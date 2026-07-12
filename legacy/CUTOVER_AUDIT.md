@@ -69,6 +69,35 @@ CHECKERBOARD-GAUSS-TOWER       T-CHECKERBOARD-SKELETON,
 FERMIONIZER                    T-FERMIONIZER (T)                    T
 LADDER-ALTERNATOR-BASIS        T-LADDER-ALTERNATOR-BASIS (T)        T
 TM-BREATH-TOWER                T-TM-BREATH-TOWER (T)                T
+COLOR-RETURN-D5                T-H1-DIHEDRAL, T-D5-GOLDEN-TABLE,
+                               T-D5-MASS-LAW (T)                    T
+COLOR-TORSOR-HOLONOMY          T-D5-TORSOR, T-SP-HOLONOMY,
+                               T-SP-ORIENTATION (T)                 T
+COLOR-SPLIT-12                 D-SP-SPLIT12 (D)                     D
+COLOR-DYNAMICAL-COLOR          F-RUNG3-TRIVIAL-DYNAMICAL (fired)   F
+COLOR-KIN-NORMALIZER           T-KIN-COLOR-NORMALIZER (T)          T
+COLOR-KINEMATICAL-GL2          D-KIN-COLOR-GL2,
+                               D-KIN-CENSUS-COVARIANCE (D)         D
+COLOR-CORE-2I                  T-COLOR-CORE-2I,
+                               T-COLOR-RAMIFIED-TRACE (T)           T
+COLOR-GOLDEN-TABLE             T-2I-GOLDEN-TABLE, T-LOOP-SPIN-LIFT,
+                               T-2I-READOUTS,
+                               T-2I-BRAUER-SHADOW (T)              T
+COLOR-MCKAY-E8                 T-MCKAY-E8, T-CATALAN-BRIDGE,
+                               T-VERB-TRANSPORT (T)                T
+COLOR-MOMENT-FINGERPRINT       T-FINGERPRINT-RATIONAL,
+                               T-MOMENT-LUCAS, T-J-SHADOW (T)      T
+COLOR-SPECTRAL-INVARIANTS      T-SPECTRAL-MEASURE, T-KOSTANT-VFE,
+                               T-PLATONIC-EXPONENTS (T)            T
+COLOR-DICKSON-RAMIFICATION     T-DICKSON-FORMS, T-MODULAR-HILBERT,
+                               T-VFE-PRIME (T)                     T
+COLOR-KLEIN-REDUCTION          T-KLEIN-RELATION-Z, T-REDUCTION-SHAPE,
+                               T-SYZYGY-SHADOW, T-AS-TOWER (T)     T
+COLOR-INTEGRAL-LIFT            T-INTEGRAL-MODEL, T-GOOD-REDUCTION,
+                               T-SYZYGY-CHANNEL,
+                               T-ORBIT-REALIZED (T)                T
+COLOR-MEASURE-TRANSPORT        T-2I-READOUTS, T-VERB-TRANSPORT,
+                               T-SPECTRAL-MEASURE (T)              T
 METRO-ADMISSIBILITY            O-METRO-ADMISSIBILITY residual       O
 METRO-EDGE-SCALE               O-METRO-EDGE-SCALE + SI clause       O
 LORENTZ-A2A3                   O-LORENTZ-A2A3                       O
@@ -105,7 +134,7 @@ PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
 derivation): the hyperplane and codec claims;
-the color ladder rungs; the gravity chain (capacity, FRW coefficients, bridge law); the
+the gravity chain (capacity, FRW coefficients, bridge law); the
 mass ladder values; Weinberg; the Maxwell closure; the alpha value
 comparison; the cosmology register (w, Omega_b, dark matter ratio,
 gyron density); the coupling and metrology arc theorems. Explicitly omitted

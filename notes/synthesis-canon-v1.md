@@ -25,8 +25,8 @@ with a reason in the audit and queued here, never registered vaguely.
 ## Queue before the synthesis PR opens
 
 1. Registry completion, cluster by cluster, each with evidence:
-   color ladder rungs (next), gravity chain, mass ladder, Weinberg,
-   Maxwell closure, alpha value (needs a high precision exact
+   gravity chain (next), mass ladder, Weinberg, Maxwell closure,
+   alpha value (needs a high precision exact
    reproduction), cosmology register, coupling and metrology arc.
 2. Deepen sections 14 and 15 from the sealed arc part bodies at the
    internal basis (they are stated here at frontier resolution).
@@ -65,8 +65,32 @@ fresh checkout of the pushed head on Debian 13 x86_64 passed
 check_policy, check_canon (60 claims), and all six reproductions
 byte identical.
 
+Color ladder staging candidate: verifier 5cd3a40c and stdout 9031fd6a,
+12/12, exit 0, empty stderr in the pre-pin dry run. Formal records
+begin only after the immutable GitHub candidate commit, through the
+Phase A staging protocol in AGENTS.md; both architecture records are
+pending at the candidate commit.
+
 ## Session log
 
+- s4 (2026-07-12): the color ladder candidate:
+  reproduce/color-ladder (12/12 blocks, eleven rungs). Rungs 1 and 2
+  close the D5 return group, integer mass law, torsors, holonomy,
+  orientation, and the 3 = 1 + 2 dictionary. Rung 3 records the fired
+  dynamical-color falsifier at F, then proves the 19200-element
+  product-affine normalizer and reads its special-linear image as
+  GL_2(F_5) at D. Rungs 4 to 11 close the 2I core, golden character
+  table and spin lift, affine E8 and Catalan bridge, the rational
+  Lucas fingerprint, the spectral class measure and invariant degrees,
+  the Dickson ramified pair, Klein reduction and Artin-Schreier tower,
+  and the integral lift. Fifteen registry rows: 12 T, 2 D, 1 F;
+  registry 75 claims. The audit omissions no longer list the color
+  ladder. The expensive 19200-candidate sweep was compressed without
+  changing scope: five generators close to 40 x 480 and each
+  generator permutes all 313 supports. The cluster now enters GitHub
+  staging: commit the immutable candidate, record x86_64 and aarch64
+  through the runner tool, validate both records, then fast-forward
+  synthesis.
 - s3 (2026-07-12): the Dirac ladder cluster:
   reproduce/dirac-ladder (16/16: the light cone pair with Pell parity;
   the spinor floor with the quartic irreducibility and the odd rung

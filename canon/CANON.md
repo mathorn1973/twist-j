@@ -460,63 +460,116 @@ abelian Z_5, not the tau anyon [F].
 
 ## 12. The color door
 
-The non abelian bridge is structural: Z[zeta_5] is the Cartan torus of
-the icosian order; the binary icosahedral group 2I = SL(2, F_5) is
-genesis generated as the qudit Clifford and Weil metaplectic group;
-the spinor -1 under 2 pi is the center; color su(3) lives on the
-traceless endomorphisms of the trace kernel, eight gluons. The
-classical Yang-Mills structure over F_5 stands with the algebra lift
-to su(3); the strong coupling is seed plus running, not a period; the
-loop coefficients are universal spin numbers; confinement is located
-at the center Z_3 beyond F_5.
+The non abelian bridge is structural. Z[zeta_5] supplies the
+icosahedral torus; the binary icosahedral group 2I = SL_2(F_5) is the
+finite color core; color su(3) is read on the traceless endomorphisms
+of the three dimensional trace kernel. This section closes the exact
+eleven-rung ladder to the core. It does not close QCD running,
+confinement, or the measure lift from the core to the full
+SL_3(F_5) carrier.
 
-The ladder from the electron attractor into color, eleven
-preregistered rungs, exact throughout [T unless noted]:
+Rungs 1 and 2 (COLOR-RETURN-D5 and COLOR-TORSOR-HOLONOMY [T],
+COLOR-SPLIT-12 [D], reproduce/color-ladder): the return group is
+D5 of order 10 with integer Plancherel mass M(E) = 10 |E|. The 312
+size-20 attractors have a free D5 half; the singlet half is the five
+reflection axes. The recurrent spatial holonomy is a Klein four
+group, orientation is tick parity, and the pairing involution Phi lies
+in SL_3(F_5). Its eigenspaces give the dictionary split 3 = 1 + 2.
+
+Rung 3 is the binding negative turn. COLOR-DYNAMICAL-COLOR [F]
+(reproduce/color-ladder): within the registered dynamical candidate
+families the generated census symmetry group has order 20 and its
+special-linear spatial image is only {I, Phi} = Z_2; the non abelian
+dynamical-color falsifier fired. The surviving kinematical statement
+is exact. COLOR-KIN-NORMALIZER [T]: the filtered product-affine
+normalizer has 40 x 480 = 19200 elements and every one permutes the
+313 attractor supports. COLOR-KINEMATICAL-GL2 [D]: its special-linear
+image is read as GL_2(F_5), order 480, on the antisymmetric plane,
+embedded by g -> (det g)^-1 direct-sum g along 3 = 1 + 2.
+
+Rung 4 (COLOR-CORE-2I [T], reproduce/color-ladder): the special-linear
+core has order 120, is perfect, has center {I, -I}, and has class
+sizes (1, 1, 12, 12, 12, 12, 20, 20, 30), hence is
+2I = SL_2(F_5). The block trace by element order is
+{1:2, 2:3, 3:4, 4:0, 5:2, 6:1, 10:3}; the pentagonal values {2, 3}
+are the ramified shadow of the golden pair.
+
+Rung 5 (COLOR-GOLDEN-TABLE [T], reproduce/color-ladder): the full
+9 x 9 character table is exact over Q(sqrt5), orthogonal by rows and
+columns, and Galois stable. The core has one involution, so D5 does
+not embed; the loop pair lifts through Dic_5 and reflections acquire
+order 4. The spin-lifted pair reads the icosahedral edge module, the
+pentagonal spin weights are the Born squares of the golden
+amplitudes, and the 5-regular block traces are the ramified Brauer
+shadow of the golden spin row.
+
+Rung 6 (COLOR-MCKAY-E8 [T], reproduce/color-ladder): tensoring by the
+spin row gives affine E8 with marks equal to representation
+dimensions. Its closed-walk moments equal the Catalan numbers through
+degree 10; finiteness first appears at degree 12 by one,
+133 = 132 + 1. The verb weights are {4 phi^-2, 4 phi^2}, with product
+16.
+
+Rung 7 (COLOR-MOMENT-FINGERPRINT [T], reproduce/color-ladder): the
+moment series is N/D, where N and D are the matching polynomials of
+finite and affine E8, and
 
 ```
-1   the return group of the attractor is the dihedral group D5; the
-    mass law is integer, M(E) = 10 |E|
-2   the attractors are D5 torsors; the holonomy lands in SL_3(F_5);
-    the dark channel is orientation reversal; the split is 3 = 1 + 2
-3   the dynamical color is Z_2: the registered falsifier fired [F] and
-    the ladder turns kinematical; the kinematical color group of the
-    census is GL_2(F_5), order 480, embedded special linearly along
-    the split [D]
-4   the color core is 2I = SL_2(F_5); the block trace by element order
-    is {1:2, 2:3, 3:4, 4:0, 5:2, 6:1}
-5   the full 9 x 9 character table of 2I, exact over Q(sqrt5), Galois
-    stable; 2I has one involution, so D5 does not embed; the axiom
-    pair lifts through the dicyclic group; stay or twist needs 720
-    degrees
-6   tensoring with the spin row draws affine E8, marks equal
-    dimensions; the walk moments are Catalan through the tenth;
-    finiteness first registers at the twelfth moment by exactly one:
-    133 = 132 + 1
-7   the moment series is the matching polynomial of finite E8 over
-    that of affine E8; 120 m_n = 2^(n+1) + 40 + 24 L_n, the Lucas
-    ladder inside the icosahedral moments
-8   the partial fraction weights are the class masses |C|/120; the
-    verb invariants are generated at degrees (12, 20, 30) = (V, F, E)
-    of the icosahedron, one syzygy at 60; 1/2 + 1/3 + 1/5 = 31/30,
-    the excess 1/30 = 1/h(E8)
-9   at the ramified place the invariant forms are the Dickson pair;
-    the modular invariant ring is free on degrees (6, 20); (V, F, E)
-    = (2(p+1), p(p-1), p(p+1)) with V - E + F = 2 identically in p
-10  T^2 + H^3 = 1728 f^5 exactly in Z[u, v], 1728 = 12^3; the face
-    form dies at reduction; good reduction forces alpha in {2, 3};
-    the modular tower is the Artin-Schreier tower
-11  the color core lifts to characteristic zero on two generators,
-    globally integral over Z[zeta_5]; reduction mod (1 - zeta) is a
-    bijection onto SL_2(F_5); the engine identity is (1 - zeta)^4 =
-    5 (zeta^2 - zeta - zeta^3); the shadow of the Hessian is the
-    Dickson form; the Klein gauge lands with the norm condition
-    gamma^2 = 3 alpha
+120 m_n = 2^(n+1) + 40 + 24 L_n
 ```
 
-The golden dual measure is transported onto the color core by the
-transport theorems of rungs 5 to 8. The remaining lift, from the core
-onto the SL_3(F_5) continuum with its 2 pi U(1) circle, joins the wall
-(COLOR-MEASURE-SELECTION).
+for even n. Also 1 - J = -zeta_5^2 is a primitive tenth root of
+unity, joining the D5 order to the J shadow without a new parameter.
+
+Rung 8 (COLOR-SPECTRAL-INVARIANTS [T], reproduce/color-ladder): the
+partial-fraction weights are exactly the class masses |C|/120. The
+Molien series is
+
+```
+(1 + t^30) / ((1 - t^12)(1 - t^20)),
+```
+
+so the invariant degrees are (12, 20, 30) = (vertices, faces, edges)
+with one relation at 60. The Platonic excess is
+1/2 + 1/3 + 1/5 - 1 = 1/30 = 1/h(E8).
+
+Rung 9 (COLOR-DICKSON-RAMIFICATION [T], reproduce/color-ladder): at
+the ramified place the invariant forms are
+
+```
+E_6 = u^5 v - u v^5,
+D_20 = (u^5 - u v^4)^4 + v^20.
+```
+
+They are algebraically independent and the modular invariant ring is
+free on degrees (6, 20). In general
+(V, F, E) = (2(p+1), p(p-1), p(p+1)) and V - E + F = 2 identically.
+
+Rung 10 (COLOR-KLEIN-REDUCTION [T], reproduce/color-ladder):
+T^2 + H^3 = 1728 f^5 holds exactly in Z[u,v], with 1728 = 12^3.
+At the ramified place invariant reduction has shape
+(alpha E_6^2, beta D_20, gamma E_6^5); freeness forces beta = 0 and
+gamma^2 = 3 alpha, with good alpha in {2, 3}. The modular invariant
+tower is the Artin-Schreier tower t -> t^5 - t.
+
+Rung 11 (COLOR-INTEGRAL-LIFT [T], reproduce/color-ladder): the two
+matrices
+
+```
+S = ((0, -1), (1, 0)),   T = ((zeta, 1), (0, zeta^4))
+```
+
+close to exactly 120 matrices over Z[zeta_5], and reduction modulo
+(1 - zeta) is a bijection onto SL_2(F_5). The engine identity is
+(1 - zeta)^4 = 5(zeta^2 - zeta - zeta^3). The Hessian reduces to the
+Dickson form; in the Klein gauge the explicit orbit realizes
+gamma^2 = 3 alpha.
+
+COLOR-MEASURE-TRANSPORT [T] (reproduce/color-ladder): the golden dual
+measure is transported from D5 onto the 2I core through the exact
+character, verb, and spectral class measures of rungs 5 to 8. The
+remaining lift from the core to the SL_3(F_5) carrier with its
+2 pi U(1) circle remains COLOR-MEASURE-SELECTION [O].
 
 ## 13. Gravity and cosmology
 

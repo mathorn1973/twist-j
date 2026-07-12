@@ -143,6 +143,61 @@ not part of the public Canon series.
 13. Merge with a merge commit. Record that merge commit as the immutable Canon
     content commit. The repository is still `GENESIS`.
 
+### Phase A cross-architecture staging
+
+During `GENESIS`, a synthesis cluster that depends on computation is
+transported between systems through GitHub, never by copying an unattached
+verifier or stdout file.
+
+1. The coordinator creates a dedicated branch from the current synthesis
+   branch:
+
+   ```text
+   staging/canon-v1-NAME
+   ```
+
+2. The coordinator commits the complete candidate before the first formal
+   staging run: verifier, `EXPECTED.txt`, README, Canon text, registry,
+   audit, changelog, hashes, and notes. This commit is the immutable
+   `candidate_commit`; push it to GitHub. Do not amend or force-push it.
+3. Runners work sequentially on the same staging branch. Each runner fetches
+   the branch, checks out the exact candidate or a descendant containing only
+   earlier run records, confirms a clean worktree, and runs:
+
+   ```text
+   python3 tools/run_staged_reproduction.py NAME --candidate FULL_SHA
+   ```
+
+4. The runner tool refuses a changed verifier or `EXPECTED.txt`, executes in
+   a deterministic environment, compares stdout byte for byte, requires exit
+   0 and empty stderr, and writes exactly one neutral record:
+
+   ```text
+   reproduce/NAME/RUNS/aarch64.md
+   reproduce/NAME/RUNS/x86_64.md
+   ```
+
+   Records contain only operating system, architecture, Python version,
+   hashes, byte counts, and commit pins. Machine nicknames are forbidden.
+5. The runner stages only its record, commits as A. M. Thorn, and pushes the
+   staging branch. A rejected push is a stop condition: never force-push;
+   contact the coordinator before rebasing or rerunning.
+6. After both architecture records are present, the coordinator runs:
+
+   ```text
+   python3 tools/check_staged_reproduction.py NAME \
+     --candidate FULL_SHA --require-architectures aarch64 x86_64
+   ```
+
+7. Only a passing validator permits `git merge --ff-only` of the staging
+   branch into `synthesis/canon-v1`. Push the synthesis branch after the
+   fast-forward. The staging exchange creates no pull request; the whole of
+   Phase A still ends in the single reviewed synthesis pull request.
+8. Any change to the verifier, expected output, scientific scope, or
+   normative text after the candidate pin invalidates all run records. Create
+   a new candidate commit and fresh staging branch; do not reinterpret old
+   records.
+
 ### Phase B: activation
 
 14. Create `activate/canon-v1` from the merged public `main`.
