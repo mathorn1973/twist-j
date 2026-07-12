@@ -101,25 +101,66 @@ def first_candidate(synthesis: str, head: str) -> str | None:
     return commits[0] if commits else None
 
 
+def candidate_reproduction(candidate: str) -> str | None:
+    parents = output("show", "-s", "--format=%P", candidate).split()
+    if len(parents) != 1:
+        return None
+    paths = changed_paths(parents[0], candidate)
+    names = {
+        match.group(1)
+        for path in paths
+        if (match := re.fullmatch(r"reproduce/([^/]+)/verify\.py", path))
+    }
+    return next(iter(names)) if len(names) == 1 else None
+
+
 def staging_entry(ref: str, synthesis: str) -> dict[str, Any]:
-    name = branch_name(ref, STAGING_PREFIX)
+    branch_label = branch_name(ref, STAGING_PREFIX)
     head = sha(ref)
-    record_prefix = f"reproduce/{name}/RUNS"
-    record_paths = [path for path in ref_paths(ref, record_prefix) if path.endswith(".md")]
-    record_fields = [parse_fields(ref_text(ref, path)) for path in record_paths]
     errors: list[str] = []
-    candidates = {fields.get("candidate_commit", "") for fields in record_fields}
-    candidates.discard("")
-    candidate = next(iter(candidates)) if len(candidates) == 1 else None
-    if len(candidates) > 1:
-        errors.append("record candidate mismatch")
+
+    all_record_paths = [
+        path
+        for path in ref_paths(ref, "reproduce")
+        if re.fullmatch(r"reproduce/[^/]+/RUNS/[^/]+\.md", path)
+    ]
+    all_records = [(path, parse_fields(ref_text(ref, path))) for path in all_record_paths]
+
+    candidate = first_candidate(synthesis, head)
     if candidate is None:
-        candidate = first_candidate(synthesis, head)
+        recorded_candidates = {
+            fields.get("candidate_commit", "")
+            for _, fields in all_records
+            if SHA.fullmatch(fields.get("candidate_commit", ""))
+            and is_ancestor(fields["candidate_commit"], head)
+        }
+        if recorded_candidates:
+            candidate = min(
+                recorded_candidates,
+                key=lambda value: int(output("rev-list", "--count", f"{value}..{head}")),
+            )
     if candidate is None or not SHA.fullmatch(candidate):
         errors.append("candidate cannot be inferred")
 
+    records = [
+        (path, fields)
+        for path, fields in all_records
+        if fields.get("candidate_commit") == candidate
+    ]
+    reproductions = {fields.get("reproduction", "") for _, fields in records}
+    reproductions.discard("")
+    name = next(iter(reproductions)) if len(reproductions) == 1 else None
+    if len(reproductions) > 1:
+        errors.append("record reproduction mismatch")
+    if name is None and candidate and SHA.fullmatch(candidate):
+        name = candidate_reproduction(candidate)
+    if name is None:
+        name = branch_label
+    if not NAME.fullmatch(name):
+        errors.append("invalid reproduction name")
+
     architectures: set[str] = set()
-    for path, fields in zip(record_paths, record_fields):
+    for path, fields in records:
         architecture = fields.get("architecture", "")
         if architecture not in ARCHITECTURES:
             errors.append(f"invalid architecture in {path}")
@@ -128,6 +169,8 @@ def staging_entry(ref: str, synthesis: str) -> dict[str, Any]:
             errors.append(f"record filename mismatch in {path}")
         if fields.get("reproduction") != name:
             errors.append(f"record reproduction mismatch in {path}")
+        if Path(path).parts[1] != name:
+            errors.append(f"record directory mismatch in {path}")
         architectures.add(architecture)
 
     candidate_parent = None
@@ -169,6 +212,7 @@ def staging_entry(ref: str, synthesis: str) -> dict[str, Any]:
     return {
         "kind": "staging",
         "name": name,
+        "branch_label": branch_label,
         "branch": ref.removeprefix("refs/remotes/origin/"),
         "head": head,
         "candidate": candidate,
@@ -260,6 +304,8 @@ def text_report(synthesis: str, staging: list[dict[str, Any]], prep: list[dict[s
     print(f"TIKTOK synthesis={synthesis}")
     for entry in prep + staging:
         fields = [entry["kind"].upper(), entry["name"], entry["state"], f"head={entry['head']}"]
+        if entry.get("branch_label") and entry["branch_label"] != entry["name"]:
+            fields.append(f"branch_label={entry['branch_label']}")
         if entry.get("candidate"):
             fields.append(f"candidate={entry['candidate']}")
         if entry.get("architectures"):
@@ -290,6 +336,10 @@ def main() -> None:
     prep = [prep_entry(ref, synthesis) for ref in refs(PREP_PREFIX)]
     staging.sort(key=lambda entry: entry["name"])
     prep.sort(key=lambda entry: entry["name"])
+    staging_labels = {entry["branch_label"] for entry in staging}
+    for entry in prep:
+        if entry["name"] in staging_labels and entry["state"] != "BLOCKED":
+            entry["state"] = "SUPERSEDED_BY_STAGING"
     active_staging = [entry for entry in staging if entry["state"] != "INTEGRATED"]
     if len(active_staging) > 1:
         branches = ", ".join(entry["branch"] for entry in active_staging)

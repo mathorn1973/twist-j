@@ -241,10 +241,14 @@ synthesis/canon-v1       one fast-forward integration lane
    ```
 
    Add `--json` for machine-readable output and `--strict` in monitoring.
-   The tool reports `PREP_CURRENT`, `REBASE_REQUIRED`, `WAIT_AARCH64`,
-   `WAIT_X86_64`, `READY_TO_VALIDATE`, `INTEGRATED`, or a stop state. Its
-   printed command is an instruction, not authorization to skip checkout,
-   clean-tree, authorship, validation, or no-force gates.
+   The tool reports `PREP_CURRENT`, `REBASE_REQUIRED`,
+   `SUPERSEDED_BY_STAGING`, `WAIT_AARCH64`, `WAIT_X86_64`,
+   `READY_TO_VALIDATE`, `INTEGRATED`, or a stop state. Its printed command is
+   an instruction, not authorization to skip checkout, clean-tree, authorship,
+   validation, or no-force gates. Use the reproduction directory name as the
+   branch suffix when possible. If a shorter branch label was already pinned,
+   the tool derives the actual reproduction name from the immutable candidate
+   and its run records and reports both names explicitly.
 7. The steady-state rhythm is: builder prepares `N+1`; architecture runners
    reproduce `N`; coordinator validates and fast-forwards `N`; builder moves
    `N+1` to the new base and pins it. This is the Phase A tik-tok. GitHub refs
