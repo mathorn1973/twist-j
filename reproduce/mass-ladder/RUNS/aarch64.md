@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: 6387da195fc100b45262a0b05b6964012b10dd02
+run_base_commit: 6387da195fc100b45262a0b05b6964012b10dd02
+reproduction: mass-ladder
+verifier_sha256: 68593371f4b075ba98ee573436a392397abcdcffc143c104777da5e6af113236
+expected_sha256: 1ea07225166d9336f11d38487d9c14b4e4c33dfc576536133278100572299848
+command: python3 reproduce/mass-ladder/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: 1ea07225166d9336f11d38487d9c14b4e4c33dfc576536133278100572299848
+stdout_bytes: 2570
+stdout_lines: 14
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS
