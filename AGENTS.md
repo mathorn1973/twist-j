@@ -198,6 +198,62 @@ verifier or stdout file.
    a new candidate commit and fresh staging branch; do not reinterpret old
    records.
 
+### Phase A asynchronous prep and staging
+
+The formal staging lane above remains linear because every cluster changes
+shared Canon, registry, audit, and hash files and must fast-forward into the
+single synthesis branch. Expensive preparation runs one cluster ahead in a
+separate, explicitly non-formal lane:
+
+```text
+prep/canon-v1-NAME       mutable preparation, no formal run records
+staging/canon-v1-NAME    immutable candidate and sequential run records
+synthesis/canon-v1       one fast-forward integration lane
+```
+
+1. As soon as cluster `N` has an immutable staging candidate, another agent
+   may create `prep/canon-v1-NEXT` from the then-current synthesis HEAD.
+   Preparation may include internal-basis audit, conservative public scope,
+   verifier development, draft Canon changes, and non-formal dry runs.
+2. A prep branch is non-canonical and non-formal. It must not contain
+   `reproduce/*/RUNS/` records, call a dry run a reproduction, or claim an
+   earned public status. It may be rebased and rewritten before pinning.
+3. While the next cluster is in prep, architecture runners and the
+   coordinator finish cluster `N` on its staging branch. No other commit may
+   enter synthesis while a formal staging candidate awaits fast-forward.
+4. After cluster `N` reaches synthesis, the builder rebases or reapplies the
+   prep work onto the new synthesis HEAD. Conflicts in shared Canon files are
+   resolved here, before immutability begins. All policy, Canon, reproduction,
+   audit, and hash checks are rerun.
+5. The builder creates `staging/canon-v1-NEXT` from the exact current
+   synthesis HEAD. The complete candidate is one commit with exactly one
+   parent. The first formal run may start only after that commit is pushed.
+   A prep commit is never itself treated as the immutable pin merely because
+   its tree happened to pass a dry run.
+6. Agents discover work from GitHub rather than from a relayed handoff. At
+   session start run one of:
+
+   ```text
+   python3 tools/staging_status.py --fetch --role builder
+   python3 tools/staging_status.py --fetch --role aarch64
+   python3 tools/staging_status.py --fetch --role x86_64
+   python3 tools/staging_status.py --fetch --role coordinator
+   ```
+
+   Add `--json` for machine-readable output and `--strict` in monitoring.
+   The tool reports `PREP_CURRENT`, `REBASE_REQUIRED`, `WAIT_AARCH64`,
+   `WAIT_X86_64`, `READY_TO_VALIDATE`, `INTEGRATED`, or a stop state. Its
+   printed command is an instruction, not authorization to skip checkout,
+   clean-tree, authorship, validation, or no-force gates.
+7. The steady-state rhythm is: builder prepares `N+1`; architecture runners
+   reproduce `N`; coordinator validates and fast-forwards `N`; builder moves
+   `N+1` to the new base and pins it. This is the Phase A tik-tok. GitHub refs
+   are the queue and handoff surface; chat summaries are informational only.
+8. `STALE_BASE`, `BLOCKED`, more than one branch eligible for the same formal
+   role, a non-fast-forward push, or a synthesis change during formal staging
+   is a stop condition. Never repair these states by force-pushing a staging
+   branch or silently reinterpreting a candidate.
+
 ### Phase B: activation
 
 14. Create `activate/canon-v1` from the merged public `main`.
