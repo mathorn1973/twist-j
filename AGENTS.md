@@ -54,7 +54,7 @@ probes/P-NAME/
     PREREG.md
     verify.py
     EXPECTED.txt
-    RUNS.md
+    RUN.md
     RESULT.md
 ```
 
@@ -135,16 +135,25 @@ security audit. It is never copied opportunistically into a probe.
    `POLICY.md`.
 3. Commit and push `PREREG.md` and the accepted exact verifier before any
    formal gate execution. Record commit and file hashes.
-4. Run exact gates. Preserve stderr, exit code, bytes, line count, platform,
-   environment, verifier hash, and stdout hash.
-5. A `T` result requires byte-identical stdout on two independent
-   architectures. A fired falsifier is merged, not hidden.
-6. Add the run and result records. Update the registry, frontier, and Canon
-   only to the earned status and scope.
-7. Open a pull request, pass policy and scientific checks, security-audit the
-   named files, and merge without squash or rebase.
-8. A Canon release is a separate declared fold with deterministic output,
+4. Run the pinned verifier locally from the repository root on Linux or a
+   Linux-compatible environment. Save exact stdout as `EXPECTED.txt` and
+   record the required fields in `RUN.md`.
+5. Open a pull request. The required `check` independently reruns the changed
+   verifier on GitHub `ubuntu-latest` and compares hashes and exact bytes.
+6. If the local and GitHub architectures differ, their byte-identical output
+   satisfies the two-architecture computation gate. If they are the same, the
+   result is reproduced but a computation-only claim remains at most `C`.
+   Independent proof may establish `T`; the verifier then audits it.
+7. Add `RESULT.md`. A fired falsifier is merged, not hidden. Update the
+   registry, frontier, and Canon only to the earned status and scope.
+8. Pass policy and scientific checks, security-audit the named files, and
+   merge without squash or rebase.
+9. A Canon release is a separate declared fold with deterministic output,
    `SHA256SUMS`, immutable tag, and updated `STATUS.md`.
+
+Notes and incomplete proposals live under `notes/`, carry `NON-CANONICAL`,
+need no verifier, and never edit `canon/CANON.md`. Canon patch proposals live
+under `notes/canon/`; only a later sealed fold changes the Canon.
 
 Commit as `A. M. Thorn <thorn@twistj.com>` unless the author explicitly names
 another contributor identity.

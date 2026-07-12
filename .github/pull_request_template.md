@@ -8,8 +8,10 @@ Probe and layer, if applicable:
 
 - Preregistration commit:
 - Verifier SHA-256:
-- Stdout SHA-256:
-- Two architectures: `yes | pending | not applicable`
+- Local platform and architecture:
+- Local stdout SHA-256:
+- GitHub byte match: `pass | pending | not applicable`
+- Two architectures: `yes | no | not applicable`
 
 ## Checks
 
@@ -17,4 +19,4 @@ Probe and layer, if applicable:
 - [ ] Formal execution followed the public pin.
 - [ ] Fired falsifiers are recorded.
 - [ ] Security review passed.
-- [ ] `tools/check_policy.py` passed.
+- [ ] Required `check` passed.

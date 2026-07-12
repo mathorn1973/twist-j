@@ -56,8 +56,8 @@ checks are allowed before the pin. Formal gates are not.
 After execution add:
 
 ```text
-EXPECTED.txt  exact expected output or output hash
-RUNS.md       platforms, versions, exit codes, byte counts, hashes
+EXPECTED.txt  exact local stdout
+RUN.md        pin, command, environment, exit code, byte counts, hashes
 RESULT.md     status, scope, fired falsifiers, conclusion
 ```
 
@@ -67,10 +67,19 @@ Do not reuse, rename, or resume a sealed probe.
 
 - Assertions use exact arithmetic. Floating point may appear only as a labeled
   engineering or measured witness.
-- Promotion to `T` requires byte-identical stdout on two independent
-  architectures and pinned file and stdout SHA-256 values.
-- A one-platform finite result is at most `C` unless its proof is independently
-  theorem-grade.
+- The author runs the pinned verifier locally and records `RUN.md` and the
+  exact stdout in `EXPECTED.txt`.
+- The required GitHub check reruns every changed verifier on a clean
+  `ubuntu-latest` runner and requires the same verifier hash, exit code 0,
+  empty stderr, and byte-identical stdout.
+- A verifier-backed contribution is reproducible only when both the local
+  record and the GitHub check pass.
+- For a computation-only promotion to `T`, the local and GitHub runs must also
+  use different architectures. Same-architecture agreement is a reproduction,
+  not a two-architecture gate. An independent proof may earn `T`; its verifier
+  is then an audit.
+- A one-architecture finite result is at most `C` unless its proof is
+  independently theorem-grade.
 - Fired falsifiers are preserved and folded. Thresholds never move after the
   preregistration pin.
 - Any lift between L1 state, L2 manifold, L3 boundary, L4 support, L5 stream,
@@ -92,6 +101,10 @@ Old versions live in immutable tags and releases named `canon-vNNN`, not as
 copies on `main`. Each release carries `SHA256SUMS`. Present truth appears once;
 history and run detail are referenced, not repeated.
 
+Incomplete work belongs under `notes/`, is marked `NON-CANONICAL`, and need
+not carry a verifier. A proposed Canon patch stays under `notes/canon/` until
+a separate sealed fold applies it to `canon/CANON.md`.
+
 ## 6. Git
 
 - `main` accepts reviewed pull requests only, except repository genesis.
@@ -107,5 +120,6 @@ private logs, personal data, binary models, compiled objects, or unreviewed
 third-party material. Files over 5 MiB require an explicit policy change.
 External or large data use a manifest with source, version, license, and hash.
 
-Every pull request must pass `tools/check_policy.py` and a manual security
-review. Apache-2.0 applies unless a file states an approved compatible license.
+Every pull request must pass the required `check`, which runs both repository
+policy and any changed verifiers, plus a manual security review. Apache-2.0
+applies unless a file states an approved compatible license.
