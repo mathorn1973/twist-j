@@ -60,7 +60,10 @@ Ubuntu 24.04 aarch64 (Python 3.12.3), same result.
 Recorded at the Dirac ladder push: verifier 3240d355 and stdout
 2f8d2036 byte identical on Ubuntu 24.04 aarch64 (Python 3.12.3) and
 Debian 13 x86_64 (Python 3.13.5), 16/16, exit 0, empty stderr, both
-runs recorded before the commit (2026-07-12).
+runs recorded before the commit (2026-07-12). After the push, a
+fresh checkout of the pushed head on Debian 13 x86_64 passed
+check_policy, check_canon (60 claims), and all six reproductions
+byte identical.
 
 ## Session log
 
