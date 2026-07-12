@@ -1,0 +1,16 @@
+TWIST-J Maxwell closure witness (exact integer arithmetic)
+Bianchi and gauge invariance identically in the 32 edge symbols; conservation identically in the 96 face symbols
+the obstruction pair is counted in p = 5: total charge mod 5 and the four winding numbers mod 5
+
+PASS 01 BIANCHI      on the 3+1 tesseract (16, 32, 24, 8): with 32 independent edge symbols as basis vectors, dF = d(dA) = 0 identically on all 8 cubes: the homogeneous Maxwell pair is an exact identity of the chain complex
+PASS 02 GAUGE        gauge invariance is an identity: F[A + d Lambda] = F[A] in 16 additional vertex symbols on all 24 faces of the tesseract, exactly
+PASS 03 GAUSS-Z      Gauss as the boundary equation bd E = rho on the closed 2 x 2 x 2 spatial torus: the Smith form of the boundary over Z has all seven elementary divisors equal to 1 (rank 7, no torsion), and the augmentation annihilates the image: over Z the equation is solvable iff the total charge is zero
+PASS 04 DIPOLE       the constructive dipole: an oriented two edge path solves bd E = delta(b) - delta(a) exactly over Z, and the integrated law holds on every one of the 256 vertex regions: the oriented crossing sum equals the enclosed charge
+PASS 05 GAUSS-F5     the Z_5 Gauss obstruction is counted in p: rank 7 over F_5 with the augmentation on the image, so solvable iff the total charge vanishes mod 5; the zero sum charge (2, 3) is solved constructively, the unit total charge is obstructed; the cycle space has dimension 17 = E - V + 1
+PASS 06 CONSERVE     on the 2^4 torus (16, 64, 96): bd1 bd2 = 0 as an exact integer matrix identity, so bd1(bd2 G) = 0 identically in the 96 independent face symbols: every solvable current is conserved, as an identity
+PASS 07 AMPERE-Z     the Smith form of bd2 over Z has all 45 elementary divisors equal to 1 (torsion free) and rank(bd1) = 15 over Q, so H_1 of the 2^4 torus is free of rank 49 - 45 = 4: the four winding classes of the closed spacetime torus
+PASS 08 WINDING      the four winding certificates f_mu annihilate bd2 exactly (4 x 96 pairings all zero) and pair with the four elementary winding currents as the identity matrix; the contractible square loop is bd2 of its own face and is conserved
+PASS 09 OBSTRUCT-P   the current obstruction is counted in p: the single winding current is obstructed over Z_5 (elimination exhibits the contradiction), while five parallel windings are solved over Z_5 constructively and stay Z obstructed with certificate value 5
+PASS 10 IFF-RANKS    the iff by exact F_5 ranks: rank(bd2) = 45 = 64 - 19 = dim ker(bd1) - 4, with rank(bd1) = 15 and the four winding certificates independent on the cycle space: the current pair is solvable in the Z_5 theory iff the current is conserved and all four winding numbers vanish mod 5
+
+RESULT 10/10 ALL PASS

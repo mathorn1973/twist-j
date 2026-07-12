@@ -25,9 +25,8 @@ with a reason in the audit and queued here, never registered vaguely.
 ## Queue before the synthesis PR opens
 
 1. Registry completion, cluster by cluster, each with evidence:
-   Maxwell closure (next), alpha value (needs a high precision
-   exact reproduction), cosmology register, coupling and metrology
-   arc.
+   alpha value (next; needs a high precision exact reproduction),
+   cosmology register, coupling and metrology arc.
 2. Deepen sections 14 and 15 from the sealed arc part bodies at the
    internal basis (they are stated here at frontier resolution).
 3. Reconciliation audit rows for every added claim.
@@ -92,8 +91,32 @@ GitHub candidate commit, through the Phase A staging protocol in
 AGENTS.md; both architecture records are pending at the candidate
 commit.
 
+Maxwell closure staging candidate: verifier a84c80da and stdout
+f449619e, 10/10, exit 0, empty stderr in the pre-pin dry run, byte
+identical on x86_64 and aarch64. Formal records begin only after the
+immutable GitHub candidate commit, through the Phase A staging
+protocol in AGENTS.md; both architecture records are pending at the
+candidate commit.
+
 ## Session log
 
+- s8 (2026-07-12): the Maxwell closure candidate: reproduce/maxwell
+  (10/10: the Bianchi identity and gauge invariance identically in the
+  32 edge and 16 vertex symbols of the tesseract, carried as exact
+  integer linear algebra; the Gauss chain on the 2 x 2 x 2 spatial
+  torus with Smith divisors all 1, the constructive dipole, and the
+  integrated law on all 256 regions; the Z_5 Gauss obstruction with a
+  constructive solve and an exhibited obstruction; conservation as the
+  exact identity bd1 bd2 = 0 in the 96 face symbols of the 2^4 torus;
+  the Smith form of the face boundary with 45 unit divisors and H_1
+  free of rank 4; the four winding certificates pairing to the
+  identity; the single winding Z_5 obstructed while five parallel
+  windings solve; the iff closed by exact ranks 45 = 64 - 19). Five
+  registry rows: MAXWELL-BIANCHI T, MAXWELL-GAUSS-CHAIN T,
+  MAXWELL-AMPERE-CHAIN T, MAXWELL-OBSTRUCTION-P T, MAXWELL-CLOSED D;
+  registry 91 claims. The audit omissions no longer list the Maxwell
+  closure. The cluster enters GitHub staging through the Phase A
+  protocol.
 - s7 (2026-07-12): the Weinberg candidate: reproduce/weinberg
   (6/6: the face degree deg_f = Tr(J) = 3 on the power basis; the
   trace kernel of dimension 3 over Q and 125 = 5^3 points over F_5 by

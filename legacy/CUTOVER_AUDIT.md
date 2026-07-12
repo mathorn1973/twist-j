@@ -123,6 +123,12 @@ HYPERCHARGE-LAW                the Part V hypercharge law and the
                                trace kernel dimension (T)            T
 WEINBERG-FORM                  the Part V committed form (D at the
                                dictionary; comparison fenced)        D
+MAXWELL-BIANCHI                T-BIANCHI-SYMBOLIC (T, v158)         T
+MAXWELL-GAUSS-CHAIN            T-GAUSS-CHAIN-EXACT (T, v158)        T
+MAXWELL-AMPERE-CHAIN           T-AMPERE-CHAIN-EXACT (T, v158)       T
+MAXWELL-OBSTRUCTION-P          the v158 obstruction pair, counted
+                               in p (T layer of the closure)        T
+MAXWELL-CLOSED                 D-MAXWELL-CLOSED (D, v158)           D
 METRO-ADMISSIBILITY            O-METRO-ADMISSIBILITY residual       O
 METRO-EDGE-SCALE               O-METRO-EDGE-SCALE + SI clause       O
 LORENTZ-A2A3                   O-LORENTZ-A2A3                       O
@@ -159,7 +165,7 @@ PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
 derivation): the hyperplane and codec claims;
-the Maxwell closure; the alpha value
+the alpha value
 comparison; the cosmology register (w, Omega_b, dark matter ratio,
 gyron density); the coupling and metrology arc theorems. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author

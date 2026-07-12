@@ -244,14 +244,17 @@ modulus, Coulomb on the argument. The sign structure is the polar
 decomposition [D]: mass is a modulus, one sign, universal attraction;
 charge is an argument, two signs.
 
-The classical Maxwell system closes exactly [T, D]: the Bianchi
-identity holds identically in the 32 edge symbols and gauge invariance
-is an identity; Gauss is the boundary equation on the closed spatial
-torus, with a constructive dipole; the inhomogeneous pair closes with
-conservation an identity in the 96 face symbols. The obstruction pair
-is counted in p: Gauss is solvable iff the total charge vanishes mod
-5; the current pair iff the current is conserved and all four winding
-numbers vanish mod 5.
+The classical Maxwell system closes exactly [MAXWELL-CLOSED at D,
+the chain layer at T; reproduce/maxwell]: the Bianchi identity
+holds identically in the 32 edge symbols and gauge invariance is
+an identity (MAXWELL-BIANCHI); Gauss is the boundary equation on
+the closed spatial torus, with a constructive dipole
+(MAXWELL-GAUSS-CHAIN); the inhomogeneous pair closes with
+conservation an identity in the 96 face symbols
+(MAXWELL-AMPERE-CHAIN). The obstruction pair is counted in p
+(MAXWELL-OBSTRUCTION-P): Gauss is solvable iff the total charge
+vanishes mod 5; the current pair iff the current is conserved and
+all four winding numbers vanish mod 5.
 
 The abelian face measure, both halves, zero parameters: electric,
 P = J/2 on the 12 electric faces from the bare tick [D]; magnetic,
