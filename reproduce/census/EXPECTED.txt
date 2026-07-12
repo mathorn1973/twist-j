@@ -1,0 +1,18 @@
+TWIST-J kernel census witness (exact integer arithmetic on Z_5^6)
+five involutions a, b, c, d, e; Thue-Morse drive; selection law
+i = (z5 + 2 t) mod 5; full enumeration, warmup 400, window 300,
+independent second window 300; closure under both transitions
+
+PASS 01 RELATIONS      a^2 = b^2 = c^2 = d^2 = e^2 = id; (bc)^5 = id
+PASS 02 COUNT-313      313 attractors
+PASS 03 SIZES          312 of size 20, 1 of size 10; support 6250 disjoint
+PASS 04 BASINS         312 basins of 50, 1 basin of 25; coverage 15625
+PASS 05 SUM-SQUARES    313 = 13^2 + 12^2
+PASS 06 Z5-SHEET       every recurrent state has z5 in {1, 4}
+PASS 07 MIRROR-ONLY    the selection law fires only b, d, e on the sheet
+PASS 08 PAIRING        involution; 144 transpositions + 25 fixed (24 size 20 + singlet); classes 169 = 13^2
+PASS 09 HOSTING        |<d, b e b>| = 10; d(b e b) = T0 = (0,0,0,0,3,2); A = H1 x' union b H1 x' on 313 of 313
+PASS 10 CLOSED-BOTH    every signature is closed under both transitions (drive bit 0 and drive bit 1)
+PASS 11 WINDOW-STABLE  the next independent 300 tick window reproduces every signature exactly
+
+RESULT 11/11 ALL PASS

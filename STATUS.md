@@ -2,9 +2,10 @@
 
 ```text
 STATE:     GENESIS
-CANON:     NOT IMPORTED
+CANON:     Public Canon v1 candidate
 AUTHORITY: mathorn1973/twistj-jam
 CUTOVER:   NOT DECLARED
 ```
 
-This repository contains policy only. No scientific claim here is canonical.
+The Canon bundle under canon/ is a candidate under synthesis review.
+No scientific claim in this repository is canonical until activation.
