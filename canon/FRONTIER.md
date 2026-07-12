@@ -64,6 +64,9 @@ Plenum and kernel:
 
 - KC3-PLENUM-READOUT  the residue class readout of the ramified place.
 - SQRT-PHI-TIME-GRAVITY  the dynamical face of the time gravity door.
+- CODEC-RATE-SCOPE  the rate 4/5 clause of the internal codec seal,
+  held open without a public claim until its precise coding scope is
+  reconstructed from the sealed basis or the clause is struck.
 
 Measure:
 

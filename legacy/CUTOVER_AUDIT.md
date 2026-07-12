@@ -198,19 +198,42 @@ PROTON-RESIDUAL-IS-QCD         O-PROTON-RESIDUAL-IS-QCD             O
 SQRT-PHI-TIME-GRAVITY          O-SQRT-PHI-TIME-GRAVITY              O
 OBSERVER-WRITE-PORT            AX-CW at H; the write port test      H
 PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
+HYPERPLANE-BOUNDARY-CLASS      T-HYPERPLANE (T-LOCK, v101, the
+                               boundary class |S| = 1250); carried
+                               at public T by full enumeration       T
+HYPERPLANE-BOUNDARY-REALIZATION  T-63-MERSENNE-FACE and the v101
+                               realization; conservatively lowered
+                               to C at the census window scope       C
+CODEC-TR4                      T-CODEC-TR4 (T-LOCK), the readout
+                               core: doubling and uniqueness;
+                               carried at public T; the rate clause
+                               is split out, not promoted            T
+CODEC-RATE-SCOPE               the rate 4/5 clause of T-CODEC-TR4;
+                               no spelled public coding scope in the
+                               sealed corpus; held open, no
+                               promotion by shorthand                O
+PHIBIT-NOT-TAU                 F-PHIBIT-NOT-TAU (the v122
+                               corrigendum); carried at F with the
+                               finite fusion ring boundary inline    F
 ```
 
 ## Intentional omissions so far (to be resolved before the PR)
 
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
-derivation): the hyperplane and codec claims. Explicitly omitted
+derivation): the narrative digest labels inventoried in the synthesis
+notes (32 label lines after the hyperplane-codec cluster resolved the
+hyperplane, codec, and phibit lines), awaiting the pre PR
+reconciliation. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author
 decision: an optional enrichment, not a gap; stays internal);
 W1-INTERFACE-PRINCIPLE, KERNEL-BRAID, and TIMEQUANTUM-POTENTIAL
 (deferred: no faithful public decision condition is stated yet; each
 returns only with a concrete falsifier or decision condition). The
-internal O17 residual stays deferred on the same ground. No claim is silently dropped. Each candidate is registered,
+internal O17 residual is now admissible: the sealed connectivity
+patches state a concrete falsifier (the all k hypothesis with its
+k >= 4 fragmentation test); it is queued as the kernel connectivity
+cluster. No claim is silently dropped. Each candidate is registered,
 conservatively lowered, rewritten as non-claim material, or
 explicitly omitted with a reason. The queue is
 notes/synthesis-canon-v1.md.

@@ -32,11 +32,18 @@ with a reason in the audit and queued here, never registered vaguely.
 3. Reconciliation audit rows for every added claim.
 4. Deferred frontier rows, each returning only with a concrete
    falsifier or decision condition: W1-INTERFACE-PRINCIPLE,
-   KERNEL-BRAID, TIMEQUANTUM-POTENTIAL, the internal O17 residual.
+   KERNEL-BRAID, TIMEQUANTUM-POTENTIAL (recon 2026-07-12: bare names
+   in the sealed corpus, no honest condition available, stay
+   internal); the internal O17 residual is admissible via the sealed
+   connectivity patches and is queued as the kernel connectivity
+   cluster.
 5. The pre PR inventory: sweep the Canon for every status-labelled
    statement without a registry identifier (grep for bracketed
    labels); each gets an identifier and registration, becomes a
-   definition or remark, or is removed.
+   definition or remark, or is removed. Recon count 2026-07-12: 35
+   label lines without a nearby identifier; the hyperplane-codec
+   cluster resolves 3 (the hyperplane, codec, and phibit lines); 32
+   remain.
 6. Full local check run, security audit, PR template fields.
 
 ## Two architecture witness
@@ -123,6 +130,25 @@ commit.
 
 ## Session log
 
+- s12 (2026-07-12): the hyperplane-codec micro cluster:
+  reproduce/hyperplane-codec (8/8: the boundary class by full
+  enumeration, |M| = 6250, |S| = 1250, complement 5000 in sheets of
+  2500 with fibers 625 + 625; the census window realization of S as
+  the 63 boundary attractors with no straddling; the step charpoly
+  Phi_5(x - 1) with det(2I - M_J) = 5 and the axiom column identity;
+  the doubling identity over Z and F_5; readout uniqueness over all
+  625 covectors and all five multipliers; the phibit and Fibonacci
+  fusion rings with the finite boundary of the fired reading). Five
+  registry rows: HYPERPLANE-BOUNDARY-CLASS T,
+  HYPERPLANE-BOUNDARY-REALIZATION C, CODEC-TR4 T, CODEC-RATE-SCOPE O
+  (the rate 4/5 clause split out, no promotion by shorthand),
+  PHIBIT-NOT-TAU F (the third public fired falsifier). The ledger
+  sentence added to the Statuses block; it does not legalize
+  unregistered labels, which stay reconciliation debt (32 lines).
+  Registry 113 claims. Both platform dry runs byte identical before
+  the pin: verifier 921ae520 and stdout bc42aa9e (3202 bytes), Ubuntu
+  24.04 aarch64 (Python 3.12.3) and Debian 13 x86_64 (Python 3.13.5),
+  exit 0, empty stderr.
 - s11 (2026-07-12): the coupling and metrology arc:
   reproduce/coupling-metrology (8/8: the squaring decoder with kernel
   {+-1} and volume neutrality det(I + H) = 1 - |h|^2; the one

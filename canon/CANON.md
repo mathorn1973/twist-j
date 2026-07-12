@@ -43,7 +43,12 @@ H hypothesis with an explicit falsifier; O open obligation; F
 falsified. Every claim carries a label; no summary is stronger than
 the label it summarizes. The machine readable registry is
 canon/REGISTRY.tsv; its claim identifiers are status neutral and
-stable.
+stable. The registry is the authoritative public ledger: a bracketed
+status in the narrative without a registered claim identifier is not
+thereby a registered public claim, and this sentence does not
+legalize it; every such label is reconciliation debt, registered with
+evidence, rewritten, or removed before the synthesis pull request
+opens.
 
 **Notation.** j = zeta_5, j^5 = 1. J = 1 + j^2. phi = (1 + sqrt5)/2 =
 1/|J|. pi = -5 i Li_1(J), with Li_1(J) = i pi/5 exactly. tau = sqrt(J)
@@ -179,9 +184,24 @@ singlet, so the classes modulo the pairing number 169 = 13^2
 all 313 (CENSUS-HOSTING [C], reproduce/census): the return group
 H1 = <d, b e b> has order 10, d o (b e b) is the line translation
 T0 = (0, 0, 0, 0, 3, 2), and every attractor is the exact two coset
-set A = H1 x' union b H1 x'. The boundary hyperplane realizes
-63 = (p^3 + 1)/2 and the boundary class has size 1250 [T]; the unique
-M_J readout is the trace codec at rate 4/5 exact [T].
+set A = H1 x' union b H1 x'. The boundary hyperplane: with s the
+piston sum Tr_4 and M the z5 sheet, the boundary class
+S = M cap {s = 0} has size 1250 exactly, the charged complement 5000
+in two sheets of 2500, the boundary fibers 625 + 625, by full
+enumeration of all 15625 states (HYPERPLANE-BOUNDARY-CLASS [T],
+reproduce/hyperplane-codec); the census window realizes S as the
+union of the 63 = (p^3 + 1)/2 boundary attractors, 62 of size 20 with
+the singlet, and the charged sector as the remaining 250
+(HYPERPLANE-BOUNDARY-REALIZATION [C], reproduce/hyperplane-codec).
+The unique M_J readout is the trace character: the step matrix is
+multiplication by J column by column, its characteristic polynomial
+is Phi_5(x - 1) with det(2I - M_J) = 5 = p, the piston sum doubles,
+Tr_4(M_J x) = 2 Tr_4(x), and the scalar multiples of Tr_4 are the
+only covectors reading any multiplier at all (CODEC-TR4 [T],
+reproduce/hyperplane-codec). The internal seal carries a further
+clause, rate 4/5 exact, whose precise coding scope is not yet
+reconstructed publicly; the clause is held open and unclaimed
+(CODEC-RATE-SCOPE [O]).
 
 ## 4. The two places
 
@@ -472,8 +492,14 @@ deficit; the native magic is the cubic C_5 (order 5, prime 5), the
 foreign qubit magic is m (order 8, prime 2). Bell and Tsirelson:
 zeta_5 caps at (sqrt5 + 1)/2, the zeta_8 magic reaches Tsirelson [T].
 The Fibonacci category with central charge c = 14/5 is mathematics at
-T and C; its physical reading is at most a hypothesis: the phibit is
-abelian Z_5, not the tau anyon [F].
+T and C; its physical reading fired: the phibit is abelian Z_5, not
+the tau anyon (PHIBIT-NOT-TAU [F], reproduce/hyperplane-codec). The
+boundary proof is finite: the phibit fusion ring is the group ring of
+Z_5, five simples, all invertible with dimension 1; the Fibonacci
+ring obeys tau tau = 1 + tau, its dimension satisfies d^2 = d + 1
+with no rational root, d = phi, and tau has no fusion inverse; five
+invertible simples cannot land on a ring with one. The dead physical
+reading is archived, not deleted.
 
 ## 12. The color door
 
@@ -772,6 +798,10 @@ PLENUM AND KERNEL
   KC3-PLENUM-READOUT         the residue class readout of the ramified
                              place
   SQRT-PHI-TIME-GRAVITY      the dynamical face of the time gravity door
+  CODEC-RATE-SCOPE           the rate 4/5 clause of the internal codec
+                             seal, held open until its precise coding
+                             scope is reconstructed or the clause is
+                             struck
 MEASURE
   QUADRATIC-ENVELOPE-DECODER the full decoder carrier hypothesis
   TM-SYM2-MEASURE            the symmetric square measure; residual the
