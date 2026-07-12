@@ -56,4 +56,21 @@ if probes.exists():
             if not (probe / required).is_file():
                 fail(f"{probe.name} lacks {required}")
 
+workflows = ROOT / ".github" / "workflows"
+workflow_files = {path.name for path in workflows.iterdir() if path.is_file()}
+if workflow_files != {"policy.yml"}:
+    fail("policy.yml must be the only workflow")
+workflow = (workflows / "policy.yml").read_text(encoding="utf-8")
+for invariant in (
+    "permissions:\n  contents: read",
+    "timeout-minutes: 15",
+    "actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5",
+    "persist-credentials: false",
+    "actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+):
+    if invariant not in workflow:
+        fail(f"workflow lacks security invariant: {invariant}")
+if "pull_request_target:" in workflow:
+    fail("pull_request_target is forbidden")
+
 print("POLICY PASS")
