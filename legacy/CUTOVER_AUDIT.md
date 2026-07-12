@@ -89,7 +89,7 @@ PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
 derivation): the hyperplane and codec claims;
-the Born quartet; the Dirac ladder theorem layer; the color ladder
+the Dirac ladder theorem layer; the color ladder
 rungs; the gravity chain (capacity, FRW coefficients, bridge law); the
 mass ladder values; Weinberg; the Maxwell closure; the alpha value
 comparison; the cosmology register (w, Omega_b, dark matter ratio,

@@ -60,6 +60,17 @@ Ubuntu 24.04 aarch64 (Python 3.12.3), same result.
 
 ## Session log
 
+- s2a (2026-07-12): Born layer closed by three review fixes from the
+  author: the half angle scope no longer counts the antipode (the
+  normalized bisector exists exactly on the 11 non antipodal gated
+  units; at u = -1 the bisector vanishes, the only square root of its
+  norm is 0, not invertible); the order 16 minimality now excludes
+  every smaller degree (16 divides none of 4, 24, 124); the audit no
+  longer lists the Born quartet among omissions. New EXPECTED; both
+  platform runs recorded before the commit: verifier cf6009aa and
+  stdout 228e7335 byte identical on Ubuntu 24.04 aarch64 (Python
+  3.12.3) and Debian 13 x86_64 (Python 3.13.5), 11/11, exit 0, empty
+  stderr.
 - s2 (2026-07-12): the frontier identifier parser in check_canon now
   rejects unregistered identifiers leading FRONTIER.md list items
   (negative tested); README gained the official channels and the
