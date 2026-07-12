@@ -5,13 +5,13 @@ no positivity is claimed in the finite read
 PASS 01 STAR         star is an involution, star fixes every Born norm, star(X) = X^7
 PASS 02 BORN-UNITS   the Born unit group of A_8 is cyclic of order 24; zeta_8 has order 8
 PASS 03 HALF-ANGLE   (1 + u)^2 = u N_B(1 + u) on all 24 Born units
-PASS 04 NORM-GATE    the bisector norm has a star fixed root exactly on the squares of the unit group (12 of 24); zeta_8 is ungated: its halving forces the quadratic step
-PASS 05 BISECTOR     on every gated Born unit except -1 (11 units): H = (1 + u)/r has H^2 = u and N_B(H) = 1
+PASS 04 NORM-GATE    the bisector norm has a star fixed root exactly on the squares of the unit group (12 of 24; at the antipode the root is 0); zeta_8 is ungated: its halving forces the quadratic step
+PASS 05 BISECTOR     the normalized bisector exists exactly on the 11 non antipodal gated units (H^2 = u, N_B(H) = 1); at u = -1 the bisector vanishes: the only square root of its norm is 0, not invertible
 PASS 06 SPLIT-8      x^4 + 1 = (x^2 + 2)(x^2 + 3) mod 5; inversion swaps the two factors
 PASS 07 SPLIT-4      x^2 + 1 = (x - 2)(x - 3) mod 5; conjugation swaps the two roots
 PASS 08 SPIN-Z       B^2 = -I, B^4 = I, det(1 - B) = 2, (1 - B)^2 = -2 B over Z
 PASS 09 SPIN-F25     R = (1 - B)/sqrt2 in SL_2(F_25): det R = 1, R^2 = -B, R^4 = -I, R^8 = I
-PASS 10 STAIRCASE    4 | 4; 8 not | 4, 8 | 24; 16 not | 24, 16 | 624; two quadratic steps
+PASS 10 STAIRCASE    4 | 4; 8 not | 4, 8 | 24; 16 not | 4, 16 not | 24, 16 not | 124, 16 | 624; two quadratic steps
 PASS 11 WITNESSES    order 8 first at F_25 (x, x^2 = -2); order 16 first at F_625 (y, y^4 = 2); both moduli irreducible
 
 RESULT 11/11 ALL PASS

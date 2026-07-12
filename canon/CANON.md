@@ -339,9 +339,11 @@ The Born quartet [T], reproduce/born-quartet. The Born unit group of
 the read place residual algebra A_8 = Z[zeta_8]/5 is cyclic of order
 24, and the unit square root of a phase is the Born normalized
 bisector: (1 + u)^2 = u N_B(1 + u) on every Born unit; the bisector
-normalizes to a unit square root exactly on the norm gated half, the
-squares of the unit group, and zeta_8 itself is ungated, so its
-halving forces the quadratic step (BORN-HALF-ANGLE). The Born faithful
+normalizes to a unit square root exactly on the 11 non antipodal
+units of the norm gated half, the squares of the unit group (at
+u = -1 the bisector vanishes, so normalization is undefined there);
+zeta_8 itself is ungated, so its halving forces the quadratic step
+(BORN-HALF-ANGLE). The Born faithful
 residuals are A_4 = Z[i]/5 and A_8 = Z[zeta_8]/5, split rings whose
 two factors are swapped by conjugation, the Born involution
 (BORN-RESIDUAL-SPLIT). The quarter turn spinor is R = (1 - B)/sqrt2
@@ -349,8 +351,9 @@ with det R = 1, carried exactly as det(1 - B) = 2 and (1 - B)^2 = -2 B
 over Z and as an order 8 element of SL_2(F_25), the finite shadow of
 the double cover (SPIN-BISECTOR). Each Born halving is one quadratic
 step: the staircase of root orders 4 -> 8 -> 16 is first realized at
-F_5 -> F_25 -> F_625, gated by the square condition on the bisector
-norm (BORN-ORDER-STAIRCASE). No positivity is claimed in the finite
+F_5 -> F_25 -> F_625, with minimality against every smaller degree
+(16 divides none of 4, 24, 124), gated by the square condition on the
+bisector norm (BORN-ORDER-STAIRCASE). No positivity is claimed in the finite
 read: probabilities are the decoder step.
 
 The measure is the Born square of the verb [D, with eight exact

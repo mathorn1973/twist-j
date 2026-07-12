@@ -180,8 +180,9 @@ def main():
     ok = (gated == squares and len(gated) == 12
           and X8 not in gated)
     check("NORM-GATE    the bisector norm has a star fixed root exactly"
-          " on the squares of the unit group (12 of 24); zeta_8 is"
-          " ungated: its halving forces the quadratic step", ok)
+          " on the squares of the unit group (12 of 24; at the antipode"
+          " the root is 0); zeta_8 is ungated: its halving forces the"
+          " quadratic step", ok)
 
     # 05 the normalized bisector witness on the whole gated half
     ok = True
@@ -210,9 +211,15 @@ def main():
             ok = False
         else:
             count += 1
-    ok = ok and count == 11
-    check("BISECTOR     on every gated Born unit except -1 (11 units):"
-          " H = (1 + u)/r has H^2 = u and N_B(H) = 1", ok)
+    zero = (0, 0, 0, 0)
+    nilpotents = [r for r in a8_all() if a8_mul(r, r) == zero]
+    anti = (nilpotents == [zero]
+            and all(a8_mul(zero, w) != ONE8 for w in a8_all()))
+    ok = ok and count == 11 and anti
+    check("BISECTOR     the normalized bisector exists exactly on the 11"
+          " non antipodal gated units (H^2 = u, N_B(H) = 1); at u = -1"
+          " the bisector vanishes: the only square root of its norm is"
+          " 0, not invertible", ok)
 
     # 06 the residual split at prime 2, conductor 8
     lhs = poly_mul([2, 0, 1], [3, 0, 1])          # (x^2+2)(x^2+3)
@@ -267,10 +274,11 @@ def main():
 
     # 10 the staircase divisibilities and the two quadratic steps
     ok = (4 % 4 == 0 and 4 % 8 != 0 and 24 % 8 == 0
-          and 24 % 16 != 0 and 624 % 16 == 0
+          and 4 % 16 != 0 and 24 % 16 != 0 and 124 % 16 != 0
+          and 624 % 16 == 0
           and 25 == 5 ** 2 and 625 == 25 ** 2)
-    check("STAIRCASE    4 | 4; 8 not | 4, 8 | 24; 16 not | 24,"
-          " 16 | 624; two quadratic steps", ok)
+    check("STAIRCASE    4 | 4; 8 not | 4, 8 | 24; 16 not | 4, 16 not |"
+          " 24, 16 not | 124, 16 | 624; two quadratic steps", ok)
 
     # 11 explicit witnesses of orders 8 and 16, with irreducibility
     x = (0, 1)
