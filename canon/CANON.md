@@ -298,9 +298,13 @@ above are one formula; no independent L value enters the alpha sector;
 the prefactor reads (1 + J Jbar)^(1/4): the gravity modulus inside the
 electromagnetic number.
 
-Weinberg: sin^2 theta_W = 3/13 + 1/(32 pi^2 phi^4); the tree value
-3/13 = deg_f / (V + 1). All seven standard model hypercharges follow
-from Y_F = (B - L) + 2 T_3^R; B_quark = 1/3 = 1/dim ker(Tr). alpha is
+Weinberg (WEINBERG-FORM at D on the exact layer WEINBERG-TREE and
+HYPERCHARGE-LAW at T; reproduce/weinberg): sin^2 theta_W = 3/13 +
+1/(32 pi^2 phi^4), the committed form with its comparison fenced; the
+tree value 3/13 = deg_f / (V + 1) with deg_f = Tr(J) = 3 and
+V = 12 = d(d + 1). All seven standard model hypercharges follow
+from Y_F = (B - L) + 2 T_3^R; B_quark = 1/3 = 1/dim ker(Tr), the
+trace kernel of dimension 3. alpha is
 built from L and X, both pi even, hence delta free (section 7).
 
 ## 7. The mass ladder and the parity law

@@ -25,9 +25,9 @@ with a reason in the audit and queued here, never registered vaguely.
 ## Queue before the synthesis PR opens
 
 1. Registry completion, cluster by cluster, each with evidence:
-   Weinberg (next), Maxwell closure, alpha value (needs a high
-   precision exact reproduction), cosmology register, coupling and
-   metrology arc.
+   Maxwell closure (next), alpha value (needs a high precision
+   exact reproduction), cosmology register, coupling and metrology
+   arc.
 2. Deepen sections 14 and 15 from the sealed arc part bodies at the
    internal basis (they are stated here at frontier resolution).
 3. Reconciliation audit rows for every added claim.
@@ -85,8 +85,28 @@ immutable GitHub candidate commit, through the Phase A staging
 protocol in AGENTS.md; both architecture records are pending at the
 candidate commit.
 
+Weinberg staging candidate: verifier cdff7689 and stdout eaeb163e,
+6/6, exit 0, empty stderr in the pre-pin dry run, byte identical on
+x86_64 and aarch64. Formal records begin only after the immutable
+GitHub candidate commit, through the Phase A staging protocol in
+AGENTS.md; both architecture records are pending at the candidate
+commit.
+
 ## Session log
 
+- s7 (2026-07-12): the Weinberg candidate: reproduce/weinberg
+  (6/6: the face degree deg_f = Tr(J) = 3 on the power basis; the
+  trace kernel of dimension 3 over Q and 125 = 5^3 points over F_5 by
+  full enumeration, so B_quark = 1/3 = 1/dim ker(Tr); the tree value
+  3/13 = deg_f/(V + 1) with V = 12 = d(d + 1) by two routes; the
+  hypercharge law reproducing all seven standard model hypercharges
+  exactly; the correction term phi^-4 = 5 - 3 phi, exactly positive,
+  over 32 = 2^5; the parity of the committed form, pi even and delta
+  free, with the single positive correction above the tree value at
+  the form level). Three registry rows: WEINBERG-TREE T,
+  HYPERCHARGE-LAW T, WEINBERG-FORM D (comparison fenced); registry 86
+  claims. The audit omissions no longer list Weinberg. The cluster
+  enters GitHub staging through the Phase A protocol.
 - s6 (2026-07-12): the mass ladder candidate:
   reproduce/mass-ladder (8/8: the shared coefficient 89/5 = 18 - 1/p
   with 240 C = 4272; the exact exchange identity in Q, identically and

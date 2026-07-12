@@ -117,6 +117,12 @@ PARITY-LAW                     the SS-DELTA parity law and register
                                census (Part VI)                     T
 BRIDGE-DEFECT                  the SS-DELTA bridge defect and the
                                exact bridges (Part VI)              T
+WEINBERG-TREE                  the Part V Weinberg block, exact
+                               layer (T); the counting chain ties    T
+HYPERCHARGE-LAW                the Part V hypercharge law and the
+                               trace kernel dimension (T)            T
+WEINBERG-FORM                  the Part V committed form (D at the
+                               dictionary; comparison fenced)        D
 METRO-ADMISSIBILITY            O-METRO-ADMISSIBILITY residual       O
 METRO-EDGE-SCALE               O-METRO-EDGE-SCALE + SI clause       O
 LORENTZ-A2A3                   O-LORENTZ-A2A3                       O
@@ -153,7 +159,7 @@ PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
 derivation): the hyperplane and codec claims;
-Weinberg; the Maxwell closure; the alpha value
+the Maxwell closure; the alpha value
 comparison; the cosmology register (w, Omega_b, dark matter ratio,
 gyron density); the coupling and metrology arc theorems. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author

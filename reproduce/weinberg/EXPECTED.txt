@@ -1,0 +1,12 @@
+TWIST-J Weinberg witness (exact arithmetic, formal pi)
+sin^2 theta_W = 3/13 + 1/(32 pi^2 phi^4); the tree value is 3/13 = deg_f/(V + 1)
+Y_F = (B - L) + 2 T_3^R; B_quark = 1/3 = 1/dim ker(Tr); no value is claimed beyond the committed form
+
+PASS 01 TRACE-D      on the power basis of Z[zeta_5]: Tr(1) = 4 and Tr(zeta^m) = -1 for m = 1..4, so Tr(J) = Tr(1 + zeta^2) = 3 = d = deg_f: the face degree is the trace of the axiom
+PASS 02 KERNEL       the trace kernel has dimension 3: three explicit independent kernel vectors of rank 3 over Q, the functional is nonzero (Tr(1) = 4), and over F_5 the kernel has exactly 125 = 5^3 points by full enumeration; B_quark = 1/3 = 1/dim ker(Tr)
+PASS 03 TREE         V = 12 = d(d + 1) by the two agreeing routes (the counting route and Tr(J)(Tr(J) + 1)); the tree value is 3/13 = deg_f/(V + 1) with V + 1 = 13 and gcd(3, 13) = 1
+PASS 04 HYPERCHARGE  Y_F = (B - L) + 2 T_3^R reproduces all seven standard model hypercharges exactly in Q: the quark doublet 1/3, u_R 4/3, d_R -2/3, the lepton doublet -1, nu_R 0, e_R -2, and the Higgs 1; the quark baryon number 1/3 is 1/dim ker(Tr)
+PASS 05 CORRECTION   phi^-4 = (2 - phi)^2 = 5 - 3 phi = (7 - 3 sqrt5)/2 exactly in Q(sqrt5), positive since 49 > 45, and phi^-4 phi^4 = 1; the committed form sin^2 theta_W = 3/13 + (1/32) pi^-2 phi^-4 has exactly two monomials: the tree value and the single correction rung over 32 = 2^5
+PASS 06 PARITY-EVEN  every pi degree of the Weinberg entry is even ({0, -2}), so sin^2 theta_W is pi even and delta free on the parity register, and the single correction is exactly positive: the form exceeds the tree value 3/13 at the form level; the measured comparison stays a fenced witness outside this file
+
+RESULT 6/6 ALL PASS
