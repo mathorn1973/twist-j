@@ -8,9 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 MAX_BYTES = 5 * 1024 * 1024
 
 ALLOWED_ROOT = {
-    ".github", ".gitignore", "AGENTS.md", "LICENSE", "POLICY.md",
-    "README.md", "STATUS.md", "canon", "data", "legacy", "notes",
-    "probes", "reproduce", "tools",
+    ".gitattributes", ".github", ".gitignore", "AGENTS.md", "LICENSE",
+    "POLICY.md", "README.md", "STATUS.md", "canon", "data", "legacy",
+    "notes", "probes", "reproduce", "tools",
 }
 FORBIDDEN_SUFFIXES = {
     ".bak", ".bin", ".dll", ".dylib", ".env", ".exe", ".jam", ".key",
@@ -48,7 +48,11 @@ for field in ("STATE:", "CANON:", "AUTHORITY:", "CUTOVER:"):
 probes = ROOT / "probes"
 if probes.exists():
     for probe in sorted(path for path in probes.iterdir() if path.is_dir()):
-        for required in ("PREREG.md", "verify.py"):
+        if not probe.name.startswith("P-"):
+            fail(f"probe directory must start P-: {probe.name}")
+        for required in (
+            "PREREG.md", "verify.py", "EXPECTED.txt", "RUN.md", "RESULT.md"
+        ):
             if not (probe / required).is_file():
                 fail(f"{probe.name} lacks {required}")
 
