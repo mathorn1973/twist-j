@@ -21,7 +21,12 @@ jobs:
         with:
           python-version: "3.12"
       - run: python tools/check_policy.py
-      - name: Reproduce changed verifiers
+      - run: python tools/check_canon.py
+      - name: Reproduce changed public probes
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: python tools/check_verifier.py --base "$BASE_SHA"
+      - name: Reproduce changed minimal reproductions
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: python tools/check_reproduce.py --base "$BASE_SHA"
