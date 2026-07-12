@@ -67,6 +67,9 @@ Plenum and kernel:
 - CODEC-RATE-SCOPE  the rate 4/5 clause of the internal codec seal,
   held open without a public claim until its precise coding scope is
   reconstructed from the sealed basis or the clause is struck.
+- KERNEL-CONNECT-ALL-K  for every k >= 2 the set {a, c, d, e} with
+  the two way CSUM ring coupling connects (F_5^6)^k into one
+  component; the k = 2 and k = 3 witnesses live at the sealed scope.
 
 Measure:
 

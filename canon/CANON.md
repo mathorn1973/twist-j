@@ -203,6 +203,32 @@ clause, rate 4/5 exact, whose precise coding scope is not yet
 reconstructed publicly; the clause is held open and unclaimed
 (CODEC-RATE-SCOPE [O]).
 
+Macro space is the coupled kernel. Cells couple on the entanglement
+axis by the two way CSUM transvections, and the wedge
+w_ij = x0_i x1_j - x0_j x1_i is the inter cell symplectic area. The
+structure is exact (KERNEL-WEDGE-AFFINITY [T], KERNEL-WEDGE-COUPLING
+[T], KERNEL-WEDGE-LINEAR-STRATA [T], KERNEL-WEDGE-AFFINE-MIX [T],
+reproduce/kernel-connectivity): every generator is affine,
+g(x) = M_g x + v_g with det M_g = 1, a and b linear, c, d, e strictly
+affine; the two transvections generate SL2(F_5), order 120, the group
+of the color door bridge, preserving all 15 wedges; the linear sector
+acts by congruence W -> M_g W M_g^T and preserves the wedge rank
+strata, with rank 0 exactly on dependent pairs; only the affine
+translations cross strata, lifting exactly 62480 of the 78125
+dependent pairs each for c, d, and e, and none for a or b. The single
+cell component census over all seventeen recorded generator subsets
+is exact (KERNEL-CELL-COMPONENTS [C], reproduce/kernel-connectivity),
+from {ac} at 945 components down to the full verb {abcde} at 1: one
+cell is connected by the five letters alone. Connected macro space is
+the affine translational sector breaking inter cell symplectic
+parallelism, organized by the SL2(F_5) coupling, with the wedge
+automorphism a completing transitivity (KERNEL-MACRO-READING [D]);
+this refines the commutator reading of space. The sealed corpus
+carries the k = 2 theorem that the minimal connecting set is
+{a, c, d, e} and the k = 3 full enumeration, both at internal scope
+beyond the public budget; publicly the all k statement is a live
+hypothesis with its falsifier (KERNEL-CONNECT-ALL-K [H]).
+
 ## 4. The two places
 
 The framework lives at two arithmetic places, disjoint over Q:
@@ -802,6 +828,10 @@ PLENUM AND KERNEL
                              seal, held open until its precise coding
                              scope is reconstructed or the clause is
                              struck
+  KERNEL-CONNECT-ALL-K       {a, c, d, e} with the two way CSUM ring
+                             coupling connects every (F_5^6)^k; the
+                             k = 2 and k = 3 witnesses live at the
+                             sealed scope
 MEASURE
   QUADRATIC-ENVELOPE-DECODER the full decoder carrier hypothesis
   TM-SYM2-MEASURE            the symmetric square measure; residual the

@@ -215,6 +215,20 @@ CODEC-RATE-SCOPE               the rate 4/5 clause of T-CODEC-TR4;
 PHIBIT-NOT-TAU                 F-PHIBIT-NOT-TAU (the v122
                                corrigendum); carried at F with the
                                finite fusion ring boundary inline    F
+KERNEL-WEDGE-AFFINITY          T-O17-WEDGE.1 (T, machine verified
+                               both architectures); carried at T     T
+KERNEL-WEDGE-COUPLING          T-O17-WEDGE.2 (T); carried at T       T
+KERNEL-WEDGE-LINEAR-STRATA     T-O17-WEDGE.3 (T); carried at T       T
+KERNEL-WEDGE-AFFINE-MIX        T-O17-WEDGE.4 (T); carried at T       T
+KERNEL-CELL-COMPONENTS         the single cell battery of the O17
+                               connectivity patch (C); carried at C  C
+KERNEL-MACRO-READING           D-O17-READING (D); carried at D       D
+KERNEL-CONNECT-ALL-K           H-O17-MIN-ALL-K (H); T-O17-MIN (k = 2,
+                               exact table) and C-O17-K3 with
+                               C-O17-K3-MIN (k = 3, single platform,
+                               1332 GiB engine) stay internal at the
+                               sealed scope; F-O17-MIN-3SUBSET stands
+                               as an internal guard                  H
 ```
 
 ## Intentional omissions so far (to be resolved before the PR)
@@ -230,10 +244,11 @@ decision: an optional enrichment, not a gap; stays internal);
 W1-INTERFACE-PRINCIPLE, KERNEL-BRAID, and TIMEQUANTUM-POTENTIAL
 (deferred: no faithful public decision condition is stated yet; each
 returns only with a concrete falsifier or decision condition). The
-internal O17 residual is now admissible: the sealed connectivity
-patches state a concrete falsifier (the all k hypothesis with its
-k >= 4 fragmentation test); it is queued as the kernel connectivity
-cluster. No claim is silently dropped. Each candidate is registered,
+internal O17 residual is resolved by the kernel connectivity
+cluster: the structure rows carried at T, the census at C, the
+reading at D, and the all k hypothesis registered live with its
+concrete falsifier; T-O17-MIN and the k = 3 counts stay internal at
+the sealed scope (single platform, beyond the public budget). No claim is silently dropped. Each candidate is registered,
 conservatively lowered, rewritten as non-claim material, or
 explicitly omitted with a reason. The queue is
 notes/synthesis-canon-v1.md.

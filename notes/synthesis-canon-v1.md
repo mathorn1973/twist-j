@@ -34,9 +34,9 @@ with a reason in the audit and queued here, never registered vaguely.
    falsifier or decision condition: W1-INTERFACE-PRINCIPLE,
    KERNEL-BRAID, TIMEQUANTUM-POTENTIAL (recon 2026-07-12: bare names
    in the sealed corpus, no honest condition available, stay
-   internal); the internal O17 residual is admissible via the sealed
-   connectivity patches and is queued as the kernel connectivity
-   cluster.
+   internal); the internal O17 residual is RESOLVED by the kernel
+   connectivity cluster (structure T, census C, reading D, the all k
+   hypothesis live with its falsifier).
 5. The pre PR inventory: sweep the Canon for every status-labelled
    statement without a registry identifier (grep for bracketed
    labels); each gets an identifier and registration, becomes a
@@ -130,6 +130,21 @@ commit.
 
 ## Session log
 
+- s13 (2026-07-12): the kernel connectivity cluster from the sealed
+  O17 patches: reproduce/kernel-connectivity (7/7: affinity split
+  with det 1 on all five generators; the CSUM wedge identity in 12
+  variables; the coupling closure SL2(F_5) order 120 equal to the
+  full determinant one count; congruence on 36 basis pairs; the rank
+  dichotomy 5 + 15620 on the slice; the affine mix 62480 of 78125 for
+  c, d, e and 0 for a, b; the seventeen subset census with
+  monotonicity). Seven registry rows: four wedge structure rows at T,
+  the component census at C, the macro reading at D, and
+  KERNEL-CONNECT-ALL-K at H with the k >= 4 fragmentation falsifier;
+  the k = 2 minimal set theorem and the k = 3 enumeration stay
+  internal at the sealed scope. Registry 120 claims. Both platform
+  dry runs byte identical before the pin: verifier 87ba627e and
+  stdout 64d0a05d (2243 bytes), Ubuntu 24.04 aarch64 (Python 3.12.3)
+  and Debian 13 x86_64 (Python 3.13.5), exit 0, empty stderr.
 - s12 (2026-07-12): the hyperplane-codec micro cluster:
   reproduce/hyperplane-codec (8/8: the boundary class by full
   enumeration, |M| = 6250, |S| = 1250, complement 5000 in sheets of
