@@ -393,31 +393,38 @@ every step, closure pair (5, 10), R^5 = -I; the pivot is
 eight exhaustive laws; the signature families obey an involution law
 with 13 at its center.
 
-The Dirac ladder closes [D at the ladder, T at the theorem layer]:
+The Dirac ladder closes [DIRAC-LADDER at D, the theorem layer at T;
+reproduce/dirac-ladder]:
 
 ```
 G1  u = 2 phi^n, v = 2 phi^-n, u v = 4      the light cone           [T]
+    (LADDER-LIGHTCONE)
 G2  N(phi) = -1                             the spinor floor         [T]
+    (SPINOR-FLOOR)
 G3  the ladder root is the cat map carrier: F^2 = C over Z; mod 5 one
     Jordan block; towers of order 20 = 4p and 10 = 2p, -I at half    [D, T]
+    (FIB-ROOT-CARRIER at D on the exact ties FIB-ROOT-TIES at T)
 G4  D_J(m) = S (I + i m X), zero free parameters: streaming is the
     counter, the coin modulus is the rest rung, the phase i is the
     plenum ellipticity; massless is the one sided shift; det = 1 + m^2
     = 5 for the electron; the mass shell is exact; the rest coin has
     infinite order                                                   [D, T]
+    (DIRAC-STEP at D on the theorem layer DIRAC-STEP-THEOREMS at T)
 G5  the ladder Z_2 (conductor 5) and the spin Z_2 (conductor 8) are
-    distinct place attached Galois involutions                       [T]
+    distinct place attached Galois involutions (LADDER-SPIN-PLACES)  [T]
 ```
 
-The checkerboard between the rungs is a Gaussian tower [D, T]: one
-binomial pair per case; the diagonal lives in Z with pair weight -4,
-the cross in iZ; the totals are (1 + 2i)^n with recursion
+The checkerboard between the rungs is a Gaussian tower [D at the
+reading, within DIRAC-LADDER; T at the tower, CHECKERBOARD-GAUSS-TOWER]:
+one binomial pair per case; the diagonal lives in Z with pair weight
+-4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. The eta naming clause stays a remark; only its
 named gate can move it (ETA-ALTERNATOR-BRIDGE). The fermionizer
-Phi_f(s) = 1 - 2^(1-s) [T]: the two that makes matter out of light.
-One beat is one boost times one alternator tick [T]; the alternator is
-breath at one scale and Thue-Morse at every scale [T].
+Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
+out of light. One beat is one boost times one alternator tick
+(LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
+and Thue-Morse at every scale (TM-BREATH-TOWER) [T].
 
 ## 10. Relativity as counting
 

@@ -25,10 +25,9 @@ with a reason in the audit and queued here, never registered vaguely.
 ## Queue before the synthesis PR opens
 
 1. Registry completion, cluster by cluster, each with evidence:
-   Dirac ladder theorem layer (next), color ladder
-   rungs, gravity chain, mass ladder, Weinberg, Maxwell closure,
-   alpha value (needs a high precision exact reproduction), cosmology
-   register, coupling and metrology arc.
+   color ladder rungs (next), gravity chain, mass ladder, Weinberg,
+   Maxwell closure, alpha value (needs a high precision exact
+   reproduction), cosmology register, coupling and metrology arc.
 2. Deepen sections 14 and 15 from the sealed arc part bodies at the
    internal basis (they are stated here at frontier resolution).
 3. Reconciliation audit rows for every added claim.
@@ -58,8 +57,27 @@ empty stderr; check_policy and check_canon (with the frontier
 identifier parser) pass on that platform (2026-07-12). Author platform
 Ubuntu 24.04 aarch64 (Python 3.12.3), same result.
 
+Recorded at the Dirac ladder push: verifier 3240d355 and stdout
+2f8d2036 byte identical on Ubuntu 24.04 aarch64 (Python 3.12.3) and
+Debian 13 x86_64 (Python 3.13.5), 16/16, exit 0, empty stderr, both
+runs recorded before the commit (2026-07-12).
+
 ## Session log
 
+- s3 (2026-07-12): the Dirac ladder cluster:
+  reproduce/dirac-ladder (16/16: the light cone pair with Pell parity;
+  the spinor floor with the quartic irreducibility and the odd rung
+  witness; the Fibonacci root with its Z conjugacy to the modulus
+  carrier, the mod 5 towers with -I at half period, the J_4(2) Jordan
+  block and an explicit 1-jet conjugator; the step form with
+  coefficient set {1, i m}; the exact invariants, the mass shell, the
+  rest coin of infinite order; the two distinct places with the
+  Gaussian place swap; the checkerboard skeleton and Gauss tower; the
+  fermionizer; the beat factorization; the Thue-Morse breath tower);
+  twelve registry rows, 9 T and 3 D (the dictionary layer of the
+  ladder enters at D, the first derived grade rows of the public
+  registry); registry 60 claims; the audit omissions no longer list
+  the Dirac ladder.
 - s2a (2026-07-12): Born layer closed by three review fixes from the
   author: the half angle scope no longer counts the antipode (the
   normalized bisector exists exactly on the 11 non antipodal gated

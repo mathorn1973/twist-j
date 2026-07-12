@@ -1,0 +1,22 @@
+TWIST-J Dirac ladder witness (exact integer arithmetic)
+D_J(m)(z) = S(z)(I + i m X); electron m = 2 from u v = 4; det = 1 + m^2 = 5 = p
+the ladder dictionary is read at D; its theorem layer is verified here
+
+PASS 01 LIGHTCONE    u = 2 phi^n, v = 2 phi^-n: u v = 4 exactly, one tick is u -> phi u and v -> v / phi, conjugation swaps the legs with sign (-1)^n (n <= 60); 2 phi^n = L_n + sqrt5 F_n and L^2 - 5 F^2 = 4 (-1)^n (n <= 200)
+PASS 02 SPINOR-FLOOR N(phi) = -1; the alternator is N(phi^n) = (-1)^n; even rungs halve inside Q(sqrt5); odd rungs do not: x^4 - x^2 - 1 is irreducible over Q and phi^3 = 2 + sqrt5 is not a square in Q(sqrt5)
+PASS 03 FIB-ROOT     det Fm = -1 = N(phi); Fm^2 = [[2,1],[1,1]] the cat map, P-conjugate over Z to the modulus carrier [[2,-1],[-1,1]] with P = diag(1,-1); x^2 - x - 1 squares onto the boost polynomial x^2 - 3x + 1; Fibonacci powers carry Cassini det (-1)^n and Lucas trace (n <= 30)
+PASS 04 TOWERS       mod 5 the towers close: ord(Fm) = 20 = 4p with Fm^10 = -I; ord(Fm^2) = 10 = 2p with (Fm^2)^5 = -I; the modulus carrier closes at 10 with -I at 5; ord(M_J) = 20 with M_J^10 = -I: -I sits at half period on every member
+PASS 05 JET          charpoly(M_J) = x^4 - 3x^3 + 4x^2 - 2x + 1, confirmed by Cayley-Hamilton over Z; mod 5 it is (x - 2)^4 with ranks of (M_J - 2I)^k equal to 3, 2, 1, 0: one Jordan block J_4(2); residues J = 2 and J^-1 = 3, the two square roots of -1; an explicit g in GL_2(F_5) conjugates Fm to the 1-jet [[3,0],[2,3]]
+PASS 06 STEP-FORM    D_J(m)(z) = S(z)(I + i m X) has entries {z^-1, i m z^-1, i m z, z} with coefficient set {1, i m}: no continuous parameter; massless is the one sided shift diag(z^-1, z); the mass insertion i m S X is purely off diagonal
+PASS 07 INVARIANTS   trace = z + z^-1, mass free; det = 1 + m^2, momentum free: electron det = 5 = p, photon det = 1; disc = (z - z^-1)^2 - 4 m^2 as an exact Laurent identity
+PASS 08 MASS-SHELL   Ehat^2 - phat^2 = m^2 exactly for every z, as the Laurent identity (z - z^-1)^2 - disc = 4 m^2; the photon closes the light cone at m = 0; the band reads Ehat^2 = 4 = u v at z = 1 and Ehat^2 = 5 = det = p at z = i
+PASS 09 REST-COIN    the rest coin I + 2iX: trace 2 = L_0, eigenvalues 1 +- 2i with sum 2 and product 5, charpoly x^2 - 2x + 5; (I + 2iX)^2 = -3I + 4iX on the 3-4-5 triple; (-3 + 4i)/5 is not an algebraic integer and the only roots of unity in Q(i) are 1, -1, i, -i: the unitarized rest coin has infinite order
+PASS 10 PLACES       chi5 (conductor 5, the sqrt5 place) and chi8 (conductor 8, the sqrt2 place) differ at the witnesses 7 and 23; gcd(5, 8) = 1 and none of 2, 5, 10 is a square, so sqrt2 is not in Q(sqrt5): the ladder Z_2 and the spin Z_2 are distinct place attached Galois involutions
+PASS 11 PLACE-SWAP   5 = (2 + i)(2 - i) in Z[i]; i = 3 mod (2 + i) and i = 2 mod (2 - i): the inverse fourth root datum is a place choice; conjugation swaps the primes above 5 and the rest eigenvalues 1 +- 2i: charge conjugation is the place swap; det family: boost -1 = N(phi), photon 1, electron 5 = N(1 + 2i)
+PASS 12 SKELETON     the reversal parity law R = [s != s0] mod 2 on every path; one binomial pair per case equals the exhaustive census (n <= 10, both starts); the transition census is C(n, R), so the sum of t^R over paths is (1 + t)^n exactly
+PASS 13 GAUSS-TOWER  the totals are (1 + 2i)^n with the diagonal in Z and the cross in iZ (n <= 8, both starts); the tower obeys x^2 - 2x + 5 with c^2 + d^2 = 5^n (n <= 20); zone edges at z = i: the electron step squares to -5I, the photon step to -I
+PASS 14 FERMIONIZER  Phi_f(s) = 1 - 2^(1-s): the bit Phi_f(1) = 0, the duty cycle Phi_f(2) = 1/2, the stalemate Phi_f(0) = -1, the Mersenne form (2^(s-1) - 1)/2^(s-1) at even s; Phi_f(-5) = -63 = -(2^6 - 1); zeta(-5) = -1/252 and eta(-5) = Phi_f(-5) zeta(-5) = 1/4
+PASS 15 BEAT         one beat is one boost times one alternator tick: STEP = B_J A = A B_J with A^2 = I, STEP^2 = B_J^2, det STEP = -1 = N(phi), det B_J = 1; the invariant E^2 - P^2 = 4 a b (-1)^n exactly, 7 amplitude pairs (n <= 60); at a = b = 1 the readings are L_n and sqrt5 F_n and the balanced shell reads m = 2a
+PASS 16 TM-BREATH    t(2n) = t(n) and t(2n+1) = 1 - t(n) with the alternator factorization (-1)^t(n) = (-1)^n (-1)^t(n div 2) below 2^16; aligned dyadic blocks and prefixes cancel; sliding cancellation forces the pure breath s(0) (-1)^n and Thue-Morse breaks it at s(1) + s(2) = -2; prod(1 - x^(2^k)) matches (-1)^t(n) below 2^13: breath at one scale, TM at every scale
+
+RESULT 16/16 ALL PASS

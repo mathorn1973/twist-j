@@ -53,6 +53,22 @@ BORN-RESIDUAL-SPLIT            T-BORN-RESIDUAL-SPLIT (T-LOCK)       T
 SPIN-BISECTOR                  T-SPIN-BISECTOR (T-LOCK); finite
                                shadow scope, no positivity          T
 BORN-ORDER-STAIRCASE           T-BORN-ORDER-STAIRCASE (T-LOCK)      T
+DIRAC-LADDER                   O-DIRAC-LADDER closed at D; the
+                               checkerboard [D] reading             D
+LADDER-LIGHTCONE               T-LADDER-LIGHTCONE (T)               T
+SPINOR-FLOOR                   T-SPINOR-FLOOR (T)                   T
+FIB-ROOT-TIES                  T-FIB-ROOT-NORM, T-FIB-ROOT-JET (T)  T
+FIB-ROOT-CARRIER               D-FIB-ROOT-CARRIER (D)               D
+DIRAC-STEP-THEOREMS            T-DIRAC-STEP-INVARIANTS, -GENERATOR,
+                               T-REST-COIN-INFINITE-ORDER (T)       T
+DIRAC-STEP                     D-DIRAC-STEP (D)                     D
+LADDER-SPIN-PLACES             PLACE-ID PASS-B (T); the fired
+                               F-LADDER-SIGN-IS-SPIN boundary       T
+CHECKERBOARD-GAUSS-TOWER       T-CHECKERBOARD-SKELETON,
+                               -ALTERNATOR-SPLIT, -GAUSS-TOWER (T)  T
+FERMIONIZER                    T-FERMIONIZER (T)                    T
+LADDER-ALTERNATOR-BASIS        T-LADDER-ALTERNATOR-BASIS (T)        T
+TM-BREATH-TOWER                T-TM-BREATH-TOWER (T)                T
 METRO-ADMISSIBILITY            O-METRO-ADMISSIBILITY residual       O
 METRO-EDGE-SCALE               O-METRO-EDGE-SCALE + SI clause       O
 LORENTZ-A2A3                   O-LORENTZ-A2A3                       O
@@ -89,8 +105,7 @@ PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
 derivation): the hyperplane and codec claims;
-the Dirac ladder theorem layer; the color ladder
-rungs; the gravity chain (capacity, FRW coefficients, bridge law); the
+the color ladder rungs; the gravity chain (capacity, FRW coefficients, bridge law); the
 mass ladder values; Weinberg; the Maxwell closure; the alpha value
 comparison; the cosmology register (w, Omega_b, dark matter ratio,
 gyron density); the coupling and metrology arc theorems. Explicitly omitted
