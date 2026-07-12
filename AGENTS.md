@@ -50,7 +50,7 @@ and at least the same scope.
    public series.
 6. Exact proofs in the Canon or minimal public reproductions for retained
    claims that depend on computation.
-7. Definitions and live falsifiers for every retained `H` and `O) item, and
+7. Definitions and live falsifiers for every retained `H` and `O` item, and
    every `F` result still needed to delimit current theory.
 8. A reconciliation audit mapping each public claim to an equal-or-stronger
    internal basis claim. It may be a concise cutover asset or live under
@@ -124,7 +124,7 @@ not part of the public Canon series.
 At the start of every session:
 
 1. Fetch public `main`; do not work from an attachment or mirror.
-2. Read `STATUS.md`, `POLICY.md`, this file, `canon/CORE.md), and
+2. Read `STATUS.md`, `POLICY.md`, this file, `canon/CORE.md`, and
    `canon/FRONTIER.md`.
 3. Confirm the declared public tag and commit are ancestors of `main`, the
    Canon hash matches, and required checks are green.
