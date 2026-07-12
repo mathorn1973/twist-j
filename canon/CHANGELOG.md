@@ -3,21 +3,22 @@
 ## Public Canon v1 (candidate)
 
 Genesis entry. Initial public synthesis: the thematic Canon in
-nineteen sections; 94 registered claims (49 theorem grade, of which 46
-carry minimal reproductions and 3 carry inline derivations; 10 derived
+nineteen sections; 99 registered claims (51 theorem grade, of which 48
+carry minimal reproductions and 3 carry inline derivations; 13 derived
 grade, the dictionary layers of the Dirac and color ladders, the SI
 bridge equation layer, the mass ladder forms, the Weinberg form, the
-Maxwell closure reading, and the alpha form, carried by the same
-witnesses as their theorem layers; 5 computed grade, the
+Maxwell closure reading, the alpha form, and the cosmology register
+readings, carried by the same witnesses as their theorem layers; 5 computed grade, the
 kernel census cluster and the alpha value digits, carried by a full
 enumeration witness with closure and stability checks and by an
 exact integer interval enclosure; 1 fired falsifier, the non abelian
 dynamical-color route at the registered scope; 29 live frontier rows,
 each with a concrete falsifier or a decision condition stating what
-closes it positively and what closes it negatively); twelve
+closes it positively and what closes it negatively); thirteen
 reproduction witnesses (kernel, alpha-exact-lemma, born-faces, census,
 born-quartet, dirac-ladder, color-ladder, gravity-chain,
-mass-ladder, weinberg, maxwell, alpha-value); the core,
+mass-ladder, weinberg, maxwell, alpha-value, cosmology-register);
+the core,
 the frontier, the registry, and the citation record. The public series
 starts here; development before this document is outside the normative
 series and is referenced only by the cutover audit.

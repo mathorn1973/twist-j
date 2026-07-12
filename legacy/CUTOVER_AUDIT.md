@@ -135,6 +135,17 @@ ALPHA-FORM                     the Part V Queen block (D at the
                                dictionary; comparison fenced)        D
 ALPHA-VALUE-DIGITS             the Part V committed digit string,
                                enclosed at finite precision          C
+TT-LINEAR-ZERO                 T-TT-LINEAR-ZERO (T-LOCK, v171)      T
+TT-QUADRATIC-INDUCED           D-TT-QUADRATIC-INDUCED-POWER (D)     D
+GYRON-DENSITY                  rho = 1/6 (T-LOCK SS80, SS86.1,
+                               quadruply confirmed); the gyron gate
+                               SS78.1; T-BASEL-TM-GATE (T)           T
+COSMOLOGY-REGISTER             the Part VIII committed register
+                               (w LOCK; the ratio theorem; N clock
+                               at D and C); comparisons fenced       D
+CONFORMAL-PREFACTOR            K_chi5 = K_L5 (D; v183 seal;
+                               O-CHI5-KINETIC-COEF closed at the
+                               homogeneous L5 scope)                 D
 METRO-ADMISSIBILITY            O-METRO-ADMISSIBILITY residual       O
 METRO-EDGE-SCALE               O-METRO-EDGE-SCALE + SI clause       O
 LORENTZ-A2A3                   O-LORENTZ-A2A3                       O
@@ -171,8 +182,7 @@ PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
 derivation): the hyperplane and codec claims;
-the cosmology register (w, Omega_b, dark matter ratio,
-gyron density); the coupling and metrology arc theorems. Explicitly omitted
+the coupling and metrology arc theorems. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author
 decision: an optional enrichment, not a gap; stays internal);
 W1-INTERFACE-PRINCIPLE, KERNEL-BRAID, and TIMEQUANTUM-POTENTIAL

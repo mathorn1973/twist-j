@@ -25,7 +25,7 @@ with a reason in the audit and queued here, never registered vaguely.
 ## Queue before the synthesis PR opens
 
 1. Registry completion, cluster by cluster, each with evidence:
-   cosmology register (next), coupling and metrology arc.
+   coupling and metrology arc (next).
 2. Deepen sections 14 and 15 from the sealed arc part bodies at the
    internal basis (they are stated here at frontier resolution).
 3. Reconciliation audit rows for every added claim.
@@ -104,8 +104,31 @@ the immutable GitHub candidate commit, through the Phase A staging
 protocol in AGENTS.md; both architecture records are pending at the
 candidate commit.
 
+Cosmology register staging candidate: verifier 3cbafabf and stdout
+3c6eb3dc, 7/7, exit 0, empty stderr in the pre-pin dry runs, byte
+identical on x86_64 and aarch64. Built in the prep lane on the
+pre-alpha base and rebased onto the post-alpha synthesis head before
+pinning. Formal records begin only after the immutable GitHub
+candidate commit, through the Phase A staging protocol in AGENTS.md;
+both architecture records are pending at the candidate commit.
+
 ## Session log
 
+- s10 (2026-07-12): the cosmology register prep (non-formal):
+  reproduce/cosmology-register drafted (7/7 in dry runs: the frozen
+  modulus under J -> J e^(i eps), so r = 0 at linear order; the TT
+  quadratic onset det(I + H) - 1 = -|h|^2 with no linear term; the
+  exact Thue-Morse pair census with its substitution recursion and
+  the invariant 6 c_00(4N) - 4N = 6 c_00(N) - N; the gyron gate
+  (0, 0) at rho = 1/6 = 1/(p + 1) with the unique stationary vector
+  (1, 2, 2, 1)/6, so 1/rho = 6 is the proton prefactor; the Basel
+  gate booking f_00 pi^2 = pi^2/6; the register parity, all forms pi
+  even; the conformal chain K_chi5 = 1/(864 pi), c_hom = 1/(72 pi)).
+  Five draft registry rows: TT-LINEAR-ZERO T, TT-QUADRATIC-INDUCED D,
+  GYRON-DENSITY T, COSMOLOGY-REGISTER D, CONFORMAL-PREFACTOR D;
+  registry 99 claims. Built in the prep lane on the pre-alpha base,
+  rebased onto the post-alpha synthesis head with the shared counts
+  re-keyed, and pinned through the Phase A staging protocol.
 - s9 (2026-07-12): the alpha value candidate:
   reproduce/alpha-value (7/7: the prefactor chord 1 + J Jbar = 3 - phi
   = |1 - zeta|^2 in Z[zeta_5]; B_{2,chi5} = 4/5 by the Bernoulli

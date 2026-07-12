@@ -608,20 +608,26 @@ unique; the source is a matter amplitude, rho = rho_0 ell^2. E_total =
 mechanism wall: ell_P / lambda_e = (32/33) alpha^10 / sqrt(g), with
 the exponent identity G_T = alpha^(20 + sigma) (GRAVITY-BRIDGE-LAW).
 
-Cosmology: the tilt is n_s - 1 = -p alpha = -5 alpha at H (NS-TILT,
-falsifier live at CMB-S4). The deformation J -> J e^(i eps) freezes
-the modulus, so r = 0 at linear order about the isotropic background
-[T]; the bilinear TT decoder permits induced tensor power at
-quadratic field order [D]; a numerical r(k) waits on the vector state
-normalization (TT-VECTOR-STATE-NORMALIZATION). Dark energy
-w = -14/15; Omega_b = pi^2 / 200; Omega_DM / Omega_b =
+Cosmology (reproduce/cosmology-register): the tilt is n_s - 1 =
+-p alpha = -5 alpha at H (NS-TILT, falsifier live at CMB-S4). The
+deformation J -> J e^(i eps) freezes the modulus, so r = 0 at linear
+order about the isotropic background (TT-LINEAR-ZERO) [T]; the
+bilinear TT decoder permits induced tensor power at quadratic field
+order (TT-QUADRATIC-INDUCED) [D]; a numerical r(k) waits on the
+vector state normalization (TT-VECTOR-STATE-NORMALIZATION). Dark
+energy w = -14/15; Omega_b = pi^2 / 200; Omega_DM / Omega_b =
 18 p^3 ln^2(phi) / pi^4, and the dark matter ratio 5 : 1 follows from
-Thue-Morse pair statistics; the gyron density rho = 1/6 [T,
-quadruply confirmed]. The conformal mode prefactor K_chi5 =
+Thue-Morse pair statistics (COSMOLOGY-REGISTER at D, the committed
+forms with fenced comparisons); the gyron density rho = 1/6
+(GYRON-DENSITY) [T, quadruply confirmed]: the gyron gate is the
+Thue-Morse pair (0, 0), and 1/rho = 6 = p + 1 is the proton
+prefactor of the mass ladder. The conformal mode prefactor K_chi5 =
 1/(864 pi) is derived at the homogeneous L5 scope from the single
-layer 5 action, with c_hom = 12 K_chi5 = 1/(72 pi) [D]; the
+layer 5 action, with c_hom = 12 K_chi5 = 1/(72 pi)
+(CONFORMAL-PREFACTOR) [D]; the
 inhomogeneous scalar action and the SI clause stay open (FRW-INHOM,
-METRO-EDGE-SCALE). N is the cosmic clock [D, C].
+METRO-EDGE-SCALE). N is the cosmic clock, carried at its committed
+labels within COSMOLOGY-REGISTER.
 
 ## 14. The gravitational wave program
 
