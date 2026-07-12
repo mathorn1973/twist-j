@@ -1,10 +1,25 @@
 ## Scope
 
-Type: `probe | canon | policy | maintenance`
+Type: `probe | canon | synthesis | activation | policy | maintenance`
 
-Probe and layer, if applicable:
+Probe, Canon section, or layer affected:
 
-## Pins
+## Canon synthesis or activation
+
+Complete this section for `synthesis` and `activation` changes.
+
+- Public Canon version:
+- Synthesis content commit:
+- Canon SHA-256:
+- Canon bytes:
+- Registry claim count:
+- Reconciliation audit:
+- Intentional omissions or lowered claims:
+- Status transition: `GENESIS -> GENESIS | GENESIS -> ACTIVE | not applicable`
+
+## Probe pins
+
+Complete this section for probe changes.
 
 - Preregistration commit:
 - Verifier SHA-256:
@@ -16,7 +31,9 @@ Probe and layer, if applicable:
 ## Checks
 
 - [ ] Scope and status are exact.
+- [ ] Canon registry, frontier, citations, and SHA-256 manifest pass, or are not applicable.
+- [ ] Minimal reproductions exit 0 with byte-identical stdout, or are not applicable.
 - [ ] Formal execution followed the public pin.
 - [ ] Fired falsifiers are recorded.
 - [ ] Security review passed.
-- [ ] Required `check` passed.
+- [ ] Required `check` job passed.
