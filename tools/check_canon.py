@@ -189,12 +189,16 @@ missing_frontier = sorted(expected_frontier - frontier_claims)
 if missing_frontier:
     fail("FRONTIER.md lacks live claims: " + ", ".join(missing_frontier))
 
+FRONTIER_ID = re.compile(r"^\s*-\s+([A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+)\b")
 for line in frontier.splitlines():
-    if not re.match(r"^\s*-\s+", line):
+    match = FRONTIER_ID.match(line)
+    if not match:
         continue
-    tokens = [claim for claim in claims if exact_token(line, claim)]
-    if tokens and claims[tokens[0]]["status"].strip() not in {"H", "O"}:
-        fail(f"FRONTIER.md list item starts with closed claim: {tokens[0]}")
+    token = match.group(1)
+    if token not in claims:
+        fail(f"FRONTIER.md lists unregistered identifier: {token}")
+    if claims[token]["status"].strip() not in {"H", "O"}:
+        fail(f"FRONTIER.md list item starts with closed claim: {token}")
 
 sums_path = CANON_DIR / "SHA256SUMS"
 sums: dict[str, str] = {}
