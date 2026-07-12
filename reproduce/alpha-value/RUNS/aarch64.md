@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: 7b05b3d0d7a78485d4af2444f3336ac4873f5fbb
+run_base_commit: 7b05b3d0d7a78485d4af2444f3336ac4873f5fbb
+reproduction: alpha-value
+verifier_sha256: e967e5df82fa06bcf68bcd6c914f6ae25fe79e1a971ede8faf7ccfffe0c6cc17
+expected_sha256: dcf55ac8cf139fe429dda13b1c64468f345c82d7f5c0959e6e807d59d583c694
+command: python3 reproduce/alpha-value/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: dcf55ac8cf139fe429dda13b1c64468f345c82d7f5c0959e6e807d59d583c694
+stdout_bytes: 2350
+stdout_lines: 13
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS
