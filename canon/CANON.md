@@ -305,22 +305,24 @@ built from L and X, both pi even, hence delta free (section 7).
 
 ## 7. The mass ladder and the parity law
 
-With the single SI anchor m_e:
+With the single SI anchor m_e (the committed forms at MASS-LADDER-FORMS,
+D; the theorem layer at T; reproduce/mass-ladder):
 
 ```
-C_mu_tau = 89/5 = 18 - 1/p                                [T]
+C_mu_tau = 89/5 = 18 - 1/p          (MU-TAU-COEFFICIENT)  [T]
 mu_mu  = 2688/13 - (89/5) alpha^2     (+0.042 sigma)      [measured comparison]
 mu_tau = 3477 + 240 (89/5) alpha^2    (-0.011 sigma)      [measured comparison]
 exchange identity: delta mu_tau + 240 delta mu_mu = 0     [T, exact in Q]
+         (MU-EXCHANGE-IDENTITY)
 mu_p   = 6 pi^5 (1 + alpha^2 / 3)     the single bare pi^5, an odd carrier
 mu_n   = mu_p + deg_v / chi - Delta_EM;  the bare neutron at -17.93 ppm
          [measured comparison];  Delta_EM open (NEUTRON-DELTA-EM)
 the electron at the Dirac step:  det = 1 + m^2 = 5 = p
 ```
 
-The parity law: the bridge defect delta = 6 phi^2 - 5 pi =
-(9 + 3 sqrt5) - 5 pi is nonzero by Lindemann-Weierstrass (about
-+2.4 x 10^-4, a gap witness, labeled). Exact bridges: xi phi^2 = 5 =
+The parity law (PARITY-LAW) [T]: the bridge defect delta = 6 phi^2 - 5 pi
+= (9 + 3 sqrt5) - 5 pi is nonzero by Lindemann-Weierstrass (about
++2.4 x 10^-4, a gap witness, labeled) (BRIDGE-DEFECT). Exact bridges: xi phi^2 = 5 =
 p; script-Q phi^2 = 2 pi; script-Q / xi = 2 pi/5 = arg J. Under
 complex conjugation every fundamental on the register is a pure parity
 eigenvector: seventeen even and delta free (among them alpha^-1,

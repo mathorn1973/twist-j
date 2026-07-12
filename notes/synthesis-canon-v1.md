@@ -25,9 +25,9 @@ with a reason in the audit and queued here, never registered vaguely.
 ## Queue before the synthesis PR opens
 
 1. Registry completion, cluster by cluster, each with evidence:
-   mass ladder (next), Weinberg, Maxwell closure, alpha value
-   (needs a high precision exact reproduction), cosmology register,
-   coupling and metrology arc.
+   Weinberg (next), Maxwell closure, alpha value (needs a high
+   precision exact reproduction), cosmology register, coupling and
+   metrology arc.
 2. Deepen sections 14 and 15 from the sealed arc part bodies at the
    internal basis (they are stated here at frontier resolution).
 3. Reconciliation audit rows for every added claim.
@@ -78,8 +78,29 @@ immutable GitHub candidate commit, through the Phase A staging
 protocol in AGENTS.md; both architecture records are pending at the
 candidate commit.
 
+Mass ladder staging candidate: verifier 68593371 and stdout
+1ea07225, 8/8, exit 0, empty stderr in the pre-pin dry run, byte
+identical on x86_64 and aarch64. Formal records begin only after the
+immutable GitHub candidate commit, through the Phase A staging
+protocol in AGENTS.md; both architecture records are pending at the
+candidate commit.
+
 ## Session log
 
+- s6 (2026-07-12): the mass ladder candidate:
+  reproduce/mass-ladder (8/8: the shared coefficient 89/5 = 18 - 1/p
+  with 240 C = 4272; the exact exchange identity in Q, identically and
+  on a rational sweep; the committed forms with their fenced sigma
+  comparisons kept outside the witness; the proton as the homogeneous
+  odd pi^5 carrier; the neutron as the unique mixed composite with
+  Delta_EM open; the exact bridges xi phi^2 = 5, Q phi^2 = 2 pi,
+  Q/xi = 2 pi/5; the algebraic side of the bridge defect, minimal
+  polynomial x^2 - 18x + 36 irreducible; the parity law on thirteen
+  named even entries and the three odd carriers at pi degrees 1, 3,
+  5). Five registry rows: MU-TAU-COEFFICIENT T, MU-EXCHANGE-IDENTITY
+  T, MASS-LADDER-FORMS D, PARITY-LAW T, BRIDGE-DEFECT T; registry 83
+  claims. The audit omissions no longer list the mass ladder values.
+  The cluster enters GitHub staging through the Phase A protocol.
 - s5 (2026-07-12): the gravity chain candidate:
   reproduce/gravity-chain (12/12: the modulus chord J Jbar = 2 - phi =
   phi^-2 with N(J) = 1; the Kahler jet and the exact capacity monomial

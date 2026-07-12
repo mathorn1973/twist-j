@@ -107,6 +107,16 @@ GRAVITY-BRIDGE-LAW             the Part VII bridge block; the
                                O-ELL-G-SI equation registration
                                (value stays O); D-SS40-TIER1-OPTIMUM
                                (D)                                  D
+MU-TAU-COEFFICIENT             T-MU-COEF 89/5 (T-LOCK, v115)        T
+MU-EXCHANGE-IDENTITY           the exchange identity (T, exact
+                               in Q, Part VI)                       T
+MASS-LADDER-FORMS              the Part VI committed ladder block
+                               (D at the dictionary; sigma
+                               comparisons fenced)                  D
+PARITY-LAW                     the SS-DELTA parity law and register
+                               census (Part VI)                     T
+BRIDGE-DEFECT                  the SS-DELTA bridge defect and the
+                               exact bridges (Part VI)              T
 METRO-ADMISSIBILITY            O-METRO-ADMISSIBILITY residual       O
 METRO-EDGE-SCALE               O-METRO-EDGE-SCALE + SI clause       O
 LORENTZ-A2A3                   O-LORENTZ-A2A3                       O
@@ -143,8 +153,7 @@ PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
 derivation): the hyperplane and codec claims;
-the
-mass ladder values; Weinberg; the Maxwell closure; the alpha value
+Weinberg; the Maxwell closure; the alpha value
 comparison; the cosmology register (w, Omega_b, dark matter ratio,
 gyron density); the coupling and metrology arc theorems. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author

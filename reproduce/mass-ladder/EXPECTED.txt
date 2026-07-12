@@ -1,0 +1,14 @@
+TWIST-J mass ladder witness (exact arithmetic, formal pi)
+C = 89/5 = 18 - 1/p; delta mu_tau + 240 delta mu_mu = 0; mu_p = 6 pi^5 (1 + alpha^2/3)
+the sigma comparisons stay fenced measured witnesses; no value is claimed beyond the committed forms
+
+PASS 01 COEFFICIENT  C = 89/5 = 18 - 1/p exactly: matter_spatial 18 = (1/2)(12)(3) and the trace term 1/p at p = 5; the tau side carries 240 C = 4272, an integer; the muon denominator 13 and the coefficient denominator 5 are coprime
+PASS 02 EXCHANGE     the exchange identity delta mu_tau + 240 delta mu_mu = 0 exactly in Q: under any shift of the shared coefficient the muon reading moves by -dC alpha^2 and the tau reading by +240 dC alpha^2, so the weighted sum vanishes identically and on a rational sweep
+PASS 03 FORMS        the committed forms on the single anchor m_e: mu_mu = 2688/13 - C alpha^2 and mu_tau = 3477 + 240 C alpha^2 share the one coefficient C = 89/5 with opposite roles -1 and +240; both entries are pi free, hence parity even; the sigma comparisons stay fenced outside this witness
+PASS 04 PROTON       mu_p = 6 pi^5 (1 + alpha^2/3) = 6 pi^5 + 2 pi^5 alpha^2: every monomial carries the single bare pi^5, so the proton is a homogeneous odd delta carrier, the pi^5 rung of the ladder
+PASS 05 NEUTRON-MIX  mu_n = mu_p + deg_v/chi - Delta_EM carries pi degrees {5, 0} at the form level: the neutron is the unique mixed parity composite of the ladder, the boundary witness; Delta_EM stays open on the frontier (NEUTRON-DELTA-EM)
+PASS 06 BRIDGES      xi = 5 phi^-2 and script-Q = 2 pi phi^-2 close the exact bridges in Q(sqrt5): xi phi^2 = 5 = p, script-Q phi^2 = 2 pi, and script-Q / xi = (2/5) pi = 2 pi/5 = arg J, the step phase of the fiber circle
+PASS 07 DEFECT       6 phi^2 = 9 + 3 sqrt5 exactly, a root of x^2 - 18x + 36, irreducible over Q since 180 is not a square: the algebraic side of the defect delta = 6 phi^2 - 5 pi is degree 2, while pi is transcendental (Lindemann-Weierstrass), so delta is nonzero; the numerical gap stays a labeled witness outside this file
+PASS 08 PARITY       under conjugation pi -> -pi every named register entry is a pure parity eigenvector: thirteen named even entries (alpha^-1, sin^2 theta_W, w, L, Omega_b, the slip X, mu_mu, mu_tau, G, PMNS, the dark matter ratio 2250 ln^2 phi / pi^4, the zeta_K residue, the neutrino register 341/10) are pi even and delta free; the three odd delta carriers sit at pi degrees 1, 3, 5; the neutron is the unique mixed composite; the full census (seventeen even) is the internal count carried at scope
+
+RESULT 8/8 ALL PASS
