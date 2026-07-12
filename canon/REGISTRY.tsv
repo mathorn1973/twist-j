@@ -10,6 +10,10 @@ J-RAMIFIED-CHORD	T	Z[zeta_5]	1. The axiom and the two projections	reproduce/kern
 PLENUM-POINT	T	Z[i] and Z[zeta_20], the archimedean readout	1. The axiom and the two projections	inline	
 ALPHA-SEED	T	the trace direction of the Galois Gram, p in {3, 5, 7, 11, 13}	6. Alpha and the observable register	reproduce/alpha-exact-lemma	
 BORN-FACE-WEIGHTS	T	the five abelian face weights, exact in Q(sqrt5)	8. The measure and Born	reproduce/born-faces	
+BORN-HALF-ANGLE	T	every Born unit of A_8 = Z[zeta_8]/5; the normalized root on the norm gated half, the squares of the cyclic unit group of order 24	8. The measure and Born	reproduce/born-quartet	
+BORN-RESIDUAL-SPLIT	T	the residual rings Z[i]/5 and Z[zeta_8]/5 and their conjugation swap	8. The measure and Born	reproduce/born-quartet	
+SPIN-BISECTOR	T	the integer skeleton and the SL_2(F_25) shadow of order 8; no positivity claim	8. The measure and Born	reproduce/born-quartet	
+BORN-ORDER-STAIRCASE	T	root orders 4, 8, 16 first realized at F_5, F_25, F_625; the gate is the square condition on the bisector norm	8. The measure and Born	reproduce/born-quartet	
 CENSUS-313	C	the full enumeration of Z_5^6 under the Thue-Morse driven kernel, warmup 400, window 300, closure and stability checked	3. The kernel and the census	reproduce/census	
 CENSUS-Z5-SHEET	C	all recurrent states of the census	3. The kernel and the census	reproduce/census	
 CENSUS-PAIRING	C	the piston pairing involution on the 313 attractors	3. The kernel and the census	reproduce/census	

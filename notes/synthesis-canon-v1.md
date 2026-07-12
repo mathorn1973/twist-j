@@ -25,7 +25,7 @@ with a reason in the audit and queued here, never registered vaguely.
 ## Queue before the synthesis PR opens
 
 1. Registry completion, cluster by cluster, each with evidence:
-   Born quartet (next), Dirac ladder theorem layer, color ladder
+   Dirac ladder theorem layer (next), color ladder
    rungs, gravity chain, mass ladder, Weinberg, Maxwell closure,
    alpha value (needs a high precision exact reproduction), cosmology
    register, coupling and metrology arc.
@@ -54,6 +54,17 @@ same result.
 
 ## Session log
 
+- s2 (2026-07-12): the frontier identifier parser in check_canon now
+  rejects unregistered identifiers leading FRONTIER.md list items
+  (negative tested); README gained the official channels and the
+  candidate review note; the Born quartet cluster:
+  reproduce/born-quartet (11/11: the cyclic Born unit group of order
+  24, the half angle identity on every Born unit, the norm gate
+  exactly on the squares with zeta_8 ungated, the normalized bisector
+  witness on all gated units, both residual splits with their
+  conjugation swaps, the integer spinor skeleton and its SL_2(F_25)
+  shadow of order 8, the order staircase with exhaustive
+  irreducibility); four registry rows at T; registry 48 claims.
 - s1 (2026-07-12): gate hardening and genesis bundle. check_canon.py
   rejects placeholder falsifiers (concrete falsifier or decision
   condition required for every H, O, F row). The bundle: Canon

@@ -47,6 +47,12 @@ CENSUS-313                     SS85.12 census; hosting corollary (T)
 CENSUS-Z5-SHEET                D-CENSUS-Z5-SHEET (D)                C
 CENSUS-PAIRING                 D-PAIR-MAP (D)                       C
 CENSUS-HOSTING                 T-HOSTING (T)                        C
+BORN-HALF-ANGLE                T-BORN-HALF-ANGLE (T-LOCK); the norm
+                               gate now publicly evidenced          T
+BORN-RESIDUAL-SPLIT            T-BORN-RESIDUAL-SPLIT (T-LOCK)       T
+SPIN-BISECTOR                  T-SPIN-BISECTOR (T-LOCK); finite
+                               shadow scope, no positivity          T
+BORN-ORDER-STAIRCASE           T-BORN-ORDER-STAIRCASE (T-LOCK)      T
 METRO-ADMISSIBILITY            O-METRO-ADMISSIBILITY residual       O
 METRO-EDGE-SCALE               O-METRO-EDGE-SCALE + SI clause       O
 LORENTZ-A2A3                   O-LORENTZ-A2A3                       O
