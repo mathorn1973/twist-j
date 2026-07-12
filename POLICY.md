@@ -14,6 +14,16 @@ Internal development numbers are not inherited and have no authority in the
 public series. They may be named once in a cutover audit, but not carried as
 the public version sequence.
 
+If an internal extraction is informally called "Canon v1", that name has no
+public authority. It is only the synthesis surface and may be named once in
+the reconciliation audit. The normative v1 is exclusively **Public Canon
+v1** in this repository. The internal extraction is intentionally not a valid
+public Canon bundle and must not be copied around the public checks.
+
+Throughout `GENESIS`, `https://twistj.com/canon/` continues to serve the
+legacy line and must not be repointed or cited as the Public Canon v1 landing
+page. Repointing is an activation action.
+
 Claim status is rigid:
 
 ```text
@@ -120,18 +130,21 @@ For new public probes:
 - Assertions use exact arithmetic. Floating point may appear only as a labeled
   engineering or measured witness.
 - The author runs the pinned verifier locally and records `RUN.md` and the
-  exact stdout in `EXPECTED.txt`.
+  exact stdout in `EXPECTED.txt`. Platform fields use neutral public
+  descriptors, for example `platform: Ubuntu 24.04` and
+  `architecture: aarch64`. Machine nicknames are forbidden.
 - The required GitHub check reruns every changed verifier on a clean
-  `ubuntu-latest` runner and requires the same verifier hash, exit code 0,
-  empty stderr, and byte-identical stdout.
+  x86_64 `ubuntu-latest` runner and requires the same verifier hash, exit
+  code 0, empty stderr, and byte-identical stdout.
 - A verifier-backed contribution is reproducible only when both the local
   record and the GitHub check pass.
 - A post-cutover pull request changes at most one probe directory. The initial
   Canon v1 synthesis is not a probe pull request and imports no historical
   probe tree.
-- For a computation-only promotion to `T`, the local and GitHub runs must also
-  use different architectures. Same-architecture agreement is a reproduction,
-  not a two-architecture gate. An independent proof may earn `T`; its
+- For a computation-only promotion to `T`, the author's local run must be
+  `aarch64` and the GitHub run `x86_64`. Their byte-identical outputs
+  satisfy the two-architecture gate. Same-architecture agreement is a
+  reproduction, not a two-architecture gate. An independent proof may earn `T`; its
   verifier is then an audit.
 - A one-architecture finite result is at most `C` unless its proof is
   independently theorem-grade.
@@ -182,8 +195,10 @@ a separate sealed public fold applies it to `canon/CANON.md`.
   reviewed pull request adds the Canon bundle, small data, minimal
   reproductions, citation material, and the reconciliation audit. It does not
   import historical probe directories or the old repository history.
-- Cutover is two-phase. The synthesis pull request leaves `STATE: GENESIS`
-  and records the Canon as a candidate. After it merges, a separate
+- Cutover is two-phase. The synthesis pull request leaves `STATE: GENESIS`,
+  keeps the legacy website pointer unchanged, and records the Canon as a
+  candidate. Its `CITATION.cff` must not use the legacy Canon URL as the
+  Public Canon v1 landing page. After it merges, a separate
   `activate/canon-v1` pull request sets `STATE: ACTIVE`, names the immutable
   Canon content commit, exact hash and byte count, and updates the README.
 - The `canon-v1` tag and release are created from the merged activation

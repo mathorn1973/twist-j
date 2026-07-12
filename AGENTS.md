@@ -16,6 +16,8 @@ Read `STATUS.md` before any scientific work.
   authority begins with Public Canon v1.
 - Never infer authority from file age, an internal version number, a mirror, or
   an attached copy.
+- During `GENESIS`, `twistj.com/canon/` remains on the legacy line. Do not
+  repoint it or present it as Public Canon v1 before activation.
 
 ## 2. Clean-slate synthesis rule
 
@@ -30,6 +32,11 @@ internal version | source HEAD | lock | Canon file | SHA-256 | byte count
 
 The frozen tuple is an audit input, not the public version identity. If it
 changes during synthesis, stop and re-freeze.
+
+The internal extraction is a non-normative synthesis surface, even if it is
+informally called "Canon v1". Name it once in the reconciliation audit and
+nowhere in the public Canon. It does not satisfy `check_canon.py`, and agents
+must not make it pass by copying or mechanically wrapping it.
 
 The output is a newly authored **Public Canon v1**, not a byte-for-byte
 migration. It may reorganize, rewrite, merge, and omit internal material.
@@ -122,7 +129,8 @@ not part of the public Canon series.
    internal claim of equal or stronger status. Missing support lowers or
    removes the public claim.
 8. Add only minimal reproductions, exact fixtures, `CITATION.cff`, and data
-   manifests required by the public text.
+   manifests required by the public text. While the repository is `GENESIS`,
+   `CITATION.cff` must not point to the legacy `twistj.com/canon/` page.
 9. Set `STATUS.md` to `STATE: GENESIS` and
    `CANON: Public Canon v1 candidate`. Authority remains internal.
 10. Audit every included file for status, scope, secrets, private
@@ -151,13 +159,15 @@ not part of the public Canon series.
     CANON_BYTES:    exact canon/CANON.md byte count
     ```
 
-16. Update `README.md` from GENESIS to ACTIVE and point readers to
-    `canon/CORE.md`, `canon/CANON.md`, and `canon/FRONTIER.md`.
+16. Update `README.md` from GENESIS to ACTIVE, point readers to
+    `canon/CORE.md`, `canon/CANON.md`, and `canon/FRONTIER.md`, and
+    finalize `CITATION.cff` with the Public Canon landing-page URL.
 17. Open and merge a separate reviewed activation pull request.
 18. Tag the activation merge commit `canon-v1`, create the release, and attach
     the recorded `canon/SHA256SUMS`.
-19. Verify the tag, release, public readback, hashes, registry, and all required
-    checks.
+19. Repoint `twistj.com/canon/` from the legacy line to Public Canon v1,
+    then verify the tag, release, public readback, hashes, registry, and all
+    required checks.
 20. Freeze the internal repository for scientific writes and replace its root
     notice with a pointer to this repository. Only then is cutover complete.
 
@@ -187,9 +197,11 @@ review.
    formal gate execution. Record commit and file hashes.
 4. Run the pinned verifier locally from the repository root on Linux or a
    Linux-compatible environment. Save exact stdout as `EXPECTED.txt` and
-   record the required fields in `RUN.md`.
+   record neutral fields in `RUN.md`, for example
+   `platform: Ubuntu 24.04` and `architecture: aarch64`. Never record a
+   machine nickname.
 5. Open a pull request changing at most one probe directory. The required
-   check independently reruns the changed verifier on GitHub
+   check independently reruns the changed verifier on GitHub x86_64
    `ubuntu-latest` and compares hashes and exact bytes.
 6. If the local and GitHub architectures differ, their byte-identical output
    satisfies the two-architecture computation gate. If they are the same, the

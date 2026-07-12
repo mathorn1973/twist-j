@@ -43,6 +43,8 @@ FORBIDDEN_CANON_PHRASES = (
     "CROSSPLATFORM_LOCK_RECORD",
     "fold commit",
     "carried forward",
+    "internal extraction",
+    "synthesis surface",
     "JAS 2",
     "TWISTER",
 )
@@ -89,6 +91,11 @@ citation = citation_path.read_text(encoding="utf-8")
 for field in ("cff-version:", "title:", "authors:", "version:", "license:"):
     if field not in citation:
         fail(f"CITATION.cff lacks {field}")
+canon_url = "https://twistj.com/canon/"
+if state == "GENESIS" and canon_url in citation:
+    fail("GENESIS CITATION.cff must not point at the legacy Canon website")
+if state == "ACTIVE" and canon_url not in citation:
+    fail("ACTIVE CITATION.cff must name the public Canon website")
 
 present = {path.name for path in CANON_DIR.iterdir() if path.is_file()}
 missing = sorted(REQUIRED_FILES - present)

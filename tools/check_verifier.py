@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import os
+import platform as host_platform
 from pathlib import Path
 import re
 import subprocess
@@ -14,6 +15,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 PROBES = ROOT / "probes"
 EMPTY_SHA256 = hashlib.sha256(b"").hexdigest()
+RUN_MACHINE_NICKNAMES = ("JAS 2", "TWISTER")
 REQUIRED = {
     "pin_commit",
     "verifier_sha256",
@@ -102,6 +104,8 @@ def reproduce(probe: Path) -> None:
     for field in ("platform", "architecture", "python"):
         if not fields[field]:
             fail(f"{name} has empty {field}")
+    if fields["architecture"] not in {"x86_64", "aarch64"}:
+        fail(f"{name} architecture must be x86_64 or aarch64")
 
     verifier_bytes = verifier.read_bytes()
     verifier_hash = sha256(verifier_bytes)
@@ -132,6 +136,14 @@ def reproduce(probe: Path) -> None:
         fail(f"{name} local exit_code is not zero")
     if fields["stderr_sha256"] != EMPTY_SHA256 or fields["stderr_bytes"] != "0":
         fail(f"{name} local stderr is not empty")
+
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        github_architecture = host_platform.machine()
+        if github_architecture != "x86_64":
+            fail(
+                f"{name} GitHub runner architecture must be x86_64, "
+                f"received {github_architecture}"
+            )
 
     environment = os.environ.copy()
     environment.update(
