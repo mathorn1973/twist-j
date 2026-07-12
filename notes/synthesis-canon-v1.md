@@ -46,6 +46,12 @@ with a reason in the audit and queued here, never registered vaguely.
 Recorded per push in the session log. Platforms are named neutrally:
 operating system, architecture, Python version.
 
+Recorded at the genesis push: Debian 13 x86_64 (Python 3.13.5), all
+four reproductions byte identical against EXPECTED.txt, exit 0, empty
+stderr; check_policy and check_canon (hardened) pass on that platform
+(2026-07-12). Author platform Ubuntu 24.04 aarch64 (Python 3.12.3),
+same result.
+
 ## Session log
 
 - s1 (2026-07-12): gate hardening and genesis bundle. check_canon.py
