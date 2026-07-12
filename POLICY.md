@@ -4,9 +4,15 @@ Simplicity is the ultimate perfection. Every file must earn its place.
 
 ## 1. Authority
 
-`STATUS.md` declares the operational authority. After cutover, `main` is the
-single source of truth and `canon/CANON.md` is the current scientific Canon.
-Until then, this repository is policy-only.
+`STATUS.md` declares the operational authority. Until cutover this repository
+is policy-only and `mathorn1973/twistj-jam` remains the internal source of
+truth. After cutover, public `main` is the single source of truth and
+`canon/CANON.md` is the current scientific Canon.
+
+The first public release starts a new normative series at **Public Canon v1**.
+Internal development numbers are not inherited and have no authority in the
+public series. They may be named once in a cutover audit, but not carried as
+the public version sequence.
 
 Claim status is rigid:
 
@@ -22,17 +28,21 @@ Directories are created only when they receive real content.
 
 ```text
 canon/       current Canon, core, frontier, registry, changelog
-probes/      one permanent directory per named probe
-reproduce/   short independent reproductions
+probes/      one permanent directory per named public probe
+reproduce/   minimal independent reproductions that earn their place
 data/        small exact inputs, fixtures, derived tables, manifests
 notes/       explicitly non-canonical exploration
 tools/       repository and Canon checks
-legacy/      curated provenance imported at cutover
+legacy/      optional concise cutover audit, never a development archive
 ```
 
-No generic work, scratch, output, temporary, or backup directory is tracked.
+No generic work, scratch, output, temporary, backup, or historical dump
+directory is tracked.
 
 ## 3. One probe, one branch
+
+This section governs formal public work after cutover. During `GENESIS`, no
+formal public probe starts before Public Canon v1 is active.
 
 Each formal attack has:
 
@@ -65,6 +75,24 @@ Do not reuse, rename, or resume a sealed probe.
 
 ## 4. Evidence
 
+Public Canon v1 is a clean synthesis, not a copy of the internal ledger.
+Development history is not evidence and need not migrate.
+
+A retained public claim must have at least one of:
+
+- a self-contained exact proof or derivation in the Canon;
+- a minimal public reproduction sufficient to audit a computational claim;
+- a clearly named external dataset or source manifest where experiment is
+  part of the claim.
+
+Before cutover, a reconciliation audit maps every public claim to an internal
+claim of equal or stronger status and scope. The audit forbids promotion by
+rewriting. It is review material, not part of the normative Canon, and may be
+kept as a concise release asset or under `legacy/`. Missing support lowers or
+omits a claim; it is never invented.
+
+For new public probes:
+
 - Assertions use exact arithmetic. Floating point may appear only as a labeled
   engineering or measured witness.
 - The author runs the pinned verifier locally and records `RUN.md` and the
@@ -74,12 +102,13 @@ Do not reuse, rename, or resume a sealed probe.
   empty stderr, and byte-identical stdout.
 - A verifier-backed contribution is reproducible only when both the local
   record and the GitHub check pass.
-- A pull request changes at most one probe directory. Bulk migration requires
-  a preceding explicit policy change.
+- A post-cutover pull request changes at most one probe directory. The initial
+  Canon v1 synthesis is not a probe pull request and imports no historical
+  probe tree.
 - For a computation-only promotion to `T`, the local and GitHub runs must also
   use different architectures. Same-architecture agreement is a reproduction,
-  not a two-architecture gate. An independent proof may earn `T`; its verifier
-  is then an audit.
+  not a two-architecture gate. An independent proof may earn `T`; its
+  verifier is then an audit.
 - A one-architecture finite result is at most `C` unless its proof is
   independently theorem-grade.
 - Fired falsifiers are preserved and folded. Thresholds never move after the
@@ -96,20 +125,38 @@ canon/CORE.md       short stable core
 canon/CANON.md      complete current Canon
 canon/FRONTIER.md   live open obligations only
 canon/REGISTRY.tsv  machine-readable claim registry
-canon/CHANGELOG.md  delta from the previous release
+canon/CHANGELOG.md  delta within the public series
 ```
 
-Old versions live in immutable tags and releases named `canon-vNNN`, not as
-copies on `main`. Each release carries `SHA256SUMS`. Present truth appears once;
-history and run detail are referenced, not repeated.
+Public Canon v1 is newly authored from the latest sealed internal state. It is
+organized by subject, may rewrite and compress inherited material, and need
+not be byte-identical to any internal Canon. It contains present truth once.
+
+The normative Canon excludes:
+
+- internal version chronology and fold narratives;
+- commit and machine ledgers;
+- failed-run diaries and amendment stories;
+- repeated carried-forward summaries;
+- superseded formulations and closed work queues;
+- historical verifiers that are not needed for a minimal public audit.
+
+Internal numbering is retired at cutover. Public versions use immutable tags
+and releases `canon-v1`, `canon-v2`, and so on. Each release carries
+`SHA256SUMS`. Public history starts at v1; earlier development remains outside
+the normative series.
 
 Incomplete work belongs under `notes/`, is marked `NON-CANONICAL`, and need
 not carry a verifier. A proposed Canon patch stays under `notes/canon/` until
-a separate sealed fold applies it to `canon/CANON.md`.
+a separate sealed public fold applies it to `canon/CANON.md`.
 
 ## 6. Git
 
 - `main` accepts reviewed pull requests only, except repository genesis.
+- The initial synthesis uses one dedicated branch `synthesis/canon-v1` and one
+  cutover pull request. It may add the Canon files, small data, minimal
+  reproductions, citation material, and the reconciliation audit. It does not
+  import historical probe directories or the old repository history.
 - Probe commits are never rebased, squashed, amended, or force-pushed after the
   preregistration pin. Merge commits preserve provenance.
 - Check for an existing branch, issue, probe, and lock before claiming work.
@@ -122,10 +169,11 @@ private logs, personal data, binary models, compiled objects, or unreviewed
 third-party material. Files over 5 MiB require an explicit policy change.
 External or large data use a manifest with source, version, license, and hash.
 
-Every pull request must pass the required `check`, which runs both repository
-policy and any changed verifiers, plus a manual security review. Apache-2.0
-applies unless a file states an approved compatible license.
+Every pull request must pass the required `check`, which runs repository
+policy and any changed public verifiers, plus a manual security review.
+Apache-2.0 applies unless a file states an approved compatible license.
 
 The sole workflow has read-only permissions, immutable action pins, no
-persisted checkout credential, and a 15-minute timeout. `pull_request_target`
-is forbidden. Any new workflow requires an explicit policy change.
+persisted checkout credential, and a 15-minute timeout.
+`pull_request_target` is forbidden. Any new workflow requires an explicit
+policy change.
