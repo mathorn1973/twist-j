@@ -44,19 +44,37 @@ and at least the same scope.
 1. `canon/CANON.md`: a self-contained thematic statement of current TWIST-J,
    written once and free of development chronology.
 2. `canon/CORE.md`: the short stable core sufficient for orientation.
-3. `canon/FRONTIER.md`: live open obligations and falsifiers only.
-4. `canon/REGISTRY.tsv`: every public claim with status, scope, and location.
-5. `canon/CHANGELOG.md`: a v1 genesis entry. Later entries describe only the
-   public series.
-6. Exact proofs in the Canon or minimal public reproductions for retained
-   claims that depend on computation.
-7. Definitions and live falsifiers for every retained `H` and `O` item, and
+3. `canon/FRONTIER.md`: live `H` and `O` claims only.
+4. `canon/REGISTRY.tsv`: every public claim with the exact columns:
+
+   ```text
+   claim_id	status	scope	canon_section	evidence	falsifier
+   ```
+
+5. `canon/CHANGELOG.md`: a Public Canon v1 genesis entry. Later entries
+   describe only the public series.
+6. `canon/SHA256SUMS`: SHA-256 for the five normative files above.
+7. Exact proofs in the Canon or minimal public reproductions for retained
+   claims that depend on computation. A reproduction has:
+
+   ```text
+   reproduce/NAME/
+       verify.py
+       EXPECTED.txt
+       README.md
+   ```
+
+8. Definitions and live falsifiers for every retained `H` and `O` item, and
    every `F` result still needed to delimit current theory.
-8. A reconciliation audit mapping each public claim to an equal-or-stronger
-   internal basis claim. It may be a concise cutover asset or live under
-   `legacy/`; it is not part of the normative Canon.
-9. `CITATION.cff`, authorship, license notices, and external-data manifests
-   actually needed by the public work.
+9. A reconciliation audit mapping each public claim to an equal-or-stronger
+   internal basis claim. It is an internal review input; publishing it is
+   optional and it is never part of the normative Canon.
+10. `CITATION.cff`, authorship, license notices, and external-data manifests
+    actually needed by the public work.
+
+Internal `T-cand`, `LOCK`, `F-LOCK`, `R`, and `Def` labels are not
+copied mechanically. Definitions and remarks are not claims. Every retained
+item must be reconciled into the seven public statuses without promotion.
 
 ### Included only when necessary
 
@@ -90,33 +108,57 @@ not part of the public Canon series.
 
 ## 4. Public Canon v1 procedure
 
+### Phase A: synthesis
+
 1. Confirm that no internal source probe is active and the chosen internal
    basis is sealed.
 2. Record and freeze the internal basis tuple.
-3. Define the public v1 scope and thematic outline before copying or rewriting.
-4. Create `synthesis/canon-v1`; do not mix the synthesis with new science.
+3. Define the public v1 scope and thematic outline before rewriting.
+4. Create `synthesis/canon-v1`; do not mix synthesis with new science.
 5. Write `canon/CANON.md` as a clean current statement, not as a history.
-6. Derive `CORE.md`, `FRONTIER.md`, `REGISTRY.tsv`, and `CHANGELOG.md`
-   from the new Canon.
-7. Build the reconciliation audit. Every public claim must map to an internal
-   claim of equal or stronger status. Missing support lowers or removes the
-   public claim.
-8. Add only the minimal reproductions, exact fixtures, citation material, and
-   data manifests required by the public text.
-9. Audit every included file for status, scope, secrets, private
-   infrastructure, license, size, duplicate content, and obsolete wording.
-10. Run the policy gate, Canon consistency checks, registry audit, hash audit,
-    and every included reproduction.
-11. Open one cutover pull request. It lists the chosen internal basis, the
-    public scope, intentional omissions, lowered claims, audit results, and all
-    public hashes. The old Canon itself is not imported.
-12. Merge with a merge commit. Create immutable tag and release `canon-v1`
-    with `SHA256SUMS`.
-13. Change `STATUS.md` to `ACTIVE` with the public tag, commit, Canon
-    SHA-256, byte count, and public authority. The internal tuple stays in the
-    cutover audit, not in the public authority block.
-14. Verify public readback and all required checks.
-15. Freeze the internal repository for scientific writes and replace its root
+6. Derive `CORE.md`, `FRONTIER.md`, `REGISTRY.tsv`, `CHANGELOG.md`, and
+   `SHA256SUMS` from the new Canon.
+7. Build the internal reconciliation audit. Every public claim must map to an
+   internal claim of equal or stronger status. Missing support lowers or
+   removes the public claim.
+8. Add only minimal reproductions, exact fixtures, `CITATION.cff`, and data
+   manifests required by the public text.
+9. Set `STATUS.md` to `STATE: GENESIS` and
+   `CANON: Public Canon v1 candidate`. Authority remains internal.
+10. Audit every included file for status, scope, secrets, private
+    infrastructure, license, size, duplication, and obsolete wording.
+11. Run `check_policy.py`, `check_canon.py`, `check_reproduce.py`, and
+    every included scientific check.
+12. Open one reviewed synthesis pull request. It states the scope,
+    intentional omissions, lowered claims, audit result, and public hashes.
+    The internal Canon and development history are not imported.
+13. Merge with a merge commit. Record that merge commit as the immutable Canon
+    content commit. The repository is still `GENESIS`.
+
+### Phase B: activation
+
+14. Create `activate/canon-v1` from the merged public `main`.
+15. Update `STATUS.md` to the exact active form:
+
+    ```text
+    STATE:          ACTIVE
+    CANON:          Public Canon v1
+    AUTHORITY:      mathorn1973/twist-j main
+    CUTOVER:        YYYY-MM-DD
+    TAG:            canon-v1
+    CANON_COMMIT:   full 40-character synthesis merge SHA
+    CANON_SHA256:   full 64-character canon/CANON.md SHA-256
+    CANON_BYTES:    exact canon/CANON.md byte count
+    ```
+
+16. Update `README.md` from GENESIS to ACTIVE and point readers to
+    `canon/CORE.md`, `canon/CANON.md`, and `canon/FRONTIER.md`.
+17. Open and merge a separate reviewed activation pull request.
+18. Tag the activation merge commit `canon-v1`, create the release, and attach
+    the recorded `canon/SHA256SUMS`.
+19. Verify the tag, release, public readback, hashes, registry, and all required
+    checks.
+20. Freeze the internal repository for scientific writes and replace its root
     notice with a pointer to this repository. Only then is cutover complete.
 
 ## 5. Startup after cutover
