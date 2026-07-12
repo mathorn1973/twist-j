@@ -289,17 +289,24 @@ alpha^-1 = 137.035999190;  CODATA 2022: 137.035999177(21)
                                             [measured comparison]
 ```
 
+(ALPHA-FORM at D; the enclosure witness ALPHA-VALUE-DIGITS at C;
+reproduce/alpha-value. The digit string and the CODATA window are
+labeled witnesses of the committed form; no value is claimed beyond
+it.)
+
 The exact lemma (ALPHA-SEED [T], reproduce/alpha-exact-lemma): the
 dimensionless trace target is exact, alpha* = 1/p, via the cyclotomic
 Galois-trace Gram G = p I - 1 1^T with normalized spectrum {1/p
 (once), 1 (p - 2 times)}, the all ones trace direction the
 eigenvector; exact for p in {3, 5, 7, 11, 13}. Scope: alpha* = 1/p is
 the dimensionless seed; the physical alpha^-1 lives at the bridge
-level. Prefactor unification [T]: with B_{2,chi5} = 4/5 exactly and
-L(2, chi5) = 4 pi^2 / (25 sqrt5), the witness formula and the formula
-above are one formula; no independent L value enters the alpha sector;
-the prefactor reads (1 + J Jbar)^(1/4): the gravity modulus inside the
-electromagnetic number.
+level. Prefactor unification (ALPHA-PREFACTOR-UNIFICATION) [T]: with
+B_{2,chi5} = 4/5 exactly, the Gauss sum tau = 2 phi - 1 = sqrt5
+exactly in Z[zeta_5], and L(2, chi5) = 4 pi^2 / (25 sqrt5), the
+witness formula and the formula above are one formula; no independent
+L value enters the alpha sector; the prefactor reads
+(1 + J Jbar)^(1/4): the gravity modulus inside the electromagnetic
+number.
 
 Weinberg (WEINBERG-FORM at D on the exact layer WEINBERG-TREE and
 HYPERCHARGE-LAW at T; reproduce/weinberg): sin^2 theta_W = 3/13 +

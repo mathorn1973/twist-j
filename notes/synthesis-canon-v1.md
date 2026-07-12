@@ -25,8 +25,7 @@ with a reason in the audit and queued here, never registered vaguely.
 ## Queue before the synthesis PR opens
 
 1. Registry completion, cluster by cluster, each with evidence:
-   alpha value (next; needs a high precision exact reproduction),
-   cosmology register, coupling and metrology arc.
+   cosmology register (next), coupling and metrology arc.
 2. Deepen sections 14 and 15 from the sealed arc part bodies at the
    internal basis (they are stated here at frontier resolution).
 3. Reconciliation audit rows for every added claim.
@@ -98,8 +97,29 @@ immutable GitHub candidate commit, through the Phase A staging
 protocol in AGENTS.md; both architecture records are pending at the
 candidate commit.
 
+Alpha value staging candidate: verifier e967e5df and stdout
+dcf55ac8, 7/7, exit 0, empty stderr in the pre-pin dry run, stdout
+byte identical on x86_64 and aarch64. Formal records begin only after
+the immutable GitHub candidate commit, through the Phase A staging
+protocol in AGENTS.md; both architecture records are pending at the
+candidate commit.
+
 ## Session log
 
+- s9 (2026-07-12): the alpha value candidate:
+  reproduce/alpha-value (7/7: the prefactor chord 1 + J Jbar = 3 - phi
+  = |1 - zeta|^2 in Z[zeta_5]; B_{2,chi5} = 4/5 by the Bernoulli
+  definition; the Gauss sum tau = 2 phi - 1 = sqrt5 exactly, tau^2 =
+  5, so the L normalization is computed, not cited; the unification
+  80 sqrt5 L(2, chi5) = (8 pi)^2/5 exactly in Q; the Queen structure
+  with X the Weinberg slip and every pi degree even; the integer
+  interval enclosure at scale 10^50 with width below 10^-20 reading
+  137.035999190 at the ninth decimal place; the fenced CODATA window,
+  above the central value and inside one ppb). Three registry rows:
+  ALPHA-PREFACTOR-UNIFICATION T, ALPHA-FORM D, ALPHA-VALUE-DIGITS C;
+  registry 94 claims. The audit omissions no longer list the alpha
+  value comparison. Built in the prep lane and pinned through the
+  Phase A staging protocol.
 - s8 (2026-07-12): the Maxwell closure candidate: reproduce/maxwell
   (10/10: the Bianchi identity and gauge invariance identically in the
   32 edge and 16 vertex symbols of the tesseract, carried as exact

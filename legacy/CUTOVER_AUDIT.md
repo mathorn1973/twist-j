@@ -129,6 +129,12 @@ MAXWELL-AMPERE-CHAIN           T-AMPERE-CHAIN-EXACT (T, v158)       T
 MAXWELL-OBSTRUCTION-P          the v158 obstruction pair, counted
                                in p (T layer of the closure)        T
 MAXWELL-CLOSED                 D-MAXWELL-CLOSED (D, v158)           D
+ALPHA-PREFACTOR-UNIFICATION    T-ALPHA-PREFACTOR-UNIFICATION
+                               (T, v162 fold)                       T
+ALPHA-FORM                     the Part V Queen block (D at the
+                               dictionary; comparison fenced)        D
+ALPHA-VALUE-DIGITS             the Part V committed digit string,
+                               enclosed at finite precision          C
 METRO-ADMISSIBILITY            O-METRO-ADMISSIBILITY residual       O
 METRO-EDGE-SCALE               O-METRO-EDGE-SCALE + SI clause       O
 LORENTZ-A2A3                   O-LORENTZ-A2A3                       O
@@ -165,8 +171,7 @@ PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
 derivation): the hyperplane and codec claims;
-the alpha value
-comparison; the cosmology register (w, Omega_b, dark matter ratio,
+the cosmology register (w, Omega_b, dark matter ratio,
 gyron density); the coupling and metrology arc theorems. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author
 decision: an optional enrichment, not a gap; stays internal);
