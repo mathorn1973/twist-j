@@ -1,0 +1,17 @@
+.env
+.env.*
+*.bak
+*.key
+*.log
+*.pem
+*.pyc
+*.token
+__pycache__/
+.venv/
+venv/
+build/
+dist/
+tmp/
+scratch/
+.DS_Store
+Thumbs.db
