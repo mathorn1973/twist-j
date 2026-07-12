@@ -52,6 +52,12 @@ stderr; check_policy and check_canon (hardened) pass on that platform
 (2026-07-12). Author platform Ubuntu 24.04 aarch64 (Python 3.12.3),
 same result.
 
+Recorded at the Born quartet push: Debian 13 x86_64 (Python 3.13.5),
+all five reproductions byte identical against EXPECTED.txt, exit 0,
+empty stderr; check_policy and check_canon (with the frontier
+identifier parser) pass on that platform (2026-07-12). Author platform
+Ubuntu 24.04 aarch64 (Python 3.12.3), same result.
+
 ## Session log
 
 - s2 (2026-07-12): the frontier identifier parser in check_canon now
