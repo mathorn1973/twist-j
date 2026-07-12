@@ -25,7 +25,8 @@ with a reason in the audit and queued here, never registered vaguely.
 ## Queue before the synthesis PR opens
 
 1. Registry completion, cluster by cluster, each with evidence:
-   coupling and metrology arc (next).
+   COMPLETE: nine clusters from the kernel to the coupling and
+   metrology arc; any residue falls to the pre PR inventory.
 2. Deepen sections 14 and 15 from the sealed arc part bodies at the
    internal basis (they are stated here at frontier resolution).
 3. Reconciliation audit rows for every added claim.
@@ -112,8 +113,34 @@ pinning. Formal records begin only after the immutable GitHub
 candidate commit, through the Phase A staging protocol in AGENTS.md;
 both architecture records are pending at the candidate commit.
 
+Coupling and metrology arc staging candidate: verifier 2ecad5f2 and
+stdout f3e975ca, 8/8, exit 0, empty stderr in the pre-pin dry runs,
+byte identical on x86_64 and aarch64. Built in the prep lane and
+rebased before pinning. Formal records begin only after the immutable
+GitHub candidate commit, through the Phase A staging protocol in
+AGENTS.md; both architecture records are pending at the candidate
+commit.
+
 ## Session log
 
+- s11 (2026-07-12): the coupling and metrology arc:
+  reproduce/coupling-metrology (8/8: the squaring decoder with kernel
+  {+-1} and volume neutrality det(I + H) = 1 - |h|^2; the one
+  propagation law on (+1, 0, -3); the Regge-Wheeler endpoint with the
+  forced -6 = 2(1 - 4); the Stage B germ bookkeeping mu = 1 with
+  Z_L2 = 1/2; the Gram density with trace exactly 1; the DeWitt
+  twelves 12 = d(d + 1) at lambda = -1; the dimensionless tick
+  2 pi/5; the coupling seeds 3/4 = d/(d + 1) and the 15 : 4 ratio).
+  Nine registry rows: TT-SQUARING-DECODER D,
+  RINGDOWN-EXPONENTIAL-DEAD F (the second public fired falsifier),
+  SCHWARZSCHILD-TT-ENDPOINT T, TT-QUADRATIC-GERM D,
+  COUPLINGS-DETERMINE T, DEWITT-TWELVES T, METRO-TICK T,
+  MEASURE-SPATIAL-ONLY T, STRONG-SEED D; registry 108 claims. The
+  audit omissions now list only the hyperplane and codec claims,
+  resolved at the pre PR inventory. Built in the prep lane on the
+  pre-cosmology base, rebased onto the post-cosmology synthesis head
+  with the shared counts re-keyed, and pinned through the Phase A
+  staging protocol.
 - s10 (2026-07-12): the cosmology register prep (non-formal):
   reproduce/cosmology-register drafted (7/7 in dry runs: the frozen
   modulus under J -> J e^(i eps), so r = 0 at linear order; the TT

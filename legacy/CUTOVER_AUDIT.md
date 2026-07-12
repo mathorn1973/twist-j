@@ -146,6 +146,29 @@ COSMOLOGY-REGISTER             the Part VIII committed register
 CONFORMAL-PREFACTOR            K_chi5 = K_L5 (D; v183 seal;
                                O-CHI5-KINETIC-COEF closed at the
                                homogeneous L5 scope)                 D
+TT-SQUARING-DECODER            the v166 GW arc: D-TT-VECTOR-DOUBLET
+                               and the squaring map rows (D)         D
+RINGDOWN-EXPONENTIAL-DEAD      F-RINGDOWN-IMR (F, v166, WKB3
+                               grade, labeled)                       F
+SCHWARZSCHILD-TT-ENDPOINT      the Stage A rows: RW coefficients
+                               forced; Lichnerowicz uniqueness at
+                               scope (T)                             T
+TT-QUADRATIC-GERM              the Stage B germ at mu = 1; Z_L2 =
+                               1/2; the free Gaussian exclusion
+                               (D with computed F boundary)          D
+COUPLINGS-DETERMINE            the Part XXXIV arc: density and
+                               Born branch norm (T);
+                               T-MEAS-GYRON-CARRIER-NOGO;
+                               F-QD-INSTRUMENT-UNIQUE (fired v172)   T
+DEWITT-TWELVES                 the covariant DeWitt coefficient
+                               12 = d(d+1) at lambda = -1 (T); the
+                               inheritance chain of twelves          T
+METRO-TICK                     the Part XLI tick clause (T at
+                               scope); the admissibility quartet
+                               with the gyron window pair            T
+MEASURE-SPATIAL-ONLY           T-MEASURE-SPATIAL-ONLY (T, v133)      T
+STRONG-SEED                    alpha_s root 3/4 (D, v133 home
+                               direction rule)                       D
 METRO-ADMISSIBILITY            O-METRO-ADMISSIBILITY residual       O
 METRO-EDGE-SCALE               O-METRO-EDGE-SCALE + SI clause       O
 LORENTZ-A2A3                   O-LORENTZ-A2A3                       O
@@ -181,8 +204,7 @@ PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
 
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
-derivation): the hyperplane and codec claims;
-the coupling and metrology arc theorems. Explicitly omitted
+derivation): the hyperplane and codec claims. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author
 decision: an optional enrichment, not a gap; stays internal);
 W1-INTERFACE-PRINCIPLE, KERNEL-BRAID, and TIMEQUANTUM-POTENTIAL

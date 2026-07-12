@@ -275,8 +275,9 @@ realized on this face.
 Coupling seeds: the coupling root of a sector is the Gram weight of
 its carrier direction; trace and conformal directions carry 1/p, the
 spatial base carries 1; the 3/4 = d/(d + 1) measure attaches to
-spatial gauge sectors only [T]. alpha* = 1/p; the strong root is
-1 x 3/4 x 1 = 3/4 [D]; the seed ratio EM to strong is 15 : 4. Dark
+spatial gauge sectors only (MEASURE-SPATIAL-ONLY) [T]. alpha* = 1/p;
+the strong root is 1 x 3/4 x 1 = 3/4 (STRONG-SEED) [D]; the seed
+ratio EM to strong is 15 : 4. Dark
 energy w = -14/15. Running and scheme are frontier rows
 (ALPHA-S-RUNNING, SCHEME-DICTIONARY).
 
@@ -632,38 +633,42 @@ labels within COSMOLOGY-REGISTER.
 ## 14. The gravitational wave program
 
 The TT decoder is the complex squaring map with kernel {+-1}, the spin
-double cover [D]; volume neutrality is det = 1 - |h|^2 exactly [D];
-one propagation law c = 1 - s^2: breathing +1, photon 0, TT square -3
-[D]. The minimal exponential ringdown reading is dead in the GW
-channel [F; 7.8 sigma at WKB3 grade, labeled engineering]. Stage A,
-the Schwarzschild TT endpoint: the Regge-Wheeler coefficients
-(1, 0, -3) are forced at scope, V_2 = f (L/r^2 - 6M/r^3) [T at scope];
-Lichnerowicz uniqueness holds at the family and witness scope [T];
-covariance alone is not sufficient [F, computed]. Stage B input: the
-quadratic germ of the action is sealed at scope mu = 1 [D]; the
-pairing dictionary has Z_L2 = 1/2; the free Gaussian vector reading is
-excluded [F, computed]; the single remaining input is g_mu
-(TT-GAUGE-PULLBACK). The mu corridor: mu at least 0.804 at 3 sigma and
+double cover; volume neutrality is det = 1 - |h|^2 exactly; one
+propagation law c = 1 - s^2: breathing +1, photon 0, TT square -3
+(TT-SQUARING-DECODER) [D; reproduce/coupling-metrology]. The minimal
+exponential ringdown reading is dead in the GW channel
+(RINGDOWN-EXPONENTIAL-DEAD) [F; 7.8 sigma at WKB3 grade, labeled
+engineering]. Stage A, the Schwarzschild TT endpoint: the
+Regge-Wheeler coefficients (1, 0, -3) are forced at scope, V_2 =
+f (L/r^2 - 6M/r^3), and Lichnerowicz uniqueness holds at the family
+and witness scope (SCHWARZSCHILD-TT-ENDPOINT) [T at scope]; covariance
+alone is not sufficient, a computed boundary. Stage B input: the
+quadratic germ of the action is sealed at scope mu = 1 with the
+pairing dictionary Z_L2 = 1/2, and the free Gaussian vector reading is
+a computed fired boundary (TT-QUADRATIC-GERM) [D]; the single
+remaining input is g_mu (TT-GAUGE-PULLBACK). The mu corridor: mu at least 0.804 at 3 sigma and
 shadow excess in [0, +0.93 percent], ngEHT decides [measured
 comparison]. The emission map, the quasinormal mu decision, and the
 polarization readout stand open (TT-SOURCE, QNM-LEAVER-MU, POL-READ).
 
 ## 15. Couplings, instruments, and metrology
 
-Couplings determine instruments; effects are the shadow [T]. The
+Couplings determine instruments; effects are the shadow; the
 density against the Gram form is rho_psi = psi psi^dagger G /
-(psi^dagger G psi), and the Born value is the branch G norm [T]; the
-gyron carrier admits no alternative at its scope [T]; instrument
+(psi^dagger G psi), and the Born value is the branch G norm; the
+gyron carrier admits no alternative at its scope; instrument
 uniqueness resolved by falsification: effects underdetermine,
-couplings determine [F, fired as registered]. The covariant canonical
-form: the dressing coefficient is the DeWitt norm, 12 = d(d + 1) at
-lambda = -1 [T]. The level 1 to level 2 normalization inheritance is
-closed, the chain of twelves exact [T at scope]. Metrological
+couplings determine, fired as registered (COUPLINGS-DETERMINE) [T,
+with the fired boundary carried at scope; reproduce/coupling-metrology].
+The covariant canonical form: the dressing coefficient is the DeWitt
+norm, 12 = d(d + 1) at lambda = -1, and the level 1 to level 2
+normalization inheritance is closed, the chain of twelves exact
+(DEWITT-TWELVES) [T at scope]. Metrological
 admissibility is closed for normalized one dimensional rational finite
 state protocols by a sealed quartet of theorems with the sharp gyron
-window pair [T at scope]; the residual is METRO-ADMISSIBILITY. The
+window pair; the residual is METRO-ADMISSIBILITY. The
 tick clause is closed dimensionless: delta tau hat = 1/5 cycle =
-2 pi/5 per tick; the remainder is the canonical selector on the
+2 pi/5 per tick (METRO-TICK) [T at scope]; the remainder is the canonical selector on the
 commutator phi ladder and the SI clause (METRO-EDGE-SCALE). The
 dressing insertion bookkeeping carries the exact witness 72 alpha^4
 (about 0.204 ppm, labeled) with the form decision gated on the integer
