@@ -74,6 +74,8 @@ Do not reuse, rename, or resume a sealed probe.
   empty stderr, and byte-identical stdout.
 - A verifier-backed contribution is reproducible only when both the local
   record and the GitHub check pass.
+- A pull request changes at most one probe directory. Bulk migration requires
+  a preceding explicit policy change.
 - For a computation-only promotion to `T`, the local and GitHub runs must also
   use different architectures. Same-architecture agreement is a reproduction,
   not a two-architecture gate. An independent proof may earn `T`; its verifier
@@ -123,3 +125,7 @@ External or large data use a manifest with source, version, license, and hash.
 Every pull request must pass the required `check`, which runs both repository
 policy and any changed verifiers, plus a manual security review. Apache-2.0
 applies unless a file states an approved compatible license.
+
+The sole workflow has read-only permissions, immutable action pins, no
+persisted checkout credential, and a 15-minute timeout. `pull_request_target`
+is forbidden. Any new workflow requires an explicit policy change.

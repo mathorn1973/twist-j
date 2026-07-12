@@ -138,8 +138,10 @@ security audit. It is never copied opportunistically into a probe.
 4. Run the pinned verifier locally from the repository root on Linux or a
    Linux-compatible environment. Save exact stdout as `EXPECTED.txt` and
    record the required fields in `RUN.md`.
-5. Open a pull request. The required `check` independently reruns the changed
-   verifier on GitHub `ubuntu-latest` and compares hashes and exact bytes.
+5. Open a pull request changing at most one probe directory. The required
+   `check` independently reruns the changed verifier on GitHub `ubuntu-latest`
+   and compares hashes and exact bytes. Bulk migration requires a preceding
+   explicit policy change.
 6. If the local and GitHub architectures differ, their byte-identical output
    satisfies the two-architecture computation gate. If they are the same, the
    result is reproduced but a computation-only claim remains at most `C`.
@@ -154,6 +156,10 @@ security audit. It is never copied opportunistically into a probe.
 Notes and incomplete proposals live under `notes/`, carry `NON-CANONICAL`,
 need no verifier, and never edit `canon/CANON.md`. Canon patch proposals live
 under `notes/canon/`; only a later sealed fold changes the Canon.
+
+Do not add or loosen GitHub workflows without an explicit policy change.
+`pull_request_target`, mutable action tags, persisted checkout credentials, and
+write permissions are forbidden.
 
 Commit as `A. M. Thorn <thorn@twistj.com>` unless the author explicitly names
 another contributor identity.

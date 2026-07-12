@@ -55,6 +55,8 @@ def changed_probes(base: str | None) -> list[Path]:
         parts = Path(raw).parts
         if len(parts) >= 3 and parts[0] == "probes":
             names.add(parts[1])
+    if len(names) > 1:
+        fail("a pull request may change only one probe directory")
     return [PROBES / name for name in sorted(names)]
 
 
