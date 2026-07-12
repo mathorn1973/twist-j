@@ -22,6 +22,18 @@ T-LOCK > T > D > C > H > O > F
 
 No summary may exceed the status or scope of its source.
 
+The public registry has one exact schema:
+
+```text
+claim_id	status	scope	canon_section	evidence	falsifier
+```
+
+`claim_id` is stable and unique. `status` is one of the seven public statuses
+above. Definitions and remarks are not registered claims. Internal `T-cand`,
+`LOCK`, `F-LOCK`, `R`, and `Def` labels are not copied mechanically;
+the Canon v1 synthesis must omit or explicitly reconcile them without
+promotion.
+
 ## 2. Layout
 
 Directories are created only when they receive real content.
@@ -85,6 +97,18 @@ A retained public claim must have at least one of:
 - a clearly named external dataset or source manifest where experiment is
   part of the claim.
 
+A minimal reproduction has the stable layout:
+
+```text
+reproduce/NAME/
+    verify.py
+    EXPECTED.txt
+    README.md
+```
+
+It uses the Python standard library, exits zero, writes no stderr, and must
+match `EXPECTED.txt` byte for byte in the required GitHub check.
+
 Before cutover, a reconciliation audit maps every public claim to an internal
 claim of equal or stronger status and scope. The audit forbids promotion by
 rewriting. It is review material, not part of the normative Canon, and may be
@@ -126,6 +150,7 @@ canon/CANON.md      complete current Canon
 canon/FRONTIER.md   live open obligations only
 canon/REGISTRY.tsv  machine-readable claim registry
 canon/CHANGELOG.md  delta within the public series
+canon/SHA256SUMS     hashes of the five normative files above
 ```
 
 Public Canon v1 is newly authored from the latest sealed internal state. It is
@@ -153,10 +178,16 @@ a separate sealed public fold applies it to `canon/CANON.md`.
 ## 6. Git
 
 - `main` accepts reviewed pull requests only, except repository genesis.
-- The initial synthesis uses one dedicated branch `synthesis/canon-v1` and one
-  cutover pull request. It may add the Canon files, small data, minimal
+- The initial synthesis uses the dedicated branch `synthesis/canon-v1`. Its
+  reviewed pull request adds the Canon bundle, small data, minimal
   reproductions, citation material, and the reconciliation audit. It does not
   import historical probe directories or the old repository history.
+- Cutover is two-phase. The synthesis pull request leaves `STATE: GENESIS`
+  and records the Canon as a candidate. After it merges, a separate
+  `activate/canon-v1` pull request sets `STATE: ACTIVE`, names the immutable
+  Canon content commit, exact hash and byte count, and updates the README.
+- The `canon-v1` tag and release are created from the merged activation
+  commit. Authority moves only after public readback and all required checks.
 - Probe commits are never rebased, squashed, amended, or force-pushed after the
   preregistration pin. Merge commits preserve provenance.
 - Check for an existing branch, issue, probe, and lock before claiming work.
