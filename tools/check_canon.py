@@ -38,6 +38,16 @@ REGISTRY_FIELDS = (
 STATUSES = {"T-LOCK", "T", "D", "C", "H", "O", "F"}
 CLAIM_ID = re.compile(r"^[A-Z][A-Z0-9-]*$")
 CLAIM_TOKEN = re.compile(r"\b(?:T-LOCK|T|D|C|H|O|F)-[A-Z0-9][A-Z0-9-]*\b")
+PLACEHOLDER_FALSIFIERS = (
+    "none armed",
+    "none fired",
+    "not applicable",
+    "to be determined",
+    "tbd",
+    "pending",
+    "registered with the hypothesis",
+    "no falsifier",
+)
 FORBIDDEN_CANON_PHRASES = (
     "TWIST_J_Canon_",
     "CROSSPLATFORM_LOCK_RECORD",
@@ -143,8 +153,16 @@ for number, row in enumerate(rows, start=2):
             fail(f"{claim} has empty {field}")
     if (row.get("canon_section") or "").strip() not in canon:
         fail(f"{claim} canon_section is absent from CANON.md")
-    if status in {"H", "O", "F"} and not (row.get("falsifier") or "").strip():
-        fail(f"{claim} with status {status} lacks falsifier")
+    if status in {"H", "O", "F"}:
+        falsifier = (row.get("falsifier") or "").strip()
+        if not falsifier:
+            fail(f"{claim} with status {status} lacks falsifier")
+        low = falsifier.lower()
+        for phrase in PLACEHOLDER_FALSIFIERS:
+            if phrase in low:
+                fail(f"{claim} falsifier is a placeholder: {phrase}")
+        if len(falsifier) < 20:
+            fail(f"{claim} falsifier is too short to be a condition")
     if not exact_token(canon, claim):
         fail(f"{claim} is absent from CANON.md")
 
