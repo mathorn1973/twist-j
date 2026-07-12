@@ -159,14 +159,15 @@ not part of the public Canon series.
     CANON_BYTES:    exact canon/CANON.md byte count
     ```
 
-16. Update `README.md` from GENESIS to ACTIVE and point readers to
-    `canon/CORE.md`, `canon/CANON.md`, and `canon/FRONTIER.md`.
+16. Update `README.md` from GENESIS to ACTIVE, point readers to
+    `canon/CORE.md`, `canon/CANON.md`, and `canon/FRONTIER.md`, and
+    finalize `CITATION.cff` with the Public Canon landing-page URL.
 17. Open and merge a separate reviewed activation pull request.
 18. Tag the activation merge commit `canon-v1`, create the release, and attach
     the recorded `canon/SHA256SUMS`.
 19. Repoint `twistj.com/canon/` from the legacy line to Public Canon v1,
-    complete the final `CITATION.cff` landing-page metadata, and verify the
-    tag, release, public readback, hashes, registry, and all required checks.
+    then verify the tag, release, public readback, hashes, registry, and all
+    required checks.
 20. Freeze the internal repository for scientific writes and replace its root
     notice with a pointer to this repository. Only then is cutover complete.
 
