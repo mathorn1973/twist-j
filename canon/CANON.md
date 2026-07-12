@@ -575,16 +575,22 @@ remaining lift from the core to the SL_3(F_5) carrier with its
 
 The bridge law alpha B g = 1; G proportional to alpha^20 with the
 geometric factor (32/33)^2 = (2^5/(2^5 + 1))^2; m_e the single SI
-anchor. The Kahler capacity V_geo = (4 pi)^3 phi^2 = 64 pi^3 phi^2
-[T]: from the single Kahler metric h(z) = (J Jbar)^-1
-(1 + |z|^2)^-1, the order 2 jet gives Fubini-Study (4 pi)^3 and the
-order 0 jet gives h(0) = phi^2, since J Jbar = phi^-2 exactly. The FRW
-rank 1 canonical form [T]: H^2 = 72 pi rho_phys with lambda = 216 pi;
-the fiber multiplier k_f = 1 is forced; the source projector is
+anchor (GRAVITY-BRIDGE-LAW at D: the equation layer, with
+g = 2^5 phi^2 sqrt(3 - phi) carried exactly through its square; the
+SI value of G stays on the frontier; reproduce/gravity-chain). The
+Kahler capacity V_geo = (4 pi)^3 phi^2 = 64 pi^3 phi^2
+(KAHLER-CAPACITY) [T]: from the single Kahler metric
+h(z) = (J Jbar)^-1 (1 + |z|^2)^-1, the order 2 jet gives Fubini-Study
+(4 pi)^3 and the order 0 jet gives h(0) = phi^2, since
+J Jbar = phi^-2 exactly. The FRW rank 1 canonical form
+(FRW-CANONICAL-FORM) [T]: H^2 = 72 pi rho_phys with lambda = 216 pi
+from the rank 1 lapse action; the fiber multiplier k_f = 1 is forced
+by the master closure against G_nat = 27 = d^3, with the cell volume
+864 pi carrying exactly one fiber 2 pi; the source projector is
 unique; the source is a matter amplitude, rho = rho_0 ell^2. E_total =
 0 is a theorem of the closed whole under A0. The ell-G wall is a
 mechanism wall: ell_P / lambda_e = (32/33) alpha^10 / sqrt(g), with
-the exponent identity G_T = alpha^(20 + sigma).
+the exponent identity G_T = alpha^(20 + sigma) (GRAVITY-BRIDGE-LAW).
 
 Cosmology: the tilt is n_s - 1 = -p alpha = -5 alpha at H (NS-TILT,
 falsifier live at CMB-S4). The deformation J -> J e^(i eps) freezes

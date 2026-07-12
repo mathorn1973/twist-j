@@ -1,0 +1,18 @@
+TWIST-J gravity chain witness (exact arithmetic, formal pi)
+V_geo = 64 pi^3 phi^2; H^2 = 72 pi rho at lambda = 216 pi; k_f = 1 forced; G_nat = 27 = d^3
+the SI bridge is carried at the equation layer only; the value of G stays on the frontier
+
+PASS 01 CHORD        J Jbar = (1 + zeta^2)(1 + zeta^3) = 2 - phi exactly in Z[zeta_5], and phi^2 (2 - phi) = 1 in Q(sqrt5): the modulus chord is J Jbar = phi^-2, so h(0) = (J Jbar)^-1 = phi^2; N(J) = 1 over the four Galois conjugates
+PASS 02 JET          h(t) = phi^2/(1 + t): the jet coefficients are (-1)^k phi^2 exactly in Q(sqrt5) (witnessed to order 12 by the closed telescoping identity); the order 0 jet is h(0) = phi^2
+PASS 03 CAPACITY     V_geo = (4 pi)^3 phi^2 = 64 pi^3 phi^2 as an exact monomial: the Fubini-Study factor (4 pi)^3 = 64 pi^3 with 4^3 = 64, the order 0 jet phi^2; the pi degree 3 is odd, the parity law carrier
+PASS 04 LAPSE        the lapse variation of the rank 1 action S = V0 int dt nu e^(3 Phi) [-(3/lambda)(Phidot/nu)^2 - rho] gives lambda nu^2 dL/dnu = e^(3 Phi)(3 Phidot^2 - lambda rho nu^2) exactly: the (00) constraint 3 H^2 = lambda rho
+PASS 05 LAMBDA       lambda = 216 pi gives H^2 = (lambda/3) rho = 72 pi rho exactly; 216 = 2^3 3^3 and 72 = 2^3 3^2; the cell chain 864 = 12 . 72 = 4 . 216 closes on the same integers
+PASS 06 TWO-PLANES   the coefficient 3 counts the spatial 2-planes: C(3, 2) = 3 and sum over i < j of H_i H_j = 3 H^2 on the isotropic background; d = 3 throughout
+PASS 07 FRIEDMANN    the Phi Euler-Lagrange equation is e^(3 Phi) [(6/lambda) Hdot + (9/lambda) H^2 - 3 rho - rho'] exactly; imposing 3 H^2 = lambda rho leaves (6/lambda) Hdot = rho'; the continuity rho' = -3 (rho + p) gives the second Friedmann equation 2 Hdot = -lambda (rho + p)
+PASS 08 HAMILTONIAN  with pi_Phi = -(6/lambda) V0 e^(3 Phi) Phidot / nu, the constraint C = -(lambda/(12 V0 e^(3 Phi))) pi_Phi^2 + V0 e^(3 Phi) rho satisfies lambda C = -V0 e^(3 Phi) (3 (Phidot/nu)^2 - lambda rho) exactly: the canonical (00) form
+PASS 09 FIBER-FORCED V_cell = 2 (d+1)^2 d^3 pi = 864 pi = 2^5 3^3 pi; the source coefficient k (3 - k)/2 = -54 at k = 12 is pi free and V free; the master closure K_flux K_src^2 8 pi = G_nat at V = k_f 864 pi reads 27/k_f = 27 k_f, so k_f^2 = 1 and the positive root k_f = 1 is forced; G_nat = 27 = d^3
+PASS 10 FIBER-CIRCLE J = zeta (zeta + zeta^4) exactly in Z[zeta_5] with zeta + zeta^4 = phi - 1 > 0, so the step phase is the fiber generator phase, one step per 2 pi/5; p = 5 steps close the U(1) fiber at 2 pi; the cell volume 864 pi carries exactly one fiber 2 pi (pi degree 1, odd)
+PASS 11 BRIDGE-EXACT |1 - zeta|^2 = 3 - phi exactly in Z[zeta_5]; g = 2^5 phi^2 sqrt(3 - phi) carried through g^2 = 1024 phi^4 (3 - phi) > 0 exactly in Q(sqrt5); (32/33)^2 = 1024/1089 with 33 = 2^5 + 1; the bridge law alpha B g = 1 holds identically at B = alpha^-1/g; the dimensional identity hbar c/m_e^2 = lambda_e^2 c^3/hbar is exact
+PASS 12 WALL-FORM    the wall spelling is exact at the equation layer: squaring ell_P/lambda_e = (32/33) alpha^10 / sqrt(g) gives (ell_P/lambda_e)^2 = (32/33)^2 alpha^20 / g = G_T, and with ell_P^2 = 27 ell_G^2 this is 27 (ell_G/lambda_e)^2 = G_T; the alpha content of G_T is exactly alpha^20 = alpha^(4p); the SI value of G is not claimed here
+
+RESULT 12/12 ALL PASS

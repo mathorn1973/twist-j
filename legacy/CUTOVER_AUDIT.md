@@ -98,6 +98,15 @@ COLOR-INTEGRAL-LIFT            T-INTEGRAL-MODEL, T-GOOD-REDUCTION,
                                T-ORBIT-REALIZED (T)                T
 COLOR-MEASURE-TRANSPORT        T-2I-READOUTS, T-VERB-TRANSPORT,
                                T-SPECTRAL-MEASURE (T)              T
+KAHLER-CAPACITY                the capacity result (v117); T-KC-J,
+                               T-KAHLER-GEOMETRIC (T-LOCK)          T
+FRW-CANONICAL-FORM             the FRW rank-1 (00) canonical form
+                               (T); the fiber wall and multiplier
+                               closures                             T
+GRAVITY-BRIDGE-LAW             the Part VII bridge block; the
+                               O-ELL-G-SI equation registration
+                               (value stays O); D-SS40-TIER1-OPTIMUM
+                               (D)                                  D
 METRO-ADMISSIBILITY            O-METRO-ADMISSIBILITY residual       O
 METRO-EDGE-SCALE               O-METRO-EDGE-SCALE + SI clause       O
 LORENTZ-A2A3                   O-LORENTZ-A2A3                       O
@@ -134,7 +143,7 @@ PHOTON-RADIATIVE-INDEPENDENCE  O-PHOTON-RADIATIVE-INDEPENDENCE      O
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
 derivation): the hyperplane and codec claims;
-the gravity chain (capacity, FRW coefficients, bridge law); the
+the
 mass ladder values; Weinberg; the Maxwell closure; the alpha value
 comparison; the cosmology register (w, Omega_b, dark matter ratio,
 gyron density); the coupling and metrology arc theorems. Explicitly omitted

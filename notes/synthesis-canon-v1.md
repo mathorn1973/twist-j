@@ -25,9 +25,9 @@ with a reason in the audit and queued here, never registered vaguely.
 ## Queue before the synthesis PR opens
 
 1. Registry completion, cluster by cluster, each with evidence:
-   gravity chain (next), mass ladder, Weinberg, Maxwell closure,
-   alpha value (needs a high precision exact
-   reproduction), cosmology register, coupling and metrology arc.
+   mass ladder (next), Weinberg, Maxwell closure, alpha value
+   (needs a high precision exact reproduction), cosmology register,
+   coupling and metrology arc.
 2. Deepen sections 14 and 15 from the sealed arc part bodies at the
    internal basis (they are stated here at frontier resolution).
 3. Reconciliation audit rows for every added claim.
@@ -71,8 +71,30 @@ begin only after the immutable GitHub candidate commit, through the
 Phase A staging protocol in AGENTS.md; both architecture records are
 pending at the candidate commit.
 
+Gravity chain staging candidate: verifier e964fb6c and stdout
+e74dd895, 12/12, exit 0, empty stderr in the pre-pin dry run, byte
+identical on x86_64 and aarch64. Formal records begin only after the
+immutable GitHub candidate commit, through the Phase A staging
+protocol in AGENTS.md; both architecture records are pending at the
+candidate commit.
+
 ## Session log
 
+- s5 (2026-07-12): the gravity chain candidate:
+  reproduce/gravity-chain (12/12: the modulus chord J Jbar = 2 - phi =
+  phi^-2 with N(J) = 1; the Kahler jet and the exact capacity monomial
+  64 pi^3 phi^2, pi odd; the rank 1 lapse action closing the (00)
+  algebra with lambda = 216 pi and H^2 = 72 pi rho; the three 2-planes
+  coefficient; the Euler-Lagrange chain to the second Friedmann
+  equation; the canonical Hamiltonian form; the forced fiber k_f = 1
+  against G_nat = 27 = d^3 with V_cell = 864 pi; the fiber circle
+  J = zeta (zeta + zeta^4); the exact bridge square g^2 = 1024 phi^4
+  (3 - phi); the wall spelling at the equation layer). Three registry
+  rows: KAHLER-CAPACITY T, FRW-CANONICAL-FORM T, GRAVITY-BRIDGE-LAW D
+  (the equation layer; the SI value of G stays on the frontier);
+  registry 78 claims. The audit omissions no longer list the gravity
+  chain. The cluster enters GitHub staging through the Phase A
+  protocol in AGENTS.md.
 - s4 (2026-07-12): the color ladder candidate:
   reproduce/color-ladder (12/12 blocks, eleven rungs). Rungs 1 and 2
   close the D5 return group, integer mass law, torsors, holonomy,
