@@ -8,8 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 MAX_BYTES = 5 * 1024 * 1024
 
 ALLOWED_ROOT = {
-    ".gitattributes", ".github", ".gitignore", "AGENTS.md", "LICENSE",
-    "POLICY.md", "README.md", "STATUS.md", "canon", "data", "legacy",
+    ".gitattributes", ".github", ".gitignore", "AGENTS.md", "CITATION.cff",
+    "LICENSE", "POLICY.md", "README.md", "STATUS.md", "canon", "data",
+    "legacy",
     "notes", "probes", "reproduce", "tools",
 }
 FORBIDDEN_SUFFIXES = {
