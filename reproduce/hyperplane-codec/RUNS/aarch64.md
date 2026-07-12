@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: a8f28419f2bb36cdc89793aa80333e254a03813a
+run_base_commit: a8f28419f2bb36cdc89793aa80333e254a03813a
+reproduction: hyperplane-codec
+verifier_sha256: 921ae52013540f044119633d0e33781898600b5e5541f375b96a5019f186a725
+expected_sha256: bc42aa9e37405c7696757505b54069a77062d4457b13651a7a6d34b2e74a318f
+command: python3 reproduce/hyperplane-codec/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: bc42aa9e37405c7696757505b54069a77062d4457b13651a7a6d34b2e74a318f
+stdout_bytes: 3202
+stdout_lines: 14
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS
