@@ -1,0 +1,205 @@
+item_id	depends_on	relation	basis
+DEF-MJ	AXIOM-J	REQUIRES	M_J is multiplication by J
+DEF-AUTONOMOUS-STATE	DEF-CHECKPOINT	REQUIRES	Omega contains the finite checkpoint
+DEF-AUTONOMOUS-STATE	DEF-ODOMETER-ORBIT	REQUIRES	Omega contains the forward odometer orbit
+DEF-AUTONOMOUS-STATE	DEF-KERNEL-GENERATORS	REQUIRES	U applies one declared generator
+DEF-AUTONOMOUS-STATE	DEF-SELECTOR	REQUIRES	U reads the declared selector
+DEF-LOG-STREAM	DEF-AUTONOMOUS-STATE	REQUIRES	the Log is a derived orbit record
+DEF-DECODER-MATTER	DEF-AUTONOMOUS-STATE	REQUIRES	D_matter reads a forward orbit
+DEF-DECODER-GEOMETRY	DEF-DECODER-MATTER	REQUIRES	geometry reads MatterData
+DEF-DECODER-CLOCK	DEF-DECODER-GEOMETRY	REQUIRES	clock reads accumulated geometry
+DEF-ARCHITECTURE	DEF-AUTONOMOUS-STATE	REQUIRES	declared architecture contains Omega and U
+DEF-ARCHITECTURE	DEF-DECODER-CLOCK	REQUIRES	declared architecture contains the partial decoder
+J-UNIT	AXIOM-J	REQUIRES	unit theorem starts from J
+J-PROJECTIONS	AXIOM-J	REQUIRES	polar decomposition starts from J
+J-MODULUS-CHORD	AXIOM-J	REQUIRES	chord identity starts from J
+PI-FROM-J	AXIOM-J	REQUIRES	principal logarithm identity starts from J
+J-TENTH-ROOT	AXIOM-J	REQUIRES	root identity starts from J
+J-GOLDEN-BRIDGE	AXIOM-J	REQUIRES	bridge identities start from J
+J-STEP	DEF-MJ	REQUIRES	J-STEP is the matrix action of M_J
+PLENUM-POINT	AXIOM-J	REQUIRES	plenum identities start from J
+J-RAMIFIED-CHORD	AXIOM-J	REQUIRES	ramified chord starts from J
+LOG-AXES-INDEPENDENCE	AXIOM-J	REQUIRES	the two logarithmic axes are projections of J
+AXIOM-PROJECTION-DICTIONARY	J-PROJECTIONS	REQUIRES	registry scope names the theorem input
+AXIOM-PROJECTION-DICTIONARY	PLENUM-POINT	REQUIRES	registry scope names the theorem input
+AXIOM-PROJECTION-DICTIONARY	J-MODULUS-CHORD	REQUIRES	registry scope names the theorem input
+AXIOM-PROJECTION-DICTIONARY	J-RAMIFIED-CHORD	REQUIRES	registry scope names the theorem input
+BOOST-COUNT-LADDER	BOOST-READING-SPLIT	REQUIRES	count dictionary rests on the exact split
+READING-SPLIT	CODEC-TR4	REQUIRES	linear leg is CODEC-TR4
+SILVER-SIBLING	SILVER-RING-FACTS	REQUIRES	dictionary rests on finite ring facts
+FORCE-AS-CURVATURE	FORCE-WEYL-HOLONOMY	REQUIRES	curvature reading rests on the Weyl theorem
+MEASURE-BORN-VERB	BORN-FACE-WEIGHTS	REQUIRES	registry scope names the theorem input
+COSMOLOGY-READING-DICTIONARY	TT-LINEAR-ZERO	REQUIRES	dictionary reads the exact zero response
+COSMOLOGY-READING-DICTIONARY	GYRON-DENSITY	REQUIRES	dictionary reads the exact density
+COSMOLOGY-READING-DICTIONARY	COSMOLOGY-REGISTER	REQUIRES	dictionary reads the committed forms
+ELECTRON-G-TREE	ELECTRON-G-RATIO	REQUIRES	dictionary rests on the exact ratio
+ELECTRON-G-TREE	ELECTRON-G-DOUBLE-COVER	REQUIRES	dictionary rests on the exact double cover
+ELECTRON-SIGN	ELECTRON-SIGN-LAWS	REQUIRES	dictionary rests on the exhaustive laws
+FRW-INHOM	FRW-CANONICAL-FORM	REQUIRES	inhomogeneous extension starts from the homogeneous theorem
+TM-SYM2-MEASURE	GYRON-DENSITY	REQUIRES	registered measure residual uses rho = 1/6
+MASS-LADDER-FORMS	NEUTRON-DELTA-EM	BOUNDED_BY	neutron comparison remains open
+TT-QUADRATIC-GERM	TT-GAUGE-PULLBACK	BOUNDED_BY	g_mu remains the named open input
+TT-QUADRATIC-INDUCED	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	normalization remains open
+COSMOLOGY-REGISTER	NS-TILT	BOUNDED_BY	tilt remains a live hypothesis
+CONFORMAL-PREFACTOR	FRW-INHOM	BOUNDED_BY	inhomogeneous action remains open
+CONFORMAL-PREFACTOR	METRO-EDGE-SCALE	BOUNDED_BY	SI clause remains open
+STRONG-SEED	ALPHA-S-RUNNING	BOUNDED_BY	running remains open
+STRONG-SEED	SCHEME-DICTIONARY	BOUNDED_BY	measurement scheme remains open
+ELECTRON-G-TREE	QUANT-SUBSTRATE	BOUNDED_BY	quantum substrate remains open
+ALPHA-SEED	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+BORN-FACE-WEIGHTS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+BORN-HALF-ANGLE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+BORN-RESIDUAL-SPLIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+SPIN-BISECTOR	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+BORN-ORDER-STAIRCASE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CENSUS-313	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CENSUS-Z5-SHEET	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CENSUS-PAIRING	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CENSUS-HOSTING	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+DIRAC-LADDER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+LADDER-LIGHTCONE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+SPINOR-FLOOR	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+FIB-ROOT-TIES	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+FIB-ROOT-CARRIER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+DIRAC-STEP-THEOREMS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+DIRAC-STEP	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+LADDER-SPIN-PLACES	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CHECKERBOARD-GAUSS-TOWER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+FERMIONIZER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+LADDER-ALTERNATOR-BASIS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TM-BREATH-TOWER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+BOOST-READING-SPLIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+BOOST-COUNT-LADDER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+OBSERVER-ALTERNATOR	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+BOOST-AXIS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-RETURN-D5	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-TORSOR-HOLONOMY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-SPLIT-12	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-LADDER-DICTIONARY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-DYNAMICAL-COLOR	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-KIN-NORMALIZER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-KINEMATICAL-GL2	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-CORE-2I	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-GOLDEN-TABLE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-MCKAY-E8	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-MOMENT-FINGERPRINT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-SPECTRAL-INVARIANTS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-DICKSON-RAMIFICATION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-KLEIN-REDUCTION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-INTEGRAL-LIFT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-MEASURE-TRANSPORT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KAHLER-CAPACITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+FRW-CANONICAL-FORM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+GRAVITY-BRIDGE-LAW	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MU-TAU-COEFFICIENT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MU-EXCHANGE-IDENTITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MASS-LADDER-FORMS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+PARITY-LAW	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+BRIDGE-DEFECT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+WEINBERG-TREE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+HYPERCHARGE-LAW	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+WEINBERG-FORM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MAXWELL-BIANCHI	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MAXWELL-GAUSS-CHAIN	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MAXWELL-AMPERE-CHAIN	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MAXWELL-OBSTRUCTION-P	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MAXWELL-CLOSED	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ALPHA-PREFACTOR-UNIFICATION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ALPHA-FORM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ALPHA-VALUE-DIGITS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TT-LINEAR-ZERO	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TT-QUADRATIC-INDUCED	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+GYRON-DENSITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COSMOLOGY-READING-DICTIONARY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COSMOLOGY-REGISTER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CONFORMAL-PREFACTOR	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TT-SQUARING-DECODER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+RINGDOWN-EXPONENTIAL-DEAD	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+SCHWARZSCHILD-TT-ENDPOINT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TT-QUADRATIC-GERM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COUPLINGS-DETERMINE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+DEWITT-TWELVES	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+METRO-TICK	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MEASURE-SPATIAL-ONLY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+STRONG-SEED	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+HYPERPLANE-BOUNDARY-CLASS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+HYPERPLANE-BOUNDARY-REALIZATION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CODEC-TR4	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+PHIBIT-NOT-TAU	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KERNEL-WEDGE-AFFINITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KERNEL-WEDGE-COUPLING	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KERNEL-WEDGE-LINEAR-STRATA	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KERNEL-WEDGE-AFFINE-MIX	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KERNEL-CELL-COMPONENTS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KERNEL-MACRO-READING	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ODOMETER-INTERNALIZED	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+READING-SPLIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TIME-QUANTUM-TOWER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+DEGREES-BY-PRIME	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+Z2-PLACES-SPLIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TWO-PLACE-PHYSICS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+I-BILOCATED	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+SILVER-RING-FACTS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+SILVER-SIBLING	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+FORCE-WEYL-HOLONOMY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+FORCE-AS-CURVATURE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COULOMB-GREEN-COMPUTATION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COULOMB-PROJECTION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+FORCE-POLAR-SIGN	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ABELIAN-FACE-DICTIONARY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MEASURE-BORN-VERB	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KERNEL-CELL-DICTIONARY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+SUBSTRATE-KNIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+METRO-ADMISSIBILITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+METRO-EDGE-SCALE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+LORENTZ-A2A3	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+QUANT-SUBSTRATE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-MEASURE-SELECTION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TT-GAUGE-PULLBACK	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TT-SOURCE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+QNM-LEAVER-MU	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+POL-READ	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TT-VECTOR-STATE-NORMALIZATION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+FRW-INHOM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+DRESS-CROSSCOUNT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+NS-TILT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+DE-CONFORMAL-WEIGHT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ALPHA-S-RUNNING	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+SCHEME-DICTIONARY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+FIBER-THRESHOLD	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+GENERATIONS-L3	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ETA-ALTERNATOR-BRIDGE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+SPIN-LIFT-FORCED	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KC3-PLENUM-READOUT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+QUADRATIC-ENVELOPE-DECODER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+TM-SYM2-MEASURE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+QUADRATIC-DECODER-DATA	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+NEUTRON-DELTA-EM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+PROTON-RESIDUAL-IS-QCD	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+SQRT-PHI-TIME-GRAVITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CODEC-RATE-SCOPE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KERNEL-CONNECT-ALL-K	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CURVATURE-TRACE-VALUE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+OBSERVER-WRITE-PORT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+PHOTON-RADIATIVE-INDEPENDENCE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+PHOTON-WINDOW-COORDINATES	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+PHOTON-UNIVERSAL-BIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MONOPOLE-FIFTHS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MONOPOLE-COST	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KAPPA-BOUNDS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+KAPPA-SHAPES	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CENTER-SPLIT-RECIPROCITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CENTER-SPLIT-CLOSURE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CENTER-SPLIT-SELECTION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ELECTRON-G-RATIO	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ELECTRON-G-DOUBLE-COVER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ELECTRON-G-TREE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ELECTRON-SIGN-LAWS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ELECTRON-SIGN	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+PHOTON-WINDOW-PROOF	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+PENTIT-ROOT-FACTS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+PENTIT-ROOT-READING	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+MAGIC-PRIME-GATE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+QUBIT-FROM-F5	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+BELL-MAGIC-BOUNDARY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+P5-ROOT-SELECTION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
