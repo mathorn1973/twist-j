@@ -274,10 +274,10 @@ Tr_4(M_J x) = 2 Tr_4(x) - 5 x_c.
 
 Therefore Tr_4(M_J x) = 2 Tr_4(x) in F_5, and the scalar multiples of
 Tr_4 are the only covectors reading any multiplier at all
-(CODEC-TR4 [T], reproduce/hyperplane-codec). The phrase "rate 4/5"
-currently has no precise public code, block length, alphabet, or
-decoding statement. `CODEC-RATE-SCOPE` [O] requires such a statement
-and its own witness, or else deletion of the shorthand.
+(CODEC-TR4 [T], reproduce/hyperplane-codec). No coding rate is inferred
+from this dimension count. The inherited phrase "rate 4/5" is retired
+from Public Canon v1; any future coding claim must define its alphabet,
+message space, encoder, decoder, error criterion, and rate from scratch.
 
 Macro space is the coupled kernel. Cells couple on the entanglement
 axis by the two way CSUM transvections, and the wedge
@@ -373,7 +373,8 @@ dictionary is claimed.
 The gravity dictionary currently places three labeled ingredients
 side by side: the cell action 864 pi at k = d(d + 1) = 12, the
 quadrupole-power comparison against the Hulse-Taylor binary pulsar
-(99.84 percent [measured comparison]), and the declared kernel
+(99.83 +/- 0.16 percent [measured comparison], source
+SRC-PSR-B1913), and the declared kernel
 coefficient A_GD = 1/(8 pi) with lambda = 216 pi. Their conjunction is
 a GRAVITY-BRIDGE-LAW reading [D], not an additional theorem and not a
 public value of G. Its exact displayed identity is:
@@ -445,6 +446,7 @@ energy w = -14/15. Running and scheme are frontier rows
 alpha = 5 S / ((8 pi)^2 sqrt(s)),   sqrt(s) = (3 - phi)^(1/4),
 S = (1 + X/5)^-5,   X = 1 / (32 pi^2 phi^4)
 alpha^-1 = 137.035999190;  CODATA 2022: 137.035999177(21)
+                                            source SRC-CODATA-2022-ALPHA
                                             [measured comparison]
 ```
 
@@ -483,13 +485,16 @@ D; the theorem layer at T; reproduce/mass-ladder):
 
 ```
 C_mu_tau = 89/5 = 18 - 1/p          (MU-TAU-COEFFICIENT)  [T]
-mu_mu  = 2688/13 - (89/5) alpha^2     (+0.042 sigma)      [measured comparison]
+mu_mu  = 2688/13 - (89/5) alpha^2     (-0.023 sigma)      [measured comparison]
+         source SRC-CODATA-2018-MUON
 mu_tau = 3477 + 240 (89/5) alpha^2    (-0.011 sigma)      [measured comparison]
+         source SRC-CODATA-2018-TAU
 exchange identity: delta mu_tau + 240 delta mu_mu = 0     [T, exact in Q]
          (MU-EXCHANGE-IDENTITY)
 mu_p   = 6 pi^5 (1 + alpha^2 / 3)     the single bare pi^5, an odd carrier
-mu_n   = mu_p + deg_v / chi - Delta_EM;  the bare neutron at -17.93 ppm
-         [measured comparison];  Delta_EM open (NEUTRON-DELTA-EM)
+mu_n   = mu_p + deg_v / chi - Delta_EM;  a numerical comparison is not
+         retained until deg_v / chi and Delta_EM are public;
+         Delta_EM stays open (NEUTRON-DELTA-EM)
 the electron at the Dirac step:  det = 1 + m_D^2 = 5 = p
 ```
 
@@ -642,8 +647,8 @@ reading, within DIRAC-LADDER; T at the tower, CHECKERBOARD-GAUSS-TOWER]:
 one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
--I for the photon. The eta naming clause stays a remark; only its
-named gate can move it (ETA-ALTERNATOR-BRIDGE). The fermionizer
+-I for the photon. No eta identity is inferred from this tower; the
+inherited naming clause is retired from Public Canon v1. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -879,20 +884,19 @@ labels within COSMOLOGY-REGISTER.
 The TT decoder is the complex squaring map with kernel {+-1}, the spin
 double cover; volume neutrality is det = 1 - |h|^2 exactly; one
 propagation law c = 1 - s^2: breathing +1, photon 0, TT square -3
-(TT-SQUARING-DECODER) [D; reproduce/coupling-metrology]. The minimal
-exponential ringdown reading is dead in the GW channel
-(RINGDOWN-EXPONENTIAL-DEAD) [F; 7.8 sigma at WKB3 grade, labeled
-engineering]. Stage A, the Schwarzschild TT endpoint: the
+(TT-SQUARING-DECODER) [D; reproduce/coupling-metrology]. The inherited
+WKB3 ringdown grade has no public source or reproducing test and is
+therefore not a Canon claim. Stage A, the Schwarzschild TT endpoint: the
 Regge-Wheeler coefficients (1, 0, -3) are forced at scope, V_2 =
 f (L/r^2 - 6M/r^3) (SCHWARZSCHILD-TT-ENDPOINT) [T at the displayed
 family scope]; no wider uniqueness theorem is claimed. Stage B uses
 the explicit dictionary inputs mu = 1 and Z_L2 = 1/2
-(TT-QUADRATIC-GERM [D]); neither the action germ nor a Gaussian-state
-boundary is derived by that bookkeeping identity. The remaining input
-is g_mu (TT-GAUGE-PULLBACK). The mu corridor: mu at least 0.804 at 3 sigma and
-shadow excess in [0, +0.93 percent], ngEHT decides [measured
-comparison]. The emission map, the quasinormal mu decision, and the
-polarization readout stand open (TT-SOURCE, QNM-LEAVER-MU, POL-READ).
+(TT-QUADRATIC-GERM [D]); neither the action germ, a Gaussian-state
+boundary, nor a Stage B pullback is derived by that bookkeeping
+identity. No numerical mu corridor is retained without a public
+shadow-to-mu inference rule. The emission map, the quasinormal mu
+decision after such a rule is preregistered, and the polarization
+readout stand open (TT-SOURCE, QNM-LEAVER-MU, POL-READ).
 
 ## 15. Couplings, instruments, and metrology
 
@@ -912,9 +916,10 @@ decision. The tick clause alone is closed dimensionless: delta tau hat = 1/5 cyc
 commutator phi ladder and the SI clause (METRO-EDGE-SCALE). The
 dressing insertion bookkeeping carries the exact witness 72 alpha^4
 (about 0.204 ppm, labeled) with the form decision gated on the integer
-crossing count (DRESS-CROSSCOUNT). `LORENTZ-A2A3` [O] asks for a public
-finite action chain with a decided K6 obstruction; no end-to-end
-Lorentz closure is asserted. `QUADRATIC-DECODER-DATA` [O] asks for a
+crossing count (DRESS-CROSSCOUNT). No end-to-end Lorentz closure is
+asserted; the former compound A2/A3/K6 row is retired until its
+operators can be registered as separate gates. `QUADRATIC-DECODER-DATA`
+[O] asks for a
 publicly typed action on data; no unregistered closure of state-update,
 Gram, dagger, or data-effect clauses is asserted.
 
@@ -940,25 +945,11 @@ non abelian measure lift (COLOR-MEASURE-SELECTION); and the shared
 
 ## 17. Engineering witnesses
 
-Witnesses, not theorem promotions; every number here is an engineering
-readout or a measured comparison, labeled by this sentence.
-
-```
-random circuit sampling   bit exact in Z[zeta_24] and Z[zeta_360];
-                          four way bit exact
-native Z_5 qudit suite    tableau, dense, shadows, magic, Wigner;
-                          110000000 circuits, zero failures; three
-                          independent invariants forced to agree
-integer Clifford+T        bit exact statevector across six platforms
-Z_5 gate set              ZX = j XZ; Bell, GHZ, Grover; the 313
-                          attractors reproduced on independent code
-exact chemistry bridge    hydrogen to 6 significant figures; helium to
-                          0.19 mHa; alpha reproduced to 0.095 ppb
-```
-
-The standing bar for a computation only theorem is byte identical
-stdout on two architectures; in this repository that bar is the public
-check plus a local run on a different architecture.
+Unregistered engineering readouts are excluded from the normative
+Canon. Their non-canonical disposition record is `notes/ENGINEERING.md`;
+nothing in that note is evidence for a public claim. The standing bar
+for a computation-only theorem is byte-identical stdout on two
+architectures through the public activation gate.
 
 ## 18. The frontier
 
@@ -982,16 +973,12 @@ MEASUREMENT AND METROLOGY
                              witness 72 alpha^4, labeled
   QUADRATIC-DECODER-DATA     the effects on data clause; state update,
                              Gram, and dagger clauses closed at scope
-DYNAMICS AND RELATIVITY
-  LORENTZ-A2A3               the Lorentz burden of the dynamics from
-                             action chain
 THE WALL
   QUANT-SUBSTRATE            the Larmor gate and the Schwinger term gate
   COLOR-MEASURE-SELECTION    the measure lift onto SL_3(F_5): 24 carrier
                              orbits, 16 observable types; the minimal
                              new datum is a weight vector
 GRAVITATIONAL WAVE
-  TT-GAUGE-PULLBACK          Stage B, gated on the single input g_mu
   TT-SOURCE                  the emission map
   QNM-LEAVER-MU              the quasinormal mu decision
   POL-READ                   the polarization readout
@@ -1004,18 +991,13 @@ COSMOLOGY
 COLOR
   ALPHA-S-RUNNING            the running above the 3/4 seed
   SCHEME-DICTIONARY          exact seeds to measured couplings
-  FIBER-THRESHOLD            the fiber doublet threshold
   GENERATIONS-L3             the generation structure at the L3 frontier
 ELECTRON AND LADDER
-  ETA-ALTERNATOR-BRIDGE      the eta naming clause and its gate
   SPIN-LIFT-FORCED           whether the dicyclic spin lift is forced
 PLENUM AND KERNEL
   KC3-PLENUM-READOUT         the residue class readout of the ramified
                              place
   SQRT-PHI-TIME-GRAVITY      the dynamical face of the time gravity door
-  CODEC-RATE-SCOPE           formulate the precise public rate 4/5
-                             code, alphabet, block length, and decoder,
-                             or strike the shorthand
   KERNEL-CONNECT-ALL-K       {a, c, d, e} with the two way CSUM ring
                              coupling connects every (F_5^6)^k;
                              proof or exact counterexample required
@@ -1032,11 +1014,9 @@ MATTER
 OBSERVER
   OBSERVER-WRITE-PORT        armed, algebraic; ordered after the
                              metrology closure
-STANDING PREREGISTRATION
-  PHOTON-RADIATIVE-INDEPENDENCE  radiative independence
 EMPIRICAL HORIZON
-  DESI DR3 (w = -14/15); MOLLER (sin^2 theta_W); ngEHT (the mu
-  corridor); CMB-S4 (the tilt)
+  DESI DR3 (w = -14/15); MOLLER (sin^2 theta_W); future shadow
+  measurements after a public inference rule; CMB-S4 (the tilt)
 ```
 
 ## 19. Verification and the registry

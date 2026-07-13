@@ -3,6 +3,7 @@
 
 from pathlib import Path
 import re
+import subprocess
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,9 +30,18 @@ def fail(message: str) -> None:
 
 
 def tracked_files():
-    for path in ROOT.rglob("*"):
-        if path.is_file() and ".git" not in path.parts:
-            yield path
+    completed = subprocess.run(
+        ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"],
+        cwd=ROOT,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=True,
+    )
+    for name in completed.stdout.decode("utf-8").split("\0"):
+        if name:
+            path = ROOT / name
+            if path.is_file():
+                yield path
 
 
 def read_status() -> dict[str, str]:

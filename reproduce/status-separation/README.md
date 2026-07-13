@@ -7,7 +7,8 @@ their physical projection, place/CPT, force-curvature, color, Maxwell, Born,
 and cosmology readings are carried by explicit `D` rows.
 
 The audit reads only `canon/REGISTRY.tsv`, uses the Python standard library,
-and emits deterministic text. Its eight checks cover the registry partition,
+and emits deterministic text. Its eight checks cover the Genesis-reconciled
+registry partition,
 the axiom and plenum, the two arithmetic places, the finite Weyl commutator,
 the Maxwell chain, the Born finite algebra, the color ladder, and the
 cosmology identities. Selected theorem scopes are also checked for the

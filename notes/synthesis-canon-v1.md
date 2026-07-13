@@ -62,6 +62,21 @@ is a structural audit only: eight deterministic checks of the five new
 D boundaries plus the existing Maxwell and Born splits, with no new
 scientific claim.
 
+The final Genesis ledger-and-release reconciliation retires six
+non-executable public obligations and the unsupported fired ringdown
+row instead of preserving private shorthand as public authority. The
+current registry has 161 claims: 81 T, 38 D, 12 C, 2 F, 22 O, and 6 H.
+The companion normative, dependency, evidence, history, and gate
+ledgers are machine checked; generated status views are derived from
+them. External comparisons are pinned in the public source manifest,
+while unsupported engineering readouts live only in notes. Activation
+requires a clean immutable content commit, full replay of all 22
+reproductions, fresh records on both architectures for every required
+computation-only theorem, and a validated release manifest. The
+`status-separation` package remains part of the full replay but is not
+a claim-evidence package and therefore carries no formal architecture
+records.
+
 Standing rules of this synthesis: public statuses are conservative, at
 most T in the genesis bundle, and internal sources keep their grades
 in the cutover audit; no unproven independence claims (pi and ln phi

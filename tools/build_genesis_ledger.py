@@ -44,6 +44,7 @@ EVIDENCE_FIELDS = (
 )
 HISTORY_FIELDS = (
     "event_id",
+    "event_sequence",
     "event_date",
     "release",
     "claim_id",
@@ -52,11 +53,13 @@ HISTORY_FIELDS = (
     "new_status",
     "scope_sha256",
     "evidence_id",
+    "evidence_location",
+    "evidence_sha256",
     "rationale",
 )
 GATE_FIELDS = (
     "gate_id",
-    "claim_id",
+    "owner_item_id",
     "from_layer",
     "to_layer",
     "gate_kind",
@@ -134,7 +137,6 @@ CLAIM_DEPENDENCIES = (
     ("FRW-INHOM", "FRW-CANONICAL-FORM", "REQUIRES", "inhomogeneous extension starts from the homogeneous theorem"),
     ("TM-SYM2-MEASURE", "GYRON-DENSITY", "REQUIRES", "registered measure residual uses rho = 1/6"),
     ("MASS-LADDER-FORMS", "NEUTRON-DELTA-EM", "BOUNDED_BY", "neutron comparison remains open"),
-    ("TT-QUADRATIC-GERM", "TT-GAUGE-PULLBACK", "BOUNDED_BY", "g_mu remains the named open input"),
     ("TT-QUADRATIC-INDUCED", "TT-VECTOR-STATE-NORMALIZATION", "BOUNDED_BY", "normalization remains open"),
     ("COSMOLOGY-REGISTER", "NS-TILT", "BOUNDED_BY", "tilt remains a live hypothesis"),
     ("CONFORMAL-PREFACTOR", "FRW-INHOM", "BOUNDED_BY", "inhomogeneous action remains open"),
@@ -145,6 +147,7 @@ CLAIM_DEPENDENCIES = (
 )
 
 GATES = (
+    ("GATE-L1-L5-LOG-PROJECTION", "DEF-LOG-STREAM", "L1", "L5", "DEFINITION_PROJECTION"),
     ("GATE-L1-L2-CURVATURE", "CURVATURE-TRACE-VALUE", "L1", "L2", "OPEN_LIFT"),
     ("GATE-L2-L3-GENERATIONS", "GENERATIONS-L3", "L2", "L3", "OPEN_LIFT"),
     ("GATE-L4-L6-COLOR-MEASURE", "COLOR-MEASURE-SELECTION", "L4", "L6", "OPEN_LIFT"),
@@ -204,10 +207,10 @@ def main() -> None:
             raise SystemExit("REGISTRY.tsv schema mismatch")
         registry = list(reader)
 
-    gate_ids_by_claim: dict[str, list[str]] = {}
+    gate_ids_by_item: dict[str, list[str]] = {}
     registry_by_id = {row["claim_id"]: row for row in registry}
-    for gate_id, claim_id, _from, _to, _kind in GATES:
-        gate_ids_by_claim.setdefault(claim_id, []).append(gate_id)
+    for gate_id, owner_item_id, _from, _to, _kind in GATES:
+        gate_ids_by_item.setdefault(owner_item_id, []).append(gate_id)
 
     normative: list[dict[str, str]] = []
     for item_id, item_type, layer, source in INVENTORY:
@@ -217,7 +220,7 @@ def main() -> None:
             "claim_id": "",
             "status": "",
             "layer": layer,
-            "gate_ids": "",
+            "gate_ids": ";".join(gate_ids_by_item.get(item_id, [])),
             "statement_source": source,
         })
     for row in registry:
@@ -228,7 +231,7 @@ def main() -> None:
             "claim_id": claim,
             "status": row["status"],
             "layer": explicit_layer(row["scope"]),
-            "gate_ids": ";".join(gate_ids_by_claim.get(claim, [])),
+            "gate_ids": ";".join(gate_ids_by_item.get(claim, [])),
             "statement_source": f"canon/CANON.md::{row['canon_section']}",
         })
 
@@ -289,6 +292,7 @@ def main() -> None:
         })
         history.append({
             "event_id": f"GENESIS-{claim}",
+            "event_sequence": "1",
             "event_date": args.date,
             "release": "canon-v1-genesis",
             "claim_id": claim,
@@ -297,16 +301,26 @@ def main() -> None:
             "new_status": row["status"],
             "scope_sha256": sha256_bytes(row["scope"].encode("utf-8")),
             "evidence_id": evidence_id,
+            "evidence_location": location,
+            "evidence_sha256": digest,
             "rationale": "Initial public declaration; pre-public mapping remains in legacy/CUTOVER_AUDIT.md",
         })
 
     gates: list[dict[str, str]] = []
-    for gate_id, claim_id, from_layer, to_layer, kind in GATES:
-        row = registry_by_id[claim_id]
-        condition = row["falsifier"] or row["scope"]
+    items_by_id = {row["item_id"]: row for row in normative}
+    for gate_id, owner_item_id, from_layer, to_layer, kind in GATES:
+        if owner_item_id in registry_by_id:
+            row = registry_by_id[owner_item_id]
+            condition = row["falsifier"] or row["scope"]
+        else:
+            row = items_by_id[owner_item_id]
+            condition = (
+                "the derived Log projection is a deterministic typed map from "
+                "the autonomous L1 orbit into the read-only L5 stream"
+            )
         gates.append({
             "gate_id": gate_id,
-            "claim_id": claim_id,
+            "owner_item_id": owner_item_id,
             "from_layer": from_layer,
             "to_layer": to_layer,
             "gate_kind": kind,

@@ -2,11 +2,9 @@
 
 The coupling and metrology arc at the exact layer, in exact
 arithmetic: integers, rationals, and polynomial or Laurent monomial
-rings over Q. No floats anywhere. Engineering grades and measured
-corridors (the WKB3 ringdown grade, the mu corridor, the 72 alpha^4
-dressing witness) stay labeled witnesses in the Canon text; fired
-falsifiers are first class boundary records and nothing here revives
-or reargues them.
+rings over Q. No floats anywhere. The unsupported WKB3 ringdown grade
+and numerical mu corridor are outside Public Canon v1; the 72 alpha^4
+dressing value remains a labeled witness.
 
 Verified: the TT decoder as the complex squaring map h_+ + i h_x =
 (v1 + i v2)^2 with kernel exactly {+-1}, the spin double cover, with
@@ -15,7 +13,7 @@ exactly; the one propagation law c = 1 - s^2 on the integer triple
 (+1, 0, -3); the Schwarzschild TT endpoint V_s = f (L/r^2 +
 2M(1 - s^2)/r^3) with the forced coefficient -6 = 2(1 - 4) at s = 2;
 the Stage B bookkeeping inputs mu = 1 and Z_L2 = 1/2, without an
-action-germ or Gaussian-state derivation; the density against the
+action-germ, Gaussian-state, or Stage B pullback derivation; the density against the
 Galois Gram G = p I - 1 1^T with trace exactly 1 and the Born value the
 branch G norm, without an instrument-uniqueness claim; the DeWitt dressing
 d(1 - lambda d) = 12 = d(d + 1) at lambda = -1, the chain of twelves;
@@ -26,9 +24,8 @@ strong seed ratio 15 : 4 exactly.
 
 Evidence for registry claims TT-SQUARING-DECODER,
 SCHWARZSCHILD-TT-ENDPOINT, TT-QUADRATIC-GERM, COUPLINGS-DETERMINE,
-DEWITT-TWELVES, METRO-TICK, MEASURE-SPATIAL-ONLY, STRONG-SEED; the
-fired boundary row RINGDOWN-EXPONENTIAL-DEAD is carried inline by
-the Canon record. Check map: 01 and 02 TT-SQUARING-DECODER; 03
+DEWITT-TWELVES, METRO-TICK, MEASURE-SPATIAL-ONLY, STRONG-SEED. Check
+map: 01 and 02 TT-SQUARING-DECODER; 03
 SCHWARZSCHILD-TT-ENDPOINT; 04 TT-QUADRATIC-GERM; 05
 COUPLINGS-DETERMINE; 06 DEWITT-TWELVES; 07 METRO-TICK; 08
 MEASURE-SPATIAL-ONLY and STRONG-SEED.

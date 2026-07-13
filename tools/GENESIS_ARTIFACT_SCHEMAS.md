@@ -52,8 +52,11 @@ item_id canon_locator observable value source_id action evidence_path rationale
 ```
 
 Allowed actions are `KEEP_MEASURED`, `KEEP_ENGINEERING`, `MOVE_TO_NOTES`,
-`REMOVE`, and `PUBLIC_C_EVIDENCE`. Retained comparisons need a valid
-`source_id`; a public computed claim needs an existing evidence path.
+`REMOVE`, and `PUBLIC_C_EVIDENCE`. Retained comparisons need valid
+`source_id` entries; multiple sources are separated by semicolons. A public
+computed claim needs an existing evidence path. Every `canon_locator` must
+occur in `canon/CANON.md`, and every moved item must be named in
+`notes/ENGINEERING.md`.
 
 Each preregistration draft declares `NON-CANONICAL DRAFT` and contains these
 bold fields:

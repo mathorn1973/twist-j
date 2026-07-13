@@ -155,6 +155,8 @@ if not rows:
 
 claims: dict[str, dict[str, str]] = {}
 for number, row in enumerate(rows, start=2):
+    if None in row or any(value is None for value in row.values()):
+        fail(f"REGISTRY.tsv line {number} must have exactly {len(REGISTRY_FIELDS)} fields")
     claim = (row.get("claim_id") or "").strip()
     status = (row.get("status") or "").strip()
     if not CLAIM_ID.fullmatch(claim):

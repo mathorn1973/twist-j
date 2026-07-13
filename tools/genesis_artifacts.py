@@ -60,6 +60,7 @@ ENGINEERING_ITEMS = {
     "MUON-TAU-SIGMA",
     "NEUTRON-PPM",
     "NGEHT-CORRIDOR",
+    "RINGDOWN-WKB3",
     "CIRCUIT-COUNT",
     "SIX-PLATFORM-BITEXACT",
     "HYDROGEN-HELIUM",
@@ -126,10 +127,16 @@ def validate_recon(root: Path) -> tuple[int, int]:
             fail(f"{context} has unexpected or duplicate item_id {item}")
         seen.add(item)
         claim = required(row, "current_claim_id", context)
-        if claim not in claims:
-            fail(f"{item} names unknown current_claim_id {claim}")
-        if required(row, "action", context) not in RECON_ACTIONS:
+        action = required(row, "action", context)
+        if action not in RECON_ACTIONS:
             fail(f"{item} has invalid action")
+        if action in {"RETIRE", "REMOVE_PROSE"} or (
+            action == "SPLIT" and claim == "-"
+        ):
+            if claim != "-" or item in claims:
+                fail(f"{item} retirement or pre-registration split must leave no current claim")
+        elif claim not in claims:
+            fail(f"{item} names unknown current_claim_id {claim}")
         if len(required(row, "public_statement", context)) < 20:
             fail(f"{item} public_statement is too short")
         if len(required(row, "evidence_required", context)) < 10:
@@ -197,6 +204,8 @@ def validate_sources(root: Path) -> tuple[int, int]:
         if local_hash != "NOT-LOCAL" and not SHA256.fullmatch(local_hash):
             fail(f"{source_id} has invalid local_hash")
 
+    canon_text = (root / "canon" / "CANON.md").read_text(encoding="utf-8")
+    engineering_note = root / "notes" / "ENGINEERING.md"
     seen_items: set[str] = set()
     for number, row in enumerate(engineering, 2):
         context = f"ENGINEERING_DISPOSITION.tsv line {number}"
@@ -206,18 +215,31 @@ def validate_sources(root: Path) -> tuple[int, int]:
         seen_items.add(item)
         for field in ("canon_locator", "observable", "value", "rationale"):
             required(row, field, context)
+        if row["canon_locator"].strip() not in canon_text:
+            fail(f"{item} canon_locator is absent from canon/CANON.md")
         action = required(row, "action", context)
         if action not in ENGINEERING_ACTIONS:
             fail(f"{item} has invalid action")
         source_id = row["source_id"].strip()
+        referenced_sources = [] if source_id == "-" else [
+            part.strip() for part in source_id.split(";") if part.strip()
+        ]
         evidence_path = row["evidence_path"].strip()
-        if action in {"KEEP_MEASURED", "KEEP_ENGINEERING"} and source_id not in source_ids:
-            fail(f"{item} retained without a valid source_id")
+        if action in {"KEEP_MEASURED", "KEEP_ENGINEERING"} and (
+            not referenced_sources
+            or any(source not in source_ids for source in referenced_sources)
+        ):
+            fail(f"{item} retained without valid source_id entries")
         if action == "PUBLIC_C_EVIDENCE":
             if not evidence_path or not (root / evidence_path).exists():
                 fail(f"{item} public C evidence path is missing")
-        if action in {"MOVE_TO_NOTES", "REMOVE"} and not evidence_path:
-            fail(f"{item} disposition must name its destination or '-' explicitly")
+        if action == "MOVE_TO_NOTES":
+            if evidence_path != "notes/ENGINEERING.md" or not engineering_note.is_file():
+                fail(f"{item} must move to notes/ENGINEERING.md")
+            if item not in engineering_note.read_text(encoding="utf-8"):
+                fail(f"notes/ENGINEERING.md lacks moved item {item}")
+        if action == "REMOVE" and not evidence_path:
+            fail(f"{item} removal must use '-' explicitly")
     missing = sorted(ENGINEERING_ITEMS - seen_items)
     if missing:
         fail("ENGINEERING_DISPOSITION.tsv lacks: " + ", ".join(missing))

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+from datetime import date
 import hashlib
 import json
 import os
@@ -33,10 +34,20 @@ REQUIRED_RECORD_FIELDS = {
 }
 SHA40 = re.compile(r"^[0-9a-f]{40}$")
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
+FORMAL_RECORD = re.compile(
+    r"^reproduce/[a-z0-9][a-z0-9-]*/RUNS/(aarch64|x86_64)\.md$"
+)
+ACTIVATION_METADATA = {"STATUS.md", "README.md", "CITATION.cff"}
 
 
 def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def post_content_path_allowed(path: str, dry_run: bool) -> bool:
+    return bool(FORMAL_RECORD.fullmatch(path)) or (
+        not dry_run and path in ACTIVATION_METADATA
+    )
 
 
 def git(root: Path, *args: str) -> subprocess.CompletedProcess[bytes]:
@@ -75,7 +86,12 @@ def parse_record(path: Path) -> dict[str, str]:
     return fields
 
 
-def validate_record(root: Path, reproduction: str, architecture: str) -> list[str]:
+def validate_record(
+    root: Path,
+    reproduction: str,
+    architecture: str,
+    content_commit: str | None = None,
+) -> list[str]:
     blockers: list[str] = []
     directory = root / "reproduce" / reproduction
     record_path = directory / "RUNS" / f"{architecture}.md"
@@ -124,6 +140,14 @@ def validate_record(root: Path, reproduction: str, architecture: str) -> list[st
     if SHA40.fullmatch(candidate):
         if git(root, "merge-base", "--is-ancestor", candidate, head).returncode:
             blockers.append(f"{relative_record} candidate is not an ancestor")
+        if SHA40.fullmatch(run_base) and git(
+            root, "merge-base", "--is-ancestor", candidate, run_base
+        ).returncode:
+            blockers.append(f"{relative_record} run base predates candidate")
+        if content_commit and SHA40.fullmatch(content_commit) and git(
+            root, "merge-base", "--is-ancestor", candidate, content_commit
+        ).returncode:
+            blockers.append(f"{relative_record} candidate is newer than content commit")
         for relative, current in (
             (f"reproduce/{reproduction}/verify.py", verifier_bytes),
             (f"reproduce/{reproduction}/EXPECTED.txt", expected),
@@ -136,7 +160,7 @@ def validate_record(root: Path, reproduction: str, architecture: str) -> list[st
     return blockers
 
 
-def architecture_blockers(root: Path) -> list[str]:
+def architecture_blockers(root: Path, content_commit: str | None = None) -> list[str]:
     rows = read_evidence(root)
     required = sorted({
         Path(row["location"]).name
@@ -145,9 +169,18 @@ def architecture_blockers(root: Path) -> list[str]:
         and row["evidence_kind"] == "REPRODUCTION"
     })
     blockers: list[str] = []
+    pairs: set[tuple[str, str]] = set()
     for reproduction in required:
         for architecture in ("aarch64", "x86_64"):
-            blockers.extend(validate_record(root, reproduction, architecture))
+            pairs.add((reproduction, architecture))
+    reproduce = root / "reproduce"
+    if reproduce.is_dir():
+        for record in reproduce.glob("*/RUNS/*.md"):
+            pairs.add((record.parents[1].name, record.stem))
+    for reproduction, architecture in sorted(pairs):
+        blockers.extend(
+            validate_record(root, reproduction, architecture, content_commit)
+        )
     return blockers
 
 
@@ -157,12 +190,23 @@ def view_blockers(root: Path) -> list[str]:
     frontier = (root / "canon" / "FRONTIER.md").read_text(encoding="utf-8")
     core = (root / "canon" / "CORE.md").read_text(encoding="utf-8")
     changelog = (root / "canon" / "CHANGELOG.md").read_text(encoding="utf-8")
+    counts = root / "canon" / "STATUS_COUNTS.tsv"
     if frontier != views["FRONTIER.md"]:
         blockers.append("canon/FRONTIER.md is not the generated registry view")
-    if views["CORE_CLAIMS.md"] not in core:
+    if (
+        core.count("<!-- BEGIN GENERATED CORE CLAIMS -->") != 1
+        or core.count("<!-- END GENERATED CORE CLAIMS -->") != 1
+        or views["CORE_CLAIMS.md"] not in core
+    ):
         blockers.append("canon/CORE.md lacks the generated core claim block")
-    if views["CHANGELOG_COUNTS.md"] not in changelog:
+    if (
+        changelog.count("<!-- BEGIN GENERATED GENESIS COUNTS -->") != 1
+        or changelog.count("<!-- END GENERATED GENESIS COUNTS -->") != 1
+        or views["CHANGELOG_COUNTS.md"] not in changelog
+    ):
         blockers.append("canon/CHANGELOG.md lacks the generated Genesis count block")
+    if not counts.is_file() or counts.read_text(encoding="utf-8") != views["STATUS_COUNTS.tsv"]:
+        blockers.append("canon/STATUS_COUNTS.tsv is not the generated status view")
     return blockers
 
 
@@ -203,6 +247,21 @@ def status_blockers(
             blockers.append("STATUS.md lacks valid CONTENT_COMMIT")
         if fields.get("CONTENT_COMMIT") and fields["CONTENT_COMMIT"] != content_commit:
             blockers.append("STATUS.md CONTENT_COMMIT differs from requested content commit")
+        canon_bytes = (root / "canon" / "CANON.md").read_bytes()
+        exact = {
+            "CANON": "Public Canon v1",
+            "AUTHORITY": "mathorn1973/twist-j main",
+            "TAG": "canon-v1",
+            "CANON_SHA256": sha256_bytes(canon_bytes),
+            "CANON_BYTES": str(len(canon_bytes)),
+        }
+        for field, value in exact.items():
+            if fields.get(field) != value:
+                blockers.append(f"STATUS.md {field} must be {value}")
+        try:
+            date.fromisoformat(fields.get("CUTOVER", ""))
+        except ValueError:
+            blockers.append("STATUS.md CUTOVER must be an ISO date")
     if not SHA40.fullmatch(content_commit):
         blockers.append("content commit must be a full lowercase SHA")
         return blockers
@@ -211,9 +270,15 @@ def status_blockers(
         return blockers
     if git(root, "merge-base", "--is-ancestor", content_commit, head).returncode:
         blockers.append("content commit is not an ancestor of HEAD")
-    changed = git(root, "diff", "--name-only", f"{content_commit}..HEAD", "--", "canon").stdout.decode().splitlines()
-    if changed:
-        blockers.append("activation changes Canon bundle after content commit: " + ", ".join(changed))
+    changed = git(root, "diff", "--name-only", f"{content_commit}..HEAD").stdout.decode().splitlines()
+    illegal = [
+        path for path in changed
+        if not post_content_path_allowed(path, dry_run)
+    ]
+    if illegal:
+        blockers.append(
+            "content bundle changes after content commit: " + ", ".join(illegal)
+        )
     if post_activation:
         tag = git(root, "rev-parse", "canon-v1^{}")
         if tag.returncode:
@@ -264,17 +329,29 @@ def normalized_architecture() -> str:
 def manifest(
     root: Path, content_commit: str, activation_commit: str, dry_run: bool
 ) -> dict[str, object]:
-    paths: list[Path] = []
-    for relative in ("STATUS.md", "POLICY.md", "AGENTS.md", "README.md", "CITATION.cff"):
-        path = root / relative
-        if path.is_file():
-            paths.append(path)
-    for directory in (root / "canon", root / "data", root / "reproduce"):
-        if directory.is_dir():
-            paths.extend(
-                path for path in directory.rglob("*")
-                if path.is_file() and "__pycache__" not in path.parts and path.suffix != ".pyc"
-            )
+    tracked = git(root, "ls-files", "-z")
+    if not tracked.returncode:
+        paths = [
+            root / relative.decode("utf-8")
+            for relative in tracked.stdout.split(b"\0") if relative
+        ]
+    else:
+        paths = []
+        for relative in (
+            "STATUS.md", "POLICY.md", "AGENTS.md", "README.md",
+            "CITATION.cff", "LICENSE", ".gitattributes", ".gitignore",
+        ):
+            path = root / relative
+            if path.is_file():
+                paths.append(path)
+        for name in ("canon", "data", "reproduce", "tools", "notes", "legacy", ".github"):
+            directory = root / name
+            if directory.is_dir():
+                paths.extend(path for path in directory.rglob("*") if path.is_file())
+    paths = [
+        path for path in paths
+        if path.is_file() and "__pycache__" not in path.parts and path.suffix != ".pyc"
+    ]
     files = []
     for path in sorted(set(paths)):
         relative = path.relative_to(root).as_posix()
@@ -343,7 +420,7 @@ def main() -> None:
 
     try:
         blockers.extend(view_blockers(root))
-        blockers.extend(architecture_blockers(root))
+        blockers.extend(architecture_blockers(root, content_commit))
     except (RuntimeError, ValueError) as error:
         blockers.append(str(error))
     blockers.extend(

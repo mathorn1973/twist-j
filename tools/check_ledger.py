@@ -25,11 +25,12 @@ EVIDENCE_FIELDS = (
     "hash_mode", "architecture_requirement",
 )
 HISTORY_FIELDS = (
-    "event_id", "event_date", "release", "claim_id", "event_type",
-    "previous_status", "new_status", "scope_sha256", "evidence_id", "rationale",
+    "event_id", "event_sequence", "event_date", "release", "claim_id", "event_type",
+    "previous_status", "new_status", "scope_sha256", "evidence_id",
+    "evidence_location", "evidence_sha256", "rationale",
 )
 GATE_FIELDS = (
-    "gate_id", "claim_id", "from_layer", "to_layer", "gate_kind",
+    "gate_id", "owner_item_id", "from_layer", "to_layer", "gate_kind",
     "decision_condition",
 )
 CORE_SELECTION_FIELDS = ("rank", "claim_id")
@@ -208,9 +209,9 @@ def validate(root: Path) -> Snapshot:
             fail(f"{context} has invalid gate_id")
         if gate in gates:
             fail(f"GATES.tsv duplicates {gate}")
-        claim = require_text(row, "claim_id", context)
-        if claim not in registry:
-            fail(f"{gate} names unknown claim {claim}")
+        owner = require_text(row, "owner_item_id", context)
+        if owner not in items:
+            fail(f"{gate} names unknown owner item {owner}")
         source = require_text(row, "from_layer", context)
         target = require_text(row, "to_layer", context)
         if source not in LAYERS or target not in LAYERS:
@@ -225,12 +226,12 @@ def validate(root: Path) -> Snapshot:
         for gate in filter(None, (part.strip() for part in row["gate_ids"].split(";"))):
             if gate not in gates:
                 fail(f"{item} names unknown gate {gate}")
-            if row["claim_id"].strip() != gates[gate]["claim_id"].strip():
-                fail(f"{item} names gate {gate} owned by another claim")
+            if item != gates[gate]["owner_item_id"].strip():
+                fail(f"{item} names gate {gate} owned by another item")
     for gate, row in gates.items():
-        owner = claim_items[row["claim_id"]]
+        owner = items[row["owner_item_id"]]
         if gate not in owner["gate_ids"].split(";"):
-            fail(f"claim row {row['claim_id']} does not name {gate}")
+            fail(f"owner row {row['owner_item_id']} does not name {gate}")
 
     dependency_keys: set[tuple[str, str, str]] = set()
     adjacency: dict[str, set[str]] = {item: set() for item in items}
@@ -251,6 +252,17 @@ def validate(root: Path) -> Snapshot:
             fail(f"DEPENDENCIES.tsv duplicates {item} -> {target} ({relation})")
         dependency_keys.add(key)
         adjacency[item].add(target)
+        source_layer = items[item]["layer"].strip()
+        target_layer = items[target]["layer"].strip()
+        protocol_layers = {f"L{number}" for number in range(1, 7)}
+        if source_layer in protocol_layers and target_layer in protocol_layers and source_layer != target_layer:
+            matching = [
+                gate for gate in filter(None, items[item]["gate_ids"].split(";"))
+                if gates[gate]["from_layer"] == target_layer
+                and gates[gate]["to_layer"] == source_layer
+            ]
+            if not matching:
+                fail(f"cross-layer dependency {target} -> {item} lacks a matching gate")
         if relation == "REQUIRES":
             source_status = items[item]["status"].strip()
             target_status = items[target]["status"].strip()
@@ -328,7 +340,7 @@ def validate(root: Path) -> Snapshot:
         fail("EVIDENCE.tsv lacks claims: " + ", ".join(missing_evidence))
 
     events: set[str] = set()
-    histories: dict[str, list[dict[str, str]]] = {claim: [] for claim in registry}
+    histories: dict[str, list[dict[str, str]]] = {}
     for number, row in enumerate(history_rows, 2):
         context = f"HISTORY.tsv line {number}"
         event = require_text(row, "event_id", context)
@@ -336,39 +348,81 @@ def validate(root: Path) -> Snapshot:
         if event in events:
             fail(f"HISTORY.tsv duplicates {event}")
         events.add(event)
-        if claim not in registry:
-            fail(f"{event} names unknown claim {claim}")
+        try:
+            sequence = int(require_text(row, "event_sequence", context))
+        except ValueError:
+            fail(f"{event} has invalid event_sequence")
+        if sequence < 1:
+            fail(f"{event} has invalid event_sequence")
         try:
             date.fromisoformat(require_text(row, "event_date", context))
         except ValueError:
             fail(f"{event} has invalid event_date")
         if require_text(row, "event_type", context) not in EVENT_TYPES:
             fail(f"{event} has invalid event_type")
+        event_type = require_text(row, "event_type", context)
         new_status = require_text(row, "new_status", context)
-        if new_status not in STATUSES:
+        if new_status not in STATUSES | {"RETIRED"}:
             fail(f"{event} has invalid new_status")
+        if (event_type == "RETIRE") != (new_status == "RETIRED"):
+            fail(f"{event} has inconsistent retirement status")
         if not SHA256.fullmatch(require_text(row, "scope_sha256", context)):
             fail(f"{event} has invalid scope hash")
-        if require_text(row, "evidence_id", context) not in evidence:
-            fail(f"{event} names unknown evidence")
+        require_text(row, "evidence_id", context)
+        location = require_text(row, "evidence_location", context)
+        if not location.startswith(("inline", "http://", "https://")):
+            relative = Path(location)
+            if relative.is_absolute() or ".." in relative.parts:
+                fail(f"{event} has unsafe evidence location")
+        digest = require_text(row, "evidence_sha256", context)
+        if not SHA256.fullmatch(digest) and digest != "PENDING-SOURCE-MANIFEST":
+            fail(f"{event} has invalid evidence hash")
         require_text(row, "release", context)
         require_text(row, "rationale", context)
-        histories[claim].append(row)
+        histories.setdefault(claim, []).append(row)
+    missing_histories = sorted(set(registry) - set(histories))
+    if missing_histories:
+        fail("HISTORY.tsv lacks claims: " + ", ".join(missing_histories))
     for claim, rows in histories.items():
-        if not rows:
-            fail(f"HISTORY.tsv lacks {claim}")
-        rows.sort(key=lambda row: (row["event_date"], row["event_id"]))
+        rows.sort(key=lambda row: int(row["event_sequence"]))
+        sequences = [int(row["event_sequence"]) for row in rows]
+        if sequences != list(range(1, len(rows) + 1)):
+            fail(f"HISTORY.tsv sequence is not contiguous for {claim}")
         previous = "-"
+        previous_date: date | None = None
         for row in rows:
+            event_date = date.fromisoformat(row["event_date"])
+            if previous_date is not None and event_date < previous_date:
+                fail(f"{row['event_id']} predates the preceding history event")
+            previous_date = event_date
             if row["previous_status"].strip() != previous:
                 fail(f"{row['event_id']} breaks the status transition chain")
+            if previous == "RETIRED":
+                fail(f"{row['event_id']} follows a retired claim")
             previous = row["new_status"].strip()
-        if previous != registry[claim]["status"].strip():
+        current = registry.get(claim)
+        if current is None:
+            if previous != "RETIRED":
+                fail(f"HISTORY.tsv names unknown active claim {claim}")
+            continue
+        if previous != current["status"].strip():
             fail(f"HISTORY.tsv latest status differs for {claim}")
-        expected_scope = sha256_bytes(registry[claim]["scope"].encode("utf-8"))
+        expected_scope = sha256_bytes(current["scope"].encode("utf-8"))
         if rows[-1]["scope_sha256"].strip() != expected_scope:
             fail(f"HISTORY.tsv latest scope differs for {claim}")
-        if rows[-1]["evidence_id"].strip() != evidence_by_claim[claim]["evidence_id"].strip():
+        current_evidence = evidence_by_claim[claim]
+        latest = rows[-1]
+        expected_evidence = (
+            current_evidence["evidence_id"].strip(),
+            current_evidence["location"].strip(),
+            current_evidence["sha256"].strip(),
+        )
+        recorded_evidence = (
+            latest["evidence_id"].strip(),
+            latest["evidence_location"].strip(),
+            latest["evidence_sha256"].strip(),
+        )
+        if recorded_evidence != expected_evidence:
             fail(f"HISTORY.tsv latest evidence differs for {claim}")
 
     return Snapshot(

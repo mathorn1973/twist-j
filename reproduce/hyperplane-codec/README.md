@@ -6,8 +6,8 @@ cyclotomic ring Z[zeta_5]. No floats anywhere. The census part
 replicates the registered kernel census protocol exactly (warmup 400
 ticks, window 300 ticks, second independent window) and reads the
 boundary partition off the attractor supports. Fired falsifiers are
-first class boundary records and nothing here revives or reargues
-them; the open rate clause is carried without any witness by design.
+first-class boundary records and nothing here revives or reargues
+them. No coding-rate statement is inferred from these finite dimensions.
 
 Verified: the boundary class by full enumeration of all 15625 states,
 S = M cap {s = 0} with M the z5 sheet {1, 4} and s the piston sum
@@ -31,9 +31,8 @@ with tau tau = 1 + tau and dimension phi, and no identification
 survives.
 
 Evidence for registry claims HYPERPLANE-BOUNDARY-CLASS,
-HYPERPLANE-BOUNDARY-REALIZATION, CODEC-TR4, PHIBIT-NOT-TAU. The open
-row CODEC-RATE-SCOPE carries no witness here: the internal rate 4/5
-clause waits for its coding scope and nothing in this file claims it.
+HYPERPLANE-BOUNDARY-REALIZATION, CODEC-TR4, PHIBIT-NOT-TAU. No rate
+claim is carried by this witness.
 Check map: 01 HYPERPLANE-BOUNDARY-CLASS; 02
 HYPERPLANE-BOUNDARY-REALIZATION; 03, 04 and 05 CODEC-TR4; 06, 07 and
 08 PHIBIT-NOT-TAU.

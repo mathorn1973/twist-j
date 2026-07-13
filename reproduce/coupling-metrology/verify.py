@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 # TWIST-J coupling and metrology arc witness. Exact arithmetic only:
 # integers, rationals, and polynomial or Laurent monomial rings over
-# Q. Standard library only, no floats anywhere. Engineering grades and
-# measured corridors stay labeled witnesses in the Canon text; fired
-# falsifiers are carried as first class boundary records and nothing
-# here revives or reargues them.
+# Q. Standard library only, no floats anywhere. Unsupported engineering
+# grades and measured corridors are excluded from the Canon claim scope.
 #
 # The arc: the TT decoder as the complex squaring map with kernel
 # {+-1} and volume neutrality det = 1 - |h|^2; the one propagation law
@@ -18,8 +16,7 @@
 #
 # Claims verified: TT-SQUARING-DECODER, SCHWARZSCHILD-TT-ENDPOINT,
 # TT-QUADRATIC-GERM, COUPLINGS-DETERMINE, DEWITT-TWELVES, METRO-TICK,
-# MEASURE-SPATIAL-ONLY, STRONG-SEED. The fired boundary row
-# RINGDOWN-EXPONENTIAL-DEAD is carried inline by the Canon record.
+# MEASURE-SPATIAL-ONLY, STRONG-SEED.
 
 import sys
 from fractions import Fraction as Fr
@@ -154,8 +151,9 @@ def main():
     check("GERM",
           "the Stage B bookkeeping takes mu = 1 and the pairing"
           " dictionary Z_L2 = 1/2 exactly as explicit inputs; it does"
-          " not derive the action germ or a Gaussian-state boundary;"
-          " the remaining input is g_mu (TT-GAUGE-PULLBACK stays live)",
+          " not derive the action germ, a Gaussian-state boundary, or"
+          " a Stage B pullback; no g_mu family is declared in Public"
+          " Canon v1",
           ok)
 
     # ------------------------------------ 05 the density and the Born value

@@ -38,12 +38,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 81, "D": 38, "C": 12, "F": 3,
-                       "O": 28, "H": 6}
+    expected_counts = {"T": 81, "D": 38, "C": 12, "F": 2,
+                       "O": 22, "H": 6}
     checks.append((
         "COUNTS",
-        "registry has 168 claims with the G2B status partition",
-        len(rows) == 168 and counts == expected_counts,
+        "registry has 161 claims with the Genesis-reconciled status partition",
+        len(rows) == 161 and counts == expected_counts,
     ))
 
     checks.append((

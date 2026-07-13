@@ -2,8 +2,8 @@
 """Generate deterministic Canon summaries from the public ledgers.
 
 During parallel Genesis preparation this command writes only to an explicit
-output directory.  The final reconciliation commit decides when the generated
-views replace or enter the five hashed Canon files.
+output directory. The final reconciliation uses `--apply` once to update the
+derived views inside the Canon bundle.
 """
 
 from __future__ import annotations
@@ -95,17 +95,9 @@ def render_counts(root: Path, rows: list[dict[str, str]]) -> str:
         "hash_mode", "architecture_requirement",
     ))
     architecture: dict[str, int] = {}
-    complete_two_arch = 0
-    pending_two_arch = 0
     for row in evidence_rows:
         key = row["architecture_requirement"]
         architecture[key] = architecture.get(key, 0) + 1
-        if key == "two-architecture":
-            runs = root / row["location"] / "RUNS"
-            if (runs / "aarch64.md").is_file() and (runs / "x86_64.md").is_file():
-                complete_two_arch += 1
-            else:
-                pending_two_arch += 1
     lines = ["metric\tvalue", f"claims\t{len(rows)}"]
     lines.extend(f"status_{status}\t{statuses[status]}" for status in statuses)
     lines.extend((
@@ -115,10 +107,6 @@ def render_counts(root: Path, rows: list[dict[str, str]]) -> str:
     lines.extend(
         f"evidence_{key}\t{architecture[key]}" for key in sorted(architecture)
     )
-    lines.extend((
-        f"two_arch_claims_complete\t{complete_two_arch}",
-        f"two_arch_claims_pending\t{pending_two_arch}",
-    ))
     lines.append("")
     return "\n".join(lines)
 
@@ -156,12 +144,68 @@ def generated_views(root: Path) -> dict[str, str]:
     }
 
 
+def replace_marked(text: str, block: str, begin: str, end: str) -> str:
+    start = text.find(begin)
+    if start < 0:
+        raise ValueError(f"missing generated block marker: {begin}")
+    stop = text.find(end, start)
+    if stop < 0:
+        raise ValueError(f"missing generated block marker: {end}")
+    stop += len(end)
+    return text[:start] + block.rstrip("\n") + text[stop:]
+
+
+def apply_views(root: Path, views: dict[str, str]) -> None:
+    canon = root / "canon"
+    (canon / "FRONTIER.md").write_text(views["FRONTIER.md"], encoding="utf-8")
+    (canon / "STATUS_COUNTS.tsv").write_text(
+        views["STATUS_COUNTS.tsv"], encoding="utf-8"
+    )
+
+    core_path = canon / "CORE.md"
+    core = core_path.read_text(encoding="utf-8")
+    core_begin = "<!-- BEGIN GENERATED CORE CLAIMS -->"
+    core_end = "<!-- END GENERATED CORE CLAIMS -->"
+    if core_begin in core:
+        core = replace_marked(core, views["CORE_CLAIMS.md"], core_begin, core_end)
+    else:
+        start = core.find("Stable orientation results:")
+        stop = core.find("\nTime is a counter.", start)
+        if start < 0 or stop < 0:
+            raise ValueError("CORE.md lacks the stable-orientation replacement anchors")
+        core = core[:start] + views["CORE_CLAIMS.md"].rstrip("\n") + core[stop:]
+    core_path.write_text(core, encoding="utf-8")
+
+    changelog_path = canon / "CHANGELOG.md"
+    changelog = changelog_path.read_text(encoding="utf-8")
+    count_begin = "<!-- BEGIN GENERATED GENESIS COUNTS -->"
+    count_end = "<!-- END GENERATED GENESIS COUNTS -->"
+    if count_begin in changelog:
+        changelog = replace_marked(
+            changelog, views["CHANGELOG_COUNTS.md"], count_begin, count_end
+        )
+    else:
+        anchor = "## Public Canon v1 (candidate)"
+        position = changelog.find(anchor)
+        if position < 0:
+            raise ValueError("CHANGELOG.md lacks the Public Canon v1 anchor")
+        position += len(anchor)
+        changelog = (
+            changelog[:position]
+            + "\n\n"
+            + views["CHANGELOG_COUNTS.md"].rstrip("\n")
+            + changelog[position:]
+        )
+    changelog_path.write_text(changelog, encoding="utf-8")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--output-dir", type=Path)
     group.add_argument("--check-dir", type=Path)
+    group.add_argument("--apply", action="store_true")
     args = parser.parse_args()
     root = args.root.resolve()
     try:
@@ -181,11 +225,28 @@ def main() -> None:
         )
         return
 
+    if args.apply:
+        try:
+            apply_views(root, views)
+        except ValueError as error:
+            print(f"FAIL: {error}")
+            raise SystemExit(1)
+        print("CANON VIEWS APPLIED " + ",".join(sorted(views)))
+        return
+
     check = args.check_dir.resolve()
     differences: list[str] = []
     for name, content in views.items():
-        path = check / name
-        if not path.is_file() or path.read_text(encoding="utf-8") != content:
+        if name == "CORE_CLAIMS.md":
+            path = check / "CORE.md"
+            matches = path.is_file() and content.rstrip("\n") in path.read_text(encoding="utf-8")
+        elif name == "CHANGELOG_COUNTS.md":
+            path = check / "CHANGELOG.md"
+            matches = path.is_file() and content.rstrip("\n") in path.read_text(encoding="utf-8")
+        else:
+            path = check / name
+            matches = path.is_file() and path.read_text(encoding="utf-8") == content
+        if not matches:
             differences.append(name)
     if differences:
         print("FAIL: generated Canon views differ: " + ", ".join(differences))

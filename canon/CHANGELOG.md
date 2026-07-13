@@ -2,44 +2,17 @@
 
 ## Public Canon v1 (candidate)
 
-Genesis entry. Initial public synthesis: the thematic Canon in
-nineteen sections; 168 registered claims (81 theorem grade, of which 77
-carry minimal reproductions and 4 carry inline derivations; 38 derived
-grade, the dictionary layers of the Dirac and color ladders, the SI
-bridge equation layer, the mass ladder forms, the Weinberg form, the
-Maxwell closure reading, the alpha form, the cosmology register
-readings, the gravitational wave and coupling arc readings, the
-macro space reading of the coupled kernel, and the place dictionary
-readings (the autonomous counter, the partial reading split, the bilocation of i, the silver
-sibling), the Coulomb and polar projections, and the face, measure,
-and kernel-cell dictionaries, the center split selection, and the
-electron g tree and electron sign readings, together with the three
-observer/boost dictionary readings (the count ladder, observer
-alternator, and boost axis), and the pentit root reading, carried by
-the same witnesses as their
-theorem layers; 12 computed grade, the
-kernel census cluster, the alpha value digits, the boundary
-hyperplane realization, the kernel component census, the time
-quantum tower, the silver ring facts, the finite C4 Green kernel, the monopole
-cost bracket, and the kappa shape library,
-carried by
-full enumeration witnesses with
-closure and stability checks and by an
-exact integer interval enclosure; 3 fired falsifiers, the non abelian
-dynamical-color route, the minimal exponential ringdown reading, and
-the tau anyon reading of the phibit
-at their registered scopes; 34 live frontier rows,
-each with a concrete falsifier or a decision condition stating what
-closes it positively and what closes it negatively); twenty-two
-reproduction witnesses (kernel, alpha-exact-lemma, born-faces, census,
-born-quartet, dirac-ladder, color-ladder, gravity-chain,
-mass-ladder, weinberg, maxwell, alpha-value, cosmology-register,
-coupling-metrology, hyperplane-codec, kernel-connectivity,
-foundations-places, force-born-dictionary, photon-electron,
-observer-boost, pentit-p5-closure, status-separation); the core,
-the frontier, the registry, and the citation record. The public series
-starts here; development before this document is outside the normative
-series and is referenced only by the cutover audit. Genesis review
+<!-- BEGIN GENERATED GENESIS COUNTS -->
+Registry snapshot: 161 claims; 0 T-LOCK, 81 T, 38 D, 12 C, 6 H, 22 O, 2 F; 28 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED GENESIS COUNTS -->
+
+Genesis entry. The initial public synthesis contains the thematic
+Canon, its generated core and frontier views, the registry and companion
+ledgers, the public reproduction witnesses, and the citation record.
+The public series starts here; development before this document is
+outside the normative series and is referenced only by the cutover
+audit. Genesis review
 made the definition boundary explicit: J is the algebraic axiom, while
 the finite kernel, selector, autonomous state, and partial decoder
 interface are declared architecture rather than a claimed reduction
@@ -71,6 +44,14 @@ two-place/CPT, force-curvature, color-ladder, and cosmology readings.
 The corresponding T rows state only their algebraic, finite-group,
 chain, or recurrence content; the existing Maxwell and Born dictionary
 rows remain the interpretation boundary for their theorem layers. The
-registry now contains 168 claims: 81 T, 38 D, 12 C, 3 F, 28 O, and 6 H.
-The deterministic status-separation audit makes these boundaries a
-dual-architecture staging gate without asserting a new scientific claim.
+deterministic status-separation audit checks these boundaries during the
+full activation replay without asserting a new scientific claim.
+
+Final Genesis reconciliation retires six candidate obligations that
+could not be formulated from public inputs: the rate shorthand, missing
+photon preregistration, unspecified fiber window, eta naming clause,
+compound Lorentz parent, and undefined Stage B pullback. Engineering
+readouts without public evidence move outside the normative Canon;
+retained measured comparisons carry explicit source identifiers.
+The unsupported WKB3 ringdown firing and bare-neutron ppm residual are
+engineering notes, not public claim or comparison evidence.

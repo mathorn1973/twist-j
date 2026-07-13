@@ -12,6 +12,7 @@ from tools.check_activation import (
     EVIDENCE_FIELDS,
     architecture_blockers,
     artifact_blockers,
+    post_content_path_allowed,
     view_blockers,
 )
 from tools.generate_canon_views import generated_views
@@ -27,6 +28,14 @@ def write_tsv(path: Path, fields: tuple[str, ...], rows: list[dict[str, str]]) -
 
 
 class ActivationTests(unittest.TestCase):
+    def test_content_commit_allowlist_is_exact(self) -> None:
+        record = "reproduce/kernel/RUNS/x86_64.md"
+        self.assertTrue(post_content_path_allowed(record, dry_run=True))
+        self.assertFalse(post_content_path_allowed("data/EXTERNAL_SOURCES.tsv", dry_run=True))
+        self.assertFalse(post_content_path_allowed("tools/check_activation.py", dry_run=False))
+        self.assertFalse(post_content_path_allowed("STATUS.md", dry_run=True))
+        self.assertTrue(post_content_path_allowed("STATUS.md", dry_run=False))
+
     def test_missing_two_architecture_records_block(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -56,9 +65,23 @@ class ActivationTests(unittest.TestCase):
             (root / "canon" / "FRONTIER.md").write_text(views["FRONTIER.md"], encoding="utf-8")
             (root / "canon" / "CORE.md").write_text(views["CORE_CLAIMS.md"], encoding="utf-8")
             (root / "canon" / "CHANGELOG.md").write_text(views["CHANGELOG_COUNTS.md"], encoding="utf-8")
+            (root / "canon" / "STATUS_COUNTS.tsv").write_text(views["STATUS_COUNTS.tsv"], encoding="utf-8")
             self.assertEqual(view_blockers(root), [])
             (root / "canon" / "FRONTIER.md").write_text("manual drift\n", encoding="utf-8")
             self.assertIn("not the generated registry view", view_blockers(root)[0])
+
+    def test_duplicate_generated_block_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            fixture = LedgerFixture(root)
+            fixture.write()
+            (root / "reproduce").mkdir()
+            views = generated_views(root)
+            (root / "canon" / "FRONTIER.md").write_text(views["FRONTIER.md"], encoding="utf-8")
+            (root / "canon" / "CORE.md").write_text(views["CORE_CLAIMS.md"] * 2, encoding="utf-8")
+            (root / "canon" / "CHANGELOG.md").write_text(views["CHANGELOG_COUNTS.md"], encoding="utf-8")
+            (root / "canon" / "STATUS_COUNTS.tsv").write_text(views["STATUS_COUNTS.tsv"], encoding="utf-8")
+            self.assertTrue(any("core claim block" in item for item in view_blockers(root)))
 
     def test_missing_aarch64_package_is_explicit(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

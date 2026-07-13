@@ -13,18 +13,17 @@
 # as the 63 = (p^3 + 1)/2 boundary attractors; the trace codec: the
 # step matrix M_J is multiplication by J = 1 + zeta_5^2, its
 # characteristic polynomial is Phi_5(x - 1) collapsing to (x - 2)^4
-# over F_5 with det(2I - M_J) = 5 = p, the piston sum Tr_4 doubles
-# exactly, Tr_4(M_J x) = 2 Tr_4(x), and the scalar multiples of Tr_4
-# are the only covectors reading any multiplier at all; and the
+# over F_5 with det(2I - M_J) = 5 = p, the integer identity is
+# Tr_4(M_J x) = 2 Tr_4(x) - 5 x_c, hence the piston sum doubles over
+# F_5; the scalar multiples of Tr_4 are the only covectors reading any
+# multiplier at all; and the
 # finite fusion ring boundary behind the fired falsifier
 # PHIBIT-NOT-TAU: the phibit fusion ring is the group ring of Z_5,
 # the Fibonacci ring is not, and no identification survives.
 #
 # Claims verified: HYPERPLANE-BOUNDARY-CLASS,
 # HYPERPLANE-BOUNDARY-REALIZATION, CODEC-TR4, PHIBIT-NOT-TAU.
-# The open row CODEC-RATE-SCOPE carries no witness here by design:
-# the internal rate 4/5 clause waits for its coding scope and nothing
-# in this file claims it.
+# No coding-rate statement is inferred from these finite dimensions.
 
 import sys
 from fractions import Fraction as Fr

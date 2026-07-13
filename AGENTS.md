@@ -258,6 +258,32 @@ synthesis/canon-v1       one fast-forward integration lane
    is a stop condition. Never repair these states by force-pushing a staging
    branch or silently reinterpreting a candidate.
 
+### Phase A final record refresh
+
+The final Genesis reconciliation may invalidate several old reproduction
+records at once. Pin the complete content commit first. On each architecture,
+from a clean descendant that contains only earlier formal records, run one
+atomic batch:
+
+```text
+python3 tools/run_staged_reproduction.py \
+  --all-pending-two-architecture --candidate FULL_CONTENT_SHA
+```
+
+The batch derives its directory set from `canon/EVIDENCE.tsv`, executes every
+missing verifier before writing any record, and writes only the current
+architecture's missing `RUNS` files. Commit those named files together; never
+change candidate content between architectures. The final validator is:
+
+```text
+python3 tools/check_activation.py --dry-run --full \
+  --content-commit FULL_CONTENT_SHA
+```
+
+It validates every existing record, requires both architectures wherever the
+ledger says `two-architecture`, and permits no post-content change except
+neutral formal records. This refresh creates no PR, merge, or activation.
+
 ### Phase B: activation
 
 14. Create `activate/canon-v1` from the merged public `main`.
@@ -280,7 +306,10 @@ synthesis/canon-v1       one fast-forward integration lane
 17. Open and merge a separate reviewed activation pull request.
 18. Tag the activation merge commit `canon-v1`, record that tag target as
     `ACTIVATION_COMMIT` in the release manifest, create the release, and attach
-    the recorded `canon/SHA256SUMS`.
+    the tag-job `activation-manifest.json` and recorded `canon/SHA256SUMS`.
+    The read-only release workflow downloads both assets, checks the complete
+    file inventory and content/activation commit pins, and compares the hash
+    manifest byte for byte.
 19. Repoint `twistj.com/canon/` from the legacy line to Public Canon v1,
     then verify the tag, release, public readback, hashes, registry, and all
     required checks.

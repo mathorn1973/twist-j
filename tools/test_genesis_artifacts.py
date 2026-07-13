@@ -42,6 +42,8 @@ class GenesisFixture:
     def __init__(self, root: Path) -> None:
         self.root = root
         claims = sorted(RECON_ITEMS | set(SPLIT_COUNTS))
+        (root / "canon").mkdir(parents=True)
+        (root / "canon" / "CANON.md").write_text("# Fixture\n", encoding="utf-8")
         write_tsv(
             root / "canon" / "REGISTRY.tsv",
             REGISTRY_FIELDS,
@@ -90,7 +92,7 @@ class GenesisFixture:
         self.engineering = [
             {
                 "item_id": item,
-                "canon_locator": "canon/CANON.md::Fixture",
+                "canon_locator": "Fixture",
                 "observable": "fixture observable",
                 "value": "fixture value",
                 "source_id": "SRC-FIXTURE",
@@ -135,7 +137,7 @@ class GenesisArtifactTests(unittest.TestCase):
         self.fixture.write_sources()
         self.fixture.write_prereg()
         self.assertEqual(validate_recon(self.root), (9, 19))
-        self.assertEqual(validate_sources(self.root), (1, 8))
+        self.assertEqual(validate_sources(self.root), (1, 9))
         self.assertEqual(validate_prereg(self.root), 6)
 
     def test_missing_reconstruction_decision_fails(self) -> None:
@@ -150,10 +152,17 @@ class GenesisArtifactTests(unittest.TestCase):
         with self.assertRaisesRegex(GenesisArtifactError, "must remain H or O"):
             validate_recon(self.root)
 
+    def test_retired_reconstruction_item_must_leave_registry(self) -> None:
+        self.fixture.recon[0]["action"] = "RETIRE"
+        self.fixture.recon[0]["current_claim_id"] = "-"
+        self.fixture.write_recon()
+        with self.assertRaisesRegex(GenesisArtifactError, "must leave no current claim"):
+            validate_recon(self.root)
+
     def test_retained_measurement_needs_source(self) -> None:
         self.fixture.engineering[0]["source_id"] = "SRC-MISSING"
         self.fixture.write_sources()
-        with self.assertRaisesRegex(GenesisArtifactError, "retained without a valid source_id"):
+        with self.assertRaisesRegex(GenesisArtifactError, "retained without valid source_id"):
             validate_sources(self.root)
 
     def test_preregistration_cannot_contain_result(self) -> None:

@@ -58,12 +58,14 @@ class LedgerFixture:
         self.history = []
         for claim, status, scope in (("T-CLAIM", "T", scope_t), ("O-CLAIM", "O", scope_o)):
             self.history.append({
-                "event_id": f"GENESIS-{claim}", "event_date": "2026-07-13", "release": "canon-v1-genesis", "claim_id": claim,
+                "event_id": f"GENESIS-{claim}", "event_sequence": "1", "event_date": "2026-07-13", "release": "canon-v1-genesis", "claim_id": claim,
                 "event_type": "DECLARE", "previous_status": "-", "new_status": status,
-                "scope_sha256": hashlib.sha256(scope.encode()).hexdigest(), "evidence_id": f"EV-{claim}", "rationale": "fixture declaration",
+                "scope_sha256": hashlib.sha256(scope.encode()).hexdigest(), "evidence_id": f"EV-{claim}",
+                "evidence_location": "inline", "evidence_sha256": canon_hash,
+                "rationale": "fixture declaration",
             })
         self.gates = [{
-            "gate_id": "GATE-FIXTURE", "claim_id": "O-CLAIM", "from_layer": "L1", "to_layer": "L2",
+            "gate_id": "GATE-FIXTURE", "owner_item_id": "O-CLAIM", "from_layer": "L1", "to_layer": "L2",
             "gate_kind": "OPEN_LIFT", "decision_condition": "closes positively by a fixture and negatively by its exact counterexample",
         }]
         self.core_selection = [
@@ -119,13 +121,62 @@ class LedgerTests(unittest.TestCase):
     def test_every_claim_needs_history(self) -> None:
         self.fixture.history.pop()
         self.fixture.write()
-        with self.assertRaisesRegex(LedgerError, "HISTORY.tsv lacks O-CLAIM"):
+        with self.assertRaisesRegex(LedgerError, "HISTORY.tsv lacks claims: O-CLAIM"):
             validate(self.root)
+
+    def test_retired_claim_can_leave_current_registry(self) -> None:
+        retired = self.fixture.history.pop()
+        self.fixture.registry.pop()
+        self.fixture.normative.pop()
+        self.fixture.dependencies.pop()
+        self.fixture.evidence.pop()
+        self.fixture.gates = []
+        self.fixture.core_selection = [{"rank": "1", "claim_id": "T-CLAIM"}]
+        retired.update({
+            "event_sequence": "2", "event_type": "RETIRE",
+            "previous_status": "O", "new_status": "RETIRED",
+            "rationale": "fixture retirement",
+        })
+        declaration = dict(retired)
+        declaration.update({
+            "event_id": "GENESIS-O-CLAIM", "event_sequence": "1",
+            "event_type": "DECLARE", "previous_status": "-", "new_status": "O",
+            "rationale": "fixture declaration",
+        })
+        retired["event_id"] = "RETIRE-O-CLAIM"
+        self.fixture.history.extend((declaration, retired))
+        self.fixture.write()
+        self.assertEqual(validate(self.root).claims, 1)
+
+    def test_evidence_change_preserves_historical_hash(self) -> None:
+        current = self.fixture.evidence[0]
+        old_hash = current["sha256"]
+        current["evidence_id"] = "EV-T-CLAIM-V2"
+        latest = dict(self.fixture.history[0])
+        latest.update({
+            "event_id": "EVIDENCE-T-CLAIM-2", "event_sequence": "2",
+            "event_type": "EVIDENCE_CHANGE", "previous_status": "T",
+            "new_status": "T", "evidence_id": "EV-T-CLAIM-V2",
+            "evidence_sha256": current["sha256"],
+            "rationale": "fixture evidence replacement",
+        })
+        self.fixture.history.append(latest)
+        self.fixture.write()
+        validate(self.root)
+        self.assertEqual(self.fixture.history[0]["evidence_sha256"], old_hash)
 
     def test_core_selection_is_unique(self) -> None:
         self.fixture.core_selection.append({"rank": "2", "claim_id": "T-CLAIM"})
         self.fixture.write()
         with self.assertRaisesRegex(LedgerError, "CORE_SELECTION.tsv duplicates T-CLAIM"):
+            validate(self.root)
+
+    def test_cross_layer_dependency_needs_matching_gate(self) -> None:
+        self.fixture.normative[2]["layer"] = "L2"
+        self.fixture.normative[2]["gate_ids"] = ""
+        self.fixture.gates = []
+        self.fixture.write()
+        with self.assertRaisesRegex(LedgerError, "cross-layer dependency"):
             validate(self.root)
 
 
