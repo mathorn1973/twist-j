@@ -224,6 +224,14 @@ Every pull request must pass the required `check`, which runs repository
 policy and any changed public verifiers, plus a manual security review.
 Apache-2.0 applies unless a file states an approved compatible license.
 
+After cutover, the release-form activation readback is not a general content
+gate. The sole workflow runs it only for an immutable tag push or release
+publication. Ordinary pull requests and `main` pushes still run policy, unit,
+Canon, ledger, changed-verifier, and changed-reproduction checks. This routing
+prevents the activation gate's exact three-file release delta from being
+misapplied to post-cutover public work; it does not relax tag or release
+readback.
+
 The sole workflow has read-only permissions, immutable action pins, no
 persisted checkout credential, and a 15-minute timeout.
 `pull_request_target` is forbidden. Any new workflow requires an explicit
