@@ -22,6 +22,9 @@ evidence:
   reconciliation record.
 - `GATES.tsv` gives every currently declared cross-layer lift a stable gate ID
   and a public decision condition.
+- `CORE_SELECTION.tsv` is the explicit, reviewable selection of closed claims
+  used to generate the short core claim badges. Selection is policy, while
+  statuses and scopes always come from `REGISTRY.tsv`.
 
 `tools/check_ledger.py` requires an acyclic dependency graph, exact agreement
 with `REGISTRY.tsv`, valid evidence hashes, continuous status history, and the

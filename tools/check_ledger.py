@@ -32,6 +32,7 @@ GATE_FIELDS = (
     "gate_id", "claim_id", "from_layer", "to_layer", "gate_kind",
     "decision_condition",
 )
+CORE_SELECTION_FIELDS = ("rank", "claim_id")
 
 STATUSES = {"T-LOCK", "T", "D", "C", "H", "O", "F"}
 ITEM_TYPES = {
@@ -125,6 +126,9 @@ def validate(root: Path) -> Snapshot:
     evidence_rows = read_tsv(canon / "EVIDENCE.tsv", EVIDENCE_FIELDS)
     history_rows = read_tsv(canon / "HISTORY.tsv", HISTORY_FIELDS)
     gate_rows = read_tsv(canon / "GATES.tsv", GATE_FIELDS)
+    core_selection_rows = read_tsv(
+        canon / "CORE_SELECTION.tsv", CORE_SELECTION_FIELDS
+    )
 
     registry: dict[str, dict[str, str]] = {}
     for number, row in enumerate(registry_rows, 2):
@@ -178,6 +182,26 @@ def validate(root: Path) -> Snapshot:
     missing_items = sorted(set(registry) - set(claim_items))
     if missing_items:
         fail("NORMATIVE.tsv lacks claims: " + ", ".join(missing_items))
+
+    core_claims: set[str] = set()
+    core_ranks: list[int] = []
+    for number, row in enumerate(core_selection_rows, 2):
+        context = f"CORE_SELECTION.tsv line {number}"
+        claim = require_text(row, "claim_id", context)
+        if claim not in registry:
+            fail(f"{context} names unknown claim {claim}")
+        if claim in core_claims:
+            fail(f"CORE_SELECTION.tsv duplicates {claim}")
+        if registry[claim]["status"].strip() not in {"T", "T-LOCK", "D", "C"}:
+            fail(f"CORE_SELECTION.tsv contains non-closed orientation claim {claim}")
+        try:
+            rank = int(require_text(row, "rank", context))
+        except ValueError:
+            fail(f"{context} has invalid rank")
+        core_claims.add(claim)
+        core_ranks.append(rank)
+    if sorted(core_ranks) != list(range(1, len(core_ranks) + 1)):
+        fail("CORE_SELECTION.tsv ranks must be contiguous from 1")
 
     gates: dict[str, dict[str, str]] = {}
     for number, row in enumerate(gate_rows, 2):

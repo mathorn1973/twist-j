@@ -10,6 +10,7 @@ import tempfile
 import unittest
 
 from tools.check_ledger import (
+    CORE_SELECTION_FIELDS,
     DEPENDENCY_FIELDS,
     EVIDENCE_FIELDS,
     GATE_FIELDS,
@@ -65,6 +66,9 @@ class LedgerFixture:
             "gate_id": "GATE-FIXTURE", "claim_id": "O-CLAIM", "from_layer": "L1", "to_layer": "L2",
             "gate_kind": "OPEN_LIFT", "decision_condition": "closes positively by a fixture and negatively by its exact counterexample",
         }]
+        self.core_selection = [
+            {"rank": "1", "claim_id": "T-CLAIM"},
+        ]
 
     def write(self) -> None:
         write_tsv(self.canon / "REGISTRY.tsv", REGISTRY_FIELDS, self.registry)
@@ -73,6 +77,11 @@ class LedgerFixture:
         write_tsv(self.canon / "EVIDENCE.tsv", EVIDENCE_FIELDS, self.evidence)
         write_tsv(self.canon / "HISTORY.tsv", HISTORY_FIELDS, self.history)
         write_tsv(self.canon / "GATES.tsv", GATE_FIELDS, self.gates)
+        write_tsv(
+            self.canon / "CORE_SELECTION.tsv",
+            CORE_SELECTION_FIELDS,
+            self.core_selection,
+        )
 
 
 class LedgerTests(unittest.TestCase):
@@ -111,6 +120,12 @@ class LedgerTests(unittest.TestCase):
         self.fixture.history.pop()
         self.fixture.write()
         with self.assertRaisesRegex(LedgerError, "HISTORY.tsv lacks O-CLAIM"):
+            validate(self.root)
+
+    def test_core_selection_is_unique(self) -> None:
+        self.fixture.core_selection.append({"rank": "2", "claim_id": "T-CLAIM"})
+        self.fixture.write()
+        with self.assertRaisesRegex(LedgerError, "CORE_SELECTION.tsv duplicates T-CLAIM"):
             validate(self.root)
 
 
