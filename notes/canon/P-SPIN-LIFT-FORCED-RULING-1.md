@@ -6,7 +6,7 @@ Probe:            P-SPIN-LIFT-FORCED-1
 Track:            B
 Owner:            unchanged, single owner
 Date:             2026-07-13
-Basis:            Public Canon v1, tag canon-v1, activation commit
+Basis:            Public Canon 1, tag canon-v1, activation commit
                   f4fb064c2a08cd21b9a2bc2bcfd4daf46da47bcb
 Status:           RULING CANDIDATE, NON-CANONICAL UNTIL MERGED AND PINNED
 Scientific claim: remains O
@@ -14,10 +14,13 @@ Action layer:     L3
 Public record:    mathorn1973/twist-j issue 12 (decisions and probe claim)
 Supersedes:       ruling draft SHA-256
                   fe635c65a9da24f37e3a0170ea049b586974c05270c8358765a968fd11955042
-                  (7420 bytes, 259 lines)
+                  (7420 bytes, 259 lines) and candidate SHA-256
+                  9856ff9f7c3283ed007cfe3c6af5ddb5fdec7db28dcb28504440a018b1e58127
+                  (13506 bytes, 395 lines)
 Incorporates:     track B review SHA-256
                   15aa55b989bc3c7b3119fa692c42bd18860ba80c5db0cd08785a45cedbb0b5a9
-                  accepted in issue 12
+                  and the owner byte review of candidate 9856ff9f
+                  (2026-07-13, blocker B2 and freeze fixes)
 ```
 
 ## 0. Decision
@@ -34,9 +37,12 @@ objects:
 The uniqueness probe concerns item 2. Item 1 is renamed the `P2 axiom-measure
 ensemble` and is not the base object of this probe.
 
-Amended per issue 12: blocker B1 is resolved by the procedural witness of
-section W; route decision R1 is resolved as route a (section 3); the track B
-review recommendations are incorporated below.
+Amended per the owner decisions recorded in issue 12: blocker B1 is resolved
+by the procedural witness of section W; route decision R1 is resolved as
+route a (section 3); the track B review recommendations are incorporated
+below. Further amended per the owner byte review of candidate 9856ff9f:
+the conjugation relation carries no sign choice (blocker B2, see D3 and D5),
+and the naming, witness map, and provenance wording are frozen accordingly.
 
 No track exchange is authorized. Track B remains the sole owner of
 `P-SPIN-LIFT-FORCED-1`.
@@ -136,7 +142,7 @@ A1  pi(R) = iota(r)
 A2  pi(S) = iota(s)
 A3  R^5 = -I
 A4  S^2 = -I
-A5  S R S^-1 in {R^-1, -R^-1}
+A5  S R S^-1 = R^-1
 A6  <R, S> = pi^-1(iota(D5))
 A7  |<R, S>| = 20
 ```
@@ -151,11 +157,13 @@ A4  entailed by A2 with the unique involution of the core
     (COLOR-GOLDEN-TABLE): S is noncentral because pi(S) is not the
     identity, and a noncentral solution of S^2 = I would be a second
     involution. Retained as an integrity gate.
-A5  entailed by A1 and A2: the downstairs relation transports through pi
-    with one central ambiguity. A5 imposes no sign constraint. The
-    conjugation sign is enumerated and recorded per candidate; it is not
-    inherited from the witness (see D5).
-A6  the subgroup closure condition; carries the dicyclic content.
+A5  entailed by A1 to A3, an integrity gate: transport through pi allows
+    only S R S^-1 in {R^-1, -R^-1}, and A3 empties the minus branch,
+    since (S R S^-1)^5 = S R^5 S^-1 = -I while (-R^-1)^5 = I. There is
+    no conjugation sign choice (see D5).
+A6  entailed by A1 to A3, an integrity gate: pi(<R, S>) = iota(D5), and
+    R^5 = -I puts the central element in <R, S>, so <R, S> is the full
+    preimage of order 20. Carries the dicyclic content.
 A7  entailed by A6: the preimage of a group of order 10 under the central
     two to one quotient has exactly 20 elements. Retained as an integrity
     gate.
@@ -197,11 +205,13 @@ The central relation `R^5 = -I` is an imported membership condition
 (ELECTRON-G-DOUBLE-COVER), not an output. The central relation `S^2 = -I` is
 entailed (D3, A4) and stands as an integrity gate.
 
-The conjugation relation carries the third central sign: by entailment,
-`S R S^-1` equals `R^-1` or `-R^-1`. No sign constraint is imposed. The
-uniqueness gate enumerates this sign per candidate and reports it per class;
-it is not inherited from the witness. The witness of section W realizes the
-value `R^-1` by construction.
+The conjugation relation carries no independent central sign. Transport
+through pi allows only `S R S^-1` in `{R^-1, -R^-1}`, and A3 empties the
+minus branch: `(S R S^-1)^5 = S R^5 S^-1 = -I`, while `(-R^-1)^5 = I`. So
+`S R S^-1 = R^-1` holds for every admissible triple, and A5 is an integrity
+gate entailed by A1 to A3, not a choice. The apparent third central sign
+flagged in earlier review rounds was false and is retired here, before the
+freeze. The only central choice anywhere in the predicate is the A3 import.
 
 Independent central retwists are not identified by convention. In particular,
 `(iota, R, S)` and `(iota, R, -S)` count as distinct unless D4 proves that
@@ -244,14 +254,17 @@ Derivation, self contained and deterministic:
 ```text
 1  Order the elements of G = SL_2(F_5) lexicographically by the row major
    entry tuple (a, b, c, d), entries 0 to 4, for the matrix ((a, b), (c, d)).
-2  Z = -I.
+2  z = -I, so Z = {I, z}.
 3  R_w is the first matrix of exact multiplicative order 10.
 4  S_w is the first matrix, in the same order, satisfying
    S_w R_w S_w^-1 = R_w^-1.
-5  pi(g) = gZ = {g, -g}.
+5  pi(g) = gZ = {g, zg}.
 6  The marked base pair downstairs is the census pair of D1:
    s = d, r = d o (b o e o b).
 7  iota_w(r) = pi(R_w), iota_w(s) = pi(S_w).
+8  Totalization: iota_w(r^a) = pi(R_w)^a and
+   iota_w(r^a s) = pi(R_w)^a pi(S_w), for a = 0 to 4, on the element
+   labels of D1, so iota_w is a fully defined map on all ten elements.
 ```
 
 The witness triple is `(iota_w, R_w, S_w)`. The derivation uses only the
@@ -261,9 +274,9 @@ clause of section 1 is therefore decidable with no run before the
 preregistration pin.
 
 Integrity notes: exact order 10 entails `R_w^5 = -I` through the unique
-involution, so the witness meets A3 by construction; `S_w` realizes the
-conjugation sign `R^-1` by step 4. The verifier must reconstruct the witness
-by this exact procedure and assert its admissibility.
+involution, so the witness meets A3 by construction; `S_w` satisfies A5 by
+step 4. The verifier must reconstruct the witness by this exact procedure
+and assert its admissibility.
 
 ## 3. Public pin route (route a) and deferred normative edits
 
@@ -364,7 +377,7 @@ orbit-size multiset under G conjugation
 number N of equivalence classes
 representative matrices for every class (canonical representatives)
 stabilizer size for every representative
-conjugation sign for every class
+A5 integrity confirmation for every class representative
 central-retwist pairing table
 all integrity-gate results
 ```
@@ -380,7 +393,8 @@ are remotely pinned.
 
 ```text
 Readiness audit:        PASS
-Track B review:         ACCEPTED AND INCORPORATED (issue 12)
+Track B review:         INCORPORATED (SHA-256 15aa55b9)
+Owner byte review:      CHANGES REQUIRED on 9856ff9f; applied in this revision
 B1 witness:             RESOLVED, procedural (section W)
 R1 route:               ROUTE A (issue 12)
 Current probe state:    RULING CANDIDATE READY FOR PULL REQUEST
