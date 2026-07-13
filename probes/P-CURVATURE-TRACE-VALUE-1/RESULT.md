@@ -1,6 +1,6 @@
 # P-CURVATURE-TRACE-VALUE-1 result
 
-Status: SCIENTIFIC RESULT; FORMAL AARCH64 RECORD; PUBLIC X86_64 GATE PENDING
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS
 
 ## Scientific decision
 
@@ -74,20 +74,30 @@ stdout SHA-256:        253c23d019de9e0c648a8adfa4547e009f4b198eaa017c0347e906e7a
 stdout bytes:          738
 stdout lines:          18
 RUN.md SHA-256:        e40d45665c0c5391a083899e5f327485b00d7cf5553bc0a626a8e03f12471353
+
+GitHub workflow run:   29291022771
+GitHub workflow job:   86954400056
+x86_64 platform:       Ubuntu 24.04.4
+x86_64 Python:         3.12.13
+x86_64 exit code:      0
+x86_64 stderr:         0 bytes
+x86_64 verifier:       c9b4d253a609cc489efc4386e5e61d3e92baa16b736b899048f2a3afa5e78c99
+x86_64 stdout:         253c23d019de9e0c648a8adfa4547e009f4b198eaa017c0347e906e7afd02ac2
 ```
 
 `EXPECTED.txt` is the exact formal stdout. `RUN.md` contains only neutral
 public environment fields. The repository self-check reran the pinned
 verifier and reproduced `EXPECTED.txt` byte for byte with empty stderr.
 
-The required pull-request check must still rerun the same pinned verifier on
-GitHub `x86_64`. Until that public check passes, the computation record is
-formally single-architecture and the two-architecture gate remains pending.
+The required pull-request check reran the same pinned verifier on GitHub
+`x86_64` and reproduced `EXPECTED.txt` byte for byte with exit zero and empty
+stderr. Together with the formal local `aarch64` record, this completes the
+two-architecture computation gate for the exact finite result.
 
 ## Status routing
 
-The finite trace fact is supported by the formal `aarch64` computation record.
-The public `x86_64` check will determine whether the two-architecture
-computation gate is complete. The normative registry and frontier transition
-is deliberately excluded from this probe pull request and belongs to the
-separate sealed fold prescribed by the ruling.
+The exact finite trace fact has passed the two-architecture computation gate
+at the frozen scope. The registered `-21/8` proposal is falsified at that
+surface, while canonical operator selection remains open. The normative
+registry and frontier transition is deliberately excluded from this probe
+pull request and belongs to the separate sealed fold prescribed by the ruling.
