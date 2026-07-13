@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: 6778fc75f267728dd1f3685aeddb9e7ae28e4d86
+run_base_commit: 55c53fe884cf65b2c020ac6dfb6643fc9646a122
+reproduction: pentit-p5-closure
+verifier_sha256: 884a2de4128b1f9d180cd03703912d95980561166216abf6b1187a49aec559e4
+expected_sha256: 805cc0f2ce2b116d8c1873af2cc277fc409220c397c57d84316af870f3dd2031
+command: python3 reproduce/pentit-p5-closure/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: 805cc0f2ce2b116d8c1873af2cc277fc409220c397c57d84316af870f3dd2031
+stdout_bytes: 801
+stdout_lines: 10
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS
