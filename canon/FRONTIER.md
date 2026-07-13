@@ -90,6 +90,19 @@ Observer:
 - OBSERVER-WRITE-PORT  armed, algebraic; ordered after the metrology
   closure.
 
+Photon window:
+
+- PHOTON-WINDOW-PROOF  completion of the photon window requires both
+  (i) every closed charge 5 worldline of length L to satisfy
+  F_occ >= kappa L for an admissible kappa with 2^(4 kappa) > 2401,
+  and (ii) an electric face roughening certificate sufficient for
+  the declared Froehlich-Spencer class import. It closes positively
+  only when both obligations have public exact certificates; an
+  exact counterexample to the kappa bound or a certified failure of
+  the declared roughening criterion closes the corresponding route
+  negatively. Until both close, no massless Coulomb conclusion is
+  promoted.
+
 Standing preregistration:
 
 - PHOTON-RADIATIVE-INDEPENDENCE  radiative independence; the frozen

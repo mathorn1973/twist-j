@@ -488,22 +488,50 @@ pairs; the Plancherel masses are 2 and 10, in the ratio p = 5.
 ## 9. The photon and the electron
 
 The quantum is an integer path count, one bit per tick, on an RP
-Hilbert space. The photon window: exact coordinates of the point and
-its dual [T]; the window proof reduced to one combinatorial lemma with
-the two integer gap 32 < 2401 < 131072; straightness, the ladder bound
-9K + 8, and the greedy bound hold [T]; the nine shape library at C,
-minimum 31/8 bits per segment. The center split [T]: the same verb
-freezes p = 2, leaves p = 3 with neither window nor tilt, and opens
-both doors first at p = 5; the tilt has reciprocity at T. The photon
-belongs to the null light branch, E+ E- = 0 identically.
+Hilbert space. The photon window has exact coordinates
+(PHOTON-WINDOW-COORDINATES [T], reproduce/photon-electron): the point
+w = (4, phi^2, phi^-2, phi^-2, phi^2) and its Kramers-Wannier dual
+what = 5 (2, 1, 0, 0, 1) with chat = w exactly, w not self dual, and
+the tilt w(1) - w(2) = sqrt5. The quantum costs one bit per tick on
+every center, what(1)/what(0) = 1/2, and every class |k| >= 2 is
+exactly closed for p >= 5 (PHOTON-UNIVERSAL-BIT [T]). Monopole charge
+exists only in lumps of five (MONOPOLE-FIFTHS [T]); the elementary
+monopole costs between 17 and 21 occupied faces (MONOPOLE-COST [C]).
+The window proof is reduced to one combinatorial lemma with the two
+integer gap 32 < 2401 < 131072: straight runs cost 5 bits per
+segment, the 1 x K ladder bound is exactly 9K + 8, and the greedy
+incidence identity holds (KAPPA-BOUNDS [T]); the nine shape library
+realizes the exact bound table with minimum 31/8 bits per segment and
+the integer margin 2^31 > 7^8 (KAPPA-SHAPES [C]). The remaining lemma
+and the electric face certificate are the frontier row
+PHOTON-WINDOW-PROOF (section 18). The center split: conjugation swaps
+the residue channels exactly for p = 3 mod 4 and preserves them for
+p = 1 mod 4, with Gauss sums g^2 = -3, +5, -7
+(CENTER-SPLIT-RECIPROCITY [T]); the same verb freezes p = 2 and
+leaves p = 3 with full dual support (CENTER-SPLIT-CLOSURE [T]); with
+the declared self duality import (the 4D Z_N window opens only for
+N >= 5), the first prime passing both doors is p = 5
+(CENTER-SPLIT-SELECTION [D]). The photon belongs to the null light
+branch, E+ E- = 0 identically.
 
-The electron: g = 2 = (2 pi/5) / (pi/5) [D on four T pillars]: the
-vertex flux over the spinor half angle; sixteen identities; one drive
-arg j, spinor pi/5 per step through the diagonal bridge, ratio 2 at
-every step, closure pair (5, 10), R^5 = -I; the pivot is
-1 - J = e^(-i pi/5). The electron sign is measured into existence [D]:
-eight exhaustive laws; the signature families obey an involution law
-with 13 at its center.
+The electron: g = 2 = (2 pi/5) / (pi/5) is the vertex flux over the
+spinor half angle, the reading ELECTRON-G-TREE [D] on exact pillars:
+sixteen identities with the pivot 1 - J = e^(-i pi/5) and the polylog
+ladder halving 2 pi/5 -> pi/5 -> pi/10 (ELECTRON-G-RATIO [T],
+reproduce/photon-electron); one drive arg j, spinor pi/5 per step
+through the diagonal bridge, ratio 2 at every step, closure pair
+(5, 10), R^5 = -I (ELECTRON-G-DOUBLE-COVER [T]). The electron sign is
+measured into existence (ELECTRON-SIGN [D]): the charge sign is the
+orientation, ghost {a, c} against live {b, d}, of the single gyron
+anchored engagement of a defect worldline, pair neutrality is
+realized through the annihilation sink, and the sign Z_2 equals the
+initial datum [z5(B_0) = 4]. Seven exhaustive public laws carry it
+(ELECTRON-SIGN-LAWS [T], reproduce/photon-electron): the count parity
+as initial datum; the forced event slot with the phase locked forever
+after; the annihilation census decided by tick 3; the eps ledger
+summing to zero; one Z_2 across the five readouts; the closed 20
+state pair cycles with equal stable supports; and the transient shift
+and Galois images.
 
 The Dirac ladder closes [DIRAC-LADDER at D, the theorem layer at T;
 reproduce/dirac-ladder]:

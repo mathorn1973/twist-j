@@ -46,8 +46,9 @@ with a reason in the audit and queued here, never registered vaguely.
    foundations-places cluster resolves the 12 lines (13 markers,
    compound brackets counted) of sections 1, 2 and 4; the
    force-born-dictionary cluster resolves eight further occurrences;
-   18 unmapped occurrences remain, all in sections 9 and beyond, the
-   count derived from this gate run.
+   the photon-electron cluster resolves the seven occurrences of
+   section 9 (five bracketed labels and the two unbracketed markers);
+   11 unmapped occurrences remain, in sections 10, 11 and 16.
 6. Full local check run, security audit, PR template fields.
 
 ## Two architecture witness
@@ -132,7 +133,41 @@ GitHub candidate commit, through the Phase A staging protocol in
 AGENTS.md; both architecture records are pending at the candidate
 commit.
 
+Photon electron staging candidate: verifier d980aa17 and stdout
+99e30466 (4108 bytes), 20/20, exit 0, empty stderr in the pre-pin dry
+runs, byte identical on x86_64 and aarch64. Built in the prep lane on
+the post-force-born synthesis base. Formal records begin only after
+the immutable GitHub candidate commit, through the Phase A staging
+protocol in AGENTS.md; both architecture records are pending at the
+candidate commit.
+
 ## Session log
+
+- s16 (2026-07-13): the photon and electron tranche, the section 9
+  label reconciliation: reproduce/photon-electron (20/20: the window
+  point and its Kramers-Wannier dual; the universal bit and closure
+  ladder on the centers p = 2, 3, 5, 7; tilt reciprocity with the
+  Gauss sums; the selection reading with the declared self duality
+  import; monopole fifths and the cost bracket [17, 21]; the
+  straight, ladder, and greedy incidence bounds with the nine shape
+  library at minimum 31/8; the sixteen identity g = 2 block in
+  Z[zeta_10] with angles as integer multiples of pi/10; the double
+  cover closure pair (5, 10); the seven public electron sign laws,
+  with the gyron count parity derived structurally as 999 plus the
+  initial datum). Fifteen registry rows: PHOTON-WINDOW-COORDINATES T,
+  PHOTON-UNIVERSAL-BIT T, MONOPOLE-FIFTHS T, MONOPOLE-COST C,
+  KAPPA-BOUNDS T, KAPPA-SHAPES C, CENTER-SPLIT-RECIPROCITY T,
+  CENTER-SPLIT-CLOSURE T, CENTER-SPLIT-SELECTION D (door 1 is the
+  declared import), ELECTRON-G-RATIO T, ELECTRON-G-DOUBLE-COVER T,
+  ELECTRON-G-TREE D, ELECTRON-SIGN-LAWS T (seven laws; the internal
+  gyron window count law is not carried publicly by author decision),
+  ELECTRON-SIGN D (eps totality on event free survivors not claimed
+  publicly), and the frontier row PHOTON-WINDOW-PROOF O with both
+  conditions explicit (the kappa lemma and the electric face
+  roughening certificate) and the Froehlich-Spencer class import
+  declared. The signature family constants stay internal. Registry
+  153 claims. The section 9 status gate debt is resolved; 11 unmapped
+  occurrences remain in sections 10, 11 and 16.
 
 - s15 (2026-07-13): the force and Born dictionary reconciliation:
   reproduce/force-born-dictionary (10/10: the finite Weyl

@@ -270,6 +270,47 @@ MEASURE-BORN-VERB             D-MEASURE-BORN-VERB, resting on the
 KERNEL-CELL-DICTIONARY        D-KCM-ORBIT-MAP                       D
 SUBSTRATE-KNIT                T-QS-BORN-FACES, T-QS-GRAM, T-QS-MUB;
                                exact public witness                  T
+PHOTON-WINDOW-COORDINATES     T-P5.1 to T-P5.4 (v155 fold), the
+                               exact point and dual                  T
+PHOTON-UNIVERSAL-BIT          T-P8.4 with the T-P8.3 closure
+                               ladder                                T
+MONOPOLE-FIFTHS               T-MONO-FIFTHS (v155 fold, P7)          T
+MONOPOLE-COST                 T-MONO-LB17 and T-MONO-UB21;
+                               conservatively carried at C as the
+                               computed bracket; the exact minimum
+                               stays the internal micro item         C
+KAPPA-BOUNDS                  T-KAPPA-STRAIGHT, T-KAPPA-LADDER,
+                               T-KAPPA-GREEDY                        T
+KAPPA-SHAPES                  C-KAPPA-SHAPES, the exact library
+                               reconstructed as nine explicit
+                               loops realizing the pinned table      C
+CENTER-SPLIT-RECIPROCITY      T-P8.1 and T-P8.2                      T
+CENTER-SPLIT-CLOSURE          T-P8.3 with the p = 2 freeze and the
+                               p = 3 full support                    T
+CENTER-SPLIT-SELECTION        T-P8.5 with the standing self
+                               duality import; carried at D because
+                               door 1 is the labeled import          D
+ELECTRON-G-RATIO              T-G-RATIO (the sixteen identity
+                               block, carried at the algebraic
+                               layer with angles in pi/10 units)     T
+ELECTRON-G-DOUBLE-COVER       T-G-DOUBLE-COVER (PS-G-1)              T
+ELECTRON-G-TREE               D-ELECTRON-G-TREE; the Schwinger
+                               residual stays inside
+                               QUANT-SUBSTRATE                       D
+ELECTRON-SIGN-LAWS            seven of the eight sealed P10 laws;
+                               the gyron window count law
+                               (counts only 999 or 1000) is not
+                               carried publicly by author decision;
+                               the parity law is carried through
+                               the structural derivation            T
+ELECTRON-SIGN                 D-ELECTRON-SIGN; the eps totality on
+                               event free survivors (the joint
+                               readout with the signature
+                               families) stays internal              D
+PHOTON-WINDOW-PROOF           O-PWP-KAPPA and O-PWP-ROUGH, merged
+                               to one public row with both
+                               conditions explicit and the import
+                               declared                              O
 ```
 
 ## Intentional omissions so far (to be resolved before the PR)
@@ -283,9 +324,14 @@ line woven to GYRON-DENSITY, the transfer trichotomy rewritten as a
 definition, the closed whole energy statement rewritten as a sealed
 scope report, the charge conjugation clause folded into
 Z2-PLACES-SPLIT). The force and Born dictionary group resolves eight
-further unmapped occurrences through the eight rows above. The gate
-measures 18 unmapped occurrences in sections 9 and beyond, the count
-derived from this run, awaiting the pre PR reconciliation. Explicitly omitted
+further unmapped occurrences through the eight rows above. The photon
+and electron cluster resolves the seven occurrences of section 9
+(five bracketed labels and the two unbracketed markers); the internal
+gyron window count law and the signature family constants stay
+internal by author decision, recorded on the ELECTRON-SIGN-LAWS and
+ELECTRON-SIGN rows above. The gate measures 11 remaining unmapped
+occurrences, in sections 10, 11 and 16, awaiting the pre PR
+reconciliation. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author
 decision: an optional enrichment, not a gap; stays internal);
 W1-INTERFACE-PRINCIPLE, KERNEL-BRAID, and TIMEQUANTUM-POTENTIAL
