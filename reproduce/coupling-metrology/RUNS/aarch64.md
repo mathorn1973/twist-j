@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: f79951fb4dc20de6e765fd7057a7abdb28c54827
+run_base_commit: 80162cfda662745bafb70499c272900cdc6dbfa3
+reproduction: coupling-metrology
+verifier_sha256: 9f2278f8d76b9598ec4d49e34d130a52aa53b9ceacd7f7f8ab1d33da2eea214d
+expected_sha256: af01692c30673da4574e93e45eb904c4d0ddfc405f39a7634acbafb0427af455
+command: python3 reproduce/coupling-metrology/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: af01692c30673da4574e93e45eb904c4d0ddfc405f39a7634acbafb0427af455
+stdout_bytes: 2667
+stdout_lines: 14
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS
