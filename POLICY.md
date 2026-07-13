@@ -182,7 +182,9 @@ The normative Canon excludes:
 Internal numbering is retired at cutover. Public versions use immutable tags
 and releases `canon-v1`, `canon-v2`, and so on. Each release carries
 `SHA256SUMS`. Public history starts at v1; earlier development remains outside
-the normative series.
+the normative series. Canon version numbers are positive whole numbers only;
+decimal Canon versions are not used. A decimal `cff-version` identifies the
+CFF schema, not the Canon.
 
 Incomplete work belongs under `notes/`, is marked `NON-CANONICAL`, and need
 not carry a verifier. A proposed Canon patch stays under `notes/canon/` until

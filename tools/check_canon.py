@@ -29,6 +29,12 @@ HASHED_FILES = (
     "REGISTRY.tsv",
     "CHANGELOG.md",
 )
+RELEASE_FACING_FILES = (
+    "CANON.md",
+    "CORE.md",
+    "CHANGELOG.md",
+    "LEDGER.md",
+)
 REGISTRY_FIELDS = (
     "claim_id",
     "status",
@@ -62,6 +68,13 @@ FORBIDDEN_CANON_PHRASES = (
 )
 PRIVATE_AUTHORITY_WORD = re.compile(
     r"\b(?:sealed|internal|private|hidden|unpublished)\b", re.IGNORECASE
+)
+PROVISIONAL_RELEASE_PHRASES = (
+    "public canon v1 (candidate)",
+    "public canon v1 candidate in genesis",
+    "this repository is in genesis",
+    "genesis audit surface until",
+    "no authority while `status.md` says `genesis`",
 )
 
 
@@ -121,6 +134,12 @@ canon = (CANON_DIR / "CANON.md").read_text(encoding="utf-8")
 core = (CANON_DIR / "CORE.md").read_text(encoding="utf-8")
 frontier = (CANON_DIR / "FRONTIER.md").read_text(encoding="utf-8")
 changelog = (CANON_DIR / "CHANGELOG.md").read_text(encoding="utf-8")
+
+for name in RELEASE_FACING_FILES:
+    text = (CANON_DIR / name).read_text(encoding="utf-8").lower()
+    for phrase in PROVISIONAL_RELEASE_PHRASES:
+        if phrase in text:
+            fail(f"canon/{name} contains provisional release wording: {phrase}")
 
 for name in HASHED_FILES:
     path = CANON_DIR / name
@@ -256,6 +275,9 @@ if state == "ACTIVE":
     for field, value in expected.items():
         if fields.get(field) != value:
             fail(f"STATUS.md {field} must be: {value}")
+    citation_version = re.search(r'^version:\s*"([^"]+)"\s*$', citation, re.MULTILINE)
+    if not citation_version or citation_version.group(1) != version:
+        fail(f'CITATION.cff version must be the whole Canon number: "{version}"')
     canon_bytes = (CANON_DIR / "CANON.md").stat().st_size
     if fields.get("CANON_SHA256") != sha256(CANON_DIR / "CANON.md"):
         fail("STATUS.md CANON_SHA256 differs from canon/CANON.md")

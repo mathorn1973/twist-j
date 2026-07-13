@@ -50,6 +50,23 @@ def post_content_path_allowed(path: str, dry_run: bool) -> bool:
     )
 
 
+def activation_delta_blockers(changed: list[str], dry_run: bool) -> list[str]:
+    if dry_run:
+        return []
+    actual = set(changed)
+    if actual == ACTIVATION_METADATA:
+        return []
+    missing = sorted(ACTIVATION_METADATA - actual)
+    extra = sorted(actual - ACTIVATION_METADATA)
+    details: list[str] = []
+    if missing:
+        details.append("missing " + ", ".join(missing))
+    if extra:
+        details.append("extra " + ", ".join(extra))
+    return ["active release delta must be exactly STATUS.md, README.md, "
+            "and CITATION.cff (" + "; ".join(details) + ")"]
+
+
 def git(root: Path, *args: str) -> subprocess.CompletedProcess[bytes]:
     return subprocess.run(["git", *args], cwd=root, capture_output=True)
 
@@ -279,6 +296,7 @@ def status_blockers(
         blockers.append(
             "content bundle changes after content commit: " + ", ".join(illegal)
         )
+    blockers.extend(activation_delta_blockers(changed, dry_run))
     if post_activation:
         tag = git(root, "rev-parse", "canon-v1^{}")
         if tag.returncode:

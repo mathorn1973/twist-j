@@ -4,9 +4,8 @@
 statuses, scopes, Canon sections, evidence locations, and live decision
 conditions.  Its six-column schema is unchanged.
 
-The companion tables make the Public Canon v1 Genesis state auditable without
-turning Git history or the private development archive into scientific
-evidence:
+The companion tables make Public Canon v1 auditable without turning Git
+history or the private development archive into scientific evidence:
 
 - `NORMATIVE.tsv` inventories the public axiom, architectural definitions,
   empirical calibration anchor, and every registered claim by semantic kind.
@@ -37,6 +36,6 @@ with `REGISTRY.tsv`, valid evidence hashes, continuous status history, and the
 status firewall: theorem rows cannot require lower-status claims, and
 dictionary rows cannot require open or falsified claims.
 
-These files are a Genesis audit surface until the final reconciliation commit
-and activation manifest pin them as part of the release bundle.  They create
-no scientific promotion and no authority while `STATUS.md` says `GENESIS`.
+These files are the machine-auditable ledger surface of Public Canon v1.
+Authority and activation state follow `STATUS.md`; their presence on another
+ref neither promotes a claim nor creates a second authority.

@@ -10,6 +10,7 @@ import unittest
 
 from tools.check_activation import (
     EVIDENCE_FIELDS,
+    activation_delta_blockers,
     architecture_blockers,
     artifact_blockers,
     post_content_path_allowed,
@@ -28,6 +29,13 @@ def write_tsv(path: Path, fields: tuple[str, ...], rows: list[dict[str, str]]) -
 
 
 class ActivationTests(unittest.TestCase):
+    def test_active_release_delta_is_exactly_three_metadata_files(self) -> None:
+        exact = ["STATUS.md", "README.md", "CITATION.cff"]
+        self.assertEqual(activation_delta_blockers(exact, dry_run=False), [])
+        self.assertEqual(activation_delta_blockers([], dry_run=True), [])
+        blockers = activation_delta_blockers(exact + ["canon/CANON.md"], dry_run=False)
+        self.assertIn("extra canon/CANON.md", blockers[0])
+
     def test_content_commit_allowlist_is_exact(self) -> None:
         record = "reproduce/kernel/RUNS/x86_64.md"
         self.assertTrue(post_content_path_allowed(record, dry_run=True))

@@ -1,8 +1,8 @@
 # TWIST-J Public Canon v1
 
-**Status.** Candidate. This repository is in GENESIS; authority is
-declared by STATUS.md at the repository root. This document becomes
-the public Canon only at the declared activation.
+**Release identity.** Public Canon v1. Normative authority and activation
+state are declared exclusively by [STATUS.md](../STATUS.md). An identical
+tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,

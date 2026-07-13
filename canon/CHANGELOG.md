@@ -1,6 +1,6 @@
 # Canon changelog (public series)
 
-## Public Canon v1 (candidate)
+## Public Canon v1
 
 <!-- BEGIN GENERATED GENESIS COUNTS -->
 Registry snapshot: 161 claims; 0 T-LOCK, 81 T, 38 D, 12 C, 6 H, 22 O, 2 F; 28 live H/O.

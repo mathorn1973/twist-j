@@ -286,7 +286,11 @@ neutral formal records. This refresh creates no PR, merge, or activation.
 
 ### Phase B: activation
 
-14. Create `activate/canon-v1` from the merged public `main`.
+14. After the synthesis pull request merges, create
+    `activate/canon-v1-candidate` from that exact public `main`. This branch is
+    the release-form staging surface: it is reviewed byte for byte but creates
+    no authority by itself. A pre-merge preview cannot be the final staging
+    surface because the synthesis merge SHA does not yet exist.
 15. Update `STATUS.md` to the exact active form:
 
     ```text
@@ -302,9 +306,25 @@ neutral formal records. This refresh creates no PR, merge, or activation.
 
 16. Update `README.md` from GENESIS to ACTIVE, point readers to
     `canon/CORE.md`, `canon/CANON.md`, and `canon/FRONTIER.md`, and
-    finalize `CITATION.cff` with the Public Canon landing-page URL.
-17. Open and merge a separate reviewed activation pull request.
-18. Tag the activation merge commit `canon-v1`, record that tag target as
+    finalize `CITATION.cff` with version `1` and the Public Canon landing-page
+    URL. Public Canon versions are positive whole numbers: `1`, `2`, `3`, and
+    so on. Decimal Canon versions are forbidden; `cff-version: 1.2.0` is the
+    CFF schema identifier and is not a Canon version.
+17. The release-form staging branch changes exactly `STATUS.md`, `README.md`,
+    and `CITATION.cff` relative to the synthesis merge. Run:
+
+    ```text
+    python3 tools/check_activation.py --full \
+      --content-commit FULL_SYNTHESIS_MERGE_SHA
+    ```
+
+    Review this exact tree one to one with the intended release. Then open the
+    separate activation pull request from it. No content, record, workflow, or
+    other documentation change is allowed in that pull request.
+18. Merge the activation pull request without changing its tree, verify that
+    the public `main` tree is byte identical to the reviewed release-form
+    staging tree, and tag the activation merge commit `canon-v1`. Record that
+    tag target as
     `ACTIVATION_COMMIT` in the release manifest, create the release, and attach
     the tag-job `activation-manifest.json` and recorded `canon/SHA256SUMS`.
     The read-only release workflow downloads both assets, checks the complete

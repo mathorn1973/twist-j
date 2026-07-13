@@ -47,7 +47,7 @@ class GeneratedViewTests(unittest.TestCase):
                 encoding="utf-8",
             )
             (root / "canon" / "CHANGELOG.md").write_text(
-                "# Changelog\n\n## Public Canon v1 (candidate)\n\nNarrative.\n",
+                "# Changelog\n\n## Public Canon v1\n\nNarrative.\n",
                 encoding="utf-8",
             )
             views = generated_views(root)

@@ -1,7 +1,7 @@
 # TWIST-J core
 
-**Status:** Public Canon v1 candidate in GENESIS. Nothing here is
-canonical before the separate activation.
+**Release identity:** Public Canon v1. Normative authority and activation
+state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
 exact, deterministic integer system whose continuum, geometry,

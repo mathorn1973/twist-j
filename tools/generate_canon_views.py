@@ -185,7 +185,7 @@ def apply_views(root: Path, views: dict[str, str]) -> None:
             changelog, views["CHANGELOG_COUNTS.md"], count_begin, count_end
         )
     else:
-        anchor = "## Public Canon v1 (candidate)"
+        anchor = "## Public Canon v1"
         position = changelog.find(anchor)
         if position < 0:
             raise ValueError("CHANGELOG.md lacks the Public Canon v1 anchor")
