@@ -1,7 +1,6 @@
 # P-SPIN-LIFT-FORCED-1 result
 
-Status: SCIENTIFIC RESULT; SINGLE-ARCHITECTURE RECORD, TWO-ARCHITECTURE
-COMPUTATION GATE PENDING THE PUBLIC x86_64 CHECK
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS
 
 ## Scientific decision
 
@@ -55,12 +54,11 @@ or base relabelings the count would be a different question and, per the
 ruling D6, a different probe ID. No physical uniqueness or continuum
 statement is inferred from `N`.
 
-The enumeration facts carry label C from this single-architecture
-record; the two-architecture computation gate completes when the public
-pull-request check reproduces `EXPECTED.txt` byte for byte on
-GitHub `x86_64`. The registry status move for `SPIN-LIFT-FORCED`
-belongs to the future normative fold named in the pinned ruling,
-section 3.2.
+The formal `aarch64` record and public GitHub `x86_64` check reproduce
+`EXPECTED.txt` byte for byte and satisfy the two-architecture computation
+gate for this exact finite result. The registry status move for
+`SPIN-LIFT-FORCED` belongs to the future normative fold named in the pinned
+ruling, section 3.2.
 
 ## Formal evidence
 
@@ -75,6 +73,13 @@ aarch64 Python:      3.12.3
 aarch64 exit code:   0
 aarch64 stderr:      0 bytes
 
+x86_64 workflow run: 29287670182
+x86_64 workflow job: 86943953826
+x86_64 platform:     Ubuntu 24.04.4
+x86_64 Python:       3.12.13
+x86_64 exit code:    0
+x86_64 stderr:       0 bytes
+
 stdout SHA-256:      8005fc1de1890a11f5e1d736c64a6796696aab87ae2ce6f41d6ac08fa1c5fb80
 stdout bytes:        1125
 stdout lines:        32
@@ -84,3 +89,11 @@ stdout lines:        32
 local run record. Audit success and the negative scientific decision are
 separate: exit zero certifies exact execution and integrity, while
 `DECISION NEGATIVE` records the preregistered scientific branch.
+
+The public repository pull-request workflow independently reran the pinned
+verifier on GitHub `x86_64` with Python 3.12.13 and reproduced
+`EXPECTED.txt` byte for byte. Policy, unit, Canon, ledger, verifier, and
+minimal-reproduction stages all passed; publication-only activation stages
+were correctly skipped. The formal `aarch64` record and public `x86_64`
+reproduction therefore satisfy the two-architecture computation gate for
+this finite negative result.
