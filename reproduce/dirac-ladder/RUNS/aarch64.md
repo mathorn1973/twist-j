@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: c97ff3554b9e9a66ad450b669632732ef691c3b5
+run_base_commit: 9384a8be5308afcc8b04edaba9d534aab7597745
+reproduction: dirac-ladder
+verifier_sha256: 3240d355f1c6750e868d8bf5d96b029fb26ffa6c95e1e849dc84452a8820b181
+expected_sha256: 2f8d20368e04cb0310f37e6af639d019d8ba97b44b18f909a7e64153e8f588a1
+command: python3 reproduce/dirac-ladder/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: 2f8d20368e04cb0310f37e6af639d019d8ba97b44b18f909a7e64153e8f588a1
+stdout_bytes: 4519
+stdout_lines: 22
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS
