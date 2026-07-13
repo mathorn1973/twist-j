@@ -23,6 +23,7 @@ class GeneratedViewTests(unittest.TestCase):
             self.assertIn("T-CLAIM [T]: exact fixture theorem", views["CORE_CLAIMS.md"])
             self.assertIn("claims\t2", views["STATUS_COUNTS.tsv"])
             self.assertIn("live_H_O\t1", views["STATUS_COUNTS.tsv"])
+            self.assertIn("Registry snapshot: 2 claims", views["CHANGELOG_COUNTS.md"])
 
     def test_views_are_byte_deterministic(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

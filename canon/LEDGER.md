@@ -13,10 +13,10 @@ evidence:
 - `DEPENDENCIES.tsv` contains declared logical dependencies and explicit open
   boundaries.  It does not infer dependencies from thematic proximity.
 - `EVIDENCE.tsv` maps every registered claim to a SHA-256-pinned public
-  evidence bundle and records its architecture requirement. A
-  `two-architecture-pending` value is an explicit Genesis release debt; the
-  final activation gate must reject it rather than treating an old informal
-  run report as a formal record.
+  evidence bundle and records its architecture requirement. Evidence bundle
+  hashes deliberately exclude `RUNS/`: immutable candidate content is pinned
+  before formal run records arrive. The final activation gate checks whether
+  every declared architecture requirement is actually satisfied.
 - `HISTORY.tsv` starts at Public Canon v1 Genesis.  It does not fabricate a
   detailed pre-public transition history; the legacy cutover audit is only a
   reconciliation record.

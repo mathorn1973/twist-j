@@ -269,7 +269,7 @@ synthesis/canon-v1       one fast-forward integration lane
     AUTHORITY:      mathorn1973/twist-j main
     CUTOVER:        YYYY-MM-DD
     TAG:            canon-v1
-    CANON_COMMIT:   full 40-character synthesis merge SHA
+    CONTENT_COMMIT: full 40-character synthesis merge SHA
     CANON_SHA256:   full 64-character canon/CANON.md SHA-256
     CANON_BYTES:    exact canon/CANON.md byte count
     ```
@@ -278,7 +278,8 @@ synthesis/canon-v1       one fast-forward integration lane
     `canon/CORE.md`, `canon/CANON.md`, and `canon/FRONTIER.md`, and
     finalize `CITATION.cff` with the Public Canon landing-page URL.
 17. Open and merge a separate reviewed activation pull request.
-18. Tag the activation merge commit `canon-v1`, create the release, and attach
+18. Tag the activation merge commit `canon-v1`, record that tag target as
+    `ACTIVATION_COMMIT` in the release manifest, create the release, and attach
     the recorded `canon/SHA256SUMS`.
 19. Repoint `twistj.com/canon/` from the legacy line to Public Canon v1,
     then verify the tag, release, public readback, hashes, registry, and all

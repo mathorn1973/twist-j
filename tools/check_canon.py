@@ -259,15 +259,15 @@ if state == "ACTIVE":
         fail("STATUS.md CANON_SHA256 differs from canon/CANON.md")
     if fields.get("CANON_BYTES") != str(canon_bytes):
         fail("STATUS.md CANON_BYTES differs from canon/CANON.md")
-    commit = fields.get("CANON_COMMIT", "")
+    commit = fields.get("CONTENT_COMMIT", "")
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
-        fail("STATUS.md CANON_COMMIT must be a full lowercase SHA")
+        fail("STATUS.md CONTENT_COMMIT must be a full lowercase SHA")
     if (ROOT / ".git").exists():
         result = subprocess.run(
             ["git", "merge-base", "--is-ancestor", commit, "HEAD"], cwd=ROOT
         )
         if result.returncode:
-            fail("STATUS.md CANON_COMMIT is not an ancestor of HEAD")
+            fail("STATUS.md CONTENT_COMMIT is not an ancestor of HEAD")
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     if "State: GENESIS" in readme:
         fail("README.md still declares GENESIS while STATUS is ACTIVE")

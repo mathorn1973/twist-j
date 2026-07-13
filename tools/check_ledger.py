@@ -52,8 +52,7 @@ RELATIONS = {"REQUIRES", "BOUNDED_BY"}
 EVIDENCE_KINDS = {"INLINE_CANON", "REPRODUCTION", "EXTERNAL_SOURCE"}
 HASH_MODES = {"file-sha256", "bundle-manifest-sha256-v1", "external-manifest"}
 ARCHITECTURE_REQUIREMENTS = {
-    "none", "one-architecture", "two-architecture",
-    "two-architecture-pending", "recorded-audit",
+    "none", "one-architecture", "two-architecture", "recorded-audit",
 }
 EVENT_TYPES = {"DECLARE", "STATUS_CHANGE", "SCOPE_CHANGE", "EVIDENCE_CHANGE", "RETIRE"}
 ID = re.compile(r"^[A-Z][A-Z0-9-]*$")
@@ -77,7 +76,12 @@ def bundle_sha256(path: Path, root: Path) -> str:
         return sha256_bytes(path.read_bytes())
     lines: list[str] = []
     for item in sorted(candidate for candidate in path.rglob("*") if candidate.is_file()):
-        if "__pycache__" in item.parts or item.suffix == ".pyc":
+        relative_parts = item.relative_to(path).parts
+        if (
+            "__pycache__" in item.parts
+            or item.suffix == ".pyc"
+            or "RUNS" in relative_parts
+        ):
             continue
         relative = item.relative_to(root).as_posix()
         lines.append(f"{sha256_bytes(item.read_bytes())}  {relative}\n")
@@ -99,13 +103,6 @@ def require_text(row: dict[str, str], field: str, context: str) -> str:
     if not value:
         fail(f"{context} has empty {field}")
     return value
-
-
-def records_for(location: Path) -> set[str]:
-    runs = location / "RUNS"
-    if not runs.is_dir():
-        return set()
-    return {path.stem for path in runs.glob("*.md") if path.is_file()}
 
 
 @dataclass(frozen=True)
@@ -317,14 +314,7 @@ def validate(root: Path) -> Snapshot:
                 fail(f"{evidence_id} reproduction is missing")
             if not SHA256.fullmatch(digest) or digest != bundle_sha256(artifact, root):
                 fail(f"{evidence_id} reproduction hash differs")
-            architectures = records_for(artifact)
-            if architecture == "two-architecture" and not {"aarch64", "x86_64"}.issubset(architectures):
-                fail(f"{evidence_id} lacks the two-architecture records")
-            if architecture == "two-architecture-pending":
-                for required in ("verify.py", "EXPECTED.txt", "README.md"):
-                    if not (artifact / required).is_file():
-                        fail(f"{evidence_id} lacks {required}")
-            if architecture == "one-architecture":
+            if architecture in {"one-architecture", "two-architecture"}:
                 for required in ("verify.py", "EXPECTED.txt", "README.md"):
                     if not (artifact / required).is_file():
                         fail(f"{evidence_id} lacks {required}")

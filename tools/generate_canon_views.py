@@ -95,9 +95,17 @@ def render_counts(root: Path, rows: list[dict[str, str]]) -> str:
         "hash_mode", "architecture_requirement",
     ))
     architecture: dict[str, int] = {}
+    complete_two_arch = 0
+    pending_two_arch = 0
     for row in evidence_rows:
         key = row["architecture_requirement"]
         architecture[key] = architecture.get(key, 0) + 1
+        if key == "two-architecture":
+            runs = root / row["location"] / "RUNS"
+            if (runs / "aarch64.md").is_file() and (runs / "x86_64.md").is_file():
+                complete_two_arch += 1
+            else:
+                pending_two_arch += 1
     lines = ["metric\tvalue", f"claims\t{len(rows)}"]
     lines.extend(f"status_{status}\t{statuses[status]}" for status in statuses)
     lines.extend((
@@ -107,8 +115,30 @@ def render_counts(root: Path, rows: list[dict[str, str]]) -> str:
     lines.extend(
         f"evidence_{key}\t{architecture[key]}" for key in sorted(architecture)
     )
+    lines.extend((
+        f"two_arch_claims_complete\t{complete_two_arch}",
+        f"two_arch_claims_pending\t{pending_two_arch}",
+    ))
     lines.append("")
     return "\n".join(lines)
+
+
+def render_changelog_counts(root: Path, rows: list[dict[str, str]]) -> str:
+    statuses = {status: 0 for status in ("T-LOCK", "T", "D", "C", "H", "O", "F")}
+    for row in rows:
+        statuses[row["status"]] += 1
+    reproductions = sum(
+        1 for path in (root / "reproduce").iterdir() if path.is_dir()
+    )
+    return "\n".join((
+        "<!-- BEGIN GENERATED GENESIS COUNTS -->",
+        f"Registry snapshot: {len(rows)} claims; "
+        + ", ".join(f"{statuses[status]} {status}" for status in statuses)
+        + f"; {statuses['H'] + statuses['O']} live H/O.",
+        f"Reproduction witnesses: {reproductions}.",
+        "<!-- END GENERATED GENESIS COUNTS -->",
+        "",
+    ))
 
 
 def generated_views(root: Path) -> dict[str, str]:
@@ -122,6 +152,7 @@ def generated_views(root: Path) -> dict[str, str]:
         "FRONTIER.md": render_frontier(rows),
         "CORE_CLAIMS.md": render_core_claims(registry, selection),
         "STATUS_COUNTS.tsv": render_counts(root, rows),
+        "CHANGELOG_COUNTS.md": render_changelog_counts(root, rows),
     }
 
 

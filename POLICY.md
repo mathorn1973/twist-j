@@ -201,8 +201,11 @@ a separate sealed public fold applies it to `canon/CANON.md`.
   Public Canon v1 landing page. After it merges, a separate
   `activate/canon-v1` pull request sets `STATE: ACTIVE`, names the immutable
   Canon content commit, exact hash and byte count, and updates the README.
-- The `canon-v1` tag and release are created from the merged activation
-  commit. Authority moves only after public readback and all required checks.
+- The activation request records the immutable synthesis merge as
+  `CONTENT_COMMIT`. The `canon-v1` tag and release are created from the merged
+  activation commit; that tag target is recorded as `ACTIVATION_COMMIT` in the
+  release manifest. Authority moves only after public readback and all
+  required checks.
 - Probe commits are never rebased, squashed, amended, or force-pushed after the
   preregistration pin. Merge commits preserve provenance.
 - Check for an existing branch, issue, probe, and lock before claiming work.

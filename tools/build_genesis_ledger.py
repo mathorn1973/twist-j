@@ -162,7 +162,12 @@ def bundle_sha256(path: Path, root: Path) -> str:
         return sha256_bytes(path.read_bytes())
     lines: list[str] = []
     for item in sorted(candidate for candidate in path.rglob("*") if candidate.is_file()):
-        if "__pycache__" in item.parts or item.suffix == ".pyc":
+        relative_parts = item.relative_to(path).parts
+        if (
+            "__pycache__" in item.parts
+            or item.suffix == ".pyc"
+            or "RUNS" in relative_parts
+        ):
             continue
         relative = item.relative_to(root).as_posix()
         lines.append(f"{sha256_bytes(item.read_bytes())}  {relative}\n")
@@ -268,15 +273,7 @@ def main() -> None:
             digest = bundle_sha256(artifact, root)
             hash_mode = "bundle-manifest-sha256-v1"
             if row["status"] in {"T", "T-LOCK"}:
-                runs = artifact / "RUNS"
-                recorded = (
-                    (runs / "aarch64.md").is_file()
-                    and (runs / "x86_64.md").is_file()
-                )
-                architecture = (
-                    "two-architecture" if recorded
-                    else "two-architecture-pending"
-                )
+                architecture = "two-architecture"
             elif row["status"] == "C":
                 architecture = "one-architecture"
             else:
