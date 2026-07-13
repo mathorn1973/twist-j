@@ -4,10 +4,11 @@
 # and Z[zeta_8], Gaussian integers, and F_25 as pairs over F_5.
 # Standard library only, no floats anywhere.
 #
-# The arc: the internalized counter (the drive bit is the parity of a
-# 2-adic odometer register, with the exact recursions t_2n = t_n and
-# t_2n+1 = 1 - t_n and the carry parity law, so the dynamics is one
-# autonomous closed map); the self similar time quantum tower on
+# The arc: the autonomous counter coordinate on the nonnegative
+# forward orbit of the 2-adic odometer (the drive bit is the finite
+# binary digit-sum parity, with exact recursions theta_2n = theta_n and
+# theta_(2n+1) = 1 - theta_n and the carry parity law); the self similar
+# time quantum tower on
 # Z/5^k, T^(5^k) = i_5 I with i_5^4 = 1 and period exactly 4 x 5^k,
 # computed for k = 1 to 4; the degree split by prime (sqrt5 at
 # zeta_5, sqrt2 and i at zeta_8, neither in the unique quadratic
@@ -22,8 +23,8 @@
 # DEGREES-BY-PRIME, Z2-PLACES-SPLIT, I-BILOCATED, SILVER-SIBLING.
 # READING-SPLIT is carried inline in the Canon (each leg separately
 # registered); CURVATURE-TRACE-VALUE stays a live open row and
-# nothing here claims it. The all k time quantum statement stands at
-# the sealed internal scope; this file computes k = 1 to 4 only.
+# nothing here claims it. This file computes the time quantum statement
+# for k = 1 to 4 only and makes no all-k claim.
 
 import sys
 from fractions import Fraction as Fr
@@ -130,14 +131,16 @@ def main():
         reg += 1
     ok &= ok_orbit
     check("ODOMETER",
-          "the counter is internalized: the drive bit is the parity of"
-          " a 2-adic odometer register, with the exact recursions"
-          " t_2n = t_n and t_2n+1 = 1 - t_n and the carry parity law"
+          "the autonomous counter is the nonnegative forward orbit of"
+          " the 2-adic odometer: the drive bit theta_n is the finite"
+          " binary digit-sum parity, with the exact recursions"
+          " theta_2n = theta_n and theta_(2n+1) = 1 - theta_n and the"
+          " carry parity law"
           " (the bit flips exactly when the carry chain has even"
           " length), verified exhaustively below 2^13; the drive read"
-          " from the register alone reproduces the external list on"
-          " the full window: one autonomous closed map, no external"
-          " parameter", ok)
+          " from the counter coordinate alone reproduces the reference"
+          " word on the full window; no parity function on all of Z_2"
+          " is asserted", ok)
 
     # ------------------------------ 02 the time quantum tower
     ok = True
@@ -162,9 +165,8 @@ def main():
           "the self similar time quantum, computed for k = 1 to 4: on"
           " Z/5^k the step operator satisfies T^(5^k) = i_5 I with the"
           " scalar of exact multiplicative order 4 and i_5 = 2 mod 5,"
-          " and the period of T is exactly 4 x 5^k (the order found by"
-          " direct search); the all k statement stands at the sealed"
-          " scope", ok)
+          " and the period of M_J is exactly 4 x 5^k (the order found"
+          " by direct search); no all-k theorem is claimed", ok)
 
     # ------------------------------ 03 the degrees split by prime
     # sqrt5 at zeta_5: (2 phi - 1)^2 = 5 with 2 phi - 1 = z - z^2 - z^3 + z^4
@@ -320,8 +322,8 @@ def main():
           " place", ok)
 
     print("TWIST-J foundations and places witness (exact arithmetic)")
-    print("the counter is a 2-adic odometer inside the state; the time"
-          " quantum tower T^(5^k) = i_5 I holds for k = 1 to 4")
+    print("Omega = N_0 x F_5^6; N_0 is the forward odometer orbit; the"
+          " time quantum tower M_J^(5^k) = i_5 I holds for k = 1 to 4")
     print("sqrt5 at zeta_5, sqrt2 and i at zeta_8; one involution"
           " against a Klein four; 5 = (2 + i)(2 - i); tau^2 = J = 2 in"
           " F_25")

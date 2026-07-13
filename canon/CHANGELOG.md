@@ -3,14 +3,14 @@
 ## Public Canon v1 (candidate)
 
 Genesis entry. Initial public synthesis: the thematic Canon in
-nineteen sections; 163 registered claims (82 theorem grade, of which 77
-carry minimal reproductions and 5 carry inline derivations; 32 derived
+nineteen sections; 163 registered claims (81 theorem grade, of which 77
+carry minimal reproductions and 4 carry inline derivations; 33 derived
 grade, the dictionary layers of the Dirac and color ladders, the SI
 bridge equation layer, the mass ladder forms, the Weinberg form, the
 Maxwell closure reading, the alpha form, the cosmology register
 readings, the gravitational wave and coupling arc readings, the
 macro space reading of the coupled kernel, and the place dictionary
-readings (the internalized counter, the bilocation of i, the silver
+readings (the autonomous counter, the partial reading split, the bilocation of i, the silver
 sibling), the Coulomb and polar projections, and the face, measure,
 and kernel-cell dictionaries, the center split selection, and the
 electron g tree and electron sign readings, together with the three
@@ -39,4 +39,10 @@ foundations-places, force-born-dictionary, photon-electron,
 observer-boost, pentit-p5-closure); the core,
 the frontier, the registry, and the citation record. The public series
 starts here; development before this document is outside the normative
-series and is referenced only by the cutover audit.
+series and is referenced only by the cutover audit. Genesis review
+made the definition boundary explicit: J is the algebraic axiom, while
+the finite kernel, selector, autonomous state, and partial decoder
+interface are declared architecture rather than a claimed reduction
+from J. The complete state is Omega = N_0 x F_5^6, the Log is derived,
+and the decoder order is matter, geometry, clock. The same review
+corrected the integer trace identity and froze the core notation.

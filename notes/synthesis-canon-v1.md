@@ -10,6 +10,30 @@ rule; D3 neutral stable claim ids; D4 single Apache-2.0 license; D5
 minimal initial reproductions: approved by the author 2026-07-12.
 D6 cutover date: pending; set when Phase A is reviewable.
 
+## Genesis review 1 remediation
+
+The first external Genesis review vetoed activation at candidate
+ac1ff2e. The veto is accepted. No new physics enters remediation.
+
+G1A formal core chooses the explicit definition boundary instead of
+inventing a KERNEL-REDUCTION theorem. J remains the single algebraic
+axiom; Omega = N_0 x F_5^6, U, the five kernel generators, the
+selector, and the partial decoder interface are declared architecture
+and are not claimed uniquely derived from J or M_J. N_0 is only the
+forward orbit of zero under the 2-adic odometer; no Thue-Morse parity
+on all of Z_2 is asserted. The checkpoint is the F_5^6 projection and
+Log streams are derived records. Decoder order is matter, geometry,
+clock, with no feedback into U; totality and completeness remain live.
+READING-SPLIT is lowered from T to D. The integer trace identity and
+hosting notation are corrected, and the core namespace is frozen.
+
+The foundations-places witness is reworded to the exact forward-orbit
+scope and makes no all-k time-quantum claim. Its previous architecture
+records are removed before the new immutable candidate; fresh x86_64
+and aarch64 records are required. G1B remains: define the formal pi
+grading involution and replace the false phrase "complex conjugation
+pi -> -pi" in the mass-ladder witness and normative bundle.
+
 Standing rules of this synthesis: public statuses are conservative, at
 most T in the genesis bundle, and internal sources keep their grades
 in the cutover audit; no unproven independence claims (pi and ln phi
@@ -236,8 +260,8 @@ candidate commit.
   against the complete Klein four at zeta_8; the Gaussian split
   5 = (2 + i)(2 - i); the bilocation of i; the silver sibling with
   the full F_25 order census). Ten registry rows:
-  ODOMETER-INTERNALIZED D, READING-SPLIT T (inline, each leg
-  separately witnessed), TIME-QUANTUM-TOWER C (lowered from the
+  ODOMETER-INTERNALIZED D, READING-SPLIT D (inline partial decoder
+  dictionary, each leg separately witnessed), TIME-QUANTUM-TOWER C (lowered from the
   sealed T-LOCK to the computed range, k = 1 to 4),
   CURVATURE-TRACE-VALUE O (the space commutator sentence rewritten to
   the sealed scope with the trace value as a live obligation),

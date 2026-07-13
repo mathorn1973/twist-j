@@ -6,23 +6,25 @@ the public Canon only at the declared activation.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
-geometry, probability, and fields are readings of it. One axiom, one
-operator, one universe. Zero free dimensionless parameters; one SI
-calibration anchor, the electron mass m_e.
+geometry, probability, and fields are readings of it. Its single
+algebraic axiom is J. Public Canon v1 also declares the discrete
+architecture used to read that axiom. Those architectural definitions
+are inventoried below and are not claimed to be uniquely derived from
+J. No fitted dimensionless parameter is introduced in the stated
+forms; the single SI calibration anchor is the electron mass m_e.
 
-**Axiom (A0).** Reality is the closed integer J-Cayley plenum. The
-whole physical object is the canonical integer Cayley system generated
-by J = 1 + zeta_5^2, with no external boundary, no external clock, and
-only internal readout. J is the generator of the plenum and the seed
-of the two projections. Under A0, E_total = 0 is a theorem of the
-closed whole, not a second axiom; that theorem stands at the sealed
-internal basis with its pinned verifier, and the internalized counter
-that removes the external clock is registered below as
-ODOMETER-INTERNALIZED.
+**Axiom (A0).** Reality is the closed integer J-Cayley plenum. Its
+algebraic generator is J = 1 + zeta_5^2. The public model has no
+external boundary and no external clock: after the architecture below
+is declared, one state determines its successor by one map U. J is the
+seed of the two algebraic projections. Public Canon v1 does not claim
+that the checkpoint space, the five kernel generators, the selector,
+or the decoder interface are uniquely forced by J or M_J.
 
-CZ: A0. Skutecnost je uzavrene celociselne J-plenum. Cely fyzikalni
-objekt je kanonicky Cayleyuv system dany jednotkou J = 1 + zeta_5^2,
-bez vnejsi hranice, bez vnejsiho casu a jen s vnitrnim ctenim.
+CZ: A0. Skutecnost je uzavrene celociselne J-plenum. Jeho algebraickym
+generatorem je J = 1 + zeta_5^2; diskretni architektura je ve verejnem
+Canonu v1 deklarovana zvlast a neni vydavana za jednoznacny dusledek J.
+System nema vnejsi hranici ani vnejsi hodiny.
 
 **Reading.** Time is a counter. Space is a commutator. J is the verb;
 phi and pi are projections of J, not primitives. Two forces are two
@@ -55,18 +57,29 @@ opens.
 
 **Notation.** j = zeta_5, j^5 = 1. J = 1 + j^2. phi = (1 + sqrt5)/2 =
 1/|J|. pi = -5 i Li_1(J), with Li_1(J) = i pi/5 exactly. tau = sqrt(J)
-in F_25; m = zeta_8 = sqrt(i) at prime 2. p = 5 and d = 3 throughout.
+in F_25; m_8 = zeta_8 = sqrt(i) at prime 2. The Dirac mass variable is
+m_D. The clock counter is n, its Thue-Morse bit is theta_n, and the
+sixth finite-kernel coordinate is r. T_pl denotes the plenum point;
+M_J denotes multiplication by J. The finite phase character is z_6 =
+Tr_6 and the piston character is Tr_4. The ramified chord is s_J and
+the kernel transport offset is s_c. p = 5 and d = 3 throughout.
 K_chi5 = 1/(864 pi) is the conformal mode prefactor.
 
-**The five stones.**
+**Primitive and architecture inventory.**
 
 ```
-1. J = 1 + zeta_5^2                       the axiom
-2. L = Re Li_2(J) = pi^2 / (2p)^2         the L-value, the action
-3. The Klein-100 typology                 the foam structure
-4. D = D_clock o D_geom o D_matter        the decoder
-5. The plenum T = s + i phi = 2i(1 - J)   structured space itself
+algebraic axiom        J = 1 + zeta_5^2
+derived algebra        j, phi, pi, M_J, L, and T_pl
+declared architecture  Omega, U, F_5^6, a,b,c,d,e, and the selector
+decoder interface      D_matter, D_geom, D_clock (partial at v1)
+calibration anchor      m_e only
 ```
+
+This is a definition boundary, not a hidden reduction theorem. Every
+downstream statement is conditional on the declared architecture.
+Restoring a stronger compression slogan requires a public theorem
+deriving the architecture from J; Public Canon v1 contains no such
+theorem.
 
 ---
 
@@ -108,13 +121,14 @@ lattice Z^4 in the basis {1, j, j^2, j^3} is the canonical step
 (a, b, c, d) -> (a - c + d, b - c, a, b - c + d),  det = N(J) = 1, trace = 3
 ```
 
-The plenum point (PLENUM-POINT [T]): T = s + i phi = 2i(1 - J) with
-s^2 = 1 + J Jbar = 3 - phi = sqrt5/phi. Derivation: J Jbar = 2 - phi
-gives s^2 = 3 - phi, and (3 - phi) phi = 2 phi - 1 = sqrt5. |T| = 2;
-arg T = 3 pi/10; zeta_5 T^2 + 4 = 0, since T^2 = -4 j^4; T^10 = -2^10;
-T/2 = zeta_20^3, and the CRT split T/2 = zeta_4^-1 zeta_5^2 says prime
+The plenum point (PLENUM-POINT [T]): T_pl = s_J + i phi = 2i(1 - J)
+with s_J^2 = 1 + J Jbar = 3 - phi = sqrt5/phi. Derivation: J Jbar =
+2 - phi gives s_J^2 = 3 - phi, and (3 - phi) phi = 2 phi - 1 =
+sqrt5. |T_pl| = 2; arg T_pl = 3 pi/10; zeta_5 T_pl^2 + 4 = 0,
+since T_pl^2 = -4 j^4; T_pl^10 = -2^10; T_pl/2 = zeta_20^3,
+and the CRT split T_pl/2 = zeta_4^-1 zeta_5^2 says prime
 5 writes, prime 2 reads, and they meet at the archimedean place in the
-plenum point itself. s = |1 - zeta_5| is the ramified chord:
+plenum point itself. s_J = |1 - zeta_5| is the ramified chord:
 N(1 - zeta_5) = 5 (J-RAMIFIED-CHORD [T], reproduce/kernel), while the
 modulus chord is a unit chord: gravity reads the unit chord, space
 reads the ramified chord [T]. At the magic prime the axiom has a
@@ -122,23 +136,32 @@ square root: sqrt(J) = tau in F_25 (section 11).
 
 ## 2. Time, space, and the decoder
 
-The dynamics is the verb: the running whole has exactly two memory
-primitives, the Log stream (one bit per tick) and the checkpoint
-psi_n in F_5^6 (15625 states):
+The autonomous state is not the finite checkpoint alone. It is
 
 ```
-psi_{n+1} = Pi_{t_n}(M_J psi_n),   t_n = popcount(n) mod 2  (Thue-Morse),
-Pi_1 = Id (Flow),  Pi_0 = Snap (the sole source of irreversibility);
-selector i = (z_n + 2 t_n) mod 5, the offset 2 the exponent in J = 1 + j^2;
-about 25 integer operations per tick; zero multiplications, zero floats.
+Omega = N_0 x F_5^6,                    omega = (n, psi),
+theta_n = s_2(n) mod 2,                 z_6(psi) = sum_k psi_k mod 5,
+sigma(omega) = z_6(psi) + 2 theta_n mod 5,
+U(n, psi) = (n + 1, g_{sigma(omega)}(psi)),
+(g_0, g_1, g_2, g_3, g_4) = (a, b, c, d, e).
 ```
 
-Under A0 the counter is internalized (ODOMETER-INTERNALIZED [D],
-reproduce/foundations-places): the tick is a 2-adic odometer register
-inside the state, the drive bit is the register parity with the exact
-recursions t_2n = t_n and t_2n+1 = 1 - t_n and the carry parity law,
-and the dynamics is one autonomous closed map with no external
-parameter.
+Here s_2(n) is the finite binary digit sum. The clock coordinate N_0
+is the distinguished forward orbit 0, 1, 2, ... of the 2-adic
+odometer, embedded in Z_2. No Thue-Morse parity function on all of Z_2
+is asserted. The finite checkpoint projection is
+pr_checkpoint(n, psi) = psi; psi by itself is not claimed to be an
+autonomous state. The driver word and every registered event log are
+derived orbit records, not additional state variables. For a binary
+observable lambda supplied by a registered decoder claim, its Log is
+(lambda(U^k omega_0))_{k >= 0}.
+
+The counter closure (ODOMETER-INTERNALIZED [D],
+reproduce/foundations-places) is exact on this forward orbit:
+theta_{2n} = theta_n, theta_{2n+1} = 1 - theta_n, and the local carry
+law updates theta without consulting an external list. Therefore U
+has no external step parameter. This is an autonomous skew product by
+definition; no extension of theta to every 2-adic integer is used.
 
 Space is a commutator: the commutator of translations is the discrete
 curvature with golden spectrum in Q(sqrt5); the sealed corpus carries
@@ -147,41 +170,63 @@ the statement with spectrum {0^27, +- i phi^n / d} and denominator
 the trace value -21/8 of the squared curvature
 (CURVATURE-TRACE-VALUE [O]).
 
-The decoder D = D_clock o D_geom o D_matter has structure 1 + 3 + 0
-and is acyclic: no feedback from output to state; time emerges as the
-terminal accumulator. The gyron density is rho = 1/6 (GYRON-DENSITY
-[T], registered in section 13). The reading split (READING-SPLIT [T],
-inline): the decoder reads the kernel by linear projection, the
-driver by binary Thue-Morse cut, the gauge housing by quadratic
-registration; three sectors, one rule, and each leg is separately
-registered: the linear readout is CODEC-TR4, the binary cut drives
-the census, the quadratic registration is the Born square. The self
-similar time quantum (TIME-QUANTUM-TOWER [C],
-reproduce/foundations-places): on the ring Z/5^k the step operator
-satisfies T^(5^k) = i_5 I with i_5^4 = 1 and period exactly 4 x 5^k,
-computed for k = 1 to 4; the all k statement stands at the sealed
-scope; explicit non claim: no generic exponentiation speedup.
+The decoder is a typed partial interface, not a completed total map.
+Let K be the set of forward U-orbits. Let MatterData, GeometryData,
+and ObservableHistory denote records whose fields exist only where a
+registered claim defines them. Then
+
+```
+D_matter : dom(D_matter) subset K -> MatterData
+D_geom   : dom(D_geom) subset K x MatterData -> GeometryData
+D_clock  : dom(D_clock) subset K x MatterData x GeometryData
+           -> ObservableHistory
+
+D(kappa) = D_clock(kappa, m, g),
+m = D_matter(kappa),  g = D_geom(kappa, m).
+```
+
+Functional order is matter, then geometry, then clock. D_matter reads
+only the orbit and the registered quadratic/Born and matter maps;
+D_geom reads the orbit plus MatterData and the registered linear,
+boundary, wedge, and chain maps; D_clock reads the counter projection
+plus the accumulated records and is terminal. None of these outputs
+feeds U, so the declared dependency graph is acyclic. Totality,
+uniqueness, and completeness of D are not claimed: they remain in
+QUADRATIC-ENVELOPE-DECODER [H] and QUADRATIC-DECODER-DATA [O].
+
+The reading split (READING-SPLIT [D], inline) is therefore a public
+dictionary at the registered legs, not a completeness theorem: the
+linear readout is CODEC-TR4, the binary cut drives the census, and the
+quadratic registration is the Born square. The gyron density is rho =
+1/6 (GYRON-DENSITY [T], registered in section 13). The self similar
+time quantum (TIME-QUANTUM-TOWER [C], reproduce/foundations-places):
+on Z/5^k, M_J^(5^k) = i_5 I with i_5^4 = 1 and period exactly
+4 x 5^k, computed for k = 1 to 4. No all-k theorem and no generic
+exponentiation speedup are claimed.
 
 ## 3. The kernel and the census
 
-F_5^6, 15625 states; the Klein-100 typology; 313 attractors. The
-kernel is the concrete Cayley realization of the verb: the state space
-is Z_5^6 with coordinates (p1, p4, p1p, p4p, q, t) and five involutive
+F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
+attractors. The finite kernel is the declared checkpoint architecture
+paired with the algebraic verb. No derivation or uniqueness of this
+architecture from J or M_J is claimed. Its checkpoint space is Z_5^6
+with coordinates (p1, p4, p1p, p4p, q, r) and five involutive
 generators, all arithmetic mod 5:
 
 ```
-a  swap             (p1, p4, p1p, p4p, q, t) -> (p4, p1, p4p, p1p, q, t)
-b  time inversion   x -> (-p1p, -p4p, -p1, -p4, -q, -t)
-c  transport        piston -> b4(piston) + s + t u;  q -> 1 - q;  t -> -t
+a  swap             (p1, p4, p1p, p4p, q, r) -> (p4, p1, p4p, p1p, q, r)
+b  time inversion   x -> (-p1p, -p4p, -p1, -p4, -q, -r)
+c  transport        piston -> b4(piston) + s_c + r u_c; q -> 1 - q; r -> -r
 d  mirror           x -> c_d - x
 e  shifted mirror   x -> (c_d + v_e) - x
 
-s = (2, 1, 2, 1),  u = (0, 1, 0, -1),  c_d = (2, 1, 3, 4, 1, 1),
+s_c = (2, 1, 2, 1), u_c = (0, 1, 0, -1), c_d = (2, 1, 3, 4, 1, 1),
 v_e = (0, 0, 0, 0, 1, 0);  b4 is the piston part of b.
 Relations: a^2 = b^2 = c^2 = d^2 = e^2 = id and (bc)^5 = id.
-Drive: t_n = popcount(n) mod 2 (Thue-Morse); phase z5(x) = sum of the
-six coordinates mod 5; selection law i_n = (z5(psi_n) + 2 t_n) mod 5,
-psi_{n+1} = g_{i_n}(psi_n) with (g_0, ..., g_4) = (a, b, c, d, e).
+Drive: theta_n = s_2(n) mod 2 (Thue-Morse); phase z_6(x) = Tr_6(x),
+the sum of the six coordinates mod 5; selection law
+i_n = z_6(psi_n) + 2 theta_n mod 5, with the autonomous update U
+defined in section 2.
 ```
 
 The census (CENSUS-313 [C], reproduce/census): the full enumeration of
@@ -189,7 +234,7 @@ all 15625 seeds, warmup 400 ticks and window 300, yields exactly 313
 attractors: 312 of size 20 with basins of 50, and one singlet of size
 10 with a basin of 25; the attractor support has 6250 states, the
 basins cover all of Z_5^6, and 313 = 13^2 + 12^2. Every recurrent
-state lies on the z5 sheet {1, 4}, so the selection law fires only b,
+state lies on the z_6 sheet {1, 4}, so the selection law fires only b,
 d, and e on the attractor: the recurrent algebra is the mirror algebra
 (CENSUS-Z5-SHEET [C], reproduce/census). The piston pairing Phi =
 (b4 d4 on pistons, identity on the fiber) is an involution that
@@ -198,23 +243,31 @@ fixed points, the fixed points being 24 attractors of size 20 and the
 singlet, so the classes modulo the pairing number 169 = 13^2
 (CENSUS-PAIRING [C], reproduce/census). The hosting formula holds on
 all 313 (CENSUS-HOSTING [C], reproduce/census): the return group
-H1 = <d, b e b> has order 10, d o (b e b) is the line translation
-T0 = (0, 0, 0, 0, 3, 2), and every attractor is the exact two coset
-set A = H1 x' union b H1 x'. The boundary hyperplane: with s the
-piston sum Tr_4 and M the z5 sheet, the boundary class
-S = M cap {s = 0} has size 1250 exactly, the charged complement 5000
+`H_1 = <d, b e b>` has order 10, d o (b e b) is the line translation
+T_0 = (0, 0, 0, 0, 3, 2), and for every attractor A there is a chosen
+representative x_A in A such that the exact two-coset formula is
+`A = H_1 x_A union b H_1 x_A`. The boundary hyperplane: with Tr_4 the
+piston sum and M the z_6 sheet, the boundary class
+S_hyp = M cap {Tr_4 = 0} has size 1250 exactly, the charged complement 5000
 in two sheets of 2500, the boundary fibers 625 + 625, by full
 enumeration of all 15625 states (HYPERPLANE-BOUNDARY-CLASS [T],
-reproduce/hyperplane-codec); the census window realizes S as the
+reproduce/hyperplane-codec); the census window realizes S_hyp as the
 union of the 63 = (p^3 + 1)/2 boundary attractors, 62 of size 20 with
 the singlet, and the charged sector as the remaining 250
 (HYPERPLANE-BOUNDARY-REALIZATION [C], reproduce/hyperplane-codec).
 The unique M_J readout is the trace character: the step matrix is
 multiplication by J column by column, its characteristic polynomial
-is Phi_5(x - 1) with det(2I - M_J) = 5 = p, the piston sum doubles,
-Tr_4(M_J x) = 2 Tr_4(x), and the scalar multiples of Tr_4 are the
-only covectors reading any multiplier at all (CODEC-TR4 [T],
-reproduce/hyperplane-codec). The internal seal carries a further
+is Phi_5(x - 1) with det(2I - M_J) = 5 = p. For
+x = (x_a, x_b, x_c, x_d) in the power basis over Z, the exact
+identity is
+
+```
+Tr_4(M_J x) = 2 Tr_4(x) - 5 x_c.
+```
+
+Therefore Tr_4(M_J x) = 2 Tr_4(x) in F_5, and the scalar multiples of
+Tr_4 are the only covectors reading any multiplier at all
+(CODEC-TR4 [T], reproduce/hyperplane-codec). The internal seal carries a further
 clause, rate 4/5 exact, whose precise coding scope is not yet
 reconstructed publicly; the clause is held open and unclaimed
 (CODEC-RATE-SCOPE [O]).
@@ -255,7 +308,7 @@ v_5 WRITES: home Q(zeta_5), real floor Q(sqrt5), state F_5^6; geometry,
     gravity, the native pentit substrate, the native magic C_5 (order 5,
     prime 5).
 v_2 READS the quadratic mode: home Q(zeta_8), real floor Q(sqrt2), with i
-    and the foreign qubit magic m = zeta_8 (order 8, prime 2); Clifford,
+    and the foreign qubit magic m_8 = zeta_8 (order 8, prime 2); Clifford,
     Born, the outside read.
 They meet only over Q. The layer boundary IS the field boundary.
 ```
@@ -264,7 +317,7 @@ The reading is not globally prime 2: the degrees split by prime,
 linear to 5, quadratic to 2, cubic to 5, foreign magic to 2
 (DEGREES-BY-PRIME [T], reproduce/foundations-places): sqrt5 lives at
 zeta_5 by (2 phi - 1)^2 = 5, sqrt2 and i live at zeta_8 by
-(m + m^-1)^2 = 2 and m^2 = i, and neither sqrt2 nor i lies in
+(m_8 + m_8^-1)^2 = 2 and m_8^2 = i, and neither sqrt2 nor i lies in
 Q(sqrt5), the unique quadratic subfield of Q(zeta_5). The Z2
 symmetries split into two families (Z2-PLACES-SPLIT [T],
 reproduce/foundations-places): cyclotomic Galois involutions at
@@ -285,7 +338,7 @@ step collapses to the doubling J = 2, tau = sqrt(J) has tau^4 = -1
 with ord(tau) = 8, and F_25* is cyclic of order 24; norm, orders,
 cyclicity, and census are finite computations. The silver sibling
 (SILVER-SIBLING [D], reproduce/foundations-places) is the dictionary
-reading resting on those facts: m = zeta_8 = sqrt(i) at prime 2 with
+reading resting on those facts: m_8 = zeta_8 = sqrt(i) at prime 2 with
 the silver unit 1 + sqrt2 of norm -1 mirrors tau = sqrt(J) at prime 5;
 sqrt(i) is the square root of the axiom read at the foreign place. Charge conjugation is the swap
 of the two Gaussian primes above p: 5 = (2 + i)(2 - i), the swap is
@@ -423,7 +476,7 @@ exchange identity: delta mu_tau + 240 delta mu_mu = 0     [T, exact in Q]
 mu_p   = 6 pi^5 (1 + alpha^2 / 3)     the single bare pi^5, an odd carrier
 mu_n   = mu_p + deg_v / chi - Delta_EM;  the bare neutron at -17.93 ppm
          [measured comparison];  Delta_EM open (NEUTRON-DELTA-EM)
-the electron at the Dirac step:  det = 1 + m^2 = 5 = p
+the electron at the Dirac step:  det = 1 + m_D^2 = 5 = p
 ```
 
 The parity law (PARITY-LAW) [T]: the bridge defect delta = 6 phi^2 - 5 pi
@@ -491,9 +544,9 @@ The quantum is an integer path count, one bit per tick, on an RP
 Hilbert space. The photon window has exact coordinates
 (PHOTON-WINDOW-COORDINATES [T], reproduce/photon-electron): the point
 w = (4, phi^2, phi^-2, phi^-2, phi^2) and its Kramers-Wannier dual
-what = 5 (2, 1, 0, 0, 1) with chat = w exactly, w not self dual, and
+w_hat = 5 (2, 1, 0, 0, 1) with w_check = w exactly, w not self dual, and
 the tilt w(1) - w(2) = sqrt5. The quantum costs one bit per tick on
-every center, what(1)/what(0) = 1/2, and every class |k| >= 2 is
+every center, w_hat(1)/w_hat(0) = 1/2, and every class |k| >= 2 is
 exactly closed for p >= 5 (PHOTON-UNIVERSAL-BIT [T]). Monopole charge
 exists only in lumps of five (MONOPOLE-FIFTHS [T]); the elementary
 monopole costs between 17 and 21 occupied faces (MONOPOLE-COST [C]).
@@ -525,7 +578,7 @@ measured into existence (ELECTRON-SIGN [D]): the charge sign is the
 orientation, ghost {a, c} against live {b, d}, of the single gyron
 anchored engagement of a defect worldline, pair neutrality is
 realized through the annihilation sink, and the sign Z_2 equals the
-initial datum [z5(B_0) = 4]. Seven exhaustive public laws carry it
+initial datum [z_6(B_0) = 4]. Seven exhaustive public laws carry it
 (ELECTRON-SIGN-LAWS [T], reproduce/photon-electron): the count parity
 as initial datum; the forced event slot with the phase locked forever
 after; the annihilation census decided by tick 3; the eps ledger
@@ -544,9 +597,9 @@ G2  N(phi) = -1                             the spinor floor         [T]
 G3  the ladder root is the cat map carrier: F^2 = C over Z; mod 5 one
     Jordan block; towers of order 20 = 4p and 10 = 2p, -I at half    [D, T]
     (FIB-ROOT-CARRIER at D on the exact ties FIB-ROOT-TIES at T)
-G4  D_J(m) = S (I + i m X), zero free parameters: streaming is the
+G4  D_J(m_D) = S (I + i m_D X), zero free parameters: streaming is the
     counter, the coin modulus is the rest rung, the phase i is the
-    plenum ellipticity; massless is the one sided shift; det = 1 + m^2
+    plenum ellipticity; massless is the one sided shift; det = 1 + m_D^2
     = 5 for the electron; the mass shell is exact; the rest coin has
     infinite order                                                   [D, T]
     (DIRAC-STEP at D on the theorem layer DIRAC-STEP-THEOREMS at T)
@@ -614,7 +667,7 @@ sqrt(J) sqrt(phi) = tau^4 = -1 with phi = J^-1
 Define V_+ as the sign quotient F_5*/{+-1}; its two classes are
 {1, 4} and {2, 3}, so V_+ is cyclic of order two
 (QUBIT-FROM-F5 [T], reproduce/pentit-p5-closure). The native magic is
-the cubic C_5 (order 5, prime 5), while the foreign read uses m of
+the cubic C_5 (order 5, prime 5), while the foreign read uses m_8 of
 order 8 at prime 2. The sealed basis also records a root-of-unity Bell
 cap at zeta_5 and the Tsirelson value at zeta_8, but its precise CHSH
 functional and both maxima have not yet been reconstructed publicly

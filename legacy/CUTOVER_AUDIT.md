@@ -230,10 +230,15 @@ KERNEL-CONNECT-ALL-K           H-O17-MIN-ALL-K (H); T-O17-MIN (k = 2,
                                sealed scope; F-O17-MIN-3SUBSET stands
                                as an internal guard                  H
 ODOMETER-INTERNALIZED          the v153 internalized counter (D);
+                               public scope is the forward N_0 orbit
+                               of the 2-adic odometer, with no parity
+                               function asserted on all of Z_2;
                                carried at D                          D
 READING-SPLIT                  T-LQ-READING-SPLIT (T-LOCK, v133
-                               seal); carried at T, inline, each leg
-                               separately witnessed                  T
+                               seal); conservatively lowered to D:
+                               the registered public legs are a
+                               partial decoder dictionary, without
+                               totality, uniqueness, or completeness D
 TIME-QUANTUM-TOWER             T-FROB-TIME-QUANTUM (T-LOCK);
                                conservatively lowered to C at the
                                computed range k = 1 to 4             C
