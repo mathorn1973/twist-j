@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: 9145c12c92bebd484bfb6099048a37283a3bbb45
+run_base_commit: f4e8cbd284cdd20c3dc824f561b21d6640c3b305
+reproduction: born-quartet
+verifier_sha256: cf6009aac03b27a000c62365b89599f3a4a40aa5f27d23225a31024ea11b87d5
+expected_sha256: 228e7335b5c21399750d4f660e5275ccad617d6e8486429ec3ecabf0a05a82cf
+command: python3 reproduce/born-quartet/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: 228e7335b5c21399750d4f660e5275ccad617d6e8486429ec3ecabf0a05a82cf
+stdout_bytes: 1431
+stdout_lines: 17
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS
