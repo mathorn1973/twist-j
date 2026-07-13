@@ -324,6 +324,22 @@ OBSERVER-ALTERNATOR           D-SPLIT22 (D); the 1 + 3 observer and
 BOOST-AXIS                    D-FROZEN-AXIS (D); the alternator-axis
                                reading in the commuting diagonal
                                boost model                            D
+PENTIT-ROOT-FACTS             Part XV theorem layer: the ramified J
+                               and phi images and the tau root block   T
+PENTIT-ROOT-READING           Part XV dictionary layer: tau named as
+                               the square root of the axiom            D
+MAGIC-PRIME-GATE              T-PENT-NORM-LADDER,
+                               T-TIMEQUANTUM-SOURCE, and
+                               T-HALFROOT-SOURCE-RECIPROCITY           T
+QUBIT-FROM-F5                 T-QUBIT-FROM-F5; public scope narrowed
+                               to the explicit sign quotient V_+       T
+BELL-MAGIC-BOUNDARY           Part XIV root-of-unity CHSH and zeta_8
+                               statement (internal T-LOCK); lowered
+                               publicly to O until the functional and
+                               both maxima are reconstructed           O
+P5-ROOT-SELECTION             Part XX Root Selection (internal
+                               T-LOCK); public scope narrowed to the
+                               exact linear root selector              T
 ```
 
 ## Intentional omissions so far (to be resolved before the PR)
@@ -345,8 +361,13 @@ internal by author decision, recorded on the ELECTRON-SIGN-LAWS and
 ELECTRON-SIGN rows above. The observer/boost cluster resolves four
 more through
 BOOST-READING-SPLIT, BOOST-COUNT-LADDER, OBSERVER-ALTERNATOR, and
-BOOST-AXIS. The gate measures 7 remaining unmapped occurrences, in
-sections 11 and 16, awaiting the pre PR reconciliation. Explicitly omitted
+BOOST-AXIS. The pentit and p = 5 closure resolves the final seven
+occurrences through the six rows above: the two labels on the root line
+fold into PENTIT-ROOT-FACTS and PENTIT-ROOT-READING; the unreconstructed
+Bell/Tsirelson sentence is lowered to a concrete O gate; and the broad
+thirteen-witness assertion is replaced by the exact public root selector.
+The sentence-local gate measures zero unmapped occurrences and is now
+enforced by check_canon.py. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author
 decision: an optional enrichment, not a gap; stays internal);
 W1-INTERFACE-PRINCIPLE, KERNEL-BRAID, and TIMEQUANTUM-POTENTIAL

@@ -74,6 +74,12 @@ Plenum and kernel:
   discrete curvature; the commutator operator and its golden spectrum
   stand at the sealed scope, and the public witness is open.
 
+Pentit boundary:
+
+- BELL-MAGIC-BOUNDARY  the sealed root-of-unity Bell and Tsirelson
+  statement, held open until the CHSH functional and the exact zeta_5
+  and zeta_8 maxima are reconstructed publicly.
+
 Measure:
 
 - QUADRATIC-ENVELOPE-DECODER  the full decoder carrier hypothesis.

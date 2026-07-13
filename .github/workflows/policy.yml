@@ -21,6 +21,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: python tools/check_policy.py
+      - run: python -m unittest discover -s tools -p 'test_check_status_labels.py'
       - run: python tools/check_canon.py
       - name: Reproduce changed public probes
         env:

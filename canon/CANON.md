@@ -599,19 +599,26 @@ No claim that any of these three dictionary choices is forced is made.
 
 ## 11. The pentit ring and the magic boundary
 
-sqrt(phi) = tau^3 [T]; sqrt(J) = tau [D]; the valuations add as
-0 + 1 = 1 [T]. F_25* = C_24 = C_8 x C_3; the golden content sits on
-the gate line, the clock is norm one; the argument is not the clock,
-and the time quantum lives on the gate, not the clock. The magic prime
-gate [T]: N(tau^k) = 3^k = 2^-k in F_5*; the source closes after two
-time quanta, half the Frobenius period; sqrt(J) sqrt(phi) = tau^4 =
--1; phi = J^-1 in F_5.
+In F_25 = F_5[tau]/(tau^2 - 2), the ramified images are J = 2 and
+phi = 3; tau^4 = -1, tau^6 = phi, and therefore
+sqrt(phi) = tau^3 (PENTIT-ROOT-FACTS [T],
+reproduce/pentit-p5-closure). Calling tau the square root of the axiom,
+sqrt(J) = tau, is the gate-line dictionary
+(PENTIT-ROOT-READING [D]); it does not identify the argument with the
+clock. The exact magic-prime gate is the complete norm ladder
+N(tau^k) = 3^k = 2^-k in F_5*, the order-four source i_5 = 2 reaching
+-1 after two steps, and the reciprocity
+sqrt(J) sqrt(phi) = tau^4 = -1 with phi = J^-1
+(MAGIC-PRIME-GATE [T], reproduce/pentit-p5-closure).
 
-The qubit from F_5 [T]: C^(F_5*)/Z_2 = V_+. The magic boundary at
-F_25: Eastin-Knill as arithmetic; magic is the stabilizer dimension
-deficit; the native magic is the cubic C_5 (order 5, prime 5), the
-foreign qubit magic is m (order 8, prime 2). Bell and Tsirelson:
-zeta_5 caps at (sqrt5 + 1)/2, the zeta_8 magic reaches Tsirelson [T].
+Define V_+ as the sign quotient F_5*/{+-1}; its two classes are
+{1, 4} and {2, 3}, so V_+ is cyclic of order two
+(QUBIT-FROM-F5 [T], reproduce/pentit-p5-closure). The native magic is
+the cubic C_5 (order 5, prime 5), while the foreign read uses m of
+order 8 at prime 2. The sealed basis also records a root-of-unity Bell
+cap at zeta_5 and the Tsirelson value at zeta_8, but its precise CHSH
+functional and both maxima have not yet been reconstructed publicly
+(BELL-MAGIC-BOUNDARY [O]).
 The Fibonacci category with central charge c = 14/5 is mathematical
 background; its physical reading fired: the phibit is abelian Z_5, not
 the tau anyon (PHIBIT-NOT-TAU [F], reproduce/hyperplane-codec). The
@@ -827,13 +834,14 @@ stands (QUADRATIC-DECODER-DATA).
 
 ## 16. p = 5 and the wall
 
-Thirteen independent witnesses lock p = 5: seven selectors and six
-structural theorems; root selection [T]; the Fermat collapse; the
-1/p trace spectrum; the ramified residue phi^2 = -1; the Diophantine
-p^2 + p + 2 = 2^p; ord(2 mod 5) = phi(5); the native Z_5 qudit;
-1/rho_0 = d(d + 1)/2 = 6; the qubit from F_5; the magic boundary at
-F_25; the Lorentz density unique to Z[zeta_5]. The two logarithmic
-axes: pi on the argument (c odd), ln phi on the modulus (c even,
+The retained public root selector is exact: for a positive prime p,
+(p - 2)/(p + 1) = 1/2 if and only if p = 5
+(P5-ROOT-SELECTION [T], reproduce/pentit-p5-closure), since clearing
+the positive denominator gives p - 5 = 0. The sealed source catalogues
+further p = 5 coincidences, but their independence was not
+reconstructed; they remain a non-normative audit digest and make no
+additional public selection claim. The two logarithmic axes: pi on
+the argument (c odd), ln phi on the modulus (c even,
 transcendental by Baker); linearly independent over the algebraic
 numbers (LOG-AXES-INDEPENDENCE [T]). No algebraic independence claim
 is made.

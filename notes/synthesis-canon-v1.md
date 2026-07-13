@@ -48,10 +48,10 @@ with a reason in the audit and queued here, never registered vaguely.
    force-born-dictionary cluster resolves eight further occurrences;
    the photon-electron cluster resolves the seven occurrences of
    section 9 (five bracketed labels and the two unbracketed markers);
-   the observer-boost cluster resolves four further occurrences;
-   7 unmapped occurrences remain, in sections 11 and 16. The count is
-   derived from the post-photon, post-observer prep gate and will be
-   recomputed before any staging pin.
+   the observer-boost cluster resolves four further occurrences; the
+   pentit-p5-closure cluster resolves the final seven in sections 11
+   and 16. The strict sentence-local gate is integrated into
+   check_canon.py and reports zero unmapped occurrences.
 6. Full local check run, security audit, PR template fields.
 
 ## Two architecture witness
@@ -184,10 +184,29 @@ candidate commit.
   Fibonacci/Lucas parity, index addition, beat factorization, the
   finite mu_4 partitions, and the axis projectors: 8/8, verifier
   9f31710f, stdout 04ac093a, exit 0, empty stderr; the negative
-  mutation exits 1. Registry 157 claims on this prep base; the status
-  gate reports 7 remaining occurrences. This is still prep only: no
-  formal run record and no staging pin until counts are recomputed and
-  every post-rebase gate passes.
+  mutation exits 1. Immutable candidate 0d94de7 was reproduced on
+  Ubuntu 24.04 x86_64 (Python 3.12.13) and aarch64 (Python 3.12.3),
+  byte-identical at stdout 04ac093a (792 bytes), exit 0 and empty
+  stderr; the two-record validator passed and staging head 3f7760f
+  fast-forwarded synthesis. Registry 157 claims; the status gate
+  reports 7 remaining occurrences.
+- s18 (2026-07-13): final pentit and p = 5 status closure, prepared
+  asynchronously on the immutable observer candidate, then rebased
+  onto the integrated observer staging head. Six registry rows:
+  PENTIT-ROOT-FACTS T (the ramified J = 2, phi = 3 root block in
+  F_25), PENTIT-ROOT-READING D (the gate-line dictionary only),
+  MAGIC-PRIME-GATE T (the complete norm ladder and source
+  reciprocity), QUBIT-FROM-F5 T (the explicit two-class sign
+  quotient), BELL-MAGIC-BOUNDARY O (lowered from the sealed statement
+  until the CHSH functional and both exact maxima are reconstructed),
+  and P5-ROOT-SELECTION T (the linear root selector only; no public
+  thirteen-witness independence claim). reproduce/pentit-p5-closure
+  checks the five exact blocks with integer and F_25 arithmetic, 5/5;
+  the strict sentence-local status checker and its seven focused tests
+  enter with this closure. Registry 163 claims on this prep base:
+  82 T, 32 D, 12 C, 3 F, 28 O, 6 H; the status gate reports zero.
+  This remains prep until observer-boost is integrated and every gate
+  is rerun on the resulting synthesis base.
 - s15 (2026-07-13): the force and Born dictionary reconciliation:
   reproduce/force-born-dictionary (10/10: the finite Weyl
   commutator on five states; the exact C4 Green pseudoinverse; the

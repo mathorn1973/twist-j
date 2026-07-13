@@ -9,6 +9,8 @@ from pathlib import Path
 import re
 import subprocess
 
+from check_status_labels import findings as status_label_findings
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CANON_DIR = ROOT / "canon"
@@ -175,6 +177,18 @@ for number, row in enumerate(rows, start=2):
         if not evidence_path.exists():
             fail(f"{claim} evidence path does not exist: {evidence}")
     claims[claim] = row
+
+status_problems = status_label_findings(
+    canon, {claim: row["status"].strip() for claim, row in claims.items()}
+)
+if status_problems:
+    first = status_problems[0]
+    missing = ",".join(first.missing_statuses)
+    fail(
+        f"CANON.md has {len(status_problems)} sentence-local status labels "
+        f"without a matching registry id; first at line {first.line}, "
+        f"missing {missing}: {first.sentence}"
+    )
 
 for text_name, text in (("CORE.md", core), ("FRONTIER.md", frontier)):
     for token in CLAIM_TOKEN.findall(text):
