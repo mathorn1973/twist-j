@@ -1,0 +1,26 @@
+TWIST-J photon and electron witness
+exact arithmetic: Z, Q, Z[zeta_p], Z[zeta_10], Q(sqrt5); angles as integer
+multiples of pi/10; the window threshold N >= 5 is the one declared import
+
+PASS 01 WINDOW-COORDS w(0)=4; 2w(1)=3+sqrt5; 2w(2)=3-sqrt5; w(1)=phi^2; tilt w(1)-w(2)=sqrt5; w(1)w(2)=1; no zero class
+PASS 02 DUAL-PAIR     what = 5(2,1,0,0,1); chat = w exactly (Kramers-Wannier pair); b = (1, 1/2, 0, 0, 1/2); w is not self dual
+PASS 03 CENTER-TABLE  p=2 frozen: w(1) = 0 exactly; p=3 no closed channel, dual support full; p=5 the photon point; p=7 what = 7(2,1,0,0,0,0,1)
+PASS 04 UNIVERSAL-BIT what(1)/what(0) = 1/2 on every center p >= 3 (witnessed p = 3, 5, 7); every class |k| >= 2 exactly closed for p >= 5 (witnessed p = 5, 7)
+PASS 05 RECIPROCITY   conjugation swaps QR/QNR exactly for p = 3 mod 4 (3, 7, 11) and preserves them for p = 1 mod 4 (5, 13, 17); Gauss sums g^2 = -3, +5, -7
+PASS 06 SELECTION     with the imported window threshold N >= 5 (door 1) and the derived tilt door p = 1 mod 4 (door 2), the first prime passing both doors is p = 5; p = 2 and p = 3 fail both
+PASS 07 MONO-FIFTHS   an edge meets exactly 6 faces; over coefficients {0, +1, -1} the mod 5 closed edge boundary takes exactly the values {0, +5, -5}: charge in lumps of five
+PASS 08 MONO-COST     lower bound: Q is the unique multi face and meets all four loop edges, so F_occ >= 1 + 16 = 17; upper bound: the square plus four disjoint five face cups has dn = 5 dQ on 21 faces; the minimum lies in [17, 21]
+PASS 09 KAPPA-STRAIGHT edges of a straight run share no face: every straight segment costs 5 bits; cofacial pairs are exactly perpendicular at a vertex or parallel at unit offset, one common face each (exhaustive box)
+PASS 10 KAPPA-LADDER  the 1 x K rectangle incidence bound is exactly 9K + 8 for K = 2..6: (26, 35, 44, 53, 62); the thin hairpin family pays 9/2 bits per segment in the limit
+PASS 11 KAPPA-SHAPES  nine explicit loops realize the exact bound table; library minimum 31/8 bits per segment; every shape wins 2^LB > 7^L; tightest margin 2^31 = 2147483648 > 5764801 = 7^8
+PASS 12 G-RATIO       sixteen exact identities: N(J) = 1, Tr(J) = 3, J Jbar = 2 - phi = phi^-2, pivot 1 - J = zeta_10^9, the polylog ladder with halving 4 -> 2 -> 1 in pi/10 units, g_tree = (2 pi/5)/(pi/5) = 2
+PASS 13 G-DOUBLE-COVER X^5 = 1 on the fiber; R^5 = -I, R^10 = I on the spinor: the closure pair (5, 10); det R = 1; cos(pi/5) = phi/2, sin^2(pi/5) = (3 - phi)/4; the orbital to spinor ratio is 2 at every step
+PASS 14 SIGN-KERNEL   five involutive bijections; affine trace laws a:(1,0) b:(4,0) c:(4,2) d:(4,2) e:(4,3); z merges to 1 by tick 3 from all 15625 seeds; on the merged clock z = 4 exactly after drive bit 0; 313 signatures on 6250 states
+PASS 15 SIGN-PARITY   gyron events (drive bit 0 and z = 4) on the aligned window [0, 6000) number exactly 999 + [z5(B_0) = 4] for every recurrent seed: the count parity is the initial datum; halves 3125 + 3125
+PASS 16 SIGN-EVENTS   the only possible event is the tick 0 anchor on the par half, slot z5(d) = 4 + dl forced; fusion census {+1: 3125 mute, -1: 3125 par, +-2: 0}, decided by tick 3; merged traces plus bijectivity close fusion and lock the phase forever after
+PASS 17 SIGN-EPS      ghost {a, c} against live {b, d}: the eps ledger assigns +1 to 6250 lines and -1 to 6250 lines, sum 0; survivors 18750 of 25000, event free 9375; one Z_2 (the initial datum) governs the five readouts
+PASS 18 SIGN-CYCLES   every one of the 18750 survivors lands on a closed 20 state pair cycle: window support exactly 20, closed under both transitions, second window identical (verified once per cycle, membership per survivor)
+PASS 19 SIGN-SUPPORT  the relaxed +2 and +3 defects land in the same signature on every one of the 6250 backgrounds; the +-1 survivors co-locate with neither (0 of 6250): the sign is event borne, never structure borne
+PASS 20 SIGN-TRANSIENT no fiber shift image of the 313 supports is a support (0 of 1252) and no Galois scalar image is a support (x2, x3, x4: 0 of 313 each): support invariance lives at the readout level only
+
+RESULT 20/20 ALL PASS

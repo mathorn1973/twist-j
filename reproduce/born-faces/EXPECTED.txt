@@ -1,0 +1,13 @@
+TWIST-J abelian face weights witness (exact integer arithmetic in Z[zeta_5])
+w(k) = |1 + zeta_5^k|^2 = (1 + j^k)(1 + j^(5-k)); sqrt5 = 1 + 2 (j + j^4)
+
+PASS 01 SQRT5   (1 + 2 (j + j^4))^2 = 5
+PASS 02 W0      w(0) = 4
+PASS 03 W1      2 w(1) = 3 + sqrt5
+PASS 04 W2      2 w(2) = 3 - sqrt5
+PASS 05 CONJ    w(3) = w(2) and w(4) = w(1)
+PASS 06 MASS    w(0) + w(1) + w(2) + w(3) + w(4) = 10
+PASS 07 GALOIS  sigma_2 w(1) = w(2)
+PASS 08 TILT    w(1) + w(4) - w(2) - w(3) = 2 sqrt5
+
+RESULT 8/8 ALL PASS

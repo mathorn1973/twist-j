@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: 0f16d82c86d0fc63ac420e8240a898a9213aea85
+run_base_commit: 4b76e26f747c25f01ffdf3ecc1202e3e66166992
+reproduction: foundations-places
+verifier_sha256: f929efd24cc814d852ba44e55db36b6e3e0802438df774a14e0f0036cae2e464
+expected_sha256: 5b2b119484531c3698da0872ec4db93fd9da6e349ff113477503112e417c6ae2
+command: python3 reproduce/foundations-places/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: 5b2b119484531c3698da0872ec4db93fd9da6e349ff113477503112e417c6ae2
+stdout_bytes: 2975
+stdout_lines: 14
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS

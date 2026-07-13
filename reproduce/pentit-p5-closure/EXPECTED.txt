@@ -1,0 +1,10 @@
+TWIST-J pentit and p=5 closure witness (exact arithmetic)
+F_25 roots, norm ladder, time-source reciprocity, the sign quotient, and root selection
+
+PASS 01 ROOTS        in F_25 = F_5[t]/(t^2-2), J -> 2 and phi -> 3; tau=t has tau^2=J, tau^4=-1, tau^6=phi, hence sqrt(phi)=tau^3; tau has exact order 8
+PASS 02 NORM-LADDER  for k=0..23, N(tau^k)=tau^(6k)=3^k=2^(-k) in F_5* exactly
+PASS 03 SOURCE       i_5=2 has order 4 and reaches -1 after two steps; sqrt(J)sqrt(phi)=tau^4=-1, the two norms multiply to 1, and phi=J^-1 in F_5
+PASS 04 QUBIT        V_+ := F_5*/{+-1} has exactly the two classes {1,4} and {2,3}; the quotient is cyclic of order 2
+PASS 05 P5-ROOT      for every positive prime p, (p-2)/(p+1)=1/2 iff p=5; after clearing the positive denominator the difference is p-5
+
+RESULT 5/5 ALL PASS

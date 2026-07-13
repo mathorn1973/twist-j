@@ -1,0 +1,9 @@
+PASS 01 GOLDEN-FIELD phi psi = -1, phi^-1 = -psi, phi^2 = phi + 1 exactly
+PASS 02 BINET        L_n = phi^n + psi^n and sqrt5 F_n = phi^n - psi^n for 0 <= n <= 96
+PASS 03 PARITY-SPLIT (C_n,S_n) = (L_n,sqrt5 F_n) for even n and (sqrt5 F_n,L_n) for odd n
+PASS 04 COUNT-LAW    beta_(m+n) = (beta_m+beta_n)/(1+beta_m beta_n); C_n^2-S_n^2 = 4 and L_n^2-5F_n^2 = 4(-1)^n
+PASS 05 BEAT         STEP = B_J A = A B_J, A^2 = I, STEP^2 = B_J^2; det(B_J,A,STEP) = (1,-1,-1)
+PASS 06 BOOST-INDEX  B_J^m B_J^n = B_J^(m+n) exactly for 0 <= m,n < 25
+PASS 07 MU4-SPLIT    observer partition 1+3; alternator k -> k+2 has two fixed-point-free 2-cycles giving substrate partition 2+2
+PASS 08 FROZEN-AXIS  A = diag(1,-1) has complementary axis projectors and commutes with B_J = diag(phi,phi^-1)
+ALL 8/8 CHECKS PASS

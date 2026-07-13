@@ -1,0 +1,7 @@
+gate_id	owner_item_id	from_layer	to_layer	gate_kind	decision_condition
+GATE-L1-L5-LOG-PROJECTION	DEF-LOG-STREAM	L1	L5	DEFINITION_PROJECTION	the derived Log projection is a deterministic typed map from the autonomous L1 orbit into the read-only L5 stream
+GATE-L1-L2-CURVATURE	CURVATURE-TRACE-VALUE	L1	L2	OPEN_LIFT	closes positively when the public operator has the registered proposed trace and a proved spectrum; closes negatively if the committed operator gives a different trace or refutes the proposed spectrum
+GATE-L2-L3-GENERATIONS	GENERATIONS-L3	L2	L3	OPEN_LIFT	closes positively by deriving the generation count at the L3 boundary layer; closes negatively if the derived count differs from three
+GATE-L4-L6-COLOR-MEASURE	COLOR-MEASURE-SELECTION	L4	L6	OPEN_LIFT	closes positively by a derivation selecting the weight vector over the 24 orbits constrained by the 16 observable types; closes negatively if the constraint set is exhausted with no surviving weight vector, or if two inequivalent vectors survive every named constraint
+GATE-L5-L6-BORN-READING	MEASURE-BORN-VERB	L5	L6	DICTIONARY_LIFT	the measure read as the Born square of the verb, resting on the exact BORN-FACE-WEIGHTS theorem layer
+GATE-L5-L6-METRO-NORMALIZATION	METRO-ADMISSIBILITY	L5	L6	OPEN_LIFT	closes positively when a public criterion classifies a named residual class and is proved invariant under its allowed reductions; closes negatively when an exact counterexample violates the proposed criterion or two reduction-equivalent protocols receive different classifications

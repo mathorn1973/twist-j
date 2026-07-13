@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: 794c9580b4588e06812536510f0785ef3fd440fa
+run_base_commit: 49615eaad90ed61502e02233ba6c1de0348f057f
+reproduction: color-ladder
+verifier_sha256: 5cd3a40c66a6d2b6ca30ffc600d0ca13ebf1f2c7743a21e2bc56d6f572a1ebd8
+expected_sha256: 9031fd6a319c96b3d70aac92af6cfe6e70c0a83847c2281a35fafedcfe115533
+command: python3 reproduce/color-ladder/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: 9031fd6a319c96b3d70aac92af6cfe6e70c0a83847c2281a35fafedcfe115533
+stdout_bytes: 346
+stdout_lines: 13
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS

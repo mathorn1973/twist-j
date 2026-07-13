@@ -3,7 +3,10 @@ name: policy
 on:
   push:
     branches: [main]
+    tags: [canon-v1]
   pull_request:
+  release:
+    types: [published]
 
 permissions:
   contents: read
@@ -21,7 +24,9 @@ jobs:
         with:
           python-version: "3.12"
       - run: python tools/check_policy.py
+      - run: python -m unittest discover -s tools -p 'test_*.py'
       - run: python tools/check_canon.py
+      - run: python tools/check_ledger.py
       - name: Reproduce changed public probes
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
@@ -30,3 +35,33 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: python tools/check_reproduce.py --base "$BASE_SHA"
+      - name: Run full activation gate
+        run: |
+          if grep -Eq '^STATE:[[:space:]]+ACTIVE' STATUS.md; then
+            if [ "${{ github.ref_type }}" = "tag" ] || [ "${{ github.event_name }}" = "release" ]; then
+              python tools/check_activation.py --full --post-activation \
+                --manifest-out activation-manifest.json
+            else
+              python tools/check_activation.py --full
+            fi
+          fi
+      - name: Preserve tag readback manifest
+        if: github.ref_type == 'tag'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: canon-v1-activation-manifest
+          path: activation-manifest.json
+          if-no-files-found: error
+      - name: Verify published release assets
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/twistj-release
+          gh release view canon-v1 --repo "$GITHUB_REPOSITORY"
+          gh release download canon-v1 --repo "$GITHUB_REPOSITORY" \
+            --pattern activation-manifest.json --pattern SHA256SUMS \
+            --dir /tmp/twistj-release
+          python tools/check_release_manifest.py \
+            /tmp/twistj-release/activation-manifest.json
+          cmp canon/SHA256SUMS /tmp/twistj-release/SHA256SUMS

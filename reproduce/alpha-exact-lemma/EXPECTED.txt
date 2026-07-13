@@ -1,0 +1,11 @@
+TWIST-J alpha exact lemma witness (exact integer arithmetic)
+G = p I - 1 1^T on dimension p - 1; spectrum {1, p x (p - 2)};
+normalized {1/p, 1 x (p - 2)}; the trace direction carries 1/p
+
+PASS p =  3  G u = u on the ones vector; G v =  3 v on the complement ( 1 vectors); det = 3^1
+PASS p =  5  G u = u on the ones vector; G v =  5 v on the complement ( 3 vectors); det = 5^3
+PASS p =  7  G u = u on the ones vector; G v =  7 v on the complement ( 5 vectors); det = 7^5
+PASS p = 11  G u = u on the ones vector; G v = 11 v on the complement ( 9 vectors); det = 11^9
+PASS p = 13  G u = u on the ones vector; G v = 13 v on the complement (11 vectors); det = 13^11
+
+RESULT 5/5 ALL PASS

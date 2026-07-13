@@ -9,6 +9,8 @@ from pathlib import Path
 import re
 import subprocess
 
+from check_status_labels import findings as status_label_findings
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CANON_DIR = ROOT / "canon"
@@ -27,6 +29,12 @@ HASHED_FILES = (
     "REGISTRY.tsv",
     "CHANGELOG.md",
 )
+RELEASE_FACING_FILES = (
+    "CANON.md",
+    "CORE.md",
+    "CHANGELOG.md",
+    "LEDGER.md",
+)
 REGISTRY_FIELDS = (
     "claim_id",
     "status",
@@ -38,6 +46,16 @@ REGISTRY_FIELDS = (
 STATUSES = {"T-LOCK", "T", "D", "C", "H", "O", "F"}
 CLAIM_ID = re.compile(r"^[A-Z][A-Z0-9-]*$")
 CLAIM_TOKEN = re.compile(r"\b(?:T-LOCK|T|D|C|H|O|F)-[A-Z0-9][A-Z0-9-]*\b")
+PLACEHOLDER_FALSIFIERS = (
+    "none armed",
+    "none fired",
+    "not applicable",
+    "to be determined",
+    "tbd",
+    "pending",
+    "registered with the hypothesis",
+    "no falsifier",
+)
 FORBIDDEN_CANON_PHRASES = (
     "TWIST_J_Canon_",
     "CROSSPLATFORM_LOCK_RECORD",
@@ -47,6 +65,16 @@ FORBIDDEN_CANON_PHRASES = (
     "synthesis surface",
     "JAS 2",
     "TWISTER",
+)
+PRIVATE_AUTHORITY_WORD = re.compile(
+    r"\b(?:sealed|internal|private|hidden|unpublished)\b", re.IGNORECASE
+)
+PROVISIONAL_RELEASE_PHRASES = (
+    "public canon v1 (candidate)",
+    "public canon v1 candidate in genesis",
+    "this repository is in genesis",
+    "genesis audit surface until",
+    "no authority while `status.md` says `genesis`",
 )
 
 
@@ -107,6 +135,22 @@ core = (CANON_DIR / "CORE.md").read_text(encoding="utf-8")
 frontier = (CANON_DIR / "FRONTIER.md").read_text(encoding="utf-8")
 changelog = (CANON_DIR / "CHANGELOG.md").read_text(encoding="utf-8")
 
+for name in RELEASE_FACING_FILES:
+    text = (CANON_DIR / name).read_text(encoding="utf-8").lower()
+    for phrase in PROVISIONAL_RELEASE_PHRASES:
+        if phrase in text:
+            fail(f"canon/{name} contains provisional release wording: {phrase}")
+
+for name in HASHED_FILES:
+    path = CANON_DIR / name
+    for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        match = PRIVATE_AUTHORITY_WORD.search(line)
+        if match:
+            fail(
+                f"canon/{name} line {number} invokes non-public authority: "
+                f"{match.group(0)}"
+            )
+
 version_match = re.search(r"Public Canon v([1-9][0-9]*)", canon)
 if not version_match:
     fail("CANON.md lacks a Public Canon vN title")
@@ -130,6 +174,8 @@ if not rows:
 
 claims: dict[str, dict[str, str]] = {}
 for number, row in enumerate(rows, start=2):
+    if None in row or any(value is None for value in row.values()):
+        fail(f"REGISTRY.tsv line {number} must have exactly {len(REGISTRY_FIELDS)} fields")
     claim = (row.get("claim_id") or "").strip()
     status = (row.get("status") or "").strip()
     if not CLAIM_ID.fullmatch(claim):
@@ -143,8 +189,16 @@ for number, row in enumerate(rows, start=2):
             fail(f"{claim} has empty {field}")
     if (row.get("canon_section") or "").strip() not in canon:
         fail(f"{claim} canon_section is absent from CANON.md")
-    if status in {"H", "O", "F"} and not (row.get("falsifier") or "").strip():
-        fail(f"{claim} with status {status} lacks falsifier")
+    if status in {"H", "O", "F"}:
+        falsifier = (row.get("falsifier") or "").strip()
+        if not falsifier:
+            fail(f"{claim} with status {status} lacks falsifier")
+        low = falsifier.lower()
+        for phrase in PLACEHOLDER_FALSIFIERS:
+            if phrase in low:
+                fail(f"{claim} falsifier is a placeholder: {phrase}")
+        if len(falsifier) < 20:
+            fail(f"{claim} falsifier is too short to be a condition")
     if not exact_token(canon, claim):
         fail(f"{claim} is absent from CANON.md")
 
@@ -157,6 +211,18 @@ for number, row in enumerate(rows, start=2):
         if not evidence_path.exists():
             fail(f"{claim} evidence path does not exist: {evidence}")
     claims[claim] = row
+
+status_problems = status_label_findings(
+    canon, {claim: row["status"].strip() for claim, row in claims.items()}
+)
+if status_problems:
+    first = status_problems[0]
+    missing = ",".join(first.missing_statuses)
+    fail(
+        f"CANON.md has {len(status_problems)} sentence-local status labels "
+        f"without a matching registry id; first at line {first.line}, "
+        f"missing {missing}: {first.sentence}"
+    )
 
 for text_name, text in (("CORE.md", core), ("FRONTIER.md", frontier)):
     for token in CLAIM_TOKEN.findall(text):
@@ -171,12 +237,16 @@ missing_frontier = sorted(expected_frontier - frontier_claims)
 if missing_frontier:
     fail("FRONTIER.md lacks live claims: " + ", ".join(missing_frontier))
 
+FRONTIER_ID = re.compile(r"^\s*-\s+([A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+)\b")
 for line in frontier.splitlines():
-    if not re.match(r"^\s*-\s+", line):
+    match = FRONTIER_ID.match(line)
+    if not match:
         continue
-    tokens = [claim for claim in claims if exact_token(line, claim)]
-    if tokens and claims[tokens[0]]["status"].strip() not in {"H", "O"}:
-        fail(f"FRONTIER.md list item starts with closed claim: {tokens[0]}")
+    token = match.group(1)
+    if token not in claims:
+        fail(f"FRONTIER.md lists unregistered identifier: {token}")
+    if claims[token]["status"].strip() not in {"H", "O"}:
+        fail(f"FRONTIER.md list item starts with closed claim: {token}")
 
 sums_path = CANON_DIR / "SHA256SUMS"
 sums: dict[str, str] = {}
@@ -205,20 +275,23 @@ if state == "ACTIVE":
     for field, value in expected.items():
         if fields.get(field) != value:
             fail(f"STATUS.md {field} must be: {value}")
+    citation_version = re.search(r'^version:\s*"([^"]+)"\s*$', citation, re.MULTILINE)
+    if not citation_version or citation_version.group(1) != version:
+        fail(f'CITATION.cff version must be the whole Canon number: "{version}"')
     canon_bytes = (CANON_DIR / "CANON.md").stat().st_size
     if fields.get("CANON_SHA256") != sha256(CANON_DIR / "CANON.md"):
         fail("STATUS.md CANON_SHA256 differs from canon/CANON.md")
     if fields.get("CANON_BYTES") != str(canon_bytes):
         fail("STATUS.md CANON_BYTES differs from canon/CANON.md")
-    commit = fields.get("CANON_COMMIT", "")
+    commit = fields.get("CONTENT_COMMIT", "")
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
-        fail("STATUS.md CANON_COMMIT must be a full lowercase SHA")
+        fail("STATUS.md CONTENT_COMMIT must be a full lowercase SHA")
     if (ROOT / ".git").exists():
         result = subprocess.run(
             ["git", "merge-base", "--is-ancestor", commit, "HEAD"], cwd=ROOT
         )
         if result.returncode:
-            fail("STATUS.md CANON_COMMIT is not an ancestor of HEAD")
+            fail("STATUS.md CONTENT_COMMIT is not an ancestor of HEAD")
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     if "State: GENESIS" in readme:
         fail("README.md still declares GENESIS while STATUS is ACTIVE")

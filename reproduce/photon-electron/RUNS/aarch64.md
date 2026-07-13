@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: 56419ef27d73da501aac484d2798d64050491ca1
+run_base_commit: 56419ef27d73da501aac484d2798d64050491ca1
+reproduction: photon-electron
+verifier_sha256: d980aa17cd2e597a2924273ea7079333b63419ff472560a395382fa293667e74
+expected_sha256: 99e30466e584bed16a7ebc72e9c5cb547b4a24c5eba2caa5a7f4e83e2dff3edb
+command: python3 reproduce/photon-electron/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: 99e30466e584bed16a7ebc72e9c5cb547b4a24c5eba2caa5a7f4e83e2dff3edb
+stdout_bytes: 4108
+stdout_lines: 26
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS

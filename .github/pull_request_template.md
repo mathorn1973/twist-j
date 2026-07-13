@@ -10,6 +10,8 @@ Complete this section for `synthesis` and `activation` changes.
 
 - Public Canon version:
 - Synthesis content commit:
+- Release-form staging commit:
+- Release-form Git tree:
 - Canon SHA-256:
 - Canon bytes:
 - Registry claim count:
@@ -38,3 +40,5 @@ Complete this section for probe changes.
 - [ ] Fired falsifiers are recorded.
 - [ ] Security review passed.
 - [ ] Required `check` job passed.
+- [ ] An activation change touches exactly `STATUS.md`, `README.md`, and `CITATION.cff`, or is not applicable.
+- [ ] The activation tree is byte identical to the reviewed release-form staging tree, or is not applicable.

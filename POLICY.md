@@ -182,7 +182,9 @@ The normative Canon excludes:
 Internal numbering is retired at cutover. Public versions use immutable tags
 and releases `canon-v1`, `canon-v2`, and so on. Each release carries
 `SHA256SUMS`. Public history starts at v1; earlier development remains outside
-the normative series.
+the normative series. Canon version numbers are positive whole numbers only;
+decimal Canon versions are not used. A decimal `cff-version` identifies the
+CFF schema, not the Canon.
 
 Incomplete work belongs under `notes/`, is marked `NON-CANONICAL`, and need
 not carry a verifier. A proposed Canon patch stays under `notes/canon/` until
@@ -201,8 +203,11 @@ a separate sealed public fold applies it to `canon/CANON.md`.
   Public Canon v1 landing page. After it merges, a separate
   `activate/canon-v1` pull request sets `STATE: ACTIVE`, names the immutable
   Canon content commit, exact hash and byte count, and updates the README.
-- The `canon-v1` tag and release are created from the merged activation
-  commit. Authority moves only after public readback and all required checks.
+- The activation request records the immutable synthesis merge as
+  `CONTENT_COMMIT`. The `canon-v1` tag and release are created from the merged
+  activation commit; that tag target is recorded as `ACTIVATION_COMMIT` in the
+  release manifest. Authority moves only after public readback and all
+  required checks.
 - Probe commits are never rebased, squashed, amended, or force-pushed after the
   preregistration pin. Merge commits preserve provenance.
 - Check for an existing branch, issue, probe, and lock before claiming work.

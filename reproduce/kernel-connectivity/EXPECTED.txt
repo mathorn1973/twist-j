@@ -1,0 +1,13 @@
+TWIST-J kernel connectivity witness (exact arithmetic)
+every generator is affine with det 1; the CSUM coupling is SL2(F_5), order 120, preserving all 15 wedges
+linear preserves the wedge strata, affine crosses exactly 62480 of 78125; one cell connects at {abcde} = 1
+
+PASS 01 AFFINITY     every kernel generator is affine on all 15625 states, g(x) = M_g x + v_g exactly, with det M_g = 1 over F_5 for all five; a and b are linear (v = 0) and c, d, e are strictly affine: the translational sector is exactly {c, d, e}
+PASS 02 CSUM-WEDGE   the two CSUM transvections x1 -> x1 + x0 and x0 -> x0 + x1 preserve all 15 wedges w_ij = x0_i x1_j - x0_j x1_i as an exact polynomial identity in 12 variables over F_5: the coupling moves within a fixed symplectic stratum
+PASS 03 SL2          the two transvection matrices generate a group of order exactly 120 with every determinant 1, and the full determinant one count over all 625 matrices is 120: the coupling group is all of SL2(F_5), the order of the binary icosahedral bridge of the color door
+PASS 04 CONGRUENCE   for the linear generators a and b the diagonal action obeys W(g x0, g x1) = M_g W M_g^T on all 36 basis pairs; both sides are bilinear in (x0, x1), so the identity holds on all pairs, and congruence by an invertible matrix preserves the wedge rank
+PASS 05 RANK         on the exhaustive slice x1 = e_0 (15625 pairs) the wedge rank is 0 exactly on the 5 dependent pairs (x0 a multiple of e_0) and 2 on the other 15620: rank 0 is parallel cells, rank 2 is independent cells, and no other rank occurs
+PASS 06 AFFINE-MIX   exhaustively over the full dependent stratum x1 = m x0 (78125 pairs per generator): the linear generators a and b lift 0 pairs off rank 0, while the affine translations c, d, and e each lift exactly 62480 = 2^4 . 5 . 11 . 71 pairs to rank 2: only the translational sector crosses the symplectic strata
+PASS 07 COMPONENTS   the single cell component census matches the recorded table on all seventeen generator subsets, from {ac} at 945 and {bde} = {cde} = 169 = 13^2 down to the full verb {abcde} at 1: one cell is connected by the five letters alone; monotonicity holds on every comparable pair (enlarging the set never increases the count)
+
+RESULT 7/7 ALL PASS

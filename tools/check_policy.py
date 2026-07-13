@@ -3,6 +3,7 @@
 
 from pathlib import Path
 import re
+import subprocess
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,7 +20,7 @@ FORBIDDEN_SUFFIXES = {
 }
 BASE_STATUS_FIELDS = {"STATE", "CANON", "AUTHORITY", "CUTOVER"}
 ACTIVE_STATUS_FIELDS = {
-    "TAG", "CANON_COMMIT", "CANON_SHA256", "CANON_BYTES",
+    "TAG", "CONTENT_COMMIT", "CANON_SHA256", "CANON_BYTES",
 }
 
 
@@ -29,9 +30,18 @@ def fail(message: str) -> None:
 
 
 def tracked_files():
-    for path in ROOT.rglob("*"):
-        if path.is_file() and ".git" not in path.parts:
-            yield path
+    completed = subprocess.run(
+        ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"],
+        cwd=ROOT,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=True,
+    )
+    for name in completed.stdout.decode("utf-8").split("\0"):
+        if name:
+            path = ROOT / name
+            if path.is_file():
+                yield path
 
 
 def read_status() -> dict[str, str]:
@@ -78,8 +88,8 @@ else:
         fail("ACTIVE CUTOVER must be an ISO date")
     if not re.fullmatch(r"canon-v[1-9][0-9]*", status["TAG"]):
         fail("ACTIVE TAG must be canon-vN")
-    if not re.fullmatch(r"[0-9a-f]{40}", status["CANON_COMMIT"]):
-        fail("ACTIVE CANON_COMMIT must be a full lowercase SHA")
+    if not re.fullmatch(r"[0-9a-f]{40}", status["CONTENT_COMMIT"]):
+        fail("ACTIVE CONTENT_COMMIT must be a full lowercase SHA")
     if not re.fullmatch(r"[0-9a-f]{64}", status["CANON_SHA256"]):
         fail("ACTIVE CANON_SHA256 must contain 64 lowercase hex characters")
     if not status["CANON_BYTES"].isdigit() or int(status["CANON_BYTES"]) <= 0:
@@ -116,6 +126,8 @@ for invariant in (
     "actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
     "python tools/check_policy.py",
     "python tools/check_canon.py",
+    "python tools/check_ledger.py",
+    "python tools/check_activation.py --full",
     "python tools/check_verifier.py --base \"$BASE_SHA\"",
     "python tools/check_reproduce.py --base \"$BASE_SHA\"",
 ):

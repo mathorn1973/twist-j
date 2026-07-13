@@ -1,0 +1,18 @@
+# Synthesis staging run (non-canonical)
+
+candidate_commit: 38502b52cd4cba12823c1e6b5d037338a30bcd01
+run_base_commit: 38502b52cd4cba12823c1e6b5d037338a30bcd01
+reproduction: cosmology-register
+verifier_sha256: 3cbafabf962d1d7b8f07902665aff2c91d7c1969e1a7811491a470a5559aae08
+expected_sha256: 3c6eb3dc52e33d52eee9fb1b18a5be4888462007874ee46d3b4a1251ca58521b
+command: python3 reproduce/cosmology-register/verify.py
+platform: Ubuntu 24.04
+architecture: aarch64
+python: 3.12.3
+exit_code: 0
+stdout_sha256: 3c6eb3dc52e33d52eee9fb1b18a5be4888462007874ee46d3b4a1251ca58521b
+stdout_bytes: 2544
+stdout_lines: 13
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+result: PASS

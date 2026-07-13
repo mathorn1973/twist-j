@@ -143,9 +143,154 @@ not part of the public Canon series.
 13. Merge with a merge commit. Record that merge commit as the immutable Canon
     content commit. The repository is still `GENESIS`.
 
+### Phase A cross-architecture staging
+
+During `GENESIS`, a synthesis cluster that depends on computation is
+transported between systems through GitHub, never by copying an unattached
+verifier or stdout file.
+
+1. The coordinator creates a dedicated branch from the current synthesis
+   branch:
+
+   ```text
+   staging/canon-v1-NAME
+   ```
+
+2. The coordinator commits the complete candidate before the first formal
+   staging run: verifier, `EXPECTED.txt`, README, Canon text, registry,
+   audit, changelog, hashes, and notes. This commit is the immutable
+   `candidate_commit`; push it to GitHub. Do not amend or force-push it.
+3. Runners work sequentially on the same staging branch. Each runner fetches
+   the branch, checks out the exact candidate or a descendant containing only
+   earlier run records, confirms a clean worktree, and runs:
+
+   ```text
+   python3 tools/run_staged_reproduction.py NAME --candidate FULL_SHA
+   ```
+
+4. The runner tool refuses a changed verifier or `EXPECTED.txt`, executes in
+   a deterministic environment, compares stdout byte for byte, requires exit
+   0 and empty stderr, and writes exactly one neutral record:
+
+   ```text
+   reproduce/NAME/RUNS/aarch64.md
+   reproduce/NAME/RUNS/x86_64.md
+   ```
+
+   Records contain only operating system, architecture, Python version,
+   hashes, byte counts, and commit pins. Machine nicknames are forbidden.
+5. The runner stages only its record, commits as A. M. Thorn, and pushes the
+   staging branch. A rejected push is a stop condition: never force-push;
+   contact the coordinator before rebasing or rerunning.
+6. After both architecture records are present, the coordinator runs:
+
+   ```text
+   python3 tools/check_staged_reproduction.py NAME \
+     --candidate FULL_SHA --require-architectures aarch64 x86_64
+   ```
+
+7. Only a passing validator permits `git merge --ff-only` of the staging
+   branch into `synthesis/canon-v1`. Push the synthesis branch after the
+   fast-forward. The staging exchange creates no pull request; the whole of
+   Phase A still ends in the single reviewed synthesis pull request.
+8. Any change to the verifier, expected output, scientific scope, or
+   normative text after the candidate pin invalidates all run records. Create
+   a new candidate commit and fresh staging branch; do not reinterpret old
+   records.
+
+### Phase A asynchronous prep and staging
+
+The formal staging lane above remains linear because every cluster changes
+shared Canon, registry, audit, and hash files and must fast-forward into the
+single synthesis branch. Expensive preparation runs one cluster ahead in a
+separate, explicitly non-formal lane:
+
+```text
+prep/canon-v1-NAME       mutable preparation, no formal run records
+staging/canon-v1-NAME    immutable candidate and sequential run records
+synthesis/canon-v1       one fast-forward integration lane
+```
+
+1. As soon as cluster `N` has an immutable staging candidate, another agent
+   may create `prep/canon-v1-NEXT` from the then-current synthesis HEAD.
+   Preparation may include internal-basis audit, conservative public scope,
+   verifier development, draft Canon changes, and non-formal dry runs.
+2. A prep branch is non-canonical and non-formal. It must not contain
+   `reproduce/*/RUNS/` records, call a dry run a reproduction, or claim an
+   earned public status. It may be rebased and rewritten before pinning.
+3. While the next cluster is in prep, architecture runners and the
+   coordinator finish cluster `N` on its staging branch. No other commit may
+   enter synthesis while a formal staging candidate awaits fast-forward.
+4. After cluster `N` reaches synthesis, the builder rebases or reapplies the
+   prep work onto the new synthesis HEAD. Conflicts in shared Canon files are
+   resolved here, before immutability begins. All policy, Canon, reproduction,
+   audit, and hash checks are rerun.
+5. The builder creates `staging/canon-v1-NEXT` from the exact current
+   synthesis HEAD. The complete candidate is one commit with exactly one
+   parent. The first formal run may start only after that commit is pushed.
+   A prep commit is never itself treated as the immutable pin merely because
+   its tree happened to pass a dry run.
+6. Agents discover work from GitHub rather than from a relayed handoff. At
+   session start run one of:
+
+   ```text
+   python3 tools/staging_status.py --fetch --role builder
+   python3 tools/staging_status.py --fetch --role aarch64
+   python3 tools/staging_status.py --fetch --role x86_64
+   python3 tools/staging_status.py --fetch --role coordinator
+   ```
+
+   Add `--json` for machine-readable output and `--strict` in monitoring.
+   The tool reports `PREP_CURRENT`, `REBASE_REQUIRED`,
+   `SUPERSEDED_BY_STAGING`, `WAIT_AARCH64`, `WAIT_X86_64`,
+   `READY_TO_VALIDATE`, `INTEGRATED`, or a stop state. Its printed command is
+   an instruction, not authorization to skip checkout, clean-tree, authorship,
+   validation, or no-force gates. Use the reproduction directory name as the
+   branch suffix when possible. If a shorter branch label was already pinned,
+   the tool derives the actual reproduction name from the immutable candidate
+   and its run records and reports both names explicitly.
+7. The steady-state rhythm is: builder prepares `N+1`; architecture runners
+   reproduce `N`; coordinator validates and fast-forwards `N`; builder moves
+   `N+1` to the new base and pins it. This is the Phase A tik-tok. GitHub refs
+   are the queue and handoff surface; chat summaries are informational only.
+8. `STALE_BASE`, `BLOCKED`, more than one branch eligible for the same formal
+   role, a non-fast-forward push, or a synthesis change during formal staging
+   is a stop condition. Never repair these states by force-pushing a staging
+   branch or silently reinterpreting a candidate.
+
+### Phase A final record refresh
+
+The final Genesis reconciliation may invalidate several old reproduction
+records at once. Pin the complete content commit first. On each architecture,
+from a clean descendant that contains only earlier formal records, run one
+atomic batch:
+
+```text
+python3 tools/run_staged_reproduction.py \
+  --all-pending-two-architecture --candidate FULL_CONTENT_SHA
+```
+
+The batch derives its directory set from `canon/EVIDENCE.tsv`, executes every
+missing verifier before writing any record, and writes only the current
+architecture's missing `RUNS` files. Commit those named files together; never
+change candidate content between architectures. The final validator is:
+
+```text
+python3 tools/check_activation.py --dry-run --full \
+  --content-commit FULL_CONTENT_SHA
+```
+
+It validates every existing record, requires both architectures wherever the
+ledger says `two-architecture`, and permits no post-content change except
+neutral formal records. This refresh creates no PR, merge, or activation.
+
 ### Phase B: activation
 
-14. Create `activate/canon-v1` from the merged public `main`.
+14. After the synthesis pull request merges, create
+    `activate/canon-v1-candidate` from that exact public `main`. This branch is
+    the release-form staging surface: it is reviewed byte for byte but creates
+    no authority by itself. A pre-merge preview cannot be the final staging
+    surface because the synthesis merge SHA does not yet exist.
 15. Update `STATUS.md` to the exact active form:
 
     ```text
@@ -154,17 +299,37 @@ not part of the public Canon series.
     AUTHORITY:      mathorn1973/twist-j main
     CUTOVER:        YYYY-MM-DD
     TAG:            canon-v1
-    CANON_COMMIT:   full 40-character synthesis merge SHA
+    CONTENT_COMMIT: full 40-character synthesis merge SHA
     CANON_SHA256:   full 64-character canon/CANON.md SHA-256
     CANON_BYTES:    exact canon/CANON.md byte count
     ```
 
 16. Update `README.md` from GENESIS to ACTIVE, point readers to
     `canon/CORE.md`, `canon/CANON.md`, and `canon/FRONTIER.md`, and
-    finalize `CITATION.cff` with the Public Canon landing-page URL.
-17. Open and merge a separate reviewed activation pull request.
-18. Tag the activation merge commit `canon-v1`, create the release, and attach
-    the recorded `canon/SHA256SUMS`.
+    finalize `CITATION.cff` with version `1` and the Public Canon landing-page
+    URL. Public Canon versions are positive whole numbers: `1`, `2`, `3`, and
+    so on. Decimal Canon versions are forbidden; `cff-version: 1.2.0` is the
+    CFF schema identifier and is not a Canon version.
+17. The release-form staging branch changes exactly `STATUS.md`, `README.md`,
+    and `CITATION.cff` relative to the synthesis merge. Run:
+
+    ```text
+    python3 tools/check_activation.py --full \
+      --content-commit FULL_SYNTHESIS_MERGE_SHA
+    ```
+
+    Review this exact tree one to one with the intended release. Then open the
+    separate activation pull request from it. No content, record, workflow, or
+    other documentation change is allowed in that pull request.
+18. Merge the activation pull request without changing its tree, verify that
+    the public `main` tree is byte identical to the reviewed release-form
+    staging tree, and tag the activation merge commit `canon-v1`. Record that
+    tag target as
+    `ACTIVATION_COMMIT` in the release manifest, create the release, and attach
+    the tag-job `activation-manifest.json` and recorded `canon/SHA256SUMS`.
+    The read-only release workflow downloads both assets, checks the complete
+    file inventory and content/activation commit pins, and compares the hash
+    manifest byte for byte.
 19. Repoint `twistj.com/canon/` from the legacy line to Public Canon v1,
     then verify the tag, release, public readback, hashes, registry, and all
     required checks.

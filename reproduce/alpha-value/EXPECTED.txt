@@ -1,0 +1,13 @@
+TWIST-J alpha value witness (exact arithmetic, integer intervals)
+alpha = 5 S / ((8 pi)^2 sqrt(s)); sqrt(s) = (3 - phi)^(1/4) = (1 + J Jbar)^(1/4); X = 1/(32 pi^2 phi^4)
+the digits and the CODATA window are labeled witnesses of the committed form; no value is claimed beyond it
+
+PASS 01 PREFACTOR    1 + J Jbar = 3 - phi exactly in Z[zeta_5], and 3 - phi = |1 - zeta|^2 is the squared ramified chord: the Queen prefactor sqrt(s) = (3 - phi)^(1/4) = (1 + J Jbar)^(1/4) is the gravity modulus inside the electromagnetic number, exactly positive
+PASS 02 BERNOULLI    B_{2,chi5} = 5 sum chi5(a) B_2(a/5) = 4/5 exactly by the generalized Bernoulli definition with B_2(x) = x^2 - x + 1/6; chi5 is the even quadratic character mod 5
+PASS 03 GAUSS-TAU    the Gauss sum tau = zeta - zeta^2 - zeta^3 + zeta^4 equals 2 phi - 1 exactly in Z[zeta_5], tau^2 = 5, and 2 phi - 1 = sqrt5 with the positive sign: the L value normalization is computed, not cited
+PASS 04 UNIFICATION  L(2, chi5) = (2 pi/5)^2 tau B_{2,chi5}/4 = (4/125) sqrt5 pi^2 = 4 pi^2/(25 sqrt5), and 80 sqrt5 L(2, chi5) = (64/5) pi^2 = (8 pi)^2/5 exactly in Q: the preregistration witness formula and the Queen formula are one formula, and no independent L value enters the alpha sector
+PASS 05 QUEEN-FORM   alpha^-1 = (8 pi)^2 (3 - phi)^(1/4) (1 + X/5)^5 / 5 with X = (1/32) pi^-2 phi^-4, the same slip as the Weinberg correction; the binomial ladder (1 + X/5)^5 carries coefficients (1, 1, 2/5, 2/25, 1/125, 1/3125); every pi degree of the form is even (2 - 2k), so alpha is pi even and delta free; 64 = 2^(p+1) and 5 = p frame the prefactor
+PASS 06 ENCLOSURE    the committed form is enclosed by exact integer intervals at scale 10^50 (Machin arctangents for pi, integer square roots for sqrt5 and the fourth root, outward rounding on every operation): the enclosure width is below 10^-20, the unrounded value begins 137.0359991899, and rounded at the ninth decimal place both ends read 137.035999190, the committed digit string, a computed finite precision witness of the form
+PASS 07 FENCED-CODATA fenced measured comparison with the declared rational input CODATA 2022 alpha^-1 = 137.035999177(21): the enclosed formula value sits above the central value and within one part per billion of it; this is a measured witness, not a claim of the value, and it moves no status
+
+RESULT 7/7 ALL PASS

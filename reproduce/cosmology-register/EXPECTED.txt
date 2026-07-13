@@ -1,0 +1,13 @@
+TWIST-J cosmology register witness (exact arithmetic, formal pi)
+the gyron gate is the Thue-Morse pair (0, 0): rho = 1/6 = 1/(p + 1); the dark matter reading is 5 : 1
+w = -14/15; Omega_b = pi^2/200; K_chi5 = 1/(864 pi); the measured comparisons stay fenced
+
+PASS 01 TT-FREEZE    the deformation J -> J e^(i eps) freezes the modulus exactly: (J u)(Jbar u^-1) = J Jbar identically with the phase monomial u = e^(i eps) cancelling, while the argument moves (J u differs from J); the tensor channel carries zero at linear order about the isotropic background, r = 0
+PASS 02 TT-QUADRATIC the bilinear TT decoder: for the traceless symmetric doublet H = [[h1, h2], [h2, -h1]], det(I + H) - 1 = -h1^2 - h2^2 = -|h|^2 exactly, with no linear term: the induced tensor power begins at quadratic field order; a numerical r(k) stays on the frontier (TT-VECTOR-STATE-NORMALIZATION)
+PASS 03 PAIR-CENSUS  the sliding pair census of Thue-Morse obeys the exact substitution recursion at every dyadic scale 2^6 to 2^16: c_00(2N) = c_10(N), c_11(2N) = c_01(N), c_01(2N) = N/2 + c_11(N), c_10(2N) = N/2 + c_00(N), with the letters exactly balanced at N/2 each
+PASS 04 GYRON-SIXTH  the gyron gate is the pair (0, 0): the invariant 6 c_00(4N) - 4N = 6 c_00(N) - N holds exactly on every tested dyadic scale, and the pair substitution has the unique stationary vector (1, 2, 2, 1)/6 (M v = 2 v, rank(M - 2I) = 3, M^3 positive): the gyron density is rho = 1/6 = 1/(p + 1) exactly, and 1/rho = 6 is the proton prefactor of the mass ladder
+PASS 05 BASEL-GATE   the Basel gate books the squared phase |5 Li_1(J)|^2 = |i pi|^2 = pi^2 with the gyron weight f_00 = 1/6, landing on pi^2/6 = Li_2(1) = zeta(2) (Euler, cited): the kernel writes the phase, the clock decides when the phase is an event, and the sixth is minted by the clock
+PASS 06 REGISTER     the committed register forms are pure pi even parity eigenvectors: w = -14/15 with 14 = 15 - 1 and 15 = 3 p, Omega_b = pi^2/200 with 200 = 2^3 5^2, Omega_DM/Omega_b = 18 p^3 ln^2(phi)/pi^4 = 2250 ln^2(phi)/pi^4, and the tilt form n_s - 1 = -5 alpha; the dark matter reading 5 : 1 is (1 - f_00)/f_00 = 5 exactly; the measured comparisons stay fenced and NS-TILT stays live on the frontier
+PASS 07 CONFORMAL-K  the conformal prefactor at the homogeneous L5 scope: K_chi5 = k/(12 V_cell) = 12/(12 . 864 pi) = 1/(864 pi), the same flux coefficient as the gravity chain master closure, and c_hom = 12 K_chi5 = 1/(72 pi) with 864 = 12 . 72: one integer chain from the cell to the Friedmann coefficient
+
+RESULT 7/7 ALL PASS
