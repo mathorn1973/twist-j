@@ -91,4 +91,3 @@ The public `x86_64` check will determine whether the two-architecture
 computation gate is complete. The normative registry and frontier transition
 is deliberately excluded from this probe pull request and belongs to the
 separate sealed fold prescribed by the ruling.
-
