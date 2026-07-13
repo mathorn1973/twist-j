@@ -48,7 +48,10 @@ with a reason in the audit and queued here, never registered vaguely.
    force-born-dictionary cluster resolves eight further occurrences;
    the photon-electron cluster resolves the seven occurrences of
    section 9 (five bracketed labels and the two unbracketed markers);
-   11 unmapped occurrences remain, in sections 10, 11 and 16.
+   the observer-boost cluster resolves four further occurrences;
+   7 unmapped occurrences remain, in sections 11 and 16. The count is
+   derived from the post-photon, post-observer prep gate and will be
+   recomputed before any staging pin.
 6. Full local check run, security audit, PR template fields.
 
 ## Two architecture witness
@@ -169,6 +172,22 @@ candidate commit.
   153 claims. The section 9 status gate debt is resolved; 11 unmapped
   occurrences remain in sections 10, 11 and 16.
 
+- s17 (2026-07-13): observer/boost reconciliation, prepared
+  asynchronously from synthesis c7e2062 and then rebased onto the
+  integrated photon/electron head. Four registry rows:
+  BOOST-READING-SPLIT T (the parity-resolved Binet identities for all
+  n, the exact beta addition law, and the constant unit gap),
+  BOOST-COUNT-LADDER D (integer rapidity and decoder dictionary),
+  OBSERVER-ALTERNATOR D (the 1 + 3 and 2 + 2 readings of mu_4), and
+  BOOST-AXIS D (the alternator-axis reading in the commuting diagonal
+  model). reproduce/observer-boost checks the exact Q(sqrt5) algebra,
+  Fibonacci/Lucas parity, index addition, beat factorization, the
+  finite mu_4 partitions, and the axis projectors: 8/8, verifier
+  9f31710f, stdout 04ac093a, exit 0, empty stderr; the negative
+  mutation exits 1. Registry 157 claims on this prep base; the status
+  gate reports 7 remaining occurrences. This is still prep only: no
+  formal run record and no staging pin until counts are recomputed and
+  every post-rebase gate passes.
 - s15 (2026-07-13): the force and Born dictionary reconciliation:
   reproduce/force-born-dictionary (10/10: the finite Weyl
   commutator on five states; the exact C4 Green pseudoinverse; the

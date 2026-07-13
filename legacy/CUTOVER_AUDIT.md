@@ -311,6 +311,19 @@ PHOTON-WINDOW-PROOF           O-PWP-KAPPA and O-PWP-ROUGH, merged
                                to one public row with both
                                conditions explicit and the import
                                declared                              O
+BOOST-READING-SPLIT           T-BOOST-READING-SPLIT (T-LOCK, v140);
+                               carried at public T with the exact
+                               parity-resolved Binet proof and
+                               witness                               T
+BOOST-COUNT-LADDER            D-BOOST-COUNT-LADDER (D); the integer
+                               rapidity and velocity dictionary,
+                               resting on BOOST-READING-SPLIT        D
+OBSERVER-ALTERNATOR           D-SPLIT22 (D); the 1 + 3 observer and
+                               2 + 2 substrate partitions, with the
+                               alternator as dictionary hinge        D
+BOOST-AXIS                    D-FROZEN-AXIS (D); the alternator-axis
+                               reading in the commuting diagonal
+                               boost model                            D
 ```
 
 ## Intentional omissions so far (to be resolved before the PR)
@@ -329,9 +342,11 @@ and electron cluster resolves the seven occurrences of section 9
 (five bracketed labels and the two unbracketed markers); the internal
 gyron window count law and the signature family constants stay
 internal by author decision, recorded on the ELECTRON-SIGN-LAWS and
-ELECTRON-SIGN rows above. The gate measures 11 remaining unmapped
-occurrences, in sections 10, 11 and 16, awaiting the pre PR
-reconciliation. Explicitly omitted
+ELECTRON-SIGN rows above. The observer/boost cluster resolves four
+more through
+BOOST-READING-SPLIT, BOOST-COUNT-LADDER, OBSERVER-ALTERNATOR, and
+BOOST-AXIS. The gate measures 7 remaining unmapped occurrences, in
+sections 11 and 16, awaiting the pre PR reconciliation. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author
 decision: an optional enrichment, not a gap; stays internal);
 W1-INTERFACE-PRINCIPLE, KERNEL-BRAID, and TIMEQUANTUM-POTENTIAL
