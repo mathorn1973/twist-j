@@ -55,3 +55,9 @@ readouts without public evidence move outside the normative Canon;
 retained measured comparisons carry explicit source identifiers.
 The unsupported WKB3 ringdown firing and bare-neutron ppm residual are
 engineering notes, not public claim or comparison evidence.
+
+Final Genesis review completes the section 18 inventory of all 28 live
+rows, removes an unsupported p-dependent gloss from `GYRON-DENSITY`,
+and reserves `r_T(k)` for the tensor-to-scalar ratio so
+it cannot be confused with the finite-kernel or radial coordinates.
+Claim and status counts are unchanged.

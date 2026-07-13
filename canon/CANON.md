@@ -65,6 +65,8 @@ sixth finite-kernel coordinate is r. T_pl denotes the plenum point;
 M_J denotes multiplication by J. The finite phase character is z_6 =
 Tr_6 and the piston character is Tr_4. The ramified chord is s_J and
 the kernel transport offset is s_c. p = 5 and d = 3 throughout.
+The tensor-to-scalar ratio is r_T(k), distinct from the finite-kernel
+coordinate r and the radial coordinate used in continuum formulas.
 K_chi5 = 1/(864 pi) is the conformal mode prefactor.
 
 **Primitive and architecture inventory.**
@@ -856,20 +858,20 @@ Cosmology (reproduce/cosmology-register): the exact deformation
 J -> J e^(i eps) freezes J Jbar at linear order
 (TT-LINEAR-ZERO [T]). COSMOLOGY-READING-DICTIONARY [D] reads that
 identity as zero linear tensor response about the declared isotropic
-background and hence as r = 0 at that dictionary layer; it also reads
+background and hence as r_T = 0 at that dictionary layer; it also reads
 the gyron density as the mass-ladder prefactor and the registered
 forms below as cosmological observables. It is not a uniqueness or
 full perturbation theorem. The tilt n_s - 1 = -p alpha = -5 alpha is
 at H (NS-TILT, falsifier live at CMB-S4); the bilinear TT decoder
 permits induced tensor power at quadratic field order
-(TT-QUADRATIC-INDUCED) [D]; a numerical r(k) waits on the vector state
+(TT-QUADRATIC-INDUCED) [D]; a numerical r_T(k) waits on the vector state
 normalization (TT-VECTOR-STATE-NORMALIZATION). Dark
 energy w = -14/15; Omega_b = pi^2 / 200; Omega_DM / Omega_b =
 18 p^3 ln^2(phi) / pi^4, and the dark matter ratio 5 : 1 follows from
 Thue-Morse pair statistics (COSMOLOGY-REGISTER at D, the committed
 forms with fenced comparisons); the gyron density rho = 1/6
-(GYRON-DENSITY) [T, quadruply confirmed]: the named Thue-Morse pair
-(0, 0) has exact stationary density rho = 1/6 = 1/(p + 1). Its proton
+(GYRON-DENSITY) [T]: the named Thue-Morse pair
+(0, 0) has exact stationary density rho = 1/6. Its proton
 and cosmology assignments belong to COSMOLOGY-READING-DICTIONARY [D].
 The conformal mode prefactor K_chi5 =
 1/(864 pi) is derived at the homogeneous L5 scope from the single
@@ -982,7 +984,7 @@ GRAVITATIONAL WAVE
   TT-SOURCE                  the emission map
   QNM-LEAVER-MU              the quasinormal mu decision
   POL-READ                   the polarization readout
-  TT-VECTOR-STATE-NORMALIZATION  the only gate yielding a numerical r(k)
+  TT-VECTOR-STATE-NORMALIZATION  the only gate yielding a numerical r_T(k)
 COSMOLOGY
   FRW-INHOM                  the inhomogeneous sector, the named
                              classical horizon
@@ -994,6 +996,12 @@ COLOR
   GENERATIONS-L3             the generation structure at the L3 frontier
 ELECTRON AND LADDER
   SPIN-LIFT-FORCED           whether the dicyclic spin lift is forced
+PHOTON
+  PHOTON-WINDOW-PROOF        the closed charge 5 worldline occupancy
+                             bound and electric face roughening certificate
+QUANTUM BOUNDARY
+  BELL-MAGIC-BOUNDARY        the exact CHSH maxima over the zeta_5 and
+                             zeta_8 phase sets for a stated functional
 PLENUM AND KERNEL
   KC3-PLENUM-READOUT         the residue class readout of the ramified
                              place

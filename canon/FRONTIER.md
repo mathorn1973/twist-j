@@ -63,7 +63,7 @@ Closed claims are excluded.
   Decision: closes positively by furnishing the dynamical face: a dynamics whose time quantum realizes the gate line square root; closes negatively if the dynamical face is proven empty
 - TT-SOURCE [O]: the emission map from an explicitly defined public source object
   Decision: closes positively by deriving the typed emission map and its source dependency; closes negatively if no map satisfies the registered TT propagation and conservation constraints
-- TT-VECTOR-STATE-NORMALIZATION [O]: the vector doublet state, its two point and pseudo covariance spectra, the action normalization, the scalar comparison; the only gate yielding a numerical r(k)
-  Decision: closes positively by a public vector-doublet normalization yielding a numerical r(k); closes negatively if every admissible normalization violates the registered TT identities or requires an extra free dimensionless input
+- TT-VECTOR-STATE-NORMALIZATION [O]: the vector doublet state, its two point and pseudo covariance spectra, the action normalization, the scalar comparison; the only gate yielding a numerical r_T(k)
+  Decision: closes positively by a public vector-doublet normalization yielding a numerical r_T(k); closes negatively if every admissible normalization violates the registered TT identities or requires an extra free dimensionless input
 
 Live total: 28.
