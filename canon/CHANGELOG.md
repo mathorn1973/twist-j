@@ -30,7 +30,7 @@ dynamical-color route, the minimal exponential ringdown reading, and
 the tau anyon reading of the phibit
 at their registered scopes; 34 live frontier rows,
 each with a concrete falsifier or a decision condition stating what
-closes it positively and what closes it negatively); twenty
+closes it positively and what closes it negatively); twenty-one
 reproduction witnesses (kernel, alpha-exact-lemma, born-faces, census,
 born-quartet, dirac-ladder, color-ladder, gravity-chain,
 mass-ladder, weinberg, maxwell, alpha-value, cosmology-register,

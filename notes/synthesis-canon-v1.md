@@ -205,8 +205,10 @@ candidate commit.
   the strict sentence-local status checker and its seven focused tests
   enter with this closure. Registry 163 claims on this prep base:
   82 T, 32 D, 12 C, 3 F, 28 O, 6 H; the status gate reports zero.
-  This remains prep until observer-boost is integrated and every gate
-  is rerun on the resulting synthesis base.
+  Immutable candidate 6778fc7 was reproduced on Ubuntu 24.04 x86_64
+  (Python 3.12.13) and aarch64 (Python 3.12.3), byte-identical at
+  stdout 805cc0f2 (801 bytes), exit 0 and empty stderr; the two-record
+  validator passed and staging head a8241c8 fast-forwarded synthesis.
 - s15 (2026-07-13): the force and Born dictionary reconciliation:
   reproduce/force-born-dictionary (10/10: the finite Weyl
   commutator on five states; the exact C4 Green pseudoinverse; the
