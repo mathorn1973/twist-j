@@ -1,6 +1,6 @@
 # P-BELL-MAGIC-BOUNDARY-1 result
 
-Status: FORMAL LOCAL RESULT; PUBLIC X86_64 REPRODUCTION REQUIRED FOR MERGE
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS
 
 ## Scientific decision
 
@@ -44,11 +44,19 @@ different observable and remains outside this probe.
 preregistration pin: 1e141603b7977902a88e80d5fe6ff2d72364f82e
 verifier SHA-256:    6fcfe90a0e920b85ade1e6ff93f799137fec41c1bb6fb1d3fea119da1c0c7268
 formal run commit:   f753bb0cd4acef4a7ce02094c62b9d4fe47de5a4
-local architecture:  aarch64
-local platform:      Ubuntu 24.04
-local Python:        3.12.3
-exit code:           0
-stderr bytes:        0
+
+aarch64 platform:    Ubuntu 24.04
+aarch64 Python:      3.12.3
+aarch64 exit code:   0
+aarch64 stderr:      0 bytes
+
+x86_64 workflow run: 29281622849
+x86_64 workflow job: 86923949971
+x86_64 platform:     Ubuntu 24.04.4
+x86_64 Python:       3.12.13
+x86_64 exit code:    0
+x86_64 stderr:       0 bytes
+
 stdout SHA-256:      7f6d21994ae02a07a6399853f5bef6748f0b16569304e58095d1589ccc01a3da
 stdout bytes:        852
 stdout lines:        14
@@ -59,7 +67,12 @@ local run record. Audit success and the positive scientific decision are
 separate: exit zero certifies exact execution and integrity, while
 `DECISION POSITIVE` records the preregistered scientific branch.
 
-The repository pull-request workflow must independently rerun the pinned
-verifier on GitHub `x86_64` with Python 3.12 and reproduce `EXPECTED.txt`
-byte for byte. This file does not claim that pending public check; merge is
-forbidden unless it passes together with all policy and ledger checks.
+The public repository pull-request workflow independently reran the pinned
+verifier on GitHub `x86_64` with Python 3.12.13 and reproduced
+`EXPECTED.txt` byte for byte. Its verifier and reproduction stages passed;
+the run's later failure was an unrelated post-cutover activation-routing
+false negative. That routing defect was corrected separately by policy PR
+`#14`, merged as `eabf309d8f73ff452e116d163487fa62f4191620`, without relaxing
+immutable tag or release readback. The formal `aarch64` record and public
+`x86_64` reproduction therefore satisfy the two-architecture computation
+gate for this finite result.
