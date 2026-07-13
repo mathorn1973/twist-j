@@ -31,6 +31,8 @@ conservative pending public probe machinery.
 public claim id                internal source (status)             public
 J-UNIT                         Part I unit facts (T)                T
 J-PROJECTIONS                  Part I two projections (T)           T
+AXIOM-PROJECTION-DICTIONARY    Genesis G2B split of the Part I
+                               physical projection/plenum reading   D
 PI-FROM-J                      Part I, Li_1(J) = i pi/5 (T)         T
 J-GOLDEN-BRIDGE                kernel facts, glossary (T)           T
 J-STEP                         step map, M_J columns (T)            T
@@ -74,6 +76,8 @@ COLOR-RETURN-D5                T-H1-DIHEDRAL, T-D5-GOLDEN-TABLE,
 COLOR-TORSOR-HOLONOMY          T-D5-TORSOR, T-SP-HOLONOMY,
                                T-SP-ORIENTATION (T)                 T
 COLOR-SPLIT-12                 D-SP-SPLIT12 (D)                     D
+COLOR-LADDER-DICTIONARY        Genesis G2B split of the color
+                               interpretation from the exact rungs  D
 COLOR-DYNAMICAL-COLOR          F-RUNG3-TRIVIAL-DYNAMICAL (fired)   F
 COLOR-KIN-NORMALIZER           T-KIN-COLOR-NORMALIZER (T)          T
 COLOR-KINEMATICAL-GL2          D-KIN-COLOR-GL2,
@@ -143,6 +147,8 @@ TT-QUADRATIC-INDUCED           D-TT-QUADRATIC-INDUCED-POWER (D)     D
 GYRON-DENSITY                  rho = 1/6 (T-LOCK SS80, SS86.1,
                                quadruply confirmed); the gyron gate
                                SS78.1; T-BASEL-TM-GATE (T)           T
+COSMOLOGY-READING-DICTIONARY   Genesis G2B split of the tensor,
+                               gyron, and observable readings        D
 COSMOLOGY-REGISTER             the Part VIII committed register
                                (w LOCK; the ratio theorem; N clock
                                at D and C); comparisons fenced       D
@@ -252,6 +258,8 @@ CURVATURE-TRACE-VALUE          SS103 space is a commutator (T-LOCK)
 DEGREES-BY-PRIME               the two places degree split (T);
                                carried at T                          T
 Z2-PLACES-SPLIT                the Z2 family seal (T); carried at T  T
+TWO-PLACE-PHYSICS              Genesis G2B split of the place and
+                               CPT dictionary from exact arithmetic D
 I-BILOCATED                    the bilocation reading (D); carried
                                at D                                  D
 SILVER-RING-FACTS              the finite computations at the two
@@ -265,6 +273,8 @@ LOG-AXES-INDEPENDENCE          pi and ln phi linearly independent
                                inline; linear only, public T         T
 FORCE-WEYL-HOLONOMY           Part IV finite Heisenberg identity;
                                carried at public T by exact witness T
+FORCE-AS-CURVATURE            Genesis G2B split of the force reading
+                               from the finite Weyl identity          D
 COULOMB-GREEN-COMPUTATION     SS9.2 exact C4 pseudoinverse (sealed T);
                                conservatively carried at public C   C
 COULOMB-PROJECTION            Part IV common-propagator force

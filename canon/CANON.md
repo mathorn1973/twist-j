@@ -27,9 +27,11 @@ Canonu v1 deklarovana zvlast a neni vydavana za jednoznacny dusledek J.
 System nema vnejsi hranici ani vnejsi hodiny.
 
 **Reading.** Time is a counter. Space is a commutator. J is the verb;
-phi and pi are projections of J, not primitives. Two forces are two
-J-projections: the modulus gives gravity and scale, the argument gives
-electromagnetism and phase. Plenum, not vacuum.
+phi and pi are projections of J, not primitives. The assignment of
+the modulus to gravity and scale and of the argument to
+electromagnetism and phase is the public dictionary
+AXIOM-PROJECTION-DICTIONARY [D], not part of the algebraic theorem.
+Plenum, not vacuum.
 
 **Conventions.** No em dashes. No decimals unless justified: integers
 and ratios are primary; decimals appear only as computed or measured
@@ -87,12 +89,11 @@ theorem.
 
 J = 1 + zeta_5^2 is a cyclotomic unit: N(J) = 1 and Tr(J) = 3 in
 Q(zeta_5), with Galois conjugate moduli (phi^-1, phi, phi, phi^-1)
-(J-UNIT [T], reproduce/kernel). The two projections of the unit are
-the two forces:
+(J-UNIT [T], reproduce/kernel). Its two archimedean projections are:
 
 ```
-|J|    = 1/phi        the modulus projection    gravity and scale
-arg(J) = 2 pi / 5     the argument projection   electromagnetism and phase
+|J|    = 1/phi        the modulus projection
+arg(J) = 2 pi / 5     the argument projection
 ```
 
 Derivation (J-PROJECTIONS [T]): with j = e^(2 pi i/5), J = 1 + j^2 =
@@ -100,6 +101,13 @@ Derivation (J-PROJECTIONS [T]): with j = e^(2 pi i/5), J = 1 + j^2 =
 |J| = 1/phi and arg J = 2 pi/5. The algebraic half is exact in the
 kernel witness as J Jbar = 2 - phi = phi^-2 (J-MODULUS-CHORD [T],
 reproduce/kernel).
+
+AXIOM-PROJECTION-DICTIONARY [D] reads the modulus projection as
+gravity and scale and the argument projection as electromagnetism and
+phase. It also reads the CRT factors of T_pl as the prime 5 write and
+prime 2 read and the unit and ramified chords as the gravity and space
+channels. These assignments rest on the exact rows above and below;
+they are neither algebraic consequences nor uniqueness claims.
 
 pi enters from the argument side (PI-FROM-J [T]): 1 - J = -j^2 is a
 primitive tenth root of unity (J-TENTH-ROOT [T], reproduce/kernel),
@@ -126,12 +134,11 @@ with s_J^2 = 1 + J Jbar = 3 - phi = sqrt5/phi. Derivation: J Jbar =
 2 - phi gives s_J^2 = 3 - phi, and (3 - phi) phi = 2 phi - 1 =
 sqrt5. |T_pl| = 2; arg T_pl = 3 pi/10; zeta_5 T_pl^2 + 4 = 0,
 since T_pl^2 = -4 j^4; T_pl^10 = -2^10; T_pl/2 = zeta_20^3,
-and the CRT split T_pl/2 = zeta_4^-1 zeta_5^2 says prime
-5 writes, prime 2 reads, and they meet at the archimedean place in the
-plenum point itself. s_J = |1 - zeta_5| is the ramified chord:
-N(1 - zeta_5) = 5 (J-RAMIFIED-CHORD [T], reproduce/kernel), while the
-modulus chord is a unit chord: gravity reads the unit chord, space
-reads the ramified chord [T]. At the magic prime the axiom has a
+and the CRT split is T_pl/2 = zeta_4^-1 zeta_5^2. The ramified chord
+s_J = |1 - zeta_5| obeys N(1 - zeta_5) = 5
+(J-RAMIFIED-CHORD [T], reproduce/kernel), while the modulus chord is a
+unit chord. Their physical channel assignment belongs only to
+AXIOM-PROJECTION-DICTIONARY [D]. At the magic prime the axiom has a
 square root: sqrt(J) = tau in F_25 (section 11).
 
 ## 2. Time, space, and the decoder
@@ -301,8 +308,9 @@ is asserted here.
 
 ## 4. The two places
 
-The framework lives at two arithmetic places, disjoint over Q:
-Q(zeta_5) cap Q(zeta_8) = Q.
+The exact arithmetic uses two places, disjoint over Q:
+Q(zeta_5) cap Q(zeta_8) = Q. Their physical assignment is the
+TWO-PLACE-PHYSICS dictionary [D]:
 
 ```
 v_5 WRITES: home Q(zeta_5), real floor Q(sqrt5), state F_5^6; geometry,
@@ -311,29 +319,33 @@ v_5 WRITES: home Q(zeta_5), real floor Q(sqrt5), state F_5^6; geometry,
 v_2 READS the quadratic mode: home Q(zeta_8), real floor Q(sqrt2), with i
     and the foreign qubit magic m_8 = zeta_8 (order 8, prime 2); Clifford,
     Born, the outside read.
-They meet only over Q. The layer boundary IS the field boundary.
+They meet only over Q. The dictionary reads the layer boundary as the
+field boundary; it does not prove that this reading is unique.
 ```
 
-The reading is not globally prime 2: the degrees split by prime,
-linear to 5, quadratic to 2, cubic to 5, foreign magic to 2
-(DEGREES-BY-PRIME [T], reproduce/foundations-places): sqrt5 lives at
-zeta_5 by (2 phi - 1)^2 = 5, sqrt2 and i live at zeta_8 by
+The exact field facts are DEGREES-BY-PRIME [T]
+(reproduce/foundations-places): sqrt5 lives at zeta_5 by
+(2 phi - 1)^2 = 5, while sqrt2 and i live at zeta_8 by
 (m_8 + m_8^-1)^2 = 2 and m_8^2 = i, and neither sqrt2 nor i lies in
-Q(sqrt5), the unique quadratic subfield of Q(zeta_5). The Z2
-symmetries split into two families (Z2-PLACES-SPLIT [T],
-reproduce/foundations-places): cyclotomic Galois involutions at
-exactly two places (one involution at zeta_5, the single order 2
-element of the cyclic Galois group, where the forces split; a
-complete Klein four at zeta_8, where every nontrivial element is an
-involution), and the Thue-Morse time reversal, which is not Galois;
-CPT = CP (Galois, zeta_5) composed with T (Thue-Morse); zeta_3 is
-disjoint but unrealized: there is no third place. i is bilocated
+Q(sqrt5), the unique quadratic subfield of Q(zeta_5). The linear,
+quadratic, cubic, and foreign-magic assignments are readings of these
+facts under TWO-PLACE-PHYSICS [D]. The Z2
+symmetries split arithmetically (Z2-PLACES-SPLIT [T],
+reproduce/foundations-places): there is one involution at zeta_5, the
+single order 2 element of its cyclic Galois group, and a complete
+Klein four at zeta_8, where every nontrivial element is an involution;
+5 = (2 + i)(2 - i) in Z[i], with conjugation swapping the factors.
+TWO-PLACE-PHYSICS [D] separately reads CP from the zeta_5/Gaussian
+conjugation and T from the Thue-Morse reversal, hence CPT as their
+composition; this is a dictionary, not a theorem identifying the
+physical CPT operator. The same dictionary assigns forces to sqrt5,
+spin to sqrt2, and charge conjugation to i. i is bilocated
 (I-BILOCATED [D], reproduce/foundations-places): the order 4 element
 of F_5* at v_5 and zeta_8^2 at v_2, identified only over Q, never
-merged. Every genuine cross place transfer descends to Q; the Born
-square is the descent operator; a transfer is rational, integer, or a
-ratio: a definition, with the descent values carried by the Born
-rows. The silver ring facts (SILVER-RING-FACTS [C],
+merged. TWO-PLACE-PHYSICS also declares the Born square as the descent
+reading for cross-place transfers; its values are carried by the Born
+rows, and no completeness claim is made. The silver ring facts
+(SILVER-RING-FACTS [C],
 reproduce/foundations-places): inside F_25 = F_5(sqrt 2), where the
 step collapses to the doubling J = 2, tau = sqrt(J) has tau^4 = -1
 with ord(tau) = 8, and F_25* is cyclic of order 24; norm, orders,
@@ -341,30 +353,30 @@ cyclicity, and census are finite computations. The silver sibling
 (SILVER-SIBLING [D], reproduce/foundations-places) is the dictionary
 reading resting on those facts: m_8 = zeta_8 = sqrt(i) at prime 2 with
 the silver unit 1 + sqrt2 of norm -1 mirrors tau = sqrt(J) at prime 5;
-sqrt(i) is the square root of the axiom read at the foreign place. Charge conjugation is the swap
-of the two Gaussian primes above p: 5 = (2 + i)(2 - i), the swap is
-conjugation, carried inside Z2-PLACES-SPLIT; forces at sqrt5, spin at
-sqrt2, charge conjugation at i.
+sqrt(i) is the square root of the axiom read at the foreign place.
 
 ## 5. The force is the curvature
 
-A force is not added; it is the curvature of the genesis phase space.
-The finite Weyl holonomy is exact on all five basis states
+The finite Weyl commutator is exact on all five basis states
 (FORCE-WEYL-HOLONOMY [T], reproduce/force-born-dictionary):
 
 ```
-Z X Z^-1 X^-1 = j I;   the flux quantum is arg j = 2 pi / 5.
+Z X Z^-1 X^-1 = j I;   j has exact order 5 and arg j = 2 pi / 5.
 ```
 
-J = 1 + j^2 packages the force quantum; its two projections are the
-two abelian forces (J-PROJECTIONS [T]).
+FORCE-AS-CURVATURE [D] reads this holonomy as a force curvature and,
+through AXIOM-PROJECTION-DICTIONARY [D], reads the two J projections
+as the two abelian force channels. This physical assignment is not
+part of FORCE-WEYL-HOLONOMY [T] and no uniqueness of the force
+dictionary is claimed.
 
-Gravity is closed by three legs: the action leg (the cell action
-864 pi at k = d(d + 1) = 12, derived from J); the observational leg
-(quadrupole power against the Hulse-Taylor binary pulsar, 99.84
-percent match [measured comparison]); the kernel leg (A_GD =
-1/(8 pi) on the A_3 lattice, with lambda = 216 pi derived, not
-fitted). Closed form:
+The gravity dictionary currently places three labeled ingredients
+side by side: the cell action 864 pi at k = d(d + 1) = 12, the
+quadrupole-power comparison against the Hulse-Taylor binary pulsar
+(99.84 percent [measured comparison]), and the declared kernel
+coefficient A_GD = 1/(8 pi) with lambda = 216 pi. Their conjunction is
+a GRAVITY-BRIDGE-LAW reading [D], not an additional theorem and not a
+public value of G. Its exact displayed identity is:
 
 ```
 G_nat = d^3 = 27 = 864 pi x 2 / (4 pi x 16).
@@ -387,8 +399,9 @@ structure is the polar dictionary (FORCE-POLAR-SIGN [D]): mass is a
 modulus, one sign, universal attraction; charge is an argument, two
 signs.
 
-The classical Maxwell system closes exactly [MAXWELL-CLOSED at D,
-the chain layer at T; reproduce/maxwell]: the Bianchi identity
+The exact chain rows and the classical dictionary are separate. The
+chain layer is at T and MAXWELL-CLOSED is its D reading
+(reproduce/maxwell): the Bianchi identity
 holds identically in the 32 edge symbols and gauge invariance is
 an identity (MAXWELL-BIANCHI); Gauss is the boundary equation on
 the closed spatial torus, with a constructive dipole
@@ -417,11 +430,11 @@ image exactly; the tilt magnitude is exactly sqrt5/5, with sign set by
 the Thue-Morse slot orientation; the Legendre symbol (2|5) = -1 is
 realized on this face.
 
-Coupling seeds: the coupling root of a sector is the Gram weight of
-its carrier direction; trace and conformal directions carry 1/p, the
-spatial base carries 1; the 3/4 = d/(d + 1) measure attaches to
-spatial gauge sectors only (MEASURE-SPATIAL-ONLY) [T]. alpha* = 1/p;
-the strong root is 1 x 3/4 x 1 = 3/4 (STRONG-SEED) [D]; the seed
+Coupling seeds: the declared decomposition has exact Gram weights 1/p
+on the trace and conformal directions and 1 on the spatial base, with
+3/4 = d/(d + 1) (MEASURE-SPATIAL-ONLY [T]). STRONG-SEED [D] reads
+these weights as coupling roots on the spatial gauge sector:
+alpha* = 1/p and the strong root is 1 x 3/4 x 1 = 3/4; the seed
 ratio EM to strong is 15 : 4. Dark
 energy w = -14/15. Running and scheme are frontier rows
 (ALPHA-S-RUNNING, SCHEME-DICTIONARY).
@@ -530,7 +543,8 @@ step: the staircase of root orders 4 -> 8 -> 16 is first realized at
 F_5 -> F_25 -> F_625, with minimality against every smaller degree
 (16 divides none of 4, 24, 124), gated by the square condition on the
 bisector norm (BORN-ORDER-STAIRCASE). No positivity is claimed in the finite
-read: probabilities are the decoder step.
+algebra. Probability and measurement language belongs to the
+MEASURE-BORN-VERB dictionary [D], not to any of the four theorem rows.
 
 The measure dictionary reads the Born square of the verb
 (MEASURE-BORN-VERB [D], reproduce/force-born-dictionary):
@@ -547,11 +561,12 @@ valued in fifths, flux quantum zeta_5; amplitudes are unimodular; the
 measure is the Born square.
 
 The substrate knit (SUBSTRATE-KNIT [T],
-reproduce/force-born-dictionary): the two abelian faces are the two
-conjugate Born readouts C_+ = I + S and C_- = C_+^T of a single verb
-state; C_+ C_+^T = circ(2, 1, 0, 0, 1) with exact spectrum w; the
-position and Fourier face bases are mutually unbiased, 1/5 on all 25
-pairs; the Plancherel masses are 2 and 10, in the ratio p = 5.
+reproduce/force-born-dictionary) is the exact matrix statement:
+C_+ = I + S and C_- = C_+^T obey
+C_+ C_+^T = circ(2, 1, 0, 0, 1) with spectrum w; the position and
+Fourier bases have squared overlap 1/5 on all 25 pairs; the Plancherel
+masses are 2 and 10, in the ratio p = 5. Reading C_+ and C_- as two
+abelian faces is part of KERNEL-CELL-DICTIONARY [D].
 
 ## 9. The photon and the electron
 
@@ -699,13 +714,13 @@ reading is archived, not deleted.
 
 ## 12. The color door
 
-The non abelian bridge is structural. Z[zeta_5] supplies the
-icosahedral torus; the binary icosahedral group 2I = SL_2(F_5) is the
-finite color core; color su(3) is read on the traceless endomorphisms
-of the three dimensional trace kernel. This section closes the exact
-eleven-rung ladder to the core. It does not close QCD running,
-confinement, or the measure lift from the core to the full
-SL_3(F_5) carrier.
+The theorem layer in this section is finite group, representation,
+and invariant theory. COLOR-LADDER-DICTIONARY [D] reads its D5 to 2I
+to E8 ladder as the nonabelian color door and reads color su(3) on the
+traceless endomorphisms of the three dimensional trace kernel. The
+dictionary rests on the exact rungs below; it proves neither a unique
+color assignment nor QCD running, confinement, or the measure lift
+from the core to the full SL_3(F_5) carrier.
 
 Rungs 1 and 2 (COLOR-RETURN-D5 and COLOR-TORSOR-HOLONOMY [T],
 COLOR-SPLIT-12 [D], reproduce/color-ladder): the return group is
@@ -832,20 +847,26 @@ rho = rho_0 ell^2, or E_total = 0. The ell-G wall is a mechanism wall:
 ell_P / lambda_e = (32/33) alpha^10 / sqrt(g), with the exponent
 identity G_T = alpha^(20 + sigma) (GRAVITY-BRIDGE-LAW).
 
-Cosmology (reproduce/cosmology-register): the tilt is n_s - 1 =
--p alpha = -5 alpha at H (NS-TILT, falsifier live at CMB-S4). The
-deformation J -> J e^(i eps) freezes the modulus, so r = 0 at linear
-order about the isotropic background (TT-LINEAR-ZERO) [T]; the
-bilinear TT decoder permits induced tensor power at quadratic field
-order (TT-QUADRATIC-INDUCED) [D]; a numerical r(k) waits on the
-vector state normalization (TT-VECTOR-STATE-NORMALIZATION). Dark
+Cosmology (reproduce/cosmology-register): the exact deformation
+J -> J e^(i eps) freezes J Jbar at linear order
+(TT-LINEAR-ZERO [T]). COSMOLOGY-READING-DICTIONARY [D] reads that
+identity as zero linear tensor response about the declared isotropic
+background and hence as r = 0 at that dictionary layer; it also reads
+the gyron density as the mass-ladder prefactor and the registered
+forms below as cosmological observables. It is not a uniqueness or
+full perturbation theorem. The tilt n_s - 1 = -p alpha = -5 alpha is
+at H (NS-TILT, falsifier live at CMB-S4); the bilinear TT decoder
+permits induced tensor power at quadratic field order
+(TT-QUADRATIC-INDUCED) [D]; a numerical r(k) waits on the vector state
+normalization (TT-VECTOR-STATE-NORMALIZATION). Dark
 energy w = -14/15; Omega_b = pi^2 / 200; Omega_DM / Omega_b =
 18 p^3 ln^2(phi) / pi^4, and the dark matter ratio 5 : 1 follows from
 Thue-Morse pair statistics (COSMOLOGY-REGISTER at D, the committed
 forms with fenced comparisons); the gyron density rho = 1/6
-(GYRON-DENSITY) [T, quadruply confirmed]: the gyron gate is the
-Thue-Morse pair (0, 0), and 1/rho = 6 = p + 1 is the proton
-prefactor of the mass ladder. The conformal mode prefactor K_chi5 =
+(GYRON-DENSITY) [T, quadruply confirmed]: the named Thue-Morse pair
+(0, 0) has exact stationary density rho = 1/6 = 1/(p + 1). Its proton
+and cosmology assignments belong to COSMOLOGY-READING-DICTIONARY [D].
+The conformal mode prefactor K_chi5 =
 1/(864 pi) is derived at the homogeneous L5 scope from the single
 layer 5 action, with c_hom = 12 K_chi5 = 1/(72 pi)
 (CONFORMAL-PREFACTOR) [D]; the

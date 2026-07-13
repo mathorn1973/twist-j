@@ -49,20 +49,29 @@ the public reading split is a dictionary at its registered legs
 
 Stable orientation results:
 
-- J-UNIT [T], J-GOLDEN-BRIDGE [T], J-STEP [T]: exact arithmetic of J.
+- J-UNIT [T], J-PROJECTIONS [T], PLENUM-POINT [T], J-GOLDEN-BRIDGE
+  [T], J-STEP [T]: exact arithmetic of J; AXIOM-PROJECTION-DICTIONARY
+  [D] carries the physical projection and plenum readings.
 - CENSUS-313 [C]: 313 attractors in the declared finite checkpoint.
 - BORN-HALF-ANGLE [T], BORN-RESIDUAL-SPLIT [T], SPIN-BISECTOR [T],
-  BORN-ORDER-STAIRCASE [T]: the Born quartet at its finite scope.
+  BORN-ORDER-STAIRCASE [T]: the finite algebraic quartet;
+  MEASURE-BORN-VERB [D] is the measurement dictionary.
 - MAXWELL-BIANCHI [T], MAXWELL-GAUSS-CHAIN [T],
   MAXWELL-AMPERE-CHAIN [T], MAXWELL-OBSTRUCTION-P [T]: the exact
   chain layer; MAXWELL-CLOSED [D] is its classical dictionary.
+- Z2-PLACES-SPLIT [T]: the exact Galois census and Gaussian-prime
+  swap; TWO-PLACE-PHYSICS [D] carries the place and CPT readings.
+- FORCE-WEYL-HOLONOMY [T]: the finite Weyl commutator;
+  FORCE-AS-CURVATURE [D] carries the force-curvature reading.
 - FRW-CANONICAL-FORM [T]: the registered homogeneous rank-one lapse
   scope; GRAVITY-BRIDGE-LAW [D] is the SI equation dictionary, while
+  COSMOLOGY-READING-DICTIONARY [D] carries the cosmological reading and
   the numerical value of G remains open.
 - BOOST-READING-SPLIT [T]: exact integer-index rapidity algebra;
   BOOST-COUNT-LADDER [D] is the velocity dictionary.
-- COLOR-MCKAY-E8 [T] and its registered ladder: the finite color
-  theorem layer; COLOR-KINEMATICAL-GL2 [D] is a dictionary reading.
+- COLOR-MCKAY-E8 [T] and its registered ladder: finite group,
+  representation, and invariant theory; COLOR-LADDER-DICTIONARY [D]
+  and COLOR-KINEMATICAL-GL2 [D] carry the color readings.
 
 Time is a counter. Space is read through commutators. The modulus and
 argument of J provide two exact algebraic projections. Their physical

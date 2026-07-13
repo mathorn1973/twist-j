@@ -44,6 +44,24 @@ non-public scope; the exact arithmetic and claim counts do not change.
 G2B will separately split theorem mathematics from physical dictionary
 readings so that the two audit operations remain reviewable.
 
+G2B recon and prep: the exact rows retain only their algebraic,
+finite-group, chain, or recurrence statements. Five explicit D rows
+carry the physical assignments: AXIOM-PROJECTION-DICTIONARY,
+TWO-PLACE-PHYSICS, FORCE-AS-CURVATURE, COLOR-LADDER-DICTIONARY, and
+COSMOLOGY-READING-DICTIONARY. The existing MAXWELL-CLOSED,
+MEASURE-BORN-VERB, KERNEL-CELL-DICTIONARY, COULOMB-PROJECTION, and
+FORCE-POLAR-SIGN rows remain the corresponding dictionary boundaries.
+No theorem is promoted and no new physics enters. The prepared count is
+168 claims: 81 T, 38 D, 12 C, 3 F, 28 O, and 6 H. The initial prep was
+based on the G2A candidate and remained unpinned until G2A was
+independently validated and fast-forwarded into synthesis.
+
+G2A was independently validated and integrated at c46b25f. G2B was
+rebased onto that exact head. Its `reproduce/status-separation` package
+is a structural audit only: eight deterministic checks of the five new
+D boundaries plus the existing Maxwell and Born splits, with no new
+scientific claim.
+
 Standing rules of this synthesis: public statuses are conservative, at
 most T in the genesis bundle, and internal sources keep their grades
 in the cutover audit; no unproven independence claims (pi and ln phi

@@ -3,8 +3,8 @@
 ## Public Canon v1 (candidate)
 
 Genesis entry. Initial public synthesis: the thematic Canon in
-nineteen sections; 163 registered claims (81 theorem grade, of which 77
-carry minimal reproductions and 4 carry inline derivations; 33 derived
+nineteen sections; 168 registered claims (81 theorem grade, of which 77
+carry minimal reproductions and 4 carry inline derivations; 38 derived
 grade, the dictionary layers of the Dirac and color ladders, the SI
 bridge equation layer, the mass ladder forms, the Weinberg form, the
 Maxwell closure reading, the alpha form, the cosmology register
@@ -30,13 +30,13 @@ dynamical-color route, the minimal exponential ringdown reading, and
 the tau anyon reading of the phibit
 at their registered scopes; 34 live frontier rows,
 each with a concrete falsifier or a decision condition stating what
-closes it positively and what closes it negatively); twenty-one
+closes it positively and what closes it negatively); twenty-two
 reproduction witnesses (kernel, alpha-exact-lemma, born-faces, census,
 born-quartet, dirac-ladder, color-ladder, gravity-chain,
 mass-ladder, weinberg, maxwell, alpha-value, cosmology-register,
 coupling-metrology, hyperplane-codec, kernel-connectivity,
 foundations-places, force-born-dictionary, photon-electron,
-observer-boost, pentit-p5-closure); the core,
+observer-boost, pentit-p5-closure, status-separation); the core,
 the frontier, the registry, and the citation record. The public series
 starts here; development before this document is outside the normative
 series and is referenced only by the cutover audit. Genesis review
@@ -64,3 +64,13 @@ Schwarzschild uniqueness clause; and the metrological-admissibility
 closure are not public claims. `check_canon.py` now rejects every
 non-public-authority marker in the five hashed Canon files. Claim and
 status counts are unchanged.
+
+Genesis review remediation G2B separates exact mathematics from the
+physical dictionaries. Five D rows now carry the projection/plenum,
+two-place/CPT, force-curvature, color-ladder, and cosmology readings.
+The corresponding T rows state only their algebraic, finite-group,
+chain, or recurrence content; the existing Maxwell and Born dictionary
+rows remain the interpretation boundary for their theorem layers. The
+registry now contains 168 claims: 81 T, 38 D, 12 C, 3 F, 28 O, and 6 H.
+The deterministic status-separation audit makes these boundaries a
+dual-architecture staging gate without asserting a new scientific claim.
