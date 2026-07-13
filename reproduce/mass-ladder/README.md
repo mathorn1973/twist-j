@@ -19,9 +19,12 @@ mixed parity composite; the exact bridges xi phi^2 = 5 = p,
 script-Q phi^2 = 2 pi, script-Q/xi = 2 pi/5 = arg J in Q(sqrt5); the
 algebraic side of the bridge defect (6 phi^2 = 9 + 3 sqrt5, a root of
 the irreducible x^2 - 18x + 36, so delta = 6 phi^2 - 5 pi is nonzero
-by Lindemann-Weierstrass); and the parity law under conjugation
-pi -> -pi on the named register entries, with the three odd delta
-carriers at pi degrees 1, 3, 5.
+by Lindemann-Weierstrass); and the parity law under the formal
+pi-grading involution iota_pi, which fixes all other generators and
+sends pi to -pi, on thirteen named even register entries, three odd
+delta carriers at pi degrees 1, 3, 5, and the mixed neutron. This
+formal grading is not ordinary complex conjugation, and no larger
+census is claimed.
 
 Evidence for registry claims MU-TAU-COEFFICIENT,
 MU-EXCHANGE-IDENTITY, MASS-LADDER-FORMS, PARITY-LAW, BRIDGE-DEFECT.

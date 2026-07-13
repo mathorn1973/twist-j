@@ -28,11 +28,12 @@ READING-SPLIT is lowered from T to D. The integer trace identity and
 hosting notation are corrected, and the core namespace is frozen.
 
 The foundations-places witness is reworded to the exact forward-orbit
-scope and makes no all-k time-quantum claim. Its previous architecture
-records are removed before the new immutable candidate; fresh x86_64
-and aarch64 records are required. G1B remains: define the formal pi
-grading involution and replace the false phrase "complex conjugation
-pi -> -pi" in the mass-ladder witness and normative bundle.
+scope and makes no all-k time-quantum claim. G1B defines the formal
+pi-grading involution, removes the false phrase "complex conjugation
+pi -> -pi", and narrows the theorem to the thirteen named even forms,
+three named odd carriers, and the mixed neutron. Both G1 witnesses
+require fresh x86_64 and aarch64 records after their respective
+immutable candidates are pinned.
 
 Standing rules of this synthesis: public statuses are conservative, at
 most T in the genesis bundle, and internal sources keep their grades
@@ -169,6 +170,16 @@ protocol in AGENTS.md; both architecture records are pending at the
 candidate commit.
 
 ## Session log
+
+- Genesis review G1B (2026-07-13): corrected `PARITY-LAW` without
+  changing its theorem status. The operation is now the explicitly
+  defined formal Laurent-register automorphism `iota_pi`, fixing the
+  coefficient algebra and sending the formal generator pi to -pi; it
+  is not ordinary complex conjugation. The witness checks involution,
+  multiplicativity, thirteen named even forms, three named odd
+  carriers, and the mixed neutron. The unreconstructed seventeen-even
+  internal census is not carried into the public scope. The prep was
+  rebased onto integrated G1A head c0b0cfd before candidate pinning.
 
 - s16 (2026-07-13): the photon and electron tranche, the section 9
   label reconciliation: reproduce/photon-electron (20/20: the window

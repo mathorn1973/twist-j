@@ -479,20 +479,34 @@ mu_n   = mu_p + deg_v / chi - Delta_EM;  the bare neutron at -17.93 ppm
 the electron at the Dirac step:  det = 1 + m_D^2 = 5 = p
 ```
 
-The parity law (PARITY-LAW) [T]: the bridge defect delta = 6 phi^2 - 5 pi
-= (9 + 3 sqrt5) - 5 pi is nonzero by Lindemann-Weierstrass (about
-+2.4 x 10^-4, a gap witness, labeled) (BRIDGE-DEFECT). Exact bridges: xi phi^2 = 5 =
-p; script-Q phi^2 = 2 pi; script-Q / xi = 2 pi/5 = arg J. Under
-complex conjugation every fundamental on the register is a pure parity
-eigenvector: seventeen even and delta free (among them alpha^-1,
-sin^2 theta_W, w = -14/15, L, Omega_b = pi^2/200, the slip X, mu_mu,
-mu_tau, G, PMNS, the dark matter ratio, the zeta_K residue); three odd
-delta carriers, the ladder pi^1, pi^3, pi^5 (the capacity 2 pi/phi^2,
-the Kahler capacity 64 pi^3 phi^2, the proton 6 pi^5); one mixed
-composite, the neutron, the boundary witness. The neutrino register
-341/10 and the PMNS sector are carried at their committed labels, both
-pi even and delta free; the sector waits on the mass mechanism
-frontier.
+The parity law (PARITY-LAW) [T] lives in a formal observable register,
+not under ordinary complex conjugation. Let
+
+```text
+R = A[pi, pi^-1],
+iota_pi(pi) = -pi,
+iota_pi(a) = a  for every a in A,
+```
+
+where `A` contains the pi-free coefficients and the other named formal
+generators. Multiplicative extension makes `iota_pi` an involutive
+algebra automorphism, and a monomial `c pi^k u`, with `u` in `A`, has
+eigenvalue `(-1)^k`. This is a formal grading operation; it is not
+complex conjugation on the complex numbers, which fixes the real number
+pi. At this public scope, thirteen named entries are even and delta
+free: alpha^-1, sin^2 theta_W, w = -14/15, L, Omega_b = pi^2/200, the
+slip X, mu_mu, mu_tau, G, PMNS, the dark matter ratio, the zeta_K
+residue, and the neutrino register 341/10. Three odd delta carriers sit
+at degrees pi^1, pi^3, and pi^5: the capacity 2 pi/phi^2, the Kahler
+capacity 64 pi^3 phi^2, and the proton 6 pi^5. The neutron is the unique
+mixed composite among these named forms. No larger parity census is
+claimed.
+
+The bridge defect delta = 6 phi^2 - 5 pi = (9 + 3 sqrt5) - 5 pi is
+nonzero by Lindemann-Weierstrass (about +2.4 x 10^-4, a labeled gap
+witness) (BRIDGE-DEFECT). The exact bridges are xi phi^2 = 5 = p,
+script-Q phi^2 = 2 pi, and script-Q / xi = 2 pi/5 = arg J. The PMNS
+sector waits on the mass mechanism frontier.
 
 ## 8. The measure and Born
 

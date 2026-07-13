@@ -46,3 +46,11 @@ interface are declared architecture rather than a claimed reduction
 from J. The complete state is Omega = N_0 x F_5^6, the Log is derived,
 and the decoder order is matter, geometry, clock. The same review
 corrected the integer trace identity and froze the core notation.
+
+Genesis review remediation G1B: `PARITY-LAW` now names the formal
+Laurent-register involution `iota_pi`, proves its involutive and
+multiplicative action, and states explicitly that it is not ordinary
+complex conjugation. The public theorem scope is the thirteen named
+even entries, the three named odd carriers, and the mixed neutron; the
+unreconstructed larger census has been removed. Claim and status counts
+are unchanged.

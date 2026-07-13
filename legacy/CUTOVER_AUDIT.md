@@ -113,8 +113,11 @@ MU-EXCHANGE-IDENTITY           the exchange identity (T, exact
 MASS-LADDER-FORMS              the Part VI committed ladder block
                                (D at the dictionary; sigma
                                comparisons fenced)                  D
-PARITY-LAW                     the SS-DELTA parity law and register
-                               census (Part VI)                     T
+PARITY-LAW                     the SS-DELTA parity law (Part VI),
+                               narrowed publicly to the named forms
+                               under a formal pi-grading; ordinary
+                               complex conjugation is not invoked
+                               and no larger census is carried       T
 BRIDGE-DEFECT                  the SS-DELTA bridge defect and the
                                exact bridges (Part VI)              T
 WEINBERG-TREE                  the Part V Weinberg block, exact

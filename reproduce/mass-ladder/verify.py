@@ -10,9 +10,10 @@
 # exchange identity delta mu_tau + 240 delta mu_mu = 0; the committed
 # forms mu_mu = 2688/13 - C alpha^2, mu_tau = 3477 + 240 C alpha^2,
 # mu_p = 6 pi^5 (1 + alpha^2/3), mu_n = mu_p + deg_v/chi - Delta_EM;
-# the parity law under conjugation pi -> -pi with the three odd
-# carriers pi^1, pi^3, pi^5 and the neutron as the unique mixed
-# composite; the exact bridges xi phi^2 = 5, Q phi^2 = 2 pi,
+# the parity law under the formal pi-grading involution iota_pi,
+# which fixes every other generator and sends pi to -pi, with the
+# three odd carriers pi^1, pi^3, pi^5 and the neutron as the unique
+# mixed composite; the exact bridges xi phi^2 = 5, Q phi^2 = 2 pi,
 # Q/xi = 2 pi/5; and the bridge defect 6 phi^2 - 5 pi nonzero by
 # Lindemann-Weierstrass on the exact algebraic side.
 #
@@ -117,18 +118,19 @@ def pdeg(key):
     return dict(key).get("pi", 0)
 
 
-def conj_pi(p):
-    # complex conjugation on the register grading: pi -> -pi
+def pi_grade_involution(p):
+    # Formal grading automorphism: fix every other generator, pi -> -pi.
+    # This is not ordinary complex conjugation, which fixes real pi.
     return mnorm({k: (c if pdeg(k) % 2 == 0 else -c)
                   for k, c in p.items()})
 
 
 def is_even(p):
-    return conj_pi(p) == p and p != {}
+    return pi_grade_involution(p) == p and p != {}
 
 
 def is_odd(p):
-    return madd(conj_pi(p), p) == {} and p != {}
+    return madd(pi_grade_involution(p), p) == {} and p != {}
 
 
 def pi_degrees(p):
@@ -250,7 +252,12 @@ def main():
     ]
     odds = [M(2, pi=1, phi=-2), M(64, pi=3, phi=2),
             madd(M(6, pi=5), M(2, pi=5, a=2))]
-    ok = all(is_even(e) for e in evens) and len(evens) == 13
+    sample_a = madd(M(2, pi=-1, phi=2), M(3, X=1))
+    sample_b = madd(M(5, pi=2), M(-7, a=1))
+    ok = pi_grade_involution(pi_grade_involution(sample_a)) == sample_a
+    ok &= pi_grade_involution(mmul(sample_a, sample_b)) == mmul(
+        pi_grade_involution(sample_a), pi_grade_involution(sample_b))
+    ok &= all(is_even(e) for e in evens) and len(evens) == 13
     ok &= all(is_odd(o) for o in odds)
     ok &= sorted(pi_degrees(o)[0] for o in odds) == [1, 3, 5]
     ok &= 18 * 5 ** 3 == 2250
@@ -258,15 +265,17 @@ def main():
                 madd(M(1, degv=1, chi=-1), M(-1, dEM=1)))
     ok &= (not is_even(mu_n)) and (not is_odd(mu_n))
     check("PARITY",
-          "under conjugation pi -> -pi every named register entry is a"
-          " pure parity eigenvector: thirteen named even entries"
+          "under the formal pi-grading involution iota_pi, which fixes"
+          " every other generator and maps pi to -pi, the thirteen"
+          " named register entries"
           " (alpha^-1, sin^2 theta_W, w, L, Omega_b, the slip X, mu_mu,"
           " mu_tau, G, PMNS, the dark matter ratio 2250 ln^2 phi /"
           " pi^4, the zeta_K residue, the neutrino register 341/10)"
-          " are pi even and delta free; the three odd delta carriers"
+          " are pure even eigenvectors and delta free; the three odd"
+          " delta carriers"
           " sit at pi degrees 1, 3, 5; the neutron is the unique mixed"
-          " composite; the full census (seventeen even) is the"
-          " internal count carried at scope", ok)
+          " composite; ordinary complex conjugation is not invoked and"
+          " no larger census is claimed", ok)
 
     print("TWIST-J mass ladder witness (exact arithmetic, formal pi)")
     print("C = 89/5 = 18 - 1/p; delta mu_tau + 240 delta mu_mu = 0;"
