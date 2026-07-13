@@ -229,6 +229,32 @@ KERNEL-CONNECT-ALL-K           H-O17-MIN-ALL-K (H); T-O17-MIN (k = 2,
                                1332 GiB engine) stay internal at the
                                sealed scope; F-O17-MIN-3SUBSET stands
                                as an internal guard                  H
+ODOMETER-INTERNALIZED          the v153 internalized counter (D);
+                               carried at D                          D
+READING-SPLIT                  T-LQ-READING-SPLIT (T-LOCK, v133
+                               seal); carried at T, inline, each leg
+                               separately witnessed                  T
+TIME-QUANTUM-TOWER             T-FROB-TIME-QUANTUM (T-LOCK);
+                               conservatively lowered to C at the
+                               computed range k = 1 to 4             C
+CURVATURE-TRACE-VALUE          SS103 space is a commutator (T-LOCK)
+                               with the trace value at O per the
+                               sealed erratum; the public operator
+                               witness is open, conservative O       O
+DEGREES-BY-PRIME               the two places degree split (T);
+                               carried at T                          T
+Z2-PLACES-SPLIT                the Z2 family seal (T); carried at T  T
+I-BILOCATED                    the bilocation reading (D); carried
+                               at D                                  D
+SILVER-RING-FACTS              the finite computations at the two
+                               places (norm, element orders,
+                               cyclicity, F_25 census); public C     C
+SILVER-SIBLING                 the dictionary mirror reading,
+                               public D, resting on the
+                               SILVER-RING-FACTS C                   D
+LOG-AXES-INDEPENDENCE          pi and ln phi linearly independent
+                               over the algebraic numbers by Baker,
+                               inline; linear only, public T         T
 ```
 
 ## Intentional omissions so far (to be resolved before the PR)
@@ -236,8 +262,13 @@ KERNEL-CONNECT-ALL-K           H-O17-MIN-ALL-K (H); T-O17-MIN (k = 2,
 Internal claims stated in the Canon text with their labels but not yet
 registered, pending public evidence (reproduction or inline
 derivation): the narrative digest labels inventoried in the synthesis
-notes (32 label lines after the hyperplane-codec cluster resolved the
-hyperplane, codec, and phibit lines), awaiting the pre PR
+notes; the foundations and places cluster resolved the twelve label
+lines of sections 1, 2 and 4 (ten registered, the gyron density
+line woven to GYRON-DENSITY, the transfer trichotomy rewritten as a
+definition, the closed whole energy statement rewritten as a sealed
+scope report, the charge conjugation clause folded into
+Z2-PLACES-SPLIT), and the gate measures 26 unmapped occurrences in sections 5 and
+beyond, the count derived from each run, awaiting the pre PR
 reconciliation. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author
 decision: an optional enrichment, not a gap; stays internal);

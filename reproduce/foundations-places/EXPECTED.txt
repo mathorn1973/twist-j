@@ -1,0 +1,14 @@
+TWIST-J foundations and places witness (exact arithmetic)
+the counter is a 2-adic odometer inside the state; the time quantum tower T^(5^k) = i_5 I holds for k = 1 to 4
+sqrt5 at zeta_5, sqrt2 and i at zeta_8; one involution against a Klein four; 5 = (2 + i)(2 - i); tau^2 = J = 2 in F_25
+
+PASS 01 ODOMETER     the counter is internalized: the drive bit is the parity of a 2-adic odometer register, with the exact recursions t_2n = t_n and t_2n+1 = 1 - t_n and the carry parity law (the bit flips exactly when the carry chain has even length), verified exhaustively below 2^13; the drive read from the register alone reproduces the external list on the full window: one autonomous closed map, no external parameter
+PASS 02 TOWER        the self similar time quantum, computed for k = 1 to 4: on Z/5^k the step operator satisfies T^(5^k) = i_5 I with the scalar of exact multiplicative order 4 and i_5 = 2 mod 5, and the period of T is exactly 4 x 5^k (the order found by direct search); the all k statement stands at the sealed scope
+PASS 03 GRADINGS     the degrees split by prime: sqrt5 lives at zeta_5, (2 phi - 1)^2 = 5 exactly in Z[zeta_5]; sqrt2 and i live at zeta_8, (m + m^-1)^2 = 2 and m^2 = i with i^2 = -1 in Z[zeta_8]; neither sqrt2 nor i lies in Q(sqrt5) (finite rational root exclusion, and a sum of squares is never negative); the native magic has order 5 = p and the foreign magic order 8 = 2^3
+PASS 04 ONE-INVOL    the Galois group of the zeta_5 place is cyclic of order 4 (2 generates all of F_5*) with exactly one involution, a = 4, hence exactly one order 2 subgroup {1, 4} and exactly one quadratic subfield; it is Q(sqrt5), since 2 phi - 1 is fixed by z -> z^-1: the place where the forces split has one mirror
+PASS 05 KLEIN-FOUR   the Galois group of the zeta_8 place is the complete Klein four group: every one of 3, 5, 7 squares to 1 mod 8, so every nontrivial symmetry of the foreign place is an involution; two places, two shapes of Z2 family
+PASS 06 GAUSS-SPLIT  the magic prime splits at the foreign place: 5 = (2 + i)(2 - i) exactly in Z[i], both factors of norm 5, and complex conjugation swaps the two Gaussian primes: charge conjugation is the swap of the two primes above p
+PASS 07 BILOCATED    i is bilocated: at v_5 it is the order 4 element 2 of F_5* (2^2 = -1, exact order 4), at v_2 it is zeta_8^2 (m^2 squares to -1); the two are identified only over Q, never merged
+PASS 08 SILVER       the silver sibling: m = zeta_8 = sqrt(i) at prime 2, the silver unit 1 + sqrt2 has norm exactly -1; at prime 5, inside F_25 = F_5(sqrt 2) (2 is a non square, checked on all residues), tau^2 = 2 = the image of J at the ramified place and tau^4 = -1 with ord(tau) = 8, and F_25* is cyclic of order 24 (all 24 element orders divide 24, an order 24 element exists, and exactly phi(24) = 8 generate): the square root of the axiom has a mirror at the foreign place
+
+RESULT 8/8 ALL PASS

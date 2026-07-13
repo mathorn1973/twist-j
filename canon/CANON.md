@@ -15,7 +15,10 @@ whole physical object is the canonical integer Cayley system generated
 by J = 1 + zeta_5^2, with no external boundary, no external clock, and
 only internal readout. J is the generator of the plenum and the seed
 of the two projections. Under A0, E_total = 0 is a theorem of the
-closed whole, not a second axiom [D].
+closed whole, not a second axiom; that theorem stands at the sealed
+internal basis with its pinned verifier, and the internalized counter
+that removes the external clock is registered below as
+ODOMETER-INTERNALIZED.
 
 CZ: A0. Skutecnost je uzavrene celociselne J-plenum. Cely fyzikalni
 objekt je kanonicky Cayleyuv system dany jednotkou J = 1 + zeta_5^2,
@@ -90,8 +93,11 @@ primitive tenth root of unity (J-TENTH-ROOT [T], reproduce/kernel),
 1 - J = e^(-i pi/5), so Li_1(J) = -log(1 - J) = i pi/5 exactly and
 pi = -5 i Li_1(J). A third transcendental enters from the modulus
 side: ln phi, the boost rapidity. The two logarithmic axes pi and
-ln phi are linearly independent over the algebraic numbers [T]. No
-algebraic independence claim is made.
+ln phi are linearly independent over the algebraic numbers
+(LOG-AXES-INDEPENDENCE [T]): i pi = Log(-1) and ln phi = Log(phi) are
+logarithms of algebraic numbers, Q-linearly independent, hence
+independent over the algebraic numbers by Baker. No algebraic
+independence claim is made.
 
 The golden bridge (J-GOLDEN-BRIDGE [T], reproduce/kernel): J phi = j,
 (J - 1)^3 = j, and J^5 phi^5 = 1. Multiplication by J on the integer
@@ -127,24 +133,34 @@ selector i = (z_n + 2 t_n) mod 5, the offset 2 the exponent in J = 1 + j^2;
 about 25 integer operations per tick; zero multiplications, zero floats.
 ```
 
-Under A0 the counter is internalized [D]: the tick is a 2-adic
-odometer register inside the state, and the dynamics is one autonomous
-closed map with no external parameter.
+Under A0 the counter is internalized (ODOMETER-INTERNALIZED [D],
+reproduce/foundations-places): the tick is a 2-adic odometer register
+inside the state, the drive bit is the register parity with the exact
+recursions t_2n = t_n and t_2n+1 = 1 - t_n and the carry parity law,
+and the dynamics is one autonomous closed map with no external
+parameter.
 
-Space is a commutator [T]: the commutator of translations is the
-discrete curvature, with spectrum {0^27, +- i phi^n / d}, everything
-in Q(sqrt5), denominator 20 = 4p; the trace value -21/8 of the squared
-curvature stands at O.
+Space is a commutator: the commutator of translations is the discrete
+curvature with golden spectrum in Q(sqrt5); the sealed corpus carries
+the statement with spectrum {0^27, +- i phi^n / d} and denominator
+20 = 4p, and its public witness is an open obligation together with
+the trace value -21/8 of the squared curvature
+(CURVATURE-TRACE-VALUE [O]).
 
 The decoder D = D_clock o D_geom o D_matter has structure 1 + 3 + 0
 and is acyclic: no feedback from output to state; time emerges as the
-terminal accumulator. The gyron density is rho = 1/6 [T]. The
-reading split [T]: the decoder reads the kernel by linear
-projection, the driver by binary Thue-Morse cut, the gauge housing by
-quadratic registration; three sectors, one rule. The self similar time
-quantum [T]: on the pentit ring the step operator satisfies
-T^(5^k) = i_5 I with period 4 x 5^k; explicit non claim: no generic
-exponentiation speedup.
+terminal accumulator. The gyron density is rho = 1/6 (GYRON-DENSITY
+[T], registered in section 13). The reading split (READING-SPLIT [T],
+inline): the decoder reads the kernel by linear projection, the
+driver by binary Thue-Morse cut, the gauge housing by quadratic
+registration; three sectors, one rule, and each leg is separately
+registered: the linear readout is CODEC-TR4, the binary cut drives
+the census, the quadratic registration is the Born square. The self
+similar time quantum (TIME-QUANTUM-TOWER [C],
+reproduce/foundations-places): on the ring Z/5^k the step operator
+satisfies T^(5^k) = i_5 I with i_5^4 = 1 and period exactly 4 x 5^k,
+computed for k = 1 to 4; the all k statement stands at the sealed
+scope; explicit non claim: no generic exponentiation speedup.
 
 ## 3. The kernel and the census
 
@@ -245,21 +261,36 @@ They meet only over Q. The layer boundary IS the field boundary.
 ```
 
 The reading is not globally prime 2: the degrees split by prime,
-linear to 5, quadratic to 2, cubic to 5, foreign magic to 2 [T].
-The Z2 symmetries split into two families [T]: cyclotomic Galois
-involutions at exactly two places (one involution at zeta_5, where the
-forces split; a complete Klein four at zeta_8), and the Thue-Morse
-time reversal, which is not Galois; CPT = CP (Galois, zeta_5) composed
-with T (Thue-Morse); zeta_3 is disjoint but unrealized: there is no
-third place. i is bilocated [D]: the order 4 element of F_5* at v_5
-and zeta_8^2 at v_2, identified only over Q, never merged. Every
-genuine cross place transfer descends to Q; the Born square is the
-descent operator; a transfer is rational, integer, or a ratio [D]. The
-silver sibling [C, D]: m = zeta_8 = sqrt(i) at prime 2 with silver
-unit 1 + sqrt2 mirrors tau = sqrt(J) at prime 5 inside F_25; sqrt(i)
-is the square root of the axiom. Charge conjugation is the swap of the
-two Gaussian primes above p: 5 = (2 + i)(2 - i); forces at sqrt5, spin
-at sqrt2, charge conjugation at i [T].
+linear to 5, quadratic to 2, cubic to 5, foreign magic to 2
+(DEGREES-BY-PRIME [T], reproduce/foundations-places): sqrt5 lives at
+zeta_5 by (2 phi - 1)^2 = 5, sqrt2 and i live at zeta_8 by
+(m + m^-1)^2 = 2 and m^2 = i, and neither sqrt2 nor i lies in
+Q(sqrt5), the unique quadratic subfield of Q(zeta_5). The Z2
+symmetries split into two families (Z2-PLACES-SPLIT [T],
+reproduce/foundations-places): cyclotomic Galois involutions at
+exactly two places (one involution at zeta_5, the single order 2
+element of the cyclic Galois group, where the forces split; a
+complete Klein four at zeta_8, where every nontrivial element is an
+involution), and the Thue-Morse time reversal, which is not Galois;
+CPT = CP (Galois, zeta_5) composed with T (Thue-Morse); zeta_3 is
+disjoint but unrealized: there is no third place. i is bilocated
+(I-BILOCATED [D], reproduce/foundations-places): the order 4 element
+of F_5* at v_5 and zeta_8^2 at v_2, identified only over Q, never
+merged. Every genuine cross place transfer descends to Q; the Born
+square is the descent operator; a transfer is rational, integer, or a
+ratio: a definition, with the descent values carried by the Born
+rows. The silver ring facts (SILVER-RING-FACTS [C],
+reproduce/foundations-places): inside F_25 = F_5(sqrt 2), where the
+step collapses to the doubling J = 2, tau = sqrt(J) has tau^4 = -1
+with ord(tau) = 8, and F_25* is cyclic of order 24; norm, orders,
+cyclicity, and census are finite computations. The silver sibling
+(SILVER-SIBLING [D], reproduce/foundations-places) is the dictionary
+reading resting on those facts: m = zeta_8 = sqrt(i) at prime 2 with
+the silver unit 1 + sqrt2 of norm -1 mirrors tau = sqrt(J) at prime 5;
+sqrt(i) is the square root of the axiom read at the foreign place. Charge conjugation is the swap
+of the two Gaussian primes above p: 5 = (2 + i)(2 - i), the swap is
+conjugation, carried inside Z2-PLACES-SPLIT; forces at sqrt5, spin at
+sqrt2, charge conjugation at i.
 
 ## 5. The force is the curvature
 
@@ -271,12 +302,12 @@ Z X Z^-1 X^-1 = j I;   the flux quantum is arg j = 2 pi / 5.
 ```
 
 J = 1 + j^2 packages the force quantum; its two projections are the
-two abelian forces [T].
+two abelian forces (J-PROJECTIONS [T]).
 
 Gravity is closed by three legs: the action leg (the cell action
 864 pi at k = d(d + 1) = 12, derived from J); the observational leg
 (quadrupole power against the Hulse-Taylor binary pulsar, 99.84
-percent match [C, measured comparison]); the kernel leg (A_GD =
+percent match [measured comparison]); the kernel leg (A_GD =
 1/(8 pi) on the A_3 lattice, with lambda = 216 pi derived, not
 fitted). Closed form:
 
@@ -398,7 +429,7 @@ frontier.
 
 ## 8. The measure and Born
 
-The Born quartet [T], reproduce/born-quartet. The Born unit group of
+The Born quartet unpacks into four registered results, reproduce/born-quartet: BORN-HALF-ANGLE [T], BORN-RESIDUAL-SPLIT [T], SPIN-BISECTOR [T], and BORN-ORDER-STAIRCASE [T]. The Born unit group of
 the read place residual algebra A_8 = Z[zeta_8]/5 is cyclic of order
 24, and the unit square root of a phase is the Born normalized
 bisector: (1 + u)^2 = u N_B(1 + u) on every Born unit; the bisector
@@ -517,8 +548,8 @@ F_25: Eastin-Knill as arithmetic; magic is the stabilizer dimension
 deficit; the native magic is the cubic C_5 (order 5, prime 5), the
 foreign qubit magic is m (order 8, prime 2). Bell and Tsirelson:
 zeta_5 caps at (sqrt5 + 1)/2, the zeta_8 magic reaches Tsirelson [T].
-The Fibonacci category with central charge c = 14/5 is mathematics at
-T and C; its physical reading fired: the phibit is abelian Z_5, not
+The Fibonacci category with central charge c = 14/5 is mathematical
+background; its physical reading fired: the phibit is abelian Z_5, not
 the tau anyon (PHIBIT-NOT-TAU [F], reproduce/hyperplane-codec). The
 boundary proof is finite: the phibit fusion ring is the group ring of
 Z_5, five simples, all invertible with dimension 1; the Fibonacci
@@ -740,7 +771,8 @@ p^2 + p + 2 = 2^p; ord(2 mod 5) = phi(5); the native Z_5 qudit;
 F_25; the Lorentz density unique to Z[zeta_5]. The two logarithmic
 axes: pi on the argument (c odd), ln phi on the modulus (c even,
 transcendental by Baker); linearly independent over the algebraic
-numbers. No algebraic independence claim is made.
+numbers (LOG-AXES-INDEPENDENCE [T]). No algebraic independence claim
+is made.
 
 The wall is one archimedean wall, and it is understood: the shadow is
 the polylogarithm ladder of J. What stands on it: the quantum
@@ -832,6 +864,10 @@ PLENUM AND KERNEL
                              coupling connects every (F_5^6)^k; the
                              k = 2 and k = 3 witnesses live at the
                              sealed scope
+  CURVATURE-TRACE-VALUE      the trace value -21/8 of the squared
+                             discrete curvature; the commutator
+                             operator and its golden spectrum stand at
+                             the sealed scope
 MEASURE
   QUADRATIC-ENVELOPE-DECODER the full decoder carrier hypothesis
   TM-SYM2-MEASURE            the symmetric square measure; residual the

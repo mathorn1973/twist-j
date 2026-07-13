@@ -42,8 +42,11 @@ with a reason in the audit and queued here, never registered vaguely.
    labels); each gets an identifier and registration, becomes a
    definition or remark, or is removed. Recon count 2026-07-12: 35
    label lines without a nearby identifier; the hyperplane-codec
-   cluster resolves 3 (the hyperplane, codec, and phibit lines); 32
-   remain.
+   cluster resolves 3 (the hyperplane, codec, and phibit lines); the
+   foundations-places cluster resolves the 12 lines (13 markers,
+   compound brackets counted) of sections 1, 2 and 4; 26 unmapped occurrences
+   remain, all in sections 5 and beyond, the count derived from each
+   gate run.
 6. Full local check run, security audit, PR template fields.
 
 ## Two architecture witness
@@ -130,6 +133,32 @@ commit.
 
 ## Session log
 
+- s14 (2026-07-12): the foundations and places cluster, the label
+  reconciliation of sections 1, 2 and 4: reproduce/foundations-places
+  (8/8: odometer internalization with the recursion and carry parity
+  laws; the time quantum tower T^(5^k) = i_5 I on Z/5^k for k = 1 to
+  4 with exact period 4 x 5^k; the degree split by prime with the
+  unique quadratic subfield exclusion; one involution at zeta_5
+  against the complete Klein four at zeta_8; the Gaussian split
+  5 = (2 + i)(2 - i); the bilocation of i; the silver sibling with
+  the full F_25 order census). Ten registry rows:
+  ODOMETER-INTERNALIZED D, READING-SPLIT T (inline, each leg
+  separately witnessed), TIME-QUANTUM-TOWER C (lowered from the
+  sealed T-LOCK to the computed range, k = 1 to 4),
+  CURVATURE-TRACE-VALUE O (the space commutator sentence rewritten to
+  the sealed scope with the trace value as a live obligation),
+  DEGREES-BY-PRIME T, Z2-PLACES-SPLIT T, I-BILOCATED D,
+  SILVER-RING-FACTS C (the finite F_25 computations: norm, orders,
+  cyclicity, and census), SILVER-SIBLING D (the dictionary mirror
+  reading, resting on SILVER-RING-FACTS C), LOG-AXES-INDEPENDENCE T
+  (pi and ln phi linearly independent over the algebraic numbers by
+  Baker, inline; linear independence only). The gyron density line woven to GYRON-DENSITY;
+  the transfer trichotomy rewritten as a definition; the closed whole
+  energy statement rewritten as a sealed scope report. Registry 130
+  claims. Both platform dry runs byte identical before the pin:
+  verifier ec422db6 and stdout c07adecb (2907 bytes), Ubuntu 24.04
+  aarch64 (Python 3.12.3) and Debian 13 x86_64 (Python 3.13.5),
+  exit 0, empty stderr.
 - s13 (2026-07-12): the kernel connectivity cluster from the sealed
   O17 patches: reproduce/kernel-connectivity (7/7: affinity split
   with det 1 on all five generators; the CSUM wedge identity in 12

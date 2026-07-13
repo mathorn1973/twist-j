@@ -70,6 +70,9 @@ Plenum and kernel:
 - KERNEL-CONNECT-ALL-K  for every k >= 2 the set {a, c, d, e} with
   the two way CSUM ring coupling connects (F_5^6)^k into one
   component; the k = 2 and k = 3 witnesses live at the sealed scope.
+- CURVATURE-TRACE-VALUE  the trace value -21/8 of the squared
+  discrete curvature; the commutator operator and its golden spectrum
+  stand at the sealed scope, and the public witness is open.
 
 Measure:
 
