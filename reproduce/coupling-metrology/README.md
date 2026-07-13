@@ -14,11 +14,13 @@ Verified: the TT decoder as the complex squaring map h_+ + i h_x =
 exactly; the one propagation law c = 1 - s^2 on the integer triple
 (+1, 0, -3); the Schwarzschild TT endpoint V_s = f (L/r^2 +
 2M(1 - s^2)/r^3) with the forced coefficient -6 = 2(1 - 4) at s = 2;
-the Stage B bookkeeping mu = 1 with the pairing dictionary Z_L2 =
-1/2; the density against the Galois Gram G = p I - 1 1^T with trace
-exactly 1 and the Born value the branch G norm; the DeWitt dressing
+the Stage B bookkeeping inputs mu = 1 and Z_L2 = 1/2, without an
+action-germ or Gaussian-state derivation; the density against the
+Galois Gram G = p I - 1 1^T with trace exactly 1 and the Born value the
+branch G norm, without an instrument-uniqueness claim; the DeWitt dressing
 d(1 - lambda d) = 12 = d(d + 1) at lambda = -1, the chain of twelves;
-the dimensionless tick clause 1/5 cycle = 2 pi/5 per tick; and the
+the dimensionless tick clause 1/5 cycle = 2 pi/5 per tick, without a
+metrological-admissibility theorem; and the
 coupling seeds 3/4 = d/(d + 1) on the spatial base with the EM to
 strong seed ratio 15 : 4 exactly.
 

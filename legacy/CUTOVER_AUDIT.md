@@ -358,8 +358,9 @@ derivation): the narrative digest labels inventoried in the synthesis
 notes; the foundations and places cluster resolved the twelve label
 lines of sections 1, 2 and 4 (ten registered, the gyron density
 line woven to GYRON-DENSITY, the transfer trichotomy rewritten as a
-definition, the closed whole energy statement rewritten as a sealed
-scope report, the charge conjugation clause folded into
+definition, the closed whole energy statement initially recorded as a
+scope report and then removed from the public claim in Genesis review
+G2A, the charge conjugation clause folded into
 Z2-PLACES-SPLIT). The force and Born dictionary group resolves eight
 further unmapped occurrences through the eight rows above. The photon
 and electron cluster resolves the seven occurrences of section 9
@@ -389,3 +390,9 @@ the sealed scope (single platform, beyond the public budget). No claim is silent
 conservatively lowered, rewritten as non-claim material, or
 explicitly omitted with a reason. The queue is
 notes/synthesis-canon-v1.md.
+
+Genesis review G2A makes this file historical provenance only. It is
+not evidence for any public claim. The normative bundle no longer
+refers to this audit, or to any other non-public source, as scientific
+authority. Scope carried only here remains outside Public Canon v1
+until it receives public evidence and a registered gate.

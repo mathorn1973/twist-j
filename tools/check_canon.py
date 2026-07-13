@@ -60,6 +60,9 @@ FORBIDDEN_CANON_PHRASES = (
     "JAS 2",
     "TWISTER",
 )
+PRIVATE_AUTHORITY_WORD = re.compile(
+    r"\b(?:sealed|internal|private|hidden|unpublished)\b", re.IGNORECASE
+)
 
 
 def fail(message: str) -> None:
@@ -118,6 +121,16 @@ canon = (CANON_DIR / "CANON.md").read_text(encoding="utf-8")
 core = (CANON_DIR / "CORE.md").read_text(encoding="utf-8")
 frontier = (CANON_DIR / "FRONTIER.md").read_text(encoding="utf-8")
 changelog = (CANON_DIR / "CHANGELOG.md").read_text(encoding="utf-8")
+
+for name in HASHED_FILES:
+    path = CANON_DIR / name
+    for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        match = PRIVATE_AUTHORITY_WORD.search(line)
+        if match:
+            fail(
+                f"canon/{name} line {number} invokes non-public authority: "
+                f"{match.group(0)}"
+            )
 
 version_match = re.search(r"Public Canon v([1-9][0-9]*)", canon)
 if not version_match:

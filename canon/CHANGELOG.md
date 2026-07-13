@@ -54,3 +54,13 @@ complex conjugation. The public theorem scope is the thirteen named
 even entries, the three named odd carriers, and the mixed neutron; the
 unreconstructed larger census has been removed. Claim and status counts
 are unchanged.
+
+Genesis review remediation G2A removes non-public authority from the
+normative bundle. Every affected statement is now either limited to its
+public witness, stated as an explicit dictionary input, or carried only
+as a self-contained `O/H` decision condition. In particular, the FRW
+source-projector, amplitude, and whole-energy clauses; the wider
+Schwarzschild uniqueness clause; and the metrological-admissibility
+closure are not public claims. `check_canon.py` now rejects every
+non-public-authority marker in the five hashed Canon files. Claim and
+status counts are unchanged.

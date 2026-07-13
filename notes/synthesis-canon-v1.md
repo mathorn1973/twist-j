@@ -35,6 +35,15 @@ three named odd carriers, and the mixed neutron. Both G1 witnesses
 require fresh x86_64 and aarch64 records after their respective
 immutable candidates are pinned.
 
+G2A installs the public-authority firewall. The five hashed Canon files
+may not invoke a sealed, internal, private, hidden, or unpublished
+source. Affected statements are narrowed to their public evidence or
+rewritten as self-contained `O/H` gates. The coupling-metrology witness
+is reissued because four stdout lines previously described wider
+non-public scope; the exact arithmetic and claim counts do not change.
+G2B will separately split theorem mathematics from physical dictionary
+readings so that the two audit operations remain reviewable.
+
 Standing rules of this synthesis: public statuses are conservative, at
 most T in the genesis bundle, and internal sources keep their grades
 in the cutover audit; no unproven independence claims (pi and ln phi

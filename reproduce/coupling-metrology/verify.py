@@ -141,8 +141,9 @@ def main():
           "the Schwarzschild TT endpoint: V_s = f (L/r^2 +"
           " 2M(1 - s^2)/r^3) carries the same 1 - s^2 family, so"
           " V_2 = f (L/r^2 - 6M/r^3) with the forced coefficient -6 ="
-          " 2(1 - 4); the coefficients (1, 0, -3) are forced at scope"
-          " and the uniqueness layer is carried at its sealed scope",
+          " 2(1 - 4); the coefficients (1, 0, -3) are forced at the"
+          " displayed family scope; no wider uniqueness theorem is"
+          " claimed",
           ok)
 
     # ------------------------------------ 04 the quadratic germ
@@ -151,11 +152,11 @@ def main():
     ok &= mu == 1
     ok &= 2 * Fr(1, 2) == 1
     check("GERM",
-          "the Stage B bookkeeping: the quadratic germ of the action is"
-          " sealed at scope mu = 1, and the pairing dictionary carries"
-          " Z_L2 = 1/2 exactly; the free Gaussian vector reading is a"
-          " fired computed boundary, and the single remaining input is"
-          " g_mu (TT-GAUGE-PULLBACK stays live)", ok)
+          "the Stage B bookkeeping takes mu = 1 and the pairing"
+          " dictionary Z_L2 = 1/2 exactly as explicit inputs; it does"
+          " not derive the action germ or a Gaussian-state boundary;"
+          " the remaining input is g_mu (TT-GAUGE-PULLBACK stays live)",
+          ok)
 
     # ------------------------------------ 05 the density and the Born value
     # G = p I - 1 1^T at p = 5 on Q^4: tr(psi psi^T G) = psi^T G psi
@@ -174,9 +175,9 @@ def main():
           " G/(psi^dagger G psi) has trace exactly 1 by the cyclic"
           " identity tr(psi psi^dagger G) = psi^dagger G psi, checked"
           " on exact witnesses against the Galois Gram G = p I - 1 1^T"
-          " at p = 5; the Born value is the branch G norm; the gyron"
-          " carrier no-go and the fired instrument uniqueness are"
-          " carried at their sealed scope", ok)
+          " at p = 5; the Born value is the branch G norm; no"
+          " instrument-uniqueness theorem or gyron-carrier no-go is"
+          " asserted by this identity", ok)
 
     # ------------------------------------ 06 the DeWitt twelves
     d = 3
@@ -199,10 +200,9 @@ def main():
     check("METRO-TICK",
           "the tick clause is closed dimensionless: delta tau hat ="
           " 1/5 cycle = 2 pi/5 per tick, the same step phase as arg J,"
-          " and five ticks close the cycle at 2 pi; the admissibility"
-          " quartet with the sharp gyron window pair is carried at its"
-          " sealed scope, with METRO-ADMISSIBILITY and METRO-EDGE-SCALE"
-          " live", ok)
+          " and five ticks close the cycle at 2 pi; no metrological"
+          " admissibility theorem is asserted, and METRO-ADMISSIBILITY"
+          " and METRO-EDGE-SCALE stay live", ok)
 
     # ------------------------------------ 08 the coupling seeds
     ok = Fr(3, 4) == Fr(d, d + 1)

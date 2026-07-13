@@ -75,7 +75,7 @@ decoder interface      D_matter, D_geom, D_clock (partial at v1)
 calibration anchor      m_e only
 ```
 
-This is a definition boundary, not a hidden reduction theorem. Every
+This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
 deriving the architecture from J; Public Canon v1 contains no such
@@ -163,12 +163,12 @@ law updates theta without consulting an external list. Therefore U
 has no external step parameter. This is an autonomous skew product by
 definition; no extension of theta to every 2-adic integer is used.
 
-Space is a commutator: the commutator of translations is the discrete
-curvature with golden spectrum in Q(sqrt5); the sealed corpus carries
-the statement with spectrum {0^27, +- i phi^n / d} and denominator
-20 = 4p, and its public witness is an open obligation together with
-the trace value -21/8 of the squared curvature
-(CURVATURE-TRACE-VALUE [O]).
+The phrase "space is a commutator" is only a dictionary reading at this
+stage. Public Canon v1 does not assert a discrete-curvature operator or
+its spectrum. `CURVATURE-TRACE-VALUE` [O] asks for an explicit public
+operator and an exact witness deciding the proposed trace value -21/8;
+until that gate closes, neither the value nor a golden spectrum is a
+public result.
 
 The decoder is a typed partial interface, not a completed total map.
 Let K be the set of forward U-orbits. Let MatterData, GeometryData,
@@ -267,10 +267,10 @@ Tr_4(M_J x) = 2 Tr_4(x) - 5 x_c.
 
 Therefore Tr_4(M_J x) = 2 Tr_4(x) in F_5, and the scalar multiples of
 Tr_4 are the only covectors reading any multiplier at all
-(CODEC-TR4 [T], reproduce/hyperplane-codec). The internal seal carries a further
-clause, rate 4/5 exact, whose precise coding scope is not yet
-reconstructed publicly; the clause is held open and unclaimed
-(CODEC-RATE-SCOPE [O]).
+(CODEC-TR4 [T], reproduce/hyperplane-codec). The phrase "rate 4/5"
+currently has no precise public code, block length, alphabet, or
+decoding statement. `CODEC-RATE-SCOPE` [O] requires such a statement
+and its own witness, or else deletion of the shorthand.
 
 Macro space is the coupled kernel. Cells couple on the entanglement
 axis by the two way CSUM transvections, and the wedge
@@ -292,11 +292,12 @@ cell is connected by the five letters alone. Connected macro space is
 the affine translational sector breaking inter cell symplectic
 parallelism, organized by the SL2(F_5) coupling, with the wedge
 automorphism a completing transitivity (KERNEL-MACRO-READING [D]);
-this refines the commutator reading of space. The sealed corpus
-carries the k = 2 theorem that the minimal connecting set is
-{a, c, d, e} and the k = 3 full enumeration, both at internal scope
-beyond the public budget; publicly the all k statement is a live
-hypothesis with its falsifier (KERNEL-CONNECT-ALL-K [H]).
+this refines the commutator reading of space. Connectivity of
+`{a, c, d, e}` on every coupled power `(F_5^6)^k`, `k >= 2`, is only
+the live hypothesis `KERNEL-CONNECT-ALL-K` [H]. It closes by a public
+all-k proof and fires on a public exact counterexample at any named
+`k >= 2`; no finite-power result beyond the registered one-cell census
+is asserted here.
 
 ## 4. The two places
 
@@ -400,10 +401,10 @@ all four winding numbers vanish mod 5.
 
 The abelian face dictionary (ABELIAN-FACE-DICTIONARY [D],
 reproduce/force-born-dictionary) reads the electric half as P = J/2
-on the 12 electric faces from the bare tick. The magnetic public
-reading begins after the sealed six-ensemble selection; that
-selection is not reconstructed or claimed here. The selected axiom
-pair, stay or twist once, reads
+on the 12 electric faces from the bare tick. At public v1 scope, the
+magnetic axiom pair is an explicit input to the dictionary; no
+uniqueness or selection theorem is claimed. Given that input, stay or
+twist once reads
 
 ```
 Psi(k) = 1 + zeta^k,   mu(k) = |Psi(k)|^2 / 10 = w(k)/10
@@ -682,10 +683,10 @@ Define V_+ as the sign quotient F_5*/{+-1}; its two classes are
 {1, 4} and {2, 3}, so V_+ is cyclic of order two
 (QUBIT-FROM-F5 [T], reproduce/pentit-p5-closure). The native magic is
 the cubic C_5 (order 5, prime 5), while the foreign read uses m_8 of
-order 8 at prime 2. The sealed basis also records a root-of-unity Bell
-cap at zeta_5 and the Tsirelson value at zeta_8, but its precise CHSH
-functional and both maxima have not yet been reconstructed publicly
-(BELL-MAGIC-BOUNDARY [O]).
+order 8 at prime 2. `BELL-MAGIC-BOUNDARY` [O] is a public problem, not
+a result: it requires a precise CHSH functional and exact maxima over
+the zeta_5 and zeta_8 phase sets. No Bell cap or Tsirelson value is
+asserted before those objects and proofs are public.
 The Fibonacci category with central charge c = 14/5 is mathematical
 background; its physical reading fired: the phibit is abelian Z_5, not
 the tau anyon (PHIBIT-NOT-TAU [F], reproduce/hyperplane-codec). The
@@ -824,11 +825,12 @@ J Jbar = phi^-2 exactly. The FRW rank 1 canonical form
 (FRW-CANONICAL-FORM) [T]: H^2 = 72 pi rho_phys with lambda = 216 pi
 from the rank 1 lapse action; the fiber multiplier k_f = 1 is forced
 by the master closure against G_nat = 27 = d^3, with the cell volume
-864 pi carrying exactly one fiber 2 pi; the source projector is
-unique; the source is a matter amplitude, rho = rho_0 ell^2. E_total =
-0 is a theorem of the closed whole under A0. The ell-G wall is a
-mechanism wall: ell_P / lambda_e = (32/33) alpha^10 / sqrt(g), with
-the exponent identity G_T = alpha^(20 + sigma) (GRAVITY-BRIDGE-LAW).
+864 pi carrying exactly one fiber 2 pi. The public theorem stops at
+the displayed lapse, Hamiltonian, and fiber identities; it makes no
+claim here about a unique source projector, the amplitude ansatz
+rho = rho_0 ell^2, or E_total = 0. The ell-G wall is a mechanism wall:
+ell_P / lambda_e = (32/33) alpha^10 / sqrt(g), with the exponent
+identity G_T = alpha^(20 + sigma) (GRAVITY-BRIDGE-LAW).
 
 Cosmology (reproduce/cosmology-register): the tilt is n_s - 1 =
 -p alpha = -5 alpha at H (NS-TILT, falsifier live at CMB-S4). The
@@ -861,53 +863,48 @@ exponential ringdown reading is dead in the GW channel
 (RINGDOWN-EXPONENTIAL-DEAD) [F; 7.8 sigma at WKB3 grade, labeled
 engineering]. Stage A, the Schwarzschild TT endpoint: the
 Regge-Wheeler coefficients (1, 0, -3) are forced at scope, V_2 =
-f (L/r^2 - 6M/r^3), and Lichnerowicz uniqueness holds at the family
-and witness scope (SCHWARZSCHILD-TT-ENDPOINT) [T at scope]; covariance
-alone is not sufficient, a computed boundary. Stage B input: the
-quadratic germ of the action is sealed at scope mu = 1 with the
-pairing dictionary Z_L2 = 1/2, and the free Gaussian vector reading is
-a computed fired boundary (TT-QUADRATIC-GERM) [D]; the single
-remaining input is g_mu (TT-GAUGE-PULLBACK). The mu corridor: mu at least 0.804 at 3 sigma and
+f (L/r^2 - 6M/r^3) (SCHWARZSCHILD-TT-ENDPOINT) [T at the displayed
+family scope]; no wider uniqueness theorem is claimed. Stage B uses
+the explicit dictionary inputs mu = 1 and Z_L2 = 1/2
+(TT-QUADRATIC-GERM [D]); neither the action germ nor a Gaussian-state
+boundary is derived by that bookkeeping identity. The remaining input
+is g_mu (TT-GAUGE-PULLBACK). The mu corridor: mu at least 0.804 at 3 sigma and
 shadow excess in [0, +0.93 percent], ngEHT decides [measured
 comparison]. The emission map, the quasinormal mu decision, and the
 polarization readout stand open (TT-SOURCE, QNM-LEAVER-MU, POL-READ).
 
 ## 15. Couplings, instruments, and metrology
 
-Couplings determine instruments; effects are the shadow; the
-density against the Gram form is rho_psi = psi psi^dagger G /
-(psi^dagger G psi), and the Born value is the branch G norm; the
-gyron carrier admits no alternative at its scope; instrument
-uniqueness resolved by falsification: effects underdetermine,
-couplings determine, fired as registered (COUPLINGS-DETERMINE) [T,
-with the fired boundary carried at scope; reproduce/coupling-metrology].
+The density against the Gram form is rho_psi = psi psi^dagger G /
+(psi^dagger G psi), with trace exactly one, and the Born value is the
+branch G norm (COUPLINGS-DETERMINE [T at this finite identity scope],
+reproduce/coupling-metrology). No instrument-uniqueness theorem or
+gyron-carrier no-go is asserted by this identity.
 The covariant canonical form: the dressing coefficient is the DeWitt
 norm, 12 = d(d + 1) at lambda = -1, and the level 1 to level 2
 normalization inheritance is closed, the chain of twelves exact
-(DEWITT-TWELVES) [T at scope]. Metrological
-admissibility is closed for normalized one dimensional rational finite
-state protocols by a sealed quartet of theorems with the sharp gyron
-window pair; the residual is METRO-ADMISSIBILITY. The
-tick clause is closed dimensionless: delta tau hat = 1/5 cycle =
+(DEWITT-TWELVES) [T at scope]. No public metrological-admissibility
+theorem is asserted; `METRO-ADMISSIBILITY` [O] asks first for a precise
+criterion on the named protocol classes and then for its public
+decision. The tick clause alone is closed dimensionless: delta tau hat = 1/5 cycle =
 2 pi/5 per tick (METRO-TICK) [T at scope]; the remainder is the canonical selector on the
 commutator phi ladder and the SI clause (METRO-EDGE-SCALE). The
 dressing insertion bookkeeping carries the exact witness 72 alpha^4
 (about 0.204 ppm, labeled) with the form decision gated on the integer
-crossing count (DRESS-CROSSCOUNT). The Lorentz burden of the dynamics
-from action chain stands (LORENTZ-A2A3); the finite chain itself is
-sealed end to end. The state update, Gram, and dagger clauses of the
-quadratic decoder are closed at scope; the effects on data clause
-stands (QUADRATIC-DECODER-DATA).
+crossing count (DRESS-CROSSCOUNT). `LORENTZ-A2A3` [O] asks for a public
+finite action chain with a decided K6 obstruction; no end-to-end
+Lorentz closure is asserted. `QUADRATIC-DECODER-DATA` [O] asks for a
+publicly typed action on data; no unregistered closure of state-update,
+Gram, dagger, or data-effect clauses is asserted.
 
 ## 16. p = 5 and the wall
 
 The retained public root selector is exact: for a positive prime p,
 (p - 2)/(p + 1) = 1/2 if and only if p = 5
 (P5-ROOT-SELECTION [T], reproduce/pentit-p5-closure), since clearing
-the positive denominator gives p - 5 = 0. The sealed source catalogues
-further p = 5 coincidences, but their independence was not
-reconstructed; they remain a non-normative audit digest and make no
-additional public selection claim. The two logarithmic axes: pi on
+the positive denominator gives p - 5 = 0. No further coincidences are
+claimed as independent support for selecting p = 5. The two
+logarithmic axes: pi on
 the argument (c odd), ln phi on the modulus (c even,
 transcendental by Baker); linearly independent over the algebraic
 numbers (LOG-AXES-INDEPENDENCE [T]). No algebraic independence claim
@@ -995,18 +992,15 @@ PLENUM AND KERNEL
   KC3-PLENUM-READOUT         the residue class readout of the ramified
                              place
   SQRT-PHI-TIME-GRAVITY      the dynamical face of the time gravity door
-  CODEC-RATE-SCOPE           the rate 4/5 clause of the internal codec
-                             seal, held open until its precise coding
-                             scope is reconstructed or the clause is
-                             struck
+  CODEC-RATE-SCOPE           formulate the precise public rate 4/5
+                             code, alphabet, block length, and decoder,
+                             or strike the shorthand
   KERNEL-CONNECT-ALL-K       {a, c, d, e} with the two way CSUM ring
-                             coupling connects every (F_5^6)^k; the
-                             k = 2 and k = 3 witnesses live at the
-                             sealed scope
+                             coupling connects every (F_5^6)^k;
+                             proof or exact counterexample required
   CURVATURE-TRACE-VALUE      the trace value -21/8 of the squared
-                             discrete curvature; the commutator
-                             operator and its golden spectrum stand at
-                             the sealed scope
+                             discrete curvature; public operator and
+                             exact witness required
 MEASURE
   QUADRATIC-ENVELOPE-DECODER the full decoder carrier hypothesis
   TM-SYM2-MEASURE            the symmetric square measure; residual the
@@ -1045,6 +1039,6 @@ During synthesis, a status-labelled statement without a registry
 identifier is unfinished draft material, not a public claim. Before
 the synthesis pull request opens, it must be registered with
 evidence, rewritten as a definition or remark, or removed. The
-reconciliation audit maps every public claim to an internal claim of
-equal or stronger status and scope. Simplicity is the ultimate
+cutover audit records historical provenance only; it supplies neither
+evidence nor status to a public claim. Simplicity is the ultimate
 perfection. Truth is not rude. Truth is just true.

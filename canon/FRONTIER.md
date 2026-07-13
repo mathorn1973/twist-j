@@ -17,13 +17,13 @@ Measurement and metrology:
   electron mass bridge).
 - DRESS-CROSSCOUNT  the integer crossing count per observable; exact
   witness 72 alpha^4, labeled.
-- QUADRATIC-DECODER-DATA  the effects on data clause; the state
-  update, Gram, and dagger clauses are closed at scope.
+- QUADRATIC-DECODER-DATA  a typed public action of the quadratic
+  decoder on data, including every dependency it reads.
 
 Dynamics and relativity:
 
-- LORENTZ-A2A3  the Lorentz burden of the dynamics from action chain;
-  the finite chain itself is sealed end to end.
+- LORENTZ-A2A3  a public finite action chain deciding the K6 Lorentz
+  obstruction.
 
 The wall:
 
@@ -64,21 +64,21 @@ Plenum and kernel:
 
 - KC3-PLENUM-READOUT  the residue class readout of the ramified place.
 - SQRT-PHI-TIME-GRAVITY  the dynamical face of the time gravity door.
-- CODEC-RATE-SCOPE  the rate 4/5 clause of the internal codec seal,
-  held open without a public claim until its precise coding scope is
-  reconstructed from the sealed basis or the clause is struck.
+- CODEC-RATE-SCOPE  formulate the precise rate 4/5 code, alphabet,
+  block length, and decoder with its own witness, or strike the
+  shorthand.
 - KERNEL-CONNECT-ALL-K  for every k >= 2 the set {a, c, d, e} with
   the two way CSUM ring coupling connects (F_5^6)^k into one
-  component; the k = 2 and k = 3 witnesses live at the sealed scope.
-- CURVATURE-TRACE-VALUE  the trace value -21/8 of the squared
-  discrete curvature; the commutator operator and its golden spectrum
-  stand at the sealed scope, and the public witness is open.
+  component; public proof or exact counterexample required.
+- CURVATURE-TRACE-VALUE  commit a public discrete-curvature operator
+  and exact witness deciding the proposed trace value -21/8; no
+  operator, value, or golden spectrum is currently asserted.
 
 Pentit boundary:
 
-- BELL-MAGIC-BOUNDARY  the sealed root-of-unity Bell and Tsirelson
-  statement, held open until the CHSH functional and the exact zeta_5
-  and zeta_8 maxima are reconstructed publicly.
+- BELL-MAGIC-BOUNDARY  state a precise CHSH functional and prove the
+  exact maxima over the zeta_5 and zeta_8 phase sets; no cap values are
+  currently asserted.
 
 Measure:
 
