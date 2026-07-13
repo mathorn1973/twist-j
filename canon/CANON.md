@@ -295,7 +295,8 @@ sqrt2, charge conjugation at i.
 ## 5. The force is the curvature
 
 A force is not added; it is the curvature of the genesis phase space.
-The Weyl holonomy around the elementary cell is j [T]:
+The finite Weyl holonomy is exact on all five basis states
+(FORCE-WEYL-HOLONOMY [T], reproduce/force-born-dictionary):
 
 ```
 Z X Z^-1 X^-1 = j I;   the flux quantum is arg j = 2 pi / 5.
@@ -315,11 +316,22 @@ fitted). Closed form:
 G_nat = d^3 = 27 = 864 pi x 2 / (4 pi x 16).
 ```
 
-Coulomb rides the same propagator [C, D]: the 1/(4 pi r) Green
-function of the decoder graph carries both forces, gravity on the
-modulus, Coulomb on the argument. The sign structure is the polar
-decomposition [D]: mass is a modulus, one sign, universal attraction;
-charge is an argument, two signs.
+The Coulomb layer separates the finite computation from the continuum
+reading. On the finite decoder graph C4, the Moore-Penrose Green
+kernel is
+
+```
+16 G = circ(5, -1, -3, -1),   L G = I - (1/4) 1 1^T,
+```
+
+with zero row sum (COULOMB-GREEN-COMPUTATION [C],
+reproduce/force-born-dictionary). The continuum Green law
+1/(4 pi r) is the same-propagator dictionary: gravity reads the
+modulus and Coulomb the argument (COULOMB-PROJECTION [D]); it is a
+scaling reading, not a value asserted on finite C4. The sign
+structure is the polar dictionary (FORCE-POLAR-SIGN [D]): mass is a
+modulus, one sign, universal attraction; charge is an argument, two
+signs.
 
 The classical Maxwell system closes exactly [MAXWELL-CLOSED at D,
 the chain layer at T; reproduce/maxwell]: the Bianchi identity
@@ -333,10 +345,12 @@ conservation an identity in the 96 face symbols
 vanishes mod 5; the current pair iff the current is conserved and
 all four winding numbers vanish mod 5.
 
-The abelian face measure, both halves, zero parameters: electric,
-P = J/2 on the 12 electric faces from the bare tick [D]; magnetic,
-over six preregistered loop ensembles exactly one passes, the axiom
-pair, stay or twist once [D]:
+The abelian face dictionary (ABELIAN-FACE-DICTIONARY [D],
+reproduce/force-born-dictionary) reads the electric half as P = J/2
+on the 12 electric faces from the bare tick. The magnetic public
+reading begins after the sealed six-ensemble selection; that
+selection is not reconstructed or claimed here. The selected axiom
+pair, stay or twist once, reads
 
 ```
 Psi(k) = 1 + zeta^k,   mu(k) = |Psi(k)|^2 / 10 = w(k)/10
@@ -450,21 +464,25 @@ F_5 -> F_25 -> F_625, with minimality against every smaller degree
 bisector norm (BORN-ORDER-STAIRCASE). No positivity is claimed in the finite
 read: probabilities are the decoder step.
 
-The measure is the Born square of the verb [D, with eight exact
-identities at T]: w(k) = |1 + zeta^k|^2 (BORN-FACE-WEIGHTS,
-reproduce/born-faces). The identikit: eight preregistered strikes died
+The measure dictionary reads the Born square of the verb
+(MEASURE-BORN-VERB [D], reproduce/force-born-dictionary):
+w(k) = |1 + zeta^k|^2, with its exact identities carried by
+BORN-FACE-WEIGHTS [T] (reproduce/born-faces). The identikit: eight preregistered strikes died
 first class and carved the survivor clause by clause: integer
 amplitudes, a quadratic Born reading, Galois breaking, irrational in
 position; counts may enter only as amplitudes. The kernel to cell
-dictionary [D]: time is the clock tick; space is the three F_5
+dictionary (KERNEL-CELL-DICTIONARY [D]): time is the clock tick;
+space is the three F_5
 directions of the trace kernel, isotropic under the Galois Gram; the
 fiber is the Z_5 edge variable with F = dA; deposits are additive,
 valued in fifths, flux quantum zeta_5; amplitudes are unimodular; the
 measure is the Born square.
 
-The substrate knit [T]: the two abelian faces are the two conjugate
-Born readouts of a single verb state; the face Gram is circulant with
-spectrum w; the two face bases are mutually unbiased, 1/5 on all 25
+The substrate knit (SUBSTRATE-KNIT [T],
+reproduce/force-born-dictionary): the two abelian faces are the two
+conjugate Born readouts C_+ = I + S and C_- = C_+^T of a single verb
+state; C_+ C_+^T = circ(2, 1, 0, 0, 1) with exact spectrum w; the
+position and Fourier face bases are mutually unbiased, 1/5 on all 25
 pairs; the Plancherel masses are 2 and 10, in the ratio p = 5.
 
 ## 9. The photon and the electron

@@ -255,6 +255,21 @@ SILVER-SIBLING                 the dictionary mirror reading,
 LOG-AXES-INDEPENDENCE          pi and ln phi linearly independent
                                over the algebraic numbers by Baker,
                                inline; linear only, public T         T
+FORCE-WEYL-HOLONOMY           Part IV finite Heisenberg identity;
+                               carried at public T by exact witness T
+COULOMB-GREEN-COMPUTATION     SS9.2 exact C4 pseudoinverse (sealed T);
+                               conservatively carried at public C   C
+COULOMB-PROJECTION            Part IV common-propagator force
+                               reading; continuum dictionary only   D
+FORCE-POLAR-SIGN              Part IV polar decomposition reading  D
+ABELIAN-FACE-DICTIONARY       D-KCM-TICK-ELECTRIC-LAW and
+                               D-KCM-MAGNETIC-EMERGENCE; the sealed
+                               six-ensemble uniqueness is omitted   D
+MEASURE-BORN-VERB             D-MEASURE-BORN-VERB, resting on the
+                               exact public Born weight layer       D
+KERNEL-CELL-DICTIONARY        D-KCM-ORBIT-MAP                       D
+SUBSTRATE-KNIT                T-QS-BORN-FACES, T-QS-GRAM, T-QS-MUB;
+                               exact public witness                  T
 ```
 
 ## Intentional omissions so far (to be resolved before the PR)
@@ -267,9 +282,10 @@ lines of sections 1, 2 and 4 (ten registered, the gyron density
 line woven to GYRON-DENSITY, the transfer trichotomy rewritten as a
 definition, the closed whole energy statement rewritten as a sealed
 scope report, the charge conjugation clause folded into
-Z2-PLACES-SPLIT), and the gate measures 26 unmapped occurrences in sections 5 and
-beyond, the count derived from each run, awaiting the pre PR
-reconciliation. Explicitly omitted
+Z2-PLACES-SPLIT). The force and Born dictionary group resolves eight
+further unmapped occurrences through the eight rows above. The gate
+measures 18 unmapped occurrences in sections 9 and beyond, the count
+derived from this run, awaiting the pre PR reconciliation. Explicitly omitted
 from the public frontier, with reasons: SIGMA3-PRIMITIVE (author
 decision: an optional enrichment, not a gap; stays internal);
 W1-INTERFACE-PRINCIPLE, KERNEL-BRAID, and TIMEQUANTUM-POTENTIAL

@@ -44,9 +44,10 @@ with a reason in the audit and queued here, never registered vaguely.
    label lines without a nearby identifier; the hyperplane-codec
    cluster resolves 3 (the hyperplane, codec, and phibit lines); the
    foundations-places cluster resolves the 12 lines (13 markers,
-   compound brackets counted) of sections 1, 2 and 4; 26 unmapped occurrences
-   remain, all in sections 5 and beyond, the count derived from each
-   gate run.
+   compound brackets counted) of sections 1, 2 and 4; the
+   force-born-dictionary cluster resolves eight further occurrences;
+   18 unmapped occurrences remain, all in sections 9 and beyond, the
+   count derived from this gate run.
 6. Full local check run, security audit, PR template fields.
 
 ## Two architecture witness
@@ -133,6 +134,24 @@ commit.
 
 ## Session log
 
+- s15 (2026-07-13): the force and Born dictionary reconciliation:
+  reproduce/force-born-dictionary (10/10: the finite Weyl
+  commutator on five states; the exact C4 Green pseudoinverse; the
+  Born weights, Galois pairing, tilt, and Legendre sign; conjugate
+  verb readouts, their circulant Gram and exact spectrum; position
+  and Fourier mutual unbiasedness; Plancherel masses 2 and 10).
+  Eight registry rows: FORCE-WEYL-HOLONOMY T,
+  COULOMB-GREEN-COMPUTATION C (the finite C4 kernel only),
+  COULOMB-PROJECTION D (the continuum scaling dictionary, explicitly
+  not a finite C4 value), FORCE-POLAR-SIGN D,
+  ABELIAN-FACE-DICTIONARY D (the sealed six-ensemble uniqueness is
+  not claimed), MEASURE-BORN-VERB D, KERNEL-CELL-DICTIONARY D, and
+  SUBSTRATE-KNIT T. Registry 138 claims. The independent status gate
+  reports 18 remaining unmapped occurrences, all in sections 9 and
+  beyond. The x86_64 prep dry run is byte identical to EXPECTED:
+  verifier 999f5d47 and stdout 75f69589 (752 bytes), 10/10, exit 0,
+  empty stderr. Formal records begin only after the immutable
+  candidate is pinned on the post-foundations synthesis base.
 - s14 (2026-07-12): the foundations and places cluster, the label
   reconciliation of sections 1, 2 and 4: reproduce/foundations-places
   (8/8: odometer internalization with the recursion and carry parity
