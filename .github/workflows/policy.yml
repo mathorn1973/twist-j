@@ -35,16 +35,11 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: python tools/check_reproduce.py --base "$BASE_SHA"
-      - name: Run full activation gate
+      - name: Run activation readback on immutable publication events
+        if: github.ref_type == 'tag' || github.event_name == 'release'
         run: |
-          if grep -Eq '^STATE:[[:space:]]+ACTIVE' STATUS.md; then
-            if [ "${{ github.ref_type }}" = "tag" ] || [ "${{ github.event_name }}" = "release" ]; then
-              python tools/check_activation.py --full --post-activation \
-                --manifest-out activation-manifest.json
-            else
-              python tools/check_activation.py --full
-            fi
-          fi
+          python tools/check_activation.py --full --post-activation \
+            --manifest-out activation-manifest.json
       - name: Preserve tag readback manifest
         if: github.ref_type == 'tag'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
