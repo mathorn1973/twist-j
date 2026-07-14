@@ -28,10 +28,12 @@ jobs:
       - run: python tools/check_canon.py
       - run: python tools/check_ledger.py
       - name: Reproduce changed public probes
+        if: github.ref_type != 'tag' && github.event_name != 'release'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: python tools/check_verifier.py --base "$BASE_SHA"
       - name: Reproduce changed minimal reproductions
+        if: github.ref_type != 'tag' && github.event_name != 'release'
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: python tools/check_reproduce.py --base "$BASE_SHA"
