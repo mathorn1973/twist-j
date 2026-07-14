@@ -1,16 +1,30 @@
 # P-ENTROPY-BRIDGE-3 result
 
-Status: FORMAL AARCH64 RECORD; PUBLIC X86_64 GATE PENDING
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS
 
-## Scientific decision (aarch64 leg)
+## Scientific decision
 
 ```text
-RESULT 10/10 ALL PASS, exit 0, stderr empty.
+RESULT 10/10 ALL PASS, exit 0, stderr empty, on both architectures,
+byte-identical stdout (sha256 a4600f24..., 1612 bytes).
 ```
 
 All ten preregistered gates passed on the first execution of the pinned
 verifier (pin commit ab175284e57ec99e5e52b04a8f2a7bb2d0c326aa, public lock
 issue 29, base c53a5c42a30c9773817f8c2d4d41f07069cf713f).
+
+Two-architecture record:
+
+```text
+aarch64 leg    Ubuntu 24.04.4 LTS, CPython 3.12.3, neutral environment;
+               first formal execution; RUN.md in this directory.
+x86_64 leg     GitHub check on pull request 30, head
+               2eeeb4e26eba690116a808c0a2ac6ea0d506e97d;
+               run 29347822737, job 87136045183, conclusion success;
+               verifier byte-identical (c12bc7cd...), stdout
+               byte-identical (a4600f24...); log carries
+               VERIFY PASS P-ENTROPY-BRIDGE-3.
+```
 
 Recorded outcomes at the preregistered scope:
 
@@ -48,12 +62,7 @@ G01                framework pin: recurrent core 6250 on 313 attractors.
 ```
 
 No falsifier fired. The successor obligation (regularity, canonicity, and
-the measure clause of the selection family) is out of scope of this probe
-and remains open in ENTROPY-LAYER-BRIDGE [O].
-
-## Two-architecture status
-
-The aarch64 leg is recorded in RUN.md (stdout sha256 a4600f24...,
-1612 bytes, EXPECTED.txt byte-identical). The public x86_64 gate runs in
-the pull request check; this file is promoted after byte identity is
-confirmed.
+the measure clause of the selection family Psi_kappa: O/lambda^5 -> L_n)
+is out of scope of this probe and remains open in ENTROPY-LAYER-BRIDGE [O].
+Folding any outcome into the registry or frontier is a separate sealed
+step; nothing in this probe modifies canon/.
