@@ -11,7 +11,8 @@ Activation:       5abb22319007fd3172f7123f4b3a71b547fb94af
 Content commit:   7cfe2a62a456d0f84b1f60b4945dcdfe896e99db
 Canon SHA-256:    abd0e026ccc2be00cdb0d9d13d634e0a71602b1565e6d53ac23a99b506281021
 Canon bytes:      54705
-Status:           RULING CANDIDATE BEFORE REVIEW AND MERGE
+Status:           RULING CANDIDATE BEFORE MERGE; PINNED NON-CANONICAL
+                  OWNER RULING AFTER REVIEWED MERGE AND PUBLIC BYTE READBACK
 Scientific claim: remains O
 Action layer:     L2
 Public record:    mathorn1973/twist-j issue 22
