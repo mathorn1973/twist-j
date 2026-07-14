@@ -131,6 +131,8 @@ for invariant in (
     "name: Run activation readback on immutable publication events",
     "if: github.ref_type == 'tag' || github.event_name == 'release'",
     "python tools/check_activation.py --full --post-activation",
+    "name: Reproduce changed public probes\n        if: github.ref_type != 'tag' && github.event_name != 'release'",
+    "name: Reproduce changed minimal reproductions\n        if: github.ref_type != 'tag' && github.event_name != 'release'",
     "python tools/check_verifier.py --base \"$BASE_SHA\"",
     "python tools/check_reproduce.py --base \"$BASE_SHA\"",
 ):
