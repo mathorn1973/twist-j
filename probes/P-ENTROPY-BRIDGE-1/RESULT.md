@@ -1,6 +1,6 @@
 # P-ENTROPY-BRIDGE-1 result
 
-Status: FORMAL AARCH64 RECORD; PUBLIC X86_64 GATE PENDING
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS
 
 ## Scientific decision (aarch64 leg)
 
@@ -59,9 +59,21 @@ or the frontier.
 aarch64 leg:  PASS (RUN.md in this directory; stdout sha256
               87650d1cb40992a9aa12ee402b350581dc29e756b9cf7f3c02ba996320e8e6ef,
               1664 bytes)
-x86_64 leg:   PENDING (the public pull request check)
+x86_64 leg:   PASS. Required check job on pull request 26, head
+              9d48a144fa6b30c3d7524eb68560063576a1d6f3: run 29337101998,
+              job 87098995766, conclusion success (GitHub x86_64
+              ubuntu-latest rerun of the pinned verifier with exact byte
+              comparison against EXPECTED.txt).
+gate:         PASS. Byte-identical stdout on aarch64 and x86_64.
 ```
 
-This file will be extended with the public run and job reference and the
-final gate status after the x86_64 comparison, in a further commit that
-does not alter the pinned files.
+Procedural disclosure: the first workflow run (29336418388) stopped before
+the verifier with "P-ENTROPY-BRIDGE-1 lacks RESULT.md"; the preliminary
+RESULT record was added in commit 9d48a14 without touching the four pinned
+files, and the rerun executed the verifier. No gate semantics were affected.
+
+The earned status at the preregistered scope: the sixteen exact gates stand
+as computed public facts (C grade at the frozen finite scope; the G02 lift
+defect is an exact integer identity), two-architecture reproduced. Folding
+into the registry, frontier, or Canon is a separate sealed step and is not
+performed by this probe.
