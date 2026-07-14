@@ -1,7 +1,6 @@
 # P-ENTROPY-BRIDGE-4 result
 
-Status: SCIENTIFIC RESULT CANDIDATE; AARCH64 FORMAL LEG PASS;
-GITHUB X86_64 CROSS-CHECK PENDING
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS
 
 ## Scientific decision at the recorded leg
 
@@ -29,10 +28,20 @@ stderr bytes:   0
 result:         8/8 ALL PASS
 ```
 
-The required pull-request check must rerun the pinned verifier on GitHub
-x86_64 and compare stdout byte for byte before the two-architecture
-computation gate is declared PASS. Until that check succeeds, every outcome
-below is a candidate at its frozen finite scope.
+Two-architecture record:
+
+```text
+aarch64 leg    Ubuntu 24.04.4 LTS, CPython 3.12.3, neutral environment;
+               first formal execution; RUN.md in this directory.
+x86_64 leg     GitHub check on pull request 34, head
+               fc55c4a87122c36b553a68ae4eeea3f744ca9485;
+               run 29366414776, job 87199009061, conclusion success;
+               Ubuntu 24.04 runner, CPython 3.12.13; verifier
+               byte-identical (4d3ad9eb...), stdout byte-identical
+               (6c93f748..., 1916 bytes); log carries
+               VERIFY PASS P-ENTROPY-BRIDGE-4.
+gate:          PASS. The aarch64 and GitHub x86_64 outputs are byte-identical.
+```
 
 ## Recorded finite outcomes
 
@@ -87,7 +96,7 @@ No preregistered falsifier fired on the recorded leg.
 
 ## Scope and non-conclusions
 
-The candidate earned statement is finite and computation-grade only: the
+The earned statement is finite and computation-grade only: the
 pentagon quotient, equivariance, frozen quotient holonomy, frozen affine
 cocycle table, and the exactly enumerated bounded no-go cases. In particular:
 
