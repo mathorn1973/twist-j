@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import csv
 from pathlib import Path
+import re
 
 try:
     from check_ledger import validate
@@ -22,6 +23,14 @@ REGISTRY_FIELDS = (
     "claim_id", "status", "scope", "canon_section", "evidence", "falsifier"
 )
 CORE_SELECTION_FIELDS = ("rank", "claim_id")
+
+
+def current_canon_version(text: str) -> str:
+    title = text.splitlines()[0] if text.splitlines() else ""
+    match = re.fullmatch(r"# TWIST-J Public Canon v([1-9][0-9]*)", title)
+    if not match:
+        raise ValueError("CANON.md lacks an exact positive whole-number title")
+    return match.group(1)
 
 
 def read_tsv(path: Path, fields: tuple[str, ...]) -> list[dict[str, str]]:
@@ -119,12 +128,12 @@ def render_changelog_counts(root: Path, rows: list[dict[str, str]]) -> str:
         1 for path in (root / "reproduce").iterdir() if path.is_dir()
     )
     return "\n".join((
-        "<!-- BEGIN GENERATED GENESIS COUNTS -->",
+        "<!-- BEGIN GENERATED CURRENT COUNTS -->",
         f"Registry snapshot: {len(rows)} claims; "
         + ", ".join(f"{statuses[status]} {status}" for status in statuses)
         + f"; {statuses['H'] + statuses['O']} live H/O.",
         f"Reproduction witnesses: {reproductions}.",
-        "<!-- END GENERATED GENESIS COUNTS -->",
+        "<!-- END GENERATED CURRENT COUNTS -->",
         "",
     ))
 
@@ -178,17 +187,19 @@ def apply_views(root: Path, views: dict[str, str]) -> None:
 
     changelog_path = canon / "CHANGELOG.md"
     changelog = changelog_path.read_text(encoding="utf-8")
-    count_begin = "<!-- BEGIN GENERATED GENESIS COUNTS -->"
-    count_end = "<!-- END GENERATED GENESIS COUNTS -->"
+    count_begin = "<!-- BEGIN GENERATED CURRENT COUNTS -->"
+    count_end = "<!-- END GENERATED CURRENT COUNTS -->"
     if count_begin in changelog:
         changelog = replace_marked(
             changelog, views["CHANGELOG_COUNTS.md"], count_begin, count_end
         )
     else:
-        anchor = "## Public Canon v1"
+        canon_text = (canon / "CANON.md").read_text(encoding="utf-8")
+        version = current_canon_version(canon_text)
+        anchor = f"## Public Canon v{version}"
         position = changelog.find(anchor)
         if position < 0:
-            raise ValueError("CHANGELOG.md lacks the Public Canon v1 anchor")
+            raise ValueError(f"CHANGELOG.md lacks the {anchor.removeprefix('## ')} anchor")
         position += len(anchor)
         changelog = (
             changelog[:position]

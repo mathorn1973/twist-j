@@ -172,7 +172,9 @@ NEUTRON-DELTA-EM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every down
 PROTON-RESIDUAL-IS-QCD	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 SQRT-PHI-TIME-GRAVITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 KERNEL-CONNECT-ALL-K	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
-CURVATURE-TRACE-VALUE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+CURVATURE-HISTORICAL-TRACE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the frozen historical operator is conditional on the declared checkpoint architecture
+CURVATURE-TRACE-VALUE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the falsified historical proposal is conditional on the declared checkpoint architecture
+CURVATURE-OPERATOR-CANONICAL	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: canonical spatial-curvature selection is conditional on the declared architecture
 OBSERVER-WRITE-PORT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 PHOTON-WINDOW-COORDINATES	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 PHOTON-UNIVERSAL-BIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture

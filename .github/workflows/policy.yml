@@ -3,7 +3,7 @@ name: policy
 on:
   push:
     branches: [main]
-    tags: [canon-v1]
+    tags: [canon-v*]
   pull_request:
   release:
     types: [published]
@@ -37,26 +37,31 @@ jobs:
         run: python tools/check_reproduce.py --base "$BASE_SHA"
       - name: Run activation readback on immutable publication events
         if: github.ref_type == 'tag' || github.event_name == 'release'
+        env:
+          PUBLICATION_TAG: ${{ github.event.release.tag_name || github.ref_name }}
         run: |
           python tools/check_activation.py --full --post-activation \
+            --expected-tag "$PUBLICATION_TAG" \
             --manifest-out activation-manifest.json
       - name: Preserve tag readback manifest
         if: github.ref_type == 'tag'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: canon-v1-activation-manifest
+          name: ${{ github.ref_name }}-activation-manifest
           path: activation-manifest.json
           if-no-files-found: error
       - name: Verify published release assets
         if: github.event_name == 'release'
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
           mkdir -p /tmp/twistj-release
-          gh release view canon-v1 --repo "$GITHUB_REPOSITORY"
-          gh release download canon-v1 --repo "$GITHUB_REPOSITORY" \
+          gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY"
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" \
             --pattern activation-manifest.json --pattern SHA256SUMS \
             --dir /tmp/twistj-release
           python tools/check_release_manifest.py \
-            /tmp/twistj-release/activation-manifest.json
+            /tmp/twistj-release/activation-manifest.json \
+            --expected-tag "$RELEASE_TAG"
           cmp canon/SHA256SUMS /tmp/twistj-release/SHA256SUMS

@@ -81,6 +81,26 @@ def read_status(root: Path) -> dict[str, str]:
     return fields
 
 
+def release_identity(root: Path) -> tuple[str, str, str]:
+    canon = (root / "canon" / "CANON.md").read_text(encoding="utf-8")
+    title = canon.splitlines()[0] if canon.splitlines() else ""
+    match = re.fullmatch(r"# TWIST-J Public Canon v([1-9][0-9]*)", title)
+    if not match:
+        raise ValueError("canon/CANON.md lacks an exact positive whole-number title")
+    version = match.group(1)
+    return version, f"Public Canon v{version}", f"canon-v{version}"
+
+
+def publication_tag_blocker(declared: str, expected: str | None) -> str | None:
+    if expected is None:
+        return "post-activation readback requires the triggering publication tag"
+    if not re.fullmatch(r"canon-v[1-9][0-9]*", expected):
+        return f"triggering publication tag is invalid: {expected}"
+    if expected != declared:
+        return f"triggering publication tag {expected} differs from STATUS.md {declared}"
+    return None
+
+
 def read_evidence(root: Path) -> list[dict[str, str]]:
     path = root / "canon" / "EVIDENCE.tsv"
     with path.open(encoding="utf-8", newline="") as handle:
@@ -217,11 +237,11 @@ def view_blockers(root: Path) -> list[str]:
     ):
         blockers.append("canon/CORE.md lacks the generated core claim block")
     if (
-        changelog.count("<!-- BEGIN GENERATED GENESIS COUNTS -->") != 1
-        or changelog.count("<!-- END GENERATED GENESIS COUNTS -->") != 1
+        changelog.count("<!-- BEGIN GENERATED CURRENT COUNTS -->") != 1
+        or changelog.count("<!-- END GENERATED CURRENT COUNTS -->") != 1
         or views["CHANGELOG_COUNTS.md"] not in changelog
     ):
-        blockers.append("canon/CHANGELOG.md lacks the generated Genesis count block")
+        blockers.append("canon/CHANGELOG.md lacks the generated current count block")
     if not counts.is_file() or counts.read_text(encoding="utf-8") != views["STATUS_COUNTS.tsv"]:
         blockers.append("canon/STATUS_COUNTS.tsv is not the generated status view")
     return blockers
@@ -245,18 +265,27 @@ def artifact_blockers(root: Path) -> list[str]:
 
 
 def status_blockers(
-    root: Path, dry_run: bool, post_activation: bool, content_commit: str
+    root: Path,
+    dry_run: bool,
+    post_activation: bool,
+    content_commit: str,
+    expected_tag: str | None = None,
 ) -> list[str]:
     fields = read_status(root)
     blockers: list[str] = []
     head = git(root, "rev-parse", "HEAD").stdout.decode().strip()
+    try:
+        version, canon_name, release_tag = release_identity(root)
+    except (OSError, ValueError) as error:
+        blockers.append(str(error))
+        version, canon_name, release_tag = "", "", ""
     if git(root, "status", "--porcelain").stdout.strip():
         blockers.append("activation gate requires a clean worktree")
     if dry_run:
         if fields.get("STATE") != "GENESIS":
             blockers.append("dry-run activation requires STATE: GENESIS")
-        if git(root, "tag", "--list", "canon-v1").stdout.strip():
-            blockers.append("canon-v1 tag already exists during Genesis")
+        if release_tag and git(root, "tag", "--list", release_tag).stdout.strip():
+            blockers.append(f"{release_tag} tag already exists during Genesis")
     else:
         if fields.get("STATE") != "ACTIVE":
             blockers.append("activation gate requires STATE: ACTIVE")
@@ -266,9 +295,9 @@ def status_blockers(
             blockers.append("STATUS.md CONTENT_COMMIT differs from requested content commit")
         canon_bytes = (root / "canon" / "CANON.md").read_bytes()
         exact = {
-            "CANON": "Public Canon v1",
+            "CANON": canon_name,
             "AUTHORITY": "mathorn1973/twist-j main",
-            "TAG": "canon-v1",
+            "TAG": release_tag,
             "CANON_SHA256": sha256_bytes(canon_bytes),
             "CANON_BYTES": str(len(canon_bytes)),
         }
@@ -298,9 +327,13 @@ def status_blockers(
         )
     blockers.extend(activation_delta_blockers(changed, dry_run))
     if post_activation:
-        tag = git(root, "rev-parse", "canon-v1^{}")
+        tag_problem = publication_tag_blocker(release_tag, expected_tag)
+        if tag_problem:
+            blockers.append(tag_problem)
+            return blockers
+        tag = git(root, "rev-parse", f"{expected_tag}^{{}}")
         if tag.returncode:
-            blockers.append("post-activation readback lacks tag canon-v1")
+            blockers.append(f"post-activation readback lacks tag {expected_tag}")
         else:
             activation_commit = tag.stdout.decode().strip()
             if git(root, "merge-base", "--is-ancestor", content_commit, activation_commit).returncode:
@@ -396,6 +429,7 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--post-activation", action="store_true")
     parser.add_argument("--content-commit")
+    parser.add_argument("--expected-tag")
     parser.add_argument("--manifest-out", type=Path)
     args = parser.parse_args()
     root = args.root.resolve()
@@ -442,12 +476,15 @@ def main() -> None:
     except (RuntimeError, ValueError) as error:
         blockers.append(str(error))
     blockers.extend(
-        status_blockers(root, args.dry_run, args.post_activation, content_commit)
+        status_blockers(
+            root, args.dry_run, args.post_activation, content_commit,
+            args.expected_tag,
+        )
     )
 
     activation_commit = "NOT_DECLARED"
     if args.post_activation:
-        tagged = git(root, "rev-parse", "canon-v1^{}")
+        tagged = git(root, "rev-parse", f"{args.expected_tag or ''}^{{}}")
         if not tagged.returncode:
             activation_commit = tagged.stdout.decode().strip()
     elif not args.dry_run:

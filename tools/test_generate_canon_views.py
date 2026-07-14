@@ -7,11 +7,20 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from tools.generate_canon_views import apply_views, generated_views
+from tools.generate_canon_views import (
+    apply_views,
+    current_canon_version,
+    generated_views,
+)
 from tools.test_check_ledger import LedgerFixture
 
 
 class GeneratedViewTests(unittest.TestCase):
+    def test_current_version_requires_an_exact_whole_number_title(self) -> None:
+        self.assertEqual(current_canon_version("# TWIST-J Public Canon v2\n"), "2")
+        with self.assertRaisesRegex(ValueError, "whole-number title"):
+            current_canon_version("# TWIST-J Public Canon v2.1\n")
+
     def test_views_are_registry_derived(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

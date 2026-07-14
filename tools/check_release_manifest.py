@@ -46,15 +46,23 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("manifest", type=Path)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--expected-tag", required=True)
     args = parser.parse_args()
     root = args.root.resolve()
     fields = read_status(root)
     content_commit = fields.get("CONTENT_COMMIT", "")
     if not SHA40.fullmatch(content_commit):
         raise SystemExit("FAIL: STATUS.md lacks a valid CONTENT_COMMIT")
-    tagged = git(root, "rev-parse", "canon-v1^{}")
+    release_tag = fields.get("TAG", "")
+    if not re.fullmatch(r"canon-v[1-9][0-9]*", release_tag):
+        raise SystemExit("FAIL: STATUS.md lacks a valid whole-number release tag")
+    if args.expected_tag != release_tag:
+        raise SystemExit(
+            f"FAIL: release event tag {args.expected_tag} differs from STATUS.md {release_tag}"
+        )
+    tagged = git(root, "rev-parse", f"{release_tag}^{{}}")
     if tagged.returncode:
-        raise SystemExit("FAIL: canon-v1 tag is unavailable")
+        raise SystemExit(f"FAIL: {release_tag} tag is unavailable")
     activation_commit = tagged.stdout.decode().strip()
     try:
         validate_manifest(root, args.manifest.resolve(), content_commit, activation_commit)

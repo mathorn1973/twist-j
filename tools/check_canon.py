@@ -151,9 +151,12 @@ for name in HASHED_FILES:
                 f"{match.group(0)}"
             )
 
-version_match = re.search(r"Public Canon v([1-9][0-9]*)", canon)
+canon_title = canon.splitlines()[0] if canon.splitlines() else ""
+version_match = re.fullmatch(
+    r"# TWIST-J Public Canon v([1-9][0-9]*)", canon_title
+)
 if not version_match:
-    fail("CANON.md lacks a Public Canon vN title")
+    fail("CANON.md lacks an exact positive whole-number Public Canon vN title")
 version = version_match.group(1)
 if f"Public Canon v{version}" not in changelog:
     fail("CHANGELOG.md lacks the current Public Canon version")

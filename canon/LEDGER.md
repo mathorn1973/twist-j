@@ -4,7 +4,7 @@
 statuses, scopes, Canon sections, evidence locations, and live decision
 conditions.  Its six-column schema is unchanged.
 
-The companion tables make Public Canon v1 auditable without turning Git
+The companion tables make the current Public Canon auditable without turning Git
 history or the private development archive into scientific evidence:
 
 - `NORMATIVE.tsv` inventories the public axiom, architectural definitions,
@@ -12,10 +12,13 @@ history or the private development archive into scientific evidence:
 - `DEPENDENCIES.tsv` contains declared logical dependencies and explicit open
   boundaries.  It does not infer dependencies from thematic proximity.
 - `EVIDENCE.tsv` maps every registered claim to a SHA-256-pinned public
-  evidence bundle and records its architecture requirement. Evidence bundle
-  hashes deliberately exclude `RUNS/`: immutable candidate content is pinned
-  before formal run records arrive. The final activation gate checks whether
-  every declared architecture requirement is actually satisfied.
+  evidence bundle and records its architecture requirement. `REPRODUCTION`
+  names a stable three-file bundle under `reproduce/`; `PUBLIC_PROBE` names
+  the five-file preregistration, run, and result bundle under `probes/`.
+  Reproduction hashes deliberately exclude `RUNS/`: immutable candidate
+  content is pinned before formal run records arrive. The final activation
+  gate checks every declared reproduction architecture requirement; public
+  probe architecture evidence is recorded in its `RUN.md` and `RESULT.md`.
 - `HISTORY.tsv` starts at Public Canon v1 Genesis. It orders each claim's
   events explicitly and preserves the evidence identifier, location, and hash
   at every event. Later status, scope, and evidence changes append events;
@@ -36,6 +39,6 @@ with `REGISTRY.tsv`, valid evidence hashes, continuous status history, and the
 status firewall: theorem rows cannot require lower-status claims, and
 dictionary rows cannot require open or falsified claims.
 
-These files are the machine-auditable ledger surface of Public Canon v1.
+These files are the machine-auditable ledger surface of Public Canon v2.
 Authority and activation state follow `STATUS.md`; their presence on another
 ref neither promotes a claim nor creates a second authority.

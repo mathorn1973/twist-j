@@ -50,7 +50,9 @@ LAYERS = {
     "NOT_APPLICABLE",
 }
 RELATIONS = {"REQUIRES", "BOUNDED_BY"}
-EVIDENCE_KINDS = {"INLINE_CANON", "REPRODUCTION", "EXTERNAL_SOURCE"}
+EVIDENCE_KINDS = {
+    "INLINE_CANON", "REPRODUCTION", "PUBLIC_PROBE", "EXTERNAL_SOURCE"
+}
 HASH_MODES = {"file-sha256", "bundle-manifest-sha256-v1", "external-manifest"}
 ARCHITECTURE_REQUIREMENTS = {
     "none", "one-architecture", "two-architecture", "recorded-audit",
@@ -317,7 +319,7 @@ def validate(root: Path) -> Snapshot:
         if kind == "INLINE_CANON":
             if location != "inline" or mode != "file-sha256" or digest != canon_hash:
                 fail(f"{evidence_id} has invalid inline evidence hash")
-        elif kind == "REPRODUCTION":
+        elif kind in {"REPRODUCTION", "PUBLIC_PROBE"}:
             relative = Path(location)
             if relative.is_absolute() or ".." in relative.parts:
                 fail(f"{evidence_id} has unsafe location")
@@ -326,10 +328,20 @@ def validate(root: Path) -> Snapshot:
                 fail(f"{evidence_id} reproduction is missing")
             if not SHA256.fullmatch(digest) or digest != bundle_sha256(artifact, root):
                 fail(f"{evidence_id} reproduction hash differs")
-            if architecture in {"one-architecture", "two-architecture"}:
+            if kind == "REPRODUCTION" and architecture in {
+                "one-architecture", "two-architecture"
+            }:
                 for required in ("verify.py", "EXPECTED.txt", "README.md"):
                     if not (artifact / required).is_file():
                         fail(f"{evidence_id} lacks {required}")
+            if kind == "PUBLIC_PROBE":
+                for required in (
+                    "PREREG.md", "verify.py", "EXPECTED.txt", "RUN.md", "RESULT.md"
+                ):
+                    if not (artifact / required).is_file():
+                        fail(f"{evidence_id} lacks {required}")
+                if architecture not in {"one-architecture", "two-architecture"}:
+                    fail(f"{evidence_id} public probe lacks an architecture gate")
         else:
             if mode != "external-manifest" or digest != "PENDING-SOURCE-MANIFEST":
                 fail(f"{evidence_id} external source is not delegated to the source manifest")
