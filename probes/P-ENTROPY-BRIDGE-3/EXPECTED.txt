@@ -1,0 +1,19 @@
+P-ENTROPY-BRIDGE-3 exact verifier
+the living-set structure of the driven kernel: the two halves,
+the four restriction bijections, the component split and the
+living count 3125 = 5^5; the unique-past law and the caterpillar
+shape along the driver word; the tower carrier; the lambda-order
+table and the O/lambda^5 spectrum
+
+PASS 01 G01 CORE           recurrent core 6250 on 313 attractors
+PASS 02 G02 HALVES         Im F_0 and Im F_1 partition the core, 3125 + 3125
+PASS 03 G03 LIVING-BIJECT  every branch map restricted to either half is a bijection onto its own image half (all four cases)
+PASS 04 G04 COMPONENT-SPLIT every 20-attractor splits (10, 10), the singlet (5, 5); living trajectories 312 x 10 + 5 = 3125 = 5^5
+PASS 05 G05 UNIQUE-PAST    word-prefix compositions ending at anchors 4096, 4873, 6144 have image 3125 and every fiber exactly 2, d = 1..12
+PASS 06 G06 CATERPILLAR    backward width exactly 2 at every depth 1..12; from depth 2 on exactly one node carries both preimages and the sibling dies (anchors 5000, 8192, 12345)
+PASS 07 G07 TOWER-CARRIER  boundary states at multiples of 2^k on the seed-0 attractor: exactly 10 states, 5 in each half, for k in {1, 2, 4, 8}
+PASS 08 G08 LAMBDA-ORDERS  ord(J mod lambda^i) for i = 1..8 equals (4, 20, 20, 20, 20, 20, 100, 100)
+PASS 09 G09 SPECTRUM-L5    orbit spectrum of J on O/lambda^5 is {1: 1, 4: 1, 20: 156} (valuation formula; 3125 points)
+PASS 10 G10 COUNT-MATCH    3125 = 5^5 = |O/lambda^5|: the living trajectory count equals the lambda-tower capacity at depth 5; per component 10 = 2 x 5 and the boundary split is 5 + 5
+
+RESULT 10/10 ALL PASS
