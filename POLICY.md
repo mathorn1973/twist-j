@@ -233,6 +233,10 @@ misapplied to post-cutover public work; it does not relax tag or release
 readback.
 
 The sole workflow has read-only permissions, immutable action pins, no
-persisted checkout credential, and a 15-minute timeout.
+persisted checkout credential, and a 15-minute timeout. Its tag trigger
+covers `canon-v*`, but the activation and release validators require the
+triggering event tag to equal the positive whole-number tag declared by the
+current `STATUS.md`; a broader, decimal, or foreign tag therefore triggers a
+failing readback, never publication.
 `pull_request_target` is forbidden. Any new workflow requires an explicit
 policy change.

@@ -1,5 +1,35 @@
 # Canon changelog (public series)
 
+## Public Canon v2
+
+<!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 163 claims; 0 T-LOCK, 83 T, 38 D, 12 C, 6 H, 20 O, 4 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CURRENT COUNTS -->
+
+This fold records the first three completed post-cutover public probes without
+expanding their frozen scopes. `BELL-MAGIC-BOUNDARY` closes at [T] for the
+declared finite absolute CHSH functional: the exact maxima are
+`1/2 + sqrt(5)` and `2 sqrt(2)`, with the preregistered strict comparison.
+No unrestricted Bell cap or continuous optimum is added.
+
+`SPIN-LIFT-FORCED` closes at [F]. The complete pinned classification has four
+inequivalent lift classes rather than one. The dicyclic witness survives, but
+its uniqueness proposal does not.
+
+The former compound curvature obligation is separated by status and scope.
+`CURVATURE-HISTORICAL-TRACE` records at [T] the exact value `-881/8` for the
+fully typed historical compression. `CURVATURE-TRACE-VALUE` records at [F]
+that the registered `-21/8` proposal fails on that surface.
+`CURVATURE-OPERATOR-CANONICAL` remains [O]: neither the historical trace nor
+the separate ten-mode checksum selects a canonical spatial-curvature
+operator or proves a spectrum.
+
+Release validation now derives the positive whole-number Canon tag from the
+current public status instead of hard-coding the first release. Publication
+routing, read-only permissions, exact activation delta, and immutable asset
+readback are unchanged.
+
 ## Public Canon v1
 
 <!-- BEGIN GENERATED GENESIS COUNTS -->

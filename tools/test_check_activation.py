@@ -14,6 +14,8 @@ from tools.check_activation import (
     architecture_blockers,
     artifact_blockers,
     post_content_path_allowed,
+    publication_tag_blocker,
+    release_identity,
     view_blockers,
 )
 from tools.generate_canon_views import generated_views
@@ -29,6 +31,35 @@ def write_tsv(path: Path, fields: tuple[str, ...], rows: list[dict[str, str]]) -
 
 
 class ActivationTests(unittest.TestCase):
+    def test_release_identity_uses_positive_whole_canon_number(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "canon").mkdir()
+            (root / "canon" / "CANON.md").write_text(
+                "# TWIST-J Public Canon v12\n", encoding="utf-8"
+            )
+            self.assertEqual(
+                release_identity(root),
+                ("12", "Public Canon v12", "canon-v12"),
+            )
+            (root / "canon" / "CANON.md").write_text(
+                "# TWIST-J Public Canon v12.1\n", encoding="utf-8"
+            )
+            with self.assertRaisesRegex(ValueError, "whole-number title"):
+                release_identity(root)
+
+    def test_publication_tag_must_equal_declared_whole_number_tag(self) -> None:
+        self.assertIsNone(publication_tag_blocker("canon-v2", "canon-v2"))
+        self.assertIn(
+            "invalid", publication_tag_blocker("canon-v2", "canon-v2.1") or ""
+        )
+        self.assertIn(
+            "differs", publication_tag_blocker("canon-v2", "canon-v3") or ""
+        )
+        self.assertIn(
+            "requires", publication_tag_blocker("canon-v2", None) or ""
+        )
+
     def test_active_release_delta_is_exactly_three_metadata_files(self) -> None:
         exact = ["STATUS.md", "README.md", "CITATION.cff"]
         self.assertEqual(activation_delta_blockers(exact, dry_run=False), [])

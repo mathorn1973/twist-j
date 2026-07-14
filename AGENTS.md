@@ -378,6 +378,12 @@ review.
    without squash or rebase.
 9. A public Canon release is a separate declared fold with deterministic
    output, `SHA256SUMS`, immutable tag `canon-vN`, and updated `STATUS.md`.
+   After v1 activation, one reviewed release branch may carry exactly two
+   frozen commits: first the complete content fold, then a release-form
+   commit changing exactly `STATUS.md`, `README.md`, and `CITATION.cff` and
+   naming the content commit. The pull-request head must pass the active
+   release gate. Merge without squash or rebase, tag the merge only after
+   public readback, and publish assets only after tag readback passes.
 
 Notes and incomplete proposals live under `notes/`, carry `NON-CANONICAL`,
 need no verifier, and never edit `canon/CANON.md`. Canon patch proposals live

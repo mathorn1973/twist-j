@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Public Canon v1 theorem/dictionary separation audit.
+"""Current Public Canon theorem/dictionary separation audit.
 
 Standard library only. This witness checks the registry boundary introduced
 by Genesis review G2B. It does not establish new physics or new mathematics;
@@ -38,12 +38,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 81, "D": 38, "C": 12, "F": 2,
-                       "O": 22, "H": 6}
+    expected_counts = {"T": 83, "D": 38, "C": 12, "F": 4,
+                       "O": 20, "H": 6}
     checks.append((
         "COUNTS",
-        "registry has 161 claims with the Genesis-reconciled status partition",
-        len(rows) == 161 and counts == expected_counts,
+        "registry has 163 claims with the current status partition",
+        len(rows) == 163 and counts == expected_counts,
     ))
 
     checks.append((

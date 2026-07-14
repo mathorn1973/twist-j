@@ -18,6 +18,7 @@ from tools.check_ledger import (
     LedgerError,
     NORMATIVE_FIELDS,
     REGISTRY_FIELDS,
+    bundle_sha256,
     validate,
 )
 
@@ -34,7 +35,10 @@ class LedgerFixture:
         self.root = root
         self.canon = root / "canon"
         self.canon.mkdir()
-        (self.canon / "CANON.md").write_text("# Fixture\nT-CLAIM [T]. O-CLAIM [O].\n", encoding="utf-8")
+        (self.canon / "CANON.md").write_text(
+            "# TWIST-J Public Canon v1\nFixture. T-CLAIM [T]. O-CLAIM [O].\n",
+            encoding="utf-8",
+        )
         scope_t = "exact fixture theorem"
         scope_o = "open fixture gate"
         self.registry = [
@@ -117,6 +121,28 @@ class LedgerTests(unittest.TestCase):
         self.fixture.write()
         with self.assertRaisesRegex(LedgerError, "invalid inline evidence hash"):
             validate(self.root)
+
+    def test_public_probe_is_a_five_file_evidence_bundle(self) -> None:
+        location = "probes/P-FIXTURE-1"
+        probe = self.root / location
+        probe.mkdir(parents=True)
+        for name in ("PREREG.md", "verify.py", "EXPECTED.txt", "RUN.md", "RESULT.md"):
+            (probe / name).write_text(f"{name}\n", encoding="utf-8")
+        digest = bundle_sha256(probe, self.root)
+        self.fixture.registry[1]["evidence"] = location
+        self.fixture.evidence[1] = {
+            "claim_id": "O-CLAIM",
+            "evidence_id": "EV-O-CLAIM",
+            "evidence_kind": "PUBLIC_PROBE",
+            "location": location,
+            "sha256": digest,
+            "hash_mode": "bundle-manifest-sha256-v1",
+            "architecture_requirement": "two-architecture",
+        }
+        self.fixture.history[1]["evidence_location"] = location
+        self.fixture.history[1]["evidence_sha256"] = digest
+        self.fixture.write()
+        self.assertEqual(validate(self.root).claims, 2)
 
     def test_every_claim_needs_history(self) -> None:
         self.fixture.history.pop()

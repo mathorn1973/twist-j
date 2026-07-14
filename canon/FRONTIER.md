@@ -23,12 +23,10 @@ Closed claims are excluded.
 
 - ALPHA-S-RUNNING [O]: the strong coupling running above the 3/4 seed
   Decision: closes positively by a running derived from the 3/4 seed matching the measured strong coupling at a named scale within its stated window; closes negatively if every derived scheme from the seed misses the measured value or breaks the seed ratio 15 : 4
-- BELL-MAGIC-BOUNDARY [O]: state a precise CHSH functional and determine its exact maxima over the zeta_5 and zeta_8 phase sets; no Bell cap or Tsirelson value is currently asserted
-  Decision: closes positively when both exact maxima are proved for the stated functional; closes negatively if the functional is ill-defined on either phase set or the two exact optimizations do not support the proposed comparison
 - COLOR-MEASURE-SELECTION [O]: the non abelian measure lift onto SL_3(F_5); 24 carrier orbits, 16 observable types
   Decision: closes positively by a derivation selecting the weight vector over the 24 orbits constrained by the 16 observable types; closes negatively if the constraint set is exhausted with no surviving weight vector, or if two inequivalent vectors survive every named constraint
-- CURVATURE-TRACE-VALUE [O]: commit a public discrete-curvature operator and exact witness deciding the proposed trace value -21/8; no operator, value, or golden spectrum is currently asserted
-  Decision: closes positively when the public operator has the registered proposed trace and a proved spectrum; closes negatively if the committed operator gives a different trace or refutes the proposed spectrum
+- CURVATURE-OPERATOR-CANONICAL [O]: whether the public architecture determines exactly one equivalence class of spatial-curvature operator after its carrier, measure, projection group, and ambient versus intrinsic commutator choice are fixed publicly
+  Decision: closes UNIQUE if exactly one class survives, NONUNIQUE if at least two survive, EMPTY if none survives, and STOP if the classification is incomplete or inexact
 - DE-CONFORMAL-WEIGHT [O]: the dark energy conformal weight
   Decision: closes positively by deriving the conformal weight of the dark energy trace direction; closes negatively if the derived weight contradicts w = -14/15
 - DRESS-CROSSCOUNT [O]: the integer crossing count per observable
@@ -57,8 +55,6 @@ Closed claims are excluded.
   Decision: the two gates decide: exact gate values close the Larmor clause; the Schwinger term carries the hypothesis value 1/(2 pi) and a failed gate fires it
 - SCHEME-DICTIONARY [O]: the scheme dictionary between exact seeds and measured couplings
   Decision: closes positively by an exact dictionary between the seed normalization and a named measurement scheme; closes negatively if any dictionary requires a new free dimensionless parameter
-- SPIN-LIFT-FORCED [O]: whether the dicyclic spin lift is forced
-  Decision: closes positively by proving the dicyclic lift is the unique lift of the axiom pair; closes negatively by exhibiting a second inequivalent lift surviving the same constraints
 - SQRT-PHI-TIME-GRAVITY [O]: the dynamical face of the time gravity door; the gravity face is furnished
   Decision: closes positively by furnishing the dynamical face: a dynamics whose time quantum realizes the gate line square root; closes negatively if the dynamical face is proven empty
 - TT-SOURCE [O]: the emission map from an explicitly defined public source object
@@ -66,4 +62,4 @@ Closed claims are excluded.
 - TT-VECTOR-STATE-NORMALIZATION [O]: the vector doublet state, its two point and pseudo covariance spectra, the action normalization, the scalar comparison; the only gate yielding a numerical r_T(k)
   Decision: closes positively by a public vector-doublet normalization yielding a numerical r_T(k); closes negatively if every admissible normalization violates the registered TT identities or requires an extra free dimensionless input
 
-Live total: 28.
+Live total: 26.
