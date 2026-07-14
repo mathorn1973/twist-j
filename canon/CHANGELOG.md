@@ -1,11 +1,37 @@
 # Canon changelog (public series)
 
-## Public Canon v2
+## Public Canon v3
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 163 claims; 0 T-LOCK, 83 T, 38 D, 12 C, 6 H, 20 O, 4 F; 26 live H/O.
+Registry snapshot: 171 claims; 0 T-LOCK, 83 T, 38 D, 17 C, 6 H, 21 O, 6 F; 27 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+This fold records the completed public sequence `P-ENTROPY-BRIDGE-1`,
+`P-ENTROPY-BRIDGE-2`, and `P-ENTROPY-BRIDGE-3`, pinned respectively by
+`9fc7a6c3`, `eb54dff5`, and `ab175284`, without expanding their frozen
+scopes. All three probes have byte-identical two-architecture public records.
+
+`ENTROPY-LIFT-DEFECT` and `ENTROPY-CYLINDER-CUT` record the two first-class
+negative boundaries: the literal integer generator lift has a nonzero exact
+affine defect, and no exact finite-cylindrical bridge cut with driver window at
+most 16 exists at any lambda-depth. `ENTROPY-JOINT-CESARO-LAW`,
+`ENTROPY-BLOCK-HALVING`, `ENTROPY-LIVING-SET`, `ENTROPY-UNIQUE-PAST`, and
+`ENTROPY-COUNT-MATCH` enter at [C] and retain their finite window, anchor, and
+depth scopes.
+
+`ENTROPY-LAYER-BRIDGE` remains [O], now narrowed to selection form. The only
+remaining bridge task is to construct an equivariant family
+`Psi_kappa: O/lambda^5 -> L_n` and prove its regularity, canonicity, and frozen
+joint-Cesaro measure clause. The exact cardinality match is a carrier fact,
+not the missing construction.
+
+## Public Canon v2
+
+<!-- BEGIN GENERATED CANON2 COUNTS -->
+Registry snapshot: 163 claims; 0 T-LOCK, 83 T, 38 D, 12 C, 6 H, 20 O, 4 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON2 COUNTS -->
 
 This fold records the first three completed post-cutover public probes without
 expanding their frozen scopes. `BELL-MAGIC-BOUNDARY` closes at [T] for the

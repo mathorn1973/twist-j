@@ -197,3 +197,15 @@ MAGIC-PRIME-GATE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every down
 QUBIT-FROM-F5	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 BELL-MAGIC-BOUNDARY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 P5-ROOT-SELECTION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ENTROPY-CYLINDER-CUT	DEF-ARCHITECTURE	REQUIRES	the finite-cylindrical ansatz is formulated on the declared checkpoint architecture and Thue-Morse driver
+ENTROPY-LIFT-DEFECT	DEF-ARCHITECTURE	REQUIRES	the literal lift falsifier is a statement about the declared finite-generator presentation
+ENTROPY-JOINT-CESARO-LAW	DEF-ARCHITECTURE	REQUIRES	the frozen window law is computed for the declared driven kernel
+ENTROPY-BLOCK-HALVING	DEF-ARCHITECTURE	REQUIRES	the block maps are compositions of the declared branch maps along the declared driver
+ENTROPY-LIVING-SET	DEF-ARCHITECTURE	REQUIRES	the living halves and restricted bijections are finite facts of the declared driven kernel
+ENTROPY-UNIQUE-PAST	ENTROPY-LIVING-SET	REQUIRES	the caterpillar backward structure uses the bijections between the two living halves
+ENTROPY-COUNT-MATCH	ENTROPY-LIVING-SET	REQUIRES	the arithmetic carrier count is compared with the living-trajectory count
+ENTROPY-LAYER-BRIDGE	ENTROPY-CYLINDER-CUT	REQUIRES	the open selection family must be non-cylindrical because the finite-cylinder ansatz is falsified
+ENTROPY-LAYER-BRIDGE	ENTROPY-JOINT-CESARO-LAW	REQUIRES	the remaining measure clause is equality with the frozen joint Cesaro law
+ENTROPY-LAYER-BRIDGE	ENTROPY-BLOCK-HALVING	REQUIRES	the one-bit-per-scale computation constrains the unbounded driver dependence
+ENTROPY-LAYER-BRIDGE	ENTROPY-UNIQUE-PAST	REQUIRES	the selection form uses the unique living past over the driver word
+ENTROPY-LAYER-BRIDGE	ENTROPY-COUNT-MATCH	REQUIRES	the depth-five lambda carrier supplies exactly the living-set cardinality

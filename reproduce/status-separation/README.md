@@ -5,7 +5,7 @@ It establishes no new mathematical or physical claim. It verifies that the
 named algebraic, finite-group, chain, and recurrence rows remain at `T`, while
 their physical projection, place/CPT, force-curvature, color, Maxwell, Born,
 and cosmology readings are carried by explicit `D` rows. Its count check is
-updated by each sealed Canon fold; the theorem/dictionary boundary checks stay
+updated by each completed Canon fold; the theorem/dictionary boundary checks stay
 structural.
 
 The audit reads only `canon/REGISTRY.tsv`, uses the Python standard library,

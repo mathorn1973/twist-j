@@ -39,6 +39,6 @@ with `REGISTRY.tsv`, valid evidence hashes, continuous status history, and the
 status firewall: theorem rows cannot require lower-status claims, and
 dictionary rows cannot require open or falsified claims.
 
-These files are the machine-auditable ledger surface of Public Canon v2.
+These files are the machine-auditable ledger surface of Public Canon v3.
 Authority and activation state follow `STATUS.md`; their presence on another
 ref neither promotes a claim nor creates a second authority.
