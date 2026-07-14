@@ -38,12 +38,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 83, "D": 38, "C": 17, "F": 6,
+    expected_counts = {"T": 83, "D": 38, "C": 20, "F": 6,
                        "O": 21, "H": 6}
     checks.append((
         "COUNTS",
-        "registry has 171 claims with the current status partition",
-        len(rows) == 171 and counts == expected_counts,
+        "registry has 174 claims with the current status partition",
+        len(rows) == 174 and counts == expected_counts,
     ))
 
     checks.append((
