@@ -1,6 +1,6 @@
 # P-ENTROPY-BRIDGE-2 result
 
-Status: FORMAL AARCH64 RECORD; PUBLIC X86_64 GATE PENDING
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS
 
 ## Scientific decision (aarch64 leg)
 
@@ -60,9 +60,17 @@ measure claim, no canon, registry, or frontier edit.
 aarch64 leg:  PASS (RUN.md in this directory; stdout sha256
               62ed9aef7226f363684f316511e9baa62972afd394aeb24def45ad9c376ca2ba,
               1296 bytes)
-x86_64 leg:   PENDING (the public pull request check)
+x86_64 leg:   PASS. Required check job on pull request 28, head
+              7d648e8d1ae4efa190ad85960ea7a9ed2686164c: run 29341238801,
+              job 87113225792, conclusion success (GitHub x86_64
+              ubuntu-latest, Python 3.12.13, rerun of the pinned verifier
+              with exact byte comparison against EXPECTED.txt).
+gate:         PASS. Byte-identical stdout on aarch64 and x86_64.
 ```
 
-This file will be extended with the public run and job reference and the
-final gate status after the x86_64 comparison, in a further commit that
-does not alter the pinned files.
+The earned status at the preregistered scope: the cylinder no-go stands as
+a two-architecture reproduced public fact (the F of the finite-cylindrical
+ansatz at windows <= 16 over all lambda-depths, by G05 with the killing
+lemma), and the one-bit-per-scale law stands at C on its finite range
+(k = 0..10). Folding into the registry, frontier, or Canon is a separate
+sealed step and is not performed by this probe.
