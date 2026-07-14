@@ -160,6 +160,12 @@ if not version_match:
 version = version_match.group(1)
 if f"Public Canon v{version}" not in changelog:
     fail("CHANGELOG.md lacks the current Public Canon version")
+expected_core_identity = f"**Release identity:** Public Canon v{version}."
+if expected_core_identity not in core:
+    fail("CORE.md release identity differs from CANON.md")
+core_versions = set(re.findall(r"Public Canon v([1-9][0-9]*)", core))
+if core_versions != {version}:
+    fail("CORE.md contains a stale or mixed Public Canon version")
 
 for phrase in FORBIDDEN_CANON_PHRASES:
     if phrase.lower() in canon.lower():

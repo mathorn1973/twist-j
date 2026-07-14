@@ -1,11 +1,35 @@
 # Canon changelog (public series)
 
-## Public Canon v3
+## Public Canon v4
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 171 claims; 0 T-LOCK, 83 T, 38 D, 17 C, 6 H, 21 O, 6 F; 27 live H/O.
+Registry snapshot: 174 claims; 0 T-LOCK, 83 T, 38 D, 20 C, 6 H, 21 O, 6 F; 27 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+This fold records `P-ENTROPY-BRIDGE-4` at its immutable preregistration pin
+`3ad1e240` and two-architecture public record. It adds only three finite
+computation-grade results from the frozen ranges: `ENTROPY-PENTAGON-QUOTIENT`,
+`ENTROPY-AFFINE-COCYCLE`, and `ENTROPY-COMPONENT-NOGO` enter at [C].
+
+The first records the constant order-five pentagon partition on every
+recurrent component and living half for `k = 1..10`, branch equivariance,
+and trivial quotient holonomy for `k = 1..8`. The second records the frozen
+affine cell maps in the named coherent level-2 gauge only. The third records
+zero solutions in exactly the 900 preregistered component-local cylinder
+cases. No gauge-independent, all-scale, ergodic, inverse-limit, or measure
+statement is added, and the depth-five selection is not declared dead.
+
+`ENTROPY-LAYER-BRIDGE` remains [O]. The new quotient and cocycle constrain
+the open equivariant selection family, but regularity, canonicity, and the
+frozen joint-Cesaro measure clause remain unproved.
+
+## Public Canon v3
+
+<!-- BEGIN GENERATED CANON3 COUNTS -->
+Registry snapshot: 171 claims; 0 T-LOCK, 83 T, 38 D, 17 C, 6 H, 21 O, 6 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON3 COUNTS -->
 
 This fold records the completed public sequence `P-ENTROPY-BRIDGE-1`,
 `P-ENTROPY-BRIDGE-2`, and `P-ENTROPY-BRIDGE-3`, pinned respectively by

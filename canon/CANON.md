@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v3
+# TWIST-J Public Canon v4
 
-**Release identity.** Public Canon v3. Normative authority and activation
+**Release identity.** Public Canon v4. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v3 also declares the discrete
+algebraic axiom is J. Public Canon v4 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v3 does not claim
+seed of the two algebraic projections. Public Canon v4 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -82,7 +82,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v3 contains no such
+deriving the architecture from J; Public Canon v4 contains no such
 theorem.
 
 ---
@@ -299,10 +299,10 @@ Therefore Tr_4(M_J x) = 2 Tr_4(x) in F_5, and the scalar multiples of
 Tr_4 are the only covectors reading any multiplier at all
 (CODEC-TR4 [T], reproduce/hyperplane-codec). No coding rate is inferred
 from this dimension count. The inherited phrase "rate 4/5" is retired
-from Public Canon v3; any future coding claim must define its alphabet,
+from Public Canon v4; any future coding claim must define its alphabet,
 message space, encoder, decoder, error criterion, and rate from scratch.
 
-Three completed public probes now delimit the entropy bridge without closing
+Four completed public probes now delimit the entropy bridge without closing
 it. Write
 
 ```
@@ -350,6 +350,29 @@ Spec(J on O/lambda^5) = {1: 1, 4: 1, 20: 156},
 
 This is ENTROPY-COUNT-MATCH [C]: the depth-five lambda carrier has exactly
 the living-set cardinality. Cardinality is not a construction of the cut.
+
+The fourth probe resolves a further finite quotient of that living carrier.
+On every recurrent component and half, the level-`k` vertex groups for
+`k = 1..10` are cyclic of order five with one constant partition into
+five-cells: two cells per size-20 component half and one per singlet half,
+for `625 = 5^4` cells per full living half. Both one-tick branch maps carry
+cells to cells, and the induced vertex holonomy on the cell quotient is
+trivial for `k = 1..8` (ENTROPY-PENTAGON-QUOTIENT [C],
+probes/P-ENTROPY-BRIDGE-4).
+
+In the preregistered coherent level-2 gauge, every level-`k` cell map for
+`k = 0..10` is affine over `F_5`; all 313 components have the same frozen
+`(a,b)` spectra, with period four for `k = 1..10`
+(ENTROPY-AFFINE-COCYCLE [C]). This is gauge-specific and does not identify
+the multipliers gauge-independently with the lambda-digit action. The same
+probe finds zero component-local cylinder solutions in exactly the 900
+frozen cases: the singlet and canonical size-20 component for `L = 4..16`,
+three cursor positions and eleven stated clocks, plus the singlet at clock
+four for `L = 17..30` at the same cursors (ENTROPY-COMPONENT-NOGO [C]).
+This finite enumeration does not quantify over every component, clock, or
+window. None of these computations kills the depth-five selection problem,
+proves an all-scale or ergodic statement, or supplies regularity, canonicity,
+or measure transport; ENTROPY-LAYER-BRIDGE [O] remains open.
 
 Macro space is the coupled kernel. Cells couple on the entanglement
 axis by the two way CSUM transvections, and the wedge
@@ -720,7 +743,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v3. The fermionizer
+inherited naming clause is not part of Public Canon v4. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale

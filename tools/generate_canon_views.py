@@ -164,15 +164,37 @@ def replace_marked(text: str, block: str, begin: str, end: str) -> str:
     return text[:start] + block.rstrip("\n") + text[stop:]
 
 
+def synchronize_core_release(text: str, version: str) -> str:
+    replacements = (
+        (
+            r"(?m)^\*\*Release identity:\*\* Public Canon v[1-9][0-9]*\.",
+            f"**Release identity:** Public Canon v{version}.",
+        ),
+        (
+            r"(?m)^Public Canon v[1-9][0-9]* also declares a discrete architecture\.",
+            f"Public Canon v{version} also declares a discrete architecture.",
+        ),
+    )
+    for pattern, replacement in replacements:
+        text, count = re.subn(pattern, replacement, text)
+        if count != 1:
+            raise ValueError("CORE.md lacks an exact release-version anchor")
+    return text
+
+
 def apply_views(root: Path, views: dict[str, str]) -> None:
     canon = root / "canon"
-    (canon / "FRONTIER.md").write_text(views["FRONTIER.md"], encoding="utf-8")
+    (canon / "FRONTIER.md").write_text(
+        views["FRONTIER.md"], encoding="utf-8", newline="\n"
+    )
     (canon / "STATUS_COUNTS.tsv").write_text(
-        views["STATUS_COUNTS.tsv"], encoding="utf-8"
+        views["STATUS_COUNTS.tsv"], encoding="utf-8", newline="\n"
     )
 
     core_path = canon / "CORE.md"
     core = core_path.read_text(encoding="utf-8")
+    canon_text = (canon / "CANON.md").read_text(encoding="utf-8")
+    core = synchronize_core_release(core, current_canon_version(canon_text))
     core_begin = "<!-- BEGIN GENERATED CORE CLAIMS -->"
     core_end = "<!-- END GENERATED CORE CLAIMS -->"
     if core_begin in core:
@@ -183,7 +205,7 @@ def apply_views(root: Path, views: dict[str, str]) -> None:
         if start < 0 or stop < 0:
             raise ValueError("CORE.md lacks the stable-orientation replacement anchors")
         core = core[:start] + views["CORE_CLAIMS.md"].rstrip("\n") + core[stop:]
-    core_path.write_text(core, encoding="utf-8")
+    core_path.write_text(core, encoding="utf-8", newline="\n")
 
     changelog_path = canon / "CHANGELOG.md"
     changelog = changelog_path.read_text(encoding="utf-8")
@@ -194,7 +216,6 @@ def apply_views(root: Path, views: dict[str, str]) -> None:
             changelog, views["CHANGELOG_COUNTS.md"], count_begin, count_end
         )
     else:
-        canon_text = (canon / "CANON.md").read_text(encoding="utf-8")
         version = current_canon_version(canon_text)
         anchor = f"## Public Canon v{version}"
         position = changelog.find(anchor)
@@ -207,7 +228,7 @@ def apply_views(root: Path, views: dict[str, str]) -> None:
             + views["CHANGELOG_COUNTS.md"].rstrip("\n")
             + changelog[position:]
         )
-    changelog_path.write_text(changelog, encoding="utf-8")
+    changelog_path.write_text(changelog, encoding="utf-8", newline="\n")
 
 
 def main() -> None:
@@ -229,7 +250,7 @@ def main() -> None:
         output = args.output_dir.resolve()
         output.mkdir(parents=True, exist_ok=True)
         for name, content in views.items():
-            (output / name).write_text(content, encoding="utf-8")
+            (output / name).write_text(content, encoding="utf-8", newline="\n")
         print(
             "CANON VIEWS GENERATED "
             + " ".join(f"{name}={len(content.encode('utf-8'))}" for name, content in views.items())
@@ -250,7 +271,15 @@ def main() -> None:
     for name, content in views.items():
         if name == "CORE_CLAIMS.md":
             path = check / "CORE.md"
-            matches = path.is_file() and content.rstrip("\n") in path.read_text(encoding="utf-8")
+            matches = False
+            if path.is_file():
+                core = path.read_text(encoding="utf-8")
+                canon_text = (root / "canon" / "CANON.md").read_text(encoding="utf-8")
+                version = current_canon_version(canon_text)
+                matches = (
+                    content.rstrip("\n") in core
+                    and synchronize_core_release(core, version) == core
+                )
         elif name == "CHANGELOG_COUNTS.md":
             path = check / "CHANGELOG.md"
             matches = path.is_file() and content.rstrip("\n") in path.read_text(encoding="utf-8")

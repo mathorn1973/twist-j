@@ -31,7 +31,7 @@ Closed claims are excluded.
   Decision: closes positively by deriving the conformal weight of the dark energy trace direction; closes negatively if the derived weight contradicts w = -14/15
 - DRESS-CROSSCOUNT [O]: the integer crossing count per observable
   Decision: closes positively when the integer crossing count per observable is derived; until then the form decision is armed: an exact witness departing from 72 alpha^4 (about 0.204 ppm, labeled) fires the exponential reading
-- ENTROPY-LAYER-BRIDGE [O]: construct a measurable cut P_5(kappa, y) from K_TM x O_{K,lambda} x T^4 with P_5(S_K kappa, J y) = F_theta(P_5(kappa, y)); the completed public probes reduce it to an equivariant selection Psi_kappa: O/lambda^5 -> L_n of one living trajectory per (kappa, y), and only regularity, canonicity, and the measure clause remain open
+- ENTROPY-LAYER-BRIDGE [O]: construct a measurable cut P_5(kappa, y) from K_TM x O_{K,lambda} x T^4 with P_5(S_K kappa, J y) = F_theta(P_5(kappa, y)); the four completed public probes reduce it to an equivariant selection Psi_kappa: O/lambda^5 -> L_n of one living trajectory per (kappa, y), constrained by a finite pentagon quotient and gauge-specific affine cocycle, while regularity, canonicity, and the measure clause remain open
   Decision: fires if a preregistered construction has an image law different from the frozen joint Cesaro law, or if an exact finite-cylindrical cut with window at most 16 is exhibited
 - FRW-INHOM [O]: the inhomogeneous sector, the named classical horizon
   Decision: closes positively by an inhomogeneous source construction that reproduces the public FRW-CANONICAL-FORM identities in the homogeneous limit; closes negatively if every inhomogeneous extension breaks the exact chain of twelves
