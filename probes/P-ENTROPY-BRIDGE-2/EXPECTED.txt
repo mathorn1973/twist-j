@@ -1,0 +1,18 @@
+P-ENTROPY-BRIDGE-2 exact verifier
+cylinder no-go for the bridge cut: constraint propagation over
+(driver window, residue orbit) contexts, exact solution counts;
+the killing lemma; the one-bit-per-scale law of the renormalized
+block maps; odometer collision pins
+
+PASS 01 G01 SPECTRUM-5     J-orbit spectrum mod 5 is {1: 1, 4: 1, 20: 31}
+PASS 02 G02 SPECTRUM-25    J-orbit spectrum mod 25 is {1: 1, 4: 1, 20: 781, 100: 3750}
+PASS 03 G03 NO-CONSTANT    F_0 and F_1 share no fixed point
+PASS 04 G04 CORE           recurrent core 6250 on 313 attractors
+PASS 05 G05 PURE-WORD-NOGO zero solutions for windows L = 4..16 on the driver word alone; factor counts pinned
+PASS 06 G06 KILLING-ZERO   J fixes the zero residue at every depth (M_J 0 = 0): the pure-word system embeds at every lambda-depth
+PASS 07 G07 M4-TABLE       zero solutions at lambda-depth 4 for all (L, c) with L <= 6 and every orbit length {1, 4, 20}
+PASS 08 G08 M8-TABLE       zero solutions at lambda-depth 8 for L = 4 and every orbit length {1, 4, 20, 100}
+PASS 09 G09 BLOCK-HALVING  |image of the level-k block map on the core| = 3125 = 6250/2 exactly, k = 0..10, both letters
+PASS 10 G10 COLLISION-PIN  on the seed-0 orbit the first (address, block-label) collision sits exactly at 4096 + 2^(k+1), k = 1..10
+
+RESULT 10/10 ALL PASS
