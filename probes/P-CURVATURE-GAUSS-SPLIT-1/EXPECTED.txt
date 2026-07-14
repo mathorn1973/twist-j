@@ -1,0 +1,21 @@
+P-CURVATURE-GAUSS-SPLIT-1
+RULING merge=57de0af8a50e14e52f0fa81e0158f6a370cab5a5 sha256=94ae6278c5ec27262d7eeb443e1a8461a84c2f59df6f315fb5fda24f63bcb02e
+AUDIT I01=P I02=P I03=P I04=P I05=P I06=P I07=P I08=P I09=P I10=P I11=P I12=P I13=P I14=P I15=P
+AUDIT PASS 15/15
+AUTHORITY tag=canon-v2 activation=5abb22319007fd3172f7123f4b3a71b547fb94af content=7cfe2a62a456d0f84b1f60b4945dcdfe896e99db canon_sha256=abd0e026ccc2be00cdb0d9d13d634e0a71602b1565e6d53ac23a99b506281021
+SOURCES trace_ruling=cf15037f5cc2690a9633ca68ef13107920ce9ce81116963dc9d8490c088eeccb trace_prereg=94ec5263d2b2931bcd3863cb5f78e2326944479aa28aef987495c8601c65f8c9 trace_verifier=c9b4d253a609cc489efc4386e5e61d3e92baa16b736b899048f2a3afa5e78c99 trace_result=5d3c406233958bee62076a624012c28bf38c7c770bb79d35f62cf49e699e6baf
+CARRIER states=15625
+H order=20 orbits=819 census=5:1,10:74,20:744
+PROJECTOR rank_P=818 basis=integer-orbit
+ROUTE_A nnz=40001,40001,0
+ROUTE_B nnz=40001,40001,0
+MATRIX_AGREEMENT PASS
+LEAKAGE A=NONZERO C=NONZERO bilinear=PASS
+SKEW PASS,PASS,PASS
+TRACE ambient=-881/8 internal=-881/8 exterior=0 cross=0
+TRACE_IDENTITY reconstructed=-881/8 ambient=-881/8 anchor=-881/8 PASS
+RANK ambient=292 nullity=526 method=exact-fraction-free mod2=242 mod3=292 kernel=PASS
+RANK internal=292 nullity=526 method=exact-fraction-free mod2=242 mod3=292 kernel=PASS
+RANK exterior=0 nullity=818 method=exact-fraction-free mod2=0 mod3=0 kernel=PASS
+DECISION INTRINSIC
+RESULT VALID
