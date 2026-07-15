@@ -1,7 +1,6 @@
 # P-ENTROPY-MIRROR-1 result
 
-Status: SCIENTIFIC RESULT CANDIDATE; AARCH64 FORMAL LEG PASS;
-GITHUB X86_64 CROSS-CHECK PENDING
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS
 
 ## Scientific decision at the recorded leg
 
@@ -29,10 +28,20 @@ stderr bytes:   0
 result:         6/6 ALL PASS
 ```
 
-The required pull-request check must rerun the pinned verifier on GitHub
-x86_64 and compare stdout byte for byte before the two-architecture
-computation gate is declared PASS. Until that check succeeds, every outcome
-below is a candidate at its frozen finite scope.
+Two-architecture record:
+
+```text
+aarch64 leg    Ubuntu 24.04.4 LTS, CPython 3.12.3, neutral environment;
+               first formal execution; RUN.md in this directory.
+x86_64 leg     GitHub check on pull request 37, head
+               18d90f33129612c25f2aaef90353002360d379a5;
+               run 29393659986, job 87282274811, conclusion success;
+               Ubuntu 24.04 runner, CPython 3.12.13; verifier
+               byte-identical (4fe37f77...), stdout byte-identical
+               (d6bdffd6..., 1139 bytes); log carries
+               VERIFY PASS P-ENTROPY-MIRROR-1.
+gate:          PASS. The aarch64 and GitHub x86_64 outputs are byte-identical.
+```
 
 ## Recorded finite outcomes
 
@@ -72,7 +81,7 @@ No preregistered falsifier fired on the recorded leg.
 
 ## Scope and non-conclusions
 
-The candidate earned statement is finite and computation-grade only: the
+The earned statement is finite and computation-grade only: the
 own-half involutions, directional alternating inverses, canonical-pentagon
 swap, and gauge-specific affine reflection law on the declared carrier. In
 particular:
