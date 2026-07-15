@@ -1,6 +1,6 @@
 # P-PENTAGON-WEIL-1 result
 
-Status: PRELIMINARY FORMAL EVIDENCE; AARCH64 G0 AUDIT PASS; PUBLIC X86_64 GATE PENDING
+Status: FORMAL PROBE RESULT; TWO-ARCHITECTURE REPRODUCIBILITY GATE PASS; PUBLIC CLAIM UNREGISTERED
 
 ## Scientific decision
 
@@ -73,6 +73,22 @@ stdout bytes:          711
 stdout lines:          12
 ```
 
-`EXPECTED.txt` is the exact first formal stdout.  The GitHub x86_64 rerun and
-byte-identity comparison are still pending at this revision.  Therefore the
-two-architecture reproducibility gate is not yet marked PASS.
+`EXPECTED.txt` is the exact first formal stdout.
+
+Two-architecture record:
+
+```text
+aarch64 leg    Ubuntu 24.04.4 LTS, CPython 3.12.3, neutral environment;
+               first formal execution recorded in RUN.md; verifier
+               5655888c...f614c; stdout f0423685...797fe, 711 bytes.
+x86_64 leg     GitHub check on pull request 42, evidence head
+               8a889586e571a8e6e811559f6bd5c2d8f9875db3; run
+               29451572197, job 87475031267, conclusion success;
+               Ubuntu 24.04.4 runner, CPython 3.12.13; verifier and stdout
+               byte-identical to the aarch64 leg.
+gate:          PASS.  The aarch64 and GitHub x86_64 verifier outputs are
+               byte-identical.
+```
+
+This gate establishes reproducibility of the exact audit.  It does not
+register a public claim, prove RH, or provide Weil positivity.
