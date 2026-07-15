@@ -1,11 +1,33 @@
 # Canon changelog (public series)
 
-## Public Canon v5
+## Public Canon v6
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 175 claims; 0 T-LOCK, 83 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
+Registry snapshot: 176 claims; 0 T-LOCK, 84 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+This fold records `P-CURVATURE-GAUSS-SPLIT-1` at its immutable
+preregistration pin `03582ff9` and byte-identical aarch64 and x86_64 public
+record. It adds `CURVATURE-HISTORICAL-GAUSS-SPLIT` at [T] for the frozen
+historical full-carrier operator.
+
+The exact split has `K_amb = K_int`, `K_ext = 0`, ambient and intrinsic rank
+292 with nullity 526, exterior rank 0 with nullity 818, intrinsic trace square
+`-881/8`, and zero exterior and cross terms. Both leakage maps are nonzero;
+the exterior term vanishes by exact cancellation, not invariance.
+
+No differential-geometric Gauss equation, embedding theorem, spectrum,
+continuum reading, physical interpretation, or canonical operator selection
+is added. The reduced spatial operator remains separately typed, and
+`CURVATURE-OPERATOR-CANONICAL` remains [O] with its scope unchanged.
+
+## Public Canon v5
+
+<!-- BEGIN GENERATED CANON5 COUNTS -->
+Registry snapshot: 175 claims; 0 T-LOCK, 83 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON5 COUNTS -->
 
 This fold records `P-ENTROPY-MIRROR-1` at its immutable preregistration pin
 `6000f11c` and two-architecture public record. It adds one finite
