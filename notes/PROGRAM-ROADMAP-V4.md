@@ -3,9 +3,11 @@
 Status: **NON-CANONICAL LOCAL ANALYSIS**
 
 Snapshot: 2026-07-15, based on public `main` at
-`ebc5c06f4d0bc5c0d01b931e4f26cccd72b60325` (`canon-v4`). This note is a
-planning surface. It changes no public claim, status, dependency, gate, or
-Canon byte.
+`0b5c7c459d4c4677b7bc834b92d5e485f410f7cb`. Public Canon v4 remains pinned
+by `canon-v4` at `ebc5c06f4d0bc5c0d01b931e4f26cccd72b60325`; the later main
+commit merges `P-ENTROPY-MIRROR-1` but does not fold it into the registry or
+Canon. This note is a planning surface. It changes no public claim, status,
+dependency, gate, or Canon byte.
 
 ## Current program shape
 
@@ -26,18 +28,17 @@ selection of canonical objects and the proof of cross-layer lifts:
 - typed decoder and metrology interfaces;
 - only then the downstream phenomenological readings.
 
-Two public probes are operationally unfinished:
+One public probe is operationally unfinished:
 
-1. `P-ENTROPY-MIRROR-1` has a frozen pin, formal aarch64 evidence, and a
-   five-file result. Its PR/x86_64 closure and any later Canon fold remain a
-   separate public operation.
-2. `P-CURVATURE-GAUSS-SPLIT-1` has a frozen pin and formal aarch64 evidence,
+1. `P-CURVATURE-GAUSS-SPLIT-1` has a frozen pin and formal aarch64 evidence,
    but still needs a scoped result, current-main reconciliation, PR, and
    x86_64 closure. Its result cannot by itself close canonical-operator
    selection.
 
-No new Canon work should be based on either probe until its public merge is
-complete.
+`P-ENTROPY-MIRROR-1` is publicly merged by PR #37 with a byte-identical
+aarch64/x86_64 result. Its later registry/Canon promotion remains a separate
+fold. Local recon may use the merged finite result, but must preserve its
+scope ceiling.
 
 ## Prioritization rule
 
@@ -55,8 +56,9 @@ readings.
 
 ### Lane 0: close work already in flight
 
-- Finish `P-ENTROPY-MIRROR-1` without widening its finite L5 scope.
 - Finish or explicitly park `P-CURVATURE-GAUSS-SPLIT-1`.
+- Keep the merged mirror result out of the Canon until a separate reviewed
+  fold states only its earned finite L5 scope.
 - Clean merged worktrees and superseded branches only as a separate repository
   maintenance task, after unique-commit review.
 

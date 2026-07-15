@@ -8,8 +8,8 @@ No target below is frozen and no claim status is earned.
 
 ## Public inputs
 
-The analysis uses only already public finite facts, plus the still-unmerged
-mirror result as a clearly separated working input:
+The analysis uses only public finite facts. The mirror result is public probe
+evidence merged by PR #37; it has not yet been folded into the Canon registry:
 
 - the recurrent core has 6250 states and two living halves of 3125 states;
 - each branch restricts bijectively between living halves;
@@ -20,8 +20,9 @@ mirror result as a clearly separated working input:
 - the finite-cylinder selector route is already falsified;
 - the coherent-gauge block cocycle is affine and periodic on the tested
   dyadic levels;
-- working mirror input: one-tick cell maps are reflections and the two own-half
-  maps have a unique singlet fixed state.
+- the merged mirror probe establishes at its frozen finite scope that one-tick
+  cell maps are reflections and the two own-half maps have a unique singlet
+  fixed state.
 
 The sought equation is
 
