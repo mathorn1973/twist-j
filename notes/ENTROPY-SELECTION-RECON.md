@@ -8,8 +8,9 @@ No target below is frozen and no claim status is earned.
 
 ## Public inputs
 
-The analysis uses only public finite facts. The mirror result is public probe
-evidence merged by PR #37; it has not yet been folded into the Canon registry:
+The analysis uses only public finite facts under Public Canon v6. The mirror
+result is public probe evidence merged by PR #37 and folded at its finite
+scope as `ENTROPY-MIRROR-LAW [C]` in Public Canon v5:
 
 - the recurrent core has 6250 states and two living halves of 3125 states;
 - each branch restricts bijectively between living halves;
@@ -23,6 +24,67 @@ evidence merged by PR #37; it has not yet been folded into the Canon registry:
 - the merged mirror probe establishes at its frozen finite scope that one-tick
   cell maps are reflections and the two own-half maps have a unique singlet
   fixed state.
+
+### Binding definition boundary
+
+The bridge source is not waiting for new definitions of `Y_5` or `nu_*`.
+The pinned owner ruling in `P-ENTROPY-BRIDGE-1` at
+`9fc7a6c3a3d1d4024f4bd9f8fdb844733a80fbc8` already fixes:
+
+- `Y_5 = O_{K,lambda}` for `K = Q(zeta_5)` and `lambda = 1-zeta_5`, with
+  verb `y -> J y`; the kernel coordinates `q,r` must come from higher
+  lambda-adic digits and carry rather than free factors;
+- the two-sided Thue--Morse base `K_TM`, its shift `S_K`, measure `m_TM`, and
+  reading `theta(kappa)=kappa_0`;
+- the source, finite cut, and almost-everywhere equivariance equation; and
+- the Cesaro sequence `nu_N`, the candidate limit `nu_*`, and the required
+  component and recurrent-state weights.
+
+Existence of `nu_*` and the asserted closed form are mathematical gates, not
+owner choices that may be supplied by a definition. The exact public kernel
+constants, selector, and census are also already present in the public probes;
+the local target reconstruction imports the merged public mirror verifier
+without invoking its formal entry point.
+
+Three contract choices remain before any public result may claim canonicity or
+regularity:
+
+1. the equivalence relation for transfer families (in particular, the
+   2500-element arithmetic unit action is not silently identified with the
+   full permutation centralizer);
+2. the regularity class and quantifier, including whether the equation is
+   everywhere or `m_TM`-almost everywhere; and
+3. unambiguous notation for the living fiber. This recon uses `L_kappa`;
+   the public shorthand `L_n` is unsuitable here because `L_n` already denotes
+   the Lucas numbers elsewhere in the Canon.
+
+These choices do not block the current local existence and falsification
+work. They must be frozen before a later public probe whose decision surface
+uses uniqueness, canonicity, or regularity.
+
+A minimal proposed working contract, still non-canonical and subject to owner
+review, is:
+
+```text
+Q_5       = O/lambda^5,
+H_eps     = Im(F_eps | recurrent core),
+L_kappa   = H_(kappa_-1),
+F_(kappa_0): L_kappa -> L_(S_K kappa).
+```
+
+Represent a transfer by a Borel family on an `S_K`-invariant conull subset of
+`K_TM`, with equivariance there for every `y in Q_5`. Identify two
+representatives only when they agree `m_TM`-almost everywhere for every finite
+`y`. For the canonicity test, the proposed primary equivalence is constant
+precomposition by a unit of `(O/lambda^5)^x`, of order 2500. A quotient by the
+much larger full permutation centralizer is retained only as a sensitivity
+comparison: it preserves the `J` cycle type but forgets the arithmetic
+structure. No kappa-dependent relabeling or post-hoc target-cell gauge is
+admitted. The pushforward to `nu_*` remains a theorem gate under this proposal.
+
+This is not yet a public issue lock. The current recon has neither a compatible
+inverse system nor a global obstruction, so a scientific preregistration would
+still be premature.
 
 The sought equation is
 
@@ -360,8 +422,10 @@ inside the declared structured `625`-block/`S_5` finite-horizon ansatz. The
 certificate has two disjoint parts:
 
 1. the exact minimum `209/2500` of the first anchored refinement distance;
-2. edge-disjoint fundamental-cycle holonomy inequalities on all later edges,
-   after dropping the all-different coupling between source blocks.
+2. holonomy-cycle inequalities on all later edges, after dropping the
+   all-different coupling between source blocks. Horizon `2..4` uses a
+   fractional packing of every positive-defect simple cycle; horizon `2..5`
+   retains the smaller edge-disjoint fundamental-cycle certificate.
 
 For one cycle, exact block transport and the triangle inequality give
 
@@ -374,23 +438,31 @@ one ordinary source block and again for the special block. Ordinary source
 blocks have identical position action, so the full relaxed contribution is
 the exact sum of `624` ordinary coordinates and one special coordinate. The
 checker reconstructs every edge, transport, witness, weight, minimum, and
-edge-disjointness condition.
+packing-capacity condition.
+
+For horizon `2..4`, the later-edge graph has exactly 20 simple cycles: four
+length-four cycles with zero defect and sixteen length-twelve cycles with
+ordinary/special minimum mismatches `(0,5)`. Assigning exact weight `1/192`
+to each of the sixteen positive cycles saturates every edge at its objective
+weight. This replayable fractional packing improves the cycle contribution
+from `1/15000` to `1/7500`; no linear-programming solver is trusted by the
+checker.
 
 The resulting exact comparisons are
 
 ```text
 horizon  certified lower bound  feasible incumbent  gap
-2..4     251/3000               626/1875            1251/5000
+2..4     157/1875               626/1875            469/1875
 2..5     313/2500               10631/15000          8753/15000
 ```
 
-For `2..4`, the selected cycle contributes `1/15000` through the special
-block while its ordinary minimum is zero. For `2..5`, the selected cycle
-contributes `26/625`: every ordinary block has five mismatches while the
-special minimum is zero. Both bounds are global for the named fixed-boundary
-finite problem, but neither meets the incumbent. The cycle packing uses only
-the deterministic fundamental basis, not all simple cycles or a fractional
-packing.
+For `2..4`, all sixteen allocated cycles contribute only through the special
+block while their ordinary minimum is zero. For `2..5`, the selected
+fundamental cycle contributes `26/625`: every ordinary block has five
+mismatches while the special minimum is zero. Both bounds are global for the
+named fixed-boundary finite problem, but neither meets the incumbent. The
+larger horizon still uses only the deterministic fundamental basis, not all
+simple cycles or a fractional packing.
 
 The initialization experiment was also tightened. Every run keeps exactly the
 same frozen `r=2` tree family and changes only the free maps. Four deterministic
@@ -427,9 +499,9 @@ an independently checked path.
    internals.
 2. Add tie-neutral moves and additional deterministic seeds, then reproduce
    whether the same small-horizon fixed points recur.
-3. Strengthen the current lower bounds with all-simple-cycle or fractional
-   cycle packing and coupled block duals. The present fundamental-cycle bounds
-   do not certify either incumbent.
+3. Extend the successful all-simple-cycle fractional packing from horizon
+   `2..4` to anchor-to-anchor path duals and coupled block duals. The current
+   bounds do not certify either incumbent.
 4. Use branch-and-bound or an exact dual certificate on `2..4` before extending
    both collar radii and the horizon. Then search for a chain whose
    refinement disagreements are summable. A surviving chain is only a

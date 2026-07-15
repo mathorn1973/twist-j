@@ -1,20 +1,18 @@
-# TWIST-J program roadmap after Public Canon v4
+# TWIST-J program roadmap current through Public Canon v6
 
 Status: **NON-CANONICAL LOCAL ANALYSIS**
 
-Snapshot: 2026-07-15, based on public `main` at
-`0b5c7c459d4c4677b7bc834b92d5e485f410f7cb`. Public Canon v4 remains pinned
-by `canon-v4` at `ebc5c06f4d0bc5c0d01b931e4f26cccd72b60325`; the later main
-commit merges `P-ENTROPY-MIRROR-1` but does not fold it into the registry or
-Canon. This note is a planning surface. It changes no public claim, status,
-dependency, gate, or Canon byte.
+Snapshot: 2026-07-15, based on authoritative public `main` at
+`6bb013bafb2d1c06fcb295fdbfce0f86198fd685`, tagged `canon-v6`. This note is
+a planning surface. It changes no public claim, status, dependency, gate, or
+Canon byte. The historical filename is retained to avoid a gratuitous rename.
 
 ## Current program shape
 
-Public Canon v4 contains 174 registered claims:
+Public Canon v6 contains 176 registered claims:
 
 ```text
-T 83    D 38    C 20    H 6    O 21    F 6
+T 84    D 38    C 21    H 6    O 21    F 6
 live H/O: 27
 ```
 
@@ -28,17 +26,10 @@ selection of canonical objects and the proof of cross-layer lifts:
 - typed decoder and metrology interfaces;
 - only then the downstream phenomenological readings.
 
-One public probe is operationally unfinished:
-
-1. `P-CURVATURE-GAUSS-SPLIT-1` has a frozen pin and formal aarch64 evidence,
-   but still needs a scoped result, current-main reconciliation, PR, and
-   x86_64 closure. Its result cannot by itself close canonical-operator
-   selection.
-
-`P-ENTROPY-MIRROR-1` is publicly merged by PR #37 with a byte-identical
-aarch64/x86_64 result. Its later registry/Canon promotion remains a separate
-fold. Local recon may use the merged finite result, but must preserve its
-scope ceiling.
+No public probe is operationally unfinished. `P-ENTROPY-MIRROR-1` is folded
+at finite computation grade in Public Canon v5. `P-CURVATURE-GAUSS-SPLIT-1`
+is merged and folded in Public Canon v6. Neither result closes its broader
+selection or canonicity frontier.
 
 ## Prioritization rule
 
@@ -54,15 +45,12 @@ readings.
 
 ## Roadmap
 
-### Lane 0: close work already in flight
+### Lane 0: completed formal work
 
-- Finish or explicitly park `P-CURVATURE-GAUSS-SPLIT-1`.
-- Keep the merged mirror result out of the Canon until a separate reviewed
-  fold states only its earned finite L5 scope.
-- Clean merged worktrees and superseded branches only as a separate repository
-  maintenance task, after unique-commit review.
-
-This lane must not be mixed with new scientific commits.
+- `P-ENTROPY-MIRROR-1` and its Public Canon v5 fold are complete.
+- `P-CURVATURE-GAUSS-SPLIT-1` and its Public Canon v6 fold are complete.
+- Any worktree or branch cleanup remains a separate repository-maintenance
+  task after unique-commit review; it is not mixed with scientific commits.
 
 ### Lane 1: entropy selection recon
 
@@ -182,9 +170,11 @@ collars, and a growing-context finite-horizon optimizer now live in
 optima through level 8 do not show a summable Cauchy tail. The subsequent
 fixed-anchor analysis produced rigorous but non-tight lower bounds for
 structured horizons `2..4` and `2..5`, plus eight diagnostically distinct
-coordinate-sweep terminal points. The next local milestone is a tighter
-fractional-cycle/coupled-block dual or exact branch-and-bound certificate for
-`2..4`. It must eventually return one of:
+coordinate-sweep terminal points. The complete positive-defect simple-cycle
+packing at `2..4` now has an exact fractional certificate, improving that
+lower bound to `157/1875` without meeting the incumbent. The next local
+milestone is an anchor-to-anchor path dual, a coupled-block dual, or an exact
+branch-and-bound certificate for `2..4`. It must eventually return one of:
 
 - an explicit compatible transfer system;
 - a precise obstruction for a named regularity class;

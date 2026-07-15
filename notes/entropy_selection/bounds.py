@@ -7,8 +7,11 @@ disjoint parts:
 
 * the exact minimum of the first adjacent distance with the declared level-2
   boundary family frozen;
-* edge-disjoint holonomy-cycle bounds on all later adjacent distances after
-  dropping the all-different coupling between source blocks.
+* holonomy-cycle bounds on all later adjacent distances after dropping the
+  all-different coupling between source blocks.  Horizon ``2..4`` uses a
+  replayable fractional packing of every positive-defect simple cycle;
+  horizon ``2..5`` keeps the smaller edge-disjoint fundamental-cycle
+  certificate.
 
 For one source block, every refinement edge is an isometry of the label space
 ``(target cell, S_5 permutation)``.  Around a cycle, the weighted triangle
@@ -19,9 +22,10 @@ inequality gives
 The right side is minimized exhaustively over all ``625 * 120`` block labels.
 The 624 ordinary J-five-sectors have the same source-position action and are
 therefore represented by one exhaustive calculation; the residual
-``J^(2^r)``-fixed block is checked separately.  Edge-disjoint cycles may be
-added, and different source blocks may be added because they are disjoint
-coordinates of the 3125-point Hamming distance.
+``J^(2^r)``-fixed block is checked separately.  Cycle inequalities may be
+added fractionally while their total load on each objective edge stays below
+that edge's exact weight.  Different source blocks may be added because they
+are disjoint coordinates of the 3125-point Hamming distance.
 
 The resulting number is a rigorous lower bound only for the named anchored
 finite horizon and structured ansatz.  It is not a global optimum certificate,
@@ -126,6 +130,20 @@ class CycleCertificate:
 
 
 @dataclass(frozen=True, slots=True)
+class FractionalCycleCertificate:
+    """One explicitly weighted simple-cycle term in a fractional packing."""
+
+    cycle_index: int
+    steps: tuple[CycleStep, ...]
+    allocation: Fraction
+    ordinary_minimum_mismatches: int
+    special_minimum_mismatches: int
+    ordinary_witness: CycleWitness
+    special_witness: CycleWitness
+    contribution: Fraction
+
+
+@dataclass(frozen=True, slots=True)
 class AnchorTerm:
     parent: tuple[int, ...]
     extension: tuple[int, ...]
@@ -144,6 +162,7 @@ class BoundCertificate:
     anchor_terms: tuple[AnchorTerm, ...]
     anchor_bound: Fraction
     cycles: tuple[CycleCertificate, ...]
+    fractional_cycles: tuple[FractionalCycleCertificate, ...]
     cycle_bound: Fraction
     lower_bound: Fraction
 
@@ -371,6 +390,88 @@ def fundamental_cycles(
     return tuple(cycles)
 
 
+@lru_cache(maxsize=None)
+def simple_cycles(
+    minimum_level: int, maximum_level: int
+) -> tuple[tuple[CycleStep, ...], ...]:
+    """Enumerate every undirected simple cycle in the audited ``3..4`` graph.
+
+    The start vertex is the least vertex on the cycle, and the order of its
+    two neighbours removes the reverse duplicate.  Keeping this deliberately
+    narrow prevents an accidental exponential search at larger horizons.
+    """
+
+    if (minimum_level, maximum_level) != (3, 4):
+        raise ValueError("simple-cycle enumeration is audited only for levels 3..4")
+    graph = constraint_graph(minimum_level, maximum_level)
+    node_index = {node: index for index, node in enumerate(graph.nodes)}
+    adjacency: dict[Node, list[tuple[int, Node]]] = {
+        node: [] for node in graph.nodes
+    }
+    for edge in graph.edges:
+        adjacency[edge.upper].append((edge.id, edge.lower))
+        adjacency[edge.lower].append((edge.id, edge.upper))
+    for row in adjacency.values():
+        row.sort()
+
+    found: list[tuple[CycleStep, ...]] = []
+    for start in graph.nodes:
+        start_index = node_index[start]
+
+        def visit(
+            current: Node,
+            nodes: tuple[Node, ...],
+            edge_ids: tuple[int, ...],
+        ) -> None:
+            for edge_id, neighbor in adjacency[current]:
+                if edge_ids and edge_id == edge_ids[-1]:
+                    continue
+                if neighbor == start:
+                    if (
+                        len(nodes) >= 4
+                        and node_index[nodes[1]] < node_index[nodes[-1]]
+                    ):
+                        closed = nodes + (start,)
+                        steps = []
+                        for used_edge, here, there in zip(
+                            edge_ids + (edge_id,), closed, closed[1:]
+                        ):
+                            edge = graph.edges[used_edge]
+                            if {here, there} != {edge.upper, edge.lower}:
+                                raise AssertionError("simple-cycle edge is discontinuous")
+                            steps.append(CycleStep(used_edge, here == edge.upper))
+                        found.append(tuple(steps))
+                    continue
+                if node_index[neighbor] < start_index or neighbor in nodes:
+                    continue
+                visit(neighbor, nodes + (neighbor,), edge_ids + (edge_id,))
+
+        visit(start, (start,), ())
+
+    result = tuple(
+        sorted(found, key=lambda cycle: tuple((step.edge, step.forward) for step in cycle))
+    )
+    keys = {
+        tuple(sorted(step.edge for step in cycle))
+        for cycle in result
+    }
+    if len(keys) != len(result):
+        raise AssertionError("simple-cycle enumeration produced a duplicate")
+    for cycle in result:
+        if len({step.edge for step in cycle}) != len(cycle):
+            raise AssertionError("simple cycle repeats an edge")
+        current = _step_start(graph.edges[cycle[0].edge], cycle[0])
+        origin = current
+        for step in cycle:
+            edge = graph.edges[step.edge]
+            if _step_start(edge, step) != current:
+                raise AssertionError("simple-cycle orientation is discontinuous")
+            current = _step_stop(edge, step)
+        if current != origin:
+            raise AssertionError("simple cycle does not close")
+    return result
+
+
 def _label_mismatches(left: BlockLabel, right: BlockLabel) -> int:
     if left.cell != right.cell:
         return MODULUS
@@ -378,14 +479,13 @@ def _label_mismatches(left: BlockLabel, right: BlockLabel) -> int:
 
 
 @lru_cache(maxsize=None)
-def _cycle_minimum(
+def _cycle_minimum_steps(
     minimum_level: int,
     maximum_level: int,
-    basis_index: int,
+    steps: tuple[CycleStep, ...],
     block_id: int,
 ) -> tuple[int, CycleWitness]:
     graph = constraint_graph(minimum_level, maximum_level)
-    steps = fundamental_cycles(minimum_level, maximum_level)[basis_index]
     first_edge = graph.edges[steps[0].edge]
     start = _step_start(first_edge, steps[0])
     half = _expected_half(start)
@@ -411,6 +511,18 @@ def _cycle_minimum(
     return best, witness
 
 
+@lru_cache(maxsize=None)
+def _cycle_minimum(
+    minimum_level: int,
+    maximum_level: int,
+    basis_index: int,
+    block_id: int,
+) -> tuple[int, CycleWitness]:
+    steps = fundamental_cycles(minimum_level, maximum_level)[basis_index]
+    return _cycle_minimum_steps(minimum_level, maximum_level, steps, block_id)
+
+
+@lru_cache(maxsize=None)
 def _verify_ordinary_block_homogeneity(
     minimum_level: int, maximum_level: int
 ) -> bool:
@@ -462,6 +574,79 @@ def analyze_cycle(
         special_witness=special_witness,
         contribution=contribution,
     )
+
+
+@lru_cache(maxsize=None)
+def analyze_fractional_cycle(
+    cycle_index: int,
+    allocation: Fraction,
+) -> FractionalCycleCertificate:
+    """Exhaustively certify one allocated simple-cycle contribution."""
+
+    if type(allocation) is not Fraction:
+        raise TypeError("fractional cycle allocation must be an exact Fraction")
+    if allocation <= 0:
+        raise ValueError("fractional cycle allocation must be positive")
+    cycles = simple_cycles(3, 4)
+    if not 0 <= cycle_index < len(cycles):
+        raise IndexError("simple cycle index is out of range")
+    if not _verify_ordinary_block_homogeneity(3, 4):
+        raise AssertionError("ordinary source blocks have different J-power actions")
+    steps = cycles[cycle_index]
+    ordinary, ordinary_witness = _cycle_minimum_steps(3, 4, steps, 0)
+    special, special_witness = _cycle_minimum_steps(
+        3, 4, steps, SPECIAL_BLOCK
+    )
+    contribution = allocation * Fraction(
+        ORDINARY_BLOCKS * ordinary + special,
+        FIBER_SIZE,
+    )
+    return FractionalCycleCertificate(
+        cycle_index=cycle_index,
+        steps=steps,
+        allocation=allocation,
+        ordinary_minimum_mismatches=ordinary,
+        special_minimum_mismatches=special,
+        ordinary_witness=ordinary_witness,
+        special_witness=special_witness,
+        contribution=contribution,
+    )
+
+
+@lru_cache(maxsize=1)
+def _fractional_simple_cycle_packing() -> tuple[FractionalCycleCertificate, ...]:
+    """Build a deterministic feasible packing of all positive ``3..4`` cycles."""
+
+    graph = constraint_graph(3, 4)
+    cycles = simple_cycles(3, 4)
+    unit_analyses = tuple(
+        analyze_fractional_cycle(index, Fraction(1))
+        for index in range(len(cycles))
+    )
+    positive = tuple(item for item in unit_analyses if item.contribution > 0)
+    if not positive:
+        return ()
+
+    incidence = [0] * len(graph.edges)
+    for item in positive:
+        for step in item.steps:
+            incidence[step.edge] += 1
+    allocation = min(
+        graph.edges[edge_id].weight / count
+        for edge_id, count in enumerate(incidence)
+        if count
+    )
+    packed = tuple(
+        analyze_fractional_cycle(item.cycle_index, allocation)
+        for item in positive
+    )
+    loads = [Fraction(0)] * len(graph.edges)
+    for item in packed:
+        for step in item.steps:
+            loads[step.edge] += item.allocation
+    if any(load > edge.weight for load, edge in zip(loads, graph.edges)):
+        raise AssertionError("fractional simple-cycle packing exceeds an edge weight")
+    return packed
 
 
 def _best_edge_disjoint_cycles(
@@ -572,8 +757,17 @@ def build_certificate(
         raise ValueError("the audited bound scope is limited to horizons 2..4 and 2..5")
     terms = anchor_terms(seed)
     anchor = sum((term.contribution for term in terms), Fraction(0))
-    cycles = _best_edge_disjoint_cycles(3, maximum_level)
-    cycle_bound = sum((cycle.contribution for cycle in cycles), Fraction(0))
+    if maximum_level == 4:
+        cycles = ()
+        fractional_cycles = _fractional_simple_cycle_packing()
+    else:
+        cycles = _best_edge_disjoint_cycles(3, maximum_level)
+        fractional_cycles = ()
+    cycle_bound = sum(
+        (cycle.contribution for cycle in cycles), Fraction(0)
+    ) + sum(
+        (cycle.contribution for cycle in fractional_cycles), Fraction(0)
+    )
     certificate = BoundCertificate(
         minimum_level=2,
         maximum_level=maximum_level,
@@ -581,6 +775,7 @@ def build_certificate(
         anchor_terms=terms,
         anchor_bound=anchor,
         cycles=cycles,
+        fractional_cycles=fractional_cycles,
         cycle_bound=cycle_bound,
         lower_bound=anchor + cycle_bound,
     )
@@ -590,9 +785,18 @@ def build_certificate(
 
 
 def verify_certificate(certificate: BoundCertificate) -> bool:
-    """Replay all exact arithmetic, cycle minima, and disjointness gates."""
+    """Replay exact arithmetic, cycle minima, and edge-capacity gates."""
 
     if certificate.minimum_level != 2 or certificate.maximum_level not in (4, 5):
+        return False
+    if any(
+        type(value) is not Fraction
+        for value in (
+            certificate.anchor_bound,
+            certificate.cycle_bound,
+            certificate.lower_bound,
+        )
+    ):
         return False
     try:
         expected_terms = anchor_terms(certificate.seed)
@@ -605,7 +809,7 @@ def verify_certificate(certificate: BoundCertificate) -> bool:
     anchor = sum((term.contribution for term in expected_terms), Fraction(0))
     if certificate.anchor_bound != anchor:
         return False
-    used_edges: set[int] = set()
+    edge_loads = [Fraction(0)] * len(graph.edges)
     cycle_sum = Fraction(0)
     seen_indices: set[int] = set()
     for claimed in certificate.cycles:
@@ -617,13 +821,42 @@ def verify_certificate(certificate: BoundCertificate) -> bool:
         if claimed != expected or claimed.steps != basis[claimed.basis_index]:
             return False
         edges = {step.edge for step in claimed.steps}
-        if len(edges) != len(claimed.steps) or used_edges & edges:
+        if len(edges) != len(claimed.steps):
             return False
         if any(not 0 <= edge < len(graph.edges) for edge in edges):
             return False
-        used_edges.update(edges)
+        for edge in edges:
+            edge_loads[edge] += claimed.minimum_edge_weight
         cycle_sum += claimed.contribution
         seen_indices.add(claimed.basis_index)
+
+    if certificate.maximum_level != 4 and certificate.fractional_cycles:
+        return False
+    seen_fractional: set[int] = set()
+    simple = simple_cycles(3, 4) if certificate.maximum_level == 4 else ()
+    for claimed in certificate.fractional_cycles:
+        if claimed.cycle_index in seen_fractional:
+            return False
+        if (
+            not 0 <= claimed.cycle_index < len(simple)
+            or type(claimed.allocation) is not Fraction
+            or claimed.allocation <= 0
+        ):
+            return False
+        expected = analyze_fractional_cycle(
+            claimed.cycle_index, claimed.allocation
+        )
+        if claimed != expected or claimed.steps != simple[claimed.cycle_index]:
+            return False
+        edges = {step.edge for step in claimed.steps}
+        if len(edges) != len(claimed.steps):
+            return False
+        for edge in edges:
+            edge_loads[edge] += claimed.allocation
+        cycle_sum += claimed.contribution
+        seen_fractional.add(claimed.cycle_index)
+    if any(load > edge.weight for load, edge in zip(edge_loads, graph.edges)):
+        return False
     if certificate.cycle_bound != cycle_sum:
         return False
     return certificate.lower_bound == anchor + cycle_sum
@@ -676,8 +909,14 @@ def format_report(report: BoundReport) -> str:
                 report.gap,
                 report.meets_incumbent,
             ),
-            "  selected fundamental cycles=%s"
-            % ([cycle.basis_index for cycle in certificate.cycles],),
+            "  selected fundamental cycles=%s fractional simple cycles=%s"
+            % (
+                [cycle.basis_index for cycle in certificate.cycles],
+                [
+                    (cycle.cycle_index, cycle.allocation)
+                    for cycle in certificate.fractional_cycles
+                ],
+            ),
             "  scope: fixed-r2 structured 625-block/S5 ansatz; relaxation only",
         )
     )
@@ -706,7 +945,9 @@ __all__ = [
     "CycleCertificate",
     "CycleStep",
     "CycleWitness",
+    "FractionalCycleCertificate",
     "analyze_cycle",
+    "analyze_fractional_cycle",
     "anchor_terms",
     "bound_report",
     "build_certificate",
@@ -714,5 +955,6 @@ __all__ = [
     "format_report",
     "fundamental_cycles",
     "main",
+    "simple_cycles",
     "verify_certificate",
 ]

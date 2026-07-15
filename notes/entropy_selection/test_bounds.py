@@ -9,19 +9,23 @@ from fractions import Fraction
 
 try:
     from .bounds import (
+        analyze_fractional_cycle,
         bound_report,
         build_certificate,
         constraint_graph,
         fundamental_cycles,
+        simple_cycles,
         verify_certificate,
     )
     from .growing import FiniteHorizonOptimizer, GrowingContextSolver
 except ImportError:  # Direct execution from this directory.
     from bounds import (  # type: ignore[no-redef]
+        analyze_fractional_cycle,
         bound_report,
         build_certificate,
         constraint_graph,
         fundamental_cycles,
+        simple_cycles,
         verify_certificate,
     )
     from growing import (  # type: ignore[no-redef]
@@ -45,6 +49,10 @@ class CertifiedFiniteHorizonBoundTests(unittest.TestCase):
         self.assertEqual((len(graph5.nodes), len(graph5.edges)), (28, 44))
         self.assertEqual(len(fundamental_cycles(3, 4)), 5)
         self.assertEqual(len(fundamental_cycles(3, 5)), 17)
+        self.assertEqual(
+            sorted(map(len, simple_cycles(3, 4))),
+            [4] * 4 + [12] * 16,
+        )
 
     def test_anchor_is_the_exact_one_transition_minimum(self) -> None:
         self.assertEqual(self.bound4.anchor_bound, Fraction(209, 2500))
@@ -61,23 +69,27 @@ class CertifiedFiniteHorizonBoundTests(unittest.TestCase):
     def test_horizon_2_4_certificate_and_gap(self) -> None:
         certificate = self.bound4
         self.assertTrue(verify_certificate(certificate))
-        self.assertEqual(certificate.cycle_bound, Fraction(1, 15000))
-        self.assertEqual(certificate.lower_bound, Fraction(251, 3000))
+        self.assertEqual(certificate.cycle_bound, Fraction(1, 7500))
+        self.assertEqual(certificate.lower_bound, Fraction(157, 1875))
+        self.assertEqual(certificate.cycles, ())
+        self.assertEqual(len(certificate.fractional_cycles), 16)
         self.assertEqual(
-            tuple(cycle.basis_index for cycle in certificate.cycles),
-            (0,),
+            {cycle.allocation for cycle in certificate.fractional_cycles},
+            {Fraction(1, 192)},
         )
-        cycle = certificate.cycles[0]
         self.assertEqual(
-            (
-                cycle.ordinary_minimum_mismatches,
-                cycle.special_minimum_mismatches,
-            ),
-            (0, 5),
+            {
+                (
+                    cycle.ordinary_minimum_mismatches,
+                    cycle.special_minimum_mismatches,
+                )
+                for cycle in certificate.fractional_cycles
+            },
+            {(0, 5)},
         )
         report = bound_report(4, "tree", 1)
         self.assertEqual(report.incumbent, Fraction(626, 1875))
-        self.assertEqual(report.gap, Fraction(1251, 5000))
+        self.assertEqual(report.gap, Fraction(469, 1875))
         self.assertFalse(report.meets_incumbent)
 
     def test_horizon_2_5_certificate_and_gap(self) -> None:
@@ -111,10 +123,54 @@ class CertifiedFiniteHorizonBoundTests(unittest.TestCase):
                 self.assertTrue(used.isdisjoint(edges))
                 used.update(edges)
 
+    def test_fractional_cycle_edge_capacities_are_exact(self) -> None:
+        graph = constraint_graph(3, 4)
+        loads = [Fraction(0)] * len(graph.edges)
+        for cycle in self.bound4.fractional_cycles:
+            for step in cycle.steps:
+                loads[step.edge] += cycle.allocation
+        self.assertEqual(
+            tuple(loads),
+            tuple(edge.weight for edge in graph.edges),
+        )
+
     def test_checker_rejects_a_strengthened_claim(self) -> None:
         forged = replace(
             self.bound5,
             lower_bound=self.bound5.lower_bound + Fraction(1, 15000),
+        )
+        self.assertFalse(verify_certificate(forged))
+
+    def test_checker_rejects_fractional_edge_overload(self) -> None:
+        overloaded = tuple(
+            analyze_fractional_cycle(cycle.cycle_index, Fraction(1, 191))
+            for cycle in self.bound4.fractional_cycles
+        )
+        cycle_bound = sum(
+            (cycle.contribution for cycle in overloaded), Fraction(0)
+        )
+        forged = replace(
+            self.bound4,
+            fractional_cycles=overloaded,
+            cycle_bound=cycle_bound,
+            lower_bound=self.bound4.anchor_bound + cycle_bound,
+        )
+        self.assertFalse(verify_certificate(forged))
+
+    def test_checker_rejects_inexact_float_certificate(self) -> None:
+        float_cycles = tuple(
+            replace(
+                cycle,
+                allocation=float(cycle.allocation),
+                contribution=float(cycle.contribution),
+            )
+            for cycle in self.bound4.fractional_cycles
+        )
+        forged = replace(
+            self.bound4,
+            fractional_cycles=float_cycles,
+            cycle_bound=float(self.bound4.cycle_bound),
+            lower_bound=float(self.bound4.lower_bound),
         )
         self.assertFalse(verify_certificate(forged))
 

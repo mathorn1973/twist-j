@@ -26,7 +26,9 @@ Modules:
   maximum-weight tree families, anchored finite-horizon coordinate
   optimization, and an all-levels-free sensitivity mode;
 - `bounds.py`: replayable fixed-anchor lower-bound certificates from exact
-  first-layer minima and edge-disjoint holonomy cycles;
+  first-layer minima, a fractional packing of every positive-defect simple
+  cycle at horizon `2..4`, and edge-disjoint fundamental holonomy cycles at
+  horizon `2..5`;
 - `basins.py`: context-dependent, separated free-map initializations for one
   frozen boundary problem and each fixed lift phase;
 - `test_*.py`: focused exact gates;
