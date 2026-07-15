@@ -174,11 +174,19 @@ speculative analysis belongs in the Canon bundle.
 
 ## Immediate next local milestone
 
-For entropy selection, construct the explicit lambda-digit carrier and reduce
-the transfer equation to quotient-cell and within-pentagon coordinates. The
-milestone is not a PASS. It is one of:
+The explicit lambda-digit carrier, living cell decomposition, finite-context
+solver, and first Rokhlin-tower baseline now live in
+`notes/entropy_selection/`; exact local results are summarized in
+`notes/ENTROPY-SELECTION-RECON.md`. The next milestone is a growing-context
+refinement optimizer with exact invariant cylinder weights. It must return
+one of:
 
 - an explicit compatible transfer system;
 - a precise obstruction for a named regularity class;
 - a proof that multiple inequivalent transfers survive, defeating canonicity;
 - a smaller exact subproblem suitable for a later public preregistration.
+
+The present empty finite-context cell-sector solver is not yet such a no-go:
+it closes only its declared exact-cylinder ansatz. Likewise, a transfer that
+is exact away from shrinking tower roofs is not yet a measurable construction;
+cross-level Cauchy compatibility is the next gate.
