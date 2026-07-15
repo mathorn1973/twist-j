@@ -14,6 +14,11 @@ try:
     )
     from .bounds import bound_report, format_report as format_bound_report
     from .growing import FiniteHorizonOptimizer, GrowingContextSolver
+    from .path_bounds import (
+        build_catalog_dual,
+        build_path_certificate,
+        format_path_report,
+    )
 except ImportError:  # Direct execution from this directory.
     from basins import (  # type: ignore[no-redef]
         DEFAULT_SEEDS,
@@ -29,6 +34,11 @@ except ImportError:  # Direct execution from this directory.
         FiniteHorizonOptimizer,
         GrowingContextSolver,
     )
+    from path_bounds import (  # type: ignore[no-redef]
+        build_catalog_dual,
+        build_path_certificate,
+        format_path_report,
+    )
 
 
 def main() -> int:
@@ -37,7 +47,7 @@ def main() -> int:
     print()
 
     expected_bounds = {
-        4: Fraction(251, 3000),
+        4: Fraction(157, 1875),
         5: Fraction(313, 2500),
     }
     print("CERTIFIED FIXED-ANCHOR LOWER BOUNDS")
@@ -48,6 +58,23 @@ def main() -> int:
             raise AssertionError("small-horizon lower-bound regression changed")
         reports[maximum_level] = report
         print(format_bound_report(report))
+    print()
+
+    path_certificate = build_path_certificate()
+    path_dual = build_catalog_dual()
+    if path_certificate.lower_bound != Fraction(417, 1250):
+        raise AssertionError("anchor-to-anchor lower-bound regression changed")
+    if path_dual.bound != path_certificate.lower_bound:
+        raise AssertionError("anchor-to-anchor catalog primal/dual gap changed")
+    print("STRONGER HORIZON 2..4 ANCHOR-TO-ANCHOR BOUND")
+    print(format_path_report(path_certificate, path_dual))
+    print(
+        "  feasible incumbent=%s certificate difference=%s"
+        % (
+            reports[4].incumbent,
+            reports[4].incumbent - path_certificate.lower_bound,
+        )
+    )
     print()
 
     solver = GrowingContextSolver()
@@ -100,7 +127,9 @@ def main() -> int:
     print()
     print("INTERPRETATION")
     print("  The lower bounds are global only inside the fixed-r2 structured")
-    print("  finite-horizon scope; neither bound meets its feasible incumbent.")
+    print("  finite-horizon scope. The stronger 2..4 path bound is 1/3750 below")
+    print("  its known feasible incumbent; the 2..5 bound also does not meet its")
+    print("  incumbent. These differences alone do not prove either optimum.")
     print("  Eight separated initializations give eight terminal diagnostics; none")
     print("  improves the incumbent and every 2..5 adjacent distance stays positive.")
     print("  Levels beyond 5 remain tested only in the reference 2..8 run, so this")

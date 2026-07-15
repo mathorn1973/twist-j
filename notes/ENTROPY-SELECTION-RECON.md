@@ -419,7 +419,7 @@ a global entropy no-go.
 
 The fixed-`r=2` tree-boundary problem now has replayable global lower bounds
 inside the declared structured `625`-block/`S_5` finite-horizon ansatz. The
-certificate has two disjoint parts:
+first certificate had two disjoint parts:
 
 1. the exact minimum `209/2500` of the first anchored refinement distance;
 2. holonomy-cycle inequalities on all later edges, after dropping the
@@ -448,21 +448,59 @@ weight. This replayable fractional packing improves the cycle contribution
 from `1/15000` to `1/7500`; no linear-programming solver is trusted by the
 checker.
 
+The subsequent anchor-to-anchor certificate puts the frozen first transition
+and the later graph into one gain graph for each source block. Each copy has
+16 free nodes, 12 fixed occurrence terminals, 20 later edges, and 12 anchor
+edges. A terminal-to-terminal path transports its fixed start label to the
+fixed end label. Exact Hamming isometry and the triangle inequality give
+
+```text
+sum_e n_e(P) m_e >= m(H_P(a_start), a_stop).
+```
+
+Allocations may name canonical block subsets, and loads are checked separately
+for every `(block, edge)`. The frozen ten-path witness uses common allocations
+on all 625 blocks and saturates every per-block edge capacity. The checker
+reconstructs all terminal labels from the level-2 tree family and replays every
+transport; no terminal table or optimizer output is trusted.
+
+A frozen packing of ten paths has six full-fiber defects and four defects only
+on the special block. Two paths receive allocation `1/12`, eight receive
+`1/24`, and every one of the 32 edge capacities is saturated in every block.
+Its exact contribution is
+
+```text
+6 full-defect paths + 4 special-only paths = 1/3 + 1/3750 = 417/1250.
+```
+
+An independent upper dual was checked against the complete bounded catalog of
+all 622 terminal paths with simple free-node interiors and all 20 simple later
+cycles. In the scaling `y = 24 * allocation`, its per-block values are `40`
+for each of the 624 ordinary blocks and `60` for the special block. Thus the
+catalog dual is `624*40 + 60 = 25020`, or `417/1250` after division by
+`24*3125`, exactly matching the ten-path primal witness. This proves
+optimality only for that declared block-relaxed simple-path/simple-cycle
+catalog. It is not an optimum certificate for the original finite-horizon
+problem.
+
 The resulting exact comparisons are
 
 ```text
-horizon  certified lower bound  feasible incumbent  gap
-2..4     157/1875               626/1875            469/1875
+horizon  certified lower bound  feasible incumbent  incumbent - lower bound
+2..4     417/1250               626/1875            1/3750
 2..5     313/2500               10631/15000          8753/15000
 ```
 
-For `2..4`, all sixteen allocated cycles contribute only through the special
-block while their ordinary minimum is zero. For `2..5`, the selected
+For `2..4`, the earlier anchor-plus-cycle value `157/1875` remains an
+independently replayed subcertificate, but is superseded by the path value in
+the table. The certificate-to-incumbent difference is exactly `1/3750` and
+positive; this alone does not prove that either value is optimal for the
+original problem. For `2..5`, the selected
 fundamental cycle contributes `26/625`: every ordinary block has five
-mismatches while the special minimum is zero. Both bounds are global for the
-named fixed-boundary finite problem, but neither meets the incumbent. The
-larger horizon still uses only the deterministic fundamental basis, not all
-simple cycles or a fractional packing.
+mismatches while the special minimum is zero. Both displayed bounds are
+global for the named fixed-boundary finite problem, but neither meets the
+incumbent. The larger horizon still uses only the deterministic fundamental
+basis, not all simple cycles or a fractional packing.
 
 The initialization experiment was also tightened. Every run keeps exactly the
 same frozen `r=2` tree family and changes only the free maps. Four deterministic
@@ -499,11 +537,12 @@ an independently checked path.
    internals.
 2. Add tie-neutral moves and additional deterministic seeds, then reproduce
    whether the same small-horizon fixed points recur.
-3. Extend the successful all-simple-cycle fractional packing from horizon
-   `2..4` to anchor-to-anchor path duals and coupled block duals. The current
-   bounds do not certify either incumbent.
-4. Use branch-and-bound or an exact dual certificate on `2..4` before extending
-   both collar radii and the horizon. Then search for a chain whose
+3. Couple source blocks through the dropped all-different assignment
+   constraints. The blockwise all-simple-path/simple-cycle catalog is closed,
+   while its certificate remains `1/3750` below the known feasible `2..4`
+   incumbent.
+4. Use exact branch-and-bound or a stronger coupled dual on `2..4` before
+   extending both collar radii and the horizon. Then search for a chain whose
    refinement disagreements are summable. A surviving chain is only a
    measurable-transfer candidate; a positive uniform lower bound closes only
    the declared cell-sector ansatz.
@@ -535,6 +574,7 @@ python -m unittest discover -s notes/entropy_selection -p "test_*.py" -v
 python -m notes.entropy_selection.run_solver
 python -m notes.entropy_selection.run_growing
 python -m notes.entropy_selection.run_landscape
+python -m notes.entropy_selection.path_bounds
 ```
 
 The package uses the Python standard library and writes no evidence artifact.

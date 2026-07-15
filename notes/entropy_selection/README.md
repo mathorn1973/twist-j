@@ -29,6 +29,10 @@ Modules:
   first-layer minima, a fractional packing of every positive-defect simple
   cycle at horizon `2..4`, and edge-disjoint fundamental holonomy cycles at
   horizon `2..5`;
+- `path_bounds.py`: a standalone blockwise anchor-to-anchor path certificate
+  for horizon `2..4`, with ten explicit paths, exact per-block edge loads, and
+  a matching catalog dual within the blockwise relaxation for all 622 simple
+  terminal paths plus 20 simple cycles;
 - `basins.py`: context-dependent, separated free-map initializations for one
   frozen boundary problem and each fixed lift phase;
 - `test_*.py`: focused exact gates;
@@ -43,6 +47,7 @@ python -m unittest discover -s notes/entropy_selection -p "test_*.py" -v
 python -m notes.entropy_selection.run_solver
 python -m notes.entropy_selection.run_growing
 python -m notes.entropy_selection.run_landscape
+python -m notes.entropy_selection.path_bounds
 ```
 
 An `EMPTY` result belongs only to the finite-context cell-sector ansatz named
