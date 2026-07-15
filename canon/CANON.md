@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v4
+# TWIST-J Public Canon v6
 
-**Release identity.** Public Canon v4. Normative authority and activation
+**Release identity.** Public Canon v6. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v4 also declares the discrete
+algebraic axiom is J. Public Canon v6 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v4 does not claim
+seed of the two algebraic projections. Public Canon v6 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -82,7 +82,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v4 contains no such
+deriving the architecture from J; Public Canon v6 contains no such
 theorem.
 
 ---
@@ -193,7 +193,36 @@ This is CURVATURE-HISTORICAL-TRACE [T], evidenced by
 probes/P-CURVATURE-TRACE-VALUE-1. The registered proposal -21/8 is
 therefore false for this operator (CURVATURE-TRACE-VALUE [F]); the
 separately printed ten-mode historical checksum is -22 and is not
-asserted as the spectrum of K_hist. None of these facts selects a
+asserted as the spectrum of K_hist.
+
+The historical compression also has an exact intrinsic/exterior split. Put
+`P = P_0 R_H`, `Q = I - P`, `A = T_a`, and `C = T_c`, and restrict every
+displayed endomorphism to `V`. Then
+
+```
+K_amb = P(AC - CA)P = K_hist,
+K_int = [PAP,PCP],
+K_ext = PAQCP - PCQAP,
+K_amb = K_int + K_ext.
+```
+
+Two complete exact routes and byte-identical aarch64 and x86_64 executions
+give `K_ext = 0` entrywise and hence `K_amb = K_int`. The ambient and
+intrinsic operators both have rank 292 and nullity 526; the exterior operator
+has rank 0 and nullity 818. Their exact trace split is
+
+```
+Tr_V(K_int^2) = -881/8,
+Tr_V(K_ext^2) = 0,
+2 Tr_V(K_int K_ext) = 0.
+```
+
+The leakage maps `QAP|_V` and `QCP|_V` are both nonzero, so the vanishing
+exterior term is exact cancellation, not invariance of `V` under `A` and
+`C`. This is CURVATURE-HISTORICAL-GAUSS-SPLIT [T], evidenced by
+probes/P-CURVATURE-GAUSS-SPLIT-1. It is an algebraic identity for the frozen
+historical operator, not a differential-geometric Gauss equation, embedding
+theorem, spectrum, or physical interpretation. None of these facts selects a
 canonical spatial-curvature operator. CURVATURE-OPERATOR-CANONICAL [O]
 asks whether the public architecture determines exactly one equivalence
 class after the carrier, measure, projection group, and ambient versus
@@ -299,10 +328,10 @@ Therefore Tr_4(M_J x) = 2 Tr_4(x) in F_5, and the scalar multiples of
 Tr_4 are the only covectors reading any multiplier at all
 (CODEC-TR4 [T], reproduce/hyperplane-codec). No coding rate is inferred
 from this dimension count. The inherited phrase "rate 4/5" is retired
-from Public Canon v4; any future coding claim must define its alphabet,
+from Public Canon v6; any future coding claim must define its alphabet,
 message space, encoder, decoder, error criterion, and rate from scratch.
 
-Four completed public probes now delimit the entropy bridge without closing
+Five completed public probes now delimit the entropy bridge without closing
 it. Write
 
 ```
@@ -373,6 +402,21 @@ This finite enumeration does not quantify over every component, clock, or
 window. None of these computations kills the depth-five selection problem,
 proves an all-scale or ergodic statement, or supplies regularity, canonicity,
 or measure transport; ENTROPY-LAYER-BRIDGE [O] remains open.
+
+The fifth probe resolves the finite mirror law on the same living carrier.
+Each branch letter restricted to its own living half is an involution with
+cycle type `{1: 1, 2: 1562}` and a unique fixed state in the singlet
+component. The cross restrictions are mutually inverse in the exact
+directions `F_1 o F_0 = id` on `H_1` and `F_0 o F_1 = id` on `H_0`. On
+canonical pentagon cells, each letter fixes the singlet cell and swaps the
+two cells of every size-20 component-half. In the frozen coherent level-2
+gauge, every one-tick cell map is a reflection with multiplier `4 = -1`;
+the two ordered letter pairs are `((4,0),(4,2))` and
+`((4,2),(4,0))`, each on exactly 625 source cells
+(ENTROPY-MIRROR-LAW [C], probes/P-ENTROPY-MIRROR-1). This is a finite,
+gauge-specific statement. It supplies no all-scale or measurable mirror
+theorem, gauge-independent normal, equivariant selection family, measure
+transport, or L2 lift.
 
 Macro space is the coupled kernel. Cells couple on the entanglement
 axis by the two way CSUM transvections, and the wedge
@@ -743,7 +787,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v4. The fermionizer
+inherited naming clause is not part of Public Canon v6. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
