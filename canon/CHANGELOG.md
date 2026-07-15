@@ -1,11 +1,85 @@
 # Canon changelog (public series)
 
-## Public Canon v2
+## Public Canon v5
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 163 claims; 0 T-LOCK, 83 T, 38 D, 12 C, 6 H, 20 O, 4 F; 26 live H/O.
+Registry snapshot: 175 claims; 0 T-LOCK, 83 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+This fold records `P-ENTROPY-MIRROR-1` at its immutable preregistration pin
+`6000f11c` and two-architecture public record. It adds one finite
+computation-grade result at the frozen carrier and gauge:
+`ENTROPY-MIRROR-LAW` enters at [C].
+
+The row records the own-half involutions and their unique singlet fixed
+states, the two directional alternating inverse identities, the induced
+singlet fix and pair swap on canonical pentagon cells, and the multiplier
+`4 = -1` reflection law with the exact `625 + 625` ordered-pair census in
+the named coherent level-2 gauge.
+
+No measurable, ergodic, spectral, all-scale, inverse-limit,
+gauge-independent, selection-family, measure, or L2 statement is added.
+`ENTROPY-LAYER-BRIDGE` remains [O] with its scope unchanged; the finite
+mirror law is recorded only as a dependency constraint for a later public
+selection probe.
+
+## Public Canon v4
+
+<!-- BEGIN GENERATED CANON4 COUNTS -->
+Registry snapshot: 174 claims; 0 T-LOCK, 83 T, 38 D, 20 C, 6 H, 21 O, 6 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON4 COUNTS -->
+
+This fold records `P-ENTROPY-BRIDGE-4` at its immutable preregistration pin
+`3ad1e240` and two-architecture public record. It adds only three finite
+computation-grade results from the frozen ranges: `ENTROPY-PENTAGON-QUOTIENT`,
+`ENTROPY-AFFINE-COCYCLE`, and `ENTROPY-COMPONENT-NOGO` enter at [C].
+
+The first records the constant order-five pentagon partition on every
+recurrent component and living half for `k = 1..10`, branch equivariance,
+and trivial quotient holonomy for `k = 1..8`. The second records the frozen
+affine cell maps in the named coherent level-2 gauge only. The third records
+zero solutions in exactly the 900 preregistered component-local cylinder
+cases. No gauge-independent, all-scale, ergodic, inverse-limit, or measure
+statement is added, and the depth-five selection is not declared dead.
+
+`ENTROPY-LAYER-BRIDGE` remains [O]. The new quotient and cocycle constrain
+the open equivariant selection family, but regularity, canonicity, and the
+frozen joint-Cesaro measure clause remain unproved.
+
+## Public Canon v3
+
+<!-- BEGIN GENERATED CANON3 COUNTS -->
+Registry snapshot: 171 claims; 0 T-LOCK, 83 T, 38 D, 17 C, 6 H, 21 O, 6 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON3 COUNTS -->
+
+This fold records the completed public sequence `P-ENTROPY-BRIDGE-1`,
+`P-ENTROPY-BRIDGE-2`, and `P-ENTROPY-BRIDGE-3`, pinned respectively by
+`9fc7a6c3`, `eb54dff5`, and `ab175284`, without expanding their frozen
+scopes. All three probes have byte-identical two-architecture public records.
+
+`ENTROPY-LIFT-DEFECT` and `ENTROPY-CYLINDER-CUT` record the two first-class
+negative boundaries: the literal integer generator lift has a nonzero exact
+affine defect, and no exact finite-cylindrical bridge cut with driver window at
+most 16 exists at any lambda-depth. `ENTROPY-JOINT-CESARO-LAW`,
+`ENTROPY-BLOCK-HALVING`, `ENTROPY-LIVING-SET`, `ENTROPY-UNIQUE-PAST`, and
+`ENTROPY-COUNT-MATCH` enter at [C] and retain their finite window, anchor, and
+depth scopes.
+
+`ENTROPY-LAYER-BRIDGE` remains [O], now narrowed to selection form. The only
+remaining bridge task is to construct an equivariant family
+`Psi_kappa: O/lambda^5 -> L_n` and prove its regularity, canonicity, and frozen
+joint-Cesaro measure clause. The exact cardinality match is a carrier fact,
+not the missing construction.
+
+## Public Canon v2
+
+<!-- BEGIN GENERATED CANON2 COUNTS -->
+Registry snapshot: 163 claims; 0 T-LOCK, 83 T, 38 D, 12 C, 6 H, 20 O, 4 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON2 COUNTS -->
 
 This fold records the first three completed post-cutover public probes without
 expanding their frozen scopes. `BELL-MAGIC-BOUNDARY` closes at [T] for the

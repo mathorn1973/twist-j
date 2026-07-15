@@ -325,8 +325,11 @@ neutral formal records. This refresh creates no PR, merge, or activation.
     the public `main` tree is byte identical to the reviewed release-form
     staging tree, and tag the activation merge commit `canon-v1`. Record that
     tag target as
-    `ACTIVATION_COMMIT` in the release manifest, create the release, and attach
-    the tag-job `activation-manifest.json` and recorded `canon/SHA256SUMS`.
+    `ACTIVATION_COMMIT` in the release manifest. Create the release as a draft,
+    attach the successful tag-job `activation-manifest.json` and recorded
+    `canon/SHA256SUMS`, download and validate both draft assets, and only then
+    publish the immutable release. Never substitute a locally generated
+    manifest.
     The read-only release workflow downloads both assets, checks the complete
     file inventory and content/activation commit pins, and compares the hash
     manifest byte for byte.

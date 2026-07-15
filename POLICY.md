@@ -230,7 +230,14 @@ publication. Ordinary pull requests and `main` pushes still run policy, unit,
 Canon, ledger, changed-verifier, and changed-reproduction checks. This routing
 prevents the activation gate's exact three-file release delta from being
 misapplied to post-cutover public work; it does not relax tag or release
-readback.
+readback. Tag and release events skip changed-path checks because those events
+do not supply a valid comparison base; their full activation readback already
+reproduces every public probe and minimal reproduction.
+
+When release immutability is enabled, a release is always assembled as a
+draft. Attach the successful tag-job `activation-manifest.json` and the tagged
+`canon/SHA256SUMS`, validate both downloads, and only then publish the draft.
+Never substitute a manifest generated from a local checkout.
 
 The sole workflow has read-only permissions, immutable action pins, no
 persisted checkout credential, and a 15-minute timeout. Its tag trigger
