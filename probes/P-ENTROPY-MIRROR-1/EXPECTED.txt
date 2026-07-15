@@ -1,0 +1,14 @@
+P-ENTROPY-MIRROR-1 exact verifier
+finite mirror law of the Public Canon v4 driven kernel
+
+WITNESS fixed state of F_0 on H_0: 10366 (1, 3, 4, 2, 1, 3)
+WITNESS fixed state of F_1 on H_1: 11616 (1, 3, 4, 2, 3, 3)
+
+PASS 01 M01 CORE        recurrent core 6250 on 313 letter-invariant components (312 x 20 + 1 x 10); halves disjoint 3125 + 3125
+PASS 02 M02 MIRROR      each letter restricted to its own half is an involution, cycle type {1: 1, 2: 1562}; its unique fixed state lies in the singlet component
+PASS 03 M03 ALTERNATION F_1 o F_0 = id on H_1 and F_0 o F_1 = id on H_0: the cross restrictions are mutually inverse
+PASS 04 M04 SWAP        every one-tick letter fixes the singlet pentagon of its own half and swaps the two pentagons of every 20-component-half, cycle type {1: 1, 2: 312}
+PASS 05 M05 REFLECTION  in the frozen coherent level-2 gauge every one-tick cell map has multiplier 4 = -1; the letter pair is {(4,0), (4,2)} in some order on every cell, each order on exactly 625 cells
+PASS 06 M06 CONSISTENCY the cell-level composition identities T_a o T_b = T_a o T_a hold on both halves for both mixed orders
+
+RESULT 6/6 ALL PASS
