@@ -218,3 +218,6 @@ ENTROPY-LAYER-BRIDGE	ENTROPY-PENTAGON-QUOTIENT	REQUIRES	the open selection must 
 ENTROPY-LAYER-BRIDGE	ENTROPY-AFFINE-COCYCLE	REQUIRES	the gauge-specific finite cocycle constrains but does not solve the open canonical selection problem
 ENTROPY-LAYER-BRIDGE	ENTROPY-COMPONENT-NOGO	BOUNDED_BY	the 900 exact zero counts exclude only the enumerated component-local cylinder cases
 ENTROPY-LAYER-BRIDGE	ENTROPY-MIRROR-LAW	REQUIRES	the open equivariant selection must be compatible with the finite mirror law on the living pentagon carrier
+CURVATURE-HISTORICAL-GAUSS-SPLIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the frozen historical full-carrier split is conditional on the declared checkpoint architecture
+CURVATURE-HISTORICAL-GAUSS-SPLIT	CURVATURE-HISTORICAL-TRACE	REQUIRES	the ambient member of the split is the previously typed historical operator and retains its exact trace anchor
+CURVATURE-OPERATOR-CANONICAL	CURVATURE-HISTORICAL-GAUSS-SPLIT	BOUNDED_BY	the exact historical equality constrains one declared full-carrier candidate but does not select a canonical operator class
