@@ -179,9 +179,12 @@ solver, first Rokhlin-tower baseline, exact cylinder measures, two-sided
 collars, and a growing-context finite-horizon optimizer now live in
 `notes/entropy_selection/`; exact local results are summarized in
 `notes/ENTROPY-SELECTION-RECON.md`. The first level-2-anchored coordinate
-optima through level 8 do not show a summable Cauchy tail. The next milestone
-is a rigorous lower bound or global certificate for the small structured
-horizons. It must return one of:
+optima through level 8 do not show a summable Cauchy tail. The subsequent
+fixed-anchor analysis produced rigorous but non-tight lower bounds for
+structured horizons `2..4` and `2..5`, plus eight diagnostically distinct
+coordinate-sweep terminal points. The next local milestone is a tighter
+fractional-cycle/coupled-block dual or exact branch-and-bound certificate for
+`2..4`. It must eventually return one of:
 
 - an explicit compatible transfer system;
 - a precise obstruction for a named regularity class;

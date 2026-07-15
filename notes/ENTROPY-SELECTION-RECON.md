@@ -353,6 +353,73 @@ tested ambiguous-incidence path. This is a result about four related seeds and
 their coordinate sweeps, not a lower bound for all structured families and not
 a global entropy no-go.
 
+## Small-horizon lower bounds and separated initializations
+
+The fixed-`r=2` tree-boundary problem now has replayable global lower bounds
+inside the declared structured `625`-block/`S_5` finite-horizon ansatz. The
+certificate has two disjoint parts:
+
+1. the exact minimum `209/2500` of the first anchored refinement distance;
+2. edge-disjoint fundamental-cycle holonomy inequalities on all later edges,
+   after dropping the all-different coupling between source blocks.
+
+For one cycle, exact block transport and the triangle inequality give
+
+```text
+sum_e w_e d_e >= min_e(w_e) d(x,H_C(x)).
+```
+
+The holonomy defect is minimized over all `625 * 120` cell/`S_5` labels for
+one ordinary source block and again for the special block. Ordinary source
+blocks have identical position action, so the full relaxed contribution is
+the exact sum of `624` ordinary coordinates and one special coordinate. The
+checker reconstructs every edge, transport, witness, weight, minimum, and
+edge-disjointness condition.
+
+The resulting exact comparisons are
+
+```text
+horizon  certified lower bound  feasible incumbent  gap
+2..4     251/3000               626/1875            1251/5000
+2..5     313/2500               10631/15000          8753/15000
+```
+
+For `2..4`, the selected cycle contributes `1/15000` through the special
+block while its ordinary minimum is zero. For `2..5`, the selected cycle
+contributes `26/625`: every ordinary block has five mismatches while the
+special minimum is zero. Both bounds are global for the named fixed-boundary
+finite problem, but neither meets the incumbent. The cycle packing uses only
+the deterministic fundamental basis, not all simple cycles or a fractional
+packing.
+
+The initialization experiment was also tightened. Every run keeps exactly the
+same frozen `r=2` tree family and changes only the free maps. Four deterministic
+context/level patterns rotate all 625 block assignments in 125 cycles of
+length 5. At every free context the patterns are pairwise at Hamming distance
+1 from one another and from the common lift for each fixed lift phase, and no
+single global block permutation explains a whole seeded family.
+
+With both lift phases, the `2..5` grid contains eight runs. All stop within
+three sweeps and produce eight distinct final free-map signatures, eight
+internal diagnostic signatures, and eight exact objectives. The diagnostic
+hashes encode exact distance and roof-defect tuples; they are neither physical
+observables nor a quotient by the full cocycle centralizer.
+
+```text
+context0/phase0  1477/1500      context0/phase1  7199/7500
+context1/phase0  70123/75000    context1/phase1  574/625
+context2/phase0  1954/1875      context2/phase1  1799/1875
+context3/phase0  1877/1875      context3/phase1  3443/3750
+```
+
+The best distant terminal point is `3443/3750`, still above the reference
+incumbent `10631/15000`. All eight `2..5` profiles retain positive adjacent
+distances. The tail beyond level 5 remains tested only in the reference `2..8`
+run, so this grid carries no asymptotic or Cauchy conclusion and is not a basin
+classification. Large sparse cell-assignment components now have an exact
+polynomial min-cost matching fallback; the small bitmask solver is retained as
+an independently checked path.
+
 ## Next exact local tests
 
 1. Emit short closed-walk obstruction certificates for the empty affine and
@@ -360,10 +427,11 @@ a global entropy no-go.
    internals.
 2. Add tie-neutral moves and additional deterministic seeds, then reproduce
    whether the same small-horizon fixed points recur.
-3. Compute a rigorous lower bound for horizons `2..4` and `2..5`, first by
-   dropping all-different coupling blockwise. If the coordinate solution meets
-   the bound, it certifies the global optimum of that finite structured scope.
-4. Only then extend both collar radii and the horizon. Search for a chain whose
+3. Strengthen the current lower bounds with all-simple-cycle or fractional
+   cycle packing and coupled block duals. The present fundamental-cycle bounds
+   do not certify either incumbent.
+4. Use branch-and-bound or an exact dual certificate on `2..4` before extending
+   both collar radii and the horizon. Then search for a chain whose
    refinement disagreements are summable. A surviving chain is only a
    measurable-transfer candidate; a positive uniform lower bound closes only
    the declared cell-sector ansatz.
@@ -394,6 +462,7 @@ From the repository root:
 python -m unittest discover -s notes/entropy_selection -p "test_*.py" -v
 python -m notes.entropy_selection.run_solver
 python -m notes.entropy_selection.run_growing
+python -m notes.entropy_selection.run_landscape
 ```
 
 The package uses the Python standard library and writes no evidence artifact.

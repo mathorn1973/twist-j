@@ -65,8 +65,8 @@ def main() -> int:
     print("  The tower baseline is exact off roofs; its tested lexicographic")
     print("  adjacent disagreements stay macroscopic. Shrinking roofs alone do not")
     print("  prove a selector.")
-    print("  The growing-context optimization is reported separately by run_growing;")
-    print("  its current bounded readout does not establish a summable Cauchy tail.")
+    print("  Growing optimization is reported by run_growing; fixed-anchor bounds")
+    print("  and separated basins by run_landscape. No summable tail is established.")
     return 0
 
 

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import random
 import unittest
 from fractions import Fraction
 
@@ -96,6 +97,89 @@ class GrowingContextTests(unittest.TestCase):
         self.assertEqual(
             optimizer.coordinate_best(((Fraction(1), mapping),)),
             mapping,
+        )
+
+    def test_sparse_matching_equals_random_small_brute_force(self) -> None:
+        rng = random.Random(20260715)
+        identity = (0, 1, 2, 3, 4)
+        for size in range(1, 7):
+            cells = tuple(range(size))
+            blocks = tuple(range(size))
+            for _trial in range(25):
+                candidates = []
+                for _block in blocks:
+                    degree = rng.randint(1, min(3, size))
+                    selected = rng.sample(cells, degree)
+                    candidates.append(
+                        {
+                            cell: (rng.randint(1, 30), identity)
+                            for cell in selected
+                        }
+                    )
+                candidate_tuple = tuple(candidates)
+                sparse = FiniteHorizonOptimizer._component_sparse_matching(
+                    blocks,
+                    cells,
+                    candidate_tuple,
+                )
+                repeated = FiniteHorizonOptimizer._component_sparse_matching(
+                    blocks,
+                    cells,
+                    candidate_tuple,
+                )
+                self.assertEqual(sparse, repeated)
+                sparse_score = sum(
+                    candidate_tuple[block][cell][0] for block, cell in sparse
+                )
+
+                best = 0
+
+                def brute(position: int, used: set[int], score: int) -> None:
+                    nonlocal best
+                    if position == size:
+                        best = max(best, score)
+                        return
+                    brute(position + 1, used, score)
+                    for cell, (edge_score, _) in candidate_tuple[position].items():
+                        if cell not in used:
+                            used.add(cell)
+                            brute(position + 1, used, score + edge_score)
+                            used.remove(cell)
+
+                brute(0, set(), 0)
+                self.assertEqual(sparse_score, best)
+                bitmask = FiniteHorizonOptimizer._component_bitmask_matching(
+                    blocks,
+                    cells,
+                    candidate_tuple,
+                )
+                bitmask_score = sum(
+                    candidate_tuple[block][cell][0] for block, cell in bitmask
+                )
+                self.assertEqual(sparse_score, bitmask_score)
+
+    def test_large_sparse_cycle_supports_an_unmatched_block(self) -> None:
+        size = 24
+        identity = (0, 1, 2, 3, 4)
+        cells = tuple(range(size))
+        blocks = tuple(range(size + 1))
+        candidates = tuple(
+            {
+                block: (100, identity),
+                (block + 1) % size: (90, identity),
+            }
+            for block in range(size)
+        ) + ({0: (1, identity)},)
+        result = FiniteHorizonOptimizer._component_partial_matching(
+            blocks,
+            cells,
+            candidates,
+        )
+        self.assertEqual(result, tuple((index, index) for index in range(size)))
+        self.assertNotIn(size, {block for block, _ in result})
+        self.assertEqual(
+            sum(candidates[block][cell][0] for block, cell in result),
+            2400,
         )
 
     def test_small_horizon_monotonic_exact_regression(self) -> None:

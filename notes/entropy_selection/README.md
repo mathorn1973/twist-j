@@ -25,9 +25,14 @@ Modules:
 - `growing.py`: structured boundary maps, exact adjacent-level distances,
   maximum-weight tree families, anchored finite-horizon coordinate
   optimization, and an all-levels-free sensitivity mode;
+- `bounds.py`: replayable fixed-anchor lower-bound certificates from exact
+  first-layer minima and edge-disjoint holonomy cycles;
+- `basins.py`: context-dependent, separated free-map initializations for one
+  frozen boundary problem and each fixed lift phase;
 - `test_*.py`: focused exact gates;
 - `run_solver.py`: complete human-readable local report;
-- `run_growing.py`: bounded growing-context and finite-horizon report.
+- `run_growing.py`: bounded growing-context and finite-horizon report;
+- `run_landscape.py`: certified small-horizon bounds and initialization grid.
 
 Run from the repository root:
 
@@ -35,6 +40,7 @@ Run from the repository root:
 python -m unittest discover -s notes/entropy_selection -p "test_*.py" -v
 python -m notes.entropy_selection.run_solver
 python -m notes.entropy_selection.run_growing
+python -m notes.entropy_selection.run_landscape
 ```
 
 An `EMPTY` result belongs only to the finite-context cell-sector ansatz named

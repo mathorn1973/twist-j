@@ -18,6 +18,7 @@ from collections import deque
 from dataclasses import dataclass
 from fractions import Fraction
 from functools import lru_cache
+from heapq import heappop, heappush
 from math import lcm
 from typing import Iterable
 
@@ -769,7 +770,7 @@ class FiniteHorizonOptimizer:
         return tuple(components)
 
     @staticmethod
-    def _component_partial_matching(
+    def _component_bitmask_matching(
         blocks: tuple[int, ...],
         cells: tuple[int, ...],
         candidates: tuple[dict[int, tuple[int, Permutation5]], ...],
@@ -777,9 +778,7 @@ class FiniteHorizonOptimizer:
         """Exact maximum-weight partial matching by bitmask DP."""
 
         if len(cells) > 18:
-            raise RuntimeError(
-                "positive matching component exceeds exact local scope (18 cells)"
-            )
+            raise ValueError("bitmask matching is restricted to at most 18 cells")
         cell_position = {cell: position for position, cell in enumerate(cells)}
         states: dict[int, tuple[int, tuple[tuple[int, int], ...]]] = {
             0: (0, ())
@@ -805,6 +804,158 @@ class FiniteHorizonOptimizer:
                 tuple(-value for pair in item[1] for value in pair),
             ),
         )[1]
+
+    @staticmethod
+    def _component_sparse_matching(
+        blocks: tuple[int, ...],
+        cells: tuple[int, ...],
+        candidates: tuple[dict[int, tuple[int, Permutation5]], ...],
+    ) -> tuple[tuple[int, int], ...]:
+        """Exact polynomial maximum-weight partial bipartite matching.
+
+        Every block sends one unit of flow either through a positive
+        block/cell edge or directly to the sink (the unmatched option).  If
+        ``M`` is the largest edge score, a real edge of score ``w`` has cost
+        ``M-w`` and the unmatched edge has cost ``M``.  Thus every complete
+        flow has cost ``len(blocks)*M - selected_score`` and a minimum-cost
+        flow is exactly a maximum-weight partial matching.
+
+        Successive shortest augmenting paths use integer potentials.  Initial
+        forward costs are non-negative, so all reduced costs stay
+        non-negative and Dijkstra is exact.  Sorted nodes, edges, and heap keys
+        give deterministic tie resolution; the small-component bitmask path
+        retains the older explicit lexicographic tie policy.
+        """
+
+        if not blocks:
+            return ()
+        block_order = tuple(sorted(blocks))
+        cell_order = tuple(sorted(cells))
+        cell_set = set(cell_order)
+        if any(not candidates[block] for block in block_order):
+            raise ValueError("a positive component contains an empty block row")
+        if any(
+            cell not in cell_set
+            for block in block_order
+            for cell in candidates[block]
+        ):
+            raise ValueError("candidate edge leaves its matching component")
+        maximum_score = max(
+            edge_score
+            for block in block_order
+            for edge_score, _ in candidates[block].values()
+        )
+        if maximum_score <= 0:
+            raise ValueError("sparse matching expects positive integer scores")
+
+        @dataclass(slots=True)
+        class FlowEdge:
+            target: int
+            reverse: int
+            capacity: int
+            cost: int
+
+        source = 0
+        block_node = {
+            block: 1 + position for position, block in enumerate(block_order)
+        }
+        cell_offset = 1 + len(block_order)
+        cell_node = {
+            cell: cell_offset + position
+            for position, cell in enumerate(cell_order)
+        }
+        sink = cell_offset + len(cell_order)
+        adjacency: list[list[FlowEdge]] = [[] for _ in range(sink + 1)]
+
+        def add_edge(start: int, stop: int, capacity: int, cost: int) -> FlowEdge:
+            forward = FlowEdge(stop, len(adjacency[stop]), capacity, cost)
+            reverse = FlowEdge(start, len(adjacency[start]), 0, -cost)
+            adjacency[start].append(forward)
+            adjacency[stop].append(reverse)
+            return forward
+
+        selected_edges: dict[tuple[int, int], FlowEdge] = {}
+        for block in block_order:
+            node = block_node[block]
+            add_edge(source, node, 1, 0)
+            for cell in sorted(candidates[block]):
+                edge_score = candidates[block][cell][0]
+                if edge_score <= 0:
+                    raise ValueError("candidate edge score must be positive")
+                selected_edges[(block, cell)] = add_edge(
+                    node,
+                    cell_node[cell],
+                    1,
+                    maximum_score - edge_score,
+                )
+            # A private direct route represents leaving this block unmatched.
+            add_edge(node, sink, 1, maximum_score)
+        for cell in cell_order:
+            add_edge(cell_node[cell], sink, 1, 0)
+
+        potential = [0] * len(adjacency)
+        for _ in block_order:
+            distances: list[int | None] = [None] * len(adjacency)
+            previous: list[tuple[int, int] | None] = [None] * len(adjacency)
+            distances[source] = 0
+            heap: list[tuple[int, int]] = [(0, source)]
+            while heap:
+                distance, node = heappop(heap)
+                if distances[node] != distance:
+                    continue
+                for edge_index, edge in enumerate(adjacency[node]):
+                    if edge.capacity <= 0:
+                        continue
+                    reduced = edge.cost + potential[node] - potential[edge.target]
+                    if reduced < 0:
+                        raise AssertionError("min-cost residual edge became negative")
+                    candidate_distance = distance + reduced
+                    known = distances[edge.target]
+                    if known is None or candidate_distance < known:
+                        distances[edge.target] = candidate_distance
+                        previous[edge.target] = (node, edge_index)
+                        heappush(heap, (candidate_distance, edge.target))
+            if distances[sink] is None:
+                raise AssertionError("unmatched fallback failed to carry full flow")
+            for node, distance in enumerate(distances):
+                if distance is not None:
+                    potential[node] += distance
+            node = sink
+            while node != source:
+                predecessor = previous[node]
+                if predecessor is None:
+                    raise AssertionError("augmenting path lost its predecessor")
+                start, edge_index = predecessor
+                edge = adjacency[start][edge_index]
+                edge.capacity -= 1
+                adjacency[node][edge.reverse].capacity += 1
+                node = start
+
+        result = tuple(
+            sorted(
+                (block, cell)
+                for (block, cell), edge in selected_edges.items()
+                if edge.capacity == 0
+            )
+        )
+        if len({block for block, _ in result}) != len(result) or len(
+            {cell for _, cell in result}
+        ) != len(result):
+            raise AssertionError("sparse flow result is not a partial matching")
+        return result
+
+    @classmethod
+    def _component_partial_matching(
+        cls,
+        blocks: tuple[int, ...],
+        cells: tuple[int, ...],
+        candidates: tuple[dict[int, tuple[int, Permutation5]], ...],
+    ) -> tuple[tuple[int, int], ...]:
+        """Dispatch to an exact small or polynomial sparse solver."""
+
+        if len(cells) <= 18:
+            return cls._component_bitmask_matching(blocks, cells, candidates)
+        return cls._component_sparse_matching(blocks, cells, candidates)
 
     def coordinate_best(
         self, votes: tuple[tuple[Fraction, StructuredMap], ...]
