@@ -868,10 +868,10 @@ def bound_report(
     seed: str = "tree",
     lift_phase: int = 1,
 ) -> BoundReport:
-    """Compare the certified lower bound with one feasible anchored incumbent."""
+    """Compare the bound with one deterministic coordinate-sweep reference."""
 
     certificate = build_certificate(maximum_level, seed)
-    incumbent_report = FiniteHorizonOptimizer(
+    reference_report = FiniteHorizonOptimizer(
         2,
         maximum_level,
         solver=_solver(),
@@ -879,16 +879,18 @@ def bound_report(
         lift_phase=lift_phase,
         freeze_minimum=True,
     ).optimize(10)
-    if not incumbent_report.minimum_level_frozen:
-        raise AssertionError("incumbent unexpectedly released its anchor")
-    incumbent = incumbent_report.final_objective
-    if certificate.lower_bound > incumbent:
-        raise AssertionError("claimed lower bound exceeds a feasible incumbent")
+    if not reference_report.minimum_level_frozen:
+        raise AssertionError(
+            "coordinate reference unexpectedly released its anchor"
+        )
+    reference = reference_report.final_objective
+    if certificate.lower_bound > reference:
+        raise AssertionError("claimed lower bound exceeds a feasible reference")
     return BoundReport(
         certificate=certificate,
-        incumbent=incumbent,
-        gap=incumbent - certificate.lower_bound,
-        meets_incumbent=certificate.lower_bound == incumbent,
+        incumbent=reference,
+        gap=reference - certificate.lower_bound,
+        meets_incumbent=certificate.lower_bound == reference,
         incumbent_seed=seed,
         incumbent_lift_phase=lift_phase,
     )
@@ -903,7 +905,7 @@ def format_report(report: BoundReport) -> str:
             "  anchor bound=%s cycle-packing bound=%s"
             % (certificate.anchor_bound, certificate.cycle_bound),
             "  certified lower bound=%s" % certificate.lower_bound,
-            "  feasible incumbent=%s gap=%s meets=%s"
+            "  coordinate-sweep feasible reference=%s gap=%s meets=%s"
             % (
                 report.incumbent,
                 report.gap,

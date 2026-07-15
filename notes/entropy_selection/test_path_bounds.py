@@ -98,8 +98,10 @@ class AnchorToAnchorPathBoundTests(unittest.TestCase):
             Counter(path.allocation for path in certificate.paths),
             Counter({Fraction(1, 24): 8, Fraction(1, 12): 2}),
         )
-        incumbent = Fraction(626, 1875)
-        self.assertEqual(incumbent - certificate.lower_bound, Fraction(1, 3750))
+        coordinate_reference = Fraction(626, 1875)
+        self.assertEqual(
+            coordinate_reference - certificate.lower_bound, Fraction(1, 3750)
+        )
 
     def test_every_block_edge_capacity_is_saturated(self) -> None:
         loads = certificate_edge_loads(self.certificate)

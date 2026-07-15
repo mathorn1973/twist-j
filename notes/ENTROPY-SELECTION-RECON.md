@@ -480,26 +480,54 @@ for each of the 624 ordinary blocks and `60` for the special block. Thus the
 catalog dual is `624*40 + 60 = 25020`, or `417/1250` after division by
 `24*3125`, exactly matching the ten-path primal witness. This proves
 optimality only for that declared block-relaxed simple-path/simple-cycle
-catalog. It is not an optimum certificate for the original finite-horizon
-problem.
+catalog. By itself it is not an optimum certificate for the original
+finite-horizon problem.
+
+The coupled closure uses the all-different target-cell constraints rather
+than dropping them. For assignment prices `lambda[v,b,c]`, the coupled dual
+splits into a minimum assignment value at every free node and a priced
+minimum for every source block. The frozen certificate takes the entire
+price tensor to be zero. Every assignment minimum is then zero, while the
+block minima remain the path values `40` on 624 blocks and `60` on the
+special block. This zero-price lift is a valid coupled dual of value `25020`;
+it does not pretend to discover a stronger block inequality.
+
+An exact coupled primal attains the dual. It changes no target cell and no
+ordinary-block permutation from the deterministic coordinate-sweep family;
+only eight special-block permutations change (three at level 3 and five at
+level 4). All sixteen free maps retain their 625-cell bijections. Direct edge
+replay gives the per-block scaled census `{40: 624, 60: 1}`, first and second
+transition distances `209/2500` and `1/4`, and total `417/1250`. All ten path
+inequalities have zero triangle slack on every block, and another coordinate
+sweep makes zero changes.
+
+The special block was also reconstructed by exact conflict-core
+branch-and-bound. Each of its five point coordinates is a 16-variable CSP on
+3125 states with 20 pair equalities and 12 anchor equalities. Exhaustive
+conflict deletion gives cost `12` on every coordinate, with active mask
+`0xfd6faefa` and removed constraints `(0,2,8,12,14,20,23,25)`. The checker
+replays `22852` calls and `5126` distinct masks per coordinate, then requires
+the five assignments to reassemble to one common cell and one `S_5`
+permutation at every free node. Thus the global root is fathomed without a
+branch: coupled lower `25020` equals coupled upper `25020`.
 
 The resulting exact comparisons are
 
 ```text
-horizon  certified lower bound  feasible incumbent  incumbent - lower bound
-2..4     417/1250               626/1875            1/3750
-2..5     313/2500               10631/15000          8753/15000
+horizon  certified lower bound  feasible reference  reference - lower  status
+2..4     417/1250               417/1250             0                  exact
+2..5     313/2500               10631/15000           8753/15000         open
 ```
 
 For `2..4`, the earlier anchor-plus-cycle value `157/1875` remains an
 independently replayed subcertificate, but is superseded by the path value in
-the table. The certificate-to-incumbent difference is exactly `1/3750` and
-positive; this alone does not prove that either value is optimal for the
-original problem. For `2..5`, the selected
+the table. The former `626/1875` point was a coordinate-local terminal point,
+not the optimum; the coupled witness improves it and closes the named
+fixed-`r=2` structured horizon exactly. For `2..5`, the selected
 fundamental cycle contributes `26/625`: every ordinary block has five
-mismatches while the special minimum is zero. Both displayed bounds are
-global for the named fixed-boundary finite problem, but neither meets the
-incumbent. The larger horizon still uses only the deterministic fundamental
+mismatches while the special minimum is zero. Its displayed bound is global
+for the named fixed-boundary finite problem but does not meet the feasible
+reference. The larger horizon still uses only the deterministic fundamental
 basis, not all simple cycles or a fractional packing.
 
 The initialization experiment was also tightened. Every run keeps exactly the
@@ -522,8 +550,8 @@ context2/phase0  1954/1875      context2/phase1  1799/1875
 context3/phase0  1877/1875      context3/phase1  3443/3750
 ```
 
-The best distant terminal point is `3443/3750`, still above the reference
-incumbent `10631/15000`. All eight `2..5` profiles retain positive adjacent
+The best distant terminal point is `3443/3750`, still above the coordinate
+reference `10631/15000`. All eight `2..5` profiles retain positive adjacent
 distances. The tail beyond level 5 remains tested only in the reference `2..8`
 run, so this grid carries no asymptotic or Cauchy conclusion and is not a basin
 classification. Large sparse cell-assignment components now have an exact
@@ -537,12 +565,10 @@ an independently checked path.
    internals.
 2. Add tie-neutral moves and additional deterministic seeds, then reproduce
    whether the same small-horizon fixed points recur.
-3. Couple source blocks through the dropped all-different assignment
-   constraints. The blockwise all-simple-path/simple-cycle catalog is closed,
-   while its certificate remains `1/3750` below the known feasible `2..4`
-   incumbent.
-4. Use exact branch-and-bound or a stronger coupled dual on `2..4` before
-   extending both collar radii and the horizon. Then search for a chain whose
+3. Extend the coupled block formulation, exact witness search, and replayable
+   lower certificate to horizon `2..5`; the current fundamental-cycle bound
+   remains far below its feasible coordinate-sweep reference.
+4. Then extend both collar radii and the horizon and search for a chain whose
    refinement disagreements are summable. A surviving chain is only a
    measurable-transfer candidate; a positive uniform lower bound closes only
    the declared cell-sector ansatz.

@@ -13,6 +13,10 @@ try:
         format_basin_report,
     )
     from .bounds import bound_report, format_report as format_bound_report
+    from .coupled_exact import (
+        build_exact_coupled_certificate,
+        format_exact_report,
+    )
     from .growing import FiniteHorizonOptimizer, GrowingContextSolver
     from .path_bounds import (
         build_catalog_dual,
@@ -29,6 +33,10 @@ except ImportError:  # Direct execution from this directory.
     from bounds import (  # type: ignore[no-redef]
         bound_report,
         format_report as format_bound_report,
+    )
+    from coupled_exact import (  # type: ignore[no-redef]
+        build_exact_coupled_certificate,
+        format_exact_report,
     )
     from growing import (  # type: ignore[no-redef]
         FiniteHorizonOptimizer,
@@ -69,12 +77,19 @@ def main() -> int:
     print("STRONGER HORIZON 2..4 ANCHOR-TO-ANCHOR BOUND")
     print(format_path_report(path_certificate, path_dual))
     print(
-        "  feasible incumbent=%s certificate difference=%s"
+        "  old coordinate-local reference=%s difference=%s"
         % (
             reports[4].incumbent,
             reports[4].incumbent - path_certificate.lower_bound,
         )
     )
+    print()
+
+    exact_coupled = build_exact_coupled_certificate()
+    if exact_coupled.optimum != Fraction(417, 1250):
+        raise AssertionError("exact coupled 2..4 optimum regression changed")
+    print("EXACT COUPLED HORIZON 2..4 CLOSURE")
+    print(format_exact_report(exact_coupled))
     print()
 
     solver = GrowingContextSolver()
@@ -121,17 +136,20 @@ def main() -> int:
     ):
         raise AssertionError("bounded basin landscape regression changed")
     print(format_basin_report(basins))
-    incumbent = reports[5].incumbent
-    print("  reference incumbent=%s" % incumbent)
-    print("  distant grid improves incumbent=%s" % (basins.best_objective < incumbent))
+    reference = reports[5].incumbent
+    print("  coordinate-sweep reference=%s" % reference)
+    print(
+        "  distant grid improves reference=%s"
+        % (basins.best_objective < reference)
+    )
     print()
     print("INTERPRETATION")
     print("  The lower bounds are global only inside the fixed-r2 structured")
-    print("  finite-horizon scope. The stronger 2..4 path bound is 1/3750 below")
-    print("  its known feasible incumbent; the 2..5 bound also does not meet its")
-    print("  incumbent. These differences alone do not prove either optimum.")
+    print("  finite-horizon scope. At 2..4, its block relaxation lower bound and")
+    print("  a coupled feasible witness coincide at 417/1250, closing that named")
+    print("  problem exactly. The 2..5 bound remains below its feasible reference.")
     print("  Eight separated initializations give eight terminal diagnostics; none")
-    print("  improves the incumbent and every 2..5 adjacent distance stays positive.")
+    print("  improves that reference and every 2..5 adjacent distance stays positive.")
     print("  Levels beyond 5 remain tested only in the reference 2..8 run, so this")
     print("  grid carries no asymptotic or Cauchy conclusion.")
     return 0

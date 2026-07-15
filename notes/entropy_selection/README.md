@@ -33,6 +33,9 @@ Modules:
   for horizon `2..4`, with ten explicit paths, exact per-block edge loads, and
   a matching catalog dual within the blockwise relaxation for all 622 simple
   terminal paths plus 20 simple cycles;
+- `coupled_exact.py`: the zero-assignment-price lift of that block dual,
+  a coupled structured witness attaining every block minimum, and a replayed
+  conflict-core branch-and-bound on the five special-block coordinates;
 - `basins.py`: context-dependent, separated free-map initializations for one
   frozen boundary problem and each fixed lift phase;
 - `test_*.py`: focused exact gates;
@@ -48,6 +51,7 @@ python -m notes.entropy_selection.run_solver
 python -m notes.entropy_selection.run_growing
 python -m notes.entropy_selection.run_landscape
 python -m notes.entropy_selection.path_bounds
+python -m notes.entropy_selection.coupled_exact
 ```
 
 An `EMPTY` result belongs only to the finite-context cell-sector ansatz named

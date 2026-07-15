@@ -168,17 +168,19 @@ collars, and a growing-context finite-horizon optimizer now live in
 `notes/entropy_selection/`; exact local results are summarized in
 `notes/ENTROPY-SELECTION-RECON.md`. The first level-2-anchored coordinate
 optima through level 8 do not show a summable Cauchy tail. The subsequent
-fixed-anchor analysis produced rigorous lower bounds that do not meet the
-known feasible incumbents for structured horizons `2..4` and `2..5`, plus
-eight diagnostically distinct
-coordinate-sweep terminal points. The complete positive-defect simple-cycle
-packing at `2..4` now has an exact fractional certificate, improving that
-first lower bound to `157/1875`. A blockwise anchor-to-anchor certificate now
-strengthens it to `417/1250`: ten explicit paths saturate all capacities, and
-a matching dual closes the declared catalog of all 622 simple terminal paths
-plus 20 simple cycles. The exact certificate-to-incumbent difference is still
-`1/3750`, so the next local milestone is a coupled-block dual or exact
-branch-and-bound certificate for `2..4`. It must eventually return one of:
+fixed-anchor analysis produced rigorous lower bounds for structured horizons
+`2..4` and `2..5`, plus eight diagnostically distinct coordinate-sweep
+terminal points. At `2..4`, ten anchor-to-anchor paths give the blockwise
+lower value `417/1250`. A zero-assignment-price coupled dual lifts that value
+through the all-different constraints, and an exact structured witness attains
+it while changing no target cells. A five-coordinate conflict-core
+branch-and-bound independently reconstructs the special block. Thus the named
+fixed-`r=2` structured horizon `2..4` is closed exactly; the former
+`626/1875` coordinate terminal point was only a local reference.
+
+The immediate next milestone is the still-open `2..5` coupled problem,
+followed by cross-level and larger-collar compatibility. That work must
+eventually return one of:
 
 - an explicit compatible transfer system;
 - a precise obstruction for a named regularity class;
