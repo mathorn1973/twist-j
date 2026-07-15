@@ -13,6 +13,11 @@ from dataclasses import dataclass
 from functools import lru_cache
 from typing import Iterable
 
+try:
+    from .measure import factors as exact_factors
+except ImportError:  # Direct execution from this directory.
+    from measure import factors as exact_factors  # type: ignore[no-redef]
+
 
 BitWord = tuple[int, ...]
 
@@ -60,45 +65,9 @@ def thue_morse_prefix(length: int) -> BitWord:
 
 @lru_cache(maxsize=None)
 def factors(length: int) -> tuple[BitWord, ...]:
-    """Census the finite Thue--Morse language at one word length.
+    """Return the exact finite substitution-closure language."""
 
-    The census is enlarged until it is unchanged through three successive
-    substitution doublings.  A final two-level look-ahead is checked before
-    returning.  This is local recon infrastructure, not a public proof of a
-    general factor-complexity formula.
-    """
-
-    if length < 1:
-        raise ValueError("factor length must be positive")
-    word: BitWord = (0,)
-    previous: frozenset[BitWord] | None = None
-    stable = 0
-    for _level in range(1, 26):
-        word = substitute(word)
-        if len(word) < max(64, 16 * length):
-            continue
-        current = frozenset(
-            word[start : start + length]
-            for start in range(len(word) - length + 1)
-        )
-        if current == previous:
-            stable += 1
-        else:
-            stable = 0
-            previous = current
-        if stable >= 3:
-            lookahead = substitute(substitute(word))
-            checked = frozenset(
-                lookahead[start : start + length]
-                for start in range(len(lookahead) - length + 1)
-            )
-            if checked != current:
-                stable = 0
-                previous = checked
-                word = lookahead
-                continue
-            return tuple(sorted(current))
-    raise RuntimeError("Thue--Morse factor census did not stabilize")
+    return exact_factors(length)
 
 
 @dataclass(frozen=True, slots=True)

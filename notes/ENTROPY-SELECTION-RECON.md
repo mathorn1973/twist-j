@@ -164,10 +164,11 @@ The base is the actual Thue--Morse language. A width-`w` Rauzy vertex is an
 allowed desubstituted factor `(previous,current,future,...)`; an edge is an
 allowed factor of length `w+1`. No supertile is closed periodically. Graph
 cycles impose only consistency of a function constant on those cylinders.
-For this local recon the finite language is obtained by a stabilized
-substitution census with additional look-ahead. A future public verifier must
-replace that development check by a bounded substitution-closure certificate
-or an equivalent automaton proof.
+The finite language now has a bounded substitution-closure certificate: for a
+factor of length `n`, choose the least `k` with `2^k >= n-1`; every factor lies
+in `sigma^k(ab)` for one of the four explicitly witnessed legal pairs `ab`.
+Exact rational cylinder frequencies come from the two substitution phases and
+pass left/right marginal, complement, and reversal gates through length 20.
 
 For each source sector, the solver first propagates a target cell section.
 It then solves, over `F_5`,
@@ -186,9 +187,8 @@ fixed points. Thus the fixed points may occupy a nonsinglet cell and a
 five-cycle may occupy the singlet; that assignment is not hardcoded. The
 mirror-aligned singlet route is retained as a separate diagnostic.
 
-Executed grid: levels `r = 2..6`, context widths `w = 2..8`. Within that
-stabilized factor census, every one of the 35 decisions returned the same
-layered result:
+Executed grid: levels `r = 2..6`, context widths `w = 2..8`. Within that exact
+factor census, every one of the 35 decisions returned the same layered result:
 
 ```text
 cell sections:                  624 / 624
@@ -243,19 +243,130 @@ mismatches remain macroscopic, but a finite list of unweighted conditional
 comparisons is neither a proof nor a disproof of Cauchy convergence for an
 optimized sequence of boundary maps.
 
+## Growing-context weighted optimizer
+
+The next layer uses anchored two-sided collars rather than adding future bits
+only. A collar `[-L,+R]` records a genuine cylinder around the desubstituted
+current letter. For a parent sequence `x`, its two substitution children obey
+
+```text
+z_(2i)   = x_i,
+z_(2i+1) = 1 - x_i.
+```
+
+Refinement therefore retains one joint extension atom
+
+```text
+parent + common extension -> (child_0, child_1)
+```
+
+with exact weight `mu(extension)` and branch weights `mu(extension)/2`. The
+two phases are not separately invariant; their half-mixture is. The incidence
+implementation checks parent marginals, mixed child marginals, overlap,
+complement symmetry, and direct reconstruction of both child words.
+
+A boundary bijection is stored without expanding `3125!` possibilities:
+
+```text
+625 source five-blocks -> 625 target pentagons,
+one internal S_5 permutation on every matched block.
+```
+
+The 625th source block consists of the five `J^(2^r)` fixed points, so the
+optimizer does not force it into the target singlet. This structured ansatz is
+closed under every exact block `advance` and `retreat` operation.
+
+For adjacent levels, the exact invariant distance is
+
+```text
+D_r = sum_e mu(e)/2 * (
+          d(X_(r+1,parent), X_(r,child_0))
+        + d(advance_r(X_(r+1,parent)), X_(r,child_1))) .
+```
+
+No additional `1/2^r` appears: the boundary Hamming distance is preserved on
+all floors of a common child tower. For one variable with all neighbors fixed,
+the code enumerates the internal `S_5` choices and solves the remaining sparse
+maximum-weight block/cell matching exactly. A forward/backward sweep therefore
+never increases the rational objective. The full finite-horizon problem is
+still discrete and nonconvex. In the primary runs level 2 is a fixed boundary,
+so convergence gives only a coordinate optimum conditional on that declared
+seed, not a local optimum of the unrestricted horizon and not a global
+certificate. A separate all-levels-free mode diagnoses this boundary choice.
+
+The exact weighted readback of the old lexicographic pair-collar baseline is
+
+```text
+D_2 = 209/1250
+D_3 = 1/2
+D_4 = 937/1875
+D_5 = 521/1250
+D_6 = 209/1250
+```
+
+The first growing schedule alternates the added side:
+
+```text
+r=2 [-1,+0], r=3 [-1,+1], r=4 [-2,+1], ... , r=8 [-4,+3].
+```
+
+For horizon `r=2..5`, four deterministic initializations were swept while
+holding level 2 fixed. Their conditional coordinate-optimum objectives were
+
+```text
+lexicographic / child 0: 1313/1500
+lexicographic / child 1: 5/6
+tree seed     / child 0: 3751/5000
+tree seed     / child 1: 10631/15000   (best of these four)
+```
+
+The best anchored run decomposes as
+
+```text
+D_2 = 157/1875
+D_3 = 5629/15000
+D_4 = 1873/7500
+```
+
+An extended anchored `r=2..8` tree/child-1 run reached `23131/15000`, with
+
+```text
+(D_2,...,D_7) =
+(157/1875, 6253/15000, 437/1500,
+ 3751/15000, 3751/15000, 1/4).
+```
+
+Allowing level 2 to move from the same tree/child-1 seeds lowers the `2..5`
+objective to `10627/15000` and the `2..8` objective to `7709/5000`. These are
+all-levels-free coordinate optima, included only as a sensitivity diagnostic;
+they do not turn the anchored runs into unrestricted optima.
+
+Thus growing context and exact weighting are operational, and local sweeps do
+improve their declared finite objectives. They do not yet expose a summable
+Cauchy tail: the last three distances in this run remain approximately `1/4`.
+Some individual child-branch terms vanish, but none of the reported total
+adjacent distances does. The outer cell matching also stayed in a narrow
+basis: the largest positive matching component was only 2 (and only 1 in the
+best and extended runs). The default collar schedule happened to give a unique
+child pair per parent, so its executed runs did not exercise the separately
+tested ambiguous-incidence path. This is a result about four related seeds and
+their coordinate sweeps, not a lower bound for all structured families and not
+a global entropy no-go.
+
 ## Next exact local tests
 
 1. Emit short closed-walk obstruction certificates for the empty affine and
    singlet equations, so the finite-context no-go is auditable without solver
    internals.
-2. Replace the lexicographic boundary matching by an optimizer on the exact
-   tower refinement graph. Context collars must grow; a fixed pair context
-   cannot represent an arbitrary measurable transfer.
-3. Compute exact invariant frequencies of the allowed cylinders and minimize
-   the genuine cross-level distance, not an unweighted context average.
-4. Search for a chain whose refinement disagreements are summable. A surviving
-   chain is only a measurable-transfer candidate; a positive uniform lower
-   bound closes only the declared cell-sector ansatz.
+2. Add tie-neutral moves and additional deterministic seeds, then reproduce
+   whether the same small-horizon fixed points recur.
+3. Compute a rigorous lower bound for horizons `2..4` and `2..5`, first by
+   dropping all-different coupling blockwise. If the coordinate solution meets
+   the bound, it certifies the global optimum of that finite structured scope.
+4. Only then extend both collar radii and the horizon. Search for a chain whose
+   refinement disagreements are summable. A surviving chain is only a
+   measurable-transfer candidate; a positive uniform lower bound closes only
+   the declared cell-sector ansatz.
 5. If a compatible chain survives, count its orbits separately under the
    2500-element arithmetic subgroup and the full permutation centralizer.
    Existence does not establish canonicity.
@@ -282,6 +393,7 @@ From the repository root:
 ```text
 python -m unittest discover -s notes/entropy_selection -p "test_*.py" -v
 python -m notes.entropy_selection.run_solver
+python -m notes.entropy_selection.run_growing
 ```
 
 The package uses the Python standard library and writes no evidence artifact.

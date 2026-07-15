@@ -175,11 +175,13 @@ speculative analysis belongs in the Canon bundle.
 ## Immediate next local milestone
 
 The explicit lambda-digit carrier, living cell decomposition, finite-context
-solver, and first Rokhlin-tower baseline now live in
+solver, first Rokhlin-tower baseline, exact cylinder measures, two-sided
+collars, and a growing-context finite-horizon optimizer now live in
 `notes/entropy_selection/`; exact local results are summarized in
-`notes/ENTROPY-SELECTION-RECON.md`. The next milestone is a growing-context
-refinement optimizer with exact invariant cylinder weights. It must return
-one of:
+`notes/ENTROPY-SELECTION-RECON.md`. The first level-2-anchored coordinate
+optima through level 8 do not show a summable Cauchy tail. The next milestone
+is a rigorous lower bound or global certificate for the small structured
+horizons. It must return one of:
 
 - an explicit compatible transfer system;
 - a precise obstruction for a named regularity class;
