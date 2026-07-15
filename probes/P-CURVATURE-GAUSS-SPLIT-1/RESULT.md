@@ -1,7 +1,6 @@
 # P-CURVATURE-GAUSS-SPLIT-1 result
 
-Status: SCIENTIFIC RESULT CANDIDATE; AARCH64 FORMAL LEG PASS;
-GITHUB X86_64 CROSS-CHECK PENDING
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS
 
 ## Scientific decision
 
@@ -103,6 +102,19 @@ host were byte-identical, and `tools/check_verifier.py` reproduced
 An additional independent witness run on a separate Ubuntu x86_64 host
 (CPython 3.11.15, neutral environment, exit 0, empty stderr) reproduced
 `EXPECTED.txt` byte for byte with the same stdout SHA-256. This witness is
-informative only; the two-architecture computation gate is closed only by
-the required pull-request check rerunning the pinned verifier on GitHub
-x86_64 and comparing stdout byte for byte.
+informative only.
+
+Two-architecture record:
+
+```text
+aarch64 leg    Ubuntu 24.04.4 LTS, CPython 3.12.3, neutral environment;
+               first formal execution; RUN.md in this directory.
+x86_64 leg     GitHub check on pull request 39, head
+               c523042b18353f235428a9734c8291c99173c41b;
+               run 29402674399, job 87310702784, conclusion success;
+               Ubuntu 24.04 runner, CPython 3.12.13; verifier
+               byte-identical (4080da59...), stdout byte-identical
+               (3f10bf3a..., 1445 bytes); log carries
+               VERIFY PASS P-CURVATURE-GAUSS-SPLIT-1.
+gate:          PASS. The aarch64 and GitHub x86_64 outputs are byte-identical.
+```
