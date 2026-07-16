@@ -14,6 +14,28 @@ G06 SIGNED LOG-DERIVATIVE CORRECTION    PASS
 RESULT                                  6/6 ALL PASS
 ```
 
+### Post-run evidence-map correction
+
+No frozen artifact is changed by this correction. In `verify.py` and
+`EXPECTED.txt`, the printed `G01` through `G06` prefixes are immutable
+historical machine-row labels. For scientific evidence mapping, read them
+as `V01` through `V06`:
+
+```text
+V01 -> PREREG G01  finite root-filter certificate
+V02 -> PREREG G02  cyclotomic/value-at-one certificate
+V03 -> PREREG G03  exact finite cutoff
+V04 -> PREREG G04  raw standard-symmetry falsifier
+V05 -> PREREG G02  natural-series subclaim at s=1
+V06 -> PREREG G05  signed logarithmic-derivative correction
+```
+
+`PREREG G06` (RH equivalence in the open critical strip) is proof-only. It
+is established by the inline divisor argument, not by a verifier row, and
+is not part of the `6/6` machine count. Thus `6/6` means all six exact
+computational assertions passed; it does not mean one machine assertion
+exists for every preregistered scientific gate.
+
 The first formal execution reproduces every frozen finite exact check.  In
 particular, it confirms the residue filter `c(n)=5[5|n]-1`, the cyclotomic
 product `prod_(a=1)^4(1-j^a)=5`, the correct finite cutoff through every
