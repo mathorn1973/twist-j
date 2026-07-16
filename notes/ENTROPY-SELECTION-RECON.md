@@ -511,6 +511,19 @@ the five assignments to reassemble to one common cell and one `S_5`
 permutation at every free node. Thus the global root is fathomed without a
 branch: coupled lower `25020` equals coupled upper `25020`.
 
+A non-formal cross-platform readback replayed the frozen code commit
+`632235b16726a1ec73edf84e44edcd85abddae84`. The source archive had SHA-256
+`23c5749733a0c960b366c54977ed71af47fbe747a2cd12792b9ffe791bd777f0`;
+the separately transferred merged public mirror input had SHA-256
+`3ce163c03856a13affff76c03fa0be0827da18b09ab6f5e8fa9304df4f95398c`.
+Five neutral environments -- Linux/aarch64 with Python 3.11.2, 3.12.3, and
+3.13.5; Darwin/arm64 with Python 3.13.2; and Linux/x86_64 with Python 3.13.5
+-- each returned exit 0, empty stderr, and the same 527-byte, 9-line stdout
+with SHA-256
+`5d287e6b01c52ffd5ebbf5027fad12a099f2ae5d4a0d59de4cb4fb5ef06f2bfb`.
+This is robustness evidence for the local recon only. It is not a public
+probe, a policy two-architecture gate, or claim authority.
+
 The resulting exact comparisons are
 
 ```text
