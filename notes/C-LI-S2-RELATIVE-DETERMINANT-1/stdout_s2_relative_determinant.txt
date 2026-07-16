@@ -1,0 +1,12 @@
+PASS S1 exact Cayley rotation and Hilbert-Schmidt defect factors
+PASS S2 exact block Li formula and cocycle telescope for n=1..16
+PASS S3 exact weighted spectral moments equal Li second differences
+PASS S4 exact A-to-O Cayley map, B_A, and Chebyshev trace dictionary
+PASS S5 exact polarization: the realified determinant is D_plus squared
+PASS S6 exact Fredholm log-derivative coefficients are p_m=Tr(A^m)
+PASS S7 exact shifted Hankel moment matrices are positive definite
+PASS S8 exact direct-Cayley carrier obstruction skeletons (scope: direct identifications only)
+IMPORTED: Li criterion; Fourier uniqueness; Hadamard product; Riemann-von Mangoldt count; spectral theorem
+NONCLAIM: no J-native A_J is constructed; G8 and RH remain open
+FAILED: none
+VERDICT: PASS C-LI-S2-RELATIVE-DETERMINANT-1 dictionary
