@@ -688,3 +688,19 @@ python -m notes.entropy_selection.coupled_horizon5
 
 The package uses the Python standard library and writes no evidence artifact.
 Its output begins with `NON-CANONICAL / NON-FORMAL / NO CLAIM STATUS`.
+
+### Neutral cross-platform readback (non-formal)
+
+Commit `e1d2a2eb4b725c5dbfb86201a575de5f9e77cfa2` was checked out afresh and
+replayed under `LC_ALL=C`, `LANG=C`, `PYTHONDONTWRITEBYTECODE=1`,
+`PYTHONHASHSEED=0`, and `TZ=UTC` on Linux/x86_64 with CPython 3.13.5 and
+Darwin/arm64 with CPython 3.13.13. Both executions returned exit 0, wrote zero
+bytes to stderr, and produced byte-identical stdout: SHA-256
+`33307b0ae0c6710329dcfa7da5acfcad3be0ff654f3264e7803bb1d82bc60ff5`, 754
+bytes, 12 lines.
+
+This is a reproducibility readback of the local recon program only. It is not
+a formal run, public gate, preregistration, probe, promotion, or evidence
+bundle; it earns no claim status. The result remains non-canonical
+finite-horizon analysis and supplies no inverse-limit, entropy, measure,
+regularity, or selection claim.
