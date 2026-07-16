@@ -1,0 +1,7 @@
+PASS CO6a gamma brackets at N = 1e5 and 2e5 overlap; intersection taken (same construction as the rev1 pinned verifier)
+PASS CO6b corrected invariant: the recomputed lambda_1 interval and the rev1 pinned interval have nonempty intersection (both contain lambda_1)
+CO6b witness lambda_1 recomputed in [23095708964233559, 23095708972138893]; rev1 pin [23095708964233559, 23095708972138893] * 10^-18
+PASS CO3a T_1 gate re-established with the tightened gamma: M1 > 0, lambda_2 > 0, det T_1 > 0
+CO3a witness M1 in [37100438723459, 37100843555683]; lambda_2 in [92345735029189221, 92345735434021445] * 10^-18
+FAILED: none
+VERDICT: PASS amendment 1 of C-LI-COCYCLE-1

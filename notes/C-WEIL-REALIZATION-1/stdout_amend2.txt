@@ -1,0 +1,8 @@
+PASS AN1 corrected complex CND identity: doubled form D = -(|A+|^2 + |A-|^2) exactly in Z[zeta_20] at theta = 2 pi/10, four zero-sum vectors; D self-conjugate (real)
+PASS AN2 scoping control: single-modulus form FAILS for two genuinely complex vectors and HOLDS for the real vector; the owner correction is necessary and exactly scoped
+PASS AN3 det(I-xF)^-1 = exp(sum Tr(F^m) x^m/m) exact to order 16; Artin factorization 1 - x^4 = prod (1 - i^k x) in Z[i][x]; additive sector sum diverges from a_K first at n = 16 (4 vs 1) while agreeing at n = 11: the F row is IDEAL-PACKET-BY-ADDITIVE-SECTOR-SUM, scoped
+PASS AN4 conventions equal: zeta*L(chi)L(chi^2)L(chi^3) = (1-5^-s)^-1 * L(chi_0)L(chi)L(chi^2)L(chi^3) as coefficients for n <= 500, chi_0 principal; dim V^I_5 = 1 (rank(P - I) = 3 exactly)
+PASS AN5 L_N (lower-triangular ones) is unimodular for N <= 8: K_N = (1/2) L_N T_(N-1) L_N* is an invertible congruence, K_N >= 0 iff T_(N-1) >= 0 (Sylvester, imported); K_2 corresponds to T_1
+PASS AN6 regression: full-plane bridge 4 zeta_5^n = 4*[5|n] + sum_r chibar^r(n) g(chi^r), n = 1..10
+FAILED: none
+VERDICT: PASS amendment 2 of C-WEIL-REALIZATION-1

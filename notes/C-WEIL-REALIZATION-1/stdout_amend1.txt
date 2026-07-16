@@ -1,0 +1,10 @@
+PASS AM1 full-plane bridge 4 zeta_5^n = 4*[5|n] + sum_r chibar^r(n) g(chi^r), n = 1..15, exact in Z[zeta_20]
+PASS AM2 uncorrected right side is 0 at n = 5 (left side 4): the multiplicative DFT is blind to the ramified class; restricted identity regression for 5 not dividing n
+PASS AM3 g(chi)conj(g(chi)) = 5 but g(chi)g(chibar) = chi(-1)*5 = -5 (odd quartic); conj g(chi) = chi(-1) g(chibar); g(chi^2)^2 = +5
+PASS AM4 lambda_2 = 2 lambda_1 - sum 1/rho^2 reduces exactly to 1 + gamma - gamma^2 - 2 gamma_1 + pi^2/8 - log(4 pi) (imported: sum 1/rho^2 = 1 + gamma^2 + 2 gamma_1 - pi^2/8; convention zeta(1+t) = 1/t + gamma - gamma_1 t + O(t^2))
+PASS AM5 gamma_1 strictly negative: elementary bracket A_N - f(N) <= gamma_1 <= A_N at N = 10^5, directed integer intervals; the sign that the lambda_2 falsifier watches
+AM5 witness gamma_1 in [-72873410205792217, -72758280940973182] * 10^-18 (reference -0.0728158454836767)
+PASS AM6 lambda_2(xi_J) > 0 by exact interval assembly (calibration gate, G3/G4 bookkeeping; NOT a G5 result; no finite Li prefix is progress toward RH)
+AM6 witness lambda_2 in [92230606084387762, 92460864725386214] * 10^-18 (reference 0.09234573522804...)
+FAILED: none
+VERDICT: PASS amendment 1 of C-WEIL-REALIZATION-1
