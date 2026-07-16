@@ -8,6 +8,12 @@ PURPOSE:   the lane grew three working lines, several unpushed branches, and
            conflicts with a repository head, the repository wins.
 AUTHORITY: none (project doc). Public authority: mathorn1973/twist-j main,
            STATE ACTIVE, Public Canon v6, tag canon-v6, head 6bb013ba.
+REV4:      SUPERSEDED AS THE LANE MAP. The current map is
+           notes/j-li-schoenberg-2/LI-COCYCLE-LANE_CONSOLIDATION_2026-07-16.md
+           (manifest-pinned). Sections 1-9 below are kept as the historical
+           record; the REV4 addendum (section 10) lists the corrections and
+           the public branch topology that supersede them. Known errata in
+           the body are marked inline with "REV4:".
 ```
 
 ## 1. The consolidated claim ledger (after owner verdicts 1-4)
@@ -48,10 +54,13 @@ J-LI-CYCLIC-CARRIER-DIMENSION   candidate-T (owner commit a62b040);
                                 unconditionally (the contradiction kills the
                                 assumption on every branch).
 J-LI-ATOM-TEST                  new, this lane, T as equivalence (Wiener
-                                imported): mu_v({1}) = lim 2 (lambda_{N+1} -
-                                lambda_N) / (2N+1); no atom at 1 iff the
-                                ladder increments are o(N). Under RH the
-                                increments are ~ (1/2) log N: consistent.
+                                imported) [REV4: factor corrected, amend4 A4:
+                                mu_v({1}) = lim (lambda_{N+1} - lambda_N) /
+                                (2N+1), no factor 2; the factor-2 limit is
+                                sigma({1})]; no atom at 1 iff the ladder
+                                increments are o(N). Under RH the increments
+                                are ~ (1/2) log N: a consistency expectation,
+                                not a theorem-grade gate (owner verdict 5).
 MEASURE REQUIREMENT ROWS        the realization measure mu_v must satisfy,
                                 exactly: total mass t_0 = 2 lambda_1 (pinned
                                 interval); Fourier moments t_m = lambda_{m+1}
@@ -124,11 +133,14 @@ cocycle          b(n) = sum_{k<n} U^k v  (owner convention; my earlier
 ladder           ||b(n)||^2 = int |D_n(theta)|^2 d mu_v,
                  |D_n|^2 = (1 - cos n theta)/(1 - cos theta)
                  (spectral theorem, imported)
-measure          CORRECTED (owner verdict 5, machine-pinned in amend3):
-                 sigma = 2 mu_v exactly. The second differences are TWICE
-                 the cosine moments of mu_v:
+measure          CORRECTED (owner verdict 5, machine-pinned in amend3)
+                 [REV4: "sigma = 2 mu_v exactly" is WRONG in general; the
+                 correct form is sigma = mu_v + iota_* mu_v, which equals
+                 2 mu_v only for conjugation-invariant mu_v, as on the two
+                 real finite instances. Machine-pinned in amend4 (A2, A3);
+                 the moment identity below stays valid]:
                  t_m = lambda_{m+1} + lambda_{m-1} - 2 lambda_m
-                     = 2 * int cos(m theta) d mu_v
+                     = 2 * int cos(m theta) d mu_v = sigma_hat(m)
 total mass       mu_v(T) = lambda_1, pinned
                  [0.023095708964233559, 0.023095708972138893];
                  sigma(T) = t_0 = 2 lambda_1
@@ -306,3 +318,42 @@ The carrier no-go narrows the realization space; it does not enter it. The
 T_1 gate and every finite prefix remain necessary-condition calibrations.
 Nothing here touches G5. J-LI-COCYCLE-REALIZATION [O]. RH [O]. No public
 registration, no push, no normative change was made by this session.
+
+## 10. REV4 addendum (2026-07-16, supersession and public topology)
+
+```
+STATUS         this document is SUPERSEDED as the lane map by
+               notes/j-li-schoenberg-2/LI-COCYCLE-LANE_CONSOLIDATION_
+               2026-07-16.md. It stays as the historical record of the
+               lane's consolidation day; nothing below rewrites the pinned
+               artifacts it references.
+MEASURE        the section-3 row "sigma = 2 mu_v exactly" and the section-1
+               atom-test factor 2 are corrected: sigma = mu_v + iota_* mu_v,
+               mu_v(T) = lambda_1, sigma(T) = 2 lambda_1, sigma_hat(m) = t_m,
+               mu_v({1}) = lim Delta lambda_N / (2N+1), sigma({1}) = twice
+               that. Fourier data determines sigma only; the non-symmetric
+               mu_v is not determined. Machine pins: amend4 (A2, A3, A4),
+               verifier 351f3dae41df9dabf2230466b792d27e9045e81dfef4dbab373
+               26cfda954e8e4, stdout 37c01ea5f79a52f7b5dcfcec2c7bd99b3a61d4
+               18af31b76f73b478b83259b876.
+DET SCALE      the REV2 lambda_3/T_2 row already used the correct
+               det K_3 = det T_2 / 8; the amend3 S4 stdout line did not and
+               printed "contains float: False" at a mis-scale of 2^3. The
+               corrected witness (amend4 A1, A5) reads True:
+               det K_3 = 7.1975411709e-14 inside the owner's interval.
+PUBLIC         the blockers B1/B2 (section 4) and the section-8 head
+TOPOLOGY       18e7d818 are OBSOLETE. Live public state:
+                 main                              6bb013ba (canon-v6, ACTIVE)
+                 agent/j-li-cross-branch-staging   fc4d6016 (public)
+                 c-li-cocycle-1-incubation         ac62cac + debt-fix commits
+               The public incubation branch is a CONTENT consolidation: the
+               local commit aee7a376 and its exact parentage were not
+               preserved, by design (owner's call). Neither incubation
+               branch has a PR or GitHub checks; the only open PR is the
+               draft #42 (P-PENTAGON-WEIL-1, unmerged by design).
+EVIDENCE MAP   confirmed shift for the draft-PR lane: V05 belongs to G02,
+               V06 to G05, and G06 is proof-only.
+MANIFESTS      notes/C-LI-COCYCLE-1/SHA256SUMS and
+               notes/C-PENTAGON-WEIL-1/SHA256SUMS added; the two components
+               were the only ones without manifests.
+```
