@@ -11,8 +11,8 @@ MAX_BYTES = 5 * 1024 * 1024
 
 ALLOWED_ROOT = {
     ".gitattributes", ".github", ".gitignore", "AGENTS.md", "CITATION.cff",
-    "LICENSE", "POLICY.md", "README.md", "STATUS.md", "canon", "data",
-    "legacy", "notes", "probes", "reproduce", "tools",
+    "CLAUDE.md", "LICENSE", "POLICY.md", "README.md", "STATUS.md", "canon",
+    "data", "legacy", "notes", "probes", "reproduce", "tools",
 }
 FORBIDDEN_SUFFIXES = {
     ".bak", ".bin", ".dll", ".dylib", ".env", ".exe", ".jam", ".key",
