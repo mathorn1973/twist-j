@@ -7,7 +7,9 @@ PURPOSE:   the lane grew three working lines, several unpushed branches, and
            map. Where it conflicts with memory, this document wins; where it
            conflicts with a repository head, the repository wins.
 AUTHORITY: none (project doc). Public authority: mathorn1973/twist-j main,
-           STATE ACTIVE, Public Canon v6, tag canon-v6, head 6bb013ba.
+           STATE ACTIVE, Public Canon v6, tag canon-v6. [REV4: the recorded
+           head 6bb013ba was the historical snapshot; at this audit's start
+           public main was a431100. The Git ref, not this archive, is live.]
 REV4:      SUPERSEDED AS THE LANE MAP. The current map is
            notes/j-li-schoenberg-2/LI-COCYCLE-LANE_CONSOLIDATION_2026-07-16.md
            (manifest-pinned). Sections 1-9 below are kept as the historical
@@ -156,9 +158,10 @@ carrier no-go    finite spectrum => a_* n^2 + O(1) (CC1: a_* = 0 bounded;
                  growth => infinite support, 1 in supp, no atom at 1
 kill test        CORRECTED RATE DISCIPLINE (owner verdict 5): the
                  theorem-grade necessary condition from the atom test is
-                 Delta lambda_n = o(n) only; the rate (1/2) log n holds
-                 under RH via Lagarias (imported) and is a consistency
-                 expectation, not a theorem-grade gate. Bounded or
+                 Delta lambda_n = o(n) only. [REV4: the stronger rate
+                 (1/2) log n does NOT follow by termwise differencing the
+                 imported Lagarias asymptotic and is not established here.]
+                 Bounded or
                  quadratic ladders still die immediately (carrier no-go).
 ```
 
@@ -195,8 +198,9 @@ B3  PUBLIC PROBES only after B1 or B2, each with a NEW PREREG and NEW pin
 2. The increment kill test as a standing falsifier row for every proposed
    realization (R1 time-driven stream, R2 lambda-adic boundary at p = 5,
    R3 transfer operators): produce lambda_1's interval, M_1's interval,
-   and increments ~ (1/2) log N, in that order; first miss kills the
-   construction, not RH.
+   and Delta lambda_N = o(N), in that order; bounded and quadratic
+   ladders die immediately. [REV4: any sharper increment asymptotic needs
+   an independent theorem and is not a gate in this document.]
 3. After B1/B2: cross-run of both lanes' verifiers in both directions,
    then the public probe assembly.
 ```
@@ -342,10 +346,11 @@ DET SCALE      the REV2 lambda_3/T_2 row already used the correct
                corrected witness (amend4 A1, A5) reads True:
                det K_3 = 7.1975411709e-14 inside the owner's interval.
 PUBLIC         the blockers B1/B2 (section 4) and the section-8 head
-TOPOLOGY       18e7d818 are OBSOLETE. Live public state:
-                 main                              6bb013ba (canon-v6, ACTIVE)
+TOPOLOGY       18e7d818 are OBSOLETE. Audit-start snapshot (the Git refs,
+               not this superseded archive, remain authoritative):
+                 main                              a431100 (canon-v6, ACTIVE)
                  agent/j-li-cross-branch-staging   fc4d6016 (public)
-                 c-li-cocycle-1-incubation         ac62cac + debt-fix commits
+                 c-li-cocycle-1-incubation         6166d08 (toral candidate)
                The public incubation branch is a CONTENT consolidation: the
                local commit aee7a376 and its exact parentage were not
                preserved, by design (owner's call). Neither incubation

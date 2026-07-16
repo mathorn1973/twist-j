@@ -275,8 +275,10 @@ CC5  the dichotomy summary: bounded against n^2 + O(1)
 
 Consequences folded into this candidate: F-guard COCYCLE-BY-FINITE-FIT is
 upgraded to a theorem-backed row; routes R1-R3 gain the cheap increment
-kill test (a proposed realization must show increments growing like
-(1/2) log N; bounded or quadratic ladders die immediately); the exemplar's
+kill test (a proposed realization must satisfy
+Delta lambda_N = o(N); bounded or quadratic ladders die immediately).
+The stronger rate (1/2) log N is not obtained by differencing the imported
+Lagarias asymptotic and is not asserted here; the exemplar's
 role as model-not-target is now a theorem, not a caution.
 
 ## 11. Amendment 3: sigma_3 derived, lambda_3 / T_2 witnesses (2026-07-16)

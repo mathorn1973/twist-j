@@ -5,8 +5,9 @@ CANDIDATE ID:   C-LI-TORAL-HAAR-1
 DATE:           2026-07-16
 SESSION:        c-li-cocycle-1 debt-fold continuation (directed by the owner:
                 "pust se do navrzene dalsi prace")
-TARGET ROWS:    J-LI-TORAL-HAAR-CARRIER  (proposed F candidate: the standard
-                toral Haar-Koopman realization is excluded)
+TARGET ROWS:    J-LI-TORAL-HAAR-NOGO     (proposed T mathematical no-go)
+                J-LI-BY-STANDARD-TORAL-HAAR (proposed F candidate: the
+                standard toral Haar-Koopman existence claim is excluded)
                 J-LI-SPECTRAL-TARGET     (proposed T as a necessary,
                 RH-conditional characterization of the realization target)
 PARENTS:        C-LI-COCYCLE-1 (through amendment 4); the corrected spine
@@ -29,10 +30,12 @@ AUTHORITY:      none. NON-CANONICAL candidate document per POLICY.md.
 2. The exact accumulation law of sigma_xi at the point 1, with the
    correct factor and constant:
    M_xi(eps) = (eps/pi)(log(1/(2 pi eps)) + 1) + O(eps^2 log(1/eps)).
-3. The closed no-go: an exact Haar cocycle realization on a hyperbolic
-   toral automorphism cannot exist. Unconditional as a falsification of
-   that proposed realization. It does not touch Pillar A itself, only its
-   standard toral Haar representation.
+3. The closed no-go in the carrier's actual dimension: for every toral
+   automorphism A in GL_d(Z) with no root-of-unity eigenvalue, an exact
+   Haar cocycle realization cannot exist. This applies in particular to
+   the Pillar A map T_J on T^4 because M_J is hyperbolic. The theorem is
+   unconditional as a falsification of that proposed realization; it does
+   not falsify Pillar A itself.
 4. Machine pins for the exact skeleton (verifier below, 5/5 PASS first
    run): Cayley dictionary, half-angle law, forced-measure dictionary on
    synthetic rational instances, character-orbit obstruction, and the
@@ -54,13 +57,18 @@ ENVIRONMENT     LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0
                 TZ=UTC; Linux x86_64, Python 3.11.15; single platform
 IMPORTED        Li's criterion (RH iff lambda_n >= 0 for all n >= 1);
                 Fourier uniqueness of finite positive measures on T;
-                the countable-Lebesgue decomposition of the Koopman
-                operator of an ergodic hyperbolic toral automorphism
-                (constants sector plus countable Lebesgue spectrum);
+                the unitary spectral-theorem atom/eigenspace identity;
                 the Riemann-von Mangoldt count N(T) = (T/2pi) log(T/(2pi e))
                 + O(log T). All four are classical; none is asserted by
                 the verifier, which pins only the exact skeleton.
 ```
+
+The pinned exploratory stdout also prints two `libm` witnesses (`atan` and
+`log`). They are not theorem evidence and are not suitable for a formal
+two-architecture gate. A formal successor must omit them from the frozen
+stdout or replace them by deterministic interval certificates. TH4 is a
+finite exact witness for one two-dimensional matrix; the all-dimensional
+claim is proved analytically in section 4, not inferred from that witness.
 
 ## 2. The forced symmetrized target
 
@@ -122,8 +130,23 @@ unconditional description of an existing object.
 The atoms of sigma_xi accumulate only at z = 1 (theta_gamma decreases to
 0 as gamma grows). Let M_xi(eps) be the sigma_xi mass of the arc
 { |arg z| <= eps }. With theta_gamma = 2 arctan(1/(2 gamma)) the cutoff
-is gamma >= 1/(2 tan(eps/2)) = 1/eps + O(eps), and with the imported
-zero count dN(gamma) = (1/(2 pi)) log(gamma/(2 pi)) d gamma + d(error):
+is
+
+```
+T_eps = 1/(2 tan(eps/2)) = 1/eps + O(eps).
+```
+
+Write the imported zero count as `N(T) = N_0(T) + E(T)`, where
+`N_0'(T) = (1/(2 pi)) log(T/(2 pi))` and `E(T) = O(log T)`. For
+`f(T) = 1/(T^2 + 1/4)`, Stieltjes partial summation gives
+
+```
+int_[T,infinity) f dE
+  = -f(T) E(T) - int_T^infinity E(t) f'(t) dt
+  = O(log(T)/T^2).
+```
+
+It follows that
 
 ```
 M_xi(eps) = 2 int_{~1/eps}^inf dN(gamma)/(gamma^2 + 1/4)
@@ -137,22 +160,26 @@ log(gamma/(2 pi))/gamma^2 is -(log(gamma/(2 pi)) + 1)/gamma, and its
 value at gamma = 1/eps is -eps (log(1/(2 pi eps)) + 1) (TH5 pins both
 coefficientwise). The replacement of gamma^2 + 1/4 by gamma^2, the
 tan-versus-linear cutoff shift, and the N(T) error term all land in the
-stated remainder. Both the factor eps/pi and the constant +1 are part of
-the law; earlier drafts that dropped either are superseded by this form.
+stated remainder: the first two contribute O(eps^3 log(1/eps)), while the
+displayed Stieltjes bound contributes O(eps^2 log(1/eps)). Both the factor
+eps/pi and the constant +1 are part of the law; earlier drafts that dropped
+either are superseded by this form.
 
 ## 4. The no-go
 
-PROPOSED REALIZATION (the standard toral Haar-Koopman form). X = T^2
-with Haar measure; T_A the automorphism induced by a hyperbolic
-A in SL_2(Z) (|tr A| > 2); U the Koopman operator on L^2(X, Haar),
-unitary in the full sense U* U = U U* = I; and a cocycle vector v with
+PROPOSED REALIZATION (the standard toral Haar-Koopman form). Let X = T^d
+with Haar measure, and let T_A be the automorphism induced by
+A in GL_d(Z). Assume that no eigenvalue of A is a root of unity
+(hyperbolicity is sufficient). Let U be the Koopman operator on
+L^2(X, Haar), unitary in the full sense U* U = U U* = I, and let v be a
+cocycle vector with
 
 ```
 ||sum_{k<n} U^k v||^2 = lambda_n   for all n >= 1, exactly.
 ```
 
-THEOREM (no-go). No such (A, v) exists. The exclusion is unconditional:
-it does not assume RH and it does not decide RH.
+THEOREM (no-go). No such (A, v) exists in any dimension d. The exclusion
+is unconditional: it does not assume RH and it does not decide RH.
 
 PROOF. Assume the realization exists.
 
@@ -164,13 +191,18 @@ PROOF. Assume the realization exists.
     mu_v + iota_* mu_v = sigma_xi, a purely atomic measure whose atoms
     sit at e^{+-i theta_gamma}, all DIFFERENT from 1, accumulating at 1
     (section 3).
-(d) The Koopman operator of an ergodic hyperbolic toral automorphism
-    decomposes as (constants) + (countable Lebesgue spectrum), imported;
-    TH4 pins the exact skeleton: no nonzero character m in Z^2 satisfies
-    (A^T)^k m = m, because det(A^k - I) = 2 - tr(A^k) != 0 for all
-    k >= 1. Consequently every vector's spectral measure is
-    |<v, 1>|^2 delta_1 + (an absolutely continuous part), and so is its
-    symmetrization: it has NO atom anywhere except possibly at 1.
+(d) This spectral statement is internal. With the Fourier convention
+    e_m(x) = exp(2 pi i <m,x>) and U f = f o T_A,
+    U e_m = e_{A^T m}. If a nonzero character orbit repeated, then
+    (A^T)^k m = m for some k >= 1. Thus 1 would be an eigenvalue of A^k,
+    so an eigenvalue of A would be a root of unity, contrary to the
+    premise. Every nonzero orbit is therefore infinite and its character
+    span is a bilateral-shift sector. Hence
+    L^2(T^d) = constants + an orthogonal sum of bilateral shifts.
+    Every vector spectral measure is |<v,1>|^2 delta_1 plus an absolutely
+    continuous part, and so is its symmetrization: it has NO atom anywhere
+    except possibly at 1. TH4 is only one exact finite d=2 witness of this
+    analytic all-d argument.
 (e) sigma_xi has atoms off 1 (any single gamma supplies one).
     Contradiction with (c) + (d). QED.
 ```
@@ -181,6 +213,18 @@ The chain in one line:
 exact Haar cocycle => lambda_n >= 0 => RH => sigma = sigma_xi atomic
                                           => contradiction with (d).
 ```
+
+Pillar A specialization. Here A = M_J in GL_4(Z), with eigenvalues
+
+```
+1 + zeta_5^(2k),  k = 1,2,3,4,
+```
+
+whose moduli are {phi^-1, phi, phi, phi^-1}. Thus M_J is hyperbolic and
+has no root-of-unity eigenvalue, so the theorem applies directly to
+T_J:T^4 -> T^4. The primitive tenth roots in the Phi_10 factor of
+exterior^2 M_J are not an escape: the Koopman action on torus characters
+is through M_J^T on Z^4, not through exterior^2 M_J.
 
 Scope and formulation discipline (the corrections this candidate freezes):
 
@@ -211,11 +255,12 @@ SUZUKI       the model-space constructions of Suzuki (arXiv:2301.05779)
 ```
 
 What the theorem kills and what it does not: it kills the standard
-toral Haar-Koopman REPRESENTATION of Pillar A's realization target - a
-natural construction path - and sharpens the target to "produce sigma_xi
-where the carrier's spectral type can host atoms accumulating at 1".
-It does not kill Pillar A, does not produce a realization, and moves
-neither J-LI-MOMENT-BRIDGE nor RH.
+Haar-Koopman realization of the Pillar A automorphism T_J on T^4, and
+more generally the same construction for every finite-dimensional toral
+automorphism with no root-of-unity eigenvalue. It does not kill the
+algebraic or periodic-point content of Pillar A, does not exclude
+non-Haar, non-Koopman, boundary, scattering, or enlarged carriers, and
+does not construct a replacement. J-LI-MOMENT-BRIDGE and RH remain open.
 
 ## 5. Proposed ledger delta
 
@@ -223,8 +268,9 @@ neither J-LI-MOMENT-BRIDGE nor RH.
 J-LI-SPECTRAL-TARGET          T as a necessary, RH-conditional
                               characterization (sigma_xi closed form,
                               accumulation law)
-J-LI-TORAL-HAAR-CARRIER       F candidate (this no-go; unconditional as
-                              falsification of the proposed realization)
+J-LI-TORAL-HAAR-NOGO          T mathematically (the unconditional no-go)
+J-LI-BY-STANDARD-TORAL-HAAR   F candidate (the exact positive existence
+                              claim falsified by the no-go)
 J-LI-MOMENT-BRIDGE            O (unchanged)
 J-WEIL-POSITIVE-REALIZATION   O (unchanged)
 RH                            O (unchanged)
@@ -239,13 +285,17 @@ procedure; nothing is registered by this candidate.
 BR1  wrong-direction audit: the chain uses Li's criterion in the
      direction (all lambda_n >= 0) => RH, which is the theorem's hard
      direction and is imported as such, not rederived.
-BR2  atom-at-1 escape: could v's measure be delta_1-only (constant
-     component) and still match? No: sigma_xi has atoms off 1 (e), and a
-     delta_1-only measure has bounded ladder, killed already by the
-     carrier no-go (J-LI-CYCLIC-CARRIER-DIMENSION).
-BR3  non-ergodic escape: a non-hyperbolic or reducible A is outside the
-     stated carrier class; the no-go claims nothing about it. The class
-     boundary is |tr A| > 2 on SL_2(Z), where TH4's obstruction is exact.
+BR2  atom-at-1 escape: a delta_1 component of mass a gives the quadratic
+     ladder a n^2, not a bounded ladder. It still cannot escape: the
+     forced identity sigma = sigma_xi gives sigma_xi({1}) = 0 and atoms
+     away from 1, so the constant-sector mass must vanish and a
+     delta_1-only measure cannot match.
+BR3  class-boundary escape: if A has a root-of-unity eigenvalue, finite
+     nonzero character orbits and extra point spectrum may occur; that
+     class is outside the theorem. M_J is inside because its four
+     eigenvalue moduli are phi or phi^-1, never 1. The primitive tenth
+     roots in exterior^2 M_J do not change the Koopman character action
+     through M_J^T.
 BR4  symmetrization escape: matching only cosine data with an asymmetric
      mu_v changes nothing - the argument runs on the symmetrization,
      which is what the ladder data forces (amend4 A2).
@@ -258,13 +308,14 @@ BR5  finite-cutoff escape: a family of finite fits for each cutoff n is
 
 ```
 F-a  any exact assertion of verify_toral_haar_nogo.py failing on re-run
-F-b  an explicit exact Haar cocycle (A, v) exhibited with ladder
-     lambda_n for all n - this would fire the no-go itself and would be
-     a mathematical event strictly larger than this candidate
-F-c  an error found in either imported decomposition (Li's criterion;
-     countable Lebesgue spectrum of hyperbolic toral Koopman operators)
-F-d  a certified computation showing the accumulation law's constant or
-     factor wrong at some eps (against a certified zero count)
+F-b  an explicit exact Haar cocycle (A, v) in the stated class exhibited
+     with ladder lambda_n for all n - this would fire the no-go itself
+F-c  a nonconstant L^2 Haar-Koopman eigenfunction for an A with no
+     root-of-unity eigenvalue, or a gap in the Fourier-orbit proof
+F-d  a proof that the accumulation remainder divided by
+     eps^2 log(1/eps) is unbounded along some sequence eps -> 0+. A
+     discrepancy at one finite eps is not a falsifier of a big-O claim
+     unless an explicit constant and validity range have first been frozen.
 ```
 
 ## 8. Non-claims
