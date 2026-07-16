@@ -279,6 +279,91 @@ kill test (a proposed realization must show increments growing like
 (1/2) log N; bounded or quadratic ladders die immediately); the exemplar's
 role as model-not-target is now a theorem, not a caution.
 
+## 11. Amendment 3: sigma_3 derived, lambda_3 / T_2 witnesses (2026-07-16)
+
+Recorded here for completeness; the pins were previously documented only in
+the root consolidation map (REV2 addendum). The sigma_3 formula is DERIVED
+by the xi(1+t) expansion (exact vector algebra; the t^1 and t^2 rows
+reproduce the imported sigma_1 and sigma_2 identities, validating the
+route), confirming the owner's frozen formula independently:
+
+```
+sigma_3 = 1 + gamma^3 + 3 gamma gamma_1 + (3/2) gamma_2 - (7/8) zeta(3)
+
+verifier        C-LI-COCYCLE-1_verifier_amend3.py
+file sha256     5d6ab0d0a7442e47fb742b1a3dfddcf4cfc9bbdc0827d4b36543f65dea7ae725
+                (8963 bytes, pinned before its single run; 5/5 PASS first run)
+stdout sha256   dc5eb44a463c3546e52ecc8bfccb049d87c1ec236e5b0ba9229cac03acf945d0
+                (1321 bytes)
+S1a-S1c  sigma_1, sigma_2 reproduced; sigma_3 derived, exact
+S2       lambda_3 = 3 sigma_1 - 3 sigma_2 + sigma_3, exact binomial
+S3       instance normalization: t_m = 2 * cosine moments of mu_v on both
+         finite instances (see amendment 4 for the corrected general form)
+S4       float witnesses: lambda_3 inside the owner's pinned interval;
+         det T_2 printed against the owner's det K_3 interval -- MIS-SCALED,
+         see the erratum in amendment 4
+```
+
+## 12. Amendment 4: det-scale erratum and measure symmetrization (2026-07-16)
+
+Two errata against amendment 3, both machine-pinned; the amend3 artifacts
+stay archived unmodified per the discipline.
+
+ERR-A (scale). The amend3 S4 witness compared det T_2 itself against the
+owner's interval for det K_3 and printed `contains float: False`. The
+owner's K carries the 1/2 normalization, K_3 = T_2 / 2 entrywise, so
+det K_3 = det T_2 / 8 (in general det K_N = 2^-N det T_{N-1}). With the
+corrected scale the witness reads `contains float: True`:
+det K_3 = 7.1975411709e-14 inside [6.9813247888e-14, 7.3758515923e-14].
+The lambda_3 / T_2 gate status is unchanged (owner-side one-architecture
+candidate-C); only the printed witness line was mis-scaled by 2^3.
+
+ERR-B (symmetrization). Amend3 S3 concluded "hence sigma = 2 mu_v". The
+correct general normalization, aligned with the corrected spine
+(notes/j-li-schoenberg-2 consolidation, section 4):
+
+```
+sigma = mu_v + iota_* mu_v,  iota(z) = conj(z);
+mu_v(T) = lambda_1,  sigma(T) = 2 lambda_1,  sigma_hat(m) = t_m;
+mu_v({1}) = lim (lambda_{N+1} - lambda_N)/(2N+1),  sigma({1}) = 2 mu_v({1}).
+```
+
+sigma = 2 mu_v holds exactly iff mu_v is conjugation-invariant, which is
+true on both real finite instances of S3 (machine-pinned as A3) but is not
+forced in general: the cosine data t_m determines sigma only, never the
+non-symmetric mu_v (A2 pins the separating instance mu_v = delta_i, exact
+in Z[i]). The same erratum scopes the amendment-2 wording "mu_v({1}) =
+lim 2 (lambda_{N+1} - lambda_N)/(2N+1)": the factor-2 limit is the SIGMA
+atom; the mu_v atom carries no factor 2 (A4 pins both on the C_4 instance).
+
+```
+verifier        C-LI-COCYCLE-1_verifier_amend4.py
+file sha256     351f3dae41df9dabf2230466b792d27e9045e81dfef4dbab37326cfda954e8e4
+                (10910 bytes, pinned before its single run; 4/4 PASS first run)
+stdout sha256   37c01ea5f79a52f7b5dcfcec2c7bd99b3a61d418af31b76f73b478b83259b876
+                (1483 bytes); exit 0, empty stderr
+A1  det K_3 = det T_2 / 8 exactly on both amend3 instances (400 -> 50,
+    512 -> 64): the S4 comparison was mis-scaled by exactly 2^3
+A2  the separating instance mu_v = delta_i: same cosine data, different
+    measures; sigma = mu_v + iota_* mu_v pinned, sigma != 2 mu_v there
+A3  both amend3 instances conjugation-invariant (moments exactly real):
+    the instance-level S3 statement stays true; only its generality fell
+A4  atom normalization on C_4: Delta g/(2N+1) -> 1 = mu_v({1}); factor 2
+    belongs to sigma({1})
+A5  float witnesses re-printed at the corrected scale: lambda_3 True,
+    det K_3 True
+ENVIRONMENT     LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0
+                TZ=UTC; Linux x86_64, Python 3.11.15; single platform
+```
+
+Public-topology note (supersedes the provenance lines above where they
+conflict): `agent/j-li-cross-branch-staging` is public at fc4d6016
+("Publish J-LI cross-branch consolidation") and this candidate's content is
+public on `c-li-cocycle-1-incubation` (content consolidation ac62cac; the
+local commit aee7a376 and its parentage were not preserved, by design).
+Cross-running of the two lanes' verifiers, anticipated in section 9, is
+therefore unblocked.
+
 ## Appendix A. Frozen run stdout (pin eeb424205400af53fe62de5187ca4eebafa56367f23689d2f9cb300295fd5b71)
 
 ```
