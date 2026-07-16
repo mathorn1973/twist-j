@@ -527,9 +527,9 @@ probe, a policy two-architecture gate, or claim authority.
 The resulting exact comparisons are
 
 ```text
-horizon  certified lower bound  feasible reference  reference - lower  status
-2..4     417/1250               417/1250             0                  exact
-2..5     313/2500               10631/15000           8753/15000         open
+horizon  certified lower bound  feasible witness  witness - lower  status
+2..4     417/1250               417/1250         0                exact
+2..5     1459/2500              1459/2500        0                exact
 ```
 
 For `2..4`, the earlier anchor-plus-cycle value `157/1875` remains an
@@ -539,9 +539,76 @@ not the optimum; the coupled witness improves it and closes the named
 fixed-`r=2` structured horizon exactly. For `2..5`, the selected
 fundamental cycle contributes `26/625`: every ordinary block has five
 mismatches while the special minimum is zero. Its displayed bound is global
-for the named fixed-boundary finite problem but does not meet the feasible
-reference. The larger horizon still uses only the deterministic fundamental
-basis, not all simple cycles or a fractional packing.
+for the named fixed-boundary finite problem but is now only an independently
+replayed subcertificate. The larger deterministic fundamental basis did not
+close the root; the exact coupled argument below supersedes it.
+
+### Exact coupled horizon `2..5`
+
+The full later graph has 28 free nodes, 44 pair edges, and 12 anchor edges.
+Weights scale integrally by 24. The initial conjecture that the ordinary scaled
+minimum was 85 was falsified: changing the ordinary permutation at three
+level-4 contexts for all 624 ordinary blocks, then propagating those labels
+exactly to level 5, lowers every ordinary block to 70 without changing any
+target cell. The refuted lower-bound conjecture is not used in the certificate.
+
+The replacement lower certificate starts at the full 3125-state point domain.
+For one ordinary block, the five source positions form a connected 140-variable
+cover with 220 pair equalities and 60 anchor pins. A canonical tree gauge has
+81 chords. Every chord holonomy preserves each root-cell fibre and acts by one
+of the five translations of `F_5`, giving exactly 625 orbits of size 5. All
+pins for an ordinary block lie in one such orbit. The explicit equivariant
+retraction
+
+```text
+rho_b(5 c + q) = 5 c_b + q
+```
+
+and its node-wise conjugates commute on all `220*3125 = 687500` edge-state
+pairs and fix all 60 pins. Thus a full-domain assignment retracts to five
+states without creating a mismatch. The 624 ordinary blocks have distinct
+anchor fibres, the same normalized pin pattern, and the same reduced problem.
+For this lower bound the shared-cell and `S_5` conditions are deliberately
+dropped after the point split; the reassembled structured witness below is the
+separate upper-bound gate.
+
+The reduced `Z/5` problem is solved by exact min-sum elimination. Conditioning
+variables 50 and 4 gives 25 cases; level-5 variables are eliminated first and
+the remainder uses deterministic min-fill. The width is 8, the largest union
+bag has `5^9` assignments, and the complete condition grid has unique minimum
+70 at `(1,1)`. Traceback gives 55 violated point constraints: every position
+copy of base edges `(0,1,2,3,8,9,12,13,14,15)` and anchor terminal 0. The
+lift reassembles to a common cell and an `S_5` permutation at every node for
+all 624 ordinary blocks, with no all-different failure.
+
+For the special block, each of the five coordinates is a 28-variable problem
+with 44 pair equalities and 12 pins. The same full-domain orbit/retraction
+argument reduces it to five states. Exact width-4 elimination gives coordinate
+minima `(18,18,18,18,18)`, hence special minimum 90. A cyclic common witness
+reassembles the five coordinate optima into one valid special label at every
+node.
+
+Zero assignment prices now give the coupled lower value
+
+```text
+624*70 + 90 = 43770.
+```
+
+A structured witness attains every block minimum simultaneously. It changes no
+cell assignment, changes 5616 ordinary and 25 special permutations relative to
+the old coordinate-sweep point, and has scaled histogram `{70:624, 90:1}`.
+Its exact transition distances are `(209/2500, 1/2, 0)`, another exact sweep
+changes zero nodes, and the family-signature digest is
+`964052c773890dbf45955b4d364805af3714e836ebf53c3cd36e20aefe358086`.
+Therefore the coupled root is fathomed without branching:
+
+```text
+lower = upper = 43770 / (24*3125) = 1459/2500.
+```
+
+This closes only the fixed-level-2 structured finite horizon `2..5`. It is
+non-canonical local analysis and supplies no inverse-limit, entropy, measure,
+regularity, or selection claim.
 
 The initialization experiment was also tightened. Every run keeps exactly the
 same frozen `r=2` tree family and changes only the free maps. Four deterministic
@@ -563,11 +630,14 @@ context2/phase0  1954/1875      context2/phase1  1799/1875
 context3/phase0  1877/1875      context3/phase1  3443/3750
 ```
 
-The best distant terminal point is `3443/3750`, still above the coordinate
-reference `10631/15000`. All eight `2..5` profiles retain positive adjacent
-distances. The tail beyond level 5 remains tested only in the reference `2..8`
-run, so this grid carries no asymptotic or Cauchy conclusion and is not a basin
-classification. Large sparse cell-assignment components now have an exact
+The best distant terminal point is `3443/3750`, still above the old coordinate
+terminal `10631/15000` and the exact coupled optimum `1459/2500`. All eight
+seeded profiles retain positive adjacent distances, while the exact coupled
+witness has zero `4 -> 5` distance; the grid therefore remains an
+initialization diagnostic, not an optimum argument. The tail beyond level 5
+remains tested only in the reference `2..8` run, so this grid carries no
+asymptotic or Cauchy conclusion and is not a basin classification. Large sparse
+cell-assignment components now have an exact
 polynomial min-cost matching fallback; the small bitmask solver is retained as
 an independently checked path.
 
@@ -578,9 +648,8 @@ an independently checked path.
    internals.
 2. Add tie-neutral moves and additional deterministic seeds, then reproduce
    whether the same small-horizon fixed points recur.
-3. Extend the coupled block formulation, exact witness search, and replayable
-   lower certificate to horizon `2..5`; the current fundamental-cycle bound
-   remains far below its feasible coordinate-sweep reference.
+3. Extend the exact coupled formulation to horizon `2..6`, preserving the
+   full-domain retraction and a replayable block-minimum certificate.
 4. Then extend both collar radii and the horizon and search for a chain whose
    refinement disagreements are summable. A surviving chain is only a
    measurable-transfer candidate; a positive uniform lower bound closes only
@@ -606,7 +675,7 @@ an independently checked path.
 
 ## Reproduction
 
-From the repository root:
+From the repository root with CPython 3.10 or newer and without `-O`:
 
 ```text
 python -m unittest discover -s notes/entropy_selection -p "test_*.py" -v
@@ -614,6 +683,7 @@ python -m notes.entropy_selection.run_solver
 python -m notes.entropy_selection.run_growing
 python -m notes.entropy_selection.run_landscape
 python -m notes.entropy_selection.path_bounds
+python -m notes.entropy_selection.coupled_horizon5
 ```
 
 The package uses the Python standard library and writes no evidence artifact.

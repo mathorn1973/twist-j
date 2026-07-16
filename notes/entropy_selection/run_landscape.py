@@ -17,6 +17,10 @@ try:
         build_exact_coupled_certificate,
         format_exact_report,
     )
+    from .coupled_horizon5 import (
+        build_exact_coupled_horizon5,
+        format_exact_report as format_horizon5_report,
+    )
     from .growing import FiniteHorizonOptimizer, GrowingContextSolver
     from .path_bounds import (
         build_catalog_dual,
@@ -37,6 +41,10 @@ except ImportError:  # Direct execution from this directory.
     from coupled_exact import (  # type: ignore[no-redef]
         build_exact_coupled_certificate,
         format_exact_report,
+    )
+    from coupled_horizon5 import (  # type: ignore[no-redef]
+        build_exact_coupled_horizon5,
+        format_exact_report as format_horizon5_report,
     )
     from growing import (  # type: ignore[no-redef]
         FiniteHorizonOptimizer,
@@ -92,6 +100,13 @@ def main() -> int:
     print(format_exact_report(exact_coupled))
     print()
 
+    exact_horizon5 = build_exact_coupled_horizon5()
+    if exact_horizon5.optimum != Fraction(1459, 2500):
+        raise AssertionError("exact coupled 2..5 optimum regression changed")
+    print("EXACT COUPLED HORIZON 2..5 CLOSURE")
+    print(format_horizon5_report(exact_horizon5))
+    print()
+
     solver = GrowingContextSolver()
     reference_optimizer = FiniteHorizonOptimizer(
         2,
@@ -145,11 +160,11 @@ def main() -> int:
     print()
     print("INTERPRETATION")
     print("  The lower bounds are global only inside the fixed-r2 structured")
-    print("  finite-horizon scope. At 2..4, its block relaxation lower bound and")
-    print("  a coupled feasible witness coincide at 417/1250, closing that named")
-    print("  problem exactly. The 2..5 bound remains below its feasible reference.")
-    print("  Eight separated initializations give eight terminal diagnostics; none")
-    print("  improves that reference and every 2..5 adjacent distance stays positive.")
+    print("  finite-horizon scope. At both 2..4 and 2..5, exact block minima and")
+    print("  coupled feasible witnesses coincide, at 417/1250 and 1459/2500.")
+    print("  The latter falsifies the old coordinate-sweep reference: its 4->5")
+    print("  transition is exactly zero after a uniform ordinary-block repair.")
+    print("  Eight separated initializations remain initialization diagnostics only.")
     print("  Levels beyond 5 remain tested only in the reference 2..8 run, so this")
     print("  grid carries no asymptotic or Cauchy conclusion.")
     return 0

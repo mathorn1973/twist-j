@@ -36,6 +36,12 @@ Modules:
 - `coupled_exact.py`: the zero-assignment-price lift of that block dual,
   a coupled structured witness attaining every block minimum, and a replayed
   conflict-core branch-and-bound on the five special-block coordinates;
+- `horizon5_ordinary.py`: the full-domain ordinary-block point bundle, its
+  equivariant `3125 -> 5` retraction, and the conditioned standard-library
+  min-sum elimination proving the scaled minimum `70`;
+- `coupled_horizon5.py`: the matching special-block retraction and five exact
+  coordinate DPs, the structured `{70:624, 90:1}` witness, and the zero-price
+  coupled closure at `1459/2500` for horizon `2..5`;
 - `basins.py`: context-dependent, separated free-map initializations for one
   frozen boundary problem and each fixed lift phase;
 - `test_*.py`: focused exact gates;
@@ -43,7 +49,7 @@ Modules:
 - `run_growing.py`: bounded growing-context and finite-horizon report;
 - `run_landscape.py`: certified small-horizon bounds and initialization grid.
 
-Run from the repository root:
+Run from the repository root with CPython 3.10 or newer and without `-O`:
 
 ```text
 python -m unittest discover -s notes/entropy_selection -p "test_*.py" -v
@@ -52,6 +58,7 @@ python -m notes.entropy_selection.run_growing
 python -m notes.entropy_selection.run_landscape
 python -m notes.entropy_selection.path_bounds
 python -m notes.entropy_selection.coupled_exact
+python -m notes.entropy_selection.coupled_horizon5
 ```
 
 An `EMPTY` result belongs only to the finite-context cell-sector ansatz named

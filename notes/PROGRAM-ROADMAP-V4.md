@@ -178,9 +178,17 @@ branch-and-bound independently reconstructs the special block. Thus the named
 fixed-`r=2` structured horizon `2..4` is closed exactly; the former
 `626/1875` coordinate terminal point was only a local reference.
 
-The immediate next milestone is the still-open `2..5` coupled problem,
-followed by cross-level and larger-collar compatibility. That work must
-eventually return one of:
+The coupled horizon `2..5` is now also closed exactly. Full-domain equivariant
+point retractions and exact min-sum elimination give scaled block minima 70 on
+all 624 ordinary blocks and 90 on the special block. A common structured
+witness, with no cell changes, attains their zero-price sum
+`43770/(24*3125) = 1459/2500`; its final `4 -> 5` transition is zero. This is
+still only the fixed-level-2 finite structured problem and carries no
+inverse-limit or measure claim.
+
+The immediate next milestone is the `2..6` coupled problem, followed by
+cross-level and larger-collar compatibility. That work must eventually return
+one of:
 
 - an explicit compatible transfer system;
 - a precise obstruction for a named regularity class;
