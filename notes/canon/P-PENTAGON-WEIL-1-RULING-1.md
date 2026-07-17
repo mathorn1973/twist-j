@@ -166,4 +166,3 @@ probe or from `xi_J = xi`.
 
 No Canon, registry, frontier, status, release, or tag file changes on this
 ruling branch.
-
