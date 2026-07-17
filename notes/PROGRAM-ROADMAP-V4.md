@@ -186,7 +186,16 @@ witness, with no cell changes, attains their zero-price sum
 still only the fixed-level-2 finite structured problem and carries no
 inverse-limit or measure claim.
 
-The immediate next milestone is the `2..6` coupled problem, followed by
+The coupled horizon `2..6` is closed exactly as well. Scale 48 retains the
+sixteen new `1/48` edges. A full-domain ordinary retraction followed by an
+integer local-polytope dual gives ordinary minimum 190; exact special
+elimination gives 220. One structured witness attains the block histogram
+`{190:624, 220:1}`, hence the zero-price optimum is
+`118780/150000 = 5939/7500`. Its terminal transition is zero, but the earlier
+first-transition value is not preserved. This is again only the named finite
+problem, with no inverse-limit or measure claim.
+
+The immediate next milestone is the `2..7` coupled problem, followed by
 cross-level and larger-collar compatibility. That work must eventually return
 one of:
 

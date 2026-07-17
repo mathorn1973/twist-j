@@ -530,6 +530,7 @@ The resulting exact comparisons are
 horizon  certified lower bound  feasible witness  witness - lower  status
 2..4     417/1250               417/1250         0                exact
 2..5     1459/2500              1459/2500        0                exact
+2..6     5939/7500              5939/7500        0                exact
 ```
 
 For `2..4`, the earlier anchor-plus-cycle value `157/1875` remains an
@@ -610,6 +611,73 @@ This closes only the fixed-level-2 structured finite horizon `2..5`. It is
 non-canonical local analysis and supplies no inverse-limit, entropy, measure,
 regularity, or selection claim.
 
+### Exact coupled horizon `2..6`
+
+The next refinement exposes a scale trap before any optimization: sixteen
+`5 -> 6` edges have weight `1/48`, so the horizon-5 expression
+`int(24*weight)` would silently erase them. The integral scale is therefore
+48 and the objective denominator is `48*3125 = 150000`. The later graph has
+44 nodes, 76 pair edges, and the unchanged 12 anchors.
+
+The ordinary point bundle has 220 variables, 380 pair equalities, and 60 pin
+equalities. Its canonical tree gauge has 161 chords. Their raw shift set is
+`{0,2,3}`, which generates all of `Z/5`; it must not be replaced by the
+horizon-5 shift census. The full-domain retraction commutes on all
+`380*3125 = 1187500` edge-state pairs, fixes all 60 representative pins, and
+maps the 624 distinct ordinary anchor fibres to one common five-state problem.
+The new normalized pin-pattern SHA-256 is
+`7b7f53c050ca256db9722692491db7c12b1940d56f4f1db6f87f353d3865d0ec`.
+
+A direct dense min-fill extrapolation is not used. The connected five-sheet
+point graph has heuristic width 21; the old two-variable conditioning still
+has width 18, while an eight-variable conditioning that reaches width 9 would
+require `5^8` cases. Instead the lower certificate is the exact dual of the
+standard pairwise local polytope. For node marginals `y_v(a)` and pair
+marginals `z_e(a,b)`, let `alpha_v` be the normalization dual and let
+`beta_e(a), gamma_e(b)` be the two marginalization duals. The pinned integers
+satisfy
+
+```text
+alpha_v - sum_out beta_e(a) - sum_in gamma_e(a) <= unary_v(a),
+beta_e(a) + gamma_e(b) <= pair_e(a,b).
+```
+
+All `220*5 + 380*25 = 10600` inequalities replay exactly with denominator 1,
+and `sum_v alpha_v = 190`. Every integral point assignment embeds in this
+polytope, so 190 is a valid ordinary lower bound. The dual file has SHA-256
+`370b2e9a73b1a336375f79d46ff94cf0bcefba3271eeba1f15b573b9fe0d5b30`.
+
+A matching integral assignment has SHA-256
+`28e91f3b2d5bd2436b1be23c52140dd8ecea90c2df1326fbd4ebddebb6f5c0e0`.
+It violates 80 point records -- 65 of weight 2 and 15 of weight 4 -- for
+exact cost 190. Its full lift reassembles to one common cell and an `S_5`
+permutation at every one of the 44 nodes for every ordinary block, and the
+624 cells remain all-different. Thus the relaxed lower optimum is attained by
+a structured ordinary witness.
+
+The special block is independently closed at 220: five exact coordinate
+minima of 44 reassemble cyclically with no all-different failure. Zero
+assignment prices then give
+
+```text
+624*190 + 220 = 118780,
+lower = upper = 118780 / 150000 = 5939/7500.
+```
+
+The common structured witness has scaled histogram `{190:624, 220:1}` and
+family-signature digest
+`6780cea7ed7cbddd332ab6ef5370df4806086abc3d5bac2a47da52b934ffce58`.
+Its four exact transition distances are
+`(313/1875, 573/1250, 1249/7500, 0)`. Hence the terminal-zero pattern survives
+for this frozen optimal witness, while the earlier first-transition value
+`209/2500` does not. This says nothing about every optimum: no uniqueness or
+transition invariance is claimed.
+
+The coupled root is fathomed by the exact block dual without branching. This
+closes only the fixed-level-2 structured finite horizon `2..6`; it remains
+non-canonical local analysis and supplies no inverse-limit, entropy, measure,
+regularity, or selection claim.
+
 The initialization experiment was also tightened. Every run keeps exactly the
 same frozen `r=2` tree family and changes only the free maps. Four deterministic
 context/level patterns rotate all 625 block assignments in 125 cycles of
@@ -648,8 +716,9 @@ an independently checked path.
    internals.
 2. Add tie-neutral moves and additional deterministic seeds, then reproduce
    whether the same small-horizon fixed points recur.
-3. Extend the exact coupled formulation to horizon `2..6`, preserving the
-   full-domain retraction and a replayable block-minimum certificate.
+3. Extend the exact coupled formulation to horizon `2..7`, preserving the
+   full-domain retraction and a replayable block-minimum certificate; do not
+   assume either frozen-witness transition pattern persists.
 4. Then extend both collar radii and the horizon and search for a chain whose
    refinement disagreements are summable. A surviving chain is only a
    measurable-transfer candidate; a positive uniform lower bound closes only
@@ -684,6 +753,8 @@ python -m notes.entropy_selection.run_growing
 python -m notes.entropy_selection.run_landscape
 python -m notes.entropy_selection.path_bounds
 python -m notes.entropy_selection.coupled_horizon5
+python -m notes.entropy_selection.horizon6_ordinary
+python -m notes.entropy_selection.coupled_horizon6
 ```
 
 The package uses the Python standard library and writes no evidence artifact.
@@ -704,3 +775,26 @@ a formal run, public gate, preregistration, probe, promotion, or evidence
 bundle; it earns no claim status. The result remains non-canonical
 finite-horizon analysis and supplies no inverse-limit, entropy, measure,
 regularity, or selection claim.
+
+### Neutral cross-platform readback for horizon `2..6` (non-formal)
+
+Commit `2ddff6d76f9685c4ce59263573a7444c4801cf9c` was checked out afresh
+from the remote branch on Linux/x86_64 with CPython 3.13.5 and Darwin/arm64
+with CPython 3.13.13. Both detached worktrees remained clean after the run.
+Under `LC_ALL=C`, `LANG=C`, `PYTHONDONTWRITEBYTECODE=1`,
+`PYTHONHASHSEED=0`, and `TZ=UTC`, both executions of
+
+```text
+python3.13 -B -m notes.entropy_selection.coupled_horizon6
+```
+
+returned exit 0, wrote zero bytes to stderr, and produced byte-identical
+stdout: SHA-256
+`cf0ee77e19e0c572a5676760968ee5f7302061dd18b9be1fa301881e0f7deb40`,
+632 bytes, 11 lines.
+
+This is a reproducibility readback of the local recon program only. It is not
+a formal run, public gate, preregistration, probe, promotion, or evidence
+bundle; it earns no claim status. The exact `2..6` result remains
+non-canonical finite-horizon analysis and supplies no inverse-limit, entropy,
+measure, regularity, or selection claim.

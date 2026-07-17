@@ -42,6 +42,14 @@ Modules:
 - `coupled_horizon5.py`: the matching special-block retraction and five exact
   coordinate DPs, the structured `{70:624, 90:1}` witness, and the zero-price
   coupled closure at `1459/2500` for horizon `2..5`;
+- `horizon6_prep.py`: the scale-48 correction, graph/retraction preparation,
+  and independent exact special-block closure at scaled cost `220`;
+- `horizon6_ordinary.py`: the full 220-variable ordinary point bundle,
+  equivariant retraction, exact integer local-polytope dual of value `190`,
+  matching assignment, and all-624 structured reassembly; its two small JSON
+  files are the pinned dual and assignment certificates;
+- `coupled_horizon6.py`: the structured `{190:624, 220:1}` witness and the
+  zero-price coupled closure at `5939/7500` for horizon `2..6`;
 - `basins.py`: context-dependent, separated free-map initializations for one
   frozen boundary problem and each fixed lift phase;
 - `test_*.py`: focused exact gates;
@@ -59,6 +67,9 @@ python -m notes.entropy_selection.run_landscape
 python -m notes.entropy_selection.path_bounds
 python -m notes.entropy_selection.coupled_exact
 python -m notes.entropy_selection.coupled_horizon5
+python -m notes.entropy_selection.horizon6_prep
+python -m notes.entropy_selection.horizon6_ordinary
+python -m notes.entropy_selection.coupled_horizon6
 ```
 
 An `EMPTY` result belongs only to the finite-context cell-sector ansatz named
