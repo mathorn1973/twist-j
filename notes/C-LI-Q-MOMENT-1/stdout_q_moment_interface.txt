@@ -1,0 +1,15 @@
+PASS Q1 partial-fraction sigma dictionary rows, m=1..6, exact polynomial identity over Q
+Q1 witness dictionary rows (sigma_1..sigma_m coefficients): m=1: [1]; m=2: [2, 1]; m=3: [6, 3, 1]; m=4: [20, 10, 4, 1]
+PASS Q2 junction algebra: qw_0 = sigma_1 = lambda_1; qw_1 = 2 sigma_1 + sigma_2 = M_1 = 4 lambda_1 - lambda_2; qw_2 row exact
+Q2 witness qw_1 vector: [('1', '3'), ('gamma', '1'), ('gamma^2', '1'), ('gamma_1', '2'), ('log4pi', '-1'), ('pi^2', '-1/8')]
+PASS Q3 Catalan reversion: w(t(w)) = w and t(w(t)) = t through order 10, exact
+PASS Q4 g-to-q recursion = power sums; Moebius maps b<->a exact and involutive; scaling covariance q_n -> c^(n+1) q_n
+PASS Q5 double-Hankel discipline: positive instance (rank witness), Hamburger separator passes H0 and fires H1, signed instance fires H0
+Q5 witness H0 minors of separator: ['2', '4', '0'] ; H1 2x2 det: -4 ; signed H0 2x2 det: -1/80
+PASS Q6 pentagon stream at the q-interface: coeff(-P0'/P0)(n) = Lambda(n) - (log 5) n [n=5^m] for all n <= 125, exact over the {log p} module
+Q6 witness n=5, 25, 125 coefficients of log5: -4, -24, -124 expected; identity checked coefficientwise
+PASS Q7 counting dichotomy skeleton: geometric N(4^-M) = M exactly; log-polynomial shape N(4^-M) >= M 2^M for M = 2..12 (finite skeleton, restricted scope)
+IMPORTED: Hadamard pairing; Stieltjes moment theorem; Riemann-von Mangoldt count; Lagarias asymptotic; nuclear singular-value decay; classical sigma_1..sigma_3 closed forms
+NONCLAIM: no J-native A_J/B_J or moment functional is constructed; SH-1 is frozen, not evaluated; G8 and RH remain open
+FAILED: none
+VERDICT: PASS C-LI-Q-MOMENT-1 dictionary
