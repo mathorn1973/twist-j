@@ -142,3 +142,17 @@ prefixes alone do not cross the all-order wall.  The next constructive task
 is therefore the separately frozen route RA: define a concrete J-native
 parent pair and test its G0--G3 dependency, trace-class, normalization, and
 positivity gates before comparing it with N1 or N2.
+
+## 6. Independent aarch64 readback
+
+A fresh Ubuntu 24.04/aarch64 clone at exact commit
+`a002e72481b8cf74fc95e51411bf3c9ead29cda3` verified the folder manifest and
+ran the pinned verifier three times under the neutral environment.  All three
+runs returned exit zero, empty stderr, and the same 2034-byte stdout SHA-256
+`743c0886225489f16e0fa03bb74108f8d444303739520b83f3947ccc1d807a9f`.
+They were byte-identical to the Windows 11/x86_64 first-run record.  Policy,
+38 tool tests, Canon v8, and the ledger also passed in that fresh clone.
+
+The neutral record is `N2_AARCH64_READBACK.md`.  This independent
+two-architecture agreement strengthens the notes result but is not a formal
+public-probe promotion gate.

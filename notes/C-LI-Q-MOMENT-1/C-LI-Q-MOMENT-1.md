@@ -467,7 +467,12 @@ SH-1'=T3anti in [0.000000000000003836691348,
 ```
 
 The enclosures overlap.  `N2_SH1P_RESULT.md` records the run and the exact
-scope ceiling.  N2 is closed only at notes-grade reference-calibration scope.
+scope ceiling.  A fresh Ubuntu 24.04/aarch64 clone at commit `a002e724` then
+reproduced the exact 2034-byte stdout three times and matched the original
+Windows 11/x86_64 stream byte for byte; `N2_AARCH64_READBACK.md` carries the
+neutral record.  This is an independent notes-lane readback, not a formal
+public-probe gate.  N2 is closed only at notes-grade reference-calibration
+scope.
 
 ## 6. Exact chart transforms
 
@@ -789,10 +794,10 @@ this candidate.
 current   notes-only candidate; exact dictionaries machine-pinned;
           SH-1 = Q transferred from the existing two-architecture
           incubation pin; fresh N1 width/transfer audit passed in one
-          environment; N2 passed 9/9 in its first environment and closes the
-          third ladder junction at notes grade
-next      independent readback, then construction of the route-RA J-native
-          parent pair through G0--G3; N3 remains the later public
+          environment; N2 passed 9/9 and has a byte-identical independent
+          x86_64/aarch64 readback, closing the third junction at notes grade
+next      construction of the route-RA J-native parent pair through G0--G3;
+          N3 remains the later formal public
           two-architecture rerun if a public validation is warranted
 then      fold of the junction and dictionary rows into the lane map;
           any public probe needs a NEW PREREG and NEW pins per the
