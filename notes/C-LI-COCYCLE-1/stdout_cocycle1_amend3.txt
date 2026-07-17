@@ -1,0 +1,12 @@
+PASS S1a t^1 row: sigma_1 = 1 + gamma/2 - log2 - (1/2) log pi (equals 1 + gamma/2 - (1/2) log 4pi), derived exactly from the expansion
+PASS S1b t^2 row: sigma_2 = 1 + 2 gamma_1 + gamma^2 - pi^2/8, derived exactly (reproduces the previously imported identity)
+PASS S1c t^3 row: sigma_3 = 1 + gamma^3 + 3 gamma gamma_1 + (3/2) gamma_2 - (7/8) zeta(3), DERIVED (the owner's frozen formula confirmed independently)
+PASS S2 lambda_3 = 3 sigma_1 - 3 sigma_2 + sigma_3, exact binomial coefficients
+PASS S3 normalization fix pinned on both instances: mu_v(T) = ladder(1) while t_m = 2 * cosine moments of mu_v (exemplar: t_m = 2 c_10(m); C_4: t_m = 2*4*[4|m]); hence sigma = 2 mu_v, sigma(T) = 2 lambda_1, mu_v(T) = lambda_1
+S4 witness sigma_3 = -1.111582314521e-04 ; lambda_3 = 0.207638920554325
+S4 witness owner lambda_3 interval [0.207638918333718933, 0.207638922051014329] contains float: True
+S4 witness t = (0.046191417932, 0.046154317296, 0.046043159064) ; det T_2 = 5.7580329367e-13
+S4 witness owner det K_3 interval [6.9813247888e-14, 7.3758515923e-14] contains float: False
+S4 note: certifying det T_2 > 0 at the 7e-14 scale needs gamma_2 brackets of width about 1e-12: EM-4 remainder at N = 1e5 or EM-2 at N = 1e7; spec recorded for the two-architecture re-run
+FAILED: none
+VERDICT: PASS amendment 3 of C-LI-COCYCLE-1

@@ -1,0 +1,9 @@
+PASS C1 c(n) = sum_k zeta_5^(kn) = 5*[5|n] - 1, exhaustive over n mod 5, exact in Z[zeta_5]
+PASS C2 (1-j)(1-j^2)(1-j^3)(1-j^4) = 5, exact in Z[zeta_5]
+PASS C3 finite identity sum c(n)n^-s = 5^(1-s) sum m^-s - sum n^-s, s in {2,3,4}, N in {5,25,125,625}, exact Fractions
+PASS C4 raw-carrier asymmetry: f5(2) = -4/5, f5(-1) = 24, ratio -1/30 != 1, exact
+PASS C5 period sum c(1..5) = 0, exact
+W1 witness sum_{n<=1e6} c(n)/n   = -1.609435912436 ; -log 5     = -1.609437912434 ; |diff| = 2.000e-06
+W2 witness sum_{n<=1e6} c(n)/n^2 = -1.315947253477 ; -2*pi^2/15 = -1.315947253479 ; |diff| = 1.974e-12
+FAILED: none
+VERDICT: PASS G0 kernel at candidate grade
