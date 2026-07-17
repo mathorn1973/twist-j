@@ -1,6 +1,6 @@
 # P-J-LI-TORAL-HAAR-1 result
 
-Status: FORMAL AARCH64 RESULT; GITHUB X86_64 GATE PENDING; PUBLIC CLAIM UNREGISTERED
+Status: FORMAL PROBE RESULT; TWO-ARCHITECTURE REPRODUCIBILITY GATE PASS; PUBLIC CLAIM UNREGISTERED
 
 ## Scientific decision at the recorded leg
 
@@ -71,6 +71,9 @@ public lock:           issue 50
 preregistration pin:   47b738ac90c7e76063696b62ef88685ca507d973
 PREREG.md SHA-256:     91efae35540d16f0714bf199d69f31d44f4ca1fef6863cc253e36680315c4383
 verify.py SHA-256:     3f309c3244a5ca8c911d9d2da0dfe7f48ade08f09c5ba8ada2cc379235fd219d
+formal evidence commit:376add6c14e6d2bc37dbcf4a7478b0d8af493982
+EXPECTED.txt SHA-256:  8e17b45e07b977fbbfe74f31cb64e2a78bc950cd5bedb70b9b163bcd77fbefc8
+RUN.md SHA-256:       5393587ec61c769f4bf1b328fe6ece651faccc1de655bcec8764c86c9e3284e3
 
 platform:              Ubuntu 24.04.4 LTS
 architecture:          aarch64
@@ -83,6 +86,24 @@ stdout lines:          16
 determinism:           three executions byte-identical
 ```
 
-`EXPECTED.txt` is the exact first formal stdout. The required GitHub x86_64
-rerun and byte comparison are pending. Until that check passes, this file
-records only the formal aarch64 leg and no two-architecture gate result.
+`EXPECTED.txt` is the exact first formal stdout.
+
+Two-architecture record:
+
+```text
+aarch64 leg    Ubuntu 24.04.4 LTS, CPython 3.12.3, neutral environment;
+               first formal execution at the exact pin, followed by two
+               byte-identical repetitions; verifier 3f309c32...219d;
+               stdout 8e17b45e...efc8, 2717 bytes.
+x86_64 leg     GitHub check on pull request 51, evidence head
+               376add6c14e6d2bc37dbcf4a7478b0d8af493982; run
+               29578010224, job 87876817139, conclusion success;
+               Ubuntu 24.04.4, CPython 3.12.13; verifier and stdout hashes
+               byte-identical to the aarch64 leg; log reports
+               VERIFY PASS P-J-LI-TORAL-HAAR-1.
+gate:          PASS. The aarch64 and GitHub x86_64 outputs are byte-identical.
+```
+
+The gate establishes reproducibility of the exact audit. The proposed
+theorem grade comes from the frozen proof, not from multiplying machine
+runs. No public claim is registered by this probe alone.
