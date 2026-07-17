@@ -1,0 +1,26 @@
+C-LI-Q-MOMENT-1 N1 exact-interval verifier
+scale=10^24  N=200000  log_terms=32
+EM2 B2    [0.000000000259533466951874, 0.000000000259533466951875]
+gamma_2   [-0.009690363452405785691059, -0.009690362933338851294461]
+g2 width  0.000000000519066934396598
+sigma_1   [0.023095708965079367097561, 0.023095708971329335948397]
+sigma_2   [-0.046154317344901637723149, -0.046154317237087378863919]
+sigma_3   [-0.000111158665537209572582, -0.000111157790857999161284]
+qw_0      [0.023095708965079367097561, 0.023095708971329335948397]
+qw_1      [0.000037100585257096471973, 0.000037100705571293032875]
+qw_2      [0.000000143090234079843337, 0.000000144325855879937341]
+SH1 direct [0.000000001928308048165368, 0.000000001956854538021970]
+SH1=Q norm [0.000000001925826928889160, 0.000000001959335657298853]
+PASS N1-ALG exact SH-1 coefficient vector equals Q: (2,-1,1,-1)
+PASS N1-EM2 B2 shape checks and gamma_2 width <= 1e-9
+PASS N1-G2 fresh gamma_2 interval is contained in the historical pin
+PASS N1-J0 fresh qw_0 interval is contained in the lambda_1 pin
+PASS N1-J1 fresh qw_1 interval is contained in the M_1 pin
+PASS N1-Q2 fresh qw_2 interval is strictly positive
+PASS N1-DIR direct SH-1 interval is strictly positive
+PASS N1-RED reduced SH-1=Q interval is strictly positive
+PASS N1-OVL direct and reduced SH-1 enclosures overlap
+PASS N1-XPIN fresh reduced SH-1=Q interval is contained in the historical Q pin
+FAILED: none
+VERDICT: PASS C-LI-Q-MOMENT-1 N1
+NONCLAIM: no J-native A_J/B_J or moment functional; no public promotion; RH remains open

@@ -53,10 +53,10 @@ is already computable with the machinery this program has pinned:
        qw_2 = sigma_3 + 3 sigma_2 + 6 sigma_1,
    and expands to the already-pinned symmetric-block invariant Q of the
    T_2 cocycle gate.  Thus SH-1 = Q exactly and its sign was already
-   enclosed at about 2e-9.  The N1 pin is designed to refine the gamma_2
-   width to the separately frozen 1e-9 threshold and will recheck the
-   transfer if all gates pass; it is not the first sign evaluation of
-   SH-1 (section 5).
+   enclosed at about 2e-9.  The fresh N1 pin refined the gamma_2 width to
+   `5.19066934396598e-10` and rechecked the transfer with 10/10 frozen
+   gates passing; it was not the first sign evaluation of SH-1
+   (section 5).
 5. Exact chart transforms.  The Catalan reversion tying the owner's
    xi(1+t) germ machinery to the w-chart, the g-to-q recursion, and the
    eigenvalue-level Moebius map to the parent's frozen x-chart operator
@@ -366,9 +366,24 @@ SH-1 = Q in
 
 strictly positive.  The historical gamma_2 interval used there has width
 `1.369020023246330e-9`: enough to decide the sign, but wider than the
-separately frozen N1 refinement threshold below.  Therefore N1 remains a
-fresh width-refinement and transfer audit; it is not the first evaluation of
-SH-1 and it does not retroactively rename the existing Q run.
+separately frozen N1 refinement threshold below.  The fresh pinned N1 run at
+commit `1799c1887055d77b213bdee777b154950219f021` returned
+
+```text
+gamma_2 width = 0.000000000519066934396598 < 1e-9,
+SH-1 direct in
+[0.000000001928308048165368,
+ 0.000000001956854538021970],
+SH-1 = Q normal form in
+[0.000000001925826928889160,
+ 0.000000001959335657298853].
+```
+
+All intervals are outward-rounded; both SH-1 lower bounds are strictly
+positive, the two evaluation graphs overlap, and the reduced interval lies
+inside the historical Q pin.  Thus N1 is closed at notes-grade candidate
+scope as a fresh width-refinement and transfer audit.  It is not the first
+evaluation of SH-1 and does not retroactively rename the existing Q run.
 
 ### 5.2 Cancellation depth, stated in advance
 
@@ -399,7 +414,8 @@ gamma terms of the classical expansion).
 ```text
 N1  fresh gamma_2 EM-2 bracket (width <= 1e-9), exact machine pin of
     SH-1 = Q, and a standalone interval transfer against the historical Q
-    pin.  One new verifier, one evidentiary run, pinned before execution.
+    pin.  CLOSED at notes-grade candidate scope: pin 1799c1887055d77b;
+    10/10 PASS, exit 0, empty stderr; exact record in N1_SH1_RESULT.md.
 N2  sigma_4 derivation and freeze by the same xi(1+t) route as
     amendment 3 (route-validated on sigma_1..sigma_3), then the shifted
     2x2 gate SH-1' = qw_1 qw_3 - qw_2^2.  This does not reach either
@@ -676,6 +692,25 @@ scope            non-formal one-environment dictionary audit; not a
                  public reproduction, not a probe execution
 ```
 
+The separately pinned N1 verifier is an outward-rounded fixed-point interval
+audit of the fresh width gate and the second determinant junction:
+
+```text
+pin commit       1799c1887055d77b213bdee777b154950219f021
+verifier sha256  9b5fc0e18eda719ca8d63ce3626e449d3d0c7859288d4ba361f550ba502df486
+verifier bytes   12947
+stdout sha256    11904f3ca3058ca617ea01c769a622fea226081d235d604d31b38be28fb002af
+stdout bytes     1537
+result           10 PASS, 0 FAIL, exit 0, empty stderr
+environment      LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1
+                 PYTHONHASHSEED=0 TZ=UTC; Windows AMD64; Python 3.12.13
+scope            non-formal one-environment N1 audit; not a public
+                 reproduction, not a probe execution, not N3
+```
+
+The exact pin, execution record, and captured stdout are
+`N1_SH1_PIN.md`, `N1_SH1_RESULT.md`, and `stdout_q_moment_n1.txt`.
+
 ## 11. Proposed non-public ledger
 
 | Candidate row | Mathematical classification | Public state |
@@ -683,7 +718,7 @@ scope            non-formal one-environment dictionary audit; not a
 | `J-LI-W-CHART-EQUIVALENCE` | T as equivalence (parent spine) | unregistered |
 | `J-LI-SIGMA-HANKEL-DICTIONARY` | T | unregistered |
 | `J-LI-LADDER-JUNCTION` | T | unregistered |
-| `J-LI-Q-CALIBRATION-LADDER` | SH-1 = Q transferred; N1 width audit pending | unregistered |
+| `J-LI-Q-CALIBRATION-LADDER` | SH-1 = Q; N1 width audit passed | unregistered |
 | `J-LI-Q-COUNTING-GATE` | T (dictionary) + imported RvM | unregistered |
 | `J-LI-Q-ANALYTIC-NUCLEAR-NOGO` | T, operator-class scope | unregistered |
 | `J-LI-Q-CARRIER-SMOOTHNESS-SELECTION` | H | unregistered |
@@ -694,8 +729,8 @@ scope            non-formal one-environment dictionary audit; not a
 
 No J-native `A_J`, `B_J`, or moment functional is constructed.  The two
 junction theorems transfer existing pins; they create no new positivity.
-SH-1 is exactly the already-evaluated Q invariant.  Gate N1 is a fresh
-gamma_2-width refinement and standalone transfer audit, never a
+SH-1 is exactly the already-evaluated Q invariant.  Gate N1 passed as a
+fresh gamma_2-width refinement and standalone transfer audit, never as a
 retroactive relabeling of the historical Q run.  The
 smoothness selection and the pair-count reading are H and are not
 inputs to any gate.  Nothing here changes the frozen parent prereg;
@@ -707,12 +742,13 @@ this candidate.
 ## 13. Promotion posture
 
 ```text
-current   notes-only candidate; exact dictionaries machine-pinned in one
-          environment; SH-1 = Q transferred from the existing
-          two-architecture incubation pin
-next      N1 (fresh gamma_2 width + SH-1/Q transfer audit), N2 (sigma_4
-          freeze and shifted SH-1'), owner review of both junction
-          theorems and the repaired no-go
+current   notes-only candidate; exact dictionaries machine-pinned;
+          SH-1 = Q transferred from the existing two-architecture
+          incubation pin; fresh N1 width/transfer audit passed in one
+          environment
+next      N2 (sigma_4 freeze and shifted SH-1'), owner review of both
+          junction theorems and the repaired no-go; N3 remains the later
+          public two-architecture rerun
 then      fold of the junction and dictionary rows into the lane map;
           any public probe needs a NEW PREREG and NEW pins per the
           standing rule; the moment-realization probe additionally
