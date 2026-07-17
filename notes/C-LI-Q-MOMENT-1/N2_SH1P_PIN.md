@@ -157,4 +157,3 @@ construct `A_J`, `B_J`, a J-native parent pair, a positive moment functional,
 the other block of `T_3`, a full all-order Hankel or Toeplitz ladder, G8, or
 RH.  It creates no public issue, probe, registry row, Canon edit, tag, or
 release.
-
