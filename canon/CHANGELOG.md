@@ -1,11 +1,33 @@
 # Canon changelog (public series)
 
-## Public Canon v6
+## Public Canon v7
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 176 claims; 0 T-LOCK, 84 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
+Registry snapshot: 177 claims; 0 T-LOCK, 85 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+This fold records `P-PENTAGON-WEIL-1` at its immutable preregistration pin
+`6be1231a` and byte-identical aarch64 and x86_64 public record. It adds
+`PENTAGON-NORMALIZATION` at [T] for the exact fifth-root filter.
+
+For `c(n) = 5[5 divides n] - 1`, the Dirichlet series is
+`P_0(s) = (5^(1-s) - 1)zeta(s)` on `Re(s) > 1`. After the explicitly named
+classical meromorphic continuation and standard completion, the normalized
+functions are `Z_J = zeta` and `xi_J = xi`. The fold also records
+`P_0(1) = -log 5`, removes the root-filter zeros, and subtracts the artificial
+`5^m log 5` tower in the signed logarithmic derivative.
+
+The global zeta theorems remain named classical imports. No Weil test space,
+positive form, operator realization, J-native carrier, RH result, or L5-to-L6
+lift is added.
+
+## Public Canon v6
+
+<!-- BEGIN GENERATED CANON6 COUNTS -->
+Registry snapshot: 176 claims; 0 T-LOCK, 84 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON6 COUNTS -->
 
 This fold records `P-CURVATURE-GAUSS-SPLIT-1` at its immutable
 preregistration pin `03582ff9` and byte-identical aarch64 and x86_64 public
