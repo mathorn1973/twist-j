@@ -1,0 +1,7 @@
+PASS CC1 exemplar cycle cocycle: ladder integral, (0,4,10,14,20,24,...), period 10, zeros at 10m, max 24, a_* = 0: the finite J-native carrier is bounded and can never host lambda
+PASS CC2 C_4 instance: g(n) = n^2 + (0,3,4,3)-periodic remainder, g(4m) = 16 m^2 exactly: a_* = mu({1}) = 1, the n^2 law of an atom at 1
+PASS CC3 telescoping dictionary (ladder-independent): sum t_m = psi(N+1)-psi(N)-psi(1) and t_0 + 2 sum t_m = 2(psi(N+1)-psi(N)); Wiener reading: mu({1}) = lim 2(lambda_(N+1)-lambda_N)/(2N+1), so no atom iff increments are o(N)
+PASS CC4 1_G vs chi_0^(5) (owner audit 1678d7b): (1-5^-s)^-1 L(chi_0) = zeta = L(1_G) coefficientwise for n <= 200; the two 'trivial' objects differ exactly on the 5-tower
+PASS CC5 dichotomy witnessed: bounded ladder (max over 40 = period max = 24) against n^2 + O(1) ladder (remainder bounded by 4); with Li + Lagarias (imported) lambda_n = n log n / 2 + O(n) is unbounded and o(n^2), excluding every finite carrier
+FAILED: none
+VERDICT: PASS amendment 2 of C-LI-COCYCLE-1

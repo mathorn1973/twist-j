@@ -1,0 +1,21 @@
+PASS A1 axiom step (a,b,c,d)->(a-c+d, b-c, a, b-c+d) equals multiplication by J, exhaustive box +-2
+PASS A2 charpoly(M_J) = z^4 - 3z^3 + 4z^2 - 2z + 1, det = 1, trace = 3
+PASS A3 N_m = det(M^m - I) = N(J^m - 1) > 0, two independent code paths, m = 1..30; N_1 = 1
+PASS A4 charpoly(Lambda^2 M) = z^6-4z^5+5z^4-5z^3+5z^2-4z+1 = (z^2-3z+1)*Phi_10(z), palindromic; charpoly(Lambda^3 M) = reciprocal of charpoly(M)
+PASS A5 weights exact: {phi^2, phi^-2} solve z^2-3z+1, product 1, sum 3; mixed 2-form eigenvalues are -zeta^k (primitive 10th roots); total product N(J) = 1
+PASS A6 Artin-Mazur zeta of the plenum step is the rational function (charM * charL3) / ((1-z)^2 * charL2), exact series match to order 16
+PASS B1 disc Q(zeta_5) = prod (zeta^i - zeta^j)^2 = 125 = 5^3 = p^d, exact in Z[zeta_5]
+PASS B2 quartic character mod 5: multiplicative, orthogonality sum_j chi^j(a) = 4[a=1], exact in Z[i]
+PASS B3 Gauss sums: |g(chi^j)|^2 = 5 exactly in Z[zeta_20]; g(chi^0) = -1; bridge 4 zeta_5^n = sum_j chibar^j(n) g(chi^j)
+PASS B4 a_K = 1*chi*chi^2*chi^3 is real, integral, nonnegative through 3000; 18 spot values match the splitting law exactly
+PASS B5 Lambda_K * a_K = a_K log identity exact over log-prime symbols for all n <= 3000 (splitting-law path vs character path)
+PASS B6 invariant hyperplanes of M_J mod p (roots of Phi_5) = a_K(p) = degree-1 primes, all p < 200 including p = 5
+B7 witness N_1=1=; N_2=11=11(r1); N_3=31=31(r1); N_4=55=5(r0)*11(r1); N_5=121=11^2(r1); N_6=341=11(r1)*31(r1)
+B7 witness N_7=911=911(r1); N_8=2255=5(r0)*11(r1)*41(r1); N_9=5611=31(r1)*181(r1); N_10=14641=11^4(r1); N_11=39161=39161(r1); N_12=104005=5(r0)*11(r1)*31(r1)*61(r1)
+PASS C0 gamma intervals from N = 1e5 and N = 2e5 overlap (bracket consistency)
+PASS C1 lambda_1(xi_J) = 1 + gamma/2 - log(4 pi)/2 > 0, exact integer interval, width < 2e-9, no zeros imported
+C1 witness lambda_1 in [23095708964233559, 23095708972138893] * 10^-18 (approx 0.0230957089...)
+C1 witness gamma    in [577215664897758041, 577215664913568443] * 10^-18
+C1 witness log(4pi) in [2531024246969290658, 2531024246969290922] * 10^-18
+FAILED: none
+VERDICT: PASS all exact anchors of C-WEIL-REALIZATION-1

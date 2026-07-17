@@ -1,0 +1,14 @@
+PASS CO1 dictionary algebra: t0 = 2 lambda_1, t1 = -sigma_2, t0+t1 = lambda_2, M1 = t0-t1 = 2 sigma_1 + sigma_2 = 3 + gamma + gamma^2 + 2 gamma_1 - pi^2/8 - log(4pi), exact
+PASS CO2 gamma_1 by EM-2 bracket at N = 10^5: strictly negative, width < 1e-9, inside the amendment-1 elementary bracket (two independent bracket methods agree)
+CO2 witness gamma_1 in [-72815845578467363, -72815845393082604] * 10^-18 (reference -0.0728158454836767)
+PASS CO3 T_1 gate: M1 > 0 (and < 1e-4), lambda_2 > 0 (width < 1e-8), det T_1 = M1 * lambda_2 > 0, all exact intervals
+CO3 witness M1       in [37100427052239, 37100909182139] * 10^-18 (about 3.7e-5)
+CO3 witness lambda_2 in [92345734988606606, 92345735470736506] * 10^-18 (reference 0.09234573522804...)
+CO3 witness det T_1  in [3426066204530, 3426110745058] * 10^-18
+PASS CO4 J-native exemplar: -zeta_5^k are exactly the primitive 10th roots (exponents 1,3,7,9); cocycle ladder psi(n) = 8 - 2 c_10(n) = (0,6,10,6,10,16,...), period 10; t = (12,-2,-8,8,2); K = L T L^T exactly; K and T PSD with rank exactly 4 (dets 5x5 = 0)
+CO4 witness minors K: [12, 140, 800, 2000, 0] ; minors T: [12, 140, 800, 2000, 0]
+PASS CO5 erratum pinned: additive branch b(n) = 4*[n=1 mod 5] diverges from a_K already at n = 1 (4 vs 1), at n = 5 (0 vs 1), at n = 6 (4 vs 0); within the ordered unramified prime-power list the first distinguishing witness is exactly 16, with agreement at 11
+FAIL CO6 chain regression: lambda_1 recomputed lies inside the rev1 pinned interval [23095708964233559, 23095708972138893] * 10^-18
+CO6 witness lambda_1 in [23095708961524905, 23095708987369468] * 10^-18
+FAILED: CO6 chain regression: lambda_1 recomputed lies inside the rev1 pinned interval [23095708964233559, 23095708972138893] * 10^-18
+VERDICT: FAIL
