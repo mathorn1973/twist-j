@@ -1,0 +1,12 @@
+P-PENTAGON-WEIL-1 exact verifier
+G0 pentagon root-filter accounting; no Weil positivity claim
+
+PASS 01 G01 ROOT-FILTER    c(n) = 5[5|n] - 1 on all residues mod 5
+PASS 02 G02 CYCLOTOMIC     conjugate pairing fixed and product prod_(k=1)^4 (1-j^k) = 5
+PASS 03 G03 CUTOFF         exact finite identity through N=625 for s=2,3,4; all naive cutoffs rejected
+PASS 04 G04 RAW-SYMMETRY  f5(2)/f5(-1) = -1/30, excluding the standard unit-root-number symmetry
+PASS 05 G05 SERIES         period sum zero and exact H_M-H_(5M) identity through M=125
+PASS 06 G06 LOG-DERIVATIVE signed raw coefficient (1-5^m)log5 and correction +5^m log5 through m=12
+
+RESULT 6/6 ALL PASS
+SCOPE G0 AUDIT ONLY; NO WEIL POSITIVITY OR RH RESULT
