@@ -405,9 +405,16 @@ Toeplitz side: the moment measure accumulates at 0 (as the Toeplitz
 measure accumulates at 1), the top atom `1/y_1 ~ 1/200.03` dominates,
 and each further minor is thinner by roughly the ratio `y_1/y_2`.
 Every new antidiagonal needs one new sigma_(k), i.e. one new gamma_(k-1)
-bracket; the derivation-then-freeze rhythm of sigma_3 extends verbatim
-to sigma_4 (needs gamma_3 and the gamma gamma_2, gamma_1^2, zeta(3)
-gamma terms of the classical expansion).
+bracket.  The derivation-then-freeze rhythm of sigma_3 extends to sigma_4,
+but the exact fourth row corrects a misleading pre-freeze shorthand:
+
+```text
+sigma_4 = 1 + gamma^4 + 4 gamma^2 gamma_1 + 2 gamma_1^2
+          + 2 gamma gamma_2 + (2/3) gamma_3 - pi^4/96.
+```
+
+There is no `gamma*zeta(3)` term in `sigma_4`; `zeta(3)` still enters the
+complete N2 determinant through `sigma_3`.
 
 ### 5.3 Named next gates
 
@@ -418,12 +425,24 @@ N1  fresh gamma_2 EM-2 bracket (width <= 1e-9), exact machine pin of
     10/10 PASS, exit 0, empty stderr; exact record in N1_SH1_RESULT.md.
 N2  sigma_4 derivation and freeze by the same xi(1+t) route as
     amendment 3 (route-validated on sigma_1..sigma_3), then the shifted
-    2x2 gate SH-1' = qw_1 qw_3 - qw_2^2.  This does not reach either
-    3x3 family: unshifted 3x3 needs qw_4/sigma_5 and shifted 3x3 needs
-    qw_5/sigma_6, each under a later separately frozen pin.
+    2x2 gate SH-1' = qw_1 qw_3 - qw_2^2.  Exact algebra also identifies
+    SH-1' with the determinant of the antisymmetric block of T_3, the third
+    ladder junction.  This does not establish full T_3 positivity and does
+    not reach either 3x3 Hankel family: unshifted 3x3 needs qw_4/sigma_5
+    and shifted 3x3 needs qw_5/sigma_6, each under a later separate pin.
 N3  Two-architecture re-run of N1/N2 at public validation time, per the
     lane's standing rule.
 ```
+
+### 5.4 N2 pre-run freeze
+
+`N2_SH1P_PIN.md` freezes the exact `sigma_4` derivation, the third ladder
+junction, the common B4 refresh of `gamma_0,...,gamma_3`, the width ceiling,
+both determinant evaluation graphs, and all non-claims before the first
+execution.  The verifier is pinned at commit
+`132538257e2671e50393d0f3fae42a101b47b3aa`, SHA-256
+`fc86ec75f31cd2884c6dffa36ba0068e778faebc06cf0c70aaae0ae3f6e80300`.
+At this freeze N2 has not run and has no result.
 
 ## 6. Exact chart transforms
 
@@ -727,8 +746,8 @@ The exact pin, execution record, and captured stdout are
 
 ## 12. Non-claims
 
-No J-native `A_J`, `B_J`, or moment functional is constructed.  The two
-junction theorems transfer existing pins; they create no new positivity.
+No J-native `A_J`, `B_J`, or moment functional is constructed.  The first
+two junction theorems transfer existing pins; they create no new positivity.
 SH-1 is exactly the already-evaluated Q invariant.  Gate N1 passed as a
 fresh gamma_2-width refinement and standalone transfer audit, never as a
 retroactive relabeling of the historical Q run.  The
@@ -745,10 +764,10 @@ this candidate.
 current   notes-only candidate; exact dictionaries machine-pinned;
           SH-1 = Q transferred from the existing two-architecture
           incubation pin; fresh N1 width/transfer audit passed in one
-          environment
-next      N2 (sigma_4 freeze and shifted SH-1'), owner review of both
-          junction theorems and the repaired no-go; N3 remains the later
-          public two-architecture rerun
+          environment; N2 is frozen before its first run
+next      first N2 execution, independent readback, and owner review of all
+          three junction theorems and the repaired no-go; N3 remains the
+          later public two-architecture rerun
 then      fold of the junction and dictionary rows into the lane map;
           any public probe needs a NEW PREREG and NEW pins per the
           standing rule; the moment-realization probe additionally
