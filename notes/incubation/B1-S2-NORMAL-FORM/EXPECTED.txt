@@ -1,0 +1,11 @@
+B1 S2 normal form / spectral rigidity exact skeleton
+------------------------------------------------------------
+PASS S1 one-block ||I-R(theta)||_S2^2 = 2/(gamma^2+1/4)  g=1:8/5; g=2:8/17; g=1/2:4
+PASS S2 lambda_n = (1/2)||I-O^n||_S2^2 = sum_i m_i 2(1-cos n theta_i)  lambda_1..3 = [Fraction(10626, 3145), Fraction(86569924, 9891025), Fraction(322678856226, 31107273625)]
+PASS S3 t_n = lambda_{n+1}+lambda_{n-1}-2 lambda_n = integral z^n d sigma_xi
+PASS S3b total mass sigma(T) = t_0 = 2 lambda_1  t_0 = 21252/3145
+PASS S4a rigidity: identity blocks are invisible (only ker(I-O) is free)
+PASS S4b rigidity: distinct nonidentity atoms give a distinct ladder  first differing n = 1
+PASS S4c rigidity: nonidentity atom cosines are forced by the moments (Prony)  nodes satisfy c^2 - (126/85) c + (9/17) = 0
+------------------------------------------------------------
+VERDICT: PASS  S2 normal form + spectral rigidity skeleton (7/7)

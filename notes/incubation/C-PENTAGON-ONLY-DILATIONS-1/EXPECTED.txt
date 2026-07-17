@@ -1,0 +1,15 @@
+C-PENTAGON-ONLY-DILATIONS-1 exact skeleton
+------------------------------------------------------------
+PASS PD1 Gram closed form gcd^2/(12mn) verified by exact integration  <g1,g1>=1/12; <g2,g3>=1/72; <g2,g5>=1/120; <g5,g25>=1/60
+PASS PD2 five-tower Gram equals KMS 5^{-|a-b|}/12 (a,b<=8)
+PASS PD3 q=2: dist^2 = (1/12)(1-1/q^2) = 1/16 for every M in 0..8  e.g. dist^2(M=0)=1/16, dist^2(M=8)=1/16
+PASS PD3 q=3: dist^2 = (1/12)(1-1/q^2) = 2/27 for every M in 0..8  e.g. dist^2(M=0)=2/27, dist^2(M=8)=2/27
+PASS PD3 q=6: dist^2 = (1/12)(1-1/q^2) = 35/432 for every M in 0..8  e.g. dist^2(M=0)=35/432, dist^2(M=8)=35/432
+PASS PD3 q=7: dist^2 = (1/12)(1-1/q^2) = 4/49 for every M in 0..8  e.g. dist^2(M=0)=4/49, dist^2(M=8)=4/49
+PASS PD3 q=12: dist^2 = (1/12)(1-1/q^2) = 143/1728 for every M in 0..8  e.g. dist^2(M=0)=143/1728, dist^2(M=8)=143/1728
+PASS PD4 q=2 deficiency equals 1/16  =1/16
+PASS PD4 q=3 deficiency equals 2/27  =2/27
+PASS PD5 best 5-tower approximant of g_q uses only g_1 (coeffs 5^{m>=1} are 0)  q=2 coeffs=[1/2, 0, 0, 0, 0, 0, 0]
+PASS PD6 distance does not decrease when 5-powers are added (F: route is dead)
+------------------------------------------------------------
+VERDICT: PASS  C-PENTAGON-ONLY-DILATIONS-1 skeleton (6/6)
