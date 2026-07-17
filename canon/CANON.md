@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v6
+# TWIST-J Public Canon v7
 
-**Release identity.** Public Canon v6. Normative authority and activation
+**Release identity.** Public Canon v7. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v6 also declares the discrete
+algebraic axiom is J. Public Canon v7 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v6 does not claim
+seed of the two algebraic projections. Public Canon v7 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -82,7 +82,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v6 contains no such
+deriving the architecture from J; Public Canon v7 contains no such
 theorem.
 
 ---
@@ -328,7 +328,7 @@ Therefore Tr_4(M_J x) = 2 Tr_4(x) in F_5, and the scalar multiples of
 Tr_4 are the only covectors reading any multiplier at all
 (CODEC-TR4 [T], reproduce/hyperplane-codec). No coding rate is inferred
 from this dimension count. The inherited phrase "rate 4/5" is retired
-from Public Canon v6; any future coding claim must define its alphabet,
+from Public Canon v7; any future coding claim must define its alphabet,
 message space, encoder, decoder, error criterion, and rate from scratch.
 
 Five completed public probes now delimit the entropy bridge without closing
@@ -787,7 +787,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v6. The fermionizer
+inherited naming clause is not part of Public Canon v7. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1103,6 +1103,46 @@ the argument (c odd), ln phi on the modulus (c even,
 transcendental by Baker); linearly independent over the algebraic
 numbers (LOG-AXES-INDEPENDENCE [T]). No algebraic independence claim
 is made.
+
+The pentagon root-filter normalization is exact
+(PENTAGON-NORMALIZATION [T], probes/P-PENTAGON-WEIL-1). Let
+`j = zeta_5 = (J - 1)^3` and, for `Re(s) > 1`, put
+
+```
+c(n)   = sum_(a=1)^4 j^(a n) = 5[5 divides n] - 1,
+P_0(s) = sum_(n>=1) c(n)n^(-s),
+f_5(s) = 5^(1-s) - 1.
+```
+
+Absolute expansion of the four polylogarithms gives
+`P_0(s) = f_5(s) zeta(s)`. With the classical meromorphic continuation of
+`zeta` and its standard completion explicitly imported, define
+
+```
+Z_J(s)  = MerCont_(Re(s)>1)(P_0(s)/f_5(s)) = zeta(s),
+xi_J(s) = (1/2)s(s-1)pi^(-s/2)Gamma(s/2)Z_J(s) = xi(s).
+```
+
+The zeros `s_k = 1 - 2 pi i k/log 5`, `k in Z`, of `f_5` are root-filter
+artifacts removed by the normalization; the pole and trivial zeros are
+handled by the imported standard zeta completion. In natural series order,
+`P_0(1) = -log 5`. On `Re(s) > 1`,
+
+```
+coeff(-P_0'/P_0)(n)
+  = Lambda(n) - (log 5)n[n = 5^m],
+```
+
+so the artificial `5^m log 5` tower is subtracted, not read as prime data.
+The unnormalized standard completion is `Xi_raw(s) = f_5(s)xi(s)` and does
+not have a constant unit-modulus root number: exactly
+`f_5(2)/f_5(-1) = -1/30`.
+
+This is a normalization identity. Meromorphic continuation, the zeta
+functional equation and divisor, the standard `xi` completion, the Euler
+product, and the treatment of the pole and trivial zeros are named classical
+imports, not results of the verifier. No Weil test space, positive form,
+operator realization, or statement about RH follows.
 
 The wall is one archimedean wall, and it is understood: the shadow is
 the polylogarithm ladder of J. What stands on it: the quantum
