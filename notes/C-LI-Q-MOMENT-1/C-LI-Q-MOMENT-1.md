@@ -434,15 +434,40 @@ N3  Two-architecture re-run of N1/N2 at public validation time, per the
     lane's standing rule.
 ```
 
-### 5.4 N2 pre-run freeze
+### 5.4 N2 exact closure
 
-`N2_SH1P_PIN.md` freezes the exact `sigma_4` derivation, the third ladder
+`N2_SH1P_PIN.md` froze the exact `sigma_4` derivation, the third ladder
 junction, the common B4 refresh of `gamma_0,...,gamma_3`, the width ceiling,
 both determinant evaluation graphs, and all non-claims before the first
-execution.  The verifier is pinned at commit
+execution.  The verifier remains pinned at commit
 `132538257e2671e50393d0f3fae42a101b47b3aa`, SHA-256
 `fc86ec75f31cd2884c6dffa36ba0068e778faebc06cf0c70aaae0ae3f6e80300`.
-At this freeze N2 has not run and has no result.
+The first run then returned `9/9 PASS`, exit zero, empty stderr, and the exact
+2034-byte stdout with SHA-256
+`743c0886225489f16e0fa03bb74108f8d444303739520b83f3947ccc1d807a9f`.
+
+The common B4 refresh gives
+
+```text
+gamma_3 in [0.002053834420303343805534,
+            0.002053834420303347765456],
+sigma_4 in [0.000073627221261687555177,
+            0.000073627221261691351731],
+qw_3    in [0.000000000659827686284693,
+            0.000000000659828142527711].
+```
+
+Both interval graphs decide the third junction strictly positively:
+
+```text
+SH-1' direct  in [0.000000000000003836699546,
+                  0.000000000000003836716508],
+SH-1'=T3anti in [0.000000000000003836691348,
+                  0.000000000000003836724705].
+```
+
+The enclosures overlap.  `N2_SH1P_RESULT.md` records the run and the exact
+scope ceiling.  N2 is closed only at notes-grade reference-calibration scope.
 
 ## 6. Exact chart transforms
 
@@ -764,10 +789,11 @@ this candidate.
 current   notes-only candidate; exact dictionaries machine-pinned;
           SH-1 = Q transferred from the existing two-architecture
           incubation pin; fresh N1 width/transfer audit passed in one
-          environment; N2 is frozen before its first run
-next      first N2 execution, independent readback, and owner review of all
-          three junction theorems and the repaired no-go; N3 remains the
-          later public two-architecture rerun
+          environment; N2 passed 9/9 in its first environment and closes the
+          third ladder junction at notes grade
+next      independent readback, then construction of the route-RA J-native
+          parent pair through G0--G3; N3 remains the later public
+          two-architecture rerun if a public validation is warranted
 then      fold of the junction and dictionary rows into the lane map;
           any public probe needs a NEW PREREG and NEW pins per the
           standing rule; the moment-realization probe additionally
