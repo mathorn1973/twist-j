@@ -47,12 +47,16 @@ is already computable with the machinery this program has pinned:
    The first two Hankel gates of the moment lane are ALREADY CLOSED at
    candidate grade by the existing lambda_1 and M_1 interval pins.  The
    two falsification ladders meet at their first rungs (section 4).
-4. The next razor.  The first genuinely new finite gate is the 2x2
-   determinant SH-1 with the exact expression
+4. The determinant junction.  The 2x2 determinant SH-1 has the exact
+   expression
        det H_1^(0) = qw_0 qw_2 - qw_1^2,
        qw_2 = sigma_3 + 3 sigma_2 + 6 sigma_1,
-   evaluable from the already-derived sigma_3 once a gamma_2 bracket of
-   width about 1e-9 is pinned; expected magnitude about 2e-9 (section 5).
+   and expands to the already-pinned symmetric-block invariant Q of the
+   T_2 cocycle gate.  Thus SH-1 = Q exactly and its sign was already
+   enclosed at about 2e-9.  The N1 pin is designed to refine the gamma_2
+   width to the separately frozen 1e-9 threshold and will recheck the
+   transfer if all gates pass; it is not the first sign evaluation of
+   SH-1 (section 5).
 5. Exact chart transforms.  The Catalan reversion tying the owner's
    xi(1+t) germ machinery to the w-chart, the g-to-q recursion, and the
    eigenvalue-level Moebius map to the parent's frozen x-chart operator
@@ -134,6 +138,24 @@ The analytic statements below import, and do not reprove:
 The included verifier checks only finite exact dictionaries; it promotes
 no imported theorem into a TWIST-J result.
 
+Here `gamma_1` always denotes the first Stieltjes constant.  Positive
+ordinates of zeta zeros are denoted `t_1,t_2,...`, so the two uses of the
+traditional gamma notation never collide.
+
+The S2 parent cited in the header is a non-canonical sibling candidate, not
+a file already merged into this branch.  Its exact provenance is frozen as
+
+```text
+branch       agent/c-li-s2-relative-determinant-1-prep
+commit       6a3d5c12ca55f8c48ce8c8e163b46c48c8c61d05
+candidate    f03ff3a801ede1a7a56713b9fd22c182590230c227c7a45e997eb57da7525c8a
+verifier     c6158ce8f3321fb6247ac96e5d419af742e3ca29d4081ab2edb2e86735db5ca3
+stdout       cf1bb46883313154ae067b369403f7d46c63c9d801a15a0642c50c27d225f6aa
+```
+
+Every use of its sections 4, 5, or 9 is conditional on that exact notes-grade
+pin.  The pin supplies audit provenance but creates no public authority.
+
 ## 3. The pole chart
 
 ### 3.1 Definitions, frozen
@@ -182,10 +204,18 @@ RH  <=>  (qw_(i+j))_(i,j=0..N) >= 0  and  (qw_(i+j+1))_(i,j=0..N) >= 0
 ```
 
 Proof is the parent's section 9 argument verbatim on the w-chart.
-Forward: under RH, y_rho = 1/4 + gamma^2 in (1/4, infinity), so qw_n are
-the moments (shifted by one power) of the finite positive measure
-sum m_gamma delta at 1/y_rho with support in (0, 4); both quadratic
-forms are traces of positive operators against |p|^2.  Converse: the two
+Forward: under RH, write `b_gamma=1/y_rho` with
+`y_rho=1/4+t_gamma^2`.  Then qw_n are the ordinary moments of the finite
+positive measure
+
+```text
+mu = sum m_gamma b_gamma delta_(b_gamma),
+```
+
+with support in `(0,4)`: `int x^n d mu(x)=sum m_gamma b_gamma^(n+1)=qw_n`.
+The unweighted counting measure would have infinite mass and is not the
+moment measure here.  The two quadratic forms are respectively
+`Tr[B |p(B)|^2]` and `Tr[B^2 |p(B)|^2]`.  Converse: the two
 Hankel families give a Stieltjes measure; the germ radius is positive
 because the smallest |y_rho| is positive; compact support, determinacy,
 and continuation on the slit plane force every zero of Gw onto the
@@ -298,12 +328,11 @@ Grade: T (exact rearrangement of absolutely convergent sums plus the
 paired sigma_1 convention already frozen in the lane; the algebra is
 machine-pinned as Q2).
 
-## 5. The calibration ladder and the next razor
+## 5. The calibration ladder and the determinant junction
 
 ### 5.1 SH-1, frozen expression
 
-The first finite gate not already closed by existing pins is the 2x2
-determinant of the unshifted family,
+The 2x2 determinant of the unshifted family is
 
 ```text
 SH-1:   det H_1^(0) = qw_0 qw_2 - qw_1^2
@@ -316,6 +345,31 @@ lane.  Under RH this is strictly positive (Cauchy-Schwarz for the
 measure with infinite support), so it is a genuine kill test with a
 one-sided margin.
 
+Expanding before any interval evaluation gives the second ladder junction:
+
+```text
+SH-1 = 2 sigma_1^2 - sigma_1 sigma_2 + sigma_1 sigma_3 - sigma_2^2
+     = sigma_1(2 sigma_1 + sigma_3 - sigma_2) - sigma_2^2
+     = Q,
+det T_2 = 2(2 sigma_1 + sigma_2 - sigma_3) SH-1.
+```
+
+Here `Q` is exactly the symmetric-block invariant already frozen in
+`notes/j-li-schoenberg-2/LAMBDA3_T2.md`.  Its pinned two-architecture
+incubation interval is
+
+```text
+SH-1 = Q in
+[0.000000001883563636456191,
+ 0.000000001989968490233267],
+```
+
+strictly positive.  The historical gamma_2 interval used there has width
+`1.369020023246330e-9`: enough to decide the sign, but wider than the
+separately frozen N1 refinement threshold below.  Therefore N1 remains a
+fresh width-refinement and transfer audit; it is not the first evaluation of
+SH-1 and it does not retroactively rename the existing Q run.
+
 ### 5.2 Cancellation depth, stated in advance
 
 The combination `qw_2 = 6 sigma_1 + 3 sigma_2 + sigma_3` cancels to
@@ -323,8 +377,10 @@ about `1.5e-7` from terms of size about `1.4e-1`: six digits of exact
 cancellation.  Float readings (engineering witnesses only, never
 assertions): qw_0 ~ 2.31e-2, qw_1 = M_1 ~ 3.71e-5, qw_2 ~ 1.5e-7,
 det H_1^(0) ~ 2e-9.  Therefore the SH-1 gate needs interval brackets of
-width about 1e-10 on the sigma side, which in turn needs a gamma_2
-bracket of width about 1e-9.  The cocycle lane's EM-2 machinery on
+width about 1e-10 on the sigma side.  A gamma_2 bracket of width about
+1e-9 is a conservative sufficient target, although the older wider Q
+pin already decides the sign through the better-conditioned normal form.
+The cocycle lane's EM-2 machinery on
 f(x) = ln^2(x)/x is the declared route (already listed there as the
 ready extension for the T_2 gate); the same bracket serves both lanes,
 another junction dividend.
@@ -341,11 +397,14 @@ gamma terms of the classical expansion).
 ### 5.3 Named next gates
 
 ```text
-N1  gamma_2 EM-2 bracket (width <= 1e-9), then exact interval evaluation
-    of SH-1.  One new verifier, one run, pinned before execution.
+N1  fresh gamma_2 EM-2 bracket (width <= 1e-9), exact machine pin of
+    SH-1 = Q, and a standalone interval transfer against the historical Q
+    pin.  One new verifier, one evidentiary run, pinned before execution.
 N2  sigma_4 derivation and freeze by the same xi(1+t) route as
-    amendment 3 (route-validated on sigma_1..sigma_3), then SH-1' =
-    qw_1 qw_3 - qw_2^2 and the 3x3 families.
+    amendment 3 (route-validated on sigma_1..sigma_3), then the shifted
+    2x2 gate SH-1' = qw_1 qw_3 - qw_2^2.  This does not reach either
+    3x3 family: unshifted 3x3 needs qw_4/sigma_5 and shifted 3x3 needs
+    qw_5/sigma_6, each under a later separately frozen pin.
 N3  Two-architecture re-run of N1/N2 at public validation time, per the
     lane's standing rule.
 ```
@@ -436,19 +495,33 @@ Import: a transfer/composition operator with holomorphic contracting
 kernel on a disk-type space (nuclear of order zero in Grothendieck's
 sense; the Mayer operator of the Gauss or golden continued-fraction map
 is the standard example) has singular values s_k = O(r^k) for some
-r < 1.  Then
+r < 1.  For a positive self-adjoint witness, singular values equal the
+forced eigenvalues, so directly
 
 ```text
 N(eps) = O( log(1/eps) ),
 ```
 
-against the forced eps^(-1/2) log(1/eps) of 7.1.  Hence NO realization
-of the pole-chart (equivalently x-chart) Fredholm target lies in the
-exponential singular-value class.  Because the parent's spectral
-rigidity fixes the nonidentity spectrum of every exact witness, this is
-an exclusion by operator class, independent of construction provenance:
-it kills every direct "analytic transfer operator" route, including the
-phi-continued-fraction route R3 in its holomorphic form, in one stroke.
+against the forced eps^(-1/2) log(1/eps) of 7.1.
+
+The nonnormal case needs one additional line, not an identification of
+eigenvalue count with singular-value count.  Order the target nonzero
+eigenvalues by modulus as `b_k`.  Fredholm determinant equality fixes
+`b_k ~ (log k/(2 pi k))^2`, while Weyl's multiplicative inequality gives
+
+```text
+prod_(k<=n) b_k <= prod_(k<=n) s_k.
+```
+
+The logarithm of the left side is `-2 n log n + O(n log log n)`, whereas
+`s_k <= C r^k` makes the right side at most
+`n log C + n(n+1) log(r)/2 = -c n^2 + O(n)`.  For large n the required
+inequality is impossible.  Hence NO positive witness, and no nonnormal
+Fredholm witness with the same nonzero determinant spectrum, lies in the
+exponential singular-value class.  This is an exclusion by operator class,
+independent of construction provenance: it kills every direct "analytic
+transfer operator" route, including the phi-continued-fraction route R3 in
+its holomorphic form, in one stroke.
 Scope discipline: it does NOT kill transfer-operator ideas as such; it
 forces them off analytic function spaces.
 
@@ -524,7 +597,7 @@ cheapest first; the first miss kills the proposal, not RH:
 K0  scale rigidity: no free constant (section 6.2);
 K1  qw_0 interval must hit the pinned lambda_1 interval;
 K2  qw_1 interval must hit the pinned M_1 interval (junction);
-K3  top-of-spectrum gate: 1/b_max must hit the y_1 = 1/4 + gamma_1^2
+K3  top-of-spectrum gate: 1/b_max must hit the y_1 = 1/4 + t_1^2
     reference interval (the reference bracket is comparator data, like
     lambda_1);
 K4  counting: both terms of 7.1; Schatten boundary of 7.2;
@@ -576,8 +649,9 @@ Q4  the g-to-q recursion against power sums on two synthetic rational
     spectra; the eigenvalue Moebius maps b = a/(1+a/4), a = b/(1-b/4)
     as exact involutive dictionaries; scaling covariance
     qw_n(c dot spectrum inverse) = c^(n+1) qw_n;
-Q5  double-Hankel discipline: a positive instance with all leading
-    minors positive; the Hamburger separator (moments of delta_(+1) +
+Q5  double-Hankel discipline: a positive finite-support instance with
+    leading minors positive through its support rank and zero thereafter;
+    the Hamburger separator (moments of delta_(+1) +
     delta_(-1)) passing every H^(0) minor while H^(1) fires at once
     (the shifted family is not redundant); a signed instance firing
     H^(0) itself;
@@ -609,7 +683,7 @@ scope            non-formal one-environment dictionary audit; not a
 | `J-LI-W-CHART-EQUIVALENCE` | T as equivalence (parent spine) | unregistered |
 | `J-LI-SIGMA-HANKEL-DICTIONARY` | T | unregistered |
 | `J-LI-LADDER-JUNCTION` | T | unregistered |
-| `J-LI-Q-CALIBRATION-LADDER` | frozen interface; SH-1 pending N1 | unregistered |
+| `J-LI-Q-CALIBRATION-LADDER` | SH-1 = Q transferred; N1 width audit pending | unregistered |
 | `J-LI-Q-COUNTING-GATE` | T (dictionary) + imported RvM | unregistered |
 | `J-LI-Q-ANALYTIC-NUCLEAR-NOGO` | T, operator-class scope | unregistered |
 | `J-LI-Q-CARRIER-SMOOTHNESS-SELECTION` | H | unregistered |
@@ -618,24 +692,27 @@ scope            non-formal one-environment dictionary audit; not a
 
 ## 12. Non-claims
 
-No J-native `A_J`, `B_J`, or moment functional is constructed.  The
-junction theorem transfers existing pins; it creates no new positivity.
-SH-1 is frozen but not evaluated: its interval evaluation is gate N1
-and happens in a fresh pinned run, never retroactively.  The
+No J-native `A_J`, `B_J`, or moment functional is constructed.  The two
+junction theorems transfer existing pins; they create no new positivity.
+SH-1 is exactly the already-evaluated Q invariant.  Gate N1 is a fresh
+gamma_2-width refinement and standalone transfer audit, never a
+retroactive relabeling of the historical Q run.  The
 smoothness selection and the pair-count reading are H and are not
 inputs to any gate.  Nothing here changes the frozen parent prereg;
 the x-chart remains the construction target and the w-chart is
 calibration.  G8 remains proof-only.  J-LI-Q-MOMENT-REALIZATION stays
-O.  RH stays O.  No public registration, no push, no normative change
-is made by this candidate.
+O.  RH stays O.  No public registration or normative change is made by
+this candidate.
 
 ## 13. Promotion posture
 
 ```text
 current   notes-only candidate; exact dictionaries machine-pinned in one
-          environment
-next      N1 (gamma_2 bracket + SH-1 interval), N2 (sigma_4 freeze,
-          SH-1'), owner review of the junction theorem and the no-go
+          environment; SH-1 = Q transferred from the existing
+          two-architecture incubation pin
+next      N1 (fresh gamma_2 width + SH-1/Q transfer audit), N2 (sigma_4
+          freeze and shifted SH-1'), owner review of both junction
+          theorems and the repaired no-go
 then      fold of the junction and dictionary rows into the lane map;
           any public probe needs a NEW PREREG and NEW pins per the
           standing rule; the moment-realization probe additionally
