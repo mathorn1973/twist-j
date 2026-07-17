@@ -4,8 +4,8 @@
 STATUS:      NON-CANONICAL ANALYSIS NOTE. No claim status earned.
              Repository-certified inputs are the closed horizons 2..4,
              2..5, 2..6 and the special-block closures in horizon6_prep /
-             horizon7_prep. Horizon-7 ordinary and coupled numbers below
-             are an explicitly unpinned experiment, not a certificate.
+             horizon7_prep. The horizon-7 ordinary and coupled values below
+             are closed by the exact data-only replay in this notes lane.
 SCOPE:       the DECLARED fixed-level-2 structured cell-sector ansatz of
              ENTROPY-SELECTION-RECON. Nothing here decides r > 2 collars,
              other sectors, or ENTROPY-LAYER-BRIDGE globally, exactly as
@@ -93,7 +93,7 @@ the invariant sense `b_H^sp -> infinity`, equivalently
 enough when `q_H` changes. Conversely, bounded special minima do not decide
 branch (A): the ordinary blocks or their global coupling may still diverge.
 
-## 2. Exact small-horizon data and the open horizon `2..7`
+## 2. Exact small-horizon data through `2..7`
 
 At the common scale 48 the repository-certified comparisons are
 
@@ -104,6 +104,10 @@ horizon   exact optimum     scaled   ordinary  special   named optimal-witness t
 2..6      5939/7500         118780      190      220     (313/1875,
                                                           573/1250,
                                                           1249/7500, 0)
+2..7      6877/7500         137540      220      260     (209/2500,
+                                                          3751/7500,
+                                                          937/3750,
+                                                          1/12, 0)
 ```
 
 The special block is also repository-certified at horizon `2..7`:
@@ -118,50 +122,55 @@ Two consecutive scaled `+40` steps refute an exact geometric-progression fit
 to these three marginals, but they prove neither a uniform unscaled floor nor
 an asymptotic law.
 
-### Unpinned ordinary/coupled experiment at `2..7`
+### Exact ordinary/coupled closure at `2..7`
 
-A completed local experiment reported the following, but no ordinary dual,
-MILP proof log, solution file, or coupled witness is committed in this branch:
-
-```text
-ordinary local-polytope optimum: 192 (denominator-5 primal, integer dual)
-ordinary integral witness:       220 (exact replay and 624-fibre lift)
-reported HiGHS MILP result:      220 with floating-point gap 0
-special exact optimum:           260 (repository-certified)
-joint integral witness:          624*220 + 260 = 137540
-```
-
-The reported exactly replayed joint witness gives the attainable upper bound
-inside this unpinned experiment
+The ordinary bundle is reconstructed independently at `320` variables, `580`
+pair records, and `60` pins.  Its exact data-only branch-and-bound certificate
+partitions the complete finite `F_5` domain into:
 
 ```text
-o_7 <= 137540/150000 = 6877/7500.
+branch nodes:                    236
+exact rational-dual leaves:      190 (minimum bound 220)
+exact Hall-infeasible leaves:     755
+dual inequalities replayed:      2911700
+maximum branch depth:            11
 ```
 
-The reported LP dual would give the relaxation lower bound
+The Hall leaves are essential: reduced point assignments do not belong to the
+structured ordinary ansatz unless the five decoded positions at every graph
+node can reassemble to a permutation.  Every branch is therefore closed either
+by a rational local-polytope dual strictly above `219`, or by an exact Hall
+cardinality violation.  No floating-point solver bound is used by the replay.
+
+The matching assignment has exact reduced cost `220`, reassembles on all `64`
+nodes, and lifts through all `624` ordinary fibres at the same cost.  Combining
+it with the already exact special block gives both the lower and upper value
 
 ```text
-(624*192 + 260)/150000 = 30017/37500,
+624*220 + 260 = 137540,
+o_7 = 137540/150000 = 6877/7500.
 ```
 
-but that dual is not present here and is not repository-auditable yet. The
-floating-point branch-and-bound lower bound is likewise not a replayable exact
-certificate excluding integer cost `<= 219`. Therefore this note does not
-state `o_7 = 6877/7500`.
+The structured witness independently replays all `625` block minima and has
+transition distances
 
-The reported experiment outcomes are:
+```text
+(209/2500, 3751/7500, 937/3750, 1/12, 0).
+```
+
+The earlier experiment diagnostics now read:
 
 ```text
 E1  PASS for the named witness: the terminal 6 -> 7 transition costs 0.
-E2  reported FAIL in the solver output: the candidate integer optimum has
-    marginal 220 - 190 = 30, outside [40, 60].
-E3  reported PASS literally: the LP dual is integral.
-    The floating-point B&B result indicates that the relaxation is not tight,
-    with candidate gap 220 - 192 = 28.
+E2  FAIL: the exact ordinary marginal is 220 - 190 = 30, outside [40, 60].
+E3  PASS only in its literal experimental wording: the root LP dual observed
+    during construction was integral.  It is not the closure certificate;
+    exact closure comes from the replayed B&B/Hall partition.
 ```
 
-An integral dual does not imply an integral primal optimum, and terminal zero
-is recorded only for this witness, not for every optimum.
+Terminal zero is recorded only for this named witness, not for every optimum.
+The finite-horizon equality proves no asymptotic bound and decides neither
+branch of the dichotomy.
 
 ## 3. The transition-local kill shot is falsified
 
@@ -249,10 +258,12 @@ conditions does a disjoint selection yield on the order of `H/log H`
 contributions and force divergence. If the same anchor edges recur in every
 band, disjoint-band counting is unavailable and the global dual is required.
 
-For horizon `2..7`, the immediate exact task is narrower: freeze and replay an
-integer infeasibility certificate for ordinary cost `<= 219`, then replay the
-joint witness. Until that lower certificate exists, `6877/7500` remains an
-attainable value rather than a closed optimum.
+Horizon `2..7` now supplies the first exact instance of that discipline: its
+data-only B&B/Hall replay excludes ordinary cost `<= 219`, and its joint
+witness attains the resulting block lower bound. Extending the table beyond
+`2..7`, or proving either asymptotic branch, requires a new exact finite lane
+or one of the global capacity programs above; the closed value here does not
+perform that extrapolation.
 
 ## 5. Non-claims
 

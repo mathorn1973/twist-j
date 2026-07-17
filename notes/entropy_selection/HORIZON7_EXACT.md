@@ -47,6 +47,11 @@ An exact assignment of cost `220` must be serialized and replayed without a
 solver dependency. The replay must verify every constraint and lift the same
 ordinary witness through all `624` ordinary fibres.
 
+The reduced point variables are a lower relaxation until their five positions
+at each of the `64` graph nodes reassemble to a permutation.  The upper gate
+therefore also verifies the representative decoded permutation at every node
+before performing the stronger all-`624` lift.
+
 Finding any exact feasible assignment of cost at most `219` fires the target:
 the value `220` is falsified, the counterexample is retained, and the threshold
 is not moved silently.
@@ -54,20 +59,41 @@ is not moved silently.
 ## 4. Decisive lower-bound gate
 
 Closure requires a standalone, exactly replayable certificate that cost at
-most `219` is impossible. The intended certificate is a branch-and-bound
-partition of the complete finite `F_5` domain:
+most `219` is impossible for every reassemblable assignment. The certificate
+is a branch-and-bound partition of the complete finite `F_5` domain:
 
 1. branch children are disjoint and exhaustive inside their parent;
-2. every leaf carries an exact rational LP dual bound strictly greater than
-   `219`;
-3. every dual inequality and objective value is checked with exact arithmetic;
+2. a leaf either carries an exact rational LP dual bound strictly greater than
+   `219`, or an exact Hall witness showing that its decoded position domains
+   cannot reassemble to a permutation;
+3. every dual inequality, objective value, and Hall cardinality inequality is
+   checked with exact arithmetic;
 4. the replayer reads a data-only certificate and has no solver dependency;
 5. the certificate bytes and their digest are pinned by the tests.
 
-Because the objective is integral, a verified leaf bound greater than `219`
-proves a leaf lower bound of at least `220`. Floating-point bounds, an
-unreplayed solver log, an incomplete partition, or an inexact leaf place the
-lane on HOLD.
+This Hall leaf is a correction forced by the first exact prototype, not a
+relaxation of the target. A dual-only partition of all `F_5^320` also contains
+integral reduced assignments which are not structured maps because decoded
+positions collide. Such branches are outside the ordinary ansatz, but they
+must be excluded explicitly rather than silently treated as valid or assumed
+to have cost at least `220`.
+
+Soundness in the other direction is replayed as well.  For every one of the
+`625` gauge fibres, every graph node, position, and residue, the canonical
+transport table verifies both that the five position sheets land in one
+physical cell and that their decoded residues are independent of the gauge
+fibre.  At each node the resulting map from the `625` gauge fibres to physical
+cells is also checked to be bijective. Thus the inverse of any original
+structured label has one common gauge fibre; retracting its five
+points, and decoding again preserves its permutation and produces one common
+cell.  A Hall-infeasible reduced branch therefore cannot contain the
+retraction of an original structured label.
+
+Because the objective is integral, a verified dual leaf bound greater than
+`219` proves a leaf lower bound of at least `220`; a verified Hall leaf proves
+that the branch contains no reassemblable assignment. Floating-point bounds,
+an unreplayed solver log, an incomplete partition, or an inexact leaf place
+the lane on HOLD.
 
 ## 5. Coupled closure gate
 
@@ -119,3 +145,41 @@ entropy test suite, `git diff --check`, policy and repository unit tests,
 Canon and ledger checks, and independent readback. One capable machine may
 construct the certificate and a second ordinary machine may replay it. This is
 not a formal two-architecture gate, and PIZE is not used.
+
+## 8. Exact closure record
+
+The ordinary lower certificate contains `1181` nodes: `236` branch nodes,
+`190` exact rational-dual leaves, and `755` exact Hall-infeasible leaves. It
+replays `2911700` dual inequalities, reaches minimum leaf bound `220`, and has
+maximum depth `11`. Its canonical data file is `394650` bytes with SHA-256
+
+```text
+5f3c2ce879bc79d16a67c9b2098787d5afb5f3bd5bac8dc83cf1e3dd0e4e29e8
+```
+
+The matching ordinary witness has assignment SHA-256
+
+```text
+821531f74d3ef86f0f8b5087c6e4f7a763dded1fb928d755837298c6ceaebd42
+```
+
+and exact cost `220`. Structure preservation is checked on the complete table
+of `625 * 320 * 5 = 1000000` gauge states. The canonical stream records each
+transported state as an unsigned 16-bit little-endian integer in
+fibre/node/position/residue order and has SHA-256
+
+```text
+7e6b33a78920aa6124dd7e237c710f3fd134073da3adb12feaf92226fe59c14b
+```
+
+Every lifted ordinary block reassembles on all `64` nodes and replays at cost
+`220`. The coupled witness then matches the special lower value `260`, covers
+all `625` blocks, and closes lower and upper bounds at
+
+```text
+624 * 220 + 260 = 137540,
+137540 / 150000 = 6877 / 7500.
+```
+
+This record closes only the finite scope in section 6. It is not a promotion,
+probe result, or asymptotic statement.
