@@ -222,3 +222,4 @@ CURVATURE-HISTORICAL-GAUSS-SPLIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boun
 CURVATURE-HISTORICAL-GAUSS-SPLIT	CURVATURE-HISTORICAL-TRACE	REQUIRES	the ambient member of the split is the previously typed historical operator and retains its exact trace anchor
 CURVATURE-OPERATOR-CANONICAL	CURVATURE-HISTORICAL-GAUSS-SPLIT	BOUNDED_BY	the exact historical equality constrains one declared full-carrier candidate but does not select a canonical operator class
 PENTAGON-NORMALIZATION	J-GOLDEN-BRIDGE	REQUIRES	the identity j = (J - 1)^3 identifies the fifth-root filter with the J-generated pentagon
+J-LI-TORAL-HAAR-NOGO	J-STEP	REQUIRES	the named dimension-four specialization uses the public multiplication-by-J matrix M_J; the general no-go depends only on the frozen root-of-unity-free toral carrier class

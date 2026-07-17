@@ -1,11 +1,35 @@
 # Canon changelog (public series)
 
-## Public Canon v7
+## Public Canon v8
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 177 claims; 0 T-LOCK, 85 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
+Registry snapshot: 178 claims; 0 T-LOCK, 86 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+This fold records `P-J-LI-TORAL-HAAR-1` at its immutable preregistration pin
+`47b738ac` and byte-identical aarch64 and x86_64 public record. It adds
+`J-LI-TORAL-HAAR-NOGO` at [T] for the declared L6 carrier class.
+
+For every finite-dimensional torus and every integer automorphism with no
+root-of-unity eigenvalue, its Haar Koopman operator cannot realize the full
+standard Li norm ladder. An assumed realization forces RH by Li's criterion,
+then forces an atomic symmetrized vector measure, while every nonconstant
+toral character orbit is a bilateral-shift sector and has no spectral atoms.
+The named `A = M_J` specialization lies in the excluded class.
+
+RH is only a forced intermediate consequence of the contradiction and
+remains open. No conditional spectral target is separately registered; no
+non-Haar, non-Koopman, infinite-dimensional, boundary, scattering, or
+enlarged carrier is excluded; and no replacement realization, moment or
+cocycle bridge, Weil-positive form, decoder, or physical lift is added.
+
+## Public Canon v7
+
+<!-- BEGIN GENERATED CANON7 COUNTS -->
+Registry snapshot: 177 claims; 0 T-LOCK, 85 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON7 COUNTS -->
 
 This fold records `P-PENTAGON-WEIL-1` at its immutable preregistration pin
 `6be1231a` and byte-identical aarch64 and x86_64 public record. It adds
