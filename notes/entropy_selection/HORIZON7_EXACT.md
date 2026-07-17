@@ -183,3 +183,31 @@ all `625` blocks, and closes lower and upper bounds at
 
 This record closes only the finite scope in section 6. It is not a promotion,
 probe result, or asymptotic statement.
+
+## 9. Validation and independent readback
+
+The closure commit is
+
+```text
+51f81083451b12c4b0b332e0fc29dea900e9950a
+```
+
+Local validation on 2026-07-17 passed the full entropy-selection suite
+(`134/134`), the repository policy suite (`POLICY PASS`, `38/38` tool tests),
+`CANON PASS v6`, `LEDGER PASS`, and `git diff --check`. Public-probe and
+minimal-reproduction checks were correctly not applicable to this notes-only
+delta.
+
+Two independent fresh detached checkouts of that exact commit then replayed on
+Ubuntu 24.04, aarch64, Python 3.12.3. Each ran the nine ordinary and six coupled
+horizon-7 tests with `15/15 PASS`, exit `0`, and empty stderr. Both generated
+the same coupled module report, byte for byte:
+
+```text
+bytes          630
+lines           11
+stdout sha256  cace0927bc8c3e80ebf0dcbac9ee00341d3ff1fd9f535fcf2cc8489607791d1f
+```
+
+Readback verified both data-file hashes from section 8 before execution. This
+is an independent notes-lane replay, not a formal two-architecture gate.
