@@ -335,3 +335,51 @@ toral carrier class, prove its spectral type, identify the forced
 symmetrized Li measure, and close the contradiction. The exploratory
 finite test to n = 32 may remain a sanity check; the no-go proof is
 analytic. A broad P-PENTAGON-WEIL-2 is intentionally NOT proposed.
+
+## 10. PREP record: successor verifier v2 (2026-07-16)
+
+Prepared per prereg draft section 2 so that probe registration only
+re-pins. NON-FORMAL: a prep artifact, not a formal run record; the
+formal probe pins a fresh copy after the owner's public claim (no
+retroactive formalization). Relative to v1 it adds the required
+M_J content and removes every libm float from the byte-pinned stdout.
+
+```
+verifier        verify_toral_haar_nogo_v2.py
+file sha256     d50a94d28daa632945ef082b5a5a6cfff987ac3c11a047139d666e8169249033
+                (19390 bytes, pinned before its single run; 10/10 PASS
+                first run, 0.2 s)
+stdout          stdout_toral_haar_v2.txt
+stdout sha256   2494056ce80ed68079a4d77e0cb4573e06151013d961db0075193b1404efda00
+                (2548 bytes); exit 0, empty stderr
+ENVIRONMENT     LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0
+                TZ=UTC; Linux x86_64, Python 3.11.15; single platform
+TH1-TH3         unchanged from v1 (Cayley, half-angle, forced-measure
+                dictionary)
+TH4             M_J characteristic data on the pinned step matrix
+                [[1,0,-1,1],[0,1,-1,0],[1,0,0,0],[0,1,-1,1]] (identical
+                to probes/P-ENTROPY-BRIDGE-1 and reproduce/dirac-ladder):
+                charpoly = Phi_5(x-1) = x^4-3x^3+4x^2-2x+1 by two exact
+                routes (Faddeev-LeVerrier and polynomial substitution),
+                det = 1, tr = 3, det(2I-M_J) = 5 (CODEC-TR4 cross-tie)
+TH5             modulus alternatives exact in Z[zeta_5]: the two
+                eigenvalue modulus-squares are the roots of y^2-3y+1,
+                i.e. phi^2 and phi^-2 in Z[phi] (y = 1+u gives u^2-u-1);
+                y = 1 evaluates to -1: no eigenvalue of modulus 1
+TH6             cyclotomic exclusion proof-first: p irreducible (exact
+                finite enumeration), eulerphi(m) = 4 only for
+                m in {5,8,10,12} (confining bound imported), p differs
+                from Phi_5, Phi_8, Phi_10, Phi_12: no root of unity
+TH7             exterior-square non-escape: charpoly(Lambda^2 M_J) =
+                (y^2-3y+1) Phi_10(y) exactly; the Koopman character
+                action runs through M_J^T with cyclotomic-free charpoly
+TH8, TH9        the former libm witnesses replaced by deterministic
+                directed Fraction enclosures (alternating-series arctan;
+                Machin pi; artanh logs with geometric tails), widths
+                < 10^-20, printed as directed 24-digit decimals:
+                theta(gamma=1) and pi and L(1/1000) enclosures in the
+                pinned stdout
+X1              det(A^k - I) != 0 loops (cat map k <= 300; M_J k <= 120)
+                labeled EXPLORATORY WITNESS; the all-k, all-d statement
+                rests on TH5/TH6, not on the loops
+```

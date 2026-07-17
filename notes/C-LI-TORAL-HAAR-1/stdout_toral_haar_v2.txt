@@ -1,0 +1,15 @@
+PASS TH1 Cayley dictionary exact at five rational gammas: |z|^2 = 1, 1 - z = 1/rho, |1-z|^2 = 1/(gamma^2+1/4) for z = (rho-1)/rho, rho = 1/2 + i gamma
+PASS TH2 half-angle law exact: Re z = (gamma^2-1/4)/(gamma^2+1/4), Im z = gamma/(gamma^2+1/4), Im(z) * 2 gamma = 1 + Re(z), so theta_gamma = 2 arctan(1/(2 gamma))
+PASS TH3 forced-measure dictionary exact on the synthetic multiset {(1,1),(3/2,2),(7,1)}: w = m/(gamma^2+1/4) = 2m(1-cos theta); lambda_n = (1/2) int |D_n|^2 d sigma_xi and t_n = sigma_xi_hat(n) for n = 0..10; sigma_xi(T) = t_0 = 2 lambda_1
+PASS TH4 M_J characteristic data exact: charpoly(M_J) = Phi_5(x-1) = x^4-3x^3+4x^2-2x+1 for the pinned step matrix; det = 1, tr = 3, det(2I-M_J) = 5 (CODEC-TR4 cross-tie), p(1) = 1, p(-1) = 11
+PASS TH5 modulus alternatives exact in Z[zeta_5]: alpha, beta satisfy y^2+y-1 = 0 with alpha+beta = -1, alpha beta = -1; |1+z^a|^2 = 2+alpha (a in {1,4}) or 2+beta (a in {2,3}); the modulus-squares are the roots of y^2-3y+1 (sum 3, product 1) = phi^2 and phi^-2 under y = 1+u (u^2-u-1); y = 1 gives -1 != 0: no eigenvalue of M_J has modulus 1
+PASS TH6 cyclotomic exclusion proof-first: p has no rational root and no integer quadratic split (exact enumeration), hence p is irreducible; {m : eulerphi(m) = 4} = {5,8,10,12} on the confining range m <= 32 (elementary bound eulerphi(m) >= sqrt(m/2), imported); p differs from Phi_5, Phi_8, Phi_10, Phi_12: no eigenvalue of M_J is a root of unity
+PASS TH7 exterior-square non-escape exact: charpoly(Lambda^2 M_J) = (y^2-3y+1) Phi_10(y) = y^6-4y^5+5y^4-5y^3+5y^2-4y+1, so the primitive tenth roots live in Lambda^2 M_J only; the Koopman character action runs through M_J^T on Z^4 with charpoly p, cyclotomic-free by TH6
+PASS TH8 directed bracket for theta at synthetic gamma = 1: exact alternating-series enclosure of 2 arctan(1/2), width < 10^-20
+TH8 enclosure theta in [0.927295218001612232428512, 0.927295218001612232428513]
+PASS TH9 directed bracket for the accumulation leading term at eps = 1/1000: L = (eps/pi)(log(1/(2 pi eps)) + 1) enclosed by Machin pi and artanh log brackets with geometric tails, width < 10^-20
+TH9 enclosure pi in [3.141592653589793238462639, 3.141592653589793238462751]
+TH9 enclosure L(1/1000) in [0.001932102242993516043710, 0.001932102242993516043711]
+PASS X1 EXPLORATORY WITNESS (finite, exact, not a gate): det(A^k - I) = 2 - tr(A^k) != 0 for the cat map, k = 1..300, and det(M_J^k - I) != 0 for k = 1..120; the all-k, all-d statement is TH5/TH6 proof-first
+FAILED: none
+VERDICT: PASS C-LI-TORAL-HAAR-1 prep successor v2
