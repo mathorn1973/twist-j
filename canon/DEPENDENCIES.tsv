@@ -223,3 +223,13 @@ CURVATURE-HISTORICAL-GAUSS-SPLIT	CURVATURE-HISTORICAL-TRACE	REQUIRES	the ambient
 CURVATURE-OPERATOR-CANONICAL	CURVATURE-HISTORICAL-GAUSS-SPLIT	BOUNDED_BY	the exact historical equality constrains one declared full-carrier candidate but does not select a canonical operator class
 PENTAGON-NORMALIZATION	J-GOLDEN-BRIDGE	REQUIRES	the identity j = (J - 1)^3 identifies the fifth-root filter with the J-generated pentagon
 J-LI-TORAL-HAAR-NOGO	J-STEP	REQUIRES	the named dimension-four specialization uses the public multiplication-by-J matrix M_J; the general no-go depends only on the frozen root-of-unity-free toral carrier class
+J-LI-E8-SHELL-MULTIPLICITY-NOGO	COLOR-MCKAY-E8	REQUIRES	the E8 shell obstruction uses the public E8 identification; the probe independently supplies the theta-series shell multiplicities needed by the declared functional-calculus scope
+MCKAY-THETA-FUNCTIONAL-CALCULUS-CARRIER	J-LI-E8-SHELL-MULTIPLICITY-NOGO	REQUIRES	the falsified carrier is exactly the positive trace-class functional-calculus route excluded by the shell-multiplicity no-go
+J-LI-LAMBDA-HAAR-HS-NOGO	J-RAMIFIED-CHORD	REQUIRES	the compact boundary is the lambda-adic completion named by the public ramified fifth-root chord; the no-go then uses its conductor filtration
+LAMBDA-BOUNDARY-HS-KOOPMAN	J-LI-LAMBDA-HAAR-HS-NOGO	REQUIRES	the falsified Hilbert-Schmidt and S2 route is exactly the subroute excluded by the compact-boundary Hilbert-Schmidt theorem
+LAMBDA-COCYCLE-ANGLES	J-LI-LAMBDA-HAAR-HS-NOGO	BOUNDED_BY	the theorem excludes Hilbert-Schmidt and S2 forms but explicitly leaves the all-vector cocycle form as the surviving bounded scope
+LAMBDA-COCYCLE-ANGLES	J-LI-TORAL-HAAR-NOGO	REQUIRES	the compact-boundary cocycle hypothesis is the remaining Haar-Koopman local route after the toral Haar carrier no-go; it does not reopen that excluded carrier
+O-R2-K-JUNCTION-PIN	PLENUM-POINT	REQUIRES	the junction identity uses the public plenum quantities s_J and phi and asks for their exact K-side arithmetic match
+J-LI-LAMBDA-SHIFT-NOGO	J-RAMIFIED-CHORD	REQUIRES	the scaling carrier is defined by the lambda uniformizer from the public ramified fifth-root chord
+J-LI-LAMBDA-SHIFT-NOGO	J-LI-TORAL-HAAR-NOGO	REQUIRES	the forced Li spectral-measure comparison is inherited from the toral Haar no-go, while the scaling probe supplies the absolutely-continuous shift contradiction
+LAMBDA-DISCRETE-SCALING-SINGLE-UNITARY-CARRIER	J-LI-LAMBDA-SHIFT-NOGO	REQUIRES	the falsified carrier is exactly the discrete-time single-unitary and declared tensor-composite class excluded by the scaling-shift no-go
