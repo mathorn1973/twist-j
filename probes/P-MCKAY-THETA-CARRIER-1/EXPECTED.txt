@@ -1,0 +1,13 @@
+PASS G7 log2 enclosure in (0.6931, 0.6932)
+PASS G1 N(200) lower bound >= 68 [witness 68.960393]
+PASS G2 N(5) upper bound < 6 [witness 5.940100]
+PASS G3 interval multiplicity bound D < 19 [witness 18.074715]
+PASS G4 max forced multiplicity 18 < shell floor 240
+PASS G5 distinct forced eigenvalues 4 > 1 slot
+PASS G6 E8 shell r(2) = 240 sigma3(1) = 240
+PASS G6 E8 shell r(4) = 240 sigma3(2) = 2160
+PASS G6 E8 shell r(6) = 240 sigma3(3) = 6720
+ASSEMBLY under E5: forced spectrum has >= 4 distinct eigenvalues of
+multiplicity <= 18; every f(Delta_E8) has <= 1 nonzero eigenvalue of
+multiplicity < 240; 4 > 1, contradiction; the carrier class is empty.
+ALL PASS (9 gates)
