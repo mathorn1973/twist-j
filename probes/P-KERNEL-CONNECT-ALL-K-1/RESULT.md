@@ -19,7 +19,7 @@ leg          architecture   python   result         stdout sha256
 -----------  ------------   ------   ------------   ----------------------------------------
 local        aarch64        3.12.3   8/8 ALL PASS   15685afb...9709 (2040 bytes, 14 lines, empty stderr, exit 0)
 local        x86_64         3.11.15  8/8 ALL PASS   15685afb...9709 (2040 bytes, 14 lines, empty stderr, exit 0)
-CI           x86_64         -        pending        (policy workflow re-runs the pinned verifier and compares byte for byte)
+CI           x86_64         3.12     8/8 ALL PASS   policy workflow run 140 (job 88093122202) on commit ae7a170, VERIFY PASS
 ```
 
 The verifier stdout is platform neutral (exact integer arithmetic, standard
@@ -36,8 +36,9 @@ Two-architecture gate: PASS. No falsifier fired: gate 02 reported
 PASS on both architectures. The pin was published before any execution and
 the decision surface was not weakened after the pin.
 
-The GitHub CI x86_64 job number is recorded here once the required `check`
-job is green on the pull request.
+The required GitHub `check` job is green on the pull request: policy suite,
+canon, ledger, unit tests, and the pinned-verifier reproduction all pass on
+x86_64.
 
 ## Fold
 
