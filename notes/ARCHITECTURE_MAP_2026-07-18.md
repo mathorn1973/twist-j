@@ -18,7 +18,8 @@ forgetting they exist.
 CZ: Tato mapa deli program na tri vrstvy. Jadro (status T) drzi: 90 presnych
 vet, vetsina s dvouarchitekturni reprodukci. Vedome mezikusy jsou vsechny
 radky D, C a H plus deklarovane vstupy bez vlastniho radku (architektura
-jadra, magneticky par, koeficient A_GD, slip X, kotva m_e, klasicke importy).
+jadra, magneticky par, koeficient A_GD, slip X, Kahlerova metrika, kotva
+m_e, klasicke importy).
 Hlucha mista jsou radky O: 22 registrovanych der, z toho ctyri strukturni
 brany a ctyri metrologicke, ktere drzi cely rozmerovy vystup dekoderu.
 Kazdy mezikus ma v teto mape polohu, co presne premostuje, a cestu k utazeni.
@@ -32,13 +33,13 @@ The dependency graph of the registry is a two-root DAG:
 ```mermaid
 flowchart TD
     AX["Axiom J = 1 + zeta_5^2"]
-    ALG["J-algebra (section 1)\n10 T rows, unconditional:\nJ-UNIT, J-PROJECTIONS, PI-FROM-J,\nJ-STEP, PLENUM-POINT, ..."]
+    ALG["J-algebra (section 1)\n10 T rows + AXIOM-PROJECTION-DICTIONARY [D],\nunconditional: J-UNIT, J-PROJECTIONS,\nPI-FROM-J, J-STEP, PLENUM-POINT, ..."]
     ARCH["DEF-ARCHITECTURE (declared, underived)\nOmega = N_0 x F_5^6, five generators,\nselector, decoder typing, m_e anchor\n159 REQUIRES edges"]
     KERN["Kernel, census, entropy\n(sections 2-3)"]
     DEC["Decoder interface\nD_matter -> D_geom -> D_clock\npartial: 3 registered legs"]
     DICT["Physics dictionaries (38 D rows)\nprojection, places, force, Born,\nboost, color, cosmology readings"]
     OBS["Observable register\ncommitted forms: alpha, sin^2 theta_W,\nmasses, cosmology register"]
-    WALL["Archimedean wall (section 16)\nLi/RH lane: hangs off the algebra,\nbypasses the architecture hub"]
+    WALL["Archimedean wall (section 16)\nLi/RH lane: hangs off the algebra\n(P5-ROOT-SELECTION and the E8 branch\nare the two architecture-tied exceptions)"]
 
     AX --> ALG
     AX -. "declared beside the axiom,\nnot derived from it" .-> ARCH
@@ -52,9 +53,16 @@ flowchart TD
 
 Two facts shape everything below.
 
-1. Only the section 1 J-algebra (plus the wall rows of section 16) hangs off
-   the axiom unconditionally. Every other claim carries the uniform
-   dependency "conditional on the declared architecture". The single largest
+1. Only the section 1 J-algebra (the 10 T rows plus
+   AXIOM-PROJECTION-DICTIONARY, which rests solely on section 1 theorems)
+   and the Li/RH lane of the wall (PENTAGON-NORMALIZATION, the four no-gos,
+   the three fired carriers, LAMBDA-COCYCLE-ANGLES, O-R2-K-JUNCTION-PIN)
+   hang off the axiom with no path to the architecture hub. Two section 16
+   rows are exceptions: P5-ROOT-SELECTION carries the uniform architecture
+   edge, and the E8 branch (J-LI-E8-SHELL-MULTIPLICITY-NOGO with its fired
+   carrier) routes into the hub through COLOR-MCKAY-E8. Every other claim
+   carries the uniform dependency "conditional on the declared
+   architecture". The single largest
    interposer of the program is therefore not any D row: it is
    DEF-ARCHITECTURE itself, the declared checkpoint space, generators,
    selector, decoder typing, and m_e anchor, with 159 incoming REQUIRES
@@ -136,8 +144,8 @@ Interposers ranked by how much stands on them (from `DEPENDENCIES.tsv`,
 
 | rank | interposer | status | what stands on it |
 |---|---|---|---|
-| 1 | DEF-ARCHITECTURE | declared | every claim outside section 1 (159 edges) |
-| 2 | CENSUS-313 (+ Z5-SHEET, PAIRING, HOSTING) | C | color door T rows, ELECTRON-SIGN-LAWS, hyperplane realization, all eleven ENTROPY rows; one-architecture evidence |
+| 1 | DEF-ARCHITECTURE | declared | every claim outside section 1 and the Li/RH wall lane (159 direct edges) |
+| 2 | CENSUS-313 (+ Z5-SHEET, PAIRING, HOSTING) | C | color door T rows, ELECTRON-SIGN-LAWS, hyperplane realization, and the entropy program (the nine ENTROPY C rows plus ENTROPY-CYLINDER-CUT and ENTROPY-LAYER-BRIDGE quantify over the recurrent core; a textual dependency, unrecorded in DEPENDENCIES.tsv); one-architecture evidence |
 | 3 | AXIOM-PROJECTION-DICTIONARY | D | every gravity-vs-EM reading (sections 5, 13); inline evidence |
 | 4 | READING-SPLIT | D | the decoder interface itself; inline evidence |
 | 5 | MEASURE-BORN-VERB | D | the whole probabilistic reading; owns the only dictionary lift L5 -> L6 |
@@ -153,10 +161,11 @@ Interposers ranked by how much stands on them (from `DEPENDENCIES.tsv`,
 | 15 | QUADRATIC-ENVELOPE-DECODER | H | the decoder-observable program (the totality clause of READING-SPLIT) |
 | 16 | LAMBDA-COCYCLE-ANGLES | H | the one surviving operator-carrier route of the wall program |
 
-Note the structural point: the program's substrate (ODOMETER-INTERNALIZED)
-and its readout (READING-SPLIT) are both D rows with inline-only evidence.
-The dynamics and the decoder are mezikusy by construction; the canon is
-honest about this, and the map's job is to keep it visible.
+Note the structural point: the program's substrate (ODOMETER-INTERNALIZED,
+a D row at recorded-audit evidence class) and its readout (READING-SPLIT, a
+D row with inline-only evidence) are both dictionaries. The dynamics and
+the decoder are mezikusy by construction; the canon is honest about this,
+and the map's job is to keep it visible.
 
 ---
 
@@ -189,7 +198,7 @@ PENTAGON-NORMALIZATION is a normalization identity with no RH content.
 | SILVER-SIBLING | D | tau at prime 5 mirrored by m_8 at prime 2 | an exact structural correspondence theorem instead of declared resemblance |
 | PENTIT-ROOT-READING | D | tau named "square root of the axiom" on the gate line | derive the gate-line role; canon refuses argument = clock, keep that fence |
 | KC3-PLENUM-READOUT | H | ramified place gets the archimedean readout s | fires if the residue-class readout disagrees with s = abs(1 - zeta_5) |
-| LAMBDA-COCYCLE-ANGLES | H | the one live operator-carrier route on the wall, within the declared compact-boundary classes (the moment-functional / Weil-positivity frame and genuinely global constructions continue separately) | fires if any Cayley angle is proved outside 2 pi (1/4) Z[1/5], or the Li second differences do not approach 2 lambda_1 along n = 4·5^A, or an all-vector contradiction closes the class |
+| LAMBDA-COCYCLE-ANGLES | H | the one live operator-carrier route on the wall, within the declared compact-boundary classes (the moment-functional / Weil-positivity frame and genuinely global constructions continue separately) | fires if any Cayley angle is proved outside 2 pi (1/4) Z[1/5], or the Li second differences are proved not to approach 2 lambda_1 along n = 4·5^A, or an all-vector contradiction closes the class |
 | IMPORT: Baker | classical | linear independence of the two log axes | keep usage strictly linear; algebraic independence would need a new (unavailable) import |
 | IMPORT: zeta continuation + completion | classical | PENTAGON-NORMALIZATION's continuation step | any Weil/positivity/carrier/RH assertion requires a separate registered claim |
 | IMPORT: Li spectral package | classical | the forced-measure chains of the no-gos | a gap in the chain is a registered falsifier of J-LI-TORAL-HAAR-NOGO |
@@ -224,6 +233,7 @@ exactly (trace -881/8, exterior term zero by exact cancellation).
 | HYPERPLANE-BOUNDARY-REALIZATION | C | boundary class realized as 63 boundary attractors | no-straddling theorem for the exact recurrent set, window-independent |
 | ENTROPY C cluster (JOINT-CESARO-LAW, BLOCK-HALVING, LIVING-SET, UNIQUE-PAST, PENTAGON-QUOTIENT, AFFINE-COCYCLE, COMPONENT-NOGO, MIRROR-LAW) | C | frozen finite structure of the living carrier | each is explicitly frozen-scope; all-scale versions are separate claims; they jointly constrain the open selection family |
 | COHERENT-LEVEL-2-GAUGE | declared | the gauge in which cocycle and mirror statements are computed | a gauge-independent cocycle or mirror theorem eliminates the input; it is the canonicity obstruction inside the bridge |
+| KERNEL-CELL-COMPONENTS | C | the seventeen-subset one-cell component census ({ac} at 945 down to {abcde} at 1), supplying the exact k = 1 boundary of KERNEL-CONNECT-ALL-K via the recorded BOUNDED_BY edge | second-architecture replay; extend to the full generator-subset lattice or prove the counts structurally |
 | KERNEL-MACRO-READING | D | connected macro space as the affine translational sector | closure of CURVATURE-OPERATOR-CANONICAL decides whether a canonical operator backs the space reading |
 | KLEIN-100 name | prose | the census typology label in section 3 | register a typology claim or anchor the phrase to the section 12 torsor rows |
 
@@ -231,13 +241,18 @@ Holes: CURVATURE-OPERATOR-CANONICAL (four-way UNIQUE / NONUNIQUE / EMPTY /
 STOP; while open, "space is a commutator" cannot rise above a reading) and
 ENTROPY-LAYER-BRIDGE (the equivariant selection family
 Psi_kappa: O/lambda^5 -> L_n with regularity, canonicity, and the frozen
-measure clause; the densest node in the graph, ten incoming edges, and the
+measure clause; with nine recorded edges to the entropy C/F cluster it is
+the most edge-connected claim row outside the DEF-ARCHITECTURE hub, and the
 strongest available discharge path for the architecture mezikus itself).
 
 Dead: CURVATURE-TRACE-VALUE (-21/8 was false; exact recomputation gave
 -881/8), ENTROPY-LIFT-DEFECT (the naive integer lift breaks (bc)^5 = 1:
 the kernel relations live in the mod-5 shadow), ENTROPY-CYLINDER-CUT (no
 finite-window cut exists; the selection must be non-cylindrical).
+
+Retired in prose: the inherited "rate 4/5" coding phrase is retired at the
+CODEC-TR4 paragraph; any future coding claim must define its alphabet,
+message space, encoder, decoder, error criterion, and rate from scratch.
 
 ### 4.3 The decoder and metrology (section 2 decoder, section 15) - the deaf spots
 
@@ -271,8 +286,10 @@ The deaf spots, precisely:
    corrections (polynomial vs exponential) is undecided; 72 alpha^4 is a
    labeled tripwire witness, not a result.
 5. **Totality and read-only-ness are hypotheses.**
-   QUADRATIC-ENVELOPE-DECODER [H] (fires if an observable is not a function
-   of (psi psi^dagger, psi psi^T)) and OBSERVER-WRITE-PORT [H] (closes
+   QUADRATIC-ENVELOPE-DECODER [H] (fires if a decoder observable is
+   exhibited that is not a function of (psi psi^dagger, psi psi^T), or if
+   the pair fails to separate two states the decoder distinguishes) and
+   OBSERVER-WRITE-PORT [H] (closes
    positively only from the completed decoder dependency graph, explicitly
    ordered after the metrology closure). TM-SYM2-MEASURE [H] is the missing
    measure-side justification of the quadratic leg (5 : 2 frame ratio,
@@ -286,7 +303,9 @@ The deaf spots, precisely:
    nothing tracks end-to-end Lorentz closure; an absence with no O row,
    worth registering as an explicit obligation.
 
-Closure order the registry itself suggests: QUADRATIC-DECODER-DATA ->
+Closure order: the canon registers only the last step (OBSERVER-WRITE-PORT
+is "armed, algebraic; ordered after the metrology closure"); the rest is
+this map's proposed order: QUADRATIC-DECODER-DATA ->
 METRO-ADMISSIBILITY -> METRO-EDGE-SCALE (with DRESS-CROSSCOUNT in
 parallel) -> OBSERVER-WRITE-PORT positive closure. The two H rows fire or
 survive along the way; MEASURE-BORN-VERB is tightened only indirectly, by
@@ -310,12 +329,12 @@ ALPHA-SEED (alpha* = 1/p), ALPHA-PREFACTOR-UNIFICATION, WEINBERG-TREE
 | FORCE-POLAR-SIGN | D | modulus = mass/one sign; argument = charge/two signs | derive signs from an interaction-energy theorem on the chain layer |
 | ABELIAN-FACE-DICTIONARY | D | electric half P = J/2; magnetic half given an explicit input pair | publish and prove the sealed six-ensemble magnetic selection (new T or H row) |
 | INPUT: magnetic axiom pair | declared | the whole magnetic half of the face dictionary | same: convert the input clause into a dependency edge |
-| STRONG-SEED | D | Gram weights -> coupling roots; 15 : 4 seed ratio | ALPHA-S-RUNNING decides: a derived running matches alpha_s at a named scale, or every scheme misses and the seed dies |
+| STRONG-SEED | D | Gram weights -> coupling roots; 15 : 4 seed ratio (the weights live in the declared trace/conformal/spatial decomposition, itself an unregistered input) | ALPHA-S-RUNNING decides: a running derived from the 3/4 seed matches alpha_s at a named scale within its stated window, or every derived scheme misses the measured value or breaks the 15 : 4 seed ratio |
 | ALPHA-FORM | D | the committed Queen form for alpha | derive the slip X and the screening S; close SCHEME-DICTIONARY; CODATA stays a fenced witness |
 | ALPHA-VALUE-DIGITS | C | the digit enclosure of the committed form | more digits promote nothing; the gap is the form's derivation, not precision; a second-architecture replay is still due |
 | WEINBERG-FORM | D | sin^2 theta_W = 3/13 + X | same slip X as ALPHA-FORM: one derivation tightens both at once |
 | INPUT: shared slip X = 1/(32 pi^2 phi^4) | declared | the load-bearing underived number of section 6 | a single derivation of X collapses the principal gap of both committed forms; SCHEME-DICTIONARY bans any new free parameter |
-| GRAVITY-BRIDGE-LAW (section 5 paragraph) | D | 864 pi cell action + declared A_GD = 1/(8 pi) + fenced Hulse-Taylor | derive A_GD; the SI clause stays with METRO-EDGE-SCALE |
+| GRAVITY-BRIDGE-LAW (section 5 paragraph; registry home is section 13, see 4.7) | D | 864 pi cell action + declared A_GD = 1/(8 pi) + fenced Hulse-Taylor | derive A_GD; the SI clause stays with METRO-EDGE-SCALE |
 
 Holes: ALPHA-S-RUNNING and SCHEME-DICTIONARY. Together they fence every
 seed-to-experiment comparison: the CODATA window, the electroweak
@@ -340,8 +359,8 @@ FERMIONIZER, TM-BREATH-TOWER).
 | MEASURE-BORN-VERB | D | Born square as THE measure | a forcing/rigidity (Gleason-style) theorem in the registered finite setting, landing exactly on the identikit survivor |
 | KERNEL-CELL-DICTIONARY | D | tick = time, ker Tr_4 = space, Z_5 edge = gauge fiber | rigidity from isotropy and Plancherel facts, or an inequivalent assignment to kill uniqueness hopes |
 | DIRAC-LADDER / FIB-ROOT-CARRIER / DIRAC-STEP | D | the five-gate list = the physical electron; det = 5 selects the electron rung | derive rather than select m_D = 2; controlled continuum limit recovering Dirac dynamics; first-order coefficient sits inside QUANT-SUBSTRATE |
-| CENTER-SPLIT-SELECTION | D | p = 5 selection: door 2 derived, door 1 imported | replace the self-duality import with the two PHOTON-WINDOW-PROOF certificates |
-| IMPORT: Z_N self-duality (N <= 4) | classical | door 1 of the p = 5 selection | same; the selection cannot exceed the import's strength meanwhile |
+| CENTER-SPLIT-SELECTION | D | p = 5 selection: door 2 derived, door 1 imported | the two PHOTON-WINDOW-PROOF certificates would close the "opens for N >= 5" half rigorously; the N <= 4 self-duality clause stays a separate declared import needing its own registered claim |
+| IMPORT: Z_N self-duality (N <= 4) | classical | door 1 of the p = 5 selection | needs its own registered claim; the selection cannot exceed the import's strength meanwhile |
 | IMPORT: Froehlich-Spencer class | classical | the roughening criterion the missing certificate must fit | produce the public exact certificate (obligation ii) |
 | ELECTRON-G-TREE | D | the exact ratio 2 = (2 pi/5)/(pi/5) is the electron's g | close QUANT-SUBSTRATE's Larmor and Schwinger gates; a derived first-order coefficient decides the reading |
 | ELECTRON-SIGN | D | orientation = charge sign; sign Z_2 = initial datum | prove eps totality on event-free survivors (withheld at v1); show the convention is forced |
@@ -351,6 +370,10 @@ FERMIONIZER, TM-BREATH-TOWER).
 Holes: NEUTRON-DELTA-EM, PROTON-RESIDUAL-IS-QCD (the hadronic branch),
 PHOTON-WINDOW-PROOF (both certificates; until closed, no massless Coulomb
 conclusion is promoted).
+
+Untracked absence: "The PMNS sector waits on the mass mechanism frontier"
+is a named, live, waiting sector with no registry row and no O row - the
+same category as the missing Lorentz-closure row in 4.3.
 
 Boundary markers in prose: the Born identikit's eight dead strikes (the
 survivor clauses bind any future Born promotion), and the retired
@@ -371,7 +394,7 @@ and the measure transported from D5 onto the core.
 | BOOST-AXIS | D | the diagonal model's A eigendirections = the frozen axis | classify involutions commuting with B_J; prove the pair unique up to declared equivalence |
 | PROSE: SO+(3,1) density | unregistered | "dense in SO+(3,1)" carried with no claim id | register it: as T with a cited/reproduced proof, or as D with declared scope; until then it is an unaudited import |
 | COLOR-SPLIT-12 | D | Phi eigenspaces 3 = 1 + 2 read as line + color plane | a measure-selected weight vector distinguishing the eigenspaces (via the color gate) |
-| COLOR-KINEMATICAL-GL2 | D | the 19200 normalizer read as GL_2(F_5) on the plane | COLOR-MEASURE-SELECTION decides which subgroup is physically weighted |
+| COLOR-KINEMATICAL-GL2 | D | the special-linear kinematical image (order 480, inside the 40 x 480 = 19200 normalizer of COLOR-KIN-NORMALIZER [T]) read as GL_2(F_5) on the antisymmetric plane | COLOR-MEASURE-SELECTION decides which subgroup is physically weighted |
 | COLOR-LADDER-DICTIONARY | D | the ladder = the nonabelian color door; su(3) on the trace kernel | positive closure of COLOR-MEASURE-SELECTION plus a derived unique color assignment |
 | PROSE: the 2 pi U(1) circle | unregistered | the archimedean normalization on the SL_3(F_5) carrier | a measure-selection derivation that fixes the weight vector without new archimedean input |
 
@@ -410,9 +433,13 @@ TT-LINEAR-ZERO, GYRON-DENSITY (rho = 1/6), SCHWARZSCHILD-TT-ENDPOINT
 
 Holes (seven; every observer-facing number in the domain is parked behind
 them): METRO-EDGE-SCALE (SI G), TT-VECTOR-STATE-NORMALIZATION (numerical
-r_T(k)), TT-SOURCE (emission), QNM-LEAVER-MU (ringdown), POL-READ
-(polarization), FRW-INHOM (perturbation cosmology and any derivation of
-the tilt), DE-CONFORMAL-WEIGHT (the weight behind w = -14/15).
+r_T(k)), TT-SOURCE (emission), QNM-LEAVER-MU (ringdown; note the inherited
+WKB3 ringdown grade was excised in prose as "not a Canon claim", so no
+ringdown grade exists pending this gate), POL-READ (polarization),
+FRW-INHOM (perturbation cosmology; a derivation of the tilt would
+naturally live here, though the registry gates NS-TILT only on CMB-S4 -
+that placement is this map's inference), DE-CONFORMAL-WEIGHT (the weight
+behind w = -14/15).
 
 Additional live O in the pentit lane: SQRT-PHI-TIME-GRAVITY (the dynamical
 face of the time gravity door: a dynamics whose time quantum realizes the
@@ -437,8 +464,9 @@ easiest to lose track of, which is this section's reason to exist.
 | 7 | Z_N self-duality import (N <= 4) | section 9 | replace with the two PHOTON-WINDOW-PROOF certificates |
 | 8 | Froehlich-Spencer class | frontier (photon) | produce the roughening certificate |
 | 9 | zeta continuation + completion | section 16 | keep as named import; separate claims for anything stronger |
-| 10 | Li spectral package (Li criterion, spectral theorem, Fourier uniqueness) | section 16 | audit-grade usage; a chain gap is a registered falsifier |
+| 10 | Li spectral package (Li criterion, spectral theorem, Fourier uniqueness; plus the Gauss-lemma and cyclotomic minimal-polynomial facts quarantined to the probe audits) | section 16 | audit-grade usage; a chain gap is a registered falsifier |
 | 11 | Baker | sections 1, 16 | keep usage strictly linear-independence |
+| 11b | Lindemann-Weierstrass | section 7 (BRIDGE-DEFECT) | keep usage strictly the transcendence of pi for the nonzero bridge defect |
 | 12 | E8 theta + explicit zero counting | section 16 | inputs of the E8 no-go; audited by its falsifier |
 | 13 | SO+(3,1) density sentence | section 10 | register as T (cited proof) or D (declared scope) |
 | 14 | 2 pi U(1) circle on the color carrier | sections 12, 16 | eliminated only by an archimedean-input-free measure selection |
@@ -448,6 +476,8 @@ easiest to lose track of, which is this section's reason to exist.
 | 18 | Hulse-Taylor measured comparison | section 5 | TT-SOURCE turns the fence into a test |
 | 19 | Schwarzschild / Regge-Wheeler background | section 14 | registered uniqueness/derivation claim to widen scope |
 | 20 | Klein-gauge / classical group-theory imports in the color tower | section 12 | already fenced inside T scopes; keep |
+| 21 | Stage B inputs mu = 1 and Z_L2 = 1/2 (inside TT-QUADRATIC-GERM) | section 14 | QNM-LEAVER-MU decides mu after a preregistered inference rule; derive or register the pairing dictionary Z_L2 |
+| 22 | declared trace/conformal/spatial decomposition (carrier of MEASURE-SPATIAL-ONLY and both coupling seeds) | section 5 | register a decomposition-selection claim (the curvature-gate pattern) |
 
 ---
 
@@ -510,8 +540,8 @@ bundles for the four inline T rows; second-architecture replay of the
 census bundle and ALPHA-VALUE-DIGITS; record the census -> color-door
 dependency edges; register falsifiers on the load-bearing dictionaries;
 register or anchor the Klein-100 name and the SO+(3,1) density sentence;
-consider an O row for end-to-end Lorentz closure (currently tracked by
-nothing).
+consider O rows for end-to-end Lorentz closure and the waiting PMNS sector
+(both currently tracked by nothing).
 
 **P1 - finite-to-theorem promotions (contained mathematics).**
 TIME-QUANTUM-TOWER all-k; census protocol-independence (upgrades the
@@ -553,8 +583,13 @@ probe records under `probes/`, reproduction READMEs under `reproduce/`,
 and the non-normative notes (`notes/synthesis-canon-v1.md`, the Li-lane
 consolidation notes, `notes/ENGINEERING.md`, `legacy/CUTOVER_AUDIT.md`).
 All 186 registry rows were cross-checked against this map; every live
-D/C/H/O row appears above in exactly one domain bucket (MEASURE-BORN-VERB
-appears in both the decoder and measure contexts by design). Status
-letters were verified against the registry; scope qualifiers were carried
-verbatim where load-bearing. Nothing in this note upgrades, downgrades,
-or reinterprets any registered status.
+D/C/H/O row appears in at least one domain bucket. Three rows appear in
+two buckets by design: MEASURE-BORN-VERB (decoder and measure contexts),
+GRAVITY-BRIDGE-LAW (its section 5 dictionary paragraph and its section 13
+registry home), and METRO-EDGE-SCALE (decoder deaf spot and gravity hole).
+Status letters were verified against the registry; scope qualifiers were
+carried verbatim where load-bearing. The draft was additionally verified
+by an adversarial pass against REGISTRY.tsv, DEPENDENCIES.tsv,
+EVIDENCE.tsv, GATES.tsv, and STATUS_COUNTS.tsv (statuses, falsifier
+quotes, edge counts, evidence classes). Nothing in this note upgrades,
+downgrades, or reinterprets any registered status.
