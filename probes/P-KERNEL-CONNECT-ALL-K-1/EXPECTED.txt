@@ -1,0 +1,14 @@
+C-KERNEL-CONNECT-ALL-K-1 verifier (exact arithmetic, stdlib only)
+model: diagonal letters {a, c, d, e} plus two-way CSUM ring transvections on (F_5^6)^k
+decision: U = Gamma-closure of span{v_c, v_d, v_e}; U = F_5^6 gives one component for every k >= 2
+
+PASS 01 VERBATIM     all five kernel generators are the verbatim census maps, affine involutions g(x) = M_g x + v_g on all 15625 states with det M_g = 1; a, b linear; translations v_c, v_d, v_e as extracted
+PASS 02 U-CLOSURE    the Gamma closure of span{v_c, v_d, v_e} under {M_a, M_c, M_d, M_e} reaches dimension 6: U = F_5^6, the positive branch of the frozen dichotomy; growth trace 1-2-3-4-5-6
+PASS 03 COMMUTATOR   for k = 2, 3, 4, every h in {c, d, e} and every cell i, the 7-move word D_h R_{i-1}^4 D_h R_{i-1} composes exactly to the pure translation t_{delta_i tensor v_h} (linear part the identity), realizing the extraction lemma
+PASS 04 TRANSVECTION the two-way ring transvections acting on F_5^k reach every nonzero vector from the all-ones vector, exhaustively for k = 2..6 (orbit sizes 24,124,624,3124,15624), the finite instances of the all-k transitivity lemma
+PASS 05 SPAN         the extracted translations delta_i tensor b_j, b_j the six closure basis vectors, span all of F_5^(6k) at k = 2 and k = 3: the translation subgroup is everything
+PASS 06 REDUCTION    for k = 2, 3, 5, forty deterministic pseudo-random states each reduce exactly to the zero state by explicit generator words (every word first verified as a pure translation by exact composition): any state connects to any state
+PASS 07 K1-SHARP     the single cell census is reproduced: {a, c, d, e} alone leaves 9 components at k = 1 and the full verb {a, b, c, d, e} leaves 1; the k >= 2 bound of the theorem is sharp and the coupling is doing real work
+PASS 08 TENSOR       sixty deterministic pseudo-random generator words at k = 2 all have linear part of the exact tensor form P tensor M with P invertible, the structural fact behind the confinement lemma and the negative branch
+
+RESULT 8/8 ALL PASS
