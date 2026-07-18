@@ -64,12 +64,45 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertTrue(self.report.wall_architecture_dependent)
         self.assertTrue(self.report.wall_architecture_free)
 
-    def test_current_census_debt_is_detected_without_illegal_requires(self) -> None:
-        self.assertEqual(
-            self.report.census_missing, architecture.CENSUS_CONSUMERS
+    def test_census_edges_are_missing_or_honest_bounds(self) -> None:
+        expected_missing = tuple(
+            item
+            for item in architecture.CENSUS_CONSUMERS
+            if not self.report.census_edges[item]
         )
+        self.assertEqual(self.report.census_missing, expected_missing)
         for relations in self.report.census_edges.values():
             self.assertNotIn("REQUIRES", relations)
+            if relations:
+                self.assertIn("BOUNDED_BY", relations)
+
+    def test_census_debt_messages_distinguish_missing_bound_and_premise(self) -> None:
+        def make_report(relations: tuple[str, ...]) -> architecture.AuditReport:
+            edges = {item: relations for item in architecture.CENSUS_CONSUMERS}
+            missing = tuple(item for item, values in edges.items() if not values)
+            wrong = tuple(
+                item
+                for item, values in edges.items()
+                if values and "BOUNDED_BY" not in values
+            )
+            return architecture.AuditReport(
+                claims=0,
+                status_counts={},
+                evidence_counts={},
+                direct_architecture_requires=(),
+                transitive_architecture_dependents=(),
+                dependency_terminals=(),
+                wall_architecture_dependent=("BOUND",),
+                wall_architecture_free=("FREE",),
+                census_edges=edges,
+                census_missing=missing,
+                census_wrong_relation=wrong,
+                count_mismatches=(),
+            )
+
+        self.assertIn("missing CENSUS-313 bounds", make_report(()).debt[0])
+        self.assertFalse(make_report(("BOUNDED_BY",)).debt)
+        self.assertIn("must include BOUNDED_BY", make_report(("REQUIRES",)).debt[0])
 
     def test_cli_exit_codes_distinguish_report_from_gate(self) -> None:
         output = io.StringIO()
@@ -77,8 +110,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
             default_code = architecture.main(["--root", str(ROOT)])
             strict_code = architecture.main(["--root", str(ROOT), "--strict"])
         self.assertEqual(default_code, 0)
-        self.assertEqual(strict_code, 1)
-        self.assertIn("missing CENSUS-313 bounds", output.getvalue())
+        self.assertEqual(strict_code, 1 if self.report.debt else 0)
+        if self.report.debt:
+            self.assertIn("Debt", output.getvalue())
 
 
 if __name__ == "__main__":
