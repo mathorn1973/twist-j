@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v9
+# TWIST-J Public Canon v10
 
-**Release identity.** Public Canon v9. Normative authority and activation
+**Release identity.** Public Canon v10. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v9 also declares the discrete
+algebraic axiom is J. Public Canon v10 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v9 does not claim
+seed of the two algebraic projections. Public Canon v10 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -82,7 +82,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v9 contains no such
+deriving the architecture from J; Public Canon v10 contains no such
 theorem.
 
 ---
@@ -328,7 +328,7 @@ Therefore Tr_4(M_J x) = 2 Tr_4(x) in F_5, and the scalar multiples of
 Tr_4 are the only covectors reading any multiplier at all
 (CODEC-TR4 [T], reproduce/hyperplane-codec). No coding rate is inferred
 from this dimension count. The inherited phrase "rate 4/5" is retired
-from Public Canon v9; any future coding claim must define its alphabet,
+from Public Canon v10; any future coding claim must define its alphabet,
 message space, encoder, decoder, error criterion, and rate from scratch.
 
 Five completed public probes now delimit the entropy bridge without closing
@@ -439,11 +439,20 @@ the affine translational sector breaking inter cell symplectic
 parallelism, organized by the SL2(F_5) coupling, with the wedge
 automorphism a completing transitivity (KERNEL-MACRO-READING [D]);
 this refines the commutator reading of space. Connectivity of
-`{a, c, d, e}` on every coupled power `(F_5^6)^k`, `k >= 2`, is only
-the live hypothesis `KERNEL-CONNECT-ALL-K` [H]. It closes by a public
-all-k proof and fires on a public exact counterexample at any named
-`k >= 2`; no finite-power result beyond the registered one-cell census
-is asserted here.
+`{a, c, d, e}` on every coupled power `(F_5^6)^k`, `k >= 2`, is exact
+(KERNEL-CONNECT-ALL-K [T], probes/P-KERNEL-CONNECT-ALL-K-1). Let
+`Gamma = <M_a, M_c, M_d, M_e>` and let `U` be the smallest
+`Gamma`-invariant subspace of `F_5^6` containing the translations
+`{v_c, v_d, v_e}`. Exact closure gives `dim U = 6`. For every affine
+letter `h in {c, d, e}`, the frozen commutator identity is
+`D_h R_(i-1)^4 D_h R_(i-1) = t_(delta_i tensor v_h)`; conjugation gives
+`D_g t_(delta_i tensor u) D_g^(-1) =
+t_(delta_i tensor M_g u)`. Thus the extracted cell factors close to all
+of `U`, and the two-way ring transvections transport them to every cell,
+so the translation subgroup is all of `(F_5^6)^k` for every `k >= 2`.
+The lower bound is sharp: at `k = 1` the same four letters have nine
+components. This is an L1 state theorem for the declared coupled carrier;
+it supplies no continuum, measure, or physical lift.
 
 ## 4. The two places
 
@@ -787,7 +796,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v9. The fermionizer
+inherited naming clause is not part of Public Canon v10. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1352,9 +1361,6 @@ PLENUM AND KERNEL
   KC3-PLENUM-READOUT         the residue class readout of the ramified
                              place
   SQRT-PHI-TIME-GRAVITY      the dynamical face of the time gravity door
-  KERNEL-CONNECT-ALL-K       {a, c, d, e} with the two way CSUM ring
-                             coupling connects every (F_5^6)^k;
-                             proof or exact counterexample required
   CURVATURE-OPERATOR-CANONICAL
                              whether the public architecture determines
                              one equivalence class of spatial-curvature

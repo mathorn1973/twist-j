@@ -233,3 +233,6 @@ O-R2-K-JUNCTION-PIN	PLENUM-POINT	REQUIRES	the junction identity uses the public 
 J-LI-LAMBDA-SHIFT-NOGO	J-RAMIFIED-CHORD	REQUIRES	the scaling carrier is defined by the lambda uniformizer from the public ramified fifth-root chord
 J-LI-LAMBDA-SHIFT-NOGO	J-LI-TORAL-HAAR-NOGO	REQUIRES	the forced Li spectral-measure comparison is inherited from the toral Haar no-go, while the scaling probe supplies the absolutely-continuous shift contradiction
 LAMBDA-DISCRETE-SCALING-SINGLE-UNITARY-CARRIER	J-LI-LAMBDA-SHIFT-NOGO	REQUIRES	the falsified carrier is exactly the discrete-time single-unitary and declared tensor-composite class excluded by the scaling-shift no-go
+KERNEL-CONNECT-ALL-K	KERNEL-WEDGE-AFFINITY	REQUIRES	the all-k proof imports the verbatim affine letter matrices and translations from the public kernel census before closing their Gamma-invariant translation span
+KERNEL-CONNECT-ALL-K	KERNEL-WEDGE-COUPLING	REQUIRES	the all-k proof applies the registered pair of two-way CSUM transvections at every adjacent edge of the coupled ring; the new proof, not the prior pair statement alone, supplies the all-k transport step
+KERNEL-CONNECT-ALL-K	KERNEL-CELL-COMPONENTS	BOUNDED_BY	the one-cell census gives nine components for {a, c, d, e}, so the theorem's k >= 2 lower boundary is exact and is not extended to k = 1

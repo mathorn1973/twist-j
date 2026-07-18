@@ -1,11 +1,31 @@
 # Canon changelog (public series)
 
-## Public Canon v9
+## Public Canon v10
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 186 claims; 0 T-LOCK, 89 T, 38 D, 21 C, 7 H, 22 O, 9 F; 29 live H/O.
+Registry snapshot: 186 claims; 0 T-LOCK, 90 T, 38 D, 21 C, 6 H, 22 O, 9 F; 28 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Kernel-connectivity lane: the existing `KERNEL-CONNECT-ALL-K` row moves
+from [H] to [T] at exactly its registered L1 scope. For every `k >= 2`,
+the diagonal letters `{a, c, d, e}` together with the two-way CSUM ring
+coupling connect all of `(F_5^6)^k`. The proof closes the invariant
+translation subspace to `U = F_5^6`, extracts pure cell translations by
+commutators, and transports them around the ring. The `k >= 2` boundary is
+sharp: the same four letters have nine components at `k = 1`.
+
+No per-layer lift, continuum statement, measure theorem, physical reading,
+or additional status change is made. RH remains O. Evidence:
+`probes/P-KERNEL-CONNECT-ALL-K-1`, pinned before execution and reproduced
+byte for byte on aarch64 and x86_64.
+
+## Public Canon v9
+
+<!-- BEGIN GENERATED CANON9 COUNTS -->
+Registry snapshot: 186 claims; 0 T-LOCK, 89 T, 38 D, 21 C, 7 H, 22 O, 9 F; 29 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON9 COUNTS -->
 
 RH/Li lane: three proof-first no-gos are added at their exact scopes. The E8
 positive trace-class functional-calculus determinant route is fired; the
