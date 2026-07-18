@@ -10,6 +10,8 @@ Closed claims are excluded.
   Decision: fires if the residue class readout of the ramified place disagrees with the archimedean value s = abs(1 - zeta_5)
 - KERNEL-CONNECT-ALL-K [H]: for every k >= 2 the generator set {a, c, d, e} with the two way CSUM ring coupling connects (F_5^6)^k into one component
   Decision: closes positively by a public proof for every k >= 2; fires on any public exact computation exhibiting more than one component at any k >= 2
+- LAMBDA-COCYCLE-ANGLES [H]: the compact lambda-adic boundary route remains open only in the cocycle-vector form: there exists v in L^2(O_lambda,Haar) with ||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n for every n >= 1; any such realization forces every Cayley angle 2 arctan(1/(2 gamma)) into 2 pi (1/4) Z[1/5] and forces the Li second differences to approach 2 lambda_1 along n = 4 . 5^A
+  Decision: fires if any single ordinate Cayley angle 2 arctan(1/(2 gamma)) is proved outside 2 pi (1/4) Z[1/5], if the Li second differences are proved not to approach 2 lambda_1 along n = 4 . 5^A, or if another contradiction excludes every cocycle vector in the declared compact-boundary class
 - NS-TILT [H]: the scalar tilt read as n_s - 1 = -5 alpha
   Decision: live: the tilt n_s - 1 = -5 alpha fails against CMB-S4
 - OBSERVER-WRITE-PORT [H]: the declared decoder is read-only: no admissible observer output writes back into the autonomous state
@@ -43,6 +45,8 @@ Closed claims are excluded.
   Decision: closes by deriving the canonical selector on the commutator phi ladder (the kinetic coefficient and dressing insertion routes) and the SI clause over the single m_e bridge; closes negatively if two inequivalent selectors survive every named gate, so no canonical selector exists
 - NEUTRON-DELTA-EM [O]: the interior compression channel of the neutron electromagnetic delta
   Decision: closes positively by deriving the interior compression channel value; closes negatively if the derived electromagnetic delta moves the neutron outside its measured tier window
+- O-R2-K-JUNCTION-PIN [O]: obtain a rigorous enclosure of lambda_1^K = 1 + (3/2) log 5 - 2 log(2 pi) - gamma + sum_(chi != chi_0 mod 5) L'/L(1,chi), together with the identity (3/2) log 5 = 6 log s_J + 3 log phi and the named Q-case cross-check, without asserting a Li carrier or RH
+  Decision: closes positively when the Q-case formula 1 + gamma/2 - (1/2) log(4 pi) is reproduced inside its pinned bracket and the K-side generalized Stieltjes-Hurwitz enclosures rigorously close; fires if either check is disproved or the declared formula is shown incorrect
 - PHOTON-WINDOW-PROOF [O]: completion of the photon window requires both (i) every closed charge 5 worldline of length L to satisfy F_occ >= kappa L for an admissible kappa with 2^(4 kappa) > 2401, and (ii) an electric face roughening certificate sufficient for the declared Froehlich-Spencer class import; the exact electric face facts already registered are not re-registered here
   Decision: closes positively only when both obligations have public exact certificates; an exact counterexample to the kappa bound or a certified failure of the declared roughening criterion closes the corresponding route negatively; until both close, no massless Coulomb conclusion is promoted
 - POL-READ [O]: the polarization readout
@@ -64,4 +68,4 @@ Closed claims are excluded.
 - TT-VECTOR-STATE-NORMALIZATION [O]: the vector doublet state, its two point and pseudo covariance spectra, the action normalization, the scalar comparison; the only gate yielding a numerical r_T(k)
   Decision: closes positively by a public vector-doublet normalization yielding a numerical r_T(k); closes negatively if every admissible normalization violates the registered TT identities or requires an extra free dimensionless input
 
-Live total: 27.
+Live total: 29.
