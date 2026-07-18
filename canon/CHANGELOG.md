@@ -1,11 +1,30 @@
 # Canon changelog (public series)
 
-## Public Canon v8
+## Public Canon v9
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 178 claims; 0 T-LOCK, 86 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
+Registry snapshot: 186 claims; 0 T-LOCK, 89 T, 38 D, 21 C, 7 H, 22 O, 9 F; 29 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+RH/Li lane: three proof-first no-gos are added at their exact scopes. The E8
+positive trace-class functional-calculus determinant route is fired; the
+compact lambda-adic boundary route is fired only in its
+Hilbert-Schmidt-perturbation and S2 forms; and the discrete-time lambda
+scaling single-unitary route, including its declared unitary tensor
+composites, is fired. The compact-boundary cocycle-vector route remains live
+as LAMBDA-COCYCLE-ANGLES [H], and O-R2-K-JUNCTION-PIN [O] is opened. The fold
+does not claim that all local single-unitary geometry is exhausted. RH
+remains O. Evidence: `probes/P-MCKAY-THETA-CARRIER-1`,
+`probes/P-R2-LAMBDA-HAAR-1`, and
+`probes/P-R2-SCALING-SHIFT-1`.
+
+## Public Canon v8
+
+<!-- BEGIN GENERATED CANON8 COUNTS -->
+Registry snapshot: 178 claims; 0 T-LOCK, 86 T, 38 D, 21 C, 6 H, 21 O, 6 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON8 COUNTS -->
 
 This fold records `P-J-LI-TORAL-HAAR-1` at its immutable preregistration pin
 `47b738ac` and byte-identical aarch64 and x86_64 public record. It adds

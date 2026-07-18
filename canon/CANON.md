@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v8
+# TWIST-J Public Canon v9
 
-**Release identity.** Public Canon v8. Normative authority and activation
+**Release identity.** Public Canon v9. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v8 also declares the discrete
+algebraic axiom is J. Public Canon v9 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v8 does not claim
+seed of the two algebraic projections. Public Canon v9 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -82,7 +82,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v8 contains no such
+deriving the architecture from J; Public Canon v9 contains no such
 theorem.
 
 ---
@@ -328,7 +328,7 @@ Therefore Tr_4(M_J x) = 2 Tr_4(x) in F_5, and the scalar multiples of
 Tr_4 are the only covectors reading any multiplier at all
 (CODEC-TR4 [T], reproduce/hyperplane-codec). No coding rate is inferred
 from this dimension count. The inherited phrase "rate 4/5" is retired
-from Public Canon v8; any future coding claim must define its alphabet,
+from Public Canon v9; any future coding claim must define its alphabet,
 message space, encoder, decoder, error criterion, and rate from scratch.
 
 Five completed public probes now delimit the entropy bridge without closing
@@ -787,7 +787,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v8. The fermionizer
+inherited naming clause is not part of Public Canon v9. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1202,6 +1202,74 @@ claim.
 This carrier exclusion does not alter or falsify the public algebraic and
 finite-periodic statements about `M_J`.
 
+
+These three verdicts delimit three declared carrier classes. They do not
+complete the plenum's single-unitary map, because the compact-boundary
+cocycle-vector route remains open.
+
+- E8 functional-calculus carrier. Here `det_1` is the ordinary trace-class
+  Fredholm determinant `product_j (1 - t^2 a_j)`, with no exponential
+  regularization. If
+  `det_1(I - t^2 A) = Xi(t)/Xi(0)` for positive trace-class
+  `A = f(Delta_E8)`, equality of zero multisets forces the nonzero spectrum
+  `gamma^-2` with zeta-zero multiplicities. The weakened explicit
+  Riemann-von Mangoldt bound gives `N(200) >= 68` and multiplicity at most
+  18 for each ordinate up to 200, hence at least four distinct
+  small-multiplicity eigenvalues. But `Theta_E8 = E4` makes every nonzero
+  E8 shell have size `240 sigma_3(n) >= 240`; only the one-dimensional zero
+  shell can supply a smaller multiplicity. Therefore no operator in the
+  frozen functional-calculus class realizes the determinant
+  (J-LI-E8-SHELL-MULTIPLICITY-NOGO [T],
+  probes/P-MCKAY-THETA-CARRIER-1).
+  MCKAY-THETA-FUNCTIONAL-CALCULUS-CARRIER [F] records exactly that fired
+  route. Non-shell-constant operators and the use of the theta identity as a
+  positivity source are not excluded.
+
+- lambda-adic boundary Koopman, Hilbert-Schmidt subroute. For any unit `u`
+  and any `n >= 1` with `u^n != 1`, multiplication by `u` leaves every
+  additive character above the finite level `v_lambda(u^n - 1)` non-fixed.
+  Thus `I - U_u^n` has infinite Hilbert-Schmidt norm. For
+  `J = 1 + zeta_5^2`, the complex embedding
+  `zeta_5 = exp(2 pi i/5)` gives `|J| = phi^-1 != 1`; hence `J` is not a
+  root of unity and the divergence holds for every `n >= 1`. The spectrum
+  is pure point on roots of unity with unbounded multiplicity, and its frozen
+  order tower is `4, 20, 20, 20, 20, 20, 100, 100`, independently
+  re-derived in the Eisenstein model
+  `x^4 - 5x^3 + 10x^2 - 10x + 5` of discriminant 125
+  (J-LI-LAMBDA-HAAR-HS-NOGO [T],
+  probes/P-R2-LAMBDA-HAAR-1).
+  LAMBDA-BOUNDARY-HS-KOOPMAN [F] closes only the
+  Hilbert-Schmidt-perturbation and S2 forms. It does not close the
+  cocycle-vector form LAMBDA-COCYCLE-ANGLES [H].
+
+- lambda-adic scaling shift. The value group of `K_lambda^*` is `Z`.
+  The unitary `U f(x) = 5^(-1/2) f(lambda x)` maps the valuation shell
+  `S_n` to `S_(n-1)` and is a bilateral shift of infinite multiplicity
+  and homogeneous Lebesgue type. Therefore every vector spectral measure is
+  absolutely continuous, incompatible with the purely atomic measure forced
+  by an exact all-n Li cocycle realization; `I - U^n` is non-Hilbert-Schmidt
+  for every `n >= 1`, and every declared discrete-time tensor composite
+  `U tensor V` remains absolutely continuous by convolution. For the
+  boundary vector the ladder increments increase strictly toward `phi^2`
+  without attaining it. After the one free rescale
+  `|c|^2 = lambda_1`, the second rung
+  `lambda_1 (2 + 2r)` is disjoint from
+  `lambda_2 = 4 lambda_1 - M_1` by exact intervals
+  (J-LI-LAMBDA-SHIFT-NOGO [T],
+  probes/P-R2-SCALING-SHIFT-1).
+  LAMBDA-DISCRETE-SCALING-SINGLE-UNITARY-CARRIER [F] records this exact
+  discrete-time class and its declared unitary tensor composites. It does
+  not cover distribution or trace formalisms, moment-functional
+  constructions, or genuinely global adelic objects.
+
+The E8 multiplicity obstruction, the compact-boundary Hilbert-Schmidt
+obstruction, and the scaling-shift spectral-type obstruction are now closed
+only at those declared scopes. In particular, the compact lambda-adic
+boundary cocycle-vector route remains LAMBDA-COCYCLE-ANGLES [H]. The program
+also continues in the moment-functional (Weil positivity) frame and in
+genuinely global constructions. RH remains O; none of these results proves,
+assumes, or falsifies RH.
+
 The wall is one archimedean wall, and it is understood: the shadow is
 the polylogarithm ladder of J. What stands on it: the quantum
 substrate gates, Larmor and the Schwinger term, the term carrying the
@@ -1223,6 +1291,25 @@ The live obligations and hypotheses of the program. Each identifier is
 a registry row with status O or H; the registry carries for every row
 a concrete falsifier or a decision condition: what closes it
 positively and what closes it negatively.
+
+- LAMBDA-COCYCLE-ANGLES [H]. The compact lambda-adic boundary route remains
+  open only in cocycle-vector form: an exact realization would require a
+  vector `v in L^2(O_lambda,Haar)` with
+  `||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n` for every `n >= 1`.
+  Necessarily every Cayley angle
+  `2 arctan(1/(2 gamma))` lies in `2 pi (1/4) Z[1/5]`, and the Li second
+  differences approach `2 lambda_1` along `n = 4 . 5^A`. One ordinate
+  proved outside that grid, failure of the stated limit, or any all-vector
+  contradiction in this compact-boundary class fires the hypothesis.
+
+- O-R2-K-JUNCTION-PIN [O]. Obtain a rigorous enclosure of
+  `lambda_1^K = 1 + (3/2) log 5 - 2 log(2 pi) - gamma
+  + sum_(chi != chi_0 mod 5) L'/L(1,chi)`, together with
+  `(3/2) log 5 = 6 log s_J + 3 log phi` and the named Q-case cross-check.
+  The obligation closes only when the Q formula is reproduced inside its
+  pinned bracket and generalized Stieltjes-Hurwitz enclosures rigorously
+  close the K side; a failed cross-check or a disproved formula fires it.
+  No Li carrier or RH statement follows from opening this obligation.
 
 ```
 MEASUREMENT AND METROLOGY
