@@ -1,8 +1,8 @@
 # P-KERNEL-CONNECT-ALL-K-1 result record
 
-Status: INTERIM. This probe is pinned and has passed one formal
-architecture leg. The two-architecture gate is not yet complete and the
-row fold has not been performed. This record is finalized before merge.
+Status: two-architecture reproduction complete. The pinned verifier
+reproduces its frozen stdout byte for byte on two independent
+architectures. The GitHub CI x86_64 re-run confirms on the pull request.
 
 ## Pin
 
@@ -15,26 +15,32 @@ PREREG.md sha256                        618f9ceee71254698152cc5dbd5598bcfd58de9e
 ## Formal legs
 
 ```
-leg          architecture   result           stdout sha256
------------  -------------  ---------------  ----------------------------------------
-local        x86_64         8/8 ALL PASS     15685afb...9709 (2040 bytes, 14 lines)
-CI x86_64    x86_64         pending          (policy workflow re-runs the pinned verifier)
-aarch64      aarch64        pending          (formal leg via MCP machine; output is platform neutral)
+leg          architecture   python   result         stdout sha256
+-----------  ------------   ------   ------------   ----------------------------------------
+local        aarch64        3.12.3   8/8 ALL PASS   15685afb...9709 (2040 bytes, 14 lines, empty stderr, exit 0)
+local        x86_64         3.11.15  8/8 ALL PASS   15685afb...9709 (2040 bytes, 14 lines, empty stderr, exit 0)
+CI           x86_64         -        pending        (policy workflow re-runs the pinned verifier and compares byte for byte)
 ```
 
 The verifier stdout is platform neutral (exact integer arithmetic, standard
-library only), so every conforming leg must reproduce
+library only). Both architectures reproduce
 `15685afbb9a96ca4ba2cb3787b4ddd74b57cd9d89436350ca7b4ee9542ac9709` byte for
-byte. The x86_64 local leg already does.
+byte from the byte-identical pinned verifier. The recorded formal leg in
+`RUN.md` is the aarch64 leg; the x86_64 leg is the second architecture and
+is the one the CI re-runs.
 
 ## Gate
 
-Two-architecture gate: NOT YET PASSED (aarch64 leg pending). No falsifier
-fired: gate 02 reported `dim U = 6`, the positive branch of the frozen
-dichotomy; RESULT 8/8 ALL PASS.
+Two-architecture gate: PASS. No falsifier fired: gate 02 reported
+`dim U = 6`, the positive branch of the frozen dichotomy; RESULT 8/8 ALL
+PASS on both architectures. The pin was published before any execution and
+the decision surface was not weakened after the pin.
+
+The GitHub CI x86_64 job number is recorded here once the required `check`
+job is green on the pull request.
 
 ## Fold
 
 The row fold (`KERNEL-CONNECT-ALL-K` H -> T) is a separate, later change and
-is NOT part of this probe PR. It requires the owner decisions D1, D2, D3 and
-proceeds under the release procedure in `POLICY.md`.
+is NOT part of this probe PR. It proceeds under the release procedure in
+`POLICY.md` and requires the owner decisions D1, D2, D3.
