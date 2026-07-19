@@ -1,0 +1,11 @@
+PASS 01 J_lambda = [1+zeta_5^2]_(1-zeta_5) = 2 has orbit 1,2,4,3 and order 4
+PASS 02 digit automata: Theta_n=J_lambda^s2(n), q(Theta_n)=t_n, Theta_n^2=(-1)^t_n, n<=2^20
+PASS 03 dyadic recursion: T_0(u)=u and T_1(u)=J_lambda*u descend to Thue-Morse, n<2^19
+PASS 04 carry cocycle: s2, Theta and t increment identities hold for n<2^20
+PASS 05 CODEC-TR4 premise: M_J is exact and Tr4(M_J*x)=2*Tr4(x)-5*x_zeta2
+PASS 06 char(M_J)=x^4-3x^3+4x^2-2x+1=(x-2)^4 mod 5
+PASS 07 exhaustive F5 readouts: nonzero scalar covectors form only the Tr4 line, multiplier 2
+PASS 08 trace lift: all 125 Tr4=1 residue seeds read J_lambda^k for 0<=k<=16
+PASS 09 guards: inverse quotient n<2^18; carry audit -4<=mu<=8, x,y<64 selects 2
+PASS 10 recovered breath: (-1)^t(n)=(-1)^n*(-1)^t(floor(n/2)), 1<=n<=2^20
+RESULT 10/10 ALL PASS
