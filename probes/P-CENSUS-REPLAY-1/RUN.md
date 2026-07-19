@@ -19,4 +19,4 @@ stderr_bytes: 0
 result: 11/11 ALL PASS
 wall_seconds: 0.366198172
 base_commit: 72a04e1e2dae8df66f170b169328611b75a8a1af
-second_architecture: pending GitHub x86_64 run from the same immutable pin
+second_architecture: GitHub x86_64, Ubuntu 24.04.4 LTS, Python 3.12.13; policy run 162 job 88192431671 on head d1f976c855483657bf4cae5b23afe12e433e50fb reports VERIFY PASS with the same verifier and stdout SHA-256 hashes
