@@ -213,10 +213,10 @@ PENTAGON-NORMALIZATION is a normalization identity with no RH content.
 | interposer | status | bridges | tighten |
 |---|---|---|---|
 | AXIOM-PROJECTION-DICTIONARY | D | modulus -> gravity/scale, argument -> EM/phase; CRT factors -> write/read | needs a channel-assignment derivation plus uniqueness; no falsifier registered |
-| TWO-PLACE-PHYSICS | D | field boundary -> physics write/read boundary; CP/T/CPT readings | uniqueness theorem for the boundary reading; identification of the physical CPT operator |
+| TWO-PLACE-PHYSICS | D | field boundary -> physics write/read boundary; CP/T/CPT readings | uniqueness theorem for the boundary reading; identification of the physical CPT operator; candidate derivation seed for the write/read split: trace 1 composes vs trace 2 copies (notes/METAL-TRACE-SYNTHESIS_2026-07-19.md) |
 | I-BILOCATED | D | one i in two places, never merged | force the double residence from the architecture, or exhibit a consequence needing the merged i |
 | SILVER-RING-FACTS | C | finite F_25 ring facts | content is exhaustive; gap is registration discipline (promote the finite proof) |
-| SILVER-SIBLING | D | tau at prime 5 mirrored by m_8 at prime 2 | an exact structural correspondence theorem instead of declared resemblance |
+| SILVER-SIBLING | D | tau at prime 5 mirrored by m_8 at prime 2 | an exact structural correspondence theorem instead of declared resemblance; candidate skeleton: the metallic trace family x^2 = t x + 1 at t = 1, 2 (notes/METAL-TRACE-SYNTHESIS_2026-07-19.md) |
 | PENTIT-ROOT-READING | D | tau named "square root of the axiom" on the gate line | derive the gate-line role; canon refuses argument = clock, keep that fence |
 | KC3-PLENUM-READOUT | H | ramified place gets the archimedean readout s | fires if the residue-class readout disagrees with s = abs(1 - zeta_5) |
 | LAMBDA-COCYCLE-ANGLES | H | the one live operator-carrier route on the wall, within the declared compact-boundary classes (the moment-functional / Weil-positivity frame and genuinely global constructions continue separately) | fires if any Cayley angle is proved outside 2 pi (1/4) Z[1/5], or the Li second differences are proved not to approach 2 lambda_1 along n = 4·5^A, or an all-vector contradiction closes the class |
@@ -592,7 +592,9 @@ metrology is parked behind it.
 
 **P4 - physics-facing single shots.** Derive the slip X (tightens both
 electroweak forms at once); derive A_GD = 1/(8 pi); publish the magnetic
-selection; the two PHOTON-WINDOW-PROOF certificates (which also discharge
+selection; preregister the metallic-trace pair METAL-TRACE-FAMILY and
+WRITE-ATOM-SQRT2I as T candidates (the SILVER-SIBLING and
+TWO-PLACE-PHYSICS tightening seed, notes/METAL-TRACE-SYNTHESIS); the two PHOTON-WINDOW-PROOF certificates (which also discharge
 the self-duality import and the p = 5 door); NEUTRON-DELTA-EM and
 PROTON-RESIDUAL-IS-QCD; the TT chain (TT-SOURCE, QNM-LEAVER-MU, POL-READ,
 TT-VECTOR-STATE-NORMALIZATION); the wall gates (QUANT-SUBSTRATE,
