@@ -23,6 +23,8 @@ Closed claims are excluded.
 
 - ALPHA-S-RUNNING [O]: the strong coupling running above the 3/4 seed
   Decision: closes positively by a running derived from the 3/4 seed matching the measured strong coupling at a named scale within its stated window; closes negatively if every derived scheme from the seed misses the measured value or breaks the seed ratio 15 : 4
+- CARRY-J-CHECKPOINT [O]: determine whether RAMIFIED-TM-LIFT factors through the finite checkpoint projection on a publicly frozen forward U-carrier; neither that carrier scope nor a checkpoint-only map is presently selected, and no selector offset or physical reading is asserted
+  Decision: closes positively only after P-CARRY-J-CHECKPOINT-1 freezes the forward carrier and constructs an exact single-valued h : F_5^6 -> F_5^* with h(pr_checkpoint(U^n omega_0)) = Theta_n for every n in that scope and proves update compatibility; closes negatively at the same frozen scope by an exact equal-checkpoint/different-Theta collision, an incompatible checkpoint update edge, or a proof that no such h exists
 - COLOR-MEASURE-SELECTION [O]: the non abelian measure lift onto SL_3(F_5); 24 carrier orbits, 16 observable types
   Decision: closes positively by a derivation selecting the weight vector over the 24 orbits constrained by the 16 observable types; closes negatively if the constraint set is exhausted with no surviving weight vector, or if two inequivalent vectors survive every named constraint
 - CURVATURE-OPERATOR-CANONICAL [O]: whether the public architecture determines exactly one equivalence class of spatial-curvature operator after its carrier, measure, projection group, and ambient versus intrinsic commutator choice are fixed publicly
@@ -66,4 +68,4 @@ Closed claims are excluded.
 - TT-VECTOR-STATE-NORMALIZATION [O]: the vector doublet state, its two point and pseudo covariance spectra, the action normalization, the scalar comparison; the only gate yielding a numerical r_T(k)
   Decision: closes positively by a public vector-doublet normalization yielding a numerical r_T(k); closes negatively if every admissible normalization violates the registered TT identities or requires an extra free dimensionless input
 
-Live total: 28.
+Live total: 29.
