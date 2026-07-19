@@ -1,0 +1,33 @@
+OK   t=1: C^2 = 1*C + I  (metal law, matrix path)
+OK   t=1: det C = -1  (norm -1, unit)
+OK   t=1: tr C = 1  (trace)
+OK   t=1: disc = t^2+4 = 5
+OK   t=1: prime 5 divides disc 5 -> Q(sqrt5)
+OK   t=2: C^2 = 2*C + I  (metal law, matrix path)
+OK   t=2: det C = -1  (norm -1, unit)
+OK   t=2: tr C = 2  (trace)
+OK   t=2: disc = t^2+4 = 8
+OK   t=2: prime 2 divides disc 8 -> Q(sqrt2)
+OK   gold companion powers give Fibonacci (independent of the pair path)
+OK   silver companion powers give Pell (independent of the pair path)
+OK   (1+i)^2 = 2i in Z[i] (Gaussian path)
+OK   N_{Q(i)/Q}(1+i) = 2  (degree-2 norm)
+OK   norms consistent: degree-4 norm = (degree-2 norm)^2 = 4
+
+trace -> field probe  (disc = t^2 + 4, squarefree kernel = field Q(sqrt kernel)):
+  t=0  disc=4    kernel=1    Q(sqrt1)  
+  t=1  disc=5    kernel=5    Q(sqrt5)  
+  t=2  disc=8    kernel=2    Q(sqrt2)  
+  t=3  disc=13   kernel=13   Q(sqrt13) 
+  t=4  disc=20   kernel=5    Q(sqrt5)    <-- SAME FIELD as t=1
+  t=5  disc=29   kernel=29   Q(sqrt29) 
+  t=6  disc=40   kernel=10   Q(sqrt10) 
+  t=7  disc=53   kernel=53   Q(sqrt53) 
+  t=8  disc=68   kernel=17   Q(sqrt17) 
+
+SCOPE BOUNDARY FOUND: trace -> field is NOT injective (e.g. t=1 and t=4 both give
+Q(sqrt5)). The candidate is therefore scoped to the TWO SIMPLEST metals t in {1,2},
+whose FUNDAMENTAL discriminants are exactly 5 and 8, the two program primes. This is
+a scope, not a contradiction: the promoted claim never asserted injectivity for all t.
+
+CORE SURVIVES, 31 assertions, 0 failures
