@@ -1,6 +1,6 @@
 # P-CARRY-PENTAD-1 result
 
-Status: FORMAL AARCH64 LEG PASS; TWO-ARCHITECTURE GATE PENDING; PUBLIC CLAIM UNREGISTERED
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS; PUBLIC CLAIM UNREGISTERED
 
 ## Recorded decision
 
@@ -10,11 +10,11 @@ exit:    0
 stderr:  empty
 ```
 
-No preregistered falsifier fired on the formal `aarch64` leg. The exact
-finite audit agrees with the frozen proof of C1-C7 at the scopes stated in
-`PREREG.md`. This records a surviving theorem candidate, not a Canon theorem:
-the required independent GitHub `x86_64` reproduction is still pending, and
-registration or promotion would require a separate sealed fold.
+No preregistered falsifier fired on either architecture. The exact finite
+audit agrees with the frozen proof of C1-C7 at the scopes stated in
+`PREREG.md`. This records a reproduced scientific result, not a registered
+Canon theorem. Registration or promotion would require a separate sealed
+fold.
 
 ## Immutable pin and formal leg
 
@@ -37,10 +37,31 @@ result:               18/18 ALL PASS
 ```
 
 `EXPECTED.txt` is the exact stdout of this formal leg. `PREREG.md` and
-`verify.py` remain byte-identical to the public pin. The pull-request policy
-check must rerun that verifier on GitHub `x86_64` and reproduce
-`EXPECTED.txt` byte for byte before the two-architecture computation gate is
-complete.
+`verify.py` remain byte-identical to the public pin.
+
+## Independent x86_64 reproduction
+
+```text
+pull request:          78
+formal evidence head: 95f29296fc381f6b8a9112ce2a7192e33b2a5132
+workflow run:          29700061628
+workflow job:          88227505751
+conclusion:            success
+platform:              GitHub-hosted Ubuntu 24.04.4 LTS x86_64
+runner image:          ubuntu24/20260714.240, runner 2.335.1
+Python:                CPython 3.12.13
+verifier SHA-256:      55484d3063885966463e755fd92c3b5d735443f776824972f35371bdedcbed0f
+stdout SHA-256:        a44a9bc26fcbfc91f61d77d2b2c5dc49133af889036d5a0b5c62302172492a56
+byte identity:         PASS, 1621 bytes and 19 lines
+gate:                  PASS
+```
+
+The required policy workflow reran the pinned verifier on the exact formal
+evidence head. It enforced verifier integrity, exit zero, empty stderr, and
+byte-identical `EXPECTED.txt`, and logged `VERIFY PASS P-CARRY-PENTAD-1` with
+the two frozen hashes. Together with the formal `aarch64` record, this
+completes the two-architecture computation gate. `RUN.md` remains the neutral
+`aarch64` record; this close-gate update changes only `RESULT.md`.
 
 ## Earned scope and fences
 
