@@ -43,7 +43,9 @@ leg          architecture   python   result             stdout sha256
 -----------  ------------   ------   ----------------   ----------------------------------------
 local        x86_64         3.11.15  ALL OK, 19 checks  8f1567fd0d9f2ac766d8242821ec8bff6277a3c40fcd467a284662dd9de54d12
                                                         (1101 bytes, 20 lines, empty stderr, exit 0)
-CI           x86_64         -        pending            required check at pull-request time
+CI           x86_64         -        VERIFY PASS        policy workflow run 29682530733
+                                                        (job 88181118811) on commit ca4cd46,
+                                                        required check green
 aarch64      -              -        PENDING            the open two-architecture obligation;
                                                         appended here as a neutral leg record
 ```
