@@ -1,8 +1,9 @@
 # P-RAMIFIED-TM-LIFT-1 result record
 
-Status: the formal aarch64 leg passes. The GitHub x86_64 leg is pending.
-The proposed all-`n` theorem status is proof-first: the finite audit does not
-promote a bounded prefix into an unbounded claim.
+Status: two-architecture reproduction complete. The formal aarch64 leg and
+the clean GitHub x86_64 leg reproduce the pinned verifier stdout byte for
+byte. The proposed all-`n` theorem status is proof-first: the finite audit
+does not promote a bounded prefix into an unbounded claim.
 
 ## Immutable pin
 
@@ -23,11 +24,14 @@ by this result commit.
 architecture  platform      python  result          stdout sha256
 ------------  ------------  ------  --------------  ----------------------------------------
 aarch64       Ubuntu 24.04  3.12.3  10/10 ALL PASS  1e186b17...5db7c8
+x86_64        GitHub Linux  3.12    10/10 ALL PASS  1e186b17...5db7c8
 ```
 
 The exact transcript is 805 bytes and 11 lines, with empty stderr and exit
 code 0. It is frozen as `EXPECTED.txt`; full command and hashes are in
-`RUN.md`.
+`RUN.md`. The GitHub policy workflow run `29692441650`, job `88207417865`,
+reports
+`VERIFY PASS P-RAMIFIED-TM-LIFT-1 31adb820...72d39f 1e186b17...5db7c8`.
 
 ## Proof and audit verdict
 
@@ -43,7 +47,7 @@ The pinned audit independently constructs the C4 and C2 digit recursions,
 checks their large frozen prefixes, exhausts every nonzero covector and
 multiplier over `F_5`, checks all 125 trace-one residue seeds through the
 frozen range, and records the inversion-blind and breath guards. All ten
-gates pass. No frozen falsifier fires on the aarch64 leg.
+gates pass. No frozen falsifier fires on either architecture leg.
 
 ## Scope firewall
 
@@ -59,8 +63,10 @@ equality with its carrier is asserted here. `READING-SPLIT [D]`,
 `ODOMETER-INTERNALIZED [D]`, and `TIME-QUANTUM-TOWER [C]` keep their current
 statuses and scopes.
 
-## Remaining gate
+## Two-architecture gate
 
-The GitHub policy workflow must reproduce `EXPECTED.txt` byte for byte on a
-clean x86_64 runner from the same verifier hash. Any Canon or ledger fold is a
-separate reviewed change after the public probe is complete.
+PASS. The aarch64 and x86_64 legs use the byte-identical pinned verifier,
+exit zero, write empty stderr, and reproduce the same 805-byte transcript
+with SHA-256 `1e186b170457cb182368a21e2145d43d5cfc358978ee6d5f6d9eb0d5ea5db7c8`.
+Policy, all 38 unit tests, Canon, and ledger checks are green in the same CI
+job. Any Canon or ledger fold is a separate reviewed change.

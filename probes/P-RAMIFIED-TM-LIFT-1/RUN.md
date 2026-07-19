@@ -17,7 +17,7 @@ stderr_bytes: 0
 result: 10/10 ALL PASS
 wall_seconds: 1.42433838
 base_commit: 72a04e1e2dae8df66f170b169328611b75a8a1af
-second_architecture: pending GitHub CI x86_64 run from the same immutable verifier
+second_architecture: GitHub CI x86_64 run 29692441650, job 88207417865, reproduces the same verifier and stdout SHA-256 byte for byte
 
 The formal run used a fresh detached checkout of the public pin commit. The
 checkout and the separate stdout/stderr files are retained for audit. The
