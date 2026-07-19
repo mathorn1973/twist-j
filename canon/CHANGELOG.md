@@ -1,11 +1,58 @@
 # Canon changelog (public series)
 
-## Public Canon v10
+## Public Canon v11
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 186 claims; 0 T-LOCK, 90 T, 38 D, 21 C, 6 H, 22 O, 9 F; 28 live H/O.
+Registry snapshot: 190 claims; 0 T-LOCK, 93 T, 38 D, 21 C, 6 H, 23 O, 9 F; 29 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Ramified lift lane: `RAMIFIED-TM-LIFT` enters at [T] and L1. The ramified
+value `J_lambda = 2`, the four-state digit recursion, its sign quotient to
+the Thue-Morse bit, the chronological carry cocycle, the all-`k` fixed
+`M_J/Tr_4` realization, and the universal integer carry weight are folded at
+exactly the scope proved in `probes/P-RAMIFIED-TM-LIFT-1`. The all-`n` status
+rests on the public proof; the finite verifier is its two-architecture audit.
+
+The fixed channel selects multiplier 2, while the sign quotient alone is
+inversion-blind. `CARRY-J-CHECKPOINT` opens at [O] and L1 only to decide
+whether this lift factors through `pr_checkpoint` on a separately frozen
+forward carrier; the target probe is `P-CARRY-J-CHECKPOINT-1`. No selector
+derivation, full-state phase identification, physical carry/phase reading,
+time-arrow statement, parity on all of `Z_2`, or lift to L2-L6 is added.
+`READING-SPLIT [D]`, `ODOMETER-INTERNALIZED [D]`,
+`PENTIT-ROOT-READING [D]`, and `TIME-QUANTUM-TOWER [C]` are unchanged.
+
+Carry-pentad lane: `CARRY-PENTAD` enters at [T] and L1. In the frozen
+four-coordinate Hamming frame, the second carry bit is the minus-type
+quadratic refinement whose five nonzero singular vectors carry `S_5`; the
+raw bit-intersection form has only `S_4 x C_2`. Four is the minimum binary
+linear width for a fixed order-five target. The integral `A4` augmentation
+lattice connects the five-cycle to `M_J`, its ramified quotient reads every
+`I+C^a` as 2, and the mod-two transvection supplies the typed root-lattice
+bridge. No unconditional prime, width, cycle, exponent, gauge, or physical
+reading is selected.
+
+Metal-trace lane: `METAL-TRACE-CASCADE` enters at [T] and L2, scoped to
+`t in {1,2}`. The two laws `x^2=t x+1` give discriminants 5 and 8,
+Fibonacci and Pell growth, golden unit `J`, and the nonunit silver pure form
+`1+i=sqrt2 m_8` of norm 4 in `Q(zeta_8)`. The run/record reading remains
+outside the theorem.
+
+Census evidence: `CENSUS-313`, `CENSUS-Z5-SHEET`, `CENSUS-PAIRING`, and
+`CENSUS-HOSTING` remain [C], but their unchanged frozen verifier now has a
+byte-identical aarch64/x86_64 public replay. This is reproduction, not an
+independent implementation and not protocol independence.
+
+Evidence: `probes/P-RAMIFIED-TM-LIFT-1`, `probes/P-CARRY-PENTAD-1`,
+`probes/P-METAL-TRACE-1`, and `probes/P-CENSUS-REPLAY-1`.
+
+## Public Canon v10
+
+<!-- BEGIN GENERATED CANON10 COUNTS -->
+Registry snapshot: 186 claims; 0 T-LOCK, 90 T, 38 D, 21 C, 6 H, 22 O, 9 F; 28 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON10 COUNTS -->
 
 Kernel-connectivity lane: the existing `KERNEL-CONNECT-ALL-K` row moves
 from [H] to [T] at exactly its registered L1 scope. For every `k >= 2`,

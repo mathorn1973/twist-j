@@ -24,24 +24,24 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 186)
+        self.assertEqual(self.report.claims, 190)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 21, "D": 38, "F": 9, "H": 6, "O": 22, "T": 90},
+            {"C": 21, "D": 38, "F": 9, "H": 6, "O": 23, "T": 93},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 39,
-                "one-architecture": 12,
+                "none": 40,
+                "one-architecture": 8,
                 "recorded-audit": 31,
-                "two-architecture": 104,
+                "two-architecture": 111,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 159)
+        self.assertEqual(len(self.report.direct_architecture_requires), 160)
         self.assertGreater(len(self.report.dependency_terminals), 2)
         self.assertIn("ANCHOR-ELECTRON-MASS", self.report.dependency_terminals)
 

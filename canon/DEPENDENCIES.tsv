@@ -236,3 +236,17 @@ LAMBDA-DISCRETE-SCALING-SINGLE-UNITARY-CARRIER	J-LI-LAMBDA-SHIFT-NOGO	REQUIRES	t
 KERNEL-CONNECT-ALL-K	KERNEL-WEDGE-AFFINITY	REQUIRES	the all-k proof imports the verbatim affine letter matrices and translations from the public kernel census before closing their Gamma-invariant translation span
 KERNEL-CONNECT-ALL-K	KERNEL-WEDGE-COUPLING	REQUIRES	the all-k proof applies the registered pair of two-way CSUM transvections at every adjacent edge of the coupled ring; the new proof, not the prior pair statement alone, supplies the all-k transport step
 KERNEL-CONNECT-ALL-K	KERNEL-CELL-COMPONENTS	BOUNDED_BY	the one-cell census gives nine components for {a, c, d, e}, so the theorem's k >= 2 lower boundary is exact and is not extended to k = 1
+RAMIFIED-TM-LIFT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the L1 state and readout statement is conditional on the declared public architecture
+RAMIFIED-TM-LIFT	DEF-ODOMETER-ORBIT	REQUIRES	the digit sum and carry cocycle use only the declared forward odometer carrier N_0 and do not extend parity to all of Z_2
+RAMIFIED-TM-LIFT	PENTIT-ROOT-FACTS	REQUIRES	the ramified image J_lambda = 2 and its exact order-four orbit are inherited theorem inputs
+RAMIFIED-TM-LIFT	QUBIT-FROM-F5	REQUIRES	the C4 to C2 sign quotient is the registered two-class quotient of F_5^*
+RAMIFIED-TM-LIFT	CODEC-TR4	REQUIRES	the all-k realization and unique multiplier 2 use the exact fixed M_J/Tr_4 channel
+CARRY-J-CHECKPOINT	RAMIFIED-TM-LIFT	REQUIRES	the open factorization target is the exact L1 lift just registered, with no larger phase or physical scope
+CARRY-J-CHECKPOINT	DEF-AUTONOMOUS-STATE	REQUIRES	any checkpoint-only factorization must be stated on a separately frozen forward carrier of the declared autonomous update U
+CARRY-PENTAD	J-UNIT	REQUIRES	the integral cyclotomic bridge uses the public unit J = 1 + zeta_5^2
+CARRY-PENTAD	J-STEP	REQUIRES	the root-lattice operator I+C^2 is identified with the public integral multiplication matrix M_J
+CARRY-PENTAD	CODEC-TR4	REQUIRES	the public M_J matrix and its ramified characteristic shadow are used at their registered exact scope
+METAL-TRACE-CASCADE	DEGREES-BY-PRIME	REQUIRES	the two metallic laws use the registered exact sqrt5 and sqrt2 place facts
+METAL-TRACE-CASCADE	Z2-PLACES-SPLIT	REQUIRES	the discriminants 5 and 8 are placed in the two registered disjoint cyclotomic fields
+METAL-TRACE-CASCADE	J-UNIT	REQUIRES	the golden pure form uses the registered exact norm N(J) = 1
+METAL-TRACE-CASCADE	J-MODULUS-CHORD	REQUIRES	the golden recurrence uses the registered exact phi arithmetic
