@@ -20,5 +20,7 @@ base_commit: 72a04e1e2dae8df66f170b169328611b75a8a1af
 second_architecture: aarch64 local leg pending (appended to RESULT.md when
 run, without changing any pinned file); the GitHub CI check reruns the
 pinned verifier on x86_64, which is a same-architecture reproduction
-cross_session: stdout sha256 equals the candidate session's pinned expected
-output byte for byte (candidate leg was Python 3.12.3, this leg 3.11.15)
+provenance_note: informational, not a formal field: the incubation
+candidate session (artifacts recorded by hash in issue 70) reported the
+same stdout sha256 for its non-public pre-probe run (Python 3.12.3); that
+record is not publicly auditable and earns nothing here

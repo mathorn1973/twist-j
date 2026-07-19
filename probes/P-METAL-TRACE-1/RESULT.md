@@ -43,12 +43,15 @@ leg          architecture   python   result             stdout sha256
 -----------  ------------   ------   ----------------   ----------------------------------------
 local        x86_64         3.11.15  ALL OK, 19 checks  8f1567fd0d9f2ac766d8242821ec8bff6277a3c40fcd467a284662dd9de54d12
                                                         (1101 bytes, 20 lines, empty stderr, exit 0)
-candidate    x86_64         3.12.3   ALL OK, 19 checks  same sha256, byte for byte (incubation
-                                                        session, pre-probe provenance, not a leg)
 CI           x86_64         -        pending            required check at pull-request time
 aarch64      -              -        PENDING            the open two-architecture obligation;
                                                         appended here as a neutral leg record
 ```
+
+Provenance (informational, not a leg): the incubation candidate session,
+whose artifacts are recorded by hash in issue 70, reported the same stdout
+sha256 (Python 3.12.3) for its pre-probe run of the byte-identical
+verifier. That record is non-public and earns nothing here.
 
 ## Gate
 
@@ -57,10 +60,10 @@ and the GitHub check are both x86_64, which is a reproduction, not a
 two-architecture gate; under POLICY.md a computation-only result at one
 architecture class stands at most at C. The aarch64 local leg on the
 byte-identical pinned verifier is the single remaining step; a differing
-byte fires the preregistered failure threshold. Every identity in the
-cascade also admits a short self-contained classical proof; an independent
-theorem-grade write-up may establish T with this verifier as its audit.
-Both routes are owner decisions.
+byte fires the preregistered failure threshold. The identities appear to
+admit short self-contained classical proofs; the owner may pursue an
+independent theorem-grade write-up, which could establish T with this
+verifier as its audit. Both routes are owner decisions.
 
 ## Fold
 
