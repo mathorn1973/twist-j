@@ -28,51 +28,72 @@ Kazdy mezikus ma v teto mape polohu, co presne premostuje, a cestu k utazeni.
 
 ## 1. The one-page picture
 
-The dependency graph of the registry is a two-root DAG:
+At this altitude the ledger is best compressed around two load-bearing
+hubs: the algebraic J lane and the declared architecture lane. The literal
+dependency graph is richer: it has eight terminal items, among them the
+separate empirical anchor ANCHOR-ELECTRON-MASS and the individual DEF-*
+definition items, so the picture below is a two-hub compression, not
+literally a two-root DAG. The architecture is declared beside J, not
+derived from it, so no arrow runs from the axiom to the hub. (The
+topology statements here are machine-checked by
+`tools/architecture_map_report.py`.)
 
 ```mermaid
 flowchart TD
-    AX["Axiom J = 1 + zeta_5^2"]
+    AX["AXIOM-J: J = 1 + zeta_5^2"]
     ALG["J-algebra (section 1)\n10 T rows + AXIOM-PROJECTION-DICTIONARY [D],\nunconditional: J-UNIT, J-PROJECTIONS,\nPI-FROM-J, J-STEP, PLENUM-POINT, ..."]
-    ARCH["DEF-ARCHITECTURE (declared, underived)\nOmega = N_0 x F_5^6, five generators,\nselector, decoder typing, m_e anchor\n159 REQUIRES edges"]
+    DECL["Declared architecture inputs\ncheckpoint, generators, selector,\ndecoder typing"]
+    ARCH["DEF-ARCHITECTURE\nhigh-load declared hub:\n159 direct REQUIRES edges,\n167 transitive dependents"]
     KERN["Kernel, census, entropy\n(sections 2-3)"]
     DEC["Decoder interface\nD_matter -> D_geom -> D_clock\npartial: 3 registered legs"]
     DICT["Physics dictionaries (38 D rows)\nprojection, places, force, Born,\nboost, color, cosmology readings"]
     OBS["Observable register\ncommitted forms: alpha, sin^2 theta_W,\nmasses, cosmology register"]
-    WALL["Archimedean wall (section 16)\nLi/RH lane: hangs off the algebra\n(P5-ROOT-SELECTION and the E8 branch\nare the two architecture-tied exceptions)"]
+    ANCH["ANCHOR-ELECTRON-MASS\nseparate empirical anchor"]
+    WALL_FREE["Wall branch (section 16) with no\ntransitive REQUIRES on the hub:\nPENTAGON-NORMALIZATION, the toral and\nlambda no-gos and their fired carriers"]
+    WALL_ARCH["Wall branch inheriting the architecture:\nP5-ROOT-SELECTION direct; the E8 no-go\nand its fired carrier through COLOR-MCKAY-E8"]
 
     AX --> ALG
-    AX -. "declared beside the axiom,\nnot derived from it" .-> ARCH
+    DECL --> ARCH
     ALG --> KERN
     ARCH --> KERN
     KERN --> DEC
     DEC --> DICT
     DICT --> OBS
-    ALG --> WALL
+    ANCH -. "SI calibration" .-> OBS
+    ALG --> WALL_FREE
+    ALG --> WALL_ARCH
+    ARCH --> WALL_ARCH
 ```
 
 Two facts shape everything below.
 
-1. Only the section 1 J-algebra (the 10 T rows plus
-   AXIOM-PROJECTION-DICTIONARY, which rests solely on section 1 theorems)
-   and the Li/RH lane of the wall (PENTAGON-NORMALIZATION, the four no-gos,
-   the three fired carriers, LAMBDA-COCYCLE-ANGLES, O-R2-K-JUNCTION-PIN)
-   hang off the axiom with no path to the architecture hub. Two section 16
-   rows are exceptions: P5-ROOT-SELECTION carries the uniform architecture
-   edge, and the E8 branch (J-LI-E8-SHELL-MULTIPLICITY-NOGO with its fired
-   carrier) routes into the hub through COLOR-MCKAY-E8. Every other claim
-   carries the uniform dependency "conditional on the declared
-   architecture". The single largest
+1. The axiom's unconditional lane is narrow: the section 1 J-algebra (the
+   10 T rows plus AXIOM-PROJECTION-DICTIONARY, which rests solely on
+   section 1 theorems) and the architecture-free wall branch
+   (PENTAGON-NORMALIZATION, the toral and lambda no-gos with their fired
+   carriers, and the section 18 rows LAMBDA-COCYCLE-ANGLES and
+   O-R2-K-JUNCTION-PIN). The rest of section 16 is architecture-tied in
+   the present ledger: P5-ROOT-SELECTION carries a direct architecture
+   edge (if that blanket edge is unintended, removing it is a separate
+   ledger correction; the map reports the ledger as it stands), and the
+   E8 branch (J-LI-E8-SHELL-MULTIPLICITY-NOGO with its fired carrier)
+   inherits the hub through COLOR-MCKAY-E8. DEF-ARCHITECTURE is the
+   largest declared hub - 159 direct REQUIRES edges, 167 transitive
+   dependents - but not the sole non-algebraic foundation: the
+   electron-mass calibration is the separate ledger item
+   ANCHOR-ELECTRON-MASS, outside the hub. The single largest
    interposer of the program is therefore not any D row: it is
    DEF-ARCHITECTURE itself, the declared checkpoint space, generators,
    selector, decoder typing, and m_e anchor, with 159 incoming REQUIRES
    edges and no derivation from J. The canon says this openly ("a definition
    boundary, not an omitted reduction theorem").
-2. All physical meaning is deliberately quarantined in D rows (the G2B
-   dictionary firewall). The T layer holds algebra, finite group theory,
-   chain complexes, and recurrences; the statement "this is gravity / charge
-   / probability / color" is always a dictionary. This is a design choice,
-   not an accident, and it is what makes the interposers enumerable.
+2. All promoted physical identifications are quarantined in D rows (the
+   G2B dictionary firewall); H and O rows may state physical hypotheses
+   and obligations, but they do not close a physical reading. The T layer
+   holds algebra, finite group theory, chain complexes, and recurrences;
+   the statement "this is gravity / charge / probability / color" is
+   always a dictionary. This is a design choice, not an accident, and it
+   is what makes the interposers enumerable.
 
 Status inventory (from `canon/STATUS_COUNTS.tsv`):
 
@@ -144,7 +165,7 @@ Interposers ranked by how much stands on them (from `DEPENDENCIES.tsv`,
 
 | rank | interposer | status | what stands on it |
 |---|---|---|---|
-| 1 | DEF-ARCHITECTURE | declared | every claim outside section 1 and the Li/RH wall lane (159 direct edges) |
+| 1 | DEF-ARCHITECTURE | declared | the largest declared hub: 159 direct REQUIRES edges, 167 transitive dependents; not every non-section-1 item (the architecture-free wall branch bypasses it, and the electron-mass calibration is the separate item ANCHOR-ELECTRON-MASS) |
 | 2 | CENSUS-313 (+ Z5-SHEET, PAIRING, HOSTING) | C | color door T rows, ELECTRON-SIGN-LAWS, hyperplane realization, and the entropy program (the nine ENTROPY C rows plus ENTROPY-CYLINDER-CUT and ENTROPY-LAYER-BRIDGE quantify over the recurrent core; a textual dependency, unrecorded in DEPENDENCIES.tsv); one-architecture evidence |
 | 3 | AXIOM-PROJECTION-DICTIONARY | D | every gravity-vs-EM reading (sections 5, 13); inline evidence |
 | 4 | READING-SPLIT | D | the decoder interface itself; inline evidence |
@@ -460,7 +481,7 @@ easiest to lose track of, which is this section's reason to exist.
 | 3 | kernel coefficient A_GD = 1/(8 pi) | section 5 | derive from the gravity-chain T layer |
 | 4 | shared slip X = 1/(32 pi^2 phi^4) | section 6 | one derivation tightens ALPHA-FORM and WEINBERG-FORM simultaneously |
 | 5 | declared Kahler metric h(z) | section 13 | register a metric-selection claim |
-| 6 | single SI anchor m_e | preamble, 7, 13, 15 | nothing to fix at the anchor; METRO-EDGE-SCALE must give it something to anchor |
+| 6 | single SI anchor m_e (ledger item ANCHOR-ELECTRON-MASS, separate from DEF-ARCHITECTURE) | preamble, 7, 13, 15 | nothing to fix at the anchor; METRO-EDGE-SCALE must give it something to anchor |
 | 7 | Z_N self-duality import (N <= 4) | section 9 | replace with the two PHOTON-WINDOW-PROOF certificates |
 | 8 | Froehlich-Spencer class | frontier (photon) | produce the roughening certificate |
 | 9 | zeta continuation + completion | section 16 | keep as named import; separate claims for anything stronger |
@@ -500,7 +521,14 @@ Rows whose evidence class is weaker than their load:
 3. **Graph debt**: COLOR-RETURN-D5, COLOR-TORSOR-HOLONOMY,
    COLOR-KIN-NORMALIZER, ELECTRON-SIGN-LAWS quantify over "all 313
    attractors" but carry no recorded DEPENDENCIES.tsv edge to
-   CENSUS-313; the census dependency is textual only. Record the edges.
+   CENSUS-313; the census dependency is textual only. The missing edges
+   must be recorded as BOUNDED_BY, not REQUIRES: all four consumers are
+   status T while CENSUS-313 is status C, and check_ledger.py rightly
+   forbids a theorem from REQUIRES-depending on a lower-status claim.
+   The exact four rows are staged in
+   notes/canon/PATCH-CENSUS-313-DEPENDENCIES-2026-07-18.md for a
+   separate Canon fold; tools/architecture_map_report.py --strict stays
+   red until they are folded.
 4. **Empty falsifier fields on load-bearing D rows**:
    AXIOM-PROJECTION-DICTIONARY, READING-SPLIT, TWO-PLACE-PHYSICS,
    MEASURE-BORN-VERB, and most other dictionaries have no registered kill
@@ -537,8 +565,10 @@ The nine F rows are not tombstones; several actively shape the open work:
 
 **P0 - registration hygiene (no new mathematics).** Two-architecture
 bundles for the four inline T rows; second-architecture replay of the
-census bundle and ALPHA-VALUE-DIGITS; record the census -> color-door
-dependency edges; register falsifiers on the load-bearing dictionaries;
+census bundle and ALPHA-VALUE-DIGITS; fold the four staged BOUNDED_BY
+census bounds (notes/canon/PATCH-CENSUS-313-DEPENDENCIES-2026-07-18.md)
+into DEPENDENCIES.tsv; register falsifiers on the load-bearing
+dictionaries;
 register or anchor the Klein-100 name and the SO+(3,1) density sentence;
 consider O rows for end-to-end Lorentz closure and the waiting PMNS sector
 (both currently tracked by nothing).
@@ -591,5 +621,9 @@ Status letters were verified against the registry; scope qualifiers were
 carried verbatim where load-bearing. The draft was additionally verified
 by an adversarial pass against REGISTRY.tsv, DEPENDENCIES.tsv,
 EVIDENCE.tsv, GATES.tsv, and STATUS_COUNTS.tsv (statuses, falsifier
-quotes, edge counts, evidence classes). Nothing in this note upgrades,
+quotes, edge counts, evidence classes), and its graph statements were
+corrected against the audit in
+notes/ARCHITECTURE_MAP_AUDIT_2026-07-18.md, whose machine check
+tools/architecture_map_report.py derives the counts and the wall split
+directly from the TSV ledgers. Nothing in this note upgrades,
 downgrades, or reinterprets any registered status.
