@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v10
+# TWIST-J Public Canon v11
 
-**Release identity.** Public Canon v10. Normative authority and activation
+**Release identity.** Public Canon v11. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v10 also declares the discrete
+algebraic axiom is J. Public Canon v11 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v10 does not claim
+seed of the two algebraic projections. Public Canon v11 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -82,7 +82,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v10 contains no such
+deriving the architecture from J; Public Canon v11 contains no such
 theorem.
 
 ---
@@ -326,9 +326,82 @@ Tr_4(M_J x) = 2 Tr_4(x) - 5 x_c.
 
 Therefore Tr_4(M_J x) = 2 Tr_4(x) in F_5, and the scalar multiples of
 Tr_4 are the only covectors reading any multiplier at all
-(CODEC-TR4 [T], reproduce/hyperplane-codec). No coding rate is inferred
+(CODEC-TR4 [T], reproduce/hyperplane-codec).
+
+This fixed channel has an exact ramified four-state lift. Put
+`lambda = 1 - zeta_5` and `J_lambda = [J] mod lambda`. Reduction sends
+`zeta_5` to 1, hence `J_lambda = 2` in `F_5^*`, with orbit
+`1, 2, 4, 3` and exact order four. Define
+
+```
+Theta_0 = 1,
+Theta_(2n) = Theta_n,
+Theta_(2n+1) = J_lambda Theta_n.
+```
+
+Binary-length induction gives the unique solution
+
+```
+Theta_n = J_lambda^s_2(n).
+```
+
+For the sign quotient `q : F_5^* -> F_5^*/{+-1} ~= F_2`, with
+`q(+-1) = 0` and `q(+-2) = 1`, one has for every `n >= 0`
+
+```
+q(Theta_n) = theta_n,
+Theta_n^2 = (-1)^theta_n.
+```
+
+The four-cycle is the digit-1 transition, not the chronological successor.
+If `c_n = nu_2(n+1)`, then the exact successor law is
+
+```
+Theta_(n+1) = Theta_n J_lambda^(1-c_n).
+```
+
+Moreover, for every `x_0 in Z^4` with `Tr_4(x_0) = 1 mod 5` and every
+`k >= 0`, induction on the CODEC-TR4 identity gives
+
+```
+[Tr_4(M_J^k x_0)]_5 = J_lambda^k.
+```
+
+Thus `k = s_2(n)` realizes `Theta_n` on the one-dimensional fixed
+`M_J/Tr_4` readout quotient. The channel selects multiplier 2; the sign
+quotient alone is inversion-blind and also sends `3^s_2(n)` to `theta_n`.
+Independently, the same integer is the unique universal binary carry weight:
+
+```
+x + y = (x XOR y) + 2 (x AND y)        for all x,y in N_0,
+```
+
+with uniqueness already forced by `x = y = 1`. The frozen formulas also
+imply, for all `x,y in N_0`,
+
+```
+s_2(x) + s_2(y) = s_2(x XOR y) + 2 s_2(x AND y),
+Theta_x Theta_y = Theta_(x XOR y) omega(x,y),
+omega(x,y) := (-1)^theta_(x AND y) in {+-1} subset F_5^*.
+```
+
+On the XOR group `(N_0, XOR)`, `omega` is the symmetric normalized
+bicharacter induced by the finite-support bit pairing `sum_i x_i y_i mod 2`.
+Equivalently, `omega(x,y) = Theta_x Theta_y Theta_(x XOR y)^(-1)`,
+so it is the normalized 2-coboundary of `Theta` and hence a 2-cocycle.
+In this factorization, `x AND y` is the exact bit-intersection datum from
+which the scalar factor set `omega` is read. Together these exact
+statements form
+RAMIFIED-TM-LIFT [T] at L1, evidenced by
+probes/P-RAMIFIED-TM-LIFT-1. The equality of the two integer values is an
+arithmetic consonance, not a physical carry or phase identification. No
+constant chronological quarter-turn, full-state four-phase identification,
+checkpoint factorization, parity on all of `Z_2`, time-arrow reading, or lift
+to L2-L6 is claimed.
+
+No coding rate is inferred
 from this dimension count. The inherited phrase "rate 4/5" is retired
-from Public Canon v10; any future coding claim must define its alphabet,
+from Public Canon v11; any future coding claim must define its alphabet,
 message space, encoder, decoder, error criterion, and rate from scratch.
 
 Five completed public probes now delimit the entropy bridge without closing
@@ -796,7 +869,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v10. The fermionizer
+inherited naming clause is not part of Public Canon v11. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1361,6 +1434,9 @@ PLENUM AND KERNEL
   KC3-PLENUM-READOUT         the residue class readout of the ramified
                              place
   SQRT-PHI-TIME-GRAVITY      the dynamical face of the time gravity door
+  CARRY-J-CHECKPOINT         whether RAMIFIED-TM-LIFT factors through
+                             pr_checkpoint on a publicly frozen forward
+                             U-carrier; target probe P-CARRY-J-CHECKPOINT-1
   CURVATURE-OPERATOR-CANONICAL
                              whether the public architecture determines
                              one equivalence class of spatial-curvature
