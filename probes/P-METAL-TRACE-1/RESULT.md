@@ -1,7 +1,6 @@
 # P-METAL-TRACE-1 result
 
-Status: SCIENTIFIC RESULT; ONE ARCHITECTURE CLASS (x86_64); AARCH64 LEG
-PENDING
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS
 
 ## Scientific decision
 
@@ -46,9 +45,19 @@ local        x86_64         3.11.15  ALL OK, 19 checks  8f1567fd0d9f2ac766d82428
 CI           x86_64         -        VERIFY PASS        policy workflow run 29682530733
                                                         (job 88181118811) on commit ca4cd46,
                                                         required check green
-aarch64      -              -        PENDING            the open two-architecture obligation;
-                                                        appended here as a neutral leg record
+local        aarch64        3.12.3   ALL OK, 19 checks  8f1567fd0d9f2ac766d8242821ec8bff6277a3c40fcd467a284662dd9de54d12
+                                                        (1101 bytes, 20 lines, empty stderr, exit 0)
 ```
+
+The aarch64 leg ran on Ubuntu 24.04 LTS from a clean shallow clone of
+`probe/P-METAL-TRACE-1` at commit
+`46b9f5d3b4d280ea967c503082349bd202b01c18`, with the pinned verifier
+hash confirmed equal to
+`57501a2975ff71a43a1e5f98e7f976e35d27dd6252143fb5d20ce715375fff2a`
+before execution, under
+`LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC`,
+run from the repository root. Its stdout was compared byte for byte
+(`cmp`) against the committed `EXPECTED.txt` and is identical.
 
 Provenance (informational, not a leg): the incubation candidate session,
 whose artifacts are recorded by hash in issue 70, reported the same stdout
@@ -57,15 +66,18 @@ verifier. That record is non-public and earns nothing here.
 
 ## Gate
 
-Two-architecture computation gate: NOT YET PASSED. The formal local leg
-and the GitHub check are both x86_64, which is a reproduction, not a
-two-architecture gate; under POLICY.md a computation-only result at one
-architecture class stands at most at C. The aarch64 local leg on the
-byte-identical pinned verifier is the single remaining step; a differing
-byte fires the preregistered failure threshold. The identities appear to
-admit short self-contained classical proofs; the owner may pursue an
-independent theorem-grade write-up, which could establish T with this
-verifier as its audit. Both routes are owner decisions.
+Two-architecture computation gate: PASS. The aarch64 local leg and the
+x86_64 legs (the formal local leg of RUN.md and the GitHub required
+check) reproduce
+`8f1567fd0d9f2ac766d8242821ec8bff6277a3c40fcd467a284662dd9de54d12` byte
+for byte from the byte-identical pinned verifier. The pin was published
+before any execution and the decision surface was not weakened after the
+pin. No falsifier fired: a single differing stdout byte would have fired
+the preregistered failure threshold. The identities appear to admit
+short self-contained classical proofs; an independent theorem-grade
+write-up remains available to the owner, with this verifier as its
+audit. Status motion (any registry row and its status) is the owner's
+fold decision, outside this probe.
 
 ## Fold
 

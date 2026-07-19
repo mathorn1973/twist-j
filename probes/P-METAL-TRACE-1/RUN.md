@@ -17,9 +17,10 @@ stderr_bytes: 0
 result: ALL OK, 19 checks
 wall_seconds: 0.1
 base_commit: 72a04e1e2dae8df66f170b169328611b75a8a1af
-second_architecture: aarch64 local leg pending (appended to RESULT.md when
-run, without changing any pinned file); the GitHub CI check reruns the
-pinned verifier on x86_64, which is a same-architecture reproduction
+second_architecture: aarch64 leg recorded in RESULT.md reproduces the same
+stdout sha256 byte for byte from a clean clone at commit 46b9f5d; the
+GitHub CI check additionally reruns the pinned verifier on x86_64
+(VERIFY PASS, run 29682530733)
 provenance_note: informational, not a formal field: the incubation
 candidate session (artifacts recorded by hash in issue 70) reported the
 same stdout sha256 for its non-public pre-probe run (Python 3.12.3); that
