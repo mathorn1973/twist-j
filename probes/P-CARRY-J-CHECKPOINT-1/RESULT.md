@@ -1,7 +1,7 @@
 # P-CARRY-J-CHECKPOINT-1 result
 
-Status: SCIENTIFIC RESULT; FORMAL AARCH64 LEG PASS;
-SECOND-ARCHITECTURE COMPUTATION GATE PENDING; PUBLIC CLAIM UNREGISTERED
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS;
+PUBLIC CLAIM UNREGISTERED
 
 ## Recorded decision
 
@@ -11,10 +11,10 @@ exit:    0
 stderr:  empty
 ```
 
-No preregistered falsifier fired in the formal aarch64 leg. The frozen
-symbolic proof establishes the full-carrier L1 checkpoint-factorization
-no-go; the finite verifier audits every one of the `5^6 = 15625` checkpoint
-seeds through the universal collision at times four and six. This records a
+No preregistered falsifier fired on either architecture. The frozen symbolic
+proof establishes the full-carrier L1 checkpoint-factorization no-go; the
+finite verifier audits every one of the `5^6 = 15625` checkpoint seeds
+through the universal collision at times four and six. This records a
 proof-first scientific result, not a registered Canon theorem. The
 `CARRY-J-CHECKPOINT` row remains `[O]` until a separate reviewed fold.
 
@@ -39,6 +39,33 @@ result:               5/5 ALL PASS
 
 `EXPECTED.txt` is the exact LF-only stdout of this formal leg. `PREREG.md`
 and `verify.py` remain byte-identical to the public pin.
+
+## Independent x86_64 reproduction
+
+```text
+pull request:          86
+formal evidence head: c3293bd5173e291093eb03ec464b4641608e574e
+tested merge commit:  ac3f53f00ec740ae4d743b106da5f8bdd4cbda2c
+workflow run:          29724695901
+workflow job:          88294996747
+conclusion:            success
+platform:              GitHub-hosted Ubuntu 24.04 x86_64
+runner image:          ubuntu-24.04 20260714.240.1, runner 2.335.1
+Python:                CPython 3.12.13
+verifier SHA-256:      406004360a511512f3c3c44351f25df64df115aa6f35dbd1c0ac16f4587b20c2
+stdout SHA-256:        87584b6afc5b77a3d8b1cc7957197431227fbdd77cf447da3ea92289fa1e668a
+byte identity:         PASS, 394 bytes and 6 lines
+gate:                  PASS
+```
+
+The required policy workflow checked out GitHub's generated merge of the
+exact formal evidence head into the declared base commit. It enforced
+verifier integrity, x86_64 architecture, exit zero, empty stderr, and
+byte-identical `EXPECTED.txt`, and logged
+`VERIFY PASS P-CARRY-J-CHECKPOINT-1` with both frozen hashes. Together with
+the formal aarch64 record, this completes the two-architecture computation
+gate. `RUN.md` remains the neutral aarch64 record; this close-gate update
+changes only `RESULT.md`.
 
 ## Proof and audit verdict
 
@@ -70,9 +97,11 @@ of `Z_2`, establish decoder completeness, or lift any claim to L2-L6.
 `RAMIFIED-TM-LIFT [T]`, `READING-SPLIT [D]`, and all other registry rows keep
 their existing scopes and statuses.
 
-## Pending gate
+## Two-architecture gate
 
-The clean GitHub x86_64 policy run must reproduce the pinned verifier and the
-394-byte transcript byte for byte. Until that succeeds, the required
-two-architecture computation gate is incomplete. Any Canon or ledger fold is
-a separate reviewed change.
+PASS. The aarch64 and x86_64 legs use the byte-identical pinned verifier,
+exit zero, write empty stderr, and reproduce the same 394-byte transcript
+with SHA-256
+`87584b6afc5b77a3d8b1cc7957197431227fbdd77cf447da3ea92289fa1e668a`.
+Policy, all 44 unit tests, Canon, and ledger checks are green in the same CI
+job. Any Canon or ledger fold is a separate reviewed change.
