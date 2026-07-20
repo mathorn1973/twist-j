@@ -1,0 +1,53 @@
+C-DE-TRACE-DENSITY-1 verifier
+architecture p = 5, d = 3; pi formal throughout
+
+[A] the exact skeleton
+GATE A1-continuity-at-register-form         PASS  d(1+w)|w=-14/15 = 1/5
+GATE A2-dictionary-solves-to-w              PASS  1/(pd) - 1 = -14/15
+GATE A3-three-one-over-p-meet               PASS  gamma_tr = alpha* = Delta_DE = 1/5
+GATE A4-one-plus-w                          PASS  1 + w = 1/15 = gamma_tr/d
+GATE A5-closed-form                         PASS  w = -(pd-1)/(pd) = -14/15
+READOUT (no assertion): w_DE = -0.9333333333 (engineering witness)
+
+[B] FRW continuity selection power over the density character q
+GATE B1-family-passes-continuity            PASS  all 6 tested q satisfy d(1+w_q)=q
+GATE B2-injectivity-q-to-w                  PASS  q -> w_q injective on the family
+GATE B3-lambda-point-not-excluded           PASS  q = 0 (w = -1, the Lambda point) survives R
+GATE B4-nonunique-witness                   PASS  6 inequivalent characters survive R(v12)
+
+[C] selector independence: every sealed relation is constant in q
+GATE C1-kinetic-chain-q-free                PASS  K_chi5 = 1/(864 pi), c_hom = 1/(72 pi) for every q
+GATE C1b-864-is-12-times-72                 PASS  864 = 12 . 72
+GATE C2-dewitt-q-free-and-12                PASS  d(1 - lambda d)|lambda=-1 = 12 for every q
+GATE C2b-ghost-control                      PASS  lambda = +1 gives -6, the GR conformal ghost, not the substrate
+GATE C3-lambda-substrate                    PASS  lambda = 1/d - 4/3 = -1
+GATE C4-friedmann-numerics                  PASS  216/3 = 72; K_chi5 . lambda_src = 1/4 = 1/(d+1); all q-free
+
+[D] transport universality control
+GATE D1-universal-transport-spatial         PASS  Gram weight 1 would force w = -2/3 on the spatial base
+GATE D2-universal-transport-contradicts     PASS  Delta = 1 is neither dust Delta = 3 nor radiation Delta = 4 (standard readings, control only)
+GATE D3-dictionary-selects-uniquely         PASS  GIVEN Delta_DE := gamma_tr, exactly one family member survives: q = 1/5
+
+[E] negative controls
+GATE E1-wrong-dictionary-separates          PASS  Delta := alpha_s_root = 3/4 gives w = -3/4, distinct physics
+GATE E2-p2-control                          PASS  p = 2 gives w = -5/6, not -14/15: the result sees p = 5
+GATE E3-p7-control                          PASS  p = 7 gives w = -20/21, not -14/15
+
+21 of 21 gates PASS
+
+OUTCOME (issue #88 space): NONUNIQUE
+  typed: trace line, chi = log a, and the map all typed (STOP excluded)
+  q = 1/p not excluded (NEGATIVE excluded)
+  survivors >= 2 under R(v12) (PASS-EARNED excluded)
+STATEMENT AT CANDIDATE GRADE:
+  candidate-T  the registered set R(v12) does not select the density
+               character of the trace sector; at least two inequivalent
+               characters survive; Delta_DE := gamma_tr is genuine
+               dictionary content, not a derivation, today.
+  candidate-T  conditional uniqueness: once Delta_DE := gamma_tr is
+               accepted, the selected member is unique and equals
+               w_DE = -14/15 at p = 5, d = 3, exactly.
+  candidate-T  the transport is not universal: applied to the spatial
+               base it contradicts the standard dust and radiation
+               characters; the dictionary is sector-specific content.
+C-DE-TRACE-DENSITY-1 VERDICT: NONUNIQUE. Dictionary remains dictionary.
