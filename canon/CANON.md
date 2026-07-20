@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v12
+# TWIST-J Public Canon v13
 
-**Release identity.** Public Canon v12. Normative authority and activation
+**Release identity.** Public Canon v13. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v12 also declares the discrete
+algebraic axiom is J. Public Canon v13 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,13 +17,13 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v12 does not claim
+seed of the two algebraic projections. Public Canon v13 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
 CZ: A0. Skutecnost je uzavrene celociselne J-plenum. Jeho algebraickym
-generatorem je J = 1 + zeta_5^2; diskretni architektura je ve verejnem
-Canonu v1 deklarovana zvlast a neni vydavana za jednoznacny dusledek J.
+generatorem je J = 1 + zeta_5^2; diskretni architektura je v aktualnim verejnem
+Canonu deklarovana zvlast a neni vydavana za jednoznacny dusledek J.
 System nema vnejsi hranici ani vnejsi hodiny.
 
 **Reading.** Time is a counter. Space is a commutator. J is the verb;
@@ -82,7 +82,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v12 contains no such
+deriving the architecture from J; Public Canon v13 contains no such
 theorem.
 
 ---
@@ -508,7 +508,7 @@ physical gauge, phase, force, spacetime, entropy, measure, or lift to L2-L6.
 
 No coding rate is inferred
 from this dimension count. The inherited phrase "rate 4/5" is retired
-from Public Canon v12; any future coding claim must define its alphabet,
+from Public Canon v13; any future coding claim must define its alphabet,
 message space, encoder, decoder, error criterion, and rate from scratch.
 
 Five completed public probes now delimit the entropy bridge without closing
@@ -997,7 +997,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v12. The fermionizer
+inherited naming clause is not part of Public Canon v13. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1620,8 +1620,11 @@ MEASUREMENT AND METROLOGY
                              the meter over the single m_e bridge)
   DRESS-CROSSCOUNT           the integer crossing count per observable;
                              witness 72 alpha^4, labeled
-  QUADRATIC-DECODER-DATA     the effects on data clause; state update,
-                             Gram, and dagger clauses closed at scope
+  QUADRATIC-DECODER-DATA     the typed D_matter effect/data action; carrier,
+                             bridge, Gram, dagger, effects, Born pairing,
+                             MatterData schema, write map, domain, and complete
+                             dependencies remain open; post-state instruments
+                             are outside this row
 THE WALL
   QUANT-SUBSTRATE            the Larmor gate and the Schwinger term gate
   COLOR-MEASURE-SELECTION    the measure lift onto SL_3(F_5): 24 carrier

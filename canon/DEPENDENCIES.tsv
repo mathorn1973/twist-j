@@ -258,3 +258,18 @@ SQRT-PHI-DIGIT-LIFT	QUBIT-FROM-F5	REQUIRES	the sign quotient supplies the final 
 SQRT-PHI-DIGIT-LIFT	RAMIFIED-TM-LIFT	REQUIRES	the binary digit recursion and chronological carry law are lifted through the two square-root branches without adding a physical reading
 SQRT-PHI-TIME-GRAVITY	SQRT-PHI-DIGIT-LIFT	REQUIRES	the exact L1 digit lift is a necessary algebraic input, while the typed clock and gravity bridge remains open
 TM-SYM2-MEASURE	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the exact golden frame supplies only the candidate coefficient ratio; Thue-Morse selection, Born halving, and a physical measure remain open
+QUADRATIC-DECODER-DATA	DEF-DECODER-MATTER	REQUIRES	the open action is the write performed by the declared D_matter interface
+QUADRATIC-DECODER-DATA	READING-SPLIT	REQUIRES	the row concerns the registered quadratic/Born decoder leg rather than the linear or binary legs
+QUADRATIC-DECODER-DATA	COUPLINGS-DETERMINE	REQUIRES	the exact Gram-normalized density and Born identity are inherited inputs, not an instrument-selection theorem
+QUADRATIC-DECODER-DATA	MEASURE-BORN-VERB	REQUIRES	the physical data effect uses the registered Born-square measure dictionary
+QUADRATIC-ENVELOPE-DECODER	QUADRATIC-DECODER-DATA	REQUIRES	positive full-decoder closure requires the complete typed quadratic data action and its observable list
+QUADRATIC-ENVELOPE-DECODER	READING-SPLIT	REQUIRES	the literal full-decoder scope includes the registered linear, binary, and quadratic legs
+OBSERVER-WRITE-PORT	QUADRATIC-DECODER-DATA	REQUIRES	completed output terminality requires the typed D_matter data action and complete dependency graph
+OBSERVER-WRITE-PORT	DEF-DECODER-CLOCK	REQUIRES	positive closure concerns terminality of the declared final decoder stage
+OBSERVER-WRITE-PORT	METRO-ADMISSIBILITY	REQUIRES	every admissible output cannot be quantified until the admissible protocol class is public
+SQRT-PHI-TIME-GRAVITY	DEF-DECODER-CLOCK	REQUIRES	the clock leg targets the declared D_clock and ObservableHistory interface
+SQRT-PHI-TIME-GRAVITY	METRO-TICK	REQUIRES	the registered dimensionless tick is an inherited clock input, not the missing bridge
+SQRT-PHI-TIME-GRAVITY	GRAVITY-BRIDGE-LAW	REQUIRES	the existing equation-layer gravity dictionary is an input but supplies no Y-to-source map
+SQRT-PHI-TIME-GRAVITY	METRO-EDGE-SCALE	BOUNDED_BY	any SI time or gravity scale remains outside scope until the selector and SI clause close
+TM-SYM2-MEASURE	DEF-AUTONOMOUS-STATE	REQUIRES	the selector must read the declared omega and U dynamics rather than the checkpoint alone
+TM-SYM2-MEASURE	MEASURE-BORN-VERB	REQUIRES	the physical measure clause rests on the Born-square dictionary, which does not itself derive the halving

@@ -1,11 +1,42 @@
 # Canon changelog (public series)
 
-## Public Canon v12
+## Public Canon v13
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
 Registry snapshot: 192 claims; 0 T-LOCK, 96 T, 39 D, 22 C, 6 H, 20 O, 9 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Ledger-hygiene fold with no promotion: no claim identifier or public status
+changes. The registry remains at 192 claims and the live frontier remains at
+26 (6 H and 20 O).
+
+Three predefinition rows are scope-corrected without changing status.
+`QUADRATIC-DECODER-DATA [O]` no longer contradicts its detailed Canon boundary:
+its carrier, bridges, Gram, dagger, effects, schema, write map, domain, and
+complete dependency graph remain open, while post-state instrument selection is
+outside the row. `SQRT-PHI-TIME-GRAVITY [O]` now names branch selection or
+sign invariance plus the typed clock/gravity bridge. `TM-SYM2-MEASURE [H]` now
+separates the proved frame algebra from the still-open stream selection, equal
+physical weights, and Born halving. Their compound layer is recorded as
+`MULTI`; no premature gate or source/target layer is invented.
+
+Fifteen dependencies that were already required by those typed contracts and by
+the full-decoder/write-port scopes are made explicit. The dependency graph
+remains acyclic.
+
+Inline evidence moves once from a whole-Canon file hash to
+`registry-scope-sha256-v1`. Per-claim history records this cutover, while the
+release tag, `canon/SHA256SUMS`, and activation manifest continue to pin exact
+Canon and repository bytes. Future edits elsewhere in the Canon therefore do
+not manufacture unrelated claim-level evidence changes.
+
+## Public Canon v12
+
+<!-- BEGIN GENERATED CANON12 COUNTS -->
+Registry snapshot: 192 claims; 0 T-LOCK, 96 T, 39 D, 22 C, 6 H, 20 O, 9 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON12 COUNTS -->
 
 Frontier closure lane: `POL-READ` moves from [O] to [D] at the exact
 plus/cross decoder-dictionary scope. `CARRY-J-CHECKPOINT` moves from [O] to

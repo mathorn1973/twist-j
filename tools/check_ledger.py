@@ -53,7 +53,11 @@ RELATIONS = {"REQUIRES", "BOUNDED_BY"}
 EVIDENCE_KINDS = {
     "INLINE_CANON", "REPRODUCTION", "PUBLIC_PROBE", "EXTERNAL_SOURCE"
 }
-HASH_MODES = {"file-sha256", "bundle-manifest-sha256-v1", "external-manifest"}
+HASH_MODES = {
+    "registry-scope-sha256-v1",
+    "bundle-manifest-sha256-v1",
+    "external-manifest",
+}
 ARCHITECTURE_REQUIREMENTS = {
     "none", "one-architecture", "two-architecture", "recorded-audit",
 }
@@ -294,7 +298,6 @@ def validate(root: Path) -> Snapshot:
 
     evidence: dict[str, dict[str, str]] = {}
     evidence_by_claim: dict[str, dict[str, str]] = {}
-    canon_hash = sha256_bytes((canon / "CANON.md").read_bytes())
     for number, row in enumerate(evidence_rows, 2):
         context = f"EVIDENCE.tsv line {number}"
         claim = require_text(row, "claim_id", context)
@@ -317,7 +320,12 @@ def validate(root: Path) -> Snapshot:
         if location != registry[claim]["evidence"].strip():
             fail(f"{claim} evidence location differs from REGISTRY.tsv")
         if kind == "INLINE_CANON":
-            if location != "inline" or mode != "file-sha256" or digest != canon_hash:
+            scope_hash = sha256_bytes(registry[claim]["scope"].encode("utf-8"))
+            if (
+                location != "inline"
+                or mode != "registry-scope-sha256-v1"
+                or digest != scope_hash
+            ):
                 fail(f"{evidence_id} has invalid inline evidence hash")
         elif kind in {"REPRODUCTION", "PUBLIC_PROBE"}:
             relative = Path(location)

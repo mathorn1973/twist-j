@@ -253,7 +253,6 @@ def main() -> None:
             "basis": "Canon definition boundary: every downstream statement is conditional on the declared architecture",
         })
 
-    canon_hash = sha256_bytes((canon / "CANON.md").read_bytes())
     evidence: list[dict[str, str]] = []
     history: list[dict[str, str]] = []
     for row in registry:
@@ -262,8 +261,8 @@ def main() -> None:
         evidence_id = f"EV-{claim}"
         if location == "inline":
             kind = "INLINE_CANON"
-            digest = canon_hash
-            hash_mode = "file-sha256"
+            digest = sha256_bytes(row["scope"].encode("utf-8"))
+            hash_mode = "registry-scope-sha256-v1"
             architecture = "none"
         elif location.startswith(("https://", "http://")):
             kind = "EXTERNAL_SOURCE"

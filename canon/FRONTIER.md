@@ -16,8 +16,8 @@ Closed claims are excluded.
   Decision: fires when a typed public decoder construction supplies a nontrivial write channel into U; closes positively when the completed decoder dependency graph proves that every output is terminal
 - QUADRATIC-ENVELOPE-DECODER [H]: the full decoder carrier as the pair of quadratic readings of one square
   Decision: fires if a decoder observable is exhibited that is not a function of the pair (psi psi^dagger, psi psi^T), or if the pair fails to separate two states the decoder distinguishes
-- TM-SYM2-MEASURE [H]: the symmetric square measure; the residual is the Born phase halving 1/6 = (1/2)(1/3)
-  Decision: fires if the Thue-Morse symmetric square average departs from the proposed 5 : 2 frame ratio at any exactly computed order, or if the Born phase halving 1/6 = (1/2)(1/3) is inconsistent with the public GYRON-DENSITY result
+- TM-SYM2-MEASURE [H]: the compound claim that the declared autonomous or Thue-Morse stream canonically selects the six GOLDEN-SIX-LINE-SYM2-FRAME projective lines with equal physical weights mu_i = 1/6 and that a registered Born reading derives, rather than assumes, 1/6 = (1/2)(1/3); the frame algebra and GYRON-DENSITY alone supply neither selection nor Born halving
+  Decision: STOP until the selector carrier, pre-update versus post-update convention, seed versus ensemble, gauge and sign quotients, line labels, limiting measure, and meanings of 1/2 and 1/3 are frozen; closes positively only when the exact selector gives mu_i = 1/6 and M_TM = (1/3)P1 + (2/15)P5 and a typed Born map derives the halving; fires if the frozen selector is noncanonical, gives unequal weights, leaves the exact commutant, changes the 5:2 ratio, or if the Born factorization is ill typed or contradicts GYRON-DENSITY
 
 ## Open obligations [O]
 
@@ -49,14 +49,14 @@ Closed claims are excluded.
   Decision: closes positively when the QCD dynamics sector derives the proton residual; closes negatively if the derived residual is incompatible with the measured proton moment within its comparison window
 - QNM-LEAVER-MU [O]: the quasinormal mu decision after a public inference rule maps an external shadow measurement to a preregistered mu interval
   Decision: closes positively when the public continued fraction computation and the preregistered inference rule decide mu; closes negatively when the exact spectrum is incompatible with that public interval
-- QUADRATIC-DECODER-DATA [O]: a typed public action of the quadratic decoder on data, including every dependency it reads
-  Decision: closes positively when the data action is derived from registered public inputs with an acyclic dependency graph; closes negatively if two states separated by the declared decoder receive inconsistent data actions or if an unregistered input is required
+- QUADRATIC-DECODER-DATA [O]: the typed D_matter action of the registered quadratic/Born leg on a published MatterData schema, including the orbit-to-amplitude bridge, Gram, dagger, effects, Born pairing, exact write map, total domain, and every dependency it reads; no post-state instrument or instrument-uniqueness claim is included
+  Decision: STOP until the carrier, orbit-to-amplitude bridge, Gram, dagger, effects, Born pairing, MatterData schema, write map, total domain, and complete dependency graph are public; closes positively when D_matter writes the frozen schema from registered inputs with exact normalization and an acyclic complete dependency graph; closes negatively if the action is ill typed, violates its declared normalization or quadratic-fiber consistency, or requires an unregistered input
 - QUANT-SUBSTRATE [O]: the Larmor gate and the Schwinger term gate on the archimedean wall
   Decision: the two gates decide: exact gate values close the Larmor clause; the Schwinger term carries the hypothesis value 1/(2 pi) and a failed gate fires it
 - SCHEME-DICTIONARY [O]: the scheme dictionary between exact seeds and measured couplings
   Decision: closes positively by an exact dictionary between the seed normalization and a named measurement scheme; closes negatively if any dictionary requires a new free dimensionless parameter
-- SQRT-PHI-TIME-GRAVITY [O]: the dynamical face of the time gravity door; the gravity face is furnished
-  Decision: closes positively by furnishing the dynamical face: a dynamics whose time quantum realizes the gate line square root; closes negatively if the dynamical face is proven empty
+- SQRT-PHI-TIME-GRAVITY [O]: the compound bridge from the two-branch L1 SQRT-PHI-DIGIT-LIFT sequence into the declared decoder clock and a registered gravity source/readout channel, including either a canonical sign-branch selector or a proof that the complete readout is sign invariant; no SI scale is included
+  Decision: STOP until the source domain, branch equivalence or selector, pre-update versus post-update convention, Y-to-D_clock map, gravity source/readout codomain, equality, and dependencies are frozen; closes positively only when an exact total bridge on the declared domain is compatible with SQRT-PHI-DIGIT-LIFT, METRO-TICK, and GRAVITY-BRIDGE-LAW; closes negatively if the frozen bridge class is empty or every admissible bridge violates a registered input; any SI claim remains bounded by METRO-EDGE-SCALE
 - TT-SOURCE [O]: the emission map from an explicitly defined public source object
   Decision: closes positively by deriving the typed emission map and its source dependency; closes negatively if no map satisfies the registered TT propagation and conservation constraints
 - TT-VECTOR-STATE-NORMALIZATION [O]: the vector doublet state, its two point and pseudo covariance spectra, the action normalization, the scalar comparison; the only gate yielding a numerical r_T(k)
