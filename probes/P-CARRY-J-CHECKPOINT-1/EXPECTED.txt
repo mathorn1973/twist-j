@@ -1,0 +1,6 @@
+PASS 01 generator algebra: five involutions and five z6 laws on 15625 checkpoints
+PASS 02 trace skeleton: all five z0 classes force z3=1 and selectors i3=i4=i5=1
+PASS 03 universal checkpoint collision: psi4=psi6 for all 15625 seeds
+PASS 04 ramified phase separation: Theta4=2 and Theta6=4 in F5*
+PASS 05 factorization no-go: every visited collision key receives both phases
+RESULT 5/5 ALL PASS
