@@ -1,7 +1,7 @@
 # P-SQRT-PHI-DIGIT-1 result
 
-Status: SCIENTIFIC RESULT; FORMAL AARCH64 LEG PASS;
-SECOND-ARCHITECTURE COMPUTATION GATE PENDING; PUBLIC CLAIM UNREGISTERED
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS;
+PUBLIC CLAIM UNREGISTERED
 
 ## Recorded decision
 
@@ -11,7 +11,7 @@ exit:    0
 stderr:  empty
 ```
 
-No preregistered falsifier fired in the formal aarch64 leg. The frozen proof
+No preregistered falsifier fired on either architecture. The frozen proof
 establishes the exact two-branch `C8 -> C4 -> C2` digit lift and the
 nonconstant chronological carry law at L1. The finite verifier exhausts the
 field and restricted norm sequence and audits both digit branches through
@@ -40,6 +40,33 @@ result:               6/6 ALL PASS
 
 `EXPECTED.txt` is the exact LF-only stdout of this formal leg. `PREREG.md`
 and `verify.py` remain byte-identical to the public pin.
+
+## Independent x86_64 reproduction
+
+```text
+pull request:          89
+formal evidence head: 048df8711dc724bad171d4e7c5cba7c8cf020be8
+tested merge commit:  1dad634db2c43bf667a095fd15bb2914f8bd25db
+workflow run:          29726308945
+workflow job:          88300111680
+conclusion:            success
+platform:              GitHub-hosted Ubuntu 24.04 x86_64
+runner image:          ubuntu-24.04 20260714.240.1, runner 2.335.1
+Python:                CPython 3.12.13
+verifier SHA-256:      ad94fdff5cf0b7c8674d36b675f058f347287702c90428c19aa6b76e8e4a1cab
+stdout SHA-256:        9a82917b6736026c3b4e0af9d401400be78be920582f6f8acdbffd87c2e4ddde
+byte identity:         PASS, 606 bytes and 7 lines
+gate:                  PASS
+```
+
+The required policy workflow checked out GitHub's generated merge of the
+exact formal evidence head into the declared base commit. It enforced
+verifier integrity, x86_64 architecture, exit zero, empty stderr, and
+byte-identical `EXPECTED.txt`, and logged
+`VERIFY PASS P-SQRT-PHI-DIGIT-1` with both frozen hashes. Together with the
+formal aarch64 record, this completes the two-architecture computation gate.
+`RUN.md` remains the neutral aarch64 record; this close-gate update changes
+only `RESULT.md`.
 
 ## Proof and audit verdict
 
@@ -76,9 +103,12 @@ parity on all of `Z_2`, or lift to L2-L6 is earned. The live
 declared chronological clock and gravity channel. All existing Canon rows
 retain their current scopes and statuses.
 
-## Pending gate
+## Two-architecture gate
 
-The clean GitHub x86_64 policy run must reproduce the pinned verifier and the
-606-byte transcript byte for byte. Until that succeeds, the required
-two-architecture computation gate is incomplete. Any Canon, registry,
-dependency, frontier, or ledger fold is a separate reviewed change.
+PASS. The aarch64 and x86_64 legs use the byte-identical pinned verifier,
+exit zero, write empty stderr, and reproduce the same 606-byte transcript
+with SHA-256
+`9a82917b6736026c3b4e0af9d401400be78be920582f6f8acdbffd87c2e4ddde`.
+Policy, all 44 unit tests, Canon, and ledger checks are green in the same CI
+job. Any Canon, registry, dependency, frontier, or ledger fold is a separate
+reviewed change.
