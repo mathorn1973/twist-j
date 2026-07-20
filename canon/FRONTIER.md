@@ -8,8 +8,6 @@ Closed claims are excluded.
 
 - KC3-PLENUM-READOUT [H]: the ramified place acquires the archimedean readout s; the residue class readout stays open
   Decision: fires if the residue class readout of the ramified place disagrees with the archimedean value s = abs(1 - zeta_5)
-- KERNEL-CONNECT-ALL-K [H]: for every k >= 2 the generator set {a, c, d, e} with the two way CSUM ring coupling connects (F_5^6)^k into one component
-  Decision: closes positively by a public proof for every k >= 2; fires on any public exact computation exhibiting more than one component at any k >= 2
 - LAMBDA-COCYCLE-ANGLES [H]: the compact lambda-adic boundary route remains open only in the cocycle-vector form: there exists v in L^2(O_lambda,Haar) with ||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n for every n >= 1; any such realization forces every Cayley angle 2 arctan(1/(2 gamma)) into 2 pi (1/4) Z[1/5] and forces the Li second differences to approach 2 lambda_1 along n = 4 . 5^A
   Decision: fires if any single ordinate Cayley angle 2 arctan(1/(2 gamma)) is proved outside 2 pi (1/4) Z[1/5], if the Li second differences are proved not to approach 2 lambda_1 along n = 4 . 5^A, or if another contradiction excludes every cocycle vector in the declared compact-boundary class
 - NS-TILT [H]: the scalar tilt read as n_s - 1 = -5 alpha
@@ -25,6 +23,8 @@ Closed claims are excluded.
 
 - ALPHA-S-RUNNING [O]: the strong coupling running above the 3/4 seed
   Decision: closes positively by a running derived from the 3/4 seed matching the measured strong coupling at a named scale within its stated window; closes negatively if every derived scheme from the seed misses the measured value or breaks the seed ratio 15 : 4
+- CARRY-J-CHECKPOINT [O]: determine whether RAMIFIED-TM-LIFT factors through the finite checkpoint projection on a publicly frozen forward U-carrier; neither that carrier scope nor a checkpoint-only map is presently selected, and no selector offset or physical reading is asserted
+  Decision: closes positively only after P-CARRY-J-CHECKPOINT-1 freezes the forward carrier and constructs an exact single-valued h : F_5^6 -> F_5^* with h(pr_checkpoint(U^n omega_0)) = Theta_n for every n in that scope and proves update compatibility; closes negatively at the same frozen scope by an exact equal-checkpoint/different-Theta collision, an incompatible checkpoint update edge, or a proof that no such h exists
 - COLOR-MEASURE-SELECTION [O]: the non abelian measure lift onto SL_3(F_5); 24 carrier orbits, 16 observable types
   Decision: closes positively by a derivation selecting the weight vector over the 24 orbits constrained by the 16 observable types; closes negatively if the constraint set is exhausted with no surviving weight vector, or if two inequivalent vectors survive every named constraint
 - CURVATURE-OPERATOR-CANONICAL [O]: whether the public architecture determines exactly one equivalence class of spatial-curvature operator after its carrier, measure, projection group, and ambient versus intrinsic commutator choice are fixed publicly

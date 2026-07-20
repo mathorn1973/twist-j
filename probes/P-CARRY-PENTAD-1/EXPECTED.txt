@@ -1,0 +1,19 @@
+PASS G01 carry bits: bit0=t=e1, bit1=q=e2, bit2=e4 on the full four-bit carrier
+PASS G02 polarization: B(x,y)=t(x)t(y)+d(x,y), alternating with trivial radical
+PASS G03 q has Arf 1: six zeros and singular pentad 1,2,4,8,15 with pair value one and XOR zero
+PASS G04 raw d stabilizer: 48=S4xC2, only permutation/complement bases, hence no order five
+PASS G05 orthogonal action: |O(q)|=120, faithful on the pentad, so O^-(4,2)=S5 inside Sp
+PASS G06 refinement action: six minus refinements and 720 faithful Sp actions, so Sp(4,2)=S6 with S5 stabilizer
+PASS G07 fixed-p width gate: ord_5(2)=4 and dimension four is the first GL(n,2) with order-five elements
+PASS G08 augmentation cycle: C^5=I and char(C)=Phi5
+PASS G09 shifted cycle: every I+C^a has char Phi5(X-1)=X^4-3X^3+4X^2-2X+1
+PASS G10 exponent conjugacy: every r->a*r is an integral A4 isometry sending I+C to I+C^a
+PASS G11 J bridge: I+C^2 on (zeta-1) is integrally conjugate to the public power-basis M_J
+PASS G12 ramified quotient: A4/(C-I)A4 has order 5, C=1, every I+C^a=2, and char=(X-2)^4 mod 5
+PASS G13 lattice form: q_A=q+B(15,.) is minus type with six zeros and the same polarization B
+PASS G14 explicit bridge: tau_15 is an involutive linear isometry q_A->q and maps the two pentads
+PASS G15 Weyl bridge: W(A4)=S5 reduces isomorphically onto O(q_A), then tau_15 conjugates it onto O(q)
+PASS G16 sign kernel: {+-1}W(A4) has 240 integral maps, 120 reductions, and kernel exactly {+-I}
+PASS G17 cyclotomic pentad: the q_A singular five map to 1,zeta,...,zeta^4 mod 2 and sum to zero
+PASS G18 pins: Phi5(1)=5 and det(2I-(I+C^2))=N(2-J)=5
+RESULT 18/18 ALL PASS

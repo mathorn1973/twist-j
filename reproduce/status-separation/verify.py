@@ -31,6 +31,11 @@ def scope_lacks(index, claim_id, words):
     return all(word.lower() not in scope for word in words)
 
 
+def scope_contains_all(index, claim_id, phrases):
+    scope = index[claim_id]["scope"].lower()
+    return all(phrase.lower() in scope for phrase in phrases)
+
+
 def run():
     rows, index = load_rows()
     checks = []
@@ -38,12 +43,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 89, "D": 38, "C": 21, "F": 9,
-                       "O": 22, "H": 7}
+    expected_counts = {"T": 93, "D": 38, "C": 21, "F": 9,
+                       "O": 23, "H": 6}
     checks.append((
         "COUNTS",
-        "registry has 186 claims with the current status partition",
-        len(rows) == 186 and counts == expected_counts,
+        "registry has 190 claims with the current status partition",
+        len(rows) == 190 and counts == expected_counts,
     ))
 
     checks.append((
@@ -63,11 +68,25 @@ def run():
         "PLACES",
         "field and Galois facts stay T; place and CPT physics are D",
         all(has_status(index, claim, "T") for claim in
-            ("DEGREES-BY-PRIME", "Z2-PLACES-SPLIT"))
+            ("DEGREES-BY-PRIME", "Z2-PLACES-SPLIT",
+             "METAL-TRACE-CASCADE"))
         and has_status(index, "TWO-PLACE-PHYSICS", "D")
         and scope_lacks(index, "DEGREES-BY-PRIME",
                         ("magic", "qubit", "gravity", "born"))
         and scope_lacks(index, "Z2-PLACES-SPLIT", ("cpt", "force", "spin")),
+    ))
+
+    checks.append((
+        "CARRY",
+        "carry arithmetic stays T; checkpoint and physical readings stay fenced",
+        all(has_status(index, claim, "T") for claim in
+            ("RAMIFIED-TM-LIFT", "CARRY-PENTAD"))
+        and has_status(index, "CARRY-J-CHECKPOINT", "O")
+        and scope_contains_all(index, "CARRY-PENTAD",
+                               ("selects no prime", "physical reading"))
+        and scope_contains_all(index, "RAMIFIED-TM-LIFT",
+                               ("no checkpoint factorization",
+                                "physical carry/phase reading")),
     ))
 
     checks.append((
