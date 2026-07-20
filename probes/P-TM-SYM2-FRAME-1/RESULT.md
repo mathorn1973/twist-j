@@ -1,6 +1,6 @@
 # P-TM-SYM2-FRAME-1 result
 
-Status: SCIENTIFIC RESULT; FORMAL AARCH64 LEG PASS; GITHUB X86_64 LEG PENDING;
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS;
 PUBLIC CLAIM UNREGISTERED
 
 ## Recorded decision
@@ -27,27 +27,41 @@ This is an L1 algebraic result for the candidate
 `GOLDEN-SIX-LINE-SYM2-FRAME`. It is not a registered Canon theorem. In
 particular, `TM-SYM2-MEASURE [H]` remains unchanged.
 
-## Immutable pin and formal leg
+## Immutable pin and formal evidence
 
 ```text
 public lock:          issue 92
+draft pull request:   93
 base commit:          3d8c6307f20d01ad50fc90ae1c5777926b884881
 preregistration pin: d36c3304b796596456dbc070b3fa5cd73fe97044
+formal evidence head:1754059fa364a27842b45ba267b0f0955b1397cd
+tested merge commit: 8eae53b5efd98441372a77c8749a9c45f0b8e310
 PREREG.md SHA-256:    9ac19d18e8d1836f16024c27be15e450646b624b693f90920187cc00a44ebe63
 verify.py SHA-256:    4b84f8ddf35be025224ba5d3a44159ffecd5e93face5a0536971357928083135
 
-platform:             Ubuntu 24.04.4 LTS
-architecture:         aarch64
-Python:               CPython 3.12.3
-checkout:             clean, detached at the exact public pin
-exit/stderr:          0 / 0 bytes
-stdout SHA-256:       d144486d47039ea3b2a4402647df315fba55d265788e7d1b8d56124e7ea98f43
-stdout bytes/lines:   742 / 10
-result:               POSITIVE 8/8 ALL PASS
+aarch64 platform:    Ubuntu 24.04.4 LTS
+aarch64 Python:      CPython 3.12.3
+aarch64 checkout:    clean, detached at the exact public pin
+aarch64 exit/stderr: 0 / 0 bytes
+
+x86_64 workflow run: 29729754592
+x86_64 workflow job: 88311179186
+x86_64 platform:     Ubuntu 24.04.4 LTS
+x86_64 runner image: ubuntu-24.04 20260714.240.1
+x86_64 runner:       2.335.1
+x86_64 Python:       CPython 3.12.13
+x86_64 exit/stderr:  0 / 0 bytes
+
+stdout SHA-256:      d144486d47039ea3b2a4402647df315fba55d265788e7d1b8d56124e7ea98f43
+stdout bytes/lines:  742 / 10
+byte identity:       PASS
+result:              POSITIVE 8/8 ALL PASS
 ```
 
-`EXPECTED.txt` is the exact LF-only stdout of this formal leg. `PREREG.md`
-and `verify.py` remain byte-identical to the public pin.
+`EXPECTED.txt` is the exact LF-only stdout of the formal aarch64 leg.
+`PREREG.md` and `verify.py` remain byte-identical to the public pin. The
+GitHub pull-request workflow reran the pinned verifier on x86_64 and reported
+the identical verifier and stdout hashes.
 
 ## Exact frame result
 
@@ -86,7 +100,11 @@ or ledger fold is a separate reviewed change.
 
 ## Architecture gate
 
-The formal aarch64 leg passes. The required clean GitHub x86_64 reproduction
-is pending. No two-architecture status is claimed until that workflow uses
-the identical pinned verifier, exits zero with empty stderr, and reproduces
-the 742-byte transcript byte for byte.
+The clean formal aarch64 run and the GitHub x86_64 pull-request workflow
+executed the identical pinned verifier, exited zero with empty stderr, and
+reproduced the 742-byte, 10-line transcript byte for byte. The exact finite
+result therefore passes the two-architecture computation gate.
+
+Policy, unit, Canon, ledger, verifier, and minimal-reproduction workflow
+stages passed. This gate does not register the candidate, change a Canon
+status, or supply the missing Thue-Morse or physical-measure bridge.
