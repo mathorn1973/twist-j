@@ -23,8 +23,6 @@ Closed claims are excluded.
 
 - ALPHA-S-RUNNING [O]: the strong coupling running above the 3/4 seed
   Decision: closes positively by a running derived from the 3/4 seed matching the measured strong coupling at a named scale within its stated window; closes negatively if every derived scheme from the seed misses the measured value or breaks the seed ratio 15 : 4
-- CARRY-J-CHECKPOINT [O]: determine whether RAMIFIED-TM-LIFT factors through the finite checkpoint projection on a publicly frozen forward U-carrier; neither that carrier scope nor a checkpoint-only map is presently selected, and no selector offset or physical reading is asserted
-  Decision: closes positively only after P-CARRY-J-CHECKPOINT-1 freezes the forward carrier and constructs an exact single-valued h : F_5^6 -> F_5^* with h(pr_checkpoint(U^n omega_0)) = Theta_n for every n in that scope and proves update compatibility; closes negatively at the same frozen scope by an exact equal-checkpoint/different-Theta collision, an incompatible checkpoint update edge, or a proof that no such h exists
 - COLOR-MEASURE-SELECTION [O]: the non abelian measure lift onto SL_3(F_5); 24 carrier orbits, 16 observable types
   Decision: closes positively by a derivation selecting the weight vector over the 24 orbits constrained by the 16 observable types; closes negatively if the constraint set is exhausted with no surviving weight vector, or if two inequivalent vectors survive every named constraint
 - CURVATURE-OPERATOR-CANONICAL [O]: whether the public architecture determines exactly one equivalence class of spatial-curvature operator after its carrier, measure, projection group, and ambient versus intrinsic commutator choice are fixed publicly
@@ -45,12 +43,8 @@ Closed claims are excluded.
   Decision: closes by deriving the canonical selector on the commutator phi ladder (the kinetic coefficient and dressing insertion routes) and the SI clause over the single m_e bridge; closes negatively if two inequivalent selectors survive every named gate, so no canonical selector exists
 - NEUTRON-DELTA-EM [O]: the interior compression channel of the neutron electromagnetic delta
   Decision: closes positively by deriving the interior compression channel value; closes negatively if the derived electromagnetic delta moves the neutron outside its measured tier window
-- O-R2-K-JUNCTION-PIN [O]: obtain a rigorous enclosure of lambda_1^K = 1 + (3/2) log 5 - 2 log(2 pi) - gamma + sum_(chi != chi_0 mod 5) L'/L(1,chi), together with the identity (3/2) log 5 = 6 log s_J + 3 log phi and the named Q-case cross-check, without asserting a Li carrier or RH
-  Decision: closes positively when the Q-case formula 1 + gamma/2 - (1/2) log(4 pi) is reproduced inside its pinned bracket and the K-side generalized Stieltjes-Hurwitz enclosures rigorously close; fires if either check is disproved or the declared formula is shown incorrect
 - PHOTON-WINDOW-PROOF [O]: completion of the photon window requires both (i) every closed charge 5 worldline of length L to satisfy F_occ >= kappa L for an admissible kappa with 2^(4 kappa) > 2401, and (ii) an electric face roughening certificate sufficient for the declared Froehlich-Spencer class import; the exact electric face facts already registered are not re-registered here
   Decision: closes positively only when both obligations have public exact certificates; an exact counterexample to the kappa bound or a certified failure of the declared roughening criterion closes the corresponding route negatively; until both close, no massless Coulomb conclusion is promoted
-- POL-READ [O]: the polarization readout
-  Decision: closes positively by deriving the polarization readout from the TT squaring decoder; closes negatively if the readout requires a propagation outside the single law c = 1 - s^2
 - PROTON-RESIDUAL-IS-QCD [O]: the proton residual, gated on QCD dynamics
   Decision: closes positively when the QCD dynamics sector derives the proton residual; closes negatively if the derived residual is incompatible with the measured proton moment within its comparison window
 - QNM-LEAVER-MU [O]: the quasinormal mu decision after a public inference rule maps an external shadow measurement to a preregistered mu interval
@@ -68,4 +62,4 @@ Closed claims are excluded.
 - TT-VECTOR-STATE-NORMALIZATION [O]: the vector doublet state, its two point and pseudo covariance spectra, the action normalization, the scalar comparison; the only gate yielding a numerical r_T(k)
   Decision: closes positively by a public vector-doublet normalization yielding a numerical r_T(k); closes negatively if every admissible normalization violates the registered TT identities or requires an extra free dimensionless input
 
-Live total: 29.
+Live total: 26.

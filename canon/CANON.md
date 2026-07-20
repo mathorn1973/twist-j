@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v11
+# TWIST-J Public Canon v12
 
-**Release identity.** Public Canon v11. Normative authority and activation
+**Release identity.** Public Canon v12. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v11 also declares the discrete
+algebraic axiom is J. Public Canon v12 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v11 does not claim
+seed of the two algebraic projections. Public Canon v12 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -82,7 +82,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v11 contains no such
+deriving the architecture from J; Public Canon v12 contains no such
 theorem.
 
 ---
@@ -399,6 +399,62 @@ constant chronological quarter-turn, full-state four-phase identification,
 checkpoint factorization, parity on all of `Z_2`, time-arrow reading, or lift
 to L2-L6 is claimed.
 
+The checkpoint-only factorization closes negatively on the frozen full
+forward carrier
+
+```
+C = {U^n(0, psi_0) : n >= 0, psi_0 in F_5^6}.
+```
+
+For every initial checkpoint, the five trace laws force `z_6(psi_3) = 1`; the
+selectors at steps three, four, and five are therefore all one. The same
+involution `b` acts three times, so `b^2 = id` gives `psi_4 = psi_6`, while
+the inherited lift has `Theta_4 = 2` and `Theta_6 = 4`. Hence no
+single-valued `h : F_5^6 -> F_5^*` factors `Theta_n` through the checkpoint
+on `C` (CARRY-J-CHECKPOINT [T] at L1,
+probes/P-CARRY-J-CHECKPOINT-1). The theorem decides no restricted carrier,
+selector offset, physical carry, phase, time, or gravity reading, decoder
+completeness, parity on all of `Z_2`, or lift to L2-L6.
+
+The same ramified digit recursion has an exact two-branch lift through
+`C8 -> C4 -> C2`. In `F_25 = F_5[tau]/(tau^2-2)`, put `eta = tau^3`.
+Then `eta^2 = phi = 3`, `eta^4 = -1`, `eta` has order eight, and its norm to
+`F_5` is the ramified image `J_lambda = 2`; the roots of `r^2 = phi` are
+exactly `eta` and `-eta`. On `<eta>`, the norm has kernel `{+-1}` and image
+`<J_lambda>`, but no section because both preimages of `J_lambda` have order
+eight. For either root `r_epsilon`, define the digit recursion
+
+```
+Y_0^epsilon      = 1,
+Y_(2n)^epsilon   = Y_n^epsilon,
+Y_(2n+1)^epsilon = r_epsilon Y_n^epsilon.
+```
+
+Binary-length induction gives its unique solution and successor law:
+
+```
+Y_n^epsilon = r_epsilon^s_2(n),
+Y_(n+1)^epsilon = Y_n^epsilon r_epsilon^(1-nu_2(n+1)).
+```
+
+For both branches and every `n >= 0`, the exact projections are
+
+```
+N(Y_n^epsilon)    = Theta_n,
+q(N(Y_n^epsilon)) = theta_n,
+(Y_n^epsilon)^2   = Theta_n^-1,
+(Y_n^epsilon)^4   = (-1)^theta_n,
+Y_n^-             = (-1)^theta_n Y_n^+.
+```
+
+Thus `Y_n -> Theta_n -> theta_n` is the exact `C8 -> C4 -> C2` tower, and
+the chronological multiplier is not constant. These statements form
+SQRT-PHI-DIGIT-LIFT [T] at L1, evidenced by
+probes/P-SQRT-PHI-DIGIT-1. Neither sign branch is physically selected; no
+checkpoint identification, physical tick, time arrow, gravity dynamics,
+coupling, SI scale, or lift to L2-L6 is claimed. The typed clock and gravity
+bridge remains SQRT-PHI-TIME-GRAVITY [O].
+
 The next carry stratum has an exact pentagonal form in the frozen
 four-coordinate Hamming frame. On `V = F_2^4`, put
 
@@ -452,7 +508,7 @@ physical gauge, phase, force, spacetime, entropy, measure, or lift to L2-L6.
 
 No coding rate is inferred
 from this dimension count. The inherited phrase "rate 4/5" is retired
-from Public Canon v11; any future coding claim must define its alphabet,
+from Public Canon v12; any future coding claim must define its alphabet,
 message space, encoder, decoder, error criterion, and rate from scratch.
 
 Five completed public probes now delimit the entropy bridge without closing
@@ -941,7 +997,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v11. The fermionizer
+inherited naming clause is not part of Public Canon v12. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1193,6 +1249,52 @@ forms with fenced comparisons); the gyron density rho = 1/6
 (GYRON-DENSITY) [T]: the named Thue-Morse pair
 (0, 0) has exact stationary density rho = 1/6. Its proton
 and cosmology assignments belong to COSMOLOGY-READING-DICTIONARY [D].
+Independently, freeze the six golden projective lines with representatives
+
+```
+v1 = (0,1,phi),       v2 = (0,1,-phi),
+v3 = (1,phi,0),       v4 = (1,-phi,0),
+v5 = (phi,0,1),       v6 = (phi,0,-1).
+```
+
+Put `K = Q(phi)`, `r = phi + 2`, `Pi = vi vi^T/r`, and give the six lines
+equal cardinal weight. On `Sym2(K^3)` define
+
+```
+M(A)  = (1/6) sum_i Tr(Pi A) Pi,
+P1(A) = Tr(A) I3/3,
+P5(A) = A - P1(A).
+```
+
+The rank-one projectors sum to `2 I3` and their centered projectors form a
+rank-five regular simplex. The direct sum defining `M` is Galois-stable and
+descends to a rational endomorphism of `Sym2(Q^3)`. The complete exact
+commutant of the rational `so(3)` action is spanned by `P1` and `P5`, and
+
+```
+M = (1/3) P1 + (2/15) P5.
+```
+
+Thus its scalar-to-per-channel coefficient ratio is `5:2`, its
+scalar-to-total-traceless trace-mass ratio is `1:2`, and
+`M != (1/6) I6`. For the negative control put
+
+```
+c1 = (1,1,1),     c2 = (1,1,-1),
+c3 = (1,-1,1),    c4 = (-1,1,1),
+Qi = ci ci^T/3,
+M_cube(A) = (1/4) sum_i Tr(Qi A) Qi.
+```
+
+Then `(1/4) sum_i Qi = I3/3`, but `M_cube` is not in the rational `so(3)`
+commutant. Thus second-order isotropy alone does not imply the Sym2
+centrality (GOLDEN-SIX-LINE-SYM2-FRAME [T] at L1,
+probes/P-TM-SYM2-FRAME-1). The six lines and their equal weights are frozen
+inputs, not a selection from J, U, a checkpoint, or a Thue-Morse orbit. The
+coefficient `1/6` in `M` is only the cardinal average over six lines; it is
+not GYRON-DENSITY, a clock density, or a Born multiplier. This theorem
+supplies no Thue-Morse measure, Born halving, physical probability, L5
+stream, or L6 measure lift; TM-SYM2-MEASURE [H] remains live.
 The conformal mode prefactor K_chi5 =
 1/(864 pi) is derived at the homogeneous L5 scope from the single
 layer 5 action, with c_hom = 12 K_chi5 = 1/(72 pi)
@@ -1206,8 +1308,22 @@ labels within COSMOLOGY-REGISTER.
 The TT decoder is the complex squaring map with kernel {+-1}, the spin
 double cover; volume neutrality is det = 1 - |h|^2 exactly; one
 propagation law c = 1 - s^2: breathing +1, photon 0, TT square -3
-(TT-SQUARING-DECODER) [D; reproduce/coupling-metrology]. The inherited
-WKB3 ringdown grade has no public source or reproducing test and is
+(TT-SQUARING-DECODER) [D; reproduce/coupling-metrology]. Writing
+`v = v_1 + i v_2` and `h = h_+ + i h_x`, the same square gives
+`h_+ = v_1^2 - v_2^2` and `h_x = 2 v_1 v_2`. For the exact input-frame
+rotation `v_1' = a v_1 - b v_2`, `v_2' = b v_1 + a v_2`, with
+`a^2 + b^2 = 1`, the pair transforms by
+
+```
+((a^2-b^2, -2ab), (2ab, a^2-b^2)),
+```
+
+the doubled-angle spin-2 law; conjugation fixes `h_+` and negates `h_x`.
+The two coordinates are read as plus and cross (POL-READ [D]). This readout
+introduces no independent propagation law, source map, detector convention,
+action or state normalization, helicity selection, or numerical tensor
+ratio. The inherited WKB3 ringdown grade has no public source or reproducing
+test and is
 therefore not a Canon claim. Stage A, the Schwarzschild TT endpoint: the
 Regge-Wheeler coefficients (1, 0, -3) are forced at scope, V_2 =
 f (L/r^2 - 6M/r^3) (SCHWARZSCHILD-TT-ENDPOINT) [T at the displayed
@@ -1216,9 +1332,8 @@ the explicit dictionary inputs mu = 1 and Z_L2 = 1/2
 (TT-QUADRATIC-GERM [D]); neither the action germ, a Gaussian-state
 boundary, nor a Stage B pullback is derived by that bookkeeping
 identity. No numerical mu corridor is retained without a public
-shadow-to-mu inference rule. The emission map, the quasinormal mu
-decision after such a rule is preregistered, and the polarization
-readout stand open (TT-SOURCE, QNM-LEAVER-MU, POL-READ).
+shadow-to-mu inference rule. The emission map and the quasinormal mu decision
+after such a rule remain open (TT-SOURCE, QNM-LEAVER-MU).
 
 ## 15. Couplings, instruments, and metrology
 
@@ -1416,6 +1531,42 @@ cocycle-vector route remains open.
   not cover distribution or trace formalisms, moment-functional
   constructions, or genuinely global adelic objects.
 
+The first completed-zeta K-side rung is pinned at finite enclosure scope
+(O-R2-K-JUNCTION-PIN [C], probes/P-R2-K-JUNCTION-PIN-1). For
+`K = Q(zeta_5)`, define
+
+```
+lambda_1^K
+  = 1 + (3/2) log 5 - 2 log(2 pi) - gamma
+    + sum_(chi != chi_0 mod 5) L'/L(1,chi),
+
+lambda_1^Q
+  = 1 + gamma/2 - (1/2) log(4 pi).
+```
+
+Exact rational interval arithmetic gives the computed enclosures
+
+```
+lambda_1^K in
+[0.304595618542798635262524662701,
+ 0.304595618542798635262524662702],
+
+sum_(chi != chi_0 mod 5) L'/L(1,chi) in
+[1.143408547611871901089216,
+ 1.143408547611871901089217],
+
+lambda_1^Q in
+[0.023095708966121033814310,
+ 0.023095708966121033814311].
+```
+
+The identity `(3/2) log 5 = 6 log s_J + 3 log phi` is preserved interval by
+interval. The literal modulus-five principal-character convention is a
+disjoint negative control at
+`[0.706955096651323728912714, 0.706955096651323728912715]`. This computed
+pin constructs no R2 carrier, proves no higher Li rung, and makes no RH
+claim.
+
 The E8 multiplicity obstruction, the compact-boundary Hilbert-Schmidt
 obstruction, and the scaling-shift spectral-type obstruction are now closed
 only at those declared scopes. In particular, the compact lambda-adic
@@ -1456,15 +1607,6 @@ positively and what closes it negatively.
   proved outside that grid, failure of the stated limit, or any all-vector
   contradiction in this compact-boundary class fires the hypothesis.
 
-- O-R2-K-JUNCTION-PIN [O]. Obtain a rigorous enclosure of
-  `lambda_1^K = 1 + (3/2) log 5 - 2 log(2 pi) - gamma
-  + sum_(chi != chi_0 mod 5) L'/L(1,chi)`, together with
-  `(3/2) log 5 = 6 log s_J + 3 log phi` and the named Q-case cross-check.
-  The obligation closes only when the Q formula is reproduced inside its
-  pinned bracket and generalized Stieltjes-Hurwitz enclosures rigorously
-  close the K side; a failed cross-check or a disproved formula fires it.
-  No Li carrier or RH statement follows from opening this obligation.
-
 ```
 MEASUREMENT AND METROLOGY
   METRO-ADMISSIBILITY        beyond one dimensional rational finite
@@ -1488,7 +1630,6 @@ THE WALL
 GRAVITATIONAL WAVE
   TT-SOURCE                  the emission map
   QNM-LEAVER-MU              the quasinormal mu decision
-  POL-READ                   the polarization readout
   TT-VECTOR-STATE-NORMALIZATION  the only gate yielding a numerical r_T(k)
 COSMOLOGY
   FRW-INHOM                  the inhomogeneous sector, the named
@@ -1505,10 +1646,8 @@ PHOTON
 PLENUM AND KERNEL
   KC3-PLENUM-READOUT         the residue class readout of the ramified
                              place
-  SQRT-PHI-TIME-GRAVITY      the dynamical face of the time gravity door
-  CARRY-J-CHECKPOINT         whether RAMIFIED-TM-LIFT factors through
-                             pr_checkpoint on a publicly frozen forward
-                             U-carrier; target probe P-CARRY-J-CHECKPOINT-1
+  SQRT-PHI-TIME-GRAVITY      the typed clock and gravity bridge remains
+                             after the exact L1 digit lift
   CURVATURE-OPERATOR-CANONICAL
                              whether the public architecture determines
                              one equivalence class of spatial-curvature
@@ -1522,8 +1661,8 @@ ENTROPY BRIDGE
                              carrier counts already match
 MEASURE
   QUADRATIC-ENVELOPE-DECODER the full decoder carrier hypothesis
-  TM-SYM2-MEASURE            the symmetric square measure; residual the
-                             Born phase halving 1/6 = (1/2)(1/3)
+  TM-SYM2-MEASURE            the Thue-Morse selection and physical measure;
+                             residual Born phase halving 1/6 = (1/2)(1/3)
 MATTER
   NEUTRON-DELTA-EM           the interior compression channel
   PROTON-RESIDUAL-IS-QCD     gated on QCD dynamics

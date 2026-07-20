@@ -43,12 +43,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 93, "D": 38, "C": 21, "F": 9,
-                       "O": 23, "H": 6}
+    expected_counts = {"T": 96, "D": 39, "C": 22, "F": 9,
+                       "O": 20, "H": 6}
     checks.append((
         "COUNTS",
-        "registry has 190 claims with the current status partition",
-        len(rows) == 190 and counts == expected_counts,
+        "registry has 192 claims with the current status partition",
+        len(rows) == 192 and counts == expected_counts,
     ))
 
     checks.append((
@@ -78,15 +78,21 @@ def run():
 
     checks.append((
         "CARRY",
-        "carry arithmetic stays T; checkpoint and physical readings stay fenced",
+        "carry lifts and checkpoint no-go stay T; physical readings stay fenced",
         all(has_status(index, claim, "T") for claim in
-            ("RAMIFIED-TM-LIFT", "CARRY-PENTAD"))
-        and has_status(index, "CARRY-J-CHECKPOINT", "O")
+            ("RAMIFIED-TM-LIFT", "CARRY-J-CHECKPOINT", "CARRY-PENTAD",
+             "SQRT-PHI-DIGIT-LIFT"))
         and scope_contains_all(index, "CARRY-PENTAD",
                                ("selects no prime", "physical reading"))
         and scope_contains_all(index, "RAMIFIED-TM-LIFT",
                                ("no checkpoint factorization",
-                                "physical carry/phase reading")),
+                                "physical carry/phase reading"))
+        and scope_contains_all(index, "CARRY-J-CHECKPOINT",
+                               ("full forward carrier", "no restricted carrier",
+                                "physical reading"))
+        and scope_contains_all(index, "SQRT-PHI-DIGIT-LIFT",
+                               ("not constant", "no sign-branch selection",
+                                "gravity dynamics")),
     ))
 
     checks.append((
