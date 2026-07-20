@@ -10,7 +10,11 @@ environment: LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC
 platform: Ubuntu 24.04
 architecture: aarch64
 python: 3.12.3
-architecture_gate: formal aarch64 leg complete; required GitHub x86_64 leg pending
+architecture_gate: two-architecture gate PASS; formal aarch64 record and GitHub Linux x86_64 run are byte-identical
+github_run: 29774669798
+github_job: 88461068408
+github_platform: ubuntu-latest
+github_architecture: x86_64
 exit_code: 0
 stdout_sha256: 62127bf909d1d50624f77d744905f3c99287db816365a27b5ef458f3fddec0c5
 stdout_bytes: 3313
@@ -24,7 +28,7 @@ Break path executed under the same environment: exit 0, stdout SHA-256
 `9f0b08587543bdba48bb1d87759b2914a5a9dbdee4213e73f72b2ae1ab62fd36`,
 result line: BREAK ATTEMPT FAILED. NONUNIQUE STANDS.
 
-Cross-platform witness: the same verifier bytes previously produced the same
-stdout hash on an independent x86_64 platform (Ubuntu, Python 3.11.15), per
-the provenance disclosure in PREREG.md. The required GitHub x86_64 check at
-PR time is the remaining gate; byte identity with EXPECTED.txt is required.
+The required GitHub Linux x86_64 check reran the pinned verifier from the
+public pull request with exit 0 and empty stderr. Its verifier and stdout
+SHA-256 values are byte-identical to the recorded aarch64 leg and
+`EXPECTED.txt`.
