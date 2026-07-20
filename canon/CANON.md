@@ -250,8 +250,10 @@ D_geom reads the orbit plus MatterData and the registered linear,
 boundary, wedge, and chain maps; D_clock reads the counter projection
 plus the accumulated records and is terminal. None of these outputs
 feeds U, so the declared dependency graph is acyclic. Totality,
-uniqueness, and completeness of D are not claimed: they remain in
-QUADRATIC-ENVELOPE-DECODER [H] and QUADRATIC-DECODER-DATA [O].
+uniqueness, and completeness of D are not claimed. The typed quadratic/Born
+`D_matter` action, including its exact factorization through the declared
+quadratic pair, remains in QUADRATIC-DECODER-DATA [O]. No umbrella
+full-decoder completeness claim is registered.
 
 The reading split (READING-SPLIT [D], inline) is therefore a public
 dictionary at the registered legs, not a completeness theorem: the
@@ -1620,10 +1622,12 @@ MEASUREMENT AND METROLOGY
                              the meter over the single m_e bridge)
   DRESS-CROSSCOUNT           the integer crossing count per observable;
                              witness 72 alpha^4, labeled
-  QUADRATIC-DECODER-DATA     the typed D_matter effect/data action; carrier,
-                             bridge, Gram, dagger, effects, Born pairing,
-                             MatterData schema, write map, domain, and complete
-                             dependencies remain open; post-state instruments
+  QUADRATIC-DECODER-DATA     the typed quadratic/Born D_matter action and its
+                             exact factorization through Q; carrier, bridge,
+                             Gram, dagger, transpose, QCarrier equality,
+                             effects, MatterData schema, write map, domain, and
+                             complete dependencies remain open; linear, binary,
+                             reconstruction, and post-state instrument claims
                              are outside this row
 THE WALL
   QUANT-SUBSTRATE            the Larmor gate and the Schwinger term gate
@@ -1663,7 +1667,6 @@ ENTROPY BRIDGE
                              ansatz is closed negatively and the finite
                              carrier counts already match
 MEASURE
-  QUADRATIC-ENVELOPE-DECODER the full decoder carrier hypothesis
   TM-SYM2-MEASURE            the Thue-Morse selection and physical measure;
                              residual Born phase halving 1/6 = (1/2)(1/3)
 MATTER

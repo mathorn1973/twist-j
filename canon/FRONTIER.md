@@ -14,8 +14,6 @@ Closed claims are excluded.
   Decision: live: the tilt n_s - 1 = -5 alpha fails against CMB-S4
 - OBSERVER-WRITE-PORT [H]: the declared decoder is read-only: no admissible observer output writes back into the autonomous state
   Decision: fires when a typed public decoder construction supplies a nontrivial write channel into U; closes positively when the completed decoder dependency graph proves that every output is terminal
-- QUADRATIC-ENVELOPE-DECODER [H]: the full decoder carrier as the pair of quadratic readings of one square
-  Decision: fires if a decoder observable is exhibited that is not a function of the pair (psi psi^dagger, psi psi^T), or if the pair fails to separate two states the decoder distinguishes
 - TM-SYM2-MEASURE [H]: the compound claim that the declared autonomous or Thue-Morse stream canonically selects the six GOLDEN-SIX-LINE-SYM2-FRAME projective lines with equal physical weights mu_i = 1/6 and that a registered Born reading derives, rather than assumes, 1/6 = (1/2)(1/3); the frame algebra and GYRON-DENSITY alone supply neither selection nor Born halving
   Decision: STOP until the selector carrier, pre-update versus post-update convention, seed versus ensemble, gauge and sign quotients, line labels, limiting measure, and meanings of 1/2 and 1/3 are frozen; closes positively only when the exact selector gives mu_i = 1/6 and M_TM = (1/3)P1 + (2/15)P5 and a typed Born map derives the halving; fires if the frozen selector is noncanonical, gives unequal weights, leaves the exact commutant, changes the 5:2 ratio, or if the Born factorization is ill typed or contradicts GYRON-DENSITY
 
@@ -49,8 +47,8 @@ Closed claims are excluded.
   Decision: closes positively when the QCD dynamics sector derives the proton residual; closes negatively if the derived residual is incompatible with the measured proton moment within its comparison window
 - QNM-LEAVER-MU [O]: the quasinormal mu decision after a public inference rule maps an external shadow measurement to a preregistered mu interval
   Decision: closes positively when the public continued fraction computation and the preregistered inference rule decide mu; closes negatively when the exact spectrum is incompatible with that public interval
-- QUADRATIC-DECODER-DATA [O]: the typed D_matter action of the registered quadratic/Born leg on a published MatterData schema, including the orbit-to-amplitude bridge, Gram, dagger, effects, Born pairing, exact write map, total domain, and every dependency it reads; no post-state instrument or instrument-uniqueness claim is included
-  Decision: STOP until the carrier, orbit-to-amplitude bridge, Gram, dagger, effects, Born pairing, MatterData schema, write map, total domain, and complete dependency graph are public; closes positively when D_matter writes the frozen schema from registered inputs with exact normalization and an acyclic complete dependency graph; closes negatively if the action is ill typed, violates its declared normalization or quadratic-fiber consistency, or requires an unregistered input
+- QUADRATIC-DECODER-DATA [O]: the typed D_matter action of the registered quadratic/Born leg factors through Q(psi) = (psi psi^dagger, psi psi^T) on a published common total domain and writes a published MatterData schema; required data include the coefficient ring, effective carrier, orbit-to-amplitude bridge, Gram, dagger, transpose, QCarrier equality, effects, Born pairing, exact write map, and complete dependencies; the linear CODEC-TR4 and binary Thue-Morse/census legs, cross-leg or state reconstruction, and post-state instrument uniqueness are excluded
+  Decision: STOP until the coefficient ring, effective carrier, common total domain, orbit-to-amplitude bridge, Gram, dagger, transpose, QCarrier equality, Q, effects, Born pairing, MatterData schema, write map, and complete dependency graph are public; closes positively only when exact factor maps through Q produce every frozen D_matter field with exact normalization and an acyclic complete dependency graph; closes negatively if the action is ill typed, an included field is not constant on Q-fibers, two states distinguished by the typed D_matter action have equal Q, normalization fails, or an unregistered input is required
 - QUANT-SUBSTRATE [O]: the Larmor gate and the Schwinger term gate on the archimedean wall
   Decision: the two gates decide: exact gate values close the Larmor clause; the Schwinger term carries the hypothesis value 1/(2 pi) and a failed gate fires it
 - SCHEME-DICTIONARY [O]: the scheme dictionary between exact seeds and measured couplings
@@ -62,4 +60,4 @@ Closed claims are excluded.
 - TT-VECTOR-STATE-NORMALIZATION [O]: the vector doublet state, its two point and pseudo covariance spectra, the action normalization, the scalar comparison; the only gate yielding a numerical r_T(k)
   Decision: closes positively by a public vector-doublet normalization yielding a numerical r_T(k); closes negatively if every admissible normalization violates the registered TT identities or requires an extra free dimensionless input
 
-Live total: 26.
+Live total: 25.

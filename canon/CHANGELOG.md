@@ -3,26 +3,31 @@
 ## Public Canon v13
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 192 claims; 0 T-LOCK, 96 T, 39 D, 22 C, 6 H, 20 O, 9 F; 26 live H/O.
+Registry snapshot: 191 claims; 0 T-LOCK, 96 T, 39 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
 
-Ledger-hygiene fold with no promotion: no claim identifier or public status
-changes. The registry remains at 192 claims and the live frontier remains at
-26 (6 H and 20 O).
+Ledger-hygiene fold with no promotion. One untyped umbrella hypothesis is
+retired after its surviving exact test is consolidated into an existing
+obligation. The active registry therefore has 191 claims and the live frontier
+falls to 25 (5 H and 20 O); no claim is promoted and no result is manufactured.
 
 Three predefinition rows are scope-corrected without changing status.
-`QUADRATIC-DECODER-DATA [O]` no longer contradicts its detailed Canon boundary:
-its carrier, bridges, Gram, dagger, effects, schema, write map, domain, and
-complete dependency graph remain open, while post-state instrument selection is
-outside the row. `SQRT-PHI-TIME-GRAVITY [O]` now names branch selection or
+`QUADRATIC-DECODER-DATA [O]` now owns one coherent quadratic/Born `D_matter`
+contract: its carrier, bridge, algebraic operations, effects, schema, write map,
+domain, dependencies, and exact factorization through `Q` remain open. The
+linear `CODEC-TR4`, binary Thue-Morse/census, reconstruction, and post-state
+instrument questions are explicitly outside it. The ill-typed
+`QUADRATIC-ENVELOPE-DECODER [H]` full-decoder umbrella is retired rather than
+given an invented common carrier; its quadratic-fiber test is preserved in
+`QUADRATIC-DECODER-DATA`. `SQRT-PHI-TIME-GRAVITY [O]` now names branch selection or
 sign invariance plus the typed clock/gravity bridge. `TM-SYM2-MEASURE [H]` now
 separates the proved frame algebra from the still-open stream selection, equal
 physical weights, and Born halving. Their compound layer is recorded as
 `MULTI`; no premature gate or source/target layer is invented.
 
-Fifteen dependencies that were already required by those typed contracts and by
-the full-decoder/write-port scopes are made explicit. The dependency graph
+Twelve dependencies that were already required by those typed contracts and by
+the write-port scope are made explicit. The dependency graph
 remains acyclic.
 
 Inline evidence moves once from a whole-Canon file hash to
