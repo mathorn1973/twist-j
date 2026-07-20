@@ -54,10 +54,17 @@ class LedgerFixture:
             {"item_id": "T-CLAIM", "depends_on": "DEF-FIXTURE", "relation": "REQUIRES", "basis": "fixture theorem uses fixture definition"},
             {"item_id": "O-CLAIM", "depends_on": "T-CLAIM", "relation": "REQUIRES", "basis": "fixture obligation starts from fixture theorem"},
         ]
-        canon_hash = hashlib.sha256((self.canon / "CANON.md").read_bytes()).hexdigest()
         self.evidence = [
-            {"claim_id": claim, "evidence_id": f"EV-{claim}", "evidence_kind": "INLINE_CANON", "location": "inline", "sha256": canon_hash, "hash_mode": "file-sha256", "architecture_requirement": "none"}
-            for claim in ("T-CLAIM", "O-CLAIM")
+            {
+                "claim_id": row["claim_id"],
+                "evidence_id": f"EV-{row['claim_id']}",
+                "evidence_kind": "INLINE_CANON",
+                "location": "inline",
+                "sha256": hashlib.sha256(row["scope"].encode()).hexdigest(),
+                "hash_mode": "registry-scope-sha256-v1",
+                "architecture_requirement": "none",
+            }
+            for row in self.registry
         ]
         self.history = []
         for claim, status, scope in (("T-CLAIM", "T", scope_t), ("O-CLAIM", "O", scope_o)):
@@ -65,7 +72,8 @@ class LedgerFixture:
                 "event_id": f"GENESIS-{claim}", "event_sequence": "1", "event_date": "2026-07-13", "release": "canon-v1-genesis", "claim_id": claim,
                 "event_type": "DECLARE", "previous_status": "-", "new_status": status,
                 "scope_sha256": hashlib.sha256(scope.encode()).hexdigest(), "evidence_id": f"EV-{claim}",
-                "evidence_location": "inline", "evidence_sha256": canon_hash,
+                "evidence_location": "inline",
+                "evidence_sha256": hashlib.sha256(scope.encode()).hexdigest(),
                 "rationale": "fixture declaration",
             })
         self.gates = [{
@@ -122,6 +130,44 @@ class LedgerTests(unittest.TestCase):
         with self.assertRaisesRegex(LedgerError, "invalid inline evidence hash"):
             validate(self.root)
 
+    def test_unrelated_canon_edit_does_not_change_inline_evidence(self) -> None:
+        self.fixture.write()
+        canon = self.fixture.canon / "CANON.md"
+        canon.write_text(
+            canon.read_text(encoding="utf-8") + "Unrelated release prose.\n",
+            encoding="utf-8",
+        )
+        self.assertEqual(validate(self.root).claims, 2)
+
+    def test_scope_change_requires_evidence_and_history_update(self) -> None:
+        self.fixture.registry[0]["scope"] = "revised exact fixture theorem"
+        self.fixture.write()
+        with self.assertRaisesRegex(LedgerError, "invalid inline evidence hash"):
+            validate(self.root)
+
+        digest = hashlib.sha256(
+            self.fixture.registry[0]["scope"].encode()
+        ).hexdigest()
+        self.fixture.evidence[0]["sha256"] = digest
+        self.fixture.write()
+        with self.assertRaisesRegex(LedgerError, "latest scope differs"):
+            validate(self.root)
+
+        latest = dict(self.fixture.history[0])
+        latest.update({
+            "event_id": "SCOPE-T-CLAIM-2",
+            "event_sequence": "2",
+            "event_type": "SCOPE_CHANGE",
+            "previous_status": "T",
+            "new_status": "T",
+            "scope_sha256": digest,
+            "evidence_sha256": digest,
+            "rationale": "fixture scope correction",
+        })
+        self.fixture.history.append(latest)
+        self.fixture.write()
+        self.assertEqual(validate(self.root).claims, 2)
+
     def test_public_probe_is_a_five_file_evidence_bundle(self) -> None:
         location = "probes/P-FIXTURE-1"
         probe = self.root / location
@@ -143,6 +189,22 @@ class LedgerTests(unittest.TestCase):
         self.fixture.history[1]["evidence_sha256"] = digest
         self.fixture.write()
         self.assertEqual(validate(self.root).claims, 2)
+
+    def test_bundle_hash_uses_case_sensitive_posix_path_order(self) -> None:
+        bundle = self.root / "bundle"
+        bundle.mkdir()
+        upper = bundle / "B.txt"
+        lower = bundle / "a.txt"
+        upper.write_bytes(b"upper\n")
+        lower.write_bytes(b"lower\n")
+        manifest = "".join(
+            f"{hashlib.sha256(path.read_bytes()).hexdigest()}  "
+            f"{path.relative_to(self.root).as_posix()}\n"
+            for path in (upper, lower)
+        ).encode("utf-8")
+        self.assertEqual(
+            bundle_sha256(bundle, self.root), hashlib.sha256(manifest).hexdigest()
+        )
 
     def test_every_claim_needs_history(self) -> None:
         self.fixture.history.pop()
@@ -176,7 +238,8 @@ class LedgerTests(unittest.TestCase):
 
     def test_evidence_change_preserves_historical_hash(self) -> None:
         current = self.fixture.evidence[0]
-        old_hash = current["sha256"]
+        old_hash = hashlib.sha256((self.fixture.canon / "CANON.md").read_bytes()).hexdigest()
+        self.fixture.history[0]["evidence_sha256"] = old_hash
         current["evidence_id"] = "EV-T-CLAIM-V2"
         latest = dict(self.fixture.history[0])
         latest.update({

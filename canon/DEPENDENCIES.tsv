@@ -36,6 +36,8 @@ ELECTRON-G-TREE	ELECTRON-G-RATIO	REQUIRES	dictionary rests on the exact ratio
 ELECTRON-G-TREE	ELECTRON-G-DOUBLE-COVER	REQUIRES	dictionary rests on the exact double cover
 ELECTRON-SIGN	ELECTRON-SIGN-LAWS	REQUIRES	dictionary rests on the exhaustive laws
 FRW-INHOM	FRW-CANONICAL-FORM	REQUIRES	inhomogeneous extension starts from the homogeneous theorem
+DE-TRACE-DENSITY-UNDERDETERMINATION	FRW-CANONICAL-FORM	REQUIRES	the registered homogeneous continuity identity is the sole coefficient relation tested for density-character selection
+DE-CONFORMAL-WEIGHT	DE-TRACE-DENSITY-UNDERDETERMINATION	BOUNDED_BY	FRW continuity alone has at least two exact density-character solutions, so the open dictionary is not derived from that relation
 TM-SYM2-MEASURE	GYRON-DENSITY	REQUIRES	registered measure residual uses rho = 1/6
 MASS-LADDER-FORMS	NEUTRON-DELTA-EM	BOUNDED_BY	neutron comparison remains open
 TT-QUADRATIC-INDUCED	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	normalization remains open
@@ -89,6 +91,7 @@ COLOR-INTEGRAL-LIFT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every d
 COLOR-MEASURE-TRANSPORT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 KAHLER-CAPACITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 FRW-CANONICAL-FORM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+DE-TRACE-DENSITY-UNDERDETERMINATION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 GRAVITY-BRIDGE-LAW	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 MU-TAU-COEFFICIENT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 MU-EXCHANGE-IDENTITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
@@ -165,7 +168,6 @@ SCHEME-DICTIONARY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every dow
 GENERATIONS-L3	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 SPIN-LIFT-FORCED	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 KC3-PLENUM-READOUT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
-QUADRATIC-ENVELOPE-DECODER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 TM-SYM2-MEASURE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 QUADRATIC-DECODER-DATA	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 NEUTRON-DELTA-EM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
@@ -258,3 +260,16 @@ SQRT-PHI-DIGIT-LIFT	QUBIT-FROM-F5	REQUIRES	the sign quotient supplies the final 
 SQRT-PHI-DIGIT-LIFT	RAMIFIED-TM-LIFT	REQUIRES	the binary digit recursion and chronological carry law are lifted through the two square-root branches without adding a physical reading
 SQRT-PHI-TIME-GRAVITY	SQRT-PHI-DIGIT-LIFT	REQUIRES	the exact L1 digit lift is a necessary algebraic input, while the typed clock and gravity bridge remains open
 TM-SYM2-MEASURE	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the exact golden frame supplies only the candidate coefficient ratio; Thue-Morse selection, Born halving, and a physical measure remain open
+QUADRATIC-DECODER-DATA	DEF-DECODER-MATTER	REQUIRES	the open action and its frozen fields are the write performed by the declared D_matter interface
+QUADRATIC-DECODER-DATA	READING-SPLIT	REQUIRES	the row concerns only the registered quadratic/Born decoder leg and explicitly excludes the linear CODEC-TR4 and binary Thue-Morse/census legs
+QUADRATIC-DECODER-DATA	COUPLINGS-DETERMINE	REQUIRES	the exact Gram-normalized density and Born identity are inherited inputs, not an instrument-selection theorem
+QUADRATIC-DECODER-DATA	MEASURE-BORN-VERB	REQUIRES	the physical data effect uses the registered Born-square measure dictionary
+OBSERVER-WRITE-PORT	QUADRATIC-DECODER-DATA	REQUIRES	completed output terminality requires the typed D_matter data action and complete dependency graph
+OBSERVER-WRITE-PORT	DEF-DECODER-CLOCK	REQUIRES	positive closure concerns terminality of the declared final decoder stage
+OBSERVER-WRITE-PORT	METRO-ADMISSIBILITY	REQUIRES	every admissible output cannot be quantified until the admissible protocol class is public
+SQRT-PHI-TIME-GRAVITY	DEF-DECODER-CLOCK	REQUIRES	the clock leg targets the declared D_clock and ObservableHistory interface
+SQRT-PHI-TIME-GRAVITY	METRO-TICK	REQUIRES	the registered dimensionless tick is an inherited clock input, not the missing bridge
+SQRT-PHI-TIME-GRAVITY	GRAVITY-BRIDGE-LAW	REQUIRES	the existing equation-layer gravity dictionary is an input but supplies no Y-to-source map
+SQRT-PHI-TIME-GRAVITY	METRO-EDGE-SCALE	BOUNDED_BY	any SI time or gravity scale remains outside scope until the selector and SI clause close
+TM-SYM2-MEASURE	DEF-AUTONOMOUS-STATE	REQUIRES	the selector must read the declared omega and U dynamics rather than the checkpoint alone
+TM-SYM2-MEASURE	MEASURE-BORN-VERB	REQUIRES	the physical measure clause rests on the Born-square dictionary, which does not itself derive the halving
