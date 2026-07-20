@@ -1,11 +1,45 @@
 # Canon changelog (public series)
 
-## Public Canon v11
+## Public Canon v12
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 190 claims; 0 T-LOCK, 93 T, 38 D, 21 C, 6 H, 23 O, 9 F; 29 live H/O.
+Registry snapshot: 192 claims; 0 T-LOCK, 96 T, 39 D, 22 C, 6 H, 20 O, 9 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Frontier closure lane: `POL-READ` moves from [O] to [D] at the exact
+plus/cross decoder-dictionary scope. `CARRY-J-CHECKPOINT` moves from [O] to
+[T] through the universal time-four/time-six checkpoint collision on the
+frozen full forward carrier. `O-R2-K-JUNCTION-PIN` moves from [O] to [C] at
+the rigorous first-rung K-side interval, including its Q guard and
+wrong-convention control. No emission map, restricted-carrier result, R2
+carrier, higher Li rung, or RH statement is added.
+
+Two proof-first L1 results enter as narrow theorems.
+`SQRT-PHI-DIGIT-LIFT [T]` registers the nonsplit `C8 -> C4 -> C2` tower and
+its nonconstant chronological multiplier without a physical clock or gravity
+bridge. `GOLDEN-SIX-LINE-SYM2-FRAME [T]` registers the exact golden
+projector frame, its two-dimensional `so(3)` commutant, coefficient ratio
+`5:2`, total block ratio `1:2`, and the failed uniform-six-channel ansatz.
+It supplies no Thue-Morse selection, Born halving, or physical measure.
+
+`SQRT-PHI-TIME-GRAVITY [O]`, `TM-SYM2-MEASURE [H]`, `R2 [O]`, and `RH [O]`
+remain live. `OBSERVER-WRITE-PORT [H]` also remains live because the public
+decoder is partial; terminality of its present outputs does not prove
+terminality of the completed decoder dependency graph.
+
+Evidence: `probes/P-CARRY-J-CHECKPOINT-1`,
+`probes/P-SQRT-PHI-DIGIT-1`, `probes/P-TM-SYM2-FRAME-1`, and
+`probes/P-R2-K-JUNCTION-PIN-1`, each with byte-identical aarch64/x86_64
+transcripts where computation evidence is claimed. `POL-READ` remains
+inline Canon evidence.
+
+## Public Canon v11
+
+<!-- BEGIN GENERATED CANON11 COUNTS -->
+Registry snapshot: 190 claims; 0 T-LOCK, 93 T, 38 D, 21 C, 6 H, 23 O, 9 F; 29 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON11 COUNTS -->
 
 Ramified lift lane: `RAMIFIED-TM-LIFT` enters at [T] and L1. The ramified
 value `J_lambda = 2`, the four-state digit recursion, its sign quotient to

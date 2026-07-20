@@ -1,10 +1,10 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry has 190 claims with the current status partition
+PASS 01 COUNTS     registry has 192 claims with the current status partition
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
-PASS 04 CARRY      carry arithmetic stays T; checkpoint and physical readings stay fenced
+PASS 04 CARRY      carry lifts and checkpoint no-go stay T; physical readings stay fenced
 PASS 05 FORCE      the finite Weyl commutator stays T; force as curvature is D
 PASS 06 MAXWELL    four exact chain rows stay T; the classical Maxwell reading is D
 PASS 07 BORN       finite Born algebra stays T; measurement and cell readings are D
