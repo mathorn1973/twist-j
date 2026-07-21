@@ -356,9 +356,14 @@ selector equations pointwise. Thus a finite worst-case bound is
 120 * 5^42 affine assignments before linear pruning.
 ```
 
-This bound proves decidability but not practical run cost. A future public
-checker must either accept that bound with a resource plan or publish a prior
-exact reduction; a sampled or floating-point search is `STOP`.
+This bound proves decidability but not practical run cost. The companion
+`P-CURVATURE-OPERATOR-CANONICAL-1-AUT-REDUCTION.md` supplies a
+proposal-local exact reduction: selector covariance leaves five cyclic
+label shifts, four have inconsistent affine systems, and the identity shift
+has the unique solution `M=I,t=0`. Thus the fallback is not reached on this
+declared surface. A future public checker must still implement and certify
+that reduction; a sampled, floating-point, or unreviewed private search is
+`STOP`.
 
 The certificate checker independently:
 
@@ -424,6 +429,13 @@ GATE-L1-L2-CURVATURE-CANONICAL:
 Because this child cannot realize `EMPTY`, it does not satisfy the merged
 predefinition acceptance test and cannot move the parent lane to `READY`.
 Every child outcome leaves `CURVATURE-OPERATOR-CANONICAL [O]` unchanged.
+
+The companion also proves that `Aut_arch_aff` is trivial, so the affine
+quotient merges no typed exact-equality classes. It explicitly rejects
+retyping `EMPTY` to mean that all surviving classes are zero: that change
+could turn one nonzero plus one zero class from `NONUNIQUE` into `UNIQUE`.
+The parent `EMPTY` obstruction therefore remains; the affine reduction does
+not repair acceptance item 8.
 
 A later scope fold may not retroactively promote a computed child result. If
 the exact family, equivalence, admissibility, and four-way routing are first
