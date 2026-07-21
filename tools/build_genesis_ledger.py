@@ -135,6 +135,8 @@ CLAIM_DEPENDENCIES = (
     ("ELECTRON-G-TREE", "ELECTRON-G-DOUBLE-COVER", "REQUIRES", "dictionary rests on the exact double cover"),
     ("ELECTRON-SIGN", "ELECTRON-SIGN-LAWS", "REQUIRES", "dictionary rests on the exhaustive laws"),
     ("FRW-INHOM", "FRW-CANONICAL-FORM", "REQUIRES", "inhomogeneous extension starts from the homogeneous theorem"),
+    ("DE-TRACE-DENSITY-UNDERDETERMINATION", "FRW-CANONICAL-FORM", "REQUIRES", "the registered homogeneous continuity identity is the sole coefficient relation tested for density-character selection"),
+    ("DE-CONFORMAL-WEIGHT", "DE-TRACE-DENSITY-UNDERDETERMINATION", "BOUNDED_BY", "FRW continuity alone has at least two exact density-character solutions, so the open dictionary is not derived from that relation"),
     ("TM-SYM2-MEASURE", "GYRON-DENSITY", "REQUIRES", "registered measure residual uses rho = 1/6"),
     ("MASS-LADDER-FORMS", "NEUTRON-DELTA-EM", "BOUNDED_BY", "neutron comparison remains open"),
     ("TT-QUADRATIC-INDUCED", "TT-VECTOR-STATE-NORMALIZATION", "BOUNDED_BY", "normalization remains open"),
@@ -164,7 +166,10 @@ def bundle_sha256(path: Path, root: Path) -> str:
     if path.is_file():
         return sha256_bytes(path.read_bytes())
     lines: list[str] = []
-    for item in sorted(candidate for candidate in path.rglob("*") if candidate.is_file()):
+    files = (candidate for candidate in path.rglob("*") if candidate.is_file())
+    for item in sorted(
+        files, key=lambda candidate: candidate.relative_to(root).as_posix()
+    ):
         relative_parts = item.relative_to(path).parts
         if (
             "__pycache__" in item.parts
@@ -253,7 +258,6 @@ def main() -> None:
             "basis": "Canon definition boundary: every downstream statement is conditional on the declared architecture",
         })
 
-    canon_hash = sha256_bytes((canon / "CANON.md").read_bytes())
     evidence: list[dict[str, str]] = []
     history: list[dict[str, str]] = []
     for row in registry:
@@ -262,8 +266,8 @@ def main() -> None:
         evidence_id = f"EV-{claim}"
         if location == "inline":
             kind = "INLINE_CANON"
-            digest = canon_hash
-            hash_mode = "file-sha256"
+            digest = sha256_bytes(row["scope"].encode("utf-8"))
+            hash_mode = "registry-scope-sha256-v1"
             architecture = "none"
         elif location.startswith(("https://", "http://")):
             kind = "EXTERNAL_SOURCE"
