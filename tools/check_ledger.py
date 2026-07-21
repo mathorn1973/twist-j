@@ -34,8 +34,25 @@ GATE_FIELDS = (
     "decision_condition",
 )
 CORE_SELECTION_FIELDS = ("rank", "claim_id")
+FRONTIER_PROGRAM_FIELDS = (
+    "claim_id", "program_id", "queue_role", "work_state", "work_mode",
+)
+FRONTIER_PROGRAM_ORDER = (
+    "DECODER_CORE",
+    "MEASURE",
+    "COSMOLOGY",
+    "TENSOR",
+    "NONABELIAN_QCD",
+    "QUANTUM_EM",
+    "PHOTON_CONTINUUM",
+    "ENRICHMENT",
+)
 
 STATUSES = {"T-LOCK", "T", "D", "C", "H", "O", "F"}
+LIVE_STATUSES = {"H", "O"}
+FRONTIER_QUEUE_ROLES = {"ROOT", "FOLLOWUP"}
+FRONTIER_WORK_STATES = {"READY", "BLOCKED", "STOP"}
+FRONTIER_WORK_MODES = {"FORMAL", "EMPIRICAL", "ENRICHMENT"}
 ITEM_TYPES = {
     "AXIOM", "DEFINITION", "THEOREM", "DICTIONARY", "COMPUTATION",
     "HYPOTHESIS", "OBLIGATION", "FALSIFIED", "EMPIRICAL_ANCHOR",
@@ -115,6 +132,50 @@ def require_text(row: dict[str, str], field: str, context: str) -> str:
     return value
 
 
+def validate_frontier_programs(
+    rows: list[dict[str, str]],
+    registry: dict[str, dict[str, str]],
+) -> int:
+    claims: list[str] = []
+    seen: set[str] = set()
+    programs: set[str] = set()
+    for number, row in enumerate(rows, 2):
+        context = f"FRONTIER_PROGRAMS.tsv line {number}"
+        claim = require_text(row, "claim_id", context)
+        if claim in seen:
+            fail(f"FRONTIER_PROGRAMS.tsv duplicates {claim}")
+        if claim not in registry:
+            fail(f"{context} names unknown claim {claim}")
+        if registry[claim]["status"].strip() not in LIVE_STATUSES:
+            fail(f"{context} names non-live claim {claim}")
+        program = require_text(row, "program_id", context)
+        if program not in FRONTIER_PROGRAM_ORDER:
+            fail(f"{context} has invalid program_id {program}")
+        role = require_text(row, "queue_role", context)
+        if role not in FRONTIER_QUEUE_ROLES:
+            fail(f"{context} has invalid queue_role {role}")
+        state = require_text(row, "work_state", context)
+        if state not in FRONTIER_WORK_STATES:
+            fail(f"{context} has invalid work_state {state}")
+        mode = require_text(row, "work_mode", context)
+        if mode not in FRONTIER_WORK_MODES:
+            fail(f"{context} has invalid work_mode {mode}")
+        seen.add(claim)
+        claims.append(claim)
+        programs.add(program)
+    if claims != sorted(claims):
+        fail("FRONTIER_PROGRAMS.tsv rows must be sorted by claim_id")
+    live = {
+        claim
+        for claim, row in registry.items()
+        if row["status"].strip() in LIVE_STATUSES
+    }
+    missing = sorted(live - seen)
+    if missing:
+        fail("FRONTIER_PROGRAMS.tsv lacks live claims: " + ", ".join(missing))
+    return len(programs)
+
+
 @dataclass(frozen=True)
 class Snapshot:
     claims: int
@@ -123,6 +184,7 @@ class Snapshot:
     evidence: int
     history_events: int
     gates: int
+    frontier_programs: int
 
 
 def validate(root: Path) -> Snapshot:
@@ -136,6 +198,9 @@ def validate(root: Path) -> Snapshot:
     core_selection_rows = read_tsv(
         canon / "CORE_SELECTION.tsv", CORE_SELECTION_FIELDS
     )
+    frontier_program_rows = read_tsv(
+        canon / "FRONTIER_PROGRAMS.tsv", FRONTIER_PROGRAM_FIELDS
+    )
 
     registry: dict[str, dict[str, str]] = {}
     for number, row in enumerate(registry_rows, 2):
@@ -145,6 +210,7 @@ def validate(root: Path) -> Snapshot:
         if row["status"].strip() not in STATUSES:
             fail(f"REGISTRY.tsv {claim} has invalid status")
         registry[claim] = row
+    frontier_program_count = validate_frontier_programs(frontier_program_rows, registry)
 
     items: dict[str, dict[str, str]] = {}
     claim_items: dict[str, dict[str, str]] = {}
@@ -455,6 +521,7 @@ def validate(root: Path) -> Snapshot:
         evidence=len(evidence_rows),
         history_events=len(history_rows),
         gates=len(gates),
+        frontier_programs=frontier_program_count,
     )
 
 
@@ -472,6 +539,7 @@ def main() -> None:
         f"claims={snapshot.claims} items={snapshot.items} "
         f"dependencies={snapshot.dependencies} evidence={snapshot.evidence} "
         f"history={snapshot.history_events} gates={snapshot.gates}"
+        f" programs={snapshot.frontier_programs}"
     )
 
 

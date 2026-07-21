@@ -13,12 +13,14 @@ from tools.check_ledger import (
     CORE_SELECTION_FIELDS,
     DEPENDENCY_FIELDS,
     EVIDENCE_FIELDS,
+    FRONTIER_PROGRAM_FIELDS,
     GATE_FIELDS,
     HISTORY_FIELDS,
     LedgerError,
     NORMATIVE_FIELDS,
     REGISTRY_FIELDS,
     bundle_sha256,
+    validate_frontier_programs,
     validate,
 )
 
@@ -83,6 +85,13 @@ class LedgerFixture:
         self.core_selection = [
             {"rank": "1", "claim_id": "T-CLAIM"},
         ]
+        self.frontier_programs = [{
+            "claim_id": "O-CLAIM",
+            "program_id": "DECODER_CORE",
+            "queue_role": "ROOT",
+            "work_state": "READY",
+            "work_mode": "FORMAL",
+        }]
 
     def write(self) -> None:
         write_tsv(self.canon / "REGISTRY.tsv", REGISTRY_FIELDS, self.registry)
@@ -95,6 +104,11 @@ class LedgerFixture:
             self.canon / "CORE_SELECTION.tsv",
             CORE_SELECTION_FIELDS,
             self.core_selection,
+        )
+        write_tsv(
+            self.canon / "FRONTIER_PROGRAMS.tsv",
+            FRONTIER_PROGRAM_FIELDS,
+            self.frontier_programs,
         )
 
 
@@ -111,6 +125,55 @@ class LedgerTests(unittest.TestCase):
         self.fixture.write()
         snapshot = validate(self.root)
         self.assertEqual(snapshot.claims, 2)
+        self.assertEqual(snapshot.frontier_programs, 1)
+
+    def test_frontier_programs_must_cover_every_live_claim(self) -> None:
+        registry = {"O-CLAIM": {"status": "O"}}
+        with self.assertRaisesRegex(LedgerError, "lacks live claims: O-CLAIM"):
+            validate_frontier_programs([], registry)
+
+    def test_frontier_programs_reject_unknown_closed_and_duplicate_claims(self) -> None:
+        base = {
+            "claim_id": "O-CLAIM", "program_id": "DECODER_CORE",
+            "queue_role": "ROOT", "work_state": "READY", "work_mode": "FORMAL",
+        }
+        registry = {"O-CLAIM": {"status": "O"}, "T-CLAIM": {"status": "T"}}
+        with self.assertRaisesRegex(LedgerError, "unknown claim UNKNOWN"):
+            validate_frontier_programs([dict(base, claim_id="UNKNOWN")], registry)
+        with self.assertRaisesRegex(LedgerError, "non-live claim T-CLAIM"):
+            validate_frontier_programs([dict(base, claim_id="T-CLAIM")], registry)
+        with self.assertRaisesRegex(LedgerError, "duplicates O-CLAIM"):
+            validate_frontier_programs([base, dict(base)], registry)
+
+    def test_frontier_programs_require_closed_enums(self) -> None:
+        base = {
+            "claim_id": "O-CLAIM", "program_id": "DECODER_CORE",
+            "queue_role": "ROOT", "work_state": "READY", "work_mode": "FORMAL",
+        }
+        registry = {"O-CLAIM": {"status": "O"}}
+        cases = (
+            ("program_id", "UNKNOWN_PROGRAM"),
+            ("queue_role", "LEAF"),
+            ("work_state", "RUNNING"),
+            ("work_mode", "NUMERICAL"),
+        )
+        for field, value in cases:
+            with self.subTest(field=field):
+                with self.assertRaisesRegex(LedgerError, f"invalid {field}"):
+                    validate_frontier_programs([dict(base, **{field: value})], registry)
+
+    def test_frontier_program_rows_are_claim_sorted(self) -> None:
+        registry = {
+            "A-OPEN": {"status": "O"},
+            "B-HYP": {"status": "H"},
+        }
+        rows = [
+            {"claim_id": claim, "program_id": "MEASURE", "queue_role": "ROOT",
+             "work_state": "READY", "work_mode": "FORMAL"}
+            for claim in ("B-HYP", "A-OPEN")
+        ]
+        with self.assertRaisesRegex(LedgerError, "sorted by claim_id"):
+            validate_frontier_programs(rows, registry)
 
     def test_theorem_cannot_require_obligation(self) -> None:
         self.fixture.dependencies.append({"item_id": "T-CLAIM", "depends_on": "O-CLAIM", "relation": "REQUIRES", "basis": "invalid lower status dependency"})
@@ -220,6 +283,7 @@ class LedgerTests(unittest.TestCase):
         self.fixture.evidence.pop()
         self.fixture.gates = []
         self.fixture.core_selection = [{"rank": "1", "claim_id": "T-CLAIM"}]
+        self.fixture.frontier_programs = []
         retired.update({
             "event_sequence": "2", "event_type": "RETIRE",
             "previous_status": "O", "new_status": "RETIRED",

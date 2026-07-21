@@ -8,6 +8,8 @@ DEF-LOG-STREAM	DEF-AUTONOMOUS-STATE	REQUIRES	the Log is a derived orbit record
 DEF-DECODER-MATTER	DEF-AUTONOMOUS-STATE	REQUIRES	D_matter reads a forward orbit
 DEF-DECODER-GEOMETRY	DEF-DECODER-MATTER	REQUIRES	geometry reads MatterData
 DEF-DECODER-CLOCK	DEF-DECODER-GEOMETRY	REQUIRES	clock reads accumulated geometry
+DEF-DECODER-COMPLETION-CONTRACT	DEF-DECODER-CLOCK	REQUIRES	the completion-contract schema refines the declared partial decoder chain without asserting a completed decoder
+DEF-DECODER-COMPLETION-CONTRACT	DEF-ACTION-LAYERS	REQUIRES	every declared contract transition records its L1-L6 endpoints without asserting or authorizing a lift
 DEF-ARCHITECTURE	DEF-AUTONOMOUS-STATE	REQUIRES	declared architecture contains Omega and U
 DEF-ARCHITECTURE	DEF-DECODER-CLOCK	REQUIRES	declared architecture contains the partial decoder
 J-UNIT	AXIOM-J	REQUIRES	unit theorem starts from J

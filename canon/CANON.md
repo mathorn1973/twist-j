@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v13
+# TWIST-J Public Canon v14
 
-**Release identity.** Public Canon v13. Normative authority and activation
+**Release identity.** Public Canon v14. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v13 also declares the discrete
+algebraic axiom is J. Public Canon v14 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v13 does not claim
+seed of the two algebraic projections. Public Canon v14 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -57,6 +57,11 @@ legalize it; every such label is reconciliation debt, registered with
 evidence, rewritten, or removed before the synthesis pull request
 opens.
 
+`canon/FRONTIER_PROGRAMS.tsv` is a validated scheduler snapshot for the
+live frontier. Its program, queue, work-state, and work-mode labels create
+no claim, status, scope, dependency, layer, gate, evidence, or permission
+to run a verifier. Those authorities remain in their dedicated ledgers.
+
 **Notation.** j = zeta_5, j^5 = 1. J = 1 + j^2. phi = (1 + sqrt5)/2 =
 1/|J|. pi = -5 i Li_1(J), with Li_1(J) = i pi/5 exactly. tau = sqrt(J)
 in F_25; m_8 = zeta_8 = sqrt(i) at prime 2. The Dirac mass variable is
@@ -75,14 +80,14 @@ K_chi5 = 1/(864 pi) is the conformal mode prefactor.
 algebraic axiom        J = 1 + zeta_5^2
 derived algebra        j, phi, pi, M_J, L, and T_pl
 declared architecture  Omega, U, F_5^6, a,b,c,d,e, and the selector
-decoder interface      D_matter, D_geom, D_clock (partial at v1)
+decoder interface      D_matter, D_geom, D_clock (typed partial interface)
 calibration anchor      m_e only
 ```
 
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v13 contains no such
+deriving the architecture from J; Public Canon v14 contains no such
 theorem.
 
 ---
@@ -254,6 +259,164 @@ uniqueness, and completeness of D are not claimed. The typed quadratic/Born
 `D_matter` action, including its exact factorization through the declared
 quadratic pair, remains in QUADRATIC-DECODER-DATA [O]. No umbrella
 full-decoder completeness claim is registered.
+
+For audit purposes only, `DEF-DECODER-COMPLETION-CONTRACT` defines the
+schema of a submitted decoder-completion candidate. It does not assert
+that such a candidate exists or that any submitted candidate satisfies
+the contract. The functional stages
+
+```
+D_matter -> D_geom -> D_clock
+```
+
+and the reading-leg labels
+
+```
+D_linear, D_binary, D_quadratic
+```
+
+are independent axes. A stage assignment does not identify, merge, or
+transfer a property between reading legs.
+
+A submitted candidate is machine-auditable only when it publishes finite
+typed manifests with these slots:
+
+```
+candidate_id
+public_pin_id
+read_convention_id
+history_equivalence_id
+region_id
+coarse_graining_id
+
+carrier_manifest[]:
+  carrier_id
+  parent_carrier_id
+  inclusion_or_quotient_map_id
+  equality_id
+  coefficient_object_id
+
+record_field_manifest[]:
+  record_id
+  field_id
+  field_type_id
+  role
+  carrier_id
+  domain_id
+  normalization_id
+  equality_id
+  source_item_id
+  write_map_id
+  presence_state
+  absence_basis_item_id
+  emit_rule_id
+  stage_id
+  leg_id
+
+stage_manifest[]:
+  stage_id
+  domain_id
+  codomain_id
+  map_id
+  totality_domain_id
+  dependency_item_ids
+
+leg_manifest[]:
+  leg_id
+  owned_field_ids
+  domain_id
+  codomain_id
+  map_id
+
+bridge_manifest[]:
+  bridge_id
+  source_id
+  target_id
+  domain_id
+  codomain_id
+  map_id
+  dependency_item_ids
+  from_layer
+  to_layer
+  gate_ids
+
+quadratic_manifest:
+  coefficient_ring_id
+  effective_carrier_id
+  orbit_to_amplitude_bridge_id
+  gram_id
+  dagger_id
+  transpose_id
+  qcarrier_id
+  q_equality_id
+  q_map_id
+  effect_ids
+  born_pairing_id
+  factorization_map_id
+
+physics_manifest:
+  source_id
+  current_id
+  conservation_id
+  propagator_id
+  detector_id
+
+measure_manifest:
+  measure_id
+  normalization_id
+  metrology_id
+  scheme_id
+
+closure_manifest:
+  write_target_ids
+  feeds_U
+  terminal_output_ids
+  terminality_basis_id
+
+obligation_manifest[]:
+  requirement_id
+  owning_item_id
+  value_state
+  basis_item_ids
+```
+
+The allowed `stage_id` values are exactly `D_matter`, `D_geom`, and
+`D_clock`. The allowed `role` values are `READOUT` and `AUXILIARY`. The allowed
+resolved `leg_id` values are exactly `D_linear`, `D_binary`, and
+`D_quadratic`. Every output field has exactly one record owner and one stage
+owner. A `READOUT` field resolves exactly one reading leg; an `AUXILIARY`
+field uses `NOT_APPLICABLE` with a resolvable basis item. A relation between
+two legs requires an explicit bridge row and is
+never inherited from a common stage.
+
+Every required identifier-valued slot uses a resolvable public identifier
+or the literal `UNRESOLVED`. `presence_state` and `value_state` are `RESOLVED`,
+`UNRESOLVED`, or `NOT_APPLICABLE`; `NOT_APPLICABLE` requires a resolvable
+basis item. `feeds_U` is `TRUE`, `FALSE`, or `UNRESOLVED`. There is no bare
+null. Field identifiers are unique. Domains, codomains, equalities,
+dependencies, layer endpoints, and write targets are explicit. Totality is
+stated only relative to a named domain. A declared cross-layer map records
+its public gate identifier; absence of that gate leaves the requirement
+unresolved. A terminal record `emit_rule_id` is distinct from a write target
+and does not by itself establish that the output cannot feed `U`.
+
+Only fields owned by `D_quadratic` under QUADRATIC-DECODER-DATA are tested
+for factorization through `Q`. No factorization, status, evidence, or closure
+is inherited by `D_linear` or `D_binary`, or transferred between
+`D_matter`, `D_geom`, and `D_clock`.
+
+This contract is a schema, not an existence, totality, uniqueness,
+canonicity, or completeness statement. Syntactic conformance, a resolved
+identifier, or a submitted candidate is not evidence and cannot change a
+public status. In particular, the definition does not establish a physical
+carrier, factorization through `Q`, post-state instrument, canonical
+geometry, source-current-conservation-propagator-detector chain, physical
+measure, normalization, metrology, scheme, write port, or completion-wide
+terminality. Each property remains owned by its registered claim and evidence,
+and every
+cross-layer lift remains owned by its public gate. Missing or `UNRESOLVED`
+fields leave all owning claims unchanged. The contract neither opens nor
+authorizes a verifier or probe.
 
 The reading split (READING-SPLIT [D], inline) is therefore a public
 dictionary at the registered legs, not a completeness theorem: the
@@ -999,7 +1162,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v13. The fermionizer
+inherited naming clause is not part of Public Canon v14. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale

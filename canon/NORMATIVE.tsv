@@ -10,6 +10,7 @@ DEF-LOG-STREAM	DEFINITION			L5	GATE-L1-L5-LOG-PROJECTION	canon/CANON.md::2. Time
 DEF-DECODER-MATTER	DEFINITION			MULTI		canon/CANON.md::2. Time, space, and the decoder
 DEF-DECODER-GEOMETRY	DEFINITION			MULTI		canon/CANON.md::2. Time, space, and the decoder
 DEF-DECODER-CLOCK	DEFINITION			MULTI		canon/CANON.md::2. Time, space, and the decoder
+DEF-DECODER-COMPLETION-CONTRACT	DEFINITION			MULTI		canon/CANON.md::2. Time, space, and the decoder
 DEF-ARCHITECTURE	DEFINITION			MULTI		canon/CANON.md::Primitive and architecture inventory
 DEF-ACTION-LAYERS	DEFINITION			MULTI		canon/CANON.md::Conventions
 DEF-PUBLIC-STATUSES	DEFINITION			NOT_APPLICABLE		canon/CANON.md::Statuses
