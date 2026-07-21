@@ -21,13 +21,13 @@ Canon bytes:        87061
 owner row:          METRO-ADMISSIBILITY [O]
 gate:               GATE-L5-L6-METRO-NORMALIZATION
 child candidate:    METRO-COMMUTING-DIGIT-AUTOMATIC-CHILD-1
-draft parent:       PR #115, commit
-                    5e60b7768e38e0e6dbb565b9d2c53138eaf260f9
+merged parent:      PR #115, public main
+                    3f6500afe1ea71fb60f7c7d81da9a2d4d05d2ba3
 scheduler:          DECODER_CORE / ROOT / READY / FORMAL
 ```
 
 `READY` only permits the owner to choose and define one residual class. The
-draft parent is non-canonical and is not an authority dependency.
+merged parent note remains non-canonical and is not an authority dependency.
 
 ## 1. Exact fixed-length word-average control
 
@@ -108,7 +108,7 @@ The control does not decide:
 ```text
 uniform convergence on arbitrary translated boxes;
 padding-independent integer-stream semantics;
-the scientific role of a compositional map;
+the complete joint certificate relation;
 the complete child class;
 reduction invariance;
 the L5-to-L6 gate endpoints.
@@ -117,25 +117,30 @@ the L5-to-L6 gate endpoints.
 In particular, it does not prove that the complete direct and factorwise
 decisions disagree on an admitted protocol.
 
-## 3. Owner-amendment recommendation, not adoption
+## 3. Owner disposition after consolidation
 
-For the proposed child, the cleanest future design is to use the direct
-translated-box property as the scientific object and a joint spectral
-decomposition as an exact certificate for that same property. On such a
-design, certificate disagreement is `STOP` integrity rather than a second
-scientific outcome.
+`V15-OWNER-FOLD-107-109.md` selects the direct translated-box property as
+the single scientific object and a joint exact certificate relation as its
+proof system. The amended ruling and scope map define the required role:
 
-That recommendation is not active. The controlling merged ruling #112
-currently requires two independently defined maps and routes their
-disagreement as `NEGATIVE`. Replacing the independent factorwise map by a
-joint certificate requires a separate reviewed owner amendment before any
-definition freeze or preregistration. Until then, the compositional fork is
-`UNRESOLVED`.
+```text
+Adm_direct(P)          scientific decision in Decision(Y_r),
+Cert_joint(P,c,d)      independent exact relation with proof payload c and
+                       decision d in Decision(Y_r).
+```
 
-No existing Canon theorem is cited as a multidimensional joint-spectral iff.
-The active boundary only says that normalized one-dimensional rational
-finite-state protocols are already inside the sealed class; it does not
-supply this higher-rank theorem.
+Soundness, completeness, and decision coherence of `Cert_joint` for
+`Adm_direct` remain theorem content. The certificate must cover individual
+digit maps, the allowed-start observable quotient, q-adic boundary/residue
+data, and the translated-box effective modulus; averaged actions or a bare
+Krylov submodule alone are insufficient. An exact admitted
+counterexample is `NEGATIVE`; a malformed or non-reproducing artifact with
+no exact mathematical counterexample is `STOP`.
+
+The owner decision closes the architectural fork but does not supply the
+certificate schema or authorize a definition freeze. No existing Canon
+theorem is cited as a multidimensional joint-spectral iff. The active
+one-dimensional boundary does not supply this higher-rank theorem.
 
 ## 4. Completeness remains a proof obligation
 
@@ -169,9 +174,9 @@ may not be claimed simultaneously.
 CLOSED PROPOSAL-LOCALLY:
     factorwise powers are not equivalent to joint anchored convergence.
 
-OWNER DECISION REQUIRED:
-    amend ruling #112 to choose joint spectral certification,
-    or retain an independently scientific factorwise map.
+ARCHITECTURAL FORK CLOSED:
+    direct property plus joint exact YES/NO certificate selected;
+    factorwise powers retained only as this fixed-length control.
 
 PROOF/TYPE DEBT STILL OPEN:
     digit order and padding;

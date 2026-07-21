@@ -22,14 +22,18 @@ Canon bytes:        87061
 owner row:          CURVATURE-OPERATOR-CANONICAL [O]
 gate:               GATE-L1-L2-CURVATURE-CANONICAL
 child candidate:    CURV-PRIMITIVE-REYNOLDS-CHILD-1
-draft parent:       PR #114, commit
+merged parent:      PR #114, source commit
                     91d08878685def0b950ca826f90ed02359bb2adc
+public main readback: 3f6500afe1ea71fb60f7c7d81da9a2d4d05d2ba3
+owner disposition:  V15-OWNER-FOLD-107-109.md
 scheduler:          DECODER_CORE / ROOT / STOP / FORMAL
 ```
 
-The draft parent is non-canonical and is not an authority dependency. This
-amendment must be reviewed, merged with that parent, and read back from
-public `main` before it can freeze even a proposal-local definition surface.
+The merged parent and this reduction remain non-canonical and are not
+authority dependencies. The owner disposition rejects the three proposed
+parent filters by a structural `NONUNIQUE` no-go and retains this child only
+as enrichment. A different pre-result parent surface is required before a
+proposal-local definition can be frozen.
 
 ## 1. Exact affine reduction
 

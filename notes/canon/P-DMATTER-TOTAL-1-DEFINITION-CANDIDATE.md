@@ -333,13 +333,16 @@ constructor.
 CURRENT:
     STOP-DEFINITION
 
+OWNER ROUTING AFTER V15-OWNER-FOLD-107-109:
+    the five-window root-injection search is CLOSED PROPOSAL-LOCALLY;
+    the branch-projector Galois filter remains NOT ADOPTED;
+    an optional filter-adoption fold is DEFERRED and requires a complete
+    scoped dictionary/write package;
+    search outside C5 is UNSCHEDULED until a genuinely prior typed readout
+    candidate is supplied;
+    D_direct remains UNRESOLVED and no classification result supplies it;
+
 NEXT DEFINITION-ONLY PASS:
-    review, merge, and read back the bounded five-window classification;
-    the branch-projector Galois filter remains NOT ADOPTED by default;
-    only adoption requires a separate later owner fold;
-    D_direct ownership remains a separate choice: adopt a complete scoped
-    dictionary/write rule or retain the genuinely prior-readout requirement;
-    no classification result itself supplies D_direct;
     complete MatterData_quadratic ownership;
     physical measure/dictionary ruling;
     exact L1--L6 bridge endpoints and gate

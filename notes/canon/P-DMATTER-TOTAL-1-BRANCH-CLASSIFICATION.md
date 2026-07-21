@@ -386,9 +386,11 @@ transition.
 
 ## 8. Owner routing and debt firewall
 
-After public readback, `Adm_GalSplit` remains `NOT ADOPTED` by default. No
-`DECLINE` fold or new completion-contract slot is required. The prior search
-for a genuinely independent readout may continue outside `C5`.
+After the owner readback in `V15-OWNER-FOLD-107-109.md`, `Adm_GalSplit`
+remains `NOT ADOPTED`. No `DECLINE` fold or new completion-contract slot is
+required. The five-window root-injection search is closed proposal-locally.
+Search outside `C5` is unscheduled and may resume only when a genuinely prior
+typed readout candidate is supplied.
 
 Only adoption requires a separate reviewed owner fold. Such a fold would
 state that, within `C5`, physical branch admissibility requires invariance
@@ -425,10 +427,16 @@ DEFAULT OWNER STATE AFTER READBACK:
     Adm_GalSplit NOT ADOPTED
     D_direct UNRESOLVED
 
+OWNER ROUTING AFTER V15-OWNER-FOLD-107-109:
+    C5 root-injection search CLOSED PROPOSAL-LOCALLY;
+    Adm_GalSplit NOT ADOPTED; optional adoption DEFERRED;
+    outside-C5 search UNSCHEDULED until a genuinely prior typed readout is
+    supplied;
+    D_direct UNRESOLVED and no classification result supplies it.
+
 NEXT PUBLIC ACTION:
-    review, merge, and read back this definition-only amendment;
-    only a later adoption of Adm_GalSplit needs a separate owner fold;
-    no classification result supplies a prior independent D_direct.
+    none until a complete optional adoption package or a genuinely prior
+    typed readout exists.
 
 FORMAL PROBE:
     forbidden; the displayed results are proof-first finite algebra and the
