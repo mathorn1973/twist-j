@@ -244,6 +244,15 @@ This gives one exact proposal-local factor map
 F_Gram : QCarrier -> CandidateQuadraticData.
 ```
 
+The companion note
+`P-DMATTER-TOTAL-1-CYCLOTOMIC-REALIZATION.md` proves, in the standard
+cyclotomic power basis, that this same factor has an exact trace-pairing
+realization. It also supplies the explicit representation equality
+`[T_w]_B0=A G` and matching total `ZERO`/`NONZERO` tags. This removes a
+coordinate-typing ambiguity, but it does not supply an independently
+published `D_direct`: the cyclotomic record is another realization of this
+same Gram factor.
+
 It does not yet give the required direct map
 
 ```text
@@ -295,7 +304,7 @@ its fibers.
 | dagger / transpose / Gram adjoint | types separated | adopt public IDs |
 | Canon-typed `Q` and equality | exact finite-image proposal frozen | adopt public IDs |
 | algebraic effects and factor map | proposal frozen | decide physical reading and measure dictionary |
-| `D_direct` | `UNRESOLVED` | publish an independent registered readout |
+| `D_direct` | `UNRESOLVED`; companion proves only a proposal-local realization of `F_Gram` | owner must either publish an explicit new scoped dictionary or retain the independent-readout requirement |
 | complete `MatterData_quadratic` ownership | `UNRESOLVED` | freeze actual fields, roles, stage and leg |
 | physics and measure identifiers | `UNRESOLVED` | no illegal `NOT_APPLICABLE` in identifier slots |
 | bridge layer endpoints and gate | `UNRESOLVED` | add or identify a public gate before `READY` |
@@ -316,7 +325,9 @@ CURRENT:
     STOP-DEFINITION
 
 NEXT DEFINITION-ONLY PASS:
-    independent D_direct
+    separately review, merge, and read back from public main an owner ruling:
+    explicit cyclotomic dictionary adoption versus a genuinely independent
+    prior D_direct
     complete MatterData_quadratic ownership
     physical measure/dictionary ruling
     exact L1--L6 bridge endpoints and gate
