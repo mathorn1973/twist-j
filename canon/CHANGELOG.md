@@ -1,11 +1,42 @@
 # Canon changelog (public series)
 
-## Public Canon v13
+## Public Canon v14
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
 Registry snapshot: 192 claims; 0 T-LOCK, 97 T, 39 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Type-debt and activation-hygiene fold with no promotion. The registry,
+evidence ledger, status histories, gates, and all 25 live H/O rows are
+unchanged.
+
+`DEF-DECODER-COMPLETION-CONTRACT` now gives a finite typed manifest schema
+for future decoder-completion candidates while leaving every concrete value
+and every scientific obligation with its existing owner. The contract does
+not assert existence, totality, uniqueness, canonicity, `Q` factorization,
+physical transport, completion-wide terminality, or completeness, and it
+authorizes no verifier or probe. The normative inventory rises to 208
+items and the
+definition-only dependency graph to 276 edges.
+
+`FRONTIER_PROGRAMS.tsv` gives every live claim exactly one validated program,
+queue role, work state, and work mode. These are scheduler labels only. They
+do not duplicate or amend statuses, scopes, scientific dependencies, layers,
+gates, or evidence. The generated frontier is regrouped by those labels while
+`REGISTRY.tsv` remains the sole status and scope authority.
+
+The activation manifest inventory now uses case-sensitive POSIX component
+ordering on every supported host, removing the remaining Windows/Linux path
+ordering difference. No formal lane is opened or run in v14; candidate lanes
+and their scientific outcomes are reserved for the v15 fold.
+
+## Public Canon v13
+
+<!-- BEGIN GENERATED CANON13 COUNTS -->
+Registry snapshot: 192 claims; 0 T-LOCK, 97 T, 39 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON13 COUNTS -->
 
 Ledger-hygiene fold with no promotion. One untyped umbrella hypothesis is
 retired after its surviving exact test is consolidated into an existing

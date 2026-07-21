@@ -42,6 +42,16 @@ history or the private development archive into scientific evidence:
 - `CORE_SELECTION.tsv` is the explicit, reviewable selection of closed claims
   used to generate the short core claim badges. Selection is policy, while
   statuses and scopes always come from `REGISTRY.tsv`.
+- `FRONTIER_PROGRAMS.tsv` assigns every current live H/O claim to exactly one
+  validated scheduling program with a queue role, work state, and work mode.
+  `ROOT` and `FOLLOWUP` are queue positions, not scientific dependencies;
+  `READY` permits scope or preregistration work but does not authorize a
+  verifier; `BLOCKED` is scheduling metadata, not a dependency edge; and
+  `STOP` requires definition work before computation. `FORMAL`, `EMPIRICAL`,
+  and `ENRICHMENT` select work queues only. The table duplicates no status,
+  scope, blocker, layer, gate, or evidence field. Those facts remain in
+  `REGISTRY.tsv`, `DEPENDENCIES.tsv`, `NORMATIVE.tsv`, `GATES.tsv`, and
+  `EVIDENCE.tsv`.
 
 `tools/check_ledger.py` requires an acyclic dependency graph, exact agreement
 with `REGISTRY.tsv`, valid evidence hashes, continuous status history, and the

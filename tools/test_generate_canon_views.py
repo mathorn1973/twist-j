@@ -30,6 +30,8 @@ class GeneratedViewTests(unittest.TestCase):
             (root / "reproduce").mkdir()
             views = generated_views(root)
             self.assertIn("O-CLAIM [O]: open fixture gate", views["FRONTIER.md"])
+            self.assertIn("## Decoder core (`DECODER_CORE`)", views["FRONTIER.md"])
+            self.assertIn("Queue: ROOT; READY; FORMAL.", views["FRONTIER.md"])
             self.assertIn("T-CLAIM [T]: exact fixture theorem", views["CORE_CLAIMS.md"])
             self.assertIn("claims\t2", views["STATUS_COUNTS.tsv"])
             self.assertIn("live_H_O\t1", views["STATUS_COUNTS.tsv"])
