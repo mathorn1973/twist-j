@@ -259,6 +259,16 @@ ROUTE B -- retain the independent-readout requirement
     fields is still required.
 ```
 
+The companion amendment
+`P-DMATTER-TOTAL-1-BRANCH-CLASSIFICATION.md` refines this fork. It freezes
+the five verb-compatible windows as a bounded candidate class with one fixed
+record equality. Their scalar subrecords agree, but their fixed-basis density
+operators form five distinct classes. Within `C5`, invariance of the branch
+projector under the full group `Gal(Q(zeta_5)/Q)` selects one split only
+after it is added as a new admissibility clause. Neither the bounded
+`NONUNIQUE` result nor the conditional algebraic uniqueness
+adopts that clause or supplies `D_direct`.
+
 Until an owner explicitly selects Route A, Route B is the conservative
 default. Route A can be adopted only by a separate definition-only decision
 that is reviewed, merged, and read back from public `main`; a private owner

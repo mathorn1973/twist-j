@@ -253,6 +253,15 @@ coordinate-typing ambiguity, but it does not supply an independently
 published `D_direct`: the cyclotomic record is another realization of this
 same Gram factor.
 
+The classification amendment
+`P-DMATTER-TOTAL-1-BRANCH-CLASSIFICATION.md` bounds the current frame
+ambiguity without treating moving-basis matrices as equal. In its frozen
+five-window class the scalar subrecord has one numerical class, the complete
+fixed-basis record has five classes, and invariance of the branch projector
+under the full group `Gal(Q(zeta_5)/Q)` leaves one split. That optional
+filter is not adopted, and none of these proposal-local facts supplies an
+independently published `D_direct`.
+
 It does not yet give the required direct map
 
 ```text
@@ -304,7 +313,7 @@ its fibers.
 | dagger / transpose / Gram adjoint | types separated | adopt public IDs |
 | Canon-typed `Q` and equality | exact finite-image proposal frozen | adopt public IDs |
 | algebraic effects and factor map | proposal frozen | decide physical reading and measure dictionary |
-| `D_direct` | `UNRESOLVED`; companion proves only a proposal-local realization of `F_Gram` | owner must either publish an explicit new scoped dictionary or retain the independent-readout requirement |
+| `D_direct` | `UNRESOLVED`; the companion realizes `F_Gram`, while the bounded `C5` classification supplies no `D_direct` | separately adopt a complete scoped dictionary/write rule (`B0`, or a consistently re-frozen `c_1` after an optional `Adm_GalSplit` ruling) or retain the genuinely prior-readout requirement |
 | complete `MatterData_quadratic` ownership | `UNRESOLVED` | freeze actual fields, roles, stage and leg |
 | physics and measure identifiers | `UNRESOLVED` | no illegal `NOT_APPLICABLE` in identifier slots |
 | bridge layer endpoints and gate | `UNRESOLVED` | add or identify a public gate before `READY` |
@@ -325,11 +334,14 @@ CURRENT:
     STOP-DEFINITION
 
 NEXT DEFINITION-ONLY PASS:
-    separately review, merge, and read back from public main an owner ruling:
-    explicit cyclotomic dictionary adoption versus a genuinely independent
-    prior D_direct
-    complete MatterData_quadratic ownership
-    physical measure/dictionary ruling
+    review, merge, and read back the bounded five-window classification;
+    the branch-projector Galois filter remains NOT ADOPTED by default;
+    only adoption requires a separate later owner fold;
+    D_direct ownership remains a separate choice: adopt a complete scoped
+    dictionary/write rule or retain the genuinely prior-readout requirement;
+    no classification result itself supplies D_direct;
+    complete MatterData_quadratic ownership;
+    physical measure/dictionary ruling;
     exact L1--L6 bridge endpoints and gate
     completion-contract dependency ruling
     legal completion of every identifier-valued manifest slot
