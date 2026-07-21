@@ -27,15 +27,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(self.report.claims, 192)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 22, "D": 39, "F": 9, "H": 6, "O": 20, "T": 96},
+            {"C": 22, "D": 39, "F": 9, "H": 5, "O": 20, "T": 97},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 38,
+                "none": 37,
                 "one-architecture": 8,
                 "recorded-audit": 31,
-                "two-architecture": 115,
+                "two-architecture": 116,
             },
         )
         self.assertFalse(self.report.count_mismatches)
