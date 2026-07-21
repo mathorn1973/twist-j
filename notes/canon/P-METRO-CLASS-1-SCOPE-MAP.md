@@ -248,9 +248,19 @@ B. JOINT SPECTRAL
    factorwise map merely because it has a different implementation.
 ```
 
-The owner must choose the scientific target before a definition freeze.
-Combining option A's factorwise language with option B's joint-killing
-criterion would be circular and remains `STOP`.
+The companion `P-METRO-CLASS-1-FORK-WITNESS.md` gives an exact two-state
+fixed-length control with `T_1=swap`, `T_2=(I+swap)/2`, and
+`T_1 T_2=T_2`. It proves that factorwise power convergence is not necessary
+for joint anchored convergence. It does not freeze padding-independent
+`N^a` semantics or prove the translated-box direct criterion.
+
+The companion recommends option B only as input to a later owner amendment.
+The controlling merged ruling #112 still requires two independently defined
+maps and routes disagreement as `NEGATIVE`. Replacing the factorwise map by
+a joint certificate therefore needs a reviewed amendment before definition
+freeze. Until then the scientific fork remains `UNRESOLVED`. Combining
+option A's factorwise language with option B's joint-killing criterion would
+be circular and remains `STOP`.
 
 Any joint spectral option must act only on the reachable submodule generated
 by the allowed starts and the readout. Irrelevant algebraic modes cannot be
@@ -318,6 +328,13 @@ ALL-PARAMETER THEOREM:
     for every finite input tuple in the chosen child class.
 ```
 
+The companion proposes an all-parameter anchored criterion plus a
+translated-box theorem as a target shape, but supplies neither completeness
+proof. Simultaneous primary/peripheral decomposition is only a suggested
+route. Translated-box uniformity remains part of this same child and the
+existing `GATE-L5-L6-METRO-NORMALIZATION`; no new owner or gate is created.
+Completeness therefore remains `UNRESOLVED`.
+
 Finite-state syntax alone is not a finite candidate surface. The class may
 not claim a bounded exhaustive probe and an unbounded theorem implicitly at
 the same time.
@@ -330,9 +347,9 @@ the same time.
 | input/action type | `N^a`-indexed commuting digit-word system; ranks separated | adopt exact digit and padding convention |
 | L5/L6 transport | raw nonnegative vectors plus tagged normalization proposed | adopt or replace |
 | direct map | exact target written | supply effective translated-box theorem |
-| compositional map | `UNRESOLVED` fork | choose factorwise or joint role |
+| compositional map | `UNRESOLVED`; factorwise is not equivalent to joint anchored convergence | amend ruling #112 for a joint certificate, or retain an independent factorwise map |
 | reductions | partial | decide minimization and blocking proof |
-| completeness | `UNRESOLVED` | finite bounds or all-parameter theorem |
+| completeness | `UNRESOLVED`; two-level target proposed without proofs | finite bounds, or anchored and translated-box all-parameter proofs |
 | layer lift | existing gate identified | preserve exact L5 and L6 endpoints |
 
 Future scientific routing must follow the selected fork:
