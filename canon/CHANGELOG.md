@@ -1,11 +1,33 @@
 # Canon changelog (public series)
 
-## Public Canon v14
+## Public Canon v15
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 192 claims; 0 T-LOCK, 97 T, 39 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
+Registry snapshot: 194 claims; 0 T-LOCK, 98 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+FIRED-COMMUTATOR-NOGO enters at [T] and L1: the fired algebra <b, d, e>
+is spatially abelian; its derived subgroup is exactly the fiber translation
+plane. Evidence probes/P-FIRED-COMMUTATOR-NOGO-1, two architectures
+byte-identical. Required GitHub x86_64 workflow run 29867059010, job
+88757811865, reproduced stdout SHA-256
+8d5472d7906ff71eeeabbd6099536f6accdcedafdd6874b58e5947823be3c04f and resolved F6.
+
+TIME-CUT-READING enters at [D]: the dictionary composition time counts, the
+cut selects, matter is the isolated 00 knot, space sits on the silent pair;
+inline evidence, component rows named clause by clause.
+
+The two rows enter in that order. No other registry row changes.
+CURVATURE-OPERATOR-CANONICAL remains [O], no component claim is strengthened,
+and the live frontier remains at 25.
+
+## Public Canon v14
+
+<!-- BEGIN GENERATED CANON14 COUNTS -->
+Registry snapshot: 192 claims; 0 T-LOCK, 97 T, 39 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON14 COUNTS -->
 
 Type-debt and activation-hygiene fold with no promotion. The registry,
 evidence ledger, status histories, gates, and all 25 live H/O rows are
