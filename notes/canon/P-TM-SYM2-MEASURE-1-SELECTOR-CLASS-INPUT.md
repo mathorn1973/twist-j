@@ -14,6 +14,12 @@ preregistration, not a verifier, not a run, not evidence, and not a status
 proposal. It contains no computation results. The lane remains `STOP` and
 no formal probe is authorized by anything below.
 
+Rev 2. This revision answers the three review points recorded on the
+review thread: the complete convergence proof with an effective modulus
+(section 7), the deterministic `NEGATIVE`/`STOP` routing (section 9), and
+the exact formulations of `sigma` and of the selector domain (sections 3
+and 4). No other content changes.
+
 ## Authority pin
 
 ```text
@@ -63,16 +69,27 @@ radius or quotient is a different candidate definition.
 
 ## 3. The complete selector map and its conventions
 
+The selector is a PARTIAL map on the declared autonomous state, total on
+its declared domain:
+
 ```text
-Sel(n, psi) := s(q(n))     for n >= 1 and every psi in F_5^6,
+Dom(Sel) := { (n, psi) in Omega = N_0 x F_5^6 : n >= 1 },
+Sel : Dom(Sel) -> Lines,
+Sel(n, psi) := s(q(n)),
 ```
 
-where `s : W3 -> Lines` is a class member per section 5.
+where `s : W3 -> Lines` is a class member per section 5. Domain clauses:
 
 ```text
-n = 0 convention   the tick n = 0 precedes the first complete window and
-                   emits no selection; the selector domain is n >= 1.
-                   This convention is part of the ansatz.
+n = 0 convention   (0, psi) is NOT in Dom(Sel) for any psi: the tick
+                   n = 0 precedes the first complete window and emits no
+                   selection. The empirical measure below is indexed by
+                   exactly Dom(Sel) truncations, nu_N over n in [1, N],
+                   the same index set as the window census; no
+                   off-by-one shift between selector and census is
+                   permitted. This convention is part of the ansatz, and
+                   any padding or one-sided-window alternative is a
+                   different candidate definition.
 update convention  theta_n is indexed as in the registered selection law
                    (the drive value consumed at tick n); the window adds
                    no new convention beyond centering at n.
@@ -93,19 +110,35 @@ starts             all n >= 1; no start is discarded.
 `v5 = (phi,0,1)`, `v6 = (phi,0,-1)`, with `r = phi + 2` and projectors
 `P_i = v_i v_i^T / r`.
 
-PROPOSED NEW STRUCTURE, declared as such: the pairing involution
+PROPOSED NEW STRUCTURE, declared as such, in its exact projective
+formulation. Every registered line has exactly one zero coordinate in its
+registered representative; call that coordinate index the ZERO PATTERN of
+the line (a projective invariant of the line with respect to the
+registered coordinate frame: whether a line lies in a coordinate plane
+does not depend on the chosen representative). Define
 
 ```text
-sigma := (v1 v2)(v3 v4)(v5 v6),
+sigma(l) := the unique registered line l' with l' != l and
+            zero-pattern(l') = zero-pattern(l).
 ```
 
-realized on the registered coordinates as the sign flip of the phi
-coordinate. `sigma` is NOT a registered linear involution of the frame; it
-is a label structure this definition adds, and its consistency with the
-registered vectors (each pair differs exactly by the phi-coordinate sign;
-the pairs are the coordinate blocks `{x = 0}`, `{z = 0}`, `{y = 0}`) is a
-checkable clause of the definition, not an inherited fact. Any competing
-pairing is a different candidate definition.
+CONSISTENCY CLAUSE (checkable, part of the definition): each of the three
+zero patterns is carried by exactly two registered lines, so `sigma` is a
+well-defined fixed-point-free involution; on the registered list it is
+the label permutation
+
+```text
+sigma = (v1 v2)(v3 v4)(v5 v6),
+```
+
+and each pair is exchanged, projectively, by negating the coordinate at
+which its two representatives differ. `sigma` is an ABSTRACT LABEL
+INVOLUTION on the registered ordered list: it is NOT a registered
+structure of the frame row, and no claim is made that it is induced by a
+single projective-linear symmetry of the line set. It is a structure this
+definition adds, with the consistency clause above as its only anchor to
+the registered vectors. Any competing pairing is a different candidate
+definition.
 
 ## 5. Selector class, equivalence, and gauge
 
@@ -157,7 +190,8 @@ checker may not embed an expected orbit count, an expected invariant
 list, or an expected weight vector; a legitimate scientific outcome is
 never a checker failure.
 
-## 7. Stream-side pushforward weight and the limiting measure
+## 7. Stream-side pushforward weight, limiting measure, and the complete
+convergence proof
 
 The registered doubling induces exact child maps on windows,
 
@@ -165,23 +199,88 @@ The registered doubling induces exact child maps on windows,
 L(a,b,c) = (1-a, b, 1-b),      R(a,b,c) = (b, 1-b, c),
 ```
 
-and the transfer `T[x][w] = [x = L(w)] + [x = R(w)]`. The weight object
-is defined procedurally:
+and the transfer `T[x][w] = [x = L(w)] + [x = R(w)]` on `Q^(W3)`. Write
+`c(N)` for the census vector, `c_w(N) = #{ n in [1, N] : q(n) = w }`, and
+`nu_N := (1/N) sum_(n=1)^(N) delta_(Sel(n, psi))` for the empirical
+measure on lines (psi-independent by section 3).
+
+LEMMA 1 (exact affine dyadic recursion; proof included). For every
+`N >= 1`,
 
 ```text
-f       the stationary law of T/2 on W3, provided the future evaluation
-        certifies (i) the exact transfer identity between consecutive
-        dyadic scales of the sliding window census, in the same
-        evidentiary shape as the registered GYRON-DENSITY row, and
-        (ii) uniqueness of the stationary law by exact rank computation;
-nu_s    := the pushforward of f under s (the STREAM-SIDE PUSHFORWARD
-        WEIGHT of each line; the term "physical weight" is not used and
-        no physical reading is claimed at this layer);
+c(2N + 1) = T c(N) + e_(q(1)).
+```
+
+Proof. The positions `[2, 2N+1]` are exactly the children `{2m, 2m+1}` of
+the parents `m in [1, N]`, each parent contributing exactly its two
+children; by the registered doubling, the window at an even child `2m`
+is `(1 - theta_(m-1), theta_m, 1 - theta_m) = L(q(m))` and at an odd
+child `2m+1` is `(theta_m, 1 - theta_m, theta_(m+1)) = R(q(m))`. Summing
+over parents gives the counts over `[2, 2N+1]` as `T c(N)`; position 1
+adds `e_(q(1))`. There is no other boundary term. QED.
+
+LEMMA 2 (deviation contraction; proof included, spectral input
+certified). Let `f` be a stationary law, `T f = 2 f`, `sum f = 1`, and
+`d(N) := c(N) - N f`. Then `sum_w d_w(N) = 0` and, by Lemma 1,
+
+```text
+d(2N + 1) = T d(N) + (e_(q(1)) - f),
+```
+
+an exact affine orbit on the sum-zero subspace `Z`. Iterating from any
+anchor `N_0` along dyadic scales,
+
+```text
+d(2^k (N_0 + 1) - 1) = T^k d(N_0) + sum_(j=0)^(k-1) T^j (e_(q(1)) - f),
+```
+
+so with `rho := spectral radius of T restricted to Z` and `m := the
+degree of the minimal polynomial factor of that restriction at its
+peripheral eigenvalues`, standard exact bounds give
+
+```text
+max_w | c_w(N) / N - f_w |  <=  C (1 + log2 N)^(m-1) rho^(log2 N) / N
+                             =  C (1 + log2 N)^(m-1) N^(log2 rho - 1)
+```
+
+for an explicit constant `C` computable from the certified Jordan data,
+first along the dyadic subsequence and then for every `N` by the one-step
+monotone interpolation `|c_w(N') - c_w(N)| <= |N' - N|`. Whenever
+`rho < 2`, the exponent `log2 rho - 1` is negative and `nu_N` converges
+to the pushforward `s_* f` with that explicit effective modulus. QED
+(conditional on the certified spectral data below).
+
+REQUIRED EXACT CERTIFICATES (produced by the future evaluation, not
+asserted here):
+
+```text
+S1  the transfer T, its exact characteristic polynomial, and its exact
+    factorization over Z;
+S2  the strict subdominance certificate: the spectral radius rho of T
+    restricted to the sum-zero subspace satisfies rho < 2, with the
+    peripheral minimal-polynomial degree m read off exactly;
+S3  uniqueness of the stationary law (rank of T/2 - I equals |W3| - 1 by
+    exact elimination), so f in Lemma 2 is unique;
+S4  machine verification of the Lemma 1 identity on the actual drive at
+    every dyadic scale up to the audit bound (a consistency audit of the
+    derivation, not the source of the theorem).
+```
+
+The weight objects are then defined, not chosen:
+
+```text
+f       the unique stationary law certified by S3;
+nu_s    := s_* f, the STREAM-SIDE PUSHFORWARD WEIGHT of each line (the
+        term "physical weight" is not used and no physical reading is
+        claimed at this layer);
 M_TM(A) := sum_w f_w Tr(P_(s(w)) A) P_(s(w))    as an operator on Sym2.
 ```
 
-The convergence clause is exactly (i) plus (ii); no stronger limit claim
-is made, and no value of `f`, `nu_s`, or `M_TM` is asserted in this note.
+The convergence claim of this definition is exactly Lemma 1 plus Lemma 2
+plus the certificates S1 to S4: a complete proof with an explicit
+effective modulus, whose only computational inputs are exact and
+machine-checkable. No value of `f`, `rho`, `m`, `nu_s`, or `M_TM` is
+asserted in this note.
 
 ## 8. Factor-map slots offered to the Born block (typing only)
 
@@ -205,20 +304,48 @@ claimed. Whether `third` and `half` may be read as the row's `1/3` and
 `1/2` through a typed Born map remains exactly the reserved dictionary
 decision of the predefinition (its false shortcuts 5 and 7).
 
-## 9. Falsifiers and routes (aligned with the predefinition)
+## 9. Deterministic routing (fixed evaluation order, one route per
+condition)
+
+The future evaluation runs two stages in a fixed order. Stage 1 decides
+integrity; only if every Stage 1 item passes is Stage 2 (science)
+evaluated. Every condition below belongs to exactly one stage and maps to
+exactly one route; no condition is routed by judgment.
 
 ```text
-EMPTY class, or the sigma consistency clause fails against the registered
-  vectors, or the stationary law is not unique      -> the definition is
-  wrong at the named clause; NEGATIVE or STOP per section 6 of the
-  predefinition.
-NONCANONICAL orbit count                            -> NEGATIVE /
-  NONCANONICAL route for a probe run under this definition; a fired
-  negative is preserved, not repaired by changing the class.
-Unequal pushforward weights, commutant departure, or a changed 5:2
-  ratio at evaluation time                          -> NEGATIVE per the
-  registered row.
+STAGE 1, INTEGRITY. ANY failure here routes STOP (the evaluation is
+invalid; nothing scientific is concluded, positively or negatively):
+  I1  exact-arithmetic reproduction of the audit fails (any inexact
+      step, any nondeterminism, any platform mismatch at audit time);
+  I2  the sigma consistency clause of section 4 fails against the
+      registered vectors (some zero pattern is not carried by exactly
+      two lines);
+  I3  the enumeration of Sel_class or of Aut(Lines, sigma) lacks a
+      completeness certificate;
+  I4  any of the certificates S1 to S4 of section 7 is missing or
+      inexact, or S2 yields rho >= 2 (the modulus formula then proves
+      nothing and the weight object is undefined);
+  I5  the stationary law is not unique (S3 fails).
+
+STAGE 2, SCIENCE (reached only with Stage 1 all green). Evaluated in
+this order; the FIRST matching condition fixes the route:
+  N1  Sel_class is EMPTY                          -> NEGATIVE;
+  N2  the canonicality test returns NONCANONICAL  -> NEGATIVE
+      (the checker names the exact orbit invariants; the fired negative
+      is preserved, not repaired by changing the class);
+  N3  some line has pushforward weight != some other line's
+      (unequal nu_s), or M_TM leaves the registered exact commutant, or
+      the 5:2 coefficient ratio is changed        -> NEGATIVE;
+  P0  otherwise: the selector clauses of this definition are satisfied
+      at evaluation grade. This does NOT route POSITIVE: the row's
+      positive closure additionally requires the typed Born derivation,
+      which this input deliberately leaves with the reserved dictionary
+      decision (section 8). The lane's residual gates own that step.
 ```
+
+A fired NEGATIVE is archived; no threshold, clause, or class is moved
+after evaluation. STOP outcomes carry no scientific weight in either
+direction.
 
 ## 10. Residual definition debt (what this input does NOT fill)
 
