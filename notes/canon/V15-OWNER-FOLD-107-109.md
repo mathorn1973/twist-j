@@ -5,18 +5,18 @@ Status: `REVIEWED-DRAFT / OWNER-DISPOSITION-PROPOSAL / NO-CANON-CHANGE / NO-PROB
 This note consolidates the useful content of three unmerged incubation
 decision inputs into one independently reviewed owner-disposition
 proposal. It changes no Canon claim, status, registry row, dependency, gate, or frontier count. It
-authorizes no formal probe. Public Canon v14 remains the only normative
+authorizes no formal probe. Public Canon v15 remains the only normative
 authority.
 
 ## Authority pin and provenance
 
 ```text
-Canon:              Public Canon v14, ACTIVE, tag canon-v14
-activation commit:  f278855cada75691142c02ebad1a75ecc2730db3
-content commit:     ab4ea07d15ab1cfa0c403d3c2a74164011ffa0e7
-Canon SHA-256:      f9f06af42a9b0b63f806603ddc671ebe6a9e5014b50d230da04a28722ed1a6a2
-Canon bytes:        87061
-public main base:   3f6500afe1ea71fb60f7c7d81da9a2d4d05d2ba3
+Canon:              Public Canon v15, ACTIVE, tag canon-v15
+activation commit:  8f4e176c5d76f519d3493e56e438aba7856e1f01
+content commit:     a850753348583e611bf7ccd5aa074030dc7e12f5
+Canon SHA-256:      53237ec25b3782e833367c998c049d19459189a21c2a36638dd9e1600335976b
+Canon bytes:        89288
+public main base:   8f4e176c5d76f519d3493e56e438aba7856e1f01
 issues:             #107, #108, #109
 ```
 

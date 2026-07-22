@@ -14,13 +14,13 @@ schema and its soundness/completeness proof remain unresolved here.
 ## Authority pin
 
 ```text
-Canon:              Public Canon v14
+Canon:              Public Canon v15
 state:              ACTIVE
-tag:                canon-v14
-activation commit:  f278855cada75691142c02ebad1a75ecc2730db3
-content commit:     ab4ea07d15ab1cfa0c403d3c2a74164011ffa0e7
-Canon SHA-256:      f9f06af42a9b0b63f806603ddc671ebe6a9e5014b50d230da04a28722ed1a6a2
-Canon bytes:        87061
+tag:                canon-v15
+activation commit:  8f4e176c5d76f519d3493e56e438aba7856e1f01
+content commit:     a850753348583e611bf7ccd5aa074030dc7e12f5
+Canon SHA-256:      53237ec25b3782e833367c998c049d19459189a21c2a36638dd9e1600335976b
+Canon bytes:        89288
 owner row:          METRO-ADMISSIBILITY [O]
 scheduler:          DECODER_CORE / ROOT / READY / FORMAL
 normative layer:    NOT_APPLICABLE
@@ -52,7 +52,7 @@ Any protocol spanning more than one scope key remains parent-owned. A future
 split must assign every remainder and intersection explicitly before it has
 normative force.
 
-Under active v14, a future public criterion on one named residual class is
+Under active v15, a future public criterion on one named residual class is
 routed through the registered gate and may affect `METRO-ADMISSIBILITY`
 according to that gate. This note neither narrows that authority nor decides
 the later status route. If the owner instead wants every residual class to
@@ -387,7 +387,7 @@ STOP:
 ```
 
 This note produces no outcome, so `METRO-ADMISSIBILITY [O]` remains unchanged.
-Under active v14, any later public named-class result must be routed through
+Under active v15, any later public named-class result must be routed through
 the registered gate as written. If the owner wants a residual-preserving
 split instead, that governance fold must be public before preregistration.
 No formal probe branch, `PREREG.md`, verifier, run, or status change is
