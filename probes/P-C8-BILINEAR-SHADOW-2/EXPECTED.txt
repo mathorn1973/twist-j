@@ -1,0 +1,7 @@
+PASS 01 FIELD        F_25 pair model exact; tau has order 8 with tau^2=J; eta=tau^3 has eta^2=phi; the two square-root pairs are exact
+PASS 02 AXES         <tau>=F_5* union tau F_5*: even powers are exactly the nonzero base-field axis; all fourth and eighth roots and all order-8 elements are exhausted
+PASS 03 GALOIS       Frobenius is a+b*tau -> a-b*tau; it fixes F_5 pointwise, negates tau F_5, and N(x)=N(-x) on all of F_25
+PASS 04 BRANCH-SWAP  both recursions equal r_epsilon^s2(n) for 0<=n<2^16 and Frob(Y+)=Y- throughout: the registered branches are Galois-conjugate
+PASS 05 RECORD       Theta always, Y on even digit-sum classes, and Y_n*Y_m on odd pairs form an F_5-valued branch-invariant record; mixed parity is off-axis and branch-dependent
+PASS 06 REFINEMENT   the norm reads exactly s2 mod 4; even values and odd-pair products read the declared classes mod 8; witnesses 15/255 and (1,1)/(1,31) separate them
+RESULT 6/6 ALL PASS
