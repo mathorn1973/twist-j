@@ -1,0 +1,17 @@
+TWIST-J fired-commutator no-go witness (exact integer arithmetic on Z_5^6)
+the five public census involutions; on the recurrent sheet the selection law
+i = (z5 + 2 t) mod 5 fires only b, d, e; this probe computes the commutator
+structure of the fired algebra <b, d, e> and its piston content
+
+PASS 01 INVOLUTIONS-AFFINE  the five census maps are involutions and equal their affine forms on all 15625 states
+PASS 02 SHEET-FIRED         on the sheet z5 in {1, 4} the selector takes only {1, 3, 4}: a and c never fire
+PASS 03 COMM-DE             [d,e] = T_(0,0,0,0,3,0) on all 15625 states; piston zero
+PASS 04 COMM-BD             [b,d] = T_(0,0,0,0,3,3) on all 15625 states; piston zero
+PASS 05 COMM-BE             [b,e] = T_(0,0,0,0,1,3) on all 15625 states; piston zero
+PASS 06 MECHANISM           b is linear; piston(B c_d) = piston(c_d) = (2,1,3,4); B preserves the fiber plane
+PASS 07 LINEAR-KLEIN        linear parts (B, -I, -I); the set {I, -I, B, -B} is closed, abelian, exponent 2
+PASS 08 WORD-SWEEP          all 1521 ordered pairs of words up to length 3: every commutator is a translation with zero piston
+PASS 09 DERIVED-PLANE       the three commutator vectors generate the full 25-element fiber plane; with 07 and 08, D(<b,d,e>) = the fiber translations exactly
+PASS 10 SILENT-CONTROL      [a,c] is not a translation: 5 distinct displacements; the fired-set restriction is essential
+
+RESULT 10/10 ALL PASS

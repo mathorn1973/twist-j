@@ -275,3 +275,14 @@ SQRT-PHI-TIME-GRAVITY	GRAVITY-BRIDGE-LAW	REQUIRES	the existing equation-layer gr
 SQRT-PHI-TIME-GRAVITY	METRO-EDGE-SCALE	BOUNDED_BY	any SI time or gravity scale remains outside scope until the selector and SI clause close
 TM-SYM2-MEASURE	DEF-AUTONOMOUS-STATE	REQUIRES	the selector must read the declared omega and U dynamics rather than the checkpoint alone
 TM-SYM2-MEASURE	MEASURE-BORN-VERB	REQUIRES	the physical measure clause rests on the Born-square dictionary, which does not itself derive the halving
+FIRED-COMMUTATOR-NOGO	DEF-ARCHITECTURE	REQUIRES	the L1 fired-algebra theorem is conditional on the declared checkpoint architecture
+FIRED-COMMUTATOR-NOGO	DEF-KERNEL-GENERATORS	REQUIRES	the commutators use the five declared public census involutions
+FIRED-COMMUTATOR-NOGO	DEF-SELECTOR	REQUIRES	the declared sheet selector determines that only b, d, and e fire
+TIME-CUT-READING	DEF-ARCHITECTURE	REQUIRES	the dictionary composition is conditional on the declared public architecture
+TIME-CUT-READING	RAMIFIED-TM-LIFT	REQUIRES	the four-phase J-channel and its sign quotient realize the binary cut
+TIME-CUT-READING	GYRON-DENSITY	REQUIRES	the matter-channel pair 00 has the registered exact density 1/6
+TIME-CUT-READING	FIRED-COMMUTATOR-NOGO	REQUIRES	the spatial channel uses the exact fired-algebra no-go before reading the silent pair
+TIME-CUT-READING	CURVATURE-HISTORICAL-TRACE	REQUIRES	the silent-pair commutator has the registered exact historical trace reading
+TIME-CUT-READING	KERNEL-MACRO-READING	REQUIRES	the spatial dictionary inherits the registered macro-space commutator reading
+TIME-CUT-READING	CURVATURE-OPERATOR-CANONICAL	BOUNDED_BY	the canonical curvature operator remains explicitly open and is not selected by this composition
+TIME-CUT-READING	METRO-TICK	REQUIRES	the terminal dimensionless proper-time reading is the registered exact tick
