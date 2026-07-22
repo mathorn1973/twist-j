@@ -1,0 +1,7 @@
+PASS 01 FIELD        F_25 pair model exact; tau has order 8 with tau^2=J; eta=tau^3 has eta^2=phi; r^2=phi has exactly {eta,-eta} and r^2=J exactly {tau,-tau}
+PASS 02 AXES         <tau> = F_5* union tau F_5*: even layer IS the base line, odd layer its tau-translate; order-8 elements are exactly {+-tau,+-eta}, all squaring into {J,phi}
+PASS 03 GALOIS       Frobenius x->x^5 is conjugation a+b tau -> a-b tau; it fixes the even layer pointwise, negates the odd layer, and N(x)=N(-x) on all of F_25
+PASS 04 BRANCH-SWAP  both branch recursions equal r_epsilon^s2(n) for 0<=n<2^16 and Frob(Y+)=Y- everywhere: the registered branch involution IS the Galois action
+PASS 05 RECORD       the record (Theta always; Y at even s2; Y_n Y_m at odd pairs) is F_5-valued and branch-invariant; branches differ exactly at odd classes; mixed-parity products are off-base and branch-dependent
+PASS 06 REFINEMENT   the norm channel reads exactly s2 mod 4; even-layer values read s2 mod 8 and odd-pair values read s2(n)+s2(m) mod 8; witnesses n=15 vs 255 and pairs (1,1) vs (1,31); even Y^2=Theta^-1
+RESULT 6/6 ALL PASS
