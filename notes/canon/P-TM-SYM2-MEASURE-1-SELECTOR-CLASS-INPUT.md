@@ -14,11 +14,16 @@ preregistration, not a verifier, not a run, not evidence, and not a status
 proposal. It contains no computation results. The lane remains `STOP` and
 no formal probe is authorized by anything below.
 
-Rev 2. This revision answers the three review points recorded on the
-review thread: the complete convergence proof with an effective modulus
-(section 7), the deterministic `NEGATIVE`/`STOP` routing (section 9), and
-the exact formulations of `sigma` and of the selector domain (sections 3
-and 4). No other content changes.
+Rev 3. Rev 2 answered the routing and `sigma`/domain review points
+(sections 9, 3, 4; marked resolved on the review thread). This revision
+answers the remaining merge blocker: section 7 now carries the all-`N`
+convergence proof. The dyadic-subsequence argument of Rev 2 was
+insufficient (the gaps between dyadic anchors have size of order `N`, so
+Lipschitz interpolation gives only an `O(1)` relative bound); the repair
+adds the even recurrence and replaces interpolation by a binary induction
+over the base-2 expansion of `N`, with the affine forcing and the
+peripheral Jordan term bounded exactly at every step. No other content
+changes.
 
 ## Authority pin
 
@@ -204,50 +209,78 @@ and the transfer `T[x][w] = [x = L(w)] + [x = R(w)]` on `Q^(W3)`. Write
 `nu_N := (1/N) sum_(n=1)^(N) delta_(Sel(n, psi))` for the empirical
 measure on lines (psi-independent by section 3).
 
-LEMMA 1 (exact affine dyadic recursion; proof included). For every
+LEMMA 1 (two exact affine recursions; proofs included). For every
 `N >= 1`,
 
 ```text
-c(2N + 1) = T c(N) + e_(q(1)).
+(odd)   c(2N + 1) = T c(N) + e_(q(1)),
+(even)  c(2N)     = T c(N) + e_(q(1)) - e_(q(2N+1)),
 ```
 
-Proof. The positions `[2, 2N+1]` are exactly the children `{2m, 2m+1}` of
-the parents `m in [1, N]`, each parent contributing exactly its two
-children; by the registered doubling, the window at an even child `2m`
-is `(1 - theta_(m-1), theta_m, 1 - theta_m) = L(q(m))` and at an odd
-child `2m+1` is `(theta_m, 1 - theta_m, theta_(m+1)) = R(q(m))`. Summing
-over parents gives the counts over `[2, 2N+1]` as `T c(N)`; position 1
-adds `e_(q(1))`. There is no other boundary term. QED.
+and the boundary window is internal to the induction:
+`q(2N + 1) = R(q(N))`.
 
-LEMMA 2 (deviation contraction; proof included, spectral input
-certified). Let `f` be a stationary law, `T f = 2 f`, `sum f = 1`, and
-`d(N) := c(N) - N f`. Then `sum_w d_w(N) = 0` and, by Lemma 1,
+Proof. Odd: the positions `[2, 2N+1]` are exactly the children
+`{2m, 2m+1}` of the parents `m in [1, N]`, each parent contributing
+exactly its two children; by the registered doubling, the window at an
+even child `2m` is `(1 - theta_(m-1), theta_m, 1 - theta_m) = L(q(m))`
+and at an odd child `2m+1` is
+`(theta_m, 1 - theta_m, theta_(m+1)) = R(q(m))`. Summing over parents
+gives the counts over `[2, 2N+1]` as `T c(N)`; position 1 adds
+`e_(q(1))`. There is no other boundary term. Even: subtract the single
+last position, `c(2N) = c(2N+1) - e_(q(2N+1))`. Boundary identity: the
+odd-child formula at parent `N` reads
+`q(2N+1) = (theta_N, 1 - theta_N, theta_(N+1)) = R(q(N))`. QED.
+
+LEMMA 2 (all-`N` deviation bound by binary induction; proof included,
+spectral input certified; no subsequence and no interpolation step). Let
+`f` be a stationary law, `T f = 2 f`, `sum f = 1`, `d(N) := c(N) - N f`.
+Because `T(N f) = 2 N f` exactly, Lemma 1 gives the two exact affine
+steps on the sum-zero subspace `Z`:
 
 ```text
-d(2N + 1) = T d(N) + (e_(q(1)) - f),
+(odd)   d(2N + 1) = T d(N) + u,   u  = e_(q(1)) - f,
+(even)  d(2N)     = T d(N) + u',  u' = e_(q(1)) - e_(R(q(N))),
 ```
 
-an exact affine orbit on the sum-zero subspace `Z`. Iterating from any
-anchor `N_0` along dyadic scales,
+where `u, u' in Z` and `max-norm(u), max-norm(u') <= 1` (entries of `f`
+lie in `[0, 1]`). Now take any `N >= 1` with binary expansion
+`b_K b_(K-1) ... b_0` (`b_K = 1`, `K = floor(log2 N)`), and define the
+prefix chain `N^(K) = 1`, `N^(j-1) = 2 N^(j) + b_(j-1)`, so that
+`N^(0) = N` and every step is exactly one of the two recursions above.
+Unrolling,
 
 ```text
-d(2^k (N_0 + 1) - 1) = T^k d(N_0) + sum_(j=0)^(k-1) T^j (e_(q(1)) - f),
+d(N) = T^K d(1) + sum_(j=0)^(K-1) T^j u_j,
 ```
 
-so with `rho := spectral radius of T restricted to Z` and `m := the
-degree of the minimal polynomial factor of that restriction at its
-peripheral eigenvalues`, standard exact bounds give
+with each `u_j in Z`, `max-norm(u_j) <= 1`, and
+`d(1) = e_(q(1)) - f in Z`, `max-norm(d(1)) <= 1`. Let `rho` be the
+spectral radius of `T` restricted to `Z`, `rho+ := max(rho, 1)`, and let
+`(C_J, m)` be the certified pair with
 
 ```text
-max_w | c_w(N) / N - f_w |  <=  C (1 + log2 N)^(m-1) rho^(log2 N) / N
-                             =  C (1 + log2 N)^(m-1) N^(log2 rho - 1)
+opnorm(T^j restricted to Z) <= C_J (1 + j)^(m-1) rho+^j    for all j >= 0
 ```
 
-for an explicit constant `C` computable from the certified Jordan data,
-first along the dyadic subsequence and then for every `N` by the one-step
-monotone interpolation `|c_w(N') - c_w(N)| <= |N' - N|`. Whenever
-`rho < 2`, the exponent `log2 rho - 1` is negative and `nu_N` converges
-to the pushforward `s_* f` with that explicit effective modulus. QED
+(`m` = the largest peripheral Jordan degree of the restriction; such a
+pair is exactly computable from the minimal polynomial certificate S2
+below). Then for EVERY `N >= 1`:
+
+```text
+max-norm(d(N)) <= sum_(j=0)^(K) C_J (1 + j)^(m-1) rho+^j
+               <= C_J (1 + K)^m rho+^K,
+```
+
+hence
+
+```text
+max_w | c_w(N) / N - f_w |  <=  C_J (1 + log2 N)^m N^(log2 rho+ - 1).
+```
+
+Whenever `rho < 2`, the exponent `log2 rho+ - 1` is negative (it equals
+`-1` if `rho <= 1`), so `nu_N` converges to the pushforward `s_* f` for
+the FULL sequence of `N`, with that explicit effective modulus. QED
 (conditional on the certified spectral data below).
 
 REQUIRED EXACT CERTIFICATES (produced by the future evaluation, not
@@ -256,14 +289,16 @@ asserted here):
 ```text
 S1  the transfer T, its exact characteristic polynomial, and its exact
     factorization over Z;
-S2  the strict subdominance certificate: the spectral radius rho of T
-    restricted to the sum-zero subspace satisfies rho < 2, with the
-    peripheral minimal-polynomial degree m read off exactly;
+S2  the growth certificate: the exact minimal polynomial of T restricted
+    to the sum-zero subspace, its factorization and root moduli, strict
+    subdominance rho < 2, and the derived explicit pair (C_J, m) of
+    Lemma 2;
 S3  uniqueness of the stationary law (rank of T/2 - I equals |W3| - 1 by
     exact elimination), so f in Lemma 2 is unique;
-S4  machine verification of the Lemma 1 identity on the actual drive at
-    every dyadic scale up to the audit bound (a consistency audit of the
-    derivation, not the source of the theorem).
+S4  machine verification of BOTH Lemma 1 recursions and of the boundary
+    identity q(2N+1) = R(q(N)) on the actual drive, over a contiguous
+    range of N up to the audit bound (not only dyadic scales; a
+    consistency audit of the derivation, not the source of the theorem).
 ```
 
 The weight objects are then defined, not chosen:
@@ -277,10 +312,10 @@ M_TM(A) := sum_w f_w Tr(P_(s(w)) A) P_(s(w))    as an operator on Sym2.
 ```
 
 The convergence claim of this definition is exactly Lemma 1 plus Lemma 2
-plus the certificates S1 to S4: a complete proof with an explicit
+plus the certificates S1 to S4: a complete all-`N` proof with an explicit
 effective modulus, whose only computational inputs are exact and
-machine-checkable. No value of `f`, `rho`, `m`, `nu_s`, or `M_TM` is
-asserted in this note.
+machine-checkable. No value of `f`, `rho`, `m`, `C_J`, `nu_s`, or `M_TM`
+is asserted in this note.
 
 ## 8. Factor-map slots offered to the Born block (typing only)
 
