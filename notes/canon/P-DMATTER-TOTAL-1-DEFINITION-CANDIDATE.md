@@ -11,13 +11,13 @@ changes no Canon object and authorizes no promotion.
 ## Authority pin
 
 ```text
-Canon:              Public Canon v14
+Canon:              Public Canon v15
 state:              ACTIVE
-tag:                canon-v14
-activation commit:  f278855cada75691142c02ebad1a75ecc2730db3
-content commit:     ab4ea07d15ab1cfa0c403d3c2a74164011ffa0e7
-Canon SHA-256:      f9f06af42a9b0b63f806603ddc671ebe6a9e5014b50d230da04a28722ed1a6a2
-Canon bytes:        87061
+tag:                canon-v15
+activation commit:  8f4e176c5d76f519d3493e56e438aba7856e1f01
+content commit:     a850753348583e611bf7ccd5aa074030dc7e12f5
+Canon SHA-256:      53237ec25b3782e833367c998c049d19459189a21c2a36638dd9e1600335976b
+Canon bytes:        89288
 owner row:          QUADRATIC-DECODER-DATA [O]
 scheduler:          DECODER_CORE / ROOT / STOP / FORMAL
 normative layer:    MULTI
@@ -320,7 +320,7 @@ its fibers.
 | completion-contract dependency | `UNRESOLVED` | decide a public dependency edge |
 | closure manifest | partial only | `feeds_U=FALSE` is stage-local; `terminal_output_ids=[]` requires a public basis |
 
-The v14 contract permits `NOT_APPLICABLE` only in its explicit state/leg
+The completion contract (entered at v14, unchanged at v15) permits `NOT_APPLICABLE` only in its explicit state/leg
 cases and only with a resolvable basis item. It cannot be inserted into
 `source_id`, `current_id`, `propagator_id`, `metrology_id`, `scheme_id`, or
 other identifier-valued slots. Those slots remain `UNRESOLVED` unless a
@@ -333,13 +333,16 @@ constructor.
 CURRENT:
     STOP-DEFINITION
 
+OWNER ROUTING AFTER V15-OWNER-FOLD-107-109:
+    the five-window root-injection search is CLOSED PROPOSAL-LOCALLY;
+    the branch-projector Galois filter remains NOT ADOPTED;
+    an optional filter-adoption fold is DEFERRED and requires a complete
+    scoped dictionary/write package;
+    search outside C5 is UNSCHEDULED until a genuinely prior typed readout
+    candidate is supplied;
+    D_direct remains UNRESOLVED and no classification result supplies it;
+
 NEXT DEFINITION-ONLY PASS:
-    review, merge, and read back the bounded five-window classification;
-    the branch-projector Galois filter remains NOT ADOPTED by default;
-    only adoption requires a separate later owner fold;
-    D_direct ownership remains a separate choice: adopt a complete scoped
-    dictionary/write rule or retain the genuinely prior-readout requirement;
-    no classification result itself supplies D_direct;
     complete MatterData_quadratic ownership;
     physical measure/dictionary ruling;
     exact L1--L6 bridge endpoints and gate

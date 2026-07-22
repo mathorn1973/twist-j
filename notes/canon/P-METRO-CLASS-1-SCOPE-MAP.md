@@ -7,16 +7,20 @@ without creating registry rows and corrects the proposed multidimensional
 finite-state skeleton. It is not `PREREG.md`, a public definition, theorem,
 verifier, run, Canon change, or status proposal.
 
+`V15-OWNER-FOLD-107-109.md` resolves the architectural fork in favor of an
+exact joint certificate for the single direct property. The certificate
+schema and its soundness/completeness proof remain unresolved here.
+
 ## Authority pin
 
 ```text
-Canon:              Public Canon v14
+Canon:              Public Canon v15
 state:              ACTIVE
-tag:                canon-v14
-activation commit:  f278855cada75691142c02ebad1a75ecc2730db3
-content commit:     ab4ea07d15ab1cfa0c403d3c2a74164011ffa0e7
-Canon SHA-256:      f9f06af42a9b0b63f806603ddc671ebe6a9e5014b50d230da04a28722ed1a6a2
-Canon bytes:        87061
+tag:                canon-v15
+activation commit:  8f4e176c5d76f519d3493e56e438aba7856e1f01
+content commit:     a850753348583e611bf7ccd5aa074030dc7e12f5
+Canon SHA-256:      53237ec25b3782e833367c998c049d19459189a21c2a36638dd9e1600335976b
+Canon bytes:        89288
 owner row:          METRO-ADMISSIBILITY [O]
 scheduler:          DECODER_CORE / ROOT / READY / FORMAL
 normative layer:    NOT_APPLICABLE
@@ -48,7 +52,7 @@ Any protocol spanning more than one scope key remains parent-owned. A future
 split must assign every remainder and intersection explicitly before it has
 normative force.
 
-Under active v14, a future public criterion on one named residual class is
+Under active v15, a future public criterion on one named residual class is
 routed through the registered gate and may affect `METRO-ADMISSIBILITY`
 according to that gate. This note neither narrows that authority nor decides
 the later status route. If the owner instead wants every residual class to
@@ -91,7 +95,7 @@ P = (coefficient_ring,
      L5_source, raw_readout,
      measure_transport, normalization,
      L6_measure_codomain, equality,
-     direct_measure, compositional_measure, admissibility,
+     direct_measure, joint_certificate_relation, admissibility,
      reductions, reduction_equivalence,
      completeness_method,
      from_layer, to_layer, gate_id).
@@ -220,53 +224,63 @@ This is an exact anchored integrity reduction. The full direct criterion
 still requires a q-adic boundary decomposition and effective uniform modulus
 for arbitrary translated boxes.
 
-## 5. The compositional fork is still unresolved
+## 5. Joint certificate selected; definition still unresolved
 
-The initial proposal used individual limits
+The initial proposal used individual coordinate limits
 
 ```text
 P_i = lim_(m->infinity) T_i^m
 ```
 
-and then multiplied the `P_i`. That choice is not equivalent to joint box
-convergence on the proposed class. A periodic peripheral mode of one
-coordinate may fail to converge individually while contraction in another
-coordinate kills that mode in every joint box limit.
+and then multiplied the `P_i`. The exact two-state fixed-length control in
+`P-METRO-CLASS-1-FORK-WITNESS.md` proves that this factorwise condition is
+not necessary for joint anchored convergence: a peripheral mode of one
+coordinate may be killed by another coordinate in every joint anchored box.
 
-There are two honest next choices:
+The control does not define an admitted padding-independent `N^a` protocol,
+does not prove translated-box uniformity, and does not show disagreement of
+complete direct and factorwise predicates. It is retained only as a scoped
+negative control against silently reintroducing factorwise power convergence
+as a necessary law.
+
+The owner fold selects one scientific predicate and one proof system:
 
 ```text
-A. FACTORWISE / ITERATED
-   Require the individual coordinate limits and every coordinate order.
-   This is independent of the direct map, but direct and compositional
-   admissibility may genuinely disagree.
+SCIENTIFIC PROPERTY
+    Adm_direct(P) in Decision(Y_r), where the decision is INADMISSIBLE or
+    ADMISSIBLE(L) with the unique exact translated-box terminal value L.
 
-B. JOINT SPECTRAL
-   Use simultaneous primary/peripheral decomposition of the commuting
-   rational matrices and one common terminal sector.
-   This can certify the direct limit, but it is not an independent
-   factorwise map merely because it has a different implementation.
+PROOF SYSTEM
+    Cert_joint(P,c,d), an exact certificate relation whose decision d is in
+    Decision(Y_r) and whose proof payload c contains the required modulus or
+    failure witness.
 ```
 
-The companion `P-METRO-CLASS-1-FORK-WITNESS.md` gives an exact two-state
-fixed-length control with `T_1=swap`, `T_2=(I+swap)/2`, and
-`T_1 T_2=T_2`. It proves that factorwise power convergence is not necessary
-for joint anchored convergence. It does not freeze padding-independent
-`N^a` semantics or prove the translated-box direct criterion.
+The certificate relation must be defined without reading `Adm_direct`. Its
+soundness, completeness, and decision coherence for the direct property are
+theorem content. Its exact data must include the relevant invariant submodule,
+simultaneous primary/peripheral information, the individual digit maps, the
+observable quotient induced by all allowed-start evaluation functionals, a
+q-adic boundary/residue decomposition, and an effective translated-box
+modulus. Averaged actions or a bare Krylov submodule alone are
+insufficient. A valid certificate cannot use irrelevant algebraic modes, floating tolerances, or a factorwise
+convergence assumption.
 
-The companion recommends option B only as input to a later owner amendment.
-The controlling merged ruling #112 still requires two independently defined
-maps and routes disagreement as `NEGATIVE`. Replacing the factorwise map by
-a joint certificate therefore needs a reviewed amendment before definition
-freeze. Until then the scientific fork remains `UNRESOLVED`. Combining
-option A's factorwise language with option B's joint-killing criterion would
-be circular and remains `STOP`.
+Before `READY-DEFINITION`, the lane must still freeze:
 
-Any joint spectral option must act only on the reachable submodule generated
-by the allowed starts and the readout. Irrelevant algebraic modes cannot be
-used to manufacture failure. Peripheral phases, Jordan growth, multiple
-terminal sectors, and state-dependent terminal values require exact
-certificates; floating tolerances are forbidden.
+1. the exact certificate schema and deterministic checker;
+2. the relevant invariant submodule and exact equality;
+3. peripheral phase, Jordan, terminal-sector and start-independence routes;
+4. YES and NO certificate forms;
+5. a q-adic boundary reduction and effective modulus for translated boxes;
+6. a terminating soundness/completeness method on the selected finite or
+   all-parameter surface.
+
+An exact admitted counterexample to soundness or completeness is a
+`NEGATIVE` mathematical result. A malformed or non-reproducing artifact with
+no exact counterexample is `STOP`. Until the items above are public, the
+joint-certificate definition remains `UNRESOLVED` and no formal probe is
+authorized.
 
 ## 6. Exact reduction candidates
 
@@ -343,40 +357,37 @@ the same time.
 
 | Surface | Current state | Next decision |
 | --- | --- | --- |
-| governance ownership | proposed without new claims | owner review |
+| governance ownership | owner-selected nonnormative architecture; public parent closure unresolved | complete and review the definition/certificate package |
 | input/action type | `N^a`-indexed commuting digit-word system; ranks separated | adopt exact digit and padding convention |
 | L5/L6 transport | raw nonnegative vectors plus tagged normalization proposed | adopt or replace |
 | direct map | exact target written | supply effective translated-box theorem |
-| compositional map | `UNRESOLVED`; factorwise is not equivalent to joint anchored convergence | amend ruling #112 for a joint certificate, or retain an independent factorwise map |
+| joint certificate | architecture selected; schema and proof `UNRESOLVED` | freeze exact YES/NO certificates plus anchored and translated-box soundness/completeness |
 | reductions | partial | decide minimization and blocking proof |
 | completeness | `UNRESOLVED`; two-level target proposed without proofs | finite bounds, or anchored and translated-box all-parameter proofs |
 | layer lift | existing gate identified | preserve exact L5 and L6 endpoints |
 
-Future scientific routing must follow the selected fork:
+Future scientific routing follows the selected joint-certificate design:
 
 ```text
-COMMON POSITIVE:
-    the frozen exact criterion classifies the complete child and survives
-    every allowed reduction;
+POSITIVE:
+    the frozen direct criterion classifies the complete child, the exact
+    joint certificate system is sound and complete for it, and the decision
+    survives every allowed reduction;
 
-COMMON NEGATIVE:
-    normalization is not total or an allowed reduction changes the decision;
-
-FACTORWISE NEGATIVE:
-    the independently defined direct and factorwise/iterated decisions
-    disagree, or required coordinate orders disagree;
-
-JOINT-SPECTRAL INTEGRITY:
-    the joint spectral route certifies the same direct property; disagreement
-    with the direct decision is STOP, not a scientific negative result;
+NEGATIVE:
+    an exact admitted counterexample refutes certificate soundness or
+    completeness, normalization is not total, an allowed reduction changes
+    the direct decision, or required-equivalent presentations disagree;
 
 STOP:
-    any type, map, matrix orientation, reduction, completeness proof,
-    endpoint, gate, or selected-fork integrity check is unresolved or fails.
+    any type, direct map, certificate schema, relevant submodule, matrix
+    orientation, reduction, completeness proof, translated-box modulus,
+    endpoint, gate, or artifact integrity check is unresolved or fails
+    without an exact mathematical counterexample.
 ```
 
 This note produces no outcome, so `METRO-ADMISSIBILITY [O]` remains unchanged.
-Under active v14, any later public named-class result must be routed through
+Under active v15, any later public named-class result must be routed through
 the registered gate as written. If the owner wants a residual-preserving
 split instead, that governance fold must be public before preregistration.
 No formal probe branch, `PREREG.md`, verifier, run, or status change is

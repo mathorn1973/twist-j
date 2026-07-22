@@ -12,24 +12,28 @@ It changes no Canon object and authorizes no promotion. The scheduler stays
 ## Authority pin
 
 ```text
-Canon:              Public Canon v14
+Canon:              Public Canon v15
 state:              ACTIVE
-tag:                canon-v14
-activation commit:  f278855cada75691142c02ebad1a75ecc2730db3
-content commit:     ab4ea07d15ab1cfa0c403d3c2a74164011ffa0e7
-Canon SHA-256:      f9f06af42a9b0b63f806603ddc671ebe6a9e5014b50d230da04a28722ed1a6a2
-Canon bytes:        87061
+tag:                canon-v15
+activation commit:  8f4e176c5d76f519d3493e56e438aba7856e1f01
+content commit:     a850753348583e611bf7ccd5aa074030dc7e12f5
+Canon SHA-256:      53237ec25b3782e833367c998c049d19459189a21c2a36638dd9e1600335976b
+Canon bytes:        89288
 owner row:          CURVATURE-OPERATOR-CANONICAL [O]
 gate:               GATE-L1-L2-CURVATURE-CANONICAL
 child candidate:    CURV-PRIMITIVE-REYNOLDS-CHILD-1
-draft parent:       PR #114, commit
+merged parent:      PR #114, source commit
                     91d08878685def0b950ca826f90ed02359bb2adc
+public main readback: 3f6500afe1ea71fb60f7c7d81da9a2d4d05d2ba3
+owner disposition:  V15-OWNER-FOLD-107-109.md
 scheduler:          DECODER_CORE / ROOT / STOP / FORMAL
 ```
 
-The draft parent is non-canonical and is not an authority dependency. This
-amendment must be reviewed, merged with that parent, and read back from
-public `main` before it can freeze even a proposal-local definition surface.
+The merged parent and this reduction remain non-canonical and are not
+authority dependencies. The owner disposition rejects the three proposed
+parent filters by a structural `NONUNIQUE` no-go and retains this child only
+as enrichment. A different pre-result parent surface is required before a
+proposal-local definition can be frozen.
 
 ## 1. Exact affine reduction
 

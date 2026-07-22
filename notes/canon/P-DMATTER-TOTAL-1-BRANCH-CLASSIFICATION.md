@@ -11,13 +11,13 @@ change.
 ## Authority and baseline
 
 ```text
-Canon:              Public Canon v14
+Canon:              Public Canon v15
 state:              ACTIVE
-tag:                canon-v14
-activation commit:  f278855cada75691142c02ebad1a75ecc2730db3
-content commit:     ab4ea07d15ab1cfa0c403d3c2a74164011ffa0e7
-Canon SHA-256:      f9f06af42a9b0b63f806603ddc671ebe6a9e5014b50d230da04a28722ed1a6a2
-Canon bytes:        87061
+tag:                canon-v15
+activation commit:  8f4e176c5d76f519d3493e56e438aba7856e1f01
+content commit:     a850753348583e611bf7ccd5aa074030dc7e12f5
+Canon SHA-256:      53237ec25b3782e833367c998c049d19459189a21c2a36638dd9e1600335976b
+Canon bytes:        89288
 owner row:          QUADRATIC-DECODER-DATA [O]
 controlling ruling: notes/canon/P-DMATTER-TOTAL-1-PREDEFINITION.md
 draft baseline:     PR #113, commit
@@ -386,9 +386,11 @@ transition.
 
 ## 8. Owner routing and debt firewall
 
-After public readback, `Adm_GalSplit` remains `NOT ADOPTED` by default. No
-`DECLINE` fold or new completion-contract slot is required. The prior search
-for a genuinely independent readout may continue outside `C5`.
+After the owner readback in `V15-OWNER-FOLD-107-109.md`, `Adm_GalSplit`
+remains `NOT ADOPTED`. No `DECLINE` fold or new completion-contract slot is
+required. The five-window root-injection search is closed proposal-locally.
+Search outside `C5` is unscheduled and may resume only when a genuinely prior
+typed readout candidate is supplied.
 
 Only adoption requires a separate reviewed owner fold. Such a fold would
 state that, within `C5`, physical branch admissibility requires invariance
@@ -425,10 +427,16 @@ DEFAULT OWNER STATE AFTER READBACK:
     Adm_GalSplit NOT ADOPTED
     D_direct UNRESOLVED
 
+OWNER ROUTING AFTER V15-OWNER-FOLD-107-109:
+    C5 root-injection search CLOSED PROPOSAL-LOCALLY;
+    Adm_GalSplit NOT ADOPTED; optional adoption DEFERRED;
+    outside-C5 search UNSCHEDULED until a genuinely prior typed readout is
+    supplied;
+    D_direct UNRESOLVED and no classification result supplies it.
+
 NEXT PUBLIC ACTION:
-    review, merge, and read back this definition-only amendment;
-    only a later adoption of Adm_GalSplit needs a separate owner fold;
-    no classification result supplies a prior independent D_direct.
+    none until a complete optional adoption package or a genuinely prior
+    typed readout exists.
 
 FORMAL PROBE:
     forbidden; the displayed results are proof-first finite algebra and the
