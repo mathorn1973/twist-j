@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v14
+# TWIST-J Public Canon v15
 
-**Release identity.** Public Canon v14. Normative authority and activation
+**Release identity.** Public Canon v15. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v14 also declares the discrete
+algebraic axiom is J. Public Canon v15 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v14 does not claim
+seed of the two algebraic projections. Public Canon v15 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -87,7 +87,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v14 contains no such
+deriving the architecture from J; Public Canon v15 contains no such
 theorem.
 
 ---
@@ -176,6 +176,33 @@ theta_{2n} = theta_n, theta_{2n+1} = 1 - theta_n, and the local carry
 law updates theta without consulting an external list. Therefore U
 has no external step parameter. This is an autonomous skew product by
 definition; no extension of theta to every 2-adic integer is used.
+
+On the sheet z5 in {1,4}, use the local probe aliases z5 = z_6(psi)
+and t = theta_n in {0,1}; t is the binary drive bit, not the sixth
+checkpoint coordinate r. The selector
+
+```
+i = (z5 + 2t) mod 5
+```
+
+takes only the values {1,3,4}, so only b, d, and e ever fire. Their
+fired pair commutators are the pure fiber translations
+
+```
+[d,e] = T_(0,0,0,0,3,0),
+[b,d] = T_(0,0,0,0,3,3),
+[b,e] = T_(0,0,0,0,1,3),
+```
+
+all with zero piston component. The linear parts of b, d, and e lie in
+the abelian Klein group {I, -I, B, -B} of exponent two. Hence every
+group commutator in <b,d,e> is a pure translation, and the derived
+subgroup D(<b,d,e>) is exactly the 25 fiber translations. This is
+FIRED-COMMUTATOR-NOGO [T] at L1, evidenced by
+probes/P-FIRED-COMMUTATOR-NOGO-1: the fired dynamics is spatially
+abelian and piston-block noncommutativity cannot arise from the fired
+steps. The silent control [a,c] is not a translation. No curvature
+operator selection, value, or physical reading is claimed.
 
 The phrase "space is a commutator" remains a dictionary reading, not a
 unique curvature construction. One historical construction is now typed
@@ -427,6 +454,26 @@ time quantum (TIME-QUANTUM-TOWER [C], reproduce/foundations-places):
 on Z/5^k, M_J^(5^k) = i_5 I with i_5^4 = 1 and period exactly
 4 x 5^k, computed for k = 1 to 4. No all-k theorem and no generic
 exponentiation speedup are claimed.
+
+TIME-CUT-READING [D] composes only registered public rows. The counter n
+is cut by theta_n = s_2(n) mod 2 into the selection law
+i = (z5 + 2 theta_n) mod 5, and RAMIFIED-TM-LIFT realizes this cut as
+the sign quotient of the four-phase J-channel. The matter channel reads
+the named isolated pair (theta_(n-1), theta_n) = (0,0), of density 1/6
+by GYRON-DENSITY. To audit the bracket, the Thue-Morse recurrence gives
+(theta_(2m), theta_(2m+1)) = (theta_m, 1 - theta_m), so 00 can occur
+only as (theta_(2m-1), theta_(2m)). That pair being 00 forces
+(theta_(m-1), theta_m) = (1,0), whence theta_(2m-2) =
+theta_(2m+1) = 1. Thus each knot is bracketed 1 00 1 by the cube-free
+drive. The spatial channel does not sit on noncommutativity of the
+fired steps, whose commutator subgroup is exactly the fiber translation
+plane by FIRED-COMMUTATOR-NOGO. It sits on the silent pair a,c, never
+fired on the sheet, whose commutator reading is carried by
+CURVATURE-HISTORICAL-TRACE and KERNEL-MACRO-READING while
+CURVATURE-OPERATOR-CANONICAL remains open. The dimensionless proper-time
+reading is delta tau hat = 2 pi/5 per tick by METRO-TICK. This dictionary
+claims no forcing, uniqueness, or completeness, and strengthens none of
+its component rows.
 
 ## 3. The kernel and the census
 
@@ -1162,7 +1209,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v14. The fermionizer
+inherited naming clause is not part of Public Canon v15. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
