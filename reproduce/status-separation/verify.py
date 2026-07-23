@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Current Public Canon theorem/dictionary separation audit.
 
-Standard library only. This witness checks the registry boundary introduced
-by Genesis review G2B. It does not establish new physics or new mathematics;
-it verifies that named exact rows remain at T and that their physical readings
-are carried by explicit D rows.
+Standard library only. This witness checks the ledger boundary introduced by
+Genesis review G2B. It does not establish new physics or new mathematics; it
+verifies that named exact rows remain at T and that their physical readings
+are carried by explicit D, C, or O rows.
 """
 
 import csv
@@ -14,12 +14,49 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "canon" / "REGISTRY.tsv"
+NORMATIVE = ROOT / "canon" / "NORMATIVE.tsv"
+DEPENDENCIES = ROOT / "canon" / "DEPENDENCIES.tsv"
+EVIDENCE = ROOT / "canon" / "EVIDENCE.tsv"
+
+
+def load_table(path):
+    with path.open(newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle, delimiter="\t"))
 
 
 def load_rows():
-    with REGISTRY.open(newline="", encoding="utf-8") as handle:
-        rows = list(csv.DictReader(handle, delimiter="\t"))
-    return rows, {row["claim_id"]: row for row in rows}
+    rows = load_table(REGISTRY)
+    normative_rows = load_table(NORMATIVE)
+    dependencies = load_table(DEPENDENCIES)
+    evidence_rows = load_table(EVIDENCE)
+    return (
+        rows,
+        {row["claim_id"]: row for row in rows},
+        {row["item_id"]: row for row in normative_rows},
+        dependencies,
+        {row["claim_id"]: row for row in evidence_rows},
+    )
+
+
+def dependency_graph(rows):
+    graph = {}
+    for row in rows:
+        graph.setdefault(row["item_id"], set()).add(row["depends_on"])
+    return graph
+
+
+def reaches(graph, start, target):
+    seen = set()
+    stack = list(graph.get(start, ()))
+    while stack:
+        item = stack.pop()
+        if item == target:
+            return True
+        if item in seen:
+            continue
+        seen.add(item)
+        stack.extend(graph.get(item, ()))
+    return False
 
 
 def has_status(index, claim_id, status):
@@ -37,18 +74,18 @@ def scope_contains_all(index, claim_id, phrases):
 
 
 def run():
-    rows, index = load_rows()
+    rows, index, normative, dependencies, evidence = load_rows()
     checks = []
 
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 99, "D": 40, "C": 22, "F": 9,
+    expected_counts = {"T": 100, "D": 40, "C": 22, "F": 9,
                        "O": 20, "H": 5}
     checks.append((
         "COUNTS",
-        "registry has 195 claims with the current status partition",
-        len(rows) == 195 and counts == expected_counts,
+        "registry has 196 claims with the current status partition",
+        len(rows) == 196 and counts == expected_counts,
     ))
 
     checks.append((
@@ -169,6 +206,71 @@ def run():
             index, "QUANT-SUBSTRATE",
             ("physical-realization gate", "remains open"),
         ),
+    ))
+
+    c20 = "C20-TEICHMULLER-SPLIT"
+    time_tower = "TIME-QUANTUM-TOWER"
+    graph = dependency_graph(dependencies)
+    c20_outgoing = [
+        (row["depends_on"], row["relation"], row["basis"])
+        for row in dependencies
+        if row["item_id"] == c20
+    ]
+    checks.append((
+        "C20",
+        "the L1 C20 theorem stays separate from time and decoder readings",
+        has_status(index, c20, "T")
+        and normative.get(c20, {}).get("item_type") == "THEOREM"
+        and normative.get(c20, {}).get("status") == "T"
+        and normative.get(c20, {}).get("layer") == "L1"
+        and normative.get(c20, {}).get("gate_ids") == ""
+        and normative.get(c20, {}).get("statement_source")
+        == "canon/CANON.md::1. The axiom and the two projections"
+        and index.get(c20, {}).get("canon_section")
+        == "1. The axiom and the two projections"
+        and index.get(c20, {}).get("evidence")
+        == "probes/P-C20-TEICHMULLER-SPLIT-2"
+        and evidence.get(c20, {}).get("location")
+        == "probes/P-C20-TEICHMULLER-SPLIT-2"
+        and evidence.get(c20, {}).get("evidence_id")
+        == "EV-C20-TEICHMULLER-SPLIT"
+        and evidence.get(c20, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(c20, {}).get("sha256")
+        == "bca1d2850ed40871bc8304defca46ee33f84f31f71a7197b30dfdbc2ded4db90"
+        and evidence.get(c20, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(c20, {}).get("architecture_requirement")
+        == "two-architecture"
+        and scope_contains_all(
+            index, c20,
+            ("(5) = (lambda)^4 is an equality of ideals",
+             "not an element equality", "finite local ring",
+             "<J> = <t> x <u> isomorphic to C_4 x C_5",
+             "for every m >= 1 the Sylow 2-subgroup of A_m^* is C_4",
+             "no A_m contains an element of order 8",
+             "no all-k order claim for M_J modulo 5^k",
+             "L1 exact arithmetic only", "time", "decoder",
+             "L2-L6 claim"),
+        )
+        and has_status(index, "J-STEP", "T")
+        and c20_outgoing == [
+            ("J-STEP", "REQUIRES",
+             "the reduced matrix leg reconstructs M_R from the four public "
+             "J-STEP columns and identifies it with multiplication by J")
+        ]
+        and has_status(index, time_tower, "C")
+        and scope_contains_all(
+            index, time_tower,
+            ("computed exhaustively for k = 1 to 4",
+             "no all-k theorem is claimed"),
+        )
+        and index.get(time_tower, {}).get("evidence")
+        == "reproduce/foundations-places"
+        and evidence.get(time_tower, {}).get("location")
+        == "reproduce/foundations-places"
+        and evidence.get(time_tower, {}).get("evidence_kind") == "REPRODUCTION"
+        and not reaches(graph, c20, time_tower)
+        and not reaches(graph, time_tower, c20),
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

@@ -293,3 +293,4 @@ TM-SYM2-MEASURE	ABELIAN-FACE-DICTIONARY	REQUIRES	literal Fourier inversion of th
 QUANT-SCHWINGER-TARGET	J-MODULUS-CHORD	REQUIRES	the target scalar uses the registered exact modulus identity J Jbar = phi^-2
 QUANT-SCHWINGER-TARGET	BRIDGE-DEFECT	REQUIRES	the target scalar uses the registered exact bridge script-Q phi^2 = 2 pi
 QUANT-SUBSTRATE	QUANT-SCHWINGER-TARGET	REQUIRES	the open physical gate consumes the exact arithmetic target without thereby realizing it
+C20-TEICHMULLER-SPLIT	J-STEP	REQUIRES	the reduced matrix leg reconstructs M_R from the four public J-STEP columns and identifies it with multiplication by J
