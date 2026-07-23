@@ -1,0 +1,7 @@
+PASS 01 MODEL        R=A_4 has 625 elements; lambda^4=0!=lambda^3; residue and the unit criterion are exact; |R*|=500
+PASS 02 CYCLE        J^5=2, J^10=-1, J^15=3, and the exact order of J in R is 20
+PASS 03 SPLIT        t=J^5 and u=J^16=3J have orders 4 and 5; u-1 has index 4; J=tu and <J>=<t> x <u>
+PASS 04 ROOTS-R      over all 625 elements, mu_8(R)=mu_4(R)=F_5* as the four nonzero constants; R has no order-8 element
+PASS 05 DEPTH        det(m_lambda)=5 audits |A_m|=5^m; the proved 5-group kernel leaves 2-primary C_4 and no order 8 at any m
+PASS 06 MATRIX       M_R is built from step(e_i); all 625 vectors and all four columns through k=19 agree with the independent ring action and matrix split
+RESULT 6/6 ALL PASS
