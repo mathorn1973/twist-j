@@ -1,7 +1,7 @@
 # P-TM-SYM2-MEASURE-1 result
 
-Status: SCIENTIFIC RESULT; FORMAL AARCH64 LEG PASS;
-TWO-ARCHITECTURE COMPUTATION GATE PENDING; PUBLIC CLAIM UNCHANGED
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS;
+PUBLIC CLAIM UNCHANGED
 
 ## Recorded decision
 
@@ -53,8 +53,11 @@ certificate, not a numerical tolerance or failed search.
 
 ```text
 public lock:          issue 130
+draft pull request:   131
 parent commit:        390c1d254b0c3939ff7fc9e6b900eac8bd1b877a
 preregistration pin: 69ff42438154bc165a74d03e914988efda9bccf9
+formal evidence head:aa9f8eb9249adb2a043fda8cc5db9730de22e778
+tested merge commit: 6493fffb96274cdecb7a186ce016584b83b281ed
 PREREG.md SHA-256:    c504d7962786436eb68376875f9239c6bc086b57617ced86f4de95a74c7f57d7
 verify.py SHA-256:    30b581a2b84e0ac8b3b333e5731f7ecdcfa9bfb975585da0603f02ab3e8ed6eb
 
@@ -64,19 +67,32 @@ aarch64 checkout:    clean, detached at the exact public pin
 aarch64 executions:  1
 aarch64 exit/stderr: 0 / 0 bytes
 
+x86_64 workflow run: 29994466027
+x86_64 workflow job: 89164731518
+x86_64 platform:     Ubuntu 24.04.4 LTS
+x86_64 runner image: ubuntu-24.04 20260720.247.2
+x86_64 runner:       2.335.1
+x86_64 Python:       CPython 3.12.13
+x86_64 exit/stderr:  0 / 0 bytes
+
 stdout SHA-256:      395209f15d0943f38b1d8af4f6d20769c5e113c65bac9455944613ab3b40726f
 stdout bytes/lines:  9879 / 79
 stdout CR/final byte:0 / 0a
+byte identity:       PASS
 result:              NEGATIVE / N2
 
-x86_64 replay:       pending draft pull-request workflow
-architecture gate:   pending
+architecture gate:   PASS
 ```
 
 The complete neutral metadata and exact raw stdout are public in issue #130
 comment `5056393829`; the environment-name transcription correction is
 comment `5056438053`. `EXPECTED.txt` is byte-identical to that raw stdout.
 The pinned `PREREG.md` and `verify.py` remain unchanged.
+
+GitHub workflow `29994466027`, job `89164731518`, reran the identical pinned
+verifier on Linux x86_64 at tested merge commit `6493fffb96274cdecb7a186ce016584b83b281ed`.
+It exited zero with empty stderr and reported the exact verifier and stdout
+SHA-256 values recorded above.
 
 ## What the negative result decides
 
@@ -106,11 +122,11 @@ the negative result in Canon is a later, separately reviewed fold.
 
 ## Architecture gate
 
-The clean formal aarch64 execution used the exact immutable public pin,
-exited zero with empty stderr, and produced the recorded 9879-byte transcript.
-The required GitHub Linux x86_64 replay must still reproduce the same verifier
-and stdout hashes and the same bytes. A mismatch, timeout, nonzero exit, or
-nonempty stderr is STOP under the frozen protocol and is not rerun.
+The clean formal aarch64 execution and GitHub Linux x86_64 pull-request
+workflow used the identical immutable verifier, exited zero with empty stderr,
+and reproduced the 9879-byte, 79-line transcript byte for byte. The exact
+finite classification therefore passes the two-architecture computation gate.
 
-This file will receive only evidence metadata after the required x86_64 check.
-Until then, the two-architecture computation gate remains pending.
+This evidence-only update does not alter `EXPECTED.txt`, `RUN.md`,
+`PREREG.md`, or `verify.py` and does not repeat the formal aarch64 execution.
+The final-head policy workflow remains a merge-eligibility check.
