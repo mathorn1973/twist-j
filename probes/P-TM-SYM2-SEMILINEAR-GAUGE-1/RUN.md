@@ -48,10 +48,23 @@ residual_invariant: chi_Q chi_F
 selector_orbit_count: 2
 selector_orbit_sizes: 24,24
 result: PASS / SEMILINEAR-DOUBLE
-architecture_gate: formal aarch64 leg complete; required GitHub x86_64 leg pending
+architecture_gate: PASS
 public_lock: issue 134
 public_pin_comment: 5058369843
 public_run_return: issue comment 5059483579
+x86_workflow_run: 30015742345
+x86_workflow_job: 89235142494
+x86_tested_merge_commit: 4c1b0d4278b0b6357a6b3d39b23a311c92429952
+x86_platform: Ubuntu 24.04.4 LTS
+x86_runner_image: ubuntu-24.04 20260714.240.1
+x86_runner: 2.336.0
+x86_python: CPython 3.12.13
+x86_architecture: x86_64
+x86_exit_code: 0
+x86_stderr_bytes: 0
+x86_verifier_sha256: f526af796e0fd2951d5b136b17f786045a932214744040dfd0b86e47c50b3590
+x86_stdout_sha256: 47e04141e0ee0b290a4ca91b1b0b977ad2674d555ab296aaa371177f662bfd19
+x86_byte_identity: PASS
 
 The formal run used a fresh public clone and a clean detached checkout of
 the exact immutable pin. Before process start, the public commit, complete
@@ -76,7 +89,9 @@ There are 24 accepted realizations: the 12-element exponent-zero group and a
 effective semilinear image has order 24 and two free selector orbits of size
 24. The residual two-orbit invariant is `chi_Q chi_F`.
 
-The required GitHub Linux x86_64 pull-request check must use the identical
-pinned verifier, exit zero with empty stderr, and reproduce `EXPECTED.txt`
-byte for byte. Until that check passes, the two-architecture computation gate
-is pending.
+The first GitHub Linux x86_64 pull-request replay used the identical pinned
+verifier at tested merge commit
+`4c1b0d4278b0b6357a6b3d39b23a311c92429952`. Workflow run `30015742345`,
+job `89235142494`, exited zero with empty stderr and reproduced
+`EXPECTED.txt` byte for byte. Together with the sole formal aarch64
+execution, the required two-architecture computation gate is PASS.

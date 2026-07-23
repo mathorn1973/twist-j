@@ -1,7 +1,7 @@
 # P-TM-SYM2-SEMILINEAR-GAUGE-1 result
 
-Status: SCIENTIFIC RESULT; AARCH64 FORMAL LEG PASS;
-X86_64 REPLAY PENDING; PUBLIC CLAIM UNCHANGED
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS;
+PUBLIC CLAIM UNCHANGED
 
 ## Recorded decision
 
@@ -87,13 +87,22 @@ aarch64 Python:       Python 3.12.3
 aarch64 checkout:     clean, detached at the exact public pin
 aarch64 executions:   1
 aarch64 exit/stderr:  0 / 0 bytes
+x86_64 workflow run:  30015742345
+x86_64 workflow job:  89235142494
+x86_64 tested merge:  4c1b0d4278b0b6357a6b3d39b23a311c92429952
+x86_64 platform:      Ubuntu 24.04.4 LTS
+x86_64 runner image:  ubuntu-24.04 20260714.240.1
+x86_64 runner:        2.336.0
+x86_64 Python:        CPython 3.12.13
+x86_64 exit/stderr:   0 / 0 bytes
+x86_64 byte identity: PASS
 
 stdout SHA-256:       47e04141e0ee0b290a4ca91b1b0b977ad2674d555ab296aaa371177f662bfd19
 stdout bytes/lines:   29205 / 146
 stdout CR/final byte: 0 / 0a
 result:               PASS / SEMILINEAR-DOUBLE
 
-architecture gate:    x86_64 replay pending
+architecture gate:    PASS
 ```
 
 The complete neutral metadata and exact raw stdout are public in issue #134
@@ -116,6 +125,9 @@ file is changed by this evidence-only record.
 
 ## Architecture gate
 
-The sole formal aarch64 leg passed. Merge eligibility still requires a clean
-GitHub Linux x86_64 replay of the identical pinned verifier with exit zero,
-empty stderr, and byte-for-byte reproduction of `EXPECTED.txt`.
+The sole formal aarch64 leg passed. The first clean GitHub Linux x86_64
+replay of the identical pinned verifier also passed at tested merge commit
+`4c1b0d4278b0b6357a6b3d39b23a311c92429952`: exit zero, empty stderr, and
+byte-for-byte reproduction of `EXPECTED.txt`. The two-architecture
+computation gate is therefore PASS. The final-head policy workflow remains
+the merge-eligibility check for this evidence update.
