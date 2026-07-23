@@ -10,11 +10,11 @@ freezes the order and firewalls for later owner decisions and sealed folds.
 
 ```text
 dossier id             PROMO-2026-07-23-PROGRAM-ROUTING-1
-public anchor          main 537b56ee1881021a942d46cb7b1216712f482c29
+public anchor          main 381f5b06ff5c7353396633f582f0adfd93332f0a
 active authority       Public Canon v16, tag canon-v16
 normative delta today  none after the v16 activation
 public result lanes    C20 arithmetic; TM-SYM2 classification
-sibling proposal       Quant-Schwinger arithmetic, draft PR #140
+reviewed proposal      Quant-Schwinger arithmetic, merged PR #140
 recommended order      Quant -> C20 -> TM owner disposition
 combined v17 fold      not authorized by this dossier
 formal execution       none
@@ -45,7 +45,7 @@ activation        ffed1ff536972113cbc3d8f74830172206b3a489
 content commit    a96f6c7a8ed63c2234977cb1c7a3432fd315bd7a
 CANON SHA-256     836b8d642f5209d46a5b833a3a1e7a1acc14a249e83066af1adb21845242d4a9
 CANON bytes       89364
-current main      537b56ee1881021a942d46cb7b1216712f482c29
+current main      381f5b06ff5c7353396633f582f0adfd93332f0a
 ```
 
 Public v16 contains 194 claims: `T98 D40 C22 H5 O20 F9`, with 210 normative
@@ -64,10 +64,11 @@ The complete public sequence for the local calendar day is:
 | #135 | semilinear twofold result | `d78f6a91a6bbaf97d16e4c189fc538d9c6ad838c` | public evidence, no gauge adoption |
 | #137 | reversal-closure successor definition | `d8f91078760ed904ae748883dfe2b8fd98c97af9` | result-neutral definition |
 | #139 | reversal-toggle closure result | `537b56ee1881021a942d46cb7b1216712f482c29` | public evidence, no gauge adoption |
+| #140 | Quant-Schwinger arithmetic proposal | `381f5b06ff5c7353396633f582f0adfd93332f0a` | public notes-only review material |
 
-Draft PR #140 at head
-`48ff7f13d3edb163178d36acb420c57d5d39a6a7` is different in kind. It is a
-notes-only promotion proposal, not probe evidence and not yet part of `main`.
+PR #140, head `48ff7f13d3edb163178d36acb420c57d5d39a6a7`, is different in
+kind. It merged as notes-only promotion material and is now part of `main`,
+but it is not probe evidence and changes no authority.
 
 No commit after the v16 activation changes `canon/`, `STATUS.md`, `README.md`,
 or `CITATION.cff`. Therefore no result listed above has been registered merely
@@ -96,7 +97,7 @@ separate sibling document:
 
 ```text
 notes/canon/PROMO-C-QUANT-SUBSTRATE-SCHWINGER-1.md
-draft PR #140
+merged PR #140 at 381f5b06ff5c7353396633f582f0adfd93332f0a
 ```
 
 Its narrow proposal is:
@@ -118,10 +119,9 @@ BRIDGE-DEFECT [T]:   script-Q phi^2 = 2 pi
 ```
 
 This dossier does not duplicate the exact registry, normative, dependency,
-evidence, history, count, or release templates in PR #140. Review and merge of
-that note would publish proposal material only. The recommended first
-normative move is a later independent Quant fold consuming the byte-reviewed
-proposal.
+evidence, history, count, or release templates in PR #140. Its merge published
+proposal material only. The recommended first normative move is a later
+independent Quant fold consuming the byte-reviewed proposal.
 
 No `T-LOCK`, physical child split, named physical gate, substrate coupling,
 measured prediction, or promotion of `QUANT-SUBSTRATE` is part of this lane.
@@ -292,7 +292,8 @@ TM equivalence.
 
 ### Stage 1: publish review material
 
-1. review and merge the Quant proposal in draft PR #140;
+1. PR #140 is merged at `381f5b06ff5c7353396633f582f0adfd93332f0a`
+   and its public note has been byte-read back;
 2. review and merge this routing dossier;
 3. create no tag and change no Canon status at this stage.
 
