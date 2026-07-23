@@ -1,7 +1,7 @@
 # P-C20-TEICHMULLER-SPLIT-2 result
 
-Status: SCIENTIFIC RESULT; FORMAL AARCH64 LEG PASS;
-X86_64 REPRODUCTION PENDING; PUBLIC CLAIM UNREGISTERED
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS;
+PUBLIC CLAIM UNREGISTERED
 
 ## Recorded decision
 
@@ -82,8 +82,33 @@ No Canon, registry, frontier, dependency, gate, or status change is made.
 
 ## Two-architecture gate
 
-PENDING. The formal aarch64 leg uses the pinned verifier, exits zero, writes
-empty stderr, and produces the 724-byte transcript in `EXPECTED.txt`. The
-required GitHub x86_64 check must reproduce the same verifier hash and exact
-stdout before this computation gate can close. Any discrepancy is preserved
-as a first-class failure.
+PASS.
+
+```text
+pull request:          129
+formal evidence head: 15875416570b135a68d83fb869fd9abb08431afc
+tested merge commit:  281f68a2063e79f5c85460af8b5f3eb7deb68f3f
+workflow run:          29983108892
+workflow job:          89129072266
+conclusion:            success
+platform:              GitHub-hosted Ubuntu 24.04 x86_64
+runner image:          ubuntu-24.04 20260714.240.1, runner 2.335.1
+Python:                CPython 3.12.13
+verifier SHA-256:      5ba3680f2cca840ab458e72e8a2f0febb99c732fcacaeadd68c71c020baacd41
+stdout SHA-256:        4cbf934b2220c5a5c3de8169a448baac1396236ebc37c286536c3886bb8d86e8
+byte identity:         PASS, 724 bytes and 7 lines
+gate:                  PASS
+```
+
+The required policy workflow checked out GitHub's generated merge of the
+exact formal evidence head into Public Canon v16 main. It enforced verifier
+integrity, x86_64 execution, exit zero, empty stderr, and byte-identical
+`EXPECTED.txt`, and logged `VERIFY PASS P-C20-TEICHMULLER-SPLIT-2` with both
+frozen hashes.
+
+Together with the single formal aarch64 leg, this completes the
+two-architecture computation gate. Policy, 53 unit tests, Canon v16, ledger,
+changed-verifier, and changed-reproduction checks are green in the same CI
+job. This gate does not itself register or promote a public claim; any Canon,
+registry, dependency, frontier, or ledger fold remains separate reviewed
+work.
