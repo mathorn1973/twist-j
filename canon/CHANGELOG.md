@@ -1,11 +1,27 @@
 # Canon changelog (public series)
 
-## Public Canon v17
+## Public Canon v18
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 195 claims; 0 T-LOCK, 99 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
+Registry snapshot: 196 claims; 0 T-LOCK, 100 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Canon v18 adds C20-TEICHMULLER-SPLIT [T] at L1 from the corrected public
+proof-first probe P-C20-TEICHMULLER-SPLIT-2. It registers the finite-local-ring
+model, the exact C_4 x C_5 split of the J-cycle in R, the complete root census
+there, the all-depth C_4 two-primary conclusion in the declared lambda-adic
+tower, and the independently reconstructed reduced J-STEP operator.
+TIME-QUANTUM-TOWER [C] is unchanged and has no dependency edge to or from the
+new theorem. No time, decoder, physical carrier, metrology, or L2-L6 reading
+is added.
+
+## Public Canon v17
+
+<!-- BEGIN GENERATED CANON17 COUNTS -->
+Registry snapshot: 195 claims; 0 T-LOCK, 99 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON17 COUNTS -->
 
 Canon v17 adds QUANT-SCHWINGER-TARGET [T] as an exact arithmetic consequence
 of J-MODULUS-CHORD [T] and BRIDGE-DEFECT [T]. QUANT-SUBSTRATE remains [O]:
