@@ -43,12 +43,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 98, "D": 40, "C": 22, "F": 9,
+    expected_counts = {"T": 99, "D": 40, "C": 22, "F": 9,
                        "O": 20, "H": 5}
     checks.append((
         "COUNTS",
-        "registry has 194 claims with the current status partition",
-        len(rows) == 194 and counts == expected_counts,
+        "registry has 195 claims with the current status partition",
+        len(rows) == 195 and counts == expected_counts,
     ))
 
     checks.append((
@@ -151,6 +151,24 @@ def run():
                         ("tensor", "isotropic", "r = 0", "cosmology"))
         and scope_lacks(index, "GYRON-DENSITY",
                         ("proton", "cosmology", "mass ladder", "basel")),
+    ))
+
+    checks.append((
+        "SCHWINGER",
+        "the exact target stays T while its physical realization stays O",
+        has_status(index, "QUANT-SCHWINGER-TARGET", "T")
+        and has_status(index, "QUANT-SUBSTRATE", "O")
+        and all(has_status(index, claim, "T") for claim in
+                ("J-MODULUS-CHORD", "BRIDGE-DEFECT"))
+        and scope_contains_all(
+            index, "QUANT-SCHWINGER-TARGET",
+            ("J Jbar / script-Q = 1/(2 pi)", "arithmetic only",
+             "no identification"),
+        )
+        and scope_contains_all(
+            index, "QUANT-SUBSTRATE",
+            ("physical-realization gate", "remains open"),
+        ),
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

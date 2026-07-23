@@ -1,11 +1,23 @@
 # Canon changelog (public series)
 
-## Public Canon v16
+## Public Canon v17
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 194 claims; 0 T-LOCK, 98 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
+Registry snapshot: 195 claims; 0 T-LOCK, 99 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Canon v17 adds QUANT-SCHWINGER-TARGET [T] as an exact arithmetic consequence
+of J-MODULUS-CHORD [T] and BRIDGE-DEFECT [T]. QUANT-SUBSTRATE remains [O]:
+production of that scalar as the first-order electron coefficient is not
+derived. No physical child split, gate, or formal probe is adopted.
+
+## Public Canon v16
+
+<!-- BEGIN GENERATED CANON16 COUNTS -->
+Registry snapshot: 194 claims; 0 T-LOCK, 98 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON16 COUNTS -->
 
 Public Canon v16 is the owner-definition fold of the TM-SYM2-MEASURE lane
 (issue #119). The definition tuple S_TM of the v15 predefinition is

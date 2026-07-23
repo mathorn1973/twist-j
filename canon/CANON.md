@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v16
+# TWIST-J Public Canon v17
 
-**Release identity.** Public Canon v16. Normative authority and activation
+**Release identity.** Public Canon v17. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v16 also declares the discrete
+algebraic axiom is J. Public Canon v17 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v16 does not claim
+seed of the two algebraic projections. Public Canon v17 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -73,6 +73,8 @@ the kernel transport offset is s_c. p = 5 and d = 3 throughout.
 The tensor-to-scalar ratio is r_T(k), distinct from the finite-kernel
 coordinate r and the radial coordinate used in continuum formulas.
 K_chi5 = 1/(864 pi) is the conformal mode prefactor.
+script-Q is the exact bridge scalar of BRIDGE-DEFECT [T], fixed by
+script-Q phi^2 = 2 pi; it is derived notation, not a new primitive.
 
 **Primitive and architecture inventory.**
 
@@ -87,7 +89,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v16 contains no such
+deriving the architecture from J; Public Canon v17 contains no such
 theorem.
 
 ---
@@ -1169,7 +1171,18 @@ sixteen identities with the pivot 1 - J = e^(-i pi/5) and the polylog
 ladder halving 2 pi/5 -> pi/5 -> pi/10 (ELECTRON-G-RATIO [T],
 reproduce/photon-electron); one drive arg j, spinor pi/5 per step
 through the diagonal bridge, ratio 2 at every step, closure pair
-(5, 10), R^5 = -I (ELECTRON-G-DOUBLE-COVER [T]). The electron sign is
+(5, 10), R^5 = -I (ELECTRON-G-DOUBLE-COVER [T]).
+
+The scalar nominated by the still-open first-order question is already exact
+arithmetic. Write u = J Jbar and q = script-Q. J-MODULUS-CHORD [T] gives
+u phi^2 = 1, while BRIDGE-DEFECT [T] gives q phi^2 = 2 pi. Hence
+q - 2 pi u = u(q phi^2 - 2 pi) - q(u phi^2 - 1) = 0, and therefore
+J Jbar / script-Q = 1/(2 pi) (QUANT-SCHWINGER-TARGET [T]). This theorem
+fixes only the target scalar. It does not identify that scalar with
+[alpha^1]((g_e(alpha)-2)/2), construct a substrate coupling, fix an action
+normalization or regularization, or close QUANT-SUBSTRATE [O].
+
+The electron sign is
 measured into existence (ELECTRON-SIGN [D]): the charge sign is the
 orientation, ghost {a, c} against live {b, d}, of the single gyron
 anchored engagement of a defect worldline, pair neutrality is
@@ -1209,7 +1222,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v16. The fermionizer
+inherited naming clause is not part of Public Canon v17. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1813,7 +1826,7 @@ assumes, or falsifies RH.
 The wall is one archimedean wall, and it is understood: the shadow is
 the polylogarithm ladder of J. What stands on it: the quantum
 substrate gates, Larmor and the Schwinger term, the term carrying the
-hypothesis value J Jbar / script-Q = 1/(2 pi) (QUANT-SUBSTRATE); the
+exact arithmetic target J Jbar / script-Q = 1/(2 pi) (QUANT-SCHWINGER-TARGET [T]), whose physical realization as the first-order electron coefficient remains open inside QUANT-SUBSTRATE [O]; the
 non abelian measure lift (COLOR-MEASURE-SELECTION); and the shared
 2 pi U(1) circle itself, with pi the locked shadow.
 
@@ -1863,7 +1876,9 @@ MEASUREMENT AND METROLOGY
                              reconstruction, and post-state instrument claims
                              are outside this row
 THE WALL
-  QUANT-SUBSTRATE            the Larmor gate and the Schwinger term gate
+  QUANT-SUBSTRATE            the Larmor gate and the Schwinger physical-realization
+                             gate; the target scalar is exact arithmetic and its
+                             production as the first-order coefficient remains open
   COLOR-MEASURE-SELECTION    the measure lift onto SL_3(F_5): 24 carrier
                              orbits, 16 observable types; the minimal
                              new datum is a weight vector

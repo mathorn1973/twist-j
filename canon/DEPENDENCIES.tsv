@@ -290,3 +290,6 @@ TM-SYM2-MEASURE	DEF-ACTION-LAYERS	REQUIRES	the lane's layer endpoints and both l
 TM-SYM2-MEASURE	RAMIFIED-TM-LIFT	REQUIRES	the window carrier reads the registered drive cut and its sign-quotient realization theta_n = s_2(n) mod 2
 TM-SYM2-MEASURE	SUBSTRATE-KNIT	REQUIRES	the coefficient-side Born carrier rests on the registered position/Fourier overlap and Plancherel mass statement
 TM-SYM2-MEASURE	ABELIAN-FACE-DICTIONARY	REQUIRES	literal Fourier inversion of the phaseful verb Psi(k) = 1 + zeta_5^k is conditional on the dictionary's explicitly supplied magnetic axiom pair, for which no uniqueness or selection theorem is claimed
+QUANT-SCHWINGER-TARGET	J-MODULUS-CHORD	REQUIRES	the target scalar uses the registered exact modulus identity J Jbar = phi^-2
+QUANT-SCHWINGER-TARGET	BRIDGE-DEFECT	REQUIRES	the target scalar uses the registered exact bridge script-Q phi^2 = 2 pi
+QUANT-SUBSTRATE	QUANT-SCHWINGER-TARGET	REQUIRES	the open physical gate consumes the exact arithmetic target without thereby realizing it
