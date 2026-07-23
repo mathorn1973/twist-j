@@ -57,12 +57,25 @@ transport_NR: REALIZABLE-E1
 extended_orbit_count: 1
 extended_orbit_sizes: 48
 result: PASS / REVERSAL-TOGGLE
-architecture_gate: formal aarch64 leg complete; required GitHub x86_64 leg pending
+architecture_gate: PASS
 public_lock: issue 138
 definition_issue: issue 136
 definition_pr: PR 137
 public_pin_comment: 5061456941
 public_run_return: issue comment 5061491530
+x86_workflow_run: 30031502906
+x86_workflow_job: 89288896540
+x86_tested_merge_commit: 154c346fc6bfce1f5be363bd8dd44903d0b57235
+x86_platform: Ubuntu 24.04.4 LTS
+x86_runner_image: ubuntu-24.04 20260720.247.2
+x86_runner: 2.336.0
+x86_python: CPython 3.12.13
+x86_architecture: x86_64
+x86_exit_code: 0
+x86_stderr_bytes: 0
+x86_verifier_sha256: 03f5cf7e49b5a03ccb9ee2a0d7383737ab0f84d0d1da7c04a6c4dce481ba77ad
+x86_stdout_sha256: 687174ea019ba5aa66ad119f581e227ac863e3dbc078312e3d6aa254dab2ea1a
+x86_byte_identity: PASS
 
 The formal run used a fresh public clone and a clean detached checkout of
 the exact immutable pin. Before process start, the public commit, complete
@@ -87,6 +100,9 @@ N, R, and NR; the N and R transports are nonrealizable over the frozen
 field, while NR is realizable at exponent one; the candidate extended
 equivalence has one orbit of size 48.
 
-The required first clean GitHub Linux x86_64 replay of the identical pinned
-verifier is pending. Merge eligibility requires exit zero, empty stderr,
-and byte-for-byte reproduction of `EXPECTED.txt`.
+The first clean GitHub Linux x86_64 pull-request replay used the identical
+pinned verifier at tested merge commit
+`154c346fc6bfce1f5be363bd8dd44903d0b57235`. Workflow run `30031502906`,
+job `89288896540`, exited zero with empty stderr and reproduced
+`EXPECTED.txt` byte for byte. Together with the sole formal aarch64
+execution, the required two-architecture computation gate is PASS.
