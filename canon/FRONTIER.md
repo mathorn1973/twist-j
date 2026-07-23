@@ -84,9 +84,9 @@ Closed claims are excluded.
 
 ## Quantum and electromagnetic wall (`QUANTUM_EM`)
 
-- QUANT-SUBSTRATE [O]: the Larmor gate and the Schwinger term gate on the archimedean wall
+- QUANT-SUBSTRATE [O]: the Larmor gate and the Schwinger physical-realization gate on the archimedean wall; QUANT-SCHWINGER-TARGET supplies the exact arithmetic scalar J Jbar / script-Q = 1/(2 pi), while deriving it as [alpha^1]((g_e(alpha)-2)/2) from a substrate coupling remains open
   Queue: ROOT; READY; FORMAL.
-  Decision: the two gates decide: exact gate values close the Larmor clause; the Schwinger term carries the hypothesis value 1/(2 pi) and a failed gate fires it
+  Decision: the two physical gates decide: exact gate values close the Larmor clause; the Schwinger branch has exact arithmetic target J Jbar / script-Q = 1/(2 pi), and a failed physical-realization gate fires it
 - NEUTRON-DELTA-EM [O]: the interior compression channel of the neutron electromagnetic delta
   Queue: FOLLOWUP; BLOCKED; FORMAL.
   Decision: closes positively by deriving the interior compression channel value; closes negatively if the derived electromagnetic delta moves the neutron outside its measured tier window
