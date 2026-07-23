@@ -294,3 +294,19 @@ QUANT-SCHWINGER-TARGET	J-MODULUS-CHORD	REQUIRES	the target scalar uses the regis
 QUANT-SCHWINGER-TARGET	BRIDGE-DEFECT	REQUIRES	the target scalar uses the registered exact bridge script-Q phi^2 = 2 pi
 QUANT-SUBSTRATE	QUANT-SCHWINGER-TARGET	REQUIRES	the open physical gate consumes the exact arithmetic target without thereby realizing it
 C20-TEICHMULLER-SPLIT	J-STEP	REQUIRES	the reduced matrix leg reconstructs M_R from the four public J-STEP columns and identifies it with multiplication by J
+TM-SYM2-PROJECTIVE-FOURFOLD	DEF-ARCHITECTURE	REQUIRES	the complete selector classification is conditional on the declared public architecture
+TM-SYM2-PROJECTIVE-FOURFOLD	DEF-ACTION-LAYERS	REQUIRES	the theorem closes the frozen L1-to-L5 candidate and adds no L6 reading
+TM-SYM2-PROJECTIVE-FOURFOLD	RAMIFIED-TM-LIFT	REQUIRES	the frozen W3 carrier reads the registered Thue-Morse drive cut
+TM-SYM2-PROJECTIVE-FOURFOLD	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the selector codomain, common pushforward operator, and 5:2 ratio use the exact registered golden frame
+TM-SYM2-SEMILINEAR-TWOFOLD	DEF-ARCHITECTURE	REQUIRES	the semilinear comparison is conditional on the declared public architecture
+TM-SYM2-SEMILINEAR-TWOFOLD	TM-SYM2-PROJECTIVE-FOURFOLD	REQUIRES	the semilinear image and its two orbits refine the complete frozen projective fourfold
+TM-SYM2-REVERSAL-CLOSURE	DEF-ARCHITECTURE	REQUIRES	drive-word reversal is interpreted only on the declared public architecture
+TM-SYM2-REVERSAL-CLOSURE	TM-SYM2-SEMILINEAR-TWOFOLD	REQUIRES	the reversal classification acts on the exact two-block semilinear comparison surface
+TM-SYM2-PHYSICAL-MEASURE	DEF-ARCHITECTURE	REQUIRES	the successor physical bridge remains conditional on the declared public architecture
+TM-SYM2-PHYSICAL-MEASURE	DEF-ACTION-LAYERS	REQUIRES	the successor must supply the registered L5-to-L6 gate and typed endpoints
+TM-SYM2-PHYSICAL-MEASURE	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the physical codomain and exact common operator use the registered six-line frame
+TM-SYM2-PHYSICAL-MEASURE	GYRON-DENSITY	REQUIRES	the proposed physical normalization must remain compatible with the registered density reading
+TM-SYM2-PHYSICAL-MEASURE	MEASURE-BORN-VERB	REQUIRES	the physical measure clause must be a typed Born-square reading rather than an assumed weight
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-PROJECTIVE-FOURFOLD	BOUNDED_BY	the successor must consume the complete fourfold record and may not repair the fired one-orbit threshold
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-SEMILINEAR-TWOFOLD	BOUNDED_BY	Gamma_sl is an exact comparison image with two blocks but is not an adopted physical gauge and supplies no L6 lift
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-REVERSAL-CLOSURE	BOUNDED_BY	R exchanges the residual blocks only by drive-word precomposition; it neither realizes the missing postcomposition coset nor authorizes quotienting reading orientation
