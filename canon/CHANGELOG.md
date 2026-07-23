@@ -1,11 +1,33 @@
 # Canon changelog (public series)
 
-## Public Canon v18
+## Public Canon v19
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 196 claims; 0 T-LOCK, 100 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
+Registry snapshot: 200 claims; 0 T-LOCK, 103 T, 40 D, 22 C, 4 H, 21 O, 10 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v19 folds the three completed TM-SYM2 classifications.
+TM-SYM2-PROJECTIVE-FOURFOLD [T] records the frozen four-by-twelve
+projective-gauge partition and the fired NONCANONICAL/N2 threshold while
+preserving the common mathematical pushforward and operator.
+TM-SYM2-SEMILINEAR-TWOFOLD [T] records the exact order-24 comparison image
+and its two residual blocks, and TM-SYM2-REVERSAL-CLOSURE [T] records their
+dynamic closure by drive-word precomposition. Gamma_sl and reversal are not
+adopted as gauge; reading orientation is retained as typed L5 data.
+TM-SYM2-MEASURE moves from H to F at its exact frozen S_TM scope.
+TM-SYM2-PHYSICAL-MEASURE [O] separately carries the still-open physical
+Born/measure bridge. The selector gate is FIRED_NEGATIVE, the Born gate is
+re-owned by the successor and remains OPEN_LIFT, and the successor scheduler
+is STOP. No Born halving, physical probability, representative, gauge
+enlargement, or L6 theorem is added.
+
+## Public Canon v18
+
+<!-- BEGIN GENERATED CANON18 COUNTS -->
+Registry snapshot: 196 claims; 0 T-LOCK, 100 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON18 COUNTS -->
 
 Canon v18 adds C20-TEICHMULLER-SPLIT [T] at L1 from the corrected public
 proof-first probe P-C20-TEICHMULLER-SPLIT-2. It registers the finite-local-ring
