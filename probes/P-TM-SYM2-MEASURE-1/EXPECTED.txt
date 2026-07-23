@@ -1,0 +1,79 @@
+P-TM-SYM2-MEASURE-1 definition checker, mode --evaluate
+exact arithmetic only: int and Fraction; no floats in any assertion
+PASS CERT-A1 sum of the six registered projectors equals 2 I3
+PASS CERT-A2 every registered line projector has exact trace 1
+PASS CERT-A3 all fifteen registered line pairs have squared cosine exactly 1/5
+PASS CERT-I2a each registered representative has exactly one zero slot; each of the three zero patterns is carried by exactly two lines
+PASS CERT-I2b the zero-pattern involution is fixed-point-free and equals sigma_line = (v1 v2)(v3 v4)(v5 v6)
+PASS CERT-I2c every single-coordinate sign flip of a nonzero slot exchanges a line with its sigma_line partner projectively; the zero-slot flip fixes the line: sigma_line is the single-sign-flip relation
+PASS CERT-I3a every three registered lines are exactly independent, so any ordered four-line subset is a projective frame
+PASS CERT-I3b every ordered target four-frame gives a full-rank exact projective realization system (360 systems audited); the exhaustive permutation scan cannot discard an underdetermined realization
+PASS CERT-F2i pair-homogeneity of the registered Gram (CERT-A3) proves no pairwise metric invariant can select a pairing
+PASS CERT-F2ii the effective signed-coordinate stabilizer of the registered presentation is a group of line permutations (order 12)
+PASS CERT-F2iii exactly one of the fifteen pairings of the registered six-line list is invariant under the signed-coordinate stabilizer, and it is sigma_line
+PASS CERT-F1a exact factor languages by de-substitution closure agree with the independent direct-prefix scan for lengths 1..8
+PASS CERT-F1b factor counts p(1..8) = (2, 4, 6, 10, 12, 16, 20, 22)
+PASS CERT-F1c right-truncation maps F_(k+1) onto F_k for k = 1..7 (monotone complexity witness)
+PASS CERT-F1d within the frozen transport principle the window length k = 3 is the unique length with |F_k| = |Lines| = 6 (k < 3 too small, k >= 4 too large by monotonicity from p(4) = 10)
+PASS CERT-F1e the frozen carrier W3 equals the exact factor language F_3; the six centered windows q(1..6) exhaust it
+PASS CERT-F1f no constant triple occurs: complementary registered children theta(2m) != theta(2m+1) audited on a contiguous range
+PASS CERT-F1g increment-reading no-go: the increment map is N-invariant with image of size exactly 3 on the six windows (every fiber a full N-orbit), so no N-invariant reading separates the six lines; the selector must read the bits, not only their changes
+PASS CERT-F1h conditionality witness: an exact N-equivariant surjection from the ten-word length-4 language onto the six lines exists (not a bijection), so WITHOUT the bijective clause the carrier is not forced; the bijective clause of ruling F1 is load-bearing
+PASS CERT-B1a bit negation N acts freely on W3
+PASS CERT-B1b N has exactly three orbits on W3
+PASS CERT-B1c every N-orbit carries exactly one window of each middle bit (canonical W3 -> Q x B_2 bijection)
+PASS CERT-B1d conditional typing theorem verified over the complete function space (46656 maps audited): equivariant + surjective implies bijective with bijective quotient descent
+PASS CERT-B2a both child maps commute exactly with bit negation on W3
+PASS CERT-B2b both child maps preserve the carrier W3
+PASS CERT-B2c the quotient transfer is well-defined on Q = W3/<N>
+PASS CERT-B2d exact quotient descent varpi_* T = T_Q varpi_*
+PASS CERT-S3a rank(T/2 - I) = 5, the stationary law is unique
+PASS CERT-S3b the unique normalized stationary law is exact, positive, and satisfies T f = 2 f (computed witness: f = (1/6, 1/6, 1/6, 1/6, 1/6, 1/6))
+PASS CERT-B2e COMPLEMENT-BALANCE: N_* f = f follows from uniqueness (verified exactly on the computed law)
+PASS CERT-B2f QUOTIENT-STREAM-COMPATIBILITY: varpi_* f is the unique normalized stationary law of T_Q and f_w = third([w])/2
+PASS CERT-S1 the transfer characteristic polynomial factors completely over Z with integer roots (-1, -1, -1, 0, 1, 2)
+PASS CERT-S2a the minimal polynomial of T on the sum-zero subspace factors over Z (roots -1, 0, 1), is squarefree there, and its spectral radius rho = 1 < 2: strict subdominance
+PASS CERT-S2b growth certificate: T^3 = T^1 on the sum-zero subspace, so opnorm(T^j) is bounded with exact C_J = 4 and peripheral Jordan degree m = 1; the all-N modulus of Lemma 2 is effective
+PASS CERT-S4 both census recursions and the boundary identity q(2N+1) = R(q(N)) hold exactly for every N <= 2048
+PASS CERT-B3a F(delta_0 + delta_1)_k = 1 + zeta_5^k: the coefficient vector transforms exactly to the registered verb symbol
+PASS CERT-B3b the axiom slot: F(v)_2 = 1 + zeta_5^2 = J
+PASS CERT-B3c exact Plancherel: F* F = 5 I on the coefficient carrier (so sum_k |F(a)_k|^2 = 5 Z_pos(a) for every a)
+PASS CERT-B3d Born_spec(delta_0 + delta_1) equals the registered five face weights (2/5, (3+sqrt5)/20, (3-sqrt5)/20, (3-sqrt5)/20, (3+sqrt5)/20) entrywise exactly
+PASS CERT-B3e the five face weights are positive in the principal order and sum exactly to 1
+PASS CERT-F3a Fourier inversion: F is exactly invertible (F* F = 5 I), so delta_0 + delta_1 is the UNIQUE coefficient preimage of the registered verb symbol
+PASS CERT-F3b support translation acts on the spectral side by the unimodular factor zeta^(tk); Born_spec is exactly translation invariant
+PASS CERT-F3c support size 1 gives the flat spectral reading (1/5,...,1/5), which is not the registered face-weight vector
+PASS CERT-F3d the k = 0 face-weight equation forces equal support coefficients: (alpha+beta)^2 - 2(alpha^2+beta^2) = -(alpha-beta)^2 as an exact polynomial identity
+PASS CERT-F3e among support gaps d = 1..4 exactly d = 1 and d = 4 (the adjacent pairs) reproduce the registered weights; WITHIN the support-size-at-most-2 class the coefficient representative is delta_m + delta_(m+1) up to translation, scale, and orientation (a robustness certificate, not the forcing)
+PASS CERT-F3f every residual representative reads its two-point support with the exact uniform Born weight (1/2, 1/2): the half map is pinned and orientation independent
+PASS CERT-F3g weights-only non-uniqueness witness: the exact full-support vector (-4, -4, 1, 1, -4)/5 reproduces the registered face weights entrywise while its Fourier transform differs from the registered phaseful symbol; the face weights alone do not force a unique coefficient representative, and the phaseful dependency of ruling F3 is load-bearing
+PASS CERT-B4a mu_B^f = third x half is exactly normalized on W3
+PASS CERT-B4b BORN-STREAM-COMPATIBILITY: Eq_Born(mu_B^f, f) holds exactly (both sides assign third([w])/2)
+PASS CERT-B4c guarded SCALAR-LINK: unit projector traces and sum f = 1 give 3 alpha = 1 on the exact commutant branch; the implication needs no selector representative
+PASS CERT-B6a the finite census-index identity holds exactly at every audited N (windows over [1, N] against pairs over [0, N-1])
+PASS CERT-B6b the selected event is the singleton fiber E_00 = {001}
+PASS CERT-B6c (pi_12)_* f equals the registered stationary pair law (1, 2, 2, 1)/6 of GYRON-DENSITY exactly
+PASS CERT-B6d GYRON-PUSHFORWARD: mu_B^f(E_00) = f(001) = rho_00 exactly
+PASS CERT-B7a canon tables reachable from the repository root
+PASS CERT-B7b every dependency endpoint, including the four delta edges, is a registered normative item
+PASS CERT-B7c the TM-SYM2-MEASURE parent set in the folded graph is exactly the five-floor plus the four adopted edges (9 direct parents)
+PASS CERT-B7d the graph carries NO edge TM-SYM2-MEASURE -> DEF-LOG-STREAM (the shifted selector records are not the registered total Log)
+PASS CERT-B7e the complete folded dependency graph is acyclic (291 edges audited)
+PASS CERT-B7f both adopted lane gates are well-formed layer lifts owned by TM-SYM2-MEASURE (L1->L5 and L5->L6, both OPEN_LIFT)
+EVALUATE MODE: pinned public probe use only
+AUDIT: line-set projective stabilizer order 60; Aut(Lines, sigma_line) order 12
+PASS CERT-I3c the exhaustive projective realization set and its computed sigma_line normalizer both contain the identity and are closed under composition and inverse
+PASS CERT-I3d the computed gauge group acts by postcomposition on the complete enumerated selector class
+AUDIT: gauge action free: yes
+B5 RECORD: NONCANONICAL_NOT_APPLICABLE(classification_certificate) with 4 gauge orbits
+B5 ORBIT 1: size 12, minimal representative (0, 2, 4, 5, 3, 1)
+B5 ORBIT 1 MEMBERS: (0, 2, 4, 5, 3, 1); (0, 3, 5, 4, 2, 1); (1, 2, 5, 4, 3, 0); (1, 3, 4, 5, 2, 0); (2, 4, 0, 1, 5, 3); (2, 5, 1, 0, 4, 3); (3, 4, 1, 0, 5, 2); (3, 5, 0, 1, 4, 2); (4, 0, 2, 3, 1, 5); (4, 1, 3, 2, 0, 5); (5, 0, 3, 2, 1, 4); (5, 1, 2, 3, 0, 4)
+B5 ORBIT 2: size 12, minimal representative (0, 2, 5, 4, 3, 1)
+B5 ORBIT 2 MEMBERS: (0, 2, 5, 4, 3, 1); (0, 3, 4, 5, 2, 1); (1, 2, 4, 5, 3, 0); (1, 3, 5, 4, 2, 0); (2, 4, 1, 0, 5, 3); (2, 5, 0, 1, 4, 3); (3, 4, 0, 1, 5, 2); (3, 5, 1, 0, 4, 2); (4, 0, 3, 2, 1, 5); (4, 1, 2, 3, 0, 5); (5, 0, 2, 3, 1, 4); (5, 1, 3, 2, 0, 4)
+B5 ORBIT 3: size 12, minimal representative (0, 4, 2, 3, 5, 1)
+B5 ORBIT 3 MEMBERS: (0, 4, 2, 3, 5, 1); (0, 5, 3, 2, 4, 1); (1, 4, 3, 2, 5, 0); (1, 5, 2, 3, 4, 0); (2, 0, 4, 5, 1, 3); (2, 1, 5, 4, 0, 3); (3, 0, 5, 4, 1, 2); (3, 1, 4, 5, 0, 2); (4, 2, 0, 1, 3, 5); (4, 3, 1, 0, 2, 5); (5, 2, 1, 0, 3, 4); (5, 3, 0, 1, 2, 4)
+B5 ORBIT 4: size 12, minimal representative (0, 4, 3, 2, 5, 1)
+B5 ORBIT 4 MEMBERS: (0, 4, 3, 2, 5, 1); (0, 5, 2, 3, 4, 1); (1, 4, 2, 3, 5, 0); (1, 5, 3, 2, 4, 0); (2, 0, 5, 4, 1, 3); (2, 1, 4, 5, 0, 3); (3, 0, 4, 5, 1, 2); (3, 1, 5, 4, 0, 2); (4, 2, 1, 0, 3, 5); (4, 3, 0, 1, 2, 5); (5, 2, 0, 1, 3, 4); (5, 3, 1, 0, 2, 4)
+B5 INVARIANT: the exact orbit invariant of a class member is its orbit block above (complete partition certificate; two members are gauge-equivalent if and only if they share a block)
+ROUTE: NEGATIVE (N2: the canonicality test returns NONCANONICAL)
+RESULT: PASS (all certificates green in mode --evaluate)
