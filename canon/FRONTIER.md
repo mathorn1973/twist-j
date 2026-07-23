@@ -40,8 +40,8 @@ Closed claims are excluded.
   Queue: ROOT; READY; FORMAL.
   Decision: fires if a preregistered construction has an image law different from the frozen joint Cesaro law, or if an exact finite-cylindrical cut with window at most 16 is exhibited
 - TM-SYM2-MEASURE [H]: the compound claim that the declared autonomous or Thue-Morse stream canonically selects the six GOLDEN-SIX-LINE-SYM2-FRAME projective lines with equal physical weights mu_i = 1/6 and that a registered Born reading derives, rather than assumes, 1/6 = (1/2)(1/3); the frame algebra and GYRON-DENSITY alone supply neither selection nor Born halving
-  Queue: ROOT; STOP; FORMAL.
-  Decision: STOP until the selector carrier, pre-update versus post-update convention, seed versus ensemble, gauge and sign quotients, line labels, limiting measure, and meanings of 1/2 and 1/3 are frozen; closes positively only when the exact selector gives mu_i = 1/6 and M_TM = (1/3)P1 + (2/15)P5 and a typed Born map derives the halving; fires if the frozen selector is noncanonical, gives unequal weights, leaves the exact commutant, changes the 5:2 ratio, or if the Born factorization is ill typed or contradicts GYRON-DENSITY
+  Queue: ROOT; READY; FORMAL.
+  Decision: the definition tuple S_TM is frozen by the v16 owner-definition fold; closes positively only when the exact selector gives mu_i = 1/6 and M_TM = (1/3)P1 + (2/15)P5 and a typed Born map derives the halving; fires if the frozen selector is noncanonical, gives unequal weights, leaves the exact commutant, changes the 5:2 ratio, or if the Born factorization is ill typed or contradicts GYRON-DENSITY
 
 ## Geometry and cosmology (`COSMOLOGY`)
 

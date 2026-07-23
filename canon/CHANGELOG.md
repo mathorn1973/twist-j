@@ -1,11 +1,40 @@
 # Canon changelog (public series)
 
-## Public Canon v15
+## Public Canon v16
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
 Registry snapshot: 194 claims; 0 T-LOCK, 98 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v16 is the owner-definition fold of the TM-SYM2-MEASURE lane
+(issue #119). The definition tuple S_TM of the v15 predefinition is
+complete: the selector-class and Born-bridge inputs are adopted; the
+window carrier, the line pairing, and the coefficient representative are
+discharged as canonicity theorems relative to the owner-adopted
+fixed-length contiguous bijective transport principle, the owner-adopted
+coordinate-axis signed-permutation class, and the registered phaseful verb
+conditional on the explicitly supplied magnetic axiom pair of
+ABELIAN-FACE-DICTIONARY, for which no uniqueness or selection theorem is
+claimed (rulings F1-F3 of
+notes/canon/P-TM-SYM2-MEASURE-1-OWNER-DEFINITION.md, with the pinned exact
+checker green on 60 definition-mode certificates). The two lane gates
+GATE-L1-L5-TM-SYM2-SELECTOR-STREAM and
+GATE-L5-L6-TM-SYM2-BORN-MEASURE are registered with four dependency edges
+(DEF-ACTION-LAYERS, RAMIFIED-TM-LIFT, SUBSTRATE-KNIT,
+ABELIAN-FACE-DICTIONARY), completing the nine-parent graph, and an
+explicit no-edge ruling for DEF-LOG-STREAM; the scheduler state moves
+from STOP to READY. No claim enters, leaves, or changes status; the
+registry counts are unchanged. No probe is authorized: the formal probe
+P-TM-SYM2-MEASURE-1 still requires its own immutable preregistration pin,
+and POSITIVE, NEGATIVE, and STOP all remain live routes.
+
+## Public Canon v15
+
+<!-- BEGIN GENERATED CANON15 COUNTS -->
+Registry snapshot: 194 claims; 0 T-LOCK, 98 T, 40 D, 22 C, 5 H, 20 O, 9 F; 25 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON15 COUNTS -->
 
 FIRED-COMMUTATOR-NOGO enters at [T] and L1: the fired algebra <b, d, e>
 is spatially abelian; its derived subgroup is exactly the fiber translation

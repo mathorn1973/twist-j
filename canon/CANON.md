@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v15
+# TWIST-J Public Canon v16
 
-**Release identity.** Public Canon v15. Normative authority and activation
+**Release identity.** Public Canon v16. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v15 also declares the discrete
+algebraic axiom is J. Public Canon v16 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v15 does not claim
+seed of the two algebraic projections. Public Canon v16 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -87,7 +87,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v15 contains no such
+deriving the architecture from J; Public Canon v16 contains no such
 theorem.
 
 ---
@@ -1209,7 +1209,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v15. The fermionizer
+inherited naming clause is not part of Public Canon v16. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1904,7 +1904,8 @@ ENTROPY BRIDGE
                              carrier counts already match
 MEASURE
   TM-SYM2-MEASURE            the Thue-Morse selection and physical measure;
-                             residual Born phase halving 1/6 = (1/2)(1/3)
+                             residual Born phase halving 1/6 = (1/2)(1/3);
+                             S_TM definition frozen (v16), scheduler READY
 MATTER
   NEUTRON-DELTA-EM           the interior compression channel
   PROTON-RESIDUAL-IS-QCD     gated on QCD dynamics
