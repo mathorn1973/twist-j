@@ -36,4 +36,3 @@ public pin commit. The public branch tip, both frozen file hashes, byte counts,
 and Git blobs matched the pin before execution. Raw stdout and stderr were
 captured separately outside the worktree. The machine is recorded only by
 neutral platform and architecture descriptors.
-
