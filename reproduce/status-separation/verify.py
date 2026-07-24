@@ -117,12 +117,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 103, "D": 40, "C": 22, "F": 10,
+    expected_counts = {"T": 104, "D": 40, "C": 22, "F": 10,
                        "O": 21, "H": 4}
     checks.append((
         "COUNTS",
-        "registry has 200 claims with the current status partition",
-        len(rows) == 200 and counts == expected_counts,
+        "registry has 201 claims with the current status partition",
+        len(rows) == 201 and counts == expected_counts,
     ))
 
     checks.append((
@@ -455,6 +455,43 @@ def run():
         and not has_cycle(graph)
         and "nullity" not in theorem_scopes
         and "q(zeta_5)" not in theorem_scopes
+    ))
+
+    wall = "WALL-LI2-RUNG"
+    wall_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == wall
+    }
+    wall_quant_edges = [
+        row for row in dependencies
+        if {row["item_id"], row["depends_on"]} == {wall, "QUANT-SUBSTRATE"}
+    ]
+    checks.append((
+        "WALL-LI2",
+        "the exact Li_2 rung stays T while substrate coupling stays O",
+        has_status(index, wall, "T")
+        and normative.get(wall, {}).get("item_type") == "THEOREM"
+        and normative.get(wall, {}).get("layer") == "NOT_APPLICABLE"
+        and index.get(wall, {}).get("evidence") == "inline"
+        and evidence.get(wall, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(wall, {}).get("location") == "inline"
+        and evidence.get(wall, {}).get("sha256")
+        == "520d79c7fb2fd2a3c1909877f1a7576ea61488be6652cf5c1a2a7541624b20cd"
+        and evidence.get(wall, {}).get("hash_mode")
+        == "registry-scope-sha256-v1"
+        and evidence.get(wall, {}).get("architecture_requirement") == "none"
+        and wall_dependencies == {
+            ("J-PROJECTIONS", "REQUIRES"),
+            ("PI-FROM-J", "REQUIRES"),
+        }
+        and not wall_quant_edges
+        and scope_contains_all(
+            index, wall,
+            ("principal dilogarithm", "pi^2/100", "9 pi^2/100",
+             "Galois-orbit real-part sum", "no field-trace claim",
+             "substrate coupling", "Schwinger coefficient"),
+        )
+        and has_status(index, "QUANT-SUBSTRATE", "O")
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

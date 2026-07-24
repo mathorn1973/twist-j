@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v19
+# TWIST-J Public Canon v20
 
-**Release identity.** Public Canon v19. Normative authority and activation
+**Release identity.** Public Canon v20. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v19 also declares the discrete
+algebraic axiom is J. Public Canon v20 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v19 does not claim
+seed of the two algebraic projections. Public Canon v20 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v19 contains no such
+deriving the architecture from J; Public Canon v20 contains no such
 theorem.
 
 ---
@@ -1263,7 +1263,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v19. The fermionizer
+inherited naming clause is not part of Public Canon v20. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1699,6 +1699,74 @@ transcendental by Baker); linearly independent over the algebraic
 numbers (LOG-AXES-INDEPENDENCE [T]). No algebraic independence claim
 is made.
 
+The exact second rung of the archimedean wall is the following real-part
+identity (WALL-LI2-RUNG [T]). Let
+`sigma_a(zeta_5) = zeta_5^a` for `a in {1,2,3,4}`. For the principal
+branches, import the classical identities
+
+```
+Li_2(z) + Li_2(1 - z)
+  = pi^2/6 - Log(z) Log(1 - z),
+
+Re Li_2(e^(i theta))
+  = pi^2/6 - pi theta/2 + theta^2/4,
+  0 <= theta <= 2 pi.
+```
+
+At `z = sigma_1(J) = phi^-1 e^(2 pi i/5)`, one has
+`1 - z = e^(-pi i/5)`,
+
+```
+Log(z)     = -ln phi + 2 pi i/5,
+Log(1 - z) = -pi i/5,
+Re(Log(z) Log(1 - z)) = 2 pi^2/25,
+Re Li_2(1 - z) = 23 pi^2/300.
+```
+
+Therefore
+
+```
+Re Li_2(sigma_1(J))
+  = pi^2(1/6 - 2/25 - 23/300)
+  = pi^2/100.
+```
+
+At `z = sigma_2(J) = phi e^(-pi i/5)`, one has
+`1 - z = e^(3 pi i/5)`,
+
+```
+Log(z)     = ln phi - pi i/5,
+Log(1 - z) = 3 pi i/5,
+Re(Log(z) Log(1 - z)) = 3 pi^2/25,
+Re Li_2(1 - z) = -13 pi^2/300.
+```
+
+Therefore
+
+```
+Re Li_2(sigma_2(J))
+  = pi^2(1/6 - 3/25 + 13/300)
+  = 9 pi^2/100.
+```
+
+Complex conjugation gives the same real parts for `a = 4` and `a = 3`,
+respectively. Hence
+
+```
+Re Li_2(sigma_a(J)) = pi^2/100     for a in {1,4},
+Re Li_2(sigma_a(J)) = 9 pi^2/100   for a in {2,3},
+
+sum_(a=1)^4 Re Li_2(sigma_a(J)) = pi^2/5,
+expanding / contracting = 9,
+(pi^2/5) / zeta(2) = 6/5,
+pi^2/5 - zeta(2) = pi^2/30.
+```
+
+This is a Galois-orbit real-part sum, not a field trace of the
+transcendental `Li_2` values. It asserts nothing about their imaginary parts,
+a substrate coupling, the Schwinger coefficient, an action, normalization,
+regularization, physical observables, or uniqueness.
+
 The pentagon root-filter normalization is exact
 (PENTAGON-NORMALIZATION [T], probes/P-PENTAGON-WEIL-1). Let
 `j = zeta_5 = (J - 1)^3` and, for `Re(s) > 1`, put
@@ -1901,12 +1969,16 @@ also continues in the moment-functional (Weil positivity) frame and in
 genuinely global constructions. RH remains O; none of these results proves,
 assumes, or falsifies RH.
 
-The wall is one archimedean wall, and it is understood: the shadow is
-the polylogarithm ladder of J. What stands on it: the quantum
-substrate gates, Larmor and the Schwinger term, the term carrying the
-exact arithmetic target J Jbar / script-Q = 1/(2 pi) (QUANT-SCHWINGER-TARGET [T]), whose physical realization as the first-order electron coefficient remains open inside QUANT-SUBSTRATE [O]; the
-non abelian measure lift (COLOR-MEASURE-SELECTION); and the shared
-2 pi U(1) circle itself, with pi the locked shadow.
+The wall is one archimedean wall. Its exact second rung is
+WALL-LI2-RUNG [T], the real-part identity above. The quantum substrate
+gates remain separate: the Larmor clause and the Schwinger physical
+realization carry the exact arithmetic target
+J Jbar / script-Q = 1/(2 pi) (QUANT-SCHWINGER-TARGET [T]), while deriving
+that scalar as the first-order electron coefficient from a typed substrate
+coupling remains open inside QUANT-SUBSTRATE [O]. WALL-LI2-RUNG does not
+supply that coupling. The non abelian measure lift
+(COLOR-MEASURE-SELECTION) and the shared 2 pi U(1) circle remain at their
+registered scopes.
 
 ## 17. Engineering witnesses
 

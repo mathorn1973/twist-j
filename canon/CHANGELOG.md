@@ -1,11 +1,28 @@
 # Canon changelog (public series)
 
-## Public Canon v19
+## Public Canon v20
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 200 claims; 0 T-LOCK, 103 T, 40 D, 22 C, 4 H, 21 O, 10 F; 25 live H/O.
+Registry snapshot: 201 claims; 0 T-LOCK, 104 T, 40 D, 22 C, 4 H, 21 O, 10 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v20 adds WALL-LI2-RUNG [T]. A direct principal-branch proof
+using the declared classical Euler reflection identity and unit-circle
+boundary evaluation gives Re Li_2(sigma_a(J)) = pi^2/100 for the contracting
+conjugate pair and 9 pi^2/100 for the expanding conjugate pair. The
+Galois-orbit real-part sum is pi^2/5, the channel ratio is 9, the sum divided
+by zeta(2) is 6/5, and the excess is pi^2/30. This is not a field trace of
+the transcendental Li_2 values. No imaginary-part, coupling, action,
+normalization, regularization, Schwinger coefficient, physical observable,
+or uniqueness claim is added. QUANT-SUBSTRATE remains O.
+
+## Public Canon v19
+
+<!-- BEGIN GENERATED CANON19 COUNTS -->
+Registry snapshot: 200 claims; 0 T-LOCK, 103 T, 40 D, 22 C, 4 H, 21 O, 10 F; 25 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON19 COUNTS -->
 
 Public Canon v19 folds the three completed TM-SYM2 classifications.
 TM-SYM2-PROJECTIVE-FOURFOLD [T] records the frozen four-by-twelve
