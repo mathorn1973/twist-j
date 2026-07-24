@@ -225,6 +225,8 @@ ENTROPY-LAYER-BRIDGE	ENTROPY-MIRROR-LAW	REQUIRES	the open equivariant selection 
 CURVATURE-HISTORICAL-GAUSS-SPLIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the frozen historical full-carrier split is conditional on the declared checkpoint architecture
 CURVATURE-HISTORICAL-GAUSS-SPLIT	CURVATURE-HISTORICAL-TRACE	REQUIRES	the ambient member of the split is the previously typed historical operator and retains its exact trace anchor
 CURVATURE-OPERATOR-CANONICAL	CURVATURE-HISTORICAL-GAUSS-SPLIT	BOUNDED_BY	the exact historical equality constrains one declared full-carrier candidate but does not select a canonical operator class
+WALL-LI2-RUNG	J-PROJECTIONS	REQUIRES	the two archimedean channel locations and exact modulus dichotomy are registered here
+WALL-LI2-RUNG	PI-FROM-J	REQUIRES	the principal logarithm fixes the pi normalization and tenth-root branch used in the proof
 PENTAGON-NORMALIZATION	J-GOLDEN-BRIDGE	REQUIRES	the identity j = (J - 1)^3 identifies the fifth-root filter with the J-generated pentagon
 J-LI-TORAL-HAAR-NOGO	J-STEP	REQUIRES	the named dimension-four specialization uses the public multiplication-by-J matrix M_J; the general no-go depends only on the frozen root-of-unity-free toral carrier class
 J-LI-E8-SHELL-MULTIPLICITY-NOGO	COLOR-MCKAY-E8	REQUIRES	the E8 shell obstruction uses the public E8 identification; the probe independently supplies the theta-series shell multiplicities needed by the declared functional-calculus scope
