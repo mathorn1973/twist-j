@@ -32,8 +32,12 @@ items named by the roadmap must appear once.
 parent_id child_id child_status layer decision_condition dependencies
 ```
 
-Children remain `H` or `O`; Genesis splitting does not promote them. Multiple
-dependencies use semicolons, and `-` means no declared dependency.
+Children remain `H` or `O`; Genesis splitting does not promote them. Once a
+reserved child is consumed, its first lifecycle event must be `DECLARE` in
+`canon-vN` for `N >= 2`, and its declaration status must match the reserved
+`child_status`. Later status changes and retirement remain ledger-governed and
+do not rewrite the Genesis row. Multiple dependencies use semicolons, and `-`
+means no declared dependency.
 
 `EXTERNAL_SOURCES.tsv` uses the review schema verbatim:
 

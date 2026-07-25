@@ -1,11 +1,59 @@
 # Canon changelog (public series)
 
-## Public Canon v21
+
+## Public Canon v22
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 203 claims; 0 T-LOCK, 106 T, 40 D, 22 C, 4 H, 21 O, 10 F; 25 live H/O.
+Registry snapshot: 205 claims; 0 T-LOCK, 107 T, 40 D, 22 C, 3 H, 23 O, 10 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v22 combines a definition-governance fold with one proof-first
+L5 theorem. It retires
+KC3-PLENUM-READOUT because the named archimedean absolute value is not an
+element of the stated cyclotomic carrier and therefore has no residue class
+there. It replaces the compound METRO-ADMISSIBILITY surface by a
+METRO-REDUCTION-CALCULUS parent that defines the exact `U_RF` tuple, typed
+reduction arrows, rational output transport, pointwise stream
+intertwining, and generated zig-zag equivalence; a commuting digit-word
+METRO-ADMISSIBILITY-DIM child that owns the exact L5-to-L6 normalization
+gate; and a residual METRO-ADMISSIBILITY row whose R1 through R8 cover is
+exhaustive by construction. All three are O and STOP.
+METRO-FINITE-STATE-RATIONALITY remains only a one-dimensional base
+dependency.
+
+The same fold types the STOP surfaces of COLOR-MEASURE-SELECTION,
+PROTON-RESIDUAL-IS-QCD, and OBSERVER-WRITE-PORT. The proton row defines the
+complete admissible class `Der_QCD` and permits negative closure only by
+`Der_QCD = empty`. Entropy Route A defines `A_A` on
+`K_TM x O_(K,lambda) -> F_5^6` using normalized additive Haar probability,
+almost-everywhere equality, exact equivariance, and pushforward `Law_W` on
+`[512,2048)`. The cardinality equality 3125 is not a construction, and
+failure of one proposed bridge is not a negative theorem. The fold also
+corrects the historical ENTROPY-CYLINDER-CUT coverage to the cases actually
+established by its own public verifier.
+
+The same release registers ENTROPY-CYLINDER-NOGO-CURSOR [T] from the
+proof-first public probe P-ENTROPY-CURSOR-CLOSURE-1. The exact global
+solution product is zero for all 522 pure-word window-cursor pairs with
+`L = 4..32` and every cursor; 27 frozen direct-depth triples also vanish.
+The `J`-fixed zero residue transports each pure-word obstruction to every
+finite lambda-depth by a labelled-graph restriction proof, not by
+finite-depth extrapolation. The sole formal aarch64 execution and GitHub
+x86_64 workflow run `30165843010`, job `89698596833`, reproduced stdout
+SHA-256
+`21ca2301ffa17634eb868c154e7b683c0d2ca0bc54661962029b12a7a0e65ca7`
+byte identically. The theorem is L5 finite-cylindrical only and leaves
+`A_A`, measurable selection, entropy, regularity, canonicity, image law,
+measure lift, L6, and every physical reading open. No other theorem,
+computation row, physical coefficient, or empirical comparison is added.
+
+## Public Canon v21
+
+<!-- BEGIN GENERATED CANON21 COUNTS -->
+Registry snapshot: 203 claims; 0 T-LOCK, 106 T, 40 D, 22 C, 4 H, 21 O, 10 F; 25 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON21 COUNTS -->
 
 Public Canon v21 adds two proof-first inline theorems.
 WALL-CIRCLE-LEMMA [T] proves the principal-branch closed form

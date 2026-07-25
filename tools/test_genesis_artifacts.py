@@ -28,6 +28,10 @@ from tools.genesis_artifacts import (
 REGISTRY_FIELDS = (
     "claim_id", "status", "scope", "canon_section", "evidence", "falsifier"
 )
+HISTORY_DECLARATION_FIELDS = (
+    "event_sequence", "release", "claim_id", "event_type",
+    "previous_status", "new_status",
+)
 
 
 def write_tsv(path: Path, fields: tuple[str, ...], rows: list[dict[str, str]]) -> None:
@@ -108,6 +112,55 @@ class GenesisFixture:
         write_tsv(directory / "RECONSTRUCTION.tsv", RECONSTRUCTION_FIELDS, self.recon)
         write_tsv(directory / "FRONTIER_SPLITS.tsv", FRONTIER_SPLIT_FIELDS, self.splits)
 
+    def register_split_child(
+        self, index: int = 0, *, registry_status: str | None = None
+    ) -> str:
+        child = self.splits[index]["child_id"]
+        path = self.root / "canon" / "REGISTRY.tsv"
+        with path.open(encoding="utf-8", newline="") as handle:
+            rows = list(csv.DictReader(handle, delimiter="\t"))
+        rows.append({
+            "claim_id": child,
+            "status": registry_status or self.splits[index]["child_status"],
+            "scope": "fixture consumed split scope",
+            "canon_section": "Fixture",
+            "evidence": "inline",
+            "falsifier": "fixture consumed split decision condition is exact and public",
+        })
+        write_tsv(path, REGISTRY_FIELDS, rows)
+        return child
+
+    def write_split_declaration(
+        self,
+        child: str,
+        *,
+        status: str = "O",
+        release: str = "canon-v22",
+        later_status: str | None = None,
+    ) -> None:
+        rows = [{
+            "event_sequence": "1",
+            "release": release,
+            "claim_id": child,
+            "event_type": "DECLARE",
+            "previous_status": "-",
+            "new_status": status,
+        }]
+        if later_status is not None:
+            rows.append({
+                "event_sequence": "2",
+                "release": "canon-v23",
+                "claim_id": child,
+                "event_type": "STATUS_CHANGE",
+                "previous_status": status,
+                "new_status": later_status,
+            })
+        write_tsv(
+            self.root / "canon" / "HISTORY.tsv",
+            HISTORY_DECLARATION_FIELDS,
+            rows,
+        )
+
     def write_sources(self) -> None:
         write_tsv(self.root / "data" / "EXTERNAL_SOURCES.tsv", EXTERNAL_SOURCE_FIELDS, self.sources)
         write_tsv(self.root / "data" / "ENGINEERING_DISPOSITION.tsv", ENGINEERING_FIELDS, self.engineering)
@@ -150,6 +203,53 @@ class GenesisArtifactTests(unittest.TestCase):
         self.fixture.splits[0]["child_status"] = "T"
         self.fixture.write_recon()
         with self.assertRaisesRegex(GenesisArtifactError, "must remain H or O"):
+            validate_recon(self.root)
+
+    def test_registered_split_needs_post_genesis_declaration(self) -> None:
+        self.fixture.write_recon()
+        self.fixture.register_split_child()
+        with self.assertRaisesRegex(
+            GenesisArtifactError, "without a matching post-Genesis DECLARE"
+        ):
+            validate_recon(self.root)
+
+    def test_registered_split_with_matching_declaration_passes(self) -> None:
+        self.fixture.write_recon()
+        child = self.fixture.register_split_child()
+        self.fixture.write_split_declaration(child)
+        self.assertEqual(validate_recon(self.root), (9, 19))
+
+    def test_registered_split_declaration_preserves_planned_status(self) -> None:
+        self.fixture.write_recon()
+        child = self.fixture.register_split_child()
+        self.fixture.write_split_declaration(child, status="H")
+        with self.assertRaisesRegex(
+            GenesisArtifactError, "at planned status O"
+        ):
+            validate_recon(self.root)
+
+    def test_genesis_declaration_does_not_consume_split(self) -> None:
+        self.fixture.write_recon()
+        child = self.fixture.register_split_child()
+        self.fixture.write_split_declaration(child, release="canon-v1-genesis")
+        with self.assertRaisesRegex(
+            GenesisArtifactError, "without a matching post-Genesis DECLARE"
+        ):
+            validate_recon(self.root)
+
+    def test_consumed_split_can_change_status_later(self) -> None:
+        self.fixture.write_recon()
+        child = self.fixture.register_split_child(registry_status="T")
+        self.fixture.write_split_declaration(child, later_status="T")
+        self.assertEqual(validate_recon(self.root), (9, 19))
+
+    def test_retired_split_still_needs_matching_declaration(self) -> None:
+        self.fixture.write_recon()
+        child = self.fixture.splits[0]["child_id"]
+        self.fixture.write_split_declaration(child, status="T")
+        with self.assertRaisesRegex(
+            GenesisArtifactError, "at planned status O"
+        ):
             validate_recon(self.root)
 
     def test_retired_reconstruction_item_must_leave_registry(self) -> None:
