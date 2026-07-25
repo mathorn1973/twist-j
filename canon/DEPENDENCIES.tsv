@@ -312,3 +312,5 @@ TM-SYM2-PHYSICAL-MEASURE	MEASURE-BORN-VERB	REQUIRES	the physical measure clause 
 TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-PROJECTIVE-FOURFOLD	BOUNDED_BY	the successor must consume the complete fourfold record and may not repair the fired one-orbit threshold
 TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-SEMILINEAR-TWOFOLD	BOUNDED_BY	Gamma_sl is an exact comparison image with two blocks but is not an adopted physical gauge and supplies no L6 lift
 TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-REVERSAL-CLOSURE	BOUNDED_BY	R exchanges the residual blocks only by drive-word precomposition; it neither realizes the missing postcomposition coset nor authorizes quotienting reading orientation
+WALL-CIRCLE-LEMMA	J-PROJECTIONS	REQUIRES	the N = 5 corollary uses the registered archimedean J-channel locations
+WALL-CIRCLE-LEMMA	PI-FROM-J	REQUIRES	the principal logarithm fixes the pi normalization and branch used in the proof

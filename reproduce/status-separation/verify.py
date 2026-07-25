@@ -8,6 +8,7 @@ are carried by explicit D, C, or O rows.
 """
 
 import csv
+import hashlib
 import sys
 from pathlib import Path
 
@@ -99,6 +100,10 @@ def scope_contains_all(index, claim_id, phrases):
     return all(phrase.lower() in scope for phrase in phrases)
 
 
+def scope_sha256(index, claim_id):
+    return hashlib.sha256(index[claim_id]["scope"].encode("utf-8")).hexdigest()
+
+
 def run():
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(newline="\n")
@@ -117,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 104, "D": 40, "C": 22, "F": 10,
+    expected_counts = {"T": 106, "D": 40, "C": 22, "F": 10,
                        "O": 21, "H": 4}
     checks.append((
         "COUNTS",
-        "registry has 201 claims with the current status partition",
-        len(rows) == 201 and counts == expected_counts,
+        "registry has 203 claims with the current status partition",
+        len(rows) == 203 and counts == expected_counts,
     ))
 
     checks.append((
@@ -492,6 +497,111 @@ def run():
              "substrate coupling", "Schwinger coefficient"),
         )
         and has_status(index, "QUANT-SUBSTRATE", "O")
+    ))
+
+    circle = "WALL-CIRCLE-LEMMA"
+    circle_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == circle
+    }
+    circle_reverse_edges = [
+        row for row in dependencies
+        if row["item_id"] == wall and row["depends_on"] == circle
+    ]
+    circle_quant_edges = [
+        row for row in dependencies
+        if {row["item_id"], row["depends_on"]}
+        == {circle, "QUANT-SUBSTRATE"}
+    ]
+    checks.append((
+        "WALL-CIRCLE",
+        "the uniform root-circle theorem stays exact and outside physics",
+        has_status(index, circle, "T")
+        and normative.get(circle, {}).get("item_type") == "THEOREM"
+        and normative.get(circle, {}).get("status") == "T"
+        and normative.get(circle, {}).get("layer") == "NOT_APPLICABLE"
+        and normative.get(circle, {}).get("gate_ids") == ""
+        and index.get(circle, {}).get("evidence") == "inline"
+        and evidence.get(circle, {}).get("evidence_id")
+        == "EV-WALL-CIRCLE-LEMMA"
+        and evidence.get(circle, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(circle, {}).get("location") == "inline"
+        and evidence.get(circle, {}).get("sha256")
+        == scope_sha256(index, circle)
+        and evidence.get(circle, {}).get("hash_mode")
+        == "registry-scope-sha256-v1"
+        and evidence.get(circle, {}).get("architecture_requirement") == "none"
+        and circle_dependencies == {
+            ("J-PROJECTIONS", "REQUIRES"),
+            ("PI-FROM-J", "REQUIRES"),
+        }
+        and not circle_reverse_edges
+        and not circle_quant_edges
+        and scope_contains_all(
+            index, circle,
+            ("psi = -Arg(-zeta_N^a)",
+             "midpoint 2a = N proved directly from z = 0",
+             "Li_1(0) = Li_2(0) = 0",
+             "full nontrivial-root sum",
+             "N = 5 specialization reproduces WALL-LI2-RUNG",
+             "no statement about substrate coupling",
+             "physical observables", "or uniqueness"),
+        )
+        and has_status(index, wall, "T")
+        and has_status(index, "QUANT-SUBSTRATE", "O")
+    ))
+
+    metro = "METRO-FINITE-STATE-RATIONALITY"
+    metro_open = "METRO-ADMISSIBILITY"
+    metro_gate = "GATE-L5-L6-METRO-NORMALIZATION"
+    metro_dependencies = [
+        row for row in dependencies if row["item_id"] == metro
+    ]
+    metro_open_edges = [
+        row for row in dependencies
+        if {row["item_id"], row["depends_on"]} == {metro, metro_open}
+    ]
+    checks.append((
+        "METRO",
+        "finite-state rationality stays T while wider admissibility stays O",
+        has_status(index, metro, "T")
+        and normative.get(metro, {}).get("item_type") == "THEOREM"
+        and normative.get(metro, {}).get("status") == "T"
+        and normative.get(metro, {}).get("layer") == "L5"
+        and normative.get(metro, {}).get("gate_ids") == ""
+        and index.get(metro, {}).get("evidence") == "inline"
+        and evidence.get(metro, {}).get("evidence_id")
+        == "EV-METRO-FINITE-STATE-RATIONALITY"
+        and evidence.get(metro, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(metro, {}).get("location") == "inline"
+        and evidence.get(metro, {}).get("sha256")
+        == scope_sha256(index, metro)
+        and evidence.get(metro, {}).get("hash_mode")
+        == "registry-scope-sha256-v1"
+        and evidence.get(metro, {}).get("architecture_requirement") == "none"
+        and not metro_dependencies
+        and not metro_open_edges
+        and scope_contains_all(
+            index, metro,
+            ("accessible q-DFAO", "rational output vector",
+             "every row sum of B is q", "converge entrywise to L 1",
+             "then L is rational", "q-primary spectral projector",
+             "conditional rationality of an existing common limit only",
+             "no convergence existence criterion", "L5-to-L6 lift"),
+        )
+        and "row-sum mismatch is outside the declared q-dfao input schema"
+        in index[metro]["falsifier"].lower()
+        and has_status(index, metro_open, "O")
+        and normative.get(metro_open, {}).get("gate_ids") == metro_gate
+        and gates.get(metro_gate, {}).get("owner_item_id") == metro_open
+        and gates.get(metro_gate, {}).get("gate_kind") == "OPEN_LIFT"
+        and gates.get(metro_gate, {}).get("from_layer") == "L5"
+        and gates.get(metro_gate, {}).get("to_layer") == "L6"
+        and programs.get(metro_open, {}).get("program_id") == "DECODER_CORE"
+        and programs.get(metro_open, {}).get("queue_role") == "ROOT"
+        and programs.get(metro_open, {}).get("work_state") == "READY"
+        and programs.get(metro_open, {}).get("work_mode") == "FORMAL"
+        and metro not in programs
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
