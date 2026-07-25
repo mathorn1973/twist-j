@@ -84,6 +84,7 @@ PREREG_FIELDS = (
 ID = re.compile(r"^[A-Z][A-Z0-9-]*$")
 SOURCE_ID = re.compile(r"^SRC-[A-Z0-9][A-Z0-9-]*$")
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
+CANON_RELEASE = re.compile(r"^canon-v([1-9][0-9]*)$")
 
 
 def fail(message: str) -> None:
@@ -111,6 +112,45 @@ def registry_claims(root: Path) -> set[str]:
     path = root / "canon" / "REGISTRY.tsv"
     with path.open(encoding="utf-8", newline="") as handle:
         return {row["claim_id"].strip() for row in csv.DictReader(handle, delimiter="\t")}
+
+
+def split_child_history(root: Path) -> tuple[set[str], dict[str, str]]:
+    """Return used claim IDs and valid post-Genesis first declarations."""
+    path = root / "canon" / "HISTORY.tsv"
+    if not path.is_file():
+        return set(), {}
+    needed = {
+        "event_sequence", "release", "claim_id", "event_type",
+        "previous_status", "new_status",
+    }
+    history_claims: set[str] = set()
+    first_events: set[str] = set()
+    declarations: dict[str, str] = {}
+    with path.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if not needed.issubset(reader.fieldnames or ()):
+            fail("HISTORY.tsv lacks fields needed to audit consumed Genesis children")
+        for row in reader:
+            claim = row["claim_id"].strip()
+            history_claims.add(claim)
+            try:
+                sequence = int(row["event_sequence"].strip())
+            except ValueError:
+                continue
+            if sequence != 1:
+                continue
+            if claim in first_events:
+                fail(f"HISTORY.tsv duplicates first lifecycle event for {claim}")
+            first_events.add(claim)
+            release = CANON_RELEASE.fullmatch(row["release"].strip())
+            if (
+                row["event_type"].strip() == "DECLARE"
+                and row["previous_status"].strip() == "-"
+                and release is not None
+                and int(release.group(1)) >= 2
+            ):
+                declarations[claim] = row["new_status"].strip()
+    return history_claims, declarations
 
 
 def validate_recon(root: Path) -> tuple[int, int]:
@@ -153,17 +193,26 @@ def validate_recon(root: Path) -> tuple[int, int]:
     children = set(declared_children)
     if len(children) != len(declared_children):
         fail("FRONTIER_SPLITS.tsv duplicates a child_id")
+    history_claims, consumed = split_child_history(root)
     for number, row in enumerate(splits, 2):
         context = f"FRONTIER_SPLITS.tsv line {number}"
         parent = required(row, "parent_id", context)
         child = required(row, "child_id", context)
         if parent not in SPLIT_COUNTS:
             fail(f"{context} has unexpected parent {parent}")
-        if child in claims or not ID.fullmatch(child):
-            fail(f"{context} has invalid or colliding child {child}")
-        parent_counts[parent] += 1
-        if required(row, "child_status", context) not in {"H", "O"}:
+        if not ID.fullmatch(child):
+            fail(f"{context} has invalid child {child}")
+        child_status = required(row, "child_status", context)
+        if child_status not in {"H", "O"}:
             fail(f"{child} must remain H or O during Genesis")
+        if (
+            child in claims or child in history_claims
+        ) and consumed.get(child) != child_status:
+            fail(
+                f"{context} has colliding child {child} without a matching "
+                f"post-Genesis DECLARE at planned status {child_status}"
+            )
+        parent_counts[parent] += 1
         if required(row, "layer", context) not in LAYERS:
             fail(f"{child} has invalid layer")
         if len(required(row, "decision_condition", context)) < 30:

@@ -12,9 +12,9 @@ Closed claims are excluded.
 - CURVATURE-OPERATOR-CANONICAL [O]: whether the public architecture determines exactly one equivalence class of spatial-curvature operator after its carrier, measure, projection group, and ambient versus intrinsic commutator choice are fixed publicly
   Queue: ROOT; STOP; FORMAL.
   Decision: closes UNIQUE if exactly one class survives, NONUNIQUE if at least two survive, EMPTY if none survives, and STOP if the classification is incomplete or inexact
-- METRO-ADMISSIBILITY [O]: state a precise admissibility criterion for named protocol classes beyond normalized one dimensional rational finite state protocols
-  Queue: ROOT; READY; FORMAL.
-  Decision: closes positively when a public criterion classifies a named residual class and is proved invariant under its allowed reductions; closes negatively when an exact counterexample violates the proposed criterion or two reduction-equivalent protocols receive different classifications
+- METRO-REDUCTION-CALCULUS [O]: the typed L5 reduction calculus on U_RF tuples P=(q,a,r,S,A0,{delta_(i,u)},enc_q,w): exact arrow preconditions, allowed-start and input-index transports, rational output transport tau_R, pointwise L5-stream intertwining, four declared allowed arrows, forbidden transformations with exact witnesses, and the finite-zig-zag equivalence approx_red; no normalization or cross-layer gate is owned
+  Queue: ROOT; STOP; FORMAL.
+  Decision: closes positively when every declared arrow has a complete exact precondition and transport proof, every forbidden entry has an exact witness, invariance and common blocking are decided, and approx_red is complete; closes negatively if one transformation is both allowed and forbidden or an admitted arrow changes a frozen decision after exact transport; STOP while any typing, witness, invariance, blocking, or completeness obligation remains
 - QUADRATIC-DECODER-DATA [O]: the typed D_matter action of the registered quadratic/Born leg factors through Q(psi) = (psi psi^dagger, psi psi^T) on a published common total domain and writes a published MatterData schema; required data include the coefficient ring, effective carrier, orbit-to-amplitude bridge, Gram, dagger, transpose, QCarrier equality, effects, Born pairing, exact write map, and complete dependencies; the linear CODEC-TR4 and binary Thue-Morse/census legs, cross-leg or state reconstruction, and post-state instrument uniqueness are excluded
   Queue: ROOT; STOP; FORMAL.
   Decision: STOP until the coefficient ring, effective carrier, common total domain, orbit-to-amplitude bridge, Gram, dagger, transpose, QCarrier equality, Q, effects, Born pairing, MatterData schema, write map, and complete dependency graph are public; closes positively only when exact factor maps through Q produce every frozen D_matter field with exact normalization and an acyclic complete dependency graph; closes negatively if the action is ill typed, an included field is not constant on Q-fibers, two states distinguished by the typed D_matter action have equal Q, normalization fails, or an unregistered input is required
@@ -24,21 +24,27 @@ Closed claims are excluded.
 - DRESS-CROSSCOUNT [O]: the integer crossing count per observable
   Queue: FOLLOWUP; BLOCKED; FORMAL.
   Decision: closes positively when the integer crossing count per observable is derived; until then the form decision is armed: an exact witness departing from 72 alpha^4 (about 0.204 ppm, labeled) fires the exponential reading
+- METRO-ADMISSIBILITY [O]: the exhaustive residual cover R1 through R8 of the registered METRO universe: R1=U_RF minus the commuting higher-rank METRO-ADMISSIBILITY-DIM child, including rank-one, noncommuting, and otherwise out-of-child finite rational protocols; plus non-finite-state, unbounded-memory adaptive, non-reducible stochastic, irrational, out-of-child cross-layer, physical-unit, and mixed-class protocols
+  Queue: FOLLOWUP; STOP; FORMAL.
+  Decision: STOP until R1 through R8 each has a typed child and decision condition; closes only when all eight children close; METRO-FINITE-STATE-RATIONALITY proves conditional rationality inside only part of R1 and does not close it
+- METRO-ADMISSIBILITY-DIM [O]: the exact admissibility decision for finite N^a-indexed commuting digit-word systems over Q with q >= 2, a >= 2, r >= 1, finite state carrier, nonempty allowed starts, fixed digit and padding convention, commuting coordinate digit actions, complete raw L5 stream in Q_(>=0)^r, total tagged L6 normalization Y_r, and uniform translated-box convergence with an effective modulus; an independently defined joint certificate must be sound, complete, and decision-coherent and must cover individual digit maps, the relevant invariant submodule, allowed-start observable quotient, primary, peripheral, Jordan, q-adic boundary and residue data, and the exact terminal value
+  Queue: FOLLOWUP; STOP; FORMAL.
+  Decision: closes positively when the direct translated-box criterion decides the complete frozen child, the independent joint certificate is terminating, sound, complete, and coherent, and every allowed reduction preserves the decision and terminal value; closes negatively on an exact admitted counterexample to soundness, completeness, coherence, total normalization, or reduction invariance; STOP while any type, endpoint, certificate field, reduction, completeness proof, boundary theorem, or effective modulus is incomplete
 - METRO-EDGE-SCALE [O]: the canonical selector on the commutator phi ladder and the SI clause
   Queue: FOLLOWUP; BLOCKED; FORMAL.
   Decision: closes by deriving the canonical selector on the commutator phi ladder (the kinetic coefficient and dressing insertion routes) and the SI clause over the single m_e bridge; closes negatively if two inequivalent selectors survive every named gate, so no canonical selector exists
-- OBSERVER-WRITE-PORT [H]: the declared decoder is read-only: no admissible observer output writes back into the autonomous state
-  Queue: FOLLOWUP; BLOCKED; FORMAL.
-  Decision: fires when a typed public decoder construction supplies a nontrivial write channel into U; closes positively when the completed decoder dependency graph proves that every output is terminal
+- OBSERVER-WRITE-PORT [H]: every output of the completed typed L5 observer interface is terminal and no admissible output supplies a nontrivial write channel into the autonomous L1 state U, relative to a public output schema, write-channel type, autonomous-state codomain, protocol class, and complete dependency graph
+  Queue: FOLLOWUP; STOP; FORMAL.
+  Decision: fires when a completed typed observer construction supplies a nontrivial L5-output-to-L1-state write channel; closes positively when the complete typed dependency graph proves every output terminal; STOP while the schema, write-channel type, codomain, protocol class, or graph is incomplete
 - SQRT-PHI-TIME-GRAVITY [O]: the compound bridge from the two-branch L1 SQRT-PHI-DIGIT-LIFT sequence into the declared decoder clock and a registered gravity source/readout channel, including either a canonical sign-branch selector or a proof that the complete readout is sign invariant; no SI scale is included
   Queue: FOLLOWUP; STOP; FORMAL.
   Decision: STOP until the source domain, branch equivalence or selector, pre-update versus post-update convention, Y-to-D_clock map, gravity source/readout codomain, equality, and dependencies are frozen; closes positively only when an exact total bridge on the declared domain is compatible with SQRT-PHI-DIGIT-LIFT, METRO-TICK, and GRAVITY-BRIDGE-LAW; closes negatively if the frozen bridge class is empty or every admissible bridge violates a registered input; any SI claim remains bounded by METRO-EDGE-SCALE
 
 ## Measure selection (`MEASURE`)
 
-- ENTROPY-LAYER-BRIDGE [O]: construct a measurable cut P_5(kappa, y) from K_TM x O_{K,lambda} x T^4 with P_5(S_K kappa, J y) = F_theta(P_5(kappa, y)); the four completed public probes reduce it to an equivariant selection Psi_kappa: O/lambda^5 -> L_n of one living trajectory per (kappa, y), constrained by a finite pentagon quotient and gauge-specific affine cocycle, while regularity, canonicity, and the measure clause remain open
-  Queue: ROOT; READY; FORMAL.
-  Decision: fires if a preregistered construction has an image law different from the frozen joint Cesaro law, or if an exact finite-cylindrical cut with window at most 16 is exhibited
+- ENTROPY-LAYER-BRIDGE [O]: the set A_A of mu-almost-everywhere classes of measurable total maps P_5: K_TM x O_(K,lambda) -> F_5^6, where mu is the product of the unique Thue-Morse substitution probability and normalized additive Haar probability, satisfying exact equivariance and the exact pushforward Law_W on W=[512,2048); equal cardinalities do not construct an element of A_A
+  Queue: ROOT; STOP; FORMAL.
+  Decision: closes positively exactly when A_A is proved nonempty by one exhibited exact map; closes negatively only by a complete theorem A_A=empty; failure of one proposed map is STOP; an exact finite-cylindrical exhibition for any registered (L,c) with 4 <= L <= 32 at any finite lambda-depth would refute ENTROPY-CYLINDER-NOGO-CURSOR rather than close this row; inside the older ENTROPY-CYLINDER-CUT scope it would also require correction of that F row
 - TM-SYM2-PHYSICAL-MEASURE [O]: the open physical L5-to-L6 obligation for a separately owner-approved successor L5 source that starts from the complete projective-gauge orbit record, retains reading orientation epsilon_read = chi_Q chi_F as typed L5 data rather than quotienting it, and maps to a normalized physical measure on the six golden lines; it must prove rather than assume coherence across all 48 selectors, preserve the exact selector-independent outputs mu_i = 1/6 and M_TM = (1/3)P1 + (2/15)P5, and derive the typed factorization 1/6 = (1/2)(1/3) compatibly with MEASURE-BORN-VERB and GYRON-DENSITY; Gamma_sl and R, N, and NR are comparison actions only, no successor L5 source is presently frozen, and no enlarged postcomposition gauge is adopted
   Queue: ROOT; STOP; FORMAL.
   Decision: STOP until the successor L5 source schema, retained-orientation type, allowed action and coherence law, physical Born carrier, total map, complete dependency graph, and completeness proof are frozen; closes positively only when an exact public total bridge on every frozen projective orbit gives one normalized physical measure with the stated outputs and derives the factorization; closes negatively only if a frozen complete admissible bridge class is empty, required coherence gives inequivalent physical outputs on residual classes, or every bridge violates the registered Born, GYRON, or normalization constraints; the fired N2 is a boundary and may not be repaired by enlarging gauge
@@ -69,18 +75,18 @@ Closed claims are excluded.
 
 ## Nonabelian and QCD (`NONABELIAN_QCD`)
 
-- COLOR-MEASURE-SELECTION [O]: the non abelian measure lift onto SL_3(F_5); 24 carrier orbits, 16 observable types
+- COLOR-MEASURE-SELECTION [O]: the canonical normalized L4-to-L6 measure lift from the registered 2I core to a public target carrier, with exact carrier equivalence, observable sigma-algebra, group action, total normalization, equality, and selection constraints
   Queue: ROOT; STOP; FORMAL.
-  Decision: closes positively by a derivation selecting the weight vector over the 24 orbits constrained by the 16 observable types; closes negatively if the constraint set is exhausted with no surviving weight vector, or if two inequivalent vectors survive every named constraint
+  Decision: closes positively by one canonical normalized lift compatible with the frozen action and observables; closes negatively by an exhaustive exact classification yielding no lift or more than one inequivalent lift under every registered constraint; STOP while the carrier, equivalence, observables, action, normalization, equality, or constraints are incomplete
 - GENERATIONS-L3 [O]: the generation structure at the standard model L3 frontier
   Queue: ROOT; READY; FORMAL.
   Decision: closes positively by deriving the generation count at the L3 boundary layer; closes negatively if the derived count differs from three
 - ALPHA-S-RUNNING [O]: the strong coupling running above the 3/4 seed
   Queue: FOLLOWUP; BLOCKED; FORMAL.
   Decision: closes positively by a running derived from the 3/4 seed matching the measured strong coupling at a named scale within its stated window; closes negatively if every derived scheme from the seed misses the measured value or breaks the seed ratio 15 : 4
-- PROTON-RESIDUAL-IS-QCD [O]: the proton residual, gated on QCD dynamics
-  Queue: FOLLOWUP; BLOCKED; FORMAL.
-  Decision: closes positively when the QCD dynamics sector derives the proton residual; closes negatively if the derived residual is incompatible with the measured proton moment within its comparison window
+- PROTON-RESIDUAL-IS-QCD [O]: the class Der_QCD of all total exact inference maps satisfying a future frozen QCD carrier and action, output carrier, residual codomain, normalization, equality, inference schema, and the registered formal proton residual equation; no empirical proton-moment comparison is included
+  Queue: FOLLOWUP; STOP; FORMAL.
+  Decision: closes positively exactly when Der_QCD is proved nonempty by an exhibited derivation; closes negatively only by an exact theorem Der_QCD=empty, equivalently every admissible derivation violates a named frozen law; failure of one derivation is STOP, and the row is STOP while the schema is incomplete
 
 ## Quantum and electromagnetic wall (`QUANTUM_EM`)
 
@@ -99,11 +105,8 @@ Closed claims are excluded.
 
 ## Enrichment (`ENRICHMENT`)
 
-- KC3-PLENUM-READOUT [H]: the ramified place acquires the archimedean readout s; the residue class readout stays open
-  Queue: ROOT; READY; ENRICHMENT.
-  Decision: fires if the residue class readout of the ramified place disagrees with the archimedean value s = abs(1 - zeta_5)
 - LAMBDA-COCYCLE-ANGLES [H]: the compact lambda-adic boundary route remains open only in the cocycle-vector form: there exists v in L^2(O_lambda,Haar) with ||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n for every n >= 1; any such realization forces every Cayley angle 2 arctan(1/(2 gamma)) into 2 pi (1/4) Z[1/5] and forces the Li second differences to approach 2 lambda_1 along n = 4 . 5^A
   Queue: ROOT; READY; ENRICHMENT.
   Decision: fires if any single ordinate Cayley angle 2 arctan(1/(2 gamma)) is proved outside 2 pi (1/4) Z[1/5], if the Li second differences are proved not to approach 2 lambda_1 along n = 4 . 5^A, or if another contradiction excludes every cocycle vector in the declared compact-boundary class
 
-Live total: 25.
+Live total: 26.

@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v21
+# TWIST-J Public Canon v22
 
-**Release identity.** Public Canon v21. Normative authority and activation
+**Release identity.** Public Canon v22. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v21 also declares the discrete
+algebraic axiom is J. Public Canon v22 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v21 does not claim
+seed of the two algebraic projections. Public Canon v22 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v21 contains no such
+deriving the architecture from J; Public Canon v22 contains no such
 theorem.
 
 ---
@@ -329,6 +329,15 @@ uniqueness, and completeness of D are not claimed. The typed quadratic/Born
 `D_matter` action, including its exact factorization through the declared
 quadratic pair, remains in QUADRATIC-DECODER-DATA [O]. No umbrella
 full-decoder completeness claim is registered.
+
+The preceding read-only clause defines only the declared partial interface.
+It does not decide every future admissible completion. OBSERVER-WRITE-PORT
+[H] is the completion hypothesis that every typed L5 observer output is
+terminal and that no such output supplies a write channel into the L1
+autonomous state `U`. It is STOP until the output schema, write-channel
+type, autonomous-state codomain, admissible protocol class, and completed
+dependency graph are public. A typed nontrivial write channel fires it; a
+complete terminality proof closes it positively.
 
 For audit purposes only, `DEF-DECODER-COMPLETION-CONTRACT` defines the
 schema of a submitted decoder-completion candidate. It does not assert
@@ -766,12 +775,74 @@ from this dimension count. The inherited phrase "rate 4/5" is retired
 from Public Canon v13; any future coding claim must define its alphabet,
 message space, encoder, decoder, error criterion, and rate from scratch.
 
-Five completed public probes now delimit the entropy bridge without closing
+Six completed public probes now delimit the entropy bridge without closing
 it. Write
 
 ```
 F_eps(psi) = g_{z_6(psi) + 2 eps mod 5}(psi).
 ```
+
+For this program, `K = Q(zeta_5)`, `lambda = 1 - zeta_5`, and
+`O_(K,lambda)` is the completion of `O_K` at the unique place above 5.
+`K_TM` is the two-sided Thue-Morse subshift with shift `S_K`, unique
+substitution probability `m_TM`, and reading `theta(kappa) = kappa_0`.
+Let `h_lambda` be normalized additive Haar probability on
+`O_(K,lambda)`, so `h_lambda(O_(K,lambda)) = 1`, and put
+
+```text
+mu = m_TM x h_lambda,
+tau_src(kappa,y) = (S_K kappa,Jy).
+```
+
+Give the source its product Borel sigma-algebra and `F_5^6` its discrete
+sigma-algebra. Maps are identified only by equality `mu`-almost everywhere.
+The typed Route A target of ENTROPY-LAYER-BRIDGE [O] is a measurable total map
+
+```text
+P_5 : K_TM x O_(K,lambda) -> F_5^6
+```
+
+satisfying
+
+```text
+P_5(tau_src(kappa,y)) = F_(theta(kappa))(P_5(kappa,y))
+```
+
+`mu`-almost everywhere. This is the complete equality convention; no
+unregistered uniqueness or canonicity quotient is implied.
+
+Let `R` be the public set of 6250 recurrent finite-kernel states and let
+`W = {512,...,2047}`. For a measurable total `P`, define
+
+```text
+psi_(P,n)(kappa,y) = P(tau_src^n(kappa,y)),
+i_(P,n)(kappa,y)
+  = z_6(psi_(P,n)(kappa,y)) + 2 theta(S_K^n kappa) mod 5,
+nu_(P,W)
+  = (1/1536) sum_(n in W) (psi_(P,n))_* mu.
+```
+
+`Law_W(P)` is the exact conjunction
+
+```text
+nu_(P,W)({psi}) = 1/6250  for psi in R,
+nu_(P,W)({psi}) = 0       for psi not in R,
+(1/1536) sum_(n in W) mu(i_(P,n)=j)
+  = (0, 2/3, 0, 1/6, 1/6)_j,
+(1/1536) sum_(n in W)
+  m_TM(theta(S_K^n kappa)=theta(S_K^(n+1) kappa)=0) = 1/6.
+```
+
+Equivalently, the generator coordinates are `(a,b,c,d,e)` in the displayed
+order. The recurrent component masses are therefore exactly their normalized
+basin masses: `50/15625` for each size-20 component and `25/15625` for the
+singlet. `Law_W` is only the frozen finite-window predicate for
+`512 <= n < 2048`; it asserts no limit and no larger-window law.
+
+Let `A_A` be the set of `mu`-almost-everywhere classes of measurable total
+maps of the displayed type satisfying both exact equivariance and `Law_W`.
+The archimedean coordinate from the original source never enters this finite
+cut and is not part of the target type.
 
 The literal integer lift of the finite generator presentation does not
 satisfy `(bc)^5 = 1`: over Z its fifth iterate is
@@ -788,11 +859,32 @@ is exactly uniform on the 6250 recurrent states on the frozen window, and
 the letter and pair masses are exactly `(2/3, 1/6, 1/6)` and `1/6`
 (ENTROPY-JOINT-CESARO-LAW [C]).
 
-No exact bridge cut depending on a finite driver window of length at most
-16 exists at any lambda-depth. The pure-word constraint system has zero
-solutions for every such window, and the J-invariant zero residue embeds
-that obstruction at every depth (ENTROPY-CYLINDER-CUT [F],
-probes/P-ENTROPY-BRIDGE-2). At the tested dyadic scales `k = 0..10`, both
+The original finite-cylinder machine coverage is narrower than earlier
+prose stated. Its pure-word system has zero solutions at cursor `c = 0`
+for every `L = 4..16`, and additionally at `(L,c) = (5,1), (6,1), (6,2)`.
+The `J`-invariant zero residue embeds each of these exact pure-word
+obstructions at every lambda-depth. Direct depth tables corroborate the
+listed small-window cases at their frozen orbit lengths. No other cursor is
+claimed by that older probe (ENTROPY-CYLINDER-CUT [F],
+probes/P-ENTROPY-BRIDGE-2).
+
+The separate proof-first cursor theorem uses the same exact L5
+finite-cylindrical constraint graph, with the global solution count equal
+to the product of the root-seed counts over all weak components. For every
+`L = 4..32` and every `c = 0..L-1`, all 522 distinct pure-word systems
+have global solution count zero. The zero residue is fixed by multiplication
+by `J` at every finite lambda-depth, and its labelled context graph projects
+exactly to the pure-word node and edge graph. Thus each of those 522
+obstructions holds at every finite lambda-depth by restriction, not by
+extrapolation from the 27 direct audits at `ell in {4,20,100}`. This is
+ENTROPY-CYLINDER-NOGO-CURSOR [T], evidenced by
+probes/P-ENTROPY-CURSOR-CLOSURE-1 with byte-identical aarch64 and x86_64
+transcripts. It excludes only the typed finite-cylindrical L5 ansatz in the
+declared window range. It supplies no non-cylindrical cut, construction of
+`P_5`, measurable selection, entropy, regularity, canonicity, image-law,
+measure lift, L6 statement, or physical interpretation.
+
+At the tested dyadic scales `k = 0..10`, both
 renormalized block maps are exactly two-to-one on the recurrent core, one
 unresolved bit per scale (ENTROPY-BLOCK-HALVING [C]).
 
@@ -813,7 +905,9 @@ Spec(J on O/lambda^5) = {1: 1, 4: 1, 20: 156},
 ```
 
 This is ENTROPY-COUNT-MATCH [C]: the depth-five lambda carrier has exactly
-the living-set cardinality. Cardinality is not a construction of the cut.
+the living-set cardinality. Cardinality is not a construction of the cut,
+does not name a new target space, and does not construct an equivariant
+bijection.
 
 The fourth probe resolves a further finite quotient of that living carrier.
 On every recurrent component and half, the level-`k` vertex groups for
@@ -834,11 +928,17 @@ frozen cases: the singlet and canonical size-20 component for `L = 4..16`,
 three cursor positions and eleven stated clocks, plus the singlet at clock
 four for `L = 17..30` at the same cursors (ENTROPY-COMPONENT-NOGO [C]).
 This finite enumeration does not quantify over every component, clock, or
-window. None of these computations kills the depth-five selection problem,
-proves an all-scale or ergodic statement, or supplies regularity, canonicity,
-or measure transport; ENTROPY-LAYER-BRIDGE [O] remains open.
+window. None of these finite results, including ENTROPY-CYLINDER-NOGO-CURSOR,
+kills the Route A problem.
+ENTROPY-LAYER-BRIDGE [O] closes positively exactly when `A_A` is
+proved nonempty by one exhibited exact map. It closes negatively only by a
+complete theorem `A_A = empty`. Failure of one proposed construction is STOP,
+not a negative decision. An exact finite-cylindrical exhibition for any registered `(L,c)` with
+`4 <= L <= 32` at any finite lambda-depth would refute ENTROPY-CYLINDER-NOGO-CURSOR [T] rather than close this row; inside the
+older ENTROPY-CYLINDER-CUT scope it would also require correction of that
+[F] row.
 
-The fifth probe resolves the finite mirror law on the same living carrier.
+The mirror probe resolves the finite mirror law on the same living carrier.
 Each branch letter restricted to its own living half is an involution with
 cycle type `{1: 1, 2: 1562}` and a unique fixed state in the singlet
 component. The cross restrictions are mutually inverse in the exact
@@ -1102,6 +1202,20 @@ mu_n   = mu_p + deg_v / chi - Delta_EM;  a numerical comparison is not
 the electron at the Dirac step:  det = 1 + m_D^2 = 5 = p
 ```
 
+PROTON-RESIDUAL-IS-QCD [O] is only a typed future residual between the
+registered formal proton expression and a future QCD dynamics output. It
+contains no comparison with a measured proton moment. Once the QCD carrier
+and action, output carrier, residual codomain, normalization, equality, and
+inference schema are frozen, let `Der_QCD` be the class of all total exact
+inference maps satisfying those data and the registered residual equation.
+The row closes positively exactly when `Der_QCD` is proved nonempty by an
+exhibited derivation. It closes negatively only by an exact theorem
+`Der_QCD = empty`, equivalently by proving that every admissible derivation
+violates a named frozen law. Failure of one proposed derivation is STOP, not
+negative. The row is STOP while any part of the schema is incomplete.
+Empirical comparison would require a separately registered source,
+comparison window, and inference rule.
+
 The parity law (PARITY-LAW) [T] lives in a formal observable register,
 not under ordinary complex conjugation. Let
 
@@ -1263,7 +1377,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v21. The fermionizer
+inherited naming clause is not part of Public Canon v22. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1470,9 +1584,15 @@ gamma^2 = 3 alpha.
 
 COLOR-MEASURE-TRANSPORT [T] (reproduce/color-ladder): the golden dual
 measure is transported from D5 onto the 2I core through the exact
-character, verb, and spectral class measures of rungs 5 to 8. The
-remaining lift from the core to the SL_3(F_5) carrier with its
-2 pi U(1) circle remains COLOR-MEASURE-SELECTION [O].
+character, verb, and spectral class measures of rungs 5 to 8.
+COLOR-MEASURE-SELECTION [O] is the remaining L4-to-L6 lift from that core.
+It is STOP until the target carrier, orbit equivalence, observable
+sigma-algebra, group action, total normalization, equality, and selection
+constraints are public. The existing finite core theorems do not determine
+those data. Positive closure requires one canonical normalized lift
+compatible with the frozen action and observables; negative closure requires
+an exhaustive exact classification yielding no lift or more than one
+inequivalent lift under every registered constraint.
 
 ## 13. Gravity and cosmology
 
@@ -1671,10 +1791,10 @@ gyron-carrier no-go is asserted by this identity.
 The covariant canonical form: the dressing coefficient is the DeWitt
 norm, 12 = d(d + 1) at lambda = -1, and the level 1 to level 2
 normalization inheritance is closed, the chain of twelves exact
-(DEWITT-TWELVES) [T at scope]. No public metrological-admissibility
-theorem is asserted; `METRO-ADMISSIBILITY` [O] asks first for a precise
-criterion on the named protocol classes and then for its public
-decision. The tick clause alone is closed dimensionless: delta tau hat = 1/5 cycle =
+(DEWITT-TWELVES) [T at scope]. No general metrological-admissibility theorem is asserted. Public Canon
+v22 replaces the former compound row by a typed reduction parent, one
+higher-rank finite-state child, and an exhaustive residual row, all at status
+O and all STOP. The tick clause alone is closed dimensionless: delta tau hat = 1/5 cycle =
 2 pi/5 per tick (METRO-TICK) [T at scope]; the remainder is the canonical selector on the
 commutator phi ladder and the SI clause (METRO-EDGE-SCALE). The
 dressing insertion bookkeeping carries the exact witness 72 alpha^4
@@ -1735,6 +1855,132 @@ common limit only. It supplies no convergence criterion, discrepancy
 bound, selector theorem, Folner equivalence, cross-layer lift, or physical
 unit. A matrix whose row sums are not `q` is outside the declared `q`-DFAO
 input schema; it is not a counterexample to the theorem.
+
+The v22 metrology split is definition-only and obeys four binding rules.
+First, let `U_RF` be the L5 class of tuples
+
+```text
+P = (q,a,r,S,A0,{delta_(i,u)},enc_q,w),
+q >= 2,  a >= 1,  r >= 1,  S finite,  empty != A0 subseteq S,
+delta_(i,u): S -> S,  i in {1,...,a},  u in {0,...,q-1},
+w: S -> Q^r.
+```
+
+The tuple has ordered input and output bases and a fixed digit and padding
+convention recorded by `enc_q`. No commutation, normalization, or L6 lift is
+built into `U_RF`. Let `S_reach(P)` be the closure of `A0` under every finite
+tuple of coordinate digit words.
+
+A reduction arrow `R: P -> P'` is typed by an exact predicate `Pre_R(P)`,
+transports of allowed starts and input indices, and an exact rational output
+transport `tau_R` taking `w` to `w'`. An arrow is admitted only when `Pre_R`
+holds and the transported L5 streams intertwine pointwise for every allowed
+start and input. The declared allowed arrows are:
+
+1. state relabeling by a bijection `phi: S -> S'` transporting `A0`, every
+   digit map, and `w' = w o phi^(-1)`;
+2. restriction to `S_reach(P)`;
+3. the multi-action Nerode quotient
+   `s ~ t iff w(delta_v(s)) = w(delta_v(t))` for every tuple `v` of
+   coordinate digit words, provided this relation is a congruence for every
+   digit map, with `w'([s]) = w(s)`;
+4. coordinate permutation transporting the ordered input basis, digit maps,
+   input indices, and boxes while leaving the ordered output basis fixed.
+
+Write `P approx_red P'` exactly when `P` and `P'` are joined by a finite
+zig-zag of admitted allowed arrows. This is the generated reduction
+equivalence. Flattening the `N^a` geometry, erasing named coordinate
+digit-word actions, arbitrary factor weights, output-dependent regrouping,
+and replacing boxes by an unrelated ordering are forbidden. Common `q^k`
+blocking remains undecided unless all length-`k` words, padding, every
+exponent-residue vector, the pointwise stream, the decision, and the terminal
+value are transported exactly.
+
+METRO-REDUCTION-CALCULUS [O] owns this type and no normalization or
+cross-layer gate. It is STOP until every declared arrow has a complete frozen
+precondition and transport proof, every forbidden entry has an exact witness,
+invariance is proved, common blocking is decided, and `approx_red` is proved
+complete for the registered class.
+
+Second, METRO-ADMISSIBILITY-DIM [O] is the child on an `N^a`-indexed
+commuting digit-word system, not an additive action. Its input has
+
+```text
+q >= 2,  a >= 2,  r >= 1,  S finite,  empty != A0 subseteq S,
+delta_(i,u): S -> S,  i in {1,...,a},  u in {0,...,q-1},
+W5: S -> Q_(>=0)^r,
+```
+
+with an ordered input basis, a separately ordered output basis, a fixed
+digit and padding convention, exact leading-zero behavior, and commuting
+actions between distinct coordinates. The L5 endpoint is the complete raw
+stream
+
+```text
+L5Stream_s(n) = W5(state(s,n)) in Q_(>=0)^r,  n in N^a.
+```
+
+The L6 endpoint is the tagged exact space
+
+```text
+Y_r = ZERO | PROBABILITY(Delta_r(Q)),
+Normalize(y) = ZERO                         if sum(y) = 0,
+               PROBABILITY(y/sum(y))       otherwise,
+```
+
+with tagged equality and the maximum metric inside the probability tag.
+For every allowed reachable start and translated box
+`R(t,N) = product_i {t_i,...,t_i+N_i-1}`, form the normalized average
+`A_R(s)`. The scientific decision `Adm_direct(P)` is INADMISSIBLE or the
+unique `ADMISSIBLE(L)` for which one exact algorithm supplies an effective
+modulus uniform in every translation, allowed start, and box with
+`min_i N_i` large enough.
+
+`Cert_joint(P,c,d)` is an independently defined proof relation, not a second
+admissibility law. Its schema must cover the relevant invariant submodule,
+simultaneous primary and peripheral data, individual digit maps, the
+allowed-start observable quotient, Jordan and terminal sectors, q-adic
+boundary and residue data, and an effective translated-box modulus.
+Soundness, completeness, and decision coherence require
+
+```text
+Adm_direct(P) = d  iff  exists c: Cert_joint(P,c,d),
+```
+
+with one terminal `L` across all valid admissible certificates. The child
+alone owns GATE-L5-L6-METRO-NORMALIZATION and is STOP until the stream
+semantics, complete certificate schema, exact checker, reductions,
+all-parameter proof or fully bounded finite surface, translated-box theorem,
+and effective modulus are public. The fixed-length two-state factorwise
+counterexample is an inline control against replacing joint convergence by
+factorwise power convergence; it is not a child theorem or architecture
+report.
+
+Third, let `C_dim` be exactly the subclass of `U_RF` typed by
+METRO-ADMISSIBILITY-DIM [O]. Residual METRO-ADMISSIBILITY [O] owns exactly:
+
+```text
+R1 = U_RF \ C_dim:
+     every rank-one finite rational protocol, every higher-rank finite
+     rational protocol with noncommuting coordinate actions, and every finite
+     rational source or readout not of the child's typed form;
+R2 = non-finite-state streams;
+R3 = unbounded-memory adaptive protocols;
+R4 = stochastic protocols without an exact reduction into U_RF;
+R5 = irrational carriers or readouts;
+R6 = cross-layer normalization outside C_dim;
+R7 = physical units;
+R8 = every protocol carrying two or more of R1 through R7.
+```
+
+This is the exhaustive ownership cover of the registered METRO universe. The
+row is STOP until R1 through R8 each has a typed child and decision condition,
+and it closes only when all eight children close.
+
+Fourth, METRO-FINITE-STATE-RATIONALITY [T] is a base dependency only. It
+proves conditional rationality of an already existing one-dimensional limit
+inside part of R1. It proves neither convergence, R1 closure, the reduction
+calculus, nor the higher-rank child.
 
 ## 16. p = 5 and the wall
 
@@ -2139,14 +2385,36 @@ No successor L5 source schema is currently frozen. The Born gate remains
 open but the scheduler is STOP pending a separately reviewed owner
 definition.
 
+The v22 ledger change is signed term by term:
+
+```text
+live H/O: 25 - 1 retired KC3 - 1 consumed METRO row
+              + 3 typed METRO rows = 26,
+claims:    203 - 1 KC3 - 1 old METRO + 3 split rows
+              + 1 entropy cursor theorem = 205,
+T:        106 + 1 = 107,      H: 4 - 1 = 3,
+O:        21 - 1 + 3 = 23.
+```
+
+The metrology and STOP-surface subfold changes no scientific status. The
+only new scientific status in v22 is ENTROPY-CYLINDER-NOGO-CURSOR [T],
+earned by its pinned two-architecture public probe.
+
 ```
 MEASUREMENT AND METROLOGY
-  METRO-ADMISSIBILITY        beyond one dimensional rational finite
-                             state protocols: higher dimensional
-                             supports, non finite state streams,
-                             unbounded memory, stochastic protocols,
-                             irrational carriers, cross layer
-                             normalization, physical units
+  METRO-REDUCTION-CALCULUS   typed protocol objects, reduction preconditions,
+                             w transport, and generated equivalence; STOP
+  METRO-ADMISSIBILITY-DIM    commuting digit-word N^a child with exact raw
+                             L5 stream, tagged L6 normalization, direct
+                             translated-box decision, and joint certificate;
+                             owns the L5-to-L6 gate and remains STOP
+  METRO-ADMISSIBILITY        exhaustive R1 through R8 residual: U_RF minus
+                             C_dim, including rank-one, noncommuting, and
+                             other out-of-child finite rational protocols;
+                             non-finite-state, unbounded adaptive,
+                             non-reducible stochastic, irrational,
+                             out-of-child cross-layer, physical-unit, and
+                             mixed-class protocols; STOP
   METRO-EDGE-SCALE           the canonical selector on the commutator
                              phi ladder; the SI clause (the second and
                              the meter over the single m_e bridge)
@@ -2163,9 +2431,9 @@ THE WALL
   QUANT-SUBSTRATE            the Larmor gate and the Schwinger physical-realization
                              gate; the target scalar is exact arithmetic and its
                              production as the first-order coefficient remains open
-  COLOR-MEASURE-SELECTION    the measure lift onto SL_3(F_5): 24 carrier
-                             orbits, 16 observable types; the minimal
-                             new datum is a weight vector
+  COLOR-MEASURE-SELECTION    the typed canonical normalized L4-to-L6
+                             lift; target carrier, equivalence, observables,
+                             action, normalization, and constraints are STOP
 GRAVITATIONAL WAVE
   TT-SOURCE                  the emission map
   QNM-LEAVER-MU              the quasinormal mu decision
@@ -2186,8 +2454,6 @@ PHOTON
   PHOTON-WINDOW-PROOF        the closed charge 5 worldline occupancy
                              bound and electric face roughening certificate
 PLENUM AND KERNEL
-  KC3-PLENUM-READOUT         the residue class readout of the ramified
-                             place
   SQRT-PHI-TIME-GRAVITY      the typed clock and gravity bridge remains
                              after the exact L1 digit lift
   CURVATURE-OPERATOR-CANONICAL
@@ -2196,18 +2462,23 @@ PLENUM AND KERNEL
                              operator after its carrier, measure,
                              projection, and commutator type are frozen
 ENTROPY BRIDGE
-  ENTROPY-LAYER-BRIDGE       construct the measurable, canonical and
-                             measure-correct equivariant selection family
-                             Psi_kappa: O/lambda^5 -> L_n; the cylinder
-                             ansatz is closed negatively and the finite
-                             carrier counts already match
+  ENTROPY-LAYER-BRIDGE       Route A asks whether A_A contains one
+                             measurable total
+                             P_5: K_TM x O_(K,lambda) -> F_5^6 with exact
+                             equivariance and Law_W for
+                             512 <= n < 2048; STOP
+  ENTROPY-CYLINDER-NOGO-CURSOR
+                             exact finite-cylinder no-go at every cursor
+                             for L = 4..32, with structural zero-residue
+                             transport to every lambda-depth; T boundary
 
 MATTER
   NEUTRON-DELTA-EM           the interior compression channel
-  PROTON-RESIDUAL-IS-QCD     gated on QCD dynamics
+  PROTON-RESIDUAL-IS-QCD     typed exact QCD residual only; carrier,
+                             normalization, equality, and inference are STOP
 OBSERVER
-  OBSERVER-WRITE-PORT        armed, algebraic; ordered after the
-                             metrology closure
+  OBSERVER-WRITE-PORT        typed L5-output to L1-state completion
+                             hypothesis; schema and dependency graph are STOP
 EMPIRICAL HORIZON
   DESI DR3 (w = -14/15); MOLLER (sin^2 theta_W); future shadow
   measurements after a public inference rule; CMB-S4 (the tilt)
