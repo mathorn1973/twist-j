@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry has 201 claims with the current status partition
+PASS 01 COUNTS     registry has 203 claims with the current status partition
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry lifts and checkpoint no-go stay T; physical readings stay fenced
@@ -14,5 +14,7 @@ PASS 10 SCHWINGER  the exact target stays T while its physical realization stays
 PASS 11 C20        the L1 C20 theorem stays separate from time and decoder readings
 PASS 12 TM-SYM2    closed action classifications stay T; fired selector and physical successor stay separated
 PASS 13 WALL-LI2   the exact Li_2 rung stays T while substrate coupling stays O
+PASS 14 WALL-CIRCLE the uniform root-circle theorem stays exact and outside physics
+PASS 15 METRO      finite-state rationality stays T while wider admissibility stays O
 
-RESULT 13/13 ALL PASS
+RESULT 15/15 ALL PASS

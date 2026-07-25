@@ -24,15 +24,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 201)
+        self.assertEqual(self.report.claims, 203)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 22, "D": 40, "F": 10, "H": 4, "O": 21, "T": 104},
+            {"C": 22, "D": 40, "F": 10, "H": 4, "O": 21, "T": 106},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 40,
+                "none": 42,
                 "one-architecture": 8,
                 "recorded-audit": 31,
                 "two-architecture": 122,
@@ -45,8 +45,11 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(
             len(self.report.transitive_architecture_dependents), 179
         )
-        self.assertGreater(len(self.report.dependency_terminals), 2)
+        self.assertEqual(len(self.report.dependency_terminals), 10)
         self.assertIn("ANCHOR-ELECTRON-MASS", self.report.dependency_terminals)
+        self.assertIn(
+            "METRO-FINITE-STATE-RATIONALITY", self.report.dependency_terminals
+        )
 
     def test_section_16_wall_is_mixed(self) -> None:
         self.assertIn(
@@ -64,6 +67,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
             "PENTAGON-NORMALIZATION", self.report.wall_architecture_free
         )
         self.assertIn("WALL-LI2-RUNG", self.report.wall_architecture_free)
+        self.assertIn(
+            "WALL-CIRCLE-LEMMA", self.report.wall_architecture_free
+        )
         self.assertIn("J-LI-TORAL-HAAR-NOGO", self.report.wall_architecture_free)
         self.assertTrue(self.report.wall_architecture_dependent)
         self.assertTrue(self.report.wall_architecture_free)

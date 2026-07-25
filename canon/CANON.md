@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v20
+# TWIST-J Public Canon v21
 
-**Release identity.** Public Canon v20. Normative authority and activation
+**Release identity.** Public Canon v21. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v20 also declares the discrete
+algebraic axiom is J. Public Canon v21 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v20 does not claim
+seed of the two algebraic projections. Public Canon v21 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v20 contains no such
+deriving the architecture from J; Public Canon v21 contains no such
 theorem.
 
 ---
@@ -1263,7 +1263,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v20. The fermionizer
+inherited naming clause is not part of Public Canon v21. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1686,6 +1686,56 @@ operators can be registered as separate gates. `QUADRATIC-DECODER-DATA`
 publicly typed action on data; no unregistered closure of state-update,
 Gram, dagger, or data-effect clauses is asserted.
 
+The rational finite-state boundary itself is exact
+(METRO-FINITE-STATE-RATIONALITY [T] at L5). Let `q >= 2`, let `S` be the
+finite state set of an accessible `q`-DFAO with transition function
+`delta`, and let `w in Q^S` be its output vector. Define the integer
+transition-count matrix
+
+```
+B[s,t] = #{d in {0,...,q-1} : delta(s,d) = t},
+P = B/q.
+```
+
+Every row of `B` sums to `q`, so `P` is a nonnegative rational
+row-stochastic matrix and `||P^m||_infinity = 1` for every `m >= 0`.
+Consequently eigenvalue 1 of `P`, equivalently eigenvalue `q` of `B`, is
+semisimple: a nontrivial Jordan chain there would make `||P^m||_infinity`
+grow at least linearly.
+
+Write the rational characteristic polynomial as
+
+```
+chi_B(x) = (x - q)^r h(x),     h(q) != 0.
+```
+
+Bezout gives `u,v in Q[x]` with
+
+```
+u(x)(x - q)^r + v(x)h(x) = 1.
+```
+
+Thus `E = v(B)h(B)` is the rational `q`-primary spectral projector.
+The preceding semisimplicity gives
+
+```
+E^2 = E,     BE = qE,     E 1 = 1.
+```
+
+If the normalized uniform-word averages converge entrywise,
+
+```
+P^m w = q^(-m) B^m w  ->  L 1,
+```
+
+then `E P^m w = Ew` for every `m`, while passage to the limit gives
+`Ew = E(L 1) = L 1`. Since `E` and `w` are rational and `S` is nonempty,
+`L` is rational. This is conditional rationality of an already existing
+common limit only. It supplies no convergence criterion, discrepancy
+bound, selector theorem, Folner equivalence, cross-layer lift, or physical
+unit. A matrix whose row sums are not `q` is outside the declared `q`-DFAO
+input schema; it is not a counterexample to the theorem.
+
 ## 16. p = 5 and the wall
 
 The retained public root selector is exact: for a positive prime p,
@@ -1766,6 +1816,78 @@ This is a Galois-orbit real-part sum, not a field trace of the
 transcendental `Li_2` values. It asserts nothing about their imaginary parts,
 a substrate coupling, the Schwinger coefficient, an action, normalization,
 regularization, physical observables, or uniqueness.
+
+The closed form behind this rung holds on every root circle
+(WALL-CIRCLE-LEMMA [T]). For every integer `N >= 3` and
+`1 <= a <= N - 1`, put
+
+```
+z     = 1 + zeta_N^a,
+alpha = Arg(1 - z) = pi(2a - N)/N,
+psi   = -alpha = pi(N - 2a)/N.
+```
+
+Since `1 - z = -zeta_N^a`, one has `|1 - z| = 1`; moreover
+`-pi < alpha < pi`, so the principal logarithm is unambiguous and
+
+```
+Li_1(z) = -Log(1 - z) = -i alpha = i psi.
+```
+
+There is one direct midpoint case. If `2a = N`, then `z = 0`, and the
+defining values `Li_1(0) = Li_2(0) = 0` give the claimed formula without
+using `Log(z)` or `Arg(z)`.
+
+Assume now `2a != N`. Use the same Euler reflection and unit-circle
+boundary identities displayed above. Represent `1 - z = exp(i theta)` by
+
+```
+theta = alpha          if alpha > 0,
+theta = alpha + 2 pi   if alpha < 0,
+```
+
+so `0 < theta < 2 pi`. The strict principal range for `alpha`, not the
+later algebraic reduction, selects this representative. From
+
+```
+z = 1 - exp(i theta)
+  = -2 i sin(theta/2) exp(i theta/2)
+```
+
+one gets `Arg(z) = theta/2 - pi/2`. Taking real parts in Euler reflection
+therefore gives
+
+```
+Re Li_2(z)
+  = alpha Arg(z) + pi theta/2 - theta^2/4
+  = alpha^2/4
+  = psi^2/4
+  = pi^2 (N - 2a)^2/(2N)^2
+```
+
+in both sign cases. Together with the direct midpoint case this proves the
+formula without excluding any `a`. Exact summation of the rational
+coefficients,
+
+```
+sum_(a=1)^(N-1) (N - 2a)^2 = N(N - 1)(N - 2)/3,
+```
+
+yields the full nontrivial-root sum
+
+```
+sum_(a=1)^(N-1) Re Li_2(1 + zeta_N^a)
+  = pi^2 (N - 1)(N - 2)/(12N).
+```
+
+For `N = 5`, reducing the exponent in
+`sigma_a(J) = 1 + zeta_5^(2a)` reproduces exactly the registered values
+`pi^2/100` for `a in {1,4}` and `9 pi^2/100` for `a in {2,3}`, with
+Galois-orbit real-part sum `pi^2/5` and channel ratio 9. For composite
+`N` the displayed full nontrivial-root sum is not called a field trace.
+The theorem is about real parts only and adds no imaginary-part, substrate,
+action, normalization, regularization, physical-observable, or uniqueness
+claim.
 
 The pentagon root-filter normalization is exact
 (PENTAGON-NORMALIZATION [T], probes/P-PENTAGON-WEIL-1). Let

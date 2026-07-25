@@ -1,11 +1,35 @@
 # Canon changelog (public series)
 
-## Public Canon v20
+## Public Canon v21
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 201 claims; 0 T-LOCK, 104 T, 40 D, 22 C, 4 H, 21 O, 10 F; 25 live H/O.
+Registry snapshot: 203 claims; 0 T-LOCK, 106 T, 40 D, 22 C, 4 H, 21 O, 10 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v21 adds two proof-first inline theorems.
+WALL-CIRCLE-LEMMA [T] proves the principal-branch closed form
+`Re Li_2(1 + zeta_N^a) = pi^2 (N - 2a)^2/(2N)^2` for every
+`N >= 3` and every nontrivial `N`th-root index, including the direct
+midpoint case `z = 0`. Its full nontrivial-root sum is
+`pi^2 (N - 1)(N - 2)/(12N)`; the `N = 5` specialization reproduces
+WALL-LI2-RUNG without changing that existing row.
+
+METRO-FINITE-STATE-RATIONALITY [T] proves that an already convergent
+normalized uniform-word average of an accessible rational `q`-DFAO has a
+rational common limit. The proof uses row-stochastic boundedness,
+semisimplicity at `q`, and a rational Bezout spectral projector. It supplies
+no convergence or wider-admissibility criterion. METRO-ADMISSIBILITY and
+QUANT-SUBSTRATE remain O, and live H/O remains 25. No coupling, physical
+coefficient, unit, layer lift, Larmor claim, probe, reproduction, or
+live-frontier closure is added.
+
+## Public Canon v20
+
+<!-- BEGIN GENERATED CANON20 COUNTS -->
+Registry snapshot: 201 claims; 0 T-LOCK, 104 T, 40 D, 22 C, 4 H, 21 O, 10 F; 25 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON20 COUNTS -->
 
 Public Canon v20 adds WALL-LI2-RUNG [T]. A direct principal-branch proof
 using the declared classical Euler reflection identity and unit-circle
