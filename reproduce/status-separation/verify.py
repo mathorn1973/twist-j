@@ -122,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 106, "D": 40, "C": 22, "F": 10,
-                       "O": 21, "H": 4}
+    expected_counts = {"T": 107, "D": 40, "C": 22, "F": 10,
+                       "O": 23, "H": 3}
     checks.append((
         "COUNTS",
-        "registry has 203 claims with the current status partition",
-        len(rows) == 203 and counts == expected_counts,
+        "registry has 205 claims with the current status partition",
+        len(rows) == 205 and counts == expected_counts,
     ))
 
     checks.append((
@@ -552,18 +552,24 @@ def run():
     ))
 
     metro = "METRO-FINITE-STATE-RATIONALITY"
-    metro_open = "METRO-ADMISSIBILITY"
+    metro_calculus = "METRO-REDUCTION-CALCULUS"
+    metro_child = "METRO-ADMISSIBILITY-DIM"
+    metro_residual = "METRO-ADMISSIBILITY"
     metro_gate = "GATE-L5-L6-METRO-NORMALIZATION"
-    metro_dependencies = [
-        row for row in dependencies if row["item_id"] == metro
-    ]
-    metro_open_edges = [
+    metro_dependencies = {
+        item: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == item
+        }
+        for item in (metro, metro_calculus, metro_child, metro_residual)
+    }
+    metro_residual_edges = [
         row for row in dependencies
-        if {row["item_id"], row["depends_on"]} == {metro, metro_open}
+        if {row["item_id"], row["depends_on"]} == {metro, metro_residual}
     ]
     checks.append((
         "METRO",
-        "finite-state rationality stays T while wider admissibility stays O",
+        "finite-state theorem stays T; typed calculus, dimensional child, and residual stay O",
         has_status(index, metro, "T")
         and normative.get(metro, {}).get("item_type") == "THEOREM"
         and normative.get(metro, {}).get("status") == "T"
@@ -579,8 +585,8 @@ def run():
         and evidence.get(metro, {}).get("hash_mode")
         == "registry-scope-sha256-v1"
         and evidence.get(metro, {}).get("architecture_requirement") == "none"
-        and not metro_dependencies
-        and not metro_open_edges
+        and metro_dependencies[metro] == set()
+        and not metro_residual_edges
         and scope_contains_all(
             index, metro,
             ("accessible q-DFAO", "rational output vector",
@@ -591,17 +597,259 @@ def run():
         )
         and "row-sum mismatch is outside the declared q-dfao input schema"
         in index[metro]["falsifier"].lower()
-        and has_status(index, metro_open, "O")
-        and normative.get(metro_open, {}).get("gate_ids") == metro_gate
-        and gates.get(metro_gate, {}).get("owner_item_id") == metro_open
+        and has_status(index, metro_calculus, "O")
+        and normative.get(metro_calculus, {}).get("item_type") == "OBLIGATION"
+        and normative.get(metro_calculus, {}).get("status") == "O"
+        and normative.get(metro_calculus, {}).get("layer") == "L5"
+        and normative.get(metro_calculus, {}).get("gate_ids") == ""
+        and evidence.get(metro_calculus, {}).get("evidence_id")
+        == "EV-METRO-REDUCTION-CALCULUS"
+        and evidence.get(metro_calculus, {}).get("evidence_kind")
+        == "INLINE_CANON"
+        and evidence.get(metro_calculus, {}).get("location") == "inline"
+        and evidence.get(metro_calculus, {}).get("sha256")
+        == scope_sha256(index, metro_calculus)
+        and evidence.get(metro_calculus, {}).get("hash_mode")
+        == "registry-scope-sha256-v1"
+        and evidence.get(metro_calculus, {}).get("architecture_requirement")
+        == "none"
+        and metro_dependencies[metro_calculus] == {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+            (metro, "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, metro_calculus,
+            ("typed L5 reduction calculus on U_RF tuples",
+             "exact arrow preconditions", "four declared allowed arrows",
+             "forbidden transformations with exact witnesses",
+             "allowed-start and input-index transports",
+             "rational output transport tau_R",
+             "pointwise L5-stream intertwining",
+             "finite-zig-zag equivalence approx_red",
+             "no normalization or cross-layer gate is owned"),
+        )
+        and programs.get(metro_calculus, {}).get("program_id") == "DECODER_CORE"
+        and programs.get(metro_calculus, {}).get("queue_role") == "ROOT"
+        and programs.get(metro_calculus, {}).get("work_state") == "STOP"
+        and programs.get(metro_calculus, {}).get("work_mode") == "FORMAL"
+        and has_status(index, metro_child, "O")
+        and normative.get(metro_child, {}).get("item_type") == "OBLIGATION"
+        and normative.get(metro_child, {}).get("status") == "O"
+        and normative.get(metro_child, {}).get("layer") == "MULTI"
+        and normative.get(metro_child, {}).get("gate_ids") == metro_gate
+        and evidence.get(metro_child, {}).get("evidence_id")
+        == "EV-METRO-ADMISSIBILITY-DIM"
+        and evidence.get(metro_child, {}).get("evidence_kind")
+        == "INLINE_CANON"
+        and evidence.get(metro_child, {}).get("location") == "inline"
+        and evidence.get(metro_child, {}).get("sha256")
+        == scope_sha256(index, metro_child)
+        and evidence.get(metro_child, {}).get("hash_mode")
+        == "registry-scope-sha256-v1"
+        and evidence.get(metro_child, {}).get("architecture_requirement")
+        == "none"
+        and metro_dependencies[metro_child] == {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+            (metro_calculus, "REQUIRES"),
+            (metro, "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, metro_child,
+            ("finite N^a-indexed commuting digit-word systems",
+             "complete raw L5 stream", "total tagged L6 normalization Y_r",
+             "uniform translated-box convergence with an effective modulus",
+             "independently defined joint certificate",
+             "sound, complete, and decision-coherent"),
+        )
+        and gates.get(metro_gate, {}).get("owner_item_id") == metro_child
         and gates.get(metro_gate, {}).get("gate_kind") == "OPEN_LIFT"
         and gates.get(metro_gate, {}).get("from_layer") == "L5"
         and gates.get(metro_gate, {}).get("to_layer") == "L6"
-        and programs.get(metro_open, {}).get("program_id") == "DECODER_CORE"
-        and programs.get(metro_open, {}).get("queue_role") == "ROOT"
-        and programs.get(metro_open, {}).get("work_state") == "READY"
-        and programs.get(metro_open, {}).get("work_mode") == "FORMAL"
+        and all(
+            phrase.lower() in gates[metro_gate]["decision_condition"].lower()
+            for phrase in (
+                "complete raw L5 stream", "total tagged L6 normalization",
+                "effective modulus", "independent joint certificate",
+                "invariant under every allowed reduction",
+            )
+        )
+        and programs.get(metro_child, {}).get("program_id") == "DECODER_CORE"
+        and programs.get(metro_child, {}).get("queue_role") == "FOLLOWUP"
+        and programs.get(metro_child, {}).get("work_state") == "STOP"
+        and programs.get(metro_child, {}).get("work_mode") == "FORMAL"
+        and has_status(index, metro_residual, "O")
+        and normative.get(metro_residual, {}).get("item_type") == "OBLIGATION"
+        and normative.get(metro_residual, {}).get("status") == "O"
+        and normative.get(metro_residual, {}).get("layer")
+        == "NOT_APPLICABLE"
+        and normative.get(metro_residual, {}).get("gate_ids") == ""
+        and evidence.get(metro_residual, {}).get("evidence_id")
+        == "EV-METRO-ADMISSIBILITY"
+        and evidence.get(metro_residual, {}).get("evidence_kind")
+        == "INLINE_CANON"
+        and evidence.get(metro_residual, {}).get("location") == "inline"
+        and evidence.get(metro_residual, {}).get("sha256")
+        == scope_sha256(index, metro_residual)
+        and evidence.get(metro_residual, {}).get("hash_mode")
+        == "registry-scope-sha256-v1"
+        and evidence.get(metro_residual, {}).get("architecture_requirement")
+        == "none"
+        and metro_dependencies[metro_residual] == {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+            (metro_calculus, "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, metro_residual,
+            ("exhaustive residual cover R1 through R8",
+             "R1=U_RF minus the commuting higher-rank "
+             "METRO-ADMISSIBILITY-DIM child",
+             "rank-one", "noncommuting", "non-finite-state",
+             "unbounded-memory adaptive", "non-reducible stochastic",
+             "irrational", "out-of-child cross-layer", "physical-unit",
+             "mixed-class protocols"),
+        )
+        and all(
+            phrase.lower() in index[metro_residual]["falsifier"].lower()
+            for phrase in (
+                "STOP until R1 through R8 each has a typed child",
+                "closes only when all eight children close",
+            )
+        )
+        and programs.get(metro_residual, {}).get("program_id")
+        == "DECODER_CORE"
+        and programs.get(metro_residual, {}).get("queue_role") == "FOLLOWUP"
+        and programs.get(metro_residual, {}).get("work_state") == "STOP"
+        and programs.get(metro_residual, {}).get("work_mode") == "FORMAL"
         and metro not in programs
+    ))
+
+    entropy = "ENTROPY-CYLINDER-NOGO-CURSOR"
+    entropy_cut = "ENTROPY-CYLINDER-CUT"
+    entropy_bridge = "ENTROPY-LAYER-BRIDGE"
+    entropy_gate = "GATE-L2-L5-ENTROPY-BRIDGE"
+    entropy_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == entropy
+    }
+    entropy_bridge_edges = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies
+        if row["item_id"] == entropy_bridge
+        and row["depends_on"] in {entropy, entropy_cut}
+    }
+    entropy_cut_edges = [
+        row for row in dependencies
+        if {row["item_id"], row["depends_on"]} == {entropy, entropy_cut}
+    ]
+    checks.append((
+        "ENTROPY",
+        "cursor cylinder no-go stays T; narrow cut stays F and Route A bridge stays O",
+        has_status(index, entropy, "T")
+        and normative.get(entropy, {}).get("item_type") == "THEOREM"
+        and normative.get(entropy, {}).get("status") == "T"
+        and normative.get(entropy, {}).get("layer") == "L5"
+        and normative.get(entropy, {}).get("gate_ids") == ""
+        and index.get(entropy, {}).get("evidence")
+        == "probes/P-ENTROPY-CURSOR-CLOSURE-1"
+        and evidence.get(entropy, {}).get("evidence_id")
+        == "EV-ENTROPY-CYLINDER-NOGO-CURSOR"
+        and evidence.get(entropy, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(entropy, {}).get("location")
+        == "probes/P-ENTROPY-CURSOR-CLOSURE-1"
+        and evidence.get(entropy, {}).get("sha256")
+        == "422ca1708e351b067f31134965f70d150194c4a6041be0351c9c131b3086f370"
+        and evidence.get(entropy, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(entropy, {}).get("architecture_requirement")
+        == "two-architecture"
+        and entropy_dependencies == {("DEF-ARCHITECTURE", "REQUIRES")}
+        and not entropy_cut_edges
+        and scope_contains_all(
+            index, entropy,
+            ("exact L5 finite-cylindrical constraint graph on F_5^6",
+             "two-sided Thue-Morse factor language",
+             "every pure-word system at every cursor c = 0..L-1",
+             "every window L = 4..32", "global solution count zero",
+             "labelled graph projects exactly to the pure-word graph",
+             "zero residue is fixed by multiplication by J",
+             "same obstruction holds at every finite lambda-depth",
+             "27 direct checks", "audits, not the source",
+             "no non-cylindrical cut", "P_5 construction",
+             "measurable selection", "L6", "physical claim"),
+        )
+        and entropy not in programs
+        and has_status(index, entropy_cut, "F")
+        and normative.get(entropy_cut, {}).get("item_type") == "FALSIFIED"
+        and normative.get(entropy_cut, {}).get("status") == "F"
+        and normative.get(entropy_cut, {}).get("layer") == "L5"
+        and evidence.get(entropy_cut, {}).get("evidence_kind")
+        == "PUBLIC_PROBE"
+        and evidence.get(entropy_cut, {}).get("sha256")
+        == "950f20397d23f395730e408a2400804c8a8dded2ac1c5e515e86a2f96ebd5f29"
+        and evidence.get(entropy_cut, {}).get("architecture_requirement")
+        == "two-architecture"
+        and scope_contains_all(
+            index, entropy_cut,
+            ("cursor c = 0 for L = 4..16",
+             "(L,c) = (5,1), (6,1), (6,2)",
+             "no other cursor or window is included"),
+        )
+        and has_status(index, entropy_bridge, "O")
+        and normative.get(entropy_bridge, {}).get("item_type") == "OBLIGATION"
+        and normative.get(entropy_bridge, {}).get("status") == "O"
+        and normative.get(entropy_bridge, {}).get("layer") == "MULTI"
+        and normative.get(entropy_bridge, {}).get("gate_ids") == entropy_gate
+        and evidence.get(entropy_bridge, {}).get("evidence_id")
+        == "EV-ENTROPY-LAYER-BRIDGE"
+        and evidence.get(entropy_bridge, {}).get("evidence_kind")
+        == "PUBLIC_PROBE"
+        and evidence.get(entropy_bridge, {}).get("location")
+        == "probes/P-ENTROPY-BRIDGE-1"
+        and evidence.get(entropy_bridge, {}).get("sha256")
+        == "96cca583006f7090d094fd4a025a78e6ee4f98fb7627af7c880f829beafccb57"
+        and evidence.get(entropy_bridge, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(entropy_bridge, {}).get("architecture_requirement")
+        == "two-architecture"
+        and scope_contains_all(
+            index, entropy_bridge,
+            ("measurable total maps P_5", "mu-almost-everywhere",
+             "exact equivariance", "exact pushforward Law_W",
+             "equal cardinalities do not construct an element of A_A"),
+        )
+        and all(
+            phrase.lower() in index[entropy_bridge]["falsifier"].lower()
+            for phrase in (
+                "any registered (L,c) with 4 <= L <= 32",
+                "at any finite lambda-depth",
+                "would refute ENTROPY-CYLINDER-NOGO-CURSOR",
+                "rather than close this row",
+                "inside the older ENTROPY-CYLINDER-CUT scope",
+                "correction of that F row",
+            )
+        )
+        and entropy_bridge_edges == {
+            (entropy_cut, "REQUIRES"),
+            (entropy, "BOUNDED_BY"),
+        }
+        and gates.get(entropy_gate, {}).get("owner_item_id") == entropy_bridge
+        and gates.get(entropy_gate, {}).get("gate_kind") == "OPEN_LIFT"
+        and gates.get(entropy_gate, {}).get("from_layer") == "L2"
+        and gates.get(entropy_gate, {}).get("to_layer") == "L5"
+        and all(
+            phrase.lower() in gates[entropy_gate]["decision_condition"].lower()
+            for phrase in (
+                "A_A is proved nonempty by one exact map",
+                "mu-almost-everywhere equivariance",
+                "pushforward Law_W", "A_A=empty",
+                "failure of one proposal is STOP",
+            )
+        )
+        and programs.get(entropy_bridge, {}).get("program_id") == "MEASURE"
+        and programs.get(entropy_bridge, {}).get("queue_role") == "ROOT"
+        and programs.get(entropy_bridge, {}).get("work_state") == "STOP"
+        and programs.get(entropy_bridge, {}).get("work_mode") == "FORMAL"
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
