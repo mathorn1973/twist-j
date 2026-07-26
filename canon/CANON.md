@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v23
+# TWIST-J Public Canon v24
 
-**Release identity.** Public Canon v23. Normative authority and activation
+**Release identity.** Public Canon v24. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v23 also declares the discrete
+algebraic axiom is J. Public Canon v24 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v23 does not claim
+seed of the two algebraic projections. Public Canon v24 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v23 contains no such
+deriving the architecture from J; Public Canon v24 contains no such
 theorem.
 
 ---
@@ -497,11 +497,457 @@ cross-layer lift remains owned by its public gate. Missing or `UNRESOLVED`
 fields leave all owning claims unchanged. The contract neither opens nor
 authorizes a verifier or probe.
 
+### Factor-canonicity audit overlay
+
+Within the same definition, a candidate may optionally submit a
+`factor_canonicity_manifest` for one fixed `stage_id`, one fixed `leg_id`,
+and one declared scope. This is an overlay on, not a replacement for, the
+manifests above. Before any classification it freezes the typed datum
+
+```text
+C_factor = (
+    source_carriers,
+    output_carriers,
+    declared_domains,
+    source_equalities,
+    output_equalities,
+    candidate_class,
+    candidate_equivalence,
+    factor_maps,
+    gauge_comparisons,
+    scale_comparisons,
+    apparatus_reductions,
+    optional_categorical_coherence,
+    optional_U_congruence,
+    nonconstancy_test,
+    completeness_statement,
+    completeness_method
+).
+```
+
+A candidate at scale `ell` has the typed form
+
+```text
+D_ell : Dom_ell -> Y_ell,                 Dom_ell subset X_ell.
+```
+
+Totality is asserted only on the named `Dom_ell`. A factor candidate has the typed shape
+
+```text
+q       : Dom -> QCarrier,
+im(q)   subset QCarrier,
+q_bar   : Dom -> im(q),       q_bar(x) = q(x),
+i_q     : im(q) -> QCarrier,  the image inclusion,
+q       = i_q o q_bar,
+F       : im(q) -> Y,
+D       : Dom -> Y,
+D       = F o q_bar           on Dom.
+```
+
+Here `q_bar` is the corestriction of `q` and is surjective by definition.
+With the equality on `QCarrier` and the equality on `Y` frozen as separate
+inputs, fiber constancy is exactly the equivalence
+
+```text
+for all x,x' in Dom, q(x) = q(x') implies D(x) = D(x')
+
+if and only if
+
+there exists a unique F : im(q) -> Y with D = F o q_bar.
+```
+
+The reverse direction uses the factor equation. The forward direction defines
+`F(q_bar(x)) := D(x)`; fiber constancy gives well-definedness and
+surjectivity of `q_bar` gives uniqueness. Nonconstancy is a separate
+requirement and needs exact witnesses `x_0,x_1 in Dom` with
+`D(x_0) != D(x_1)`, or an equivalent proof that `|im(D)| >= 2`. Syntactic
+dependence on an input field is not such a certificate.
+
+Every admitted comparison is first a typed per-map square
+
+```text
+r     : Dom_s -> Dom_t,
+D_s   : Dom_s -> Y_s,
+D_t   : Dom_t -> Y_t,
+T_r   : Y_s -> Y_t,
+D_t o r = T_r o D_s.
+```
+
+Gauge comparison, scale covariance, apparatus reduction coherence, and
+optional `U`-congruence are four different obligations. None is inherited
+from another.
+
+- A gauge comparison freezes `g : Dom_s -> Dom_t` and
+  `Gamma_g : Y_s -> Y_t` with `D_t o g = Gamma_g o D_s`.
+- A scale comparison freezes
+  `R_(b,ell) : Dom_ell -> Dom_(b ell)` and
+  `Z_(b,ell) : Y_ell -> Y_(b ell)` with
+  `D_(b ell) o R_(b,ell) = Z_(b,ell) o D_ell`.
+- An apparatus reduction freezes
+  `r_X : Dom_P -> Dom_(P')` and `tau_r : Y_P -> Y_(P')` with
+  `D_(P') o r_X = tau_r o D_P`.
+- Optional `U`-congruence uses a named domain `Dom_U` and freezes
+  `U_U := U|Dom_U : Dom_U -> Dom_U`,
+  `D_U := D|Dom_U : Dom_U -> Y`,
+  `Y_U := D(Dom_U) subset Y`,
+  `D_bar_U : Dom_U -> Y_U`, and the image inclusion
+  `i_U : Y_U -> Y`, with `D_U = i_U o D_bar_U`. The typing of `U_U`
+  includes `U(Dom_U) subset Dom_U`. The exact condition
+  `D_U(x) = D_U(x')` implies `D_U(U_U x) = D_U(U_U x')` for every
+  `x,x' in Dom_U`. Only then is
+  `U_bar(D_bar_U(x)) := D_bar_U(U_U x)` well defined, and only then does
+  `D_bar_U o U_U = U_bar o D_bar_U` hold on `Dom_U`. The unqualified
+  expression `U_bar o D` is not used. This clause supplies no attractor,
+  feedback, purpose, write channel, or terminality result.
+
+Strict invariance is the special case only when the source and target domains,
+decoder components, output carriers, and output transport are all explicitly
+identified and the output transport is the identity. A forward substitution,
+an information-losing block map, and an inverse desubstitution are different
+typed operations. Equality of effects does not imply equality of instruments
+or post-event operations.
+
+Two candidates are equivalent only through an independently frozen typed
+output isomorphism
+
+```text
+h : Y_1 -> Y_2
+```
+
+preserving every owned field, equality, normalization, effect, outcome label,
+orientation datum, and declared transport, and obeying
+
+```text
+h o D_1 = D_2
+```
+
+on the common declared domain. A bijection invented after seeing the output
+does not define an admissible equivalence. Before equivalence classes are
+counted, reflexivity, symmetry, transitivity, and closure of the admitted
+isomorphisms must be proved on the complete candidate class.
+
+For one frozen scope with one common source domain, let
+`Inv_adm(C_factor)` be an independently defined complete class of admissible
+readouts that are strictly invariant under the independently frozen
+invisible-transformation class. Its readouts are typed as
+
+```text
+D       : Dom -> Y_D,
+D_bar   : Dom -> im(D),       D_bar(x) = D(x),
+i_D     : im(D) -> Y_D,
+D       = i_D o D_bar,
+A       : Dom -> Y_A.
+```
+
+A candidate `D` may be called a maximal invariant only if all of the
+following are proved:
+
+1. `D` belongs to `Inv_adm(C_factor)` and is strictly invariant under
+   every declared invisible transformation at that scope;
+2. every `A` in `Inv_adm(C_factor)` has the same declared source `Dom`
+   as `D`, and there exists a unique typed mediator
+   `A_bar : im(D) -> Y_A` with `A = A_bar o D_bar`;
+3. the invisible-transformation class, invariant class, candidate class, and
+   candidate equivalence are each complete at the declared scope; and
+4. all dependencies are closed and every input is declared and publicly
+   identified.
+
+A non-strict gauge comparison, scale-covariant square, or apparatus-reduction
+square may be an additional coherence obligation, but it does not discharge
+strict invariance under an invisible transformation. A universal
+factorization theorem for a merely covariant family is a maximal-covariant
+readout theorem, not a maximal-invariant theorem.
+
+For an indexed family, every component freezes
+
+```text
+D_i       : Dom_i -> Y_i,
+D_bar_i   : Dom_i -> im(D_i),
+A_i       : Dom_i -> Z_i,
+A_bar_i   : im(D_i) -> Z_i,
+A_i       = A_bar_i o D_bar_i.
+```
+
+For every frozen source map `r : Dom_i -> Dom_j`, it also freezes decoder
+and readout transports with
+
+```text
+D_j o r = T_D(r) o D_i,
+A_j o r = T_A(r) o A_i,
+T_D_bar(r) : im(D_i) -> im(D_j).
+```
+
+The component mediators are compatible only when
+
+```text
+T_A(r) o A_bar_i = A_bar_j o T_D_bar(r)
+```
+
+for every admitted `r`. Componentwise factorization without these frozen
+compatibility equations is not indexed maximality. `Nontrivial maximal
+invariant` additionally requires the separate exact nonconstancy certificate
+above.
+
+The optional machine-auditable overlay has the slots
+
+```text
+factor_canonicity_manifest:
+  owner_item_id
+  stage_id
+  leg_id
+  source_carrier_id
+  output_carrier_id
+  domain_id
+  totality_domain_id
+  source_equality_id
+  output_equality_id
+  qcarrier_id
+  q_equality_id
+  q_map_id
+  q_image_id
+  q_corestriction_id
+  q_image_inclusion_id
+  factor_map_id
+  factor_equation_id
+  fiber_constancy_test_id
+  fiber_factor_equivalence_statement_id
+  fiber_factor_equivalence_proof_id
+  nonconstancy_test_id
+  candidate_class_id
+  candidate_membership_test_id
+  candidate_equivalence_id
+  candidate_equivalence_reflexivity_proof_id
+  candidate_equivalence_symmetry_proof_id
+  candidate_equivalence_transitivity_proof_id
+  candidate_isomorphism_closure_proof_id
+  candidate_completeness_statement_id
+  candidate_completeness_proof_id
+  hidden_input_closure_id
+
+gauge_square_manifest[]:
+  comparison_id
+  source_domain_id
+  target_domain_id
+  source_decoder_component_id
+  target_decoder_component_id
+  source_output_carrier_id
+  target_output_carrier_id
+  source_map_id
+  output_transport_id
+  membership_test_id
+  commuting_square_id
+  completeness_statement_id
+  completeness_proof_id
+  pre_output_freeze_basis_id
+
+  strict_invariance_manifest:
+    state = NOT_CLAIMED | DEFINED | UNRESOLVED
+
+    DEFINED:
+      common_domain_identification_id
+      decoder_component_identification_id
+      output_carrier_identification_id
+      identity_output_transport_id
+      strict_invariance_proof_id
+
+    NOT_CLAIMED:
+      nonstrict_square_basis_id
+
+scale_manifest[]:
+  source_scale_id
+  target_scale_id
+  source_domain_id
+  target_domain_id
+  source_decoder_component_id
+  target_decoder_component_id
+  source_output_carrier_id
+  target_output_carrier_id
+  source_map_id
+  output_transport_id
+  commuting_square_id
+  blocking_origin_id
+  phase_policy_id
+  normalization_id
+  pre_post_convention_id
+  completeness_statement_id
+  completeness_proof_id
+  pre_output_freeze_basis_id
+
+  strict_invariance_manifest:
+    state = NOT_CLAIMED | DEFINED | UNRESOLVED
+
+    DEFINED:
+      common_domain_identification_id
+      decoder_component_identification_id
+      output_carrier_identification_id
+      identity_output_transport_id
+      strict_invariance_proof_id
+
+    NOT_CLAIMED:
+      nonstrict_square_basis_id
+
+apparatus_reduction_manifest[]:
+  source_protocol_id
+  target_protocol_id
+  source_domain_id
+  target_domain_id
+  source_decoder_component_id
+  target_decoder_component_id
+  source_output_carrier_id
+  target_output_carrier_id
+  reduction_precondition_id
+  source_transport_id
+  output_transport_id
+  commuting_square_id
+  reduction_equality_id
+  membership_test_id
+  completeness_statement_id
+  completeness_proof_id
+  pre_output_freeze_basis_id
+
+U_congruence_manifest:
+  state = DEFINED | NONE | UNRESOLVED
+
+  DEFINED:
+    U_id
+    U_stable_domain_id
+    U_restriction_id
+    decoder_restriction_id
+    decoder_image_id
+    decoder_corestriction_id
+    decoder_image_inclusion_id
+    decoder_kernel_equality_id
+    congruence_test_id
+    induced_map_id
+    induced_map_equality_id
+    corestricted_factor_dynamics_equation_id
+
+  NONE:
+    no_U_congruence_claim_basis_id
+
+categorical_coherence_manifest:
+  state = NONE | DEFINED | UNRESOLVED
+
+  DEFINED:
+    object_class_id
+    arrow_class_id
+    identity_arrow_id
+    composition_id
+    arrow_closure_proof_id
+    composition_associativity_proof_id
+    left_unit_law_proof_id
+    right_unit_law_proof_id
+    source_identity_law_id
+    source_composition_law_id
+    output_identity_law_id
+    output_composition_law_id
+    decoder_family_naturality_id
+
+    group_action_manifest:
+      state = NOT_CLAIMED | DEFINED | UNRESOLVED
+
+      DEFINED:
+        inverse_assignment_id
+        inverse_closure_proof_id
+        left_inverse_law_proof_id
+        right_inverse_law_proof_id
+
+      NOT_CLAIMED:
+        no_group_action_claim_basis_id
+
+  NONE:
+    no_categorical_coherence_claim_basis_id
+
+maximality_manifest:
+  state = NOT_CLAIMED | DEFINED | UNRESOLVED
+
+  DEFINED:
+    common_domain_id
+    decoder_corestriction_id
+    invisible_transformation_class_id
+    strict_invariance_statement_id
+    strict_invariance_proof_id
+    admissible_invariant_class_id
+    invariant_membership_test_id
+    invariant_completeness_statement_id
+    invariant_completeness_proof_id
+    universal_factorization_statement_id
+    universal_factorization_proof_id
+
+    indexed_family_manifest:
+      state = NONE | DEFINED | UNRESOLVED
+
+      DEFINED:
+        component_domain_manifest_id
+        component_mediator_manifest_id
+        component_mediator_compatibility_id
+
+      NONE:
+        single_scope_basis_id
+
+nontriviality_manifest:
+  state = NOT_CLAIMED | DEFINED | UNRESOLVED
+
+  DEFINED:
+    nonconstancy_certificate_id
+```
+
+Every identifier-valued field is a resolvable public identifier or
+`UNRESOLVED`; there is no bare null. `DEFINED` records a typed submitted
+property and does not mean that the property is proved. A scientific owner
+and its evidence must decide the corresponding property.
+
+`NONE` is the normal categorical-coherence state for the base per-map
+schema. Categorical `DEFINED` requires every identity, composition, closure,
+associativity, unit, source, output, and decoder-family field above. A group
+claim additionally requires every inverse field. A componentwise indexed
+claim requires its mediator compatibility field; otherwise its state is
+`UNRESOLVED`.
+
+`NOT_CLAIMED` is the normal strict-invariance state for a legitimate
+non-strict commuting square. It supplies the named non-strict basis and does
+not turn that square into an invisible transformation.
+
+Maximality and nontriviality have independent states.
+`maximality = NOT_CLAIMED` is required when the submission proves only
+factorization through a named `q` and no universal invariant property.
+`nontriviality = NOT_CLAIMED` is required when no exact nonconstancy claim is
+made. A defined maximality claim may therefore coexist with
+`nontriviality = NOT_CLAIMED`.
+
+The inheritance
+
+```text
+D_quadratic factorization  -/->  D_binary or D_linear factorization
+D_binary coherence         -/->  D_quadratic instrument selection
+one D_matter field         -/->  every MatterData field
+D_matter closure           -/->  D_geom or D_clock closure
+L5 reduction equivalence   -/->  L6 normalization
+effect equality            -/->  instrument equality
+common numeric value       -/->  typed bridge
+comparison action          -/->  adopted gauge
+```
+
+is forbidden. A relation between legs still requires an explicit
+`bridge_manifest[]` row with its complete typing, dependencies, layer
+endpoints, and gates.
+
+This overlay is a schema, not an existence, totality, uniqueness, canonicity,
+classification, maximality, nontriviality, scale-stability, or completeness
+result. It supplies no carrier, factor, quotient, gauge, macrodynamics,
+physical source or event map, instrument, measure, normalization, writeback,
+terminality, status, evidence, or gate. It neither repairs a fired predecessor
+nor authorizes a verifier or probe. The terms `nontrivial maximal invariant`,
+`universal quotient`, `universality class`, and `canonical factor` remain
+forbidden outputs while any applicable typing, compatibility, completeness,
+maximality, or nonconstancy item is unresolved.
+
 The reading split (READING-SPLIT [D], inline) is therefore a public
 dictionary at the registered legs, not a completeness theorem: the
 linear readout is CODEC-TR4, the binary cut drives the census, and the
-quadratic registration is the Born square. The gyron density is rho =
-1/6 (GYRON-DENSITY [T], registered in section 13). The self similar
+quadratic registration is the Born square. The L1 Thue-Morse sliding-pair
+density is rho = 1/6 (GYRON-DENSITY [T], registered in section 3). The
+self similar
 time quantum (TIME-QUANTUM-TOWER [C], reproduce/foundations-places):
 on Z/5^k, M_J^(5^k) = i_5 I with i_5^4 = 1 and period exactly
 4 x 5^k, computed for k = 1 to 4. No all-k theorem and no generic
@@ -551,6 +997,113 @@ the sum of the six coordinates mod 5; selection law
 i_n = z_6(psi_n) + 2 theta_n mod 5, with the autonomous update U
 defined in section 2.
 ```
+
+For the Thue-Morse drive itself, put `t_n = theta_n = s_2(n) mod 2` and,
+for every `L >= 1`,
+
+```text
+n_a(L)  = #{0 <= i <= L - 1 : t_i = a},
+c_ab(L) = #{0 <= i <= L - 2 : (t_i,t_(i+1)) = (a,b)},
+S(L)    = n_0(L) - n_1(L),
+d(L)    = 6 c_00(L) - L,
+```
+
+with the empty pair census at `L = 1`. The exact substitution seams imply
+
+```text
+d(2L) = -d(L) + 3S(L) - 6,
+d(4L) =  d(L) - 3S(L).
+```
+
+Hence `d(4L) = d(L)` exactly when `L` is even. The least positive
+counterexample to the unqualified four-step equality is `L = 1`, with
+`d(1) = -1` and `d(4) = -4`.
+
+The signed-affine state `q(L) = (S(L),t_(L-1),t_L)` has exactly the six
+reachable states
+
+```text
+(-1,1,0), (0,0,0), (0,0,1), (0,1,0), (0,1,1), (1,0,1).
+```
+
+Its complete 96-path four-bit certificate gives the exact cumulative extrema
+
+```text
+E_1 = 2,
+E_2 = 4,
+E_k = 2(floor((k+1)/4) + 2),  k >= 3,
+```
+
+where `E_k = max_(1 <= L <= 2^k) |d(L)|`. The endpoint obeys
+`|d(2^k)| = 2` for odd `k` and `4` for even `k`. Consequently
+
+```text
+d(L) = O(log L),
+d(L)/L^epsilon -> 0 for every fixed epsilon > 0,
+c_00(L)/L -> 1/6,
+c_00(L)/(L - 1) -> 1/6,
+```
+
+with the last normalization used only for `L >= 2`. These statements are
+GYRON-DISCREPANCY-LOG [T] at L1, evidenced by
+probes/P-GYRON-DISCREPANCY-LOG-3. The finite prefix census is an independent
+audit, not the proof of any universal clause.
+
+The corresponding forward pair-substitution law must retain its two anchoring
+conventions. In pair order `v = (a,b,c,d) = (v_00,v_01,v_10,v_11)`, put
+
+```text
+I_L(v) = (0,a+b,c+d,0),
+I_R(v) = (0,a+c,b+d,0),
+B(v)   = (c,d,a,b),
+R_L    = (I_L+B)/2,
+R_R    = (I_R+B)/2.
+```
+
+On the full four-dimensional carrier the maps and their spectra differ:
+
+```text
+chi_(R_L)(x) = x(x-1)(x-1/2)(x+1/2),
+chi_(R_R)(x) = x(x-1)(x+1/2)^2.
+```
+
+On the stationary subspace `b = c` their restrictions agree. The common
+forward phase-averaged operator `R` has spectrum `{1,-1/2,0}`. In the
+normalized stationary affine space `b = c` and `a+b+c+d = 1`,
+
+```text
+v_* = (1,2,2,1)/6
+```
+
+is the unique fixed point, and `R^n v -> v_*` componentwise for every input
+in that affine space. At the fixed point,
+
+```text
+I(v_*) = (0,1/2,1/2,0),
+B(v_*) = (1/3,1/6,1/6,1/3),
+v_*    = (I(v_*)+B(v_*))/2.
+```
+
+Thus the `00` coordinate is `0` in the `I(v_*)` phase, `1/3` in the
+`B(v_*)` phase, and `1/6` only under the frozen equal phase average.
+These statements
+are TM-PAIR-SUBSTITUTION-FIXED-POINT [T] at L1, evidenced by
+probes/P-GYRON-DISCREPANCY-LOG-3.
+
+GYRON-DENSITY [T] records exactly the two compatible L1 density clauses: the
+two prefix-frequency limits above, and the `00` coordinate `1/6` of the unique
+normalized equal-phase stationary fixed point. It is not an unqualified
+finite-prefix invariant: `d(4L) = d(L)` holds iff `L` is even. It is also not
+a density in either fixed phase. The value is not a six-line cardinal
+average, Born multiplier, mass density, cosmological parameter, selector
+weight, physical probability, L5 stream, or L6 measure.
+
+The operator `R` is a normalized forward substitution or inflation operator,
+not coarse-graining, desubstitution, inverse RG, a blocking-origin-independent
+finite-prefix histogram, a decoder factor or quotient, a physical
+probability or measure, or an L1-to-L5/L6 bridge. Equality of the `R_L` and
+`R_R` restrictions holds only on the stationary subspace and does not
+identify the full maps or their spectra.
 
 The census (CENSUS-313 [C], reproduce/census): the full enumeration of
 all 15625 seeds, warmup 400 ticks and window 300, yields exactly 313
@@ -1423,7 +1976,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v23. The fermionizer
+inherited naming clause is not part of Public Canon v24. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -1700,10 +2253,11 @@ forms with fenced comparisons). For DE-CONFORMAL-WEIGHT [O], its
 Neither COSMOLOGY-REGISTER [D] nor COSMOLOGY-READING-DICTIONARY [D]
 selects `Delta_DE`, supplies a trace/source map, or authorizes
 `Delta_DE := gamma_tr`; using either row as a selection premise is circular.
-The gyron density rho = 1/6
-(GYRON-DENSITY) [T]: the named Thue-Morse pair
-(0, 0) has exact stationary density rho = 1/6. Its proton
-and cosmology assignments belong to COSMOLOGY-READING-DICTIONARY [D].
+COSMOLOGY-READING-DICTIONARY [D] reads the L1 stationary equal-phase
+sliding-pair value 1/6 from GYRON-DENSITY as the mass-ladder prefactor.
+Its proton and cosmology assignments belong only to that dictionary.
+GYRON-DENSITY itself is not a mass density, cosmological parameter,
+Born multiplier, physical probability, or L5-to-L6 measure statement.
 Independently, freeze the six golden projective lines with representatives
 
 ```
@@ -2430,6 +2984,33 @@ M_TM = (1/3)P1 + (2/15)P5, and the typed factorization
 No successor L5 source schema is currently frozen. The Born gate remains
 open but the scheduler is STOP pending a separately reviewed owner
 definition.
+
+The v24 ledger change is signed term by term:
+
+```text
+claims:    206 + 2 L1 theorems = 208,
+T:         107 + 2 = 109,
+live H/O:  27 unchanged,
+decoder factor-canonicity definition: +0 claims, +0 dependencies, +0 gates.
+```
+
+The Gyron-owned transaction registers GYRON-DISCREPANCY-LOG [T] and
+TM-PAIR-SUBSTITUTION-FIXED-POINT [T], and corrects GYRON-DENSITY [T] without
+changing its status or the separate dictionary consumers of its value. The
+public proof bundle passed its sole native aarch64 execution and the first
+GitHub x86_64 replay byte identically. The corrected density row is re-pinned
+to that public probe.
+
+The decoder-owned transaction extends only
+`DEF-DECODER-COMPLETION-CONTRACT` with the optional factor-canonicity audit
+overlay. It creates no decoder-universality row, scientific claim, evidence,
+dependency, gate, probe, result, or status change. No Gyron-to-decoder
+dependency is added.
+
+Both transactions retain their firewalls. The forward pair-substitution
+operator is not coarse-graining or a decoder factor, and the decoder schema
+does not inherit existence, canonicity, maximality, nontriviality, physical
+meaning, or cross-layer closure from a commuting square.
 
 The v23 ledger change is signed term by term:
 

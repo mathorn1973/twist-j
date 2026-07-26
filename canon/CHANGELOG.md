@@ -1,12 +1,60 @@
 # Canon changelog (public series)
 
 
-## Public Canon v23
+## Public Canon v24
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 206 claims; 0 T-LOCK, 107 T, 40 D, 22 C, 3 H, 24 O, 10 F; 27 live H/O.
+Registry snapshot: 208 claims; 0 T-LOCK, 109 T, 40 D, 22 C, 3 H, 24 O, 10 F; 27 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v24 combines one proof-first L1 Gyron transaction with one
+orthogonal definition-only decoder-contract transaction.
+
+The Gyron transaction registers GYRON-DISCREPANCY-LOG [T] and
+TM-PAIR-SUBSTITUTION-FIXED-POINT [T]. The first theorem gives the exact
+two-step and four-step discrepancy laws, the parity-qualified four-step
+equality, the complete six-state signed-affine certificate, the all-k
+extremum formula, the logarithmic and subpower bounds, and both prefix-density
+limits. The second keeps the two full anchoring maps distinct, proves their
+common stationary restriction, unique normalized equal-phase fixed point,
+all-input convergence, and the separate fixed-phase values 0 and 1/3.
+
+GYRON-DENSITY remains T with value 1/6, but its scope is corrected: the
+unsupported unqualified finite-prefix invariant is replaced by the exact
+even-L condition, and the stationary 1/6 is distinguished from both fixed
+phases. Its evidence is re-pinned to
+`probes/P-GYRON-DISCREPANCY-LOG-3`, bundle SHA-256
+`b4e7eba23b815d0964a8516f25fe3cdc6db363e3646d658253ea5e9289e9382e`.
+The sole authorized native aarch64 execution and the first public GitHub
+x86_64 replay produced byte-identical stdout SHA-256
+`ce10ac43276890c4978b189d830b6c989ae31b4e74cb42380a09f845e4a802b4`;
+external Gate C passed. No coarse-graining, decoder, physical probability or
+measure, cosmological parameter, or L2-L6 lift is promoted.
+
+The decoder transaction extends only the existing
+`DEF-DECODER-COMPLETION-CONTRACT`. Its optional factor-canonicity overlay
+freezes one stage/leg/scope datum, typed factorization and fiber-constancy
+tests, four independent per-map coherence obligations, candidate equivalence,
+and the separate completeness and nonconstancy requirements for maximality
+language. It does not assert a surviving factor, classification, maximality,
+nontriviality, universality, scale stability, macrodynamics, instrument,
+physical measure, writeback, or terminality. It adds exactly zero claim rows,
+dependencies, gates, probes, runs, evidence items, or status changes.
+
+The two transactions are deliberately separate: the Gyron claim delta creates
+no decoder dependency, and the decoder schema derives nothing from the new
+Gyron theorems. Existing owners and STOP boundaries, including
+TM-SYM2-PHYSICAL-MEASURE, QUADRATIC-DECODER-DATA,
+METRO-REDUCTION-CALCULUS, OBSERVER-WRITE-PORT, and the fired
+TM-SYM2-MEASURE route, remain unchanged.
+
+## Public Canon v23
+
+<!-- BEGIN GENERATED CANON23 COUNTS -->
+Registry snapshot: 206 claims; 0 T-LOCK, 107 T, 40 D, 22 C, 3 H, 24 O, 10 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON23 COUNTS -->
 
 Public Canon v23 is an owner-definition fold. It registers exactly one new
 claim row, KERNEL-Z6-SYNCHRONIZATION [O] at L1. On the declared autonomous update

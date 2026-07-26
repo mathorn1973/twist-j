@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 206)
+        self.assertEqual(self.report.claims, 208)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 22, "D": 40, "F": 10, "H": 3, "O": 24, "T": 107},
+            {"C": 22, "D": 40, "F": 10, "H": 3, "O": 24, "T": 109},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,15 +35,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 44,
                 "one-architecture": 8,
                 "recorded-audit": 31,
-                "two-architecture": 123,
+                "two-architecture": 125,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 168)
+        self.assertEqual(len(self.report.direct_architecture_requires), 170)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 181
+            len(self.report.transitive_architecture_dependents), 183
         )
         self.assertEqual(len(self.report.dependency_terminals), 10)
         self.assertNotIn(
@@ -53,6 +53,14 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertNotIn(
             "KERNEL-Z6-SYNCHRONIZATION",
             self.report.transitive_architecture_dependents,
+        )
+        self.assertIn(
+            "GYRON-DISCREPANCY-LOG",
+            self.report.direct_architecture_requires,
+        )
+        self.assertIn(
+            "TM-PAIR-SUBSTITUTION-FIXED-POINT",
+            self.report.direct_architecture_requires,
         )
         self.assertIn("ANCHOR-ELECTRON-MASS", self.report.dependency_terminals)
         self.assertIn(
