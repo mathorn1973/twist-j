@@ -64,8 +64,9 @@ ruling made and merged before the candidate universe is opened:
 5. identifies the fixed `low` and `high` labels or permits their swap;
 6. declares an orthogonal transformation inside the high sector to be gauge
    without a separately frozen physical equivalence;
-7. removes the exact `P_12` or `R_t` controls from the system-side class in
-   order to recover uniqueness;
+7. removes the exact reduced witness pairs
+   `(E_low,P_12 E_high)` or `(E_low,R_t E_high)` from the system-side class
+   in order to recover uniqueness;
 8. treats the algebraic cardinality result as physical
    `NONUNIQUE(aleph_0)` before the physical apparatus image and its
    completeness are frozen;
@@ -189,8 +190,8 @@ The consequences are frozen:
 2. `Eq_effect` audits the shadows `E_a`. It does not classify instruments.
 3. `Eq_K_matrix` is finer than operational instrument equality and does not
    replace it.
-4. A common nonzero rational sign on one labeled `K_a` does not change that
-   event operation.
+4. Multiplication of either labeled `K_a` by an independent
+   `epsilon_a in {+1,-1}` does not change that event operation.
 5. High-sector orthogonal conjugacy or frame change is not an adopted
    physical gauge.
 6. Equality of apparatus realizations, when later defined, is distinct from
@@ -279,7 +280,7 @@ entries. Infinitude is certified by the exact Householder family
 ```text
 u_t = (1,-1,t,-t)^T,
 R_t = I_4 - u_t u_t^T / (1+t^2),
-t >= 2,
+t in Z, t >= 2,
 
 K_low^(t)  = E_low,
 K_high^(t) = R_t E_high.
@@ -342,9 +343,11 @@ completion-wide terminality               UNRESOLVED
 ```
 
 The proposal-local amplitude carrier `Q^2`, ready vector `f_low`,
-conditional dilations, weak-QND counterexample, `P_12`, and `R_t` remain
-exact decision inputs from the predefinition. None becomes physical merely
-because the system-side branch is adopted.
+conditional dilations, and weak-QND counterexample remain exact decision
+inputs from the predefinition. The reduced witness pairs
+`(E_low,P_12 E_high)` and `(E_low,R_t E_high)` likewise remain exact
+system-side inputs. None becomes physical merely because the system-side
+branch is adopted.
 
 The existing Route A map `beta` and its anchored pre-update convention remain
 proposal-local definition content. This ruling does not declare that map to
