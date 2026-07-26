@@ -1,6 +1,6 @@
 # P-KERNEL-Z6-SYNCHRONIZATION-1 result
 
-Status: FORMAL AARCH64 PROOF-SURVIVES; X86_64 PENDING;
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS;
 PUBLIC CANON UNCHANGED
 
 The immutable preregistration pin
@@ -11,6 +11,12 @@ wrote no stderr, and produced the exact 1000-byte output recorded in
 `b86fd3889abb668ebc235e045aeed928e791cd02ca14e4b92910b81c65959077`.
 Every frozen integrity, universal-proof, finite-audit, route-agreement, and
 transcript condition passed. No counterexample or diagnostic was emitted.
+
+The first clean GitHub Linux/x86_64 replay used the identical pinned verifier
+at tested merge commit
+`d19129e9639aa7acd5d5a33bedc8c1b0b802b90e`. Workflow run `30200967000`,
+job `89790713980`, exited zero with empty stderr and reproduced
+`EXPECTED.txt` byte for byte. The two-architecture computation gate is PASS.
 
 ## Recorded decision
 
@@ -59,15 +65,25 @@ aarch64 Python:       Python 3.12.3
 aarch64 checkout:     fresh, clean, detached at the exact public pin
 aarch64 executions:   1
 aarch64 exit/stderr:  0 / 0 bytes
+x86_64 workflow run:  30200967000
+x86_64 workflow job:  89790713980
+x86_64 tested merge:  d19129e9639aa7acd5d5a33bedc8c1b0b802b90e
+x86_64 platform:      Ubuntu 24.04.4 LTS
+x86_64 runner image:  ubuntu-24.04 20260720.247.2
+x86_64 runner:        2.336.0
+x86_64 Python:        CPython 3.12.13
+x86_64 exit/stderr:   0 / 0 bytes
+x86_64 byte identity: PASS
 stdout SHA-256:       b86fd3889abb668ebc235e045aeed928e791cd02ca14e4b92910b81c65959077
 stdout bytes/lines:   1000 / 21
 stdout CR/NUL/final:  0 / 0 / 0a
 
-architecture gate:    GitHub Linux/x86_64 reproduction pending
+architecture gate:    PASS
 ```
 
 The exact neutral metadata and raw stdout are public in issue #160 comment
-`5083313218`. `EXPECTED.txt` is byte-identical to that raw stdout. The
+`5083313218`. The first x86_64 replay return is public in issue #160 comment
+`5083352628`. `EXPECTED.txt` is byte-identical on both architectures. The
 immutable `PREREG.md` and `verify.py` remain unchanged.
 
 ## Scope firewall
@@ -86,7 +102,9 @@ Public lock: https://github.com/mathorn1973/twist-j/issues/160
 
 ## Architecture gate
 
-The sole formal aarch64 leg passed. Merge remains forbidden until the first
-clean GitHub Linux/x86_64 pull-request replay executes the identical pinned
-verifier with exit zero, empty stderr, and byte-for-byte reproduction of
-`EXPECTED.txt`.
+The sole formal aarch64 leg passed. The first clean GitHub Linux/x86_64
+pull-request replay of the identical pinned verifier also passed at tested
+merge commit `d19129e9639aa7acd5d5a33bedc8c1b0b802b90e`: exit zero, empty
+stderr, and byte-for-byte reproduction of `EXPECTED.txt`. The
+two-architecture computation gate is therefore PASS. The final-head policy
+workflow remains the merge-eligibility check for this evidence update.
