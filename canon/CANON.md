@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v22
+# TWIST-J Public Canon v23
 
-**Release identity.** Public Canon v22. Normative authority and activation
+**Release identity.** Public Canon v23. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v22 also declares the discrete
+algebraic axiom is J. Public Canon v23 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v22 does not claim
+seed of the two algebraic projections. Public Canon v23 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v22 contains no such
+deriving the architecture from J; Public Canon v23 contains no such
 theorem.
 
 ---
@@ -679,6 +679,52 @@ on `C` (CARRY-J-CHECKPOINT [T] at L1,
 probes/P-CARRY-J-CHECKPOINT-1). The theorem decides no restricted carrier,
 selector offset, physical carry, phase, time, or gravity reading, decoder
 completeness, parity on all of `Z_2`, or lift to L2-L6.
+
+KERNEL-Z6-SYNCHRONIZATION [O] freezes the next exact L1 decision for the
+declared autonomous update `U` on `X = F_5^6`. For `z in F_5`, put
+
+```
+X_z  = {psi in X : z_6(psi) = z},
+X_14 = X_1 union X_4,
+E_n(psi_0) = pr_checkpoint(U^n(0, psi_0)),
+q_n = 4 + 2 theta_(n-1) mod 5                         for n >= 1.
+```
+
+The owner asks for one self-contained all-`n` proof of all four clauses:
+
+```
+S1  for every n >= 3 and z in F_5, E_n|X_z is a bijection
+    X_z -> X_(q_n); hence, at each fixed known n, E_n:X->X_(q_n)
+    is exactly 5-to-1 with one preimage in each initial sheet;
+
+S2  for every n >= 1, E_n|X_1 and E_n|X_4 are separately
+    bijections onto X_(q_n); hence, at each fixed known n,
+    E_n|X_14 is exactly 2-to-1;
+
+S3  for every seed, both the checkpoint trace z_6(E_n(psi_0)) and
+    checkpoint trajectory E_n(psi_0) are not eventually periodic;
+
+S4  for every seed, there are no finite set S, self-map H:S->S,
+    projection pi:S->X, and s_0 in S such that
+    pi(H^n(s_0)) = E_n(psi_0) for all n >= 0.
+```
+
+Positive closure requires that proof and a complete exact audit of the
+frozen finite generator and sheet carrier through the pinned aarch64 and
+x86_64 byte-identity gate. One exact counterexample to any universal
+clause closes the owner negatively, including an exact eventual-period
+certificate for S3 or an exact finite realization for S4. A broken premise,
+unresolved index or scope, incomplete proof or audit, invalid pin, authority
+mismatch, run-integrity failure, or transcript mismatch returns STOP. A proof
+defect without an exact counterexample is STOP, not F.
+
+Here `q_n` is a sheet label and is not the checkpoint coordinate `q`.
+Every multiplicity above is a fixed-time fiber statement. No unindexed
+checkpoint-fiber statement, census-recurrence claim, decoded-log claim,
+physical-irreversibility claim, unique infinite-realization claim, or
+L2-L6 lift is included. CARRY-J-CHECKPOINT [T] is lineage for this question,
+not an additional logical premise. This owner declaration creates no probe,
+gate, execution, theorem, or computation.
 
 The same ramified digit recursion has an exact two-branch lift through
 `C8 -> C4 -> C2`. In `F_25 = F_5[tau]/(tau^2-2)`, put `eta = tau^3`.
@@ -1377,7 +1423,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v22. The fermionizer
+inherited naming clause is not part of Public Canon v23. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -2385,6 +2431,20 @@ No successor L5 source schema is currently frozen. The Born gate remains
 open but the scheduler is STOP pending a separately reviewed owner
 definition.
 
+The v23 ledger change is signed term by term:
+
+```text
+live H/O: 26 + 1 KERNEL-Z6 owner = 27,
+claims:    205 + 1 = 206,
+O:         23 + 1 = 24.
+```
+
+Public Canon v23 registers KERNEL-Z6-SYNCHRONIZATION [O] as one L1
+owner-definition row. It freezes the four candidate synchronization
+clauses and their exclusions but supplies no proof, computation, probe,
+gate, run, physical reading, or L2-L6 lift. No existing claim changes
+status; no candidate clause is promoted.
+
 The v22 ledger change is signed term by term:
 
 ```text
@@ -2454,6 +2514,12 @@ PHOTON
   PHOTON-WINDOW-PROOF        the closed charge 5 worldline occupancy
                              bound and electric face roughening certificate
 PLENUM AND KERNEL
+  KERNEL-Z6-SYNCHRONIZATION
+                             the four exact all-n checkpoint synchronization
+                             decisions on the declared autonomous carrier;
+                             fixed-time sheet multiplicities only, with no
+                             decoded-log or physical-irreversibility claim;
+                             READY for a later separately frozen formal probe
   SQRT-PHI-TIME-GRAVITY      the typed clock and gravity bridge remains
                              after the exact L1 digit lift
   CURVATURE-OPERATOR-CANONICAL

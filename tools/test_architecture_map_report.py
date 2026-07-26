@@ -24,15 +24,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 205)
+        self.assertEqual(self.report.claims, 206)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 22, "D": 40, "F": 10, "H": 3, "O": 23, "T": 107},
+            {"C": 22, "D": 40, "F": 10, "H": 3, "O": 24, "T": 107},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 43,
+                "none": 44,
                 "one-architecture": 8,
                 "recorded-audit": 31,
                 "two-architecture": 123,
@@ -46,6 +46,14 @@ class ArchitectureMapReportTests(unittest.TestCase):
             len(self.report.transitive_architecture_dependents), 181
         )
         self.assertEqual(len(self.report.dependency_terminals), 10)
+        self.assertNotIn(
+            "KERNEL-Z6-SYNCHRONIZATION",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "KERNEL-Z6-SYNCHRONIZATION",
+            self.report.transitive_architecture_dependents,
+        )
         self.assertIn("ANCHOR-ELECTRON-MASS", self.report.dependency_terminals)
         self.assertIn(
             "METRO-FINITE-STATE-RATIONALITY", self.report.dependency_terminals
