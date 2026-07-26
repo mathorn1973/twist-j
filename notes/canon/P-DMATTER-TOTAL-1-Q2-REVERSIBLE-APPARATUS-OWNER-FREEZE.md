@@ -307,6 +307,19 @@ U U^natural = I_8.
 Thus every member is a full reversible joint evolution. The second
 two-sided identity is a derived certificate, not an additional filter.
 
+Define the exact joint evaluation object
+
+```text
+Eval_Q2 : Cpl_Q2_rev_comm x H_tot -> H_tot,
+
+Eval_Q2(U,Psi) = U Psi,
+
+EvalDomain_Q2 = Cpl_Q2_rev_comm x H_tot.
+```
+
+Its domain, totality domain, and equality are exact. No state or coupling is
+supplied by the evaluation map.
+
 Candidate membership is a finite exact decision:
 
 ```text
@@ -629,6 +642,9 @@ role by this ruling.
 Every `CAND-*` identifier below is proposal-local. It fills no public
 completion-contract slot.
 
+Fields not present in the strict manifest are supporting proposal-local
+metadata only.
+
 ### 8.1 Locally defined apparatus and ready fields
 
 ```text
@@ -896,6 +912,20 @@ dependency_closure_manifest
 completion_contract_binding_manifest
 completion-wide terminality.
 ```
+
+The strict public `output_manifest` also remains literal `UNRESOLVED`:
+
+```text
+output_manifest:
+    predefinition_output_id: UNRESOLVED
+    candidate_rejection_output_id: UNRESOLVED
+    classification_output_id: UNRESOLVED
+    candidate_relation_id: UNRESOLVED
+    fire_posthoc_id: UNRESOLVED.
+```
+
+The proposal-local output meanings in Section 10 do not fill those public
+identifier slots.
 
 No tagged `NONE` choice is inferred. The existing stage-local
 `feeds_U=FALSE` for `D_scoped` does not choose apparatus writeback and does
