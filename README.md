@@ -4,8 +4,8 @@ TWIST-J tests one risky hypothesis: physical reality is a closed, exact,
 deterministic integer system; continuum, geometry, probability, and fields are
 readings of it.
 
-**State: ACTIVE. Public Canon v23 is the normative public ledger.** Authority is
-the public `main` branch at the tag `canon-v23`; see [STATUS.md](STATUS.md) and
+**State: ACTIVE. Public Canon v24 is the normative public ledger.** Authority is
+the public `main` branch at the tag `canon-v24`; see [STATUS.md](STATUS.md) and
 [POLICY.md](POLICY.md). An identical ACTIVE form on a branch other than
 `main` remains only an activation candidate until the reviewed activation
 commit and tag are public.
@@ -16,7 +16,7 @@ manifests, and independent reproductions.
 ## Canon entry points
 
 - [Core](canon/CORE.md): compact orientation with claim IDs and statuses.
-- [Canon](canon/CANON.md): the normative Public Canon v23 text.
+- [Canon](canon/CANON.md): the normative Public Canon v24 text.
 - [Registry](canon/REGISTRY.tsv): the authoritative current claim ledger.
 - [Frontier](canon/FRONTIER.md): the generated live hypotheses and obligations.
 - [Ledger architecture](canon/LEDGER.md): dependencies, evidence, history, and
@@ -25,10 +25,10 @@ manifests, and independent reproductions.
 ## Versioning
 
 Public Canon releases use positive whole numbers only. This release is version
-`23`, tagged `canon-v23`; versions `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`,
-`10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`, `21`, and
-`22` remain immutable preceding releases. A later normative replacement is
-version `24`, then version `25`, and so on.
+`24`, tagged `canon-v24`; versions `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`,
+`10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`, `21`, `22`,
+and `23` remain immutable preceding releases. A later normative replacement
+is version `25`, then version `26`, and so on.
 There are no decimal Canon versions such as `1.1` or `1.2`; non-normative
 documentation corrections do not create a new Canon.
 
