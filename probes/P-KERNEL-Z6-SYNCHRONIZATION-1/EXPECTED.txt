@@ -1,0 +1,21 @@
+P-KERNEL-Z6-SYNCHRONIZATION-1 exact verifier
+authority base=4ac41b4fac3a3794a6e9d5be1e2027d324edb806 owner_scope=abcb22785e37c2fbaae7860856b1ca8762ccc2b4c1b4b50fcf763fb273bbd2e0
+prereg sha256=e783a3a16891804f0c97b5b80744b0bb4ec5dcee1f8b2ae4f479283e2b48703a
+I01 RUNTIME arguments=0 environment=5: PASS
+I02 CARRIER states=15625 sheets=5 sheet_size=3125 x14=6250: PASS
+I03 GENERATORS coordinate=78125 affine=78125: PASS
+A01 SHEET-TABLE transitions=10: PASS
+A02 BRANCH-BIJECTIONS restrictions=10 states=31250: PASS
+D01 DIRECT trajectories=15625 times=7: PASS
+D02 FIXED-TIME s1_maps=20 s2_maps=12 fibers=10: PASS
+P01 BASE s1=5 s2=2: PASS
+P02 INDUCTION adjacent_cases=4: PASS
+P03 APERIODICITY symbolic_nodes=5 controls=6: PASS
+P04 FINITE-STATE symbolic_nodes=4 controls=21504: PASS
+R01 ROUTE-AGREEMENT direct_and_sheet: PASS
+SCOPE L1 only; fixed-time fibers; no autonomous-state completion
+counterexample: NONE
+diagnostic: NONE
+run integrity: PASS
+scientific decision: PROOF-SURVIVES
+route: PROOF-SURVIVES
