@@ -122,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 107, "D": 40, "C": 22, "F": 10,
+    expected_counts = {"T": 109, "D": 40, "C": 22, "F": 10,
                        "O": 24, "H": 3}
     checks.append((
         "COUNTS",
-        "registry has 206 claims with the current status partition",
-        len(rows) == 206 and counts == expected_counts,
+        "registry has 208 claims with the current status partition",
+        len(rows) == 208 and counts == expected_counts,
     ))
 
     checks.append((
@@ -246,16 +246,72 @@ def run():
         and has_status(index, "COLOR-LADDER-DICTIONARY", "D"),
     ))
 
+    gyron_density = "GYRON-DENSITY"
+    gyron_discrepancy = "GYRON-DISCREPANCY-LOG"
+    gyron_fixed_point = "TM-PAIR-SUBSTITUTION-FIXED-POINT"
+    gyron_items = (gyron_density, gyron_discrepancy, gyron_fixed_point)
+    gyron_path = "probes/P-GYRON-DISCREPANCY-LOG-3"
+    gyron_digest = "b4e7eba23b815d0964a8516f25fe3cdc6db363e3646d658253ea5e9289e9382e"
+    expected_gyron_dependencies = {
+        gyron_density: {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+            (gyron_discrepancy, "REQUIRES"),
+            (gyron_fixed_point, "REQUIRES"),
+        },
+        gyron_discrepancy: {("DEF-ARCHITECTURE", "REQUIRES")},
+        gyron_fixed_point: {("DEF-ARCHITECTURE", "REQUIRES")},
+    }
+    actual_gyron_dependencies = {
+        item: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == item
+        }
+        for item in gyron_items
+    }
     checks.append((
         "COSMOLOGY",
-        "phase and density identities stay T; their cosmology reading is D",
+        "exact L1 Gyron theorems stay T; their physical reading stays D",
         all(has_status(index, claim, "T") for claim in
-            ("TT-LINEAR-ZERO", "GYRON-DENSITY"))
+            ("TT-LINEAR-ZERO",) + gyron_items)
         and has_status(index, "COSMOLOGY-READING-DICTIONARY", "D")
         and scope_lacks(index, "TT-LINEAR-ZERO",
                         ("tensor", "isotropic", "r = 0", "cosmology"))
-        and scope_lacks(index, "GYRON-DENSITY",
-                        ("proton", "cosmology", "mass ladder", "basel")),
+        and scope_lacks(index, gyron_density,
+                        ("proton", "cosmology", "mass ladder", "basel"))
+        and scope_contains_all(index, gyron_density,
+                               ("both prefix normalizations",
+                                "holds iff L is even",
+                                "fixed I(v_*) and B(v_*) phase readouts",
+                                "physical probability or measure"))
+        and scope_contains_all(index, gyron_discrepancy,
+                               ("complete 96-path",
+                                "d(4L) = d(L) iff L is even",
+                                "audit rather than proof",
+                                "L2-L6 claim"))
+        and scope_contains_all(index, gyron_fixed_point,
+                               ("full maps are unequal",
+                                "spectrum {1,-1/2,0}",
+                                "only under their frozen equal average",
+                                "not coarse-graining",
+                                "decoder factor"))
+        and all(
+            normative[item]["item_type"] == "THEOREM"
+            and normative[item]["status"] == "T"
+            and normative[item]["layer"] == "L1"
+            and normative[item]["gate_ids"] == ""
+            for item in gyron_items
+        )
+        and all(
+            evidence[item]["evidence_kind"] == "PUBLIC_PROBE"
+            and evidence[item]["location"] == gyron_path
+            and evidence[item]["sha256"] == gyron_digest
+            and evidence[item]["hash_mode"]
+                == "bundle-manifest-sha256-v1"
+            and evidence[item]["architecture_requirement"]
+                == "two-architecture"
+            for item in gyron_items
+        )
+        and actual_gyron_dependencies == expected_gyron_dependencies,
     ))
 
     checks.append((

@@ -13,8 +13,10 @@ deterministic text. Its sixteen checks cover the current registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, and the separately fenced KERNEL-Z6-SYNCHRONIZATION
 owner, the finite Weyl commutator, the Maxwell chain, the Born
-finite algebra, the color ladder, the cosmology identities, the Schwinger
-target firewall, the C20 arithmetic/time firewall, the TM-SYM2 split
+finite algebra, the color ladder, the exact Gyron discrepancy and forward
+pair-substitution theorems, their corrected stationary-density boundary,
+and the separate cosmology dictionary, the Schwinger target firewall, the
+C20 arithmetic/time firewall, the TM-SYM2 split
 between three closed action classifications, the fired frozen selector, and
 the distinct open physical-measure successor, plus the separation of the
 exact WALL-LI2-RUNG theorem from the still-open QUANT-SUBSTRATE coupling.
