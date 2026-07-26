@@ -267,7 +267,7 @@ max_(L <= X) |d(L)| = (1/2) log_2(X) + O(1)
 
 along dyadic horizons, and `d(L) = O(log L)` globally.
 
-## 6. Precise sector consequence
+## 6. Precise subpower consequence
 
 The logarithmic bound implies
 
@@ -275,29 +275,18 @@ The logarithmic bound implies
 d(L) / L^epsilon -> 0
 ```
 
-for every fixed `epsilon > 0`. It therefore excludes any nonzero leading
-term of either precise form
+for every fixed `epsilon > 0`. This subpower statement is the only
+sector-scale corollary proposed here.
 
-```text
-L Phi(log_2 L),
-L^alpha Psi(log_b L),  alpha > 0,
-```
+It does not by itself exclude an otherwise unspecified periodic modulator.
+Any future exclusion must freeze the exact asymptotic representation, base,
+sampling domain, regularity, and a nonvanishing condition on sampled phases
+before classification.
 
-with bounded periodic `Phi` or `Psi` and nonzero amplitude.
-
-This statement is deliberately narrower than "no Takagi-type modulator".
-That broad phrase is undefined without specifying the normalization and
-function class. The comparison targets are the classical scale types in:
-
-- H. Delange, *Sur la fonction sommatoire de la fonction "somme des
-  chiffres"*, L'Enseignement Mathematique 21 (1975),
-  DOI `10.5169/seals-47328`;
-- J. Coquet, *A Summation Formula Related to the Binary Digits*,
-  Inventiones Mathematicae 73 (1983), 107-115,
-  DOI `10.1007/BF01393827`.
-
-Those papers concern different summatory functions. They are comparison
-classes here, not imported theorems about the gyron pair census.
+In particular, this note makes no "Takagi-type", Delange-type, Coquet-type,
+or other fractal-sector classification. Those authors study different
+summatory functions; no theorem from those settings is imported into this
+gyron pair census.
 
 ## 7. Possible public probe
 
@@ -334,9 +323,8 @@ ALL-K EXTREMA:
   one incorrect reachable state, transition, base interval, four-step shift,
   endpoint value, or value of E_k in equation (4);
 
-SECTOR:
-  one failure of the proved O(log L) implication, not a moved finite
-  threshold or a newly selected sample ray.
+SUBPOWER:
+  one failure of the proved O(log L) or d(L)/L^epsilon -> 0 implication.
 ```
 
 ## 8. Possible v24 disposition
@@ -345,8 +333,8 @@ A later owner-reviewed v24 fold may decide to:
 
 1. register the primitive doubling and four-step laws as one exact L1 row;
 2. register the all-`k` extremal theorem as a second exact L1 row;
-3. keep the sector exclusion as a precise corollary rather than a broad
-   "fractal modulator" claim;
+3. keep only the precise subpower corollary and make no wider
+   periodic-modulator or "fractal sector" classification;
 4. reconcile the existing `GYRON-DENSITY` wording with equation (2) without
    changing its density `1/6`, phase-averaged stationary fixed point
    `(1,2,2,1)/6`, physical dictionary consumers, or status, while removing
