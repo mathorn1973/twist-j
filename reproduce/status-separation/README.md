@@ -10,8 +10,9 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/GATES.tsv`, and
 `canon/FRONTIER_PROGRAMS.tsv`, uses the Python standard library, and emits
 deterministic text. Its sixteen checks cover the current registry partition,
-the axiom and plenum, the two arithmetic places, the carry lifts and
-checkpoint no-go, the finite Weyl commutator, the Maxwell chain, the Born
+the axiom and plenum, the two arithmetic places, the carry lifts, the
+checkpoint no-go, and the separately fenced KERNEL-Z6-SYNCHRONIZATION
+owner, the finite Weyl commutator, the Maxwell chain, the Born
 finite algebra, the color ladder, the cosmology identities, the Schwinger
 target firewall, the C20 arithmetic/time firewall, the TM-SYM2 split
 between three closed action classifications, the fired frozen selector, and

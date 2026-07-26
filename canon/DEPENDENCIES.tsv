@@ -248,6 +248,7 @@ RAMIFIED-TM-LIFT	QUBIT-FROM-F5	REQUIRES	the C4 to C2 sign quotient is the regist
 RAMIFIED-TM-LIFT	CODEC-TR4	REQUIRES	the all-k realization and unique multiplier 2 use the exact fixed M_J/Tr_4 channel
 CARRY-J-CHECKPOINT	RAMIFIED-TM-LIFT	REQUIRES	the checkpoint no-go targets exactly the registered L1 lift, with no larger phase or physical scope
 CARRY-J-CHECKPOINT	DEF-AUTONOMOUS-STATE	REQUIRES	any checkpoint-only factorization must be stated on a separately frozen forward carrier of the declared autonomous update U
+KERNEL-Z6-SYNCHRONIZATION	DEF-AUTONOMOUS-STATE	REQUIRES	the target is the checkpoint projection of the declared autonomous U orbit; the existing definition dependencies supply the checkpoint, odometer coordinate, selector, and five kernel generators
 CARRY-PENTAD	J-UNIT	REQUIRES	the integral cyclotomic bridge uses the public unit J = 1 + zeta_5^2
 CARRY-PENTAD	J-STEP	REQUIRES	the root-lattice operator I+C^2 is identified with the public integral multiplication matrix M_J
 CARRY-PENTAD	CODEC-TR4	REQUIRES	the public M_J matrix and its ramified characteristic shadow are used at their registered exact scope

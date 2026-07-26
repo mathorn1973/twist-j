@@ -123,11 +123,11 @@ def run():
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
     expected_counts = {"T": 107, "D": 40, "C": 22, "F": 10,
-                       "O": 23, "H": 3}
+                       "O": 24, "H": 3}
     checks.append((
         "COUNTS",
-        "registry has 205 claims with the current status partition",
-        len(rows) == 205 and counts == expected_counts,
+        "registry has 206 claims with the current status partition",
+        len(rows) == 206 and counts == expected_counts,
     ))
 
     checks.append((
@@ -155,12 +155,17 @@ def run():
         and scope_lacks(index, "Z2-PLACES-SPLIT", ("cpt", "force", "spin")),
     ))
 
+    owner_dependencies = [
+        row for row in dependencies
+        if row["item_id"] == "KERNEL-Z6-SYNCHRONIZATION"
+    ]
     checks.append((
         "CARRY",
-        "carry lifts and checkpoint no-go stay T; physical readings stay fenced",
+        "carry theorems stay T; synchronization owner stays O and fenced",
         all(has_status(index, claim, "T") for claim in
             ("RAMIFIED-TM-LIFT", "CARRY-J-CHECKPOINT", "CARRY-PENTAD",
              "SQRT-PHI-DIGIT-LIFT"))
+        and has_status(index, "KERNEL-Z6-SYNCHRONIZATION", "O")
         and scope_contains_all(index, "CARRY-PENTAD",
                                ("selects no prime", "physical reading"))
         and scope_contains_all(index, "RAMIFIED-TM-LIFT",
@@ -171,7 +176,28 @@ def run():
                                 "physical reading"))
         and scope_contains_all(index, "SQRT-PHI-DIGIT-LIFT",
                                ("not constant", "no sign-branch selection",
-                                "gravity dynamics")),
+                                "gravity dynamics"))
+        and scope_contains_all(index, "KERNEL-Z6-SYNCHRONIZATION",
+                               ("fixed known n",
+                                "q_n is not the checkpoint coordinate q",
+                                "no unindexed checkpoint-fiber",
+                                "physical-irreversibility",
+                                "L2-L6 claim is included"))
+        and normative["KERNEL-Z6-SYNCHRONIZATION"]["item_type"] == "OBLIGATION"
+        and normative["KERNEL-Z6-SYNCHRONIZATION"]["layer"] == "L1"
+        and normative["KERNEL-Z6-SYNCHRONIZATION"]["gate_ids"] == ""
+        and len(owner_dependencies) == 1
+        and owner_dependencies[0]["depends_on"] == "DEF-AUTONOMOUS-STATE"
+        and owner_dependencies[0]["relation"] == "REQUIRES"
+        and evidence["KERNEL-Z6-SYNCHRONIZATION"]["evidence_kind"]
+            == "INLINE_CANON"
+        and evidence["KERNEL-Z6-SYNCHRONIZATION"]
+            ["architecture_requirement"] == "none"
+        and programs["KERNEL-Z6-SYNCHRONIZATION"]["program_id"]
+            == "DECODER_CORE"
+        and programs["KERNEL-Z6-SYNCHRONIZATION"]["queue_role"] == "ROOT"
+        and programs["KERNEL-Z6-SYNCHRONIZATION"]["work_state"] == "READY"
+        and programs["KERNEL-Z6-SYNCHRONIZATION"]["work_mode"] == "FORMAL",
     ))
 
     checks.append((

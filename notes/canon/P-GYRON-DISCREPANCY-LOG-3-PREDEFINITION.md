@@ -3,7 +3,7 @@
 Date: 2026-07-26.
 
 **NON-CANONICAL PREDEFINITION.** This note records an exact proof surface for
-possible Public Canon v23 work. It changes no public claim, status, scope,
+possible Public Canon v24 work. It changes no public claim, status, scope,
 evidence row, Canon text, or release identity. It authorizes no issue, probe,
 preregistration, formal execution, promotion, or fold.
 
@@ -32,19 +32,21 @@ This note was prepared from the repository at:
 
 ```text
 STATE             ACTIVE
-Public Canon      v22
-authority         mathorn1973/twist-j public main
-tag               canon-v22
-activation commit 91854391ee8529702a5776f028db86dd7fb0bef2
-content commit    dd455edf7e10050bad6722f9bafc27fe6359e411
-Canon SHA-256     67b1286845434ae6d20edb1d09b7d5c892470be3439c3331b07d8d598a780d21
-Canon bytes       113066
-registry SHA-256  3c8d46f08fe45ae4d6362d79e0dd423f06f179412d5c7223fd28aa919c21d58b
-registry lines    206 including the header, 205 claim rows
+Public Canon      v23
+authority         mathorn1973/twist-j main
+tag               canon-v23
+activation commit 4ac41b4fac3a3794a6e9d5be1e2027d324edb806
+content commit    7830d852229ffc06c9d287d026c8ece290bf339b
+Canon SHA-256     f842b613d6f65fe07ddab92ddbe1fb9fec89217d52b781571b7380281c3fb2b1
+Canon bytes       116017
+current base      9b63cba9c48eb524bc3e25d884e750cc8790b188
+registry SHA-256  6f4c7b350e0f12ba3e7ddc112ce04c4e916d03709aaab7ff007c0c17967a86c1
+registry lines    207 including the header, 206 claim rows
 ```
 
 The tag and content commit are ancestors of public `main`; the recorded Canon
-and registry hashes match; the active push, tag, and release checks passed.
+and registry hashes match. The current base is post-v23 public `main`; it is
+not a later Canon release, and `STATUS.md` remains the authority declaration.
 
 ## 2. Objects and boundary convention
 
@@ -133,6 +135,40 @@ d(4N) != d(N)    iff N is odd.
 
 This is an L1 integer statement. It supplies no physical density, mass,
 measure, decoder, or cross-layer conclusion.
+
+### 3.1 Phase-averaged fixed-point scope
+
+There is a distinct exact fixed-point statement, but it must not be confused
+with finite-prefix coarse-graining. On a shift-invariant pair law,
+equivalently after averaging the two child-position phases of the
+substitution, the normalized pair vector in the order
+`(00,01,10,11)` transforms by
+
+```text
+        1  [ 0  0  1  0 ]
+R =     -  [ 1  1  0  1 ] .
+        2  [ 1  0  1  1 ]
+           [ 0  1  0  0 ]
+```
+
+Its unique normalized positive fixed point is
+
+```text
+v_* = (1,2,2,1)/6,    R v_* = v_*.
+```
+
+This is the phase-averaged stationary pair law that supports the registered
+density `rho_00 = 1/6`. It is not a literal blocking identity for a finite
+prefix census. A prefix of length `L` has `L-1` adjacent pairs and retains
+boundary and seam terms; equations (1) and (2) record those terms exactly.
+In particular, equation (2) rules out interpreting the fixed point as the
+unqualified finite-prefix invariant `d(4L) = d(L)`.
+
+Accordingly, `R v_* = v_*` supplies no canonical coarse-graining map on
+histories, no claim that every blocking origin or pre/post convention gives
+the same finite census, no decoder factorization or universality theorem, and
+no L1-to-L5 or L1-to-L6 lift. Any such claim needs its own frozen carrier,
+phase convention, map, equality, layer, gate, and evidence.
 
 ## 4. Six-state signed-affine transducer
 
@@ -303,17 +339,18 @@ SECTOR:
   threshold or a newly selected sample ray.
 ```
 
-## 8. Possible v23 disposition
+## 8. Possible v24 disposition
 
-A later owner-reviewed v23 fold may decide to:
+A later owner-reviewed v24 fold may decide to:
 
 1. register the primitive doubling and four-step laws as one exact L1 row;
 2. register the all-`k` extremal theorem as a second exact L1 row;
 3. keep the sector exclusion as a precise corollary rather than a broad
    "fractal modulator" claim;
 4. reconcile the existing `GYRON-DENSITY` wording with equation (2) without
-   changing its density `1/6`, stationary vector `(1,2,2,1)/6`, physical
-   dictionary consumers, or status;
+   changing its density `1/6`, phase-averaged stationary fixed point
+   `(1,2,2,1)/6`, physical dictionary consumers, or status, while removing
+   any implication of an exact finite-prefix coarse-graining invariant;
 5. add only dependencies justified by the public probe and proof.
 
 This note proposes no row text, status, evidence hash, history event, generated
@@ -330,5 +367,7 @@ Stop if a future candidate:
 - calls a sampled ray an asymptotic limit;
 - imports a Delange or Coquet theorem as if it applied directly to this pair
   census;
+- turns the phase-averaged stationary fixed point into a finite-prefix
+  coarse-graining identity, canonical blocking map, or decoder theorem;
 - promotes a physical density, mass, measure, decoder, or L2-L6 reading;
 - treats this note or an unattached transcript as public evidence.
