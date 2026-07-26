@@ -1,7 +1,6 @@
 # P-GYRON-DISCREPANCY-LOG-3 result
 
-Status: NATIVE SCIENTIFIC RESULT; CROSS-ARCHITECTURE GATE PENDING;
-PUBLIC CLAIM UNCHANGED
+Status: EXTERNAL GATE C PASS; PUBLIC CLAIM UNCHANGED
 
 ## Recorded decision
 
@@ -19,12 +18,14 @@ run integrity:          PASS
 scientific decision:    PROOF-SURVIVES
 route:                  PROOF-SURVIVES
 native aarch64 leg:     PASS
-cross-architecture:     PENDING
+x86_64 replay:          PASS
+cross-architecture:     PASS
+external Gate C:        PASS
 ```
 
 This is the exact outcome of the sole authorized native Linux/aarch64
-execution. It is not a Canon promotion, registry edit, public theorem-status
-change, or completed two-architecture evidence gate.
+execution and the first public GitHub Linux/x86_64 replay. It is not a Canon
+promotion, registry edit, or public theorem-status change.
 
 ## Reported proof and audit nodes
 
@@ -161,14 +162,26 @@ aarch64 exit/stderr:  0 / 0 bytes
 stdout bytes/lines:   1735 / 34
 stdout CR/NUL/final:  0 / 0 / 0a
 
-x86_64 replay:        PENDING
-external Gate C:      PENDING
+x86_64 workflow run:  30221889556
+x86_64 job:           89845627151
+tested merge commit:  9ac6ef90a2d12ff233513d372ede8491f7315f57
+tested PR head:       fb1c86e6e5b43de8692b0ff9cb0d6fae8708b8c8
+x86_64 platform:      Ubuntu 24.04.4 LTS
+runner image:         ubuntu-24.04 20260720.247.2
+runner version:       2.336.0
+x86_64 Python:        CPython 3.12.13
+x86_64 exit/stderr:   0 / 0 bytes
+x86_64 stdout SHA:    ce10ac43276890c4978b189d830b6c989ae31b4e74cb42380a09f845e4a802b4
+byte identity:        PASS
+external Gate C:      PASS
 public claim status:  UNCHANGED
 ```
 
 The complete neutral metadata and exact raw stdout were returned publicly on
 issue #171 in comment `5085509668` before `EXPECTED.txt`, `RUN.md`, and this
-file were created. `EXPECTED.txt` is byte-identical to that raw stdout.
+file were created. `EXPECTED.txt` is byte-identical to that raw stdout. The
+first public x86_64 replay return was recorded in issue #171 comment
+`5085569836`.
 
 ## Scope firewall
 
@@ -190,7 +203,16 @@ cross-architecture gate is complete.
 
 ## Architecture gate
 
-The sole native aarch64 leg passed. The first clean GitHub Linux/x86_64
-pull-request replay of the byte-identical pinned verifier has not yet
-occurred. The cross-architecture computation gate and external Gate C
-therefore remain `PENDING`; this record claims no earned public status.
+The sole native aarch64 leg passed. The first public GitHub Linux/x86_64
+pull-request replay also passed in workflow `30221889556`, job `89845627151`,
+on merge commit `9ac6ef90a2d12ff233513d372ede8491f7315f57`.
+The successful policy checker used the byte-identical pinned verifier,
+enforced exit code 0 and empty stderr, and reproduced `EXPECTED.txt`
+byte for byte with SHA-256
+`ce10ac43276890c4978b189d830b6c989ae31b4e74cb42380a09f845e4a802b4`.
+
+`C-PIN`, `C-REMOTE`, `C-AARCH64`, `C-PUBLIC-RETURN`, `C-X86_64`, and
+`C-BYTES` are all `PASS`. The cross-architecture computation gate and
+external Gate C therefore pass, with no rerun of the sole native aarch64
+leg and no minimal reproduction required. This record still claims no
+public Canon status; that requires a separate owner-reviewed fold.

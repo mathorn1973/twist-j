@@ -48,14 +48,32 @@ route: PROOF-SURVIVES
 counterexample: NONE
 diagnostic: NONE
 native_aarch64_leg: PASS
-cross_architecture_gate: PENDING
-x86_64_replay: PENDING
+x86_64_replay: PASS
+x86_64_workflow_run: 30221889556
+x86_64_job: 89845627151
+x86_64_tested_merge_commit: 9ac6ef90a2d12ff233513d372ede8491f7315f57
+x86_64_pr_head: fb1c86e6e5b43de8692b0ff9cb0d6fae8708b8c8
+x86_64_platform: Ubuntu 24.04.4 LTS
+x86_64_runner_image: ubuntu-24.04
+x86_64_runner_image_version: 20260720.247.2
+x86_64_runner_version: 2.336.0
+x86_64_architecture: x86_64
+x86_64_python: CPython 3.12.13
+x86_64_exit_code: 0
+x86_64_stderr_bytes: 0
+x86_64_verifier_sha256: 10ebef3ffd10067dce0b47b95e58f6ffb8437a2d252eba0510afc39e98bee3ae
+x86_64_stdout_sha256: ce10ac43276890c4978b189d830b6c989ae31b4e74cb42380a09f845e4a802b4
+x86_64_byte_identity: PASS
+cross_architecture_gate: PASS
+external_gate_c: PASS
+c_pin/c_remote/c_aarch64/c_public_return/c_x86_64/c_bytes: PASS/PASS/PASS/PASS/PASS/PASS
 public_status: UNCHANGED
 public_lock: issue 171
 public_pin_comment: 5085492841
 public_readback_comment: 5085499764
 public_authorization_comment: 5085500991
 public_run_return: 5085509668
+public_x86_return: 5085569836
 
 The initial public pin contains only `PREREG.md` and `verify.py`. Both files
 were fetched back from the public GitHub contents endpoint at the exact pin
@@ -77,10 +95,21 @@ Stderr is the exact empty byte string.
 
 The sole native aarch64 leg passed with Gate A and Gate B both
 `PROOF-SURVIVES`, local Gate C `AUDIT-PASS`, and overall route
-`PROOF-SURVIVES`. This is not yet the completed external Gate C. The first
-clean GitHub Linux/x86_64 replay of the byte-identical pinned verifier is
-pending and must reproduce `EXPECTED.txt` byte for byte before the
-cross-architecture gate can pass.
+`PROOF-SURVIVES`.
+
+The first public GitHub Linux/x86_64 replay then ran once in workflow
+`30221889556`, job `89845627151`, against merge commit
+`9ac6ef90a2d12ff233513d372ede8491f7315f57`. The Ubuntu 24.04.4 LTS
+runner used image `ubuntu-24.04` version `20260720.247.2`, runner version
+`2.336.0`, x86_64, and CPython 3.12.13. The successful policy checker
+enforced exit code 0, empty stderr, pinned verifier SHA-256
+`10ebef3ffd10067dce0b47b95e58f6ffb8437a2d252eba0510afc39e98bee3ae`,
+and byte identity with `EXPECTED.txt`; it reported stdout SHA-256
+`ce10ac43276890c4978b189d830b6c989ae31b4e74cb42380a09f845e4a802b4`.
+The public replay return is issue #171 comment `5085569836`.
+
+The cross-architecture gate and external Gate C therefore pass. This
+completes the probe evidence but does not itself alter any public claim.
 
 No Canon, registry, frontier, dependency, gate, status, release, or authority
 file is changed by this run record.
