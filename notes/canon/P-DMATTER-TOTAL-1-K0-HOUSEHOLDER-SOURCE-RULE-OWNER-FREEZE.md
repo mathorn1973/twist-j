@@ -845,13 +845,19 @@ source_realization_relation_id:
     CAND-QDD-PHYSREAL-K0-HH-ALL-LIFTS
 
 source_realization_domain_id:
-    CAND-QDD-DOMAIN-K0-X-CPL-Q2-REV-COMM
+    CAND-CARRIER-ANCHORED-ORBITS-K0
 
 source_realization_codomain_id:
-    CAND-QDD-TRUTH-VALUES
+    CAND-QDD-COUPLING-CLASS-UFULL-Q2-REVERSIBLE-ADM-COMMUTANT
 
 source_realization_membership_id:
     CAND-QDD-MEMBERSHIP-PHYSREAL-K0-HH-RED-EQUALITY
+
+source_realization_membership_domain_id:
+    CAND-QDD-DOMAIN-K0-X-CPL-Q2-REV-COMM
+
+source_realization_membership_codomain_id:
+    CAND-QDD-TRUTH-VALUES
 
 source_realization_equality_id:
     CAND-QDD-EQ-PHYSREAL-K0-HH-EXTENSIONAL
