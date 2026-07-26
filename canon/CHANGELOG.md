@@ -1,12 +1,38 @@
 # Canon changelog (public series)
 
 
-## Public Canon v22
+## Public Canon v23
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 205 claims; 0 T-LOCK, 107 T, 40 D, 22 C, 3 H, 23 O, 10 F; 26 live H/O.
+Registry snapshot: 206 claims; 0 T-LOCK, 107 T, 40 D, 22 C, 3 H, 24 O, 10 F; 27 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v23 is an owner-definition fold. It registers exactly one new
+claim row, KERNEL-Z6-SYNCHRONIZATION [O] at L1. On the declared autonomous update
+it freezes four candidate all-n decisions: the per-sheet bijections and
+fixed-time 5-to-1 and 2-to-1 checkpoint fibers, non-eventual-periodicity of
+each seed's checkpoint trace and trajectory, and exclusion of a finite
+autonomous realization for each seed. None of the four candidate clauses is
+promoted.
+
+The row defines its sheet label and carrier, confines every multiplicity to a
+fixed known time, and excludes unindexed checkpoint fibers, census
+recurrence, decoded logs, physical irreversibility, unique infinite
+realizations, and L2-L6 lifts. Its only logical dependency is
+DEF-AUTONOMOUS-STATE. CARRY-J-CHECKPOINT is lineage only. The declaration
+creates no theorem, computation, probe, gate, execution, or physical reading.
+The result-exposed predefinition was merged in PR #157 and read back byte
+identically at SHA-256
+`c139a22625d54736a4a2ca5f3286b6262ba31e4a169a80d0fcbcb722f5724e36`;
+that note remains non-normative and supplies no evidence for the owner row.
+
+## Public Canon v22
+
+<!-- BEGIN GENERATED CANON22 COUNTS -->
+Registry snapshot: 205 claims; 0 T-LOCK, 107 T, 40 D, 22 C, 3 H, 23 O, 10 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON22 COUNTS -->
 
 Public Canon v22 combines a definition-governance fold with one proof-first
 L5 theorem. It retires
