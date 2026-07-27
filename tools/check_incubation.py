@@ -203,6 +203,23 @@ def add_commit(root: Path, relative: str) -> str:
     return commits[0]
 
 
+def commit_parents(root: Path, commit: str) -> list[str]:
+    return [item for item in git(root, "show", "-s", "--format=%P", commit).split() if item]
+
+
+def changed_paths_at_commit(root: Path, commit: str) -> list[str]:
+    output = git(
+        root,
+        "diff-tree",
+        "--root",
+        "--no-commit-id",
+        "--name-only",
+        "-r",
+        commit,
+    )
+    return sorted(line for line in output.splitlines() if line)
+
+
 def file_at_commit(root: Path, commit: str, relative: str) -> bytes:
     process = subprocess.run(
         ["git", "-C", str(root), "show", f"{commit}:{relative}"],
@@ -250,14 +267,27 @@ def check_breaker_dag(
         errors.append(f"{artifact_relative}: prereg_revision must be {revision}")
     prereg_relative = f"{candidate_relative}/PREREG-r{revision}.md"
     try:
-        commit = add_commit(root, artifact_relative)
-        prereg_bytes = file_at_commit(root, commit, prereg_relative)
+        artifact_commit = add_commit(root, artifact_relative)
+        prereg_commit = add_commit(root, prereg_relative)
+        parents = commit_parents(root, artifact_commit)
+        if parents != [prereg_commit]:
+            errors.append(
+                f"{artifact_relative}: BREAKER-NOT-DIRECT-CHILD / STOP: "
+                f"freeze commit must be the direct child of {prereg_commit}"
+            )
+        changed = changed_paths_at_commit(root, artifact_commit)
+        if changed != [artifact_relative]:
+            errors.append(
+                f"{artifact_relative}: BREAKER-FREEZE-SCOPE / STOP: "
+                "freeze commit must change exactly the breaker artifact"
+            )
+        prereg_bytes = file_at_commit(root, artifact_commit, prereg_relative)
         digest = hashlib.sha256(prereg_bytes).hexdigest()
         if metadata.get("prereg_sha256") not in {None, digest}:
             errors.append(
                 f"{artifact_relative}: prereg_sha256 does not match {prereg_relative} at add commit"
             )
-        leak = verifier_in_ancestry(root, commit, candidate_relative)
+        leak = verifier_in_ancestry(root, artifact_commit, candidate_relative)
         if leak:
             errors.append(
                 f"{artifact_relative}: BREAKER-VERIFIER-ANCESTRY / STOP: verifier reachable at {leak}"
@@ -344,8 +374,7 @@ def check_run_record(path: Path, root: Path, errors: list[str]) -> None:
         count = counts.get(field, 0)
         if count != 1:
             errors.append(f"{relative}: field {field} appears {count} times, must be exactly 1")
-    unknown = sorted(set(counts) - set(RUN_FIELDS))
-    for field in unknown:
+    for field in sorted(set(counts) - set(RUN_FIELDS)):
         errors.append(f"{relative}: unknown run-record field {field}")
     if values.get("run_format") not in {None, "2"}:
         errors.append(f"{relative}: run_format must be 2")
