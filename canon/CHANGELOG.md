@@ -1,12 +1,38 @@
 # Canon changelog (public series)
 
 
-## Public Canon v24
+## Public Canon v25
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 208 claims; 0 T-LOCK, 109 T, 40 D, 22 C, 3 H, 24 O, 10 F; 27 live H/O.
+Registry snapshot: 208 claims; 0 T-LOCK, 110 T, 40 D, 22 C, 3 H, 23 O, 10 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v25 closes exactly one existing L1 owner.
+KERNEL-Z6-SYNCHRONIZATION moves from O to T because its preregistered
+self-contained all-`n` proof establishes all four frozen clauses: the
+fixed-time 5-to-1 and 2-to-1 sheet laws, non-eventual-periodicity of every
+checkpoint trace and trajectory, and exclusion of every finite autonomous
+realization.
+
+The existing `probes/P-KERNEL-Z6-SYNCHRONIZATION-1` bundle is registered as
+the public two-architecture evidence. It audits the exact finite generator
+and sheet premises, the base cases, the complete four-case induction, and two
+independent implementations. The native aarch64 execution and GitHub x86_64
+replay produced byte-identical stdout. The proof, rather than the finite
+enumeration, carries the universal quantifiers.
+
+The scope remains L1 and fixed-time. No unknown-time fiber, census meaning,
+decoded log, physical irreversibility, complete-state identification, decoder
+completion, unique infinite realization, or L2-L6 claim is added. The probe
+is unchanged and no new execution is authorized or performed.
+
+## Public Canon v24
+
+<!-- BEGIN GENERATED CANON24 COUNTS -->
+Registry snapshot: 208 claims; 0 T-LOCK, 109 T, 40 D, 22 C, 3 H, 24 O, 10 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON24 COUNTS -->
 
 Public Canon v24 combines one proof-first L1 Gyron transaction with one
 orthogonal definition-only decoder-contract transaction.
@@ -57,7 +83,7 @@ Reproduction witnesses: 22.
 <!-- END GENERATED CANON23 COUNTS -->
 
 Public Canon v23 is an owner-definition fold. It registers exactly one new
-claim row, KERNEL-Z6-SYNCHRONIZATION [O] at L1. On the declared autonomous update
+claim row, KERNEL-Z6-SYNCHRONIZATION at status O and layer L1. On the declared autonomous update
 it freezes four candidate all-n decisions: the per-sheet bijections and
 fixed-time 5-to-1 and 2-to-1 checkpoint fibers, non-eventual-periodicity of
 each seed's checkpoint trace and trajectory, and exclusion of a finite
