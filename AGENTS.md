@@ -19,53 +19,63 @@ At the start of every session:
    licence uncertainty, collision, or any repository stop condition.
 
 An attachment, mirror, chat transcript, or project snapshot is never authority.
-Public `main` is the scientific authority. The former private repository is
-read-only development history under `POLICY.md`.
+Public `main` is the sole public scientific authority. Other work has no public
+authority until it is handed off through Git and accepted by the public
+procedure.
 
-## 2. Agent roles and the only handoff
+## 2. Roles and the only handoff
 
-The current role assignment is:
+The stable roles are:
 
 ```text
-PUBLIC_AGENT    ChatGPT
-INTERNAL_AGENT  Claude
+PUBLIC_ROLE               owns public Git claims, branches, probes, and PRs
+BUILDER_ROLE              constructs one scoped candidate
+BREAKER_ROLE              attacks a frozen preregistration independently
+ARCHITECTURE_RUNNER_ROLE  supplies one workflow architecture execution
 ```
 
-`PUBLIC_AGENT` owns work on `mathorn1973/twist-j`: issue claims, branches,
-public review, probes, folds, and pull requests.
-
-`INTERNAL_AGENT` may incubate and break candidates without authority. It does
-not supply public currency from a private workspace. A candidate reaches the
-public line only as a Git commit carrying an explicit `PROMO.md` package under
-the rules in `notes/incubation/README.md`.
+Concrete products, people, machines, or sessions are assigned to roles in the
+claim issue or run record. They are not permanently assigned in this manual.
 
 Git is the only shared filesystem, queue, and handoff surface. Chat summaries
-are informational only. Changing this role assignment requires a reviewed pull
-request to this file.
+are informational only. A candidate reaches the public line only as a committed
+package with an explicit `PROMO.md` under `notes/incubation/README.md`.
 
-## 3. Atomic claim lock
+## 3. Object lock and claim lock
 
-Every public probe, incubation candidate, policy change, or scoped note has one
-exact `CLAIM_KEY` and one public GitHub issue.
-
-Acquire the lock by creating the issue already assigned in the same server-side
-operation. The issue body records:
+Every scoped item records three different identifiers:
 
 ```text
-CLAIM_KEY:     stable exact key
-OWNER_SESSION: unique non-secret session token
+OBJECT_KEY:     stable target object or exact normalized new scope
+CLAIM_KEY:      one proposed attack or construction on that object
+OWNER_SESSION:  unique non-secret session token
 ```
 
-No branch or commit may predate that assigned issue.
+For an existing object, `OBJECT_KEY` is its public registry, frontier, probe,
+policy, or file identifier. A new object uses `NEW:<sha256>`, where the digest is
+computed from the exact UTF-8, LF-terminated scope statement recorded in the
+issue.
 
-Concurrent duplicate creation is resolved deterministically. Among issues with
-the same exact `CLAIM_KEY`, the lowest issue number is the sole owner. Every
-higher-numbered duplicate stops and closes as duplicate before committing.
+Acquire the lock by creating the issue already assigned in the same server-side
+operation. No branch or commit may predate the assigned issue readback.
+
+Among active builder issues with the same exact `OBJECT_KEY`, the lowest issue
+number is the sole build owner. Every higher-numbered duplicate stops and closes
+as duplicate before committing. A breaker may work against the winning issue
+without acquiring a competing build lock.
+
 Assignment identifies the public account. `OWNER_SESSION` distinguishes
-concurrent sessions that use the same account.
+concurrent sessions using the same account.
 
-One issue owns one scoped item. A second session may review or break it, but may
-not build a competing candidate under the same key.
+A lock never expires by time alone. Release requires an issue comment containing
+exactly `LOCK_RELEASED`, followed by unassignment or closure by the current
+owner session or repository owner. A successor must read that server-side
+record before claiming the object.
+
+String equality does not prove mathematical equivalence. Before claiming a new
+object, search issues, branches, probes, the registry, and promotion packages
+for content collisions. A suspected equivalent scope is `OBJECT-COLLISION /
+STOP` until an owner ruling identifies or separates the objects.
 
 ## 4. Work classes
 
@@ -80,47 +90,16 @@ Its layout, naming, blind-breaker procedure, and promotion manifest are defined
 in `notes/incubation/README.md`. Incubation never edits `canon/`, never creates
 a registry status, and never earns public authority by itself.
 
-## 5. Computation legs
+## 5. Verifier portability
 
-The public computation gate has two fixed architecture roles:
-
-```text
-x86_64    the required GitHub pull-request check, automatic
-
-aarch64   the designated internal-side architecture runner, supplied before
-          merge with neutral public fields only
-```
-
-The public workflow currently runs `ubuntu-latest` with Python 3.12 and is the
-x86_64 leg. A local ChatGPT execution is also x86_64. It is therefore zero new
-architecture legs: useful as a dry run or reproduction, but never sufficient
-for computation-grade `T`.
-
-The aarch64 record uses neutral fields only, for example:
-
-```text
-platform: Ubuntu 24.04
-architecture: aarch64
-```
-
-Never record a machine nickname. `EXPECTED.txt` carries the exact stdout.
-`RUN.md` carries the candidate pin, verifier hash, stdout SHA-256, byte counts,
-exit code, Python version, platform, and architecture. The aarch64 record must
-land in the probe branch before merge. Without it, a computation-only result
-stays at most `C`.
-
-If the public workflow is changed to provide a genuine aarch64 job, this role
-assignment must be reviewed against the actual workflow before use.
-
-## 6. Verifier portability
-
-Public verifiers use the Python standard library and exact arithmetic. They
-must produce byte-identical scientific stdout on the supported Python 3.12 and
-3.13 lanes.
+Public verifiers use the Python standard library and exact arithmetic. Their
+scientific stdout must be byte-identical on every architecture and supported
+Python minor version exercised by the required workflow.
 
 Verifier stdout contains only explicitly formatted integers, signs, finite
 strings, and rational numbers. Format a rational as `numerator/denominator`,
-with denominator one printed as an integer.
+with denominator one printed as an integer. Sort every collection before
+output.
 
 Do not print or depend on:
 
@@ -132,43 +111,87 @@ Do not print or depend on:
 - randomized hash order;
 - library-specific floating-point formatting.
 
-Platform and Python metadata belong in `RUN.md`, not scientific stdout. A
+Platform and Python metadata belong in run records, not scientific stdout. A
 failure prints one stable project-defined message and exits nonzero.
+
+## 6. Formal public computation gate
+
+This section number and heading are permanent compatibility anchors. Historical
+sealed records that cite `AGENTS.md section 6` refer to this section. New records
+should cite the heading `Formal public computation gate` as well as the section
+number.
+
+A computation-only public `T` requires the repository's pinned workflow to run
+the same PR head, verifier bytes, and `EXPECTED.txt` successfully on at least
+one x86_64 job and at least one aarch64 job. Each job requires exit zero, empty
+stderr, and stdout byte-identical to the same committed `EXPECTED.txt`.
+Byte-identity across architectures then follows transitively.
+
+The workflow and repository checkers define the current runner labels and
+supported Python versions. Do not duplicate mutable labels here.
+
+A local run, a manually written architecture field, or repeated execution on
+one architecture is reproduction only. It contributes no architecture gate by
+itself. Until both required workflow architecture jobs pass on the same PR head,
+a computation-only result remains at most `C`.
+
+`RUN.md` is an audit record, not proof of machine identity. It may record neutral
+platform, architecture, Python, hashes, byte counts, and exit status. The
+repository checker must reject machine nicknames and private infrastructure in
+public run records.
+
+An independent exact proof may establish `T`; its verifier is then an audit.
 
 ## 7. Blind breaker
 
 Blind confirmation separates construction from attack.
 
-Agent A freezes the complete `PREREG.md` before formal computation and writes
-`verify.py`. Agent B receives only the frozen preregistration and the public
-dependencies explicitly named by it. Agent B must not read `verify.py`, its
-commit diff, its output, or an implementation-derived hint before freezing the
-independent attack.
+The builder freezes the complete `PREREG.md` before formal computation and
+writes `verify.py`. The breaker receives only the frozen preregistration and the
+public dependencies explicitly named by it. The breaker must not read
+`verify.py`, its diff, output, or an implementation-derived hint before freezing
+the independent attack.
 
-Agent B writes `break.py` from the preregistration alone and freezes it before
-comparison. The attack must use an independently stated route, representation,
-enumeration, derivation, or invariant. Merely invoking, importing, wrapping, or
-reimplementing the control flow of `verify.py` is reproduction, not independent
-confirmation.
+The breaker writes `break.py` from the preregistration alone and freezes it
+before comparison. The attack must use an independently stated route,
+representation, enumeration, derivation, or invariant. Invoking, importing,
+wrapping, translating, or following the control flow of `verify.py` is
+reproduction, not independent confirmation.
 
-If the preregistration does not contain enough typed information to construct
-an independent attack without reading `verify.py`, B records:
+### Revision 1
+
+If the preregistration is insufficient, the breaker records:
 
 ```text
 BLIND-BREAKER-UNDERSPECIFIED / STOP
 ```
 
-That result is a defect in the preregistration. It does not authorize B to read
-`verify.py`, guess the intended claim, or weaken the attack. The candidate may
-be revised only by a new freeze and a new breaker attempt.
+The public deficiency report names only missing types, domains, equality rules,
+dependencies, thresholds, or output fields. It must not disclose an attack
+strategy, candidate counterexample, or implementation hint.
 
-After both programs are frozen, compare claims, domains, thresholds, outputs,
-and fired falsifiers. Running A's verifier on a second machine is reproduction
-only. Independent confirmation requires the frozen B route.
+### Revision 2
+
+The builder may publish one revised preregistration under a new pin. A different
+`BREAKER_SESSION`, which has not read `verify.py`, `break.py`, or private attack
+reasoning from revision 1, performs the second blind attempt.
+
+A second `BLIND-BREAKER-UNDERSPECIFIED / STOP` terminates the candidate. Further
+work requires a new candidate identifier and object-lock review. There is no
+third revision under the same candidate.
+
+The repository checker can validate files, pins, declared sessions, and visible
+references. It cannot prove what an agent saw outside Git. The independence
+statement is therefore a signed process assertion bounded by the auditable Git
+record, never a machine-proved fact.
+
+After both routes are frozen, compare claims, domains, thresholds, outputs, and
+fired falsifiers. Running the builder's verifier on another machine is
+reproduction only.
 
 ## 8. Promotion and naming
 
-Never infer a public target name by deleting a prefix or copying an internal
+Never infer a public target name by deleting a prefix or copying a development
 identifier. Every incubation package carries one explicit, single-valued
 promotion map in `PROMO.md`:
 
@@ -183,19 +206,29 @@ target_claim_id:
 A field may be `NONE`, but may not contain alternatives. Before promotion,
 search issues, branches, probes, the registry, and current promotion packages
 for every target. Any duplicate target, multiple possible target, naming
-collision, or mismatch between content and target is `PROMO-NAME-COLLISION /
-STOP`. Resolution requires a new owner ruling before a public branch is
-created.
+collision, or mismatch between content and target is a terminal STOP. Resolution
+requires a new owner ruling before a public branch is created.
 
 Examples such as `C-FOO-BAR-1` to `FOO-BAR` are illustrations only. They are
-never an implicit renaming rule.
+never implicit renaming rules.
 
-## 9. Pull requests and safety
+## 9. Machine enforcement boundary
+
+`tools/check_incubation.py` validates the visible incubation contract, including
+package shape, manifest fields, duplicate targets, forbidden alternatives,
+visible premature verifier references, session declarations, and public run
+record hygiene.
+
+The checker does not prove mathematical equivalence of scopes, independence of
+human knowledge, or absence of information exchanged outside Git. Those remain
+explicit process claims and review obligations.
+
+## 10. Pull requests and safety
 
 Stage named files only. A pull request changes only the declared scope. Run the
-repository policy, unit, Canon, ledger, verifier, and reproduction checks that
-apply. Perform the manual security and licence review. Preserve fired
-falsifiers. Merge without squash or rebase when the repository procedure
+repository policy, unit, Canon, ledger, incubation, verifier, and reproduction
+checks that apply. Perform the manual security and licence review. Preserve
+fired falsifiers. Merge without squash or rebase when the repository procedure
 requires provenance.
 
 Do not add or loosen workflows without an explicit policy change. Never commit
@@ -208,13 +241,13 @@ Commit as exactly:
 A. M. Thorn <thorn@twistj.com>
 ```
 
-## 10. Stop conditions
+## 11. Stop conditions
 
 Stop without guessing on unclear authority, stale base, failed readback,
-missing support, incomplete types, ambiguous equality, issue collision,
-branch collision, probe collision, naming collision, premature data access,
-changed pinned bytes, moved threshold, unnamed layer lift, failed architecture
-gate, verifier portability failure, licence uncertainty, or public-safety
-doubt.
+missing support, incomplete types, ambiguous equality, object collision, issue
+collision, branch collision, probe collision, naming collision, premature data
+access, changed pinned bytes, moved threshold, unnamed layer lift, failed
+workflow architecture gate, verifier portability failure, licence uncertainty,
+or public-safety doubt.
 
 Simplicity is the ultimate perfection. Negative results are first-class.
