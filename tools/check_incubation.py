@@ -21,39 +21,30 @@ PROBE_ID = re.compile(r"^P-[A-Z0-9][A-Z0-9-]*$")
 PROBE_BRANCH = re.compile(r"^probe/P-[A-Z0-9][A-Z0-9-]*$")
 RESULTS = {"candidate-T", "candidate-D", "candidate-C", "NEGATIVE", "STOP"}
 CLAIM_FIELDS = (
-    "incubation_id",
-    "object_key",
-    "claim_key",
-    "claim_issue",
-    "owner_session",
-    "builder_session",
-    "status",
-    "scope",
-    "excluded_scope",
-    "dependencies",
-    "action_layer",
+    "incubation_id", "object_key", "claim_key", "claim_issue",
+    "owner_session", "builder_session", "status", "scope",
+    "excluded_scope", "dependencies", "action_layer",
 )
 PROMO_FIELDS = (
-    "incubation_id",
-    "target_issue",
-    "target_branch",
-    "target_probe_id",
-    "target_claim_id",
+    "incubation_id", "target_issue", "target_branch",
+    "target_probe_id", "target_claim_id",
 )
 FORBIDDEN_ALTERNATIVES = (" or ", "|", "*", "?", "[", "]", ",")
 FORBIDDEN_RUN_FIELDS = {
-    "host",
-    "hostname",
-    "machine",
-    "machine_name",
-    "machine_nickname",
-    "runner_name",
+    "host", "hostname", "machine", "machine_name",
+    "machine_nickname", "runner_name",
 }
 PRIVATE_IPV4 = re.compile(
     r"\b(?:10(?:\.\d{1,3}){3}|192\.168(?:\.\d{1,3}){2}|"
     r"172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2})\b"
 )
+MACHINE_NICKNAME = re.compile(
+    r"\b(?:JAS(?:\s+[0-9]+)?|TWISTER|PIJAM|PIZE)\b", re.IGNORECASE
+)
 FIELD = re.compile(r"^([a-z][a-z0-9_]*):[ \t]*(.*?)[ \t]*$")
+BREAKER_SESSION = re.compile(
+    r"(?m)^BREAKER_SESSION\s*=\s*['\"]([A-Za-z0-9._:-]+)['\"]\s*$"
+)
 
 
 def parse_fields(path: Path) -> tuple[dict[str, str], dict[str, int]]:
@@ -70,11 +61,7 @@ def parse_fields(path: Path) -> tuple[dict[str, str], dict[str, int]]:
     return values, dict(counts)
 
 
-def require_fields(
-    path: Path,
-    required: tuple[str, ...],
-    errors: list[str],
-) -> dict[str, str]:
+def require_fields(path: Path, required: tuple[str, ...], errors: list[str]) -> dict[str, str]:
     values, counts = parse_fields(path)
     for field in required:
         count = counts.get(field, 0)
@@ -89,14 +76,17 @@ def require_fields(
 
 def has_alternative(value: str) -> bool:
     lowered = f" {value.lower()} "
-    return any(token in lowered if token == " or " else token in value
-               for token in FORBIDDEN_ALTERNATIVES)
+    for token in FORBIDDEN_ALTERNATIVES:
+        if token == " or ":
+            if token in lowered:
+                return True
+        elif token in value:
+            return True
+    return False
 
 
 def check_claim(path: Path, candidate: str, errors: list[str]) -> None:
     values = require_fields(path, CLAIM_FIELDS, errors)
-    if not values:
-        return
     if values.get("incubation_id") not in {None, candidate}:
         errors.append(f"{path.as_posix()}: incubation_id must equal {candidate}")
     if values.get("status") not in {None, "NO-AUTHORITY"}:
@@ -115,11 +105,10 @@ def check_claim(path: Path, candidate: str, errors: list[str]) -> None:
 
 def check_prereg(path: Path, errors: list[str]) -> None:
     values, counts = parse_fields(path)
-    revision_count = counts.get("prereg_revision", 0)
-    if revision_count != 1:
+    count = counts.get("prereg_revision", 0)
+    if count != 1:
         errors.append(
-            f"{path.as_posix()}: field prereg_revision appears {revision_count} times, "
-            "must be exactly 1"
+            f"{path.as_posix()}: field prereg_revision appears {count} times, must be exactly 1"
         )
     elif values.get("prereg_revision") not in {"1", "2"}:
         errors.append(f"{path.as_posix()}: prereg_revision must be 1 or 2")
@@ -142,28 +131,26 @@ def check_breaker(path: Path, errors: list[str]) -> None:
             f"{path.as_posix()}: PREMATURE-VERIFIER-DISCLOSURE / STOP: "
             "break.py visibly references verify.py"
         )
-    values, counts = parse_fields(path)
-    count = counts.get("breaker_session", 0)
-    if count != 1:
+    matches = BREAKER_SESSION.findall(text)
+    if len(matches) != 1:
         errors.append(
-            f"{path.as_posix()}: field breaker_session appears {count} times, "
-            "must be exactly 1"
+            f"{path.as_posix()}: BREAKER_SESSION appears {len(matches)} times, must be exactly 1"
         )
-    elif not values.get("breaker_session") or any(
-        ch.isspace() for ch in values["breaker_session"]
-    ):
-        errors.append(f"{path.as_posix()}: breaker_session must be one nonempty token")
 
 
-def check_result(path: Path, errors: list[str]) -> None:
+def check_result(path: Path, errors: list[str]) -> str | None:
     values, counts = parse_fields(path)
     count = counts.get("result", 0)
     if count != 1:
         errors.append(
             f"{path.as_posix()}: field result appears {count} times, must be exactly 1"
         )
-    elif values.get("result") not in RESULTS:
-        errors.append(f"{path.as_posix()}: invalid incubation result {values.get('result')!r}")
+        return None
+    result = values.get("result")
+    if result not in RESULTS:
+        errors.append(f"{path.as_posix()}: invalid incubation result {result!r}")
+        return None
+    return result
 
 
 def check_promo(
@@ -173,8 +160,6 @@ def check_promo(
     errors: list[str],
 ) -> None:
     values = require_fields(path, PROMO_FIELDS, errors)
-    if not values:
-        return
     if values.get("incubation_id") not in {None, candidate}:
         errors.append(f"{path.as_posix()}: incubation_id must equal {candidate}")
     for field in PROMO_FIELDS[1:]:
@@ -209,15 +194,15 @@ def check_run_records(root: Path, errors: list[str]) -> None:
             paths.extend(path for path in base.rglob("*.md") if path.name.startswith("RUN"))
     for path in sorted(paths):
         text = path.read_text(encoding="utf-8")
+        relative = path.relative_to(root).as_posix()
         if PRIVATE_IPV4.search(text) or ".local" in text.lower():
-            errors.append(f"{path.relative_to(root).as_posix()}: private infrastructure is forbidden")
+            errors.append(f"{relative}: private infrastructure is forbidden")
+        if MACHINE_NICKNAME.search(text):
+            errors.append(f"{relative}: machine nickname is forbidden")
         for number, raw in enumerate(text.splitlines(), 1):
             match = FIELD.fullmatch(raw)
             if match and match.group(1) in FORBIDDEN_RUN_FIELDS:
-                errors.append(
-                    f"{path.relative_to(root).as_posix()}:{number}: "
-                    f"forbidden run-record field {match.group(1)}"
-                )
+                errors.append(f"{relative}:{number}: forbidden run-record field {match.group(1)}")
 
 
 def findings(root: Path = ROOT) -> tuple[list[str], int]:
@@ -236,23 +221,37 @@ def findings(root: Path = ROOT) -> tuple[list[str], int]:
         candidate = candidate_path.name
         claim = candidate_path / "CLAIM.md"
         prereg = candidate_path / "PREREG.md"
-        verifier = candidate_path / "verify.py"
-        result = candidate_path / "RESULT.md"
-        for required in (claim, prereg, verifier, result):
+        for required in (claim, prereg):
             if not required.is_file():
                 errors.append(f"{required.relative_to(root).as_posix()}: missing required file")
         if claim.is_file():
-            check_claim(claim.relative_to(root), candidate, errors)
+            check_claim(claim, candidate, errors)
         if prereg.is_file():
-            check_prereg(prereg.relative_to(root), errors)
+            check_prereg(prereg, errors)
+
+        verifier = candidate_path / "verify.py"
         breaker = candidate_path / "break.py"
-        if breaker.is_file():
-            check_breaker(breaker.relative_to(root), errors)
-        if result.is_file():
-            check_result(result.relative_to(root), errors)
+        result_path = candidate_path / "RESULT.md"
         promo = candidate_path / "PROMO.md"
+        result: str | None = None
+        if breaker.is_file():
+            if not verifier.is_file():
+                errors.append(f"{verifier.relative_to(root).as_posix()}: required when break.py exists")
+            check_breaker(breaker, errors)
+        if result_path.is_file():
+            if not verifier.is_file():
+                errors.append(f"{verifier.relative_to(root).as_posix()}: required when RESULT.md exists")
+            result = check_result(result_path, errors)
         if promo.is_file():
-            check_promo(promo.relative_to(root), candidate, promotion_claims, errors)
+            if not verifier.is_file():
+                errors.append(f"{verifier.relative_to(root).as_posix()}: required when PROMO.md exists")
+            if not result_path.is_file():
+                errors.append(f"{result_path.relative_to(root).as_posix()}: required when PROMO.md exists")
+            if not breaker.is_file() and result != "STOP":
+                errors.append(
+                    f"{breaker.relative_to(root).as_posix()}: required for promotion unless result is STOP"
+                )
+            check_promo(promo, candidate, promotion_claims, errors)
 
     for target, owners in sorted(promotion_claims.items()):
         if len(owners) > 1:
