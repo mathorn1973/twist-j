@@ -171,6 +171,41 @@ python: 3.12.3
             errors, _ = check.findings(root)
             self.assertTrue(any("BREAKER-VERIFIER-ANCESTRY" in error for error in errors))
 
+    def test_breaker_must_be_direct_child_of_prereg(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.init_repo(root)
+            base = self.claim(root)
+            prereg = root / base / "PREREG-r1.md"
+            digest = hashlib.sha256(prereg.read_bytes()).hexdigest()
+            self.write(root, "README.md", "intermediate\n")
+            self.commit(root, "intermediate commit")
+            self.write(
+                root,
+                f"{base}/break/r1/break.py",
+                self.breaker_text("sess-b", 1, digest, "print('PASS')\n"),
+            )
+            self.commit(root, "late breaker")
+            errors, _ = check.findings(root)
+            self.assertTrue(any("BREAKER-NOT-DIRECT-CHILD" in error for error in errors))
+
+    def test_breaker_freeze_commit_changes_one_artifact_only(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.init_repo(root)
+            base = self.claim(root)
+            prereg = root / base / "PREREG-r1.md"
+            digest = hashlib.sha256(prereg.read_bytes()).hexdigest()
+            self.write(
+                root,
+                f"{base}/break/r1/break.py",
+                self.breaker_text("sess-b", 1, digest, "print('PASS')\n"),
+            )
+            self.write(root, "README.md", "extra change\n")
+            self.commit(root, "impure breaker freeze")
+            errors, _ = check.findings(root)
+            self.assertTrue(any("BREAKER-FREEZE-SCOPE" in error for error in errors))
+
     def test_dynamic_verifier_name_is_safe_only_on_blind_branch(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -193,21 +228,13 @@ python: 3.12.3
             self.init_repo(root)
             base = self.claim(root)
             name = Path(base).name
-            self.write(
-                root,
-                f"{base}/RESULT.md",
-                "result: STOP\nstop_reason: owner-went-on-holiday\n",
-            )
-            self.write(
-                root,
-                f"{base}/PROMO.md",
-                f"""incubation_id: {name}
+            self.write(root, f"{base}/RESULT.md", "result: STOP\nstop_reason: owner-went-on-holiday\n")
+            self.write(root, f"{base}/PROMO.md", f"""incubation_id: {name}
 target_issue: NONE
 target_branch: NONE
 target_probe_id: NONE
 target_claim_id: NONE
-""",
-            )
+""")
             self.commit(root, "invalid unrelated stop")
             errors, _ = check.findings(root)
             self.assertTrue(any("exact underspecified STOP" in error for error in errors))
@@ -219,33 +246,21 @@ target_claim_id: NONE
             base = self.claim(root)
             prereg = root / base / "PREREG-r1.md"
             digest = hashlib.sha256(prereg.read_bytes()).hexdigest()
-            self.write(
-                root,
-                f"{base}/BREAK-r1.md",
-                f"""breaker_session: sess-b
+            self.write(root, f"{base}/BREAK-r1.md", f"""breaker_session: sess-b
 prereg_revision: 1
 prereg_sha256: {digest}
 stop_reason: BLIND-BREAKER-UNDERSPECIFIED
 missing_types: output equality
-""",
-            )
+""")
             self.commit(root, "freeze underspecified report")
             name = Path(base).name
-            self.write(
-                root,
-                f"{base}/RESULT.md",
-                "result: STOP\nstop_reason: BLIND-BREAKER-UNDERSPECIFIED\n",
-            )
-            self.write(
-                root,
-                f"{base}/PROMO.md",
-                f"""incubation_id: {name}
+            self.write(root, f"{base}/RESULT.md", "result: STOP\nstop_reason: BLIND-BREAKER-UNDERSPECIFIED\n")
+            self.write(root, f"{base}/PROMO.md", f"""incubation_id: {name}
 target_issue: NONE
 target_branch: NONE
 target_probe_id: NONE
 target_claim_id: NONE
-""",
-            )
+""")
             self.commit(root, "record exact stop")
             errors, _ = check.findings(root)
             self.assertEqual(errors, [])
@@ -257,26 +272,18 @@ target_claim_id: NONE
             base = self.claim(root)
             prereg1 = root / base / "PREREG-r1.md"
             digest1 = hashlib.sha256(prereg1.read_bytes()).hexdigest()
-            self.write(
-                root,
-                f"{base}/BREAK-r1.md",
-                f"""breaker_session: sess-b
+            self.write(root, f"{base}/BREAK-r1.md", f"""breaker_session: sess-b
 prereg_revision: 1
 prereg_sha256: {digest1}
 stop_reason: BLIND-BREAKER-UNDERSPECIFIED
 missing_types: equality
-""",
-            )
+""")
             self.commit(root, "freeze report r1")
             self.write(root, f"{base}/PREREG-r2.md", "prereg_revision: 2\n")
             self.commit(root, "freeze prereg r2")
             prereg2 = root / base / "PREREG-r2.md"
             digest2 = hashlib.sha256(prereg2.read_bytes()).hexdigest()
-            self.write(
-                root,
-                f"{base}/break/r2/break.py",
-                self.breaker_text("sess-b", 2, digest2, "print('PASS')\n"),
-            )
+            self.write(root, f"{base}/break/r2/break.py", self.breaker_text("sess-b", 2, digest2, "print('PASS')\n"))
             self.commit(root, "freeze breaker r2")
             errors, _ = check.findings(root)
             self.assertTrue(any("different breaker_session" in error for error in errors))
@@ -286,11 +293,7 @@ missing_types: equality
             root = Path(tmp)
             self.valid_integrated_candidate(root)
             promo = root / "notes/incubation/C-ALPHA-1/PROMO.md"
-            promo.write_text(
-                promo.read_text(encoding="utf-8")
-                + " target_branch: probe/P-DECOY-9\n",
-                encoding="utf-8",
-            )
+            promo.write_text(promo.read_text(encoding="utf-8") + " target_branch: probe/P-DECOY-9\n", encoding="utf-8")
             self.commit(root, "add hidden field")
             errors, _ = check.findings(root)
             self.assertTrue(any("indented manifest field" in error for error in errors))
@@ -301,10 +304,7 @@ missing_types: equality
             self.init_repo(root)
             for name in ("C-ALPHA-1", "C-BETA-1"):
                 base = f"notes/incubation/{name}"
-                self.write(
-                    root,
-                    f"{base}/CLAIM.md",
-                    f"""incubation_id: {name}
+                self.write(root, f"{base}/CLAIM.md", f"""incubation_id: {name}
 object_key: REGISTRY:TEST
 claim_key: {name}-CLAIM
 claim_issue: 1
@@ -315,8 +315,7 @@ scope: exact test scope
 excluded_scope: none
 dependencies: none
 action_layer: L1
-""",
-                )
+""")
                 self.write(root, f"{base}/PREREG-r1.md", "prereg_revision: 1\n")
                 self.write(root, f"{base}/RESULT.md", "result: STOP\nstop_reason: BLIND-BREAKER-UNDERSPECIFIED\n")
                 digest = hashlib.sha256((root / base / "PREREG-r1.md").read_bytes()).hexdigest()
