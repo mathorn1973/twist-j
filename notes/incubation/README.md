@@ -10,19 +10,22 @@ This directory is not Canon, a public probe, evidence, or a status ledger.
 Nothing here changes `canon/`, closes a frontier row, or earns public authority.
 `AGENTS.md` and `POLICY.md` govern all work.
 
-## 1. Line split
+## 1. Roles and handoff
 
-The current division is:
+Use the stable roles from `AGENTS.md`:
 
 ```text
-PUBLIC_AGENT    ChatGPT
-INTERNAL_AGENT  Claude
+PUBLIC_ROLE
+BUILDER_ROLE
+BREAKER_ROLE
+ARCHITECTURE_RUNNER_ROLE
 ```
 
-The public agent owns GitHub claims, public branches, formal probes, folds, and
-pull requests. The internal agent owns authority-free incubation and adversarial
-breaking. The former private repository remains read-only history under public
-policy.
+Concrete products, people, machines, and sessions are assigned in the claim
+issue or run record. They are not fixed by this README.
+
+Public `main` is the sole public scientific authority. Other work has no public
+authority until handed off through Git and accepted by the public procedure.
 
 The only handoff is a committed `PROMO.md` package in public Git. An attachment,
 private workspace, or chat summary is not a handoff and carries no currency.
@@ -39,31 +42,46 @@ C-<TOPIC>-<N>
 integer. The identifier names the incubation package only. It does not imply a
 public claim, probe, branch, or registry identifier.
 
-Example:
+## 3. Object lock before files
+
+Before creating a candidate directory, define:
 
 ```text
-C-FOO-BAR-1
+OBJECT_KEY
+CLAIM_KEY
+OWNER_SESSION
 ```
 
-The example does not authorize an inferred public name.
+For an existing object, `OBJECT_KEY` is its public registry, frontier, probe,
+policy, or file identifier. A new object uses `NEW:<sha256>` of the exact UTF-8,
+LF-terminated scope statement stored in the issue.
 
-## 3. Atomic claim before files
+Then:
 
-Before creating a candidate directory:
+1. create one GitHub issue already assigned in the same server-side operation;
+2. record the three identifiers in the issue body;
+3. read the issue back;
+4. create no branch or commit before that readback.
 
-1. choose one exact `CLAIM_KEY`;
-2. create one GitHub issue already assigned in the same server-side operation;
-3. record a unique non-secret `OWNER_SESSION` in the issue body;
-4. read the issue back;
-5. create no branch or commit before that readback.
+Among active builder issues with the same exact `OBJECT_KEY`, the lowest issue
+number is the sole build owner. Every higher-numbered issue stops and closes as
+duplicate before committing. A breaker works against the winning issue and does
+not acquire a competing build lock.
 
-For concurrent issues with the same exact `CLAIM_KEY`, the lowest issue number
-is the sole winner. Every higher-numbered issue stops and closes as duplicate
-before committing. This rule also distinguishes sessions that share one GitHub
-account.
+A lock has no automatic timeout. Release requires an issue comment containing
+exactly:
 
-The issue owns one candidate. Reviewers and breakers do not acquire a competing
-build lock.
+```text
+LOCK_RELEASED
+```
+
+followed by unassignment or closure by the owner session or repository owner. A
+successor must read the release record before claiming the object.
+
+String equality is not a theorem of content equality. Search issues, branches,
+probes, the registry, and promotion packages for equivalent scopes. A suspected
+equivalence is `OBJECT-COLLISION / STOP` until an owner ruling identifies or
+separates the objects.
 
 ## 4. Directory shape
 
@@ -86,14 +104,15 @@ exist.
 
 ### `CLAIM.md`
 
-Records:
+Records exactly one value for:
 
 ```text
 incubation_id
+object_key
 claim_key
 claim_issue
 owner_session
-target_line: INTERNAL-INCUBATION
+builder_session
 status: NO-AUTHORITY
 scope
 excluded_scope
@@ -115,19 +134,35 @@ Freezes six fields before computation:
 ```
 
 It also defines every output field needed by an independent breaker. A breaker
-must be able to tell what would falsify the claim without reading `verify.py`.
+must be able to determine what would falsify the claim without reading
+`verify.py`.
+
+A revision records:
+
+```text
+prereg_revision: 1 or 2
+prereg_sha256
+```
+
+There is no revision 3 under one candidate identifier.
 
 ### `verify.py`
 
-Agent A's exact construction route. Standard library only. Integers and exact
-rational arithmetic first. Scientific stdout follows the portability rules in
-`AGENTS.md`.
+The builder's exact construction route. Standard library only. Integers and
+exact rational arithmetic first. Scientific stdout follows the portability
+rules in `AGENTS.md`.
 
 ### `break.py`
 
-Agent B's independent attack, written only from the frozen `PREREG.md` and its
-explicitly named public dependencies. It must not import, invoke, wrap, copy,
-or inspect `verify.py` before its own freeze.
+The breaker's independent attack, written only from the frozen `PREREG.md` and
+its explicitly named public dependencies. It must not import, invoke, wrap,
+copy, translate, or inspect `verify.py` before its own freeze.
+
+It records a distinct non-secret:
+
+```text
+breaker_session
+```
 
 ### `RESULT.md`
 
@@ -152,65 +187,77 @@ It contains the explicit target map defined below.
 
 ## 5. Blind-breaker protocol
 
-Agent A freezes `PREREG.md` and writes `verify.py`.
+The builder freezes `PREREG.md` revision 1 and writes `verify.py`.
 
-Agent B receives only:
+The breaker receives only:
 
 - the exact frozen `PREREG.md`;
 - public dependencies explicitly named there;
 - no verifier bytes, verifier diff, expected output, implementation hint, or
   private explanation.
 
-B writes and freezes `break.py` before any comparison with A's implementation.
-The breaker must use an independent representation, derivation, enumeration,
-invariant, or code path.
+The breaker writes and freezes `break.py` before any comparison with the
+builder's implementation. The breaker must use an independent representation,
+derivation, enumeration, invariant, or code path.
 
-If B cannot construct a well-typed attack from the preregistration alone, B
-does not inspect `verify.py`. B records in `RESULT.md`:
+### First underspecification
+
+If no well-typed attack can be constructed, the breaker records:
 
 ```text
 BLIND-BREAKER-UNDERSPECIFIED / STOP
 ```
 
-This falsifies the adequacy of the preregistration for blind confirmation. A
-new attempt requires a new preregistration freeze and a new breaker freeze.
-The missing information may not be supplied privately after the pin.
+The deficiency report lists only missing types, domains, equality rules,
+dependencies, thresholds, or output fields. It must not disclose an attack
+strategy, candidate counterexample, or implementation hint.
 
-If B merely runs or translates A's verifier, the result is reproduction. It is
-never independent confirmation.
+The builder may publish one revised preregistration under revision 2 and a new
+pin.
+
+### Second attempt
+
+A different `breaker_session`, which has not read `verify.py`, the first
+`break.py`, or private attack reasoning, performs the second blind attempt.
+
+A second `BLIND-BREAKER-UNDERSPECIFIED / STOP` terminates the candidate. Further
+work requires a new candidate identifier and a fresh object-lock review. There
+is no third iteration under the same candidate.
+
+The missing information may not be supplied privately after either pin.
+
+If a breaker merely runs or translates the builder's verifier, the result is
+reproduction. It is never independent confirmation.
 
 After both routes are frozen, compare exact domains, equality, thresholds,
 outputs, and falsifiers. Disagreement is a first-class result. Never repair a
 candidate by moving a threshold or changing the claim after opening either
 result.
 
-## 6. Computation topology
+The checker validates visible files, fields, hashes, sessions, and references.
+It cannot prove what an agent saw outside Git. Blind independence is therefore
+a signed process assertion bounded by the public Git record.
 
-The automatic GitHub pull-request check is the x86_64 leg. The designated
-internal-side runner supplies the aarch64 leg before merge, using neutral fields
-only:
+## 6. Formal computation boundary
 
-```text
-platform: Ubuntu 24.04
-architecture: aarch64
-```
+Public computation status is governed by `AGENTS.md` section 6, `Formal public
+computation gate`, and by the pinned workflow.
 
-No machine nickname enters public records. `EXPECTED.txt` contains exact
-stdout for a promoted formal probe. `RUN.md` contains the aarch64 candidate pin,
-verifier SHA-256, stdout SHA-256, byte counts, exit code, Python version, and
-neutral platform fields.
+A manually written architecture value in `RUN.md` is audit metadata only. It is
+not proof of machine identity. A computation-only public `T` requires successful
+required workflow jobs on x86_64 and aarch64 against the same PR head, verifier,
+and committed `EXPECTED.txt`.
 
-A local ChatGPT run is x86_64 and contributes no second architecture. Without a
-genuine aarch64 record, a computation-only result is at most `C` after public
-fold, regardless of how many x86_64 reruns agree.
+Local and incubation reruns are development evidence only. Repeated runs on one
+architecture contribute no second architecture.
 
-Incubation reruns are evidence for development only. Public computation status
-is earned solely by the public probe procedure.
+Public run records use neutral fields. Machine nicknames and private
+infrastructure are forbidden and checked under `probes/` and `reproduce/`.
 
 ## 7. Portable verifier output
 
-The construction and breaker must remain byte-stable across the supported
-Python 3.12 and 3.13 lanes.
+The construction and breaker must remain byte-stable across every architecture
+and Python minor version exercised by the required workflow.
 
 Print only explicit finite strings, integers, signs, and rationals. Format a
 rational manually as `numerator/denominator`; print denominator one as an
@@ -228,7 +275,7 @@ contains exactly one value for each field:
 
 ```text
 incubation_id: C-FOO-BAR-1
-target_issue: 181
+target_issue: NONE
 target_branch: probe/P-FOO-1
 target_probe_id: P-FOO-1
 target_claim_id: FOO-BAR
@@ -237,7 +284,7 @@ target_claim_id: FOO-BAR
 A target may be `NONE`. A field may not contain alternatives, wildcards,
 fallbacks, or prose choices.
 
-Before any public branch is created, the public agent searches:
+Before any public branch is created, search:
 
 - open and closed issues;
 - branches;
@@ -268,14 +315,31 @@ PREREG-C-FOO-1.md -> probes/P-FOO-1/PREREG.md
 
 are illustrations only. The explicit `PROMO.md` fields are the sole mapping.
 
-## 9. Promotion boundary
+## 9. Machine enforcement
+
+`tools/check_incubation.py` checks the visible contract:
+
+- candidate directory and file names;
+- required single-valued fields;
+- object, claim, owner, builder, and breaker session declarations;
+- preregistration revision bounds;
+- forbidden alternatives and duplicate promotion targets;
+- visible references from `break.py` to `verify.py`;
+- stable public result labels;
+- machine nicknames and private infrastructure in public run records.
+
+It does not prove mathematical equivalence of scopes, independence of private
+knowledge, or absence of information exchanged outside Git. Those remain
+review obligations and signed process claims.
+
+## 10. Promotion boundary
 
 A complete incubation package may be proposed for public work only when:
 
-1. the issue lock is valid;
+1. the object lock is valid;
 2. the preregistration is frozen and adequate;
 3. the construction result is exact;
-4. the blind breaker is frozen or has returned the underspecified STOP;
+4. the blind breaker is frozen or has returned the bounded underspecified STOP;
 5. all negative results are retained;
 6. the promotion map is single-valued and collision-free;
 7. licence and public-safety review pass.
@@ -284,13 +348,13 @@ Promotion occurs only through a new public claim and the procedure in
 `POLICY.md` and `AGENTS.md`. Files are rewritten into the public probe shape;
 incubation labels do not become public statuses automatically.
 
-## 10. Stop conditions
+## 11. Stop conditions
 
-Stop on stale public base, unclear authority, duplicate claim ownership,
+Stop on stale public base, unclear authority, duplicate object ownership,
 ambiguous target, missing type, hidden dependency, inadequate preregistration,
 premature verifier disclosure, changed pinned bytes, moved threshold, reused
-breaker, unnamed layer lift, same-architecture inflation, licence uncertainty,
-or public-safety doubt.
+breaker session, unnamed layer lift, same-architecture inflation, licence
+uncertainty, or public-safety doubt.
 
 Negative results are first-class. Incubation exists to make failure cheap,
 precise, and visible before public authority is requested.
