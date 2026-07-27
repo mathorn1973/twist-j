@@ -127,6 +127,7 @@ for invariant in (
     "python tools/check_policy.py",
     "python tools/check_canon.py",
     "python tools/check_ledger.py",
+    "python tools/check_incubation.py",
     "python tools/check_activation.py --full",
     "name: Run activation readback on immutable publication events",
     "if: github.ref_type == 'tag' || github.event_name == 'release'",
