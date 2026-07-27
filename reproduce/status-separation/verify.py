@@ -122,8 +122,8 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 109, "D": 40, "C": 22, "F": 10,
-                       "O": 24, "H": 3}
+    expected_counts = {"T": 110, "D": 40, "C": 22, "F": 10,
+                       "O": 23, "H": 3}
     checks.append((
         "COUNTS",
         "registry has 208 claims with the current status partition",
@@ -155,17 +155,18 @@ def run():
         and scope_lacks(index, "Z2-PLACES-SPLIT", ("cpt", "force", "spin")),
     ))
 
-    owner_dependencies = [
-        row for row in dependencies
-        if row["item_id"] == "KERNEL-Z6-SYNCHRONIZATION"
+    kernel = "KERNEL-Z6-SYNCHRONIZATION"
+    kernel_path = "probes/P-KERNEL-Z6-SYNCHRONIZATION-1"
+    kernel_digest = "7ac0cae9685575c8bd92f1c3f39603e0fc7a148fae5db80746fbcc1e5e4de1b9"
+    kernel_dependencies = [
+        row for row in dependencies if row["item_id"] == kernel
     ]
     checks.append((
         "CARRY",
-        "carry theorems stay T; synchronization owner stays O and fenced",
+        "carry and synchronization all-n theorems stay T and physically fenced",
         all(has_status(index, claim, "T") for claim in
             ("RAMIFIED-TM-LIFT", "CARRY-J-CHECKPOINT", "CARRY-PENTAD",
-             "SQRT-PHI-DIGIT-LIFT"))
-        and has_status(index, "KERNEL-Z6-SYNCHRONIZATION", "O")
+             "SQRT-PHI-DIGIT-LIFT", kernel))
         and scope_contains_all(index, "CARRY-PENTAD",
                                ("selects no prime", "physical reading"))
         and scope_contains_all(index, "RAMIFIED-TM-LIFT",
@@ -177,27 +178,25 @@ def run():
         and scope_contains_all(index, "SQRT-PHI-DIGIT-LIFT",
                                ("not constant", "no sign-branch selection",
                                 "gravity dynamics"))
-        and scope_contains_all(index, "KERNEL-Z6-SYNCHRONIZATION",
-                               ("fixed known n",
-                                "q_n is not the checkpoint coordinate q",
-                                "no unindexed checkpoint-fiber",
+        and scope_contains_all(index, kernel,
+                               ("at each fixed known n",
+                                "q_n is a sheet label and not the checkpoint coordinate q",
+                                "no unknown-time or unindexed checkpoint-fiber",
                                 "physical-irreversibility",
-                                "L2-L6 claim is included"))
-        and normative["KERNEL-Z6-SYNCHRONIZATION"]["item_type"] == "OBLIGATION"
-        and normative["KERNEL-Z6-SYNCHRONIZATION"]["layer"] == "L1"
-        and normative["KERNEL-Z6-SYNCHRONIZATION"]["gate_ids"] == ""
-        and len(owner_dependencies) == 1
-        and owner_dependencies[0]["depends_on"] == "DEF-AUTONOMOUS-STATE"
-        and owner_dependencies[0]["relation"] == "REQUIRES"
-        and evidence["KERNEL-Z6-SYNCHRONIZATION"]["evidence_kind"]
-            == "INLINE_CANON"
-        and evidence["KERNEL-Z6-SYNCHRONIZATION"]
-            ["architecture_requirement"] == "none"
-        and programs["KERNEL-Z6-SYNCHRONIZATION"]["program_id"]
-            == "DECODER_CORE"
-        and programs["KERNEL-Z6-SYNCHRONIZATION"]["queue_role"] == "ROOT"
-        and programs["KERNEL-Z6-SYNCHRONIZATION"]["work_state"] == "READY"
-        and programs["KERNEL-Z6-SYNCHRONIZATION"]["work_mode"] == "FORMAL",
+                                "no L2-L6 claim is included"))
+        and normative[kernel]["item_type"] == "THEOREM"
+        and normative[kernel]["status"] == "T"
+        and normative[kernel]["layer"] == "L1"
+        and normative[kernel]["gate_ids"] == ""
+        and len(kernel_dependencies) == 1
+        and kernel_dependencies[0]["depends_on"] == "DEF-AUTONOMOUS-STATE"
+        and kernel_dependencies[0]["relation"] == "REQUIRES"
+        and evidence[kernel]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence[kernel]["location"] == kernel_path
+        and evidence[kernel]["sha256"] == kernel_digest
+        and evidence[kernel]["hash_mode"] == "bundle-manifest-sha256-v1"
+        and evidence[kernel]["architecture_requirement"] == "two-architecture"
+        and kernel not in programs,
     ))
 
     checks.append((

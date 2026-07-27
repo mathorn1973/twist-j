@@ -11,8 +11,8 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/FRONTIER_PROGRAMS.tsv`, uses the Python standard library, and emits
 deterministic text. Its sixteen checks cover the current registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
-checkpoint no-go, and the separately fenced KERNEL-Z6-SYNCHRONIZATION
-owner, the finite Weyl commutator, the Maxwell chain, the Born
+checkpoint no-go, and the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem,
+the finite Weyl commutator, the Maxwell chain, the Born
 finite algebra, the color ladder, the exact Gyron discrepancy and forward
 pair-substitution theorems, their corrected stationary-density boundary,
 and the separate cosmology dictionary, the Schwinger target firewall, the
