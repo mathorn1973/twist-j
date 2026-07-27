@@ -24,11 +24,8 @@ manifests, and independent reproductions.
 
 ## Versioning
 
-Public Canon releases use positive whole numbers only. This release is version
-`24`, tagged `canon-v24`; versions `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`,
-`10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`, `21`, `22`,
-and `23` remain immutable preceding releases. A later normative replacement
-is version `25`, then version `26`, and so on.
+Public Canon releases are numbered with positive integers beginning at `1`.
+The current release is Public Canon v24, tagged `canon-v24`.
 There are no decimal Canon versions such as `1.1` or `1.2`; non-normative
 documentation corrections do not create a new Canon.
 
