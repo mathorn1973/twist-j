@@ -511,3 +511,66 @@ verifier, run, decoder write, physical completeness, or status change occurs.
 This action is stacked on draft #189. It MUST NOT merge until #183, then #188,
 then #189 have each merged and been read back from public `main`, in that
 order.
+
+## 8. Post-merge scope amendment
+
+```text
+AMENDMENT DATE:         2026-07-27
+AMENDMENT EFFECT:       SCOPE CLARIFICATION ONLY
+PUBLIC MAIN BASE:       412d56fd46f3d6a919d17fdaaa39bb4c9bfc681b
+ORIGINAL PR / HEAD:     190 / cd2cb46c5d50a77c3d858ee954f27a62bd798eb6
+ORIGINAL MERGE COMMIT:  178d5cf9c108379dddd48ddb53b98077b2c227ce
+ORIGINAL FILE BLOB:     1c1ec92d99b70a1fe6b31ca13e4bc7893f36d837
+ORIGINAL FILE SHA-256:  ae488099bdf0c1a66bd234be74f8909110d04c7f817789c81de9ef83509412dc
+ORIGINAL FILE BYTES:    16884
+OWNER SCOPE RECORD:     issue 107, comment 5093205688
+AMENDMENT CLAIM:        issue 107, comment 5093431422
+FORMAL RUN:             NONE
+CANON/TABLE/GATE CHANGE: NONE
+QDD STATUS:             O / STOP, unchanged
+```
+
+This block is an append-only durability amendment. It does not alter the
+owner choice, definitions, identifiers, results, or original provenance
+above.
+
+For an arbitrary `S subset X`, where `S` is a local dummy variable unrelated
+to the named objects `S_beta` and `S_3`, put
+
+```text
+K_(0,S)={kappa_x:x in S},
+E_3(S)={E_3(x):x in S} subset X_1.
+```
+
+Restricting (4) gives the canonical bijection
+
+```text
+K_(0,S)/~tail0 -> E_3(S),    [kappa_x] |-> E_3(x).   (5a)
+```
+
+This remains the unique empty bijection when `S` is empty. The quotient is
+canonically the whole `X_1` exactly when
+
+```text
+E_3(S)=X_1
+iff S meets every E_3-fiber
+iff S intersect E_3^(-1)(y) is nonempty for every y in X_1.   (5b)
+```
+
+For `y in E_3(S)`, the corresponding quotient-projection fiber has size
+
+```text
+|S intersect E_3^(-1)(y)|.
+```
+
+The complete-sheet unions in Section 3.1 are the special case `S=X_Z`.
+Because every `E_3|X_z:X_z->X_1` is bijective, a nonempty `Z` gives
+`E_3(X_Z)=X_1` and constant fiber size `|Z|`, recovering (5). Thus the
+sentences "nonempty genesis-sheet families are canonically equivalent" and
+"local tail-universality theorem" above apply to the explicitly frozen
+complete-sheet-union class. For a general subset `S`, the canonical quotient
+is only `E_3(S)`.
+
+
+No new public or proposal-local identifier, start family, decoder field,
+dependency, gate, probe, evidence item, or status is introduced.
