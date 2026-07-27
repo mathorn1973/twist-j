@@ -1,12 +1,38 @@
 # Canon changelog (public series)
 
 
-## Public Canon v25
+## Public Canon v26
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 208 claims; 0 T-LOCK, 110 T, 40 D, 22 C, 3 H, 23 O, 10 F; 26 live H/O.
+Registry snapshot: 209 claims; 0 T-LOCK, 111 T, 40 D, 22 C, 3 H, 23 O, 10 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v26 registers exactly one new L1 theorem,
+C8-BILINEAR-SHADOW [T]. In `F_25`, the theorem identifies the two nonzero
+axes and all exact order-eight elements, proves that Frobenius exchanges the
+two registered digit branches, and constructs their branch-invariant record.
+The norm retains digit sum modulo 4, while the record resolves the declared
+even and odd-pair classes modulo 8 with exact witnesses.
+
+The immutable `probes/P-C8-BILINEAR-SHADOW-2` bundle is the sole evidence.
+Its formal aarch64 run produced `RESULT 6/6 ALL PASS`; GitHub policy run
+29948644987, job 89020433805, reproduced the pinned verifier and stdout byte
+identically on x86_64, and the final-head manual review closed the
+two-architecture gate. The pending wording in the frozen `RESULT.md` records
+its pre-CI chronology; no probe file is amended and no new formal evidence
+execution is used by this fold.
+
+The theorem selects no branch and adds no physical or gauge equivalence,
+checkpoint identification, clock, gravity, SI, force, uniqueness, decoder
+completion, or L2-L6 lift. `SQRT-PHI-TIME-GRAVITY [O]` remains open.
+
+## Public Canon v25
+
+<!-- BEGIN GENERATED CANON25 COUNTS -->
+Registry snapshot: 208 claims; 0 T-LOCK, 110 T, 40 D, 22 C, 3 H, 23 O, 10 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON25 COUNTS -->
 
 Public Canon v25 closes exactly one existing L1 owner.
 KERNEL-Z6-SYNCHRONIZATION moves from O to T because its preregistered

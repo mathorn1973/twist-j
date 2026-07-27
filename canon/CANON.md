@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v25
+# TWIST-J Public Canon v26
 
-**Release identity.** Public Canon v25. Normative authority and activation
+**Release identity.** Public Canon v26. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -1386,6 +1386,61 @@ probes/P-SQRT-PHI-DIGIT-1. Neither sign branch is physically selected; no
 checkpoint identification, physical tick, time arrow, gravity dynamics,
 coupling, SI scale, or lift to L2-L6 is claimed. The typed clock and gravity
 bridge remains SQRT-PHI-TIME-GRAVITY [O].
+
+The two-branch lift has an exact branch-invariant bilinear shadow. In the
+same field `K = F_25 = F_5[tau]/(tau^2-2)`,
+
+```
+<tau> = F_5^* union tau F_5^*.
+```
+
+The even powers are exactly the nonzero base-field axis, and the odd powers
+are its `tau`-multiple. The eight powers are distinct roots of `x^8-1`, while
+the four roots of `x^4-1` already lie in `F_5^*`; hence the elements of exact
+order eight are precisely `{+-tau,+-eta}`. Frobenius is conjugation:
+
+```
+Frob(a+b tau) = (a+b tau)^5 = a-b tau.
+```
+
+It fixes `F_5`, negates `tau F_5`, preserves norm under sign, and sends
+`eta` to `-eta`. Therefore
+
+```
+Frob(Y_n^+) = Y_n^-                         for every n >= 0.
+```
+
+For either registered branch, form the record `V^epsilon` containing every
+`Theta_n`, each `Y_n^epsilon` with even `s_2(n)`, and each same-branch product
+`Y_n^epsilon Y_m^epsilon` when both digit sums are odd. Writing
+`s=s_2(n)` and `t=s_2(m)` gives
+
+```
+s even:       Y_n^+ = Y_n^- = phi^(s/2) in F_5,
+s,t odd:      Y_n^+ Y_m^+ = Y_n^- Y_m^- = phi^((s+t)/2) in F_5.
+```
+
+Thus `V^+ = V^- =: V` and the whole record is `F_5`-valued. By contrast,
+the branches differ exactly on odd digit-sum classes, and a mixed-parity
+product is a nonzero `tau F_5` element whose single branch sign does not
+cancel.
+
+Since both `2` and `phi=3` have order four, the norm channel
+`Theta_n=2^s` reads exactly `s mod 4`, whereas `V` reads `s mod 8` on its
+even classes and `s+t mod 8` on its odd-pair classes. The witnesses
+`n=15,255` have digit sums `4,8`, and the pairs `(1,1),(1,31)` have sums
+`2,6`. On the even classes carried by `V`,
+`(Y_n^epsilon)^2=Theta_n^-1`.
+
+These statements form C8-BILINEAR-SHADOW [T] at L1, evidenced by the
+immutable public bundle `probes/P-C8-BILINEAR-SHADOW-2`. Its self-contained
+all-`n` proof carries the theorem; the finite verifier audits the field,
+axes, roots, residue classes, branch record, and successor identities. The
+formal aarch64 execution and required GitHub x86_64 check produced
+byte-identical output. The theorem selects no branch and asserts no broader
+physical or gauge equivalence, checkpoint identification, clock, gravity,
+SI, force, uniqueness, or lift to L2-L6. SQRT-PHI-TIME-GRAVITY [O] remains
+open.
 
 The next carry stratum has an exact pentagonal form in the frozen
 four-coordinate Hamming frame. On `V = F_2^4`, put
@@ -3053,6 +3108,23 @@ M_TM = (1/3)P1 + (2/15)P5, and the typed factorization
 No successor L5 source schema is currently frozen. The Born gate remains
 open but the scheduler is STOP pending a separately reviewed owner
 definition.
+
+The v26 ledger change is signed term by term:
+
+```text
+claims:    208 + 1 L1 theorem = 209,
+T:         110 + 1 C8 bilinear-shadow theorem = 111,
+live H/O:  26 unchanged.
+```
+
+Public Canon v26 registers C8-BILINEAR-SHADOW [T] at its exact L1 boundary.
+The proof identifies the two nonzero axes of `<tau>`, the exact order-eight
+elements and Frobenius conjugation, proves the all-`n` branch swap and the
+branch-invariant record, and shows its strict mod-8 refinement of the norm
+channel. The existing public probe supplies byte-identical aarch64 and
+GitHub x86_64 audit output. No probe file is amended, and no branch selector,
+physical gauge equivalence, checkpoint, clock, gravity, SI, force,
+uniqueness, or L2-L6 statement is introduced.
 
 The v25 ledger change is signed term by term:
 

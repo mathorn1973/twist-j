@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 208)
+        self.assertEqual(self.report.claims, 209)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 22, "D": 40, "F": 10, "H": 3, "O": 23, "T": 110},
+            {"C": 22, "D": 40, "F": 10, "H": 3, "O": 23, "T": 111},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 43,
                 "one-architecture": 8,
                 "recorded-audit": 31,
-                "two-architecture": 126,
+                "two-architecture": 127,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,7 +43,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 170)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 183
+            len(self.report.transitive_architecture_dependents), 184
         )
         self.assertEqual(len(self.report.dependency_terminals), 10)
         self.assertNotIn(

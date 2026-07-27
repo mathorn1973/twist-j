@@ -329,3 +329,6 @@ GYRON-DISCREPANCY-LOG	DEF-ARCHITECTURE	REQUIRES	the Thue-Morse prefix census and
 TM-PAIR-SUBSTITUTION-FIXED-POINT	DEF-ARCHITECTURE	REQUIRES	the forward pair-substitution carrier and stationary law are the L1 Thue-Morse driver of the declared public architecture
 GYRON-DENSITY	GYRON-DISCREPANCY-LOG	REQUIRES	the exact logarithmic discrepancy bound proves both prefix-density limits at 1/6 and corrects the false unqualified four-step invariant
 GYRON-DENSITY	TM-PAIR-SUBSTITUTION-FIXED-POINT	REQUIRES	the stationary pair-law clause uses the unique normalized fixed point and equal-phase convergence theorem
+C8-BILINEAR-SHADOW	PENTIT-ROOT-FACTS	REQUIRES	the exact F_25 pair model, tau and eta identities, and order-eight field input are inherited at their registered algebraic scope
+C8-BILINEAR-SHADOW	RAMIFIED-TM-LIFT	REQUIRES	the Theta_n digit recursion, sign quotient, and chronological all-n carry law supply the registered norm channel
+C8-BILINEAR-SHADOW	SQRT-PHI-DIGIT-LIFT	REQUIRES	the two exact Y branches, their projections, and their all-n successor law are the objects whose Frobenius swap and invariant record are proved

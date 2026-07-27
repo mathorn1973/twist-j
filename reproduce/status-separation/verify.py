@@ -122,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 110, "D": 40, "C": 22, "F": 10,
+    expected_counts = {"T": 111, "D": 40, "C": 22, "F": 10,
                        "O": 23, "H": 3}
     checks.append((
         "COUNTS",
-        "registry has 208 claims with the current status partition",
-        len(rows) == 208 and counts == expected_counts,
+        "registry has 209 claims with the current status partition",
+        len(rows) == 209 and counts == expected_counts,
     ))
 
     checks.append((
@@ -161,12 +161,19 @@ def run():
     kernel_dependencies = [
         row for row in dependencies if row["item_id"] == kernel
     ]
+    c8 = "C8-BILINEAR-SHADOW"
+    c8_path = "probes/P-C8-BILINEAR-SHADOW-2"
+    c8_digest = "72728a88f45af777656a39d313b79c8189e2dfa2fa587e08fac5bf02aa6b234d"
+    c8_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == c8
+    }
     checks.append((
         "CARRY",
-        "carry and synchronization all-n theorems stay T and physically fenced",
+        "carry, synchronization, and C8 shadow theorems stay T and physically fenced",
         all(has_status(index, claim, "T") for claim in
             ("RAMIFIED-TM-LIFT", "CARRY-J-CHECKPOINT", "CARRY-PENTAD",
-             "SQRT-PHI-DIGIT-LIFT", kernel))
+             "SQRT-PHI-DIGIT-LIFT", kernel, c8))
         and scope_contains_all(index, "CARRY-PENTAD",
                                ("selects no prime", "physical reading"))
         and scope_contains_all(index, "RAMIFIED-TM-LIFT",
@@ -178,6 +185,13 @@ def run():
         and scope_contains_all(index, "SQRT-PHI-DIGIT-LIFT",
                                ("not constant", "no sign-branch selection",
                                 "gravity dynamics"))
+        and scope_contains_all(index, c8,
+                               ("<tau> = F_5^* union tau F_5^*",
+                                "branch invariant",
+                                "mixed-parity products are off-axis and branch-dependent",
+                                "no branch selection",
+                                "broader physical or gauge equivalence",
+                                "lift to L2-L6"))
         and scope_contains_all(index, kernel,
                                ("at each fixed known n",
                                 "q_n is a sheet label and not the checkpoint coordinate q",
@@ -196,7 +210,22 @@ def run():
         and evidence[kernel]["sha256"] == kernel_digest
         and evidence[kernel]["hash_mode"] == "bundle-manifest-sha256-v1"
         and evidence[kernel]["architecture_requirement"] == "two-architecture"
-        and kernel not in programs,
+        and kernel not in programs
+        and normative[c8]["item_type"] == "THEOREM"
+        and normative[c8]["status"] == "T"
+        and normative[c8]["layer"] == "L1"
+        and normative[c8]["gate_ids"] == ""
+        and c8_dependencies == {
+            ("PENTIT-ROOT-FACTS", "REQUIRES"),
+            ("RAMIFIED-TM-LIFT", "REQUIRES"),
+            ("SQRT-PHI-DIGIT-LIFT", "REQUIRES"),
+        }
+        and evidence[c8]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence[c8]["location"] == c8_path
+        and evidence[c8]["sha256"] == c8_digest
+        and evidence[c8]["hash_mode"] == "bundle-manifest-sha256-v1"
+        and evidence[c8]["architecture_requirement"] == "two-architecture"
+        and c8 not in programs,
     ))
 
     checks.append((
