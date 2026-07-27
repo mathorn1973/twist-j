@@ -88,7 +88,7 @@ checks are allowed before the pin. Formal gates are not.
 After execution add:
 
 ```text
-EXPECTED.txt  exact local stdout
+EXPECTED.txt  exact scientific stdout
 RUN.md        pin, command, environment, exit code, byte counts, hashes
 RESULT.md     status, scope, fired falsifiers, conclusion
 ```
@@ -117,7 +117,7 @@ reproduce/NAME/
 ```
 
 It uses the Python standard library, exits zero, writes no stderr, and must
-match `EXPECTED.txt` byte for byte in the required GitHub check.
+match `EXPECTED.txt` byte for byte in every required architecture job.
 
 Before cutover, a reconciliation audit maps every public claim to an internal
 claim of equal or stronger status and scope. The audit forbids promotion by
@@ -129,25 +129,24 @@ For new public probes:
 
 - Assertions use exact arithmetic. Floating point may appear only as a labeled
   engineering or measured witness.
-- The author runs the pinned verifier locally and records `RUN.md` and the
-  exact stdout in `EXPECTED.txt`. Platform fields use neutral public
-  descriptors, for example `platform: Ubuntu 24.04` and
-  `architecture: aarch64`. Machine nicknames are forbidden.
-- The required GitHub check reruns every changed verifier on a clean
-  x86_64 `ubuntu-latest` runner and requires the same verifier hash, exit
-  code 0, empty stderr, and byte-identical stdout.
-- A verifier-backed contribution is reproducible only when both the local
-  record and the GitHub check pass.
+- The author commits one exact `EXPECTED.txt`. A local run may be recorded in
+  `RUN.md`, but local platform declarations are audit metadata and do not prove
+  an architecture gate.
+- The required pull-request workflow runs the same PR head on clean GitHub-hosted
+  x86_64 `ubuntu-latest` and aarch64 `ubuntu-24.04-arm` jobs with Python 3.12.
+  Both jobs require the same verifier hash, exit code 0, empty stderr, and
+  stdout byte-identical to the same committed `EXPECTED.txt`.
+- The stable required context `check` is an aggregate job that depends on both
+  architecture jobs. It cannot pass when either architecture job fails or is
+  skipped on a pull request.
+- Passing both architecture jobs satisfies the two-architecture computation
+  gate. Repeated same-architecture runs are reproduction only.
+- An independent proof may earn `T`; its verifier is then an audit.
+- A computation-only result is at most `C` until both required architecture
+  jobs pass on the same pull-request head.
 - A post-cutover pull request changes at most one probe directory. The initial
   Canon v1 synthesis is not a probe pull request and imports no historical
   probe tree.
-- For a computation-only promotion to `T`, the author's local run must be
-  `aarch64` and the GitHub run `x86_64`. Their byte-identical outputs
-  satisfy the two-architecture gate. Same-architecture agreement is a
-  reproduction, not a two-architecture gate. An independent proof may earn `T`; its
-  verifier is then an audit.
-- A one-architecture finite result is at most `C` unless its proof is
-  independently theorem-grade.
 - Fired falsifiers are preserved and folded. Thresholds never move after the
   preregistration pin.
 - Any lift between L1 state, L2 manifold, L3 boundary, L4 support, L5 stream,
@@ -190,6 +189,11 @@ Incomplete work belongs under `notes/`, is marked `NON-CANONICAL`, and need
 not carry a verifier. A proposed Canon patch stays under `notes/canon/` until
 a separate sealed public fold applies it to `canon/CANON.md`.
 
+Candidate packages under `notes/incubation/` are authority-free. Their visible
+layout, manifests, promotion targets, and public run-record hygiene are checked
+by `tools/check_incubation.py`. The checker does not prove mathematical scope
+equivalence or what an agent saw outside Git.
+
 ## 6. Git
 
 - `main` accepts reviewed pull requests only, except repository genesis.
@@ -210,7 +214,8 @@ a separate sealed public fold applies it to `canon/CANON.md`.
   required checks.
 - Probe commits are never rebased, squashed, amended, or force-pushed after the
   preregistration pin. Merge commits preserve provenance.
-- Check for an existing branch, issue, probe, and lock before claiming work.
+- Check for an existing branch, issue, probe, object lock, and claim lock before
+  claiming work.
 - Stage named files only. Never add all files blindly.
 
 ## 7. Public safety
@@ -220,19 +225,21 @@ private logs, personal data, binary models, compiled objects, or unreviewed
 third-party material. Files over 5 MiB require an explicit policy change.
 External or large data use a manifest with source, version, license, and hash.
 
-Every pull request must pass the required `check`, which runs repository
-policy and any changed public verifiers, plus a manual security review.
+Every pull request must pass the required `check`, which aggregates the x86_64
+and aarch64 architecture jobs, plus manual security review.
 Apache-2.0 applies unless a file states an approved compatible license.
 
 After cutover, the release-form activation readback is not a general content
-gate. The sole workflow runs it only for an immutable tag push or release
-publication. Ordinary pull requests and `main` pushes still run policy, unit,
-Canon, ledger, changed-verifier, and changed-reproduction checks. This routing
-prevents the activation gate's exact three-file release delta from being
-misapplied to post-cutover public work; it does not relax tag or release
-readback. Tag and release events skip changed-path checks because those events
-do not supply a valid comparison base; their full activation readback already
-reproduces every public probe and minimal reproduction.
+gate. Pull requests and ordinary `main` pushes run the two architecture jobs
+and their aggregate `check`. Immutable tag pushes and release publication run
+a separate single x86_64 publication job. This prevents duplicate artifact
+uploads and release races while preserving full publication readback.
+
+The publication job reruns policy, unit, Canon, ledger, and incubation checks,
+then performs the activation readback. Tag and release events skip changed-path
+checks because those events do not supply a valid comparison base; their full
+activation readback already reproduces every public probe and minimal
+reproduction.
 
 When release immutability is enabled, a release is always assembled as a
 draft. Attach the successful tag-job `activation-manifest.json` and the tagged
@@ -240,10 +247,13 @@ draft. Attach the successful tag-job `activation-manifest.json` and the tagged
 Never substitute a manifest generated from a local checkout.
 
 The sole workflow has read-only permissions, immutable action pins, no
-persisted checkout credential, and a 15-minute timeout. Its tag trigger
-covers `canon-v*`, but the activation and release validators require the
-triggering event tag to equal the positive whole-number tag declared by the
-current `STATUS.md`; a broader, decimal, or foreign tag therefore triggers a
-failing readback, never publication.
-`pull_request_target` is forbidden. Any new workflow requires an explicit
-policy change.
+persisted checkout credential, 15-minute architecture and publication limits,
+and a 5-minute aggregate limit. Its pull-request gate uses one x86_64 and one
+aarch64 standard GitHub-hosted runner. Its tag trigger covers `canon-v*`, but
+the activation and release validators require the triggering event tag to equal
+the positive whole-number tag declared by the current `STATUS.md`; a broader,
+decimal, or foreign tag therefore triggers a failing readback, never
+publication.
+
+`pull_request_target` is forbidden. Any new workflow or runner topology requires
+an explicit policy change.
