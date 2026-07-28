@@ -60,12 +60,23 @@ Stderr was empty.
 ## Required GitHub leg
 
 ```text
-status: PENDING
-required_architecture: x86_64
-required_identity: same pin_commit and verifier_sha256
-required_stdout_sha256: c0e4b5685b86799937e905b4cd6c55513c8c368c083587d6af7ddfb5bd3ac2d7
+status: PASS
+workflow_run_id: 30333005251
+job_id: 90191949550
+job_url: https://github.com/mathorn1973/twist-j/actions/runs/30333005251/job/90191949550
+check_name: check
+tested_head_commit: a38524be1dc7adefcb4db6acb8a37ed80cb85a19
+checkout_merge_commit: eaef9c6526770a1bd1a08791b7f775c18d667710
+base_commit: ef1d2d917486dfb15cba3a81bd2309183c57f572
+platform: Ubuntu 24.04.4 LTS
+architecture: x86_64
+python: Python 3.12.13
+verifier_sha256: db9e4c4911dd7237cbd2a685b8f8ce1c6d84679d0842fa1186feb61cd5779a6f
+stdout_sha256: c0e4b5685b86799937e905b4cd6c55513c8c368c083587d6af7ddfb5bd3ac2d7
+verdict: VERIFY PASS
 ```
 
-Both local and required GitHub legs are x86_64. Byte identity therefore
+The required GitHub check reproduced the public pinned verifier and exact
+stdout bytes. Both local and GitHub legs are x86_64. Byte identity therefore
 establishes reproduction only; a computation-only conclusion remains at
 most C. No L6 decision or normalization lift is claimed.

@@ -6,7 +6,7 @@
 local_status: PASS
 gates: 17 of 17 OK
 fired_falsifiers: none
-reproduction_status: PENDING REQUIRED GITHUB CHECK
+reproduction_status: PASS
 ```
 
 The single prospective-pinned local execution passed every frozen gate with
@@ -40,5 +40,5 @@ terminal-value, physical, SI, or other cross-layer gate.
 
 No Canon, registry, frontier, changelog, hash, release, or status change is
 proposed. `METRO-REDUCTION-CALCULUS` remains `[O]` and remains STOP. Final
-reproduction status depends on the required GitHub x86_64 byte-identity
-check and review.
+reproduction status is PASS: the required GitHub x86_64 check reproduced the
+pinned verifier and exact stdout SHA-256. Review remains pending.
