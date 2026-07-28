@@ -1,12 +1,65 @@
 # Canon changelog (public series)
 
 
-## Public Canon v25
+## Public Canon v26
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 208 claims; 0 T-LOCK, 110 T, 40 D, 22 C, 3 H, 23 O, 10 F; 26 live H/O.
+Registry snapshot: 210 claims; 0 T-LOCK, 111 T, 40 D, 23 C, 3 H, 23 O, 10 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v26 registers exactly one new L1 theorem,
+C8-BILINEAR-SHADOW [T]. In `F_25`, the theorem identifies the two nonzero
+axes and all exact order-eight elements, proves that Frobenius exchanges the
+two registered digit branches, and constructs their branch-invariant record.
+The norm retains digit sum modulo 4, while the record resolves the declared
+even and odd-pair classes modulo 8 with exact witnesses.
+
+The immutable `probes/P-C8-BILINEAR-SHADOW-2` bundle is the sole evidence.
+Its formal aarch64 run produced `RESULT 6/6 ALL PASS`; GitHub policy run
+29948644987, job 89020433805, reproduced the pinned verifier and stdout byte
+identically on x86_64, and the final-head manual review closed the
+two-architecture gate. The pending wording in the frozen `RESULT.md` records
+its pre-CI chronology; no probe file is amended and no new formal evidence
+execution is used by this fold.
+
+The theorem selects no branch and adds no physical or gauge equivalence,
+checkpoint identification, clock, gravity, SI, force, uniqueness, decoder
+completion, or L2-L6 lift. `SQRT-PHI-TIME-GRAVITY [O]` remains open.
+
+The second transaction registers METRO-REDUCTION-ARROWS [C] at L5. The four
+admitted arrows have exact preconditions and transports: bijective state
+relabeling, restriction to the full single-digit reachable closure, the
+multi-action Nerode quotient with its coordinate-2-and-higher congruence
+proviso, and coordinate permutation with the ordered input basis transported.
+Each has `tau_R = identity` and exact pointwise transported L5-stream
+equality. The frozen witnesses separate one-shot image from `Sigma*` closure,
+expose the necessary noncommuting quotient proviso, and distinguish a
+transported-basis permutation from its basis-fixed lookalike.
+
+The immutable `probes/P-METRO-REDUCTION-ARROWS-4` bundle is the sole
+evidence. Its prospective-pinned run passed all 17 gates, with zero
+congruence counterexamples among exactly 1,024 two-state and 4,251,528
+three-state protocols. The local and GitHub executions were both x86_64 and
+produced identical stdout SHA-256
+`c0e4b5685b86799937e905b4cd6c55513c8c368c083587d6af7ddfb5bd3ac2d7`.
+This establishes reproduction but not a two-architecture gate, so the
+computation-only claim is C.
+
+METRO-REDUCTION-CALCULUS remains O and STOP. Only obligations A and C are
+separated into the new row; obligation B for the complete forbidden catalogue
+and witnesses, obligation D for common blocking including decision and
+terminal-value transport, and obligation E for completeness of `approx_red`
+remain open. No normalization, L6, physical, SI, or cross-layer status is
+added. Both probe bundles remain byte-unchanged, and this fold authorizes no
+new formal probe execution.
+
+## Public Canon v25
+
+<!-- BEGIN GENERATED CANON25 COUNTS -->
+Registry snapshot: 208 claims; 0 T-LOCK, 110 T, 40 D, 22 C, 3 H, 23 O, 10 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON25 COUNTS -->
 
 Public Canon v25 closes exactly one existing L1 owner.
 KERNEL-Z6-SYNCHRONIZATION moves from O to T because its preregistered
