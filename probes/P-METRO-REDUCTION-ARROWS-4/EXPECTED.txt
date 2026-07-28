@@ -1,0 +1,29 @@
+P-METRO-REDUCTION-ARROWS-4
+owner item: METRO-REDUCTION-CALCULUS [O], obligations A and C
+scope: pointwise transported L5 streams; no lift to L6
+exact integer and Fraction arithmetic, no float in any assertion
+
+E1a   OK   arrow 1 relabeling intertwines pointwise on all 1024 protocols of F2, both bijections, and all 64 indices of BOX
+E1b   OK   arrow 1 intertwines on W4 for all 24 bijections; bijectivity is the complete precondition
+E2a   OK   iterated V-closure equals the Sigma*-orbit on F2 for A0={0},{1},S, and the result is digit-map closed; F3 has A0=S, hence S_reach=S and restriction is the identity
+E2b   OK   arrow 2 restriction to S_reach intertwines pointwise on F2 with A0={0}, over all 64 indices of BOX
+E2c   OK   typing witness WR: the one-shot V-image [0, 2, 3] is strictly inside the Sigma*-orbit [0, 1, 2, 3]; only the closure reading types arrow 2 correctly
+E3a   OK   delta_v o delta_(1,u)=delta_(u.v_1,v_2) on every frozen witness for coordinate words of length <=2; this is the coordinate-1 congruence identity
+E3b   OK   W4: ~_V identifies states {0,2}, but delta_(2,1) sends them to different classes. Failures found: [(2, 1, 0, 2)]
+E3c   OK   W4 has no coordinate-1 congruence failure, as E3a forces
+E3d   OK   |S|=2 exhausted: 1024 protocols, 0 congruence counterexamples
+E3e   OK   |S|=3 exhausted: 4251528 protocols, 0 congruence counterexamples
+E3f   OK   minimality at q=2,a=2,r=1 with binary output: W4 at |S|=4 is minimal; the arrow-3 congruence precondition is non-vacuous
+E4a   OK   arrow 4 with coordinate names, indices, and ordered input basis transported preserves the pointwise stream on all F2 x BOX
+E4b   OK   the basis-fixed lookalike breaks intertwining at 29568 points of F2 x BOX; arrow 4 is admitted only with the ordered basis transported
+E4c   OK   permutation witness WP: admitted composite [1, 1, 1, 1], basis-fixed lookalike [0, 0, 0, 0]
+E5a   OK   obligation C: arrows 1 and 2 preserve pointwise transported L5 streams on their complete F2 x BOX audits with tau_R=id
+E5b   OK   obligation C: every admitted arrow-3 Nerode quotient on F2 is well-defined and preserves the pointwise L5 stream on BOX
+E5c   OK   obligation C covers all four admitted arrows at pointwise L5 scope with tau_R=id; no L6 decision or normalization lift is claimed
+
+gates passed: 17 of 17
+VERDICT: ALL PASS
+
+NOT CLOSED BY THIS PROBE: obligation B (forbidden transformations),
+obligation D (common q^k blocking), obligation E (completeness of
+approx_red). METRO-REDUCTION-CALCULUS remains [O] and remains STOP.
