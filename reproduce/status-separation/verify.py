@@ -122,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 110, "D": 40, "C": 22, "F": 10,
+    expected_counts = {"T": 111, "D": 40, "C": 23, "F": 10,
                        "O": 23, "H": 3}
     checks.append((
         "COUNTS",
-        "registry has 208 claims with the current status partition",
-        len(rows) == 208 and counts == expected_counts,
+        "registry has 210 claims with the current status partition",
+        len(rows) == 210 and counts == expected_counts,
     ))
 
     checks.append((
@@ -161,12 +161,19 @@ def run():
     kernel_dependencies = [
         row for row in dependencies if row["item_id"] == kernel
     ]
+    c8 = "C8-BILINEAR-SHADOW"
+    c8_path = "probes/P-C8-BILINEAR-SHADOW-2"
+    c8_digest = "72728a88f45af777656a39d313b79c8189e2dfa2fa587e08fac5bf02aa6b234d"
+    c8_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == c8
+    }
     checks.append((
         "CARRY",
-        "carry and synchronization all-n theorems stay T and physically fenced",
+        "carry, synchronization, and C8 shadow theorems stay T and physically fenced",
         all(has_status(index, claim, "T") for claim in
             ("RAMIFIED-TM-LIFT", "CARRY-J-CHECKPOINT", "CARRY-PENTAD",
-             "SQRT-PHI-DIGIT-LIFT", kernel))
+             "SQRT-PHI-DIGIT-LIFT", kernel, c8))
         and scope_contains_all(index, "CARRY-PENTAD",
                                ("selects no prime", "physical reading"))
         and scope_contains_all(index, "RAMIFIED-TM-LIFT",
@@ -178,6 +185,13 @@ def run():
         and scope_contains_all(index, "SQRT-PHI-DIGIT-LIFT",
                                ("not constant", "no sign-branch selection",
                                 "gravity dynamics"))
+        and scope_contains_all(index, c8,
+                               ("<tau> = F_5^* union tau F_5^*",
+                                "branch invariant",
+                                "mixed-parity products are off-axis and branch-dependent",
+                                "no branch selection",
+                                "broader physical or gauge equivalence",
+                                "lift to L2-L6"))
         and scope_contains_all(index, kernel,
                                ("at each fixed known n",
                                 "q_n is a sheet label and not the checkpoint coordinate q",
@@ -196,7 +210,22 @@ def run():
         and evidence[kernel]["sha256"] == kernel_digest
         and evidence[kernel]["hash_mode"] == "bundle-manifest-sha256-v1"
         and evidence[kernel]["architecture_requirement"] == "two-architecture"
-        and kernel not in programs,
+        and kernel not in programs
+        and normative[c8]["item_type"] == "THEOREM"
+        and normative[c8]["status"] == "T"
+        and normative[c8]["layer"] == "L1"
+        and normative[c8]["gate_ids"] == ""
+        and c8_dependencies == {
+            ("PENTIT-ROOT-FACTS", "REQUIRES"),
+            ("RAMIFIED-TM-LIFT", "REQUIRES"),
+            ("SQRT-PHI-DIGIT-LIFT", "REQUIRES"),
+        }
+        and evidence[c8]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence[c8]["location"] == c8_path
+        and evidence[c8]["sha256"] == c8_digest
+        and evidence[c8]["hash_mode"] == "bundle-manifest-sha256-v1"
+        and evidence[c8]["architecture_requirement"] == "two-architecture"
+        and c8 not in programs,
     ))
 
     checks.append((
@@ -634,6 +663,7 @@ def run():
 
     metro = "METRO-FINITE-STATE-RATIONALITY"
     metro_calculus = "METRO-REDUCTION-CALCULUS"
+    metro_arrows = "METRO-REDUCTION-ARROWS"
     metro_child = "METRO-ADMISSIBILITY-DIM"
     metro_residual = "METRO-ADMISSIBILITY"
     metro_gate = "GATE-L5-L6-METRO-NORMALIZATION"
@@ -642,7 +672,7 @@ def run():
             (row["depends_on"], row["relation"])
             for row in dependencies if row["item_id"] == item
         }
-        for item in (metro, metro_calculus, metro_child, metro_residual)
+        for item in (metro, metro_arrows, metro_calculus, metro_child, metro_residual)
     }
     metro_residual_edges = [
         row for row in dependencies
@@ -650,7 +680,7 @@ def run():
     ]
     checks.append((
         "METRO",
-        "finite-state theorem stays T; typed calculus, dimensional child, and residual stay O",
+        "finite-state theorem stays T; reduction arrows stay C; typed calculus, dimensional child, and residual stay O",
         has_status(index, metro, "T")
         and normative.get(metro, {}).get("item_type") == "THEOREM"
         and normative.get(metro, {}).get("status") == "T"
@@ -678,6 +708,60 @@ def run():
         )
         and "row-sum mismatch is outside the declared q-dfao input schema"
         in index[metro]["falsifier"].lower()
+        and has_status(index, metro_arrows, "C")
+        and normative.get(metro_arrows, {}).get("item_type") == "COMPUTATION"
+        and normative.get(metro_arrows, {}).get("status") == "C"
+        and normative.get(metro_arrows, {}).get("layer") == "L5"
+        and normative.get(metro_arrows, {}).get("gate_ids") == ""
+        and index.get(metro_arrows, {}).get("evidence")
+        == "probes/P-METRO-REDUCTION-ARROWS-4"
+        and evidence.get(metro_arrows, {}).get("evidence_id")
+        == "EV-METRO-REDUCTION-ARROWS"
+        and evidence.get(metro_arrows, {}).get("evidence_kind")
+        == "PUBLIC_PROBE"
+        and evidence.get(metro_arrows, {}).get("location")
+        == "probes/P-METRO-REDUCTION-ARROWS-4"
+        and evidence.get(metro_arrows, {}).get("sha256")
+        == "7864cb2ea6a6939cc477efa89f005fd71943091b446866decfa5a4db9036e8c6"
+        and evidence.get(metro_arrows, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(metro_arrows, {}).get("architecture_requirement")
+        == "one-architecture"
+        and metro_dependencies[metro_arrows] == {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, metro_arrows,
+            ("typed L5 U_RF tuple",
+             "four admitted reductions have exact preconditions and transports",
+             "state relabeling by a bijection",
+             "closure of A0 under every single-digit map",
+             "multi-action Nerode quotient",
+             "congruence for every coordinate i >= 2",
+             "coordinate 1 automatic",
+             "coordinate permutation transporting coordinate names",
+             "tau_R = identity",
+             "exact pointwise transported L5-stream equality",
+             "zero congruence counterexamples",
+             "exactly 1024 two-state and 4251528 three-state protocols",
+             "computation-only L5 scope",
+             "no forbidden-transformation catalogue",
+             "common q^k blocking",
+             "completeness of approx_red",
+             "or L6, cross-layer, physical, or SI claim"),
+        )
+        and all(
+            phrase.lower() in index[metro_arrows]["falsifier"].lower()
+            for phrase in (
+                "pinned evidence bundle or exact stdout differs",
+                "17 frozen gates fails",
+                "admitted arrow changes a transported pointwise L5 stream",
+                "either exhaustive family yields a congruence counterexample",
+                "obligation B", "common q^k blocking",
+                "approx_red completeness", "every L6",
+            )
+        )
+        and metro_arrows not in programs
         and has_status(index, metro_calculus, "O")
         and normative.get(metro_calculus, {}).get("item_type") == "OBLIGATION"
         and normative.get(metro_calculus, {}).get("status") == "O"
@@ -697,17 +781,33 @@ def run():
         and metro_dependencies[metro_calculus] == {
             ("DEF-ARCHITECTURE", "REQUIRES"),
             (metro, "REQUIRES"),
+            (metro_arrows, "REQUIRES"),
         }
         and scope_contains_all(
             index, metro_calculus,
-            ("typed L5 reduction calculus on U_RF tuples",
-             "exact arrow preconditions", "four declared allowed arrows",
-             "forbidden transformations with exact witnesses",
-             "allowed-start and input-index transports",
-             "rational output transport tau_R",
-             "pointwise L5-stream intertwining",
-             "finite-zig-zag equivalence approx_red",
+            ("remaining open L5 reduction-calculus obligations",
+             "after METRO-REDUCTION-ARROWS [C]",
+             "obligation B",
+             "complete forbidden-transformation catalogue",
+             "obligation D", "common q^k blocking",
+             "scientific decision", "terminal value",
+             "obligation E",
+             "completeness of the finite-zig-zag equivalence approx_red",
+             "obligations A and C are separated",
+             "do not close B, D, or E",
              "no normalization or cross-layer gate is owned"),
+        )
+        and all(
+            phrase.lower() in index[metro_calculus]["falsifier"].lower()
+            for phrase in (
+                "every forbidden entry has an exact witness",
+                "common q^k blocking",
+                "decision and terminal-value transport",
+                "approx_red is complete",
+                "STOP while any forbidden-witness",
+                "closes only obligations A and C",
+                "leaves this row O and STOP",
+            )
         )
         and programs.get(metro_calculus, {}).get("program_id") == "DECODER_CORE"
         and programs.get(metro_calculus, {}).get("queue_role") == "ROOT"
