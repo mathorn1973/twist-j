@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v25
+# TWIST-J Public Canon v26
 
-**Release identity.** Public Canon v25. Normative authority and activation
+**Release identity.** Public Canon v26. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v25 also declares the discrete
+algebraic axiom is J. Public Canon v26 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v25 does not claim
+seed of the two algebraic projections. Public Canon v26 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v25 contains no such
+deriving the architecture from J; Public Canon v26 contains no such
 theorem.
 
 ---
@@ -1387,6 +1387,61 @@ checkpoint identification, physical tick, time arrow, gravity dynamics,
 coupling, SI scale, or lift to L2-L6 is claimed. The typed clock and gravity
 bridge remains SQRT-PHI-TIME-GRAVITY [O].
 
+The two-branch lift has an exact branch-invariant bilinear shadow. In the
+same field `K = F_25 = F_5[tau]/(tau^2-2)`,
+
+```
+<tau> = F_5^* union tau F_5^*.
+```
+
+The even powers are exactly the nonzero base-field axis, and the odd powers
+are its `tau`-multiple. The eight powers are distinct roots of `x^8-1`, while
+the four roots of `x^4-1` already lie in `F_5^*`; hence the elements of exact
+order eight are precisely `{+-tau,+-eta}`. Frobenius is conjugation:
+
+```
+Frob(a+b tau) = (a+b tau)^5 = a-b tau.
+```
+
+It fixes `F_5`, negates `tau F_5`, preserves norm under sign, and sends
+`eta` to `-eta`. Therefore
+
+```
+Frob(Y_n^+) = Y_n^-                         for every n >= 0.
+```
+
+For either registered branch, form the record `V^epsilon` containing every
+`Theta_n`, each `Y_n^epsilon` with even `s_2(n)`, and each same-branch product
+`Y_n^epsilon Y_m^epsilon` when both digit sums are odd. Writing
+`s=s_2(n)` and `t=s_2(m)` gives
+
+```
+s even:       Y_n^+ = Y_n^- = phi^(s/2) in F_5,
+s,t odd:      Y_n^+ Y_m^+ = Y_n^- Y_m^- = phi^((s+t)/2) in F_5.
+```
+
+Thus `V^+ = V^- =: V` and the whole record is `F_5`-valued. By contrast,
+the branches differ exactly on odd digit-sum classes, and a mixed-parity
+product is a nonzero `tau F_5` element whose single branch sign does not
+cancel.
+
+Since both `2` and `phi=3` have order four, the norm channel
+`Theta_n=2^s` reads exactly `s mod 4`, whereas `V` reads `s mod 8` on its
+even classes and `s+t mod 8` on its odd-pair classes. The witnesses
+`n=15,255` have digit sums `4,8`, and the pairs `(1,1),(1,31)` have sums
+`2,6`. On the even classes carried by `V`,
+`(Y_n^epsilon)^2=Theta_n^-1`.
+
+These statements form C8-BILINEAR-SHADOW [T] at L1, evidenced by the
+immutable public bundle `probes/P-C8-BILINEAR-SHADOW-2`. Its self-contained
+all-`n` proof carries the theorem; the finite verifier audits the field,
+axes, roots, residue classes, branch record, and successor identities. The
+formal aarch64 execution and required GitHub x86_64 check produced
+byte-identical output. The theorem selects no branch and asserts no broader
+physical or gauge equivalence, checkpoint identification, clock, gravity,
+SI, force, uniqueness, or lift to L2-L6. SQRT-PHI-TIME-GRAVITY [O] remains
+open.
+
 The next carry stratum has an exact pentagonal form in the frozen
 four-coordinate Hamming frame. On `V = F_2^4`, put
 
@@ -2045,7 +2100,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v25. The fermionizer
+inherited naming clause is not part of Public Canon v26. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -2537,8 +2592,12 @@ w: S -> Q^r.
 
 The tuple has ordered input and output bases and a fixed digit and padding
 convention recorded by `enc_q`. No commutation, normalization, or L6 lift is
-built into `U_RF`. Let `S_reach(P)` be the closure of `A0` under every finite
-tuple of coordinate digit words.
+built into `U_RF`. Let `S_reach(P)` be the closure of `A0` under every
+single-digit map `delta_(i,u)`, equivalently its `Sigma*` orbit. Iterated
+tuples of coordinate digit words give the same orbit, but a single tuple
+need not. For `v = (v_1,...,v_a)`, coordinate 1 acts first in
+`delta_v = D_a(v_a) o ... o D_1(v_1)`, and the pointwise L5 stream is
+`Stream_P(s,n) = w(state_P(s,n))`.
 
 A reduction arrow `R: P -> P'` is typed by an exact predicate `Pre_R(P)`,
 transports of allowed starts and input indices, and an exact rational output
@@ -2550,9 +2609,11 @@ start and input. The declared allowed arrows are:
    digit map, and `w' = w o phi^(-1)`;
 2. restriction to `S_reach(P)`;
 3. the multi-action Nerode quotient
-   `s ~ t iff w(delta_v(s)) = w(delta_v(t))` for every tuple `v` of
-   coordinate digit words, provided this relation is a congruence for every
-   digit map, with `w'([s]) = w(s)`;
+   `s ~_V t iff w(delta_v(s)) = w(delta_v(t))` for every tuple `v` of
+   coordinate digit words. It is automatically a congruence for coordinate
+   1; the exact finite precondition is congruence for every digit map in
+   coordinates `i >= 2`. Under that precondition the quotient maps and
+   output `w'([s]) = w(s)` are well defined;
 4. coordinate permutation transporting the ordered input basis, digit maps,
    input indices, and boxes while leaving the ordered output basis fixed.
 
@@ -2565,11 +2626,24 @@ blocking remains undecided unless all length-`k` words, padding, every
 exponent-residue vector, the pointwise stream, the decision, and the terminal
 value are transported exactly.
 
-METRO-REDUCTION-CALCULUS [O] owns this type and no normalization or
-cross-layer gate. It is STOP until every declared arrow has a complete frozen
-precondition and transport proof, every forbidden entry has an exact witness,
-invariance is proved, common blocking is decided, and `approx_red` is proved
-complete for the registered class.
+METRO-REDUCTION-ARROWS [C], evidenced by the immutable
+`probes/P-METRO-REDUCTION-ARROWS-4` bundle, registers the exact preconditions
+and transports of these four arrows and their `tau_R = identity` pointwise
+L5-stream equality, closing obligations A and C only. Its frozen four-state
+witnesses distinguish the one-shot tuple image from the `Sigma*` closure,
+exhibit the necessary higher-coordinate congruence proviso, and separate a
+transported-basis permutation from the basis-fixed lookalike. Exact
+exhaustion found zero congruence counterexamples among exactly 1,024
+two-state and 4,251,528 three-state protocols in the frozen
+`q = 2, a = 2, r = 1` binary-output family. The local and GitHub records are
+both x86_64, so this computation-only result is C, not T.
+
+METRO-REDUCTION-CALCULUS [O] remains the parent for obligations B, D, and E:
+complete exact witnesses for the forbidden catalogue; common `q^k` blocking
+with all length-`k` words, padding, exponent-residue vectors, the pointwise
+stream, scientific decision, and terminal value transported; and completeness
+of `approx_red` for the registered class. It remains STOP. Neither row owns
+normalization, L6, or another cross-layer gate.
 
 Second, METRO-ADMISSIBILITY-DIM [O] is the child on an `N^a`-indexed
 commuting digit-word system, not an additive action. Its input has
@@ -3053,6 +3127,37 @@ M_TM = (1/3)P1 + (2/15)P5, and the typed factorization
 No successor L5 source schema is currently frozen. The Born gate remains
 open but the scheduler is STOP pending a separately reviewed owner
 definition.
+
+The v26 ledger change is signed term by term:
+
+```text
+claims:    208 + 1 L1 theorem + 1 L5 computation = 210,
+T:         110 + 1 C8 bilinear-shadow theorem = 111,
+C:         22 + 1 reduction-arrow computation = 23,
+O:         23 unchanged,
+live H/O:  26 unchanged.
+```
+
+Public Canon v26 registers C8-BILINEAR-SHADOW [T] at its exact L1 boundary.
+The proof identifies the two nonzero axes of `<tau>`, the exact order-eight
+elements and Frobenius conjugation, proves the all-`n` branch swap and the
+branch-invariant record, and shows its strict mod-8 refinement of the norm
+channel. The existing public probe supplies byte-identical aarch64 and
+GitHub x86_64 audit output. No probe file is amended, and no branch selector,
+physical gauge equivalence, checkpoint, clock, gravity, SI, force,
+uniqueness, or L2-L6 statement is introduced.
+
+Public Canon v26 also registers METRO-REDUCTION-ARROWS [C] at its exact L5
+boundary. The computation freezes the preconditions and transports of the
+four admitted arrows and their pointwise `tau_R = identity` L5-stream
+invariance, closing obligations A and C only. Its public prospective-pinned
+bundle passed all 17 gates and the exact two-state and three-state exhaustion.
+The local and GitHub records are both x86_64 and byte-identical, so this earns
+reproduction but not a two-architecture theorem gate and remains C.
+METRO-REDUCTION-CALCULUS remains O and STOP on obligation B, common `q^k`
+blocking with decision and terminal-value transport in obligation D, and
+`approx_red` completeness in obligation E. No L6, cross-layer, physical,
+or SI claim is added.
 
 The v25 ledger change is signed term by term:
 
