@@ -4,7 +4,7 @@
 Standard library only. This witness checks the ledger boundary introduced by
 Genesis review G2B. It does not establish new physics or new mathematics; it
 verifies that named exact rows remain at T and that their physical readings
-are carried by explicit D, C, or O rows.
+are carried by explicit D, C, H, or O rows.
 """
 
 import csv
@@ -122,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 111, "D": 40, "C": 23, "F": 10,
-                       "O": 23, "H": 3}
+    expected_counts = {"T": 113, "D": 40, "C": 23, "F": 10,
+                       "O": 24, "H": 4}
     checks.append((
         "COUNTS",
-        "registry has 210 claims with the current status partition",
-        len(rows) == 210 and counts == expected_counts,
+        "registry has 214 claims with the current status partition",
+        len(rows) == 214 and counts == expected_counts,
     ))
 
     checks.append((
@@ -226,6 +226,140 @@ def run():
         and evidence[c8]["hash_mode"] == "bundle-manifest-sha256-v1"
         and evidence[c8]["architecture_requirement"] == "two-architecture"
         and c8 not in programs,
+    ))
+
+    drift = "DRIFT-IS-THE-READ"
+    coin_selector = "COIN-SELECTION-CONDITIONAL"
+    coin_premise = "COIN-MINIMAL-READ"
+    coin_derivation = "MINIMAL-READ-DERIVATION"
+    coin_gate = "GATE-L5-L1-MINIMAL-READ"
+    boost_path = "probes/P-BOOST-COHERENCE-1"
+    boost_digest = (
+        "0e2c9daaee5a7c189615f1941894015be2b9e59a71a1183cfc6ed207c9c8d083"
+    )
+    boost_items = (drift, coin_selector, coin_premise, coin_derivation)
+    expected_boost_dependencies = {
+        drift: {
+            ("BOOST-READING-SPLIT", "REQUIRES"),
+            ("BOOST-COUNT-LADDER", "BOUNDED_BY"),
+        },
+        coin_selector: {
+            ("BOOST-READING-SPLIT", "REQUIRES"),
+            ("BOOST-COUNT-LADDER", "BOUNDED_BY"),
+            (drift, "REQUIRES"),
+        },
+        coin_premise: {(coin_selector, "REQUIRES")},
+        coin_derivation: {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+            (coin_selector, "REQUIRES"),
+            ("OBSERVER-WRITE-PORT", "REQUIRES"),
+        },
+    }
+    actual_boost_dependencies = {
+        item: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == item
+        }
+        for item in boost_items
+    }
+    checks.append((
+        "BOOST",
+        "exact drift and selector ranking stay T; MINIMAL-READ stays H with derivation O",
+        has_status(index, drift, "T")
+        and has_status(index, coin_selector, "T")
+        and has_status(index, coin_premise, "H")
+        and has_status(index, coin_derivation, "O")
+        and normative.get(drift, {}).get("item_type") == "THEOREM"
+        and normative.get(drift, {}).get("layer") == "L5"
+        and normative.get(drift, {}).get("gate_ids") == ""
+        and normative.get(coin_selector, {}).get("item_type") == "THEOREM"
+        and normative.get(coin_selector, {}).get("layer") == "MULTI"
+        and normative.get(coin_selector, {}).get("gate_ids") == ""
+        and normative.get(coin_premise, {}).get("item_type") == "HYPOTHESIS"
+        and normative.get(coin_premise, {}).get("layer") == "L1"
+        and normative.get(coin_premise, {}).get("gate_ids") == ""
+        and normative.get(coin_derivation, {}).get("item_type") == "OBLIGATION"
+        and normative.get(coin_derivation, {}).get("layer") == "MULTI"
+        and normative.get(coin_derivation, {}).get("gate_ids") == coin_gate
+        and actual_boost_dependencies == expected_boost_dependencies
+        and all(
+            evidence.get(item, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(item, {}).get("location") == boost_path
+            and evidence.get(item, {}).get("sha256") == boost_digest
+            and evidence.get(item, {}).get("hash_mode")
+                == "bundle-manifest-sha256-v1"
+            and evidence.get(item, {}).get("architecture_requirement")
+                == "two-architecture"
+            for item in boost_items
+        )
+        and scope_contains_all(
+            index, drift,
+            ("division-free spectral skeleton",
+             "minimum 16/5",
+             "V_inf(1) = -beta_1 A_1",
+             "for every N >= 1",
+             "P1 and P2 are premises rather than conclusions",
+             "no decoherence"),
+        )
+        and scope_contains_all(
+            index, coin_selector,
+            ("exactly {beta_1,beta_3}",
+             "generic/rung multiplicities 2/1",
+             "non-integral half-rung",
+             "S1 minimum generic multiplicity",
+             "S3 maximum coherent half-width",
+             "theorem adopts no selector"),
+        )
+        and scope_contains_all(
+            index, coin_premise,
+            ("adopts beta_1 by MINIMAL-READ",
+             "MAXIMAL-REACH",
+             "not a general equivalence",
+             "no claim that the decoder architecture forces MINIMAL-READ"),
+        )
+        and scope_contains_all(
+            index, coin_derivation,
+            ("complete registered decoder architecture",
+             "without adopting MINIMAL-READ as a premise",
+             "typed L5-read to L1-coin selection route"),
+        )
+        and all(
+            phrase.lower() in index[coin_derivation]["falsifier"].lower()
+            for phrase in (
+                "complete admissible decoder class is proved nonempty",
+                "fully compliant beta_1 and beta_3 realizations",
+                "failure of no-feedback or any one favored route is STOP",
+                "classifies the complete admissible class",
+            )
+        )
+        and gates.get(coin_gate, {}).get("owner_item_id") == coin_derivation
+        and gates.get(coin_gate, {}).get("from_layer") == "L5"
+        and gates.get(coin_gate, {}).get("to_layer") == "L1"
+        and gates.get(coin_gate, {}).get("gate_kind") == "OPEN_SELECTION"
+        and all(
+            phrase.lower() in gates[coin_gate]["decision_condition"].lower()
+            for phrase in (
+                "complete typed decoder carrier",
+                "cover-to-output map",
+                "accumulator/equality rule",
+                "redundancy theorem",
+                "uniquely force w = 1 and beta_1",
+                "complete admissible class is proved nonempty",
+                "fully compliant beta_1 and beta_3 realizations",
+                "failure of one favored route is only STOP",
+            )
+        )
+        and drift not in programs
+        and coin_selector not in programs
+        and programs.get(coin_premise, {}).get("program_id") == "DECODER_CORE"
+        and programs.get(coin_premise, {}).get("queue_role") == "FOLLOWUP"
+        and programs.get(coin_premise, {}).get("work_state") == "BLOCKED"
+        and programs.get(coin_premise, {}).get("work_mode") == "FORMAL"
+        and programs.get(coin_derivation, {}).get("program_id") == "DECODER_CORE"
+        and programs.get(coin_derivation, {}).get("queue_role") == "ROOT"
+        and programs.get(coin_derivation, {}).get("work_state") == "STOP"
+        and programs.get(coin_derivation, {}).get("work_mode") == "FORMAL",
     ))
 
     checks.append((

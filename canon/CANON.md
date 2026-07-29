@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v26
+# TWIST-J Public Canon v27
 
-**Release identity.** Public Canon v26. Normative authority and activation
+**Release identity.** Public Canon v27. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v26 also declares the discrete
+algebraic axiom is J. Public Canon v27 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v26 does not claim
+seed of the two algebraic projections. Public Canon v27 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v26 contains no such
+deriving the architecture from J; Public Canon v27 contains no such
 theorem.
 
 ---
@@ -2100,7 +2100,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v26. The fermionizer
+inherited naming clause is not part of Public Canon v27. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -2135,7 +2135,185 @@ by lambda = -1 has the two orbits {1, -1} and {i, -i}, giving the
 substrate partition 2 + 2. In the commuting diagonal model
 B_J = diag(phi, phi^-1), A = diag(1, -1), the name boost axis
 (BOOST-AXIS [D]) is the reading of the two exact A eigendirections.
-No claim that any of these three dictionary choices is forced is made.
+No claim that any of these three existing dictionary choices is forced is
+made.
+
+The fixed `beta_1` walk has a theorem-grade exact drift. Put
+
+```
+A_1 = 1/sqrt(5) [[1, 2], [2, -1]],
+Sigma = diag(-1, 1),
+D = A_1 Sigma A_1 = 1/5 [[3, -4], [-4, -3]].
+```
+
+Then `D^2 = I`, `tr(D) = 0`, and `spec(D) = {-1,+1}`. For
+
+```
+S(z) = diag(z,z^-1),              W(z) = S(z) A_1,
+t = tr(W) = (z-z^-1)/sqrt(5),     h = t/2,
+r^2 = (18+z^2+z^-2)/20,
+lambda_+ = h+r,                   lambda_- = h-r,
+p_+ = W-lambda_- I,               p_- = W-lambda_+ I,
+```
+
+the following identities hold division-free in
+`Q(sqrt(5))[z,z^-1,r]/(r^2-(18+z^2+z^-2)/20)`:
+
+```
+W^2 = tW+I,                       W^-1 = W-tI,
+lambda_+ lambda_- = -1,           r^2-h^2 = 1,
+p_+^2 = 2r p_+,                   p_-^2 = -2r p_-,
+p_+ p_- = p_- p_+ = 0,           p_+-p_- = 2rI.
+```
+
+On `z=exp(ik)`, both bands are unitary. With
+`rho=lambda_-/lambda_+`,
+
+```
+|1-rho|^2 = 4r^2,
+r^2 - 4/5 = cos^2(k)/5,
+```
+
+so the squared step gap never closes and its minimum is `16/5`. The exact
+diagonal drift is obtained from
+
+```
+G = p_+ D p_+ + p_- D p_-
+  = -(z+z^-1)/sqrt(5) (2W-tI),
+V_inf = G/(4r^2),
+V_inf^2 = [beta_1^2 cos^2(k) /
+           (1-beta_1^2 sin^2(k))] I.
+```
+
+It obeys `V_inf(1)=-beta_1 A_1`, and its spectrum fills exactly
+`[-beta_1,beta_1]`. If
+
+```
+P_+ = p_+/(2r),   P_- = -p_-/(2r),
+V_bar_N = (1/N) sum_(j=0)^(N-1) W^-j D W^j,
+```
+
+the division-free conjugation kernel gives, for every `N>=1`,
+
+```
+||V_bar_N-V_inf|| <= 1/(Nr) <= sqrt(5)/(2N).
+```
+
+This is DRIFT-IS-THE-READ [T] at L5. The final reading statement is an
+implication under two declared premises:
+
+```
+P1  the read is translation covariant and acts fiberwise in k;
+P2  the read window is long, N >> 1.
+```
+
+P1 and P2 are not derived. The theorem proves the exact operator identities
+and all-`N` bound and says what a read satisfying those premises returns. It
+does not prove decoherence, an environment, collapse, a Born coupling,
+measurement, L6, SI, coin adoption, or unique physics.
+
+The corresponding integer coin classification is also exact. For positive
+odd `n`,
+
+```
+beta_n = L_n/(sqrt(5) F_n),       1-beta_n^2 = 4/(5F_n^2).
+```
+
+An integer-normalized positive-orientation alternator coin has
+
+```
+A(a,b) = 1/sqrt(5) [[a,b],[b,-a]],
+a,b in Z_(>0),                    a^2+b^2 = 5.
+```
+
+The positive solutions are `(a,b)=(1,2),(2,1)`. Equivalently, integrality on
+an odd rung implies `F_n | L_n`; then
+`L_n^2-5F_n^2=-4` gives `F_n^2 | 4`, and monotonicity of the positive
+Fibonacci numbers leaves exactly `n=1,3`. Thus the complete admissible pair
+is
+
+```
+{beta_1,beta_3},   beta_1=1/sqrt(5),   beta_3=2/sqrt(5).
+```
+
+In rapidity coordinate `x=eta/log(phi)`, distinguish the closed ranges used
+for completeness from the open bands used for cost:
+
+```
+n in Z, w>0,
+C_(n,w) = [n-w,n+w],              I_(n,w) = (n-w,n+w).
+```
+
+The closed family covers the line exactly when `w>=1/2`. For integer
+`w>=1`, the open-band multiplicity is `2w` away from a rung and `2w-1` on a
+rung. Hence
+
+```
+coin       w    generic multiplicity    rung multiplicity
+beta_1    1    2                       1
+beta_3    3    6                       5
+```
+
+At `w=1/2`, the closed intervals still cover, but the open bands have
+multiplicity one only away from the seams and multiplicity zero at
+`Z+1/2`; the half-rung is therefore only a generic single tiling. Its
+velocity `tanh(log(phi)/2)=sqrt(5)-2=phi^-3` is not integer-admissible.
+Under the registered boost addition law, the closed rapidity cover maps to
+a complete composed velocity cover of `(-1,1)`.
+
+Repeating the exact spectral comparison at `beta_3` gives
+
+```
+coin       r_min^2    uniform constant    min |1-rho|^2
+beta_1    4/5        sqrt(5)/2           16/5
+beta_3    1/5        sqrt(5)             4/5.
+```
+
+Therefore, on the complete frozen pair,
+
+```
+S1  minimum generic open-band multiplicity  -> beta_1 uniquely,
+S2  minimum worst-case uniform constant      -> beta_1 uniquely,
+S3  maximum coherent half-width              -> beta_3 uniquely.
+```
+
+This is COIN-SELECTION-CONDITIONAL [T]. S1 and S2 are distinct definitions
+that agree on this pair; no general equivalence or experimental independence
+is asserted. S3 is the exact counter-ranking. The theorem adopts no selector.
+Its use as a velocity-read comparison is bounded by BOOST-COUNT-LADDER [D];
+that dictionary is not a proof premise of the T row.
+
+The Canon adopts S1/S2 under one name:
+
+```
+MINIMAL-READ    usporne cteni; choose the complete integer-admissible
+                coin minimizing both generic covering multiplicity and
+                worst-case uniform-read constant
+
+MAXIMAL-REACH   nejdelsi dosah; choose the admissible coin with the
+                largest coherent range
+```
+
+COIN-MINIMAL-READ [H] selects `beta_1` by MINIMAL-READ. MAXIMAL-REACH is the
+named, unadopted counter-selector and selects `beta_3`. The agreement of the
+two minimum-cost criteria is evidence on the frozen pair, not a derivation of
+the premise and not a general equivalence. The row fires if a complete exact
+decoder derivation uniquely forces `beta_3`, or if an exact counterexample
+overturns the admissible-pair or ranking theorem; merely naming another
+preference that chooses `beta_3` does not fire it.
+
+MINIMAL-READ-DERIVATION [O] owns the unresolved L5-to-L1 selection boundary.
+It asks whether the complete registered decoder architecture, without
+adopting MINIMAL-READ, uniquely forces `w=1`, `beta_1`, and its minimum-read
+property. GATE-L5-L1-MINIMAL-READ closes positively only when the complete
+typed carrier, cover-to-output map, admissible protocol class,
+accumulator/equality rule, redundancy theorem, and dependency graph uniquely
+force that result. It closes negatively only when the complete admissible
+class is proved nonempty and either contains fully compliant `beta_1` and
+`beta_3` realizations or uniquely forces `beta_3`. It is STOP while any
+listed type, map, class, rule, graph, or layer endpoint is incomplete.
+Failure of the no-feedback route or any one favored route is only STOP unless
+it classifies the complete admissible class.
 
 ## 11. The pentit ring and the magic boundary
 
@@ -3116,6 +3294,21 @@ positively and what closes it negatively.
   proved outside that grid, failure of the stated limit, or any all-vector
   contradiction in this compact-boundary class fires the hypothesis.
 
+COIN-MINIMAL-READ [H] is the adopted L1 dictionary premise that selects
+`beta_1` from the complete integer-admissible pair by the two distinct
+minimum-cost criteria proved in COIN-SELECTION-CONDITIONAL [T].
+MAXIMAL-REACH remains the named unadopted alternative and selects `beta_3`.
+The hypothesis does not say that the decoder architecture forces this
+choice.
+
+MINIMAL-READ-DERIVATION [O] is the corresponding open L5-to-L1 decision. It
+requires a complete typed decoder class, cover-to-output map,
+accumulator/equality rule, redundancy theorem, dependency graph, and layer
+typing. A complete derivation uniquely forcing `w=1` and `beta_1` closes it
+positively; a complete nonempty class supporting both coins, or uniquely
+forcing `beta_3`, closes it negatively. Missing structure or failure of only
+one proposed route is STOP.
+
 TM-SYM2-PHYSICAL-MEASURE [O] is the surviving physical L5-to-L6
 obligation. A future successor must start from the complete four-orbit
 projective-gauge record, retain epsilon_read as typed L5
@@ -3127,6 +3320,43 @@ M_TM = (1/3)P1 + (2/15)P5, and the typed factorization
 No successor L5 source schema is currently frozen. The Born gate remains
 open but the scheduler is STOP pending a separately reviewed owner
 definition.
+
+The v27 ledger change is signed term by term:
+
+```text
+claims:    210 + 2 theorems + 1 hypothesis + 1 obligation = 214,
+T:         111 + 2 exact boost/coin theorems = 113,
+H:         3 + 1 adopted coin premise = 4,
+O:         23 + 1 derivation owner = 24,
+live H/O:  26 + 2 = 28.
+```
+
+Public Canon v27 registers DRIFT-IS-THE-READ [T] at L5 and
+COIN-SELECTION-CONDITIONAL [T] at the exact L1/L5 comparison boundary. The
+first row packages the fixed `beta_1` reflection, division-free spectral
+skeleton, nonclosing gap, exact drift and range, and all-`N` uniform bound.
+Its read interpretation is conditional on P1 and P2; neither premise is
+derived or physically anchored. The second row proves the complete pair
+`{beta_1,beta_3}`, endpoint-qualified cover and multiplicity statements,
+exact uniform constants and squared gaps, and the S1/S2/S3 rankings.
+
+The same immutable `probes/P-BOOST-COHERENCE-1` bundle is the sole evidence
+for both theorem rows and for the supported H/O split. Its one formal
+aarch64 execution and required GitHub x86_64 reproduction produced the same
+8-group, 477-check PASS transcript byte for byte. No probe file is amended
+and no `P-BOOST-COHERENCE-1` probe verifier or formal execution is rerun by
+this fold.
+
+COIN-MINIMAL-READ [H] adopts `beta_1` by MINIMAL-READ and records
+MAXIMAL-REACH as the unadopted selector of `beta_3`.
+MINIMAL-READ-DERIVATION [O] separately owns the OPEN_SELECTION gate and
+remains STOP on incomplete decoder, class, map, accumulator, redundancy,
+graph, and layer data. No premise-to-theorem promotion, P1/P2 anchoring,
+decoherence, Born, L6, SI, measurement, collapse, environment, or unique
+physics is added. The absent incubation identifiers
+`O-COIN-CANONICAL` and `O-DECOHERENCE-CLAUSE` receive no public retirement
+or history event. TM-SYM2-PHYSICAL-MEASURE and every other v26 row remain
+unchanged.
 
 The v26 ledger change is signed term by term:
 
@@ -3311,6 +3541,10 @@ MATTER
   PROTON-RESIDUAL-IS-QCD     typed exact QCD residual only; carrier,
                              normalization, equality, and inference are STOP
 OBSERVER
+  MINIMAL-READ-DERIVATION    decide whether a complete typed decoder forces
+                             the beta_1 minimum read; L5-to-L1 gate is STOP
+  COIN-MINIMAL-READ          beta_1 adopted by the two minimum-cost criteria;
+                             MAXIMAL-REACH is named and not adopted
   OBSERVER-WRITE-PORT        typed L5-output to L1-state completion
                              hypothesis; schema and dependency graph are STOP
 EMPIRICAL HORIZON
