@@ -1,0 +1,9 @@
+PASS integer coins (56 checks)
+PASS cover and half-rung (361 checks)
+PASS T1 velocity operator (4 checks)
+PASS T2 spectral skeleton (14 checks)
+PASS T2 spectral gap (3 checks)
+PASS T3 drift (11 checks)
+PASS T4 uniform read kernel (9 checks)
+PASS T5 selector ranking (19 checks)
+SUMMARY PASS groups=8 checks=477
