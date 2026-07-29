@@ -334,3 +334,13 @@ C8-BILINEAR-SHADOW	RAMIFIED-TM-LIFT	REQUIRES	the Theta_n digit recursion, sign q
 C8-BILINEAR-SHADOW	SQRT-PHI-DIGIT-LIFT	REQUIRES	the two exact Y branches, their projections, and their all-n successor law are the objects whose Frobenius swap and invariant record are proved
 METRO-REDUCTION-ARROWS	DEF-ARCHITECTURE	REQUIRES	the typed finite rational protocol carrier is conditional on the declared public architecture
 METRO-REDUCTION-CALCULUS	METRO-REDUCTION-ARROWS	REQUIRES	obligations A and C are discharged only at the registered computation scope; the parent retains B, D, and E and remains O/STOP
+DRIFT-IS-THE-READ	BOOST-READING-SPLIT	REQUIRES	the fixed beta_1 coin and its exact rapidity value use the registered parity-resolved Fibonacci/Lucas boost theorem
+DRIFT-IS-THE-READ	BOOST-COUNT-LADDER	BOUNDED_BY	the word read names only the registered count-to-velocity dictionary and does not make that lower-status dictionary a proof premise
+COIN-SELECTION-CONDITIONAL	BOOST-READING-SPLIT	REQUIRES	the complete odd-rung rigidity proof and beta_1/beta_3 values use the exact parity-resolved boost identities
+COIN-SELECTION-CONDITIONAL	BOOST-COUNT-LADDER	BOUNDED_BY	the rapidity-cover cost is interpreted only inside the registered count-to-velocity dictionary and the theorem itself adopts no selector
+COIN-SELECTION-CONDITIONAL	DRIFT-IS-THE-READ	REQUIRES	the S2 comparison uses the exact all-N uniform-read kernel and beta_1 worst-case constant
+COIN-MINIMAL-READ	COIN-SELECTION-CONDITIONAL	REQUIRES	the adopted H-level choice rests on the complete exact pair and conditional S1/S2/S3 ranking theorem
+MINIMAL-READ-DERIVATION	DEF-ARCHITECTURE	REQUIRES	any derivation must start from the complete registered public decoder architecture rather than from the adopted premise
+MINIMAL-READ-DERIVATION	DEF-ACTION-LAYERS	REQUIRES	the proposed selection route must type its L5 read and L1 coin endpoints without smuggling a cross-layer lift
+MINIMAL-READ-DERIVATION	COIN-SELECTION-CONDITIONAL	REQUIRES	the derivation target uses the exact complete coin pair, cost coordinates, and conditional rankings
+MINIMAL-READ-DERIVATION	OBSERVER-WRITE-PORT	REQUIRES	the no-feedback route cannot proceed until completed observer terminality and its full dependency graph close positively

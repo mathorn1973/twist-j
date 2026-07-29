@@ -1,12 +1,56 @@
 # Canon changelog (public series)
 
 
-## Public Canon v26
+## Public Canon v27
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 210 claims; 0 T-LOCK, 111 T, 40 D, 23 C, 3 H, 23 O, 10 F; 26 live H/O.
+Registry snapshot: 214 claims; 0 T-LOCK, 113 T, 40 D, 23 C, 4 H, 24 O, 10 F; 28 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v27 registers two exact rows from the immutable
+`probes/P-BOOST-COHERENCE-1` bundle. DRIFT-IS-THE-READ [T] packages the
+fixed `beta_1` reflection, division-free spectral skeleton, nonclosing
+squared gap, exact drift and coherent range, and the uniform all-`N` bound
+`||V_bar_N-V_inf|| <= sqrt(5)/(2N)`. Its large-window reading is conditional
+on the declared translation-covariant fiber premise P1 and long-window
+premise P2; neither premise is derived or physically anchored.
+
+COIN-SELECTION-CONDITIONAL [T] proves that the positive-orientation
+integer-admissible coins are exactly `{beta_1,beta_3}`, separates closed-cover
+completeness from open-band generic, rung, and seam multiplicity, and records
+the exact comparison. The generic multiplicities are `2` versus `6`, the
+rung multiplicities are `1` versus `5`, the uniform constants are
+`sqrt(5)/2` versus `sqrt(5)`, and the minimum squared gaps are `16/5` versus
+`4/5`. S1 and S2 uniquely select `beta_1`; S3 uniquely selects `beta_3`.
+The criteria are distinct and agree only on the frozen complete pair.
+
+The same public evidence supports the owner-approved split:
+COIN-MINIMAL-READ [H] adopts `beta_1` by MINIMAL-READ and names
+MAXIMAL-REACH as the unadopted counter-selector, while
+MINIMAL-READ-DERIVATION [O] owns the open L5-to-L1 selection gate. The
+obligation is STOP until the complete decoder class, cover-to-output map,
+accumulator/equality rule, redundancy theorem, dependency graph, and layer
+typing are public. Failure of one favored route is STOP, not a negative
+classification.
+
+The prospective-pinned aarch64 execution and required GitHub x86_64
+reproduction returned the same 8-group, 477-check PASS transcript byte for
+byte. The evidence bundle SHA-256 is
+`0e2c9daaee5a7c189615f1941894015be2b9e59a71a1183cfc6ed207c9c8d083`.
+No probe file is changed, and no `P-BOOST-COHERENCE-1` probe verifier or
+formal execution is rerun. This fold adds no
+premise-to-theorem promotion, P1/P2 anchoring, decoherence, environment,
+collapse, Born, measurement, L6, SI, or unique-physics claim. It records no
+retirement for absent incubation identifiers, and
+TM-SYM2-PHYSICAL-MEASURE remains unchanged.
+
+## Public Canon v26
+
+<!-- BEGIN GENERATED CANON26 COUNTS -->
+Registry snapshot: 210 claims; 0 T-LOCK, 111 T, 40 D, 23 C, 3 H, 23 O, 10 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON26 COUNTS -->
 
 Public Canon v26 registers exactly one new L1 theorem,
 C8-BILINEAR-SHADOW [T]. In `F_25`, the theorem identifies the two nonzero
