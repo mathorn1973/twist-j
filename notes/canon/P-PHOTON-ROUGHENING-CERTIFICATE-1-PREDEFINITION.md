@@ -45,10 +45,13 @@ lock, not permission to create the reserved formal branch or path.
 The sibling lock `PHOTON-KAPPA-LEMMA` in issue #200 is disjoint and remains
 out of scope here. Neither child can close or redefine the other.
 
-The reconciliation layer is literally `NOT_APPLICABLE`. Repository policy
-requires a future formal preregistration to freeze an action layer from L1
-through L6. This mismatch is a pre-pin `STOP` requiring explicit public
-disposition. It may not be repaired silently by relabeling this child L1.
+The reconciliation layer is literally `NOT_APPLICABLE`. This is valid for a
+non-normative routing row and does not itself create an error or protocol
+placement. A future formal preregistration must still freeze its action-layer
+scope. The exact one-face algebra below is L4; a theorem import whose consumed
+conclusion concerns an infinite-volume Gibbs state or phase reaches L6. Such
+an import is therefore prospective `MULTI`, with a separately named L4-to-L6
+gate. It may not be silently relabeled as L1.
 
 ## 2. Exact inherited inventory and firewalls
 
@@ -160,10 +163,11 @@ For the Wilson action, the face factor is of the form
 phi_beta(theta) = exp(beta cos(theta)).
 ```
 
-For positive finite `beta`, its cyclic Fourier coefficients are strictly
-positive: the Bessel expansion gives each coefficient as a positive sum of
-`I_(m+rN)(beta)`. The Villain heat-kernel coefficients are also strictly
-positive for finite coupling.
+For `0<beta<infinity`, its cyclic Fourier coefficients are strictly positive:
+the Bessel expansion gives each coefficient as a positive sum of
+`I_(m+rN)(beta)`. The standard Villain heat-kernel coefficients are also
+strictly positive at strictly positive finite coupling. Zero coupling is a
+boundary endpoint and is not covered by this strict-positivity statement.
 
 The TWIST-J Fourier vector has exact zeros in character classes 2 and 3:
 
@@ -188,6 +192,48 @@ A future positive import must instead provide one of:
 
 A local convexity, Hessian, Fourier-support, or finite-face check is not by
 itself an infinite-volume import.
+
+### 4.1 Exact Fourier-shape side result
+
+The exact pair `w` and `Fourier(w)` is already public in
+`PHOTON-WINDOW-COORDINATES [T]`; it is not a new result here. A strictly
+incremental finite-algebra statement is nevertheless available. Put
+
+```text
+lambda_0 = 4,
+lambda_1 = lambda_4 = phi^2,
+lambda_2 = lambda_3 = phi^(-2).
+```
+
+The values are strictly decreasing only in cyclic radius:
+
+```text
+lambda_0 > lambda_(+/-1) > lambda_(+/-2) > 0.
+```
+
+The radial three-term sequence is strictly log-concave because
+
+```text
+lambda_1^2 = phi^4 > 4 phi^(-2) = lambda_0 lambda_2.
+```
+
+The five-periodic sequence is not cyclically log-concave. At class 2,
+
+```text
+lambda_2^2 = phi^(-4) < lambda_1 lambda_3 = 1.
+```
+
+With the named automorphism `sigma_2: j -> j^2`, the Galois action exchanges
+the radius-one and radius-two pairs and hence exchanges `phi^2` with
+`phi^(-2)`. The direct weight has full support, while the normalized character
+vector `b=(1,1/2,0,0,1/2)` has support `{0,+1,-1}`.
+
+These exact finite facts may seed a separate future L4 Fourier-shape
+candidate. They do not supply an action comparison. Any comparison theorem
+must name which side of the transform it consumes, whether boundary zeros are
+allowed, and every quantitative hypothesis. No projective-closure or broader
+action-class membership statement is made here; either would first require
+an explicit family, normalization, topology, and uniform estimates.
 
 ## 5. Source-import object that must be frozen
 
@@ -300,7 +346,30 @@ STOP
 Failure of one unfrozen action map is `STOP`, not `CERTIFIED-FAILURE`.
 Negative closure requires a complete frozen admissible bridge class.
 
-## 9. Future preregistration skeleton, still forbidden
+## 9. Owner disposition for the v27 queue
+
+The owner selects `R4B` as non-canonical routing input:
+
+```text
+PHOTON-ROUGHENING-CERTIFICATE  remains O / STOP on the missing typed import
+N_c = 5                        remains a source belief, not a public premise
+Fourier-shape result           separate future exact L4 candidate
+roughening source lane         prospective MULTI, L4 face data to L6 measure
+```
+
+The finite Fourier candidate must be strictly incremental over
+`PHOTON-WINDOW-COORDINATES [T]` and limited to the radial order,
+radial three-point log-concavity, its explicit cyclic counterexample, named
+Galois action, exact supports, and the finite-coupling equality obstruction.
+It carries no comparison, broader-class, closure, Gibbs, roughening,
+masslessness, or phase conclusion.
+
+The source-import child remains disjoint. A future formal attempt must pin an
+exact L4-to-L6 theorem bridge and named gate; finite one-face algebra cannot
+serve as that bridge by itself. This disposition changes no public claim,
+status, scope, layer ledger, gate, or evidence row and authorizes no probe.
+
+## 10. Future preregistration skeleton, still forbidden
 
 Only after public review may a later immutable preregistration fill:
 
@@ -311,14 +380,15 @@ CARRIER:     complete TWIST-J and source carriers with equality
 SYSTEMATICS: theorem dependencies, action class, coupling, measure,
              boundary, limit, observable, comparison, and source controls
 THRESHOLD:   exact CERTIFICATE-PASS / CERTIFIED-FAILURE / STOP predicates
-LAYER:       currently NOT_APPLICABLE in the reconciliation split
+LAYER:       MULTI, L4 one-face input to L6 Gibbs/phase conclusion
 ```
 
-If formal review requires an L1-L6 assignment, `LAYER=NOT_APPLICABLE` is a
-pre-pin `STOP` until the public routing is explicitly repaired. Any newly
-discovered inter-layer map or dependency requires separate authorization.
+The reconciliation table may continue to record `NOT_APPLICABLE`; it creates
+no protocol placement. A future preregistration must freeze the MULTI scope
+and name its exact L4-to-L6 gate. No such gate is created by this note.
+Any new inter-layer dependency requires separate authorization.
 
-## 10. Pre-pin acceptance checklist
+## 11. Pre-pin acceptance checklist
 
 The formal branch and path remain forbidden until:
 
@@ -333,14 +403,14 @@ The formal branch and path remain forbidden until:
 7. the consumed conclusion is stated without strengthening;
 8. all three outcomes remain reachable and their falsifiers are exact;
 9. source license and manifest requirements receive explicit disposition;
-10. the action-layer mismatch receives explicit public disposition;
+10. the formal preregistration freezes MULTI and names its L4-to-L6 gate;
 11. issue, branch, probe, path, and short-ID collisions are rechecked;
 12. an accepted verifier, if any, is committed and pushed with `PREREG.md`
     before the first formal gate execution; and
 13. remote hashes, byte counts, and LF-normalized readback are confirmed
     before any run.
 
-## 11. Debt firewall
+## 12. Debt firewall
 
 This note does not define roughening, prove or disprove broader
 Frohlich-Spencer action-class membership, establish a `Z_5` Coulomb phase,
