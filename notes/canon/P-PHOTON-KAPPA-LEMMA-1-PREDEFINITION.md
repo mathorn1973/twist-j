@@ -45,10 +45,13 @@ The sibling lock
 `PHOTON-ROUGHENING-CERTIFICATE` in issue #201 is disjoint. Neither child can
 close or redefine the other.
 
-The reconciliation layer is literally `NOT_APPLICABLE`. Repository policy
-requires a future formal preregistration to freeze an action layer from L1
-through L6. This mismatch is a pre-pin `STOP` requiring explicit public
-disposition. It may not be repaired silently by relabeling this child L1.
+The reconciliation layer is literally `NOT_APPLICABLE`. This is valid for a
+non-normative routing row and does not itself create an error or protocol
+placement. Repository policy nevertheless requires a future formal
+preregistration to freeze an action layer from L1 through L6. On the
+support-chain surface selected below, the prospective probe is L4 only.
+Any later use of a tick, stream, or measure quantity requires a separately
+named cross-layer gate.
 
 ## 2. Exact inherited inventory and firewalls
 
@@ -309,6 +312,18 @@ F(n) = V + V + V/2 = 5V/2,
 L(j) = V.
 ```
 
+This current is not a nonzero-homology obstruction. It is the signed sum of
+`N_1 N_2 N_3` individually winding `x_0` loops, and
+
+```text
+[j] = (sum_(x_1,x_2,x_3) sigma(x)) [gamma_0] = 0
+```
+
+because every spatial period is even. The displayed equation
+`partial n=5j` independently proves that the total signed current has an
+admissible filling. The individual winding components do not bound, but their
+homology classes cancel in the total current.
+
 Hence `Phi(j)<=5V/2` if this carrier and minimum are adopted, while every
 coefficient satisfying (K2) is strictly larger than `5/2` because
 `2^10=1024<2401`. This family would exclude every admissible threshold
@@ -348,7 +363,62 @@ The simple family in section 7.1 refutes only the sufficiency of the current
 greedy proof route. The torus family in section 7.2 becomes a scientific
 negative only if its carrier survives the prior scope freeze.
 
-## 9. Future preregistration skeleton, still forbidden
+## 9. Owner disposition for the v27 queue
+
+This non-canonical note records the owner-selected next route. It changes no
+public parent scope or status:
+
+```text
+R0A  retain the inherited ternary face alphabet and exact charge equation
+R1A  support/support on the candidate chain carrier
+R2A  finite-support cubical chains on infinite Z^4
+R3A  do not narrow the public parent; use connected edge-simple currents only
+      as the first falsifier subclass
+R5B  falsification before a universal construction
+```
+
+The exact candidate search surface is
+
+```text
+j in C_1^c(Z^4; {0,+1,-1}),
+j != 0,
+partial j = 0,
+
+Fill(j) = {
+    n in C_2^c(Z^4; {0,+1,-1}) : partial n = 5j
+},
+
+Fill(j) != empty,
+L(j) = |supp(j)|,
+F_occ(j) = min_{n in Fill(j)} |supp(n)|.
+```
+
+Chain equality is coefficientwise. Walk length, immediate backtracks,
+repeated traversal, and coefficients outside `{0,+1,-1}` are not part of
+this search carrier. The support and `l1` grades coincide on this ternary
+surface. An unrestricted integer-face model is not an alternative reading of
+the same registered rows: it would allow the unit square filling `5Q` on one
+face and contradict `MONOPOLE-COST [C]`, `MONOPOLE-FIFTHS [T]`, and the
+incidence argument. Likewise, for `j=k partial Q`, `k>=2`, a ternary filling
+would require magnitude at least 10 on a charged edge while six incident
+ternary faces give magnitude at most 6.
+
+The first exact falsifier certificate is an explicit connected edge-simple
+pair `(j,n)` on this surface satisfying
+
+```text
+partial n = 5j,
+2^|supp(n)| <= 7^|supp(j)|.
+```
+
+It needs no minimum solver: `F_occ(j)<=|supp(n)|` already excludes every
+universal `kappa` with `2^(4 kappa)>2401`. Failure to find such a pair in any
+finite family or range proves nothing about the broad parent. The greedy
+family in section 7.1 is therefore a refuted proof route, not a registered
+public `[F]` row. The torus construction in section 7.2 is retained only as
+an out-of-carrier regression control after R2A.
+
+## 10. Future preregistration skeleton, still forbidden
 
 Only after public review may a later immutable preregistration fill:
 
@@ -359,14 +429,15 @@ CARRIER:     complete S_kappa carrier and equality
 SYSTEMATICS: orientation, boundary, multiplicity, topology, reduction,
              completeness, and counterexample controls
 THRESHOLD:   exact outcome predicates above, frozen before output
-LAYER:       currently NOT_APPLICABLE in the reconciliation split
+LAYER:       L4 support on the owner-selected candidate surface
 ```
 
-If formal review requires an L1-L6 assignment, `LAYER=NOT_APPLICABLE` is a
-pre-pin `STOP` until the public routing is explicitly repaired. Any newly
-discovered inter-layer map or dependency requires separate authorization.
+The reconciliation table may continue to record `NOT_APPLICABLE`; it creates
+no protocol placement. The future preregistration itself must freeze L4.
+Any newly discovered inter-layer map or dependency requires separate
+authorization and a named gate.
 
-## 10. Pre-pin acceptance checklist
+## 11. Pre-pin acceptance checklist
 
 The formal branch and path remain forbidden until:
 
@@ -379,18 +450,19 @@ The formal branch and path remain forbidden until:
 6. the universal proof or counterexample method is complete for the whole
    carrier;
 7. all four outcomes remain reachable and their falsifiers are exact;
-8. the action-layer mismatch receives explicit public disposition;
+8. the formal preregistration freezes L4 and names every required lift;
 9. issue, branch, probe, path, and short-ID collisions are rechecked;
 10. an accepted verifier, if any, is committed and pushed with `PREREG.md`
     before the first formal gate execution; and
 11. remote hashes, byte counts, and LF-normalized readback are confirmed
     before any run.
 
-## 11. Debt firewall
+## 12. Debt firewall
 
-This note does not select the worldline carrier, prove a universal kappa,
-claim that the torus family belongs to the parent scope, equate `LB` with
-`F_occ`, strengthen `KAPPA-SHAPES`, infer a massless photon or Coulomb phase,
-change `CENTER-SPLIT-SELECTION`, edit the Canon, or authorize a probe. It
-records why the current inherited evidence is insufficient and makes the
-next definition decision falsifiable.
+This note selects a non-canonical candidate search surface but does not change
+the public parent carrier or status, prove a universal kappa, claim that the
+torus family belongs to the parent scope, equate `LB` with `F_occ`, strengthen
+`KAPPA-SHAPES`, infer a massless photon or Coulomb phase, change
+`CENTER-SPLIT-SELECTION`, edit the Canon, or authorize a probe. It records why
+the current inherited evidence is insufficient and makes the next definition
+decision falsifiable.
