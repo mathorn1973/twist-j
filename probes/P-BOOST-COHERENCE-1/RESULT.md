@@ -9,7 +9,7 @@ groups: 8 of 8 PASS
 checks: 477
 fired_falsifiers: none
 stop_conditions: none
-reproduction_status: PENDING
+reproduction_status: PASS
 ```
 
 The single prospective-pinned aarch64 execution passed every frozen exact
@@ -44,5 +44,6 @@ P2. It supplies no decoder-completion, no-feedback, L5-to-L1, L6, SI,
 measurement, collapse, environment, or unique-physics claim.
 
 No Canon, registry, frontier, changelog, hash, release, or status change is
-proposed. Reproduction remains pending until the required clean GitHub x86_64
-leg matches the pinned verifier and `EXPECTED.txt` byte for byte.
+proposed. Final reproduction status is PASS: the required clean GitHub x86_64
+check reproduced the pinned verifier and matched the aarch64 stdout SHA-256
+byte for byte. Review and any later Canon fold remain separate owner actions.

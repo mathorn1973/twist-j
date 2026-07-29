@@ -62,9 +62,22 @@ record.
 ## Required GitHub leg
 
 ```text
-status: PENDING
+status: PASS
+workflow_run_id: 30482405522
+job_id: 90679567824
+job_url: https://github.com/mathorn1973/twist-j/actions/runs/30482405522/job/90679567824
+check_name: check
+tested_head_commit: bf2aa420efead351042df4ebb34e5214779633d5
+checkout_merge_commit: e5e0f5d3cad5381ee479977857c1c196f1faf93f
+base_commit: 48213275d0ace92d8f034166179a9fee4d53d908
+platform: Ubuntu 24.04 GitHub-hosted runner image 20260720.247.2
+architecture: x86_64
+python: Python 3.12.13
+verifier_sha256: 3b79ebf025bde6e15f8f25a9856f242a219e3c159329d65029148c16a86abe2c
+stdout_sha256: 426855610214b6b83a62007dce6adc2a20ae389e42af3617615559a0904d1907
+verdict: VERIFY PASS
 ```
 
-The required clean x86_64 GitHub reproduction will be recorded after the
-post-run commit triggers it. Until then, the local aarch64 result is a passed
-formal leg, not a completed two-architecture gate.
+The required clean GitHub check reproduced the public pinned verifier and
+matched `EXPECTED.txt` byte for byte. The local aarch64 leg and GitHub x86_64
+leg therefore complete the two-architecture gate for the verifier-backed
