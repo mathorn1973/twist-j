@@ -4,8 +4,8 @@
 STATUS:           NON-CANONICAL BREAKER RESULT
 AUTHORITY:        none
 SCIENTIFIC GRADE: UNEARNED
-BREAKER:          22/22 PASS as reported by the M2 breaker session
-RUN RECORD:       INCOMPLETE, pinned stdout not transferred
+BREAKER:          22/22 PASS, stdout pinned and verified against the code
+RUN RECORD:       COMPLETE
 DECISION:         BREAKER GATE SATISFIED ON THE COUNTING AND TARGET-STRUCTURE
                   CONTENT; THE COMMON-COCYCLE PREMISE REMAINS SINGLE-ROUTE
 PUBLIC BRIDGE:    ENTROPY-LAYER-BRIDGE remains O / STOP
@@ -31,14 +31,50 @@ breaker prereg sha: d02badef96706f4c1e3f88edf1430e4641e2276245873b875e56f399fafc
 breaker code:       mackey4_break.py
 breaker code sha:   2bcb6ce2f009395e81f5904aef45475e8f165983003b6c4ca2d6aead86be6faa
 breaker bytes:      29504
-breaker stdout sha: 96475153... CLAIMED BY THE BREAKER SESSION, FILE NOT TRANSFERRED
+breaker stdout:     mackey4_break.stdout.txt
+breaker stdout sha: 96475153f0c7745d06bcbdde709ce0a5ee6b5da1e6aa8630d56d67cd6556c323
+breaker stdout:     3912 bytes, 0 CR, final byte 10
+breaker result:     RESULT-BREAKER-MACKEY4-1.md
+breaker result sha: b19c519a3c8367487599a173a631c1926bdde056f9aa5c4a37c4853283390518
 platform:           Ubuntu 24.04.4, x86_64, Python 3.11.15, one platform
 executions:         1 formal, plus one byte-identical repeat run
 ```
 
-Both transferred files were verified byte for byte against the declared
-SHA-256 before they were committed. Both are LF only. The committed Git blobs
+All four transferred files were verified byte for byte against the declared
+SHA-256 before they were committed. All are LF only. The committed Git blobs
 reproduce the declared hashes exactly.
+
+### 1.1 Verification of the breaker's own falsifier clauses
+
+`RESULT-BREAKER-MACKEY4-1.md` declares itself wrong if the pinned files miss
+their hashes, if any stdout line differs from the pinned stdout, if the runs
+ledger is incomplete, or if `mackey4_break.py` reads or imports a forbidden
+primary file. Checked here, without executing the breaker:
+
+```text
+hashes            all four files match their declared SHA-256 exactly, and
+                  the stdout matches its declared 3912 bytes.
+stdout vs code    22 gate() call sites in the pinned code, 22 gate lines in
+                  the pinned stdout, same identifiers in the same source
+                  order, all PASS, and every stdout line's static text
+                  matches the corresponding format string in the code.
+                  Every non-gate line traces to a literal in the code.
+                  No line is unaccounted for.
+independence      imports are `fractions` and `math` only. No open, exec,
+                  eval, compile, __import__, subprocess or network call
+                  anywhere in the file. The string `mackey4_verify` occurs
+                  exactly once, in the independence comment on line 9, and
+                  `entropy_selection` does not occur at all. The file cannot
+                  have read a forbidden primary file at runtime.
+runs ledger       2 executions declared, formal plus a byte-identical
+                  determinism repeat, with pre-pin activity limited to
+                  py_compile and an SNF smoke test on toy matrices, which the
+                  frozen prereg permits. Not independently checkable from the
+                  artifacts; recorded as declared.
+```
+
+No falsifier of that record fired. The stdout is the output of the pinned
+code, not a transcription.
 
 ## 2. Independence provenance
 
@@ -215,6 +251,16 @@ value both instruments actually test, and the primary's reconstruction is
 explicit. But the premise that carries the most weight in the obstruction has
 exactly one witness: one implementation, one platform, one run.
 
+Both sides of this are preserved, not reconciled. `RESULT-BREAKER-MACKEY4-1.md`
+is committed verbatim as the breaker session's own frozen record. Its
+per-gate wording is accurate: it describes its cocycle reconstruction as
+"verified per component", which is exactly the property identified above. What
+does not survive adjudication is only the summary line that the independent
+route "AGREES WITH THE PRIMARY ON EVERY LOAD-BEARING VALUE", which for `E9`
+reports agreement a tautological gate could not have withheld. Neither
+instrument was edited, and the breaker's own falsifier clauses were checked
+and did not fire.
+
 ## 6. Lane decision
 
 ```text
@@ -231,19 +277,18 @@ successor summary can drift:
 - every `629` statement remains scoped to `r >= 2`;
 - one platform, incubation lane, so `candidate-C` is the ceiling in any case.
 
-Recommended next step, in order of cost:
+Recommended next step:
 
-1. Supply the pinned breaker stdout so the run record in section 1 is
-   complete. Until then this record is incomplete by its own preregistration,
-   whose execution policy requires every execution to be recorded.
-2. Commission `PREREG-BREAKER-MACKEY4-2` scoped to `E9` alone: an independent
+1. Commission `PREREG-BREAKER-MACKEY4-2` scoped to `E9` alone: an independent
    reconstruction that builds one global `D_5` from the public generators,
    allows only a per-component gauge, and tests block independence. This is a
-   single gate and it is the premise the entire obstruction rests on.
-3. Only then decide whether to record the `candidate-C` negative subclass
+   single gate and it is the premise the entire obstruction rests on. The
+   negative control in section 5 is the acceptance test any successor gate
+   must fail on: a correct `E9` gate must REJECT that synthetic target.
+2. Only then decide whether to record the `candidate-C` negative subclass
    result for the fixed depth-five, fiberwise-bijective, `r >= 2` class.
 
-Recording `candidate-C` before step 2 is defensible under the literal decision
+Recording `candidate-C` before step 1 is defensible under the literal decision
 rule, but it would rest the load-bearing common-cocycle premise on a single
 route while the `22/22 ALL PASS` headline suggests otherwise. That gap is the
 reason this note does not itself declare the candidate result.
