@@ -185,18 +185,42 @@ A^sharp    = G^(-1) A^T G.
 `G` is exactly the Gram of the pairing of part 2, so it is not an independent
 choice.
 
+The adjoint and the transpose are **two separate definitions**, because the
+public contract carries `dagger_id`, `transpose_id` and `q_map_id` as three
+distinct slots:
+
 ```text
-Q_QDD(v)       = ( v v^dagger, v v^T ),
+DEF-QDD-DAGGER-RATIONAL      dagger_Q(v)    = v^T   on V_eff
+DEF-QDD-TRANSPOSE-RATIONAL   transpose_Q(v) = v^T   on V_eff
+TYPED-DIAGONAL-IDENTITY      dagger_Q|V_eff = transpose_Q|V_eff
+```
+
+`TYPED-DIAGONAL-IDENTITY` is their exact coincidence on the chosen carrier. It
+is a recorded identity of this leg, not a licence to merge the slots: **one
+identifier must not fill two manifest slots merely because the two values
+agree.** The ordered quadratic map is then
+
+```text
+Q_QDD(v)       = ( v dagger_Q(v), v transpose_Q(v) ),
 QCarrier_QDD   = im( Q_QDD | V_eff )  subset M_4(Q) x M_4(Q),
 ```
 
-with ordered componentwise rational matrix equality. **Disclosure:** because
-`v^dagger = v^T` on `Q^4`, the two slots of `Q_QDD(v)` are equal on every one
-of the 313 carrier elements. The pair is the diagonal of
-`M_4(Q) x M_4(Q)`. The ordered form is retained because the registered scope of
-`QUADRATIC-DECODER-DATA` writes `Q(psi) = (psi psi^dagger, psi psi^T)`; whether
-that registered form is satisfied in this degenerate diagonal sense is an owner
-question, and it is raised in part 9 rather than assumed here.
+with ordered componentwise rational matrix equality.
+
+**Owner ruling, recorded.** The diagonal ordered pair is admissible for the
+current registered scope. The public row asks for
+`Q(psi) = (psi psi^dagger, psi psi^T)` and does not ask that the two components
+be different, independent, or each carry separate information. On the selected
+effective carrier `V_eff subset Q^4` it is therefore permitted that
+`v^dagger = v^T` and `Q_QDD(v) = (v v^T, v v^T)`. That is a degenerate
+specialization of the registered form, not a violation of it.
+
+Nothing may be claimed from it. This package asserts **no** independence of the
+two quadratic components, **no** essential use of both, **no** uniqueness of
+the adjoint choice, and **no** completeness of a general quadratic
+architecture. A choice taking `sigma_4` as a non-trivial adjoint would be a
+different candidate with a different carrier and a different equality; it is
+not mixed into this package.
 
 The two **projectors**, per ruling 2:
 
@@ -321,25 +345,33 @@ Canon change.
 
 Columns `item_id, item_type, claim_id, status, layer, gate_ids,
 statement_source`. `DEFINITION` items carry empty `claim_id` and empty
-`status`, following every existing `DEF-*` row. `SECTION` below is the section
-of `canon/CANON.md` in which the eventual fold states these definitions; it is
-filled at fold time and is not invented here.
+`status`, following every existing `DEF-*` row.
+
+The anchor is **definitive, not a placeholder**. `tools/check_ledger.py`
+verifies that the anchor string literally occurs in the named file, so a
+placeholder would make the delta untestable and would leave the scratch run
+checking an improvisation rather than the proposal. The exact proposed text of
+the section, which part 7.5 gives in full, is inserted into
+`canon/CANON.md` as a `###` sub-section of `## 2. Time, space, and the
+decoder`, the section that already sources `DEF-LOG-STREAM` and
+`DEF-DECODER-MATTER`. All sixteen rows therefore read:
 
 ```text
-DEF-QDD-DOMAIN                 DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-BALANCED-SECTION       DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-AMPLITUDE              DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-SIGMA4                 DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-PAIRING                DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-LOW-LINE               DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-PROJECTOR-LOW          DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-PROJECTOR-HIGH         DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-BRANCH-WEIGHT-PAIRING  DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-GRAM                   DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-QPAIR                  DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-MATTER-RECORD          DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-DIRECT-WRITE           DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
-DEF-QDD-FACTOR-MAP             DEFINITION  -  -  L1  -  canon/CANON.md::SECTION
+statement_source = canon/CANON.md::QDD algebraic factorization definitions
+```
+
+The sixteen items, all `DEFINITION`, all layer `L1`, all `gate_ids` empty:
+
+```text
+DEF-QDD-DOMAIN                 DEF-QDD-GRAM
+DEF-QDD-BALANCED-SECTION       DEF-QDD-DAGGER-RATIONAL
+DEF-QDD-AMPLITUDE              DEF-QDD-TRANSPOSE-RATIONAL
+DEF-QDD-SIGMA4                 DEF-QDD-QPAIR
+DEF-QDD-PAIRING                DEF-QDD-MATTER-RECORD
+DEF-QDD-LOW-LINE               DEF-QDD-DIRECT-WRITE
+DEF-QDD-PROJECTOR-LOW          DEF-QDD-FACTOR-MAP
+DEF-QDD-PROJECTOR-HIGH
+DEF-QDD-BRANCH-WEIGHT-PAIRING
 ```
 
 Every `statement_source` is `canon/CANON.md`, per ruling 1. `gate_ids` is empty
@@ -354,9 +386,9 @@ Columns `item_id, depends_on, relation, basis`. Both `relation` and `basis` are
 supplied on every row; `basis` is required non-empty.
 
 ```text
-DEF-QDD-DOMAIN  DEF-ARCHITECTURE  REQUIRES
-  the domain is a subset of the declared checkpoint carrier and inherits its
-  definition boundary
+DEF-QDD-DOMAIN  DEF-AUTONOMOUS-STATE  REQUIRES
+  the domain is the set of complete forward orbits of the autonomous update,
+  so it inherits that definition and no other
 DEF-QDD-BALANCED-SECTION  DEF-QDD-DOMAIN  REQUIRES
   the section is applied to the four piston coordinates of the domain head
 DEF-QDD-AMPLITUDE  DEF-QDD-BALANCED-SECTION  REQUIRES
@@ -373,8 +405,18 @@ DEF-QDD-BRANCH-WEIGHT-PAIRING  DEF-QDD-PROJECTOR-HIGH  REQUIRES
   the branch weights are the pairing norms of the two projected components
 DEF-QDD-GRAM  DEF-QDD-PAIRING  REQUIRES
   the Gram matrix is the matrix of the pairing in the frozen power basis
-DEF-QDD-QPAIR  DEF-QDD-GRAM  REQUIRES
-  the ordered quadratic pair is formed on the carrier the Gram is defined on
+DEF-QDD-BRANCH-WEIGHT-PAIRING  DEF-QDD-GRAM  REQUIRES
+  the weights are traces against the Gram of the frozen pairing
+DEF-QDD-DAGGER-RATIONAL  DEF-QDD-BALANCED-SECTION  REQUIRES
+  the rational adjoint is defined on the effective carrier the section produces
+DEF-QDD-TRANSPOSE-RATIONAL  DEF-QDD-BALANCED-SECTION  REQUIRES
+  the rational transpose is defined on the effective carrier the section
+  produces
+DEF-QDD-QPAIR  DEF-QDD-DAGGER-RATIONAL  REQUIRES
+  the first slot of the ordered pair is formed with the rational adjoint
+DEF-QDD-QPAIR  DEF-QDD-TRANSPOSE-RATIONAL  REQUIRES
+  the second slot of the ordered pair is formed with the rational transpose;
+  the two slots coincide on this carrier and remain typed separately
 DEF-QDD-MATTER-RECORD  DEF-QDD-BRANCH-WEIGHT-PAIRING  REQUIRES
   the record's five fields are typed by the weights and the tagged zero branch
 DEF-QDD-DIRECT-WRITE  DEF-QDD-AMPLITUDE  REQUIRES
@@ -391,9 +433,12 @@ QUADRATIC-DECODER-DATA  DEF-QDD-FACTOR-MAP  REQUIRES
   the open row's factorization target is stated against this factor map
 ```
 
-`DEF-QDD-SIGMA4` and `DEF-QDD-DOMAIN` are the two roots of this subgraph;
-`DEF-ARCHITECTURE` is the only existing item the subgraph attaches to, and
-`QUADRATIC-DECODER-DATA` keeps its five existing outgoing edges unchanged.
+`DEF-QDD-SIGMA4` is the one new root of this subgraph: the Galois automorphism
+of `Q(zeta_5)` depends on nothing else in the ledger, and inventing a parent
+for it in order to keep a count stable would be adapting the science to the
+tool. `DEF-AUTONOMOUS-STATE` is the only existing item the subgraph attaches
+to, and `QUADRATIC-DECODER-DATA` keeps its five existing outgoing edges
+unchanged.
 
 No row points at a gate. Gates bind through the owner's `gate_ids` column, and
 0 of the 345 existing dependency edges point at a `GATE-*`; the predecessor's
@@ -412,6 +457,74 @@ MULTI`, and empty `gate_ids`. **The layer is not changed to `L6`.** Changing it
 so that a checker begins to enforce a gate would be adapting the scientific
 type to the tool, and, as part 9 records, would make QDD the second enforced
 gate in a ledger where ten of eleven are not enforced.
+
+### 7.5 The exact proposed `canon/CANON.md` section
+
+Inserted as a `###` sub-section of `## 2. Time, space, and the decoder`,
+immediately before `## 3. The kernel and the census`. Its heading supplies the
+anchor of 7.1. This is the complete text; nothing is left to be improvised at
+fold time.
+
+```text
+### QDD algebraic factorization definitions
+
+These definitions fix the algebraic factorization leg of `D_matter` and
+nothing else. They select no physical apparatus, adopt no effect family,
+assert no realized outcome, no post-state instrument, and no `L6` measure.
+`quadratic_manifest.effect_ids` remains unresolved.
+
+Let `X = F_5^6` in the public checkpoint coordinate order,
+`x = (p1, p4, p1p, p4p, q, r)`, and `K_QDD = { (U^n(0,x))_(n>=0) : x in X }`
+with equality of complete pointed forward sequences (DEF-QDD-DOMAIN). The
+balanced section is `ell(0)=0, ell(1)=1, ell(2)=2, ell(3)=-2, ell(4)=-1`
+(DEF-QDD-BALANCED-SECTION), and the total pre-update head map is
+`beta_QDD(kappa_x) = (ell(p1), ell(p4), ell(p1p), ell(p4p))^T` in
+`V_eff = ell(F_5)^4` inside `Q^4`. The coordinates `q` and `r`, every later
+checkpoint, and every environment input are forbidden inputs.
+
+With `zeta = zeta_5` and the public power basis `B0 = (1, zeta, zeta^2,
+zeta^3)`, the amplitude is `Amp_QDD = iota_0 o beta_QDD` where
+`iota_0(v) = v_0 + v_1 zeta + v_2 zeta^2 + v_3 zeta^3` (DEF-QDD-AMPLITUDE).
+The Galois map is `sigma_4(zeta) = zeta^4` (DEF-QDD-SIGMA4) and the pairing is
+`<x, y> = (1/5) Tr_(Q(zeta_5)/Q)( x sigma_4(y) )` (DEF-QDD-PAIRING). The
+constant `1/5` is part of the definition; the matrix of the pairing in `B0` is
+exactly `G = I_4 - (1/5) 1 1^T` (DEF-QDD-GRAM).
+
+The low line is `L_B = Q lambda_B` with
+`lambda_B = 1 + zeta + zeta^2 + zeta^3 = -zeta^4` and
+`<lambda_B, lambda_B> = 4/5` (DEF-QDD-LOW-LINE). It is neither the rational
+line `Q.1` nor the trace kernel; `Tr(lambda_B) = 1`. The pairing-orthogonal
+projector onto `L_B` is `P_low = (1/4) 1 1^T` and its complement is
+`P_high = I_4 - P_low` (DEF-QDD-PROJECTOR-LOW, DEF-QDD-PROJECTOR-HIGH). They
+are algebraic readout, not a physical apparatus selection. The branch weight
+pairing is `w_a(A) = Tr(P_a A G)` with `w_low + w_high = m` where
+`m(A) = Tr(A G)` (DEF-QDD-BRANCH-WEIGHT-PAIRING).
+
+On `V_eff` the rational adjoint is `dagger_Q(v) = v^T` (DEF-QDD-DAGGER-RATIONAL)
+and the rational transpose is `transpose_Q(v) = v^T`
+(DEF-QDD-TRANSPOSE-RATIONAL). They are separate definitions filling separate
+contract slots; that they coincide on this carrier is a recorded identity of
+this leg and is not a claim that the two slots are the same object. The ordered
+quadratic map is `Q_QDD(v) = (v dagger_Q(v), v transpose_Q(v))` with ordered
+componentwise rational matrix equality on its image `QCarrier_QDD`
+(DEF-QDD-QPAIR). On `V_eff` the two components coincide; that degenerate
+specialization asserts no independence of the two quadratic components, no
+essential use of both, no uniqueness of the adjoint choice, and no completeness
+of a general quadratic architecture.
+
+`MatterData_QDD` is the tagged record with exactly five fields, support state,
+total weight, ordered branch weights, density state and normalized weight
+state, with the zero branch tagged rather than divided (DEF-QDD-MATTER-RECORD).
+The direct write `D_QDD_direct : K_QDD -> MatterData_QDD` is built from
+multiplication in `Q(zeta_5)`, `sigma_4` and `Tr` alone, using
+`pi_low(w) = ( <w, lambda_B> / <lambda_B, lambda_B> ) lambda_B` and the
+rank-one operator `T_w(x) = w <x, w>` whose matrix in `B0`, divided by `m(w)`,
+is the density (DEF-QDD-DIRECT-WRITE). The factor map
+`F_QDD : QCarrier_QDD -> MatterData_QDD` is defined by the displayed Gram and
+projector formulas (DEF-QDD-FACTOR-MAP). Whether
+`D_QDD_direct = F_QDD o Q_QDD o beta_QDD` holds field by field is the open
+question of QUADRATIC-DECODER-DATA and is not asserted here.
+```
 
 ## 8. Checker transcript
 
@@ -439,6 +552,94 @@ S1 the record separates the quadratic carrier OK  313 distinct records for 313 d
 SUMMARY 9/9 witnesses reproduce
 ```
 
+## 8bis. The scratch delta, run before the audit
+
+The delta of part 7 was applied to a scratch copy of public `main` at
+`0096acb`, the base of this package, and the checks were run. This was done
+deliberately **before** the adversarial audit: the audit should attack the
+scientific and typed content, not be the first thing to discover a TSV slip or
+a missing anchor. The result is known in advance and the audit is open rather
+than blind, so a prior run does not compromise its independence. **The auditor
+must repeat this run independently.** `D:/twistj` was never modified.
+
+Scratch files changed, as one whole:
+
+```text
+canon/CANON.md          the exact section of 7.5, inserted before section 3
+canon/NORMATIVE.tsv     16 rows
+canon/DEPENDENCIES.tsv  21 rows
+canon/SHA256SUMS        recomputed inside the scratch copy only
+STATUS.md               CANON_SHA256 and CANON_BYTES, scratch copy only
+```
+
+No gate row. `canon/CANON.md` goes 150959 to 154521 bytes, which is exactly the
+version consequence ruling 1 requires to be stated rather than denied. The
+derived views were regenerated with `tools/generate_canon_views.py --apply`.
+
+Check output:
+
+```text
+python3 tools/check_policy.py         POLICY PASS
+python3 tools/check_canon.py          CANON PASS v27 claims=214
+python3 tools/check_ledger.py         LEDGER PASS claims=214 items=246
+                                      dependencies=366 evidence=214
+                                      history=704 gates=11 programs=8
+python3 tools/check_status_labels.py  STATUS LABELS PASS
+python3 -m unittest discover -s tools -p 'test_*.py'
+                                      FAILED (failures=1)
+```
+
+Registry counts: claims unchanged at 214, since these are `NORMATIVE` items and
+not registry claims; items 230 to 246; dependencies 345 to 366; evidence,
+history, gates and programs unchanged.
+
+`statement_source` confirmation: all sixteen rows point at
+`canon/CANON.md::QDD algebraic factorization definitions`, and that anchor is
+the heading actually inserted by step 1 of the same run. `check_ledger.py`
+verifies anchor presence by literal substring, so this is checked and not
+asserted.
+
+### The one failure, and what it means
+
+```text
+FAIL test_architecture_is_a_hub_not_the_only_non_algebraic_root
+     tools/test_architecture_map_report.py line 48
+     self.assertEqual(len(self.report.dependency_terminals), 10)
+     AssertionError: 11 != 10
+```
+
+`tools/test_architecture_map_report.py` pins exact structural counts of the
+ledger. The delta adds exactly one dependency terminal, and it is
+`DEF-QDD-SIGMA4`:
+
+```text
+                                   base   scratch
+direct_architecture_requires        172       172
+transitive_architecture_dependents  189       189
+dependency_terminals                 10        11   + DEF-QDD-SIGMA4
+```
+
+This is not a defect of the delta and it is not avoidable by rewiring.
+`DEF-QDD-SIGMA4` is the Galois automorphism of `Q(zeta_5)`; it depends on
+nothing else in the ledger and belongs beside `AXIOM-J`, `DEF-CHECKPOINT`,
+`DEF-SELECTOR` and the other seven existing terminals. Giving it a parent to
+keep a pinned number stable would be adapting the science to the tool.
+
+**Consequence for the eventual fold: it must carry a companion update to
+`tools/test_architecture_map_report.py`, changing the pinned terminal count
+from 10 to 11.** That is a `tools/` change riding with a content fold, and it
+must be visible in the fold's diff rather than discovered by its CI.
+
+One earlier variant of the delta is recorded because it is instructive. With
+`DEF-QDD-DOMAIN` attached to `DEF-ARCHITECTURE` instead of
+`DEF-AUTONOMOUS-STATE`, the same test failed on a different line,
+`direct_architecture_requires` 172 to 173. The parent was changed for a
+scientific reason and not to dodge the test: `K_QDD` is literally the set of
+complete forward orbits of `U`, so `DEF-AUTONOMOUS-STATE` is the precise
+parent, and it mirrors `DEF-LOG-STREAM`, which is built from the same orbits.
+The architecture-hub numbers being left alone is a consequence of that choice,
+not its motive.
+
 ## 9. Open disclosures
 
 Stated here so that no later preregistration has to discover them.
@@ -455,12 +656,16 @@ two size-25 blocks are disjoint. The coincidence is numerical; there is no
 cross-leg identity, which is what the scope requires. It is recorded because
 this repository fences numerical coincidences explicitly.
 
-**9.2 The ordered pair is diagonal.** `v^dagger = v^T` makes both slots of
-`Q_QDD(v)` equal on all 313 carrier elements. Whether the registered
-`Q(psi) = (psi psi^dagger, psi psi^T)` is satisfied in that degenerate sense is
-an owner question, not a computation. A non-degenerate alternative would take
-the dagger to be `sigma_4`, the conjugation of the amplitude field, which is
-not the transpose; that choice would change the carrier and is not made here.
+**9.2 The ordered pair is diagonal — ruled admissible.** `v^dagger = v^T` makes
+both slots of `Q_QDD(v)` equal on all 313 carrier elements. The owner has ruled
+this a permitted degenerate specialization of the registered
+`Q(psi) = (psi psi^dagger, psi psi^T)`, which asks for the ordered pair but not
+for the two components to differ, to be independent, or each to carry separate
+information. The ruling and its four prohibitions are recorded in part 4, and
+the two slots are kept typed apart by `DEF-QDD-DAGGER-RATIONAL` and
+`DEF-QDD-TRANSPOSE-RATIONAL` with `TYPED-DIAGONAL-IDENTITY` recording only
+their coincidence on this carrier. This disclosure is therefore closed, and it
+is not reopened by the audit that follows.
 
 **9.3 Evenness.** Disclosed in part 5 and verified: factoring through a map
 that identifies `+-v` is automatic for the direct write. The content of the
@@ -492,14 +697,23 @@ version. `QUADRATIC-DECODER-DATA` stays `O / STOP`.
 Not a fold and not a probe yet.
 
 ```text
+DONE  the proposed delta applied to a scratch copy and run; part 8bis. The
+      four ledger checks pass; the one unit-test failure is the pinned
+      terminal count and is disclosed with its cause and its fix.
+DONE  an owner decision on 9.2, the diagonal pair; recorded in part 4.
+
 1  a further adversarial audit of this package, on the same terms as the one
-   that produced AUDIT-QDD-BINDING-PACKAGE-V27.md
-2  the proposed delta of part 7 applied to a scratch copy and shown to pass
-   tools/check_ledger.py, with the PASS line recorded, and separately checked
-   by hand against ruling 1 rather than against the tool alone
-3  an owner decision on 9.2, the diagonal pair
+   that produced AUDIT-QDD-BINDING-PACKAGE-V27.md. It must repeat the scratch
+   run independently rather than rely on part 8bis, and it should attack the
+   five-field agreement, the 1/5 normalisation, the LOW LINE and the matrix
+   convention. It should not re-decide 9.2, which is ruled.
+2  the delta checked by hand against ruling 1, that is against the authority
+   of the statement source, rather than against the tool alone. A delta can
+   pass tools/check_ledger.py and still be wrong under ruling 1.
+3  the companion update to tools/test_architecture_map_report.py, written as
+   part of the fold and visible in its diff.
 4  only then, a decision on whether this belongs in a v28 manifest, and only
-   after that, whether a formal probe may be preregistered
+   after that, whether a formal probe may be preregistered.
 ```
 
 Nothing in this file authorizes a verifier, a run, a preregistration, a probe,
