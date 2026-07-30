@@ -8,7 +8,8 @@ basis            Public Canon v27, tag canon-v27, CONTENT_COMMIT 116b62ed
 verifier         2d28ff4ec95274feb625cf0689289f5b2b398d3c8234947c459b533f7db23565
 stdout           5ffddbd571272bf4b2a9d079acf7ed87481baaaa6f00af3cf7c7efc819bd8efa
 local leg        aarch64, exit 0, empty stderr, 16 of 16 PASS
-GitHub leg       see RUN.md
+GitHub leg       x86_64, VERIFY PASS, byte identical
+two-arch gate    SATISFIED
 falsifiers       none of F1 to F8 fired
 verdict          SURVIVED
 informs          MINIMAL-READ-DERIVATION [O]
@@ -82,9 +83,16 @@ F5  the orbit-count and basis cross-checks passed at every tested (m, D).
 F6  the ring table agreed with the independent cross-check of B8.
 F7  no float appears in any assertion or emitted field; the verifier uses only
     int and Fraction, and exact pairs for Q(sqrt5).
-F8  pending the GitHub leg; see RUN.md. This entry is completed only when the
-    required check records a byte-identical transcript.
+F8  the local aarch64 leg and the required GitHub x86_64 leg produced the
+    identical stdout hash
+    5ffddbd571272bf4b2a9d079acf7ed87481baaaa6f00af3cf7c7efc819bd8efa,
+    so the transcripts do not differ.
 ```
+
+The two architectures therefore complete the computation gate of `POLICY.md`
+section 4 for this verifier: the local formal leg is `aarch64`, the required
+GitHub leg is `x86_64`, and their stdout is byte identical. See `RUN.md` for
+both records.
 
 ## Status earned
 

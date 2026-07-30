@@ -66,17 +66,36 @@ private machine nickname is intentionally omitted from the public record.
 ## Required GitHub leg
 
 ```text
-status: PENDING
+status: PASS
+workflow_run_id: 30539017324
+job_id: 90859094699
+job_url: https://github.com/mathorn1973/twist-j/actions/runs/30539017324/job/90859094699
+check_name: check
+event: pull_request
+tested_head_commit: 6046c09646e235cf6c847a4d38c23561f4c3e2f3
+checkout_merge_commit: 618de5a15d1e3f82cf1ac291bb2b43daa6f0111a
+base_commit: 9d17a1e7d10e6ffb93c104e53faecc6d5c1aeb47
+platform: Ubuntu 24.04 GitHub-hosted runner image ubuntu-24.04
+architecture: x86_64
+python: Python 3.12.13
+verifier_sha256: 2d28ff4ec95274feb625cf0689289f5b2b398d3c8234947c459b533f7db23565
+stdout_sha256: 5ffddbd571272bf4b2a9d079acf7ed87481baaaa6f00af3cf7c7efc819bd8efa
+verdict: VERIFY PASS
 ```
 
-The required clean GitHub check reruns the pinned verifier on an `x86_64`
-`ubuntu-latest` runner and compares the verifier hash and `EXPECTED.txt` byte
-for byte. This section is completed from the check's own record after the
-pull request runs.
+The required clean GitHub check reran the public pinned verifier and matched
+`EXPECTED.txt` byte for byte. The architecture field is not self-reported:
+`tools/check_verifier.py` fails the job unless `platform.machine()` is
+`x86_64` when `GITHUB_ACTIONS` is true, so `VERIFY PASS` certifies it.
 
 ## Two-architecture gate
 
-The local formal leg is `aarch64` and the required GitHub leg is `x86_64`.
-Byte-identical stdout across the two therefore satisfies the two-architecture
-computation gate of `POLICY.md` section 4. The gate is not claimed here; it is
-claimed in `RESULT.md` only once the GitHub leg above is recorded as `PASS`.
+```text
+local leg   aarch64,  stdout_sha256 5ffddbd571272bf4b2a9d079acf7ed87481baaaa6f00af3cf7c7efc819bd8efa
+GitHub leg  x86_64,   stdout_sha256 5ffddbd571272bf4b2a9d079acf7ed87481baaaa6f00af3cf7c7efc819bd8efa
+verdict     SATISFIED
+```
+
+The local formal leg is `aarch64` and the required GitHub leg is `x86_64`, and
+their stdout is byte identical. The two-architecture computation gate of
+`POLICY.md` section 4 is therefore satisfied for this verifier.
