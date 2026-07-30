@@ -536,7 +536,24 @@ question of QUADRATIC-DECODER-DATA and is not asserted here.
 `notes/canon/QDD-ALGEBRAIC-FACTORIZATION-CHECKER-2026-07-30.py`, run from the
 repository root under
 `LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC`,
-Linux x86_64, Python 3.12.3, exit 0, empty stderr, about 18 s:
+Linux x86_64, Python 3.12.3, exit 0, empty stderr, about 18 s.
+
+**Correction, 2026-07-30.** The transcript first pinned here carried a
+false mathematical statement. Gate `L1` was labelled
+*sigma_4 has order 4 on it*; the automorphism `zeta -> zeta^4` has order
+exactly **2**, since the multiplicative order of 4 modulo 5 is 2. The
+gate was also vacuous: it applied `sigma_4` four times, which returns the
+input for any map whose order divides 4, and its other conjunct
+multiplied by zero. The order-2 fact is load bearing rather than
+cosmetic, because it is what makes the pairing symmetric, which this
+package uses throughout. `L1` now tests `lambda_B = -zeta^4` directly,
+`L1b` tests the order, and `L1c` tests the symmetry the order implies.
+The defect was found by AUDIT-QDD-ALGEBRAIC-FACTORIZATION-1, issue 224,
+and is recorded rather than quietly removed. Nothing else in the package
+changed and no number moved: the mathematics reproduced from five
+independent implementations with zero mismatches on the full domain.
+
+The current transcript, 11 of 11:
 
 ```text
 QDD-ALGEBRAIC-FACTORIZATION checker
@@ -544,7 +561,9 @@ direct side: field multiplication, sigma_4 and Tr only
 factor side: F_QDD o Q_QDD o beta_QDD, matrices only
 arithmetic: int and Fraction only; no float in this file
 
-L1 lambda_B = 1 + z + z^2 + z^3 equals -z^4 OK  sigma_4 has order 4 on it
+L1 lambda_B = 1 + z + z^2 + z^3 equals -z^4 OK  zeta^4 reduces to ('-1', '-1', '-1', '-1') in B0
+L1b sigma_4 has order exactly 2 OK  the multiplicative order of 4 modulo 5 is 2, so sigma_4 o sigma_4 = id and sigma_4 is not the identity; this is what makes the pairing symmetric
+L1c the pairing is symmetric, as the order-2 fact requires OK
 L2 lambda_B is NOT rational and NOT in the trace kernel OK  Tr(lambda_B) = 1, so Q.lambda_B is neither Q.1 nor ker Tr
 L3 the low line norm OK  <lambda_B, lambda_B> = 4/5
 P1 the Gram of <x,y> in B0 is exactly G OK  so the 1/5 in the pairing is the whole normalisation
@@ -554,7 +573,7 @@ A1 the direct side reads only the four piston coordinates OK  625 piston tuples,
 E1 direct_record is even, so factoring through +-w is automatic OK  disclosed, not claimed as content of the target
 S1 the record separates the quadratic carrier OK  313 distinct records for 313 distinct Q values
 
-SUMMARY 9/9 witnesses reproduce
+SUMMARY 11/11 witnesses reproduce
 ```
 
 ## 8bis. The scratch delta, run before the audit
