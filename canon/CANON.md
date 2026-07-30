@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v27
+# TWIST-J Public Canon v28
 
-**Release identity.** Public Canon v27. Normative authority and activation
+**Release identity.** Public Canon v28. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v27 also declares the discrete
+algebraic axiom is J. Public Canon v28 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v27 does not claim
+seed of the two algebraic projections. Public Canon v28 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v27 contains no such
+deriving the architecture from J; Public Canon v28 contains no such
 theorem.
 
 ---
@@ -2100,7 +2100,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v27. The fermionizer
+inherited naming clause is not part of Public Canon v28. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -2314,6 +2314,31 @@ class is proved nonempty and either contains fully compliant `beta_1` and
 listed type, map, class, rule, graph, or layer endpoint is incomplete.
 Failure of the no-feedback route or any one favored route is only STOP unless
 it classifies the complete admissible class.
+
+READ-REDUNDANCY-PRIME-SUPPORT [T] settles what absence of feedback does and
+does not buy. A typed projection funnel carries the sixfold cover over Z with
+zero arithmetic nodes, and over Q every multiplicity carries, so acyclicity,
+no-feedback, integrality and totality together obstruct nothing; dropping
+totality voids every bound as well, since the diagonal common-value map
+carries every multiplicity. For anonymous total accumulators over the
+localization Z_S the bound is exact: multiplicity m carries if and only if
+every prime divisor of m lies in S. Necessity is the weight-1 stratum
+equation m c_(1) = 1 in Z_S, since (1) is the only weight-1 partition and
+every monomial symmetric basis element has diagonal degree equal to its
+weight; sufficiency is (x_1 + .. + x_m)/m. At the registered places {2} and
+{2,5} the sixfold read therefore costs the prime 3, which the constant ring
+does not carry, and the twofold read costs only the prime 2. The criterion is
+a prime-support selector, not a smaller-is-better principle: on the pair
+{6,10} over {2,5} it selects the larger multiplicity, and on {2,10} it is
+nonunique.
+
+The row informs MINIMAL-READ-DERIVATION [O] and closes nothing. The two
+decoder definitions that row lists as missing, the cover-to-output map and
+the accumulator equality rule, are reduced to two named bits with known
+prices, anonymity and totality; the row itself stays O and STOP by its own
+decision text, since one clause pair is not the complete registered decoder
+class, and COIN-MINIMAL-READ [H] is unchanged. No lift is performed and
+GATE-L5-L1-MINIMAL-READ is untouched.
 
 ## 11. The pentit ring and the magic boundary
 
@@ -3314,12 +3339,43 @@ obligation. A future successor must start from the complete four-orbit
 projective-gauge record, retain epsilon_read as typed L5
 reading-orientation data, prove coherence on all 48 selectors without
 choosing a representative or enlarging the gauge, and derive a normalized
-physical measure with mu_i = 1/6,
-M_TM = (1/3)P1 + (2/15)P5, and the typed factorization
-1/6 = (1/2)(1/3), compatibly with MEASURE-BORN-VERB and GYRON-DENSITY.
-No successor L5 source schema is currently frozen. The Born gate remains
-open but the scheduler is STOP pending a separately reviewed owner
-definition.
+physical measure. Whether that measure agrees with the exact
+selector-independent mathematical image mu_i = 1/6 and
+M_TM = (1/3)P1 + (2/15)P5, proved by TM-SYM2-PROJECTIVE-FOURFOLD, is an
+outcome of the bridge and is not required of it; a closure that assumes
+those values, or the typed factorization 1/6 = (1/2)(1/3), is CIRCULAR.
+MEASURE-BORN-VERB and GYRON-DENSITY constrain the type of the physical
+measure clause; they do not select its values. No successor L5 source
+schema is currently frozen. The Born gate remains open but the scheduler
+is STOP while a separately reviewed owner definition is absent.
+
+The v28 ledger change is signed term by term:
+
+```text
+claims:    214 + 1 theorem = 215,
+T:         113 + 1 read-redundancy theorem = 114,
+D:         40, C: 23, H: 4, O: 24, F: 10, all unchanged,
+live H/O:  28 unchanged.
+```
+
+Public Canon v28 registers READ-REDUNDANCY-PRIME-SUPPORT [T] at L5 on the
+immutable `probes/P-READ-REDUNDANCY-1` bundle, whose local aarch64 leg and
+required GitHub x86_64 leg produced the same 16-gate PASS transcript byte for
+byte. The universal classification rests on the short symbolic proof that the
+verifier audits; the three exhaustion legs corroborate it inside their frozen
+boxes and establish nothing beyond them.
+
+Public Canon v28 also amends the scope and falsifier of
+TM-SYM2-PHYSICAL-MEASURE [O]. The row previously required a future bridge to
+preserve mu_i = 1/6 and M_TM = (1/3)P1 + (2/15)P5 and to derive the typed
+factorization 1/6 = (1/2)(1/3); those are the values such a bridge would be
+trying to establish, so requiring them in advance stated the answer before the
+question. The amendment moves them to the result side and adds the explicit
+CIRCULAR rejection, following CANON13-SCOPE-DE-CONFORMAL-WEIGHT. The fired N2
+boundary, the complete 48-selector class in four free orbits of 12, the
+retained reading orientation, the prohibition on enlarging gauge, and the
+three exact classifications are all preserved without change, and the row
+stays O and STOP. No status or count moves except the history.
 
 The v27 ledger change is signed term by term:
 

@@ -1,12 +1,48 @@
 # Canon changelog (public series)
 
 
-## Public Canon v27
+## Public Canon v28
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 214 claims; 0 T-LOCK, 113 T, 40 D, 23 C, 4 H, 24 O, 10 F; 28 live H/O.
+Registry snapshot: 215 claims; 0 T-LOCK, 114 T, 40 D, 23 C, 4 H, 24 O, 10 F; 28 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v28 carries exactly two items.
+
+READ-REDUNDANCY-PRIME-SUPPORT [T] registers the exact read-redundancy
+classification for polynomial accumulators over Z_S: absence of feedback alone
+bounds nothing, while for anonymous total accumulators multiplicity m carries
+if and only if every prime divisor of m lies in S. The evidence is the
+immutable `probes/P-READ-REDUNDANCY-1` bundle, claimed in issue 216, whose
+aarch64 local leg and required GitHub x86_64 leg produced the same 16-gate
+PASS transcript byte for byte, satisfying the two-architecture computation
+gate. The status is earned by the symbolic proof, which the verifier audits
+rather than establishes; the three exhaustion legs corroborate it inside their
+frozen boxes only. MINIMAL-READ-DERIVATION [O] stays O and STOP and
+COIN-MINIMAL-READ [H] is unchanged; the row closes nothing and derives no
+physically canonical coin.
+
+TM-SYM2-PHYSICAL-MEASURE [O] receives a SCOPE_CHANGE, O to O. The previous
+scope required a future physical bridge to preserve the exact
+selector-independent outputs and to derive the typed factorization, which are
+the values the bridge would be establishing. The amendment moves them from the
+requirement side to the result side and adds the explicit CIRCULAR rejection,
+on the pattern of CANON13-SCOPE-DE-CONFORMAL-WEIGHT. The fired N2 selector
+gate, the three exact TM-SYM2 classifications, the retained reading
+orientation and the prohibition on gauge enlargement are preserved unchanged.
+
+This fold registers no physical effect family, no L6 measure, no apparatus,
+and no decoder completion. The QDD algebraic factorization package, TM-CORR-
+ZEROS, and the OBSERVER-WRITE-PORT retirement proposal are all deliberately
+excluded from this manifest.
+
+## Public Canon v27
+
+<!-- BEGIN GENERATED CANON27 COUNTS -->
+Registry snapshot: 214 claims; 0 T-LOCK, 113 T, 40 D, 23 C, 4 H, 24 O, 10 F; 28 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON27 COUNTS -->
 
 Public Canon v27 registers two exact rows from the immutable
 `probes/P-BOOST-COHERENCE-1` bundle. DRIFT-IS-THE-READ [T] packages the
