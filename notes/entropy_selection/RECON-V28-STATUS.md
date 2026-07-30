@@ -181,13 +181,15 @@ The current list is:
 5. **Open:** regularity and the full pushforward theorem.
 6. **Open contracts:** transfer-family equivalence, regularity class and
    quantifier, and unambiguous living-fiber notation `L_kappa`.
-7. **Partly closed:** `C-ENTROPY-MACKEY-OBSTRUCTION-4-N` was preregistered,
-   run by the primary route, and attacked by an independently authored frozen
-   breaker. See `MACKEY4-BREAKER-RESULT.md`. Both exact routes agree on the
-   source additive type, the cycle type `1^1 4^1 20^156`, `c_src = 629` at
-   `r >= 2`, the target decomposition into 312 regular `D_5` blocks plus the
-   `D_5/C_2` singlet, the menu `{313,625,1563,3125}`, the exclusion of 629,
-   and the mixed control `(2,5)`.
+7. **Open, and carrying no breaker credit:** `C-ENTROPY-MACKEY-OBSTRUCTION-4-N`
+   was preregistered, run by the primary route, and attacked by an
+   independently authored frozen breaker. That breaker is now
+   **RETIRED IN FULL** by owner ruling; see
+   `OWNER-RULING-BREAKER-MACKEY4-1.md` and the adjudication in
+   `MACKEY4-BREAKER-RESULT.md`. Its outputs keep discovery-history and
+   diagnostic value and are not declared false, but they earn zero breaker
+   credit. Every load-bearing value of the candidate therefore rests on the
+   primary route alone until a live successor instrument re-establishes it.
 8. **Open, and load bearing:** the common-cocycle premise of that candidate.
    Breaker gate `B13` was shown to have no discriminating power: it reports a
    common cocycle on a synthetic target built to have none, because its
@@ -205,14 +207,23 @@ The current list is:
    declared before the run, and three mandatory synthetic controls that the
    gate must reject, reject, and accept respectively. The session that wrote
    that preregistration is disqualified from implementing it.
-9. **Open owner ruling:** `PREREG-BREAKER-MACKEY4-1` states that a defect in
-   it found after first execution retires that breaker id. Such a defect was
-   found, in the specification of `E9`. Whether the retirement is total, which
-   would also withdraw breaker-1's support for `E1-E8` and `E10-E13`, or is
-   confined to `E9`, is not decided by any instrument and is owner business.
-   Pending that ruling, `PREREG-BREAKER-MACKEY4-2` requires the Mackey menu as
-   a secondary output, so a total-retirement ruling needs no third instrument.
-10. **Next attack:** run item 8, settle item 9, then extend the finite
+9. **Settled by owner ruling, 2026-07-30:** `PREREG-BREAKER-MACKEY4-1` is
+   retired in full, not only `E9`. The frozen clause retires the breaker id,
+   no severability for individual gates was frozen, and confining the
+   retirement to `E9` would introduce severability after the result was known.
+   `PREREG-BREAKER-MACKEY4-2` is the sole live successor instrument and is not
+   amended by the ruling. Recorded in `OWNER-RULING-BREAKER-MACKEY4-1.md`.
+10. **Open, and newly load bearing:** full retirement leaves the entire source
+    side without a live instrument. `PREREG-BREAKER-MACKEY4-2` is scoped to
+    the target; it re-establishes `E4`, `E6`, `E7`, `E8`, `E9`, and the menu
+    `E10-E12`, but not `E1`, `E2`, `E3`, `E5` or `E13`. After that successor
+    runs, `629` at `r >= 2` still rests on the primary route alone while the
+    menu rests on two. Closing that half of the obstruction needs a companion
+    preregistration under its own identifier, scoped to `E1`, `E2`, `E3`,
+    `E5`, `E13`, with a source presentation distinct from the primary's
+    lambda-digit arithmetic. It is disjoint from item 8 and may run in
+    parallel. Not yet opened.
+11. **Next attack:** run item 8, open and run item 10, then extend the finite
     horizon.
 
 No item above closes the public entropy bridge. No finite restricted no-go is

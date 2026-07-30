@@ -6,8 +6,12 @@ AUTHORITY:        none
 SCIENTIFIC GRADE: UNEARNED
 BREAKER:          22/22 PASS, stdout pinned and verified against the code
 RUN RECORD:       COMPLETE
-DECISION:         BREAKER GATE SATISFIED ON THE COUNTING AND TARGET-STRUCTURE
-                  CONTENT; THE COMMON-COCYCLE PREMISE REMAINS SINGLE-ROUTE
+DECISION:         SUPERSEDED BY OWNER RULING, 2026-07-30. The instrument
+                  adjudicated here, PREREG-BREAKER-MACKEY4-1, is RETIRED IN
+                  FULL. Sections 3 to 5 stand as written and are preserved;
+                  section 3 now reads as discovery history and diagnostic
+                  value, and earns zero breaker credit. See
+                  OWNER-RULING-BREAKER-MACKEY4-1.md.
 PUBLIC BRIDGE:    ENTROPY-LAYER-BRIDGE remains O / STOP
 ```
 
@@ -92,6 +96,16 @@ section 5. It touches no claim carrier: no `F_5^6`, no `Z[zeta_5]`, no canon
 generator table. It does not import or execute either verifier.
 
 ## 3. What the breaker independently corroborates
+
+> **Superseded, 2026-07-30.** The owner ruling retires
+> `PREREG-BREAKER-MACKEY4-1` in full, so nothing in this section carries
+> breaker credit. The word "AGREE" below records what the two routes computed,
+> not what the candidate may rely on. The mathematical outputs are not
+> declared false. Any value the successor decision needs must be
+> re-established by a live instrument; the mapping of which values that covers
+> and which it leaves open is in `OWNER-RULING-BREAKER-MACKEY4-1.md`. The
+> section is preserved unedited below because retirement withdraws credit, it
+> does not rewrite a record.
 
 The breaker reaches the primary's load-bearing values by genuinely different
 routes:
@@ -263,6 +277,19 @@ and did not fire.
 
 ## 6. Lane decision
 
+> **Revised by the owner ruling of 2026-07-30.** The paragraph below was
+> written before the retirement ruling and is superseded. With
+> `PREREG-BREAKER-MACKEY4-1` retired in full, the correct lane state is:
+
+```text
+The gate STOP PENDING INDEPENDENT BREAKER is NOT satisfied. The instrument
+that would have satisfied it earns zero credit. The lane returns to STOP
+pending PREREG-BREAKER-MACKEY4-2, the sole live successor, plus a companion
+instrument for the source side that is not yet opened.
+```
+
+Superseded wording, preserved:
+
 ```text
 The gate STOP PENDING INDEPENDENT BREAKER is satisfied on the counting and
 target-structure content. It is not satisfied on the common-cocycle premise.
@@ -277,18 +304,21 @@ successor summary can drift:
 - every `629` statement remains scoped to `r >= 2`;
 - one platform, incubation lane, so `candidate-C` is the ceiling in any case.
 
-Recommended next step:
+Next steps, as they stand after the ruling:
 
-1. Commission `PREREG-BREAKER-MACKEY4-2` scoped to `E9` alone: an independent
-   reconstruction that builds one global `D_5` from the public generators,
-   allows only a per-component gauge, and tests block independence. This is a
-   single gate and it is the premise the entire obstruction rests on. The
-   negative control in section 5 is the acceptance test any successor gate
-   must fail on: a correct `E9` gate must REJECT that synthetic target.
-2. Only then decide whether to record the `candidate-C` negative subclass
-   result for the fixed depth-five, fiberwise-bijective, `r >= 2` class.
+1. DONE. `PREREG-BREAKER-MACKEY4-2` is written and frozen at
+   `45192f7fcbe3b1699f69ccd35351c8a8ddc756e488a2f01ee0d0491e197f03e6`. The
+   negative control in section 5 became its mandatory acceptance test `N1`:
+   a correct `E9` gate must REJECT that synthetic target.
+2. Implement and run it in a clean session under the independence fence of
+   that preregistration. The session that wrote it is disqualified.
+3. Open the companion preregistration for the source side, `E1`, `E2`, `E3`,
+   `E5`, `E13`, which full retirement left without any live instrument. It is
+   disjoint from step 2 and may run in parallel.
+4. Only after steps 2 and 3 decide whether to record the `candidate-C`
+   negative subclass result for the fixed depth-five, fiberwise-bijective,
+   `r >= 2` class.
 
-Recording `candidate-C` before step 1 is defensible under the literal decision
-rule, but it would rest the load-bearing common-cocycle premise on a single
-route while the `22/22 ALL PASS` headline suggests otherwise. That gap is the
-reason this note does not itself declare the candidate result.
+Recording `candidate-C` before steps 2 and 3 would rest the whole obstruction
+on the primary route alone. That is the reason this note does not declare the
+candidate result.
