@@ -122,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 113, "D": 40, "C": 23, "F": 10,
+    expected_counts = {"T": 114, "D": 40, "C": 23, "F": 10,
                        "O": 24, "H": 4}
     checks.append((
         "COUNTS",
-        "registry has 214 claims with the current status partition",
-        len(rows) == 214 and counts == expected_counts,
+        "registry has 215 claims with the current status partition",
+        len(rows) == 215 and counts == expected_counts,
     ))
 
     checks.append((
@@ -679,8 +679,10 @@ def run():
             index, physical_owner,
             ("epsilon_read = chi_Q chi_F as typed L5 data",
              "rather than quotienting it", "coherence across all 48 selectors",
-             "mu_i = 1/6", "1/6 = (1/2)(1/3)",
-             "comparison actions only", "no enlarged postcomposition gauge"),
+             "mu_i = 1/6", "M_TM = (1/3)P1 + (2/15)P5",
+             "is an outcome of the bridge and is not required of it",
+             "comparison actions only", "enlarge no postcomposition gauge",
+             "select no representative among the 48 selectors"),
         )
         and gates.get(selector_gate, {}).get("owner_item_id") == frozen_owner
         and gates.get(selector_gate, {}).get("gate_kind") == "FIRED_NEGATIVE"
