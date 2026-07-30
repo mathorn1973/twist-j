@@ -6,6 +6,22 @@ This package is a local construction and falsification surface for the open
 entropy selection problem. It does not modify the Canon, run a formal probe,
 or create evidence authority.
 
+## Current control documents
+
+- `RECON-V28-STATUS.md`: current Public Canon v28 basis, exact finite state,
+  corrections binding successor work, and the live work list. It supersedes
+  the stale authority sentence and final task-list reading of
+  `../ENTROPY-SELECTION-RECON.md`.
+- `PREREG-C-ENTROPY-MACKEY-OBSTRUCTION-4-N.md`: frozen non-canonical
+  preregistration for the next attack. It states `r >= 2`, treats the target as
+  312 separate regular `D_5` torsors plus `D_5/C_2`, and makes uniform
+  pushforward conditional on the proved Haar quotient lemma and fiberwise
+  bijectivity. No `mackey4` code existed or ran at the freeze commit.
+- `ENTROPY-DICHOTOMY.md`: exact fixed-`F_2`, fixed-`r=2` prefix-tree
+  dichotomy, finite optima through `2..7`, and the falsified transition-local
+  kill shot.
+- `HORIZON7_EXACT.md`: exact horizon `2..7` closure record.
+
 Modules:
 
 - `lambda5.py`: exact `O/lambda^5` ring, `J` action, orbits, and distinct
@@ -50,6 +66,13 @@ Modules:
   files are the pinned dual and assignment certificates;
 - `coupled_horizon6.py`: the structured `{190:624, 220:1}` witness and the
   zero-price coupled closure at `5939/7500` for horizon `2..6`;
+- `horizon7_prep.py`: exact horizon-7 graph and special-block preparation at
+  scaled cost `260`;
+- `horizon7_ordinary.py`: the 320-variable ordinary bundle, exact data-only
+  branch-and-bound and Hall-infeasibility replay, and the matching cost-`220`
+  structured witness across all 624 ordinary fibres;
+- `coupled_horizon7.py`: the full `{220:624,260:1}` coupled witness and exact
+  closure at `6877/7500`;
 - `basins.py`: context-dependent, separated free-map initializations for one
   frozen boundary problem and each fixed lift phase;
 - `test_*.py`: focused exact gates;
@@ -70,6 +93,9 @@ python -m notes.entropy_selection.coupled_horizon5
 python -m notes.entropy_selection.horizon6_prep
 python -m notes.entropy_selection.horizon6_ordinary
 python -m notes.entropy_selection.coupled_horizon6
+python -m notes.entropy_selection.horizon7_prep
+python -m notes.entropy_selection.horizon7_ordinary
+python -m notes.entropy_selection.coupled_horizon7
 ```
 
 An `EMPTY` result belongs only to the finite-context cell-sector ansatz named
