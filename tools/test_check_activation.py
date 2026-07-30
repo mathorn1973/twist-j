@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 import csv
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 import tempfile
 import unittest
 
@@ -14,6 +14,7 @@ from tools.check_activation import (
     architecture_blockers,
     artifact_blockers,
     post_content_path_allowed,
+    posix_component_sort_key,
     publication_tag_blocker,
     release_identity,
     view_blockers,
@@ -31,6 +32,28 @@ def write_tsv(path: Path, fields: tuple[str, ...], rows: list[dict[str, str]]) -
 
 
 class ActivationTests(unittest.TestCase):
+    def test_manifest_sort_preserves_case_sensitive_top_level_order(self) -> None:
+        paths = ["canon/CANON.md", "CITATION.cff"]
+        expected = ["CITATION.cff", "canon/CANON.md"]
+        for path_type in (PurePosixPath, PureWindowsPath):
+            with self.subTest(path_type=path_type.__name__):
+                ordered = sorted(map(path_type, paths), key=posix_component_sort_key)
+                self.assertEqual([path.as_posix() for path in ordered], expected)
+
+    def test_manifest_sort_uses_posix_components_for_prefix_siblings(self) -> None:
+        paths = [
+            "reproduce/kernel-connectivity/README.md",
+            "reproduce/kernel/README.md",
+        ]
+        expected = [
+            "reproduce/kernel/README.md",
+            "reproduce/kernel-connectivity/README.md",
+        ]
+        for path_type in (PurePosixPath, PureWindowsPath):
+            with self.subTest(path_type=path_type.__name__):
+                ordered = sorted(map(path_type, paths), key=posix_component_sort_key)
+                self.assertEqual([path.as_posix() for path in ordered], expected)
+
     def test_release_identity_uses_positive_whole_canon_number(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

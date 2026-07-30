@@ -1,20 +1,33 @@
 # Theorem and dictionary separation audit
 
 This release audit checks a structural boundary in the current Public Canon.
-It establishes no new mathematical or physical claim. It verifies that the
-named algebraic, finite-group, chain, and recurrence rows remain at `T`, while
-their physical projection, place/CPT, force-curvature, color, Maxwell, Born,
-and cosmology readings are carried by explicit `D` rows. Its count check is
-updated by each completed Canon fold; the theorem/dictionary boundary checks stay
-structural.
+It establishes no new mathematical or physical claim. It verifies that named
+exact rows remain at `T`, while physical readings are carried by explicit
+`D`, `C`, `H`, `O`, or `F` rows. Its count check is updated by each completed
+Canon fold; the theorem/dictionary boundary checks stay structural.
 
-The audit reads only `canon/REGISTRY.tsv`, uses the Python standard library,
-and emits deterministic text. Its eight checks cover the current registry
-partition,
-the axiom and plenum, the two arithmetic places, the finite Weyl commutator,
-the Maxwell chain, the Born finite algebra, the color ladder, and the
-cosmology identities. Selected theorem scopes are also checked for the
-interpretive phrases moved to dictionary rows.
+The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
+`canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/GATES.tsv`, and
+`canon/FRONTIER_PROGRAMS.tsv`, uses the Python standard library, and emits
+deterministic text. Its seventeen checks cover the current registry partition,
+the axiom and plenum, the two arithmetic places, the carry lifts, the
+checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
+branch-invariant C8-BILINEAR-SHADOW theorem, the exact boost drift and
+conditional coin-ranking theorems separated from the MINIMAL-READ H/O rows,
+the finite Weyl commutator, the Maxwell chain, the Born finite algebra, the
+color ladder, the exact Gyron discrepancy and forward pair-substitution
+theorems, their corrected stationary-density boundary, and the separate
+cosmology dictionary, the Schwinger target firewall, the C20 arithmetic/time
+firewall, the TM-SYM2 split between three closed action classifications, the
+fired frozen selector, and the distinct open physical-measure successor, plus
+the separation of the exact WALL-LI2-RUNG theorem from the still-open
+QUANT-SUBSTRATE coupling. The final three checks pin the corrected midpoint
+and branch scope of WALL-CIRCLE-LEMMA; keep the L5 finite-state rationality
+theorem separate from the computed METRO-REDUCTION-ARROWS obligations A and C,
+while the typed reduction-calculus parent remains O and STOP on obligations B,
+D, and E and the dimensional child and residual remain O; and fence the
+all-cursor finite-cylinder theorem from both the narrow fired cut and the
+still-open Route A entropy bridge.
 
 Run from the repository root:
 
@@ -22,5 +35,5 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 8/8 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 17/17 ALL PASS`,
 exit 0, and empty stderr.

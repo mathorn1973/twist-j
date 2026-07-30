@@ -9,7 +9,7 @@ from datetime import date
 import hashlib
 import json
 import os
-from pathlib import Path
+from pathlib import Path, PurePath
 import platform
 import re
 import subprocess
@@ -377,6 +377,11 @@ def normalized_architecture() -> str:
     )
 
 
+def posix_component_sort_key(path: PurePath) -> tuple[str, ...]:
+    """Return the case-sensitive component order used by PurePosixPath."""
+    return tuple(path.as_posix().split("/"))
+
+
 def manifest(
     root: Path, content_commit: str, activation_commit: str, dry_run: bool
 ) -> dict[str, object]:
@@ -404,7 +409,10 @@ def manifest(
         if path.is_file() and "__pycache__" not in path.parts and path.suffix != ".pyc"
     ]
     files = []
-    for path in sorted(set(paths)):
+    for path in sorted(
+        set(paths),
+        key=lambda candidate: posix_component_sort_key(candidate.relative_to(root)),
+    ):
         relative = path.relative_to(root).as_posix()
         data = path.read_bytes()
         files.append({"path": relative, "sha256": sha256_bytes(data), "bytes": len(data)})

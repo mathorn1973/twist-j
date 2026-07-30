@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v6. Normative authority and activation
+**Release identity:** Public Canon v28. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -11,7 +11,7 @@ probability, and fields are readings. Its single algebraic axiom is
 J = 1 + zeta_5^2.
 ```
 
-Public Canon v6 also declares a discrete architecture. It does not
+Public Canon v28 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -46,6 +46,14 @@ Here `K` is the set of forward `U`-orbits. Decoder outputs never feed
 the state update. Totality, uniqueness, and completeness remain open;
 the public reading split is a dictionary at its registered legs
 (READING-SPLIT [D]), not a completeness theorem.
+`DEF-DECODER-COMPLETION-CONTRACT` supplies only the finite typed manifest
+shape against which a future candidate can be audited. Its optional
+factor-canonicity overlay freezes one stage, leg, scope, factor datum, and
+four distinct per-map coherence obligations, together with independent
+equivalence, completeness, maximality, and nonconstancy slots. It supplies
+no surviving factor, classification, universality, carrier, physical
+bridge, completion-wide terminality result, evidence, or status change,
+and it authorizes no verifier or probe.
 
 <!-- BEGIN GENERATED CORE CLAIMS -->
 The stable orientation claims are generated from the registry:
@@ -88,5 +96,7 @@ interpretations are only as strong as the registered dictionary rows.
 
 The authoritative current state is `canon/REGISTRY.tsv`.
 `canon/CANON.md` gives complete scopes and `canon/FRONTIER.md` gives
-the live obligations. Reproductions under `reproduce/` must exit zero
+the live obligations grouped by scheduler-only program metadata from
+`canon/FRONTIER_PROGRAMS.tsv`. That metadata creates no scientific edge or
+status. Reproductions under `reproduce/` must exit zero
 with byte-identical stdout.

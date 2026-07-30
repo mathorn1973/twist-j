@@ -1,0 +1,7 @@
+PASS 01 FIELD        F_25 pair model exact; tau^2=J, tau^5=-tau; eta=tau^3 has eta^2=phi, eta^4=-1, order 8, norm J
+PASS 02 ROOTS        r^2=phi has exactly {eta,-eta}; both roots have order 8 and norm J
+PASS 03 EXACT-SEQ    1->{+/-1}-><eta>--N--><J>->1 is exact and nonsplit
+PASS 04 DIGIT        both digit recursions equal r_epsilon^s2(n) for 0<=n<=2^18 and visit all 8 states
+PASS 05 TOWER        N(Y)=Theta, q(N(Y))=theta, Y^2=Theta^-1, Y^4=(-1)^theta, Y^-=(-1)^theta Y^+ for 0<=n<=2^18
+PASS 06 CHRONOLOGY   Y(n+1)=Y(n)r^(1-nu2(n+1)) for 0<=n<2^18; multipliers at n=0,1 are r and 1
+RESULT 6/6 ALL PASS

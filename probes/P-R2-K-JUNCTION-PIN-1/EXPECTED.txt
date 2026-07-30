@@ -1,0 +1,18 @@
+PASS K00 trace-Gram D_K=125; degree/signature/conductors; completed-zeta coefficients; exact cyclic character table
+PASS K01 principal convention: coefficients derived from u=1/5 are -u/(1-u)=-1/4 and +u/(1-u)=+1/4; omitted drift excludes zero
+PASS K02 Bernoulli recurrence through B_24; rational log(2); Machin pi width < 10^-60
+PASS K03 N=64 and N=128 EM intervals overlap for gamma_0,gamma_1 at q=1/5,2/5,3/5,4/5,1; every intersection width < 10^-24
+PASS K04 independent N_check=37 sum-integral enclosures contain every tight EM interval; log(N_check+q) > 3/2
+PASS K05 all complex character norms and reduced A_2,x^2+y^2 denominators exclude zero at N=64,N=128,and the tight intersection
+PASS K06 L(1,chi_2) overlaps 2log(phi)/sqrt(5); |L(1,omega)|^2 overlaps 2pi^2/25
+PASS K07 lambda_1^Q strictly inside (0.0230957,0.0230958)
+PASS K08 N=64 and N=128 lambda_1^K enclosures overlap; final width < 10^-24 (no preregistered centre or sign)
+PASS K09 explicit complex sums for omega,omega^2,conj(omega) are narrowly real and overlap the independent real reduction and simplified target
+PASS K10 positive-branch plenum identity: 6log(s_J)+3log(phi) = (3/2)log(5) by exact coefficient arithmetic
+PASS K11 negative control: literal modulus-five convention differs by the derived +log(5)/4 drift and is disjoint from the registered result
+WITNESS lambda_1^Q in [0.023095708966121033814310, 0.023095708966121033814311]
+WITNESS sum_nonprincipal L'/L in [1.143408547611871901089216, 1.143408547611871901089217]
+WITNESS lambda_1^K in [0.304595618542798635262524662701, 0.304595618542798635262524662702]
+NEGATIVE-CONTROL literal-modulus-5 interval in [0.706955096651323728912714, 0.706955096651323728912715]
+SCOPE R2-K-JUNCTION-PIN is C at most; R2 and RH remain O.
+ALL PASS (12 gates)

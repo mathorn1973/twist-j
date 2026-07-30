@@ -1,0 +1,41 @@
+PASS A1 the popcount drive equals the substitution fixed point on the first 4100 letters
+PASS A2 centered windows and length-3 factors both exhaust exactly the six-word carrier W3
+PASS A3 N is a fixed-point-free involution, R is an involution, they commute, and R fixes exactly the palindromes 010 and 101
+PASS A4 the child maps are grounded in the drive for every counter m in [1, 2048], preserve W3, and commute with N
+PASS A5 reversal intertwines the children up to negation: R o E_even = N o E_odd o R on W3
+PASS A6 the child maps reproduce the frozen public transfer
+PASS A7 transfer row and column sums are 2; rank(T - 2I) = 5; the unique normalized stationary law is uniform and invariant under both N and R pushforward; T commutes with the negation permutation
+PASS B1 both source snapshots are byte-identical to their pinned SHA-256
+PASS B2.1 published orbit block 1 parsed
+PASS B2.2 published orbit block 2 parsed
+PASS B2.3 published orbit block 3 parsed
+PASS B2.4 published orbit block 4 parsed
+PASS B3 the semilinear scientific block parsed with route SEMILINEAR-DOUBLE and residual invariant chi_Q chi_F
+PASS B4 the complete function-space scan (46656 maps) yields exactly 48 equivariant bijections, equal to the union of the four published blocks (sizes 12,12,12,12, pairwise disjoint)
+PASS B5 precomposition by R and by N stabilizes the class
+PASS B6 two independent fiber routes agree on all 48 members
+PASS B7 each published block carries a single fiber and the four block fibers are pairwise distinct
+PASS C1 all fifteen registered line pairs have squared cosine exactly 1/5
+PASS C2 the sigma_line centralizer W has exactly 48 elements
+PASS C3 exactly 96 incidence cases decided, projective-frame and RREF-nullspace methods agree on every case, and no frame degeneracy occurred
+PASS C4 the exponent-zero image equals the common character kernel ker(chi_Q) cap ker(chi_F) of order 12
+PASS C5 the exponent-one image has the inherited count with one common nonzero character equal to the published coset character
+PASS C6 Gamma_sl order equals the published order
+PASS C7 the Gamma_sl selector orbits match the published count and sizes and are unions of published blocks along equal chi_Q chi_F
+PASS D1 the exact identity s o N = sigma_line o s holds for all 48
+PASS D2 every structural involution translates the fibers uniformly across the class
+PASS D3 the translation of NR is the sum of the translations of N and R
+PASS D4 every transport centralizes sigma_line, carries the translation character of its involution, and has a uniform realizability verdict across the class
+PASS D5 the derived route is consistent with the extended orbit partition (frozen table: toggle <-> one orbit of 48, silent <-> two orbits of 24)
+SCIENTIFIC_RESULT_BEGIN
+ROUTE: REVERSAL-TOGGLE
+TRANSLATION_N: (0,1)
+TRANSLATION_R: (1,0)
+TRANSLATION_NR: (1,1)
+TRANSPORT_N: NONREALIZABLE
+TRANSPORT_R: NONREALIZABLE
+TRANSPORT_NR: REALIZABLE-E1
+EXTENDED_ORBIT_COUNT: 1
+EXTENDED_ORBIT_SIZES: 48
+RESULT: PASS
+SCIENTIFIC_RESULT_END

@@ -1,0 +1,602 @@
+{
+  "package_format": "TWISTJ_QDD_ROUTE_A_PROPOSAL_ID_PACKAGE_1",
+  "authority": {
+    "artifact_authority": "NOT_CANON",
+    "public_canon": "Public Canon v23",
+    "public_canon_tag": "canon-v23",
+    "activation_commit": "4ac41b4fac3a3794a6e9d5be1e2027d324edb806",
+    "content_commit": "7830d852229ffc06c9d287d026c8ece290bf339b",
+    "canon_sha256": "f842b613d6f65fe07ddab92ddbe1fb9fec89217d52b781571b7380281c3fb2b1",
+    "canon_bytes": 116017,
+    "public_main_base": "34d7b40ba79f2155f80c2f64dd27c2c0cc9bb8e2",
+    "claim_issue": 107,
+    "definition_candidate_path": "notes/canon/P-DMATTER-TOTAL-1-DEFINITION-CANDIDATE.md",
+    "definition_candidate_sha256": "2f6d299a1df495d8894bc5d46f1dc3f642a59e16d8a196ec8a8aa0399865d5ea",
+    "route_a_ruling_path": "notes/canon/P-DMATTER-TOTAL-1-ROUTE-A-OWNER-DECISION.md",
+    "route_a_ruling_sha256": "8ce44e09a3967f3c160ba5db632f8e36a9ee71fbb6d62c5d7aad16e1380b2cde",
+    "resolution_map_path": "notes/canon/P-DMATTER-TOTAL-1-A01-A15-RESOLUTION-MAP.md",
+    "resolution_map_sha256": "2480f917178b4fdb3c7ff0faeff31521c45042572dcec1b77e2b7d07bbb578cc",
+    "owner_ruling_path": "notes/canon/P-DMATTER-TOTAL-1-OD1-OD4-OWNER-RULING.md",
+    "owner_ruling_sha256": "0cb5d0e46d2a76d5170ac399b15626b558256984cf2d01c4029441ca0d248ca5",
+    "manifest_skeleton_path": "notes/canon/P-DMATTER-TOTAL-1-COMPLETION-MANIFEST-SKELETON.json",
+    "manifest_skeleton_sha256": "b19e073743fde8a71a18a9394c2c1bf71289ef515d626787ac290f6cfd57aa86"
+  },
+  "status": {
+    "artifact_status": "PROPOSAL_LOCAL_ID_PACKAGE",
+    "public_id_state": "PROPOSED_ONLY",
+    "canon_change": "NONE",
+    "registry_change": "NONE",
+    "dependency_ledger_change": "NONE",
+    "gate_change": "NONE",
+    "probe_change": "NONE",
+    "formal_run": "NONE",
+    "qdd_claim_id": "QUADRATIC-DECODER-DATA",
+    "qdd_claim_status": "O",
+    "qdd_work_state": "STOP"
+  },
+  "namespace_rules": {
+    "proposal_prefix": "CAND-",
+    "legacy_names_are_preserved": true,
+    "parallel_namespace_created": false,
+    "proposal_ids_are_public_contract_ids": false,
+    "proposal_ids_fill_contract_slots": false,
+    "normative_adoption_required": true,
+    "missing_public_contract_values_remain": "UNRESOLVED",
+    "inapplicable_literal_used": false
+  },
+  "legacy_ids": [
+    "CAND-READ-CHECKPOINT-N0-PRE",
+    "CAND-EQ-POINTED-FORWARD-SEQUENCE",
+    "CAND-REGION-PISTON4-N0",
+    "CAND-COARSE-IDENTITY-N0",
+    "CAND-CARRIER-BALANCED-PISTON4",
+    "CAND-BETA-BALANCED-PISTON-N0",
+    "CAND-RING-Q-TRIVIAL-INVOLUTION",
+    "CAND-GRAM-GALOIS-Q4-RAW",
+    "CAND-GRAM-GALOIS-Q4-NORMALIZED",
+    "CAND-DAGGER-Q",
+    "CAND-TRANSPOSE-Q",
+    "CAND-G-ADJOINT-Q4",
+    "CAND-Q-ORDERED-PAIR-Q4",
+    "CAND-QCARRIER-EXACT-FINITE-IMAGE",
+    "CAND-QCARRIER-EQ-COMPONENTWISE-Q",
+    "CAND-RIGHT-GRAM-NUMERATOR",
+    "CAND-EFFECT-GRAM-LOW",
+    "CAND-EFFECT-GRAM-HIGH",
+    "CAND-GRAM-TOTAL-WEIGHT",
+    "CAND-GRAM-SPECTRAL-WEIGHTS"
+  ],
+  "new_atomic_ids": [
+    {
+      "proposal_id": "CAND-COEFFICIENT-RING-Q",
+      "kind": "COEFFICIENT_OBJECT",
+      "symbol": "R_mat",
+      "definition": "Q"
+    },
+    {
+      "proposal_id": "CAND-INVOLUTION-Q-IDENTITY",
+      "kind": "TYPED_OPERATION",
+      "symbol": "inv_Q",
+      "definition": "identity_Q"
+    },
+    {
+      "proposal_id": "CAND-CARRIER-ANCHORED-ORBITS-K0",
+      "kind": "CARRIER",
+      "symbol": "K0",
+      "definition": "{kappa_x=(U^n(0,x))_(n>=0):x in F_5^6}"
+    },
+    {
+      "proposal_id": "CAND-CARRIER-CYCLOTOMIC-AMPLITUDE-QZETA5",
+      "kind": "CARRIER",
+      "symbol": "K_amp",
+      "definition": "Q(zeta_5)"
+    },
+    {
+      "proposal_id": "CAND-EQ-CYCLOTOMIC-AMPLITUDE",
+      "kind": "EQUALITY",
+      "symbol": "Eq_K_amp",
+      "definition": "input equality in Q(zeta_5)"
+    },
+    {
+      "proposal_id": "CAND-CONJUGATION-CYCLOTOMIC-SIGMA4",
+      "kind": "TYPED_OPERATION",
+      "symbol": "bar_K",
+      "definition": "sigma_4 on Q(zeta_5)"
+    },
+    {
+      "proposal_id": "CAND-TRACE-CYCLOTOMIC-Q",
+      "kind": "TYPED_OPERATION",
+      "symbol": "Tr_K",
+      "definition": "Tr_(Q(zeta_5)/Q)"
+    },
+    {
+      "proposal_id": "CAND-BASIS-POWER-B0",
+      "kind": "ORDERED_BASIS",
+      "symbol": "B0",
+      "definition": "(1,zeta,zeta^2,zeta^3)"
+    },
+    {
+      "proposal_id": "CAND-MAP-IOTA-B0",
+      "kind": "TOTAL_MAP",
+      "symbol": "iota_B0",
+      "definition": "v maps to v_0+v_1*zeta+v_2*zeta^2+v_3*zeta^3"
+    },
+    {
+      "proposal_id": "CAND-MAP-ORBIT-TO-AMPLITUDE-B0-N0",
+      "kind": "TOTAL_MAP",
+      "symbol": "iota_B0 o beta",
+      "definition": "K0 -> Q(zeta_5) at the pre-update n=0 piston read"
+    },
+    {
+      "proposal_id": "CAND-MAP-F-GRAM",
+      "kind": "TOTAL_MAP",
+      "symbol": "F_Gram",
+      "definition": "QCarrier -> CandidateQuadraticData"
+    },
+    {
+      "proposal_id": "CAND-MAP-R-CYC",
+      "kind": "TOTAL_MAP",
+      "symbol": "R_cyc",
+      "definition": "Q(zeta_5) -> CandidateQuadraticData"
+    },
+    {
+      "proposal_id": "CAND-MAP-D-SCOPED",
+      "kind": "TOTAL_MAP",
+      "symbol": "D_scoped",
+      "definition": "R_cyc o iota_B0 o beta"
+    },
+    {
+      "proposal_id": "CAND-RECORD-CANDIDATE-QUADRATIC-DATA",
+      "kind": "TAGGED_RECORD",
+      "symbol": "CandidateQuadraticData",
+      "definition": "total tagged ZERO or NONZERO record with exactly five adopted fields"
+    },
+    {
+      "proposal_id": "CAND-EQ-CANDIDATE-QUADRATIC-DATA",
+      "kind": "EQUALITY",
+      "symbol": "Eq_CandidateQuadraticData",
+      "definition": "literal constructor equality and componentwise payload equality"
+    },
+    {
+      "proposal_id": "CAND-CTOR-CQD-ZERO",
+      "kind": "CONSTRUCTOR",
+      "symbol": "ZERO",
+      "definition": "zero-support constructor with explicit zero-denominator tags"
+    },
+    {
+      "proposal_id": "CAND-CTOR-CQD-NONZERO",
+      "kind": "CONSTRUCTOR",
+      "symbol": "NONZERO",
+      "definition": "positive-total-weight constructor with normalized payloads"
+    },
+    {
+      "proposal_id": "CAND-FIELD-CQD-SUPPORT-STATE",
+      "kind": "FIELD",
+      "symbol": "support_state",
+      "definition": "ZERO or NONZERO support tag"
+    },
+    {
+      "proposal_id": "CAND-TYPE-CQD-SUPPORT-STATE",
+      "kind": "FIELD_TYPE",
+      "symbol": "Type_support_state",
+      "definition": "tagged set {ZERO,NONZERO}"
+    },
+    {
+      "proposal_id": "CAND-EQ-CQD-SUPPORT-STATE",
+      "kind": "EQUALITY",
+      "symbol": "Eq_support_state",
+      "definition": "literal tag equality"
+    },
+    {
+      "proposal_id": "CAND-EMIT-CQD-SUPPORT-STATE",
+      "kind": "EMIT_RULE",
+      "symbol": "Emit_support_state",
+      "definition": "emit the zero test of the cyclotomic amplitude"
+    },
+    {
+      "proposal_id": "CAND-FIELD-CQD-TOTAL-WEIGHT",
+      "kind": "FIELD",
+      "symbol": "total_weight",
+      "definition": "0 on ZERO and m(A) on NONZERO"
+    },
+    {
+      "proposal_id": "CAND-TYPE-CQD-TOTAL-WEIGHT",
+      "kind": "FIELD_TYPE",
+      "symbol": "Type_total_weight",
+      "definition": "Q_(>=0)"
+    },
+    {
+      "proposal_id": "CAND-EQ-CQD-TOTAL-WEIGHT",
+      "kind": "EQUALITY",
+      "symbol": "Eq_total_weight",
+      "definition": "rational equality"
+    },
+    {
+      "proposal_id": "CAND-EMIT-CQD-TOTAL-WEIGHT",
+      "kind": "EMIT_RULE",
+      "symbol": "Emit_total_weight",
+      "definition": "emit 0 on ZERO and Tr(A G) on NONZERO"
+    },
+    {
+      "proposal_id": "CAND-FIELD-CQD-BRANCH-WEIGHTS",
+      "kind": "FIELD",
+      "symbol": "branch_weights",
+      "definition": "(0,0) on ZERO and (w_low,w_high) on NONZERO"
+    },
+    {
+      "proposal_id": "CAND-TYPE-CQD-BRANCH-WEIGHTS",
+      "kind": "FIELD_TYPE",
+      "symbol": "Type_branch_weights",
+      "definition": "Q_(>=0)^2 as an ordered pair"
+    },
+    {
+      "proposal_id": "CAND-EQ-CQD-BRANCH-WEIGHTS",
+      "kind": "EQUALITY",
+      "symbol": "Eq_branch_weights",
+      "definition": "ordered componentwise rational equality"
+    },
+    {
+      "proposal_id": "CAND-EMIT-CQD-BRANCH-WEIGHTS",
+      "kind": "EMIT_RULE",
+      "symbol": "Emit_branch_weights",
+      "definition": "emit (0,0) on ZERO and (w_low,w_high) on NONZERO"
+    },
+    {
+      "proposal_id": "CAND-FIELD-CQD-DENSITY-STATE",
+      "kind": "FIELD",
+      "symbol": "density_state",
+      "definition": "ZERO_DENOMINATOR or DENSITY(A G/m(A))"
+    },
+    {
+      "proposal_id": "CAND-TYPE-CQD-DENSITY-STATE",
+      "kind": "FIELD_TYPE",
+      "symbol": "Type_density_state",
+      "definition": "tagged union ZERO_DENOMINATOR or DENSITY(M_4(Q))"
+    },
+    {
+      "proposal_id": "CAND-EQ-CQD-DENSITY-STATE",
+      "kind": "EQUALITY",
+      "symbol": "Eq_density_state",
+      "definition": "literal constructor and componentwise rational matrix equality"
+    },
+    {
+      "proposal_id": "CAND-EMIT-CQD-DENSITY-STATE",
+      "kind": "EMIT_RULE",
+      "symbol": "Emit_density_state",
+      "definition": "emit ZERO_DENOMINATOR or DENSITY(A G/m(A))"
+    },
+    {
+      "proposal_id": "CAND-FIELD-CQD-NORMALIZED-WEIGHT-STATE",
+      "kind": "FIELD",
+      "symbol": "normalized_weight_state",
+      "definition": "ZERO_DENOMINATOR or NORMALIZED((w_low,w_high)/m(A))"
+    },
+    {
+      "proposal_id": "CAND-TYPE-CQD-NORMALIZED-WEIGHT-STATE",
+      "kind": "FIELD_TYPE",
+      "symbol": "Type_normalized_weight_state",
+      "definition": "tagged union ZERO_DENOMINATOR or NORMALIZED(Q_(>=0)^2)"
+    },
+    {
+      "proposal_id": "CAND-EQ-CQD-NORMALIZED-WEIGHT-STATE",
+      "kind": "EQUALITY",
+      "symbol": "Eq_normalized_weight_state",
+      "definition": "literal constructor and ordered componentwise rational equality"
+    },
+    {
+      "proposal_id": "CAND-EMIT-CQD-NORMALIZED-WEIGHT-STATE",
+      "kind": "EMIT_RULE",
+      "symbol": "Emit_normalized_weight_state",
+      "definition": "emit ZERO_DENOMINATOR or NORMALIZED((w_low,w_high)/m(A))"
+    },
+    {
+      "proposal_id": "CAND-NORM-CQD-DENSITY-TOTAL",
+      "kind": "NORMALIZATION",
+      "symbol": "Norm_density_state",
+      "definition": "divide A G by m(A) only on the NONZERO constructor"
+    },
+    {
+      "proposal_id": "CAND-NORM-CQD-NORMALIZED-WEIGHTS-TOTAL",
+      "kind": "NORMALIZATION",
+      "symbol": "Norm_normalized_weight_state",
+      "definition": "divide (w_low,w_high) by m(A) only on the NONZERO constructor"
+    }
+  ],
+  "slot_bindings": [
+    {
+      "contract_slot": "read_convention_id",
+      "proposal_value": "CAND-READ-CHECKPOINT-N0-PRE"
+    },
+    {
+      "contract_slot": "history_equivalence_id",
+      "proposal_value": "CAND-EQ-POINTED-FORWARD-SEQUENCE"
+    },
+    {
+      "contract_slot": "region_id",
+      "proposal_value": "CAND-REGION-PISTON4-N0"
+    },
+    {
+      "contract_slot": "coarse_graining_id",
+      "proposal_value": "CAND-COARSE-IDENTITY-N0"
+    },
+    {
+      "contract_slot": "carrier_manifest[K0].carrier_id",
+      "proposal_value": "CAND-CARRIER-ANCHORED-ORBITS-K0"
+    },
+    {
+      "contract_slot": "carrier_manifest[K0].equality_id",
+      "proposal_value": "CAND-EQ-POINTED-FORWARD-SEQUENCE"
+    },
+    {
+      "contract_slot": "carrier_manifest[Veff].carrier_id",
+      "proposal_value": "CAND-CARRIER-BALANCED-PISTON4"
+    },
+    {
+      "contract_slot": "carrier_manifest[K_amp].carrier_id",
+      "proposal_value": "CAND-CARRIER-CYCLOTOMIC-AMPLITUDE-QZETA5"
+    },
+    {
+      "contract_slot": "carrier_manifest[K_amp].equality_id",
+      "proposal_value": "CAND-EQ-CYCLOTOMIC-AMPLITUDE"
+    },
+    {
+      "contract_slot": "carrier_manifest[QCarrier].carrier_id",
+      "proposal_value": "CAND-QCARRIER-EXACT-FINITE-IMAGE"
+    },
+    {
+      "contract_slot": "carrier_manifest[QCarrier].equality_id",
+      "proposal_value": "CAND-QCARRIER-EQ-COMPONENTWISE-Q"
+    },
+    {
+      "contract_slot": "carrier_manifest[CandidateQuadraticData].carrier_id",
+      "proposal_value": "CAND-RECORD-CANDIDATE-QUADRATIC-DATA"
+    },
+    {
+      "contract_slot": "carrier_manifest[CandidateQuadraticData].equality_id",
+      "proposal_value": "CAND-EQ-CANDIDATE-QUADRATIC-DATA"
+    },
+    {
+      "contract_slot": "stage_manifest[D_matter].map_id",
+      "proposal_value": "CAND-MAP-D-SCOPED"
+    },
+    {
+      "contract_slot": "leg_manifest[D_quadratic].map_id",
+      "proposal_value": "CAND-MAP-D-SCOPED"
+    },
+    {
+      "contract_slot": "bridge_manifest[beta].map_id",
+      "proposal_value": "CAND-BETA-BALANCED-PISTON-N0"
+    },
+    {
+      "contract_slot": "bridge_manifest[iota_B0].map_id",
+      "proposal_value": "CAND-MAP-IOTA-B0"
+    },
+    {
+      "contract_slot": "bridge_manifest[D_scoped_record].map_id",
+      "proposal_value": "CAND-MAP-D-SCOPED"
+    },
+    {
+      "contract_slot": "quadratic_manifest.coefficient_ring_id",
+      "proposal_value": "CAND-COEFFICIENT-RING-Q"
+    },
+    {
+      "contract_slot": "quadratic_manifest.effective_carrier_id",
+      "proposal_value": "CAND-CARRIER-BALANCED-PISTON4"
+    },
+    {
+      "contract_slot": "quadratic_manifest.orbit_to_amplitude_bridge_id",
+      "proposal_value": "CAND-MAP-ORBIT-TO-AMPLITUDE-B0-N0"
+    },
+    {
+      "contract_slot": "quadratic_manifest.gram_id",
+      "proposal_value": "CAND-GRAM-GALOIS-Q4-NORMALIZED"
+    },
+    {
+      "contract_slot": "quadratic_manifest.dagger_id",
+      "proposal_value": "CAND-DAGGER-Q"
+    },
+    {
+      "contract_slot": "quadratic_manifest.transpose_id",
+      "proposal_value": "CAND-TRANSPOSE-Q"
+    },
+    {
+      "contract_slot": "quadratic_manifest.qcarrier_id",
+      "proposal_value": "CAND-QCARRIER-EXACT-FINITE-IMAGE"
+    },
+    {
+      "contract_slot": "quadratic_manifest.q_equality_id",
+      "proposal_value": "CAND-QCARRIER-EQ-COMPONENTWISE-Q"
+    },
+    {
+      "contract_slot": "quadratic_manifest.q_map_id",
+      "proposal_value": "CAND-Q-ORDERED-PAIR-Q4"
+    },
+    {
+      "contract_slot": "quadratic_manifest.factorization_map_id",
+      "proposal_value": "CAND-MAP-F-GRAM"
+    }
+  ],
+  "field_rows": [
+    {
+      "field_handle": "support_state",
+      "record_id": "CAND-RECORD-CANDIDATE-QUADRATIC-DATA",
+      "field_id": "CAND-FIELD-CQD-SUPPORT-STATE",
+      "field_type_id": "CAND-TYPE-CQD-SUPPORT-STATE",
+      "role": "READOUT",
+      "carrier_id": "CAND-TYPE-CQD-SUPPORT-STATE",
+      "domain_id": "CAND-CARRIER-ANCHORED-ORBITS-K0",
+      "normalization_id": "UNRESOLVED",
+      "equality_id": "CAND-EQ-CQD-SUPPORT-STATE",
+      "source_item_id": "QUADRATIC-DECODER-DATA",
+      "write_map_id": "CAND-MAP-D-SCOPED",
+      "presence_state": "RESOLVED",
+      "absence_basis_item_id": "UNRESOLVED",
+      "emit_rule_id": "CAND-EMIT-CQD-SUPPORT-STATE",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "public_contract_state": "UNRESOLVED"
+    },
+    {
+      "field_handle": "total_weight",
+      "record_id": "CAND-RECORD-CANDIDATE-QUADRATIC-DATA",
+      "field_id": "CAND-FIELD-CQD-TOTAL-WEIGHT",
+      "field_type_id": "CAND-TYPE-CQD-TOTAL-WEIGHT",
+      "role": "READOUT",
+      "carrier_id": "CAND-TYPE-CQD-TOTAL-WEIGHT",
+      "domain_id": "CAND-CARRIER-ANCHORED-ORBITS-K0",
+      "normalization_id": "UNRESOLVED",
+      "equality_id": "CAND-EQ-CQD-TOTAL-WEIGHT",
+      "source_item_id": "QUADRATIC-DECODER-DATA",
+      "write_map_id": "CAND-MAP-D-SCOPED",
+      "presence_state": "RESOLVED",
+      "absence_basis_item_id": "UNRESOLVED",
+      "emit_rule_id": "CAND-EMIT-CQD-TOTAL-WEIGHT",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "public_contract_state": "UNRESOLVED"
+    },
+    {
+      "field_handle": "branch_weights",
+      "record_id": "CAND-RECORD-CANDIDATE-QUADRATIC-DATA",
+      "field_id": "CAND-FIELD-CQD-BRANCH-WEIGHTS",
+      "field_type_id": "CAND-TYPE-CQD-BRANCH-WEIGHTS",
+      "role": "READOUT",
+      "carrier_id": "CAND-TYPE-CQD-BRANCH-WEIGHTS",
+      "domain_id": "CAND-CARRIER-ANCHORED-ORBITS-K0",
+      "normalization_id": "UNRESOLVED",
+      "equality_id": "CAND-EQ-CQD-BRANCH-WEIGHTS",
+      "source_item_id": "QUADRATIC-DECODER-DATA",
+      "write_map_id": "CAND-MAP-D-SCOPED",
+      "presence_state": "RESOLVED",
+      "absence_basis_item_id": "UNRESOLVED",
+      "emit_rule_id": "CAND-EMIT-CQD-BRANCH-WEIGHTS",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "public_contract_state": "UNRESOLVED"
+    },
+    {
+      "field_handle": "density_state",
+      "record_id": "CAND-RECORD-CANDIDATE-QUADRATIC-DATA",
+      "field_id": "CAND-FIELD-CQD-DENSITY-STATE",
+      "field_type_id": "CAND-TYPE-CQD-DENSITY-STATE",
+      "role": "READOUT",
+      "carrier_id": "CAND-TYPE-CQD-DENSITY-STATE",
+      "domain_id": "CAND-CARRIER-ANCHORED-ORBITS-K0",
+      "normalization_id": "CAND-NORM-CQD-DENSITY-TOTAL",
+      "equality_id": "CAND-EQ-CQD-DENSITY-STATE",
+      "source_item_id": "QUADRATIC-DECODER-DATA",
+      "write_map_id": "CAND-MAP-D-SCOPED",
+      "presence_state": "RESOLVED",
+      "absence_basis_item_id": "UNRESOLVED",
+      "emit_rule_id": "CAND-EMIT-CQD-DENSITY-STATE",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "public_contract_state": "UNRESOLVED"
+    },
+    {
+      "field_handle": "normalized_weight_state",
+      "record_id": "CAND-RECORD-CANDIDATE-QUADRATIC-DATA",
+      "field_id": "CAND-FIELD-CQD-NORMALIZED-WEIGHT-STATE",
+      "field_type_id": "CAND-TYPE-CQD-NORMALIZED-WEIGHT-STATE",
+      "role": "READOUT",
+      "carrier_id": "CAND-TYPE-CQD-NORMALIZED-WEIGHT-STATE",
+      "domain_id": "CAND-CARRIER-ANCHORED-ORBITS-K0",
+      "normalization_id": "CAND-NORM-CQD-NORMALIZED-WEIGHTS-TOTAL",
+      "equality_id": "CAND-EQ-CQD-NORMALIZED-WEIGHT-STATE",
+      "source_item_id": "QUADRATIC-DECODER-DATA",
+      "write_map_id": "CAND-MAP-D-SCOPED",
+      "presence_state": "RESOLVED",
+      "absence_basis_item_id": "UNRESOLVED",
+      "emit_rule_id": "CAND-EMIT-CQD-NORMALIZED-WEIGHT-STATE",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "public_contract_state": "UNRESOLVED"
+    }
+  ],
+  "forbidden_bindings": [
+    {
+      "proposal_values": [
+        "CAND-EFFECT-GRAM-LOW",
+        "CAND-EFFECT-GRAM-HIGH"
+      ],
+      "forbidden_contract_slot": "quadratic_manifest.effect_ids",
+      "reason": "These are algebraic effect candidates, not physical effect identifiers."
+    },
+    {
+      "proposal_values": [
+        "CAND-COARSE-IDENTITY-N0"
+      ],
+      "forbidden_contract_slot": "physical instrument outcome coarse-graining",
+      "reason": "The anchored input coarse-graining does not define post-event outcome coarse-graining."
+    },
+    {
+      "proposal_values": [
+        "CAND-MAP-D-SCOPED"
+      ],
+      "forbidden_contract_slot": "layer or gate identifiers",
+      "reason": "An anchored record map does not determine a cross-layer endpoint or gate."
+    },
+    {
+      "proposal_values": [
+        "READOUT",
+        "FALSE"
+      ],
+      "forbidden_contract_slot": "terminal_output_ids or terminality_basis_id",
+      "reason": "Role and feeds_U state do not prove completion-wide terminality."
+    }
+  ],
+  "unresolved_slots": {
+    "identity": [
+      "candidate_id",
+      "public_pin_id"
+    ],
+    "field_rows": [
+      "normalization_id for support_state",
+      "normalization_id for total_weight",
+      "normalization_id for branch_weights",
+      "all absence_basis_item_id values",
+      "all public record and field identifier slots until normative adoption"
+    ],
+    "physical_measurement": [
+      "physical effect_ids",
+      "physical Born pairing",
+      "instrument_ids",
+      "K_a",
+      "outcome_ids",
+      "post-event semantics",
+      "outcome coarse-graining"
+    ],
+    "transport": [
+      "all L1 to L6 endpoints",
+      "all gate_ids",
+      "hybrid carrier and transport"
+    ],
+    "dependencies_and_closure": [
+      "complete dependency DAG",
+      "acyclicity certificate",
+      "terminal_output_ids",
+      "terminality_basis_id"
+    ],
+    "contract_blocks": [
+      "physics_manifest",
+      "measure_manifest",
+      "A01 to A15 value_state"
+    ]
+  },
+  "collision_audit": {
+    "open_issue_owner": 107,
+    "formal_probe_id_reserved": "P-DMATTER-TOTAL-1",
+    "formal_probe_authorized": false,
+    "open_pr_collision": false,
+    "stale_branch_dispositions": [
+      {
+        "branch": "notes/p-dmatter-total-1-direct-readout",
+        "disposition": "DO_NOT_IMPORT"
+      },
+      {
+        "branch": "notes/p-dmatter-total-1-owner-decision-input",
+        "disposition": "DO_NOT_IMPORT"
+      }
+    ]
+  }
+}

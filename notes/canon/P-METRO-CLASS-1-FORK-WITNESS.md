@@ -1,0 +1,195 @@
+# P-METRO-CLASS-1: factorwise versus joint-anchored control (NON-CANONICAL)
+
+Status: `DRAFT / BOUNDED-CONTROL-LEMMA / DEFINITION-UNRESOLVED`
+
+This note supplies one exact matrix control for the compositional fork in
+`P-METRO-CLASS-1-SCOPE-MAP.md`. It does not select the public scientific
+criterion, prove translated-box uniformity, or supply an all-parameter
+decision theorem. It is not `PREREG.md`, a verifier, run, Canon change, or
+status proposal. `METRO-ADMISSIBILITY` stays `[O]`.
+
+## Authority pin
+
+```text
+Canon:              Public Canon v15
+state:              ACTIVE
+tag:                canon-v15
+activation commit:  8f4e176c5d76f519d3493e56e438aba7856e1f01
+content commit:     a850753348583e611bf7ccd5aa074030dc7e12f5
+Canon SHA-256:      53237ec25b3782e833367c998c049d19459189a21c2a36638dd9e1600335976b
+Canon bytes:        89288
+owner row:          METRO-ADMISSIBILITY [O]
+gate:               GATE-L5-L6-METRO-NORMALIZATION
+child candidate:    METRO-COMMUTING-DIGIT-AUTOMATIC-CHILD-1
+merged parent:      PR #115, public main
+                    3f6500afe1ea71fb60f7c7d81da9a2d4d05d2ba3
+scheduler:          DECODER_CORE / ROOT / READY / FORMAL
+```
+
+`READY` only permits the owner to choose and define one residual class. The
+merged parent note remains non-canonical and is not an authority dependency.
+
+## 1. Exact fixed-length word-average control
+
+Take
+
+```text
+q=2,
+a=2,
+r=2,
+S={0,1},
+W5(s)=e_s in Q_(>=0)^2.
+```
+
+Let `X` be the two-state swap matrix. For fixed binary word lengths, define
+the coordinate digit actions
+
+```text
+coordinate 1: delta_(1,0)=delta_(1,1)=X,
+coordinate 2: delta_(2,0)=I, delta_(2,1)=X.
+```
+
+All four digit maps commute. Uniform averaging over all words of a fixed
+length gives
+
+```text
+T_1 = X,
+T_2 = (I+X)/2,
+T_1^2=I,
+T_2^2=T_2,
+T_1 T_2=T_2 T_1=T_2.
+```
+
+Consequently the factorwise sequence `T_1^m` does not converge. In the
+entrywise maximum norm,
+
+```text
+max_entry |T_1^(m+1)-T_1^m| = 1
+```
+
+for every `m`. But for every start state, every `m_1>=0`, and every
+`m_2>=1`, the joint anchored fixed-length average is exactly
+
+```text
+(T_1^m1 T_2^m2 W5)(s) = (1/2,1/2).
+```
+
+Thus factorwise power convergence is not necessary for joint anchored box
+convergence, even in the smallest nontrivial commuting example.
+
+This is deliberately only a fixed-length word-average control. The first
+coordinate is not leading-zero invariant, so the note does not claim a
+padding-independent stream on `N^2`. The exact digit order, padding, allowed
+starts, and pointwise integer semantics remain unresolved in the parent.
+
+The control also has force only if the named rank-two action and independent
+rectangular cofinal parameters are retained as typed structure. Synchronously
+pairing the two digits produces a one-dimensional four-letter automaton with
+average `T_1 T_2=T_2`. Such flattening or diagonalization is forbidden by the
+proposed child type but has not yet been publicly adopted.
+
+No private stdout hash or two-architecture report is needed or offered; the
+entire bounded calculation is displayed above.
+
+## 2. What the control decides
+
+The exact proposal-local lemma is
+
+```text
+FACTORWISE POWERS != JOINT ANCHORED CONVERGENCE
+```
+
+on the displayed fixed-length matrix class. Therefore a future definition
+on any class containing this control may not assert their equivalence as an
+algebraic identity.
+
+The control does not decide:
+
+```text
+uniform convergence on arbitrary translated boxes;
+padding-independent integer-stream semantics;
+the complete joint certificate relation;
+the complete child class;
+reduction invariance;
+the L5-to-L6 gate endpoints.
+```
+
+In particular, it does not prove that the complete direct and factorwise
+decisions disagree on an admitted protocol.
+
+## 3. Owner disposition after consolidation
+
+`V15-OWNER-FOLD-107-109.md` selects the direct translated-box property as
+the single scientific object and a joint exact certificate relation as its
+proof system. The amended ruling and scope map define the required role:
+
+```text
+Adm_direct(P)          scientific decision in Decision(Y_r),
+Cert_joint(P,c,d)      independent exact relation with proof payload c and
+                       decision d in Decision(Y_r).
+```
+
+Soundness, completeness, and decision coherence of `Cert_joint` for
+`Adm_direct` remain theorem content. The certificate must cover individual
+digit maps, the allowed-start observable quotient, q-adic boundary/residue
+data, and the translated-box effective modulus; averaged actions or a bare
+Krylov submodule alone are insufficient. An exact admitted
+counterexample is `NEGATIVE`; a malformed or non-reproducing artifact with
+no exact mathematical counterexample is `STOP`.
+
+The owner decision closes the architectural fork but does not supply the
+certificate schema or authorize a definition freeze. No existing Canon
+theorem is cited as a multidimensional joint-spectral iff. The active
+one-dimensional boundary does not supply this higher-rank theorem.
+
+## 4. Completeness remains a proof obligation
+
+A useful target shape is two-level, but neither level is closed here:
+
+```text
+ANCHORED ALL-PARAMETER TARGET:
+    seek an exact terminating criterion on the reachable submodule using
+    simultaneous primary/peripheral decomposition of commuting rational
+    matrices, including the tagged normalization and terminal-value tests;
+
+TRANSLATED-BOX TARGET:
+    prove uniform translated-box convergence with an effective boundary
+    decomposition and modulus for the same child criterion.
+```
+
+Simultaneous decomposition is a suggested route, not a supplied termination
+or completeness proof. Translated-box uniformity stays inside the same
+`METRO-ADMISSIBILITY` child and the existing
+`GATE-L5-L6-METRO-NORMALIZATION`; this note creates no new obligation owner
+or gate.
+
+If the all-parameter proofs are not supplied before freeze, the honest
+fallback is a finite surface with public bounds on every parameter and
+encoding. A bounded exhaustive probe and an unproved all-parameter theorem
+may not be claimed simultaneously.
+
+## 5. Exact disposition for the next day
+
+```text
+CLOSED PROPOSAL-LOCALLY:
+    factorwise powers are not equivalent to joint anchored convergence.
+
+ARCHITECTURAL FORK CLOSED:
+    direct property plus joint exact YES/NO certificate selected;
+    factorwise powers retained only as this fixed-length control.
+
+PROOF/TYPE DEBT STILL OPEN:
+    digit order and padding;
+    admitted N^a stream semantics;
+    translated-box theorem and effective modulus;
+    anchored all-parameter completeness or finite bounds;
+    minimization and blocking invariance;
+    exact L5/L6 endpoints and parent-closure routing.
+
+FORMAL PROBE:
+    forbidden.
+```
+
+`METRO-ADMISSIBILITY` stays `[O]`, `METRO-EDGE-SCALE` stays `[O]`,
+`OBSERVER-WRITE-PORT` stays blocked, and the frontier, gates, dependencies,
+and Canon remain unchanged.

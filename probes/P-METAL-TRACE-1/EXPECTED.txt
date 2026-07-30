@@ -1,0 +1,20 @@
+OK   gold law: phi^2 = phi + 1        (trace 1)
+OK   gold: N(phi) = phi*phi' = -1     (unit)
+OK   gold: Tr(phi) = phi + phi' = 1   (middle coefficient is the trace)
+OK   silver law: delta^2 = 2*delta + 1 (trace 2)
+OK   silver: N(delta) = -1            (unit)
+OK   silver: Tr(delta) = 2            (middle coefficient is the trace)
+OK   trace 1 -> disc = 1 + 4 = 5  -> Q(sqrt5) -> prime 5
+OK   trace 2 -> disc = 4 + 4 = 8  -> Q(sqrt2) -> prime 2
+OK   gold prime divides its disc:   5 | 5
+OK   silver prime divides its disc: 2 | 8
+OK   gold growth is Fibonacci:  phi^n = F_n * phi + F_(n-1)  [n <= 11]
+OK   silver growth is Pell:     delta^n = P_n * delta + P_(n-1)  [n <= 11]
+OK   silver phase atom:     m^2 = i
+OK   silver amplitude atom: (m + m^-1)^2 = 2  so m + m^-1 = sqrt2
+OK   Hadamard coefficient:  m + m^-1 = sqrt2  (1/sqrt2 undoes one write)
+OK   sqrt(2i) squared:      (1 + i)^2 = 2i
+OK   sqrt(2i) factored:     sqrt2 * m = 1 + i   (amplitude sqrt2, phase pi/4)
+OK   silver pure form NOT a unit: N(1 + i) = 4 over Q(zeta_8)
+OK   gold pure form IS a unit: N(J = 1 + j^2) = 1
+ALL OK, 19 checks

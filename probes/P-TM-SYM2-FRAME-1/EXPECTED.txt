@@ -1,0 +1,10 @@
+PASS 01 FIELD Q(phi), conjugate roots, raw Sym2 coordinates, and Gram verified
+PASS 02 FRAME six trace-one projectors; Gram diagonal 1, off-diagonal 1/5; sum=2I
+PASS 03 SIMPLEX traceless projectors form a rank-5 regular simplex
+PASS 04 COMMUTANT End(Sym2)^so(3) has nullity 2 = span{P1,P5}
+PASS 05 MOMENT direct frame moment descends to Q, is Galois-stable, and is so(3)-central
+PASS 06 SPECTRAL coefficients 1/3:2/15=5:2; block masses 1/3:2/3=1:2; trace 1
+PASS 07 NONUNIFORM M is not (1/6)I6; six equal channel weights are false at this frame scope
+PASS 08 CONTROL cube lines have isotropic second moment but fail the Sym2 centrality test
+RESULT POSITIVE 8/8 ALL PASS
+SCOPE GOLDEN-SIX-LINE-SYM2-FRAME algebra only; no TM or physical measure

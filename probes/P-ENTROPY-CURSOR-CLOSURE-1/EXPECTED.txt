@@ -1,0 +1,19 @@
+P-ENTROPY-CURSOR-CLOSURE-1 exact verifier
+prereg d57fc9e12527aa98db4c270952add818a1f2e3b083c13155b5861d5c24b35f14
+S01 SOURCES verify.py=1c2c701290640f19cddc6822cfdd5bb24bdd9826c0c36cbd5ae989ac7371d72f, PREREG.md=dc51c42aff39707b09cc5cf4c80cd6c23ed5aa6fb8e1a6332e3aa825818ef08d: PASS
+S02 FACTORS certified 512/2^16/2^18 sets agree for L=1..40 and pinned counts hold: PASS
+C03A ROUTES literal affine tables and Thue-Morse constructions agree exactly: PASS
+E01 ENGINE reproduces G05, G07, and G08: PASS
+E02 GAP L=7..16 c=1..L-1: 105 pairs, nonzero=0
+E03 FULL-AXIS L=4..32 every cursor: 522 distinct pairs, nonzero=0
+E04 DEPTH-GRID ell in {4,20,100}: 27 distinct triples, nonzero=0
+E05 ZERO-RESIDUE labelled graph projects exactly to pure word for all 522 pairs: PASS
+E06 REVERSAL factor closure and cursor count equality hold for L=4..24: PASS
+C02 CONTROLS one-component global counts constant-0=126/components=1, constant-1=126/components=1, period-2-01=6250/components=1, period-3-001=126/components=1, period-4-0110=0/components=1: PASS
+C03B TREE-RESIDUAL route matches 105 gap pairs, six depth checks, and controls: PASS
+C01 FORWARD-REACHABILITY every used weak component: PASS
+TOTAL distinct candidate parameter triples: 549, nonzero=0
+SCOPE finite-cylindrical L5 ansatz only; no selection or measure claim
+CLOSURE every cursor at driver windows L=4..32
+CLOSURE zero-residue restriction transports the no-go to every depth
+RESULT PASS cursor axis closed through window 32

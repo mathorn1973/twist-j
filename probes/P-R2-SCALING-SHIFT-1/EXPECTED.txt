@@ -1,0 +1,22 @@
+PASS S0 sqrt5 in (2.236067977, 2.236067978) by exact squaring
+PASS S1 <U^j v, U^k v> = 5^{-|j-k|/2} (exponent identity, 0 <= j,k <= 6); vol(O) = sum of shells = 1; adjacent shells disjoint so ||(I-U)e||^2 = 2 on the transported basis
+PASS S2 ladder closed form psi(n) = n(1+r)/(1-r) - 2r(1-r^n)/(1-r)^2 exact for n = 1..12
+PASS S3 increments 1 + 2r(1-r^n)/(1-r), monotone, gap to phi^2 = 2 r^{n+1}/(1-r) > 0, limit exactly phi^2 = (3+sqrt5)/2
+PASS S4 boundary spectral density: P(0) = phi^2, P(pi) = phi^-2, product 1, absolutely continuous with full support
+PASS S5 psi(1) = 1 outside the lambda_1 bracket (0.0230957, 0.0230958): rung-1 miss by a factor above 43
+PASS S6a gamma enclosure width < 1e-12, 14-digit witness 0.57721566490153
+PASS S6b gamma_1 inside the prior cocycle-lane pin, witness -0.07281584548367
+PASS S6c lambda_1 in (0.0230957, 0.0230958), witness 0.02309570896612
+PASS S6d M_1 inside the cited pin and > 0, witness 0.00003710063643
+PASS S6e lambda_2 = 4 lambda_1 - M_1 in (0.09234573, 0.09234574), witness 0.09234573522804
+PASS S6f rescaled rung 2: hi(lambda_1 (2 + 2r)) = 0.066848848031 < lo(lambda_2) = 0.092345735228: JUNCTION FIRED
+PASS S7 ||(I - U^n) e||^2 = 2 on every transported basis vector, every n >= 1: the S2 ladder is infinite at every rung
+ASSEMBLY K1: multiplication by lambda is a bilateral shift, so I - U
+is not Hilbert-Schmidt (ladder infinite at every rung). K2: the type
+is homogeneous Lebesgue, every vector absolutely continuous, while a
+cocycle realization forces the atomic sigma_xi of the public toral
+no-go: contradiction for every vector. K3: convolution keeps
+archimedean composites absolutely continuous. K4: the boundary ladder
+increments increase strictly toward phi^2 (never attained) and miss
+the second Li rung after the single rescale |c|^2 = lambda_1.
+ALL PASS (13 gates)

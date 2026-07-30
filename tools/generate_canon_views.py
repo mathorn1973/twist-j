@@ -14,9 +14,17 @@ from pathlib import Path
 import re
 
 try:
-    from check_ledger import validate
+    from check_ledger import (
+        FRONTIER_PROGRAM_FIELDS,
+        FRONTIER_PROGRAM_ORDER,
+        validate,
+    )
 except ModuleNotFoundError:  # imported as tools.generate_canon_views in tests
-    from tools.check_ledger import validate
+    from tools.check_ledger import (
+        FRONTIER_PROGRAM_FIELDS,
+        FRONTIER_PROGRAM_ORDER,
+        validate,
+    )
 
 
 REGISTRY_FIELDS = (
@@ -41,34 +49,72 @@ def read_tsv(path: Path, fields: tuple[str, ...]) -> list[dict[str, str]]:
         return list(reader)
 
 
-def wrap_claim(claim: str, status: str, scope: str, decision: str | None = None) -> str:
+def wrap_claim(
+    claim: str, status: str, scope: str, decision: str | None = None,
+    queue: str | None = None,
+) -> str:
     lines = [f"- {claim} [{status}]: {scope}"]
+    if queue:
+        lines.append(f"  Queue: {queue}.")
     if decision:
         lines.append(f"  Decision: {decision}")
     return "\n".join(lines)
 
 
-def render_frontier(rows: list[dict[str, str]]) -> str:
+FRONTIER_PROGRAM_TITLES = {
+    "DECODER_CORE": "Decoder core",
+    "MEASURE": "Measure selection",
+    "COSMOLOGY": "Geometry and cosmology",
+    "TENSOR": "Tensor and radiation",
+    "NONABELIAN_QCD": "Nonabelian and QCD",
+    "QUANTUM_EM": "Quantum and electromagnetic wall",
+    "PHOTON_CONTINUUM": "Photon continuum",
+    "ENRICHMENT": "Enrichment",
+}
+
+
+def render_frontier(
+    rows: list[dict[str, str]], programs: list[dict[str, str]]
+) -> str:
     live = [row for row in rows if row["status"] in {"H", "O"}]
-    groups = (
-        ("Hypotheses", "H"),
-        ("Open obligations", "O"),
-    )
+    program_by_claim = {row["claim_id"]: row for row in programs}
     parts = [
         "# TWIST-J frontier",
         "",
-        "This file is generated from `canon/REGISTRY.tsv`. Every live row has",
-        "one public scope and one concrete falsifier or decision condition.",
+        "This file is generated from `canon/REGISTRY.tsv` and grouped by",
+        "`canon/FRONTIER_PROGRAMS.tsv`. `REGISTRY.tsv` alone determines which",
+        "claims are live and supplies every status, scope, and decision condition.",
+        "The program table supplies scheduler labels only. It creates no claim,",
+        "status, scope, dependency, layer, gate, evidence, or verifier permission.",
         "Closed claims are excluded.",
     ]
-    for title, status in groups:
-        parts.extend(["", f"## {title} [{status}]", ""])
+    role_order = {"ROOT": 0, "FOLLOWUP": 1}
+    for program_id in FRONTIER_PROGRAM_ORDER:
         selected = sorted(
-            (row for row in live if row["status"] == status),
-            key=lambda row: row["claim_id"],
+            (
+                row for row in live
+                if program_by_claim[row["claim_id"]]["program_id"] == program_id
+            ),
+            key=lambda row: (
+                role_order[program_by_claim[row["claim_id"]]["queue_role"]],
+                row["claim_id"],
+            ),
         )
+        if not selected:
+            continue
+        title = FRONTIER_PROGRAM_TITLES[program_id]
+        parts.extend(["", f"## {title} (`{program_id}`)", ""])
         parts.extend(
-            wrap_claim(row["claim_id"], status, row["scope"], row["falsifier"])
+            wrap_claim(
+                row["claim_id"],
+                row["status"],
+                row["scope"],
+                row["falsifier"],
+                "; ".join(
+                    program_by_claim[row["claim_id"]][field]
+                    for field in ("queue_role", "work_state", "work_mode")
+                ),
+            )
             for row in selected
         )
     parts.extend(["", f"Live total: {len(live)}.", ""])
@@ -145,8 +191,11 @@ def generated_views(root: Path) -> dict[str, str]:
     selection = read_tsv(
         root / "canon" / "CORE_SELECTION.tsv", CORE_SELECTION_FIELDS
     )
+    programs = read_tsv(
+        root / "canon" / "FRONTIER_PROGRAMS.tsv", FRONTIER_PROGRAM_FIELDS
+    )
     return {
-        "FRONTIER.md": render_frontier(rows),
+        "FRONTIER.md": render_frontier(rows, programs),
         "CORE_CLAIMS.md": render_core_claims(registry, selection),
         "STATUS_COUNTS.tsv": render_counts(root, rows),
         "CHANGELOG_COUNTS.md": render_changelog_counts(root, rows),

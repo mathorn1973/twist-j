@@ -8,6 +8,8 @@ DEF-LOG-STREAM	DEF-AUTONOMOUS-STATE	REQUIRES	the Log is a derived orbit record
 DEF-DECODER-MATTER	DEF-AUTONOMOUS-STATE	REQUIRES	D_matter reads a forward orbit
 DEF-DECODER-GEOMETRY	DEF-DECODER-MATTER	REQUIRES	geometry reads MatterData
 DEF-DECODER-CLOCK	DEF-DECODER-GEOMETRY	REQUIRES	clock reads accumulated geometry
+DEF-DECODER-COMPLETION-CONTRACT	DEF-DECODER-CLOCK	REQUIRES	the completion-contract schema refines the declared partial decoder chain without asserting a completed decoder
+DEF-DECODER-COMPLETION-CONTRACT	DEF-ACTION-LAYERS	REQUIRES	every declared contract transition records its L1-L6 endpoints without asserting or authorizing a lift
 DEF-ARCHITECTURE	DEF-AUTONOMOUS-STATE	REQUIRES	declared architecture contains Omega and U
 DEF-ARCHITECTURE	DEF-DECODER-CLOCK	REQUIRES	declared architecture contains the partial decoder
 J-UNIT	AXIOM-J	REQUIRES	unit theorem starts from J
@@ -36,6 +38,8 @@ ELECTRON-G-TREE	ELECTRON-G-RATIO	REQUIRES	dictionary rests on the exact ratio
 ELECTRON-G-TREE	ELECTRON-G-DOUBLE-COVER	REQUIRES	dictionary rests on the exact double cover
 ELECTRON-SIGN	ELECTRON-SIGN-LAWS	REQUIRES	dictionary rests on the exhaustive laws
 FRW-INHOM	FRW-CANONICAL-FORM	REQUIRES	inhomogeneous extension starts from the homogeneous theorem
+DE-TRACE-DENSITY-UNDERDETERMINATION	FRW-CANONICAL-FORM	REQUIRES	the registered homogeneous continuity identity is the sole coefficient relation tested for density-character selection
+DE-CONFORMAL-WEIGHT	DE-TRACE-DENSITY-UNDERDETERMINATION	BOUNDED_BY	FRW continuity alone has at least two exact density-character solutions, so the open dictionary is not derived from that relation
 TM-SYM2-MEASURE	GYRON-DENSITY	REQUIRES	registered measure residual uses rho = 1/6
 MASS-LADDER-FORMS	NEUTRON-DELTA-EM	BOUNDED_BY	neutron comparison remains open
 TT-QUADRATIC-INDUCED	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	normalization remains open
@@ -89,6 +93,7 @@ COLOR-INTEGRAL-LIFT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every d
 COLOR-MEASURE-TRANSPORT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 KAHLER-CAPACITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 FRW-CANONICAL-FORM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+DE-TRACE-DENSITY-UNDERDETERMINATION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 GRAVITY-BRIDGE-LAW	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 MU-TAU-COEFFICIENT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 MU-EXCHANGE-IDENTITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
@@ -164,8 +169,6 @@ ALPHA-S-RUNNING	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downs
 SCHEME-DICTIONARY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 GENERATIONS-L3	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 SPIN-LIFT-FORCED	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
-KC3-PLENUM-READOUT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
-QUADRATIC-ENVELOPE-DECODER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 TM-SYM2-MEASURE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 QUADRATIC-DECODER-DATA	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 NEUTRON-DELTA-EM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
@@ -209,15 +212,140 @@ ENTROPY-AFFINE-COCYCLE	ENTROPY-PENTAGON-QUOTIENT	REQUIRES	the affine cell maps u
 ENTROPY-COMPONENT-NOGO	DEF-ARCHITECTURE	REQUIRES	the bounded cylinder systems are formulated on the declared driven kernel and frozen components
 ENTROPY-MIRROR-LAW	ENTROPY-LIVING-SET	REQUIRES	the own-half involutions and alternating inverse maps refine the declared living-half bijections
 ENTROPY-MIRROR-LAW	ENTROPY-PENTAGON-QUOTIENT	REQUIRES	the cell swap and reflection law use the canonical pentagon partition and frozen coherent level-2 gauge
-ENTROPY-LAYER-BRIDGE	ENTROPY-CYLINDER-CUT	REQUIRES	the open selection family must be non-cylindrical because the finite-cylinder ansatz is falsified
-ENTROPY-LAYER-BRIDGE	ENTROPY-JOINT-CESARO-LAW	REQUIRES	the remaining measure clause is equality with the frozen joint Cesaro law
-ENTROPY-LAYER-BRIDGE	ENTROPY-BLOCK-HALVING	REQUIRES	the one-bit-per-scale computation constrains the unbounded driver dependence
-ENTROPY-LAYER-BRIDGE	ENTROPY-UNIQUE-PAST	REQUIRES	the selection form uses the unique living past over the driver word
-ENTROPY-LAYER-BRIDGE	ENTROPY-COUNT-MATCH	REQUIRES	the depth-five lambda carrier supplies exactly the living-set cardinality
-ENTROPY-LAYER-BRIDGE	ENTROPY-PENTAGON-QUOTIENT	REQUIRES	the open selection must respect the finite equivariant pentagon quotient on the living carrier
-ENTROPY-LAYER-BRIDGE	ENTROPY-AFFINE-COCYCLE	REQUIRES	the gauge-specific finite cocycle constrains but does not solve the open canonical selection problem
-ENTROPY-LAYER-BRIDGE	ENTROPY-COMPONENT-NOGO	BOUNDED_BY	the 900 exact zero counts exclude only the enumerated component-local cylinder cases
-ENTROPY-LAYER-BRIDGE	ENTROPY-MIRROR-LAW	REQUIRES	the open equivariant selection must be compatible with the finite mirror law on the living pentagon carrier
+ENTROPY-LAYER-BRIDGE	ENTROPY-CYLINDER-CUT	REQUIRES	every element of A_A must lie outside the finite-cylinder class excluded by the registered exact cut
+ENTROPY-LAYER-BRIDGE	ENTROPY-JOINT-CESARO-LAW	REQUIRES	Law_W is the exact pushforward predicate on W=[512,2048) frozen by the public joint Cesaro law
+ENTROPY-LAYER-BRIDGE	ENTROPY-BLOCK-HALVING	BOUNDED_BY	the finite one-bit-per-scale computation constrains but does not construct an element of A_A
+ENTROPY-LAYER-BRIDGE	ENTROPY-UNIQUE-PAST	BOUNDED_BY	the finite unique-living-past result constrains but does not construct an element of A_A
+ENTROPY-LAYER-BRIDGE	ENTROPY-COUNT-MATCH	BOUNDED_BY	the depth-five carrier and living set have equal cardinality, which does not construct or select an element of A_A
+ENTROPY-LAYER-BRIDGE	ENTROPY-PENTAGON-QUOTIENT	BOUNDED_BY	the finite pentagon quotient is a compatibility constraint and not a construction of an element of A_A
+ENTROPY-LAYER-BRIDGE	ENTROPY-AFFINE-COCYCLE	BOUNDED_BY	the gauge-specific finite cocycle constrains but does not construct an element of A_A
+ENTROPY-LAYER-BRIDGE	ENTROPY-COMPONENT-NOGO	BOUNDED_BY	the exact zero counts exclude only the enumerated component-local cylinder cases
+ENTROPY-LAYER-BRIDGE	ENTROPY-MIRROR-LAW	BOUNDED_BY	the finite mirror law is a compatibility constraint and not a construction of an element of A_A
 CURVATURE-HISTORICAL-GAUSS-SPLIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the frozen historical full-carrier split is conditional on the declared checkpoint architecture
 CURVATURE-HISTORICAL-GAUSS-SPLIT	CURVATURE-HISTORICAL-TRACE	REQUIRES	the ambient member of the split is the previously typed historical operator and retains its exact trace anchor
 CURVATURE-OPERATOR-CANONICAL	CURVATURE-HISTORICAL-GAUSS-SPLIT	BOUNDED_BY	the exact historical equality constrains one declared full-carrier candidate but does not select a canonical operator class
+WALL-LI2-RUNG	J-PROJECTIONS	REQUIRES	the two archimedean channel locations and exact modulus dichotomy are registered here
+WALL-LI2-RUNG	PI-FROM-J	REQUIRES	the principal logarithm fixes the pi normalization and tenth-root branch used in the proof
+PENTAGON-NORMALIZATION	J-GOLDEN-BRIDGE	REQUIRES	the identity j = (J - 1)^3 identifies the fifth-root filter with the J-generated pentagon
+J-LI-TORAL-HAAR-NOGO	J-STEP	REQUIRES	the named dimension-four specialization uses the public multiplication-by-J matrix M_J; the general no-go depends only on the frozen root-of-unity-free toral carrier class
+J-LI-E8-SHELL-MULTIPLICITY-NOGO	COLOR-MCKAY-E8	REQUIRES	the E8 shell obstruction uses the public E8 identification; the probe independently supplies the theta-series shell multiplicities needed by the declared functional-calculus scope
+MCKAY-THETA-FUNCTIONAL-CALCULUS-CARRIER	J-LI-E8-SHELL-MULTIPLICITY-NOGO	REQUIRES	the falsified carrier is exactly the positive trace-class functional-calculus route excluded by the shell-multiplicity no-go
+J-LI-LAMBDA-HAAR-HS-NOGO	J-RAMIFIED-CHORD	REQUIRES	the compact boundary is the lambda-adic completion named by the public ramified fifth-root chord; the no-go then uses its conductor filtration
+LAMBDA-BOUNDARY-HS-KOOPMAN	J-LI-LAMBDA-HAAR-HS-NOGO	REQUIRES	the falsified Hilbert-Schmidt and S2 route is exactly the subroute excluded by the compact-boundary Hilbert-Schmidt theorem
+LAMBDA-COCYCLE-ANGLES	J-LI-LAMBDA-HAAR-HS-NOGO	BOUNDED_BY	the theorem excludes Hilbert-Schmidt and S2 forms but explicitly leaves the all-vector cocycle form as the surviving bounded scope
+LAMBDA-COCYCLE-ANGLES	J-LI-TORAL-HAAR-NOGO	REQUIRES	the compact-boundary cocycle hypothesis is the remaining Haar-Koopman local route after the toral Haar carrier no-go; it does not reopen that excluded carrier
+O-R2-K-JUNCTION-PIN	PLENUM-POINT	REQUIRES	the computed junction identity uses the public plenum quantities s_J and phi and verifies their exact K-side arithmetic match
+J-LI-LAMBDA-SHIFT-NOGO	J-RAMIFIED-CHORD	REQUIRES	the scaling carrier is defined by the lambda uniformizer from the public ramified fifth-root chord
+J-LI-LAMBDA-SHIFT-NOGO	J-LI-TORAL-HAAR-NOGO	REQUIRES	the forced Li spectral-measure comparison is inherited from the toral Haar no-go, while the scaling probe supplies the absolutely-continuous shift contradiction
+LAMBDA-DISCRETE-SCALING-SINGLE-UNITARY-CARRIER	J-LI-LAMBDA-SHIFT-NOGO	REQUIRES	the falsified carrier is exactly the discrete-time single-unitary and declared tensor-composite class excluded by the scaling-shift no-go
+KERNEL-CONNECT-ALL-K	KERNEL-WEDGE-AFFINITY	REQUIRES	the all-k proof imports the verbatim affine letter matrices and translations from the public kernel census before closing their Gamma-invariant translation span
+KERNEL-CONNECT-ALL-K	KERNEL-WEDGE-COUPLING	REQUIRES	the all-k proof applies the registered pair of two-way CSUM transvections at every adjacent edge of the coupled ring; the new proof, not the prior pair statement alone, supplies the all-k transport step
+KERNEL-CONNECT-ALL-K	KERNEL-CELL-COMPONENTS	BOUNDED_BY	the one-cell census gives nine components for {a, c, d, e}, so the theorem's k >= 2 lower boundary is exact and is not extended to k = 1
+RAMIFIED-TM-LIFT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the L1 state and readout statement is conditional on the declared public architecture
+RAMIFIED-TM-LIFT	DEF-ODOMETER-ORBIT	REQUIRES	the digit sum and carry cocycle use only the declared forward odometer carrier N_0 and do not extend parity to all of Z_2
+RAMIFIED-TM-LIFT	PENTIT-ROOT-FACTS	REQUIRES	the ramified image J_lambda = 2 and its exact order-four orbit are inherited theorem inputs
+RAMIFIED-TM-LIFT	QUBIT-FROM-F5	REQUIRES	the C4 to C2 sign quotient is the registered two-class quotient of F_5^*
+RAMIFIED-TM-LIFT	CODEC-TR4	REQUIRES	the all-k realization and unique multiplier 2 use the exact fixed M_J/Tr_4 channel
+CARRY-J-CHECKPOINT	RAMIFIED-TM-LIFT	REQUIRES	the checkpoint no-go targets exactly the registered L1 lift, with no larger phase or physical scope
+CARRY-J-CHECKPOINT	DEF-AUTONOMOUS-STATE	REQUIRES	any checkpoint-only factorization must be stated on a separately frozen forward carrier of the declared autonomous update U
+KERNEL-Z6-SYNCHRONIZATION	DEF-AUTONOMOUS-STATE	REQUIRES	the target is the checkpoint projection of the declared autonomous U orbit; the existing definition dependencies supply the checkpoint, odometer coordinate, selector, and five kernel generators
+CARRY-PENTAD	J-UNIT	REQUIRES	the integral cyclotomic bridge uses the public unit J = 1 + zeta_5^2
+CARRY-PENTAD	J-STEP	REQUIRES	the root-lattice operator I+C^2 is identified with the public integral multiplication matrix M_J
+CARRY-PENTAD	CODEC-TR4	REQUIRES	the public M_J matrix and its ramified characteristic shadow are used at their registered exact scope
+METAL-TRACE-CASCADE	DEGREES-BY-PRIME	REQUIRES	the two metallic laws use the registered exact sqrt5 and sqrt2 place facts
+METAL-TRACE-CASCADE	Z2-PLACES-SPLIT	REQUIRES	the discriminants 5 and 8 are placed in the two registered disjoint cyclotomic fields
+METAL-TRACE-CASCADE	J-UNIT	REQUIRES	the golden pure form uses the registered exact norm N(J) = 1
+METAL-TRACE-CASCADE	J-MODULUS-CHORD	REQUIRES	the golden recurrence uses the registered exact phi arithmetic
+POL-READ	TT-SQUARING-DECODER	REQUIRES	the plus/cross components, conjugation parity, and doubled-angle covariance are exact polynomial consequences of the registered complex square; no independent propagation law is introduced
+POL-READ	TT-SOURCE	BOUNDED_BY	the component readout does not construct the still-open emission map
+POL-READ	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the component readout does not select a state normalization or produce a numerical r_T(k)
+SQRT-PHI-DIGIT-LIFT	PENTIT-ROOT-FACTS	REQUIRES	the registered F_25 block J = 2, phi = 3, tau^3 = sqrt(phi), and tau of order eight supplies the inherited field input; root uniqueness, the restricted norm, and nonsplitting are proved by this claim
+SQRT-PHI-DIGIT-LIFT	QUBIT-FROM-F5	REQUIRES	the sign quotient supplies the final C4 to C2 projection
+SQRT-PHI-DIGIT-LIFT	RAMIFIED-TM-LIFT	REQUIRES	the binary digit recursion and chronological carry law are lifted through the two square-root branches without adding a physical reading
+SQRT-PHI-TIME-GRAVITY	SQRT-PHI-DIGIT-LIFT	REQUIRES	the exact L1 digit lift is a necessary algebraic input, while the typed clock and gravity bridge remains open
+TM-SYM2-MEASURE	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the exact golden frame supplies only the candidate coefficient ratio; Thue-Morse selection, Born halving, and a physical measure remain open
+QUADRATIC-DECODER-DATA	DEF-DECODER-MATTER	REQUIRES	the open action and its frozen fields are the write performed by the declared D_matter interface
+QUADRATIC-DECODER-DATA	READING-SPLIT	REQUIRES	the row concerns only the registered quadratic/Born decoder leg and explicitly excludes the linear CODEC-TR4 and binary Thue-Morse/census legs
+QUADRATIC-DECODER-DATA	COUPLINGS-DETERMINE	REQUIRES	the exact Gram-normalized density and Born identity are inherited inputs, not an instrument-selection theorem
+QUADRATIC-DECODER-DATA	MEASURE-BORN-VERB	REQUIRES	the physical data effect uses the registered Born-square measure dictionary
+OBSERVER-WRITE-PORT	QUADRATIC-DECODER-DATA	REQUIRES	completed output terminality requires the typed D_matter data action and complete dependency graph
+OBSERVER-WRITE-PORT	DEF-DECODER-CLOCK	REQUIRES	positive closure concerns terminality of the declared final decoder stage
+OBSERVER-WRITE-PORT	METRO-ADMISSIBILITY	REQUIRES	every admissible output cannot be quantified until the admissible protocol class is public
+SQRT-PHI-TIME-GRAVITY	DEF-DECODER-CLOCK	REQUIRES	the clock leg targets the declared D_clock and ObservableHistory interface
+SQRT-PHI-TIME-GRAVITY	METRO-TICK	REQUIRES	the registered dimensionless tick is an inherited clock input, not the missing bridge
+SQRT-PHI-TIME-GRAVITY	GRAVITY-BRIDGE-LAW	REQUIRES	the existing equation-layer gravity dictionary is an input but supplies no Y-to-source map
+SQRT-PHI-TIME-GRAVITY	METRO-EDGE-SCALE	BOUNDED_BY	any SI time or gravity scale remains outside scope until the selector and SI clause close
+TM-SYM2-MEASURE	DEF-AUTONOMOUS-STATE	REQUIRES	the selector must read the declared omega and U dynamics rather than the checkpoint alone
+TM-SYM2-MEASURE	MEASURE-BORN-VERB	REQUIRES	the physical measure clause rests on the Born-square dictionary, which does not itself derive the halving
+FIRED-COMMUTATOR-NOGO	DEF-ARCHITECTURE	REQUIRES	the L1 fired-algebra theorem is conditional on the declared checkpoint architecture
+FIRED-COMMUTATOR-NOGO	DEF-KERNEL-GENERATORS	REQUIRES	the commutators use the five declared public census involutions
+FIRED-COMMUTATOR-NOGO	DEF-SELECTOR	REQUIRES	the declared sheet selector determines that only b, d, and e fire
+TIME-CUT-READING	DEF-ARCHITECTURE	REQUIRES	the dictionary composition is conditional on the declared public architecture
+TIME-CUT-READING	RAMIFIED-TM-LIFT	REQUIRES	the four-phase J-channel and its sign quotient realize the binary cut
+TIME-CUT-READING	GYRON-DENSITY	REQUIRES	the matter-channel pair 00 has the registered exact density 1/6
+TIME-CUT-READING	FIRED-COMMUTATOR-NOGO	REQUIRES	the spatial channel uses the exact fired-algebra no-go before reading the silent pair
+TIME-CUT-READING	CURVATURE-HISTORICAL-TRACE	REQUIRES	the silent-pair commutator has the registered exact historical trace reading
+TIME-CUT-READING	KERNEL-MACRO-READING	REQUIRES	the spatial dictionary inherits the registered macro-space commutator reading
+TIME-CUT-READING	CURVATURE-OPERATOR-CANONICAL	BOUNDED_BY	the canonical curvature operator remains explicitly open and is not selected by this composition
+TIME-CUT-READING	METRO-TICK	REQUIRES	the terminal dimensionless proper-time reading is the registered exact tick
+TM-SYM2-MEASURE	DEF-ACTION-LAYERS	REQUIRES	the lane's layer endpoints and both lane gates use the registered six-layer protocol
+TM-SYM2-MEASURE	RAMIFIED-TM-LIFT	REQUIRES	the window carrier reads the registered drive cut and its sign-quotient realization theta_n = s_2(n) mod 2
+TM-SYM2-MEASURE	SUBSTRATE-KNIT	REQUIRES	the coefficient-side Born carrier rests on the registered position/Fourier overlap and Plancherel mass statement
+TM-SYM2-MEASURE	ABELIAN-FACE-DICTIONARY	REQUIRES	literal Fourier inversion of the phaseful verb Psi(k) = 1 + zeta_5^k is conditional on the dictionary's explicitly supplied magnetic axiom pair, for which no uniqueness or selection theorem is claimed
+QUANT-SCHWINGER-TARGET	J-MODULUS-CHORD	REQUIRES	the target scalar uses the registered exact modulus identity J Jbar = phi^-2
+QUANT-SCHWINGER-TARGET	BRIDGE-DEFECT	REQUIRES	the target scalar uses the registered exact bridge script-Q phi^2 = 2 pi
+QUANT-SUBSTRATE	QUANT-SCHWINGER-TARGET	REQUIRES	the open physical gate consumes the exact arithmetic target without thereby realizing it
+C20-TEICHMULLER-SPLIT	J-STEP	REQUIRES	the reduced matrix leg reconstructs M_R from the four public J-STEP columns and identifies it with multiplication by J
+TM-SYM2-PROJECTIVE-FOURFOLD	DEF-ARCHITECTURE	REQUIRES	the complete selector classification is conditional on the declared public architecture
+TM-SYM2-PROJECTIVE-FOURFOLD	DEF-ACTION-LAYERS	REQUIRES	the theorem closes the frozen L1-to-L5 candidate and adds no L6 reading
+TM-SYM2-PROJECTIVE-FOURFOLD	RAMIFIED-TM-LIFT	REQUIRES	the frozen W3 carrier reads the registered Thue-Morse drive cut
+TM-SYM2-PROJECTIVE-FOURFOLD	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the selector codomain, common pushforward operator, and 5:2 ratio use the exact registered golden frame
+TM-SYM2-SEMILINEAR-TWOFOLD	DEF-ARCHITECTURE	REQUIRES	the semilinear comparison is conditional on the declared public architecture
+TM-SYM2-SEMILINEAR-TWOFOLD	TM-SYM2-PROJECTIVE-FOURFOLD	REQUIRES	the semilinear image and its two orbits refine the complete frozen projective fourfold
+TM-SYM2-REVERSAL-CLOSURE	DEF-ARCHITECTURE	REQUIRES	drive-word reversal is interpreted only on the declared public architecture
+TM-SYM2-REVERSAL-CLOSURE	TM-SYM2-SEMILINEAR-TWOFOLD	REQUIRES	the reversal classification acts on the exact two-block semilinear comparison surface
+TM-SYM2-PHYSICAL-MEASURE	DEF-ARCHITECTURE	REQUIRES	the successor physical bridge remains conditional on the declared public architecture
+TM-SYM2-PHYSICAL-MEASURE	DEF-ACTION-LAYERS	REQUIRES	the successor must supply the registered L5-to-L6 gate and typed endpoints
+TM-SYM2-PHYSICAL-MEASURE	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the physical codomain and exact common operator use the registered six-line frame
+TM-SYM2-PHYSICAL-MEASURE	GYRON-DENSITY	REQUIRES	the proposed physical normalization must be typed compatibly with the registered density reading; agreement of values is a result of the bridge, not a precondition on it
+TM-SYM2-PHYSICAL-MEASURE	MEASURE-BORN-VERB	REQUIRES	the physical measure clause must be a typed Born-square reading rather than an assumed weight
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-PROJECTIVE-FOURFOLD	BOUNDED_BY	the successor must consume the complete fourfold record and may not repair the fired one-orbit threshold
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-SEMILINEAR-TWOFOLD	BOUNDED_BY	Gamma_sl is an exact comparison image with two blocks but is not an adopted physical gauge and supplies no L6 lift
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-REVERSAL-CLOSURE	BOUNDED_BY	R exchanges the residual blocks only by drive-word precomposition; it neither realizes the missing postcomposition coset nor authorizes quotienting reading orientation
+WALL-CIRCLE-LEMMA	J-PROJECTIONS	REQUIRES	the N = 5 corollary uses the registered archimedean J-channel locations
+WALL-CIRCLE-LEMMA	PI-FROM-J	REQUIRES	the principal logarithm fixes the pi normalization and branch used in the proof
+METRO-ADMISSIBILITY	METRO-REDUCTION-CALCULUS	REQUIRES	the exhaustive residual class R1 is defined as U_RF minus the dimensional child and therefore requires the parent's exact U_RF protocol type
+METRO-REDUCTION-CALCULUS	DEF-ARCHITECTURE	REQUIRES	the typed protocol and reduction calculus is conditional on the declared architecture
+METRO-REDUCTION-CALCULUS	METRO-FINITE-STATE-RATIONALITY	REQUIRES	the one-dimensional theorem is a boundary and base dependency only, not a proof of the calculus
+METRO-ADMISSIBILITY-DIM	DEF-ARCHITECTURE	REQUIRES	the child protocol type is conditional on the declared architecture
+METRO-ADMISSIBILITY-DIM	DEF-ACTION-LAYERS	REQUIRES	the raw L5 stream and tagged L6 endpoint use the declared layer separation
+METRO-ADMISSIBILITY-DIM	METRO-REDUCTION-CALCULUS	REQUIRES	the child decision must be invariant under the complete typed reduction equivalence
+METRO-ADMISSIBILITY-DIM	METRO-FINITE-STATE-RATIONALITY	REQUIRES	conditional one-dimensional rationality is a base boundary only and supplies no higher-rank completeness
+OBSERVER-WRITE-PORT	METRO-REDUCTION-CALCULUS	REQUIRES	quantifying every admissible observer output requires typed protocol equivalence and output-vector transport
+OBSERVER-WRITE-PORT	METRO-ADMISSIBILITY-DIM	REQUIRES	higher-rank finite-state observer outputs remain inside the completion hypothesis
+ENTROPY-CYLINDER-NOGO-CURSOR	DEF-ARCHITECTURE	REQUIRES	the finite-cylindrical constraint graph uses the declared F_5^6 kernel, public branch maps, Thue-Morse driver, and multiplication-by-J zero-residue transport
+ENTROPY-LAYER-BRIDGE	ENTROPY-CYLINDER-NOGO-CURSOR	BOUNDED_BY	the exact no-go excludes every cursor for L = 4..32 at every finite lambda-depth but does not decide existence of a non-cylindrical element of A_A
+GYRON-DISCREPANCY-LOG	DEF-ARCHITECTURE	REQUIRES	the Thue-Morse prefix census and all-L/all-k L1 laws are stated on the declared binary driver of the public architecture
+TM-PAIR-SUBSTITUTION-FIXED-POINT	DEF-ARCHITECTURE	REQUIRES	the forward pair-substitution carrier and stationary law are the L1 Thue-Morse driver of the declared public architecture
+GYRON-DENSITY	GYRON-DISCREPANCY-LOG	REQUIRES	the exact logarithmic discrepancy bound proves both prefix-density limits at 1/6 and corrects the false unqualified four-step invariant
+GYRON-DENSITY	TM-PAIR-SUBSTITUTION-FIXED-POINT	REQUIRES	the stationary pair-law clause uses the unique normalized fixed point and equal-phase convergence theorem
+C8-BILINEAR-SHADOW	PENTIT-ROOT-FACTS	REQUIRES	the exact F_25 pair model, tau and eta identities, and order-eight field input are inherited at their registered algebraic scope
+C8-BILINEAR-SHADOW	RAMIFIED-TM-LIFT	REQUIRES	the Theta_n digit recursion, sign quotient, and chronological all-n carry law supply the registered norm channel
+C8-BILINEAR-SHADOW	SQRT-PHI-DIGIT-LIFT	REQUIRES	the two exact Y branches, their projections, and their all-n successor law are the objects whose Frobenius swap and invariant record are proved
+METRO-REDUCTION-ARROWS	DEF-ARCHITECTURE	REQUIRES	the typed finite rational protocol carrier is conditional on the declared public architecture
+METRO-REDUCTION-CALCULUS	METRO-REDUCTION-ARROWS	REQUIRES	obligations A and C are discharged only at the registered computation scope; the parent retains B, D, and E and remains O/STOP
+DRIFT-IS-THE-READ	BOOST-READING-SPLIT	REQUIRES	the fixed beta_1 coin and its exact rapidity value use the registered parity-resolved Fibonacci/Lucas boost theorem
+DRIFT-IS-THE-READ	BOOST-COUNT-LADDER	BOUNDED_BY	the word read names only the registered count-to-velocity dictionary and does not make that lower-status dictionary a proof premise
+COIN-SELECTION-CONDITIONAL	BOOST-READING-SPLIT	REQUIRES	the complete odd-rung rigidity proof and beta_1/beta_3 values use the exact parity-resolved boost identities
+COIN-SELECTION-CONDITIONAL	BOOST-COUNT-LADDER	BOUNDED_BY	the rapidity-cover cost is interpreted only inside the registered count-to-velocity dictionary and the theorem itself adopts no selector
+COIN-SELECTION-CONDITIONAL	DRIFT-IS-THE-READ	REQUIRES	the S2 comparison uses the exact all-N uniform-read kernel and beta_1 worst-case constant
+COIN-MINIMAL-READ	COIN-SELECTION-CONDITIONAL	REQUIRES	the adopted H-level choice rests on the complete exact pair and conditional S1/S2/S3 ranking theorem
+MINIMAL-READ-DERIVATION	DEF-ARCHITECTURE	REQUIRES	any derivation must start from the complete registered public decoder architecture rather than from the adopted premise
+MINIMAL-READ-DERIVATION	DEF-ACTION-LAYERS	REQUIRES	the proposed selection route must type its L5 read and L1 coin endpoints without smuggling a cross-layer lift
+MINIMAL-READ-DERIVATION	COIN-SELECTION-CONDITIONAL	REQUIRES	the derivation target uses the exact complete coin pair, cost coordinates, and conditional rankings
+MINIMAL-READ-DERIVATION	OBSERVER-WRITE-PORT	REQUIRES	the no-feedback route cannot proceed until completed observer terminality and its full dependency graph close positively
+READ-REDUNDANCY-PRIME-SUPPORT	DEF-ARCHITECTURE	REQUIRES	the accumulator, funnel and cover objects are read inside the declared architecture and are conditional on it
+READ-REDUNDANCY-PRIME-SUPPORT	COIN-SELECTION-CONDITIONAL	REQUIRES	the admissible pair and its generic and rung multiplicities 2, 6, 1 and 5 are the registered input the corollary is stated against
+READ-REDUNDANCY-PRIME-SUPPORT	DRIFT-IS-THE-READ	REQUIRES	the diagonal read condition is the registered drift normalization and its coherent range, used to motivate the identity output
+READ-REDUNDANCY-PRIME-SUPPORT	Z2-PLACES-SPLIT	REQUIRES	the constant rings Z_S at S = {2} and S = {2,5} are the registered places
+READ-REDUNDANCY-PRIME-SUPPORT	TWO-PLACE-PHYSICS	BOUNDED_BY	the read and write places name only the registered dictionary; the prime-support classification is arithmetic and the dictionary bounds its reading without being a premise of the proof
