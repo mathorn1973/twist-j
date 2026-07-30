@@ -153,10 +153,19 @@ print("arithmetic: int and Fraction only; no float in this file")
 print("")
 
 # ---- L, the low line
+BASIS = [tuple(F(1 if j == i else 0) for j in range(4)) for i in range(4)]
+Z4 = red([F(0), F(0), F(0), F(0), F(1)])          # zeta^4, reduced into B0
 check("L1 lambda_B = 1 + z + z^2 + z^3 equals -z^4",
-      cmul(LAM, (F(0), F(0), F(0), F(0))) == (F(0),) * 4
-      and sigma4(sigma4(sigma4(sigma4(LAM)))) == LAM,
-      "sigma_4 has order 4 on it")
+      LAM == tuple(-c for c in Z4),
+      "zeta^4 reduces to %s in B0" % (tuple(str(c) for c in Z4),))
+check("L1b sigma_4 has order exactly 2",
+      all(sigma4(sigma4(b)) == b for b in BASIS)
+      and any(sigma4(b) != b for b in BASIS),
+      "the multiplicative order of 4 modulo 5 is 2, so sigma_4 o sigma_4 = id "
+      "and sigma_4 is not the identity; this is what makes the pairing "
+      "symmetric")
+check("L1c the pairing is symmetric, as the order-2 fact requires",
+      all(pair(a, b) == pair(b, a) for a in BASIS for b in BASIS))
 check("L2 lambda_B is NOT rational and NOT in the trace kernel",
       (LAM[1], LAM[2], LAM[3]) != (F(0), F(0), F(0)) and trace(LAM) != 0,
       "Tr(lambda_B) = %s, so Q.lambda_B is neither Q.1 nor ker Tr"
