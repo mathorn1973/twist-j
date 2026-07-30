@@ -192,11 +192,28 @@ The current list is:
    Breaker gate `B13` was shown to have no discriminating power: it reports a
    common cocycle on a synthetic target built to have none, because its
    marking is per component. `S7` and `F6` therefore rest on the primary's
-   `T02` alone. A successor breaker scoped to this single gate, building one
-   global `D_5` from the public generators and permitting only a
-   per-component gauge, is required before any `candidate-C` negative
-   subclass result is recorded.
-9. **Next attack:** decide item 8, then extend the finite horizon.
+   `T02` alone. The successor gate is preregistered and frozen:
+
+   ```text
+   PREREG-BREAKER-MACKEY4-2.md
+   sha256 45192f7fcbe3b1699f69ccd35351c8a8ddc756e488a2f01ee0d0491e197f03e6
+   14504 bytes, frozen 2026-07-30, instrument mackey4_cocycle.py absent
+   ```
+
+   It requires one global `D_5` given as explicit permutations of the
+   recurrent core, prior to and independent of any component, a gauge set
+   declared before the run, and three mandatory synthetic controls that the
+   gate must reject, reject, and accept respectively. The session that wrote
+   that preregistration is disqualified from implementing it.
+9. **Open owner ruling:** `PREREG-BREAKER-MACKEY4-1` states that a defect in
+   it found after first execution retires that breaker id. Such a defect was
+   found, in the specification of `E9`. Whether the retirement is total, which
+   would also withdraw breaker-1's support for `E1-E8` and `E10-E13`, or is
+   confined to `E9`, is not decided by any instrument and is owner business.
+   Pending that ruling, `PREREG-BREAKER-MACKEY4-2` requires the Mackey menu as
+   a secondary output, so a total-retirement ruling needs no third instrument.
+10. **Next attack:** run item 8, settle item 9, then extend the finite
+    horizon.
 
 No item above closes the public entropy bridge. No finite restricted no-go is
 silently promoted to `A_A = empty`.
