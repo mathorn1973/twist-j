@@ -1,0 +1,21 @@
+C-ENTROPY-MACKEY-OBSTRUCTION-4-N PRIMARY
+STATUS NON-CANONICAL; PRIMARY ROUTE ONLY; BREAKER REQUIRED
+SCOPE fixed lambda-depth five, fiberwise bijective Route A subclass, r>=2
+
+PASS S01 Q5 has 3125 canonical classes and additive type Z/25 + (Z/5)^3  orders=(25,5,5,5)
+PASS S02 multiplication by J is a permutation of cycle type 1^1 4^1 20^156  cycle_type={1: 1, 4: 1, 20: 156}
+PASS S03 the finite dyadic component formula stabilizes at 629 exactly for r>=2  r0=158 r1=315 r2..7=629
+PASS T01 the complete recurrent target is 312x20 plus one x10 with two 3125 halves  components={10: 1, 20: 312}
+PASS T02 all 312 generic halves admit one fixed gauge with common D5 edge cocycle  edges=(ref4,id,id,ref0); gauges id=157 ref2=155
+PASS T03 the singlet is D5/C2 and carries the same common edge cocycle  stabilizer={id,ref2}; edges=(ref4,id,id,ref0)
+PASS T04 the two nontrivial common edge labels generate D5  ref4 and ref0 generate order 10
+PASS M01 all eight D5 subgroups give the complete target component menu  menu={313,625,1563,3125}; five C2 subgroups enumerated
+PASS M02 every reflection subgroup has 5 regular and 3 singlet orbits  312*5+3=1563
+PASS M03 the mixed negative control has unique solution (2,5), unavailable to one common subgroup  mixed requires C5 on generic blocks and trivial M on singlet
+PASS M04 source component count 629 is absent from the common-M target menu  629 not in {313,625,1563,3125}
+PASS H01 translation invariance gives uniform Haar mass on Q5 cosets  coset=1/3125; half x coset=1/6250
+PASS D01 the exact primary route excludes the fixed-depth-five fiberwise-bijective subclass  conditional on the written Mackey theorem and r>=2 scope
+
+SUMMARY 13/13 PASS
+DECISION PRIMARY ROUTE SURVIVES; INDEPENDENT BREAKER REQUIRED
+PUBLIC ENTROPY-LAYER-BRIDGE REMAINS O / STOP
