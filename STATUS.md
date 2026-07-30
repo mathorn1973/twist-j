@@ -2,13 +2,13 @@
 
 ```text
 STATE:          ACTIVE
-CANON:          Public Canon v27
+CANON:          Public Canon v28
 AUTHORITY:      mathorn1973/twist-j main
 CUTOVER:        2026-07-13
-TAG:            canon-v27
-CONTENT_COMMIT: 116b62edf505914d96fcd65318d97f3675c53f85
-CANON_SHA256:   c7c4c7e6d5a3116e356b060eaf696963285b0f2f465d5f2e1dcda5c094a309f6
-CANON_BYTES:    150959
+TAG:            canon-v28
+CONTENT_COMMIT: c2d8f092644017f2a07bf008466b984d85103e7b
+CANON_SHA256:   4b720846ccd42c7ec808ab2acb21793962390b074bb3799d28c0f16c00165d2c
+CANON_BYTES:    154316
 ```
 
 Public Canon v27 is the normative public ledger of TWIST-J. Authority begins
