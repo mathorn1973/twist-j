@@ -81,17 +81,33 @@ decision. It was disclosed in issue #226 before these records were committed.
 ## Required GitHub leg
 
 ```text
-github_status: PENDING
-github_architecture: PENDING
-github_stdout_sha256: PENDING
-github_verdict: PENDING
+github_status: PASS
+github_workflow_run_id: 30559263103
+github_job_id: 90927731153
+github_check_name: check
+github_event: pull_request
+github_tested_head_commit: 7dfa4b59f35e2568df8fe953b7ab7a7b619aa8f8
+github_checkout_merge_commit: defe44bf150f2751ff044b84f918cb61bb39e50d
+github_base_commit: 501f7d9f3d1dc8a915ad7fcc1f33f0673b5b4b8a
+github_platform: Ubuntu 24.04.4 LTS
+github_runner_image: ubuntu-24.04 20260720.247.2
+github_runner_version: 2.336.0
+github_architecture: x86_64
+github_python: Python 3.12.13
+github_verifier_sha256: 153f4ac98972cd44ce4921defed9980020258b074b4d7a3cf130c6a8598df9c5
+github_stdout_sha256: e99e828ff3f6531d6e660589c1c8da03f0e5d211a50faca26f968f23aa8c4ca6
+github_exit_code: 0
+github_stderr_bytes: 0
+github_verdict: VERIFY PASS
 ```
 
-The pull-request check must rerun the identical pinned verifier on GitHub
-x86_64 and compare `EXPECTED.txt` byte for byte. Issue #219 records that the
-current checker flattens repeated legacy keys. Therefore this record does not
-infer a two-leg architecture pair from checker parsing. The GitHub fields will
-be filled from the public workflow return by an additive commit.
+The first pull-request check reran the identical pinned verifier on GitHub
+x86_64 and compared `EXPECTED.txt` byte for byte. The public log printed
+`VERIFY PASS` with the frozen verifier and stdout hashes above. The checker
+reaches that line only after requiring verifier exit 0, empty stderr, and exact
+stdout identity. Issue #219 records that the current checker flattens repeated
+legacy keys. Therefore this record uses separately named GitHub fields and does
+not infer a two-leg architecture pair from checker parsing.
 
 ## Architecture and status boundary
 
