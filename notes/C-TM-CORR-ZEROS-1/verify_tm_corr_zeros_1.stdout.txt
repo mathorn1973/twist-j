@@ -1,0 +1,14 @@
+C-TM-CORR-ZEROS-1 verifier
+basis: Public Canon v27, tag canon-v27, content commit 116b62ed
+arithmetic: int and Fraction only; no float in this file
+
+V1 zero set on 1 <= k <= 200000 equals {k : oddpart(k) in {5,7}} PASS  zeros=31 extra=0 missing=0
+V2 L1 identities, 0 <= m <= 300, 0 <= N <= 300, direct integer sums PASS
+V3 discrepancy bound, 0 <= k <= 64, 1 <= N <= 4096, exact rational PASS  tightest LHS/RHS = 1/6
+V4a base cases (U_m, W_m) for m in {0,1,2,3} match the pinned values PASS
+V4b v_2(U_m) = v_2(W_m) = -(L(m) - 3) for 4 <= m <= 2^18 PASS
+V5a deep k by transfer-matrix product: zero iff oddpart in {5,7} PASS  8 zero and 10 nonzero pins
+V5b transfer-matrix path agrees with the memoized recursion, 1 <= k <= 20000 PASS
+V5c c(m) = c(m+1) for exactly one m in 1..200000 PASS  m = [1]
+
+SUMMARY 8/8 PASS
