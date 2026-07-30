@@ -181,8 +181,22 @@ The current list is:
 5. **Open:** regularity and the full pushforward theorem.
 6. **Open contracts:** transfer-family equivalence, regularity class and
    quantifier, and unambiguous living-fiber notation `L_kappa`.
-7. **Next attack:** preregister and try to break
-   `C-ENTROPY-MACKEY-OBSTRUCTION-4-N` before extending the finite horizon.
+7. **Partly closed:** `C-ENTROPY-MACKEY-OBSTRUCTION-4-N` was preregistered,
+   run by the primary route, and attacked by an independently authored frozen
+   breaker. See `MACKEY4-BREAKER-RESULT.md`. Both exact routes agree on the
+   source additive type, the cycle type `1^1 4^1 20^156`, `c_src = 629` at
+   `r >= 2`, the target decomposition into 312 regular `D_5` blocks plus the
+   `D_5/C_2` singlet, the menu `{313,625,1563,3125}`, the exclusion of 629,
+   and the mixed control `(2,5)`.
+8. **Open, and load bearing:** the common-cocycle premise of that candidate.
+   Breaker gate `B13` was shown to have no discriminating power: it reports a
+   common cocycle on a synthetic target built to have none, because its
+   marking is per component. `S7` and `F6` therefore rest on the primary's
+   `T02` alone. A successor breaker scoped to this single gate, building one
+   global `D_5` from the public generators and permitting only a
+   per-component gauge, is required before any `candidate-C` negative
+   subclass result is recorded.
+9. **Next attack:** decide item 8, then extend the finite horizon.
 
 No item above closes the public entropy bridge. No finite restricted no-go is
 silently promoted to `A_A = empty`.
