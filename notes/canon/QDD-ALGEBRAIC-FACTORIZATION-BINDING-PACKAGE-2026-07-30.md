@@ -393,6 +393,8 @@ DEF-QDD-BALANCED-SECTION  DEF-QDD-DOMAIN  REQUIRES
   the section is applied to the four piston coordinates of the domain head
 DEF-QDD-AMPLITUDE  DEF-QDD-BALANCED-SECTION  REQUIRES
   the amplitude is the power-basis image of the balanced head vector
+DEF-QDD-SIGMA4  AXIOM-J  REQUIRES
+  sigma_4 is the Galois automorphism of the cyclotomic field named by the axiom
 DEF-QDD-PAIRING  DEF-QDD-SIGMA4  REQUIRES
   the pairing is defined by the Galois map and the field trace
 DEF-QDD-LOW-LINE  DEF-QDD-PAIRING  REQUIRES
@@ -433,12 +435,15 @@ QUADRATIC-DECODER-DATA  DEF-QDD-FACTOR-MAP  REQUIRES
   the open row's factorization target is stated against this factor map
 ```
 
-`DEF-QDD-SIGMA4` is the one new root of this subgraph: the Galois automorphism
-of `Q(zeta_5)` depends on nothing else in the ledger, and inventing a parent
-for it in order to keep a count stable would be adapting the science to the
-tool. `DEF-AUTONOMOUS-STATE` is the only existing item the subgraph attaches
-to, and `QUADRATIC-DECODER-DATA` keeps its five existing outgoing edges
-unchanged.
+The subgraph introduces **no new root**. It attaches to two existing items:
+`DEF-AUTONOMOUS-STATE`, because `K_QDD` is the set of complete forward orbits
+of `U`, and `AXIOM-J`, because `sigma_4` is the Galois automorphism of the
+cyclotomic field the axiom names. That second edge follows the established
+pattern of the registry, where `DEF-MJ` requires `AXIOM-J` as multiplication by
+`J`, and where `J-UNIT`, `J-PROJECTIONS`, `J-GOLDEN-BRIDGE`, `PLENUM-POINT` and
+every other cyclotomic identity roots at the axiom.
+
+`QUADRATIC-DECODER-DATA` keeps its five existing outgoing edges unchanged.
 
 No row points at a gate. Gates bind through the owner's `gate_ids` column, and
 0 of the 345 existing dependency edges point at a `GATE-*`; the predecessor's
@@ -567,7 +572,7 @@ Scratch files changed, as one whole:
 ```text
 canon/CANON.md          the exact section of 7.5, inserted before section 3
 canon/NORMATIVE.tsv     16 rows
-canon/DEPENDENCIES.tsv  21 rows
+canon/DEPENDENCIES.tsv  22 rows
 canon/SHA256SUMS        recomputed inside the scratch copy only
 STATUS.md               CANON_SHA256 and CANON_BYTES, scratch copy only
 ```
@@ -582,16 +587,26 @@ Check output:
 python3 tools/check_policy.py         POLICY PASS
 python3 tools/check_canon.py          CANON PASS v27 claims=214
 python3 tools/check_ledger.py         LEDGER PASS claims=214 items=246
-                                      dependencies=366 evidence=214
+                                      dependencies=367 evidence=214
                                       history=704 gates=11 programs=8
 python3 tools/check_status_labels.py  STATUS LABELS PASS
 python3 -m unittest discover -s tools -p 'test_*.py'
-                                      FAILED (failures=1)
+                                      OK, 59 tests
 ```
 
 Registry counts: claims unchanged at 214, since these are `NORMATIVE` items and
-not registry claims; items 230 to 246; dependencies 345 to 366; evidence,
+not registry claims; items 230 to 246; dependencies 345 to 367; evidence,
 history, gates and programs unchanged.
+
+The structural numbers that `tools/test_architecture_map_report.py` pins are
+unchanged, so **no companion change to that test is required**:
+
+```text
+                                   base   scratch
+direct_architecture_requires        172       172
+transitive_architecture_dependents  189       189
+dependency_terminals                 10        10
+```
 
 `statement_source` confirmation: all sixteen rows point at
 `canon/CANON.md::QDD algebraic factorization definitions`, and that anchor is
@@ -599,46 +614,32 @@ the heading actually inserted by step 1 of the same run. `check_ledger.py`
 verifies anchor presence by literal substring, so this is checked and not
 asserted.
 
-### The one failure, and what it means
+### What the first run caught, recorded because it is the point of running it
 
-```text
-FAIL test_architecture_is_a_hub_not_the_only_non_algebraic_root
-     tools/test_architecture_map_report.py line 48
-     self.assertEqual(len(self.report.dependency_terminals), 10)
-     AssertionError: 11 != 10
-```
+An earlier draft of the delta omitted the edge
+`DEF-QDD-SIGMA4 -> AXIOM-J`. The unit tests then failed on
+`tools/test_architecture_map_report.py`, because `DEF-QDD-SIGMA4` appeared as
+an eleventh dependency terminal.
 
-`tools/test_architecture_map_report.py` pins exact structural counts of the
-ledger. The delta adds exactly one dependency terminal, and it is
-`DEF-QDD-SIGMA4`:
+The first reading of that failure, that the delta legitimately introduced a new
+algebraic root and that the pinned test should move from 10 to 11, **was
+wrong**. `sigma_4` is not independent of anything: its type already contains
+the cyclotomic field and its chosen primitive root, and those belong to the
+axiomatic base. The registry uses exactly this pattern elsewhere, with `DEF-MJ`
+requiring `AXIOM-J` as multiplication by `J`, and with `J-UNIT`,
+`J-PROJECTIONS`, `J-GOLDEN-BRIDGE`, `PLENUM-POINT` and every other cyclotomic
+identity rooted at the axiom.
 
-```text
-                                   base   scratch
-direct_architecture_requires        172       172
-transitive_architecture_dependents  189       189
-dependency_terminals                 10        11   + DEF-QDD-SIGMA4
-```
+The missing edge was a genuine gap in the dependency graph. Adding it restores
+all three pinned numbers to their base values and the test passes untouched.
+**The test did not obstruct new science; it detected an incomplete graph.**
 
-This is not a defect of the delta and it is not avoidable by rewiring.
-`DEF-QDD-SIGMA4` is the Galois automorphism of `Q(zeta_5)`; it depends on
-nothing else in the ledger and belongs beside `AXIOM-J`, `DEF-CHECKPOINT`,
-`DEF-SELECTOR` and the other seven existing terminals. Giving it a parent to
-keep a pinned number stable would be adapting the science to the tool.
-
-**Consequence for the eventual fold: it must carry a companion update to
-`tools/test_architecture_map_report.py`, changing the pinned terminal count
-from 10 to 11.** That is a `tools/` change riding with a content fold, and it
-must be visible in the fold's diff rather than discovered by its CI.
-
-One earlier variant of the delta is recorded because it is instructive. With
-`DEF-QDD-DOMAIN` attached to `DEF-ARCHITECTURE` instead of
-`DEF-AUTONOMOUS-STATE`, the same test failed on a different line,
-`direct_architecture_requires` 172 to 173. The parent was changed for a
-scientific reason and not to dodge the test: `K_QDD` is literally the set of
-complete forward orbits of `U`, so `DEF-AUTONOMOUS-STATE` is the precise
+A second earlier variant is recorded for completeness. With `DEF-QDD-DOMAIN`
+attached to `DEF-ARCHITECTURE` rather than `DEF-AUTONOMOUS-STATE`, the same
+test failed on a different line, `direct_architecture_requires` 172 to 173.
+That parent was also changed for a scientific reason: `K_QDD` is literally the
+set of complete forward orbits of `U`, so `DEF-AUTONOMOUS-STATE` is the precise
 parent, and it mirrors `DEF-LOG-STREAM`, which is built from the same orbits.
-The architecture-hub numbers being left alone is a consequence of that choice,
-not its motive.
 
 ## 9. Open disclosures
 
@@ -697,22 +698,21 @@ version. `QUADRATIC-DECODER-DATA` stays `O / STOP`.
 Not a fold and not a probe yet.
 
 ```text
-DONE  the proposed delta applied to a scratch copy and run; part 8bis. The
-      four ledger checks pass; the one unit-test failure is the pinned
-      terminal count and is disclosed with its cause and its fix.
+DONE  the proposed delta applied to a scratch copy and run; part 8bis. All
+      five checks pass, including the full unit-test suite, and every pinned
+      structural number is unchanged.
 DONE  an owner decision on 9.2, the diagonal pair; recorded in part 4.
 
 1  a further adversarial audit of this package, on the same terms as the one
    that produced AUDIT-QDD-BINDING-PACKAGE-V27.md. It must repeat the scratch
-   run independently rather than rely on part 8bis, and it should attack the
-   five-field agreement, the 1/5 normalisation, the LOW LINE and the matrix
-   convention. It should not re-decide 9.2, which is ruled.
+   installation independently rather than rely on part 8bis, and it should
+   attack the direct write and its independence, the 1/5 factor, the LOW LINE,
+   the matrix of the operator T_w, and any inconsistency among the five
+   fields. It should not re-decide 9.2, which is ruled.
 2  the delta checked by hand against ruling 1, that is against the authority
    of the statement source, rather than against the tool alone. A delta can
    pass tools/check_ledger.py and still be wrong under ruling 1.
-3  the companion update to tools/test_architecture_map_report.py, written as
-   part of the fold and visible in its diff.
-4  only then, a decision on whether this belongs in a v28 manifest, and only
+3  only then, a decision on whether this belongs in a v28 manifest, and only
    after that, whether a formal probe may be preregistered.
 ```
 
