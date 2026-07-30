@@ -1,0 +1,19 @@
+C-READ-REDUNDANCY-1 verifier
+basis: Public Canon v27, tag canon-v27, content commit 116b62ed
+arithmetic: int and Fraction only; no float in this file
+
+K1 composition-closure sample (funnel = polynomial), 10 points PASS
+K2 orbit counts formula = enumeration, m in {1,2,5,6}, weight <= 4 PASS
+K3 weight-1 stratum = {(1)}, orbit m; diagonal degree = weight PASS
+K4 ring table: 1/m in Z_S iff primes(m) subset S; hand cells agree PASS
+K5 sufficiency: P = e_1/m carries m over Z_S with primes(m) in S PASS
+K6a W6 typed projection returns v, all port orders, Q and Q(sqrt5) PASS
+K6b sixfold cover: 6 sheets, offsets shift invariant, types distinct PASS
+K7 W2 dyadic: (x1+x2)/2 carries m = 2 over Z[1/2] PASS
+K8 PART: diagonal common-value map carries every m in 1..8 PASS
+K9 blindness: {2,6} forces 2; {2,10} nonunique; {6,10} forces 10 PASS
+K10 pair: m=1 free; m=2 needs prime 2; m=6 obstructed (needs 3); m=5 needs prime 5 PASS
+K11 WALL: over Q every m in 1..12 carries PASS
+K12 range: (6 beta_1)^2 = 36/5 > 1 exactly; (2 beta_1)^2 = 4/5 < 1 PASS
+
+SUMMARY 13/13 PASS
