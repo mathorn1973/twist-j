@@ -1,6 +1,6 @@
 # P-ENTROPY-LAW-REDUCTION-1 result
 
-Status: PROOF-SURVIVES AT LOCAL AUDIT STAGE; PUBLIC CLAIM UNCHANGED
+Status: PROOF-SURVIVES; GITHUB REPLAY PASS; PUBLIC CLAIM UNCHANGED
 
 ## Recorded decision
 
@@ -12,9 +12,9 @@ local verifier stderr:      empty
 finite audit:               13 of 13 PASS
 written proof review:       PROOF-SURVIVES
 fired falsifier:            NONE FOUND
-GitHub replay:              PENDING
+GitHub replay:              PASS
 cross architecture:         NOT CLAIMED
-scientific decision:        PROOF-SURVIVES, pending public PR replay and review
+scientific decision:        PROOF-SURVIVES, pending review and merge
 public Canon status:        UNCHANGED
 ENTROPY-LAYER-BRIDGE:       O / STOP, unchanged
 ```
@@ -87,6 +87,11 @@ stdout SHA-256
 The verifier is an audit of finite premises. It is not the source of the
 universal measurable theorem.
 
+The first required GitHub pull-request replay also passed on Ubuntu 24.04.4
+LTS, x86_64, Python 3.12.13, workflow `30559263103`, job `90927731153`.
+The public checker printed the identical verifier and stdout hashes. This is
+same-architecture reproduction, not a two-architecture computation gate.
+
 ## Failure-threshold disposition
 
 ```text
@@ -134,7 +139,7 @@ or absorb it.
 No Canon, registry, frontier, evidence, dependency, gate, changelog, hash,
 release, workflow, or authority file is changed by this probe directory. The
 result earns no automatic public status. A later owner-reviewed fold may
-consider the exact proof after the pull-request replay and review complete.
+consider the exact proof after review and merge complete.
 
 Issue #219 remains a tooling defect. This result makes no two-architecture
 claim and does not rely on the flat legacy RUN parser to manufacture one.
