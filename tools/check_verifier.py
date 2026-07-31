@@ -41,6 +41,16 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def touches_canon(paths: "list[str]") -> bool:
+    """True when a changed path lies under canon/.
+
+    A Canon change can invalidate a verifier that reads canon/ at run time even
+    though that verifier's own directory is untouched, so the changed-path
+    selection below widens to every directory when this returns True.
+    """
+    return any(Path(raw).parts[:1] == ("canon",) for raw in paths if raw)
+
+
 def changed_probes(base: str | None) -> list[Path]:
     if not PROBES.exists():
         return []
@@ -52,13 +62,17 @@ def changed_probes(base: str | None) -> list[Path]:
     result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
     if result.returncode:
         fail(f"cannot read changed paths: {result.stderr.strip()}")
+    changed = result.stdout.splitlines()
     names = set()
-    for raw in result.stdout.splitlines():
+    for raw in changed:
         parts = Path(raw).parts
         if len(parts) >= 3 and parts[0] == "probes":
             names.add(parts[1])
     if len(names) > 1:
         fail("a pull request may change only one probe directory")
+    if touches_canon(changed):
+        print("VERIFY FULL SWEEP canon change")
+        return sorted(path for path in PROBES.iterdir() if path.is_dir())
     return [PROBES / name for name in sorted(names)]
 
 
