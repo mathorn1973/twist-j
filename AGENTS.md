@@ -121,19 +121,34 @@ sealed records that cite `AGENTS.md section 6` refer to this section. New record
 should cite the heading `Formal public computation gate` as well as the section
 number.
 
-A computation-only public `T` requires the repository's pinned workflow to run
-the same PR head, verifier bytes, and `EXPECTED.txt` successfully on at least
-one x86_64 job and at least one aarch64 job. Each job requires exit zero, empty
-stderr, and stdout byte-identical to the same committed `EXPECTED.txt`.
-Byte-identity across architectures then follows transitively.
+The previous section 6 was a nine-item procedure. Records that cite an item
+number resolve as follows. The items are not restored, because the procedure
+they belonged to is now spread across sections 4, 6, 8 and 10:
+
+- `section 6 item 6`, the two-architecture computation gate, is this section.
+- `section 6 item 9`, the two-commit release form and the rule that assets are
+  published only after the tag readback passes, is section 10 below and
+  `POLICY.md` section 6.
+
+No other item number appears in a public record of this repository.
+
+The two-architecture computation gate requires the same PR head, verifier bytes,
+and `EXPECTED.txt` to succeed on an x86_64 job and on an aarch64 job. Each job
+requires exit zero, empty stderr, and stdout byte-identical to the same
+committed `EXPECTED.txt`. Byte-identity across architectures then follows
+transitively. Passing the gate does not by itself raise a computation-only
+result above `C`.
 
 The workflow and repository checkers define the current runner labels and
 supported Python versions. Do not duplicate mutable labels here.
 
-A local run, a manually written architecture field, or repeated execution on
-one architecture is reproduction only. It contributes no architecture gate by
-itself. Until both required workflow architecture jobs pass on the same PR head,
-a computation-only result remains at most `C`.
+The gate is satisfied by byte-identical stdout on two different architectures.
+The workflow satisfies it alone, because its two required jobs are x86_64 and
+aarch64. A recorded local run on an architecture that differs from a passing
+workflow job also satisfies it: the gate rests on byte identity against the one
+committed `EXPECTED.txt`, which any reader can recheck, not on the platform
+declaration, which is audit metadata. Repeated execution on one architecture is
+reproduction, not a gate.
 
 `RUN.md` is an audit record, not proof of machine identity. It may record neutral
 platform, architecture, Python, hashes, byte counts, and exit status. The
@@ -230,6 +245,16 @@ repository policy, unit, Canon, ledger, incubation, verifier, and reproduction
 checks that apply. Perform the manual security and licence review. Preserve
 fired falsifiers. Merge without squash or rebase when the repository procedure
 requires provenance.
+
+A public Canon release is a separate declared fold with deterministic output,
+`canon/SHA256SUMS`, an immutable tag `canon-vN`, and an updated `STATUS.md`. One
+reviewed release branch carries exactly two frozen commits: first the complete
+content fold, then a release-form commit changing exactly `STATUS.md`,
+`README.md` and `CITATION.cff` and naming the content commit. The pull-request
+head must pass the active release gate. Merge without squash or rebase, tag the
+merge only after public readback, and publish assets only after the tag readback
+passes. A frozen release candidate is rebuilt, never amended, rebased or
+force-pushed.
 
 Do not add or loosen workflows without an explicit policy change. Never commit
 secrets, credentials, private infrastructure, personal data, raw private logs,
