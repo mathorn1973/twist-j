@@ -1,12 +1,42 @@
 # Canon changelog (public series)
 
 
-## Public Canon v28
+## Public Canon v29
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 215 claims; 0 T-LOCK, 114 T, 40 D, 23 C, 4 H, 24 O, 10 F; 28 live H/O.
+Registry snapshot: 216 claims; 0 T-LOCK, 114 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v29 carries exactly one item.
+
+ENTROPY-RG-RETURN [C] registers the fixed-point tower and the multiplier
+spectra of the renormalized block maps on the recurrent core, at the dyadic
+scales `k = 0..14` for both letters. Outside two residues the maps fix no
+state, on the core or off it. At `k = 0` each letter fixes one reflection
+centre in the size-10 component with multiplier minus the identity, and at
+every scale with `k = 1 mod 4` the fixed set is exactly the opposite living
+half with the identity as multiplier at all 3125 of its states. The scales
+carrying a full-half return are exactly those with block length
+`2^k = 2 mod 5`, and the scales with `2^k = 1 mod 5` carry none. The evidence
+is the immutable `probes/P-ENTROPY-RG-RETURN-1` bundle, whose aarch64 local leg
+and required GitHub x86_64 leg produced the same 13-gate PASS transcript byte
+for byte, satisfying the two-architecture computation gate. The status is C and
+is earned by exhaustive finite computation on the declared carrier; nothing is
+proved beyond that range.
+
+The row closes at birth inside its finite scope, so no live H or O row moves
+and the frontier is unchanged. In particular the missing monotone function of
+scale is not supplied: this fold registers no C-function, no positivity
+statement, no continuum or scaling limit, no critical exponent, no measure and
+no L6 statement, and it reads the residue class physically nowhere. Its
+agreement with the order of the ramified digit unit of RAMIFIED-TM-LIFT is an
+arithmetic consonance and is registered as one. The image re-audit it carries
+extends the range of ENTROPY-BLOCK-HALVING as a computation only; that row is
+unchanged.
+
+
+## Public Canon v28
 
 Public Canon v28 carries exactly two items.
 
