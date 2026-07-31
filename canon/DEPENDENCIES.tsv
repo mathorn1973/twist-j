@@ -204,6 +204,7 @@ ENTROPY-CYLINDER-CUT	DEF-ARCHITECTURE	REQUIRES	the finite-cylindrical ansatz is 
 ENTROPY-LIFT-DEFECT	DEF-ARCHITECTURE	REQUIRES	the literal lift falsifier is a statement about the declared finite-generator presentation
 ENTROPY-JOINT-CESARO-LAW	DEF-ARCHITECTURE	REQUIRES	the frozen window law is computed for the declared driven kernel
 ENTROPY-BLOCK-HALVING	DEF-ARCHITECTURE	REQUIRES	the block maps are compositions of the declared branch maps along the declared driver
+ENTROPY-RG-RETURN	DEF-ARCHITECTURE	REQUIRES	the block maps are compositions of the declared branch maps along the declared driver
 ENTROPY-LIVING-SET	DEF-ARCHITECTURE	REQUIRES	the living halves and restricted bijections are finite facts of the declared driven kernel
 ENTROPY-UNIQUE-PAST	ENTROPY-LIVING-SET	REQUIRES	the caterpillar backward structure uses the bijections between the two living halves
 ENTROPY-COUNT-MATCH	ENTROPY-LIVING-SET	REQUIRES	the arithmetic carrier count is compared with the living-trajectory count
