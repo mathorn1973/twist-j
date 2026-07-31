@@ -23,12 +23,21 @@ class WorkflowArchitectureTests(unittest.TestCase):
     def test_aggregate_check_depends_on_architecture(self) -> None:
         block = (
             "  check:\n"
-            "    if: github.ref_type != 'tag' && github.event_name != 'release'\n"
+            "    if: always() && github.ref_type != 'tag' "
+            "&& github.event_name != 'release'\n"
             "    needs: architecture\n"
             "    runs-on: ubuntu-latest"
         )
         self.assertIn(block, self.text)
         self.assertIn('echo "TWO-ARCHITECTURE CHECK PASS"', self.text)
+
+    def test_aggregate_fails_rather_than_skips_on_architecture_failure(self) -> None:
+        """A skipped required check can count as passing. The aggregate
+        therefore runs always() and asserts the matrix result itself, so a
+        failed architecture job fails the required context instead of
+        vanishing from it."""
+        self.assertIn("if: always() &&", self.text)
+        self.assertIn("if: needs.architecture.result != 'success'", self.text)
 
     def test_publication_is_single_runner(self) -> None:
         block = (

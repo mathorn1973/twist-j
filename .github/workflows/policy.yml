@@ -47,11 +47,16 @@ jobs:
         run: python tools/check_reproduce.py --base "$BASE_SHA"
 
   check:
-    if: github.ref_type != 'tag' && github.event_name != 'release'
+    if: always() && github.ref_type != 'tag' && github.event_name != 'release'
     needs: architecture
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Require every architecture job to have succeeded
+        if: needs.architecture.result != 'success'
+        run: |
+          echo "architecture result: ${{ needs.architecture.result }}"
+          exit 1
       - run: echo "TWO-ARCHITECTURE CHECK PASS"
 
   publication:
