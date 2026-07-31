@@ -1,0 +1,78 @@
+P-ENTROPY-RG-RETURN-1 exact verifier
+fixed points and multiplier spectra of the renormalized block
+maps Phi^(k)_eps on the recurrent core of the F_5^6 kernel,
+dyadic scales k = 0..14, both letters, exact arithmetic
+
+PASS 01 G01 CENSUS      recurrent core 6250 on 313 components, sizes 312 x 20 + 1 x 10, pairwise disjoint
+PASS 02 G02 HALVES      H_0 and H_1 disjoint, 3125 each, union the core, and F_t maps the core into the core
+PASS 03 G03 AFFINE      every generator equals its linear part plus its constant on all 15625 states
+PASS 04 G04 LINPARTS    every linear part is an involution of determinant 1
+PASS 05 G05 CHARPOLY    companion, identity and minus identity self-tests over F_5
+PASS 06 G06 WORD        the doubling recursion equals the literal substitution-word composition, k = 0..6, both letters
+PASS 07 G07 MULTWALK    the multiplier recursion equals the literal ordered substep product at fixed states, k = 0..8
+PASS 08 G08 HALVING     the image of the level-k block map on the core has 3125 states for every k = 0..14, both letters
+PASS 09 G09 K0-CENTRES  at k = 0 each letter has exactly one recurrent fixed state, the reflection centres 3(C_D + V_E) and 3 C_D in the singlet, 125 off-core each, multiplier exactly minus the identity, and no state is fixed by both letters
+PASS 10 G10 RETURN      at every k = 1 mod 4 in range the fixed set is exactly the opposite living half, 3125 states, every multiplier the identity, off-core 3125 at k = 1 and 0 at k = 5, 9, 13
+PASS 11 G11 EMPTY       at every other k = 2..14 the block map has no fixed state on the core and none off it
+PASS 12 G12 HALF-LAW    every fixed state lies in the half H_(eps xor k mod 2), k = 0..14
+PASS 13 G13 CLOCK       the scales carrying a full-half return are exactly those with block length 2^k = 2 mod 5, and no scale with 2^k = 1 mod 5 carries one
+
+TOWER k= 0 eps=0 core_fix=    1 offcore=  125 image=3125 singlet=  1 components=   1 identity=    0
+TOWER k= 0 eps=1 core_fix=    1 offcore=  125 image=3125 singlet=  1 components=   1 identity=    0
+TOWER k= 1 eps=0 core_fix= 3125 offcore= 3125 image=3125 singlet=  5 components= 313 identity= 3125
+TOWER k= 1 eps=1 core_fix= 3125 offcore= 3125 image=3125 singlet=  5 components= 313 identity= 3125
+TOWER k= 2 eps=0 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 2 eps=1 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 3 eps=0 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 3 eps=1 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 4 eps=0 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 4 eps=1 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 5 eps=0 core_fix= 3125 offcore=    0 image=3125 singlet=  5 components= 313 identity= 3125
+TOWER k= 5 eps=1 core_fix= 3125 offcore=    0 image=3125 singlet=  5 components= 313 identity= 3125
+TOWER k= 6 eps=0 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 6 eps=1 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 7 eps=0 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 7 eps=1 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 8 eps=0 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 8 eps=1 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k= 9 eps=0 core_fix= 3125 offcore=    0 image=3125 singlet=  5 components= 313 identity= 3125
+TOWER k= 9 eps=1 core_fix= 3125 offcore=    0 image=3125 singlet=  5 components= 313 identity= 3125
+TOWER k=10 eps=0 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k=10 eps=1 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k=11 eps=0 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k=11 eps=1 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k=12 eps=0 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k=12 eps=1 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k=13 eps=0 core_fix= 3125 offcore=    0 image=3125 singlet=  5 components= 313 identity= 3125
+TOWER k=13 eps=1 core_fix= 3125 offcore=    0 image=3125 singlet=  5 components= 313 identity= 3125
+TOWER k=14 eps=0 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+TOWER k=14 eps=1 core_fix=    0 offcore=    0 image=3125 singlet=  0 components=   0 identity=    0
+
+SPECTRUM k= 0 eps=0 count=    1 charpoly_c0..c6=1,1,0,0,0,1,1
+SPECTRUM k= 0 eps=0 distinct_multipliers=1
+SPECTRUM k= 0 eps=1 count=    1 charpoly_c0..c6=1,1,0,0,0,1,1
+SPECTRUM k= 0 eps=1 distinct_multipliers=1
+SPECTRUM k= 1 eps=0 count= 3125 charpoly_c0..c6=1,4,0,0,0,4,1
+SPECTRUM k= 1 eps=0 distinct_multipliers=1
+SPECTRUM k= 1 eps=1 count= 3125 charpoly_c0..c6=1,4,0,0,0,4,1
+SPECTRUM k= 1 eps=1 distinct_multipliers=1
+SPECTRUM k= 5 eps=0 count= 3125 charpoly_c0..c6=1,4,0,0,0,4,1
+SPECTRUM k= 5 eps=0 distinct_multipliers=1
+SPECTRUM k= 5 eps=1 count= 3125 charpoly_c0..c6=1,4,0,0,0,4,1
+SPECTRUM k= 5 eps=1 distinct_multipliers=1
+SPECTRUM k= 9 eps=0 count= 3125 charpoly_c0..c6=1,4,0,0,0,4,1
+SPECTRUM k= 9 eps=0 distinct_multipliers=1
+SPECTRUM k= 9 eps=1 count= 3125 charpoly_c0..c6=1,4,0,0,0,4,1
+SPECTRUM k= 9 eps=1 distinct_multipliers=1
+SPECTRUM k=13 eps=0 count= 3125 charpoly_c0..c6=1,4,0,0,0,4,1
+SPECTRUM k=13 eps=0 distinct_multipliers=1
+SPECTRUM k=13 eps=1 count= 3125 charpoly_c0..c6=1,4,0,0,0,4,1
+SPECTRUM k=13 eps=1 distinct_multipliers=1
+
+CLOCK nonempty scales in range: 0,1,5,9,13
+CLOCK scales with 2^k = 2 mod 5:  1,5,9,13
+CLOCK scales with 2^k = 1 mod 5:  0,4,8,12
+CLOCK distinct multiplier matrices realized at fixed states: 2
+CLOCK realized multipliers are exactly the identity and its negative: yes
+
+GATES 13/13 ALL PASS
