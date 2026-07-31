@@ -1,12 +1,201 @@
 # Canon changelog (public series)
 
 
-## Public Canon v24
+## Public Canon v29
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 208 claims; 0 T-LOCK, 109 T, 40 D, 22 C, 3 H, 24 O, 10 F; 27 live H/O.
+Registry snapshot: 216 claims; 0 T-LOCK, 114 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v29 carries exactly one item.
+
+ENTROPY-RG-RETURN [C] registers the fixed-point tower and the multiplier
+spectra of the renormalized block maps on the recurrent core, at the dyadic
+scales `k = 0..14` for both letters. Outside two residues the maps fix no
+state, on the core or off it. At `k = 0` each letter fixes one reflection
+centre in the size-10 component with multiplier minus the identity, and at
+every scale with `k = 1 mod 4` the fixed set is exactly the opposite living
+half with the identity as multiplier at all 3125 of its states. The scales
+carrying a full-half return are exactly those with block length
+`2^k = 2 mod 5`, and the scales with `2^k = 1 mod 5` carry none. The evidence
+is the immutable `probes/P-ENTROPY-RG-RETURN-1` bundle, whose aarch64 local leg
+and required GitHub x86_64 leg produced the same 13-gate PASS transcript byte
+for byte, satisfying the two-architecture computation gate. The status is C and
+is earned by exhaustive finite computation on the declared carrier; nothing is
+proved beyond that range.
+
+The row closes at birth inside its finite scope, so no live H or O row moves
+and the frontier is unchanged. In particular the missing monotone function of
+scale is not supplied: this fold registers no C-function, no positivity
+statement, no continuum or scaling limit, no critical exponent, no measure and
+no L6 statement, and it reads the residue class physically nowhere. Its
+agreement with the order of the ramified digit unit of RAMIFIED-TM-LIFT is an
+arithmetic consonance and is registered as one. The image re-audit it carries
+extends the range of ENTROPY-BLOCK-HALVING as a computation only; that row is
+unchanged.
+
+
+## Public Canon v28
+
+Public Canon v28 carries exactly two items.
+
+READ-REDUNDANCY-PRIME-SUPPORT [T] registers the exact read-redundancy
+classification for polynomial accumulators over Z_S: absence of feedback alone
+bounds nothing, while for anonymous total accumulators multiplicity m carries
+if and only if every prime divisor of m lies in S. The evidence is the
+immutable `probes/P-READ-REDUNDANCY-1` bundle, claimed in issue 216, whose
+aarch64 local leg and required GitHub x86_64 leg produced the same 16-gate
+PASS transcript byte for byte, satisfying the two-architecture computation
+gate. The status is earned by the symbolic proof, which the verifier audits
+rather than establishes; the three exhaustion legs corroborate it inside their
+frozen boxes only. MINIMAL-READ-DERIVATION [O] stays O and STOP and
+COIN-MINIMAL-READ [H] is unchanged; the row closes nothing and derives no
+physically canonical coin.
+
+TM-SYM2-PHYSICAL-MEASURE [O] receives a SCOPE_CHANGE, O to O. The previous
+scope required a future physical bridge to preserve the exact
+selector-independent outputs and to derive the typed factorization, which are
+the values the bridge would be establishing. The amendment moves them from the
+requirement side to the result side and adds the explicit CIRCULAR rejection,
+on the pattern of CANON13-SCOPE-DE-CONFORMAL-WEIGHT. The fired N2 selector
+gate, the three exact TM-SYM2 classifications, the retained reading
+orientation and the prohibition on gauge enlargement are preserved unchanged.
+
+This fold registers no physical effect family, no L6 measure, no apparatus,
+and no decoder completion. The QDD algebraic factorization package, TM-CORR-
+ZEROS, and the OBSERVER-WRITE-PORT retirement proposal are all deliberately
+excluded from this manifest.
+
+## Public Canon v27
+
+<!-- BEGIN GENERATED CANON27 COUNTS -->
+Registry snapshot: 214 claims; 0 T-LOCK, 113 T, 40 D, 23 C, 4 H, 24 O, 10 F; 28 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON27 COUNTS -->
+
+Public Canon v27 registers two exact rows from the immutable
+`probes/P-BOOST-COHERENCE-1` bundle. DRIFT-IS-THE-READ [T] packages the
+fixed `beta_1` reflection, division-free spectral skeleton, nonclosing
+squared gap, exact drift and coherent range, and the uniform all-`N` bound
+`||V_bar_N-V_inf|| <= sqrt(5)/(2N)`. Its large-window reading is conditional
+on the declared translation-covariant fiber premise P1 and long-window
+premise P2; neither premise is derived or physically anchored.
+
+COIN-SELECTION-CONDITIONAL [T] proves that the positive-orientation
+integer-admissible coins are exactly `{beta_1,beta_3}`, separates closed-cover
+completeness from open-band generic, rung, and seam multiplicity, and records
+the exact comparison. The generic multiplicities are `2` versus `6`, the
+rung multiplicities are `1` versus `5`, the uniform constants are
+`sqrt(5)/2` versus `sqrt(5)`, and the minimum squared gaps are `16/5` versus
+`4/5`. S1 and S2 uniquely select `beta_1`; S3 uniquely selects `beta_3`.
+The criteria are distinct and agree only on the frozen complete pair.
+
+The same public evidence supports the owner-approved split:
+COIN-MINIMAL-READ [H] adopts `beta_1` by MINIMAL-READ and names
+MAXIMAL-REACH as the unadopted counter-selector, while
+MINIMAL-READ-DERIVATION [O] owns the open L5-to-L1 selection gate. The
+obligation is STOP until the complete decoder class, cover-to-output map,
+accumulator/equality rule, redundancy theorem, dependency graph, and layer
+typing are public. Failure of one favored route is STOP, not a negative
+classification.
+
+The prospective-pinned aarch64 execution and required GitHub x86_64
+reproduction returned the same 8-group, 477-check PASS transcript byte for
+byte. The evidence bundle SHA-256 is
+`0e2c9daaee5a7c189615f1941894015be2b9e59a71a1183cfc6ed207c9c8d083`.
+No probe file is changed, and no `P-BOOST-COHERENCE-1` probe verifier or
+formal execution is rerun. This fold adds no
+premise-to-theorem promotion, P1/P2 anchoring, decoherence, environment,
+collapse, Born, measurement, L6, SI, or unique-physics claim. It records no
+retirement for absent incubation identifiers, and
+TM-SYM2-PHYSICAL-MEASURE remains unchanged.
+
+## Public Canon v26
+
+<!-- BEGIN GENERATED CANON26 COUNTS -->
+Registry snapshot: 210 claims; 0 T-LOCK, 111 T, 40 D, 23 C, 3 H, 23 O, 10 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON26 COUNTS -->
+
+Public Canon v26 registers exactly one new L1 theorem,
+C8-BILINEAR-SHADOW [T]. In `F_25`, the theorem identifies the two nonzero
+axes and all exact order-eight elements, proves that Frobenius exchanges the
+two registered digit branches, and constructs their branch-invariant record.
+The norm retains digit sum modulo 4, while the record resolves the declared
+even and odd-pair classes modulo 8 with exact witnesses.
+
+The immutable `probes/P-C8-BILINEAR-SHADOW-2` bundle is the sole evidence.
+Its formal aarch64 run produced `RESULT 6/6 ALL PASS`; GitHub policy run
+29948644987, job 89020433805, reproduced the pinned verifier and stdout byte
+identically on x86_64, and the final-head manual review closed the
+two-architecture gate. The pending wording in the frozen `RESULT.md` records
+its pre-CI chronology; no probe file is amended and no new formal evidence
+execution is used by this fold.
+
+The theorem selects no branch and adds no physical or gauge equivalence,
+checkpoint identification, clock, gravity, SI, force, uniqueness, decoder
+completion, or L2-L6 lift. `SQRT-PHI-TIME-GRAVITY [O]` remains open.
+
+The second transaction registers METRO-REDUCTION-ARROWS [C] at L5. The four
+admitted arrows have exact preconditions and transports: bijective state
+relabeling, restriction to the full single-digit reachable closure, the
+multi-action Nerode quotient with its coordinate-2-and-higher congruence
+proviso, and coordinate permutation with the ordered input basis transported.
+Each has `tau_R = identity` and exact pointwise transported L5-stream
+equality. The frozen witnesses separate one-shot image from `Sigma*` closure,
+expose the necessary noncommuting quotient proviso, and distinguish a
+transported-basis permutation from its basis-fixed lookalike.
+
+The immutable `probes/P-METRO-REDUCTION-ARROWS-4` bundle is the sole
+evidence. Its prospective-pinned run passed all 17 gates, with zero
+congruence counterexamples among exactly 1,024 two-state and 4,251,528
+three-state protocols. The local and GitHub executions were both x86_64 and
+produced identical stdout SHA-256
+`c0e4b5685b86799937e905b4cd6c55513c8c368c083587d6af7ddfb5bd3ac2d7`.
+This establishes reproduction but not a two-architecture gate, so the
+computation-only claim is C.
+
+METRO-REDUCTION-CALCULUS remains O and STOP. Only obligations A and C are
+separated into the new row; obligation B for the complete forbidden catalogue
+and witnesses, obligation D for common blocking including decision and
+terminal-value transport, and obligation E for completeness of `approx_red`
+remain open. No normalization, L6, physical, SI, or cross-layer status is
+added. Both probe bundles remain byte-unchanged, and this fold authorizes no
+new formal probe execution.
+
+## Public Canon v25
+
+<!-- BEGIN GENERATED CANON25 COUNTS -->
+Registry snapshot: 208 claims; 0 T-LOCK, 110 T, 40 D, 22 C, 3 H, 23 O, 10 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON25 COUNTS -->
+
+Public Canon v25 closes exactly one existing L1 owner.
+KERNEL-Z6-SYNCHRONIZATION moves from O to T because its preregistered
+self-contained all-`n` proof establishes all four frozen clauses: the
+fixed-time 5-to-1 and 2-to-1 sheet laws, non-eventual-periodicity of every
+checkpoint trace and trajectory, and exclusion of every finite autonomous
+realization.
+
+The existing `probes/P-KERNEL-Z6-SYNCHRONIZATION-1` bundle is registered as
+the public two-architecture evidence. It audits the exact finite generator
+and sheet premises, the base cases, the complete four-case induction, and two
+independent implementations. The native aarch64 execution and GitHub x86_64
+replay produced byte-identical stdout. The proof, rather than the finite
+enumeration, carries the universal quantifiers.
+
+The scope remains L1 and fixed-time. No unknown-time fiber, census meaning,
+decoded log, physical irreversibility, complete-state identification, decoder
+completion, unique infinite realization, or L2-L6 claim is added. The probe
+is unchanged and no new execution is authorized or performed.
+
+## Public Canon v24
+
+<!-- BEGIN GENERATED CANON24 COUNTS -->
+Registry snapshot: 208 claims; 0 T-LOCK, 109 T, 40 D, 22 C, 3 H, 24 O, 10 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON24 COUNTS -->
 
 Public Canon v24 combines one proof-first L1 Gyron transaction with one
 orthogonal definition-only decoder-contract transaction.
@@ -57,7 +246,7 @@ Reproduction witnesses: 22.
 <!-- END GENERATED CANON23 COUNTS -->
 
 Public Canon v23 is an owner-definition fold. It registers exactly one new
-claim row, KERNEL-Z6-SYNCHRONIZATION [O] at L1. On the declared autonomous update
+claim row, KERNEL-Z6-SYNCHRONIZATION at status O and layer L1. On the declared autonomous update
 it freezes four candidate all-n decisions: the per-sheet bijections and
 fixed-time 5-to-1 and 2-to-1 checkpoint fibers, non-eventual-periodicity of
 each seed's checkpoint trace and trajectory, and exclusion of a finite
