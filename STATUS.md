@@ -29,7 +29,7 @@ standardised as ISO/IEC 18670, and each pins bytes rather than a location:
 
 - the content of `canon/CANON.md` at Public Canon v27 —
   `swh:1:cnt:99fbf396ad353267c1dae996e47c5562399cf29a`
-- the revision named by the content commit above —
+- the revision named as the content commit of Public Canon v27 —
   `swh:1:rev:116b62edf505914d96fcd65318d97f3675c53f85`
 - the snapshot of the origin at the archiving visit —
   `swh:1:snp:735c0fe3dbf7f8fbe3f8559411a5309d1305e9d3`
@@ -37,8 +37,10 @@ standardised as ISO/IEC 18670, and each pins bytes rather than a location:
 Software Heritage independently reports the archived `canon/CANON.md` as
 150959 bytes with SHA-256
 `c7c4c7e6d5a3116e356b060eaf696963285b0f2f465d5f2e1dcda5c094a309f6`. Both agree
-with the byte count and checksum declared above, so the archive is a
-third-party witness to them and not merely a copy.
+with the byte count and checksum this file declared for Public Canon v27, so
+the archive is a third-party witness to them and not merely a copy. The fields
+above declare the current Canon, which is a later version and is not covered by
+these identifiers.
 
 To cite the Canon with the resolution context included:
 
