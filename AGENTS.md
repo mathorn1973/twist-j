@@ -229,14 +229,15 @@ never implicit renaming rules.
 
 ## 9. Machine enforcement boundary
 
-`tools/check_incubation.py` validates the visible incubation contract, including
-package shape, manifest fields, duplicate targets, forbidden alternatives,
-visible premature verifier references, session declarations, and public run
-record hygiene.
+A machine check can reach the visible shape of an incubation package: its
+layout, its declared fields, duplicate or forbidden targets, premature verifier
+references, session declarations, and public run-record hygiene. Where such a
+check exists it is named by the workflow, not here.
 
-The checker does not prove mathematical equivalence of scopes, independence of
-human knowledge, or absence of information exchanged outside Git. Those remain
-explicit process claims and review obligations.
+It cannot reach mathematical equivalence of scopes, independence of human
+knowledge, or absence of information exchanged outside Git. Those remain
+explicit process claims carried by review. No green check establishes them, and
+none should be read as having done so.
 
 ## 10. Pull requests and safety
 
