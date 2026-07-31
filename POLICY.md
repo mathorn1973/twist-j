@@ -129,9 +129,10 @@ For new public probes:
 
 - Assertions use exact arithmetic. Floating point may appear only as a labeled
   engineering or measured witness.
-- The author commits one exact `EXPECTED.txt`. A local run may be recorded in
-  `RUN.md`, but local platform declarations are audit metadata and do not prove
-  an architecture gate.
+- The author commits one exact `EXPECTED.txt` and records the local run in
+  `RUN.md` using neutral public descriptors, for example
+  `platform: Ubuntu 24.04` and `architecture: aarch64`. Machine nicknames are
+  forbidden.
 - The required pull-request workflow runs the same PR head on clean GitHub-hosted
   x86_64 `ubuntu-latest` and aarch64 `ubuntu-24.04-arm` jobs with Python 3.12.
   Both jobs require the same verifier hash, exit code 0, empty stderr, and
@@ -139,11 +140,16 @@ For new public probes:
 - The stable required context `check` is an aggregate job that depends on both
   architecture jobs. It cannot pass when either architecture job fails or is
   skipped on a pull request.
-- Passing both architecture jobs satisfies the two-architecture computation
-  gate. Repeated same-architecture runs are reproduction only.
+- The two-architecture computation gate is satisfied by byte-identical stdout
+  on two different architectures. The workflow satisfies it alone, because its
+  two required jobs are x86_64 and aarch64. A recorded local run on an
+  architecture that differs from a passing workflow job also satisfies it: the
+  gate rests on byte identity against the one committed `EXPECTED.txt`, which
+  any reader can recheck, not on the platform declaration, which is audit
+  metadata. Same-architecture agreement is reproduction, not a gate.
 - An independent proof may earn `T`; its verifier is then an audit.
-- A computation-only result is at most `C` until both required architecture
-  jobs pass on the same pull-request head.
+- A one-architecture finite result is at most `C` unless its proof is
+  independently theorem-grade.
 - A post-cutover pull request changes at most one probe directory. The initial
   Canon v1 synthesis is not a probe pull request and imports no historical
   probe tree.
