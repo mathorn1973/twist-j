@@ -1,0 +1,12 @@
+task_id	seat	depends_on	object_key	title
+T1-01	S2	-	notes/C-KERNEL-PAIR-ORDERS-1	open the incubation lock issue and check for collisions
+T1-02	S3	T1-01	notes/C-KERNEL-PAIR-ORDERS-1	freeze and push PREREG alone, report freeze commit and prereg sha256
+T1-03	S3	T1-02	notes/C-KERNEL-PAIR-ORDERS-1	write, run and push verify_kernel_pair_orders_1.py and its stdout
+T1-04	S2	T1-02	notes/C-KERNEL-PAIR-ORDERS-1	BREAKER 1 cross-model: freeze and push break_..._r1.py and stdout, blind
+T1-05	S4	T1-02	notes/C-KERNEL-PAIR-ORDERS-1	BREAKER 2 same-model: freeze and push break_..._r2.py and stdout, blind
+T1-06	S2	T1-03 T1-04	notes/C-KERNEL-PAIR-ORDERS-1	write and push BREAK-r1.md after reading the verifier
+T1-07	S4	T1-03 T1-05	notes/C-KERNEL-PAIR-ORDERS-1	write and push BREAK-r2.md after reading the verifier
+T1-08	S1	T1-04 T1-05	notes/C-KERNEL-PAIR-ORDERS-1	reveal the sealed answer, verify its published hash
+T1-09	S1	T1-03 T1-04 T1-05	notes/C-KERNEL-PAIR-ORDERS-1	run all three codes on JAS_2 aarch64, check byte identity with pushed stdout
+T1-10	S1	T1-06 T1-07 T1-08 T1-09	notes/C-KERNEL-PAIR-ORDERS-1	adjudicate, push RESULT.md and SHA256SUMS.txt
+T1-11	S2	T1-10	notes/C-KERNEL-PAIR-ORDERS-1	open the pull request, do not merge
