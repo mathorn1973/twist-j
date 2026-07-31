@@ -241,7 +241,7 @@ explicit process claims and review obligations.
 ## 10. Pull requests and safety
 
 Stage named files only. A pull request changes only the declared scope. Run the
-repository policy, unit, Canon, ledger, incubation, verifier, and reproduction
+repository policy, unit, Canon, ledger, verifier, and reproduction
 checks that apply. Perform the manual security and licence review. Preserve
 fired falsifiers. Merge without squash or rebase when the repository procedure
 requires provenance.
