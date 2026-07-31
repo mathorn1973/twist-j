@@ -227,7 +227,12 @@ Apache-2.0 applies unless a file states an approved compatible license.
 After cutover, the release-form activation readback is not a general content
 gate. The sole workflow runs it only for an immutable tag push or release
 publication. Ordinary pull requests and `main` pushes still run policy, unit,
-Canon, ledger, changed-verifier, and changed-reproduction checks. This routing
+Canon, ledger, changed-verifier, and changed-reproduction checks. A pull
+request that changes any file under `canon/` widens both changed-path checks to
+every public probe and every minimal reproduction, because a verifier may read
+`canon/` at run time while its own directory is untouched, and a changed-path
+check cannot see that. The one-probe-per-pull-request rule is unaffected: it
+still counts only the probe directories the diff names. This routing
 prevents the activation gate's exact three-file release delta from being
 misapplied to post-cutover public work; it does not relax tag or release
 readback. Tag and release events skip changed-path checks because those events
