@@ -24,26 +24,26 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 208)
+        self.assertEqual(self.report.claims, 216)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 22, "D": 40, "F": 10, "H": 3, "O": 24, "T": 109},
+            {"C": 24, "D": 40, "F": 10, "H": 4, "O": 24, "T": 114},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 44,
-                "one-architecture": 8,
+                "none": 43,
+                "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 125,
+                "two-architecture": 133,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 170)
+        self.assertEqual(len(self.report.direct_architecture_requires), 174)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 183
+            len(self.report.transitive_architecture_dependents), 191
         )
         self.assertEqual(len(self.report.dependency_terminals), 10)
         self.assertNotIn(
@@ -59,9 +59,34 @@ class ArchitectureMapReportTests(unittest.TestCase):
             self.report.direct_architecture_requires,
         )
         self.assertIn(
+            "METRO-REDUCTION-ARROWS",
+            self.report.direct_architecture_requires,
+        )
+        self.assertIn(
+            "METRO-REDUCTION-ARROWS",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertIn(
             "TM-PAIR-SUBSTITUTION-FIXED-POINT",
             self.report.direct_architecture_requires,
         )
+        self.assertIn(
+            "MINIMAL-READ-DERIVATION",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "DRIFT-IS-THE-READ",
+            self.report.direct_architecture_requires,
+        )
+        for claim in (
+            "DRIFT-IS-THE-READ",
+            "COIN-SELECTION-CONDITIONAL",
+            "COIN-MINIMAL-READ",
+            "MINIMAL-READ-DERIVATION",
+        ):
+            self.assertIn(
+                claim, self.report.transitive_architecture_dependents
+            )
         self.assertIn("ANCHOR-ELECTRON-MASS", self.report.dependency_terminals)
         self.assertIn(
             "METRO-FINITE-STATE-RATIONALITY", self.report.dependency_terminals

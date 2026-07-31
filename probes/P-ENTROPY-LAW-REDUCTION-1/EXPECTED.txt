@@ -1,0 +1,17 @@
+P-ENTROPY-LAW-REDUCTION-1
+SCOPE exact finite audit of a proof-first Route A reduction
+PASS A01 J is a unit: det(M_J)=1 and the displayed integer inverse is exact
+PASS A02 the five public generators are involutions on all 5^6 states
+PASS A03 the five generator trace laws hold on all 5^6 states
+PASS A04 the complete two-row public sheet table is exact
+PASS A05 all four two-letter factors occur in the Thue-Morse language
+PASS A06 the level-4 two-supertile certificate gives exactly 24 length-9 factors
+PASS A07 every allowed length-9 factor synchronizes all five input sheets
+PASS A08 the synchronized sheet is 4+2 times the final bit modulo 5
+PASS A09 length 9 is sharp: an allowed length-8 factor is not synchronizing
+PASS A10 the public stationary pair law is normalized, symmetric, and fixed
+PASS A11 the forced trace law gives the exact pair-to-selector map
+PASS A12 the selector law is exactly (0,2/3,0,1/6,1/6)
+PASS A13 the frozen window has 1536 terms and averages a time-independent law unchanged
+SUMMARY 13/13 PASS
+RESULT FINITE PREMISES AUDITED; UNIVERSAL CLAIM REMAINS PROOF-FIRST

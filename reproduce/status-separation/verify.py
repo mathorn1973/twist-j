@@ -4,7 +4,7 @@
 Standard library only. This witness checks the ledger boundary introduced by
 Genesis review G2B. It does not establish new physics or new mathematics; it
 verifies that named exact rows remain at T and that their physical readings
-are carried by explicit D, C, or O rows.
+are carried by explicit D, C, H, or O rows.
 """
 
 import csv
@@ -122,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 109, "D": 40, "C": 22, "F": 10,
-                       "O": 24, "H": 3}
+    expected_counts = {"T": 114, "D": 40, "C": 24, "F": 10,
+                       "O": 24, "H": 4}
     checks.append((
         "COUNTS",
-        "registry has 208 claims with the current status partition",
-        len(rows) == 208 and counts == expected_counts,
+        "registry has 216 claims with the current status partition",
+        len(rows) == 216 and counts == expected_counts,
     ))
 
     checks.append((
@@ -155,17 +155,25 @@ def run():
         and scope_lacks(index, "Z2-PLACES-SPLIT", ("cpt", "force", "spin")),
     ))
 
-    owner_dependencies = [
-        row for row in dependencies
-        if row["item_id"] == "KERNEL-Z6-SYNCHRONIZATION"
+    kernel = "KERNEL-Z6-SYNCHRONIZATION"
+    kernel_path = "probes/P-KERNEL-Z6-SYNCHRONIZATION-1"
+    kernel_digest = "7ac0cae9685575c8bd92f1c3f39603e0fc7a148fae5db80746fbcc1e5e4de1b9"
+    kernel_dependencies = [
+        row for row in dependencies if row["item_id"] == kernel
     ]
+    c8 = "C8-BILINEAR-SHADOW"
+    c8_path = "probes/P-C8-BILINEAR-SHADOW-2"
+    c8_digest = "72728a88f45af777656a39d313b79c8189e2dfa2fa587e08fac5bf02aa6b234d"
+    c8_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == c8
+    }
     checks.append((
         "CARRY",
-        "carry theorems stay T; synchronization owner stays O and fenced",
+        "carry, synchronization, and C8 shadow theorems stay T and physically fenced",
         all(has_status(index, claim, "T") for claim in
             ("RAMIFIED-TM-LIFT", "CARRY-J-CHECKPOINT", "CARRY-PENTAD",
-             "SQRT-PHI-DIGIT-LIFT"))
-        and has_status(index, "KERNEL-Z6-SYNCHRONIZATION", "O")
+             "SQRT-PHI-DIGIT-LIFT", kernel, c8))
         and scope_contains_all(index, "CARRY-PENTAD",
                                ("selects no prime", "physical reading"))
         and scope_contains_all(index, "RAMIFIED-TM-LIFT",
@@ -177,27 +185,181 @@ def run():
         and scope_contains_all(index, "SQRT-PHI-DIGIT-LIFT",
                                ("not constant", "no sign-branch selection",
                                 "gravity dynamics"))
-        and scope_contains_all(index, "KERNEL-Z6-SYNCHRONIZATION",
-                               ("fixed known n",
-                                "q_n is not the checkpoint coordinate q",
-                                "no unindexed checkpoint-fiber",
+        and scope_contains_all(index, c8,
+                               ("<tau> = F_5^* union tau F_5^*",
+                                "branch invariant",
+                                "mixed-parity products are off-axis and branch-dependent",
+                                "no branch selection",
+                                "broader physical or gauge equivalence",
+                                "lift to L2-L6"))
+        and scope_contains_all(index, kernel,
+                               ("at each fixed known n",
+                                "q_n is a sheet label and not the checkpoint coordinate q",
+                                "no unknown-time or unindexed checkpoint-fiber",
                                 "physical-irreversibility",
-                                "L2-L6 claim is included"))
-        and normative["KERNEL-Z6-SYNCHRONIZATION"]["item_type"] == "OBLIGATION"
-        and normative["KERNEL-Z6-SYNCHRONIZATION"]["layer"] == "L1"
-        and normative["KERNEL-Z6-SYNCHRONIZATION"]["gate_ids"] == ""
-        and len(owner_dependencies) == 1
-        and owner_dependencies[0]["depends_on"] == "DEF-AUTONOMOUS-STATE"
-        and owner_dependencies[0]["relation"] == "REQUIRES"
-        and evidence["KERNEL-Z6-SYNCHRONIZATION"]["evidence_kind"]
-            == "INLINE_CANON"
-        and evidence["KERNEL-Z6-SYNCHRONIZATION"]
-            ["architecture_requirement"] == "none"
-        and programs["KERNEL-Z6-SYNCHRONIZATION"]["program_id"]
-            == "DECODER_CORE"
-        and programs["KERNEL-Z6-SYNCHRONIZATION"]["queue_role"] == "ROOT"
-        and programs["KERNEL-Z6-SYNCHRONIZATION"]["work_state"] == "READY"
-        and programs["KERNEL-Z6-SYNCHRONIZATION"]["work_mode"] == "FORMAL",
+                                "no L2-L6 claim is included"))
+        and normative[kernel]["item_type"] == "THEOREM"
+        and normative[kernel]["status"] == "T"
+        and normative[kernel]["layer"] == "L1"
+        and normative[kernel]["gate_ids"] == ""
+        and len(kernel_dependencies) == 1
+        and kernel_dependencies[0]["depends_on"] == "DEF-AUTONOMOUS-STATE"
+        and kernel_dependencies[0]["relation"] == "REQUIRES"
+        and evidence[kernel]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence[kernel]["location"] == kernel_path
+        and evidence[kernel]["sha256"] == kernel_digest
+        and evidence[kernel]["hash_mode"] == "bundle-manifest-sha256-v1"
+        and evidence[kernel]["architecture_requirement"] == "two-architecture"
+        and kernel not in programs
+        and normative[c8]["item_type"] == "THEOREM"
+        and normative[c8]["status"] == "T"
+        and normative[c8]["layer"] == "L1"
+        and normative[c8]["gate_ids"] == ""
+        and c8_dependencies == {
+            ("PENTIT-ROOT-FACTS", "REQUIRES"),
+            ("RAMIFIED-TM-LIFT", "REQUIRES"),
+            ("SQRT-PHI-DIGIT-LIFT", "REQUIRES"),
+        }
+        and evidence[c8]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence[c8]["location"] == c8_path
+        and evidence[c8]["sha256"] == c8_digest
+        and evidence[c8]["hash_mode"] == "bundle-manifest-sha256-v1"
+        and evidence[c8]["architecture_requirement"] == "two-architecture"
+        and c8 not in programs,
+    ))
+
+    drift = "DRIFT-IS-THE-READ"
+    coin_selector = "COIN-SELECTION-CONDITIONAL"
+    coin_premise = "COIN-MINIMAL-READ"
+    coin_derivation = "MINIMAL-READ-DERIVATION"
+    coin_gate = "GATE-L5-L1-MINIMAL-READ"
+    boost_path = "probes/P-BOOST-COHERENCE-1"
+    boost_digest = (
+        "0e2c9daaee5a7c189615f1941894015be2b9e59a71a1183cfc6ed207c9c8d083"
+    )
+    boost_items = (drift, coin_selector, coin_premise, coin_derivation)
+    expected_boost_dependencies = {
+        drift: {
+            ("BOOST-READING-SPLIT", "REQUIRES"),
+            ("BOOST-COUNT-LADDER", "BOUNDED_BY"),
+        },
+        coin_selector: {
+            ("BOOST-READING-SPLIT", "REQUIRES"),
+            ("BOOST-COUNT-LADDER", "BOUNDED_BY"),
+            (drift, "REQUIRES"),
+        },
+        coin_premise: {(coin_selector, "REQUIRES")},
+        coin_derivation: {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+            (coin_selector, "REQUIRES"),
+            ("OBSERVER-WRITE-PORT", "REQUIRES"),
+        },
+    }
+    actual_boost_dependencies = {
+        item: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == item
+        }
+        for item in boost_items
+    }
+    checks.append((
+        "BOOST",
+        "exact drift and selector ranking stay T; MINIMAL-READ stays H with derivation O",
+        has_status(index, drift, "T")
+        and has_status(index, coin_selector, "T")
+        and has_status(index, coin_premise, "H")
+        and has_status(index, coin_derivation, "O")
+        and normative.get(drift, {}).get("item_type") == "THEOREM"
+        and normative.get(drift, {}).get("layer") == "L5"
+        and normative.get(drift, {}).get("gate_ids") == ""
+        and normative.get(coin_selector, {}).get("item_type") == "THEOREM"
+        and normative.get(coin_selector, {}).get("layer") == "MULTI"
+        and normative.get(coin_selector, {}).get("gate_ids") == ""
+        and normative.get(coin_premise, {}).get("item_type") == "HYPOTHESIS"
+        and normative.get(coin_premise, {}).get("layer") == "L1"
+        and normative.get(coin_premise, {}).get("gate_ids") == ""
+        and normative.get(coin_derivation, {}).get("item_type") == "OBLIGATION"
+        and normative.get(coin_derivation, {}).get("layer") == "MULTI"
+        and normative.get(coin_derivation, {}).get("gate_ids") == coin_gate
+        and actual_boost_dependencies == expected_boost_dependencies
+        and all(
+            evidence.get(item, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(item, {}).get("location") == boost_path
+            and evidence.get(item, {}).get("sha256") == boost_digest
+            and evidence.get(item, {}).get("hash_mode")
+                == "bundle-manifest-sha256-v1"
+            and evidence.get(item, {}).get("architecture_requirement")
+                == "two-architecture"
+            for item in boost_items
+        )
+        and scope_contains_all(
+            index, drift,
+            ("division-free spectral skeleton",
+             "minimum 16/5",
+             "V_inf(1) = -beta_1 A_1",
+             "for every N >= 1",
+             "P1 and P2 are premises rather than conclusions",
+             "no decoherence"),
+        )
+        and scope_contains_all(
+            index, coin_selector,
+            ("exactly {beta_1,beta_3}",
+             "generic/rung multiplicities 2/1",
+             "non-integral half-rung",
+             "S1 minimum generic multiplicity",
+             "S3 maximum coherent half-width",
+             "theorem adopts no selector"),
+        )
+        and scope_contains_all(
+            index, coin_premise,
+            ("adopts beta_1 by MINIMAL-READ",
+             "MAXIMAL-REACH",
+             "not a general equivalence",
+             "no claim that the decoder architecture forces MINIMAL-READ"),
+        )
+        and scope_contains_all(
+            index, coin_derivation,
+            ("complete registered decoder architecture",
+             "without adopting MINIMAL-READ as a premise",
+             "typed L5-read to L1-coin selection route"),
+        )
+        and all(
+            phrase.lower() in index[coin_derivation]["falsifier"].lower()
+            for phrase in (
+                "complete admissible decoder class is proved nonempty",
+                "fully compliant beta_1 and beta_3 realizations",
+                "failure of no-feedback or any one favored route is STOP",
+                "classifies the complete admissible class",
+            )
+        )
+        and gates.get(coin_gate, {}).get("owner_item_id") == coin_derivation
+        and gates.get(coin_gate, {}).get("from_layer") == "L5"
+        and gates.get(coin_gate, {}).get("to_layer") == "L1"
+        and gates.get(coin_gate, {}).get("gate_kind") == "OPEN_SELECTION"
+        and all(
+            phrase.lower() in gates[coin_gate]["decision_condition"].lower()
+            for phrase in (
+                "complete typed decoder carrier",
+                "cover-to-output map",
+                "accumulator/equality rule",
+                "redundancy theorem",
+                "uniquely force w = 1 and beta_1",
+                "complete admissible class is proved nonempty",
+                "fully compliant beta_1 and beta_3 realizations",
+                "failure of one favored route is only STOP",
+            )
+        )
+        and drift not in programs
+        and coin_selector not in programs
+        and programs.get(coin_premise, {}).get("program_id") == "DECODER_CORE"
+        and programs.get(coin_premise, {}).get("queue_role") == "FOLLOWUP"
+        and programs.get(coin_premise, {}).get("work_state") == "BLOCKED"
+        and programs.get(coin_premise, {}).get("work_mode") == "FORMAL"
+        and programs.get(coin_derivation, {}).get("program_id") == "DECODER_CORE"
+        and programs.get(coin_derivation, {}).get("queue_role") == "ROOT"
+        and programs.get(coin_derivation, {}).get("work_state") == "STOP"
+        and programs.get(coin_derivation, {}).get("work_mode") == "FORMAL",
     ))
 
     checks.append((
@@ -517,8 +679,10 @@ def run():
             index, physical_owner,
             ("epsilon_read = chi_Q chi_F as typed L5 data",
              "rather than quotienting it", "coherence across all 48 selectors",
-             "mu_i = 1/6", "1/6 = (1/2)(1/3)",
-             "comparison actions only", "no enlarged postcomposition gauge"),
+             "mu_i = 1/6", "M_TM = (1/3)P1 + (2/15)P5",
+             "is an outcome of the bridge and is not required of it",
+             "comparison actions only", "enlarge no postcomposition gauge",
+             "select no representative among the 48 selectors"),
         )
         and gates.get(selector_gate, {}).get("owner_item_id") == frozen_owner
         and gates.get(selector_gate, {}).get("gate_kind") == "FIRED_NEGATIVE"
@@ -635,6 +799,7 @@ def run():
 
     metro = "METRO-FINITE-STATE-RATIONALITY"
     metro_calculus = "METRO-REDUCTION-CALCULUS"
+    metro_arrows = "METRO-REDUCTION-ARROWS"
     metro_child = "METRO-ADMISSIBILITY-DIM"
     metro_residual = "METRO-ADMISSIBILITY"
     metro_gate = "GATE-L5-L6-METRO-NORMALIZATION"
@@ -643,7 +808,7 @@ def run():
             (row["depends_on"], row["relation"])
             for row in dependencies if row["item_id"] == item
         }
-        for item in (metro, metro_calculus, metro_child, metro_residual)
+        for item in (metro, metro_arrows, metro_calculus, metro_child, metro_residual)
     }
     metro_residual_edges = [
         row for row in dependencies
@@ -651,7 +816,7 @@ def run():
     ]
     checks.append((
         "METRO",
-        "finite-state theorem stays T; typed calculus, dimensional child, and residual stay O",
+        "finite-state theorem stays T; reduction arrows stay C; typed calculus, dimensional child, and residual stay O",
         has_status(index, metro, "T")
         and normative.get(metro, {}).get("item_type") == "THEOREM"
         and normative.get(metro, {}).get("status") == "T"
@@ -679,6 +844,60 @@ def run():
         )
         and "row-sum mismatch is outside the declared q-dfao input schema"
         in index[metro]["falsifier"].lower()
+        and has_status(index, metro_arrows, "C")
+        and normative.get(metro_arrows, {}).get("item_type") == "COMPUTATION"
+        and normative.get(metro_arrows, {}).get("status") == "C"
+        and normative.get(metro_arrows, {}).get("layer") == "L5"
+        and normative.get(metro_arrows, {}).get("gate_ids") == ""
+        and index.get(metro_arrows, {}).get("evidence")
+        == "probes/P-METRO-REDUCTION-ARROWS-4"
+        and evidence.get(metro_arrows, {}).get("evidence_id")
+        == "EV-METRO-REDUCTION-ARROWS"
+        and evidence.get(metro_arrows, {}).get("evidence_kind")
+        == "PUBLIC_PROBE"
+        and evidence.get(metro_arrows, {}).get("location")
+        == "probes/P-METRO-REDUCTION-ARROWS-4"
+        and evidence.get(metro_arrows, {}).get("sha256")
+        == "7864cb2ea6a6939cc477efa89f005fd71943091b446866decfa5a4db9036e8c6"
+        and evidence.get(metro_arrows, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(metro_arrows, {}).get("architecture_requirement")
+        == "one-architecture"
+        and metro_dependencies[metro_arrows] == {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, metro_arrows,
+            ("typed L5 U_RF tuple",
+             "four admitted reductions have exact preconditions and transports",
+             "state relabeling by a bijection",
+             "closure of A0 under every single-digit map",
+             "multi-action Nerode quotient",
+             "congruence for every coordinate i >= 2",
+             "coordinate 1 automatic",
+             "coordinate permutation transporting coordinate names",
+             "tau_R = identity",
+             "exact pointwise transported L5-stream equality",
+             "zero congruence counterexamples",
+             "exactly 1024 two-state and 4251528 three-state protocols",
+             "computation-only L5 scope",
+             "no forbidden-transformation catalogue",
+             "common q^k blocking",
+             "completeness of approx_red",
+             "or L6, cross-layer, physical, or SI claim"),
+        )
+        and all(
+            phrase.lower() in index[metro_arrows]["falsifier"].lower()
+            for phrase in (
+                "pinned evidence bundle or exact stdout differs",
+                "17 frozen gates fails",
+                "admitted arrow changes a transported pointwise L5 stream",
+                "either exhaustive family yields a congruence counterexample",
+                "obligation B", "common q^k blocking",
+                "approx_red completeness", "every L6",
+            )
+        )
+        and metro_arrows not in programs
         and has_status(index, metro_calculus, "O")
         and normative.get(metro_calculus, {}).get("item_type") == "OBLIGATION"
         and normative.get(metro_calculus, {}).get("status") == "O"
@@ -698,17 +917,33 @@ def run():
         and metro_dependencies[metro_calculus] == {
             ("DEF-ARCHITECTURE", "REQUIRES"),
             (metro, "REQUIRES"),
+            (metro_arrows, "REQUIRES"),
         }
         and scope_contains_all(
             index, metro_calculus,
-            ("typed L5 reduction calculus on U_RF tuples",
-             "exact arrow preconditions", "four declared allowed arrows",
-             "forbidden transformations with exact witnesses",
-             "allowed-start and input-index transports",
-             "rational output transport tau_R",
-             "pointwise L5-stream intertwining",
-             "finite-zig-zag equivalence approx_red",
+            ("remaining open L5 reduction-calculus obligations",
+             "after METRO-REDUCTION-ARROWS [C]",
+             "obligation B",
+             "complete forbidden-transformation catalogue",
+             "obligation D", "common q^k blocking",
+             "scientific decision", "terminal value",
+             "obligation E",
+             "completeness of the finite-zig-zag equivalence approx_red",
+             "obligations A and C are separated",
+             "do not close B, D, or E",
              "no normalization or cross-layer gate is owned"),
+        )
+        and all(
+            phrase.lower() in index[metro_calculus]["falsifier"].lower()
+            for phrase in (
+                "every forbidden entry has an exact witness",
+                "common q^k blocking",
+                "decision and terminal-value transport",
+                "approx_red is complete",
+                "STOP while any forbidden-witness",
+                "closes only obligations A and C",
+                "leaves this row O and STOP",
+            )
         )
         and programs.get(metro_calculus, {}).get("program_id") == "DECODER_CORE"
         and programs.get(metro_calculus, {}).get("queue_role") == "ROOT"

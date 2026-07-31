@@ -1,0 +1,23 @@
+P-READ-REDUNDANCY-1 verifier
+basis: Public Canon v27, tag canon-v27, content commit 116b62ed
+scope: A no-feedback tolerance; B prime-support bound; C fences
+arithmetic: int and Fraction only; no float in this file
+
+A1 composition closure: funnel equals its polynomial, 10 points PASS
+A2 TYPED witness carries m = 6 over Z, 8 port orders, Q and Q(sqrt5) PASS  9 values
+A3 sixfold cover: 6 sheets, shift-invariant offsets, distinct types PASS
+A4 PART pole: diagonal common-value map carries every m in 1..8 PASS
+A5 WALL: over Q every m in 1..12 carries PASS
+B1 orbit counts formula equals enumeration, m in {1,2,5,6}, weight <= 4 PASS
+B2 weight-1 stratum is {(1)} with orbit m; diagonal degree = weight PASS
+B3 ring table: 1/m in Z_S iff primes(m) subset S, hand cells agree PASS
+B4 sufficiency: P = e_1/m carries m over Z_S with primes(m) in S PASS
+B5 necessity at m = 2: 390625 integer symmetric candidates PASS  zero satisfy the diagonal identity
+B6 necessity at m = 6, dyadic power-sum family: 1922375 candidates PASS  zero satisfy the diagonal identity
+B7 necessity at m = 6, dyadic elementary family: 1922375 candidates PASS  zero satisfy the diagonal identity
+B8 cross-check 1/6 in Z[1/10]: direct scan agrees with the rule PASS  both say no
+C1 registered places: m=1 free; m=2 needs 2; m=6 needs 3 and is obstructed; m=5 needs 5 PASS
+C2 blindness: {2,6} forces 2; {2,10} nonunique; {6,10} forces 10 PASS
+C3 range: (6 beta_1)^2 = 36/5 > 1; (2 beta_1)^2 = 4/5 < 1 PASS
+
+SUMMARY 16/16 PASS

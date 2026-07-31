@@ -1,0 +1,15 @@
+C-TM-CORR-ZEROS-1 breaker
+independent code paths: bit-parallel counting, 2x2 matrix products,
+no reuse of the verifier's memoized recursion
+
+B1 (F1/F2) bit-parallel S_k(2^22), 1 <= k <= 2000 no counterexample  max|S| on predicted zeros = 512 (k=1280); min |S|/N on predicted non-zeros = 2643/2097152 (k=1793)
+B1b (F1/F2, added leg) mean scaling 2^20 -> 2^22, 1 <= k <= 2000 no counterexample  predicted zeros: mean ratio <= 1/4 (k=5); predicted non-zeros: mean ratio >= 2817/3076 (k=1277); families disjoint
+B2 (F6) 2x2 matrix product vs independent memoization, 0 <= k <= 20000 no counterexample  agree everywhere
+B3 (F1/F7) q*2^a for odd q <= 4001, a <= 64, plus 256 pinned 512-bit k no counterexample  seed C-TM-CORR-ZEROS-1/breaker/B3/v1; no rogue zero
+B3b (F7) c(p) = c(p+1) for 1 <= p <= 100000 no counterexample  only p = [1]
+B4 convention sweep: complemented word and reversed shift, k <= 600 no counterexample  S_k identical under both conventions
+B5 scope fence: {0,1}-weighted correlation, 1 <= k <= 2000 no counterexample  no zero of the {0,1} correlation on the range; it is nonzero at k = 5, 7, 10, 14 where the balanced correlation vanishes
+B5 note d(k) = (1 + c(k))/4 at k = 1,3,5,7: 1/6, 1/3, 1/4, 1/4
+B6 (F8) no float in any computed or emitted numeric field no counterexample  int and Fraction only
+
+NO FALSIFIER FIRED
