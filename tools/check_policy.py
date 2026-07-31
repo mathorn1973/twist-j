@@ -120,24 +120,37 @@ if workflow_files != {"policy.yml"}:
 workflow = (workflows / "policy.yml").read_text(encoding="utf-8")
 for invariant in (
     "permissions:\n  contents: read",
-    "timeout-minutes: 15",
+    "jobs:\n  architecture:",
+    "name: architecture-${{ matrix.architecture }}",
+    "fail-fast: false",
+    "architecture: x86_64\n            runner: ubuntu-latest",
+    "architecture: aarch64\n            runner: ubuntu-24.04-arm",
+    "runs-on: ${{ matrix.runner }}",
+    "  check:\n    if: github.ref_type != 'tag' && github.event_name != 'release'\n    needs: architecture\n    runs-on: ubuntu-latest",
+    "  publication:\n    if: github.ref_type == 'tag' || github.event_name == 'release'\n    runs-on: ubuntu-latest",
     "actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5",
     "persist-credentials: false",
     "actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
     "python tools/check_policy.py",
     "python tools/check_canon.py",
     "python tools/check_ledger.py",
-    "python tools/check_activation.py --full",
-    "name: Run activation readback on immutable publication events",
-    "if: github.ref_type == 'tag' || github.event_name == 'release'",
-    "python tools/check_activation.py --full --post-activation",
-    "name: Reproduce changed public probes\n        if: github.ref_type != 'tag' && github.event_name != 'release'",
-    "name: Reproduce changed minimal reproductions\n        if: github.ref_type != 'tag' && github.event_name != 'release'",
     "python tools/check_verifier.py --base \"$BASE_SHA\"",
     "python tools/check_reproduce.py --base \"$BASE_SHA\"",
+    "python tools/check_activation.py --full --post-activation",
+    "echo \"TWO-ARCHITECTURE CHECK PASS\"",
 ):
     if invariant not in workflow:
         fail(f"workflow lacks security invariant: {invariant}")
+if workflow.count("runner: ubuntu-latest") != 1:
+    fail("workflow must declare exactly one x86_64 matrix runner")
+if workflow.count("runner: ubuntu-24.04-arm") != 1:
+    fail("workflow must declare exactly one aarch64 matrix runner")
+if workflow.count("actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a") != 1:
+    fail("workflow must upload the activation manifest exactly once")
+publication_at = workflow.find("\n  publication:")
+upload_at = workflow.find("actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a")
+if publication_at < 0 or upload_at < publication_at:
+    fail("activation artifact upload must live only in the publication job")
 if "pull_request_target:" in workflow:
     fail("pull_request_target is forbidden")
 

@@ -534,11 +534,12 @@ def reproduce(probe: Path) -> None:
 
     if os.environ.get("GITHUB_ACTIONS") == "true":
         github_architecture = host_platform.machine()
-        if github_architecture != "x86_64":
+        if github_architecture not in {"x86_64", "aarch64"}:
             fail(
-                f"{name} GitHub runner architecture must be x86_64, "
-                f"received {github_architecture}"
+                f"{name} GitHub runner architecture must be x86_64 or "
+                f"aarch64, received {github_architecture}"
             )
+        print(f"VERIFY ARCHITECTURE {name} {github_architecture}")
 
     environment = os.environ.copy()
     environment.update(
