@@ -204,6 +204,7 @@ ENTROPY-CYLINDER-CUT	DEF-ARCHITECTURE	REQUIRES	the finite-cylindrical ansatz is 
 ENTROPY-LIFT-DEFECT	DEF-ARCHITECTURE	REQUIRES	the literal lift falsifier is a statement about the declared finite-generator presentation
 ENTROPY-JOINT-CESARO-LAW	DEF-ARCHITECTURE	REQUIRES	the frozen window law is computed for the declared driven kernel
 ENTROPY-BLOCK-HALVING	DEF-ARCHITECTURE	REQUIRES	the block maps are compositions of the declared branch maps along the declared driver
+ENTROPY-RG-RETURN	DEF-ARCHITECTURE	REQUIRES	the block maps are compositions of the declared branch maps along the declared driver
 ENTROPY-LIVING-SET	DEF-ARCHITECTURE	REQUIRES	the living halves and restricted bijections are finite facts of the declared driven kernel
 ENTROPY-UNIQUE-PAST	ENTROPY-LIVING-SET	REQUIRES	the caterpillar backward structure uses the bijections between the two living halves
 ENTROPY-COUNT-MATCH	ENTROPY-LIVING-SET	REQUIRES	the arithmetic carrier count is compared with the living-trajectory count
@@ -307,7 +308,7 @@ TM-SYM2-REVERSAL-CLOSURE	TM-SYM2-SEMILINEAR-TWOFOLD	REQUIRES	the reversal classi
 TM-SYM2-PHYSICAL-MEASURE	DEF-ARCHITECTURE	REQUIRES	the successor physical bridge remains conditional on the declared public architecture
 TM-SYM2-PHYSICAL-MEASURE	DEF-ACTION-LAYERS	REQUIRES	the successor must supply the registered L5-to-L6 gate and typed endpoints
 TM-SYM2-PHYSICAL-MEASURE	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the physical codomain and exact common operator use the registered six-line frame
-TM-SYM2-PHYSICAL-MEASURE	GYRON-DENSITY	REQUIRES	the proposed physical normalization must remain compatible with the registered density reading
+TM-SYM2-PHYSICAL-MEASURE	GYRON-DENSITY	REQUIRES	the proposed physical normalization must be typed compatibly with the registered density reading; agreement of values is a result of the bridge, not a precondition on it
 TM-SYM2-PHYSICAL-MEASURE	MEASURE-BORN-VERB	REQUIRES	the physical measure clause must be a typed Born-square reading rather than an assumed weight
 TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-PROJECTIVE-FOURFOLD	BOUNDED_BY	the successor must consume the complete fourfold record and may not repair the fired one-orbit threshold
 TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-SEMILINEAR-TWOFOLD	BOUNDED_BY	Gamma_sl is an exact comparison image with two blocks but is not an adopted physical gauge and supplies no L6 lift
@@ -344,3 +345,8 @@ MINIMAL-READ-DERIVATION	DEF-ARCHITECTURE	REQUIRES	any derivation must start from
 MINIMAL-READ-DERIVATION	DEF-ACTION-LAYERS	REQUIRES	the proposed selection route must type its L5 read and L1 coin endpoints without smuggling a cross-layer lift
 MINIMAL-READ-DERIVATION	COIN-SELECTION-CONDITIONAL	REQUIRES	the derivation target uses the exact complete coin pair, cost coordinates, and conditional rankings
 MINIMAL-READ-DERIVATION	OBSERVER-WRITE-PORT	REQUIRES	the no-feedback route cannot proceed until completed observer terminality and its full dependency graph close positively
+READ-REDUNDANCY-PRIME-SUPPORT	DEF-ARCHITECTURE	REQUIRES	the accumulator, funnel and cover objects are read inside the declared architecture and are conditional on it
+READ-REDUNDANCY-PRIME-SUPPORT	COIN-SELECTION-CONDITIONAL	REQUIRES	the admissible pair and its generic and rung multiplicities 2, 6, 1 and 5 are the registered input the corollary is stated against
+READ-REDUNDANCY-PRIME-SUPPORT	DRIFT-IS-THE-READ	REQUIRES	the diagonal read condition is the registered drift normalization and its coherent range, used to motivate the identity output
+READ-REDUNDANCY-PRIME-SUPPORT	Z2-PLACES-SPLIT	REQUIRES	the constant rings Z_S at S = {2} and S = {2,5} are the registered places
+READ-REDUNDANCY-PRIME-SUPPORT	TWO-PLACE-PHYSICS	BOUNDED_BY	the read and write places name only the registered dictionary; the prime-support classification is arithmetic and the dictionary bounds its reading without being a premise of the proof

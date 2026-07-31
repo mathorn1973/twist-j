@@ -1,12 +1,78 @@
 # Canon changelog (public series)
 
 
-## Public Canon v27
+## Public Canon v29
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 214 claims; 0 T-LOCK, 113 T, 40 D, 23 C, 4 H, 24 O, 10 F; 28 live H/O.
+Registry snapshot: 216 claims; 0 T-LOCK, 114 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v29 carries exactly one item.
+
+ENTROPY-RG-RETURN [C] registers the fixed-point tower and the multiplier
+spectra of the renormalized block maps on the recurrent core, at the dyadic
+scales `k = 0..14` for both letters. Outside two residues the maps fix no
+state, on the core or off it. At `k = 0` each letter fixes one reflection
+centre in the size-10 component with multiplier minus the identity, and at
+every scale with `k = 1 mod 4` the fixed set is exactly the opposite living
+half with the identity as multiplier at all 3125 of its states. The scales
+carrying a full-half return are exactly those with block length
+`2^k = 2 mod 5`, and the scales with `2^k = 1 mod 5` carry none. The evidence
+is the immutable `probes/P-ENTROPY-RG-RETURN-1` bundle, whose aarch64 local leg
+and required GitHub x86_64 leg produced the same 13-gate PASS transcript byte
+for byte, satisfying the two-architecture computation gate. The status is C and
+is earned by exhaustive finite computation on the declared carrier; nothing is
+proved beyond that range.
+
+The row closes at birth inside its finite scope, so no live H or O row moves
+and the frontier is unchanged. In particular the missing monotone function of
+scale is not supplied: this fold registers no C-function, no positivity
+statement, no continuum or scaling limit, no critical exponent, no measure and
+no L6 statement, and it reads the residue class physically nowhere. Its
+agreement with the order of the ramified digit unit of RAMIFIED-TM-LIFT is an
+arithmetic consonance and is registered as one. The image re-audit it carries
+extends the range of ENTROPY-BLOCK-HALVING as a computation only; that row is
+unchanged.
+
+
+## Public Canon v28
+
+Public Canon v28 carries exactly two items.
+
+READ-REDUNDANCY-PRIME-SUPPORT [T] registers the exact read-redundancy
+classification for polynomial accumulators over Z_S: absence of feedback alone
+bounds nothing, while for anonymous total accumulators multiplicity m carries
+if and only if every prime divisor of m lies in S. The evidence is the
+immutable `probes/P-READ-REDUNDANCY-1` bundle, claimed in issue 216, whose
+aarch64 local leg and required GitHub x86_64 leg produced the same 16-gate
+PASS transcript byte for byte, satisfying the two-architecture computation
+gate. The status is earned by the symbolic proof, which the verifier audits
+rather than establishes; the three exhaustion legs corroborate it inside their
+frozen boxes only. MINIMAL-READ-DERIVATION [O] stays O and STOP and
+COIN-MINIMAL-READ [H] is unchanged; the row closes nothing and derives no
+physically canonical coin.
+
+TM-SYM2-PHYSICAL-MEASURE [O] receives a SCOPE_CHANGE, O to O. The previous
+scope required a future physical bridge to preserve the exact
+selector-independent outputs and to derive the typed factorization, which are
+the values the bridge would be establishing. The amendment moves them from the
+requirement side to the result side and adds the explicit CIRCULAR rejection,
+on the pattern of CANON13-SCOPE-DE-CONFORMAL-WEIGHT. The fired N2 selector
+gate, the three exact TM-SYM2 classifications, the retained reading
+orientation and the prohibition on gauge enlargement are preserved unchanged.
+
+This fold registers no physical effect family, no L6 measure, no apparatus,
+and no decoder completion. The QDD algebraic factorization package, TM-CORR-
+ZEROS, and the OBSERVER-WRITE-PORT retirement proposal are all deliberately
+excluded from this manifest.
+
+## Public Canon v27
+
+<!-- BEGIN GENERATED CANON27 COUNTS -->
+Registry snapshot: 214 claims; 0 T-LOCK, 113 T, 40 D, 23 C, 4 H, 24 O, 10 F; 28 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON27 COUNTS -->
 
 Public Canon v27 registers two exact rows from the immutable
 `probes/P-BOOST-COHERENCE-1` bundle. DRIFT-IS-THE-READ [T] packages the

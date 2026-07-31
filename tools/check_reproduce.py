@@ -25,6 +25,16 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def touches_canon(paths: "list[str]") -> bool:
+    """True when a changed path lies under canon/.
+
+    A Canon change can invalidate a verifier that reads canon/ at run time even
+    though that verifier's own directory is untouched, so the changed-path
+    selection below widens to every directory when this returns True.
+    """
+    return any(Path(raw).parts[:1] == ("canon",) for raw in paths if raw)
+
+
 def changed_reproductions(base: str | None) -> list[Path]:
     if not REPRODUCE.exists():
         return []
@@ -40,8 +50,12 @@ def changed_reproductions(base: str | None) -> list[Path]:
     )
     if result.returncode:
         fail(f"cannot read changed paths: {result.stderr.strip()}")
+    changed = result.stdout.splitlines()
+    if touches_canon(changed):
+        print("REPRODUCE FULL SWEEP canon change")
+        return sorted(path for path in REPRODUCE.iterdir() if path.is_dir())
     names = set()
-    for raw in result.stdout.splitlines():
+    for raw in changed:
         parts = Path(raw).parts
         if len(parts) >= 3 and parts[0] == "reproduce":
             names.add(parts[1])
