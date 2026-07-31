@@ -277,8 +277,8 @@ def classify_leg_pair(
                 fail(f"{probe} has empty recorded {label} {name}")
     if local["architecture"] not in {"aarch64", "x86_64"}:
         fail(f"{probe} local architecture must be x86_64 or aarch64")
-    if github["architecture"] != "x86_64":
-        fail(f"{probe} recorded GitHub architecture must be x86_64")
+    if github["architecture"] not in {"aarch64", "x86_64"}:
+        fail(f"{probe} recorded GitHub architecture must be x86_64 or aarch64")
     if local["exit_code"] != "0":
         fail(f"{probe} recorded local exit_code is not zero")
     if (
@@ -294,7 +294,7 @@ def classify_leg_pair(
         fail(f"{probe} recorded GitHub verifier SHA-256 differs")
     if not github_success:
         fail(f"{probe} lacks a successful recorded GitHub leg")
-    if local["architecture"] == "aarch64":
+    if local["architecture"] != github["architecture"]:
         return "TWO-ARCHITECTURE"
     return "REPRODUCTION-ONLY"
 
@@ -534,11 +534,12 @@ def reproduce(probe: Path) -> None:
 
     if os.environ.get("GITHUB_ACTIONS") == "true":
         github_architecture = host_platform.machine()
-        if github_architecture != "x86_64":
+        if github_architecture not in {"x86_64", "aarch64"}:
             fail(
-                f"{name} GitHub runner architecture must be x86_64, "
-                f"received {github_architecture}"
+                f"{name} GitHub runner architecture must be x86_64 or "
+                f"aarch64, received {github_architecture}"
             )
+        print(f"VERIFY ARCHITECTURE {name} {github_architecture}")
 
     environment = os.environ.copy()
     environment.update(

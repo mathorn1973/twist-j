@@ -123,9 +123,42 @@ class CheckVerifierTests(unittest.TestCase):
         )
         self.assert_record_failure(record)
 
-    def test_github_leg_must_be_x86_64(self) -> None:
+    def test_github_leg_may_be_aarch64_when_the_local_leg_differs(self) -> None:
+        """The workflow runs both architectures, so either may be the recorded
+        remote leg. What the gate needs is that the two legs differ."""
         record = parse_run(
-            run_text(github_architecture="aarch64"),
+            run_text(local_architecture="x86_64", github_architecture="aarch64"),
+            "fixture",
+        )
+        self.assertEqual(
+            recorded_leg_class(
+                record, "P-FIXTURE", VERIFIER_SHA256, STDOUT_SHA256
+            ),
+            "TWO-ARCHITECTURE",
+        )
+
+    def test_matching_architectures_are_reproduction_only(self) -> None:
+        """Agreement on one architecture is reproduction, not a gate, and is
+        recorded as such rather than rejected."""
+        for architecture in ("x86_64", "aarch64"):
+            with self.subTest(architecture=architecture):
+                record = parse_run(
+                    run_text(
+                        local_architecture=architecture,
+                        github_architecture=architecture,
+                    ),
+                    "fixture",
+                )
+                self.assertEqual(
+                    recorded_leg_class(
+                        record, "P-FIXTURE", VERIFIER_SHA256, STDOUT_SHA256
+                    ),
+                    "REPRODUCTION-ONLY",
+                )
+
+    def test_unknown_github_architecture_is_rejected(self) -> None:
+        record = parse_run(
+            run_text(github_architecture="riscv64"),
             "fixture",
         )
         self.assert_record_failure(record)
