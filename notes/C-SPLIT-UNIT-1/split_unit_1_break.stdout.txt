@@ -1,0 +1,11 @@
+C-SPLIT-UNIT-1 break attempt. Independent paths.
+PASS K1 charpoly of mult by (2 + z^2 + z^3) is (x^2 - 3x + 1)^2 = x^4 - 6x^3 + 11x^2 - 6x + 1
+PASS K2a resultant calibration: Res(Phi5, x) = 1, Res(Phi5, 1 - x) = 5, Res(Phi5, 2) = 16
+PASS K2b second path: N(1 + zeta^k) = 1 and N(1 - zeta^k) = 5 for all k, so the only 1 + torsion units are the four conjugates of J
+PASS K3 brute force over 16 sign maps: exactly the trivial map and chi5 = (+, -, -, +) are multiplicative
+PASS K3b constructed counterexample: the partition map (+, +, -, -) is not multiplicative
+PASS K3c direct attempts at a second index-2 subgroup fail: {1,2}, {1,3}, {1,2,3} are not closed
+PASS K4 every unit with coefficients in [-2,2]^4 equals +-zeta^k phi^m (found 58, outside 0 expected)
+PASS K5 orbit size data are exactly {phi^-2 twice, phi^2 twice}: quantum |m| = 1 across the whole orbit
+GATES 8 PASS 8 FAIL 0
+RESULT: ALL PASS
