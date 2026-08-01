@@ -1,12 +1,20 @@
 # Canon changelog (public series)
 
 
-## Public Canon v29
+## Public Canon v30
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
 Registry snapshot: 216 claims; 0 T-LOCK, 114 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v30 carries no new item. It republishes the v29 ledger with the
+reproduction fixture corrected, so that a tagged tree passes its own activation
+readback and the release can carry assets. The v29 gap is recorded in
+`notes/canon/V29-RELEASE-ERRATUM.md` and is not repaired by this version.
+
+
+## Public Canon v29
 
 Public Canon v29 carries exactly one item.
 
