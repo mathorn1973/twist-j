@@ -1,11 +1,11 @@
-# Mathlib environment map
+# Mathlib environment map and manual theorem audit
 
-Status: **NON-CANONICAL ENVIRONMENT INVENTORY ONLY**.
+Status: **NON-CANONICAL MANUAL LABORATORY ONLY**.
 
 This file records the exact manual-development environment and maps selected
-upstream API names needed by the frozen selection contract. It proves no
-`MinimalCM` theorem, creates no public evidence, and is not an `A-LEAN-*`
-package.
+upstream API names needed by the frozen selection contract. It also records
+the manual build and axiom audit of the first project theorem. It creates no
+public evidence or status and is not an `A-LEAN-*` package.
 
 ## Immutable inputs
 
@@ -51,13 +51,31 @@ of an API name is not a proof of any project theorem.
 | Contract block | Direct import | Upstream anchors | Environment finding |
 |---|---|---|---|
 | Abelianization | `Mathlib.GroupTheory.Abelianization.Defs` | `Abelianization`, `.of`, `.lift`, `.lift_of_comp` | Universal-property API is present; the Hom-to-`C₂` equivalence remains a project lemma. |
-| Square-root floor | `Mathlib.Algebra.Module.ZMod`, `Mathlib.LinearAlgebra.Dual.Lemmas`, `Mathlib.GroupTheory.OrderOfElement` | `nsmulAddMonoidHom`, `QuotientAddGroup.zmodModule`, `Module.forall_dual_apply_eq_zero_iff`, `addOrderOf` | The quotient-dual route is available; the quarter-turn theorem is not claimed here. |
+| Square-root floor | `Mathlib.Algebra.Field.ZMod`, `Mathlib.Algebra.Module.ZMod`, `Mathlib.LinearAlgebra.Basis.VectorSpace`, `Mathlib.LinearAlgebra.Dual.Lemmas`, `Mathlib.GroupTheory.OrderOfElement` | `nsmulAddMonoidHom`, `QuotientAddGroup.zmodModule`, `Module.forall_dual_apply_eq_zero_iff`, `addOrderOf_eq_prime_pow` | The quotient-dual route is consumed by the named project theorem below; its presence here remains a manual non-canonical audit, not public evidence. |
 | Finite bit classification | `Mathlib.GroupTheory.Sylow` | `Sylow`, `Sylow.card_eq_multiplicity` | Sylow primitives are present; the unique-bit classification remains a project theorem. |
 | CM conjugation | `Mathlib.NumberTheory.NumberField.CMField` | `NumberField.IsCMField`, `.complexConj`, `.orderOf_complexConj` | Complex conjugation is available in `Gal(K/K⁺)`; transport to `Gal(K/ℚ)` must be constructed and audited. |
 | Units | `Mathlib.NumberTheory.NumberField.Units.DirichletTheorem` | `NumberField.Units.rank`, `.rank_modTorsion` | Dirichlet-unit primitives are present; the CM degree-to-rank formula still needs assembly. |
 | Minkowski | `Mathlib.NumberTheory.NumberField.Discriminant.Basic` | `NumberField.discr`, `.abs_discr_ge_of_isTotallyComplex` | The required totally-complex lower-bound theorem is present. |
 | Cyclotomic witness | `Mathlib.NumberTheory.Cyclotomic.Gal`, `Mathlib.NumberTheory.Cyclotomic.Discriminant`, `Mathlib.NumberTheory.NumberField.CMField` | `IsCyclotomicExtension.autEquivPow`, `.discr_odd_prime`, `.Rat.isCMField` | The cyclotomic primitives are present; `discr_odd_prime` computes a power-basis discriminant, not automatically `NumberField.discr`. |
 | Dirichlet primitives | `Mathlib.NumberTheory.DirichletCharacter.Basic` | `.conductor`, `.IsPrimitive`, `.primitiveCharacter`, `.Even`, `.Odd`, `.conductor_inv` | Conductor and parity primitives are present. |
+
+## First project theorem
+
+`TwistJ/MinimalCM/CMConjugationBit.lean` defines:
+
+```text
+TwistJ.MinimalCM.exists_addOrderOf_four_of_all_quadratic_chars_vanish
+```
+
+Its signature uses only an additive commutative group, a nonzero element `c`
+with `2 • c = 0`, and the condition that every `G →+ ZMod 2` sends `c` to
+zero. It concludes that some `τ` has `addOrderOf τ = 4` and `2 • τ = c`.
+It does not use finiteness or the cardinality of the character group.
+
+No finite unique-bit classification, Sylow theorem, CM-field statement, unit
+rank formula, discriminant bound, cyclotomic witness, conductor-discriminant
+formula, `ℚ(ζ₅)` minimality theorem, or physical interpretation is claimed by
+this module.
 
 ## Open hard gaps
 
@@ -82,8 +100,11 @@ On the neutral platform recorded above:
 - a second invocation left `lake-manifest.json` byte-identical at the recorded
   SHA-256 and byte count;
 - `lake env lean --version` reported Lean 4.30.0 at commit `d024af0...`;
-- `lake build TwistJLeanNote` completed with exit 0; and
-- `lake env lean Audit.lean` completed with exit 0.
+- `lake build TwistJLeanNote` completed with exit 0;
+- `lake build TwistJ` completed with exit 0;
+- `lake env lean Audit.lean` completed with exit 0; and
+- the printed footprint of the project theorem contains no `sorryAx` or local
+  axiom.
 
 No stdout from these manual checks is retained in the repository. These facts
 describe environment validation only and are not a reproduction or an
@@ -97,6 +118,7 @@ From this directory in a Linux-compatible environment:
 lake update
 lake env lean --version
 lake build TwistJLeanNote
+lake build TwistJ
 lake env lean Audit.lean
 ```
 

@@ -10,3 +10,6 @@ require mathlib from git
 
 @[default_target]
 lean_lib TwistJLeanNote
+
+lean_lib TwistJ where
+  globs := #[`TwistJ.+]

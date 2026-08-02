@@ -7,7 +7,7 @@ modify the Canon, registry, frontier, evidence ledger, or any claim status or
 scope. It is not a formal probe, a minimal public reproduction, or registry
 evidence, and it must not be cited as earned public evidence.
 
-It contains three deliberately separate surfaces:
+It contains four deliberately separate surfaces:
 
 1. `SELECTION-CONTRACT.md` specifies a proposed minimal-abelian-CM theorem,
    its selection assumptions, regressions, dependency graph, and the firewall
@@ -15,13 +15,35 @@ It contains three deliberately separate surfaces:
    design contract only.
 2. `TwistJLeanNote.lean` is the pre-existing symbolic quartic experiment
    described below. It is not a premise of the selection theorem.
-3. `MATHLIB-MAP.md`, `lake-manifest.json`, and `Audit.lean` form a pinned
-   environment inventory. They check dependency resolution and upstream name
-   availability only; they contain no new `MinimalCM` theorem.
+3. `TwistJ/MinimalCM/CMConjugationBit.lean` proves the first abstract group
+   floor: a nonzero involution killed by every additive character to `ZMod 2`
+   has a square root of additive order four. It is a manual theorem in this
+   non-canonical laboratory, not public evidence.
+4. `MATHLIB-MAP.md`, `lake-manifest.json`, and `Audit.lean` form a pinned
+   environment and axiom inventory. They check dependency resolution,
+   upstream names, and the printed logical footprint of the new theorem.
 
-The dependency environment is pinned before any new `MinimalCM` source. A
-later theorem commit must preserve that separation and may not reinterpret the
-environment inventory as evidence.
+The dependency environment was pinned before any new `MinimalCM` source.
+Later theorem commits must preserve that separation and may not reinterpret
+the environment inventory as evidence.
+
+## First minimal-CM group floor
+
+For an additive commutative group `G`, the new module proves exactly:
+
+```text
+c ≠ 0,  2 • c = 0,  (∀ χ : G →+ ZMod 2, χ c = 0)
+  ⇒ ∃ τ, addOrderOf τ = 4 ∧ 2 • τ = c.
+```
+
+Finiteness and uniqueness of the quadratic bit are deliberately absent from
+this lemma. The finite unique-bit/Sylow classification, CM interpretation,
+unit rank, discriminant bounds, `ℚ(ζ₅)` witness and minimality, conductor
+gate, and any conclusion about `J` remain unproved here.
+
+The abstract element `τ` is not the semilinear operator `ν`, a spinor lift, or
+an operator from `P-CENTRAL-LIFT-PHASE-1` or `P-CM-2I-QCARRIER-1`. Those public
+objects have separate carriers, hypotheses, and evidence.
 
 ## Existing symbolic experiment
 
@@ -63,6 +85,7 @@ cd notes/lean-j-cyclotomic
 lake update
 lake env lean --version
 lake build TwistJLeanNote
+lake build TwistJ
 lake env lean Audit.lean
 ```
 

@@ -1,4 +1,5 @@
 import TwistJLeanNote
+import TwistJ.MinimalCM.CMConjugationBit
 import Mathlib.Algebra.Module.ZMod
 import Mathlib.GroupTheory.Abelianization.Defs
 import Mathlib.GroupTheory.OrderOfElement
@@ -12,12 +13,12 @@ import Mathlib.NumberTheory.NumberField.Discriminant.Basic
 import Mathlib.NumberTheory.NumberField.Units.DirichletTheorem
 
 /-!
-NON-CANONICAL ENVIRONMENT INVENTORY ONLY.
+NON-CANONICAL MANUAL ENVIRONMENT AND AXIOM AUDIT.
 
 This file checks that selected upstream names elaborate at the pinned Mathlib
-commit and prints the axiom footprints of selected existing declarations. It
-proves no MinimalCM result, creates no public evidence, and must not be reused
-as an A-LEAN audit source.
+commit. It also imports the first project theorem and prints its axiom
+footprint. This file defines no theorem, creates no public evidence, and must
+not be reused as an A-LEAN audit source.
 -/
 
 set_option autoImplicit false
@@ -67,7 +68,10 @@ set_option autoImplicit false
 #print axioms IsCyclotomicExtension.discr_odd_prime
 #print axioms DirichletCharacter.primitiveCharacter_isPrimitive
 
--- Existing symbolic note only; no MinimalCM theorem exists at this stage.
+-- Existing symbolic note.
 #print axioms TwistJLeanNote.fifth_power_eq_one
 #print axioms TwistJLeanNote.square_satisfies_fifth_cyclotomic
 #print axioms TwistJLeanNote.J_satisfies_quartic
+
+-- First project theorem; manual audit only, with no earned public status.
+#print axioms TwistJ.MinimalCM.exists_addOrderOf_four_of_all_quadratic_chars_vanish
