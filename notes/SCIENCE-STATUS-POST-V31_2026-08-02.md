@@ -205,3 +205,51 @@ MINIMAL-READ-DERIVATION [O] a CURVATURE-OPERATOR-CANONICAL [O].
 Krok 1 a 2 jsou nezávislé a mohou běžet souběžně; krok 3 závisí na 2;
 krok 6 je nezávislý na všem ostatním a měl by dostat vlastní verzi
 Canonu bez příměsí.
+
+## 8. Dodatek: posun k 2026-08-02 večer
+
+Stav se od sepsání §1–§7 pohnul; tento dodatek nic výše nepřepisuje,
+jen zaznamenává deltu a upřesňuje pořadí.
+
+- **PR #252 merged: P-CENTRAL-LIFT-PHASE-1 proběhla formálně.**
+  10/10 PASS, dvouarchitekturní gate splněn (lokální x86_64 +
+  GitHub aarch64), post-CI ratifikace zapsána, owner přijal PREREG §7
+  jako theorem-grade před pinem — T je dostupné přesně na E1–E3 scope.
+  Pozor na zúžení: výsledek je jen L4 kvadratická opora (projektivní
+  pátá mocnina, centrální znaménko, Herm/Sym skalární zákony,
+  mu_5/mu_10 obstrukce). Kužel/rigidita (Herm2 páteř) a ikosiánový
+  nosič v ní NEjsou — Tier 1 tedy pokračuje dvěma zbývajícími sondami.
+  První položka kroku 1 je hotová a čeká na fold.
+- **PR #249 (draft): policy vrstva „Supplemental Lean audits".**
+  Dobře postavený firewall: audity jen pro už uzavřené T/T-LOCK řádky,
+  žádný dopad na status/scope/gate, oddělený katalog `audits/INDEX.tsv`,
+  EXACT vs PARTIAL pokrytí, immutabilní balíčky s append-only událostmi,
+  CI validuje katalog, ale Lean nespouští — kernel acceptance zůstává na
+  nezávislém reviewerovi s replay z čistého prostředí. Jde o závaznou
+  změnu POLICY + nový checker (`check_audits.py` + testy) + zásah do
+  AGENTS.md; potřebuje plnou revizi, ale koncepčně je to správná
+  architektura pro kredibilitu.
+- **PR #247 (draft): notes/lean-j-cyclotomic laboratoř.** NON-CANONICAL,
+  na #249 nezávislá: pinnuté prostředí, kvartika J (symbolický důkaz
+  anihilačního vztahu pro J = 1 + zeta^2), první abstraktní „CM floor"
+  (involuce zabitá všemi ZMod-2 charaktery má odmocninu aditivního řádu
+  čtyři — abstraktní echo C4/C8 bitu), a SELECTION-CONTRACT pro
+  minimal-abelian-CM větu. Ten kontrakt je zjevně předpolí ohlášené
+  změny axiomatiky (výběr Q(zeta_5) jako věta místo postulátu) a drží
+  správný firewall aritmetika vs fyzikální čtení.
+
+Upřesněné pořadí:
+
+```text
+1a  fold v32 = central lift phase (ratifikováno, fronta je čistá;
+    kadence jedna položka na verzi drží)
+1b  souběžně pin P-COMMON-CARRIER-ICOSIAN-1 (tik-tok: další sonda
+    během foldu; v PREREG §7 oddělit [T, literatura] opory
+    Steinitz/h(K)=1 a explicitně rozhodnout owner přijetí)
+1c  potom Herm2 páteř (kužel, rigidita, nález A) jako třetí sonda
+2   merge pořadí Lean: nejdřív #249 (policy, s nezávislým reviewer
+    replay), #247 může jako notes kdykoli; první audit balíček pak
+    přirozeně A-LEAN-* nad kvartikou J (scope J-UNIT, u J-PROJECTIONS
+    nejspíš PARTIAL — archimedovská část výslovně vyjmenovat)
+3   QDD freeze sprint (§3) běží nezávisle dál — pořád největší páka
+```
