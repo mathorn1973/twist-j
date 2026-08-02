@@ -2,7 +2,7 @@
 
 ## Decision
 
-**LOCAL FORMAL LEG PASS; REQUIRED GITHUB LEGS PENDING.**
+**FORMAL RESULT PASS; TWO-ARCHITECTURE GATE SATISFIED.**
 
 The pinned verifier at commit
 `0c8adc4ea22b88c5fb65f78ea567cd4e04f9aa26` was executed exactly once
@@ -12,7 +12,39 @@ SHA-256
 `0609c48f3df68d79c0cea9fd38cbccaab14ad908590f00767a51322944a994cc`,
 826 bytes and 11 lines.
 
-The local leg audits the frozen decisions positively:
+The required GitHub x86_64 and aarch64 jobs independently reran the
+same pinned verifier. Both exited successfully, enforced empty stderr,
+and produced stdout byte-identical to the same committed
+`EXPECTED.txt`. The local x86_64 leg and the recorded GitHub aarch64
+leg differ in architecture, satisfying the POLICY section 4
+two-architecture computation gate.
+
+### Chronology and post-CI ratification
+
+The first version of this `RESULT.md` was committed in
+`59a55ecef8bb64e87f9eee97459ca0f9bc3cda89` after the local formal
+execution and before the required GitHub jobs had completed. It was
+therefore provisional only as to the two-architecture conclusion.
+Workflow run `30750743452` subsequently passed on that exact PR head:
+aarch64 job `91504236573` and x86_64 job `91504236569` both reported
+`VERIFY PASS` for verifier SHA-256
+`d062a009a98db0e1c26f1c95b2e3df04f04f14a79f68df4ec7784a9d8d40e163`
+and stdout SHA-256
+`0609c48f3df68d79c0cea9fd38cbccaab14ad908590f00767a51322944a994cc`;
+aggregate job `91504252562` passed.
+
+Commit `160af09af09dd0b16b207b88914171cdb4e664c6` then recorded the
+required aarch64 leg in `RUN.md`. Workflow run `30751810897` passed on
+that structured-record head: aarch64 job `91507054033` and x86_64 job
+`91507053994` both reported
+`RUN RECORD P-CENTRAL-LIFT-PHASE-1 TWO-ARCHITECTURE` and repeated the
+same `VERIFY PASS` hashes; aggregate job `91507074426` reported
+`TWO-ARCHITECTURE CHECK PASS`. This paragraph ratifies the
+two-architecture conclusion after the evidence and validated record
+existed. It changes no frozen equation, proof, verifier, expected
+output, threshold, falsifier, scope, or action layer.
+
+The frozen decisions are audited positively:
 
 ```text
 E1  projective fifth and central spinor sign       E1          PASS
@@ -26,18 +58,18 @@ R   inherited public cyclotomic inputs             R1-R3       PASS
 
 ## Falsification
 
-No scientific falsifier fired on the local formal leg. F-CLP-1 through
-F-CLP-3 were frozen before execution and remain armed. No threshold,
-equation, scope, or action layer moved after the pin.
+No scientific falsifier fired. F-CLP-1 through F-CLP-3 were frozen
+before execution and remain armed. No threshold, equation, scope, or
+action layer moved after the pin.
 
 ## Status and scope
 
+- The finite verifier evidence satisfies the two-architecture
+  computation gate and earns at most `C` on computation alone.
 - The owner explicitly accepted `PREREG.md` section 7 as an independent
-  theorem-grade proof before the pin. That proof makes T available at
-  exactly the frozen E1-E3 scope; the verifier is its audit.
-- The required pull-request workflow has not yet rerun the pinned
-  verifier on GitHub x86_64 and aarch64. This result therefore does not
-  claim the two-architecture computation gate or final PR closure.
+  theorem-grade proof before the pin. That proof makes `T` available at
+  exactly the frozen E1-E3 scope; the verifier audits the exact
+  certificates supporting it.
 - The probe is RESULT-EXPOSED and confirmatory: its incubation output
   was public before the pin.
 - The result is L4 quadratic support only. It owns no Herm2
@@ -49,7 +81,7 @@ equation, scope, or action layer moved after the pin.
 - `QUADRATIC-DECODER-DATA` and every other live row remain unchanged.
   No registry, frontier, or Canon file is modified by this probe.
 
-This record must be ratified only after the required GitHub x86_64 and
-aarch64 jobs and their aggregate `check` pass byte-identically. A failed
-exact gate or byte mismatch is retained; an infrastructure-only failure
-is an integrity STOP, not a scientific negative result.
+This record is ratified against workflow run `30751810897` after its
+structured `TWO-ARCHITECTURE` classification and aggregate pass. A
+failed exact gate or byte mismatch is retained; an infrastructure-only
+failure is an integrity STOP, not a scientific negative result.
