@@ -6,10 +6,12 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from tools.check_audits import (
     AUDIT_FIELDS,
@@ -18,6 +20,8 @@ from tools.check_audits import (
     COVERAGE_FIELDS,
     DEPENDENCY_FIELDS,
     EVENT_FIELDS,
+    detect_audit_head,
+    detect_base_commit,
     records_sha256,
     source_sha256,
     validate,
@@ -326,6 +330,79 @@ class AuditTests(unittest.TestCase):
     def test_release_pinned_partial_audit_is_valid(self) -> None:
         self.fixture.add_audit()
         self.assertEqual(validate(self.root, self.fixture.base_commit), 1)
+
+    def test_foreign_github_event_shas_do_not_escape_fixture_repository(self) -> None:
+        _, _, audit_head = self.fixture.add_audit()
+        event_path = self.root / "github-event.json"
+        event_path.write_text(
+            json.dumps({
+                "before": "d" * 40,
+                "pull_request": {
+                    "base": {"sha": "e" * 40},
+                    "head": {"sha": "f" * 40},
+                },
+            }),
+            encoding="utf-8",
+        )
+        foreign_workspace = self.root / "another-checkout"
+        with patch.dict(os.environ, {
+            "GITHUB_EVENT_PATH": str(event_path),
+            "GITHUB_WORKSPACE": str(foreign_workspace),
+        }):
+            self.assertIsNone(detect_base_commit(self.root))
+            self.assertEqual(
+                detect_audit_head(self.root, self.fixture.base_commit), audit_head,
+            )
+            self.assertEqual(validate(self.root, self.fixture.base_commit), 1)
+            self.assertEqual(validate(self.root, None), 1)
+
+    def test_matching_github_workspace_uses_repository_event_shas(self) -> None:
+        _, _, audit_head = self.fixture.add_audit()
+        event_path = self.root / "github-event.json"
+        event_path.write_text(
+            json.dumps({
+                "pull_request": {
+                    "base": {"sha": self.fixture.base_commit},
+                    "head": {"sha": audit_head},
+                },
+            }),
+            encoding="utf-8",
+        )
+        with patch.dict(os.environ, {
+            "GITHUB_EVENT_PATH": str(event_path),
+            "GITHUB_WORKSPACE": str(self.root),
+        }):
+            self.assertEqual(detect_base_commit(self.root), self.fixture.base_commit)
+            self.assertEqual(
+                detect_audit_head(self.root, self.fixture.base_commit), audit_head,
+            )
+            self.assertEqual(validate(self.root, None), 1)
+
+    def test_matching_github_workspace_fails_closed_on_missing_event_shas(self) -> None:
+        _, _, audit_head = self.fixture.add_audit()
+        event_path = self.root / "github-event.json"
+        environment = {
+            "GITHUB_EVENT_PATH": str(event_path),
+            "GITHUB_WORKSPACE": str(self.root),
+        }
+        cases = (
+            ({"base": "e" * 40, "head": audit_head}, "comparison base"),
+            ({"base": self.fixture.base_commit, "head": "f" * 40}, "record commit"),
+        )
+        for shas, error in cases:
+            with self.subTest(error=error):
+                event_path.write_text(
+                    json.dumps({
+                        "pull_request": {
+                            "base": {"sha": shas["base"]},
+                            "head": {"sha": shas["head"]},
+                        },
+                    }),
+                    encoding="utf-8",
+                )
+                with patch.dict(os.environ, environment):
+                    with self.assertRaisesRegex(AuditError, error + ".*does not exist"):
+                        validate(self.root, None)
 
     def test_manifest_profile_accepts_pinned_inherited_dependencies(self) -> None:
         self.fixture.add_audit(include_transitive=True)

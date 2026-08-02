@@ -235,10 +235,30 @@ def git_text(root: Path, *arguments: str) -> str:
     return git(root, *arguments).stdout.decode("utf-8")
 
 
+def commit_exists(root: Path, commit: str) -> bool:
+    return bool(COMMIT.fullmatch(commit)) and not git(
+        root, "cat-file", "-e", f"{commit}^{{commit}}", allow_failure=True,
+    ).returncode
+
+
+def github_event_for_root(root: Path) -> dict[str, object]:
+    event_path = os.environ.get("GITHUB_EVENT_PATH", "").strip()
+    workspace = os.environ.get("GITHUB_WORKSPACE", "").strip()
+    if not event_path or not workspace:
+        return {}
+    try:
+        if root.resolve() != Path(workspace).resolve():
+            return {}
+        event = json.loads(Path(event_path).read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError, UnicodeDecodeError):
+        return {}
+    return event if isinstance(event, dict) else {}
+
+
 def require_commit(root: Path, commit: str, context: str) -> None:
     if not COMMIT.fullmatch(commit):
         fail(f"{context} is not a full commit SHA")
-    if git(root, "cat-file", "-e", f"{commit}^{{commit}}", allow_failure=True).returncode:
+    if not commit_exists(root, commit):
         fail(f"{context} does not exist in public history")
 
 
@@ -951,12 +971,8 @@ def detect_base_commit(root: Path) -> str | None:
     explicit = os.environ.get("AUDIT_BASE_SHA", "").strip()
     if COMMIT.fullmatch(explicit):
         return explicit
-    event_path = os.environ.get("GITHUB_EVENT_PATH", "").strip()
-    if event_path and Path(event_path).is_file():
-        try:
-            event = json.loads(Path(event_path).read_text(encoding="utf-8"))
-        except (json.JSONDecodeError, UnicodeDecodeError):
-            event = {}
+    event = github_event_for_root(root)
+    if event:
         pull_base = event.get("pull_request", {}).get("base", {}).get("sha", "")
         before = event.get("before", "")
         for candidate in (pull_base, before):
@@ -1001,12 +1017,8 @@ def detect_audit_head(root: Path, base_commit: str) -> str:
     explicit = os.environ.get("AUDIT_HEAD_SHA", "").strip()
     if COMMIT.fullmatch(explicit):
         return explicit
-    event_path = os.environ.get("GITHUB_EVENT_PATH", "").strip()
-    if event_path and Path(event_path).is_file():
-        try:
-            event = json.loads(Path(event_path).read_text(encoding="utf-8"))
-        except (json.JSONDecodeError, UnicodeDecodeError):
-            event = {}
+    event = github_event_for_root(root)
+    if event:
         pull_head = event.get("pull_request", {}).get("head", {}).get("sha", "")
         if COMMIT.fullmatch(pull_head):
             return pull_head
