@@ -1,0 +1,12 @@
+PASS N1  the registered lift closes to 120 det-1 matrices (COLOR-INTEGRAL-LIFT reproduced)
+PASS N2  the space of C with C sigma(g) = g C for the generators is exactly ONE K-line (rank 12, nullity 4 over Q): Schur for the two irreducible golden branches
+PASS N3  the primitive integral C intertwines ALL 120 elements: C sigma(g) = g C on the whole lift (multiplicativity made explicit), and C is invertible
+PASS N4  C sigma(C) = mu I with mu = -phi^2 exactly: the cocycle scalar is minus a totally positive unit, hence TOTALLY NEGATIVE at both real places
+PASS N5  the norm equation N(d) = tau^3(mu^-1) has NO solution (exhaustive box |c_i| <= 3, and impossible in principle: the target is totally negative while CM norms are totally positive), so nu^4 = 1 is UNREACHABLE for every choice of C-scaling and d: the obstruction class is [-1] in F^x / N_{K/F}(K^x)
+PASS N6  the sign-flipped equation N(d) = -tau^3(mu^-1) = phi^2 IS solvable: deterministic smallest d picked from 10 small solutions
+PASS N7  nu is G-equivariant: nu o Pi(g) = Pi(g) o nu exactly for both generators (4x4 semilinear composites equal)
+PASS N8  nu^2 is block-diagonal sigma-semilinear (the pair's global conjugation), nu^4 = -1 exactly, nu^8 = 1: the arithmetic quarter-turn on the equivariant pair closes at order EIGHT with central sign -1, never at order four
+PASS N9  the central sign is the SAME bit for the third time: mu = -phi^2 pairs with the order-8 antiunitary spinor lift of S (C-HERM2 gate C5), the mu_5-escaping tenth-root glue phase 1 - J = -zeta5^2 with (1-J)^5 = -1 (C-CENTRAL-LIFT-PHASE-1 CP12), and the half-tick obstruction sigma(phi^-1) = -phi < 0 (C-COMMON-CARRIER-ICOSIAN-1 T6): vector level C4, spinor level C8, exactly
+PASS N10 nu swaps the two branch summands (antidiagonal blocks, diagonal zero) while nu^2 preserves them: ker chi5 acts within branches, the nontrivial coset across -- the explicit operator completing the descent dichotomy of C-CM-2I-QCARRIER-1
+PASS N11 Gram transport: B-dagger diag(H0, tau H0) B = diag(N(d) tau H0, kappa sigma H0) exactly, with kappa in F totally positive: nu is a semilinear similitude between the pair Gram and its Galois twist -- the quarter-turn respects the unique invariant form up to totally positive scale
+SUMMARY 11/11 PASS
