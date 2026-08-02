@@ -14,11 +14,18 @@ handover itself.
 ```text
 C-HERM2-BORN-CONE-1.md                        candidate claim and scope doc (rev 1)
 README.md                                     this manifest
+AUDIT-C-HERM2-BORN-CONE-1_2026-08-02.md       ACCEPTED external audit; supersedes prose labels
 HANDOVER-HERM2-ANALYTIC-ATTACK_2026-08-02.md  verbatim handover (Czech), primary document
 herm2_consolidation_verify.py                 pinned verifier, 47 gates
 herm2_consolidation_verify_stdout.txt         committed stdout of the verifier
 SHA256SUMS                                    hashes of the files above
 ```
+
+The audit's exact claims are machine-verified in
+notes/C-CENTRAL-LIFT-PHASE-1 (gates CP1-CP16) and
+notes/C-CM-2I-QCARRIER-1 (gates Q1-Q10). Where the audit re-grades a
+gate of this bundle (Z2 branch wording; M2/M3 witness-not-proof; L3/L4
+projective phrasing), the audit's grading is authoritative.
 
 ## Reproduction
 
