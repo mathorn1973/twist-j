@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v30
+# TWIST-J Public Canon v31
 
-**Release identity.** Public Canon v30. Normative authority and activation
+**Release identity.** Public Canon v31. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v30 also declares the discrete
+algebraic axiom is J. Public Canon v31 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v30 does not claim
+seed of the two algebraic projections. Public Canon v31 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v30 contains no such
+deriving the architecture from J; Public Canon v31 contains no such
 theorem.
 
 ---
@@ -2123,7 +2123,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v30. The fermionizer
+inherited naming clause is not part of Public Canon v31. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -2530,6 +2530,97 @@ close to exactly 120 matrices over Z[zeta_5], and reduction modulo
 (1 - zeta)^4 = 5(zeta^2 - zeta - zeta^3). The Hessian reduces to the
 Dickson form; in the Klein gauge the explicit orbit realizes
 gamma^2 = 3 alpha.
+
+The marked CM closure of Rung 11 (COLOR-CM-2I-SEMILINEAR-PAIR [T],
+probes/P-CM-2I-QCARRIER-1) is relative to exactly the displayed marked
+integral representative. Put
+
+```text
+K = Q(zeta_5),                    tau(zeta_5) = zeta_5^2,
+sigma = tau^2,                    F = K^sigma = Q(sqrt(5)),
+phi = (1 + sqrt(5))/2,            G = <S,T>,
+rho(S) = S,                       rho(T) = T,
+rho^a(g) = a(rho(g)),             V = K^2 direct-sum K^2,
+Pi(g) = diag(rho(g),rho^tau(g)),
+q = zeta_5 - zeta_5^4,            C0 = ((1,q),(-q,1)).
+```
+
+Field automorphisms act entrywise on matrices and vectors,
+`M^dagger = sigma(M)^T`,
+`N_K/F(x) = x sigma(x)`, and
+`H0 = sum_(g in G) rho(g)^dagger rho(g)`. An admitted tau-semilinear
+structure is an invertible `nu_B(v) = B tau(v)` satisfying
+`nu_B Pi(g) = Pi(g) nu_B`. Its frozen pair-coordinate equivalence is
+
+```text
+B' = A B tau(A)^-1,       A = diag(r I2,s I2),       r,s in K^x.
+```
+
+For `gamma in Gal(K/Q)`, marked twist-isomorphism means that there is one
+`P_gamma in GL2(K)` satisfying
+
+```text
+P_gamma gamma(rho(S)) P_gamma^-1 = rho(S),
+P_gamma gamma(rho(T)) P_gamma^-1 = rho(T).
+```
+
+An invariant sigma-Hermitian form on the single branch means a matrix `H`
+with `H^dagger = H` and
+`rho(g)^dagger H rho(g) = H` for every `g in G`.
+
+The four conclusions are:
+
+1. The marked twist-isomorphism stabilizer of `rho` is exactly
+   `{1,sigma}`. The elements `tau` and `tau^3` exchange the golden trace
+   values `phi^-1` and `-phi`. This stabilizer equality neither identifies
+   unmarked conjugacy classes nor supplies an outer automorphism, an `F`-form,
+   or a descent datum; the norm obstruction below forbids normalizing the
+   sigma-intertwiner to an involution.
+2. The ordered pair `Pi` has Q-valued character and a Galois-stable
+   K-isomorphism class through explicit intertwiners. Its branches are
+   absolutely irreducible and inequivalent with scalar endomorphism algebras,
+   and the exact block spaces are
+
+   ```text
+   Hom_G(rho^tau,rho)           = 0,
+   Hom_G(rho^sigma,rho)         = K C0,
+   End_G(rho^tau)               = K I2,
+   Hom_G(rho^sigma,rho^tau)     = 0.
+   ```
+
+   These facts supply neither a Q-form nor a coherent C4 descent datum.
+3. Every admitted structure has the exhaustive antidiagonal form
+
+   ```text
+   B = ((0, a C0), (d I2, 0)),       a,d in K^x.
+   ```
+
+   The intertwiner cocycle is
+   `mu(a) = N_K/F(a) (-phi^2) I2`, so its invariant class under the
+   displayed equivalence is `[-1]` in `F^x/N_K/F(K^x)`. Total positivity
+   of nonzero CM norms excludes order four universally. For
+   `B0 = ((0,C0),(phi I2,0))`, the map `nu = B0 tau` obeys
+   `nu^4 = -I4` and `nu^8 = I4`, so eight is the smallest attainable finite
+   order. This does not say that every admitted `nu` has finite order.
+4. On the single `rho` branch the invariant sigma-Hermitian forms are
+   exactly the F-line `F H0`, which contains the totally positive definite
+   form `H0`. For the chosen form `H_pair = diag(H0,tau(H0))`, the explicit
+   order-eight map satisfies
+
+   ```text
+   B0^dagger H_pair B0 = phi^2 tau(H_pair),
+   ```
+
+   where determinants and positivity force the multiplier `phi^2`. No claim
+   is made that the full space of invariant forms on the pair `V` is one
+   dimensional.
+
+These are L4 representation-theoretic statements only. They assert neither
+uniqueness nor selection of the displayed marked lift; SPIN-LIFT-FORCED [F]
+remains unchanged. They do not define decoder `Q` or `QCarrier`, a decoder
+Gram, an orbit-to-amplitude map, `MatterData`, a physical U(1), or an L5-L6
+measure lift. QUADRATIC-DECODER-DATA [O] and COLOR-MEASURE-SELECTION [O]
+remain STOP and unchanged.
 
 COLOR-MEASURE-TRANSPORT [T] (reproduce/color-ladder): the golden dual
 measure is transported from D5 onto the 2I core through the exact
@@ -3371,6 +3462,23 @@ MEASURE-BORN-VERB and GYRON-DENSITY constrain the type of the physical
 measure clause; they do not select its values. No successor L5 source
 schema is currently frozen. The Born gate remains open but the scheduler
 is STOP while a separately reviewed owner definition is absent.
+
+The v31 ledger change is signed term by term:
+
+```text
+claims:    216 + 1 theorem = 217,
+T:         114 + 1 marked-CM semilinear-pair theorem = 115,
+D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,
+live H/O:  28 unchanged.
+```
+
+Public Canon v31 registers COLOR-CM-2I-SEMILINEAR-PAIR [T] at L4 on the
+immutable `probes/P-CM-2I-QCARRIER-1` bundle. The theorem status is earned by
+the independently accepted proof in its preregistration; the byte-identical
+x86_64 and aarch64 verifier transcript audits its exact certificates. The
+result is relative to the displayed marked representative and creates no
+marked-lift selector, decoder `QCarrier`, U(1) dictionary, or measure lift. No
+live H or O row moves, and both adjacent STOP obligations remain unchanged.
 
 The v30 ledger change is signed term by term:
 
