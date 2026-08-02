@@ -1,0 +1,20 @@
+PASS M1 field conventions: sigma=tau^2 fixes F, while tau(phi^-1)=-phi
+PASS M2 the fixed marked lift closes to 120 integral determinant-one matrices
+PASS M3 every nontrivial twist meets the fixed matrix set exactly in <S>
+PASS M4 marked twist-isomorphism-class stabilizer is {1,sigma}; this alone is not descent
+PASS M5 pair character is Q-valued and explicit intertwiners certify Galois-stable isomorphism class
+PASS M6 both golden branches are absolutely irreducible (full M2 span)
+PASS M7 both branch centralizers are exactly the scalar K-lines
+PASS M8 both diagonal blocks of an equivariant tau-semilinear pair map vanish
+PASS M9 allowed off-diagonal Hom spaces are K*C0 and K*I2
+PASS M10 full pair kernel has K-rank 14/nullity 2 with the antidiagonal basis
+PASS M11 C0 is an integral unit intertwiner on all 120 elements with mu0=-phi^2
+PASS M12 cocycle representative realizes class [-1] and is totally negative
+PASS M13 exact sign certificate: order-four target is totally negative and witness norm positive
+PASS M14 explicit d=phi lift is integral, invertible, equivariant, and swaps branches
+PASS M15 nu^2 is block-diagonal sigma-semilinear (not bare conjugation); nu^4=-I, nu^8=I
+PASS M16 H0=sum g^dagger g is sigma-Hermitian and invariant
+PASS M17 H0 is totally positive definite at both real embeddings
+PASS M18 invariant single-branch Hermitian space is exactly the F-line F*H0
+PASS M19 balanced pair identity: B0^dagger H_pair B0 = phi^2 tau(H_pair)
+SUMMARY 19/19 PASS
