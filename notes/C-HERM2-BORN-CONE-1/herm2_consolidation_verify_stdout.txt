@@ -1,0 +1,48 @@
+PASS Z1  J*conj(J) = 2-phi = phi^-2 (modulus of J is 1/phi)
+PASS Z2  J+conj(J) = J*conj(J)  => cos(arg J) = (phi-1)/2, arg J = 2*pi/5 exactly
+PASS Z3  phi^2 = phi+1
+PASS Z4  (2-phi)*phi^2 = 1
+PASS Z5  J*phi = j
+PASS Z6  (J-1)^3 = j
+PASS Z7  J^5 = 5*phi-8
+PASS Z8  J^5 * phi^5 = 1  (J^5 = phi^-5)
+PASS Z9  Tr(J) = 3
+PASS Z10 N(J) = 1
+PASS Z11 5*phi-8 > 0 iff 125 > 121  (J^5 real positive: rotation part has exact order 5)
+PASS Z12 |sigma_a(J)|^2 = phi^-2 for a in {1,4}
+PASS Z13 |sigma_a(J)|^2 = phi^2 for a in {2,3}  (chi5 splits the moduli)
+PASS B1  phi * phi^-1 = 1
+PASS B2  cosh(ln phi) = (phi+phi^-1)/2 = sqrt5/2
+PASS B3  sinh(ln phi) = (phi-phi^-1)/2 = 1/2
+PASS B4  cosh^2 - sinh^2 = 1
+PASS B5  beta^2 = 1/5  (5*sinh^2 = cosh^2): v_J = c/sqrt5, gamma = sqrt5/2
+PASS B6  cosh*sinh = sqrt5/4, nonzero (rigidity lever)
+PASS B7  Minkowski diag(a,-a) invariant under the J-boost: c^2-s^2 = 1, offdiag cs*(a-a) = 0
+PASS B8  Euclidean diag(a,a) NOT invariant: offdiag 2*cs != 0
+PASS M1  det X = t^2-x^2-y^2-z^2, proved exactly by 3^4 interpolation grid (degree <= 2 per variable)
+PASS M2  PSD (minor criterion) <=> (t >= 0 and det >= 0), exact on 300 random rational points
+PASS M3  Born form v†Xv is real; never negative inside the cone (sampled witness, exact rationals)
+PASS C1  S^4 = 1
+PASS C2  traces of S^0..S^3 = (4,0,0,0): the S-module is the regular representation of C4
+PASS C3  S^T G S = G  (Lorentz isometry, orthochronous)
+PASS C4  spatial det(S) = -1 (improper rotoreflection); S^2 = R_z(pi) proper
+PASS C5  S realized as X -> U X^T U†, U ~ [[0,i],[1,0]]: spinor lift psi -> U*conj(psi), antiunitary, order 8 (numeric witness)
+PASS G1  Galois generator on the CM spinor: (z1,z2) -> (z2, conj z1), mixed-linear, order 4, exact
+PASS G2  induced quadratic action: t fixed, z -> -z, and (w,s) -> (s, conj w): a 4-cycle w -> s -> conj w -> conj s; Herm alone is NOT stable, the pair (PsiPsi†, PsiPsi^T) is forced
+PASS K1  exactly 4 CM types of Q(zeta5), all primitive (only quadratic subfield Q(sqrt5) is real), Galois acts transitively: CM type unique up to Galois
+PASS O1  Zolotarev p=5: sign(mult_a) = chi5(a)
+PASS O2  det(mult_a restricted to W_5) = chi5(a): the bit is the orientation of 3-space, exact
+PASS A1  Lambda^2 W = W, character identity on all classes (exact golden arithmetic)
+PASS A2  <chi_W, chi_W> = 1 (irreducible)
+PASS A3  dim Hom_A5(Lambda^2 W, W) = 1: the unique equivariant bracket is the cross product
+PASS A4  Sym^2 W contains the trivial once and W never: the invariant metric on 1+W has exactly two parameters a, b
+PASS L1  |J| = 1/phi and arg J = 2*pi/5 (numeric witness; exact via Z1, Z2)
+PASS L2  g_J = diag(sqrtJ, 1/sqrtJ): u -> |J|u, v -> |J|^-1 v, w -> (J/|J|)w; det preserved (numeric witness)
+PASS L3  J^5 = phi^-5 real positive: the fifth power of the loxodromic step is a PURE boost (numeric witness; exact via Z7, Z8, Z11)
+PASS L4  phig o g_J o phig^-1 = diag(1/sqrtJ, conj(sqrtJ)): multiplier phi, a PURE expanding boost; rotation absorbed by the mixed-linear quarter-turn; real eigenvalue multiset {s, conj s, 1/s, 1/conj s} preserved (numeric witness)
+PASS CB1 det(sum w_i psi_i psi_i†) = sum_{i<j} w_i w_j |det(psi_i, psi_j)|^2 (exact, random rational spinors, k = 2..4)
+PASS CB2 rank-1: det(psi psi†) = 0 exactly (pure = null; interior needs non-collinear mixture)
+PASS RA1 over Q with trivial involution v v† = v v^T identically: Route A cannot carry a phase (identity, recorded)
+PASS RA2 CM repair: with Psi = (sigma1(alpha), sigma2(alpha)), PsiPsi† and PsiPsi^T differ generically (numeric witness, alpha = 1+zeta)
+PASS D1  L(1, chi5) = 2 ln(phi)/sqrt5 (Dirichlet class number formula; numeric witness, |diff| < 1e-8)
+SUMMARY 47/47 PASS
