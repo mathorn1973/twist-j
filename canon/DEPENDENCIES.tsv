@@ -90,6 +90,8 @@ COLOR-SPECTRAL-INVARIANTS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: e
 COLOR-DICKSON-RAMIFICATION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 COLOR-KLEIN-REDUCTION	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 COLOR-INTEGRAL-LIFT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+COLOR-CM-2I-SEMILINEAR-PAIR	COLOR-INTEGRAL-LIFT	REQUIRES	the marked CM pair uses exactly the displayed integral 2I representative and its frozen S,T matrices
+COLOR-CM-2I-SEMILINEAR-PAIR	DEF-ACTION-LAYERS	REQUIRES	the theorem is confined to L4 support structure and creates no L5 stream, L6 measure, or cross-layer lift
 COLOR-MEASURE-TRANSPORT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 KAHLER-CAPACITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 FRW-CANONICAL-FORM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture

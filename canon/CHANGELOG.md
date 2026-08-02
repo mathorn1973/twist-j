@@ -1,12 +1,47 @@
 # Canon changelog (public series)
 
 
-## Public Canon v30
+## Public Canon v31
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 216 claims; 0 T-LOCK, 114 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
+Registry snapshot: 217 claims; 0 T-LOCK, 115 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v31 carries exactly one item.
+
+COLOR-CM-2I-SEMILINEAR-PAIR [T] registers the four frozen L4 conclusions of
+`probes/P-CM-2I-QCARRIER-1`, relative to the displayed marked integral 2I
+representative. The marked twist stabilizer is exactly `{1,sigma}`; the
+ordered branch pair has Q-valued character and a Galois-stable K-isomorphism
+class with the complete Hom data; every admitted invertible G-equivariant
+tau-semilinear structure
+has the exhaustive antidiagonal form and cocycle class `[-1]`, making order
+four impossible and eight the smallest attainable finite order, without
+asserting that every admitted structure has finite order; and the invariant
+single-branch sigma-Hermitian forms are exactly the F-line `F H0`, which
+contains the totally positive definite form `H0`, with balanced pair
+multiplier `phi^2`.
+
+The status is T because the owner independently accepted the proof in
+`PREREG.md` section 7 as theorem-grade at this exact scope. The pinned verifier
+audits its certificates and produced the same 19-gate transcript byte for byte
+on x86_64 and aarch64; computation alone would remain C. The row is not
+T-LOCK.
+
+This fold selects no marked lift, creates no Q-form or coherent C4 descent
+datum, and defines no decoder `Q` or `QCarrier`, decoder Gram,
+orbit-to-amplitude map, `MatterData`, physical U(1), or L5-L6 measure lift.
+SPIN-LIFT-FORCED [F], QUADRATIC-DECODER-DATA [O], and
+COLOR-MEASURE-SELECTION [O] are unchanged; no live H or O row moves.
+
+
+## Public Canon v30
+
+<!-- BEGIN GENERATED CANON30 COUNTS -->
+Registry snapshot: 216 claims; 0 T-LOCK, 114 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON30 COUNTS -->
 
 Public Canon v30 carries no new item. It republishes the v29 ledger with the
 reproduction fixture corrected, so that a tagged tree passes its own activation

@@ -122,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 114, "D": 40, "C": 24, "F": 10,
+    expected_counts = {"T": 115, "D": 40, "C": 24, "F": 10,
                        "O": 24, "H": 4}
     checks.append((
         "COUNTS",
-        "registry has 216 claims with the current status partition",
-        len(rows) == 216 and counts == expected_counts,
+        "registry has 217 claims with the current status partition",
+        len(rows) == 217 and counts == expected_counts,
     ))
 
     checks.append((
@@ -406,6 +406,88 @@ def run():
         "finite group and invariant rungs stay T; the color reading is D",
         all(has_status(index, claim, "T") for claim in color_theorems)
         and has_status(index, "COLOR-LADDER-DICTIONARY", "D"),
+    ))
+
+    cm_pair = "COLOR-CM-2I-SEMILINEAR-PAIR"
+    cm_path = "probes/P-CM-2I-QCARRIER-1"
+    cm_digest = "2d480767d992215fe0c7328c8fb794484cd7c99c22d6b56f65b340c8b9d09bee"
+    cm_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == cm_pair
+    }
+    checks.append((
+        "CM-2I",
+        "marked semilinear pair stays T at L4; decoder and measure stay O/STOP",
+        has_status(index, cm_pair, "T")
+        and normative.get(cm_pair, {}).get("item_type") == "THEOREM"
+        and normative.get(cm_pair, {}).get("status") == "T"
+        and normative.get(cm_pair, {}).get("layer") == "L4"
+        and normative.get(cm_pair, {}).get("gate_ids") == ""
+        and index.get(cm_pair, {}).get("canon_section") == "12. The color door"
+        and index.get(cm_pair, {}).get("evidence") == cm_path
+        and evidence.get(cm_pair, {}).get("evidence_id")
+        == "EV-COLOR-CM-2I-SEMILINEAR-PAIR"
+        and evidence.get(cm_pair, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(cm_pair, {}).get("location") == cm_path
+        and evidence.get(cm_pair, {}).get("sha256") == cm_digest
+        and evidence.get(cm_pair, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(cm_pair, {}).get("architecture_requirement")
+        == "two-architecture"
+        and cm_dependencies == {
+            ("COLOR-INTEGRAL-LIFT", "REQUIRES"),
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, cm_pair,
+            ("marked twist-isomorphism stabilizer is exactly {1,sigma}",
+             "Galois-stable K-isomorphism class through explicit intertwiners",
+             "Hom_G(rho^tau,rho) = 0",
+             "Hom_G(rho^sigma,rho) = K C0",
+             "End_G(rho^tau) = K I2",
+             "Hom_G(rho^sigma,rho^tau) = 0",
+             "exhaustive antidiagonal form",
+             "cocycle class [-1]", "order four is impossible",
+             "eight is the smallest attainable finite order",
+             "invariant sigma-Hermitian forms",
+             "exactly the F-line F H0",
+             "phi^2 forced by determinants and positivity",
+             "no claim is made that the full space of invariant forms",
+             "no Q-form or coherent C4 descent datum",
+             "no uniqueness or selection of a marked lift",
+             "decoder Q or QCarrier", "decoder Gram",
+             "orbit-to-amplitude map", "MatterData",
+             "physical U(1)", "L5-L6 measure lift"),
+        )
+        and all(
+            phrase.lower() in index[cm_pair]["falsifier"].lower()
+            for phrase in (
+                "pair character is not Q-valued",
+                "an explicit Galois pair intertwiner fails",
+                "H0 is not totally positive definite",
+                "balanced multiplier is not forced to phi^2",
+            )
+        )
+        and has_status(index, "SPIN-LIFT-FORCED", "F")
+        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and has_status(index, "COLOR-MEASURE-SELECTION", "O")
+        and programs.get("QUADRATIC-DECODER-DATA", {}).get("program_id")
+        == "DECODER_CORE"
+        and programs.get("QUADRATIC-DECODER-DATA", {}).get("queue_role")
+        == "ROOT"
+        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_state")
+        == "STOP"
+        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_mode")
+        == "FORMAL"
+        and programs.get("COLOR-MEASURE-SELECTION", {}).get("program_id")
+        == "NONABELIAN_QCD"
+        and programs.get("COLOR-MEASURE-SELECTION", {}).get("queue_role")
+        == "ROOT"
+        and programs.get("COLOR-MEASURE-SELECTION", {}).get("work_state")
+        == "STOP"
+        and programs.get("COLOR-MEASURE-SELECTION", {}).get("work_mode")
+        == "FORMAL"
+        and cm_pair not in programs,
     ))
 
     gyron_density = "GYRON-DENSITY"
