@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 217)
+        self.assertEqual(self.report.claims, 218)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 24, "D": 40, "F": 10, "H": 4, "O": 24, "T": 115},
+            {"C": 24, "D": 40, "F": 10, "H": 4, "O": 24, "T": 116},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 43,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 134,
+                "two-architecture": 135,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -84,6 +84,14 @@ class ArchitectureMapReportTests(unittest.TestCase):
         )
         self.assertIn(
             "COLOR-CM-2I-SEMILINEAR-PAIR",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertNotIn(
+            "CENTRAL-LIFT-PHASE",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "CENTRAL-LIFT-PHASE",
             self.report.transitive_architecture_dependents,
         )
         for claim in (

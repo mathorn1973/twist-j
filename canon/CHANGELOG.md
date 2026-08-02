@@ -1,12 +1,44 @@
 # Canon changelog (public series)
 
 
-## Public Canon v31
+## Public Canon v32
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 217 claims; 0 T-LOCK, 115 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
+Registry snapshot: 218 claims; 0 T-LOCK, 116 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v32 carries exactly one item.
+
+CENTRAL-LIFT-PHASE [T] registers the three frozen L4 conclusions of
+`probes/P-CENTRAL-LIFT-PHASE-1`. The principal square-root lift has a
+central minus sign at its fifth spinor power but a pure fifth-power boost on
+the projective Hermitian action; normalized Hermitian action forgets every
+nonzero scalar while normalized symmetric-square action retains its phase,
+giving the exact `zeta_5^2` factor for `A_J^2 = J diag(J,J^-1)`; and the
+unit-scalar phase image from `Z[zeta_5]^x` is exactly `mu_5`, while
+`1-J = -zeta_5^2` lies in `mu_10 \ mu_5`.
+
+The status is T because the owner independently accepted the proof in
+`PREREG.md` section 7 as theorem-grade at this exact scope. The pinned
+verifier audits its certificates and produced the same 10-gate transcript
+byte for byte on x86_64 and aarch64; computation alone would remain C. The
+row is not T-LOCK.
+
+This is a central-only fold. It defines no Herm2 positive, Born, or causal
+cone, boundary, split-unit projector, rigidity or common carrier, integral
+tick, physical time, bit, U(1), electromagnetism, decoder `Q` or `QCarrier`,
+`MatterData`, L5 stream, L6 measure, or cross-layer lift.
+QUADRATIC-DECODER-DATA [O] remains unchanged and STOP; no live H or O row
+moves.
+
+
+## Public Canon v31
+
+<!-- BEGIN GENERATED CANON31 COUNTS -->
+Registry snapshot: 217 claims; 0 T-LOCK, 115 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON31 COUNTS -->
 
 Public Canon v31 carries exactly one item.
 

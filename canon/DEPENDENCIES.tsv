@@ -29,6 +29,10 @@ AXIOM-PROJECTION-DICTIONARY	J-RAMIFIED-CHORD	REQUIRES	registry scope names the t
 BOOST-COUNT-LADDER	BOOST-READING-SPLIT	REQUIRES	count dictionary rests on the exact split
 READING-SPLIT	CODEC-TR4	REQUIRES	linear leg is CODEC-TR4
 SILVER-SIBLING	SILVER-RING-FACTS	REQUIRES	dictionary rests on finite ring facts
+CENTRAL-LIFT-PHASE	J-PROJECTIONS	REQUIRES	the principal embedding, exact modulus, and oriented phase of J are inherited public inputs
+CENTRAL-LIFT-PHASE	J-TENTH-ROOT	REQUIRES	the primitive tenth-root identity 1-J = -zeta_5^2 supplies the frozen mu_10 outside mu_5 obstruction
+CENTRAL-LIFT-PHASE	J-GOLDEN-BRIDGE	REQUIRES	the identities J = phi^-1 zeta_5 and phi in Z[zeta_5] supply the exact square-root-free coefficients
+CENTRAL-LIFT-PHASE	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L4 quadratic support and creates no state, stream, measure, or cross-layer lift
 FORCE-AS-CURVATURE	FORCE-WEYL-HOLONOMY	REQUIRES	curvature reading rests on the Weyl theorem
 MEASURE-BORN-VERB	BORN-FACE-WEIGHTS	REQUIRES	registry scope names the theorem input
 COSMOLOGY-READING-DICTIONARY	TT-LINEAR-ZERO	REQUIRES	dictionary reads the exact zero response
