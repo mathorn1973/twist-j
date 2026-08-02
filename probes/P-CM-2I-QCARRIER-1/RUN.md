@@ -31,7 +31,7 @@ Executed once from the repository root in the deterministic
 environment `LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1
 PYTHONHASHSEED=0 TZ=UTC`. The exact raw stdout is `EXPECTED.txt`.
 
-## Local formal execution
+## Local formal leg
 
 ```text
 platform: Ubuntu 24.04
@@ -48,7 +48,30 @@ deterministic_executions: 1
 gates: 19 of 19 PASS
 ```
 
-The frozen verifier process exited 0 and wrote no stderr. This section
-records the single local formal leg on one architecture; the required
-GitHub architecture jobs run on the pull request and their record is
-appended after they complete.
+The frozen verifier process exited 0 and wrote no stderr.
+
+## Required GitHub leg
+
+```text
+github_platform: Ubuntu 24.04
+github_architecture: aarch64
+github_python: Python 3.12.13
+github_verifier_sha256: d031470193a1e6035769c64c75c5ab98e4e4f381af2dbdf6307d81f8e33c100f
+github_stdout_sha256: 138cda2609bd712089ac550e508830d6bd42efe33fde39d0a01ed2badbd2fd86
+github_exit_code: 0
+github_stderr_bytes: 0
+github_status: PASS
+github_verdict: VERIFY PASS
+github_workflow_run_id: 30737458873
+github_job_id: 91468760543
+github_tested_head_commit: 57b92bc8d4819ac1cd7cc58cc8e371302abe979d
+```
+
+The GitHub-hosted `ubuntu-24.04-arm` job checked the pinned verifier
+hash, reran it in the deterministic environment, and reported
+`VERIFY PASS` with stdout byte-identical to the committed
+`EXPECTED.txt`. The local x86_64 leg and the GitHub aarch64 leg differ
+in architecture, so byte identity against the one committed
+`EXPECTED.txt` satisfies the POLICY section 4 two-architecture
+computation gate. The paired x86_64 job of the same workflow run
+(job 91468760576) also reported `VERIFY PASS`.
