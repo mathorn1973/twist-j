@@ -7,15 +7,21 @@ modify the Canon, registry, frontier, evidence ledger, or any claim status or
 scope. It is not a formal probe, a minimal public reproduction, or registry
 evidence, and it must not be cited as earned public evidence.
 
-It contains two deliberately separate surfaces:
+It contains three deliberately separate surfaces:
 
 1. `SELECTION-CONTRACT.md` specifies a proposed minimal-abelian-CM theorem,
    its selection assumptions, regressions, dependency graph, and the firewall
    between arithmetic claims and physical interpretation. It is a frozen
-   design contract only; no new `MinimalCM` code begins before the separate
-   dependency-environment pin.
+   design contract only.
 2. `TwistJLeanNote.lean` is the pre-existing symbolic quartic experiment
    described below. It is not a premise of the selection theorem.
+3. `MATHLIB-MAP.md`, `lake-manifest.json`, and `Audit.lean` form a pinned
+   environment inventory. They check dependency resolution and upstream name
+   availability only; they contain no new `MinimalCM` theorem.
+
+The dependency environment is pinned before any new `MinimalCM` source. A
+later theorem commit must preserve that separation and may not reinterpret the
+environment inventory as evidence.
 
 ## Existing symbolic experiment
 
@@ -55,8 +61,13 @@ not turn this notes tree into a primary canonical pipeline.
 ```bash
 cd notes/lean-j-cyclotomic
 lake update
-lake build
+lake env lean --version
+lake build TwistJLeanNote
+lake env lean Audit.lean
 ```
 
-The note names Lean 4.30.0 and Mathlib 4.30.0 for local review. It does not
-contain a complete immutable dependency lock.
+The lock names Lean `4.30.0`, Mathlib commit
+`c5ea00351c28e24afc9f0f84379aa41082b1188f`, and full commit SHAs for every
+transitive Lake package. `.lake/` remains ignored; `lake-manifest.json` is
+committed. See `MATHLIB-MAP.md` for the exact inventory, known API gaps, and
+the evidence firewall.
