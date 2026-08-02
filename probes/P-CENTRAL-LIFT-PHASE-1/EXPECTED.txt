@@ -1,0 +1,11 @@
+PASS R1 inherited J projection identities: J+Jbar=J Jbar=2-phi
+PASS R2 inherited polarization: phi J=zeta pins the principal branch
+PASS E1 zeta10^2=zeta, zeta10^5=-1, zeta10^10=1; s^2=J and the fifth spinor power carries the central minus sign
+PASS R3 inherited golden magnitude: J^5 phi^5=1
+PASS E2A square-root-free Herm action of A_J has coefficients (phi^-1,phi,zeta)
+PASS E2B five normalized Herm steps give (phi^-5,phi^5,1)
+PASS E2C A_J^2=J diag(J,J^-1), so the normalized Herm action is projective
+PASS E2D the corresponding normalized Sym central factor is J^2/N(J)=zeta^2
+PASS E3A finite terminal certificate: mu10 has ten roots, its residue-one subset is exactly mu5, and unit roots attain all mu5 phases
+PASS E3B 1-J=-zeta^2 is primitive in mu10 and lies outside the unit-scalar phase image mu5
+SUMMARY 10/10 PASS
