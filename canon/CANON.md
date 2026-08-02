@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v31
+# TWIST-J Public Canon v32
 
-**Release identity.** Public Canon v31. Normative authority and activation
+**Release identity.** Public Canon v32. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v31 also declares the discrete
+algebraic axiom is J. Public Canon v32 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v31 does not claim
+seed of the two algebraic projections. Public Canon v32 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v31 contains no such
+deriving the architecture from J; Public Canon v32 contains no such
 theorem.
 
 ---
@@ -1784,6 +1784,76 @@ reading resting on those facts: m_8 = zeta_8 = sqrt(i) at prime 2 with
 the silver unit 1 + sqrt2 of norm -1 mirrors tau = sqrt(J) at prime 5;
 sqrt(i) is the square root of the axiom read at the foreign place.
 
+The central phase of the quadratic lift is exact
+(CENTRAL-LIFT-PHASE [T], `probes/P-CENTRAL-LIFT-PHASE-1`). In
+`K = Q(zeta_5)` with `O_K = Z[zeta_5]`, principal
+`zeta_5 = exp(2 pi i/5)`, and
+
+```text
+phi = -(zeta_5^2 + zeta_5^3),       J = phi^-1 zeta_5,
+zeta_10 = -zeta_5^3,                s = zeta_10 / sqrt(phi),
+g_J = diag(s,s^-1),                 A_J = diag(J,1) = s g_J,
+```
+
+define, for `A in GL_2(C)`,
+
+```text
+H_A(X) = A X A^dagger / |det A|,    X in Herm_2(C),
+S_A(Y) = A Y A^T      / |det A|,    Y in Sym_2(C).
+```
+
+The principal square root obeys
+
+```text
+s^2 = J,
+s^5 = -phi^(-5/2),
+g_J^5 = -diag(phi^(-5/2),phi^(5/2)),
+g_J^10 = diag(phi^-5,phi^5).
+```
+
+Thus the fifth power retains the central minus sign on the spinor but
+induces the displayed pure boost on `Herm_2(C)`, where `-I` acts
+trivially. This is a projective action statement, not a physical-clock or
+tick identification.
+
+For every nonzero complex scalar `c`, the normalized actions separate as
+
+```text
+H_(cA) = H_A,                        S_(cA) = (c^2/|c|^2) S_A.
+```
+
+Writing `X = [[u,w],[conjugate(w),v]]`, the square-root-free J action and
+its fifth power are
+
+```text
+H_(A_J):   (u,v,w) -> (phi^-1 u, phi v, zeta_5 w),
+H_(A_J)^5: (u,v,w) -> (phi^-5 u, phi^5 v, w).
+```
+
+With `B = diag(J,J^-1)`, one has `A_J^2 = J B`, hence
+`H_(A_J^2) = H_B`, while `S_(A_J^2) = zeta_5^2 S_B`. The Hermitian slot
+forgets the scalar and the symmetric slot retains its central phase.
+
+Finally the unit-scalar phase map
+
+```text
+O_K^x -> C^x,        c -> c/conjugate(c)
+```
+
+has image exactly `mu_5`. Kronecker's unit-circle lemma places every
+image in the roots of unity of `K`, reduction modulo `1-zeta_5` removes
+the negative `mu_10` coset, and `c = zeta_5^a` attains all of `mu_5`.
+The inherited identity `1-J = -zeta_5^2` lies in
+`mu_10 \ mu_5`, so it is not the normalized symmetric-square phase of
+an `O_K` unit scalar.
+
+These are L4 quadratic-support theorems only. They define no positive,
+Born, or causal cone, boundary, split-unit projector, rigidity or common
+carrier, integral tick, physical time, bit, U(1), electromagnetic channel,
+decoder `Q` or `QCarrier`, `MatterData`, L5 stream, L6 measure, or
+cross-layer lift. In particular QUADRATIC-DECODER-DATA [O] remains STOP
+and unchanged.
+
 The golden and silver numbers are the positive roots of the two simplest
 metallic laws `x^2 = t x + 1`, at `t = 1` and `t = 2`
 (METAL-TRACE-CASCADE [T], `probes/P-METAL-TRACE-1`). Both are units of
@@ -2123,7 +2193,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v31. The fermionizer
+inherited naming clause is not part of Public Canon v32. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -3462,6 +3532,25 @@ MEASURE-BORN-VERB and GYRON-DENSITY constrain the type of the physical
 measure clause; they do not select its values. No successor L5 source
 schema is currently frozen. The Born gate remains open but the scheduler
 is STOP while a separately reviewed owner definition is absent.
+
+The v32 ledger change is signed term by term:
+
+```text
+claims:    217 + 1 theorem = 218,
+T:         115 + 1 central-lift phase theorem = 116,
+D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,
+live H/O:  28 unchanged.
+```
+
+Public Canon v32 registers CENTRAL-LIFT-PHASE [T] at L4 on the immutable
+`probes/P-CENTRAL-LIFT-PHASE-1` bundle. The theorem status is earned by the
+independently accepted proof in its preregistration; the byte-identical
+x86_64 and aarch64 transcript audits the exact E1-E3 certificates. The fold
+adds only the projective fifth, normalized Herm/Sym scalar separation,
+square-root-free J action, central `zeta_5^2` Sym factor, exact unit-phase
+image `mu_5`, and the `mu_10 \ mu_5` obstruction. It adds no Herm2 cone,
+rigidity, common carrier, decoder data, U(1), measure, or physical tick, and
+no live H or O row moves.
 
 The v31 ledger change is signed term by term:
 

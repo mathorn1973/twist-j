@@ -108,6 +108,7 @@ TWO-PLACE-PHYSICS	EV-TWO-PLACE-PHYSICS	INLINE_CANON	inline	723345566b09c54211dce
 I-BILOCATED	EV-I-BILOCATED	REPRODUCTION	reproduce/foundations-places	feeb30a3320ddb88836b622414f795dfa778eaea7fbba0ece126b652ece5fea0	bundle-manifest-sha256-v1	recorded-audit
 SILVER-RING-FACTS	EV-SILVER-RING-FACTS	REPRODUCTION	reproduce/foundations-places	feeb30a3320ddb88836b622414f795dfa778eaea7fbba0ece126b652ece5fea0	bundle-manifest-sha256-v1	one-architecture
 SILVER-SIBLING	EV-SILVER-SIBLING	REPRODUCTION	reproduce/foundations-places	feeb30a3320ddb88836b622414f795dfa778eaea7fbba0ece126b652ece5fea0	bundle-manifest-sha256-v1	recorded-audit
+CENTRAL-LIFT-PHASE	EV-CENTRAL-LIFT-PHASE	PUBLIC_PROBE	probes/P-CENTRAL-LIFT-PHASE-1	ff0ffb98cbc3197d18a86a22dd3cabe853b5f50a80e099ede48b1ae6a7a258e0	bundle-manifest-sha256-v1	two-architecture
 FORCE-WEYL-HOLONOMY	EV-FORCE-WEYL-HOLONOMY	REPRODUCTION	reproduce/force-born-dictionary	b1a2f643a2461efa55ae31b6fbb2819c82e270299acea11a4f4215d268be5804	bundle-manifest-sha256-v1	two-architecture
 FORCE-AS-CURVATURE	EV-FORCE-AS-CURVATURE	INLINE_CANON	inline	e240ce5de9bd398e402e88bcf5c4a1e3328aff7b2e62aca550a8fd098adeba0a	registry-scope-sha256-v1	none
 COULOMB-GREEN-COMPUTATION	EV-COULOMB-GREEN-COMPUTATION	REPRODUCTION	reproduce/force-born-dictionary	b1a2f643a2461efa55ae31b6fbb2819c82e270299acea11a4f4215d268be5804	bundle-manifest-sha256-v1	one-architecture

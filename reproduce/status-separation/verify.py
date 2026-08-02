@@ -122,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 115, "D": 40, "C": 24, "F": 10,
+    expected_counts = {"T": 116, "D": 40, "C": 24, "F": 10,
                        "O": 24, "H": 4}
     checks.append((
         "COUNTS",
-        "registry has 217 claims with the current status partition",
-        len(rows) == 217 and counts == expected_counts,
+        "registry has 218 claims with the current status partition",
+        len(rows) == 218 and counts == expected_counts,
     ))
 
     checks.append((
@@ -391,6 +391,64 @@ def run():
                 ("MEASURE-BORN-VERB", "KERNEL-CELL-DICTIONARY"))
         and scope_lacks(index, "SUBSTRATE-KNIT",
                         ("born", "measurement", "abelian face")),
+    ))
+
+    central = "CENTRAL-LIFT-PHASE"
+    central_path = "probes/P-CENTRAL-LIFT-PHASE-1"
+    central_digest = (
+        "ff0ffb98cbc3197d18a86a22dd3cabe853b5f50a80e099ede48b1ae6a7a258e0"
+    )
+    central_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == central
+    }
+    checks.append((
+        "CENTRAL",
+        "central Herm/Sym phase stays T at L4; cone, decoder, and physics stay outside",
+        has_status(index, central, "T")
+        and normative.get(central, {}).get("item_type") == "THEOREM"
+        and normative.get(central, {}).get("status") == "T"
+        and normative.get(central, {}).get("layer") == "L4"
+        and normative.get(central, {}).get("gate_ids") == ""
+        and index.get(central, {}).get("canon_section") == "4. The two places"
+        and index.get(central, {}).get("evidence") == central_path
+        and evidence.get(central, {}).get("evidence_id")
+        == "EV-CENTRAL-LIFT-PHASE"
+        and evidence.get(central, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(central, {}).get("location") == central_path
+        and evidence.get(central, {}).get("sha256") == central_digest
+        and evidence.get(central, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(central, {}).get("architecture_requirement")
+        == "two-architecture"
+        and central_dependencies == {
+            ("J-PROJECTIONS", "REQUIRES"),
+            ("J-TENTH-ROOT", "REQUIRES"),
+            ("J-GOLDEN-BRIDGE", "REQUIRES"),
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, central,
+            ("fifth projective Herm power is a pure boost",
+             "H_(cA) = H_A", "central Sym factor zeta_5^2",
+             "image of O_K^x", "exactly mu_5",
+             "mu_10 \\ mu_5", "L4 quadratic-support",
+             "no Herm2 positive/Born/causal cone", "decoder Q or QCarrier",
+             "MatterData", "L5 stream", "L6 measure", "cross-layer lift"),
+        )
+        and all(
+            phrase.lower() in index[central]["falsifier"].lower()
+            for phrase in (
+                "unit-phase image differs from mu_5",
+                "1-J lies in mu_5",
+                "excluded physical, decoder, cone, carrier, or cross-layer",
+                "integrity STOP, not a scientific falsifier",
+            )
+        )
+        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_state")
+        == "STOP"
+        and central not in programs,
     ))
 
     color_theorems = (
