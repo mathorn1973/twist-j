@@ -1,0 +1,7 @@
+PASS BK1 break fails: the untwisted diag(J, J^-1) does NOT preserve the icosian lattice (a Z-basis vector escapes O): the det-1 even tick is not integral along the h-splitting
+PASS BK2 break fails: NO plus-sign twist diag(J q^a, J^-1 q^-a), a = 0..4, preserves O: the residue mismatch res(J) = 2 vs res(J^-1) = 3 cannot be repaired inside the fifth roots; only the sign flip (-1, residue 4) repairs it
+PASS BK3 break fails: for EVERY pure inverting icosian e' the span Z[q].1 + Z[q].e' has index 5, never 1: no h-orthonormal free basis exists, the glue is unavoidable
+PASS BK4 break fails: h(1, omega) is NOT in Z[zeta5]: the canonical CM-Hermitian form is genuinely inverse-different-valued on O
+PASS BK5 break fails: no y = +-phi^k g (g in 2I, |k| <= 3) satisfies y^2 = J, the witness sweep over all 1680 golden-unit multiples of 2I agrees with the total-positivity obstruction
+PASS BK6 break fails: the untwisted trace form Tr_{F/Q}(trd(x ybar)) has determinant 625 = 5^4, not 1: E8 requires the golden 1/sqrt5 twist, the ramified prime is load-bearing
+SUMMARY 6/6 PASS
