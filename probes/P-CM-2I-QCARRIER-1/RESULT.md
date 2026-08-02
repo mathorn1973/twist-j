@@ -13,6 +13,26 @@ pinned verifier and enforce byte identity against the same
 two different architectures satisfies the POLICY section 4
 two-architecture computation gate.
 
+### Chronology and post-CI ratification
+
+The first version of this `RESULT.md` was committed in
+`57b92bc8d4819ac1cd7cc58cc8e371302abe979d` before the required GitHub
+jobs had completed, because the repository policy checker requires
+`RESULT.md` to be present in every probe directory. It was therefore
+provisional only as to the two-architecture conclusion. Workflow run
+`30737458873` subsequently completed successfully for that PR head:
+aarch64 job `91468760543` and x86_64 job `91468760576` both reported
+`VERIFY PASS` for verifier SHA-256
+`d031470193a1e6035769c64c75c5ab98e4e4f381af2dbdf6307d81f8e33c100f`
+and stdout SHA-256
+`138cda2609bd712089ac550e508830d6bd42efe33fde39d0a01ed2badbd2fd86`.
+Commit `adc43d3cf80dd26ddf56649d0cc1f09fa5549bbd` then recorded that leg
+in `RUN.md`, and workflow run `30737517851` passed both architecture
+jobs and the aggregate check while classifying the record
+`TWO-ARCHITECTURE`. This paragraph ratifies the two-architecture
+conclusion after the evidence existed. It changes no frozen equation,
+verifier, expected output, threshold, falsifier, or action layer.
+
 The frozen decisions E1-E4 of `PREREG.md` are audited positively:
 
 ```text
