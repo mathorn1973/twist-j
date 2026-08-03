@@ -1,0 +1,63 @@
+job start Mon Aug  3 23:19:28 CEST 2026
+current: L = 3240, connected closed, Eulerian walk certified
+defect edges 3520, mass 6776
+ILP: 309808 variable faces, 235668 edge constraints
+Running HiGHS 1.15.1 (git hash: 04024d7): Copyright (c) 2026 under MIT licence terms
+Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
+MIP has 235668 rows; 619616 cols; 2478464 nonzeros; 619616 integer variables (619616 binary)
+Coefficient ranges:
+  Matrix  [1e+00, 1e+00]
+  Cost    [1e+00, 1e+00]
+  Bound   [1e+00, 1e+00]
+  RHS     [5e+00, 5e+00]
+Presolving model
+229240 rows, 612040 cols, 2448160 nonzeros 3s
+229135 rows, 601687 cols, 2406748 nonzeros 18s
+Presolve reductions: rows 229135(-6533); columns 601687(-17929); nonzeros 2406748(-71716) 
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   229135 rows
+   601687 cols (601687 binary, 0 integer, 0 implied int., 0 continuous, 0 domain fixed)
+   2406748 nonzeros
+   Thread count 8 (of 16 threads). Using 1 max workers. Parallel search off
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+ J       0       0         0   0.00%   -inf            9997               Large        0      0      0         0    46.3s
+ T       0       0         0   0.00%   7112            7993              11.02%        0      0      0     11963    58.5s
+         1       0         1 100.00%   7993            7993               0.00%        0      0      0     11963    58.5s
+
+Solving report
+  Status            Optimal
+  Primal bound      7993
+  Dual bound        7993
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      2.82579015008
+  Solution status   feasible
+                    7993 (objective)
+                    0 (bound viol.)
+                    6.68354260824e-14 (int. viol.)
+                    0 (row viol.)
+  Timing            58.51
+                    18.77 (Presolve)
+                    39.66 (Solve)
+                    0.00 (Postsolve)
+  Max sub-MIP depth 0
+  Nodes             1
+  Repair LPs        0
+  LP iterations     11963
+                    0 (strong br.)
+                    0 (separation)
+                    0 (heuristics)
+ILP status: Optimal
+WITNESS: L = 3240, F = 7993, F/L = 2.4670
+exact check 2^F <= 7^L: True
+witness written
+job end Mon Aug  3 23:21:34 CEST 2026 exit 0
