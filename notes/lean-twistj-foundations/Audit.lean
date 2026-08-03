@@ -1,13 +1,14 @@
 import TwistJ.Foundation.Orbit
 import TwistJ.Models.CounterRegressions
+import TwistJ.Models.LayerTypingRegressions
 import TwistJ.Models.ReadoutRegressions
 
 /-!
 NON-CANONICAL MANUAL AXIOM AUDIT.
 
-This file prints the logical footprint of the first two foundation and
-observation cuts. It is not an `A-LEAN-*` package, public evidence, or a
-claim-status mechanism.
+This file prints the logical footprint of the first three foundation,
+observation, and layer-typing cuts. It is not an `A-LEAN-*` package, public
+evidence, or a claim-status mechanism.
 -/
 
 set_option autoImplicit false
@@ -39,3 +40,12 @@ set_option autoImplicit false
 #print axioms TwistJ.Models.equivalent_but_distinct_orbits
 #print axioms TwistJ.Models.constant_defined_readings_equate_distinct_orbits
 #print axioms TwistJ.Models.emptyFamily_equates_all
+#print axioms TwistJ.Observation.StateReading.atOrbitIndex_read
+#print axioms TwistJ.Dictionary.SpaceReading.toOrbitReading_read
+#print axioms TwistJ.Models.sampledInitialOrbitReadout_read
+#print axioms TwistJ.Models.successorStateReadout_at_one
+#print axioms TwistJ.Models.same_orbit_different_state_samples
+#print axioms TwistJ.Models.emptyOutputSpaceReading_undefined
+#print axioms TwistJ.Models.constantSpaceReading_equates_distinct_orbits
+#print axioms TwistJ.Models.zeroFlagSpaceReading_nonzero
+#print axioms TwistJ.Models.spaceProjection_preserves_option_boundary
