@@ -194,6 +194,9 @@ structure ReadoutFamily (Input : Type u) where
 For the public decoder, `Input` must be a forward-orbit type. `Option`
 preserves the distinction between undefined and defined output.
 
+The stacked implementation of that next cut is governed separately by
+`OBSERVATION-CONTRACT.md`; it does not retroactively widen this cut 1 contract.
+
 ## 5. Import firewall
 
 The present modules obey

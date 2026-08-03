@@ -1,14 +1,18 @@
-# Lean laboratory: TWIST-J foundations, cut 1
+# Lean laboratory: TWIST-J foundations, cuts 1 and 2
 
 Status: **NON-CANONICAL NOTE**.
 
-This directory is the first narrow Lean laboratory for the Public Canon v32
-ontology. It separates four things that the prose must not conflate:
+This directory is the stacked Lean laboratory for the first two narrow Public
+Canon v32 ontology cuts. It separates things that the prose must not conflate:
 
 - an autonomous one-step map;
 - a natural-valued internal counter carried by the complete state;
 - a checkpoint projection that may recur; and
-- the metatheoretic iteration used to state and prove a theorem.
+- the metatheoretic iteration used to state and prove a theorem;
+- a named forward orbit rather than one state;
+- an undefined partial read rather than a default value; and
+- equality of every reading under one family rather than equality of the
+  orbit inputs.
 
 The central manual theorems are
 
@@ -23,6 +27,17 @@ an arbitrary checkpoint map in the same counter-checkpoint skew-product shape.
 The declared v32 selector update is the intended Canon-level instance; its
 exact translation remains a separate review obligation because this cut does
 not formalize or assume the internal formulas for `a,...,e`.
+
+The second cut adds ordinary explicit `PartialReadout` and heterogeneous
+`ReadoutFamily` structures. For one fixed family it defines
+
+```text
+ObservationallyEquivalent R x y
+  iff for every i, R.read i x = R.read i y.
+```
+
+The output carrier may depend on `i`; outputs are compared only at the same
+index. Orbit readout aliases accept `ForwardOrbit S`, not a single state.
 
 Nothing here changes `canon/`, the registry, frontier, evidence ledger,
 history, release metadata, or any claim status. In particular,
@@ -40,21 +55,32 @@ TwistJ/Architecture/
   N0.lean
   CounterCheckpoint.lean
   UpdateShape.lean
+TwistJ/Observation/
+  PartialReadout.lean
+  ReadoutFamily.lean
+  ObservationalEquivalence.lean
+  OrbitReadout.lean
 TwistJ/Models/
   CounterRegressions.lean
+  ReadoutRegressions.lean
 Audit.lean
 FOUNDATION-CONTRACT.md
+OBSERVATION-CONTRACT.md
 ```
 
-The enforced import direction in this cut is
+The enforced import graph in the stacked cuts is
 
 ```text
-Foundation -> Architecture -> Models/Audit.
+Foundation.Orbit ---------------------> Observation.OrbitReadout
+Architecture.UpdateShape ------------> Observation.OrbitReadout
+PartialReadout -> ReadoutFamily -> ObservationalEquivalence
+Observation --------------------------> Models/Audit
 ```
 
-There is no algebraic-seed, decoder, observation, dictionary, commutator, or
-layer module in this first cut. Future observation and decoder modules may
-import the update layer; the update layer must never import them.
+There is no algebraic-seed, decoder, dictionary, commutator, or layer module in
+this project. Observation may import the update layer; the update layer does
+not import Observation and must never import Decoder or Dictionary. The
+parallel algebraic-seed laboratory is not a dependency.
 
 ## Pinned manual environment
 
@@ -83,9 +109,10 @@ lake env lean Audit.lean
 Routine builds consume the committed lock. `lake update` is only a lock
 regeneration check here and must leave `lake-manifest.json` byte-identical.
 
-`Audit.lean` prints the axiom footprint of the general theorem, the exact
-v32-shaped specialization, and the regressions. A successful local build is a
-review aid only and creates no public evidence or scientific status.
+`Audit.lean` prints the axiom footprint of the counter theorems, the exact
+v32-shaped specialization, the observation-equivalence laws, and the
+regressions. A successful local build is a review aid only and creates no
+public evidence or scientific status.
 
 ## Manual verification
 
@@ -112,5 +139,29 @@ SHA-256             85af4a94effdd6d702b41d39901181bc76f76e3a796113406d93acec0c95
 These are manual, status-neutral checks. No build output or run record is
 tracked.
 
-The binding design scope and its non-claims are in
-`FOUNDATION-CONTRACT.md`.
+On 2026-08-03, the stacked cut 2 source on Ubuntu 24.04.3 LTS WSL2 x86_64
+with the same committed pins reported:
+
+```text
+Build completed successfully (1126 jobs).
+```
+
+`lake env lean Audit.lean` exited zero. The pointwise observational-equivalence
+laws, its explicit `Setoid`, the unequal-leg theorem, the `leg` and `toFamily`
+bridges, the everywhere-undefined and everywhere-constant examples, and the
+empty-family regression reported `does not depend on any axioms`. The local
+undefinedness lemma and concrete conditional Option regressions reported only
+`[propext]`. No project axiom or `sorryAx` occurs. The earlier
+`ForwardOrbit.stateAt_succ` proof reports `[propext, Quot.sound]` through the
+Mathlib iteration machinery; neither axiom enters the counter/no-return or
+observation-equivalence laws.
+
+The cut 1 lock remained byte-identical:
+
+```text
+lake-manifest.json  3173 bytes
+SHA-256             85af4a94effdd6d702b41d39901181bc76f76e3a796113406d93acec0c95394c
+```
+
+The binding design scopes and their non-claims are in
+`FOUNDATION-CONTRACT.md` and `OBSERVATION-CONTRACT.md`.
