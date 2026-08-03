@@ -1,18 +1,21 @@
-# Lean laboratory: TWIST-J foundations, cuts 1 and 2
+# Lean laboratory: TWIST-J foundations, cuts 1 through 3
 
 Status: **NON-CANONICAL NOTE**.
 
-This directory is the stacked Lean laboratory for the first two narrow Public
+This directory is the stacked Lean laboratory for the first three narrow Public
 Canon v32 ontology cuts. It separates things that the prose must not conflate:
 
 - an autonomous one-step map;
 - a natural-valued internal counter carried by the complete state;
-- a checkpoint projection that may recur; and
+- a checkpoint projection that may recur;
 - the metatheoretic iteration used to state and prove a theorem;
 - a named forward orbit rather than one state;
-- an undefined partial read rather than a default value; and
+- an undefined partial read rather than a default value;
 - equality of every reading under one family rather than equality of the
-  orbit inputs.
+  orbit inputs;
+- a read of one state rather than a read of a named forward orbit; and
+- an explicitly declared spatial dictionary role rather than a theorem that
+  physical space exists.
 
 The central manual theorems are
 
@@ -39,6 +42,16 @@ ObservationallyEquivalent R x y
 The output carrier may depend on `i`; outputs are compared only at the same
 index. Orbit readout aliases accept `ForwardOrbit S`, not a single state.
 
+The third cut adds the generic aliases `StateReading S` and `OrbitReading S`.
+A state read can be sampled along an orbit by the supplied named function
+`StateReading.atOrbitIndex`; no implicit conversion is installed. The
+downstream nominal structure
+`Dictionary.SpaceReading S` records that a dictionary has chosen an
+orbit-indexed partial read and called its role spatial. It is ordinary data,
+not a typeclass, coercion, decoder implementation, L2 carrier, or proof of
+physical space. The cut supplies the explicit forgetful function
+`SpaceReading.toOrbitReading`; no coercion or reverse helper is supplied.
+
 Nothing here changes `canon/`, the registry, frontier, evidence ledger,
 history, release metadata, or any claim status. In particular,
 `FULL-STATE-NONRETURN` is only a proposed future `T-target` label. This tree is
@@ -60,12 +73,17 @@ TwistJ/Observation/
   ReadoutFamily.lean
   ObservationalEquivalence.lean
   OrbitReadout.lean
+  LayerTyping.lean
+TwistJ/Dictionary/
+  SpaceReading.lean
 TwistJ/Models/
   CounterRegressions.lean
   ReadoutRegressions.lean
+  LayerTypingRegressions.lean
 Audit.lean
 FOUNDATION-CONTRACT.md
 OBSERVATION-CONTRACT.md
+LAYER-TYPING-CONTRACT.md
 ```
 
 The enforced import graph in the stacked cuts is
@@ -74,13 +92,18 @@ The enforced import graph in the stacked cuts is
 Foundation.Orbit ---------------------> Observation.OrbitReadout
 Architecture.UpdateShape ------------> Observation.OrbitReadout
 PartialReadout -> ReadoutFamily -> ObservationalEquivalence
-Observation --------------------------> Models/Audit
+Foundation.Orbit + PartialReadout ----> Observation.LayerTyping
+Observation.LayerTyping -------------> Dictionary.SpaceReading
+Observation + Dictionary ------------> Models/Audit
 ```
 
-There is no algebraic-seed, decoder, dictionary, commutator, or layer module in
-this project. Observation may import the update layer; the update layer does
-not import Observation and must never import Decoder or Dictionary. The
-parallel algebraic-seed laboratory is not a dependency.
+There is no algebraic-seed, decoder, or commutator module in this project. The
+only Dictionary module is the downstream nominal `SpaceReading` leaf; no
+Foundation, Architecture, or Observation source imports it. Observation may
+import the update layer; the update layer does not import Observation and must
+never import Decoder or Dictionary. The parallel algebraic-seed laboratory is
+not a dependency. The three local typing strata are not the Canon action
+layers L1--L6 and discharge no cross-layer gate.
 
 ## Pinned manual environment
 
@@ -110,9 +133,9 @@ Routine builds consume the committed lock. `lake update` is only a lock
 regeneration check here and must leave `lake-manifest.json` byte-identical.
 
 `Audit.lean` prints the axiom footprint of the counter theorems, the exact
-v32-shaped specialization, the observation-equivalence laws, and the
-regressions. A successful local build is a review aid only and creates no
-public evidence or scientific status.
+v32-shaped specialization, the observation-equivalence laws, the explicit
+layer-typing conversions, and the regressions. A successful local build is a
+review aid only and creates no public evidence or scientific status.
 
 ## Manual verification
 
@@ -163,5 +186,27 @@ lake-manifest.json  3173 bytes
 SHA-256             85af4a94effdd6d702b41d39901181bc76f76e3a796113406d93acec0c95394c
 ```
 
+On 2026-08-03, the stacked cut 3 source on Ubuntu 24.04.3 LTS WSL2 x86_64
+with the same committed pins reported:
+
+```text
+Build completed successfully (1129 jobs).
+```
+
+`lake env lean Audit.lean` exited zero. The named state-to-orbit sampling law,
+the explicit `SpaceReading.toOrbitReading` law, the initial-orbit sample, the
+empty-output regression, and the constant spatial-reading nonseparation
+regression reported `does not depend on any axioms`. The concrete successor
+sample and conditional `Option` regressions reported only `[propext]`. No
+project axiom or `sorryAx` occurs.
+
+The committed lock again remained byte-identical:
+
+```text
+lake-manifest.json  3173 bytes
+SHA-256             85af4a94effdd6d702b41d39901181bc76f76e3a796113406d93acec0c95394c
+```
+
 The binding design scopes and their non-claims are in
-`FOUNDATION-CONTRACT.md` and `OBSERVATION-CONTRACT.md`.
+`FOUNDATION-CONTRACT.md`, `OBSERVATION-CONTRACT.md`, and
+`LAYER-TYPING-CONTRACT.md`.

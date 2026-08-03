@@ -226,3 +226,7 @@ The stacked cut is acceptable only if all of the following hold:
 A successful build remains a manual, status-neutral review aid. This cut is
 not a formal probe, a minimal reproduction, a Canon patch, an `A-LEAN-*`
 package, or a mechanism for promoting any claim.
+
+The downstream layer-typing extension is governed separately by
+`LAYER-TYPING-CONTRACT.md`. It does not retroactively widen this cut 2
+contract or turn a generic observation into a physical dictionary statement.
