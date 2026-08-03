@@ -1,0 +1,11 @@
+PASS 01 TOTIENT      prime-factor certificate gives phi(n)=4 exactly for n={5,8,10,12}
+PASS 02 FIELDS       Phi_5,Phi_8,Phi_10,Phi_12 are reconstructed and zeta_10=-zeta_5^3 with zeta_10^2=zeta_5
+PASS 03 DISCRIMINANT disc(K5)=5^3, disc(K8)=2^8, disc(K10)=5^3, disc(K12)=2^4*3^2 by formula and resultant
+PASS 04 REDUCTIONS   the four frozen cyclotomic reductions and both quadratic irreducibility claims are exact
+PASS 05 PROFILES     independent factorization gives (e,f,g)=(4,1,1),(4,1,1),(2,2,1),(2,2,1)
+PASS 06 CENSUS       exactly K5 at 5 and K8 at 2 are totally ramified; K12 at 2 and 3 is not
+PASS 07 NORMS        N(1-zeta_5)=5 and N(1-zeta_8)=2 with unique linear total factors
+PASS 08 RESIDUES     unit groups are C4,C1 at the total primes and C3,C8 at the two K12 controls
+PASS 09 INHERITED-J  J mod (1-zeta_5)=2 has order 4 and generates F5*; mismatch is STOP
+SCOPE L1 TOTAL RAMIFICATION IN FULL QUARTIC CYCLOTOMIC FIELDS ONLY; K12 RESIDUES ARE NON-TOTAL CONTROLS; NO TWO-PLACE-PHYSICS OR L2-L6 CLAIM
+RESULT 9/9 ALL PASS
