@@ -36,6 +36,7 @@ CENTRAL-LIFT-PHASE	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L4 quadr
 QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	C20-TEICHMULLER-SPLIT	REQUIRES	the final J compatibility corollary inherits O=Z[zeta_5], the principal prime (1-zeta_5), residue F_5, and its cyclic order-four unit group at the registered L1 scope
 QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	RAMIFIED-TM-LIFT	REQUIRES	the final compatibility corollary inherits only J mod (1-zeta_5)=2 in F_5^x at L1; the field and ramification census is proved independently
 QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L1 exact arithmetic and creates no physical reading or lift to L2-L6
+ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L1 exact arithmetic and creates no physical selection, write/read assignment, or lift to L2-L6
 FORCE-AS-CURVATURE	FORCE-WEYL-HOLONOMY	REQUIRES	curvature reading rests on the Weyl theorem
 MEASURE-BORN-VERB	BORN-FACE-WEIGHTS	REQUIRES	registry scope names the theorem input
 COSMOLOGY-READING-DICTIONARY	TT-LINEAR-ZERO	REQUIRES	dictionary reads the exact zero response

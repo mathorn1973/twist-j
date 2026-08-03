@@ -20,6 +20,7 @@ DEPENDENCIES = ROOT / "canon" / "DEPENDENCIES.tsv"
 EVIDENCE = ROOT / "canon" / "EVIDENCE.tsv"
 GATES = ROOT / "canon" / "GATES.tsv"
 FRONTIER_PROGRAMS = ROOT / "canon" / "FRONTIER_PROGRAMS.tsv"
+CORE = ROOT / "canon" / "CORE.md"
 
 
 def load_table(path):
@@ -117,17 +118,18 @@ def run():
         gates,
         programs,
     ) = load_rows()
+    core_text = CORE.read_text(encoding="utf-8")
     checks = []
 
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 117, "D": 40, "C": 24, "F": 10,
+    expected_counts = {"T": 118, "D": 40, "C": 24, "F": 10,
                        "O": 24, "H": 4}
     checks.append((
         "COUNTS",
-        "registry has 219 claims with the current status partition",
-        len(rows) == 219 and counts == expected_counts,
+        "registry has 220 claims with the current status partition",
+        len(rows) == 220 and counts == expected_counts,
     ))
 
     checks.append((
@@ -507,6 +509,72 @@ def run():
         )
         and has_status(index, "TWO-PLACE-PHYSICS", "D")
         and quartic not in programs,
+    ))
+
+    abelian_cm = "ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM"
+    abelian_cm_path = (
+        "probes/P-ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM-1"
+    )
+    abelian_cm_digest = (
+        "31a4d20d4cd73778a7c058435ccc9e8bb1b7fcdc5a5475a5181c1e3aa739e2e0"
+    )
+    abelian_cm_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == abelian_cm
+    }
+    checks.append((
+        "ABELIAN-CM",
+        "unique even-bit minimum stays T at L1; its class is not a physical selector",
+        has_status(index, abelian_cm, "T")
+        and normative.get(abelian_cm, {}).get("item_type") == "THEOREM"
+        and normative.get(abelian_cm, {}).get("status") == "T"
+        and normative.get(abelian_cm, {}).get("layer") == "L1"
+        and normative.get(abelian_cm, {}).get("gate_ids") == ""
+        and index.get(abelian_cm, {}).get("canon_section")
+        == "4. The two places"
+        and index.get(abelian_cm, {}).get("evidence") == abelian_cm_path
+        and evidence.get(abelian_cm, {}).get("evidence_id")
+        == "EV-ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM"
+        and evidence.get(abelian_cm, {}).get("evidence_kind")
+        == "PUBLIC_PROBE"
+        and evidence.get(abelian_cm, {}).get("location") == abelian_cm_path
+        and evidence.get(abelian_cm, {}).get("sha256") == abelian_cm_digest
+        and evidence.get(abelian_cm, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(abelian_cm, {}).get("architecture_requirement")
+        == "two-architecture"
+        and abelian_cm_dependencies == {
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, abelian_cm,
+            ("Q(zeta_5) belongs to A",
+             "|Hom(G_K,C_2)|=2 including the trivial character",
+             "absDisc(K)>=125",
+             "unique absolute-discriminant minimizer",
+             "primitive character epsilon associated to the pointwise square psi^2",
+             "pure 2-primary control (16,8) giving floor 2048",
+             "no total-ramification premise",
+             "no claim that A or discriminant minimization is selected",
+             "TWO-PLACE-PHYSICS promotion", "lift to L2-L6"),
+        )
+        and all(
+            phrase.lower() in index[abelian_cm]["falsifier"].lower()
+            for phrase in (
+                "field K in A has absDisc(K)<125",
+                "not Q-isomorphic to Q(zeta_5) has absDisc(K)=125",
+                "Q(zeta_5) fails an admissibility condition",
+                "field conductor-discriminant identity",
+                "integrity STOP, not a scientific falsifier",
+            )
+        )
+        and "## Why five, twice" in core_text
+        and "{(K_5,5),(K_8,2)}" in core_text
+        and "unique absolute-discriminant" in core_text
+        and "separate frozen classes, not a physical-selection chain"
+        in core_text
+        and has_status(index, "TWO-PLACE-PHYSICS", "D")
+        and abelian_cm not in programs,
     ))
 
     color_theorems = (

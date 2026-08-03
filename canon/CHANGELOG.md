@@ -1,12 +1,56 @@
 # Canon changelog (public series)
 
 
-## Public Canon v33
+## Public Canon v34
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 219 claims; 0 T-LOCK, 117 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
+Registry snapshot: 220 claims; 0 T-LOCK, 118 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v34 carries exactly one new claim and one concise Core synthesis.
+
+ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM [T] registers the frozen L1
+theorem for finite abelian Galois CM fields `K/Q` with exactly one nontrivial
+quadratic character and with every quadratic character even on canonical CM
+conjugation. Every such field has `absDisc(K)>=125`, and equality holds exactly
+for the `Q`-isomorphism class of `Q(zeta_5)`.
+
+The proof forces degree divisible by four from the even-bit condition, uses
+the exact totally imaginary Minkowski bound to reduce every smaller or tied
+competitor to degree four, forces cyclic group `C_4`, and applies the abelian
+character-field correspondence and conductor-discriminant theorem to obtain
+`absDisc(K)=f(psi)^2 f(epsilon)`, where `epsilon` is the primitive character
+associated to the pointwise square `psi^2`. The conductor floors give
+`5^2 5=125`; the
+pure 2-primary control starts at `16^2 8=2048`; equality at conductor five
+cuts out the full fifth cyclotomic field.
+
+The status is T because the owner accepted the complete written proof and its
+named classical theorem inputs at the exact frozen scope. The proof and both
+GitHub architectures' byte-identical seven-gate transcripts audit the result;
+the full execution-integrity record remains in the evidence bundle.
+Computation alone would remain C; the row is not T-LOCK.
+
+Core now displays the two independent "why five" answers: v33 has the complete
+total-ramification locus `{(K_5,5),(K_8,2)}` inside full quartic cyclotomic
+fields, while v34 makes `K_5` the unique absolute-discriminant minimizer inside
+the different abelian Galois CM unique-even-bit class. This synthesis is not a
+new claim and does not chain the two frozen classes.
+
+This is an L1 arithmetic-only fold. It does not assert that Nature selects the
+class, total ramification, or discriminant minimization; it does not strengthen
+TWO-PLACE-PHYSICS [D], promote or otherwise change the non-canonical
+`V2-JEDNA-VOLBA` note, or supply a decoder, Born measure, physical bit, clock,
+force, observable, or L2-L6 lift. No live H or O row moves.
+
+
+## Public Canon v33
+
+<!-- BEGIN GENERATED CANON33 COUNTS -->
+Registry snapshot: 219 claims; 0 T-LOCK, 117 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON33 COUNTS -->
 
 Public Canon v33 carries exactly one item.
 

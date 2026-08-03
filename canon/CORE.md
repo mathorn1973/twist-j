@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v33. Normative authority and activation
+**Release identity:** Public Canon v34. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -11,7 +11,7 @@ probability, and fields are readings. Its single algebraic axiom is
 J = 1 + zeta_5^2.
 ```
 
-Public Canon v33 also declares a discrete architecture. It does not
+Public Canon v34 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -54,6 +54,24 @@ equivalence, completeness, maximality, and nonconstancy slots. It supplies
 no surviving factor, classification, universality, carrier, physical
 bridge, completion-wide terminality result, evidence, or status change,
 and it authorizes no verifier or probe.
+
+## Why five, twice
+
+Two independent L1 theorems now answer two different arithmetic questions.
+
+- QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T] says that among full
+  quartic cyclotomic fields, the complete total-ramification locus is exactly
+  `{(K_5,5),(K_8,2)}`. Their residue-unit groups are respectively `C_4` and
+  `C_1`.
+- ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM [T] says that among finite
+  abelian Galois CM fields with exactly one nontrivial quadratic character,
+  even on CM conjugation, `Q(zeta_5)` is the unique absolute-discriminant
+  minimizer, with minimum `125`.
+
+These are separate frozen classes, not a physical-selection chain. Total
+ramification is not a premise of the minimum theorem, and neither theorem says
+that its class or optimization rule is forced by `J`, the decoder, or Nature.
+TWO-PLACE-PHYSICS remains [D], and no live H or O row moves.
 
 <!-- BEGIN GENERATED CORE CLAIMS -->
 The stable orientation claims are generated from the registry:

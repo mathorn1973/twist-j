@@ -7,9 +7,10 @@ exact rows remain at `T`, while physical readings are carried by explicit
 Canon fold; the theorem/dictionary boundary checks stay structural.
 
 The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
-`canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/GATES.tsv`, and
-`canon/FRONTIER_PROGRAMS.tsv`, uses the Python standard library, and emits
-deterministic text. Its twenty checks cover the current registry partition,
+`canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/GATES.tsv`,
+`canon/FRONTIER_PROGRAMS.tsv`, and `canon/CORE.md`, uses the Python standard
+library, and emits deterministic text. Its twenty-one checks cover the current
+registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
 branch-invariant C8-BILINEAR-SHADOW theorem, the exact boost drift and
@@ -19,6 +20,9 @@ central Herm/Sym phase theorem kept at L4 and separate from the Herm2 cone,
 decoder data, and physical readings, the full quartic cyclotomic
 total-ramification census kept at L1 and separate from degree selection,
 broader CM completeness, TWO-PLACE-PHYSICS, and every physical lift, the
+abelian Galois CM unique-even-bit discriminant-minimum theorem kept at L1 and
+separate from total ramification, physical class selection,
+TWO-PLACE-PHYSICS, and every higher-layer lift, the
 color ladder, the marked CM 2I semilinear-pair theorem kept at L4 and
 separate from marked-lift selection, decoder QCarrier and measure obligations,
 the exact Gyron discrepancy and forward pair-substitution
@@ -41,5 +45,5 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 20/20 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 21/21 ALL PASS`,
 exit 0, and empty stderr.

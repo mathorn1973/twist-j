@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v33
+# TWIST-J Public Canon v34
 
-**Release identity.** Public Canon v33. Normative authority and activation
+**Release identity.** Public Canon v34. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v33 also declares the discrete
+algebraic axiom is J. Public Canon v34 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v33 does not claim
+seed of the two algebraic projections. Public Canon v34 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v33 contains no such
+deriving the architecture from J; Public Canon v34 contains no such
 theorem.
 
 ---
@@ -1788,6 +1788,97 @@ ramification in all number fields, identify a unique physical field or place,
 strengthen TWO-PLACE-PHYSICS [D], or define a decoder, Born measure, physical
 bit, clock, force, observable, or lift to L2-L6.
 
+A second exact theorem answers a different minimization question
+(ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM [T],
+`probes/P-ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM-1`). For a finite
+Galois CM extension `K/Q`, write `G_K=Gal(K/Q)` and let `c_K` be its canonical
+CM complex conjugation. Let `A` be the class, up to `Q`-isomorphism, in which
+
+```text
+G_K is abelian,
+|Hom(G_K,C_2)| = 2, including the trivial character,
+chi(c_K) = +1 for every chi:G_K -> C_2.
+```
+
+Then
+
+```text
+absDisc(K) >= 125 for every K in A,
+absDisc(K) = 125 iff K is Q-isomorphic to Q(zeta_5).
+```
+
+The standard inputs are the central nonidentity CM involution, the finite
+abelian square-kernel identity, the totally imaginary Minkowski bound,
+Kronecker--Weber and the abelian Dirichlet character-field correspondence,
+the conductor-discriminant theorem, primitive quadratic characters and
+fundamental discriminants, and the cyclotomic discriminant formula.
+
+Here is the proof. For a finite abelian group, the intersection of the
+kernels of all maps to `C_2` is `G_K^2`. The nonidentity involution `c_K` is
+killed by every quadratic character, hence `c_K=tau^2` for some `tau` of
+exact order four. Thus `4` divides `[K:Q]`.
+
+For a totally imaginary degree-`n` field, Minkowski gives
+
+```text
+absDisc(K) >= (pi/4)^n n^(2n)/(n!)^2.
+```
+
+Using `pi>3`, put `M(n)=(3/4)^n n^(2n)/(n!)^2`. The exact checkpoints are
+
+```text
+M(8) = 21233664/1225 > 125,
+M(n+1)/M(n) = (3/4)(1+1/n)^(2n) >= 3.
+```
+
+Therefore every smaller or tied competitor has degree four. An abelian group
+of order four is `C_4` or `C_2 x C_2`; the latter has four maps to `C_2`,
+including the trivial map. The unique-bit condition forces `G_K=C_4`.
+
+By Kronecker--Weber and the abelian character-field correspondence, `K` is
+cut out by a primitive Dirichlet character `psi` of exact order four. It is
+odd. Let `epsilon` be the primitive character associated to the pointwise
+square `psi^2`; it is the unique nontrivial quadratic character and is even.
+The conductor-discriminant theorem for abelian extensions gives the
+field-discriminant identity
+
+```text
+absDisc(K) = f(psi)^2 f(epsilon).
+```
+
+There is no primitive order-four character of conductor below five and no
+nontrivial even primitive quadratic character of conductor below five, so
+`f(psi)>=5` and `f(epsilon)>=5`. The pure 2-primary branch has the stronger
+floor
+
+```text
+f(psi) >= 16,   f(epsilon)=8,
+absDisc(K) >= 16^2 8 = 2048,
+```
+
+and therefore no pure 2-primary competitor lies below 125. Hence
+`absDisc(K)>=5^2 5=125`.
+Equality forces both conductors to be five. An order-four character modulo
+five is faithful on `(Z/5Z)^x=C_4`, so its field is the full `Q(zeta_5)`.
+Conversely `Q(zeta_5)` belongs to `A` and has discriminant `5^3=125`.
+
+The two L1 results now supply two independent answers to "why five":
+
+```text
+ramification answer: among full quartic cyclotomic fields, the complete
+                     total-ramification locus is {(K_5,5),(K_8,2)};
+minimum answer:      in the abelian Galois CM unique-even-bit class A,
+                     K_5 is the unique absolute-discriminant minimizer.
+```
+
+The answers use different frozen classes and are not a physical selection
+chain. Total ramification is not a premise of the minimum theorem; the class
+`A` and discriminant minimization are not claimed to be forced by `J`, the
+decoder, or Nature. In particular `K_8` has Galois group `C_2 x C_2` and does
+not satisfy the unique-bit premise. Neither theorem promotes
+TWO-PLACE-PHYSICS [D], derives a write/read assignment, or supplies a decoder,
+Born measure, physical bit, clock, force, observable, or lift to L2-L6.
+
 Separately, the exact arithmetic uses two places, disjoint over Q:
 Q(zeta_5) cap Q(zeta_8) = Q. Their physical assignment is the
 TWO-PLACE-PHYSICS dictionary [D]:
@@ -2244,7 +2335,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v33. The fermionizer
+inherited naming clause is not part of Public Canon v34. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -3583,6 +3674,28 @@ MEASURE-BORN-VERB and GYRON-DENSITY constrain the type of the physical
 measure clause; they do not select its values. No successor L5 source
 schema is currently frozen. The Born gate remains open but the scheduler
 is STOP while a separately reviewed owner definition is absent.
+
+The v34 ledger change is signed term by term:
+
+```text
+claims:    219 + 1 theorem = 220,
+T:         117 + 1 abelian CM discriminant-minimum theorem = 118,
+D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,
+live H/O:  28 unchanged.
+```
+
+Public Canon v34 registers
+ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM [T] at L1 on the immutable
+`probes/P-ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM-1` bundle. The
+theorem status is earned by the complete owner-accepted proof; the accepted
+proof and byte-identical x86_64 and aarch64 transcripts audit its seven exact
+gates, with the full execution-integrity record retained in the evidence
+bundle. The fold adds only the unique absolute-discriminant
+minimum in the frozen abelian Galois CM unique-even-bit class and the concise
+Core synthesis of the two independent "why five" answers. It adds no claim
+that the class, total ramification, or discriminant minimization is physically
+selected, no physical-field uniqueness, TWO-PLACE-PHYSICS promotion, decoder,
+measure, or L2-L6 lift, and no live H or O row moves.
 
 The v33 ledger change is signed term by term:
 
