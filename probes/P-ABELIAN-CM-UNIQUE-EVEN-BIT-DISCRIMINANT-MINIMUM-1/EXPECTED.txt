@@ -1,0 +1,9 @@
+PASS 01 GROUP-FLOOR        the even-bit condition supplies an order-four root and excludes the Klein group at degree four
+PASS 02 MINKOWSKI          M(8)=21233664/1225>125 and the exact ratio certificate is at least three
+PASS 03 QUARTIC-GROUPS     C4 has one involution and two C2 characters; C2xC2 has three and four
+PASS 04 SMALL-CONDUCTORS   quartic conductors start at five and even quadratic conductors start at five
+PASS 05 TWO-PRIMARY        the pure 2-primary quartic/even-quadratic floor is (16,8) and discriminant at least 2048
+PASS 06 CONDUCTOR-PRODUCT  f(psi)^2 f(epsilon) is at least 125 with equality only at (5,5)
+PASS 07 ZETA-FIVE          Phi_5 has discriminant 125 and the faithful conductor-five character cuts out the full field
+SCOPE L1 MINIMUM IN THE FROZEN ABELIAN GALOIS CM UNIQUE-EVEN-BIT CLASS ONLY; NO PHYSICAL SELECTION, J DERIVATION, TWO-PLACE-PHYSICS PROMOTION, OR L2-L6 CLAIM
+RESULT 7/7 ALL PASS
