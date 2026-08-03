@@ -1,7 +1,7 @@
 metric	value
-claims	218
+claims	219
 status_T-LOCK	0
-status_T	116
+status_T	117
 status_D	40
 status_C	24
 status_H	4
@@ -12,4 +12,4 @@ reproductions	22
 evidence_none	43
 evidence_one-architecture	9
 evidence_recorded-audit	31
-evidence_two-architecture	135
+evidence_two-architecture	136

@@ -33,6 +33,9 @@ CENTRAL-LIFT-PHASE	J-PROJECTIONS	REQUIRES	the principal embedding, exact modulus
 CENTRAL-LIFT-PHASE	J-TENTH-ROOT	REQUIRES	the primitive tenth-root identity 1-J = -zeta_5^2 supplies the frozen mu_10 outside mu_5 obstruction
 CENTRAL-LIFT-PHASE	J-GOLDEN-BRIDGE	REQUIRES	the identities J = phi^-1 zeta_5 and phi in Z[zeta_5] supply the exact square-root-free coefficients
 CENTRAL-LIFT-PHASE	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L4 quadratic support and creates no state, stream, measure, or cross-layer lift
+QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	C20-TEICHMULLER-SPLIT	REQUIRES	the final J compatibility corollary inherits O=Z[zeta_5], the principal prime (1-zeta_5), residue F_5, and its cyclic order-four unit group at the registered L1 scope
+QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	RAMIFIED-TM-LIFT	REQUIRES	the final compatibility corollary inherits only J mod (1-zeta_5)=2 in F_5^x at L1; the field and ramification census is proved independently
+QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L1 exact arithmetic and creates no physical reading or lift to L2-L6
 FORCE-AS-CURVATURE	FORCE-WEYL-HOLONOMY	REQUIRES	curvature reading rests on the Weyl theorem
 MEASURE-BORN-VERB	BORN-FACE-WEIGHTS	REQUIRES	registry scope names the theorem input
 COSMOLOGY-READING-DICTIONARY	TT-LINEAR-ZERO	REQUIRES	dictionary reads the exact zero response

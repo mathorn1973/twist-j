@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v32
+# TWIST-J Public Canon v33
 
-**Release identity.** Public Canon v32. Normative authority and activation
+**Release identity.** Public Canon v33. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v32 also declares the discrete
+algebraic axiom is J. Public Canon v33 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v32 does not claim
+seed of the two algebraic projections. Public Canon v33 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v32 contains no such
+deriving the architecture from J; Public Canon v33 contains no such
 theorem.
 
 ---
@@ -1737,7 +1737,58 @@ it supplies no continuum, measure, or physical lift.
 
 ## 4. The two places
 
-The exact arithmetic uses two places, disjoint over Q:
+The total-ramification census among full quartic cyclotomic fields is exact
+(QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T],
+`probes/P-QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS-1`). For
+`K_n = Q(zeta_n)` one has
+
+```text
+phi(n) = 4 iff n in {5,8,10,12},
+Q(zeta_10) = Q(zeta_5).
+```
+
+After quotienting by equality of fields, the class is exactly
+`{K_5,K_8,K_12}`, with
+
+```text
+disc(K_5)  = 5^3,
+disc(K_8)  = 2^8,
+disc(K_12) = 2^4 3^2.
+```
+
+Using `O_n = Z[zeta_n]`, the exact ramified-prime profiles are
+
+```text
+5 O_5  = p_(5,5)^4,   p_(5,5)=(1-zeta_5),   (e,f,g)=(4,1,1),
+2 O_8  = p_(8,2)^4,   p_(8,2)=(1-zeta_8),   (e,f,g)=(4,1,1),
+2 O_12 = P_(12,2)^2,                         (e,f,g)=(2,2,1),
+3 O_12 = P_(12,3)^2,                         (e,f,g)=(2,2,1).
+```
+
+The displayed discriminants exclude every other ramified rational prime.
+Consequently the total-ramification locus in the frozen class is exactly
+`{(K_5,5),(K_8,2)}`. A unique prime above a rational prime is not enough:
+the two `K_12` controls have `g=1` but `e=f=2` and are not total.
+
+At the total primes the residue fields and their unit groups are
+
+```text
+O_5/p_(5,5) = F_5,   F_5^x = C_4,
+O_8/p_(8,2) = F_2,   F_2^x = C_1.
+```
+
+The inherited axiom element reduces to `J mod p_(5,5)=2`, which has exact
+order four and generates `F_5^x`. The non-total controls are
+`O_12/P_(12,2)=F_4` with unit group `C_3` and
+`O_12/P_(12,3)=F_9` with unit group `C_8`.
+
+This is L1 exact arithmetic only. It does not select degree four, prove that
+full cyclotomic fields exhaust any broader CM or admissible class, classify
+ramification in all number fields, identify a unique physical field or place,
+strengthen TWO-PLACE-PHYSICS [D], or define a decoder, Born measure, physical
+bit, clock, force, observable, or lift to L2-L6.
+
+Separately, the exact arithmetic uses two places, disjoint over Q:
 Q(zeta_5) cap Q(zeta_8) = Q. Their physical assignment is the
 TWO-PLACE-PHYSICS dictionary [D]:
 
@@ -1758,8 +1809,8 @@ The exact field facts are DEGREES-BY-PRIME [T]
 (m_8 + m_8^-1)^2 = 2 and m_8^2 = i, and neither sqrt2 nor i lies in
 Q(sqrt5), the unique quadratic subfield of Q(zeta_5). The linear,
 quadratic, cubic, and foreign-magic assignments are readings of these
-facts under TWO-PLACE-PHYSICS [D]. The Z2
-symmetries split arithmetically (Z2-PLACES-SPLIT [T],
+facts under TWO-PLACE-PHYSICS [D]. The Z2 symmetries split arithmetically
+(Z2-PLACES-SPLIT [T],
 reproduce/foundations-places): there is one involution at zeta_5, the
 single order 2 element of its cyclic Galois group, and a complete
 Klein four at zeta_8, where every nontrivial element is an involution;
@@ -2193,7 +2244,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v32. The fermionizer
+inherited naming clause is not part of Public Canon v33. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -3532,6 +3583,27 @@ MEASURE-BORN-VERB and GYRON-DENSITY constrain the type of the physical
 measure clause; they do not select its values. No successor L5 source
 schema is currently frozen. The Born gate remains open but the scheduler
 is STOP while a separately reviewed owner definition is absent.
+
+The v33 ledger change is signed term by term:
+
+```text
+claims:    218 + 1 theorem = 219,
+T:         116 + 1 quartic cyclotomic total-ramification theorem = 117,
+D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,
+live H/O:  28 unchanged.
+```
+
+Public Canon v33 registers
+QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T] at L1 on the immutable
+`probes/P-QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS-1` bundle. The
+theorem status is earned by the complete independently accepted proof; the
+byte-identical x86_64 and aarch64 transcript and the independently frozen
+blind breaker audit its exact certificates. The fold adds only the complete
+`phi(n)=4` index and field quotient, discriminants, ramification profiles,
+total-prime locus, residue-unit groups, and inherited `J` compatibility. It
+adds no degree-four or broader CM selection, physical-field uniqueness,
+TWO-PLACE-PHYSICS promotion, decoder, measure, or L2-L6 lift, and no live H
+or O row moves.
 
 The v32 ledger change is signed term by term:
 
