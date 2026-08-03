@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 218)
+        self.assertEqual(self.report.claims, 219)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 24, "D": 40, "F": 10, "H": 4, "O": 24, "T": 116},
+            {"C": 24, "D": 40, "F": 10, "H": 4, "O": 24, "T": 117},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 43,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 135,
+                "two-architecture": 136,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,7 +43,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 174)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 192
+            len(self.report.transitive_architecture_dependents), 193
         )
         self.assertEqual(len(self.report.dependency_terminals), 10)
         self.assertNotIn(
@@ -92,6 +92,14 @@ class ArchitectureMapReportTests(unittest.TestCase):
         )
         self.assertNotIn(
             "CENTRAL-LIFT-PHASE",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertNotIn(
+            "QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS",
+            self.report.direct_architecture_requires,
+        )
+        self.assertIn(
+            "QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS",
             self.report.transitive_architecture_dependents,
         )
         for claim in (

@@ -122,12 +122,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 116, "D": 40, "C": 24, "F": 10,
+    expected_counts = {"T": 117, "D": 40, "C": 24, "F": 10,
                        "O": 24, "H": 4}
     checks.append((
         "COUNTS",
-        "registry has 218 claims with the current status partition",
-        len(rows) == 218 and counts == expected_counts,
+        "registry has 219 claims with the current status partition",
+        len(rows) == 219 and counts == expected_counts,
     ))
 
     checks.append((
@@ -449,6 +449,64 @@ def run():
         and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_state")
         == "STOP"
         and central not in programs,
+    ))
+
+    quartic = "QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS"
+    quartic_path = (
+        "probes/P-QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS-1"
+    )
+    quartic_digest = (
+        "05f6a5c1e29b5e962c357f323ec2104d39f771230ea5cb6953a6b25126bbe5ee"
+    )
+    quartic_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == quartic
+    }
+    checks.append((
+        "QUARTIC",
+        "quartic total ramification stays T at L1; no field selection or physical lift",
+        has_status(index, quartic, "T")
+        and normative.get(quartic, {}).get("item_type") == "THEOREM"
+        and normative.get(quartic, {}).get("status") == "T"
+        and normative.get(quartic, {}).get("layer") == "L1"
+        and normative.get(quartic, {}).get("gate_ids") == ""
+        and index.get(quartic, {}).get("canon_section") == "4. The two places"
+        and index.get(quartic, {}).get("evidence") == quartic_path
+        and evidence.get(quartic, {}).get("evidence_id")
+        == "EV-QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS"
+        and evidence.get(quartic, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(quartic, {}).get("location") == quartic_path
+        and evidence.get(quartic, {}).get("sha256") == quartic_digest
+        and evidence.get(quartic, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(quartic, {}).get("architecture_requirement")
+        == "two-architecture"
+        and quartic_dependencies == {
+            ("C20-TEICHMULLER-SPLIT", "REQUIRES"),
+            ("RAMIFIED-TM-LIFT", "REQUIRES"),
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, quartic,
+            ("phi(n)=4 exactly for n in {5,8,10,12}",
+             "Q(zeta_10)=Q(zeta_5)",
+             "total-ramification locus is exactly {(K_5,5),(K_8,2)}",
+             "(e,f,g)=(2,2,1)", "F_5^x=C_4", "F_2^x=C_1",
+             "F_4^x=C_3", "F_9^x=C_8", "J mod p_(5,5)=2",
+             "L1 exact arithmetic only", "no selection of degree four",
+             "TWO-PLACE-PHYSICS promotion", "lift to L2-L6"),
+        )
+        and all(
+            phrase.lower() in index[quartic]["falsifier"].lower()
+            for phrase in (
+                "solution set of phi(n)=4 differs",
+                "total-ramification locus differs",
+                "J-reduction mismatch requires correction",
+                "integrity STOP, not a scientific falsifier",
+            )
+        )
+        and has_status(index, "TWO-PLACE-PHYSICS", "D")
+        and quartic not in programs,
     ))
 
     color_theorems = (
