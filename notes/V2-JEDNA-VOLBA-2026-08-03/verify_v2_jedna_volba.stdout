@@ -1,0 +1,11 @@
+PASS G01 RAMIFIED-IMAGE  N(1-zeta_5) = Phi_5(1) = 5; J mod lambda = 2; ord(2 mod 5) = 4 with 2^2 = -1
+PASS G02 V2-READOUT      c mod 4 -> 2^(1-c) mod 5 is a bijection onto F_5^x; iterated increments match Theta_n = 2^s_2(n) for n < 2^18
+PASS G03 RECOVERY        the phase increment determines v_2(n+1) mod 4 exactly; inverse table verified on the same range
+PASS G04 NONPERIODIC     for every period candidate p = 1..128 the increment stream breaks it at some n <= 4096
+PASS G05 HAAR-MASSES     window counts equal the closed formula for M = 4..20 and approach (8,4,2,1)/15 within 2^(1-M)
+PASS G06 RESIDUE-DEGREE  the least f with 5 | 2^f - 1 is f = 4, so 2 is inert with residue field F_16 and |F_16^x| = 15 is the mass denominator
+PASS G07 FROZEN-TABLE    the public bridge-4 affine rows repeat with period four for k = 1..10, the translation set is a function of 2^k mod 5, and only k = 0 has multiplier -1
+PASS G08 TOWER-PERIOD    det M_J = 1; M_J^(5^k) = i_5 I with i_5 = 2 mod 5, i_5^4 = 1, and exact period 4 * 5^k for k = 1, 2
+PASS G09 RATIONAL-IDS    (1/3) + (2/15)*5 = 1; 8/15 = 1/3 + 1/5; the third phase mass equals the registered M_TM coefficient 2/15 as a number only
+
+RESULT 9/9 ALL PASS
