@@ -14,7 +14,7 @@ registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
 branch-invariant C8-BILINEAR-SHADOW theorem, the exact boost drift and
-conditional coin-ranking theorems separated from the MINIMAL-READ H/O rows,
+conditional coin-ranking theorems separated from the MINIMAL-READ D/O rows,
 the finite Weyl commutator, the Maxwell chain, the Born finite algebra, the
 central Herm/Sym phase theorem kept at L4 and separate from the Herm2 cone,
 decoder data, and physical readings, the full quartic cyclotomic

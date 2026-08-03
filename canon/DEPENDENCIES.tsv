@@ -350,7 +350,7 @@ DRIFT-IS-THE-READ	BOOST-COUNT-LADDER	BOUNDED_BY	the word read names only the reg
 COIN-SELECTION-CONDITIONAL	BOOST-READING-SPLIT	REQUIRES	the complete odd-rung rigidity proof and beta_1/beta_3 values use the exact parity-resolved boost identities
 COIN-SELECTION-CONDITIONAL	BOOST-COUNT-LADDER	BOUNDED_BY	the rapidity-cover cost is interpreted only inside the registered count-to-velocity dictionary and the theorem itself adopts no selector
 COIN-SELECTION-CONDITIONAL	DRIFT-IS-THE-READ	REQUIRES	the S2 comparison uses the exact all-N uniform-read kernel and beta_1 worst-case constant
-COIN-MINIMAL-READ	COIN-SELECTION-CONDITIONAL	REQUIRES	the adopted H-level choice rests on the complete exact pair and conditional S1/S2/S3 ranking theorem
+COIN-MINIMAL-READ	COIN-SELECTION-CONDITIONAL	REQUIRES	the adopted dictionary choice rests on the complete exact pair and conditional S1/S2/S3 ranking theorem
 MINIMAL-READ-DERIVATION	DEF-ARCHITECTURE	REQUIRES	any derivation must start from the complete registered public decoder architecture rather than from the adopted premise
 MINIMAL-READ-DERIVATION	DEF-ACTION-LAYERS	REQUIRES	the proposed selection route must type its L5 read and L1 coin endpoints without smuggling a cross-layer lift
 MINIMAL-READ-DERIVATION	COIN-SELECTION-CONDITIONAL	REQUIRES	the derivation target uses the exact complete coin pair, cost coordinates, and conditional rankings

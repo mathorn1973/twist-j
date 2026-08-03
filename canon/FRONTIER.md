@@ -24,9 +24,6 @@ Closed claims are excluded.
 - SCHEME-DICTIONARY [O]: the scheme dictionary between exact seeds and measured couplings
   Queue: ROOT; READY; FORMAL.
   Decision: closes positively by an exact dictionary between the seed normalization and a named measurement scheme; closes negatively if any dictionary requires a new free dimensionless parameter
-- COIN-MINIMAL-READ [H]: among the publicly proved complete pair {beta_1,beta_3}, the Canon dictionary adopts beta_1 by MINIMAL-READ: beta_1 uniquely minimizes both generic covering multiplicity and the worst-case constant of the uniform ergodic read; MAXIMAL-REACH is the named unadopted counter-selector and chooses beta_3; the agreement of the two distinct minimum-cost criteria is evidence on this pair, not a general equivalence, and no claim that the decoder architecture forces MINIMAL-READ is included
-  Queue: FOLLOWUP; BLOCKED; FORMAL.
-  Decision: fires if an exact public derivation from the complete registered decoder architecture uniquely forces beta_3, or if an exact counterexample overturns the frozen admissible-pair or ranking theorem; merely naming another preference that chooses beta_3 does not fire the row
 - DRESS-CROSSCOUNT [O]: the integer crossing count per observable
   Queue: FOLLOWUP; BLOCKED; FORMAL.
   Decision: closes positively when the integer crossing count per observable is derived; until then the form decision is armed: an exact witness departing from 72 alpha^4 (about 0.204 ppm, labeled) fires the exponential reading
@@ -115,4 +112,4 @@ Closed claims are excluded.
   Queue: ROOT; READY; ENRICHMENT.
   Decision: fires if any single ordinate Cayley angle 2 arctan(1/(2 gamma)) is proved outside 2 pi (1/4) Z[1/5], if the Li second differences are proved not to approach 2 lambda_1 along n = 4 . 5^A, or if another contradiction excludes every cocycle vector in the declared compact-boundary class
 
-Live total: 28.
+Live total: 27.

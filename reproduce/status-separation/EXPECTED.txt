@@ -5,7 +5,7 @@ PASS 01 COUNTS     registry has 220 claims with the current status partition
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
-PASS 05 BOOST      exact drift and selector ranking stay T; MINIMAL-READ stays H with derivation O
+PASS 05 BOOST      exact drift and selector ranking stay T; MINIMAL-READ is D with derivation O
 PASS 06 FORCE      the finite Weyl commutator stays T; force as curvature is D
 PASS 07 MAXWELL    four exact chain rows stay T; the classical Maxwell reading is D
 PASS 08 BORN       finite Born algebra stays T; measurement and cell readings are D
