@@ -360,3 +360,6 @@ READ-REDUNDANCY-PRIME-SUPPORT	COIN-SELECTION-CONDITIONAL	REQUIRES	the admissible
 READ-REDUNDANCY-PRIME-SUPPORT	DRIFT-IS-THE-READ	REQUIRES	the diagonal read condition is the registered drift normalization and its coherent range, used to motivate the identity output
 READ-REDUNDANCY-PRIME-SUPPORT	Z2-PLACES-SPLIT	REQUIRES	the constant rings Z_S at S = {2} and S = {2,5} are the registered places
 READ-REDUNDANCY-PRIME-SUPPORT	TWO-PLACE-PHYSICS	BOUNDED_BY	the read and write places name only the registered dictionary; the prime-support classification is arithmetic and the dictionary bounds its reading without being a premise of the proof
+PHOTON-KAPPA-LEMMA	DEF-ARCHITECTURE	REQUIRES	the frozen finite-support ternary L4 carrier and its reading remain conditional on the declared public architecture
+PHOTON-KAPPA-LEMMA	MONOPOLE-FIFTHS	REQUIRES	the exact charge-five filling equation partial n = 5j uses the registered lattice boundary convention and fifths quantization
+PHOTON-WINDOW-PROOF	PHOTON-KAPPA-LEMMA	REQUIRES	the frozen compound photon-window route requires the universal occupancy conjunct that the public Kappa certificate falsifies
