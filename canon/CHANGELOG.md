@@ -1,12 +1,39 @@
 # Canon changelog (public series)
 
 
-## Public Canon v34
+## Public Canon v35
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 220 claims; 0 T-LOCK, 118 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
+Registry snapshot: 220 claims; 0 T-LOCK, 118 T, 41 D, 24 C, 3 H, 24 O, 10 F; 27 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v35 carries one status reclassification and no new claim.
+
+COIN-MINIMAL-READ moves from H to D at byte-identical registered scope and
+byte-identical falsifier. Its sentence already adopts `beta_1` by the
+MINIMAL-READ dictionary on the publicly proved complete pair
+`{beta_1,beta_3}`. The type now matches that dictionary content without
+strengthening it or claiming that the decoder architecture forces the choice.
+MAXIMAL-REACH remains named and unadopted.
+
+MINIMAL-READ-DERIVATION [O] remains the separate architectural question. It
+stays O, ROOT, and STOP, and GATE-L5-L1-MINIMAL-READ remains its unchanged
+OPEN_SELECTION gate. COIN-SELECTION-CONDITIONAL [T],
+READ-REDUNDANCY-PRIME-SUPPORT [T], every dependency edge, and the exact
+`probes/P-BOOST-COHERENCE-1` evidence bundle remain unchanged. No probe file or
+scientific verifier changes, and no new formal probe execution or evidence is
+introduced. Mandatory architecture CI replay audits the fold and creates no
+evidence record. No derivation, closure, theorem, new selector, decoder
+completion, physical reading, or action-layer lift is claimed.
+
+
+## Public Canon v34
+
+<!-- BEGIN GENERATED CANON34 COUNTS -->
+Registry snapshot: 220 claims; 0 T-LOCK, 118 T, 40 D, 24 C, 4 H, 24 O, 10 F; 28 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON34 COUNTS -->
 
 Public Canon v34 carries exactly one new claim and one concise Core synthesis.
 

@@ -124,8 +124,8 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 118, "D": 40, "C": 24, "F": 10,
-                       "O": 24, "H": 4}
+    expected_counts = {"T": 118, "D": 41, "C": 24, "F": 10,
+                       "O": 24, "H": 3}
     checks.append((
         "COUNTS",
         "registry has 220 claims with the current status partition",
@@ -267,10 +267,10 @@ def run():
     }
     checks.append((
         "BOOST",
-        "exact drift and selector ranking stay T; MINIMAL-READ stays H with derivation O",
+        "exact drift and selector ranking stay T; MINIMAL-READ is D with derivation O",
         has_status(index, drift, "T")
         and has_status(index, coin_selector, "T")
-        and has_status(index, coin_premise, "H")
+        and has_status(index, coin_premise, "D")
         and has_status(index, coin_derivation, "O")
         and normative.get(drift, {}).get("item_type") == "THEOREM"
         and normative.get(drift, {}).get("layer") == "L5"
@@ -278,7 +278,8 @@ def run():
         and normative.get(coin_selector, {}).get("item_type") == "THEOREM"
         and normative.get(coin_selector, {}).get("layer") == "MULTI"
         and normative.get(coin_selector, {}).get("gate_ids") == ""
-        and normative.get(coin_premise, {}).get("item_type") == "HYPOTHESIS"
+        and normative.get(coin_premise, {}).get("item_type") == "DICTIONARY"
+        and normative.get(coin_premise, {}).get("status") == "D"
         and normative.get(coin_premise, {}).get("layer") == "L1"
         and normative.get(coin_premise, {}).get("gate_ids") == ""
         and normative.get(coin_derivation, {}).get("item_type") == "OBLIGATION"
@@ -354,10 +355,7 @@ def run():
         )
         and drift not in programs
         and coin_selector not in programs
-        and programs.get(coin_premise, {}).get("program_id") == "DECODER_CORE"
-        and programs.get(coin_premise, {}).get("queue_role") == "FOLLOWUP"
-        and programs.get(coin_premise, {}).get("work_state") == "BLOCKED"
-        and programs.get(coin_premise, {}).get("work_mode") == "FORMAL"
+        and coin_premise not in programs
         and programs.get(coin_derivation, {}).get("program_id") == "DECODER_CORE"
         and programs.get(coin_derivation, {}).get("queue_role") == "ROOT"
         and programs.get(coin_derivation, {}).get("work_state") == "STOP"
