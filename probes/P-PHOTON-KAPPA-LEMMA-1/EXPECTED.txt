@@ -1,0 +1,16 @@
+P-PHOTON-KAPPA-LEMMA-1
+PIN PASS witness=witness_6_3_6_6.json bytes=280106 sha256=9b664f16830d2b562949933e40b4f1460d9da5645a88beff7bca347b70320313
+C1 PASS schema=exact canonical-json=yes j-keys=3240 n-keys=7993
+C2 PASS current=nonzero partial-j=0
+C3 PASS connected=yes vertices=2160 degrees=2,4 euler-steps=3240
+C4 PASS face-chain=ternary support=7993
+C5 PASS partial-n=5j boundary-support=3240 boundary-values=-5,5
+C6 PASS L=3240 F=7993 header-counts=exact pinned-counts=exact
+C7 PASS 2^F<=7^L B=9095 slack=1102
+S1 PASS shapes=9 min-LB/L=31/8 all-2^LB>7^L
+S2 PASS torus-periods=3,4,4,4 out-of-carrier=yes components=64
+S3 PASS mutations=5 face-flip:C5_BOUNDARY edge-delete:C2_NOT_CLOSED face-duplicate:C1_DUPLICATE_FACE coeff-2:C1_COEFFICIENT bridge-inverse:C3_DISCONNECTED
+S4 PASS evaluations=2 transcript=byte-identical
+S5 PASS outcome-vocabulary=BELOW-THRESHOLD
+OUTCOME BELOW-THRESHOLD
+RESULT 12/12 ALL PASS
