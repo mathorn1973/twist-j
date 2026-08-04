@@ -8,6 +8,24 @@ readback and explicit owner authorization. This record contains neutral public
 descriptors only. It contains no machine nickname, hostname, username,
 private path, credential, or elapsed-time telemetry.
 
+The following flat fields are the repository checker's machine-readable
+local-leg record.  `command` names the checker's canonical replay command;
+the exact formal capture command, including its no-bytecode `-B` flag, is
+recorded separately below.
+
+```text
+pin_commit: b24f60fa5e44d891a4da43fa0f4747c01c836e68
+verifier_sha256: 7a3c8e1e3a1658f8b2538a2aa069f1ea678d358a66f56c158a09bc96161ca976
+command: python3 probes/P-PHOTON-KAPPA-LEMMA-1/verify.py
+python: Python 3.12.3
+exit_code: 0
+stdout_sha256: 546c1cc2ec839588041a0bdd420bd9b976cf68ca379b6d3441cb0b00a10e0f12
+stdout_bytes: 911
+stdout_lines: 16
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+```
+
 ## Authority and authorization
 
 ```text
