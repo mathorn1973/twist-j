@@ -1,0 +1,17 @@
+G1 PASS |Aut|=48 eq_pmPsigma=True roots_closed=True dets=[-1, 1] basis_gram=True
+G2 PASS orders=[(1, 1), (2, 19), (3, 8), (4, 12), (6, 8)] frozen=[(1, 1), (2, 19), (3, 8), (4, 12), (6, 8)]
+G3 PASS shell4_eq_axes=True transported_eq_signedperms=True roots_to_minvecs=True |detT|=2
+G4 PASS |O5|=240 order5=24 red_distinct=48 red_in_O5=True order5_in_image=False index=5
+G5 PASS rank=2 trace=2 fix_r4=True fix_m4=True indep=True
+G6 PASS sizes=(12, 6, 24, 12) a=(-4, 32, -72, -64) coord_indep=True
+G7 PASS witness_810=True witness_094=True witness_631=True no_positive_shells13=True cone=(-4, 32, -72)
+-- expected-fail demonstrations (a NOT-FIRED line is a failure) --
+D1 FIRED wrong-Gram triple rejected by filter
+D2 FIRED multiset breaks on injected 49th element
+D3 FIRED Shell(2) is not the axes set
+D4 FIRED full O(F_5^3) contains order-5 elements
+D5 FIRED C4 invariant dimension is 5, not 2
+D6a FIRED wrong table detected
+D6b FIRED non-invariant set breaks coordinate independence
+D7 FIRED weights (1,1,1) are off the cone, value -44
+GATES 7/7 PASS, DEMOS 8/8 FIRED, VERDICT ALL PASS

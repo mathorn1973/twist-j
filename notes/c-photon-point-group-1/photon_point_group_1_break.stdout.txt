@@ -1,0 +1,13 @@
+B1 PASS shell4=axes:True span_det=8 signed_perms=48 orthogonal=True preserve_D3=True
+B1 deduction: isometry permutes the norm-4 shell => g(e_i) = +-e_pi(i) on a spanning set => g is a signed permutation; ceiling 48 meets floor 48.
+B2 PASS row_count=240 formula=240 order5(g^5=I,g!=I)=24
+B3 PASS molien_dim_deg4=2
+B4 PASS a=(-4, 32, -72, -64) orbit_closed=True identity=True
+B5 PASS second_basis_count=48 all_signed_perms=True |detB|=2
+-- breaker expected-fail demonstrations --
+BD1 FIRED rank-2 axis set fails the spanning premise
+BD2 FIRED a miscount 239 is caught by the formula
+BD3 FIRED Molien on C4 gives 5, not 2
+BD4 FIRED harmonic identity fails on a non-invariant set
+BD5 FIRED a repeated-vector triple is rejected by the Gram filter
+BREAK GATES 5/5 PASS, DEMOS 5/5 FIRED, VERDICT NO BREAK FOUND
