@@ -100,16 +100,10 @@ Closed claims are excluded.
   Queue: FOLLOWUP; BLOCKED; FORMAL.
   Decision: closes positively by deriving the interior compression channel value; closes negatively if the derived electromagnetic delta moves the neutron outside its measured tier window
 
-## Photon continuum (`PHOTON_CONTINUUM`)
-
-- PHOTON-WINDOW-PROOF [O]: completion of the photon window requires both (i) every closed charge 5 worldline of length L to satisfy F_occ >= kappa L for an admissible kappa with 2^(4 kappa) > 2401, and (ii) an electric face roughening certificate sufficient for the declared Froehlich-Spencer class import; the exact electric face facts already registered are not re-registered here
-  Queue: ROOT; READY; FORMAL.
-  Decision: closes positively only when both obligations have public exact certificates; an exact counterexample to the kappa bound or a certified failure of the declared roughening criterion closes the corresponding route negatively; until both close, no massless Coulomb conclusion is promoted
-
 ## Enrichment (`ENRICHMENT`)
 
 - LAMBDA-COCYCLE-ANGLES [H]: the compact lambda-adic boundary route remains open only in the cocycle-vector form: there exists v in L^2(O_lambda,Haar) with ||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n for every n >= 1; any such realization forces every Cayley angle 2 arctan(1/(2 gamma)) into 2 pi (1/4) Z[1/5] and forces the Li second differences to approach 2 lambda_1 along n = 4 . 5^A
   Queue: ROOT; READY; ENRICHMENT.
   Decision: fires if any single ordinate Cayley angle 2 arctan(1/(2 gamma)) is proved outside 2 pi (1/4) Z[1/5], if the Li second differences are proved not to approach 2 lambda_1 along n = 4 . 5^A, or if another contradiction excludes every cocycle vector in the declared compact-boundary class
 
-Live total: 27.
+Live total: 26.

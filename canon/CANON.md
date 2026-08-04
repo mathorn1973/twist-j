@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v35
+# TWIST-J Public Canon v36
 
-**Release identity.** Public Canon v35. Normative authority and activation
+**Release identity.** Public Canon v36. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v35 also declares the discrete
+algebraic axiom is J. Public Canon v36 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v35 does not claim
+seed of the two algebraic projections. Public Canon v36 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v35 contains no such
+deriving the architecture from J; Public Canon v36 contains no such
 theorem.
 
 ---
@@ -2261,14 +2261,27 @@ every center, w_hat(1)/w_hat(0) = 1/2, and every class |k| >= 2 is
 exactly closed for p >= 5 (PHOTON-UNIVERSAL-BIT [T]). Monopole charge
 exists only in lumps of five (MONOPOLE-FIFTHS [T]); the elementary
 monopole costs between 17 and 21 occupied faces (MONOPOLE-COST [C]).
-The window proof is reduced to one combinatorial lemma with the two
-integer gap 32 < 2401 < 131072: straight runs cost 5 bits per
-segment, the 1 x K ladder bound is exactly 9K + 8, and the greedy
-incidence identity holds (KAPPA-BOUNDS [T]); the nine shape library
-realizes the exact bound table with minimum 31/8 bits per segment and
-the integer margin 2^31 > 7^8 (KAPPA-SHAPES [C]). The remaining lemma
-and the electric face certificate are the frontier row
-PHOTON-WINDOW-PROOF (section 18). The center split: conjugation swaps
+The frozen photon-window proof route used the two-integer gap
+32 < 2401 < 131072: straight runs cost 5 bits per segment, the
+1 x K ladder bound is exactly 9K + 8, and the greedy incidence
+identity holds (KAPPA-BOUNDS [T]); the nine-shape library realizes
+the exact bound table with minimum 31/8 bits per segment and the
+integer margin 2^31 > 7^8 (KAPPA-SHAPES [C]). Its remaining
+universal occupancy lemma now closes negatively
+(PHOTON-KAPPA-LEMMA [F], probes/P-PHOTON-KAPPA-LEMMA-1): on the
+frozen finite-support ternary L4 carrier, the admitted connected
+current j_* has L = 3240 and an exhibited ternary filling n_* with
+partial n_* = 5j_*, |supp(n_*)| = 7993, and
+2^7993 <= 7^3240. Thus F_occ(j_*) <= 7993; equality and optimality
+are not claimed. The exact exclusion lemma rules out every coprime
+positive a,b with 2^(4a) > 2401^b from satisfying
+b F_occ(j) >= a L(j) for every j in ParentWorldline. Because this
+occupancy bound was a necessary conjunct, PHOTON-WINDOW-PROOF [F]
+is falsified as the frozen compound route. The independent
+electric-face roughening question remains undecided. No
+Froehlich-Spencer import, massless Coulomb phase, continuum limit,
+photon propagator, or physical-photon conclusion follows from this
+result. The center split: conjugation swaps
 the residue channels exactly for p = 3 mod 4 and preserves them for
 p = 1 mod 4, with Gauss sums g^2 = -3, +5, -7
 (CENTER-SPLIT-RECIPROCITY [T]); the same verb freezes p = 2 and
@@ -2335,7 +2348,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v35. The fermionizer
+inherited naming clause is not part of Public Canon v36. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -3677,6 +3690,42 @@ measure clause; they do not select its values. No successor L5 source
 schema is currently frozen. The Born gate remains open but the scheduler
 is STOP while a separately reviewed owner definition is absent.
 
+The v36 ledger change is signed term by term:
+
+```text
+claims:    220 + 1 Kappa falsification row = 221,
+T:         118, D: 41, C: 24, H: 3, all unchanged,
+O:         24 - 1 falsified compound route = 23,
+F:         10 + 1 Kappa row + 1 compound route = 12,
+live H/O:  27 - 1 = 26.
+```
+
+Public Canon v36 declares PHOTON-KAPPA-LEMMA [F] at L4 and changes
+PHOTON-WINDOW-PROOF from O to F. The public two-architecture
+`P-PHOTON-KAPPA-LEMMA-1` certificate exhibits one admitted connected
+current with `L=3240` and one ternary filling of support 7993 satisfying
+`2^7993<=7^3240`. Only `F_occ<=7993` is used. The exact integer exclusion
+lemma therefore rules out every admissible rational Kappa coefficient from
+the frozen universal occupancy proposition. The `F` label classifies that
+failed positive proposition; the exclusion lemma itself is true.
+
+The parent was a conjunction. Falsification of its necessary Kappa conjunct
+falsifies the frozen compound route regardless of the separate roughening
+question. Issue #201 and electric-face roughening remain open, undecided, and
+unregistered; no successor is created automatically. KAPPA-SHAPES [C] and
+MONOPOLE-COST [C] remain unchanged. No filling equality or optimality, pump
+family, asymptotic family, broader carrier, Froehlich-Spencer import,
+massless or Coulomb phase, continuum limit, propagator, physical photon,
+cross-layer lift, or physical measure is claimed.
+
+The explanatory README of the older `reproduce/photon-electron` bundle is
+updated to point to the later public Kappa probe while preserving that
+reproduction's own exact scope and unchanged verifier. Its 14 existing
+evidence consumers are re-pinned to the recomputed bundle hash with explicit
+evidence-change history events. The public Kappa probe supplies the new and
+parent evidence rows. Mandatory architecture CI replays every public probe
+and minimal reproduction because this fold changes `canon/`.
+
 The v35 ledger change is signed term by term:
 
 ```text
@@ -4031,9 +4080,6 @@ COLOR
   ALPHA-S-RUNNING            the running above the 3/4 seed
   SCHEME-DICTIONARY          exact seeds to measured couplings
   GENERATIONS-L3             the generation structure at the L3 frontier
-PHOTON
-  PHOTON-WINDOW-PROOF        the closed charge 5 worldline occupancy
-                             bound and electric face roughening certificate
 PLENUM AND KERNEL
 
   SQRT-PHI-TIME-GRAVITY      the typed clock and gravity bridge remains

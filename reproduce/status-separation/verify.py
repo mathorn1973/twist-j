@@ -124,12 +124,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 118, "D": 41, "C": 24, "F": 10,
-                       "O": 24, "H": 3}
+    expected_counts = {"T": 118, "D": 41, "C": 24, "F": 12,
+                       "O": 23, "H": 3}
     checks.append((
         "COUNTS",
-        "registry has 220 claims with the current status partition",
-        len(rows) == 220 and counts == expected_counts,
+        "registry has 221 claims with the current status partition",
+        len(rows) == 221 and counts == expected_counts,
     ))
 
     checks.append((
@@ -1431,6 +1431,84 @@ def run():
         and programs.get(entropy_bridge, {}).get("queue_role") == "ROOT"
         and programs.get(entropy_bridge, {}).get("work_state") == "STOP"
         and programs.get(entropy_bridge, {}).get("work_mode") == "FORMAL"
+    ))
+
+    photon_child = "PHOTON-KAPPA-LEMMA"
+    photon_parent = "PHOTON-WINDOW-PROOF"
+    photon_path = "probes/P-PHOTON-KAPPA-LEMMA-1"
+    photon_digest = (
+        "b0f14e92c008fdd5fcdbc6f0960aac0e1b5b55bb85b1e05dd3945fa67b31f0d6"
+    )
+    photon_child_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == photon_child
+    }
+    photon_parent_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == photon_parent
+    }
+    roughening = "PHOTON-ROUGHENING-CERTIFICATE"
+    checks.append((
+        "PHOTON",
+        "Kappa universal proposition and compound route are F; roughening stays unregistered",
+        has_status(index, photon_child, "F")
+        and normative.get(photon_child, {}).get("item_type") == "FALSIFIED"
+        and normative.get(photon_child, {}).get("status") == "F"
+        and normative.get(photon_child, {}).get("layer") == "L4"
+        and normative.get(photon_child, {}).get("gate_ids") == ""
+        and evidence.get(photon_child, {}).get("evidence_id")
+        == "EV-PHOTON-KAPPA-LEMMA"
+        and evidence.get(photon_child, {}).get("evidence_kind")
+        == "PUBLIC_PROBE"
+        and evidence.get(photon_child, {}).get("location") == photon_path
+        and evidence.get(photon_child, {}).get("sha256") == photon_digest
+        and evidence.get(photon_child, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(photon_child, {}).get("architecture_requirement")
+        == "two-architecture"
+        and photon_child_dependencies == {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+            ("MONOPOLE-FIFTHS", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, photon_child,
+            ("positive proposition", "is false on the frozen L4 carrier",
+             "no connectedness restriction", "partial n=5j",
+             "F_occ(j_*)<=7993", "neither equality nor optimality",
+             "no roughening", "no roughening, Froehlich-Spencer, Coulomb"),
+        )
+        and all(
+            phrase.lower() in index[photon_child]["falsifier"].lower()
+            for phrase in (
+                "fired", "public two-architecture exact certificate",
+                "2^7993<=7^3240", "no value of F_occ(j_*) is computed",
+            )
+        )
+        and photon_child not in programs
+        and has_status(index, photon_parent, "F")
+        and normative.get(photon_parent, {}).get("item_type") == "FALSIFIED"
+        and normative.get(photon_parent, {}).get("status") == "F"
+        and evidence.get(photon_parent, {}).get("evidence_kind")
+        == "PUBLIC_PROBE"
+        and evidence.get(photon_parent, {}).get("location") == photon_path
+        and evidence.get(photon_parent, {}).get("sha256") == photon_digest
+        and evidence.get(photon_parent, {}).get("architecture_requirement")
+        == "two-architecture"
+        and photon_parent_dependencies == {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+            (photon_child, "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, photon_parent,
+            ("requires both (i)", "and (ii)",
+             "electric-face roughening certificate"),
+        )
+        and photon_parent not in programs
+        and roughening not in index
+        and roughening not in normative
+        and roughening not in programs
+        and has_status(index, "KAPPA-SHAPES", "C")
+        and has_status(index, "MONOPOLE-COST", "C")
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

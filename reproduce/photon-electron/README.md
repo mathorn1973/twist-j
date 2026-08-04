@@ -36,10 +36,13 @@ sentence (`p = 5` is the first prime passing both doors) rests on one
 declared external import, the four dimensional `Z_N` self duality
 threshold `N <= 4`; the witness verifies the arithmetic on both
 doors, and the selection is carried by the registered dictionary
-reading `CENTER-SPLIT-SELECTION [D]`, not promoted here.  The window
-proof itself (the kappa lemma and the electric face roughening) is
-the open frontier row `PHOTON-WINDOW-PROOF [O]`; this witness corners
-the adversary in integers and closes nothing.  The internal gyron
+reading `CENTER-SPLIT-SELECTION [D]`, not promoted here.  This witness
+by itself corners the photon-window adversary in integers and closes
+nothing.  The later public probe `P-PHOTON-KAPPA-LEMMA-1` supplies the
+separate exact counterexample: Public Canon v36 registers
+`PHOTON-KAPPA-LEMMA [F]` and the conjunctive route
+`PHOTON-WINDOW-PROOF [F]`, while the electric-face roughening question
+remains undecided.  The internal gyron
 window count law is not claimed here: the parity gate derives the
 count structurally (999 plus the initial datum) and asserts only the
 parity identity.  The eps totality on event free survivors is not

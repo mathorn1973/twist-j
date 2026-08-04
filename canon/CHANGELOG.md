@@ -1,12 +1,57 @@
 # Canon changelog (public series)
 
 
-## Public Canon v35
+## Public Canon v36
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 220 claims; 0 T-LOCK, 118 T, 41 D, 24 C, 3 H, 24 O, 10 F; 27 live H/O.
+Registry snapshot: 221 claims; 0 T-LOCK, 118 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v36 registers the exact negative result of
+`P-PHOTON-KAPPA-LEMMA-1` and closes the frozen photon-window route
+negatively.
+
+PHOTON-KAPPA-LEMMA [F] records the failed positive proposition that one
+admissible rational Kappa coefficient satisfies the universal occupied-face
+bound on every frozen `ParentWorldline`. The public two-architecture
+certificate admits a connected current `j_*` with `L=3240` and an exhibited
+ternary filling `n_*` with `partial n_*=5j_*`, support 7993, and
+`2^7993<=7^3240`. Hence only `F_occ(j_*)<=7993` is used. The exact integer
+exclusion lemma rules out every coprime positive `a,b` satisfying
+`2^(4a)>2401^b` from universal `b F_occ>=a L`. The F status classifies the
+failed universal proposition, not the true exclusion lemma.
+
+PHOTON-WINDOW-PROOF moves O to F and its scope is rewritten as the terminal
+false proposition without changing the frozen route. Its positive route
+requires the universal Kappa bound and the independent electric-face
+roughening certificate conjunctively. Failure of the necessary Kappa
+conjunct therefore falsifies the frozen compound route. Roughening was not
+reached and is neither proved nor falsified: issue #201 remains open and no
+roughening row or successor route is registered automatically.
+
+The result claims no value `F_occ(j_*)=7993`, optimal filling, pump family,
+asymptotic family, broader carrier, Froehlich-Spencer import, massless or
+Coulomb phase, continuum limit, propagator, physical photon, measure, or
+cross-layer lift. `KAPPA-SHAPES [C]`, `MONOPOLE-COST [C]`, and all other
+scientific rows are unchanged.
+
+The explanatory README of `reproduce/photon-electron` now distinguishes that
+older witness from the later Kappa closure; its verifier and expected
+transcript are unchanged. The recomputed shared bundle is explicitly
+re-pinned for all 14 existing consumers with 14 evidence-change history
+events. The new child and the parent use the merged public Kappa probe with
+its byte-identical x86_64 and aarch64 transcript. Because the fold changes
+`canon/`, mandatory architecture CI replays every public probe and minimal
+reproduction.
+
+
+## Public Canon v35
+
+<!-- BEGIN GENERATED CANON35 COUNTS -->
+Registry snapshot: 220 claims; 0 T-LOCK, 118 T, 41 D, 24 C, 3 H, 24 O, 10 F; 27 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON35 COUNTS -->
 
 Public Canon v35 carries one status reclassification and no new claim.
 
