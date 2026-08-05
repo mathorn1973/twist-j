@@ -1,0 +1,47 @@
+X1 PASS all five generators involutive
+X2 PASS (bc)^5 = id
+X3 PASS fired commutators equal the displayed fiber translations [d,e]=(..3,0) [b,d]=(..3,3) [b,e]=(..1,3)
+X4 PASS linear parts of b, d, e lie in the Klein group {I,-I,B,-B}
+A1u PASS uniform families all MISS the cone: [('shell1 only', -4), ('shells 1+2', 28), ('shells 1+2+3', -44)]
+A1b PASS no NONZERO assignment of Born-verb weights {4, phi^2, phi^-2} nor dual weights {10, 5, 0} to shells (1,2,3) lies on the cone (54 exact checks; the only hit is the degenerate all-zero dual triple [('dual', ('0', '0', '0'))]); class weights are not shell weights
+A1c NOTE v_c = (2, 1, 2, 1, 1, 0)  piston=(2, 1, 2, 1) Tr4=1 fiber=(1, 0)
+A1c NOTE v_d = (2, 1, 3, 4, 1, 1)  piston=(2, 1, 3, 4) Tr4=0 fiber=(1, 1)
+A1c NOTE v_e = (2, 1, 3, 4, 2, 1)  piston=(2, 1, 3, 4) Tr4=0 fiber=(2, 1)
+A1c1 PASS piston(v_d) = piston(v_e) = (2,1,3,4) in ker(Tr4); piston(v_c) carries trace 1 (off the spatial kernel)
+A1c2 PASS the deposited spatial class (2,1,3,4) is NULL in the reduced form: q = 30 = 0 mod 5
+A1c3 PASS minimal integer lift of the deposit class has norm 10, witness ((2, 1, -2, -1),) (NOT a minimal vector; the nearest-neighbor step picture has no support in the registered translations)
+A1c NOTE minimal-lift norm census over the 124 nonzero kernel classes: [(2, 12), (4, 6), (6, 24), (8, 12), (10, 24), (12, 8), (14, 24), (16, 6), (18, 8)]
+A1c4 PASS exactly 12 classes lift to norm 2 (the root classes); the deposit class is not among them
+A1c5 PASS Gamma-module closure dims by depth [3, 6] reaching dim U = 6 (cross-checks KERNEL-CONNECT-ALL-K)
+A1c NOTE orbit size 44; distinct nonzero spatial (kernel) classes deposited: 20, of which null-class: 8
+A1c NOTE deposited alphabet census (reduced norm mod 5, minimal lift norm) -> count: [((0, 10), 8), ((1, 16), 2), ((2, 2), 4), ((3, 8), 4), ((4, 4), 2)]
+A1c6 PASS the deposited alphabet touches the minimal shell PARTIALLY: norm 2: 4 of 12, norm 4: 2 of 6, norm 8: 4 of 12, norm 10: 8 of 24, norm 16: 2 of 6 (seeds are null-class norm-10; closure reaches 4 of 12 root classes)
+A1c7 PASS the deposited alphabet is NOT closed under the carrier point group: the machine's spatial alphabet BREAKS octahedral symmetry (conditional on the coordinate-identity reading of the lift); isotropy, if it holds, must be restored at the measure or decoder level, not by the raw alphabet
+A2a PASS triangles per vertex: 24
+A2b PASS each edge lies in 4 triangles
+A2c PASS 24 triangles per vertex fall into 4 direction classes forming 1 orbit under the 48-group: a fully symmetric flux ansatz on the carrier is ONE Z_5 number
+A2d PASS pure-gauge connection has zero Z_5 holonomy on all 24 triangles (flat sector reduces to the phase-free cone)
+A2e PASS one unit of flux on a single triangle gives holonomy zeta^1: the commutator of the two magnetic steps around it is zeta_5, the registered holonomy value (FORCE-WEYL-HOLONOMY [T]); at cell level the registered fluxes are the fired fiber commutators (0,0,0,0,3,0), (0,0,0,0,3,3), (0,0,0,0,1,3) [T]
+-- A3 verdict map --
+A3.1 FORCED: NO registered principle selects a point on the cone.
+     Uniform families miss it; Born-verb and dual class weights
+     miss it under every nonzero assignment; unimodular
+     amplitudes reduce weights to step multiplicities over the
+     machine's own alphabet, which is not shell-symmetric.
+A3.2 The registered spatial alphabet is NOT the nearest-neighbor
+     walk: the seed deposit (2,1,3,4) is null mod 5 with minimal
+     lift norm 10; the Gamma-closure touches only 4 of 12 root
+     classes and is NOT closed under the carrier point group.
+     Either isotropy is restored by the measure or decoder, or
+     the octahedral symmetry of the carrier is broken by the
+     dynamics; deciding which is R1/R3 material of the first
+     order.
+A3.3 EMPTY for public derivation, with two named missing maps:
+     (i) the cell-to-carrier lift (the R1 object), and (ii) a
+     class-to-shell weight transport. R3 must freeze them or a
+     derivation must produce them; nothing registered does.
+A3.4 The flux sector is registered at cell level (fired fiber
+     commutators) and unregistered at carrier level; the carrier
+     flux decision space at minimal scale is Z_5 per triangle
+     orbit (see A2c).
+RECON CHECKS 18/18 PASS, VERDICT RECON COMPLETE
