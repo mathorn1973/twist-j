@@ -1,0 +1,69 @@
+skeleton sha256 b19e073743fde8a71a18a9394c2c1bf71289ef515d626787ac290f6cfd57aa86 18770 B
+v1 cross-check: slots=242 carried=38 unresolved=204 (v1: 242/38/204)
+
+classification of the 204 UNRESOLVED slots:
+  O-FROZEN   2
+  OWNER     13
+  S-AFTER    6
+  S-BIND   165
+  S-DERIVE   1
+  S-EVAL    15
+  S-MECH     1
+  S-NAME     1
+  TOTAL    204
+
+per block (block: class=count):
+  bridge_manifest          OWNER=9 S-BIND=21
+  candidate_id             S-NAME=1
+  carrier_manifest         S-BIND=35
+  closure_manifest         S-AFTER=1 S-BIND=2
+  coarse_graining_id       S-BIND=1
+  history_equivalence_id   S-BIND=1
+  leg_manifest             S-BIND=4
+  measure_manifest         OWNER=2 S-AFTER=2
+  obligation_manifest      S-BIND=30 S-EVAL=15
+  physics_manifest         OWNER=2 S-AFTER=3
+  public_pin_id            S-MECH=1
+  quadratic_manifest       O-FROZEN=2 S-BIND=9 S-DERIVE=1
+  read_convention_id       S-BIND=1
+  record_field_manifest    S-BIND=55
+  region_id                S-BIND=1
+  stage_manifest           S-BIND=5
+
+explicit pairings applied: 28 slots carry a displayed catalog value
+
+OWNER slots (13):
+  /bridge_manifest:D_scoped_record/from_layer
+  /bridge_manifest:D_scoped_record/gate_ids
+  /bridge_manifest:D_scoped_record/to_layer
+  /bridge_manifest:beta/from_layer
+  /bridge_manifest:beta/gate_ids
+  /bridge_manifest:beta/to_layer
+  /bridge_manifest:iota_B0/from_layer
+  /bridge_manifest:iota_B0/gate_ids
+  /bridge_manifest:iota_B0/to_layer
+  /measure_manifest/measure_id
+  /measure_manifest/scheme_id
+  /physics_manifest/detector_id
+  /physics_manifest/source_id
+
+owner DECISIONS behind the 13 owner slots:
+  D1 layer typing and gates of the three record bridges (9 slots,
+     one declaration; OD2 residue)
+  D2 measure_id: approve a successor L5 source (TM-SYM2 owner-STOP)
+  D3 scheme_id: name the measurement scheme (SCHEME-DICTIONARY)
+  D4 source_id: choose and define the public source object (TT-SOURCE)
+  D5 detector_id: instrument choice (OD4: separate predefinition)
+
+named missing objects OUTSIDE the 204 slots (catalog-level):
+  D_direct_state UNRESOLVED (the direct write; ruling 9.2 governs)
+  required_dependency_delta ledger edge QDD REQUIRES
+    DEF-DECODER-COMPLETION-CONTRACT: ledger_state UNRESOLVED (a fold act)
+  stream_extension, hybrid_extension: UNRESOLVED by design (OD2, OD3
+    open boundaries, outside the core scope)
+
+rebase state: skeleton declares pin Public Canon v23; head is v36;
+the factor-canonicity overlay (added v24) is still absent; the four
+local binding artifacts are STALE_BASE per the 2026-08-04 freeze and
+need a rebuild on v36 before any S-EVAL slot can be filled.
+CENSUS-V2 COMPLETE

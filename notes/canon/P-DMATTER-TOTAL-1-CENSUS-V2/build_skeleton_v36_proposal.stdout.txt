@@ -1,0 +1,17 @@
+source sha256 b19e073743fde8a71a18a9394c2c1bf71289ef515d626787ac290f6cfd57aa86
+census before: slots=242 carried=38 unresolved=204
+census after:  slots=274 carried=41 unresolved=233
+proposal written: notes/canon/P-DMATTER-TOTAL-1-COMPLETION-MANIFEST-SKELETON-V36-REBASE-PROPOSAL.json
+proposal sha256 481f8df2d2a5edbaa47a645e22a38f7f8fee31f8f23e5ff0a2dbb525d4bd62fc 21163 B
+deltas (10):
+  R1 /authority/public_canon: 'Public Canon v23' -> 'Public Canon v36'
+  R1 /authority/public_canon_tag: 'canon-v23' -> 'canon-v36'
+  R1 /authority/content_commit: '7830d852229ffc06c9d287d026c8ece290bf339b' -> 'df64035f6f0cadbeb17f539eaeec5d8d0f444515'
+  R1 /authority/canon_sha256: 'f842b613d6f65fe07ddab92ddbe1fb9fec89217d52b781571b7380281c3fb2b1' -> 'c8f50d0ce4686d7eedc11599a95debee15c71a2cf13c52c93c3f0605890fa2d5'
+  R1 /authority/canon_bytes: 116017 -> 175814
+  R1 /authority/base_head: None -> '470d95826037d75e29530177171763f1376b4614'
+  R2 overlay added: factor_canonicity_manifest with 31 UNRESOLVED slots, empty gauge_square_manifest
+  R3 effect_ids: ['UNRESOLVED'] -> ['P-DMATTER-TOTAL-1-EFFECT-SHADOW-MINIMAL-OWNER-FREEZE-2026-08-04:E_low', 'P-DMATTER-TOTAL-1-EFFECT-SHADOW-MINIMAL-OWNER-FREEZE-2026-08-04:E_high']
+  R3 born_pairing_id: 'UNRESOLVED' -> 'P-DMATTER-TOTAL-1-EFFECT-SHADOW-MINIMAL-OWNER-FREEZE-2026-08-04:BORN-TRACE-PAIRING'
+  R4 _rebase_note added (underscore key, not a slot)
+BUILD OK

@@ -1,0 +1,671 @@
+{
+  "skeleton_format": "TWISTJ_QDD_COMPLETION_SKELETON_1",
+  "format_authority": "LOCAL_ONLY",
+  "authority": {
+    "artifact_authority": "NOT_CANON",
+    "public_canon": "Public Canon v36",
+    "public_canon_tag": "canon-v36",
+    "activation_commit": "4ac41b4fac3a3794a6e9d5be1e2027d324edb806",
+    "content_commit": "df64035f6f0cadbeb17f539eaeec5d8d0f444515",
+    "canon_sha256": "c8f50d0ce4686d7eedc11599a95debee15c71a2cf13c52c93c3f0605890fa2d5",
+    "canon_bytes": 175814,
+    "public_main_base": "de32e7786599870db5b09144e68717023810b4e8",
+    "schema_basis_id": "DEF-DECODER-COMPLETION-CONTRACT",
+    "owner_ruling_path": "notes/canon/P-DMATTER-TOTAL-1-OD1-OD4-OWNER-RULING.md",
+    "resolution_map_path": "notes/canon/P-DMATTER-TOTAL-1-A01-A15-RESOLUTION-MAP.md",
+    "resolution_map_sha256": "2480f917178b4fdb3c7ff0faeff31521c45042572dcec1b77e2b7d07bbb578cc",
+    "base_head": "470d95826037d75e29530177171763f1376b4614"
+  },
+  "status": {
+    "artifact_status": "OWNER_RULING_TRANSCRIPTION_SKELETON",
+    "canon_status": "NOT_CANON",
+    "qdd_claim_id": "QUADRATIC-DECODER-DATA",
+    "qdd_claim_status": "O",
+    "qdd_work_state": "STOP",
+    "strict_contract_state": "UNRESOLVED",
+    "formal_run": "NONE",
+    "registry_change": "NONE",
+    "dependency_ledger_change": "NONE",
+    "gate_ledger_change": "NONE"
+  },
+  "manifest_scope": {
+    "core_scope": "QDD_SCOPED_ROUTE_A",
+    "contract_slot_schema_coverage": "COMPLETE",
+    "contract_row_inventory_state": "INCOMPLETE_BY_SCOPE",
+    "included_stage_rows": [
+      "D_matter"
+    ],
+    "included_leg_rows": [
+      "D_quadratic"
+    ],
+    "excluded_from_core_rows": [
+      "D_geom",
+      "D_clock",
+      "D_linear",
+      "D_binary",
+      "QDD_HYBRID_EXTENSION"
+    ]
+  },
+  "serialization_rules": {
+    "contract_source": "Public Canon v23 DEF-DECODER-COMPLETION-CONTRACT",
+    "unresolved_literal": "UNRESOLVED",
+    "missing_plural_id_encoding": [
+      "UNRESOLVED"
+    ],
+    "null_permitted": false,
+    "inapplicable_literal_used": false,
+    "underscore_keys_are_contract_slots": false,
+    "proposal_local_ids_are_public_ids": false,
+    "repeated_unresolved_values_satisfy_uniqueness": false
+  },
+  "owner_rulings": {
+    "OD1": {
+      "state": "ADOPTED",
+      "field_count": 5,
+      "role": "READOUT",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "auxiliary_fields": 0
+    },
+    "OD2": {
+      "state": "ADOPTED",
+      "record_semantics": "ONE_ANCHORED_PRE_UPDATE_N0_RECORD",
+      "map": "D_scoped : K0 -> CandidateQuadraticData",
+      "is_stream": false,
+      "stream_map_state": "UNRESOLVED",
+      "layer_state": "UNRESOLVED",
+      "gate_state": "UNRESOLVED"
+    },
+    "OD3": {
+      "state": "ADOPTED_AS_OPEN_BOUNDARY",
+      "hybrid_scope": "SEPARATE_EXTENSION",
+      "hybrid_contract_state": "UNRESOLVED",
+      "physical_bridge_state": "O_STOP"
+    },
+    "OD4": {
+      "state": "ADOPTED",
+      "effect_state": "ALGEBRAIC_ONLY",
+      "instrument_state": "UNRESOLVED",
+      "infer_K_from_E": false,
+      "K_equals_E_adopted": false,
+      "separate_predefinition_required": true
+    }
+  },
+  "contract_manifest": {
+    "candidate_id": "UNRESOLVED",
+    "public_pin_id": "UNRESOLVED",
+    "read_convention_id": "UNRESOLVED",
+    "history_equivalence_id": "UNRESOLVED",
+    "region_id": "UNRESOLVED",
+    "coarse_graining_id": "UNRESOLVED",
+    "carrier_manifest": [
+      {
+        "_row_key": "X",
+        "carrier_id": "UNRESOLVED",
+        "parent_carrier_id": "UNRESOLVED",
+        "inclusion_or_quotient_map_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "coefficient_object_id": "UNRESOLVED"
+      },
+      {
+        "_row_key": "K0",
+        "carrier_id": "UNRESOLVED",
+        "parent_carrier_id": "UNRESOLVED",
+        "inclusion_or_quotient_map_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "coefficient_object_id": "UNRESOLVED"
+      },
+      {
+        "_row_key": "Veff",
+        "carrier_id": "UNRESOLVED",
+        "parent_carrier_id": "UNRESOLVED",
+        "inclusion_or_quotient_map_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "coefficient_object_id": "UNRESOLVED"
+      },
+      {
+        "_row_key": "V_lin",
+        "carrier_id": "UNRESOLVED",
+        "parent_carrier_id": "UNRESOLVED",
+        "inclusion_or_quotient_map_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "coefficient_object_id": "UNRESOLVED"
+      },
+      {
+        "_row_key": "K_amp",
+        "carrier_id": "UNRESOLVED",
+        "parent_carrier_id": "UNRESOLVED",
+        "inclusion_or_quotient_map_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "coefficient_object_id": "UNRESOLVED"
+      },
+      {
+        "_row_key": "QCarrier",
+        "carrier_id": "UNRESOLVED",
+        "parent_carrier_id": "UNRESOLVED",
+        "inclusion_or_quotient_map_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "coefficient_object_id": "UNRESOLVED"
+      },
+      {
+        "_row_key": "CandidateQuadraticData",
+        "carrier_id": "UNRESOLVED",
+        "parent_carrier_id": "UNRESOLVED",
+        "inclusion_or_quotient_map_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "coefficient_object_id": "UNRESOLVED"
+      }
+    ],
+    "record_field_manifest": [
+      {
+        "_row_key": "support_state",
+        "record_id": "UNRESOLVED",
+        "field_id": "UNRESOLVED",
+        "field_type_id": "UNRESOLVED",
+        "role": "READOUT",
+        "carrier_id": "UNRESOLVED",
+        "domain_id": "UNRESOLVED",
+        "normalization_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "source_item_id": "UNRESOLVED",
+        "write_map_id": "UNRESOLVED",
+        "presence_state": "RESOLVED",
+        "absence_basis_item_id": "UNRESOLVED",
+        "emit_rule_id": "UNRESOLVED",
+        "stage_id": "D_matter",
+        "leg_id": "D_quadratic"
+      },
+      {
+        "_row_key": "total_weight",
+        "record_id": "UNRESOLVED",
+        "field_id": "UNRESOLVED",
+        "field_type_id": "UNRESOLVED",
+        "role": "READOUT",
+        "carrier_id": "UNRESOLVED",
+        "domain_id": "UNRESOLVED",
+        "normalization_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "source_item_id": "UNRESOLVED",
+        "write_map_id": "UNRESOLVED",
+        "presence_state": "RESOLVED",
+        "absence_basis_item_id": "UNRESOLVED",
+        "emit_rule_id": "UNRESOLVED",
+        "stage_id": "D_matter",
+        "leg_id": "D_quadratic"
+      },
+      {
+        "_row_key": "branch_weights",
+        "record_id": "UNRESOLVED",
+        "field_id": "UNRESOLVED",
+        "field_type_id": "UNRESOLVED",
+        "role": "READOUT",
+        "carrier_id": "UNRESOLVED",
+        "domain_id": "UNRESOLVED",
+        "normalization_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "source_item_id": "UNRESOLVED",
+        "write_map_id": "UNRESOLVED",
+        "presence_state": "RESOLVED",
+        "absence_basis_item_id": "UNRESOLVED",
+        "emit_rule_id": "UNRESOLVED",
+        "stage_id": "D_matter",
+        "leg_id": "D_quadratic"
+      },
+      {
+        "_row_key": "density_state",
+        "record_id": "UNRESOLVED",
+        "field_id": "UNRESOLVED",
+        "field_type_id": "UNRESOLVED",
+        "role": "READOUT",
+        "carrier_id": "UNRESOLVED",
+        "domain_id": "UNRESOLVED",
+        "normalization_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "source_item_id": "UNRESOLVED",
+        "write_map_id": "UNRESOLVED",
+        "presence_state": "RESOLVED",
+        "absence_basis_item_id": "UNRESOLVED",
+        "emit_rule_id": "UNRESOLVED",
+        "stage_id": "D_matter",
+        "leg_id": "D_quadratic"
+      },
+      {
+        "_row_key": "normalized_weight_state",
+        "record_id": "UNRESOLVED",
+        "field_id": "UNRESOLVED",
+        "field_type_id": "UNRESOLVED",
+        "role": "READOUT",
+        "carrier_id": "UNRESOLVED",
+        "domain_id": "UNRESOLVED",
+        "normalization_id": "UNRESOLVED",
+        "equality_id": "UNRESOLVED",
+        "source_item_id": "UNRESOLVED",
+        "write_map_id": "UNRESOLVED",
+        "presence_state": "RESOLVED",
+        "absence_basis_item_id": "UNRESOLVED",
+        "emit_rule_id": "UNRESOLVED",
+        "stage_id": "D_matter",
+        "leg_id": "D_quadratic"
+      }
+    ],
+    "stage_manifest": [
+      {
+        "_row_key": "D_matter",
+        "stage_id": "D_matter",
+        "domain_id": "UNRESOLVED",
+        "codomain_id": "UNRESOLVED",
+        "map_id": "UNRESOLVED",
+        "totality_domain_id": "UNRESOLVED",
+        "dependency_item_ids": [
+          "UNRESOLVED"
+        ]
+      }
+    ],
+    "leg_manifest": [
+      {
+        "_row_key": "D_quadratic",
+        "leg_id": "D_quadratic",
+        "owned_field_ids": [
+          "UNRESOLVED"
+        ],
+        "domain_id": "UNRESOLVED",
+        "codomain_id": "UNRESOLVED",
+        "map_id": "UNRESOLVED"
+      }
+    ],
+    "bridge_manifest": [
+      {
+        "_row_key": "beta",
+        "bridge_id": "UNRESOLVED",
+        "source_id": "UNRESOLVED",
+        "target_id": "UNRESOLVED",
+        "domain_id": "UNRESOLVED",
+        "codomain_id": "UNRESOLVED",
+        "map_id": "UNRESOLVED",
+        "dependency_item_ids": [
+          "UNRESOLVED"
+        ],
+        "from_layer": "UNRESOLVED",
+        "to_layer": "UNRESOLVED",
+        "gate_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "iota_B0",
+        "bridge_id": "UNRESOLVED",
+        "source_id": "UNRESOLVED",
+        "target_id": "UNRESOLVED",
+        "domain_id": "UNRESOLVED",
+        "codomain_id": "UNRESOLVED",
+        "map_id": "UNRESOLVED",
+        "dependency_item_ids": [
+          "UNRESOLVED"
+        ],
+        "from_layer": "UNRESOLVED",
+        "to_layer": "UNRESOLVED",
+        "gate_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "D_scoped_record",
+        "bridge_id": "UNRESOLVED",
+        "source_id": "UNRESOLVED",
+        "target_id": "UNRESOLVED",
+        "domain_id": "UNRESOLVED",
+        "codomain_id": "UNRESOLVED",
+        "map_id": "UNRESOLVED",
+        "dependency_item_ids": [
+          "UNRESOLVED"
+        ],
+        "from_layer": "UNRESOLVED",
+        "to_layer": "UNRESOLVED",
+        "gate_ids": [
+          "UNRESOLVED"
+        ]
+      }
+    ],
+    "quadratic_manifest": {
+      "coefficient_ring_id": "UNRESOLVED",
+      "effective_carrier_id": "UNRESOLVED",
+      "orbit_to_amplitude_bridge_id": "UNRESOLVED",
+      "gram_id": "UNRESOLVED",
+      "dagger_id": "UNRESOLVED",
+      "transpose_id": "UNRESOLVED",
+      "qcarrier_id": "UNRESOLVED",
+      "q_equality_id": "UNRESOLVED",
+      "q_map_id": "UNRESOLVED",
+      "effect_ids": [
+        "P-DMATTER-TOTAL-1-EFFECT-SHADOW-MINIMAL-OWNER-FREEZE-2026-08-04:E_low",
+        "P-DMATTER-TOTAL-1-EFFECT-SHADOW-MINIMAL-OWNER-FREEZE-2026-08-04:E_high"
+      ],
+      "born_pairing_id": "P-DMATTER-TOTAL-1-EFFECT-SHADOW-MINIMAL-OWNER-FREEZE-2026-08-04:BORN-TRACE-PAIRING",
+      "factorization_map_id": "UNRESOLVED"
+    },
+    "physics_manifest": {
+      "source_id": "UNRESOLVED",
+      "current_id": "UNRESOLVED",
+      "conservation_id": "UNRESOLVED",
+      "propagator_id": "UNRESOLVED",
+      "detector_id": "UNRESOLVED"
+    },
+    "measure_manifest": {
+      "measure_id": "UNRESOLVED",
+      "normalization_id": "UNRESOLVED",
+      "metrology_id": "UNRESOLVED",
+      "scheme_id": "UNRESOLVED"
+    },
+    "closure_manifest": {
+      "write_target_ids": [
+        "UNRESOLVED"
+      ],
+      "feeds_U": "FALSE",
+      "terminal_output_ids": [
+        "UNRESOLVED"
+      ],
+      "terminality_basis_id": "UNRESOLVED"
+    },
+    "obligation_manifest": [
+      {
+        "_row_key": "A01",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A02",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A03",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A04",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A05",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A06",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A07",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A08",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A09",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A10",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A11",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A12",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A13",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A14",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      },
+      {
+        "_row_key": "A15",
+        "requirement_id": "UNRESOLVED",
+        "owning_item_id": "QUADRATIC-DECODER-DATA",
+        "value_state": "UNRESOLVED",
+        "basis_item_ids": [
+          "UNRESOLVED"
+        ]
+      }
+    ],
+    "factor_canonicity_manifest": {
+      "owner_item_id": "UNRESOLVED",
+      "stage_id": "UNRESOLVED",
+      "leg_id": "UNRESOLVED",
+      "source_carrier_id": "UNRESOLVED",
+      "output_carrier_id": "UNRESOLVED",
+      "domain_id": "UNRESOLVED",
+      "totality_domain_id": "UNRESOLVED",
+      "source_equality_id": "UNRESOLVED",
+      "output_equality_id": "UNRESOLVED",
+      "qcarrier_id": "UNRESOLVED",
+      "q_equality_id": "UNRESOLVED",
+      "q_map_id": "UNRESOLVED",
+      "q_image_id": "UNRESOLVED",
+      "q_corestriction_id": "UNRESOLVED",
+      "q_image_inclusion_id": "UNRESOLVED",
+      "factor_map_id": "UNRESOLVED",
+      "factor_equation_id": "UNRESOLVED",
+      "fiber_constancy_test_id": "UNRESOLVED",
+      "fiber_factor_equivalence_statement_id": "UNRESOLVED",
+      "fiber_factor_equivalence_proof_id": "UNRESOLVED",
+      "nonconstancy_test_id": "UNRESOLVED",
+      "candidate_class_id": "UNRESOLVED",
+      "candidate_membership_test_id": "UNRESOLVED",
+      "candidate_equivalence_id": "UNRESOLVED",
+      "candidate_equivalence_reflexivity_proof_id": "UNRESOLVED",
+      "candidate_equivalence_symmetry_proof_id": "UNRESOLVED",
+      "candidate_equivalence_transitivity_proof_id": "UNRESOLVED",
+      "candidate_isomorphism_closure_proof_id": "UNRESOLVED",
+      "candidate_completeness_statement_id": "UNRESOLVED",
+      "candidate_completeness_proof_id": "UNRESOLVED",
+      "hidden_input_closure_id": "UNRESOLVED"
+    },
+    "gauge_square_manifest": [],
+    "_overlay_note": "factor-canonicity overlay per the v24 contract extension, carried by Public Canon v36; all slots UNRESOLVED; gauge_square_manifest rows are added when a square is declared"
+  },
+  "proposal_local_catalog": {
+    "identity_values": {
+      "read_convention": "PRE_UPDATE_CHECKPOINT_N0",
+      "history_equivalence": "COMPLETE_POINTED_FORWARD_SEQUENCE_EQUALITY",
+      "region": "ORDERED_PISTON4_N0",
+      "coarse_graining": "IDENTITY_N0"
+    },
+    "carrier_values": {
+      "X": "F_5^6",
+      "K0": "{kappa_x=(U^n(0,x))_(n>=0):x in X}",
+      "Veff": "ell(F_5)^4 subset Q^4",
+      "V_lin": "span_Q(Veff)=Q^4",
+      "j_lin": "j_lin(v)=v",
+      "K_amp": "Q(zeta_5)",
+      "QCarrier": "image(Qcan|Veff) subset M_4(Q) x M_4(Q)",
+      "CandidateQuadraticData": "TOTAL_TAGGED_ZERO_OR_NONZERO_RECORD"
+    },
+    "map_values": {
+      "beta": "kappa_x maps to (ell(p1),ell(p4),ell(p1p),ell(p4p))^T at pre-update n=0",
+      "iota_B0": "v maps to v_0+v_1*zeta+v_2*zeta^2+v_3*zeta^3",
+      "Qcan": "v maps to (v*v^dagger,v*v^T) as an ordered pair",
+      "D_scoped": "R_cyc o iota_B0 o beta",
+      "definition_audit_identity": "D_scoped=F_Gram o Qcan o beta",
+      "definition_audit_identity_is_independent_factorization": false,
+      "D_direct_state": "UNRESOLVED"
+    },
+    "operation_values": {
+      "coefficient_ring": "Q",
+      "coefficient_involution": "identity_Q",
+      "cyclotomic_conjugation": "sigma_4",
+      "G0": "5*I_4-1*1^T",
+      "G": "I_4-(1/5)*1*1^T",
+      "dagger": "v^dagger=v^T",
+      "transpose": "transpose(A)=A^T",
+      "sharp_G": "sharp_G(A)=G^(-1)*A^T*G",
+      "E_low": "(1/4)*1*1^T",
+      "E_high": "I_4-E_low"
+    },
+    "record_values": {
+      "field_handles": [
+        "support_state",
+        "total_weight",
+        "branch_weights",
+        "density_state",
+        "normalized_weight_state"
+      ],
+      "record_owner": "CandidateQuadraticData",
+      "role": "READOUT",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "write_map": "D_scoped",
+      "semantic_write_targets_are_exact": true,
+      "public_write_target_ids_state": "UNRESOLVED"
+    },
+    "known_public_dependency_floor": [
+      "DEF-ARCHITECTURE",
+      "DEF-DECODER-MATTER",
+      "READING-SPLIT",
+      "COUPLINGS-DETERMINE",
+      "MEASURE-BORN-VERB"
+    ],
+    "required_dependency_delta": {
+      "parent": "QUADRATIC-DECODER-DATA",
+      "dependency": "DEF-DECODER-COMPLETION-CONTRACT",
+      "relation": "REQUIRES",
+      "ledger_state": "UNRESOLVED"
+    },
+    "closure_values": {
+      "feeds_U": "FALSE",
+      "terminal_output_ids": [
+        "UNRESOLVED"
+      ],
+      "terminality_basis_id": "UNRESOLVED"
+    }
+  },
+  "extensions": {
+    "stream_extension": {
+      "local_handle": "S_scoped",
+      "state": "UNRESOLVED",
+      "required_type": "K0 -> CandidateQuadraticData^(N_0)",
+      "required_fields": [
+        "exact_term",
+        "read_convention",
+        "shift_law",
+        "equality",
+        "emit_rule",
+        "layer_endpoints",
+        "dependencies",
+        "public_gate"
+      ]
+    },
+    "hybrid_extension": {
+      "state": "UNRESOLVED",
+      "contract_integration_state": "UNRESOLVED",
+      "required_fields": [
+        "GyronObject",
+        "L_label",
+        "label_equality",
+        "ell_gyron",
+        "ell_gyron_totality_domain",
+        "C_hyb",
+        "G_hyb",
+        "j_hyb",
+        "source_layer",
+        "target_layer",
+        "public_gate",
+        "physical_carrier_identification"
+      ]
+    },
+    "physical_instrument_predefinition": {
+      "state": "UNRESOLVED",
+      "infer_K_from_E": false,
+      "required_fields": [
+        "admissible_instrument_universe",
+        "exact_K_a",
+        "exact_E_a_certificates",
+        "K_level_equivalence",
+        "E_level_equivalence",
+        "outcome_semantics",
+        "post_event_semantics",
+        "coarse_graining",
+        "Born_pairing",
+        "normalization_and_completeness",
+        "MatterData_outcome_fields",
+        "PASS_NONUNIQUE_EMPTY_STOP_semantics"
+      ]
+    }
+  },
+  "_rebase_note": "V36 REBASE PROPOSAL, mechanical, produced by the census v2 lane on 2026-08-05. Additive: the pinned v23 skeleton is unchanged and stays the file of record until the lane owner adopts this proposal. Deltas are exactly R1 pins, R2 overlay, R3 the two EFFECT_SHADOW_MINIMAL bindings, R4 this note. No other slot was touched; the local binding artifacts remain STALE_BASE per the freeze note and are NOT rebuilt here."
+}
