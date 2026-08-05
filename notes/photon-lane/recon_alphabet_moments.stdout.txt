@@ -1,0 +1,29 @@
+X PASS involutions and fired fiber commutators reproduce the display
+A0 PASS deposited spatial classes: 20
+A1 PASS isometry preserves every lift norm
+A1 NOTE lift tie census (ties per class -> classes): [(1, 20)]; total vectors 20
+A2 PASS the lift set is closed under negation (odd moments vanish exactly)
+A3 NOTE symmetric completion S_SYM: 60 vectors, shells [(2, 12), (4, 6), (8, 12), (10, 24), (16, 6)]
+-- S_V: uniform per vector over the deposited alphabet lifts --
+SV.m1 PASS first moments [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+SV.m2 PASS M2 diag=[Fraction(60, 1), Fraction(0, 1), Fraction(100, 1)] off=[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)] -> ANISOTROPIC
+SV.m4 INFO pure=[Fraction(396, 1), Fraction(0, 1), Fraction(940, 1)] sq=[Fraction(0, 1), Fraction(140, 1), Fraction(0, 1)] mixed_nonzero={} deficit(pure-3sq)=[Fraction(396, 1), Fraction(-420, 1), Fraction(940, 1)] -> ANISOTROPIC
+-- S_C: uniform per class, ties split equally --
+SC.m1 PASS first moments [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+SC.m2 PASS M2 diag=[Fraction(60, 1), Fraction(0, 1), Fraction(100, 1)] off=[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)] -> ANISOTROPIC
+SC.m4 INFO pure=[Fraction(396, 1), Fraction(0, 1), Fraction(940, 1)] sq=[Fraction(0, 1), Fraction(140, 1), Fraction(0, 1)] mixed_nonzero={} deficit(pure-3sq)=[Fraction(396, 1), Fraction(-420, 1), Fraction(940, 1)] -> ANISOTROPIC
+-- S_SYM: uniform per vector over the 48-closure --
+SSYM.m1 PASS first moments [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+SSYM.m2 PASS M2 diag=[Fraction(160, 1), Fraction(160, 1), Fraction(160, 1)] off=[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)] -> ISOTROPIC
+SSYM.m4 INFO pure=[Fraction(1336, 1), Fraction(1336, 1), Fraction(1336, 1)] sq=[Fraction(140, 1), Fraction(140, 1), Fraction(140, 1)] mixed_nonzero={} deficit(pure-3sq)=[Fraction(916, 1), Fraction(916, 1), Fraction(916, 1)] -> ANISOTROPIC
+-- seed class (2,1,3,4) alone, its minimal lift ties --
+SEED.m1 NOTE first moments [Fraction(1, 1), Fraction(0, 1), Fraction(-3, 1)] (single class carries no negation closure; zero is not asserted)
+SEED.m2 PASS M2 diag=[Fraction(1, 1), Fraction(0, 1), Fraction(9, 1)] off=[Fraction(0, 1), Fraction(-3, 1), Fraction(0, 1)] -> ANISOTROPIC
+SEED.m4 INFO pure=[Fraction(1, 1), Fraction(0, 1), Fraction(81, 1)] sq=[Fraction(0, 1), Fraction(9, 1), Fraction(0, 1)] mixed_nonzero=[((1, 0, 3), Fraction(-27, 1)), ((3, 0, 1), Fraction(-3, 1))] deficit(pure-3sq)=[Fraction(1, 1), Fraction(-27, 1), Fraction(81, 1)] -> ANISOTROPIC
+A4 PASS PLANARITY: every one of the 20 minimal lifts has second coordinate 0; the deposited alphabet spans a RANK-2 sublattice (invariant statement under R1-B: the alphabet is coplanar). M2 within the plane is (60, 100): anisotropic even there.
+-- verdict --
+V1 S_V   second order ANISOTROPIC, fourth order ANISOTROPIC
+V2 S_C   second order ANISOTROPIC, fourth order ANISOTROPIC
+V3 S_SYM second order isotropic, fourth order ANISOTROPIC
+V4 seed  second order ANISOTROPIC, fourth order ANISOTROPIC
+MOMENT RECON 12/12 checks PASS, VERDICT COMPLETE
