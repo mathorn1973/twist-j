@@ -1,9 +1,11 @@
 # P-LAMBDA-COCYCLE-ANGLES-2 result
 
-Route: positive local formal leg. The pinned verifier exited zero, wrote empty
-standard error, and ended with `RESULT 33/33 ALL PASS`. The required GitHub
-Linux x86_64 and aarch64 jobs are pending; until that gate passes the grades
-below are intended and not earned.
+Route: positive local formal leg with a passed architecture gate. The pinned
+verifier exited zero, wrote empty standard error, and ended with
+`RESULT 33/33 ALL PASS`. The required GitHub Linux x86_64 and aarch64 jobs
+reproduced the exact stdout bytes from the same verifier hash, and their
+aggregate `check` job succeeded. The grades below are the earned grades of
+record.
 
 Scope: the converse direction of the compact lambda-adic cocycle-vector
 hypothesis and the resulting characterization, at L6 measure and spectral only.
@@ -25,14 +27,22 @@ stdout_lines: 34
 exit_code: 0
 stderr_bytes: 0
 local_result: 33/33 ALL PASS
+local_leg: Ubuntu 24.04, x86_64, CPython 3.11.15
+github_leg: Ubuntu 24.04, aarch64, CPython 3.12.13
 public_lock: issue 287
 sibling_pin: d7ad9d9973a7859e030b42e572b7f64a1f926b2d (P-LAMBDA-COCYCLE-ANGLES-1)
-architecture_gate: pending
+pull_request: 288
+workflow_run: 31116267757
+tested_head: ba474e6ce6b1bd39a59f363f2a55ee36637e926a
+github_verifier_sha256: 37347d200eba27b2aa94da3e79c3705aa1e8e4d8cc6136c6347d32cd7b6306a9
+github_stdout_sha256: 7c5b661401dc245e9469e9cc7b6e9129f4a773b44226410ff557770d35727eeb
+github_byte_identity: PASS
+architecture_gate: PASS
 ```
 
 No registered falsifier of this probe fired.
 
-## S1 [T intended]
+## S1 [T]
 
 Ring arithmetic in the fixed basis gives `J phi = zeta`, `N(J) = 1` and
 `Tr(J) = 3`. A unit of finite order in a number field is a root of unity, and
@@ -41,7 +51,7 @@ the roots of unity of `Q(zeta_5)` are exactly the ten elements
 explicit ten-element list, so the exclusion is complete rather than a bounded
 search over powers. Hence `J` has infinite order. Blocks C1-01 through C1-07.
 
-## S2 [T intended]
+## S2 [T]
 
 `J` is a unit, so multiplication by `J` is a continuous additive automorphism of
 `O_lambda` with continuous inverse; since `|N(J)|_lambda = 1` it preserves Haar
@@ -57,7 +67,7 @@ so `U_J` permutes that basis by `y -> J y`. Every `y` lies in
 the bijection, so **every orbit is finite**. `U_J` is a permutation of an
 orthonormal basis with finite cycles.
 
-## S3 [T intended]
+## S3 [T]
 
 For `y` of exact level `k`, the orbit size is the least `d` with `J^d y = y`,
 that is `ord_(lambda^k)(J)`. Since `zeta = 1 mod lambda`,
@@ -84,7 +94,7 @@ size of `J` at level `4A`.** That is why that sequence appears in the row: it is
 not a chosen test sequence but the period of the operator on each level.
 Blocks C2-01 through C3-05.
 
-## S4 [T intended]
+## S4 [T]
 
 The valuation ladder, computed exactly through `v_lambda(x) = v_5(N(x))`, is
 
@@ -101,7 +111,7 @@ does not yet apply. From `v = 6 > 1` onward it does, and every later step adds
 `4`. The ladder is strictly increasing and never reaches infinity, so no power
 `J^(4 . 5^m)` equals `1`, consistent with S1. Blocks C4-01 through C4-04.
 
-## S5 [T intended]
+## S5 [T]
 
 A permutation of an orthonormal basis with all cycles finite has pure point
 spectrum: the space is the orthogonal direct sum of the finite-dimensional
@@ -123,7 +133,7 @@ never appears. Blocks C5-01 through C5-04.
 zeta; it is the point spectrum of `U_J`, forced by the multiplicative order of
 `J` in the residue rings.
 
-## S6 [T intended]
+## S6 [T]
 
 Assume RH and assume every Cayley angle lies in the grid. Let `mu` carry mass
 `(1/2)/(1/4 + gamma^2)` at each of `+/- alpha_gamma`; its total mass is
@@ -148,7 +158,7 @@ determined by two consecutive values together with all its second differences,
 so `f(n) = lambda_n` for every `n >= 0`. That is exactly the cocycle condition,
 so `v` is a cocycle vector. Blocks C6-01, C6-02, C7-01 through C7-03.
 
-## S7 [T intended]
+## S7 [T]
 
 Combining the directions:
 
