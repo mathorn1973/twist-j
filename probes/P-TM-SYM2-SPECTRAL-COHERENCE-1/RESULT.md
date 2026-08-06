@@ -89,13 +89,44 @@ outcome. Such treatment is a later separately reviewed fold.
 ## 5. Cross-architecture gate
 
 ```text
-architecture_gate: pending
+architecture_gate: PASS
 ```
 
-The local leg above is aarch64. The required check reruns the identical
-pinned verifier on the x86_64 and aarch64 runners at pull-request time and
-must exit zero with empty stderr and stdout byte-identical to EXPECTED.txt.
-The gate verdict and the workflow evidence are appended to this file in an
-evidence-only commit after the check completes. Until then this probe carries
-a single-architecture formal leg and claims no computation-grade cross-
-architecture reproduction.
+The required check reran the identical pinned verifier on both runners at
+pull-request time. Both legs exited zero with empty stderr and stdout
+byte-identical to the committed EXPECTED.txt.
+
+```text
+pull request:   279
+workflow:       policy, event pull_request
+workflow run:   31077427253
+head:           b76e7e6be4add20388257f717dbf69a94fff508d
+base:           bff109aa0272cb61e33df60682f2e30358dc9765
+python:         3.12 as pinned by the workflow
+
+job 92538416302   architecture-aarch64   runner label ubuntu-24.04-arm
+                  2026-08-06T06:29:02Z to 2026-08-06T06:29:20Z   success
+job 92538416559   architecture-x86_64    runner label ubuntu-latest
+                  2026-08-06T06:29:02Z to 2026-08-06T06:29:18Z   success
+job 92538472052   check                  TWO-ARCHITECTURE CHECK PASS
+                  2026-08-06T06:29:22Z to 2026-08-06T06:29:28Z   success
+```
+
+Reproduction ran as `tools/check_verifier.py --base bff109aa` on each
+architecture. That tool executes the pinned verifier from the repository root
+and compares its transcript with EXPECTED.txt; a byte mismatch, a nonzero
+exit, or nonempty stderr fails the step. Both architecture jobs passed it. In
+the check job the failure branch was skipped, which is exactly the condition
+that every architecture job succeeded.
+
+The publication job was skipped. It is gated on a tag push or a release event
+and is not part of the pull-request gate. Its skip is not a gate result.
+
+Three executions now agree byte for byte on the transcript with sha256
+410679552c329e420f7e7196e039c04e57708d5c9ff0975b260a2352c070b255: the local
+aarch64 formal leg recorded in RUN.md and the two runner legs above. RUN.md
+records the local leg as it stood at execution time and is not amended; this
+section is the gate verdict of record.
+
+The evidence above establishes reproduction, not status. Any registry,
+frontier, or Canon movement is a later separately reviewed fold.
