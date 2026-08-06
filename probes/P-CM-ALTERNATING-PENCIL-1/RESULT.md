@@ -1,10 +1,10 @@
-# P-CM-ALTERNATING-PENCIL-1 preliminary result
+# P-CM-ALTERNATING-PENCIL-1 result
 
 Route: positive local formal leg. The pinned verifier exited zero, wrote empty
 standard error, and ended with `RESULT 34/34 ALL PASS`. The independent
-adversarial program ended with `RESULT 5/5 ALL PASS`. The pull-request
-architecture gate is pending, so the grades below are provisional and are not
-yet earned grades of record.
+adversarial program ended with `RESULT 5/5 ALL PASS`. The required GitHub
+Linux aarch64 and x86_64 jobs reproduced the exact stdout bytes. The grades
+below are the earned grades of record.
 
 Scope: the alternating trace-form pencil on `O_K` and its unit action, at L1
 state only. This result changes no Canon, registry, frontier, or status file.
@@ -24,13 +24,22 @@ local_result: 34/34 ALL PASS
 breaker_sha256: 0870c628346dcd7499cf453fcbff3c8ed25e370ea316fbd20d9cde0355c82786
 breaker_stdout_sha256: 6dc623f6088e0b4a8a68343f12ecaa6c027f6288015d1ba6270803b3602d37e8
 adversarial_result: 5/5 ALL PASS
-architecture_gate: pending
+pull_request: 282
+workflow_run: 31093086019
+tested_head: 7e3c52fa26bdbab62d2d7cda853ed4da3b33b5c7
+github_aarch64_job: 92588494657
+github_x86_64_job: 92588494713
+github_check_job: 92588539165
+github_verifier_sha256: 19cdff86cc90de099a96088b39818956022fbd36d0ce48a0e2c2a3f9747e4b78
+github_stdout_sha256: 5f790488d58802bdf467c7269e967e82a08e7b8f0f1b51a8736789c04384cdfd
+github_byte_identity: PASS
+architecture_gate: PASS
 ```
 
 No registered falsifier fired in the declared finite ranges or in the wider
 adversarial searches recorded in `BREAK.md`.
 
-## P1, provisional T
+## P1 [T]
 
 For coordinates `(a,b,c,d)` in the fixed basis, conjugation is
 
@@ -50,7 +59,7 @@ Direct reduction in `Z[j]` gives
 `lambda_2=lambda_1 phi^-1`. Also `Z[phi]=Z+Z phi^-1`, so
 `L=lambda_1 Z[phi]`, free of rank one, with the stated integer basis.
 
-## P2, provisional T
+## P2 [T]
 
 For `lam` in `L`, P1 gives `conj(lam)=-lam`. Trace is invariant under
 conjugation. For `w=lam y conj(x)`, commutativity gives
@@ -63,7 +72,7 @@ Therefore `Tr(lam y conj(x))=-Tr(lam x conj(y))`. Division by five proves
 antisymmetry. Setting `y=x` makes the rational value equal to its negative,
 so it is zero and the form is alternating.
 
-## P3, provisional T
+## P3 [T]
 
 The trace-dual criterion says that the form is integer-valued exactly when
 `lam/5` lies in the inverse different. For this cyclotomic field,
@@ -95,7 +104,7 @@ It is one exactly for a unit, zero for `eta=0`, and greater than one for a
 nonzero nonunit. The direct Gram calculation has Pfaffian one for `Omega_1`,
 so its determinant is one.
 
-## P4, provisional T
+## P4 [T]
 
 Direct trace reduction gives
 
@@ -130,7 +139,7 @@ N_{K+/Q}((a-b)+b phi)
 
 Thus the finite three-value calculation is the complete polynomial proof.
 
-## P5, provisional T
+## P5 [T]
 
 P1 rewrites the parameter as
 
@@ -154,7 +163,7 @@ The parameter orbit is consequently exactly the Pell layer. Induction from
 `(F_{n+1},F_n)` has this coefficient, so its Pfaffian is
 `N(phi)^n=(-1)^n`.
 
-## P6, provisional T
+## P6 [T]
 
 For a unit `u`, commutativity and conjugation give
 
@@ -175,7 +184,7 @@ of unity, and the roots in `Q(j)` are exactly
 
 All ten have relative norm one, proving equality with the kernel.
 
-## P7, provisional T
+## P7 [T]
 
 The relative norm of `J` is
 
@@ -200,7 +209,7 @@ Parameter multiplication by `phi` has columns from
 `phi^2`, and direct matrix multiplication gives `A_J` as that square's
 inverse. The pullback by the unit `phi` uses `phi^2`, as P6 requires.
 
-## P8, provisional T
+## P8 [T]
 
 For every alternating four by four matrix `W`, the Pfaffian identity is
 
@@ -231,11 +240,29 @@ Omega_lam(conj(x),conj(y))=-Omega_lam(x,y),
 or `C^T Omega C=-Omega`. Conjugation is a distinct map from unit
 multiplication.
 
-## Pending gates
+## Grade and architecture record
 
-Each written proof above closes the corresponding universal statement, and
-the local verifier audits its frozen finite consequences. The independent
-adversarial program found no counterexample. Final grade `T` is available for
-each item only if the required GitHub transcript is byte-identical to
-`EXPECTED.txt`. Any fired falsifier remains part of the final record without
-moving a threshold.
+```text
+P1  T  written coordinate and module proof; B2 audit passed
+P2  T  written trace-invariance proof; B3 audit passed
+P3  T  written inverse-different and determinant proof; B4 audit passed
+P4  T  written three-value quadratic proof; B5 audit passed
+P5  T  written unit and Fibonacci proof; B6 audit passed
+P6  T  written pullback and relative-norm-kernel proof; B7 audit passed
+P7  T  written matrix and eigenvalue proof; B8 audit passed
+P8  T  written Pfaffian, positivity, and conjugation proof; B9 audit passed
+```
+
+The two required workflow jobs ran the identical pinned verifier with
+CPython major 3 minor 12 patch 13. The aarch64 job and the x86_64 job both
+printed
+
+```text
+VERIFY PASS P-CM-ALTERNATING-PENCIL-1 19cdff86cc90de099a96088b39818956022fbd36d0ce48a0e2c2a3f9747e4b78 5f790488d58802bdf467c7269e967e82a08e7b8f0f1b51a8736789c04384cdfd
+```
+
+Thus the local transcript and both GitHub Linux transcripts are byte-identical
+to `EXPECTED.txt`; all have 35 lines, 1940 bytes, empty standard error, and
+exit zero. The aggregate check also passed. The written proofs establish the
+universal claims, while the finite checks and independent attack audit them.
+No registered falsifier fired and no threshold moved.
