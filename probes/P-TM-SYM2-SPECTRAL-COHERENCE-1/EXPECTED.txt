@@ -1,0 +1,29 @@
+CERT 01 PASS field sanity: phi^2 = phi + 1 and (phi+2)^2 = 5 phi^2
+CERT 02 PASS six lines: |v_i|^2 = phi + 2 and all pairwise dots are +-phi
+CERT 03 PASS structural selector class: 3! * 2^3 = 48 distinct equivariant bijections
+CERT 04 PASS gauge from det +1 signed coordinate matrices preserving the line set: order 12
+CERT 05 PASS free postcomposition with exactly 4 orbits of 12
+CERT 06 PASS orbit minimal representatives equal the public record
+CERT 07 PASS orbits are exactly the four (chi_Q, chi_F) fibers of the structural characters
+CERT 08 PASS linear realizability count over all 720 line permutations: 60
+CERT 09 PASS exponent-one realizability count over all 720 line permutations: 60 [C4]
+CERT 10 PASS exponent-one intersection with the 48-element centralizer W: 12 [C4]
+CERT 11 PASS two-graph split of the 20 triples is 10 + 10 [C5]
+CERT 12 PASS Galois conjugation flips every pairwise dot sign [C5]
+CERT 13 PASS characteristic polynomial is representative-sign invariant (flip spot check)
+CERT 14 PASS one characteristic polynomial across all 48 selectors [C2]
+CHARPOLY det(xI - L_s) = sum_k c_k x^k, c_k = a + b sqrt5:
+  c_6 = (1) + (0) sqrt5
+  c_5 = (0) + (0) sqrt5
+  c_4 = (-6) + (-2) sqrt5
+  c_3 = (0) + (0) sqrt5
+  c_2 = (21/2) + (9/2) sqrt5
+  c_1 = (0) + (0) sqrt5
+  c_0 = (0) + (0) sqrt5
+CERT 15 PASS battery F1 edge-sign product is orbit-constant and epsilon-blind [C3]
+CERT 16 PASS battery transfer-triangle tau sum (2 triangles) is orbit-constant and epsilon-blind [C3]
+CERT 17 PASS battery all-triple tau sum is orbit-constant and epsilon-blind [C3]
+CERT 18 PASS characteristic polynomial is epsilon-blind [C3]
+CERT 19 PASS all 1128 selector pairs admit a witness with P in {id, N} [C1]
+WITNESS first-found split: direct-id 552, direct-N 576 (deterministic order)
+RESULT: PASS (19 certificates green)
