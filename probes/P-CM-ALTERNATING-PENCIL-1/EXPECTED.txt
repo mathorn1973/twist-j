@@ -1,0 +1,35 @@
+PASS B1-01 j^5 equals 1
+PASS B1-02 j satisfies t^4+t^3+t^2+t+1
+PASS B1-03 phi^2 equals phi+1
+PASS B1-04 J*phi equals j
+PASS B1-05 absolute norm of J equals 1
+PASS B1-06 absolute trace of J equals 3
+PASS B1-07 determinant of M_J equals 1
+PASS B2-01 conjugation equation and lambda span agree on [-4,4]^4
+PASS B2-02 lambda_1 and lambda_2 are purely imaginary
+PASS B2-03 lambda_2 equals lambda_1*phi^-1
+PASS B2-04 lambda_1*phi equals lambda_1+lambda_2
+PASS B3-01 antisymmetry holds on the declared 8-vector ordered square
+PASS B3-02 alternation holds on the declared 8-vector list
+PASS B4-01 all pencil matrices are integral for -20<=a,b<=20
+PASS B4-02 determinant of Omega_1 equals 1
+PASS B4-03 the nongenerator 2*lambda_1 has determinant greater than 1
+PASS B5-01 Pf(Omega_{a,b}) equals a^2-a*b-b^2 on [-20,20]^2
+PASS B5-02 the Pfaffian equals the real quadratic norm on the range
+PASS B5-03 values at (1,0),(0,1),(1,1) determine coefficients 1,-1,-1
+PASS B6-01 unimodular matrices are exactly the Pell solutions on the range
+PASS B6-02 Fibonacci pairs have Pfaffian (-1)^n for 1<=n<=20
+PASS B7-01 declared generators and inverses are integral units
+PASS B7-02 unit pullback equals the relative-norm parameter action
+PASS B7-03 every declared unit action stays in the pencil
+PASS B7-04 exactly the ten roots in the fixed-form list preserve Omega_1
+PASS B8-01 J*conj(J) equals phi^-2 and has the registered action matrix
+PASS B8-02 the phi action matrix has determinant -1
+PASS B8-03 A_J has determinant 1, trace 3, and polynomial t^2-3*t+1
+PASS B8-04 the two eigenvalues are phi^2 and phi^-2
+PASS B8-05 A_J is the inverse of the square of the phi action
+PASS B9-01 all declared matrices are integral
+PASS B9-02 Pf(M^T*W*M)=det(M)*Pf(W) on the declared matrices and forms
+PASS B9-03 direct entries reject a scalar multiplier for the J pullback
+PASS B9-04 conjugation pulls both pencil generators back to their negatives
+RESULT 34/34 ALL PASS
