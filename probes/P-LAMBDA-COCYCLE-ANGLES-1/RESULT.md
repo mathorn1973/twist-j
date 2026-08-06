@@ -1,9 +1,11 @@
 # P-LAMBDA-COCYCLE-ANGLES-1 result
 
-Route: positive local formal leg. The pinned verifier exited zero, wrote empty
-standard error, and ended with `RESULT 31/31 ALL PASS`. The required GitHub
-Linux x86_64 and aarch64 jobs are pending. The grades below are the intended
-grades of record and are not earned until that gate passes.
+Route: positive local formal leg with a passed architecture gate. The pinned
+verifier exited zero, wrote empty standard error, and ended with
+`RESULT 31/31 ALL PASS`. The required GitHub Linux x86_64 and aarch64 jobs
+reproduced the exact stdout bytes from the same verifier hash, and their
+aggregate `check` job succeeded. The grades below are the earned grades of
+record.
 
 Scope: the exact relation between the two registered falsifier branches of
 `LAMBDA-COCYCLE-ANGLES [H]`, at L6 measure and spectral only. This result
@@ -25,13 +27,23 @@ stdout_lines: 32
 exit_code: 0
 stderr_bytes: 0
 local_result: 31/31 ALL PASS
+local_leg: Ubuntu 24.04, x86_64, CPython 3.11.15
 public_lock: issue 284
-architecture_gate: pending
+pull_request: 285
+workflow_run: 31110661860
+tested_head: a7f65508ac9afff9a67fa5881e3a313c7d833e0e
+github_aarch64_job: 92647281077
+github_x86_64_job: 92647281487
+github_check_job: 92647355707
+github_verifier_sha256: 3263191dd30c07f9895f1b2c95f347d3d9a45ecb8dfcf136e1a34997891f62b1
+github_stdout_sha256: 9e46f7f56d7e4b22683e3b595707f5bb880ef707771ac75aaa35a8dcc2584688
+github_byte_identity: PASS
+architecture_gate: PASS
 ```
 
 No registered falsifier of this probe fired.
 
-## R1 [T intended]
+## R1 [T]
 
 Write `rho = (1 + 2 i g)/2` for a critical-line zero of ordinate `g`. Then
 `1/rho = 2(1 - 2 i g)/(1 + 4 g^2)`, so
@@ -72,7 +84,7 @@ these as an identity of rational functions in the free variable `g`, compared by
 cross multiplication, so they hold for all ordinates at once and not on a
 sample.
 
-## R2 [T intended]
+## R2 [T]
 
 For `v` in the declared class, `lambda_n = ||sum_(k<n) U_J^k v||^2` is a squared
 norm, so `lambda_n >= 0` for every `n >= 1`. By Li's criterion the declared
@@ -80,7 +92,7 @@ class is empty unless RH holds. RH is therefore a consequence of membership and
 not an added assumption, and every later step is applied only inside the class.
 The result is consequently not a conditional theorem.
 
-## R3 [T intended]
+## R3 [T]
 
 In any commutative ring,
 
@@ -110,7 +122,7 @@ M - t_n = sum_(gamma>0) |w_gamma^n - 1|^2/(1/4 + gamma^2)
 
 Blocks B3-01, B3-02 and B4-01 through B4-05 audit these identities exactly.
 
-## R4 [T intended]
+## R4 [T]
 
 Every summand of R3 lies between `0` and `4/(1/4 + gamma^2)` because
 `|w^n| = 1`. Summing against `sum 2/(1/4 + gamma^2) = M` gives
@@ -128,7 +140,7 @@ and at any precision.** This retires the finite scope, not because it is
 expensive or imprecise, but because it is provably empty of consequence. Blocks
 B5-01, B5-02 and B8-02 record the sign, the bound, and this conclusion.
 
-## R5 [T intended]
+## R5 [T]
 
 For `alpha/(2 pi) = m/(4 . 5^a)` with `m` coprime to `5`,
 
@@ -150,7 +162,7 @@ So the registered grid `2 pi (1/4) Z[1/5]` is exactly the set of angles the
 index sequence `n_A = 4 . 5^A` annihilates, which is why the grid appears in
 the row at all.
 
-## R6 [T intended]
+## R6 [T]
 
 If every Cayley angle is annihilated in the limit, each summand of R3 tends to
 zero and the convergent majorant `sum 4/(1/4 + gamma^2) = 2 M` gives
@@ -183,7 +195,7 @@ the head and tail split, and the descent.
 second-difference falsifier of `LAMBDA-COCYCLE-ANGLES [H]` cannot be fired
 without firing its angle falsifier at a specific ordinate.
 
-## R7 [T intended]
+## R7 [T]
 
 For `|z| = 1`, the Fejer quantity `D_n = |1 + z + ... + z^(n-1)|^2` equals
 `|z^n - 1|^2/|z - 1|^2`. Its numerator obeys the same identity as R3, and on

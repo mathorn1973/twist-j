@@ -3,7 +3,9 @@
 The preregistration and verifier were committed, pushed, and read back from the
 public branch before execution. The local formal leg below invoked the pinned
 verifier exactly once from the repository root on a clean worktree. The
-pull-request architecture gate is pending.
+pull-request architecture gate has since passed: the required GitHub Linux
+x86_64 and aarch64 jobs both reproduced `EXPECTED.txt` byte for byte from the
+same verifier hash, and their aggregate `check` job succeeded.
 
 pin_commit: d7ad9d9973a7859e030b42e572b7f64a1f926b2d
 base_commit: 11a059cc1578f2d48037b523c670196a49ae8f40
@@ -34,7 +36,23 @@ stdout_git_blob: 3f4b7d203cf5a4b587699988eb09d2b383a52b66
 stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 stderr_bytes: 0
 result: 31/31 ALL PASS
-architecture_gate: pending; the required GitHub Linux x86_64 and aarch64 jobs must reproduce EXPECTED.txt byte for byte
+github_platform: Ubuntu 24.04
+github_architecture: aarch64
+github_python: CPython major 3 minor 12 patch 13
+github_verifier_sha256: 3263191dd30c07f9895f1b2c95f347d3d9a45ecb8dfcf136e1a34997891f62b1
+github_stdout_sha256: 9e46f7f56d7e4b22683e3b595707f5bb880ef707771ac75aaa35a8dcc2584688
+github_exit_code: 0
+github_stderr_bytes: 0
+github_status: PASS
+github_verdict: VERIFY PASS
+github_byte_identity: PASS
+architecture_gate: PASS
+pull_request: 285
+workflow_run: 31110661860
+tested_head: a7f65508ac9afff9a67fa5881e3a313c7d833e0e
+github_aarch64_job: 92647281077
+github_x86_64_job: 92647281487
+github_check_job: 92647355707
 public_lock: issue 284
 
 ## Integrity notes
@@ -60,7 +78,10 @@ not depend on locale, timezone, or hash seed. That determinism check was run on
 a development copy outside the repository; the pinned file's first execution is
 the formal leg recorded above.
 
-The local leg is Linux x86_64. The required workflow supplies clean Linux
-x86_64 and Linux aarch64 executions, and its full-byte comparisons are required
-before the architecture gate can pass. No conclusion relies on a machine name
-or on an operating-system-specific operation.
+The local leg is Linux x86_64 on CPython 3.11.15. The recorded GitHub leg is
+Linux aarch64 on CPython 3.12.13. The two legs differ in architecture and in
+interpreter patch level and produced byte-identical standard output from the
+same verifier hash, so the two-architecture computation gate rests on byte
+identity against the one committed `EXPECTED.txt` and not on any platform
+declaration. No conclusion relies on a machine name or on an
+operating-system-specific operation.
