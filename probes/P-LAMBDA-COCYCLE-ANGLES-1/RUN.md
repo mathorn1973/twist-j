@@ -65,7 +65,7 @@ The remote readback preceding execution compared the two pinned blobs as stored
 by the remote against the local worktree. Both agreed:
 
 ```text
-origin/claude/pracovni-ukoly-s1rdl3 = d7ad9d9973a7859e030b42e572b7f64a1f926b2d
+remote pin commit = d7ad9d9973a7859e030b42e572b7f64a1f926b2d
 PREREG.md  remote sha256 736b9bd8b6a189c9c9a4a80ac128c7f259c4f87a0d7539f3ae66adcdb761b783
 verify.py  remote sha256 3263191dd30c07f9895f1b2c95f347d3d9a45ecb8dfcf136e1a34997891f62b1
 ```
