@@ -363,3 +363,7 @@ READ-REDUNDANCY-PRIME-SUPPORT	TWO-PLACE-PHYSICS	BOUNDED_BY	the read and write pl
 PHOTON-KAPPA-LEMMA	DEF-ARCHITECTURE	REQUIRES	the frozen finite-support ternary L4 carrier and its reading remain conditional on the declared public architecture
 PHOTON-KAPPA-LEMMA	MONOPOLE-FIFTHS	REQUIRES	the exact charge-five filling equation partial n = 5j uses the registered lattice boundary convention and fifths quantization
 PHOTON-WINDOW-PROOF	PHOTON-KAPPA-LEMMA	REQUIRES	the frozen compound photon-window route requires the universal occupancy conjunct that the public Kappa certificate falsifies
+TM-SYM2-SPECTRAL-COHERENCE	DEF-ARCHITECTURE	REQUIRES	the frozen window carrier, transfer, and L5 reading are conditional on the declared public architecture
+TM-SYM2-SPECTRAL-COHERENCE	TM-SYM2-PROJECTIVE-FOURFOLD	REQUIRES	the complete 48-member selector class and its free order-12 gauge with four orbits are the enumerated domain
+TM-SYM2-SPECTRAL-COHERENCE	TM-SYM2-SEMILINEAR-TWOFOLD	REQUIRES	the characters chi_Q and chi_F define the residual reading orientation tested by the frozen battery
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-SPECTRAL-COHERENCE	BOUNDED_BY	the exact L5 similarity classification constrains what coherence a future physical bridge may demand and does not supply that bridge

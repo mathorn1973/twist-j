@@ -28,7 +28,7 @@ separate from marked-lift selection, decoder QCarrier and measure obligations,
 the exact Gyron discrepancy and forward pair-substitution
 theorems, their corrected stationary-density boundary, and the separate
 cosmology dictionary, the Schwinger target firewall, the C20 arithmetic/time
-firewall, the TM-SYM2 split between three closed action classifications, the
+firewall, the TM-SYM2 split between four closed exact classifications, the
 fired frozen selector, and the distinct open physical-measure successor, plus
 the separation of the exact WALL-LI2-RUNG theorem from the still-open
 QUANT-SUBSTRATE coupling. The final four checks pin the corrected midpoint

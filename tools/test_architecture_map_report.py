@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 221)
+        self.assertEqual(self.report.claims, 222)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 24, "D": 41, "F": 12, "H": 3, "O": 23, "T": 118},
+            {"C": 24, "D": 41, "F": 12, "H": 3, "O": 23, "T": 119},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,15 +35,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 42,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 139,
+                "two-architecture": 140,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 175)
+        self.assertEqual(len(self.report.direct_architecture_requires), 176)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 194
+            len(self.report.transitive_architecture_dependents), 195
         )
         self.assertEqual(len(self.report.dependency_terminals), 10)
         self.assertNotIn(
@@ -72,6 +72,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         )
         self.assertIn(
             "MINIMAL-READ-DERIVATION",
+            self.report.direct_architecture_requires,
+        )
+        self.assertIn(
+            "TM-SYM2-SPECTRAL-COHERENCE",
             self.report.direct_architecture_requires,
         )
         self.assertNotIn(
