@@ -124,12 +124,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 119, "D": 41, "C": 24, "F": 12,
+    expected_counts = {"T": 120, "D": 41, "C": 24, "F": 12,
                        "O": 23, "H": 3}
     checks.append((
         "COUNTS",
-        "registry has 222 claims with the current status partition",
-        len(rows) == 222 and counts == expected_counts,
+        "registry has 223 claims with the current status partition",
+        len(rows) == 223 and counts == expected_counts,
     ))
 
     checks.append((
@@ -573,6 +573,71 @@ def run():
         in core_text
         and has_status(index, "TWO-PLACE-PHYSICS", "D")
         and abelian_cm not in programs,
+    ))
+
+    cm_pencil = "CM-ALTERNATING-PENCIL"
+    cm_pencil_path = "probes/P-CM-ALTERNATING-PENCIL-1"
+    cm_pencil_digest = (
+        "74e15b610ef60afab903b241ff550febd08ce6ca8a685f0b1be698e1528163ed"
+    )
+    cm_pencil_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == cm_pencil
+    }
+    checks.append((
+        "CM-PENCIL",
+        "alternating trace pencil stays T at L1; repaired similitude boundary stays exact",
+        has_status(index, cm_pencil, "T")
+        and normative.get(cm_pencil, {}).get("item_type") == "THEOREM"
+        and normative.get(cm_pencil, {}).get("status") == "T"
+        and normative.get(cm_pencil, {}).get("layer") == "L1"
+        and normative.get(cm_pencil, {}).get("gate_ids") == ""
+        and index.get(cm_pencil, {}).get("canon_section")
+        == "4. The two places"
+        and index.get(cm_pencil, {}).get("evidence") == cm_pencil_path
+        and evidence.get(cm_pencil, {}).get("evidence_id")
+        == "EV-CM-ALTERNATING-PENCIL"
+        and evidence.get(cm_pencil, {}).get("evidence_kind")
+        == "PUBLIC_PROBE"
+        and evidence.get(cm_pencil, {}).get("location") == cm_pencil_path
+        and evidence.get(cm_pencil, {}).get("sha256") == cm_pencil_digest
+        and evidence.get(cm_pencil, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(cm_pencil, {}).get("architecture_requirement")
+        == "two-architecture"
+        and cm_pencil_dependencies == {
+            ("J-GOLDEN-BRIDGE", "REQUIRES"),
+            ("J-STEP", "REQUIRES"),
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, cm_pencil,
+            ("L = lambda_1 Z[phi]",
+             "Omega_lam(x,y) = Tr(lam x conjugate(y))/5",
+             "unimodular exactly when (lam) = (lambda_1)",
+             "Pf(Omega_(a,b)) = a^2-a b-b^2",
+             "Pell unit orbit",
+             "action kernel is exactly {+zeta_5^k,-zeta_5^k : 0<=k<5}",
+             "A_J=[[1,-1],[-1,2]]",
+             "A_J is the inverse of its square",
+             "unit multiplication has a scalar multiplier only at +1",
+             "conjugation acts with multiplier -1",
+             "L1 exact algebra only",
+             "lift to L2-L6"),
+        )
+        and all(
+            phrase.lower() in index[cm_pencil]["falsifier"].lower()
+            for phrase in (
+                "unimodular locus differs",
+                "relative-norm kernel other than the ten roots of unity",
+                "integral determinant-one scalar similitude has multiplier outside {+1,-1}",
+                "unit other than a root of unity fixes Omega_1",
+                "conjugation does not act by -1",
+                "changed evidence bundle or architecture transcript",
+                "integrity STOP",
+            )
+        )
+        and cm_pencil not in programs,
     ))
 
     color_theorems = (

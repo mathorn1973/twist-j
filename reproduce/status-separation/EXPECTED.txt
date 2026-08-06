@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry has 222 claims with the current status partition
+PASS 01 COUNTS     registry has 223 claims with the current status partition
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -12,16 +12,17 @@ PASS 08 BORN       finite Born algebra stays T; measurement and cell readings ar
 PASS 09 CENTRAL    central Herm/Sym phase stays T at L4; cone, decoder, and physics stay outside
 PASS 10 QUARTIC    quartic total ramification stays T at L1; no field selection or physical lift
 PASS 11 ABELIAN-CM unique even-bit minimum stays T at L1; its class is not a physical selector
-PASS 12 COLOR      finite group and invariant rungs stay T; the color reading is D
-PASS 13 CM-2I      marked semilinear pair stays T at L4; decoder and measure stay O/STOP
-PASS 14 COSMOLOGY  exact L1 Gyron theorems stay T; their physical reading stays D
-PASS 15 SCHWINGER  the exact target stays T while its physical realization stays O
-PASS 16 C20        the L1 C20 theorem stays separate from time and decoder readings
-PASS 17 TM-SYM2    four closed exact classifications stay T; fired selector and physical successor stay separated
-PASS 18 WALL-LI2   the exact Li_2 rung stays T while substrate coupling stays O
-PASS 19 WALL-CIRCLE the uniform root-circle theorem stays exact and outside physics
-PASS 20 METRO      finite-state theorem stays T; reduction arrows stay C; typed calculus, dimensional child, and residual stay O
-PASS 21 ENTROPY    cursor cylinder no-go stays T; narrow cut stays F and Route A bridge stays O
-PASS 22 PHOTON     Kappa universal proposition and compound route are F; roughening stays unregistered
+PASS 12 CM-PENCIL  alternating trace pencil stays T at L1; repaired similitude boundary stays exact
+PASS 13 COLOR      finite group and invariant rungs stay T; the color reading is D
+PASS 14 CM-2I      marked semilinear pair stays T at L4; decoder and measure stay O/STOP
+PASS 15 COSMOLOGY  exact L1 Gyron theorems stay T; their physical reading stays D
+PASS 16 SCHWINGER  the exact target stays T while its physical realization stays O
+PASS 17 C20        the L1 C20 theorem stays separate from time and decoder readings
+PASS 18 TM-SYM2    four closed exact classifications stay T; fired selector and physical successor stay separated
+PASS 19 WALL-LI2   the exact Li_2 rung stays T while substrate coupling stays O
+PASS 20 WALL-CIRCLE the uniform root-circle theorem stays exact and outside physics
+PASS 21 METRO      finite-state theorem stays T; reduction arrows stay C; typed calculus, dimensional child, and residual stay O
+PASS 22 ENTROPY    cursor cylinder no-go stays T; narrow cut stays F and Route A bridge stays O
+PASS 23 PHOTON     Kappa universal proposition and compound route are F; roughening stays unregistered
 
-RESULT 22/22 ALL PASS
+RESULT 23/23 ALL PASS
