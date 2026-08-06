@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 222)
+        self.assertEqual(self.report.claims, 223)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 24, "D": 41, "F": 12, "H": 3, "O": 23, "T": 119},
+            {"C": 24, "D": 41, "F": 12, "H": 3, "O": 23, "T": 120},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 42,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 140,
+                "two-architecture": 141,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -112,6 +112,14 @@ class ArchitectureMapReportTests(unittest.TestCase):
         )
         self.assertNotIn(
             "ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertNotIn(
+            "CM-ALTERNATING-PENCIL",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "CM-ALTERNATING-PENCIL",
             self.report.transitive_architecture_dependents,
         )
         for claim in (

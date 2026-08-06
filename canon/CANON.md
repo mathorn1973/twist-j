@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v37
+# TWIST-J Public Canon v38
 
-**Release identity.** Public Canon v37. Normative authority and activation
+**Release identity.** Public Canon v38. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v37 also declares the discrete
+algebraic axiom is J. Public Canon v38 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v37 does not claim
+seed of the two algebraic projections. Public Canon v38 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v37 contains no such
+deriving the architecture from J; Public Canon v38 contains no such
 theorem.
 
 ---
@@ -1879,6 +1879,178 @@ not satisfy the unique-bit premise. Neither theorem promotes
 TWO-PLACE-PHYSICS [D], derives a write/read assignment, or supplies a decoder,
 Born measure, physical bit, clock, force, observable, or lift to L2-L6.
 
+### The alternating trace-form pencil
+
+Put `K = Q(j)`, `O_K = Z[j]`, `K+ = Q(sqrt5)`, and
+`O_K+ = Z[phi]`. Define
+
+```text
+lambda_1 = j - j^-1,        lambda_2 = j^2 - j^-2,
+L = {lam in O_K : conj(lam) = -lam}.
+```
+
+In the basis `1,j,j^2,j^3`,
+`conj(q,r,s,t) = (q-r,-r,t-r,s-r)`. Hence
+`conj(lam) = -lam` is equivalent to `r = 2q` and `s+t = 2q`. Writing
+`v=s-q` gives
+
+```text
+(q,2q,q+v,q-v) = q lambda_1 + v lambda_2.
+```
+
+Direct reduction gives `lambda_1 phi = lambda_1 + lambda_2`. Since
+`phi^-1 = phi-1` and `Z[phi] = Z + Z phi^-1`, this proves
+
+```text
+L = Z lambda_1 + Z lambda_2 = lambda_1 Z[phi],
+lambda_2 = lambda_1 phi^-1.
+```
+
+For `lam` in `L`, set
+
+```text
+Omega_lam(h,k) = Tr(lam h conj(k))/5.
+```
+
+Trace invariance under conjugation gives
+`Omega_lam(k,h) = -Omega_lam(h,k)` and
+`Omega_lam(h,h) = 0`. The different and codifferent are
+
+```text
+D_K = (5/(1-j)),            D_K^-1 = ((1-j)/5).
+```
+
+The identities
+
+```text
+N(lambda_1) = N(1-j) = 5,
+lambda_1 = j(1-j)(1+j+j^2)
+```
+
+show `(lambda_1) = (1-j)`. The trace-dual criterion therefore makes every
+`Omega_lam` integer-valued and makes it unimodular exactly when
+`(lam) = (lambda_1)`. More explicitly, if
+`lam = lambda_1 eta` with `eta` in `Z[phi]`, multiplication by `eta` in the
+first trace argument gives
+
+```text
+det(Omega_lam) = N_(K/Q)(eta) det(Omega_1)
+               = N_(K+/Q)(eta)^2 det(Omega_1).
+```
+
+The direct Gram matrix below has Pfaffian one, so `det(Omega_1)=1`. Hence
+`det(Omega_lam)=N_(K+/Q)(eta)^2`, and the criterion follows.
+
+For `Omega_(a,b) = a Omega_1 + b Omega_2`, exact trace reduction gives
+
+```text
+Omega_1 = [[ 0, 1, 0, 0],
+           [-1, 0, 1, 0],
+           [ 0,-1, 0, 1],
+           [ 0, 0,-1, 0]],
+
+Omega_2 = [[ 0, 0, 1,-1],
+           [ 0, 0, 0, 1],
+           [-1, 0, 0, 0],
+           [ 1,-1, 0, 0]].
+```
+
+The entries are linear in `a,b`, so the Pfaffian is a binary quadratic
+form. Its exact values at `(1,0)`, `(0,1)`, and `(1,1)` are `1`, `-1`, and
+`-1`. These three values determine all three coefficients and prove
+
+```text
+Pf(Omega_(a,b)) = a^2-a b-b^2
+                = N_(K+/Q)((a-b)+b phi).
+```
+
+Since
+`a lambda_1+b lambda_2 = lambda_1((a-b)+b phi)`, the unimodular pencil
+members are exactly the parameters of norm `+1` or `-1`. To classify them,
+take a unit of `Z[phi]`, change its sign, and multiply by a power of `phi` so
+that its positive real value `delta` satisfies `1<=delta<phi`. If its norm is
+one, the integer trace `delta+delta^-1` lies in `[2,3)` and forces
+`delta=1`. If its norm is minus one, the integer trace
+`delta-delta^-1` lies in `[0,1)` and again forces `delta=1`, contradicting
+that norm. Thus
+
+```text
+Z[phi]^x = <-1> x <phi>.
+```
+
+The unimodular locus is therefore the Pell unit orbit. Induction from
+`phi^2=phi+1` gives `phi^n=F_n phi+F_(n-1)` for `n>=1`, and hence
+
+```text
+Pf(Omega_(F_(n+1),F_n)) = (-1)^n.
+```
+
+For every `u` in `O_K^x`, commutativity gives
+
+```text
+Omega_lam(u h,u k) = Omega_(lam u conj(u))(h,k).
+```
+
+Thus the unit action on the pencil factors through
+`N_(K/K+)(u) = u conj(u)`. The unit ranks of `K` and `K+` are both one,
+while the relative norm sends each real-subfield unit to its square. Its
+kernel therefore has rank zero and consists of roots of unity. The roots in
+`K` are exactly
+
+```text
+mu_10 = {+j^k,-j^k : 0<=k<5},
+```
+
+and all ten have relative norm one, so this is exactly the kernel.
+
+Since `J conj(J) = 2-phi = phi^-2`, its pullback action on the parameter
+lattice has the coordinate columns
+
+```text
+lambda_1 phi^-2 = lambda_1-lambda_2,
+lambda_2 phi^-2 = -lambda_1+2 lambda_2.
+```
+
+Thus, in the ordered basis `lambda_1,lambda_2`, its matrix is
+
+```text
+A_J = [[1,-1],[-1,2]].
+```
+
+It has determinant `1`, trace `3`, characteristic polynomial
+`t^2-3t+1`, and eigenvalues `phi^2` and `phi^-2`. Parameter multiplication
+by `phi` has matrix
+
+```text
+B_phi = [[1,1],[1,0]],       det(B_phi) = -1,
+```
+
+and `A_J = B_phi^-2`.
+
+Finally, for every four by four alternating matrix `W`,
+
+```text
+Pf(M^T W M) = det(M) Pf(W).
+```
+
+If `M` is integral with determinant `1`, `W` is a nonzero pencil member,
+and `M^T W M = mu W`, cancellation gives `mu^2 = 1`. Hence `mu` is `+1`
+or `-1`. The parameter map is injective because a zero trace form would
+make `Tr(lam h)=0` for every `h` in `O_K`, and nondegeneracy of the trace
+pairing would force `lam=0`. A scalar multiplier from unit multiplication
+must therefore equal `u conj(u)`. This relative norm is positive at both
+real embeddings, so unit multiplication realizes only `mu=1`, exactly for
+the ten roots of unity. Multiplication by `J` instead moves the pencil by
+`A_J`; it does not scale a fixed member by `phi^-2`. Conjugation is not
+multiplication by a unit and satisfies
+
+```text
+C^T Omega_lam C = -Omega_lam.
+```
+
+These statements form CM-ALTERNATING-PENCIL [T] at L1, evidenced by
+`probes/P-CM-ALTERNATING-PENCIL-1`.
+
 Separately, the exact arithmetic uses two places, disjoint over Q:
 Q(zeta_5) cap Q(zeta_8) = Q. Their physical assignment is the
 TWO-PLACE-PHYSICS dictionary [D]:
@@ -2348,7 +2520,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v37. The fermionizer
+inherited naming clause is not part of Public Canon v38. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -3734,7 +3906,7 @@ F:         10 + 1 Kappa row + 1 compound route = 12,
 live H/O:  27 - 1 = 26.
 ```
 
-Public Canon v37 declares PHOTON-KAPPA-LEMMA [F] at L4 and changes
+Public Canon v38 declares PHOTON-KAPPA-LEMMA [F] at L4 and changes
 PHOTON-WINDOW-PROOF from O to F. The public two-architecture
 `P-PHOTON-KAPPA-LEMMA-1` certificate exhibits one admitted connected
 current with `L=3240` and one ternary filling of support 7993 satisfying

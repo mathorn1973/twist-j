@@ -1,12 +1,34 @@
 # Canon changelog (public series)
 
 
-## Public Canon v37
+## Public Canon v38
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 222 claims; 0 T-LOCK, 119 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
+Registry snapshot: 223 claims; 0 T-LOCK, 120 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v38 carries exactly one item. CM-ALTERNATING-PENCIL [T]
+registers the exact L1 lattice of purely imaginary elements of
+`Z[zeta_5]`, its integral alternating trace-form pencil, the Pfaffian norm
+and Pell classification of its unimodular members, and the relative-norm
+unit action.
+
+Multiplication by `J` moves the pencil by `[[1,-1],[-1,2]]`; it is not a
+scalar similitude with multiplier `phi^-2`. For a fixed nonzero pencil member,
+the determinant-one Pfaffian identity permits only scalar multipliers `+1`
+and `-1`. Unit multiplication realizes only `+1` through the ten roots of
+unity, and conjugation sends each pencil member to its negative. Written exact
+proofs establish T at the frozen scope; the verifier audits the declared
+finite ranges.
+
+
+## Public Canon v37
+
+<!-- BEGIN GENERATED CANON37 COUNTS -->
+Registry snapshot: 222 claims; 0 T-LOCK, 119 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON37 COUNTS -->
 
 Public Canon v37 registers TM-SYM2-SPECTRAL-COHERENCE [T] at L5 from the
 public two-architecture probe P-TM-SYM2-SPECTRAL-COHERENCE-1. Across the
