@@ -124,12 +124,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 118, "D": 41, "C": 24, "F": 12,
+    expected_counts = {"T": 119, "D": 41, "C": 24, "F": 12,
                        "O": 23, "H": 3}
     checks.append((
         "COUNTS",
-        "registry has 221 claims with the current status partition",
-        len(rows) == 221 and counts == expected_counts,
+        "registry has 222 claims with the current status partition",
+        len(rows) == 222 and counts == expected_counts,
     ))
 
     checks.append((
@@ -826,11 +826,12 @@ def run():
     projective = "TM-SYM2-PROJECTIVE-FOURFOLD"
     semilinear = "TM-SYM2-SEMILINEAR-TWOFOLD"
     reversal = "TM-SYM2-REVERSAL-CLOSURE"
+    spectral = "TM-SYM2-SPECTRAL-COHERENCE"
     frozen_owner = "TM-SYM2-MEASURE"
     physical_owner = "TM-SYM2-PHYSICAL-MEASURE"
     selector_gate = "GATE-L1-L5-TM-SYM2-SELECTOR-STREAM"
     born_gate = "GATE-L5-L6-TM-SYM2-BORN-MEASURE"
-    tm_theorems = (projective, semilinear, reversal)
+    tm_theorems = (projective, semilinear, reversal, spectral)
     expected_tm_dependencies = {
         projective: {
             ("DEF-ARCHITECTURE", "REQUIRES"),
@@ -846,6 +847,11 @@ def run():
             ("DEF-ARCHITECTURE", "REQUIRES"),
             (semilinear, "REQUIRES"),
         },
+        spectral: {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+            (projective, "REQUIRES"),
+            (semilinear, "REQUIRES"),
+        },
         physical_owner: {
             ("DEF-ARCHITECTURE", "REQUIRES"),
             ("DEF-ACTION-LAYERS", "REQUIRES"),
@@ -855,6 +861,7 @@ def run():
             (projective, "BOUNDED_BY"),
             (semilinear, "BOUNDED_BY"),
             (reversal, "BOUNDED_BY"),
+            (spectral, "BOUNDED_BY"),
         },
     }
     actual_tm_dependencies = {
@@ -884,15 +891,22 @@ def run():
             "probes/P-TM-SYM2-REVERSAL-CLOSURE-1",
             "b329f3a65f821690e8ab1514b6ab2cc9c307ba05ebcccaf6c0d326bd36dc619e",
         ),
+        spectral: (
+            "probes/P-TM-SYM2-SPECTRAL-COHERENCE-1",
+            "22662135d6e5e6a7cd6729690a98f6c2998bcedd24f8cd696feb5cc16d81e60c",
+        ),
     }
     checks.append((
         "TM-SYM2",
-        "closed action classifications stay T; fired selector and physical successor stay separated",
+        "four closed exact classifications stay T; fired selector and physical successor stay separated",
         all(has_status(index, item, "T") for item in tm_theorems)
         and normative.get(projective, {}).get("item_type") == "THEOREM"
         and normative.get(projective, {}).get("layer") == "MULTI"
         and normative.get(semilinear, {}).get("layer") == "L5"
         and normative.get(reversal, {}).get("layer") == "L5"
+        and normative.get(spectral, {}).get("item_type") == "THEOREM"
+        and normative.get(spectral, {}).get("layer") == "L5"
+        and normative.get(spectral, {}).get("gate_ids") == ""
         and all(
             index.get(item, {}).get("evidence") == path
             and evidence.get(item, {}).get("location") == path
@@ -922,6 +936,10 @@ def run():
             ("t_N = (0,1)", "t_R = (1,0)", "t_NR = (1,1)",
              "NONREALIZABLE", "REALIZABLE-E1", "one orbit of size 48",
              "precomposition closure only", "not a postcomposition"),
+        )
+        and scope_contains_all(
+            index, spectral,
+            ("frozen v16 S_TM carrier", "48-selector class", "L5"),
         )
         and has_status(index, frozen_owner, "F")
         and normative.get(frozen_owner, {}).get("item_type") == "FALSIFIED"
@@ -961,6 +979,7 @@ def run():
         and "reading orientation retained as typed data"
         in gates.get(born_gate, {}).get("decision_condition", "")
         and frozen_owner not in programs
+        and spectral not in programs
         and programs.get(physical_owner, {}).get("program_id") == "MEASURE"
         and programs.get(physical_owner, {}).get("queue_role") == "ROOT"
         and programs.get(physical_owner, {}).get("work_state") == "STOP"

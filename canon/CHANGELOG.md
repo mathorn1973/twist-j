@@ -1,12 +1,27 @@
 # Canon changelog (public series)
 
 
-## Public Canon v36
+## Public Canon v37
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 221 claims; 0 T-LOCK, 118 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
+Registry snapshot: 222 claims; 0 T-LOCK, 119 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v37 registers TM-SYM2-SPECTRAL-COHERENCE [T] at L5 from the
+public two-architecture probe P-TM-SYM2-SPECTRAL-COHERENCE-1. Across the
+complete frozen 48-selector class, all signed transfer operators lie in one
+signed-permutation similarity class, share the exact characteristic
+polynomial `x^2 (x^2 - phi^2) (x^2 - 3 phi^2)`, and the frozen battery does
+not separate the two reading-orientation classes. The exact semilinear and
+two-graph census is registered at the same frozen scope.
+
+TM-SYM2-PHYSICAL-MEASURE remains O with its scope, decision condition, gate,
+and scheduler row unchanged. The new theorem bounds what a future physical
+bridge may demand; it supplies no L5-to-L6 map, normalized physical measure,
+Born reading, preferred selector, or enlarged gauge.
+
+## Public Canon v36
 
 Public Canon v36 registers the exact negative result of
 `P-PHOTON-KAPPA-LEMMA-1` and closes the frozen photon-window route
