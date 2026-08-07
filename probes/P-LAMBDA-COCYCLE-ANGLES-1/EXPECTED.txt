@@ -1,0 +1,32 @@
+PASS B1-01 1-1/rho equals (4g^2-1+4ig)/(4g^2+1)
+PASS B1-02 the Cayley factor is a unit: A^2+B^2=D^2
+PASS B1-03 (A,B,D) is the half-angle triple (V^2-U^2,2UV,V^2+U^2), U=1, V=2g
+PASS B1-04 the conjugate ordinate gives the conjugate factor
+PASS B1-05 1/rho+1/conj(rho) equals 1/(1/4+g^2), the paired mass
+PASS B2-01 (w-1)^2 equals 1/rho^2
+PASS B2-02 1/rho^2 equals -w/(1/4+g^2)
+PASS B2-03 -w^(n-1)/rho^2 equals w^n/(1/4+g^2) for 1<=n<=20
+PASS B3-01 X^(n+1)+X^(n-1)-2X^n equals X^(n-1)(X-1)^2 for 1<=n<=20
+PASS B3-02 the same identity holds for the Cayley factor for 1<=n<=20
+PASS B4-01 |w^n| equals 1 for 1<=n<=20
+PASS B4-02 the ordinate pair contributes 2cos(n alpha)/(1/4+g^2) for 1<=n<=20
+PASS B4-03 the ordinate pair contributes 2/(1/4+g^2) to M=2 lambda_1
+PASS B4-04 M-term minus t_n-term equals |w^n-1|^2/(1/4+g^2) for 1<=n<=20
+PASS B4-05 |w^n-1|^2 equals 2-2cos(n alpha) equals 4 sin^2(n alpha/2) for 1<=n<=20
+PASS B5-01 0<=|w^n-1|^2<=4 on the declared ladder for 1<=n<=20
+PASS B5-02 1/4+g^2 is at least 1/4 on the declared ladder
+PASS B6-01 the free circle point is a unit: E^2+F^2=G^2
+PASS B6-02 D_1 equals 1, so M equals twice the total mass
+PASS B6-03 D_(n+1)+D_(n-1)-2D_n equals 2cos(n theta) for 1<=n<=12
+PASS B6-04 the Fejer second difference uses the same X^(n-1)(X-1)^2 identity
+PASS B7-01 a grid angle m/(4*5^a), m coprime to 5, is annihilated exactly when A>=a
+PASS B7-02 an off-grid angle p/q keeps distance at least 1/q from Z for every n_A
+PASS B7-03 a sum of K nonnegative terms at least delta/2 has a term at least delta/(2K)
+PASS B7-04 a tail below delta/2 leaves head mass at least delta/2 in the finite window
+PASS B7-05 that term forces |w^n-1|^2 at least delta/(8K) since 1/4+g^2>=1/4
+PASS B8-01 M-t_n is a sum of nonnegative terms, so 0<=M-t_n<=2M for every n
+PASS B8-02 no finite set of Li values can contradict the hypothesis
+PASS B8-03 t_(n_A)->M holds exactly when n_A alpha->0 mod 2 pi for every ordinate
+PASS B8-04 a tail separation fires the angle branch at one located ordinate
+PASS B8-05 the grid 2 pi (1/4) Z[1/5] is exactly the set of angles n_A annihilates
+RESULT 31/31 ALL PASS
