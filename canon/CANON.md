@@ -917,7 +917,7 @@ made. A defined maximality claim may therefore coexist with
 
 The inheritance
 
-```text
+```
 D_quadratic factorization  -/->  D_binary or D_linear factorization
 D_binary coherence         -/->  D_quadratic instrument selection
 one D_matter field         -/->  every MatterData field
@@ -1001,7 +1001,7 @@ defined in section 2.
 For the Thue-Morse drive itself, put `t_n = theta_n = s_2(n) mod 2` and,
 for every `L >= 1`,
 
-```text
+```
 n_a(L)  = #{0 <= i <= L - 1 : t_i = a},
 c_ab(L) = #{0 <= i <= L - 2 : (t_i,t_(i+1)) = (a,b)},
 S(L)    = n_0(L) - n_1(L),
@@ -1010,7 +1010,7 @@ d(L)    = 6 c_00(L) - L,
 
 with the empty pair census at `L = 1`. The exact substitution seams imply
 
-```text
+```
 d(2L) = -d(L) + 3S(L) - 6,
 d(4L) =  d(L) - 3S(L).
 ```
@@ -1022,13 +1022,13 @@ counterexample to the unqualified four-step equality is `L = 1`, with
 The signed-affine state `q(L) = (S(L),t_(L-1),t_L)` has exactly the six
 reachable states
 
-```text
+```
 (-1,1,0), (0,0,0), (0,0,1), (0,1,0), (0,1,1), (1,0,1).
 ```
 
 Its complete 96-path four-bit certificate gives the exact cumulative extrema
 
-```text
+```
 E_1 = 2,
 E_2 = 4,
 E_k = 2(floor((k+1)/4) + 2),  k >= 3,
@@ -1037,7 +1037,7 @@ E_k = 2(floor((k+1)/4) + 2),  k >= 3,
 where `E_k = max_(1 <= L <= 2^k) |d(L)|`. The endpoint obeys
 `|d(2^k)| = 2` for odd `k` and `4` for even `k`. Consequently
 
-```text
+```
 d(L) = O(log L),
 d(L)/L^epsilon -> 0 for every fixed epsilon > 0,
 c_00(L)/L -> 1/6,
@@ -1052,7 +1052,7 @@ audit, not the proof of any universal clause.
 The corresponding forward pair-substitution law must retain its two anchoring
 conventions. In pair order `v = (a,b,c,d) = (v_00,v_01,v_10,v_11)`, put
 
-```text
+```
 I_L(v) = (0,a+b,c+d,0),
 I_R(v) = (0,a+c,b+d,0),
 B(v)   = (c,d,a,b),
@@ -1062,7 +1062,7 @@ R_R    = (I_R+B)/2.
 
 On the full four-dimensional carrier the maps and their spectra differ:
 
-```text
+```
 chi_(R_L)(x) = x(x-1)(x-1/2)(x+1/2),
 chi_(R_R)(x) = x(x-1)(x+1/2)^2.
 ```
@@ -1071,14 +1071,14 @@ On the stationary subspace `b = c` their restrictions agree. The common
 forward phase-averaged operator `R` has spectrum `{1,-1/2,0}`. In the
 normalized stationary affine space `b = c` and `a+b+c+d = 1`,
 
-```text
+```
 v_* = (1,2,2,1)/6
 ```
 
 is the unique fixed point, and `R^n v -> v_*` componentwise for every input
 in that affine space. At the fixed point,
 
-```text
+```
 I(v_*) = (0,1/2,1/2,0),
 B(v_*) = (1/3,1/6,1/6,1/3),
 v_*    = (I(v_*)+B(v_*))/2.
@@ -1742,7 +1742,7 @@ The total-ramification census among full quartic cyclotomic fields is exact
 `probes/P-QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS-1`). For
 `K_n = Q(zeta_n)` one has
 
-```text
+```
 phi(n) = 4 iff n in {5,8,10,12},
 Q(zeta_10) = Q(zeta_5).
 ```
@@ -1750,7 +1750,7 @@ Q(zeta_10) = Q(zeta_5).
 After quotienting by equality of fields, the class is exactly
 `{K_5,K_8,K_12}`, with
 
-```text
+```
 disc(K_5)  = 5^3,
 disc(K_8)  = 2^8,
 disc(K_12) = 2^4 3^2.
@@ -1758,7 +1758,7 @@ disc(K_12) = 2^4 3^2.
 
 Using `O_n = Z[zeta_n]`, the exact ramified-prime profiles are
 
-```text
+```
 5 O_5  = p_(5,5)^4,   p_(5,5)=(1-zeta_5),   (e,f,g)=(4,1,1),
 2 O_8  = p_(8,2)^4,   p_(8,2)=(1-zeta_8),   (e,f,g)=(4,1,1),
 2 O_12 = P_(12,2)^2,                         (e,f,g)=(2,2,1),
@@ -1772,7 +1772,7 @@ the two `K_12` controls have `g=1` but `e=f=2` and are not total.
 
 At the total primes the residue fields and their unit groups are
 
-```text
+```
 O_5/p_(5,5) = F_5,   F_5^x = C_4,
 O_8/p_(8,2) = F_2,   F_2^x = C_1.
 ```
@@ -1794,7 +1794,7 @@ A second exact theorem answers a different minimization question
 Galois CM extension `K/Q`, write `G_K=Gal(K/Q)` and let `c_K` be its canonical
 CM complex conjugation. Let `A` be the class, up to `Q`-isomorphism, in which
 
-```text
+```
 G_K is abelian,
 |Hom(G_K,C_2)| = 2, including the trivial character,
 chi(c_K) = +1 for every chi:G_K -> C_2.
@@ -1802,7 +1802,7 @@ chi(c_K) = +1 for every chi:G_K -> C_2.
 
 Then
 
-```text
+```
 absDisc(K) >= 125 for every K in A,
 absDisc(K) = 125 iff K is Q-isomorphic to Q(zeta_5).
 ```
@@ -1820,13 +1820,13 @@ exact order four. Thus `4` divides `[K:Q]`.
 
 For a totally imaginary degree-`n` field, Minkowski gives
 
-```text
+```
 absDisc(K) >= (pi/4)^n n^(2n)/(n!)^2.
 ```
 
 Using `pi>3`, put `M(n)=(3/4)^n n^(2n)/(n!)^2`. The exact checkpoints are
 
-```text
+```
 M(8) = 21233664/1225 > 125,
 M(n+1)/M(n) = (3/4)(1+1/n)^(2n) >= 3.
 ```
@@ -1842,7 +1842,7 @@ square `psi^2`; it is the unique nontrivial quadratic character and is even.
 The conductor-discriminant theorem for abelian extensions gives the
 field-discriminant identity
 
-```text
+```
 absDisc(K) = f(psi)^2 f(epsilon).
 ```
 
@@ -1851,7 +1851,7 @@ nontrivial even primitive quadratic character of conductor below five, so
 `f(psi)>=5` and `f(epsilon)>=5`. The pure 2-primary branch has the stronger
 floor
 
-```text
+```
 f(psi) >= 16,   f(epsilon)=8,
 absDisc(K) >= 16^2 8 = 2048,
 ```
@@ -1864,7 +1864,7 @@ Conversely `Q(zeta_5)` belongs to `A` and has discriminant `5^3=125`.
 
 The two L1 results now supply two independent answers to "why five":
 
-```text
+```
 ramification answer: among full quartic cyclotomic fields, the complete
                      total-ramification locus is {(K_5,5),(K_8,2)};
 minimum answer:      in the abelian Galois CM unique-even-bit class A,
@@ -1884,7 +1884,7 @@ Born measure, physical bit, clock, force, observable, or lift to L2-L6.
 Put `K = Q(j)`, `O_K = Z[j]`, `K+ = Q(sqrt5)`, and
 `O_K+ = Z[phi]`. Define
 
-```text
+```
 lambda_1 = j - j^-1,        lambda_2 = j^2 - j^-2,
 L = {lam in O_K : conj(lam) = -lam}.
 ```
@@ -1894,21 +1894,21 @@ In the basis `1,j,j^2,j^3`,
 `conj(lam) = -lam` is equivalent to `r = 2q` and `s+t = 2q`. Writing
 `v=s-q` gives
 
-```text
+```
 (q,2q,q+v,q-v) = q lambda_1 + v lambda_2.
 ```
 
 Direct reduction gives `lambda_1 phi = lambda_1 + lambda_2`. Since
 `phi^-1 = phi-1` and `Z[phi] = Z + Z phi^-1`, this proves
 
-```text
+```
 L = Z lambda_1 + Z lambda_2 = lambda_1 Z[phi],
 lambda_2 = lambda_1 phi^-1.
 ```
 
 For `lam` in `L`, set
 
-```text
+```
 Omega_lam(h,k) = Tr(lam h conj(k))/5.
 ```
 
@@ -1916,13 +1916,13 @@ Trace invariance under conjugation gives
 `Omega_lam(k,h) = -Omega_lam(h,k)` and
 `Omega_lam(h,h) = 0`. The different and codifferent are
 
-```text
+```
 D_K = (5/(1-j)),            D_K^-1 = ((1-j)/5).
 ```
 
 The identities
 
-```text
+```
 N(lambda_1) = N(1-j) = 5,
 lambda_1 = j(1-j)(1+j+j^2)
 ```
@@ -1933,7 +1933,7 @@ show `(lambda_1) = (1-j)`. The trace-dual criterion therefore makes every
 `lam = lambda_1 eta` with `eta` in `Z[phi]`, multiplication by `eta` in the
 first trace argument gives
 
-```text
+```
 det(Omega_lam) = N_(K/Q)(eta) det(Omega_1)
                = N_(K+/Q)(eta)^2 det(Omega_1).
 ```
@@ -1943,7 +1943,7 @@ The direct Gram matrix below has Pfaffian one, so `det(Omega_1)=1`. Hence
 
 For `Omega_(a,b) = a Omega_1 + b Omega_2`, exact trace reduction gives
 
-```text
+```
 Omega_1 = [[ 0, 1, 0, 0],
            [-1, 0, 1, 0],
            [ 0,-1, 0, 1],
@@ -1959,7 +1959,7 @@ The entries are linear in `a,b`, so the Pfaffian is a binary quadratic
 form. Its exact values at `(1,0)`, `(0,1)`, and `(1,1)` are `1`, `-1`, and
 `-1`. These three values determine all three coefficients and prove
 
-```text
+```
 Pf(Omega_(a,b)) = a^2-a b-b^2
                 = N_(K+/Q)((a-b)+b phi).
 ```
@@ -1974,20 +1974,20 @@ one, the integer trace `delta+delta^-1` lies in `[2,3)` and forces
 `delta-delta^-1` lies in `[0,1)` and again forces `delta=1`, contradicting
 that norm. Thus
 
-```text
+```
 Z[phi]^x = <-1> x <phi>.
 ```
 
 The unimodular locus is therefore the Pell unit orbit. Induction from
 `phi^2=phi+1` gives `phi^n=F_n phi+F_(n-1)` for `n>=1`, and hence
 
-```text
+```
 Pf(Omega_(F_(n+1),F_n)) = (-1)^n.
 ```
 
 For every `u` in `O_K^x`, commutativity gives
 
-```text
+```
 Omega_lam(u h,u k) = Omega_(lam u conj(u))(h,k).
 ```
 
@@ -1997,7 +1997,7 @@ while the relative norm sends each real-subfield unit to its square. Its
 kernel therefore has rank zero and consists of roots of unity. The roots in
 `K` are exactly
 
-```text
+```
 mu_10 = {+j^k,-j^k : 0<=k<5},
 ```
 
@@ -2006,14 +2006,14 @@ and all ten have relative norm one, so this is exactly the kernel.
 Since `J conj(J) = 2-phi = phi^-2`, its pullback action on the parameter
 lattice has the coordinate columns
 
-```text
+```
 lambda_1 phi^-2 = lambda_1-lambda_2,
 lambda_2 phi^-2 = -lambda_1+2 lambda_2.
 ```
 
 Thus, in the ordered basis `lambda_1,lambda_2`, its matrix is
 
-```text
+```
 A_J = [[1,-1],[-1,2]].
 ```
 
@@ -2021,7 +2021,7 @@ It has determinant `1`, trace `3`, characteristic polynomial
 `t^2-3t+1`, and eigenvalues `phi^2` and `phi^-2`. Parameter multiplication
 by `phi` has matrix
 
-```text
+```
 B_phi = [[1,1],[1,0]],       det(B_phi) = -1,
 ```
 
@@ -2029,7 +2029,7 @@ and `A_J = B_phi^-2`.
 
 Finally, for every four by four alternating matrix `W`,
 
-```text
+```
 Pf(M^T W M) = det(M) Pf(W).
 ```
 
@@ -2044,7 +2044,7 @@ the ten roots of unity. Multiplication by `J` instead moves the pencil by
 `A_J`; it does not scale a fixed member by `phi^-2`. Conjugation is not
 multiplication by a unit and satisfies
 
-```text
+```
 C^T Omega_lam C = -Omega_lam.
 ```
 
@@ -2103,7 +2103,7 @@ The central phase of the quadratic lift is exact
 `K = Q(zeta_5)` with `O_K = Z[zeta_5]`, principal
 `zeta_5 = exp(2 pi i/5)`, and
 
-```text
+```
 phi = -(zeta_5^2 + zeta_5^3),       J = phi^-1 zeta_5,
 zeta_10 = -zeta_5^3,                s = zeta_10 / sqrt(phi),
 g_J = diag(s,s^-1),                 A_J = diag(J,1) = s g_J,
@@ -2111,14 +2111,14 @@ g_J = diag(s,s^-1),                 A_J = diag(J,1) = s g_J,
 
 define, for `A in GL_2(C)`,
 
-```text
+```
 H_A(X) = A X A^dagger / |det A|,    X in Herm_2(C),
 S_A(Y) = A Y A^T      / |det A|,    Y in Sym_2(C).
 ```
 
 The principal square root obeys
 
-```text
+```
 s^2 = J,
 s^5 = -phi^(-5/2),
 g_J^5 = -diag(phi^(-5/2),phi^(5/2)),
@@ -2132,14 +2132,14 @@ tick identification.
 
 For every nonzero complex scalar `c`, the normalized actions separate as
 
-```text
+```
 H_(cA) = H_A,                        S_(cA) = (c^2/|c|^2) S_A.
 ```
 
 Writing `X = [[u,w],[conjugate(w),v]]`, the square-root-free J action and
 its fifth power are
 
-```text
+```
 H_(A_J):   (u,v,w) -> (phi^-1 u, phi v, zeta_5 w),
 H_(A_J)^5: (u,v,w) -> (phi^-5 u, phi^5 v, w).
 ```
@@ -2150,7 +2150,7 @@ forgets the scalar and the symmetric slot retains its central phase.
 
 Finally the unit-scalar phase map
 
-```text
+```
 O_K^x -> C^x,        c -> c/conjugate(c)
 ```
 
@@ -2349,7 +2349,7 @@ comparison window, and inference rule.
 The parity law (PARITY-LAW) [T] lives in a formal observable register,
 not under ordinary complex conjugation. Let
 
-```text
+```
 R = A[pi, pi^-1],
 iota_pi(pi) = -pi,
 iota_pi(a) = a  for every a in A,
@@ -2932,7 +2932,7 @@ The marked CM closure of Rung 11 (COLOR-CM-2I-SEMILINEAR-PAIR [T],
 probes/P-CM-2I-QCARRIER-1) is relative to exactly the displayed marked
 integral representative. Put
 
-```text
+```
 K = Q(zeta_5),                    tau(zeta_5) = zeta_5^2,
 sigma = tau^2,                    F = K^sigma = Q(sqrt(5)),
 phi = (1 + sqrt(5))/2,            G = <S,T>,
@@ -2949,14 +2949,14 @@ Field automorphisms act entrywise on matrices and vectors,
 structure is an invertible `nu_B(v) = B tau(v)` satisfying
 `nu_B Pi(g) = Pi(g) nu_B`. Its frozen pair-coordinate equivalence is
 
-```text
+```
 B' = A B tau(A)^-1,       A = diag(r I2,s I2),       r,s in K^x.
 ```
 
 For `gamma in Gal(K/Q)`, marked twist-isomorphism means that there is one
 `P_gamma in GL2(K)` satisfying
 
-```text
+```
 P_gamma gamma(rho(S)) P_gamma^-1 = rho(S),
 P_gamma gamma(rho(T)) P_gamma^-1 = rho(T).
 ```
@@ -3174,7 +3174,7 @@ class, define the signed transfer operator by
 zero elsewhere. Every one of the 1128 unordered selector pairs admits an
 exact similarity witness
 
-```text
+```
 L_t = D P^-1 L_s P D,
 P in {id, N},
 D diagonal with entries in {+1,-1}.
@@ -3183,7 +3183,7 @@ D diagonal with entries in {+1,-1}.
 Thus the 48 operators form one signed-permutation similarity class. Their
 common characteristic polynomial and spectrum are
 
-```text
+```
 det(x I - L_s) = x^2 (x^2 - phi^2) (x^2 - 3 phi^2),
 spec(L_s) = {0, 0, +phi, -phi, +sqrt(3) phi, -sqrt(3) phi}.
 ```
@@ -3331,7 +3331,7 @@ input schema; it is not a counterexample to the theorem.
 The v22 metrology split is definition-only and obeys four binding rules.
 First, let `U_RF` be the L5 class of tuples
 
-```text
+```
 P = (q,a,r,S,A0,{delta_(i,u)},enc_q,w),
 q >= 2,  a >= 1,  r >= 1,  S finite,  empty != A0 subseteq S,
 delta_(i,u): S -> S,  i in {1,...,a},  u in {0,...,q-1},
@@ -3396,7 +3396,7 @@ normalization, L6, or another cross-layer gate.
 Second, METRO-ADMISSIBILITY-DIM [O] is the child on an `N^a`-indexed
 commuting digit-word system, not an additive action. Its input has
 
-```text
+```
 q >= 2,  a >= 2,  r >= 1,  S finite,  empty != A0 subseteq S,
 delta_(i,u): S -> S,  i in {1,...,a},  u in {0,...,q-1},
 W5: S -> Q_(>=0)^r,
@@ -3407,13 +3407,13 @@ digit and padding convention, exact leading-zero behavior, and commuting
 actions between distinct coordinates. The L5 endpoint is the complete raw
 stream
 
-```text
+```
 L5Stream_s(n) = W5(state(s,n)) in Q_(>=0)^r,  n in N^a.
 ```
 
 The L6 endpoint is the tagged exact space
 
-```text
+```
 Y_r = ZERO | PROBABILITY(Delta_r(Q)),
 Normalize(y) = ZERO                         if sum(y) = 0,
                PROBABILITY(y/sum(y))       otherwise,
@@ -3434,7 +3434,7 @@ allowed-start observable quotient, Jordan and terminal sectors, q-adic
 boundary and residue data, and an effective translated-box modulus.
 Soundness, completeness, and decision coherence require
 
-```text
+```
 Adm_direct(P) = d  iff  exists c: Cert_joint(P,c,d),
 ```
 
@@ -3450,7 +3450,7 @@ report.
 Third, let `C_dim` be exactly the subclass of `U_RF` typed by
 METRO-ADMISSIBILITY-DIM [O]. Residual METRO-ADMISSIBILITY [O] owns exactly:
 
-```text
+```
 R1 = U_RF \ C_dim:
      every rank-one finite rational protocol, every higher-rank finite
      rational protocol with noncommuting coordinate actions, and every finite
@@ -3831,7 +3831,7 @@ assumes, or falsifies RH.
 LAMBDA-COCYCLE-BRANCH-COLLAPSE [T]. On the critical line the Cayley factor is
 not merely of modulus one, it is the Cayley-angle unit itself:
 
-```text
+```
 1 - 1/rho = e^(i alpha_gamma),   alpha_gamma = 2 arctan(1/(2 gamma)),
 1/rho^2   = -(1 - 1/rho)/(1/4 + gamma^2).
 ```
@@ -3839,40 +3839,72 @@ not merely of modulus one, it is the Cayley-angle unit itself:
 Applying the single identity `X^(n+1) + X^(n-1) - 2 X^n = X^(n-1)(X-1)^2` to
 the Bombieri-Lagarias representation gives, inside the declared class,
 
-```text
+```
 M - t_n = sum_(gamma>0) 4 sin^2(n alpha_gamma / 2)/(1/4 + gamma^2),
 M       = 2 lambda_1 = sum_(gamma>0) 2/(1/4 + gamma^2).
 ```
 
 Every summand is nonnegative and bounded, so `0 <= M - t_n <= 2 M` holds
-automatically once the class is nonempty. No exact value and no interval
-enclosure of finitely many Li coefficients can contradict membership, at any
-range and at any precision; and a tail separation on an infinite set localizes,
-by convergence of the majorant, to a single ordinate inside an explicit finite
-window. The second-difference falsifier therefore fires only by firing the
-angle falsifier.
+automatically once the class is nonempty. Consequently a finite Li profile
+cannot fire the registered pointwise residual-bound subroute merely by
+violating those bounds. This does not prove that every finite profile obeying
+the bounds is realizable by a cocycle vector, and no general finite-profile
+nonfalsifiability claim is made. A tail separation on an infinite set
+localizes, by convergence of the majorant, to one ordinate inside an explicit
+finite window. The second-difference tail falsifier therefore fires only by
+firing the angle falsifier.
 
 LAMBDA-COCYCLE-GRID-EQUIVALENCE [T]. The grid in that row is not an assumption
 about zeta; it is the point spectrum of the operator. Multiplication by
 `J = 1 + zeta_5^2` is a Haar-preserving automorphism of `O_lambda`, so `U_J`
-permutes the character basis by `y -> J y`. Every character has finite level and
-`J` preserves level, so every orbit is finite, and an orbit of exact level `k`
-has size `ord_(lambda^k)(J)`. Since `J = 2 mod lambda` has order four there, and
-since `e = 4` makes `lambda^(4m)` and `(5^m)` the same ideal,
+permutes the character basis by `y -> J y`. The trivial character `y = 0` is
+fixed and gives the lone orbit of length one. Every nontrivial character has
+an exact positive level `k`, and its orbit size is `ord_(lambda^k)(J)`. Since
+`J = 2 mod lambda` has order four, every such order is divisible by four; the
+unit group has order `4 . 5^(k-1)`, so every nontrivial orbit size is
+`4 . 5^a` for some `a >= 0`. Since `e = 4` makes `lambda^(4m)` and `(5^m)`
+the same ideal, the exact order calculation gives
 
-```text
-ord_(lambda^(4m))(J) = 4 . 5^m,
+```
+ord_(lambda^(4m))(J) = 4 . 5^m.
 ```
 
-so the index sequence `n_A = 4 . 5^A` is exactly the orbit size at level `4A`:
-it is the period of the operator, not a chosen test sequence. A cycle of length
-`d` contributes exactly the `d`-th roots of unity, so `U_J` has pure point
-spectrum whose eigenvalue angles are exactly `2 pi (1/4) Z[1/5]`, every angle
-attained. Conversely, when the Riemann hypothesis holds and every Cayley angle
-lies on that grid, the Cayley-angle measure has all its atoms at eigenvalue
-angles, an explicit vector of finite norm `lambda_1` realizes it, and agreement
-of two initial values with all second differences forces the cocycle identity
-for every `n`. Membership in the class is therefore equivalent to an arithmetic
+Thus the complete cycle-length set is `{1} union {4 . 5^a : a >= 0}`, and
+the index sequence `n_A = 4 . 5^A` is exactly the orbit size at level `4A`:
+it is the period of the operator, not a chosen test sequence. A cycle of
+length `d` contributes exactly the `d`-th roots of unity. The fixed
+length-one orbit contributes only eigenvalue `1`, whose angle is already zero
+in `2 pi (1/4) Z[1/5]`; the nontrivial cycles therefore give pure point
+spectrum with eigenvalue angle set exactly `2 pi (1/4) Z[1/5]`, every angle
+attained.
+
+The annihilation statement used by the tail argument is exact for real angles,
+not only rational controls:
+
+```
+dist(4 . 5^A x, Z) -> 0
+  iff
+x lies in (1/4) Z[1/5] modulo Z.
+```
+
+For the nontrivial direction put `y = 4x`. Choose nearest integers `m_A` and
+write `e_A = 5^A y - m_A`, so `e_A -> 0`. For all sufficiently large `A`,
+
+```
+m_(A+1) - 5 m_A = 5 e_A - e_(A+1)
+```
+
+is an integer of absolute value less than one, hence is zero. Therefore
+`e_(A+1) = 5 e_A` eventually. A sequence satisfying that recurrence can tend
+to zero only if it is eventually zero. Thus `5^A y` is an integer for some
+large `A`, which is exactly `x in (1/4) Z[1/5]` modulo `Z`. The converse is
+immediate.
+
+Conversely, when the Riemann hypothesis holds and every Cayley angle lies on
+that grid, the Cayley-angle measure has all its atoms at eigenvalue angles, an
+explicit vector of finite norm `lambda_1` realizes it, and agreement of two
+initial values with all second differences forces the cocycle identity for
+every `n`. Membership in the class is therefore equivalent to an arithmetic
 condition on the zeros, and the all-vector route closes with it.
 
 The wall is one archimedean wall. Its exact second rung is
@@ -3912,9 +3944,10 @@ frontier row.
   when every nontrivial zero is `rho = 1/(1 - xi)` for a `4 . 5^a`-th root
   of unity `xi`. The hypothesis is fired by one exact arithmetic exclusion
   of a single ordinate from that grid, or by a disproof of the Riemann
-  hypothesis. It is not fired by any finite Li profile, and the
-  second-difference and all-vector routes are the same route, by
-  LAMBDA-COCYCLE-BRANCH-COLLAPSE [T] and
+  hypothesis. The residual-bound theorem excludes only firing from a
+  violation of its pointwise bounds; it makes no general finite-profile
+  nonfalsifiability claim. The second-difference tail and all-vector routes
+  are the same arithmetic route, by LAMBDA-COCYCLE-BRANCH-COLLAPSE [T] and
   LAMBDA-COCYCLE-GRID-EQUIVALENCE [T] in section 16.
 
 COIN-MINIMAL-READ [D] is the adopted L1 dictionary premise that selects
@@ -3949,7 +3982,7 @@ is STOP while a separately reviewed owner definition is absent.
 
 The v36 ledger change is signed term by term:
 
-```text
+```
 claims:    220 + 1 Kappa falsification row = 221,
 T:         118, D: 41, C: 24, H: 3, all unchanged,
 O:         24 - 1 falsified compound route = 23,
@@ -3957,7 +3990,7 @@ F:         10 + 1 Kappa row + 1 compound route = 12,
 live H/O:  27 - 1 = 26.
 ```
 
-Public Canon v38 declares PHOTON-KAPPA-LEMMA [F] at L4 and changes
+Public Canon v36 declares PHOTON-KAPPA-LEMMA [F] at L4 and changes
 PHOTON-WINDOW-PROOF from O to F. The public two-architecture
 `P-PHOTON-KAPPA-LEMMA-1` certificate exhibits one admitted connected
 current with `L=3240` and one ternary filling of support 7993 satisfying
@@ -3985,7 +4018,7 @@ and minimal reproduction because this fold changes `canon/`.
 
 The v35 ledger change is signed term by term:
 
-```text
+```
 claims:    220 unchanged,
 T:         118, C: 24, O: 24, F: 10, all unchanged,
 D:         40 + 1 dictionary retype = 41,
@@ -4010,7 +4043,7 @@ added.
 
 The v34 ledger change is signed term by term:
 
-```text
+```
 claims:    219 + 1 theorem = 220,
 T:         117 + 1 abelian CM discriminant-minimum theorem = 118,
 D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,
@@ -4032,7 +4065,7 @@ measure, or L2-L6 lift, and no live H or O row moves.
 
 The v33 ledger change is signed term by term:
 
-```text
+```
 claims:    218 + 1 theorem = 219,
 T:         116 + 1 quartic cyclotomic total-ramification theorem = 117,
 D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,
@@ -4048,12 +4081,12 @@ blind breaker audit its exact certificates. The fold adds only the complete
 `phi(n)=4` index and field quotient, discriminants, ramification profiles,
 total-prime locus, residue-unit groups, and inherited `J` compatibility. It
 adds no degree-four or broader CM selection, physical-field uniqueness,
-TWO-PLACE-PHYSICS promotion, decoder, measure, or L2-L6 lift, and no live H
-or O row moves.
+TWO-PLACE-PHYSICS promotion, decoder, measure, or L2-L6 lift, and no live H or
+O row moves.
 
 The v32 ledger change is signed term by term:
 
-```text
+```
 claims:    217 + 1 theorem = 218,
 T:         115 + 1 central-lift phase theorem = 116,
 D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,
@@ -4072,7 +4105,7 @@ no live H or O row moves.
 
 The v31 ledger change is signed term by term:
 
-```text
+```
 claims:    216 + 1 theorem = 217,
 T:         114 + 1 marked-CM semilinear-pair theorem = 115,
 D:         40, C: 24, H: 4, O: 24, F: 10, all unchanged,
@@ -4089,7 +4122,7 @@ live H or O row moves, and both adjacent STOP obligations remain unchanged.
 
 The v30 ledger change is signed term by term:
 
-```text
+```
 claims:    216 unchanged,
 statuses:  0 T-LOCK, 114 T, 40 D, 24 C, 4 H, 24 O, 10 F, all unchanged,
 live H/O:  28 unchanged,
@@ -4103,7 +4136,7 @@ the release can carry assets. The v29 gap is recorded in
 
 The v29 ledger change is signed term by term:
 
-```text
+```
 claims:    215 + 1 computation = 216,
 C:         23 + 1 renormalization-return computation = 24,
 T:         114, D: 40, H: 4, O: 24, F: 10, all unchanged,
@@ -4119,7 +4152,7 @@ measure or all-scale law is registered with it.
 
 The v28 ledger change is signed term by term:
 
-```text
+```
 claims:    214 + 1 theorem = 215,
 T:         113 + 1 read-redundancy theorem = 114,
 D:         40, C: 23, H: 4, O: 24, F: 10, all unchanged,
@@ -4147,7 +4180,7 @@ stays O and STOP. No status or count moves except the history.
 
 The v27 ledger change is signed term by term:
 
-```text
+```
 claims:    210 + 2 theorems + 1 hypothesis + 1 obligation = 214,
 T:         111 + 2 exact boost/coin theorems = 113,
 H:         3 + 1 adopted coin premise = 4,
@@ -4184,7 +4217,7 @@ unchanged.
 
 The v26 ledger change is signed term by term:
 
-```text
+```
 claims:    208 + 1 L1 theorem + 1 L5 computation = 210,
 T:         110 + 1 C8 bilinear-shadow theorem = 111,
 C:         22 + 1 reduction-arrow computation = 23,
@@ -4215,7 +4248,7 @@ or SI claim is added.
 
 The v25 ledger change is signed term by term:
 
-```text
+```
 claims:    208 unchanged,
 T:         109 + 1 KERNEL-Z6 theorem = 110,
 O:         24 - 1 closed owner = 23,
@@ -4233,7 +4266,7 @@ completion, or L2-L6 lift is introduced.
 
 The v24 ledger change is signed term by term:
 
-```text
+```
 claims:    206 + 2 L1 theorems = 208,
 T:         107 + 2 = 109,
 live H/O:  27 unchanged,
@@ -4260,7 +4293,7 @@ meaning, or cross-layer closure from a commuting square.
 
 The v23 ledger change is signed term by term:
 
-```text
+```
 live H/O: 26 + 1 KERNEL-Z6 owner = 27,
 claims:    205 + 1 = 206,
 O:         23 + 1 = 24.
@@ -4274,7 +4307,7 @@ status; no candidate clause is promoted.
 
 The v22 ledger change is signed term by term:
 
-```text
+```
 live H/O: 25 - 1 retired KC3 - 1 consumed METRO row
               + 3 typed METRO rows = 26,
 claims:    203 - 1 KC3 - 1 old METRO + 3 split rows
