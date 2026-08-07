@@ -14,29 +14,36 @@ H; its scope is restated as an equivalence and its queue state moves to
 BLOCKED.
 
 LAMBDA-COCYCLE-BRANCH-COLLAPSE [T] records that on the critical line the Cayley
-factor is exactly `e^(i alpha_gamma)`, so the Li second difference obeys
+factor is exactly `e^(i alpha_gamma)`. With
+`t_n = lambda_(n+1) + lambda_(n-1) - 2 lambda_n` and `M = 2 lambda_1`, the Li
+second difference obeys
 `M - t_n = sum 4 sin^2(n alpha_gamma / 2)/(1/4 + gamma^2)` inside the declared
-class. Every summand is nonnegative and bounded, so the bounds hold
-automatically and no finite Li profile can contradict membership at any range
-or precision. A tail separation localizes to one ordinate in an explicit finite
-window, so the second-difference falsifier fires only by firing the angle
-falsifier.
+class and `0 <= M - t_n <= 2 M`. These are necessary pointwise bounds. An exact
+finite violation contradicts membership; finite satisfaction is inconclusive.
+No general finite-profile nonfalsifiability or realization theorem is claimed.
+Failure of the tail limit along `n_A = 4 . 5^A` localizes to one fixed ordinate
+in a finite ordinate window.
 
 LAMBDA-COCYCLE-GRID-EQUIVALENCE [T] records that the registered grid is the
-point spectrum of the operator. Every orbit of `J` on the lambda-adic character
-group is finite, `ord_(lambda^(4m))(J) = 4 . 5^m`, and therefore the index
-sequence `n_A = 4 . 5^A` is exactly the orbit size at level `4A`. The
-eigenvalue angle set is exactly `2 pi (1/4) Z[1/5]`, and the converse
-construction upgrades the hypothesis to an equivalence: a cocycle vector exists
-if and only if the Riemann hypothesis holds and every Cayley angle lies on that
-grid, equivalently every nontrivial zero is `1/(1 - xi)` for a `4 . 5^a`-th
-root of unity.
+point spectrum of the operator. The trivial character `y = 0` is the unique
+orbit of length one. Every nontrivial character has exact positive level, and
+the complete cycle-length set is `{1} union {4 . 5^a : a >= 0}`. More
+precisely, `ord_(lambda^(4m))(J) = 4 . 5^m` for `m >= 1`; `n_0 = 4` occurs at
+level one, while `n_A = 4 . 5^A` occurs at level `4A` only for `A >= 1`. The
+trivial eigenvalue leaves the eigenvalue angle set exactly
+`2 pi (1/4) Z[1/5]`. The required all-real step is the equivalence
+`dist(4 . 5^A x,Z) -> 0` if and only if `x` lies in `(1/4) Z[1/5]` modulo
+`Z`. The converse construction upgrades the hypothesis to an equivalence: a
+cocycle vector exists if and only if the Riemann hypothesis holds and every
+Cayley angle lies on that grid, equivalently every nontrivial zero is
+`1/(1 - xi)` with `xi != 1` and `xi^(4 . 5^a) = 1` for some integer
+`a >= 0`.
 
-Together the two theorems make all three registered falsifier branches of the
-row one branch. The row now fires only by a disproof of the Riemann hypothesis
-or by an exact proof that one nontrivial zero is not `1/(1 - xi)` for a
-`4 . 5^a`-th root of unity; on the critical line the latter is the exclusion of
-one Cayley angle from an explicit dense countable set.
+Together the finite-window localization and the all-real annihilation lemma
+identify the registered tail-limit branch with the angle-grid branch. The
+converse construction separately characterizes the all-vector route by the
+Riemann hypothesis plus the grid. They do not establish any general statement
+about realizability or nonfalsifiability of arbitrary finite Li profiles.
 
 
 ## Public Canon v38

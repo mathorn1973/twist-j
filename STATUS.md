@@ -6,9 +6,9 @@ CANON:          Public Canon v39
 AUTHORITY:      mathorn1973/twist-j main
 CUTOVER:        2026-07-13
 TAG:            canon-v39
-CONTENT_COMMIT: 22744ba3b840d5a47abc12a77e60d25adcb8dd8e
-CANON_SHA256:   06e7cd0ad5ff0260c6eef797979a2df6ae556e4c0fc7cebc9dfa314bc22e2d70
-CANON_BYTES:    184752
+CONTENT_COMMIT: ab17b10412d03bf1cd69791fe22c66252502b2d4
+CANON_SHA256:   698df2212f0bc782de2fb50ff04fb4026d1e276743d6fae7f10607cca770b556
+CANON_BYTES:    187370
 ```
 
 Public Canon v39 is the normative public ledger of TWIST-J. Authority begins

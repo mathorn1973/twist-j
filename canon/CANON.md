@@ -3836,44 +3836,87 @@ not merely of modulus one, it is the Cayley-angle unit itself:
 1/rho^2   = -(1 - 1/rho)/(1/4 + gamma^2).
 ```
 
-Applying the single identity `X^(n+1) + X^(n-1) - 2 X^n = X^(n-1)(X-1)^2` to
-the Bombieri-Lagarias representation gives, inside the declared class,
+Apply the single identity `X^(n+1) + X^(n-1) - 2 X^n = X^(n-1)(X-1)^2` to
+the Bombieri-Lagarias representation. Inside the declared class, write
+`t_n = lambda_(n+1) + lambda_(n-1) - 2 lambda_n`, `M = 2 lambda_1`, and
+`n_A = 4 . 5^A`; then
 
 ```text
 M - t_n = sum_(gamma>0) 4 sin^2(n alpha_gamma / 2)/(1/4 + gamma^2),
 M       = 2 lambda_1 = sum_(gamma>0) 2/(1/4 + gamma^2).
 ```
 
-Every summand is nonnegative and bounded, so `0 <= M - t_n <= 2 M` holds
-automatically once the class is nonempty. No exact value and no interval
-enclosure of finitely many Li coefficients can contradict membership, at any
-range and at any precision; and a tail separation on an infinite set localizes,
-by convergence of the majorant, to a single ordinate inside an explicit finite
-window. The second-difference falsifier therefore fires only by firing the
-angle falsifier.
+Every summand is nonnegative and bounded, so `0 <= M - t_n <= 2 M` is a
+necessary consequence of membership at every `n`. These are pointwise
+necessary bounds only. Through this residual-bound test, a finite family of
+exact Li values or rigorous interval enclosures can contradict membership only
+by proving one of the displayed inequalities false. Satisfying any finite
+family of them has no converse implication: it neither constructs a cocycle
+vector nor proves that the finite profile is realizable. No general
+finite-profile nonfalsifiability or realization theorem is claimed. If
+`M - t_(n_A)` fails to tend to zero, then for some `delta > 0` it stays at
+least `delta` on infinitely many `A`. Convergence of the majorant gives a finite
+ordinate window whose tail is below `delta/2`, and a finite pigeonhole argument
+gives one fixed ordinate in that window for which
+`dist(n_A alpha_gamma/(2 pi),Z)` stays bounded away from zero for infinitely
+many `A`.
 
 LAMBDA-COCYCLE-GRID-EQUIVALENCE [T]. The grid in that row is not an assumption
 about zeta; it is the point spectrum of the operator. Multiplication by
 `J = 1 + zeta_5^2` is a Haar-preserving automorphism of `O_lambda`, so `U_J`
-permutes the character basis by `y -> J y`. Every character has finite level and
-`J` preserves level, so every orbit is finite, and an orbit of exact level `k`
-has size `ord_(lambda^k)(J)`. Since `J = 2 mod lambda` has order four there, and
-since `e = 4` makes `lambda^(4m)` and `(5^m)` the same ideal,
+permutes the character basis by `y -> J y`. The trivial character `y = 0` is
+fixed. It is the unique length-one orbit because `J - 1 = zeta_5^2` is a unit.
+Every nontrivial character has an exact positive level `k`, and its orbit has
+size `ord_(lambda^k)(J)`. The residue of `J` modulo `lambda` has order four, so
+every such order is divisible by four; since
+`|(O/lambda^k)^x| = 4 . 5^(k-1)`, Lagrange's theorem makes every nontrivial
+orbit length `4 . 5^a`. Moreover,
 
 ```text
-ord_(lambda^(4m))(J) = 4 . 5^m,
+ord_(lambda^(4m))(J) = 4 . 5^m,   m >= 1.
 ```
 
-so the index sequence `n_A = 4 . 5^A` is exactly the orbit size at level `4A`:
-it is the period of the operator, not a chosen test sequence. A cycle of length
-`d` contributes exactly the `d`-th roots of unity, so `U_J` has pure point
-spectrum whose eigenvalue angles are exactly `2 pi (1/4) Z[1/5]`, every angle
-attained. Conversely, when the Riemann hypothesis holds and every Cayley angle
-lies on that grid, the Cayley-angle measure has all its atoms at eigenvalue
-angles, an explicit vector of finite norm `lambda_1` realizes it, and agreement
-of two initial values with all second differences forces the cocycle identity
-for every `n`. Membership in the class is therefore equivalent to an arithmetic
-condition on the zeros, and the all-vector route closes with it.
+Thus every `4 . 5^a` occurs: `n_0 = 4` occurs at level one, and
+`n_A = 4 . 5^A` occurs at level `4A` for `A >= 1`. The complete cycle-length
+set is `{1} union {4 . 5^a : a >= 0}`. A cycle of length `d` contributes
+exactly the `d`-th roots of unity. The length-one cycle contributes only
+eigenvalue `1`, whose angle zero already lies in the grid, so `U_J` has pure
+point spectrum with eigenvalue angle set exactly `2 pi (1/4) Z[1/5]`, every
+angle attained.
+
+The tail/grid step is an all-real statement. For `x in R/Z`,
+
+```text
+dist(4 . 5^A x, Z) -> 0
+  if and only if
+x lies in (1/4) Z[1/5] modulo Z.
+```
+
+Put `y = 4x`. Choose nearest integers `m_A` and signed errors
+`e_A = 5^A y - m_A`, so `|e_A| -> 0`. The quantity
+`m_(A+1) - 5m_A = 5e_A - e_(A+1)` is an integer tending to zero, hence it
+vanishes for every sufficiently large `A`. Therefore `e_(A+1) = 5e_A`
+eventually. Since `e_A -> 0`, this forces `e_A = 0` eventually, so `y` lies in
+`Z[1/5]`. The converse is immediate because a sufficiently large power of five
+annihilates the denominator. Combined with the finite-window localization
+above, this proves that failure of the tail limit `t_(n_A) -> M` is exactly the
+angle-grid obstruction.
+
+Conversely, suppose the Riemann hypothesis holds and every Cayley angle lies on
+that grid. Define a symmetric atomic measure `mu` by assigning mass
+`(1/2)/(1/4 + gamma^2)` to each of `+alpha_gamma` and `-alpha_gamma`, with
+multiplicity, and combine masses when atoms coincide. Then
+`mu(R/(2 pi Z)) = lambda_1`, and every atom is an eigenvalue angle. Choose one
+unit eigenvector for each distinct atom and weight it by the square root of the
+combined mass; their orthogonal sum is a vector `v` of squared norm
+`lambda_1`. Put
+`f_n = ||sum_(k=0)^(n-1) U_J^k v||^2`. Then `f_0 = lambda_0 = 0` and
+`f_1 = lambda_1`, while the atomic construction gives
+`f_(n+1) + f_(n-1) - 2f_n = t_n` for every `n >= 1`. Thus the two sequences
+agree identically. Membership in the cocycle class is therefore equivalent to
+RH together with the grid condition, equivalently to every nontrivial zero
+having the form `rho = 1/(1 - xi)` with `xi != 1` and
+`xi^(4 . 5^a) = 1` for some integer `a >= 0`.
 
 The wall is one archimedean wall. Its exact second rung is
 WALL-LI2-RUNG [T], the real-part identity above. The quantum substrate
@@ -3909,12 +3952,19 @@ frontier row.
   `||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n` for every `n >= 1`. Such a
   vector exists exactly when the Riemann hypothesis holds and every Cayley
   angle `2 arctan(1/(2 gamma))` lies in `2 pi (1/4) Z[1/5]`, equivalently
-  when every nontrivial zero is `rho = 1/(1 - xi)` for a `4 . 5^a`-th root
-  of unity `xi`. The hypothesis is fired by one exact arithmetic exclusion
-  of a single ordinate from that grid, or by a disproof of the Riemann
-  hypothesis. It is not fired by any finite Li profile, and the
-  second-difference and all-vector routes are the same route, by
-  LAMBDA-COCYCLE-BRANCH-COLLAPSE [T] and
+  when every nontrivial zero is `rho = 1/(1 - xi)` with `xi != 1` and
+  `xi^(4 . 5^a) = 1` for some integer `a >= 0`. The hypothesis is fired by a
+  disproof of the Riemann hypothesis or by one exact arithmetic exclusion of a
+  nontrivial zero from that form. With
+  `t_n = lambda_(n+1) + lambda_(n-1) - 2 lambda_n`, `M = 2 lambda_1`, and
+  `n_A = 4 . 5^A`, failure of the tail limit `t_(n_A) -> M` localizes to one
+  such off-grid ordinate. The pointwise inequalities
+  `0 <= M - t_n <= 2 M` are necessary only: an exact finite violation
+  contradicts membership, while
+  satisfaction at finitely many indices does not decide the row. No general
+  finite-profile nonfalsifiability or realization theorem is claimed. The tail
+  localization and the all-real tail/grid equivalence are supplied respectively
+  by LAMBDA-COCYCLE-BRANCH-COLLAPSE [T] and
   LAMBDA-COCYCLE-GRID-EQUIVALENCE [T] in section 16.
 
 COIN-MINIMAL-READ [D] is the adopted L1 dictionary premise that selects
@@ -3957,7 +4007,7 @@ F:         10 + 1 Kappa row + 1 compound route = 12,
 live H/O:  27 - 1 = 26.
 ```
 
-Public Canon v38 declares PHOTON-KAPPA-LEMMA [F] at L4 and changes
+Public Canon v36 declares PHOTON-KAPPA-LEMMA [F] at L4 and changes
 PHOTON-WINDOW-PROOF from O to F. The public two-architecture
 `P-PHOTON-KAPPA-LEMMA-1` certificate exhibits one admitted connected
 current with `L=3240` and one ternary filling of support 7993 satisfying
