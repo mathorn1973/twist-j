@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v38
+# TWIST-J Public Canon v39
 
-**Release identity.** Public Canon v38. Normative authority and activation
+**Release identity.** Public Canon v39. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v38 also declares the discrete
+algebraic axiom is J. Public Canon v39 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v38 does not claim
+seed of the two algebraic projections. Public Canon v39 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v38 contains no such
+deriving the architecture from J; Public Canon v39 contains no such
 theorem.
 
 ---
@@ -2520,7 +2520,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v38. The fermionizer
+inherited naming clause is not part of Public Canon v39. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -3828,6 +3828,53 @@ also continues in the moment-functional (Weil positivity) frame and in
 genuinely global constructions. RH remains O; none of these results proves,
 assumes, or falsifies RH.
 
+LAMBDA-COCYCLE-BRANCH-COLLAPSE [T]. On the critical line the Cayley factor is
+not merely of modulus one, it is the Cayley-angle unit itself:
+
+```text
+1 - 1/rho = e^(i alpha_gamma),   alpha_gamma = 2 arctan(1/(2 gamma)),
+1/rho^2   = -(1 - 1/rho)/(1/4 + gamma^2).
+```
+
+Applying the single identity `X^(n+1) + X^(n-1) - 2 X^n = X^(n-1)(X-1)^2` to
+the Bombieri-Lagarias representation gives, inside the declared class,
+
+```text
+M - t_n = sum_(gamma>0) 4 sin^2(n alpha_gamma / 2)/(1/4 + gamma^2),
+M       = 2 lambda_1 = sum_(gamma>0) 2/(1/4 + gamma^2).
+```
+
+Every summand is nonnegative and bounded, so `0 <= M - t_n <= 2 M` holds
+automatically once the class is nonempty. No exact value and no interval
+enclosure of finitely many Li coefficients can contradict membership, at any
+range and at any precision; and a tail separation on an infinite set localizes,
+by convergence of the majorant, to a single ordinate inside an explicit finite
+window. The second-difference falsifier therefore fires only by firing the
+angle falsifier.
+
+LAMBDA-COCYCLE-GRID-EQUIVALENCE [T]. The grid in that row is not an assumption
+about zeta; it is the point spectrum of the operator. Multiplication by
+`J = 1 + zeta_5^2` is a Haar-preserving automorphism of `O_lambda`, so `U_J`
+permutes the character basis by `y -> J y`. Every character has finite level and
+`J` preserves level, so every orbit is finite, and an orbit of exact level `k`
+has size `ord_(lambda^k)(J)`. Since `J = 2 mod lambda` has order four there, and
+since `e = 4` makes `lambda^(4m)` and `(5^m)` the same ideal,
+
+```text
+ord_(lambda^(4m))(J) = 4 . 5^m,
+```
+
+so the index sequence `n_A = 4 . 5^A` is exactly the orbit size at level `4A`:
+it is the period of the operator, not a chosen test sequence. A cycle of length
+`d` contributes exactly the `d`-th roots of unity, so `U_J` has pure point
+spectrum whose eigenvalue angles are exactly `2 pi (1/4) Z[1/5]`, every angle
+attained. Conversely, when the Riemann hypothesis holds and every Cayley angle
+lies on that grid, the Cayley-angle measure has all its atoms at eigenvalue
+angles, an explicit vector of finite norm `lambda_1` realizes it, and agreement
+of two initial values with all second differences forces the cocycle identity
+for every `n`. Membership in the class is therefore equivalent to an arithmetic
+condition on the zeros, and the all-vector route closes with it.
+
 The wall is one archimedean wall. Its exact second rung is
 WALL-LI2-RUNG [T], the real-part identity above. The quantum substrate
 gates remain separate: the Larmor clause and the Schwinger physical
@@ -3859,12 +3906,16 @@ frontier row.
 - LAMBDA-COCYCLE-ANGLES [H]. The compact lambda-adic boundary route remains
   open only in cocycle-vector form: an exact realization would require a
   vector `v in L^2(O_lambda,Haar)` with
-  `||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n` for every `n >= 1`.
-  Necessarily every Cayley angle
-  `2 arctan(1/(2 gamma))` lies in `2 pi (1/4) Z[1/5]`, and the Li second
-  differences approach `2 lambda_1` along `n = 4 . 5^A`. One ordinate
-  proved outside that grid, failure of the stated limit, or any all-vector
-  contradiction in this compact-boundary class fires the hypothesis.
+  `||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n` for every `n >= 1`. Such a
+  vector exists exactly when the Riemann hypothesis holds and every Cayley
+  angle `2 arctan(1/(2 gamma))` lies in `2 pi (1/4) Z[1/5]`, equivalently
+  when every nontrivial zero is `rho = 1/(1 - xi)` for a `4 . 5^a`-th root
+  of unity `xi`. The hypothesis is fired by one exact arithmetic exclusion
+  of a single ordinate from that grid, or by a disproof of the Riemann
+  hypothesis. It is not fired by any finite Li profile, and the
+  second-difference and all-vector routes are the same route, by
+  LAMBDA-COCYCLE-BRANCH-COLLAPSE [T] and
+  LAMBDA-COCYCLE-GRID-EQUIVALENCE [T] in section 16.
 
 COIN-MINIMAL-READ [D] is the adopted L1 dictionary premise that selects
 `beta_1` from the complete integer-admissible pair by the two distinct

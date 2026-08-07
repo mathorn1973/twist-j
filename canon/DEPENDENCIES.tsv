@@ -245,6 +245,8 @@ J-LI-LAMBDA-HAAR-HS-NOGO	J-RAMIFIED-CHORD	REQUIRES	the compact boundary is the l
 LAMBDA-BOUNDARY-HS-KOOPMAN	J-LI-LAMBDA-HAAR-HS-NOGO	REQUIRES	the falsified Hilbert-Schmidt and S2 route is exactly the subroute excluded by the compact-boundary Hilbert-Schmidt theorem
 LAMBDA-COCYCLE-ANGLES	J-LI-LAMBDA-HAAR-HS-NOGO	BOUNDED_BY	the theorem excludes Hilbert-Schmidt and S2 forms but explicitly leaves the all-vector cocycle form as the surviving bounded scope
 LAMBDA-COCYCLE-ANGLES	J-LI-TORAL-HAAR-NOGO	REQUIRES	the compact-boundary cocycle hypothesis is the remaining Haar-Koopman local route after the toral Haar carrier no-go; it does not reopen that excluded carrier
+LAMBDA-COCYCLE-BRANCH-COLLAPSE	LAMBDA-COCYCLE-ANGLES	BOUNDED_BY	the collapse is proved inside the declared cocycle-vector class of that hypothesis and states nothing outside it
+LAMBDA-COCYCLE-GRID-EQUIVALENCE	LAMBDA-COCYCLE-BRANCH-COLLAPSE	REQUIRES	the converse construction uses the residual identity and the second-difference agreement proved by the collapse
 O-R2-K-JUNCTION-PIN	PLENUM-POINT	REQUIRES	the computed junction identity uses the public plenum quantities s_J and phi and verifies their exact K-side arithmetic match
 J-LI-LAMBDA-SHIFT-NOGO	J-RAMIFIED-CHORD	REQUIRES	the scaling carrier is defined by the lambda uniformizer from the public ramified fifth-root chord
 J-LI-LAMBDA-SHIFT-NOGO	J-LI-TORAL-HAAR-NOGO	REQUIRES	the forced Li spectral-measure comparison is inherited from the toral Haar no-go, while the scaling probe supplies the absolutely-continuous shift contradiction

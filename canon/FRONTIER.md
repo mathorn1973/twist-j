@@ -102,8 +102,8 @@ Closed claims are excluded.
 
 ## Enrichment (`ENRICHMENT`)
 
-- LAMBDA-COCYCLE-ANGLES [H]: the compact lambda-adic boundary route remains open only in the cocycle-vector form: there exists v in L^2(O_lambda,Haar) with ||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n for every n >= 1; any such realization forces every Cayley angle 2 arctan(1/(2 gamma)) into 2 pi (1/4) Z[1/5] and forces the Li second differences to approach 2 lambda_1 along n = 4 . 5^A
-  Queue: ROOT; READY; ENRICHMENT.
-  Decision: fires if any single ordinate Cayley angle 2 arctan(1/(2 gamma)) is proved outside 2 pi (1/4) Z[1/5], if the Li second differences are proved not to approach 2 lambda_1 along n = 4 . 5^A, or if another contradiction excludes every cocycle vector in the declared compact-boundary class
+- LAMBDA-COCYCLE-ANGLES [H]: the compact lambda-adic boundary route remains open only in the cocycle-vector form: there exists v in L^2(O_lambda,Haar) with ||sum_(k=0)^(n-1) U_J^k v||^2 = lambda_n for every n >= 1; by LAMBDA-COCYCLE-GRID-EQUIVALENCE such a v exists if and only if RH holds and every Cayley angle 2 arctan(1/(2 gamma)) lies in 2 pi (1/4) Z[1/5], equivalently every nontrivial zero is rho = 1/(1 - xi) for a 4 . 5^a-th root of unity xi
+  Queue: ROOT; BLOCKED; ENRICHMENT.
+  Decision: fires if RH is disproved, or if one nontrivial zero is exactly proved not to be 1/(1 - xi) for a 4 . 5^a-th root of unity xi; for a critical-line zero that is exactly the exclusion of its Cayley angle 2 arctan(1/(2 gamma)) from 2 pi (1/4) Z[1/5]; the second-difference branch and the all-vector class-contradiction branch are proved to coincide with these by LAMBDA-COCYCLE-BRANCH-COLLAPSE and LAMBDA-COCYCLE-GRID-EQUIVALENCE, and no finite Li profile can fire it
 
 Live total: 26.
