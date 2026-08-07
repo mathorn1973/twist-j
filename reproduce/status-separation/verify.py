@@ -1642,14 +1642,17 @@ def run():
         and scope_contains_all(
             index, collapse,
             ("1 - 1/rho = e^(i alpha_gamma)",
-             "0 <= M - t_n <= 2 M holds automatically",
-             "no finite set of exact Li values or interval enclosures",
-             "localizes to one ordinate in an explicit finite window"),
+             "0 <= M - t_n <= 2 M is necessary at every n",
+             "no general finite-profile nonfalsifiability or realization theorem",
+             "a finite ordinate window"),
         )
         and scope_contains_all(
             index, grid,
-            ("every orbit finite",
-             "ord_(lambda^(4m))(J) = 4 . 5^m",
+            ("y = 0 is the unique orbit of length 1",
+             "exact positive level k",
+             "ord_(lambda^(4m))(J) = 4 . 5^m for every m >= 1",
+             "n_0 = 4 occurs at level 1",
+             "dist(4 . 5^A x,Z) -> 0",
              "pure point spectrum with eigenvalue angle set exactly",
              "if and only if RH holds"),
         )
@@ -1666,15 +1669,17 @@ def run():
         and scope_contains_all(
             index, angles,
             ("if and only if RH holds",
-             "rho = 1/(1 - xi) for a 4 . 5^a-th root of unity xi"),
+             "rho = 1/(1 - xi) with xi != 1",
+             "n_A = 4 . 5^A",
+             "no general finite-profile nonfalsifiability or realization theorem"),
         )
         and all(
             phrase.lower() in index[angles]["falsifier"].lower()
             for phrase in (
                 "fires if rh is disproved",
                 "for a critical-line zero that is exactly the exclusion",
-                "proved to coincide with these",
-                "no finite li profile can fire it",
+                "exact finite violation",
+                "finite satisfaction does not decide the row",
             )
         )
     ))
