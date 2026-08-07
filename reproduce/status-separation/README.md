@@ -9,7 +9,7 @@ Canon fold; the theorem/dictionary boundary checks stay structural.
 The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/GATES.tsv`,
 `canon/FRONTIER_PROGRAMS.tsv`, and `canon/CORE.md`, uses the Python standard
-library, and emits deterministic text. Its twenty-three checks cover the current
+library, and emits deterministic text. Its twenty-four checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -41,7 +41,10 @@ D, and E and the dimensional child and residual remain O; and fence the
 all-cursor finite-cylinder theorem from both the narrow fired cut and the
 still-open Route A entropy bridge; and register the failed universal Kappa
 proposition and its conjunctive photon-window parent at F while leaving the
-independent roughening question unregistered.
+independent roughening question unregistered. A final check keeps the two
+lambda-cocycle wall reductions at T on L6 with two-architecture evidence while
+the cocycle-vector hypothesis they bound stays H, unfired, and BLOCKED in the
+enrichment queue.
 
 Run from the repository root:
 
@@ -49,5 +52,5 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 23/23 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 24/24 ALL PASS`,
 exit 0, and empty stderr.

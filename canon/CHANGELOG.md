@@ -1,12 +1,50 @@
 # Canon changelog (public series)
 
 
-## Public Canon v38
+## Public Canon v39
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 223 claims; 0 T-LOCK, 120 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
+Registry snapshot: 225 claims; 0 T-LOCK, 122 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v39 carries two items, both bounding the one live enrichment row
+rather than firing it. LAMBDA-COCYCLE-ANGLES [H] is not fired and keeps status
+H; its scope is restated as an equivalence and its queue state moves to
+BLOCKED.
+
+LAMBDA-COCYCLE-BRANCH-COLLAPSE [T] records that on the critical line the Cayley
+factor is exactly `e^(i alpha_gamma)`, so the Li second difference obeys
+`M - t_n = sum 4 sin^2(n alpha_gamma / 2)/(1/4 + gamma^2)` inside the declared
+class. Every summand is nonnegative and bounded, so the bounds hold
+automatically and no finite Li profile can contradict membership at any range
+or precision. A tail separation localizes to one ordinate in an explicit finite
+window, so the second-difference falsifier fires only by firing the angle
+falsifier.
+
+LAMBDA-COCYCLE-GRID-EQUIVALENCE [T] records that the registered grid is the
+point spectrum of the operator. Every orbit of `J` on the lambda-adic character
+group is finite, `ord_(lambda^(4m))(J) = 4 . 5^m`, and therefore the index
+sequence `n_A = 4 . 5^A` is exactly the orbit size at level `4A`. The
+eigenvalue angle set is exactly `2 pi (1/4) Z[1/5]`, and the converse
+construction upgrades the hypothesis to an equivalence: a cocycle vector exists
+if and only if the Riemann hypothesis holds and every Cayley angle lies on that
+grid, equivalently every nontrivial zero is `1/(1 - xi)` for a `4 . 5^a`-th
+root of unity.
+
+Together the two theorems make all three registered falsifier branches of the
+row one branch. The row now fires only by a disproof of the Riemann hypothesis
+or by an exact proof that one nontrivial zero is not `1/(1 - xi)` for a
+`4 . 5^a`-th root of unity; on the critical line the latter is the exclusion of
+one Cayley angle from an explicit dense countable set.
+
+
+## Public Canon v38
+
+<!-- BEGIN GENERATED CANON38 COUNTS -->
+Registry snapshot: 223 claims; 0 T-LOCK, 120 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON38 COUNTS -->
 
 Public Canon v38 carries exactly one item. CM-ALTERNATING-PENCIL [T]
 registers the exact L1 lattice of purely imaginary elements of

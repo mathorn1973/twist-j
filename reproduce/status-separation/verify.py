@@ -124,12 +124,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 120, "D": 41, "C": 24, "F": 12,
+    expected_counts = {"T": 122, "D": 41, "C": 24, "F": 12,
                        "O": 23, "H": 3}
     checks.append((
         "COUNTS",
-        "registry has 223 claims with the current status partition",
-        len(rows) == 223 and counts == expected_counts,
+        "registry has 225 claims with the current status partition",
+        len(rows) == 225 and counts == expected_counts,
     ))
 
     checks.append((
@@ -1593,6 +1593,90 @@ def run():
         and roughening not in programs
         and has_status(index, "KAPPA-SHAPES", "C")
         and has_status(index, "MONOPOLE-COST", "C")
+    ))
+
+    collapse = "LAMBDA-COCYCLE-BRANCH-COLLAPSE"
+    grid = "LAMBDA-COCYCLE-GRID-EQUIVALENCE"
+    angles = "LAMBDA-COCYCLE-ANGLES"
+    collapse_path = "probes/P-LAMBDA-COCYCLE-ANGLES-1"
+    grid_path = "probes/P-LAMBDA-COCYCLE-ANGLES-2"
+    collapse_digest = (
+        "6fa30375944a0c5ad2ed84705191552442dc1024b4248046a1382f5a0caf7710"
+    )
+    grid_digest = (
+        "d721d7dea495f447f136a30fc310d99fee27b5fa3af7515c62fb662d120486f2"
+    )
+    lambda_dependencies = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] in {collapse, grid}
+    }
+    checks.append((
+        "LAMBDA-COC",
+        "both wall reductions stay T at L6; the cocycle hypothesis stays H and unfired",
+        all(
+            has_status(index, claim, "T")
+            and normative.get(claim, {}).get("item_type") == "THEOREM"
+            and normative.get(claim, {}).get("status") == "T"
+            and normative.get(claim, {}).get("layer") == "L6"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("canon_section")
+            == "16. p = 5 and the wall"
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("hash_mode")
+            == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and claim not in programs
+            for claim in (collapse, grid)
+        )
+        and index.get(collapse, {}).get("evidence") == collapse_path
+        and evidence.get(collapse, {}).get("location") == collapse_path
+        and evidence.get(collapse, {}).get("sha256") == collapse_digest
+        and index.get(grid, {}).get("evidence") == grid_path
+        and evidence.get(grid, {}).get("location") == grid_path
+        and evidence.get(grid, {}).get("sha256") == grid_digest
+        and lambda_dependencies == {
+            (collapse, angles, "BOUNDED_BY"),
+            (grid, collapse, "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, collapse,
+            ("1 - 1/rho = e^(i alpha_gamma)",
+             "0 <= M - t_n <= 2 M holds automatically",
+             "no finite set of exact Li values or interval enclosures",
+             "localizes to one ordinate in an explicit finite window"),
+        )
+        and scope_contains_all(
+            index, grid,
+            ("every orbit finite",
+             "ord_(lambda^(4m))(J) = 4 . 5^m",
+             "pure point spectrum with eigenvalue angle set exactly",
+             "if and only if RH holds"),
+        )
+        and has_status(index, angles, "H")
+        and normative.get(angles, {}).get("item_type") == "HYPOTHESIS"
+        and normative.get(angles, {}).get("layer") == "L6"
+        and programs.get(angles, {}) == {
+            "claim_id": angles, "program_id": "ENRICHMENT",
+            "queue_role": "ROOT", "work_state": "BLOCKED",
+            "work_mode": "ENRICHMENT",
+        }
+        and evidence.get(angles, {}).get("sha256")
+        == "811c41d0d1b1ec00fa1d114385c7915bd648dfea8c0e773ca41c292768156bdc"
+        and scope_contains_all(
+            index, angles,
+            ("if and only if RH holds",
+             "rho = 1/(1 - xi) for a 4 . 5^a-th root of unity xi"),
+        )
+        and all(
+            phrase.lower() in index[angles]["falsifier"].lower()
+            for phrase in (
+                "fires if rh is disproved",
+                "for a critical-line zero that is exactly the exclusion",
+                "proved to coincide with these",
+                "no finite li profile can fire it",
+            )
+        )
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
