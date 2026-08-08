@@ -1,0 +1,40 @@
+PASS C0-01 z^5 = 1
+PASS C0-02 cyclotomic relation
+PASS C0-03 phi^2 = phi + 1
+PASS C0-04 psi = 1 - phi
+PASS C0-05 psi*phi = -1
+PASS C0-06 J*phi = z
+PASS C0-07 mu_10 has ten distinct listed elements
+PASS C0-08 every listed mu_10 element has tenth power 1
+PASS S1-01 u(a,b) has the frozen integer word form
+PASS S1-02 u_1 = -psi
+PASS S1-03 psi*phi = -1 is the first universal basis identity
+PASS S1-04 psi*(-1) = phi-1 is the second universal basis identity
+PASS S1-05 basis identities certify u(a,b) -> u(b,a+b)
+PASS S2-01 all ten landing points are nonzero
+PASS S2-02 A(1) = phi
+PASS S2-03 psi*(-z) = J
+PASS S2-04 A(-z) = 1-J = -z^2
+PASS S2-05 principal angle of -z^2 is -pi/5
+PASS S3-01 A(x) is real exactly for x in {1,-1}
+PASS S3-02 A(-1) = phi^-2 = 2-phi
+PASS S3-03 phi^-1 = phi-1
+PASS S3-04 (2-phi)*phi^2 = 1
+PASS S4-01 exact norm formula holds on complete mu_10
+PASS S4-02 |A(x)|=1 exactly for x in {-z,-z^-1}
+PASS S4-03 (-z)+(-z^-1) = psi
+PASS S4-04 A(-z^-1) = -z^3
+PASS S4-05 principal angle of -z^3 is +pi/5
+PASS S5-01 free landing A(1) = phi
+PASS S5-02 inverse free landing A(-1) = phi^-2
+PASS S5-03 torsion landing A(-z) = -z^2
+PASS S5-04 conjugate torsion landing A(-z^-1) = -z^3
+PASS S5-05 -z^2 has exact order 10
+PASS S5-06 -z^3 has exact order 10
+PASS S5-07 the two torsion landings are conjugate
+PASS S5-08 J*phi=z links the mixed unit back to torsion
+PASS S6-01 -H(1)-2H(-z) reconstructs (-log phi)+(2/5)i*pi
+PASS S6-02 J principal argument coefficient is 2/5
+PASS S6-03 J log-modulus coefficient is -1
+CHECKS 38
+DECISION SEAM-PASS
