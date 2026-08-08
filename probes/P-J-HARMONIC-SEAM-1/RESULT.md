@@ -8,11 +8,11 @@ Date: 2026-08-09
 SEAM-PASS
 ```
 
-**Evidence status: C at this stage.** The accepted local exact audit is one
-x86_64 lane. The written derivation is a theorem candidate, but no public `T`
-status is claimed by this result file. Any promotion requires review, the
-repository-required x86_64/aarch64 byte-identical check, and a separate Canon
-fold.
+**Probe evidence gate: COMPLETE. Canon status: unchanged.** The frozen written
+proof is theorem-grade at the declared L1 scope, the exact local audit passed,
+and the repository-required GitHub x86_64/aarch64 jobs reproduced the same
+committed stdout byte for byte. This result is therefore eligible for a later
+reviewed `T` fold, but this probe PR itself creates no Registry or Canon claim.
 
 ## Frozen scope decided
 
@@ -77,15 +77,19 @@ bridge, or new constant. `LOG-AXES-INDEPENDENCE [T]` and
 ## Reproducibility state
 
 ```text
-pin:            61aa12c2b0e9705c3c0d9fb91fc4cfe6c80697ff
-local lane:     x86_64 PASS
-stdout sha256:  8198dc9c8c7dcc188d04635ec4c365e86dcb4524e28b347f2b2d1da1c943118d
-stderr:         empty
-GitHub x86_64:  pending
-GitHub aarch64: pending
-aggregate check: pending
-Canon fold:     not started
+pin:             61aa12c2b0e9705c3c0d9fb91fc4cfe6c80697ff
+verifier sha256: 9aa0b47f91c8e57c421b900d4578d159537715cca773c404209c20fd1ec71a40
+stdout sha256:   8198dc9c8c7dcc188d04635ec4c365e86dcb4524e28b347f2b2d1da1c943118d
+local x86_64:    PASS, empty stderr
+GitHub x86_64:   PASS, Ubuntu 24.04.4, Python 3.12.13
+GitHub aarch64:  PASS, Ubuntu 24.04.4, Python 3.12.13
+aggregate check: PASS, workflow run 31284728617
+Canon fold:      not started
 ```
 
-The next allowed action is the one-probe pull request. The required GitHub jobs
-must execute this same pinned verifier against the committed `EXPECTED.txt`.
+Both GitHub architecture jobs reported the same verifier and stdout SHA-256 as
+above. Policy, 99 unit tests, Canon check, and ledger check also passed on both
+architectures.
+
+The next boundary is review and merge of this one-probe PR without squash or
+rebase. Any Registry/Canon promotion is a later separate reviewed action.
