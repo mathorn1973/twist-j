@@ -10,7 +10,10 @@ platform: Linux
 architecture: x86_64
 python: 3.13.5
 clean_checkout: yes
-architecture_gate: local x86_64 leg complete; required GitHub x86_64 and aarch64 byte-identical jobs pending
+architecture_gate: local x86_64 leg complete; required GitHub x86_64 and aarch64 byte-identical jobs later passed
+pre_pin_accepted_verifier_executions: 0
+post_pin_nonformal_preflight_executions: 1
+formal_executions: 1
 deterministic_executions: 1
 exit_code: 0
 stdout_sha256: 1f751aa0ce1773a218862eb47d6973884f9079fba9891d92778844207ceae329
@@ -21,8 +24,18 @@ stderr_bytes: 0
 result: 6/6 ALL PASS
 public_lock: issue 314
 
-The executed verifier was byte-checked against the immutable pin before the
-run. A separate notebook-wrapper preflight was excluded from evidence because
-that wrapper injected unrelated Python-startup instrumentation into stderr;
-the pinned verifier itself was unchanged. The formal shell execution recorded
-above used the frozen neutral environment and produced empty stderr.
+## Execution-order disclosure
+
+No execution or import of the accepted `verify.py` occurred before the immutable
+pin commit and remote readback. After that pin, one notebook-wrapper preflight
+was attempted on the unchanged verifier. The wrapper injected unrelated Python
+startup instrumentation into stderr, so that post-pin preflight is excluded
+from evidence and from `deterministic_executions`; it is recorded here rather
+than hidden. The subsequent neutral shell execution above is the formal local
+record and produced empty stderr.
+
+The first PR workflow attempt did not execute the verifier: repository unit
+tests stopped first on the machine-readable RUN schema. Only this run record
+was repaired. The immutable `PREREG.md` and `verify.py` were never amended,
+rebased, force-pushed, or changed. The later public x86_64 and aarch64 changed-
+probe replays matched the committed `EXPECTED.txt` and aggregate `check` passed.
