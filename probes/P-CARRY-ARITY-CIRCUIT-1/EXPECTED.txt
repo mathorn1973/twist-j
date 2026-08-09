@@ -1,0 +1,7 @@
+PASS G01 weight-residue law audited for w=0..255
+PASS G02 full singular counts n=1..12 agree with exact binomial formula
+PASS G03 exhaustive circuit classification n=1..12 selects n=4 only
+PASS G04 P_4={1,2,4,8,15} is one spanning five-circuit
+PASS G05 proof boundaries n<4 and n>=5 audit exactly
+PASS G06 selected cardinality is 5=4+1 after arity selection
+RESULT 6/6 ALL PASS
