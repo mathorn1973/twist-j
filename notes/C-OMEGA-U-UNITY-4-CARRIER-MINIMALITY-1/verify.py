@@ -200,9 +200,9 @@ def main():
     N = madd(M, mscale(-2, I4))
     assert mpow(M, 5) == mscale(2, I4)
     assert order(M, 40) == 20
-    assert mpow(N, 4) != zero(4, 4)
-    assert mpow(N, 5) == zero(4, 4)
-    print("PASS V1 public carrier: ord(M)=20, M^5=2I, N has index 5-bound and J4 length 4")
+    assert mpow(N, 3) != zero(4, 4)
+    assert mpow(N, 4) == zero(4, 4)
+    print("PASS V1 public carrier: ord(M)=20, M^5=2I, N has exact Jordan length 4")
 
     # Universal truncated-polynomial identities in F_5[x]/(x^5).
     r = [2, 1, 0, 0, 0]
