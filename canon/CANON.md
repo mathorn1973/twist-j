@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v39
+# TWIST-J Public Canon v40
 
-**Release identity.** Public Canon v39. Normative authority and activation
+**Release identity.** Public Canon v40. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v39 also declares the discrete
+algebraic axiom is J. Public Canon v40 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v39 does not claim
+seed of the two algebraic projections. Public Canon v40 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v39 contains no such
+deriving the architecture from J; Public Canon v40 contains no such
 theorem.
 
 ---
@@ -135,8 +135,86 @@ independent over the algebraic numbers by Baker. No algebraic
 independence claim is made.
 
 The golden bridge (J-GOLDEN-BRIDGE [T], reproduce/kernel): J phi = j,
-(J - 1)^3 = j, and J^5 phi^5 = 1. Multiplication by J on the integer
-lattice Z^4 in the basis {1, j, j^2, j^3} is the canonical step
+(J - 1)^3 = j, and J^5 phi^5 = 1.
+
+### The harmonic seam
+
+Put `K = Q(j)`, `O_K = Z[j]`, `psi = 1-phi = -phi^-1`, and let
+`F_0=0`, `F_1=1`, `F_(n+1)=F_n+F_(n-1)`. For `n>=1` define
+
+```text
+u_n = F_n phi - F_(n+1),
+H(x) = sum_(n>=1) u_n x^n/n,       x in mu_10.
+```
+
+Since `|psi|=phi^-1<1`, the series converges absolutely on `mu_10` and,
+on the principal archimedean branch,
+
+```text
+u_n = -psi^n
+    = -F_(n+1)-F_n j^2-F_n j^3,
+H(x) = Log(1-psi x).
+```
+
+The first identity holds for every `n`, not just a finite range. Its induction
+starts at `u_1=-psi`; the identities `psi phi=-1` and
+`psi(-1)=phi-1` carry the coefficient pair `(F_n,F_(n+1))` to
+`(F_(n+1),F_(n+2))`.
+
+The complete torsion-axis classification is
+
+```text
+H(x) is real  iff x in {1,-1},
+Re H(x) = 0   iff x in {-j,-j^-1}.
+```
+
+Indeed, `1-psi x` is real exactly when `x=conj(x)`, and the only real
+elements of `mu_10` are `1,-1`. Their positive landings are
+`1-psi=phi` and `1+psi=phi^-2`. For the imaginary axis,
+
+```text
+|1-psi x|^2 = 1+psi^2-psi(x+x^-1),
+```
+
+so unit modulus is equivalent to `x+x^-1=psi`, whose two roots in the
+complete ten-element class are `-j,-j^-1`. The four landing values are
+
+```text
+1-psi       = phi,          1+psi       = phi^-2,
+1-psi(-j)   = -j^2,         1-psi(-j^-1)= -j^3.
+```
+
+The last two have exact order ten. The full arithmetic unit group is
+
+```text
+O_K^x = mu_10 x <phi>.
+```
+
+For a unit `e`, the quotient `e/conj(e)` has every conjugate on the unit
+circle and is therefore a root of unity. Reduction modulo `1-j` places it in
+`mu_5`; after division by its square root in `mu_5`, the remaining unit is
+real. The elementary Pell-unit classification
+`Z[phi]^x={+/- phi^m:m in Z}` then gives the displayed product, with trivial
+intersection between `mu_10` and `<phi>`.
+
+Consequently the distinguished values and reconstruction are
+
+```text
+H(1)  = log phi,
+H(-j) = -i pi/5,
+Log J = -H(1)-2H(-j) = -log phi+2 pi i/5.
+```
+
+These statements form J-HARMONIC-SEAM [T] at L1, evidenced by
+`probes/P-J-HARMONIC-SEAM-1`. They classify one exact contracting integer
+ladder and its four torsion-axis landings. They do not promote
+AXIOM-PROJECTION-DICTIONARY [D] or TWO-PLACE-PHYSICS [D], identify the
+order-two sign in `mu_10` with the separate `zeta_8` read place, strengthen
+BOOST-COUNT-LADDER [D], or add a decoder, measure, observer, force,
+spacetime, SI bridge, new constant, or lift to L2-L6.
+
+Multiplication by J on the integer lattice Z^4 in the basis
+{1, j, j^2, j^3} is the canonical step
 (J-STEP [T], reproduce/kernel):
 
 ```
@@ -2520,7 +2598,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v39. The fermionizer
+inherited naming clause is not part of Public Canon v40. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale

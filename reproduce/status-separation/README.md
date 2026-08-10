@@ -9,7 +9,7 @@ Canon fold; the theorem/dictionary boundary checks stay structural.
 The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/GATES.tsv`,
 `canon/FRONTIER_PROGRAMS.tsv`, and `canon/CORE.md`, uses the Python standard
-library, and emits deterministic text. Its twenty-four checks cover the current
+library, and emits deterministic text. Its twenty-five checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -44,7 +44,9 @@ proposition and its conjunctive photon-window parent at F while leaving the
 independent roughening question unregistered. A final check keeps the two
 lambda-cocycle wall reductions at T on L6 with two-architecture evidence while
 the cocycle-vector hypothesis they bound stays H, unfired, and BLOCKED in the
-enrichment queue.
+enrichment queue. The last check keeps J-HARMONIC-SEAM at exact L1 scope with
+only its two theorem-grade arithmetic dependencies and fences every dictionary,
+place, decoder, physical, SI, constant, and higher-layer reading.
 
 Run from the repository root:
 
@@ -52,5 +54,5 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 24/24 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 25/25 ALL PASS`,
 exit 0, and empty stderr.
