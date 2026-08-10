@@ -1,0 +1,23 @@
+P-MOBIUS-TM-PRIME2-1 exact verifier
+scope=L1 public-probe audit
+N=32768 SYNTH_N=4096 LAMBERT_N=2048
+PASS S1-01 dilation invariance implies p-free Moebius support
+PASS S1-02 p-free primitive support implies dilation invariance
+PASS S2-01 Thue-Morse binary recurrences
+PASS S2-02 mu(2x)=-mu(x) on odd x
+PASS S2-03 unrestricted mu(2x) wording is false at x=2  witness x=2
+PASS S2-04 every even c coefficient vanishes
+PASS S2-05 Moebius inversion reconstructs tau
+PASS S2-06 odd primitive spectrum reconstructs tau
+PASS S3-01 Boolean mixed-difference formula  cases=3321
+PASS S3-02 nonmultiplicativity guard  witness 3,5,15
+PASS S3-03 odd-prime filter
+PASS S3-04 odd-prime-power filter
+PASS S4-01 odd divisor recursion
+PASS S5-01 finite Thue-Morse product coefficients
+PASS S5-02 odd Lambert coefficients equal product minus one
+PASS S6-01 coefficient audit of zeta*C=T
+PASS S6-02 coefficient audit of zeta_odd*C=T_odd
+PASS G-01 parity and size scope guard
+CHECKS 18
+DECISION BRIDGE-PASS
