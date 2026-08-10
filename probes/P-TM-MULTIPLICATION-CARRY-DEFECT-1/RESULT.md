@@ -8,17 +8,17 @@ Date: 2026-08-10
 CARRY-PASS
 ```
 
-**Local proof and audit: PASS. Public two-architecture gate: PENDING. Canon
-status: unchanged.** The frozen written proof is theorem-grade at the declared
-L1 scope and the exact local audit returned 15/15 PASS with empty stderr. The
-probe is not eligible for a public `T` fold until the repository-required
-GitHub x86_64 and aarch64 jobs reproduce the committed `EXPECTED.txt` byte for
-byte and the aggregate `check` passes.
+**Probe evidence gate: COMPLETE. Canon status: unchanged.** The frozen written
+proof is theorem-grade at the declared L1 scope, the exact local audit returned
+15/15 PASS with empty stderr, and the repository-required GitHub x86_64 and
+aarch64 jobs reproduced the same committed `EXPECTED.txt` byte for byte. The
+aggregate two-architecture `check` also passed. The result is therefore
+eligible for a later reviewed `T` fold, but this probe PR itself creates no
+Registry or Canon claim.
 
-## Frozen scope decided locally
+## Frozen scope decided
 
-Within the preregistered L1 scope, subject to final repository review finding no
-proof defect:
+Within the preregistered L1 scope:
 
 ```text
 S1  CANONICAL BINARY MULTIPLICATION CARRY MASS
@@ -81,11 +81,15 @@ PREREG sha256:   df69655203b307c06136357a83afdaec460c331cc9a65553e8cecf76934a98b
 verifier sha256: 2d5ead2b4a506faddb8f86d9740cf4920ac375ec87af515532e19b1ac7ab055d
 stdout sha256:   d10538998b533f2dc0f6a2796024b90368fb225b7edf21b993fd26b14851e2dc
 local x86_64:    PASS, Debian GNU/Linux 13, Python 3.13.5, empty stderr
-GitHub x86_64:   PENDING
-GitHub aarch64:  PENDING
-aggregate check: PENDING
+GitHub x86_64:   PASS, Ubuntu 24.04.4, Python 3.12.13
+GitHub aarch64:  PASS, Ubuntu 24.04.4, Python 3.12.13
+aggregate check: PASS, workflow run 31383719610
 Canon fold:      not started
 ```
 
-The next boundary is the public pull-request two-architecture audit. Any
-Registry or Canon promotion is a later separate reviewed action.
+Both GitHub architecture logs report the same verifier SHA-256 and stdout
+SHA-256 displayed above. Policy, 99 unit tests, Canon check, ledger check, and
+the changed-probe verifier also passed on both architectures.
+
+The next boundary is review and merge of this one-probe PR without squash or
+rebase. Any Registry or Canon promotion is a later separate reviewed action.
