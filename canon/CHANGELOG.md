@@ -1,12 +1,111 @@
 # Canon changelog (public series)
 
 
-## Public Canon v40
+## Public Canon v41
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 226 claims; 0 T-LOCK, 123 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
+Registry snapshot: 227 claims; 0 T-LOCK, 125 T, 41 D, 24 C, 2 H, 23 O, 12 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v41 combines exactly two standalone L1 theorems with one
+registry-hygiene transaction under the combined release authority of issue
+#330. The theorem authority is issues #326, #329, and #331 and merged probe
+PRs #328 and #332; the cleanup authority is issue #327.
+
+MOBIUS-TM-PRIME2-BRIDGE [T] proves the general prime-dilation and
+Moebius-support equivalence and its Thue-Morse specialization: for
+`c_TM=mu*tau_TM`, every even coefficient vanishes and the unique
+odd-supported primitive reconstructs `tau_TM` by divisor sums. The same
+package proves the odd-squarefree Boolean mixed difference, prime and
+prime-power corollaries, odd divisor recursion, Lambert bridge for `|x|<1`,
+and Dirichlet bridge for `Re(s)>1`. The global field scalar `tau=sqrt(J)` is
+kept type-distinct from the alpha-renamed arithmetic function `tau_TM`.
+
+The universal clauses rest on the frozen written proofs. The completed public
+probe is their finite two-architecture audit, with bundle SHA-256
+`94c8338bb78d2836c4bb707ce3dc13ed00b38f423645e17c78d6d3bc07cd501a`.
+At the same argument, the cancelled odd-layer factor `1-2^(-s)` is not the
+neighboring FERMIONIZER factor `1-2^(1-s)`. Its unused identity with the shift
+`Phi_f(s+1)` creates no dependency or physical reading. No pointwise or
+averaged/Cesaro Moebius--Thue--Morse orthogonality, Sarnak-type correlation,
+asymptotic cancellation, RH, zero-location, analytic-continuation, `J`, `p=5`,
+decoder, measure, observer, physical, SI, or L2-L6 conclusion enters the
+theorem.
+
+TM-MULTIPLICATION-CARRY-DEFECT [T] proves that the binary schoolbook-product
+carry mass
+
+```text
+kappa_(2,mul)(a,b)=s_2(a)s_2(b)-s_2(ab)
+```
+
+is the nonnegative, normalization-order-independent count of unit carry
+moves. Its parity is the exact XOR correction to the raw AND parity and gives
+the OR/XOR Thue-Morse multiplicativity defect. Direct Moebius expansion then
+gives the complete eight-state distinct-odd-semiprime shadow table, the
+prime-square even-carry criterion, and the full signed carry-parity field on
+every odd-squarefree divisor Boolean cube. The completed public probe audits
+the written universal proof on both architectures, with bundle SHA-256
+`348e359dd2c2566c7c142ac9f7217bec3dd4ab3e725584e89a477420354e50bf`.
+
+The multiplication theorem repeats the definition `c_TM=mu*tau_TM`,
+rederives its displayed consequences, and is a standalone sibling, not a
+consumer of MOBIUS-TM-PRIME2-BRIDGE. Its
+`kappa_(2,mul)` is distinct from every decoder or photon-worldline `kappa`,
+the finite-vector-space `e_2` carry layer of CARRY-PENTAD, and the
+chronological carry cocycle of RAMIFIED-TM-LIFT. A zero `c_TM` shadow is not
+zero carry, trivial multiplication, vacuum, or absence of arithmetic structure.
+No multiplicativity of `c_TM`, RH, zeta-zero, analytic-continuation, `J`,
+`p=5`, FERMIONIZER, decoder, measure, Born, observer, matter, light, entanglement,
+curvature, physical, SI, or L2-L6 conclusion is added.
+
+In the cleanup transaction, OBSERVER-WRITE-PORT is retired as a category
+error, not closed at T and not fired at F. The declared partial decoder
+already defines terminal `D_clock`, no output-to-`U` edge, and an acyclic
+read-only graph, while no registered nonempty complete admissible class of
+future nontrivial observer-output-to-`U` writeback extensions exists on which
+the wider completion hypothesis could be decided. The fold preserves those
+definitions and the explicit nonclaims of decoder totality, uniqueness, and
+completeness. Any such extension requires its own newly typed architecture
+and separately registered and preregistered claim; registering it would not
+retroactively falsify the declared partial read-only architecture.
+
+The retirement removes the current H row, its evidence and normative rows,
+six outgoing dependency edges, OPEN_WRITEBACK gate, and scheduler row. It
+also removes the later `MINIMAL-READ-DERIVATION -> OBSERVER-WRITE-PORT`
+favored-route dependency. This is not a derivation result:
+MINIMAL-READ-DERIVATION remains O, DECODER_CORE / ROOT / STOP / FORMAL, and
+owner of its unchanged L5-to-L1 OPEN_SELECTION gate. The complete decoder
+class, cover-to-output map, accumulator/equality rule, dependency graph, and
+layer typing remain missing. READ-REDUNDANCY-PRIME-SUPPORT [T] already proves
+that no-feedback alone supplies no multiplicity bound.
+
+SCHEME-DICTIONARY remains O at byte-identical scope. Its silent
+DECODER_CORE / ROOT / READY / FORMAL scheduler row moves to STOP, and its
+authoritative decision condition now records why no computation can start:
+the source-seed domain and normalizations, consumed seed dependencies, named
+measurement scheme, scale and threshold conventions, total map, equality and
+window semantics, source manifests, and complete acyclic dependency graph
+are not public. Failure of one candidate is only STOP. No
+SCHEME-DICTIONARY probe, fit, scheme result, parameter, or mass-reading claim
+is introduced.
+
+The exact combined ledger delta is 226 to 227 claims, T 123 to 125, H 3 to
+2, live H/O 26 to 25, normative items 242 to 243, dependencies 375 to 368,
+evidence rows 226 to 227, architecture-none evidence 42 to 41,
+two-architecture evidence 144 to 146, history events 738 to 741, gates 11 to
+10, and frontier rows 26 to 25. All D, C, O, and F counts, all 22
+reproductions, both five-file public probe bundles, and every other closed
+scientific scope are unchanged.
+
+
+## Public Canon v40
+
+<!-- BEGIN GENERATED CANON40 COUNTS -->
+Registry snapshot: 226 claims; 0 T-LOCK, 123 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON40 COUNTS -->
 
 Public Canon v40 carries exactly one item. J-HARMONIC-SEAM [T] registers the
 L1 theorem that the contracting Fibonacci numerator

@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v40
+# TWIST-J Public Canon v41
 
-**Release identity.** Public Canon v40. Normative authority and activation
+**Release identity.** Public Canon v41. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v40 also declares the discrete
+algebraic axiom is J. Public Canon v41 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v40 does not claim
+seed of the two algebraic projections. Public Canon v41 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v40 contains no such
+deriving the architecture from J; Public Canon v41 contains no such
 theorem.
 
 ---
@@ -409,13 +409,13 @@ quadratic pair, remains in QUADRATIC-DECODER-DATA [O]. No umbrella
 full-decoder completeness claim is registered.
 
 The preceding read-only clause defines only the declared partial interface.
-It does not decide every future admissible completion. OBSERVER-WRITE-PORT
-[H] is the completion hypothesis that every typed L5 observer output is
-terminal and that no such output supplies a write channel into the L1
-autonomous state `U`. It is STOP until the output schema, write-channel
-type, autonomous-state codomain, admissible protocol class, and completed
-dependency graph are public. A typed nontrivial write channel fires it; a
-complete terminality proof closes it positively.
+No registered nonempty complete admissible class of future nontrivial
+observer-output-to-`U` writeback extensions exists, so the clause is not a
+theorem about such extensions. Any such extension requires its own newly
+typed architecture, output schema, write-channel type, autonomous-state
+codomain, protocol class, dependency graph, and separately registered and
+preregistered claim. Registering that new architecture would not
+retroactively falsify the declared partial read-only architecture.
 
 For audit purposes only, `DEF-DECODER-COMPLETION-CONTRACT` defines the
 schema of a submitted decoder-completion candidate. It does not assert
@@ -2598,11 +2598,323 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v40. The fermionizer
+inherited naming clause is not part of Public Canon v41. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
 and Thue-Morse at every scale (TM-BREATH-TOWER) [T].
+
+### MOBIUS-TM-PRIME2-BRIDGE [T]
+
+This subsection is L1 arithmetic only. To avoid a type collision with the
+global field element `tau = sqrt(J)`, write
+
+```text
+tau_TM(n) = (-1)^s_2(n),  n >= 0,
+c_TM      = mu * tau_TM
+```
+
+for the function denoted `tau` in the public probe and its Dirichlet
+convolution with the Moebius function. Arithmetic functions below have domain
+the positive integers; `1` is the constant-one arithmetic function and
+
+```text
+(f*g)(n) = sum_(d|n) f(d)g(n/d),
+D_p f(n) = f(pn).
+```
+
+First, for every prime `p`, every complex-valued arithmetic function `f`, and
+`g = mu*f`,
+
+```text
+D_p f = f
+```
+
+on all positive integers if and only if `g(n)=0` whenever `p|n`. For the
+forward direction write `n=p^a r`, with `a>=1` and `p` not dividing `r`.
+Only divisors with zero or one factor `p` survive under `mu`, so
+
+```text
+g(p^a r) = sum_(e|r) mu(e)
+             [f(p^a r/e)-f(p^(a-1)r/e)] = 0.
+```
+
+Conversely, Moebius inversion gives `f=1*g`. If `g` vanishes on multiples of
+`p`, then
+
+```text
+f(pn) = sum_(d|pn, p not dividing d) g(d)
+      = sum_(d|n,  p not dividing d) g(d) = f(n).
+```
+
+The binary recurrences
+
+```text
+tau_TM(2n)   =  tau_TM(n),
+tau_TM(2n+1) = -tau_TM(n)
+```
+
+therefore imply, by the preceding equivalence at `p=2`,
+
+```text
+c_TM(2n) = 0,  n >= 1.
+```
+
+Since `tau_TM=1*c_TM`,
+
+```text
+tau_TM(n) = sum_(d|n) c_TM(d) = sum_(d|n, d odd) c_TM(d).
+```
+
+Thus `c_TM` is the unique arithmetic function supported on the odd positive
+integers whose divisor sum is `tau_TM`. The identity
+`mu(2x)=-mu(x)` used in the paired proof is restricted to odd `x`; its
+unrestricted form is false already at `x=2`.
+
+For odd squarefree `n=product_(p in P)p`, with `I` the identity operator, the
+surviving divisor cube gives
+
+```text
+c_TM(n) = product_(p|n)(D_p-I)tau_TM(1)
+     = sum_(S subseteq P) (-1)^(|P|-|S|)
+         tau_TM(product_(p in S)p).
+```
+
+This is the top Boolean mixed difference of binary digit parity over the
+prime-divisor cube. It is not a multiplicativity statement: exactly
+`c_TM(3)=2`, `c_TM(5)=2`, and `c_TM(15)=-2`. For every odd prime `p` and
+`k>=1`,
+
+```text
+c_TM(p)   = tau_TM(p)+1 in {0,2},
+c_TM(p^k) = tau_TM(p^k)-tau_TM(p^(k-1)) in {-2,0,2}.
+```
+
+For every positive integer `n`, the odd-step recurrence also gives the exact
+divisor recursion
+
+```text
+sum_(d|2n+1)c_TM(d) = -sum_(d|n)c_TM(d).
+```
+
+For `|x|<1`, put `F_TM(x)=sum_(n>=0)tau_TM(n)x^n`. Splitting even and odd
+indices gives `F_TM(x)=(1-x)F_TM(x^2)`, and iteration with absolute convergence
+gives
+
+```text
+F_TM(x) = product_(j>=0)(1-x^(2^j)).
+```
+
+The bound of `|c_TM(m)|` by the number of positive divisors of `m` makes the
+Lambert rearrangement absolutely convergent for `|x|<1`. The odd-supported
+reconstruction then gives the bridge
+
+```text
+product_(j>=0)(1-x^(2^j))-1
+  = sum_(d>=1, d odd)c_TM(d)x^d/(1-x^d),  |x|<1.
+```
+
+Finally, for `Re(s)>1`, define
+
+```text
+T_TM(s)     = sum_(n>=1) tau_TM(n)n^(-s),
+C_TM(s)     = sum_(n>=1) c_TM(n)n^(-s),
+T_TM,odd(s) = sum_(n odd) tau_TM(n)n^(-s),
+zeta_odd(s) = (1-2^(-s))zeta(s).
+```
+
+The bound `|c_TM(n)|<=sum_(d|n)|mu(d)|<=d(n)` makes the series and their
+rearrangements absolutely convergent in this half-plane. Moebius inversion
+and the prime-2 recurrence give
+
+```text
+T_TM(s) = zeta(s)C_TM(s),
+T_TM(s) = T_TM,odd(s)/(1-2^(-s)),
+zeta_odd(s)C_TM(s) = T_TM,odd(s),
+C_TM(s) = T_TM,odd(s)/zeta_odd(s).
+```
+
+The last division is valid because the absolutely convergent Euler product
+over odd primes makes `zeta_odd(s)` nonzero for `Re(s)>1`.
+
+These six clauses form MOBIUS-TM-PRIME2-BRIDGE [T], evidenced by
+`probes/P-MOBIUS-TM-PRIME2-1`. The written proofs supply the universal
+quantifiers; the two-architecture verifier is an audit of finite instances
+and coefficient identities. Its general parity and size checks are guards,
+not additional theorem clauses. At the same argument, the cancelled factor
+`1-2^(-s)` is not the neighboring FERMIONIZER factor `Phi_f(s)=1-2^(1-s)`.
+The trivial shifted identity `1-2^(-s)=Phi_f(s+1)` is unused and creates no
+dependency on or physical identification with FERMIONIZER,
+LADDER-ALTERNATOR-BASIS, or TM-BREATH-TOWER, and supplies no matter or light
+reading.
+
+No RH or zero-location result, Nyman--Beurling or Baez--Duarte completeness,
+analytic continuation outside the displayed domains, `J` coupling, `p=5`
+selection, decoder, Born, observer, force, spacetime, SI, physical vacuum or
+other physical interpretation, pointwise or averaged/Cesaro
+Moebius--Thue--Morse orthogonality, Sarnak-type correlation, asymptotic
+cancellation such as `sum_(n<=N)mu(n)tau_TM(n)=o(N)`, multiplicativity of
+`c_TM`, or lift to L2--L6 is asserted.
+
+### TM-MULTIPLICATION-CARRY-DEFECT [T]
+
+This is a second, logically standalone L1 theorem. It reuses the locally
+typed arithmetic functions `tau_TM(n)=(-1)^s_2(n)` and
+`c_TM=mu*tau_TM`, but does not import MOBIUS-TM-PRIME2-BRIDGE as a premise.
+To distinguish ordinary integer-multiplication carries from every other
+Canon use of `kappa`, write `kappa_(2,mul)` for the quantity called `kappa_2`
+in the public probe.
+
+For positive integers
+
+```text
+a = sum_i a_i 2^i,  b = sum_j b_j 2^j,
+a_i,b_j in {0,1},
+```
+
+ordinary schoolbook multiplication has raw column multiplicities
+
+```text
+r_k = sum_(i+j=k)a_i b_j,
+ab = sum_k r_k 2^k,
+sum_k r_k = s_2(a)s_2(b).
+```
+
+Set `q_(-1)=0`, put `r_k=0` after the last raw column, and iterate until the
+carry vanishes:
+
+```text
+u_k = r_k+q_(k-1),
+z_k = u_k mod 2,
+q_k = (u_k-z_k)/2.
+```
+
+The `z_k` are the unique binary digits of `ab`. Summing
+`r_k+q_(k-1)=z_k+2q_k` through the final carry gives
+
+```text
+kappa_(2,mul)(a,b) := sum_k q_k
+  = s_2(a)s_2(b)-s_2(ab) >= 0.
+```
+
+Equivalently, each unit normalization move `2*2^k -> 2^(k+1)` lowers the
+coefficient mass by one. Every complete forward normalization has the same
+unique binary endpoint, so `kappa_(2,mul)` is its normalization-order-
+independent number of unit moves. It is not an algorithm-dependent count of
+grouped carry events.
+
+Now put
+
+```text
+P = s_2(a) mod 2,             Q = s_2(b) mod 2,
+K = kappa_(2,mul)(a,b) mod 2, R = s_2(ab) mod 2.
+```
+
+Reduction of the carry-mass identity modulo two and the Boolean identity
+`(P AND Q) XOR P XOR Q = P OR Q` give
+
+```text
+R = (P AND Q) XOR K,
+tau_TM(ab)tau_TM(a)tau_TM(b) = (-1)^((P OR Q) XOR K).
+```
+
+Thus `tau_TM` is multiplicative at the pair `(a,b)` exactly when
+`K=P OR Q`.
+
+For distinct odd primes `p,q`, direct expansion of `c_TM=mu*tau_TM` gives
+
+```text
+c_TM(pq) = tau_TM(pq)-tau_TM(p)-tau_TM(q)-1.
+```
+
+With `P=s_2(p) mod 2`, `Q=s_2(q) mod 2`, and
+`K=kappa_(2,mul)(p,q) mod 2`, the preceding sign law yields the complete
+abstract table
+
+```text
+P Q K | c_TM(pq)
+0 0 0 | -2
+0 0 1 | -4
+0 1 0 |  0
+0 1 1 | -2
+1 0 0 |  0
+1 0 1 | -2
+1 1 0 |  0
+1 1 1 |  2
+```
+
+Therefore
+
+```text
+c_TM(pq) in {-4,-2,0,2},
+c_TM(pq)=0 iff K=0 and (P OR Q)=1.
+```
+
+The table classifies the Boolean states; it does not assert that every state
+is realized by an odd-prime pair. A zero shadow is not zero carry:
+
+```text
+kappa_(2,mul)(3,11)=4, c_TM(33)=0;
+kappa_(2,mul)(7,17)=0, c_TM(119)=0;
+kappa_(2,mul)(3,113)=3, c_TM(339)=-4.
+```
+
+For every prime `p`, only the divisors `1,p` survive in the convolution at
+`p^2`, hence
+
+```text
+c_TM(p^2)=tau_TM(p^2)-tau_TM(p).
+```
+
+The parity law at `a=b=p` then proves
+
+```text
+c_TM(p^2)=0 iff kappa_(2,mul)(p,p) is even.
+```
+
+Finally let `n=product_(i=1)^m p_i`, `m>=1`, be odd and squarefree. For every
+subset `S` of `{1,...,m}`, define
+
+```text
+P_i          = s_2(p_i) mod 2,
+n_S          = product_(i in S)p_i,
+A_S          = product_(i in S)s_2(p_i),
+Delta_mul(S) = A_S-s_2(n_S),
+K_S          = Delta_mul(S) mod 2,
+```
+
+with `n_empty=A_empty=1`, `Delta_mul(empty)=0`, and the empty AND equal to
+one. The raw multiproduct has coefficient mass `A_S`; the same unit-move
+argument proves `Delta_mul(S)>=0` and
+
+```text
+s_2(n_S) mod 2 = (AND_(i in S)P_i) XOR K_S.
+```
+
+Expanding every squarefree divisor directly in `c_TM=mu*tau_TM`, with `S`
+the support of `n/d` and hence `mu(d)=(-1)^(m-|S|)`, therefore gives the
+complete carry-parity field on the divisor Boolean cube:
+
+```text
+c_TM(n) = sum_(S subseteq {1,...,m}) (-1)^(m-|S|)
+            (-1)^((AND_(i in S)P_i) XOR K_S).
+```
+
+These five clauses form TM-MULTIPLICATION-CARRY-DEFECT [T], evidenced by
+`probes/P-TM-MULTIPLICATION-CARRY-DEFECT-1`. The written proof carries the
+universal quantifiers; the two-architecture verifier audits exact finite
+instances and the complete three-bit table.
+
+Here `kappa_(2,mul)` is distinct from decoder-seed and photon-worldline uses
+of `kappa`, from the finite-vector-space `e_2` carry layer of CARRY-PENTAD,
+and from the chronological `nu_2(n+1)` carry cocycle of RAMIFIED-TM-LIFT. No
+multiplicativity of `c_TM`, RH or zero-location result, Nyman--Beurling or
+Baez--Duarte completeness, analytic continuation, `J` coupling, `p=5`
+selection, FERMIONIZER dependency, decoder, measure, Born, observer, force,
+spacetime, SI, physical vacuum, matter, light, entanglement, curvature,
+physical interaction or other physical interpretation, or lift to L2--L6 is
+asserted. In particular, `c_TM=0` means neither zero carries nor trivial
+multiplication.
 
 ## 10. Relativity as counting
 
@@ -4463,7 +4775,10 @@ COSMOLOGY
                              trace-Gram dictionary is authorized
 COLOR
   ALPHA-S-RUNNING            the running above the 3/4 seed
-  SCHEME-DICTIONARY          exact seeds to measured couplings
+  SCHEME-DICTIONARY          exact seeds to measured couplings; source-seed
+                             domain, named scheme, scale and threshold,
+                             total map, source manifests, and dependency
+                             graph are STOP
   GENERATIONS-L3             the generation structure at the L3 frontier
 PLENUM AND KERNEL
 
@@ -4492,8 +4807,6 @@ MATTER
 OBSERVER
   MINIMAL-READ-DERIVATION    decide whether a complete typed decoder forces
                              the beta_1 minimum read; L5-to-L1 gate is STOP
-  OBSERVER-WRITE-PORT        typed L5-output to L1-state completion
-                             hypothesis; schema and dependency graph are STOP
 EMPIRICAL HORIZON
   DESI DR3 (w = -14/15); MOLLER (sin^2 theta_W); future shadow
   measurements after a public inference rule; CMB-S4 (the tilt)

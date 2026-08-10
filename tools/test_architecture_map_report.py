@@ -24,28 +24,28 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 226)
+        self.assertEqual(self.report.claims, 227)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 24, "D": 41, "F": 12, "H": 3, "O": 23, "T": 123},
+            {"C": 24, "D": 41, "F": 12, "H": 2, "O": 23, "T": 125},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 42,
+                "none": 41,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 144,
+                "two-architecture": 146,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 176)
+        self.assertEqual(len(self.report.direct_architecture_requires), 175)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 195
+            len(self.report.transitive_architecture_dependents), 194
         )
-        self.assertEqual(len(self.report.dependency_terminals), 10)
+        self.assertEqual(len(self.report.dependency_terminals), 12)
         self.assertNotIn(
             "KERNEL-Z6-SYNCHRONIZATION",
             self.report.direct_architecture_requires,
@@ -73,6 +73,14 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertIn(
             "MINIMAL-READ-DERIVATION",
             self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "OBSERVER-WRITE-PORT",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "OBSERVER-WRITE-PORT",
+            self.report.transitive_architecture_dependents,
         )
         self.assertIn(
             "TM-SYM2-SPECTRAL-COHERENCE",
@@ -129,6 +137,29 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertNotIn(
             "J-HARMONIC-SEAM",
             self.report.transitive_architecture_dependents,
+        )
+        self.assertNotIn(
+            "MOBIUS-TM-PRIME2-BRIDGE",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "MOBIUS-TM-PRIME2-BRIDGE",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertIn(
+            "MOBIUS-TM-PRIME2-BRIDGE", self.report.dependency_terminals
+        )
+        self.assertNotIn(
+            "TM-MULTIPLICATION-CARRY-DEFECT",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "TM-MULTIPLICATION-CARRY-DEFECT",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertIn(
+            "TM-MULTIPLICATION-CARRY-DEFECT",
+            self.report.dependency_terminals,
         )
         for claim in (
             "DRIFT-IS-THE-READ",

@@ -22,8 +22,8 @@ Closed claims are excluded.
   Queue: ROOT; STOP; FORMAL.
   Decision: STOP until the coefficient ring, effective carrier, common total domain, orbit-to-amplitude bridge, Gram, dagger, transpose, QCarrier equality, Q, effects, Born pairing, MatterData schema, write map, and complete dependency graph are public; closes positively only when exact factor maps through Q produce every frozen D_matter field with exact normalization and an acyclic complete dependency graph; closes negatively if the action is ill typed, an included field is not constant on Q-fibers, two states distinguished by the typed D_matter action have equal Q, normalization fails, or an unregistered input is required
 - SCHEME-DICTIONARY [O]: the scheme dictionary between exact seeds and measured couplings
-  Queue: ROOT; READY; FORMAL.
-  Decision: closes positively by an exact dictionary between the seed normalization and a named measurement scheme; closes negatively if any dictionary requires a new free dimensionless parameter
+  Queue: ROOT; STOP; FORMAL.
+  Decision: STOP until the exact source-seed domain and normalizations, every consumed seed dependency, a named measurement scheme, scale and threshold conventions, a total map with equality and window semantics, source manifests, and the complete acyclic dependency graph are public; failure of one candidate is STOP; closes positively only by an exact dictionary at that frozen scope requiring no new free dimensionless parameter; closes negatively only if every admissible dictionary requires a new free dimensionless parameter
 - DRESS-CROSSCOUNT [O]: the integer crossing count per observable
   Queue: FOLLOWUP; BLOCKED; FORMAL.
   Decision: closes positively when the integer crossing count per observable is derived; until then the form decision is armed: an exact witness departing from 72 alpha^4 (about 0.204 ppm, labeled) fires the exponential reading
@@ -36,9 +36,6 @@ Closed claims are excluded.
 - METRO-EDGE-SCALE [O]: the canonical selector on the commutator phi ladder and the SI clause
   Queue: FOLLOWUP; BLOCKED; FORMAL.
   Decision: closes by deriving the canonical selector on the commutator phi ladder (the kinetic coefficient and dressing insertion routes) and the SI clause over the single m_e bridge; closes negatively if two inequivalent selectors survive every named gate, so no canonical selector exists
-- OBSERVER-WRITE-PORT [H]: every output of the completed typed L5 observer interface is terminal and no admissible output supplies a nontrivial write channel into the autonomous L1 state U, relative to a public output schema, write-channel type, autonomous-state codomain, protocol class, and complete dependency graph
-  Queue: FOLLOWUP; STOP; FORMAL.
-  Decision: fires when a completed typed observer construction supplies a nontrivial L5-output-to-L1-state write channel; closes positively when the complete typed dependency graph proves every output terminal; STOP while the schema, write-channel type, codomain, protocol class, or graph is incomplete
 - SQRT-PHI-TIME-GRAVITY [O]: the compound bridge from the two-branch L1 SQRT-PHI-DIGIT-LIFT sequence into the declared decoder clock and a registered gravity source/readout channel, including either a canonical sign-branch selector or a proof that the complete readout is sign invariant; no SI scale is included
   Queue: FOLLOWUP; STOP; FORMAL.
   Decision: STOP until the source domain, branch equivalence or selector, pre-update versus post-update convention, Y-to-D_clock map, gravity source/readout codomain, equality, and dependencies are frozen; closes positively only when an exact total bridge on the declared domain is compatible with SQRT-PHI-DIGIT-LIFT, METRO-TICK, and GRAVITY-BRIDGE-LAW; closes negatively if the frozen bridge class is empty or every admissible bridge violates a registered input; any SI claim remains bounded by METRO-EDGE-SCALE
@@ -106,4 +103,4 @@ Closed claims are excluded.
   Queue: ROOT; BLOCKED; ENRICHMENT.
   Decision: fires if RH is disproved, or if one nontrivial zero is exactly proved not to be 1/(1 - xi) with xi != 1 and xi^(4 . 5^a) = 1 for any integer a >= 0; for a critical-line zero that is exactly the exclusion of its Cayley angle 2 arctan(1/(2 gamma)) from 2 pi (1/4) Z[1/5]; failure of the tail limit t_(n_A) -> M localizes to such an off-grid ordinate by LAMBDA-COCYCLE-BRANCH-COLLAPSE together with the all-real annihilation lemma in LAMBDA-COCYCLE-GRID-EQUIVALENCE; within the pointwise residual-bound test, an exact finite violation of 0 <= M - t_n <= 2 M contradicts membership, while finite satisfaction does not decide the row; no claim is made that these bounds classify every possible finite-profile obstruction
 
-Live total: 26.
+Live total: 25.

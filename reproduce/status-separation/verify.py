@@ -124,12 +124,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 123, "D": 41, "C": 24, "F": 12,
-                       "O": 23, "H": 3}
+    expected_counts = {"T": 125, "D": 41, "C": 24, "F": 12,
+                       "O": 23, "H": 2}
     checks.append((
         "COUNTS",
-        "registry has 226 claims with the current status partition",
-        len(rows) == 226 and counts == expected_counts,
+        "registry has 227 claims with the current status partition",
+        len(rows) == 227 and counts == expected_counts,
     ))
 
     checks.append((
@@ -234,6 +234,7 @@ def run():
     coin_selector = "COIN-SELECTION-CONDITIONAL"
     coin_premise = "COIN-MINIMAL-READ"
     coin_derivation = "MINIMAL-READ-DERIVATION"
+    retired_observer = "OBSERVER-WRITE-PORT"
     coin_gate = "GATE-L5-L1-MINIMAL-READ"
     boost_path = "probes/P-BOOST-COHERENCE-1"
     boost_digest = (
@@ -255,7 +256,6 @@ def run():
             ("DEF-ARCHITECTURE", "REQUIRES"),
             ("DEF-ACTION-LAYERS", "REQUIRES"),
             (coin_selector, "REQUIRES"),
-            ("OBSERVER-WRITE-PORT", "REQUIRES"),
         },
     }
     actual_boost_dependencies = {
@@ -267,7 +267,7 @@ def run():
     }
     checks.append((
         "BOOST",
-        "exact drift and selector ranking stay T; MINIMAL-READ is D with derivation O",
+        "exact drift and selector ranking stay T; retired observer no longer blocks derivation O",
         has_status(index, drift, "T")
         and has_status(index, coin_selector, "T")
         and has_status(index, coin_premise, "D")
@@ -359,7 +359,19 @@ def run():
         and programs.get(coin_derivation, {}).get("program_id") == "DECODER_CORE"
         and programs.get(coin_derivation, {}).get("queue_role") == "ROOT"
         and programs.get(coin_derivation, {}).get("work_state") == "STOP"
-        and programs.get(coin_derivation, {}).get("work_mode") == "FORMAL",
+        and programs.get(coin_derivation, {}).get("work_mode") == "FORMAL"
+        and retired_observer not in index
+        and retired_observer not in normative
+        and retired_observer not in evidence
+        and retired_observer not in programs
+        and all(
+            retired_observer not in (row["item_id"], row["depends_on"])
+            for row in dependencies
+        )
+        and all(
+            row["owner_item_id"] != retired_observer
+            for row in gates.values()
+        ),
     ))
 
     checks.append((
@@ -369,6 +381,49 @@ def run():
         and has_status(index, "FORCE-AS-CURVATURE", "D")
         and scope_lacks(index, "FORCE-WEYL-HOLONOMY",
                         ("force", "curvature", "gravity", "electromagnetism")),
+    ))
+
+    scheme = "SCHEME-DICTIONARY"
+    scheme_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == scheme
+    }
+    checks.append((
+        "SCHEME",
+        "scheme dictionary stays O and is explicitly STOP before definition",
+        has_status(index, scheme, "O")
+        and normative.get(scheme, {}).get("item_type") == "OBLIGATION"
+        and normative.get(scheme, {}).get("status") == "O"
+        and normative.get(scheme, {}).get("layer") == "NOT_APPLICABLE"
+        and normative.get(scheme, {}).get("gate_ids") == ""
+        and evidence.get(scheme, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(scheme, {}).get("location") == "inline"
+        and evidence.get(scheme, {}).get("sha256")
+        == scope_sha256(index, scheme)
+        and evidence.get(scheme, {}).get("architecture_requirement") == "none"
+        and scheme_dependencies == {("DEF-ARCHITECTURE", "REQUIRES")}
+        and all(
+            phrase.lower() in index[scheme]["falsifier"].lower()
+            for phrase in (
+                "STOP until the exact source-seed domain",
+                "named measurement scheme",
+                "scale and threshold conventions",
+                "total map with equality and window semantics",
+                "source manifests",
+                "complete acyclic dependency graph",
+                "failure of one candidate is STOP",
+                "exact dictionary at that frozen scope requiring no new free dimensionless parameter",
+                "every admissible dictionary requires a new free dimensionless parameter",
+            )
+        )
+        and programs.get(scheme, {}) == {
+            "claim_id": scheme,
+            "program_id": "DECODER_CORE",
+            "queue_role": "ROOT",
+            "work_state": "STOP",
+            "work_mode": "FORMAL",
+        }
+        and all(row["owner_item_id"] != scheme for row in gates.values())
     ))
 
     checks.append((
@@ -1743,6 +1798,149 @@ def run():
         and has_status(index, "LOG-AXES-INDEPENDENCE", "T")
         and has_status(index, "QUADRATIC-DECODER-DATA", "O")
         and seam not in programs,
+    ))
+
+    mobius = "MOBIUS-TM-PRIME2-BRIDGE"
+    mobius_path = "probes/P-MOBIUS-TM-PRIME2-1"
+    mobius_digest = (
+        "94c8338bb78d2836c4bb707ce3dc13ed00b38f423645e17c78d6d3bc07cd501a"
+    )
+    mobius_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == mobius
+    }
+    checks.append((
+        "MOBIUS-TM",
+        "prime-2 bridge stays exact L1 arithmetic with no fermionizer or physical lift",
+        has_status(index, mobius, "T")
+        and normative.get(mobius, {}).get("item_type") == "THEOREM"
+        and normative.get(mobius, {}).get("status") == "T"
+        and normative.get(mobius, {}).get("layer") == "L1"
+        and normative.get(mobius, {}).get("gate_ids") == ""
+        and index.get(mobius, {}).get("canon_section")
+        == "9. The photon and the electron"
+        and index.get(mobius, {}).get("evidence") == mobius_path
+        and evidence.get(mobius, {}).get("evidence_id")
+        == "EV-MOBIUS-TM-PRIME2-BRIDGE"
+        and evidence.get(mobius, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(mobius, {}).get("location") == mobius_path
+        and evidence.get(mobius, {}).get("sha256") == mobius_digest
+        and evidence.get(mobius, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(mobius, {}).get("architecture_requirement")
+        == "two-architecture"
+        and mobius_dependencies == set()
+        and all(row["depends_on"] != mobius for row in dependencies)
+        and scope_contains_all(
+            index, mobius,
+            ("D_p f=f on all positive integers iff",
+             "c_TM(2n)=0 for every n>=1",
+             "unique odd-supported arithmetic function",
+             "with I the identity operator",
+             "c_TM(n)=product_(p|n)(D_p-I)tau_TM(1)",
+             "c_TM(15)=-2",
+             "product_(j>=0)(1-x^(2^j))-1",
+             "zeta_odd(s)C_TM(s)=T_TM,odd(s)",
+             "tau=sqrt(J)",
+             "mu(2x)=-mu(x) restricted to odd x",
+             "no multiplicativity or Euler-product claim",
+             "not equal to FERMIONIZER's Phi_f(s)=1-2^(1-s) at the same argument",
+             "although it equals Phi_f(s+1)",
+             "unused shift creating no dependency or physical identification",
+             "no RH, zeta-zero, Nyman-Beurling, Baez-Duarte",
+             "pointwise or averaged/Cesaro Moebius-Thue-Morse orthogonality",
+             "Sarnak-type correlation",
+             "asymptotic cancellation",
+             "physical-vacuum",
+             "L2-L6 conclusion"),
+        )
+        and all(
+            phrase.lower() in index[mobius]["falsifier"].lower()
+            for phrase in (
+                "prime-dilation equivalence",
+                "even-support annihilation",
+                "odd-supported uniqueness or reconstruction",
+                "odd-squarefree Boolean formula",
+                "Lambert identity in |x|<1",
+                "Dirichlet identities",
+                "integrity STOP",
+            )
+        )
+        and has_status(index, "FERMIONIZER", "T")
+        and has_status(index, "TM-BREATH-TOWER", "T")
+        and mobius not in programs
+        and all(row["owner_item_id"] != mobius for row in gates.values()),
+    ))
+
+    carry_mul = "TM-MULTIPLICATION-CARRY-DEFECT"
+    carry_mul_path = "probes/P-TM-MULTIPLICATION-CARRY-DEFECT-1"
+    carry_mul_digest = (
+        "348e359dd2c2566c7c142ac9f7217bec3dd4ab3e725584e89a477420354e50bf"
+    )
+    carry_mul_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == carry_mul
+    }
+    checks.append((
+        "TM-MUL-CARRY",
+        "multiplication carry defect stays standalone L1 arithmetic with no physical lift",
+        has_status(index, carry_mul, "T")
+        and normative.get(carry_mul, {}).get("item_type") == "THEOREM"
+        and normative.get(carry_mul, {}).get("status") == "T"
+        and normative.get(carry_mul, {}).get("layer") == "L1"
+        and normative.get(carry_mul, {}).get("gate_ids") == ""
+        and index.get(carry_mul, {}).get("canon_section")
+        == "9. The photon and the electron"
+        and index.get(carry_mul, {}).get("evidence") == carry_mul_path
+        and evidence.get(carry_mul, {}).get("evidence_id")
+        == "EV-TM-MULTIPLICATION-CARRY-DEFECT"
+        and evidence.get(carry_mul, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(carry_mul, {}).get("location") == carry_mul_path
+        and evidence.get(carry_mul, {}).get("sha256") == carry_mul_digest
+        and evidence.get(carry_mul, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(carry_mul, {}).get("architecture_requirement")
+        == "two-architecture"
+        and carry_mul_dependencies == set()
+        and all(row["depends_on"] != carry_mul for row in dependencies)
+        and scope_contains_all(
+            index, carry_mul,
+            ("kappa_(2,mul)(a,b)=s_2(a)s_2(b)-s_2(ab)>=0",
+             "normalization-order-independent count of unit moves",
+             "R=(P AND Q) XOR K",
+             "tau_TM(ab)tau_TM(a)tau_TM(b)=(-1)^((P OR Q) XOR K)",
+             "takes the values -2,-4,0,-2,0,-2,0,2",
+             "vanishes iff K=0 and (P OR Q)=1",
+             "kappa_(2,mul)(3,11)=4 and c_TM(33)=0",
+             "c_TM(p^2)=0 iff kappa_(2,mul)(p,p) is even",
+             "Delta_mul(empty)=0",
+             "c_TM(n)=sum_(S subseteq {1,...,m})",
+             "finite-vector-space e_2 carry layer of CARRY-PENTAD",
+             "chronological nu_2(n+1) carry cocycle of RAMIFIED-TM-LIFT",
+             "semiprime table not asserting realization",
+             "c_TM=0 not implying zero carries or trivial multiplication",
+             "no multiplicativity claim for c_TM",
+             "no dependence on MOBIUS-TM-PRIME2-BRIDGE as a theorem premise",
+             "decoder, measure, Born, observer",
+             "physical-vacuum, matter, light, entanglement, curvature",
+             "L2-L6 conclusion"),
+        )
+        and all(
+            phrase.lower() in index[carry_mul]["falsifier"].lower()
+            for phrase in (
+                "raw-column recurrence",
+                "carry-mass identity",
+                "unit-normalization-order independence",
+                "lexicographic semiprime table entry",
+                "prime-square identity",
+                "odd-squarefree carry-parity-cube formula",
+                "integrity STOP",
+            )
+        )
+        and carry_mul not in programs
+        and all(
+            row["owner_item_id"] != carry_mul for row in gates.values()
+        ),
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
