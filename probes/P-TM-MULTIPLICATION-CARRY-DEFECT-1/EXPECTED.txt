@@ -1,0 +1,19 @@
+P-TM-MULTIPLICATION-CARRY-DEFECT-1 exact verifier
+scope=L1 public-probe audit
+PASS S1-01 schoolbook carry normalization reconstructs ab
+PASS S1-02 total carry value equals popcount defect
+PASS S1-03 carry mass is nonnegative
+PASS S2-01 output parity is AND XOR carry parity
+PASS S2-02 Thue-Morse multiplicativity defect is OR XOR carry parity
+PASS S3-01 complete eight-state semiprime table
+PASS S3-02 zero-shadow criterion
+PASS S3-03 odd-prime pair classification  pairs=1431
+PASS S3-04 nonzero-carry zero-shadow control  p=3 q=11
+PASS S3-05 zero-carry shadow and odd-carry excitation controls
+PASS S4-01 prime-square shadow criterion  primes=303
+PASS S4-02 named square controls
+PASS S5-01 higher squarefree carry-field identity  cubes=127
+PASS S5-02 multi-product carry mass nonnegative on audit cubes
+PASS G-01 c=0 does not mean zero carries
+CHECKS 15
+DECISION CARRY-PASS
