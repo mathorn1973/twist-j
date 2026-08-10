@@ -1,0 +1,9 @@
+C-OMEGA-U-UNITY-4-CARRIER-MINIMALITY-1 breaker
+status NON-CANONICAL same-session adversarial implementation
+PASS B1 independent linear solve: intertwiner dimension 4, invertible intertwiners 500
+PASS B2 determinant attack: T^2=2I can occur only in even F5 dimension
+PASS B3 partition attack: killed=18, survivors_through_8=[(8, (4, 4))]
+PASS B4 top attack: 20 roots form one GL2 class and every nonzero line is moved
+PASS B5 fresh rank-8 witness reconstructed from the full intertwiner space
+NO BREAK G1-G5
+G6 STOP full pair classification remains outside this breaker
