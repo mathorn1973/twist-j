@@ -1,12 +1,45 @@
 # Canon changelog (public series)
 
 
-## Public Canon v39
+## Public Canon v40
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 225 claims; 0 T-LOCK, 122 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
+Registry snapshot: 226 claims; 0 T-LOCK, 123 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v40 carries exactly one item. J-HARMONIC-SEAM [T] registers the
+L1 theorem that the contracting Fibonacci numerator
+`u_n=F_n phi-F_(n+1)=-psi^n` is an integral cyclotomic word and that its
+principal-branch harmonic read `H(x)=Log(1-psi x)` has exactly two real-axis
+weights and two pure-phase weights in the complete class `mu_10`.
+
+The four landings are `phi`, `phi^-2`, `-zeta_5^2`, and `-zeta_5^3`; the
+torsion pair has exact order ten. Together with
+`O_K^x=mu_10 x <phi>`, the oriented representatives give
+`H(1)=log phi`, `H(-zeta_5)=-i pi/5`, and
+`Log J=-H(1)-2H(-zeta_5)=-log phi+2 pi i/5`.
+
+The written proof establishes T at the frozen scope and the public probe
+audits it byte-identically on x86_64 and aarch64. The only registered logical
+dependencies are J-GOLDEN-BRIDGE [T] and J-TENTH-ROOT [T].
+LOG-AXES-INDEPENDENCE [T] is an unchanged compatibility guard, not a
+dependency of the seam theorem.
+
+This fold is L1 arithmetic only. It does not promote
+AXIOM-PROJECTION-DICTIONARY [D] or TWO-PLACE-PHYSICS [D], identify the
+order-two sign in `mu_10` with the separate `zeta_8` read place, strengthen
+BOOST-COUNT-LADDER [D], or add a decoder, measure, observer, force,
+spacetime, SI bridge, new constant, or L2-L6 lift. No existing status or live
+H/O row changes.
+
+
+## Public Canon v39
+
+<!-- BEGIN GENERATED CANON39 COUNTS -->
+Registry snapshot: 225 claims; 0 T-LOCK, 122 T, 41 D, 24 C, 3 H, 23 O, 12 F; 26 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CANON39 COUNTS -->
 
 Public Canon v39 carries two items, both bounding the one live enrichment row
 rather than firing it. LAMBDA-COCYCLE-ANGLES [H] is not fired and keeps status

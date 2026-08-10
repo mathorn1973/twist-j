@@ -124,12 +124,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 122, "D": 41, "C": 24, "F": 12,
+    expected_counts = {"T": 123, "D": 41, "C": 24, "F": 12,
                        "O": 23, "H": 3}
     checks.append((
         "COUNTS",
-        "registry has 225 claims with the current status partition",
-        len(rows) == 225 and counts == expected_counts,
+        "registry has 226 claims with the current status partition",
+        len(rows) == 226 and counts == expected_counts,
     ))
 
     checks.append((
@@ -1682,6 +1682,67 @@ def run():
                 "finite satisfaction does not decide the row",
             )
         )
+    ))
+
+    seam = "J-HARMONIC-SEAM"
+    seam_path = "probes/P-J-HARMONIC-SEAM-1"
+    seam_digest = (
+        "9054c62b919f5edb1b67ae9100d5ab733fd78a6b094662424a24a43a8bfe21cd"
+    )
+    seam_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == seam
+    }
+    checks.append((
+        "J-SEAM",
+        "harmonic seam stays T at L1; dictionary, places, decoder, and physics stay outside",
+        has_status(index, seam, "T")
+        and normative.get(seam, {}).get("item_type") == "THEOREM"
+        and normative.get(seam, {}).get("status") == "T"
+        and normative.get(seam, {}).get("layer") == "L1"
+        and normative.get(seam, {}).get("gate_ids") == ""
+        and index.get(seam, {}).get("canon_section")
+        == "1. The axiom and the two projections"
+        and index.get(seam, {}).get("evidence") == seam_path
+        and evidence.get(seam, {}).get("evidence_id") == "EV-J-HARMONIC-SEAM"
+        and evidence.get(seam, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(seam, {}).get("location") == seam_path
+        and evidence.get(seam, {}).get("sha256") == seam_digest
+        and evidence.get(seam, {}).get("hash_mode")
+        == "bundle-manifest-sha256-v1"
+        and evidence.get(seam, {}).get("architecture_requirement")
+        == "two-architecture"
+        and seam_dependencies == {
+            ("J-GOLDEN-BRIDGE", "REQUIRES"),
+            ("J-TENTH-ROOT", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, seam,
+            ("u_n=-psi^n=-F_(n+1)-F_n zeta_5^2-F_n zeta_5^3",
+             "H(x) is real iff x in {1,-1}",
+             "Re H(x)=0 iff x in {-zeta_5,-zeta_5^-1}",
+             "O_K^x=mu_10 x <phi>",
+             "Log J=-H(1)-2H(-zeta_5)",
+             "no promotion of AXIOM-PROJECTION-DICTIONARY or TWO-PLACE-PHYSICS",
+             "no decoder, measure, observer, force, spacetime, SI bridge",
+             "lift to L2-L6"),
+        )
+        and all(
+            phrase.lower() in index[seam]["falsifier"].lower()
+            for phrase in (
+                "universal integral numerator identity",
+                "complete mu_10 axis classification",
+                "unit-group product",
+                "principal-branch reconstruction of Log J",
+                "integrity STOP",
+            )
+        )
+        and has_status(index, "AXIOM-PROJECTION-DICTIONARY", "D")
+        and has_status(index, "TWO-PLACE-PHYSICS", "D")
+        and has_status(index, "BOOST-COUNT-LADDER", "D")
+        and has_status(index, "LOG-AXES-INDEPENDENCE", "T")
+        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and seam not in programs,
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
