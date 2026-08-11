@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 234)
+        self.assertEqual(self.report.claims, 237)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 26, "D": 41, "F": 13, "H": 2, "O": 23, "T": 129},
+            {"C": 27, "D": 41, "F": 13, "H": 2, "O": 23, "T": 131},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 41,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 153,
+                "two-architecture": 156,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -45,7 +45,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(
             len(self.report.transitive_architecture_dependents), 194
         )
-        self.assertEqual(len(self.report.dependency_terminals), 19)
+        self.assertEqual(len(self.report.dependency_terminals), 22)
         self.assertNotIn(
             "KERNEL-Z6-SYNCHRONIZATION",
             self.report.direct_architecture_requires,
@@ -169,6 +169,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
             "TM-HANKEL-K3-UNIVERSAL-TRANSFER",
             "TM-HANKEL-K3-TWO-SCALAR-CLASSIFICATION",
             "TM-HANKEL-K3-QUADRATIC-INVARIANT-SUFFICIENCY",
+            "ARITHMETIC-RAPIDITY-DECOMPOSITION",
+            "SPLIT-PRIME-RAPIDITY-CLASS",
+            "SPLIT-PRIME-RAPIDITY-CONSTRUCTION-AGREEMENT",
         ):
             self.assertIn(claim, self.report.dependency_terminals)
             self.assertNotIn(claim, self.report.direct_architecture_requires)

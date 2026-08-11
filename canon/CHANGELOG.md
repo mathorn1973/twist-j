@@ -1,12 +1,52 @@
 # Canon changelog (public series)
 
 
-## Public Canon v43
+## Public Canon v44
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 234 claims; 0 T-LOCK, 129 T, 41 D, 26 C, 2 H, 23 O, 13 F; 25 live H/O.
+Registry snapshot: 237 claims; 0 T-LOCK, 131 T, 41 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v44 registers the arithmetic rapidity arc under the release
+authority of issue #344, the claim lock issue #342, and the completed
+two-architecture public probe P-ARITH-RAPIDITY-1 (PR #343, 26 of 26
+checks, byte-identical stdout on x86_64 and aarch64), bundle SHA-256
+`e053d4950e368c7815f6df723b4dde316c6bb5a17d4f8d62f8fcee8eeb105fda`. Three rows enter with
+a clean epistemic split: two theorems carried by written algebraic proofs
+embedded in the probe preregistration and audited at finite scope by the
+pinned verifier, and one finite computation.
+
+ARITHMETIC-RAPIDITY-DECOMPOSITION [T] carries the signed Galois reading
+of F = Q(sqrt5): t = a and s = b sqrt5 with the exact interval identity
+t^2 - s^2 = N(x) with sign, an empty F-rational null locus against the
+full real cone, the rest locus exactly ab = 0, the dense rational
+norm-one subgroup against the discrete unit rapidity lattice log phi
+with Lucas the time reading and sqrt5 Fibonacci the space reading, and
+the exact bridge sigma-(phi^n) = (-1)^n phi^-n to BOOST-READING-SPLIT.
+
+SPLIT-PRIME-RAPIDITY-CLASS [T] attaches to every split rational prime
+the canonical unordered rapidity pair R(p) = {r, -r} in
+(R/(log phi)Z)/{+-1}, well defined by class number one and negated by
+conjugation, decided exactly and without logarithms through even-index
+Lucas traces, with inert primes and the ramified sqrt5 anchored at
+class zero.
+
+SPLIT-PRIME-RAPIDITY-CONSTRUCTION-AGREEMENT [C] verifies R1(p) = R2(p)
+for all 146 split p below 2000 across two structurally independent
+generator constructions, a Pell sweep and a norm-decreasing Euclidean
+gcd, with the 70 to 76 orientation split reported as data and gating
+nothing.
+
+Not registered by this release: no frame-reading row, since an H row
+requires a concrete falsifier and none is written; and no Weil-bridge
+row, the Hecke-type interface remaining in the probe preregistration,
+asserted of nothing.
+
+## Public Canon v43
+
+Registry snapshot: 234 claims; 0 T-LOCK, 129 T, 41 D, 26 C, 2 H, 23 O, 13 F; 25 live H/O.
+Reproduction witnesses: 22.
 
 Public Canon v43 activates the closed Hankel divisor-block arc. The designation v42 was consumed by a blocked activation readback: the first release form carried the generated count marker pair twice, the tag publication gate fired on it, and the repository tag rule forbids deleting or moving a canon tag, so the tag canon-v42 remains the archived record of that firing and no v42 release exists. The canon content of this entry is the content reviewed under that designation, unchanged. This release registers the arc of the
 Thue-Morse Moebius transform under the release authority of issue #338, the
