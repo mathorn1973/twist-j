@@ -1,0 +1,44 @@
+P-TM-HANKEL-K3-TRANSFER-1 verify
+INERTIA_ORDER NEG ZERO POS (named fields in every record)
+FREE cell order (code 9m1+3m2+m3): 002 012 020 021 022 102 112 120 121 122 200 201 202 210 211 212 220 221 222
+PASS G1.empty_row_and_column (246 sets)
+PASS G1.Rtilde_I_mod2_det_odd
+PASS G1.layers_parity_identity_fullrank
+PASS G1.layer_inversion_exact
+PASS G2.local_identity_diag_1_minus3
+G2 extremal pair count p<q<=1000: 1103
+PASS G2.witt_congruence_all_1109_extremal_sets
+PASS G2.Rprime_parity_preserved
+PASS G3.corner_collapse_all_pairs
+PASS G3.corner_bound_le_7
+G3 isolation scope: first 128 extremal pairs lexicographic
+PASS G3.zero_pencil_roots_first_128_pairs
+PASS G3.balanced_inertia_s_0_half_1_first_128
+G4 witness n=147965 NEG=5 ZERO=0 POS=3 detK=-3840 roots01=1
+G4 witness n=1942781 NEG=5 ZERO=0 POS=3 detK=-768 roots01=1
+G4 witness n=11743733 NEG=5 ZERO=0 POS=3 detK=-9856 roots01=1
+PASS G4.three_witnesses_two_paths
+PASS G4.uniqueness_scan_157_triples_1_nonbalanced
+PASS G4.recount_99_triples_3_fail
+PASS G5.top4_cells_absent_from_G6
+PASS G5.diagonal_L_bounds_32_cases
+PASS G5.coupling_bound_16_cases
+PASS G5.trichotomy_by_det
+PASS G5.pair_schur_minors_nonneg_neg_at_least_2
+PASS G5.substrate_census_32398_110_260
+PASS G5.unique_degenerate_configuration
+G5 sweep classes pos=522462 zero=51 neg=1775 fallback=2451
+PASS G5.strata_16x_lift
+PASS G5.classes_522462_51_1775
+PASS G5.inertia_profiles_404_413_503
+PASS G5.two_scalar_law
+PASS G6.linear_insufficient_3584_buckets_58_mixed
+PASS G6.quadratic_sufficient_88352_buckets_0_mixed
+PASS G6.cycle_counts
+PASS G6.burnside_89472_two_paths
+PASS G6.proper_quotient_gap_1120
+G7 witness n=147965 detG6=-1536 detK=-3840
+G7 witness n=1942781 detG6=-1536 detK=-768
+G7 witness n=11743733 detG6=-4864 detK=-9856
+PASS G7.real_consistency_two_path
+SUMMARY PASS=31 FAIL=0
