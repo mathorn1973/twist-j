@@ -60,10 +60,8 @@ starts from this release as a fresh public basis.
 
 ## Public Canon v41
 
-<!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 227 claims; 0 T-LOCK, 125 T, 41 D, 24 C, 2 H, 23 O, 12 F; 25 live H/O.
+Registry snapshot at v41: 227 claims; 0 T-LOCK, 125 T, 41 D, 24 C, 2 H, 23 O, 12 F; 25 live H/O.
 Reproduction witnesses: 22.
-<!-- END GENERATED CURRENT COUNTS -->
 
 Public Canon v41 combines exactly two standalone L1 theorems with one
 registry-hygiene transaction under the combined release authority of issue
