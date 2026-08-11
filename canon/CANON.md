@@ -1,4 +1,4 @@
-# TWIST-J Public Canon v42
+# TWIST-J Public Canon v43
 
 **Release identity.** Public Canon v41. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
