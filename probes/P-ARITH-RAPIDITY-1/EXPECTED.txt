@@ -1,0 +1,63 @@
+P-ARITH-RAPIDITY-1 verifier
+AUDIT of written proofs at finite scope; no universal quantifier
+exact throughout; the rapidity class is decided without logarithms
+G1 grid 288 elements, 58 product pairs
+PASS G1.rho_and_N_multiplicative_on_pairs
+PASS G1.signed_interval_t2_minus_s2_equals_N
+PASS G1.x_times_conj_equals_norm
+PASS G1.rest_class_zero_exactly_iff_ab_zero
+PASS G1.no_nonzero_F_rational_null_vector_on_grid
+PASS G2.unit_norm_alternates_to_k12
+PASS G2.rho_phi_equals_minus_phi_squared
+PASS G2.phi_n_is_Lucas_time_sqrt5_Fibonacci_space_to_n30
+PASS G2.sheet_sign_matches_parity
+PASS G3.membership_test_agrees_with_direct_comparison_to_m12
+PASS G3.test_returns_zero_on_sqrt5_and_on_rationals
+PASS G3.test_returns_n_on_phi_n
+G4 split primes below 2000: 146
+G4 orientation data (gates nothing): oriented=70 conjugate=76
+PASS G4.both_constructions_return_a_generator_of_norm_plus_p
+PASS G4.every_euclid_division_step_norm_decreasing
+PASS G4.canonical_unordered_classes_agree_R1_equals_R2
+G5 split primes below 500: 45, generator variants each: 5
+PASS G5.class_unchanged_under_every_generator_variant
+PASS G5.conjugate_class_is_the_negative
+G6 inert primes below 2000: 155
+PASS G6.inert_primes_sit_at_class_zero
+PASS G6.ramified_sqrt5_class_zero_and_rho_exactly_minus_one
+PASS G7.frame_change_preserves_norm_scale
+PASS G7.frame_change_shifts_class_by_exactly_k
+PASS G7.rapidity_differences_invariant
+G8 distinct norm-one rational classes exhibited: 583
+PASS G8.rational_points_occupy_many_distinct_classes
+PASS G9.rho_of_conjugate_is_the_inverse_all_split_below_2000
+PASS G9.inert_ideal_norm_is_p_squared
+G9 recorded weights: split N(p)=p, inert N(p)=p^2; no bridge claim is made
+G10 check inventory, one line per assertion executed:
+  G1.rho_and_N_multiplicative_on_pairs
+  G1.signed_interval_t2_minus_s2_equals_N
+  G1.x_times_conj_equals_norm
+  G1.rest_class_zero_exactly_iff_ab_zero
+  G1.no_nonzero_F_rational_null_vector_on_grid
+  G2.unit_norm_alternates_to_k12
+  G2.rho_phi_equals_minus_phi_squared
+  G2.phi_n_is_Lucas_time_sqrt5_Fibonacci_space_to_n30
+  G2.sheet_sign_matches_parity
+  G3.membership_test_agrees_with_direct_comparison_to_m12
+  G3.test_returns_zero_on_sqrt5_and_on_rationals
+  G3.test_returns_n_on_phi_n
+  G4.both_constructions_return_a_generator_of_norm_plus_p
+  G4.every_euclid_division_step_norm_decreasing
+  G4.canonical_unordered_classes_agree_R1_equals_R2
+  G5.class_unchanged_under_every_generator_variant
+  G5.conjugate_class_is_the_negative
+  G6.inert_primes_sit_at_class_zero
+  G6.ramified_sqrt5_class_zero_and_rho_exactly_minus_one
+  G7.frame_change_preserves_norm_scale
+  G7.frame_change_shifts_class_by_exactly_k
+  G7.rapidity_differences_invariant
+  G8.rational_points_occupy_many_distinct_classes
+  G9.rho_of_conjugate_is_the_inverse_all_split_below_2000
+  G9.inert_ideal_norm_is_p_squared
+PASS G10.inventory_length_equals_checks_executed
+SUMMARY PASS=26 FAIL=0
