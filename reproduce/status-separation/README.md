@@ -9,7 +9,7 @@ Canon fold; the theorem/dictionary boundary checks stay structural.
 The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/GATES.tsv`,
 `canon/FRONTIER_PROGRAMS.tsv`, and `canon/CORE.md`, uses the Python standard
-library, and emits deterministic text. Its twenty-eight checks cover the current
+library, and emits deterministic text. Its twenty-nine checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -51,13 +51,18 @@ the cocycle-vector hypothesis they bound stays H, unfired, and BLOCKED in the
 enrichment queue. The following check keeps J-HARMONIC-SEAM at exact L1 scope with
 only its two theorem-grade arithmetic dependencies and fences every dictionary,
 place, decoder, physical, SI, constant, and higher-layer reading.
-The final two checks keep MOBIUS-TM-PRIME2-BRIDGE at exact L1 arithmetic scope
+The next two checks keep MOBIUS-TM-PRIME2-BRIDGE at exact L1 arithmetic scope
 with its public two-architecture probe, no dependencies, collision-free
 `tau_TM` and `c_TM` notation, and no fermionizer, RH, physical, or higher-layer
 lift; and keep TM-MULTIPLICATION-CARRY-DEFECT as a standalone L1 sibling with
 its own two-architecture probe, exact unit-carry, Boolean-parity, semiprime,
 prime-square, and squarefree-cube clauses, no dependency on its sibling, and
-no collision with other carry objects or physical lift.
+no collision with other carry objects or physical lift. The final check keeps
+the seven TM-HANKEL divisor-block rows at their exact epistemic split, four
+theorems, one falsified universal transfer with its fired witness
+147965 = 5.101.293, and two finite classifications at computation grade, all
+on the shared public two-architecture probe, with no dependencies, no gates,
+no frontier queue entries, and no physical or higher-layer lift.
 
 Run from the repository root:
 
@@ -65,5 +70,5 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 28/28 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 29/29 ALL PASS`,
 exit 0, and empty stderr.

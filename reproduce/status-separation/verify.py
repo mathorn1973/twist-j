@@ -124,12 +124,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 125, "D": 41, "C": 24, "F": 12,
+    expected_counts = {"T": 129, "D": 41, "C": 26, "F": 13,
                        "O": 23, "H": 2}
     checks.append((
         "COUNTS",
-        "registry has 227 claims with the current status partition",
-        len(rows) == 227 and counts == expected_counts,
+        "registry has 234 claims with the current status partition",
+        len(rows) == 234 and counts == expected_counts,
     ))
 
     checks.append((
@@ -1940,6 +1940,84 @@ def run():
         and carry_mul not in programs
         and all(
             row["owner_item_id"] != carry_mul for row in gates.values()
+        ),
+    ))
+
+    hankel_path = "probes/P-TM-HANKEL-K3-TRANSFER-1"
+    hankel_digest = (
+        "364f459aee2910edc27e3fa7c85e692f0a8f93cf7c17e7bc0771daa334b53592"
+    )
+    hankel_rows = {
+        "TM-HANKEL-DIVISOR-BRIDGE": ("T", "THEOREM"),
+        "TM-HANKEL-SQUAREFUL-RANK-NOGO": ("T", "THEOREM"),
+        "TM-HANKEL-EXTREMAL-WITT-SKELETON": ("T", "THEOREM"),
+        "TM-HANKEL-K2-TRANSFER": ("T", "THEOREM"),
+        "TM-HANKEL-K3-UNIVERSAL-TRANSFER": ("F", "FALSIFIED"),
+        "TM-HANKEL-K3-TWO-SCALAR-CLASSIFICATION": ("C", "COMPUTATION"),
+        "TM-HANKEL-K3-QUADRATIC-INVARIANT-SUFFICIENCY": ("C", "COMPUTATION"),
+    }
+    checks.append((
+        "TM-HANKEL",
+        "Hankel divisor block splits T, F, and C exactly; no physical lift",
+        all(
+            has_status(index, claim, status)
+            and normative.get(claim, {}).get("item_type") == item_type
+            and normative.get(claim, {}).get("status") == status
+            and normative.get(claim, {}).get("layer") == "L1"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("canon_section")
+            == "9. The photon and the electron"
+            and index.get(claim, {}).get("evidence") == hankel_path
+            and evidence.get(claim, {}).get("evidence_id") == "EV-" + claim
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("location") == hankel_path
+            and evidence.get(claim, {}).get("sha256") == hankel_digest
+            and evidence.get(claim, {}).get("hash_mode")
+            == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and all(row["item_id"] != claim for row in dependencies)
+            and all(row["depends_on"] != claim for row in dependencies)
+            and claim not in programs
+            and all(
+                row["owner_item_id"] != claim for row in gates.values()
+            )
+            for claim, (status, item_type) in hankel_rows.items()
+        )
+        and scope_contains_all(
+            index, "TM-HANKEL-K2-TRANSFER",
+            ("h(s)=-9+s(3D+3E+F)-s^2(A+D)^2/(3+sA)-s^2(B+E)^2/(3+sB)"
+             "<=-9+7s<=-2<0",
+             "NEG 2 ZERO 0 POS 2",
+             "universal at k=2"),
+        )
+        and scope_contains_all(
+            index, "TM-HANKEL-K3-UNIVERSAL-TRANSFER",
+            ("147965=5.101.293",
+             "NEG 5 ZERO 0 POS 3",
+             "determinant -3840",
+             "157 extremal triples with n<=200000",
+             "unique nonbalanced case"),
+        )
+        and index["TM-HANKEL-K3-UNIVERSAL-TRANSFER"]["falsifier"]
+        .startswith("fired:")
+        and scope_contains_all(
+            index, "TM-HANKEL-K3-TWO-SCALAR-CLASSIFICATION",
+            ("32398/110/260",
+             "518368/1760/4160",
+             "522462 tables",
+             "FAIL iff det G_6<0 and det K<=0",
+             "computation grade"),
+        )
+        and scope_contains_all(
+            index, "TM-HANKEL-K3-QUADRATIC-INVARIANT-SUFFICIENCY",
+            ("3584 buckets of which exactly 58 are mixed",
+             "88352 buckets with zero mixed",
+             "factors through the quadratic invariant map",
+             "(2^19+3.2^12+2.2^7)/6=89472",
+             "merging 1120 orbit distinctions",
+             "no claim is made that the deciding function is itself a "
+             "polynomial of degree two"),
         ),
     ))
 
