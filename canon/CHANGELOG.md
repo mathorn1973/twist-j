@@ -1,14 +1,14 @@
 # Canon changelog (public series)
 
 
-## Public Canon v42
+## Public Canon v43
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
 Registry snapshot: 234 claims; 0 T-LOCK, 129 T, 41 D, 26 C, 2 H, 23 O, 13 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
 
-Public Canon v42 registers the closed Hankel divisor-block arc of the
+Public Canon v43 activates the closed Hankel divisor-block arc. The designation v42 was consumed by a blocked activation readback: the first release form carried the generated count marker pair twice, the tag publication gate fired on it, and the repository tag rule forbids deleting or moving a canon tag, so the tag canon-v42 remains the archived record of that firing and no v42 release exists. The canon content of this entry is the content reviewed under that designation, unchanged. This release registers the arc of the
 Thue-Morse Moebius transform under the release authority of issue #338, the
 merged public companion note (PR #334), and the completed two-architecture
 public probe P-TM-HANKEL-K3-TRANSFER-1 (PR #335, 31 of 31 gates,
