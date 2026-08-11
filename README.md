@@ -4,8 +4,8 @@ TWIST-J tests one risky hypothesis: physical reality is a closed, exact,
 deterministic integer system; continuum, geometry, probability, and fields are
 readings of it.
 
-**State: ACTIVE. Public Canon v43 is the normative public ledger.** Authority is
-the public `main` branch at the tag `canon-v43`; see [STATUS.md](STATUS.md) and
+**State: ACTIVE. Public Canon v44 is the normative public ledger.** Authority is
+the public `main` branch at the tag `canon-v44`; see [STATUS.md](STATUS.md) and
 [POLICY.md](POLICY.md). An identical ACTIVE form on a branch other than
 `main` remains only an activation candidate until the reviewed activation
 commit and tag are public.
@@ -25,7 +25,7 @@ manifests, and independent reproductions.
 ## Versioning
 
 Public Canon releases are numbered with positive integers beginning at `1`.
-The current release is Public Canon v43, tagged `canon-v43`.
+The current release is Public Canon v44, tagged `canon-v44`.
 There are no decimal Canon versions such as `1.1` or `1.2`; non-normative
 documentation corrections do not create a new Canon.
 
