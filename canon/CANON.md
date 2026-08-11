@@ -1,4 +1,4 @@
-# TWIST-J Public Canon v41
+# TWIST-J Public Canon v42
 
 **Release identity.** Public Canon v41. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
@@ -2915,6 +2915,230 @@ spacetime, SI, physical vacuum, matter, light, entanglement, curvature,
 physical interaction or other physical interpretation, or lift to L2--L6 is
 asserted. In particular, `c_TM=0` means neither zero carries nor trivial
 multiplication.
+
+### The Hankel divisor block of c_TM
+
+This block of subsections is L1 arithmetic only, continuing the locally
+typed symbols `tau_TM(n)=(-1)^s_2(n)` and `c_TM=mu*tau_TM`. Fix an odd
+squarefree positive integer with prime set `P` and `k=|P|`, and write,
+for subsets `S,T` of `P`,
+
+```text
+n_S         = product_(p in S) p,
+K_P(S,T)    = c_TM(n_S n_T),
+Kxor_P(S,T) = c_TM(n_(S XOR T)),
+R_P         = K_P - Kxor_P,
+W(S,T)      = 2^(|T|-|S|) if S subseteq T, else 0.
+```
+
+`P` is called extremal when `tau_TM(n_Z)=(-1)^(|Z|+1)` for every subset
+`Z`, the equality locus of the divisor-count bound `|c_TM(n_P)|<=2^k`.
+Inertia triples are written with named fields `NEG ZERO POS`.
+
+### TM-HANKEL-DIVISOR-BRIDGE [T]
+
+For the Hankel kernel `H(m,n)=c_TM(mn)/(mn)` on positive integers, the
+compression `H_P` to the divisor cube of `n_P` satisfies, with
+`D_P=diag(n_S)` positive,
+
+```text
+(D_P H_P D_P)(S,T) = c_TM(n_S n_T) = K_P(S,T),
+```
+
+so by Sylvester's law of inertia `inertia(H_P)=inertia(K_P)`: the
+integer matrix `K_P` carries the entire inertia content of the divisor
+block. Since `n_S n_T = n_(S XOR T) n_(S AND T)^2` exactly, the block
+splits as
+
+```text
+K_P = Kxor_P + R_P,
+```
+
+where `Kxor_P` is an XOR circulant diagonalized by the `2^k` Walsh
+characters and the defect `R_P` is supported exactly on the pairs with
+`S AND T` nonempty. This forms TM-HANKEL-DIVISOR-BRIDGE [T], evidenced
+by `probes/P-TM-HANKEL-K3-TRANSFER-1`; the written proof is the two
+displayed identities, and the probe audits them on 246 prime sets,
+extremal and not.
+
+### TM-HANKEL-SQUAREFUL-RANK-NOGO [T]
+
+`c_TM(1)=-1` is odd, and `c_TM(N)` is even for every `N>=2`, because
+`c_TM(N)` is a sum of `2^omega(N)` unit terms. This parity is
+table-general: it uses no property of `tau_TM` beyond taking values in
+`{-1,+1}`. Hence the empty row and column of `R_P` vanish, the nonempty
+block of `R_P` is congruent to the identity modulo 2 with odd
+determinant, and
+
+```text
+rank R_P = 2^k - 1,  ker R_P = span(e_empty)
+```
+
+exactly. The same parity applies at every intersection order: for every
+`U subseteq P` the layer transform
+
+```text
+d_U(z) = sum_(V subseteq U) (-1)^(|U|-|V|) c_TM(n_z n_V^2)
+```
+
+on subsets `z` of `P` minus `U` has `d_U(empty)` odd and `d_U(z)` even
+for nonempty `z`, its XOR-structured layer matrix is congruent to the
+identity modulo 2 with odd determinant and full rank `2^(k-|U|)`, and
+the exact layer inversion
+
+```text
+K_P(S,T) = sum_(V subseteq S AND T) d_V(S XOR T)
+```
+
+holds entrywise. Consequently no low-rank compression of the squareful
+defect exists, globally or at any single intersection order: the defect
+is two-adically unimodular on its carrier. This forms
+TM-HANKEL-SQUAREFUL-RANK-NOGO [T], evidenced by
+`probes/P-TM-HANKEL-K3-TRANSFER-1`.
+
+### TM-HANKEL-EXTREMAL-WITT-SKELETON [T]
+
+`W` is unimodular, upper triangular, and congruent to the identity
+modulo 2. On every extremal `P`, the extremal cube values
+`c_TM(n_T)=-(-2)^(|T|)` force the exact tensor decomposition
+`Kxor_P = -(m^(tensor k))` for `m=[[1,-2],[-2,1]]`, and the local
+identity `u^T m u = diag(1,-3)` for `u=[[1,2],[0,1]]` tensorizes to the
+integral congruence
+
+```text
+W^T Kxor_P W = diag_(S subseteq P) ((-1)^(|S|+1) 3^(|S|)).
+```
+
+The empty row and column of `W^T R_P W` vanish, so the empty direction
+splits off at the constant `-1` for the entire pencil `Kxor_P + s R_P`.
+The balance `NEG = POS = 2^(k-1)` of the skeleton is read off the
+diagonal. This forms TM-HANKEL-EXTREMAL-WITT-SKELETON [T], evidenced by
+`probes/P-TM-HANKEL-K3-TRANSFER-1`; the probe verifies the congruence
+on 1109 extremal sets with `p < q <= 1000`, four triples, and chains at
+`k = 4` and `k = 5`.
+
+### TM-HANKEL-K2-TRANSFER [T]
+
+For an extremal pair `{p,q}` put `A=tau_TM(p^2)`, `B=tau_TM(q^2)`,
+`D=tau_TM(p^2 q)`, `E=tau_TM(p q^2)`, `F=tau_TM(p^2 q^2)`, all units.
+In the `W` basis the pencil `Kxor_P + s R_P` equals exactly
+
+```text
+row empty: ( -1,      0,       0,       0             )
+row {p}:   (  0,      3+sA,    0,       s(A+D)        )
+row {q}:   (  0,      0,       3+sB,    s(B+E)        )
+row {p,q}: (  0,      s(A+D),  s(B+E),  -9+s(3D+3E+F) )
+```
+
+with `|3D+3E+F| <= 7`. For `0 <= s <= 1` the two middle pivots are at
+least 2, and Schur elimination leaves
+
+```text
+h(s) = -9 + s(3D+3E+F) - s^2 (A+D)^2/(3+sA) - s^2 (B+E)^2/(3+sB)
+     <= -9 + 7s <= -2 < 0,
+```
+
+so the pencil determinant never vanishes on `[0,1]` and the inertia is
+constantly `NEG 2 ZERO 0 POS 2`, uniformly over all 32 squareful sign
+patterns. The balanced transfer is therefore universal at `k = 2`. This
+forms TM-HANKEL-K2-TRANSFER [T], evidenced by
+`probes/P-TM-HANKEL-K3-TRANSFER-1`.
+
+### TM-HANKEL-K3-UNIVERSAL-TRANSFER [F]
+
+The universal proposal that the balanced transfer persists at `k = 3`,
+that is, that every extremal triple has `K_P` inertia
+`NEG 4 ZERO 0 POS 4`, is false. The extremal triple
+
+```text
+147965 = 5 . 101 . 293
+```
+
+has `K_P` inertia `NEG 5 ZERO 0 POS 3`, determinant `-3840`, pencil
+constant term `3^12`, and exactly one root of `det(Kxor_P + s R_P)` in
+the open interval `(0,1)`: an interior crossing, not an endpoint
+degeneracy. Among all 157 extremal triples with `n <= 200000` this is
+the unique nonbalanced case; the witnesses `1942781 = 83 . 89 . 263`
+and `11743733 = 149 . 269 . 293` behave identically, and among the 99
+triples with `p < q < r <= 300` exactly three fail. Every witness holds
+by two independent exact integer paths on two architectures. The false
+universal statement is registered as TM-HANKEL-K3-UNIVERSAL-TRANSFER
+[F], evidenced by `probes/P-TM-HANKEL-K3-TRANSFER-1`; the firing does
+not reopen TM-HANKEL-K2-TRANSFER and does not weaken the finite `k = 3`
+classification below.
+
+### TM-HANKEL-K3-TWO-SCALAR-CLASSIFICATION [C]
+
+Abstract setting: ternary sign tables on `{0,1,2}^3` with the extremal
+binary face fixed leave 19 free squareful signs, and `K` is linear in
+them. Exhaustive facts over all `2^19` tables, byte-identical on two
+architectures: writing `G_6` for the weight-at-most-2 block in the `W`
+basis, the sign of `det G_6` obeys the rigidity trichotomy
+
+```text
+det G_6 < 0  iff  G_6 inertia NEG 3 ZERO 0 POS 3,
+det G_6 = 0  iff  G_6 inertia NEG 2 ZERO 1 POS 3,
+det G_6 > 0  iff  G_6 inertia NEG 2 ZERO 0 POS 4,
+```
+
+with census `32398 / 110 / 260` on the 15-bit substrate, exact 16x lift
+`518368 / 1760 / 4160` to the `2^19` strata, and a unique
+all-minors-zero pair-Schur configuration, of inertia
+`NEG 2 ZERO 0 POS 1`. The full-block classes refine by the sign of
+`det K`:
+
+```text
+det K > 0  iff  K inertia NEG 4 ZERO 0 POS 4   (522462 tables),
+det K = 0  iff  K inertia NEG 4 ZERO 1 POS 3   (51 tables),
+det K < 0  iff  K inertia NEG 5 ZERO 0 POS 3   (1775 tables),
+```
+
+and the two-scalar law holds over the whole domain:
+
+```text
+FAIL  iff  det G_6 < 0  and  det K <= 0.
+```
+
+The three real witnesses satisfy `det G_6 < 0` and `det K < 0` through
+the abstract linear form, with `det K` equal to the direct integer
+values `-3840`, `-768`, `-9856`. This is
+TM-HANKEL-K3-TWO-SCALAR-CLASSIFICATION [C], a computation at the stated
+finite, fully enumerated scope, evidenced by
+`probes/P-TM-HANKEL-K3-TRANSFER-1`. The finite local case lists behind
+the trichotomy, the four-value bound table with its 32 diagonal and 16
+coupling cases, are printable and theorem-eligible, but this row stays
+at computation grade until they are separately written and reviewed.
+
+### TM-HANKEL-K3-QUADRATIC-INVARIANT-SUFFICIENCY [C]
+
+The 19 free cells carry the `S_3` representation `6 trivial + sign +
+6 standard`. The six linear orbit sums do not decide the transfer
+class: they produce 3584 buckets of which exactly 58 are mixed. The
+canonical quadratic layer of 28 invariants, namely the six orbit sums,
+the 21 Gram pairings of the six standard-component vectors, and the
+squared circulation, is sufficient: it produces 88352 buckets with zero
+mixed, so the transfer decision factors through the quadratic invariant
+map. Burnside's count gives exactly
+
+```text
+(2^19 + 3 . 2^12 + 2 . 2^7)/6 = 89472
+```
+
+orbits, by the formula and by direct enumeration, so the decision
+factors through a proper quotient of the orbit space, merging 1120
+orbit distinctions and no class pair. Sufficiency means factoring
+through the invariant map; no claim is made that the deciding function
+is itself a polynomial of degree two. This is
+TM-HANKEL-K3-QUADRATIC-INVARIANT-SUFFICIENCY [C], evidenced by
+`probes/P-TM-HANKEL-K3-TRANSFER-1`.
+
+The seven rows above assert no RH or zero-location result, no Weil
+positivity or explicit-formula connection, no Nyman--Beurling or
+Baez--Duarte statement, nothing about the operator `H` beyond the
+displayed finite compressions, no `J` coupling, no `p=5` selection, no
+decoder, measure, Born, observer, force, spacetime, physical, or SI
+reading, and no L2--L6 lift. The successor question at `k = 4` is not a
+registered claim of this Canon.
 
 ## 10. Relativity as counting
 

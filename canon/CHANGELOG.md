@@ -1,6 +1,63 @@
 # Canon changelog (public series)
 
 
+## Public Canon v42
+
+<!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 234 claims; 0 T-LOCK, 129 T, 41 D, 26 C, 2 H, 23 O, 13 F; 25 live H/O.
+Reproduction witnesses: 22.
+<!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v42 registers the closed Hankel divisor-block arc of the
+Thue-Morse Moebius transform under the release authority of issue #338, the
+merged public companion note (PR #334), and the completed two-architecture
+public probe P-TM-HANKEL-K3-TRANSFER-1 (PR #335, 31 of 31 gates,
+byte-identical stdout on x86_64 and aarch64), bundle SHA-256
+`364f459aee2910edc27e3fa7c85e692f0a8f93cf7c17e7bc0771daa334b53592`. Seven rows enter with a clean epistemic split: the
+positive theorems, the real falsifier, and the finite classification of the
+new boundary.
+
+TM-HANKEL-DIVISOR-BRIDGE [T] carries the inertia of every finite Hankel
+compression of `c_TM` to an integer divisor block by a positive diagonal
+conjugation and splits it exactly into an XOR circulant plus a squareful
+defect. TM-HANKEL-SQUAREFUL-RANK-NOGO [T] proves the defect and every
+intersection layer congruent to the identity modulo 2: rank `2^k - 1`
+exactly, kernel the empty coordinate, and no low-rank compression at any
+intersection order. TM-HANKEL-EXTREMAL-WITT-SKELETON [T] gives the
+unimodular divisor-lattice congruence
+
+```text
+W^T Kxor_P W = diag((-1)^(|S|+1) 3^(|S|))
+```
+
+on the extremal locus, with the empty direction split at `-1` for the whole
+pencil. TM-HANKEL-K2-TRANSFER [T] proves the balanced transfer universal at
+`k = 2` by the exact Schur bound `h(s) <= -9 + 7s <= -2 < 0`.
+
+TM-HANKEL-K3-UNIVERSAL-TRANSFER [F] attaches the F to the false universal
+statement, not to a negative theorem: the extremal triple
+`147965 = 5 . 101 . 293` has `K_P` inertia `NEG 5 ZERO 0 POS 3` with
+determinant `-3840` and one interior pencil crossing, the unique nonbalanced
+case among all 157 extremal triples with `n <= 200000`.
+
+TM-HANKEL-K3-TWO-SCALAR-CLASSIFICATION [C] holds the complete `2^19`
+classification: the rigidity trichotomy of `G_6`, its exact 16x lift, the
+inertia refinement of the `det K` classes `522462 / 51 / 1775`, and the
+two-scalar law `FAIL iff det G_6 < 0 and det K <= 0`.
+TM-HANKEL-K3-QUADRATIC-INVARIANT-SUFFICIENCY [C] is deliberately a separate
+row: the six linear orbit sums fail at 58 mixed buckets, the canonical
+28-invariant quadratic map decides with zero mixed buckets, and the decision
+factors through a proper quotient of the `S_3` orbit space with gap 1120.
+Sufficiency is stated as factoring through the invariant map, not as a
+degree-two form of the deciding function.
+
+The epistemic boundary of the release is exact: `k = 2` transfer at theorem
+grade, the `k = 3` universal transfer falsified with a pinned integer
+witness, and the `k = 3` finite classification at computation grade. The
+release makes no RH or Weil-positivity connection, opens no new H or O
+frontier row, and registers no `k = 4` claim; the `k = 4` substrate question
+starts from this release as a fresh public basis.
+
 ## Public Canon v41
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
