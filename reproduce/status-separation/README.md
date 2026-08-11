@@ -9,7 +9,7 @@ Canon fold; the theorem/dictionary boundary checks stay structural.
 The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/GATES.tsv`,
 `canon/FRONTIER_PROGRAMS.tsv`, and `canon/CORE.md`, uses the Python standard
-library, and emits deterministic text. Its twenty-nine checks cover the current
+library, and emits deterministic text. Its thirty checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,3 +72,5 @@ python3 reproduce/status-separation/verify.py
 
 Expected: byte-identical output to `EXPECTED.txt`, `RESULT 29/29 ALL PASS`,
 exit 0, and empty stderr.
+
+The thirtieth check pins the arithmetic rapidity fold: the decomposition and split-prime class rows at T and the finite construction-agreement row at C, all at L1 in section 10 with the pinned probe bundle as their only evidence, no dependency, gate, or program rows, and no physical lift.

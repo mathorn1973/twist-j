@@ -1,4 +1,4 @@
-# TWIST-J Public Canon v43
+# TWIST-J Public Canon v44
 
 **Release identity.** Public Canon v41. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
@@ -3373,6 +3373,80 @@ prices, anonymity and totality; the row itself stays O and STOP by its own
 decision text, since one clause pair is not the complete registered decoder
 class, and COIN-MINIMAL-READ [D] remains the adopted dictionary. No lift is
 performed and GATE-L5-L1-MINIMAL-READ is untouched.
+
+The boost ladder above reads the units of `F = Q(sqrt5)`. The three rows
+below carry the arithmetic structure the whole field supplies under the
+same reading, at L1 and with no physical lift.
+
+### ARITHMETIC-RAPIDITY-DECOMPOSITION [T]
+
+For `x = a + b sqrt5` in `F*` write `conj` for the nontrivial
+automorphism, `N(x) = x conj(x)` for the norm with sign, and
+`rho(x) = x/conj(x)` for the multiplicative rapidity avatar; `rho` and
+`N` are multiplicative. Setting `t = a` and `s = b sqrt5`,
+
+```text
+t^2 - s^2 = a^2 - 5 b^2 = N(x)   with sign,
+```
+
+so `N` is the Minkowski invariant of the pair, `N > 0` timelike and
+`N < 0` spacelike. The F-rational null locus is empty, `a^2 = 5 b^2`
+forcing `a = b = 0` by irrationality of `sqrt5`, while the real
+completion keeps the full cone `t = +- s`; neither statement may be
+quoted without the other. The rest locus `eta = 0` is exactly `ab = 0`.
+The rational norm-one points are dense in `SO+(1,1)`, not discrete, by
+the parametrization `t -> ((1+5t^2)/(1-5t^2), 2t/(1-5t^2))`; the
+discrete rapidity lattice is supplied by the units alone,
+`O_F*/{+-1} = <phi>` with `eta(phi^n) = n log phi`. Since
+`phi^n = (L_n + F_n sqrt5)/2` with `L_n^2 - 5 F_n^2 = 4(-1)^n`, Lucas
+is always the time reading and `sqrt5` Fibonacci always the space
+reading in these coordinates, and the alternator `N(phi) = -1`
+exchanges the timelike and spacelike unit sheets. The positive-inverse
+coordinates of BOOST-READING-SPLIT above and the signed Galois
+coordinates here are bridged by `sigma-(phi^n) = (-1)^n phi^-n`: the
+parity swap there and the fixed Lucas time reading here are one
+identity read in two conventions, with no conflict. This forms
+ARITHMETIC-RAPIDITY-DECOMPOSITION [T], with written proof in
+`probes/P-ARITH-RAPIDITY-1/PREREG.md` and the pinned two-architecture
+verifier as its finite audit, evidenced by `probes/P-ARITH-RAPIDITY-1`.
+
+### SPLIT-PRIME-RAPIDITY-CLASS [T]
+
+For a rational prime `p` split in `F`, a prime ideal above it is
+generated, by class number one, by some `pi` with `N(pi) = +- p`. The
+class `r = [eta(pi)]` in `R/(log phi)Z` does not depend on the
+generator, any other being `+- phi^n pi`; conjugation negates it. The
+rational prime therefore carries canonically only the unordered pair
+
+```text
+R(p) = { r, -r }   in   ( R/(log phi)Z ) / {+-1},
+```
+
+and nothing finer without an extra choice. The class is decided exactly
+and without logarithms: `[eta(x)] = [eta(y)]` iff
+`rho(x)/rho(y) = +- phi^(2n)`, and membership of a norm-one integral
+`w` in `+- phi^(2Z)` is decided by `|Tr(w)| = L_(2m)`, strictly
+increasing in `|m|`, followed by exact comparison. Anchors: every inert
+`p` has `rho(p) = 1` and class zero exactly; the ramified generator
+`sqrt5` has `rho(sqrt5) = -1` and `eta` exactly `0`, not merely `0`
+modulo the lattice. This forms SPLIT-PRIME-RAPIDITY-CLASS [T], with
+written proof in `probes/P-ARITH-RAPIDITY-1/PREREG.md` and the pinned
+verifier as its finite audit, evidenced by `probes/P-ARITH-RAPIDITY-1`.
+
+### SPLIT-PRIME-RAPIDITY-CONSTRUCTION-AGREEMENT [C]
+
+For all 146 split `p < 2000`, two structurally independent
+constructions return a generator of norm `+p` in `Z[phi]`: a
+Diophantine Pell sweep on `a^2 - 5 b^2 = +- 4 p`, and a Euclidean gcd
+of `p` and `sqrt5 - r` at the canonical root `0 < r < p/2`, with every
+division step asserted norm-decreasing rather than assumed. The
+canonical unordered classes agree in every case, `R1(p) = R2(p)`. The
+oriented split is data and gates nothing: 70 pairs agree oriented and
+76 only after conjugation, as expected since the Pell sweep fixes no
+orientation; only the unordered `R(p)` is canonical. Byte-identical
+stdout on two architectures. This forms
+SPLIT-PRIME-RAPIDITY-CONSTRUCTION-AGREEMENT [C], evidenced by
+`probes/P-ARITH-RAPIDITY-1`.
 
 ## 11. The pentit ring and the magic boundary
 

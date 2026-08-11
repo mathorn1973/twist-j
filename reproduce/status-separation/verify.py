@@ -124,12 +124,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 129, "D": 41, "C": 26, "F": 13,
+    expected_counts = {"T": 131, "D": 41, "C": 27, "F": 13,
                        "O": 23, "H": 2}
     checks.append((
         "COUNTS",
-        "registry has 234 claims with the current status partition",
-        len(rows) == 234 and counts == expected_counts,
+        "registry has 237 claims with the current status partition",
+        len(rows) == 237 and counts == expected_counts,
     ))
 
     checks.append((
@@ -2018,6 +2018,67 @@ def run():
              "merging 1120 orbit distinctions",
              "no claim is made that the deciding function is itself a "
              "polynomial of degree two"),
+        ),
+    ))
+
+    rapidity_path = "probes/P-ARITH-RAPIDITY-1"
+    rapidity_digest = (
+        "e053d4950e368c7815f6df723b4dde316c6bb5a17d4f8d62f8fcee8eeb105fda"
+    )
+    rapidity_rows = {
+        "ARITHMETIC-RAPIDITY-DECOMPOSITION": ("T", "THEOREM"),
+        "SPLIT-PRIME-RAPIDITY-CLASS": ("T", "THEOREM"),
+        "SPLIT-PRIME-RAPIDITY-CONSTRUCTION-AGREEMENT": ("C", "COMPUTATION"),
+    }
+    checks.append((
+        "RAPIDITY",
+        "arithmetic rapidity rows split T and C exactly; no physical lift",
+        all(
+            has_status(index, claim, status)
+            and normative.get(claim, {}).get("item_type") == item_type
+            and normative.get(claim, {}).get("status") == status
+            and normative.get(claim, {}).get("layer") == "L1"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("canon_section")
+            == "10. Relativity as counting"
+            and index.get(claim, {}).get("evidence") == rapidity_path
+            and evidence.get(claim, {}).get("evidence_id") == "EV-" + claim
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("location") == rapidity_path
+            and evidence.get(claim, {}).get("sha256") == rapidity_digest
+            and evidence.get(claim, {}).get("hash_mode")
+            == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and all(row["item_id"] != claim for row in dependencies)
+            and all(row["depends_on"] != claim for row in dependencies)
+            and claim not in programs
+            and all(
+                row["owner_item_id"] != claim for row in gates.values()
+            )
+            for claim, (status, item_type) in rapidity_rows.items()
+        )
+        and scope_contains_all(
+            index, "ARITHMETIC-RAPIDITY-DECOMPOSITION",
+            ("t^2-s^2=N(x)",
+             "null locus is empty",
+             "dense, not discrete",
+             "Lucas always the time reading",
+             "with no conflict"),
+        )
+        and scope_contains_all(
+            index, "SPLIT-PRIME-RAPIDITY-CLASS",
+            ("R(p)={r,-r}",
+             "|Tr(w)|=L_(2m)",
+             "class zero exactly",
+             "not merely 0 modulo the lattice"),
+        )
+        and scope_contains_all(
+            index, "SPLIT-PRIME-RAPIDITY-CONSTRUCTION-AGREEMENT",
+            ("all 146 of them",
+             "R1(p)=R2(p) in every case",
+             "70 pairs agreeing oriented and 76 only after conjugation",
+             "computation grade"),
         ),
     ))
 
