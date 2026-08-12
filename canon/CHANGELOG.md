@@ -1,12 +1,54 @@
 # Canon changelog (public series)
 
 
-## Public Canon v45
+## Public Canon v46
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 239 claims; 0 T-LOCK, 133 T, 41 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
+Registry snapshot: 241 claims; 0 T-LOCK, 135 T, 41 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v46 registers two separately decided L1 theorems carried by the
+written proofs and the completed public probe
+P-SPLIT-RAPIDITY-QUANTITATIVE-SEPARATION-1. Its 18 exact gates pass with
+byte-identical stdout on x86_64 and aarch64. The finite audit checks the
+declared determinant, normalization, shell-count and breaker scopes; the
+written proofs, rather than the finite census, carry the universal
+quantifiers. No additional computation row is registered.
+
+SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION [T] gives every nonzero merged
+vector of oriented split-prime rapidities the exact lower bound
+`asinh(1/(2 sqrt(P(c))))`. All prime generators use the uniform convention
+`N(pi_p)=+p`. The nearest-unit determinant has an absolute, parity-resolved
+lattice: `|D_c|` lies in `sqrt(5) Z_(>0)` on the even branch and in
+`Z_(>0)` on the odd branch. Its sign is unrestricted; in particular the
+ordinary controls admit `-182 sqrt(5)`. The positive-norm `421/431` channel
+has only the retained controls `d_L=0.0011737895036417...` and
+`d_2L=0.4800380355559618...`. The theorem proves a sharp universal numerator,
+and no mixed-sign decimal comparison enters the row. It proves no asymptotic
+least-gap law or prime-distribution result.
+
+SPLIT-RAPIDITY-FEJER-GRAM-BOUND [T] applies the separation theorem to finite
+sets of distinct oriented split prime-power addresses and gives the exact
+Schur bound with its `asinh(1/(2X))` denominator. A singleton is handled
+separately by `A_K=[1]`, and the uniform asymptotic is precisely
+`(pi^2 L^2/3+e_X)(X/(K+1))^2` with `|e_X|<=C X^-2` for all sufficiently large
+`X`. The abstract Fejer characters receive no
+Hecke or external-mode identification. An integral phase multiplier obeys
+`P(nu c)=P(c)^|nu|`: the `491/1429` rungs `22` and `182` audit the ordinary
+channels, while the actual doubled-phase negative control is `(2,2)`, the
+translate `phi^-3 x^2`, trace `29`, and numerator `841`. It falsifies reuse of
+the unchanged `X` budget, not either registered theorem.
+
+No zeta, RH, zero-simplicity, K4, decoder, measure, physical, SI, or L2--L6
+claim is added. Every pre-existing status and all 25 live H/O rows remain
+unchanged.
+
+
+## Public Canon v45
+
+Registry snapshot at that release: 239 claims; 0 T-LOCK, 133 T, 41 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
+Reproduction witnesses: 22.
 
 Public Canon v45 registers two theorems about the rapidity classes of split
 rational primes, carried by the completed two-architecture public probe

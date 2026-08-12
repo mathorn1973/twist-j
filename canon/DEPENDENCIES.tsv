@@ -370,3 +370,8 @@ J-HARMONIC-SEAM	J-TENTH-ROOT	REQUIRES	the primitive tenth-root identity 1-J = -z
 SPLIT-PRIME-RAPIDITY-INDEPENDENCE	SPLIT-PRIME-RAPIDITY-CLASS	REQUIRES	the log-free class equivalence turns a vanishing combination into rho(x)=+-phi^(2n)
 REDUCED-SPLIT-GENERATOR-HEIGHT	SPLIT-PRIME-RAPIDITY-INDEPENDENCE	REQUIRES	the half-period endpoint is excluded because it is a two-torsion class
 REDUCED-SPLIT-GENERATOR-HEIGHT	SPLIT-PRIME-RAPIDITY-CLASS	REQUIRES	the reduction acts on generators of one ideal, which the class row shows differ by +-phi^n
+SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION	ARITHMETIC-RAPIDITY-DECOMPOSITION	REQUIRES	the signed norm, additive rapidity, exact interval identity, and discrete unit rapidity lattice supply the nearest-unit translate and determinant identity
+SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION	SPLIT-PRIME-RAPIDITY-CLASS	REQUIRES	the oriented generator class, its even-unit ambiguity at fixed positive norm, and the exact logarithm-free class equivalence fix the allowed gauge changes
+SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION	SPLIT-PRIME-RAPIDITY-INDEPENDENCE	REQUIRES	fractional-ideal independence excludes determinant zero, nearest-channel ties, and equality of the sum and difference gaps for distinct unordered classes
+SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION	REDUCED-SPLIT-GENERATOR-HEIGHT	REQUIRES	the unique open-half-period reduced lift supplies the canonical finite controls without promoting their decimal values into the exact proof
+SPLIT-RAPIDITY-FEJER-GRAM-BOUND	SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION	REQUIRES	merging each address difference gives a nonzero vector of product budget at most X^2 and hence the exact finite spacing bound

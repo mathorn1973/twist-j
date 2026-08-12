@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 239)
+        self.assertEqual(self.report.claims, 241)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 27, "D": 41, "F": 13, "H": 2, "O": 23, "T": 133},
+            {"C": 27, "D": 41, "F": 13, "H": 2, "O": 23, "T": 135},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 41,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 158,
+                "two-architecture": 160,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -46,6 +46,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
             len(self.report.transitive_architecture_dependents), 194
         )
         self.assertEqual(len(self.report.dependency_terminals), 22)
+        for claim in (
+            "SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION",
+            "SPLIT-RAPIDITY-FEJER-GRAM-BOUND",
+        ):
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+            self.assertNotIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+            self.assertNotIn(claim, self.report.dependency_terminals)
         self.assertNotIn(
             "KERNEL-Z6-SYNCHRONIZATION",
             self.report.direct_architecture_requires,
