@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v44
+# TWIST-J Public Canon v45
 
-**Release identity.** Public Canon v41. Normative authority and activation
+**Release identity.** Public Canon v45. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v41 also declares the discrete
+algebraic axiom is J. Public Canon v45 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v41 does not claim
+seed of the two algebraic projections. Public Canon v45 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v41 contains no such
+deriving the architecture from J; Public Canon v45 contains no such
 theorem.
 
 ---
@@ -2598,7 +2598,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v41. The fermionizer
+inherited naming clause is not part of Public Canon v45. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -3447,6 +3447,74 @@ orientation; only the unordered `R(p)` is canonical. Byte-identical
 stdout on two architectures. This forms
 SPLIT-PRIME-RAPIDITY-CONSTRUCTION-AGREEMENT [C], evidenced by
 `probes/P-ARITH-RAPIDITY-1`.
+
+### SPLIT-PRIME-RAPIDITY-INDEPENDENCE [T]
+
+Let `p_1, ..., p_k` be pairwise distinct rational primes, all split in
+`F`, let `P_i = (pi_i)` be a prime ideal above `p_i` with either
+orientation, and let `r_i = [eta(pi_i)]`. If integers `m_i` satisfy
+
+```text
+m_1 r_1 + ... + m_k r_k = 0   in   R/(log phi)Z,
+```
+
+then every `m_i = 0`. Equivalently, real lifts `t_1, ..., t_k` together
+with `log phi` are linearly independent over `Q`. The proof needs only
+what is already registered above. Put `x = prod pi_i^(m_i)`; since
+`rho` is multiplicative and `eta` additive, `[eta(x)] = 0`, so by
+SPLIT-PRIME-RAPIDITY-CLASS `rho(x) = +- phi^(2n)`. Passing to
+fractional ideals and using that `phi` is a unit,
+
+```text
+prod_i P_i^(m_i) conj(P_i)^(-m_i) = (1),
+```
+
+and the `2k` ideals `P_i`, `conj(P_i)` are pairwise distinct because
+each `p_i` splits and residue characteristics separate distinct
+indices. The group of fractional ideals is free abelian on the primes,
+so every exponent vanishes. Replacing `P_i` by `conj(P_i)` negates
+`t_i`, so no orientation is chosen anywhere. Carried consequences: no
+split class is torsion, the map `p -> m R(p)` is injective for every
+`m >= 1` and never the zero class, the integer-multiple orbit
+equidistributes in the `k`-torus by Weyl's criterion, and after one
+choice of orientation the classes generate a free abelian subgroup of
+infinite rank. The equidistribution statement concerns multiples of a
+fixed finite set of classes and says nothing about the distribution of
+primes as `p` grows. This forms SPLIT-PRIME-RAPIDITY-INDEPENDENCE [T],
+with written proof in `probes/P-SPLIT-PRIME-INDEPENDENCE-1/PREREG.md`
+and the pinned verifier as its finite audit, evidenced by
+`probes/P-SPLIT-PRIME-INDEPENDENCE-1`.
+
+### REDUCED-SPLIT-GENERATOR-HEIGHT [T]
+
+Among the generators `+- phi^n pi` of a prime ideal above a split `p`,
+exactly one up to sign and conjugation has
+
+```text
+eta in ( -(log phi)/2, (log phi)/2 ),
+```
+
+the endpoints being unattainable because `eta = +-(log phi)/2` means
+`2 r = 0`, which the preceding row forbids. For that reduced generator
+`|sigma+| |sigma-| = p` and `|eta| < (log phi)/2` give
+`min |sigma| > sqrt(p) phi^(-1/2)`, and the smallest split rational
+prime is `11`, so both embeddings exceed one; both comparisons are
+exact in `Z[phi]`. The generator is an algebraic integer of degree two
+with monic minimal polynomial, so its absolute logarithmic height is
+
+```text
+h(pi) = (1/2) log p,
+```
+
+and hence `h(pi/conj(pi)) <= log p`. The arithmetic content is the pair
+of exact embedding comparisons; the height value then follows from the
+definition of the height and the norm identity. The reduction is not
+cosmetic: without it the height is unbounded at fixed class, because
+`pi -> phi^a pi` multiplies the avatar by `(-1)^a phi^(2a)` and leaves
+the class unchanged. This forms REDUCED-SPLIT-GENERATOR-HEIGHT [T],
+with written proof in `probes/P-SPLIT-PRIME-INDEPENDENCE-1/PREREG.md`
+and the pinned verifier as its finite audit, evidenced by
+`probes/P-SPLIT-PRIME-INDEPENDENCE-1`.
 
 ## 11. The pentit ring and the magic boundary
 

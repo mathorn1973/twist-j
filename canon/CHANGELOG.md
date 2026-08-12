@@ -1,12 +1,59 @@
 # Canon changelog (public series)
 
 
-## Public Canon v44
+## Public Canon v45
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 237 claims; 0 T-LOCK, 131 T, 41 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
+Registry snapshot: 239 claims; 0 T-LOCK, 133 T, 41 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v45 registers two theorems about the rapidity classes of split
+rational primes, carried by the completed two-architecture public probe
+P-SPLIT-PRIME-INDEPENDENCE-1 (13 of 13 checks, byte-identical stdout on
+aarch64 and x86_64), bundle SHA-256
+`8c293da2f9b3af5d96e20fea472be19676d18328350bb2c0800ed68de2e7ffbf`. Both rows
+are theorems with written algebraic proofs embedded in the probe
+preregistration and audited at finite scope by the pinned verifier. Neither
+row adds any analytic, transcendence or ordering content, and the finite audit
+is deliberately not registered as a separate computation row because it is
+subsumed by the two theorems.
+
+SPLIT-PRIME-RAPIDITY-INDEPENDENCE [T] states that for pairwise distinct split
+rational primes the oriented rapidity classes are linearly independent over
+the integers modulo the class of the fundamental unit. The proof consumes only
+the log-free class equivalence already registered in v44 and unique
+factorisation of fractional ideals. It strengthens the v44 arc from a class
+that is well defined to a family of classes that is a genuine coordinate
+system: no split class is torsion, the multiple map is injective for every
+integer, the integer-multiple orbit of any finite family equidistributes in
+the torus, and after one choice of orientation the classes generate a free
+abelian subgroup of infinite rank. The equidistribution consequence concerns
+multiples of a fixed finite set and is explicitly not a statement about the
+distribution of primes.
+
+REDUCED-SPLIT-GENERATOR-HEIGHT [T] states that the generator reduced into the
+open fundamental half-period has both real embeddings above one, hence
+absolute logarithmic height exactly one half the logarithm of the prime. The
+half-period endpoint is unattainable precisely because it would be a torsion
+class, so the reduction is well defined by the preceding row. Without the
+reduction the height is unbounded at fixed class, which is why the clause is
+stated for the reduced representative and audited against an unreduced one.
+
+The required public claim issue was not opened before the pin. The executing
+session had repository push access but no API credential, so the pin was
+pushed before first execution without the issue required by policy. That
+exception remains disclosed in the probe preregistration and run record.
+Issue #347 is the post-pin public claim record opened before this fold, and
+issue #348 is the release authority. Neither record rewrites the chronology
+or changes the pinned preregistration or verifier. Three record corrections
+made while the probe was in flight also remain disclosed; none changed those
+pinned byte streams.
+
+## Public Canon v44
+
+Registry snapshot at that release: 237 claims; 0 T-LOCK, 131 T, 41 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
+Reproduction witnesses: 22.
 
 Public Canon v44 registers the arithmetic rapidity arc under the release
 authority of issue #344, the claim lock issue #342, and the completed

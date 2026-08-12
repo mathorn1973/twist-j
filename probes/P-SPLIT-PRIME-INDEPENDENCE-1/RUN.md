@@ -2,10 +2,10 @@
 
 Date: 2026-08-12
 
-Status: local reproduction record. The required GitHub x86_64 check is the
-public second leg of the two-architecture gate and is not represented here;
-its structured record is added once that check has run, before the fold is
-requested. This record changes no Canon status.
+Status: completed two-architecture reproduction record. The required GitHub
+x86_64 check is the public second leg of the gate and is recorded below from
+the successful policy workflow for PR #346. This record changes no Canon
+status by itself.
 
 ## Pin audit
 
@@ -23,7 +23,7 @@ verifier_bytes: 12883
 verifier_blob: 26f38626bb4cc9123e9d59554559c28ea07f374f
 ```
 
-## Accepted run
+## Local formal leg
 
 The flat fields below are the machine-readable record required by
 `tools/check_verifier.py`.
@@ -75,10 +75,44 @@ aarch64, Debian GNU/Linux 13 (trixie), CPython 3.13.5
 ```
 
 The second of those exercises a different CPython minor series from the
-accepted run, which is the series the public check uses, so the recorded
-output is known not to depend on the interpreter version. Together with the
-accepted aarch64 leg this gives two architectures and three interpreters
-locally. None of that replaces the required GitHub check.
+accepted run, so the recorded output is known not to depend on that
+interpreter version. The public check uses CPython 3.12.13, recorded below.
+Together with the accepted aarch64 leg, the local reproductions cover two
+architectures and three interpreters. None of that replaces the required
+GitHub check.
+
+## Required GitHub leg
+
+```text
+status: PASS
+workflow_run_id: 31578587979
+job_id: 94056240731
+job_url: https://github.com/mathorn1973/twist-j/actions/runs/31578587979/job/94056240731
+check_name: architecture-x86_64
+event: pull_request
+tested_head_commit: 11cb272fd60c31b8f445f311317cf5790d5cfa87
+checkout_merge_commit: 8e359b75ee488010e67adc6dee5bd427dab17ba5
+base_commit: 1417b533944e85106901079cc73ae7a0c3c42dc2
+platform: Ubuntu 24.04.4 LTS GitHub-hosted runner image 20260810.271.1
+architecture: x86_64
+python: Python 3.12.13
+check_step_log_start_utc: 2026-08-12T08:30:03.1723966Z
+verify_pass_log_utc: 2026-08-12T08:30:04.6794187Z
+verifier_sha256: 2d45231d96de5d8e8a92c4d3462b1fa7f45189e3b3dafd48b55edfa1f45b28c7
+stdout_sha256: 13c8a6f413655cefde8f72a81f6dbe818e4e57432a6b081f9620f9dbc4188399
+stdout_bytes: 1159
+stdout_lines: 23
+exit_code: 0
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+byte_identity: PASS
+replay: PASS
+verdict: VERIFY PASS
+```
+
+The required clean GitHub x86_64 job reproduced the pinned verifier and
+matched `EXPECTED.txt` byte for byte. Together with the accepted aarch64 leg,
+this completes the public two-architecture gate before the Canon fold.
 
 ## Order of operations, for the audit trail
 
@@ -108,15 +142,15 @@ locally. None of that replaces the required GitHub check.
 2  that draft named the accepted leg's platform as Debian 13. It ran on
    Debian 12; the field above is the corrected value, and Debian 13 appears
    only where it belongs, among the additional reproductions.
-3  a second draft used the structured leg headings. Those headings require a
-   completed GitHub leg, which cannot exist before the public check has run,
-   so the flat form is used until that record exists.
+3  a second draft used the structured leg headings before a completed GitHub
+   leg existed, so it was temporarily kept flat. After the PR #346 check ran,
+   its completed public leg was recorded above before this fold.
 ```
 
-Neither correction touches the pinned bundle, which is unchanged since the
-pin commit.
+None of these corrections changes the preregistration or verifier bytes pinned
+at the pin commit; the post-run evidence bundle records them transparently.
 
-The public claim issue required by POLICY step 2 could not be opened from the
-executing session, which had push access by key but no API credential. The
-disclosure stands in the preregistration under ISSUE and the pin itself,
-pushed before first execution, is the operative public claim.
+The public claim issue required by `AGENTS.md` startup step 5 could not be
+opened from the executing session, which had push access by key but no API
+credential. The disclosure stands in the preregistration under ISSUE and the
+pin itself, pushed before first execution, is the operative public claim.
