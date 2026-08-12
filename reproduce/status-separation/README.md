@@ -9,7 +9,7 @@ Canon fold; the theorem/dictionary boundary checks stay structural.
 The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/GATES.tsv`,
 `canon/FRONTIER_PROGRAMS.tsv`, and `canon/CORE.md`, uses the Python standard
-library, and emits deterministic text. Its thirty checks cover the current
+library, and emits deterministic text. Its thirty-one checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -57,7 +57,7 @@ with its public two-architecture probe, no dependencies, collision-free
 lift; and keep TM-MULTIPLICATION-CARRY-DEFECT as a standalone L1 sibling with
 its own two-architecture probe, exact unit-carry, Boolean-parity, semiprime,
 prime-square, and squarefree-cube clauses, no dependency on its sibling, and
-no collision with other carry objects or physical lift. The final check keeps
+no collision with other carry objects or physical lift. A later check keeps
 the seven TM-HANKEL divisor-block rows at their exact epistemic split, four
 theorems, one falsified universal transfer with its fired witness
 147965 = 5.101.293, and two finite classifications at computation grade, all
@@ -70,7 +70,14 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 29/29 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 31/31 ALL PASS`,
 exit 0, and empty stderr.
 
-The thirtieth check pins the arithmetic rapidity fold: the decomposition and split-prime class rows at T and the finite construction-agreement row at C, all at L1 in section 10 with the pinned probe bundle as their only evidence, no dependency, gate, or program rows, and no physical lift.
+The thirtieth check pins the arithmetic rapidity fold: the decomposition and
+split-prime class rows at T and the finite construction-agreement row at C,
+all at L1 in section 10 with the pinned probe bundle as their only evidence,
+no dependency, gate, or program rows, and no physical lift. The thirty-first
+check pins the split-prime independence fold: both new rows remain theorems at
+L1 in section 10, use the registered dependency chain and the completed
+two-architecture probe, own no gate or program row, and add no analytic,
+ordering, physical, or higher-layer lift.

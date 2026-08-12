@@ -367,3 +367,6 @@ CM-ALTERNATING-PENCIL	J-STEP	REQUIRES	multiplication by J is the registered inte
 CM-ALTERNATING-PENCIL	DEF-ACTION-LAYERS	REQUIRES	the theorem is confined to L1 exact algebra and creates no state, stream, decoder, measure, interpretation, or lift to L2-L6
 J-HARMONIC-SEAM	J-GOLDEN-BRIDGE	REQUIRES	the exact identities J phi = zeta_5 and phi^-1 = phi-1 supply the algebraic conversion between the contracting Fibonacci ladder, J, and the free-unit landing
 J-HARMONIC-SEAM	J-TENTH-ROOT	REQUIRES	the primitive tenth-root identity 1-J = -zeta_5^2 fixes the torsion landing and its principal phase representative
+SPLIT-PRIME-RAPIDITY-INDEPENDENCE	SPLIT-PRIME-RAPIDITY-CLASS	REQUIRES	the log-free class equivalence turns a vanishing combination into rho(x)=+-phi^(2n)
+REDUCED-SPLIT-GENERATOR-HEIGHT	SPLIT-PRIME-RAPIDITY-INDEPENDENCE	REQUIRES	the half-period endpoint is excluded because it is a two-torsion class
+REDUCED-SPLIT-GENERATOR-HEIGHT	SPLIT-PRIME-RAPIDITY-CLASS	REQUIRES	the reduction acts on generators of one ideal, which the class row shows differ by +-phi^n

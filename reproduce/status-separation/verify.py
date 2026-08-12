@@ -105,6 +105,12 @@ def scope_sha256(index, claim_id):
     return hashlib.sha256(index[claim_id]["scope"].encode("utf-8")).hexdigest()
 
 
+INDEPENDENCE_ROWS = (
+    "SPLIT-PRIME-RAPIDITY-INDEPENDENCE",
+    "REDUCED-SPLIT-GENERATOR-HEIGHT",
+)
+
+
 def run():
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(newline="\n")
@@ -124,12 +130,12 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 131, "D": 41, "C": 27, "F": 13,
+    expected_counts = {"T": 133, "D": 41, "C": 27, "F": 13,
                        "O": 23, "H": 2}
     checks.append((
         "COUNTS",
-        "registry has 237 claims with the current status partition",
-        len(rows) == 237 and counts == expected_counts,
+        "registry has 239 claims with the current status partition",
+        len(rows) == 239 and counts == expected_counts,
     ))
 
     checks.append((
@@ -2051,7 +2057,11 @@ def run():
             and evidence.get(claim, {}).get("architecture_requirement")
             == "two-architecture"
             and all(row["item_id"] != claim for row in dependencies)
-            and all(row["depends_on"] != claim for row in dependencies)
+            and all(
+                row["item_id"] in INDEPENDENCE_ROWS
+                for row in dependencies
+                if row["depends_on"] == claim
+            )
             and claim not in programs
             and all(
                 row["owner_item_id"] != claim for row in gates.values()
@@ -2079,6 +2089,57 @@ def run():
              "R1(p)=R2(p) in every case",
              "70 pairs agreeing oriented and 76 only after conjugation",
              "computation grade"),
+        ),
+    ))
+
+    independence_path = "probes/P-SPLIT-PRIME-INDEPENDENCE-1"
+    independence_digest = (
+        "8c293da2f9b3af5d96e20fea472be19676d18328350bb2c0800ed68de2e7ffbf"
+    )
+    independence_rows = {
+        "SPLIT-PRIME-RAPIDITY-INDEPENDENCE": ("T", "THEOREM"),
+        "REDUCED-SPLIT-GENERATOR-HEIGHT": ("T", "THEOREM"),
+    }
+    checks.append((
+        "INDEPENDENCE",
+        "split-prime independence rows stay exact L1 arithmetic with no "
+        "analytic or ordering lift",
+        all(
+            has_status(index, claim, status)
+            and normative.get(claim, {}).get("item_type") == item_type
+            and normative.get(claim, {}).get("status") == status
+            and normative.get(claim, {}).get("layer") == "L1"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("canon_section")
+            == "10. Relativity as counting"
+            and index.get(claim, {}).get("evidence") == independence_path
+            and evidence.get(claim, {}).get("evidence_id") == "EV-" + claim
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("location") == independence_path
+            and evidence.get(claim, {}).get("sha256") == independence_digest
+            and evidence.get(claim, {}).get("hash_mode")
+            == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and claim not in programs
+            and all(
+                row["owner_item_id"] != claim for row in gates.values()
+            )
+            for claim, (status, item_type) in independence_rows.items()
+        )
+        and scope_contains_all(
+            index, "SPLIT-PRIME-RAPIDITY-INDEPENDENCE",
+            ("forces every m_i=0",
+             "unique factorisation of fractional ideals",
+             "the statement is orientation-free",
+             "NOT about the distribution of primes as p grows"),
+        )
+        and scope_contains_all(
+            index, "REDUCED-SPLIT-GENERATOR-HEIGHT",
+            ("open fundamental half-period",
+             "both real embeddings exceed one",
+             "h(pi) = (1/2) log p",
+             "the height is unbounded at fixed class"),
         ),
     ))
 
