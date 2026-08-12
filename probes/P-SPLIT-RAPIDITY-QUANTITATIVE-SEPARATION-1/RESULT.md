@@ -8,7 +8,7 @@ probe_status: SURVIVED
 checks: 18 of 18 PASS
 fired_falsifiers: none
 stop_conditions: none
-reproduction_status: PENDING_REQUIRED_GITHUB_LEG
+reproduction_status: PASS
 ```
 
 The one post-pin local execution returned 0, wrote no stderr, and reproduced
@@ -66,6 +66,20 @@ controls. The doubled-phase normalization falsifier is the effective vector
 that the unchanged `X` budget cannot be reused. The corrected integral phase
 budget is `P(nu c)=P(c)^|nu|`.
 
+## Public reproduction and rows earned
+
+The required GitHub aarch64 job reproduced the pinned verifier and the same
+stdout SHA-256 byte for byte. With the accepted local x86_64 leg, the public
+two-architecture reproduction is complete. The written proofs and their
+finite audit support these separately registered theorem rows:
+
+```text
+SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION  T  10. Relativity as counting
+SPLIT-RAPIDITY-FEJER-GRAM-BOUND               T  10. Relativity as counting
+```
+
+The finite audit is not proposed as an additional `C` row.
+
 ## Firewall
 
 This result introduces no inert-prime, ramified-prime, Hecke, completed-zeta,
@@ -75,5 +89,5 @@ tower. A provenance or architecture mismatch is integrity STOP, not a
 scientific falsifier.
 
 No Canon, registry, frontier, changelog, hash, release, or public status is
-changed by this probe result. The two-architecture evidence remains pending
-until the required GitHub jobs reproduce the pinned bytes.
+changed by this probe result. The required clean GitHub aarch64 job and the
+accepted local x86_64 leg reproduced the pinned bytes on two architectures.
