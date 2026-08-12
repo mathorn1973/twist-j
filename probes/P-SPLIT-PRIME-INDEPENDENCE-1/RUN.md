@@ -1,6 +1,17 @@
-# RUN P-SPLIT-PRIME-INDEPENDENCE-1
+# P-SPLIT-PRIME-INDEPENDENCE-1 run record
 
-## Immutable pin
+Date: 2026-08-12
+
+Status: local reproduction record. The required GitHub x86_64 check is the
+public second leg of the two-architecture gate and is not represented here;
+its structured record is added once that check has run, before the fold is
+requested. This record changes no Canon status.
+
+## Pin audit
+
+The preregistration and the verifier were pushed to the probe branch before
+any execution, and the public readback matched the pin commit, both byte
+streams, both SHA-256 values and both Git blob identities.
 
 ```text
 pin_commit: 9aed10db8985a0d15569bffcfd2b8f4477102ce7
@@ -12,26 +23,13 @@ verifier_bytes: 12883
 verifier_blob: 26f38626bb4cc9123e9d59554559c28ea07f374f
 ```
 
-The preregistration and the verifier were pushed to the probe branch before
-any execution, and the public readback matched the pin commit, both byte
-streams, both SHA-256 values and both Git blob identities.
+## Accepted run
 
-## Command
-
-```text
-LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC \
-  python3 probes/P-SPLIT-PRIME-INDEPENDENCE-1/verify.py
-```
-
-Machine-readable command field:
+The flat fields below are the machine-readable record required by
+`tools/check_verifier.py`.
 
 ```text
 command: python3 probes/P-SPLIT-PRIME-INDEPENDENCE-1/verify.py
-```
-
-## Local formal leg
-
-```text
 platform: Debian GNU/Linux 12 (bookworm)
 architecture: aarch64
 python: Python 3.11.2
@@ -52,24 +50,35 @@ checks: 13
 verdict: SURVIVED
 ```
 
+Full environment on every leg:
+
+```text
+LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC
+```
+
 The checkout was clean immediately before and after the execution.
-`EXPECTED.txt` is the exact raw stdout, LF line endings, final LF present,
-no carriage return anywhere. Stderr was empty. The formal leg ran on a
-user-controlled connected runner and its private machine nickname is
-intentionally omitted from the public record.
+`EXPECTED.txt` is the exact raw stdout, LF line endings, final LF present, no
+carriage return anywhere. Stderr was empty. The leg ran on a user-controlled
+connected runner and its private machine nickname is intentionally omitted
+from the public record.
 
-A second architecture was exercised locally in addition to the leg above,
-from a fresh clone of the pinned branch rather than from the working tree,
-on x86_64 under Ubuntu 24.04.4 LTS with CPython 3.11.15. It reproduced the
-same stdout SHA-256, the same 1159 bytes and 23 lines, exit code zero and an
-empty stderr, so the two local architectures are byte-identical. That
-confirmation is recorded in prose only; the required second leg of the
-public gate is the GitHub x86_64 check below.
+## Additional local reproductions, recorded in prose
 
-## Required GitHub leg
+Two further reproductions were run from a fresh clone of the pinned branch
+rather than from a working tree, and both matched the accepted stdout
+SHA-256 exactly, with the same 1159 bytes and 23 lines, exit code zero and an
+empty stderr.
 
-Pending. This section is completed from the workflow run that the pull
-request triggers, and the merge is not requested before it reports success.
+```text
+x86_64, Ubuntu 24.04.4 LTS, CPython 3.11.15
+aarch64, Debian GNU/Linux 13 (trixie), CPython 3.13.5
+```
+
+The second of those exercises a different CPython minor series from the
+accepted run, which is the series the public check uses, so the recorded
+output is known not to depend on the interpreter version. Together with the
+accepted aarch64 leg this gives two architectures and three interpreters
+locally. None of that replaces the required GitHub check.
 
 ## Order of operations, for the audit trail
 
@@ -84,18 +93,28 @@ request triggers, and the merge is not requested before it reports success.
 4  security audit of both staged files: no secrets, no keys, no private
    paths, no hostnames, no machine nicknames, ASCII text only
 5  PIN: branch pushed with both files, BEFORE any execution
-6  local formal leg executed, second architecture reproduced from a fresh
-   clone of the pinned branch
+6  accepted leg executed; two further architectures and interpreters
+   reproduced from fresh clones of the pinned branch
 7  EXPECTED.txt, RUN.md and RESULT.md written from the recorded output
 ```
 
-Two record corrections are disclosed rather than repaired in silence. The
-first machine-readable draft of this file repeated the singleton fields
-across two leg blocks and was rejected by the house checker; it has been
-rewritten into the sectioned form and no measured value changed. The same
-draft named the local platform as Debian 13, which was wrong; the leg ran on
-Debian 12 and the field above is the corrected value. Neither correction
-touches the pinned bundle, which is unchanged since the pin commit.
+## Record corrections, disclosed rather than repaired in silence
+
+```text
+1  the first draft of this file carried two flat field blocks, one per
+   architecture, which repeats the singleton fields pin_commit and command;
+   the house checker rejected it and it was rewritten to a single accepted
+   leg with the further reproductions in prose. No measured value changed.
+2  that draft named the accepted leg's platform as Debian 13. It ran on
+   Debian 12; the field above is the corrected value, and Debian 13 appears
+   only where it belongs, among the additional reproductions.
+3  a second draft used the structured leg headings. Those headings require a
+   completed GitHub leg, which cannot exist before the public check has run,
+   so the flat form is used until that record exists.
+```
+
+Neither correction touches the pinned bundle, which is unchanged since the
+pin commit.
 
 The public claim issue required by POLICY step 2 could not be opened from the
 executing session, which had push access by key but no API credential. The
