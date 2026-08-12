@@ -18,9 +18,11 @@ REGISTRY = ROOT / "canon" / "REGISTRY.tsv"
 NORMATIVE = ROOT / "canon" / "NORMATIVE.tsv"
 DEPENDENCIES = ROOT / "canon" / "DEPENDENCIES.tsv"
 EVIDENCE = ROOT / "canon" / "EVIDENCE.tsv"
+HISTORY = ROOT / "canon" / "HISTORY.tsv"
 GATES = ROOT / "canon" / "GATES.tsv"
 FRONTIER_PROGRAMS = ROOT / "canon" / "FRONTIER_PROGRAMS.tsv"
 CORE = ROOT / "canon" / "CORE.md"
+REPRODUCE = ROOT / "reproduce"
 
 
 def load_table(path):
@@ -33,6 +35,7 @@ def load_rows():
     normative_rows = load_table(NORMATIVE)
     dependencies = load_table(DEPENDENCIES)
     evidence_rows = load_table(EVIDENCE)
+    history_rows = load_table(HISTORY)
     gate_rows = load_table(GATES)
     program_rows = load_table(FRONTIER_PROGRAMS)
     return (
@@ -41,6 +44,7 @@ def load_rows():
         {row["item_id"]: row for row in normative_rows},
         dependencies,
         {row["claim_id"]: row for row in evidence_rows},
+        history_rows,
         {row["gate_id"]: row for row in gate_rows},
         {row["claim_id"]: row for row in program_rows},
     )
@@ -108,6 +112,8 @@ def scope_sha256(index, claim_id):
 INDEPENDENCE_ROWS = (
     "SPLIT-PRIME-RAPIDITY-INDEPENDENCE",
     "REDUCED-SPLIT-GENERATOR-HEIGHT",
+    "SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION",
+    "SPLIT-RAPIDITY-FEJER-GRAM-BOUND",
 )
 
 
@@ -121,6 +127,7 @@ def run():
         normative,
         dependencies,
         evidence,
+        history,
         gates,
         programs,
     ) = load_rows()
@@ -130,12 +137,25 @@ def run():
     counts = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    expected_counts = {"T": 133, "D": 41, "C": 27, "F": 13,
+    two_architecture = sum(
+        row["architecture_requirement"] == "two-architecture"
+        for row in evidence.values()
+    )
+    expected_counts = {"T": 135, "D": 41, "C": 27, "F": 13,
                        "O": 23, "H": 2}
     checks.append((
         "COUNTS",
-        "registry has 239 claims with the current status partition",
-        len(rows) == 239 and counts == expected_counts,
+        "registry and companion-ledger counts match Public Canon v46",
+        len(rows) == 241
+        and counts == expected_counts
+        and len(normative) == 257
+        and len(dependencies) == 376
+        and len(evidence) == 241
+        and two_architecture == 160
+        and len(history) == 755
+        and len(gates) == 10
+        and len({row["program_id"] for row in programs.values()}) == 7
+        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 22,
     ))
 
     checks.append((
@@ -2140,6 +2160,97 @@ def run():
              "both real embeddings exceed one",
              "h(pi) = (1/2) log p",
              "the height is unbounded at fixed class"),
+        ),
+    ))
+
+    separation = "SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION"
+    fejer = "SPLIT-RAPIDITY-FEJER-GRAM-BOUND"
+    separation_path = "probes/P-SPLIT-RAPIDITY-QUANTITATIVE-SEPARATION-1"
+    separation_digest = (
+        "ea59451558e513f16ee471b3bf9ccddfa0bc6e1cabbed70d27809cedfeb25ecb"
+    )
+    separation_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == separation
+    }
+    fejer_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == fejer
+    }
+    checks.append((
+        "SEPARATION",
+        "quantitative separation and finite Fejer rows stay exact, distinct, and normalization-fenced",
+        all(
+            has_status(index, claim, "T")
+            and normative.get(claim, {}).get("item_type") == "THEOREM"
+            and normative.get(claim, {}).get("status") == "T"
+            and normative.get(claim, {}).get("layer") == "L1"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("canon_section")
+            == "10. Relativity as counting"
+            and index.get(claim, {}).get("evidence") == separation_path
+            and evidence.get(claim, {}).get("evidence_id") == "EV-" + claim
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("location") == separation_path
+            and evidence.get(claim, {}).get("sha256") == separation_digest
+            and evidence.get(claim, {}).get("hash_mode")
+            == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and claim not in programs
+            and all(row["owner_item_id"] != claim for row in gates.values())
+            for claim in (separation, fejer)
+        )
+        and evidence[separation]["sha256"] == evidence[fejer]["sha256"]
+        and separation_dependencies == {
+            ("ARITHMETIC-RAPIDITY-DECOMPOSITION", "REQUIRES"),
+            ("SPLIT-PRIME-RAPIDITY-CLASS", "REQUIRES"),
+            ("SPLIT-PRIME-RAPIDITY-INDEPENDENCE", "REQUIRES"),
+            ("REDUCED-SPLIT-GENERATOR-HEIGHT", "REQUIRES"),
+        }
+        and fejer_dependencies == {(separation, "REQUIRES")}
+        and scope_contains_all(
+            index, separation,
+            ("finite nonzero integer vector c=(c_p)",
+             "signed norm +p",
+             "|D_c| in sqrt5 Z_{>0} for even n",
+             "|D_c| in Z_{>0} for odd n",
+             "d_L=0.0011737895036417",
+             "d_2L=0.4800380355559618",
+             "valid determinant may be negative",
+             "selects no global orientation or parity sheet",
+             "minimizing signed channel is unique up to simultaneous conjugation"),
+        )
+        and all(
+            phrase.lower() in index[separation]["falsifier"].lower()
+            for phrase in (
+                "|D_c| in sqrt5 Z_{>0} for even n",
+                "|D_c| in Z_{>0} for odd n",
+                "negative D_c",
+                "-182sqrt5",
+            )
+        )
+        and scope_contains_all(
+            index, fejer,
+            ("finite set A of distinct oriented split prime-power addresses",
+             "delta_A>=asinh(1/(2X))",
+             "character chi_h(a)",
+             "ordinary signed-channel rungs are |b|=22 and |b|=182",
+             "doubled-phase falsifier is the effective vector (2,2)",
+             "phi^-3 x^2",
+             "trace 29",
+             "numerator 841",
+             "correct P(c)^2 budget",
+             "no Hecke"),
+        )
+        and all(
+            phrase.lower() in index[fejer]["falsifier"].lower()
+            for phrase in (
+                "two distinct declared finite addresses collide",
+                "operator-norm bound",
+                "singleton Gram matrix differs from [1]",
+                "normalization STOP",
+            )
         ),
     ))
 

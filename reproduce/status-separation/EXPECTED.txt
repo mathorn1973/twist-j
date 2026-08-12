@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry has 239 claims with the current status partition
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v46
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -32,5 +32,6 @@ PASS 28 TM-MUL-CARRY multiplication carry defect stays standalone L1 arithmetic 
 PASS 29 TM-HANKEL  Hankel divisor block splits T, F, and C exactly; no physical lift
 PASS 30 RAPIDITY   arithmetic rapidity rows split T and C exactly; no physical lift
 PASS 31 INDEPENDENCE split-prime independence rows stay exact L1 arithmetic with no analytic or ordering lift
+PASS 32 SEPARATION quantitative separation and finite Fejer rows stay exact, distinct, and normalization-fenced
 
-RESULT 31/31 ALL PASS
+RESULT 32/32 ALL PASS

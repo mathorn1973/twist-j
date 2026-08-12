@@ -7,9 +7,10 @@ exact rows remain at `T`, while physical readings are carried by explicit
 Canon fold; the theorem/dictionary boundary checks stay structural.
 
 The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
-`canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/GATES.tsv`,
-`canon/FRONTIER_PROGRAMS.tsv`, and `canon/CORE.md`, uses the Python standard
-library, and emits deterministic text. Its thirty-one checks cover the current
+`canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
+`canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
+minimal-reproduction directory inventory, uses the Python standard library,
+and emits deterministic text. Its thirty-two checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -70,7 +71,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 31/31 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 32/32 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -81,3 +82,12 @@ check pins the split-prime independence fold: both new rows remain theorems at
 L1 in section 10, use the registered dependency chain and the completed
 two-architecture probe, own no gate or program row, and add no analytic,
 ordering, physical, or higher-layer lift.
+
+The thirty-second check pins the v46 separation pair. It requires the
+quantitative determinant theorem and finite Fejer corollary to remain distinct
+L1 theorem rows on the shared two-architecture probe, with exactly their five
+declared dependency edges and no gate or frontier-program ownership. It also
+locks the positive-norm `421/431` controls, the parity-sensitive absolute
+determinant lattices, acceptance of negative determinants, and the separation
+of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
+numerator-841 doubled-phase normalization falsifier with product budget `P^2`.

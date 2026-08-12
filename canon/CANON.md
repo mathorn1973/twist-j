@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v45
+# TWIST-J Public Canon v46
 
-**Release identity.** Public Canon v45. Normative authority and activation
+**Release identity.** Public Canon v46. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v45 also declares the discrete
+algebraic axiom is J. Public Canon v46 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v45 does not claim
+seed of the two algebraic projections. Public Canon v46 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v45 contains no such
+deriving the architecture from J; Public Canon v46 contains no such
 theorem.
 
 ---
@@ -2598,7 +2598,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v45. The fermionizer
+inherited naming clause is not part of Public Canon v46. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -3515,6 +3515,261 @@ the class unchanged. This forms REDUCED-SPLIT-GENERATOR-HEIGHT [T],
 with written proof in `probes/P-SPLIT-PRIME-INDEPENDENCE-1/PREREG.md`
 and the pinned verifier as its finite audit, evidenced by
 `probes/P-SPLIT-PRIME-INDEPENDENCE-1`.
+
+### SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION [T]
+
+Put `L = log phi`. For every split rational prime `p`, fix an oriented
+prime ideal `P_p` above `p` and a generator satisfying
+
+```text
+(pi_p) = P_p,                     N(pi_p) = +p,
+eta_p = (1/2) log(pi_p/conj(pi_p)).
+```
+
+The common sign is chosen so that both real embeddings of `pi_p` are
+positive. This positive-norm convention applies uniformly to every generator
+in this row. Given any finite list `(p_j,epsilon_j,a_j)`, with
+`epsilon_j` in `{+1,-1}` and `a_j` integral, first merge repetitions and
+conjugated orientations over each rational prime:
+
+```text
+c_p = sum_(j:p_j=p) epsilon_j a_j.
+```
+
+Delete the zero coefficients. For every resulting nonzero finite vector `c`,
+set
+
+```text
+P(c) = prod_p p^|c_p|,            S = sum_p c_p eta_p.
+```
+
+Then
+
+```text
+dist(S,L Z) >= asinh(1/(2 sqrt(P(c)))).
+```
+
+More precisely, let `n` be the unique nearest integer to `S/L` and put
+`delta = S-nL`. The parity refinement is
+
+```text
+n even: |delta| >= asinh(sqrt(5)/(2 sqrt(P(c)))),
+n odd:  |delta| >= asinh(1/(2 sqrt(P(c)))).
+```
+
+In the odd branch, `P(c) = -1 (mod 5)` improves the numerator `1` to `2`.
+To prove the result, form the totally positive element
+
+```text
+x = prod_(c_p>0) pi_p^c_p prod_(c_p<0) conj(pi_p)^(-c_p),
+y = phi^(-n) x,                   D_c = y-(-1)^n conj(y).
+```
+
+Its embeddings give
+
+```text
+D_c = 2 sqrt(P(c)) sinh(delta),
+sinh^2(dist(S,L Z)) = D_c^2/(4P(c)).
+```
+
+Writing `y=a+b phi` and `T=Tr(y)=2a+b`, one has `D_c=b sqrt(5)` when
+`n` is even and `D_c=T` when `n` is odd. The determinant cannot vanish:
+if it did, `x/conj(x)=phi^(2n)`, but direct fractional-ideal valuation gives
+
+```text
+v_(P_p)((x/conj(x))) = c_p,
+```
+
+whereas the unit on the right has valuation zero at every `P_p`. Thus every
+`c_p` would vanish. Consequently the exact determinant lattices are
+
+```text
+n even: |D_c| in sqrt(5) Z_(>0),
+n odd:  |D_c| in Z_(>0).
+```
+
+The same argument applied to `2c` excludes a nearest-lattice tie. The norm
+identities
+
+```text
+T^2-5b^2 = +4P(c)   for even n,
+T^2-5b^2 = -4P(c)   for odd n
+```
+
+give the displayed bounds and the odd congruence refinement. Positive-norm
+even-unit gauge changes on a fixed oriented ideal preserve the parity branch,
+`D_c^2/P(c)`, and the metric; simultaneous orientation reversal and
+coefficient reversal also preserve it. No global orientation of the rational
+split primes is selected.
+
+For two distinct public unordered split-prime classes, the minimizing signed
+channel is unique up to simultaneous conjugation. Equality of the sum and
+difference gaps would make twice one class vanish, contradicting
+SPLIT-PRIME-RAPIDITY-INDEPENDENCE [T]; this still selects no global
+orientation.
+
+The universal numerator `1` is sharp, but no asymptotic least-gap law is
+asserted. The positive-norm lifts
+
+```text
+pi_11=3+phi,                       pi_41=6+phi,
+phi^-1 pi_11 pi_41=-9+19phi,
+
+pi_421=19+4phi,                   pi_431=19+5phi,
+phi^-1 pi_421 pi_431=-190+381phi
+```
+
+give norm-minus-`451` and norm-minus-`421*431` half-band translates of trace
+one. For the positive-norm `421/431` sum channel, with
+
+```text
+d_L  = dist(eta_421+eta_431,L Z),
+d_2L = dist(eta_421+eta_431,2L Z),
+```
+
+the corresponding numerical controls are only
+
+```text
+d_L  = 0.0011737895036417...
+d_2L = 0.4800380355559618...
+```
+
+No mixed-sign decimal comparison enters this row.
+
+The theorem is falsified by one permitted nonzero merged vector with
+`D_c=0`, by a failure of the exact metric or bound, by dependence on a
+permitted even-unit gauge change, or by failure of the parity-resolved
+absolute-value condition
+
+```text
+n even: |D_c| in sqrt(5) Z_(>0),
+n odd:  |D_c| in Z_(>0).
+```
+
+The sign of `D_c` is unrestricted: a valid determinant can be negative, as
+in the ordinary control `-182 sqrt(5)`, and negativity alone is not a
+falsifier. This forms SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION [T], with
+written proof in
+`probes/P-SPLIT-RAPIDITY-QUANTITATIVE-SEPARATION-1/PREREG.md` and the pinned
+two-architecture verifier as its finite exact audit, evidenced by
+`probes/P-SPLIT-RAPIDITY-QUANTITATIVE-SEPARATION-1`.
+
+### SPLIT-RAPIDITY-FEJER-GRAM-BOUND [T]
+
+Let `A` be a nonempty finite set of distinct oriented split prime-power
+addresses
+
+```text
+a=(p,m,epsilon),                   m>=1,
+epsilon in {+1,-1},               p^m<=X,
+beta_a=epsilon m eta_p   in   R/(L Z).
+```
+
+If `|A|>=2`, define
+
+```text
+delta_A = min_(a!=b) dist(beta_a-beta_b,L Z).
+```
+
+The effective vector of an address difference is nonzero and has product
+budget at most `X^2`, so the preceding theorem gives
+
+```text
+delta_A >= asinh(1/(2X)).
+```
+
+For every integer `K>=0`, define the height-one normalized Fejer kernel and
+its Gram matrix by
+
+```text
+Phi_K(u) = 1/(K+1) sum_(|h|<=K) (1-|h|/(K+1)) exp(2 pi i h u)
+         = 1/(K+1)^2 (sin(pi(K+1)u)/sin(pi u))^2,
+(A_K)_(ab) = Phi_K((beta_a-beta_b)/L).
+```
+
+At integral `u` the quotient has its continuous value `1`. Then
+
+```text
+||A_K-I||_(2->2)
+ <= pi^2 L^2/(12(K+1)^2 delta_A^2)
+ <= pi^2 L^2/(12(K+1)^2 asinh^2(1/(2X))).
+```
+
+For a singleton, `A_K=[1]` and the norm is zero; no spacing minimum is
+defined or needed. Writing `||u||=dist(u,Z)`,
+
+```text
+0 <= Phi_K(u) <= min(1,1/(4(K+1)^2 ||u||^2)).
+```
+
+The half-open circular shell
+`j delta_A <= dist(beta_a-beta_b,L Z) < (j+1) delta_A` contains at most one
+address on each side of `beta_a`. Every off-diagonal row sum is therefore at
+most
+
+```text
+2 sum_(j>=1) L^2/(4(K+1)^2 j^2 delta_A^2)
+ = pi^2 L^2/(12(K+1)^2 delta_A^2),
+```
+
+and Schur's test proves the result. Uniformly over families of such finite
+sets, the second bound has the precise asymptotic form
+
+```text
+(pi^2 L^2/3+e_X) (X/(K+1))^2,
+|e_X| <= C X^-2   for all X>=X_0,
+```
+
+for constants `C,X_0` independent of the finite family. Thus
+`K(X)/X -> infinity` is sufficient. The asymptotic coefficient is not a finite
+replacement for the exact `asinh` denominator.
+
+The characters
+`chi_h(a)=exp(2 pi i h beta_a/L)` are abstract parts of the displayed
+definition. They are not identified with a Hecke character, an `xi_h` or
+`xi_(2h)` family, or an `End` mode. For any later integral phase multiplier
+`nu`, the exact budget is
+
+```text
+P(nu c) = P(c)^|nu|.
+```
+
+It is unchanged only for `|nu|=1`; `nu=0` is the excluded diagonal and
+`|nu|>=2` requires a new spacing derivation. A nonintegral phase lies outside
+the carrier.
+
+The `491/1429` controls keep the two normalizations separate. Their ordinary
+signed channels have determinant rungs `|b|=22` and `|b|=182`, hence
+even-branch determinants `+-22 sqrt(5)` and `+-182 sqrt(5)`; these audit only
+the base sign channels, and one valid value is `-182 sqrt(5)`. The actual
+doubled-phase falsifier uses the effective vector `(2,2)`. With
+
+```text
+x=(20+7phi)(34+13phi),            P=491*1429,
+phi^-3 x^2=-313768+627565phi,     Tr(phi^-3 x^2)=29,
+sinh^2(d_2)=841/(4P^2) < 1/(4*1429^2),
+```
+
+the numerator `841` falsifies reuse of the unchanged `X` spacing budget after
+phase doubling. It is not a counterexample to the preceding separation
+theorem, whose correct doubled budget is `P^2`, and it does not by itself
+assert a concrete operator-norm violation.
+
+This row is falsified by a declared finite set with spacing below
+`asinh(1/(2X))`, by failure of the two-points-per-half-open-shell count, or by
+a finite `A_K` violating either displayed norm bound; for a singleton it is
+falsified exactly by `A_K != [1]`. Importing an external phase normalization
+without its correct product budget is outside the row, not a repair of its
+threshold. This forms SPLIT-RAPIDITY-FEJER-GRAM-BOUND [T], with written proof
+in `probes/P-SPLIT-RAPIDITY-QUANTITATIVE-SEPARATION-1/PREREG.md` and the same
+pinned two-architecture verifier as its finite exact audit, evidenced by
+`probes/P-SPLIT-RAPIDITY-QUANTITATIVE-SEPARATION-1`.
+
+Both rows are L1 arithmetic and finite split-address analysis only. They add
+no unrestricted least-gap or prime-distribution result, Pell parametrization,
+inert or ramified diagonalization, gamma or polar term, completed-zeta
+compression, Weil positivity, RH or zero-simplicity statement, decoder,
+measure, physical or SI reading, or L2--L6 lift.
 
 ## 11. The pentit ring and the magic boundary
 
