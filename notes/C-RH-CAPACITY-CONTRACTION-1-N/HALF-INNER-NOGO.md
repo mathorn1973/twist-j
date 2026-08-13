@@ -1,7 +1,7 @@
 # GAUSS HALF-FACTOR INNERNESS NO-GO
 
 ```text
-STATUS: F for the inner-shortcut candidate class
+STATUS: NON-CANONICAL candidate-T no-go for one post-prereg shortcut
 ISSUE:  #357
 PUBLIC STATUS CHANGES: none
 RH STATUS CHANGE: none
@@ -17,8 +17,10 @@ gamma_(m,k)(s)=Gamma(s/(2m)+k/m),
 phi_(m,k)(s)=gamma_(m,k)(s)/gamma_(m,k)(1-s),
 ```
 
-and after a harmless pure exponential normalization obtain quasi-inner factors
-`rho_inf^(m,k)` whose product is `rho_inf`.
+and after an explicit pure exponential normalization obtain quasi-inner factors
+`rho_inf^(m,k)` whose product is `rho_inf`. That normalization is entire and
+nonzero, so it does not remove the pole obstruction below; its Hardy
+orientation is otherwise not treated as harmless here.
 
 The tempting half-angle shortcut was:
 
@@ -75,7 +77,8 @@ rho_inf^(m,k)(s) rho_p(s)
 is not holomorphic in the left critical half-plane. It cannot be an inner
 function there.
 
-**Status:** exact F for `GAUSS-PAIR-INNER`.
+**Status:** candidate-T exact no-go for the explicitly stated
+`GAUSS-PAIR-INNER` shortcut. This post-prereg label is not a public `F` claim.
 
 ## 3. Consequences
 
@@ -90,6 +93,7 @@ Thus the double-cover / half-argument algebra remains a valid structural
 factorization, but it cannot supply Weil positivity by an automatic inner/model
 space inclusion.
 
-The surviving target is the compressed delay-generator construction of
-`COMPRESSED-DELAY-GENERATOR.md`, where quasi-inner off-diagonal defects enter
-explicitly rather than being assumed away.
+`COMPRESSED-DELAY-GENERATOR.md` records a distinct form-level comparison in
+which quasi-inner off-diagonal defects are not assumed away. It is not thereby
+selected as a surviving G6 target: frozen G3 remains UNDECIDED, so G4 and G6
+are blocked and no replacement gate is opened here.

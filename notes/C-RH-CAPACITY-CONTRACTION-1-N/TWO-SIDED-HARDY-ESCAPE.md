@@ -118,5 +118,6 @@ if that carrier is represented directly as a physical interval cutoff for a
 translation-invariant convolution operator. Such use requires its own
 normalization map and may not cite the Connes prolate equations as support.
 
-The active source-comparison gate is now `ARCHIMEDEAN-GAUGE-DELAY` in
-`ARCHIMEDEAN-ESCAPE-DEFECT.md`.
+`ARCHIMEDEAN-ESCAPE-DEFECT.md` records a possible cutoff-carrier comparison on
+HOLD. Frozen G3 remains UNDECIDED, so G4/G6 are blocked and no active
+source-comparison gate is opened by either file.

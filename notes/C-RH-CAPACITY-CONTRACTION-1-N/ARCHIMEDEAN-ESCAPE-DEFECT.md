@@ -16,7 +16,7 @@ projection `P1` is already the two-sided interval cutoff `[-1,1]`.
 
 A second overly cautious draft described `u_inf^g` as a possibly differently
 gauged phase. The source notation is more precise and simpler: superscript `g`
-means **geometric representation**,
+means **geometric representation** (source equations (22)--(23)),
 
 ```text
 T^g = F_mu^(-1) T F_mu.
@@ -38,8 +38,8 @@ Connes--Consani define
 u_inf(s)=exp(2 i theta(s)),
 ```
 
-where `theta` is the Riemann--Siegel angle. In their Appendix E they give
-exactly
+where `theta` is the Riemann--Siegel angle. In Appendix E, equations
+(159)--(160), they give exactly
 
 ```text
 u_inf(s)
@@ -84,7 +84,8 @@ P      = multiplication by 1_[1,infinity),
 P_hat  = (F_eR^w)^(-1) P F_eR^w.
 ```
 
-The source identities imply
+The source identities (in particular equations (62)--(63) and (69)--(70))
+imply
 
 ```text
 (u_inf^g)^* P u_inf^g = 1-P_hat.
@@ -110,7 +111,7 @@ Thus `P1,P1_hat` are directly the time/band cutoff pair of the classical
 prolate problem. They are not Hardy half-space projections in this
 representation.
 
-**Status:** source-T import, no project novelty.
+**Status:** candidate-T (direct source import; no project novelty).
 
 ## 3. The prolate pair is an exact scattering escape square
 
@@ -152,7 +153,7 @@ source identity.
 The source proves, for `rho>=1`,
 
 ```text
-delta(rho)=Tr(theta(rho^(-1)) P1_hat P1).
+delta(rho)=Tr(Theta_scale(rho^(-1)) P1_hat P1).
 ```
 
 At `rho=1`, trace cyclicity on the trace-class compression gives
@@ -168,16 +169,20 @@ delta(1)
 Thus the nonzero prolate remainder at the identity is exactly the
 Hilbert--Schmidt escape energy of the source cutoff scattering block.
 
-For general scaling, `delta(rho)` is the scaling correlation
+For `rho>=1`, `delta(rho)` is the scaling correlation
 
 ```text
-Tr(theta(rho^(-1)) P1_hat P1),
+Tr(Theta_scale(rho^(-1)) P1_hat P1),
 ```
 
-not a plain pointwise defect norm.
+not a plain pointwise defect norm. Here `Theta_scale` denotes the scaling
+representation and is deliberately distinguished from the Riemann--Siegel
+angle `theta`. For `0<rho<1`, the source symmetry
+`delta(rho^(-1))=delta(rho)` reduces the statement to the reciprocal scale;
+the displayed operator ordering is not silently extended outside `rho>=1`.
 
-**Status:** candidate-T for the `rho=1` escape-energy identity; source-T import
-for the scaled trace formula.
+**Status:** candidate-T for the `rho=1` escape-energy identity and for the
+directly imported scaled trace formula on its stated source domain.
 
 ## 5. Operator Pythagoras on the actual interval cutoff
 
@@ -202,6 +207,17 @@ source prolate compression is the escape square.
 
 **Status:** candidate-T.
 
+This interval escape identity does not represent the corrected signed pole
+
+```text
+2 Re[M_+ conjugate(M_-)]
+ = ||(M_++M_-)/sqrt(2)||^2
+   -||(M_+-M_-)/sqrt(2)||^2,
+```
+
+does not identify the frozen capacity carrier, and does not prove
+`q_A,a>=0`.
+
 ## 6. Relation to the frozen Suzuki gamma multiplier
 
 There is no phase-normalization mismatch:
@@ -216,8 +232,9 @@ up to the already-frozen Fourier/quantized-differential sign convention. The
 source Appendix E explicitly derives the same logarithmic derivative and uses
 it in the archimedean local trace formula.
 
-Thus the **local scattering phase and its infinitesimal Weil generator are
-already exactly the same object on both sides**.
+Thus the **local boundary scattering phase and its infinitesimal Weil
+multiplier are already exactly the same object on both sides**. This says
+nothing yet about equality of the cutoff realizations.
 
 What is not yet identified is the cutoff carrier:
 
@@ -231,12 +248,16 @@ Suzuki cutoff:
 
 These cannot be identified by notation alone.
 
-**Status:** candidate-T for multiplier/generator identity; OPEN cutoff-carrier
-intertwiner.
+**Status:** candidate-T for the multiplier/logarithmic-velocity identity; OPEN
+cutoff-carrier intertwiner.
 
-## 7. Sharpened next gate: CUTOFF-CARRIER-INTERTWINER
+## 7. HOLD: CUTOFF-CARRIER-INTERTWINER comparison
 
-The next exact test is no longer a gauge calculation. It is:
+Frozen G3 remains UNDECIDED; therefore G4 and G6 are blocked. The comparison
+below is source recon only. It is not an opened or executed gate and would
+require a separate lock before use.
+
+A later exact comparison would be:
 
 1. write the full chain of source unitary maps `F_mu`, inversion `I`, `w`, and
    the even Fourier transform;
@@ -247,7 +268,8 @@ The next exact test is no longer a gauge calculation. It is:
 4. transport the escape block `B` and its phase-delay derivative back to the
    Suzuki carrier;
 5. compare the resulting quadratic form coefficient-by-coefficient with
-   `q_gamma` and the global polar channels.
+   `q_gamma` and both corrected signed pole legs, including every source
+   boundary condition.
 
 Falsifiers:
 
@@ -259,6 +281,5 @@ Falsifiers:
 - a prolate correction or pole term remains unmatched;
 - any step assumes Weil positivity.
 
-If this carrier bridge closes, the archimedean part of the current
-`Pythagoras one level up` program is no longer a structural analogy: it is an
-explicit unitary escape construction with the correct Weil generator.
+Even a successful carrier bridge would not settle G3: the signed pole pair and
+the frozen capacity choice would still require a separate positivity argument.

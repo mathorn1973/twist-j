@@ -52,6 +52,10 @@ q_p(xi)
 These are exactly the archimedean and complete-Euler finite-place Weil symbols
 already derived from Suzuki's source functional.
 
+The multiplier is unbounded (`q_inf(xi)` grows logarithmically), so every
+operator formula below is a quadratic-form identity on the common smooth core
+unless a larger form domain is stated explicitly.
+
 **Status:** candidate-T.
 
 ## 2. Localized Weil form as a compressed delay generator
@@ -66,25 +70,36 @@ F_a = {infinity} union {p : log p < 2a}.
 
 Every admitted prime is completed through its full Euler tower. For
 `v in C_c^infty(-a,a)`, all prime-power correlations with `k log p >=2a`
-vanish by disjoint support, so completing the tower does not alter the localized
-Weil value.
+vanish by disjoint support, so completing the tower does not alter the signed
+localized Weil value. This is a balanced stabilization of that signed value;
+it changes the individual positive Hilbert legs and is not, by itself, a
+realization of the frozen capacity `q_A,a`.
 
 Therefore, with `f=Fourier(v)`, the exact localized Weil form is
 
 ```text
 Q_W^a(v)
- = |M_+(v)|^2+|M_-(v)|^2
+ = 2 Re[M_+(v) conjugate(M_-(v))]
    + <f, Q_(F_a) f>.
 ```
 
-Equivalently on the Paley--Wiener carrier,
+Equivalently, on the Fourier image of the smooth test-function core, put
 
 ```text
-A_W,a = R_pole,a + P_a Q_(F_a) P_a,
+R_+^pole(v)=(M_+(v)+M_-(v))/sqrt(2),
+R_-^pole(v)=(M_+(v)-M_-(v))/sqrt(2).
 ```
 
-where `R_pole,a` is the positive rank-two form represented by the two
-Laplace-evaluation channels `M_+,M_-`.
+Then the exact form identity is
+
+```text
+Q_W^a
+ = ||R_+^pole||^2-||R_-^pole||^2
+   + P_a Q_(F_a) P_a.
+```
+
+The pole contribution is an **indefinite** rank-at-most-two form. In
+particular it is not the sum `|M_+|^2+|M_-|^2`.
 
 This identity contains no zero data and no RH assumption.
 
@@ -105,14 +120,15 @@ U_F^* D_xi U_F - D_xi
  = multiplication by Q_F.
 ```
 
-Thus the local Weil multiplier is the relative infinitesimal generator of the
-unconditional lossless scattering system:
+Thus the local Weil multiplier is the relative logarithmic velocity of the
+unconditional boundary-unitary multiplication operator:
 
 ```text
 Q_F = U_F^* D_xi U_F - D_xi.
 ```
 
-This is the operator form of the phase-derivative identity. In the additive
+This is the operator form of the phase-derivative identity. It does not by
+itself construct a causal/passive conservative colligation. In the additive
 Fourier-dual variable, `D_xi` is multiplication by the signed delay coordinate,
 up to the frozen Fourier sign convention.
 
@@ -168,15 +184,17 @@ P_a Q_F P_a
  = -i[S_a^*S_a' + B_a^*B_a'].
 ```
 
-The right side is self-adjoint as a whole because it is the infinitesimal
-generator of an isometric column. The individual two summands need not be
-positive or self-adjoint separately.
+The path `tau -> U_F(tau)` is differentiable but need not be a one-parameter
+group. The right side is self-adjoint as a whole because it is the
+Wigner--Smith/logarithmic velocity of an isometric column. The individual two
+summands need not be positive or self-adjoint separately.
 
-Thus the non-polar localized Weil operator is exactly the phase-delay generator
-of a Pythagorean decomposition into an in-window output and an escape output.
+Thus the non-polar localized Weil form contribution is exactly the
+phase-delay logarithmic velocity of a Pythagorean decomposition into an
+in-window output and an escape output, on the stated core.
 
-**Status:** candidate-T, general Hilbert-space identity applied to the frozen
-semilocal multiplier.
+**Status:** candidate-T, general Hilbert-space identity applied to the stated
+semilocal multiplier on the stated core.
 
 ## 5. The finite interval is a difference of shifted Hardy projections
 
@@ -211,8 +229,10 @@ Therefore every block involving the finite-interval projection `P_a` can be
 expanded into a finite combination of **shifted Hardy blocks** of the same
 scattering multiplier `u_F`.
 
-This is the direct algebraic bridge between Suzuki's interval localization and
-the Hardy off-diagonal operators computed by Connes--Consani.
+This is a generic shifted-Hardy expansion of the interval projection. It is
+not source evidence identifying `P_a` with the Connes--Consani prolate cutoff:
+their relevant source pair is a two-sided time/band projection pair. An exact
+carrier/normalization intertwiner remains open.
 
 **Status:** candidate-T.
 
@@ -235,41 +255,58 @@ localized form is then obtained by the independent projection `P_a`.
 
 Thus the mixed jet is a property of the Hardy off-diagonal block of the
 multiplicative scattering function, not of the uncompressed logarithmic delay
-generator itself.
+generator itself. This observation does not supply the still-missing map from
+the balanced full-tower carrier to the frozen strict-cutoff capacity carrier.
 
 ## 7. What this does and does not prove
 
 The identities above do not prove positivity. An isometric output column may
-have a phase-delay generator of either sign. The positive rank-two polar
-channel is also still external to the local scattering product.
+have a phase-delay generator of either sign. The signed pole pair is also still
+external to the local scattering product.
 
-What is gained is a non-circular construction of the exact operator whose
-positivity is at issue:
+What is gained is a non-circular form-level construction of the signed
+localized Weil form on the smooth core:
 
 ```text
-A_W,a
- = R_pole,a
+Q_W^a
+ = (R_+^pole)^*R_+^pole-(R_-^pole)^*R_-^pole
    - i W_a^* W_a'.
 ```
 
 Here `W_a` is built solely from known local L-factor scattering ratios and the
 geometric support projection.
 
-No zeta zero and no Weil positivity is used to construct either term.
+This is not the frozen G3 capacity:
 
-## 8. Next falsification gate: HARDY-CUTOFF-EXPANSION
+```text
+q_A,a(v) = Q_W^a(v) + ||V_a^+ v||^2,
+```
 
-Expand the exact interval identity of Section 5 inside
+where `V_a^+` is the strict-cutoff frozen feature map, not its silently
+completed Euler tower. The balanced Euler completion preserves `Q_W^a`, but
+changes the separate Hilbert legs from which a capacity is chosen. No zeta zero
+and no Weil positivity is used in the form identity; no positivity conclusion
+follows.
+
+## 8. HOLD: possible cutoff-carrier comparison
+
+The frozen preregistration keeps G3 (unconditional positivity of `q_A,a`)
+UNDECIDED. Consequently G4 and G6 remain blocked. No new gate is opened or
+executed by this recon.
+
+A separately locked future comparison could expand the exact interval identity
+of Section 5 inside
 
 ```text
 -i[S_a^*S_a' + B_a^*B_a']
 ```
 
-and compare it with the source Hardy formulas for `rho_inf product rho_p`.
+and compare it with the source formulas for `rho_inf product rho_p` after an
+exact carrier map has been typed.
 
-A positive outcome must derive the prolate/cutoff correction from the shifted
-Hardy blocks, not fit it afterwards. The test begins at the archimedean place
-and then at `{infinity,p}`.
+A positive outcome would have to derive the prolate/cutoff correction from the
+transported blocks, not fit it afterwards. Such a test would begin at the
+archimedean place and then at `{infinity,p}`.
 
 Falsifiers:
 
@@ -282,6 +319,6 @@ Falsifiers:
 4. the construction requires an innerness or positivity assumption;
 5. the first complete-prime update violates the exact cutoff restriction law.
 
-If these gates survive, the RH wall is reduced to the sign of the phase-delay
-generator of one explicitly constructed isometric cutoff column plus the two
-polar channels.
+Even if these comparisons survive, they do not settle G3: the signed pole pair,
+the capacity choice, and positivity would still require their separately
+frozen arguments.
