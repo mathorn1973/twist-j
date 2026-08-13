@@ -1,0 +1,495 @@
+{
+  "G_mod": [
+    1,
+    21
+  ],
+  "amplitude_maps": {
+    "1": {
+      "a": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "11": {
+      "a": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "13": {
+      "a": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "17": {
+      "a": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "19": {
+      "a": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "21": {
+      "a": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "23": {
+      "a": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "27": {
+      "a": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "29": {
+      "a": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "3": {
+      "a": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "31": {
+      "a": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "33": {
+      "a": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "37": {
+      "a": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "39": {
+      "a": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "7": {
+      "a": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "9": {
+      "a": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    }
+  },
+  "fixed_field": {
+    "degree": 8,
+    "generator": "1*z^2",
+    "generator_description": "(1/2)*sum_{h in H} z^(h*2)",
+    "minimal_polynomial_coefficients_low_to_high": [
+      "1",
+      "0",
+      "-1",
+      "0",
+      "1",
+      "0",
+      "-1",
+      "0",
+      "1"
+    ],
+    "subgroup": [
+      1,
+      21
+    ]
+  },
+  "labeled_summary": {
+    "1": {
+      "colored_support_candidates": 2,
+      "liftable_permutation_candidates": 1,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "11": {
+      "colored_support_candidates": 2,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "13": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "17": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "19": {
+      "colored_support_candidates": 2,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "21": {
+      "colored_support_candidates": 2,
+      "liftable_permutation_candidates": 1,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "23": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "27": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "29": {
+      "colored_support_candidates": 2,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "3": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "31": {
+      "colored_support_candidates": 2,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "33": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "37": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "39": {
+      "colored_support_candidates": 2,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "7": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "9": {
+      "colored_support_candidates": 2,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    }
+  },
+  "result_path": "CROSSCHECK.json",
+  "result_sha256": "5f4911df2f3366b7ee5eb382020487396a49897161759b028dbc41396e25f36a",
+  "source": {
+    "amplitude_counts": {
+      "a": 40,
+      "b": 40,
+      "c": 32
+    },
+    "bytes": 8515,
+    "degree_vectors": [
+      [
+        20,
+        18,
+        16,
+        24,
+        16,
+        18
+      ],
+      [
+        14,
+        14,
+        22,
+        20,
+        20,
+        22
+      ],
+      [
+        20,
+        20,
+        18,
+        18,
+        18,
+        18
+      ],
+      [
+        18,
+        18,
+        18,
+        18,
+        20,
+        20
+      ]
+    ],
+    "path": "AME46_ORIGINAL.m",
+    "sha256": "55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae",
+    "support": 112
+  },
+  "swap23_summary": {
+    "1": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "11": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "13": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "17": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "19": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "21": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "23": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "27": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "29": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "3": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "31": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "33": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "37": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "39": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "7": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "9": {
+      "colored_support_candidates": 0,
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    }
+  }
+}

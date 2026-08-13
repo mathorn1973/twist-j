@@ -1,0 +1,98 @@
+PREREG_COMMIT f78538f881a0e25fcc0ed839c88c0fd45a751352
+PREREG_SHA256 d662cae52dbbafd2f0802aabade5ffdfc09bb5d22d7160999bf845fc4866f886
+SOURCE bytes 8515 sha256 55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae blob e0d0e171d58b3360c39595d677ffc401a466112d
+SUPPORT 112 AMPLITUDES {'a': 40, 'b': 40, 'c': 32}
+GALOIS_UNITS (1, 3, 7, 9, 11, 13, 17, 19, 21, 23, 27, 29, 31, 33, 37, 39)
+FROZEN_GENERATOR_CLOSURE (1, 3, 7, 9, 11, 13, 17, 19, 21, 23, 27, 29, 31, 33, 37, 39)
+GENERATOR_ORDERS {17: 4, 11: 2, 21: 2}
+GAL 1 w_exp_mod20 1 map {'a': ('a', 0), 'b': ('b', 0), 'c': ('c', 0)} tensor_sha256 3a43b5edf209e6918e986c1084bd92787dd555db0ac6811651371d8eefd07f0b
+GAL 3 w_exp_mod20 3 map {'a': ('b', 20), 'b': ('a', 0), 'c': ('c', 20)} tensor_sha256 e02f572e8cd080a49b8c27239c2f7abbdbdf301a48c273f76edb3cbdacbdc6ea
+GAL 7 w_exp_mod20 7 map {'a': ('b', 20), 'b': ('a', 0), 'c': ('c', 0)} tensor_sha256 15cae9b0df62df1bbb1d3b910199c9621ba3b0058408c95e083bb52a9606d53c
+GAL 9 w_exp_mod20 9 map {'a': ('a', 20), 'b': ('b', 20), 'c': ('c', 0)} tensor_sha256 a887e3f9a648dadf6a9c1c5419dc82d60c28c9a26158c7e7a6018135643ba8c3
+GAL 11 w_exp_mod20 11 map {'a': ('a', 0), 'b': ('b', 0), 'c': ('c', 20)} tensor_sha256 419f3b6aaea481e85f7e805833cd81820d31f963b98d850725c27faaf031c442
+GAL 13 w_exp_mod20 13 map {'a': ('b', 0), 'b': ('a', 20), 'c': ('c', 20)} tensor_sha256 b47c75872104f8d1408d5b4f061d109895ba155cd67bf5188690c540da0547db
+GAL 17 w_exp_mod20 17 map {'a': ('b', 0), 'b': ('a', 20), 'c': ('c', 0)} tensor_sha256 2cd4cb5c78283c9239beaf3cbc00e890d91317aad0009c3c151b70eae96e5b99
+GAL 19 w_exp_mod20 19 map {'a': ('a', 20), 'b': ('b', 20), 'c': ('c', 20)} tensor_sha256 c05714080808ff0eac9681849039bf8077ff19cd8a66cd6e0fddf060ead1525f
+GAL 21 w_exp_mod20 1 map {'a': ('a', 20), 'b': ('b', 20), 'c': ('c', 20)} tensor_sha256 02013185cda826359cbd28e0f199465145f44075d1f73c6d803a0beebd89beb7
+GAL 23 w_exp_mod20 3 map {'a': ('b', 0), 'b': ('a', 20), 'c': ('c', 0)} tensor_sha256 ff155bb8ab3e285b08455621bf516d2c6406b2e0b09417c97ba8f8a274cc6eaa
+GAL 27 w_exp_mod20 7 map {'a': ('b', 0), 'b': ('a', 20), 'c': ('c', 20)} tensor_sha256 144281fd361cff9a9326cfff24bcc9416a4bcdb24847a3703ebaa0e9b2c994d1
+GAL 29 w_exp_mod20 9 map {'a': ('a', 0), 'b': ('b', 0), 'c': ('c', 20)} tensor_sha256 37935bc8fa66bad5e3b942d4cc646f244d358a029a352adaf0f44ee0af64d5b6
+GAL 31 w_exp_mod20 11 map {'a': ('a', 20), 'b': ('b', 20), 'c': ('c', 0)} tensor_sha256 4fe552a6a33f490f6ee50db8fd93e942b11e6217a311c5b4e1c2e9c72bf9b297
+GAL 33 w_exp_mod20 13 map {'a': ('b', 20), 'b': ('a', 0), 'c': ('c', 0)} tensor_sha256 54fa6355480bffd7c1f0da82a5a371432b5cd7d77035833b3c11d7475563a6e4
+GAL 37 w_exp_mod20 17 map {'a': ('b', 20), 'b': ('a', 0), 'c': ('c', 20)} tensor_sha256 cb7c492a13b6d9781e16b977ccac88f3f9df7f2b7c85dbd00ceb5e363619e76f
+GAL 39 w_exp_mod20 19 map {'a': ('a', 0), 'b': ('b', 0), 'c': ('c', 0)} tensor_sha256 bbae3fa929f58b2ca3499d29d52b48b56162bf789fde08b91442be643f6c9647
+PROJECTIVE_FIELD_WITNESS A[0,1,0,2]/A[0,0,0,1]=z^34=w^17; power13=w=zeta20
+PROJECTIVE_FIELD exact Q(projective_ratios)=Q(zeta20) degree8; sigma21(A)=-A
+DEGREES [(20, 18, 16, 24, 16, 18), (14, 14, 22, 20, 20, 22), (20, 20, 18, 18, 18, 18), (18, 18, 18, 18, 20, 20)]
+PER_LEG_CANDIDATES (4, 8, 48, 48) PRODUCT 73728
+COLORED_SUPPORT_MAP ('a', 'b', 'c') COUNT 2
+ CAND 0 orders (1, 1, 1, 1) cycles ('()', '()', '()', '()') perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5))
+ CAND 1 orders (1, 1, 2, 2) cycles ('()', '()', '(0 1)(2 3)(4 5)', '(0 1)(2 3)(4 5)') perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (1, 0, 3, 2, 5, 4), (1, 0, 3, 2, 5, 4))
+COLORED_SUPPORT_MAP ('b', 'a', 'c') COUNT 0
+TRANSPORTER 1 colored 2 phase_lifted_permutation_classes 1 rejected 1
+ LIFT 0 perm_orders (1, 1, 1, 1) perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5)) normalized_d_h (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) kernel_counts_mod5_mod8 (625, 4096) ranks_A_aug_mod2_mod5 (21, 21, 21, 21)
+ REJECT 0 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (1, 0, 3, 2, 5, 4), (1, 0, 3, 2, 5, 4)) solution_counts_mod5_mod8 (0, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 2, 4, 4), 2), ((0, 2, 5, 4), 3), ((0, 3, 4, 0), 3), ((0, 3, 5, 0), 2)) 
+TRANSPORTER 3 colored 0 phase_lifted_permutation_classes 0 rejected 0
+TRANSPORTER 7 colored 0 phase_lifted_permutation_classes 0 rejected 0
+TRANSPORTER 9 colored 2 phase_lifted_permutation_classes 0 rejected 2
+ REJECT 0 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5)) solution_counts_mod5_mod8 (0, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 2, 4, 4), 3), ((0, 2, 5, 4), 2), ((0, 3, 4, 0), 2), ((0, 3, 5, 0), 3)) 
+ REJECT 1 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (1, 0, 3, 2, 5, 4), (1, 0, 3, 2, 5, 4)) solution_counts_mod5_mod8 (0, 4096) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 3, 4, 1), 2), ((0, 4, 2, 2), 3), ((1, 0, 4, 1), 3), ((1, 4, 0, 2), 2), ((2, 0, 2, 4), 2), ((2, 3, 0, 4), 3)) 
+TRANSPORTER 11 colored 2 phase_lifted_permutation_classes 0 rejected 2
+ REJECT 0 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5)) solution_counts_mod5_mod8 (625, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 21) LEFT_NULL_MOD 8 DOT_RHS 4 SPARSE_CERT (((0, 3, 4, 1), 7), ((0, 4, 2, 2), 1), ((1, 0, 4, 1), 1), ((1, 4, 0, 2), 7), ((2, 0, 2, 4), 7), ((2, 3, 0, 4), 1))  2_PRIMARY_DIVISOR4_AFTER_DIVISION_DOT_RHS_MOD2=1
+ REJECT 1 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (1, 0, 3, 2, 5, 4), (1, 0, 3, 2, 5, 4)) solution_counts_mod5_mod8 (0, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 2, 4, 4), 2), ((0, 2, 5, 4), 3), ((0, 3, 4, 0), 3), ((0, 3, 5, 0), 2)) 
+TRANSPORTER 13 colored 0 phase_lifted_permutation_classes 0 rejected 0
+TRANSPORTER 17 colored 0 phase_lifted_permutation_classes 0 rejected 0
+TRANSPORTER 19 colored 2 phase_lifted_permutation_classes 0 rejected 2
+ REJECT 0 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5)) solution_counts_mod5_mod8 (0, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 2, 4, 4), 3), ((0, 2, 5, 4), 2), ((0, 3, 4, 0), 2), ((0, 3, 5, 0), 3)) 
+ REJECT 1 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (1, 0, 3, 2, 5, 4), (1, 0, 3, 2, 5, 4)) solution_counts_mod5_mod8 (0, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 3, 4, 1), 2), ((0, 4, 2, 2), 3), ((1, 0, 4, 1), 3), ((1, 4, 0, 2), 2), ((2, 0, 2, 4), 2), ((2, 3, 0, 4), 3)) 
+TRANSPORTER 21 colored 2 phase_lifted_permutation_classes 1 rejected 1
+ LIFT 0 perm_orders (1, 1, 1, 1) perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5)) normalized_d_h (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20) kernel_counts_mod5_mod8 (625, 4096) ranks_A_aug_mod2_mod5 (21, 21, 21, 21)
+ REJECT 0 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (1, 0, 3, 2, 5, 4), (1, 0, 3, 2, 5, 4)) solution_counts_mod5_mod8 (0, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 2, 4, 4), 2), ((0, 2, 5, 4), 3), ((0, 3, 4, 0), 3), ((0, 3, 5, 0), 2)) 
+TRANSPORTER 23 colored 0 phase_lifted_permutation_classes 0 rejected 0
+TRANSPORTER 27 colored 0 phase_lifted_permutation_classes 0 rejected 0
+TRANSPORTER 29 colored 2 phase_lifted_permutation_classes 0 rejected 2
+ REJECT 0 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5)) solution_counts_mod5_mod8 (0, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 2, 4, 4), 3), ((0, 2, 5, 4), 2), ((0, 3, 4, 0), 2), ((0, 3, 5, 0), 3)) 
+ REJECT 1 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (1, 0, 3, 2, 5, 4), (1, 0, 3, 2, 5, 4)) solution_counts_mod5_mod8 (0, 4096) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 3, 4, 1), 2), ((0, 4, 2, 2), 3), ((1, 0, 4, 1), 3), ((1, 4, 0, 2), 2), ((2, 0, 2, 4), 2), ((2, 3, 0, 4), 3)) 
+TRANSPORTER 31 colored 2 phase_lifted_permutation_classes 0 rejected 2
+ REJECT 0 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5)) solution_counts_mod5_mod8 (625, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 21) LEFT_NULL_MOD 8 DOT_RHS 4 SPARSE_CERT (((0, 3, 4, 1), 7), ((0, 4, 2, 2), 1), ((1, 0, 4, 1), 1), ((1, 4, 0, 2), 7), ((2, 0, 2, 4), 7), ((2, 3, 0, 4), 1))  2_PRIMARY_DIVISOR4_AFTER_DIVISION_DOT_RHS_MOD2=1
+ REJECT 1 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (1, 0, 3, 2, 5, 4), (1, 0, 3, 2, 5, 4)) solution_counts_mod5_mod8 (0, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 2, 4, 4), 2), ((0, 2, 5, 4), 3), ((0, 3, 4, 0), 3), ((0, 3, 5, 0), 2)) 
+TRANSPORTER 33 colored 0 phase_lifted_permutation_classes 0 rejected 0
+TRANSPORTER 37 colored 0 phase_lifted_permutation_classes 0 rejected 0
+TRANSPORTER 39 colored 2 phase_lifted_permutation_classes 0 rejected 2
+ REJECT 0 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5)) solution_counts_mod5_mod8 (0, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 2, 4, 4), 3), ((0, 2, 5, 4), 2), ((0, 3, 4, 0), 2), ((0, 3, 5, 0), 3)) 
+ REJECT 1 perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (1, 0, 3, 2, 5, 4), (1, 0, 3, 2, 5, 4)) solution_counts_mod5_mod8 (0, 0) ranks_A_aug_mod2_mod5 (21, 21, 21, 22) LEFT_NULL_MOD 5 DOT_RHS 1 SPARSE_CERT (((0, 3, 4, 1), 2), ((0, 4, 2, 2), 3), ((1, 0, 4, 1), 3), ((1, 4, 0, 2), 2), ((2, 0, 2, 4), 2), ((2, 3, 0, 4), 3)) 
+G_MOD (1, 21) ORDER 2 FIXED_FIELD_DEGREE 8
+G_MOD_SUBGROUP True
+G4_SUBGROUP (1,) coherent YES coboundary YES fixed_field K=Q(zeta40)
+G4_SUBGROUP (1,21) coherent YES coboundary YES transporter_permutation identity phase_projectively_identity h21=20
+G4_FIXED_BASIS ('z^0', 'z^2', 'z^4', 'z^6', 'z^8', 'z^10', 'z^12', 'z^14')
+G4_FIXED_FIELD Q(zeta20) degree 8 minpoly x^8-x^6+x^4-x^2+1 explicit_representative A/c
+G4_NEW_DESCENT_BELOW_QZETA20 NO
+PHASE_KERNEL_BASIS_Z40 ((1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39), (0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 39), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 39)) ORDER 2560000 COMPLETE_BY_CRT_COUNTS 2560000
+G5_ADMISSIBLE_PARTY_PERMUTATIONS ((0, 1, 2, 3), (0, 1, 3, 2))
+G5_PARTY_SEARCH (0, 1, 2, 3) PER_LEG (4, 8, 48, 48) PRODUCT 73728
+G5_COLORED (0, 1, 2, 3) ('a', 'b', 'c') COUNT 2
+G5_COLORED (0, 1, 2, 3) ('b', 'a', 'c') COUNT 0
+G5_PARTY_SEARCH (0, 1, 3, 2) PER_LEG (4, 8, 48, 48) PRODUCT 73728
+G5_COLORED (0, 1, 3, 2) ('a', 'b', 'c') COUNT 0
+G5_COLORED (0, 1, 3, 2) ('b', 'a', 'c') COUNT 0
+G5_TRANSPORTER 1 phase_lifted_classes 1
+ G5_LIFT 0 pi (0, 1, 2, 3) perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5)) normalized_d_h (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) kernel_counts_mod5_mod8 (625, 4096)
+G5_TRANSPORTER 3 phase_lifted_classes 0
+G5_TRANSPORTER 7 phase_lifted_classes 0
+G5_TRANSPORTER 9 phase_lifted_classes 0
+G5_TRANSPORTER 11 phase_lifted_classes 0
+G5_TRANSPORTER 13 phase_lifted_classes 0
+G5_TRANSPORTER 17 phase_lifted_classes 0
+G5_TRANSPORTER 19 phase_lifted_classes 0
+G5_TRANSPORTER 21 phase_lifted_classes 1
+ G5_LIFT 0 pi (0, 1, 2, 3) perms ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5)) normalized_d_h (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20) kernel_counts_mod5_mod8 (625, 4096)
+G5_TRANSPORTER 23 phase_lifted_classes 0
+G5_TRANSPORTER 27 phase_lifted_classes 0
+G5_TRANSPORTER 29 phase_lifted_classes 0
+G5_TRANSPORTER 31 phase_lifted_classes 0
+G5_TRANSPORTER 33 phase_lifted_classes 0
+G5_TRANSPORTER 37 phase_lifted_classes 0
+G5_TRANSPORTER 39 phase_lifted_classes 0
+G5_G_MOD_UNLABELED (1, 21) ORDER 2 FIXED_FIELD_DEGREE 8
+G5_PRIMARY_REPAIRED False

@@ -1,0 +1,4902 @@
+{
+  "G_mod": [
+    1,
+    21
+  ],
+  "G_mod_order": 2,
+  "G_mod_subgroup_check": true,
+  "amplitude_maps": {
+    "1": {
+      "a": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "11": {
+      "a": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "13": {
+      "a": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "17": {
+      "a": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "19": {
+      "a": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "21": {
+      "a": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "23": {
+      "a": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "27": {
+      "a": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "29": {
+      "a": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "3": {
+      "a": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "31": {
+      "a": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "33": {
+      "a": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "37": {
+      "a": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 20
+      }
+    },
+    "39": {
+      "a": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "7": {
+      "a": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "a",
+        "z40_phase": 0
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    },
+    "9": {
+      "a": {
+        "label": "a",
+        "z40_phase": 20
+      },
+      "b": {
+        "label": "b",
+        "z40_phase": 20
+      },
+      "c": {
+        "label": "c",
+        "z40_phase": 0
+      }
+    }
+  },
+  "fixed_field": {
+    "degree": 8,
+    "generator": "1*z^2",
+    "generator_description": "(1/2)*sum_{h in H} z^(h*2)",
+    "minimal_polynomial_coefficients_low_to_high": [
+      "1",
+      "0",
+      "-1",
+      "0",
+      "1",
+      "0",
+      "-1",
+      "0",
+      "1"
+    ],
+    "subgroup": [
+      1,
+      21
+    ]
+  },
+  "implementation": "independent crosscheck.py",
+  "labeled": {
+    "1": {
+      "candidate_phase_audits": [
+        {
+          "all_112_substitution": true,
+          "candidate_index": 0,
+          "mod40_solution": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "mod5": {
+            "kernel_basis": [
+              [
+                4,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 21,
+            "solution": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "solvable": true
+          },
+          "mod8": {
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "kernel_basis": [
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "kernel_orders": [
+              8,
+              8,
+              8,
+              8
+            ],
+            "rank_unit": 21,
+            "solution": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "solvable": true
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "all_112_substitution": false,
+          "candidate_index": 1,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 4,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 14,
+                "tensor_index": [
+                  0,
+                  4,
+                  3,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 16,
+                "tensor_index": [
+                  0,
+                  5,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 18,
+                "tensor_index": [
+                  0,
+                  5,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                12,
+                4
+              ],
+              [
+                14,
+                1
+              ],
+              [
+                16,
+                1
+              ],
+              [
+                18,
+                4
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 4,
+                "tensor_index": [
+                  0,
+                  2,
+                  4,
+                  4
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 24,
+                "tensor_index": [
+                  1,
+                  2,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 28,
+                "tensor_index": [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                4,
+                1
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                24,
+                7
+              ],
+              [
+                28,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ]
+          ]
+        }
+      ],
+      "colored_support_candidates": 2,
+      "conjugate_sha256": "7fd274c8a0d62fda4ac3cfff59a3d37b7cf558ae38200a56721e414651c5a5f1",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 1,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "11": {
+      "candidate_phase_audits": [
+        {
+          "all_112_substitution": false,
+          "candidate_index": 0,
+          "mod40_solution": null,
+          "mod5": {
+            "kernel_basis": [
+              [
+                4,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 21,
+            "solution": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "solvable": true
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 7,
+                "row": 9,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 20,
+                "tensor_index": [
+                  1,
+                  0,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 30,
+                "tensor_index": [
+                  1,
+                  4,
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 38,
+                "tensor_index": [
+                  2,
+                  0,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 44,
+                "tensor_index": [
+                  2,
+                  3,
+                  0,
+                  4
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                9,
+                7
+              ],
+              [
+                12,
+                1
+              ],
+              [
+                20,
+                1
+              ],
+              [
+                30,
+                7
+              ],
+              [
+                38,
+                7
+              ],
+              [
+                44,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "all_112_substitution": false,
+          "candidate_index": 1,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 4,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 14,
+                "tensor_index": [
+                  0,
+                  4,
+                  3,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 16,
+                "tensor_index": [
+                  0,
+                  5,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 18,
+                "tensor_index": [
+                  0,
+                  5,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                12,
+                4
+              ],
+              [
+                14,
+                1
+              ],
+              [
+                16,
+                1
+              ],
+              [
+                18,
+                4
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 4,
+                "tensor_index": [
+                  0,
+                  2,
+                  4,
+                  4
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 24,
+                "tensor_index": [
+                  1,
+                  2,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 28,
+                "tensor_index": [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                4,
+                1
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                24,
+                7
+              ],
+              [
+                28,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ]
+          ]
+        }
+      ],
+      "colored_support_candidates": 2,
+      "conjugate_sha256": "42ae5b0f12a48bebcd70a73d3b6a001235d8b842f85419f43a654172485fbb59",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "13": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "cac2d1432afc3ef825dbcb5202ee19f5db9edc48782ab781660cff84162a4149",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "17": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "004cfa7c63308e5a59227afcea70fb50861e28143a1f634dd3a06660523a5720",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "19": {
+      "candidate_phase_audits": [
+        {
+          "all_112_substitution": false,
+          "candidate_index": 0,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 14,
+                "tensor_index": [
+                  0,
+                  4,
+                  3,
+                  2
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 16,
+                "tensor_index": [
+                  0,
+                  5,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 18,
+                "tensor_index": [
+                  0,
+                  5,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                12,
+                1
+              ],
+              [
+                14,
+                4
+              ],
+              [
+                16,
+                4
+              ],
+              [
+                18,
+                1
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 4,
+                "tensor_index": [
+                  0,
+                  2,
+                  4,
+                  4
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 24,
+                "tensor_index": [
+                  1,
+                  2,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 28,
+                "tensor_index": [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                4,
+                1
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                24,
+                7
+              ],
+              [
+                28,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "all_112_substitution": false,
+          "candidate_index": 1,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 2,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 10,
+                "tensor_index": [
+                  0,
+                  3,
+                  5,
+                  0
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 11,
+                "tensor_index": [
+                  0,
+                  3,
+                  5,
+                  1
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 20,
+                "tensor_index": [
+                  1,
+                  0,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 30,
+                "tensor_index": [
+                  1,
+                  4,
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 38,
+                "tensor_index": [
+                  2,
+                  0,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 44,
+                "tensor_index": [
+                  2,
+                  3,
+                  0,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                8,
+                2
+              ],
+              [
+                10,
+                3
+              ],
+              [
+                11,
+                2
+              ],
+              [
+                12,
+                3
+              ],
+              [
+                20,
+                3
+              ],
+              [
+                30,
+                2
+              ],
+              [
+                38,
+                2
+              ],
+              [
+                44,
+                3
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 7,
+                "row": 9,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 20,
+                "tensor_index": [
+                  1,
+                  0,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 30,
+                "tensor_index": [
+                  1,
+                  4,
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 38,
+                "tensor_index": [
+                  2,
+                  0,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 44,
+                "tensor_index": [
+                  2,
+                  3,
+                  0,
+                  4
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                9,
+                7
+              ],
+              [
+                12,
+                1
+              ],
+              [
+                20,
+                1
+              ],
+              [
+                30,
+                7
+              ],
+              [
+                38,
+                7
+              ],
+              [
+                44,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ]
+          ]
+        }
+      ],
+      "colored_support_candidates": 2,
+      "conjugate_sha256": "d8ea54a684abadd05eef714f0d41fee8d8e40cb12e9c7d2d724b9cf919def27c",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "21": {
+      "candidate_phase_audits": [
+        {
+          "all_112_substitution": true,
+          "candidate_index": 0,
+          "mod40_solution": [
+            20,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "mod5": {
+            "kernel_basis": [
+              [
+                4,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 21,
+            "solution": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "solvable": true
+          },
+          "mod8": {
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "kernel_basis": [
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "kernel_orders": [
+              8,
+              8,
+              8,
+              8
+            ],
+            "rank_unit": 21,
+            "solution": [
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "solvable": true
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "all_112_substitution": false,
+          "candidate_index": 1,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 4,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 14,
+                "tensor_index": [
+                  0,
+                  4,
+                  3,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 16,
+                "tensor_index": [
+                  0,
+                  5,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 18,
+                "tensor_index": [
+                  0,
+                  5,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                12,
+                4
+              ],
+              [
+                14,
+                1
+              ],
+              [
+                16,
+                1
+              ],
+              [
+                18,
+                4
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 4,
+                "tensor_index": [
+                  0,
+                  2,
+                  4,
+                  4
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 24,
+                "tensor_index": [
+                  1,
+                  2,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 28,
+                "tensor_index": [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                4,
+                1
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                24,
+                7
+              ],
+              [
+                28,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ]
+          ]
+        }
+      ],
+      "colored_support_candidates": 2,
+      "conjugate_sha256": "70cf089769a5cccadeee1b4404773da2bb9674a342ae337c4ffe9ad19c93573d",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 1,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "23": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "d84e1ecbd957b44429b1bc441d941fe9cacf499512ab45ea06675d6d35772836",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "27": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "11be3562d70f60b38a9c8bb8cebac5503d5bb1bdbf7dbdbc7bab465ae5a09a7c",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "29": {
+      "candidate_phase_audits": [
+        {
+          "all_112_substitution": false,
+          "candidate_index": 0,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 14,
+                "tensor_index": [
+                  0,
+                  4,
+                  3,
+                  2
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 16,
+                "tensor_index": [
+                  0,
+                  5,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 18,
+                "tensor_index": [
+                  0,
+                  5,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                12,
+                1
+              ],
+              [
+                14,
+                4
+              ],
+              [
+                16,
+                4
+              ],
+              [
+                18,
+                1
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 4,
+                "tensor_index": [
+                  0,
+                  2,
+                  4,
+                  4
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 24,
+                "tensor_index": [
+                  1,
+                  2,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 28,
+                "tensor_index": [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                4,
+                1
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                24,
+                7
+              ],
+              [
+                28,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "all_112_substitution": false,
+          "candidate_index": 1,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 2,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 10,
+                "tensor_index": [
+                  0,
+                  3,
+                  5,
+                  0
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 11,
+                "tensor_index": [
+                  0,
+                  3,
+                  5,
+                  1
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 20,
+                "tensor_index": [
+                  1,
+                  0,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 30,
+                "tensor_index": [
+                  1,
+                  4,
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 38,
+                "tensor_index": [
+                  2,
+                  0,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 44,
+                "tensor_index": [
+                  2,
+                  3,
+                  0,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                8,
+                2
+              ],
+              [
+                10,
+                3
+              ],
+              [
+                11,
+                2
+              ],
+              [
+                12,
+                3
+              ],
+              [
+                20,
+                3
+              ],
+              [
+                30,
+                2
+              ],
+              [
+                38,
+                2
+              ],
+              [
+                44,
+                3
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "kernel_basis": [
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "kernel_orders": [
+              8,
+              8,
+              8,
+              8
+            ],
+            "rank_unit": 21,
+            "solution": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              4,
+              4,
+              4,
+              0,
+              0,
+              0,
+              0,
+              4,
+              4,
+              0,
+              0
+            ],
+            "solvable": true
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ]
+          ]
+        }
+      ],
+      "colored_support_candidates": 2,
+      "conjugate_sha256": "7e91340817fcd5e2bbc683047b7c501361f6b95d7fe7d790517a90070a545faf",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "3": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "7fc6e14cddfaf5c4af60c3bb4c64729e8fea923e39e8f97799044da4aa7c0057",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "31": {
+      "candidate_phase_audits": [
+        {
+          "all_112_substitution": false,
+          "candidate_index": 0,
+          "mod40_solution": null,
+          "mod5": {
+            "kernel_basis": [
+              [
+                4,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 21,
+            "solution": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "solvable": true
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 7,
+                "row": 9,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 20,
+                "tensor_index": [
+                  1,
+                  0,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 30,
+                "tensor_index": [
+                  1,
+                  4,
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 38,
+                "tensor_index": [
+                  2,
+                  0,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 44,
+                "tensor_index": [
+                  2,
+                  3,
+                  0,
+                  4
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                9,
+                7
+              ],
+              [
+                12,
+                1
+              ],
+              [
+                20,
+                1
+              ],
+              [
+                30,
+                7
+              ],
+              [
+                38,
+                7
+              ],
+              [
+                44,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "all_112_substitution": false,
+          "candidate_index": 1,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 4,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 14,
+                "tensor_index": [
+                  0,
+                  4,
+                  3,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 16,
+                "tensor_index": [
+                  0,
+                  5,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 18,
+                "tensor_index": [
+                  0,
+                  5,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                12,
+                4
+              ],
+              [
+                14,
+                1
+              ],
+              [
+                16,
+                1
+              ],
+              [
+                18,
+                4
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 4,
+                "tensor_index": [
+                  0,
+                  2,
+                  4,
+                  4
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 24,
+                "tensor_index": [
+                  1,
+                  2,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 28,
+                "tensor_index": [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                4,
+                1
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                24,
+                7
+              ],
+              [
+                28,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ]
+          ]
+        }
+      ],
+      "colored_support_candidates": 2,
+      "conjugate_sha256": "e863899b5ba39c853562d04aadff13d354e4ca3d52b06d33474efee34c6a9992",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "33": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "7dd114a41249e11f7954d48523bc5287f0433d665840fcf4d8d20920326f5cd9",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "37": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "c63682b0975c7e79a68b19a8afa36f5559f12729f37eb0fbbe5462e2b7f8d909",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "39": {
+      "candidate_phase_audits": [
+        {
+          "all_112_substitution": false,
+          "candidate_index": 0,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 14,
+                "tensor_index": [
+                  0,
+                  4,
+                  3,
+                  2
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 16,
+                "tensor_index": [
+                  0,
+                  5,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 18,
+                "tensor_index": [
+                  0,
+                  5,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                12,
+                1
+              ],
+              [
+                14,
+                4
+              ],
+              [
+                16,
+                4
+              ],
+              [
+                18,
+                1
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 4,
+                "tensor_index": [
+                  0,
+                  2,
+                  4,
+                  4
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 24,
+                "tensor_index": [
+                  1,
+                  2,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 28,
+                "tensor_index": [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                4,
+                1
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                24,
+                7
+              ],
+              [
+                28,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "all_112_substitution": false,
+          "candidate_index": 1,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 2,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 10,
+                "tensor_index": [
+                  0,
+                  3,
+                  5,
+                  0
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 11,
+                "tensor_index": [
+                  0,
+                  3,
+                  5,
+                  1
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 20,
+                "tensor_index": [
+                  1,
+                  0,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 30,
+                "tensor_index": [
+                  1,
+                  4,
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 38,
+                "tensor_index": [
+                  2,
+                  0,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 44,
+                "tensor_index": [
+                  2,
+                  3,
+                  0,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                8,
+                2
+              ],
+              [
+                10,
+                3
+              ],
+              [
+                11,
+                2
+              ],
+              [
+                12,
+                3
+              ],
+              [
+                20,
+                3
+              ],
+              [
+                30,
+                2
+              ],
+              [
+                38,
+                2
+              ],
+              [
+                44,
+                3
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 7,
+                "row": 9,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 20,
+                "tensor_index": [
+                  1,
+                  0,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 30,
+                "tensor_index": [
+                  1,
+                  4,
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 38,
+                "tensor_index": [
+                  2,
+                  0,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 44,
+                "tensor_index": [
+                  2,
+                  3,
+                  0,
+                  4
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                9,
+                7
+              ],
+              [
+                12,
+                1
+              ],
+              [
+                20,
+                1
+              ],
+              [
+                30,
+                7
+              ],
+              [
+                38,
+                7
+              ],
+              [
+                44,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ]
+          ]
+        }
+      ],
+      "colored_support_candidates": 2,
+      "conjugate_sha256": "394cd763a0a2eb9d60c9c660be6073197f02974f9f460c5b86ea9e4d89298de5",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "7": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "1651e204b84e57574fb3ce1eb7310a009d17723c5421973c525f9c7c71034f54",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    },
+    "9": {
+      "candidate_phase_audits": [
+        {
+          "all_112_substitution": false,
+          "candidate_index": 0,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 14,
+                "tensor_index": [
+                  0,
+                  4,
+                  3,
+                  2
+                ]
+              },
+              {
+                "coefficient": 4,
+                "row": 16,
+                "tensor_index": [
+                  0,
+                  5,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 18,
+                "tensor_index": [
+                  0,
+                  5,
+                  3,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                12,
+                1
+              ],
+              [
+                14,
+                4
+              ],
+              [
+                16,
+                4
+              ],
+              [
+                18,
+                1
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "certificate_dot_b": 4,
+            "certificate_rows": [
+              {
+                "coefficient": 1,
+                "row": 4,
+                "tensor_index": [
+                  0,
+                  2,
+                  4,
+                  4
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 7,
+                "row": 24,
+                "tensor_index": [
+                  1,
+                  2,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 1,
+                "row": 28,
+                "tensor_index": [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              }
+            ],
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "left_null_certificate_sparse": [
+              [
+                4,
+                1
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                24,
+                7
+              ],
+              [
+                28,
+                1
+              ]
+            ],
+            "rank_unit": 21,
+            "solvable": false
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "all_112_substitution": false,
+          "candidate_index": 1,
+          "mod40_solution": null,
+          "mod5": {
+            "certificate_dot_b": 1,
+            "certificate_rows": [
+              {
+                "coefficient": 2,
+                "row": 8,
+                "tensor_index": [
+                  0,
+                  3,
+                  4,
+                  0
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 10,
+                "tensor_index": [
+                  0,
+                  3,
+                  5,
+                  0
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 11,
+                "tensor_index": [
+                  0,
+                  3,
+                  5,
+                  1
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 12,
+                "tensor_index": [
+                  0,
+                  4,
+                  2,
+                  2
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 20,
+                "tensor_index": [
+                  1,
+                  0,
+                  4,
+                  1
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 30,
+                "tensor_index": [
+                  1,
+                  4,
+                  0,
+                  2
+                ]
+              },
+              {
+                "coefficient": 2,
+                "row": 38,
+                "tensor_index": [
+                  2,
+                  0,
+                  2,
+                  4
+                ]
+              },
+              {
+                "coefficient": 3,
+                "row": 44,
+                "tensor_index": [
+                  2,
+                  3,
+                  0,
+                  4
+                ]
+              }
+            ],
+            "left_null_certificate_sparse": [
+              [
+                8,
+                2
+              ],
+              [
+                10,
+                3
+              ],
+              [
+                11,
+                2
+              ],
+              [
+                12,
+                3
+              ],
+              [
+                20,
+                3
+              ],
+              [
+                30,
+                2
+              ],
+              [
+                38,
+                2
+              ],
+              [
+                44,
+                3
+              ]
+            ],
+            "rank_a": 21,
+            "rank_aug": 22,
+            "solvable": false
+          },
+          "mod8": {
+            "diagonal": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "kernel_basis": [
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ]
+            ],
+            "kernel_orders": [
+              8,
+              8,
+              8,
+              8
+            ],
+            "rank_unit": 21,
+            "solution": [
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              4,
+              4,
+              4,
+              0,
+              0,
+              0,
+              0,
+              4,
+              4,
+              0,
+              0
+            ],
+            "solvable": true
+          },
+          "permutations": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ],
+            [
+              1,
+              0,
+              3,
+              2,
+              5,
+              4
+            ]
+          ]
+        }
+      ],
+      "colored_support_candidates": 2,
+      "conjugate_sha256": "699dac5bf468acd2ff13dcf45b61017ab48e045e3f7f3e3e93756d57b3ad00c2",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 2
+    }
+  },
+  "only_possible_party_permutations_from_degree_signatures": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      1,
+      3,
+      2
+    ]
+  ],
+  "party_swap_23": {
+    "1": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "7fd274c8a0d62fda4ac3cfff59a3d37b7cf558ae38200a56721e414651c5a5f1",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "11": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "42ae5b0f12a48bebcd70a73d3b6a001235d8b842f85419f43a654172485fbb59",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "13": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "cac2d1432afc3ef825dbcb5202ee19f5db9edc48782ab781660cff84162a4149",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "17": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "004cfa7c63308e5a59227afcea70fb50861e28143a1f634dd3a06660523a5720",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "19": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "d8ea54a684abadd05eef714f0d41fee8d8e40cb12e9c7d2d724b9cf919def27c",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "21": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "70cf089769a5cccadeee1b4404773da2bb9674a342ae337c4ffe9ad19c93573d",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "23": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "d84e1ecbd957b44429b1bc441d941fe9cacf499512ab45ea06675d6d35772836",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "27": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "11be3562d70f60b38a9c8bb8cebac5503d5bb1bdbf7dbdbc7bab465ae5a09a7c",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "29": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "7e91340817fcd5e2bbc683047b7c501361f6b95d7fe7d790517a90070a545faf",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "3": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "7fc6e14cddfaf5c4af60c3bb4c64729e8fea923e39e8f97799044da4aa7c0057",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "31": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "e863899b5ba39c853562d04aadff13d354e4ca3d52b06d33474efee34c6a9992",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "33": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "7dd114a41249e11f7954d48523bc5287f0433d665840fcf4d8d20920326f5cd9",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "37": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "c63682b0975c7e79a68b19a8afa36f5559f12729f37eb0fbbe5462e2b7f8d909",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "39": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "394cd763a0a2eb9d60c9c660be6073197f02974f9f460c5b86ea9e4d89298de5",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "7": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "1651e204b84e57574fb3ce1eb7310a009d17723c5421973c525f9c7c71034f54",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    },
+    "9": {
+      "candidate_phase_audits": [],
+      "colored_support_candidates": 0,
+      "conjugate_sha256": "699dac5bf468acd2ff13dcf45b61017ab48e045e3f7f3e3e93756d57b3ad00c2",
+      "degree_pool_sizes": [
+        4,
+        8,
+        48,
+        48
+      ],
+      "liftable_permutation_candidates": 0,
+      "raw_candidates": 73728,
+      "support_candidates": 0
+    }
+  },
+  "prereg_commit": "f78538f881a0e25fcc0ed839c88c0fd45a751352",
+  "prereg_sha256": "d662cae52dbbafd2f0802aabade5ffdfc09bb5d22d7160999bf845fc4866f886",
+  "source": {
+    "amplitude_counts": {
+      "a": 40,
+      "b": 40,
+      "c": 32
+    },
+    "bytes": 8515,
+    "degree_vectors": [
+      [
+        20,
+        18,
+        16,
+        24,
+        16,
+        18
+      ],
+      [
+        14,
+        14,
+        22,
+        20,
+        20,
+        22
+      ],
+      [
+        20,
+        20,
+        18,
+        18,
+        18,
+        18
+      ],
+      [
+        18,
+        18,
+        18,
+        18,
+        20,
+        20
+      ]
+    ],
+    "path": "AME46_ORIGINAL.m",
+    "sha256": "55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae",
+    "support": 112
+  },
+  "units": [
+    1,
+    3,
+    7,
+    9,
+    11,
+    13,
+    17,
+    19,
+    21,
+    23,
+    27,
+    29,
+    31,
+    33,
+    37,
+    39
+  ]
+}
