@@ -119,8 +119,13 @@ definitions.
 
 Connes--Consani decompose multiplication by a quasi-inner boundary function
 `u` with respect to the Hardy space and its orthogonal complement and define
-the associated Sonin space as the kernel of the diagonal lower block `u_22`.
-In the orientation above,
+the associated Sonin space as the kernel of the diagonal lower block
+
+```text
+u_22=(1-P)u(1-P).
+```
+
+In the orientation above this is exactly
 
 ```text
 u_22 = Q M_u Q |_(H_minus).
@@ -141,7 +146,129 @@ intersection space with the same **kernel construction** used by Connes--Consani
 explicit observation that the two published definitions coincide after the
 sharp/Fourier orientation is written out.
 
-## 5. Immediate consequence: Suzuki's open nontriviality problem is a global Sonin problem
+## 5. Standard Toeplitz form
+
+Let
+
+```text
+J_H : H_plus -> H_minus,
+J_H f=f^sharp.
+```
+
+For `eta=J_H f`, the Sonin condition
+
+```text
+Theta eta in H_plus
+```
+
+is equivalent after applying `sharp` to
+
+```text
+Theta^sharp f in H_minus.
+```
+
+On the real boundary Suzuki has
+
+```text
+Theta^sharp=Theta^(-1)=conjugate(Theta).
+```
+
+Therefore
+
+```text
+V(0) != {0}
+ <=> S(Theta_xi) != {0}
+ <=> ker T_(conjugate(Theta_xi)) != {0},
+```
+
+where
+
+```text
+T_g=P M_g |_(H_plus)
+```
+
+is the ordinary Toeplitz operator on `H2(C_+)`.
+
+This places Suzuki's unconditional nontriviality question directly inside the
+standard Toeplitz-kernel problem.
+
+**Status:** candidate-T, exact unitary/antiunitary rewrite.
+
+## 6. Exact factorization criterion, stated without importing a theorem name
+
+For any unimodular boundary symbol `g`,
+
+```text
+ker T_g != {0}
+```
+
+if and only if there exist nonzero Hardy functions
+
+```text
+f_+ in H_plus,
+f_- in H_minus
+```
+
+such that
+
+```text
+g f_+ = f_-.
+```
+
+Factoring the two Hardy functions into inner and outer parts gives a
+Wiener--Hopf / inner--outer factorization of `g`. Conversely any such
+factorization immediately supplies a nonzero Toeplitz-kernel vector.
+
+Applied to
+
+```text
+g=conjugate(Theta_xi),
+```
+
+this is exactly the analytic factorization wall behind `V(0)!=0`.
+
+The standard Toeplitz-kernel literature sharpens this to canonical
+inner--outer/maximal-vector forms; no such strengthening is required for the
+present gate. The point is that the open problem is not an abstract Hilbert
+existence question anymore: it is a concrete Wiener--Hopf factorization problem
+for the global xi phase.
+
+**Status:** candidate-T, direct equivalence from the Toeplitz definition.
+
+## 7. Why one known critical zero does not solve the problem
+
+Suzuki defines, for zeros `gamma` of
+
+```text
+A(z)=xi(1/2-i z),
+```
+
+the meromorphic functions
+
+```text
+F_gamma(z)
+ = sqrt(m_gamma/pi) i(1+Theta(z))/(2(z-gamma)).
+```
+
+These functions exist in his unconditional zero expansion. However the later
+statement
+
+```text
+F_gamma = Fourier(psi_gamma),
+psi_gamma in V(0),
+```
+
+is made in the RH-dependent model-space section and uses the orthogonality /
+model-space structure available when `Theta` is inner.
+
+Thus the unconditional existence of infinitely many real zeros of `A` does not
+by itself furnish a vector in `V(0)`. The missing condition is precisely Hardy
+membership of a candidate and its `conjugate(Theta)`-transformed image.
+
+**Status:** F for the shortcut `ONE-CRITICAL-ZERO -> V(0) NONZERO` at the
+claimed direct-construction scope.
+
+## 8. Immediate consequence: Suzuki's open nontriviality problem is a global Sonin/Toeplitz problem
 
 Suzuki remarks that proving or disproving
 
@@ -152,17 +279,23 @@ V(0) != {0}
 unconditionally is an interesting problem, and reduces it to the existence of
 an eigenfunction of the isometric involution `K` inside `L2(0,infinity)`.
 
-By Section 3, this is exactly
+By Sections 3 and 5, this is exactly
 
 ```text
-S(Theta_xi) != {0}.
+S(Theta_xi) != {0}
+```
+
+or equivalently
+
+```text
+ker T_(conjugate(Theta_xi)) != {0}.
 ```
 
 Thus the first global bridge target is strictly weaker than RH:
 
 ```text
-construct one nonzero vector eta in H_minus such that
-Q M_(Theta_xi) Q eta = 0.
+construct one nonzero f in H_plus such that
+conjugate(Theta_xi) f lies in H_minus.
 ```
 
 A positive result would solve Suzuki's unconditional nontriviality question but
@@ -172,7 +305,7 @@ escape `Q M_Theta P`, the Weil norm identity, or RH.
 **Status:** candidate-D reformulation of the open problem; no RH implication is
 claimed beyond Suzuki's stated one-way fact that `V(0)={0}` would contradict RH.
 
-## 6. Why the semilocal Sonin filtration is now relevant but not automatically sufficient
+## 9. Why the semilocal Sonin filtration is now relevant but not automatically sufficient
 
 For a finite place set `F`, Connes--Consani use
 
@@ -209,7 +342,7 @@ Can one transport a nonzero vector through the finite Sonin filtration into
 S(Theta_xi) by a separately constructed Wiener--Hopf/intertwining factor?
 ```
 
-## 7. Abstract transport lemma
+## 10. Abstract transport lemma
 
 Let `u` and `U` be unimodular boundary functions. Suppose there exist
 multipliers `D,N` with
@@ -247,7 +380,7 @@ written as a numerator/denominator pair.
 
 **Status:** candidate-T, elementary Hardy-space lemma.
 
-## 8. New exact gate: GLOBAL-SONIN-WIENER-HOPF
+## 11. New exact gate: GLOBAL-SONIN-WIENER-HOPF
 
 The next non-circular construction is therefore:
 
@@ -279,7 +412,7 @@ It would **not** prove RH. The RH wall would remain the stronger statement that
 `Theta_xi` is inner / its opposite Hardy escape vanishes, together with the
 Weil metric identification.
 
-## 9. Hard falsifiers
+## 12. Hard falsifiers
 
 The proposed gate fails if:
 
@@ -294,7 +427,7 @@ The proposed gate fails if:
    Suzuki's `K_0`, `H(E_xi)` or `V(0)` is assumed;
 7. the factorization is normalized after inspecting the desired target vector.
 
-## 10. Current hierarchy
+## 13. Current hierarchy
 
 ```text
 local Euler factor / gamma factor
@@ -302,10 +435,10 @@ local Euler factor / gamma factor
     -> finite semilocal quasi-inner u(F)
     -> infinite-dimensional S(u(F)) with inductive maps
     -> [OPEN GLOBAL-SONIN-WIENER-HOPF]
-    -> S(Theta_xi) ~= V(0)
+    -> S(Theta_xi) ~= V(0) ~= ker T_(conjugate Theta_xi)
     -> [stronger OPEN] Theta_xi inner / opposite Hardy escape zero
     -> RH.
 ```
 
-The new middle equality `S(Theta_xi) ~= V(0)` is exact. The transport arrow into
-it is open. No public scientific status moves.
+The new middle equality is exact. The transport arrow into it is open. No
+public scientific status moves.
