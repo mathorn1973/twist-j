@@ -74,7 +74,7 @@ sigma_k(z) = z^k,
 k in {1,3,7,9,11,13,17,19,21,23,27,29,31,33,37,39}.
 ```
 
-Its frozen CRT generators are `3` (order four), `17` (order two), and `21`
+Its frozen CRT generators are `17` (order four), `11` (order two), and `21`
 (order two).  Their subgroup closure must be verified rather than assumed.
 
 Relevant Canon facts are only `PLENUM-POINT [T]`, `Z2-PLACES-SPLIT [T]`, and
@@ -123,6 +123,12 @@ G_mod = { k in G : T_k is nonempty }.
 
 Its fixed field `K_mod = K^G_mod` is the **field of moduli in the frozen
 gauge class**.  This is distinct from the already proved field of entries.
+
+There is one mandatory baseline.  Projectivizing already removes the common
+factor `c`: the ratios `A/c` generate `E=Q(zeta_20)`, and `sigma_21(A)=-A`.
+Thus `<21>=Gal(K/E)` is automatically contained in `G_mod`.  A new descent
+below the projective coordinate field requires `G_mod` strictly larger than
+`<21>`; reporting only this baseline as a discovery is forbidden.
 
 A coherent descent datum to `K^H`, for a subgroup `H <= G_mod`, is a choice
 `M_k in T_k` for every `k in H`, with `M_1=1`, satisfying the semilinear
