@@ -1,0 +1,2 @@
+PASS generic sparse direct-order cross-check: 8 matrices
+PASS generic graph-star identity: 16 matrices

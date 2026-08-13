@@ -1,0 +1,39 @@
+{
+  "all_representatives_sha256": "06b887026919ba24f95592fd125e0608033337634def90fdbd8c08e18bc99020",
+  "burnside_orbits_per_leg": 2345,
+  "connected_no_double_edge_representatives_sha256": "df5a7d9f6d3454119cc7eaf066a42e1382232c442f3ab69e6906319bde0f6134",
+  "enumerated_orbits_per_leg": 2345,
+  "histogram_irreducible_connected_aut_order": {
+    "irreducible=False,connected=False,aut=1": 125,
+    "irreducible=False,connected=False,aut=2": 63,
+    "irreducible=False,connected=False,aut=3": 13,
+    "irreducible=False,connected=False,aut=6": 1,
+    "irreducible=False,connected=True,aut=1": 2139,
+    "irreducible=True,connected=True,aut=1": 4
+  },
+  "irreducible_orbits_self_star": 4,
+  "labeled_connected_no_double_edge_after_q_normalization": 24,
+  "labeled_no_double_edge_after_q_normalization": 24,
+  "labeled_reduction_histogram_target_multiplicity_loops": {
+    "target=one_leg_n3,multiplicity=2,loops=0": 10032,
+    "target=one_leg_n3,multiplicity=3,loops=1": 1560,
+    "target=one_leg_n3,multiplicity=4,loops=2": 48,
+    "target=scalar_identity_times_closed_n3,multiplicity=2,loops=0": 1944,
+    "target=scalar_identity_times_closed_n3,multiplicity=3,loops=1": 216
+  },
+  "model": "ordered triples S4^3 modulo simultaneous conjugation by S3 fixing 0",
+  "no_double_edge_representatives_sha256": "df5a7d9f6d3454119cc7eaf066a42e1382232c442f3ab69e6906319bde0f6134",
+  "normalized_labeled_per_leg": 13824,
+  "orbit_reduction_histogram_target_multiplicity_loops": {
+    "target=one_leg_n3,multiplicity=2,loops=0": 1683,
+    "target=one_leg_n3,multiplicity=3,loops=1": 269,
+    "target=one_leg_n3,multiplicity=4,loops=2": 4,
+    "target=scalar_identity_times_closed_n3,multiplicity=2,loops=0": 336,
+    "target=scalar_identity_times_closed_n3,multiplicity=3,loops=1": 49
+  },
+  "orbits_connected_no_double_edge_per_leg": 4,
+  "orbits_double_edge_per_leg": 2341,
+  "orbits_no_double_edge_per_leg": 4,
+  "raw_per_leg": 82944,
+  "result_sha256": "b26689374364d36211c04bc63718c4ef84b98de1c708f6ca22bdd2fa01896a7c"
+}
