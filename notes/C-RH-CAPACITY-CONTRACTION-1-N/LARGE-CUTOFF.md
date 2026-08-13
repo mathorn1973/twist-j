@@ -40,48 +40,50 @@ unconditional theorem and contains no RH input.
 
 ## Proof
 
-Take only prime-power delays in the shell
+The frozen capacity sum uses the strict delay cutoff `L_n<2a`, so take only
+prime-power delays in the strict shell
 
 ```text
-x < n <= x^2,
+x < n < x^2.
 ```
 
-so
-
-```text
-a < L_n <= 2a.
-```
-
-For every such delay the support-chain lemma gives
+Then `a<L_n<2a`, and the support-chain lemma gives
 
 ```text
 ||E_av-U_(L_n)E_av||^2 >= ||v||^2.
 ```
 
-(The endpoint `L_n=2a` is even stronger: supports are disjoint and the left
-side is `2||v||^2`.) Hence, discarding all other nonnegative terms,
+Therefore, discarding all other nonnegative terms,
 
 ```text
 q_A,a(v)/||v||^2
- >= (1/2) sum_(x<n<=x^2) Lambda(n)/sqrt(n) - kappa.
+ >= (1/2) sum_(x<n<x^2) Lambda(n)/sqrt(n) - kappa.
 ```
 
-Because `sqrt(n)<=x` on this shell,
+There is at most one integer at the upper endpoint `n=x^2`. If it is a prime
+power, its omitted Mangoldt weight is at most
 
 ```text
-sum_(x<n<=x^2) Lambda(n)/sqrt(n)
- >= [psi(x^2)-psi(x)]/x
- >= (9/10)x - 6/5.
+Lambda(x^2) <= log(x^2)=2 log x;
 ```
 
-Therefore
+otherwise the endpoint correction is zero. Since `sqrt(n)<x` on the strict
+shell,
+
+```text
+sum_(x<n<x^2) Lambda(n)/sqrt(n)
+ >= [psi(x^2)-psi(x)-2log x]/x
+ >= (9/10)x - 6/5 - 2(log x)/x.
+```
+
+Hence
 
 ```text
 q_A,a(v)/||v||^2
- >= (9/20)x - 3/5 - kappa.
+ >= (9/20)x - 3/5 - (log x)/x - kappa.
 ```
 
-It remains only to certify the constant. The elementary inequalities
+The elementary inequalities
 
 ```text
 log(pi) < log 4 = 2 log 2 < 2,
@@ -90,18 +92,20 @@ pi/2 < 2,
 3 log 2 < 3
 ```
 
-give
+give `kappa<8`. For `x>=41`, the function `(log x)/x` is decreasing and
+`log 41<4`, so
 
 ```text
-kappa < 8.
+(log x)/x <= (log 41)/41 < 4/41 < 1/10.
 ```
 
-At `x>=41`,
+Therefore
 
 ```text
-(9/20)x - 3/5 - kappa
- > (9/20)*41 - 3/5 - 8
- = 197/20
+q_A,a(v)/||v||^2
+ > (9/20)*41 - 3/5 - 1/10 - 8
+ = 39/4 - 1/10
+ = 193/20
  > 0.
 ```
 
