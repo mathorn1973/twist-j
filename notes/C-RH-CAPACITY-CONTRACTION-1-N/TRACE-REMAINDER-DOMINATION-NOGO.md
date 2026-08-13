@@ -1,13 +1,21 @@
-# TRACE-REMAINDER DOMINATION NO-GO
+# STOPPED TRACE-REMAINDER DOMINATION NO-GO
 
 ```text
-STATUS: F for the frozen simple-domination subroute
+STATUS: STOP as a #357 result; auxiliary comparison retained
 ISSUE:  #357
 PUBLIC STATUS CHANGES: none
 RH STATUS CHANGE: none
 ```
 
-## 1. The tempting reduction
+## 0. Post-commit decision
+
+The claimed no-go below used the same incorrect positive pole factorization
+withdrawn in `CORRECTION.md`. It is therefore **not** an `F` result for a
+frozen #357 subroute. The calculation of `delta(1)` and the small-support
+comparison may remain as an auxiliary source-normalization check, but it does
+not decide G3 or constrain G6.
+
+## 1. The stopped reduction
 
 After the standard critical-line Fourier/Mellin normalization, the
 archimedean Weil multiplier is
@@ -26,32 +34,32 @@ L = W_inf + D
 
 is a positive functional without a support restriction.
 
-Since the frozen capacity has the form
+The committed note then used the formula
 
 ```text
 q_A = W_inf
       + |M_+|^2 + |M_-|^2
-      + prime_antisymmetric_energy,
+      + prime_antisymmetric_energy.
 ```
 
-one has algebraically
+That premise is false for Suzuki's convolution involution. The actual pole
+term is
 
 ```text
-q_A
- = L
-   + |M_+|^2 + |M_-|^2
-   + prime_antisymmetric_energy
-   - D.
+2 Re[M_+conj(M_-)]
+ =(1/2)|M_++M_-|^2-(1/2)|M_+-M_-|^2.
 ```
 
-This suggested the stronger sufficient condition
+Consequently the displayed rewrite through `L` and the proposed sufficient
+condition
 
 ```text
 D(v)
  <= |M_+(v)|^2+|M_-(v)|^2+prime_antisymmetric_energy(v).
 ```
 
-The present note kills that sufficient subroute.
+do not represent the frozen capacity problem. The route was not
+preregistered, and no falsifier fires from this comparison.
 
 ## 2. Exact value of the remainder kernel at the identity
 
@@ -94,7 +102,7 @@ Hence exactly
 delta(1)>2.
 ```
 
-## 3. Small-support asymptotic breaker
+## 3. Auxiliary small-support comparison
 
 Fix a nonzero `phi in C_c^infty(-1,1)` with
 
@@ -153,56 +161,59 @@ Because `delta(1)>2`, for all sufficiently small `a`
 D(v_a) > |M_+(v_a)|^2+|M_-(v_a)|^2.
 ```
 
-There is no prime energy available in this range. Thus the proposed separate
-domination of the trace remainder fails on the actual smooth frozen test
-class.
+There is no prime energy available in this range. Thus the separate inequality
+comparing `D` with the **incorrect positive pole sum** fails on the smooth test
+class. That is an auxiliary comparison under the displayed trace-remainder
+normalization, not a breaker for the corrected `q_A`.
 
-**Status:** exact F for `TRACE-REMAINDER-SEPARATE-DOMINATION`.
+**Status:** candidate-T auxiliary asymptotic comparison; no #357 gate result.
 
 ## 4. Meaning
 
-This negative result does not threaten capacity positivity. It shows instead
-that the known positive functional
+This calculation neither threatens nor supports capacity positivity. Because
+the pole reservoir was mistyped, it does not show that the known positive
+functional
 
 ```text
 L=W_inf+D
 ```
 
-cannot be used by simply paying for `D` with the pole and prime channels after
-the fact. The positive Sonin reservoir and the trace/prolate remainder must be
-coupled before taking the final inequality.
+cannot be used in some correctly typed joint inequality. It only rejects the
+displayed comparison with `|M_+|^2+|M_-|^2`, which is not the pole term of the
+frozen capacity.
 
-This is consistent with Connes--Consani's actual proof at the archimedean
-place: they move the small square Delta into the positive reservoir Sigma by
-using a pair of cutoff projections and prolate components, rather than proving
-a pointwise or separate domination of the trace remainder.
+Connes--Consani's archimedean work remains a comparison source involving a
+pair of cutoff projections and prolate components. Importing its remainder
+requires a separately frozen sign, normalization, and domain map.
 
-## 5. Sharpened surviving target
+## 5. Possible separately locked comparison
 
-The G6 route must now construct a **coupled compression identity**, not a
-scalar domination:
+If separately preregistered, one may test a **coupled compression identity**
+rather than the stopped scalar comparison:
 
 ```text
 lossless semilocal scattering + cutoff pair
    -> orthogonal decomposition
    -> positive compressed/Sonin channel + signed prolate defect
-   -> frozen R_+,R_- pair.
+   -> corrected R_+,R_- pair.
 ```
 
-The next exact comparison is between the source off-diagonal decomposition for
-`rho_inf rho_p`
+A possible exact comparison would be between the source off-diagonal
+decomposition for `rho_inf rho_p`
 
 ```text
 (1-P) kappa kappa_p P = E_inf + E_p + E_0
 ```
 
-and the three frozen feature sectors
+and the three corrected feature sectors
 
 ```text
-gamma/pole ladder,
+gamma jump/pole channels,
 complete-prime delayed tower,
 two pole channels M_+,M_-.
 ```
 
-A coefficient-level mismatch kills that proposed intertwiner before any RH
-question is reached.
+A coefficient-level mismatch would kill only that separately frozen
+intertwiner candidate before any RH question is reached. Under the current
+#357 breaker order, G6 is not open while G3 is undecided. The immediate task
+remains the corrected signed G3 coercivity problem.

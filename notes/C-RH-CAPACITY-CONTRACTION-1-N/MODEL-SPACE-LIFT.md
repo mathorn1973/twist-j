@@ -81,9 +81,9 @@ det(P_0-P_r)=-r^2,
 spectrum(P_0-P_r)={+r,-r}.
 ```
 
-Hence the local prime obstruction is literally the relative position of two
-distinct one-dimensional Hardy model spaces. No invertible coordinate change
-can make their projection difference positive.
+Hence there is an exact rank-two model-space analogue of the local prime
+obstruction: it is the relative position of two distinct one-dimensional
+Hardy model spaces, and their projection difference is indefinite.
 
 With `r=p^(-1/2)`, the exact local inertia scale is
 
@@ -91,7 +91,10 @@ With `r=p^(-1/2)`, the exact local inertia scale is
 {+p^(-1/2), -p^(-1/2)}.
 ```
 
-This is a model-space refinement of the earlier Sylvester no-go.
+The diagonal density identity alone does not provide a congruence or unitary
+map from the delayed Euler tower to `P_0-P_r`. Without that carrier map, this is
+an independent model-space analogue, not a refinement or new proof of the
+earlier Sylvester no-go.
 
 **Status:** candidate-T.
 
@@ -129,9 +132,12 @@ d/dxi arg[Z_F/B_F]
 which is the complete finite-place Weil symbol for the full Euler towers of
 the primes in `F`.
 
-Thus the finite-place signed scattering problem can be lifted one level up to
-a quotient of two genuine inner channels. This is a finite-prime Hardy/Bohr
-repackaging; no novelty over the classical local-factor theory is claimed.
+Thus the finite-place signed **symbol** can be lifted one level up to a
+quotient of two genuine inner channels. This is a finite-prime Hardy/Bohr
+repackaging of the Euler-normalized balanced stabilization; no novelty over
+the classical local-factor theory is claimed. It is not a lift of the frozen
+strict-cutoff `q_A` or corrected `R_+,R_-` carrier, and no linear map from the
+delayed tower is supplied.
 
 **Status:** candidate-T for the exact algebraic lift.
 
@@ -147,11 +153,11 @@ global disk.
 
 ## 5. Strong sufficient gate, not an equivalence
 
-For inner functions, positive ordering of the corresponding model kernels is
-forced by an inclusion/divisibility relation between model spaces. Therefore a
-future archimedean completion which produced an exact model-space inclusion
-between the completed positive and negative inner channels would imply a
-positive kernel and hence contractivity.
+For inner functions, a typed inclusion/divisibility relation can order the
+corresponding model kernels. A future use must freeze which model space is
+included in which, the projection orientation, and the quotient or transfer
+map. With the orientation giving a positive projection difference, an exact
+completed inclusion would be a sufficient route to a contractive compression.
 
 This would be a **strong sufficient mechanism**, not an established equivalent
 form of RH. The local prime pair itself fails the inclusion because the two
@@ -161,4 +167,6 @@ The scientifically relevant question is whether the archimedean/prolate defect
 can enlarge the positive side so that the completed semilocal graph becomes an
 orthogonal compression of an isometric model-space transfer.
 
-No such inclusion is claimed here.
+No such inclusion is claimed here. Under the frozen #357 breaker order, G6 is
+blocked while G3 is undecided. This model-space comparison may be tested early
+only under a separate lock as an independent carrier/no-go study.

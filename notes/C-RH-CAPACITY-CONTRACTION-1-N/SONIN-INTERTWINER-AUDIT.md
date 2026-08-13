@@ -38,7 +38,7 @@ partial-isometry structure of triangular unitaries.
 
 **Status:** candidate-T, elementary operator lemma.
 
-## 2. Direct-intertwiner no-go
+## 2. Direct-intertwiner no-go for the corrected signed pair
 
 The frozen signed feature factorization in this incubation is
 
@@ -62,29 +62,32 @@ with `J,J_-` isometric would force
 for every admitted `v`, hence `Q_W^a(v)=0` identically. Therefore the exact
 Sonin isometry itself cannot be the desired G6 contraction.
 
-Any successful Sonin mechanism must contain a genuine compression, quotient,
-projection, or additional defect channel after the Sonin isometry.
+Any Sonin mechanism in this candidate class must contain a genuine
+compression, quotient, projection, or additional defect channel after the
+Sonin isometry.
 
 **Status:** exact F for the direct-isometry candidate class.
 
 ## 3. Source-level obstruction already at the archimedean place
 
-Connes--Consani's archimedean construction does not identify the Sonin trace
-with the archimedean Weil functional. Their trace remainder `delta(rho)` is an
-explicit nonzero positive function; they write the positive trace functional
-as the Weil distribution plus this remainder, and later express
+Connes--Consani's specific archimedean construction does not identify its
+Sonin trace with the archimedean Weil functional without a correction. They
+express the difference between the Weil distribution and the Sonin trace in
+terms of prolate spheroidal data and later write
 
 ```text
 Tr(theta(f) S) = W_inf(f) + E(f)
 ```
 
 with the correction controlled through the prolate pair of cutoff projections.
-Their main inequality is therefore an inequality involving the Sonin trace and
-an explicit remainder, not an equality of the two functionals.
+Their result therefore involves the Sonin trace and an explicit remainder,
+not a correction-free equality of the two functionals.
 
-Consequently a correction-free exact identification of the frozen Suzuki
-feature pair with the Connes--Consani Sonin projection pair is false already in
-the one-place archimedean case.
+Consequently the candidate that identifies the corrected #357 feature pair
+directly with that specific source-normalized Sonin trace, with no prolate
+correction, is false already in the one-place archimedean case. This does not
+exclude a differently normalized carrier with an independently constructed
+defect term.
 
 **Status:** F for `DIRECT-SONIN-EQUALITY`.
 
@@ -101,7 +104,7 @@ R_+ --J_a-->  S(u(F_a)) (+) D_a
                 |
                 | C_a   (orthogonal compression / contraction)
                 v
-               R_-
+              corrected R_-
 ```
 
 where
@@ -111,8 +114,8 @@ u(F_a) = rho_inf * product_(p in F_a) rho_p,
 F_a    = {p : log p < 2a}
 ```
 
-using the completed whole-Euler-tower convention already established in this
-incubation. The required content is not the diagram itself but exact formulas
+using the Euler-normalized balanced stabilization tested in this incubation.
+The required content is not the diagram itself but exact formulas
 for `J_a`, the defect carrier `D_a`, and `C_a`, with
 
 ```text
@@ -122,8 +125,9 @@ R_- = C_a [u12 (+) defect] J_a R_+,
 
 proved without RH or Weil positivity.
 
-The defect carrier is not optional: the archimedean trace-remainder theorem
-shows that a correction-free identification is already wrong at `F={inf}`.
+For an identification with the cited source-normalized Sonin trace, the defect
+carrier is not optional: the archimedean trace-remainder theorem shows that a
+correction-free equality is already wrong at `F={inf}`.
 
 ## 5. Filtration alignment
 
@@ -150,9 +154,9 @@ here. Constructing it is the remaining content.
 **Status:** candidate-D structural alignment; exact ingredients on each side,
 intertwiner open.
 
-## 6. New falsifier for the next construction
+## 6. Falsifier for an independently locked comparison
 
-A proposed semilocal G6 construction fails if any of the following occurs:
+A proposed semilocal comparison fails if any of the following occurs:
 
 1. it identifies `R_-` directly with the exact Sonin isometric image of `R_+`;
 2. it omits the known archimedean trace/prolate remainder while claiming exact
@@ -163,16 +167,21 @@ A proposed semilocal G6 construction fails if any of the following occurs:
 5. the defect term is defined from the target Weil inequality rather than from
    the independent cutoff/scattering geometry.
 
-## 7. Current target
+## 7. Current boundary
 
-The narrowed non-circular problem is:
+If separately preregistered as an independent comparison/no-go study, the
+narrowed non-circular problem would be:
 
 ```text
 Construct the explicit prolate/semilocal defect channel which completes the
-Sonin isometry into the frozen R_+ -> R_- graph map, and prove that the final
+Sonin isometry into the corrected R_+ -> R_- graph map, and prove that the final
 output is an orthogonal compression of an unconditional isometry.
 ```
 
-If this succeeds, contractivity is inherited from Hilbert geometry rather than
-from RH. If it fails already at the archimedean place or at the first added
-prime, the Sonin-intertwiner route is closed without affecting RH itself.
+Success would still require a proof that the constructed map has the corrected
+`R_+ -> R_-` typing; only then could contractivity be inherited from Hilbert
+geometry rather than RH. Failure at the archimedean place or the first added
+prime would close this candidate class without affecting RH itself.
+
+The frozen breaker order permits G6 only after G3-G5 survive. Since G3 is
+currently undecided, this audit does not open or execute G6.

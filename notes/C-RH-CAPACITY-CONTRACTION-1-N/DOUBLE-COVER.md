@@ -38,8 +38,8 @@ b_r(w^2)
  = b_q(w)b_(-q)(w).
 ```
 
-Thus one critical-radius factor at `p^(-1/2)` splits on the phase double cover
-into two parity factors at the quarter-power radius `+/- p^(-1/4)`.
+Thus one critical-radius factor at `p^(-1/2)` splits on the two-sheeted phase
+cover into two factors at the quarter-power radius `+/-p^(-1/4)`.
 
 ## 2. Same statement at the Euler denominator
 
@@ -68,11 +68,16 @@ square-root variable `p^(-s/2)`.
 
 ## 3. Interpretation of the two factors
 
-The two factors `b_q` and `b_-q` are the even/odd (sign) pair on the double
-cover. This is the local analytic counterpart of the delayed amplitude split
-into symmetric and antisymmetric channels. The result does not make either
-factor individually positive in the Weil sense; it only exhibits the exact
-square-root carrier underlying the signed pair.
+The two factors are exchanged by the deck involution, up to sign:
+
+```text
+b_q(-w)=-b_(-q)(w).
+```
+
+They are therefore a deck-conjugate sign pair, not individually even and odd
+functions. An exact linear identification with the delayed symmetric and
+antisymmetric feature channels has not been proved. The result does not make
+either factor individually positive in the Weil sense.
 
 ## 4. Boundary on zeta_8
 
@@ -82,31 +87,37 @@ No fixed eighth root is selected globally. The cover phase is the variable
 w=exp(i theta/2).
 ```
 
-At the special base phase `z=i` (`theta=pi/2`), its square roots are precisely
-odd eighth roots, e.g.
+At the special base phase `z=i` (`theta=pi/2`), its two square roots are
 
 ```text
-w=exp(i pi/4)=zeta_8,
+w=zeta_8 or zeta_8^5,
 w^2=i.
 ```
 
-Thus `sqrt(i)` is a distinguished **fiber value** of the universal half-phase
-cover, not the globally fixed source of positivity. This matches the earlier
-#355 non-uniqueness breaker while giving an exact reason for the appearance of
-`zeta_8` whenever the underlying local phase equals `i`.
+No sheet is privileged. Moreover the normalized Euler half-variable
+`beta/|beta|`, for `beta=p^(-s/2)`, has phase `w^(-1)` in the convention above.
+Over `z=i` it therefore gives a square root of `-i`, such as `zeta_8^(-1)`,
+up to the other sheet. This orientation must be kept distinct from the cover
+coordinate `w` and from the transform convention in #355. Neither eighth root
+is a source of positivity.
 
 ## 5. Why the square root, not an arbitrary m-th root
 
-Algebraically one can generalize
+For complex `alpha` use the standard Blaschke factor
+
+```text
+b_alpha(w)=(w-alpha)/(1-conj(alpha)w).
+```
+
+Then algebraically one can generalize
 
 ```text
 b_(q^m)(w^m)=product_(zeta^m=1) b_(q zeta)(w),
 ```
 
-so an `m`-fold phase cover exists abstractly. The present attack singles out
-`m=2` only because the frozen Weil object is a Hermitian **quadratic** form and
-the prime weight enters as a norm square. The square-root layer is therefore
-the minimal cover compatible with the quadratic/Pythagorean structure; the
-algebra alone does not prohibit higher covers.
+so an `m`-fold phase cover exists abstractly. The frozen Weil object is a
+Hermitian quadratic form and the prime weight enters as a norm square, which
+motivates testing `m=2` first. This motivation does not prove that the double
+cover is uniquely selected; the algebra alone does not prohibit higher covers.
 
 No Born, spin, metaplectic, or physical identification is claimed here.

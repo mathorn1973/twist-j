@@ -37,8 +37,10 @@ When `kL>=2a`, the supports of `f` and `U_(kL)f` are disjoint, hence
 
 Therefore adding all powers beyond the support cutoff adds the **same**
 positive norm to both sides and leaves the signed Weil difference unchanged.
-The full Euler-local tower is consequently an independently canonical
-completion of the truncated delayed channel, not a retuning of the form.
+The full tower is a natural Euler-normalized balanced stabilization of the
+truncated channel. It is not forced uniquely by the signed form: it changes
+the candidate capacity, both auxiliary Hilbert norms, and their graph
+geometry, even though their difference is unchanged.
 
 ## 2. Exact boundary symbols
 
@@ -97,10 +99,12 @@ Since `|b_r|=1`, the two quadratures obey the exact local Pythagorean identity
 |1-b_r|^2+|1+b_r|^2=4.
 ```
 
-Thus the completed prime place is controlled by one unit-modulus scattering
-phase. The indefinite local Weil contribution is not an arbitrary difference
-of squares; it is the signed pair of the two canonical quadratures of this
-phase, plus the explicit constant `d_p` on the symmetric channel.
+Thus the completed prime-place **norm symbols** are controlled by one
+unit-modulus Blaschke phase. The indefinite local Weil contribution is not an
+arbitrary difference of squares; it is the signed pair of these scalar
+quadratures, plus the explicit constant `d_p` on the symmetric channel. A
+linear map from the original `ell^2(k)`-valued tower to a one-state
+colligation has not been constructed.
 
 ## 3. Exact relation to the local L-factor ratio
 
@@ -158,27 +162,32 @@ Completing every `p in S_a` through all powers gives a carrier indexed by
 {(p,k): p in S_a, k>=1}.
 ```
 
-If `a<b`, then `S_a subseteq S_b`, and the prime-place carrier grows by direct
-sum of **whole local Euler towers**, not by individual powers. This removes the
-artificial power-by-power boundary from the carrier and gives a canonical
-prime-set filtration.
+If `a<b`, then `S_a subseteq S_b`, and this chosen stabilized prime-place
+carrier grows by direct sum of **whole local Euler towers**, not by individual
+powers. This removes the power-by-power boundary for this normalization and
+gives a candidate prime-set filtration.
 
 This filtration is structurally aligned with the semilocal local-factor
 framework of Connes--Consani: for a finite set `F` of places including the
 archimedean place they study the product of the ratios
 `rho_v=gamma_v/gamma_v(1-s)` and prove that the associated semilocal Sonin
-spaces form an inductive system as `F` grows. That external theorem is a
-comparison target only here; no identification of the present feature carrier
-with their Sonin space is claimed without a separate intertwining theorem.
+spaces form an inductive system as `F` grows. Their comparison maps for adding
+places are multipliers by the new local denominators, not plain subspace
+inclusions. That external theorem is a comparison target only here; no
+identification of the present feature carrier with their Sonin kernels is
+claimed without a separate intertwining theorem.
 
 ## 5. Consequence for G6
 
-The next non-circular contraction search should not use independent prime-power
-coordinates as primitive. The natural finite-place primitive is the completed
-local phase `b_(p^-1/2)` or equivalently `rho_p`, with the whole Euler tower as
-its amplitude realization.
+The exact scalar identities motivate testing the completed local phase
+`b_(p^-1/2)` together with `rho_p=z/b_(p^-1/2)` as finite-place comparison
+objects. They do not yet replace the independent prime-power coordinates by a
+proved equivalent carrier: a common Kolmogorov/spectral-factor map for both
+signed channels is missing.
 
 A genuine G6 construction would need to add the archimedean local ratio and
 prove an exact intertwiner between the resulting semilocal scattering/model
-space and the frozen `R_+ -> R_-` feature map. Merely observing the common
-local-factor vocabulary is not a proof.
+space and the corrected `R_+ -> R_-` feature map, respecting the multiplier
+maps when places are added. Merely observing the common local-factor vocabulary
+or equality of scalar norms is not a proof. Under the frozen breaker order,
+G6 remains blocked while G3 is undecided.

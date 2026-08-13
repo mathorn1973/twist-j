@@ -60,9 +60,12 @@ c_A(xi) = (A-i xi/2)/(A+i xi/2).
 ```
 
 Every factor `c_A` is unimodular for real `xi`. The exponential factors are
-pure translation phases. The product is the standard convergent Weierstrass
-product for the gamma ratio; finite truncations are exact finite all-pass
-cascades and converge to the displayed `rho_inf`.
+pure boundary phases. The product is the standard convergent Weierstrass
+product for the gamma ratio; finite truncations are exact finite boundary
+cascades and converge to the displayed `rho_inf`. In the right-half-plane
+variable `lambda=i xi/2`, however, `exp(i xi/m)=exp(2lambda/m)` has the advance
+orientation and is not a bounded causal Schur factor. Thus the full product is
+not asserted to be a passive operator colligation.
 
 **Status:** candidate-T, classical exact factorization/repackaging.
 
@@ -150,7 +153,7 @@ level.
 
 **Status:** candidate-T.
 
-## 5. Finite places and infinity now have the same architecture
+## 5. Finite places and infinity share a boundary-factor architecture
 
 For a finite prime `p`, the incubation already proved
 
@@ -163,18 +166,22 @@ present note gives a convergent product of lossless first-order Cayley factors
 `c_(m+1/4)` plus pure phase delays.
 
 Hence, before imposing a finite support cutoff, every local scattering ratio
-used in the semilocal product
+used in the semilocal boundary product
 
 ```text
 u_F = rho_inf product_(p in F) rho_p
 ```
 
-has an explicit lossless factorization independent of RH.
+has an explicit unimodular factor dictionary independent of RH. At infinity
+the factors `c_A` have stable first-order all-pass realizations. At a finite
+prime the displayed passive colligation realizes `b_r`, not
+`rho_p=z_p/b_r`; the reciprocal, the bare phase, and the Hardy orientation
+must still be typed before calling `rho_p` a passive transfer function.
 
-The remaining obstruction is therefore not local losslessness. It is the
-interaction of this global lossless scattering object with the finite
-interval/time-frequency cutoff which produces the Weil form and the known
-prolate/Sonin correction.
+The missing data are therefore not the local boundary phases themselves. They
+are a common linear carrier, the analytic orientation, and the interaction
+with the finite interval/time-frequency cutoff which produces the Weil form
+and the known prolate/Sonin correction.
 
 **Status:** candidate-D structural synthesis of exact local identities; no
 claim that a single global colligation has yet been constructed.
@@ -187,8 +194,8 @@ The cell variable is already the half spectral variable
 lambda = i xi/2,
 ```
 
-and the pole ladder starts at `1/4`. This is consistent with the exact global
-half-factor identities already recorded:
+and the pole ladder starts at `1/4`. This is consistent with the exact local
+half-argument identities already recorded:
 
 ```text
 1-p^(-s)=(1-p^(-s/2))(1+p^(-s/2)),
@@ -202,14 +209,18 @@ signed problem.
 
 ## 7. Current prior-art boundary
 
-Connes--Consani--Moscovici's semilocal prolate work already relates the prolate
-operator to the metaplectic representation of the double cover of
-`SL(2,R)`, and proves stability of semilocal Sonin spaces when finite places are
-added. Therefore neither the existence of a double-cover/metaplectic language
-nor a semilocal prolate operator is new here.
+Connes--Consani--Moscovici's *Zeta zeros and prolate wave operators*
+(`arXiv:2310.18423v2`) relates the archimedean/cyclic-pair prolate description
+to the metaplectic representation of the double cover of `SL(2,R)` and proves
+stability of semilocal Sonin spaces when finite places are added. It defers a
+semilocal metaplectic/Weil-representation candidate to future work. Thus the
+double-cover language and the semilocal Sonin/prolate framework are prior art;
+the missing semilocal metaplectic construction must not be claimed as already
+proved.
 
-Their 2026 `Zeta Spectral Triples` construction goes further in a different
-finite-dimensional direction: it restricts the Weil quadratic form to the
+Their *Zeta Spectral Triples* (`arXiv:2511.22755v1`, published in the cited
+2026 proceedings) goes further in a different finite-dimensional direction:
+it restricts the Weil quadratic form to the
 scaling basis on `[lambda^-1,lambda]`, uses Euler products over
 `p<=lambda^2`, and constructs rank-one perturbed self-adjoint scaling
 operators. The paper explicitly leaves two essential steps open: simplicity
@@ -221,21 +232,27 @@ possible contribution is the explicit local factor dictionary and a proposed
 route to identify the **cutoff defect itself** as the compression defect of a
 fully factorized lossless scattering cascade.
 
-## 8. Sharpened next gate: ARCHIMEDEAN-CUTOFF-DEFECT
+## 8. Proposed independent test: ARCHIMEDEAN-CUTOFF-DEFECT
 
-The next construction must start with the unconditional lossless cascade above
-and the exact time/support projection corresponding to `[-a,a]`. It must derive,
-not insert, the known archimedean prolate remainder.
+If separately preregistered as a comparison/no-go study, a future construction
+could start with the unconditional cascade above and the exact time/support
+projection corresponding to `[-a,a]`. It would have to derive, not insert, the
+known archimedean prolate remainder.
 
-A positive outcome requires an identity of the schematic form
+A positive outcome would have to freeze the source normalization, input
+class, and sign. Connes--Consani's general trace formula has a signed
+remainder, while on their constrained quadratic inputs the proved inequality
+has the orientation `W_inf >= Sonin trace`. A positive-square refinement would
+therefore have to prove an identity schematically oriented as
 
 ```text
-compressed scattering energy
- = archimedean Weil energy + ||D_a v||^2
+archimedean Weil energy
+ = compressed Sonin energy + ||D_a v||^2
 ```
 
 or an equivalent orthogonal-decomposition formula, with `D_a` independently
-defined by the cutoff geometry.
+defined by the cutoff geometry. No such norm-square identity is imported from
+the source for a general test function.
 
 The following are falsifiers:
 
@@ -245,8 +262,11 @@ The following are falsifiers:
 3. the infinite cascade is used as an operator without a proved domain/limit;
 4. the defect is fitted after observing the target remainder;
 5. adding the first finite prime breaks compatibility with the exact
-   `(D_p,N_p,b_r)` update already frozen.
+   `(D_p,N_p,b_r)` update already recorded.
 
-If the archimedean defect identity fails, the current Sonin/colligation G6 route
-is closed. If it survives, the next test is whether the complete-prime updates
-preserve the same defect/compression architecture.
+If the archimedean defect identity fails, this Sonin/colligation candidate
+class is closed. If it survives, a later test could ask whether complete-prime
+updates preserve the same defect/compression architecture. The frozen #357
+breaker order does not open G6 while G3 is undecided; this note records no G6
+execution or result. The immediate #357 task remains the corrected G3 signed
+coercivity problem.

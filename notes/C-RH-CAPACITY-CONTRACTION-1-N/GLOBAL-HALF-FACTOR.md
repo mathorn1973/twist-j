@@ -1,7 +1,7 @@
-# GLOBAL HALF-ARGUMENT PARITY FACTORIZATION
+# LOCAL AND FINITE-SEMILOCAL HALF-ARGUMENT FACTORIZATION
 
 ```text
-STATUS: candidate-T exact classical identities assembled at one scope
+STATUS: candidate-T local identities; global product not claimed
 ISSUE:  #357
 RH INPUT: none
 ```
@@ -20,7 +20,7 @@ The original critical line `Re(s)=1/2` becomes
 Re(u)=1/4.
 ```
 
-This is the same quarter-power line already forced by the prime amplitude
+This is the same quarter-power line displayed by the prime amplitude
 `p^(-s/2)`.
 
 ## 2. Finite place: even/odd Euler split
@@ -100,8 +100,8 @@ Gamma_R(2u)
  = 2^(u-1) Gamma_R(u) Gamma_R(u+1).
 ```
 
-Thus the archimedean factor also splits into an even/odd pair on the same
-half-argument cover. Define
+Thus the archimedean factor also splits into the classical even/odd real-gamma
+pair at half argument. Define
 
 ```text
 rho_(inf,+)(u)=Gamma_R(u)/Gamma_R(1/2-u),
@@ -121,11 +121,12 @@ On the critical line `2u=s=1/2+i xi`, the prefactor is the pure phase
 2^(2u-1/2)=2^(i xi)=exp(i xi log 2).
 ```
 
-No modulus is introduced.
+No modulus is introduced, but the phase is not disposable in a
+phase-derivative or trace comparison: it contributes the constant `log 2`.
 
-## 4. Structural statement
+## 4. Local and finite-semilocal structural statement
 
-The square-root cover therefore acts uniformly at every place:
+The same half-argument algebra occurs at each local place:
 
 ```text
 finite p:     one Euler denominator -> (+) and (-) half factors
@@ -141,16 +142,23 @@ The number `1/4` is thus simultaneously
 2. the real part of the half spectral parameter `u=s/2`;
 3. the radius exponent of the two Blaschke factors on the phase double cover.
 
-This is exact algebra, not an RH consequence.
+This is exact local algebra, not an RH consequence. For any fixed finite set
+of places the factors may be multiplied. No global Euler product of both half
+factors is claimed on `Re(u)=1/4`, where the naive products do not converge.
+The formal all-prime minus factor is related only after meromorphic
+continuation to a quotient such as `zeta(2u)/zeta(u)`; it is not supplied here
+as a new global `L`-factor or Hecke character.
 
 ## 5. Boundary and next question
 
 The factorization does not prove positivity. Each half scattering ratio can
-still have a signed phase derivative. What it supplies is a canonical two-copy
-(parity) carrier on which a metaplectic/Hardy or colligation comparison could
-be attempted.
+still have a signed phase derivative. It supplies local deck-conjugate factors
+and the classical archimedean parity pair on which a finite-semilocal
+comparison could be attempted; it does not yet supply a canonical common
+carrier or an intertwiner.
 
-At the special boundary phase `w=exp(i pi/4)`, the cover contains
-`sqrt(i)=zeta_8`; no fixed `zeta_8` is selected for general phase. Any link to
-the public TWIST-J Born half-angle requires a separate theorem and is outside
-this incubation.
+At the special cover coordinate `w^2=i`, the two sheets are `zeta_8` and
+`zeta_8^5`; no sheet is selected. The normalized Euler variable has inverse
+phase and therefore yields a square root of `-i` in this convention. Any link
+to the public TWIST-J Born half-angle requires a separate theorem and is
+outside this incubation.

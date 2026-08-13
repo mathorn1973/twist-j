@@ -1,7 +1,7 @@
 # SEMILOCAL DEFECT COEFFICIENT MATCH
 
 ```text
-STATUS: NON-CANONICAL incubation result
+STATUS: NON-CANONICAL independent comparison / no-go note
 ISSUE:  #357
 PUBLIC STATUS CHANGES: none
 RH STATUS CHANGE: none
@@ -9,9 +9,10 @@ RH STATUS CHANGE: none
 
 ## 1. Target tested
 
-The previous notes identified the complete local Euler factor of the frozen
-delayed-amplitude construction with the same local Blaschke/scattering factor
-used in the Connes--Consani Hardy model. The next proposed step was a direct
+The previous notes matched scalar norm symbols of the Euler-normalized
+balanced stabilization to the local Blaschke/scattering factor used in the
+Connes--Consani Hardy model. They did not identify the frozen delayed Hilbert
+carrier with that model. A proposed comparison was a direct
 sectorwise identification of their one-prime off-diagonal decomposition
 
 ```text
@@ -137,10 +138,11 @@ alpha x^(k-1) + (k-1) beta x^(k-1),
 with nonzero `beta` and with both `alpha` and `beta` depending explicitly on
 `p` and `log p`.
 
-The two universal pole squares in Suzuki's additive Weil functional,
+The corrected universal pole channels in Suzuki's additive Weil functional,
 
 ```text
-|M_+(v)|^2 + |M_-(v)|^2,
+[M_+(v)+M_-(v)]/sqrt(2),
+[M_+(v)-M_-(v)]/sqrt(2),
 ```
 
 are independent of the prime being added. They come from the global polar part
@@ -157,7 +159,9 @@ More conceptually, `E_0` is a **mixed collision jet** produced by multiplying
 two local scattering factors which share a pole at `s=0`. It belongs neither
 to the pure archimedean factor nor to the pure finite factor.
 
-**Status:** exact F for `DIRECT-THREE-SECTOR-MATCH`.
+**Status:** candidate-T no-go for the literal coefficient-preserving
+`DIRECT-THREE-SECTOR-MATCH`. A prime-dependent change of basis or a larger
+mixed defect carrier is not excluded.
 
 This falsification does not exclude a larger intertwiner that contains a mixed
 finite-dimensional defect channel.
@@ -244,22 +248,24 @@ the displayed additivity is an elementary exact identity.
 
 ## 7. Ruling on the attempted intertwiner
 
-The proposed map
+The proposed literal map
 
 ```text
-frozen additive feature sectors
+corrected additive feature labels
   <-> off-diagonal pole sectors of u_F itself
 ```
 
-is **F** in its direct sectorwise form. It fails at the first prime because of
-`E_0`, and the mismatch grows into an `(m+1)`-jet collision sector for `m`
-finite primes.
+fails in its coefficient-preserving sectorwise form. At the first prime `E_0`
+is a mixed collision jet rather than the universal pole label, and the
+collision sector grows to rank `m+1` for `m` finite primes. This is a no-go for
+that explicitly stated comparison, not for every possible semilocal
+intertwiner.
 
-The surviving construction must operate one infinitesimal level below the
-multiplicative scattering matrix:
+One candidate alternative is to operate one infinitesimal level below the
+multiplicative boundary multiplier:
 
 ```text
-lossless semilocal scattering u_F
+unimodular semilocal boundary multiplier u_F
           |
           | logarithmic / phase derivative
           v
@@ -270,19 +276,23 @@ additive local delay generator Q_F
 localized Weil quadratic form.
 ```
 
-This is exactly the hierarchy suggested by the signed Pythagorean attack:
-unitary scattering one level up, additive quadratic delay one level down.
+This is a precise candidate hierarchy suggested by the signed Pythagorean
+attack. It does not yet provide a causal conservative realization, a cutoff
+carrier, or an intertwiner.
 
-## 8. New gate: COMPRESSED-DELAY-GENERATOR
+## 8. Possible separately locked test: COMPRESSED-DELAY-GENERATOR
 
-A non-circular successor to the failed direct intertwiner must define the
-finite-cutoff object from the unconditional lossless scattering system before
-using Weil positivity. A viable target has the following shape.
+If independently preregistered outside the current breaker order, a successor
+test could define a finite-cutoff object from the unconditional boundary
+multiplier before using Weil positivity. A viable target would have the
+following shape.
 
-Let `C_a` denote the independently defined support/time-frequency cutoff and
-let a conservative dilation/colligation of the compressed scattering channel be
-fixed. Construct its self-adjoint infinitesimal phase-delay generator
-`Q_(F,a)` and prove an exact quadratic-form identity
+Let `C_a` denote an independently defined support/time-frequency cutoff. A
+future lock would first have to construct and type a conservative
+dilation/colligation of the chosen analytic orientation; boundary
+unimodularity alone does not supply it. It could then seek a self-adjoint
+infinitesimal phase-delay generator `Q_(F,a)` and an exact quadratic-form
+identity
 
 ```text
 <j_a(v), Q_(F,a) j_a(v)>
@@ -303,6 +313,9 @@ Required falsifiers:
 6. a claimed positivity follows only after assuming an inner/subspace property
    equivalent to the target inequality.
 
-No RH conclusion is claimed. The value of this gate is that its uncompressed
-local generator is already exactly the Weil local sum, while its multiplicative
-unitary ancestor is unconditional and lossless.
+No RH conclusion is claimed. The uncompressed scalar phase derivative is
+already exactly the sum of local Weil symbols, while its multiplicative
+ancestor is unconditionally unimodular on the critical boundary. Under the
+frozen #357 order, G6 is not open while G3 is undecided; this note neither
+opens nor executes `COMPRESSED-DELAY-GENERATOR`. The immediate task remains
+the corrected signed G3 coercivity problem.

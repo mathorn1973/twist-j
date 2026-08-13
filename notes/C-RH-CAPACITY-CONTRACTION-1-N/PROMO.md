@@ -1,244 +1,202 @@
-# PROMO C-RH-CAPACITY-CONTRACTION-1-N
+# CORRECTED PROMO C-RH-CAPACITY-CONTRACTION-1-N
 
 ```text
-STATUS: NON-CANONICAL PROMOTION PACKAGE
+STATUS: NON-CANONICAL REVIEW PACKAGE
 AUTHORITY: none
 ISSUE: #357
+PR: #359
 PROMOTION: not executed
 ```
 
-## 1. Results that survived
+`CORRECTION.md` is part of this package. It withdraws every conclusion that
+used the wrong positive factorization of the pole term.
 
-### A. Delayed prime powers form an exact signed Pythagorean pair
+## 1. Exact results that survive
 
-**candidate-T.** On `D_a=C_c^infty(-a,a)`, with zero extension and
-`w_n=Lambda(n)/sqrt(n)`, the exact prime part is
+### A. Finite prime powers form an exact signed pair
+
+**candidate-T.** On `D_a=C_c^infty(-a,a)`,
 
 ```text
-q_P,a=||V_a^-||^2-||V_a^+||^2,
+q_P,a=||V_a^-||^2-||V_a^+||^2.
 ```
 
-where `V^-` and `V+` are the antisymmetric and symmetric delayed channels.
-Every isolated delayed block has both signs, so no local basis change can make
-one prime leg positive.
+Each isolated delayed block has both signs. The cutoff restriction law also
+survives: a newly admitted disjoint delay adds exactly `w_n||v||^2` to each
+side.
 
-### B. The archimedean remainder has an exact Dirichlet-energy form
+### B. The gamma term is a jump energy minus mass
 
-**candidate-T.** Directly from Suzuki's Weil functional,
+**candidate-T.** Directly from Suzuki's displayed Weil functional,
 
 ```text
 q_gamma(v)
  = integral_0^infinity K(t)||E_av-U_tE_av||^2 dt
-   - kappa||v||^2,
+   -kappa||v||^2,
 
 K(t)=e^(-t/2)/(1-e^(-2t)),
-kappa=log(pi)-psi(1/4).
+kappa=log(pi)-psi_dig(1/4).
 ```
 
-The pole term is the positive rank-two form
+The separate pole term is **not** positive. It is
 
 ```text
-|M_+(v)|^2+|M_-(v)|^2.
+2 Re[M_+conj(M_-)]
+ =(1/2)|M_++M_-|^2-(1/2)|M_+-M_-|^2.
 ```
 
-Hence the frozen capacity `q_A` is one explicit nonlocal Dirichlet energy
-minus a single scalar mass.
+Thus the corrected `q_A,a` is an explicit signed coercivity problem, not a
+positive Dirichlet energy minus one scalar mass.
 
-### C. Large-cutoff G3 is closed unconditionally
+### C. Translation and strict-shell lemmas
 
-**candidate-T, external exact Chebyshev input.** Using the translation-chain
-lower bound and the unconditional explicit estimates
+**candidate-T.** The path-chain estimate gives
 
 ```text
-psi(x)>=(9/10)x for x>=41,
-psi(x)<=(6/5)x for x>=0,
+||v-U_Lv||^2
+ >=2[1-cos(pi/(ceil(2a/L)+1))]||v||^2.
 ```
 
-one gets
+For `a<L<2a`, the right side is `||v||^2`. Together with unconditional
+Chebyshev bounds, the strict shell `x<n<x^2`, `x=e^a>=41`, contributes at
+least
 
 ```text
-q_A,a(v)>0
+[(9/20)x-3/5-(log x)/x]||v||^2
 ```
 
-for every nonzero `v` and every
+to `q_A,a`. The earlier large-cutoff theorem does not follow because the pole
+term can be negative. G3 remains `UNDECIDED` for all `a>0`.
 
-```text
-a>=log 41.
-```
+### D. Euler-normalized balanced stabilization
 
-No RH, zero data, or Weil positivity is used. The strict endpoint in the
-frozen cutoff is handled explicitly by subtracting at most `2 log x` before
-applying the shell bound.
+**candidate-T for the equality; working choice for the geometry.** For an
+included prime `p`, adding all powers beyond the support cutoff adds equal
+norm to the two signed channels and leaves `Q_W` unchanged. This is a natural
+Euler-normalized balanced stabilization. It is not forced uniquely by the
+signed form and it changes `q_A`, both auxiliary norms, and graph geometry.
 
-The unresolved G3 domain is the compact interval
-
-```text
-0<a<log 41.
-```
-
-### D. Cutoff nesting is exact
-
-**candidate-T.** If `0<a<b` and `v in D_a`, each newly admitted prime-power
-channel has disjoint translated support and adds exactly
-
-```text
-w_n||v||^2
-```
-
-to both signed sides. Thus old vectors gain a matched diagonal block as the
-cutoff grows.
-
-### E. Completing a prime through its full Euler tower is canonical
-
-**candidate-T.** For an included prime `p`, adding all powers `p^k`, including
-those beyond the support cutoff, changes neither signed Weil difference nor
-any old correlation: beyond support the plus/minus norms are equal.
-
-With `r=p^(-1/2)` the completed local positive symbol is
+At the scalar Fourier-symbol level, with `r=p^(-1/2)`,
 
 ```text
 A_p(theta)=c_p|1-b_r(e^(i theta))|^2,
+B_p(theta)=c_p|1+b_r(e^(i theta))|^2+d_p,
 
 b_r(z)=(z-r)/(1-rz),
-c_p=(log p)r/[2(1-r^2)].
-```
-
-The symmetric symbol is
-
-```text
-B_p(theta)=c_p|1+b_r(e^(i theta))|^2+d_p,
+c_p=(log p)r/[2(1-r^2)],
 d_p=2(log p)r^2/(1-r^2).
 ```
 
-Since `|b_r|=1`, the two local quadratures obey
+The exact identity `|1-b_r|^2+|1+b_r|^2=4` holds on the circle. These norm
+symbols do not yet supply a linear tower-to-state intertwiner.
 
-```text
-|1-b_r|^2+|1+b_r|^2=4.
-```
-
-### F. The local phase is the standard L-factor scattering ratio
+### E. Local Weil symbols are scattering-phase derivatives
 
 **candidate-T.** On the critical line,
 
 ```text
 rho_p(s)=gamma_p(s)/gamma_p(1-s)=z/b_r(z),
-z=exp(i xi log p),
+d/dxi arg rho_p=(log p)[1-P_r(xi log p)],
 ```
 
 and
 
 ```text
-d/dxi arg rho_p(1/2+i xi)
+d/dxi arg rho_inf
+ =Re psi_dig(1/4+i xi/2)-log pi.
 ```
 
-is exactly the completed local prime Weil symbol. At infinity,
+The finite and infinite non-pole symbols are local pieces of one
+scattering-phase derivative. The bare factor `z` contributes `log p`; it is
+part of the equality.
 
-```text
-d/dxi arg rho_inf(1/2+i xi)
- = Re psi(1/4+i xi/2)-log pi,
-```
+### F. The compensating Blaschke factor has a lossless realization
 
-which is exactly the gamma multiplier. Finite and infinite places are
-therefore one scattering-phase-derivative mechanism.
-
-### G. Every finite prime place has a lossless two-state colligation
-
-**candidate-T.** The Blaschke phase is the transfer function of
+**candidate-T.** The real orthogonal `2x2` colligation with one-dimensional
+state
 
 ```text
 U_r=[[r,sqrt(1-r^2)],
-     [sqrt(1-r^2),-r]],
-U_r^T U_r=I.
+     [sqrt(1-r^2),-r]]
 ```
 
-This is a genuine local contraction/unitarity input independent of RH.
+has transfer function `b_r`. It does **not** directly realize `rho_p=z/b_r`,
+which has a pole at `z=r` in this orientation. Passing to the semilocal
+scattering multiplier still requires inversion, the bare phase, and a frozen
+Hardy orientation.
 
-### H. The square-root cover is exact at every place
+### G. The two-sheeted square-root identities are exact locally
 
-**candidate-T.** With `q=p^(-1/4)` and `z=w^2`,
+**candidate-T.** With `q=p^(-1/4)`, `z=w^2`, and `s=2u`,
 
 ```text
-b_(q^2)(w^2)=b_q(w)b_(-q)(w).
+b_(q^2)(w^2)=b_q(w)b_(-q)(w),
+1-p^(-2u)=[1-p^(-u)][1+p^(-u)],
+Gamma_R(2u)=2^(u-1)Gamma_R(u)Gamma_R(u+1).
 ```
 
-Equivalently
+The critical line becomes `Re(u)=1/4`. The two Blaschke factors are exchanged
+by the deck involution, up to sign; they are not separately even and odd
+functions. The gamma scattering ratio also carries the pure boundary phase
+`2^(2u-1/2)`, whose phase derivative contributes `log 2`.
+
+These are local or finite-semilocal identities. They do not define convergent
+global Euler products of both half factors on `Re(u)=1/4`.
+
+## 2. Corrected fully signed carrier
+
+The source-side form retains the exact factorization
 
 ```text
-1-p^(-s)=[1-p^(-s/2)][1+p^(-s/2)].
+Q_W^a(v)=||R_+(v)||^2-||R_-(v)||^2,
 ```
 
-The archimedean analogue is Legendre duplication
+provided the pole components are
 
 ```text
-Gamma_R(2u)=2^(u-1)Gamma_R(u)Gamma_R(u+1),
-s=2u.
+R_+^pole(v)=[M_+(v)+M_-(v)]/sqrt(2),
+R_-^pole(v)=[M_+(v)-M_-(v)]/sqrt(2).
 ```
 
-Thus the same half-argument cover splits finite Euler factors into `+/-`
-parity factors and the infinite factor into even/odd real gamma factors. The
-critical line `Re(s)=1/2` becomes `Re(u)=1/4`.
+Together with the continuous jump, mass, and prime delayed channels, these
+give exact Hilbert feature maps. Their contractive coherent graph map is not
+proved.
 
-This gives a global exact reason that quarter-power modulus and half phase
-appear together. `zeta_8=sqrt(i)` is one special fiber value when the base
-phase equals `i`; no fixed eighth root is globally selected.
+## 3. Falsifications and live boundaries
 
-## 2. Falsifications / boundaries
+1. **F positive pole shortcut:** the pole form is indefinite.
+2. **F supplied large-cutoff proof:** the valid prime shell cannot discard the
+   negative pole term; `a>=log 41` is not closed by that proof.
+3. **F local positivity:** one prime leg and the complete finite-prime sector
+   are indefinite in the frozen source-side splitting.
+4. **F pure-archimedean positive Schur shortcut:** a positive lower Schur
+   block contributes a negative semidefinite correction.
+5. **F automatic Hardy shortcut:** Toeplitz contractivity of a unimodular
+   multiplier does not imply the signed relative-projection inequality.
+6. **Boundary Hardy orientation:** for
+   `W=Tr(M_f[P-u*Pu])`, positivity needs the corresponding co-inner order;
+   an ordinary inner orientation gives the opposite order. Trace-class
+   hypotheses must be frozen.
+7. **Boundary Sonin system:** Connes--Consani's comparison maps for adding
+   places are multiplier maps, not plain inclusions. Their quasi-inner result
+   supplies a candidate comparison category, not the missing intertwiner.
+8. **Boundary zeta_8:** a coordinate `w^2=i` has two sheets. The normalized
+   Euler half-variable has the inverse orientation and yields a square root of
+   `-i`; neither choice is privileged by RH.
 
-1. **F local positivity:** one prime leg is genuinely indefinite. No local
-   `SU(2)` or other invertible change of basis can cure it.
-2. **F pure-archimedean positive Schur shortcut:** a positive lower Schur block
-   contributes only a negative semidefinite correction. The positive prime
-   channel must live in the capacity or the auxiliary geometry must be
-   indefinite.
-3. **F automatic Hardy shortcut:** a unimodular scattering multiplier has a
-   contractive Hardy compression, but the Weil functional is a signed relative
-   projection / quantized-differential quantity. Automatic Toeplitz
-   contractivity does not imply Weil positivity.
-4. **Boundary quasi-inner vs inner:** existing Connes--Consani semilocal
-   products are quasi-inner and their Sonin spaces form an inductive system.
-   This supplies the right carrier category, not the missing projection order.
-5. G3 remains open on `0<a<log 41`. No finite numerical scan is promoted.
-6. G6 nested contraction is not closed.
+## 4. Ordered next step
 
-## 3. Sharpened RH wall
+The proposed exact comparison with the semilocal Hardy/Sonin projection pair
+is a useful falsification target. Under the frozen breaker order in
+`PREREG.md`, however, G6 opens only after G3-G5 survive. The immediate #357
+task is therefore a corrected joint coercivity analysis for G3.
 
-The fully signed source-side factorization may be written
+An intertwiner study may proceed earlier only under an explicit separate lock
+that calls it an independent carrier-comparison/no-go test and does not claim
+G6 or consume positivity.
 
-```text
-Q_W^a(v)=||R_+(v)||^2-||R_-(v)||^2.
-```
+## 5. Promotion recommendation
 
-The canonical graph map
-
-```text
-T_a^0(R_+v)=R_-v
-```
-
-is algebraically defined once injectivity is fixed. The hard statement is its
-contractive, coherent extension. That statement may be recast as an exact
-relative-subspace / projection-order problem in a semilocal scattering model
-only after an intertwining theorem is proved.
-
-The best next theorem target is therefore:
-
-```text
-Construct an exact intertwiner between
-
-  (i) the frozen delayed-amplitude feature pair R_+,R_-, and
-  (ii) the semilocal Hardy/Sonin projection pair generated by
-       rho_inf * product_(p in S) rho_p,
-
-compatible with the full Euler-local towers and cutoff inclusions.
-```
-
-If the intertwiner exists, the residual RH wall becomes a precise subspace
-inclusion / innerness-strengthening problem. If it does not, the present
-scattering route is falsified without touching RH itself.
-
-## 4. Promotion recommendation
-
-Do not promote any RH claim. A later public theorem probe could reasonably
-separate the exact algebraic lemmas (delayed factor, local Blaschke/Euler
-completion, scattering derivative, double-cover parity factorization) from the
-open positivity/contraction problem. Such promotion requires independent audit
-and a fresh public claim lock.
+Do not promote any RH or G3 claim. A later public theorem probe may separate
+the exact algebraic identities from the open capacity and intertwining
+problems, after independent audit and a fresh claim lock.

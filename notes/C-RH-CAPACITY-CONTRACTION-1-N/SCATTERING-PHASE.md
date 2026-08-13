@@ -113,7 +113,7 @@ different mechanisms. They are the finite and infinite local pieces of one
 scattering-phase derivative. The pole terms remain separate rank-one/rank-two
 boundary channels.
 
-## 4. Exact lossless local realization
+## 4. Exact lossless realization of the compensating factor
 
 The Blaschke factor itself is the transfer function of the real orthogonal
 colligation
@@ -130,33 +130,45 @@ Indeed `U_r^T U_r=I`, and the scalar transfer function with state parameter
 -r + z(1-r^2)/(1-rz) = (z-r)/(1-rz)=b_r(z).
 ```
 
-Hence each finite prime place admits a canonical lossless two-state
-realization before any RH question is asked.
+Hence the compensating factor `b_r=z/rho_p` admits a real orthogonal `2x2`
+colligation with one-dimensional state before any RH question is asked. The
+colligation does not directly realize `rho_p`: in this disk orientation
+`rho_p=z/b_r` has a pole at `z=r`. Inversion, the bare phase `z`, and the
+Hardy orientation remain part of any scattering realization.
 
 ## 5. Comparison with the existing semilocal literature
 
 Connes--Consani define exactly the same local ratios
 `rho_v=gamma_v/gamma_v(1-s)`. For finite sets of places including infinity
-they prove the product is quasi-inner and that the associated semilocal Sonin
-spaces form an inductive system as the set of places grows. Their
+they prove the product is quasi-inner and that the associated semilocal
+kernels form an inductive system as the set of places grows. The comparison
+maps for adding places are local-denominator multipliers, not plain
+inclusions. Their
 archimedean-place work realizes a positive trace functional by compressing the
 scaling action to Sonin space.
 
 These are external comparison theorems, not imported conclusions for #357.
-The present incubation has not proved that its feature maps `R_+` and `R_-`
-intertwine with those semilocal Hardy/Sonin blocks.
+The geometric identification of all semilocal kernels with Sonin spaces is not
+imported here. The present incubation has not proved that its corrected feature
+maps `R_+` and `R_-` intertwine with those semilocal Hardy blocks.
+
+The local relation `rho_p b_r=z` is also not a novelty claim: it is the scalar
+local form of the Blaschke compensation already present in the cited
+Connes--Consani analysis. The useful new content at this lane is its exact
+comparison with the delayed-tower norm symbols.
 
 ## 6. Sharpened G6 target
 
-The natural next map is now explicit in type:
+The candidate comparison is now explicit in type:
 
 ```text
-signed delayed amplitudes
-       -> local lossless colligations U_(p^-1/2)
+signed delayed norm symbols
+       -> missing common spectral-factor map
+       -> local lossless colligations for b_(p^-1/2)
        -> finite product of local scattering ratios rho_p
        -> archimedean scattering ratio rho_inf
        -> Hardy/Sonin compression
-       -> compare with the canonical graph map R_+ -> R_-.
+       -> compare with the corrected graph map R_+ -> R_-.
 ```
 
 A positive result requires an exact intertwining identity at the quadratic-form
@@ -165,4 +177,6 @@ level. Similar vocabulary or a common phase derivative is not enough.
 The hoped-for mechanism is that the target contraction is a compression or
 defect map of a unitary semilocal scattering system. If so, its contractivity
 would come from unitarity rather than from assuming Weil positivity. This is a
-hypothesis for the next gate, not a theorem of this note.
+hypothesis for a later gate, not a theorem of this note. The frozen breaker
+order keeps G6 blocked while G3 is undecided; an earlier comparison requires a
+separate no-go/intertwiner lock.
