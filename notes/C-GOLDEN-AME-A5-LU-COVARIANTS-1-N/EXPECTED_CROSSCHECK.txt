@@ -1,0 +1,27 @@
+{
+  "diagram_counts": {
+    "n2_per_leg": 8,
+    "n2_total": 32,
+    "n3_per_leg": 432,
+    "n3_total": 1728
+  },
+  "diagram_list_sha256": "6603df99e77241aa6835c779d5519d91aa23813d6659f5373cd6d0299f69b708",
+  "f41_residues": {
+    "a": 4,
+    "b": 28,
+    "c": 12,
+    "w": 36,
+    "z": 6
+  },
+  "n2_computed": 32,
+  "n2_span_dimensions": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 1
+  },
+  "n3_scanned": 1728,
+  "result_sha256": "37c81c9337656551ce0973b6012203ce58b74fba2ad57e6b7e81a42896712c9a",
+  "source_sha256": "55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae",
+  "witness": null
+}
