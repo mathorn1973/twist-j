@@ -1,7 +1,7 @@
-# SUZUKI GLOBAL SONIN IDENTIFICATION
+# SUZUKI GLOBAL DIAGONAL-KERNEL IDENTIFICATION
 
 ```text
-STATUS: NON-CANONICAL incubation result / cross-source exact synthesis
+STATUS: NON-CANONICAL candidate-T algebra / candidate-D cross-source reading
 ISSUE:  #357
 PUBLIC STATUS CHANGES: none
 RH STATUS CHANGE: none
@@ -34,7 +34,7 @@ locations, or the RH-dependent model-space equality.
 
 ## 2. Hardy decomposition and the sharp antiunitary
 
-Freeze the Fourier orientation used by Suzuki:
+Freeze Suzuki's Fourier orientation and normalize the carrier map explicitly:
 
 ```text
 H_plus = F L2(0,infinity) = H2(C_+),
@@ -52,24 +52,33 @@ F^sharp(z)=conjugate(F(conjugate(z)))
 maps boundary values antiunitarily between the two Hardy halves. Therefore
 
 ```text
-A : L2(0,infinity) -> H_minus,
-A psi = (F psi)^sharp
+A_0 : L2(0,infinity) -> H_minus,
+A_0 psi = (2 pi)^(-1/2) (F psi)^sharp
 ```
 
-is an antiunitary bijection, up to the fixed Fourier normalization constant.
+is an antiunitary bijection for Suzuki's unnormalized Fourier transform. The
+fixed `(2 pi)^(-1/2)` is part of the map and is not allowed to vary between the
+two carriers.
 
 ## 3. Exact kernel identity
 
-Let `psi in L2(0,infinity)` and put
+Suzuki's `K` is an isometric involution, so
 
 ```text
-eta = A psi = (F psi)^sharp in H_minus.
+V(0)
+ = {psi in L2(0,infinity) : K psi in L2(0,infinity)}.
+```
+
+Let an arbitrary `psi in L2(0,infinity)` be given and put
+
+```text
+eta = A_0 psi = (2 pi)^(-1/2)(F psi)^sharp in H_minus.
 ```
 
 By Suzuki's definition,
 
 ```text
-F K psi = Theta eta.
+F K psi = sqrt(2 pi) Theta eta.
 ```
 
 Hence
@@ -93,21 +102,21 @@ Q M_Theta Q eta = 0.
 Consequently
 
 ```text
-A[V(0)]
+A_0[V(0)]
  = ker( Q M_Theta Q |_(H_minus) ).
 ```
 
-Define, for any unimodular boundary multiplier `u`, the Sonin kernel in this
-Hardy orientation by
+Define, for any unimodular boundary multiplier `u`, the extended
+diagonal-block kernel in this Hardy orientation by
 
 ```text
-S(u)=ker(Q M_u Q |_(H_minus)).
+S_diag(u)=ker(Q M_u Q |_(H_minus)).
 ```
 
 Then exactly
 
 ```text
-V(0) antiunitarily-isomorphic to S(Theta_xi).
+V(0) antiunitarily-isomorphic to S_diag(Theta_xi).
 ```
 
 No RH assumption enters this identity.
@@ -115,9 +124,9 @@ No RH assumption enters this identity.
 **Status:** candidate-T, exact Hilbert-space algebra from the two source
 definitions.
 
-## 4. Exact match to the Connes--Consani definition
+## 4. Match to the abstract Connes--Consani kernel after orientation transport
 
-Connes--Consani decompose multiplication by a quasi-inner boundary function
+Connes--Consani decompose multiplication by a **quasi-inner** boundary function
 `u` with respect to the Hardy space and its orthogonal complement and define
 the associated Sonin space as the kernel of the diagonal lower block
 
@@ -125,26 +134,31 @@ the associated Sonin space as the kernel of the diagonal lower block
 u_22=(1-P)u(1-P).
 ```
 
-In the orientation above this is exactly
+Their critical-line/left-Hardy convention and Suzuki's upper-`z` convention
+must first be related by the explicit coordinate/reflection antiunitary. After
+that transport, in the orientation frozen above, this is
 
 ```text
 u_22 = Q M_u Q |_(H_minus).
 ```
 
-Therefore the right side of Section 3 is precisely their abstract Sonin-space
-construction, now applied to Suzuki's **global xi boundary phase** `Theta_xi`:
+Therefore the right side of Section 3 has precisely the same abstract
+diagonal-block kernel formula, extended here to Suzuki's **global xi boundary
+phase** `Theta_xi`:
 
 ```text
-V(0)  ~=_antiunitary  S(Theta_xi).
+V(0)  ~=_antiunitary  S_diag(Theta_xi).
 ```
 
-This is not an identification of Suzuki's RH-dependent de Branges space with a
-semi-local Connes space. It is an identification of Suzuki's unconditional
-intersection space with the same **kernel construction** used by Connes--Consani.
+Unconditional boundary unimodularity of `Theta_xi` does not establish the
+quasi-inner hypothesis under which Connes--Consani use the name Sonin space.
+Thus this is not an identification of Suzuki's RH-dependent de Branges space
+with a semilocal Connes space. It is an exact identification with an extended
+diagonal-block kernel of the same formula.
 
-**Status:** candidate-T cross-source dictionary. Novelty, if any, is only the
-explicit observation that the two published definitions coincide after the
-sharp/Fourier orientation is written out.
+**Status:** candidate-T for the displayed kernel algebra and candidate-D for
+the cross-source category reading. This does not identify any finite
+semilocal carrier with Suzuki's carrier.
 
 ## 5. Standard Toeplitz form
 
@@ -155,7 +169,7 @@ J_H : H_plus -> H_minus,
 J_H f=f^sharp.
 ```
 
-For `eta=J_H f`, the Sonin condition
+For `eta=J_H f`, the diagonal-kernel condition
 
 ```text
 Theta eta in H_plus
@@ -177,7 +191,7 @@ Therefore
 
 ```text
 V(0) != {0}
- <=> S(Theta_xi) != {0}
+ <=> S_diag(Theta_xi) != {0}
  <=> ker T_(conjugate(Theta_xi)) != {0},
 ```
 
@@ -215,9 +229,10 @@ such that
 g f_+ = f_-.
 ```
 
-Factoring the two Hardy functions into inner and outer parts gives a
-Wiener--Hopf / inner--outer factorization of `g`. Conversely any such
-factorization immediately supplies a nonzero Toeplitz-kernel vector.
+Factoring the two Hardy functions into inner and outer parts is the starting
+point for a Wiener--Hopf / inner--outer description of `g`. Conversely any
+typed factorization with the displayed Hardy memberships immediately supplies
+a nonzero Toeplitz-kernel vector.
 
 Applied to
 
@@ -228,10 +243,9 @@ g=conjugate(Theta_xi),
 this is exactly the analytic factorization wall behind `V(0)!=0`.
 
 The standard Toeplitz-kernel literature sharpens this to canonical
-inner--outer/maximal-vector forms; no such strengthening is required for the
-present gate. The point is that the open problem is not an abstract Hilbert
-existence question anymore: it is a concrete Wiener--Hopf factorization problem
-for the global xi phase.
+inner--outer/maximal-vector forms; no such strengthening is imported here.
+This records a concrete Wiener--Hopf factorization formulation for the global
+xi phase, not a solution of it.
 
 **Status:** candidate-T, direct equivalence from the Toeplitz definition.
 
@@ -261,14 +275,15 @@ psi_gamma in V(0),
 is made in the RH-dependent model-space section and uses the orthogonality /
 model-space structure available when `Theta` is inner.
 
-Thus the unconditional existence of infinitely many real zeros of `A` does not
-by itself furnish a vector in `V(0)`. The missing condition is precisely Hardy
-membership of a candidate and its `conjugate(Theta)`-transformed image.
+The RH-dependent source step cannot be used unconditionally to infer that a
+known real zero furnishes a vector in `V(0)`. The missing condition is precisely
+Hardy membership of a candidate and its `conjugate(Theta)`-transformed image.
 
-**Status:** F for the shortcut `ONE-CRITICAL-ZERO -> V(0) NONZERO` at the
-claimed direct-construction scope.
+**Status:** `STOP` for the unsupported inference
+`ONE-CRITICAL-ZERO -> V(0) NONZERO`; no no-go theorem says that every possible
+zero-based construction must fail.
 
-## 8. Immediate consequence: Suzuki's open nontriviality problem is a global Sonin/Toeplitz problem
+## 8. Immediate consequence: Suzuki's open problem is a global diagonal/Toeplitz problem
 
 Suzuki remarks that proving or disproving
 
@@ -282,7 +297,7 @@ an eigenfunction of the isometric involution `K` inside `L2(0,infinity)`.
 By Sections 3 and 5, this is exactly
 
 ```text
-S(Theta_xi) != {0}
+S_diag(Theta_xi) != {0}
 ```
 
 or equivalently
@@ -291,7 +306,7 @@ or equivalently
 ker T_(conjugate(Theta_xi)) != {0}.
 ```
 
-Thus the first global bridge target is strictly weaker than RH:
+This nontriviality is necessary under RH and is not known to be sufficient:
 
 ```text
 construct one nonzero f in H_plus such that
@@ -307,7 +322,7 @@ claimed beyond Suzuki's stated one-way fact that `V(0)={0}` would contradict RH.
 
 ## 9. Why the semilocal Sonin filtration is now relevant but not automatically sufficient
 
-For a finite place set `F`, Connes--Consani use
+For a finite place set `F`, Connes--Consani use, in their source orientation,
 
 ```text
 u(F)=rho_inf product_(p in F_fin) rho_p
@@ -316,36 +331,41 @@ u(F)=rho_inf product_(p in F_fin) rho_p
 and prove that
 
 ```text
-S(u(F))=ker(Q M_(u(F)) Q)
+S_CC(u(F))=ker(Q M_(u(F)) Q)
 ```
 
-is infinite-dimensional; these spaces form an inductive system as finite
-places are added.
+is infinite-dimensional; these spaces form an inductive system under specified
+injective multiplier maps as finite places are added. They are not asserted to
+be literal inclusions, nor are their off-diagonal blocks automatically
+intertwined.
 
-The present identity puts the desired global target in **exactly the same
-kernel category**:
+After the orientation transport of Section 4, the present identity puts the
+desired global target in the same abstract diagonal-kernel category:
 
 ```text
-finite stage:  S(u(F)),
-global target: S(Theta_xi).
+finite stage:  S_CC(u(F)),
+global target: S_diag(Theta_xi).
 ```
 
-This does NOT identify their inductive limit with `S(Theta_xi)`. The earlier
-`DIRECT-SONIN-LIMIT-IDENTIFICATION` shortcut remains F: Suzuki explicitly notes
-that the associated de Branges constructions have different generators and
-spectral properties.
+Here `S_CC` names the source Sonin space for quasi-inner `u(F)`. This does NOT
+identify its inductive limit with `S_diag(Theta_xi)`. The earlier
+source comparison only excludes the literal generator-/spectrum-preserving
+identification of the named CCM de Branges spaces with `H(E_xi)`; it does not
+exclude every abstract isometry, limit, compression, quotient, or defect
+relation.
 
-The legitimate question is now narrower:
+One deferred question is now narrower:
 
 ```text
 Can one transport a nonzero vector through the finite Sonin filtration into
-S(Theta_xi) by a separately constructed Wiener--Hopf/intertwining factor?
+S_diag(Theta_xi) by a separately constructed Wiener--Hopf/intertwining factor?
 ```
 
 ## 10. Abstract transport lemma
 
-Let `u` and `U` be unimodular boundary functions. Suppose there exist
-multipliers `D,N` with
+Let `u` and `U` be unimodular boundary functions. Suppose there exist bounded
+multipliers `D,N` (or closed multipliers on an explicitly common invariant
+domain, with every displayed product in `L2`) with
 
 ```text
 U D = N u
@@ -358,13 +378,13 @@ D H_minus subset H_minus,
 N H_plus  subset H_plus.
 ```
 
-Then multiplication by `D` maps Sonin kernels forward:
+Then multiplication by `D` maps the extended diagonal kernels forward:
 
 ```text
-D : S(u) -> S(U).
+D : S_diag(u) -> S_diag(U).
 ```
 
-Proof. If `eta in S(u)`, then `eta in H_minus` and `u eta in H_plus`. By the
+Proof. If `eta in S_diag(u)`, then `eta in H_minus` and `u eta in H_plus`. By the
 preservation assumptions,
 
 ```text
@@ -372,17 +392,20 @@ D eta in H_minus,
 U D eta = N u eta in H_plus.
 ```
 
-Hence `D eta in S(U)`.
+Hence `D eta in S_diag(U)`.
 
 This is the abstract mechanism behind the Connes--Consani finite-place
 injections, where the quotient between consecutive scattering functions is
 written as a numerator/denominator pair.
 
-**Status:** candidate-T, elementary Hardy-space lemma.
+**Status:** candidate-T, elementary Hardy-space lemma at the stated bounded or
+typed-domain scope.
 
-## 11. New exact gate: GLOBAL-SONIN-WIENER-HOPF
+## 11. Deferred GLOBAL-SONIN-WIENER-HOPF comparison (not a gate)
 
-The next non-circular construction is therefore:
+Frozen G3 remains UNDECIDED, so G4 and G6 are blocked. No new #357 gate is
+opened or executed here. After the frozen order and outcome-blind G0
+classification permit it, a separately locked comparison could ask:
 
 For a finite semilocal stage `F`, find `D_F,N_F`, independently of RH and zero
 locations, such that
@@ -398,23 +421,24 @@ D_F H_minus subset H_minus,
 N_F H_plus  subset H_plus.
 ```
 
-Then every nonzero `eta_F in S(u(F))` with `D_F eta_F !=0` produces a nonzero
+Then every nonzero `eta_F in S_CC(u(F))` with `D_F eta_F !=0` produces a nonzero
 vector
 
 ```text
-D_F eta_F in S(Theta_xi) ~= V(0).
+D_F eta_F in S_diag(Theta_xi) ~= V(0).
 ```
 
-This would be a genuine prime/archimedean-to-global-xi bridge and would settle
-Suzuki's unconditional nontriviality question.
+If all domain/orientation and non-annihilation requirements were proved, this
+would be a prime/archimedean-to-global-xi bridge and would settle Suzuki's
+unconditional nontriviality question.
 
 It would **not** prove RH. The RH wall would remain the stronger statement that
 `Theta_xi` is inner / its opposite Hardy escape vanishes, together with the
 Weil metric identification.
 
-## 12. Hard falsifiers
+## 12. Falsifiers for a later separately locked comparison
 
-The proposed gate fails if:
+The proposed later comparison fails if:
 
 1. `D_F,N_F` are defined using zeros of `xi`, RH, or innerness of `Theta_xi`;
 2. the factorization exists only by writing the tautological quotient
@@ -431,14 +455,18 @@ The proposed gate fails if:
 
 ```text
 local Euler factor / gamma factor
-    -> exact lossless scattering cells
+    -> exact boundary-unitary scattering factors
     -> finite semilocal quasi-inner u(F)
-    -> infinite-dimensional S(u(F)) with inductive maps
-    -> [OPEN GLOBAL-SONIN-WIENER-HOPF]
-    -> S(Theta_xi) ~= V(0) ~= ker T_(conjugate Theta_xi)
-    -> [stronger OPEN] Theta_xi inner / opposite Hardy escape zero
+    -> infinite-dimensional S_CC(u(F)) with inductive maps
+    -> [deferred GLOBAL-SONIN-WIENER-HOPF comparison]
+    -> S_diag(Theta_xi) ~= V(0) ~= ker T_(conjugate Theta_xi)
+    -> [RH-equivalent condition which implies nontriviality]
+       Theta_xi inner / opposite Hardy escape zero
     -> RH.
 ```
 
-The new middle equality is exact. The transport arrow into it is open. No
-public scientific status moves.
+The new middle equality `S_diag(Theta_xi) ~= V(0)` is exact. Calling the global
+kernel a Connes--Consani Sonin space would additionally require quasi-innerness,
+which is not imported. The transport arrow is unproved and is not a #357 gate.
+It also does not prove G3 or absorb the corrected signed pole pair. No public
+scientific status moves.
