@@ -1,0 +1,5 @@
+G0 PASS
+G1 PASS: 2345 orbits, four irreducible cores
+G2 PASS: complete 16+16 census; first hard locator q=0,R1
+G3 PASS: exact minor nonzero, residue 31, exact eigen split 2+2+2
+G4 EXACT NO in the frozen arbitrary-local-unitary 1+5 scope

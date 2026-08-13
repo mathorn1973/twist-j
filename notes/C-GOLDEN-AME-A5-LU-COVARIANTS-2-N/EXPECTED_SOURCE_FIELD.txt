@@ -1,0 +1,31 @@
+PASS source pin: commit 1fa4a4d4d2b9a3c6d3b6c8d802116415fb679fe8
+PASS source bytes: 8515; sha256 55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae; git-blob e0d0e171d58b3360c39595d677ffc401a466112d
+PASS parser: base=36x36, exponent=36x36, nonzero=112, active phase range=[0,19]
+PASS a is real
+PASS b is real
+PASS c is real
+PASS c^2=1/2
+PASS a^2=(1-1/sqrt(5))/4
+PASS b^2=(1+1/sqrt(5))/4
+PASS a^2=(3-phi)/10
+PASS b^2=(2+phi)/10
+PASS b/a=phi
+PASS w=(zeta_20^3)^7=(T_pl/2)^7
+PASS U: exact left and right unitarity (0 residual entries)
+PASS U^R: exact left and right unitarity (0 residual entries)
+PASS U^Gamma_2: exact left and right unitarity (0 residual entries)
+PASS entry U[1,2]=c
+PASS entry U[2,3]=c*w^17
+PASS w=(U[2,3]/U[1,2])^13
+PASS zeta_40=c*(1+w^5)*w^-2
+PASS w=zeta_40^2
+PASS c=(zeta_40^5+zeta_40^-5)/2
+PASS a=c/(w+w^-1)
+PASS b=(w^2+w^-2)*a
+PASS Phi_40(zeta_40)=0
+PASS zeta_40^20=-1
+PASS zeta_40^40=1
+PASS zeta_40=zeta_5^2*zeta_8^-3
+PASS minimal entry field: Q(entries)=Q(zeta_40), degree 16 over Q (Phi_40 is the irreducible 40th cyclotomic polynomial)
+PASS two-place identity: Q(zeta_40)=Q(zeta_5,zeta_8)
+RESULT G0=PASS G1=PASS

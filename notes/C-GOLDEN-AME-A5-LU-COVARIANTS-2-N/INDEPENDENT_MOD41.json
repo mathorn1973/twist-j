@@ -1,0 +1,2699 @@
+{
+  "field": {
+    "p": 41,
+    "z": 6,
+    "z_inverse": 7
+  },
+  "first_hard_witness": {
+    "certificate": {
+      "basis_words": [
+        "I",
+        "R1",
+        "(R1*R1)"
+      ],
+      "dimension_reached": 3,
+      "first_minor": {
+        "det": 31,
+        "flat_columns": [
+          0,
+          7,
+          21
+        ],
+        "matrices": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "kind": "closure",
+    "q": 0,
+    "through_core": 1
+  },
+  "graph_star_conjugators": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      1,
+      3,
+      2
+    ],
+    [
+      0,
+      3,
+      2,
+      1
+    ],
+    [
+      0,
+      3,
+      2,
+      1
+    ]
+  ],
+  "legs": [
+    {
+      "cores": [
+        {
+          "core": 0,
+          "first_nonscalar_entry": null,
+          "matrix": [
+            [
+              19,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              19,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              19,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              19,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              19,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              19
+            ]
+          ],
+          "matrix_sha256": "8f045c64812c3c18a884fde5d3b902a02ac80a55f568d11be3ea806cd9f0d15c",
+          "scalar": true,
+          "star_matrix": [
+            [
+              19,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              19,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              19,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              19,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              19,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              19
+            ]
+          ],
+          "star_matrix_sha256": "8f045c64812c3c18a884fde5d3b902a02ac80a55f568d11be3ea806cd9f0d15c"
+        },
+        {
+          "core": 1,
+          "first_nonscalar_entry": [
+            1,
+            1,
+            15
+          ],
+          "matrix": [
+            [
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              19,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              19,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          ],
+          "matrix_sha256": "216ab9aed14ee7c08dc13cd688d3b95b216ddad7644525c635a0dc28bdb37559",
+          "scalar": false,
+          "star_matrix": [
+            [
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              19,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              19,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              4
+            ]
+          ],
+          "star_matrix_sha256": "216ab9aed14ee7c08dc13cd688d3b95b216ddad7644525c635a0dc28bdb37559"
+        },
+        {
+          "core": 2,
+          "first_nonscalar_entry": null,
+          "matrix": [
+            [
+              9,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              9,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              9,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              9
+            ]
+          ],
+          "matrix_sha256": "2f84828b4a39fe60fba047574cf50216285b718edd7a06227bc3702741c9522d",
+          "scalar": true,
+          "star_matrix": [
+            [
+              9,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              9,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              9,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              9
+            ]
+          ],
+          "star_matrix_sha256": "2f84828b4a39fe60fba047574cf50216285b718edd7a06227bc3702741c9522d"
+        },
+        {
+          "core": 3,
+          "first_nonscalar_entry": null,
+          "matrix": [
+            [
+              33,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              33,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              33,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              33,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              33,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              33
+            ]
+          ],
+          "matrix_sha256": "7bcb77109d6d0d52a281ea4fac6150ccf8f786ef239c460f08933393e09e6114",
+          "scalar": true,
+          "star_matrix": [
+            [
+              33,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              33,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              33,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              33,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              33,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              33
+            ]
+          ],
+          "star_matrix_sha256": "7bcb77109d6d0d52a281ea4fac6150ccf8f786ef239c460f08933393e09e6114"
+        }
+      ],
+      "first_commutator": null,
+      "first_three_minor_in_I_R0_R1_R2_R3": null,
+      "prefix_priority_audit": [
+        {
+          "closure": {
+            "basis_words": [
+              "I"
+            ],
+            "dimension_reached": 1,
+            "first_minor": null
+          },
+          "direct_span_minor": null,
+          "first_commutator": null,
+          "through_core": 0
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R1",
+              "(R1*R1)"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 31,
+              "flat_columns": [
+                0,
+                7,
+                21
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": null,
+          "first_commutator": null,
+          "through_core": 1
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R1",
+              "(R1*R1)"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 31,
+              "flat_columns": [
+                0,
+                7,
+                21
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": null,
+          "first_commutator": null,
+          "through_core": 2
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R1",
+              "(R1*R1)"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 31,
+              "flat_columns": [
+                0,
+                7,
+                21
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": null,
+          "first_commutator": null,
+          "through_core": 3
+        }
+      ],
+      "q": 0,
+      "span_rank_I_R0_R1_R2_R3": 2
+    },
+    {
+      "cores": [
+        {
+          "core": 0,
+          "first_nonscalar_entry": null,
+          "matrix": [
+            [
+              19,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              19,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              19,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              19,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              19,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              19
+            ]
+          ],
+          "matrix_sha256": "8f045c64812c3c18a884fde5d3b902a02ac80a55f568d11be3ea806cd9f0d15c",
+          "scalar": true,
+          "star_matrix": [
+            [
+              19,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              19,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              19,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              19,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              19,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              19
+            ]
+          ],
+          "star_matrix_sha256": "8f045c64812c3c18a884fde5d3b902a02ac80a55f568d11be3ea806cd9f0d15c"
+        },
+        {
+          "core": 1,
+          "first_nonscalar_entry": [
+            1,
+            1,
+            23
+          ],
+          "matrix": [
+            [
+              19,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              4,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              19
+            ]
+          ],
+          "matrix_sha256": "e5bef014afba92e1ddddcfc3a93f54ec24f5985d0160bf91790def0361dc82fd",
+          "scalar": false,
+          "star_matrix": [
+            [
+              19,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              4,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              19
+            ]
+          ],
+          "star_matrix_sha256": "e5bef014afba92e1ddddcfc3a93f54ec24f5985d0160bf91790def0361dc82fd"
+        },
+        {
+          "core": 2,
+          "first_nonscalar_entry": null,
+          "matrix": [
+            [
+              33,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              33,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              33,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              33,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              33,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              33
+            ]
+          ],
+          "matrix_sha256": "7bcb77109d6d0d52a281ea4fac6150ccf8f786ef239c460f08933393e09e6114",
+          "scalar": true,
+          "star_matrix": [
+            [
+              33,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              33,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              33,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              33,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              33,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              33
+            ]
+          ],
+          "star_matrix_sha256": "7bcb77109d6d0d52a281ea4fac6150ccf8f786ef239c460f08933393e09e6114"
+        },
+        {
+          "core": 3,
+          "first_nonscalar_entry": null,
+          "matrix": [
+            [
+              9,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              9,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              9,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              9
+            ]
+          ],
+          "matrix_sha256": "2f84828b4a39fe60fba047574cf50216285b718edd7a06227bc3702741c9522d",
+          "scalar": true,
+          "star_matrix": [
+            [
+              9,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              9,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              9,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              9
+            ]
+          ],
+          "star_matrix_sha256": "2f84828b4a39fe60fba047574cf50216285b718edd7a06227bc3702741c9522d"
+        }
+      ],
+      "first_commutator": null,
+      "first_three_minor_in_I_R0_R1_R2_R3": null,
+      "prefix_priority_audit": [
+        {
+          "closure": {
+            "basis_words": [
+              "I"
+            ],
+            "dimension_reached": 1,
+            "first_minor": null
+          },
+          "direct_span_minor": null,
+          "first_commutator": null,
+          "through_core": 0
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R1",
+              "(R1*R1)"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 31,
+              "flat_columns": [
+                0,
+                7,
+                21
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": null,
+          "first_commutator": null,
+          "through_core": 1
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R1",
+              "(R1*R1)"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 31,
+              "flat_columns": [
+                0,
+                7,
+                21
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": null,
+          "first_commutator": null,
+          "through_core": 2
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R1",
+              "(R1*R1)"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 31,
+              "flat_columns": [
+                0,
+                7,
+                21
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": null,
+          "first_commutator": null,
+          "through_core": 3
+        }
+      ],
+      "q": 1,
+      "span_rank_I_R0_R1_R2_R3": 2
+    },
+    {
+      "cores": [
+        {
+          "core": 0,
+          "first_nonscalar_entry": [
+            0,
+            1,
+            2
+          ],
+          "matrix": [
+            [
+              28,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              19,
+              31,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              20,
+              8,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4,
+              39,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              9,
+              32
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              28
+            ]
+          ],
+          "matrix_sha256": "b5be7566151c07630d1d9548b448f0ecec59159b03d5b8d0d2d092b6cfa83026",
+          "scalar": false,
+          "star_matrix": [
+            [
+              28,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              19,
+              31,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              20,
+              8,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4,
+              39,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              9,
+              32
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1,
+              28
+            ]
+          ],
+          "star_matrix_sha256": "b5be7566151c07630d1d9548b448f0ecec59159b03d5b8d0d2d092b6cfa83026"
+        },
+        {
+          "core": 1,
+          "first_nonscalar_entry": [
+            0,
+            1,
+            38
+          ],
+          "matrix": [
+            [
+              35,
+              38,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              29,
+              32,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              33,
+              17,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              36,
+              34,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              21,
+              27
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              9,
+              22
+            ]
+          ],
+          "matrix_sha256": "df4617b8d0e8c9366ba19cddd451f5a6449dba2ad9f33d28c168424f57666806",
+          "scalar": false,
+          "star_matrix": [
+            [
+              35,
+              38,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              29,
+              32,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              33,
+              17,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              36,
+              34,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              21,
+              27
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              9,
+              22
+            ]
+          ],
+          "star_matrix_sha256": "df4617b8d0e8c9366ba19cddd451f5a6449dba2ad9f33d28c168424f57666806"
+        },
+        {
+          "core": 2,
+          "first_nonscalar_entry": [
+            0,
+            1,
+            3
+          ],
+          "matrix": [
+            [
+              20,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              18,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              17,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5,
+              12
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              35,
+              30
+            ]
+          ],
+          "matrix_sha256": "37fcf5414552e4fa9c1d8b960c2d8a4a1c2b35493792c487f7e661ef6208f174",
+          "scalar": false,
+          "star_matrix": [
+            [
+              20,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              18,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              17,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5,
+              12
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              35,
+              30
+            ]
+          ],
+          "star_matrix_sha256": "37fcf5414552e4fa9c1d8b960c2d8a4a1c2b35493792c487f7e661ef6208f174"
+        },
+        {
+          "core": 3,
+          "first_nonscalar_entry": [
+            0,
+            1,
+            22
+          ],
+          "matrix": [
+            [
+              21,
+              22,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              12,
+              34,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              14,
+              11,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              15,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              15,
+              33
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              28,
+              5
+            ]
+          ],
+          "matrix_sha256": "556e93f9122258b0c542f743651c0c7c3a8b98a0cbed1c9a6f97b8fb3d3f1e19",
+          "scalar": false,
+          "star_matrix": [
+            [
+              21,
+              22,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              12,
+              34,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              14,
+              11,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              15,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              15,
+              33
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              28,
+              5
+            ]
+          ],
+          "star_matrix_sha256": "556e93f9122258b0c542f743651c0c7c3a8b98a0cbed1c9a6f97b8fb3d3f1e19"
+        }
+      ],
+      "first_commutator": {
+        "entry": [
+          0,
+          0,
+          33
+        ],
+        "matrix": [
+          [
+            33,
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            21,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            15,
+            13,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            24,
+            26,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            15,
+            11
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            6,
+            26
+          ]
+        ],
+        "pair": [
+          0,
+          1
+        ]
+      },
+      "first_three_minor_in_I_R0_R1_R2_R3": {
+        "det": 33,
+        "flat_columns": [
+          0,
+          1,
+          6
+        ],
+        "matrices": [
+          0,
+          1,
+          2
+        ]
+      },
+      "prefix_priority_audit": [
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R0",
+              "(R0*R0)"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 4,
+              "flat_columns": [
+                0,
+                1,
+                28
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": null,
+          "first_commutator": null,
+          "through_core": 0
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R0",
+              "R1"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 33,
+              "flat_columns": [
+                0,
+                1,
+                6
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": {
+            "det": 33,
+            "flat_columns": [
+              0,
+              1,
+              6
+            ],
+            "matrices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "first_commutator": {
+            "entry": [
+              0,
+              0,
+              33
+            ],
+            "matrix": [
+              [
+                33,
+                3,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                21,
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                15,
+                13,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                24,
+                26,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                15,
+                11
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                6,
+                26
+              ]
+            ],
+            "pair": [
+              0,
+              1
+            ]
+          },
+          "through_core": 1
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R0",
+              "R1"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 33,
+              "flat_columns": [
+                0,
+                1,
+                6
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": {
+            "det": 33,
+            "flat_columns": [
+              0,
+              1,
+              6
+            ],
+            "matrices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "first_commutator": {
+            "entry": [
+              0,
+              0,
+              33
+            ],
+            "matrix": [
+              [
+                33,
+                3,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                21,
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                15,
+                13,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                24,
+                26,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                15,
+                11
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                6,
+                26
+              ]
+            ],
+            "pair": [
+              0,
+              1
+            ]
+          },
+          "through_core": 2
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R0",
+              "R1"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 33,
+              "flat_columns": [
+                0,
+                1,
+                6
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": {
+            "det": 33,
+            "flat_columns": [
+              0,
+              1,
+              6
+            ],
+            "matrices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "first_commutator": {
+            "entry": [
+              0,
+              0,
+              33
+            ],
+            "matrix": [
+              [
+                33,
+                3,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                21,
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                15,
+                13,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                24,
+                26,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                15,
+                11
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                6,
+                26
+              ]
+            ],
+            "pair": [
+              0,
+              1
+            ]
+          },
+          "through_core": 3
+        }
+      ],
+      "q": 2,
+      "span_rank_I_R0_R1_R2_R3": 5
+    },
+    {
+      "cores": [
+        {
+          "core": 0,
+          "first_nonscalar_entry": [
+            0,
+            1,
+            22
+          ],
+          "matrix": [
+            [
+              16,
+              22,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              19,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              24,
+              22,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              14,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              24,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              18,
+              6
+            ]
+          ],
+          "matrix_sha256": "37b8095c2f6ffeb28691887fc050faddf223b3de8c32c6f7a93b6f2b4f5f5877",
+          "scalar": false,
+          "star_matrix": [
+            [
+              16,
+              22,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              19,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              24,
+              22,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              14,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              24,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              18,
+              6
+            ]
+          ],
+          "star_matrix_sha256": "37b8095c2f6ffeb28691887fc050faddf223b3de8c32c6f7a93b6f2b4f5f5877"
+        },
+        {
+          "core": 1,
+          "first_nonscalar_entry": [
+            0,
+            1,
+            10
+          ],
+          "matrix": [
+            [
+              34,
+              10,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              31,
+              16,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              20,
+              30,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              34,
+              31,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              18,
+              32
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              21,
+              38
+            ]
+          ],
+          "matrix_sha256": "73744167ced543956c0329a69f3674923d2a7f6e12b971df72fac54a17838194",
+          "scalar": false,
+          "star_matrix": [
+            [
+              34,
+              10,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              31,
+              16,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              20,
+              30,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              34,
+              31,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              18,
+              32
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              21,
+              38
+            ]
+          ],
+          "star_matrix_sha256": "73744167ced543956c0329a69f3674923d2a7f6e12b971df72fac54a17838194"
+        },
+        {
+          "core": 2,
+          "first_nonscalar_entry": [
+            0,
+            1,
+            28
+          ],
+          "matrix": [
+            [
+              5,
+              28,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              13,
+              12,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              25,
+              15,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              17,
+              10,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              30,
+              22
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              17,
+              13
+            ]
+          ],
+          "matrix_sha256": "99a628ea1af58fac6c144cc991db9501bb7e4f2251599719c35bb3d9d2b8da9d",
+          "scalar": false,
+          "star_matrix": [
+            [
+              5,
+              28,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              13,
+              12,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              25,
+              15,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              17,
+              10,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              30,
+              22
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              17,
+              13
+            ]
+          ],
+          "star_matrix_sha256": "99a628ea1af58fac6c144cc991db9501bb7e4f2251599719c35bb3d9d2b8da9d"
+        },
+        {
+          "core": 3,
+          "first_nonscalar_entry": [
+            0,
+            1,
+            16
+          ],
+          "matrix": [
+            [
+              7,
+              16,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              30,
+              30,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              17,
+              31,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              36,
+              11,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              20,
+              22
+            ]
+          ],
+          "matrix_sha256": "7554a5fae8cf58dca4992fcf9ddb33a589598e1d1db86cb4d988e1e77d97e926",
+          "scalar": false,
+          "star_matrix": [
+            [
+              7,
+              16,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              30,
+              30,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              17,
+              31,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              36,
+              11,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              20,
+              22
+            ]
+          ],
+          "star_matrix_sha256": "7554a5fae8cf58dca4992fcf9ddb33a589598e1d1db86cb4d988e1e77d97e926"
+        }
+      ],
+      "first_commutator": {
+        "entry": [
+          0,
+          0,
+          28
+        ],
+        "matrix": [
+          [
+            28,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            15,
+            13,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            30,
+            17,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            30,
+            11,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            26,
+            11
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            18,
+            15
+          ]
+        ],
+        "pair": [
+          0,
+          3
+        ]
+      },
+      "first_three_minor_in_I_R0_R1_R2_R3": {
+        "det": 22,
+        "flat_columns": [
+          0,
+          1,
+          14
+        ],
+        "matrices": [
+          0,
+          1,
+          2
+        ]
+      },
+      "prefix_priority_audit": [
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R0",
+              "(R0*R0)"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 29,
+              "flat_columns": [
+                0,
+                1,
+                14
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": null,
+          "first_commutator": null,
+          "through_core": 0
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R0",
+              "R1"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 22,
+              "flat_columns": [
+                0,
+                1,
+                14
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": {
+            "det": 22,
+            "flat_columns": [
+              0,
+              1,
+              14
+            ],
+            "matrices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "first_commutator": null,
+          "through_core": 1
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R0",
+              "R1"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 22,
+              "flat_columns": [
+                0,
+                1,
+                14
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": {
+            "det": 22,
+            "flat_columns": [
+              0,
+              1,
+              14
+            ],
+            "matrices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "first_commutator": null,
+          "through_core": 2
+        },
+        {
+          "closure": {
+            "basis_words": [
+              "I",
+              "R0",
+              "R1"
+            ],
+            "dimension_reached": 3,
+            "first_minor": {
+              "det": 22,
+              "flat_columns": [
+                0,
+                1,
+                14
+              ],
+              "matrices": [
+                0,
+                1,
+                2
+              ]
+            }
+          },
+          "direct_span_minor": {
+            "det": 22,
+            "flat_columns": [
+              0,
+              1,
+              14
+            ],
+            "matrices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "first_commutator": {
+            "entry": [
+              0,
+              0,
+              28
+            ],
+            "matrix": [
+              [
+                28,
+                8,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                15,
+                13,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                30,
+                17,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                30,
+                11,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                26,
+                11
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                18,
+                15
+              ]
+            ],
+            "pair": [
+              0,
+              3
+            ]
+          },
+          "through_core": 3
+        }
+      ],
+      "q": 3,
+      "span_rank_I_R0_R1_R2_R3": 5
+    }
+  ],
+  "prereg_sha256": "b03ed300806c993cb4f4eac7249d9a6c2e7e9df9d96669d989445d4a1ade68f3",
+  "source_sha256": "55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae"
+}
