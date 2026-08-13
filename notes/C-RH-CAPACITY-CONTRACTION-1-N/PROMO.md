@@ -195,8 +195,27 @@ An intertwiner study may proceed earlier only under an explicit separate lock
 that calls it an independent carrier-comparison/no-go test and does not claim
 G6 or consume positivity.
 
-## 5. Promotion recommendation
+## 5. Successor boundary after correction
+
+Post-correction semilocal/Sonin/Toeplitz reconnaissance that appeared later on
+the #357 branch is **exposed preparation only**. It is not G6 evidence and does
+not inherit candidate status from #357.
+
+A fresh independent lock now owns that work:
+
+```text
+C-RH-GLOBAL-SONIN-WIENER-HOPF-1-N
+issue #360
+branch notes/c-rh-global-sonin-wiener-hopf-1-n
+```
+
+That successor re-derives every load-bearing cross-source statement from the
+primary sources. In particular, any later observation about Suzuki `V(0)`,
+Sonin kernels, Toeplitz kernels, or Wiener--Hopf transport belongs to #360, not
+to the blocked #357 G6 lane.
+
+## 6. Promotion recommendation
 
 Do not promote any RH or G3 claim. A later public theorem probe may separate
-the exact algebraic identities from the open capacity and intertwining
-problems, after independent audit and a fresh claim lock.
+the exact algebraic identities from the open capacity problem, after
+independent audit and a fresh claim lock.
