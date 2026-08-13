@@ -151,7 +151,60 @@ new complete prime tower first enters outside the old support.
 **Status:** candidate-T for the graph update and matched modulus; identification
 with the frozen `R_+,R_-` feature maps remains open.
 
-## 5. Infinitesimal link to the Weil symbol
+## 5. The Sonin update and the local lossless colligation are the same factor
+
+Still with `z=z_p(s)` and `r=p^(-1/2)`, one has exactly
+
+```text
+D_p = 1-r z^(-1),
+N_p = 1-r z,
+b_r(z) = z D_p / N_p.
+```
+
+Therefore for any boundary vector `eta`,
+
+```text
+z D_p eta = b_r(z) N_p eta.
+```
+
+The pair created by the Sonin filtration update, `(D_p eta, N_p eta)`, becomes
+a free/scattered pair after applying the free coordinate shift `z` to the first
+leg; the two legs are then related by the same lossless transfer function
+`b_r` used in the complete-Euler Pythagorean factorization.
+
+Equivalently, if
+
+```text
+X = N_p eta,
+Y = z D_p eta,
+```
+
+then
+
+```text
+Y=b_r X,
+||Y||=||X||  on the critical boundary,
+```
+
+and the parity combinations
+
+```text
+(X-Y)/sqrt(2),
+(X+Y)/sqrt(2)
+```
+
+carry the `1-b_r` and `1+b_r` factors which occur in the delayed signed
+channels. The complete symmetric channel also contains the already-recorded
+positive static bypass term; this statement identifies the nontrivial
+scattering part, not that bypass with zero.
+
+Thus the Connes prime-set injection and the local two-state colligation are not
+parallel analogies. They are two factorizations of the same `D_p,N_p,b_r`
+identity.
+
+**Status:** candidate-T.
+
+## 6. Infinitesimal link to the Weil symbol
 
 Along the critical line the relative phase of the two graph multipliers is
 
@@ -180,10 +233,10 @@ Therefore the signed delayed quadratic form is the infinitesimal scaling
 response of the same two-leg Hardy graph whose finite update is `(D_p,N_p)`.
 
 This is stronger than a structural analogy: the finite local factor, its Hardy
-inner lift, the Sonin filtration update, and the local Weil generator are four
-representations of one object.
+inner lift, the Sonin filtration update, the lossless colligation and the local
+Weil generator are five representations of one object.
 
-## 6. What remains open
+## 7. What remains open
 
 The exact local bridge does not solve G6. The remaining construction must:
 
