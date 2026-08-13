@@ -1,0 +1,23 @@
+SOURCE_SHA256 55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae
+SOURCE_BYTES 8515
+NONZERO 112
+AMPLITUDE_COUNTS {'a': 40, 'b': 40, 'c': 32}
+PHASE_EXPONENT_COUNTS {0: 19, 1: 6, 2: 5, 3: 6, 4: 3, 5: 9, 6: 2, 7: 7, 8: 2, 9: 2, 10: 13, 11: 1, 12: 2, 13: 5, 14: 7, 15: 7, 16: 6, 17: 2, 18: 3, 19: 5}
+SUPPORT_DEGREES_BY_LEG [(20, 18, 16, 24, 16, 18), (14, 14, 22, 20, 20, 22), (20, 20, 18, 18, 18, 18), (18, 18, 18, 18, 20, 20)]
+STRICT_DIAGONAL_PROJECTIVE_ORDER 1
+STRICT () sigma= (0, 1, 2, 3, 4, 5) chi=zeta20^ 0
+SIMULTANEOUS_S6_X_LEGPERM_S4_PROJECTIVE_COUNT 1
+ADMITTED_LEG_PERMUTATIONS 1
+LEG () pi= (0, 1, 2, 3) sigma_count= 1
+STRICT_GENERATED_PERMUTATION_GROUP_ORDER 1
+STRICT_CONTAINS_ORDER60 False
+INDEPENDENT_DEGREE_PRESERVING_SEARCH_SIZE (4, 8, 48, 48)
+INDEPENDENT_LABEL_SUPPORT_AUTOMORPHISMS 2
+IND_SUPPORT 0 orders= (1, 1, 1, 1) cycles= ('()', '()', '()', '()') mu40_lift=(mod5,mod8,total,rank5,rank5_aug)= (True, True, True, 21, 21) perms= ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5))
+IND_SUPPORT 1 orders= (1, 1, 2, 2) cycles= ('()', '()', '(0 1)(2 3)(4 5)', '(0 1)(2 3)(4 5)') mu40_lift=(mod5,mod8,total,rank5,rank5_aug)= (False, False, False, 21, 22) perms= ((0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (1, 0, 3, 2, 5, 4), (1, 0, 3, 2, 5, 4))
+MU40_MOD5_LEFT_NULL_CERTIFICATE [((0, 4, 2, 2), 1), ((0, 4, 3, 2), 4), ((0, 5, 2, 4), 4), ((0, 5, 3, 4), 1)]
+MAX_EQUAL_SUPPORT_DEGREE_MULTIPLICITY_BY_LEG (2, 2, 4, 4)
+ORDER5_LOCAL_PERMUTATION_POSSIBLE_BY_DEGREE (False, False, False, False)
+INDEPENDENT_SUPPORT_HAS_ORDER5_ON_ALL_LEGS False
+A5_SIX_POINT_ACTION_SURVIVES_SUPPORT False
+RESULT G3_STRICT_ORDER=1 G4=FALSIFIER_FIRED

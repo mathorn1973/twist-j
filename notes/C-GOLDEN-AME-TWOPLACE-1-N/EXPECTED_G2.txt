@@ -1,0 +1,30 @@
+G2_EXACT_PASS
+field=Q(phi), phi^2=phi+1
+projector_rank=6
+sum_projectors=2*I3
+projector_gram=diag(1),offdiag(1/5)
+centered_gram=diag(2/3),offdiag(-2/15)
+moment_spectrum=1/3^1,2/15^5
+Gamma_Gram=S6 order=720
+Gamma_SO3_lines=A5 order=60 faithful
+cycle_counts={(1, 1, 1, 1, 1, 1): 1, (5, 1): 24, (3, 3): 20, (2, 2, 1, 1): 15}
+X_order2=[[(-1/2+1/2*phi), (0+-1/2*phi), 1/2], [(0+-1/2*phi), -1/2, (1/2+-1/2*phi)], [1/2, (1/2+-1/2*phi), (0+-1/2*phi)]]
+X_perm_1based=(1, 6, 3, 5, 4, 2)
+Y_order3=[[0, 0, 1], [1, 0, 0], [0, 1, 0]]
+Y_perm_1based=(5, 6, 1, 2, 3, 4)
+XY_order=5
+generated_order=60
+PSL2F5_action_order=60
+P1_order=(infinity,0,1,2,3,4)
+lex_comparison_line_to_P1_0based=(0, 1, 2, 5, 4, 3)
+number_of_labeled_comparisons=120
+marked_T_trace_split={1-phi:60,phi:60}
+marked_comparisons_mod_outer=60
+marked_line_to_P1_0based=(0, 1, 2, 5, 4, 3)
+Sbar_pullback_perm_1based=(2, 1, 4, 3, 5, 6)
+Sbar_pullback_matrix=[[-1, 0, 0], [0, 1, 0], [0, 0, -1]]
+Tbar_pullback_perm_1based=(1, 3, 6, 2, 4, 5)
+Tbar_pullback_matrix=[[(0+-1/2*phi), -1/2, (-1/2+1/2*phi)], [1/2, (1/2+-1/2*phi), (0+1/2*phi)], [(1/2+-1/2*phi), (0+1/2*phi), 1/2]]
+marked_relations=S^2=T^5=(ST)^3=I
+X_on_P1_0based=(0, 3, 2, 1, 5, 4)
+Y_on_P1_0based=(4, 3, 0, 5, 2, 1)
