@@ -288,7 +288,7 @@ changes the separate Hilbert legs from which a capacity is chosen. No zeta zero
 and no Weil positivity is used in the form identity; no positivity conclusion
 follows.
 
-## 8. HOLD: possible cutoff-carrier comparison
+## 8. Deferred cutoff-carrier comparison (not a gate)
 
 The frozen preregistration keeps G3 (unconditional positivity of `q_A,a`)
 UNDECIDED. Consequently G4 and G6 remain blocked. No new gate is opened or

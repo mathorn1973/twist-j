@@ -84,8 +84,8 @@ P      = multiplication by 1_[1,infinity),
 P_hat  = (F_eR^w)^(-1) P F_eR^w.
 ```
 
-The source identities (in particular equations (62)--(63) and (69)--(70))
-imply
+Source equation (25), together with the proof of Lemma 4.1 immediately before
+equation (60), implies
 
 ```text
 (u_inf^g)^* P u_inf^g = 1-P_hat.
@@ -248,10 +248,10 @@ Suzuki cutoff:
 
 These cannot be identified by notation alone.
 
-**Status:** candidate-T for the multiplier/logarithmic-velocity identity; OPEN
-cutoff-carrier intertwiner.
+**Status:** candidate-T for the multiplier/logarithmic-velocity identity. The
+cutoff-carrier intertwiner is not proved.
 
-## 7. HOLD: CUTOFF-CARRIER-INTERTWINER comparison
+## 7. Deferred CUTOFF-CARRIER-INTERTWINER comparison (not a gate)
 
 Frozen G3 remains UNDECIDED; therefore G4 and G6 are blocked. The comparison
 below is source recon only. It is not an opened or executed gate and would

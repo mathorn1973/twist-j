@@ -1,7 +1,7 @@
 # TWO-SIDED HARDY ESCAPE
 
 ```text
-STATUS: NON-CANONICAL generic lemma; source-bridge interpretation SUPERSEDED
+STATUS: NON-CANONICAL candidate-T generic lemma; prior source interpretation withdrawn
 ISSUE:  #357
 PUBLIC STATUS CHANGES: none
 RH STATUS CHANGE: none
@@ -118,6 +118,6 @@ if that carrier is represented directly as a physical interval cutoff for a
 translation-invariant convolution operator. Such use requires its own
 normalization map and may not cite the Connes prolate equations as support.
 
-`ARCHIMEDEAN-ESCAPE-DEFECT.md` records a possible cutoff-carrier comparison on
-HOLD. Frozen G3 remains UNDECIDED, so G4/G6 are blocked and no active
+`ARCHIMEDEAN-ESCAPE-DEFECT.md` records a deferred cutoff-carrier comparison.
+Frozen G3 remains UNDECIDED, so G4/G6 are blocked and no active
 source-comparison gate is opened by either file.
