@@ -1,0 +1,1203 @@
+{
+  "descriptors": {
+    "D0": [
+      [
+        1,
+        0,
+        3,
+        2
+      ],
+      [
+        2,
+        3,
+        0,
+        1
+      ],
+      [
+        3,
+        2,
+        1,
+        0
+      ]
+    ],
+    "D1": [
+      [
+        1,
+        0,
+        3,
+        2
+      ],
+      [
+        2,
+        3,
+        1,
+        0
+      ],
+      [
+        3,
+        2,
+        0,
+        1
+      ]
+    ],
+    "D2": [
+      [
+        1,
+        2,
+        3,
+        0
+      ],
+      [
+        2,
+        3,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        1,
+        2
+      ]
+    ],
+    "D3": [
+      [
+        1,
+        2,
+        3,
+        0
+      ],
+      [
+        3,
+        0,
+        1,
+        2
+      ],
+      [
+        2,
+        3,
+        0,
+        1
+      ]
+    ]
+  },
+  "exact_certificates": {
+    "sparse": {
+      "coordinate_index": 0,
+      "coordinate_name": "v0",
+      "difference_coefficients_Q_zeta120_power_basis": [
+        "-57/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3",
+        "0",
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3/2",
+        "0",
+        "3/2",
+        "0"
+      ],
+      "difference_convention": "golden_minus_target",
+      "difference_mod241_xi_to_3": 38,
+      "locator_difference_mod241": 38,
+      "replay": {
+        "golden": {
+          "D0": {
+            "compatible_tuples": 107688,
+            "mod241": 209,
+            "nonzero_signature_bins": 561,
+            "order": [
+              "A3",
+              "B1",
+              "A0",
+              "B3",
+              "A2",
+              "B0",
+              "A1",
+              "B2"
+            ],
+            "signature_total": 107688
+          }
+        },
+        "sparse": {
+          "D0": {
+            "compatible_tuples": 2437776,
+            "mod241": 171,
+            "order": [
+              "A3",
+              "B1",
+              "A0",
+              "B3",
+              "A2",
+              "B0",
+              "A1",
+              "B2"
+            ],
+            "pair_numerator_over_6^8": [
+              287214336,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "sym": {
+      "coordinate_index": 0,
+      "coordinate_name": "v0",
+      "difference_coefficients_Q_zeta120_power_basis": [
+        "-57/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3",
+        "0",
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "3/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3/2",
+        "0",
+        "3/2",
+        "0"
+      ],
+      "difference_convention": "golden_minus_target",
+      "difference_mod241_xi_to_3": 38,
+      "locator_difference_mod241": 38,
+      "replay": {
+        "golden": {
+          "D0": {
+            "compatible_tuples": 107688,
+            "mod241": 209,
+            "nonzero_signature_bins": 561,
+            "order": [
+              "A3",
+              "B1",
+              "A0",
+              "B3",
+              "A2",
+              "B0",
+              "A1",
+              "B2"
+            ],
+            "signature_total": 107688
+          }
+        },
+        "sym": {
+          "D0": {
+            "compatible_tuples": 2385072,
+            "mod241": 171,
+            "order": [
+              "A3",
+              "B1",
+              "A0",
+              "B3",
+              "A2",
+              "B0",
+              "A1",
+              "B2"
+            ],
+            "pair_numerator_over_6^8": [
+              287214336,
+              0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "field": {
+    "prime": 241,
+    "xi_image": 3,
+    "xi_order": 120
+  },
+  "integrity": {
+    "gl2_f3_distinct_tables": {
+      "sparse": 24,
+      "sym": 24
+    },
+    "golden_amplitudes_mod241": {
+      "a": 135,
+      "b": 104,
+      "c": 230
+    },
+    "source": {
+      "bytes": 8515,
+      "git_blob_sha1": "e0d0e171d58b3360c39595d677ffc401a466112d",
+      "sha256": "55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae"
+    },
+    "support_sizes": {
+      "golden": 112,
+      "sparse": 180,
+      "sym": 180
+    },
+    "two_unitary_mod241": {
+      "golden": true,
+      "sparse": true,
+      "sym": true
+    }
+  },
+  "modular": {
+    "golden": {
+      "F8_mod241": [
+        209,
+        12,
+        166,
+        170
+      ],
+      "frontier_stats": {
+        "D0": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 112,
+              "transitions": 112
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 2136,
+              "transitions": 2136
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 41120,
+              "transitions": 41120
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 110308,
+              "transitions": 134560
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 133985,
+              "transitions": 343768
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 5153,
+              "transitions": 69653
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 144,
+              "transitions": 2680
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 112
+            }
+          ],
+          "total_transitions": 594141
+        },
+        "D1": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 112,
+              "transitions": 112
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 2136,
+              "transitions": 2136
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 41120,
+              "transitions": 41120
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 110308,
+              "transitions": 134560
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 133985,
+              "transitions": 343768
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 5149,
+              "transitions": 73660
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 143,
+              "transitions": 2684
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 112
+            }
+          ],
+          "total_transitions": 598152
+        },
+        "D2": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 112,
+              "transitions": 112
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 2136,
+              "transitions": 2136
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 27632,
+              "transitions": 39968
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 82292,
+              "transitions": 89008
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 104692,
+              "transitions": 256610
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 4905,
+              "transitions": 54052
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 143,
+              "transitions": 2510
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 111
+            }
+          ],
+          "total_transitions": 444507
+        },
+        "D3": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 112,
+              "transitions": 112
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 2136,
+              "transitions": 2136
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 27040,
+              "transitions": 39952
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 81456,
+              "transitions": 87104
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 103852,
+              "transitions": 253624
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 4911,
+              "transitions": 53380
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 144,
+              "transitions": 2511
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 112
+            }
+          ],
+          "total_transitions": 438931
+        }
+      },
+      "v_mod241": [
+        209,
+        17,
+        88,
+        148
+      ]
+    },
+    "sparse": {
+      "F8_mod241": [
+        171,
+        83,
+        47,
+        5
+      ],
+      "frontier_stats": {
+        "D0": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 180,
+              "transitions": 180
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 5400,
+              "transitions": 5400
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 162000,
+              "transitions": 162000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 66960,
+              "transitions": 812592
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 217296,
+              "transitions": 334800
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 7524,
+              "transitions": 182304
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 198,
+              "transitions": 6336
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 180
+            }
+          ],
+          "total_transitions": 1503792
+        },
+        "D1": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 180,
+              "transitions": 180
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 5400,
+              "transitions": 5400
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 162000,
+              "transitions": 162000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 66960,
+              "transitions": 812592
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 217296,
+              "transitions": 334800
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 7416,
+              "transitions": 181008
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 198,
+              "transitions": 6192
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 180
+            }
+          ],
+          "total_transitions": 1502352
+        },
+        "D2": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 180,
+              "transitions": 180
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 5400,
+              "transitions": 5400
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 162000,
+              "transitions": 162000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 245808,
+              "transitions": 810000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 263484,
+              "transitions": 1229040
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 7056,
+              "transitions": 220032
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 198,
+              "transitions": 5958
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 180
+            }
+          ],
+          "total_transitions": 2432790
+        },
+        "D3": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 180,
+              "transitions": 180
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 5400,
+              "transitions": 5400
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 162000,
+              "transitions": 162000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 245808,
+              "transitions": 810000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 258696,
+              "transitions": 1229040
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 7200,
+              "transitions": 216000
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 198,
+              "transitions": 6012
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 180
+            }
+          ],
+          "total_transitions": 2428812
+        }
+      },
+      "v_mod241": [
+        171,
+        108,
+        108,
+        108
+      ]
+    },
+    "sym": {
+      "F8_mod241": [
+        171,
+        83,
+        47,
+        5
+      ],
+      "frontier_stats": {
+        "D0": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 180,
+              "transitions": 180
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 5400,
+              "transitions": 5400
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 162000,
+              "transitions": 162000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 174312,
+              "transitions": 811296
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 273888,
+              "transitions": 870912
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 7524,
+              "transitions": 228636
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 198,
+              "transitions": 6336
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 180
+            }
+          ],
+          "total_transitions": 2084940
+        },
+        "D1": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 180,
+              "transitions": 180
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 5400,
+              "transitions": 5400
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 162000,
+              "transitions": 162000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 174312,
+              "transitions": 811296
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 273888,
+              "transitions": 870912
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 7056,
+              "transitions": 228528
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 198,
+              "transitions": 5958
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 180
+            }
+          ],
+          "total_transitions": 2084454
+        },
+        "D2": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 180,
+              "transitions": 180
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 5400,
+              "transitions": 5400
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 162000,
+              "transitions": 162000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 245808,
+              "transitions": 810000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 271800,
+              "transitions": 1229040
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 7200,
+              "transitions": 227232
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 198,
+              "transitions": 6012
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 180
+            }
+          ],
+          "total_transitions": 2440044
+        },
+        "D3": {
+          "max_boundary_rank": 8,
+          "order": [
+            "A0",
+            "B0",
+            "A1",
+            "B1",
+            "A2",
+            "B2",
+            "A3",
+            "B3"
+          ],
+          "stages": [
+            {
+              "boundary_rank": 4,
+              "factor": "A0",
+              "matched_wires": 0,
+              "nonzero_states": 180,
+              "transitions": 180
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B0",
+              "matched_wires": 1,
+              "nonzero_states": 5400,
+              "transitions": 5400
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A1",
+              "matched_wires": 1,
+              "nonzero_states": 162000,
+              "transitions": 162000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "B1",
+              "matched_wires": 2,
+              "nonzero_states": 243432,
+              "transitions": 810000
+            },
+            {
+              "boundary_rank": 8,
+              "factor": "A2",
+              "matched_wires": 2,
+              "nonzero_states": 275544,
+              "transitions": 1216512
+            },
+            {
+              "boundary_rank": 6,
+              "factor": "B2",
+              "matched_wires": 3,
+              "nonzero_states": 7416,
+              "transitions": 229860
+            },
+            {
+              "boundary_rank": 4,
+              "factor": "A3",
+              "matched_wires": 3,
+              "nonzero_states": 198,
+              "transitions": 6192
+            },
+            {
+              "boundary_rank": 0,
+              "factor": "B3",
+              "matched_wires": 4,
+              "nonzero_states": 1,
+              "transitions": 180
+            }
+          ],
+          "total_transitions": 2430324
+        }
+      },
+      "v_mod241": [
+        171,
+        108,
+        108,
+        108
+      ]
+    }
+  },
+  "orbit_verdicts": {
+    "sparse": "EXACT_NO_SPARSE",
+    "sym": "EXACT_NO_SYM"
+  },
+  "public_pin": {
+    "commit": "62c1e877c3817923dca6b922ebd4562f83d2bbea",
+    "prereg_sha256": "0ffaca441435003aeb0779160e9fcdbca6c40a25c4ea2acce836ff3eca6e0137"
+  },
+  "schema": "artisan-f8-independent-compatible-tuples-v1",
+  "union_verdict": "EXACT_NO_GG_ARTISANAL_9PLUS27"
+}

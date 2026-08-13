@@ -1,0 +1,110 @@
+{
+  "G0_public_prereg": {
+    "classifier_json_sha256": "ad8711a87a74fee321ea114d74dc1183bab4c9723c1a200c1d81c824b771eeeb",
+    "classifier_stdout_sha256": "e448f842db9cc6fe2a62e4ea0269da801cfcfb351ba7e27b1a4b898f47b3da82",
+    "files": {
+      "LOCK.md": "ef432da688919608f245704d4bdb3e3b03c2675c4eefd15725bdd7f76f317856",
+      "PREREG.md": "0ffaca441435003aeb0779160e9fcdbca6c40a25c4ea2acce836ff3eca6e0137",
+      "README.md": "7b0eb21d24fe929ce62238422307db732a74f784ba824300b240f3022849101e",
+      "SOURCE_PINS.json": "d6a8f1ac95375a6cf7447b0f3ab0e4cb31956df83d8d4ad0d9db9c80829e0ea2",
+      "construction_skeleton.py": "18e6c7adf0ec9569d97416287256595811e258079088c9664fad0b4040bda99a",
+      "diagram_classifier.py": "717f53db5b0f374d785bbe4c8db7a837d5379c2c8415c4ddad1000a7927d0cda",
+      "run_prereg_checks.py": "1cfc8f5acbb6ea053d82b078079f6237f258d8c06039b3dccf9db9476bb6b879"
+    },
+    "issue": 368,
+    "party_action": "D0_FIXED_D1_D2_D3_FULL_S3",
+    "party_image_order": 6,
+    "party_kernel_order": 4,
+    "public_commit": "62c1e877c3817923dca6b922ebd4562f83d2bbea",
+    "public_tree": "9a8bf350f0f255bd74c0e7dabca665d0a46477c3",
+    "skeleton_stdout_sha256": "54d878ce4445b5860b2b6eab17ea121a49ca1a45230b18f4fbd8dc9e6ab2f496"
+  },
+  "G0_source": {
+    "golden": {
+      "bytes": 8515,
+      "git_blob_sha1": "e0d0e171d58b3360c39595d677ffc401a466112d",
+      "sha256": "55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae",
+      "support": 112,
+      "support_by_label": {
+        "a": 40,
+        "b": 40,
+        "c": 32
+      }
+    },
+    "golden_three_unitarity": {
+      "01": "PASS",
+      "02": "PASS",
+      "03": "PASS"
+    },
+    "paper_pdf": {
+      "bytes": 643554,
+      "sha256": "3c423439d89a969235612bc4149069e8bfca349cf1532413ae90f19fdbf0e2be"
+    },
+    "paper_source": {
+      "bytes": 49234,
+      "sha256": "c67eab02dc7960e171eea723aada3554fb2869c8e07ece7ae209132cc33c86d2"
+    }
+  },
+  "G1_construction": {
+    "entry_denominator": 6,
+    "formula": "direct_U_lambda_eq4_with_eq16_phase_convention",
+    "locator": {
+      "conjugate_xi_image": 161,
+      "prime": 241,
+      "xi_image": 3,
+      "xi_order": 120
+    },
+    "orbit_intersection_size": 0,
+    "sparse": {
+      "all_24_autocorrelations": "PASS",
+      "autocorrelation_certificates_sha256": "9ca83335ded871151e0faabf972929a10fd7cbfdece82c05011fd4bed77530bb",
+      "block_9plus27": {
+        "commutator": "ZERO",
+        "rank_pi27_from_exact_idempotent_trace": 27,
+        "rank_pi9_from_exact_idempotent_trace": 9
+      },
+      "direct_support": 180,
+      "distinct_tables": 24,
+      "gl_matrices_enumerated": 48,
+      "tables_sha256": "4df3ed9f329290d1676ca69b25c4ccdd061aeb07495af34f1b3d5593c86a63f0",
+      "three_unitarity": {
+        "01": "PASS",
+        "02": "PASS",
+        "03": "PASS"
+      }
+    },
+    "sym": {
+      "all_24_autocorrelations": "PASS",
+      "autocorrelation_certificates_sha256": "9ca83335ded871151e0faabf972929a10fd7cbfdece82c05011fd4bed77530bb",
+      "block_9plus27": {
+        "commutator": "ZERO",
+        "rank_pi27_from_exact_idempotent_trace": 27,
+        "rank_pi9_from_exact_idempotent_trace": 9
+      },
+      "direct_support": 180,
+      "distinct_tables": 24,
+      "gl_matrices_enumerated": 48,
+      "tables_sha256": "11588515b3f36c38f701262bc5aeffe60cf84831018e8bf7102886d1f30414a7",
+      "three_unitarity": {
+        "01": "PASS",
+        "02": "PASS",
+        "03": "PASS"
+      }
+    }
+  },
+  "G2_diagrams": {
+    "classes": 4,
+    "collision_free": 24,
+    "normalized": 13824,
+    "party_action": "D0_FIXED_D1_D2_D3_FULL_S3",
+    "reducible": 13800,
+    "status": "PASS"
+  },
+  "independent_gate_audit": {
+    "audit_sha256": "7922febb77ad188069f3fe0cd57d204f1358091640c58b889c4353635359241b",
+    "certificate_sha256": "67c9493c92129eba274345e5042d6c38738cc53e08172ff95e6d879865384834",
+    "status": "PASS",
+    "stdout_sha256": "738d55bff802314ff95a581ffc9a1a61a2fbbb34aac2a30fe0b2044c54794be3"
+  },
+  "schema": "artisan-f8-gate-report-v1"
+}

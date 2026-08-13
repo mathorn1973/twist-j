@@ -1,0 +1,51 @@
+{
+  "schema": "artisan-f8-source-pins-v1",
+  "policy": {
+    "source_bytes_vendored_in_prereg_package": false,
+    "postlock_rule": "Reject before parsing unless byte count and SHA-256 match. For the git source, also require the pinned blob id.",
+    "target_invariants_evaluated_while_making_manifest": false
+  },
+  "golden_tensor": {
+    "logical_name": "AME46_ORIGINAL.m",
+    "repository": "https://github.com/matrix-toolbox/AME_4_6.git",
+    "commit": "1fa4a4d4d2b9a3c6d3b6c8d802116415fb679fe8",
+    "path_at_commit": "AME46_ORIGINAL.m",
+    "raw_url": "https://raw.githubusercontent.com/matrix-toolbox/AME_4_6/1fa4a4d4d2b9a3c6d3b6c8d802116415fb679fe8/AME46_ORIGINAL.m",
+    "bytes": 8515,
+    "sha256": "55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae",
+    "git_blob_sha1": "e0d0e171d58b3360c39595d677ffc401a466112d",
+    "role": "The pinned golden 36-by-36 two-unitary; post-lock parser uses row=6*i+j and col=6*k+l."
+  },
+  "gross_goedicke": {
+    "title": "Thirty-six officers, artisanally entangled",
+    "authors": [
+      "David Gross",
+      "Paulina Goedicke"
+    ],
+    "arxiv_id": "2504.15401",
+    "arxiv_version": "v2",
+    "version_date": "2025-06-20",
+    "landing_url": "https://arxiv.org/abs/2504.15401v2",
+    "pdf": {
+      "url": "https://arxiv.org/pdf/2504.15401v2",
+      "bytes": 643554,
+      "sha256": "3c423439d89a969235612bc4149069e8bfca349cf1532413ae90f19fdbf0e2be",
+      "pages": 32
+    },
+    "source_archive": {
+      "url": "https://arxiv.org/e-print/2504.15401v2",
+      "bytes": 49234,
+      "sha256": "c67eab02dc7960e171eea723aada3554fb2869c8e07ece7ae209132cc33c86d2",
+      "container": "gzip-compressed tar archive"
+    },
+    "normative_locations": [
+      "Eq. (4): direct U_lambda in the Weyl-Heisenberg Bell basis",
+      "Eq. (8): Z_6^2 to the 9+27 partition",
+      "Eq. (9): lambda_sym representative",
+      "Eq. (10): lambda_sparse representative",
+      "Eq. (16): Bell-basis phase convention",
+      "Theorem 1: two GL(2,F_3) orbits, 24 functions per orbit"
+    ],
+    "role": "Normative definition and classification of the two artisanal direct-sum orbit representatives."
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "F8_contractions": "NOT_COMPUTED",
+  "construction": {
+    "GL2_F3_count": 48,
+    "direct_formula": "delta(i-j,k-l)/6 sum_p lambda(p,i-j) zeta6^(p(i-k))",
+    "orbit_intersection": 0,
+    "targets": {
+      "sparse": {
+        "GL_images": 48,
+        "all_distinct_tables_exact_autocorrelations": true,
+        "direct_U_nonzero_entries": 180,
+        "distinct_tables": 24,
+        "projector_audit": {
+          "Pi27_idempotent": true,
+          "Pi27_rank": 27,
+          "Pi9_idempotent": true,
+          "Pi9_rank": 9,
+          "U_commutes_with_Pi9": true,
+          "orthogonal": true
+        },
+        "representative_table_sha256": "d0fbc53934108b9e9137d54725fc98deec981fafa34af9ad762fedc351fe3fe4",
+        "sorted_orbit_tables_sha256": "4df3ed9f329290d1676ca69b25c4ccdd061aeb07495af34f1b3d5593c86a63f0",
+        "three_unitarities": {
+          "ij|kl": {
+            "exact_gram": "I_36",
+            "rows": 36,
+            "status": "PASS"
+          },
+          "ik|jl": {
+            "exact_gram": "I_36",
+            "rows": 36,
+            "status": "PASS"
+          },
+          "il|jk": {
+            "exact_gram": "I_36",
+            "rows": 36,
+            "status": "PASS"
+          }
+        }
+      },
+      "sym": {
+        "GL_images": 48,
+        "all_distinct_tables_exact_autocorrelations": true,
+        "direct_U_nonzero_entries": 180,
+        "distinct_tables": 24,
+        "projector_audit": {
+          "Pi27_idempotent": true,
+          "Pi27_rank": 27,
+          "Pi9_idempotent": true,
+          "Pi9_rank": 9,
+          "U_commutes_with_Pi9": true,
+          "orthogonal": true
+        },
+        "representative_table_sha256": "332027bc9bb6615952760d4f0bb2ca4667bceff2236716f08f7d2da986594a07",
+        "sorted_orbit_tables_sha256": "11588515b3f36c38f701262bc5aeffe60cf84831018e8bf7102886d1f30414a7",
+        "three_unitarities": {
+          "ij|kl": {
+            "exact_gram": "I_36",
+            "rows": 36,
+            "status": "PASS"
+          },
+          "ik|jl": {
+            "exact_gram": "I_36",
+            "rows": 36,
+            "status": "PASS"
+          },
+          "il|jk": {
+            "exact_gram": "I_36",
+            "rows": 36,
+            "status": "PASS"
+          }
+        }
+      }
+    }
+  },
+  "golden": {
+    "amplitude_identities_in_Qzeta40": true,
+    "label_counts": {
+      "0": 1184,
+      "a": 40,
+      "b": 40,
+      "c": 32
+    },
+    "nonzero_entries": 112,
+    "phase_range": [
+      0,
+      19
+    ],
+    "shape": [
+      36,
+      36
+    ],
+    "three_unitarities": {
+      "ij|kl": {
+        "exact_gram": "I_36",
+        "rows": 36,
+        "status": "PASS"
+      },
+      "ik|jl": {
+        "exact_gram": "I_36",
+        "rows": 36,
+        "status": "PASS"
+      },
+      "il|jk": {
+        "exact_gram": "I_36",
+        "rows": 36,
+        "status": "PASS"
+      }
+    }
+  },
+  "public_lock": {
+    "commit": "62c1e877c3817923dca6b922ebd4562f83d2bbea",
+    "issue": 368,
+    "prereg": {
+      "bytes": 16028,
+      "path": "/tmp/artisan_f8_prereg/PREREG.md",
+      "sha256": "0ffaca441435003aeb0779160e9fcdbca6c40a25c4ea2acce836ff3eca6e0137"
+    }
+  },
+  "schema": "artisan-f8-independent-g0-g1-v1",
+  "scope": "source/construction integrity only; no F8 contractions",
+  "source_integrity": {
+    "archive_audit": {
+      "artisanal_tex_bytes": 142990,
+      "artisanal_tex_sha256": "1408d0bf8d7b404f0d0c0fd6b1ff5fbba8b7f22040d2ae457c81d4e7e71525a2",
+      "members": [
+        "00README.json",
+        "artisanal.bbl",
+        "artisanal.tex"
+      ],
+      "normative_anchors_present": true
+    },
+    "golden": {
+      "bytes": 8515,
+      "git_blob_sha1": "e0d0e171d58b3360c39595d677ffc401a466112d",
+      "path": "/tmp/galois_root/AME46_ORIGINAL.m",
+      "sha256": "55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae"
+    },
+    "gross_goedicke_archive": {
+      "bytes": 49234,
+      "path": "/tmp/artisan_f8_prereg_source_probe_used_for_manifest/2504.15401v2.tar",
+      "sha256": "c67eab02dc7960e171eea723aada3554fb2869c8e07ece7ae209132cc33c86d2"
+    },
+    "gross_goedicke_pdf": {
+      "bytes": 643554,
+      "path": "/tmp/artisan_f8_prereg_source_probe_used_for_manifest/2504.15401v2.pdf",
+      "sha256": "3c423439d89a969235612bc4149069e8bfca349cf1532413ae90f19fdbf0e2be"
+    }
+  },
+  "status": "PASS"
+}
