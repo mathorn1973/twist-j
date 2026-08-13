@@ -70,11 +70,13 @@ K=<X_+,X_+>-<X_-,X_->
 
 is positive semidefinite iff there exists a contraction from `closure(span X_+)` to `closure(span X_-)` carrying every `X_+(t)` to `X_-(t)`.
 
-Combined only downstream with Suzuki's imported screw-positivity criterion, RH is equivalent to existence of such contractions on every finite window. This is a reformulation, not a proof.
+Combined only downstream with Suzuki Theorem 1.2, RH is equivalent to
+existence of such contractions on every finite window. This is a
+reformulation, not a proof.
 
 Potential status: `T` for the abstract Gram lemma; `D` for the RH reformulation resting on Suzuki.
 
-### Candidate public theorem D: the exact role of sqrt(i)
+### Candidate public theorem D: the exact conjugate eighth-root correction
 
 For the conjugate half-phase copies `E_+,E_-`, the normalized even/odd transform is
 
@@ -84,7 +86,10 @@ U^*U=I,
 det U=i.
 ```
 
-The determinant-one lift requires a scalar `lambda` with `lambda^2=-i`; equivalently, up to the central sign and conjugation convention, an eighth-root phase `zeta_8=sqrt(i)` supplies the unique central correction into `SU(2)`.
+The determinant-one lift requires a scalar `lambda` with `lambda^2=-i`.
+Thus `lambda=+/-zeta_8^(-1)` in the displayed orientation. Equivalently, the
+conjugate of `zeta_8=sqrt(i)`, up to the central sign, supplies the correction
+into `SU(2)`.
 
 This is a genuine exact appearance of the eighth root in the half-angle parity transform. It does not select a fixed eighth-root value for the variable prime phase and it does not affect Gram norms.
 
@@ -96,6 +101,10 @@ Potential status: `T` as pure two-channel complex linear algebra. No Born/decode
 2. One delayed prime-power screw leg is indefinite; the frozen two-point determinant is `-L^2/4`.
 3. Bilinear reconstruction alone does not select `zeta_8`; `(3+4i)/5` is an exact competing phase witness.
 4. No independent contraction can map one prime leg's sine half-angle trajectory to its cosine trajectory or vice versa. Hence a local `SU(2)` block, including its central eighth-root phase, cannot prove positivity.
+5. The complete prime-sector kernel is indefinite at the exact two-point
+   witness `a=(1/4)log 6`, `t=+/-a`. Therefore arbitrary prime-only mixing is
+   also insufficient; any surviving contraction for these explicit carriers
+   must mix finite and archimedean channels.
 
 ## The actual next theorem target
 
@@ -109,7 +118,10 @@ zero ordinates, or an already-positive Weil form, and prove compatibility
 of the construction as a increases.
 ```
 
-Because the local prime-by-prime contraction is exactly impossible, any surviving construction must globally mix prime quadratures and/or the pole/Gamma boundary channels.
+Because the complete prime-sector contraction is exactly impossible, any
+surviving construction for these explicit source-side carriers must contain
+a finite/archimedean cross block coupling prime quadratures to the pole/Gamma
+boundary channels.
 
 A pointwise map defined from the desired inequality is circular and forbidden.
 

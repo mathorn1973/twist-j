@@ -36,6 +36,11 @@ At the archimedean place the completed zeta already contains `Gamma(s/2)=Gamma(w
 
 This is an exact alignment statement. It is not an RH proof and does not assert a square root of the complete xi-function.
 
+In particular, `sqrt(Lambda(n))` is not multiplicative. These atoms do not
+define an Euler product, and no Dirichlet series is claimed whose square is
+`zeta`, `xi`, or `-zeta'/zeta`. The alignment is kinematic at the level of
+the displayed factorization, not a multiplicative square-root construction.
+
 ## 2. Pole kernel is rank-(1,1) Pythagoras
 
 Suzuki's pole piece is
@@ -230,9 +235,30 @@ sum c_j X_+(t_j) -> sum c_j X_-(t_j)
 
 is well-defined and contractive on the algebraic span, hence extends uniquely to its closure. The converse follows immediately from contractivity.
 
+### Source boundary for the downstream RH reading
+
+The frozen `PREREG.md` imported Suzuki Theorem 1.7 only, which is the
+pointwise criterion `RH iff Psi(t)>=0`. That theorem controls the diagonal
+`G_g(t,t)=2Psi(t)` but does not by itself imply positivity of all mixed
+finite Gram matrices.
+
+The source-side factorization above and the abstract Gram-domination lemma
+do not need any further RH criterion. The downstream equivalence in the next
+paragraph additionally imports Suzuki Theorem 1.2, which states that RH is
+equivalent to `g` being a screw function, hence to positivity of `G_g` on
+every finite window. Suzuki Theorem 1.3 is a separate localized
+hermitian-form criterion on its stated zero-mean test class. It is not a
+direct substitute for Theorem 1.2 in the pointwise-kernel statement unless
+the required kernel-to-form bridge, domains, and normalizations are supplied.
+
+This is a post-freeze source disclosure. It does not rewrite the preregistered
+input. Any promoted public lock must name the theorem appropriate to its
+kernel or form scope explicitly.
+
 ### Consequence for this incubation
 
-By imported Suzuki screw positivity, RH is equivalent to positivity of `G_g` on every finite window. Combined with the explicit factorization above:
+By imported Suzuki Theorem 1.2, RH is equivalent to positivity of `G_g` on
+every finite window. Combined with the explicit factorization above:
 
 ```text
 RH
@@ -254,7 +280,12 @@ A contraction obtained only after assuming positivity is circular and earns noth
 
 ## 7. Structural conclusion
 
-The local breaker now has a sharper meaning. No block-diagonal contraction acting independently prime by prime can be justified from local positivity, because each delayed prime leg is itself indefinite. Any successful `T_a` must use **global mixing** among prime quadratures and/or the pole/Gamma boundary channels.
+The local breaker and the exact two-point prime-sector witness in
+`NO-LOCAL-CONTRACTION.md` have a sharper meaning. Each delayed prime leg is
+indefinite, and the whole prime sector remains indefinite even after arbitrary
+mixing among prime powers. Any successful `T_a` must use **cross-place
+mixing** between finite-prime quadratures and the pole/Gamma boundary
+channels for these explicit carriers.
 
 This is exactly the sense in which a proof, if it exists in this representation, must be a global Pythagorean theorem rather than a sum of locally positive prime energies.
 

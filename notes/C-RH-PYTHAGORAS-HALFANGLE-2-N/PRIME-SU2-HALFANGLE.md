@@ -72,7 +72,10 @@ for `zeta_8=e^(i pi/4)` with `zeta_8^2=i`. Equivalently the conjugate eighth roo
 zeta_8^(-1) U in SU(2).
 ```
 
-This is a precise mathematical appearance of `sqrt(i)` in the half-angle prime-kernel factorization.
+This is a precise mathematical appearance of the conjugate eighth-root
+correction `sqrt(-i)=zeta_8^(-1)` in the half-angle prime-kernel
+factorization. It is not the assertion that the chosen correction is
+literally `sqrt(i)` in the displayed orientation.
 
 ## 4. Real-space reading
 
@@ -89,7 +92,7 @@ full phase e^(iLxi)
  -> conjugate half phases e^(+/- iLxi/2)
  -> unitary even/odd transform U with det U=i
  -> determinant-one lift requires a central square root of -i,
-    equivalently zeta_8 up to conjugation/sign convention.
+    namely +/-zeta_8^(-1) in the displayed orientation.
 ```
 
 What is **not** forced:
