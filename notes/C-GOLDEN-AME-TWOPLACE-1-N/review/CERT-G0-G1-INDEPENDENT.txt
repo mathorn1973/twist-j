@@ -1,0 +1,107 @@
+C-GOLDEN-AME-TWOPLACE-1-N exact verifier, gates G0 and G1
+prereg commit 494ce485e92911c107b2a171935f76d7e3f81ff5
+source pin: matrix-toolbox/AME_4_6 commit 1fa4a4d4d2b9a3c6d3b6c8d802116415fb679fe8
+
+== G0 SOURCE INTEGRITY ==
+AME46_ORIGINAL.m bytes 8515 sha256 55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae
+pinned byte count 8515 : PASS
+pinned sha256 : PASS
+token parse 36x36 amplitudes in {0,a,b,c} and 36x36 exponents in 0..19 : PASS
+support: 112 nonzero entries; letters a=40 b=40 c=32
+row letter profiles: 20 x 'aabb', 16 x 'cc'
+column letter profiles: 4 x 'aabb', 32 x 'abc'
+every row/column letter multiset is norm-admissible (in {cc, aabb, abc}) : PASS
+no nonzero exponent off support (count 0) : PASS
+support digest sha256 e8d5d07b085c5baa2962f3714fbe808e19ee6680b0d1d6e26f219da69e99e73e
+
+exact constants over Q(zeta_40) = Q[x]/(Phi_40), z := zeta_40,
+frozen embedding z -> exp(i*pi/20); square roots are the positive ones:
+reduction self-test z^40 = 1 : PASS
+sqrt2 := z^5 + z^-5, sqrt2^2 = 2 : PASS
+  sign: z^5 + z^-5 -> 2*cos(pi/4) > 0 since 0 < pi/4 < pi/2
+sqrt5 := 2(z^4 + z^-4) - 1, sqrt5^2 = 5 : PASS
+  sign: 4*cos(pi/5) - 1 > 4*cos(pi/3) - 1 = 1 > 0 (cos decreasing on (0,pi))
+sqrt10 := sqrt2*sqrt5, sqrt10^2 = 10 : PASS
+  sign: product of two positives
+phi := (1+sqrt5)/2 = z^4 + z^-4 : PASS
+s := -i(z^4 - z^-4), s^2 + phi = 3  (i.e. s^2 = 3 - phi = (10-2*sqrt5)/4) : PASS
+  (embedded identity: 4 sin^2(pi/5) + 2 cos(pi/5) = 3 exactly)
+  sign: 2*sin(pi/5) > 0 since 0 < pi/5 < pi
+t := z^2 + z^-2 = w + w^-1 -> 2*cos(pi/10) > 0 since 0 < pi/10 < pi/2
+a := s*sqrt10/10 > 0 and 4*a^2 = 1 - 1/sqrt5  [source def a = sqrt(1-1/sqrt5)/2] : PASS
+b := t*sqrt10/10 > 0 and 4*b^2 = 1 + 1/sqrt5  [source def b = sqrt(1+1/sqrt5)/2] : PASS
+c := sqrt2/2 > 0 and c^2 = 1/2               [source def c = 1/sqrt2] : PASS
+w := z^2 satisfies w = exp(2*pi*i/20) under the frozen embedding (definition) : PASS
+w^20 = 1 : PASS
+w primitive: w^k != 1 for 1 <= k <= 19 : PASS
+
+== G0 EXACT 2-UNITARITY ==
+index conventions frozen by PREREG section 4 (zero-based):
+  A[i,j,k,l] = U[6i+j, 6k+l]
+  R(U)[6i+k, 6j+l] = A[i,j,k,l]
+  Gamma2(U)[6i+l, 6k+j] = A[i,j,k,l]
+U U* = I_36 exactly (1296 exact inner products) : PASS
+R(U) R(U)* = I_36 exactly (1296 exact inner products) : PASS
+Gamma2(U) Gamma2(U)* = I_36 exactly (1296 exact inner products) : PASS
+upstream assertion U U* = R(U) R(U)* = Gamma2(U) Gamma2(U)* = I_36 reproduced exactly : PASS
+
+== G0 CROSS-CHECK (textual only; AME46.py carries no authority) ==
+AME46.py bytes 3653 sha256 8cb6e7453fa7cfe80b98bd13e0448a4dd366ca4ff4204e7841640a4ca446d171
+AME46.py textual entries parsed: 112 (own w = exp(i*pi/10), same w)
+AME46.py support cardinality equals pinned support cardinality (112) : PASS
+AME46.py letter multiset equals pinned letter multiset : PASS
+no exact entry-level relation in the declared class (24 slot maps x conj x global z-phase)
+support-level matches (slot maps carrying support onto support): none
+cross-check verdict: TEXTUAL AGREEMENT ONLY (constants, cardinality, letters);
+no authority impact; AME46_ORIGINAL.m remains the sole matrix input
+
+== G1 SECTION-5 IDENTITIES (exact) ==
+T_pl/2 = zeta_20^3 = z^6 equals zeta_4^-1 * zeta_5^2 = z^30 * z^16  [PLENUM-POINT] : PASS
+w = (T_pl/2)^7 : PASS
+a^2 = (3 - phi)/10 : PASS
+a^2 = s_J^2/10 with s_J^2 = 3 - phi  [PLENUM-POINT] : PASS
+b^2 = (2 + phi)/10 : PASS
+b = a*phi and a != 0  (hence b/a = phi) : PASS
+c^2 = 1/2 : PASS
+
+== G1 MINIMAL FIELD F_U ==
+Gal(Q(zeta_40)/Q) = (Z/40)^x = {1,3,7,9,11,13,17,19,21,23,27,29,31,33,37,39}, order 16
+F_U := Q(all nonzero entries); by Galois correspondence F_U = Fix(H),
+H := { sigma_m : sigma_m fixes every entry }.
+witness table (first support entry moved, row-major):
+  sigma_3 : moves entry (0,1) = c*w^0
+  sigma_7 : moves entry (1,2) = c*w^17
+  sigma_9 : moves entry (1,2) = c*w^17
+  sigma_11 : moves entry (0,1) = c*w^0
+  sigma_13 : moves entry (0,1) = c*w^0
+  sigma_17 : moves entry (1,2) = c*w^17
+  sigma_19 : moves entry (0,1) = c*w^0
+  sigma_21 : moves entry (0,1) = c*w^0
+  sigma_23 : moves entry (1,2) = c*w^17
+  sigma_27 : moves entry (0,1) = c*w^0
+  sigma_29 : moves entry (0,1) = c*w^0
+  sigma_31 : moves entry (1,2) = c*w^17
+  sigma_33 : moves entry (1,2) = c*w^17
+  sigma_37 : moves entry (0,1) = c*w^0
+  sigma_39 : moves entry (1,2) = c*w^17
+H = {identity} : PASS
+F_U = Q(zeta_40), degree [F_U:Q] = 16 : PASS
+greedy generating witnesses (entries alone generating F_U over Q):
+  U[0,1] = c*w^0
+  U[1,2] = c*w^17
+witness subset generates F_U (stabilizer reduced to {1}) : PASS
+compositum certificates:
+  zeta_5 = z^8, zeta_8 = z^5, and z = zeta_5^2 * zeta_8^-3  => Q(zeta_5,zeta_8) = Q(zeta_40) : PASS
+  zeta_8 = c*(1+i) with i = z^10  => zeta_8 in Q(zeta_20, sqrt2) : PASS
+  zeta_20 = z^2 in Q(zeta_40); with zeta_5 = zeta_20^2 and the line above,
+  z = zeta_5^2 * zeta_8^-3 in Q(zeta_20, sqrt2)  => Q(zeta_20, sqrt2) = Q(zeta_40)
+  Q(zeta_5) intersect Q(zeta_8) = Q is frozen Canon [Z2-PLACES-SPLIT], cited not recomputed
+field prediction of PREREG section 5: F_U = Q(zeta_20, sqrt2) = Q(zeta_40) = Q(zeta_5, zeta_8)
+field prediction CONFIRMED from actual entries : PASS
+
+== VERDICT ==
+G0 PASS -- pinned source reproduced exactly; U, R(U), Gamma2(U) exactly unitary
+G1 PASS -- F_U = Q(zeta_20, sqrt2) = Q(zeta_40) = Q(zeta_5, zeta_8), degree 16,
+           all section-5 identities proved exactly
+scope note: per PREREG section 11, G0-G2 alone are insufficient for any bridge claim;
+this certificate records source reproduction and an exact L1 coefficient statement only.
