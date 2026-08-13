@@ -25,6 +25,10 @@ def quad(M,x):
     return sum(x[i]*M[i][j]*x[j] for i in range(len(x)) for j in range(len(x)))
 
 
+def norm2(v):
+    return sum(x*x for x in v)
+
+
 def test_local_inertia():
     # Normalized delayed bilinear block w[[0,-1],[-1,0]].
     M=[[F(0),F(-1)],[F(-1),F(0)]]
@@ -47,31 +51,22 @@ def test_schur_sign():
     print("PASS G2-break: positive-lower-block Schur correction is negative semidefinite")
 
 
-def shift_zero(v,k):
-    # finite exact zero-extended right shift: (U_k v)[i]=v[i+k]
-    n=len(v)
-    return [v[i+k] if 0<=i+k<n else F(0) for i in range(n)]
-
-
-def norm2(v):
-    return sum(x*x for x in v)
-
-
-def inner(u,v):
-    return sum(x*y for x,y in zip(u,v))
-
-
 def test_disjoint_cutoff_increment():
-    # Exact discrete analogue of a newly admitted shift exceeding support
-    # diameter: V- and V+ acquire equal diagonal mass.
+    # Exact discrete analogue of a newly admitted translation on the full
+    # zero-extended carrier.  The old and translated supports are disjoint,
+    # but translation preserves norm.  Therefore V- and V+ each acquire the
+    # full diagonal mass w*||v||^2 (here w=1), not half that mass.
     v=[F(1),F(-2),F(3),F(1)]
-    u=shift_zero(v,4)  # fully disjoint / zero on original window
-    assert norm2(u)==0
+    k=len(v)
+    e0=v+[F(0)]*k
+    ek=[F(0)]*k+v
     N=norm2(v)
-    minus=F(1,2)*norm2([x-y for x,y in zip(v,u)])
-    plus =F(1,2)*norm2([x+y for x,y in zip(v,u)])
-    assert minus==plus==F(1,2)*N
-    print("PASS G5-break: newly disjoint channel adds equal V-/V+ diagonal mass")
+    assert norm2(e0)==norm2(ek)==N
+    assert sum(x*y for x,y in zip(e0,ek))==0
+    minus=F(1,2)*norm2([x-y for x,y in zip(e0,ek)])
+    plus =F(1,2)*norm2([x+y for x,y in zip(e0,ek)])
+    assert minus==plus==N
+    print("PASS G5-break: disjoint translated channel adds equal V-/V+ mass = ||v||^2")
 
 
 def main():
