@@ -35,8 +35,9 @@ separate from marked-lift selection, decoder QCarrier and measure obligations,
 the exact Gyron discrepancy and forward pair-substitution
 theorems, their corrected stationary-density boundary, and the separate
 cosmology dictionary, the Schwinger target firewall, the C20 arithmetic/time
-firewall, the TM-SYM2 split between four closed exact classifications, the
-fired frozen selector, and the distinct open physical-measure successor, plus
+firewall, the TM-SYM2 split between four exact classifications, the fired frozen
+selector, and the distinct dictionary-grade physical-measure successor closed
+at D by the orientation-retaining source and monomial Born lift, plus
 the separation of the exact WALL-LI2-RUNG theorem from the still-open
 QUANT-SUBSTRATE coupling. The next four checks pin the corrected midpoint
 and branch scope of WALL-CIRCLE-LEMMA; keep the L5 finite-state rationality
@@ -91,3 +92,5 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v47 count and TM-SYM2 checks additionally require the two new L5 definition rows, the retired MEASURE frontier entry, the DICTIONARY_LIFT gate, the public Born-halving probe evidence, and the explicit absence of GYRON-DENSITY as a dependency of the physical six-line measure.
