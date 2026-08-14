@@ -34,7 +34,7 @@ CENTRAL-LIFT-PHASE	J-TENTH-ROOT	REQUIRES	the primitive tenth-root identity 1-J =
 CENTRAL-LIFT-PHASE	J-GOLDEN-BRIDGE	REQUIRES	the identities J = phi^-1 zeta_5 and phi in Z[zeta_5] supply the exact square-root-free coefficients
 CENTRAL-LIFT-PHASE	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L4 quadratic support and creates no state, stream, measure, or cross-layer lift
 QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	C20-TEICHMULLER-SPLIT	REQUIRES	the final J compatibility corollary inherits O=Z[zeta_5], the principal prime (1-zeta_5), residue F_5, and its cyclic order-four unit group at the registered L1 scope
-QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	RAMIFIED-TM-LIFT	REQUIRES	the final compatibility corollary inherits only J mod (1-zeta_5)=2 in F_5^x at L1; the field and ramification census is proved independently
+QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	RAMIFIED-TM-LIFT	REQUIRES	the final J compatibility corollary inherits only J mod (1-zeta_5)=2 in F_5^x at L1; the field and ramification census is proved independently
 QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L1 exact arithmetic and creates no physical reading or lift to L2-L6
 ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L1 exact arithmetic and creates no physical selection, write/read assignment, or lift to L2-L6
 FORCE-AS-CURVATURE	FORCE-WEYL-HOLONOMY	REQUIRES	curvature reading rests on the Weyl theorem
@@ -313,14 +313,22 @@ TM-SYM2-SEMILINEAR-TWOFOLD	DEF-ARCHITECTURE	REQUIRES	the semilinear comparison i
 TM-SYM2-SEMILINEAR-TWOFOLD	TM-SYM2-PROJECTIVE-FOURFOLD	REQUIRES	the semilinear image and its two orbits refine the complete frozen projective fourfold
 TM-SYM2-REVERSAL-CLOSURE	DEF-ARCHITECTURE	REQUIRES	drive-word reversal is interpreted only on the declared public architecture
 TM-SYM2-REVERSAL-CLOSURE	TM-SYM2-SEMILINEAR-TWOFOLD	REQUIRES	the reversal classification acts on the exact two-block semilinear comparison surface
-TM-SYM2-PHYSICAL-MEASURE	DEF-ARCHITECTURE	REQUIRES	the successor physical bridge remains conditional on the declared public architecture
-TM-SYM2-PHYSICAL-MEASURE	DEF-ACTION-LAYERS	REQUIRES	the successor must supply the registered L5-to-L6 gate and typed endpoints
-TM-SYM2-PHYSICAL-MEASURE	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the physical codomain and exact common operator use the registered six-line frame
-TM-SYM2-PHYSICAL-MEASURE	GYRON-DENSITY	REQUIRES	the proposed physical normalization must be typed compatibly with the registered density reading; agreement of values is a result of the bridge, not a precondition on it
-TM-SYM2-PHYSICAL-MEASURE	MEASURE-BORN-VERB	REQUIRES	the physical measure clause must be a typed Born-square reading rather than an assumed weight
-TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-PROJECTIVE-FOURFOLD	BOUNDED_BY	the successor must consume the complete fourfold record and may not repair the fired one-orbit threshold
-TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-SEMILINEAR-TWOFOLD	BOUNDED_BY	Gamma_sl is an exact comparison image with two blocks but is not an adopted physical gauge and supplies no L6 lift
-TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-REVERSAL-CLOSURE	BOUNDED_BY	R exchanges the residual blocks only by drive-word precomposition; it neither realizes the missing postcomposition coset nor authorizes quotienting reading orientation
+DEF-TM-SYM2-ORIENTATION-SOURCE	TM-SYM2-PROJECTIVE-FOURFOLD	REQUIRES	the source uses the complete frozen W3 carrier and the four projective-gauge selector classes
+DEF-TM-SYM2-ORIENTATION-SOURCE	TM-SYM2-SEMILINEAR-TWOFOLD	REQUIRES	epsilon_read = chi_Q chi_F is the retained four-class reading-orientation character
+DEF-TM-SYM2-ORIENTATION-SOURCE	TM-SYM2-REVERSAL-CLOSURE	REQUIRES	the N and R comparison actions fix the frozen anti-invariant source law without becoming gauge
+DEF-TM-SYM2-MONOMIAL-VERB-LIFT	J-UNIT	REQUIRES	the lift is built from the exact J = 1 + zeta_5^2 generator and its Galois conjugates on the nonzero slots
+DEF-TM-SYM2-MONOMIAL-VERB-LIFT	J-GOLDEN-BRIDGE	REQUIRES	the exact zeta_5 and J arithmetic fixes the Fourier/Galois reindexing; the zero slot is separately 2
+TM-SYM2-PHYSICAL-MEASURE	DEF-ARCHITECTURE	REQUIRES	the physical dictionary remains conditional on the declared public architecture
+TM-SYM2-PHYSICAL-MEASURE	DEF-ACTION-LAYERS	REQUIRES	the closed bridge has the registered L5-to-L6 endpoints
+TM-SYM2-PHYSICAL-MEASURE	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the physical codomain is the registered six-line frame; its equal-cardinality 1/6 and M_TM are not construction inputs
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-PROJECTIVE-FOURFOLD	REQUIRES	the bridge consumes the complete 48-selector record and only the registered L5 stationary W3 law; the fired N2 selector conclusion is not repaired
+TM-SYM2-PHYSICAL-MEASURE	DEF-TM-SYM2-ORIENTATION-SOURCE	REQUIRES	the separately owner-approved L5 source retains the four selector classes and epsilon_read together with the current W3 word and omega
+TM-SYM2-PHYSICAL-MEASURE	DEF-TM-SYM2-MONOMIAL-VERB-LIFT	REQUIRES	the separately frozen monomial J-verb lift supplies the exact two-sheet coefficient carrier before Born square
+TM-SYM2-PHYSICAL-MEASURE	MEASURE-BORN-VERB	REQUIRES	the physical L6 reading is constrained to be the registered Born square of the typed verb and does not import a numerical probability
+TM-SYM2-PHYSICAL-MEASURE	ABELIAN-FACE-DICTIONARY	REQUIRES	the chosen monomial lift must reproduce the registered face moduli; the modulus row does not select its phase, as the same-modulus negative control shows
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-MEASURE	BOUNDED_BY	the fired N2 canonical-selector route remains terminal and the physical bridge emits no canonical selector stream
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-SEMILINEAR-TWOFOLD	BOUNDED_BY	Gamma_sl remains comparison-only and is not an adopted physical gauge
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-REVERSAL-CLOSURE	BOUNDED_BY	R, N, and NR remain drive comparison actions and do not enlarge the postcomposition gauge
 WALL-CIRCLE-LEMMA	J-PROJECTIONS	REQUIRES	the N = 5 corollary uses the registered archimedean J-channel locations
 WALL-CIRCLE-LEMMA	PI-FROM-J	REQUIRES	the principal logarithm fixes the pi normalization and branch used in the proof
 METRO-ADMISSIBILITY	METRO-REDUCTION-CALCULUS	REQUIRES	the exhaustive residual class R1 is defined as U_RF minus the dimensional child and therefore requires the parent's exact U_RF protocol type
@@ -361,7 +369,7 @@ PHOTON-WINDOW-PROOF	PHOTON-KAPPA-LEMMA	REQUIRES	the frozen compound photon-windo
 TM-SYM2-SPECTRAL-COHERENCE	DEF-ARCHITECTURE	REQUIRES	the frozen window carrier, transfer, and L5 reading are conditional on the declared public architecture
 TM-SYM2-SPECTRAL-COHERENCE	TM-SYM2-PROJECTIVE-FOURFOLD	REQUIRES	the complete 48-member selector class and its free order-12 gauge with four orbits are the enumerated domain
 TM-SYM2-SPECTRAL-COHERENCE	TM-SYM2-SEMILINEAR-TWOFOLD	REQUIRES	the characters chi_Q and chi_F define the residual reading orientation tested by the frozen battery
-TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-SPECTRAL-COHERENCE	BOUNDED_BY	the exact L5 similarity classification constrains what coherence a future physical bridge may demand and does not supply that bridge
+TM-SYM2-PHYSICAL-MEASURE	TM-SYM2-SPECTRAL-COHERENCE	BOUNDED_BY	the exact L5 similarity classification remains a compatibility boundary; its battery does not select the source, lift, or physical values
 CM-ALTERNATING-PENCIL	J-GOLDEN-BRIDGE	REQUIRES	the identities for j, phi, J and their norms and traces are the registered exact arithmetic inputs
 CM-ALTERNATING-PENCIL	J-STEP	REQUIRES	multiplication by J is the registered integral determinant-one map whose pullback action is classified on the pencil
 CM-ALTERNATING-PENCIL	DEF-ACTION-LAYERS	REQUIRES	the theorem is confined to L1 exact algebra and creates no state, stream, decoder, measure, interpretation, or lift to L2-L6
