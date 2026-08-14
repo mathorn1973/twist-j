@@ -55,6 +55,7 @@ class V47GeneratedPackage(unittest.TestCase):
         for index, chunk in enumerate(chunks, start=1):
             print(f"::notice title=V47_PACKAGE_{index:04d}_OF_{len(chunks):04d}::{chunk}")
         self.assertLessEqual(len(chunks), 45)
+        self.fail("V47_PACKAGE_EMITTED")
 
 
 if __name__ == "__main__":
