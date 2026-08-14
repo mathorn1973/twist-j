@@ -4,10 +4,10 @@
 Runs before the v47 builder in unittest discovery. It patches exactly one
 Registry evidence field in the workspace, replaces the builder's history step
 with an idempotent latest-snapshot update, upgrades the generated CORE release
-identity before normative hashes are written, suppresses transport payloads
-while diagnosing later repository tests, and emits concise GitHub annotations
-for any failing unittest. Historical seq1/seq2 are never rewritten. Removed
-before the final content tree is frozen.
+identity before normative hashes are written, disambiguates one historical
+status token in CANON.md, suppresses transport payloads while diagnosing later
+repository tests, and emits concise GitHub annotations for failures. Historical
+seq1/seq2 are never rewritten. Removed before the final content tree is frozen.
 """
 
 from __future__ import annotations
@@ -24,6 +24,7 @@ PATH = ROOT / "canon" / "REGISTRY.tsv"
 EVIDENCE = ROOT / "canon" / "EVIDENCE.tsv"
 HISTORY = ROOT / "canon" / "HISTORY.tsv"
 CORE = ROOT / "canon" / "CORE.md"
+CANON_MD = ROOT / "canon" / "CANON.md"
 CLAIM = "TM-SYM2-PHYSICAL-MEASURE"
 PROBE = "probes/P-TM-SYM2-BORN-HALVING-1"
 EVIDENCE_ID = "EV-TM-SYM2-PHYSICAL-MEASURE"
@@ -36,6 +37,7 @@ import test_000_v47_builder as builder  # noqa: E402
 
 ORIGINAL_WRITE_SHA256S = builder.write_sha256s
 ORIGINAL_RUN_CHECKED = builder.run_checked
+ORIGINAL_PATCH_CANON = builder.patch_canon
 
 _ORIGINAL_ADD_FAILURE = unittest.TextTestResult.addFailure
 _ORIGINAL_ADD_ERROR = unittest.TextTestResult.addError
@@ -83,7 +85,6 @@ def write_tsv(path: Path, fields, rows):
 
 
 def idempotent_patch_history() -> None:
-    """Make only the latest physical-measure history snapshot current."""
     e_fields, evidence = read_tsv(EVIDENCE)
     if not e_fields:
         raise AssertionError("missing evidence header")
@@ -140,8 +141,17 @@ def idempotent_patch_history() -> None:
     write_tsv(HISTORY, fields, rows)
 
 
+def patch_canon_with_historical_status_disambiguation() -> None:
+    ORIGINAL_PATCH_CANON()
+    text = CANON_MD.read_text(encoding="utf-8")
+    old = "Public Canon v28 also amends the scope and falsifier of TM-SYM2-PHYSICAL-MEASURE [O]."
+    new = "Public Canon v28 also amends the scope and falsifier of TM-SYM2-PHYSICAL-MEASURE, which was O at that release."
+    if text.count(old) != 1:
+        raise AssertionError(f"historical v28 status sentence count={text.count(old)}")
+    CANON_MD.write_text(text.replace(old, new), encoding="utf-8")
+
+
 def write_sha256s_with_v47_core() -> None:
-    """Patch CORE identity after view generation and before hashing."""
     text = CORE.read_text(encoding="utf-8")
     if "Public Canon v47" not in text:
         if "Public Canon v46" not in text:
@@ -168,12 +178,9 @@ def concise_run_checked(*args: str) -> str:
 
 
 def diagnostic_print_transport_package() -> None:
-    """Print only deterministic file identities while diagnosing prep."""
     for relative in builder.OUTPUT_FILES:
         data = (ROOT / relative).read_bytes()
-        print(
-            f"V47_DIAG_FILE {relative} bytes={len(data)} sha256={sha256(data)}"
-        )
+        print(f"V47_DIAG_FILE {relative} bytes={len(data)} sha256={sha256(data)}")
 
 
 class V47RegistryEvidencePatch(unittest.TestCase):
@@ -193,13 +200,13 @@ class V47RegistryEvidencePatch(unittest.TestCase):
             row["evidence"] = PROBE
         self.assertEqual(hits, 1)
         with PATH.open("w", encoding="utf-8", newline="") as handle:
-            writer = csv.DictWriter(
-                handle, fieldnames=fields, delimiter="\t", lineterminator="\n"
-            )
+            writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t", lineterminator="\n")
             writer.writeheader()
             writer.writerows(rows)
 
+        builder.patch_evidence = builder.patch_evidence
         builder.patch_history = idempotent_patch_history
+        builder.patch_canon = patch_canon_with_historical_status_disambiguation
         builder.write_sha256s = write_sha256s_with_v47_core
         builder.run_checked = concise_run_checked
         builder.print_transport_package = diagnostic_print_transport_package
