@@ -1,0 +1,8 @@
+PASS  ordinary ideal membership identity: x(x+y)-(xy-1)=x^2+1
+PASS  Rabinowitsch saturation identity: s(ab)+b(1-sa)=b
+PASS  Rabinowitsch radical identity: (1-tz)(1+tz)+t^2 z^2=1
+PASS  unit-circle trace reduction: Phi20=x^4((x+y)^4-5(x+y)^2+5) modulo xy-1
+PASS  Sturm isolation r^2-r-1: root counts (-1,0),(1,2)=(1, 1)
+PASS  Sturm isolation T^4-5T^2+5: four rational interval counts=(1, 1, 1, 1)
+PASS  modular squarefree good-prime screen: gcd(f,f') over F_p=[(7, [1]), (11, [1]), (13, [1])]
+SUMMARY 7/7 PASS

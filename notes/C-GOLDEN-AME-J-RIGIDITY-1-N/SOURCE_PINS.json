@@ -1,0 +1,109 @@
+{
+  "schema": "golden-ame-j-rigidity-source-pins-v1",
+  "claim_key": "C-GOLDEN-AME-J-RIGIDITY-1-N",
+  "status": "NON-CANONICAL_INCUBATION",
+  "public_lock": {
+    "repository": "https://github.com/mathorn1973/twist-j",
+    "issue_number": 369,
+    "issue_url": "https://github.com/mathorn1973/twist-j/issues/369",
+    "branch": "notes/c-golden-ame-j-rigidity-1-n"
+  },
+  "policy": {
+    "source_bytes_vendored": false,
+    "reject_before_parse_on_mismatch": true,
+    "raw_builder_may_evaluate_source_constant_definitions": false,
+    "raw_exponents_are_literal_integers_not_residues": true,
+    "target_grobner_or_elimination_computed_before_public_lock": false,
+    "canon_write_authorized": false,
+    "registry_write_authorized": false,
+    "promo_authorized": false
+  },
+  "resource_envelope": {
+    "wall_hours_per_mandatory_exact_stage": 24,
+    "maximum_worker_processes": 8,
+    "maximum_resident_memory_gib": 16,
+    "cumulative_wall_hours_g4_through_g7_per_implementation": 72,
+    "maximum_repository_artifact_bytes": 5242880,
+    "ceiling_outcome": "NO_VERDICT"
+  },
+  "public_canon_v46": {
+    "repository": "https://github.com/mathorn1973/twist-j.git",
+    "activation_commit": "6545c1d0de61ff4696eb3de1a258139e8891f436",
+    "content_commit": "62628ca4da2d938e4e3a122d35c0d93a6debc27f",
+    "canon_path": "canon/CANON.md",
+    "canon_bytes": 222760,
+    "canon_sha256": "6c57e714c441bd679b9f6c673352cfae44ac993433d7c4624cd9c3c93df291ff"
+  },
+  "upstream": {
+    "repository": "https://github.com/matrix-toolbox/AME_4_6.git",
+    "commit": "1fa4a4d4d2b9a3c6d3b6c8d802116415fb679fe8",
+    "license": "MIT",
+    "files": {
+      "AME46_ORIGINAL.m": {
+        "role": "sole tensor-value authority; parse only the two 36-by-36 literals after pin verification",
+        "raw_url": "https://raw.githubusercontent.com/matrix-toolbox/AME_4_6/1fa4a4d4d2b9a3c6d3b6c8d802116415fb679fe8/AME46_ORIGINAL.m",
+        "bytes": 8515,
+        "sha256": "55fbc0ba2747b4e5adc5a5abd15ac7241a461ff8182268ebdae464d8a29cc9ae",
+        "git_blob_sha1": "e0d0e171d58b3360c39595d677ffc401a466112d",
+        "forbidden_raw_builder_input": "the numerical or algebraic definitions of a,b,c,w above the two literals",
+        "structural_checks": {
+          "matrix_shape": [36, 36],
+          "support": 112,
+          "support_by_label": {
+            "a": 40,
+            "b": 40,
+            "c": 32
+          },
+          "active_exponent_min": 0,
+          "active_exponent_max": 19
+        }
+      },
+      "block944.m": {
+        "role": "auxiliary provenance and orientation for the two nine-block permutations used by independent construction B",
+        "raw_url": "https://raw.githubusercontent.com/matrix-toolbox/AME_4_6/1fa4a4d4d2b9a3c6d3b6c8d802116415fb679fe8/block944.m",
+        "bytes": 8234,
+        "sha256": "af0aac863f54beb2c8396368fd87102e75192a38ec77efee0605210123540649",
+        "git_blob_sha1": "caab29cb76e60e3165abf70931cf35e387b6e3b1"
+      }
+    }
+  },
+  "prelock_structural_freeze": {
+    "primary_equations": "ordered row-Gram coordinates FF*-I for 01, then 02, then 03, followed by xy-1",
+    "column_grams": "mandatory redundant audit; not primary generators",
+    "coordinate_records_including_xy": 3889,
+    "nonzero_coordinate_records_including_xy": 383,
+    "duplicate_nonzero_records_quotiented_in_count": false,
+    "serialization_bytes": 136262,
+    "serialization_sha256": "09aac23466680ba762e363ad75845aa1535f4e8e32cee75ad41119f43cb16762",
+    "block_nonzero_counts": [12, 14, 14, 8, 16, 8, 14, 14, 12],
+    "target_relations_evaluated": false
+  },
+  "prior_independent_replay": {
+    "repository": "https://github.com/mathorn1973/twist-j",
+    "commit": "c5da90c091995e398f2379c9437234754d4e3d3a",
+    "role": "prior independent multi-architecture replay of source pins, support, exact unitarity and known-specialization field; not a rigidity computation",
+    "certificate_sha256": {
+      "CERT-G0-G1-INDEPENDENT.txt": "5afb8eb1c188536de7de175eec3fe1340ea47fa449471540d67f5f6a3c3c1f7d",
+      "CERT-G3-G4-REVIEW.txt": "48f469f53ffc3803647b0708a590954f356f8f991dbfff4262343d1e533755f9"
+    },
+    "architectures": ["x86_64", "aarch64"]
+  },
+  "publication_provenance_not_machine_input": [
+    {
+      "title": "Thirty-six entangled officers of Euler: Quantum solution to a classically impossible problem",
+      "authors_short": "Rather et al.",
+      "arxiv_id": "2104.05122",
+      "arxiv_version": "v2",
+      "landing_url": "https://arxiv.org/abs/2104.05122v2",
+      "role": "published AME(4,6) construction provenance only"
+    },
+    {
+      "title": "9 x 4 = 6 x 6: Understanding the quantum solution to the Euler's problem of 36 officers",
+      "authors_short": "Zyczkowski et al.",
+      "arxiv_id": "2204.06800",
+      "arxiv_version": "v2",
+      "landing_url": "https://arxiv.org/abs/2204.06800v2",
+      "role": "nine-groups-of-four explanatory provenance only; no target equation is imported"
+    }
+  ]
+}
