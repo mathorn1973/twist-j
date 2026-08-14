@@ -27,15 +27,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(self.report.claims, 241)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 27, "D": 41, "F": 13, "H": 2, "O": 23, "T": 135},
+            {"C": 27, "D": 42, "F": 13, "H": 2, "O": 22, "T": 135},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 41,
+                "none": 40,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 160,
+                "two-architecture": 161,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,7 +43,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 175)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 194
+            len(self.report.transitive_architecture_dependents), 195
         )
         self.assertEqual(len(self.report.dependency_terminals), 22)
         for claim in (
