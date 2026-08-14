@@ -4,9 +4,10 @@
 Runs before the v47 builder in unittest discovery. It patches exactly one
 Registry evidence field in the workspace, replaces the builder's history step
 with an idempotent latest-snapshot update, upgrades the generated CORE release
-identity before normative hashes are written, and suppresses transport payloads
-while diagnosing later repository tests. Historical seq1/seq2 are never
-rewritten. Removed before the final content tree is frozen.
+identity before normative hashes are written, suppresses transport payloads
+while diagnosing later repository tests, and emits concise GitHub annotations
+for any failing unittest. Historical seq1/seq2 are never rewritten. Removed
+before the final content tree is frozen.
 """
 
 from __future__ import annotations
@@ -35,6 +36,34 @@ import test_000_v47_builder as builder  # noqa: E402
 
 ORIGINAL_WRITE_SHA256S = builder.write_sha256s
 ORIGINAL_RUN_CHECKED = builder.run_checked
+
+# Prep-only CI diagnosis. unittest normally prints the useful traceback only to
+# the raw job log, which is not exposed by the connector. Convert each failure
+# and error into one GitHub workflow annotation with the test id and terminal
+# traceback line. This monkeypatch changes reporting only, never test outcome.
+_ORIGINAL_ADD_FAILURE = unittest.TextTestResult.addFailure
+_ORIGINAL_ADD_ERROR = unittest.TextTestResult.addError
+
+
+def _annotation_message(result, test, err) -> str:
+    text = result._exc_info_to_string(err, test)
+    tail = next((line.strip() for line in reversed(text.splitlines()) if line.strip()), "unknown failure")
+    msg = f"{test.id()} | {tail}"
+    return msg.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")[:1800]
+
+
+def _annotating_add_failure(self, test, err):
+    print(f"::error title=V47_TEST_FAILURE::{_annotation_message(self, test, err)}")
+    return _ORIGINAL_ADD_FAILURE(self, test, err)
+
+
+def _annotating_add_error(self, test, err):
+    print(f"::error title=V47_TEST_ERROR::{_annotation_message(self, test, err)}")
+    return _ORIGINAL_ADD_ERROR(self, test, err)
+
+
+unittest.TextTestResult.addFailure = _annotating_add_failure
+unittest.TextTestResult.addError = _annotating_add_error
 
 
 def sha256(data: bytes) -> str:
