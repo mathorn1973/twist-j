@@ -40,7 +40,7 @@ class V47GeneratedPackage(unittest.TestCase):
         raw = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
         packed = zlib.compress(raw, 9)
         encoded = base64.b64encode(packed).decode("ascii")
-        chunk_size = 7000
+        chunk_size = 45000
         chunks = [encoded[i:i + chunk_size] for i in range(0, len(encoded), chunk_size)]
         meta = {
             "files": manifest,
@@ -54,7 +54,7 @@ class V47GeneratedPackage(unittest.TestCase):
         print(f"::notice title=V47_PACKAGE_META::{meta_text}")
         for index, chunk in enumerate(chunks, start=1):
             print(f"::notice title=V47_PACKAGE_{index:04d}_OF_{len(chunks):04d}::{chunk}")
-        self.assertLessEqual(len(chunks), 45)
+        self.assertLessEqual(len(chunks), 9)
         self.fail("V47_PACKAGE_EMITTED")
 
 
