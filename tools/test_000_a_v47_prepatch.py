@@ -77,9 +77,7 @@ def read_tsv(path: Path):
 
 def write_tsv(path: Path, fields, rows):
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(
-            handle, fieldnames=fields, delimiter="\t", lineterminator="\n"
-        )
+        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -97,10 +95,7 @@ def idempotent_patch_history() -> None:
         raise AssertionError(f"unexpected current evidence {expected}")
 
     fields, rows = read_tsv(HISTORY)
-    own = sorted(
-        (row for row in rows if row["claim_id"] == CLAIM),
-        key=lambda row: int(row["event_sequence"]),
-    )
+    own = sorted((row for row in rows if row["claim_id"] == CLAIM), key=lambda row: int(row["event_sequence"]))
     seq = [int(row["event_sequence"]) for row in own]
     if seq == [1, 2]:
         row = {field: "" for field in fields}
@@ -144,8 +139,14 @@ def idempotent_patch_history() -> None:
 def patch_canon_with_historical_status_disambiguation() -> None:
     ORIGINAL_PATCH_CANON()
     text = CANON_MD.read_text(encoding="utf-8")
-    old = "Public Canon v28 also amends the scope and falsifier of TM-SYM2-PHYSICAL-MEASURE [O]."
-    new = "Public Canon v28 also amends the scope and falsifier of TM-SYM2-PHYSICAL-MEASURE, which was O at that release."
+    old = (
+        "Public Canon v28 also amends the scope and falsifier of\n"
+        "TM-SYM2-PHYSICAL-MEASURE [O]."
+    )
+    new = (
+        "Public Canon v28 also amends the scope and falsifier of\n"
+        "TM-SYM2-PHYSICAL-MEASURE, which was O at that release."
+    )
     if text.count(old) != 1:
         raise AssertionError(f"historical v28 status sentence count={text.count(old)}")
     CANON_MD.write_text(text.replace(old, new), encoding="utf-8")
@@ -204,7 +205,6 @@ class V47RegistryEvidencePatch(unittest.TestCase):
             writer.writeheader()
             writer.writerows(rows)
 
-        builder.patch_evidence = builder.patch_evidence
         builder.patch_history = idempotent_patch_history
         builder.patch_canon = patch_canon_with_historical_status_disambiguation
         builder.write_sha256s = write_sha256s_with_v47_core
