@@ -22,7 +22,11 @@ class V47ReproduceDiagnostic(unittest.TestCase):
         )
         if result.returncode:
             lines = (result.stdout + "\n" + result.stderr).splitlines()
-            self.fail("V47_STATUS_SEPARATION_FAILURE\n" + "\n".join(lines[-45:]))
+            decisive = [
+                line for line in lines
+                if line.startswith("FAIL ") or line.startswith("RESULT ")
+            ]
+            self.fail("V47_STATUS_SEPARATION_FAILURE\n" + "\n".join(decisive))
         self.assertIn("RESULT 32/32 ALL PASS", result.stdout)
 
     def test_full_reproduction_sweep(self) -> None:
