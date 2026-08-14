@@ -78,25 +78,43 @@ was tested by policy workflow `31813296463` on the clean pull-request merge
 checkout `55858de4921c9edd9b530e07a29db383a136f5c1`.
 
 ```text
-x86_64 job:      94808833870   success
-architecture:    x86_64
-platform:        Ubuntu 24.04.4 LTS
-python:          CPython 3.12.13
-verifier sha256: a9dbe6d5549aa3e0bb5f21cc4d8e26586cbcf95141df141432b710e8fdb0f6f7
-stdout sha256:   52ee81ddd10c7af5e00ff1a2a1b6ea2fed9905b1f235349b73c0732fb2ead51d
+X86_JOB = 94808833870 success
+X86_ARCH = x86_64
+X86_PLATFORM = Ubuntu 24.04.4 LTS
+X86_PYTHON = CPython 3.12.13
+X86_VERIFIER_SHA256 = a9dbe6d5549aa3e0bb5f21cc4d8e26586cbcf95141df141432b710e8fdb0f6f7
+X86_STDOUT_SHA256 = 52ee81ddd10c7af5e00ff1a2a1b6ea2fed9905b1f235349b73c0732fb2ead51d
 
-aarch64 job:     94808834014   success
-architecture:    aarch64
-platform:        Ubuntu 24.04.4 LTS
-python:          CPython 3.12.13
-verifier sha256: a9dbe6d5549aa3e0bb5f21cc4d8e26586cbcf95141df141432b710e8fdb0f6f7
-stdout sha256:   52ee81ddd10c7af5e00ff1a2a1b6ea2fed9905b1f235349b73c0732fb2ead51d
+ARM_JOB = 94808834014 success
+ARM_ARCH = aarch64
+ARM_PLATFORM = Ubuntu 24.04.4 LTS
+ARM_PYTHON = CPython 3.12.13
+ARM_VERIFIER_SHA256 = a9dbe6d5549aa3e0bb5f21cc4d8e26586cbcf95141df141432b710e8fdb0f6f7
+ARM_STDOUT_SHA256 = 52ee81ddd10c7af5e00ff1a2a1b6ea2fed9905b1f235349b73c0732fb2ead51d
 
-aggregate check: 94808891578   success
-terminal line:   TWO-ARCHITECTURE CHECK PASS
+AGGREGATE_JOB = 94808891578 success
+AGGREGATE_TERMINAL = TWO-ARCHITECTURE CHECK PASS
 ```
 
 Both architecture jobs also passed policy, all 99 repository unit tests,
 Canon and ledger checks, and `tools/check_verifier.py --base` reproduced the
 changed probe byte-for-byte. The x86_64 and aarch64 clean replays therefore
 satisfy the public two-architecture computation gate for the pinned verifier.
+
+## Final-head gate-record syntax preflight
+
+After the successful gate was recorded in RUN/RESULT, workflow `31813599848`
+again stopped on both architectures before any changed-probe verifier replay.
+The RUN parser reported:
+
+```text
+RUN.md repeats architecture inside section 'successful clean github replay'
+```
+
+The cause was purely syntactic: the audit block above originally used repeated
+lower-case machine-readable labels such as `architecture:` for both successful
+jobs under one prose section. This commit changes only those audit labels to
+non-parser text and records this preflight failure. The top-level structured
+GitHub leg fields, pin, verifier, `EXPECTED.txt`, scientific result, thresholds,
+and local execution count are unchanged. The failed preflight carries no
+scientific verdict.
