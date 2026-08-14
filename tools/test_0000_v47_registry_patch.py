@@ -2,9 +2,10 @@
 """Temporary prep-only prepatch for Public Canon v47.
 
 Runs before the v47 builder in unittest discovery. It patches exactly one
-Registry evidence field in the workspace and replaces the builder's history
-step with an idempotent latest-snapshot update. Historical seq1/seq2 are never
-rewritten. Removed before the final content tree is frozen.
+Registry evidence field in the workspace, replaces the builder's history step
+with an idempotent latest-snapshot update, and upgrades the generated CORE
+release identity before normative hashes are written. Historical seq1/seq2 are
+never rewritten. Removed before the final content tree is frozen.
 """
 
 from __future__ import annotations
@@ -23,6 +24,7 @@ TOOLS = ROOT / "tools"
 PATH = ROOT / "canon" / "REGISTRY.tsv"
 EVIDENCE = ROOT / "canon" / "EVIDENCE.tsv"
 HISTORY = ROOT / "canon" / "HISTORY.tsv"
+CORE = ROOT / "canon" / "CORE.md"
 CLAIM = "TM-SYM2-PHYSICAL-MEASURE"
 PROBE = "probes/P-TM-SYM2-BORN-HALVING-1"
 EVIDENCE_ID = "EV-TM-SYM2-PHYSICAL-MEASURE"
@@ -32,6 +34,9 @@ SCOPE_SHA = "f9ad8efe676d58a167f84d3ccfb873e511945fd0a7c301a1113aa275032278d0"
 if str(TOOLS) not in sys.path:
     sys.path.insert(0, str(TOOLS))
 import test_000_v47_builder as builder  # noqa: E402
+
+ORIGINAL_WRITE_SHA256S = builder.write_sha256s
+ORIGINAL_RUN_CHECKED = builder.run_checked
 
 
 def sha256(data: bytes) -> str:
@@ -111,8 +116,33 @@ def idempotent_patch_history() -> None:
     write_tsv(HISTORY, fields, rows)
 
 
+def write_sha256s_with_v47_core() -> None:
+    """Patch CORE identity after view generation and before hashing."""
+    text = CORE.read_text(encoding="utf-8")
+    if "Public Canon v47" not in text:
+        if "Public Canon v46" not in text:
+            raise AssertionError("CORE release identity drift")
+        text = text.replace("Public Canon v46", "Public Canon v47")
+        CORE.write_text(text, encoding="utf-8")
+    versions = set()
+    import re
+    versions.update(re.findall(r"Public Canon v([1-9][0-9]*)", text))
+    if versions != {"47"}:
+        raise AssertionError(f"CORE mixed versions: {sorted(versions)}")
+    ORIGINAL_WRITE_SHA256S()
+
+
+def concise_run_checked(*args: str) -> str:
+    try:
+        return ORIGINAL_RUN_CHECKED(*args)
+    except AssertionError as exc:
+        lines = str(exc).splitlines()
+        tail = "\n".join(lines[-25:])
+        raise AssertionError("V47_CONCISE_CHECK_FAILURE\n" + tail) from None
+
+
 class V47RegistryEvidencePatch(unittest.TestCase):
-    def test_patch_registry_evidence_and_builder_history_step(self) -> None:
+    def test_patch_registry_evidence_and_builder_hooks(self) -> None:
         with PATH.open(encoding="utf-8", newline="") as handle:
             reader = csv.DictReader(handle, delimiter="\t")
             fields = list(reader.fieldnames or ())
@@ -135,10 +165,12 @@ class V47RegistryEvidencePatch(unittest.TestCase):
             writer.writerows(rows)
 
         # Discovery imports the builder module before tests execute. Replacing
-        # this module-level function here changes the already-loaded builder
-        # test's call site, so its own check_ledger sees the correct seq3
-        # snapshot. This is prep-only ordering control, not post-hoc repair.
+        # these module-level functions here changes the already-loaded builder
+        # test call sites. All changes precede the builder's own check_ledger
+        # and check_canon calls; none is a post-check repair.
         builder.patch_history = idempotent_patch_history
+        builder.write_sha256s = write_sha256s_with_v47_core
+        builder.run_checked = concise_run_checked
 
         data = PATH.read_bytes()
         payload = json.dumps(
