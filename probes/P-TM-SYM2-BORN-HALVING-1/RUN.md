@@ -3,7 +3,7 @@
 ```text
 pin_commit:              0e930978878453800fa078f75b9a0e25c2963787
 PREREG_sha256:           7e512890fa486cd3b37410d813b0b6becfc1694bbe2f5dae691ebfa17cfec36e
-verify_sha256:           a9dbe6d5549aa3e0bb5f21cc4d8e26586cbcf95141df141432b710e8fdb0f6f7
+verifier_sha256:         a9dbe6d5549aa3e0bb5f21cc4d8e26586cbcf95141df141432b710e8fdb0f6f7
 platform:                Debian GNU/Linux 13 (trixie)
 architecture:            x86_64
 python:                  Python 3.13.5
@@ -13,6 +13,7 @@ command:                 python3 probes/P-TM-SYM2-BORN-HALVING-1/verify.py
 environment:             LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC
 exit_code:               0
 stdout_bytes:            741
+stdout_lines:            30
 stdout_sha256:           52ee81ddd10c7af5e00ff1a2a1b6ea2fed9905b1f235349b73c0732fb2ead51d
 stderr_bytes:            0
 stderr_sha256:           e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -44,3 +45,18 @@ is not part of the scientific transcript.
 `EXPECTED.txt` is the exact 741-byte stdout of this single execution.
 The decision printed by the pinned verifier is `BORN-HALVING-PASS`.
 No post-pin verifier edit, retry, threshold move, or scientific rerun occurred.
+
+## First pull-request workflow preflight
+
+Workflow `31813175546` on the first evidence head stopped on both GitHub
+architectures before any changed-probe verifier replay. `check_policy.py`
+passed. The repository unit test that parses all RUN records then reported:
+
+```text
+RUN.md lacks fields: stdout_lines, verifier_sha256
+```
+
+This RUN metadata schema defect is corrected in the next evidence-record
+commit. No PREREG, verifier, EXPECTED, scientific threshold, route, or output
+byte changed, and no additional local scientific execution was made. The
+failed workflow therefore carries no cross-architecture scientific verdict.
