@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 135, "D": 41, "C": 27, "F": 13,
-                       "O": 23, "H": 2}
+    expected_counts = {"T": 135, "D": 42, "C": 27, "F": 13,
+                       "O": 22, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v46",
+        "registry and companion-ledger counts match Public Canon v47",
         len(rows) == 241
         and counts == expected_counts
-        and len(normative) == 257
-        and len(dependencies) == 376
+        and len(normative) == 259
+        and len(dependencies) == 384
         and len(evidence) == 241
-        and two_architecture == 160
-        and len(history) == 755
+        and two_architecture == 161
+        and len(history) == 756
         and len(gates) == 10
         and len({row["program_id"] for row in programs.values()}) == 7
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 22,
@@ -975,6 +975,8 @@ def run():
     spectral = "TM-SYM2-SPECTRAL-COHERENCE"
     frozen_owner = "TM-SYM2-MEASURE"
     physical_owner = "TM-SYM2-PHYSICAL-MEASURE"
+    orientation_source = "DEF-TM-SYM2-ORIENTATION-SOURCE"
+    monomial_lift = "DEF-TM-SYM2-MONOMIAL-VERB-LIFT"
     selector_gate = "GATE-L1-L5-TM-SYM2-SELECTOR-STREAM"
     born_gate = "GATE-L5-L6-TM-SYM2-BORN-MEASURE"
     tm_theorems = (projective, semilinear, reversal, spectral)
@@ -998,13 +1000,25 @@ def run():
             (projective, "REQUIRES"),
             (semilinear, "REQUIRES"),
         },
+        orientation_source: {
+            (projective, "REQUIRES"),
+            (semilinear, "REQUIRES"),
+            (reversal, "REQUIRES"),
+        },
+        monomial_lift: {
+            ("J-UNIT", "REQUIRES"),
+            ("J-GOLDEN-BRIDGE", "REQUIRES"),
+        },
         physical_owner: {
             ("DEF-ARCHITECTURE", "REQUIRES"),
             ("DEF-ACTION-LAYERS", "REQUIRES"),
             ("GOLDEN-SIX-LINE-SYM2-FRAME", "REQUIRES"),
-            ("GYRON-DENSITY", "REQUIRES"),
+            (projective, "REQUIRES"),
+            (orientation_source, "REQUIRES"),
+            (monomial_lift, "REQUIRES"),
             ("MEASURE-BORN-VERB", "REQUIRES"),
-            (projective, "BOUNDED_BY"),
+            ("ABELIAN-FACE-DICTIONARY", "REQUIRES"),
+            (frozen_owner, "BOUNDED_BY"),
             (semilinear, "BOUNDED_BY"),
             (reversal, "BOUNDED_BY"),
             (spectral, "BOUNDED_BY"),
@@ -1044,7 +1058,7 @@ def run():
     }
     checks.append((
         "TM-SYM2",
-        "four closed exact classifications stay T; fired selector and physical successor stay separated",
+        "four exact classifications stay T; fired selector stays F; physical successor closes only at D",
         all(has_status(index, item, "T") for item in tm_theorems)
         and normative.get(projective, {}).get("item_type") == "THEOREM"
         and normative.get(projective, {}).get("layer") == "MULTI"
@@ -1099,18 +1113,34 @@ def run():
              "NONCANONICAL and N2 fires", "Born branch is not reached",
              "does not falsify", "every future TM-to-measure definition"),
         )
-        and has_status(index, physical_owner, "O")
-        and normative.get(physical_owner, {}).get("item_type") == "OBLIGATION"
+        and has_status(index, physical_owner, "D")
+        and normative.get(physical_owner, {}).get("item_type") == "DICTIONARY"
         and normative.get(physical_owner, {}).get("layer") == "MULTI"
         and normative.get(physical_owner, {}).get("gate_ids") == born_gate
+        and normative.get(orientation_source, {}).get("item_type") == "DEFINITION"
+        and normative.get(orientation_source, {}).get("layer") == "L5"
+        and normative.get(monomial_lift, {}).get("item_type") == "DEFINITION"
+        and normative.get(monomial_lift, {}).get("layer") == "L5"
+        and index.get(physical_owner, {}).get("evidence") == "probes/P-TM-SYM2-BORN-HALVING-1"
+        and evidence.get(physical_owner, {}).get("evidence_id") == "EV-TM-SYM2-PHYSICAL-MEASURE"
+        and evidence.get(physical_owner, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(physical_owner, {}).get("location") == "probes/P-TM-SYM2-BORN-HALVING-1"
+        and evidence.get(physical_owner, {}).get("sha256") == "acc598e670eb7e57f689a6ecc970438ce7211d1a097514a78847100e8871fa59"
+        and evidence.get(physical_owner, {}).get("hash_mode") == "bundle-manifest-sha256-v1"
+        and evidence.get(physical_owner, {}).get("architecture_requirement") == "two-architecture"
         and scope_contains_all(
             index, physical_owner,
-            ("epsilon_read = chi_Q chi_F as typed L5 data",
-             "rather than quotienting it", "coherence across all 48 selectors",
-             "mu_i = 1/6", "M_TM = (1/3)P1 + (2/15)P5",
-             "is an outcome of the bridge and is not required of it",
-             "comparison actions only", "enlarge no postcomposition gauge",
-             "select no representative among the 48 selectors"),
+            ("owner-approved typed L5-to-L6 physical dictionary bridge",
+             "C_sel = Sel_class/G with four classes",
+             "epsilon_read = chi_Q chi_F", "omega(a,b,c) = c-a",
+             "separately frozen monomial verb-lift class",
+             "same normalized two-sheet law for every t",
+             "six equal line weights 1/6 only as an output",
+             "no selector representative is chosen",
+             "no postcomposition gauge is enlarged",
+             "same-modulus nonmonomial lift has unequal coefficient Born weights",
+             "no uniqueness among all amplitude lifts",
+             "GYRON identification"),
         )
         and gates.get(selector_gate, {}).get("owner_item_id") == frozen_owner
         and gates.get(selector_gate, {}).get("gate_kind") == "FIRED_NEGATIVE"
@@ -1119,17 +1149,14 @@ def run():
         and "four free projective-linear gauge orbits of size 12"
         in gates.get(selector_gate, {}).get("decision_condition", "")
         and gates.get(born_gate, {}).get("owner_item_id") == physical_owner
-        and gates.get(born_gate, {}).get("gate_kind") == "OPEN_LIFT"
+        and gates.get(born_gate, {}).get("gate_kind") == "DICTIONARY_LIFT"
         and gates.get(born_gate, {}).get("from_layer") == "L5"
         and gates.get(born_gate, {}).get("to_layer") == "L6"
-        and "reading orientation retained as typed data"
+        and "complete orientation-retaining L5 source"
         in gates.get(born_gate, {}).get("decision_condition", "")
         and frozen_owner not in programs
         and spectral not in programs
-        and programs.get(physical_owner, {}).get("program_id") == "MEASURE"
-        and programs.get(physical_owner, {}).get("queue_role") == "ROOT"
-        and programs.get(physical_owner, {}).get("work_state") == "STOP"
-        and programs.get(physical_owner, {}).get("work_mode") == "FORMAL"
+        and physical_owner not in programs
         and actual_tm_dependencies == expected_tm_dependencies
         and not theorem_to_owner
         and not has_cycle(graph)

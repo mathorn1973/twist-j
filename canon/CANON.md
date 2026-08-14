@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v46
+# TWIST-J Public Canon v47
 
-**Release identity.** Public Canon v46. Normative authority and activation
+**Release identity.** Public Canon v47. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v46 also declares the discrete
+algebraic axiom is J. Public Canon v47 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v46 does not claim
+seed of the two algebraic projections. Public Canon v47 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v46 contains no such
+deriving the architecture from J; Public Canon v47 contains no such
 theorem.
 
 ---
@@ -2598,7 +2598,7 @@ one binomial pair per case; the diagonal lives in Z with pair weight
 -4, the cross in iZ; the totals are (1 + 2i)^n with recursion
 x^2 - 2x + 5 and c^2 + d^2 = 5^n; zone edges -5I for the electron and
 -I for the photon. No eta identity is inferred from this tower; the
-inherited naming clause is not part of Public Canon v46. The fermionizer
+inherited naming clause is not part of Public Canon v47. The fermionizer
 Phi_f(s) = 1 - 2^(1-s) (FERMIONIZER) [T]: the two that makes matter
 out of light. One beat is one boost times one alternator tick
 (LADDER-ALTERNATOR-BASIS) [T]; the alternator is breath at one scale
@@ -4224,6 +4224,90 @@ survive, so the route emits no canonical selector stream and never
 reaches its Born branch. This falsifies that frozen compound route, not
 the frame theorem, the stationary law, GYRON-DENSITY, the common
 mathematical pushforward, or every future TM-to-measure definition.
+### TM-SYM2-PHYSICAL-MEASURE [D]
+
+The surviving TM-SYM2 measure route is closed only as a physical dictionary,
+not as a selector theorem. Two L5 objects are frozen as definitions for this
+bridge. First,
+
+```text
+C_sel  = Sel_class/G,            |C_sel| = 4,
+Q_word = W3/<N>,                 |Q_word| = 3,
+omega(a,b,c) = c-a.
+```
+
+`C_sel` is the four-class selector-gauge record and `Q_word` is the three-shell
+word quotient. They are different types and no map `C_sel -> Q_word` is
+introduced. The complete L5 source retains the whole `C_sel` record,
+`epsilon_read = chi_Q chi_F`, the current word in `W3`, and `omega`. On `W3`,
+`omega` is anti-invariant under both complement `N` and reversal `R`, and the
+rational joint `(-1,-1)` function sector is one-dimensional, spanned by
+`omega`. The `N`, `R`, and `NR` actions remain comparison actions and are not
+adopted as gauge. This is `DEF-TM-SYM2-ORIENTATION-SOURCE`.
+
+Second, put `j = zeta_5`, use the exact five-point Fourier convention
+
+```text
+F(a)_k = sum_(r in Z/5Z) a_r j^(rk),
+v_t = delta_t + delta_(t+1),     t in Z/5Z.
+```
+
+The separately frozen monomial verb-lift class obeys
+
+```text
+F(v_t)_k = j^(tk) (1+j^k).
+```
+
+For `k != 0`, `1+j^k = sigma_(3k)(J)` with
+`sigma_a(j)=j^a`; the `k=0` slot is separately `2` and is not called a Galois
+conjugate. Exact inverse Fourier transform returns the two-term coefficient
+vectors. This is `DEF-TM-SYM2-MONOMIAL-VERB-LIFT`.
+
+The public `ABELIAN-FACE-DICTIONARY [D]` fixes the corresponding face moduli,
+but it does not select a phase lift. The distinction is necessary: the frozen
+negative control conjugates only the `k=1` spectral slot, preserves all five
+pointwise spectral moduli, and has full inverse-Fourier support with unequal
+coefficient Born weights. Therefore the modulus data alone do not force the
+halving and no uniqueness among all amplitude lifts is claimed.
+
+Within the frozen monomial class, every `v_t` has two equal nonzero coefficient
+amplitudes. `MEASURE-BORN-VERB [D]` constrains the physical read to the Born
+square of this typed verb. Normalized coordinate square on its support is
+independent of `t` and of sheet order and, only after that equality is proved,
+is
+
+```text
+Born_t = (1/2,1/2).
+```
+
+For the other factor, import only the public L5 stationary law on `W3` from
+`TM-SYM2-PROJECTIVE-FOURFOLD [T]`. Its already known six-line pushforward and
+`M_TM` are not construction inputs. Form the three `N`-orbit marginals of that
+window law and then apply the derived two-sheet Born conditional. This gives a
+total normalized word measure. Only after construction and normalization its
+six word weights, and hence the six line weights under every selector chart,
+are read as
+
+```text
+mu_B(w) = 1/6,      w in W3.
+```
+
+Because the word measure is constant, every one of the 48 frozen selector
+charts has the same normalized pushforward. No selector representative is
+chosen and no postcomposition gauge is enlarged. The complete L5 source still
+contains `epsilon_read`; the scalar L6 measure is orientation-blind only as a
+proved output of the total map. The fired N2 conclusion of `TM-SYM2-MEASURE
+[F]` remains terminal and is not repaired.
+
+This closes `GATE-L5-L6-TM-SYM2-BORN-MEASURE` as a `DICTIONARY_LIFT` at status
+D. The exact finite algebra and the two-architecture audit are evidenced by
+`probes/P-TM-SYM2-BORN-HALVING-1`. The status does not rise above D because the
+physical Born-of-the-verb assignment is the registered dictionary reading and
+the monomial lift is frozen here as the typed bridge input, not selected from
+all same-modulus lifts. `GYRON-DENSITY` is not a dependency or confirmation of
+this bridge. No `M_TM` confirmation, `D_matter`, decoder-completion, SI, or
+all-lift uniqueness claim follows.
+
 The conformal mode prefactor K_chi5 =
 1/(864 pi) is derived at the homogeneous L5 scope from the single
 layer 5 action, with c_hom = 12 K_chi5 = 1/(72 pi)
@@ -4993,21 +5077,6 @@ positively; a complete nonempty class supporting both coins, or uniquely
 forcing `beta_3`, closes it negatively. Missing structure or failure of only
 one proposed route is STOP.
 
-TM-SYM2-PHYSICAL-MEASURE [O] is the surviving physical L5-to-L6
-obligation. A future successor must start from the complete four-orbit
-projective-gauge record, retain epsilon_read as typed L5
-reading-orientation data, prove coherence on all 48 selectors without
-choosing a representative or enlarging the gauge, and derive a normalized
-physical measure. Whether that measure agrees with the exact
-selector-independent mathematical image mu_i = 1/6 and
-M_TM = (1/3)P1 + (2/15)P5, proved by TM-SYM2-PROJECTIVE-FOURFOLD, is an
-outcome of the bridge and is not required of it; a closure that assumes
-those values, or the typed factorization 1/6 = (1/2)(1/3), is CIRCULAR.
-MEASURE-BORN-VERB and GYRON-DENSITY constrain the type of the physical
-measure clause; they do not select its values. No successor L5 source
-schema is currently frozen. The Born gate remains open but the scheduler
-is STOP while a separately reviewed owner definition is absent.
-
 The v36 ledger change is signed term by term:
 
 ```text
@@ -5195,7 +5264,7 @@ verifier audits; the three exhaustion legs corroborate it inside their frozen
 boxes and establish nothing beyond them.
 
 Public Canon v28 also amends the scope and falsifier of
-TM-SYM2-PHYSICAL-MEASURE [O]. The row previously required a future bridge to
+TM-SYM2-PHYSICAL-MEASURE, which was O at that release. The row previously required a future bridge to
 preserve mu_i = 1/6 and M_TM = (1/3)P1 + (2/15)P5 and to derive the typed
 factorization 1/6 = (1/2)(1/3); those are the values such a bridge would be
 trying to establish, so requiring them in advance stated the answer before the

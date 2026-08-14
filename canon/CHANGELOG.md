@@ -1,12 +1,42 @@
 # Canon changelog (public series)
 
 
-## Public Canon v46
+## Public Canon v47
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 241 claims; 0 T-LOCK, 135 T, 41 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
+Registry snapshot: 241 claims; 0 T-LOCK, 135 T, 42 D, 27 C, 2 H, 22 O, 13 F; 24 live H/O.
 Reproduction witnesses: 22.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v47 closes exactly one live measure obligation at dictionary
+status. `TM-SYM2-PHYSICAL-MEASURE` moves from O to D. No theorem,
+computation, hypothesis, falsification, or other status changes.
+
+The closure uses the completed two-architecture public probe
+`P-TM-SYM2-BORN-HALVING-1`. The fold freezes two typed L5 definitions: the
+orientation-retaining source on the complete four selector-gauge classes, and
+the five-member monomial J-verb lift. The exact coefficient Born square of
+every frozen monomial lift gives the same two-sheet conditional. A pinned
+same-modulus nonmonomial control has unequal coefficient Born weights, so the
+public modulus dictionary does not select the lift phase and no all-lift
+uniqueness is claimed.
+
+Only the L5 stationary W3 law is imported from
+`TM-SYM2-PROJECTIVE-FOURFOLD [T]`. The physical line value `1/6` is read only
+after the typed Born conditional and the stationary word law have been
+composed and normalized. All 48 frozen selector charts then agree without a
+representative choice or gauge enlargement. The fired N2 selector result is
+preserved.
+
+The former `TM-SYM2-PHYSICAL-MEASURE -> GYRON-DENSITY` dependency is removed.
+`GYRON-DENSITY` explicitly concerns a different carrier and contributes no L6
+physical-measure premise here. `M_TM` and the GYRON numeral are not counted as
+confirmation. The closed bridge remains D and adds no `D_matter`, decoder
+completion, SI, or physical uniqueness claim.
+
+
+## Public Canon v46
+
 
 Public Canon v46 registers two separately decided L1 theorems carried by the
 written proofs and the completed public probe
