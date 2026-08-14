@@ -1,0 +1,18 @@
+STAGE raw_gb unique=362
+STAGE six_gb
+STAGE saturation_gb
+STAGE real_gb
+GOLDEN_RIGIDITY_INDEPENDENT_SYMPY_V1
+PASS SYMPY_VERSION=1.14.0
+PASS RAW records=3889 active=383 bytes=136262 sha256=09aac23466680ba762e363ad75845aa1535f4e8e32cee75ad41119f43cb16762
+PASS FIELD_LOCATORS U[0,1]=gamma U[1,2]=gamma*x^17
+PASS SIX_RAW_TAGS=01:00:00,01:02:02,02:08:05,02:12:13,02:13:22,unit_phase
+PASS RAW_GB count=5 sha256=65693339a44018108bd147ec364d09ff20733da05040fe66b5ce98d39cd81935
+PASS SATURATION_REDUNDANT inverse_D=-8*gamma*x^6+8*gamma*x^4+4*gamma sat_sha256=5ff059e4ae7ecb73e769cddeb9b202d8e467fbac2a698cc05c771acc8b080fdf
+PASS COMPLEX dimension=0 degree=16 radical=YES prime=YES
+PASS REAL_GB count=5 sha256=56cffa396293f2b309538b663d411627cbb3b264fc12604fe7553e3268498d6f
+PASS REAL_DECOMPOSITION components=2 total_points=16 positive_points=2 conjugation_pair=YES
+PASS POSITIVE_BRANCH u^2=(5+sqrt(5))/8 c=1/sqrt(2) v=+-(sqrt(5)-1)/4
+PASS TARGET complex_mask=111111 positive_mask=111111
+PASS FIELD Q(entries)=Q(x,gamma)=Q(zeta20,sqrt2)=Q(zeta40)
+SUMMARY 13/13 PASS verdict=EXACT_J_RIGID_UP_TO_CONJUGATION

@@ -40,3 +40,27 @@ Before the public lock, no target Gröbner basis, saturation, radical,
 elimination, branch classification, or expected-relation test was computed.
 No outcome under this lock authorizes a Canon or Registry change, pull
 request, release, or `PROMO.md`.
+
+## Post-lock exact result
+
+All frozen gates G0--G7 now pass. The scoped verdict is
+`EXACT_J_RIGID_UP_TO_CONJUGATION`: inside the tied
+three-amplitude/one-phase printed-gauge family, three-way unitarity leaves
+exactly two positive solutions, exchanged by complex conjugation. This is
+not a uniqueness statement for all AME(4,6) tensors or local-unitary orbits.
+
+The primary replay is standard-library-only and relocatable. It combines:
+
+1. the blind tracked Gröbner certificate and both ideal containments;
+2. a second parser and a six-coordinate straight-line certificate;
+3. exact real-root/sign classification and all six frozen targets;
+4. NC0--NC5, construction B, known-point replay, and the column-Gram audit;
+5. canonical result JSON and artifact cross-checks.
+
+Start with `RESULT.md`, `RUN.md`, and `RESULT.json`. Run
+`run_standardlib.sh` with the two pinned upstream files; its stdout must
+match `EXPECTED_STANDARDLIB.txt` byte for byte. `independent_sympy.py` is an
+optional exact discovery replay and is not required by the primary checker.
+`SHA256SUMS.txt` pins the complete preregistration and result package.
+
+Public Canon v46, the Registry, and all promotion surfaces remain unchanged.

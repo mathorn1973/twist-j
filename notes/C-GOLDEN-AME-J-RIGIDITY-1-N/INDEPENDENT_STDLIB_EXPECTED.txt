@@ -1,0 +1,13 @@
+GOLDEN_RIGIDITY_INDEPENDENT_STDLIB_V1
+PASS SOURCE_AND_RAW records=3889 active=383 sha256=09aac23466680ba762e363ad75845aa1535f4e8e32cee75ad41119f43cb16762
+PASS FIELD_LOCATORS U[0,1]=gamma U[1,2]=gamma*x^17
+PASS COMPLEX_GB buchberger=YES reduced=YES raw_residuals=383/383
+PASS FORWARD_MEMBERSHIP outputs=5 raw_tags=6 terms=9899 bytes=233819 sha256=541295971b4ebf3f221fd65e4435a9801b8c9e760c43191340ca17d6c281034b
+PASS SIX_RAW_COORDINATES=01:00:00,01:02:02,02:08:05,02:12:13,02:13:22,unit_phase
+PASS SATURATION_REDUNDANT D_inverse=-8*gamma*x^6+8*gamma*x^4+4*gamma
+PASS REAL_GB buchberger=YES reduced=YES decomposition=two_comaximal_components
+PASS POSITIVE_CLASSIFICATION total_real=16 positive=2 conjugation_pair=YES
+PASS PRIMARY_INTERVALS d,T,gamma,alpha,beta,u,v_plus,v_minus=8/8
+PASS TARGET complex_mask=111111 positive_mask=111111
+PASS FIELD exponent_inverse=13_mod_20 compositum=Q(zeta40)
+SUMMARY 11/11 PASS verdict=EXACT_J_RIGID_UP_TO_CONJUGATION
