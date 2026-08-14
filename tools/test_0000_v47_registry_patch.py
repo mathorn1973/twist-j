@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Temporary prep-only Registry patch for Public Canon v47.
+"""Temporary prep-only prepatch for Public Canon v47.
 
-Runs before the v47 builder in unittest discovery, patches exactly one evidence
-field in the workspace, and emits a compressed byte package. Removed before the
-final content tree is frozen.
+Runs before the v47 builder in unittest discovery. It patches exactly one
+Registry evidence field in the workspace and replaces the builder's history
+step with an idempotent latest-snapshot update. Historical seq1/seq2 are never
+rewritten. Removed before the final content tree is frozen.
 """
 
 from __future__ import annotations
@@ -13,22 +14,105 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+import sys
 import unittest
 import zlib
 
 ROOT = Path(__file__).resolve().parents[1]
+TOOLS = ROOT / "tools"
 PATH = ROOT / "canon" / "REGISTRY.tsv"
+EVIDENCE = ROOT / "canon" / "EVIDENCE.tsv"
+HISTORY = ROOT / "canon" / "HISTORY.tsv"
 CLAIM = "TM-SYM2-PHYSICAL-MEASURE"
 PROBE = "probes/P-TM-SYM2-BORN-HALVING-1"
+EVIDENCE_ID = "EV-TM-SYM2-PHYSICAL-MEASURE"
+BUNDLE_SHA = "acc598e670eb7e57f689a6ecc970438ce7211d1a097514a78847100e8871fa59"
 SCOPE_SHA = "f9ad8efe676d58a167f84d3ccfb873e511945fd0a7c301a1113aa275032278d0"
+
+if str(TOOLS) not in sys.path:
+    sys.path.insert(0, str(TOOLS))
+import test_000_v47_builder as builder  # noqa: E402
 
 
 def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def read_tsv(path: Path):
+    with path.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        return list(reader.fieldnames or ()), list(reader)
+
+
+def write_tsv(path: Path, fields, rows):
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(
+            handle, fieldnames=fields, delimiter="\t", lineterminator="\n"
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def idempotent_patch_history() -> None:
+    """Make only the latest physical-measure history snapshot current."""
+    e_fields, evidence = read_tsv(EVIDENCE)
+    if not e_fields:
+        raise AssertionError("missing evidence header")
+    current = [row for row in evidence if row["claim_id"] == CLAIM]
+    if len(current) != 1:
+        raise AssertionError(f"evidence rows={len(current)}")
+    current = current[0]
+    expected = (current["evidence_id"], current["location"], current["sha256"])
+    if expected != (EVIDENCE_ID, PROBE, BUNDLE_SHA):
+        raise AssertionError(f"unexpected current evidence {expected}")
+
+    fields, rows = read_tsv(HISTORY)
+    own = sorted(
+        (row for row in rows if row["claim_id"] == CLAIM),
+        key=lambda row: int(row["event_sequence"]),
+    )
+    seq = [int(row["event_sequence"]) for row in own]
+    if seq == [1, 2]:
+        row = {field: "" for field in fields}
+        row.update(
+            event_id="CANON47-STATUS-TM-SYM2-PHYSICAL-MEASURE-3",
+            event_sequence="3",
+            event_date="2026-08-14",
+            release="canon-v47",
+            claim_id=CLAIM,
+            event_type="STATUS_CHANGE",
+            previous_status="O",
+            new_status="D",
+            scope_sha256=SCOPE_SHA,
+            evidence_id=expected[0],
+            evidence_location=expected[1],
+            evidence_sha256=expected[2],
+            rationale=builder.RATIONAL,
+        )
+        rows.append(row)
+    elif seq == [1, 2, 3]:
+        row = own[-1]
+        if row["event_id"] != "CANON47-STATUS-TM-SYM2-PHYSICAL-MEASURE-3":
+            raise AssertionError("unexpected seq3 event id")
+        row.update(
+            event_date="2026-08-14",
+            release="canon-v47",
+            event_type="STATUS_CHANGE",
+            previous_status="O",
+            new_status="D",
+            scope_sha256=SCOPE_SHA,
+            evidence_id=expected[0],
+            evidence_location=expected[1],
+            evidence_sha256=expected[2],
+            rationale=builder.RATIONAL,
+        )
+    else:
+        raise AssertionError(f"unexpected history chain {seq}")
+    write_tsv(HISTORY, fields, rows)
+
+
 class V47RegistryEvidencePatch(unittest.TestCase):
-    def test_patch_registry_evidence(self) -> None:
+    def test_patch_registry_evidence_and_builder_history_step(self) -> None:
         with PATH.open(encoding="utf-8", newline="") as handle:
             reader = csv.DictReader(handle, delimiter="\t")
             fields = list(reader.fieldnames or ())
@@ -49,6 +133,13 @@ class V47RegistryEvidencePatch(unittest.TestCase):
             )
             writer.writeheader()
             writer.writerows(rows)
+
+        # Discovery imports the builder module before tests execute. Replacing
+        # this module-level function here changes the already-loaded builder
+        # test's call site, so its own check_ledger sees the correct seq3
+        # snapshot. This is prep-only ordering control, not post-hoc repair.
+        builder.patch_history = idempotent_patch_history
+
         data = PATH.read_bytes()
         payload = json.dumps(
             {"canon/REGISTRY.tsv": base64.b64encode(data).decode("ascii")},
