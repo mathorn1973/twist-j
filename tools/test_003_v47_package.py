@@ -40,7 +40,7 @@ class V47GeneratedPackage(unittest.TestCase):
         raw = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
         packed = zlib.compress(raw, 9)
         encoded = base64.b64encode(packed).decode("ascii")
-        chunk_size = 3500
+        chunk_size = 7000
         chunks = [encoded[i:i + chunk_size] for i in range(0, len(encoded), chunk_size)]
         meta = {
             "files": manifest,
