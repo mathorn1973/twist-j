@@ -1,0 +1,13 @@
+PASS 0: reviewed constants re-derived independently (11/54, 22/27,
+        C*=9/sqrt(11), 11*sqrt(11)/(2916 pi), min degree q_B/5)
+PASS 1 (R1): on every conjugation-invariant set the symmetrization
+        identity forces mu_v(S) = sigma(S)/2 for every v, so
+        Theorem 4 constrains sigma, not the cocycle vector
+PASS 2 (R2): dyadic sum gives C*=18/sqrt(77) and the constant
+        11*sqrt(77)/(2916 pi), all windows positive from j=0
+PASS 3 (R3): Theorem 5 coefficient = 11/270 for every window j,
+        so that route is already optimal for this method
+PASS 4 (R4): rho = 1/(1-xi) sits on Re s = 1/2 and has height
+        at most log 2, so closure step 3 cannot use Northcott
+PASS 5: improvement ratio new/old = sqrt(7)
+ALL PASS
