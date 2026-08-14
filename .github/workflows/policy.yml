@@ -35,6 +35,24 @@ jobs:
           python-version: "3.12"
       - run: python tools/check_policy.py
       - run: python -m unittest discover -s tools -p 'test_*.py'
+      - name: Preserve prep-only v47 generated candidate
+        if: always() && github.head_ref == 'prep/canon-v47'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: v47-generated-${{ matrix.architecture }}
+          path: |
+            canon/CANON.md
+            canon/CORE.md
+            canon/FRONTIER.md
+            canon/CHANGELOG.md
+            canon/SHA256SUMS
+            canon/EVIDENCE.tsv
+            canon/HISTORY.tsv
+            canon/STATUS_COUNTS.tsv
+            reproduce/status-separation/verify.py
+            reproduce/status-separation/EXPECTED.txt
+            reproduce/status-separation/README.md
+          if-no-files-found: error
       - run: python tools/check_canon.py
       - run: python tools/check_ledger.py
       - name: Reproduce changed public probes
