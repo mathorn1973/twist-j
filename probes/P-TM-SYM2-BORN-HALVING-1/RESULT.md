@@ -1,6 +1,6 @@
 # RESULT. P-TM-SYM2-BORN-HALVING-1
 
-**Status: SCIENTIFIC RESULT; local x86_64 formal leg PASS; public status unchanged.**
+**Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS; PUBLIC CLAIM UNCHANGED.**
 
 ```text
 decision:                  BORN-HALVING-PASS
@@ -8,7 +8,7 @@ local formal executions:   1
 local exit/stderr:          0 / empty
 local gates:                18/18 PASS
 status ceiling:             D
-two-architecture gate:      PENDING
+two-architecture gate:      PASS
 ```
 
 ## 1. What is new at this probe scope
@@ -27,7 +27,8 @@ typed J-verb monomial lift
     -> coherence across every frozen selector chart.
 ```
 
-The local exact verifier returns positive on that frozen class.
+The frozen exact verifier returns positive on that class and the same transcript
+is reproduced on clean GitHub x86_64 and aarch64 runners.
 
 ## 2. Source and type separation
 
@@ -59,6 +60,9 @@ No map from the four selector classes to the three word shells is introduced.
 The total L5 type retains the complete four-class record and
 `epsilon_read=chi_Q chi_F`, together with the current W3 word and `omega`.
 
+**[candidate-T, frozen finite algebra]** The joint source sector and the type
+separation are exact within the declared scope.
+
 ## 3. The corrected lift statement
 
 The public `ABELIAN-FACE-DICTIONARY [D]` modulus data do not determine an
@@ -86,9 +90,9 @@ where `sigma_a(zeta_5)=zeta_5^a`; the `k=0` slot is separately `2`.
 All five monomial lifts have the same pointwise spectral moduli and exact
 inverse Fourier transform back to the frozen two-term coefficient vectors.
 
-**[candidate-T, frozen finite algebra]** These are exact algebraic statements
-inside the public probe scope. They do not establish uniqueness among all
-amplitude lifts with the same moduli.
+**[candidate-T, frozen finite algebra]** These are exact algebraic statements.
+They do not establish uniqueness among all amplitude lifts with the same
+moduli.
 
 ## 4. Born halving
 
@@ -143,6 +147,9 @@ weight is read as
 The value is therefore an output of this frozen bridge, not an input selecting
 the factors.
 
+**[candidate-D]** The physical bridge interpretation remains at most D; the
+uniform W3 law itself is an imported public T input and is not new here.
+
 ## 7. Selector coherence
 
 The constructed W3 measure is constant. Hence every bijection from W3 to the
@@ -156,6 +163,9 @@ adopted as a new gauge.
 The L5 source remains orientation-retaining. The scalar L6 candidate is
 orientation-blind only as the output of the typed total map.
 
+**[candidate-D]** This supplies the required selector coherence for the frozen
+candidate bridge without repairing the fired N2 selector canonicality result.
+
 ## 8. What is deliberately not a confirmation
 
 This probe does not count the following as independent scientific controls:
@@ -168,7 +178,9 @@ This probe does not count the following as independent scientific controls:
 Those statements carry no additional confirmation weight for the Born-halving
 target.
 
-## 9. Local transcript
+## 9. Exact transcript and pin identity
+
+The accepted verifier printed:
 
 ```text
 G01 W3-CARRIER PASS
@@ -189,25 +201,72 @@ G15 TOTAL-WORD-MEASURE PASS
 G16 SELECTOR-COHERENCE PASS
 G17 ORIENTATION-TOTALITY PASS
 G18 CIRCULARITY-STATUS PASS
+GATE_COUNT 18
 ```
 
-Stdout SHA-256:
+The frozen identity is:
 
 ```text
-52ee81ddd10c7af5e00ff1a2a1b6ea2fed9905b1f235349b73c0732fb2ead51d
+pin commit:       0e930978878453800fa078f75b9a0e25c2963787
+verifier sha256:  a9dbe6d5549aa3e0bb5f21cc4d8e26586cbcf95141df141432b710e8fdb0f6f7
+stdout sha256:    52ee81ddd10c7af5e00ff1a2a1b6ea2fed9905b1f235349b73c0732fb2ead51d
+stdout bytes:     741
+stdout lines:     30
 ```
 
-The accepted verifier and preregistration remain byte-identical to the public
-pin `0e930978878453800fa078f75b9a0e25c2963787`.
+The pinnuté `PREREG.md`, `verify.py`, and `EXPECTED.txt` were not changed after
+the scientific run.
 
-## 10. Current scientific disposition
+## 10. First CI preflight failure, preserved
 
-**[candidate-D]** The frozen monomial J-verb class supplies the missing Born
-halving and a total selector-coherent L5-to-L6 candidate map without assuming
-the target `1/6`.
+The first pull-request workflow `31813175546` stopped on both architectures
+before any changed-probe verifier replay. The repository RUN parser required
+`stdout_lines` and the exact field name `verifier_sha256`; the initial RUN
+record omitted the former and used `verify_sha256` for the latter.
 
-This does **not** close `TM-SYM2-PHYSICAL-MEASURE [O]` by itself. The public
-gate remains unchanged until the required clean GitHub x86_64/aarch64 replay
-passes and any later Canon/Registry/frontier treatment is separately reviewed.
+This was an evidence-metadata schema failure. The correction changed only
+`RUN.md`, recorded the failure, and did not alter the pin, verifier,
+`EXPECTED.txt`, thresholds, route, scientific output, or local execution count.
+It carries no scientific negative verdict.
 
-No `D_matter`, SI, new gauge, or decoder-completion claim is made.
+## 11. Two-architecture gate
+
+The corrected evidence head
+`b7d86f655921aceabee140e44d4e93d5f7c678fb` was tested by clean pull-request
+workflow `31813296463` at tested merge
+`55858de4921c9edd9b530e07a29db383a136f5c1`.
+
+```text
+x86_64 job       94808833870   success
+platform         Ubuntu 24.04.4 LTS
+python           CPython 3.12.13
+VERIFY PASS      verifier a9dbe6d5549aa3e0bb5f21cc4d8e26586cbcf95141df141432b710e8fdb0f6f7
+                 stdout   52ee81ddd10c7af5e00ff1a2a1b6ea2fed9905b1f235349b73c0732fb2ead51d
+
+aarch64 job      94808834014   success
+platform         Ubuntu 24.04.4 LTS
+python           CPython 3.12.13
+VERIFY PASS      verifier a9dbe6d5549aa3e0bb5f21cc4d8e26586cbcf95141df141432b710e8fdb0f6f7
+                 stdout   52ee81ddd10c7af5e00ff1a2a1b6ea2fed9905b1f235349b73c0732fb2ead51d
+
+aggregate check  94808891578   success
+terminal         TWO-ARCHITECTURE CHECK PASS
+```
+
+Both architecture jobs also passed policy, all 99 repository unit tests,
+Canon and ledger checks. The x86_64 and aarch64 clean replays therefore satisfy
+the public two-architecture computation gate for the pinned verifier.
+
+## 12. Scientific disposition
+
+**[candidate-D]** The frozen monomial J-verb class supplies exact Born halving
+and a total selector-coherent L5-to-L6 candidate map without assuming the
+target `1/6`.
+
+**[candidate-T bounded negative]** The registered spectral moduli alone do not
+force that halving; a same-modulus nonmonomial lift breaks it.
+
+This probe does **not** by itself change or close
+`TM-SYM2-PHYSICAL-MEASURE [O]`. Public status, dependency, gate, Canon and
+Frontier treatment remain a separate reviewed fold. No `D_matter`, SI, new
+gauge, or decoder-completion claim is made.
