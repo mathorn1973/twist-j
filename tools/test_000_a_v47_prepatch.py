@@ -4,21 +4,18 @@
 Runs before the v47 builder in unittest discovery. It patches exactly one
 Registry evidence field in the workspace, replaces the builder's history step
 with an idempotent latest-snapshot update, upgrades the generated CORE release
-identity before normative hashes are written, and suppresses large transport
-payloads while diagnosing later repository tests. Historical seq1/seq2 are
-never rewritten. Removed before the final content tree is frozen.
+identity before normative hashes are written, and suppresses transport payloads
+while diagnosing later repository tests. Historical seq1/seq2 are never
+rewritten. Removed before the final content tree is frozen.
 """
 
 from __future__ import annotations
 
-import base64
 import csv
 import hashlib
-import json
 from pathlib import Path
 import sys
 import unittest
-import zlib
 
 ROOT = Path(__file__).resolve().parents[1]
 TOOLS = ROOT / "tools"
@@ -38,7 +35,6 @@ import test_000_v47_builder as builder  # noqa: E402
 
 ORIGINAL_WRITE_SHA256S = builder.write_sha256s
 ORIGINAL_RUN_CHECKED = builder.run_checked
-ORIGINAL_PRINT_PACKAGE = builder.print_transport_package
 
 
 def sha256(data: bytes) -> str:
@@ -126,9 +122,8 @@ def write_sha256s_with_v47_core() -> None:
             raise AssertionError("CORE release identity drift")
         text = text.replace("Public Canon v46", "Public Canon v47")
         CORE.write_text(text, encoding="utf-8")
-    versions = set()
     import re
-    versions.update(re.findall(r"Public Canon v([1-9][0-9]*)", text))
+    versions = set(re.findall(r"Public Canon v([1-9][0-9]*)", text))
     if versions != {"47"}:
         raise AssertionError(f"CORE mixed versions: {sorted(versions)}")
     ORIGINAL_WRITE_SHA256S()
@@ -175,28 +170,14 @@ class V47RegistryEvidencePatch(unittest.TestCase):
             writer.writeheader()
             writer.writerows(rows)
 
-        # Discovery imports the builder module before tests execute. Replacing
-        # these module-level functions here changes the already-loaded builder
-        # test call sites. All changes precede the builder's own check_ledger
-        # and check_canon calls; none is a post-check repair.
         builder.patch_history = idempotent_patch_history
         builder.write_sha256s = write_sha256s_with_v47_core
         builder.run_checked = concise_run_checked
         builder.print_transport_package = diagnostic_print_transport_package
 
         data = PATH.read_bytes()
-        payload = json.dumps(
-            {"canon/REGISTRY.tsv": base64.b64encode(data).decode("ascii")},
-            sort_keys=True,
-            separators=(",", ":"),
-        ).encode("ascii")
-        packed = base64.b64encode(zlib.compress(payload, 9)).decode("ascii")
         print(f"V47_REGISTRY_BYTES={len(data)}")
         print(f"V47_REGISTRY_SHA256={sha256(data)}")
-        print("V47_REGISTRY_PACKAGE_BEGIN")
-        for i in range(0, len(packed), 1600):
-            print(packed[i:i+1600])
-        print("V47_REGISTRY_PACKAGE_END")
 
 
 if __name__ == "__main__":
