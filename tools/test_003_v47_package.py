@@ -16,8 +16,6 @@ FILES = (
     "canon/CORE.md",
     "canon/FRONTIER.md",
     "canon/CHANGELOG.md",
-    "canon/CHANGELOG_COUNTS.md",
-    "canon/CORE_CLAIMS.md",
     "canon/SHA256SUMS",
     "canon/EVIDENCE.tsv",
     "canon/HISTORY.tsv",
