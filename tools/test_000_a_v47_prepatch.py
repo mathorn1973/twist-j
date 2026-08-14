@@ -3,8 +3,9 @@
 
 Runs before the v47 builder in unittest discovery. It patches exactly one
 Registry evidence field in the workspace, replaces the builder's history step
-with an idempotent latest-snapshot update, and upgrades the generated CORE
-release identity before normative hashes are written. Historical seq1/seq2 are
+with an idempotent latest-snapshot update, upgrades the generated CORE release
+identity before normative hashes are written, and suppresses large transport
+payloads while diagnosing later repository tests. Historical seq1/seq2 are
 never rewritten. Removed before the final content tree is frozen.
 """
 
@@ -37,6 +38,7 @@ import test_000_v47_builder as builder  # noqa: E402
 
 ORIGINAL_WRITE_SHA256S = builder.write_sha256s
 ORIGINAL_RUN_CHECKED = builder.run_checked
+ORIGINAL_PRINT_PACKAGE = builder.print_transport_package
 
 
 def sha256(data: bytes) -> str:
@@ -141,6 +143,15 @@ def concise_run_checked(*args: str) -> str:
         raise AssertionError("V47_CONCISE_CHECK_FAILURE\n" + tail) from None
 
 
+def diagnostic_print_transport_package() -> None:
+    """Print only deterministic file identities while diagnosing prep."""
+    for relative in builder.OUTPUT_FILES:
+        data = (ROOT / relative).read_bytes()
+        print(
+            f"V47_DIAG_FILE {relative} bytes={len(data)} sha256={sha256(data)}"
+        )
+
+
 class V47RegistryEvidencePatch(unittest.TestCase):
     def test_patch_registry_evidence_and_builder_hooks(self) -> None:
         with PATH.open(encoding="utf-8", newline="") as handle:
@@ -171,6 +182,7 @@ class V47RegistryEvidencePatch(unittest.TestCase):
         builder.patch_history = idempotent_patch_history
         builder.write_sha256s = write_sha256s_with_v47_core
         builder.run_checked = concise_run_checked
+        builder.print_transport_package = diagnostic_print_transport_package
 
         data = PATH.read_bytes()
         payload = json.dumps(
