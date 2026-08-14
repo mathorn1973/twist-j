@@ -1,0 +1,186 @@
+name: v47-release-builder
+
+on:
+  push:
+    branches: [prep/canon-v47]
+
+permissions:
+  contents: write
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+
+      - name: Materialize the reviewed v47 candidate
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tools -p 'test_000*.py'
+          python tools/check_canon.py
+          python tools/check_ledger.py
+          python reproduce/status-separation/verify.py
+
+      - name: Re-run complete public evidence surface
+        env:
+          BASE_SHA: 2e4194fff467d91117d4884b502a05d1fd2d40e8
+        run: |
+          set -euo pipefail
+          python tools/check_verifier.py --base "$BASE_SHA"
+          python tools/check_reproduce.py --base "$BASE_SHA"
+
+      - name: Build exact two-commit release branch
+        env:
+          BASE_SHA: 2e4194fff467d91117d4884b502a05d1fd2d40e8
+          CANON_SHA256: 5e4c454e53381e13df2bc2e894bd6e7328af9329c4b13df03106c902c7caf400
+          CANON_BYTES: "225589"
+        run: |
+          set -euo pipefail
+
+          expected_content='canon/CANON.md
+          canon/CHANGELOG.md
+          canon/CORE.md
+          canon/DEPENDENCIES.tsv
+          canon/EVIDENCE.tsv
+          canon/FRONTIER.md
+          canon/FRONTIER_PROGRAMS.tsv
+          canon/GATES.tsv
+          canon/HISTORY.tsv
+          canon/NORMATIVE.tsv
+          canon/REGISTRY.tsv
+          canon/SHA256SUMS
+          canon/STATUS_COUNTS.tsv
+          reproduce/status-separation/EXPECTED.txt
+          reproduce/status-separation/README.md
+          reproduce/status-separation/verify.py
+          tools/test_architecture_map_report.py'
+
+          rm -rf /tmp/v47-content
+          mkdir -p /tmp/v47-content
+          while IFS= read -r path; do
+            [ -n "$path" ] || continue
+            mkdir -p "/tmp/v47-content/$(dirname "$path")"
+            cp "$path" "/tmp/v47-content/$path"
+          done <<< "$expected_content"
+
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+          expected = {
+              "canon/CANON.md": (225589, "5e4c454e53381e13df2bc2e894bd6e7328af9329c4b13df03106c902c7caf400"),
+              "canon/CHANGELOG.md": (80806, "d06388a54bb69838357d0389f67edbc75cbfe051c810a7e29aea40368b0a8926"),
+              "canon/CORE.md": (11304, "4092f370640f5f86b3f579b5cb3853e2b13cdfc5efa0eb074206d4b5b46883ae"),
+              "canon/EVIDENCE.tsv": (45261, "2c75ef8dbbe374ebf4de9db01e3dd8007390d0f6d5d9e98636e9d26193778113"),
+              "canon/FRONTIER.md": (16717, "c4dced43e3d96e070d7ca3ca84849a61655bad343ede069bbabcb68ca4baaa68"),
+              "canon/HISTORY.tsv": (305737, "4c7803e0b3d245ff90defd3b548f83cbda5182c94b83738e7f35c5acc741218a"),
+              "canon/SHA256SUMS": (415, "251a9285212b495e99e4a8d698fefc51c9c0a847096b3d3b31d4d2ff0f27064c"),
+              "canon/STATUS_COUNTS.tsv": (243, "996e13cf0eb1df3570d1298e11fc2311ceed21de24c72d63f34299789740496a"),
+              "reproduce/status-separation/EXPECTED.txt": (3126, "239ed874992be685910a13de2fd0906a303cdfec67ed0d994306c3c10b3ed5f3"),
+              "reproduce/status-separation/README.md": (6277, "c215e5ac06a49547e3e78b936556392a47ecf5cd6a37d9bf33bb9b0de4e65fdd"),
+              "reproduce/status-separation/verify.py": (102594, "8c25008a1e5405d987242fd28dc913beeae38fdb600e5d701ae1b17dc19a4454"),
+          }
+          root = Path("/tmp/v47-content")
+          for path, (size, digest) in expected.items():
+              data = (root / path).read_bytes()
+              got = hashlib.sha256(data).hexdigest()
+              assert len(data) == size, (path, len(data), size)
+              assert got == digest, (path, got, digest)
+          print("V47 GENERATED HASH MANIFEST PASS")
+          PY
+
+          git config user.name 'A. M. Thorn'
+          git config user.email 'thorn@twistj.com'
+          git checkout -B release/canon-v47 "$BASE_SHA"
+
+          while IFS= read -r path; do
+            [ -n "$path" ] || continue
+            mkdir -p "$(dirname "$path")"
+            cp "/tmp/v47-content/$path" "$path"
+          done <<< "$expected_content"
+
+          actual="$(git status --short | sed -E 's/^.. //' | sort)"
+          expected="$(printf '%s\n' "$expected_content" | sed '/^[[:space:]]*$/d' | sed 's/^[[:space:]]*//' | sort)"
+          if [ "$actual" != "$expected" ]; then
+            echo 'Unexpected content diff:'
+            git status --short
+            exit 1
+          fi
+
+          git add -- $expected
+          git commit -m 'Fold TM-SYM2 physical Born dictionary into Public Canon v47'
+          CONTENT_COMMIT="$(git rev-parse HEAD)"
+          echo "CONTENT_COMMIT=$CONTENT_COMMIT"
+
+          python - "$CONTENT_COMMIT" "$CANON_SHA256" "$CANON_BYTES" <<'PY'
+          from pathlib import Path
+          import sys
+          content_commit, canon_sha, canon_bytes = sys.argv[1:]
+
+          def replace_once(text, old, new, label):
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f"{label}: expected one occurrence, got {count}")
+              return text.replace(old, new)
+
+          status = Path("STATUS.md").read_text(encoding="utf-8")
+          for old, new, label in (
+              ("CANON:          Public Canon v46", "CANON:          Public Canon v47", "status canon"),
+              ("TAG:            canon-v46", "TAG:            canon-v47", "status tag"),
+              ("CONTENT_COMMIT: 62628ca4da2d938e4e3a122d35c0d93a6debc27f", f"CONTENT_COMMIT: {content_commit}", "status content"),
+              ("CANON_SHA256:   6c57e714c441bd679b9f6c673352cfae44ac993433d7c4624cd9c3c93df291ff", f"CANON_SHA256:   {canon_sha}", "status hash"),
+              ("CANON_BYTES:    222760", f"CANON_BYTES:    {canon_bytes}", "status bytes"),
+              ("Public Canon v46 is the normative public ledger of TWIST-J.", "Public Canon v47 is the normative public ledger of TWIST-J.", "status prose version"),
+              ("under the tag `canon-v46`", "under the tag `canon-v47`", "status prose tag"),
+          ):
+              status = replace_once(status, old, new, label)
+          Path("STATUS.md").write_text(status, encoding="utf-8")
+
+          readme = Path("README.md").read_text(encoding="utf-8")
+          for old, new, label in (
+              ("Public Canon v46 is the normative public ledger.", "Public Canon v47 is the normative public ledger.", "readme state"),
+              ("tag `canon-v46`", "tag `canon-v47`", "readme tag"),
+              ("the normative Public Canon v46 text.", "the normative Public Canon v47 text.", "readme canon"),
+              ("The current release is Public Canon v46, tagged `canon-v46`.", "The current release is Public Canon v47, tagged `canon-v47`.", "readme release"),
+          ):
+              readme = replace_once(readme, old, new, label)
+          Path("README.md").write_text(readme, encoding="utf-8")
+
+          citation = Path("CITATION.cff").read_text(encoding="utf-8")
+          for old, new, label in (
+              ('message: "If you use TWIST-J Public Canon v46, cite it as below."', 'message: "If you use TWIST-J Public Canon v47, cite it as below."', "citation message"),
+              ('version: "46"', 'version: "47"', "citation version"),
+              ('date-released: 2026-08-13', 'date-released: 2026-08-14', "citation date"),
+          ):
+              citation = replace_once(citation, old, new, label)
+          Path("CITATION.cff").write_text(citation, encoding="utf-8")
+          PY
+
+          activation_files="$(git status --short | sed -E 's/^.. //' | sort)"
+          if [ "$activation_files" != $'CITATION.cff\nREADME.md\nSTATUS.md' ]; then
+            echo 'Activation changed unexpected files:'
+            git status --short
+            exit 1
+          fi
+          git add CITATION.cff README.md STATUS.md
+          git commit -m 'Stage Public Canon v47 activation'
+
+          python tools/check_policy.py
+          python -m unittest discover -s tools -p 'test_*.py'
+          python tools/check_canon.py
+          python tools/check_ledger.py
+          python tools/check_verifier.py --base "$BASE_SHA"
+          python tools/check_reproduce.py --base "$BASE_SHA"
+          python tools/check_activation.py --full --content-commit "$CONTENT_COMMIT"
+
+          test "$(git rev-list --count "$BASE_SHA"..HEAD)" = 2
+          test "$(git diff-tree --no-commit-id --name-only -r HEAD | sort)" = $'CITATION.cff\nREADME.md\nSTATUS.md'
+          test "$(git status --porcelain)" = ""
+
+          git push origin HEAD:refs/heads/release/canon-v47
+          echo "RELEASE_HEAD=$(git rev-parse HEAD)"
