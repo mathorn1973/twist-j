@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its thirty-two checks cover the current
+and emits deterministic text. Its thirty-three checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -92,5 +92,7 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v48 count check reads the folded tree (246 claims, 23 reproductions, 11 gates), the CENTRAL, CM-2I and J-SEAM checks read QUADRATIC-DECODER-DATA as a dictionary with the instrument apparatus as the open DECODER_CORE row, and the new QDD-ROUTE-A check requires the three L1 theorems, the L6 Born reading behind its DICTIONARY_LIFT gate, the separate apparatus obligation, the two-architecture qdd-route-a evidence and the exact scope phrases of the slot boundary and of the measure.
 
 The v47 count and TM-SYM2 checks additionally require the two new L5 definition rows, the retired MEASURE frontier entry, the DICTIONARY_LIFT gate, the public Born-halving probe evidence, and the explicit absence of GYRON-DENSITY as a dependency of the physical six-line measure.

@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v47
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v48
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -15,7 +15,7 @@ PASS 11 QUARTIC    quartic total ramification stays T at L1; no field selection 
 PASS 12 ABELIAN-CM unique even-bit minimum stays T at L1; its class is not a physical selector
 PASS 13 CM-PENCIL  alternating trace pencil stays T at L1; repaired similitude boundary stays exact
 PASS 14 COLOR      finite group and invariant rungs stay T; the color reading is D
-PASS 15 CM-2I      marked semilinear pair stays T at L4; decoder and measure stay O/STOP
+PASS 15 CM-2I      marked semilinear pair stays T at L4; decoder dictionary at D, apparatus and measure stay O/STOP
 PASS 16 COSMOLOGY  exact L1 Gyron theorems stay T; their physical reading stays D
 PASS 17 SCHWINGER  the exact target stays T while its physical realization stays O
 PASS 18 C20        the L1 C20 theorem stays separate from time and decoder readings
@@ -33,5 +33,6 @@ PASS 29 TM-HANKEL  Hankel divisor block splits T, F, and C exactly; no physical 
 PASS 30 RAPIDITY   arithmetic rapidity rows split T and C exactly; no physical lift
 PASS 31 INDEPENDENCE split-prime independence rows stay exact L1 arithmetic with no analytic or ordering lift
 PASS 32 SEPARATION quantitative separation and finite Fejer rows stay exact, distinct, and normalization-fenced
+PASS 33 QDD-ROUTE-A QDD algebra stays T at L1; the L6 Born reading is D behind its gate; the apparatus is O; QDD is a dictionary
 
-RESULT 32/32 ALL PASS
+RESULT 33/33 ALL PASS

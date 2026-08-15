@@ -1,12 +1,46 @@
 # Canon changelog (public series)
 
 
-## Public Canon v47
+## Public Canon v48
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 241 claims; 0 T-LOCK, 135 T, 42 D, 27 C, 2 H, 22 O, 13 F; 24 live H/O.
-Reproduction witnesses: 22.
+Registry snapshot: 246 claims; 0 T-LOCK, 138 T, 44 D, 27 C, 2 H, 22 O, 13 F; 24 live H/O.
+Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v48 folds the QDD Route A dictionary. `QUADRATIC-DECODER-DATA`
+moves from O to D. Three L1 theorems, one L6 dictionary and one open
+apparatus obligation are declared; no other status changes.
+
+The fourteen data the open row required are now public definitions in
+section 2 (`DEF-QDD-*`): the pointed-orbit domain, the balanced piston head,
+the B0 amplitude, the coefficient field with three distinct typed involutions,
+the trace pairing and its Gram `G = I - (1/5) 1 1^T`, dagger, transpose, the
+ordered quadratic pair and its carrier equality, the LOW LINE `Q lambda_B`
+with `lambda_B = -zeta_5^4`, the two projectors as ALGEBRAIC_READOUT, the
+branch-weight pairing, the five-field tagged record, the direct write and the
+factor map, plus the explicit bridge `DEF-BRIDGE-QDD-TR4-EFFECT-SELECTION`.
+
+`QDD-ALGEBRAIC-FACTORIZATION [T]` states the exact identity of the direct
+cyclotomic write and the Gram/projector factor route on all 15625
+checkpoints, with totality, normalization, the 313 fibres and two negative
+controls. `QDD-PROJECTOR-PAIR-TR4 [T]` states that `E_low` is the unique
+G-self-adjoint idempotent with kernel `ker Tr_4`. `QDD-QCARRIER-DIAGONAL-
+BOUNDARY [T]` records that both typed slots coincide on the frozen carrier
+and that no central phase is derived from it. `QDD-BORN-READOUT-MEASURE [D]`
+reads only the normalized NONZERO branch as a two-outcome measure through the
+new direct gate `GATE-L1-L6-QDD-BORN-READOUT`; the ZERO branch stays a tag.
+The value 1/6 in the value table is a numerical witness with no role. The
+physical instrument family is `QDD-INSTRUMENT-APPARATUS [O]`, registered
+separately so that the dictionary carries no unregistered blocker.
+
+Evidence is the new two-architecture reproduction `reproduce/qdd-route-a`
+(fifteen checks). The status-separation witness gains a thirty-third check.
+No uniqueness-from-J, apparatus, occurrence law, sampling, post-state, SI,
+totality or completeness claim is made.
+
+
+## Public Canon v47
 
 Public Canon v47 closes exactly one live measure obligation at dictionary
 status. `TM-SYM2-PHYSICAL-MEASURE` moves from O to D. No theorem,

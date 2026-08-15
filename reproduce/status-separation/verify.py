@@ -141,21 +141,21 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 135, "D": 42, "C": 27, "F": 13,
+    expected_counts = {"T": 138, "D": 44, "C": 27, "F": 13,
                        "O": 22, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v47",
-        len(rows) == 241
+        "registry and companion-ledger counts match Public Canon v48",
+        len(rows) == 246
         and counts == expected_counts
-        and len(normative) == 259
-        and len(dependencies) == 384
-        and len(evidence) == 241
-        and two_architecture == 161
-        and len(history) == 756
-        and len(gates) == 10
+        and len(normative) == 282
+        and len(dependencies) == 448
+        and len(evidence) == 246
+        and two_architecture == 166
+        and len(history) == 763
+        and len(gates) == 11
         and len({row["program_id"] for row in programs.values()}) == 7
-        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 22,
+        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
     ))
 
     checks.append((
@@ -526,8 +526,8 @@ def run():
                 "integrity STOP, not a scientific falsifier",
             )
         )
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_state")
+        and has_status(index, "QUADRATIC-DECODER-DATA", "D")
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("work_state")
         == "STOP"
         and central not in programs,
     ))
@@ -745,7 +745,7 @@ def run():
     }
     checks.append((
         "CM-2I",
-        "marked semilinear pair stays T at L4; decoder and measure stay O/STOP",
+        "marked semilinear pair stays T at L4; decoder dictionary at D, apparatus and measure stay O/STOP",
         has_status(index, cm_pair, "T")
         and normative.get(cm_pair, {}).get("item_type") == "THEOREM"
         and normative.get(cm_pair, {}).get("status") == "T"
@@ -797,15 +797,15 @@ def run():
             )
         )
         and has_status(index, "SPIN-LIFT-FORCED", "F")
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and has_status(index, "QUADRATIC-DECODER-DATA", "D")
         and has_status(index, "COLOR-MEASURE-SELECTION", "O")
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("program_id")
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("program_id")
         == "DECODER_CORE"
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("queue_role")
-        == "ROOT"
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_state")
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("queue_role")
+        == "FOLLOWUP"
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("work_state")
         == "STOP"
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_mode")
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("work_mode")
         == "FORMAL"
         and programs.get("COLOR-MEASURE-SELECTION", {}).get("program_id")
         == "NONABELIAN_QCD"
@@ -1849,7 +1849,7 @@ def run():
         and has_status(index, "TWO-PLACE-PHYSICS", "D")
         and has_status(index, "BOOST-COUNT-LADDER", "D")
         and has_status(index, "LOG-AXES-INDEPENDENCE", "T")
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and has_status(index, "QUADRATIC-DECODER-DATA", "D")
         and seam not in programs,
     ))
 
@@ -2279,6 +2279,49 @@ def run():
                 "normalization STOP",
             )
         ),
+    ))
+
+    qdd_path = "reproduce/qdd-route-a"
+    qdd_gate = "GATE-L1-L6-QDD-BORN-READOUT"
+    checks.append((
+        "QDD-ROUTE-A",
+        "QDD algebra stays T at L1; the L6 Born reading is D behind its gate; the apparatus is O; QDD is a dictionary",
+        all(
+            has_status(index, claim, "T")
+            and normative.get(claim, {}).get("layer") == "L1"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("evidence") == qdd_path
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            for claim in ("QDD-ALGEBRAIC-FACTORIZATION", "QDD-PROJECTOR-PAIR-TR4",
+                          "QDD-QCARRIER-DIAGONAL-BOUNDARY")
+        )
+        and has_status(index, "QDD-BORN-READOUT-MEASURE", "D")
+        and normative.get("QDD-BORN-READOUT-MEASURE", {}).get("layer") == "L6"
+        and normative.get("QDD-BORN-READOUT-MEASURE", {}).get("gate_ids")
+        == qdd_gate
+        and gates.get(qdd_gate, {}).get("owner_item_id")
+        == "QDD-BORN-READOUT-MEASURE"
+        and gates.get(qdd_gate, {}).get("from_layer") == "L1"
+        and gates.get(qdd_gate, {}).get("to_layer") == "L6"
+        and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("program_id")
+        == "DECODER_CORE"
+        and has_status(index, "QUADRATIC-DECODER-DATA", "D")
+        and normative.get("QUADRATIC-DECODER-DATA", {}).get("layer") == "MULTI"
+        and "QUADRATIC-DECODER-DATA" not in programs
+        and normative.get("DEF-BRIDGE-QDD-TR4-EFFECT-SELECTION", {}).get("item_type")
+        == "DEFINITION"
+        and normative.get("DEF-QDD-PROJECTOR-LOW", {}).get("item_type")
+        == "DEFINITION"
+        and scope_lacks(index, "QDD-ALGEBRAIC-FACTORIZATION",
+                        ("apparatus", "occurrence"))
+        and scope_contains_all(index, "QDD-QCARRIER-DIAGONAL-BOUNDARY",
+                               ("a_dagger = a_t = v v^t",
+                                "no physical central phase"))
+        and scope_contains_all(index, "QDD-BORN-READOUT-MEASURE",
+                               ("numerical witness", "not derived from j",
+                                "zero_denominator")),
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
