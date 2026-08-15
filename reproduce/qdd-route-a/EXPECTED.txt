@@ -1,0 +1,21 @@
+TWIST-J QDD Route A reproduction (exact rational arithmetic, all 15625 checkpoints of F_5^6)
+K = Q(z), z = zeta_5, B0 = (1, z, z^2, z^3), <x,y>_tr = (1/5) Tr(x sigma_4(y)), G = I - (1/5) 1 1^T
+
+PASS 01 LOWLINE  lambda_B = 1 + z + z^2 + z^3 = -z^4, Tr(lambda_B) = 1, <lambda_B,lambda_B> = 4/5
+PASS 02 GRAM     matrix of <.,.>_tr in B0 is G = I - (1/5) 1 1^T; G^-1 = I + 1 1^T; G^-1 1 = 5 1
+PASS 03 TARGET   D_direct = F_QDD o Q_QDD o beta field by field on 15625 checkpoints, mismatches 0
+PASS 04 TOTAL    tagged record total: ZERO_SUPPORT heads 25, SUPPORTED heads 15600, no division on the zero branch
+PASS 05 NORM     w_low + w_high = m and p_low + p_high = 1 on all supported heads, nonnegative weights, m > 0; violations 0
+PASS 06 FIBRES   |QCarrier_QDD| = 313, fibre sizes {25: 1, 50: 312}, constant on every fibre, distinct records 313 (injective)
+PASS 07 ALLOW    record independent of (q, r): True; depends on each piston coordinate: [True, True, True, True]
+PASS 08 NEGLINE  control: rational-line reading Q.1 instead of the LOW LINE mismatches on 480 of 625 pistons
+PASS 09 NEGGRAM  control: omitting G in the factor map mismatches on 540 of 625 pistons
+PASS 10 PROJ     E_low = projector onto span(1) along ker Tr_4, E_high = I - E_low, both G-self-adjoint idempotents, im(E_high) = ker Tr_4, ker(E_low) = ker Tr_4
+PASS 11 CLOSED   m = |v|^2 - s^2/5, w_low = s^2/20, w_high = |v|^2 - s^2/4 on all 625 pistons (s = sum v_i)
+PASS 12 DIAG     Q_QDD(v) = (A_dagger, A_T) with A_dagger = A_T = v v^T on all 625 pistons of V_eff (dagger = transpose over Q)
+PASS 13 SLOTS    cyclotomic pair (w sigma_4(w), w^2): 90 Herm slots, 313 pairs, 80 Herm slots with more than one record; total_weight is a function of the Herm slot (True), density is not (False); bilinear Gram G' differs from G
+PASS 14 TABLE    p_low over 312 nonzero classes: 22 distinct values, 42 classes at 0, 2 at 1, 12 at 1/6 (numerical witness only)
+       table   0:42 1/256:12 1/176:24 1/136:16 1/96:12 1/56:24 1/46:18 1/26:24 9/224:12 1/16:28 9/104:12 2/17:12 9/64:12 5/32:4 1/6:12 2/7:12 5/16:12 3/8:8 5/8:4 9/14:6 49/64:4 1:2
+PASS 15 SUMS     pistons with rational sum zero 85 (p_low = 0), pistons with Tr_4 = 0 in F_5 125; the first set is a proper subset of the second
+
+RESULT 15/15 ALL PASS
