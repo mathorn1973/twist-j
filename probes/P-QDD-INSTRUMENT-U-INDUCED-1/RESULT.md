@@ -2,7 +2,7 @@
 
 ## Frozen question
 
-Does Canon v49's autonomous update `U`, with the frozen piston/fiber split, internally produce not only a bidirectional measurement-like channel and records, but also one of the 900 frozen QDD instrument candidates with the prescribed occurrence law and post object?
+Does Canon v49's autonomous update `U`, with the frozen piston/fiber split, internally produce not only a bidirectional measurement-like channel and records, but also, at one of the 900 frozen (record map, delay) pairs, the prescribed occurrence law and post object?
 
 ## Exact answer
 
@@ -24,22 +24,22 @@ Thus Canon v49 already contains a fully internal interaction that can create mea
 
 For all 180 frozen record maps and all five delays:
 
-- `NO-REALIZATION-W count=0`: none of the 900 candidates realizes the QDD occurrence law for all 15625 seeds in the single window.
+- `NO-REALIZATION-W count=0`: none of the 900 pairs realizes the QDD occurrence law for all 15625 seeds in the single window.
 - `LONG-NO-REALIZATION-W2 count=0`: none realizes it for the 625 ready-fiber seeds in the longer window.
 - `CENSUS-NO-REALIZATION-W count=0`: none realizes it in the exact all-state census either.
-- `INSTRUMENT-FUNCTIONAL-0`: no candidate induces a seed-independent post map.
-- `ORIENT-POST-COHERENT-0`: no candidate descends coherently through both signs of a QDD class.
-- `POST-UNDEFINED-OR-ZERO-900` and `ZERO-INPUT-MULTIVALUED-900`: every candidate fails the frozen strict post-object domain rules.
+- `INSTRUMENT-FUNCTIONAL-0`: no pair induces a seed-independent post map.
+- `ORIENT-POST-COHERENT-0`: no pair descends coherently through both signs of a QDD class.
+- `POST-UNDEFINED-OR-ZERO-900` and `ZERO-INPUT-MULTIVALUED-900`: every pair fails the frozen strict post-object domain rules.
 - `SEED-DEPENDENT-271350` and `ORIENTATION-DEPENDENT-22500`: the obstruction is strongly visible both across seeds and across signed representatives.
 
-The family domain was defined as candidates that were either REAL or FUNCTIONAL. Since both sets are empty, `FAMILY-MEMBER-0` and `OUTSIDE-FAMILY-0` mean **no eligible candidates**, not that the family test succeeded vacuously.
+The family domain was defined as pairs that were either REAL or FUNCTIONAL. Since both sets are empty, `FAMILY-MEMBER-0` and `OUTSIDE-FAMILY-0` mean **no eligible pairs**, not that the family test succeeded vacuously.
 
 ## Interpretation
 
 The computation separates two claims that should not be conflated:
 
 1. **Measurement coupling and record formation can be inside the autonomous physics.** This probe gives a positive finite, exact witness for that statement.
-2. **Canon v49's registered `U` selects and realizes the present QDD instrument/Born occurrence law by itself.** This probe gives a negative result for the complete frozen class of 900 candidates and the three frozen sampling regimes.
+2. **Canon v49's registered `U` selects and realizes the present QDD instrument/Born occurrence law by itself.** This probe gives a negative result for the complete frozen class of 900 (record map, delay) pairs, read on the two frozen windows W and W2 together with the census control, which is the seed sum of the W counts and therefore shares that window.
 
 So the defensible derived statement is:
 
