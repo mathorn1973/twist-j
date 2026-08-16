@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its thirty-four checks cover the current
+and emits deterministic text. Its thirty-five checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 32/32 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 35/35 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -92,6 +92,8 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v49 count check reads the folded tree (246 claims, 23 reproductions, 10 gates). The new QDD-NONSELECTION check pins the theorem at L4 on the completed two-architecture public probe, its self-contained frozen inputs and absence of dependency, gate or frontier ownership. It requires the injective rational post-state family at fixed effects, weights and C = 0, rational orthogonal-dilation nonselection, target-control circularity and the positive-root mathematics-only boundary. QDD-INSTRUMENT-APPARATUS stays O at DECODER_CORE/FOLLOWUP/STOP with exactly O2 independent physical instrument selection and O1 realized event generation / sampling. SAMPLING NOT PROVIDED; no L5 stream, L6 measure or decoder completion.
 
 The v48 count check reads the folded tree (245 claims, 23 reproductions, 10 gates). The CENTRAL, CM-2I and J-SEAM checks are unchanged and keep reading QUADRATIC-DECODER-DATA as an open obligation. The new QDD-ROUTE-A check requires the three L1 theorems on two-architecture qdd-route-a evidence, the separate apparatus obligation at DECODER_CORE/FOLLOWUP/STOP, QUADRATIC-DECODER-DATA still O with its ROOT/STOP program row, the absence of any Born-readout row, effect-selection bridge or L1-L6 gate, and the exact scope phrases of the factorization, the projector pair and the slot boundary. The new QDD-DIRECT-FIREWALL check computes the transitive closure of DEF-QDD-DIRECT-WRITE in canon/DEPENDENCIES.tsv and requires it to be exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, with no factor-side object.
 
