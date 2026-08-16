@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v47
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v48
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -33,5 +33,7 @@ PASS 29 TM-HANKEL  Hankel divisor block splits T, F, and C exactly; no physical 
 PASS 30 RAPIDITY   arithmetic rapidity rows split T and C exactly; no physical lift
 PASS 31 INDEPENDENCE split-prime independence rows stay exact L1 arithmetic with no analytic or ordering lift
 PASS 32 SEPARATION quantitative separation and finite Fejer rows stay exact, distinct, and normalization-fenced
+PASS 33 QDD-ROUTE-A the QDD Route A algebra is three L1 theorems on two-architecture evidence; the apparatus is a separate O; QUADRATIC-DECODER-DATA stays O with its ROOT/STOP program row; no gate and no L6 row exist
+PASS 34 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
 
-RESULT 32/32 ALL PASS
+RESULT 34/34 ALL PASS

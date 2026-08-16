@@ -1,12 +1,55 @@
 # Canon changelog (public series)
 
 
-## Public Canon v47
+## Public Canon v48
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 241 claims; 0 T-LOCK, 135 T, 42 D, 27 C, 2 H, 22 O, 13 F; 24 live H/O.
-Reproduction witnesses: 22.
+Registry snapshot: 245 claims; 0 T-LOCK, 138 T, 42 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
+Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v48 registers the QDD Route A algebra: three L1 theorems and
+one separate obligation. `QUADRATIC-DECODER-DATA` is not modified and remains
+an open obligation; no gate is added and no L6 reading is claimed.
+
+The seventeen public definitions `DEF-QDD-*` in section 2 state the
+pointed-orbit domain, the balanced piston head, the B0 amplitude, the
+coefficient field with three distinct typed involutions, the trace pairing
+and its Gram `G = I - (1/5) 1 1^T`, dagger, transpose, the ordered quadratic
+pair and its carrier equality, the LOW LINE `Q lambda_B` with
+`lambda_B = -zeta_5^4`, the frozen effect pair of the EFFECT_SHADOW_MINIMAL
+owner freeze as ALGEBRAIC_READOUT projectors, the owner-frozen Born
+trace pairing as a dictionary input, the five-field tagged record with the
+explicit ZERO branch, the direct write under the independence firewall, and
+the factor map.
+
+`QDD-ALGEBRAIC-FACTORIZATION [T]` states the exact identity of the direct
+cyclotomic write and the Gram/projector factor route on all 15625
+checkpoints, with totality, exact normalization, the 313 fibres, injectivity
+and two negative controls. `QDD-PROJECTOR-PAIR-TR4 [T]` states that `E_low`
+is the unique G-self-adjoint idempotent with kernel `ker Tr_4`, with the
+closed forms; it identifies the pair inside its algebraic class and does not
+force the choice of that class. `QDD-QCARRIER-DIAGONAL-BOUNDARY [T]` records
+that both typed slots coincide on the frozen carrier and that no central
+phase is derived from it. `QDD-INSTRUMENT-APPARATUS [O]` is the physical
+instrument family, registered separately and filling no completion-contract
+field.
+
+Per the owner rulings of 2026-07-30 and the EFFECT_SHADOW_MINIMAL freeze, the
+`effects` requirement of the decoder completion contract stays UNRESOLVED and
+the contract is not submitted. The value 1/6 in the normalized value table is
+a numerical witness with no role. Evidence is the new two-architecture
+reproduction `reproduce/qdd-route-a` (fifteen checks). `DEF-QDD-MATTER-RECORD`
+is a pure type schema, every field of the direct branch is sourced through
+the cyclotomic write R_cyc alone, and the transitive independence firewall
+of the direct write (DICTIONARY-DIRECT amendment, section 6) is enforced
+fail-closed by the insertion delta and permanently by the status-separation
+witness, which gains two checks: the conservative QDD partition and the
+direct-write firewall closure. No uniqueness-from-J, apparatus, occurrence
+law, sampling, post-state, SI, totality or completeness claim is made.
+
+
+## Public Canon v47
 
 Public Canon v47 closes exactly one live measure obligation at dictionary
 status. `TM-SYM2-PHYSICAL-MEASURE` moves from O to D. No theorem,
