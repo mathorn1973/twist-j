@@ -141,21 +141,21 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 135, "D": 42, "C": 27, "F": 13,
-                       "O": 22, "H": 2}
+    expected_counts = {"T": 138, "D": 42, "C": 27, "F": 13,
+                       "O": 23, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v47",
-        len(rows) == 241
+        "registry and companion-ledger counts match Public Canon v48",
+        len(rows) == 245
         and counts == expected_counts
-        and len(normative) == 259
-        and len(dependencies) == 384
-        and len(evidence) == 241
-        and two_architecture == 161
-        and len(history) == 756
+        and len(normative) == 280
+        and len(dependencies) == 425
+        and len(evidence) == 245
+        and two_architecture == 164
+        and len(history) == 760
         and len(gates) == 10
         and len({row["program_id"] for row in programs.values()}) == 7
-        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 22,
+        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
     ))
 
     checks.append((
@@ -2279,6 +2279,74 @@ def run():
                 "normalization STOP",
             )
         ),
+    ))
+
+    qdd_path = "reproduce/qdd-route-a"
+    checks.append((
+        "QDD-ROUTE-A",
+        "the QDD Route A algebra is three L1 theorems on two-architecture evidence; the apparatus is a separate O; QUADRATIC-DECODER-DATA stays O with its ROOT/STOP program row; no gate and no L6 row exist",
+        all(
+            has_status(index, claim, "T")
+            and normative.get(claim, {}).get("layer") == "L1"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("evidence") == qdd_path
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            for claim in ("QDD-ALGEBRAIC-FACTORIZATION", "QDD-PROJECTOR-PAIR-TR4",
+                          "QDD-QCARRIER-DIAGONAL-BOUNDARY")
+        )
+        and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("program_id")
+        == "DECODER_CORE"
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("queue_role")
+        == "FOLLOWUP"
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("work_state")
+        == "STOP"
+        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and programs.get("QUADRATIC-DECODER-DATA", {}).get("queue_role")
+        == "ROOT"
+        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_state")
+        == "STOP"
+        and "QDD-BORN-READOUT-MEASURE" not in index
+        and "DEF-BRIDGE-QDD-TR4-EFFECT-SELECTION" not in normative
+        and "GATE-L1-L6-QDD-BORN-READOUT" not in gates
+        and normative.get("DEF-QDD-PROJECTOR-LOW", {}).get("item_type")
+        == "DEFINITION"
+        and scope_lacks(index, "QDD-ALGEBRAIC-FACTORIZATION",
+                        ("apparatus", "occurrence"))
+        and scope_contains_all(index, "QDD-ALGEBRAIC-FACTORIZATION",
+                               ("no completion-contract field is filled",))
+        and scope_contains_all(index, "QDD-PROJECTOR-PAIR-TR4",
+                               ("no uniqueness-from-j",))
+        and scope_contains_all(index, "QDD-QCARRIER-DIAGONAL-BOUNDARY",
+                               ("a_dagger = a_t = v v^t",
+                                "no physical central phase"))
+        and scope_contains_all(index, "QDD-INSTRUMENT-APPARATUS",
+                               ("filling no field of the decoder completion contract",)),
+    ))
+
+    fw_requires = {}
+    for row in dependencies:
+        fw_requires.setdefault(row["item_id"], set()).add(row["depends_on"])
+    fw_seen, fw_stack = set(), ["DEF-QDD-DIRECT-WRITE"]
+    while fw_stack:
+        fw_cur = fw_stack.pop()
+        for fw_nxt in fw_requires.get(fw_cur, ()):
+            if fw_nxt not in fw_seen:
+                fw_seen.add(fw_nxt)
+                fw_stack.append(fw_nxt)
+    fw_qdd = {x for x in fw_seen if x.startswith("DEF-QDD-") or x.startswith("QDD-")}
+    checks.append((
+        "QDD-DIRECT-FIREWALL",
+        "the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)",
+        fw_qdd == {"DEF-QDD-DOMAIN-K0", "DEF-QDD-BALANCED-PISTON",
+                   "DEF-QDD-AMPLITUDE-B0", "DEF-QDD-COEFFICIENT-Q",
+                   "DEF-QDD-TRACE-PAIRING", "DEF-QDD-LOW-LINE",
+                   "DEF-QDD-MATTER-RECORD"}
+        and not fw_seen & {"DEF-QDD-GRAM", "DEF-QDD-DAGGER", "DEF-QDD-TRANSPOSE",
+                           "DEF-QDD-QPAIR", "DEF-QDD-QCARRIER-EQUALITY",
+                           "DEF-QDD-PROJECTOR-LOW", "DEF-QDD-PROJECTOR-HIGH",
+                           "DEF-QDD-BRANCH-WEIGHT-PAIRING", "DEF-QDD-FACTOR-MAP"},
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
