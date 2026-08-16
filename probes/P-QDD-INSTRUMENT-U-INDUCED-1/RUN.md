@@ -16,11 +16,27 @@ stdout_bytes: 3441
 stdout_lines: 33
 stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 stderr_bytes: 0
+github_platform: GitHub Actions ubuntu-24.04-arm
+github_architecture: aarch64
+github_python: 3.12.13
+github_verifier_sha256: 991e648fee113117b4028d3776f997f9e2725da04b1d856bc61f7adc2171e3b4
+github_stdout_sha256: 652baf70e75600fa80fb685c36435b19cdaae6e8f519e207e0d0a646bb7f5d5c
+github_exit_code: 0
+github_stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+github_stderr_bytes: 0
+github_status: PASS
+github_verdict: VERIFY PASS
+github_byte_identity: PASS
+github_replay: PASS
 ```
 
-This local record is not the public two-architecture gate by itself. The pull
-request workflow reproduces the same pinned verifier and exact stdout once on
-x86_64 and once on aarch64.
+The local leg is not the public two-architecture gate by itself. Pull-request
+workflow run `31961611319` independently reproduced the same pinned verifier
+and exact stdout on aarch64 (job `95200329536`) and x86_64 (job
+`95200329591`). Aggregate job `95200657530` printed
+`TWO-ARCHITECTURE CHECK PASS`. The machine-readable GitHub leg above records
+the aarch64 run, which is architecture-independent evidence relative to the
+local x86_64 leg.
 
 ## Authority and immutable pin
 
