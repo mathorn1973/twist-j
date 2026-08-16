@@ -17,4 +17,7 @@ LAMBDA L2 (1,1) autonomous=YES in_selector=YES
 LAMBDA L3 (1,2) autonomous=YES in_selector=NO
 LAMBDA L4 (1,3) autonomous=YES in_selector=NO
 LAMBDA L5 (1,4) autonomous=YES in_selector=NO
-SUMMARY 6/6 ALL PASS
+PASS A7 SEED_BOUND triples=281700 dependent=271350 independent=10350 pos_classes=268 max_pos_realizing_pairs=38 pigeonhole_min_failing_pairs=862 agree=YES
+PASS A8 WINDOW_FEASIBILITY pos_denominator_sum=19688 min_window_for_all_pos=19688 W=1536_max_pos=107 W2=14336_max_pos=245 zero_target_denominator=1
+POS-DENOMINATORS 6:12,7:12,8:12,14:6,16:40,17:12,26:24,32:4,46:18,56:24,64:16,96:12,104:12,136:16,176:24,224:12,256:12
+SUMMARY 8/8 ALL PASS

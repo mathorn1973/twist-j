@@ -5,11 +5,16 @@ NON-CANONICAL incubation-lane script for notes/C-QDD-U-INDUCED-NULL-ANATOMY-1-N.
 It is not a public probe and claims no POLICY section 4 two-architecture gate.
 
 Everything computed here is definitional arithmetic on formulas published in
-Public Canon v49 (sections 2, 3, KERNEL-Z6-SYNCHRONIZATION, DEF-QDD-*).  No
-orbit is iterated, no window is read, no seed is swept, and no quantity of the
-sealed probe P-QDD-INSTRUMENT-U-INDUCED-1 beyond its published Canon-level
-audit expectations (313 classes, 25 ZERO checkpoints, 22 occurrence values) is
-recomputed.
+Public Canon v49 (sections 2, 3, KERNEL-Z6-SYNCHRONIZATION, DEF-QDD-*), plus
+two arithmetic consequences of published probe counts.  No orbit is iterated,
+no window is read and no seed is swept.
+
+Gates A1 to A6 use only Canon formulas and reproduce the published Canon-level
+audit expectations 313 / 25 / 22 as a transcription check.  Gate A7 additionally
+consumes one published integer of P-QDD-INSTRUMENT-U-INDUCED-1, the C8 count
+SEED-DEPENDENT-271350, and derives a bound on that probe's own unpublished
+restricted quantifier.  Gate A8 uses only the Canon target law and the two
+frozen window lengths.
 
 Python 3 standard library only.  Exact integers and Fractions.  Deterministic.
 """
@@ -31,6 +36,9 @@ U_C = (0, 1, 0, -1)
 LAMBDAS = ((1, 0), (0, 1), (1, 1), (1, 2), (1, 3), (1, 4))
 
 CANON_SHEET_TABLE = ((0, 4, 0, 4, 4), (2, 1, 1, 3, 1))
+
+PAIRS = 900
+SEED_DEPENDENT_C8 = 271350
 
 failures = 0
 
@@ -242,5 +250,52 @@ for index, (alpha, gamma) in enumerate(LAMBDAS):
           f"autonomous={'YES' if autonomous[index] else 'NO'} "
           f"in_selector={'YES' if (alpha, gamma) == (1, 1) else 'NO'}")
 
-print(f"SUMMARY {6 - failures}/6 {'ALL PASS' if failures == 0 else 'FAIL'}")
+# ---------------------------------------------------------------- A7
+total_triples = PAIRS * len(classes)
+independent = total_triples - SEED_DEPENDENT_C8
+bound = independent // len(both_positive)
+off_pos = (1 + len(low_zero) + len(high_zero)) * PAIRS
+inside_pos = SEED_DEPENDENT_C8 - off_pos
+pigeon = -(-inside_pos // len(both_positive))
+gate("A7 SEED_BOUND",
+     independent == 10350 and bound == 38 and PAIRS - pigeon == bound,
+     f"triples={total_triples} dependent={SEED_DEPENDENT_C8} independent={independent} "
+     f"pos_classes={len(both_positive)} max_pos_realizing_pairs={bound} "
+     f"pigeonhole_min_failing_pairs={pigeon} agree=YES")
+
+# ---------------------------------------------------------------- A8
+denominators = {}
+for rep in nonzero_reps:
+    low = w_low(rep) / m_form(rep)
+    high = w_high(rep) / m_form(rep)
+    assert low.denominator == high.denominator
+    denominators[class_id[rep]] = low.denominator
+pos_denominators = sorted(denominators[i] for i in both_positive)
+total_denominator = sum(pos_denominators)
+
+
+def reachable(window):
+    used = 0
+    count = 0
+    for q in pos_denominators:
+        if used + q <= window:
+            used += q
+            count += 1
+    return count
+
+
+w_cap = reachable(1536)
+w2_cap = reachable(14336)
+gate("A8 WINDOW_FEASIBILITY",
+     total_denominator == 19688 and w_cap == 107 and w2_cap == 245
+     and all(denominators[i] == 1 for i in low_zero + high_zero),
+     f"pos_denominator_sum={total_denominator} min_window_for_all_pos={total_denominator} "
+     f"W=1536_max_pos={w_cap} W2=14336_max_pos={w2_cap} zero_target_denominator=1")
+histogram = {}
+for q in pos_denominators:
+    histogram[q] = histogram.get(q, 0) + 1
+print("POS-DENOMINATORS " + ",".join(
+    f"{q}:{n}" for q, n in sorted(histogram.items())))
+
+print(f"SUMMARY {8 - failures}/8 {'ALL PASS' if failures == 0 else 'FAIL'}")
 raise SystemExit(1 if failures else 0)
