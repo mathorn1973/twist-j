@@ -1,12 +1,36 @@
 # Canon changelog (public series)
 
 
-## Public Canon v48
+## Public Canon v49
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 245 claims; 0 T-LOCK, 138 T, 42 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
+Registry snapshot: 246 claims; 0 T-LOCK, 139 T, 42 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v49 registers exactly one new scientific row,
+`QDD-INSTRUMENT-NONSELECTION [T]`, at L4 apparatus/support scope from the
+completed public probe `P-QDD-INSTRUMENT-NONSELECTION-1`. Its written proof
+classifies every rational single-effect fibre, the branchwise and diagonal
+two-branch orbits, physical post-state equivalence, and rational orthogonal
+dilations. At fixed effects, fixed branch weights and `C = 0`, an injective
+rational family of physically distinct post-state instruments remains.
+Existence of an unrestricted rational orthogonal dilation therefore cannot
+select a physical instrument.
+
+The fold keeps `QDD-INSTRUMENT-APPARATUS [O]` open and narrows it to two
+independent blockers: O2 independent physical instrument selection, and O1
+realized event generation / sampling. A coupling controlled by the target
+projectors is circular as independent-selection evidence. G-positive
+square-root uniqueness remains mathematics only. The only sampling statement
+is `SAMPLING NOT PROVIDED`; no sampling-impossibility theorem is claimed.
+
+No L5 stream, L6 measure, decoder completion, new physical premise, SI
+statement, uniqueness-from-J claim, or change to `QUADRATIC-DECODER-DATA`
+is made.
+
+
+## Public Canon v48
 
 Public Canon v48 registers the QDD Route A algebra: three L1 theorems and
 one separate obligation. `QUADRATIC-DECODER-DATA` is not modified and remains

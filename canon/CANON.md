@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v48
+# TWIST-J Public Canon v49
 
-**Release identity.** Public Canon v48. Normative authority and activation
+**Release identity.** Public Canon v49. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v48 also declares the discrete
+algebraic axiom is J. Public Canon v49 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v48 does not claim
+seed of the two algebraic projections. Public Canon v49 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v48 contains no such
+deriving the architecture from J; Public Canon v49 contains no such
 theorem.
 
 ---
@@ -1054,13 +1054,14 @@ its component rows.
 ### QDD Route A dictionary
 
 The quadratic leg of `D_matter` gains its exact algebra as public definitions
-and theorems on the finite balanced piston carrier. Everything below is L1
-exact algebra. Nothing here fills the decoder completion contract, claims an
-L6 reading, selects an apparatus, derives the architecture or the effect pair
-from J, or changes `QUADRATIC-DECODER-DATA`, which remains an open obligation
-[O]: the physical effect selection and the completion contract stay open under
-the EFFECT_SHADOW_MINIMAL owner freeze, and the physical instrument family is
-the separate obligation `QDD-INSTRUMENT-APPARATUS`.
+and theorems on the finite balanced piston carrier. The Route A factorization
+block is L1 exact algebra. The later instrument nonselection theorem is L4
+apparatus/support mathematics. Nothing here fills the decoder completion
+contract, claims an L6 reading, selects a physical instrument, derives the
+architecture or the effect pair from J, or changes
+`QUADRATIC-DECODER-DATA`, which remains an open obligation [O]. The physical
+instrument realization remains the separate obligation
+`QDD-INSTRUMENT-APPARATUS`.
 
 Definitions.
 
@@ -1153,7 +1154,8 @@ DEF-QDD-FACTOR-MAP
     formulas on the transpose slot.
 ```
 
-Theorems and the separate apparatus obligation.
+L1 theorems, the L4 instrument nonselection theorem, and the separate
+apparatus obligation.
 
 ```
 QDD-ALGEBRAIC-FACTORIZATION [T]
@@ -1186,15 +1188,41 @@ QDD-QCARRIER-DIAGONAL-BOUNDARY [T]
     (w sigma_4(w), w^2) has 90 distinct Hermitian slots and 313 distinct
     pairs on the 625 pistons, and 80 Hermitian slots carry more than one
     record; neither Herm-only nor use of both slots is asserted.
+QDD-INSTRUMENT-NONSELECTION [T]
+    At L4 apparatus/support scope over V = Q^4, freeze
+    G = I_4 - (1/5) 1 1^T, A^sharp = G^-1 A^T G,
+    E_low = (1/4) 1 1^T and E_high = I_4 - E_low. Every nonzero
+    G-self-adjoint idempotent effect fibre is {W E : W in O(G,Q)}. The ordered raw
+    two-branch fibre is one branchwise O(G,Q) x O(G,Q) orbit, not one
+    diagonal orbit; Gamma_ab = K_a^sharp K_b completely classifies diagonal
+    orbits, with C = K_low^sharp K_high the complete two-branch invariant.
+    Under the frozen pure density-operator post-state definition, physical
+    equivalence inside one nonzero effect fibre is exactly K ~ +/-K.
+    The rational rotations R_t on im(E_high) therefore give an injection
+    Q -> physical post-state instrument classes at fixed effects, fixed
+    branch weights and C = 0. Every rational isometry between subspaces of a
+    positive-definite rational bilinear space extends by rational reflections,
+    so every complete rational two-branch family has a rational orthogonal
+    dilation on the frozen system/pointer type. Existence of an unrestricted
+    rational orthogonal dilation is therefore not an instrument-selection
+    principle. A coupling already controlled by the target projectors is
+    circular as independent-selection evidence. G-self-adjointness and
+    G-positivity select K = E only as a mathematical positive-square-root
+    section, not as a physical law. Finally K^T G K = G E reproduces the
+    frozen occurrence weights globally. No physical selector, L5
+    realized-event stream, L6 measure, decoder completion or SI statement;
+    SAMPLING NOT PROVIDED, not SAMPLING IMPOSSIBLE.
 QDD-INSTRUMENT-APPARATUS [O]
-    the physical instrument family {K_a} with E_a = K_a^sharp K_a realizing
-    the frozen ordered pair (E_low, E_high) as physical effects, from a
-    public apparatus carrier, ready state, coupling, pointer and reduction,
-    with occurrence law, sampling, post-state and completeness of the
-    admissible class; registered separately from QUADRATIC-DECODER-DATA and
-    filling no field of the decoder completion contract; reverse inference
-    from effects to instruments is forbidden and equality of effects does not
-    identify post-state instruments.
+    after the nonselection theorem only two independent blockers remain:
+    O2, independent physical instrument selection from a public admissible
+    law or coupling class frozen before comparison with E_low and E_high;
+    O1, realized event generation and sampling. An exact rational apparatus
+    reducing to the Lueder pair is exhibited, but its target-controlled
+    coupling is circular as independent-selection evidence. Positive-root
+    uniqueness is mathematics only, equality of effects does not identify
+    post-state instruments, the row remains separate from
+    QUADRATIC-DECODER-DATA and fills no decoder-completion-contract field.
+    SAMPLING NOT PROVIDED; SAMPLING IMPOSSIBLE is not claimed.
 ```
 
 Disclosure. `|QCarrier_QDD| = 313 = 1 + (5^4 - 1)/2` arises from the sign
@@ -1205,6 +1233,12 @@ nonzero classes the normalized pair takes 22 values; the value 1/6 on 12
 classes is a numerical witness with no input, threshold, normalization,
 confirmation or dependency role. Evidence: `reproduce/qdd-route-a`,
 byte-identical on the public x86_64 and aarch64 jobs, RESULT 15/15 ALL PASS.
+
+At L4, `P-QDD-INSTRUMENT-NONSELECTION-1` supplies the theorem-grade written
+proof and exact two-architecture audit for S1a-S6. It proves an injective
+rational family of physically distinct post-state instruments at fixed effects,
+weights and C = 0 and proves rational orthogonal-dilation surjectivity. It does
+not select a physical family or create an event stream or measure.
 
 ## 3. The kernel and the census
 
@@ -5599,13 +5633,16 @@ MEASUREMENT AND METROLOGY
                              complete dependencies remain open; linear, binary,
                              reconstruction, and post-state instrument claims
                              are outside this row
-  QDD-INSTRUMENT-APPARATUS   the physical instrument family {K_a} with
-                             E_a = K_a^sharp K_a realizing the frozen ordered
-                             effect pair as physical effects; apparatus
-                             carrier, ready state, coupling, pointer,
-                             reduction, occurrence law, sampling and
-                             post-state remain open; fills no completion
-                             contract field
+  QDD-INSTRUMENT-NONSELECTION
+                             the L4 rational fibre, diagonal-orbit and
+                             dilation classification; fixed effects, weights
+                             and C = 0 leave infinitely many physical
+                             post-state classes, and dilation existence does
+                             not select an instrument
+  QDD-INSTRUMENT-APPARATUS   only O2 independent physical instrument selection
+                             and O1 realized event generation / sampling remain;
+                             SAMPLING NOT PROVIDED, not impossible; fills no
+                             completion-contract field
 THE WALL
   QUANT-SUBSTRATE            the Larmor gate and the Schwinger physical-realization
                              gate; the target scalar is exact arithmetic and its

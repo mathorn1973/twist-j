@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 138, "D": 42, "C": 27, "F": 13,
+    expected_counts = {"T": 139, "D": 42, "C": 27, "F": 13,
                        "O": 23, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v48",
-        len(rows) == 245
+        "registry and companion-ledger counts match Public Canon v49",
+        len(rows) == 246
         and counts == expected_counts
-        and len(normative) == 280
+        and len(normative) == 281
         and len(dependencies) == 425
-        and len(evidence) == 245
-        and two_architecture == 164
-        and len(history) == 760
+        and len(evidence) == 246
+        and two_architecture == 165
+        and len(history) == 762
         and len(gates) == 10
         and len({row["program_id"] for row in programs.values()}) == 7
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
@@ -2323,6 +2323,64 @@ def run():
                                 "no physical central phase"))
         and scope_contains_all(index, "QDD-INSTRUMENT-APPARATUS",
                                ("filling no field of the decoder completion contract",)),
+    ))
+
+    nonselection = "QDD-INSTRUMENT-NONSELECTION"
+    nonselection_path = "probes/P-QDD-INSTRUMENT-NONSELECTION-1"
+    nonselection_digest = (
+        "d49930ce735413cb58601d85d697b6dc049e5571f50cdf16d837206db26727e2"
+    )
+    nonselection_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == nonselection
+    }
+    apparatus_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == "QDD-INSTRUMENT-APPARATUS"
+    }
+    checks.append((
+        "QDD-NONSELECTION",
+        "the L4 theorem fixes rational fibre, post-state and dilation nonselection while the apparatus remains O on exactly independent selection and realized-event sampling",
+        has_status(index, nonselection, "T")
+        and normative.get(nonselection, {}).get("item_type") == "THEOREM"
+        and normative.get(nonselection, {}).get("status") == "T"
+        and normative.get(nonselection, {}).get("layer") == "L4"
+        and normative.get(nonselection, {}).get("gate_ids") == ""
+        and index.get(nonselection, {}).get("evidence") == nonselection_path
+        and evidence.get(nonselection, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(nonselection, {}).get("location") == nonselection_path
+        and evidence.get(nonselection, {}).get("sha256") == nonselection_digest
+        and evidence.get(nonselection, {}).get("architecture_requirement")
+        == "two-architecture"
+        and nonselection not in programs
+        and all(row["owner_item_id"] != nonselection for row in gates.values())
+        and nonselection_dependencies == set()
+        and apparatus_dependencies == {
+            ("DEF-QDD-PROJECTOR-LOW", "REQUIRES"),
+            ("DEF-QDD-PROJECTOR-HIGH", "REQUIRES"),
+            ("DEF-QDD-GRAM", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, nonselection,
+            ("one branchwise O(G,Q) x O(G,Q) orbit",
+             "injects Q into physically distinct post-state instrument classes",
+             "not an instrument-selection principle",
+             "mathematical positive-square-root section",
+             "no L5 realized-event stream",
+             "no L6 measure",
+             "SAMPLING NOT PROVIDED rather than SAMPLING IMPOSSIBLE"),
+        )
+        and scope_contains_all(
+            index, "QDD-INSTRUMENT-APPARATUS",
+            ("only two independent blockers remain",
+             "O2 independent physical instrument selection",
+             "O1 realized event generation / sampling",
+             "target-controlled coupling is circular",
+             "SAMPLING NOT PROVIDED",
+             "SAMPLING IMPOSSIBLE is not claimed"),
+        )
+        and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
+        and has_status(index, "QUADRATIC-DECODER-DATA", "O"),
     ))
 
     fw_requires = {}
