@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its thirty-two checks cover the current
+and emits deterministic text. Its thirty-six checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -35,8 +35,9 @@ separate from marked-lift selection, decoder QCarrier and measure obligations,
 the exact Gyron discrepancy and forward pair-substitution
 theorems, their corrected stationary-density boundary, and the separate
 cosmology dictionary, the Schwinger target firewall, the C20 arithmetic/time
-firewall, the TM-SYM2 split between four closed exact classifications, the
-fired frozen selector, and the distinct open physical-measure successor, plus
+firewall, the TM-SYM2 split between four exact classifications, the fired frozen
+selector, and the distinct dictionary-grade physical-measure successor closed
+at D by the orientation-retaining source and monomial Born lift, plus
 the separation of the exact WALL-LI2-RUNG theorem from the still-open
 QUANT-SUBSTRATE coupling. The next four checks pin the corrected midpoint
 and branch scope of WALL-CIRCLE-LEMMA; keep the L5 finite-state rationality
@@ -71,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 32/32 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 36/36 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -91,3 +92,11 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v50 count check reads the folded tree (249 claims, 23 reproductions, 10 gates). The new SUZUKI-CAPACITY-NOGO check pins the L1 no-go theorem and its two finite computations to the completed two-architecture public probe bundle. It requires the empty nonnegative ramp class, first-event domination failure, separately indefinite kernels, the forced unit norm and the nonlocality consequence in the registered scopes, and requires absence of dependency, gate and frontier ownership.
+
+The v49 count check reads the folded tree (246 claims, 23 reproductions, 10 gates). The new QDD-NONSELECTION check pins the theorem at L4 on the completed two-architecture public probe, its self-contained frozen inputs and absence of dependency, gate or frontier ownership. It requires the injective rational post-state family at fixed effects, weights and C = 0, rational orthogonal-dilation nonselection, target-control circularity and the positive-root mathematics-only boundary. QDD-INSTRUMENT-APPARATUS stays O at DECODER_CORE/FOLLOWUP/STOP with exactly O2 independent physical instrument selection and O1 realized event generation / sampling. SAMPLING NOT PROVIDED; no L5 stream, L6 measure or decoder completion.
+
+The v48 count check reads the folded tree (245 claims, 23 reproductions, 10 gates). The CENTRAL, CM-2I and J-SEAM checks are unchanged and keep reading QUADRATIC-DECODER-DATA as an open obligation. The new QDD-ROUTE-A check requires the three L1 theorems on two-architecture qdd-route-a evidence, the separate apparatus obligation at DECODER_CORE/FOLLOWUP/STOP, QUADRATIC-DECODER-DATA still O with its ROOT/STOP program row, the absence of any Born-readout row, effect-selection bridge or L1-L6 gate, and the exact scope phrases of the factorization, the projector pair and the slot boundary. The new QDD-DIRECT-FIREWALL check computes the transitive closure of DEF-QDD-DIRECT-WRITE in canon/DEPENDENCIES.tsv and requires it to be exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, with no factor-side object.
+
+The v47 count and TM-SYM2 checks additionally require the two new L5 definition rows, the retired MEASURE frontier entry, the DICTIONARY_LIFT gate, the public Born-halving probe evidence, and the explicit absence of GYRON-DENSITY as a dependency of the physical six-line measure.
