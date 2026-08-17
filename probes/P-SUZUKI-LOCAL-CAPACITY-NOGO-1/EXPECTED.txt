@@ -1,0 +1,14 @@
+PASS X1 psi(3/4)-psi(1/4) encloses pi  delta=[3.141592653589793238462643383279, 3.141592653...
+PASS X2 psi'(1/4)+psi'(3/4) encloses 2 pi^2  sum=[19.739208802178717237668981999752, 19.7392088...
+PASS V1 surrogate identities (i)-(iv) + negative control  negctrl=1/16
+PASS V2a geometric identity at t=1/4,1/2,1  widths<2^-100, intervals intersect
+PASS V2r A''(log q) matches sqrt(q)-1/(sqrt(q)(q^2-1)), q=2,3  A''(log2)=1.178511301977..
+PASS V2b h(13/10)<0<h(4/3), h'>0, A''(1/4)<0, A''(log2)>0  A''(1/4) hi=-0.227215300124
+PASS V3 convexity violation (ramp class EMPTY)  lhs>=0.002382356805 rhs<=-0.002214183180
+PASS V4a A(1/4) > A(1/2)  A(1/4)>=0.051233496282 A(1/2)<=0.040162580382
+PASS V4b (log2/sqrt2)(4/5-log2) > A(4/5)-A(log2)  dP>=0.052371673204 dA<=0.031050793500
+PASS V5 4A(3)-A(6)<0, 4P(3)-P(6)<0, A(6)>0, P(6)>0, guards  4A3-A6<=-35.85403015 4P3-P6<=-35.96474408
+PASS V6 A>0 on [1/128,45/64] adaptive cover  leaves=100 undecided=0
+PASS V7 event count two ways at 10^6  N=78734
+CAPACITY WITNESS A(1/4)=0.05123349628233368698..
+GATES PASSED 12/12
