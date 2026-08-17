@@ -1,0 +1,49 @@
+C-TT-VECTOR-MOMENT-UNDERDETERMINATION-2 verifier
+family A, B_0..B_4, Bmix on Z/5 at a = 1, field Q(zeta_5)
+elements printed as [c0,c1,c2,c3] meaning c0 + c1 z + c2 z^2 + c3 z^3
+
+CHECK A.support.3125                                       PASS  n=3125
+CHECK Bm.support.160.each                                  PASS  n=160,160,160,160,160
+CHECK Bmix.support.640                                     PASS  n=640
+CHECK weights.sum.1.all.seven                              PASS
+CHECK pointwise.modulus.one.all.six                        PASS
+CHECK P5.composition.D.eq.gamma.rho.eq.rho.gamma           PASS
+CHECK P5.tau.invariance.all.seven                          PASS
+CHECK P5.rho.orbit.Bm.to.B.uinv.m.20of20                   PASS  ok=20
+CHECK P5.rho.fixes.A                                       PASS
+CHECK P5.rho.fixes.Bmix                                    PASS
+CHECK P5.gamma.orbit.Bm.to.B.um.20of20                     PASS  ok=20
+CHECK P5.gamma.fixes.A                                     PASS
+CHECK P5.gamma.fixes.Bmix                                  PASS
+CHECK P5.diagonal.fixes.every.law.28of28                   PASS  ok=28
+CHECK P1.mean0.C.delta.P.zero.all.six                      PASS
+CHECK P4.Pi_w.zero.A                                       PASS
+CHECK P4.S_w.A.flat.one                                    PASS
+CHECK P4.Pi_w.zero.B0                                      PASS
+CHECK P4.S_w.B0.5.delta.k.0                                PASS
+CHECK P4.Pi_w.zero.B1                                      PASS
+CHECK P4.S_w.B1.5.delta.k.2                                PASS
+CHECK P4.Pi_w.zero.B2                                      PASS
+CHECK P4.S_w.B2.5.delta.k.4                                PASS
+CHECK P4.Pi_w.zero.B3                                      PASS
+CHECK P4.S_w.B3.5.delta.k.1                                PASS
+CHECK P4.Pi_w.zero.B4                                      PASS
+CHECK P4.S_w.B4.5.delta.k.3                                PASS
+CHECK P4.Pi_w.zero.Bmix                                    PASS
+CHECK P4.S_w.Bmix.5over4.off.zero                          PASS
+  S_w Bmix = [0,0,0,0] [5/4,0,0,0] [5/4,0,0,0] [5/4,0,0,0] [5/4,0,0,0]
+CHECK P5.peak.table.2m                                     PASS  peaks=0,2,4,1,3
+CHECK P5.inverse.map.m.equals.3k0                          PASS
+
+CHECK count.deg.le3.286                                    PASS  n=286
+CHECK count.deg.4.715                                      PASS  n=715
+CHECK count.deg.5.2002                                     PASS  n=2002
+CHECK P1.family.agreement.deg.le3                          PASS  separators=0
+CHECK P2.universal.separator.set.15.pairs                  PASS  sizes=20,20,20,20,20,20,20,20,20,20,20,20,20,20,20
+CHECK P3.value.table.z.2m.xminusy                          PASS
+CHECK P6.deg5.A.vs.Bm.exactly.ten.fifth.powers             PASS
+CHECK P6.deg5.no.separator.between.B.laws                  PASS
+CHECK P7.abs.v4.one.and.K.minus.one.all.six                PASS
+
+SUMMARY gates=40 fails=0
+VERDICT PASS

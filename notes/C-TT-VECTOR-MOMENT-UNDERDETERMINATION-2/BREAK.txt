@@ -1,0 +1,17 @@
+C-TT-VECTOR-MOMENT-UNDERDETERMINATION-2 breaker
+closed-form character sums, independent of the verifier code path
+
+BREAK count.deg.le6.8008                                   PASS  n=8008
+BREAK BRK-1.no.separator.deg.le3.any.pair                  PASS
+BREAK BRK-1.deg4.separators.exactly.twenty.15.pairs        PASS
+BREAK BRK-1.deg5.A.pairs.exactly.ten.fifth.powers          PASS
+BREAK BRK-1.deg5.B.pairs.none                              PASS
+BREAK BRK-2.value.table.z.2m.xminusy                       PASS
+BREAK BRK-3.closedform.equals.enumeration.deg.le5          PASS  mismatches=0
+BREAK BRK-4.diagonal.moment.identity.deg.le6               PASS  violations=0
+BREAK BRK-5.rho.orbit.moment.identity.deg.le4              PASS  violations=0
+BREAK BRK-5.gamma.orbit.moment.identity.deg.le4            PASS  violations=0
+BREAK BRK-6.wick.survivors.none                            PASS  survivors=0 over 144 exact scales
+
+BREAKER SUMMARY gates=11 fails=0 breaks=0
+BREAKER VERDICT NO BREAK
