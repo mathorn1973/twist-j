@@ -1,0 +1,79 @@
+C-TT-VECTOR-MOMENT-UNDERDETERMINATION-1 verifier
+carrier X = Z/5, scale a = 1, field Q(zeta_5) basis {1,z,z^2,z^3}
+elements printed as [c0,c1,c2,c3] meaning c0 + c1 z + c2 z^2 + c3 z^3
+
+CHECK A.support.3125                                 PASS  n=3125
+CHECK B0.support.160                                 PASS  n=160
+CHECK Bmix.support.640                               PASS  n=640
+CHECK A.weights.sum.1                                PASS
+CHECK B0.weights.sum.1                               PASS
+CHECK Bmix.weights.sum.1                             PASS
+CHECK A.pointwise.modulus.one                        PASS
+CHECK B0.pointwise.modulus.one                       PASS
+CHECK A.translation.invariant                        PASS
+CHECK A.rho.invariant                                PASS
+CHECK B0.translation.invariant                       PASS
+CHECK B0.rho.invariant                               PASS
+CHECK Bmix.translation.invariant                     PASS
+CHECK Bmix.rho.invariant                             PASS
+CHECK B1.rho.NOT.invariant                           PASS
+CHECK B1.translation.invariant                       PASS
+CHECK B2.rho.NOT.invariant                           PASS
+CHECK B2.translation.invariant                       PASS
+CHECK B3.rho.NOT.invariant                           PASS
+CHECK B3.translation.invariant                       PASS
+CHECK B4.rho.NOT.invariant                           PASS
+CHECK B4.translation.invariant                       PASS
+CHECK A.mean.zero                                    PASS
+CHECK B0.mean.zero                                   PASS
+CHECK A.C.equals.delta                               PASS
+CHECK B0.C.equals.delta                              PASS
+CHECK A.P.equals.zero                                PASS
+CHECK B0.P.equals.zero                               PASS
+CHECK A.C.translation.invariant                      PASS
+CHECK B0.C.translation.invariant                     PASS
+CHECK A.S_v.equals.one                               PASS
+CHECK B0.S_v.equals.one                              PASS
+CHECK A.Pi_v.equals.zero                             PASS
+CHECK B0.Pi_v.equals.zero                            PASS
+  S_v(k) A  = [1,0,0,0] [1,0,0,0] [1,0,0,0] [1,0,0,0] [1,0,0,0]
+  S_v(k) B0 = [1,0,0,0] [1,0,0,0] [1,0,0,0] [1,0,0,0] [1,0,0,0]
+
+CHECK A.Cw.equals.delta                              PASS
+CHECK B0.Cw.equals.allones                           PASS
+CHECK A.Cw.translation.invariant                     PASS
+CHECK B0.Cw.translation.invariant                    PASS
+CHECK A.S_w.equals.one.all.k                         PASS
+CHECK B0.S_w.equals.5.delta.k0                       PASS
+CHECK A.Pi_w.equals.zero                             PASS
+CHECK B0.Pi_w.equals.zero                            PASS
+  S_w(k) A  = [1,0,0,0] [1,0,0,0] [1,0,0,0] [1,0,0,0] [1,0,0,0]
+  S_w(k) B0 = [5,0,0,0] [0,0,0,0] [0,0,0,0] [0,0,0,0] [0,0,0,0]
+
+CHECK B1.S_w.equals.5.delta.k.2                      PASS
+CHECK B2.S_w.equals.5.delta.k.4                      PASS
+CHECK B3.S_w.equals.5.delta.k.1                      PASS
+CHECK B4.S_w.equals.5.delta.k.3                      PASS
+CHECK Bmix.S_w.equals.5over4.off.zero                PASS
+  S_w(k) Bmix = [0,0,0,0] [5/4,0,0,0] [5/4,0,0,0] [5/4,0,0,0] [5/4,0,0,0]
+
+CHECK A.E.abs.v4.equals.one                          PASS  [1,0,0,0]
+CHECK A.wick.value.equals.two                        PASS  [2,0,0,0]
+CHECK A.wick.NOGO.gap.minus.one                      PASS
+CHECK B0.E.abs.v4.equals.one                         PASS  [1,0,0,0]
+CHECK B0.wick.value.equals.two                       PASS  [2,0,0,0]
+CHECK B0.wick.NOGO.gap.minus.one                     PASS
+CHECK A.K.equals.minus.delta                         PASS
+CHECK B0.K.equals.one.minus.2delta                   PASS
+CHECK K.difference.is.offdiagonal.one                PASS
+
+CHECK monomials.degree.le3.count.286                 PASS  n=286
+CHECK F1.no.separator.at.degree.le3                  PASS  separators=0
+CHECK monomials.degree.4.count.715                   PASS  n=715
+CHECK F5.degree4.separator.count.20                  PASS  n=20
+CHECK F5.degree4.separator.set.is.v2conjv2           PASS
+CHECK F5.degree4.separator.values.0.and.1            PASS
+CHECK S1.iv.minimal.separating.degree.is.4           PASS
+
+SUMMARY gates=63 fails=0
+VERDICT PASS
