@@ -15,9 +15,9 @@ The one post-pin local execution returned 0, wrote no stderr, and reproduced
 the pinned 1054-byte `EXPECTED.txt` exactly. `EXPECTED.txt` equals the
 frozen candidate stdout of 2026-08-13 (x86_64, executed twice there,
 byte-identical), so the same verifier bytes now have byte-identical stdout
-on x86_64 and aarch64. The formal public two-architecture gate is completed
-by the required GitHub x86_64 check at pull-request time and recorded in
-`RUN.md` before any fold.
+on x86_64 and aarch64. The formal public two-architecture gate is complete: the
+required GitHub x86_64 check reproduced the pinned verifier byte for byte
+(workflow run 32022745731) and is recorded in `RUN.md`.
 
 ## Result by claim
 
@@ -55,12 +55,13 @@ geometry (N5); any Gram realization dominating the prime curve has operator
 norm exactly one (N8) and must be nonlocal in t. RH is untouched; nothing
 here moves it.
 
-## Pending before fold
+## Sequence record
 
 ```text
-1  claim issue opened and linked in RUN.md (credential exception
-   disclosed in PREREG.md)
-2  pull request opened from probe/P-SUZUKI-LOCAL-CAPACITY-NOGO-1
-3  GitHub x86_64 leg recorded in RUN.md, byte identity required
-4  sealed fold with the registry motion proposed in PREREG.md Field 6
+1  claim issue 399 opened and linked in RUN.md (credential
+   exception disclosed in PREREG.md)                          DONE
+2  pull request 400 opened from the probe branch              DONE
+3  GitHub x86_64 leg recorded in RUN.md, byte identity PASS   DONE
+4  sealed fold with the registry motion proposed in
+   PREREG.md Field 6                                          PENDING
 ```

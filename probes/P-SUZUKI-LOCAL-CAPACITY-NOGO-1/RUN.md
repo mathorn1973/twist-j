@@ -44,7 +44,7 @@ Machine-readable command field:
 command: python3 probes/P-SUZUKI-LOCAL-CAPACITY-NOGO-1/verify.py
 ```
 
-## Local leg record
+## Local formal leg
 
 ```text
 platform: Ubuntu 24.04.4 LTS
@@ -78,10 +78,36 @@ audit. The local stdout equals the frozen candidate stdout recorded on
 aarch64 leg already exhibit cross-architecture byte identity of the same
 verifier bytes.
 
-## Pending GitHub leg
+## Required GitHub leg
 
-The required GitHub architecture check (x86_64, complementary to the local
-leg) runs at pull-request time. Its machine fields are to be recorded in
-this section after the check completes; until then the verifier
-reproduction check reports the missing GitHub leg, which is the expected
-pre-finalization state.
+```text
+status: PASS
+workflow_run_id: 32022745731
+job_id: 95365661982
+job_url: https://github.com/mathorn1973/twist-j/actions/runs/32022745731/job/95365661982
+check_name: architecture-x86_64
+event: pull_request
+tested_head_commit: cad162215295393a9826fc1b99967286895ccdd7
+checkout_merge_commit: 1f5b9268dbd198a2223e884d4e8cbdf1281c594e
+base_commit: 8e38bb773c0c9a375440eef23f764efcaa07ab5c
+platform: Ubuntu 24.04 GitHub-hosted runner image 20260810.271.1
+architecture: x86_64
+python: Python 3.12.13
+check_step_log_start_utc: 2026-08-17T10:59:27.7352799Z
+verify_pass_log_utc: 2026-08-17T10:59:28.6501964Z
+verifier_sha256: c68381aff92bd6b01d2170e40d1d82da909f7ec11c3f597516da8c1c1e128ddb
+stdout_sha256: ad99e73f827fbc075342d93fbc8e840c05cba8764c99b5c26bedf37b46050a84
+stdout_bytes: 1054
+stdout_lines: 14
+exit_code: 0
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+byte_identity: PASS
+replay: PASS
+verdict: VERIFY PASS
+```
+
+The required clean GitHub x86_64 job reproduced the pinned verifier and
+matched `EXPECTED.txt` byte for byte (VERIFY PASS line in the job log with
+both hashes). Together with the accepted local aarch64 leg, this completes
+the public two-architecture gate before the Canon fold.
