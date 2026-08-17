@@ -1,0 +1,11 @@
+PASS A1: frozen G and ordered effect pair are exact
+PASS A2: four-dimensional pointer PVM and controlled witness are exact
+PASS A3: occurrence identity K^T G K = G E audited exactly
+PASS A4: diagonal-orbit breaker has exact nonzero cross Gram C
+PASS A5: one diagonal O(G,Q) action changes the exact post-state
+PASS A6: rational R_t family identities and pairwise controls are exact
+PASS A7: rational reflection extension step is exact
+PASS A8: explicit non-Lueder complete family has a rational orthogonal dilation
+PASS A9: self-adjoint sign breaker and positive-root controls are exact
+PASS A10: target-controlled coupling contains the target projectors explicitly
+ALL PASS: QDD instrument nonselection exact audit complete
