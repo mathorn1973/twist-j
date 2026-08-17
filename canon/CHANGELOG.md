@@ -1,12 +1,139 @@
 # Canon changelog (public series)
 
 
-## Public Canon v46
+## Public Canon v50
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 241 claims; 0 T-LOCK, 135 T, 41 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
-Reproduction witnesses: 22.
+Registry snapshot: 249 claims; 0 T-LOCK, 140 T, 42 D, 29 C, 2 H, 23 O, 13 F; 25 live H/O.
+Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v50 registers three rows from the completed public probe
+`P-SUZUKI-LOCAL-CAPACITY-NOGO-1`, all at layer L1 over the classical
+Riemann zeta function. `SUZUKI-LOCAL-CAPACITY-NOGO [T]` is the local no-go
+complex for the completion capacity of the Suzuki screw function: the
+prime side is a canonical orthogonal-increment path; the reproduced
+curvature closed form changes sign once at the plastic constant; a
+certified convexity violation empties the nonnegative ramp class;
+filtration and per-place increment domination die at the first event
+`q = 2`; both screw kernels are separately indefinite; and any
+contraction realizing capacity over the prime curve is forced to operator
+norm exactly one by the prime number theorem import, so every dominating
+Gram realization is nonlocal in `t`.
+
+`SUZUKI-PRIME-FREE-WINDOW [C]` certifies `A > 0` on `[1/128, 45/64]` by a
+100-leaf adaptive outward-interval cover with zero undecided leaves, an
+independent code path reproducing one corner of the cited certified strip
+record. `SUZUKI-EVENT-COUNT [C]` fixes `N(10^6) = 78734` by two exact
+counting paths.
+
+The screw function, its positivity criterion and its kernel follow
+Suzuki; the curvature closed form, the plastic transition and the strip
+record follow Mittermeier; the reproductions claim no novelty, with
+attribution frozen in the probe preregistration. The prime-event counting
+frame stays motivation. No statement about the Riemann hypothesis or its
+zeros, no J-coupling, no new H or O row, and no change to any existing
+row is made.
+
+
+## Public Canon v49
+
+Public Canon v49 registers exactly one new scientific row,
+`QDD-INSTRUMENT-NONSELECTION [T]`, at L4 apparatus/support scope from the
+completed public probe `P-QDD-INSTRUMENT-NONSELECTION-1`. Its written proof
+classifies every rational single-effect fibre, the branchwise and diagonal
+two-branch orbits, physical post-state equivalence, and rational orthogonal
+dilations. At fixed effects, fixed branch weights and `C = 0`, an injective
+rational family of physically distinct post-state instruments remains.
+Existence of an unrestricted rational orthogonal dilation therefore cannot
+select a physical instrument.
+
+The fold keeps `QDD-INSTRUMENT-APPARATUS [O]` open and narrows it to two
+independent blockers: O2 independent physical instrument selection, and O1
+realized event generation / sampling. A coupling controlled by the target
+projectors is circular as independent-selection evidence. G-positive
+square-root uniqueness remains mathematics only. The only sampling statement
+is `SAMPLING NOT PROVIDED`; no sampling-impossibility theorem is claimed.
+
+No L5 stream, L6 measure, decoder completion, new physical premise, SI
+statement, uniqueness-from-J claim, or change to `QUADRATIC-DECODER-DATA`
+is made.
+
+
+## Public Canon v48
+
+Public Canon v48 registers the QDD Route A algebra: three L1 theorems and
+one separate obligation. `QUADRATIC-DECODER-DATA` is not modified and remains
+an open obligation; no gate is added and no L6 reading is claimed.
+
+The seventeen public definitions `DEF-QDD-*` in section 2 state the
+pointed-orbit domain, the balanced piston head, the B0 amplitude, the
+coefficient field with three distinct typed involutions, the trace pairing
+and its Gram `G = I - (1/5) 1 1^T`, dagger, transpose, the ordered quadratic
+pair and its carrier equality, the LOW LINE `Q lambda_B` with
+`lambda_B = -zeta_5^4`, the frozen effect pair of the EFFECT_SHADOW_MINIMAL
+owner freeze as ALGEBRAIC_READOUT projectors, the owner-frozen Born
+trace pairing as a dictionary input, the five-field tagged record with the
+explicit ZERO branch, the direct write under the independence firewall, and
+the factor map.
+
+`QDD-ALGEBRAIC-FACTORIZATION [T]` states the exact identity of the direct
+cyclotomic write and the Gram/projector factor route on all 15625
+checkpoints, with totality, exact normalization, the 313 fibres, injectivity
+and two negative controls. `QDD-PROJECTOR-PAIR-TR4 [T]` states that `E_low`
+is the unique G-self-adjoint idempotent with kernel `ker Tr_4`, with the
+closed forms; it identifies the pair inside its algebraic class and does not
+force the choice of that class. `QDD-QCARRIER-DIAGONAL-BOUNDARY [T]` records
+that both typed slots coincide on the frozen carrier and that no central
+phase is derived from it. `QDD-INSTRUMENT-APPARATUS [O]` is the physical
+instrument family, registered separately and filling no completion-contract
+field.
+
+Per the owner rulings of 2026-07-30 and the EFFECT_SHADOW_MINIMAL freeze, the
+`effects` requirement of the decoder completion contract stays UNRESOLVED and
+the contract is not submitted. The value 1/6 in the normalized value table is
+a numerical witness with no role. Evidence is the new two-architecture
+reproduction `reproduce/qdd-route-a` (fifteen checks). `DEF-QDD-MATTER-RECORD`
+is a pure type schema, every field of the direct branch is sourced through
+the cyclotomic write R_cyc alone, and the transitive independence firewall
+of the direct write (DICTIONARY-DIRECT amendment, section 6) is enforced
+fail-closed by the insertion delta and permanently by the status-separation
+witness, which gains two checks: the conservative QDD partition and the
+direct-write firewall closure. No uniqueness-from-J, apparatus, occurrence
+law, sampling, post-state, SI, totality or completeness claim is made.
+
+
+## Public Canon v47
+
+Public Canon v47 closes exactly one live measure obligation at dictionary
+status. `TM-SYM2-PHYSICAL-MEASURE` moves from O to D. No theorem,
+computation, hypothesis, falsification, or other status changes.
+
+The closure uses the completed two-architecture public probe
+`P-TM-SYM2-BORN-HALVING-1`. The fold freezes two typed L5 definitions: the
+orientation-retaining source on the complete four selector-gauge classes, and
+the five-member monomial J-verb lift. The exact coefficient Born square of
+every frozen monomial lift gives the same two-sheet conditional. A pinned
+same-modulus nonmonomial control has unequal coefficient Born weights, so the
+public modulus dictionary does not select the lift phase and no all-lift
+uniqueness is claimed.
+
+Only the L5 stationary W3 law is imported from
+`TM-SYM2-PROJECTIVE-FOURFOLD [T]`. The physical line value `1/6` is read only
+after the typed Born conditional and the stationary word law have been
+composed and normalized. All 48 frozen selector charts then agree without a
+representative choice or gauge enlargement. The fired N2 selector result is
+preserved.
+
+The former `TM-SYM2-PHYSICAL-MEASURE -> GYRON-DENSITY` dependency is removed.
+`GYRON-DENSITY` explicitly concerns a different carrier and contributes no L6
+physical-measure premise here. `M_TM` and the GYRON numeral are not counted as
+confirmation. The closed bridge remains D and adds no `D_matter`, decoder
+completion, SI, or physical uniqueness claim.
+
+
+## Public Canon v46
+
 
 Public Canon v46 registers two separately decided L1 theorems carried by the
 written proofs and the completed public probe

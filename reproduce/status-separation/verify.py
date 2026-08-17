@@ -141,21 +141,21 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 135, "D": 41, "C": 27, "F": 13,
+    expected_counts = {"T": 140, "D": 42, "C": 29, "F": 13,
                        "O": 23, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v46",
-        len(rows) == 241
+        "registry and companion-ledger counts match Public Canon v50",
+        len(rows) == 249
         and counts == expected_counts
-        and len(normative) == 257
-        and len(dependencies) == 376
-        and len(evidence) == 241
-        and two_architecture == 160
-        and len(history) == 755
+        and len(normative) == 284
+        and len(dependencies) == 425
+        and len(evidence) == 249
+        and two_architecture == 168
+        and len(history) == 765
         and len(gates) == 10
         and len({row["program_id"] for row in programs.values()}) == 7
-        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 22,
+        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
     ))
 
     checks.append((
@@ -975,6 +975,8 @@ def run():
     spectral = "TM-SYM2-SPECTRAL-COHERENCE"
     frozen_owner = "TM-SYM2-MEASURE"
     physical_owner = "TM-SYM2-PHYSICAL-MEASURE"
+    orientation_source = "DEF-TM-SYM2-ORIENTATION-SOURCE"
+    monomial_lift = "DEF-TM-SYM2-MONOMIAL-VERB-LIFT"
     selector_gate = "GATE-L1-L5-TM-SYM2-SELECTOR-STREAM"
     born_gate = "GATE-L5-L6-TM-SYM2-BORN-MEASURE"
     tm_theorems = (projective, semilinear, reversal, spectral)
@@ -998,13 +1000,25 @@ def run():
             (projective, "REQUIRES"),
             (semilinear, "REQUIRES"),
         },
+        orientation_source: {
+            (projective, "REQUIRES"),
+            (semilinear, "REQUIRES"),
+            (reversal, "REQUIRES"),
+        },
+        monomial_lift: {
+            ("J-UNIT", "REQUIRES"),
+            ("J-GOLDEN-BRIDGE", "REQUIRES"),
+        },
         physical_owner: {
             ("DEF-ARCHITECTURE", "REQUIRES"),
             ("DEF-ACTION-LAYERS", "REQUIRES"),
             ("GOLDEN-SIX-LINE-SYM2-FRAME", "REQUIRES"),
-            ("GYRON-DENSITY", "REQUIRES"),
+            (projective, "REQUIRES"),
+            (orientation_source, "REQUIRES"),
+            (monomial_lift, "REQUIRES"),
             ("MEASURE-BORN-VERB", "REQUIRES"),
-            (projective, "BOUNDED_BY"),
+            ("ABELIAN-FACE-DICTIONARY", "REQUIRES"),
+            (frozen_owner, "BOUNDED_BY"),
             (semilinear, "BOUNDED_BY"),
             (reversal, "BOUNDED_BY"),
             (spectral, "BOUNDED_BY"),
@@ -1044,7 +1058,7 @@ def run():
     }
     checks.append((
         "TM-SYM2",
-        "four closed exact classifications stay T; fired selector and physical successor stay separated",
+        "four exact classifications stay T; fired selector stays F; physical successor closes only at D",
         all(has_status(index, item, "T") for item in tm_theorems)
         and normative.get(projective, {}).get("item_type") == "THEOREM"
         and normative.get(projective, {}).get("layer") == "MULTI"
@@ -1099,18 +1113,34 @@ def run():
              "NONCANONICAL and N2 fires", "Born branch is not reached",
              "does not falsify", "every future TM-to-measure definition"),
         )
-        and has_status(index, physical_owner, "O")
-        and normative.get(physical_owner, {}).get("item_type") == "OBLIGATION"
+        and has_status(index, physical_owner, "D")
+        and normative.get(physical_owner, {}).get("item_type") == "DICTIONARY"
         and normative.get(physical_owner, {}).get("layer") == "MULTI"
         and normative.get(physical_owner, {}).get("gate_ids") == born_gate
+        and normative.get(orientation_source, {}).get("item_type") == "DEFINITION"
+        and normative.get(orientation_source, {}).get("layer") == "L5"
+        and normative.get(monomial_lift, {}).get("item_type") == "DEFINITION"
+        and normative.get(monomial_lift, {}).get("layer") == "L5"
+        and index.get(physical_owner, {}).get("evidence") == "probes/P-TM-SYM2-BORN-HALVING-1"
+        and evidence.get(physical_owner, {}).get("evidence_id") == "EV-TM-SYM2-PHYSICAL-MEASURE"
+        and evidence.get(physical_owner, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(physical_owner, {}).get("location") == "probes/P-TM-SYM2-BORN-HALVING-1"
+        and evidence.get(physical_owner, {}).get("sha256") == "acc598e670eb7e57f689a6ecc970438ce7211d1a097514a78847100e8871fa59"
+        and evidence.get(physical_owner, {}).get("hash_mode") == "bundle-manifest-sha256-v1"
+        and evidence.get(physical_owner, {}).get("architecture_requirement") == "two-architecture"
         and scope_contains_all(
             index, physical_owner,
-            ("epsilon_read = chi_Q chi_F as typed L5 data",
-             "rather than quotienting it", "coherence across all 48 selectors",
-             "mu_i = 1/6", "M_TM = (1/3)P1 + (2/15)P5",
-             "is an outcome of the bridge and is not required of it",
-             "comparison actions only", "enlarge no postcomposition gauge",
-             "select no representative among the 48 selectors"),
+            ("owner-approved typed L5-to-L6 physical dictionary bridge",
+             "C_sel = Sel_class/G with four classes",
+             "epsilon_read = chi_Q chi_F", "omega(a,b,c) = c-a",
+             "separately frozen monomial verb-lift class",
+             "same normalized two-sheet law for every t",
+             "six equal line weights 1/6 only as an output",
+             "no selector representative is chosen",
+             "no postcomposition gauge is enlarged",
+             "same-modulus nonmonomial lift has unequal coefficient Born weights",
+             "no uniqueness among all amplitude lifts",
+             "GYRON identification"),
         )
         and gates.get(selector_gate, {}).get("owner_item_id") == frozen_owner
         and gates.get(selector_gate, {}).get("gate_kind") == "FIRED_NEGATIVE"
@@ -1119,17 +1149,14 @@ def run():
         and "four free projective-linear gauge orbits of size 12"
         in gates.get(selector_gate, {}).get("decision_condition", "")
         and gates.get(born_gate, {}).get("owner_item_id") == physical_owner
-        and gates.get(born_gate, {}).get("gate_kind") == "OPEN_LIFT"
+        and gates.get(born_gate, {}).get("gate_kind") == "DICTIONARY_LIFT"
         and gates.get(born_gate, {}).get("from_layer") == "L5"
         and gates.get(born_gate, {}).get("to_layer") == "L6"
-        and "reading orientation retained as typed data"
+        and "complete orientation-retaining L5 source"
         in gates.get(born_gate, {}).get("decision_condition", "")
         and frozen_owner not in programs
         and spectral not in programs
-        and programs.get(physical_owner, {}).get("program_id") == "MEASURE"
-        and programs.get(physical_owner, {}).get("queue_role") == "ROOT"
-        and programs.get(physical_owner, {}).get("work_state") == "STOP"
-        and programs.get(physical_owner, {}).get("work_mode") == "FORMAL"
+        and physical_owner not in programs
         and actual_tm_dependencies == expected_tm_dependencies
         and not theorem_to_owner
         and not has_cycle(graph)
@@ -2252,6 +2279,187 @@ def run():
                 "normalization STOP",
             )
         ),
+    ))
+
+    qdd_path = "reproduce/qdd-route-a"
+    checks.append((
+        "QDD-ROUTE-A",
+        "the QDD Route A algebra is three L1 theorems on two-architecture evidence; the apparatus is a separate O; QUADRATIC-DECODER-DATA stays O with its ROOT/STOP program row; no gate and no L6 row exist",
+        all(
+            has_status(index, claim, "T")
+            and normative.get(claim, {}).get("layer") == "L1"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("evidence") == qdd_path
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            for claim in ("QDD-ALGEBRAIC-FACTORIZATION", "QDD-PROJECTOR-PAIR-TR4",
+                          "QDD-QCARRIER-DIAGONAL-BOUNDARY")
+        )
+        and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("program_id")
+        == "DECODER_CORE"
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("queue_role")
+        == "FOLLOWUP"
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("work_state")
+        == "STOP"
+        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and programs.get("QUADRATIC-DECODER-DATA", {}).get("queue_role")
+        == "ROOT"
+        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_state")
+        == "STOP"
+        and "QDD-BORN-READOUT-MEASURE" not in index
+        and "DEF-BRIDGE-QDD-TR4-EFFECT-SELECTION" not in normative
+        and "GATE-L1-L6-QDD-BORN-READOUT" not in gates
+        and normative.get("DEF-QDD-PROJECTOR-LOW", {}).get("item_type")
+        == "DEFINITION"
+        and scope_lacks(index, "QDD-ALGEBRAIC-FACTORIZATION",
+                        ("apparatus", "occurrence"))
+        and scope_contains_all(index, "QDD-ALGEBRAIC-FACTORIZATION",
+                               ("no completion-contract field is filled",))
+        and scope_contains_all(index, "QDD-PROJECTOR-PAIR-TR4",
+                               ("no uniqueness-from-j",))
+        and scope_contains_all(index, "QDD-QCARRIER-DIAGONAL-BOUNDARY",
+                               ("a_dagger = a_t = v v^t",
+                                "no physical central phase"))
+        and scope_contains_all(index, "QDD-INSTRUMENT-APPARATUS",
+                               ("filling no field of the decoder completion contract",)),
+    ))
+
+    nonselection = "QDD-INSTRUMENT-NONSELECTION"
+    nonselection_path = "probes/P-QDD-INSTRUMENT-NONSELECTION-1"
+    nonselection_digest = (
+        "d49930ce735413cb58601d85d697b6dc049e5571f50cdf16d837206db26727e2"
+    )
+    nonselection_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == nonselection
+    }
+    apparatus_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == "QDD-INSTRUMENT-APPARATUS"
+    }
+    checks.append((
+        "QDD-NONSELECTION",
+        "the L4 theorem fixes rational fibre, post-state and dilation nonselection while the apparatus remains O on exactly independent selection and realized-event sampling",
+        has_status(index, nonselection, "T")
+        and normative.get(nonselection, {}).get("item_type") == "THEOREM"
+        and normative.get(nonselection, {}).get("status") == "T"
+        and normative.get(nonselection, {}).get("layer") == "L4"
+        and normative.get(nonselection, {}).get("gate_ids") == ""
+        and index.get(nonselection, {}).get("evidence") == nonselection_path
+        and evidence.get(nonselection, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(nonselection, {}).get("location") == nonselection_path
+        and evidence.get(nonselection, {}).get("sha256") == nonselection_digest
+        and evidence.get(nonselection, {}).get("architecture_requirement")
+        == "two-architecture"
+        and nonselection not in programs
+        and all(row["owner_item_id"] != nonselection for row in gates.values())
+        and nonselection_dependencies == set()
+        and apparatus_dependencies == {
+            ("DEF-QDD-PROJECTOR-LOW", "REQUIRES"),
+            ("DEF-QDD-PROJECTOR-HIGH", "REQUIRES"),
+            ("DEF-QDD-GRAM", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, nonselection,
+            ("one branchwise O(G,Q) x O(G,Q) orbit",
+             "injects Q into physically distinct post-state instrument classes",
+             "not an instrument-selection principle",
+             "mathematical positive-square-root section",
+             "no L5 realized-event stream",
+             "no L6 measure",
+             "SAMPLING NOT PROVIDED rather than SAMPLING IMPOSSIBLE"),
+        )
+        and scope_contains_all(
+            index, "QDD-INSTRUMENT-APPARATUS",
+            ("only two independent blockers remain",
+             "O2 independent physical instrument selection",
+             "O1 realized event generation / sampling",
+             "target-controlled coupling is circular",
+             "SAMPLING NOT PROVIDED",
+             "SAMPLING IMPOSSIBLE is not claimed"),
+        )
+        and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
+        and has_status(index, "QUADRATIC-DECODER-DATA", "O"),
+    ))
+
+    suzuki = "SUZUKI-LOCAL-CAPACITY-NOGO"
+    suzuki_path = "probes/P-SUZUKI-LOCAL-CAPACITY-NOGO-1"
+    suzuki_digest = (
+        "0891418a788e7e2d1d4795af8883020dbcd78c7ea2f9f9fefb41b055131deb65"
+    )
+    suzuki_window = "SUZUKI-PRIME-FREE-WINDOW"
+    suzuki_count = "SUZUKI-EVENT-COUNT"
+    suzuki_rows = (suzuki, suzuki_window, suzuki_count)
+    suzuki_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] in suzuki_rows
+    }
+    checks.append((
+        "SUZUKI-CAPACITY-NOGO",
+        "the L1 no-go complex for the Suzuki completion capacity enters at T with two finite C computations, all pinned to the two-architecture public probe bundle and free of dependency, gate and frontier ownership",
+        has_status(index, suzuki, "T")
+        and has_status(index, suzuki_window, "C")
+        and has_status(index, suzuki_count, "C")
+        and normative.get(suzuki, {}).get("item_type") == "THEOREM"
+        and normative.get(suzuki, {}).get("status") == "T"
+        and normative.get(suzuki, {}).get("layer") == "L1"
+        and normative.get(suzuki, {}).get("gate_ids") == ""
+        and normative.get(suzuki_window, {}).get("item_type") == "COMPUTATION"
+        and normative.get(suzuki_count, {}).get("item_type") == "COMPUTATION"
+        and all(index.get(row, {}).get("evidence") == suzuki_path for row in suzuki_rows)
+        and all(evidence.get(row, {}).get("evidence_kind") == "PUBLIC_PROBE" for row in suzuki_rows)
+        and all(evidence.get(row, {}).get("location") == suzuki_path for row in suzuki_rows)
+        and all(evidence.get(row, {}).get("sha256") == suzuki_digest for row in suzuki_rows)
+        and all(
+            evidence.get(row, {}).get("architecture_requirement") == "two-architecture"
+            for row in suzuki_rows
+        )
+        and all(row not in programs for row in suzuki_rows)
+        and all(row["owner_item_id"] not in suzuki_rows for row in gates.values())
+        and suzuki_dependencies == set()
+        and scope_contains_all(
+            index, suzuki,
+            ("orthogonal increments",
+             "the nonnegative ramp class is empty",
+             "at the first event q = 2",
+             "separately indefinite",
+             "the norm is exactly one",
+             "nonlocal in t",
+             "no J-coupling, no L2--L6 lift"),
+        )
+        and scope_contains_all(
+            index, suzuki_window,
+            ("[1/128, 45/64]", "zero undecided leaves"),
+        )
+        and scope_contains_all(
+            index, suzuki_count,
+            ("78734", "two independent counting paths"),
+        ),
+    ))
+
+    fw_requires = {}
+    for row in dependencies:
+        fw_requires.setdefault(row["item_id"], set()).add(row["depends_on"])
+    fw_seen, fw_stack = set(), ["DEF-QDD-DIRECT-WRITE"]
+    while fw_stack:
+        fw_cur = fw_stack.pop()
+        for fw_nxt in fw_requires.get(fw_cur, ()):
+            if fw_nxt not in fw_seen:
+                fw_seen.add(fw_nxt)
+                fw_stack.append(fw_nxt)
+    fw_qdd = {x for x in fw_seen if x.startswith("DEF-QDD-") or x.startswith("QDD-")}
+    checks.append((
+        "QDD-DIRECT-FIREWALL",
+        "the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)",
+        fw_qdd == {"DEF-QDD-DOMAIN-K0", "DEF-QDD-BALANCED-PISTON",
+                   "DEF-QDD-AMPLITUDE-B0", "DEF-QDD-COEFFICIENT-Q",
+                   "DEF-QDD-TRACE-PAIRING", "DEF-QDD-LOW-LINE",
+                   "DEF-QDD-MATTER-RECORD"}
+        and not fw_seen & {"DEF-QDD-GRAM", "DEF-QDD-DAGGER", "DEF-QDD-TRANSPOSE",
+                           "DEF-QDD-QPAIR", "DEF-QDD-QCARRIER-EQUALITY",
+                           "DEF-QDD-PROJECTOR-LOW", "DEF-QDD-PROJECTOR-HIGH",
+                           "DEF-QDD-BRANCH-WEIGHT-PAIRING", "DEF-QDD-FACTOR-MAP"},
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

@@ -1,0 +1,411 @@
+{
+  "manifest_format": "TWISTJ_QDD_COMPLETION_MANIFEST_2",
+  "authority": {
+    "artifact_authority": "NOT_CANON_UNTIL_FOLD / CONTRACT NOT SUBMITTED",
+    "public_canon_basis": "Public Canon v47",
+    "public_canon_tag": "canon-v47",
+    "content_commit": "95219e2ba51bdedce76b2040bb0cfcb97937edfa",
+    "canon_sha256": "5e4c454e53381e13df2bc2e894bd6e7328af9329c4b13df03106c902c7caf400",
+    "canon_bytes": 225589,
+    "schema_basis_id": "DEF-DECODER-COMPLETION-CONTRACT",
+    "owner_decisions": [
+      "SPLIT",
+      "ACCEPT-T1",
+      "SLOT-RULING",
+      "AUDIT-2026-08-15-CONSERVATIVE"
+    ],
+    "owner_decision_date": "2026-08-15",
+    "reproduction_bundle": "reproduce/qdd-route-a",
+    "reproduction_bundle_sha256": "897f18e27e822a96ece61048cb17d4a5488b267d014f2bb10787f1a56edc8c6a",
+    "verifier_sha256": "fbd1da8b9945033ad03794c9960341a457640d636929c9b3a030e0898b0fb464",
+    "expected_sha256": "41870e4c3335ebdc3fbbecf57dfb4940830d928817c8ea60d0eb67109b88a230"
+  },
+  "candidate_id": "QDD-ROUTE-A-CONSERVATIVE-V47",
+  "public_pin_id": "canon-v47",
+  "read_convention_id": "DEF-QDD-DOMAIN-K0",
+  "history_equivalence_id": "DEF-QDD-DOMAIN-K0",
+  "region_id": "DEF-QDD-BALANCED-PISTON",
+  "coarse_graining_id": "DEF-QDD-BALANCED-PISTON",
+  "carrier_manifest": [
+    {
+      "carrier_id": "DEF-QDD-DOMAIN-K0",
+      "parent_carrier_id": "DEF-ARCHITECTURE",
+      "inclusion_or_quotient_map_id": "DEF-QDD-DOMAIN-K0",
+      "equality_id": "DEF-QDD-DOMAIN-K0",
+      "coefficient_object_id": "NOT_APPLICABLE:DEF-QDD-DOMAIN-K0"
+    },
+    {
+      "carrier_id": "DEF-QDD-BALANCED-PISTON",
+      "parent_carrier_id": "DEF-QDD-DOMAIN-K0",
+      "inclusion_or_quotient_map_id": "DEF-QDD-BALANCED-PISTON",
+      "equality_id": "DEF-QDD-COEFFICIENT-Q",
+      "coefficient_object_id": "DEF-QDD-COEFFICIENT-Q"
+    },
+    {
+      "carrier_id": "DEF-QDD-AMPLITUDE-B0",
+      "parent_carrier_id": "DEF-QDD-BALANCED-PISTON",
+      "inclusion_or_quotient_map_id": "DEF-QDD-AMPLITUDE-B0",
+      "equality_id": "DEF-QDD-COEFFICIENT-Q",
+      "coefficient_object_id": "DEF-QDD-COEFFICIENT-Q"
+    },
+    {
+      "carrier_id": "DEF-QDD-QCARRIER-EQUALITY",
+      "parent_carrier_id": "DEF-QDD-BALANCED-PISTON",
+      "inclusion_or_quotient_map_id": "DEF-QDD-QPAIR",
+      "equality_id": "DEF-QDD-QCARRIER-EQUALITY",
+      "coefficient_object_id": "DEF-QDD-COEFFICIENT-Q"
+    }
+  ],
+  "record_field_manifest": [
+    {
+      "record_id": "DEF-QDD-MATTER-RECORD",
+      "field_id": "support_state",
+      "field_type_id": "TYPE-QDD-SUPPORT",
+      "role": "READOUT",
+      "carrier_id": "DEF-QDD-AMPLITUDE-B0",
+      "domain_id": "DEF-QDD-DOMAIN-K0",
+      "normalization_id": "DEF-QDD-MATTER-RECORD",
+      "equality_id": "DEF-QDD-MATTER-RECORD",
+      "source_item_id": "DEF-QDD-DIRECT-WRITE",
+      "write_map_id": "DEF-QDD-DIRECT-WRITE",
+      "presence_state": "RESOLVED",
+      "absence_basis_item_id": "NOT_APPLICABLE:DEF-QDD-MATTER-RECORD",
+      "emit_rule_id": "DEF-QDD-DIRECT-WRITE",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "layer": "L1"
+    },
+    {
+      "record_id": "DEF-QDD-MATTER-RECORD",
+      "field_id": "total_weight",
+      "field_type_id": "TYPE-QDD-NONNEGATIVE-RATIONAL",
+      "role": "READOUT",
+      "carrier_id": "DEF-QDD-AMPLITUDE-B0",
+      "domain_id": "DEF-QDD-DOMAIN-K0",
+      "normalization_id": "DEF-QDD-DIRECT-WRITE",
+      "equality_id": "DEF-QDD-COEFFICIENT-Q",
+      "source_item_id": "DEF-QDD-DIRECT-WRITE",
+      "write_map_id": "DEF-QDD-DIRECT-WRITE",
+      "presence_state": "RESOLVED",
+      "absence_basis_item_id": "NOT_APPLICABLE:DEF-QDD-MATTER-RECORD",
+      "emit_rule_id": "DEF-QDD-DIRECT-WRITE",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "layer": "L1"
+    },
+    {
+      "record_id": "DEF-QDD-MATTER-RECORD",
+      "field_id": "branch_weights",
+      "field_type_id": "TYPE-QDD-ORDERED-PAIR-NONNEGATIVE-RATIONAL",
+      "role": "READOUT",
+      "carrier_id": "DEF-QDD-AMPLITUDE-B0",
+      "domain_id": "DEF-QDD-DOMAIN-K0",
+      "normalization_id": "DEF-QDD-DIRECT-WRITE",
+      "equality_id": "DEF-QDD-COEFFICIENT-Q",
+      "source_item_id": "DEF-QDD-DIRECT-WRITE",
+      "write_map_id": "DEF-QDD-DIRECT-WRITE",
+      "presence_state": "RESOLVED",
+      "absence_basis_item_id": "NOT_APPLICABLE:DEF-QDD-MATTER-RECORD",
+      "emit_rule_id": "DEF-QDD-DIRECT-WRITE",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "layer": "L1"
+    },
+    {
+      "record_id": "DEF-QDD-MATTER-RECORD",
+      "field_id": "density_state",
+      "field_type_id": "TYPE-QDD-TAGGED-DENSITY",
+      "role": "READOUT",
+      "carrier_id": "DEF-QDD-AMPLITUDE-B0",
+      "domain_id": "DEF-QDD-DOMAIN-K0",
+      "normalization_id": "DEF-QDD-DIRECT-WRITE",
+      "equality_id": "DEF-QDD-COEFFICIENT-Q",
+      "source_item_id": "DEF-QDD-DIRECT-WRITE",
+      "write_map_id": "DEF-QDD-DIRECT-WRITE",
+      "presence_state": "RESOLVED",
+      "absence_basis_item_id": "NOT_APPLICABLE:DEF-QDD-MATTER-RECORD",
+      "emit_rule_id": "DEF-QDD-DIRECT-WRITE",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "layer": "L1"
+    },
+    {
+      "record_id": "DEF-QDD-MATTER-RECORD",
+      "field_id": "normalized_weight_state",
+      "field_type_id": "TYPE-QDD-TAGGED-NORMALIZED-PAIR",
+      "role": "READOUT",
+      "carrier_id": "DEF-QDD-AMPLITUDE-B0",
+      "domain_id": "DEF-QDD-DOMAIN-K0",
+      "normalization_id": "DEF-QDD-DIRECT-WRITE",
+      "equality_id": "DEF-QDD-COEFFICIENT-Q",
+      "source_item_id": "DEF-QDD-DIRECT-WRITE",
+      "write_map_id": "DEF-QDD-DIRECT-WRITE",
+      "presence_state": "RESOLVED",
+      "absence_basis_item_id": "NOT_APPLICABLE:DEF-QDD-MATTER-RECORD",
+      "emit_rule_id": "DEF-QDD-DIRECT-WRITE",
+      "stage_id": "D_matter",
+      "leg_id": "D_quadratic",
+      "layer": "L1",
+      "note": "exactly normalized rational pair on the NONZERO branch; no L6 measure reading is claimed; the ZERO branch carries the tag ZERO_DENOMINATOR"
+    }
+  ],
+  "stage_manifest": [
+    {
+      "stage_id": "D_matter",
+      "domain_id": "DEF-QDD-DOMAIN-K0",
+      "codomain_id": "DEF-QDD-MATTER-RECORD",
+      "map_id": "DEF-QDD-DIRECT-WRITE",
+      "totality_domain_id": "DEF-QDD-DOMAIN-K0",
+      "dependency_item_ids": [
+        "DEF-QDD-DOMAIN-K0",
+        "DEF-QDD-BALANCED-PISTON",
+        "DEF-QDD-AMPLITUDE-B0",
+        "DEF-QDD-COEFFICIENT-Q",
+        "DEF-QDD-TRACE-PAIRING",
+        "DEF-QDD-GRAM",
+        "DEF-QDD-LOW-LINE",
+        "DEF-QDD-PROJECTOR-LOW",
+        "DEF-QDD-PROJECTOR-HIGH",
+        "DEF-QDD-BRANCH-WEIGHT-PAIRING",
+        "DEF-QDD-MATTER-RECORD"
+      ]
+    },
+    {
+      "stage_id": "D_geom",
+      "domain_id": "SCOPE_EXCLUDED(stage_domain, SCOPE-QDD-DMATTER-DQUADRATIC, DEF-DECODER-GEOMETRY, QUADRATIC-DECODER-DATA)",
+      "codomain_id": "SCOPE_EXCLUDED(stage_codomain, SCOPE-QDD-DMATTER-DQUADRATIC, DEF-DECODER-GEOMETRY, QUADRATIC-DECODER-DATA)",
+      "map_id": "SCOPE_EXCLUDED(stage_map, SCOPE-QDD-DMATTER-DQUADRATIC, DEF-DECODER-GEOMETRY, QUADRATIC-DECODER-DATA)",
+      "totality_domain_id": "SCOPE_EXCLUDED(totality_domain, SCOPE-QDD-DMATTER-DQUADRATIC, DEF-DECODER-GEOMETRY, QUADRATIC-DECODER-DATA)",
+      "dependency_item_ids": []
+    },
+    {
+      "stage_id": "D_clock",
+      "domain_id": "SCOPE_EXCLUDED(stage_domain, SCOPE-QDD-DMATTER-DQUADRATIC, DEF-DECODER-CLOCK, QUADRATIC-DECODER-DATA)",
+      "codomain_id": "SCOPE_EXCLUDED(stage_codomain, SCOPE-QDD-DMATTER-DQUADRATIC, DEF-DECODER-CLOCK, QUADRATIC-DECODER-DATA)",
+      "map_id": "SCOPE_EXCLUDED(stage_map, SCOPE-QDD-DMATTER-DQUADRATIC, DEF-DECODER-CLOCK, QUADRATIC-DECODER-DATA)",
+      "totality_domain_id": "SCOPE_EXCLUDED(totality_domain, SCOPE-QDD-DMATTER-DQUADRATIC, DEF-DECODER-CLOCK, QUADRATIC-DECODER-DATA)",
+      "dependency_item_ids": []
+    }
+  ],
+  "leg_manifest": [
+    {
+      "leg_id": "D_quadratic",
+      "owned_field_ids": [
+        "support_state",
+        "total_weight",
+        "branch_weights",
+        "density_state",
+        "normalized_weight_state"
+      ],
+      "domain_id": "DEF-QDD-DOMAIN-K0",
+      "codomain_id": "DEF-QDD-MATTER-RECORD",
+      "map_id": "DEF-QDD-DIRECT-WRITE"
+    },
+    {
+      "leg_id": "D_linear",
+      "owned_field_ids": [],
+      "domain_id": "SCOPE_EXCLUDED(leg_domain, SCOPE-QDD-DMATTER-DQUADRATIC, READING-SPLIT, QUADRATIC-DECODER-DATA)",
+      "codomain_id": "SCOPE_EXCLUDED(leg_codomain, SCOPE-QDD-DMATTER-DQUADRATIC, READING-SPLIT, QUADRATIC-DECODER-DATA)",
+      "map_id": "SCOPE_EXCLUDED(leg_map, SCOPE-QDD-DMATTER-DQUADRATIC, READING-SPLIT, QUADRATIC-DECODER-DATA)"
+    },
+    {
+      "leg_id": "D_binary",
+      "owned_field_ids": [],
+      "domain_id": "SCOPE_EXCLUDED(leg_domain, SCOPE-QDD-DMATTER-DQUADRATIC, READING-SPLIT, QUADRATIC-DECODER-DATA)",
+      "codomain_id": "SCOPE_EXCLUDED(leg_codomain, SCOPE-QDD-DMATTER-DQUADRATIC, READING-SPLIT, QUADRATIC-DECODER-DATA)",
+      "map_id": "SCOPE_EXCLUDED(leg_map, SCOPE-QDD-DMATTER-DQUADRATIC, READING-SPLIT, QUADRATIC-DECODER-DATA)"
+    }
+  ],
+  "bridge_manifest": [],
+  "quadratic_manifest": {
+    "coefficient_ring_id": "DEF-QDD-COEFFICIENT-Q",
+    "effective_carrier_id": "DEF-QDD-BALANCED-PISTON",
+    "orbit_to_amplitude_bridge_id": "DEF-QDD-AMPLITUDE-B0",
+    "gram_id": "DEF-QDD-GRAM",
+    "dagger_id": "DEF-QDD-DAGGER",
+    "transpose_id": "DEF-QDD-TRANSPOSE",
+    "qcarrier_id": "DEF-QDD-QCARRIER-EQUALITY",
+    "q_equality_id": "DEF-QDD-QCARRIER-EQUALITY",
+    "q_map_id": "DEF-QDD-QPAIR",
+    "effect_ids": "UNRESOLVED",
+    "effect_ids_semantics": "UNRESOLVED per QDD-OWNER-RULINGS-2026-07-30 Ruling 2 and the EFFECT_SHADOW_MINIMAL owner freeze, which accepts the projectors as an algebraic effect shadow but fills no completion-contract field; the frozen pair is registered as DEF-QDD-PROJECTOR-LOW/HIGH [ALGEBRAIC_READOUT] and the physical instrument family is the separate obligation QDD-INSTRUMENT-APPARATUS [O]",
+    "born_pairing_id": "DEF-QDD-BRANCH-WEIGHT-PAIRING",
+    "factorization_map_id": "DEF-QDD-FACTOR-MAP",
+    "slot_boundary_id": "QDD-QCARRIER-DIAGONAL-BOUNDARY",
+    "factorization_theorem_id": "QDD-ALGEBRAIC-FACTORIZATION"
+  },
+  "physics_manifest": {
+    "source_id": "SCOPE_EXCLUDED(physics_source, SCOPE-QDD-DMATTER-DQUADRATIC, QDD-INSTRUMENT-APPARATUS, QUADRATIC-DECODER-DATA)",
+    "current_id": "SCOPE_EXCLUDED(physics_current, SCOPE-QDD-DMATTER-DQUADRATIC, QDD-INSTRUMENT-APPARATUS, QUADRATIC-DECODER-DATA)",
+    "conservation_id": "SCOPE_EXCLUDED(physics_conservation, SCOPE-QDD-DMATTER-DQUADRATIC, QDD-INSTRUMENT-APPARATUS, QUADRATIC-DECODER-DATA)",
+    "propagator_id": "SCOPE_EXCLUDED(physics_propagator, SCOPE-QDD-DMATTER-DQUADRATIC, QDD-INSTRUMENT-APPARATUS, QUADRATIC-DECODER-DATA)",
+    "detector_id": "SCOPE_EXCLUDED(physics_detector, SCOPE-QDD-DMATTER-DQUADRATIC, QDD-INSTRUMENT-APPARATUS, QUADRATIC-DECODER-DATA)"
+  },
+  "measure_manifest": {
+    "measure_id": "UNRESOLVED",
+    "normalization_id": "DEF-QDD-BRANCH-WEIGHT-PAIRING",
+    "metrology_id": "SCOPE_EXCLUDED(metrology, SCOPE-QDD-DMATTER-DQUADRATIC, METRO-EDGE-SCALE, QUADRATIC-DECODER-DATA)",
+    "scheme_id": "SCOPE_EXCLUDED(scheme, SCOPE-QDD-DMATTER-DQUADRATIC, SCHEME-DICTIONARY, QUADRATIC-DECODER-DATA)",
+    "note": "no L6 reading is claimed; the normalized pair stays an L1 record field"
+  },
+  "closure_manifest": {
+    "write_target_ids": [
+      "support_state",
+      "total_weight",
+      "branch_weights",
+      "density_state",
+      "normalized_weight_state"
+    ],
+    "feeds_U": "FALSE",
+    "terminal_output_ids": [],
+    "terminality_basis_id": "DEF-DECODER-GEOMETRY"
+  },
+  "obligation_manifest": [
+    {
+      "requirement_id": "coefficient ring",
+      "owning_item_id": "DEF-QDD-COEFFICIENT-Q",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-ALGEBRAIC-FACTORIZATION"
+      ]
+    },
+    {
+      "requirement_id": "effective carrier",
+      "owning_item_id": "DEF-QDD-BALANCED-PISTON",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-ALGEBRAIC-FACTORIZATION"
+      ]
+    },
+    {
+      "requirement_id": "common total domain",
+      "owning_item_id": "DEF-QDD-DOMAIN-K0",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-ALGEBRAIC-FACTORIZATION"
+      ]
+    },
+    {
+      "requirement_id": "orbit-to-amplitude bridge",
+      "owning_item_id": "DEF-QDD-AMPLITUDE-B0",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-ALGEBRAIC-FACTORIZATION"
+      ]
+    },
+    {
+      "requirement_id": "Gram",
+      "owning_item_id": "DEF-QDD-GRAM",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-PROJECTOR-PAIR-TR4"
+      ]
+    },
+    {
+      "requirement_id": "dagger",
+      "owning_item_id": "DEF-QDD-DAGGER",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-QCARRIER-DIAGONAL-BOUNDARY"
+      ]
+    },
+    {
+      "requirement_id": "transpose",
+      "owning_item_id": "DEF-QDD-TRANSPOSE",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-QCARRIER-DIAGONAL-BOUNDARY"
+      ]
+    },
+    {
+      "requirement_id": "QCarrier equality",
+      "owning_item_id": "DEF-QDD-QCARRIER-EQUALITY",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-ALGEBRAIC-FACTORIZATION"
+      ]
+    },
+    {
+      "requirement_id": "Q",
+      "owning_item_id": "DEF-QDD-QPAIR",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-ALGEBRAIC-FACTORIZATION"
+      ]
+    },
+    {
+      "requirement_id": "effects",
+      "owning_item_id": "UNRESOLVED",
+      "value_state": "UNRESOLVED",
+      "basis_item_ids": [
+        "QDD-OWNER-RULINGS-2026-07-30 Ruling 2",
+        "P-DMATTER-TOTAL-1-EFFECT-SHADOW-MINIMAL-OWNER-FREEZE.md"
+      ],
+      "note": "the frozen algebraic effect shadow exists as DEF-QDD-PROJECTOR-LOW/HIGH but does not fill this requirement; a new explicit owner amendment superseding Ruling 2 would be required"
+    },
+    {
+      "requirement_id": "Born pairing",
+      "owning_item_id": "DEF-QDD-BRANCH-WEIGHT-PAIRING",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-ALGEBRAIC-FACTORIZATION"
+      ]
+    },
+    {
+      "requirement_id": "MatterData schema",
+      "owning_item_id": "DEF-QDD-MATTER-RECORD",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-ALGEBRAIC-FACTORIZATION"
+      ]
+    },
+    {
+      "requirement_id": "exact write map",
+      "owning_item_id": "DEF-QDD-DIRECT-WRITE",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "QDD-ALGEBRAIC-FACTORIZATION"
+      ]
+    },
+    {
+      "requirement_id": "complete dependency graph",
+      "owning_item_id": "canon/DEPENDENCIES.tsv",
+      "value_state": "RESOLVED",
+      "basis_item_ids": [
+        "canon/DEPENDENCIES.tsv",
+        "tools/check_ledger.py"
+      ],
+      "note": "the graph of the new definitions and claims; QUADRATIC-DECODER-DATA acquires no edge and stays O"
+    }
+  ],
+  "input_allowlist": {
+    "allowed": [
+      "the literal n = 0 head of kappa in K_QDD",
+      "its four piston coordinates",
+      "the fixed balanced section",
+      "the fixed rational and cyclotomic constants and maps of the definitions",
+      "exact deterministic arithmetic"
+    ],
+    "forbidden": [
+      "q and r",
+      "every later checkpoint and counter value",
+      "D_geom, D_clock, MatterData feedback and any emitted outcome",
+      "measured values, fitted parameters, environment, files, wall clock, randomness, network input, dynamic evaluation"
+    ]
+  },
+  "disclosure": {
+    "qcarrier_count": 313,
+    "fibre_profile": {
+      "25": 1,
+      "50": 312
+    },
+    "census_313_collision": "same count and multiplicity profile as CENSUS-313 from a different origin; the two partitions of F_5^6 share no block (AUDIT-QDD-BINDING-PACKAGE-V27 section 5); no cross-leg identity is claimed",
+    "one_sixth": "the normalized pair equals 1/6 on 12 of 312 nonzero classes; numerical witness only, no input, threshold, normalization, confirmation or dependency role"
+  },
+  "submission": {
+    "completion_contract_submitted": false,
+    "quadratic_decoder_data_status": "O / STOP, unchanged by this package",
+    "reason": "effects requirement UNRESOLVED per Ruling 2 and the EFFECT_SHADOW_MINIMAL freeze; promotion to D requires a new explicit owner amendment superseding Ruling 2"
+  },
+  "record_field_sources_note": "all five direct-branch fields are sourced through the cyclotomic write R_cyc of DEF-QDD-DIRECT-WRITE on the DEF-QDD-AMPLITUDE-B0 carrier, per section 6 of the DICTIONARY-DIRECT owner amendment; DEF-QDD-MATTER-RECORD is a pure type schema; the factor route recomputes the same five fields through DEF-QDD-BRANCH-WEIGHT-PAIRING on QCarrier_QDD, and the field-by-field equality of the two routes is QDD-ALGEBRAIC-FACTORIZATION [T]"
+}
