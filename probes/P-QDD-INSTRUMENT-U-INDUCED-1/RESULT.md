@@ -16,7 +16,7 @@ The accepted verifier completed all nine integrity/classification gates and prin
 - The two exact feedback witnesses are:
   - selector path: `theta=0`, `x=000000`, `y=000020`, selectors `0,2`, posts `0000,2121`;
   - direct-`c` path: `theta=0`, `x=000002`, `y=000011`, common selector `2`, posts `2324,2220`, difference `0104`.
-- `RECORD-INFORMATION count=150`: every nontrivial subset record of the functional `q+r` carries class information at every delay `1,...,5`.
+- `RECORD-INFORMATION count=150`: in the `W` census conditional table, every nontrivial subset record of the functional `q+r` has a class-dependent LOW rate at every delay `1,...,5`.
 
 Thus Canon v49 already contains a fully internal interaction that can create measurement-like records. No external observer, collapse instruction, or externally chosen readout event was inserted into `U`.
 
@@ -25,9 +25,9 @@ Thus Canon v49 already contains a fully internal interaction that can create mea
 For all 180 frozen record maps and all five delays:
 
 - `NO-REALIZATION-W count=0`: none of the 900 pairs realizes the QDD occurrence law for all 15625 seeds in the single window.
-- `LONG-NO-REALIZATION-W2 count=0`: none realizes it for the 625 ready-fiber seeds in the longer window.
+- `LONG-NO-REALIZATION-W2 count=0`: none realizes it for the 625 seeds with `f(x_0) = (0,0)` at `n=0` in the longer window.
 - `CENSUS-NO-REALIZATION-W count=0`: none realizes it in the exact all-state census either.
-- `INSTRUMENT-FUNCTIONAL-0`: no pair induces a seed-independent post map.
+- `INSTRUMENT-FUNCTIONAL-0`: in the `W` census joint tallies, no pair has a singleton post-class support for every visited nonzero pre-class/outcome branch with at least one event.
 - `ORIENT-POST-COHERENT-0`: no pair descends coherently through both signs of a QDD class.
 - `POST-UNDEFINED-OR-ZERO-900` and `ZERO-INPUT-MULTIVALUED-900`: every pair fails the frozen strict post-object domain rules.
 - `SEED-DEPENDENT-271350` and `ORIENTATION-DEPENDENT-22500`: the obstruction is strongly visible both across seeds and across signed representatives.
@@ -43,7 +43,7 @@ The computation separates two claims that should not be conflated:
 
 So the defensible derived statement is:
 
-> In Canon v49, the beginnings of measurement are internal dynamics: system-apparatus coupling, backreaction, and informative records. But the current autonomous update does not yet derive the QDD physical instrument or its occurrence law.
+> For the frozen v49 update `U`, piston/fiber split, record class, delays, windows, and post-object predicates, the exact finite computation finds internal coupling and backreaction, class-dependent LOW rates in the `W` census conditional table, and no realization among the 900 tested pairs on `W`, `W2`, or the census control. It does not decide whether autonomous physics derives a QDD physical instrument outside that frozen test.
 
 ## Scope and status firewall
 
