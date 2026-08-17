@@ -17,7 +17,11 @@ LAMBDA L2 (1,1) autonomous=YES in_selector=YES
 LAMBDA L3 (1,2) autonomous=YES in_selector=NO
 LAMBDA L4 (1,3) autonomous=YES in_selector=NO
 LAMBDA L5 (1,4) autonomous=YES in_selector=NO
-PASS A7 SEED_BOUND triples=281700 dependent=271350 independent=10350 pos_classes=268 max_pos_realizing_pairs=38 pigeonhole_min_failing_pairs=862 agree=YES
-PASS A8 WINDOW_FEASIBILITY pos_denominator_sum=19688 min_window_for_all_pos=19688 W=1536_max_pos=107 W2=14336_max_pos=245 zero_target_denominator=1
+PASS A7 SEED_BOUND triples=281700 dependent=271350 independent=10350 pos_classes=268 complement_form=38 pigeonhole_form=38 forms_independent=NO
+SEED-BOUND POS-REALIZED-SINGLE<=38 note=the two forms are algebraically equivalent readings of the single published C8 count and are not independent evidence
+PASS A8 DIVISIBILITY_DATA pos_denominator_sum=19688 min_q=6 max_q=256 q_ge_6=268 q_ge_8=244 zero_target_denominator=1
+VISIT-CAP W=1536 classes<=107/268 oriented_cells<=138/536
+VISIT-CAP W2=14336 classes<=245/268 oriented_cells<=401/536
+VISIT-CAP note=these bound how many positive classes a realizing seed may VISIT; REAL-POS quantifies only over visited classes, so they are weak certificates and assert no unreachability
 POS-DENOMINATORS 6:12,7:12,8:12,14:6,16:40,17:12,26:24,32:4,46:18,56:24,64:16,96:12,104:12,136:16,176:24,224:12,256:12
 SUMMARY 8/8 ALL PASS

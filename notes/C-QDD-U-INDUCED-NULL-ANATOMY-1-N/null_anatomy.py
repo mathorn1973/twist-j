@@ -13,8 +13,11 @@ Gates A1 to A6 use only Canon formulas and reproduce the published Canon-level
 audit expectations 313 / 25 / 22 as a transcription check.  Gate A7 additionally
 consumes one published integer of P-QDD-INSTRUMENT-U-INDUCED-1, the C8 count
 SEED-DEPENDENT-271350, and derives a bound on that probe's own unpublished
-restricted quantifier.  Gate A8 uses only the Canon target law and the two
-frozen window lengths.
+restricted quantifier; its two displayed forms are algebraically equivalent
+readings of that one count, not independent evidence.  Gate A8 uses only the
+Canon target law and the two frozen window lengths, and publishes the
+divisibility data a later probe needs; it asserts no unreachability, because
+the decisive test is dynamic and per seed.
 
 Python 3 standard library only.  Exact integers and Fractions.  Deterministic.
 """
@@ -253,15 +256,19 @@ for index, (alpha, gamma) in enumerate(LAMBDAS):
 # ---------------------------------------------------------------- A7
 total_triples = PAIRS * len(classes)
 independent = total_triples - SEED_DEPENDENT_C8
-bound = independent // len(both_positive)
+complement_form = independent // len(both_positive)
 off_pos = (1 + len(low_zero) + len(high_zero)) * PAIRS
 inside_pos = SEED_DEPENDENT_C8 - off_pos
-pigeon = -(-inside_pos // len(both_positive))
+pigeonhole_form = PAIRS - -(-inside_pos // len(both_positive))
 gate("A7 SEED_BOUND",
-     independent == 10350 and bound == 38 and PAIRS - pigeon == bound,
+     independent == 10350 and complement_form == 38
+     and pigeonhole_form == complement_form,
      f"triples={total_triples} dependent={SEED_DEPENDENT_C8} independent={independent} "
-     f"pos_classes={len(both_positive)} max_pos_realizing_pairs={bound} "
-     f"pigeonhole_min_failing_pairs={pigeon} agree=YES")
+     f"pos_classes={len(both_positive)} complement_form={complement_form} "
+     f"pigeonhole_form={pigeonhole_form} forms_independent=NO")
+print("SEED-BOUND POS-REALIZED-SINGLE<=38 "
+      "note=the two forms are algebraically equivalent readings of the single "
+      "published C8 count and are not independent evidence")
 
 # ---------------------------------------------------------------- A8
 denominators = {}
@@ -274,23 +281,36 @@ pos_denominators = sorted(denominators[i] for i in both_positive)
 total_denominator = sum(pos_denominators)
 
 
-def reachable(window):
+def visit_cap(window, multiplicity):
     used = 0
     count = 0
-    for q in pos_denominators:
+    for q in sorted(pos_denominators * multiplicity):
         if used + q <= window:
             used += q
             count += 1
     return count
 
 
-w_cap = reachable(1536)
-w2_cap = reachable(14336)
-gate("A8 WINDOW_FEASIBILITY",
-     total_denominator == 19688 and w_cap == 107 and w2_cap == 245
+caps = {(w, k): visit_cap(w, k) for w in (1536, 14336) for k in (1, 2)}
+gate("A8 DIVISIBILITY_DATA",
+     total_denominator == 19688 and min(pos_denominators) == 6
+     and max(pos_denominators) == 256
+     and sum(1 for q in pos_denominators if q >= 6) == 268
+     and sum(1 for q in pos_denominators if q >= 8) == 244
+     and caps[(1536, 1)] == 107 and caps[(14336, 1)] == 245
+     and caps[(1536, 2)] == 138 and caps[(14336, 2)] == 401
      and all(denominators[i] == 1 for i in low_zero + high_zero),
-     f"pos_denominator_sum={total_denominator} min_window_for_all_pos={total_denominator} "
-     f"W=1536_max_pos={w_cap} W2=14336_max_pos={w2_cap} zero_target_denominator=1")
+     f"pos_denominator_sum={total_denominator} min_q=6 max_q=256 "
+     f"q_ge_6={sum(1 for q in pos_denominators if q >= 6)} "
+     f"q_ge_8={sum(1 for q in pos_denominators if q >= 8)} "
+     f"zero_target_denominator=1")
+print(f"VISIT-CAP W=1536 classes<={caps[(1536, 1)]}/268 "
+      f"oriented_cells<={caps[(1536, 2)]}/536")
+print(f"VISIT-CAP W2=14336 classes<={caps[(14336, 1)]}/268 "
+      f"oriented_cells<={caps[(14336, 2)]}/536")
+print("VISIT-CAP note=these bound how many positive classes a realizing seed "
+      "may VISIT; REAL-POS quantifies only over visited classes, so they are "
+      "weak certificates and assert no unreachability")
 histogram = {}
 for q in pos_denominators:
     histogram[q] = histogram.get(q, 0) + 1

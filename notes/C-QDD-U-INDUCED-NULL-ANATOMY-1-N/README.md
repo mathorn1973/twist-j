@@ -1,6 +1,6 @@
 # notes/C-QDD-U-INDUCED-NULL-ANATOMY-1-N
 
-NON-CANONICAL. Incubation candidate, revision 2. No authority, no Canon change,
+NON-CANONICAL. Incubation candidate, revision 3. No authority, no Canon change,
 no `canon/` file touched, no registry row edited, no status moved. Durable git
 handoff of two documents produced 2026-08-16 against Public Canon v49 (tag
 `canon-v49`, content commit `dc80228522a4ccb9495550dfbef8ba73b33b2157`).
@@ -14,46 +14,55 @@ together with `NO-REALIZATION` over the complete class `R x D` and
 
 ## Revision history
 
-Revision 1 proposed that the whole null was carried by the 44 zero-target
-classes and that the 268-class positive sector was untested. The owner refuted
-that from the published `SEED-DEPENDENT-271350` by a counting argument, and
-revision 2 withdraws it. The withdrawn claims and the refutation are stated in
-sections 0 and 5.2 of the note. The preregistration draft was rebuilt from that
-verdict, block by block.
+```text
+r1  proposed H-ZT: the whole null carried by the 44 zero-target classes, the
+    268-class positive sector untested
+r2  owner refuted H-ZT from the published SEED-DEPENDENT-271350; three claims
+    withdrawn; a denominator argument added
+r3  owner corrected the denominator argument: the visit budget bounds how many
+    positive classes a realizing seed may VISIT and asserts no unreachability,
+    since REAL quantifies only over visited classes. One further claim and one
+    arithmetic slip withdrawn; the argument replaced by a divisibility gate
+```
+
+Both r2 and r3 corrected the same kind of error: a static count carried further
+than the quantifier it belongs to. Section 0 of the note lists every withdrawal
+by name.
 
 ## What the archive now says
 
 ```text
 1  the null quantifies over an exactly stateable narrow class, and must be
    archived with that class attached or it will be over-read
-2  the frozen construction carries at least three separate sufficient
-   obstructions, and the zero-target sector is only one of them
+2  the frozen construction carries more than one obstruction
    A  zero-target sector, 44 of 312 classes                        OPEN
    B  seed dependence inside the positive sector                   ESTABLISHED
-   C  target denominators against window length                    NECESSARY
-3  causes B and C are settled by published counts plus static arithmetic and
-   need no new physics; only cause A is still open, as Z-SUFFICIENT
+   C  a divisibility gate on the visit counts                      NOT RUN
+3  only cause A is open, as Z-SUFFICIENT, and only for the U3 indicator alone
 4  two positive results survive untouched: the channel is internal, and the
    information locus is exactly the selector-coupled functional q + r
 ```
 
-Cause B gives `POS-REALIZED-SINGLE <= 38`, that is at least 862 of the 900
-pairs already fail inside the positive sector on window `W`. Cause C gives that
-the 268 positive target denominators sum to 19688 while the frozen windows are
-1536 and 14336 steps, so the whole positive sector is arithmetically
-unreachable on either window whatever `U` does.
+Cause B gives `POS-REALIZED-SINGLE <= 38`, that is at least 862 of the 900 pairs
+already fail inside the positive sector on window `W`. Its two derivations are
+algebraically equivalent readings of one published count, not independent
+evidence.
+
+Cause C is a gate, not a result. `REAL` forces `q_c` to divide the visit count
+of every visited positive class and oriented pre-cell, so a single seed with an
+indivisible visit count would nullify all 900 pairs of that regime at once,
+before the record map and the delay are chosen. Nothing here runs it.
 
 ## Contents
 
 ```text
 README.md                                            this manifest
-C-QDD-U-INDUCED-NULL-ANATOMY-1-N.md                  the archive, revision 2
+C-QDD-U-INDUCED-NULL-ANATOMY-1-N.md                  the archive, revision 3
 PREREG-DRAFT-P-QDD-OBSTRUCTION-LOCUS-1_2026-08-16.md draft preregistration,
-                                                     revision 2, blocks B1 to
-                                                     B6; B1 has owner ANO, B2
-                                                     to B5 are rebuilt from the
-                                                     verdict, B6 is new and
-                                                     unruled
+                                                     revision 3, blocks B1 to
+                                                     B6; B1 has owner ANO,
+                                                     B2 to B5 rebuilt from the
+                                                     verdicts, B6 never ruled on
 null_anatomy.py                                      static anatomy script,
                                                      8 gates, stdlib, exact
 null_anatomy.stdout.txt                              committed stdout
@@ -103,10 +112,14 @@ A6  all six fiber functionals of Lambda_0 are autonomous; s = q+r is the unique
 A7  from the published SEED-DEPENDENT-271350: 10350 of the 281700 triples are
     seed independent, so at most 38 pairs can satisfy REAL-POS-SINGLE and at
     least 862 already fail inside the positive sector; the complement form and
-    the owner's pigeonhole form are checked to agree
-A8  the 268 positive target denominators sum to 19688, so at most 107 positive
-    classes are simultaneously realizable on W = 1536 steps and at most 245 on
-    W2 = 14336 steps; the 44 zero-target classes have denominator 1
+    the pigeonhole form are checked to agree, which is an arithmetic self-check
+    and not corroboration by a second source
+A8  the divisibility data a later probe needs: the 268 positive target
+    denominators, smallest 6 and largest 256, all 268 at least 6 and 244 at
+    least 8, summing to 19688; and the weak visit caps, at most 107 of 268
+    positive classes on W and 245 on W2, at most 138 respectively 401 of the
+    536 positive oriented pre-cells. A8 asserts no unreachability: the caps
+    bound visits, and REAL quantifies only over visited classes
 ```
 
 Gates A1 to A6 and A8 use only Canon v49 formulas and the two frozen window
@@ -122,6 +135,7 @@ reopened, amended, renamed or resumed; the RESULT prose correction on the #396
 branch is a separate commit touching only `RESULT.md`, with `PREREG.md`,
 `verify.py`, `EXPECTED.txt` and `RUN.md` byte-identical.
 
-The next steps belong to the owner, in this order: accept #396 so the result
-commit reaches `main`, rule on block B6, and only then open a fresh claim lock
-and a fresh probe branch. Nothing in this directory authorizes a probe.
+The next steps belong to the owner, in this order: read revision 3 and rule on
+B6, accept #396 so the result commit reaches `main`, and only then open a fresh
+claim lock and a fresh probe branch. Nothing in this directory authorizes a
+probe.
