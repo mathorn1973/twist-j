@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v49
+# TWIST-J Public Canon v50
 
-**Release identity.** Public Canon v49. Normative authority and activation
+**Release identity.** Public Canon v50. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v49 also declares the discrete
+algebraic axiom is J. Public Canon v50 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v49 does not claim
+seed of the two algebraic projections. Public Canon v50 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v49 contains no such
+deriving the architecture from J; Public Canon v50 contains no such
 theorem.
 
 ---
@@ -3959,6 +3959,79 @@ no unrestricted least-gap or prime-distribution result, Pell parametrization,
 inert or ramified diagonalization, gamma or polar term, completed-zeta
 compression, Weil positivity, RH or zero-simplicity statement, decoder,
 measure, physical or SI reading, or L2--L6 lift.
+
+### SUZUKI-LOCAL-CAPACITY-NOGO [T]
+
+One classical no-go complex on the screw function of the Riemann zeta
+function, in Suzuki's normalization. Freeze
+
+```text
+P(t) = sum_(p^k <= e^t) (log p) p^(-k/2) (t - k log p)          t >= 0
+S(z) = sum_(k >= 0) z^k / (4k+1)^2                              0 < z < 1
+A(t) = 8 (cosh(t/2) - 1) - alpha t + C - 4 e^(-t/2) S(e^(-2t))  t > 0
+alpha = (log pi - psi(1/4)) / 2,     C = psi'(1/4) / 4
+Psi = A - P,     K_F(s,t) = F(s) + F(t) - F(|s-t|).
+```
+
+The positivity criterion for Psi and the screw kernel K_A - K_P are
+Suzuki's; the curvature closed form and the plastic transition below are
+Mittermeier's, reproduced here by an independent implementation with no
+novelty claimed. Six statements, written proofs pinned in the public
+probe, finite gates certified by outward interval arithmetic at scale
+`2^-192`:
+
+```text
+N1  for every locally finite event family {(tau_q, omega_q)} the
+    direct-sum curve Y_t = (+)_q omega_q 1_[tau_q,t] has
+    ||Y_t||^2 = F(t), <Y_s,Y_t> = F(min(s,t)), orthogonal increments
+    and ||Y_t - Y_u||^2 = F(t) - F(u); prime powers give P
+R2  A''(t) = e^(t/2) + e^(-t/2) - e^(-t/2)/(1 - e^(-2t)); the sign
+    changes once, at log rho with rho^3 = rho + 1, rho in (13/10, 4/3)
+N3  no c0, c1 and locally finite Borel measure mu >= 0 give
+    A = c0 + c1 t + integral (t-a)_+ dmu on (0, inf): a certified
+    three-point convexity violation at (1/20, 1/4, 1/2) empties the
+    nonnegative ramp class
+N4  A(1/4) > A(1/2), so dA is not a nonnegative measure and no
+    filtration model exists on (0, log 2); on [log 2, 4/5] the single
+    exact prime ramp exceeds the capacity increment, so increment
+    domination dP <= dA and every nonnegative per-place budget die at
+    the first event q = 2
+N5  4A(3) - A(6) < 0 < A(6) and 4P(3) - P(6) < 0 < P(6), with e^3 in
+    (20, 23) and e^6 in (401, 409): both screw kernels are separately
+    indefinite; only the difference can be a screw geometry
+N8  T Z_t = Y_t with ||Z_t||^2 = A, ||Y_t||^2 = P and
+    ||T|| <= 1 - delta forces Psi >= delta (2 - delta) A against
+    Psi = o(e^(t/2)) from the prime number theorem, so ||T|| = 1
+```
+
+Together: the completion capacity is not a positive superposition of
+prime-type ramp atoms, admits no filtration or per-place domination
+reading, and is not itself a screw geometry; every Gram realization
+dominating the prime curve has operator norm exactly one and is
+nonlocal in `t`. The prime-event counting frame is motivation only. No
+statement about the Riemann hypothesis or its zeros, no least-gap or
+prime-distribution result, no decoder, measure, physical or SI
+reading, no J-coupling, and no L2--L6 lift.
+
+### SUZUKI-PRIME-FREE-WINDOW [C]
+
+`A(t) > 0` for every `t` in `[1/128, 45/64]`, where `Psi = A` on
+`(0, log 2)`: a 100-leaf adaptive outward-interval cover with zero
+undecided leaves, an independent code path reproducing one corner of
+Mittermeier's certified event-segment strip; the interval
+`(0, 1/128)` carries no gate.
+
+### SUZUKI-EVENT-COUNT [C]
+
+`N(10^6) = 78734` prime-power events `p^k <= 10^6`, by direct
+enumeration and by `sum_k pi(floor(10^(6/k)))`, exact integer equality
+of two independent counting paths.
+
+At L1, `P-SUZUKI-LOCAL-CAPACITY-NOGO-1` supplies the written proofs,
+the byte-identical two-architecture audit, twelve certified gates and
+the two finite computations above, with frozen attribution to Suzuki
+and to Mittermeier in its preregistration. It makes no statement about
+the Riemann hypothesis.
 
 ## 11. The pentit ring and the magic boundary
 

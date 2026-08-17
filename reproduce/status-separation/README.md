@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its thirty-five checks cover the current
+and emits deterministic text. Its thirty-six checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 35/35 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 36/36 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -92,6 +92,8 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v50 count check reads the folded tree (249 claims, 23 reproductions, 10 gates). The new SUZUKI-CAPACITY-NOGO check pins the L1 no-go theorem and its two finite computations to the completed two-architecture public probe bundle. It requires the empty nonnegative ramp class, first-event domination failure, separately indefinite kernels, the forced unit norm and the nonlocality consequence in the registered scopes, and requires absence of dependency, gate and frontier ownership.
 
 The v49 count check reads the folded tree (246 claims, 23 reproductions, 10 gates). The new QDD-NONSELECTION check pins the theorem at L4 on the completed two-architecture public probe, its self-contained frozen inputs and absence of dependency, gate or frontier ownership. It requires the injective rational post-state family at fixed effects, weights and C = 0, rational orthogonal-dilation nonselection, target-control circularity and the positive-root mathematics-only boundary. QDD-INSTRUMENT-APPARATUS stays O at DECODER_CORE/FOLLOWUP/STOP with exactly O2 independent physical instrument selection and O1 realized event generation / sampling. SAMPLING NOT PROVIDED; no L5 stream, L6 measure or decoder completion.
 
