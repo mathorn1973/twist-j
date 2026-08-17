@@ -27,8 +27,9 @@ disclosures in `PREREG.md`.
 
 The claim issue could not be opened before the pin because the executing
 session holds repository push access and no API credential; the exception
-and the collision scan are disclosed in `PREREG.md`. The issue link is to be
-recorded here before any Canon fold.
+and the collision scan are disclosed in `PREREG.md`. The claim issue is
+https://github.com/mathorn1973/twist-j/issues/399, opened post-pin under
+that exception on 2026-08-17.
 
 ## Command
 
@@ -43,7 +44,7 @@ Machine-readable command field:
 command: python3 probes/P-SUZUKI-LOCAL-CAPACITY-NOGO-1/verify.py
 ```
 
-## Local formal leg
+## Local leg record
 
 ```text
 platform: Ubuntu 24.04.4 LTS
