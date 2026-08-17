@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 139, "D": 42, "C": 27, "F": 13,
+    expected_counts = {"T": 140, "D": 42, "C": 29, "F": 13,
                        "O": 23, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v49",
-        len(rows) == 246
+        "registry and companion-ledger counts match Public Canon v50",
+        len(rows) == 249
         and counts == expected_counts
-        and len(normative) == 281
+        and len(normative) == 284
         and len(dependencies) == 425
-        and len(evidence) == 246
-        and two_architecture == 165
-        and len(history) == 762
+        and len(evidence) == 249
+        and two_architecture == 168
+        and len(history) == 765
         and len(gates) == 10
         and len({row["program_id"] for row in programs.values()}) == 7
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
@@ -2381,6 +2381,61 @@ def run():
         )
         and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
         and has_status(index, "QUADRATIC-DECODER-DATA", "O"),
+    ))
+
+    suzuki = "SUZUKI-LOCAL-CAPACITY-NOGO"
+    suzuki_path = "probes/P-SUZUKI-LOCAL-CAPACITY-NOGO-1"
+    suzuki_digest = (
+        "0891418a788e7e2d1d4795af8883020dbcd78c7ea2f9f9fefb41b055131deb65"
+    )
+    suzuki_window = "SUZUKI-PRIME-FREE-WINDOW"
+    suzuki_count = "SUZUKI-EVENT-COUNT"
+    suzuki_rows = (suzuki, suzuki_window, suzuki_count)
+    suzuki_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] in suzuki_rows
+    }
+    checks.append((
+        "SUZUKI-CAPACITY-NOGO",
+        "the L1 no-go complex for the Suzuki completion capacity enters at T with two finite C computations, all pinned to the two-architecture public probe bundle and free of dependency, gate and frontier ownership",
+        has_status(index, suzuki, "T")
+        and has_status(index, suzuki_window, "C")
+        and has_status(index, suzuki_count, "C")
+        and normative.get(suzuki, {}).get("item_type") == "THEOREM"
+        and normative.get(suzuki, {}).get("status") == "T"
+        and normative.get(suzuki, {}).get("layer") == "L1"
+        and normative.get(suzuki, {}).get("gate_ids") == ""
+        and normative.get(suzuki_window, {}).get("item_type") == "COMPUTATION"
+        and normative.get(suzuki_count, {}).get("item_type") == "COMPUTATION"
+        and all(index.get(row, {}).get("evidence") == suzuki_path for row in suzuki_rows)
+        and all(evidence.get(row, {}).get("evidence_kind") == "PUBLIC_PROBE" for row in suzuki_rows)
+        and all(evidence.get(row, {}).get("location") == suzuki_path for row in suzuki_rows)
+        and all(evidence.get(row, {}).get("sha256") == suzuki_digest for row in suzuki_rows)
+        and all(
+            evidence.get(row, {}).get("architecture_requirement") == "two-architecture"
+            for row in suzuki_rows
+        )
+        and all(row not in programs for row in suzuki_rows)
+        and all(row["owner_item_id"] not in suzuki_rows for row in gates.values())
+        and suzuki_dependencies == set()
+        and scope_contains_all(
+            index, suzuki,
+            ("orthogonal increments",
+             "the nonnegative ramp class is empty",
+             "at the first event q = 2",
+             "separately indefinite",
+             "the norm is exactly one",
+             "nonlocal in t",
+             "no J-coupling, no L2--L6 lift"),
+        )
+        and scope_contains_all(
+            index, suzuki_window,
+            ("[1/128, 45/64]", "zero undecided leaves"),
+        )
+        and scope_contains_all(
+            index, suzuki_count,
+            ("78734", "two independent counting paths"),
+        ),
     ))
 
     fw_requires = {}
