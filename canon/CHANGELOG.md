@@ -1,12 +1,42 @@
 # Canon changelog (public series)
 
 
-## Public Canon v49
+## Public Canon v50
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 246 claims; 0 T-LOCK, 139 T, 42 D, 27 C, 2 H, 23 O, 13 F; 25 live H/O.
+Registry snapshot: 249 claims; 0 T-LOCK, 140 T, 42 D, 29 C, 2 H, 23 O, 13 F; 25 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v50 registers three rows from the completed public probe
+`P-SUZUKI-LOCAL-CAPACITY-NOGO-1`, all at layer L1 over the classical
+Riemann zeta function. `SUZUKI-LOCAL-CAPACITY-NOGO [T]` is the local no-go
+complex for the completion capacity of the Suzuki screw function: the
+prime side is a canonical orthogonal-increment path; the reproduced
+curvature closed form changes sign once at the plastic constant; a
+certified convexity violation empties the nonnegative ramp class;
+filtration and per-place increment domination die at the first event
+`q = 2`; both screw kernels are separately indefinite; and any
+contraction realizing capacity over the prime curve is forced to operator
+norm exactly one by the prime number theorem import, so every dominating
+Gram realization is nonlocal in `t`.
+
+`SUZUKI-PRIME-FREE-WINDOW [C]` certifies `A > 0` on `[1/128, 45/64]` by a
+100-leaf adaptive outward-interval cover with zero undecided leaves, an
+independent code path reproducing one corner of the cited certified strip
+record. `SUZUKI-EVENT-COUNT [C]` fixes `N(10^6) = 78734` by two exact
+counting paths.
+
+The screw function, its positivity criterion and its kernel follow
+Suzuki; the curvature closed form, the plastic transition and the strip
+record follow Mittermeier; the reproductions claim no novelty, with
+attribution frozen in the probe preregistration. The prime-event counting
+frame stays motivation. No statement about the Riemann hypothesis or its
+zeros, no J-coupling, no new H or O row, and no change to any existing
+row is made.
+
+
+## Public Canon v49
 
 Public Canon v49 registers exactly one new scientific row,
 `QDD-INSTRUMENT-NONSELECTION [T]`, at L4 apparatus/support scope from the
