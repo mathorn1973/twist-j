@@ -38,7 +38,8 @@ live H/O:  25 unchanged.
 ```
 
 No frontier, gate, or core-selection change; no L2-L6, physical, decoder
-completion, census, or SI claim is added.
+completion, census, or SI claim is added. The deterministic
+status-separation audit is refreshed to the v52 counts.
 
 ## Public Canon v51
 
