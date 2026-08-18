@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v51
+# TWIST-J Public Canon v52
 
-**Release identity.** Public Canon v51. Normative authority and activation
+**Release identity.** Public Canon v52. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v51 also declares the discrete
+algebraic axiom is J. Public Canon v52 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v51 does not claim
+seed of the two algebraic projections. Public Canon v52 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v51 contains no such
+deriving the architecture from J; Public Canon v52 contains no such
 theorem.
 
 ---
@@ -2099,6 +2099,81 @@ so the translation subgroup is all of `(F_5^6)^k` for every `k >= 2`.
 The lower bound is sharp: at `k = 1` the same four letters have nine
 components. This is an L1 state theorem for the declared coupled carrier;
 it supplies no continuum, measure, or physical lift.
+
+TM-SHEET-SYNCHRONIZING-GRAPH [T] is the exact L1 theorem for the sheet pair
+induced by the declared generators. Direct substitution in the sheet laws
+above gives the two letter maps on `F_5`,
+
+```
+T_0 = (0,4,0,4,4),          T_1 = (2,1,1,3,1),
+```
+
+a word `w = w_1 ... w_k` acting in temporal order, `T_w = T_(w_k) o ... o
+T_(w_1)`, with image `R(w) = T_w(F_5)`, and `theta_n = s_2(n) mod 2` driving
+the Thue-Morse language. The theorem has eight clauses:
+
+```
+G1  for every finite binary word w, |R(w)| = 1 iff w contains 011 or
+    110; the minimal synchronizing words are exactly 011 and 110, and
+    R(11) = {1,3};
+G2  the transformation automaton with identity start has exactly 9
+    states and 8 nonempty-word maps; its support quotient has 7 states
+    and exactly two 2-to-1 identifications, on support {0,4} the maps
+    (0,4,0,4,4) and (0,4,4,4,4), on support {1,2} the maps (2,1,2,1,1)
+    and (2,1,1,1,1); the quotient is well defined on every support
+    class;
+G3  the Thue-Morse factors of length at most 16 are exactly the factors
+    of mu^4(ab) for ab in {00,01,10,11}, mu(0)=01, mu(1)=10; the factor
+    counts for lengths 1..16 are 2 4 6 10 12 16 20 22 24 28 32 36 40 42
+    44 46; every factor of length 9 synchronizes;
+G4  the unique nonsynchronizing factor of length 8 is the palindrome
+    w* = 10100101, the unique 11-free factor of length 8; no 11-free
+    factor of length 9 to 16 exists; for lengths 3 to 16 a factor fails
+    to synchronize iff it contains no 11; the unique two-sided
+    neighborhood is 1 w* 1;
+G5  T_w*(0) = 2 and T_w*(z) = 1 for z != 0, so the preimage partition
+    is {0} | F_5^x, the zero orientation partition of
+    FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT, as a partition coincidence
+    only;
+G6  eps(T_w*(z)) = 1 iff z = 0 in the quadratic-class bit eps(1) =
+    eps(4) = 0, eps(2) = eps(3) = 1; R(01) = R(w*) = {1,2} while
+    T_01 = (2,1,2,1,1) differs from T_w*, the pre-final maps being
+    (0,4,0,4,4) and (0,4,4,4,4) of equal support {0,4};
+G7  over the two-sided Thue-Morse subshift the skew product (theta, z)
+    -> (S theta, T_(theta_0) z) has the invariant graph
+    z = 4 + 2 theta_(-1); every length-9 factor composes to the
+    constant map with value 4 + 2 u_last, so the graph is the unique
+    invariant graph, unconditionally; the canonical start 011 reaches
+    it in exactly 3 letters, and 9 is sharp, witnessed by |R(w*)| = 2;
+G8  (4 + 2 theta) mod 5 = (-(-1)^theta) mod 5, so on the graph
+    z_(n+1) = -Theta_n^2 in the RAMIFIED-TM-LIFT phase; the
+    quadratic-class bit is removed by a 2-to-1 merge at every
+    synchronization edge and the clock bit survives only as the sign
+    inside {1,4}.
+```
+
+Proof shape. Either reset word sends each of the seven reachable subset
+states to a singleton, and a word avoiding both walks the five
+nonsingleton states of the subset graph and never leaves them; the
+equivalence was additionally checked over all 32766 binary words of
+length at most 14. Every Thue-Morse factor of length at most 16 lies in
+a concatenation of two adjacent mu^4 blocks, and mu^4 of each occurring
+pair is itself a factor, so the block language is exact. For the graph,
+any invariant assignment h satisfies h(theta) = T_(theta_(-1)) o ... o
+T_(theta_(-9)) applied to an arbitrary value, and every such nine-letter
+composite is the constant 4 + 2 theta_(-1).
+
+The eight clauses were verified by `probes/P-TM-SHEET-SYNCHRONIZING-GRAPH-1`:
+sixteen exact gates, exit zero, and byte-identical aarch64 and x86_64
+output against the recorded expected stream.
+
+The theorem is L1 only. It assigns no census meaning to the value pair
+{1,4}, reconstructs no counter, claims no completeness, uniqueness, or
+totality for any decoder reading, makes no physical-irreversibility,
+probability, or measure statement, and recovers no four-phase lift value.
+KERNEL-Z6-SYNCHRONIZATION [T] is lineage: the sheet laws and the table
+are re-derived above, not imported. The partition coincidence of G5
+carries no derivation in either direction.
 
 ## 4. The two places
 

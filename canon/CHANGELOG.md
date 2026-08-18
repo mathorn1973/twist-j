@@ -1,11 +1,49 @@
 # Canon changelog (public series)
 
-## Public Canon v51
+## Public Canon v52
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 263 claims; 0 T-LOCK, 151 T, 42 D, 30 C, 2 H, 23 O, 15 F; 25 live H/O.
+Registry snapshot: 264 claims; 0 T-LOCK, 152 T, 42 D, 30 C, 2 H, 23 O, 15 F; 25 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v52 registers one row from the completed public probe
+`P-TM-SHEET-SYNCHRONIZING-GRAPH-1`. `TM-SHEET-SYNCHRONIZING-GRAPH [T]` is
+the synchronizing-graph theorem of the induced sheet pair: a binary word
+collapses the five sheets to one exactly when it contains a reset word
+011 or 110; the nine-state transformation automaton refines the
+seven-state support quotient by exactly two 2-to-1 identifications,
+separating the seed-blind observable from the leaf relation; the
+Thue-Morse language of length at most 16 is closed exactly by mu^4
+blocks; the unique blind window w* = 10100101 carries the source
+partition {0} | F_5^x for eight letters and the forced next letter
+merges it away; the skew product over the two-sided subshift has the
+unique invariant graph z = 4 + 2 theta_(-1), and on the graph
+z_(n+1) = -Theta_n^2, so the clock bit survives only as the sign inside
+{1,4} while the quadratic-class bit is erased at every synchronization.
+The partition coincidence with FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT is
+registered with no derivation in either direction, per the owner ruling
+of 2026-08-18. The probe is result-exposed by declaration: two prior
+project runs are pinned inside its preregistration, the frozen verifier
+ran exactly once on native aarch64, and the pull-request replay
+reproduced the expected output byte-identically on x86_64 and aarch64.
+
+The v52 ledger change is signed term by term:
+
+```text
+claims:    263 + 1 L1 theorem = 264,
+T:         151 + 1 = 152,
+two-architecture evidence: 182 + 1 = 183,
+live H/O:  25 unchanged.
+```
+
+No frontier, gate, or core-selection change; no L2-L6, physical, decoder
+completion, census, or SI claim is added.
+
+## Public Canon v51
+
+Registry snapshot: 263 claims; 0 T-LOCK, 151 T, 42 D, 30 C, 2 H, 23 O, 15 F; 25 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v51 registers fourteen rows from five completed public probe
 families: eleven theorems, one finite computation and two exact
