@@ -1,12 +1,72 @@
 # Canon changelog (public series)
 
-
-## Public Canon v50
+## Public Canon v51
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 249 claims; 0 T-LOCK, 140 T, 42 D, 29 C, 2 H, 23 O, 13 F; 25 live H/O.
+Registry snapshot: 263 claims; 0 T-LOCK, 151 T, 42 D, 30 C, 2 H, 23 O, 15 F; 25 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v51 registers fourteen rows from five completed public probe
+families: eleven theorems, one finite computation and two exact
+falsifications. All five evidence bundles passed the required x86_64 and
+aarch64 jobs byte-identically. Five typed definitions fix the independent
+integral QPAIR carrier, its Hermitian and symmetric slots, the mixed
+order-four action and the relative admissible linear class.
+
+The C4/2I QPAIR block separates three questions that had previously been
+conflated. On the independent carrier `O_K^2`, the Hermitian slot does not
+carry the mixed action through its integral `zeta_5` collision, while the
+typed pair closes by an exact rational-linear order-four map. The symmetric
+slot has sign fibres and therefore set-theoretically determines the
+Hermitian slot, so the pair has no information-theoretic minimality claim.
+The marked `Sym^2(2a)=3a` module is irreducible, and the full pair is the
+least closure only in the frozen class that retains the original Hermitian
+slot with a linear typed readout and is stable under both marked pullback
+families. Two universal propositions are registered at F: `2I`-equivariance
+alone does not force a pair, and the mixed action does not normalize the
+marked `2I`.
+
+The tensor block registers the natural matched-sector product law, the
+factor-gauge non-descent of the two cross sectors, and the exact
+characteristic-not-two decomposition
+`Sym^2(V tensor W)=Sym^2(V) tensor Sym^2(W) direct-sum
+Lambda^2(V) tensor Lambda^2(W)`. For two-dimensional factors this is
+`10=9+1`; product squares span the nine-dimensional summand and the missing
+projection is `(ad-bc)kappa/2`. That line is a determinant/concurrence
+direction in the quadratic target, not a Bell state, the ordinary singlet,
+or a one-dimensional defect theorem for the full pair.
+
+`FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT [T]` proves over every field that a
+nontrivial total Boolean cut descends through multiplication only in the two
+oriented cases `{0}/OR` and `F^x/AND`. The zero-deleted
+quadratic-character controls do not supply fifth-prime content or a QDD
+dependency.
+
+`QDD-U-INDUCED-CHANNEL [T]` registers the exact L1 bidirectional algebraic
+channel already present in the public update. The separate
+`QDD-U-INDUCED-FINITE-NONSELECTION [C]` exhausts the frozen 900
+record-delay pairs across its registered finite windows: `INFO=150`, no
+occurrence-law realization, no functional post object, and an empty eligible
+family. Its induced-apparatus conclusion is L4 inside a multi-layer finite
+classification; it is no limit or sampling-impossibility result.
+
+`TT-VECTOR-MOMENT-UNDERDETERMINATION [T]` gives six exact unit-modulus laws
+that agree through degree three while their squared-readout spectra vary,
+with the complete degree-four and degree-five separator inventories and the
+fixed-modulus Wick obstruction. It selects no state and produces no
+numerical `r_T(k)`.
+
+The fold adds exactly 29 explicit dependency edges and no blanket
+architecture edges. `TT-VECTOR-STATE-NORMALIZATION` and
+`QDD-INSTRUMENT-APPARATUS` receive scope-only O-to-O history events recording
+the new boundaries; both remain O/STOP. No gate, frontier program,
+reproduction directory, physical lift, decoder completion, L6 measure,
+`BELL-CAUSAL-ACCOUNTING` row, or status change of any pre-existing claim is
+introduced.
+
+
+## Public Canon v50
 
 Public Canon v50 registers three rows from the completed public probe
 `P-SUZUKI-LOCAL-CAPACITY-NOGO-1`, all at layer L1 over the classical

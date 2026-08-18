@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 249)
+        self.assertEqual(self.report.claims, 263)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 29, "D": 42, "F": 13, "H": 2, "O": 23, "T": 140},
+            {"C": 30, "D": 42, "F": 15, "H": 2, "O": 23, "T": 151},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 41,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 168,
+                "two-architecture": 182,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,9 +43,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 176)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 205
+            len(self.report.transitive_architecture_dependents), 210
         )
-        self.assertEqual(len(self.report.dependency_terminals), 27)
+        self.assertEqual(len(self.report.dependency_terminals), 37)
         for claim in (
             "SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION",
             "SPLIT-RAPIDITY-FEJER-GRAM-BOUND",
