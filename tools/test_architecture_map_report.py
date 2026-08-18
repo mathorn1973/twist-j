@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 263)
+        self.assertEqual(self.report.claims, 264)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 30, "D": 42, "F": 15, "H": 2, "O": 23, "T": 151},
+            {"C": 30, "D": 42, "F": 15, "H": 2, "O": 23, "T": 152},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 41,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 182,
+                "two-architecture": 183,
             },
         )
         self.assertFalse(self.report.count_mismatches)

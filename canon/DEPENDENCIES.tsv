@@ -453,3 +453,6 @@ QDD-QCARRIER-DIAGONAL-BOUNDARY	DEF-QDD-TRANSPOSE	REQUIRES	the second slot
 QDD-INSTRUMENT-APPARATUS	DEF-QDD-PROJECTOR-LOW	REQUIRES	the instrument family must realize the frozen E_low exactly
 QDD-INSTRUMENT-APPARATUS	DEF-QDD-PROJECTOR-HIGH	REQUIRES	the instrument family must realize the frozen E_high exactly
 QDD-INSTRUMENT-APPARATUS	DEF-QDD-GRAM	REQUIRES	E_a = K_a^sharp K_a is taken in the frozen Gram form
+TM-SHEET-SYNCHRONIZING-GRAPH	KERNEL-Z6-SYNCHRONIZATION	BOUNDED_BY	the sheet pair and its table are re-derived from the same declared generators and selector; the moving-layer theorem is lineage and its exclusion of census meaning for the value pair is inherited unchanged
+TM-SHEET-SYNCHRONIZING-GRAPH	RAMIFIED-TM-LIFT	BOUNDED_BY	clause (viii) quotes the registered phase dictionary Theta_n^2 = (-1)^theta_n as a reading of the standalone congruence 4 + 2 theta = -(-1)^theta mod 5; nothing is inherited as a premise
+TM-SHEET-SYNCHRONIZING-GRAPH	FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT	BOUNDED_BY	clause (v) states a partition coincidence with the zero orientation of the cut classification; no derivation is claimed in either direction, per the owner ruling of 2026-08-18

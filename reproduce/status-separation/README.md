@@ -93,7 +93,7 @@ determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
 
-The v51 count check reads the folded tree (263 claims, 23 reproductions,
+The v52 count check reads the folded tree (264 claims, 23 reproductions,
 10 gates). Five new bundle-level checks pin the TT moment
 underdetermination theorem and its still-open normalization parent; the exact
 U-induced channel and complete finite multi-layer QDD nonselection
