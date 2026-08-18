@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v50
+# TWIST-J Public Canon v51
 
-**Release identity.** Public Canon v50. Normative authority and activation
+**Release identity.** Public Canon v51. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v50 also declares the discrete
+algebraic axiom is J. Public Canon v51 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v50 does not claim
+seed of the two algebraic projections. Public Canon v51 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v50 contains no such
+deriving the architecture from J; Public Canon v51 contains no such
 theorem.
 
 ---
@@ -1212,6 +1212,52 @@ QDD-INSTRUMENT-NONSELECTION [T]
     frozen occurrence weights globally. No physical selector, L5
     realized-event stream, L6 measure, decoder completion or SI statement;
     SAMPLING NOT PROVIDED, not SAMPLING IMPOSSIBLE.
+QDD-U-INDUCED-CHANNEL [T]
+    On the registered autonomous carrier Omega = N_0 x F_5^6, write
+    x = (p1,p4,p1p,p4p,q,r), pi(x) = (p1,p4,p1p,p4p), and f(x) = (q,r).
+    The five generator fibers are exactly
+        f(a(x)) = (q,r),
+        f(b(x)) = (-q,-r),
+        f(c(x)) = (1-q,-r),
+        f(d(x)) = (1-q,1-r),
+        f(e(x)) = (2-q,1-r).
+    Since sigma = sum pi(x) + (q+r) + 2 theta_n mod 5, the delay-one fiber
+    is a function only of (f(x_k),theta_k,sum pi(x_k)); every
+    piston-to-fiber influence at delay one passes through the selector.
+    Fiber-to-piston influence is witnessed independently by
+        theta=0, x=000000, y=000020, sigma=0,2, post=0000,2121,
+    and
+        theta=0, x=000002, y=000011, sigma=2,
+        post=2324,2220, difference=0104=(r-r')u_c.
+    This is exact L1 bidirectional algebraic channel structure. It claims no
+    structural factorization for delays d>=2 and no physical measurement,
+    selector, instrument, effect realization, event law, sampling map,
+    normalized measure or decoder completion.
+QDD-U-INDUCED-FINITE-NONSELECTION [C]
+    Freeze the six nonzero projective F_5-linear fiber functionals, the
+    thirty nonempty proper subsets S of F_5, the 180 records
+    rho_(lambda,S), delays D={1,2,3,4,5}, W with 512 <= n < 2048 over all
+    15625 seeds, W2 with 2048 <= n < 16384 over the 625 ready-fiber seeds,
+    and the summed W
+    census. The complete exact classification of all 900 record-delay pairs
+    gives INFO=150 on the census and zero realizations of the frozen
+    occurrence law on W, W2 or the census. It further gives
+        FUNCTIONAL=0,
+        ORIENT-POST-COHERENT=0,
+        POST-PURE-STRICT=0,
+        POST-MIXED=0,
+        POST-UNDEFINED-OR-ZERO=900,
+        ZERO-INPUT-MULTIVALUED=900.
+    The frozen-family eligible set is empty, so evaluated/member/outside is
+    0/0/0; no outside-family conclusion follows. Seed-dependent triples
+    number 271350, orientation-dependent triples number 22500, and the
+    canonical table root is
+    0baacabc9d94a824c6a9480695c7a37f2762a3a2e773d1161c26816a2dbdee15.
+    This is a multi-layer finite classification: its induced-apparatus
+    conclusion is at L4, over the registered L1 update and the frozen finite
+    L5 windows, for this U, split, record class, delays and seeds only. It supplies no
+    limit, independent physical selector, sampling-impossibility theorem,
+    exclusion of another admissible apparatus class or decoder completion.
 QDD-INSTRUMENT-APPARATUS [O]
     after the nonselection theorem only two independent blockers remain:
     O2, independent physical instrument selection from a public admissible
@@ -1240,12 +1286,64 @@ rational family of physically distinct post-state instruments at fixed effects,
 weights and C = 0 and proves rational orthogonal-dilation surjectivity. It does
 not select a physical family or create an event stream or measure.
 
+`P-QDD-INSTRUMENT-U-INDUCED-1` supplies the written L1 channel proof and its
+complete checkpoint audit, together with the two explicit fiber-to-piston
+witnesses. The same two-architecture bundle exhausts the frozen 900
+record-delay pairs and supplies the finite multi-layer classification above,
+whose apparatus conclusion is at L4. Neither
+result closes `QDD-INSTRUMENT-APPARATUS`: O2 independent physical selection
+and O1 realized event generation or sampling remain STOP. The empty
+frozen-family eligibility set licenses no conclusion about instruments
+outside that family.
+
 ## 3. The kernel and the census
 
 F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
 attractors. The finite kernel is the declared checkpoint architecture
 paired with the algebraic verb. No derivation or uniqueness of this
-architecture from J or M_J is claimed. Its checkpoint space is Z_5^6
+architecture from J or M_J is claimed.
+
+### FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT [T]
+
+Let \(F\) be any field, let \(\varnothing\ne A\subsetneq F\), and put
+\(d_A=1_A:F\to\{0,1\}\). There is a total Boolean operation
+\(B:\{0,1\}^2\to\{0,1\}\) satisfying
+
+```text
+d_A(xy) = B(d_A(x),d_A(y))       for every x,y in F
+```
+
+if and only if exactly one of the two oriented cases holds:
+
+```text
+A = {0},    B = OR;
+A = F^x,    B = AND.
+```
+
+In either case \(B\) is unique. Indeed, put \(\epsilon=d_A(0)\).
+Since both colors occur and \(0y=0\), one has
+\(B(\epsilon,b)=\epsilon\) for both attained bits. If a nonzero \(u\)
+also had color \(\epsilon\), then \(d_A(uy)=\epsilon\) for every \(y\);
+multiplication by \(u\) is bijective, so \(d_A\) would be constant.
+Thus `d_A(u)=1-epsilon` for every nonzero `u`. All four Boolean input
+pairs are realized by zero/nonzero factors, so the table is uniquely OR
+when `epsilon=1` and uniquely AND when `epsilon=0`; the absence of zero
+divisors proves both converses.
+
+The exact evidence is `probes/P-FIELD-ZERO-NONZERO-CUT-1`. The theorem is
+independent of characteristic and contains no specifically fifth-prime
+content. Deleting zero changes the problem: on \(F_5^x\), the two
+quadratic-character orientations are `QR/XNOR` and `NQR/XOR`. This
+unit-group boundary does not contradict the total-field classification.
+
+The result is L1 field and Boolean algebra only. Its shape is a structural
+cross-reference to the public `ZERO_SUPPORT | SUPPORTED` and
+`ZERO_DENOMINATOR` branches, not a theorem that any QDD record satisfies the
+displayed composition law. It selects no field or cut, creates no QDD
+dependency, and moves no decoder, apparatus, L5 stream, L6 measure, or
+frontier status.
+
+The checkpoint space is Z_5^6
 with coordinates (p1, p4, p1p, p4p, q, r) and five involutive
 generators, all arithmetic mod 5:
 
@@ -4074,6 +4172,121 @@ evidenced by probes/P-BELL-MAGIC-BOUNDARY-1. It is not an unrestricted
 Bell cap, a theorem about local-variable models, a continuous quantum optimum,
 or a Tsirelson claim. The legacy modulus bound involving phi is a
 different observable.
+
+### Product composition of the quadratic pair
+
+Let \(K\) be a field of characteristic not two with involution `c`, let
+`bar(V)` be the `c`-twist of `V`, and identify `Sym^2(V)` with the
+`+1` eigenspace of factor interchange. Put
+
+```text
+H(V) = V tensor bar(V),    S(V) = Sym^2(V),
+Q(V) = H(V) direct-sum S(V),
+H(v) = v tensor bar(v),    S(v) = v tensor v,
+Q(v) = (H(v),S(v)).
+```
+
+Canonical factor reorderings define the typed matched maps
+
+```text
+boxtimes_H: H(V) tensor H(W) -> H(V tensor W),
+boxtimes_S: S(V) tensor S(W) -> S(V tensor W).
+```
+
+The exact evidence is
+`probes/P-QPAIR-SYM2-TENSOR-DEFECT-1`.
+
+**QPAIR-PRODUCT-COMPOSITION [T].** The componentwise law
+
+```text
+mu((A,B),(C,D)) = (A boxtimes_H C, B boxtimes_S D)
+```
+
+is natural, associative, symmetric, and unital, with unit `Q(1)=(1,1)`,
+and satisfies
+
+```text
+Q(v tensor w) = mu(Q(v),Q(w)).
+```
+
+This is an exact product-vector law and extends bilinearly on the matched
+carrier sectors. It does not assert surjectivity onto the symmetric squares
+of entangled vectors.
+
+**QPAIR-CROSS-SECTOR-NONDESCENT [T].** The reciprocal change of
+factorization `(v,w) -> (lambda v,lambda^-1 w)` fixes the composite tensor.
+It leaves `H tensor H` and `S tensor S` invariant, while the cross sectors
+have weights
+
+```text
+H tensor S: c(lambda)/lambda,     S tensor H: lambda/c(lambda).
+```
+
+For \(K=Q(\zeta_5)\), `c(zeta_5)=zeta_5^-1`, and
+\(\lambda=\zeta_5\), the weights are
+\(\zeta_5^3\) and \(\zeta_5^2\), neither one. Thus neither nonzero cross
+sector assignment arising from nonzero `v,w` descends to a function of the
+composite pure tensor. Retaining the matched sectors is a typed descent
+through factorization gauge, not an arbitrary deletion of invariant data.
+
+**QPAIR-SYM2-TENSOR-DEFECT [T].** If `char(K) != 2` and
+\(\dim V=\dim W=2\), then
+
+```text
+Sym^2(V tensor W)
+  = (Sym^2(V) tensor Sym^2(W)) direct-sum
+    (Lambda^2(V) tensor Lambda^2(W)),
+10 = 9 + 1.
+```
+
+The linear span of product squares is exactly the first, nine-dimensional
+summand. Freeze the reorder
+
+```text
+R((v tensor w) tensor (v' tensor w'))
+  = (v tensor v') tensor (w tensor w').
+```
+
+On the reordered space let `alpha` swap the two `V` factors, let `beta`
+swap the two `W` factors, and put
+
+```text
+P_++ = (1+alpha)(1+beta)/4,    P_-- = (1-alpha)(1-beta)/4.
+```
+
+For
+
+```text
+x = a e0 f0 + b e0 f1 + c e1 f0 + d e1 f1,
+kappa = (e0 wedge e1) tensor (f0 wedge f1),
+u wedge v = u tensor v - v tensor u,
+```
+
+the missing projection is
+
+```text
+P_-- R(x tensor x) = ((ad-bc)/2) kappa.
+```
+
+The line transforms by `det(g)det(h)`, is fixed by
+`SL_2 times SL_2`, and vanishes exactly on the product cone.
+
+The missing line is a determinant/concurrence direction in the quadratic
+symmetric target. It is not a Bell state and not the ordinary two-qubit
+singlet in \(V\otimes W\). After a complex norm is supplied, normalized
+Bell states are inputs maximizing the ordinary concurrence `2|ad-bc|`.
+The `9+1` result is confined to the symmetric slot and does not assert that
+a full Hermitian-plus-symmetric informational or entanglement defect is
+one-dimensional.
+
+These are L1 product-composition statements. They create no
+`BELL-CAUSAL-ACCOUNTING` row, no dependency on
+`QUADRATIC-DECODER-DATA`, no bridge to rational \(V_{\rm eff}\), and no
+decoder, observable, Born rule, instrument, L5 stream, or L6 measure.
+The `zeta_5` instance is only an exact factor-gauge witness and carries no
+fifth-prime physical or selection content. `QDD-QCARRIER-DIAGONAL-BOUNDARY`
+and `QUADRATIC-DECODER-DATA` retain their registered scopes and statuses.
+
 The Fibonacci category with central charge c = 14/5 is mathematical
 background; its physical reading fired: the phibit is abelian Z_5, not
 the tau anyon (PHIBIT-NOT-TAU [F], reproduce/hyperplane-codec). The
@@ -4200,6 +4413,182 @@ close to exactly 120 matrices over Z[zeta_5], and reduction modulo
 (1 - zeta)^4 = 5(zeta^2 - zeta - zeta^3). The Hessian reduces to the
 Dickson form; in the Klein gauge the explicit orbit realizes
 gamma^2 = 3 alpha.
+
+### The integral quadratic pair and its relative closure
+
+The following definitions fix the carrier and admissible category of this
+subsection.
+
+**DEF-QPAIR-SPIN-CARRIER.** Put
+
+```text
+K = Q(zeta_5),    O_K = Z[zeta_5],    c(zeta_5) = zeta_5^-1,
+V_spin = O_K^2.
+```
+
+The coordinates of `V_spin` are independent. Scalar multiplication
+`u(z1,z2)=(u z1,u z2)` is defined on the carrier for `u in O_K`, and is a
+carrier automorphism for `u in O_K^x`. Statements below using `u in K^x`
+are made after scalar extension to `K^2`. This is neither a diagonal
+two-place image of one field element nor the rational carrier
+\(V_{\rm eff}\) of `DEF-QDD-QPAIR`. The marked binary-icosahedral action
+uses exactly
+`COLOR-INTEGRAL-LIFT`:
+
+```text
+S0 = ((0,-1),(1,0)),    T0 = ((zeta_5,1),(0,zeta_5^-1)),
+G = <S0,T0>.
+```
+
+**DEF-QPAIR-HERM-SLOT.** On `V_spin` define
+`H(v)=v c(v)^T`. Under the principal embedding its linearly readable
+coordinate space \({\cal H}\) has real dimension four.
+
+**DEF-QPAIR-SYM-SLOT.** Define `S(v)=vv^T` and
+`Q(v)=(H(v),S(v))`. The realification \({\cal S}\) of the three complex
+symmetric coordinates has real dimension six.
+
+**DEF-QPAIR-MIXED-C4.** The rational-linear state action
+`Phi(z1,z2)=(z2,c(z1))` satisfies `Phi^2=c` componentwise and
+`Phi^4=1`.
+
+**DEF-QPAIR-ADMISSIBLE-LINEAR-CLASS.** Regard the coordinates of `H` and
+`S` as formal homogeneous real quadratic polynomials on
+\((C^2)_R\), subsequently restricted to \(O_K^2\). The class
+\({\cal A}_{\rm rel}\) consists of real linear subspaces `E` such that
+\({\cal H}\subseteq E\) remains a linearly readable typed slot and `E` is
+stable under pullback by every marked `g in G` and by `Phi`. Quotients by
+pointwise coincidence, nonlinear image actions, arbitrary set
+reconstruction, decoder factorization, normalization, and a presumed group
+product between the two pullback families are excluded.
+
+The exact evidence for the seven rows below is
+`probes/P-QPAIR-C4-2I-MINIMALITY-1`.
+
+**QPAIR-HERM-INTEGER-NONDESCENT [T].** For `v=(1,1)` and
+`v'=zeta_5 v`,
+
+```text
+H(v)=H(v'),    H(Phi v)_12=1,    H(Phi v')_12=zeta_5^2.
+```
+
+Consequently no total set map on `im(H)` descends `Phi` on \(O_K^2\).
+For nonzero vectors over `K` the complete fiber is
+
+```text
+H^-1(H(v)) = K^1 v,    K^1 = {u in K^x : u c(u)=1}.
+```
+
+Define `cont(z1,z2)=z1 O_K+z2 O_K`. Since
+\(O_K^x=\mu_{10}\times\langle\varphi\rangle\), with
+\(\varphi=-(\zeta_5^2+\zeta_5^3)\), for every nonzero
+`v in O_K^2` the vectors `w` satisfying both `H(w)=H(v)` and
+`cont(w)=cont(v)` are exactly \(\mu_{10}v\). The qualification is essential:
+for `a=2+zeta_5`, the integral vectors `(c(a),0)` and `(a,0)` have equal
+Hermitian slots but distinct content and are not related by \(\mu_{10}\).
+
+**QPAIR-TRANSPOSE-FIBER-REDUNDANCY [T].** For `v,w in K^2`,
+`S(v)=S(w)` iff `w=+-v`. Because `H(-v)=H(v)`, there is a unique set
+map `F:im(S)->im(H)` with `F(S(v))=H(v)`, and
+`im(Q)->im(S)` is bijective. Thus the pair carries exactly the
+set-theoretic information of `S`. This supplies no polynomial, rational,
+linear, typed-natural, or admissible factorization.
+
+**QPAIR-TYPED-MIXED-C4-CLOSURE [T].** For
+
+```text
+H=((h11,h12),(h21,h22)),    S=((s11,s12),(s12,s22)),
+h21=c(h12),
+```
+
+the exact typed action is
+
+```text
+H'=((h22,s12),(c(s12),h11)),
+S'=((s22,h21),(h21,c(s11))).
+```
+
+Define `T_Q(H,S)=(H',S')`. It is rational-linear, satisfies
+`T_Q Q(v)=Q(Phi v)` and `T_Q^4=1`,
+and gives the cycle
+`h12 -> s12 -> c(h12) -> c(s12) -> h12`. The least `Phi`-stable
+space containing \({\cal H}\) has dimension six, so `Phi` alone does not
+force the full pair.
+
+**QPAIR-SYM2-2I-IRREDUCIBLE [T].** Relative to the marked public
+character row `2a`,
+
+```text
+Sym^2(2a)=3a
+```
+
+is absolutely irreducible and factors through \(A_5\); its Galois companion
+is `Sym^2(2b)=3b`. For the pullback convention
+`(g.q)(v)=q(g^-1 v)` on binary quadratics, the seed `s(x,y)=xy` obeys
+`T0.s=s-zeta_5 y^2` and its subsequent `S0` orbit supplies `x^2`. Hence
+the orbit spans `K{x^2,xy,y^2}`.
+
+**QPAIR-MINIMAL-2I-CLOSURE-OF-HERM-UNDER-MIXED-C4 [T].** Write
+`z1=a+ib` and `z2=c+id`. The four Hermitian real coordinates are
+
+```text
+a^2+b^2, c^2+d^2, ac+bd, bc-ad,
+```
+
+and the six symmetric real coordinates are
+
+```text
+a^2-b^2, 2ab, ac-bd, ad+bc, c^2-d^2, 2cd.
+```
+
+These ten coordinates recover every real quadratic monomial on \(C^2\):
+
+```text
+dim_R H = 4,    dim_R S = 6,    H intersection S = 0,
+absolute coordinate determinant = 64.
+```
+
+Since `Phi^* H12=z1 z2`, every \(E\in{\cal A}_{\rm rel}\) contains both
+real coordinates of the seed. The marked `2I` orbit forces the full
+realification of `Sym^2(V^*)`; complex coefficients act on real and
+imaginary parts by real two-by-two matrices. Therefore
+\({\cal H}\oplus{\cal S}\subseteq E\). The pair space is itself stable
+under both pullback families, so it is the least member of
+\({\cal A}_{\rm rel}\), of real dimension ten. This is relative minimality
+of a fixed readable `H` slot, not absolute, slot-count, or
+information-theoretic minimality.
+
+**QPAIR-2I-ONLY-PAIR-FORCING [F].** The universal proposition that
+`2I`-equivariance alone forces a pair is false: the single symmetric slot
+already obeys `S(gv)=gS(v)g^T`. With
+
+```text
+epsilon=((0,1),(-1,0)),    Theta(Y)=Y epsilon^-1,
+```
+
+one also has `Theta(gYg^T)=g Theta(Y) g^-1`. This is an adjoint
+presentation of the one-slot counterexample. It does not identify the
+standard trace-zero Hermitian slice with an invariant module in the
+displayed nonunitary marked basis, and no invariant graph or quotient
+involving that slice is claimed.
+
+**QPAIR-MIXED-C4-NORMALIZES-2I [F].** The proposition that `Phi`
+normalizes the marked `2I` is false:
+
+```text
+Phi T0 Phi^-1(z1,z2)
+  = (zeta_5^-1 z1, zeta_5^-1 z2 + c(z1)).
+```
+
+The conjugate contains `c(z1)`, is not `K`-linear, and is not in `G`.
+Simultaneous stability under the two pullback families supplies neither
+`2I semidirect-product C4` nor `2I times C4`, and it is not the distinct
+registered `COLOR-CM-2I-SEMILINEAR-PAIR`.
+
+All statements in this block are L1 carrier algebra. They create no bridge
+to rational \(V_{\rm eff}\), `DEF-QDD-QPAIR`, MatterData, a Born pairing,
+decoder write map, physical `U(1)`, instrument, L5 stream, or L6 measure,
+and they move no QDD or color-selection parent.
 
 The marked CM closure of Rung 11 (COLOR-CM-2I-SEMILINEAR-PAIR [T],
 probes/P-CM-2I-QCARRIER-1) is relative to exactly the displayed marked
@@ -4597,7 +4986,56 @@ the doubled-angle spin-2 law; conjugation fixes `h_+` and negates `h_x`.
 The two coordinates are read as plus and cross (POL-READ [D]). This readout
 introduces no independent propagation law, source map, detector convention,
 action or state normalization, helicity selection, or numerical tensor
-ratio. The inherited WKB3 ringdown grade has no public source or reproducing
+ratio.
+
+The finite moment boundary
+(TT-VECTOR-MOMENT-UNDERDETERMINATION) [T;
+probes/P-TT-VECTOR-MOMENT-UNDERDETERMINATION-1] is entirely L1. Let
+`X = Z/5`, `z = zeta_5`, `w_x = v_x^2`, and
+`S_w(k) = sum_r E[w_r conjugate(w_0)] z^(-kr)`. Define
+
+```text
+A     v_x = z^(t_x),              with the t_x iid uniform on Z/5,
+B_m   v_x = z^(t_0+mx) epsilon_x, m in Z/5, with t_0 uniform and the
+                                  epsilon_x iid uniform on {+1,-1}.
+```
+
+The six laws `A,B_0,...,B_4` are translation invariant, have deterministic
+pointwise modulus one, and agree on the mean, `C = delta`, `P = 0`, and every
+polynomial functional of total degree at most three. Their squared-readout
+spectra are
+
+```text
+A:       S_w(k) = 1,
+B_m:     S_w(k) = 5 delta_(k,2m mod 5),
+Bmix:    S_w(k) = (5/4)(1-delta_(k,0)),
+```
+
+where `Bmix` is the uniform mixture over nonzero `m`. For every distinct pair
+of the six extremal laws the minimal separating degree is exactly four, and
+the separator set is exactly the twenty monomials
+`v_x^2 conjugate(v_y)^2`, `x != y`. Their values are zero under `A` and
+`z^(2m(x-y))` under `B_m`, so they read the full `Z/5` family index. At
+degree five the separators from `A` are exactly the ten fifth powers
+`v_x^5` and `conjugate(v_x)^5`, with values one under `A` and zero under
+every `B_m`; no two `B` laws separate at any odd degree.
+
+For `u in (Z/5)^x`, the site action `rho_u` sends `m` to `u^-1 m`, the
+pointwise coefficient action `gamma_u` sends `m` to `u m`, and the two
+actions commute. Their diagonal fixes every extremal law and `Bmix`.
+Consequently `B_(3k_0 mod 5)` is diagonally invariant and has its
+squared-readout peak exactly at `k_0`.
+
+Finally, any zero-mean state with `P_xx = 0` and
+`|v_x|^2 = a^2` almost surely at `a > 0` has
+`E[|v_x|^4] = a^4`, whereas Isserlis closure requires `2a^4`; hence
+`K_xx = -a^4` and no Gaussian or Wick closure exists at fixed modulus.
+All arithmetic is exact in `Q(zeta_5)`. This theorem neither chooses a state
+nor supplies a normalization, physical tensor identification, source,
+propagation law, helicity, detector response, observable or numerical
+`r_T(k)`, and it makes no L2--L6 claim.
+
+The inherited WKB3 ringdown grade has no public source or reproducing
 test and is
 therefore not a Canon claim. Stage A, the Schwarzschild TT endpoint: the
 Regge-Wheeler coefficients (1, 0, -3) are forced at scope, V_2 =

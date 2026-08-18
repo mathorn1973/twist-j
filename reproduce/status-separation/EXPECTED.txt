@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v50
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v51
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -36,6 +36,11 @@ PASS 32 SEPARATION quantitative separation and finite Fejer rows stay exact, dis
 PASS 33 QDD-ROUTE-A the QDD Route A algebra is three L1 theorems on two-architecture evidence; the apparatus is a separate O; QUADRATIC-DECODER-DATA stays O with its ROOT/STOP program row; no gate and no L6 row exist
 PASS 34 QDD-NONSELECTION the L4 theorem fixes rational fibre, post-state and dilation nonselection while the apparatus remains O on exactly independent selection and realized-event sampling
 PASS 35 SUZUKI-CAPACITY-NOGO the L1 no-go complex for the Suzuki completion capacity enters at T with two finite C computations, all pinned to the two-architecture public probe bundle and free of dependency, gate and frontier ownership
-PASS 36 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
+PASS 36 TT-MOMENT  the exact L1 moment family proves fourth-order underdetermination while state normalization remains O and no numerical tensor ratio is produced
+PASS 37 QDD-U      the registered update supplies an exact L1 channel and a complete finite multi-layer nonselection computation while apparatus selection and sampling remain O and STOP
+PASS 38 FIELD-CUT  the unique total multiplicative field bit is exactly the two oriented zero/nonzero cuts and remains independent of QDD and fifth-prime selection
+PASS 39 QPAIR-TENSOR matched quadratic sectors compose on product vectors, cross sectors fail factor-gauge descent, and the symmetric target has the exact determinant 9+1 defect
+PASS 40 QPAIR-C4-2I the independent integral carrier has exact mixed closure and relative 2I minimality while set redundancy, 2I-only pair forcing, and normalization firewalls remain explicit
+PASS 41 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
 
-RESULT 36/36 ALL PASS
+RESULT 41/41 ALL PASS

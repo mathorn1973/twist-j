@@ -1,4 +1,33 @@
 item_id	depends_on	relation	basis
+TT-VECTOR-MOMENT-UNDERDETERMINATION	TT-SQUARING-DECODER	BOUNDED_BY	the theorem evaluates the same formal square w=v^2 but does not inherit the lower-status physical decoder reading
+TT-VECTOR-MOMENT-UNDERDETERMINATION	POL-READ	BOUNDED_BY	the plus/cross convention bounds any interpretation of the complex square; no source, propagation, normalization or observable is imported
+TT-VECTOR-MOMENT-UNDERDETERMINATION	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the theorem constrains admissible state closures but supplies neither a normalization nor a numerical r_T(k)
+QDD-U-INDUCED-CHANNEL	DEF-AUTONOMOUS-STATE	REQUIRES	the formulas are statements about the registered Omega, selector, generators and autonomous update U
+QDD-U-INDUCED-CHANNEL	DEF-QDD-BALANCED-PISTON	REQUIRES	the piston/fiber split and the equality between sum pi mod 5 and the balanced-piston sum are frozen on the public QDD carrier
+QDD-U-INDUCED-CHANNEL	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact algebraic channel structure supplies no independent physical selector, realized event law or sampling map
+QDD-U-INDUCED-FINITE-NONSELECTION	QDD-U-INDUCED-CHANNEL	REQUIRES	the finite classification evaluates record maps on the registered U-induced piston/fiber channel
+QDD-U-INDUCED-FINITE-NONSELECTION	DEF-QDD-BRANCH-WEIGHT-PAIRING	REQUIRES	the realization predicate compares exact finite rates with the frozen ordered branch weights and density
+QDD-U-INDUCED-FINITE-NONSELECTION	DEF-QDD-MATTER-RECORD	REQUIRES	the ZERO_DENOMINATOR, normalized-weight and density tags use the frozen MatterData schema
+QDD-U-INDUCED-FINITE-NONSELECTION	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the eligible family test uses exactly the frozen rational post-state instrument family and no enlarged apparatus class
+QDD-U-INDUCED-FINITE-NONSELECTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the complete 900-pair finite classification neither closes O2 or O1 nor excludes another admissible physical apparatus class
+DEF-QPAIR-HERM-SLOT	DEF-QPAIR-SPIN-CARRIER	REQUIRES	the Hermitian slot is defined on the independent integral spin carrier
+DEF-QPAIR-SYM-SLOT	DEF-QPAIR-SPIN-CARRIER	REQUIRES	the symmetric slot is defined on the independent integral spin carrier
+DEF-QPAIR-MIXED-C4	DEF-QPAIR-SPIN-CARRIER	REQUIRES	the mixed rational-linear action is defined on the independent integral spin carrier
+DEF-QPAIR-ADMISSIBLE-LINEAR-CLASS	DEF-QPAIR-HERM-SLOT	REQUIRES	the admissible spaces retain the fixed Hermitian slot with its original linear readout
+DEF-QPAIR-ADMISSIBLE-LINEAR-CLASS	DEF-QPAIR-SYM-SLOT	REQUIRES	the ambient formal quadratic coordinates include the typed symmetric slot
+DEF-QPAIR-ADMISSIBLE-LINEAR-CLASS	DEF-QPAIR-MIXED-C4	REQUIRES	the admissible spaces are stable under pullback by the frozen mixed action
+DEF-QPAIR-ADMISSIBLE-LINEAR-CLASS	COLOR-INTEGRAL-LIFT	REQUIRES	the marked generators S0 and T0 are the registered integral 2I lift
+QPAIR-SYM2-2I-IRREDUCIBLE	COLOR-CORE-2I	REQUIRES	the marked finite group is the registered binary-icosahedral core
+QPAIR-SYM2-2I-IRREDUCIBLE	COLOR-GOLDEN-TABLE	REQUIRES	the public class order and rows 2a, 2b, 3a and 3b type the symmetric-square character identity
+QPAIR-SYM2-2I-IRREDUCIBLE	COLOR-INTEGRAL-LIFT	REQUIRES	the orbit certificate uses the registered marked matrices S0 and T0
+QPAIR-SYM2-2I-IRREDUCIBLE	DEF-ACTION-LAYERS	REQUIRES	the claim is confined to L1 representation theory and creates no cross-layer lift
+QPAIR-MINIMAL-2I-CLOSURE-OF-HERM-UNDER-MIXED-C4	QPAIR-SYM2-2I-IRREDUCIBLE	REQUIRES	the orbit of the mixed-action seed forces the full symmetric-square module
+QPAIR-MINIMAL-2I-CLOSURE-OF-HERM-UNDER-MIXED-C4	DEF-QPAIR-SPIN-CARRIER	REQUIRES	the relative closure is evaluated on the frozen independent spin carrier
+QPAIR-MINIMAL-2I-CLOSURE-OF-HERM-UNDER-MIXED-C4	DEF-QPAIR-HERM-SLOT	REQUIRES	the admissible class must retain this fixed linearly readable slot
+QPAIR-MINIMAL-2I-CLOSURE-OF-HERM-UNDER-MIXED-C4	DEF-QPAIR-SYM-SLOT	REQUIRES	the forced complement is the frozen symmetric slot
+QPAIR-MINIMAL-2I-CLOSURE-OF-HERM-UNDER-MIXED-C4	DEF-QPAIR-MIXED-C4	REQUIRES	the off-diagonal Hermitian coordinate is sent to the symmetric seed by the frozen mixed action
+QPAIR-MINIMAL-2I-CLOSURE-OF-HERM-UNDER-MIXED-C4	DEF-QPAIR-ADMISSIBLE-LINEAR-CLASS	REQUIRES	minimality is relative only to this typed linear class
+QPAIR-MINIMAL-2I-CLOSURE-OF-HERM-UNDER-MIXED-C4	DEF-ACTION-LAYERS	REQUIRES	the result is L1 carrier algebra and supplies no decoder, stream or measure lift
 DEF-MJ	AXIOM-J	REQUIRES	M_J is multiplication by J
 DEF-AUTONOMOUS-STATE	DEF-CHECKPOINT	REQUIRES	Omega contains the finite checkpoint
 DEF-AUTONOMOUS-STATE	DEF-ODOMETER-ORBIT	REQUIRES	Omega contains the forward odometer orbit

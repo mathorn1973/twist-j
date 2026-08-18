@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 140, "D": 42, "C": 29, "F": 13,
+    expected_counts = {"T": 151, "D": 42, "C": 30, "F": 15,
                        "O": 23, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v50",
-        len(rows) == 249
+        "registry and companion-ledger counts match Public Canon v51",
+        len(rows) == 263
         and counts == expected_counts
-        and len(normative) == 284
-        and len(dependencies) == 425
-        and len(evidence) == 249
-        and two_architecture == 168
-        and len(history) == 765
+        and len(normative) == 303
+        and len(dependencies) == 454
+        and len(evidence) == 263
+        and two_architecture == 182
+        and len(history) == 781
         and len(gates) == 10
         and len({row["program_id"] for row in programs.values()}) == 7
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
@@ -2436,6 +2436,300 @@ def run():
             index, suzuki_count,
             ("78734", "two independent counting paths"),
         ),
+    ))
+
+    tt_moment = "TT-VECTOR-MOMENT-UNDERDETERMINATION"
+    tt_moment_path = "probes/P-TT-VECTOR-MOMENT-UNDERDETERMINATION-1"
+    tt_moment_digest = (
+        "302e0403e5b1a0027555a39c33dddbe55e17b6ec76ee9292da8407630d5b10bf"
+    )
+    tt_moment_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == tt_moment
+    }
+    checks.append((
+        "TT-MOMENT",
+        "the exact L1 moment family proves fourth-order underdetermination while state normalization remains O and no numerical tensor ratio is produced",
+        has_status(index, tt_moment, "T")
+        and normative.get(tt_moment, {}).get("item_type") == "THEOREM"
+        and normative.get(tt_moment, {}).get("layer") == "L1"
+        and normative.get(tt_moment, {}).get("gate_ids") == ""
+        and evidence.get(tt_moment, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(tt_moment, {}).get("location") == tt_moment_path
+        and evidence.get(tt_moment, {}).get("sha256") == tt_moment_digest
+        and evidence.get(tt_moment, {}).get("architecture_requirement")
+        == "two-architecture"
+        and tt_moment_dependencies == {
+            ("TT-SQUARING-DECODER", "BOUNDED_BY"),
+            ("POL-READ", "BOUNDED_BY"),
+            ("TT-VECTOR-STATE-NORMALIZATION", "BOUNDED_BY"),
+        }
+        and scope_contains_all(
+            index, tt_moment,
+            ("every polynomial functional of total degree at most three",
+             "minimal separating degree is exactly four",
+             "no gaussian or wick closure exists at fixed modulus",
+             "no normalization", "r_t(k)", "l2-l6 lift"),
+        )
+        and has_status(index, "TT-VECTOR-STATE-NORMALIZATION", "O")
+        and scope_contains_all(
+            index, "TT-VECTOR-STATE-NORMALIZATION",
+            ("fourth-moment data", "explicit non-gaussian closure rule",
+             "neither that choice nor a numerical r_t(k)"),
+        )
+        and evidence["TT-VECTOR-STATE-NORMALIZATION"]["sha256"]
+        == scope_sha256(index, "TT-VECTOR-STATE-NORMALIZATION")
+        and tt_moment not in programs
+        and all(row["owner_item_id"] != tt_moment for row in gates.values()),
+    ))
+
+    qdd_u_channel = "QDD-U-INDUCED-CHANNEL"
+    qdd_u_finite = "QDD-U-INDUCED-FINITE-NONSELECTION"
+    qdd_u_path = "probes/P-QDD-INSTRUMENT-U-INDUCED-1"
+    qdd_u_digest = (
+        "17f5e001c9fce5360b021781fbb3910ed5045a5e9666ab7624a90e7880eae60f"
+    )
+    qdd_u_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in (qdd_u_channel, qdd_u_finite)
+    }
+    checks.append((
+        "QDD-U",
+        "the registered update supplies an exact L1 channel and a complete finite multi-layer nonselection computation while apparatus selection and sampling remain O and STOP",
+        has_status(index, qdd_u_channel, "T")
+        and has_status(index, qdd_u_finite, "C")
+        and normative.get(qdd_u_channel, {}).get("item_type") == "THEOREM"
+        and normative.get(qdd_u_channel, {}).get("layer") == "L1"
+        and normative.get(qdd_u_finite, {}).get("item_type") == "COMPUTATION"
+        and normative.get(qdd_u_finite, {}).get("layer") == "MULTI"
+        and all(
+            evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("location") == qdd_u_path
+            and evidence.get(claim, {}).get("sha256") == qdd_u_digest
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            for claim in (qdd_u_channel, qdd_u_finite)
+        )
+        and qdd_u_dependencies[qdd_u_channel] == {
+            ("DEF-AUTONOMOUS-STATE", "REQUIRES"),
+            ("DEF-QDD-BALANCED-PISTON", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        }
+        and qdd_u_dependencies[qdd_u_finite] == {
+            (qdd_u_channel, "REQUIRES"),
+            ("DEF-QDD-BRANCH-WEIGHT-PAIRING", "REQUIRES"),
+            ("DEF-QDD-MATTER-RECORD", "REQUIRES"),
+            ("QDD-INSTRUMENT-NONSELECTION", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        }
+        and scope_contains_all(
+            index, qdd_u_channel,
+            ("five generator fibers are exactly", "delay one",
+             "exact bidirectional algebraic channel structure only",
+             "no physical measurement"),
+        )
+        and scope_contains_all(
+            index, qdd_u_finite,
+            ("180 two-cell maps", "900 record-delay pairs",
+             "info is true for exactly 150", "functional=0",
+             "post-undefined-or-zero=900", "evaluated/member/outside=0/0/0",
+             "multi-layer scope", "no limit", "sampling impossibility"),
+        )
+        and scope_contains_all(
+            index, "QDD-INSTRUMENT-APPARATUS",
+            ("qdd-u-induced-channel", "frozen 900 record-delay pairs",
+             "does not exclude another admissible apparatus class"),
+        )
+        and evidence["QDD-INSTRUMENT-APPARATUS"]["sha256"]
+        == scope_sha256(index, "QDD-INSTRUMENT-APPARATUS")
+        and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
+        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("work_state")
+        == "STOP",
+    ))
+
+    field_cut = "FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT"
+    field_cut_path = "probes/P-FIELD-ZERO-NONZERO-CUT-1"
+    field_cut_digest = (
+        "baf65d43b2016d629f1442dea3e20191631e5b0f2729e8020eb6d36e9fe3384c"
+    )
+    checks.append((
+        "FIELD-CUT",
+        "the unique total multiplicative field bit is exactly the two oriented zero/nonzero cuts and remains independent of QDD and fifth-prime selection",
+        has_status(index, field_cut, "T")
+        and normative.get(field_cut, {}).get("item_type") == "THEOREM"
+        and normative.get(field_cut, {}).get("layer") == "L1"
+        and evidence.get(field_cut, {}).get("location") == field_cut_path
+        and evidence.get(field_cut, {}).get("sha256") == field_cut_digest
+        and evidence.get(field_cut, {}).get("architecture_requirement")
+        == "two-architecture"
+        and all(row["item_id"] != field_cut for row in dependencies)
+        and scope_contains_all(
+            index, field_cut,
+            ("for every field f", "a={0} with b=or",
+             "a=f^x with b=and", "b is unique",
+             "qr/xnor and nqr/xor", "no five-specific selection",
+             "no qdd equation", "dependency edge"),
+        )
+        and field_cut not in programs
+        and all(row["owner_item_id"] != field_cut for row in gates.values()),
+    ))
+
+    tensor_path = "probes/P-QPAIR-SYM2-TENSOR-DEFECT-1"
+    tensor_digest = (
+        "ae345af394adf1693b5515d038743dc3f3697fa0c55340972eb979682538fed5"
+    )
+    tensor_rows = (
+        "QPAIR-PRODUCT-COMPOSITION",
+        "QPAIR-CROSS-SECTOR-NONDESCENT",
+        "QPAIR-SYM2-TENSOR-DEFECT",
+    )
+    checks.append((
+        "QPAIR-TENSOR",
+        "matched quadratic sectors compose on product vectors, cross sectors fail factor-gauge descent, and the symmetric target has the exact determinant 9+1 defect",
+        all(
+            has_status(index, claim, "T")
+            and normative.get(claim, {}).get("item_type") == "THEOREM"
+            and normative.get(claim, {}).get("layer") == "L1"
+            and evidence.get(claim, {}).get("location") == tensor_path
+            and evidence.get(claim, {}).get("sha256") == tensor_digest
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and all(row["item_id"] != claim for row in dependencies)
+            and claim not in programs
+            for claim in tensor_rows
+        )
+        and scope_contains_all(
+            index, tensor_rows[0],
+            ("natural, associative, symmetric and unital",
+             "exact for product vectors", "no surjectivity"),
+        )
+        and scope_contains_all(
+            index, tensor_rows[1],
+            ("c(lambda)/lambda", "lambda/c(lambda)",
+             "zeta_5^3 and zeta_5^2", "no fifth-prime physical"),
+        )
+        and scope_contains_all(
+            index, tensor_rows[2],
+            ("10=9+1", "product squares span exactly",
+             "((ad-bc)/2)kappa", "not a bell state",
+             "not a claim that a full hermitian-plus-symmetric defect"),
+        )
+        and all(row["owner_item_id"] not in tensor_rows for row in gates.values()),
+    ))
+
+    qpair_path = "probes/P-QPAIR-C4-2I-MINIMALITY-1"
+    qpair_digest = (
+        "6f1d5a5859a193cb68eb53f6ed58f5da21b25f3c0084c3875eede690317ea592"
+    )
+    qpair_t = (
+        "QPAIR-HERM-INTEGER-NONDESCENT",
+        "QPAIR-TRANSPOSE-FIBER-REDUNDANCY",
+        "QPAIR-TYPED-MIXED-C4-CLOSURE",
+        "QPAIR-SYM2-2I-IRREDUCIBLE",
+        "QPAIR-MINIMAL-2I-CLOSURE-OF-HERM-UNDER-MIXED-C4",
+    )
+    qpair_f = (
+        "QPAIR-2I-ONLY-PAIR-FORCING",
+        "QPAIR-MIXED-C4-NORMALIZES-2I",
+    )
+    qpair_definitions = {
+        "DEF-QPAIR-SPIN-CARRIER",
+        "DEF-QPAIR-HERM-SLOT",
+        "DEF-QPAIR-SYM-SLOT",
+        "DEF-QPAIR-MIXED-C4",
+        "DEF-QPAIR-ADMISSIBLE-LINEAR-CLASS",
+    }
+    qpair_dependency_map = {
+        item: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == item
+        }
+        for item in qpair_definitions | set(qpair_t) | set(qpair_f)
+    }
+    checks.append((
+        "QPAIR-C4-2I",
+        "the independent integral carrier has exact mixed closure and relative 2I minimality while set redundancy, 2I-only pair forcing, and normalization firewalls remain explicit",
+        all(has_status(index, claim, "T") for claim in qpair_t)
+        and all(has_status(index, claim, "F") for claim in qpair_f)
+        and all(
+            normative.get(item, {}).get("item_type") == "DEFINITION"
+            and normative.get(item, {}).get("layer") == "L1"
+            for item in qpair_definitions
+        )
+        and all(
+            evidence.get(claim, {}).get("location") == qpair_path
+            and evidence.get(claim, {}).get("sha256") == qpair_digest
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and normative.get(claim, {}).get("layer") == "L1"
+            for claim in qpair_t + qpair_f
+        )
+        and qpair_dependency_map["QPAIR-SYM2-2I-IRREDUCIBLE"] == {
+            ("COLOR-CORE-2I", "REQUIRES"),
+            ("COLOR-GOLDEN-TABLE", "REQUIRES"),
+            ("COLOR-INTEGRAL-LIFT", "REQUIRES"),
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+        }
+        and qpair_dependency_map[
+            "QPAIR-MINIMAL-2I-CLOSURE-OF-HERM-UNDER-MIXED-C4"
+        ] == {
+            ("QPAIR-SYM2-2I-IRREDUCIBLE", "REQUIRES"),
+            ("DEF-QPAIR-SPIN-CARRIER", "REQUIRES"),
+            ("DEF-QPAIR-HERM-SLOT", "REQUIRES"),
+            ("DEF-QPAIR-SYM-SLOT", "REQUIRES"),
+            ("DEF-QPAIR-MIXED-C4", "REQUIRES"),
+            ("DEF-QPAIR-ADMISSIBLE-LINEAR-CLASS", "REQUIRES"),
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+        }
+        and all(
+            qpair_dependency_map[claim] == set()
+            for claim in qpair_t[:3] + qpair_f
+        )
+        and qpair_dependency_map["DEF-QPAIR-SPIN-CARRIER"] == set()
+        and qpair_dependency_map["DEF-QPAIR-HERM-SLOT"]
+        == {("DEF-QPAIR-SPIN-CARRIER", "REQUIRES")}
+        and qpair_dependency_map["DEF-QPAIR-SYM-SLOT"]
+        == {("DEF-QPAIR-SPIN-CARRIER", "REQUIRES")}
+        and qpair_dependency_map["DEF-QPAIR-MIXED-C4"]
+        == {("DEF-QPAIR-SPIN-CARRIER", "REQUIRES")}
+        and qpair_dependency_map["DEF-QPAIR-ADMISSIBLE-LINEAR-CLASS"] == {
+            ("DEF-QPAIR-HERM-SLOT", "REQUIRES"),
+            ("DEF-QPAIR-SYM-SLOT", "REQUIRES"),
+            ("DEF-QPAIR-MIXED-C4", "REQUIRES"),
+            ("COLOR-INTEGRAL-LIFT", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, qpair_t[0],
+            ("independent carrier", "no total set map",
+             "field fiber is k^1 v", "fixed nonzero content layer",
+             "full lattice can have wider fibers"),
+        )
+        and scope_contains_all(
+            index, qpair_t[1],
+            ("s(v)=s(w) iff w=+-v", "set-theoretic redundancy only",
+             "no informational defense of two slots"),
+        )
+        and scope_contains_all(
+            index, qpair_t[4],
+            ("frozen class a_rel", "absolute determinant 64",
+             "relative minimality", "not minimality of slot count"),
+        )
+        and scope_contains_all(
+            index, qpair_f[0],
+            ("universal proposition", "single symmetric slot"),
+        )
+        and "disproving the universal pair-forcing proposition"
+        in index[qpair_f[0]]["falsifier"].lower()
+        and scope_contains_all(
+            index, qpair_f[1],
+            ("not complex-linear or k-linear",),
+        )
+        and "disproving normalization"
+        in index[qpair_f[1]]["falsifier"].lower()
+        and all(claim not in programs for claim in qpair_t + qpair_f),
     ))
 
     fw_requires = {}

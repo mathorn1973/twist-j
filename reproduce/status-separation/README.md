@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its thirty-six checks cover the current
+and emits deterministic text. Its forty-one checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 36/36 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 41/41 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -92,6 +92,20 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v51 count check reads the folded tree (263 claims, 23 reproductions,
+10 gates). Five new bundle-level checks pin the TT moment
+underdetermination theorem and its still-open normalization parent; the exact
+U-induced channel and complete finite multi-layer QDD nonselection
+classification while the apparatus remains O/STOP; the field-wide
+zero/nonzero multiplicative-cut theorem with no QDD dependency; the three
+matched-sector, cross-sector and symmetric-target tensor theorems; and the
+five QPAIR theorems plus two exact falsifications on the independent
+integral carrier. They require five typed QPAIR definitions, the exact 29
+new dependency edges, all five two-architecture probe bundles, and the
+absence of any new gate, physical lift, decoder completion or status move of
+the open parents. The permanent QDD direct-write firewall remains the final
+check.
 
 The v50 count check reads the folded tree (249 claims, 23 reproductions, 10 gates). The new SUZUKI-CAPACITY-NOGO check pins the L1 no-go theorem and its two finite computations to the completed two-architecture public probe bundle. It requires the empty nonnegative ramp class, first-event domination failure, separately indefinite kernels, the forced unit norm and the nonlocality consequence in the registered scopes, and requires absence of dependency, gate and frontier ownership.
 
