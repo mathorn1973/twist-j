@@ -1,0 +1,11 @@
+AUDIT F2 order=2 subsets=2 tables=16 solutions=2 cuts=ZERO/OR,NONZERO/AND
+AUDIT F3 order=3 subsets=6 tables=16 solutions=2 cuts=ZERO/OR,NONZERO/AND
+AUDIT F4 order=4 subsets=14 tables=16 solutions=2 cuts=ZERO/OR,NONZERO/AND
+AUDIT F5 order=5 subsets=30 tables=16 solutions=2 cuts=ZERO/OR,NONZERO/AND
+AUDIT F7 order=7 subsets=126 tables=16 solutions=2 cuts=ZERO/OR,NONZERO/AND
+AUDIT F8 order=8 subsets=254 tables=16 solutions=2 cuts=ZERO/OR,NONZERO/AND
+AUDIT F9 order=9 subsets=510 tables=16 solutions=2 cuts=ZERO/OR,NONZERO/AND
+AUDIT F11 order=11 subsets=2046 tables=16 solutions=2 cuts=ZERO/OR,NONZERO/AND
+BOUNDARY F5x order=4 subsets=14 tables=16 solutions=2 cuts=NQR/XOR,QR/XNOR
+RESULT fields=8 total_classification=TWO_ORIENTED_CUTS boundary=F5x_QUADRATIC_CHARACTER
+SCOPE L1 FIELD/BOOLEAN ALGEBRA ONLY; NO FIELD SELECTION, QDD COMPOSITION, DECODER, L5 STREAM, L6 MEASURE, OR STATUS MOVE
