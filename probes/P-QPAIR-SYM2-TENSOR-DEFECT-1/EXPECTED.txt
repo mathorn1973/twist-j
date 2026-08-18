@@ -1,0 +1,36 @@
+P-QPAIR-SYM2-TENSOR-DEFECT-1 verifier
+exact typed composition, reciprocal gauge descent, and Sym^2 9+1 determinant line
+the determinant line is not a Bell state or the two-qubit singlet
+
+CHECK P1.product.H(vw).matched                                   PASS
+CHECK P1.product.S(vw).matched                                   PASS
+CHECK P1.matched-products.bilinear                               PASS
+CHECK P1.naturality.H.typed                                      PASS
+CHECK P1.naturality.S                                            PASS
+CHECK P1.associativity                                           PASS
+CHECK P1.symmetry                                                PASS
+CHECK P1.tensor-unit                                             PASS
+CHECK P2.factor-gauge.formal-weights                             PASS
+CHECK P2.zeta5.cross-weights.nontrivial                          PASS
+CHECK P2.zeta5.cross-weights.reciprocal                          PASS
+CHECK P2.zeta5.composite-and-matched.invariant                   PASS
+CHECK P3.alpha.beta.commuting-involutions                        PASS
+CHECK P3.simultaneous-swap.involution                            PASS
+CHECK P3.projectors.idempotent                                   PASS
+CHECK P3.projectors.orthogonal.and.complete                      PASS
+CHECK P3.sym.projector.eq.plusplus-plus-minusminus               PASS
+CHECK P3.ranks.10.eq.9.plus.1                                    PASS  ranks=10,9,1
+CHECK P3.joint-ranks.9-3-3-1                                     PASS  ranks=9,3,3,1
+CHECK P3.kappa.joint-signs.and.Pminusminus                       PASS
+CHECK P3.product-squares.rank-nine                               PASS  rank=9
+CHECK P3.product-squares.span.exactly.plusplus                   PASS
+CHECK P3.symbolic.Pminusminus.x2.eq.det-over-2-kappa             PASS
+CHECK P3.symbolic.determinant-character                          PASS
+CHECK P3.exterior-line.detg-deth.character                       PASS  character=-5
+CHECK P3.control.product.det-zero.and.no-minusminus              PASS
+CHECK P3.control.unnormalized-Phi-plus.det-line                  PASS
+CHECK P3.control.unnormalized-Psi-minus.det-line                 PASS
+CHECK P3.control.concurrence.product-zero.Bell-one               PASS
+
+SUMMARY gates=29 pass=29 fail=0
+RESULT ALL_EXACT_GATES_PASS
