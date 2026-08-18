@@ -6,7 +6,7 @@ break.py was frozen. It audits algebraic identities; written proofs carry
 universal statements. External CHSH interpretation uses the standard
 Horodecki criterion and is not a TWIST-J derivation.
 """
-from sympy import Matrix, symbols, I, simplify, factor, eye
+from sympy import Matrix, symbols, I, simplify, kronecker_product
 
 
 def cpx(name):
@@ -19,7 +19,6 @@ def main() -> int:
     A = Matrix([[a,b],[c,d]])
     Delta = simplify(A.det())
     rho = simplify(A * A.conjugate().T)
-    norm2 = simplify(sum(z*z.conjugate() for z in [a,b,c,d]))
     det_rho = simplify(rho.det())
     delta2 = simplify(Delta * Delta.conjugate())
 
@@ -37,7 +36,7 @@ def main() -> int:
 
     # G4 pure-state concurrence via spin flip: squared overlap is 4 |Delta|^2.
     sy = Matrix([[0,-I],[I,0]])
-    YY = sy.kronecker_product(sy)
+    YY = kronecker_product(sy,sy)
     x = Matrix([a,b,c,d])
     overlap = simplify((x.T * YY * x)[0])
     assert simplify(overlap + 2*Delta) == 0 or simplify(overlap - 2*Delta) == 0
@@ -50,7 +49,7 @@ def main() -> int:
     sx = Matrix([[0,1],[1,0]])
     sz = Matrix([[1,0],[0,-1]])
     paulis = [sx, sy, sz]
-    T = Matrix(3,3, lambda i,j: simplify((xs.T * paulis[i].kronecker_product(paulis[j]) * xs)[0]))
+    T = Matrix(3,3, lambda i,j: simplify((xs.T * kronecker_product(paulis[i],paulis[j]) * xs)[0]))
     target = Matrix([[2*s0*s1,0,0],[0,-2*s0*s1,0],[0,0,s0**2+s1**2]])
     assert simplify(T-target) == Matrix.zeros(3,3)
     C = 2*s0*s1
