@@ -1,0 +1,19 @@
+P-TM-SHEET-SYNCHRONIZING-GRAPH-1 exact verifier
+authority base=cef0a08cec219a41333b36fbfe0a0e4dc780045f
+prereg sha256=a66dbc167a90e89b315122137035076386751a857e06f194e5b6ab6388d41ce3
+I01 RUNTIME arguments=0 environment=5: PASS
+C01 CARRIER states=15625 sheets=5 sheet_size=3125: PASS
+C02 GENERATORS involutions=5 bc5=id sheet_laws=5: PASS
+C03 SHEET-TABLE t0=04044 t1=21131: PASS
+A01 TRANSFORMATION-AUTOMATON states=9 maps=8 supports=7 identifications=2: PASS
+A02 MINIMAL-RESET len2_sync=0 len3_sync=011,110 R11=13: PASS
+A03 RESET-THEOREM directionA=14 productgraph_nodes=7 brute_words=32766: PASS
+L01 TM-PAIRS pairs=00,01,10,11: PASS
+L02 MU4-LANGUAGE counts=2,4,6,10,12,16,20,22,24,28,32,36,40,42,44,46 prefix_equal=1..12 prefix_subset=13..16: PASS
+L03 NONSYNC-TABLE table=2,4,4,5,4,3,2,1,0,0,0,0 no11_iff_nonsync=3..16: PASS
+W01 WSTAR w=10100101 palindrome=1 unique_11free_8=1 flanks=1,1 sandwich=1101001011: PASS
+W02 LEAF-TRANSFORM T01=21211 TW=21111 pre01=04044 preW=04444: PASS
+W03 EPS-CUT epsrow=10000 postsync_eps=0: PASS
+G01 INVARIANT-GRAPH letter_pairs=4 nine_constancy=24 canonical_011=3 sharp8=2: PASS
+G02 SIGN-LAW checked_n=2048: PASS
+RESULT PASS
