@@ -1,6 +1,6 @@
 # P-TM-SHEET-SYNCHRONIZING-GRAPH-1 result
 
-Status: SCIENTIFIC RESULT; LOCAL LEG PASS; PULL-REQUEST LEG PENDING;
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS;
 PUBLIC CANON UNCHANGED
 
 The immutable preregistration pin
@@ -15,14 +15,23 @@ mu^4 language, nonsync table, w* facts, leaf transformations,
 quadratic-class cut, invariant graph, and sign law. No counterexample was
 emitted; the falsifier did not fire.
 
+The first clean GitHub Linux/x86_64 pull-request replay used the identical
+pinned verifier at tested merge commit
+`7ef57b77eaa0ca14cc32551de2fe49227f7ea81b`. Workflow run `32171197983`,
+job `95822501472`, exited zero with empty stderr and reproduced
+`EXPECTED.txt` byte for byte; the parallel GitHub Linux/aarch64 job
+replayed identically. The two-architecture computation gate is PASS.
+
 ## Recorded decision
 
 ```text
 run integrity:       PASS
 counterexample:      NONE
 result:              PASS
+architecture gate:   PASS (local aarch64, GitHub x86_64, GitHub aarch64)
 scope:               the eight frozen clauses of PREREG.md, layer L1
-status discipline:   candidate result; the registry row and Canon fold are
-                     a separate sealed step after the pull-request replay
-                     supplies the second architecture leg
+status discipline:   the probe result stands at its evidential grade; the
+                     registry row TM-SHEET-SYNCHRONIZING-GRAPH and the
+                     Canon fold are a separate sealed integer-versioned
+                     step and are not made by this probe
 ```
