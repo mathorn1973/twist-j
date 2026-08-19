@@ -1,6 +1,6 @@
 # P-DQRC-ARITHMETIC-RECONSTRUCTION-1 result
 
-Status: `SCIENTIFIC RESULT / LOCAL X86_64 PASS / ARCHITECTURE GATE PENDING / CANON UNCHANGED`
+Status: `SCIENTIFIC RESULT / TWO-ARCHITECTURE PASS / CANON UNCHANGED`
 
 ## Verdict
 
@@ -117,5 +117,10 @@ not a physical trial count and the finite deficit is not an identifiable
 prediction. The correct next attack is the L4-to-L5 trial/address bridge, not
 a retrospective fit to Bell data.
 
-The required two-architecture workflow is still pending. All dispositions
-remain non-canonical.
+Workflow run `32248520638` reproduced the exact verifier SHA-256
+`2af01ac1...a5cf53` and stdout SHA-256 `7a776fac...e4a94e` on native aarch64
+job `96054205145` and x86_64 job `96054205514`; aggregate job `96054256599`
+passed. The two-architecture gate is PASS.
+
+All dispositions remain non-canonical until a separate sealed Canon fold
+reviews them.
