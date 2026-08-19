@@ -2,6 +2,19 @@
 
 Status: `VERIFIER TRANSCRIPT PASS / SCIENTIFIC FALSIFIER FIRED / PROBE CLOSED / CANON UNCHANGED`
 
+pin_commit: 6cc6d2d8175dfeed2a59e8c910d07e33fe35be32
+verifier_sha256: 725b227e97b4c79a135151eb291f3a8a89c06cbb1adcdd1c494c5f08623cc90b
+command: python3 probes/P-PURE-QUBIT-RELATIONAL-GEOMETRY-1/verify.py
+platform: Ubuntu 24.04
+architecture: x86_64
+python: CPython 3.12.13
+exit_code: 0
+stdout_sha256: 26560ebffd68dc7b079bdd479bd1053a1e9f3a26327672c8696c6169d49f995e
+stdout_bytes: 1469
+stdout_lines: 24
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+
 ## Authority and immutable initial pin
 
 ```text
@@ -34,9 +47,9 @@ No formal verifier gate ran before that readback. The only pre-pin check was
 LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC \
   python3 probes/P-PURE-QUBIT-RELATIONAL-GEOMETRY-1/verify.py
 
-platform:       Ubuntu 24.04
-architecture:   x86_64
-Python:         3.12.13
+platform =      Ubuntu 24.04
+architecture =  x86_64
+Python =        3.12.13
 arguments:      none
 stdin:          none
 ```
