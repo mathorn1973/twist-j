@@ -1,6 +1,6 @@
 # P-PURE-QUBIT-RELATIONAL-GEOMETRY-2 result
 
-Status: `SCIENTIFIC RESULT / LOCAL EXACT PASS / PUBLIC WORKFLOW PENDING / CANON UNCHANGED`
+Status: `SCIENTIFIC RESULT / TWO-ARCHITECTURE PASS / CANON UNCHANGED`
 
 ## Verdict
 
@@ -83,6 +83,9 @@ of one joint state, not a third particle, force, signal or transported
 substance. This conditional comparison says nothing yet about what physical
 quanta are in TWIST-J or how a laboratory Bell experiment is generated.
 
-Public two-architecture evidence is pending. Until the required workflow
-passes and a separate sealed Canon fold is reviewed, all four rows remain
-non-canonical candidates.
+Required workflow run `32226965301` reproduced the exact verifier and
+`EXPECTED.txt` on aarch64 job `95988501590` and x86_64 job `95988501973`;
+aggregate job `95988607069` passed. The two-architecture gate is PASS.
+
+All four dispositions remain non-canonical until a separate sealed Canon fold
+reviews them. The probe changes no current Canon row.
