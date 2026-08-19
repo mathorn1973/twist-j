@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Exact audit for P-PISTON-RELATIONAL-WEDGE-1 (DRAFT, not pinned).
+"""Exact audit for P-PISTON-RELATIONAL-WEDGE-1.
 
-Authority: none.  Zero-run preregistration verifier.  The written proofs in
+Scientific authority: none.  Initial zero-run preregistration verifier.  The written proofs in
 PREREG.md carry the universal claims; this standard-library verifier audits
 the frozen 2x2 reshape of the balanced piston, the piston actions of the
 five public generators, the frozen Tr_4 occurrence-weight closed forms, and
 the finite census over the 625 pistons.  Rational and integer arithmetic
 only; no cyclotomic carrier is touched.  It must not be imported as a module.
 
-Formal run (only after the immutable pin):
+Formal run (only after the immutable pin and public remote readback):
   LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC \
     python3 probes/P-PISTON-RELATIONAL-WEDGE-1/verify.py
 
@@ -42,6 +42,18 @@ def gate(name, condition, detail=""):
     if detail:
         line += "  " + detail
     print(line)
+
+
+def integrity(name, condition, detail=""):
+    global GATE_COUNT
+    GATE_COUNT += 1
+    ok = bool(condition)
+    line = "CHECK %-52s %s" % (name, "PASS" if ok else "FAIL")
+    if detail:
+        line += "  " + detail
+    print(line)
+    if not ok:
+        raise RuntimeError("integrity gate failed: " + name)
 
 
 def report(name, value):
@@ -224,7 +236,7 @@ def kappa_coefficient_rational(X):
 # ------------------------------------------------------------------- main
 
 def main():
-    print("P-PISTON-RELATIONAL-WEDGE-1 verifier (DRAFT)")
+    print("P-PISTON-RELATIONAL-WEDGE-1 verifier")
     print("2x2 reshape of the balanced piston selected by the two linear "
           "generators, the piston wedge D_Z, the frozen Tr_4 occurrence "
           "weights as a non-separating map, and the F_5 / Z lift census")
@@ -232,8 +244,10 @@ def main():
 
     if len(sys.argv) != 1:
         raise RuntimeError("no arguments accepted")
-    gate("I01.environment", sys.version_info >= (3, 8))
-    gate("I01.piston.count.625", len(PISTONS) == 625)
+    if sys.version_info < (3, 8):
+        raise RuntimeError("Python 3.8 or newer required")
+    integrity("I01.environment", True)
+    integrity("I01.piston.count.625", len(PISTONS) == 625)
 
     # ============================================================== R3
     Ma = signed_permutation_matrix(act_a)
@@ -380,8 +394,9 @@ def main():
              closed_forms(v2)[2] / closed_forms(v2)[0]))
     gate("R4b.witness.different.D_Z.and.c_Z",
          d_z(v1) == 1 and d_z(v2) == 0 and c_z(v1) == ONE and c_z(v2) == ZERO)
-    # the record carries the wedge: v v^T G / m determines v v^T since G is
-    # invertible; audited on the witness pair
+    # The full record carries the wedge: on SUPPORTED records the pair
+    # (total_weight m, density rho) recovers v v^T = m rho G^-1.
+    # Density alone is scale-blind.
     def density(p):
         v = [F(t) for t in lift(p)]
         vG = [sum(v[i] * G[i][j] for i in range(4)) for j in range(4)]
@@ -391,14 +406,22 @@ def main():
     gate("R4b.G.inverse.is.I+11^T",
          all(sum(G[i][t] * Ginv[t][j] for t in range(4)) == ONE * (i == j)
              for i in range(4) for j in range(4)))
-    def wedge_from_density(p):
-        rho = density(p)
+    def wedge_from_record(p):
         m = closed_forms(p)[0]
+        if m == ZERO:
+            return ZERO
+        rho = density(p)
         vvT = tuple(tuple(sum(rho[i][t] * Ginv[t][j] for t in range(4)) * m
                           for j in range(4)) for i in range(4))
         return vvT[0][3] - vvT[1][2]
-    gate("R4b.density.field.recovers.D_Z.on.witnesses",
-         wedge_from_density(v1) == 1 and wedge_from_density(v2) == 0)
+    gate("R4b.total-weight+density.recovers.D_Z.all.625",
+         all(wedge_from_record(p) == d_z(p) for p in PISTONS))
+    v_scaled = (2, 0, 0, 2)
+    gate("R4b.density-alone.scale-blind.witness",
+         density(v1) == density(v_scaled)
+         and d_z(v1) == 1 and d_z(v_scaled) == 4
+         and closed_forms(v1)[0] == F(6, 5)
+         and closed_forms(v_scaled)[0] == F(24, 5))
     # guard gates, not claims: G is not a product metric for the reshape,
     # and the wedge form is outside the span of the two Tr_4 quadratic forms
     Re = []
@@ -409,18 +432,19 @@ def main():
                 for j2 in range(2):
                     row.append(G[2 * i1 + j1][2 * i2 + j2])
             Re.append(tuple(row))
-    gate("G1.guard.realignment.rank.of.G.is.2", frac_rank(Re) == 2)
+    integrity("G1.guard.realignment.rank.of.G.is.2", frac_rank(Re) == 2)
     ones = tuple(tuple(ONE for _ in range(4)) for _ in range(4))
     ident = tuple(tuple(ONE * (i == j) for j in range(4)) for i in range(4))
     W = [[ZERO] * 4 for _ in range(4)]
     W[0][3] = W[3][0] = F(1, 2)
     W[1][2] = W[2][1] = F(-1, 2)
     flat = lambda M: [M[i][j] for i in range(4) for j in range(4)]
-    gate("G2.guard.W.outside.span{I,11^T}",
-         frac_rank([flat(ident), flat(ones), flat(W)]) == 3)
-    gate("G2.guard.W.quadratic.form.is.D_Z",
-         all(sum(F(lift(p)[i]) * W[i][j] * F(lift(p)[j])
-                 for i in range(4) for j in range(4)) == d_z(p) for p in PISTONS))
+    integrity("G2.guard.W.outside.span{I,11^T}",
+              frac_rank([flat(ident), flat(ones), flat(W)]) == 3)
+    integrity("G2.guard.W.quadratic.form.is.D_Z",
+              all(sum(F(lift(p)[i]) * W[i][j] * F(lift(p)[j])
+                      for i in range(4) for j in range(4)) == d_z(p)
+                  for p in PISTONS))
     classes = {}
     for p in PISTONS:
         classes.setdefault((piston_sum(p), norm2(p)), set()).add(abs(d_z(p)))
@@ -436,7 +460,7 @@ def main():
     gate("R5b.count.|D_Z|=5.is.16", len(five) == 16)
     gate("R5b.|D_Z|=5.all.|v|^2=10.c_Z=1",
          all(norm2(p) == 10 and c_z(p) == ONE for p in five))
-    gate("R5b.rank-one.mod.5.iff.D_Z.in.{0,+-5}",
+    gate("R5b.singular.mod.5.iff.D_Z.in.{0,+-5}",
          all((d_5(p) == 0) == (dz[p] in (0, 5, -5)) for p in PISTONS))
     gate("R5b.count.D_Z=0.is.129", sum(1 for t in dz.values() if t == 0) == 129)
     gate("R5b.145.equals.129+16", 129 + 16 == 145)

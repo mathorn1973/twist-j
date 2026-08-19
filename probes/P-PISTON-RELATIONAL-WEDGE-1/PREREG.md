@@ -1,9 +1,9 @@
-# P-PISTON-RELATIONAL-WEDGE-1 preregistration (DRAFT, revision 2)
+# P-PISTON-RELATIONAL-WEDGE-1 preregistration
 
-Status: `DRAFT / NOT PINNED / RESULT-EXPOSED / NO FORMAL RUN / NO CLAIM LOCK`
+Status: `PREREGISTERED CANDIDATE / RESULT-EXPOSED / NO FORMAL RUN`
 
-Revision 2 rebases the draft on Public Canon v52 and, following the owner
-verdict of 2026-08-18, carries only the rational piston half of the earlier
+This revision is based on Public Canon v52 and, following the owner verdict
+of 2026-08-18, carries only the rational piston half of the earlier
 combined draft. Everything on the integral QPAIR carrier lives in the
 sibling draft `P-QPAIR-RELATIONAL-AREA-1`. No bridge between the two
 carriers is stated, used, or implied here; a bridge, if ever, is a third
@@ -13,11 +13,12 @@ This document freezes one exact L1 probe on the frozen public piston
 carrier `V_eff` of Route A: a 2 x 2 reshape of the balanced piston that the
 two linear kernel generators select, the integer wedge of that reshape, the
 statement that the frozen `Tr_4` occurrence-weight map does not separate
-that wedge although the public quadratic record carries it, and an exact
-census of the wedge over the 625 pistons. It contains no verifier output,
-earns no scientific or Canon status, and is not a pin. Formal execution is
-forbidden until a public claim lock and an immutable initial pin of
-`PREREG.md` and `verify.py` read back from the public remote.
+that wedge although the public quadratic record carries it through its total
+weight and density fields, and an exact census of the wedge over the 625
+pistons. It contains no verifier output and earns no scientific or Canon
+status. Together with `verify.py`, it is the complete zero-run initial pin.
+Formal execution is forbidden until that immutable commit and both file
+hashes read back from the public remote.
 
 ## Public identity, authority, and action layer
 
@@ -26,16 +27,16 @@ program owner:       relational-wedge lane, piston half (NON-CANONICAL)
 target rows:         PISTON-2X2-RESHAPE-WEDGE                 (new, ceiling T)
                      QDD-TR4-OCCURRENCE-WEIGHT-WEDGE-BLIND    (new boundary row,
                                                                ceiling T, with the
-                                                               two REQUIRES edges below)
-                     PISTON-WEDGE-LIFT-CENSUS                 (new, ceiling T for the
-                                                               proved counts, C for
-                                                               the reported multiset)
+                                                               three REQUIRES edges below)
+                     PISTON-WEDGE-LIFT-CENSUS                 (new, ceiling T for
+                                                               R5.i-R5.iv; R5.v is
+                                                               REPORT-only, no row)
 proposed items:      DEF-PISTON-2X2-RESHAPE, DEF-PISTON-WEDGE
 probe:               P-PISTON-RELATIONAL-WEDGE-1
 sibling probe:       P-QPAIR-RELATIONAL-AREA-1 (separate carrier, separate pin)
-public lock:         none yet
-probe owner:         A. M. Thorn / delegated drafting session
-branch:              probe/P-PISTON-RELATIONAL-WEDGE-1 (not created)
+public lock:         issue #425
+probe owner:         A. M. Thorn / delegated session piston_relational_wedge
+branch:              probe/P-PISTON-RELATIONAL-WEDGE-1
 path:                probes/P-PISTON-RELATIONAL-WEDGE-1/
 initial base:        91e11e4f4db01d1badeabfea0a361972a6d4f2ea (public main = canon-v52)
 Public Canon tag:    canon-v52
@@ -45,8 +46,8 @@ Canon bytes:         261476
 action layer:        L1 only (exact carrier algebra, finite exact census)
 mode:                result-exposed, proof-first; verify.py is an exact finite audit
 formal runs:         none; verify.py neither imported nor executed
-static check:        py_compile PASS, pyflakes clean (drafting); to be
-                     re-recorded at pin
+static check:        Python 3.13 ast.parse PASS at pin; no import, bytecode
+                     compilation, or execution
 ```
 
 Explicit dependency edges proposed for the fold (relation `REQUIRES`):
@@ -70,12 +71,11 @@ PISTON-WEDGE-LIFT-CENSUS               REQUIRES  PISTON-2X2-RESHAPE-WEDGE
 No edge to `QUADRATIC-DECODER-DATA [O]` or `QDD-INSTRUMENT-APPARATUS [O]`;
 both stay exactly as open as they are.
 
-Collision readback at drafting (main `91e11e4`): no registry, normative,
-probe-directory or branch entry named `PISTON-*`, `*WEDGE-BLIND*`,
-`*RELATIONAL-WEDGE*` (the branches `notes/c-entanglement-relational-wedge-1-n`
-and `-duplicate` hold incubation notes only); the `KERNEL-WEDGE-*` rows name a
-different object (the cell-pair wedge). Open-issue readback is to be
-completed by the owner at claim-lock time.
+Collision readback at claim lock #425 (main `91e11e4`): no other registry,
+normative, probe-directory, issue or branch entry collides with this probe or
+its target rows. The branches `notes/c-entanglement-relational-wedge-1-n` and
+`-duplicate` and issues #419 and #422 are non-canonical linguistic lineage
+only; the `KERNEL-WEDGE-*` rows name a different object, the cell-pair wedge.
 
 Lineage and novelty boundary, none of which is a logical premise beyond the
 exact statements quoted in the equation field: `DEF-QDD-BALANCED-PISTON`,
@@ -87,8 +87,7 @@ and effect pair; `QDD-PROJECTOR-PAIR-TR4 [T]` supplies the closed forms;
 `A_dagger = A_T = v v^T`; `KERNEL-WEDGE-AFFINITY [T]` supplies the
 linear/affine split of the five generators; the Canon transcription of the
 generators supplies the piston actions. `QUADRATIC-DECODER-DATA [O]`,
-`QDD-INSTRUMENT-APPARATUS [O]`, `QDD-INSTRUMENT-NONSELECTION [T]`,
-`BELL-CAUSAL-ACCOUNTING [O]`, `KERNEL-WEDGE-COUPLING [T]`,
+`QDD-INSTRUMENT-APPARATUS [O]`, `QDD-INSTRUMENT-NONSELECTION [T]`, `KERNEL-WEDGE-COUPLING [T]`,
 `KERNEL-WEDGE-LINEAR-STRATA [T]`, `DEF-QPAIR-SPIN-CARRIER` and every
 statement on the integral cyclotomic carrier are excluded from the premises
 and are not moved, strengthened, interpreted, or bridged by this probe.
@@ -97,8 +96,8 @@ and are not moved, strengthened, interpreted, or bridged by this probe.
 
 ```text
 1  does the public piston carry a canonical 2 x 2 arrangement, and is its
-   determinant a well-defined integer invariant of the public linear
-   generators;
+   determinant a well-defined integer sign semi-invariant of the public
+   linear generators, with invariant absolute value;
 2  does the frozen public occurrence law of Route A separate that
    determinant, given that the public quadratic record is injective;
 3  where exactly do the F_5 wedge and its balanced Z lift disagree.
@@ -109,9 +108,10 @@ generators factor-local; its determinant `D_Z` is odd under each of them,
 so `|D_Z|` and `c_Z = 2|D_Z|/|v|^2` are invariants; `D_Z` is a linear
 functional on the transpose slot. R4 answers 2 in the narrow form the
 owner fixed: the frozen `Tr_4` occurrence-weight map and its normalized pair
-are not separating for `D_Z`, while the record's density field carries
-`D_Z` linearly. R5 answers 3: on exactly 16 pistons, all rank one modulo 5
-and all sent by the lift to `c_Z = 1`.
+are not separating for `D_Z`, while the record's total-weight and density
+fields together determine `D_Z`; it is the displayed linear functional on
+the reconstructed transpose slot. R5 answers 3: on exactly 16 pistons,
+all rank one modulo 5 and all sent by the lift to `c_Z = 1`.
 
 ## Result exposure
 
@@ -134,12 +134,11 @@ formal protocol; that reproduction is a review witness, not public evidence.
 This probe is therefore a pinned confirmation and adversarial audit, not
 blind discovery. No equation, carrier, systematic, threshold, output route,
 or scope may move in response to the exposed values. `verify.py` has never
-been executed and never imported; at drafting it passed `py_compile` and a
-`pyflakes` static pass, and its helper functions (reshape, wedge, closed
-forms, rank, generator matrices) were unit-checked on a copied source slice
-in the scratch environment without evaluating any gate. No dynamic
+been executed or imported. Before the preparation commit and again at this
+pin it passed only a Python 3.13 `ast.parse` syntax check. No helper or gate
+was evaluated from the verifier. No dynamic
 evaluation of `U`, no orbit, window, seed, or event tally of any kind was
-run for this draft, and none is part of the probe.
+run before this pin, and none is part of the probe.
 
 ## Falsifier first
 
@@ -147,16 +146,18 @@ A single exact counterexample to R3, R4 or R5 falsifies the corresponding
 row: `a` or `b` failing to be factor-local under the frozen reshape, a
 labeling count other than 8 of 24, the 8 labelings not sharing `|D_Z|`, a
 sign character other than `-1` for `a` or for `b`, `D_Z` differing from the
-transpose-slot functional or from `det X_p` on some piston, the rank-one
+transpose-slot functional or from `det X_p` on some piston, the singular-matrix
 count modulo 5 differing from 145; the frozen closed forms failing on some
 piston, the witness pair failing to have equal occurrence weights and equal
-normalized pair with unequal `D_Z`, the density field failing to recover
-`D_Z` on the witnesses; any of the counts 145, 129, 16, 48, 8 differing, a
+normalized pair with unequal `D_Z`, the total_weight and density fields
+failing to recover `D_Z` on some record, or the density-only scale witness
+failing; any of the counts 145, 129, 16, 48, 8 differing, a
 `|D_Z| = 5` piston with `|v|^2 != 10`, or `c_Z` outside `[0, 1]`.
 
-An environment or argument defect, an exception, a nonzero exit on a valid
-route, nonempty stderr, or a cross-architecture byte mismatch is `STOP`, not
-`FALSIFIED`. Exit code map: 0 pass, 1 STOP, 2 FALSIFIED.
+An environment or argument defect, an exception, an unexpected nonzero exit
+other than the declared scientific exit 2, nonempty stderr, or a
+cross-architecture byte mismatch is `STOP`, not `FALSIFIED`. Exit code map:
+0 pass, 1 STOP, 2 FALSIFIED.
 
 ## The six frozen fields
 
@@ -217,8 +218,8 @@ density field  v v^T G / m   (QDD-ALGEBRAIC-FACTORIZATION record).
 
 Under the reshape, a `4 x 4` matrix `M` is realigned to `Re(M)` with
 `Re(M)[(i1,i2),(j1,j2)] = M[(i1,j1),(i2,j2)]`, indices in the product order
-of DEF-PISTON-2X2-RESHAPE; `M` is a product `M_1 tensor M_2` iff `Re(M)` has
-rank one.
+of DEF-PISTON-2X2-RESHAPE; a nonzero `M` is a simple product `M_1 tensor M_2` iff `Re(M)` has
+rank one; the zero matrix has realignment rank zero.
 
 #### Target R3. PISTON-2X2-RESHAPE-WEDGE
 
@@ -238,7 +239,8 @@ R3.iv   D_Z is the linear functional A_T -> (A_T)_14 - (A_T)_23 on the
         transpose slot; det(X_p X_p^T) = D_Z^2; consistency clause: over
         K = Q with V = W = Q^2 in the reshape, D_Z/2 is the kappa coefficient
         of QPAIR-SYM2-TENSOR-DEFECT (named dependency, no carrier bridge).
-R3.v    D_5 = 0 on exactly 145 = 625 - |GL_2(F_5)| pistons; D_Z = D_5 mod 5.
+R3.v    D_5 = 0 on exactly 145 = 625 - |GL_2(F_5)| pistons, the
+        singular-matrix count including the zero piston; D_Z = D_5 mod 5.
 ```
 
 #### Target R4. QDD-TR4-OCCURRENCE-WEIGHT-WEDGE-BLIND (boundary row)
@@ -251,17 +253,22 @@ R4.ii   witness pair v = (1,0,0,1), v' = (1,1,0,0): (s,|v|^2) = (2,2) for
         normalized pair (1/6, 5/6) for both, while D_Z = 1 against 0 and
         c_Z = 1 against 0.  Hence the frozen Tr_4 occurrence-weight map and
         its normalized pair are not separating for D_Z, |D_Z| or c_Z.
-R4.iii  the density field v v^T G / m determines v v^T through G^-1 and
-        hence D_Z linearly (audited on the witness pair): the wedge is
-        carried by the public quadratic record; only the frozen occurrence
-        weights fail to separate it.
+R4.iii  on the SUPPORTED branch the pair of record fields total_weight
+        m and density rho = v v^T G / m determines
+        v v^T = m rho G^-1; D_Z is the displayed linear functional on this
+        reconstructed transpose slot. On ZERO_SUPPORT, D_Z = 0.  Thus the full public quadratic record carries the wedge;
+        only the frozen occurrence weights fail to separate it.
+R4.iv   density alone is scale-blind: v = (1,0,0,1) and
+        2v = (2,0,0,2) have the same rho but D_Z = 1 and 4, while their
+        total weights are 6/5 and 24/5.  No density-only recovery is claimed.
 G1, G2  guard gates, not claims: Re(G) has rank 2 (G is not a product
         metric for the reshape, so no G-adapted normalized wedge is defined
         here) and W is outside span{I_4, 1 1^T}.  If the owner prefers a
         registered theorem for the rank statement it becomes a separate
         atomic row QDD-TR4-GRAM-NONPRODUCT; it is not folded into R4.
-R4.v    reported: the number of (s,|v|^2) classes on the 625 pistons and
-        the number of classes containing more than one value of |D_Z|.
+R4.v    REPORT-only audit output: the number of (s,|v|^2) classes on the
+        625 pistons and the number of classes containing more than one value
+        of |D_Z|; neither count is a field of the target row.
 ```
 
 The row is a boundary statement next to `QDD-QCARRIER-DIAGONAL-BOUNDARY`.
@@ -281,8 +288,9 @@ R5.ii   exactly 16 pistons have |D_Z| = 5; each has |v|^2 = 10 and c_Z = 1;
 R5.iii  exactly 48 pistons have c_Z = 1, namely those with X_p X_p^T =
         lambda I, lambda > 0; the 16 of R5.ii are among them.
 R5.iv   0 <= c_Z <= 1 on all 624 nonzero pistons and A_Z = c_Z^2/4.
-R5.v    reported: the number of distinct values of c_Z and the full multiset
-        over the 624 nonzero pistons.
+R5.v    REPORT-only audit output: the number of distinct values of c_Z and
+        the full multiset over the 624 nonzero pistons; neither is a field of
+        PISTON-WEDGE-LIFT-CENSUS and no separate status is earned.
 ```
 
 #### Wording firewall
@@ -303,7 +311,8 @@ integral cyclotomic carrier.
 
 #### What is not claimed
 
-No physical reading of `X_p`, no L2 to L6 statement, no instrument, no
+No BELL-CAUSAL-ACCOUNTING row is created. No physical reading of `X_p`, no
+L2 to L6 statement, no instrument, no
 event stream, no measure, no effect identifier, no change to any QDD row,
 no statement that a decoder must or will read `D_Z`, no derivation of the
 reshape from `J`, no dynamic evaluation of `U`, no G-normalized wedge, no
@@ -334,22 +343,26 @@ R3c  sign characters of a and b on 625, ell odd, <a,b>-invariance of |D_Z|
      and c_Z, d changes |D_Z|
 R3d  D_Z equals the transpose-slot functional (14)-(23), equals 2 kappa_coef
      over Q, det(X_p X_p^T) = D_Z^2, on all 625
-R3e  rank-one count 145 modulo 5, |GL_2(F_5)| = 480, D_Z mod 5 = D_5
+R3e  singular-matrix count 145 modulo 5, |GL_2(F_5)| = 480,
+     D_Z mod 5 = D_5
 R4a  closed forms (2) on 625 and their dependence on (s,|v|^2) alone
 R4b  witness pair: equal (s,|v|^2), equal occurrence weights, equal
-     normalized pair, unequal D_Z and c_Z; G^-1 = I + 1 1^T; density field
-     recovers D_Z on the witnesses
+     normalized pair, unequal D_Z and c_Z; G^-1 = I + 1 1^T; total_weight
+     together with density determines D_Z on all records through the
+     reconstructed transpose slot; a scale pair proves that density alone
+     does not
 G1   guard: realignment rank of G is 2
 G2   guard: W outside span{I, 1 1^T}; W is the quadratic form of D_Z
 R5a  |D_Z| <= 8, count 8 at the maximum
-R5b  count 16 at |D_Z| = 5, all with |v|^2 = 10 and c_Z = 1; rank one mod 5
-     iff D_Z in {0, +-5}; count 129 with D_Z = 0; 145 = 129 + 16
+R5b  count 16 at |D_Z| = 5, all with |v|^2 = 10 and c_Z = 1; singular
+     modulo 5 iff D_Z in {0, +-5}; count 129 with D_Z = 0;
+     145 = 129 + 16
 R5c  count 48 at c_Z = 1 and characterization X_p X_p^T = lambda I; the 16
      are among the 48
 R5d  bounds of c_Z on all 624 nonzero pistons; A_Z = c_Z^2/4
-REPORT lines (no gate): d-change count, (s,|v|^2) class counts, distinct
-     c_Z values, c_Z multiset, value set
-RESULT PASS | FALSIFIED | STOP
+REPORT lines (no gate and no row/status): d-change count, (s,|v|^2) class
+     counts, distinct c_Z values, c_Z multiset, value set
+terminal line: RESULT PASS | RESULT FALSIFIED | STOP <exception>: <detail>
 ```
 
 ### 3. Carrier or data
@@ -376,14 +389,15 @@ S4  R3.iv's consistency clause uses QPAIR-SYM2-TENSOR-DEFECT only as a
     theorem over K = Q with the frozen conventions (Sym^2 as the +1
     eigenspace, R orders (V_1, V_2, W_1, W_2), the wedge not halved,
     P_-- = (1-alpha)(1-beta)/4); nothing about O_K^2 enters.
-S5  "Not separating" is proved by one exhibited pair; the reported class
-    counts quantify it and are not thresholds.
+S5  "Not separating" is proved by one exhibited pair; the REPORT-only class
+    counts quantify it and are neither thresholds nor registered fields.
 S6  Reported values (REPORT lines) are frozen only in EXPECTED.txt after the
     formal run.  The drafting expectations below are exposure, not
-    thresholds.
-S7  Two-architecture gate: the local formal run is on aarch64, the required
-    public job on x86_64; the census reaches C by byte-identical output and
-    T only through the written proofs the verifier audits.
+    thresholds, claims, or status-bearing output.
+S7  The first formal run is local Linux/aarch64.  The required pull-request
+    workflow reruns the pinned verifier on x86_64 and aarch64 and requires
+    the aggregate check.  Computation status rests on byte identity; T can
+    come only from the written proofs the verifier audits.
 ```
 
 ### 5. Failure threshold
@@ -396,16 +410,18 @@ F3  a or b is not factor-local under the frozen reshape, or the admissible
     labeling count is not 8, or the 8 labelings do not share |D_Z|, or
     D_Z(av) != -D_Z(v) or D_Z(bv) != -D_Z(v) on some piston, or D_Z differs
     from the transpose-slot functional, from 2 kappa_coef over Q, or from
-    det X_p on some piston, or det(X_p X_p^T) != D_Z^2, or the rank-one
-    count modulo 5 is not 145.
+    det X_p on some piston, or det(X_p X_p^T) != D_Z^2, or the singular-
+    matrix count modulo 5 is not 145.
 F4  the closed forms (2) fail on some piston or depend on more than
     (s,|v|^2), or the witness pair has unequal occurrence weights or unequal
-    normalized pair or equal D_Z, or the density field fails to recover D_Z
-    on the witnesses.  (G1, G2 failing is integrity STOP for the guard, not
+    normalized pair or equal D_Z, or the total_weight and density fields
+    fail to recover D_Z on some record, or the density-only scale witness
+    fails.  (G1, G2 failing is integrity STOP for the guard, not
     a scientific falsifier of R4.)
 F5  |D_Z| > 8 somewhere, or the counts (8 at |D_Z| = 8; 16 at |D_Z| = 5,
     all with |v|^2 = 10 and c_Z = 1; 129 with D_Z = 0; 48 with c_Z = 1)
-    differ, or rank one modulo 5 is not equivalent to D_Z in {0, +-5}, or
+    differ, or singularity modulo 5 is not equivalent to D_Z in
+    {0, +-5}, or
     some c_Z lies outside [0, 1], or some piston with c_Z = 1 does not
     satisfy X_p X_p^T = lambda I, or A_Z != c_Z^2/4 somewhere.
 ```
@@ -446,7 +462,9 @@ and fixes `D_Z`. QED
 
 `R3.iii`. `a` swaps the columns of `X_p`, `b` swaps the rows and negates all
 entries; each has determinant `-1` on its factor, and the global sign of `b`
-is squared away, so `D_Z` changes sign under each. QED
+is squared away, so `D_Z` changes sign under each. For
+`p=(1,0,0,0)`, `D_Z(p)=0`, while `d(p)=(1,1,3,4)` has balanced lift
+`(1,1,-2,-1)` and `D_Z(d(p))=1`; hence `d` changes `|D_Z|`. QED
 
 `R3.iv`. `(v v^T)_14 = v_1 v_4` and `(v v^T)_23 = v_2 v_3`, so the
 functional is `det X_p`. `det(X_p X_p^T) = (det X_p)^2`. For the consistency
@@ -466,8 +484,11 @@ polynomials in `s` and `|v|^2` only. `R4.ii` is the displayed computation:
 `s = 2`, `|v|^2 = 2`, `m = 2 - 4/5 = 6/5`, `w_low = 4/20 = 1/5`,
 `w_high = 2 - 1 = 1`, normalized `(1/6, 5/6)`, for both pistons, while
 `D_Z = 1` and `0`. `R4.iii`: `G` is invertible with `G^-1 = I + 1 1^T`
-(since `(1 1^T)^2 = 4 (1 1^T)`), so `v v^T G / m` determines `v v^T`, whose
-entries `(1,4)` and `(2,3)` give `D_Z`. Guards: `G = I tensor I -
+(since `(1 1^T)^2 = 4 (1 1^T)`). On SUPPORTED records,
+`m (v v^T G/m) G^-1 = v v^T`, whose entries `(1,4)` and `(2,3)` give
+`D_Z`; ZERO_SUPPORT has `v=0` and `D_Z=0`. For `R4.iv`, replacing
+`v=(1,0,0,1)` by `2v=(2,0,0,2)` multiplies `m` and `v v^T G` by four, so
+rho is unchanged, while `D_Z` changes from 1 to 4. Guards: `G = I tensor I -
 (1/5)(1 1^T) tensor (1 1^T)` in the reshape, and `{I, 1 1^T}` are linearly
 independent `2 x 2` matrices, so the operator-Schmidt rank of `G` is `2`;
 `W` has zero diagonal and a non-constant off-diagonal pattern, so it is not
@@ -527,8 +548,9 @@ B5 (2026-08-18)  row renamed QDD-TR4-OCCURRENCE-WEIGHT-WEDGE-BLIND with the
                  guard G1, not as part of the claim.
 ```
 
-Open before pin: owner readback of open issues for collisions; then claim
-lock issue, branch `probe/P-PISTON-RELATIONAL-WEDGE-1`, static check,
-initial pin of `PREREG.md` and `verify.py`, readback, formal run on aarch64
-from the repository root, `EXPECTED.txt`, `RUN.md`, pull request with the
-x86_64 job, `RESULT.md`.
+Completed before this pin: public authority and collision readback, claim lock
+#425, branch creation, and the Python 3.13 AST check. Next: read back the
+immutable `PREREG.md` and `verify.py` pin, run once on Linux/aarch64 from
+the repository root, then add `EXPECTED.txt`, `RUN.md`, and `RESULT.md`.
+The later probe-only pull request must pass its x86_64 and aarch64 jobs and
+the aggregate check.
