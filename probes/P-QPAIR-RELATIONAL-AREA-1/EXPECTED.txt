@@ -1,0 +1,72 @@
+P-QPAIR-RELATIONAL-AREA-1 verifier
+two typed slots, two determinant forms: det(X c(X)^T) = N(D) and P_-- R(x tensor x) = (D/2) kappa; the area N(D)/n^2 in K+ and its two real embeddings
+
+CHECK I01.environment                                      PASS
+CHECK R1a.partial-trace.rhoV.explicit                      PASS
+CHECK R1a.traces.equal.n                                   PASS
+CHECK R1a.det.rhoV.equals.N(D)                             PASS
+CHECK R1a.det.rhoW.equals.N(D)                             PASS
+CHECK R1a.N(D).c-fixed                                     PASS
+CHECK R1a.n.c-fixed                                        PASS
+CHECK R1b.discriminant.identity                            PASS
+CHECK R1b.pythagorean.beta+4A=1.numerators                 PASS
+CHECK R1b.rhoV.offdiagonal.c-conjugate                     PASS
+CHECK R1c.kappa.coefficient.(ad-bc)/2                      PASS
+CHECK R1c.projection.rank-one.line                         PASS
+CHECK R1c.slot-comparison.4N(kappa)=det.rhoV               PASS
+CHECK R1d.phase.u.c(u)=1                                   PASS
+CHECK R1d.phase.H-slots.equal                              PASS
+CHECK R1d.phase.D.changes.by.u^2                           PASS
+CHECK R1d.phase.S-slots.differ                             PASS
+CHECK R1d.phase.trivial-involution.u^2=1                   PASS
+CHECK R1e.character.D->det(g)det(h)D                       PASS
+CHECK R1e.witness.det(g)det(h).nonunit                     PASS
+CHECK R1e.witness.D.character                              PASS
+CHECK R1e.witness.N(D).character                           PASS
+CHECK R1e.witness.A.local-unitary.and.scalar.invariant     PASS
+CHECK R2a.witness.(1,0,0,1).area.exact                     PASS
+CHECK R2a.witness.(1,0,0,1).place-order                    PASS
+CHECK R2b.witness.(1,0,0,1).bounds                         PASS
+CHECK R2d.witness.(1,0,0,1).Gal(K+/Q).indexing             PASS
+CHECK R2a.witness.(1,0,0,phi).area.exact                   PASS
+CHECK R2a.witness.(1,0,0,phi).place-order                  PASS
+CHECK R2b.witness.(1,0,0,phi).bounds                       PASS
+CHECK R2d.witness.(1,0,0,phi).Gal(K+/Q).indexing           PASS
+CHECK R2a.witness.(1,zeta,0,1).area.exact                  PASS
+CHECK R2a.witness.(1,zeta,0,1).place-order                 PASS
+CHECK R2b.witness.(1,zeta,0,1).bounds                      PASS
+CHECK R2d.witness.(1,zeta,0,1).Gal(K+/Q).indexing          PASS
+CHECK R2a.witness.(1,1,0,phi).area.exact                   PASS
+CHECK R2a.witness.(1,1,0,phi).place-order                  PASS
+CHECK R2b.witness.(1,1,0,phi).bounds                       PASS
+CHECK R2d.witness.(1,1,0,phi).Gal(K+/Q).indexing           PASS
+CHECK R2a.witness.(1,1,1,1+zeta).area.exact                PASS
+CHECK R2a.witness.(1,1,1,1+zeta).place-order               PASS
+CHECK R2b.witness.(1,1,1,1+zeta).bounds                    PASS
+CHECK R2d.witness.(1,1,1,1+zeta).Gal(K+/Q).indexing        PASS
+REPORT R2r.embedding.{1,4}.(1,1,0,phi)                     (23/242) + (3/242)*sqrt5
+REPORT R2r.embedding.{2,3}.(1,1,0,phi)                     (23/242) - (3/242)*sqrt5
+REPORT R2r.embedding.{1,4}.(1,1,1,1+zeta)                  (43/722) + (-9/722)*sqrt5
+REPORT R2r.embedding.{2,3}.(1,1,1,1+zeta)                  (43/722) - (-9/722)*sqrt5
+CHECK R2c.disc.(1,1,0,phi).equals.6+3phi                   PASS
+CHECK R2c.disc.norm.45.not.square                          PASS
+CHECK R2c.disc.(2,0,0,1).equals.9.weights.4.1              PASS
+CHECK R2c.(1,1,0,phi).N(D).integral.1+phi                  PASS
+CHECK R2b.pentit.family.size.14640                         PASS
+CHECK R2b.pentit.family.areas.in.Kplus                     PASS
+CHECK R2b.pentit.family.bounds.no.violation                PASS
+REPORT R2v.pentit.place-blind                              6640
+REPORT R2v.pentit.place-split                              8000
+REPORT R2v.pentit.area.1/4                                 1200
+REPORT R2v.pentit.area.0                                   1440
+REPORT R2v.pentit.distinct.areas                           7
+REPORT R2v.pentit.area.(0)+(0)phi                          1440
+REPORT R2v.pentit.area.(1/8)+(-1/16)phi                    2000
+REPORT R2v.pentit.area.(1/16)+(1/16)phi                    2000
+REPORT R2v.pentit.area.(1/9)+(0)phi                        4000
+REPORT R2v.pentit.area.(3/16)+(-1/16)phi                   2000
+REPORT R2v.pentit.area.(1/8)+(1/16)phi                     2000
+REPORT R2v.pentit.area.(1/4)+(0)phi                        1200
+
+gates: 50  failures: 0
+RESULT PASS
