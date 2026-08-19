@@ -48,11 +48,16 @@ Frontier, workflow, gate, or existing probe file.
 
 ## Evidence boundary
 
-The local formal leg is x86_64 on CPython 3.12.13. Until the required GitHub
-x86_64 and aarch64 jobs reproduce the pinned verifier and `EXPECTED.txt` byte
-for byte, the repository two-architecture computation gate remains pending.
-The public workflow replay is an audit of the finite verifier; it cannot add
-physical meaning or strengthen the written theorem's declared L1 scope.
+The local formal leg is x86_64 on CPython 3.12.13. In workflow run
+`32295818148`, native aarch64 job `96206737767` and x86_64 job `96206738018`
+both reproduced the pinned verifier SHA-256
+`226824dbc053acd8f41517f5f5103697509172519ea483055e2fd49711e7062f` and
+stdout SHA-256
+`67eeba11fccc240d7da681357f72620adc741e854165b4b2657b51059bf5342e`
+byte for byte. Aggregate job `96206816211` completed the repository
+two-architecture computation gate. The public workflow replay remains an
+audit of the finite verifier; it cannot add physical meaning or strengthen
+the written theorem's declared L1 scope.
 
 No public status is earned by this probe-only record. Any later Canon fold
 requires separate review of the self-contained proofs and a separately sealed

@@ -1,6 +1,6 @@
 # P-DQRC-INTRINSIC-SELECTION-1 formal run record
 
-Status: `AUDIT-CONSISTENT / REPARAMETERIZATION-ONLY / ONE LOCAL FORMAL LEG / CANON UNCHANGED`
+Status: `AUDIT-CONSISTENT / REPARAMETERIZATION-ONLY / TWO-ARCHITECTURE REPLAY / CANON UNCHANGED`
 
 The public pin and both accepted files were read back before execution. The
 single owner-authorized formal execution then used the sealed invocation from
@@ -30,7 +30,7 @@ arguments: none
 locale: LC_ALL=C.UTF-8 LANG=C.UTF-8
 timezone: Europe/London
 formal_execution_count: 1
-post_capture_repository_replays: 1
+post_capture_repository_replays: 2
 exit_code: 0
 stdout_sha256: 67eeba11fccc240d7da681357f72620adc741e854165b4b2657b51059bf5342e
 stdout_bytes: 596
@@ -47,7 +47,32 @@ stderr_nul_bytes: 0
 stderr_final_byte: EMPTY
 run_integrity: AUDIT-CONSISTENT
 coefficient_disposition: REPARAMETERIZATION-ONLY
-architecture_gate: pending required GitHub x86_64 and aarch64 replays
+architecture_gate: TWO-ARCHITECTURE
+github_workflow_run: 32295818148
+github_workflow_job: 96206737767
+github_tested_merge_commit: 553ea0a7e498e59b6ac415a54f50d8a8e6885bb4
+github_head_commit: 116cc85029d59c8491287fb7c36ec870131f3c8a
+github_base_commit: 18f1180b6128c05705ebaa23733a10457aea3d3f
+github_platform: Ubuntu 24.04.4 LTS
+github_runner_image: ubuntu-24.04-arm 20260810.90.1
+github_architecture: aarch64
+github_python: CPython 3.12.13
+github_exit_code: 0
+github_stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+github_stderr_bytes: 0
+github_verifier_sha256: 226824dbc053acd8f41517f5f5103697509172519ea483055e2fd49711e7062f
+github_stdout_sha256: 67eeba11fccc240d7da681357f72620adc741e854165b4b2657b51059bf5342e
+github_status: PASS
+github_verdict: VERIFY PASS
+github_byte_identity: PASS
+github_replay: PASS
+parallel_x86_job: 96206738018
+parallel_x86_runner_image: ubuntu-24.04 20260816.277.1
+parallel_x86_python: CPython 3.12.14
+parallel_x86_verifier_sha256: 226824dbc053acd8f41517f5f5103697509172519ea483055e2fd49711e7062f
+parallel_x86_stdout_sha256: 67eeba11fccc240d7da681357f72620adc741e854165b4b2657b51059bf5342e
+parallel_x86_byte_identity: PASS
+aggregate_check_job: 96206816211
 ```
 
 ## Launcher normalization
@@ -75,11 +100,11 @@ returned the frozen disposition `AUDIT-CONSISTENT`. The seven bounded gates
 audit the formulas; the universal word and uniqueness statements remain
 carried by the written proofs in `PREREG.md`.
 
-After the transcript and run record were assembled, one local invocation of
+After the transcript and run record were assembled, two local invocations of
 `tools/check_verifier.py --base 18f1180b6128c05705ebaa23733a10457aea3d3f`
-replayed the pinned script and reproduced `EXPECTED.txt` byte for byte. That
-repository validation is a post-capture reproduction, not a second formal
-capture and not independent scientific evidence.
+replayed the pinned script and reproduced `EXPECTED.txt` byte for byte. Those
+repository validations are post-capture reproductions, not additional formal
+captures and not independent scientific evidence.
 
 The verifier has a deliberate hard interpreter guard
 `sys.version_info[:2] == (3, 12)`. The repository workflow currently pins
@@ -87,6 +112,10 @@ Python 3.12 on both architectures. A future workflow change to another minor
 version would produce an integrity `STOP`; this sealed probe cannot be repaired
 in place and would require a fresh probe if replay were still needed.
 
-The two GitHub architecture legs are not pre-recorded here. They must rerun
-the pinned verifier and compare stdout byte for byte with `EXPECTED.txt` in
-the pull-request workflow.
+Pull-request workflow run `32295818148` checked synthetic merge commit
+`553ea0a7e498e59b6ac415a54f50d8a8e6885bb4`. Native aarch64 job
+`96206737767` and x86_64 job `96206738018` both reproduced the pinned verifier
+and `EXPECTED.txt` byte for byte; aggregate job `96206816211` completed the
+required two-architecture gate. The aarch64 runner resolved CPython 3.12.13
+and the x86_64 runner resolved CPython 3.12.14. Both satisfy the deliberately
+frozen 3.12 minor-version guard; neither weakens it.
