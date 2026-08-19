@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v53
+# TWIST-J Public Canon v54
 
-**Release identity.** Public Canon v53. Normative authority and activation
+**Release identity.** Public Canon v54. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v53 also declares the discrete
+algebraic axiom is J. Public Canon v54 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v53 does not claim
+seed of the two algebraic projections. Public Canon v54 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v53 contains no such
+deriving the architecture from J; Public Canon v54 contains no such
 theorem.
 
 ---
@@ -4710,6 +4710,234 @@ piston carrier, QDD, or the autonomous TWIST-J state to physical qubits. It
 supplies no mixed-state convex-roof extension and no L2 manifold, L3 boundary,
 L4 apparatus, L5 realized event, or L6 probability measure.
 
+### Deterministic quadratic relational census
+
+**DEF-DQRC-INTEGER-CENSUS.** Let
+
+```text
+X=((a,b),(c,d)) in Z^(2x2) \\ {0},
+Q=a^2+b^2+c^2+d^2,
+Delta=(ad-bc)^2,
+H=Q^2+4Delta.
+```
+
+For `K>=0`, define only by integer comparisons
+
+```text
+M_0(K)=max {m>=0: H m^2<=Q^2 K^2},
+M_1(K)=max {m>=0: Q^2 H m^2<=16 Delta^2 K^2},
+u_x(k)=M_x(k+1)-M_x(k).
+```
+
+For an integer origin `j>=0`, put
+
+```text
+M_x^[j](K)=M_x(K+j)-M_x(j),
+u_x^[j](k)=u_x(k+j).
+```
+
+For formal bits `x,y,r,t in {0,1}`, let
+
+```text
+n=16k+4(2x+y)+2r+t,
+sigma_xy=(-1)^(xy),
+A_xy^[j](k,r,t)=(-1)^t,
+B_xy^[j](k,r,t)=A_xy^[j](k,r,t) sigma_xy
+                      (-1)^(r(1-u_x^[j](k))).
+```
+
+For `K>=1` and `epsilon,eta in {+1,-1}`, let
+`N_xy^(epsilon,eta)(K;j)` count the triples `(k,r,t)` with `0<=k<K` and
+the displayed formal signs `(epsilon,eta)`, and define
+
+```text
+E_xy^[j](K)=(1/(4K)) sum_(k,r,t) A_xy^[j](k,r,t)B_xy^[j](k,r,t),
+S_K^[j]=E_00^[j]+E_01^[j]+E_10^[j]-E_11^[j].
+```
+
+These are L1 formal addresses, signs, integer counts, and rational
+signed-count ratios. The symbols `x,y,A,B,n` do not thereby become physical
+settings, outcomes, or trials, and the definition supplies no L4 apparatus,
+L5 event stream, L6 probability law, no-signalling intervention statement,
+or Bell causal model.
+
+**DQRC-INTEGER-CENSUS-ARITHMETIC [T].** For every declared nonzero integral
+`X`, every `K>=1`, every fixed origin `j>=0`, and every `k>=0`, the exact
+Lagrange identity
+
+```text
+Q^2-4Delta=(a^2+b^2-c^2-d^2)^2+4(ac+bd)^2>=0
+```
+
+puts both comparator slopes in `[0,1]` and gives `u_x^[j](k) in {0,1}`.
+The comparator maxima are total, and the exact closed census is
+
+```text
+N_xy^(epsilon,eta)(K;j)
+  = K+M_x^[j](K)  if epsilon eta=sigma_xy,
+  = K-M_x^[j](K)  otherwise.
+```
+
+Each sign of each formal local variable occurs exactly `2K` times in every
+context, and
+
+```text
+E_xy^[j](K)=sigma_xy M_x^[j](K)/K,
+S_K^[j]=2(M_0^[j](K)+M_1^[j](K))/K,
+lim_(K->infinity) S_K^[j]=S_inf=2sqrt(H)/Q.
+```
+
+At the distinguished lower-floor origin `j=0` only,
+
+```text
+0<=S_inf-S_K<4/K.
+```
+
+Integer rescaling `X->qX`, `q!=0`, changes `(Q,Delta,H)` to
+`(q^2 Q,q^4 Delta,q^4 H)` and leaves every comparator and census unchanged.
+For every fixed `(k,r,t,j)`,
+
+```text
+product_(x,y) A_xy^[j] B_xy^[j]=-1,
+```
+
+whereas every locally factorized deterministic table has product `+1`. The
+balanced margins are inserted solely by the `t` involution, and the parity
+solely by `product_(x,y)sigma_xy=-1`; neither is an emergent no-signalling or
+locality theorem.
+
+**DQRC-HORODECKI-REENCODING [T].** Supply externally the normalized real pure
+two-qubit state with coefficient matrix `X/sqrt(Q)`. Its standard concurrence
+is
+
+```text
+C=2|det X|/Q,       C^2=4Delta/Q^2,
+H=Q^2(1+C^2),       S_inf=2sqrt(1+C^2)=B_max.
+```
+
+Thus the DQRC limit is exactly the already registered Horodecki pure-state
+optimum written in the integer invariants. In Schmidt gauge,
+
+```text
+T=diag(C,-C,1),       spec(T^T T)={1,C^2,C^2},
+A_0=z,                A_1=x,
+B_0=(z+Cx)/sqrt(1+C^2),
+B_1=(z-Cx)/sqrt(1+C^2),
+(E_00,E_01,E_10,E_11)=(r_0,r_0,r_1,-r_1),
+r_0=Q/sqrt(H),        r_1=4Delta/(Q sqrt(H)).
+```
+
+For a general real `X`, the displayed directions must be rotated by its local
+singular-value transformations. This is an exact reencoding of an externally
+supplied standard-QM result, not an intrinsic derivation of `H`, a TWIST-J
+apparatus map, or an independent Bell prediction.
+
+**DQRC-H-COEFFICIENT-NONSELECTION [T].** Under the full real local action
+`X->UXV^T`, `U,V in O(2)`, the invariant polynomial ring is generated by
+
+```text
+Q=tr(XX^T),       Delta=det(X)^2.
+```
+
+Every homogeneous degree-four invariant is therefore `A Q^2+beta Delta`.
+Rank-one normalization `H(Q,0)=Q^2` fixes `A=1` but not `beta`. For every
+integer `beta>=0`, the replacement
+
+```text
+H_beta=Q^2+beta Delta
+```
+
+preserves comparator totality, binary increments, the closed census, exact
+margins, integer rescaling, and inserted parity. Its actual limit is
+
+```text
+L_beta=2(Q^2+4Delta)/(Q sqrt(H_beta)).
+```
+
+For `Delta>0`,
+
+```text
+L_beta=B_max
+iff L_beta=2sqrt(H_beta)/Q
+iff beta=4.
+```
+
+Hence the frozen orbit data, degree-four homogeneity, rank-one normalization,
+integrality, and census identities admit the infinite family
+`beta=0,1,2,...` and do not select `4`; the already known target does. The
+result proves nonselection only in this explicitly frozen ansatz and does not
+exclude a richer preregistered derivation from `J`, `Omega`, or `U`.
+
+**DQRC-ORIGIN-NONSELECTION [T].** Every fixed shift
+
+```text
+M_x^[j](K)=M_x(K+j)-M_x(j)
+```
+
+preserves the determinant bound, binary increments, exact census, `2K`
+margins, integer rescaling, inserted parity, and the limit
+`S_K^[j]->S_inf`. The finite sign is not origin invariant. At
+
+```text
+(Q,Delta,H)=(2,1,8),       K=1,
+S_1^[0]=0,                 S_1^[1]=4,
+S_inf^2=8.
+```
+
+The same comparator and asymptotic target therefore permit a finite deficit
+or excess. The origin-zero one-sided `O(1/K)` deficit is a theorem of the
+chosen lower-floor origin, not a physical prediction until an intrinsic
+carrier, time address, and apparatus law select the origin or intercept.
+
+**DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY [T].** On `4Delta=Q^2`,
+
+```text
+H=2Q^2,       S_inf=2sqrt(2),
+alpha_0=alpha_1=1/sqrt(2).
+```
+
+The unique quadratic subfield of `Q(zeta_5)` is `Q(sqrt(5))`; hence `sqrt(2)`
+is not in `Q(zeta_5)`, and
+
+```text
+Q(zeta_5) intersection Q(zeta_8)=Q,
+[Q(zeta_5,sqrt(2)):Q]=8,
+Q(zeta_5,sqrt(2)) is a proper subfield of Q(zeta_40),
+Q(zeta_5,zeta_8)=Q(zeta_40),
+[Q(zeta_40):Q]=16.
+```
+
+This does not obstruct a purely integer substitution: `A->AAB`, `B->A` has
+incidence matrix `((2,1),(1,0))` and limiting `A` frequency `1/sqrt(2)`. The
+field mismatch blocks only a claim that the slope is a `Q(zeta_5)` scalar
+or follows by a `Q(zeta_5)`-linear construction. Finally,
+
+```text
+S_inf^2=4+16Delta/Q^2 in Q.
+```
+
+Thus `S_inf` cannot equal `a+b sqrt(5)` with nonzero rational `a,b`. The
+integral witness `X=((-3,-1),(-1,0))` has `(Q,Delta,H)=(11,1,125)` and
+`S_inf=10sqrt(5)/11`, but no nonzero integral `X` has `S_inf=sqrt(5)`. These
+are field and arithmetic statements only, not a physical place or apparatus
+selection.
+
+The exact evidence for all five theorem rows is
+`probes/P-DQRC-ARITHMETIC-RECONSTRUCTION-1`.
+
+Here `Q` is quadratic in the entries of `X`, whereas `Delta=(det X)^2` is
+quartic; `Delta` becomes quadratic only after a determinant-line coordinate
+has separately been supplied. The exact standard-QM equality runs from
+externally supplied pure-two-qubit structure to the DQRC formula, not
+conversely from the TWIST-J carrier to qubits, apparatus, events, or a Born
+measure. The `t` involution inserts the balanced formal margins, `sigma_xy`
+inserts the parity, `beta=4` is not selected by the census identities, and
+the finite deficit is not selected without an origin. The five DQRC theorem
+rows are exact L1 statements only; they create no physical DQRC reading and
+move no `BELL-CAUSAL-ACCOUNTING`, `QDD-INSTRUMENT-APPARATUS`,
+`QUADRATIC-DECODER-DATA`, `BELL-MAGIC-BOUNDARY`, `TWO-PLACE-PHYSICS`,
+`SILVER-RING-FACTS`, or `SILVER-SIBLING` status.
+
 The product-composition, cyclotomic-area, and conditional pure-two-qubit rows
 remain at their registered L1 scopes. They do not supply the separately
 registered `BELL-CAUSAL-ACCOUNTING [O]` contract, do not close
@@ -6202,9 +6430,11 @@ premise fails. Failure of Bell-local factorization does not by itself imply a
 signal, force, mechanism, or superluminal communication; no-signalling and
 controllable signalling are separate tests.
 
-`BELL-MAGIC-BOUNDARY` is a finite functional only.
-`PURE-QUBIT-RELATIONAL-CHSH` is an optimized standard-QM pure-state
-comparison only. Neither supplies this contract. `QUADRATIC-DECODER-DATA [O]`
+`BELL-MAGIC-BOUNDARY` is a finite functional only;
+`PURE-QUBIT-RELATIONAL-CHSH` is an optimized standard-QM pure-state comparison
+only; the DQRC rows are L1 formal-census, reencoding, nonselection, and
+field-boundary theorems only. None supplies this contract.
+`QUADRATIC-DECODER-DATA [O]`
 and `QDD-INSTRUMENT-APPARATUS [O]` remain separate and unchanged. Neither the
 integral QPAIR carrier nor the rational piston carrier is identified with a
 physical bipartite system, and no conclusion about latent-variable models,

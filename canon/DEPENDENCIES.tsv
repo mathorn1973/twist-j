@@ -471,3 +471,17 @@ PURE-QUBIT-RELATIONAL-CHSH	PURE-QUBIT-RELATIONAL-AREA	REQUIRES	the pure-state CH
 PURE-QUBIT-RELATIONAL-READING	PURE-QUBIT-RELATIONAL-AREA	REQUIRES	the dictionary reads only the proved pure-state determinant-line norm after the external structure is supplied
 BELL-MAGIC-BOUNDARY	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the finite cyclotomic CHSH functional supplies no source, settings, apparatus, events, probability kernel, premise test, no-signalling test, or causal account
 PURE-QUBIT-RELATIONAL-CHSH	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the optimized standard-QM pure-state value supplies no realized Bell experiment, sampling measure, or causal account
+DQRC-INTEGER-CENSUS-ARITHMETIC	DEF-DQRC-INTEGER-CENSUS	REQUIRES	the theorem proves the exact identities of the registered integral comparator census
+DQRC-INTEGER-CENSUS-ARITHMETIC	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L1 exact arithmetic and formal combinatorics and creates no L4 apparatus, L5 event, L6 measure, or cross-layer lift
+DQRC-INTEGER-CENSUS-ARITHMETIC	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the balanced formal margins and inserted parity supply no source, realized settings or outcomes, Bell-premise test, no-signalling intervention test, or causal account
+DQRC-HORODECKI-REENCODING	DQRC-INTEGER-CENSUS-ARITHMETIC	REQUIRES	the reencoding uses the proved DQRC asymptotic signed-count functional
+DQRC-HORODECKI-REENCODING	PURE-QUBIT-RELATIONAL-CHSH	REQUIRES	the equality target is the already registered externally supplied standard-QM pure-state optimum
+DQRC-HORODECKI-REENCODING	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the exact model-value identity supplies no TWIST-J source, apparatus, realized event stream, sampling law, locality premise, no-signalling test, or causal mechanism
+DQRC-H-COEFFICIENT-NONSELECTION	DQRC-INTEGER-CENSUS-ARITHMETIC	REQUIRES	the nonselection theorem holds fixed the beta-independent integer census identities
+DQRC-H-COEFFICIENT-NONSELECTION	DQRC-HORODECKI-REENCODING	REQUIRES	the coefficient beta=4 is identified only by equality with the already known pure-state target
+DQRC-H-COEFFICIENT-NONSELECTION	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	nonselection of an invariant coefficient supplies neither a Bell model nor a physical mechanism
+DQRC-ORIGIN-NONSELECTION	DQRC-INTEGER-CENSUS-ARITHMETIC	REQUIRES	the shifted-origin family preserves the registered exact census identities and asymptotic limit
+DQRC-ORIGIN-NONSELECTION	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the origin witness blocks a finite Bell-data prediction until an intrinsic time address, apparatus, realized-trial map, and sampling law are supplied
+DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY	DQRC-INTEGER-CENSUS-ARITHMETIC	REQUIRES	the maximal-locus slope and S_inf formulas are specializations of the exact DQRC arithmetic
+DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY	DEGREES-BY-PRIME	REQUIRES	the DQRC field application uses the registered separation of the zeta_5 and zeta_8 place fields
+DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the field boundary neither selects a physical place assignment nor supplies a Bell source, apparatus, event law, or causal account

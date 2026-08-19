@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 160, "D": 43, "C": 30, "F": 15,
+    expected_counts = {"T": 165, "D": 43, "C": 30, "F": 15,
                        "O": 24, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v53",
-        len(rows) == 274
+        "registry and companion-ledger counts match Public Canon v54",
+        len(rows) == 279
         and counts == expected_counts
-        and len(normative) == 318
-        and len(dependencies) == 472
-        and len(evidence) == 274
-        and two_architecture == 192
-        and len(history) == 792
+        and len(normative) == 324
+        and len(dependencies) == 486
+        and len(evidence) == 279
+        and two_architecture == 197
+        and len(history) == 797
         and len(gates) == 10
         and len(programs) == 26
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -2953,6 +2953,11 @@ def run():
         and bell_incoming == {
             ("BELL-MAGIC-BOUNDARY", "BOUNDED_BY"),
             ("PURE-QUBIT-RELATIONAL-CHSH", "BOUNDED_BY"),
+            ("DQRC-INTEGER-CENSUS-ARITHMETIC", "BOUNDED_BY"),
+            ("DQRC-HORODECKI-REENCODING", "BOUNDED_BY"),
+            ("DQRC-H-COEFFICIENT-NONSELECTION", "BOUNDED_BY"),
+            ("DQRC-ORIGIN-NONSELECTION", "BOUNDED_BY"),
+            ("DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY", "BOUNDED_BY"),
         }
         and all(row["owner_item_id"] != bell for row in gates.values())
         and scope_contains_all(
@@ -2967,6 +2972,115 @@ def run():
         )
         and "partial accounts and failed individual candidates remain stop"
         in index[bell]["falsifier"].lower(),
+    ))
+
+    dqrc_rows = (
+        "DQRC-INTEGER-CENSUS-ARITHMETIC",
+        "DQRC-HORODECKI-REENCODING",
+        "DQRC-H-COEFFICIENT-NONSELECTION",
+        "DQRC-ORIGIN-NONSELECTION",
+        "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
+    )
+    dqrc_definition = "DEF-DQRC-INTEGER-CENSUS"
+    dqrc_path = "probes/P-DQRC-ARITHMETIC-RECONSTRUCTION-1"
+    dqrc_digest = (
+        "25af7d719a244e4d877cf364736f9f9d0c4d0d45ff07a3611f7ff39b1679ee4b"
+    )
+    dqrc_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in dqrc_rows
+    }
+    checks.append((
+        "DQRC",
+        "the deterministic integer census and four boundary theorems stay exact L1 results while coefficient, origin, apparatus, event, measure, Bell, and physical readings remain unselected",
+        {claim for claim in index if claim.startswith("DQRC-")}
+        == set(dqrc_rows)
+        and all(has_status(index, claim, "T") for claim in dqrc_rows)
+        and dqrc_definition not in index
+        and normative.get(dqrc_definition, {}).get("item_type") == "DEFINITION"
+        and normative.get(dqrc_definition, {}).get("claim_id") == ""
+        and normative.get(dqrc_definition, {}).get("status") == ""
+        and normative.get(dqrc_definition, {}).get("layer") == "L1"
+        and all(
+            normative.get(claim, {}).get("item_type") == "THEOREM"
+            and normative.get(claim, {}).get("status") == "T"
+            and normative.get(claim, {}).get("layer") == "L1"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and evidence.get(claim, {}).get("location") == dqrc_path
+            and evidence.get(claim, {}).get("sha256") == dqrc_digest
+            and evidence.get(claim, {}).get("hash_mode")
+            == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and claim not in programs
+            and all(row["owner_item_id"] != claim for row in gates.values())
+            for claim in dqrc_rows
+        )
+        and dqrc_dependencies[dqrc_rows[0]] == {
+            (dqrc_definition, "REQUIRES"),
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+            ("BELL-CAUSAL-ACCOUNTING", "BOUNDED_BY"),
+        }
+        and dqrc_dependencies[dqrc_rows[1]] == {
+            (dqrc_rows[0], "REQUIRES"),
+            ("PURE-QUBIT-RELATIONAL-CHSH", "REQUIRES"),
+            ("BELL-CAUSAL-ACCOUNTING", "BOUNDED_BY"),
+        }
+        and dqrc_dependencies[dqrc_rows[2]] == {
+            (dqrc_rows[0], "REQUIRES"),
+            (dqrc_rows[1], "REQUIRES"),
+            ("BELL-CAUSAL-ACCOUNTING", "BOUNDED_BY"),
+        }
+        and dqrc_dependencies[dqrc_rows[3]] == {
+            (dqrc_rows[0], "REQUIRES"),
+            ("BELL-CAUSAL-ACCOUNTING", "BOUNDED_BY"),
+        }
+        and dqrc_dependencies[dqrc_rows[4]] == {
+            (dqrc_rows[0], "REQUIRES"),
+            ("DEGREES-BY-PRIME", "REQUIRES"),
+            ("BELL-CAUSAL-ACCOUNTING", "BOUNDED_BY"),
+        }
+        and scope_contains_all(
+            index, dqrc_rows[0],
+            ("exact integral l1 carrier", "margin exactly 2k",
+             "inserted t involution", "parity solely from sigma_xy",
+             "no realized setting", "no-signalling"),
+        )
+        and scope_contains_all(
+            index, dqrc_rows[1],
+            ("externally supplying", "exactly reencodes",
+             "local singular-value rotations", "not an intrinsic derivation"),
+        )
+        and scope_contains_all(
+            index, dqrc_rows[2],
+            ("every integer beta>=0", "if and only if beta=4",
+             "do not select 4", "no claim excludes a richer"),
+        )
+        and scope_contains_all(
+            index, dqrc_rows[3],
+            ("s_1^[0]=0", "s_1^[1]=4", "not origin invariant",
+             "not an intrinsic physical prediction"),
+        )
+        and scope_contains_all(
+            index, dqrc_rows[4],
+            ("proper subfield of q(zeta_40)", "integer substitution",
+             "not an integer limiting frequency", "no physical place"),
+        )
+        and has_status(index, "BELL-CAUSAL-ACCOUNTING", "O")
+        and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
+        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and has_status(index, "BELL-MAGIC-BOUNDARY", "T")
+        and has_status(index, "PURE-QUBIT-RELATIONAL-CHSH", "T")
+        and has_status(index, "TWO-PLACE-PHYSICS", "D")
+        and has_status(index, "SILVER-RING-FACTS", "C")
+        and has_status(index, "SILVER-SIBLING", "D")
+        and "P-DQRC-FINITE-DEFICIT-1" not in normative
+        and "P-DQRC-FINITE-DEFICIT-1" not in programs
+        and all(row["owner_item_id"] != "P-DQRC-FINITE-DEFICIT-1"
+                for row in gates.values()),
     ))
 
     fw_requires = {}
