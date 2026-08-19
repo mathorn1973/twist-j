@@ -1,7 +1,7 @@
 # P-PISTON-RELATIONAL-WEDGE-1 result
 
-Status: SCIENTIFIC RESULT (LOCAL FORMAL LEG); TWO-ARCHITECTURE COMPUTATION
-GATE PENDING; PUBLIC CANON UNCHANGED
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS;
+PUBLIC CANON UNCHANGED
 
 The immutable preregistration pin
 `348c3c3ea65b0dbc79052a70482eba690e82b145` (base `91e11e4`, Public Canon
@@ -84,10 +84,13 @@ EXPECTED.txt sha256 c41fe236222402f35d678316e3180b651a8c51da600135bc3dda78071e43
 The accepted local leg is the single formal execution on Linux/aarch64,
 CPython 3.12.3, deterministic environment, exit zero, empty stderr, with the
 raw stdout returned on issue #425 before this record was written. The
-pull-request Linux/x86_64 and Linux/aarch64 jobs and the aggregate check
-remain to be recorded in `RUN.md`; until they pass, the two-architecture
-computation gate is pending and the computational grade of the finite
-census is not yet earned.
+first clean GitHub Linux/x86_64 pull-request replay (pull request #427)
+used the identical pinned verifier at tested merge commit
+`98e26368c5325a9f8add1ad4d8f1bc8ed532d590`: workflow run `32219987568`, job
+`95968523697`, exit zero, empty stderr, `EXPECTED.txt` reproduced byte for
+byte; the parallel GitHub Linux/aarch64 job `95968523721` replayed
+identically and the aggregate check job `95968573327` passed. The
+two-architecture computation gate is PASS.
 
 ## Scope firewall
 
@@ -114,8 +117,7 @@ event stream, no measure, and no L2 to L6 or physical statement.
 run integrity:       PASS
 counterexample:      NONE
 result:              PASS
-architecture gate:   PENDING (local aarch64 done; GitHub x86_64 and aarch64
-                     replay and aggregate check outstanding)
+architecture gate:   PASS (local aarch64, GitHub x86_64, GitHub aarch64)
 scope:               R3, R4, R5 of PREREG.md, layer L1, frozen public
                      piston carrier V_eff
 status discipline:   the probe result stands at its evidential grade; the
