@@ -34,10 +34,31 @@ stderr_nul_bytes: 0
 stderr_final_byte: EMPTY
 run_integrity: PASS
 result: PASS
-architecture_gate: PENDING
+architecture_gate: PASS
 public_lock: issue 430
 public_pin_comment: 5338770133
 public_run_return: 5338770284
+public_pull_request: 431
+github_workflow_run: 32226965301
+github_workflow_job: 95988501590
+github_tested_merge_commit: 0d85c8b8bb67e9b9a276d42d74c5d0d72e994f8d
+github_head_commit: 7494576c78ae9424e5980b36b8b4d378303856bf
+github_base_commit: e1fc4677d72eaef5851b103d1fbcbf95cf4dd38f
+github_platform: Ubuntu 24.04.4 LTS
+github_runner_image: ubuntu-24.04-arm 20260810.90.1
+github_runner: 2.336.0
+github_python: CPython 3.12.13
+github_architecture: aarch64
+github_exit_code: 0
+github_stderr_bytes: 0
+github_verifier_sha256: 2405a218512813fa041334562be83e655d95a9cc1622892027686bb965c94a77
+github_stdout_sha256: 1c1c60dbca25469e55081841f7c73b636516df1888602344515c7e21b8936676
+github_byte_identity: PASS
+x86_replay_workflow_job: 95988501973
+x86_replay_runner_image: ubuntu-24.04 20260816.277.1
+x86_replay_python: CPython 3.12.14
+x86_replay_byte_identity: PASS
+aggregate_check_job: 95988607069
 
 The single authorized formal execution used the exact verifier whose public
 remote bytes, SHA-256, byte count and Git blob identity were read back at the
@@ -47,6 +68,13 @@ No rerun occurred.
 
 The written proofs in `PREREG.md` carry the universal statements. The exact
 finite audit covered 2,401 Gaussian-rational `2 x 2` matrices and 69,888
-Gaussian-rational two-row matrices for `n=2,3,4`. Public x86_64 and aarch64
-pull-request replays are pending; until both reproduce these same bytes and
-the aggregate `check` passes, the architecture gate remains PENDING.
+Gaussian-rational two-row matrices for `n=2,3,4`.
+
+The first clean pull-request replay at tested merge commit
+`0d85c8b8bb67e9b9a276d42d74c5d0d72e994f8d` reproduced the exact pinned
+verifier and expected stdout on native Linux/aarch64, workflow run
+`32226965301`, job `95988501590`. The parallel Linux/x86_64 job
+`95988501973` reproduced the same bytes, and aggregate job `95988607069`
+passed. The local x86_64 formal leg and required aarch64 GitHub leg differ in
+architecture and are byte-identical; the workflow independently passed both
+required architectures. The two-architecture gate is PASS.
