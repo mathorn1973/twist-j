@@ -1,7 +1,7 @@
 # P-QPAIR-RELATIONAL-AREA-1 result
 
-Status: SCIENTIFIC RESULT (LOCAL FORMAL LEG); TWO-ARCHITECTURE COMPUTATION
-GATE PENDING; PUBLIC CANON UNCHANGED
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS;
+PUBLIC CANON UNCHANGED
 
 The immutable preregistration pin
 `a7564e7f47ee4d7ff39b952554f5af3bf673bf22` (base `91e11e4`, Public Canon
@@ -70,10 +70,13 @@ EXPECTED.txt sha256 cf07f330d7f39d2487171f59dd260b5dcbf8934d92f67f9858d2b1d06040
 The accepted local leg is the single formal execution on Linux/aarch64,
 CPython 3.12.3, deterministic environment, exit zero, empty stderr, with the
 raw stdout returned on issue #424 before this record was written. The
-pull-request Linux/x86_64 and Linux/aarch64 jobs and the aggregate check
-remain to be recorded in `RUN.md`; until they pass, the two-architecture
-computation gate is pending and the computational grade of the finite audit
-is not yet earned.
+first clean GitHub Linux/x86_64 pull-request replay (pull request #426)
+used the identical pinned verifier at tested merge commit
+`c2ec4c00754fdbdd237b1c51f3e40acdf8a40a0b`: workflow run `32219985004`, job
+`95968516655`, exit zero, empty stderr, `EXPECTED.txt` reproduced byte for
+byte; the parallel GitHub Linux/aarch64 job `95968516518` replayed
+identically and the aggregate check job `95968564806` passed. The
+two-architecture computation gate is PASS.
 
 ## Scope firewall
 
@@ -96,8 +99,7 @@ evidence or dependencies.
 run integrity:       PASS
 counterexample:      NONE
 result:              PASS
-architecture gate:   PENDING (local aarch64 done; GitHub x86_64 and aarch64
-                     replay and aggregate check outstanding)
+architecture gate:   PASS (local aarch64, GitHub x86_64, GitHub aarch64)
 scope:               R1 and R2 of PREREG.md, layer L1, integral QPAIR carrier
 status discipline:   the probe result stands at its evidential grade; the
                      registry rows QPAIR-DET-AREA-SLOT-COMPARISON and

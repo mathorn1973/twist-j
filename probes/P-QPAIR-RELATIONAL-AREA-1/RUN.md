@@ -36,10 +36,32 @@ stderr_nul_bytes: 0
 stderr_final_byte: EMPTY
 run_integrity: PASS
 result: PASS
-architecture_gate: PENDING
+architecture_gate: PASS
 public_lock: issue 424
 public_pin_comment: 5337851333
 public_run_return: 5337865246
+public_pull_request: 426
+x86_public_return: 32219985004
+x86_workflow_run: 32219985004
+x86_workflow_job: 95968516655
+x86_tested_merge_commit: c2ec4c00754fdbdd237b1c51f3e40acdf8a40a0b
+x86_head_commit: e555ec56a4032b57135e84f1ca099bfae8c8689c
+x86_base_commit: 91e11e4f4db01d1badeabfea0a361972a6d4f2ea
+x86_platform: Ubuntu 24.04.4 LTS
+x86_runner_image: ubuntu-24.04 20260810.271.1
+x86_runner: 2.336.0
+x86_python: CPython 3.12.13
+x86_architecture: x86_64
+x86_exit_code: 0
+x86_stderr_bytes: 0
+x86_verifier_sha256: 2b26d98781cd8e49118981ba6a1046ebc7c37e818f886adcd72a69a2abb340b2
+x86_stdout_sha256: cf07f330d7f39d2487171f59dd260b5dcbf8934d92f67f9858d2b1d06040f7fa
+x86_byte_identity: PASS
+aarch64_replay_workflow_job: 95968516518
+aarch64_replay_runner_image: ubuntu-24.04-arm 20260810.90.1
+aarch64_replay_python: CPython 3.12.13
+aarch64_replay_byte_identity: PASS
+aggregate_check_job: 95968564806
 
 The single authorized formal execution used a fresh clean checkout of the
 exact immutable pin on native Linux/aarch64, from the repository root, after
@@ -51,8 +73,12 @@ publicly on issue #424 before these post-run records were created. No rerun
 occurred. `EXPECTED.txt` was assembled from that public return and its
 SHA-256, byte count, and line count agree with the returned values.
 
-The two-architecture computation gate is pending the probe-only pull
-request: its Linux/x86_64 and Linux/aarch64 jobs must rerun the identical
-pinned verifier and reproduce `EXPECTED.txt` byte for byte, and the
-aggregate check must pass. Their identifiers are to be appended to this
-record after the replay.
+The first clean GitHub Linux/x86_64 pull-request replay (pull request
+#426) used the identical pinned verifier at tested merge commit
+c2ec4c00754fdbdd237b1c51f3e40acdf8a40a0b. Workflow run 32219985004, job
+95968516655, exited zero with empty stderr and reproduced `EXPECTED.txt`
+byte for byte (`VERIFY PASS` with the pinned verifier SHA-256 and the
+recorded stdout SHA-256). The parallel GitHub Linux/aarch64 job 95968516518
+also replayed byte for byte, and the aggregate check job 95968564806
+passed. Together with the sole formal aarch64 execution, the required
+two-architecture computation gate is PASS.
