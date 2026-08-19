@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Exact audit for P-QPAIR-RELATIONAL-AREA-1 (DRAFT, not pinned).
+"""Exact audit for P-QPAIR-RELATIONAL-AREA-1.
 
-Authority: none.  Zero-run preregistration verifier.  The written proofs in
-PREREG.md carry the universal claims; this standard-library verifier audits
+Scientific authority: none.  Initial zero-run preregistration verifier.
+The written proofs in PREREG.md carry the universal claims; this standard-library verifier audits
 exact generic polynomial identities in eight or twelve variables, exact
 Q(zeta_5) witnesses on the integral QPAIR carrier, and the finite pentit
 audit family.  It touches no rational piston carrier.  It must not be
 imported as a module.
 
-Formal run (only after the immutable pin):
+Formal run (only after the immutable pin and public remote readback):
   LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC \
     python3 probes/P-QPAIR-RELATIONAL-AREA-1/verify.py
 
@@ -42,6 +42,18 @@ def gate(name, condition, detail=""):
     if detail:
         line += "  " + detail
     print(line)
+
+
+def integrity(name, condition, detail=""):
+    global GATE_COUNT
+    GATE_COUNT += 1
+    ok = bool(condition)
+    line = "CHECK %-52s %s" % (name, "PASS" if ok else "FAIL")
+    if detail:
+        line += "  " + detail
+    print(line)
+    if not ok:
+        raise RuntimeError("integrity gate failed: " + name)
 
 
 def report(name, value):
@@ -492,7 +504,7 @@ def frac_rank(rows):
 # ------------------------------------------------------------------- main
 
 def main():
-    print("P-QPAIR-RELATIONAL-AREA-1 verifier (DRAFT)")
+    print("P-QPAIR-RELATIONAL-AREA-1 verifier")
     print("two typed slots, two determinant forms: det(X c(X)^T) = N(D) and "
           "P_-- R(x tensor x) = (D/2) kappa; the area N(D)/n^2 in K+ and "
           "its two real embeddings")
@@ -500,7 +512,7 @@ def main():
 
     if len(sys.argv) != 1:
         raise RuntimeError("no arguments accepted")
-    gate("I01.environment", sys.version_info >= (3, 8))
+    integrity("I01.environment", sys.version_info >= (3, 8))
 
     # ============================================================== R1
     # Eight variables: a b c d ab bb cb db ; the involution swaps i <-> i+4.
@@ -708,7 +720,7 @@ def main():
     pentits = [izero] + [izpow(k) for k in range(5)] + \
         [tuple(-t for t in izpow(k)) for k in range(5)]
     counts = {"states": 0, "blind": 0, "split": 0, "max": 0, "zero": 0,
-              "violations": 0}
+              "violations": 0, "outside_kplus": 0}
     area_values = {}
     for x in product(pentits, repeat=4):
         if all(t == izero for t in x):
@@ -718,7 +730,9 @@ def main():
         NDp = imul(Dp, iconj(Dp))
         nn = sum(1 for t in x if t != izero)   # n = number of nonzero pentits
         # N(D) as alpha + beta phi
-        assert NDp[1] == 0 and NDp[2] == NDp[3]
+        if NDp[1] != 0 or NDp[2] != NDp[3]:
+            counts["outside_kplus"] += 1
+            continue
         A = (F(NDp[0], nn * nn), F(-NDp[2], nn * nn))
         if not in_unit_quarter(A):
             counts["violations"] += 1
@@ -732,6 +746,8 @@ def main():
             counts["zero"] += 1
         area_values[A] = area_values.get(A, 0) + 1
     gate("R2b.pentit.family.size.14640", counts["states"] == 14640)
+    gate("R2b.pentit.family.areas.in.Kplus",
+         counts["outside_kplus"] == 0)
     gate("R2b.pentit.family.bounds.no.violation", counts["violations"] == 0)
     report("R2v.pentit.place-blind", counts["blind"])
     report("R2v.pentit.place-split", counts["split"])

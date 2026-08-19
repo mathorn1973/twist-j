@@ -1,34 +1,37 @@
-# P-QPAIR-RELATIONAL-AREA-1 preregistration (DRAFT, revision 2)
+# P-QPAIR-RELATIONAL-AREA-1 preregistration
 
-Status: `DRAFT / NOT PINNED / RESULT-EXPOSED / NO FORMAL RUN / NO CLAIM LOCK`
+Status: `PREREGISTERED CANDIDATE / RESULT-EXPOSED / NO FORMAL RUN`
 
-Revision 2 rebases the draft on Public Canon v52 and, following the owner
-verdict of 2026-08-18, restricts this probe to the integral QPAIR carrier.
+This revision is based on Public Canon v52 and, following the owner verdict of
+2026-08-18, restricts this probe to the integral QPAIR carrier.
 The rational piston carrier and every statement about it now live in the
 sibling draft `P-PISTON-RELATIONAL-WEDGE-1`. No bridge between the two
 carriers is stated, used, or implied here; a bridge, if ever, is a third
 probe.
 
-This document freezes one exact L1 probe carrying the incubation results of
-`C-ENTANGLEMENT-RELATIONAL-WEDGE-1-N` (issue #419, verdict
-RELATIONAL-AREA-PURE) and its post-result observation (the Pythagorean
-identity `|b|^2 + 4||r||^2 = 1`, not absorbed there) into the public form of
-the program. It contains no verifier output, earns no scientific or Canon
-status, and is not a pin. Formal execution is forbidden until a public claim
-lock and an immutable initial pin of `PREREG.md` and `verify.py` read back
-from the public remote.
+This document freezes one exact L1 probe carrying the non-canonical
+incubation results of `C-ENTANGLEMENT-RELATIONAL-WEDGE-1-N` (issue #419,
+verdict RELATIONAL-AREA-PURE) and
+`C-ENTANGLEMENT-LOCAL-RELATION-PYTHAGORAS-1-N` (issue #422, recorded outcome
+PYTHAGOREAN-PURE). The latter owns the post-result Pythagorean observation
+`|b|^2 + 4||r||^2 = 1`; it is not retroactively absorbed into #419. This
+file contains no verifier output and earns no scientific or Canon status.
+Together with `verify.py`, it is the complete zero-run initial pin.
+Formal execution is forbidden until that immutable commit and both file
+hashes read back from the public remote.
 
 ## Public identity, authority, and action layer
 
 ```text
-program owner:       C-ENTANGLEMENT-RELATIONAL-WEDGE-1-N (incubation, NON-CANONICAL)
+incubation sources:  C-ENTANGLEMENT-RELATIONAL-WEDGE-1-N (#419, NON-CANONICAL)
+                     C-ENTANGLEMENT-LOCAL-RELATION-PYTHAGORAS-1-N (#422, NON-CANONICAL)
 target rows:         QPAIR-DET-AREA-SLOT-COMPARISON     (new, ceiling T)
                      QPAIR-DET-AREA-PLACE-PAIR          (new, ceiling T)
 probe:               P-QPAIR-RELATIONAL-AREA-1
 sibling probe:       P-PISTON-RELATIONAL-WEDGE-1 (separate carrier, separate pin)
-public lock:         none yet
-probe owner:         A. M. Thorn / delegated drafting session
-branch:              probe/P-QPAIR-RELATIONAL-AREA-1 (not created)
+public lock:         issue #424
+probe owner:         A. M. Thorn / delegated session qpair_relational_area
+branch:              probe/P-QPAIR-RELATIONAL-AREA-1
 path:                probes/P-QPAIR-RELATIONAL-AREA-1/
 initial base:        91e11e4f4db01d1badeabfea0a361972a6d4f2ea (public main = canon-v52)
 Public Canon tag:    canon-v52
@@ -38,15 +41,16 @@ Canon bytes:         261476
 action layer:        L1 only (exact carrier algebra, finite exact audit family)
 mode:                result-exposed, proof-first; verify.py is an exact finite audit
 formal runs:         none; verify.py neither imported nor executed
-static check:        py_compile PASS, pyflakes clean (drafting); to be
-                     re-recorded at pin
+static check:        Python 3.13 ast.parse PASS at pin; no import, bytecode
+                     compilation, or execution
 ```
 
-Collision readback at drafting (main `91e11e4`): no registry, normative,
-probe-directory or branch entry named `*DET-AREA*`, `*RELATIONAL-AREA*`;
-the branches `notes/c-entanglement-relational-wedge-1-n` and its
-`-duplicate` hold the incubation notes only. Open-issue readback is to be
-completed by the owner at claim-lock time.
+Collision readback at claim lock #424 (main `91e11e4`): no other registry,
+normative, probe-directory, issue or branch entry collides with this probe or
+its target rows. The branches
+`notes/c-entanglement-relational-wedge-1-n` and its `-duplicate` hold
+incubation notes only. Issues #419 and #422 are the two named non-canonical
+lineage records, not public evidence or dependencies.
 
 Lineage and novelty boundary, none of which is a logical premise beyond the
 exact statements quoted in the equation field: `QPAIR-SYM2-TENSOR-DEFECT
@@ -54,22 +58,22 @@ exact statements quoted in the equation field: `QPAIR-SYM2-TENSOR-DEFECT
 and its conventions; `QPAIR-PRODUCT-COMPOSITION [T]` supplies the typed
 matched product; `DEF-QPAIR-SPIN-CARRIER`, `DEF-QPAIR-HERM-SLOT`,
 `DEF-QPAIR-SYM-SLOT` supply the integral carrier `O_K^2` and the two slots;
-`QPAIR-TRANSPOSE-FIBER-REDUNDANCY [T]` (the symmetric slot determines the
-Hermitian slot set-theoretically) bounds the wording of R1; `J-PROJECTIONS
-[T]` names the principal archimedean embedding; `QUBIT-FROM-F5 [T]` names
+`QPAIR-TRANSPOSE-FIBER-REDUNDANCY [T]` is scoped to its registered
+`K^2` carrier and is cited only as a wording precedent: it is not a premise
+and is not widened here to the composite `K^4` carrier. `J-PROJECTIONS [T]`
+names the principal archimedean embedding; `QUBIT-FROM-F5 [T]` names
 `V_+ = F_5^x/{+-1}` and is cited only as a coincidence of index sets. The
 rows `QUADRATIC-DECODER-DATA [O]`, `QDD-INSTRUMENT-APPARATUS [O]`,
-`BELL-CAUSAL-ACCOUNTING [O]`, `BELL-MAGIC-BOUNDARY [T]`, `TWO-PLACE-PHYSICS
-[D]`, `MEASURE-BORN-VERB [D]`, every `DEF-QDD-*` item and every `QDD-*` row
-are excluded from the premises and are not moved, strengthened, interpreted,
-or bridged by this probe.
+`BELL-MAGIC-BOUNDARY [T]`, `TWO-PLACE-PHYSICS [D]`,
+`MEASURE-BORN-VERB [D]`, every `DEF-QDD-*` item and every `QDD-*` row are
+excluded from the premises and are not moved, strengthened, interpreted, or
+bridged by this probe. No `BELL-CAUSAL-ACCOUNTING` row is created.
 
 ## The question this probe attacks, at this carrier
 
 Public Canon says that the symmetric slot of the composite pair on
 `V tensor W` has a one-dimensional summand carrying the coefficient
-`(ad-bc)/2`, and that the symmetric slot determines the Hermitian slot as a
-set map. Two exact questions remain open at L1 on the integral carrier:
+`(ad-bc)/2`. Two exact questions remain open at L1 on the integral carrier:
 
 ```text
 1  which determinant form does each typed slot carry, and how do the two
@@ -108,10 +112,9 @@ probe; only its Q(zeta_5) block is exposure for this document.)
 This probe is therefore a pinned confirmation and adversarial audit, not
 blind discovery. No equation, carrier, systematic, threshold, output route,
 or scope may move in response to the exposed values. `verify.py` has never
-been executed and never imported; at drafting it passed `py_compile` and a
-`pyflakes` static pass, and its helper functions (field arithmetic,
-polynomial ring, rank) were unit-checked on a copied source slice in the
-scratch environment without evaluating any gate. No dynamic evaluation of
+been executed or imported. Before the preparation commit and again at this
+pin it passed only a Python 3.13 `ast.parse` syntax check. No helper or gate
+was evaluated from the verifier. No dynamic evaluation of
 `U`, no orbit, window, seed, or event tally of any kind was run for this
 draft, and none is part of the probe.
 
@@ -128,9 +131,10 @@ of its two real embeddings, or is negative or exceeds `1/4` at either
 embedding; any state of the pentit audit family violating those bounds; the
 discriminant witness having a square norm.
 
-An environment or argument defect, an exception, a nonzero exit on a valid
-route, nonempty stderr, or a cross-architecture byte mismatch is `STOP`, not
-`FALSIFIED`. Exit code map: 0 pass, 1 STOP, 2 FALSIFIED.
+An environment or argument defect, an exception, an unexpected nonzero exit
+other than the declared scientific exit 2, nonempty stderr, or a
+cross-architecture byte mismatch is `STOP`, not `FALSIFIED`. Exit code map:
+0 pass, 1 STOP, 2 FALSIFIED.
 
 ## The six frozen fields
 
@@ -194,14 +198,18 @@ DEF-QPAIR-TYPED-PARTIAL-TRACE (proposed)
     rho_V(x) = tr_W H(x) = X c(X)^T,    rho_W(x) = tr_V H(x) = X^T c(X).
 DEF-QPAIR-DET-AREA (proposed)
     n(x) = sum_ij X_ij c(X_ij),   N(D) = D c(D),
-    A(x) = N(D(x)) / n(x)^2   for x != 0;   the ZERO tag for x = 0;
-    disc(x) = n^2 - 4 N(D);   beta_B(x) = disc / n^2.
+    disc(x) = n^2 - 4 N(D);
+    A(x) = N(D(x)) / n(x)^2 and beta_B(x) = disc / n(x)^2
+        on the explicit domain n(x) != 0;
+    for K = Q(zeta_5), this domain is exactly x != 0, with the ZERO tag at
+        x = 0.
 ```
 
 #### Target R1. QPAIR-DET-AREA-SLOT-COMPARISON
 
-Over every field `K` with involution `c` and two-dimensional `V, W`, for
-every state `x`, the two typed slots carry two determinant forms:
+Over every field `K` of characteristic not two with involution `c` and
+two-dimensional `V, W`, for every state `x`, the two typed slots carry two
+determinant forms:
 
 ```text
 R1.i    tr_W H(x) = X c(X)^T,  tr_V H(x) = X^T c(X),  both of trace n(x).
@@ -210,30 +218,32 @@ R1.ii   det rho_V = det rho_W = N(D) = D c(D), an element of Fix(c)
 R1.iii  P_-- R(x tensor x) = (D/2) kappa (the symmetric determinant form,
         equation (1) re-audited);  comparison: 4 N(kappa_coef) = det rho_V.
 R1.iv   with rho_V = ((p, z), (c(z), q)):
-        disc = (p - q)^2 + 4 z c(z),  hence  beta_B + 4 A = 1
-        (Pythagorean identity in Fix(c), before any embedding is chosen).
+        disc = (p - q)^2 + 4 z c(z) for every x; on n(x) != 0,
+        beta_B + 4 A = 1 (Pythagorean identity in Fix(c), before any
+        embedding is chosen).
 R1.v    phase: for u with u c(u) = 1, H(ux) = H(x), D(ux) = u^2 D(x),
-        S(ux) = u^2 S(x); witness x = (1,0,0,1), u = zeta: equal Hermitian
-        slots, D = 1 against D = zeta^2, distinct symmetric slots.  For
-        trivial c the phase group is {+-1} and u^2 = 1.
+        S(ux) = u^2 S(x); over K = Q(zeta_5), the witness
+        x = (1,0,0,1), u = zeta has equal Hermitian slots, D = 1 against
+        D = zeta^2, and distinct symmetric slots.  For trivial c the phase
+        group is {+-1} and u^2 = 1.
 R1.vi   local maps g in GL(V), h in GL(W): D -> det(g) det(h) D,
         N(D) -> N(det g det h) N(D); A is invariant under h_V-unitary and
-        h_W-unitary local maps and under nonzero scalars.
+        h_W-unitary local maps and under nonzero scalars wherever n != 0.
 ```
 
 R1 asserts no necessity, minimality, or informational independence of the
-two slots; `QPAIR-TRANSPOSE-FIBER-REDUNDANCY [T]` already states that the
-symmetric slot determines the Hermitian slot set-theoretically. R1 says only
-which determinant form each typed slot carries and how the two compare.
+two slots and no composite-carrier redundancy theorem. R1 says only which
+determinant form each typed slot carries and how the two compare.
 
 #### Target R2. QPAIR-DET-AREA-PLACE-PAIR
 
 For `K = Q(zeta_5)` and every nonzero `x in K^4`:
 
 ```text
-R2.i    A(x) in K+;  sigma_a(A) depends only on the class of a in
-        F_5^x/{+-1};  writing A = alpha + beta phi, the two real embeddings
-        agree iff beta = 0 iff A in Q (embedding-blind); otherwise
+R2.i    n(x) != 0 for every nonzero x; A(x) in K+; sigma_a(A) depends only
+        on the class of a in F_5^x/{+-1}; writing A = alpha + beta phi, the
+        two real embeddings agree iff beta = 0 iff A in Q
+        (embedding-blind); otherwise
         embedding-split.
 R2.ii   0 <= iota(A) <= 1/4 at both real embeddings;
         iota(A) = 1/4 iff at that embedding X X-bar^T is a scalar matrix.
@@ -253,7 +263,8 @@ R2.iv   Schmidt-root obstruction: the eigenvalues (n +- sqrt(disc))/2 of
 R2.v    finite audit family: over the pentit class (mu_10 union {0})^4
         minus zero (14640 states) every area lies in K+ and satisfies R2.ii
         at both embeddings; the counts of blind and split states, the
-        number of distinct area values, and the multiset are reported.
+        number of distinct area values, and the multiset are REPORT-only
+        audit output, not fields of either target row.
 ```
 
 #### Wording firewall
@@ -272,7 +283,7 @@ every `QDD` object are absent from this probe.
 #### What is not claimed
 
 No mixed states, no Schmidt rank above two, no `2 x n` bivector, no
-BELL-CAUSAL-ACCOUNTING row or dependency, no link to `BELL-MAGIC-BOUNDARY`,
+BELL-CAUSAL-ACCOUNTING row, no link to `BELL-MAGIC-BOUNDARY`,
 no L2 to L6 statement, no instrument, no measure, no decoder statement, no
 uniqueness of the area among entanglement monotones, no derivation of the
 principal embedding from `J`, no bridge to `V_eff`, and no SI statement.
@@ -309,15 +320,15 @@ R1e  local characters on generic matrices (12 variables) and on an exact
      non-unimodular witness pair; local-unitary and scalar invariance of A
 R2a  every witness area lies in K+ and equals its stated exact value; the
      order of the two real embeddings of each split witness
-R2b  exact bounds 0 <= iota(A) <= 1/4 on the witnesses and on all 14640
-     pentit states
+R2b  every one of the 14640 pentit areas lies in K+; exact bounds
+     0 <= iota(A) <= 1/4 on the witnesses and on all 14640 pentit states
 R2c  discriminant witnesses: 6 + 3 phi with norm 45 not a square; 9 with
      weights 4 and 1; N(D) = 1 + phi integral
 R2d  Galois-class indexing sigma_2 = sigma_3 and sigma_1 = sigma_4 on the
      numerator and denominator of every witness area
 REPORT lines (no gate): the two real embeddings of each split witness as
      exact surds; pentit counts and area values
-RESULT PASS | FALSIFIED | STOP
+terminal line: RESULT PASS | RESULT FALSIFIED | STOP <exception>: <detail>
 ```
 
 ### 3. Carrier or data
@@ -342,13 +353,15 @@ S3  Areas are elements of Fix(c); "embedding" means a real embedding of
     never by floats.  No gate depends on which embedding is called
     principal.
 S4  The pentit family in R2.v is an audit family for the universal bounds
-    of R2.ii and a reported census; it is not a state space of the machine.
+    of R2.ii and a REPORT-only census; it is not a state space of the machine
+    and its reports are not a registered claim.
 S5  Reported values (REPORT lines) are frozen only in EXPECTED.txt after the
     formal run; they are not thresholds.  The drafting expectations below
     are exposure, not thresholds.
-S6  Two-architecture gate: the local formal run is on aarch64, the required
-    public job on x86_64; the finite audit reaches C by byte-identical
-    output and T only through the written proofs the verifier audits.
+S6  The first formal run is local Linux/aarch64.  The required pull-request
+    workflow reruns the pinned verifier on x86_64 and aarch64 and requires
+    the aggregate check.  Computation status rests on byte identity; T can
+    come only from the written proofs the verifier audits.
 S7  Nothing in this probe uses, names, or restricts to the rational
     carrier V_eff; the sibling probe P-PISTON-RELATIONAL-WEDGE-1 is
     logically independent of this one.
@@ -366,8 +379,8 @@ F1  any identity of R1.i to R1.iv fails on the generic polynomial audit, or
     scalar invariance of A fails on the witness.
 F2  a witness area is not in K+, differs from its stated exact value, has
     the wrong order of embeddings, or violates 0 <= iota(A) <= 1/4 at either
-    embedding; or any pentit state violates those bounds; or 45 is a
-    rational square; or sigma_2(A) != sigma_3(A) on a witness.
+    embedding; or any pentit area lies outside K+ or violates those bounds;
+    or 45 is a rational square; or sigma_2(A) != sigma_3(A) on a witness.
 ```
 
 A verifier, expected-output, or hash mismatch, any execution before the
@@ -405,11 +418,13 @@ proof of QPAIR-SYM2-TENSOR-DEFECT, re-audited). Then
 `R1.iv`. For `rho_V = ((p, z), (c(z), q))` with `p, q` fixed by `c`,
 `n = p + q` and `N(D) = det rho_V = pq - z c(z)`. Then
 `n^2 - 4 N(D) = (p+q)^2 - 4pq + 4 z c(z) = (p-q)^2 + 4 z c(z)`. Dividing by
-`n^2` gives `beta_B + 4A = 1`. Both sides are in `Fix(c)`. QED
+`n^2` on the declared domain `n != 0` gives `beta_B + 4A = 1`. Both
+sides are in `Fix(c)`. QED
 
 `R1.v`. `H(ux) = u c(u) H(x) = H(x)` when `u c(u) = 1`, while
 `D(ux) = u^2 D(x)` and `S(ux) = u^2 S(x)`. For `x = (1,0,0,1)` and
-`u = zeta`, `zeta c(zeta) = 1`, `D` becomes `zeta^2 != 1`, and `S` changes by
+`u = zeta` over `Q(zeta_5)`, `zeta c(zeta) = 1`, `D` becomes
+`zeta^2 != 1`, and `S` changes by
 the factor `zeta^2`. If `c` is trivial then `u c(u) = u^2 = 1`. QED
 
 `R1.vi`. `X -> g X h^T` for local `g, h`, so `D -> det g det h D` and
@@ -420,7 +435,9 @@ so `n` and `det` are unchanged, and `A` is unchanged. Under a scalar
 
 ### Proof of R2
 
-`R2.i`. `N(D)` and `n` are sums of products `y c(y)`, hence in `Fix(c) = K+`;
+`R2.i`. At either real place choose a complex embedding `tau` of `K`.
+Then `iota(n)=sum_ij |tau(X_ij)|^2 > 0` for nonzero `x`, so `n != 0`.
+`N(D)` and `n` are sums of products `y c(y)`, hence in `Fix(c) = K+`;
 `A` is their quotient. `Gal(K/Q)` is abelian, `sigma_-a = sigma_a sigma_-1`
 and `sigma_-1 = c` fixes `A`, so `sigma_a(A)` depends only on the class of
 `a` modulo `{+-1}`. `iota_{1,4}(alpha + beta phi) = iota_{2,3}(alpha + beta
@@ -484,8 +501,9 @@ R1 wording       "the reading is a pair" removed; the row states two typed
                  consistent with QPAIR-TRANSPOSE-FIBER-REDUNDANCY.
 ```
 
-Open before pin: owner readback of open issues for collisions; then claim
-lock issue, branch `probe/P-QPAIR-RELATIONAL-AREA-1`, static check, initial
-pin of `PREREG.md` and `verify.py`, readback, formal run on aarch64 from the
-repository root, `EXPECTED.txt`, `RUN.md`, pull request with the x86_64
-job, `RESULT.md`.
+Completed before this pin: public authority and collision readback, claim lock
+#424, branch creation, and the Python 3.13 AST check. Next: read back the
+immutable `PREREG.md` and `verify.py` pin, run once on Linux/aarch64 from
+the repository root, then add `EXPECTED.txt`, `RUN.md`, and `RESULT.md`.
+The later probe-only pull request must pass its x86_64 and aarch64 jobs and
+the aggregate check.
