@@ -2,18 +2,18 @@
 
 ```text
 STATE:          ACTIVE
-CANON:          Public Canon v52
+CANON:          Public Canon v53
 AUTHORITY:      mathorn1973/twist-j main
-CUTOVER:        2026-07-13
-TAG:            canon-v52
-CONTENT_COMMIT: 6fc6923f727edacf55d511ec30eee2c7461ac497
-CANON_SHA256:   b496e4e73a2b06167a981b75a5ea651591db383a9c7f222e0075eb8bb6f1ee03
-CANON_BYTES:    261476
+CUTOVER:        2026-08-19
+TAG:            canon-v53
+CONTENT_COMMIT: 27b8d28c84eb7bb4c4844705839c7f96f9fe014a
+CANON_SHA256:   74a7da6c72cbfe9c2e3da419f42c02fb531d72e1dfe97a48d65db72553aabc02
+CANON_BYTES:    274311
 ```
 
-Public Canon v52 is the normative public ledger of TWIST-J. Authority begins
+Public Canon v53 is the normative public ledger of TWIST-J. Authority begins
 only when this activation form is merged into public `main` and the merge
-commit is published under the tag `canon-v52`; the same form on any other
+commit is published under the tag `canon-v53`; the same form on any other
 branch is an activation candidate, not an activation.
 
 ## Independent archival
