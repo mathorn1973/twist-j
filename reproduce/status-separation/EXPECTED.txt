@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v53
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v54
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -45,6 +45,7 @@ PASS 41 QPAIR-AREA typed determinant slots and the two cyclotomic places stay ex
 PASS 42 PISTON-WEDGE the rational piston reshape, occurrence-weight boundary, and lift census stay exact and decoder-fenced
 PASS 43 PURE-QUBIT conditional pure-two-qubit area, Pythagoras, CHSH, and reading stay on the external standard-QM scope
 PASS 44 BELL-CAUSAL the Bell row remains an inline O/STOP accounting barrier with no experiment or causal conclusion
-PASS 45 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
+PASS 45 DQRC       the deterministic integer census and four boundary theorems stay exact L1 results while coefficient, origin, apparatus, event, measure, Bell, and physical readings remain unselected
+PASS 46 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
 
-RESULT 45/45 ALL PASS
+RESULT 46/46 ALL PASS

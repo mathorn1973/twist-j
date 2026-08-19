@@ -1,11 +1,79 @@
 # Canon changelog (public series)
 
-## Public Canon v53
+## Public Canon v54
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 274 claims; 0 T-LOCK, 160 T, 43 D, 30 C, 2 H, 24 O, 15 F; 26 live H/O.
+Registry snapshot: 279 claims; 0 T-LOCK, 165 T, 43 D, 30 C, 2 H, 24 O, 15 F; 26 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v54 registers five closed L1 theorem rows and one L1 definition
+from the completed result-exposed, proof-first public probe
+`P-DQRC-ARITHMETIC-RECONSTRUCTION-1`. The universal statements are carried by
+written exact proofs; the frozen integer verifier audited 15 groups and
+replayed byte-identically on x86_64 and aarch64.
+
+The arithmetic row fixes the deterministic quadratic relational census on
+nonzero integral `2 x 2` matrices. It proves the determinant bound, comparator
+totality and binary increments, exact four-cell counts, `2K` formal margins,
+signed correlators, the origin-zero one-sided `O(1/K)` bound, integer scaling
+invariance, and the parity identity. The margins come only from the inserted
+bit `t`, and the parity only from the inserted CHSH sign table; neither is
+registered as an emergent no-signalling or locality result.
+
+The pure-qubit row identifies the asymptotic DQRC formula and its four
+Schmidt-gauge correlators exactly with the already registered standard-QM
+pure-two-qubit Horodecki optimum after that external structure is supplied. It
+is registered as `DQRC-HORODECKI-REENCODING`, not as an intrinsic derivation or
+independent prediction.
+
+Two nonselection rows record the anti-fit boundary. The full `O(2) x O(2)`
+degree-four invariant ansatz admits every `H_beta=Q^2+beta Delta`, `beta>=0`,
+while matching the known pure-state target selects `beta=4` exactly away from
+the product locus. Independently, an integer shift of the unselected tick
+origin preserves the exact census and asymptotic limit but changes the finite
+sign: at `(Q,Delta,H,K)=(2,1,8,1)`, the origins zero and one give `S=0` and
+`S=4`. The origin-zero finite deficit is therefore not registered as a
+physical prediction.
+
+The field-boundary row corrects the maximal-sector extension statement. The
+slope `1/sqrt(2)` is not in `Q(zeta_5)`; adjoining only `sqrt(2)` gives the
+degree-eight proper subfield `Q(zeta_5,sqrt(2))` of `Q(zeta_40)`, whereas
+adjoining the full `zeta_8` gives the degree-sixteen compositum. This is no
+obstruction to an integer substitution having limiting frequency
+`1/sqrt(2)`. The rational-square form of `S_inf` excludes a mixed linear
+`sqrt(5)` value, admits the exact witness `10sqrt(5)/11`, and excludes
+`S_inf=sqrt(5)` for every nonzero integral carrier.
+
+No physical DQRC row is created. `BELL-CAUSAL-ACCOUNTING [O]`,
+`QDD-INSTRUMENT-APPARATUS [O]`, and `QUADRATIC-DECODER-DATA [O]` remain
+unchanged and STOP; `BELL-MAGIC-BOUNDARY`, `PURE-QUBIT-RELATIONAL-CHSH`,
+`TWO-PLACE-PHYSICS`, `SILVER-RING-FACTS`, and `SILVER-SIBLING` retain their
+prior scopes and statuses. No apparatus, realized-event, Born,
+probability-measure, signalling, or causal claim is added, and
+`P-DQRC-FINITE-DEFICIT-1` remains unauthorized.
+
+The v54 ledger change is signed term by term:
+
+```text
+claims:    274 + 5 L1 theorems = 279,
+T:         160 + 5 = 165,
+D: 43, C: 30, H: 2, O: 24, F: 15, all unchanged,
+live H/O: 26, unchanged,
+normative items: 318 + 1 definition + 5 theorem items = 324,
+dependencies: 472 + 14 = 486,
+two-architecture evidence: 192 + 5 = 197,
+reproduction witnesses: 23, unchanged.
+```
+
+No pre-existing status, gate, reproduction directory, Bell obligation, QDD
+obligation, decoder completion, physical-qubit bridge, or L2-L6 event/measure
+claim changes.
+
+## Public Canon v53
+
+Registry snapshot: 274 claims; 0 T-LOCK, 160 T, 43 D, 30 C, 2 H, 24 O, 15 F; 26 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v53 registers nine closed rows from three completed public probe
 families: eight L1 theorems and one conditional L1 dictionary. Four typed

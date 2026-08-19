@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 274)
+        self.assertEqual(self.report.claims, 279)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 30, "D": 43, "F": 15, "H": 2, "O": 24, "T": 160},
+            {"C": 30, "D": 43, "F": 15, "H": 2, "O": 24, "T": 165},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 42,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 192,
+                "two-architecture": 197,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,10 +43,21 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 176)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 213
+            len(self.report.transitive_architecture_dependents), 214
         )
-        self.assertEqual(len(self.report.dependency_terminals), 44)
+        self.assertEqual(len(self.report.dependency_terminals), 45)
         self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
+        self.assertNotIn(
+            "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
+            self.report.direct_architecture_requires,
+        )
+        self.assertIn(
+            "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertIn(
+            "DEF-DQRC-INTEGER-CENSUS", self.report.dependency_terminals
+        )
         for claim in (
             "SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION",
             "SPLIT-RAPIDITY-FEJER-GRAM-BOUND",
