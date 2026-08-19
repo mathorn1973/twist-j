@@ -141,19 +141,20 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 152, "D": 42, "C": 30, "F": 15,
-                       "O": 23, "H": 2}
+    expected_counts = {"T": 160, "D": 43, "C": 30, "F": 15,
+                       "O": 24, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v52",
-        len(rows) == 264
+        "registry and companion-ledger counts match Public Canon v53",
+        len(rows) == 274
         and counts == expected_counts
-        and len(normative) == 304
-        and len(dependencies) == 457
-        and len(evidence) == 264
-        and two_architecture == 183
-        and len(history) == 782
+        and len(normative) == 318
+        and len(dependencies) == 472
+        and len(evidence) == 274
+        and two_architecture == 192
+        and len(history) == 792
         and len(gates) == 10
+        and len(programs) == 26
         and len({row["program_id"] for row in programs.values()}) == 7
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
     ))
@@ -2730,6 +2731,242 @@ def run():
         and "disproving normalization"
         in index[qpair_f[1]]["falsifier"].lower()
         and all(claim not in programs for claim in qpair_t + qpair_f),
+    ))
+
+
+    qpair_area_rows = (
+        "QPAIR-DET-AREA-SLOT-COMPARISON",
+        "QPAIR-DET-AREA-PLACE-PAIR",
+    )
+    qpair_area_path = "probes/P-QPAIR-RELATIONAL-AREA-1"
+    qpair_area_digest = (
+        "5c02838a8d0bfe822fd30d703b6b0dad71cc459cbede3b9347ed8dfccd25a47f"
+    )
+    qpair_area_definitions = {
+        "DEF-QPAIR-TYPED-PARTIAL-TRACE",
+        "DEF-QPAIR-DET-AREA",
+    }
+    checks.append((
+        "QPAIR-AREA",
+        "typed determinant slots and the two cyclotomic places stay exact L1 algebra with no physical lift",
+        all(
+            has_status(index, claim, "T")
+            and normative.get(claim, {}).get("item_type") == "THEOREM"
+            and normative.get(claim, {}).get("layer") == "L1"
+            and evidence.get(claim, {}).get("location") == qpair_area_path
+            and evidence.get(claim, {}).get("sha256") == qpair_area_digest
+            and evidence.get(claim, {}).get("hash_mode")
+            == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and claim not in programs
+            and all(row["item_id"] != claim for row in dependencies)
+            for claim in qpair_area_rows
+        )
+        and all(
+            normative.get(item, {}).get("item_type") == "DEFINITION"
+            and normative.get(item, {}).get("layer") == "L1"
+            for item in qpair_area_definitions
+        )
+        and scope_contains_all(
+            index, qpair_area_rows[0],
+            ("4n(d/2)=det rho_v", "beta_b+4a=1",
+             "no necessity", "physical-qubit"),
+        )
+        and scope_contains_all(
+            index, qpair_area_rows[1],
+            ("every nonzero x in o_k^4", "f_5^x/{+-1}",
+             "[0,1/4]", "conservative common scope o_k^4",
+             "fresh lock for any field-wide promotion", "no qubit"),
+        )
+        and all(row["owner_item_id"] not in qpair_area_rows
+                for row in gates.values()),
+    ))
+
+    piston_rows = (
+        "PISTON-2X2-RESHAPE-WEDGE",
+        "QDD-TR4-OCCURRENCE-WEIGHT-WEDGE-BLIND",
+        "PISTON-WEDGE-LIFT-CENSUS",
+    )
+    piston_path = "probes/P-PISTON-RELATIONAL-WEDGE-1"
+    piston_digest = (
+        "680d4ea3a134d3523f67260b64d21720f4ed5777b36c055b9d23ae3f4c00d2b8"
+    )
+    piston_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in piston_rows
+    }
+    checks.append((
+        "PISTON-WEDGE",
+        "the rational piston reshape, occurrence-weight boundary, and lift census stay exact and decoder-fenced",
+        all(
+            has_status(index, claim, "T")
+            and normative.get(claim, {}).get("item_type") == "THEOREM"
+            and normative.get(claim, {}).get("layer") == "L1"
+            and evidence.get(claim, {}).get("location") == piston_path
+            and evidence.get(claim, {}).get("sha256") == piston_digest
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and claim not in programs
+            for claim in piston_rows
+        )
+        and all(
+            normative.get(item, {}).get("item_type") == "DEFINITION"
+            and normative.get(item, {}).get("layer") == "L1"
+            for item in ("DEF-PISTON-2X2-RESHAPE", "DEF-PISTON-WEDGE")
+        )
+        and piston_dependencies[piston_rows[0]] == {
+            ("KERNEL-WEDGE-AFFINITY", "REQUIRES"),
+            ("DEF-QDD-BALANCED-PISTON", "REQUIRES"),
+            ("DEF-QDD-QPAIR", "REQUIRES"),
+            ("DEF-QDD-TRANSPOSE", "REQUIRES"),
+            ("QPAIR-SYM2-TENSOR-DEFECT", "REQUIRES"),
+        }
+        and piston_dependencies[piston_rows[1]] == {
+            ("QDD-PROJECTOR-PAIR-TR4", "REQUIRES"),
+            ("QDD-ALGEBRAIC-FACTORIZATION", "REQUIRES"),
+            (piston_rows[0], "REQUIRES"),
+        }
+        and piston_dependencies[piston_rows[2]]
+        == {(piston_rows[0], "REQUIRES")}
+        and scope_contains_all(
+            index, piston_rows[0],
+            ("exactly 8 of 24", "d_z/2", "exactly 145",
+             "no carrier bridge"),
+        )
+        and scope_contains_all(
+            index, piston_rows[1],
+            ("same (m,w_low,w_high)", "full registered quadratic record is not wedge-blind",
+             "no claim about what a decoder should read"),
+        )
+        and scope_contains_all(
+            index, piston_rows[2],
+            ("145", "129+16", "exactly 48", "no concurrence"),
+        )
+        and all(row["owner_item_id"] not in piston_rows
+                for row in gates.values()),
+    ))
+
+    pure_rows = (
+        "PURE-QUBIT-RELATIONAL-AREA",
+        "PURE-QUBIT-LOCAL-RELATION-PYTHAGORAS",
+        "PURE-QUBIT-RELATIONAL-CHSH",
+        "PURE-QUBIT-RELATIONAL-READING",
+    )
+    pure_path = "probes/P-PURE-QUBIT-RELATIONAL-GEOMETRY-2"
+    pure_digest = (
+        "bcfc2d7c1552fb4b42e64f4bca7a3025415893152129aea67a45585f6d15320e"
+    )
+    pure_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in pure_rows
+    }
+    checks.append((
+        "PURE-QUBIT",
+        "conditional pure-two-qubit area, Pythagoras, CHSH, and reading stay on the external standard-QM scope",
+        all(has_status(index, claim, "T") for claim in pure_rows[:3])
+        and has_status(index, pure_rows[3], "D")
+        and all(
+            normative.get(claim, {}).get("layer") == "L1"
+            and evidence.get(claim, {}).get("location") == pure_path
+            and evidence.get(claim, {}).get("sha256") == pure_digest
+            and evidence.get(claim, {}).get("hash_mode")
+            == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and claim not in programs
+            and all(row["owner_item_id"] != claim for row in gates.values())
+            for claim in pure_rows
+        )
+        and all(normative.get(claim, {}).get("item_type") == "THEOREM"
+                for claim in pure_rows[:3])
+        and normative.get(pure_rows[3], {}).get("item_type") == "DICTIONARY"
+        and pure_dependencies[pure_rows[0]]
+        == {("QPAIR-SYM2-TENSOR-DEFECT", "REQUIRES")}
+        and pure_dependencies[pure_rows[1]]
+        == {(pure_rows[0], "REQUIRES")}
+        and pure_dependencies[pure_rows[2]] == {
+            (pure_rows[0], "REQUIRES"),
+            ("BELL-CAUSAL-ACCOUNTING", "BOUNDED_BY"),
+        }
+        and pure_dependencies[pure_rows[3]]
+        == {(pure_rows[0], "REQUIRES")}
+        and scope_contains_all(
+            index, pure_rows[0],
+            ("externally supplying", "||kappa||^2=4",
+             "(1/2)||u wedge v||_tensor^2", "including a possible zero",
+             "determinant phase", "external standard-qm"),
+        )
+        and scope_contains_all(
+            index, pure_rows[1],
+            ("|b_vec|^2+c^2=1", "not a mixed-state conservation law",
+             "werner p=1/2"),
+        )
+        and scope_contains_all(
+            index, pure_rows[2],
+            ("maximum absolute expectation", "optimized model value",
+             "no-signalling test", "causal account"),
+        )
+        and scope_contains_all(
+            index, pure_rows[3],
+            ("only after externally supplying", "not a third particle",
+             "no map from the integral qpair carrier", "l6 measure"),
+        ),
+    ))
+
+    bell = "BELL-CAUSAL-ACCOUNTING"
+    bell_incoming = {
+        (row["item_id"], row["relation"])
+        for row in dependencies if row["depends_on"] == bell
+    }
+    bell_outgoing = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == bell
+    }
+    checks.append((
+        "BELL-CAUSAL",
+        "the Bell row remains an inline O/STOP accounting barrier with no experiment or causal conclusion",
+        has_status(index, bell, "O")
+        and normative.get(bell, {}).get("item_type") == "OBLIGATION"
+        and normative.get(bell, {}).get("status") == "O"
+        and normative.get(bell, {}).get("layer") == "MULTI"
+        and normative.get(bell, {}).get("gate_ids") == ""
+        and index.get(bell, {}).get("canon_section") == "18. The frontier"
+        and index.get(bell, {}).get("evidence") == "inline"
+        and evidence.get(bell, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(bell, {}).get("location") == "inline"
+        and evidence.get(bell, {}).get("sha256") == scope_sha256(index, bell)
+        and evidence.get(bell, {}).get("hash_mode")
+        == "registry-scope-sha256-v1"
+        and evidence.get(bell, {}).get("architecture_requirement") == "none"
+        and programs.get(bell, {}).get("program_id") == "QUANTUM_EM"
+        and programs.get(bell, {}).get("queue_role") == "ROOT"
+        and programs.get(bell, {}).get("work_state") == "STOP"
+        and programs.get(bell, {}).get("work_mode") == "FORMAL"
+        and bell_outgoing == set()
+        and bell_incoming == {
+            ("BELL-MAGIC-BOUNDARY", "BOUNDED_BY"),
+            ("PURE-QUBIT-RELATIONAL-CHSH", "BOUNDED_BY"),
+        }
+        and all(row["owner_item_id"] != bell for row in gates.values())
+        and scope_contains_all(
+            index, bell,
+            ("source state or variable lambda", "setting-selection mechanism",
+             "normalized kernel p(a,b|x,y,lambda)", "bell-local factorization",
+             "measurement independence", "no-signalling marginal equalities",
+             "controllable-superluminal-signalling test",
+             "l1-to-l4, l4-to-l5, and l5-to-l6",
+             "complete dimensional audit", "failure of factorization alone",
+             "no latent-variable", "selected in advance"),
+        )
+        and "partial accounts and failed individual candidates remain stop"
+        in index[bell]["falsifier"].lower(),
     ))
 
     fw_requires = {}

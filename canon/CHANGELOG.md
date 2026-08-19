@@ -1,11 +1,75 @@
 # Canon changelog (public series)
 
-## Public Canon v52
+## Public Canon v53
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 264 claims; 0 T-LOCK, 152 T, 42 D, 30 C, 2 H, 23 O, 15 F; 25 live H/O.
+Registry snapshot: 274 claims; 0 T-LOCK, 160 T, 43 D, 30 C, 2 H, 24 O, 15 F; 26 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v53 registers nine closed rows from three completed public probe
+families: eight L1 theorems and one conditional L1 dictionary. Four typed
+definitions fix the QPAIR partial traces and determinant area and the rational
+piston reshape and wedge. All nine closed rows use immutable public bundles
+with byte-identical x86_64 and aarch64 replay.
+
+The QPAIR block proves the exact determinant comparison between the Hermitian
+partial traces and the symmetric determinant line, the identity
+`beta_B+4A=1`, and the two-place bounds `0<=iota(A)<=1/4`. Target R2 and
+its proof are field-wide, but the preregistration frame and recorded decision
+say integral QPAIR carrier. The registry therefore adopts the conservative
+common scope `O_K^4` only; a field-wide promotion requires a fresh lock.
+
+The piston block fixes the unique admissible reshape class, its determinant
+character, the exact occurrence-weight nonseparation witness, and the
+balanced-lift census `145=129+16`. The full quadratic record is not
+wedge-blind, and no statement is made about what a decoder should read.
+
+The pure-qubit block is conditional on an externally supplied normalized
+orthonormal `C^2 tensor C^2` pure-state structure. It proves
+`||r||^2=det rho_A`, `C=2||r||`, the Bloch-concurrence Pythagoras identity,
+and `B_max=2 sqrt(1+C^2)` under the standard optimized CHSH definition.
+`PURE-QUBIT-RELATIONAL-READING [D]` reads `||r||` as relational area and
+`C/2` only on that supplied scope. It creates no bridge from a TWIST-J
+carrier to physical qubits, no mixed-state extension, and no apparatus,
+event, measure, or causal statement.
+
+The first pure-qubit attack is preserved separately as an integrity STOP and
+scientifically falsified frozen formulation because its declared unhalved
+`2 x n` wedge equality missed a factor of two. It was not patched or rerun.
+The fresh successor corrected the convention, normalized its phase witness,
+froze CPython 3.12, included all three scope breakers, and supplied the full
+two-setting optimization before earning the four registered dispositions.
+
+`BELL-CAUSAL-ACCOUNTING [O]` is a new independent frontier STOP. It requires
+one typed source, setting, outcome, kernel, factorization, independence,
+no-signalling, layer-gate, and dimensional contract before any physical Bell
+or causal claim. The finite `BELL-MAGIC-BOUNDARY` functional and the
+standard-QM pure-state CHSH comparison are bounded by that obligation and do
+not solve it.
+
+The v53 ledger change is signed term by term:
+
+```text
+claims:    264 + 8 L1 theorems + 1 L1 dictionary + 1 obligation = 274,
+T:         152 + 8 = 160,
+D:         42 + 1 = 43,
+O:         23 + 1 = 24,
+C: 30, H: 2, F: 15, all unchanged,
+live H/O:  25 + 1 = 26,
+definitions: 304 items + 4 definitions + 10 claim items = 318,
+dependencies: 457 + 15 = 472,
+two-architecture evidence: 183 + 9 = 192.
+```
+
+No pre-existing status, gate, reproduction directory, decoder completion,
+physical-qubit bridge, or L2-L6 event/measure claim changes. The deterministic
+status-separation audit is refreshed to 45 checks.
+
+## Public Canon v52
+
+Registry snapshot: 264 claims; 0 T-LOCK, 152 T, 42 D, 30 C, 2 H, 23 O, 15 F; 25 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v52 registers one row from the completed public probe
 `P-TM-SHEET-SYNCHRONIZING-GRAPH-1`. `TM-SHEET-SYNCHRONIZING-GRAPH [T]` is

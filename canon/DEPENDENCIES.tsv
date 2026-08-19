@@ -456,3 +456,18 @@ QDD-INSTRUMENT-APPARATUS	DEF-QDD-GRAM	REQUIRES	E_a = K_a^sharp K_a is taken in t
 TM-SHEET-SYNCHRONIZING-GRAPH	KERNEL-Z6-SYNCHRONIZATION	BOUNDED_BY	the sheet pair and its table are re-derived from the same declared generators and selector; the moving-layer theorem is lineage and its exclusion of census meaning for the value pair is inherited unchanged
 TM-SHEET-SYNCHRONIZING-GRAPH	RAMIFIED-TM-LIFT	BOUNDED_BY	clause (viii) quotes the registered phase dictionary Theta_n^2 = (-1)^theta_n as a reading of the standalone congruence 4 + 2 theta = -(-1)^theta mod 5; nothing is inherited as a premise
 TM-SHEET-SYNCHRONIZING-GRAPH	FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT	BOUNDED_BY	clause (v) states a partition coincidence with the zero orientation of the cut classification; no derivation is claimed in either direction, per the owner ruling of 2026-08-18
+PISTON-2X2-RESHAPE-WEDGE	KERNEL-WEDGE-AFFINITY	REQUIRES	the factor-local reshape compares its determinant character with the registered rational cell-pair wedge without identifying the two wedges
+PISTON-2X2-RESHAPE-WEDGE	DEF-QDD-BALANCED-PISTON	REQUIRES	the reshape is defined on the frozen balanced piston coordinates
+PISTON-2X2-RESHAPE-WEDGE	DEF-QDD-QPAIR	REQUIRES	the theorem reads the determinant from the registered quadratic pair
+PISTON-2X2-RESHAPE-WEDGE	DEF-QDD-TRANSPOSE	REQUIRES	D_Z is the displayed linear functional on the transpose slot
+PISTON-2X2-RESHAPE-WEDGE	QPAIR-SYM2-TENSOR-DEFECT	REQUIRES	the K=Q specialization fixes the unhalved kappa coefficient D_Z/2 as a consistency clause only
+QDD-TR4-OCCURRENCE-WEIGHT-WEDGE-BLIND	QDD-PROJECTOR-PAIR-TR4	REQUIRES	the occurrence weights are the exact frozen Tr_4 projector weights
+QDD-TR4-OCCURRENCE-WEIGHT-WEDGE-BLIND	QDD-ALGEBRAIC-FACTORIZATION	REQUIRES	the full-record recovery boundary uses the registered total quadratic factorization
+QDD-TR4-OCCURRENCE-WEIGHT-WEDGE-BLIND	PISTON-2X2-RESHAPE-WEDGE	REQUIRES	the separating target is the registered piston determinant D_Z
+PISTON-WEDGE-LIFT-CENSUS	PISTON-2X2-RESHAPE-WEDGE	REQUIRES	the finite lift census uses the frozen reshape, determinant, and normalization
+PURE-QUBIT-RELATIONAL-AREA	QPAIR-SYM2-TENSOR-DEFECT	REQUIRES	the external pure-two-qubit comparison uses the registered unhalved determinant-line projection and supplies its Hilbert structure separately
+PURE-QUBIT-LOCAL-RELATION-PYTHAGORAS	PURE-QUBIT-RELATIONAL-AREA	REQUIRES	the Pythagoras identity substitutes C^2=4||r||^2 from the pure-state determinant theorem
+PURE-QUBIT-RELATIONAL-CHSH	PURE-QUBIT-RELATIONAL-AREA	REQUIRES	the pure-state CHSH optimization is expressed through the registered norm and standard concurrence
+PURE-QUBIT-RELATIONAL-READING	PURE-QUBIT-RELATIONAL-AREA	REQUIRES	the dictionary reads only the proved pure-state determinant-line norm after the external structure is supplied
+BELL-MAGIC-BOUNDARY	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the finite cyclotomic CHSH functional supplies no source, settings, apparatus, events, probability kernel, premise test, no-signalling test, or causal account
+PURE-QUBIT-RELATIONAL-CHSH	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the optimized standard-QM pure-state value supplies no realized Bell experiment, sampling measure, or causal account
