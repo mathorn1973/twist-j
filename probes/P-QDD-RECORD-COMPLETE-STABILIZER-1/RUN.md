@@ -69,9 +69,9 @@ stderr. The verifier was not rerun.
 checks: 12/12 PASS
 decision: RECORD-COMPLETE-SELECTION
 positive route: full S4 record-partition covariance leaves one physical class
-boundary: affine C4 covariance leaves a three-dimensional centralizer
+affine boundary: affine C4 covariance leaves a three-dimensional centralizer
 witness: R-C commutes with C4 but fails 16 of 24 S4 commutation tests per token
 target: token 2 gives P_2=E_low and Q_2=E_high
 premise: record-partition completeness remains an extra law
-boundary: global O2 unchanged; O1 untouched; SAMPLING NOT PROVIDED
+scope boundary: global O2 unchanged; O1 untouched; SAMPLING NOT PROVIDED
 ```
