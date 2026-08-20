@@ -1,0 +1,14 @@
+C-RH-STIELTJES-WIDDER-EULER-1-N verify
+V1 functional coordinate u=s(s-1) PASS
+V2 functional-pair and conjugation symmetry PASS
+V3 shifted square-resolvent identity PASS
+V4 Euler polar prefactor PASS
+V5 unconditional resolvent-pair positivity PASS
+V6 unconditional W1-pair positivity PASS
+V7 one-pole formula by recursive differentiation PASS
+V8 critical-line Stieltjes atoms k=1..8 PASS
+V9 low off-line first failure PASS: first_nonpositive=2
+V10 high off-line delayed failure PASS: first_nonpositive=32
+V11 prime-cut upper-lip orientation PASS
+V12 functional-pair pole collision factorization PASS
+RESULT 12/12 ALL PASS
