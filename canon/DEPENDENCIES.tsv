@@ -492,3 +492,12 @@ PENTAGON-ONLY-DILATIONS	J-LI-PENTAGON-DILATION-DEFICIENCY	REQUIRES	the falsifica
 KERNEL-SUBSET-LANDSCAPE	KERNEL-CONNECT-ALL-K	REQUIRES	the subset-generic lemma chain is inherited from the public all-k proof, which uses only that the letters are affine involutions and the two-way CSUM ring transvections are present
 KERNEL-SUBSET-LANDSCAPE	KERNEL-WEDGE-AFFINITY	REQUIRES	the verbatim affine letter matrices and translations audited on all 15625 states are the registered kernel census data
 J-TORAL-ENTROPY	J-STEP	REQUIRES	the toral automorphism is induced by the public multiplication-by-J step matrix acting on R^4/Z^4
+J-MAHLER-MEASURE	J-STEP	REQUIRES	the Mahler measure is computed from the public multiplication-by-J step matrix and its characteristic polynomial
+J-MAHLER-MEASURE	ENTROPY-LAYER-BRIDGE	BOUNDED_BY	the arithmetic invariant and the toral entropy carry the same constant; that is a fact about the number phi and not a bridge between layers, and the open obligation governs any dynamical reading
+REGULATOR-TWO-LOG-PHI	J-PROJECTIONS	REQUIRES	phi is the modulus projection of J registered there; the regulator statement is about the unit lattice of the field that projection lives in
+REGULATOR-TWO-LOG-PHI	ENTROPY-LAYER-BRIDGE	BOUNDED_BY	the field invariant and the toral entropy carry the same constant; no rate of the decoder or of the plenum is asserted and the open obligation governs any such reading
+CYCLOTOMIC-CLASS-NUMBER-ONE	QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	REQUIRES	the discriminant disc(K_5) = 5^3 that the Minkowski bound consumes is the registered census value, recomputed here as the trace-form determinant
+J-TORAL-PERIODIC-POINTS	J-TORAL-ENTROPY	REQUIRES	the fixed-point identity and its witness are registered there; this row adds only the closed forms, the census and the bracket and restates neither
+J-TORAL-PERIODIC-POINTS	ENTROPY-LAYER-BRIDGE	BOUNDED_BY	counting periodic points is not a rate statement; no entropy or measure claim is created and the open obligation keeps its exact scope
+METRO-FORBIDDEN-WITNESSES	METRO-REDUCTION-ARROWS	REQUIRES	the four admitted arrows and their exact preconditions are registered there and are used only as the control that exhibits zero obstructions
+METRO-FORBIDDEN-WITNESSES	METRO-REDUCTION-CALCULUS	BOUNDED_BY	the row serves obligation B only, for the five entries section 15 names; obligations D and E are untouched and the parent stays open and STOP

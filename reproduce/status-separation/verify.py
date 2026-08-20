@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 171, "D": 43, "C": 30, "F": 16,
+    expected_counts = {"T": 174, "D": 43, "C": 32, "F": 16,
                        "O": 24, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v56",
-        len(rows) == 287
+        "registry and companion-ledger counts match Public Canon v57",
+        len(rows) == 292
         and counts == expected_counts
-        and len(normative) == 332
-        and len(dependencies) == 493
-        and len(evidence) == 287
-        and two_architecture == 205
-        and len(history) == 805
+        and len(normative) == 337
+        and len(dependencies) == 502
+        and len(evidence) == 292
+        and two_architecture == 210
+        and len(history) == 811
         and len(gates) == 10
         and len(programs) == 27
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -3241,6 +3241,7 @@ def run():
             ("KERNEL-SUBSET-LANDSCAPE", "KERNEL-WEDGE-AFFINITY",
              "REQUIRES"),
             ("J-TORAL-ENTROPY", "J-STEP", "REQUIRES"),
+            ("J-TORAL-PERIODIC-POINTS", "J-TORAL-ENTROPY", "REQUIRES"),
         }
         and has_status(index, "KERNEL-CONNECT-ALL-K", "T")
         and has_status(index, "ENTROPY-LAYER-BRIDGE", "O")
@@ -3251,6 +3252,112 @@ def run():
         and all(row["owner_item_id"] not in anchor_new
                 for row in gates.values())
         and all(claim not in programs for claim in anchor_new),
+    ))
+
+    arith_new = ("J-MAHLER-MEASURE", "REGULATOR-TWO-LOG-PHI",
+                 "CYCLOTOMIC-CLASS-NUMBER-ONE", "J-TORAL-PERIODIC-POINTS")
+    arith_edges = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies
+        if any(claim in (row["item_id"], row["depends_on"])
+               for claim in arith_new)
+    }
+    checks.append((
+        "TWOLOGPHI-ARITHMETIC-ANCHOR",
+        "2 log phi gains its arithmetic anchor as a Mahler measure and a regulator, with class number one proved rather than imported and the periodic-point structure entering at C, while the entropy bridge keeps its exact scope and every new row carries the fence as a ledger edge",
+        has_status(index, "J-MAHLER-MEASURE", "T")
+        and has_status(index, "REGULATOR-TWO-LOG-PHI", "T")
+        and has_status(index, "CYCLOTOMIC-CLASS-NUMBER-ONE", "T")
+        and has_status(index, "J-TORAL-PERIODIC-POINTS", "C")
+        and all(index[claim]["evidence"] == "probes/P-TWOLOGPHI-INVARIANTS-1"
+                and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+                and evidence[claim]["architecture_requirement"]
+                == "two-architecture"
+                and normative[claim]["gate_ids"] == ""
+                for claim in arith_new)
+        and index["J-MAHLER-MEASURE"]["canon_section"]
+        == "1. The axiom and the two projections"
+        and index["REGULATOR-TWO-LOG-PHI"]["canon_section"]
+        == "4. The two places"
+        and index["CYCLOTOMIC-CLASS-NUMBER-ONE"]["canon_section"]
+        == "4. The two places"
+        and index["J-TORAL-PERIODIC-POINTS"]["canon_section"]
+        == "2. Time, space, and the decoder"
+        and normative["J-MAHLER-MEASURE"]["layer"] == "L1"
+        and normative["REGULATOR-TWO-LOG-PHI"]["layer"] == "L1"
+        and normative["CYCLOTOMIC-CLASS-NUMBER-ONE"]["layer"] == "L1"
+        and normative["J-TORAL-PERIODIC-POINTS"]["layer"] == "L2"
+        and scope_contains_all(index, "J-MAHLER-MEASURE",
+                               ("mahler measure", "log m(j) = 2 log phi",
+                                "irreducible over q"))
+        and scope_contains_all(index, "REGULATOR-TWO-LOG-PHI",
+                               ("reg(q(zeta_5)) = 2 log phi",
+                                "fundamental unit", "labeled imports"))
+        and scope_contains_all(index, "CYCLOTOMIC-CLASS-NUMBER-ONE",
+                               ("1125 < 16 pi^4", "5 < 16",
+                                "proved not imported"))
+        and scope_contains_all(index, "J-TORAL-PERIODIC-POINTS",
+                               ("l_n^2", "(l_n - 2)^2", "finite-range"))
+        and arith_edges == {
+            ("J-MAHLER-MEASURE", "J-STEP", "REQUIRES"),
+            ("J-MAHLER-MEASURE", "ENTROPY-LAYER-BRIDGE", "BOUNDED_BY"),
+            ("REGULATOR-TWO-LOG-PHI", "J-PROJECTIONS", "REQUIRES"),
+            ("REGULATOR-TWO-LOG-PHI", "ENTROPY-LAYER-BRIDGE", "BOUNDED_BY"),
+            ("CYCLOTOMIC-CLASS-NUMBER-ONE",
+             "QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS", "REQUIRES"),
+            ("J-TORAL-PERIODIC-POINTS", "J-TORAL-ENTROPY", "REQUIRES"),
+            ("J-TORAL-PERIODIC-POINTS", "ENTROPY-LAYER-BRIDGE", "BOUNDED_BY"),
+        }
+        and has_status(index, "J-TORAL-ENTROPY", "T")
+        and has_status(index, "J-UNIT", "T")
+        and has_status(index, "ENTROPY-LAYER-BRIDGE", "O")
+        and scope_contains_all(index, "ENTROPY-LAYER-BRIDGE",
+                               ("equal cardinalities do not construct",))
+        and all(row["owner_item_id"] not in arith_new
+                for row in gates.values())
+        and all(claim not in programs for claim in arith_new),
+    ))
+
+    metro_edges = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies
+        if "METRO-FORBIDDEN-WITNESSES" in (row["item_id"], row["depends_on"])
+    }
+    checks.append((
+        "METRO-FORBIDDEN-WITNESSES",
+        "obligation B is discharged for the five entries section 15 names, at C on the completed public probe with exactly its two declared edges, while the parent keeps status O and STOP with only its obligation B clause changed and the arrows row does not move",
+        has_status(index, "METRO-FORBIDDEN-WITNESSES", "C")
+        and index["METRO-FORBIDDEN-WITNESSES"]["evidence"]
+        == "probes/P-METRO-FORBIDDEN-WITNESSES-1"
+        and index["METRO-FORBIDDEN-WITNESSES"]["canon_section"]
+        == "15. Couplings, instruments, and metrology"
+        and evidence["METRO-FORBIDDEN-WITNESSES"]["evidence_kind"]
+        == "PUBLIC_PROBE"
+        and evidence["METRO-FORBIDDEN-WITNESSES"]["architecture_requirement"]
+        == "two-architecture"
+        and normative["METRO-FORBIDDEN-WITNESSES"]["layer"] == "L5"
+        and normative["METRO-FORBIDDEN-WITNESSES"]["gate_ids"] == ""
+        and metro_edges == {
+            ("METRO-FORBIDDEN-WITNESSES", "METRO-REDUCTION-ARROWS",
+             "REQUIRES"),
+            ("METRO-FORBIDDEN-WITNESSES", "METRO-REDUCTION-CALCULUS",
+             "BOUNDED_BY"),
+        }
+        and scope_contains_all(
+            index, "METRO-FORBIDDEN-WITNESSES",
+            ("functional obstruction", "16140", "21987",
+             "distinctions of the stream"),
+        )
+        and has_status(index, "METRO-REDUCTION-CALCULUS", "O")
+        and has_status(index, "METRO-REDUCTION-ARROWS", "C")
+        and scope_contains_all(
+            index, "METRO-REDUCTION-CALCULUS",
+            ("discharged for the five entries section 15 names",
+             "obligation d", "obligation e"),
+        )
+        and "METRO-FORBIDDEN-WITNESSES" not in programs
+        and all(row["owner_item_id"] != "METRO-FORBIDDEN-WITNESSES"
+                for row in gates.values()),
     ))
 
     fw_requires = {}

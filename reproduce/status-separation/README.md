@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its forty-nine checks cover the current
+and emits deterministic text. Its fifty-one checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 49/49 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 51/51 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -92,6 +92,8 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v57 count check reads the folded tree (292 claims, 23 reproductions, 10 gates). The two new v57 checks pin the five closed rows of the arithmetic-anchor fold: the Mahler measure, the regulator and the proved class number with their layers, sections, evidence and the seven declared edges including the three BOUNDED_BY fences to the entropy bridge, which keeps its exact scope; and the forbidden-witness row at C with exactly its two edges, the parent held at O and STOP with only its obligation B clause changed, and the arrows row unmoved. The permanent QDD direct-write firewall remains the final check.
 
 The v56 count check reads the folded tree (287 claims, 23 reproductions, 10 gates). The two new v56 checks pin the seven closed rows of the consolidation fold: the exact constant pentagon-tower dilation deficiency with its fired route at F and its single dependency edge, the all-finite cyclic-carrier exclusion beside the three registered carrier no-gos with the cocycle-vector hypothesis untouched, the exact 32-entry kernel subset landscape with its two declared edges, and the 2 log phi anchor rows (toral entropy, zero-entropy driver, binary residue bracket) with the toral row's step-matrix edge, the layer-bridge obligation held at its exact scope, and no gate, program row, or layer lift anywhere. The permanent QDD direct-write firewall remains the final check.
 
