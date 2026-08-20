@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v55
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v56
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -47,6 +47,10 @@ PASS 43 PURE-QUBIT conditional pure-two-qubit area, Pythagoras, CHSH, and readin
 PASS 44 BELL-CAUSAL the Bell row remains an inline O/STOP accounting barrier with no experiment or causal conclusion
 PASS 45 DQRC       the deterministic integer census and four boundary theorems stay exact L1 results while coefficient, origin, apparatus, event, measure, Bell, and physical readings remain unselected
 PASS 46 DE-W-CONSTANT the armed dark-energy reading enters at H on the completed public probe with exactly its three declared edges, while the register dictionary and the conformal-weight obligation keep their statuses and no gate, layer lift, or selection premise is created
-PASS 47 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
+PASS 47 PENTAGON-DILATION the exact pentagon-tower deficiency enters at T and fires only the restricted pentagon-dilation route at F, with the route depending on its theorem and no wider Li carrier or RH claim
+PASS 48 LI-CYCLIC  the finite-cyclic Li carrier dichotomy enters at T on its completed proof-first probe, forces infinite support with 1 non-atomic, and creates neither a realization nor an RH conclusion
+PASS 49 KERNEL-SUBSETS the complete 32-subset landscape enters at L1 T with exactly the all-k theorem dependency, connected subsets acde and abcde, load-bearing a, inert b, and no resurrection of the fired stronger bound
+PASS 50 ENTROPY-MATH the toral 2 log phi value, zero-entropy Thue-Morse driver, and strict binary residue bracket enter as three closed mathematics rows while the L6 entropy bridge remains open
+PASS 51 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
 
-RESULT 47/47 ALL PASS
+RESULT 51/51 ALL PASS

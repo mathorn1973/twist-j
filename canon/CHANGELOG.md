@@ -1,11 +1,71 @@
 # Canon changelog (public series)
 
-## Public Canon v55
+## Public Canon v56
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 280 claims; 0 T-LOCK, 165 T, 43 D, 30 C, 3 H, 24 O, 15 F; 27 live H/O.
+Registry snapshot: 287 claims; 0 T-LOCK, 171 T, 43 D, 30 C, 3 H, 24 O, 16 F; 27 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v56 consumes four completed proof-first public probes and
+registers seven closed rows: six `T` and one `F`. No live row moves, no gate
+is added, and the live total remains 27.
+
+`J-LI-PENTAGON-DILATION-DEFICIENCY [T]` gives the exact Gram
+`gcd(m,n)^2/(12mn)` for the centered fractional-part functions and proves
+that every direction `q` coprime to 5 remains at squared distance
+`(1/12)(1-1/q^2)` from every finite pentagon tower, independently of its
+height. The best approximant is `(1/q)g_1`. This fires precisely the
+restricted route `PENTAGON-ONLY-DILATIONS [F]`; no wider Nyman-Beurling or
+Baez-Duarte route is excluded.
+
+`J-LI-CYCLIC-CARRIER-DIMENSION [T]` proves the universal finite-cyclic
+dichotomy `q_n=a_* n^2+O(1)`. With the Li, Bombieri-Lagarias and Lagarias
+imports named, it excludes every finite-dimensional cyclic realization of
+the full Li ladder and forces infinite spectral support, with 1 in the
+support and no atom there. It constructs no infinite carrier and proves no
+RH statement.
+
+`KERNEL-SUBSET-LANDSCAPE [T]` decides all 32 letter subsets. With the
+two-way ring transvections present, all coupled powers are connected exactly
+when `dim U_S=6`, which occurs only for `acde` and `abcde`. The letter `a` is
+load-bearing and `b` is inert. The stronger lower-bound clause falsified in
+incubation remains absent; the negative branch asserts only at least two
+components.
+
+The entropy triple is purely mathematical. `J-TORAL-ENTROPY [T]` registers
+the exact `Z[phi]` factorization, eigenvalue moduli
+`phi,phi,1/phi,1/phi`, the classical toral value `2 log phi`, and the
+two-path fixed-point identity with `#Fix(T^15)=1860496`.
+`TM-ENTROPY-ZERO [T]` registers zero entropy of the Thue-Morse driver from
+the named exact linear-complexity formula and stabilized counts through
+`p(20)=60`. `BINARY-READ-RELATIVE-ENTROPY [T]` registers the exact residue
+bracket `[log(phi^2/2),2 log phi]`, its strict golden floor, split identity,
+and logarithmic independence from the norm gates. No L6 lift, physical
+measure, or closure of `ENTROPY-LAYER-BRIDGE [O]` follows.
+
+The v56 ledger change is signed term by term:
+
+```text
+claims:    280 + 7 closed rows = 287,
+T:         165 + 6 = 171,
+F:         15 + 1 = 16,
+D: 43, C: 30, H: 3, O: 24, all unchanged,
+live H/O:  27, unchanged,
+normative items: 325 + 7 = 332,
+dependencies: 489 + 2 = 491,
+two-architecture evidence: 198 + 7 = 205,
+history events: 798 + 7 = 805,
+reproduction witnesses: 23, unchanged.
+```
+
+No pre-existing status, scope, gate, layer, reproduction directory, probe
+record, empirical threshold, or frontier program tuple changes.
+
+## Public Canon v55
+
+Registry snapshot: 280 claims; 0 T-LOCK, 165 T, 43 D, 30 C, 3 H, 24 O, 15 F; 27 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v55 registers one new live empirical row, `DE-W-CONSTANT [H]`,
 from the completed public probe `P-DE-W-ARMING-1`. The row arms the committed

@@ -1,4 +1,6 @@
 item_id	depends_on	relation	basis
+PENTAGON-ONLY-DILATIONS	J-LI-PENTAGON-DILATION-DEFICIENCY	REQUIRES	the falsified pentagon-only closure route is exactly the restricted dilation class excluded by the positive deficiency theorem
+KERNEL-SUBSET-LANDSCAPE	KERNEL-CONNECT-ALL-K	REQUIRES	the subset-generic dichotomy restates the registered all-k translation-span proof and sharpens it by deciding the complete 32-subset table
 TT-VECTOR-MOMENT-UNDERDETERMINATION	TT-SQUARING-DECODER	BOUNDED_BY	the theorem evaluates the same formal square w=v^2 but does not inherit the lower-status physical decoder reading
 TT-VECTOR-MOMENT-UNDERDETERMINATION	POL-READ	BOUNDED_BY	the plus/cross convention bounds any interpretation of the complex square; no source, propagation, normalization or observable is imported
 TT-VECTOR-MOMENT-UNDERDETERMINATION	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the theorem constrains admissible state closures but supplies neither a normalization nor a numerical r_T(k)

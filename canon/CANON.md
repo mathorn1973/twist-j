@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v55
+# TWIST-J Public Canon v56
 
-**Release identity.** Public Canon v55. Normative authority and activation
+**Release identity.** Public Canon v56. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v55 also declares the discrete
+algebraic axiom is J. Public Canon v56 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v55 does not claim
+seed of the two algebraic projections. Public Canon v56 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v55 contains no such
+deriving the architecture from J; Public Canon v56 contains no such
 theorem.
 
 ---
@@ -1413,6 +1413,52 @@ and O1 realized event generation or sampling remain STOP. The empty
 frozen-family eligibility set licenses no conclusion about instruments
 outside that family.
 
+The integral step of `J` has a separate exact entropy theorem
+(J-TORAL-ENTROPY [T], probes/P-ENTROPY-RESIDUE-MATH-1). Its characteristic
+polynomial
+
+```text
+x^4 - 3x^3 + 4x^2 - 2x + 1
+```
+
+factors over `Z[phi]` as
+
+```text
+(x^2 - phi^2 x + phi^2)(x^2 - (2 - phi)x + (2 - phi)).
+```
+
+Both discriminants are negative, so the four eigenvalue moduli are exactly
+`phi, phi, 1/phi, 1/phi`. The classical entropy theorem for hyperbolic toral
+automorphisms, named here as an import, therefore gives
+
+```text
+h_top(T_J) = h_Haar(T_J) = 2 log phi.
+```
+
+No eigenvalue is a root of unity. Hence
+`#Fix(T_J^n) = |det(M_J^n - I)| = |N(J^n - 1)|`; the exact two-path audit
+agrees for `n = 1..15` and gives `#Fix(T_J^15) = 1860496`.
+
+There is also a carrier-independent residue theorem
+(BINARY-READ-RELATIVE-ENTROPY [T], the same probe). For any binary factor
+`q` of a system with entropy rate `2 log phi`, entropy monotonicity and the
+binary alphabet bound give
+
+```text
+R(q) = 2 log phi - h(q)
+     in [log(phi^2/2), 2 log phi].
+```
+
+The lower endpoint is strictly positive because
+`phi^2 - 2 = 1/phi > 0`, and
+`2 log phi = log 2 + log(phi^2/2)` is exact. Deterministic schedules attain
+the upper endpoint; lower-endpoint attainability is not claimed. The norm
+identities `N(phi^2)=1`, `N(2)=4`, and `N(5)=25`, together with the infinite
+order of `phi`, prove that `2 log phi` is the logarithm of no rational and is
+`Q`-linearly independent of `log 2` and `log 5`. These are mathematical
+entropy statements only. They create no event law, physical measure, L6
+lift, or closure of ENTROPY-LAYER-BRIDGE [O].
+
 ## 3. The kernel and the census
 
 F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
@@ -1980,6 +2026,16 @@ from this dimension count. The inherited phrase "rate 4/5" is retired
 from Public Canon v13; any future coding claim must define its alphabet,
 message space, encoder, decoder, error criterion, and rate from scratch.
 
+The Thue-Morse driver itself has zero entropy
+(TM-ENTROPY-ZERO [T], probes/P-ENTROPY-RESIDUE-MATH-1). Its factor
+complexity is linear by the exact classical formula of Brlek and of de
+Luca-Varricchio, named here as an import, so the driver subshift has entropy
+rate zero. The exact finite audit gives
+`p(1..4) = 2, 4, 6, 10` and `p(20) = 60`, with the counts through length 20
+stabilized between prefixes of lengths `2^16` and `2^17`. This L5 stream
+theorem does not assign a physical information rate and supplies no L6
+measure lift.
+
 Six completed public probes now delimit the entropy bridge without closing
 it. Write
 
@@ -2216,6 +2272,21 @@ so the translation subgroup is all of `(F_5^6)^k` for every `k >= 2`.
 The lower bound is sharp: at `k = 1` the same four letters have nine
 components. This is an L1 state theorem for the declared coupled carrier;
 it supplies no continuum, measure, or physical lift.
+
+The complete subset landscape is now exact
+(KERNEL-SUBSET-LANDSCAPE [T],
+probes/P-KERNEL-SUBSET-LANDSCAPE-1). For every subset `S` of the five kernel
+letters, let `U_S` be the least invariant subspace generated by the affine
+translations under the linear parts of the letters in `S`. With the two-way
+CSUM ring transvections present, `(F_5^6)^k` is one component for every
+`k >= 2` exactly when `dim U_S = 6`; if `dim U_S < 6`, there are at least two
+components for every `k >= 2`. The exact 32-row table is monotone under
+inclusion and reaches dimension six only for `S = {a,c,d,e}` and
+`S = {a,b,c,d,e}`. Thus `a` is necessary, witnessed by
+`dim U_{cde}=4` and `dim U_{bcde}=5`, while `b` is never needed. The earlier
+incubation lower-bound clause was falsified and is not asserted: the negative
+branch says only "at least two components". No measure, dynamics, continuum,
+or physical lift follows.
 
 TM-SHEET-SYNCHRONIZING-GRAPH [T] is the exact L1 theorem for the sheet pair
 induced by the declared generators. Direct substitution in the sheet laws
@@ -6132,6 +6203,31 @@ product, and the treatment of the pole and trivial zeros are named classical
 imports, not results of the verifier. No Weil test space, positive form,
 operator realization, or statement about RH follows.
 
+The pentagon-only dilation route has an exact positive obstruction. In
+`H = L^2(0,1)`, put `g_n(x) = frac(nx) - 1/2`. Then
+
+```text
+<g_m,g_n> = gcd(m,n)^2/(12mn).
+```
+
+Consequently the pentagon tower has Gram matrix
+`<g_(5^a),g_(5^b)> = 5^(-|a-b|)/12`, and for every `q` coprime to 5 and
+every `M >= 0`,
+
+```text
+dist(g_q, span{g_(5^m): 0 <= m <= M})^2
+  = (1/12)(1 - 1/q^2).
+```
+
+The value is independent of the tower height and the best approximant is
+exactly `(1/q)g_1`; examples are `1/16` for `q=2` and `2/27` for `q=3`.
+This is J-LI-PENTAGON-DILATION-DEFICIENCY [T], proved and independently
+integrated exactly in probes/P-PENTAGON-ONLY-DILATIONS-1. It fires
+PENTAGON-ONLY-DILATIONS [F]: a Nyman-Beurling / Baez-Duarte route restricted
+to the dilations `5^m` cannot reach any direction coprime to 5. The standard
+criterion is a named classical import; the claim falsifies only this
+restricted route.
+
 The standard finite-dimensional toral Haar-Koopman carrier cannot realize
 the full Li norm ladder (J-LI-TORAL-HAAR-NOGO [T],
 probes/P-J-LI-TORAL-HAAR-1). For every `d >= 1` and every
@@ -6189,6 +6285,24 @@ conditional spectral target is a proof step, not a separately registered
 claim.
 This carrier exclusion does not alter or falsify the public algebraic and
 finite-periodic statements about `M_J`.
+
+The obstruction is in fact universal over finite cyclic unitary carriers
+(J-LI-CYCLIC-CARRIER-DIMENSION [T],
+probes/P-J-LI-CARRIER-NOGO-1). For every unitary pair `(U,v)` whose cyclic
+subspace is finite-dimensional,
+
+```text
+q_n = ||sum_(k=0)^(n-1) U^k v||^2 = a_* n^2 + R_n,
+a_* = ||P_(z=1)v||^2,                 0 <= R_n <= C.
+```
+
+Li nonnegativity, the Bombieri-Lagarias equivalence, and the Lagarias
+asymptotic are named imports. They exclude equality `q_n=lambda_n` for all
+`n`: an exact Li-ladder realization has infinite spectral support, contains
+`1` in that support, and has no atom at `1`. The exact audit realizes the
+three mechanisms inside `Q(zeta_10)=Q(zeta_5)` and attains the bounded
+remainder ceiling `6 + 2 sqrt(5)`. This theorem does not construct an
+infinite carrier and does not prove RH.
 
 
 These three verdicts delimit three declared carrier classes. They do not

@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its forty-seven checks cover the current
+and emits deterministic text. Its fifty-one checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 47/47 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 51/51 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -92,6 +92,8 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v56 count check reads the folded tree (287 claims, 23 reproductions, 10 gates). Four new checks pin the pentagon-tower deficiency theorem and its restricted route falsifier, the universal finite-cyclic Li carrier no-go, the complete 32-subset kernel landscape with its corrected lower boundary, and the three closed entropy-mathematics rows. They require the exact four completed public-probe bundles, six T rows, one F row, the L2/L1/L5 layer assignments, exactly two new dependency edges, no new gate or frontier program, and ENTROPY-LAYER-BRIDGE to remain O. The permanent QDD direct-write firewall remains the final check.
 
 The v55 count check reads the folded tree (280 claims, 23 reproductions, 10 gates). The new DE-W-CONSTANT check pins the armed dark-energy reading at H on the completed two-architecture public probe bundle, with its NOT_APPLICABLE layer, its COSMOLOGY/FOLLOWUP/BLOCKED/EMPIRICAL program tuple, and exactly its three declared dependency edges. It requires COSMOLOGY-REGISTER to stay D, DE-CONFORMAL-WEIGHT to stay O, NS-TILT to stay H, and forbids any gate owned by the new row. The permanent QDD direct-write firewall remains the final check.
 

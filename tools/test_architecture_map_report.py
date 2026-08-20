@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 280)
+        self.assertEqual(self.report.claims, 287)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 30, "D": 43, "F": 15, "H": 3, "O": 24, "T": 165},
+            {"C": 30, "D": 43, "F": 16, "H": 3, "O": 24, "T": 171},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 42,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 198,
+                "two-architecture": 205,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,9 +43,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 177)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 215
+            len(self.report.transitive_architecture_dependents), 216
         )
-        self.assertEqual(len(self.report.dependency_terminals), 45)
+        self.assertEqual(len(self.report.dependency_terminals), 50)
         self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
         self.assertNotIn(
             "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
@@ -62,6 +62,21 @@ class ArchitectureMapReportTests(unittest.TestCase):
             "DE-W-CONSTANT", self.report.direct_architecture_requires
         )
         self.assertNotIn("DE-W-CONSTANT", self.report.dependency_terminals)
+        self.assertIn(
+            "KERNEL-SUBSET-LANDSCAPE",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertNotIn(
+            "KERNEL-SUBSET-LANDSCAPE", self.report.dependency_terminals
+        )
+        for claim in (
+            "J-LI-PENTAGON-DILATION-DEFICIENCY",
+            "J-LI-CYCLIC-CARRIER-DIMENSION",
+            "J-TORAL-ENTROPY",
+            "TM-ENTROPY-ZERO",
+            "BINARY-READ-RELATIVE-ENTROPY",
+        ):
+            self.assertIn(claim, self.report.dependency_terminals)
         for claim in (
             "SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION",
             "SPLIT-RAPIDITY-FEJER-GRAM-BOUND",
@@ -237,6 +252,12 @@ class ArchitectureMapReportTests(unittest.TestCase):
             "WALL-CIRCLE-LEMMA", self.report.wall_architecture_free
         )
         self.assertIn("J-LI-TORAL-HAAR-NOGO", self.report.wall_architecture_free)
+        for claim in (
+            "J-LI-PENTAGON-DILATION-DEFICIENCY",
+            "PENTAGON-ONLY-DILATIONS",
+            "J-LI-CYCLIC-CARRIER-DIMENSION",
+        ):
+            self.assertIn(claim, self.report.wall_architecture_free)
         self.assertTrue(self.report.wall_architecture_dependent)
         self.assertTrue(self.report.wall_architecture_free)
 

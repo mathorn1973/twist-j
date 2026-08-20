@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 165, "D": 43, "C": 30, "F": 15,
+    expected_counts = {"T": 171, "D": 43, "C": 30, "F": 16,
                        "O": 24, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v55",
-        len(rows) == 280
+        "registry and companion-ledger counts match Public Canon v56",
+        len(rows) == 287
         and counts == expected_counts
-        and len(normative) == 325
-        and len(dependencies) == 489
-        and len(evidence) == 280
-        and two_architecture == 198
-        and len(history) == 798
+        and len(normative) == 332
+        and len(dependencies) == 491
+        and len(evidence) == 287
+        and two_architecture == 205
+        and len(history) == 805
         and len(gates) == 10
         and len(programs) == 27
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -3117,6 +3117,148 @@ def run():
         and has_status(index, "NS-TILT", "H")
         and all(row["owner_item_id"] != "DE-W-CONSTANT"
                 for row in gates.values()),
+    ))
+
+    v56_claims = {
+        "J-LI-PENTAGON-DILATION-DEFICIENCY",
+        "PENTAGON-ONLY-DILATIONS",
+        "J-LI-CYCLIC-CARRIER-DIMENSION",
+        "KERNEL-SUBSET-LANDSCAPE",
+        "J-TORAL-ENTROPY",
+        "TM-ENTROPY-ZERO",
+        "BINARY-READ-RELATIVE-ENTROPY",
+    }
+    v56_edges = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies
+        if row["item_id"] in v56_claims or row["depends_on"] in v56_claims
+    }
+    checks.append((
+        "PENTAGON-DILATION",
+        "the exact pentagon-tower deficiency enters at T and fires only the restricted pentagon-dilation route at F, with the route depending on its theorem and no wider Li carrier or RH claim",
+        has_status(index, "J-LI-PENTAGON-DILATION-DEFICIENCY", "T")
+        and has_status(index, "PENTAGON-ONLY-DILATIONS", "F")
+        and all(
+            evidence[claim]["location"]
+            == "probes/P-PENTAGON-ONLY-DILATIONS-1"
+            and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+            and evidence[claim]["architecture_requirement"]
+            == "two-architecture"
+            and normative[claim]["layer"] == "L2"
+            and normative[claim]["gate_ids"] == ""
+            for claim in (
+                "J-LI-PENTAGON-DILATION-DEFICIENCY",
+                "PENTAGON-ONLY-DILATIONS",
+            )
+        )
+        and (
+            "PENTAGON-ONLY-DILATIONS",
+            "J-LI-PENTAGON-DILATION-DEFICIENCY",
+            "REQUIRES",
+        ) in v56_edges
+        and v56_edges == {
+            (
+                "PENTAGON-ONLY-DILATIONS",
+                "J-LI-PENTAGON-DILATION-DEFICIENCY",
+                "REQUIRES",
+            ),
+            (
+                "KERNEL-SUBSET-LANDSCAPE",
+                "KERNEL-CONNECT-ALL-K",
+                "REQUIRES",
+            ),
+        }
+        and scope_contains_all(
+            index, "J-LI-PENTAGON-DILATION-DEFICIENCY",
+            ("gcd(m,n)^2/(12mn)", "constant in the tower height",
+             "best approximant (1/q) g_1", "1/16", "2/27"),
+        )
+        and scope_contains_all(
+            index, "PENTAGON-ONLY-DILATIONS",
+            ("route restricted", "entire non-5 spectrum", "falsified"),
+        )
+        and all(row["owner_item_id"] not in v56_claims
+                for row in gates.values()),
+    ))
+
+    checks.append((
+        "LI-CYCLIC",
+        "the finite-cyclic Li carrier dichotomy enters at T on its completed proof-first probe, forces infinite support with 1 non-atomic, and creates neither a realization nor an RH conclusion",
+        has_status(index, "J-LI-CYCLIC-CARRIER-DIMENSION", "T")
+        and index["J-LI-CYCLIC-CARRIER-DIMENSION"]["evidence"]
+        == "probes/P-J-LI-CARRIER-NOGO-1"
+        and evidence["J-LI-CYCLIC-CARRIER-DIMENSION"]["evidence_kind"]
+        == "PUBLIC_PROBE"
+        and evidence["J-LI-CYCLIC-CARRIER-DIMENSION"]
+        ["architecture_requirement"] == "two-architecture"
+        and normative["J-LI-CYCLIC-CARRIER-DIMENSION"]["layer"] == "L1"
+        and normative["J-LI-CYCLIC-CARRIER-DIMENSION"]["gate_ids"] == ""
+        and scope_contains_all(
+            index, "J-LI-CYCLIC-CARRIER-DIMENSION",
+            ("finite-dimensional cyclic subspace", "a* n^2 + r_n",
+             "infinite spectral support", "1 in the support",
+             "no atom at 1", "imports labeled"),
+        )
+    ))
+
+    checks.append((
+        "KERNEL-SUBSETS",
+        "the complete 32-subset landscape enters at L1 T with exactly the all-k theorem dependency, connected subsets acde and abcde, load-bearing a, inert b, and no resurrection of the fired stronger bound",
+        has_status(index, "KERNEL-SUBSET-LANDSCAPE", "T")
+        and index["KERNEL-SUBSET-LANDSCAPE"]["evidence"]
+        == "probes/P-KERNEL-SUBSET-LANDSCAPE-1"
+        and evidence["KERNEL-SUBSET-LANDSCAPE"]["evidence_kind"]
+        == "PUBLIC_PROBE"
+        and evidence["KERNEL-SUBSET-LANDSCAPE"]["architecture_requirement"]
+        == "two-architecture"
+        and normative["KERNEL-SUBSET-LANDSCAPE"]["layer"] == "L1"
+        and normative["KERNEL-SUBSET-LANDSCAPE"]["gate_ids"] == ""
+        and (
+            "KERNEL-SUBSET-LANDSCAPE", "KERNEL-CONNECT-ALL-K", "REQUIRES"
+        ) in v56_edges
+        and scope_contains_all(
+            index, "KERNEL-SUBSET-LANDSCAPE",
+            ("exact 32-entry table", "connected subsets are exactly acde and abcde",
+             "letter a is necessary", "b is never needed",
+             "at least two components"),
+        )
+        and scope_lacks(index, "KERNEL-SUBSET-LANDSCAPE", ("5^(k", "at least 25"))
+    ))
+
+    entropy_rows = (
+        "J-TORAL-ENTROPY", "TM-ENTROPY-ZERO",
+        "BINARY-READ-RELATIVE-ENTROPY",
+    )
+    checks.append((
+        "ENTROPY-MATH",
+        "the toral 2 log phi value, zero-entropy Thue-Morse driver, and strict binary residue bracket enter as three closed mathematics rows while the L6 entropy bridge remains open",
+        all(has_status(index, claim, "T") for claim in entropy_rows)
+        and all(
+            evidence[claim]["location"] == "probes/P-ENTROPY-RESIDUE-MATH-1"
+            and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+            and evidence[claim]["architecture_requirement"]
+            == "two-architecture"
+            and normative[claim]["gate_ids"] == ""
+            for claim in entropy_rows
+        )
+        and tuple(normative[claim]["layer"] for claim in entropy_rows)
+        == ("L2", "L5", "L5")
+        and scope_contains_all(
+            index, "J-TORAL-ENTROPY",
+            ("moduli exactly phi, phi, 1/phi, 1/phi", "2 log phi",
+             "#fix(t^15) = 1860496", "import labeled"),
+        )
+        and scope_contains_all(
+            index, "TM-ENTROPY-ZERO",
+            ("linear factor complexity", "p(20) = 60", "entropy rate 0"),
+        )
+        and scope_contains_all(
+            index, "BINARY-READ-RELATIVE-ENTROPY",
+            ("log(phi^2/2)", "strictly positive floor", "floor attainability is not claimed",
+             "q-linearly independent of log 2 and log 5"),
+        )
+        and has_status(index, "ENTROPY-LAYER-BRIDGE", "O")
+        and all(claim not in programs for claim in entropy_rows)
     ))
 
     fw_requires = {}
