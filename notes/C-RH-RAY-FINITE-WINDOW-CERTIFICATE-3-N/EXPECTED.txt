@@ -1,0 +1,12 @@
+PASS V1 frozen symmetry and multiplicity carrier
+PASS V2 mixed derivatives by Taylor and J_ref routes
+PASS V3 interpolation and first direct certificate r=14 N=17
+PASS V4 exact split certificate and coefficient quadratic agreement
+PASS V5 exact inertia pos=4 neg=2 zero=11; first nonpositive leading minor=5
+PASS V6 uniform rational majorant; sufficient bound threshold r=19
+PASS V7 complete-height-window corollary on frozen carrier
+PASS V8 non-tau-invariant split negative control
+PASS V9 fixed-orbit and q_W>=1 negative controls
+PASS V10 exact arithmetic and deterministic scope
+DECISION CERTIFICATE: conditional finite-window theorem survives; synthetic audit only
+RESULT 10/10 ALL PASS
