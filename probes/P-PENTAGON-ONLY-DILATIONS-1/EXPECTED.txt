@@ -1,0 +1,14 @@
+P-PENTAGON-ONLY-DILATIONS-1 verify
+PD1 exact piecewise integration equals gcd(m,n)^2/(12mn) on 59 pairs including (q,125) PASS
+PD2 five-tower Gram is KMS 5^-|a-b|/12 (formula a,b<=3; integration a,b<=2) PASS
+PD0 collapse identity G e_0 (1/q) = c for a <= 8, q in {2,3,6,7,12} PASS
+  q =  2: dist^2 = 1/16 for every M = 0..8, approximant coefficients beyond g_1 all zero
+  q =  3: dist^2 = 2/27 for every M = 0..8, approximant coefficients beyond g_1 all zero
+  q =  6: dist^2 = 35/432 for every M = 0..8, approximant coefficients beyond g_1 all zero
+  q =  7: dist^2 = 4/49 for every M = 0..8, approximant coefficients beyond g_1 all zero
+  q = 12: dist^2 = 143/1728 for every M = 0..8, approximant coefficients beyond g_1 all zero
+PD3 deficiency (1/12)(1 - 1/q^2), constant in M, best approximant (1/q) g_1, for q in {2,3,6,7,12}, M = 0..8 PASS
+PD4 witnesses: q=2 gives 1/16 and q=3 gives 2/27 exactly PASS
+PD6 the deficiency is strictly positive for every q >= 2: the pentagon tower reaches no cross-prime direction PASS
+DECISION: pentagon-tower dilations miss every direction coprime to 5 by an exact positive constant; the route is dead
+RESULT 6/6 ALL PASS
