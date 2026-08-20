@@ -1,0 +1,11 @@
+BREAKER B1 symmetry carrier PASS
+BREAKER B2 exact q_W PASS q=3/5
+BREAKER B3 tail transition PASS r=1 fails, r=14 certifies
+BREAKER B4 invariant split and negative coefficient form PASS
+BREAKER B5 Taylor derivative route PASS
+BREAKER B6 ordinary Cauchy norm bound PASS
+BREAKER B7 rational majorant of exponential tail PASS
+BREAKER B8 non-invariant support exposes cross term PASS
+BREAKER B9 tau-fixed target rejected PASS
+BREAKER B10 q_W>=1 control rejected PASS
+BREAKER FINDINGS 0/10
