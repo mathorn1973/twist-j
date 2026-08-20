@@ -1,0 +1,44 @@
+P-KERNEL-SUBSET-LANDSCAPE-1 verify
+K1 verbatim: all five letters are affine involutions on all 15625 states, exact form g(x) = M_g x + v_g; strictly affine letters are exactly {c, d, e} PASS
+table of dim U_S over all 32 subsets:
+  dim U_(empty) = 0
+  dim U_a = 0
+  dim U_b = 0
+  dim U_c = 1
+  dim U_d = 1
+  dim U_e = 1
+  dim U_ab = 0
+  dim U_ac = 2
+  dim U_ad = 2
+  dim U_ae = 2
+  dim U_bc = 1
+  dim U_bd = 2
+  dim U_be = 2
+  dim U_cd = 3
+  dim U_ce = 3
+  dim U_de = 2
+  dim U_abc = 2
+  dim U_abd = 3
+  dim U_abe = 3
+  dim U_acd = 5
+  dim U_ace = 5
+  dim U_ade = 3
+  dim U_bcd = 4
+  dim U_bce = 4
+  dim U_bde = 3
+  dim U_cde = 4
+  dim U_abcd = 5
+  dim U_abce = 5
+  dim U_abde = 4
+  dim U_acde = 6
+  dim U_bcde = 5
+  dim U_abcde = 6
+K2 table decided exactly for all 32 subsets PASS
+K3 anchors and structure: dim U_(empty) = 0, dim U_acde = 6, monotone under inclusion; disclosed prior entries acde=6, cde=4, cd=3, c=1, bcde=5 all confirmed PASS
+K4 confinement instances: for every nonempty subset the k = 1 letter orbit of 0 lies inside U_S, exhaustively PASS
+K5 extraction instances at k = 2: every letter commutator with the ring transvection is an exact translation with cell components in U_(letter); linear letters give the identity (a:0, b:0, c:seed, d:seed, e:seed) PASS
+connected subsets (dim U_S = 6): acde, abcde
+K6 dichotomy census: dim U_S = 6 subsets are exactly the connected ones for every k >= 2; every other subset confines the orbit of 0 to a proper invariant sub-box and has at least two components PASS
+K7 amendment honored: the retired 5^(k(6-dim)) lower bound is not asserted; the public negative branch claims at least two components and nothing more PASS
+DECISION: the 32-entry landscape is decided; connectivity holds exactly at dim U_S = 6
+RESULT 7/7 ALL PASS
