@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v55
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v56
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -47,6 +47,8 @@ PASS 43 PURE-QUBIT conditional pure-two-qubit area, Pythagoras, CHSH, and readin
 PASS 44 BELL-CAUSAL the Bell row remains an inline O/STOP accounting barrier with no experiment or causal conclusion
 PASS 45 DQRC       the deterministic integer census and four boundary theorems stay exact L1 results while coefficient, origin, apparatus, event, measure, Bell, and physical readings remain unselected
 PASS 46 DE-W-CONSTANT the armed dark-energy reading enters at H on the completed public probe with exactly its three declared edges, while the register dictionary and the conformal-weight obligation keep their statuses and no gate, layer lift, or selection premise is created
-PASS 47 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
+PASS 47 J-LI-WALL-CLOSURES the pentagon-tower dilation route is dead by the exact constant deficiency with the fired route recorded at F, and every finite-dimensional cyclic carrier is excluded, while the three registered carrier no-gos and the live cocycle-vector hypothesis keep their statuses and no gate or program row is created
+PASS 48 ENTROPY-KERNEL-ANCHORS the subset landscape decides the exact 32-entry table with connectivity iff dim U_S = 6, and the rate 2 log phi enters with the toral anchor, the zero-entropy driver, and the binary residue bracket, while the layer-bridge obligation keeps its exact scope and no gate or program row is created
+PASS 49 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
 
-RESULT 47/47 ALL PASS
+RESULT 49/49 ALL PASS
