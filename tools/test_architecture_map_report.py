@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 287)
+        self.assertEqual(self.report.claims, 292)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 30, "D": 43, "F": 16, "H": 3, "O": 24, "T": 171},
+            {"C": 32, "D": 43, "F": 16, "H": 3, "O": 24, "T": 174},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 42,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 205,
+                "two-architecture": 210,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,7 +43,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 177)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 216
+            len(self.report.transitive_architecture_dependents), 218
         )
         self.assertEqual(len(self.report.dependency_terminals), 49)
         self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
@@ -78,6 +78,23 @@ class ArchitectureMapReportTests(unittest.TestCase):
             self.assertIn(claim, self.report.dependency_terminals)
             self.assertNotIn(claim, self.report.direct_architecture_requires)
         for claim in ("PENTAGON-ONLY-DILATIONS", "J-TORAL-ENTROPY"):
+            self.assertNotIn(claim, self.report.dependency_terminals)
+            self.assertNotIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+        for claim in (
+            "CYCLOTOMIC-CLASS-NUMBER-ONE",
+            "METRO-FORBIDDEN-WITNESSES",
+        ):
+            self.assertIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+            self.assertNotIn(claim, self.report.dependency_terminals)
+        for claim in (
+            "J-MAHLER-MEASURE",
+            "REGULATOR-TWO-LOG-PHI",
+            "J-TORAL-PERIODIC-POINTS",
+        ):
             self.assertNotIn(claim, self.report.dependency_terminals)
             self.assertNotIn(
                 claim, self.report.transitive_architecture_dependents

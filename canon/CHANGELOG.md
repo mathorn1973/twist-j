@@ -1,11 +1,117 @@
 # Canon changelog (public series)
 
-## Public Canon v56
+## Public Canon v57
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 287 claims; 0 T-LOCK, 171 T, 43 D, 30 C, 3 H, 24 O, 16 F; 27 live H/O.
+Registry snapshot: 292 claims; 0 T-LOCK, 174 T, 43 D, 32 C, 3 H, 24 O, 16 F; 27 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v57 registers five closed rows from two completed public probes,
+`P-TWOLOGPHI-INVARIANTS-1` and `P-METRO-FORBIDDEN-WITNESSES-1`, each merged
+without squash after a byte-identical two-architecture replay. Three rows
+enter at `T` and two at `C`. No live row moves and the frontier carries the
+same 27 live rows as v56.
+
+Public Canon v56 anchored `2 log phi` in the dynamical direction, as the
+topological and Haar entropy of the toral automorphism induced by the step
+matrix. It anchored nothing in the arithmetic direction: at v56 the strings
+`Mahler`, `regulator` and `class number` occur in `canon/CANON.md` zero times
+each. Three of the five new rows close that gap. `J-MAHLER-MEASURE [T]` gives
+`M(J) = phi^2` exactly, so `log M(J) = 2 log phi`, with the characteristic
+polynomial proved irreducible over `Q` by exhaustive integer factorization
+over a Gauss-lemma derived range, and with `phi^2` carrying minimal polynomial
+`x^2 - 3x + 1` whose trace 3 is `Tr(J)` and whose norm 1 is `N(J)`.
+`REGULATOR-TWO-LOG-PHI [T]` gives `Reg(Q(zeta_5)) = 2 log phi` from unit rank
+one, `phi` proved the fundamental unit of `Z[phi]` by exhaustive enumeration
+over derived bounds, and local degree two at the complex place; the
+prime-cyclotomic unit index `Q = 1` with `h^+ = 1` is the single labeled
+import and the analytic class number formula is not used.
+`CYCLOTOMIC-CLASS-NUMBER-ONE [T]` proves rather than imports class number one
+for both `Q(zeta_5)` and `Q(sqrt5)`, by the Minkowski bound reduced to the
+exact rational statement `1125 < 16 pi^4` with a checked alternating-series
+enclosure of `pi`, and to `5 < 16` with no transcendental input at all.
+
+The same constant is therefore now the logarithm of a Mahler measure, a
+regulator, and a toral entropy. That three independent invariants of one
+algebraic datum meet at one number is a fact about `phi`. It is not a bridge
+between layers, and `ENTROPY-LAYER-BRIDGE [O]` keeps its exact scope, with a
+`BOUNDED_BY` edge from each of the new arithmetic rows recording the fence as
+a ledger fact rather than as prose.
+
+`J-TORAL-PERIODIC-POINTS [C]` adds exact structure to the fixed-point count
+`J-TORAL-ENTROPY [T]` already registers, and restates none of it: Lucas closed
+forms `L_n^2` and `(L_n - 2)^2` on the two residue classes of `5 | n`, exactly
+one perfect square among the 32 off-residue values on `1..40` at `n = 1`, and
+a two-sided bracket proved for every `n >= 1` by the triangle inequality on
+the two conjugate pairs. The closed-form and bracket clauses carry written
+all-`n` proofs; the census clause is finite-range, which is why the row is C.
+
+`METRO-FORBIDDEN-WITNESSES [C]` discharges obligation B of
+`METRO-REDUCTION-CALCULUS [O]` for the five entries section 15 names. Each of
+the five forbidden entries admits an exact functional obstruction, a pair of
+positions with equal pointwise L5 stream whose transported values differ, so
+none of the five is an admissible arrow. Five witnesses of at most four states
+each are checkable by hand, and across the two frozen boxes of 2,304 and
+19,683 tuples the obstructing counts are 16,140, 18,666, 12,702, 9,072 and
+13,116 of 21,987, while the four admitted arrows exhibit zero obstructions
+under their own exact preconditions.
+
+The five entries had no fixed meaning before this fold, which is why B could
+not be tested. Each is now given one ratified reading, minimal and typewise.
+The discipline is not editorial: section 15 fixes four admitted arrows and
+immediately names five forbidden operations, so a reading under which one
+transformation were both admitted and forbidden would falsify the parent
+negatively. Two of the five readings are load-bearing in exactly that sense.
+Output-dependent regrouping is regrouping by output already obtained and is
+not the Nerode quotient, which the same list admits under its congruence
+precondition; and replacing boxes by an unrelated ordering is discarding the
+canonical box geometry and is not the box transport an admitted coordinate
+permutation induces.
+
+The parent does not close. `METRO-REDUCTION-CALCULUS [O]` keeps status `O`,
+keeps `STOP`, and keeps its falsifier; only its obligation B clause changes,
+and obligations D, common `q^k` blocking, and E, completeness of `approx_red`,
+are untouched. `METRO-REDUCTION-ARROWS [C]` is a control and does not move.
+
+One clause of a frozen row was tightened by this fold rather than folded
+verbatim, and the deviation is recorded because it is a deviation. The probe's
+own result record established that the unrestricted phrase "excludes every
+output transport tau at once" is exact for the box-reordering witness and
+needs a reading for three of the others, since a constant transport satisfies
+the bare admissibility equation while destroying the stream. A reduction arrow
+is typed with an output transport carrying `w` to `w'`, and every arrow
+registered by `METRO-REDUCTION-ARROWS [C]` carries `tau_R` = identity, so the
+class that matters is the distinction-preserving transports, and the row now
+says exactly that. Folding the looser phrase would have put a claim in the
+registry stronger than the evidence carries.
+
+The v57 ledger change is signed term by term:
+
+```text
+claims:    287 + 5 = 292,
+T:         171 + 3 = 174,
+C:         30 + 2 = 32,
+D: 43, H: 3, O: 24, F: 16, all unchanged,
+live H/O:  27, unchanged,
+normative items: 332 + 3 theorem items + 2 computation items = 337,
+dependencies: 493 + 9 = 502,
+evidence rows: 287 + 5 = 292,
+history rows: 805 + 5 declarations + 1 scope change = 811,
+two-architecture evidence: 205 + 5 = 210,
+reproduction witnesses: 23, unchanged.
+```
+
+One pre-existing row changes: `METRO-REDUCTION-CALCULUS [O]` takes a scope
+change on its obligation B clause, at unchanged status and unchanged STOP
+state, with its inline evidence hash and a history event recorded for it. No
+other status, scope, gate, layer, reproduction directory or probe record
+changes, and no cross-layer lift is created.
+
+## Public Canon v56
+
+Registry snapshot: 287 claims; 0 T-LOCK, 171 T, 43 D, 30 C, 3 H, 24 O, 16 F; 27 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v56 registers seven closed rows from four completed public
 probes, each merged without squash after its byte-identical

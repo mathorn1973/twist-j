@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v56
+# TWIST-J Public Canon v57
 
-**Release identity.** Public Canon v56. Normative authority and activation
+**Release identity.** Public Canon v57. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v56 also declares the discrete
+algebraic axiom is J. Public Canon v57 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v56 does not claim
+seed of the two algebraic projections. Public Canon v57 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v56 contains no such
+deriving the architecture from J; Public Canon v57 contains no such
 theorem.
 
 ---
@@ -136,6 +136,27 @@ independence claim is made.
 
 The golden bridge (J-GOLDEN-BRIDGE [T], reproduce/kernel): J phi = j,
 (J - 1)^3 = j, and J^5 phi^5 = 1.
+
+The same modulus has an exact arithmetic name. The characteristic polynomial
+of the step matrix, `x^4 - 3x^3 + 4x^2 - 2x + 1 = Phi_5(x - 1)`, is
+irreducible over `Q`, by exhaustive integer factorization over the range
+Gauss's lemma allows for a monic quartic with constant term 1, so it is also
+the minimal polynomial of `J`. Since `J Jbar = 2 - phi = phi^-2` is totally
+real with characteristic polynomial `(x^2 - 3x + 1)^2`, the four archimedean
+squared moduli are exactly `phi^2, phi^2, phi^-2, phi^-2`, so exactly two
+conjugates lie outside the unit circle and both have modulus `phi`.
+Therefore
+
+```
+M(J) = phi^2,      log M(J) = 2 log phi
+```
+
+exactly (J-MAHLER-MEASURE [T], probes/P-TWOLOGPHI-INVARIANTS-1). The
+coincidence is worth stating plainly: `phi^2` has minimal polynomial
+`x^2 - 3x + 1`, whose trace 3 is `Tr(J)` and whose norm 1 is `N(J)`. Exactly
+`phi < 2 < phi^2`, so `1 < log_phi 2 < 2`. This is arithmetic about `J` and
+its conjugates. It creates no dynamical, entropic or physical reading.
+
 
 ### The harmonic seam
 
@@ -1451,6 +1472,33 @@ architecture's tick is made here: that identification is exactly the
 open obligation ENTROPY-LAYER-BRIDGE [O], whose scope is unchanged and
 which is neither closed nor weakened by these rows.
 
+The registered fixed-point count has exact structure at finite range
+(J-TORAL-PERIODIC-POINTS [C], probes/P-TWOLOGPHI-INVARIANTS-1). When `5`
+divides `n`, `J^n = phi^-n` is totally real and the inner quadratic norm is
+`L_n` for odd `n` and `2 - L_n` for even `n`, so
+
+```
+|N(J^n - 1)| = L_n^2        for n = 5 mod 10,
+             = (L_n - 2)^2  for n = 0 mod 10,
+```
+
+with `L_n` the Lucas sequence. Among the 32 values with `5` not dividing `n`
+and `1 <= n <= 40`, exactly one is a perfect square, namely `n = 1` with
+value 1. For every `n >= 1` the two-sided bracket
+
+```
+(phi^n - 1)^2 (1 - phi^-n)^2 <= |N(J^n - 1)| <= (phi^n + 1)^2 (1 + phi^-n)^2
+```
+
+holds by the triangle inequality on the two conjugate pairs. Three
+independent exact routes agree on `1 <= n <= 40`. The closed-form and bracket
+clauses carry written all-`n` proofs and a later fold may lift them under
+their own gate; the census clause is finite-range only, which is why the row
+is C. Counting periodic points is not a rate statement: no entropy, rate or
+measure claim is created here and ENTROPY-LAYER-BRIDGE [O] keeps its exact
+scope.
+
+
 
 ## 3. The kernel and the census
 
@@ -2395,6 +2443,47 @@ The displayed discriminants exclude every other ramified rational prime.
 Consequently the total-ramification locus in the frozen class is exactly
 `{(K_5,5),(K_8,2)}`. A unique prime above a rational prime is not enough:
 the two `K_12` controls have `g=1` but `e=f=2` and are not total.
+
+The class number of the frozen quartic field is one, proved here rather than
+imported (CYCLOTOMIC-CLASS-NUMBER-ONE [T],
+probes/P-TWOLOGPHI-INVARIANTS-1). The trace form on `1, zeta_5, zeta_5^2,
+zeta_5^3` has determinant 125, matching the census value `disc(K_5) = 5^3`
+above. For `n = 4`, `r_2 = 2` and `|d_K| = 125` the Minkowski bound is
+
+```text
+M_K = (4/pi)^2 (4!/4^4) sqrt125 = (15 sqrt5)/(2 pi^2),
+M_K < 2  iff  1125 < 16 pi^4,
+```
+
+and the right-hand inequality is established exactly, as a statement about
+rationals, by a Machin enclosure of `pi` with a checked alternating-series
+tail bound. Every ideal class therefore contains an ideal of norm 1. For the
+real quadratic subfield the bound is `sqrt5/2 < 2`, equivalently `5 < 16`,
+with no transcendental input at all. The maximality of `Z[zeta_5]` and the
+Minkowski bound itself are labeled imports.
+
+The unit lattice fixes the second logarithmic axis exactly
+(REGULATOR-TWO-LOG-PHI [T], probes/P-TWOLOGPHI-INVARIANTS-1). `Phi_5` has no
+real root, since `(x - 1) Phi_5(x) = x^5 - 1` and `Phi_5(1) = 5`, so
+`r_1 = 0`, `r_2 = 2` and the unit rank is 1. The element
+`phi = -zeta_5^2 - zeta_5^3` lies in `Z[zeta_5]`, is fixed by
+`zeta_5 -> zeta_5^4` and so is totally real, and satisfies `phi^2 = phi + 1`
+and `phi (phi - 1) = 1`, hence is a unit of norm 1. It is the fundamental
+unit of `Z[phi]`, by exhaustive enumeration over the bounds `|2a + b| <= 2`
+and `|b| <= 1` that `1 < u < phi` forces. Both infinite places are complex,
+of local degree 2, so the rank-one regulator is
+
+```text
+Reg(Q(zeta_5)) = |2 log |sigma(phi)|| = 2 log phi.
+```
+
+The prime-cyclotomic unit index `Q = 1` and `h^+ = 1` are labeled imports and
+the analytic class number formula is not used. Together with
+J-MAHLER-MEASURE [T] this is the arithmetic anchor of `2 log phi`: the same
+constant is the logarithm of a Mahler measure and a regulator. That two
+independent invariants of the same algebraic datum meet at one number is a
+fact about `phi`, not a bridge between layers, and it neither closes nor
+weakens ENTROPY-LAYER-BRIDGE [O].
 
 At the total primes the residue fields and their unit groups are
 
@@ -5921,8 +6010,41 @@ two-state and 4,251,528 three-state protocols in the frozen
 `q = 2, a = 2, r = 1` binary-output family. The local and GitHub records are
 both x86_64, so this computation-only result is C, not T.
 
+METRO-FORBIDDEN-WITNESSES [C], evidenced by the immutable
+`probes/P-METRO-FORBIDDEN-WITNESSES-1` bundle, exhibits an exact functional
+obstruction for each of the five forbidden entries above. An obstruction is a
+pair of positions with equal pointwise L5 stream whose transported values
+differ, so it excludes at once every output transport `tau` that preserves
+the distinctions of the stream, which is the class a reduction arrow types
+and in which every admitted arrow above carries `tau_R` = identity, rather
+than one family of them; for the box-reordering entry it excludes every `tau`
+outright. None of the five is an admissible arrow. Each entry is read
+minimally and typewise, one ratified reading per phrase: flattening is loss
+of the named `N^a` product structure, not a faithful encoding that transports
+it; erasing names is forgetting which coordinate a digit-word action belongs
+to, not a coordinate permutation that carries the names, bases, maps and
+boxes with it; arbitrary factor weights are new relative weights of the
+geometry factors, not the exact rational output transport `tau_R` a reduction
+arrow already licenses; output-dependent regrouping is regrouping by output
+already obtained, not the Nerode quotient, which the same list admits under
+its congruence precondition; and replacing boxes by an unrelated ordering is
+discarding the canonical box geometry, not the box transport an admitted
+coordinate permutation induces. Read broadly instead, each of the last two
+phrases would make one admitted arrow forbidden as well, which the parent's
+own falsifier excludes. The five witnesses have at most four states and are
+checkable by hand. Across the two frozen boxes of 2,304 and 19,683 tuples the
+obstructing counts are 16,140 for flattening, 18,666 for erasing names,
+12,702 for factor weights, 9,072 for output regrouping, and 13,116 for box
+reordering, out of 21,987; the four admitted arrows exhibit zero obstructions
+across both boxes under their own exact preconditions; and every obstruction
+survives reading the composition in the opposite order. This is computation
+at a declared finite range, so the result is C, not T. Common `q^k` blocking
+is untouched: it is obligation D below.
+
 METRO-REDUCTION-CALCULUS [O] remains the parent for obligations B, D, and E:
-complete exact witnesses for the forbidden catalogue; common `q^k` blocking
+exact witnesses for any forbidden entry beyond the five section 15
+names, the ratified reading of those five having been discharged by
+METRO-FORBIDDEN-WITNESSES; common `q^k` blocking
 with all length-`k` words, padding, exponent-residue vectors, the pointwise
 stream, scientific decision, and terminal value transported; and completeness
 of `approx_red` for the registered class. It remains STOP. Neither row owns
