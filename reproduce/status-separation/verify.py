@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 165, "D": 43, "C": 30, "F": 15,
+    expected_counts = {"T": 171, "D": 43, "C": 30, "F": 16,
                        "O": 24, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v55",
-        len(rows) == 280
+        "registry and companion-ledger counts match Public Canon v56",
+        len(rows) == 287
         and counts == expected_counts
-        and len(normative) == 325
-        and len(dependencies) == 489
-        and len(evidence) == 280
-        and two_architecture == 198
-        and len(history) == 798
+        and len(normative) == 332
+        and len(dependencies) == 493
+        and len(evidence) == 287
+        and two_architecture == 205
+        and len(history) == 805
         and len(gates) == 10
         and len(programs) == 27
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -3117,6 +3117,140 @@ def run():
         and has_status(index, "NS-TILT", "H")
         and all(row["owner_item_id"] != "DE-W-CONSTANT"
                 for row in gates.values()),
+    ))
+
+    wall_new = (
+        "J-LI-PENTAGON-DILATION-DEFICIENCY",
+        "PENTAGON-ONLY-DILATIONS",
+        "J-LI-CYCLIC-CARRIER-DIMENSION",
+    )
+    wall_edges = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies
+        if any(claim in (row["item_id"], row["depends_on"])
+               for claim in wall_new)
+    }
+    checks.append((
+        "J-LI-WALL-CLOSURES",
+        "the pentagon-tower dilation route is dead by the exact constant deficiency with the fired route recorded at F, and every finite-dimensional cyclic carrier is excluded, while the three registered carrier no-gos and the live cocycle-vector hypothesis keep their statuses and no gate or program row is created",
+        has_status(index, "J-LI-PENTAGON-DILATION-DEFICIENCY", "T")
+        and has_status(index, "PENTAGON-ONLY-DILATIONS", "F")
+        and has_status(index, "J-LI-CYCLIC-CARRIER-DIMENSION", "T")
+        and all(index[claim]["canon_section"] == "16. p = 5 and the wall"
+                and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+                and evidence[claim]["architecture_requirement"]
+                == "two-architecture"
+                and normative[claim]["layer"] == "NOT_APPLICABLE"
+                and normative[claim]["gate_ids"] == ""
+                for claim in wall_new)
+        and index["J-LI-PENTAGON-DILATION-DEFICIENCY"]["evidence"]
+        == "probes/P-PENTAGON-ONLY-DILATIONS-1"
+        and index["PENTAGON-ONLY-DILATIONS"]["evidence"]
+        == "probes/P-PENTAGON-ONLY-DILATIONS-1"
+        and index["J-LI-CYCLIC-CARRIER-DIMENSION"]["evidence"]
+        == "probes/P-J-LI-CARRIER-NOGO-1"
+        and scope_contains_all(
+            index, "J-LI-PENTAGON-DILATION-DEFICIENCY",
+            ("(1/12)(1 - 1/q^2)", "constant in the tower height",
+             "(1/q) g_1"),
+        )
+        and scope_contains_all(
+            index, "PENTAGON-ONLY-DILATIONS",
+            ("falsified", "unreachable"),
+        )
+        and scope_contains_all(
+            index, "J-LI-CYCLIC-CARRIER-DIMENSION",
+            ("finite-dimensional cyclic", "infinite spectral support",
+             "no atom at 1"),
+        )
+        and wall_edges == {
+            ("PENTAGON-ONLY-DILATIONS",
+             "J-LI-PENTAGON-DILATION-DEFICIENCY", "REQUIRES"),
+        }
+        and has_status(index, "J-LI-TORAL-HAAR-NOGO", "T")
+        and has_status(index, "J-LI-LAMBDA-HAAR-HS-NOGO", "T")
+        and has_status(index, "J-LI-LAMBDA-SHIFT-NOGO", "T")
+        and has_status(index, "LAMBDA-COCYCLE-ANGLES", "H")
+        and all(row["owner_item_id"] not in wall_new
+                for row in gates.values())
+        and all(claim not in programs for claim in wall_new),
+    ))
+
+    anchor_new = (
+        "KERNEL-SUBSET-LANDSCAPE",
+        "J-TORAL-ENTROPY",
+        "TM-ENTROPY-ZERO",
+        "BINARY-READ-RELATIVE-ENTROPY",
+    )
+    anchor_edges = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies
+        if any(claim in (row["item_id"], row["depends_on"])
+               for claim in anchor_new)
+    }
+    checks.append((
+        "ENTROPY-KERNEL-ANCHORS",
+        "the subset landscape decides the exact 32-entry table with connectivity iff dim U_S = 6, and the rate 2 log phi enters with the toral anchor, the zero-entropy driver, and the binary residue bracket, while the layer-bridge obligation keeps its exact scope and no gate or program row is created",
+        has_status(index, "KERNEL-SUBSET-LANDSCAPE", "T")
+        and has_status(index, "J-TORAL-ENTROPY", "T")
+        and has_status(index, "TM-ENTROPY-ZERO", "T")
+        and has_status(index, "BINARY-READ-RELATIVE-ENTROPY", "T")
+        and all(evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+                and evidence[claim]["architecture_requirement"]
+                == "two-architecture"
+                and normative[claim]["gate_ids"] == ""
+                for claim in anchor_new)
+        and index["KERNEL-SUBSET-LANDSCAPE"]["evidence"]
+        == "probes/P-KERNEL-SUBSET-LANDSCAPE-1"
+        and all(index[claim]["evidence"]
+                == "probes/P-ENTROPY-RESIDUE-MATH-1"
+                for claim in ("J-TORAL-ENTROPY", "TM-ENTROPY-ZERO",
+                              "BINARY-READ-RELATIVE-ENTROPY"))
+        and index["KERNEL-SUBSET-LANDSCAPE"]["canon_section"]
+        == "3. The kernel and the census"
+        and index["TM-ENTROPY-ZERO"]["canon_section"]
+        == "3. The kernel and the census"
+        and index["J-TORAL-ENTROPY"]["canon_section"]
+        == "2. Time, space, and the decoder"
+        and index["BINARY-READ-RELATIVE-ENTROPY"]["canon_section"]
+        == "2. Time, space, and the decoder"
+        and normative["KERNEL-SUBSET-LANDSCAPE"]["layer"] == "L1"
+        and normative["J-TORAL-ENTROPY"]["layer"] == "L2"
+        and normative["TM-ENTROPY-ZERO"]["layer"] == "L5"
+        and normative["BINARY-READ-RELATIVE-ENTROPY"]["layer"]
+        == "NOT_APPLICABLE"
+        and scope_contains_all(
+            index, "KERNEL-SUBSET-LANDSCAPE",
+            ("dim U_S = 6", "acde", "abcde"),
+        )
+        and scope_contains_all(
+            index, "J-TORAL-ENTROPY",
+            ("2 log phi", "#fix(t^n)", "1860496"),
+        )
+        and scope_contains_all(
+            index, "TM-ENTROPY-ZERO",
+            ("linear factor complexity", "entropy rate 0"),
+        )
+        and scope_contains_all(
+            index, "BINARY-READ-RELATIVE-ENTROPY",
+            ("log(phi^2/2)", "2 log phi = log 2 + log(phi^2/2)"),
+        )
+        and anchor_edges == {
+            ("KERNEL-SUBSET-LANDSCAPE", "KERNEL-CONNECT-ALL-K",
+             "REQUIRES"),
+            ("KERNEL-SUBSET-LANDSCAPE", "KERNEL-WEDGE-AFFINITY",
+             "REQUIRES"),
+            ("J-TORAL-ENTROPY", "J-STEP", "REQUIRES"),
+        }
+        and has_status(index, "KERNEL-CONNECT-ALL-K", "T")
+        and has_status(index, "ENTROPY-LAYER-BRIDGE", "O")
+        and scope_contains_all(
+            index, "ENTROPY-LAYER-BRIDGE",
+            ("equal cardinalities do not construct",),
+        )
+        and all(row["owner_item_id"] not in anchor_new
+                for row in gates.values())
+        and all(claim not in programs for claim in anchor_new),
     ))
 
     fw_requires = {}

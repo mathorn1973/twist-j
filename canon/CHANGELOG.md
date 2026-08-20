@@ -1,11 +1,81 @@
 # Canon changelog (public series)
 
-## Public Canon v55
+## Public Canon v56
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 280 claims; 0 T-LOCK, 165 T, 43 D, 30 C, 3 H, 24 O, 15 F; 27 live H/O.
+Registry snapshot: 287 claims; 0 T-LOCK, 171 T, 43 D, 30 C, 3 H, 24 O, 16 F; 27 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v56 registers seven closed rows from four completed public
+probes, each merged without squash after its byte-identical
+two-architecture replay: `P-PENTAGON-ONLY-DILATIONS-1`,
+`P-J-LI-CARRIER-NOGO-1`, `P-KERNEL-SUBSET-LANDSCAPE-1`, and
+`P-ENTROPY-RESIDUE-MATH-1`. Six rows enter at `T` and one at `F`. No
+live row moves, no gate or layer lift is created, and the frontier
+carries the same 27 live rows as v55.
+
+On the wall, `J-LI-PENTAGON-DILATION-DEFICIENCY [T]` proves the exact
+constant deficiency of the pentagon-tower dilation route: in `L^2(0,1)`
+the squared distance of the clock function `g_q`, `q` coprime to 5, to
+the span of any number of tower rungs `g_(5^m)` is exactly
+`(1/12)(1 - 1/q^2)`, constant in the tower height, with best
+approximant `(1/q) g_1`. `PENTAGON-ONLY-DILATIONS [F]` records the
+fired route: Nyman-Beurling / Baez-Duarte closure restricted to
+pentagon-tower dilations can never reach the non-5 spectrum. The `F`
+row exists to prevent a re-attempt of a route the arithmetic already
+forbids. `J-LI-CYCLIC-CARRIER-DIMENSION [T]` closes every
+finite-dimensional cyclic carrier at once: `q_n = a* n^2 + R_n` with
+`0 <= R_n <= C`, set against Li nonnegativity and the Lagarias
+asymptotic, so every exact realization of the Li ladder has infinite
+spectral support, 1 in the support, and no atom at 1. It complements
+the three registered carrier no-gos, which exclude specific carriers.
+The cocycle-vector form `LAMBDA-COCYCLE-ANGLES [H]` is untouched.
+
+In the kernel, `KERNEL-SUBSET-LANDSCAPE [T]` is the sharpness companion
+of `KERNEL-CONNECT-ALL-K [T]`: the exact 32-entry table of `dim U_S` is
+decided, connectivity of `(F_5^6)^k` for every `k >= 2` holds exactly
+at `dim U_S = 6`, the connected subsets are exactly `acde` and `abcde`,
+the letter `a` is load-bearing and the letter `b` is inert.
+
+The entropy rate `2 log phi` gains its first public Canon anchor.
+`J-TORAL-ENTROPY [T]` gives `h_top = h_Haar = 2 log phi` for the toral
+automorphism induced by the step matrix, by exact `Z[phi]`
+factorization of the characteristic polynomial, with the exact
+fixed-point law and witness `#Fix(T^15) = 1860496` by two independent
+exact paths. `TM-ENTROPY-ZERO [T]` pins the Thue-Morse driver at
+entropy rate 0 by linear factor complexity with stabilization witness
+`p(20) = 60`. `BINARY-READ-RELATIVE-ENTROPY [T]` brackets the residue
+of any binary factor of a system at that rate in
+`[log(phi^2/2), 2 log phi]`, with strictly positive floor `1/phi` and
+the exact split identity `2 log phi = log 2 + log(phi^2/2)`;
+deterministic schedules attain the ceiling and floor attainability is
+not claimed. `ENTROPY-LAYER-BRIDGE [O]` keeps its exact scope: the
+identification of the toral rate with the declared architecture's tick
+remains exactly as open as that row states, and these rows are never to
+be cited as closing or weakening it.
+
+The v56 ledger change is signed term by term:
+
+```text
+claims:    280 + 7 = 287,
+T:         165 + 6 = 171,
+F:         15 + 1 = 16,
+D: 43, C: 30, H: 3, O: 24, all unchanged,
+live H/O:  27, unchanged,
+normative items: 325 + 6 theorem items + 1 falsified item = 332,
+dependencies: 489 + 4 = 493,
+two-architecture evidence: 198 + 7 = 205,
+reproduction witnesses: 23, unchanged.
+```
+
+No pre-existing status, scope, gate, layer, reproduction directory, or
+probe record changes, and no L2 to L6 lift is created.
+
+## Public Canon v55
+
+Registry snapshot: 280 claims; 0 T-LOCK, 165 T, 43 D, 30 C, 3 H, 24 O, 15 F; 27 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v55 registers one new live empirical row, `DE-W-CONSTANT [H]`,
 from the completed public probe `P-DE-W-ARMING-1`. The row arms the committed

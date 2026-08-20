@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v55
+# TWIST-J Public Canon v56
 
-**Release identity.** Public Canon v55. Normative authority and activation
+**Release identity.** Public Canon v56. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v55 also declares the discrete
+algebraic axiom is J. Public Canon v56 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v55 does not claim
+seed of the two algebraic projections. Public Canon v56 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v55 contains no such
+deriving the architecture from J; Public Canon v56 contains no such
 theorem.
 
 ---
@@ -1413,6 +1413,45 @@ and O1 realized event generation or sampling remain STOP. The empty
 frozen-family eligibility set licenses no conclusion about instruments
 outside that family.
 
+The time counter has an exact entropy anchor. The step matrix of
+J = 1 + zeta_5^2 induces a hyperbolic automorphism T_J of the torus
+R^4/Z^4 with eigenvalue moduli exactly phi, phi, phi^-1, phi^-1: the
+characteristic polynomial x^4 - 3x^3 + 4x^2 - 2x + 1 factors over
+Z[phi] into complex conjugate pairs of squared moduli phi^2 and
+2 - phi, and the entropy formula for hyperbolic toral automorphisms
+gives h_top = h_Haar = 2 log phi (J-TORAL-ENTROPY [T],
+probes/P-ENTROPY-RESIDUE-MATH-1). The periodic-point law is exact,
+
+```
+#Fix(T_J^n) = |det(M_J^n - I)| = |N(J^n - 1)|,
+```
+
+decided by two independent exact routes for n = 1..15 with witness
+#Fix(T_J^15) = 1860496. The entropy formula and the equality of
+topological and Haar entropy for these automorphisms are labeled
+classical imports.
+
+Any binary reading of a system at that rate loses an exact positive
+residue. For a binary factor q of a system at entropy rate 2 log phi,
+the residue R(q) = 2 log phi - h(q) lies in the exact bracket
+
+```
+log(phi^2/2) <= R(q) <= 2 log phi,
+```
+
+with strictly positive floor phi^2 - 2 = 1/phi > 0 exactly and the
+exact split identity 2 log phi = log 2 + log(phi^2/2); deterministic
+schedules attain the ceiling, and floor attainability is not claimed
+(BINARY-READ-RELATIVE-ENTROPY [T], probes/P-ENTROPY-RESIDUE-MATH-1).
+2 log phi is the logarithm of no rational number and is Q-linearly
+independent of log 2 and log 5, by the norm gates on {phi^2, 2, 5}.
+Both rows are mathematics of the induced automorphism and of abstract
+binary factors. No identification of the toral rate with the declared
+architecture's tick is made here: that identification is exactly the
+open obligation ENTROPY-LAYER-BRIDGE [O], whose scope is unchanged and
+which is neither closed nor weakened by these rows.
+
+
 ## 3. The kernel and the census
 
 F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
@@ -2217,6 +2256,26 @@ The lower bound is sharp: at `k = 1` the same four letters have nine
 components. This is an L1 state theorem for the declared coupled carrier;
 it supplies no continuum, measure, or physical lift.
 
+The subset landscape of the five letters is decided, and the all-k
+theorem is sharp in the subset direction (KERNEL-SUBSET-LANDSCAPE [T],
+probes/P-KERNEL-SUBSET-LANDSCAPE-1). For every subset S of the five
+kernel letters, with the two-way CSUM ring transvections present, the
+coupled power (F_5^6)^k is a single component for every k >= 2 if and
+only if dim U_S = 6, where U_S is the smallest Gamma_S-invariant
+subspace of F_5^6 containing the translations of the affine letters of
+S; and dim U_S < 6 gives at least two components, carried by
+confinement alone. The exact 32-entry table of dim U_S is decided and
+monotone under inclusion, and the connected subsets are exactly acde
+and abcde. The letter a is load-bearing: dim U_cde = 4 and
+dim U_bcde = 5. The letter b never raises any dimension. The
+subset-generic lemma chain is inherited from the all-k proof above,
+which uses only that the letters are affine involutions and that the
+transvections are present; the verifier decided the table exactly and
+audited the chain's finite instances, verbatim letters on all 15625
+states, exhaustive k = 1 confinement per subset, and exact commutator
+translations at k = 2. No dynamics, measure, or census claim is
+touched.
+
 TM-SHEET-SYNCHRONIZING-GRAPH [T] is the exact L1 theorem for the sheet pair
 induced by the declared generators. Direct substitution in the sheet laws
 above gives the two letter maps on `F_5`,
@@ -2291,6 +2350,16 @@ probability, or measure statement, and recovers no four-phase lift value.
 KERNEL-Z6-SYNCHRONIZATION [T] is lineage: the sheet laws and the table
 are re-derived above, not imported. The partition coincidence of G5
 carries no derivation in either direction.
+
+The driver contributes no entropy. The Thue-Morse driver
+theta_n = s_2(n) mod 2 has linear factor complexity: the exact counts
+are p(1..4) = 2, 4, 6, 10 with the stabilization witness p(20) = 60,
+and the universal linear formula for Thue-Morse factor complexity is
+the labeled classical import; hence the driver subshift has entropy
+rate 0 (TM-ENTROPY-ZERO [T], probes/P-ENTROPY-RESIDUE-MATH-1). This is
+a statement about the driver stream alone. It assigns no census
+meaning, makes no measure or physical-irreversibility statement, and
+neither closes nor weakens ENTROPY-LAYER-BRIDGE [O].
 
 ## 4. The two places
 
@@ -6249,6 +6318,56 @@ cocycle-vector route remains open.
   discrete-time class and its declared unitary tensor composites. It does
   not cover distribution or trace formalisms, moment-functional
   constructions, or genuinely global adelic objects.
+
+The carrier exclusions now include an exact dimension theorem
+(J-LI-CYCLIC-CARRIER-DIMENSION [T], probes/P-J-LI-CARRIER-NOGO-1).
+Every unitary U with a vector v whose cyclic subspace is
+finite-dimensional satisfies
+
+```
+|| sum_(k=0)^(n-1) U^k v ||^2 = a* n^2 + R_n,
+a* = ||P_(z=1) v||^2,        0 <= R_n <= C,
+```
+
+with P_(z=1) the spectral projection at the eigenvalue 1. Since the
+Li ladder is nonnegative-forcing (Li, Bombieri-Lagarias) and under RH
+is unbounded and o(n^2) (Lagarias), both branches close: no
+finite-dimensional cyclic carrier realizes the ladder, every exact
+realization has infinite spectral support, 1 lies in the support, and
+there is no atom at 1. Li's criterion in both directions, the
+Lagarias asymptotic, and the unitary spectral theorem are labeled
+classical imports. The audited exemplars live in the program's own
+field Q(zeta_10) = Q(zeta_5): the mu_10 rotation attains the exact
+10-periodic ladder with period maximum 6 + 2 sqrt5 = 4/|1 - zeta_10|^2,
+the proof's remainder bound realized with equality; the eigenvalue-1
+carrier gives q_n = n^2; their orthogonal sum gives the mixed branch
+with the exact bracket. The three carrier verdicts above exclude
+specific carriers; this row excludes every finite one. The
+cocycle-vector form LAMBDA-COCYCLE-ANGLES [H] is untouched.
+
+The dilation route restricted to the pentagon tower is dead by exact
+arithmetic. In L^2(0,1) the clock functions g_n(x) = frac(nx) - 1/2
+have exact Gram <g_m, g_n> = gcd(m,n)^2/(12mn); the pentagon tower
+{g_(5^m)} has the KMS Gram 5^(-|a-b|)/12; and for every q coprime to
+5 the squared distance of g_q to the span of any number of tower
+rungs is exactly
+
+```
+dist(g_q, span{g_(5^m): m <= M})^2 = (1/12)(1 - 1/q^2),
+```
+
+constant in the tower height M, with best approximant (1/q) g_1 and
+witnesses 1/16 at q = 2 and 2/27 at q = 3
+(J-LI-PENTAGON-DILATION-DEFICIENCY [T],
+probes/P-PENTAGON-ONLY-DILATIONS-1). Therefore the Nyman-Beurling /
+Baez-Duarte closure route restricted to pentagon-tower dilations 5^m
+is falsified: the entire non-5 spectrum is unreachable, with the
+deficiency bounded below by a fixed positive rational per direction q
+coprime to 5 (PENTAGON-ONLY-DILATIONS [F],
+probes/P-PENTAGON-ONLY-DILATIONS-1). The route returns only if the
+deficiency computation is exactly refuted. Nyman-Beurling and
+Baez-Duarte are cited as motivation and are not reproved. Nothing in
+these rows advances RH or any physical row.
 
 The first completed-zeta K-side rung is pinned at finite enclosure scope
 (O-R2-K-JUNCTION-PIN [C], probes/P-R2-K-JUNCTION-PIN-1). For
