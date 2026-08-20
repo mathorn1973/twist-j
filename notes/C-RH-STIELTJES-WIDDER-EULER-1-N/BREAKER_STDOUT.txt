@@ -1,0 +1,12 @@
+C-RH-STIELTJES-WIDDER-EULER-1-N independent breaker
+B1 coordinate controls PASS
+B2 conjugate resolvent PASS
+B3 W1 pair formula PASS
+B4 factorial identity k=1..3 PASS
+B5 on-line positivity k=1..8 PASS
+B6 low off-line first rung survives PASS
+B7 low off-line W2 detects PASS: sign=negative
+B8 high off-line W2 delayed PASS
+B9 prime-cut orientation PASS
+B10 high off-line later rung detects PASS: first_nonpositive=32
+BREAKER FINDINGS 0/10
