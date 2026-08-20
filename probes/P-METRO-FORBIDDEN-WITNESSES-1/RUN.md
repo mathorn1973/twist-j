@@ -106,3 +106,27 @@ decision: each of the five forbidden entries of section 15, under the ratified
           arrows exhibit none; obligation B is discharged for those five
           entries and the parent stays open
 ```
+
+## Second architecture, recorded
+
+Run from a clean fetch of this branch at the record commit, on a different
+architecture, operating system and interpreter than the accepted run above.
+The pinned file hashes were read back from that checkout before execution and
+matched the pin. The fields are written as prose rather than as a second
+machine-readable leg, because the pull-request workflow owns the GitHub leg
+and this record must not be mistaken for it.
+
+```text
+leg          second architecture, recorded outside the accepted single run
+platform     macOS 26.5.2
+arch         arm64
+interpreter  CPython 3.13.13
+verifier     sha256 884d9a51deee630e6d5fe3b1db085166809a7bf57dae98109629c7ad03a45ca5
+stdout       sha256 df0adcbf79fd1f56d4ff22f71e409d8a6d178593759a8add4fa15d4071d7dc24
+outcome      exit 0, empty stderr, byte identical to EXPECTED.txt and to the
+             x86_64 leg, wall time about two and a half seconds
+```
+
+The two legs therefore differ in architecture, in operating system and in
+interpreter minor version, and agree byte for byte. The repository
+pull-request workflow supplies the same gate again on its own two runners.
