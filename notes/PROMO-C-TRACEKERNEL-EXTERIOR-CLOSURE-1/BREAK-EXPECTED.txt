@@ -1,0 +1,18 @@
+C-TRACEKERNEL-EXTERIOR-CLOSURE-1-N INDEPENDENT BREAKER
+SOURCE frozen_prereg_plus_addendum commit=8b8eb640a3ef260c4664d253f69398979afc926f
+PREMISE EXACT-HODGE-HOME-CLOSURE DECLARED_NOT_EARNED
+STATUS candidate-T universal_trace_kernel_and_derived_form
+STATUS candidate-T conditional_nonzero_home_closure_only_p=5
+STATUS candidate-T conditional_p=5_sl2_with_Phi_1+2
+STATUS O public_architecture_does_not_force_premise
+G1_G2_G3_G5_S1 PASS primes=2,3,5,7,11,13,17,19,23 lift_generator_tests=41908 normalized_eigenvalues=1/p,1
+G4_G6_G7_S5 PASS states=125 pairs=15625 jacobi_triples=1953125 beta_det_nonzero phi_dims=1+2 sl2_triple_det=4
+S2_EMPTY_CASE PASS W_2=0 closure_vacuous; not_the_nonzero_F_2^4_CARRY_PENTAD
+S3_VOLUME_RESCALING PASS c=1,2,3,4 isomorphism x->x/c verified on every pair
+S4_PLANE_NEGATIVE_CONTROL PASS dim_Lambda2_Wminus=1_not_2
+S6_EXACT_NONJACOBI PASS A4=SUPPLIED_BY_EXTERNAL_REVIEW det=1 jacobi=(0,0,-1) characteristic_free
+S6_SEEDED_CENSUS PASS seed=20260820 trials=4000 invertible=3052 jacobi=21
+S7_AUTOMORPHISMS PASS Aut=SO3=120; public_GL2=480
+A2_A3_KINEMATICAL PASS A2=SUPPLIED_BY_EXTERNAL_REVIEW central_survivors=1,4; A3=RESULT_EXPOSED compatible=8 incompatible=472 fraction=59/60 structure=4_diagonal_det1+4_antidiagonal_det_minus1 torus_normalizer direct_image=480 sym2_image=120
+S8_SCOPE PASS no_2I_derivation no_spinor_carrier no_integral_lift no_L2_to_L6_claim
+ROUTE CONDITIONAL-PASS L1_ONLY NO_PROMOTION
