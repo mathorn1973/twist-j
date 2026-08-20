@@ -1,0 +1,14 @@
+AUDIT_PIN-WIDDER-2B.txt
+
+prereg_sha256:   799ae461fb3b57af1c6d4e00a0412d51b77081210851f30c0a88933c520fe5b4
+prereg_bytes:    1357
+prereg_lf:       22
+prereg_cr:       0
+prereg_final_lf: yes
+code_sha256:     5297da6c658acf83297c81ac256acf6cd299c9ecc6498f418a606cf413d22e7a
+code_bytes:      2853
+code_lf:         116
+code_cr:         0
+code_final_lf:   yes
+leg:             2B, correction of fired gate CG2 (representation defect)
+formal_audit_executions: 0
