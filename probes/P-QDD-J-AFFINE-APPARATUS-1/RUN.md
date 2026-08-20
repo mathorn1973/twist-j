@@ -65,37 +65,47 @@ scope:    restricted target-independent J-affine L4 apparatus class
 boundary: global O2 unchanged; O1 untouched; SAMPLING NOT PROVIDED
 ```
 
-## Public two-architecture evidence
+## Public workflow identity
 
-Workflow run `32386442082` checked the synthetic merge
-`95a827f3cf02242ab8f9b11df395524d88f6ee9b`, whose parents were the frozen
-probe head `a5275e98ef02178bb73531a3b6e813eaaf2021a2` and public `main`
+Workflow run `32386442082` checked synthetic merge
+`95a827f3cf02242ab8f9b11df395524d88f6ee9b`, whose parents were frozen probe
+head `a5275e98ef02178bb73531a3b6e813eaaf2021a2` and public `main`
 `6e521f077b57ea343e5b456adb666b50e6a17eb4`.
 
+## Public aarch64 evidence
+
 ```text
-aarch64 job:     96483771198
-platform:        Ubuntu 24.04.4 LTS
-architecture:    aarch64
-python:          CPython 3.12.14
+job_id: 96483771198
+platform: Ubuntu 24.04.4 LTS
+architecture: aarch64
+python: CPython 3.12.14
 verifier_sha256: f946497132b0f12bb781b14e269c6c37442948bca60d7247563d4271e9e08246
-stdout_sha256:   ae944d523ffb77319907e50799812e7fabdbc9952c9bdbd93d6d854cc12de80c
-result:          VERIFY PASS
+stdout_sha256: ae944d523ffb77319907e50799812e7fabdbc9952c9bdbd93d6d854cc12de80c
+result: VERIFY PASS
+```
 
-x86_64 job:      96483821339
-platform:        Ubuntu 24.04.4 LTS
-architecture:    x86_64
-python:          CPython 3.12.14
+## Public x86_64 evidence
+
+```text
+job_id: 96483821339
+platform: Ubuntu 24.04.4 LTS
+architecture: x86_64
+python: CPython 3.12.14
 verifier_sha256: f946497132b0f12bb781b14e269c6c37442948bca60d7247563d4271e9e08246
-stdout_sha256:   ae944d523ffb77319907e50799812e7fabdbc9952c9bdbd93d6d854cc12de80c
-result:          VERIFY PASS
+stdout_sha256: ae944d523ffb77319907e50799812e7fabdbc9952c9bdbd93d6d854cc12de80c
+result: VERIFY PASS
+```
 
-aggregate job:   96483770286
-result:          TWO-ARCHITECTURE CHECK PASS
+## Public aggregate evidence
+
+```text
+job_id: 96483770286
+result: TWO-ARCHITECTURE CHECK PASS
 ```
 
 Both architecture jobs also passed policy, all 99 repository unit tests,
 Public Canon v56 (`claims=287`), the ledger
 (`items=332 dependencies=493 evidence=287 history=805 gates=10 programs=7`),
-and changed-reproduction routing. This section is neutral evidence only. It
-changes no pinned file, equation, class, threshold, result, or scientific
+and changed-reproduction routing. These sections are neutral evidence only.
+They change no pinned file, equation, class, threshold, result, or scientific
 scope.
