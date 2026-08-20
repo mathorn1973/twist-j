@@ -1,11 +1,70 @@
 # Canon changelog (public series)
 
-## Public Canon v54
+## Public Canon v55
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 279 claims; 0 T-LOCK, 165 T, 43 D, 30 C, 2 H, 24 O, 15 F; 26 live H/O.
+Registry snapshot: 280 claims; 0 T-LOCK, 165 T, 43 D, 30 C, 3 H, 24 O, 15 F; 27 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v55 registers one new live empirical row, `DE-W-CONSTANT [H]`,
+from the completed public probe `P-DE-W-ARMING-1`. The row arms the committed
+register form `w = -14/15 = -1 + 1/(d p)` with `d = 3` and `p = 5`, exactly
+and constant in `a`, equivalently `rho_DE` proportional to `a^(-1/5)`, in the
+standard flat FRW fluid convention. It is the second empirical frontier row,
+beside `NS-TILT [H]`.
+
+The falsifier is frozen and its thresholds do not move. The row fires, and
+folds to `F`, when a carrier release from DESI, DES, Euclid or CMB-S4
+excludes `w = -14/15` at or above the 99 percent credible level in its
+headline constant-w fit; or when one carrier collaboration reports evolving
+dark energy at or above 5 sigma in its headline combination; or when two
+carrier collaborations each report it at or above 3 sigma from combinations
+sharing no primary dataset. Tension at or above 2 sigma, and an evolution
+preference at or above 3 sigma that the double leg does not reach, are
+recorded as witnesses, fire nothing, and never soften or postpone the two
+firing rules.
+
+On the record frozen by the probe the row holds. Four witnesses sit at or
+above 3 sigma: DESI DR2 at 31/10 sigma on the BAO and CMB headline, at 19/5
+and 21/5 sigma adding Union3 and DESY5, and DES Y6 at 3 sigma on its
+shared-data headline. Every cross-collaboration pair among them shares DESI
+BAO and CMB, so the disjointness clause blocks the double leg; the only
+disjoint cross-collaboration candidate, DES alone, carries 11/5 sigma. The
+probe records the counterfactual: without the clause the double leg would
+fire today on shared data, so the clause is decision-bearing now. The
+headline constant-w exclusion rule is unevaluated on this record, because no
+carrier collaboration constant-w posterior summary is on it; that evaluation
+belongs to a fresh probe, never to an amendment of the frozen rules.
+
+No derivation of `w` from `J` is claimed and no dictionary source is
+selected. `COSMOLOGY-REGISTER [D]` is unchanged as the source of the
+committed form, with its comparisons fenced, and `DE-CONFORMAL-WEIGHT [O]`
+is unchanged and open and never takes the new row as a selection premise;
+the CIRCULAR clause of that obligation governs. A consistent witness is not
+evidence of a derivation; the only public life of this row is the exposure
+of one exact rational to named future measurements.
+
+The v55 ledger change is signed term by term:
+
+```text
+claims:    279 + 1 empirical row = 280,
+H:         2 + 1 = 3,
+T: 165, D: 43, C: 30, O: 24, F: 15, all unchanged,
+live H/O:  26 + 1 = 27,
+normative items: 324 + 1 hypothesis item = 325,
+dependencies: 486 + 3 = 489,
+two-architecture evidence: 197 + 1 = 198,
+reproduction witnesses: 23, unchanged.
+```
+
+No pre-existing status, scope, gate, layer, reproduction directory, or probe
+record changes, and no L2 to L6 lift is created.
+
+## Public Canon v54
+
+Registry snapshot: 279 claims; 0 T-LOCK, 165 T, 43 D, 30 C, 2 H, 24 O, 15 F; 26 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v54 registers five closed L1 theorem rows and one L1 definition
 from the completed result-exposed, proof-first public probe

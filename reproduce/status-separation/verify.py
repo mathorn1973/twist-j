@@ -142,19 +142,19 @@ def run():
         for row in evidence.values()
     )
     expected_counts = {"T": 165, "D": 43, "C": 30, "F": 15,
-                       "O": 24, "H": 2}
+                       "O": 24, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v54",
-        len(rows) == 279
+        "registry and companion-ledger counts match Public Canon v55",
+        len(rows) == 280
         and counts == expected_counts
-        and len(normative) == 324
-        and len(dependencies) == 486
-        and len(evidence) == 279
-        and two_architecture == 197
-        and len(history) == 797
+        and len(normative) == 325
+        and len(dependencies) == 489
+        and len(evidence) == 280
+        and two_architecture == 198
+        and len(history) == 798
         and len(gates) == 10
-        and len(programs) == 26
+        and len(programs) == 27
         and len({row["program_id"] for row in programs.values()}) == 7
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
     ))
@@ -3080,6 +3080,42 @@ def run():
         and "P-DQRC-FINITE-DEFICIT-1" not in normative
         and "P-DQRC-FINITE-DEFICIT-1" not in programs
         and all(row["owner_item_id"] != "P-DQRC-FINITE-DEFICIT-1"
+                for row in gates.values()),
+    ))
+
+    de_w_edges = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies
+        if "DE-W-CONSTANT" in (row["item_id"], row["depends_on"])
+    }
+    checks.append((
+        "DE-W-CONSTANT",
+        "the armed dark-energy reading enters at H on the completed public probe with exactly its three declared edges, while the register dictionary and the conformal-weight obligation keep their statuses and no gate, layer lift, or selection premise is created",
+        has_status(index, "DE-W-CONSTANT", "H")
+        and index["DE-W-CONSTANT"]["evidence"] == "probes/P-DE-W-ARMING-1"
+        and index["DE-W-CONSTANT"]["canon_section"] == "18. The frontier"
+        and evidence["DE-W-CONSTANT"]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence["DE-W-CONSTANT"]["architecture_requirement"]
+        == "two-architecture"
+        and normative["DE-W-CONSTANT"]["layer"] == "NOT_APPLICABLE"
+        and normative["DE-W-CONSTANT"]["gate_ids"] == ""
+        and tuple(programs["DE-W-CONSTANT"][field] for field in
+                  ("program_id", "queue_role", "work_state", "work_mode"))
+        == ("COSMOLOGY", "FOLLOWUP", "BLOCKED", "EMPIRICAL")
+        and de_w_edges == {
+            ("COSMOLOGY-REGISTER", "DE-W-CONSTANT", "BOUNDED_BY"),
+            ("DE-CONFORMAL-WEIGHT", "DE-W-CONSTANT", "BOUNDED_BY"),
+            ("DE-W-CONSTANT", "DEF-ARCHITECTURE", "REQUIRES"),
+        }
+        and scope_contains_all(
+            index, "DE-W-CONSTANT",
+            ("-14/15", "constant in a", "no derivation from j",
+             "no dictionary source", "no selection premise"),
+        )
+        and has_status(index, "COSMOLOGY-REGISTER", "D")
+        and has_status(index, "DE-CONFORMAL-WEIGHT", "O")
+        and has_status(index, "NS-TILT", "H")
+        and all(row["owner_item_id"] != "DE-W-CONSTANT"
                 for row in gates.values()),
     ))
 

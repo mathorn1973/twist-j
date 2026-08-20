@@ -485,3 +485,6 @@ DQRC-ORIGIN-NONSELECTION	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the origin witness bl
 DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY	DQRC-INTEGER-CENSUS-ARITHMETIC	REQUIRES	the maximal-locus slope and S_inf formulas are specializations of the exact DQRC arithmetic
 DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY	DEGREES-BY-PRIME	REQUIRES	the DQRC field application uses the registered separation of the zeta_5 and zeta_8 place fields
 DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the field boundary neither selects a physical place assignment nor supplies a Bell source, apparatus, event law, or causal account
+COSMOLOGY-REGISTER	DE-W-CONSTANT	BOUNDED_BY	the committed dark-energy form is additionally armed as a live empirical row
+DE-W-CONSTANT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+DE-CONFORMAL-WEIGHT	DE-W-CONSTANT	BOUNDED_BY	the armed reading supplies no source, no typed dictionary, and no selection premise, and the CIRCULAR clause rejects any closure that assumes w = -14/15

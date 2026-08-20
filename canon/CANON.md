@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v54
+# TWIST-J Public Canon v55
 
-**Release identity.** Public Canon v54. Normative authority and activation
+**Release identity.** Public Canon v55. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v54 also declares the discrete
+algebraic axiom is J. Public Canon v55 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v54 does not claim
+seed of the two algebraic projections. Public Canon v55 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v54 contains no such
+deriving the architecture from J; Public Canon v55 contains no such
 theorem.
 
 ---
@@ -5417,6 +5417,18 @@ sliding-pair value 1/6 from GYRON-DENSITY as the mass-ladder prefactor.
 Its proton and cosmology assignments belong only to that dictionary.
 GYRON-DENSITY itself is not a mass density, cosmological parameter,
 Born multiplier, physical probability, or L5-to-L6 measure statement.
+
+The committed dark-energy form is additionally armed as a live empirical
+hypothesis. DE-W-CONSTANT [H] carries w_DE(a) = -14/15 = -1 + 1/(d p) with
+d = 3 and p = 5, exactly and constant in a, equivalently rho_DE proportional
+to a^(-1/5), in the standard flat FRW fluid convention, and its falsifier is
+frozen on the named survey carrier DESI, DES, Euclid and CMB-S4
+(probes/P-DE-W-ARMING-1). The row is a reading of the committed register
+form and derives nothing: COSMOLOGY-REGISTER [D] remains the source of that
+form with its comparisons fenced, no dictionary source is selected, and
+DE-CONFORMAL-WEIGHT [O] remains open and untouched, with DE-W-CONSTANT
+refused as a selection premise there by the CIRCULAR clause of that row.
+
 Independently, freeze the six golden projective lines with representatives
 
 ```
@@ -6878,6 +6890,9 @@ COSMOLOGY
                              selecting the dark-energy density character;
                              FRW continuity alone is nonunique and no
                              trace-Gram dictionary is authorized
+  DE-W-CONSTANT              the committed dark-energy form w = -14/15
+                             armed as a live empirical row; falsifier
+                             frozen on DESI, DES, Euclid, CMB-S4
 COLOR
   ALPHA-S-RUNNING            the running above the 3/4 seed
   SCHEME-DICTIONARY          exact seeds to measured couplings; source-seed

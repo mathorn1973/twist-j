@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its forty-six checks cover the current
+and emits deterministic text. Its forty-seven checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 46/46 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 47/47 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -92,6 +92,8 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v55 count check reads the folded tree (280 claims, 23 reproductions, 10 gates). The new DE-W-CONSTANT check pins the armed dark-energy reading at H on the completed two-architecture public probe bundle, with its NOT_APPLICABLE layer, its COSMOLOGY/FOLLOWUP/BLOCKED/EMPIRICAL program tuple, and exactly its three declared dependency edges. It requires COSMOLOGY-REGISTER to stay D, DE-CONFORMAL-WEIGHT to stay O, NS-TILT to stay H, and forbids any gate owned by the new row. The permanent QDD direct-write firewall remains the final check.
 
 The v54 count check reads the folded tree (279 claims, 23 reproductions, 10 gates). The new DQRC check pins one exact L1 definition, five L1 theorem rows, their fourteen dependency edges and shared two-architecture public probe bundle. It requires the determinant/comparator census, external pure-qubit reencoding, coefficient nonselection, origin nonselection and corrected field boundary while preserving BELL-CAUSAL-ACCOUNTING, both QDD obligations, the decoder obligation, the existing Bell and pure-qubit theorems, both silver rows and TWO-PLACE-PHYSICS at their prior statuses. It forbids a physical DQRC row and leaves P-DQRC-FINITE-DEFICIT-1 unauthorized. The permanent QDD direct-write firewall remains the final check.
 
