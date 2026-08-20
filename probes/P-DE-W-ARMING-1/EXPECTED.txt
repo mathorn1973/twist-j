@@ -1,0 +1,27 @@
+P-DE-W-ARMING-1 verify
+target: w = -14/15 exact, constant; carrier: CMB-S4, DES, DESI, Euclid
+G1 register identities: -14/15 = -1 + 1/(d p), d=3, p=5; density exponent -3(1+w) = -1/5 PASS
+G2 rule constants: R1 |z| >= 322/125, R2 >= 5 single or >= 3 twice disjoint, R3 band [2, 322/125) PASS
+G3 record integrity: 6 entries, all in carrier, all exact PASS
+record:
+  [S1] DESI DR2 w0waCDM BAO+CMB HEADLINE pref = 31/10 sigma, primary = {CMB, DESI-BAO}
+  [S1] DESI DR2 w0waCDM BAO+CMB+PantheonPlus pref = 14/5 sigma, primary = {CMB, DESI-BAO, PantheonPlus}
+  [S1] DESI DR2 w0waCDM BAO+CMB+Union3 pref = 19/5 sigma, primary = {CMB, DESI-BAO, Union3}
+  [S1] DESI DR2 w0waCDM BAO+CMB+DESY5 pref = 21/5 sigma, primary = {CMB, DES-SN, DESI-BAO}
+  [S2] DES Y6 w0waCDM DES-alone pref = 11/5 sigma, primary = {DES-Y6}
+  [S2] DES Y6 w0waCDM DES+DESI-BAO+CMB HEADLINE pref = 3 sigma, primary = {CMB, DES-Y6, DESI-BAO}
+G4 R1 constant-w exclusion: no in-carrier collaboration wCDM summary on this record; R1 PENDING, fires nothing here PASS
+  headline maximum DES: 3 sigma
+  headline maximum DESI: 31/10 sigma
+G5 R2 single leg: every headline preference below 5 sigma, no fire PASS
+G6 R2 double leg with the disjointness clause: 4 strong entries, 0 qualifying disjoint cross-collaboration pairs, no fire PASS
+G7 counterfactual: clause removed, DESI and DES cross pairs at >= 3 sigma exist (3), so the double leg WOULD fire on shared data; the clause is decision-bearing today PASS
+G8 disjoint candidate: DES-alone at 11/5 sigma is below 3; no independent-evidence pair exists on this record PASS
+G9 knife edge: DES headline preference minus 3 equals 0 exactly; >= semantics frozen PASS
+  witness: DES Y6 DES+DESI-BAO+CMB (3 sigma)
+  witness: DESI DR2 BAO+CMB (31/10 sigma)
+  witness: DESI DR2 BAO+CMB+DESY5 (21/5 sigma)
+  witness: DESI DR2 BAO+CMB+Union3 (19/5 sigma)
+G10 witness census: 4 recorded witnesses at or above 3 sigma, all below every firing bar or blocked by the clause PASS
+DECISION: DE-W-CONSTANT ARMED, HOLDS (fires nothing on this record)
+RESULT 10/10 ALL PASS
