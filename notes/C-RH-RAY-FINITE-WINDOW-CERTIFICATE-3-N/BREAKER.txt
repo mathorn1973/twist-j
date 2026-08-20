@@ -1,0 +1,11 @@
+BREAK B1 exact symmetry carrier PASS
+BREAK B2 exact Cauchy geometry PASS q_W=3/5
+BREAK B3 nonvacuous tail transition PASS r=14 N=17
+BREAK B4 invariant split and negative coefficient form PASS
+BREAK B5 derivative sign and factorial route PASS
+BREAK B6 ordinary Cauchy norm comparison PASS
+BREAK B7 uniform majorant PASS r_bound=19
+BREAK B8 noninvariant support cross term PASS
+BREAK B9 tau-fixed and nontrivial-orbit controls PASS
+BREAK B10 q_W>=1 rejection control PASS
+BREAKER FINDINGS 0/10
