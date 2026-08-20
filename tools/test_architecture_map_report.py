@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 279)
+        self.assertEqual(self.report.claims, 280)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 30, "D": 43, "F": 15, "H": 2, "O": 24, "T": 165},
+            {"C": 30, "D": 43, "F": 15, "H": 3, "O": 24, "T": 165},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,15 +35,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 42,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 197,
+                "two-architecture": 198,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 176)
+        self.assertEqual(len(self.report.direct_architecture_requires), 177)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 214
+            len(self.report.transitive_architecture_dependents), 215
         )
         self.assertEqual(len(self.report.dependency_terminals), 45)
         self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
@@ -58,6 +58,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertIn(
             "DEF-DQRC-INTEGER-CENSUS", self.report.dependency_terminals
         )
+        self.assertIn(
+            "DE-W-CONSTANT", self.report.direct_architecture_requires
+        )
+        self.assertNotIn("DE-W-CONSTANT", self.report.dependency_terminals)
         for claim in (
             "SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION",
             "SPLIT-RAPIDITY-FEJER-GRAM-BOUND",
