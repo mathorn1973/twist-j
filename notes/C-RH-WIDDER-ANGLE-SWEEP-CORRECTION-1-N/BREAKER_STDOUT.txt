@@ -1,0 +1,12 @@
+C-RH-WIDDER-ANGLE-SWEEP-CORRECTION-1-N independent breaker
+B1 arbitrary-level endpoint criterion is false PASS: endpoint=16 pair_sign=negative
+B2 resonance rejects ceil and gives first failure 3 PASS
+B3 owner depths remain 2 and 32 PASS
+B4 no sampled negativity below first negative power PASS
+B5 corrected integer criterion survives sampled attack PASS: later-level endpoint counterexamples=237
+B6 finite-prefix family N=1..64 PASS: exact sampled levels=2080
+B7 termwise adjacent-level implication is false PASS
+B8 W2 strip controls are strictly positive PASS
+B9 safe-depth ratio B/A<1/H PASS
+B10 conjugate-pair bookkeeping PASS
+BREAKER FINDINGS 0/10
