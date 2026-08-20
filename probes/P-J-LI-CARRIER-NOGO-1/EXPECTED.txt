@@ -1,0 +1,20 @@
+P-J-LI-CARRIER-NOGO-1 verify
+KC1 field sanity: zeta^5 = -1, zeta^10 = 1, sum_(k<10) zeta^k = 0, sqrt5^2 = 5, and mu_10 in Z[zeta_5]: -(zeta_10^2)^3 = zeta_10 PASS
+KC2 exemplar A: S_(n+10) = S_n and q_(n+10) = q_n exactly for n <= 30; the ladder is 10-periodic hence bounded, and a* = 0 (the single eigenvalue zeta_10 differs from 1) PASS
+  exemplar A period of q_n, written p + q sqrt5:
+    q_0 = 0 + (0) sqrt5
+    q_1 = 1 + (0) sqrt5
+    q_2 = 5/2 + (1/2) sqrt5
+    q_3 = 7/2 + (3/2) sqrt5
+    q_4 = 5 + (2) sqrt5
+    q_5 = 6 + (2) sqrt5
+    q_6 = 5 + (2) sqrt5
+    q_7 = 7/2 + (3/2) sqrt5
+    q_8 = 5/2 + (1/2) sqrt5
+    q_9 = 1 + (0) sqrt5
+KC3 exemplar B: q_n = n^2 exactly for n <= 40 (a* = 1) PASS
+KC4 exemplar C: R_n = q_n - n^2 obeys 0 <= R_n <= C exactly with C = 6 + (2) sqrt5 over the period PASS
+KC5 dichotomy instances on the exemplars: bounded against a* n^2 + O(1); no exemplar is both unbounded and o(n^2) PASS
+KC6 Ramanujan c_10(n) exact for n <= 10: c_10(0) = phi(10) = 4, c_10(5) = -4, alternating unit values off the divisors PASS
+DECISION: finite mechanism audits pass; the carrier exclusion is carried by the written proof with imports labeled
+RESULT 6/6 ALL PASS
