@@ -52,6 +52,7 @@ Directories are created only when they receive real content.
 canon/       current Canon, core, frontier, registry, changelog
 probes/      one permanent directory per named public probe
 reproduce/   minimal independent reproductions that earn their place
+audits/      supplemental public audits with no claim-status effect
 data/        small exact inputs, fixtures, derived tables, manifests
 notes/       explicitly non-canonical exploration
 tools/       repository and Canon checks
@@ -119,6 +120,117 @@ reproduce/NAME/
 It uses the Python standard library, exits zero, writes no stderr, and must
 match `EXPECTED.txt` byte for byte in every required architecture job.
 
+### Supplemental Lean audits
+
+Lean 4 formalizations may be admitted for selected, already closed `T` or
+`T-LOCK` claims as a **supplemental public audit layer**. They are not primary
+claim evidence. They live under `audits/lean/` and are catalogued separately
+in `audits/INDEX.tsv`; `canon/REGISTRY.tsv`, `canon/EVIDENCE.tsv`, and
+`canon/HISTORY.tsv` continue to name exactly the primary evidence that earned
+the public status.
+
+A Lean audit checks that the pinned Lean kernel accepts a stated translation
+of some or all of one theorem claim at one immutable Public Canon release.
+Human review remains responsible for the translation between Canon prose and
+Lean definitions. Consequently a Lean audit:
+
+- creates no claim and changes no status, scope, layer, gate, STOP condition,
+  falsifier, or primary evidence;
+- never promotes a claim to `T` or `T-LOCK`, never counts as an independent
+  acceptance for `T-LOCK`, and never closes a falsifier;
+- records `EXACT` only when the reviewed translation covers the complete
+  registered scope; otherwise it records `PARTIAL` and names every exclusion;
+- pins the real Canon tag, content commit, theorem status, and exact registry
+  scope that were audited, so a later Canon revision neither invalidates nor
+  silently retargets the historical audit; and
+- enters the public index only as `RECORDED_PASS` under the frozen
+  `LEAN4-RECORDED-V1` profile. An unsuccessful build or rejected translation
+  is not public evidence and has no claim effect.
+
+Each indexed package has the stable layout:
+
+```text
+audits/lean/A-LEAN-NAME/
+    README.md
+    COVERAGE.tsv
+    DEPENDENCIES.tsv
+    AXIOMS.tsv
+    EXPECTED.txt
+    RUN.md
+    RESULT.md
+    Audit.lean
+    lean-toolchain
+    lakefile.toml
+    lake-manifest.json
+    MATHLIB-MANIFEST.json
+```
+
+Before the first recorded build, commit and push the immutable source inputs:
+the scope map, dependency and licence manifest, exact Lean toolchain, Lake
+files, committed dependency lock, byte-exact Mathlib upstream-manifest
+snapshot, its pinned public GitHub provenance, and `Audit.lean`. From a fresh
+isolated clone, first confirm absent `.lake` state, materialize only the pinned
+dependencies, verify every dependency checkout revision and clean tree, and
+then disable network access. With no secrets present, the formal command is
+exactly `lake env lean Audit.lean`, run with the audit package as its working
+directory; never `lake update`. Only after exit zero, empty stderr, and
+captured exact stdout may the author add `AXIOMS.tsv`, `EXPECTED.txt`,
+`RUN.md`, `RESULT.md`, and the index row. Architecture is neutral audit
+metadata, not the two-architecture computation gate.
+
+Claim one `A-LEAN-*` identifier in a public issue before creating
+`audit/lean/A-LEAN-NAME`. One audit pull request changes at most one package
+plus its index row and changes no Canon, registry, primary-evidence, history,
+frontier, status, policy, or unrelated file. The pull-request branch has
+exactly two non-merge commits: a pre-run source commit and its direct child
+record commit. The source commit's parent is the branch base and must remain
+an ancestor of the current pull-request base; an unrelated advance of `main`
+therefore does not invalidate the pin. Its Git tree is the source pin; the
+checker recomputes the source digest from that exact commit and requires the
+current source bytes to match it. Existing audit rows and packages are
+immutable. A correction or new translation receives a new audit identifier.
+A later semantic defect is recorded append-only in
+`audits/EVENTS.tsv` as `WITHDRAWN` or `SUPERSEDED`, with a public reason and no
+claim-status effect. A supersession names an unqualified replacement audit of
+the same claim and pinned scope with no weaker coverage. The checker prevents
+an `EXACT` to `PARTIAL` downgrade; human review decides whether one `PARTIAL`
+translation is semantically no weaker than another. The replacement must be
+unqualified at that event; a later append-only event may withdraw or supersede
+it without rewriting history. Explicit event sequence, non-future dates, and
+acyclic supersession preserve the temporal record.
+One qualification pull request carries exactly one non-merge commit changing
+only `audits/EVENTS.tsv`.
+
+The first public trust profile requires a stable numeric Lean version, full
+commit revisions for every Lake dependency, public GitHub dependency sources
+and approved SPDX licences, one exact TOML Lake profile with official Mathlib
+as its only direct dependency, the committed Lake manifest schema `1.2.0` with
+full resolved revisions and no path or subdirectory source, and an inherited
+closure byte-identical to the recorded Mathlib manifest snapshot except for
+Lake's `inherited` bit. It also requires one `Audit.lean` entrypoint, a
+package-local theorem declaration for every mapped name, and a
+committed `#print axioms` command and normalized axiom record for every
+declaration. Every Lean source sets `set_option autoImplicit false`. The
+profile forbids `sorry`, `admit`, `sorryAx`, package-local axioms or
+constants, private, opaque, partial, unsafe, external or natively implemented
+declarations, custom syntax, attributes, macros, elaborators, syntax
+quotations, run/output commands other than top-level exact `#print axioms`,
+path dependencies, custom executables or code generation, tracked build
+products, caches, binaries, and logs. Accepted kernel axioms are
+limited to `Classical.choice`, `Quot.sound`, and `propext` and are stated in
+the package README.
+
+Repository CI validates only the audit catalogue, status firewall, scope and
+source and record hashes, real Git and Canon pins, dependency pins, forbidden
+constructs, immutable changed-path rules, and recorded metadata. It does not
+install or execute Lean, fetch the upstream snapshot, or establish kernel
+acceptance. Before merge, a reviewer other than the author must compare that
+snapshot byte for byte with `lake-manifest.json` at the pinned Mathlib commit,
+publicly replay the command from a separate fresh networkless/no-secrets
+environment, and accept the prose-to-Lean translation. Thus the audit layer is
+public and integrity-checked without becoming the primary Canon pipeline or a
+required scientific gate for unrelated work.
+
 Before cutover, a reconciliation audit maps every public claim to an internal
 claim of equal or stronger status and scope. The audit forbids promotion by
 rewriting. It is review material, not part of the normative Canon, and may be
@@ -147,7 +259,9 @@ For new public probes:
   gate rests on byte identity against the one committed `EXPECTED.txt`, which
   any reader can recheck, not on the platform declaration, which is audit
   metadata. Same-architecture agreement is reproduction, not a gate.
-- An independent proof may earn `T`; its verifier is then an audit.
+- An independent proof may earn `T`; its verifier is then a primary theorem
+  audit. The supplemental Lean profile above is explicitly not that promotion
+  evidence.
 - A one-architecture finite result is at most `C` unless its proof is
   independently theorem-grade.
 - A post-cutover pull request changes at most one probe directory. The initial

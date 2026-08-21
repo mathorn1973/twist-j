@@ -9,6 +9,9 @@
 __pycache__/
 .venv/
 venv/
+.lake/
+*.ilean
+*.olean
 build/
 dist/
 tmp/

@@ -348,8 +348,10 @@ At the start of every session:
    `canon/FRONTIER.md`.
 3. Confirm the declared public tag and commit are ancestors of `main`, the
    Canon hash matches, and required checks are green.
-4. Search open issues, branches, `probes/`, and the registry for collisions.
-5. Claim exactly one named probe in a public issue before committing.
+4. Search open issues, branches, `probes/`, `audits/INDEX.tsv`, and the registry
+   for collisions.
+5. Claim exactly one named probe or supplemental-audit identifier in a public
+   issue before committing that formal work.
 
 Agents with access to the internal archive may read it only for audit. Missing
 material is never copied opportunistically into a public probe. A justified
@@ -387,6 +389,20 @@ review.
    naming the content commit. The pull-request head must pass the active
    release gate. Merge without squash or rebase, tag the merge only after
    public readback, and publish assets only after tag readback passes.
+
+### Supplemental Lean audit lane
+
+A supplemental Lean audit is neither a formal probe nor a `NON-CANONICAL`
+incubation note. Follow the status-neutral contract in `POLICY.md` and the
+record format in `audits/README.md`. Use one public issue claim, branch
+`audit/lean/A-LEAN-NAME`, one immutable non-merge pre-run source commit, and
+one direct non-merge record commit. The pull request changes only that package
+and `audits/INDEX.tsv`; it never changes Canon, registry, primary evidence,
+history, frontier, status, policy, or a claim grade. Repository CI validates
+metadata and Git pins but does not run Lean or fetch upstream provenance. An
+independent reviewer must verify the Mathlib snapshot and replay from a fresh
+networkless/no-secrets environment before merge. A source correction receives
+a new audit ID; never amend or force-push a source pin.
 
 Notes and incomplete proposals live under `notes/`, carry `NON-CANONICAL`,
 need no verifier, and never edit `canon/CANON.md`. Canon patch proposals live

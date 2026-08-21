@@ -5,6 +5,8 @@ from pathlib import Path
 import re
 import subprocess
 
+from check_audits import AuditError, validate as validate_audits
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MAX_BYTES = 5 * 1024 * 1024
@@ -12,11 +14,12 @@ MAX_BYTES = 5 * 1024 * 1024
 ALLOWED_ROOT = {
     ".gitattributes", ".github", ".gitignore", "AGENTS.md", "CITATION.cff",
     "CLAUDE.md", "LICENSE", "POLICY.md", "README.md", "STATUS.md", "canon",
-    "data", "legacy", "notes", "probes", "reproduce", "tools",
+    "audits", "data", "legacy", "notes", "probes", "reproduce", "tools",
 }
 FORBIDDEN_SUFFIXES = {
     ".bak", ".bin", ".dll", ".dylib", ".env", ".exe", ".jam", ".key",
-    ".log", ".pem", ".pt", ".pth", ".pyc", ".so", ".token",
+    ".ilean", ".log", ".olean", ".pem", ".pt", ".pth", ".pyc", ".so",
+    ".token",
 }
 BASE_STATUS_FIELDS = {"STATE", "CANON", "AUTHORITY", "CUTOVER"}
 ACTIVE_STATUS_FIELDS = {
@@ -64,6 +67,13 @@ for path in tracked_files():
         fail(f"file exceeds 5 MiB: {relative}")
     if path.suffix.lower() in FORBIDDEN_SUFFIXES or path.name.startswith(".env"):
         fail(f"forbidden file: {relative}")
+    if ".lake" in relative.parts:
+        fail(f"forbidden Lean build state: {relative}")
+
+try:
+    validate_audits(ROOT)
+except AuditError as error:
+    fail(str(error))
 
 status = read_status()
 missing_status = sorted(BASE_STATUS_FIELDS - status.keys())
@@ -157,5 +167,14 @@ if publication_at < 0 or upload_at < publication_at:
     fail("activation artifact upload must live only in the publication job")
 if "pull_request_target:" in workflow:
     fail("pull_request_target is forbidden")
+workflow_lower = workflow.lower()
+for forbidden in (
+    "lean-action", "lake build", "lake update", "lake env lean", "elan",
+    "setup-lean",
+):
+    if forbidden in workflow_lower:
+        fail(f"workflow must not execute supplemental Lean audits: {forbidden}")
+if re.search(r"(?m)(?:^|[\s;&|])lean(?:4)?(?:\s|$)", workflow_lower):
+    fail("workflow must not execute supplemental Lean audits: direct Lean command")
 
 print("POLICY PASS")
