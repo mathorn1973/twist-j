@@ -501,3 +501,22 @@ J-TORAL-PERIODIC-POINTS	J-TORAL-ENTROPY	REQUIRES	the fixed-point identity and it
 J-TORAL-PERIODIC-POINTS	ENTROPY-LAYER-BRIDGE	BOUNDED_BY	counting periodic points is not a rate statement; no entropy or measure claim is created and the open obligation keeps its exact scope
 METRO-FORBIDDEN-WITNESSES	METRO-REDUCTION-ARROWS	REQUIRES	the four admitted arrows and their exact preconditions are registered there and are used only as the control that exhibits zero obstructions
 METRO-FORBIDDEN-WITNESSES	METRO-REDUCTION-CALCULUS	BOUNDED_BY	the row serves obligation B only, for the five entries section 15 names; obligations D and E are untouched and the parent stays open and STOP
+TRACEKERNEL-RESIDUAL-FORM	DEF-ACTION-LAYERS	REQUIRES	the theorem is confined to exact L1 algebra and creates no lift to the manifold, boundary, support, stream or measure layers
+TRACEKERNEL-RESIDUAL-FORM	QDD-PROJECTOR-PAIR-TR4	BOUNDED_BY	at p=5 the rational matrix formula agrees with DEF-QDD-GRAM, but W_5 is the mod-5 radical and residual carrier whereas the registered projector pair acts on Q^4; no projector, weight, apparatus or decoder transport follows
+TRACEKERNEL-HOME-DIMENSION	TRACEKERNEL-RESIDUAL-FORM	REQUIRES	the dimension equation uses dim W_p=p-2 from the universal trace-kernel theorem
+TRACEKERNEL-HOME-DIMENSION	DEF-EXACT-HODGE-HOME-CLOSURE	REQUIRES	the theorem assumes the named two-stage predicate and proves only its dimension consequence; whether the architecture forces it is a separate obligation
+TRACEKERNEL-HOME-DIMENSION	KERNEL-WEDGE-COUPLING	BOUNDED_BY	the registered wedge coupling acts on a different two-cell carrier and supplies no home map Lambda^2 W_p->W_p
+DEF-EXACT-HODGE-HOME-CLOSURE	TRACEKERNEL-RESIDUAL-FORM	REQUIRES	the predicate is typed on the registered prime-family carrier W_p and residual metric g_p
+TRACEKERNEL-F5-HODGE-BRACKET	TRACEKERNEL-RESIDUAL-FORM	REQUIRES	the explicit p=5 metric and bracket use the registered nondegenerate residual form on W_5
+TRACEKERNEL-F5-HODGE-BRACKET	TRACEKERNEL-HOME-DIMENSION	REQUIRES	the conditional dimension theorem isolates p=5 as the unique nonzero branch before the three-form is used
+TRACEKERNEL-F5-HODGE-BRACKET	DEF-EXACT-HODGE-HOME-CLOSURE	REQUIRES	the Lie-algebra and grading theorem assumes the named metric-volume predicate and does not claim that the public architecture forces it
+TRACEKERNEL-F5-HODGE-BRACKET	COLOR-SPLIT-12	BOUNDED_BY	the exact Phi bracket grading follows the existing 1+2 dictionary split but does not promote or widen that D row
+TRACEKERNEL-F5-HODGE-BRACKET	QPAIR-SYM2-2I-IRREDUCIBLE	BOUNDED_BY	the registered symmetric-square module has no named intertwiner with W_5 and cannot be identified by equal dimension
+TRACEKERNEL-F5-HODGE-BRACKET	COLOR-LADDER-DICTIONARY	BOUNDED_BY	the sl_2(F_5) bracket on the finite carrier W_5 is not the dictionary's color su(3) on End_0(W_5); no color assignment, QCD dynamics or physical bridge is created
+TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY	TRACEKERNEL-F5-HODGE-BRACKET	REQUIRES	the automorphism and block-action boundary is computed for the explicit registered h,e,f bracket
+TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY	COLOR-KINEMATICAL-GL2	BOUNDED_BY	the 8-of-480 comparison is relative to the faithful public block-action dictionary and does not promote it or require full equivariance
+TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY	COLOR-CORE-2I	BOUNDED_BY	the Lie algebra sl_2(F_5), its automorphism group PGL_2(F_5), and the group SL_2(F_5)=2I are distinct objects; equal orders create no bridge
+TRACEKERNEL-CURVATURE-FORCING	DEF-ARCHITECTURE	REQUIRES	the obligation asks what the declared public architecture forces and makes no derivation from J alone
+TRACEKERNEL-CURVATURE-FORCING	DEF-EXACT-HODGE-HOME-CLOSURE	REQUIRES	the obligation classifies whether every fully admissible realization satisfies the exact named two-stage predicate
+TRACEKERNEL-CURVATURE-FORCING	TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY	REQUIRES	the full-equivariance negative route uses the exact registered eight-of-480 block-action boundary
+TRACEKERNEL-CURVATURE-FORCING	CURVATURE-OPERATOR-CANONICAL	REQUIRES	the forcing classification cannot advance until the upstream obligation publishes the carrier and complete admissible L2 operator or commutator class; UNIQUE versus NONUNIQUE does not itself decide the common Hodge-home property

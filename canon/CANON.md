@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v57
+# TWIST-J Public Canon v58
 
-**Release identity.** Public Canon v57. Normative authority and activation
+**Release identity.** Public Canon v58. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v57 also declares the discrete
+algebraic axiom is J. Public Canon v58 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v57 does not claim
+seed of the two algebraic projections. Public Canon v58 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v57 contains no such
+deriving the architecture from J; Public Canon v58 contains no such
 theorem.
 
 ---
@@ -402,6 +402,54 @@ asks whether the public architecture determines exactly one equivalence
 class after the carrier, measure, projection group, and ambient versus
 intrinsic commutator choice are fixed publicly. No golden spectrum or
 continuum-curvature reading is asserted.
+
+The trace-kernel route isolates a sharper L1 closure question.
+
+### DEF-EXACT-HODGE-HOME-CLOSURE
+
+For a prime `p` and the trace-kernel metric carrier `(W_p,g_p)` defined in
+section 3, DEF-EXACT-HODGE-HOME-CLOSURE is the following two-stage predicate:
+
+1. the complete alternating spatial-commutator data return bijectively to
+   precisely the same carrier by `beta:Lambda^2 W_p -> W_p`, with no
+   projection, quotient, proper subspace, auxiliary carrier, remainder, or
+   unnamed change of degree;
+2. if `dim W_p=3`, there exists a nonzero `omega in Lambda^3 W_p^*` such
+   that the home map is metric-volume:
+   `g_p(beta(x wedge y),z)=omega(x,y,z)` for all `x,y,z in W_p`.
+
+For `W_2=0`, the predicate uses only the unique empty bijection `0 -> 0`; it
+asserts no nonzero volume form or nonzero bracket. The first stage alone does
+not imply the second, does not imply Jacobi, and does not identify a spatial
+commutator.
+
+TRACEKERNEL-CURVATURE-FORCING [O], evidenced by
+`probes/P-TRACEKERNEL-EXTERIOR-CLOSURE-1`, asks whether the complete public
+architecture forces DEF-EXACT-HODGE-HOME-CLOSURE through its complete
+admissible L2 spatial-commutator/operator class. It closes positively only
+when that class is public, complete, nonempty, and every fully admissible
+realization satisfies both stages. It closes negatively when a complete
+nonempty class contains even one fully admissible realization that violates
+any clause; a mixed Hodge/non-Hodge class is therefore negative. A proved
+requirement of full faithful equivariance of the same bracket under the frozen
+480-element block action supplies an exact negative route only within a proved
+complete nonempty admissible class. If that requirement leaves the complete
+class empty, the result is `EMPTY`, not negative. The obligation also closes
+`EMPTY` whenever the complete admissible class is empty. It remains `STOP`
+while the carrier, measure, projection group, ambient-versus-intrinsic
+commutator choice,
+admissible class, equivalence, completeness, or layer bridge is unfixed or
+inexact.
+
+This forcing obligation neither closes nor duplicates
+CURVATURE-OPERATOR-CANONICAL [O], which asks for uniqueness of the operator
+class rather than for a common Hodge-home property of every admissible class.
+Its named
+GATE-L2-L1-TRACEKERNEL-HODGE-HOME records the still-open selection from the
+complete admissible L2 spatial-commutator class back to the exact L1
+trace-kernel property. It cannot advance until the upstream carrier and
+complete class tracked by CURVATURE-OPERATOR-CANONICAL are public; the gate
+adds no carrier identification and selects no curvature operator.
 
 The decoder is a typed partial interface, not a completed total map.
 Let K be the set of forward U-orbits. Let MatterData, GeometryData,
@@ -1506,6 +1554,84 @@ F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
 attractors. The finite kernel is the declared checkpoint architecture
 paired with the algebraic verb. No derivation or uniqueness of this
 architecture from J or M_J is claimed.
+
+### TRACEKERNEL-RESIDUAL-FORM [T]
+
+Let `p` be any prime, let `zeta_p` be a primitive `p`-th root, put
+`n=p-1`, and write `J_n=11^T`. Summing over all nontrivial Galois
+conjugates gives the exact trace Gram
+
+```text
+G_p = p I_n - J_n.
+```
+
+On the all-ones line its eigenvalue is one and on the rational trace-zero
+hyperplane its eigenvalue is `p`; hence `G_p/p` has normalized spectrum
+`1/p` once and `1` with multiplicity `p-2`. Modulo `p`,
+
+```text
+W_p := rad(G_p mod p)
+     = ker(sum:F_p^(p-1) -> F_p),
+dim W_p = p - 2.
+```
+
+For `xbar,ybar in W_p`, choose integer lifts `x,y` and define
+
+```text
+g_p(xbar,ybar) = (x^T G_p y)/p mod p.
+```
+
+If the coordinate sums of the lifts are `pr` and `ps`, then the divided
+integer is `x.y - p*r*s`, so the residue is the restricted dot product and is
+independent of both lifts. Since
+
+```text
+W_p^perp = <1>,
+sum(1) = p - 1 = -1 mod p,
+W_p intersect W_p^perp = 0,
+```
+
+the residual form is nondegenerate for every prime, including the
+zero-dimensional case `p=2`. This is an unconditional L1 theorem. The
+finite verifier sweep through `p=23` audits the symbolic proof and is not the
+source of its universal quantifier.
+
+At `p=5`, the rational matrix formula `G_5/5=I_4-(1/5)11^T` agrees with
+DEF-QDD-GRAM, but the types do not. Independently,
+`W_5=rad(G_5 mod 5)`, and `g_5` is obtained by the divided-on-lifts
+construction before reduction; QDD-PROJECTOR-PAIR-TR4 instead acts on rational
+`Q^4` and its high space is `ker Tr_4` there. No projector, weight, apparatus,
+or decoder transport follows from the shared formula.
+
+### TRACEKERNEL-HOME-DIMENSION [T]
+
+If exact home closure supplies a bijection
+`Lambda^2 W_p -> W_p`, then, with `m=dim W_p=p-2`,
+
+```text
+m(m - 1)/2 = m,
+m(m - 3) = 0.
+```
+
+Thus `p=2` or `p=5`. The `p=2` carrier is the empty `W_2=0`, not the
+unrelated nonzero `F_2^4` object, and `p=5` is the unique nonzero branch.
+This proves the implication from DEF-EXACT-HODGE-HOME-CLOSURE; it does not
+supply or force that premise. Nor can the public two-dimensional minus
+plane close by itself, because `dim Lambda^2 W_-=1`, not two.
+
+An unnamed bijection is also too weak. On a basis `u1,u2,u3`, the alternating
+product
+
+```text
+[u2,u3]=u1,
+[u3,u1]=u1+u2,
+[u1,u2]=u3
+```
+
+has wedge matrix `[[1,1,0],[0,1,0],[0,0,1]]` of determinant one but Jacobi
+sum `-u3`. This exact characteristic-independent control, supplied by
+external review, proves why the metric-volume second stage is substantive.
+No random-product census is used as theorem evidence.
 
 ### FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT [T]
 
@@ -3010,7 +3136,13 @@ Galois-trace Gram G = p I - 1 1^T with normalized spectrum {1/p
 (once), 1 (p - 2 times)}, the all ones trace direction the
 eigenvector; exact for p in {3, 5, 7, 11, 13}. Scope: alpha* = 1/p is
 the dimensionless seed; the physical alpha^-1 lives at the bridge
-level. Prefactor unification (ALPHA-PREFACTOR-UNIFICATION) [T]: with
+level.
+
+TRACEKERNEL-RESIDUAL-FORM [T] is a separate every-prime theorem about the
+full Gram, its mod-`p` radical, and the divided residual form. It does not
+widen the registered finite-prime scope or physical reading of ALPHA-SEED.
+
+Prefactor unification (ALPHA-PREFACTOR-UNIFICATION) [T]: with
 B_{2,chi5} = 4/5 exactly, the Gauss sum tau = 2 phi - 1 = sqrt5
 exactly in Z[zeta_5], and L(2, chi5) = 4 pi^2 / (25 sqrt5), the
 witness formula and the formula above are one formula; no independent
@@ -5143,6 +5275,100 @@ normalizer has 40 x 480 = 19200 elements and every one permutes the
 image is read as GL_2(F_5), order 480, on the antisymmetric plane,
 embedded by g -> (det g)^-1 direct-sum g along 3 = 1 + 2.
 
+### TRACEKERNEL-F5-HODGE-BRACKET [T]
+
+Conditional on DEF-EXACT-HODGE-HOME-CLOSURE, the unique nonzero branch is
+`W_5`. In the difference basis
+
+```text
+b1=(1,-1,0,0),
+b2=(0,1,-1,0),
+b3=(0,0,1,-1),
+```
+
+its residual Gram and inverse are
+
+```text
+B    = [[2,4,0],[4,2,4],[0,4,2]],  det B=4,
+B^-1 = [[2,3,4],[3,1,3],[4,3,2]].
+```
+
+For the volume normalized by `omega(b1,b2,b3)=1`, the metric-volume bracket
+is `beta(x,y)=B^-1(x cross y)`. The basis
+
+```text
+h=(1,0,1),  e=(1,4,3),  f=(3,4,1)
+```
+
+has determinant four and satisfies
+
+```text
+[h,e]=2e,  [h,f]=-2f,  [e,f]=h.
+```
+
+It therefore identifies the bracket exactly with `sl_2(F_5)`; matrix
+commutators supply the written Jacobi proof. Replacing `omega` by
+`c omega`, `c!=0`, multiplies the bracket by `c`, and `x -> c^-1 x` is the
+frozen directed isomorphism, so the isomorphism class is volume-scale
+independent.
+
+The public involution `Phi:(x0,x1,x2,x3)->(x2,x3,x0,x1)` preserves the
+sum, residual metric, volume, and bracket. Its eigenspaces are
+
+```text
+W_+ = <(1,-1,1,-1)>,                   dim 1,
+W_- = {(u,v,-u,-v):u,v in F_5},        dim 2,
+[W_+,W_+]=0,  [W_+,W_-]=W_-,  [W_-,W_-]=W_+,
+```
+
+where both nonzero displayed images are onto. This is a bracket grading
+along the existing dictionary split. It neither proves the closure premise
+nor promotes COLOR-SPLIT-12 [D].
+
+This finite `sl_2(F_5)` bracket on `W_5` is not the
+COLOR-LADDER-DICTIONARY reading of color `su(3)` on `End_0(W_5)`. No color
+assignment, QCD dynamics, or physical bridge is created.
+
+### TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY [T]
+
+For the explicit `h,e,f` bracket, the Killing form is twice the residual
+form and is nondegenerate. Every automorphism preserves it and has determinant
+one. Conjugation embeds `PGL_2(F_5)` into the automorphism group; the exact
+isotropic-vector and stabilizer count supplies the matching upper bound:
+
+```text
+Aut(sl_2(F_5)) = SO_3(F_5) = PGL_2(F_5),
+|Aut| = 120.
+```
+
+Against the faithful public block action on `W_+ direct-sum W_-`,
+
+```text
+rho_A(h)=(det A)^-1 h,  rho_A|(W_-)=A,
+```
+
+bracket preservation leaves exactly eight of the 480 matrices: four
+diagonal matrices of determinant one and four antidiagonal matrices of
+determinant minus one. Together they form an exact dihedral subgroup of order
+eight. The scalar `A=2I_2` is an immediate exact mismatch, scaling `h` by four
+and the plane by two.
+
+This boundary gives exact local input to TRACEKERNEL-CURVATURE-FORCING [O].
+The probe's full-equivariance falsifier F2 is armed but does not fire at v58:
+no public dependency requires the same spatial commutator to be equivariant
+under the entire faithful 480-element group. If a future proved complete
+nonempty admissible class does require it, that routes the forcing obligation
+negatively; if no admissible realization survives, the route is `EMPTY`. It
+does not falsify this finite theorem. Replacing that action by
+`(det A)^-1 Sym^2(A)` would require a new named bridge. The Lie algebra
+`sl_2(F_5)` is not the group
+`SL_2(F_5)=2I`; the adjoint action of the latter has kernel `{+-I}` and image
+`PSL_2(F_5)=A5`, not all of `PGL_2(F_5)`. The three-dimensional
+QPAIR-SYM2-2I-IRREDUCIBLE module has no registered intertwiner with `W_5`,
+and KERNEL-WEDGE-COUPLING uses a different carrier. Dimension or order
+coincidence supplies no bridge, no spinor, no integral lift, and no physical
+or higher-layer reading.
+
 Rung 4 (COLOR-CORE-2I [T], reproduce/color-ladder): the special-linear
 core has order 120, is perfect, has center {I, -I}, and has class
 sizes (1, 1, 12, 12, 12, 12, 20, 20, 30), hence is
@@ -6135,9 +6361,12 @@ calculus, nor the higher-rank child.
 The retained public root selector is exact: for a positive prime p,
 (p - 2)/(p + 1) = 1/2 if and only if p = 5
 (P5-ROOT-SELECTION [T], reproduce/pentit-p5-closure), since clearing
-the positive denominator gives p - 5 = 0. No further coincidences are
-claimed as independent support for selecting p = 5. The two
-logarithmic axes: pi on
+the positive denominator gives p - 5 = 0. No further unconditional selector
+or independent support for selecting p = 5 is claimed.
+TRACEKERNEL-HOME-DIMENSION [T] is instead a conditional classification under
+the unearned DEF-EXACT-HODGE-HOME-CLOSURE predicate; whether the architecture
+forces that predicate remains TRACEKERNEL-CURVATURE-FORCING [O], not another root
+selector. The two logarithmic axes: pi on
 the argument (c odd), ln phi on the modulus (c even,
 transcendental by Baker); linearly independent over the algebraic
 numbers (LOG-AXES-INDEPENDENCE [T]). No algebraic independence claim
