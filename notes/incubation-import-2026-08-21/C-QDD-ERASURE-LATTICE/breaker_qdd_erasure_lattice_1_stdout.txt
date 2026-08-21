@@ -1,0 +1,14 @@
+B1a-subgroup-census-of-S4 HOLDS found 30 subgroups (expected 30)
+B1b-containment-filter HOLDS orders over H_k: [4, 8, 24] (expected [4, 8, 24])
+B2a-full-commutant-dims HOLDS End(V) dims (4, 3, 2) (expected (4, 3, 2))
+B2b-moving-space-dims HOLDS Q_kV dims (3, 2, 1) (expected (3, 2, 1))
+B2c-C5-and-S5-commutants HOLDS dims (4, 1) (expected (4, 1))
+B3a-motor-annihilator-dim HOLDS solution dim 0 (expected 0)
+B3b-monomial-kill-attempt HOLDS
+B4a-circle-points-fail-Dk HOLDS
+B4b-normalizer-family-Dk-filter BREAK survivors 4 algebraic (expected 2: +Q, -Q)
+B4c-Dk-covariant-space-vs-four HOLDS avg image dim 2 (expected 2), four members inside
+B4d-S-covariant-space-dim-1-Qline HOLDS
+B5-second-token-ladder HOLDS token 4 dims (3, 2, 1) (expected (3, 2, 1))
+FINDINGS 1 of 10
+BROKEN: B4b-normalizer-family-Dk-filter
