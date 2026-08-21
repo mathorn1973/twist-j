@@ -18,7 +18,7 @@ exit_code: 0
 stdout_sha256: b654c73efcf84510d3d10f6e426ef5fbb122cad3ed57417165f8f2624e43c68c
 stdout_bytes: 1357
 stdout_lines: 19
-stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649c934ca495991b7852b855
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 stderr_bytes: 0
 ```
 
