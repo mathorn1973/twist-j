@@ -1,0 +1,27 @@
+PASS A1 authority
+PASS A2 Gram inverse
+PASS A3 J motor
+PASS A4 regular simplex
+PASS B1 five token projectors
+PASS B2 five rational phase reflections
+PASS B3 reflected branch exact effects
+PASS B4 reflected branch two-sided support
+PASS B5 reflected branches are sign-inequivalent
+PASS C1 two-phase exact effects
+PASS C2 two-phase ordinary repeatability
+PASS C3 two-phase ready isometry data
+PASS C4 two-phase post-state phase nonselection
+PASS D1 256-phase update is permutation
+PASS D2 256-phase exact effects
+PASS D3 256-phase ordinary repeatability
+PASS D4 256-phase law is not phase independent
+PASS E1 target comparison last
+CLASS finite_memory_pointwise=A_rep_fibres
+REALIZATION arbitrary_finite_phase_family=rational_ready_isometry
+PHASE two_and_256_phase_nonselection=YES
+ARCHITECTURE finite_memory_not_global_O2b_completion
+DECISION FINITE-MEMORY-FIBRE-BOUNDARY
+O2A UNTOUCHED
+O1 UNTOUCHED
+SAMPLING NOT PROVIDED
+RESULT 18/18 PASS
