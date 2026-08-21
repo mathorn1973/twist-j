@@ -1,0 +1,20 @@
+TWIST-J QDD deterministic event sampler probe
+Exact arithmetic on ell(F_5)^4; LOW=1, HIGH=0; lower mechanical word at zero phase
+
+PASS 01 CARRIER    pistons 625 = ZERO_SUPPORT 1 + SUPPORTED 624
+PASS 02 CHECKPOINT fiber lift gives ZERO_SUPPORT 25 and SUPPORTED 15600 checkpoints
+PASS 03 TABLE      exact LOW table has 22 values and piston multiplicity 624
+       table      0:84 1/256:24 1/176:48 1/136:32 1/96:24 1/56:48 1/46:36 1/26:48 9/224:24 1/16:56 9/104:24 2/17:24 9/64:24 5/32:8 1/6:24 2/7:24 5/16:24 3/8:16 5/8:8 9/14:12 49/64:8 1:4
+PASS 04 DENOMS     reduced denominators 1,6,7,8,14,16,17,26,32,46,56,64,96,104,136,176,224,256; maximum 256
+PASS 05 PREFIX     #LOW(0..N-1)=floor(N a/b) and discrepancy < 1 for every audited prefix
+PASS 06 PERIOD     interior words have least period b; endpoint words are constant
+PASS 07 BLOCKS     every cyclic block of length b contains exactly a LOW events
+PASS 08 PHASE      interior weights admit 1372 distinct cyclic phases in total
+PASS 09 MEMORY     p_low=1/256 occurs on 24 pistons; no cycle shorter than 256 realizes it; 10 < 256
+PASS 10 LOCAL      local invocation word is unchanged by arbitrary audited gaps in the global counter
+PASS 11 GLOBAL     LOW-position and HIGH-position subsequences break global-counter schedule invariance
+PASS 12 VARIABLE   carried accumulator gives floor(sum p_j) on all 22^3 ordered triples
+PASS 13 ORDER      same multiset {1/256,2/7,49/64} gives HHL versus HLH, residual 99/1792
+PASS 14 DECISION   MECHANICAL-SAMPLER-BOUNDARY; O1 remains open and SAMPLING NOT PROVIDED
+
+RESULT 14/14 ALL PASS
