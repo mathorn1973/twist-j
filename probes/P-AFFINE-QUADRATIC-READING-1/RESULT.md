@@ -113,3 +113,67 @@ separate implementation with a different structure and different check labels.
 Those runs are discovery context and are not evidence. The accepted verifier
 was written fresh, pinned before any execution, read back from the public
 remote, and run exactly once.
+
+## 7. Erratum, recorded after the run, pin untouched
+
+Independent external review on the same date, by a second author and a
+different code path (Reynolds character averaging first, kernel systems
+second), reproduced every census number and fired nothing. It also raised two
+imprecisions in the pinned prose. Both are recorded here rather than repaired,
+because `PREREG.md` and `verify.py` are pinned and are not edited after a pin.
+
+```text
+E1  QUOTIENT VERSUS SUBMODULE.
+    Field 3 pins P(e_x) = zeta^x with kernel the all ones vector, so the
+    carrier is the QUOTIENT Q^5/<1>, the coinvariants, and not the sum-zero
+    submodule that the word "augmentation" conventionally names. The
+    independent Burnside route in block B3 is worded for the submodule model,
+    where 11^T restricts to zero. In the quotient model neither I_5 nor 11^T
+    descends by itself: a form a I_5 + b 11^T descends exactly when a + 5b = 0,
+    so the descending line is spanned by 5 I_5 - 11^T. The dimension is one in
+    both models, and the two modules are isomorphic in characteristic zero by
+    Maschke, so no number and no conclusion moves. The probe's own T1 output is
+    already the quotient-model witness and is exact:
+    P^T Gram(q_+) P = (5 I_5 - 11^T)/2, whose coefficients satisfy
+    5/2 + 5(-1/2) = 0. The affected text is the label of check B2, "the all
+    ones form dies on the augmentation", which states the submodule mechanism;
+    the assertion that check makes, that P annihilates the all ones vector, is
+    true as written. B1 and T1 read together are the complete machine evidence
+    for the independent route.
+
+E2  SYMBOL AMBIGUITY.
+    11^T appears at size five in the Burnside route and the pullback identity,
+    and at size four in 5 I_4 - 11^T = 2 Gram(q_+) two paragraphs later. The
+    sizes are fixed by context and no computation is affected, but the symbol
+    should have been written J_4 and J_5. Field 4 of this preregistration names
+    symbol collision as hazard one; it caught M_J versus D_J and missed this.
+```
+
+Two further review points close by construction rather than by repair. The
+claim issue number is inside the pinned bytes: line 13 of the pinned
+`PREREG.md` reads `Public claim lock: issue 495, opened before this file was
+committed`, because the issue was opened before the file was written, so no
+post-pin commit was ever needed to carry it. And `BASE_COMMIT` equals the pin
+commit's parent exactly, `2a5601a9ec5cd5c8e24e80f3da78ca6838608fb4`, so the
+gate base and the pin base are one commit.
+
+Neither erratum changes the decision, any threshold, any census number, or any
+earned status.
+
+## 8. Independence, stated at its true grade
+
+The external review above is an independent code path by a second author, run
+once, on one architecture, outside the pin. It is discovery-context
+independence and corroboration, not evidence: it is not preregistered, not
+pinned, and not part of this probe's record.
+
+Its most useful single result is a witness at the one field where a break was
+plausible. Over `K+ = Q(sqrt5)`, where the motor-only compression wall does
+fall, the full-group commutant still has dimension one, so the affine wall does
+not fall there either. Section 2's field-independence argument already carries
+that universally; the witness confirms it at the dangerous place rather than
+extending it.
+
+The two target rows rest on written proofs that no verifier can fire. Their
+only gate is review of this pull request. That is stated here because the
+preregistration did not state it and should have.
