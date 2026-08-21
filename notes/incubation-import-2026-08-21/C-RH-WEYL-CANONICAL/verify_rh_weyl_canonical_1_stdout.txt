@@ -1,0 +1,98 @@
+P-RH-WEYL-CANONICAL-1 verifier
+T2 lane opener: free Jacobi model, gates S1-S5, nodes a_n = 1 + 1/n, n = 1..8
+R in {4,8,16,32,64}, moment point c = 2, k <= 6, detection eps in {1/10, 1/100}
+CHECK 0 sqrt enclosures certified: PASS
+CHECK 1 dictionary chi^(1)/chi equals resolvent Q: PASS
+CHECK 2 Laurent normalization mu0 = 1, mu1 = 0: PASS
+PICKPIVOT R=64 i=1 p~=+2.360679e-1
+PICKPIVOT R=64 i=2 p~=+2.083648e-3
+PICKPIVOT R=64 i=3 p~=+6.437596e-6
+PICKPIVOT R=64 i=4 p~=+9.886754e-9
+PICKPIVOT R=64 i=5 p~=+9.018345e-12
+PICKPIVOT R=64 i=6 p~=+5.434837e-15
+PICKPIVOT R=64 i=7 p~=+2.322154e-18
+PICKPIVOT R=64 i=8 p~=+7.396432e-22
+CHECK 3 Herglotz: Im Q > 0 all R,n; 8x8 Pick pivots positive: PASS
+CONV n=1 R=4 dist2_hi~=+2.311165e-11
+CONV n=2 R=4 dist2_hi~=+2.179798e-9
+CONV n=3 R=4 dist2_hi~=+1.274611e-8
+CONV n=4 R=4 dist2_hi~=+3.261985e-8
+CONV n=5 R=4 dist2_hi~=+5.845823e-8
+CONV n=6 R=4 dist2_hi~=+8.698546e-8
+CONV n=7 R=4 dist2_hi~=+1.160350e-7
+CONV n=8 R=4 dist2_hi~=+1.443709e-7
+CONV n=1 R=8 dist2_hi~=+2.149932e-21
+CONV n=2 R=8 dist2_hi~=+1.087318e-17
+CONV n=3 R=8 dist2_hi~=+2.961094e-16
+CONV n=4 R=8 dist2_hi~=+1.714291e-15
+CONV n=5 R=8 dist2_hi~=+5.095359e-15
+CONV n=6 R=8 dist2_hi~=+1.069768e-14
+CONV n=7 R=8 dist2_hi~=+1.831245e-14
+CONV n=8 R=8 dist2_hi~=+2.752429e-14
+CONV n=1 R=16 dist2_hi~=+1.860421e-41
+CONV n=2 R=16 dist2_hi~=+2.705368e-34
+CONV n=3 R=16 dist2_hi~=+1.597983e-31
+CONV n=4 R=16 dist2_hi~=+4.734139e-30
+CONV n=5 R=16 dist2_hi~=+3.870490e-29
+CONV n=6 R=16 dist2_hi~=+1.617681e-28
+CONV n=7 R=16 dist2_hi~=+4.559988e-28
+CONV n=8 R=16 dist2_hi~=+1.000181e-27
+CONV n=1 R=32 dist2_hi~=+4.024241e-80
+CONV n=2 R=32 dist2_hi~=+1.674810e-67
+CONV n=3 R=32 dist2_hi~=+4.653844e-62
+CONV n=4 R=32 dist2_hi~=+3.610386e-59
+CONV n=5 R=32 dist2_hi~=+2.233306e-57
+CONV n=6 R=32 dist2_hi~=+3.699127e-56
+CONV n=7 R=32 dist2_hi~=+2.827470e-55
+CONV n=8 R=32 dist2_hi~=+1.320701e-54
+CONV n=1 R=64 dist2_hi~=+2.666061e-80
+CONV n=2 R=64 dist2_hi~=+2.169123e-81
+CONV n=3 R=64 dist2_hi~=+4.938271e-82
+CONV n=4 R=64 dist2_hi~=+1.013306e-82
+CONV n=5 R=64 dist2_hi~=+3.534707e-83
+CONV n=6 R=64 dist2_hi~=+1.499740e-83
+CONV n=7 R=64 dist2_hi~=+4.196631e-84
+CONV n=8 R=64 dist2_hi~=+6.369246e-84
+CHECK 4 node convergence certified, decreasing, <1e-40 at R=64: PASS
+MOM R=4 k=0 dist_hi~=+1.321739e-5
+MOM R=4 k=1 dist_hi~=+6.749923e-5
+MOM R=4 k=2 dist_hi~=+1.941199e-4
+MOM R=4 k=3 dist_hi~=+4.149853e-4
+MOM R=4 k=4 dist_hi~=+7.357208e-4
+MOM R=4 k=5 dist_hi~=+1.145701e-3
+MOM R=4 k=6 dist_hi~=+1.622553e-3
+MOM R=8 k=0 dist_hi~=+3.512082e-10
+MOM R=8 k=1 dist_hi~=+3.415724e-9
+MOM R=8 k=2 dist_hi~=+1.772911e-8
+MOM R=8 k=3 dist_hi~=+6.527899e-8
+MOM R=8 k=4 dist_hi~=+1.912870e-7
+MOM R=8 k=5 dist_hi~=+4.746307e-7
+MOM R=8 k=6 dist_hi~=+1.036369e-6
+MOM R=16 k=0 dist_hi~=+2.479727e-19
+MOM R=16 k=1 dist_hi~=+4.702367e-18
+MOM R=16 k=2 dist_hi~=+4.613975e-17
+MOM R=16 k=3 dist_hi~=+3.120633e-16
+MOM R=16 k=4 dist_hi~=+1.635371e-15
+MOM R=16 k=5 dist_hi~=+7.077634e-15
+MOM R=16 k=6 dist_hi~=+2.633098e-14
+MOM R=32 k=0 dist_hi~=+1.236287e-37
+MOM R=32 k=1 dist_hi~=+4.628200e-36
+MOM R=32 k=2 dist_hi~=+8.816980e-35
+MOM R=32 k=3 dist_hi~=+1.139409e-33
+MOM R=32 k=4 dist_hi~=+1.123405e-32
+MOM R=32 k=5 dist_hi~=+9.012051e-32
+MOM R=32 k=6 dist_hi~=+6.126029e-31
+MOM R=64 k=0 dist_hi~=+1.894923e-40
+MOM R=64 k=1 dist_hi~=+1.263282e-40
+MOM R=64 k=2 dist_hi~=+1.052735e-41
+MOM R=64 k=3 dist_hi~=+7.018236e-42
+MOM R=64 k=4 dist_hi~=+4.971250e-42
+MOM R=64 k=5 dist_hi~=+3.704069e-42
+MOM R=64 k=6 dist_hi~=+2.875527e-42
+CHECK 5 moment convergence at c=2, series sqrt exact, <1e-30 at R=64: PASS
+DETECT defect=D1 mu=1/3+1/10i w=1/10 Nstar=none first_bad_pivot~=-
+DETECT defect=D2 mu=9/10+1/10i w=1/10 Nstar=6 first_bad_pivot~=-2.422044e-15
+DETECT defect=D3 mu=1/3+1/100i w=1/100 Nstar=none first_bad_pivot~=-
+CHECK 6 detection of defect D1 within 8 nodes: FAIL
+LANE VERDICT: lane opens with dropped claims, see failed checks
+CHECKS: 6 of 7 PASS, FAILED: CHECK 6 detection of defect D1 within 8 nodes
