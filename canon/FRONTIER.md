@@ -42,6 +42,9 @@ Closed claims are excluded.
 - SQRT-PHI-TIME-GRAVITY [O]: the compound bridge from the two-branch L1 SQRT-PHI-DIGIT-LIFT sequence into the declared decoder clock and a registered gravity source/readout channel, including either a canonical sign-branch selector or a proof that the complete readout is sign invariant; no SI scale is included
   Queue: FOLLOWUP; STOP; FORMAL.
   Decision: STOP until the source domain, branch equivalence or selector, pre-update versus post-update convention, Y-to-D_clock map, gravity source/readout codomain, equality, and dependencies are frozen; closes positively only when an exact total bridge on the declared domain is compatible with SQRT-PHI-DIGIT-LIFT, METRO-TICK, and GRAVITY-BRIDGE-LAW; closes negatively if the frozen bridge class is empty or every admissible bridge violates a registered input; any SI claim remains bounded by METRO-EDGE-SCALE
+- TRACEKERNEL-CURVATURE-FORCING [O]: whether the complete public L2 admissible spatial-commutator/operator class forces DEF-EXACT-HODGE-HOME-CLOSURE on the registered L1 trace-kernel carrier; positive forcing requires a public complete nonempty class in which every fully admissible realization returns all alternating data bijectively to exactly W_p with no projection, quotient, proper subspace, auxiliary carrier, remainder or unnamed degree change and, whenever dim W_p=3, admits a nonzero omega in Lambda^3 W_p^* with g_p(beta(x wedge y),z)=omega(x,y,z) for all x,y,z; distinct from uniqueness of the spatial-curvature operator class
+  Queue: FOLLOWUP; BLOCKED; FORMAL.
+  Decision: closes positively only if the complete public class is nonempty and every fully admissible realization satisfies every clause of DEF-EXACT-HODGE-HOME-CLOSURE; closes negatively if a complete nonempty class contains even one fully admissible realization violating any clause, so a mixed Hodge/non-Hodge class is negative; within such a proved nonempty class, required full faithful GL_2(F_5) equivariance of the same bracket under the frozen block action supplies an exact negative route; closes EMPTY if the complete class is empty; STOP while the carrier, measure, projection group, commutator choice, admissible class, equivalence, completeness or layer bridge is unfixed or inexact
 
 ## Measure selection (`MEASURE`)
 
@@ -109,4 +112,4 @@ Closed claims are excluded.
   Queue: ROOT; BLOCKED; ENRICHMENT.
   Decision: fires if RH is disproved, or if one nontrivial zero is exactly proved not to be 1/(1 - xi) with xi != 1 and xi^(4 . 5^a) = 1 for any integer a >= 0; for a critical-line zero that is exactly the exclusion of its Cayley angle 2 arctan(1/(2 gamma)) from 2 pi (1/4) Z[1/5]; failure of the tail limit t_(n_A) -> M localizes to such an off-grid ordinate by LAMBDA-COCYCLE-BRANCH-COLLAPSE together with the all-real annihilation lemma in LAMBDA-COCYCLE-GRID-EQUIVALENCE; within the pointwise residual-bound test, an exact finite violation of 0 <= M - t_n <= 2 M contradicts membership, while finite satisfaction does not decide the row; no claim is made that these bounds classify every possible finite-profile obstruction
 
-Live total: 27.
+Live total: 28.

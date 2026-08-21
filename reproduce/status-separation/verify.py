@@ -141,20 +141,20 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 174, "D": 43, "C": 32, "F": 16,
-                       "O": 24, "H": 3}
+    expected_counts = {"T": 178, "D": 43, "C": 32, "F": 16,
+                       "O": 25, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v57",
-        len(rows) == 292
+        "registry and companion-ledger counts match Public Canon v58",
+        len(rows) == 297
         and counts == expected_counts
-        and len(normative) == 337
-        and len(dependencies) == 502
-        and len(evidence) == 292
-        and two_architecture == 210
-        and len(history) == 811
-        and len(gates) == 10
-        and len(programs) == 27
+        and len(normative) == 343
+        and len(dependencies) == 521
+        and len(evidence) == 297
+        and two_architecture == 215
+        and len(history) == 816
+        and len(gates) == 11
+        and len(programs) == 28
         and len({row["program_id"] for row in programs.values()}) == 7
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
     ))

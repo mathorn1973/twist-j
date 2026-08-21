@@ -1,11 +1,100 @@
 # Canon changelog (public series)
 
-## Public Canon v57
+## Public Canon v58
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 292 claims; 0 T-LOCK, 174 T, 43 D, 32 C, 3 H, 24 O, 16 F; 27 live H/O.
+Registry snapshot: 297 claims; 0 T-LOCK, 178 T, 43 D, 32 C, 3 H, 25 O, 16 F; 28 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v58 folds the complete scientific disposition of the merged
+public probe `P-TRACEKERNEL-EXTERIOR-CLOSURE-1`. The probe directory remains
+byte-identical to its public merge. Its evidence bundle has
+`bundle-manifest-sha256-v1`
+`d21649fa77828dc5368b1a8bafeee3b644d5642fa17eb6d209b46b23b35facb6`;
+the accepted verifier has SHA-256 `31986402dfe1eeffb0a906db0b26443725417f7c945d5624e52883e9b211d5d1`
+and the exact stdout has SHA-256
+`f9a95f22ddb8bf5f1ca79be00144cc663adcc1ef484a013eaf482695addbaf93`.
+The one accepted formal Linux run and both public CI architectures agree byte
+for byte. The symbolic proofs, not the finite sweep, carry the universal
+quantifiers.
+
+Four rows enter at `T`. TRACEKERNEL-RESIDUAL-FORM gives, for every prime,
+the trace Gram `G_p=pI-J`, its mod-`p` radical
+`W_p=ker(sum:F_p^(p-1)->F_p)` of dimension `p-2`, and the lift-independent
+nondegenerate first residual form. TRACEKERNEL-HOME-DIMENSION proves only the
+conditional implication `Lambda^2 W_p isomorphic to W_p => p=2 or p=5`, with
+`p=2` empty and `p=5` the sole nonzero branch.
+TRACEKERNEL-F5-HODGE-BRACKET proves that, under the explicitly unearned
+DEF-EXACT-HODGE-HOME-CLOSURE predicate, the `p=5` bracket is `sl_2(F_5)`,
+independent up to isomorphism of nonzero volume scaling, and graded `1+2` by
+`Phi`. TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY proves
+`Aut=SO_3(F_5)=PGL_2(F_5)` of order 120 and classifies exactly eight of the
+480 faithful public block maps as bracket-preserving.
+
+One named definition enters the normative graph without becoming a sixth
+claim: DEF-EXACT-HODGE-HOME-CLOSURE freezes the two-stage predicate used by
+the conditional theorems. The fifth claim,
+TRACEKERNEL-CURVATURE-FORCING [O], records rather than hides the missing
+bridge from the complete admissible L2 class back to that L1 predicate. It is
+`POSITIVE` only for a complete nonempty class whose every fully admissible
+realization is Hodge-home, `NEGATIVE` for a complete nonempty class containing
+even one non-Hodge realization, `EMPTY` for a complete empty class, and
+otherwise `STOP`. It is logically distinct from
+CURVATURE-OPERATOR-CANONICAL [O]: uniqueness of an operator class and a
+common Hodge-home property of every admissible class are separate questions.
+
+The complete boundary is retained. `W_2=0` is not the unrelated `F_2^4`
+carrier. The public minus plane cannot close home by itself. The exact
+invertible alternating product supplied by external review has determinant
+one but Jacobi sum `-u3`, proving that an unnamed bijection is insufficient.
+The scalar `rho(2I_2)` witness supplied by external review gives a local
+equivariance mismatch. The probe's F2 remains armed but does not fire at v58
+because no public dependency requires full faithful `GL_2(F_5)` equivariance
+of the same commutator. Inside a future proved complete nonempty class, such a
+requirement routes TRACEKERNEL-CURVATURE-FORCING negatively; if the complete
+class is empty, the route is `EMPTY`. The alternative symmetric-square action
+is not adopted.
+
+The collision firewall is explicit. The Lie algebra `sl_2(F_5)` is not the
+group `SL_2(F_5)=2I`; the adjoint image of the latter is `PSL_2(F_5)=A5`, not
+all of `PGL_2(F_5)`. No registered intertwiner identifies the QPAIR symmetric
+square with `W_5`, and KERNEL-WEDGE-COUPLING uses a different carrier. Over
+`Q`, `G_5/5` and DEF-QDD-GRAM share a matrix formula; independently,
+`W_5=rad(G_5 mod 5)` and `g_5` comes from the divided-on-lifts construction
+before reduction, while the QDD projector pair acts on `Q^4`. No projector,
+weight, apparatus, or decoder is transported. The finite `sl_2(F_5)` bracket
+is not the COLOR-LADDER-DICTIONARY `su(3)` reading on `End_0(W_5)`. No
+extension of ALPHA-SEED, promotion of COLOR-SPLIT-12 or
+COLOR-KINEMATICAL-GL2, binary-icosahedral derivation, spinor, integral lift,
+measure, physical reading, or unregistered layer lift is created.
+
+The v58 ledger change is signed term by term:
+
+```text
+claims:    292 + 5 = 297,
+T:         174 + 4 = 178,
+O:         24 + 1 = 25,
+D: 43, C: 32, H: 3, F: 16, all unchanged,
+live H/O:  27 + 1 = 28,
+normative items: 337 + 1 definition + 4 theorem items + 1 obligation = 343,
+dependencies: 502 + 19 = 521,
+evidence rows: 292 + 5 = 297,
+gates:      10 + 1 open L2-to-L1 selection = 11,
+history rows: 811 + 5 declarations = 816,
+two-architecture evidence: 210 + 5 = 215,
+reproduction witnesses: 23, unchanged.
+```
+
+No pre-existing claim changes status or scope. The probe, its pin, result,
+transcript, verifier, thresholds and route remain immutable. One open
+L2-to-L1 gate is added for the new obligation; no workflow, minimal
+reproduction or core selection changes.
+
+## Public Canon v57
+
+Registry snapshot: 292 claims; 0 T-LOCK, 174 T, 43 D, 32 C, 3 H, 24 O, 16 F; 27 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v57 registers five closed rows from two completed public probes,
 `P-TWOLOGPHI-INVARIANTS-1` and `P-METRO-FORBIDDEN-WITNESSES-1`, each merged
