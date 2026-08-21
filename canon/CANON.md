@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v58
+# TWIST-J Public Canon v59
 
-**Release identity.** Public Canon v58. Normative authority and activation
+**Release identity.** Public Canon v59. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v58 also declares the discrete
+algebraic axiom is J. Public Canon v59 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v58 does not claim
+seed of the two algebraic projections. Public Canon v59 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v58 contains no such
+deriving the architecture from J; Public Canon v59 contains no such
 theorem.
 
 ---
@@ -1327,16 +1327,146 @@ QDD-U-INDUCED-FINITE-NONSELECTION [C]
     L5 windows, for this U, split, record class, delays and seeds only. It supplies no
     limit, independent physical selector, sampling-impossibility theorem,
     exclusion of another admissible apparatus class or decoder completion.
+QDD-J-AFFINE-APPARATUS-NONSELECTION [T]
+    Let the five rational J-phase vertices u_x, x in F_5, carry the faithful
+    G-orthogonal action rho(c,b)u_x=u_(b+cx) of AGL_1(F_5), of order 20.
+    For each memory token k, averaging its four-element multiplier stabilizer
+    gives complementary G-orthogonal projectors P_k and Q_k of ranks one and
+    three. The complete frozen target-independent affine family consists of
+    the four reversible covariant system-pointer-memory couplings whose moving
+    maps are rho(h_(a,k))Q_k, a in F_5^x, where
+        h_(a,k):x -> k+a(x-k).
+    After the class is frozen, token k=2 gives P_2=E_low and Q_2=E_high. All
+    four members realize the same ordered effects and occurrence weights but
+    are pairwise inequivalent under the
+    registered K~+/-K post-state equality. Self-adjoint involutivity still
+    leaves a in {1,4}, two physical classes. Zero displacement on im(Q_k)
+    uniquely leaves a=1, the Lueder member, but only as an added
+    identity/minimal-disturbance rule. The theorem classifies this four-member
+    L4 class; it neither derives that rule nor makes the class exhaustive.
+QDD-J-CENTRALIZER-NONSELECTION [T]
+    Let H_k={h_(a,k):a in F_5^x}~=C_4 be the affine token stabilizer and
+    Z_k=End_(H_k)(Q_k V) its complete rational moving-support centralizer.
+    Put R_k=(I-g_k+g_k^2-g_k^3)/4, C_k=Q_k-R_k and J_k=g_k C_k, where
+    g_k=rho(h_(2,k)). Then
+        Z_k=Q R_k direct-sum Q C_k direct-sum Q J_k,
+        J_k^2=-C_k,
+    and every effect-preserving reversible moving branch is exactly
+        T_k(e,r,s)=eR_k+rC_k+sJ_k,
+        e in {+1,-1}, r,s in Q, r^2+s^2=1.
+    The rational circle supplies infinitely many physical sign classes at the
+    same ordered effects and weights. Ordinary same-outcome repeatability
+    holds throughout and selects nothing. The self-adjoint involutive
+    subclass has four algebraic members and two sign classes. This is complete
+    only for the frozen rational stabilizer-centralizer class. After the class
+    is frozen, token k=2 gives P_2=E_low and Q_2=E_high.
+QDD-J-TERMINALITY-SELECTION [T]
+    Inside that complete invertible moving-branch class, fresh-pointer ray
+    terminality forces T_k=+Q_k or T_k=-Q_k and hence exactly one registered
+    post-state sign class. Strict representative idempotence T_k^2=T_k fixes
+    T_k=Q_k. At token k=2 these are respectively the Lueder physical class
+    and its positive representative. Ray terminality and strict idempotence
+    are conditional selectors, not laws derived from J, Omega, U, the decoder,
+    the record protocol or Nature.
+QDD-FRESH-RECORD-EXTENSION [T]
+    Let P,Q be complementary G-orthogonal projectors and let a rational moving
+    branch T satisfy
+        P^2=P=P^sharp, Q^2=Q=Q^sharp, P+Q=I, PQ=QP=0,
+        TP=PT=0, QT=TQ=T, T^sharp T=Q.
+    Every such T admits an explicit reversible fresh-pointer extension with
+    a fresh blank cell in a three-symbol record alphabet. At every finite
+    repetition count, old cells are fixed, no old record controls a later
+    system map, LOW and HIGH repeat exactly, and N HIGH outcomes leave the
+    conditioned state T^N v with record word HIGH^N. This is an L4 existence
+    theorem for the frozen extension, not an L5 event stream, a sampling law,
+    an identification with D_clock or an exhaustive apparatus theorem.
+QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION [T]
+    Fresh pointers, fresh append-only record cells, no old-record feedback,
+    rational microscopic reversibility and ordinary exact outcome
+    repeatability do not imply [T]^2=[T]. The target-independent exact witness
+        T_*=R_k-C_k
+    is self-adjoint and involutive on Q_k V, obeys
+        T_*^sharp T_*=Q_k,  T_*^2=Q_k,  T_*!=+Q_k,  T_*!=-Q_k,
+    and writes HIGH repeatedly while a state with nonzero R_k and C_k parts
+    has distinct first and second conditioned rays. Only after construction,
+    token k=2 identifies Q_2=E_high. The result is a nonimplication inside the
+    frozen L4 class, not a global no-go for every physical selector.
+QDD-RECORD-SUFFICIENCY-TERMINALITY [T]
+    In the frozen rational invertible branch class, let complementary
+    G-orthogonal projectors P,Q with dim(QV)>=2 satisfy
+        P^2=P=P^sharp, Q^2=Q=Q^sharp, P+Q=I, PQ=QP=0,
+    and let T obey the full two-sided branch equations
+        TP=PT=0, QT=TQ=T, T^sharp T=Q.
+    Then record sufficiency, meaning that the conditioned ray is determined
+    by the terminal outcome symbol independently of repetition count, is
+    equivalent
+    to fresh-pointer ray terminality, projective class idempotence
+    class(T)^2=class(T), and
+        T in {+Q,-Q}.
+    The last pair is one physical class under the registered sign equality.
+    Within those frozen equations the implication uses no symmetry-group
+    premise: invertibility on QV and preservation of every rational line
+    force the restriction to be scalar. Record sufficiency remains an added
+    physical premise rather than a consequence of record persistence or
+    no-feedback. No conclusion is made from the weaker one-sided hypotheses
+    T^sharp T=Q and QT=T alone.
+QDD-RECORD-COMPLETE-LUEDER-SELECTION [T]
+    The complete marked symmetry of the rational J simplex is S_5. For the
+    terminal binary partition {k}|other, its complete stabilizer is
+    Gamma_k~=S_4; averaging Gamma_k gives P_k of rank one and Q_k of rank
+    three. Strict microscopic law naturality means
+        T rho(g)=rho(g) T for every g in Gamma_k,
+    and
+        End_(Gamma_k)(Q_k V)=Q Q_k.
+    Thus strict record-partition naturality plus the effect equation leaves
+    T=+Q_k or T=-Q_k, one sign class, and representative idempotence leaves
+    +Q_k. In contrast, the affine token stabilizer H_k~=C_4 has the
+    three-dimensional centralizer Q R_k direct-sum Q C_k direct-sum Q J_k;
+    R_k-C_k commutes with H_k but fails 16 of the 24 complete S_4
+    commutation tests at every token. The full affine group has order 20,
+    satisfies AGL_1(F_5) intersection Gamma_k=H_k with
+    [Gamma_k:H_k]=6, and contains no transposition:
+    an affine involution fixes one token and swaps the other four in two
+    pairs. Token k=2 gives the Lueder class. Full record-partition naturality
+    is the conditional selector; the architecture does not derive it.
+QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY [T]
+    Strict law naturality is the Gamma_k centralizer condition and gives the
+    single Lueder sign class above. Weak uniform quotient covariance is the
+    normalizer condition. Since Aut(S_4)=Inn(S_4), its complete rational
+    G-orthogonal solution set is
+        N_k={+rho(h)Q_k,-rho(h)Q_k:h in Gamma_k},
+    with 48 algebraic members and 24 registered sign classes. For a
+    transposition tau of two HIGH labels, rho(tau)Q_k has the same effect,
+    support, pointer result and terminal HIGH symbol as Q_k, normalizes
+    Gamma_k, is involutive and ordinarily repeatable, but is not +/-Q_k and
+    is not projectively idempotent; it commutes with four of the 24 S_4
+    elements and fails twenty strict
+    naturality squares. All 48 members collapse only after adopting the new
+    orbit equality under +/-S_4. Complete observation of the quotient
+    therefore does not choose between strict microscopic naturality and an
+    enlarged gauge equality. The theorem adopts neither and leaves the
+    physical selection premise open. After the class is frozen, token k=2
+    gives P_2=E_low and Q_2=E_high.
 QDD-INSTRUMENT-APPARATUS [O]
-    after the nonselection theorem only two independent blockers remain:
-    O2, independent physical instrument selection from a public admissible
-    law or coupling class frozen before comparison with E_low and E_high;
-    O1, realized event generation and sampling. An exact rational apparatus
-    reducing to the Lueder pair is exhibited, but its target-controlled
-    coupling is circular as independent-selection evidence. Positive-root
-    uniqueness is mathematics only, equality of effects does not identify
-    post-state instruments, the row remains separate from
-    QUADRATIC-DECODER-DATA and fills no decoder-completion-contract field.
+    Exact target-independent rational J-simplex apparatus classes frozen
+    before target comparison contain members realizing E_low,E_high at token
+    k=2. Only two independent blockers remain. O2 is the physical selection
+    of the post-state law and equality inside a complete admissible class; O1
+    is realized event generation and sampling. J-affine covariance and the
+    complete affine-stabilizer centralizer remain nonselective. Fresh
+    append-only no-feedback recording, reversibility and ordinary
+    repeatability do not imply projective idempotence. On the frozen full
+    two-sided-support class, record sufficiency, fresh-pointer ray terminality
+    and projective idempotence are equivalent and conditionally select the
+    Lueder sign class. Strict S_4 law naturality conditionally selects the same
+    class. Weak S_4 quotient covariance leaves 24 classes under the registered
+    sign equality and collapses them only after changing to the +/-S_4 gauge
+    equality. None of record sufficiency, terminality, strict law naturality
+    or enlarged gauge equality is derived or adopted by the public
+    architecture. The frozen classes do not exhaust every admissible J-native
+    apparatus. These results fill no decoder-completion-contract field,
+    supply no L5 stream or L6 measure, and remain separate from
+    QUADRATIC-DECODER-DATA.
     SAMPLING NOT PROVIDED; SAMPLING IMPOSSIBLE is not claimed.
 ```
 
@@ -1476,11 +1606,20 @@ not select a physical family or create an event stream or measure.
 complete checkpoint audit, together with the two explicit fiber-to-piston
 witnesses. The same two-architecture bundle exhausts the frozen 900
 record-delay pairs and supplies the finite multi-layer classification above,
-whose apparatus conclusion is at L4. Neither
-result closes `QDD-INSTRUMENT-APPARATUS`: O2 independent physical selection
-and O1 realized event generation or sampling remain STOP. The empty
-frozen-family eligibility set licenses no conclusion about instruments
-outside that family.
+whose apparatus conclusion is at L4.
+
+Five later public two-architecture probes freeze target-independent rational
+J-simplex apparatus classes before target comparison. They prove the exact
+four-member affine boundary, the complete rational C_4 centralizer and its
+infinite nonselection family, reversible fresh append-only record extensions
+and the R-C nonterminal witness, strict S_4 law-naturality selection, and the
+24-class normalizer boundary under the registered sign equality. Record
+sufficiency, terminality and projective idempotence are equivalent only on the
+full two-sided-support class stated above. These results identify exact
+conditional selectors but derive or adopt none as a physical law or equality.
+No result closes `QDD-INSTRUMENT-APPARATUS`: O2 independent physical selection
+and O1 realized event generation or sampling remain STOP. The frozen classes
+license no conclusion about instruments outside them.
 
 The time counter has an exact entropy anchor. The step matrix of
 J = 1 + zeta_5^2 induces a hyperbolic automorphism T_J of the torus
@@ -7337,10 +7476,35 @@ MEASUREMENT AND METROLOGY
                              and C = 0 leave infinitely many physical
                              post-state classes, and dilation existence does
                              not select an instrument
-  QDD-INSTRUMENT-APPARATUS   only O2 independent physical instrument selection
-                             and O1 realized event generation / sampling remain;
-                             SAMPLING NOT PROVIDED, not impossible; fills no
-                             completion-contract field
+  QDD-J-AFFINE-APPARATUS-NONSELECTION
+                             four target-independent affine members, four
+                             sign classes; self-adjoint involutivity leaves two
+  QDD-J-CENTRALIZER-NONSELECTION
+                             complete C_4 centralizer, rational circle and
+                             infinite sign-class nonselection boundary
+  QDD-J-TERMINALITY-SELECTION
+                             conditional ray terminality gives +/-Q and strict
+                             representative idempotence gives +Q
+  QDD-FRESH-RECORD-EXTENSION
+                             reversible append-only three-symbol record
+                             extension for the full two-sided-support class
+  QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION
+                             fresh no-feedback records and repeatability do
+                             not imply projective idempotence; witness R-C
+  QDD-RECORD-SUFFICIENCY-TERMINALITY
+                             four-way equivalence only under the full frozen
+                             two-sided support equations
+  QDD-RECORD-COMPLETE-LUEDER-SELECTION
+                             strict microscopic S_4 law naturality
+                             conditionally leaves one Lueder sign class
+  QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY
+                             weak S_4 quotient covariance leaves 24 sign
+                             classes; collapse to one requires a new gauge
+                             equality
+  QDD-INSTRUMENT-APPARATUS   O2 now asks for independent physical selection
+                             of law and equality in a complete admissible
+                             class; O1 remains realized events / sampling;
+                             SAMPLING NOT PROVIDED, not impossible
 THE WALL
   QUANT-SUBSTRATE            the Larmor gate and the Schwinger physical-realization
                              gate; the target scalar is exact arithmetic and its
