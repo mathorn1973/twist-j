@@ -1,0 +1,9 @@
+PASS G01 pure quadratic S_n-invariant space has dimension one for n=2..5
+PASS G02 Lucas carry layers e_1,e_2,e_4,e_8 audited for w=0..255
+PASS G03 second carry bit has exact least weight period 4=2^2
+PASS G04 first non-atomic singular arity is 4 and P_4 has 5 points
+PASS G05 Aut(q_4) has order 120 and induces every permutation of P_4
+PASS G06 group-order obstruction excludes full singular symmetry at n=5,6,7
+PASS G07 binom(n,4)>=n^2+2 audited for n=8..64
+PASS G08 collision control only: 5=2^2+1 and ord_5(2)=4
+RESULT 8/8 ALL PASS
