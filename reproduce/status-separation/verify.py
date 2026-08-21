@@ -141,20 +141,20 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 186, "D": 43, "C": 32, "F": 16,
-                       "O": 25, "H": 3}
+    expected_counts = {"T": 199, "D": 43, "C": 32, "F": 16,
+                       "O": 27, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v59",
-        len(rows) == 305
+        "registry and companion-ledger counts match Public Canon v60",
+        len(rows) == 320
         and counts == expected_counts
-        and len(normative) == 351
-        and len(dependencies) == 538
-        and len(evidence) == 305
-        and two_architecture == 223
-        and len(history) == 825
+        and len(normative) == 366
+        and len(dependencies) == 577
+        and len(evidence) == 320
+        and two_architecture == 236
+        and len(history) == 841
         and len(gates) == 11
-        and len(programs) == 28
+        and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 7
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
     ))
@@ -2373,13 +2373,13 @@ def run():
         )
         and scope_contains_all(
             index, "QDD-INSTRUMENT-APPARATUS",
-            ("O2 is now independent physical selection of the post-state law and equality",
-             "O1 remains realized event generation / sampling",
-             "record sufficiency, fresh-pointer ray terminality and projective idempotence are equivalent",
-             "weak S_4 quotient covariance leaves 24 classes",
-             "none of record sufficiency, terminality, strict law naturality or enlarged gauge equality is derived or adopted",
+            ("O2 is the compatible conjunction of QDD-TERMINAL-EVENT-SEMANTICS",
+             "QDD-INSTRUMENT-CLASS-COMPLETENESS",
+             "O1 remains a separate typed realized-event/sampling obligation",
+             "post-v59 pure-record, COMM-SAT and finite-memory theorems remove mathematical ambiguities",
+             "adopt no terminal semantics, global class, phase gauge or equality",
              "SAMPLING NOT PROVIDED",
-             "SAMPLING IMPOSSIBLE is not claimed"),
+             "rather than impossible"),
         )
         and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
         and has_status(index, "QUADRATIC-DECODER-DATA", "O"),
@@ -3522,6 +3522,348 @@ def run():
         and "METRO-FORBIDDEN-WITNESSES" not in programs
         and all(row["owner_item_id"] != "METRO-FORBIDDEN-WITNESSES"
                 for row in gates.values()),
+    ))
+
+    v60_theorems = {
+        "AFFINE-READING-DEGREE-CENSUS": (
+            "L1", "3. The kernel and the census",
+            "probes/P-AFFINE-QUADRATIC-READING-1",
+            "95a3d91f6707fda16b7baecdc1e17d54eda884e9a4e622540950014777d8f255",
+        ),
+        "AFFINE-QUADRATIC-FORM-UNIQUENESS": (
+            "L1", "3. The kernel and the census",
+            "probes/P-AFFINE-QUADRATIC-READING-1",
+            "95a3d91f6707fda16b7baecdc1e17d54eda884e9a4e622540950014777d8f255",
+        ),
+        "CARRY-QUADRATIC-SYMMETRY": (
+            "L1", "3. The kernel and the census",
+            "probes/P-CARRY-QUADRATIC-SYMMETRY-2",
+            "7799ef57695141d74409eccdc5da69a0d6aadfcf17783ee5623e91eaa499d9a1",
+        ),
+        "J-BINARY-NORM-DESCENT": (
+            "L1", "3. The kernel and the census",
+            "probes/P-J-BINARY-NORM-DESCENT-1",
+            "1170f93a879410a1cd8f2119b731f305d94608e15dc11792620e604efe8ead97",
+        ),
+        "QDD-RECORD-SATURATION-DESCENT": (
+            "L4", "2. Time, space, and the decoder",
+            "probes/P-QDD-RECORD-MONOID-DESCENT-2",
+            "0f0fdb9f053d9c7498908a7ba105c1c509e339bd194b801bdcfa33e4a5815fcf",
+        ),
+        "QDD-COMMUTATOR-READOUT-EQUALITY-FORK": (
+            "L4", "2. Time, space, and the decoder",
+            "probes/P-QDD-COMMUTATOR-READOUT-FORK-2",
+            "94ab2859cd0bbd5ac43bb4699bd48ac14a7bde781b96d00dce6a5998f86c673b",
+        ),
+        "QDD-PURE-RECORD-COMMUTATOR-FAITHFULNESS": (
+            "MULTI", "2. Time, space, and the decoder",
+            "probes/P-QDD-AFFINE-PURE-RECORD-BRIDGE-1",
+            "03c4f81854fad29baa6f4fa5112e93733861b0b770f4f2752e5d79ea555f0932",
+        ),
+        "QDD-PURE-RECORD-TYPED-BRIDGE-BOUNDARY": (
+            "MULTI", "2. Time, space, and the decoder",
+            "probes/P-QDD-PURE-RECORD-TYPED-BRIDGE-1",
+            "0804101ff4a53f5b0954360c518149add2f94cc6ff51eacb81f1ce18ec32632b",
+        ),
+        "QDD-PURE-RECORD-PORT-UNIQUENESS": (
+            "MULTI", "2. Time, space, and the decoder",
+            "probes/P-QDD-PURE-RECORD-PORT-CANONICAL-1",
+            "f6d5d8098f76f3402d7865c7b10ded2d6f6e3533538c2b961467e5824f2b18cf",
+        ),
+        "QDD-COMMUTATOR-SATURATION-SELECTION": (
+            "L4", "2. Time, space, and the decoder",
+            "probes/P-QDD-COMMUTATOR-SATURATION-CLOSURE-1",
+            "b2912abe0eda6018ee6cc00eb9c6d7e51bae0ed8cc672f72fce7ee74da350b5f",
+        ),
+        "QDD-MECHANICAL-EVENT-SAMPLER": (
+            "MULTI", "2. Time, space, and the decoder",
+            "probes/P-QDD-DETERMINISTIC-EVENT-SAMPLER-1",
+            "657946b5ab07aeb41808ccdde9be1bca01a1e001ddf43e356b468aaba57e25ba",
+        ),
+        "QDD-FINITE-MEMORY-O2B-BOUNDARY": (
+            "L4", "2. Time, space, and the decoder",
+            "probes/P-QDD-INSTRUMENT-CLASS-COMPLETENESS-1",
+            "f6cf413cfc6dd8bb1e3d621fd545281f8fe7df7a0de0126804ed9fd43b4dd270",
+        ),
+        "QDD-EVENT-CONTEXT-BANK": (
+            "MULTI", "2. Time, space, and the decoder",
+            "probes/P-QDD-EVENT-CARRY-BANK-1",
+            "234fea8f560c0f49c9676cb043f41116ca074110fcb4dee7e57929fca338a34c",
+        ),
+    }
+    v60_obligations = {
+        "QDD-TERMINAL-EVENT-SEMANTICS": (
+            "MULTI",
+            "aa11aa00883b70a3ba6d2170e5554f4b757e8368a47f4b8f3fb33c5db1778b2c",
+        ),
+        "QDD-INSTRUMENT-CLASS-COMPLETENESS": (
+            "L4",
+            "99b14df0bda674d2723f4f2d567a74e2e0ece546a73da9a24bd99d3b07786408",
+        ),
+    }
+    v60_scope_hashes = {
+        "AFFINE-READING-DEGREE-CENSUS":
+            "9504b8dbbdd578c3e0edf9a89a0a6568289841b5f253b03cf6d0bd7fccdff202",
+        "AFFINE-QUADRATIC-FORM-UNIQUENESS":
+            "c1e6013d1fbf9029dc3e96d48308bebe87951d25652387769273bf3f0b8c70a8",
+        "CARRY-QUADRATIC-SYMMETRY":
+            "787b4724282e76a2fe958722bd7b668bf09df624a5a4f21eecdec45d694d4b8a",
+        "J-BINARY-NORM-DESCENT":
+            "e579c9e094c2969f60c73c6d2af4bc7cb6df7b533b4957df9ea2385c3cfb383a",
+        "QDD-RECORD-SATURATION-DESCENT":
+            "c641854947500c4cbe89a16125f406dded5d37de8f00a5d37883af457b40dfc7",
+        "QDD-COMMUTATOR-READOUT-EQUALITY-FORK":
+            "ba1e6bd1a9f1d7cb3195f241379092a008e9fa06706a1349a2c841eaec5e65dc",
+        "QDD-PURE-RECORD-COMMUTATOR-FAITHFULNESS":
+            "96ac7e9ca1452aeb72f00c1edc1f634cf362343a0ae7e16120e39020a26981b9",
+        "QDD-PURE-RECORD-TYPED-BRIDGE-BOUNDARY":
+            "85633904bf6e6a76331277011c08ea14765f1de569bd375667e0c70e26eaa568",
+        "QDD-PURE-RECORD-PORT-UNIQUENESS":
+            "d707322d96f9e27f280e0dbc17d3e86c6c2cca5245dea8caa1813a5e23497849",
+        "QDD-COMMUTATOR-SATURATION-SELECTION":
+            "e0f515f8c14cfe92d20f5bdb7878e7ef16953f6eb4218b44a40fd8226cf845a9",
+        "QDD-MECHANICAL-EVENT-SAMPLER":
+            "ca9463a2e776e9dd9e7d33b80c9c8645298904746f23eda757901c63ecf9f170",
+        "QDD-FINITE-MEMORY-O2B-BOUNDARY":
+            "33553b206c40ccbf1fd3e925c838e3431806b3e993eec75dae09db9597af10a5",
+        "QDD-EVENT-CONTEXT-BANK":
+            "677f3ce093bbc430438120d701c7586e2e446961a2ac33242f3bc90409073316",
+        "QDD-INSTRUMENT-CLASS-COMPLETENESS":
+            "99b14df0bda674d2723f4f2d567a74e2e0ece546a73da9a24bd99d3b07786408",
+    }
+    v60_dependencies = {
+        "AFFINE-READING-DEGREE-CENSUS": {
+            ("J-STEP", "REQUIRES"),
+            ("J-UNIT", "REQUIRES"),
+        },
+        "AFFINE-QUADRATIC-FORM-UNIQUENESS": {
+            ("AFFINE-READING-DEGREE-CENSUS", "REQUIRES"),
+        },
+        "CARRY-QUADRATIC-SYMMETRY": {
+            ("CARRY-PENTAD", "REQUIRES"),
+        },
+        "J-BINARY-NORM-DESCENT": {
+            ("AFFINE-QUADRATIC-FORM-UNIQUENESS", "REQUIRES"),
+            ("CARRY-PENTAD", "REQUIRES"),
+        },
+        "QDD-RECORD-SATURATION-DESCENT": {
+            ("QDD-FRESH-RECORD-EXTENSION", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+            ("QDD-INSTRUMENT-NONSELECTION", "REQUIRES"),
+        },
+        "QDD-COMMUTATOR-READOUT-EQUALITY-FORK": {
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+            ("QDD-INSTRUMENT-NONSELECTION", "REQUIRES"),
+            ("QDD-J-CENTRALIZER-NONSELECTION", "REQUIRES"),
+        },
+        "QDD-PURE-RECORD-COMMUTATOR-FAITHFULNESS": {
+            ("QDD-ALGEBRAIC-FACTORIZATION", "REQUIRES"),
+            ("QDD-COMMUTATOR-READOUT-EQUALITY-FORK", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+        "QDD-PURE-RECORD-TYPED-BRIDGE-BOUNDARY": {
+            ("DEF-DECODER-MATTER", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+            ("QDD-PURE-RECORD-COMMUTATOR-FAITHFULNESS", "REQUIRES"),
+        },
+        "QDD-PURE-RECORD-PORT-UNIQUENESS": {
+            ("AFFINE-QUADRATIC-FORM-UNIQUENESS", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+            ("QDD-PURE-RECORD-TYPED-BRIDGE-BOUNDARY", "REQUIRES"),
+        },
+        "QDD-COMMUTATOR-SATURATION-SELECTION": {
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+            ("QDD-INSTRUMENT-NONSELECTION", "REQUIRES"),
+            ("QDD-PURE-RECORD-PORT-UNIQUENESS", "REQUIRES"),
+        },
+        "QDD-MECHANICAL-EVENT-SAMPLER": {
+            ("DEF-AUTONOMOUS-STATE", "REQUIRES"),
+            ("QDD-ALGEBRAIC-FACTORIZATION", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+        "QDD-FINITE-MEMORY-O2B-BOUNDARY": {
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+            ("QDD-INSTRUMENT-NONSELECTION", "REQUIRES"),
+        },
+        "QDD-EVENT-CONTEXT-BANK": {
+            ("DEF-AUTONOMOUS-STATE", "REQUIRES"),
+            ("QDD-FRESH-RECORD-EXTENSION", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+            ("QDD-MECHANICAL-EVENT-SAMPLER", "REQUIRES"),
+        },
+        "QDD-TERMINAL-EVENT-SEMANTICS": {
+            ("QDD-COMMUTATOR-SATURATION-SELECTION", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+            ("QDD-PURE-RECORD-PORT-UNIQUENESS", "REQUIRES"),
+            ("QDD-RECORD-SATURATION-DESCENT", "REQUIRES"),
+        },
+        "QDD-INSTRUMENT-CLASS-COMPLETENESS": {
+            ("QDD-FINITE-MEMORY-O2B-BOUNDARY", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+    }
+    v60_scope_boundaries = {
+        "AFFINE-READING-DEGREE-CENSUS": (
+            "degree two is the first nonzero invariant scalar degree",
+            "no nonzero lossy G-equivariant linear reading exists",
+            "no Born, decoder, effect, apparatus, event, measure or L2-L6 lift",
+        ),
+        "AFFINE-QUADRATIC-FORM-UNIQUENESS": (
+            "unique invariant symmetric line",
+            "additional premises q!=0 and q>=0 fix the positive ray",
+            "no carrier-basis identification beyond P",
+        ),
+        "CARRY-QUADRATIC-SYMMETRY": (
+            "bounded S_5 clause imported from CARRY-PENTAD",
+            "five is an output cardinality, not a selected rational prime",
+            "no cycle, orientation, exponent, J, decoder, physical reading or L2-L6 lift",
+        ),
+        "J-BINARY-NORM-DESCENT": (
+            "explicit isometries rather than literal carrier equality",
+            "differs from Frobenius",
+            "no uniqueness of J, 2, 5, order five, Born, decoder, apparatus, event, measure or L2-L6 lift",
+        ),
+        "QDD-RECORD-SATURATION-DESCENT": (
+            "no physical saturation law",
+            "L5 stream",
+            "L6 measure or exhaustive apparatus conclusion",
+        ),
+        "QDD-COMMUTATOR-READOUT-EQUALITY-FORK": (
+            "decoder completeness relative only to event equality is insufficient",
+            "no decoder completion, adopted bridge, event stream or measure",
+        ),
+        "QDD-PURE-RECORD-COMMUTATOR-FAITHFULNESS": (
+            "decoder ownership, totality and the named layer gate remain absent",
+        ),
+        "QDD-PURE-RECORD-TYPED-BRIDGE-BOUNDARY": (
+            "no source ownership, equality or L4-to-L1 gate is adopted",
+        ),
+        "QDD-PURE-RECORD-PORT-UNIQUENESS": (
+            "public physical ownership and the named gate remain absent",
+        ),
+        "QDD-COMMUTATOR-SATURATION-SELECTION": (
+            "no physical saturation dictionary or globally complete apparatus class is adopted",
+        ),
+        "QDD-MECHANICAL-EVENT-SAMPLER": (
+            "for those interior weights its b phases share frequency and remain unselected",
+            "for every interior weight global-tick substitution admits all-LOW/all-HIGH subsequences",
+            "single accumulator initialized by x_0=0",
+            "no physical context, counter origin, update law, sampler, randomness or L6 measure",
+        ),
+        "QDD-FINITE-MEMORY-O2B-BOUNDARY": (
+            "unbounded, nonlinear, mixed, irrational and differently typed architectures remain outside scope",
+        ),
+        "QDD-EVENT-CONTEXT-BANK": (
+            "active architecture supplies no ready phase, persistence law or registered gate",
+            "no O1 closure, randomness or L6 measure",
+        ),
+    }
+    v60_rows = set(v60_theorems) | set(v60_obligations)
+    v60_actual_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in v60_rows
+    }
+    checks.append((
+        "V60-BOUNDARY",
+        "thirteen post-v59 theorem rows and two explicit O2 children keep exact evidence and dependency contracts while O1, the parent apparatus, physical adoption, gates, and sampling stay open",
+        all(
+            has_status(index, claim, "T")
+            and normative.get(claim, {}).get("item_type") == "THEOREM"
+            and normative.get(claim, {}).get("status") == "T"
+            and normative.get(claim, {}).get("layer") == layer
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("canon_section") == section
+            and index.get(claim, {}).get("evidence") == path
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("location") == path
+            and evidence.get(claim, {}).get("sha256") == digest
+            and evidence.get(claim, {}).get("hash_mode")
+            == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and claim not in programs
+            and scope_contains_all(index, claim, v60_scope_boundaries[claim])
+            for claim, (layer, section, path, digest) in v60_theorems.items()
+        )
+        and all(
+            has_status(index, claim, "O")
+            and normative.get(claim, {}).get("item_type") == "OBLIGATION"
+            and normative.get(claim, {}).get("status") == "O"
+            and normative.get(claim, {}).get("layer") == layer
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("canon_section")
+            == "2. Time, space, and the decoder"
+            and index.get(claim, {}).get("evidence") == "inline"
+            and evidence.get(claim, {}).get("evidence_kind") == "INLINE_CANON"
+            and evidence.get(claim, {}).get("location") == "inline"
+            and evidence.get(claim, {}).get("sha256") == digest
+            and evidence.get(claim, {}).get("sha256")
+            == scope_sha256(index, claim)
+            and evidence.get(claim, {}).get("hash_mode")
+            == "registry-scope-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement") == "none"
+            and programs.get(claim) == {
+                "claim_id": claim,
+                "program_id": "DECODER_CORE",
+                "queue_role": "FOLLOWUP",
+                "work_state": "STOP",
+                "work_mode": "FORMAL",
+            }
+            for claim, (layer, digest) in v60_obligations.items()
+        )
+        and v60_actual_dependencies == v60_dependencies
+        and all(
+            scope_sha256(index, claim) == digest
+            for claim, digest in v60_scope_hashes.items()
+        )
+        and all(row["owner_item_id"] not in v60_rows for row in gates.values())
+        and "GATE-L4-L1-QDD-PURE-RECORD" not in gates
+        and "GATE-L1-L5-QDD-EVENT-CARRY-BANK" not in gates
+        and has_status(index, "CARRY-PENTAD", "T")
+        and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
+        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and has_status(index, "BELL-CAUSAL-ACCOUNTING", "O")
+        and evidence["QDD-INSTRUMENT-APPARATUS"]["sha256"]
+        == "0b10264cce9764c2e1dbddb91166aef061af041b8db73226445377801cd902d1"
+        and evidence["QDD-INSTRUMENT-APPARATUS"]["sha256"]
+        == scope_sha256(index, "QDD-INSTRUMENT-APPARATUS")
+        and programs.get("QDD-INSTRUMENT-APPARATUS") == {
+            "claim_id": "QDD-INSTRUMENT-APPARATUS",
+            "program_id": "DECODER_CORE",
+            "queue_role": "FOLLOWUP",
+            "work_state": "STOP",
+            "work_mode": "FORMAL",
+        }
+        and scope_contains_all(
+            index, "QDD-TERMINAL-EVENT-SEMANTICS",
+            ("independently justified target-independent physical meaning",
+             "functional terminality, read-only decoder output and completion-contract conformance provably do not imply saturation",
+             "no physical saturation law is adopted",
+             "without COMM-SAT, Xi_T=0, projective idempotence, +/-Q, Lueder or target effects as construction inputs",
+             "independently testable consequence outside the selector target"),
+        )
+        and scope_contains_all(
+            index, "QDD-INSTRUMENT-CLASS-COMPLETENESS",
+            ("complete target-independent physical preselection class and equality",
+             "every admitted memory and ready/preparation state",
+             "supplies neither global physical completeness nor phase independence",
+             "finite and unbounded memory, nonlinear, mixed, irrational and differently typed architectures",
+             "phase relabeling, ready phases, transition permutations and future-output dependence"),
+        )
+        and scope_contains_all(
+            index, "QDD-INSTRUMENT-APPARATUS",
+            ("O2 is the compatible conjunction of QDD-TERMINAL-EVENT-SEMANTICS",
+             "QDD-INSTRUMENT-CLASS-COMPLETENESS",
+             "O1 remains a separate typed realized-event/sampling obligation",
+             "all B initial phase vectors preserve the frequencies and remain future-output distinguishable within that frozen transducer class",
+             "no physical reduced-p context key",
+             "registered L1-to-L5 gate",
+             "supply no L6 measure, randomness or independence law",
+             "SAMPLING NOT PROVIDED rather than impossible"),
+        ),
     ))
 
     fw_requires = {}

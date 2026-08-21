@@ -1,4 +1,43 @@
 item_id	depends_on	relation	basis
+AFFINE-READING-DEGREE-CENSUS	J-UNIT	REQUIRES	the full affine carrier uses the registered algebraic unit J
+AFFINE-READING-DEGREE-CENSUS	J-STEP	REQUIRES	the full step M_J and motor D_J=M_J-I are the registered exact matrices
+AFFINE-QUADRATIC-FORM-UNIQUENESS	AFFINE-READING-DEGREE-CENSUS	REQUIRES	the unique positive quadratic ray refines the one-dimensional invariant symmetric line
+CARRY-QUADRATIC-SYMMETRY	CARRY-PENTAD	REQUIRES	the bounded n=4 full-S5 clause imports the existing fixed-frame pentad theorem without reversing its provenance
+J-BINARY-NORM-DESCENT	AFFINE-QUADRATIC-FORM-UNIQUENESS	REQUIRES	the binary residue is the reduction of the registered unique affine quadratic form
+J-BINARY-NORM-DESCENT	CARRY-PENTAD	REQUIRES	the final q_A comparison uses the registered fixed-frame carry-pentad quadratic carrier
+QDD-RECORD-SATURATION-DESCENT	QDD-FRESH-RECORD-EXTENSION	REQUIRES	fresh repetition uses the registered reversible append-only record construction and its no-feedback boundary
+QDD-RECORD-SATURATION-DESCENT	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the projective branch action is restricted to the frozen supported rational effect fibre and sign equality
+QDD-RECORD-SATURATION-DESCENT	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact monoid descent criterion does not adopt saturation as physical event semantics or provide sampling
+QDD-COMMUTATOR-READOUT-EQUALITY-FORK	QDD-J-CENTRALIZER-NONSELECTION	REQUIRES	the compressed motor and exact rational orthogonal centralizer are the frozen L4 comparison class
+QDD-COMMUTATOR-READOUT-EQUALITY-FORK	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the branch maps and registered sign equality use the public fixed-effect fibre
+QDD-COMMUTATOR-READOUT-EQUALITY-FORK	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the equality fork proves a conditional field result but adopts no complete decoder or physical selector
+QDD-PURE-RECORD-COMMUTATOR-FAITHFULNESS	QDD-ALGEBRAIC-FACTORIZATION	REQUIRES	the global total_weight and density formulas extend the registered exact Route A record identities
+QDD-PURE-RECORD-COMMUTATOR-FAITHFULNESS	QDD-COMMUTATOR-READOUT-EQUALITY-FORK	REQUIRES	the full pure record refines the frozen ordered-composition commutator question and equality fork
+QDD-PURE-RECORD-COMMUTATOR-FAITHFULNESS	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	mathematical record faithfulness supplies neither physical ownership nor complete apparatus selection
+QDD-PURE-RECORD-TYPED-BRIDGE-BOUNDARY	QDD-PURE-RECORD-COMMUTATOR-FAITHFULNESS	REQUIRES	the typed bridge audit uses the exact global pure-record formula and its sign fibres
+QDD-PURE-RECORD-TYPED-BRIDGE-BOUNDARY	DEF-DECODER-MATTER	REQUIRES	the static-encoding and U-tail tests use the declared partial D_matter signature and bridge schema
+QDD-PURE-RECORD-TYPED-BRIDGE-BOUNDARY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the read-only mathematical map is unowned and the named L4-to-L1 gate remains absent
+QDD-PURE-RECORD-PORT-UNIQUENESS	QDD-PURE-RECORD-TYPED-BRIDGE-BOUNDARY	REQUIRES	the direct port is the surviving read-only class after the typed encoding and U-tail boundary
+QDD-PURE-RECORD-PORT-UNIQUENESS	AFFINE-QUADRATIC-FORM-UNIQUENESS	REQUIRES	the scalar form and normalization use the unique registered affine positive quadratic ray
+QDD-PURE-RECORD-PORT-UNIQUENESS	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	direct-port uniqueness in the frozen mathematical class does not adopt its physical ownership or gate
+QDD-COMMUTATOR-SATURATION-SELECTION	QDD-PURE-RECORD-PORT-UNIQUENESS	REQUIRES	COMM-SAT is defined with the canonical direct pure-record port on the complete ordered source
+QDD-COMMUTATOR-SATURATION-SELECTION	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the complete A_rep branch class refines the registered fixed-effect rational fibre
+QDD-COMMUTATOR-SATURATION-SELECTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact conditional selector neither derives terminal-event saturation nor exhausts physical apparatuses
+QDD-MECHANICAL-EVENT-SAMPLER	QDD-ALGEBRAIC-FACTORIZATION	REQUIRES	the exact 22-value probability census is evaluated from the registered Route A weights
+QDD-MECHANICAL-EVENT-SAMPLER	DEF-AUTONOMOUS-STATE	REQUIRES	the schedule boundary distinguishes the public global counter from an unregistered local invocation rank
+QDD-MECHANICAL-EVENT-SAMPLER	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the mechanical words and restricted memory bounds supply no physical context key ready phase update law or gate
+QDD-FINITE-MEMORY-O2B-BOUNDARY	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the operational finite-memory proof uses the public rational reflection-extension theorem and the frozen one-effect branch fibres without assuming COMM-SAT
+QDD-FINITE-MEMORY-O2B-BOUNDARY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	finite rational pointwise completeness and converse realization do not establish global physical class completeness or equality
+QDD-EVENT-CONTEXT-BANK	QDD-MECHANICAL-EVENT-SAMPLER	REQUIRES	the Euclidean coordinates are the residue-state form of the registered exact lower mechanical words and 22 contexts
+QDD-EVENT-CONTEXT-BANK	DEF-AUTONOMOUS-STATE	REQUIRES	the architecture comparison uses the registered global counter checkpoint and no decoder feedback
+QDD-EVENT-CONTEXT-BANK	QDD-FRESH-RECORD-EXTENSION	REQUIRES	the existing record theorem is explicitly L4 no-feedback rather than L5 sampler persistence
+QDD-EVENT-CONTEXT-BANK	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the class-relative bank and phase theorems adopt neither a physical context law nor ready state or sampling gate
+QDD-TERMINAL-EVENT-SEMANTICS	QDD-COMMUTATOR-SATURATION-SELECTION	REQUIRES	the open physical semantics is tested against the exact target-independent COMM-SAT conditional theorem
+QDD-TERMINAL-EVENT-SEMANTICS	QDD-PURE-RECORD-PORT-UNIQUENESS	REQUIRES	the obligation requires physical ownership and equality of the mathematically canonical complete post-state port
+QDD-TERMINAL-EVENT-SEMANTICS	QDD-RECORD-SATURATION-DESCENT	REQUIRES	passive readback fresh interaction and saturated event semantics must remain distinct
+QDD-TERMINAL-EVENT-SEMANTICS	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	this is the O2a child of the unchanged parent obligation
+QDD-INSTRUMENT-CLASS-COMPLETENESS	QDD-FINITE-MEMORY-O2B-BOUNDARY	REQUIRES	the physical class contract must contain and correctly classify the complete frozen finite rational phase-family boundary
+QDD-INSTRUMENT-CLASS-COMPLETENESS	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	this is the O2b child of the unchanged parent obligation
 TT-VECTOR-MOMENT-UNDERDETERMINATION	TT-SQUARING-DECODER	BOUNDED_BY	the theorem evaluates the same formal square w=v^2 but does not inherit the lower-status physical decoder reading
 TT-VECTOR-MOMENT-UNDERDETERMINATION	POL-READ	BOUNDED_BY	the plus/cross convention bounds any interpretation of the complex square; no source, propagation, normalization or observable is imported
 TT-VECTOR-MOMENT-UNDERDETERMINATION	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the theorem constrains admissible state closures but supplies neither a normalization nor a numerical r_T(k)
