@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its fifty-one checks cover the current
+and emits deterministic text. Its fifty-three checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 52/52 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 53/53 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -93,7 +93,9 @@ determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
 
-The v59 count check reads the folded tree (305 claims, 23 reproductions, 11 gates). The new QDD selection-boundary check pins eight restricted L4 theorem rows to five completed two-architecture public probes, verifies all seventeen declared dependency edges with no new cross-layer gate, preserves the full two-sided support assumptions of the record-sufficiency theorem, and keeps the weaker-hypothesis strengthening, O2 physical selection, O1 realized events, sampling, unsealed successor work and Bell accounting open. The permanent QDD direct-write firewall remains the final check.
+The v60 count check reads the folded tree (320 claims, 23 reproductions, 11 gates). The V60-BOUNDARY check pins thirteen exact theorem rows from the completed post-v59 probes to their types, layers, evidence bundles, scope boundaries and all 39 dependency edges. It splits O2 into two explicit children while leaving O1 on the parent, and keeps the parent apparatus, terminal-event semantics, instrument-class completeness, sampling, physical selection, Bell accounting, and every new physical gate open. The permanent QDD direct-write firewall remains the final check.
+
+The v59 count check reads the folded tree (305 claims, 23 reproductions, 11 gates). The QDD selection-boundary check pins eight restricted L4 theorem rows to five completed two-architecture public probes, verifies all seventeen declared dependency edges with no new cross-layer gate, preserves the full two-sided support assumptions of the record-sufficiency theorem, and keeps the weaker-hypothesis strengthening, O2 physical selection, O1 realized events, sampling, unsealed successor work and Bell accounting open. The permanent QDD direct-write firewall remains the final check.
 
 The v58 count check reads the folded tree (297 claims, 23 reproductions, 11 gates). The trace-kernel exterior-closure fold adds four exact theorem rows and one open multi-layer forcing obligation, keeps the exact Hodge-home condition as a separate definition, and pins all five claim rows to the completed two-architecture public probe without promoting the forcing premise. The permanent QDD direct-write firewall remains the final check.
 

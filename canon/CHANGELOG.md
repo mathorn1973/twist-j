@@ -1,11 +1,95 @@
 # Canon changelog (public series)
 
-## Public Canon v59
+## Public Canon v60
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 305 claims; 0 T-LOCK, 186 T, 43 D, 32 C, 3 H, 25 O, 16 F; 28 live H/O.
+Registry snapshot: 320 claims; 0 T-LOCK, 199 T, 43 D, 32 C, 3 H, 27 O, 16 F; 30 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v60 is a boundary consolidation of twelve already merged public
+probes after v59. It adds no new run, gate, physical dictionary, H row, D row,
+decoder completion or status promotion.
+
+The L1 carry/J packet registers four theorem rows. From
+`P-AFFINE-QUADRATIC-READING-1`, AFFINE-READING-DEGREE-CENSUS records that the
+full affine action has no invariant linear or alternating scalar and one
+symmetric line over every characteristic-zero extension, while
+AFFINE-QUADRATIC-FORM-UNIQUENESS identifies that line with the positive
+trace form under a separately stated positivity premise. The fold carries the
+probe's errata: the five-point carrier mechanism is the quotient `Q^5/<1>`,
+`J_5` and `J_4` are distinguished, and line and ray are not conflated.
+
+CARRY-QUADRATIC-SYMMETRY, from the corrected successor probe
+`P-CARRY-QUADRATIC-SYMMETRY-2`, proves the prime-free chain from the unique
+pure quadratic carry layer through first non-atomic arity four to the
+five-point singular carrier. The stopped predecessor #501 supplies no
+evidence. J-BINARY-NORM-DESCENT registers the finite-field norm-trace residue,
+the explicit `q_2`, `q_A`, `q_4` isometries, and the motor-versus-Frobenius
+guard. CARRY-PENTAD keeps its stable status, evidence, scope and registered
+inputs; its Canon prose is clarified as the fixed `n=4` geometry and integral
+bridge, not a selector for `J`, 2 or 5.
+
+Nine QDD rows consolidate nine public probes, one stable row per evidence
+bundle. They register: the passive-readback/fresh-interaction saturation
+boundary; the event-equality versus quadratic-projective fork; canonical full
+pure-record commutator faithfulness and the finite-domain boundary; the typed
+read-only bridge, static-encoding nonselection and U-tail no-go; uniqueness of
+the complete direct port and its 42-class finite overlap; the complete named
+rational pure/repeatable branch fibre and exact COMM-SAT conditional selector;
+the 22-weight mechanical words, phase and restricted-memory boundaries; finite
+rational phase-family pointwise completeness with genuine post-state phase
+nonselection; and the schedule-invariant product carry bank with exact
+class-relative minimum
+
+```text
+B=19702414515172535913561087541248
+ =2^66 3^2 7^4 11 13^2 17^2 23.
+```
+
+All `B` initial phase vectors preserve the exact per-context frequencies and
+remain future-output distinguishable within the frozen transducer class. The
+active architecture still supplies no
+physical reduced-probability context key, selected ready phase, persistent
+bank update or registered L1-to-L5 gate. Therefore O1 remains open and
+`SAMPLING NOT PROVIDED`; no sampling-impossibility, randomness, independence
+or L6 measure statement follows.
+
+O2 is split into two live obligations. QDD-TERMINAL-EVENT-SEMANTICS asks for an
+independently justified physical meaning of event completion without building
+the desired COMM-SAT/Lueder result into its input. QDD-INSTRUMENT-CLASS-
+COMPLETENESS asks for the complete physical preselection class and equality on
+whole apparatus families, including memory, ready phase and transitions. The
+parent QDD-INSTRUMENT-APPARATUS remains O and closes only after O1 and both O2
+children close compatibly. QUADRATIC-DECODER-DATA is unchanged.
+
+The v60 ledger change is exact:
+
+```text
+claims:    305 + 13 T + 2 O = 320,
+T:         186 + 13 = 199,
+O:          25 + 2 = 27,
+D: 43, C: 32, H: 3, F: 16, all unchanged,
+live H/O:   28 + 2 = 30,
+normative items: 351 + 13 theorem + 2 obligation items = 366,
+dependencies: 538 + 39 = 577,
+evidence rows: 305 + 15 = 320,
+gates:      11, unchanged,
+history rows: 825 + 15 declarations + 1 scope change = 841,
+two-architecture evidence: 223 + 13 = 236,
+frontier programs: 28 + 2 = 30,
+reproduction witnesses: 23, unchanged.
+```
+
+The candidate sub-row ceilings in the probe results are deliberately
+consolidated into the thirteen named theorem scopes rather than mechanically
+creating forty registry rows. No probe bytes, policy, workflow, gate table or
+core selection change in this release.
+
+## Public Canon v59
+
+Registry snapshot: 305 claims; 0 T-LOCK, 186 T, 43 D, 32 C, 3 H, 25 O, 16 F; 28 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v59 is one conservative QDD selection-boundary fold. It registers
 eight restricted L4 theorems from five already merged public probes, each with
