@@ -10,6 +10,8 @@ against `EXPECTED.txt`.
 ```text
 base_commit:       307e872d529ed053c972a726c2f456378850e92a
 pin_commit:        2be3c0426791921a258e9354c4694c49d03f607a
+command:           python3 probes/P-QDD-DETERMINISTIC-EVENT-SAMPLER-1/verify.py
+verifier_sha256:   407b73fa434ffbfafae9b8b097a78f427b573c3db5fa6bc0cdcbc5c3abea9dd2
 pin_tree:          8e971ca7b60c308a60d5b0e95bb32c96ee442466
 prereg_blob:       982e93282537fd77bbd094f194bcc595f3cd56d9
 verify_blob:       48b8864f61a2dd95e7a32250ffbb368c28b8699e
