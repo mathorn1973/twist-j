@@ -131,7 +131,7 @@ for invariant in (
     "needs: architecture\n    runs-on: ubuntu-latest\n    timeout-minutes: 5",
     "if: needs.architecture.result != 'success'",
     "  publication:\n    if: github.ref_type == 'tag' || github.event_name == 'release'\n    runs-on: ubuntu-latest",
-    "if: github.ref_type == 'tag' || github.event_name == 'release'\n    runs-on: ubuntu-latest\n    timeout-minutes: 15",
+    "if: github.ref_type == 'tag' || github.event_name == 'release'\n    runs-on: ubuntu-latest\n    timeout-minutes: 30",
     "actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5",
     "persist-credentials: false",
     "actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",

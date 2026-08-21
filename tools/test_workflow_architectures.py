@@ -29,9 +29,9 @@ class WorkflowArchitectureTests(unittest.TestCase):
         publication_block = self.text[publication_at:]
         self.assertIn("timeout-minutes: 25", architecture_block)
         self.assertIn("timeout-minutes: 5", check_block)
-        self.assertIn("timeout-minutes: 15", publication_block)
+        self.assertIn("timeout-minutes: 30", publication_block)
         self.assertEqual(self.text.count("timeout-minutes: 25"), 1)
-        self.assertEqual(self.text.count("timeout-minutes: 15"), 1)
+        self.assertEqual(self.text.count("timeout-minutes: 30"), 1)
         self.assertEqual(self.text.count("timeout-minutes: 5"), 1)
 
     def test_aggregate_check_depends_on_architecture(self) -> None:
