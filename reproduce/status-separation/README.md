@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 51/51 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 52/52 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -92,6 +92,8 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v59 count check reads the folded tree (305 claims, 23 reproductions, 11 gates). The new QDD selection-boundary check pins eight restricted L4 theorem rows to five completed two-architecture public probes, verifies all seventeen declared dependency edges with no new cross-layer gate, preserves the full two-sided support assumptions of the record-sufficiency theorem, and keeps the weaker-hypothesis strengthening, O2 physical selection, O1 realized events, sampling, unsealed successor work and Bell accounting open. The permanent QDD direct-write firewall remains the final check.
 
 The v58 count check reads the folded tree (297 claims, 23 reproductions, 11 gates). The trace-kernel exterior-closure fold adds four exact theorem rows and one open multi-layer forcing obligation, keeps the exact Hodge-home condition as a separate definition, and pins all five claim rows to the completed two-architecture public probe without promoting the forcing premise. The permanent QDD direct-write firewall remains the final check.
 

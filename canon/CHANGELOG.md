@@ -1,11 +1,84 @@
 # Canon changelog (public series)
 
-## Public Canon v58
+## Public Canon v59
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 297 claims; 0 T-LOCK, 178 T, 43 D, 32 C, 3 H, 25 O, 16 F; 28 live H/O.
+Registry snapshot: 305 claims; 0 T-LOCK, 186 T, 43 D, 32 C, 3 H, 25 O, 16 F; 28 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v59 is one conservative QDD selection-boundary fold. It registers
+eight restricted L4 theorems from five already merged public probes, each with
+a byte-identical x86_64 and aarch64 workflow replay:
+
+```text
+P-QDD-J-AFFINE-APPARATUS-1
+P-QDD-J-CENTRALIZER-TERMINALITY-1
+P-QDD-FRESH-RECORD-NOFEEDBACK-2
+P-QDD-RECORD-COMPLETE-STABILIZER-1
+P-QDD-RECORD-NATURALITY-FORK-1
+```
+
+QDD-J-AFFINE-APPARATUS-NONSELECTION registers the complete four-member frozen
+target-independent affine family, four registered sign classes and the
+two-class self-adjoint involutive boundary. QDD-J-CENTRALIZER-NONSELECTION
+registers the full rational `C_4` stabilizer centralizer, its rational-circle
+family and infinite sign-class nonselection. QDD-J-TERMINALITY-SELECTION
+records ray terminality and strict representative idempotence only as exact
+conditional selectors inside that class.
+
+QDD-FRESH-RECORD-EXTENSION registers the reversible fresh-pointer,
+three-symbol append-only extension under all frozen complementary-projector
+and two-sided support equations. QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION
+registers the exact `R_k-C_k` witness: persistence, no-feedback, reversibility
+and ordinary repeatability do not imply projective idempotence.
+QDD-RECORD-SUFFICIENCY-TERMINALITY registers the four-way equivalence among
+record sufficiency, ray terminality, projective class idempotence and
+`T=+/-Q` only under the full hypotheses
+`TP=PT=0`, `QT=TQ=T` and `T^sharp T=Q`. It makes no claim from weaker
+one-sided hypotheses, for which this fold admits no evidence.
+
+QDD-RECORD-COMPLETE-LUEDER-SELECTION defines the positive condition precisely
+as strict microscopic `S_4` law naturality, not mere observation of a
+quotient. QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY registers the complete
+48-member normalizer and 24 registered sign classes; their collapse to one
+class requires adoption of a new `+/-S_4` physical equality. Neither strict
+naturality nor that enlarged equality is derived or adopted.
+
+The scope of QDD-INSTRUMENT-APPARATUS remains `O` and is sharpened without a
+status move. O2 is now independent physical selection of the post-state law
+and equality inside a complete admissible class. O1 remains realized event
+generation and sampling. Every new theorem stays inside its exact frozen
+rational L4 class, with J-simplex specialization only where stated. There is
+no exhaustion of all J-native apparatuses, L5 event stream, L6 measure,
+decoder completion, SI or Bell claim:
+`SAMPLING NOT PROVIDED`.
+
+The v59 ledger change is exact:
+
+```text
+claims:    297 + 8 = 305,
+T:         178 + 8 = 186,
+D: 43, C: 32, H: 3, O: 25, F: 16, all unchanged,
+live H/O:  28, unchanged,
+normative items: 343 + 8 theorem items = 351,
+dependencies: 521 + 17 = 538,
+evidence rows: 297 + 8 = 305,
+gates:      11, unchanged,
+history rows: 816 + 8 declarations + 1 scope change = 825,
+two-architecture evidence: 215 + 8 = 223,
+reproduction witnesses: 23, unchanged.
+```
+
+Only the five listed public probes are evidence for this fold. No unsealed
+successor work is imported. Bell causal accounting is unchanged. There are no
+gate or status moves, and no probe, workflow, threshold, core-selection or
+frontier-program row changes.
+
+## Public Canon v58
+
+Registry snapshot: 297 claims; 0 T-LOCK, 178 T, 43 D, 32 C, 3 H, 25 O, 16 F; 28 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v58 folds the complete scientific disposition of the merged
 public probe `P-TRACEKERNEL-EXTERIOR-CLOSURE-1`. The probe directory remains

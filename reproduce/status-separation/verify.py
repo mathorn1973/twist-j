@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 178, "D": 43, "C": 32, "F": 16,
+    expected_counts = {"T": 186, "D": 43, "C": 32, "F": 16,
                        "O": 25, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v58",
-        len(rows) == 297
+        "registry and companion-ledger counts match Public Canon v59",
+        len(rows) == 305
         and counts == expected_counts
-        and len(normative) == 343
-        and len(dependencies) == 521
-        and len(evidence) == 297
-        and two_architecture == 215
-        and len(history) == 816
+        and len(normative) == 351
+        and len(dependencies) == 538
+        and len(evidence) == 305
+        and two_architecture == 223
+        and len(history) == 825
         and len(gates) == 11
         and len(programs) == 28
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -2341,7 +2341,7 @@ def run():
     }
     checks.append((
         "QDD-NONSELECTION",
-        "the L4 theorem fixes rational fibre, post-state and dilation nonselection while the apparatus remains O on exactly independent selection and realized-event sampling",
+        "the L4 fibre theorem remains exact while the apparatus O is sharpened to independent selection of law and equality plus realized-event sampling",
         has_status(index, nonselection, "T")
         and normative.get(nonselection, {}).get("item_type") == "THEOREM"
         and normative.get(nonselection, {}).get("status") == "T"
@@ -2373,15 +2373,179 @@ def run():
         )
         and scope_contains_all(
             index, "QDD-INSTRUMENT-APPARATUS",
-            ("only two independent blockers remain",
-             "O2 independent physical instrument selection",
-             "O1 realized event generation / sampling",
-             "target-controlled coupling is circular",
+            ("O2 is now independent physical selection of the post-state law and equality",
+             "O1 remains realized event generation / sampling",
+             "record sufficiency, fresh-pointer ray terminality and projective idempotence are equivalent",
+             "weak S_4 quotient covariance leaves 24 classes",
+             "none of record sufficiency, terminality, strict law naturality or enlarged gauge equality is derived or adopted",
              "SAMPLING NOT PROVIDED",
              "SAMPLING IMPOSSIBLE is not claimed"),
         )
         and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
         and has_status(index, "QUADRATIC-DECODER-DATA", "O"),
+    ))
+
+    qdd_v59_rows = (
+        "QDD-J-AFFINE-APPARATUS-NONSELECTION",
+        "QDD-J-CENTRALIZER-NONSELECTION",
+        "QDD-J-TERMINALITY-SELECTION",
+        "QDD-FRESH-RECORD-EXTENSION",
+        "QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION",
+        "QDD-RECORD-SUFFICIENCY-TERMINALITY",
+        "QDD-RECORD-COMPLETE-LUEDER-SELECTION",
+        "QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY",
+    )
+    qdd_v59_evidence = {
+        qdd_v59_rows[0]: (
+            "probes/P-QDD-J-AFFINE-APPARATUS-1",
+            "c533652710c6a3cea58ee40473233b46ab64cdfbae4f0a6ee17e6733ecc035d2",
+        ),
+        qdd_v59_rows[1]: (
+            "probes/P-QDD-J-CENTRALIZER-TERMINALITY-1",
+            "f13fbcd080aa618c6896fe00c0b2157514b97beeb446cd1b49f8928e6789cd3e",
+        ),
+        qdd_v59_rows[2]: (
+            "probes/P-QDD-J-CENTRALIZER-TERMINALITY-1",
+            "f13fbcd080aa618c6896fe00c0b2157514b97beeb446cd1b49f8928e6789cd3e",
+        ),
+        qdd_v59_rows[3]: (
+            "probes/P-QDD-FRESH-RECORD-NOFEEDBACK-2",
+            "9b2cf5cfeb18f6c1b68a526b8d6f88c9e4b1ddfc72a3576e401357e2f4336b49",
+        ),
+        qdd_v59_rows[4]: (
+            "probes/P-QDD-FRESH-RECORD-NOFEEDBACK-2",
+            "9b2cf5cfeb18f6c1b68a526b8d6f88c9e4b1ddfc72a3576e401357e2f4336b49",
+        ),
+        qdd_v59_rows[5]: (
+            "probes/P-QDD-FRESH-RECORD-NOFEEDBACK-2",
+            "9b2cf5cfeb18f6c1b68a526b8d6f88c9e4b1ddfc72a3576e401357e2f4336b49",
+        ),
+        qdd_v59_rows[6]: (
+            "probes/P-QDD-RECORD-COMPLETE-STABILIZER-1",
+            "d8f756317e7394c41a589fa69143bb4ac7d32c69ccddfb4cfe8fa2f5257a6322",
+        ),
+        qdd_v59_rows[7]: (
+            "probes/P-QDD-RECORD-NATURALITY-FORK-1",
+            "135951e6ad63f7ef0825ce63557e22e7e8a1301c0ca58c583b7756782fc2673d",
+        ),
+    }
+    qdd_v59_dependencies = {
+        qdd_v59_rows[0]: {
+            ("QDD-INSTRUMENT-NONSELECTION", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+        qdd_v59_rows[1]: {
+            ("QDD-INSTRUMENT-NONSELECTION", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+        qdd_v59_rows[2]: {
+            (qdd_v59_rows[1], "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+        qdd_v59_rows[3]: {
+            ("QDD-INSTRUMENT-NONSELECTION", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+        qdd_v59_rows[4]: {
+            (qdd_v59_rows[3], "REQUIRES"),
+            (qdd_v59_rows[1], "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+        qdd_v59_rows[5]: {
+            (qdd_v59_rows[3], "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+        qdd_v59_rows[6]: {
+            (qdd_v59_rows[1], "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+        qdd_v59_rows[7]: {
+            (qdd_v59_rows[6], "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+    }
+    checks.append((
+        "QDD-SELECTION-BOUNDARY",
+        "eight public L4 QDD rows register exact nonselectors and conditional selectors while O2, O1, the weaker-hypothesis strengthening, and sampling stay open",
+        all(
+            has_status(index, claim, "T")
+            and normative.get(claim, {}).get("item_type") == "THEOREM"
+            and normative.get(claim, {}).get("status") == "T"
+            and normative.get(claim, {}).get("layer") == "L4"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and index.get(claim, {}).get("evidence")
+            == qdd_v59_evidence[claim][0]
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("location")
+            == qdd_v59_evidence[claim][0]
+            and evidence.get(claim, {}).get("sha256")
+            == qdd_v59_evidence[claim][1]
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and claim not in programs
+            and {
+                (row["depends_on"], row["relation"])
+                for row in dependencies if row["item_id"] == claim
+            } == qdd_v59_dependencies[claim]
+            and all(row["owner_item_id"] != claim for row in gates.values())
+            for claim in qdd_v59_rows
+        )
+        and scope_contains_all(
+            index, qdd_v59_rows[0],
+            ("complete frozen target-independent affine family",
+             "four registered sign classes",
+             "self-adjoint involutivity leaves a in {1,4}",
+             "SAMPLING NOT PROVIDED"),
+        )
+        and scope_contains_all(
+            index, qdd_v59_rows[1],
+            ("Q R_k direct-sum Q C_k direct-sum Q J_k",
+             "infinitely many registered sign classes",
+             "four algebraic members and two sign classes",
+             "k=2 gives P_2=E_low and Q_2=E_high"),
+        )
+        and scope_contains_all(
+            index, qdd_v59_rows[2],
+            ("fresh-pointer ray terminality forces",
+             "strict representative idempotence",
+             "neither terminality nor strict idempotence is derived or adopted"),
+        )
+        and scope_contains_all(
+            index, qdd_v59_rows[3],
+            ("P^2=P=P^sharp", "TP=PT=0", "QT=TQ=T",
+             "N HIGH outcomes leave conditioned state T^N v",
+             "these protocol records are not D_clock"),
+        )
+        and scope_contains_all(
+            index, qdd_v59_rows[4],
+            ("T_*=R_k-C_k", "T_*^2=Q_k",
+             "distinct first and second conditioned rays"),
+        )
+        and scope_contains_all(
+            index, qdd_v59_rows[5],
+            ("dim(QV)>=2", "TP=PT=0", "QT=TQ=T",
+             "weaker one-sided hypotheses", "T^2=+T or T^2=-T"),
+        )
+        and scope_contains_all(
+            index, qdd_v59_rows[6],
+            ("strict microscopic law naturality",
+             "T rho(g)=rho(g) T for every g in Gamma_k",
+             "fails 16 of 24 Gamma_k tests"),
+        )
+        and scope_contains_all(
+            index, qdd_v59_rows[7],
+            ("Aut(S_4)=Inn(S_4)",
+             "48 algebraic members and 24 registered sign classes",
+             "commutes with four of 24 Gamma_k elements",
+             "failing twenty strict naturality squares",
+             "new +/-S_4 orbit equality"),
+        )
+        and evidence["QDD-INSTRUMENT-APPARATUS"]["sha256"]
+        == scope_sha256(index, "QDD-INSTRUMENT-APPARATUS")
+        and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
+        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and "QDD-RELABELING-CEILING" not in normative
+        and "QDD-CLASS-IDEMPOTENCE-SELECTION" not in normative,
     ))
 
     suzuki = "SUZUKI-LOCAL-CAPACITY-NOGO"

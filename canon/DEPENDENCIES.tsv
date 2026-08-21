@@ -520,3 +520,20 @@ TRACEKERNEL-CURVATURE-FORCING	DEF-ARCHITECTURE	REQUIRES	the obligation asks what
 TRACEKERNEL-CURVATURE-FORCING	DEF-EXACT-HODGE-HOME-CLOSURE	REQUIRES	the obligation classifies whether every fully admissible realization satisfies the exact named two-stage predicate
 TRACEKERNEL-CURVATURE-FORCING	TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY	REQUIRES	the full-equivariance negative route uses the exact registered eight-of-480 block-action boundary
 TRACEKERNEL-CURVATURE-FORCING	CURVATURE-OPERATOR-CANONICAL	REQUIRES	the forcing classification cannot advance until the upstream obligation publishes the carrier and complete admissible L2 operator or commutator class; UNIQUE versus NONUNIQUE does not itself decide the common Hodge-home property
+QDD-J-AFFINE-APPARATUS-NONSELECTION	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the four-member target-independent affine class is a restricted exact refinement of the registered L4 fixed-effect post-state nonselection boundary
+QDD-J-AFFINE-APPARATUS-NONSELECTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the restricted affine classification neither derives a physical selector nor supplies realized events or sampling
+QDD-J-CENTRALIZER-NONSELECTION	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the complete affine-stabilizer centralizer class refines the registered L4 fixed-effect post-state nonselection boundary
+QDD-J-CENTRALIZER-NONSELECTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the infinite restricted-class nonselection result does not exhaust every admissible apparatus or discharge O2 or O1
+QDD-J-TERMINALITY-SELECTION	QDD-J-CENTRALIZER-NONSELECTION	REQUIRES	the conditional terminality theorem is proved only inside the complete invertible centralizer class
+QDD-J-TERMINALITY-SELECTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	terminality and strict idempotence are conditional selectors not derived or adopted as physical laws, and O1 remains open
+QDD-FRESH-RECORD-EXTENSION	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the fresh-record construction uses the registered L4 branch/support setting while adding no selector
+QDD-FRESH-RECORD-EXTENSION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	a reversible append-only protocol is not a realized event stream or sampling map and does not close O2 or O1
+QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION	QDD-FRESH-RECORD-EXTENSION	REQUIRES	the exact R_k-C_k witness is evaluated in the frozen reversible fresh-pointer and append-only record construction
+QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION	QDD-J-CENTRALIZER-NONSELECTION	REQUIRES	the witness and its R_k,C_k decomposition lie in the complete affine-stabilizer centralizer class
+QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the restricted nonimplication rules out listed sufficient premises but neither selects an apparatus nor supplies sampling
+QDD-RECORD-SUFFICIENCY-TERMINALITY	QDD-FRESH-RECORD-EXTENSION	REQUIRES	record sufficiency and ray terminality are defined on the full two-sided-support fresh-record branch class
+QDD-RECORD-SUFFICIENCY-TERMINALITY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	record sufficiency remains an additional physical premise and supplies neither a complete apparatus class nor O1 sampling
+QDD-RECORD-COMPLETE-LUEDER-SELECTION	QDD-J-CENTRALIZER-NONSELECTION	REQUIRES	the strict S_4 centralizer result is compared against the registered three-dimensional C_4 centralizer boundary
+QDD-RECORD-COMPLETE-LUEDER-SELECTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	strict microscopic law naturality is conditional and not derived, so the selected restricted class does not close O2 or O1
+QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY	QDD-RECORD-COMPLETE-LUEDER-SELECTION	REQUIRES	the normalizer-versus-centralizer fork sharpens the exact strict S_4 naturality selection class
+QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	neither strict naturality nor the enlarged +/-S_4 equality is derived or adopted and weak covariance remains nonselective
