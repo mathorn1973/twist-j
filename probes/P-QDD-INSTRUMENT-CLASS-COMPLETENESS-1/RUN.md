@@ -19,7 +19,7 @@ stdout_sha256:     8123b0a53e4f1cebce3c9555b39f8a89323476b51c538fe254901a7aea4f9
 PREREG_blob:       7acf7a56dba092d108c5307126def72d26a32765
 PREREG_sha256:     1e5642a7200ed7496c0ed87a3ec086866618ea99159c10e0a9692106085bef7a
 verify_blob:       6b1f047e7c4c8bc536459fa0ab63a5536edeff86
-verify_sha256:     9f17862e4ac63f632da5106b1c6a823aa0063511848a03e119103a4f81f19daf
+verifier_sha256:   9f17862e4ac63f632da5106b1c6a823aa0063511848a03e119103a4f81f19daf
 formal_runs:       1
 result:            18/18 PASS
 decision:          FINITE-MEMORY-FIBRE-BOUNDARY
