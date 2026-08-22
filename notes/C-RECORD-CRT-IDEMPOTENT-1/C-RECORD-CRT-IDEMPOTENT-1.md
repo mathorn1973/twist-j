@@ -1,18 +1,21 @@
 # C-RECORD-CRT-IDEMPOTENT-1
 
-**Title:** Record structure of finite quotients of `Z[zeta_5]`: support forces
-the Boolean algebra, exponents carry the thickness
+**Title:** Record quotient calculus of `Z[zeta_5]`: support forces the Boolean
+algebra, exponents carry the thickness, reductions are classified by ideal
+inclusion
 
-**Status:** NON-CANONICAL INCUBATION CANDIDATE. No public T/D/C/H/O/F status is
-created here. Proposed status on promotion: T, narrow arithmetic scope.
+**Status:** NON-CANONICAL INCUBATION CANDIDATE, revision 2. No public
+T/D/C/H/O/F status is created here. Proposed status on promotion: T, narrow
+arithmetic scope.
 
-**Date opened:** 2026-08-22
+**Date opened:** 2026-08-22. **Revision 2:** 2026-08-22, after the rev1 run
+was archived as defective (section 6).
 
-**Layer:** L1 arithmetic only. No decoder, measure, physical reading, or
-cross-layer lift is claimed.
+**Layer:** L1 arithmetic only. No decoder, measure, physical reading, event
+semantics, or cross-layer lift is claimed.
 
 This note changes no Canon, Registry, Frontier, dependency, gate, evidence,
-verifier, status, release, decoder, or layer assignment. It touches no file
+verifier, status, release, decoder, or layer assignment, and touches no file
 under `canon/`.
 
 ---
@@ -27,198 +30,250 @@ Read from the public head on 2026-08-22: `STATUS.md` declares `STATE: ACTIVE`,
 declared hash agrees with `canon/SHA256SUMS`. A fold session must re-confirm
 the head before acting on this note.
 
-## 1. Claim
+## 1. Scope
 
-Let `R = Z[zeta_5]`, a Dedekind domain, and let
+This candidate covers the record quotient calculus **R1-R6 only**. The
+following material, present in earlier drafts of this note, is deliberately
+**excluded** from the candidate and from its verifier, and remains in the
+companion synthesis note as unverified non-probe material:
 
-```
-I = prod_{i=1}^{r} p_i^{e_i},        r = |Supp(I)|,
-```
+- the reading of the three arithmetic positions of `J` as write / read / scale,
+- the neighbouring-ring census (`Z[i]`, `Z[zeta_7]`),
+- cyclotomic unit-rank minimality,
+- apparatus terminology and the `M = (I, tau, mu)` signature,
+- all renormalization-group and continuum language.
 
-be a nonzero ideal with distinct prime ideals `p_i`.
+## 2. Claim
 
-**(R1) CRT decomposition and Boolean skeleton.**
-
-```
-R/I  ~=  prod_{i=1}^{r} R/p_i^{e_i},
-```
-
-each factor local. Hence, as Boolean algebras,
-
-```
-Idem(R/I)  ~=  F_2^r  ~=  Idem(R/sqrt(I)).
-```
-
-**(R2) Support versus thickness.** `Supp(I)` alone determines the Boolean
-algebra of outcomes; the exponent vector `(e_1, ..., e_r)` is invisible to the
-idempotent layer and carries the local thickness (the nilpotent filtration
-`sqrt(I)/I`).
-
-**(R3) Local correction.** `|Supp(I)| = 1` implies `|Idem(R/I)| = 2` even when
-`R/p^e` is not a field. The correct statement is about support cardinality, not
-about being a field.
-
-**(R4) Minima.** Smallest rational conductor with two channels is `m = 6`, with
-`R/(6) ~= F_16 x F_81` and `|R/(6)| = 6^4 = 1296`. In the full ideal class the
-smallest two-channel square-free ideal is `lambda p_11` of norm `55`, and the
-smallest square-free ideal whose support contains both a prime over 5 and a
-prime over 2 is
+Let `R = Z[zeta_5]`, a Dedekind domain, `lambda = 1 - zeta_5`, and let
 
 ```
-I = lambda (2),      N(I) = 5 * 16 = 80,      R/I ~= F_5 x F_16.
+I = prod_{P in Supp(I)} P^{e_P}
 ```
 
-**(R5) Extreme points are not apparatuses.** Both minimal kernels give a single
-channel and therefore zero Boolean resolution. Nontrivial Boolean distinction
-requires at least two distinct prime-ideal components; a one-prime record
-cannot be an apparatus.
+be a nonzero proper ideal, `r = |Supp(I)|`.
 
-**(P) Three arithmetic positions of `J = 1 + zeta_5^2`.** With
-`lambda = 1 - zeta_5` and the reduction `zeta -> 1`:
+**(R1) Canonical Booleanization.** By the Chinese remainder theorem
+`R/I = prod_P R/P^{e_P}` with every factor local, so an idempotent is a choice
+of `0` or `1` in each factor:
 
-| position | phase | scale | `J` |
-|---|---|---|---|
-| ramified residue `lambda` | order 1, dies | order 4 shadow | `J = 2` in `F_5^x`, order 4 |
-| binary residue `(2)` | order 5, exact | order 3 shadow | order 15, primitive in `F_16^x` |
-| archimedean | infinite | infinite | `sigma_1(J) sigma_4(J) = phi^-2` exactly |
+```
+Idem(R/I)  ~=  P(Supp I),
+```
 
-Both finite positions are torsion: every finite quotient has a finite unit
-group, so no finite position carries an infinite scale direction. The
-archimedean position is the only one that does.
+the **power set of the support**, as Boolean algebras. The atoms are labelled
+by the primes themselves; no numbering or ordering of the primes is used.
 
-**(S) `J`-specificity of the binary position.** `Phi_5 mod 2` is irreducible,
-so `R/(2) ~= F_16` is a field: one channel, no splitting, no thickness. This
-fails in neighbouring rings — `Z[i]/(2)` has the nonzero nilpotent `1 + i`, and
-`Z[zeta_7]/(2) ~= F_8 x F_8` splits.
+**(R2) Radical invariance.** The reduction `R/I -> R/rad(I)` induces a
+bijection `Idem(R/I) -> Idem(R/rad I)`. The exponent vector is therefore
+invisible to the idempotent layer.
 
-**(U) Cyclotomic unit-rank minimality, modest form.** For prime `p` the unit
-rank of `K_p` is `r = (p-3)/2`, so `p = 5` is the first prime with a nontrivial
-finite phase and exactly one infinite unit direction. Dropping primality,
-`r = 1` iff `phi(n) = 4` iff `n in {5, 8, 10, 12}`; in the full cyclotomic class
-the rank-1 condition is therefore *equivalent to quarticity* and is not an
-independent selector. In discriminant order the class runs
-`K_5 (125) < K_12 (144) < K_8 (256)`.
+**(R3) Exact Loewy profile.** With `n_I = rad(I)/I` and the convention
+`n^0 = R/I`, layer `k` is `n^k/n^(k+1)` for `k >= 0`, so the first layer is
+`n^0/n^1 = R/rad(I)`. Then
 
-## 2. Guards (what is NOT claimed)
+```
+|n^k / n^(k+1)|  =  prod { N(P) : e_P > k },
+L(R/I)           =  min{ L : n^L = 0 }  =  max_P e_P.
+```
+
+Starting the layer list at `n^1` yields a different, wrong table; the
+verifier exhibits that difference against a route that never forms the chain.
+
+**(R4) Reductions are forced.** For nonzero proper ideals `I, J`,
+
+```
+Hom_{R-alg}(R/I, R/J) = { the canonical projection r + I -> r + J }   if I subset J,
+                        empty                                        otherwise.
+```
+
+`R/I` is generated as an `R`-algebra by the image of `R`, so the map is
+determined; well-definedness is exactly `I subset J`. The category of finite
+record rings `R/I` with `R`-algebra maps is therefore **thin**. Unitality is
+what makes it thin: dropping unitality, the multiplicative `R`-linear maps are
+exactly the idempotents of `R/J` annihilated by `I`, and there are up to four
+of them in the verified family.
+
+**(R5) Irreversibility.** A strict quotient `R/I -> R/J`, `I` strictly inside
+`J`, has no `R`-algebra section. Record coarse-graining is irreversible.
+
+**(R6) Negative result: the Boolean layer does not fix the depth.** For
+`I_L = lambda^L (2)`, every `L >= 1` gives the same support `{lambda, (2)}`,
+the same radical, the same reduced record `R/rad = F_5 x F_16`, and the same
+Boolean algebra of size 4, while `L(R/I_L) = L` is unbounded. Hence the
+Boolean skeleton and the reduced record **cannot determine the filtration
+length**.
+
+## 3. Guards (what is NOT claimed)
 
 **G1 (classification is not selection).** `Spec R` catalogues the possible
-kernels; it does not select which `I` a physical apparatus realizes, and it does
-not by itself determine `I` (the exponents are extra data). Which `I`
-corresponds to which apparatus is not claimed here.
+kernels and `R1-R5` classify the maps between the resulting records. Nothing
+here selects which `I` a physical apparatus realizes, and `Spec` alone does
+not even determine `I`, since the exponents are extra data.
 
-**G2 (no event semantics).** Nothing here says that a physically completed event
-must land in the idempotent/saturation class. The public theorem
+**G2 (no event semantics).** Nothing here says that a physically completed
+event must land in an idempotent class. The public theorem
 `COMM-SAT(T) iff Xi_T = 0 iff T = +/-Q iff class(T)^2 = class(T)` is an exact
 algebraic characterization *once COMM-SAT is posited*; whether physical event
-completion implies it is exactly `QDD-TERMINAL-EVENT-SEMANTICS [O]`, whose fence
-forbids COMM-SAT, idempotence, `+/-Q`, Lueders, or target effects as
-construction inputs. This note adopts no such law and supplies no input to it.
+completion implies it is exactly `QDD-TERMINAL-EVENT-SEMANTICS [O]`, whose
+fence forbids COMM-SAT, idempotence, `+/-Q`, Lueders, or target effects as
+construction inputs. This note adopts no such law and supplies no input to
+one. R6 is a *negative* result and is stated so that it constrains any future
+depth-based completion law without supplying one.
 
-**G3 (Boolean algebra is a space, not an outcome).** `Idem(R/I)` determines the
-space of possible Boolean events. It does not determine which atom occurs;
-atom selection remains a dynamical problem and is not addressed.
+**G3 (a space of events, not an event).** `Idem(R/I)` determines the space of
+possible Boolean events. It does not determine which atom occurs; atom
+selection remains a dynamical question and is not addressed.
 
-**G4 (no physical names).** The three positions are named arithmetically
-(ramified residue, binary residue, archimedean). Any reading of them as
-write / read / scale is a dictionary act, out of scope here and separate from
-`TWO-PLACE-PHYSICS [D]`. In particular `(2) subset Z[zeta_5]` is *not* asserted
-to be the `K_8 = Q(zeta_8)` read place; those are two distinct binary objects
-and a bridge between them is not claimed.
+**G4 (orders, not modules).** R3 is verified as an identity between **orders**.
+The finer statement that each layer decomposes as a direct sum of
+one-dimensional `kappa(P)`-spaces is *not* verified here and is not claimed;
+an earlier draft asserted it on the strength of a cardinality comparison, and
+that is exactly the defect class recorded in section 6.
 
-**G5 (no measure, no coarse-graining).** No `mu`, no L6 measure, no RG flow, no
-continuum limit, and no scaling theorem is claimed. The spectral `2+2` splitting
-of `M_J` is not asserted to be an RG relevant/irrelevant decomposition.
+**G5 (no lifts).** No measure, no coarse-graining calculus, no RG flow, no
+continuum limit, no physical naming of the positions. Any lift between layers
+requires its own named public gate, and none is claimed.
 
-**G6 (no unconditional selection of 5).** Nothing here selects the prime 5, the
-cycle, the exponent, or a physical reading unconditionally; the public
-`CARRY-PENTAD [T]` guard applies unchanged and is not routed around.
+## 4. Relation to public rows
 
-## 3. Relation to public rows (predecessor authority)
+Public predecessors, to be re-confirmed from the head at claim time:
+`CARRY-PENTAD [T]` (`canon/REGISTRY.tsv` row 232), `J-BINARY-NORM-DESCENT [T]`
+(row 16), `CARRY-QUADRATIC-SYMMETRY [T]` (row 15). Those rows already carry the
+carry-geometry, pentad, `S_5`, and mod-2 material; this candidate does not
+re-derive any of it and adds only the quotient calculus above. The standing
+guard of `CARRY-PENTAD [T]` — that it selects neither the prime 5, nor the
+cycle, nor the exponent, nor a physical reading — applies here unchanged and
+is not routed around.
 
-The public predecessors, to be re-confirmed at claim time, are:
-
-- `CARRY-PENTAD [T]` (`canon/REGISTRY.tsv` row 232) — pentad on `F_2^4`,
-  `O(q) = O^-(4,2) ~= S_5`, `I + C^2` integrally conjugate to `M_J`, all
-  `I + C^a` read as 2. The identity `J = 2` at the ramified position is the same
-  carry token; this note does not re-derive it.
-- `J-BINARY-NORM-DESCENT [T]` (row 16) — `O_5/(2) ~= F_16`,
-  `q_2 = Tr_(F_4/F_2) o N_(F_16/F_4)`, singular locus exactly `mu_5`, the
-  `A4/2A4 -> O_5/2O_5` isometry and transport to the pentad form. The binary
-  position of the table above is this row's carrier.
-- `CARRY-QUADRATIC-SYMMETRY [T]` (row 15).
-- `QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T]` and
-  `ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM [T]` for clause (U): those
-  are separate frozen classes and this note adds a third reading, not a
-  selection chain.
-
-Origin of idea, not predecessor authority: an internal incubation freeze of
-2026-07-19 (`C-CARRY-PENTAD-1`), superseded for public purposes by the rows
-above.
-
-## 4. Preregistration (frozen fields)
+## 5. Preregistration (frozen fields)
 
 ```
-Equation:    clauses (R1)-(R5), (P), (S), (U) above.
-Code:        verify_record_crt_idempotent.py, Python standard library only,
-             exact integer arithmetic, no floats anywhere, deterministic,
-             single process, no file writes, runtime well under 120 s.
+Equation:    clauses (R1)-(R6) of section 2.
+Code:        verify_record_quotient.py, Python standard library only, exact
+             integer arithmetic, no floats anywhere, deterministic, single
+             process, no file writes, no network. Ideals are Hermite normal
+             forms of sublattices of Z^4, so ideals that are not rational
+             conductors (lambda^L (2)) are handled directly.
              Run with LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1
              PYTHONHASHSEED=0 TZ=UTC.
-Carrier:     R = Z[X]/Phi_5 with basis (1, z, z^2, z^3); quotients R/(m)
-             enumerated exhaustively for m in {2,3,4,5,6,10,11,20};
-             prime-ideal data from the splitting law in Q(zeta_5);
-             unit ranks from Dirichlet; conductors n < 200 for phi(n) = 4.
-Systematics: none (exact integers, full enumeration, not sampling).
-             ONE platform this session (x86_64, Python 3); the
-             two-architecture byte gate belongs to a public probe at
-             promotion, not to this incubation run.
+Carrier:     R = Z[X]/Phi_5 with basis (1, z, z^2, z^3); the eleven-ideal
+             family of section "Part 2"; primes above 2, 3, 5, 11; the
+             Hom family restricted to ideals of norm at most 2000; the R6
+             family I_L = lambda^L (2) for L = 1..5, of norms 80 to 50000.
+Systematics: none (exact integers; exhaustive enumeration over each quotient,
+             not sampling).
+             ONE platform this session (x86_64, Python 3). The POLICY
+             section 4 two-architecture gate is NOT claimed.
 Threshold:   any single gate FAIL fires the falsifier; no threshold moves
              after the result.
-Layer:       L1 only. No lift to L2..L6 claimed.
-Falsifier:   an ideal I with |Idem(R/I)| != 2^|Supp(I)|; an ideal with
-             Idem(R/I) not isomorphic to Idem(R/sqrt I); a one-support ideal
-             with more than two idempotents; a two-channel square-free ideal
-             of norm below 55; a square-free ideal of norm below 80 whose
-             support meets both 5 and 2; a nontorsion element in a finite
-             quotient; Phi_5 mod 2 reducible; a cyclotomic field of unit
-             rank 1 outside {K_5, K_8, K_12}.
+Layer:       L1 only.
+Falsifier:   an ideal with |Idem(R/I)| different from 2^|Supp(I)|; an
+             idempotent whose residue is neither 0 nor 1 at some prime of the
+             support; a failure of the Boolean isomorphism on any pair; an
+             ideal with Idem(R/I) not in bijection with Idem(R/rad I); a
+             layer order differing from prod{N(P) : e_P > k}; a Loewy length
+             differing from max_P e_P; an R-algebra map R/I -> R/J with I not
+             inside J, or two distinct unital ones, or a unital section of a
+             strict quotient; a member of the I_L family whose support,
+             radical, or idempotent count differs from the others.
 ```
 
-## 5. Result
+## 6. Dead-run record: rev1 is archived, not corrected
 
-40 gates, all OK, exit 0, empty stderr, runtime 0.59 s on one platform.
+The rev1 verifier and its stdout are kept **unchanged** as
 
-```text
-verifier:  verify_record_crt_idempotent.py
-           sha256 f3e1b167f53503d8fd06f1ddc9f6b803d7ccaa832f3e92e469e89ed6828b1b48
-stdout:    record_crt_idempotent.stdout.txt   (3104 bytes, LF line endings)
-           sha256 6c1ce9c627d3d4e8c5c108701bb3119bcf5b374b747683f6ed36e1ec00b7f6df
+```
+ARCHIVE_verify_record_crt_idempotent_rev1_DEFECTIVE.py
+    sha256 f3e1b167f53503d8fd06f1ddc9f6b803d7ccaa832f3e92e469e89ed6828b1b48
+    9288 bytes
+ARCHIVE_verify_record_crt_idempotent_rev1_DEFECTIVE_stdout.txt
+    sha256 6c1ce9c627d3d4e8c5c108701bb3119bcf5b374b747683f6ed36e1ec00b7f6df
+    3045 bytes, 43 gate lines and 1 RESULT line
+```
+
+**What the dead run reported.** `RESULT: ALL GATES OK`, exit 0, empty stderr.
+
+**Cause, stated mechanically per defect.** An owner review found seven, all
+confirmed:
+
+1. the note claimed 40 gates; the verifier had 43;
+2. the note recorded the stdout as 3104 bytes; after LF normalization the
+   file and the published blob are 3045 bytes, and the byte count was not
+   regenerated with the hash;
+3. gate `S3` had the literal `True` as its condition and therefore tested
+   nothing;
+4. gate `P4` claimed `(5) = lambda^4` but evaluated `625 == 625`; the ideal
+   identity is true, the element identity is false, and the gate tested
+   neither. Exactly, `(1 - z)^4 = 5 u` with `u = -z + z^2 - z^3`, `N(u) = 1`;
+5. gate `M2` claimed `R/(6) = F_16 x F_81` but evaluated `6^4 == 16 * 81`;
+6. the position table called the archimedean phase infinite, when `zeta_5` has
+   order 5 in every embedding and it is the free unit direction that is
+   infinite;
+7. the phrase "neither minimal kernel is an apparatus" and its gate used
+   apparatus language, which is not an L1 notion.
+
+**Diagnosis.** The mathematics stood; the verification did not. Defects 3-5
+are one class: a condition that cannot fail. A successor draft, written to fix
+them, reproduced the same class in three further places and was discarded
+without publication; only rev1 was ever published, so only rev1 is archived.
+
+**Preservation.** Both rev1 artifacts are kept, not deleted, and archived
+unchanged; their bytes equal the blobs published on the pull-request branch.
+No threshold moved. The claims themselves are unchanged in substance and were
+independently re-derived by routes that share no code with either verifier.
+A corrected preregistration (section 5) was frozen before the rev2 execution.
+
+## 7. Result
+
+```
+verifier:  verify_record_quotient.py
+           sha256 9f36d76cf89c128db1c0388a623c87c634451718e839ef4822440fbc5226f824
+           22191 bytes
+stdout:    record_quotient.stdout.txt
+           sha256 079e35b5c93c9509d98da52d4140cf1f4e8f1bbf34a45ae105ff18977bf14e6e
+           4663 bytes, LF endings, 31 gate lines and 1 RESULT line
+harness:   mutation_test.py
+           sha256 228be8a98ff1cc258badd9323b315fc55e60a8137b1a605cddbec80ad6175fc9
+           12595 bytes
 platform:  x86_64, Python 3, neutral env; ONE platform only. A public probe
            must reproduce byte-identically on a second architecture before
-           any T. Re-running the verifier reproduces the pinned stdout
-           exactly; the pin is taken on LF endings, so compare after the
-           repository's `text=auto eol=lf` normalization.
+           any T. Two runs of the verifier reproduce the pinned stdout
+           exactly; pins are taken on LF content, per the repository's
+           `text=auto eol=lf` normalization.
 ```
 
-Two falsifier clauses are retired to proofs rather than tests: every finite
-quotient has a finite unit group (so no finite position can carry a nontorsion
-element), and `R/(2)` is a field iff `ord_5(2) = 4`.
+31 gates, all OK, exit 0, empty stderr, runtime about 1.1 s.
 
-## 6. Settled formulation
+**The guarantee that the gates test something.** Not a source scan: a source
+scan for literal constants is blind to construction-true conditions, which is
+how three rounds of this file failed. Instead `mutation_test.py` breaks, one
+at a time, the thing each gate claims to test, and requires the gate to
+notice. It enforces four conditions and exits 0 only if all hold:
+
+- every mutation kills at least one gate (a surviving mutation is a proven
+  tautology);
+- every mutation kills the gates it declares as targets;
+- every gate is killed by at least one mutation with a clean attribution —
+  **31 of 31 gates are covered**;
+- a deliberately tautological gate injected into a scratch copy is reported
+  as uncovered, which is the harness's own self-test, and it passes.
+
+Result: 31 mutations, all killed their targets, 31 of 31 gates covered,
+self-test passed, exit 0, runtime about 72 s.
+
+The harness earned its place during the rev2 build: it showed that an earlier
+form of gate `L5` compared two routes that both called `radical()`, so a
+broken radical moved both sides together and the gate could not fail. `L5`
+now takes its second route from the residue-field sizes over the support and
+forms no radical ideal; mutation `M18` exists to keep it that way.
+
+## 8. Settled formulation
 
 > `J` determines reversible arithmetic motion; `I` determines the loss;
-> `Supp(I)` forces the Boolean algebra of outcomes; `(e_i)` carry the
-> thickness; `mu_I` remains physics.
+> `Supp(I)` forces the Boolean algebra of outcomes; `(e_P)` carry the
+> thickness; the weight remains physics.
 
-Signature of a measurement, at this level of description:
-
-```
-M = (I, tau, mu_I),        B_I = Idem(R/I) forced.
-```
-
-`tau` (the event-completion law) and `mu_I` (the weight) are open and are not
-addressed here; `tau` in the nilpotent filtration `sqrt(I)/I` is recorded as an
-`[H]` direction in the companion synthesis note, valuable precisely because it
-uses neither COMM-SAT nor idempotence as an input, and still short of the
-`QDD-TERMINAL-EVENT-SEMANTICS [O]` fence until it predicts something
-independent and attaches to a physically chosen `I`.
+What is open, and is not addressed here: which `I` a physical apparatus
+realizes, the law of event completion, and the measure. R6 says only that the
+first of these cannot be read off the Boolean layer.
