@@ -2,13 +2,29 @@
 
 Status: **LOCAL FORMAL RUN COMPLETE. GITHUB TWO-ARCHITECTURE GATE PENDING.**
 
+## Machine record
+
+pin_commit: 835d68c9c451cc1a8a62f6ff1437450b909d24d5
+verifier_sha256: 78b5ae47fbede9449e0a7c706dc12e00661a0d3d63227c57ee6a35de84f3ef42
+command: python3 probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-2/verify.py
+platform: Debian GNU/Linux 13
+architecture: x86_64
+python: 3.13.5
+exit_code: 0
+stdout_sha256: 6d81ea8c28b55912d63e6a35b3aa19ded5bb3648dc82925bf0026e41fbb4a072
+stdout_bytes: 499
+stdout_lines: 15
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+
+The flat fields above are the repository checker's required machine-readable view. They describe the single formal local leg and do not alter the pinned scientific content.
+
 ```text
-claim issue:          #527
-branch:               probe/P-J-ODD-MOTOR-MEDIATED-BRIDGE-2
-pin commit:           835d68c9c451cc1a8a62f6ff1437450b909d24d5
-pin parent:           7a0fb56e44e652879aec1cc188a8867c63f39577
-layer:                L1 exact arithmetic only
-result exposure:      RESULT-EXPOSED
+CLAIM ISSUE           #527
+BRANCH                probe/P-J-ODD-MOTOR-MEDIATED-BRIDGE-2
+PIN PARENT             7a0fb56e44e652879aec1cc188a8867c63f39577
+LAYER                  L1 exact arithmetic only
+RESULT EXPOSURE        RESULT-EXPOSED
 ```
 
 ## Pin and public readback
@@ -35,35 +51,18 @@ Both files were read back from public GitHub at the exact pin. The returned blob
 
 The predecessor identifier `P-J-ODD-MOTOR-MEDIATED-BRIDGE-1` stopped before execution on a readback mismatch and supplied no evidence to this run.
 
-## Environment
+## Execution detail
+
+The formal command recorded above is the canonical repository command required by `tools/check_verifier.py`. It was executed once after pin and readback inside an emptied deterministic shell environment with `PYTHONHASHSEED=0`, `LC_ALL=C`, `LANG=C`, and `TZ=UTC`.
 
 ```text
-platform:             Debian GNU/Linux 13
-architecture:         x86_64
-Python:               3.13.5
-```
-
-No machine nickname is recorded.
-
-## Command
-
-Executed exactly once after pin and readback, in an emptied deterministic environment:
-
-```text
-env -i PATH="$PATH" PYTHONHASHSEED=0 LC_ALL=C LANG=C TZ=UTC \
-  python3 probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-2/verify.py
-```
-
-## Outcome
-
-```text
-exit code:            0
-stderr bytes:         0
-stdout bytes:         499
-stdout lines:         15
-stdout sha256:        6d81ea8c28b55912d63e6a35b3aa19ded5bb3648dc82925bf0026e41fbb4a072
-stdout git blob:      9284faaab4a6fa94345df6cdd9e8d0dd265e1e88
-decision:             MEDIATED-BRIDGE-CERTIFIED
+EXIT CODE              0
+STDERR BYTES           0
+STDOUT BYTES           499
+STDOUT LINES           15
+STDOUT SHA256          6d81ea8c28b55912d63e6a35b3aa19ded5bb3648dc82925bf0026e41fbb4a072
+STDOUT GIT BLOB        9284faaab4a6fa94345df6cdd9e8d0dd265e1e88
+DECISION               MEDIATED-BRIDGE-CERTIFIED
 ```
 
 `EXPECTED.txt` is the exact stdout of this single formal local execution.
