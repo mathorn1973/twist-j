@@ -1,0 +1,54 @@
+C-RECORD-CRT-IDEMPOTENT-1 rev2 -- record quotient calculus R1-R6
+R = Z[zeta_5] = Z[X]/Phi_5; ideals as HNF sublattices of Z^4
+LOEWY CONVENTION: n^0 = R/I; layer k is n^k/n^(k+1); the first listed
+layer is n^0/n^1 = R/rad(I), of order N(rad I). See gate L4.
+Guarantee against tautological gates: mutation_test.py, not a source
+scan. Every gate below is killed by a mutation there.
+
+-- Part 0: ring and lattice machinery
+W1  z^5 = 1 and 1+z+z^2+z^3+z^4 = 0                      OK   repeated multiplication vs the summed defining relation
+W2  rmul agrees with hand expansion: (1+z)(1+z^2) = 1+z+z^2+z^3 OK   independent hand expansion
+W3  HNF box is a complete irredundant residue system     OK   box size vs determinant; a 13^4 sweep lands in the same 80 classes; reduction is constant on cosets
+W4  the norm is multiplicative: N(AB) = N(A) N(B)        OK   lattice determinant of the product vs product of determinants
+
+-- Part 1: primes above p and residue fields
+F1  5 is totally ramified: one prime, f = 1, and lambda^4 = (5) OK   factorization route and the lattice identity lambda^4 = (5) agree
+F2  2 and 3 are inert, f = 4: factor degree = ord_5(p)   OK   N(P) = 16 and 81
+F3  11 splits completely: four primes of norm 11, one per fifth root OK   roots [3, 4, 5, 9] found by search match the linear factors
+F4  |kappa(P)| = N(P): the image of the reduction is the whole field OK   image counted, and N(P) taken as a lattice determinant
+F5  reduction R -> kappa(P) is a RING map (sum and product) OK   reduce-then-operate vs operate-then-reduce, four primes
+
+-- Part 2: R1  Idem(R/I) = P(Supp I), canonically
+R1a e -> {P : e = 1 in kappa(P)} is a BIJECTION onto the power set OK   11 ideals; surjective AND injective onto P(Supp), not a count match
+R1b |Idem(R/I)| = 2^|Supp I|: enumeration vs prime count OK   lambda:2; (2):2; (3):2; (4):2; (5):2; (6):4; lambda(2):4; lambda^2(2):4; (10):4; (11):16; (20):4
+R1c BOOLEAN isomorphism: ef -> cap, e+f-ef -> cup, 1-e -> complement OK   every idempotent pair of every ideal in the family
+R1d atoms are orthogonal, one per prime, and sum to 1    OK   atoms are labelled by the primes themselves; no numbering is used
+R1e support is by PRIME: 11 splits into four, so |Idem(R/(11))| = 16 OK   a rational-divisor count would give 2 for both
+
+-- Part 3: R2  Idem(R/I) -> Idem(R/rad I) is a bijection
+R2a Idem(R/I) -> Idem(R/rad I) is onto and injective     OK   two separate enumerations per ideal
+R2b thickness is invisible to the Boolean layer          OK   same Boolean algebra, provably different ideals
+R2c |Supp I| = 1 gives |Idem| = 2 even when R/I is NOT a field OK   tested in BOTH directions; R/(5) is local of order 625, not a field
+
+-- Part 4: R3  exact Loewy profile
+L1  lattice-index route == prime-norm route == frozen hand table OK   (5):[5, 5, 5, 5]; (10):[80, 5, 5, 5]; (20):[80, 80, 5, 5]
+L2  L(R/I) = min{L : n^L = 0} = max_P e_P                OK   chain length from HNF determinants, max exponent from valuations
+L3  |n^k/n^(k+1)| = product of N(P) over {P : e_P > k}   OK   ORDERS only; no module decomposition is claimed
+L4  the n^1 start CONTRADICTS the product formula, which never sees the chain OK   (10): wrong [5, 5, 5] vs correct [80, 5, 5, 5]
+L5  the first layer is the product of N(P) over the support OK   chain index vs residue-field sizes, no shared radical computation
+
+-- Part 5: R4/R5  R-algebra maps classified by ideal inclusion
+H1  a unital map R/I1 -> R/I2 exists iff I1 is contained in I2 OK   64 ordered pairs; existence from well-definedness vs lattice containment
+H2  THIN: many multiplicative maps exist; unitality leaves at most one OK   max multiplicative 4, max unital 1 -- unitality applied AFTER the enumeration, not inside it
+H3  the unique unital map is reduction on every basis vector OK   f(z^j) = z^j mod I2 for j = 0..3, on the whole Z-basis
+H5  R5: a strict quotient has NO unital section back     OK   all 9 strict quotients enumerated, none skipped
+H6  the multiplicative maps are exactly the idempotents killed by I1 OK   ties R4 back to R1: Hom is an idempotent computation
+
+-- Part 6: R6  fixed support admits arbitrary Loewy length (no-go)
+N1  every I_L has the SAME support and the SAME radical  OK   support and radical recomputed per L; N(rad) = 80
+N2  every I_L has the SAME Boolean algebra, |Idem| = 4   OK   enumerated separately in each R/I_L, up to 50000 cells
+N3  L(R/I_L) = L is UNBOUNDED over the family            OK   lengths [1, 2, 3, 4, 5] from the lattice route
+N4  NO-GO: support and reduced record constant, filtration length not OK   the Boolean skeleton cannot determine the completion depth
+
+GATE COUNT: 31
+RESULT: ALL 31 GATES OK

@@ -1,0 +1,59 @@
+C-RECORD-CRT-IDEMPOTENT-1 exact verifier
+R = Z[zeta_5] = Z[X]/Phi_5, basis (1, z, z^2, z^3)
+
+-- Part 1: the axiom element J
+J1  zeta = (J-1)^3                             OK
+J2  N(J) = 1 (unit)                            OK
+J3  J = zeta * (zeta + zeta^4)                 OK
+J4  phi * (1/phi) = 1                          OK
+J5  phi^2 = phi + 1                            OK
+J6  J^5 = (1/phi)^5 and J^5 != 1               OK
+J7  N(lambda) = 5, lambda = 1 - zeta           OK
+
+-- Part 2: three arithmetic positions (no physical names)
+P1  sigma_1(J) sigma_4(J) = phi^-2             OK
+P2  sigma_2(J) sigma_3(J) = phi^2              OK
+P3  modulus constant on conjugate pairs, pairs differ OK
+P4  R/(5) has 5^4 elements, (5) = lambda^4     OK
+P5  zeta = 1 mod lambda (phase dies)           OK
+P6  J = 2 mod lambda (carry token)             OK
+P7  ord_(F_5^x)(2) = 4 (torsion, not scale)    OK   powers (2, 4, 3, 1)
+P8  1/phi = 2 mod lambda                       OK
+P9  ord(zeta) = 5 in R/(2) (phase exact)       OK
+P10 ord(1/phi) = 3 in R/(2) (scale folded)     OK
+P11 ord(J) = 15 in R/(2) (primitive root)      OK
+P12 both finite positions are torsion          OK
+
+-- Part 3: J-specificity of the binary position
+S1  Z[zeta_5]/(2) = F_16 is a field            OK
+S2  Z[zeta_7]/(2) splits (F_8 x F_8)           OK
+S3  Z[i]/(2) has a nonzero nilpotent (1+i)     OK   (1+i)^2 = 2i = 0 mod 2, 1+i != 0
+
+-- Part 4: CRT idempotent structure (exhaustive enumeration)
+C-2  |Idem(R/(2))| = 2^r, r = 1                OK   |Idem| = 2, |R/(2)| = 16
+C-3  |Idem(R/(3))| = 2^r, r = 1                OK   |Idem| = 2, |R/(3)| = 81
+C-4  |Idem(R/(4))| = 2^r, r = 1                OK   |Idem| = 2, |R/(4)| = 256
+C-5  |Idem(R/(5))| = 2^r, r = 1                OK   |Idem| = 2, |R/(5)| = 625
+C-6  |Idem(R/(6))| = 2^r, r = 2                OK   |Idem| = 4, |R/(6)| = 1296
+C-10 |Idem(R/(10))| = 2^r, r = 2               OK   |Idem| = 4, |R/(10)| = 10000
+C-11 |Idem(R/(11))| = 2^r, r = 4               OK   |Idem| = 16, |R/(11)| = 14641
+C-20 |Idem(R/(20))| = 2^r, r = 2               OK   |Idem| = 4, |R/(20)| = 160000
+C1  radical invariance: (4) vs (2)             OK
+C2  radical invariance: (20) vs (10)           OK
+C3  |Supp| = 1 gives |Idem| = 2 even when not a field OK   R/(5) = R/lambda^4 is local with nilpotents
+C4  thickness invisible to the Boolean layer   OK
+
+-- Part 5: record minima
+M1  smallest rational conductor with r = 2 is 6 OK
+M2  R/(6) = F_16 x F_81, |R/(6)| = 1296        OK
+M3  smallest two-channel square-free ideal norm = 55 OK   lambda * p_11, N = 5 * 11
+M4  smallest ideal carrying both marked positions: N = 80 OK   lambda * (2), R/I = F_5 x F_16
+M5  neither minimal kernel is an apparatus     OK   one channel each: zero Boolean resolution
+
+-- Part 6: cyclotomic unit-rank minimality (modest form)
+U1  rank 1 iff phi(n) = 4 iff n in {5,8,10,12} OK
+U2  prime case: r = (p-3)/2, first r = 1 at p = 5 OK
+U3  discriminant order is K_5 < K_12 < K_8     OK   125 < 144 < 256
+U4  K_8 is NOT the discriminant runner-up      OK
+
+RESULT: ALL GATES OK
