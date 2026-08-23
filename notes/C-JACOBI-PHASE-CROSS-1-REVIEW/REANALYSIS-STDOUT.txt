@@ -1,0 +1,42 @@
+REVIEW    verify_jacobi_cross_canonical_h.py
+TARGET    C-JACOBI-PHASE-CROSS-1 (branch agent/c-jacobi-phase-cross-1)
+SURFACE   their frozen phase convention and chi-square lines;
+          canonical conjugation-invariant h and arc on the modulus side
+GATES     J conj(J) = p, axis and zero-real exclusions, |N(w)| = p,
+          conjugate octant law: PASS on all 808 carrier primes
+MARGINAL  QUAD 224 205 192 187
+MARGINAL  SGN  193 407 208
+MARGINAL  h    395 413
+MARGINAL  arc  193 202 202 211
+XCHECK X1 QUAD marginal vs pinned stdout: MATCH
+XCHECK X2 SGN marginal vs pinned stdout:  MATCH
+XCHECK X3 h marginal vs their invariant refold: MATCH
+XCHECK X4 T1' table vs collapse of their T3:    MATCH
+T1' QUAD x h
+      123    101
+       93    112
+       92    100
+       87    100
+    X2 exact   = 625146097522/131329384725
+    X2 witness = 4.760139 (float, witness only)
+    min expected = 73865/808
+    DECISION   = NOT-REJECTED
+T2' SGN x h
+       92    101
+      205    202
+       98    110
+    X2 exact   = 122189168952/166587426005
+    X2 witness = 0.733484 (float, witness only)
+    min expected = 76235/808
+    DECISION   = NOT-REJECTED
+T3' QUAD x arc
+       68     55     49     52
+       46     47     51     61
+       44     48     53     47
+       35     52     49     51
+    X2 exact   = 1887412483923/174845014960
+    X2 witness = 10.794774 (float, witness only)
+    min expected = 36091/808
+    DECISION   = NOT-REJECTED
+XCHECK ALL MATCH: independent code path reproduces their pinned data
+REVIEW PASS
