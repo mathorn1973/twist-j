@@ -157,6 +157,13 @@ For new public probes:
   preregistration pin.
 - Any lift between L1 state, L2 manifold, L3 boundary, L4 support, L5 stream,
   and L6 measure requires its own named gate.
+- Gate enforcement is explicit rather than inferred only from dependency-layer
+  coincidence. Every `GATES.tsv` row uses one closed `gate_kind`; that kind
+  fixes the required semantic type and public status of its owner. If the
+  owner has one concrete L1 to L6 layer, it must equal the gate `to_layer`.
+  `MULTI` and `NOT_APPLICABLE` do not disable this owner contract. Separately,
+  every dependency edge that actually crosses two concrete protocol layers
+  still requires a matching gate with those exact endpoints.
 
 ## 5. Canon
 
@@ -243,11 +250,11 @@ directory is untouched, and a changed-path check cannot see that. The
 one-probe-per-pull-request rule is unaffected: it still counts only the probe
 directories the diff names.
 
-The publication job reruns policy, unit, Canon and ledger checks,
-then performs the activation readback. Tag and release events skip changed-path
-checks because those events do not supply a valid comparison base; their full
-activation readback already reproduces every public probe and minimal
-reproduction.
+The publication job reruns policy, unit, Canon, ledger and explicit gate
+contract checks, then performs the activation readback. Tag and release events
+skip changed-path checks because those events do not supply a valid comparison
+base; their full activation readback already reproduces every public probe and
+minimal reproduction.
 
 When release immutability is enabled, a release is always assembled as a
 draft. Attach the successful tag-job `activation-manifest.json` and the tagged

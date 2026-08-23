@@ -35,10 +35,14 @@ history or the private development archive into scientific evidence:
   It does not fabricate a detailed pre-public transition history; the legacy
   cutover audit is only a reconciliation record.
 - `GATES.tsv` gives every currently declared cross-layer lift a stable gate ID,
-  an owning normative item, and a public decision condition. Items without an
-  explicit L1--L6 role remain `NOT_APPLICABLE`; that value does not invent a
-  protocol placement. Every declared dependency that actually crosses two
-  distinct protocol layers must name a matching gate.
+  an owning normative item, a closed `gate_kind`, and a public decision
+  condition. `tools/check_gate_contract.py` validates every gate row directly:
+  the gate kind fixes the required owner semantic type and public status, and a
+  concrete L1--L6 owner layer must equal the gate `to_layer`. `MULTI` and
+  `NOT_APPLICABLE` do not disable that owner contract or invent a concrete
+  protocol placement. Separately, every declared dependency that actually
+  crosses two distinct protocol layers must still name a matching gate with
+  the correct endpoints.
 - `CORE_SELECTION.tsv` is the explicit, reviewable selection of closed claims
   used to generate the short core claim badges. Selection is policy, while
   statuses and scopes always come from `REGISTRY.tsv`.
@@ -56,7 +60,11 @@ history or the private development archive into scientific evidence:
 `tools/check_ledger.py` requires an acyclic dependency graph, exact agreement
 with `REGISTRY.tsv`, valid evidence hashes, continuous status history, and the
 status firewall: theorem rows cannot require lower-status claims, and
-dictionary rows cannot require open or falsified claims.
+dictionary rows cannot require open or falsified claims. It also requires a
+matching gate for every dependency that crosses two concrete protocol layers.
+`tools/check_gate_contract.py` independently makes every gate row load-bearing
+by checking its closed gate-kind and owner contract even when no concrete
+cross-layer dependency reaches that gate.
 
 These files are the machine-auditable companion-ledger surface of the current
 Public Canon series.
