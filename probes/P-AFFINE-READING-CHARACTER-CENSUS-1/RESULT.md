@@ -124,3 +124,32 @@ required pull-request check. The registry row proposed in
 `notes/C-AFFINE-READING-CHARACTER-CENSUS-1/PROMO-C-AFFINE-READING-CHARACTER-CENSUS-1.md`
 is not created by this probe. No summary of this probe may exceed L1 or claim a
 status this directory has not earned.
+
+## Basis movement during the probe, recorded
+
+Public `main` advanced from `f9b7438747e612eeebf63cb3ac95283fcb2a7085` to the
+Public Canon v61 fold while this probe was open. The pin parent, and therefore
+every basis field frozen in `PREREG.md`, names v60. `PREREG.md` is pinned and
+is not edited; this section records the movement instead.
+
+The movement was checked for substance before this probe was merged, not waved
+through:
+
+```text
+AFFINE-READING-DEGREE-CENSUS       still present, still T, row not modified
+AFFINE-QUADRATIC-FORM-UNIQUENESS   still present, still T, row not modified
+rows added by v61                  J-BINARY-NORM-INDEX, J-BINARY-NORM-ORDER-CENSUS,
+                                   RECORD-QUOTIENT-CALCULUS, J-ODD-MOTOR-MEDIATED-BRIDGE
+collision with this probe          none
+```
+
+Both rows this probe depends on are unchanged in text and status, and none of
+the four rows folded at v61 covers a graded or character graded reading census.
+The carrier itself is fixed by the axiom and does not move with a Canon
+version, so no gate value depends on the fold.
+
+The consequence is confined to provenance: the frozen basis fields in
+`PREREG.md` describe v60 and are correct as of the pin, and a reader at v61 or
+later should read them as the state at the pin rather than as a current
+statement. Any later fold that proposes a registry row from this probe must
+perform its own currency gate against the head of the day.
