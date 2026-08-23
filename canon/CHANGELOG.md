@@ -1,5 +1,66 @@
 # Canon changelog (public series)
 
+## Public Canon v61
+
+<!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 324 claims; 0 T-LOCK, 202 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
+<!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v61 is a narrow exact L1 consolidation of the three public probes
+merged after v60. It registers three theorem rows and one finite-range
+computation row. It adds no scientific run, physical dictionary, D/H/O/F row,
+status move, gate, decoder completion or layer lift.
+
+`J-BINARY-NORM-INDEX [T]` records the exact index `p-1` of the residue norm-one
+subgroup at inert primes and the fact that a norm-one unit can generate the
+whole inert residue multiplicative group only at `p=2`; J attains that case
+with order 15 in `F_16`. The generic-degree and Galois-orbit controls are part
+of the row and forbid reading this as selection of J, degree four, the prime
+five, the axiom exponent or a physical characteristic-two principle.
+`J-BINARY-NORM-ORDER-CENSUS [C]` records only the 156 inert primes below 2000,
+where J generates the complete norm-one subgroup exactly at 2 and 3.
+
+`RECORD-QUOTIENT-CALCULUS [T]` folds the universal R1-R6 proof: prime-labelled
+Boolean idempotents from CRT, invariance under radical reduction, exact Loewy
+layer orders and length, thin unital quotient maps, absence of sections for
+strict quotients, and a fixed-support family with unbounded depth. It selects
+no ideal, atom, event, decoder, measure or continuum reading.
+
+`J-ODD-MOTOR-MEDIATED-BRIDGE [T]` folds G1-G8 of the corrected public successor
+probe into one row. The native carrier has only two primitive nonzero sectors,
+so the naive third native mediator route is negative. On the frozen affine
+token decomposition the odd channel has the exact `P <-> C <-> R` block graph,
+a rank-one second-order P-to-R bridge with norm factor `5/4`, active-line
+squared overlap `1/5`, exact control exclusions and Schur polynomial, and the
+quadratic decomposition `Sym^2(V)=1+epsilon+2V`. The repeated `2V` remains a
+nonselection boundary. No physical resonance or higher-layer reading is
+created.
+
+The v61 ledger change is:
+
+```text
+claims:    320 + 3 T + 1 C = 324,
+T:         199 + 3 = 202,
+C:          32 + 1 = 33,
+D: 43, H: 3, O: 27, F: 16, all unchanged,
+live H/O:   30, unchanged,
+normative items: 366 + 4 = 370,
+dependencies: 577 + 4 = 581,
+evidence rows: 320 + 4 = 324,
+gates:      11, unchanged,
+history rows: 841 + 4 = 845,
+two-architecture evidence: 236 + 4 = 240,
+frontier programs: 7, unchanged,
+reproduction witnesses: 23, unchanged.
+```
+
+The candidate dependency audit omits the draft `RECORD-QUOTIENT-CALCULUS ->
+J-UNIT` edge because the universal Dedekind/CRT proof uses the fixed ring
+`Z[zeta_5]` but not the theorem `N(J)=1`; issue #529 explicitly allowed omission
+of a proposed edge when exact proof review found it nongenuine. No reverse edge
+or old proof lineage changes.
+
 ## Public Canon v60
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->

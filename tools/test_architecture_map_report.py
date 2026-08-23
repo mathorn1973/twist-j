@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 320)
+        self.assertEqual(self.report.claims, 324)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 32, "D": 43, "F": 16, "H": 3, "O": 27, "T": 199},
+            {"C": 33, "D": 43, "F": 16, "H": 3, "O": 27, "T": 202},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 44,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 236,
+                "two-architecture": 240,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -45,7 +45,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(
             len(self.report.transitive_architecture_dependents), 228
         )
-        self.assertEqual(len(self.report.dependency_terminals), 49)
+        self.assertEqual(len(self.report.dependency_terminals), 50)
         self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
         self.assertNotIn(
             "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
