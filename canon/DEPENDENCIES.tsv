@@ -576,3 +576,7 @@ QDD-RECORD-COMPLETE-LUEDER-SELECTION	QDD-J-CENTRALIZER-NONSELECTION	REQUIRES	the
 QDD-RECORD-COMPLETE-LUEDER-SELECTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	strict microscopic law naturality is conditional and not derived, so the selected restricted class does not close O2 or O1
 QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY	QDD-RECORD-COMPLETE-LUEDER-SELECTION	REQUIRES	the normalizer-versus-centralizer fork sharpens the exact strict S_4 naturality selection class
 QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	neither strict naturality nor the enlarged +/-S_4 equality is derived or adopted and weak covariance remains nonselective
+J-BINARY-NORM-INDEX	J-UNIT	REQUIRES	written proof uses N(J)=1 and the public cyclotomic-unit setting for the J attainment clause
+J-BINARY-NORM-ORDER-CENSUS	J-BINARY-NORM-INDEX	REQUIRES	finite census is the bounded computational companion to the norm-index theorem
+J-ODD-MOTOR-MEDIATED-BRIDGE	AFFINE-READING-DEGREE-CENSUS	REQUIRES	affine token decomposition and characteristic-zero invariant census used by the frozen quadratic-lift proof
+J-ODD-MOTOR-MEDIATED-BRIDGE	AFFINE-QUADRATIC-FORM-UNIQUENESS	REQUIRES	positive invariant q_+ line and affine quadratic carrier used in the frozen G7-G8 proof
