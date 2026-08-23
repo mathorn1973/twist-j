@@ -1,0 +1,3 @@
+BOOLEAN_CLASS_COUNT 12 PASS
+MINIMAL_SETS {M,R} {B,R} PASS
+BREAKER requires exact arithmetic witnesses from verify.py; no logical alternative survives
