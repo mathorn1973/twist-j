@@ -1,0 +1,10 @@
+C-QDD-DIRECT-RECORD-QUOTIENT-1-N
+STATUS NON-CANONICAL INCUBATION
+R1 DIRECT_EQUALITY_IFF_Q_EQUALITY q_to_D_singleton=1 D_to_q_singleton=1 PASS
+R2 CLASSES 313 FIBRES 1x25+312x50 PASS
+R3 Q_TO_RECORD_BIJECTION q=313 records=313 PASS
+R4 TERMINAL_FACTOR_OBJECT written_universal_proof_required AUDIT_PARTITION_PASS
+R5 MINIMAL_FACTOR_CARDINALITY 313 written_surjection_proof_required
+CONTROL DENSITY_ONLY_CLASSES 273 LESS_THAN_313=1
+GUARD direct Route A dictionary fixed; no Born/effects/apparatus/physical D_matter/layer lift
+RESULT candidate-T conditional_on_written_proof

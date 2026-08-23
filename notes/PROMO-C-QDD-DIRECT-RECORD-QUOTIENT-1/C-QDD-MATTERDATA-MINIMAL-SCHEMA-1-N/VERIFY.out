@@ -1,0 +1,11 @@
+C-QDD-MATTERDATA-MINIMAL-SCHEMA-1-N
+STATUS NON-CANONICAL INCUBATION
+S1 COMPLETE_SUBSETS 12 PASS
+S2 RULE contains_R_and_(M_or_B) PASS
+S3 MINIMAL {M,R} {B,R} PASS
+S4 SUFFICIENCY M+R_reconstructs_Q; B+R_recovers_M_then_Q PASS
+S5 NECESSITY no_R_wedge_witness=PASS R_without_scale_e0_2e0=PASS
+S6 REDUNDANCY support_and_normalized_never_required PASS
+COMPLETE {M,R} {S,M,R} {B,R} {S,B,R} {M,B,R} {S,M,B,R} {M,R,N} {S,M,R,N} {B,R,N} {S,B,R,N} {M,B,R,N} {S,M,B,R,N}
+GUARD equality classification only; no schema deletion or Born/measure/decoder-completion claim
+RESULT candidate-T
