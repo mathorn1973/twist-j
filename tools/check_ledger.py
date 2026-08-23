@@ -12,10 +12,27 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from tools import check_ledger_core as _core
-from tools.check_ledger_core import *  # noqa: F401,F403
-from tools.check_gate_contract import GateContractError, validate_gate_contract
+try:  # package import under unittest
+    from tools import check_ledger_core as _core
+    from tools.check_gate_contract import GateContractError, validate_gate_contract
+except ModuleNotFoundError:  # direct `python tools/check_ledger.py`
+    import check_ledger_core as _core
+    from check_gate_contract import GateContractError, validate_gate_contract
 
+
+# Stable public names consumed by the unit suite and repository helpers.
+REGISTRY_FIELDS = _core.REGISTRY_FIELDS
+NORMATIVE_FIELDS = _core.NORMATIVE_FIELDS
+DEPENDENCY_FIELDS = _core.DEPENDENCY_FIELDS
+EVIDENCE_FIELDS = _core.EVIDENCE_FIELDS
+HISTORY_FIELDS = _core.HISTORY_FIELDS
+GATE_FIELDS = _core.GATE_FIELDS
+CORE_SELECTION_FIELDS = _core.CORE_SELECTION_FIELDS
+FRONTIER_PROGRAM_FIELDS = _core.FRONTIER_PROGRAM_FIELDS
+LedgerError = _core.LedgerError
+Snapshot = _core.Snapshot
+bundle_sha256 = _core.bundle_sha256
+validate_frontier_programs = _core.validate_frontier_programs
 
 _core_validate = _core.validate
 _core_read_tsv = _core.read_tsv
