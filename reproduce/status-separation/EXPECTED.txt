@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v60
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v61
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -53,6 +53,7 @@ PASS 49 ENTROPY-KERNEL-ANCHORS the subset landscape decides the exact 32-entry t
 PASS 50 TWOLOGPHI-ARITHMETIC-ANCHOR 2 log phi gains its arithmetic anchor as a Mahler measure and a regulator, with class number one proved rather than imported and the periodic-point structure entering at C, while the entropy bridge keeps its exact scope and every new row carries the fence as a ledger edge
 PASS 51 METRO-FORBIDDEN-WITNESSES obligation B is discharged for the five entries section 15 names, at C on the completed public probe with exactly its two declared edges, while the parent keeps status O and STOP with only its obligation B clause changed and the arrows row does not move
 PASS 52 V60-BOUNDARY thirteen post-v59 theorem rows and two explicit O2 children keep exact evidence and dependency contracts while O1, the parent apparatus, physical adoption, gates, and sampling stay open
-PASS 53 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
+PASS 53 V61-EXACT  four post-v60 L1 rows keep exact status, evidence, dependencies and nonselection firewalls with no gate or frontier move
+PASS 54 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
 
-RESULT 53/53 ALL PASS
+RESULT 54/54 ALL PASS

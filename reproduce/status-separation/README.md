@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its fifty-three checks cover the current
+and emits deterministic text. Its fifty-four checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 53/53 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 54/54 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -92,6 +92,8 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v61 count check reads the folded tree (324 claims, 23 reproductions, 11 gates). The V61-EXACT check pins three theorem rows and one finite-range computation row at L1 to their exact public-probe evidence, dependency directions, scope hashes and nonselection firewalls, preserves the exact three-edge CARRY-PENTAD lineage, and permits no new gate, frontier move, physical reading or layer lift. The permanent QDD direct-write firewall remains the final check.
 
 The v60 count check reads the folded tree (320 claims, 23 reproductions, 11 gates). The V60-BOUNDARY check pins thirteen exact theorem rows from the completed post-v59 probes to their types, layers, evidence bundles, scope boundaries and all 39 dependency edges. It splits O2 into two explicit children while leaving O1 on the parent, and keeps the parent apparatus, terminal-event semantics, instrument-class completeness, sampling, physical selection, Bell accounting, and every new physical gate open. The permanent QDD direct-write firewall remains the final check.
 
