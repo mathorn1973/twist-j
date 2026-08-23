@@ -24,6 +24,7 @@ RESULT-C-AFFINE-READING-CHARACTER-CENSUS-1.md      recorded run, outcome, fired 
 BREAK-C-AFFINE-READING-CHARACTER-CENSUS-1.py       independent third code path
 BREAK.stdout.txt                                   committed stdout of the break attempt
 PROMO-C-AFFINE-READING-CHARACTER-CENSUS-1.md       promotion proposal for a public fold
+CROSSPLATFORM.md                                   second architecture execution leg
 SHA256SUMS                                         hashes of the files above
 ```
 
@@ -41,10 +42,12 @@ LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC \
 ```
 
 Expected: exit 0, empty stderr, stdout byte identical to `EXPECTED.txt`,
-decision line `READING-CENSUS-CERTIFIED`. Recorded leg: Ubuntu 24.04, x86_64,
-Python 3.12.3, 1473 ms as an engineering readout. One architecture only. These
-are incubation pins, not a public probe, and the POLICY section 4 two
-architecture gate is not claimed.
+decision line `READING-CENSUS-CERTIFIED`. Two legs are recorded in
+`CROSSPLATFORM.md`: Ubuntu 24.04 x86_64 Python 3.12.3, and Darwin 26.5.2 arm64
+Python 3.9.6, with byte identical stdout on both. These are incubation pins,
+not a public probe, and the POLICY section 4 two architecture gate is still not
+claimed, because that gate is defined for a pinned public probe with the
+GitHub check at pull request time.
 
 The break attempt is relocatable and resolves its own directory:
 
