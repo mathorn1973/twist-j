@@ -20,19 +20,12 @@ except ModuleNotFoundError:  # direct `python tools/check_ledger.py`
     from check_gate_contract import GateContractError, validate_gate_contract
 
 
-# Stable public names consumed by the unit suite and repository helpers.
-REGISTRY_FIELDS = _core.REGISTRY_FIELDS
-NORMATIVE_FIELDS = _core.NORMATIVE_FIELDS
-DEPENDENCY_FIELDS = _core.DEPENDENCY_FIELDS
-EVIDENCE_FIELDS = _core.EVIDENCE_FIELDS
-HISTORY_FIELDS = _core.HISTORY_FIELDS
-GATE_FIELDS = _core.GATE_FIELDS
-CORE_SELECTION_FIELDS = _core.CORE_SELECTION_FIELDS
-FRONTIER_PROGRAM_FIELDS = _core.FRONTIER_PROGRAM_FIELDS
-LedgerError = _core.LedgerError
-Snapshot = _core.Snapshot
-bundle_sha256 = _core.bundle_sha256
-validate_frontier_programs = _core.validate_frontier_programs
+# Preserve the complete public import surface of the historical checker. Several
+# generators and validators import constants/helpers from check_ledger.py; a
+# maintenance wrapper must not make those names disappear.
+for _name in dir(_core):
+    if not _name.startswith("_") and _name not in {"validate", "main"}:
+        globals()[_name] = getattr(_core, _name)
 
 _core_validate = _core.validate
 _core_read_tsv = _core.read_tsv
