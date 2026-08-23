@@ -31,6 +31,7 @@ class GateFixture:
             {"item_id": "DEF-PROJ", "item_type": "DEFINITION", "claim_id": "", "status": "", "layer": "L5", "gate_ids": "GATE-DEF", "statement_source": "fixture"},
             {"item_id": "OPEN-LIFT", "item_type": "OBLIGATION", "claim_id": "OPEN-LIFT", "status": "O", "layer": "L2", "gate_ids": "GATE-LIFT", "statement_source": "fixture"},
             {"item_id": "OPEN-SELECT", "item_type": "OBLIGATION", "claim_id": "OPEN-SELECT", "status": "O", "layer": "MULTI", "gate_ids": "GATE-SELECT", "statement_source": "fixture"},
+            {"item_id": "OPEN-DECIDE", "item_type": "OBLIGATION", "claim_id": "OPEN-DECIDE", "status": "O", "layer": "L4", "gate_ids": "GATE-DECIDE", "statement_source": "fixture"},
             {"item_id": "DICT-LIFT", "item_type": "DICTIONARY", "claim_id": "DICT-LIFT", "status": "D", "layer": "NOT_APPLICABLE", "gate_ids": "GATE-DICT", "statement_source": "fixture"},
             {"item_id": "FIRED", "item_type": "FALSIFIED", "claim_id": "FIRED", "status": "F", "layer": "MULTI", "gate_ids": "GATE-FIRED", "statement_source": "fixture"},
         ]
@@ -38,6 +39,7 @@ class GateFixture:
             {"gate_id": "GATE-DEF", "owner_item_id": "DEF-PROJ", "from_layer": "L1", "to_layer": "L5", "gate_kind": "DEFINITION_PROJECTION", "decision_condition": "fixture definition projection decision condition"},
             {"gate_id": "GATE-LIFT", "owner_item_id": "OPEN-LIFT", "from_layer": "L1", "to_layer": "L2", "gate_kind": "OPEN_LIFT", "decision_condition": "fixture open lift decision condition"},
             {"gate_id": "GATE-SELECT", "owner_item_id": "OPEN-SELECT", "from_layer": "L5", "to_layer": "L1", "gate_kind": "OPEN_SELECTION", "decision_condition": "fixture open selection decision condition"},
+            {"gate_id": "GATE-DECIDE", "owner_item_id": "OPEN-DECIDE", "from_layer": "L4", "to_layer": "L4", "gate_kind": "OPEN_DECISION", "decision_condition": "fixture same-layer open decision condition"},
             {"gate_id": "GATE-DICT", "owner_item_id": "DICT-LIFT", "from_layer": "L5", "to_layer": "L6", "gate_kind": "DICTIONARY_LIFT", "decision_condition": "fixture dictionary lift decision condition"},
             {"gate_id": "GATE-FIRED", "owner_item_id": "FIRED", "from_layer": "L1", "to_layer": "L5", "gate_kind": "FIRED_NEGATIVE", "decision_condition": "fixture fired negative decision condition"},
         ]
@@ -59,8 +61,9 @@ class GateContractTests(unittest.TestCase):
     def test_valid_gate_contract(self) -> None:
         self.fixture.write()
         kinds = validate_gate_contract(self.root)
-        self.assertEqual(sum(kinds.values()), 5)
+        self.assertEqual(sum(kinds.values()), 6)
         self.assertEqual(kinds["OPEN_LIFT"], 1)
+        self.assertEqual(kinds["OPEN_DECISION"], 1)
 
     def test_gate_kind_is_closed(self) -> None:
         self.fixture.gates[1]["gate_kind"] = "DECORATIVE"
@@ -75,7 +78,7 @@ class GateContractTests(unittest.TestCase):
             validate_gate_contract(self.root)
 
     def test_gate_kind_requires_owner_status(self) -> None:
-        self.fixture.normative[3]["status"] = "T"
+        self.fixture.normative[4]["status"] = "T"
         self.fixture.write()
         with self.assertRaisesRegex(GateContractError, "requires owner status D"):
             validate_gate_contract(self.root)
@@ -90,6 +93,24 @@ class GateContractTests(unittest.TestCase):
         self.fixture.write()
         kinds = validate_gate_contract(self.root)
         self.assertEqual(kinds["OPEN_SELECTION"], 1)
+
+    def test_same_layer_requires_open_decision(self) -> None:
+        self.fixture.gates[1]["from_layer"] = "L2"
+        self.fixture.write()
+        with self.assertRaisesRegex(GateContractError, "same-layer endpoints require OPEN_DECISION"):
+            validate_gate_contract(self.root)
+
+    def test_open_decision_must_stay_on_one_layer(self) -> None:
+        self.fixture.gates[3]["from_layer"] = "L3"
+        self.fixture.write()
+        with self.assertRaisesRegex(GateContractError, "OPEN_DECISION must stay on one layer"):
+            validate_gate_contract(self.root)
+
+    def test_open_decision_requires_concrete_owner_layer(self) -> None:
+        self.fixture.normative[3]["layer"] = "MULTI"
+        self.fixture.write()
+        with self.assertRaisesRegex(GateContractError, "OPEN_DECISION requires a concrete owner layer"):
+            validate_gate_contract(self.root)
 
     def test_owner_must_name_its_gate(self) -> None:
         self.fixture.normative[1]["gate_ids"] = ""

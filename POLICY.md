@@ -156,14 +156,21 @@ For new public probes:
 - Fired falsifiers are preserved and folded. Thresholds never move after the
   preregistration pin.
 - Any lift between L1 state, L2 manifold, L3 boundary, L4 support, L5 stream,
-  and L6 measure requires its own named gate.
+  and L6 measure requires its own named cross-layer gate.
 - Gate enforcement is explicit rather than inferred only from dependency-layer
   coincidence. Every `GATES.tsv` row uses one closed `gate_kind`; that kind
-  fixes the required semantic type and public status of its owner. If the
-  owner has one concrete L1 to L6 layer, it must equal the gate `to_layer`.
-  `MULTI` and `NOT_APPLICABLE` do not disable this owner contract. Separately,
-  every dependency edge that actually crosses two concrete protocol layers
-  still requires a matching gate with those exact endpoints.
+  fixes the required semantic type and public status of its owner. Cross-layer
+  kinds must have distinct concrete L1 to L6 endpoints. If such an owner has
+  one concrete L1 to L6 layer, it must equal the gate `to_layer`; `MULTI` and
+  `NOT_APPLICABLE` do not disable this owner contract. Separately, every
+  dependency edge that actually crosses two concrete protocol layers still
+  requires a matching gate with those exact endpoints.
+- A decision that remains entirely within one concrete protocol layer may use
+  `OPEN_DECISION`. It is a decision gate, not a lift: `from_layer` and
+  `to_layer` must be the same concrete L1 to L6 layer, the owner must be an
+  open obligation at that same concrete layer, and `MULTI` or
+  `NOT_APPLICABLE` may not be used to evade the placement. Other gate kinds
+  may not use equal endpoints.
 
 ## 5. Canon
 

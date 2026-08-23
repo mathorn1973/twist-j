@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Validate the explicit semantic contract of every Public Canon gate.
 
-This checker complements check_ledger.py. The ledger checker still requires a
-matching gate for every dependency that actually crosses two concrete protocol
-layers. This checker makes each GATES.tsv row load-bearing independently of
-whether such a dependency edge happens to exist.
+This checker complements check_ledger.py. Cross-layer dependency gates remain
+checked against the dependency graph. Every GATES.tsv row is also load-bearing
+through its own closed gate kind and owner contract. OPEN_DECISION is the sole
+same-layer gate kind and represents a decision at one concrete protocol layer,
+not a lift between layers.
 """
 
 from __future__ import annotations
@@ -28,6 +29,7 @@ GATE_KIND_OWNER = {
     "DEFINITION_PROJECTION": ("DEFINITION", ""),
     "OPEN_LIFT": ("OBLIGATION", "O"),
     "OPEN_SELECTION": ("OBLIGATION", "O"),
+    "OPEN_DECISION": ("OBLIGATION", "O"),
     "DICTIONARY_LIFT": ("DICTIONARY", "D"),
     "FIRED_NEGATIVE": ("FALSIFIED", "F"),
 }
@@ -85,12 +87,15 @@ def validate_gate_contract(root: Path) -> Counter[str]:
         target = require(row, "to_layer", context)
         if source not in PROTOCOL_LAYERS or target not in PROTOCOL_LAYERS:
             fail(f"{gate} endpoints must both be concrete protocol layers")
-        if source == target:
-            fail(f"{gate} does not cross a layer")
 
         gate_kind = require(row, "gate_kind", context)
         if gate_kind not in GATE_KIND_OWNER:
             fail(f"{gate} has invalid gate_kind {gate_kind}")
+        if source == target and gate_kind != "OPEN_DECISION":
+            fail(f"{gate} same-layer endpoints require OPEN_DECISION")
+        if source != target and gate_kind == "OPEN_DECISION":
+            fail(f"{gate} OPEN_DECISION must stay on one layer")
+
         expected_type, expected_status = GATE_KIND_OWNER[gate_kind]
         owner_row = items[owner]
         owner_type = owner_row["item_type"].strip()
@@ -109,7 +114,15 @@ def validate_gate_contract(root: Path) -> Counter[str]:
             )
 
         owner_layer = owner_row["layer"].strip()
-        if owner_layer in PROTOCOL_LAYERS and owner_layer != target:
+        if gate_kind == "OPEN_DECISION":
+            if owner_layer not in PROTOCOL_LAYERS:
+                fail(f"{gate} OPEN_DECISION requires a concrete owner layer")
+            if owner_layer != target:
+                fail(
+                    f"{gate} same-layer endpoint {target} differs from owner layer "
+                    f"{owner_layer}"
+                )
+        elif owner_layer in PROTOCOL_LAYERS and owner_layer != target:
             fail(
                 f"{gate} to_layer {target} differs from concrete owner layer "
                 f"{owner_layer}"
