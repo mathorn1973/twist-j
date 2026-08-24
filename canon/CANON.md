@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v61
+# TWIST-J Public Canon v62
 
-**Release identity.** Public Canon v61. Normative authority and activation
+**Release identity.** Public Canon v62. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v61 also declares the discrete
+algebraic axiom is J. Public Canon v62 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v61 does not claim
+seed of the two algebraic projections. Public Canon v62 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v61 contains no such
+deriving the architecture from J; Public Canon v62 contains no such
 theorem.
 
 ---
@@ -3051,7 +3051,7 @@ a genuine nonselection boundary. The native two-sector no-go is retained
 inside the theorem rather than omitted. The result is algebraic only: it is not
 a physical resonance and supplies no material, frequency, susceptibility,
 Born, probability, observer, decoder, force, spacetime, SI or L2-L6 reading.
-Evidence is `probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-2`.
+Evidence is `probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2`.
 
 
 ## 4. The two places
