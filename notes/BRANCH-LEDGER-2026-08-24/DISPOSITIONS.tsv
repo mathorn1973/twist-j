@@ -41,7 +41,7 @@ notes/c-qdd-u-induced-null-anatomy-1-n	FOLD	0	0	1	single-pass	notes/C-QDD-U-INDU
 notes/c-rh-hadamard-horizontal-source-1-n	FOLD	0	1	1	single-pass	notes/C-RH-HADAMARD-HORIZONTAL-SOURCE-1-N/RESULT.md	-
 notes/c-rh-hadamard-weil-cayley-1-n	FOLD	0	1	1	single-pass	notes/C-RH-HADAMARD-WEIL-CAYLEY-1-N/RESULT.md	-
 notes/c-rh-ray-finite-window-certificate-1-n	FOLD	0	1	1	single-pass	notes/C-RH-RAY-FINITE-WINDOW-CERTIFICATE-1-N/EXPECTED.txt	-
-notes/c-rh-ray-finite-window-certificate-2-n	ABANDON	1	1	0	direct	-	gate executed but never completed: pinned wrapper failed on import before the engine ran. Closing record quotable from notes/c-rh-ray-finite-window-certificate-3-n RESULT.md section 5; fold -3-N first
+notes/c-rh-ray-finite-window-certificate-2-n	ABANDON	1	1	0	direct	-	gate executed but never completed: pinned wrapper failed on import before the engine ran and was not repaired; closing record cites notes/c-rh-ray-finite-window-certificate-3-n, RESULT.md section 5, commit ce3c7b5c; -3-N remains unmerged and deferred to v64+
 notes/c-rh-ray-finite-window-certificate-3-n	FOLD	0	1	1	single-pass	notes/C-RH-RAY-FINITE-WINDOW-CERTIFICATE-3-N/RESULT.md	-
 notes/c-rh-stieltjes-widder-euler-1-n	FOLD	0	1	1	single-pass	notes/C-RH-STIELTJES-WIDDER-EULER-1-N/RESULT.md	-
 notes/c-rh-weil-norm-junction-1-n	RETARGET	1	1	0	direct	-	owner ruling 2026-08-24: content RETARGET, old identifier consumed with a terminal ABANDONED record that preserves achieved candidate results and manufactures no J7 verdict; decision bar J7 never reached; issue #374 stays open until that record merges; see notes/V63-CLEANUP-SCOPE.md
