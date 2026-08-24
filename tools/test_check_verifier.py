@@ -6,14 +6,80 @@ from __future__ import annotations
 from contextlib import redirect_stdout
 import hashlib
 from io import StringIO
+from pathlib import Path
+import tempfile
 import unittest
+from unittest.mock import patch
 
+from tools import check_verifier
 from tools.check_verifier import ROOT, parse_run, read_run, recorded_leg_class
 
 
 EMPTY_SHA256 = hashlib.sha256(b"").hexdigest()
 VERIFIER_SHA256 = "1" * 64
 STDOUT_SHA256 = "2" * 64
+
+
+def abandoned_probe(root: Path, status: str) -> Path:
+    probe = root / "probes" / "P-ABANDONED-FIXTURE"
+    probe.mkdir(parents=True)
+    (probe / "PREREG.md").write_text("# frozen pin\n", encoding="utf-8")
+    (probe / "verify.py").write_text("# accepted verifier\n", encoding="utf-8")
+    (probe / "RESULT.md").write_text(
+        f"# Result\n\nStatus: {status}\n", encoding="utf-8"
+    )
+    return probe
+
+
+class AbandonedProbeIntegrationTests(unittest.TestCase):
+    """Exercise the real verifier gate, not only its shared predicate."""
+
+    def test_valid_abandoned_shape_skips_reproduction_explicitly(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            probe = abandoned_probe(root, "`ABANDONED`. pin closed")
+            output = StringIO()
+            with patch.object(check_verifier, "ROOT", root), redirect_stdout(output):
+                check_verifier.reproduce(probe)
+            self.assertEqual(
+                output.getvalue(),
+                "VERIFY ABANDONED P-ABANDONED-FIXTURE "
+                "no completed gate, nothing to reproduce\n",
+            )
+
+    def test_abandoned_word_later_on_status_line_cannot_skip(self) -> None:
+        statuses = (
+            "NOT ABANDONED",
+            "FAILED; predecessor ABANDONED",
+            "PASS / ABANDONED was considered",
+            "PASS\nStatus: ABANDONED / second declaration",
+        )
+        for status in statuses:
+            with self.subTest(status=status), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                probe = abandoned_probe(root, status)
+                output = StringIO()
+                with (
+                    patch.object(check_verifier, "ROOT", root),
+                    redirect_stdout(output),
+                    self.assertRaises(SystemExit),
+                ):
+                    check_verifier.reproduce(probe)
+                self.assertIn("lacks EXPECTED.txt", output.getvalue())
+
+    def test_run_artefact_blocks_abandoned_skip(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            probe = abandoned_probe(root, "ABANDONED / pin closed")
+            (probe / "EXPECTED.txt").write_text("", encoding="utf-8")
+            output = StringIO()
+            with (
+                patch.object(check_verifier, "ROOT", root),
+                redirect_stdout(output),
+                self.assertRaises(SystemExit),
+            ):
+                check_verifier.reproduce(probe)
+            self.assertIn("lacks RUN.md", output.getvalue())
 
 
 def replace_last(text: str, old: str, new: str) -> str:

@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 199, "D": 43, "C": 32, "F": 16,
+    expected_counts = {"T": 202, "D": 43, "C": 33, "F": 16,
                        "O": 27, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v60",
-        len(rows) == 320
+        "registry and companion-ledger counts match Public Canon v62",
+        len(rows) == 324
         and counts == expected_counts
-        and len(normative) == 366
-        and len(dependencies) == 577
-        and len(evidence) == 320
-        and two_architecture == 236
-        and len(history) == 841
+        and len(normative) == 370
+        and len(dependencies) == 581
+        and len(evidence) == 324
+        and two_architecture == 240
+        and len(history) == 846
         and len(gates) == 11
         and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -3864,6 +3864,189 @@ def run():
              "supply no L6 measure, randomness or independence law",
              "SAMPLING NOT PROVIDED rather than impossible"),
         ),
+    ))
+
+    v61_rows = {
+        "J-BINARY-NORM-INDEX": (
+            "T", "THEOREM", "probes/P-J-BINARY-NORM-INDEX-1",
+            "626f598fb7a4cdd331208d28c60ed9fc15d9ac6412ecc003c5bf4dd0dfc4682e",
+            "279407082e3182d01812cba3e2e5cdc6fa8bdb790a33199f96edbbed99b12c89",
+            (
+                "index exactly p-1",
+                "can generate the whole inert residue multiplicative group only at p=2",
+                "four 1+zeta_5^a form one Frobenius orbit",
+                "no axiom exponent or physical characteristic-two selection is claimed",
+            ),
+        ),
+        "J-BINARY-NORM-ORDER-CENSUS": (
+            "C", "COMPUTATION", "probes/P-J-BINARY-NORM-INDEX-1",
+            "626f598fb7a4cdd331208d28c60ed9fc15d9ac6412ecc003c5bf4dd0dfc4682e",
+            "3fd14ba4c97679659010b9067bb290dd255b51a55d714d1d820e450760c3f23a",
+            (
+                "156 rational primes p<2000",
+                "exactly at p=2 and p=3",
+                "finite range only, no all-prime theorem",
+            ),
+        ),
+        "RECORD-QUOTIENT-CALCULUS": (
+            "T", "THEOREM", "probes/P-RECORD-QUOTIENT-CALCULUS-1",
+            "5b0c0a4327539b7426de78bb54f03d525c32c94673c5113ce1c009bb274e92ff",
+            "f8c28c6ef063d004a30b72069e89772062b12422e8f09247762cfa32ba7ebf5b",
+            (
+                "Idem(R/I)~=P(Supp(I))",
+                "R/I->R/rad(I) is bijective on idempotents",
+                "L(R/I)=max_P e_P",
+                "exists uniquely exactly when I is contained in J",
+                "no ideal, atom, event semantics, decoder, measure, coarse-graining, RG or continuum reading",
+            ),
+        ),
+        "J-ODD-MOTOR-MEDIATED-BRIDGE": (
+            "T", "THEOREM", "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2",
+            "f6b2ca8bf117ee709eba29356b4e5ad61e60801c1975e5405cab1fefbbaa624b",
+            "a1f5d43376bafced23478edd0857dfc2c2d1566ee960db32e8d67d493191ad9a",
+            (
+                "exactly two primitive nonzero rank-two invariant sectors",
+                "exact block graph is P<->C<->R",
+                "B^sharp B=(5/4)R",
+                "active C-line squared overlap 1/5",
+                "repeated 2V remains a nonselection boundary",
+                "no physical resonance or L2-L6 reading",
+            ),
+        ),
+    }
+    v61_dependencies = {
+        "J-BINARY-NORM-INDEX": {("J-UNIT", "REQUIRES")},
+        "J-BINARY-NORM-ORDER-CENSUS": {
+            ("J-BINARY-NORM-INDEX", "REQUIRES"),
+        },
+        "RECORD-QUOTIENT-CALCULUS": set(),
+        "J-ODD-MOTOR-MEDIATED-BRIDGE": {
+            ("AFFINE-READING-DEGREE-CENSUS", "REQUIRES"),
+            ("AFFINE-QUADRATIC-FORM-UNIQUENESS", "REQUIRES"),
+        },
+    }
+    v61_actual_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in v61_rows
+    }
+    v61_incoming_dependencies = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies if row["depends_on"] in v61_rows
+    }
+    v61_carry_pentad_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == "CARRY-PENTAD"
+    }
+    v61_history = {
+        row["claim_id"]: row
+        for row in history
+        if row["event_id"].startswith("CANON61-DECLARE-")
+    }
+    checks.append((
+        "V61-EXACT",
+        "four post-v60 L1 rows keep exact status, evidence, dependencies and nonselection firewalls with no gate or frontier move",
+        all(
+            has_status(index, claim, status)
+            and normative.get(claim, {}).get("item_type") == item_type
+            and normative.get(claim, {}).get("claim_id") == claim
+            and normative.get(claim, {}).get("status") == status
+            and normative.get(claim, {}).get("layer") == "L1"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and normative.get(claim, {}).get("statement_source")
+            == "canon/CANON.md::3. The kernel and the census"
+            and index.get(claim, {}).get("canon_section")
+            == "3. The kernel and the census"
+            and index.get(claim, {}).get("evidence") == path
+            and evidence.get(claim, {}).get("evidence_id") == f"EV-{claim}"
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("location") == path
+            and evidence.get(claim, {}).get("sha256") == evidence_hash
+            and evidence.get(claim, {}).get("hash_mode")
+            == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement")
+            == "two-architecture"
+            and scope_sha256(index, claim) == scope_hash
+            and scope_contains_all(index, claim, boundaries)
+            and claim not in programs
+            for claim, (
+                status, item_type, path, evidence_hash, scope_hash, boundaries
+            ) in v61_rows.items()
+        )
+        and v61_actual_dependencies == v61_dependencies
+        and v61_incoming_dependencies == {
+            ("J-BINARY-NORM-ORDER-CENSUS", "J-BINARY-NORM-INDEX", "REQUIRES"),
+        }
+        and v61_carry_pentad_dependencies == {
+            ("J-UNIT", "REQUIRES"),
+            ("J-STEP", "REQUIRES"),
+            ("CODEC-TR4", "REQUIRES"),
+        }
+        and set(v61_history) == set(v61_rows)
+        and all(
+            row["event_id"] == f"CANON61-DECLARE-{claim}"
+            and row["event_sequence"] == "1"
+            and row["event_date"] == "2026-08-23"
+            and row["release"] == "canon-v61-candidate"
+            and row["event_type"] == "DECLARE"
+            and row["previous_status"] == "-"
+            and row["new_status"] == v61_rows[claim][0]
+            and row["scope_sha256"] == v61_rows[claim][4]
+            and row["evidence_id"] == f"EV-{claim}"
+            and row["evidence_location"] == (
+                "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-2" if claim == "J-ODD-MOTOR-MEDIATED-BRIDGE"
+                else v61_rows[claim][2]
+            )
+            and row["evidence_sha256"] == (
+                "03db973566ae068b5ed8eb65f4e79ae13af398ac067f325c26a25c1553bf636b" if claim == "J-ODD-MOTOR-MEDIATED-BRIDGE"
+                else v61_rows[claim][3]
+            )
+            for claim, row in v61_history.items()
+        )
+        and all(row["owner_item_id"] not in v61_rows for row in gates.values()),
+    ))
+
+    v62_events = [
+        row for row in history
+        if row["claim_id"] == "J-ODD-MOTOR-MEDIATED-BRIDGE"
+        and row["event_id"] == "CANON62-EVIDENCE-J-ODD-MOTOR-MEDIATED-BRIDGE"
+    ]
+    checks.append((
+        "V62-MAINTENANCE",
+        "v62 changes only the odd-motor evidence pointer and one lifecycle event while status, scope, dependencies, gates and science counts stay fixed",
+        len(v62_events) == 1
+        and has_status(index, "J-ODD-MOTOR-MEDIATED-BRIDGE", "T")
+        and scope_sha256(index, "J-ODD-MOTOR-MEDIATED-BRIDGE") == "a1f5d43376bafced23478edd0857dfc2c2d1566ee960db32e8d67d493191ad9a"
+        and index["J-ODD-MOTOR-MEDIATED-BRIDGE"]["evidence"] == "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["evidence_id"] == "EV-J-ODD-MOTOR-MEDIATED-BRIDGE"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["location"] == "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["sha256"] == "f6b2ca8bf117ee709eba29356b4e5ad61e60801c1975e5405cab1fefbbaa624b"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["hash_mode"] == "bundle-manifest-sha256-v1"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["architecture_requirement"] == "two-architecture"
+        and {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == "J-ODD-MOTOR-MEDIATED-BRIDGE"
+        } == {
+            ("AFFINE-READING-DEGREE-CENSUS", "REQUIRES"),
+            ("AFFINE-QUADRATIC-FORM-UNIQUENESS", "REQUIRES"),
+        }
+        and normative["J-ODD-MOTOR-MEDIATED-BRIDGE"]["status"] == "T"
+        and normative["J-ODD-MOTOR-MEDIATED-BRIDGE"]["layer"] == "L1"
+        and normative["J-ODD-MOTOR-MEDIATED-BRIDGE"]["gate_ids"] == ""
+        and all(row["owner_item_id"] != "J-ODD-MOTOR-MEDIATED-BRIDGE" for row in gates.values())
+        and v62_events[0]["event_sequence"] == "2"
+        and v62_events[0]["event_date"] == "2026-08-24"
+        and v62_events[0]["release"] == "canon-v62-candidate"
+        and v62_events[0]["event_type"] == "EVIDENCE_CHANGE"
+        and v62_events[0]["previous_status"] == "T"
+        and v62_events[0]["new_status"] == "T"
+        and v62_events[0]["scope_sha256"] == "a1f5d43376bafced23478edd0857dfc2c2d1566ee960db32e8d67d493191ad9a"
+        and v62_events[0]["evidence_id"] == "EV-J-ODD-MOTOR-MEDIATED-BRIDGE"
+        and v62_events[0]["evidence_location"] == "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2"
+        and v62_events[0]["evidence_sha256"] == "f6b2ca8bf117ee709eba29356b4e5ad61e60801c1975e5405cab1fefbbaa624b"
     ))
 
     fw_requires = {}

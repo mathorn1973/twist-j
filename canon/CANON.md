@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v60
+# TWIST-J Public Canon v62
 
-**Release identity.** Public Canon v60. Normative authority and activation
+**Release identity.** Public Canon v62. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v60 also declares the discrete
+algebraic axiom is J. Public Canon v62 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v60 does not claim
+seed of the two algebraic projections. Public Canon v62 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v60 contains no such
+deriving the architecture from J; Public Canon v62 contains no such
 theorem.
 
 ---
@@ -2945,6 +2945,114 @@ rate 0 (TM-ENTROPY-ZERO [T], probes/P-ENTROPY-RESIDUE-MATH-1). This is
 a statement about the driver stream alone. It assigns no census
 meaning, makes no measure or physical-irreversibility statement, and
 neither closes nor weakens ENTROPY-LAYER-BRIDGE [O].
+
+### Binary norm index
+
+J-BINARY-NORM-INDEX [T] is an exact L1 theorem for the absolute norm at inert
+rational primes. Let `K=Q(zeta_5)` and let `p` be inert, so
+`O_K/(p)=F_(p^4)`. Reduction commutes with the absolute norm, hence a unit
+`u` with `N_(K/Q)(u)=1` reduces into
+
+```text
+ker N_(F_(p^4)/F_p),
+|ker N|=(p^4-1)/(p-1)=(p+1)(p^2+1),
+[F_(p^4)^x:ker N]=p-1.
+```
+
+Therefore a norm-one algebraic unit can generate the whole inert residue
+multiplicative group only when `p-1=1`, namely at `p=2`. The public unit J
+attains this sole possible whole-group case: in `F_16`,
+`ord(Jbar)=15=|F_16^x|`. The mechanism itself is generic in field degree and
+selects neither J, degree four nor the prime five. Moreover the four elements
+`1+zeta_5^a`, `a=1,2,3,4`, form one Frobenius orbit at `p=2` and all have
+order fifteen, so the attainment does not select the axiom exponent or turn
+characteristic two into a physical selection principle. Evidence is
+`probes/P-J-BINARY-NORM-INDEX-1`.
+
+J-BINARY-NORM-ORDER-CENSUS [C] is the finite companion on the same L1 carrier.
+Among the 156 rational primes `p<2000` inert in `Q(zeta_5)`, `Jbar` generates
+the complete norm-one subgroup exactly for `p=2` and `p=3`; at every other
+prime in the frozen range its order is a proper divisor of `(p+1)(p^2+1)`.
+This statement is finite-range only. It is not an all-prime theorem.
+
+### Exact record quotient calculus
+
+RECORD-QUOTIENT-CALCULUS [T] is the exact L1 theorem for finite quotient
+records of `R=Z[zeta_5]`. For every nonzero proper ideal
+`I=product_P P^(e_P)`:
+
+```text
+Idem(R/I) ~= P(Supp(I))
+```
+
+canonically as the prime-labelled Boolean algebra supplied by CRT and the
+local-idempotent lemma. Reduction `R/I -> R/rad(I)` is bijective on
+idempotents, so the exponent vector is invisible to the Boolean layer. With
+`n_I=rad(I)/I` and `n_I^0=R/I`, the exact layer orders and Loewy length are
+
+```text
+|n_I^k/n_I^(k+1)| = product {N(P): e_P>k},
+L(R/I)=max_P e_P.
+```
+
+A unital `R`-algebra map `R/I -> R/J` exists exactly when `I` is contained in
+`J` and is then the unique canonical projection; a strict quotient has no
+unital `R`-algebra section. Finally, for
+`I_L=(1-zeta_5)^L(2)`, `L>=1`, the support, radical, reduced ring
+`F_5 x F_16` and four-element Boolean algebra are constant while the Loewy
+length is exactly L and is unbounded. The theorem selects no ideal or atom and
+supplies no event semantics, orientation, decoder, measure, Born weight,
+coarse-graining, RG flow, continuum statement or L2-L6 lift. Evidence is
+`probes/P-RECORD-QUOTIENT-CALCULUS-1`.
+
+### Odd-motor mediated block
+
+J-ODD-MOTOR-MEDIATED-BRIDGE [T] is one consolidated exact L1 theorem on the
+public `M_J`, `D=M_J-I`, the frozen `AGL_1(F_5)` affine simplex and the
+multiplier-stabilizer sectors `P,R,C`. Over `Q(sqrt5)` the native algebra has
+exactly two primitive nonzero rank-two invariant sectors, so the naive third
+native mediator sector is impossible. On the affine token decomposition the
+odd channel `A=D-D^-1` instead has the exact block graph
+
+```text
+P <-> C <-> R,
+PAP=RAR=CAC=PAR=RAP=0,
+rank(PAC)=rank(CAP)=rank(RAC)=rank(CAR)=1.
+```
+
+For `B=P A C A R`,
+
+```text
+rank(B)=1,
+B^sharp B=(5/4)R,
+B B^sharp=(5/4)P,
+```
+
+and the squared overlap of the two active lines in C is exactly `1/5`. None of
+`D,D^2,D^3,D^4,D+D^-1` has the same frozen direct-zero / one-mediator-nonzero
+pattern. For `H_k=g_k+g_k^-1`, the sector eigenvalues are `+2,-2,0`; exact elimination
+of C gives orientation-independent magnitude `sqrt5 t^2/(2z)`, with `t` only a
+formal insertion counter, and at token 2
+
+```text
+det[zI-(H_k+tA)] = z^4+(5t^2-4)z^2+5t^4.
+```
+
+The quadratic lift is exactly
+
+```text
+Sym^2(V) ~= 1 + epsilon + 2V,
+dim End_G(Sym^2 V)=6,
+```
+
+with `q_+` invariant, `q_-` transforming by `epsilon`, the frozen pairwise Hom
+vanishing and trilinear invariant census. The repeated `2V` component remains
+a genuine nonselection boundary. The native two-sector no-go is retained
+inside the theorem rather than omitted. The result is algebraic only: it is not
+a physical resonance and supplies no material, frequency, susceptibility,
+Born, probability, observer, decoder, force, spacetime, SI or L2-L6 reading.
+Evidence is `probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2`.
+
 
 ## 4. The two places
 
