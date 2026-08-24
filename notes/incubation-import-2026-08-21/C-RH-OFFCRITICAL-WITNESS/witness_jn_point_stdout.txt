@@ -1,0 +1,14 @@
+PASS P0 M_0,M_1 at c=1 vs direct  |dM0|=6.32e-62 |dM1|=1.94e-62
+PASS P1 J_1(1) closed form and det  maxdev=0.0 det=3.3981183e-6
+PASS P2 prime vs taylor M_k, c=5/2, k<=12  worst |d|=10.9 at k=12 (tail bound 11.3, |M_k|=6.71e-7); sharp for small k, tail-dominated for large k
+PASS P3 |c M'(c)| < M(c) on grid  c=0.6 ratio=0.998844 c=0.75 ratio=0.998196 c=1 ratio=0.996802 c=1.5 ratio=0.992859 c=2.5 ratio=0.980634 c=5 ratio=0.930283
+PASS P4 J_16(1) LDL pivots all positive  p_0=0.04614 p_8=3.246e-26 p_16=6.063e-54 decay~0.000272..0.00225 per step
+NOTE P4: D_N chain at a_n=1+1/n had pivot ~1.3e-35 already at N=8;
+one-point pivots decay ~1e-3 per step (scale set by the first zero,
+((c-1/2)/gamma_1)^2-ish), roughly geometric: better conditioned than the
+chain but still needing ~3 digits per order; certified work needs interval
+arithmetic with precision linear in N.
+PASS P5 zero-side vs recursion  J[0,0] d=0.0023 J[0,1] d=1.0e-9 J[1,1] d=1.0e-9 J[2,3] d=9.8e-22 J[5,5] d=2.2e-29 J[8,8] d=4.0e-36 ((0,0) within zero tail 0.0023)
+PASS P6 Li bridge (1-r)^2 sum lambda_n r^(n-1) = M(a)  r=0.15 a=0.67647 |d|=0.00155 (budget 0.00115) r=0.30 a=0.92857 |d|=0.00213 (budget 0.00117)
+PASS P6 lambda_1 zero-sum vs exact  zero-sum=0.02194692 exact=0.02309570897
+WITNESS PASS

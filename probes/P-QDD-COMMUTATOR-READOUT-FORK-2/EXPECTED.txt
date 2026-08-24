@@ -1,0 +1,21 @@
+PASS C1 authority
+PASS C2 motor metric
+PASS C3 projectors
+PASS C4 compressed motor
+PASS C5 centralizer formula
+PASS C6 first elimination
+PASS C7 second elimination
+PASS C8 final elimination
+PASS C9 signs centralize
+PASS D1 quadratic sign fibres
+PASS D2 reflection noncentral
+PASS D3 event blind
+PASS D4 quadratic detects
+PASS T1 target last
+CENTRALIZER signs_only
+EVENT_READOUT complete_for_event_partition blind_to_internal_commutators
+QUADRATIC_READOUT sign_complete faithful_to_nonzero_internal_commutators
+PUBLIC_BOUNDARY common_ordered_composition_domain_not_supplied
+DECISION EQUALITY-FORK
+SAMPLING NOT PROVIDED
+RESULT 14/14 PASS

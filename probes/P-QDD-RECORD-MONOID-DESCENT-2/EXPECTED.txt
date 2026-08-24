@@ -1,0 +1,42 @@
+PASS M1 saturation homomorphism
+PASS M2 source nonidempotent target idempotent
+PASS M3 histories free
+PASS C1 conditioning idempotent
+PASS J1 simplex
+PASS J2 S projector
+PASS J3 branch algebra
+PASS W1 finite witness
+PASS W2 finite witness ray moves
+PASS W3 parity not saturation
+PASS W4 infinite witness effect
+PASS W5 infinite certificate
+PASS W6 first powers distinct
+PASS W7 infinite witness not saturation
+PASS D0-14 descent iff idem
+PASS D0-15 descent iff idem
+PASS D0-16 descent iff idem
+PASS D0-17 descent iff idem
+PASS D1-18 descent iff idem
+PASS D1-19 descent iff idem
+PASS D1-20 descent iff idem
+PASS D1-21 descent iff idem
+PASS D2-22 descent iff idem
+PASS D2-23 descent iff idem
+PASS D2-24 descent iff idem
+PASS D2-25 descent iff idem
+PASS D3-26 descent iff idem
+PASS D3-27 descent iff idem
+PASS D3-28 descent iff idem
+PASS D3-29 descent iff idem
+PASS D4-30 descent iff idem
+PASS D4-31 descent iff idem
+PASS D4-32 descent iff idem
+PASS D4-33 descent iff idem
+PASS Dfinal only signs descend
+PASS TARGET last
+DECISION RECORD-MONOID-NONDESCENT
+FINITE_ORBIT period=2
+INFINITE_ORBIT certificate_trace=6/5
+BOUNDARY same_record_conditioning_idempotent_fresh_reinteraction_not_forced
+SAMPLING NOT PROVIDED
+RESULT 36/36 PASS

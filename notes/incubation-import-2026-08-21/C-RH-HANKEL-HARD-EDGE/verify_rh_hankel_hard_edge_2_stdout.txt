@@ -1,0 +1,80 @@
+P-RH-HANKEL-HARD-EDGE-2 verifier
+successor of HE-1, fork B: affine family, hard edge c_d = (33/4) d + 21
+D = {2,4,8,16,24}, EXT data-scan d in {32,48}, ceiling grid T = k/2, k = 1..100
+CHECK 0 enclosures and kappa witness: PASS
+CHECK 1 Bessel R_m recurrence equals closed form, m<=99: PASS
+CHECK 2 Fourier spot identities: PASS
+GATEB family=F0 theta=- d=2 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=0 d=2 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-399/100 d=2 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-19599/100 d=2 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-575/16 d=2 verdict=PASS roots_beyond=0
+GATEB family=F0 theta=- d=4 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=0 d=4 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-399/100 d=4 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-19599/100 d=4 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-575/16 d=4 verdict=PASS roots_beyond=0
+GATEB family=F0 theta=- d=8 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=0 d=8 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-399/100 d=8 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-19599/100 d=8 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-575/16 d=8 verdict=PASS roots_beyond=0
+GATEB family=F0 theta=- d=16 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=0 d=16 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-399/100 d=16 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-19599/100 d=16 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-575/16 d=16 verdict=PASS roots_beyond=0
+GATEB family=F0 theta=- d=24 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=0 d=24 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-399/100 d=24 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-19599/100 d=24 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=-575/16 d=24 verdict=PASS roots_beyond=0
+EXTSCAN family=F1 theta=0 d=32 sign(xlo)=-1 grid_pos=0 first_pos=NONE leading=-1
+EXTSCAN family=F1 theta=-399/100 d=32 sign(xlo)=-1 grid_pos=0 first_pos=NONE leading=-1
+EXTSCAN family=F1 theta=0 d=48 sign(xlo)=-1 grid_pos=0 first_pos=NONE leading=-1
+EXTSCAN family=F1 theta=-399/100 d=48 sign(xlo)=-1 grid_pos=0 first_pos=NONE leading=-1
+GATEA d=24 family=F0 theta=- alpha1 V_sign=+1 V~=+1.992029e+0
+GATEA d=24 family=F1 theta=0 alpha1 V_sign=+1 V~=+1.364717e-8
+GATEA d=24 family=F1 theta=-399/100 alpha1 V_sign=-1 V~=-1.385143e-10
+GATEA d=24 family=F1 theta=-19599/100 alpha1 V_sign=+1 V~=+3.192424e-5
+GATEA d=24 family=F1 theta=-575/16 alpha1 V_sign=+1 V~=+8.837503e-7
+GATEA d=24 family=F0 theta=- alpha2 V_sign=+1 V~=+1.644402e+0
+GATEA d=24 family=F1 theta=0 alpha2 V_sign=+1 V~=+2.723356e-5
+GATEA d=24 family=F1 theta=-399/100 alpha2 V_sign=+1 V~=+2.613138e-5
+GATEA d=24 family=F1 theta=-19599/100 alpha2 V_sign=-1 V~=-5.068149e-9
+GATEA d=24 family=F1 theta=-575/16 alpha2 V_sign=+1 V~=+1.812708e-5
+GATEA d=24 family=F0 theta=- alpha3 V_sign=+1 V~=+1.929360e+0
+GATEA d=24 family=F1 theta=0 alpha3 V_sign=+1 V~=+1.074664e-6
+GATEA d=24 family=F1 theta=-399/100 alpha3 V_sign=+1 V~=+8.475964e-7
+GATEA d=24 family=F1 theta=-19599/100 alpha3 V_sign=+1 V~=+2.148354e-5
+GATEA d=24 family=F1 theta=-575/16 alpha3 V_sign=-1 V~=-7.526048e-9
+MARGIN family=F1 alpha1 theta=-399/100 d=2 V_sign=-1 V~=-1.580744e-7
+MARGIN family=F1 alpha1 theta=-399/100 d=4 V_sign=-1 V~=-3.701528e-8
+MARGIN family=F1 alpha1 theta=-399/100 d=8 V_sign=-1 V~=-5.526970e-9
+MARGIN family=F1 alpha1 theta=-399/100 d=16 V_sign=-1 V~=-5.803888e-10
+MARGIN family=F1 alpha1 theta=-399/100 d=24 V_sign=-1 V~=-1.385143e-10
+MARGIN family=F1 alpha2 theta=-19599/100 d=2 V_sign=+1 V~=+3.364463e-4
+MARGIN family=F1 alpha2 theta=-19599/100 d=4 V_sign=+1 V~=+2.030068e-5
+MARGIN family=F1 alpha2 theta=-19599/100 d=8 V_sign=+1 V~=+3.993472e-7
+MARGIN family=F1 alpha2 theta=-19599/100 d=16 V_sign=-1 V~=-1.389012e-8
+MARGIN family=F1 alpha2 theta=-19599/100 d=24 V_sign=-1 V~=-5.068149e-9
+MARGIN family=F1 alpha3 theta=-575/16 d=2 V_sign=-1 V~=-6.749343e-6
+MARGIN family=F1 alpha3 theta=-575/16 d=4 V_sign=-1 V~=-1.791341e-6
+MARGIN family=F1 alpha3 theta=-575/16 d=8 V_sign=-1 V~=-2.850655e-7
+MARGIN family=F1 alpha3 theta=-575/16 d=16 V_sign=-1 V~=-3.107691e-8
+MARGIN family=F1 alpha3 theta=-575/16 d=24 V_sign=-1 V~=-7.526048e-9
+CEILING delta=1/10 d=8 T_ff=23/2 n_fail=78
+CEILING delta=1/10 d=16 T_ff=17 n_fail=67
+CEILING delta=1/10 d=24 T_ff=43/2 n_fail=58
+CEILING delta=1/10 d=32 T_ff=51/2 n_fail=50
+CEILING delta=1/10 d=48 T_ff=33 n_fail=35
+CEILING delta=1/4 d=8 T_ff=16 n_fail=69
+CEILING delta=1/4 d=16 T_ff=23 n_fail=55
+CEILING delta=1/4 d=24 T_ff=29 n_fail=43
+CEILING delta=1/4 d=32 T_ff=69/2 n_fail=32
+CEILING delta=1/4 d=48 T_ff=89/2 n_fail=12
+CHECK 5 control F0 alpha1 d=24 V>0: PASS
+SURVIVAL F1 gateB=PASS gateA=PASS verdict=SURVIVES
+STOPGATE affine-hard-edge fired=NO
+ROUTE ARMED: step-3 obligation = tail majorant over the measured ceiling frontier; T2 lane opens next regardless
+CHECKS: 4 of 4 PASS, FAILED: none

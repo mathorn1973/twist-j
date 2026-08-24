@@ -1,0 +1,30 @@
+PASS A1 authority
+PASS A2 Gram inverse
+PASS A3 motor and metric
+PASS A4 projective order certificates
+PASS R1 cyclotomic trace Gram
+PASS R2 global direct-helper identity
+PASS R3 pure-record projector identities
+PASS R4 exact sign fibres
+PASS R5 current finite image
+PASS R6 rational HIGH-support rays
+PASS C1 rational-code round trip
+PASS C2 static encodings disjoint
+PASS C3 static extensions decode
+PASS C4 static bridges nonidentical
+PASS U1 projective motor five-cycles
+PASS U2 pointed-tail freeness
+PASS U3 nonnegative lag reduction
+PASS U4 congruence no-go audit
+PASS L1 compressed source
+PASS L2 global bridge reads L4 commutator
+PASS T1 target comparison last
+READONLY_BRIDGE global_Q4_sign_source faithful
+FINITE_LEG pure_record_fibres=313 insufficient_for_infinite_source
+STATIC_ENCODINGS count=2 disjoint exact nonselected
+U_CONGRUENCE class=empty order5_vs_free_tail
+L4_RESTRICTION internal_commutator_read=YES
+PUBLIC_GATE GATE-L4-L1-QDD-PURE-RECORD ABSENT_ON_BASIS
+DECISION READONLY-BRIDGE-ONLY
+SAMPLING NOT PROVIDED
+RESULT 21/21 PASS

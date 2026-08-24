@@ -1,0 +1,83 @@
+P-RH-HANKEL-HARD-EDGE-1 verifier
+families F0 monomial, F1 affine, F2 Chebyshev-T, F3 Chebyshev-U (Jacobi 1/2,1/2)
+hard edge c_d = (33/4) d + 9/2, D = {2,4,8,16,24}
+CHECK 0 enclosures and hard-edge witnesses: PASS
+CHECK 1 Bessel R_m recurrence equals closed form, m<=51: PASS
+CHECK 2 Fourier spot identities: PASS
+GATEB family=F0 theta=- d=2 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=0 d=2 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-399/100 d=2 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-19599/100 d=2 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-575/16 d=2 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F2 theta=- d=2 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F3 theta=- d=2 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F0 theta=- d=4 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=0 d=4 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-399/100 d=4 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-19599/100 d=4 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-575/16 d=4 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F2 theta=- d=4 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F3 theta=- d=4 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F0 theta=- d=8 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=0 d=8 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-399/100 d=8 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-19599/100 d=8 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-575/16 d=8 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F2 theta=- d=8 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F3 theta=- d=8 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F0 theta=- d=16 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=0 d=16 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-399/100 d=16 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-19599/100 d=16 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-575/16 d=16 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F2 theta=- d=16 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F3 theta=- d=16 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F0 theta=- d=24 verdict=PASS roots_beyond=0
+GATEB family=F1 theta=0 d=24 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-399/100 d=24 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-19599/100 d=24 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F1 theta=-575/16 d=24 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F2 theta=- d=24 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEB family=F3 theta=- d=24 verdict=AMBIGUOUS roots_beyond=1 note=positive_only_in_gray_zone
+GATEA d=24 family=F0 theta=- alpha1 V_sign=+1 V~=+1.990680e+0
+GATEA d=24 family=F1 theta=0 alpha1 V_sign=+1 V~=+1.865601e-8
+GATEA d=24 family=F1 theta=-399/100 alpha1 V_sign=-1 V~=-1.893444e-10
+GATEA d=24 family=F1 theta=-19599/100 alpha1 V_sign=+1 V~=+4.364183e-5
+GATEA d=24 family=F1 theta=-575/16 alpha1 V_sign=+1 V~=+1.208127e-6
+GATEA d=24 family=F2 theta=- alpha1 V_sign=+1 V~=+1.583868e+0
+GATEA d=24 family=F3 theta=- alpha1 V_sign=+1 V~=+1.151998e+3
+GATEA d=24 family=F0 theta=- alpha2 V_sign=+1 V~=+1.590818e+0
+GATEA d=24 family=F1 theta=0 alpha2 V_sign=+1 V~=+3.599152e-5
+GATEA d=24 family=F1 theta=-399/100 alpha2 V_sign=+1 V~=+3.453390e-5
+GATEA d=24 family=F1 theta=-19599/100 alpha2 V_sign=-1 V~=-6.471041e-9
+GATEA d=24 family=F1 theta=-575/16 alpha2 V_sign=+1 V~=+2.394913e-5
+GATEA d=24 family=F2 theta=- alpha2 V_sign=+1 V~=+1.942650e+0
+GATEA d=24 family=F3 theta=- alpha2 V_sign=+1 V~=+9.777850e+0
+GATEA d=24 family=F0 theta=- alpha3 V_sign=+1 V~=+1.917633e+0
+GATEA d=24 family=F1 theta=0 alpha3 V_sign=+1 V~=+1.460931e-6
+GATEA d=24 family=F1 theta=-399/100 alpha3 V_sign=+1 V~=+1.152224e-6
+GATEA d=24 family=F1 theta=-19599/100 alpha3 V_sign=+1 V~=+2.921130e-5
+GATEA d=24 family=F1 theta=-575/16 alpha3 V_sign=-1 V~=-1.022752e-8
+GATEA d=24 family=F2 theta=- alpha3 V_sign=+1 V~=+3.735736e-2
+GATEA d=24 family=F3 theta=- alpha3 V_sign=+1 V~=+5.656633e+2
+MARGIN family=F1 alpha1 theta=-399/100 d=2 V_sign=-1 V~=-1.519429e-6
+MARGIN family=F1 alpha1 theta=-399/100 d=4 V_sign=-1 V~=-1.563027e-7
+MARGIN family=F1 alpha1 theta=-399/100 d=8 V_sign=-1 V~=-1.274689e-8
+MARGIN family=F1 alpha1 theta=-399/100 d=16 V_sign=-1 V~=-9.146835e-10
+MARGIN family=F1 alpha1 theta=-399/100 d=24 V_sign=-1 V~=-1.893444e-10
+MARGIN family=F1 alpha2 theta=-19599/100 d=2 V_sign=+1 V~=+7.763818e-3
+MARGIN family=F1 alpha2 theta=-19599/100 d=4 V_sign=+1 V~=+1.993737e-4
+MARGIN family=F1 alpha2 theta=-19599/100 d=8 V_sign=+1 V~=+2.099045e-6
+MARGIN family=F1 alpha2 theta=-19599/100 d=16 V_sign=-1 V~=-1.405920e-8
+MARGIN family=F1 alpha2 theta=-19599/100 d=24 V_sign=-1 V~=-6.471041e-9
+MARGIN family=F1 alpha3 theta=-575/16 d=2 V_sign=+1 V~=+2.298680e-6
+MARGIN family=F1 alpha3 theta=-575/16 d=4 V_sign=-1 V~=-6.135519e-6
+MARGIN family=F1 alpha3 theta=-575/16 d=8 V_sign=-1 V~=-6.271179e-7
+MARGIN family=F1 alpha3 theta=-575/16 d=16 V_sign=-1 V~=-4.835939e-8
+MARGIN family=F1 alpha3 theta=-575/16 d=24 V_sign=-1 V~=-1.022752e-8
+CHECK 5 control F0 alpha1 d=24 V>0: PASS
+SURVIVAL F1 gateB=FAIL gateA=PASS verdict=FAILS
+SURVIVAL F2 gateB=FAIL gateA=FAIL verdict=FAILS
+SURVIVAL F3 gateB=FAIL gateA=FAIL verdict=FAILS
+STOPGATE standard-hard-edge-families fired=YES
+CHECKS: 4 of 4 PASS, FAILED: none

@@ -1,0 +1,16 @@
+PASS BR-00 sanity: u . u^-1 = 1 in the 4-tuple basis
+PASS BR-01 division-route ladder equals the registered 1, 6, 10, 14, 18, 22, 26
+PASS BR-02 naive boundary guess v(J^20 - 1) = 5 is refuted (value is 6)
+PASS BR-03 forced cancellation: res((w/lambda)^4 u) = 4 = -1 mod 5
+PASS BR-04 axiom step matrix equals multiplication by J in the 4-tuple basis
+PASS BR-05 matrix route: ord of M_J in GL_4(Z/5^m) = 4.5^m for m = 1..6
+PASS BR-06 unit count at level 2 is 4 . 5 = 20
+PASS BR-07 order of J in (O/lambda^2)^x is 20 by direct enumeration
+PASS BR-08 exponent bound: every unit order at level 2 divides 20
+PASS BR-09 Teichmueller: (2^(5^11))^2 + 1 = 0 mod 5^12 and = 2 mod 5
+PASS BR-10 mu_3 attack blocked at the residue field: x^2 + x + 1 has no root mod 5
+PASS BR-11 mu_8 attack blocked at the residue field: x^4 + 1 has no root mod 5
+PASS BR-12 grid denominators are exactly {2^e 5^f : e <= 2}, q <= 2000
+PASS BR-13 reproduction P-LAMBDA-COCYCLE-ANGLES-1: file hash sealed, exit 0, stdout byte-identical
+PASS BR-13 reproduction P-LAMBDA-COCYCLE-ANGLES-2: file hash sealed, exit 0, stdout byte-identical
+FINDINGS 0 of 15 attacks
