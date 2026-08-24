@@ -1,0 +1,5 @@
+METRIC_ONLY_PROJECTOR_NONSELECTION FIRED expected
+public_line=span(1,1,1,1)
+alternative_line=span(1,0,0,0)
+both_rank_one_idempotent_and_G_self_adjoint=1
+VERDICT direct LOW subrecord is necessary for effect recovery

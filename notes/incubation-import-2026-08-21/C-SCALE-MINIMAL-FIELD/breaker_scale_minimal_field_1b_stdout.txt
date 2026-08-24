@@ -1,0 +1,15 @@
+BREAKER C-SCALE-MINIMAL-FIELD-1b   independent path, exact
+supersedes leg BR4 of run 1: its irreducibility test missed the root 0.
+run 1 archived as ARCHIVE_breaker_scale_minimal_field_1_BR4-DEFECTIVE.py
+
+BR1-no real quadratic field of |disc| < 5 exists         SURVIVES least positive fundamental discriminant = 5
+BR2-S2 is minimal only INSIDE the cyclotomic class       SURVIVES drop cyclotomic and the minimizer is Q(sqrt5) at 5, not Q(zeta_5) at 125
+BR3-INTENDED BREAK: selection power is in the REQUIREMENT BREAKS scale -> d=5 |disc|=5 (five) ; extra torsion -> d=-3 |disc|=3 (three)
+BR4-corrected: no cubic in the box reaches |disc| <= 5   SURVIVES least |poly disc| over irreducible cubics in [-6,6]^3 is 23 at (-5, 4, -1)
+BR5-INTENDED BREAK on S4: no rational invariant can pick J BREAKS all four 1+zeta^a share ONE minimal polynomial [1, -3, 4, -2, 1]
+BR5b-Tr((1+zeta^a)^k) is independent of a for k = 1..12  SURVIVES they are Galois conjugates; the choice of J is orientation, not arithmetic
+BR6-J^10 = F_11 - F_10 phi exactly, so |J|^10 = phi^-10 < 1 SURVIVES J^10 = 89 + 55(zeta^2 + zeta^3) = 89 - 55 phi
+
+SURVIVED 5 of 7 attacks
+BREAKS 2
+BROKEN: BR3-INTENDED BREAK: selection power is in the REQUIREMENT, BR5-INTENDED BREAK on S4: no rational invariant can pick J

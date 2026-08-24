@@ -1,0 +1,18 @@
+AUDIT_PIN-CORRECTION.txt
+
+prereg_sha256:   56e1d4701816f6dc3a8e46c9273786a0223b95b5f3c8308e93e479f724f85430
+prereg_bytes:    6424
+prereg_lf:       147
+prereg_cr:       0
+prereg_final_lf: yes
+code_sha256:     244b0b8846f26423d127b4f7bc0e9211ab24dd5497ff0d23e7d055cbefdaba24
+code_bytes:      11892
+code_lf:         358
+code_cr:         0
+code_final_lf:   yes
+basis_commit:    4ef54f0c34f80897af0121a2d93b710e70a8377c
+audited_merge:   4ed6cb72ab1110b68ed0574115e9dacbaf65e954
+python_expected: CPython 3.11.15, Linux x86_64
+timeout_seconds: 120
+formal_audit_executions: 0
+static_check:    ast.parse only, no import, no execution, no .pyc

@@ -1,0 +1,60 @@
+P-RECORD-QUOTIENT-CALCULUS-1 -- exact record quotient calculus R1-R6
+R = Z[zeta_5] = Z[X]/Phi_5; ideals as HNF sublattices of Z^4
+LOEWY CONVENTION: n^0 = R/I; layer k is n^k/n^(k+1); the first listed
+layer is n^0/n^1 = R/rad(I), of order N(rad I). See gate L4.
+ROUTE DISCIPLINE: independent exact constructions; finite audit of a written proof
+FORMAL SCOPE: 31 gates, L1 only, no sampling claim beyond the frozen carrier
+
+-- Part 0: ring and lattice machinery
+PASS W1  z^5 = 1 and 1+z+z^2+z^3+z^4 = 0   repeated multiplication vs the summed defining relation
+PASS W2  rmul agrees with hand expansion: (1+z)(1+z^2) = 1+z+z^2+z^3   independent hand expansion
+PASS W3  HNF box is a complete irredundant residue system   box size vs determinant; a 13^4 sweep lands in the same 80 classes; reduction is constant on cosets
+PASS W4  selected ideal products have the frozen multiplicative norms   lattice determinant of the product vs product of determinants
+
+-- Part 1: primes above p and residue fields
+PASS F1  5 is totally ramified: one prime, f = 1, and lambda^4 = (5)   factorization route and the lattice identity lambda^4 = (5) agree
+PASS F2  2 and 3 are inert, f = 4: factor degree = ord_5(p)   N(P) = 16 and 81
+PASS F3  11 splits completely: four primes of norm 11, one per fifth root   roots [3, 4, 5, 9] found by search match the linear factors
+PASS F4  ker(reduce) is P and the image has |kappa(P)| = N(P)   P lies in the kernel; equal finite indices identify it with the kernel
+PASS F5  reduction R -> kappa(P) is a RING map (sum and product)   reduce-then-operate vs operate-then-reduce, four primes
+
+-- Part 2: R1  Idem(R/I) = P(Supp I), canonically
+PASS R1a e -> {P : e = 1 in kappa(P)} is a BIJECTION onto the power set   11 ideals; surjective AND injective onto P(Supp), not a count match
+PASS R1b |Idem(R/I)| = 2^|Supp I|: enumeration vs prime count   lambda:2; (2):2; (3):2; (4):2; (5):2; (6):4; lambda(2):4; lambda^2(2):4; (10):4; (11):16; (20):4
+PASS R1c BOOLEAN isomorphism: ef -> cap, e+f-ef -> cup, 1-e -> complement   every idempotent pair of every ideal in the family
+PASS R1d atoms are orthogonal, one per prime, and sum to 1   atoms are labelled by the primes themselves; no numbering is used
+PASS R1e support is by PRIME: 11 splits into four, so |Idem(R/(11))| = 16   a rational-divisor count would give 2 for both
+
+-- Part 3: R2  Idem(R/I) -> Idem(R/rad I) is a bijection
+PASS R2a Idem(R/I) -> Idem(R/rad I) is onto and injective   I is contained in rad(I), then two separate enumerations per ideal
+PASS R2b thickness is invisible to the Boolean layer   same Boolean algebra, provably different ideals
+PASS R2c |Supp I| = 1 gives |Idem| = 2 even when R/I is NOT a field   tested in BOTH directions; R/(5) is local of order 625, not a field
+
+-- Part 4: R3  exact Loewy profile
+PASS L1  lattice-index route == prime-norm route == frozen hand table   (5):[5, 5, 5, 5]; (10):[80, 5, 5, 5]; (20):[80, 80, 5, 5]
+PASS L2  L(R/I) = min{L : n^L = 0} = max_P e_P   chain length from HNF determinants, max exponent from valuations
+PASS L3  |n^k/n^(k+1)| = product of N(P) over {P : e_P > k}   ORDERS only; no module decomposition is claimed
+PASS L4  the n^1 start CONTRADICTS the product formula, which never sees the chain   (10): wrong [5, 5, 5] vs correct [80, 5, 5, 5]
+PASS L5  the first layer is the product of N(P) over the support   chain index vs residue-field sizes, no shared radical computation
+
+-- Part 5: R4/R5  R-algebra maps classified by ideal inclusion
+PASS H1  a unital map R/I1 -> R/I2 exists iff I1 is contained in I2   64 ordered pairs; existence from well-definedness vs lattice containment
+PASS H2  THIN: many multiplicative maps exist; unitality leaves at most one   max multiplicative 4, max unital 1 -- unitality applied AFTER the enumeration, not inside it
+PASS H3  the unique unital map is reduction on every basis vector   requires exactly one map before checking f(z^j) = z^j for j = 0..3
+PASS H5  R5: a strict quotient has NO unital section back   all 9 strict quotients enumerated, none skipped
+PASS H6  map enumeration agrees with the independent CRT valuation count   idempotent-image enumeration vs selectable local components
+
+-- Part 6: R6  fixed support admits arbitrary Loewy length (no-go)
+PASS N1  all five tested I_L have the same support and radical   support and radical recomputed per L; N(rad) = 80
+PASS N2  all five tested I_L have the same Boolean algebra, |Idem| = 4   enumerated separately in each R/I_L, up to 50000 cells
+PASS N3  finite audit: L(R/I_L) = L for L = 1..5   lengths [1, 2, 3, 4, 5] from the lattice route
+PASS N4  finite witness: fixed Boolean data, five distinct depths   the universal no-go is proved in PREREG.md; this gate is its finite witness
+
+DECISION RECORD-QUOTIENT-CALCULUS-CONFIRMED
+BOOLEAN Idem(R/I)=P(Supp(I)); radical reduction preserves idempotents
+THICKNESS layer_order=product_NP_for_eP_gt_k Loewy=max_eP
+REDUCTIONS Hom_R_alg=canonical_projection_iff_I_subset_J; strict=no_section
+NO_GO fixed_support_and_reduced_record_do_not_determine_Loewy_depth
+SCOPE L1 only; no selector, apparatus, event, atom choice, decoder, measure, coarse-graining, RG, continuum, or L2-L6 lift
+SAMPLING NOT PROVIDED
+RESULT 31/31 PASS

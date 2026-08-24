@@ -1,0 +1,13 @@
+PASS B3-07a k=1 degree preserved, monic
+PASS B3-07b k=1 constant term exactly 5, not divisible by 25
+PASS B3-07c k=1 all middle coefficients divisible by 5
+PASS B3-07d k=1 independent congruence Phi(x+1) = x^deg mod 5
+PASS B3-07a k=2 degree preserved, monic
+PASS B3-07b k=2 constant term exactly 5, not divisible by 25
+PASS B3-07c k=2 all middle coefficients divisible by 5
+PASS B3-07d k=2 independent congruence Phi(x+1) = x^deg mod 5
+PASS B3-07a k=3 degree preserved, monic
+PASS B3-07b k=3 constant term exactly 5, not divisible by 25
+PASS B3-07c k=3 all middle coefficients divisible by 5
+PASS B3-07d k=3 independent congruence Phi(x+1) = x^deg mod 5
+RESULT 12/12 PASS

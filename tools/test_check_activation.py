@@ -7,12 +7,14 @@ import csv
 from pathlib import Path, PurePosixPath, PureWindowsPath
 import tempfile
 import unittest
+from unittest.mock import call, patch
 
 from tools.check_activation import (
     EVIDENCE_FIELDS,
     activation_delta_blockers,
     architecture_blockers,
     artifact_blockers,
+    full_replay_blockers,
     post_content_path_allowed,
     posix_component_sort_key,
     publication_tag_blocker,
@@ -97,6 +99,35 @@ class ActivationTests(unittest.TestCase):
         self.assertFalse(post_content_path_allowed("tools/check_activation.py", dry_run=False))
         self.assertFalse(post_content_path_allowed("STATUS.md", dry_run=True))
         self.assertTrue(post_content_path_allowed("STATUS.md", dry_run=False))
+
+    def test_full_replay_runs_public_probes_before_reproductions(self) -> None:
+        root = Path("fixture-root")
+        with patch(
+            "tools.check_activation.run_script",
+            side_effect=[(True, "PROBES PASS"), (True, "REPRODUCTIONS PASS")],
+        ) as runner:
+            self.assertEqual(full_replay_blockers(root), [])
+        self.assertEqual(
+            runner.call_args_list,
+            [
+                call(root, "check_verifier.py"),
+                call(root, "check_reproduce.py"),
+            ],
+        )
+
+    def test_full_replay_aggregates_failures_in_order(self) -> None:
+        root = Path("fixture-root")
+        with patch(
+            "tools.check_activation.run_script",
+            side_effect=[(False, "PROBES FAIL"), (False, "REPRODUCTIONS FAIL")],
+        ):
+            self.assertEqual(
+                full_replay_blockers(root),
+                [
+                    "full public-probe replay failed",
+                    "full reproduction replay failed",
+                ],
+            )
 
     def test_missing_two_architecture_records_block(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

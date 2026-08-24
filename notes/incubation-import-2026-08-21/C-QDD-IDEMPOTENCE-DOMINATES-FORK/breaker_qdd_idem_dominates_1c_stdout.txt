@@ -1,0 +1,15 @@
+PASS B0-01 the sum-zero projector is symmetric idempotent of rank four and the five label vertices span it with the 4/5, -1/5 Gram, so on S the simplex form is the dot product and the adjoint is the transpose
+PASS B0-02 all 120 label permutations act on S orthogonally with respect to the dot product and are pairwise distinct on S
+PASS B0-03 route agreement on the ceiling: exactly 20 of the 120 relabelings are affine, and no transposition is affine
+PASS B0-04 route agreement on the pieces: P_k rank one, Q_k rank three, both symmetric idempotent, R + C = Q, J^2 = -C, J transpose = -J
+PASS B1-01 route agreement on the normalizer: 48 distinct members, 24 sign classes, every member with T transpose T = Q_k and Q_k T = T
+PASS B1-02 B1 attempt failed to break: no stabilizer element restricts to minus the identity on the moving support, at any token
+PASS B1-03 class level idempotence on the full normalizer, exhaustive, agrees with the verifier route: exactly +Q_k and -Q_k survive
+PASS B2-01 B2 attempt failed to break: every member of the wide enlarged family is inside the effect-compatible family and none beyond +-Q_k is class level idempotent
+PASS B3-01 B3 attempt failed to break: the independent Cayley sweep produces only effect-compatible operators and no survivor beyond +-Q_k
+PASS B4-01 B4 boundary recorded: the support condition Q_k T = T is load bearing, and the boundary count is reported rather than hidden
+NOTE B1 searched 120 stabilizer-token pairs for rho(h)|W = -identity: 0 found
+NOTE B2 swept 5520 normalizer-times-wide-circle members over 23 rational circle points: 0 anomalies
+NOTE B3 independent Cayley sweep on grid -3,-1,1,3 in the label basis: 320 operators built, 0 anomalies
+NOTE B4 boundary probe, effect equation kept and support condition dropped, over all 600 permutation-token pairs: 0 class level idempotent operators outside the support condition
+RESULT 10/10 PASS

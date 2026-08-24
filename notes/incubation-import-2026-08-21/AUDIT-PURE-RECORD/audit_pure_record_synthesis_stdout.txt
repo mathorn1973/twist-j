@@ -1,0 +1,20 @@
+A01-Ginv-and-projectors                        PASS
+A02-H-is-2-1-1-simplex-gram                    PASS
+A03-Ostar-H-orthogonal-involution              PASS
+A04-A-preserves-W-and-TrA                      PASS
+A05-ordered-outputs-match-stated               PASS
+A06-equal-scalar-weight-3-4                    PASS
+A07-branch-weights-0-and-3-4                   PASS
+A08-densities-match-stated-and-differ          PASS
+A09-outputs-outside-Veff                       PASS
+A10-identities-on-1295-vector-sweep            PASS
+A11-record-fibres-are-sign-pairs               PASS
+A12-G-definite-on-Q4                           PASS
+A13-Ostar-commutes-with-S                      PASS
+A14-scalar-channel-blind-on-125-coord-sweep    PASS
+A15-commutator-nonzero-rank-2                  PASS
+A16-Rcyc-fields-equal-m-and-vvTG-on-624-sweep  PASS
+A17-witness-Rcyc-total-and-density             PASS
+
+FINDINGS 0
+AUDIT VERDICT: the posted synthesis computations withstand the independent pass
