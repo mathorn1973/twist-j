@@ -44,7 +44,7 @@ notes/c-rh-ray-finite-window-certificate-1-n	FOLD	0	1	1	single-pass	notes/C-RH-R
 notes/c-rh-ray-finite-window-certificate-2-n	ABANDON	1	1	0	direct	-	gate executed but never completed: pinned wrapper failed on import before the engine ran. Closing record quotable from notes/c-rh-ray-finite-window-certificate-3-n RESULT.md section 5; fold -3-N first
 notes/c-rh-ray-finite-window-certificate-3-n	FOLD	0	1	1	single-pass	notes/C-RH-RAY-FINITE-WINDOW-CERTIFICATE-3-N/RESULT.md	-
 notes/c-rh-stieltjes-widder-euler-1-n	FOLD	0	1	1	single-pass	notes/C-RH-STIELTJES-WIDDER-EULER-1-N/RESULT.md	-
-notes/c-rh-weil-norm-junction-1-n	RETARGET	1	1	0	direct	-	issue #374 is OPEN; owner decision required, do not close unilaterally
+notes/c-rh-weil-norm-junction-1-n	RETARGET	1	1	0	direct	-	owner ruling 2026-08-24: content RETARGET, old identifier consumed with a terminal ABANDONED record that preserves achieved candidate results and manufactures no J7 verdict; decision bar J7 never reached; issue #374 stays open until that record merges; see notes/V63-CLEANUP-SCOPE.md
 notes/c-rh-widder-angle-sweep-correction-1-n	ABANDON	1	1	0	adversarial	-	-
 notes/c-split-unit-1	FOLD	0	1	1	single-pass	notes/C-SPLIT-UNIT-1/RESULT-C-SPLIT-UNIT-1_2026-08-01.md	-
 notes/c-suzuki-local-capacity-nogo-1	ARCHIVE	0	1	1	single-pass	notes/C-SUZUKI-LOCAL-CAPACITY-NOGO-1/RESULT.md	-

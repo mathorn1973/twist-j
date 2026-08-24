@@ -82,8 +82,13 @@ to commit, and neither can take the ordinary result route.
 3  Fold notes/c-jacobi-phase-cross-1-canonical-h-review only. The branch
    agent/c-jacobi-phase-cross-1 is its strict ancestor; folding both lands
    the same eight blobs twice.
-4  notes/c-rh-weil-norm-junction-1-n is locked to issue #374, which is
-   OPEN. It is the one candidate that must not be closed unilaterally.
+4  notes/c-rh-weil-norm-junction-1-n is ruled by the owner, 2026-08-24:
+   content RETARGET, old identifier consumed by a terminal ABANDONED
+   record. The record preserves the candidate results actually achieved
+   and manufactures no J7 verdict in either direction; the decision bar
+   J7 was never reached. Issue #374 stays open until that record merges.
+   Any continuation starts under a new identifier after v63. See
+   notes/V63-CLEANUP-SCOPE.md.
 5  probe/P-QDD-IDEMPOTENCE-DOMINATES-FORK-2 has no closure statement on any
    ref; its record has to be authored, not quoted.
 ```
