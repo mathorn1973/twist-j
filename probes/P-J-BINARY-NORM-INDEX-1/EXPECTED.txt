@@ -1,0 +1,28 @@
+PASS N1 x^5 equals 1 in F_p[x]/(Phi_5) for every inert p below the census limit
+PASS N2 (J - 1)^3 equals x in every such residue ring, so J generates it
+PASS N3 ord_5(p) equals 4 for every inert p, so Phi_5 is irreducible over F_p and the quotient is the field of p^4 elements
+PASS N4 the inert primes below the census limit are exactly the primes congruent to 2 or 3 mod 5, and there are the recorded number of them
+PASS A1 (p^4 - 1)/(p - 1) equals (p + 1)(p^2 + 1) equals 1 + p + p^2 + p^3 for every inert p
+PASS A2 the index of the norm-one subgroup in F_(p^4)^x is p - 1, so that subgroup is the whole group exactly when p equals 2
+PASS A3 the index is p - 1 in degrees 2, 3, 4, 6 and 8 alike, so the mechanism is generic and is not a property of J or of the prime 5
+PASS B1 N(Jbar) equals 1 by the Frobenius product for every inert p below the norm-path limit
+PASS B2 N(Jbar) equals 1 by the exponent path for the same primes, so the two independent norm routes agree
+PASS B3 ord(Jbar) divides (p + 1)(p^2 + 1) for every inert p below the census limit, which is the norm-one constraint made explicit
+PASS C1 the quotient at p = 2 has sixteen elements and all fifteen nonzero ones are invertible, so it is the field of sixteen elements
+PASS C2 at p = 2, J^3 equals x^3 and has order five, and J^5 equals x^2 + x^3 and has order three
+PASS C3 ord(Jbar) equals 15 at p = 2 by exhaustion over exponents 1 to 15
+PASS C4 p = 2 is the only inert p below the census limit at which ord(Jbar) equals p^4 - 1, so a norm-one unit generates the residue field there and nowhere else
+PASS D1 1 + x^k has order fifteen at p = 2 for k = 1, 2, 3 and 4
+PASS D2 those four elements are J, J^2, J^4 and J^8, one Frobenius orbit, so generating F_16^x is Galois invariant and selects no exponent a in J = 1 + zeta_5^a
+PASS E1 ord(Jbar) equals the full norm-one order (p + 1)(p^2 + 1) exactly at p = 2 and p = 3 among the inert p below the census limit
+PASS E2 at every other inert p below the census limit the order is a proper divisor of (p + 1)(p^2 + 1)
+PASS F1 control: xbar has norm one and order five at p = 2, so norm one permits generation but does not force it
+PASS F2 control: w = 2 + x has N(w) = 11, and its residue norm is 11 mod p at every inert p below the norm-path limit, which is 2 at p = 3, so a non-unit is not confined to the norm-one subgroup
+DECISION J-BINARY-NORM-INDEX-CONFIRMED
+INDEX index=p-1 norm_one_order=(p+1)(p^2+1)
+UNIQUENESS full_group_possible_only_at=2
+ATTAINMENT p=2 ord_Jbar=15 group_order=15
+CENSUS full_norm_one_generation=2,3 inert_count=156 range=2000
+GALOIS orbit=1+x,1+x^2,1+x^3,1+x^4 orders=15 selects=nothing
+SCOPE L1 only; no selector, no apparatus, no instrument, no event, no measure, no L2-L6 lift
+RESULT 20/20 PASS

@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its forty-nine checks cover the current
+and emits deterministic text. Its fifty-four checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 49/49 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 55/55 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -92,6 +92,18 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v62 count check reads the maintenance tree (324 claims, 23 reproductions, 11 gates). The V62-MAINTENANCE check requires the odd-motor theorem to retain its T status, exact scope, dependencies, layer and no-gate boundary while its single current evidence pointer moves to the completed two-architecture COVERAGE-2 bundle and HISTORY records exactly one sequence-2 EVIDENCE_CHANGE. No scientific count or status moves.
+
+The v61 count check reads the folded tree (324 claims, 23 reproductions, 11 gates). The V61-EXACT check pins three theorem rows and one finite-range computation row at L1 to their exact public-probe evidence, dependency directions, scope hashes and nonselection firewalls, preserves the exact three-edge CARRY-PENTAD lineage, and permits no new gate, frontier move, physical reading or layer lift. The permanent QDD direct-write firewall remains the final check.
+
+The v60 count check reads the folded tree (320 claims, 23 reproductions, 11 gates). The V60-BOUNDARY check pins thirteen exact theorem rows from the completed post-v59 probes to their types, layers, evidence bundles, scope boundaries and all 39 dependency edges. It splits O2 into two explicit children while leaving O1 on the parent, and keeps the parent apparatus, terminal-event semantics, instrument-class completeness, sampling, physical selection, Bell accounting, and every new physical gate open. The permanent QDD direct-write firewall remains the final check.
+
+The v59 count check reads the folded tree (305 claims, 23 reproductions, 11 gates). The QDD selection-boundary check pins eight restricted L4 theorem rows to five completed two-architecture public probes, verifies all seventeen declared dependency edges with no new cross-layer gate, preserves the full two-sided support assumptions of the record-sufficiency theorem, and keeps the weaker-hypothesis strengthening, O2 physical selection, O1 realized events, sampling, unsealed successor work and Bell accounting open. The permanent QDD direct-write firewall remains the final check.
+
+The v58 count check reads the folded tree (297 claims, 23 reproductions, 11 gates). The trace-kernel exterior-closure fold adds four exact theorem rows and one open multi-layer forcing obligation, keeps the exact Hodge-home condition as a separate definition, and pins all five claim rows to the completed two-architecture public probe without promoting the forcing premise. The permanent QDD direct-write firewall remains the final check.
+
+The v57 count check reads the folded tree (292 claims, 23 reproductions, 10 gates). The two new v57 checks pin the five closed rows of the arithmetic-anchor fold: the Mahler measure, the regulator and the proved class number with their layers, sections, evidence and the seven declared edges including the three BOUNDED_BY fences to the entropy bridge, which keeps its exact scope; and the forbidden-witness row at C with exactly its two edges, the parent held at O and STOP with only its obligation B clause changed, and the arrows row unmoved. The permanent QDD direct-write firewall remains the final check.
 
 The v56 count check reads the folded tree (287 claims, 23 reproductions, 10 gates). The two new v56 checks pin the seven closed rows of the consolidation fold: the exact constant pentagon-tower dilation deficiency with its fired route at F and its single dependency edge, the all-finite cyclic-carrier exclusion beside the three registered carrier no-gos with the cocycle-vector hypothesis untouched, the exact 32-entry kernel subset landscape with its two declared edges, and the 2 log phi anchor rows (toral entropy, zero-entropy driver, binary residue bracket) with the toral row's step-matrix edge, the layer-bridge obligation held at its exact scope, and no gate, program row, or layer lift anywhere. The permanent QDD direct-write firewall remains the final check.
 

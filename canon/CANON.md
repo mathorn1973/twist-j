@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v56
+# TWIST-J Public Canon v62
 
-**Release identity.** Public Canon v56. Normative authority and activation
+**Release identity.** Public Canon v62. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v56 also declares the discrete
+algebraic axiom is J. Public Canon v62 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v56 does not claim
+seed of the two algebraic projections. Public Canon v62 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v56 contains no such
+deriving the architecture from J; Public Canon v62 contains no such
 theorem.
 
 ---
@@ -136,6 +136,27 @@ independence claim is made.
 
 The golden bridge (J-GOLDEN-BRIDGE [T], reproduce/kernel): J phi = j,
 (J - 1)^3 = j, and J^5 phi^5 = 1.
+
+The same modulus has an exact arithmetic name. The characteristic polynomial
+of the step matrix, `x^4 - 3x^3 + 4x^2 - 2x + 1 = Phi_5(x - 1)`, is
+irreducible over `Q`, by exhaustive integer factorization over the range
+Gauss's lemma allows for a monic quartic with constant term 1, so it is also
+the minimal polynomial of `J`. Since `J Jbar = 2 - phi = phi^-2` is totally
+real with characteristic polynomial `(x^2 - 3x + 1)^2`, the four archimedean
+squared moduli are exactly `phi^2, phi^2, phi^-2, phi^-2`, so exactly two
+conjugates lie outside the unit circle and both have modulus `phi`.
+Therefore
+
+```
+M(J) = phi^2,      log M(J) = 2 log phi
+```
+
+exactly (J-MAHLER-MEASURE [T], probes/P-TWOLOGPHI-INVARIANTS-1). The
+coincidence is worth stating plainly: `phi^2` has minimal polynomial
+`x^2 - 3x + 1`, whose trace 3 is `Tr(J)` and whose norm 1 is `N(J)`. Exactly
+`phi < 2 < phi^2`, so `1 < log_phi 2 < 2`. This is arithmetic about `J` and
+its conjugates. It creates no dynamical, entropic or physical reading.
+
 
 ### The harmonic seam
 
@@ -381,6 +402,54 @@ asks whether the public architecture determines exactly one equivalence
 class after the carrier, measure, projection group, and ambient versus
 intrinsic commutator choice are fixed publicly. No golden spectrum or
 continuum-curvature reading is asserted.
+
+The trace-kernel route isolates a sharper L1 closure question.
+
+### DEF-EXACT-HODGE-HOME-CLOSURE
+
+For a prime `p` and the trace-kernel metric carrier `(W_p,g_p)` defined in
+section 3, DEF-EXACT-HODGE-HOME-CLOSURE is the following two-stage predicate:
+
+1. the complete alternating spatial-commutator data return bijectively to
+   precisely the same carrier by `beta:Lambda^2 W_p -> W_p`, with no
+   projection, quotient, proper subspace, auxiliary carrier, remainder, or
+   unnamed change of degree;
+2. if `dim W_p=3`, there exists a nonzero `omega in Lambda^3 W_p^*` such
+   that the home map is metric-volume:
+   `g_p(beta(x wedge y),z)=omega(x,y,z)` for all `x,y,z in W_p`.
+
+For `W_2=0`, the predicate uses only the unique empty bijection `0 -> 0`; it
+asserts no nonzero volume form or nonzero bracket. The first stage alone does
+not imply the second, does not imply Jacobi, and does not identify a spatial
+commutator.
+
+TRACEKERNEL-CURVATURE-FORCING [O], evidenced by
+`probes/P-TRACEKERNEL-EXTERIOR-CLOSURE-1`, asks whether the complete public
+architecture forces DEF-EXACT-HODGE-HOME-CLOSURE through its complete
+admissible L2 spatial-commutator/operator class. It closes positively only
+when that class is public, complete, nonempty, and every fully admissible
+realization satisfies both stages. It closes negatively when a complete
+nonempty class contains even one fully admissible realization that violates
+any clause; a mixed Hodge/non-Hodge class is therefore negative. A proved
+requirement of full faithful equivariance of the same bracket under the frozen
+480-element block action supplies an exact negative route only within a proved
+complete nonempty admissible class. If that requirement leaves the complete
+class empty, the result is `EMPTY`, not negative. The obligation also closes
+`EMPTY` whenever the complete admissible class is empty. It remains `STOP`
+while the carrier, measure, projection group, ambient-versus-intrinsic
+commutator choice,
+admissible class, equivalence, completeness, or layer bridge is unfixed or
+inexact.
+
+This forcing obligation neither closes nor duplicates
+CURVATURE-OPERATOR-CANONICAL [O], which asks for uniqueness of the operator
+class rather than for a common Hodge-home property of every admissible class.
+Its named
+GATE-L2-L1-TRACEKERNEL-HODGE-HOME records the still-open selection from the
+complete admissible L2 spatial-commutator class back to the exact L1
+trace-kernel property. It cannot advance until the upstream carrier and
+complete class tracked by CURVATURE-OPERATOR-CANONICAL are public; the gate
+adds no carrier identification and selects no curvature operator.
 
 The decoder is a typed partial interface, not a completed total map.
 Let K be the set of forward U-orbits. Let MatterData, GeometryData,
@@ -1258,17 +1327,298 @@ QDD-U-INDUCED-FINITE-NONSELECTION [C]
     L5 windows, for this U, split, record class, delays and seeds only. It supplies no
     limit, independent physical selector, sampling-impossibility theorem,
     exclusion of another admissible apparatus class or decoder completion.
+QDD-J-AFFINE-APPARATUS-NONSELECTION [T]
+    Let the five rational J-phase vertices u_x, x in F_5, carry the faithful
+    G-orthogonal action rho(c,b)u_x=u_(b+cx) of AGL_1(F_5), of order 20.
+    For each memory token k, averaging its four-element multiplier stabilizer
+    gives complementary G-orthogonal projectors P_k and Q_k of ranks one and
+    three. The complete frozen target-independent affine family consists of
+    the four reversible covariant system-pointer-memory couplings whose moving
+    maps are rho(h_(a,k))Q_k, a in F_5^x, where
+        h_(a,k):x -> k+a(x-k).
+    After the class is frozen, token k=2 gives P_2=E_low and Q_2=E_high. All
+    four members realize the same ordered effects and occurrence weights but
+    are pairwise inequivalent under the
+    registered K~+/-K post-state equality. Self-adjoint involutivity still
+    leaves a in {1,4}, two physical classes. Zero displacement on im(Q_k)
+    uniquely leaves a=1, the Lueder member, but only as an added
+    identity/minimal-disturbance rule. The theorem classifies this four-member
+    L4 class; it neither derives that rule nor makes the class exhaustive.
+QDD-J-CENTRALIZER-NONSELECTION [T]
+    Let H_k={h_(a,k):a in F_5^x}~=C_4 be the affine token stabilizer and
+    Z_k=End_(H_k)(Q_k V) its complete rational moving-support centralizer.
+    Put R_k=(I-g_k+g_k^2-g_k^3)/4, C_k=Q_k-R_k and J_k=g_k C_k, where
+    g_k=rho(h_(2,k)). Then
+        Z_k=Q R_k direct-sum Q C_k direct-sum Q J_k,
+        J_k^2=-C_k,
+    and every effect-preserving reversible moving branch is exactly
+        T_k(e,r,s)=eR_k+rC_k+sJ_k,
+        e in {+1,-1}, r,s in Q, r^2+s^2=1.
+    The rational circle supplies infinitely many physical sign classes at the
+    same ordered effects and weights. Ordinary same-outcome repeatability
+    holds throughout and selects nothing. The self-adjoint involutive
+    subclass has four algebraic members and two sign classes. This is complete
+    only for the frozen rational stabilizer-centralizer class. After the class
+    is frozen, token k=2 gives P_2=E_low and Q_2=E_high.
+QDD-J-TERMINALITY-SELECTION [T]
+    Inside that complete invertible moving-branch class, fresh-pointer ray
+    terminality forces T_k=+Q_k or T_k=-Q_k and hence exactly one registered
+    post-state sign class. Strict representative idempotence T_k^2=T_k fixes
+    T_k=Q_k. At token k=2 these are respectively the Lueder physical class
+    and its positive representative. Ray terminality and strict idempotence
+    are conditional selectors, not laws derived from J, Omega, U, the decoder,
+    the record protocol or Nature.
+QDD-FRESH-RECORD-EXTENSION [T]
+    Let P,Q be complementary G-orthogonal projectors and let a rational moving
+    branch T satisfy
+        P^2=P=P^sharp, Q^2=Q=Q^sharp, P+Q=I, PQ=QP=0,
+        TP=PT=0, QT=TQ=T, T^sharp T=Q.
+    Every such T admits an explicit reversible fresh-pointer extension with
+    a fresh blank cell in a three-symbol record alphabet. At every finite
+    repetition count, old cells are fixed, no old record controls a later
+    system map, LOW and HIGH repeat exactly, and N HIGH outcomes leave the
+    conditioned state T^N v with record word HIGH^N. This is an L4 existence
+    theorem for the frozen extension, not an L5 event stream, a sampling law,
+    an identification with D_clock or an exhaustive apparatus theorem.
+QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION [T]
+    Fresh pointers, fresh append-only record cells, no old-record feedback,
+    rational microscopic reversibility and ordinary exact outcome
+    repeatability do not imply [T]^2=[T]. The target-independent exact witness
+        T_*=R_k-C_k
+    is self-adjoint and involutive on Q_k V, obeys
+        T_*^sharp T_*=Q_k,  T_*^2=Q_k,  T_*!=+Q_k,  T_*!=-Q_k,
+    and writes HIGH repeatedly while a state with nonzero R_k and C_k parts
+    has distinct first and second conditioned rays. Only after construction,
+    token k=2 identifies Q_2=E_high. The result is a nonimplication inside the
+    frozen L4 class, not a global no-go for every physical selector.
+QDD-RECORD-SUFFICIENCY-TERMINALITY [T]
+    In the frozen rational invertible branch class, let complementary
+    G-orthogonal projectors P,Q with dim(QV)>=2 satisfy
+        P^2=P=P^sharp, Q^2=Q=Q^sharp, P+Q=I, PQ=QP=0,
+    and let T obey the full two-sided branch equations
+        TP=PT=0, QT=TQ=T, T^sharp T=Q.
+    Then record sufficiency, meaning that the conditioned ray is determined
+    by the terminal outcome symbol independently of repetition count, is
+    equivalent
+    to fresh-pointer ray terminality, projective class idempotence
+    class(T)^2=class(T), and
+        T in {+Q,-Q}.
+    The last pair is one physical class under the registered sign equality.
+    Within those frozen equations the implication uses no symmetry-group
+    premise: invertibility on QV and preservation of every rational line
+    force the restriction to be scalar. Record sufficiency remains an added
+    physical premise rather than a consequence of record persistence or
+    no-feedback. No conclusion is made from the weaker one-sided hypotheses
+    T^sharp T=Q and QT=T alone.
+QDD-RECORD-COMPLETE-LUEDER-SELECTION [T]
+    The complete marked symmetry of the rational J simplex is S_5. For the
+    terminal binary partition {k}|other, its complete stabilizer is
+    Gamma_k~=S_4; averaging Gamma_k gives P_k of rank one and Q_k of rank
+    three. Strict microscopic law naturality means
+        T rho(g)=rho(g) T for every g in Gamma_k,
+    and
+        End_(Gamma_k)(Q_k V)=Q Q_k.
+    Thus strict record-partition naturality plus the effect equation leaves
+    T=+Q_k or T=-Q_k, one sign class, and representative idempotence leaves
+    +Q_k. In contrast, the affine token stabilizer H_k~=C_4 has the
+    three-dimensional centralizer Q R_k direct-sum Q C_k direct-sum Q J_k;
+    R_k-C_k commutes with H_k but fails 16 of the 24 complete S_4
+    commutation tests at every token. The full affine group has order 20,
+    satisfies AGL_1(F_5) intersection Gamma_k=H_k with
+    [Gamma_k:H_k]=6, and contains no transposition:
+    an affine involution fixes one token and swaps the other four in two
+    pairs. Token k=2 gives the Lueder class. Full record-partition naturality
+    is the conditional selector; the architecture does not derive it.
+QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY [T]
+    Strict law naturality is the Gamma_k centralizer condition and gives the
+    single Lueder sign class above. Weak uniform quotient covariance is the
+    normalizer condition. Since Aut(S_4)=Inn(S_4), its complete rational
+    G-orthogonal solution set is
+        N_k={+rho(h)Q_k,-rho(h)Q_k:h in Gamma_k},
+    with 48 algebraic members and 24 registered sign classes. For a
+    transposition tau of two HIGH labels, rho(tau)Q_k has the same effect,
+    support, pointer result and terminal HIGH symbol as Q_k, normalizes
+    Gamma_k, is involutive and ordinarily repeatable, but is not +/-Q_k and
+    is not projectively idempotent; it commutes with four of the 24 S_4
+    elements and fails twenty strict
+    naturality squares. All 48 members collapse only after adopting the new
+    orbit equality under +/-S_4. Complete observation of the quotient
+    therefore does not choose between strict microscopic naturality and an
+    enlarged gauge equality. The theorem adopts neither and leaves the
+    physical selection premise open. After the class is frozen, token k=2
+    gives P_2=E_low and Q_2=E_high.
+QDD-RECORD-SATURATION-DESCENT [T]
+    Re-reading or re-conditioning on one immutable event is idempotent set
+    restriction and applies no new system branch map. A fresh prepared pointer
+    and record cell instead applies the branch T again; append-only histories
+    retain the free monoid words HIGH^n. The quotient sending zero repetitions
+    to 0 and every positive count to one saturated HIGH symbol carries the
+    projective branch action exactly when class(T)^2=class(T), equivalently
+    class(T)=class(Q) in the frozen supported group. The exact branch R-C has
+    projective period two, and R+(3/5)C+(4/5)J has infinite projective order,
+    while both write only HIGH under fresh repetition. Thus passive readback
+    and fresh interaction are distinct, and the append-only protocol does not
+    derive saturation descent. This is an L4 theorem for the frozen class, not
+    a physical saturation law or L5 event stream.
+QDD-COMMUTATOR-READOUT-EQUALITY-FORK [T]
+    On W=QV let A=QD_JQ|W and T=OQ. The exact compressed motor has
+        det(A)=-1/4, tr(A)=-3/4,
+        Cent_(O(W,H)(Q))(A)={+I_W,-I_W}.
+    The complete LOW/HIGH event quotient is blind to every within-branch
+    commutator because both ordered nonzero outputs remain HIGH. In contrast,
+    the quadratic projective record q(v)=vv^T with exact matrix equality obeys
+        q(OAv)=q(AOv) for every v
+          iff Xi_T=OA-AO=0
+          iff O=+I_W or O=-I_W.
+    The possible OA=-AO branch is excluded by the nonzero trace. Decoder
+    completeness relative only to event equality is therefore insufficient;
+    full quadratic projective faithfulness is an exact conditional result on
+    the common ordered-composition source, not an adopted decoder bridge.
+QDD-PURE-RECORD-COMMUTATOR-FAITHFULNESS [T]
+    For nonzero v in Q^4, the global algebraic helper contains the exact pure
+    record
+        R_pure(v)=(m(v),rho(v)),
+        m(v)=v^T G v, rho(v)=vv^T G/m(v).
+    Here rho is the unique G-self-adjoint rank-one idempotent with image Qv,
+    the fibres are exactly v~-v, and vv^T=m rho G^-1. A nonzero within-branch
+    commutator can be invisible to the complete scalar channel m, but equality
+    of the full pure records on OAv and AOv for every v is equivalent to
+    Xi_T=0. The public finite balanced leg has only 313 pure-record fibres while
+    the rational projective support is infinite, so its present domain cannot
+    carry the complete ordered-composition question. The global formula exists;
+    decoder ownership, totality and the layer bridge remain absent.
+QDD-PURE-RECORD-TYPED-BRIDGE-BOUNDARY [T]
+    The read-only map b_alg:(Q^4-{0})/{+/-1}->MatterData_QDD given by the
+    total_weight and density fields is total and injective and reads the
+    rational HIGH-support commutator exactly. The present finite
+    D_QDD_direct domain is too small. At least two disjoint exact static
+    encodings into the declared pointed-orbit set K decode the same records,
+    so the decoder signature does not select an encoding. Moreover no faithful
+    injective bridge can intertwine the order-five projective motor with a
+    nonnegative U-tail lag: one circuit would force a positive tail period,
+    while tail shift is free, and zero total lag would force a forbidden fixed
+    projective motor point. A direct read-only source port remains
+    mathematically possible, with feeds_U=false, but no source ownership,
+    equality or registered L4-to-L1 gate is adopted.
+QDD-PURE-RECORD-PORT-UNIQUENESS [T]
+    The frozen ordered-composition source generated by all OAv and AOv is
+    exactly (W-{0})/{+/-1}; invertibility of A and the admissible O=I prove both
+    inclusions. In the direct read-only port class, total weight is v^T G v and
+    rho is required to be G-self-adjoint, rank-one, idempotent and trace one
+    with image Qv. These conditions force the singleton port
+        b_W([v])=(v^T G v, vv^T G/(v^T G v)).
+    It has sign fibres, introduces no free parameter, and agrees exactly with
+    the existing finite QDD record on all 84 overlap vectors, or 42 sign
+    classes. This is mathematical source and port canonicity in the frozen
+    direct class. Public physical ownership and the named layer gate remain
+    absent, and no encoding into K or writeback to U follows.
+QDD-COMMUTATOR-SATURATION-SELECTION [T]
+    For complementary target-independent G-orthogonal P,Q, the complete named
+    rational pure repeatable branch class is
+        A_rep(Q)={T:T^sharp T=Q, QT=TQ=T}
+                ={OQ:O in O(W,G|W)(Q)}.
+    With the canonical pure-record formula, define COMM-SAT(T) by equality of
+    the OAv and AOv records for every nonzero v in W. Then
+        COMM-SAT(T) iff Xi_T=0 iff T=+Q or T=-Q iff class(T)^2=class(T).
+    Under the registered sign equality this is one branch class; only after
+    the class is frozen does Q=E_high identify the Lueder HIGH class. Functional
+    terminal order, read-only output and completion-contract conformance do not
+    imply COMM-SAT in the active architecture. The selector is theorem-grade;
+    its physical saturation premise and global apparatus completeness are not.
+QDD-MECHANICAL-EVENT-SAMPLER [T]
+    The complete balanced carrier has one ZERO_SUPPORT piston and 624 supported
+    pistons, with exactly 22 reduced LOW probabilities and maximum denominator
+    256. For fixed p=a/b the lower word
+        L_p(r)=floor((r+1)a/b)-floor(ra/b)
+    has exact count floor(Na/b), discrepancy below one and least period b for
+    0<a<b. For those interior weights its b cyclic phases have the same exact
+    frequency and are not selected by the weight. Any autonomous finite state
+    cycle with exact reduced frequency a/b has b dividing its length; hence the
+    QDD value 1/256
+    requires at least 256 persistent states in that restricted class. A local
+    invocation rank is invariant under arbitrary gaps, whereas for every
+    interior weight substitution of the public global tick admits all-LOW and
+    all-HIGH subsequence schedules. A single carried accumulator initialized at
+    x_0=0 preserves the floor of the total weight under changing preparations
+    but not the realized event order. These are exact arithmetic and
+    architecture boundaries, not a physical sampler, random
+    process or L6 measure.
+QDD-FINITE-MEMORY-O2B-BOUNDARY [T]
+    Let a finite nonempty phase set M have outcome permutations tau_L,tau_H
+    and rational pure branches obeying exact effects and ordinary repeatability
+    after phase update. At every phase,
+        K_L,m=O_L,m P,       K_H,m=O_H,m Q;
+    finite memory does not enlarge the pointwise A_rep branch fibres. Conversely
+    every finite family from those fibres with arbitrary phase permutations has
+    a rational isometric ready-subspace coupling and a rational orthogonal
+    microscopic dilation. The apparatus law is nevertheless larger: exact
+    two-phase and 256-phase examples satisfy all frozen premises while their
+    HIGH branches are inequivalent under K~+/-K. Thus phase is a real
+    post-state ambiguity under the registered equality. The theorem is complete
+    only for the finite rational pure/repeatable class and does not cover
+    unbounded, nonlinear, mixed, irrational or differently typed apparatuses.
+QDD-EVENT-CONTEXT-BANK [T]
+    For each of the 22 reduced Route A contexts p=a/b, the Euclidean state
+    c_p in Z/bZ updates by c_p+a=c'_p+b e_p, with e_p=1 read as LOW. Zero phase
+    gives the lower mechanical word. The product bank
+        C_bank=product_p Z/b_p Z
+    updates only the invoked coordinate, so distinct-context transitions
+    commute and every context subsequence depends only on its own invocation
+    rank and phase. Arbitrary interleaving preserves its exact frequency and
+    discrepancy. In the complete frozen probability-keyed rank-exact finite
+    deterministic-machine class, all count-residue vectors are reachable and
+    future-output distinguishable, and the exact minimum is
+        B=19702414515172535913561087541248
+         =2^66 3^2 7^4 11 13^2 17^2 23,
+    of bit length 104; every reachable B-state realization is transducer-
+    isomorphic to the bank. All B initial phases preserve the frequencies and
+    schedule invariance while remaining future-output distinguishable. The
+    active architecture contains neither the probability-keyed rank vector nor
+    a physical reduced-p context law, selected ready phase, persistent update
+    or registered L1-to-L5 gate. The bank is an exact mathematical protocol and
+    class-relative normal form, not O1 closure or an L6 probability law.
+QDD-TERMINAL-EVENT-SEMANTICS [O]
+    The target-independent physical meaning of a completed terminal QDD event
+    on the exact ordered-composition source. The canonical direct pure-record
+    map and COMM-SAT selector are mathematically fixed, but functional
+    terminality, read-only decoder output and completion-contract conformance
+    do not imply saturation, and no physical saturation law is adopted. A
+    positive principle must be stated without COMM-SAT, Xi_T=0, projective
+    idempotence, +/-Q, Lueder or the target effects as construction inputs and
+    must have an independently testable consequence outside this selector.
+QDD-INSTRUMENT-CLASS-COMPLETENESS [O]
+    The complete target-independent physical preselection class and equality
+    for QDD post-state apparatuses, including every admitted memory and ready
+    state, outcome-dependent phase transition and phase-indexed branch family.
+    The finite rational pure/repeatable theorem gives complete pointwise fibres
+    and converse realizations but neither global physical completeness nor
+    phase independence. A complete contract must explicitly classify finite
+    and unbounded memory, nonlinear, mixed, irrational and differently typed
+    architectures, and must freeze equality on whole apparatus families rather
+    than silently erase phase, transitions or future-output dependence.
 QDD-INSTRUMENT-APPARATUS [O]
-    after the nonselection theorem only two independent blockers remain:
-    O2, independent physical instrument selection from a public admissible
-    law or coupling class frozen before comparison with E_low and E_high;
-    O1, realized event generation and sampling. An exact rational apparatus
-    reducing to the Lueder pair is exhibited, but its target-controlled
-    coupling is circular as independent-selection evidence. Positive-root
-    uniqueness is mathematics only, equality of effects does not identify
-    post-state instruments, the row remains separate from
-    QUADRATIC-DECODER-DATA and fills no decoder-completion-contract field.
-    SAMPLING NOT PROVIDED; SAMPLING IMPOSSIBLE is not claimed.
+    Exact target-independent rational J-simplex classes contain members
+    realizing E_low,E_high after target comparison, but the parent remains
+    open on three compatible obligations. O2a is
+    QDD-TERMINAL-EVENT-SEMANTICS; O2b is
+    QDD-INSTRUMENT-CLASS-COMPLETENESS. O2 closes only when both children close
+    at compatible scope and equality. The post-v59 theorems fix the ordered
+    source and unique port only in the frozen direct read-only class, the
+    complete named rational branch fibre, the exact
+    COMM-SAT conditional selector, and the finite-memory pointwise boundary;
+    they adopt no physical event semantics, complete apparatus-family equality
+    or phase gauge. O1 remains the separate typed realized-event and sampling
+    obligation. The exact 22-context carry bank is schedule invariant and
+    minimal in its frozen probability-keyed rank-exact finite
+    deterministic-machine class, but the active
+    architecture does not identify reduced w_low/m as the physical context,
+    select one ready phase, provide persistent update/reset semantics or pass
+    a future registered L1-to-L5 gate. The parent closes positively only when O1 and both
+    O2 children close and one frozen apparatus realizes the ordered effects and
+    occurrence law exactly. These results fill no decoder-completion-contract
+    field and remain separate from QUADRATIC-DECODER-DATA.
+    SAMPLING NOT PROVIDED; SAMPLING IMPOSSIBLE is not claimed. No L6 measure,
+    randomness or independence statement follows.
 ```
 
 ### Piston reshape and wedge
@@ -1407,11 +1757,38 @@ not select a physical family or create an event stream or measure.
 complete checkpoint audit, together with the two explicit fiber-to-piston
 witnesses. The same two-architecture bundle exhausts the frozen 900
 record-delay pairs and supplies the finite multi-layer classification above,
-whose apparatus conclusion is at L4. Neither
-result closes `QDD-INSTRUMENT-APPARATUS`: O2 independent physical selection
-and O1 realized event generation or sampling remain STOP. The empty
-frozen-family eligibility set licenses no conclusion about instruments
-outside that family.
+whose apparatus conclusion is at L4.
+
+Five later public two-architecture probes freeze target-independent rational
+J-simplex apparatus classes before target comparison. They prove the exact
+four-member affine boundary, the complete rational C_4 centralizer and its
+infinite nonselection family, reversible fresh append-only record extensions
+and the R-C nonterminal witness, strict S_4 law-naturality selection, and the
+24-class normalizer boundary under the registered sign equality. Record
+sufficiency, terminality and projective idempotence are equivalent only on the
+full two-sided-support class stated above. These results identify exact
+conditional selectors but derive or adopt none as a physical law or equality.
+
+Nine post-v59 two-architecture probes sharpen both sides of the boundary. At
+L1/L4 and the unadopted direct-port boundary they separate passive readback
+from fresh interaction, exhibit period-two and infinite post-state repetition
+orbits, prove the event-equality versus
+pure-record fork, construct and classify the faithful direct pure-record port,
+prove the exact COMM-SAT conditional selector, and classify finite rational
+pure/repeatable phase families pointwise while preserving their genuine
+phase-indexed ambiguity. At L1 and the unadopted L1-to-L5 protocol boundary,
+they enumerate the 22 exact weights, construct the mechanical words and the
+schedule-invariant product carry bank, prove its class-relative minimum of
+`B` states, and prove that its `B` initial phase vectors remain unselected. No
+probe registers the physical context key, ready phase, persistent update, port
+ownership, terminal-event semantics, complete physical apparatus class or
+layer gate.
+
+No result closes `QDD-INSTRUMENT-APPARATUS`: O2 is now split into
+`QDD-TERMINAL-EVENT-SEMANTICS` and
+`QDD-INSTRUMENT-CLASS-COMPLETENESS`, both STOP, while O1 realized event
+generation or sampling remains STOP. The frozen classes license no conclusion
+about instruments outside them.
 
 The time counter has an exact entropy anchor. The step matrix of
 J = 1 + zeta_5^2 induces a hyperbolic automorphism T_J of the torus
@@ -1451,6 +1828,33 @@ architecture's tick is made here: that identification is exactly the
 open obligation ENTROPY-LAYER-BRIDGE [O], whose scope is unchanged and
 which is neither closed nor weakened by these rows.
 
+The registered fixed-point count has exact structure at finite range
+(J-TORAL-PERIODIC-POINTS [C], probes/P-TWOLOGPHI-INVARIANTS-1). When `5`
+divides `n`, `J^n = phi^-n` is totally real and the inner quadratic norm is
+`L_n` for odd `n` and `2 - L_n` for even `n`, so
+
+```
+|N(J^n - 1)| = L_n^2        for n = 5 mod 10,
+             = (L_n - 2)^2  for n = 0 mod 10,
+```
+
+with `L_n` the Lucas sequence. Among the 32 values with `5` not dividing `n`
+and `1 <= n <= 40`, exactly one is a perfect square, namely `n = 1` with
+value 1. For every `n >= 1` the two-sided bracket
+
+```
+(phi^n - 1)^2 (1 - phi^-n)^2 <= |N(J^n - 1)| <= (phi^n + 1)^2 (1 + phi^-n)^2
+```
+
+holds by the triangle inequality on the two conjugate pairs. Three
+independent exact routes agree on `1 <= n <= 40`. The closed-form and bracket
+clauses carry written all-`n` proofs and a later fold may lift them under
+their own gate; the census clause is finite-range only, which is why the row
+is C. Counting periodic points is not a rate statement: no entropy, rate or
+measure claim is created here and ENTROPY-LAYER-BRIDGE [O] keeps its exact
+scope.
+
+
 
 ## 3. The kernel and the census
 
@@ -1458,6 +1862,84 @@ F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
 attractors. The finite kernel is the declared checkpoint architecture
 paired with the algebraic verb. No derivation or uniqueness of this
 architecture from J or M_J is claimed.
+
+### TRACEKERNEL-RESIDUAL-FORM [T]
+
+Let `p` be any prime, let `zeta_p` be a primitive `p`-th root, put
+`n=p-1`, and write `J_n=11^T`. Summing over all nontrivial Galois
+conjugates gives the exact trace Gram
+
+```text
+G_p = p I_n - J_n.
+```
+
+On the all-ones line its eigenvalue is one and on the rational trace-zero
+hyperplane its eigenvalue is `p`; hence `G_p/p` has normalized spectrum
+`1/p` once and `1` with multiplicity `p-2`. Modulo `p`,
+
+```text
+W_p := rad(G_p mod p)
+     = ker(sum:F_p^(p-1) -> F_p),
+dim W_p = p - 2.
+```
+
+For `xbar,ybar in W_p`, choose integer lifts `x,y` and define
+
+```text
+g_p(xbar,ybar) = (x^T G_p y)/p mod p.
+```
+
+If the coordinate sums of the lifts are `pr` and `ps`, then the divided
+integer is `x.y - p*r*s`, so the residue is the restricted dot product and is
+independent of both lifts. Since
+
+```text
+W_p^perp = <1>,
+sum(1) = p - 1 = -1 mod p,
+W_p intersect W_p^perp = 0,
+```
+
+the residual form is nondegenerate for every prime, including the
+zero-dimensional case `p=2`. This is an unconditional L1 theorem. The
+finite verifier sweep through `p=23` audits the symbolic proof and is not the
+source of its universal quantifier.
+
+At `p=5`, the rational matrix formula `G_5/5=I_4-(1/5)11^T` agrees with
+DEF-QDD-GRAM, but the types do not. Independently,
+`W_5=rad(G_5 mod 5)`, and `g_5` is obtained by the divided-on-lifts
+construction before reduction; QDD-PROJECTOR-PAIR-TR4 instead acts on rational
+`Q^4` and its high space is `ker Tr_4` there. No projector, weight, apparatus,
+or decoder transport follows from the shared formula.
+
+### TRACEKERNEL-HOME-DIMENSION [T]
+
+If exact home closure supplies a bijection
+`Lambda^2 W_p -> W_p`, then, with `m=dim W_p=p-2`,
+
+```text
+m(m - 1)/2 = m,
+m(m - 3) = 0.
+```
+
+Thus `p=2` or `p=5`. The `p=2` carrier is the empty `W_2=0`, not the
+unrelated nonzero `F_2^4` object, and `p=5` is the unique nonzero branch.
+This proves the implication from DEF-EXACT-HODGE-HOME-CLOSURE; it does not
+supply or force that premise. Nor can the public two-dimensional minus
+plane close by itself, because `dim Lambda^2 W_-=1`, not two.
+
+An unnamed bijection is also too weak. On a basis `u1,u2,u3`, the alternating
+product
+
+```text
+[u2,u3]=u1,
+[u3,u1]=u1+u2,
+[u1,u2]=u3
+```
+
+has wedge matrix `[[1,1,0],[0,1,0],[0,0,1]]` of determinant one but Jacobi
+sum `-u3`. This exact characteristic-independent control, supplied by
+external review, proves why the metric-volume second stage is substantive.
+No random-product census is used as theorem evidence.
 
 ### FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT [T]
 
@@ -1963,7 +2445,106 @@ physical or gauge equivalence, checkpoint identification, clock, gravity,
 SI, force, uniqueness, or lift to L2-L6. SQRT-PHI-TIME-GRAVITY [O] remains
 open.
 
-The next carry stratum has an exact pentagonal form in the frozen
+The characteristic-zero affine `J` carrier has a rigid first scalar reading.
+Put `K = Q(zeta_5)`, let `M_J` be multiplication by
+`J = 1 + zeta_5^2`, put `D_J = M_J-I`, and let
+`u(zeta_5)=zeta_5^2`. On `V=K`, equivalently on the quotient
+`Q^5/<1>` in the five-point presentation, the group
+
+```text
+G=<D_J,u> ~= AGL_1(F_5)
+```
+
+has
+
+```text
+(V*)^G=0,       (Lambda^2 V*)^G=0,
+dim (Sym^2 V*)^G=1,       dim End_(Q[G])(V)=1.
+```
+
+These equalities remain true after extension to every characteristic-zero
+field. Degree two is therefore the first degree carrying a nonzero
+`G`-invariant scalar reading, and it carries one line. This is
+AFFINE-READING-DEGREE-CENSUS [T]. The motor alone has two symmetric and two
+alternating channels and, over `Q(phi)`, a rank-two equivariant idempotent;
+`u E u^-1=I-E`. It is the full affine action, not the motor alone, that closes
+the linear and alternating channels.
+
+The invariant symmetric line is
+
+```text
+Q q_+,       q_+(x)=Tr_(Q(phi)/Q)(x c(x)),
+```
+
+where `c` is complex conjugation. Its Gram has positive leading minors
+`2,15/4,25/4,125/16`. Rational invariance fixes the line; adding the separate
+premises `q!=0` and `q>=0` fixes the positive ray. With `P(e_x)=zeta_5^x`,
+
+```text
+P^T Gram(q_+) P=(5 I_5-J_5)/2,
+5 I_4-J_4=2 Gram(q_+).
+```
+
+The sizes `J_5` and `J_4` are distinct, and neither matrix identity turns the
+quotient carrier into the sum-zero submodule mechanism. These statements form
+AFFINE-QUADRATIC-FORM-UNIQUENESS [T]. Both affine rows are L1 theorems from
+`probes/P-AFFINE-QUADRATIC-READING-1`; they select no Born reading, decoder,
+effect, apparatus, event stream or measure.
+
+The prime-free Boolean source is also rigid. For every `n>=2`, the invariant
+subspace of pure quadratic Boolean forms under coordinate permutations is
+exactly `{0,e_2}`, where
+
+```text
+e_2(x)=sum_(i<j) x_i x_j=binom(popcount(x),2) mod 2.
+```
+
+Its least weight period is four. Weights two and three are nonsingular and
+weight four is singular, so `n=4` is the unique first arity with a non-atomic
+singular vector. There
+
+```text
+P_4={e_1,e_2,e_3,e_4,1_4},       |P_4|=5,
+```
+
+and the full singular action is `S_5`. In the frozen conjunction of a
+non-atomic singular vector and full symmetric action on the singular carrier,
+`n=4` is the unique solution; the bounded `S_5` clause uses the already
+registered fixed-frame CARRY-PENTAD theorem. This is
+CARRY-QUADRATIC-SYMMETRY [T], evidenced by
+`probes/P-CARRY-QUADRATIC-SYMMETRY-2`. Five is an output cardinality at the
+first non-atomic birth, not an input rational prime. No cycle, orientation,
+exponent, `J`, decoder or physical reading is selected.
+
+The affine form has an exact binary descent. With `O_5=Z[zeta_5]`,
+
+```text
+O_5/(2) ~= F_16,       O_(Q(phi))/(2) ~= F_4,
+q_2(y)=q_+(y) mod 2=Tr_(F_4/F_2)(N_(F_16/F_4)(y)).
+```
+
+The polar form is nondegenerate and the nonzero singular locus is exactly
+`mu_5`. Reduction of the integral map `P` gives isometries
+
+```text
+(A4/2A4,q_A) --Pbar--> (F_16,q_2),
+(A4/2A4,q_A) --tau_15--> (F_2^4,q_4=e_2).
+```
+
+Thus `q_2`, `q_A` and `q_4` are explicitly transported presentations of one
+binary quadratic isometry class, not literally equal functions on one carrier.
+The multiplication motor and Frobenius remain distinct:
+
+```text
+bar(D_J): k -> k+2,       Frob_2: k -> 2k       on mu_5.
+```
+
+They are translation and dilation and together generate the affine action.
+This is J-BINARY-NORM-DESCENT [T], evidenced by
+`probes/P-J-BINARY-NORM-DESCENT-1`. It selects neither `J`, characteristic
+two, the rational prime five nor a physical reading.
+
+The fixed `n=4` carry stratum has an exact pentagonal form in the frozen
 four-coordinate Hamming frame. On `V = F_2^4`, put
 
 ```
@@ -2009,7 +2590,11 @@ shadow is `(X-2)^4 mod 5`. Modulo two, the even-lattice refinement is
 `(V,q)`. Weyl reduction gives `W(A4) ~= S_5 -> O(q_A)`, and the five
 nonzero singular classes map to the five powers of `zeta_5`, whose sum is
 zero. These statements form CARRY-PENTAD [T] at L1, evidenced by
-`probes/P-CARRY-PENTAD-1`. The theorem is relative to the frozen frame and
+`probes/P-CARRY-PENTAD-1`. Its stable role is the fixed `n=4` Arf-one pentad
+and the exact integral `A4`/cyclotomic bridge to the already-given `J` step.
+The prime-free birth theorem above may use its bounded full-`S_5` clause, and
+the binary descent may compare to its `q_A` carrier; neither direction turns
+CARRY-PENTAD into a selector. The theorem is relative to the frozen frame and
 fixed order-five target. It does not unconditionally select `p=5`, width
 four, a five-cycle, its orientation or exponent, and it adds no decoder,
 physical gauge, phase, force, spacetime, entropy, measure, or lift to L2-L6.
@@ -2361,6 +2946,114 @@ a statement about the driver stream alone. It assigns no census
 meaning, makes no measure or physical-irreversibility statement, and
 neither closes nor weakens ENTROPY-LAYER-BRIDGE [O].
 
+### Binary norm index
+
+J-BINARY-NORM-INDEX [T] is an exact L1 theorem for the absolute norm at inert
+rational primes. Let `K=Q(zeta_5)` and let `p` be inert, so
+`O_K/(p)=F_(p^4)`. Reduction commutes with the absolute norm, hence a unit
+`u` with `N_(K/Q)(u)=1` reduces into
+
+```text
+ker N_(F_(p^4)/F_p),
+|ker N|=(p^4-1)/(p-1)=(p+1)(p^2+1),
+[F_(p^4)^x:ker N]=p-1.
+```
+
+Therefore a norm-one algebraic unit can generate the whole inert residue
+multiplicative group only when `p-1=1`, namely at `p=2`. The public unit J
+attains this sole possible whole-group case: in `F_16`,
+`ord(Jbar)=15=|F_16^x|`. The mechanism itself is generic in field degree and
+selects neither J, degree four nor the prime five. Moreover the four elements
+`1+zeta_5^a`, `a=1,2,3,4`, form one Frobenius orbit at `p=2` and all have
+order fifteen, so the attainment does not select the axiom exponent or turn
+characteristic two into a physical selection principle. Evidence is
+`probes/P-J-BINARY-NORM-INDEX-1`.
+
+J-BINARY-NORM-ORDER-CENSUS [C] is the finite companion on the same L1 carrier.
+Among the 156 rational primes `p<2000` inert in `Q(zeta_5)`, `Jbar` generates
+the complete norm-one subgroup exactly for `p=2` and `p=3`; at every other
+prime in the frozen range its order is a proper divisor of `(p+1)(p^2+1)`.
+This statement is finite-range only. It is not an all-prime theorem.
+
+### Exact record quotient calculus
+
+RECORD-QUOTIENT-CALCULUS [T] is the exact L1 theorem for finite quotient
+records of `R=Z[zeta_5]`. For every nonzero proper ideal
+`I=product_P P^(e_P)`:
+
+```text
+Idem(R/I) ~= P(Supp(I))
+```
+
+canonically as the prime-labelled Boolean algebra supplied by CRT and the
+local-idempotent lemma. Reduction `R/I -> R/rad(I)` is bijective on
+idempotents, so the exponent vector is invisible to the Boolean layer. With
+`n_I=rad(I)/I` and `n_I^0=R/I`, the exact layer orders and Loewy length are
+
+```text
+|n_I^k/n_I^(k+1)| = product {N(P): e_P>k},
+L(R/I)=max_P e_P.
+```
+
+A unital `R`-algebra map `R/I -> R/J` exists exactly when `I` is contained in
+`J` and is then the unique canonical projection; a strict quotient has no
+unital `R`-algebra section. Finally, for
+`I_L=(1-zeta_5)^L(2)`, `L>=1`, the support, radical, reduced ring
+`F_5 x F_16` and four-element Boolean algebra are constant while the Loewy
+length is exactly L and is unbounded. The theorem selects no ideal or atom and
+supplies no event semantics, orientation, decoder, measure, Born weight,
+coarse-graining, RG flow, continuum statement or L2-L6 lift. Evidence is
+`probes/P-RECORD-QUOTIENT-CALCULUS-1`.
+
+### Odd-motor mediated block
+
+J-ODD-MOTOR-MEDIATED-BRIDGE [T] is one consolidated exact L1 theorem on the
+public `M_J`, `D=M_J-I`, the frozen `AGL_1(F_5)` affine simplex and the
+multiplier-stabilizer sectors `P,R,C`. Over `Q(sqrt5)` the native algebra has
+exactly two primitive nonzero rank-two invariant sectors, so the naive third
+native mediator sector is impossible. On the affine token decomposition the
+odd channel `A=D-D^-1` instead has the exact block graph
+
+```text
+P <-> C <-> R,
+PAP=RAR=CAC=PAR=RAP=0,
+rank(PAC)=rank(CAP)=rank(RAC)=rank(CAR)=1.
+```
+
+For `B=P A C A R`,
+
+```text
+rank(B)=1,
+B^sharp B=(5/4)R,
+B B^sharp=(5/4)P,
+```
+
+and the squared overlap of the two active lines in C is exactly `1/5`. None of
+`D,D^2,D^3,D^4,D+D^-1` has the same frozen direct-zero / one-mediator-nonzero
+pattern. For `H_k=g_k+g_k^-1`, the sector eigenvalues are `+2,-2,0`; exact elimination
+of C gives orientation-independent magnitude `sqrt5 t^2/(2z)`, with `t` only a
+formal insertion counter, and at token 2
+
+```text
+det[zI-(H_k+tA)] = z^4+(5t^2-4)z^2+5t^4.
+```
+
+The quadratic lift is exactly
+
+```text
+Sym^2(V) ~= 1 + epsilon + 2V,
+dim End_G(Sym^2 V)=6,
+```
+
+with `q_+` invariant, `q_-` transforming by `epsilon`, the frozen pairwise Hom
+vanishing and trilinear invariant census. The repeated `2V` component remains
+a genuine nonselection boundary. The native two-sector no-go is retained
+inside the theorem rather than omitted. The result is algebraic only: it is not
+a physical resonance and supplies no material, frequency, susceptibility,
+Born, probability, observer, decoder, force, spacetime, SI or L2-L6 reading.
+Evidence is `probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2`.
+
+
 ## 4. The two places
 
 The total-ramification census among full quartic cyclotomic fields is exact
@@ -2395,6 +3088,47 @@ The displayed discriminants exclude every other ramified rational prime.
 Consequently the total-ramification locus in the frozen class is exactly
 `{(K_5,5),(K_8,2)}`. A unique prime above a rational prime is not enough:
 the two `K_12` controls have `g=1` but `e=f=2` and are not total.
+
+The class number of the frozen quartic field is one, proved here rather than
+imported (CYCLOTOMIC-CLASS-NUMBER-ONE [T],
+probes/P-TWOLOGPHI-INVARIANTS-1). The trace form on `1, zeta_5, zeta_5^2,
+zeta_5^3` has determinant 125, matching the census value `disc(K_5) = 5^3`
+above. For `n = 4`, `r_2 = 2` and `|d_K| = 125` the Minkowski bound is
+
+```text
+M_K = (4/pi)^2 (4!/4^4) sqrt125 = (15 sqrt5)/(2 pi^2),
+M_K < 2  iff  1125 < 16 pi^4,
+```
+
+and the right-hand inequality is established exactly, as a statement about
+rationals, by a Machin enclosure of `pi` with a checked alternating-series
+tail bound. Every ideal class therefore contains an ideal of norm 1. For the
+real quadratic subfield the bound is `sqrt5/2 < 2`, equivalently `5 < 16`,
+with no transcendental input at all. The maximality of `Z[zeta_5]` and the
+Minkowski bound itself are labeled imports.
+
+The unit lattice fixes the second logarithmic axis exactly
+(REGULATOR-TWO-LOG-PHI [T], probes/P-TWOLOGPHI-INVARIANTS-1). `Phi_5` has no
+real root, since `(x - 1) Phi_5(x) = x^5 - 1` and `Phi_5(1) = 5`, so
+`r_1 = 0`, `r_2 = 2` and the unit rank is 1. The element
+`phi = -zeta_5^2 - zeta_5^3` lies in `Z[zeta_5]`, is fixed by
+`zeta_5 -> zeta_5^4` and so is totally real, and satisfies `phi^2 = phi + 1`
+and `phi (phi - 1) = 1`, hence is a unit of norm 1. It is the fundamental
+unit of `Z[phi]`, by exhaustive enumeration over the bounds `|2a + b| <= 2`
+and `|b| <= 1` that `1 < u < phi` forces. Both infinite places are complex,
+of local degree 2, so the rank-one regulator is
+
+```text
+Reg(Q(zeta_5)) = |2 log |sigma(phi)|| = 2 log phi.
+```
+
+The prime-cyclotomic unit index `Q = 1` and `h^+ = 1` are labeled imports and
+the analytic class number formula is not used. Together with
+J-MAHLER-MEASURE [T] this is the arithmetic anchor of `2 log phi`: the same
+constant is the logarithm of a Mahler measure and a regulator. That two
+independent invariants of the same algebraic datum meet at one number is a
+fact about `phi`, not a bridge between layers, and it neither closes nor
+weakens ENTROPY-LAYER-BRIDGE [O].
 
 At the total primes the residue fields and their unit groups are
 
@@ -2921,7 +3655,13 @@ Galois-trace Gram G = p I - 1 1^T with normalized spectrum {1/p
 (once), 1 (p - 2 times)}, the all ones trace direction the
 eigenvector; exact for p in {3, 5, 7, 11, 13}. Scope: alpha* = 1/p is
 the dimensionless seed; the physical alpha^-1 lives at the bridge
-level. Prefactor unification (ALPHA-PREFACTOR-UNIFICATION) [T]: with
+level.
+
+TRACEKERNEL-RESIDUAL-FORM [T] is a separate every-prime theorem about the
+full Gram, its mod-`p` radical, and the divided residual form. It does not
+widen the registered finite-prime scope or physical reading of ALPHA-SEED.
+
+Prefactor unification (ALPHA-PREFACTOR-UNIFICATION) [T]: with
 B_{2,chi5} = 4/5 exactly, the Gauss sum tau = 2 phi - 1 = sqrt5
 exactly in Z[zeta_5], and L(2, chi5) = 4 pi^2 / (25 sqrt5), the
 witness formula and the formula above are one formula; no independent
@@ -5054,6 +5794,100 @@ normalizer has 40 x 480 = 19200 elements and every one permutes the
 image is read as GL_2(F_5), order 480, on the antisymmetric plane,
 embedded by g -> (det g)^-1 direct-sum g along 3 = 1 + 2.
 
+### TRACEKERNEL-F5-HODGE-BRACKET [T]
+
+Conditional on DEF-EXACT-HODGE-HOME-CLOSURE, the unique nonzero branch is
+`W_5`. In the difference basis
+
+```text
+b1=(1,-1,0,0),
+b2=(0,1,-1,0),
+b3=(0,0,1,-1),
+```
+
+its residual Gram and inverse are
+
+```text
+B    = [[2,4,0],[4,2,4],[0,4,2]],  det B=4,
+B^-1 = [[2,3,4],[3,1,3],[4,3,2]].
+```
+
+For the volume normalized by `omega(b1,b2,b3)=1`, the metric-volume bracket
+is `beta(x,y)=B^-1(x cross y)`. The basis
+
+```text
+h=(1,0,1),  e=(1,4,3),  f=(3,4,1)
+```
+
+has determinant four and satisfies
+
+```text
+[h,e]=2e,  [h,f]=-2f,  [e,f]=h.
+```
+
+It therefore identifies the bracket exactly with `sl_2(F_5)`; matrix
+commutators supply the written Jacobi proof. Replacing `omega` by
+`c omega`, `c!=0`, multiplies the bracket by `c`, and `x -> c^-1 x` is the
+frozen directed isomorphism, so the isomorphism class is volume-scale
+independent.
+
+The public involution `Phi:(x0,x1,x2,x3)->(x2,x3,x0,x1)` preserves the
+sum, residual metric, volume, and bracket. Its eigenspaces are
+
+```text
+W_+ = <(1,-1,1,-1)>,                   dim 1,
+W_- = {(u,v,-u,-v):u,v in F_5},        dim 2,
+[W_+,W_+]=0,  [W_+,W_-]=W_-,  [W_-,W_-]=W_+,
+```
+
+where both nonzero displayed images are onto. This is a bracket grading
+along the existing dictionary split. It neither proves the closure premise
+nor promotes COLOR-SPLIT-12 [D].
+
+This finite `sl_2(F_5)` bracket on `W_5` is not the
+COLOR-LADDER-DICTIONARY reading of color `su(3)` on `End_0(W_5)`. No color
+assignment, QCD dynamics, or physical bridge is created.
+
+### TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY [T]
+
+For the explicit `h,e,f` bracket, the Killing form is twice the residual
+form and is nondegenerate. Every automorphism preserves it and has determinant
+one. Conjugation embeds `PGL_2(F_5)` into the automorphism group; the exact
+isotropic-vector and stabilizer count supplies the matching upper bound:
+
+```text
+Aut(sl_2(F_5)) = SO_3(F_5) = PGL_2(F_5),
+|Aut| = 120.
+```
+
+Against the faithful public block action on `W_+ direct-sum W_-`,
+
+```text
+rho_A(h)=(det A)^-1 h,  rho_A|(W_-)=A,
+```
+
+bracket preservation leaves exactly eight of the 480 matrices: four
+diagonal matrices of determinant one and four antidiagonal matrices of
+determinant minus one. Together they form an exact dihedral subgroup of order
+eight. The scalar `A=2I_2` is an immediate exact mismatch, scaling `h` by four
+and the plane by two.
+
+This boundary gives exact local input to TRACEKERNEL-CURVATURE-FORCING [O].
+The probe's full-equivariance falsifier F2 is armed but does not fire at v58:
+no public dependency requires the same spatial commutator to be equivariant
+under the entire faithful 480-element group. If a future proved complete
+nonempty admissible class does require it, that routes the forcing obligation
+negatively; if no admissible realization survives, the route is `EMPTY`. It
+does not falsify this finite theorem. Replacing that action by
+`(det A)^-1 Sym^2(A)` would require a new named bridge. The Lie algebra
+`sl_2(F_5)` is not the group
+`SL_2(F_5)=2I`; the adjoint action of the latter has kernel `{+-I}` and image
+`PSL_2(F_5)=A5`, not all of `PGL_2(F_5)`. The three-dimensional
+QPAIR-SYM2-2I-IRREDUCIBLE module has no registered intertwiner with `W_5`,
+and KERNEL-WEDGE-COUPLING uses a different carrier. Dimension or order
+coincidence supplies no bridge, no spinor, no integral lift, and no physical
+or higher-layer reading.
+
 Rung 4 (COLOR-CORE-2I [T], reproduce/color-ladder): the special-linear
 core has order 120, is perfect, has center {I, -I}, and has class
 sizes (1, 1, 12, 12, 12, 12, 20, 20, 30), hence is
@@ -5921,8 +6755,41 @@ two-state and 4,251,528 three-state protocols in the frozen
 `q = 2, a = 2, r = 1` binary-output family. The local and GitHub records are
 both x86_64, so this computation-only result is C, not T.
 
+METRO-FORBIDDEN-WITNESSES [C], evidenced by the immutable
+`probes/P-METRO-FORBIDDEN-WITNESSES-1` bundle, exhibits an exact functional
+obstruction for each of the five forbidden entries above. An obstruction is a
+pair of positions with equal pointwise L5 stream whose transported values
+differ, so it excludes at once every output transport `tau` that preserves
+the distinctions of the stream, which is the class a reduction arrow types
+and in which every admitted arrow above carries `tau_R` = identity, rather
+than one family of them; for the box-reordering entry it excludes every `tau`
+outright. None of the five is an admissible arrow. Each entry is read
+minimally and typewise, one ratified reading per phrase: flattening is loss
+of the named `N^a` product structure, not a faithful encoding that transports
+it; erasing names is forgetting which coordinate a digit-word action belongs
+to, not a coordinate permutation that carries the names, bases, maps and
+boxes with it; arbitrary factor weights are new relative weights of the
+geometry factors, not the exact rational output transport `tau_R` a reduction
+arrow already licenses; output-dependent regrouping is regrouping by output
+already obtained, not the Nerode quotient, which the same list admits under
+its congruence precondition; and replacing boxes by an unrelated ordering is
+discarding the canonical box geometry, not the box transport an admitted
+coordinate permutation induces. Read broadly instead, each of the last two
+phrases would make one admitted arrow forbidden as well, which the parent's
+own falsifier excludes. The five witnesses have at most four states and are
+checkable by hand. Across the two frozen boxes of 2,304 and 19,683 tuples the
+obstructing counts are 16,140 for flattening, 18,666 for erasing names,
+12,702 for factor weights, 9,072 for output regrouping, and 13,116 for box
+reordering, out of 21,987; the four admitted arrows exhibit zero obstructions
+across both boxes under their own exact preconditions; and every obstruction
+survives reading the composition in the opposite order. This is computation
+at a declared finite range, so the result is C, not T. Common `q^k` blocking
+is untouched: it is obligation D below.
+
 METRO-REDUCTION-CALCULUS [O] remains the parent for obligations B, D, and E:
-complete exact witnesses for the forbidden catalogue; common `q^k` blocking
+exact witnesses for any forbidden entry beyond the five section 15
+names, the ratified reading of those five having been discharged by
+METRO-FORBIDDEN-WITNESSES; common `q^k` blocking
 with all length-`k` words, padding, exponent-residue vectors, the pointwise
 stream, scientific decision, and terminal value transported; and completeness
 of `approx_red` for the registered class. It remains STOP. Neither row owns
@@ -6013,9 +6880,12 @@ calculus, nor the higher-rank child.
 The retained public root selector is exact: for a positive prime p,
 (p - 2)/(p + 1) = 1/2 if and only if p = 5
 (P5-ROOT-SELECTION [T], reproduce/pentit-p5-closure), since clearing
-the positive denominator gives p - 5 = 0. No further coincidences are
-claimed as independent support for selecting p = 5. The two
-logarithmic axes: pi on
+the positive denominator gives p - 5 = 0. No further unconditional selector
+or independent support for selecting p = 5 is claimed.
+TRACEKERNEL-HOME-DIMENSION [T] is instead a conditional classification under
+the unearned DEF-EXACT-HODGE-HOME-CLOSURE predicate; whether the architecture
+forces that predicate remains TRACEKERNEL-CURVATURE-FORCING [O], not another root
+selector. The two logarithmic axes: pi on
 the argument (c odd), ln phi on the modulus (c even,
 transcendental by Baker); linearly independent over the algebraic
 numbers (LOG-AXES-INDEPENDENCE [T]). No algebraic independence claim
@@ -6986,10 +7856,44 @@ MEASUREMENT AND METROLOGY
                              and C = 0 leave infinitely many physical
                              post-state classes, and dilation existence does
                              not select an instrument
-  QDD-INSTRUMENT-APPARATUS   only O2 independent physical instrument selection
-                             and O1 realized event generation / sampling remain;
-                             SAMPLING NOT PROVIDED, not impossible; fills no
-                             completion-contract field
+  QDD-J-AFFINE-APPARATUS-NONSELECTION
+                             four target-independent affine members, four
+                             sign classes; self-adjoint involutivity leaves two
+  QDD-J-CENTRALIZER-NONSELECTION
+                             complete C_4 centralizer, rational circle and
+                             infinite sign-class nonselection boundary
+  QDD-J-TERMINALITY-SELECTION
+                             conditional ray terminality gives +/-Q and strict
+                             representative idempotence gives +Q
+  QDD-FRESH-RECORD-EXTENSION
+                             reversible append-only three-symbol record
+                             extension for the full two-sided-support class
+  QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION
+                             fresh no-feedback records and repeatability do
+                             not imply projective idempotence; witness R-C
+  QDD-RECORD-SUFFICIENCY-TERMINALITY
+                             four-way equivalence only under the full frozen
+                             two-sided support equations
+  QDD-RECORD-COMPLETE-LUEDER-SELECTION
+                             strict microscopic S_4 law naturality
+                             conditionally leaves one Lueder sign class
+  QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY
+                             weak S_4 quotient covariance leaves 24 sign
+                             classes; collapse to one requires a new gauge
+                             equality
+  QDD-INSTRUMENT-APPARATUS   O2 now asks for independent physical selection
+                             through the two children below; O1 remains a
+                             typed realized-event / sampling obligation after
+                             the exact carry-bank boundary; SAMPLING NOT
+                             PROVIDED, not impossible
+  QDD-TERMINAL-EVENT-SEMANTICS
+                             the independently justified physical meaning of
+                             a completed terminal event; no saturation law is
+                             adopted from the conditional COMM-SAT theorem
+  QDD-INSTRUMENT-CLASS-COMPLETENESS
+                             the complete physical preselection class and
+                             equality, including memory, ready phase,
+                             transitions and phase-indexed branch families
 THE WALL
   QUANT-SUBSTRATE            the Larmor gate and the Schwinger physical-realization
                              gate; the target scalar is exact arithmetic and its

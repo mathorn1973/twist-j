@@ -5,6 +5,11 @@ from pathlib import Path
 import re
 import subprocess
 
+try:  # pragma: no cover - import shim, see check_ledger.py
+    from tools import probe_records as _records
+except ImportError:  # pragma: no cover
+    import probe_records as _records
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MAX_BYTES = 5 * 1024 * 1024
@@ -100,11 +105,11 @@ if probes.exists():
     for probe in sorted(path for path in probes.iterdir() if path.is_dir()):
         if not probe.name.startswith("P-"):
             fail(f"probe directory must start P-: {probe.name}")
-        for required in (
-            "PREREG.md", "verify.py", "EXPECTED.txt", "RUN.md", "RESULT.md"
-        ):
-            if not (probe / required).is_file():
-                fail(f"{probe.name} lacks {required}")
+        result = probe / "RESULT.md"
+        text = result.read_text(encoding="utf-8") if result.is_file() else None
+        present = {item.name for item in probe.iterdir() if item.is_file()}
+        for problem in _records.problems(present, text):
+            fail(f"{probe.name} {problem}")
 
 reproduce = ROOT / "reproduce"
 if reproduce.exists():
@@ -126,9 +131,12 @@ for invariant in (
     "architecture: x86_64\n            runner: ubuntu-latest",
     "architecture: aarch64\n            runner: ubuntu-24.04-arm",
     "runs-on: ${{ matrix.runner }}",
+    "runs-on: ${{ matrix.runner }}\n    timeout-minutes: 25",
     "  check:\n    if: always() && github.ref_type != 'tag' && github.event_name != 'release'\n    needs: architecture\n    runs-on: ubuntu-latest",
+    "needs: architecture\n    runs-on: ubuntu-latest\n    timeout-minutes: 5",
     "if: needs.architecture.result != 'success'",
     "  publication:\n    if: github.ref_type == 'tag' || github.event_name == 'release'\n    runs-on: ubuntu-latest",
+    "if: github.ref_type == 'tag' || github.event_name == 'release'\n    runs-on: ubuntu-latest\n    timeout-minutes: 30",
     "actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5",
     "persist-credentials: false",
     "actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
