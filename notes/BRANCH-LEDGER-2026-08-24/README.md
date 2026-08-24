@@ -73,16 +73,26 @@ the base ref    `main` is an ancestor of itself, so an ancestor test files it
 Regenerate, confirm the counts, then delete only the `MERGED` column:
 
 ```sh
+work=$(mktemp -d)
 git fetch --unshallow                       # no-op if already complete
 git fetch origin '+refs/heads/*:refs/remotes/origin/*' --prune
-python3 tools/build_branch_ledger.py --output /tmp/ledger.tsv
-awk -F'\t' 'NR>1 && $2=="MERGED"{print $1}' /tmp/ledger.tsv > /tmp/prune.txt
-grep -qx main /tmp/prune.txt && { echo "STOP: base branch in prune list"; exit 1; }
-xargs -a /tmp/prune.txt git push origin --delete
+python3 tools/build_branch_ledger.py --output "$work/ledger.tsv"
+awk -F'\t' 'NR>1 && $2=="MERGED"{print $1}' "$work/ledger.tsv" > "$work/prune.txt"
+grep -qx main "$work/prune.txt" && { echo "STOP: base branch in prune list"; exit 1; }
+xargs -a "$work/prune.txt" git push origin --delete --
 ```
+
+Two details are load-bearing.
 
 The `grep -qx main` line is a second, independent stop. Keep it even though
 the generator already excludes the base branch.
+
+The trailing `--` ends option parsing, so a ref whose name begins with a dash
+is deleted rather than read as a flag. `git branch` refuses to create such a
+name, but `git update-ref` and a crafted push both accept it, so the ref can
+exist. Staging through `mktemp -d` rather than fixed `/tmp` paths keeps the
+list from being replaced between the line that writes it and the line that
+reads it.
 
 ## The 93 divergent and 1 orphan refs
 
