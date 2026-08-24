@@ -7,8 +7,12 @@ A disposition for each of the 94 divergent and orphan refs in
 recorded decision. This proposes; it closes nothing. No identifier is
 consumed and no probe is sealed by this file.
 
+v63 acts on ABANDON and RETARGET only. FOLD and ARCHIVE are recorded here
+and deferred; see notes/V63-CLEANUP-SCOPE.md section 3.
+
 ```text
-FOLD       28   finished work whose content should land
+FOLD       28   finished work whose content should land. NOT v63: each goes
+                separately into v64 or later, under normal probe discipline
 ARCHIVE    51   no pin, no obligation; superseded or historical. Keep the
                 ref, record it, do no further work
 ABANDON    13   pin frozen, gate never completed, closed by an ABANDONED
@@ -76,12 +80,17 @@ to commit, and neither can take the ordinary result route.
 1  This cleanup lands first. POLICY.md on main contains no abandoned-pin
    rule today, so no ABANDONED record can honestly cite the policy it
    follows until this branch merges.
-2  Fold c-rh-ray-finite-window-certificate-3-n before writing the record
-   for -2-N, so the record can quote its integrity history instead of
-   restating it.
-3  Fold notes/c-jacobi-phase-cross-1-canonical-h-review only. The branch
-   agent/c-jacobi-phase-cross-1 is its strict ancestor; folding both lands
-   the same eight blobs twice.
+2  The record for -2-N cites, and does not quote, its integrity history.
+   Folding is out of v63 scope, so notes/c-rh-ray-finite-window-certificate-3-n
+   stays unmerged; the record names the branch, the path
+   notes/C-RH-RAY-FINITE-WINDOW-CERTIFICATE-3-N/RESULT.md section 5, and
+   the commit ce3c7b5cb41f79d0686a600f40534ec411764f6f, and states the
+   facts directly: the pinned wrapper failed on import before the engine
+   ran, and was not repaired.
+3  When notes/c-jacobi-phase-cross-1-canonical-h-review is eventually
+   folded, in v64 or later, fold only that branch. agent/c-jacobi-phase-cross-1
+   is its strict ancestor; folding both lands the same eight blobs twice.
+   Neither is v63 work.
 4  notes/c-rh-weil-norm-junction-1-n is ruled by the owner, 2026-08-24:
    content RETARGET, old identifier consumed by a terminal ABANDONED
    record. The record preserves the candidate results actually achieved

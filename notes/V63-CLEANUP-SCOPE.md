@@ -87,8 +87,43 @@ audit or a legacy/ step under its own review, never a promotion package
 authored to fill the gap
 ```
 
-## 3. What this leaves in v63
+## 3. The closed scope of v63
 
-The cleanup keeps its original shape and gets smaller, not larger. Nothing
-here adds a claim, a carrier, a dictionary, or a layer lift, and the live `H`
-and `O` count is unchanged at 30.
+**Ruling: v63 is hygiene. It is exactly three things and it ends after the
+third.**
+
+```text
+1  phase A          errata, branch ledger and generator, retention rule,
+                    abandoned-pin rule, the disposition table
+2  the prune        the 107 MERGED refs, once the ledger is in main to
+                    serve as the receipt for what was deleted
+3  fifteen records  the abandonment and retarget closures: fourteen
+                    branch-level pins plus PREREG-BREAKER-MACKEY4-2
+```
+
+Nothing follows point 3. v63 adds no claim, no carrier, no dictionary and no
+layer lift; the live `H` and `O` count stays at **30**, and a cleanup fold that
+opened new obligations would not be a cleanup.
+
+### The 28 folds are not v63
+
+The disposition table marks 28 refs `FOLD`. None of them lands here. Each goes
+**one at a time**, into v64 or later, under ordinary probe discipline: its own
+issue, its own pin, its own gate, its own pull request. Folding is how science
+enters the Canon, and it does not get to ride in on a hygiene release just
+because the accounting happened to touch the same branches.
+
+The 51 `ARCHIVE` refs need no action at all beyond their recorded row.
+
+### What this changes about the records
+
+One consequence is worth stating, because the earlier sequencing assumed
+otherwise. The record for `C-RH-RAY-FINITE-WINDOW-CERTIFICATE-2-N` was going
+to quote `-3-N` after folding it. `-3-N` is a fold, so it stays unmerged, and
+the record instead **cites** it: branch
+`notes/c-rh-ray-finite-window-certificate-3-n`, path
+`notes/C-RH-RAY-FINITE-WINDOW-CERTIFICATE-3-N/RESULT.md` section 5, commit
+`ce3c7b5cb41f79d0686a600f40534ec411764f6f`, and states the fact directly, that
+the pinned wrapper failed on import before the engine ran and was not
+repaired. A citation to an unmerged branch is honest; inventing a merge to
+make the quotation available would not be.
