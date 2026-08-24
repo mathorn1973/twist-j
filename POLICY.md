@@ -95,6 +95,43 @@ RESULT.md     status, scope, fired falsifiers, conclusion
 
 Do not reuse, rename, or resume a sealed probe.
 
+### Abandoned pins
+
+A preregistration that was frozen and whose formal gate never **completed** is
+an **abandoned pin**. It is an open public obligation, not a neutral leftover:
+the identifier is already spent, and this policy forbids reusing, renaming or
+resuming it. Leaving it open is not a disposition.
+
+Never completed covers two cases, and the test is the record, not the
+intention. The gate may never have been started. It may also have been started
+and failed to produce one: a run that exits nonzero, or dies on a fixture
+defect, yields no exact stdout to pin and no scientific conclusion, so no
+`EXPECTED.txt` and no `RUN.md` exist to commit. Both close the same way.
+
+An abandoned pin is closed by an explicit record, merged like any other:
+
+```text
+probes/P-NAME/
+    PREREG.md     the frozen pin, unchanged
+    verify.py     the accepted verifier, unchanged
+    RESULT.md     Status: ABANDONED
+                  why the gate never ran, and the sentence that the
+                  identifier is consumed and must not be reused
+```
+
+The record carries no `EXPECTED.txt` and no `RUN.md`, because no completed run
+produced either. That absence is what separates the two routes: a gate that
+completed produces an exact stdout and a run record, and a probe holding them
+is closed by its result, never by abandonment. A fired falsifier is merged,
+not relabelled. `check_policy.py` enforces both directions.
+
+Where a successor probe exists, it names the abandoned predecessor and the
+reason in its own preregistration, before its own pin.
+
+If the content is worth keeping, it is retargeted under a **new** identifier
+with its own new pin. Retargeting does not release the old identifier, which
+still requires its own abandonment record.
+
 ## 4. Evidence
 
 Public Canon v1 is a clean synthesis, not a copy of the internal ledger.
@@ -156,7 +193,21 @@ For new public probes:
 - Fired falsifiers are preserved and folded. Thresholds never move after the
   preregistration pin.
 - Any lift between L1 state, L2 manifold, L3 boundary, L4 support, L5 stream,
-  and L6 measure requires its own named gate.
+  and L6 measure requires its own named cross-layer gate.
+- Gate enforcement is explicit rather than inferred only from dependency-layer
+  coincidence. Every `GATES.tsv` row uses one closed `gate_kind`; that kind
+  fixes the required semantic type and public status of its owner. Cross-layer
+  kinds must have distinct concrete L1 to L6 endpoints. If such an owner has
+  one concrete L1 to L6 layer, it must equal the gate `to_layer`; `MULTI` and
+  `NOT_APPLICABLE` do not disable this owner contract. Separately, every
+  dependency edge that actually crosses two concrete protocol layers still
+  requires a matching gate with those exact endpoints.
+- A decision that remains entirely within one concrete protocol layer may use
+  `OPEN_DECISION`. It is a decision gate, not a lift: `from_layer` and
+  `to_layer` must be the same concrete L1 to L6 layer, the owner must be an
+  open obligation at that same concrete layer, and `MULTI` or
+  `NOT_APPLICABLE` may not be used to evade the placement. Other gate kinds
+  may not use equal endpoints.
 
 ## 5. Canon
 
@@ -243,11 +294,11 @@ directory is untouched, and a changed-path check cannot see that. The
 one-probe-per-pull-request rule is unaffected: it still counts only the probe
 directories the diff names.
 
-The publication job reruns policy, unit, Canon and ledger checks,
-then performs the activation readback. Tag and release events skip changed-path
-checks because those events do not supply a valid comparison base; their full
-activation readback already reproduces every public probe and minimal
-reproduction.
+The publication job reruns policy, unit, Canon, ledger and explicit gate
+contract checks, then performs the activation readback. Tag and release events
+skip changed-path checks because those events do not supply a valid comparison
+base; their full activation readback already reproduces every public probe and
+minimal reproduction.
 
 When release immutability is enabled, a release is always assembled as a
 draft. Attach the successful tag-job `activation-manifest.json` and the tagged
@@ -255,8 +306,9 @@ draft. Attach the successful tag-job `activation-manifest.json` and the tagged
 Never substitute a manifest generated from a local checkout.
 
 The sole workflow has read-only permissions, immutable action pins, no
-persisted checkout credential, 15-minute architecture and publication limits,
-and a 5-minute aggregate limit. Its pull-request gate uses one x86_64 and one
+persisted checkout credential, a 25-minute architecture limit, a 30-minute
+publication limit, and a 5-minute aggregate limit. Its pull-request gate uses
+one x86_64 and one
 aarch64 standard GitHub-hosted runner. Its tag trigger covers `canon-v*`, but
 the activation and release validators require the triggering event tag to equal
 the positive whole-number tag declared by the current `STATUS.md`; a broader,

@@ -1,0 +1,52 @@
+P-RH-WEYL-CANONICAL-1 breaker (no authority, floats allowed)
+B1 dense float inverse spot values at R=16
+  node n=1 Q~=-0.000000000000+0.472135955000i
+  node n=4 Q~=-0.000000000000+0.701562118716i
+  compare against the exact stdout by eye; disagreement beyond 1e-10 would fire a finding
+B2 float pivots R=64: 2.361e-01 2.084e-03 6.438e-06 9.887e-09 9.019e-12 7.732e-15 1.123e-15 4.101e-16
+  float loses the deep ladder (exact goes to 7.4e-22); sign pattern up to float noise only, per C10 this is why floats never gate
+B3 moments at c=2, float resolvent powers vs closed limit
+  k=0 limit_coef~=-0.535898385
+  k=1 limit_coef~=0.309401205
+  k=2 limit_coef~=-0.192450180
+  k=3 limit_coef~=0.128300370
+  k=4 limit_coef~=-0.090982777
+  matches the exact Q(sqrt3) series within finite-difference error; full FW5 comparison is the exact table in the verifier stdout
+B4 roam: 50 random Jacobi models R=12, N=6 nodes, hunting a Herglotz model with a negative pivot
+  suspicious models: 0 of 50 (float threshold -1e-13)
+B5 defect landscape: N* on the 8-node set, background R=64
+  columns: x0, delta, w, Nstar, min_pivot
+  x0=0.1000 delta=0.100 w=0.100 Nstar=7 min_pivot=-1.492e-15
+  x0=0.1000 delta=0.010 w=0.100 Nstar=7 min_pivot=-2.004e-15
+  x0=0.1000 delta=0.001 w=0.100 Nstar=8 min_pivot=-1.654e-15
+  x0=0.1000 delta=0.100 w=0.001 Nstar=0 min_pivot=1.315e-16
+  x0=0.3333 delta=0.100 w=0.100 Nstar=7 min_pivot=-6.785e-16
+  x0=0.3333 delta=0.010 w=0.100 Nstar=7 min_pivot=-9.667e-16
+  x0=0.3333 delta=0.001 w=0.100 Nstar=0 min_pivot=1.568e-16
+  x0=0.3333 delta=0.100 w=0.001 Nstar=8 min_pivot=-9.763e-16
+  x0=0.5000 delta=0.100 w=0.100 Nstar=7 min_pivot=-3.626e-15
+  x0=0.5000 delta=0.010 w=0.100 Nstar=7 min_pivot=-3.054e-16
+  x0=0.5000 delta=0.001 w=0.100 Nstar=8 min_pivot=-1.674e-15
+  x0=0.5000 delta=0.100 w=0.001 Nstar=8 min_pivot=-1.286e-15
+  x0=0.7000 delta=0.100 w=0.100 Nstar=8 min_pivot=-2.874e-15
+  x0=0.7000 delta=0.010 w=0.100 Nstar=8 min_pivot=-2.236e-15
+  x0=0.7000 delta=0.001 w=0.100 Nstar=7 min_pivot=-1.455e-15
+  x0=0.7000 delta=0.100 w=0.001 Nstar=7 min_pivot=-6.109e-16
+  x0=0.8000 delta=0.100 w=0.100 Nstar=8 min_pivot=-7.666e-16
+  x0=0.8000 delta=0.010 w=0.100 Nstar=7 min_pivot=-3.094e-15
+  x0=0.8000 delta=0.001 w=0.100 Nstar=8 min_pivot=-6.892e-16
+  x0=0.8000 delta=0.100 w=0.001 Nstar=7 min_pivot=-1.200e-15
+  x0=0.9000 delta=0.100 w=0.100 Nstar=6 min_pivot=-4.557e-15
+  x0=0.9000 delta=0.010 w=0.100 Nstar=7 min_pivot=-1.132e-15
+  x0=0.9000 delta=0.001 w=0.100 Nstar=7 min_pivot=-2.146e-16
+  x0=0.9000 delta=0.100 w=0.001 Nstar=8 min_pivot=-2.263e-15
+  x0=0.9500 delta=0.100 w=0.100 Nstar=6 min_pivot=-1.231e-15
+  x0=0.9500 delta=0.010 w=0.100 Nstar=7 min_pivot=-7.745e-16
+  x0=0.9500 delta=0.001 w=0.100 Nstar=7 min_pivot=-7.028e-16
+  x0=0.9500 delta=0.100 w=0.001 Nstar=7 min_pivot=-2.331e-15
+B5 reading: float only, exact confirmation exists for the frozen D1,
+   D2, D3 rows in the verifier; the landscape shape is the datum
+B6 convergence rate check at node 8 (a=9/8)
+  measured ratio per 16 steps r32/r16 = 3.509e-03, predicted 3.634e-14
+FINDINGS: 0
+breaker done

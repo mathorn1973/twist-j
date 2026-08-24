@@ -24,28 +24,90 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 221)
+        self.assertEqual(self.report.claims, 324)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 24, "D": 41, "F": 12, "H": 3, "O": 23, "T": 118},
+            {"C": 33, "D": 43, "F": 16, "H": 3, "O": 27, "T": 202},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 42,
+                "none": 44,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 139,
+                "two-architecture": 240,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 175)
+        self.assertEqual(len(self.report.direct_architecture_requires), 178)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 194
+            len(self.report.transitive_architecture_dependents), 228
         )
-        self.assertEqual(len(self.report.dependency_terminals), 10)
+        self.assertEqual(len(self.report.dependency_terminals), 50)
+        self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
+        self.assertNotIn(
+            "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
+            self.report.direct_architecture_requires,
+        )
+        self.assertIn(
+            "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertIn(
+            "DEF-DQRC-INTEGER-CENSUS", self.report.dependency_terminals
+        )
+        self.assertIn(
+            "DE-W-CONSTANT", self.report.direct_architecture_requires
+        )
+        self.assertNotIn("DE-W-CONSTANT", self.report.dependency_terminals)
+        self.assertIn(
+            "KERNEL-SUBSET-LANDSCAPE",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertNotIn(
+            "KERNEL-SUBSET-LANDSCAPE", self.report.dependency_terminals
+        )
+        for claim in (
+            "J-LI-PENTAGON-DILATION-DEFICIENCY",
+            "J-LI-CYCLIC-CARRIER-DIMENSION",
+            "TM-ENTROPY-ZERO",
+            "BINARY-READ-RELATIVE-ENTROPY",
+        ):
+            self.assertIn(claim, self.report.dependency_terminals)
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+        for claim in ("PENTAGON-ONLY-DILATIONS", "J-TORAL-ENTROPY"):
+            self.assertNotIn(claim, self.report.dependency_terminals)
+            self.assertNotIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+        for claim in (
+            "CYCLOTOMIC-CLASS-NUMBER-ONE",
+            "METRO-FORBIDDEN-WITNESSES",
+        ):
+            self.assertIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+            self.assertNotIn(claim, self.report.dependency_terminals)
+        for claim in (
+            "J-MAHLER-MEASURE",
+            "REGULATOR-TWO-LOG-PHI",
+            "J-TORAL-PERIODIC-POINTS",
+        ):
+            self.assertNotIn(claim, self.report.dependency_terminals)
+            self.assertNotIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+        for claim in (
+            "SPLIT-PRIME-RAPIDITY-QUANTITATIVE-SEPARATION",
+            "SPLIT-RAPIDITY-FEJER-GRAM-BOUND",
+        ):
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+            self.assertNotIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+            self.assertNotIn(claim, self.report.dependency_terminals)
         self.assertNotIn(
             "KERNEL-Z6-SYNCHRONIZATION",
             self.report.direct_architecture_requires,
@@ -72,6 +134,18 @@ class ArchitectureMapReportTests(unittest.TestCase):
         )
         self.assertIn(
             "MINIMAL-READ-DERIVATION",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "OBSERVER-WRITE-PORT",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "OBSERVER-WRITE-PORT",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertIn(
+            "TM-SYM2-SPECTRAL-COHERENCE",
             self.report.direct_architecture_requires,
         )
         self.assertNotIn(
@@ -110,6 +184,62 @@ class ArchitectureMapReportTests(unittest.TestCase):
             "ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM",
             self.report.transitive_architecture_dependents,
         )
+        self.assertNotIn(
+            "CM-ALTERNATING-PENCIL",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "CM-ALTERNATING-PENCIL",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertNotIn(
+            "J-HARMONIC-SEAM",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "J-HARMONIC-SEAM",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertNotIn(
+            "MOBIUS-TM-PRIME2-BRIDGE",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "MOBIUS-TM-PRIME2-BRIDGE",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertIn(
+            "MOBIUS-TM-PRIME2-BRIDGE", self.report.dependency_terminals
+        )
+        self.assertNotIn(
+            "TM-MULTIPLICATION-CARRY-DEFECT",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "TM-MULTIPLICATION-CARRY-DEFECT",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertIn(
+            "TM-MULTIPLICATION-CARRY-DEFECT",
+            self.report.dependency_terminals,
+        )
+        for claim in (
+            "TM-HANKEL-DIVISOR-BRIDGE",
+            "TM-HANKEL-SQUAREFUL-RANK-NOGO",
+            "TM-HANKEL-EXTREMAL-WITT-SKELETON",
+            "TM-HANKEL-K2-TRANSFER",
+            "TM-HANKEL-K3-UNIVERSAL-TRANSFER",
+            "TM-HANKEL-K3-TWO-SCALAR-CLASSIFICATION",
+            "TM-HANKEL-K3-QUADRATIC-INVARIANT-SUFFICIENCY",
+            "ARITHMETIC-RAPIDITY-DECOMPOSITION",
+            "SPLIT-PRIME-RAPIDITY-CLASS",
+            "SPLIT-PRIME-RAPIDITY-CONSTRUCTION-AGREEMENT",
+        ):
+            self.assertIn(claim, self.report.dependency_terminals)
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+            self.assertNotIn(
+                claim, self.report.transitive_architecture_dependents
+            )
         for claim in (
             "DRIFT-IS-THE-READ",
             "COIN-SELECTION-CONDITIONAL",

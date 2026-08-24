@@ -1,0 +1,16 @@
+PASS CH1 pin commit is an ancestor of result commit, final PR head and merge
+PASS CH2 the three pinned blobs are byte-identical at all four commits
+PASS CH3 EXPECTED.txt, RUN.md and RESULT.md do not exist at the pin
+PASS CH4 no pinned file changes in any commit after the pin up to the merge
+PASS CH5 current-main copies of all six sealed files equal the merge copies
+PASS CH6 the audit checkout worktree is clean
+PASS CH7 the audit checkout HEAD is exactly the audited merge commit
+PASS CH8 basis pair: canon/CANON.md DIFFERS between the audited merge and current main, and the QDD-INSTRUMENT-APPARATUS row is unchanged
+PASS PR1 R and C are self-sharp and J^sharp = -J at every token, so by linearity T(e,r,s)^sharp = e R + r C - s J for all rational e, r, s
+PASS PR2 the multiplication table gives T^sharp T = e^2 R + (r^2+s^2) C by linearity, so the effect equation is exactly e^2 = 1 and r^2+s^2 = 1
+PASS PR3 projective idempotence: Q_k absorbs the generators, T^sharp T^2 = (T^sharp T) T and Q_k T = T hold, so T^2 = eps T forces T = eps Q_k
+PASS PR4 T ~ -T is a congruence for composition, so the post-state quotient is a group with identity [Q_k] and its only idempotent is that identity
+PASS PR5 R - C is an involution with (R-C)^2 = Q and R - C not +/- Q; on w = w_R + w_C it maps w to w_R - w_C and back, off the line of w
+CHAIN 8/8 PASS
+PROOF-INPUTS 5/5 PASS
+DECISION AUDIT-PASS

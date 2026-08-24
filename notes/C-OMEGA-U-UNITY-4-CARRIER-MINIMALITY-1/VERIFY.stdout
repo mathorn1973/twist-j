@@ -1,0 +1,16 @@
+C-OMEGA-U-UNITY-4-CARRIER-MINIMALITY-1 verify
+status NON-CANONICAL incubation
+PASS V1 public carrier: ord(M)=20, M^5=2I, N has exact Jordan length 4
+PASS V2 conjugation polynomial: f(N)=N(4+3N+N^2+2N^3), unit factor, involutive
+PASS V3 canonical quotient formula on 59 partitions through dimension 8
+PASS V4 x^2-2 irreducible; 20 top square roots; none fixes any of the 6 F5 lines
+PASS V5 parity gate: no carrier below 8; unique dimension-8 Jordan type is (4,4)
+PASS V6 rank-8 witness: A=M+M, S^2=2I=A^5, SAS^-1=A^9
+PASS V7 displayed marked P is transverse: P direct-sum S(P)=F5^8
+G1 candidate-T PASS exact-size Jordan multiplicities forced even by S^2=2 on invariant quotients
+G2 candidate-T PASS minimal F5 dimension is at least 8
+G3 candidate-T PASS minimal A Jordan type forced to (4,4)
+G4 candidate-T PASS top-line obstruction forces transversality at rank 8
+G5 candidate-C PASS explicit rank-8 witness exists over unchanged F5
+G6 STOP full minimal-pair equivalence classification not decided by this verifier
+ALL REQUIRED GATES G1-G5 PASS

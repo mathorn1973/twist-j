@@ -1,0 +1,11 @@
+P-DQRC-INTRINSIC-SELECTION-1 R3 exact audit
+ENV implementation=CPython version=3.12 optimization=0
+BOX N=20000 J=0..32 K=0..3999 comparator=0..20032
+G1 COMPARATOR checks=20033 PASS
+G2 SUBSTITUTION incidence=2,1;1,0 fixed-prefix=20000 PASS
+G3 WORD_PREFIXES u0=0w u1=w checked-length=20000 prefix-sums=40002 PASS
+G4 FIXED_SHIFT_IN_BOX shifts=0..32 survivor=1 PASS
+G5 ABSOLUTE_COUNT_SHIFT_IN_BOX shifts=0..32 survivor=0 telescope-checks=132000 PASS
+G6 AGREEMENT_W_U0_40 agreements=16 mismatches=24 PASS
+G7 INDEX_PAIR_IN_BOX absolute=0 fixed=1 PASS
+VERIFY PASS gates=7/7 disposition=AUDIT-CONSISTENT

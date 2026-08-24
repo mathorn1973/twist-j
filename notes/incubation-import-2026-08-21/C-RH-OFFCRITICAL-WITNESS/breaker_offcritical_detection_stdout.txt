@@ -1,0 +1,43 @@
+SYNTHETIC MODEL: 120 on-line ordinates + injected quadruples, c = 1.
+All numbers are computed witnesses on the model, not statements about zeta.
+
+single x=0.10 y=14.1347
+  I1 ray 1+1/n   (N<=24): first neg pivot N* = 8, negs 2, min pivot -6.38e-36
+  I2 spread      (N<=24): first neg pivot N* = 8, negs 2, min pivot -1.2e-21
+  I3 J_N(1)      (N<=48): first neg pivot N* = 8, negs 2 (expect up to 2), min pivot -3.07e-23
+
+single x=0.25 y=14.1347
+  I1 ray 1+1/n   (N<=24): first neg pivot N* = 7, negs 2, min pivot -4.14e-30
+  I2 spread      (N<=24): first neg pivot N* = 7, negs 2, min pivot -3.91e-19
+  I3 J_N(1)      (N<=48): first neg pivot N* = 7, negs 2 (expect up to 2), min pivot -6.18e-20
+
+single x=0.40 y=14.1347
+  I1 ray 1+1/n   (N<=24): first neg pivot N* = 7, negs 2, min pivot -2.4e-29
+  I2 spread      (N<=24): first neg pivot N* = 7, negs 2, min pivot -2.53e-18
+  I3 J_N(1)      (N<=48): first neg pivot N* = 7, negs 2 (expect up to 2), min pivot -3.48e-19
+
+single x=0.25 y=30
+  I1 ray 1+1/n   (N<=24): first neg pivot N* = 21, negs 2, min pivot -1.07e-121
+  I2 spread      (N<=24): first neg pivot N* = 21, negs 2, min pivot -2.35e-49
+  I3 J_N(1)      (N<=48): first neg pivot N* = 21, negs 2 (expect up to 2), min pivot -8.49e-69
+
+single x=0.25 y=60
+  I1 ray 1+1/n   (N<=24): first neg pivot N* = None, negs 0, min pivot 2.48e-143
+  I2 spread      (N<=24): first neg pivot N* = None, negs 0, min pivot 2.23e-54
+  I3 J_N(1)      (N<=48): first neg pivot N* = None, negs 0 (expect up to 2), min pivot 3.93e-180
+
+double (0.25,14.1347)+(0.25,60)
+  I1 ray 1+1/n   (N<=24): first neg pivot N* = 7, negs 2, min pivot -4.13e-30
+  I2 spread      (N<=24): first neg pivot N* = 7, negs 2, min pivot -3.88e-19
+  I3 J_N(1)      (N<=48): first neg pivot N* = 7, negs 2 (expect up to 4), min pivot -6.15e-20
+
+control (no injection): ray negs 0 (min pivot 2.29e-143), J_48(1) negs 0 (min pivot 4.02e-180)
+
+Li/Abel radius R = min |1 - 1/rho| over the symmetric multiset:
+  x=0.25 y=14.1347: R = 0.99875142 (deficit 1-R = 0.00125)
+  x=0.40 y=14.1347: R = 0.99800399 (deficit 1-R = 0.002)
+  x=0.40 y=2: R = 0.9130607 (deficit 1-R = 0.0869)
+  r=0.80 (R=0.913...): M_syn=0.920382  partial_120=0.920382  partial_220=0.920382  CONVERGING
+  r=0.95 (R=0.913...): M_syn=0.750204  partial_120=0.0882332  partial_220=44.11  DIVERGING
+
+BREAKER DONE

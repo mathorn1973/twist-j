@@ -1,0 +1,15 @@
+FAIL XA1 at fixed level and u the contribution magnitude strictly decreases with the height of an on-line pole
+PASS XA2 masking: at the exact first negative degree of an off-line pair at height 50, the lower on-line background keeps the aggregate positive at every sampled u where the pair itself is negative
+PASS XA3 leg-1 diagnosis: an off-line pair sitting below the whole background keeps the aggregate negative, which is exactly why WA7 fired
+PASS XA4 the dominant positive term exceeds the negative term by more than 10^6 at every masked sample
+PASS XA5 at fixed height the factorial-normalized weight falls strictly with the level, so depth amplifies the lowest poles
+OFFLINE-PROBE rho=3/4+50i first negative degree 158
+LEG1-CONTROL  rho=3/4+2i first negative degree 7, sampled negatives 2, survived background 2
+RATIO u=1/1000 dominant_positive_over_negative_exceeds_10p176
+RATIO u=1/100 dominant_positive_over_negative_exceeds_10p176
+RATIO u=1/10 dominant_positive_over_negative_exceeds_10p176
+RATIO u=1/2 dominant_positive_over_negative_exceeds_10p176
+RATIO u=1 dominant_positive_over_negative_exceeds_10p176
+RATIO u=2 dominant_positive_over_negative_exceeds_10p175
+GATES 4/5 PASS
+DECISION AUDIT-DISAGREEMENT

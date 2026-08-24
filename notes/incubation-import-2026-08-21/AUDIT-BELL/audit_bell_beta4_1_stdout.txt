@@ -1,0 +1,18 @@
+A1-T-matrix-matches-the-probe                  PASS
+A2-zero-pattern-sym-vs-antisym                 PASS
+B1-e1 = Q^2 + 2R^2                             PASS
+B2-e2 = 2Q^2R^2 + R^4                          PASS
+B3-det = Q^2 R^4                               PASS
+B4-charpoly = (L-Q^2)(L-R^2)^2  [B1,B2,B3 together] PASS
+C1-Q^2 = u^2+v^2+w^2                           PASS
+C2-only s = +-2 closes the identity            PASS  surviving s: [-2, 2]
+C3-exact defect is (s^2-4)D^2 at s=3           PASS
+D1-Q-2D = (a-d)^2+(b+c)^2                      PASS
+D2-Q+2D = (a+d)^2+(b-c)^2                      PASS
+D3-Q^2-R^2 = product of two SOS (so lam1=Q^2 always) PASS
+E1-signature(Q) = (4,0)                        PASS  (4, 0)
+E2-signature(R) = (2,2)                        PASS  (2, 2)
+E3-no invertible linear swap Q <-> R (Sylvester) PASS
+E4-zero locus asymmetry: R=0 has rank-1 witnesses, Q=0 only 0 PASS
+
+gates: 16 PASS, 0 FAIL

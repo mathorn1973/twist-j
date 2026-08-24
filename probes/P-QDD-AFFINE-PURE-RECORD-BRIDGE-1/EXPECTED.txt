@@ -1,0 +1,26 @@
+PASS A1 authority
+PASS A2 Gram inverse
+PASS A3 motor
+PASS A4 target-independent projectors
+PASS R1 cyclotomic trace Gram
+PASS R2 global rank-one operator identity
+PASS R3 density projector identities
+PASS R4 pure-record reconstruction
+PASS R5 finite fibre census
+PASS C1 compressed carrier
+PASS S1 scalar-blind reflection
+PASS S2 scalar equality control
+PASS F1 quadratic sign fibres
+PASS F2 centralizer formula
+PASS F3 orthogonal eliminations
+PASS F4 complete record separates
+PASS D1 rational support rays
+PASS T1 target comparison last
+SCALAR_CHANNEL blind_witness_rank=2
+PURE_RECORD finite_fibres=313 reconstruction=exact
+GLOBAL_HELPER R_cyc_o_iota_B0 projectively_faithful
+PUBLIC_BOUNDARY finite_D_matter_domain_not_full_W
+BRIDGE_GATE GATE-L4-L1-QDD-PURE-RECORD UNADOPTED
+DECISION PURE-RECORD-BRIDGE-BOUNDARY
+SAMPLING NOT PROVIDED
+RESULT 18/18 PASS

@@ -1,0 +1,62 @@
+P-RH-WEYL-CANONICAL-1 correction breaker 1b (no authority)
+purpose: discharge FW5 for real, and machine-verify the rank-two
+threshold identity; prompted by the owner-side review of PR #6
+C1 FW5 discharge: finite Q_R Taylor coefficients at c = 2,
+   dense-exact vs dense-float, and distance to the Q(sqrt3) limit
+  R=4 k=0 exact_vs_float_rel=0.0e+00 dist_to_limit<1.322e-05
+  R=4 k=1 exact_vs_float_rel=0.0e+00 dist_to_limit<6.750e-05
+  R=4 k=2 exact_vs_float_rel=0.0e+00 dist_to_limit<1.941e-04
+  R=4 k=3 exact_vs_float_rel=2.2e-16 dist_to_limit<4.150e-04
+  R=4 k=4 exact_vs_float_rel=0.0e+00 dist_to_limit<7.357e-04
+  R=4 k=5 exact_vs_float_rel=0.0e+00 dist_to_limit<1.146e-03
+  R=4 k=6 exact_vs_float_rel=0.0e+00 dist_to_limit<1.623e-03
+  R=8 k=0 exact_vs_float_rel=0.0e+00 dist_to_limit<3.512e-10
+  R=8 k=1 exact_vs_float_rel=0.0e+00 dist_to_limit<3.416e-09
+  R=8 k=2 exact_vs_float_rel=1.4e-16 dist_to_limit<1.773e-08
+  R=8 k=3 exact_vs_float_rel=0.0e+00 dist_to_limit<6.528e-08
+  R=8 k=4 exact_vs_float_rel=0.0e+00 dist_to_limit<1.913e-07
+  R=8 k=5 exact_vs_float_rel=2.0e-16 dist_to_limit<4.746e-07
+  R=8 k=6 exact_vs_float_rel=1.3e-16 dist_to_limit<1.036e-06
+  R=16 k=0 exact_vs_float_rel=0.0e+00 dist_to_limit<2.480e-19
+  R=16 k=1 exact_vs_float_rel=0.0e+00 dist_to_limit<4.702e-18
+  R=16 k=2 exact_vs_float_rel=0.0e+00 dist_to_limit<4.614e-17
+  R=16 k=3 exact_vs_float_rel=0.0e+00 dist_to_limit<3.121e-16
+  R=16 k=4 exact_vs_float_rel=0.0e+00 dist_to_limit<1.635e-15
+  R=16 k=5 exact_vs_float_rel=0.0e+00 dist_to_limit<7.078e-15
+  R=16 k=6 exact_vs_float_rel=0.0e+00 dist_to_limit<2.633e-14
+  R=32 k=0 exact_vs_float_rel=0.0e+00 dist_to_limit<1.236e-37
+  R=32 k=1 exact_vs_float_rel=0.0e+00 dist_to_limit<4.628e-36
+  R=32 k=2 exact_vs_float_rel=1.4e-16 dist_to_limit<8.817e-35
+  R=32 k=3 exact_vs_float_rel=0.0e+00 dist_to_limit<1.139e-33
+  R=32 k=4 exact_vs_float_rel=1.5e-16 dist_to_limit<1.123e-32
+  R=32 k=5 exact_vs_float_rel=2.0e-16 dist_to_limit<9.012e-32
+  R=32 k=6 exact_vs_float_rel=1.3e-16 dist_to_limit<6.126e-31
+  R=64 k=0 exact_vs_float_rel=0.0e+00 dist_to_limit<1.895e-40
+  R=64 k=1 exact_vs_float_rel=0.0e+00 dist_to_limit<1.263e-40
+  R=64 k=2 exact_vs_float_rel=1.4e-16 dist_to_limit<1.053e-41
+  R=64 k=3 exact_vs_float_rel=0.0e+00 dist_to_limit<7.018e-42
+  R=64 k=4 exact_vs_float_rel=1.5e-16 dist_to_limit<4.971e-42
+  R=64 k=5 exact_vs_float_rel=2.0e-16 dist_to_limit<3.704e-42
+  R=64 k=6 exact_vs_float_rel=1.3e-16 dist_to_limit<2.876e-42
+C1 verdict: OK (this independently reproduces the verifier CHECK 5
+   verdict; breaker 1 never computed these finite moments)
+C2 rank-two threshold identity, exact machine check at N = 8
+  D1: alpha>0:True beta>0:True Re(gamma)~4.607332e+00 D~8.810322e+01 (D>=0:True)
+  D1: det P(w)/det P0 == 1 + 2w Re(gamma) - w^2 D exact at 3 w values: OK
+  D1: full-block quadratic at frozen w: sign=+1 (negative means a negative direction inside N=8)
+  D1: w*(N=8, full block) in [1.709752e-01, 1.709752e-01]
+  D2: alpha>0:True beta>0:True Re(gamma)~-8.875312e+00 D~2.099321e+03 (D>=0:True)
+  D2: det P(w)/det P0 == 1 + 2w Re(gamma) - w^2 D exact at 3 w values: OK
+  D2: full-block quadratic at frozen w: sign=-1 (negative means a negative direction inside N=8)
+  D2: w*(N=8, full block) in [1.800331e-02, 1.800331e-02]
+  D3: alpha>0:True beta>0:True Re(gamma)~5.401781e+00 D~5.066123e-01 (D>=0:True)
+  D3: det P(w)/det P0 == 1 + 2w Re(gamma) - w^2 D exact at 3 w values: OK
+  D3: full-block quadratic at frozen w: sign=+1 (negative means a negative direction inside N=8)
+  D3: w*(N=8, full block) in [2.141727e+01, 2.141727e+01]
+C2 note: the identity is the 2x2 reduction of the rank-two update
+   P(w) = P0 + w(AB* + BA*); D >= 0 is Cauchy-Schwarz in the P0^-1
+   inner product with equality iff A parallel B; above w* there is
+   at most one negative direction by the rank-one comparison
+   P(w) >= P0 - w lambda_- v v*.
+FINDINGS: 0
+breaker 1b done

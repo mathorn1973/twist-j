@@ -1,0 +1,28 @@
+P-ENTROPY-RESIDUE-MATH-1 verify
+E1 char poly of the step matrix is x^4 - 3x^3 + 4x^2 - 2x + 1, with det = N(J) = 1 and trace = Tr(J) = 3 PASS
+E2a coefficient identities: with A = phi^2 and B = 2 - phi: A + B = 3, A B = 1, A + B + A B = 4, so the expanded product (x^2 - A x + A)(x^2 - B x + B) equals the char poly exactly PASS
+E2b both discriminants negative (two complex conjugate pairs); squared moduli exactly phi^2 and phi^-2 = 2 - phi, so h_top = h_Haar = log(phi) + log(phi) = 2 log phi by the imported entropy formula PASS
+fixed-point table #Fix(T^n) = |det(M^n - I)| = |N(J^n - 1)|:
+  n =  1: 1
+  n =  2: 11
+  n =  3: 31
+  n =  4: 55
+  n =  5: 121
+  n =  6: 341
+  n =  7: 911
+  n =  8: 2255
+  n =  9: 5611
+  n = 10: 14641
+  n = 11: 39161
+  n = 12: 104005
+  n = 13: 272611
+  n = 14: 711491
+  n = 15: 1860496
+E3 the two paths agree for n = 1..15, all counts positive; pinned witness #Fix(T^15) = 1860496 PASS
+TM factor complexity p(L), L = 1..20: 2, 4, 6, 10, 12, 16, 20, 22, 24, 28, 32, 36, 40, 42, 44, 46, 48, 52, 56, 60
+E4 exact counts stabilized between prefixes 2^16 and 2^17; p(1..4) = 2, 4, 6, 10; p(20) = 60; p(L) < 4L for 3 <= L <= 20 (linear-complexity witness; the universal linearity is the labeled import, hence entropy rate 0) PASS
+E5a floor identity: phi^2 - 2 = phi - 1 = 1/phi exactly, and it is strictly positive, so the bracket floor log(phi^2/2) is strictly positive PASS
+E5b split identity carrier: phi^2 = 2 (phi^2 / 2), i.e. 2 log phi = log 2 + log(phi^2 / 2) as an exact factorization, and phi^2 = phi + 1 is irrational (x^2 - x - 1 has no rational root), so 2 log phi is the log of no rational number PASS
+E5c multiplicative independence of {phi^2, 2, 5} by norms: N(phi^2) = 1, N(2) = 4, N(5) = 25, and phi has infinite order (phi > 1); hence a log(phi^2) + b log 2 + c log 5 = 0 with rational a, b, c forces a = b = c = 0; in particular 2 log phi differs from log 5 and from log 4 exactly PASS
+DECISION: the exact skeleton of the three entropy rows holds; universal statements carried by the written proofs with imports labeled
+RESULT 8/8 ALL PASS

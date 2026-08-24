@@ -1,0 +1,14 @@
+survivors of the B4b filter, with their h labels:
+  sign +  h = (0, 1, 2, 3, 4)  ->  +Q_k
+  sign -  h = (0, 1, 2, 3, 4)  ->  -Q_k
+  sign +  h = (4, 3, 2, 1, 0)  ->  +(R_k - C_k)
+  sign -  h = (4, 3, 2, 1, 0)  ->  -(R_k - C_k)
+checks:
+  survivor count = 4 (4 expected after diagnosis)
+  survivor set equals E3 member list {+-Q, +-(R-C)}: True
+  g^2 = (4, 3, 2, 1, 0), cycle type [1, 2, 2] (double transposition fixing k)
+  g^2 central in D_k: True
+  rho(g^2) Q_k == R_k - C_k: True
+  Z(D_k) nontrivial on moving space explains the second class;
+  Z(S_k) is trivial, which is why the S rung is unique.
+DIAGNOSIS: breaker auxiliary expectation was wrong; the four survivors are exactly the E3 member list; E3 CONFIRMED by the independent route; no candidate falsifier fires

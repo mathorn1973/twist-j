@@ -1,0 +1,33 @@
+P-METRO-FORBIDDEN-WITNESSES-1 verify
+obligation B of METRO-REDUCTION-CALCULUS; five owner-ratified readings
+
+PASS  G1 NAMED-WITNESSES                 5 of 5 reproduce an exact obstruction
+      W1 FLATTEN           (0, 0, 1) and (0, 1, 0)  ->  2 vs 1
+      W2 ERASE-NAMES       tuple P and tuple P' with the same multiset  ->  1 vs 0
+      W3 WEIGHTS-STRICT    (0, 1, 1) and (1, 0, 0)  ->  2 vs 1
+      W4 OUTPUT-REGROUP    (0, 1, 0) and (1, 1, 0)  ->  0 vs 1
+      W5 BOX-REORDER       (0, 0, 1) and (0, 1, 1)  ->  0 vs 1
+      W2 same multiset of digit maps, redistribution (0, 1, 3, 2), which is
+      neither the identity nor the coordinate swap; position (1, 0, 0)
+
+BOX-2 tuples 2304   BOX-3 tuples 19683
+
+PASS  G2 CENSUS-FORBIDDEN                obstructing tuples of 21987: T1=16140, T2=18666, T3a=12702, T3b=9288, T4=9072, T5=13116
+PASS  G10 CENSUS-DOMAIN-CONSISTENCY      every reading examined the same 21987 tuples: T1=21987, T2=21987, T3a=21987, T3b=21987, T4=21987, T5=21987
+PASS  G3a ARROW-RELABEL                  violations 0
+PASS  G3b ARROW-RESTRICT                 violations 0
+PASS  G3c ARROW-NERODE                   applicable 21987, violations 0
+PASS  G3d ARROW-COORDPERM (commuting sub-box only) commuting tuples 4329, violations 0
+PASS  G8 T3b-SUBSET-OF-T3a               tuples obstructing T3b but not T3a: 0
+REPORT R1 COORDPERM-NONCOMMUTING  13320 tuples
+      A transported coordinate swap reverses the composition order,
+      because CANON.md composes coordinate 1 first. Preserved on every
+      commuting tuple, broken on these. Not gated, not a claim about
+      METRO-REDUCTION-ARROWS [C].
+PASS  G6 EVALUATOR-AGREEMENT             BOX-2 disagreements 0
+PASS  G4 NOT-AN-ADMITTED-ARROW           every witness leaves all admitted arrows stream-preserving, so the obstruction is the transformation's own
+PASS  G7 W4-DISTINCT-FROM-NERODE         w(0)=w(1) but Nerode separates them, so output regrouping is not arrow 3
+PASS  G9 CONVENTION-INDEPENDENCE         5 of 5 obstructions survive coordinate 2 acting first
+PASS  G5 EXACT-ARITHMETIC                all outputs are Fraction; no float in any assertion
+
+RESULT 12/12 ALL PASS

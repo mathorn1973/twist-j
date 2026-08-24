@@ -1,0 +1,34 @@
+PASS C1-01 zeta^5 equals 1
+PASS C1-02 zeta satisfies x^4+x^3+x^2+x+1
+PASS C1-03 phi^2 equals phi+1
+PASS C1-04 J*phi equals zeta
+PASS C1-05 the absolute norm of J is 1
+PASS C1-06 the absolute trace of J is 3
+PASS C1-07 J is none of the ten roots of unity of Q(zeta_5), so J has infinite order
+PASS C2-01 the norm of lambda is 5
+PASS C2-02 the residue map O -> F_5 is a ring homomorphism on the declared pairs
+PASS C2-03 lambda reduces to 0 and J reduces to 2
+PASS C2-04 2 has multiplicative order 4 in F_5, so ord_lambda(J) = 4
+PASS C3-01 lambda^4 and 5 generate the same ideal: v_lambda(5) = 4 and v_lambda(lambda) = 1
+PASS C3-02 ord_(lambda^(4m))(J) = 4*5^m for 1<=m<=12
+PASS C3-03 every measured orbit size is 4 times a power of 5, the index sequence n_A
+PASS C3-04 |(O/5^m)^x| = 4*5^(4m-1) by direct count for the declared m
+PASS C3-05 every orbit size divides 4*5^a by Lagrange, since |(O/lambda^k)^x| = 4*5^(k-1)
+PASS C4-01 v_lambda(J^4 - 1) = 1, the boundary case e/(p-1) = 1
+PASS C4-02 v_lambda(J^20 - 1) = 6, a jump of 5 rather than e = 4
+PASS C4-03 v_lambda(J^(4*5^m) - 1) = 4m+2 for m >= 1 on the declared range
+PASS C4-04 the ladder is strictly increasing, so J^(4*5^m) is never 1
+PASS C5-01 every generated angle fraction has denominator dividing some 4*5^a
+PASS C5-02 the orbit-generated angle set equals the (1/4)Z[1/5] set built independently
+PASS C5-03 an off-grid denominator divides no 4*5^a and is never generated
+PASS C5-04 the grid is closed under the index action: n_A kills level a exactly when A>=a
+PASS C6-01 matching second differences and two initial values rebuild the sequence exactly
+PASS C6-02 the Fejer normalization supplies those two values: D_0 = 0 and D_1 = 1
+PASS C7-01 every atom mass is strictly positive
+PASS C7-02 the two atoms of an ordinate carry total mass 1/(1/4+g^2)
+PASS C7-03 the vector norm equals the total atom mass, so summability gives v in L^2
+PASS C8-01 U_J has pure point spectrum with eigenvalue angles exactly the grid
+PASS C8-02 every grid angle is attained, so the converse construction has its atoms
+PASS C8-03 the grid condition is sufficient as well as necessary
+PASS C8-04 a cocycle vector exists iff RH holds and every Cayley angle is on the grid
+RESULT 33/33 ALL PASS

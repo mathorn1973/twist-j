@@ -1,0 +1,24 @@
+P-PURE-QUBIT-RELATIONAL-GEOMETRY-1 verifier
+pure-state determinant-line norm, local/relation Pythagoras, standard-QM CHSH comparison, and mixed/higher-rank scope breakers
+
+CHECK I01.no.arguments                                           PASS
+CHECK I02.python.version                                         PASS
+CHECK I03.exact.backend                                          PASS
+CHECK R1.det(rho_A)=|det(A)|^2.gaussian-grid                     PASS
+REPORT R1.gaussian-grid.states                                   2401
+CHECK R1.||r||^2=|D|^2.wedge-normalization                       PASS
+CHECK R1.unit-phase.H-invariant.S-determinant-retained           PASS
+CHECK R1.local-U2.phase-breaker.modulus-invariant                PASS
+CHECK R1.area.classifies.normalized-Schmidt-pair.grid            PASS
+CHECK R1.2xn.Cauchy-Binet.gaussian-grids.n=2..4                  PASS
+REPORT R1.Cauchy-Binet.row-pairs                                 69888
+CHECK R2.|b|^2+C^2=1.Schmidt-grid                                PASS
+CHECK R2.local-purity-complement.Schmidt-grid                    PASS
+CHECK R3.Bmax^2-4=16||r||^2.Horodecki-input-grid                 PASS
+CHECK R3.endpoints.product.4.Bell.8                              PASS
+CHECK B1.Werner.p=1/2.PT-negative.CHSH-subcritical               PASS
+CHECK B1.Werner.pure-Pythagoras-fails                            PASS
+CHECK B2.higher-rank.same-e2.different-spectrum                  PASS
+
+gates: 16  failures: 0
+RESULT PASS

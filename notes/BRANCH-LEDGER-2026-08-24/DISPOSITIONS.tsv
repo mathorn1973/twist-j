@@ -1,0 +1,95 @@
+branch	disposition	abandoned_pin	has_prereg	has_result	verification	result_file	note
+agent/b-c-lane-2026-07-17	ARCHIVE	0	0	1	single-pass	notes/incubation/README_B-C_2026-07-17.md	-
+agent/c-jacobi-phase-cross-1	ARCHIVE	0	1	1	direct	notes/C-JACOBI-PHASE-CROSS-1/C-JACOBI-PHASE-CROSS-1.md	strict ancestor of notes/c-jacobi-phase-cross-1-canonical-h-review; fold the descendant only, or the same eight blobs land twice
+agent/canon-v27-tm-sym2-retire-disposition	ARCHIVE	0	0	0	single-pass	-	-
+agent/incubation-checker	ARCHIVE	0	0	0	direct	-	touches tools/check_policy.py and .github/workflows/policy.yml; conflicts with this cleanup
+agent/incubation-contract	FOLD	0	0	0	direct	-	rewrites AGENTS.md; conflicts with this cleanup
+agent/review-lambda-cocycle-conductor-capacity-2026-08-14	FOLD	0	0	1	direct	notes/C-LAMBDA-COCYCLE-CONDUCTOR-CAPACITY-1-N/R-LAMBDA-COCYCLE-CONDUCTOR-CAPACITY-1-N-REVIEW/REVIEW.md	-
+agent/two-architecture-workflow	ARCHIVE	0	0	0	single-pass	-	-
+ci/v27-activation-preflight-209	ARCHIVE	0	0	0	single-pass	-	-
+claude/coin-minimal-read-type-1c194b	ARCHIVE	0	0	0	single-pass	-	-
+claude/science-status-v31-plan-ds4adk	ARCHIVE	0	0	0	single-pass	-	-
+codex/cm-2i-qcarrier-hardening	ARCHIVE	0	0	0	single-pass	-	-
+codex/entropy-mackey-consolidation	ARCHIVE	0	0	0	single-pass	-	-
+codex/lean-public-audit-policy	FOLD	0	0	0	direct	-	touches AGENTS.md, POLICY.md, tools/check_policy.py and adds root audits/; conflicts with this cleanup and needs a POLICY layout change
+fix/policy-architecture-timeout-15	ARCHIVE	0	0	0	single-pass	-	-
+fold/canon-v22	ARCHIVE	0	0	0	single-pass	-	-
+fold/canon-v26-c8-bilinear-shadow	ARCHIVE	0	0	0	single-pass	-	-
+fold/canon-v26-c8-metro-reduction-arrows	ARCHIVE	0	0	0	single-pass	-	-
+fold/canon-v27-minimal-read	ARCHIVE	0	0	0	single-pass	-	-
+fold/ramified-tm-lift-v11	ARCHIVE	0	0	0	single-pass	-	-
+handoff/audit-euler-widder-depth-20260820	FOLD	0	1	1	single-pass	notes/AUDIT-EULER-WIDDER-DEPTH-2026-08-20/AUDIT-EULER-WIDDER-DEPTH_2026-08-20.md	-
+handoff/audits-lambda-grid-qdd-terminality-20260820	FOLD	0	1	1	single-pass	notes/HANDOFF-AUDITS-2026-08-20/lambda-grid/AUDIT-LAMBDA-COCYCLE-GRID_2026-08-20.md	-
+notes/C-AFFINE-READING-CHARACTER-CENSUS-1	ARCHIVE	0	1	1	single-pass	notes/C-AFFINE-READING-CHARACTER-CENSUS-1/RESULT-C-AFFINE-READING-CHARACTER-CENSUS-1.md	-
+notes/C-EM-UNIT-CARRIER-1	ABANDON	1	1	0	direct	-	notes lane: pin frozen with no verifier at all; closes as a notes record, not a probes/ record
+notes/C-TRACEKERNEL-EXTERIOR-CLOSURE-1-N	ARCHIVE	0	1	1	direct	notes/PROMO-C-TRACEKERNEL-EXTERIOR-CLOSURE-1/BREAK-RESULT.md (descendant ref)	-
+notes/PROMO-C-TRACEKERNEL-EXTERIOR-CLOSURE-1	ARCHIVE	0	1	1	single-pass	notes/PROMO-C-TRACEKERNEL-EXTERIOR-CLOSURE-1/BREAK-RESULT.md	-
+notes/c-entanglement-local-relation-pythagoras-1-n	ARCHIVE	0	1	1	single-pass	notes/C-ENTANGLEMENT-LOCAL-RELATION-PYTHAGORAS-1-N/RESULT.md	-
+notes/c-entanglement-relational-wedge-1-n	ARCHIVE	0	1	1	single-pass	notes/C-ENTANGLEMENT-RELATIONAL-WEDGE-1-N/RESULT.md	-
+notes/c-golden-ame-a5-lu-covariants-1-n	FOLD	0	1	1	single-pass	notes/C-GOLDEN-AME-A5-LU-COVARIANTS-1-N/RESULT.md	-
+notes/c-golden-ame-a5-lu-covariants-2-n	FOLD	0	1	1	single-pass	notes/C-GOLDEN-AME-A5-LU-COVARIANTS-2-N/RESULT.md	-
+notes/c-golden-ame-galois-descent-1-n	FOLD	0	1	1	single-pass	notes/C-GOLDEN-AME-GALOIS-DESCENT-1-N/RESULT.md	-
+notes/c-golden-ame-j-rigidity-1-n	FOLD	0	1	1	single-pass	notes/C-GOLDEN-AME-J-RIGIDITY-1-N/RESULT.md	-
+notes/c-golden-ame-twoplace-1-n	FOLD	0	1	1	single-pass	notes/C-GOLDEN-AME-TWOPLACE-1-N/RESULT.md	-
+notes/c-golden-ame-vs-gg-artisanal-f8-1-n	FOLD	0	1	1	single-pass	notes/C-GOLDEN-AME-vs-GG-ARTISANAL-F8-1-N/RESULT.md	-
+notes/c-j-artin-mazur-zeta-1-n	FOLD	0	0	0	single-pass	-	-
+notes/c-jacobi-phase-cross-1-canonical-h-review	FOLD	0	1	1	single-pass	notes/C-JACOBI-PHASE-CROSS-1/C-JACOBI-PHASE-CROSS-1.md	-
+notes/c-mass-read-n	FOLD	0	0	0	direct	-	-
+notes/c-photon-point-group-1	ARCHIVE	0	1	1	direct	notes/c-photon-point-group-1/RESULT-C-PHOTON-POINT-GROUP-1_2026-08-04.md	-
+notes/c-qdd-instrument-dilation-1-n	ARCHIVE	0	0	1	single-pass	notes/canon/C-QDD-INSTRUMENT-DILATION-1-N.md	-
+notes/c-qdd-u-induced-null-anatomy-1-n	FOLD	0	0	1	single-pass	notes/C-QDD-U-INDUCED-NULL-ANATOMY-1-N/C-QDD-U-INDUCED-NULL-ANATOMY-1-N.md	-
+notes/c-rh-hadamard-horizontal-source-1-n	FOLD	0	1	1	single-pass	notes/C-RH-HADAMARD-HORIZONTAL-SOURCE-1-N/RESULT.md	-
+notes/c-rh-hadamard-weil-cayley-1-n	FOLD	0	1	1	single-pass	notes/C-RH-HADAMARD-WEIL-CAYLEY-1-N/RESULT.md	-
+notes/c-rh-ray-finite-window-certificate-1-n	FOLD	0	1	1	single-pass	notes/C-RH-RAY-FINITE-WINDOW-CERTIFICATE-1-N/EXPECTED.txt	-
+notes/c-rh-ray-finite-window-certificate-2-n	ABANDON	1	1	0	direct	-	gate executed but never completed: pinned wrapper failed on import before the engine ran and was not repaired; closing record cites notes/c-rh-ray-finite-window-certificate-3-n, RESULT.md section 5, commit ce3c7b5c; -3-N remains unmerged and deferred to v64+
+notes/c-rh-ray-finite-window-certificate-3-n	FOLD	0	1	1	single-pass	notes/C-RH-RAY-FINITE-WINDOW-CERTIFICATE-3-N/RESULT.md	-
+notes/c-rh-stieltjes-widder-euler-1-n	FOLD	0	1	1	single-pass	notes/C-RH-STIELTJES-WIDDER-EULER-1-N/RESULT.md	-
+notes/c-rh-weil-norm-junction-1-n	RETARGET	1	1	0	direct	-	owner ruling 2026-08-24: content RETARGET, old identifier consumed with a terminal ABANDONED record that preserves achieved candidate results and manufactures no J7 verdict; decision bar J7 never reached; issue #374 stays open until that record merges; see notes/V63-CLEANUP-SCOPE.md
+notes/c-rh-widder-angle-sweep-correction-1-n	ABANDON	1	1	0	adversarial	-	-
+notes/c-split-unit-1	FOLD	0	1	1	single-pass	notes/C-SPLIT-UNIT-1/RESULT-C-SPLIT-UNIT-1_2026-08-01.md	-
+notes/c-suzuki-local-capacity-nogo-1	ARCHIVE	0	1	1	single-pass	notes/C-SUZUKI-LOCAL-CAPACITY-NOGO-1/RESULT.md	-
+notes/c-tm-sym2-hadamard-character-1-n	FOLD	0	1	1	adversarial	notes/C-TM-SYM2-HADAMARD-CHARACTER-1-N/RESULT.md	-
+notes/c-tm-sym2-nchar-born-carrier-1-n	FOLD	0	1	1	adversarial	notes/C-TM-SYM2-NCHAR-BORN-CARRIER-1-N/RESULT.md	-
+notes/c-tm-sym2-orientation-source-1-n	ARCHIVE	0	1	1	single-pass	notes/C-TM-SYM2-ORIENTATION-SOURCE-1-N/RESULT.md	-
+notes/c-tm-sym2-oriented-born-junction-1-n	ARCHIVE	0	1	1	single-pass	notes/C-TM-SYM2-ORIENTED-BORN-JUNCTION-1-N/RESULT.md	-
+notes/c-tt-vector-moment-underdetermination-1	ARCHIVE	0	1	1	single-pass	notes/C-TT-VECTOR-MOMENT-UNDERDETERMINATION-2/RESULT.md (and notes/C-TT-VECTOR-MOMENT-UNDERDETERMINATION-1/RESULT.md)	-
+notes/canon-v39-lambda-cocycle	ARCHIVE	0	0	0	single-pass	-	-
+notes/census-v2-and-photon-lane	FOLD	0	0	1	adversarial	notes/photon-lane/RECON-PHOTON-TRANSFER-DATA_2026-08-05.md	-
+notes/entropy-selection-recon	ARCHIVE	0	1	1	single-pass	notes/entropy_selection/MACKEY4-PRIMARY-RESULT.md	-
+notes/entropy-selection-recon-breaker-m2	RETARGET	0	1	1	direct	notes/entropy_selection/RESULT-BREAKER-MACKEY4-1.md	carries a SECOND abandoned identifier: notes/entropy_selection/PREREG-BREAKER-MACKEY4-2.md has no result on any of the 203 refs; owes its own ABANDONED record
+notes/j-li-ra0-frobenius-square	FOLD	0	0	1	adversarial	notes/C-J-LI-RA0-FROBENIUS-SQUARE/RA0_FROBENIUS_SQUARE.md	-
+notes/lean-twistj-algebraic-seed-4	FOLD	0	0	1	adversarial	notes/lean-twistj-algebraic-seed/README.md	-
+notes/lean-twistj-foundations-1	ARCHIVE	0	0	1	single-pass	notes/lean-twistj-foundations/README.md	-
+notes/lean-twistj-layer-typing-3	FOLD	0	0	1	adversarial	notes/lean-twistj-foundations/README.md	-
+notes/lean-twistj-observation-2	ARCHIVE	0	0	1	single-pass	notes/lean-twistj-foundations/README.md	-
+notes/p-curvature-operator-canonical-1-aut-reduction	ARCHIVE	0	0	1	single-pass	notes/canon/P-CURVATURE-OPERATOR-CANONICAL-1-AUT-REDUCTION.md	-
+notes/p-curvature-operator-canonical-1-parent-surface-2	ARCHIVE	0	0	0	single-pass	-	-
+notes/p-dmatter-total-1-direct-readout	ARCHIVE	0	0	1	single-pass	notes/canon/P-DMATTER-TOTAL-1-DIRECT-READOUT.md	-
+notes/p-dmatter-total-1-owner-decision-input	ARCHIVE	0	0	1	single-pass	notes/canon/P-DMATTER-TOTAL-1-OWNER-DECISION-INPUT.md	-
+notes/p-metro-class-1-fork-witness	ARCHIVE	0	0	1	single-pass	notes/canon/P-METRO-CLASS-1-FORK-WITNESS.md	-
+notes/p-metro-class-1-ruling-amendment-1-draft	ARCHIVE	0	0	0	single-pass	-	-
+notes/record-crt-idempotent-and-v60-manifest-draft	ARCHIVE	0	1	1	single-pass	notes/C-RECORD-CRT-IDEMPOTENT-1/C-RECORD-CRT-IDEMPOTENT-1.md	-
+notes/rh-suzuki-consolidation-20260813	ARCHIVE	0	1	1	adversarial	notes/C-SUZUKI-LOCAL-CAPACITY-NOGO-1/RESULT.md	-
+ops/board	ARCHIVE	0	0	0	direct	-	orphan: unrelated history, 8 files, no pin, no result
+prep/canon-v61-build-export	ARCHIVE	0	0	0	single-pass	-	-
+prep/canon-v61-evidence-hashes	ARCHIVE	0	0	0	single-pass	-	-
+prep/canon-v62-build-export	ARCHIVE	0	0	0	single-pass	-	-
+prep/v39-pretag-review-fix	ARCHIVE	0	0	0	single-pass	-	-
+probe/P-A3-FCC-POINT-GROUP-1	ABANDON	1	1	0	adversarial	-	-
+probe/P-C20-TEICHMULLER-SPLIT-1	ARCHIVE	0	1	1	adversarial	probes/P-C20-TEICHMULLER-SPLIT-1/RESULT.md	-
+probe/P-CARRY-ARITY-CIRCUIT-1	FOLD	0	1	1	adversarial	probes/P-CARRY-ARITY-CIRCUIT-1/RESULT.md	-
+probe/P-CARRY-QUADRATIC-SYMMETRY-1	ARCHIVE	0	1	1	single-pass	probes/P-CARRY-QUADRATIC-SYMMETRY-1/RESULT.md	-
+probe/P-FINITE-PRIME-SUPPORT-DILATIONS-1	ABANDON	1	1	0	adversarial	-	-
+probe/P-J-ODD-MOTOR-MEDIATED-BRIDGE-1	ABANDON	1	1	0	adversarial	-	-
+probe/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-1	ABANDON	1	1	0	adversarial	-	-
+probe/P-PAULI-CARRIER-ALGEBRA-1	ABANDON	1	1	0	adversarial	-	-
+probe/P-QDD-COMMUTATOR-READOUT-FORK-1	ABANDON	1	1	0	adversarial	-	-
+probe/P-QDD-FRESH-RECORD-NOFEEDBACK-1	ABANDON	1	1	0	adversarial	-	gate executed once and exited nonzero on a verifier fixture defect; successor -2 discloses it on main
+probe/P-QDD-IDEMPOTENCE-DOMINATES-FORK-1	ABANDON	1	1	0	adversarial	-	-
+probe/P-QDD-IDEMPOTENCE-DOMINATES-FORK-2	ABANDON	1	1	0	adversarial	-	-
+probe/P-QDD-INSTRUMENT-U-INDUCED-2	ARCHIVE	0	0	0	single-pass	-	-
+probe/P-QDD-RECORD-MONOID-DESCENT-1	ABANDON	1	1	0	adversarial	-	-
+release/canon-v28	ARCHIVE	0	0	0	single-pass	-	-
+release/canon-v29	ARCHIVE	0	0	0	single-pass	-	-
+release/canon-v53	ARCHIVE	0	0	0	single-pass	-	-
+release/canon-v56	ARCHIVE	0	0	0	single-pass	-	-

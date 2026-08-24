@@ -1,0 +1,17 @@
+P-DQRC-ARITHMETIC-RECONSTRUCTION-1 exact audit
+I1 interpreter implementation=CPython version=3.12
+A1 determinant-bound cases=28560 violations=0
+A2 comparator-totality pairs=293 increments=93760 violations=0
+A3 census-closed-form configurations=336 violations=0
+A4 constructor-marginals configurations=336 violations=0
+A5 origin-zero-deficit exact-square-checks=3223 violations=0
+A6 scaling-invariance configurations=7200 violations=0
+A7 inserted-parity relational=2016 local=16 violations=0
+H1 Horodecki-maximum-reencoding pairs=293 violations=0
+H2 Schmidt-correlator-reencoding pairs=293 violations=0
+N1 quartic-coefficient-nonselection checks=2344 beta4-iff-target=PASS
+O1 origin-nonselection witness Q=2 Delta=1 K=1 S_origin0=0 S_origin1=4 target_square=8
+K1 maximal-field-audit distinct-pairs=26 squarefree-parts=2 violations=0
+K2 sqrt5-sector witness X=(-3,-1,-1,0) Q=11 Delta=1 H=125 S_square=500/121
+K3 exact-sqrt5-obstruction audit-pairs=293 violations=0
+SUMMARY PASS gates=15/15 physical-bridge=NOT-TESTED data-attack=STOP
