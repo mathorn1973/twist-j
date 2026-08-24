@@ -1,0 +1,18 @@
+P-METRO-FORBIDDEN-WITNESSES-1 breaker
+B1 census: recompute both boxes and all six counts from scratch with a different encoding and a different search -> NO KILL
+   independent counts T1=16140, T2=18666, T3a=12702, T3b=9288, T4=9072, T5=13116 over 21987 tuples, boxes 2304 and 19683, all equal to the declared values
+B2 admitted arrows: hunt across both boxes for one that breaks the pointwise stream under its own precondition -> NO KILL
+   relabel 0, restrict 0, Nerode 0 with 21987 applicable, coordinate permutation 0 on 4329 commuting tuples: all zero
+B3 control count: the commuting sub-box and the non-commuting remainder must match the declared split -> NO KILL
+   commuting 4329, non-commuting tuples on which a transported swap breaks the stream 13320, both as declared
+B4 named witnesses: recompute each stated pair of positions and each stated pair of values independently -> NO KILL
+   four positional witnesses reproduce exactly, and the erasing-names witness still differs under a redistribution that is neither the identity nor the coordinate swap
+B5 output transport: search every distinction-preserving tau for one that intertwines a witness, and test the box-reordering witness against every tau at all -> NO KILL
+   no injective tau makes any of W1, W3 or W4 well defined, and W5 admits no tau whatever, so the obstruction argument is confirmed by exhaustive search rather than assumed
+B6 convention: flip the composition so coordinate 2 acts first and check every obstruction again -> NO KILL
+   all five obstructions survive the flip, so none of them is an artifact of the coordinate-1-first convention
+B7 collision: test whether the ratified reading of output regrouping collapses onto the admitted Nerode quotient, which would make one transformation allowed and forbidden at once -> NO KILL
+   on the regrouping witness w identifies two states that Nerode separates, so the level-set quotient is strictly coarser and the two are different transformations
+B8 degeneracy: check whether the displayed admissibility equation alone excludes the constant output transport, which would destroy the stream -> NO KILL
+   it does not: for W1, W3, W4 a constant tau satisfies the bare equation while collapsing the stream to a point. The exclusion those three witnesses carry is of every distinction-preserving transport, which is the class a reduction arrow types, and every arrow registered by METRO-REDUCTION-ARROWS carries tau_R = identity. W5 needs no such reading: it excludes every tau outright. A fold should read the row's tau clause in that sense and the RESULT record proposes the exact tightening
+BREAKER 0 kills in 8 attacks

@@ -1,0 +1,25 @@
+PASS A1 authority
+PASS A2 Gram
+PASS A3 motor
+PASS A4 support
+PASS A5 W
+PASS A6 compressed motor
+PASS S1 ordered source controls
+PASS S2 ordered maps invertible
+PASS R1 scalar positive
+PASS R2 density projector
+PASS R3 reconstruction
+PASS R4 sign invariance
+PASS R5 sign fibres
+PASS O1 finite overlap
+PASS C1 nonzero commutator witness
+PASS C2 port separates witness
+PASS T1 target last
+SOURCE ordered_outputs=full_W_sign_quotient
+PORT admissible_class=singleton
+OVERLAP vectors=84 sign_classes=42
+READONLY feeds_U=FALSE source_to_K_encoding=NONE
+SCHEMA separate_bridge_manifest_possible gate_unregistered
+DECISION PORT-CANONICAL
+SAMPLING NOT PROVIDED
+RESULT 17/17 PASS

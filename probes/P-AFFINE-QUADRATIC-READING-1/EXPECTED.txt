@@ -1,0 +1,42 @@
+PASS N1 M_J equals I + D_J
+PASS N2 det(M_J - I) equals det(D_J) equals 1
+PASS N3 det(D_J - I) equals 5
+PASS N4 Phi_5(D_J) vanishes and D_J has order five
+PASS N5 I, D_J, D_J^2, D_J^3 independent so Phi_5 is the minimal polynomial
+PASS N6 M_J satisfies x^4 - 3x^3 + 4x^2 - 2x + 1 equals Phi_5(x - 1)
+PASS N7 Phi_5 irreducible over Q by exhaustive bounded integer factorization
+PASS G1 relations u D_J u^-1 equals D_J^2, u^4 equals I, D_J^5 equals I
+PASS G2 the closure of D_J and u has exactly twenty elements
+PASS G3 the affine action is sharply two-transitive on five points
+PASS G4 the action has exactly two orbits on ordered pairs
+PASS P1 P sends e_x to zeta^x and intertwines T with m_zeta and s_2 with u
+PASS P2 P intertwines T^2 with the motor D_J
+PASS P3 P has rank four and annihilates the all ones vector
+PASS P4 the full step is I + T^2 on the augmentation
+PASS E1 the rational endomorphism algebra of V under the full group is one dimensional
+PASS E2 the character square sum over the group equals the group order
+PASS E3 control: under the motor alone the endomorphism algebra is four dimensional
+PASS C1 no nonzero invariant linear functional under the full group
+PASS C2 the invariant symmetric space under the full group is one dimensional
+PASS C3 that line is spanned by the norm form q_plus
+PASS C4 no nonzero invariant alternating form under the full group
+PASS C5 q_plus is positive definite with leading minors 2, 15/4, 25/4, 125/16
+PASS C6 control: under the motor alone the invariant symmetric space is two dimensional
+PASS C7 control: under the motor alone the invariant alternating space is two dimensional
+PASS C8 the second symmetric channel is Galois odd, which is what kills it
+PASS B1 invariant bilinear forms on the five point module span I and the all ones matrix
+PASS B2 the all ones form dies on the augmentation, leaving exactly one
+PASS K1 Phi_5 splits over Q(sqrt5) into the two golden quadratics
+PASS K2 over Q(sqrt5) the motor admits a lossy equivariant idempotent of rank two
+PASS K3 the Galois generator carries that idempotent to its complement
+PASS T1 pullback identity: the unique invariant form is the five point Euclidean form
+PASS T2 the two frozen public constant matrices are positive rational multiples of q_plus
+DECISION AFFINE-QUADRATIC-READING-CONFIRMED
+LINEAR dim=0
+ALTERNATING dim=0
+SYMMETRIC dim=1 span=q_plus definite=positive
+MOTOR_ONLY symmetric=2 alternating=2 endomorphism=4
+ABSOLUTE endomorphism=1 route=rational_rank_field_independent
+TARGET frozen_constants=positive_rational_multiples_of_q_plus
+SCOPE L1 only; no apparatus, instrument, selector, L5 stream or L6 measure
+RESULT 33/33 PASS

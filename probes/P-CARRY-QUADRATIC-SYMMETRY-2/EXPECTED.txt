@@ -1,0 +1,10 @@
+PASS Q1A coefficient-orbit uniqueness audited for n=2..10
+PASS Q1B Lucas carry layers e_1,e_2,e_4,e_8 audited for w=0..255
+PASS Q2A second carry bit has exact least weight period 4=2^2
+PASS Q2B complete Boolean carriers audited for every x in F_2^n, n=2..10 (2044 vectors)
+PASS Q2C first non-atomic singular arity is 4 and P_4 has 5 points
+PASS Q3A Aut(q_4) has order 120 and induces every permutation of P_4
+PASS Q3B exact carrier counts and order obstruction audited for n=5..10
+PASS Q3C binom(n,4)>=n^2+2 and induction step audited for n=8..64
+PASS C01 collision control only: 5=2^2+1 and ord_5(2)=4
+RESULT 9/9 ALL PASS

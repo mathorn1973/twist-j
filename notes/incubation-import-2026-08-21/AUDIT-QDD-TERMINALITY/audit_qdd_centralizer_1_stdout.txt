@@ -1,0 +1,33 @@
+PASS Q1-01 M_J equals the axiom step map on six probe vectors
+PASS Q1-02 D^5 = I
+PASS Q1-03 G inverse is I + one one^T
+PASS Q1-04 D^T G D = G
+PASS Q1-05 simplex sum is zero
+PASS Q1-06 u_2 = -one
+PASS Q1-07 Gram is 4/5 diagonal and -1/5 off
+PASS Q1-08 rho(c,b) u_x = u_(b+cx) for all twenty maps and all five x
+PASS Q1-09 rho(1,1) = D
+PASS Q1-10 group law on all four hundred pairs
+PASS Q1-11 all twenty maps G-orthogonal and pairwise distinct
+PASS Q1-12 P_k idempotent, self-sharp, rank 1, image Q u_k
+PASS Q1-13 Q_k idempotent, self-sharp, rank 3, P_k Q_k = 0
+PASS Q1-14 g_k has order four; traces of g, g^2, g^3, g^4 are 0, 0, 0, 4, so the characteristic polynomial is x^4 - 1 = (x-1)(x+1)(x^2+1)
+PASS Q1-15 full R, C, J multiplication table at all five tokens, including J^2 = -C and J^sharp = -J
+PASS Q1-16 centralizer nullity is exactly three at every token and {R, C, J} is a basis of it
+PASS Q1-17 affine transport of P, Q, R, C, J across tokens, all twenty maps
+PASS Q2-01 every rational-circle member satisfies the exact effect equation T^sharp T = Q
+PASS Q2-02 pairwise physically distinct: T(t) != +-T(u) on the t list
+PASS Q2-03 Kraus completeness and cross term: P^sharp P + T^sharp T = I and P^sharp T = 0
+PASS Q2-04 ordinary repeatability for every member: Q T = T
+PASS Q2-05 the four self-adjoint involutive members: s = 0 forced by sharp-symmetry, each satisfies T^2 = Q
+PASS Q2-06 modulo sign exactly two physical classes: [Q] and [R - C]
+PASS Q3-01 mixed-line witness: every sampled non +-Q member moves the line of w_R + w_C
+PASS Q3-02 ray terminality holds at +Q and -Q on the witness set
+PASS Q3-03 strict idempotence T^2 = T holds in the class exactly at (e, r, s) = (1, 1, 0), that is T = Q
+PASS Q6-01 class-level idempotence T^2 = +-T holds exactly at T = +-Q on the sampled class
+PASS Q6-02 R - C is an explicit non-terminal involution: (R-C)^2 = Q and Q != +-(R-C)
+PASS Q4-01 target comparison last: P_2 = E_low and Q_2 = E_high
+PASS Q4-02 every sampled member realizes the frozen effects at k = 2
+PASS Q5-01 all four sealed files match the RUN.md pin hashes
+PASS Q5-02 sealed verifier reproduces byte-identically, exit 0, empty stderr
+RESULT 32/32 PASS

@@ -1,0 +1,27 @@
+PASS A1 Phi_5 mod 2 is irreducible, so O/(2) is F_16
+PASS A2 the Frobenius^2 fixed field has four elements, F_4
+PASS A3 controls: Z[i]/2 nonreduced, zeta_7/2 split, zeta_3/2 remains a field
+PASS A4 F_16 has 16 elements and alpha has exact order five
+PASS B1 u mod 2 is Frobenius and c mod 2 is Frobenius squared
+PASS B2 multiplication motor D_J mod 2 is not Frobenius
+PASS B3 on mu_5 the motor is k->k+2 and Frobenius is k->2k
+PASS B4 the two residue actions generate sharply two-transitive AGL_1(F_5) of order 20
+PASS B5 the residue affine generators preserve q_2
+PASS B6 p congruent 2 mod 5 is a nonunique Frobenius-exponent class
+PASS C1 q_2 is Trace_F4/F2 composed with Norm_F16/F4
+PASS C2 q_+ reduces to q_2 on every element of O/(2)
+PASS C3 the five nonzero q_2-singular elements are exactly mu_5
+PASS C4 the polar form of q_2 is nondegenerate
+PASS C5 nonzero q_2(y)=0 iff Norm_F16/F4(y)=1
+PASS D1 P(A_4)=(j-1)O and the integral index is five
+PASS D2 P mod 2 is an F_2-linear isomorphism A_4/2A_4 -> O/2O
+PASS D3 q_+(P x)=5/2 sum x_r^2 and reduces exactly to q_A
+PASS D4 the A4 singular pentad maps exactly to the cyclotomic mu_5 pentad
+PASS D5 target comparison is compatible with registered CARRY-PENTAD and adds no new S_5 claim
+DECISION J-BINARY-NORM-DESCENT-CONFIRMED
+FIELD O_mod_2=F16 fixed_field=F4 singular_nonzero=5
+ACTION motor=translation_by_2 frobenius=dilation_by_2 affine_order=20
+FORM q2=Trace_F4_F2_of_Norm_F16_F4 singular_locus=mu5
+BRIDGE qplus_mod_2=qA via P_mod_2
+SCOPE L1 only; no Boolean-selection, Thue-Morse, Born, decoder, apparatus, measure or L2-L6 lift
+RESULT 20/20 PASS

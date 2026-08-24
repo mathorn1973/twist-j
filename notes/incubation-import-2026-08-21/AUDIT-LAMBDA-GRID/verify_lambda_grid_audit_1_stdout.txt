@@ -1,0 +1,56 @@
+PASS A1-01 J phi = zeta
+PASS A1-02 N(J) = 1
+PASS A1-03 Tr(J) = 3
+PASS A1-04 (J-1)^3 = zeta
+PASS A1-05 J = 2 mod lambda
+PASS A1-06 lambda^4 = 5 u with u = -z+z^2-z^3
+PASS A1-07 u is a unit, N(u) = 1
+PASS A1-08 J is none of the ten roots of unity
+PASS A1-09 Cayley triangle: (1 - J)(-zeta^3) = 1
+PASS A1-10 rho_T (1 + zeta^3) = 1
+PASS A1-11 rho_T + conj(rho_T) = 1
+PASS A1-12 |rho_T|^2 = phi^2
+PASS A1-13 1 - 1/rho_T = -zeta^3, as rho_T - 1 = -zeta^3 rho_T
+PASS A1-14 order of -zeta^3 is 10
+PASS A1-15 turn 1/10 lies on the grid
+PASS A1-16 4 phi^2 - 1 = 4 phi + 3 in Z[phi]
+PASS A1-17 uniformizer identity (1 - zeta^4)(-zeta) = 1 - zeta
+PASS A1-18 lambda turn branch 7/20 on grid
+PASS A1-19 lambda turn branch 7/20 not in (1/2) Z[1/5]
+PASS A1-18 lambda turn branch 17/20 on grid
+PASS A1-19 lambda turn branch 17/20 not in (1/2) Z[1/5]
+PASS A1-20 phi sandwich certificate p(3/2) < 0 < p(2)
+PASS A2-01 v_lambda(J^4 - 1) = 1
+PASS A2-02 v_lambda(J^20 - 1) = 6
+PASS A2-03 v_lambda(J^(4.5^m) - 1) = 4m + 2 for m = 2..6
+PASS A2-04 ladder strictly increasing
+PASS A2-05 ord_lambda(J) = 4
+PASS A2-06 registered ord_(lambda^(4m))(J) = 4.5^m at m = 1, 2, 3
+PASS A2-07 every orbit length is 4 times a power of 5
+PASS A2-08 n_0 = 4 occurs at level 1 and only at level 1
+PASS A2-09 unit group order 4.5^(k-1) is a multiple of every orbit length
+PASS A2-10 measured closed form ord = 4.5^(max(1, ceil((k-2)/4))) for k >= 2, 4 at k = 1
+PASS A3-01 orbit set equals arithmetic set (denominators to 500)
+PASS A3-02 orbit set equals realizability set (denominators to 500)
+PASS A3-03 x^4 - 1 has the four simple roots 1..4 mod 5
+PASS A3-04 Hensel: i in Z_5, t = 2 mod 5, t^2 + 1 = 0 mod 5^60
+PASS A3-05 mu_3 obstruction: x^2 + x + 1 has no root mod 5
+PASS A3-06 mu_8 obstruction: x^4 + 1 has no root mod 5
+FAIL A3-07 Eisenstein certificates for Phi_5, Phi_25, Phi_125 at x + 1
+PASS A4-01 grid fractions annihilated from their level on
+PASS A4-02 off-grid denominators separated by 1/q at every A <= 12
+PASS A5-01 A^2 + B^2 = D^2 over Q[g]
+PASS A5-02 (A + iB) rho = D (rho - 1): the Cayley factor is -conj(rho)/rho
+PASS A5-03 reciprocal square collapse -rho^2 (A + iB) = (1/4 + g^2) D
+PASS A5-04 rho + conj(rho) = 1 and rho conj(rho) = 1/4 + g^2
+PASS A5-05 X^(n+1) + X^(n-1) - 2 X^n = X^(n-1)(X-1)^2 for n = 1..40
+PASS A5-06 Fejer second difference D_(n+1)+D_(n-1)-2D_n = 2 cos(n theta), n = 1..59
+PASS A5-07 two initial values + second differences rebuild the ladder, n <= 61
+PASS A6-01 grid-supported synthetic: residual exactly 0 for all A >= 2
+PASS A6-02 shared angle bookkeeping: masses add to one atom of mass 1/2
+PASS A6-03 off-grid atoms 1/3, 1/8, 5/12: residual constant 3m, 4m, 3m for all A <= 12
+PASS A6-04 period certificate: 5^A mod 3 cycles in {1, 2}, never 0
+CONJ-FIRED CONJ-A2 ord_(lambda^k)(J) = 4.5^ceil((k-1)/4) for k = 1..14
+LADDER v_lambda(J^(4.5^m) - 1), m = 0..6: 1 6 10 14 18 22 26
+ORDERS ord_(lambda^k)(J), k = 1..14: 4 20 20 20 20 20 100 100 100 100 500 500 500 500
+RESULT 51/52 PASS, 1 conjecture line(s) reported separately
