@@ -1,0 +1,27 @@
+PASS A1 authority
+PASS A2 Gram inverse
+PASS A3 motor
+PASS A4 support
+PASS A5 W basis
+PASS A6 compressed motor
+PASS B1 representative branch equations
+PASS R1 pure record projector
+PASS R2 reconstruction
+PASS R3 sign fibres
+PASS C1 centralizer formula
+PASS C2 eliminate b
+PASS C3 eliminate a
+PASS C4 signs only
+PASS S1 sign representatives saturate
+PASS S2 noncentral witness
+PASS S3 port detects witness
+PASS I1 sign representatives projectively idempotent
+PASS I2 witness not projectively idempotent
+PASS T1 target comparison last
+CLASS repeatable_pure=O(W,H)_times_Q
+SATURATION COMM-SAT=Xi_zero=sign_class=projective_idempotence
+ARCHITECTURE current_contract_does_not_derive_COMM-SAT
+DICTIONARY terminal_event_commutator_saturation=UNADOPTED
+DECISION SATURATION-DICTIONARY-BOUNDARY
+SAMPLING NOT PROVIDED
+RESULT 20/20 PASS

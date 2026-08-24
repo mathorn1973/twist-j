@@ -1,0 +1,8 @@
+6ba0d1e947e310e1c8952e83bdb59bdac8642eff72b28a1d9504aa402adbb921  PREREG-C-QDD-ERASURE-LATTICE-1.md
+e482ed41ffa7471a7307ee0cf02d1d2d7bd3f6cab2be39318b2c7978a471c9b8  verify_qdd_erasure_lattice_1.py
+c1223b967bfdf864ef9f8a38bf11515bfbc2f5d28171a68234079cfb5eb6f89b  breaker_qdd_erasure_lattice_1.py
+11433 PREREG-C-QDD-ERASURE-LATTICE-1.md
+18550 verify_qdd_erasure_lattice_1.py
+11792 breaker_qdd_erasure_lattice_1.py
+41775 total
+FROZEN_UTC: 2026-08-21T08:08:58Z

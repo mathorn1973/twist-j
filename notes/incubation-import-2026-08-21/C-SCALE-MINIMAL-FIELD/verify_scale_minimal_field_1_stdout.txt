@@ -1,0 +1,31 @@
+C-SCALE-MINIMAL-FIELD-1   exact integers and Fractions, no float
+prereg sha256 bc1ce96f63dd9086d3b090ffcda1ea881687a4508fcec13467fb64a51a570d77
+
+S0a-ANF over {1,XOR,AND} realizes every f:{0,1}^n->{0,1}, n=1..3 HOLDS counts 4, 16, 256 all attained
+S0b-half adder: a + b = (a XOR b) + 2(a AND b)           HOLDS 
+S0c-integer addition from XOR and AND alone, exhaustive 6-bit HOLDS 
+S0d-PREREGISTERED NEGATIVE: Boolean completeness selects no prime HOLDS universal representability has zero selection power. Stated as a defeat.
+
+M1-Minkowski lower bound is strictly increasing in degree, m=1..60 HOLDS B(3) >= 13, B(4) >= 44, B(6) >= 986
+M2-tail: (1+1/m)^m sqrt(pi/4) > 1.76 > 1 for every m, so B keeps growing HOLDS 
+
+S1a-degree 2: minimal |disc| with unit rank >= 1 is 5, uniquely Q(sqrt5) HOLDS minimizer d = [5], |disc| = 5
+S1b-degree 1: Q has unit rank 0                          HOLDS 
+S1c-imaginary quadratic always has unit rank 0           HOLDS 
+S1d-every degree >= 3 has |disc| >= 13 > 5, so degree 2 is forced HOLDS B(3) >= 13
+S1-[candidate-T] Q(sqrt5) is THE minimal arithmetic home of a scale HOLDS |disc| = 5, fundamental unit phi = (1+sqrt5)/2
+
+S2a-cyclotomic rank >= 1 iff phi(n) >= 4                 HOLDS 
+S2b-phi(n) = 4 has exactly n in {5,8,10,12}              HOLDS discs [125, 256, 125, 144]
+S2c-degree >= 6 forces |disc| >= 985 > 125               HOLDS B(6) >= 986
+S2-[candidate-T] Q(zeta_5) is the unique cyclotomic minimizer at 125 HOLDS minimizer n = [5] (n = 10 is the same field, excluded as a duplicate)
+
+S3-trace-form route agrees with the conductor formula, n = 3..24 HOLDS mismatches: none
+S3b-disc(Q(zeta_p)) = (-1)^((p-1)/2) p^(p-2) for odd primes p <= 31 HOLDS disc Q(zeta_5) = 125
+
+S4a-all four 1 + zeta^a are units of norm 1 and trace 3  HOLDS norm and trace do NOT separate them
+S4b-J = 1 + zeta^2 is NOT torsion: J^10 != 1             HOLDS J^10 = [89, 0, 55, 55], so J has infinite order
+S4-[candidate-O] the FIELD is selected, the ELEMENT is not HOLDS S1 and S2 stop at Q(zeta_5); nothing here picks 1+zeta^2 over 1+zeta
+
+GATES 20 of 20 PASS
+FINDINGS 0

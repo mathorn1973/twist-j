@@ -1,0 +1,65 @@
+P-RH-HANKEL-HARD-EDGE-2 breaker (no authority, floats allowed)
+B1 quadrature vs closed form
+  m=1 x=0.70 rel=1.98e-06
+  m=2 x=1.30 rel=8.55e-11
+  m=3 x=2.00 rel=2.83e-14
+  m=4 x=3.50 rel=1.33e-14
+  m=5 x=5.00 rel=2.97e-14
+  m=6 x=8.00 rel=2.03e-14
+B1 worst rel error 1.98e-06 -> OK
+B2 last +to- crossing vs threshold c_d log2, beta=21
+  d=2 F0 crossing=14.3603 xlo=25.9930 margin=11.6327 sign(xhi)=-1
+  d=2 F1 theta=0 crossing=25.2687 xlo=25.9930 margin=0.7243 sign(xhi)=-1
+  d=2 F1 theta=-399/100 crossing=25.2445 xlo=25.9930 margin=0.7486 sign(xhi)=-1
+  d=2 F1 theta=-19599/100 crossing=24.1579 xlo=25.9930 margin=1.8351 sign(xhi)=-1
+  d=2 F1 theta=-575/16 crossing=25.0526 xlo=25.9930 margin=0.9405 sign(xhi)=-1
+  d=4 F0 crossing=25.6814 xlo=37.4299 margin=11.7486 sign(xhi)=-1
+  d=4 F1 theta=0 crossing=36.7261 xlo=37.4299 margin=0.7038 sign(xhi)=-1
+  d=4 F1 theta=-399/100 crossing=36.7133 xlo=37.4299 margin=0.7167 sign(xhi)=-1
+  d=4 F1 theta=-19599/100 crossing=36.1211 xlo=37.4299 margin=1.3089 sign(xhi)=-1
+  d=4 F1 theta=-575/16 crossing=36.6112 xlo=37.4299 margin=0.8188 sign(xhi)=-1
+  d=8 F0 crossing=48.3134 xlo=60.3038 margin=11.9904 sign(xhi)=-1
+  d=8 F1 theta=0 crossing=59.4670 xlo=60.3038 margin=0.8368 sign(xhi)=-1
+  d=8 F1 theta=-399/100 crossing=59.4617 xlo=60.3038 margin=0.8421 sign(xhi)=-1
+  d=8 F1 theta=-19599/100 crossing=59.2099 xlo=60.3038 margin=1.0939 sign(xhi)=-1
+  d=8 F1 theta=-575/16 crossing=59.4191 xlo=60.3038 margin=0.8847 sign(xhi)=-1
+  d=16 F0 crossing=93.5709 xlo=106.0515 margin=12.4806 sign(xhi)=-1
+  d=16 F1 theta=0 crossing=104.7963 xlo=106.0515 margin=1.2552 sign(xhi)=-1
+  d=16 F1 theta=-399/100 crossing=104.7945 xlo=106.0515 margin=1.2570 sign(xhi)=-1
+  d=16 F1 theta=-19599/100 crossing=104.7078 xlo=106.0515 margin=1.3437 sign(xhi)=-1
+  d=16 F1 theta=-575/16 crossing=104.7800 xlo=106.0515 margin=1.2715 sign(xhi)=-1
+  d=24 F0 crossing=138.8267 xlo=151.7992 margin=12.9726 sign(xhi)=-1
+  d=24 F1 theta=0 crossing=150.0794 xlo=151.7992 margin=1.7198 sign(xhi)=-1
+  d=24 F1 theta=-399/100 crossing=150.0785 xlo=151.7992 margin=1.7207 sign(xhi)=-1
+  d=24 F1 theta=-19599/100 crossing=150.0353 xlo=151.7992 margin=1.7640 sign(xhi)=-1
+  d=24 F1 theta=-575/16 crossing=150.0713 xlo=151.7992 margin=1.7279 sign(xhi)=-1
+B3 float recheck of GATEA at d=24
+  alpha1 theta=0.0 V=1.364717e-08 sign=+1
+  alpha1 theta=-3.99 V=-1.385144e-10 sign=-1
+  alpha1 theta=-195.99 V=3.192425e-05 sign=+1
+  alpha1 theta=-35.9375 V=8.837504e-07 sign=+1
+  alpha2 theta=0.0 V=2.723357e-05 sign=+1
+  alpha2 theta=-3.99 V=2.613138e-05 sign=+1
+  alpha2 theta=-195.99 V=-5.068149e-09 sign=-1
+  alpha2 theta=-35.9375 V=1.812709e-05 sign=+1
+  alpha3 theta=0.0 V=1.074665e-06 sign=+1
+  alpha3 theta=-3.99 V=8.475965e-07 sign=+1
+  alpha3 theta=-195.99 V=2.148355e-05 sign=+1
+  alpha3 theta=-35.9375 V=-7.526048e-09 sign=-1
+B4 roam: 200 random quartets, matched theta, d=24, c=219.0
+  failures: 24 of 200, failures below 0.85*T*(law): 0
+B5 ceiling table recomputation, complex float
+  delta=1/10 d=8 T_ff=11.5 n_fail=78 Tff^3/(delta c^2)=2.0093
+  delta=1/10 d=16 T_ff=17.0 n_fail=67 Tff^3/(delta c^2)=2.0988
+  delta=1/10 d=24 T_ff=21.5 n_fail=58 Tff^3/(delta c^2)=2.0722
+  delta=1/10 d=32 T_ff=25.5 n_fail=50 Tff^3/(delta c^2)=2.0414
+  delta=1/10 d=48 T_ff=33.0 n_fail=35 Tff^3/(delta c^2)=2.0667
+  delta=1/4 d=8 T_ff=16.0 n_fail=69 Tff^3/(delta c^2)=2.1646
+  delta=1/4 d=16 T_ff=23.0 n_fail=55 Tff^3/(delta c^2)=2.0790
+  delta=1/4 d=24 T_ff=29.0 n_fail=43 Tff^3/(delta c^2)=2.0341
+  delta=1/4 d=32 T_ff=34.5 n_fail=32 Tff^3/(delta c^2)=2.0222
+  delta=1/4 d=48 T_ff=44.5 n_fail=12 Tff^3/(delta c^2)=2.0271
+B5 compare these rows against the verifier CEILING lines by eye and
+   by the committed stdouts; any T_ff or n_fail mismatch fires FH5.
+FINDINGS: 0
+breaker done

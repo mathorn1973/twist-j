@@ -1,0 +1,24 @@
+P-TRACEKERNEL-EXTERIOR-CLOSURE-1
+BASE_COMMIT 6b8d27b2721b97c88c5b80b49592d6a755f35a0a
+ISSUE 481
+SOURCE frozen=8b8eb640a3ef260c4664d253f69398979afc926f promo=6cba68250b0298ed85b39fe3816c54e0b785c3e8 RESULT_EXPOSED=YES
+PREMISE EXACT-HODGE-HOME-CLOSURE DECLARED_NOT_EARNED
+UNIVERSAL_TRACE_KERNEL PASS primes=2,3,5,7,11,13,17,19,23 lift_generator_tests=43100 normalized_eigenvalues=1/p,1
+DIMENSION_CLASSIFICATION PASS p=2_empty p=5_only_nonzero
+HODGE_F5 PASS states=125 pairs=15625 jacobi_triples=1953125 wedge_det=4
+SL2_PHI PASS triple_det=4 phi_dims=1+2 grading=0,minus,plus
+VOLUME_RESCALING PASS c=1,2,3,4 map=source_to_scaled:x/c
+NEGATIVE_CONTROLS PASS W2=0 plane_wedge_dim=1_not_2 unnamed_beta_det=1_jacobi=0,0,-1 SUPPLIED_BY_EXTERNAL_REVIEW
+AUTOMORPHISMS PASS bracket=SO3=120
+KINEMATICAL_BOUNDARY PASS public_GL2=480 compatible=8 incompatible=472 central_survivors=1,4 sym2_image=120 A3_RESULT_EXPOSED=YES
+F2 MANUAL_BASE_STATUS=ARMED_NOT_FIRED full_spatial_GL2_equivariance_not_derived
+STATUS candidate-T universal_trace_kernel_and_derived_form
+STATUS candidate-T conditional_nonzero_home_closure_only_p=5
+STATUS candidate-T conditional_p=5_sl2_with_Phi_1+2
+STATUS candidate-T finite_field_Aut120_and_8_of_480_boundary
+STATUS O public_architecture_does_not_force_premise
+SCOPE L1_ONLY no_binary_icosahedral_derivation no_spinor no_integral_lift no_physics no_measure no_L2_to_L6
+SAMPLING NOT PROVIDED
+ROUTE CONDITIONAL-PASS NO_CANON_PROMOTION
+MANUAL_BASE_AUDIT NOT_EXECUTABLE see_PREREG_M1
+ALL EXECUTABLE GATES PASS 9/9

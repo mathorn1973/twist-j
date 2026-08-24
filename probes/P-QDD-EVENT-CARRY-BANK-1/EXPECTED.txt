@@ -1,0 +1,19 @@
+TWIST-J QDD event carry bank probe
+Exact Route A contexts; LOW=1, HIGH=0; probability-keyed Euclidean carry bank
+
+PASS 01 CARRIER     625 pistons = ZERO_SUPPORT 1 + SUPPORTED 624; exact table match
+PASS 02 CONTEXTS    probability contexts 22; sum of reduced coordinate sizes 1374
+PASS 03 CARRY       Euclidean identity c+a=c'+b e holds on every phase state
+PASS 04 CYCLES      each interior update is one b-cycle; endpoints are one-state maps
+PASS 05 FIXED       every phase emits its exact shifted lower mechanical word
+PASS 06 COMMUTE     all 843152 two-context phase states commute exactly
+PASS 07 INTERLEAVE  rank law audited on 245411 schedules at two phase vectors
+PASS 08 BANKSIZE    B=19702414515172535913561087541248; factorization 2^66*3^2*7^4*11*13^2*17^2*23
+PASS 09 TAILS       all context cyclic tails distinct; coordinate phase total 1374
+PASS 10 MINIMAL     Myhill-Nerode residue product lower bound equals B=19702414515172535913561087541248
+PASS 11 PHASE       all B=19702414515172535913561087541248 phase vectors preserve frequencies and remain distinguishable
+PASS 12 CHECKPOINT  B has bit length 104 and exceeds 5^6=15625
+PASS 13 ARCH        no public context-bank state, ready phase, feedback bridge, or registered carry-bank gate
+PASS 14 DECISION    CARRY-BANK-BOUNDARY; O1 remains open and SAMPLING NOT PROVIDED
+
+RESULT 14/14 ALL PASS

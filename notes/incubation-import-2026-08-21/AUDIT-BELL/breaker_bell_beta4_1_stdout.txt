@@ -1,0 +1,11 @@
+X1a-|piston T| = |physical <sig_i sig_j>|    HOLDS  0 of 6561 mismatched
+X1b-only entry (2,2) differs, by sign (S2=i sig_y) HOLDS
+X2-physical route gives the same spectrum    HOLDS
+X3-M = 1 + C^2 exactly (Horodecki + Wootters) HOLDS  beta=4 reproduces the standard pure-state result
+X4-max M = 2, i.e. CHSH_max = 2 sqrt2 exactly HOLDS  max M = 2
+X5a-spectrum under rescaling = {Q^2,R^2,t^4 R^2} HOLDS
+X5b-beta is NOT fixed by local covariance    HOLDS  beta(t) = t=1 -> 4, t=2 -> 64, t=3 -> 324, t=5 -> 2500
+X5c-diag(2,8,2) and diag(2,18,2) are t=2 and t=3 HOLDS  so they carry beta = 64 and beta = 324, not 4
+X6-t=1 iff the three S_i share one Frobenius norm HOLDS  ||S_i||^2 = 2 for all three exactly at t=1
+
+FINDINGS 0 of 9

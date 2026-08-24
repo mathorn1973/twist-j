@@ -1,11 +1,355 @@
 # Canon changelog (public series)
 
-## Public Canon v57
+## Public Canon v62
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 292 claims; 0 T-LOCK, 174 T, 43 D, 32 C, 3 H, 24 O, 16 F; 27 live H/O.
+Registry snapshot: 324 claims; 0 T-LOCK, 202 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v62 is an integrity and evidence-maintenance release. It adds no
+scientific claim, status move, scope move, dependency move, gate verdict,
+physical dictionary or layer lift. Scientific registry counts are unchanged
+from v61.
+
+The released tree incorporates the already merged gate-contract maintenance
+from PR #541. Every public gate row remains governed by the closed `gate_kind`
+contract, including the explicit same-layer `OPEN_DECISION` case; no gate row
+or verdict changes in this fold.
+
+`J-ODD-MOTOR-MEDIATED-BRIDGE [T]` keeps its v61 status, scope, falsifier,
+dependencies and nonselection boundary. Its single current evidence pointer is
+re-pinned from `probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-2` to
+`probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2`, the complete RESULT-EXPOSED
+two-architecture evidence-maintenance bundle. That bundle combines the frozen
+G2-G8 implementation with the later native-sector and explicit-Schur
+hardening, while explicitly not consuming the 624-channel-box H3 value.
+The stopped COVERAGE-1 predecessor supplies no evidence.
+
+The v62 ledger change is:
+
+```text
+claims: 324, unchanged,
+T: 202, D: 43, C: 33, H: 3, O: 27, F: 16, unchanged,
+live H/O: 30, unchanged,
+normative items: 370, unchanged,
+dependencies: 581, unchanged,
+evidence rows: 324, unchanged,
+gates: 11, unchanged,
+history rows: 845 + 1 evidence-change event = 846,
+two-architecture evidence: 240, unchanged,
+reproduction witnesses: 23, unchanged.
+```
+
+## Public Canon v61
+
+Registry snapshot: 324 claims; 0 T-LOCK, 202 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
+
+Public Canon v61 is a narrow exact L1 consolidation of the three public probes
+merged after v60. It registers three theorem rows and one finite-range
+computation row. It adds no scientific run, physical dictionary, D/H/O/F row,
+status move, gate, decoder completion or layer lift.
+
+`J-BINARY-NORM-INDEX [T]` records the exact index `p-1` of the residue norm-one
+subgroup at inert primes and the fact that a norm-one unit can generate the
+whole inert residue multiplicative group only at `p=2`; J attains that case
+with order 15 in `F_16`. The generic-degree and Galois-orbit controls are part
+of the row and forbid reading this as selection of J, degree four, the prime
+five, the axiom exponent or a physical characteristic-two principle.
+`J-BINARY-NORM-ORDER-CENSUS [C]` records only the 156 inert primes below 2000,
+where J generates the complete norm-one subgroup exactly at 2 and 3.
+
+`RECORD-QUOTIENT-CALCULUS [T]` folds the universal R1-R6 proof: prime-labelled
+Boolean idempotents from CRT, invariance under radical reduction, exact Loewy
+layer orders and length, thin unital quotient maps, absence of sections for
+strict quotients, and a fixed-support family with unbounded depth. It selects
+no ideal, atom, event, decoder, measure or continuum reading.
+
+`J-ODD-MOTOR-MEDIATED-BRIDGE [T]` folds G1-G8 of the corrected public successor
+probe into one row. The native carrier has only two primitive nonzero sectors,
+so the naive third native mediator route is negative. On the frozen affine
+token decomposition the odd channel has the exact `P <-> C <-> R` block graph,
+a rank-one second-order P-to-R bridge with norm factor `5/4`, active-line
+squared overlap `1/5`, exact control exclusions and Schur polynomial, and the
+quadratic decomposition `Sym^2(V)=1+epsilon+2V`. The repeated `2V` remains a
+nonselection boundary. No physical resonance or higher-layer reading is
+created.
+
+The v61 ledger change is:
+
+```text
+claims:    320 + 3 T + 1 C = 324,
+T:         199 + 3 = 202,
+C:          32 + 1 = 33,
+D: 43, H: 3, O: 27, F: 16, all unchanged,
+live H/O:   30, unchanged,
+normative items: 366 + 4 = 370,
+dependencies: 577 + 4 = 581,
+evidence rows: 320 + 4 = 324,
+gates:      11, unchanged,
+history rows: 841 + 4 = 845,
+two-architecture evidence: 236 + 4 = 240,
+frontier programs: 7, unchanged,
+reproduction witnesses: 23, unchanged.
+```
+
+The candidate dependency audit omits the draft `RECORD-QUOTIENT-CALCULUS ->
+J-UNIT` edge because the universal Dedekind/CRT proof uses the fixed ring
+`Z[zeta_5]` but not the theorem `N(J)=1`; issue #529 explicitly allowed omission
+of a proposed edge when exact proof review found it nongenuine. No reverse edge
+or old proof lineage changes.
+
+## Public Canon v60
+
+Registry snapshot: 320 claims; 0 T-LOCK, 199 T, 43 D, 32 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
+
+Public Canon v60 is a boundary consolidation of twelve already merged public
+probes after v59. It adds no new run, gate, physical dictionary, H row, D row,
+decoder completion or status promotion.
+
+The L1 carry/J packet registers four theorem rows. From
+`P-AFFINE-QUADRATIC-READING-1`, AFFINE-READING-DEGREE-CENSUS records that the
+full affine action has no invariant linear or alternating scalar and one
+symmetric line over every characteristic-zero extension, while
+AFFINE-QUADRATIC-FORM-UNIQUENESS identifies that line with the positive
+trace form under a separately stated positivity premise. The fold carries the
+probe's errata: the five-point carrier mechanism is the quotient `Q^5/<1>`,
+`J_5` and `J_4` are distinguished, and line and ray are not conflated.
+
+CARRY-QUADRATIC-SYMMETRY, from the corrected successor probe
+`P-CARRY-QUADRATIC-SYMMETRY-2`, proves the prime-free chain from the unique
+pure quadratic carry layer through first non-atomic arity four to the
+five-point singular carrier. The stopped predecessor #501 supplies no
+evidence. J-BINARY-NORM-DESCENT registers the finite-field norm-trace residue,
+the explicit `q_2`, `q_A`, `q_4` isometries, and the motor-versus-Frobenius
+guard. CARRY-PENTAD keeps its stable status, evidence, scope and registered
+inputs; its Canon prose is clarified as the fixed `n=4` geometry and integral
+bridge, not a selector for `J`, 2 or 5.
+
+Nine QDD rows consolidate nine public probes, one stable row per evidence
+bundle. They register: the passive-readback/fresh-interaction saturation
+boundary; the event-equality versus quadratic-projective fork; canonical full
+pure-record commutator faithfulness and the finite-domain boundary; the typed
+read-only bridge, static-encoding nonselection and U-tail no-go; uniqueness of
+the complete direct port and its 42-class finite overlap; the complete named
+rational pure/repeatable branch fibre and exact COMM-SAT conditional selector;
+the 22-weight mechanical words, phase and restricted-memory boundaries; finite
+rational phase-family pointwise completeness with genuine post-state phase
+nonselection; and the schedule-invariant product carry bank with exact
+class-relative minimum
+
+```text
+B=19702414515172535913561087541248
+ =2^66 3^2 7^4 11 13^2 17^2 23.
+```
+
+All `B` initial phase vectors preserve the exact per-context frequencies and
+remain future-output distinguishable within the frozen transducer class. The
+active architecture still supplies no
+physical reduced-probability context key, selected ready phase, persistent
+bank update or registered L1-to-L5 gate. Therefore O1 remains open and
+`SAMPLING NOT PROVIDED`; no sampling-impossibility, randomness, independence
+or L6 measure statement follows.
+
+O2 is split into two live obligations. QDD-TERMINAL-EVENT-SEMANTICS asks for an
+independently justified physical meaning of event completion without building
+the desired COMM-SAT/Lueder result into its input. QDD-INSTRUMENT-CLASS-
+COMPLETENESS asks for the complete physical preselection class and equality on
+whole apparatus families, including memory, ready phase and transitions. The
+parent QDD-INSTRUMENT-APPARATUS remains O and closes only after O1 and both O2
+children close compatibly. QUADRATIC-DECODER-DATA is unchanged.
+
+The v60 ledger change is exact:
+
+```text
+claims:    305 + 13 T + 2 O = 320,
+T:         186 + 13 = 199,
+O:          25 + 2 = 27,
+D: 43, C: 32, H: 3, F: 16, all unchanged,
+live H/O:   28 + 2 = 30,
+normative items: 351 + 13 theorem + 2 obligation items = 366,
+dependencies: 538 + 39 = 577,
+evidence rows: 305 + 15 = 320,
+gates:      11, unchanged,
+history rows: 825 + 15 declarations + 1 scope change = 841,
+two-architecture evidence: 223 + 13 = 236,
+frontier programs: 28 + 2 = 30,
+reproduction witnesses: 23, unchanged.
+```
+
+The candidate sub-row ceilings in the probe results are deliberately
+consolidated into the thirteen named theorem scopes rather than mechanically
+creating forty registry rows. No probe bytes, policy, workflow, gate table or
+core selection change in this release.
+
+## Public Canon v59
+
+Registry snapshot: 305 claims; 0 T-LOCK, 186 T, 43 D, 32 C, 3 H, 25 O, 16 F; 28 live H/O.
+Reproduction witnesses: 23.
+
+Public Canon v59 is one conservative QDD selection-boundary fold. It registers
+eight restricted L4 theorems from five already merged public probes, each with
+a byte-identical x86_64 and aarch64 workflow replay:
+
+```text
+P-QDD-J-AFFINE-APPARATUS-1
+P-QDD-J-CENTRALIZER-TERMINALITY-1
+P-QDD-FRESH-RECORD-NOFEEDBACK-2
+P-QDD-RECORD-COMPLETE-STABILIZER-1
+P-QDD-RECORD-NATURALITY-FORK-1
+```
+
+QDD-J-AFFINE-APPARATUS-NONSELECTION registers the complete four-member frozen
+target-independent affine family, four registered sign classes and the
+two-class self-adjoint involutive boundary. QDD-J-CENTRALIZER-NONSELECTION
+registers the full rational `C_4` stabilizer centralizer, its rational-circle
+family and infinite sign-class nonselection. QDD-J-TERMINALITY-SELECTION
+records ray terminality and strict representative idempotence only as exact
+conditional selectors inside that class.
+
+QDD-FRESH-RECORD-EXTENSION registers the reversible fresh-pointer,
+three-symbol append-only extension under all frozen complementary-projector
+and two-sided support equations. QDD-PROJECTIVE-IDEMPOTENCE-NONIMPLICATION
+registers the exact `R_k-C_k` witness: persistence, no-feedback, reversibility
+and ordinary repeatability do not imply projective idempotence.
+QDD-RECORD-SUFFICIENCY-TERMINALITY registers the four-way equivalence among
+record sufficiency, ray terminality, projective class idempotence and
+`T=+/-Q` only under the full hypotheses
+`TP=PT=0`, `QT=TQ=T` and `T^sharp T=Q`. It makes no claim from weaker
+one-sided hypotheses, for which this fold admits no evidence.
+
+QDD-RECORD-COMPLETE-LUEDER-SELECTION defines the positive condition precisely
+as strict microscopic `S_4` law naturality, not mere observation of a
+quotient. QDD-LAW-NATURALITY-VS-GAUGE-BOUNDARY registers the complete
+48-member normalizer and 24 registered sign classes; their collapse to one
+class requires adoption of a new `+/-S_4` physical equality. Neither strict
+naturality nor that enlarged equality is derived or adopted.
+
+The scope of QDD-INSTRUMENT-APPARATUS remains `O` and is sharpened without a
+status move. O2 is now independent physical selection of the post-state law
+and equality inside a complete admissible class. O1 remains realized event
+generation and sampling. Every new theorem stays inside its exact frozen
+rational L4 class, with J-simplex specialization only where stated. There is
+no exhaustion of all J-native apparatuses, L5 event stream, L6 measure,
+decoder completion, SI or Bell claim:
+`SAMPLING NOT PROVIDED`.
+
+The v59 ledger change is exact:
+
+```text
+claims:    297 + 8 = 305,
+T:         178 + 8 = 186,
+D: 43, C: 32, H: 3, O: 25, F: 16, all unchanged,
+live H/O:  28, unchanged,
+normative items: 343 + 8 theorem items = 351,
+dependencies: 521 + 17 = 538,
+evidence rows: 297 + 8 = 305,
+gates:      11, unchanged,
+history rows: 816 + 8 declarations + 1 scope change = 825,
+two-architecture evidence: 215 + 8 = 223,
+reproduction witnesses: 23, unchanged.
+```
+
+Only the five listed public probes are evidence for this fold. No unsealed
+successor work is imported. Bell causal accounting is unchanged. There are no
+gate or status moves, and no probe, workflow, threshold, core-selection or
+frontier-program row changes.
+
+## Public Canon v58
+
+Registry snapshot: 297 claims; 0 T-LOCK, 178 T, 43 D, 32 C, 3 H, 25 O, 16 F; 28 live H/O.
+Reproduction witnesses: 23.
+
+Public Canon v58 folds the complete scientific disposition of the merged
+public probe `P-TRACEKERNEL-EXTERIOR-CLOSURE-1`. The probe directory remains
+byte-identical to its public merge. Its evidence bundle has
+`bundle-manifest-sha256-v1`
+`d21649fa77828dc5368b1a8bafeee3b644d5642fa17eb6d209b46b23b35facb6`;
+the accepted verifier has SHA-256 `31986402dfe1eeffb0a906db0b26443725417f7c945d5624e52883e9b211d5d1`
+and the exact stdout has SHA-256
+`f9a95f22ddb8bf5f1ca79be00144cc663adcc1ef484a013eaf482695addbaf93`.
+The one accepted formal Linux run and both public CI architectures agree byte
+for byte. The symbolic proofs, not the finite sweep, carry the universal
+quantifiers.
+
+Four rows enter at `T`. TRACEKERNEL-RESIDUAL-FORM gives, for every prime,
+the trace Gram `G_p=pI-J`, its mod-`p` radical
+`W_p=ker(sum:F_p^(p-1)->F_p)` of dimension `p-2`, and the lift-independent
+nondegenerate first residual form. TRACEKERNEL-HOME-DIMENSION proves only the
+conditional implication `Lambda^2 W_p isomorphic to W_p => p=2 or p=5`, with
+`p=2` empty and `p=5` the sole nonzero branch.
+TRACEKERNEL-F5-HODGE-BRACKET proves that, under the explicitly unearned
+DEF-EXACT-HODGE-HOME-CLOSURE predicate, the `p=5` bracket is `sl_2(F_5)`,
+independent up to isomorphism of nonzero volume scaling, and graded `1+2` by
+`Phi`. TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY proves
+`Aut=SO_3(F_5)=PGL_2(F_5)` of order 120 and classifies exactly eight of the
+480 faithful public block maps as bracket-preserving.
+
+One named definition enters the normative graph without becoming a sixth
+claim: DEF-EXACT-HODGE-HOME-CLOSURE freezes the two-stage predicate used by
+the conditional theorems. The fifth claim,
+TRACEKERNEL-CURVATURE-FORCING [O], records rather than hides the missing
+bridge from the complete admissible L2 class back to that L1 predicate. It is
+`POSITIVE` only for a complete nonempty class whose every fully admissible
+realization is Hodge-home, `NEGATIVE` for a complete nonempty class containing
+even one non-Hodge realization, `EMPTY` for a complete empty class, and
+otherwise `STOP`. It is logically distinct from
+CURVATURE-OPERATOR-CANONICAL [O]: uniqueness of an operator class and a
+common Hodge-home property of every admissible class are separate questions.
+
+The complete boundary is retained. `W_2=0` is not the unrelated `F_2^4`
+carrier. The public minus plane cannot close home by itself. The exact
+invertible alternating product supplied by external review has determinant
+one but Jacobi sum `-u3`, proving that an unnamed bijection is insufficient.
+The scalar `rho(2I_2)` witness supplied by external review gives a local
+equivariance mismatch. The probe's F2 remains armed but does not fire at v58
+because no public dependency requires full faithful `GL_2(F_5)` equivariance
+of the same commutator. Inside a future proved complete nonempty class, such a
+requirement routes TRACEKERNEL-CURVATURE-FORCING negatively; if the complete
+class is empty, the route is `EMPTY`. The alternative symmetric-square action
+is not adopted.
+
+The collision firewall is explicit. The Lie algebra `sl_2(F_5)` is not the
+group `SL_2(F_5)=2I`; the adjoint image of the latter is `PSL_2(F_5)=A5`, not
+all of `PGL_2(F_5)`. No registered intertwiner identifies the QPAIR symmetric
+square with `W_5`, and KERNEL-WEDGE-COUPLING uses a different carrier. Over
+`Q`, `G_5/5` and DEF-QDD-GRAM share a matrix formula; independently,
+`W_5=rad(G_5 mod 5)` and `g_5` comes from the divided-on-lifts construction
+before reduction, while the QDD projector pair acts on `Q^4`. No projector,
+weight, apparatus, or decoder is transported. The finite `sl_2(F_5)` bracket
+is not the COLOR-LADDER-DICTIONARY `su(3)` reading on `End_0(W_5)`. No
+extension of ALPHA-SEED, promotion of COLOR-SPLIT-12 or
+COLOR-KINEMATICAL-GL2, binary-icosahedral derivation, spinor, integral lift,
+measure, physical reading, or unregistered layer lift is created.
+
+The v58 ledger change is signed term by term:
+
+```text
+claims:    292 + 5 = 297,
+T:         174 + 4 = 178,
+O:         24 + 1 = 25,
+D: 43, C: 32, H: 3, F: 16, all unchanged,
+live H/O:  27 + 1 = 28,
+normative items: 337 + 1 definition + 4 theorem items + 1 obligation = 343,
+dependencies: 502 + 19 = 521,
+evidence rows: 292 + 5 = 297,
+gates:      10 + 1 open L2-to-L1 selection = 11,
+history rows: 811 + 5 declarations = 816,
+two-architecture evidence: 210 + 5 = 215,
+reproduction witnesses: 23, unchanged.
+```
+
+No pre-existing claim changes status or scope. The probe, its pin, result,
+transcript, verifier, thresholds and route remain immutable. One open
+L2-to-L1 gate is added for the new obligation; no workflow, minimal
+reproduction or core selection changes.
+
+## Public Canon v57
+
+Registry snapshot: 292 claims; 0 T-LOCK, 174 T, 43 D, 32 C, 3 H, 24 O, 16 F; 27 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v57 registers five closed rows from two completed public probes,
 `P-TWOLOGPHI-INVARIANTS-1` and `P-METRO-FORBIDDEN-WITNESSES-1`, each merged
