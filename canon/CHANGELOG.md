@@ -1,11 +1,50 @@
 # Canon changelog (public series)
 
-## Public Canon v61
+## Public Canon v62
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
 Registry snapshot: 324 claims; 0 T-LOCK, 202 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v62 is an integrity and evidence-maintenance release. It adds no
+scientific claim, status move, scope move, dependency move, gate verdict,
+physical dictionary or layer lift. Scientific registry counts are unchanged
+from v61.
+
+The released tree incorporates the already merged gate-contract maintenance
+from PR #541. Every public gate row remains governed by the closed `gate_kind`
+contract, including the explicit same-layer `OPEN_DECISION` case; no gate row
+or verdict changes in this fold.
+
+`J-ODD-MOTOR-MEDIATED-BRIDGE [T]` keeps its v61 status, scope, falsifier,
+dependencies and nonselection boundary. Its single current evidence pointer is
+re-pinned from `probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-2` to
+`probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2`, the complete RESULT-EXPOSED
+two-architecture evidence-maintenance bundle. That bundle combines the frozen
+G2-G8 implementation with the later native-sector and explicit-Schur
+hardening, while explicitly not consuming the 624-channel-box H3 value.
+The stopped COVERAGE-1 predecessor supplies no evidence.
+
+The v62 ledger change is:
+
+```text
+claims: 324, unchanged,
+T: 202, D: 43, C: 33, H: 3, O: 27, F: 16, unchanged,
+live H/O: 30, unchanged,
+normative items: 370, unchanged,
+dependencies: 581, unchanged,
+evidence rows: 324, unchanged,
+gates: 11, unchanged,
+history rows: 845 + 1 evidence-change event = 846,
+two-architecture evidence: 240, unchanged,
+reproduction witnesses: 23, unchanged.
+```
+
+## Public Canon v61
+
+Registry snapshot: 324 claims; 0 T-LOCK, 202 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v61 is a narrow exact L1 consolidation of the three public probes
 merged after v60. It registers three theorem rows and one finite-range
@@ -63,10 +102,8 @@ or old proof lineage changes.
 
 ## Public Canon v60
 
-<!-- BEGIN GENERATED CURRENT COUNTS -->
 Registry snapshot: 320 claims; 0 T-LOCK, 199 T, 43 D, 32 C, 3 H, 27 O, 16 F; 30 live H/O.
 Reproduction witnesses: 23.
-<!-- END GENERATED CURRENT COUNTS -->
 
 Public Canon v60 is a boundary consolidation of twelve already merged public
 probes after v59. It adds no new run, gate, physical dictionary, H row, D row,

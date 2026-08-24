@@ -145,14 +145,14 @@ def run():
                        "O": 27, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v61",
+        "registry and companion-ledger counts match Public Canon v62",
         len(rows) == 324
         and counts == expected_counts
         and len(normative) == 370
         and len(dependencies) == 581
         and len(evidence) == 324
         and two_architecture == 240
-        and len(history) == 845
+        and len(history) == 846
         and len(gates) == 11
         and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -3901,8 +3901,8 @@ def run():
             ),
         ),
         "J-ODD-MOTOR-MEDIATED-BRIDGE": (
-            "T", "THEOREM", "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-2",
-            "03db973566ae068b5ed8eb65f4e79ae13af398ac067f325c26a25c1553bf636b",
+            "T", "THEOREM", "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2",
+            "f6b2ca8bf117ee709eba29356b4e5ad61e60801c1975e5405cab1fefbbaa624b",
             "a1f5d43376bafced23478edd0857dfc2c2d1566ee960db32e8d67d493191ad9a",
             (
                 "exactly two primitive nonzero rank-two invariant sectors",
@@ -3995,11 +3995,58 @@ def run():
             and row["new_status"] == v61_rows[claim][0]
             and row["scope_sha256"] == v61_rows[claim][4]
             and row["evidence_id"] == f"EV-{claim}"
-            and row["evidence_location"] == v61_rows[claim][2]
-            and row["evidence_sha256"] == v61_rows[claim][3]
+            and row["evidence_location"] == (
+                "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-2" if claim == "J-ODD-MOTOR-MEDIATED-BRIDGE"
+                else v61_rows[claim][2]
+            )
+            and row["evidence_sha256"] == (
+                "03db973566ae068b5ed8eb65f4e79ae13af398ac067f325c26a25c1553bf636b" if claim == "J-ODD-MOTOR-MEDIATED-BRIDGE"
+                else v61_rows[claim][3]
+            )
             for claim, row in v61_history.items()
         )
         and all(row["owner_item_id"] not in v61_rows for row in gates.values()),
+    ))
+
+    v62_events = [
+        row for row in history
+        if row["claim_id"] == "J-ODD-MOTOR-MEDIATED-BRIDGE"
+        and row["event_id"] == "CANON62-EVIDENCE-J-ODD-MOTOR-MEDIATED-BRIDGE"
+    ]
+    checks.append((
+        "V62-MAINTENANCE",
+        "v62 changes only the odd-motor evidence pointer and one lifecycle event while status, scope, dependencies, gates and science counts stay fixed",
+        len(v62_events) == 1
+        and has_status(index, "J-ODD-MOTOR-MEDIATED-BRIDGE", "T")
+        and scope_sha256(index, "J-ODD-MOTOR-MEDIATED-BRIDGE") == "a1f5d43376bafced23478edd0857dfc2c2d1566ee960db32e8d67d493191ad9a"
+        and index["J-ODD-MOTOR-MEDIATED-BRIDGE"]["evidence"] == "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["evidence_id"] == "EV-J-ODD-MOTOR-MEDIATED-BRIDGE"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["location"] == "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["sha256"] == "f6b2ca8bf117ee709eba29356b4e5ad61e60801c1975e5405cab1fefbbaa624b"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["hash_mode"] == "bundle-manifest-sha256-v1"
+        and evidence["J-ODD-MOTOR-MEDIATED-BRIDGE"]["architecture_requirement"] == "two-architecture"
+        and {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == "J-ODD-MOTOR-MEDIATED-BRIDGE"
+        } == {
+            ("AFFINE-READING-DEGREE-CENSUS", "REQUIRES"),
+            ("AFFINE-QUADRATIC-FORM-UNIQUENESS", "REQUIRES"),
+        }
+        and normative["J-ODD-MOTOR-MEDIATED-BRIDGE"]["status"] == "T"
+        and normative["J-ODD-MOTOR-MEDIATED-BRIDGE"]["layer"] == "L1"
+        and normative["J-ODD-MOTOR-MEDIATED-BRIDGE"]["gate_ids"] == ""
+        and all(row["owner_item_id"] != "J-ODD-MOTOR-MEDIATED-BRIDGE" for row in gates.values())
+        and v62_events[0]["event_sequence"] == "2"
+        and v62_events[0]["event_date"] == "2026-08-24"
+        and v62_events[0]["release"] == "canon-v62-candidate"
+        and v62_events[0]["event_type"] == "EVIDENCE_CHANGE"
+        and v62_events[0]["previous_status"] == "T"
+        and v62_events[0]["new_status"] == "T"
+        and v62_events[0]["scope_sha256"] == "a1f5d43376bafced23478edd0857dfc2c2d1566ee960db32e8d67d493191ad9a"
+        and v62_events[0]["evidence_id"] == "EV-J-ODD-MOTOR-MEDIATED-BRIDGE"
+        and v62_events[0]["evidence_location"] == "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2"
+        and v62_events[0]["evidence_sha256"] == "f6b2ca8bf117ee709eba29356b4e5ad61e60801c1975e5405cab1fefbbaa624b"
     ))
 
     fw_requires = {}
