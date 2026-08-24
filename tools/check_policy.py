@@ -5,6 +5,11 @@ from pathlib import Path
 import re
 import subprocess
 
+try:  # pragma: no cover - import shim, see check_ledger.py
+    from tools import probe_records as _records
+except ImportError:  # pragma: no cover
+    import probe_records as _records
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MAX_BYTES = 5 * 1024 * 1024
@@ -100,11 +105,11 @@ if probes.exists():
     for probe in sorted(path for path in probes.iterdir() if path.is_dir()):
         if not probe.name.startswith("P-"):
             fail(f"probe directory must start P-: {probe.name}")
-        for required in (
-            "PREREG.md", "verify.py", "EXPECTED.txt", "RUN.md", "RESULT.md"
-        ):
-            if not (probe / required).is_file():
-                fail(f"{probe.name} lacks {required}")
+        result = probe / "RESULT.md"
+        text = result.read_text(encoding="utf-8") if result.is_file() else None
+        present = {item.name for item in probe.iterdir() if item.is_file()}
+        for problem in _records.problems(present, text):
+            fail(f"{probe.name} {problem}")
 
 reproduce = ROOT / "reproduce"
 if reproduce.exists():

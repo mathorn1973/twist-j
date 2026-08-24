@@ -348,8 +348,49 @@ At the start of every session:
    `canon/FRONTIER.md`.
 3. Confirm the declared public tag and commit are ancestors of `main`, the
    Canon hash matches, and required checks are green.
-4. Search open issues, branches, `probes/`, and the registry for collisions.
+4. Search open issues, `probes/`, and the registry for collisions, and scan
+   the remote branches explicitly:
+
+   ```text
+   git ls-remote --heads origin
+   ```
+
+   A local branch list is not a collision scan. Work in flight lives on refs
+   that were never merged and therefore appear in no local checkout, in no
+   `probes/` directory, and in no registry row. Duplicate lanes have been
+   started this way.
 5. Claim exactly one named probe in a public issue before committing.
+
+## 5a. Branch retention
+
+A ref is deleted only when deleting it destroys nothing.
+
+```text
+MERGED     an ancestor of `main`. Its content is in `main` for ever, so the
+           ref holds nothing. It may be pruned.
+DIVERGENT  content exists only on this ref. NEVER delete.
+ORPHAN     unrelated history, no merge base with `main` at all. Content exists
+           only on this ref. NEVER delete.
+BASE       `main` itself. Never delete.
+```
+
+Deleting a merged ref is not deleting history: every commit stays reachable
+from `main`. Deleting an unmerged ref hides evidence, and no cleanup, tidiness,
+or age argument outweighs that.
+
+Determine the states with `tools/build_branch_ledger.py`, never by eye and
+never with an ad-hoc shell loop. Three faults make a hand-rolled ledger
+authorise the wrong deletion, and the tool guards each:
+
+- a shallow clone has no common history to find, so `merge-base` reports
+  merged branches as unrelated;
+- `git diff main...branch` errors on a true orphan, and a pipeline that
+  discards the error records the branch as contributing no files;
+- `main` is an ancestor of itself, so a naive ancestor test files it under
+  MERGED and a prune list built from that column deletes the default branch.
+
+Record the ledger before pruning, so that what was deleted, and where it still
+lives, stays auditable afterwards.
 
 Agents with access to the internal archive may read it only for audit. Missing
 material is never copied opportunistically into a public probe. A justified
