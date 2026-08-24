@@ -5,10 +5,12 @@ from __future__ import annotations
 
 import base64
 import csv
+from dataclasses import dataclass
 import hashlib
 import io
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import shutil
+import stat
 import subprocess
 import sys
 import tempfile
@@ -22,9 +24,177 @@ NEW_PATH = "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2"
 NEW_HASH = "f6b2ca8bf117ee709eba29356b4e5ad61e60801c1975e5405cab1fefbbaa624b"
 SCOPE_HASH = "a1f5d43376bafced23478edd0857dfc2c2d1566ee960db32e8d67d493191ad9a"
 
+EXPORT_FILES = (
+    "canon/CANON.md",
+    "canon/CHANGELOG.md",
+    "canon/CORE.md",
+    "canon/EVIDENCE.tsv",
+    "canon/FRONTIER.md",
+    "canon/HISTORY.tsv",
+    "canon/REGISTRY.tsv",
+    "canon/SHA256SUMS",
+    "canon/STATUS_COUNTS.tsv",
+    "reproduce/status-separation/EXPECTED.txt",
+    "reproduce/status-separation/README.md",
+    "reproduce/status-separation/verify.py",
+)
+EXPORT_FILE_COUNT = 12
+EXPORT_MANIFEST_HEADER = "relative_path\tbyte_count\tsha256\n"
+ZIP_TIMESTAMP = (1980, 1, 1, 0, 0, 0)
+ZIP_CREATE_SYSTEM = 3
+ZIP_CREATE_VERSION = 20
+ZIP_EXTRACT_VERSION = 20
+ZIP_EXTERNAL_ATTR = (stat.S_IFREG | 0o644) << 16
+ZIP_COMPRESSION = zipfile.ZIP_DEFLATED
+ZIP_COMPRESSION_LEVEL = 9
+EXPECTED_EXPORT_MANIFEST_SHA256 = "ea18a3ac4feae44d655db17c9295cf3faf177debf8f963292eeca80d7d6ecf46"
+EXPECTED_ZIP_SHA256 = "e393e4b4a1c35442c07eb80c816459b491e2736b1a5a1bc1b1945a54dd59c3a5"
+
+
+@dataclass(frozen=True)
+class ExportFile:
+    relative_path: str
+    data: bytes
+
+    @property
+    def byte_count(self) -> int:
+        return len(self.data)
+
+    @property
+    def sha256(self) -> str:
+        return sha256_bytes(self.data)
+
+
+@dataclass(frozen=True)
+class ExportRun:
+    files: tuple[ExportFile, ...]
+    manifest: bytes
+    archive: bytes
+    canon_sha256: str
+    canon_bytes: int
+
+    @property
+    def manifest_sha256(self) -> str:
+        return sha256_bytes(self.manifest)
+
+    @property
+    def archive_sha256(self) -> str:
+        return sha256_bytes(self.archive)
+
 
 def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def collect_export_files(work: Path, relative_paths: tuple[str, ...]) -> tuple[ExportFile, ...]:
+    if relative_paths != EXPORT_FILES:
+        raise AssertionError("candidate export inventory differs from the frozen 12-file inventory")
+    if len(relative_paths) != EXPORT_FILE_COUNT:
+        raise AssertionError(f"candidate export file count={len(relative_paths)}")
+    if len(set(relative_paths)) != len(relative_paths):
+        raise AssertionError("candidate export inventory contains duplicate paths")
+    if relative_paths != tuple(sorted(relative_paths)):
+        raise AssertionError("candidate export inventory is not sorted")
+
+    files = []
+    for relative in relative_paths:
+        posix = PurePosixPath(relative)
+        if (
+            not relative
+            or "\\" in relative
+            or "\t" in relative
+            or "\r" in relative
+            or "\n" in relative
+            or posix.is_absolute()
+            or ".." in posix.parts
+            or posix.as_posix() != relative
+        ):
+            raise AssertionError(f"unsafe export path: {relative!r}")
+        path = work / relative
+        if not path.is_file():
+            raise AssertionError(f"missing export file: {relative}")
+        files.append(ExportFile(relative, path.read_bytes()))
+    return tuple(files)
+
+
+def canonical_manifest(files: tuple[ExportFile, ...]) -> bytes:
+    lines = [EXPORT_MANIFEST_HEADER]
+    lines.extend(
+        f"{item.relative_path}\t{item.byte_count}\t{item.sha256}\n"
+        for item in files
+    )
+    manifest = "".join(lines).encode("utf-8")
+    if b"\r" in manifest or not manifest.endswith(b"\n"):
+        raise AssertionError("export manifest is not canonical UTF-8/LF")
+    return manifest
+
+
+def deterministic_zip(files: tuple[ExportFile, ...]) -> bytes:
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(
+        buffer,
+        "w",
+        compression=ZIP_COMPRESSION,
+        compresslevel=ZIP_COMPRESSION_LEVEL,
+        allowZip64=False,
+    ) as archive:
+        archive.comment = b""
+        for item in files:
+            info = zipfile.ZipInfo(item.relative_path, date_time=ZIP_TIMESTAMP)
+            info.create_system = ZIP_CREATE_SYSTEM
+            info.create_version = ZIP_CREATE_VERSION
+            info.extract_version = ZIP_EXTRACT_VERSION
+            info.reserved = 0
+            info.flag_bits = 0
+            info.volume = 0
+            info.internal_attr = 0
+            info.external_attr = ZIP_EXTERNAL_ATTR
+            info.compress_type = ZIP_COMPRESSION
+            info.extra = b""
+            info.comment = b""
+            archive.writestr(
+                info,
+                item.data,
+                compress_type=ZIP_COMPRESSION,
+                compresslevel=ZIP_COMPRESSION_LEVEL,
+            )
+    return buffer.getvalue()
+
+
+def validate_zip(payload: bytes, files: tuple[ExportFile, ...]) -> None:
+    expected_paths = [item.relative_path for item in files]
+    with zipfile.ZipFile(io.BytesIO(payload), "r") as archive:
+        infos = archive.infolist()
+        if archive.comment != b"":
+            raise AssertionError("ZIP archive comment is not empty")
+        if [info.filename for info in infos] != expected_paths:
+            raise AssertionError("ZIP member ordering differs from the canonical inventory")
+        if archive.testzip() is not None:
+            raise AssertionError("ZIP CRC validation failed")
+        for info, item in zip(infos, files, strict=True):
+            expected = {
+                "date_time": ZIP_TIMESTAMP,
+                "create_system": ZIP_CREATE_SYSTEM,
+                "create_version": ZIP_CREATE_VERSION,
+                "extract_version": ZIP_EXTRACT_VERSION,
+                "reserved": 0,
+                "flag_bits": 0,
+                "volume": 0,
+                "internal_attr": 0,
+                "external_attr": ZIP_EXTERNAL_ATTR,
+                "compress_type": ZIP_COMPRESSION,
+                "extra": b"",
+                "comment": b"",
+                "file_size": item.byte_count,
+            }
+            for field, value in expected.items():
+                if getattr(info, field) != value:
+                    raise AssertionError(
+                        f"ZIP {item.relative_path} {field}={getattr(info, field)!r}, "
+                        f"expected {value!r}"
+                    )
+            if archive.read(info) != item.data:
+                raise AssertionError(f"ZIP member bytes differ: {item.relative_path}")
 
 
 def rewrite_tsv(path: Path, key: str, mutate) -> None:
@@ -147,7 +317,7 @@ def patch_status_separation(work: Path) -> None:
     (work / "reproduce/status-separation/EXPECTED.txt").write_bytes(result.stdout)
 
 
-def build_candidate(root: Path, work: Path) -> tuple[list[str], str, int]:
+def build_candidate(root: Path, work: Path) -> tuple[tuple[str, ...], str, int]:
     canon_dir = work / "canon"
     frontier_before = (canon_dir / "FRONTIER.md").read_bytes()
     status_counts_before = (canon_dir / "STATUS_COUNTS.tsv").read_bytes()
@@ -291,37 +461,96 @@ reproduction witnesses: 23, unchanged.
 
     canon_hash = sha256_bytes(canon_path.read_bytes())
     canon_bytes = canon_path.stat().st_size
-    export_files = [
-        "canon/CANON.md", "canon/CORE.md", "canon/FRONTIER.md",
-        "canon/REGISTRY.tsv", "canon/EVIDENCE.tsv", "canon/HISTORY.tsv",
-        "canon/CHANGELOG.md", "canon/STATUS_COUNTS.tsv", "canon/SHA256SUMS",
-        "reproduce/status-separation/verify.py",
-        "reproduce/status-separation/EXPECTED.txt",
-        "reproduce/status-separation/README.md",
-    ]
-    return export_files, canon_hash, canon_bytes
+    return EXPORT_FILES, canon_hash, canon_bytes
+
+
+def build_export(root: Path, temporary_root: Path) -> ExportRun:
+    work = temporary_root / "repo"
+    shutil.copytree(
+        root, work,
+        ignore=shutil.ignore_patterns(".git", "__pycache__", "*.pyc"),
+    )
+    export_paths, canon_hash, canon_bytes = build_candidate(root, work)
+    files = collect_export_files(work, export_paths)
+    manifest = canonical_manifest(files)
+    archive = deterministic_zip(files)
+    validate_zip(archive, files)
+    return ExportRun(files, manifest, archive, canon_hash, canon_bytes)
 
 
 class V62BuildExportTest(unittest.TestCase):
     def test_build_validate_and_export(self) -> None:
         root = Path(__file__).resolve().parents[1]
-        with tempfile.TemporaryDirectory() as td:
-            work = Path(td) / "repo"
-            shutil.copytree(
-                root, work,
-                ignore=shutil.ignore_patterns(".git", "__pycache__", "*.pyc"),
-            )
-            export_files, canon_hash, canon_bytes = build_candidate(root, work)
-            buffer = io.BytesIO()
-            with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
-                for relative in export_files:
-                    archive.writestr(relative, (work / relative).read_bytes())
-            payload = buffer.getvalue()
-            encoded = base64.b64encode(payload).decode("ascii")
+        with (
+            tempfile.TemporaryDirectory(prefix="twistj-v62-export-run-1-") as td1,
+            tempfile.TemporaryDirectory(prefix="twistj-v62-export-run-2-") as td2,
+        ):
+            self.assertNotEqual(Path(td1).resolve(), Path(td2).resolve())
+            run1 = build_export(root, Path(td1))
+            run2 = build_export(root, Path(td2))
+
+            paths1 = tuple(item.relative_path for item in run1.files)
+            paths2 = tuple(item.relative_path for item in run2.files)
+            sizes1 = tuple(item.byte_count for item in run1.files)
+            sizes2 = tuple(item.byte_count for item in run2.files)
+            hashes1 = tuple(item.sha256 for item in run1.files)
+            hashes2 = tuple(item.sha256 for item in run2.files)
+            bytes1 = tuple(item.data for item in run1.files)
+            bytes2 = tuple(item.data for item in run2.files)
+
+            self.assertEqual(paths1, EXPORT_FILES)
+            self.assertEqual(paths2, EXPORT_FILES)
+            self.assertEqual(len(paths1), EXPORT_FILE_COUNT)
+            self.assertEqual(paths1, paths2)
+            self.assertEqual(sizes1, sizes2)
+            self.assertEqual(hashes1, hashes2)
+            self.assertEqual(bytes1, bytes2)
+            self.assertEqual(run1.manifest, run2.manifest)
+            self.assertEqual(run1.manifest_sha256, run2.manifest_sha256)
+            self.assertEqual(run1.manifest_sha256, EXPECTED_EXPORT_MANIFEST_SHA256)
+            self.assertEqual(run1.archive, run2.archive)
+            self.assertEqual(run1.archive_sha256, run2.archive_sha256)
+            self.assertEqual(run1.archive_sha256, EXPECTED_ZIP_SHA256)
+            self.assertEqual(run1.canon_sha256, run2.canon_sha256)
+            self.assertEqual(run1.canon_bytes, run2.canon_bytes)
+
+            for number, run in enumerate((run1, run2), start=1):
+                print(
+                    f"V62_DETERMINISM_RUN run={number} "
+                    f"EXPORT_FILE_COUNT={len(run.files)} "
+                    f"EXPORT_MANIFEST_SHA256={run.manifest_sha256} "
+                    f"ZIP_BYTES={len(run.archive)} ZIP_SHA256={run.archive_sha256}"
+                )
+
+            for item in run1.files:
+                print(
+                    f"V62_EXPORT_FILE\t{item.relative_path}\t"
+                    f"{item.byte_count}\t{item.sha256}"
+                )
+
+            manifest_encoded = base64.b64encode(run1.manifest).decode("ascii")
+            print("V62_EXPORT_MANIFEST_BEGIN")
+            for offset in range(0, len(manifest_encoded), 6000):
+                print(
+                    f"V62_EXPORT_MANIFEST_CHUNK {offset//6000:04d} "
+                    f"{manifest_encoded[offset:offset+6000]}"
+                )
+            print("V62_EXPORT_MANIFEST_END")
+
             print(
-                f"V62_BUILD_PASS canon_sha256={canon_hash} canon_bytes={canon_bytes} "
-                f"files={len(export_files)} zip_bytes={len(payload)} zip_sha256={sha256_bytes(payload)}"
+                "V62_DETERMINISM_PASS inventory_identical=YES "
+                "file_byte_counts_identical=YES per_file_sha256_identical=YES "
+                "manifest_identical=YES zip_identical=YES"
             )
+            print(
+                f"V62_BUILD_PASS canon_sha256={run1.canon_sha256} "
+                f"canon_bytes={run1.canon_bytes} files={len(run1.files)} "
+                f"EXPORT_FILE_COUNT={len(run1.files)} "
+                f"EXPORT_MANIFEST_SHA256={run1.manifest_sha256} "
+                f"zip_bytes={len(run1.archive)} zip_sha256={run1.archive_sha256} "
+                f"ZIP_SHA256={run1.archive_sha256}"
+            )
+            encoded = base64.b64encode(run1.archive).decode("ascii")
             print("V62_EXPORT_BEGIN")
             for offset in range(0, len(encoded), 6000):
                 print(f"V62_EXPORT_CHUNK {offset//6000:04d} {encoded[offset:offset+6000]}")
