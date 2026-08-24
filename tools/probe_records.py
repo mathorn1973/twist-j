@@ -22,7 +22,13 @@ import re
 PIN_FILES = ("PREREG.md", "verify.py", "RESULT.md")
 RUN_FILES = ("EXPECTED.txt", "RUN.md")
 
-ABANDON_PATTERN = re.compile(r"^Status:.*\bABANDONED\b", re.MULTILINE)
+# ABANDONED must be the status value, not merely a word later on the line.
+# The accepted public forms are the plain or backticked token, optionally
+# followed by a period or slash introducing the explanation.
+ABANDON_PATTERN = re.compile(
+    r"^Status:\s*`?ABANDONED`?(?=\s*(?:[./]|$))",
+    re.MULTILINE,
+)
 
 
 def declares_abandoned(result_text: str | None) -> bool:

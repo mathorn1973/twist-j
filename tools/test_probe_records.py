@@ -34,6 +34,15 @@ class DeclaresAbandonedTests(unittest.TestCase):
         text = "# Result\n\nThe route was ABANDONED upstream.\nStatus: PASS\n"
         self.assertFalse(declares_abandoned(text))
 
+    def test_abandoned_must_be_the_status_value(self) -> None:
+        for text in (
+            "Status: NOT ABANDONED\n",
+            "Status: FAILED; predecessor ABANDONED\n",
+            "Status: PASS / ABANDONED was considered\n",
+        ):
+            with self.subTest(text=text):
+                self.assertFalse(declares_abandoned(text))
+
 
 class ProblemsTests(unittest.TestCase):
     def test_complete_probe_passes(self) -> None:
@@ -65,14 +74,8 @@ class ProblemsTests(unittest.TestCase):
         self.assertTrue(any("verify.py" in item for item in found))
 
 
-class GateAgreementTests(unittest.TestCase):
-    """The policy gate and the verifier gate must agree on the shape.
-
-    check_policy.py and check_verifier.py both decide whether a probe is an
-    abandoned pin.  They read the same predicate from this module so they
-    cannot drift; if they ever disagree, an abandoned record either cannot be
-    landed at all or slips past reproduction while carrying run artefacts.
-    """
+class SharedPredicateTests(unittest.TestCase):
+    """Exercise the record-shape predicate shared by both public gates."""
 
     def test_skippable_shape_is_exactly_the_valid_abandoned_shape(self) -> None:
         # What check_verifier skips

@@ -488,7 +488,8 @@ def reproduce(probe: Path) -> None:
     # reproduce and no run record to audit.  Only the full abandoned shape is
     # skipped, and probe_records requires that shape to carry no run
     # artefacts, so a probe that did complete can never reach this branch.
-    # The same module backs check_policy.py, so the two gates cannot drift.
+    # The same module backs check_policy.py, so both gates use one
+    # record-shape predicate.
     result_path = probe / "RESULT.md"
     result_text = (
         result_path.read_text(encoding="utf-8") if result_path.is_file() else None
