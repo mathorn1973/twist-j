@@ -9,6 +9,7 @@ from dataclasses import dataclass
 import hashlib
 import io
 from pathlib import Path, PurePosixPath
+import re
 import shutil
 import stat
 import subprocess
@@ -23,6 +24,12 @@ OLD_HASH = "03db973566ae068b5ed8eb65f4e79ae13af398ac067f325c26a25c1553bf636b"
 NEW_PATH = "probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2"
 NEW_HASH = "f6b2ca8bf117ee709eba29356b4e5ad61e60801c1975e5405cab1fefbbaa624b"
 SCOPE_HASH = "a1f5d43376bafced23478edd0857dfc2c2d1566ee960db32e8d67d493191ad9a"
+FROZEN_BASE = "d9841380d137bdf7d1465b71af96e8733f69b536"
+CHANGELOG_HEADER = "# Canon changelog (public series)"
+CURRENT_COUNTS_BEGIN = "<!-- BEGIN GENERATED CURRENT COUNTS -->"
+CURRENT_COUNTS_END = "<!-- END GENERATED CURRENT COUNTS -->"
+EXPECTED_CHANGELOG_BYTES = 127430
+EXPECTED_HISTORICAL_MARKER_BYTES_REMOVED = 156
 
 EXPORT_FILES = (
     "canon/CANON.md",
@@ -38,6 +45,10 @@ EXPORT_FILES = (
     "reproduce/status-separation/README.md",
     "reproduce/status-separation/verify.py",
 )
+EXPECTED_CONTENT_CHANGED_FILES = tuple(
+    path for path in EXPORT_FILES
+    if path not in ("canon/FRONTIER.md", "canon/STATUS_COUNTS.tsv")
+)
 EXPORT_FILE_COUNT = 12
 EXPORT_MANIFEST_HEADER = "relative_path\tbyte_count\tsha256\n"
 ZIP_TIMESTAMP = (1980, 1, 1, 0, 0, 0)
@@ -47,8 +58,24 @@ ZIP_EXTRACT_VERSION = 20
 ZIP_EXTERNAL_ATTR = (stat.S_IFREG | 0o644) << 16
 ZIP_COMPRESSION = zipfile.ZIP_DEFLATED
 ZIP_COMPRESSION_LEVEL = 9
-EXPECTED_EXPORT_MANIFEST_SHA256 = "ea18a3ac4feae44d655db17c9295cf3faf177debf8f963292eeca80d7d6ecf46"
-EXPECTED_ZIP_SHA256 = "e393e4b4a1c35442c07eb80c816459b491e2736b1a5a1bc1b1945a54dd59c3a5"
+EXPECTED_EXPORT_MANIFEST_SHA256 = "3a8d89bb6670a6a86935bb22e9711023928f53477ac49f596d14de72d1f44334"
+EXPECTED_ZIP_SHA256 = "2934a42d953cfdca623678d870a1dc071616d76b9df32c5b84c1c08710196173"
+EXPECTED_ZIP_BYTES = 399222
+EXPECTED_CHANGELOG_SHA256 = "92c968bee0329d8580500a3bd328ba2f6816d8ebec043e88838624286bcb19f4"
+EXPECTED_SHA256SUMS_SHA256 = "236a4eaeab3412fb86478683799f3becb96464273e39b209c6277e07ce58c9e7"
+
+UNCHANGED_CERTIFIED_FILES = {
+    "canon/CANON.md": (334109, "1575eedbbe9e6b6e20e0e49decc5a4a8aaeb264f54a950860a677b740634351d"),
+    "canon/CORE.md": (11304, "232da1e23686263453339751650783d77ecb69569825a3c6e55966fa9f669bb1"),
+    "canon/EVIDENCE.tsv": (63218, "6930149081b0381184976771dbf3b820a23548e13066bec9676fb8d2a478be3d"),
+    "canon/FRONTIER.md": (26974, "a761f327261d1d07a216f84d470f5cd46a21b8754cb18f772b18c79e0e5f5f3d"),
+    "canon/HISTORY.tsv": (353467, "a5c16e5d8441d035632b4ec0e3548bf925b297e6d2a7a9ad56dafb11e99db0f9"),
+    "canon/REGISTRY.tsv": (265407, "abf9a17dd8868959baa484972d80a33e32658fa57549f48b4fdf8d38102d4d1f"),
+    "canon/STATUS_COUNTS.tsv": (243, "96f82b9757e9036ab30688995107a5f8f8f5956ba9cbf326b88872aae4055c77"),
+    "reproduce/status-separation/EXPECTED.txt": (7918, "08a9df602d0c6f8a5e26ebf03c83470b6f1268c4100f958d2b82c7b8e06b37a1"),
+    "reproduce/status-separation/README.md": (14916, "3252b1a6351b2afcedda79a8b2c6a63acc84ff0481b9d53235c9aa807cdafac3"),
+    "reproduce/status-separation/verify.py": (187288, "181a1252eea8672fd25f799ffbb909d8ade2b554c77dca12f9b1b058265a5127"),
+}
 
 
 @dataclass(frozen=True)
@@ -84,6 +111,57 @@ class ExportRun:
 
 def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def changelog_section(text: str, version: int) -> str:
+    heading = f"## Public Canon v{version}\n"
+    if text.count(heading) != 1:
+        raise AssertionError(f"CHANGELOG Public Canon v{version} section count={text.count(heading)}")
+    start = text.index(heading)
+    following = re.search(r"(?m)^## Public Canon v[1-9][0-9]*\n", text[start + len(heading):])
+    end = len(text) if following is None else start + len(heading) + following.start()
+    return text[start:end]
+
+
+def marked_snapshot_payload(section: str, version: int) -> str:
+    begin_line = CURRENT_COUNTS_BEGIN + "\n"
+    end_line = CURRENT_COUNTS_END + "\n"
+    if section.count(CURRENT_COUNTS_BEGIN) != 1 or section.count(CURRENT_COUNTS_END) != 1:
+        raise AssertionError(f"Public Canon v{version} historical marker count mismatch")
+    if section.splitlines(keepends=True).count(begin_line) != 1:
+        raise AssertionError(f"Public Canon v{version} BEGIN marker is not one exact line")
+    if section.splitlines(keepends=True).count(end_line) != 1:
+        raise AssertionError(f"Public Canon v{version} END marker is not one exact line")
+    before, separator, remainder = section.partition(begin_line)
+    if not separator:
+        raise AssertionError(f"Public Canon v{version} BEGIN marker missing")
+    payload, separator, after = remainder.partition(end_line)
+    if not separator or CURRENT_COUNTS_BEGIN in before + after or CURRENT_COUNTS_END in before + after:
+        raise AssertionError(f"Public Canon v{version} historical count block is malformed")
+    return payload
+
+
+def strip_exact_historical_marker_lines(text: str) -> str:
+    begin_line = CURRENT_COUNTS_BEGIN + "\n"
+    end_line = CURRENT_COUNTS_END + "\n"
+    lines = text.splitlines(keepends=True)
+    if text.count(CURRENT_COUNTS_BEGIN) != 2 or lines.count(begin_line) != 2:
+        raise AssertionError("historical CHANGELOG BEGIN marker count is not exactly two lines")
+    if text.count(CURRENT_COUNTS_END) != 2 or lines.count(end_line) != 2:
+        raise AssertionError("historical CHANGELOG END marker count is not exactly two lines")
+    stripped = "".join(line for line in lines if line not in (begin_line, end_line))
+    removed = len(text.encode("utf-8")) - len(stripped.encode("utf-8"))
+    if removed != EXPECTED_HISTORICAL_MARKER_BYTES_REMOVED:
+        raise AssertionError(f"historical CHANGELOG marker bytes removed={removed}")
+    return stripped
+
+
+def replace_status_field(text: str, field: str, value: str) -> str:
+    pattern = rf"(?m)^({re.escape(field)}:\s*).*$"
+    replaced, count = re.subn(pattern, rf"\g<1>{value}", text)
+    if count != 1:
+        raise AssertionError(f"STATUS field {field} replacement count={count}")
+    return replaced
 
 
 def collect_export_files(work: Path, relative_paths: tuple[str, ...]) -> tuple[ExportFile, ...]:
@@ -372,9 +450,19 @@ def build_candidate(root: Path, work: Path) -> tuple[tuple[str, ...], str, int]:
 
     changelog_path = canon_dir / "CHANGELOG.md"
     changelog = changelog_path.read_text(encoding="utf-8")
-    header = "# Canon changelog (public series)\n\n"
-    if not changelog.startswith(header):
+    header, separator, historical = changelog.partition("\n\n")
+    if header != CHANGELOG_HEADER or separator != "\n\n":
         raise AssertionError("CHANGELOG header mismatch")
+    historical_snapshot_payloads_before = {
+        version: marked_snapshot_payload(changelog_section(historical, version), version)
+        for version in (61, 60)
+    }
+    historical_without_markers = strip_exact_historical_marker_lines(historical)
+    historical_sections_without_markers_before = {
+        version: changelog_section(historical_without_markers, version)
+        for version in (61, 60)
+    }
+    historical = historical_without_markers
     v62 = f'''## Public Canon v62
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
@@ -417,7 +505,7 @@ reproduction witnesses: 23, unchanged.
 
 '''
     changelog_path.write_text(
-        header + v62 + changelog[len(header):], encoding="utf-8", newline="\n"
+        header + separator + v62 + historical, encoding="utf-8", newline="\n"
     )
 
     patch_status_separation(work)
@@ -426,6 +514,32 @@ reproduction witnesses: 23, unchanged.
         [sys.executable, "tools/generate_canon_views.py", "--root", str(work), "--apply"],
         cwd=work, check=True, text=True,
     )
+    completed_changelog = changelog_path.read_text(encoding="utf-8")
+    begin_count = completed_changelog.count(CURRENT_COUNTS_BEGIN)
+    end_count = completed_changelog.count(CURRENT_COUNTS_END)
+    if begin_count != 1 or end_count != 1:
+        raise AssertionError(
+            f"completed CHANGELOG marker counts BEGIN={begin_count} END={end_count}"
+        )
+    v62_position = completed_changelog.index("## Public Canon v62")
+    v61_position = completed_changelog.index("## Public Canon v61")
+    begin_position = completed_changelog.index(CURRENT_COUNTS_BEGIN)
+    end_position = completed_changelog.index(CURRENT_COUNTS_END)
+    if not v62_position < begin_position < end_position < v61_position:
+        raise AssertionError("unique generated current-count block is not inside Public Canon v62")
+    for version in (61, 60):
+        completed_section = changelog_section(completed_changelog, version)
+        if completed_section != historical_sections_without_markers_before[version]:
+            raise AssertionError(f"Public Canon v{version} historical section text changed")
+        payload = historical_snapshot_payloads_before[version]
+        if not payload or completed_section.count(payload) != 1:
+            raise AssertionError(f"Public Canon v{version} historical snapshot payload changed")
+    changelog_bytes = changelog_path.stat().st_size
+    if changelog_bytes != EXPECTED_CHANGELOG_BYTES:
+        raise AssertionError(
+            f"corrected candidate CHANGELOG bytes={changelog_bytes}, "
+            f"expected {EXPECTED_CHANGELOG_BYTES}"
+        )
     if (canon_dir / "FRONTIER.md").read_bytes() != frontier_before:
         raise AssertionError("FRONTIER changed although no live row moved")
     if (canon_dir / "STATUS_COUNTS.tsv").read_bytes() != status_counts_before:
@@ -478,6 +592,137 @@ def build_export(root: Path, temporary_root: Path) -> ExportRun:
     return ExportRun(files, manifest, archive, canon_hash, canon_bytes)
 
 
+def checked_process(args: list[str], cwd: Path) -> subprocess.CompletedProcess[str]:
+    result = subprocess.run(args, cwd=cwd, capture_output=True, text=True, check=False)
+    if result.returncode != 0:
+        raise AssertionError(
+            f"command failed ({' '.join(args)}):\n{result.stdout}{result.stderr}"
+        )
+    return result
+
+
+def validate_activation_overlay(root: Path, files: tuple[ExportFile, ...]) -> None:
+    by_path = {item.relative_path: item for item in files}
+    if tuple(by_path) != EXPORT_FILES:
+        raise AssertionError("activation overlay export inventory mismatch")
+
+    with tempfile.TemporaryDirectory(prefix="twistj-v62-activation-overlay-") as td:
+        overlay = Path(td) / "repo"
+        clone = subprocess.run(
+            ["git", "clone", "--quiet", "--no-local", str(root), str(overlay)],
+            capture_output=True, text=True, check=False,
+        )
+        if clone.returncode != 0:
+            raise AssertionError(f"activation overlay clone failed:\n{clone.stdout}{clone.stderr}")
+        checked_process(["git", "switch", "--detach", FROZEN_BASE], overlay)
+        if checked_process(["git", "rev-parse", "HEAD"], overlay).stdout.strip() != FROZEN_BASE:
+            raise AssertionError("activation overlay did not start at the frozen base")
+        if checked_process(["git", "status", "--porcelain"], overlay).stdout:
+            raise AssertionError("activation overlay base is not clean")
+
+        for relative in EXPORT_FILES:
+            path = overlay / relative
+            path.write_bytes(by_path[relative].data)
+        changed = tuple(
+            checked_process(["git", "diff", "--name-only"], overlay).stdout.splitlines()
+        )
+        if changed != EXPECTED_CONTENT_CHANGED_FILES:
+            raise AssertionError(f"activation overlay content paths={changed!r}")
+        checked_process(["git", "add", "--", *EXPORT_FILES], overlay)
+        checked_process([
+            "git", "-c", "user.name=A. M. Thorn", "-c", "user.email=thorn@twistj.com",
+            "commit", "--quiet", "-m", "Ephemeral v62 content for activation certification",
+        ], overlay)
+        content_commit = checked_process(["git", "rev-parse", "HEAD"], overlay).stdout.strip()
+        if checked_process(["git", "rev-parse", "HEAD^"], overlay).stdout.strip() != FROZEN_BASE:
+            raise AssertionError("ephemeral content commit parent differs from frozen base")
+
+        canon_bytes = (overlay / "canon/CANON.md").read_bytes()
+        status_path = overlay / "STATUS.md"
+        status = status_path.read_text(encoding="utf-8")
+        if status.count("Public Canon v61") != 2 or status.count("canon-v61") != 2:
+            raise AssertionError("v61 STATUS release identity occurrence count changed")
+        status = status.replace("Public Canon v61", "Public Canon v62")
+        status = status.replace("canon-v61", "canon-v62")
+        status = replace_status_field(status, "STATE", "ACTIVE")
+        status = replace_status_field(status, "CANON", "Public Canon v62")
+        status = replace_status_field(status, "AUTHORITY", "mathorn1973/twist-j main")
+        status = replace_status_field(status, "TAG", "canon-v62")
+        status = replace_status_field(status, "CONTENT_COMMIT", content_commit)
+        status = replace_status_field(status, "CANON_SHA256", sha256_bytes(canon_bytes))
+        status = replace_status_field(status, "CANON_BYTES", str(len(canon_bytes)))
+        if "CUTOVER:        2026-08-21" not in status:
+            raise AssertionError("activation overlay changed the established CUTOVER")
+        status_path.write_text(status, encoding="utf-8", newline="\n")
+
+        readme_path = overlay / "README.md"
+        readme = readme_path.read_text(encoding="utf-8")
+        if readme.count("Public Canon v61") != 3 or readme.count("canon-v61") != 2:
+            raise AssertionError("v61 README release identity occurrence count changed")
+        readme = readme.replace("Public Canon v61", "Public Canon v62")
+        readme = readme.replace("canon-v61", "canon-v62")
+        readme_path.write_text(readme, encoding="utf-8", newline="\n")
+
+        citation_path = overlay / "CITATION.cff"
+        citation = citation_path.read_text(encoding="utf-8")
+        replacements = (
+            (
+                'message: "If you use TWIST-J Public Canon v61, cite it as below."',
+                'message: "If you use TWIST-J Public Canon v62, cite it as below."',
+            ),
+            ('version: "61"', 'version: "62"'),
+            ('date-released: 2026-08-23', 'date-released: 2026-08-24'),
+        )
+        for old, new in replacements:
+            if citation.count(old) != 1:
+                raise AssertionError(f"CITATION release identity count={citation.count(old)} for {old}")
+            citation = citation.replace(old, new, 1)
+        citation_path.write_text(citation, encoding="utf-8", newline="\n")
+
+        release_paths = tuple(
+            checked_process(["git", "diff", "--name-only"], overlay).stdout.splitlines()
+        )
+        if release_paths != ("CITATION.cff", "README.md", "STATUS.md"):
+            raise AssertionError(f"activation release-form paths={release_paths!r}")
+        checked_process(
+            ["git", "add", "--", "STATUS.md", "README.md", "CITATION.cff"], overlay
+        )
+        checked_process([
+            "git", "-c", "user.name=A. M. Thorn", "-c", "user.email=thorn@twistj.com",
+            "commit", "--quiet", "-m", "Ephemeral v62 release form for activation certification",
+        ], overlay)
+        if checked_process(["git", "status", "--porcelain"], overlay).stdout:
+            raise AssertionError("activation release-form overlay is not clean")
+        committed_release_paths = tuple(
+            checked_process(
+                ["git", "diff", "--name-only", f"{content_commit}..HEAD"], overlay
+            ).stdout.splitlines()
+        )
+        if committed_release_paths != ("CITATION.cff", "README.md", "STATUS.md"):
+            raise AssertionError(
+                f"committed activation release-form paths={committed_release_paths!r}"
+            )
+
+        activation = subprocess.run(
+            [
+                sys.executable, "tools/check_activation.py", "--full",
+                "--content-commit", content_commit,
+            ],
+            cwd=overlay, capture_output=True, text=True, check=False,
+        )
+        if activation.returncode != 0:
+            raise AssertionError(
+                "full activation overlay failed:\n"
+                + activation.stdout + activation.stderr
+            )
+        if "ACTIVATION PASS mode=active full=True" not in activation.stdout:
+            raise AssertionError("full activation overlay lacked its exact PASS line")
+        print(
+            "V62_ACTIVATION_OVERLAY_PASS full=YES "
+            "unique_changelog_marker_gate=YES"
+        )
+
+
 class V62BuildExportTest(unittest.TestCase):
     def test_build_validate_and_export(self) -> None:
         root = Path(__file__).resolve().parents[1]
@@ -511,8 +756,34 @@ class V62BuildExportTest(unittest.TestCase):
             self.assertEqual(run1.archive, run2.archive)
             self.assertEqual(run1.archive_sha256, run2.archive_sha256)
             self.assertEqual(run1.archive_sha256, EXPECTED_ZIP_SHA256)
+            self.assertEqual(len(run1.archive), EXPECTED_ZIP_BYTES)
             self.assertEqual(run1.canon_sha256, run2.canon_sha256)
             self.assertEqual(run1.canon_bytes, run2.canon_bytes)
+
+            files_by_path = {item.relative_path: item for item in run1.files}
+            self.assertEqual(tuple(files_by_path), EXPORT_FILES)
+            for relative, expected in UNCHANGED_CERTIFIED_FILES.items():
+                item = files_by_path[relative]
+                self.assertEqual((item.byte_count, item.sha256), expected)
+            self.assertEqual(
+                (
+                    files_by_path["canon/CHANGELOG.md"].byte_count,
+                    files_by_path["canon/CHANGELOG.md"].sha256,
+                ),
+                (EXPECTED_CHANGELOG_BYTES, EXPECTED_CHANGELOG_SHA256),
+            )
+            self.assertEqual(
+                files_by_path["canon/SHA256SUMS"].sha256,
+                EXPECTED_SHA256SUMS_SHA256,
+            )
+            changelog = files_by_path["canon/CHANGELOG.md"].data.decode("utf-8")
+            self.assertEqual(changelog.count(CURRENT_COUNTS_BEGIN), 1)
+            self.assertEqual(changelog.count(CURRENT_COUNTS_END), 1)
+            self.assertLess(changelog.index("## Public Canon v62"), changelog.index(CURRENT_COUNTS_BEGIN))
+            self.assertLess(changelog.index(CURRENT_COUNTS_BEGIN), changelog.index(CURRENT_COUNTS_END))
+            self.assertLess(changelog.index(CURRENT_COUNTS_END), changelog.index("## Public Canon v61"))
+
+            validate_activation_overlay(root, run1.files)
 
             for number, run in enumerate((run1, run2), start=1):
                 print(
