@@ -97,10 +97,16 @@ Do not reuse, rename, or resume a sealed probe.
 
 ### Abandoned pins
 
-A preregistration that was frozen and whose formal gate never executed is an
-**abandoned pin**. It is an open public obligation, not a neutral leftover:
-the identifier is already spent, and `POLICY.md` forbids reusing, renaming or
+A preregistration that was frozen and whose formal gate never **completed** is
+an **abandoned pin**. It is an open public obligation, not a neutral leftover:
+the identifier is already spent, and this policy forbids reusing, renaming or
 resuming it. Leaving it open is not a disposition.
+
+Never completed covers two cases, and the test is the record, not the
+intention. The gate may never have been started. It may also have been started
+and failed to produce one: a run that exits nonzero, or dies on a fixture
+defect, yields no exact stdout to pin and no scientific conclusion, so no
+`EXPECTED.txt` and no `RUN.md` exist to commit. Both close the same way.
 
 An abandoned pin is closed by an explicit record, merged like any other:
 
@@ -113,10 +119,14 @@ probes/P-NAME/
                   identifier is consumed and must not be reused
 ```
 
-The record carries no `EXPECTED.txt` and no `RUN.md`, because nothing ran.
-A probe that did execute is closed by its result, never by abandonment: a
-fired falsifier is merged, not relabelled. `check_policy.py` enforces both
-directions.
+The record carries no `EXPECTED.txt` and no `RUN.md`, because no completed run
+produced either. That absence is what separates the two routes: a gate that
+completed produces an exact stdout and a run record, and a probe holding them
+is closed by its result, never by abandonment. A fired falsifier is merged,
+not relabelled. `check_policy.py` enforces both directions.
+
+Where a successor probe exists, it names the abandoned predecessor and the
+reason in its own preregistration, before its own pin.
 
 If the content is worth keeping, it is retargeted under a **new** identifier
 with its own new pin. Retargeting does not release the old identifier, which

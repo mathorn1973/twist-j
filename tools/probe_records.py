@@ -6,10 +6,12 @@ distinguishes two shapes of closed probe:
 
 * a probe that executed its formal gate carries the pin, the accepted
   verifier and the full run record;
-* an abandoned pin never executed, so it carries the pin and the verifier and
-  is closed by a RESULT.md that records the abandonment.  It must carry no run
-  artefacts, so that a probe which did run cannot be relabelled abandoned to
-  keep a fired falsifier out of the public record.
+* an abandoned pin never completed one -- it was never started, or it was
+  started and produced no exact stdout, for instance a run that exited nonzero
+  on a fixture defect.  It carries the pin and the verifier and is closed by a
+  RESULT.md that records the abandonment.  It must carry no run artefacts, so
+  that a probe which did complete cannot be relabelled abandoned to keep a
+  fired falsifier out of the public record.
 """
 
 from __future__ import annotations
