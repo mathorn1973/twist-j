@@ -43,6 +43,10 @@ class DeclaresAbandonedTests(unittest.TestCase):
             with self.subTest(text=text):
                 self.assertFalse(declares_abandoned(text))
 
+    def test_status_must_be_unique(self) -> None:
+        text = "Status: PASS\nStatus: ABANDONED / second declaration\n"
+        self.assertFalse(declares_abandoned(text))
+
 
 class ProblemsTests(unittest.TestCase):
     def test_complete_probe_passes(self) -> None:

@@ -52,6 +52,7 @@ class AbandonedProbeIntegrationTests(unittest.TestCase):
             "NOT ABANDONED",
             "FAILED; predecessor ABANDONED",
             "PASS / ABANDONED was considered",
+            "PASS\nStatus: ABANDONED / second declaration",
         )
         for status in statuses:
             with self.subTest(status=status), tempfile.TemporaryDirectory() as directory:
