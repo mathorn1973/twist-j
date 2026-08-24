@@ -34,6 +34,19 @@ class DeclaresAbandonedTests(unittest.TestCase):
         text = "# Result\n\nThe route was ABANDONED upstream.\nStatus: PASS\n"
         self.assertFalse(declares_abandoned(text))
 
+    def test_abandoned_must_be_the_status_value(self) -> None:
+        for text in (
+            "Status: NOT ABANDONED\n",
+            "Status: FAILED; predecessor ABANDONED\n",
+            "Status: PASS / ABANDONED was considered\n",
+        ):
+            with self.subTest(text=text):
+                self.assertFalse(declares_abandoned(text))
+
+    def test_status_must_be_unique(self) -> None:
+        text = "Status: PASS\nStatus: ABANDONED / second declaration\n"
+        self.assertFalse(declares_abandoned(text))
+
 
 class ProblemsTests(unittest.TestCase):
     def test_complete_probe_passes(self) -> None:
@@ -63,6 +76,34 @@ class ProblemsTests(unittest.TestCase):
         self.assertEqual(len(found), 2)
         self.assertTrue(any("PREREG.md" in item for item in found))
         self.assertTrue(any("verify.py" in item for item in found))
+
+
+class SharedPredicateTests(unittest.TestCase):
+    """Exercise the record-shape predicate shared by both public gates."""
+
+    def test_skippable_shape_is_exactly_the_valid_abandoned_shape(self) -> None:
+        # What check_verifier skips
+        skippable = declares_abandoned(ABANDONED) and not problems(
+            PIN_ONLY, ABANDONED
+        )
+        # What check_policy accepts
+        accepted = problems(PIN_ONLY, ABANDONED) == []
+        self.assertTrue(skippable)
+        self.assertTrue(accepted)
+
+    def test_run_artefacts_block_the_skip(self) -> None:
+        for extra in ("EXPECTED.txt", "RUN.md"):
+            present = PIN_ONLY | {extra}
+            skippable = declares_abandoned(ABANDONED) and not problems(
+                present, ABANDONED
+            )
+            self.assertFalse(skippable, f"{extra} must block the skip")
+
+    def test_ordinary_probe_is_never_skippable(self) -> None:
+        skippable = declares_abandoned(SCIENTIFIC) and not problems(
+            COMPLETE, SCIENTIFIC
+        )
+        self.assertFalse(skippable)
 
 
 if __name__ == "__main__":

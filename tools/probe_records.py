@@ -22,14 +22,21 @@ import re
 PIN_FILES = ("PREREG.md", "verify.py", "RESULT.md")
 RUN_FILES = ("EXPECTED.txt", "RUN.md")
 
-ABANDON_PATTERN = re.compile(r"^Status:.*\bABANDONED\b", re.MULTILINE)
+# ABANDONED must be the status value, not merely a word later on the line.
+# The accepted public forms are the plain or backticked token, optionally
+# followed by a period or slash introducing the explanation.
+STATUS_PATTERN = re.compile(r"^Status:\s*(.*)$", re.MULTILINE)
+ABANDON_VALUE_PATTERN = re.compile(
+    r"^`?ABANDONED`?(?=\s*(?:[./]|$))"
+)
 
 
 def declares_abandoned(result_text: str | None) -> bool:
     """True when RESULT.md text closes an abandoned pin."""
     if not result_text:
         return False
-    return bool(ABANDON_PATTERN.search(result_text))
+    values = STATUS_PATTERN.findall(result_text)
+    return len(values) == 1 and bool(ABANDON_VALUE_PATTERN.match(values[0]))
 
 
 def problems(present: set[str], result_text: str | None) -> list[str]:
