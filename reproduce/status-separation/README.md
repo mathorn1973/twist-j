@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 54/54 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 55/55 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -92,6 +92,8 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v62 count check reads the maintenance tree (324 claims, 23 reproductions, 11 gates). The V62-MAINTENANCE check requires the odd-motor theorem to retain its T status, exact scope, dependencies, layer and no-gate boundary while its single current evidence pointer moves to the completed two-architecture COVERAGE-2 bundle and HISTORY records exactly one sequence-2 EVIDENCE_CHANGE. No scientific count or status moves.
 
 The v61 count check reads the folded tree (324 claims, 23 reproductions, 11 gates). The V61-EXACT check pins three theorem rows and one finite-range computation row at L1 to their exact public-probe evidence, dependency directions, scope hashes and nonselection firewalls, preserves the exact three-edge CARRY-PENTAD lineage, and permits no new gate, frontier move, physical reading or layer lift. The permanent QDD direct-write firewall remains the final check.
 
