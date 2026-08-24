@@ -11,6 +11,7 @@ ci/v27-activation-preflight-209	DIVERGENT	1	2026-07-29	1	0	0
 claude/coin-minimal-read-type-1c194b	DIVERGENT	2	2026-08-04	17	0	0
 claude/pracovni-ukoly-s1rdl3	MERGED	0	-	0	0	0
 claude/science-status-v31-plan-ds4adk	DIVERGENT	2	2026-08-02	1	0	0
+claude/v63-velky-uklid-1f5uft	DIVERGENT	5	2026-08-24	10	0	0
 codex/cm-2i-qcarrier-hardening	DIVERGENT	1	2026-08-02	5	1	0
 codex/entropy-mackey-consolidation	DIVERGENT	1	2026-08-02	8	2	0
 codex/lean-public-audit-policy	DIVERGENT	2	2026-08-02	9	0	0
@@ -75,7 +76,7 @@ notes/p-metro-class-1-fork-witness	DIVERGENT	1	2026-07-21	1	0	0
 notes/p-metro-class-1-ruling-amendment-1-draft	DIVERGENT	1	2026-07-21	1	0	0
 notes/record-crt-idempotent-and-v60-manifest-draft	DIVERGENT	2	2026-08-22	12	0	0
 notes/rh-suzuki-consolidation-20260813	DIVERGENT	6	2026-08-13	19	2	2
-ops/board	ORPHAN	3	2026-07-31	1337	158	131
+ops/board	ORPHAN	3	2026-07-31	8	0	0
 prep/canon-v49-qdd-nonselection	MERGED	0	-	0	0	0
 prep/canon-v61-build-export	DIVERGENT	3	2026-08-23	2	0	0
 prep/canon-v61-evidence-hashes	DIVERGENT	1	2026-08-23	1	0	0

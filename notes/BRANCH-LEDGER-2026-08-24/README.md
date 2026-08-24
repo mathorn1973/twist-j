@@ -13,7 +13,7 @@ base            origin/main ec810acad66ab73631fdfa7e582043e7363eb435
 Canon           Public Canon v62, tag canon-v62, CONTENT_COMMIT
                 72d7fdaf131f999763bb0904e50e8841245027ff
 generator       tools/build_branch_ledger.py
-refs measured   202
+refs measured   203
 ```
 
 The snapshot is not maintained. It is a dated audit input, not a live index;
@@ -25,10 +25,13 @@ regenerate rather than edit it.
 BASE        1    the base branch itself. Never prunable.
 MERGED    107    an ancestor of main. Its content is in main for ever, so
                  deleting the ref deletes no content and hides no evidence.
-DIVERGENT  93    content exists only on this ref. NEVER delete.
+DIVERGENT  94    content exists only on this ref. NEVER delete.
 ORPHAN      1    unrelated history, no merge base with main at all.
                  Content exists only on this ref. NEVER delete.
 ```
+
+The snapshot includes the cleanup branch that carries it, which is divergent
+until its own pull request lands.
 
 Only the 107 `MERGED` refs are prunable. Deleting a ref is not deleting
 history: every commit remains reachable from `main`.
@@ -45,11 +48,18 @@ shallow clone   A truncated clone has no common history to find, so
                 Measured here: the same repository reported 35 MERGED and 142
                 unrelated while shallow, against 107 and 1 once unshallowed.
                 The tool now refuses to run in a shallow clone.
-orphan branch   `git diff main...branch` errors when there is no merge base.
-                A pipeline that discards the error records zero files.
-                Measured here: ops/board recorded as 0 files, actually 1337
-                files including 158 preregistrations and 131 results. It is
-                the largest branch in the repository.
+orphan branch   `git diff main...branch` errors when there is no merge base,
+                and a pipeline that discards the error records zero files.
+                Switching to a two-dot diff is not the fix: against unrelated
+                history it reports every file of the base as a deletion.
+                Measured here on ops/board, all three answers differ:
+                  0     three-dot, error discarded
+                  1337  two-dot: 1329 deletions of main's tree, 7 adds,
+                        1 rename. Also miscounts 158 PREREG and 131 RESULT
+                        paths that belong to main, not to the ref.
+                  8     the ref's own tree, which is the real answer:
+                        an ops board, 0 preregistrations, 0 results.
+                An orphan shares nothing, so it is measured by its own tree.
 the base ref    `main` is an ancestor of itself, so an ancestor test files it
                 under MERGED. A prune list built from that column deletes the
                 default branch. The tool classifies it BASE instead.

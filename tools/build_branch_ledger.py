@@ -15,8 +15,10 @@ ledger that authorises the wrong deletion:
   to run in a shallow clone rather than emit a ledger that cannot be trusted.
 * A branch with no merge base at all is a true orphan.  `git diff A...B`
   errors on those, and a shell pipeline that ignores the error records the
-  branch as contributing zero files.  Orphans are classified ORPHAN and
-  measured with a two-dot diff instead.
+  branch as contributing zero files.  A two-dot diff is not the fix either:
+  against unrelated history it reports every file of the base as a deletion,
+  inflating the count by the size of `main`.  An orphan carries its whole
+  tree and shares nothing, so it is measured by that tree.
 * The base branch is an ancestor of itself, so a naive ancestor test files it
   under MERGED and a prune list built from that column deletes `main`.  The
   base branch is classified BASE and is never prunable.
@@ -82,8 +84,11 @@ def branch_names(remote: str) -> list[str]:
 
 
 def measure(base: str, head: str, orphan: bool) -> tuple[int, int, int]:
-    spec = f"{base}..{head}" if orphan else f"{base}...{head}"
-    listing = git("diff", "--name-only", spec)
+    if orphan:
+        # No shared history, so every file on the ref exists only here.
+        listing = git("ls-tree", "-r", "--name-only", head)
+    else:
+        listing = git("diff", "--name-only", f"{base}...{head}")
     paths = [p for p in listing.splitlines() if p]
     prereg = sum(1 for p in paths if "PREREG" in p)
     result = sum(1 for p in paths if "RESULT" in p)
