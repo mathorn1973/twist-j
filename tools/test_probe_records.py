@@ -65,5 +65,39 @@ class ProblemsTests(unittest.TestCase):
         self.assertTrue(any("verify.py" in item for item in found))
 
 
+class GateAgreementTests(unittest.TestCase):
+    """The policy gate and the verifier gate must agree on the shape.
+
+    check_policy.py and check_verifier.py both decide whether a probe is an
+    abandoned pin.  They read the same predicate from this module so they
+    cannot drift; if they ever disagree, an abandoned record either cannot be
+    landed at all or slips past reproduction while carrying run artefacts.
+    """
+
+    def test_skippable_shape_is_exactly_the_valid_abandoned_shape(self) -> None:
+        # What check_verifier skips
+        skippable = declares_abandoned(ABANDONED) and not problems(
+            PIN_ONLY, ABANDONED
+        )
+        # What check_policy accepts
+        accepted = problems(PIN_ONLY, ABANDONED) == []
+        self.assertTrue(skippable)
+        self.assertTrue(accepted)
+
+    def test_run_artefacts_block_the_skip(self) -> None:
+        for extra in ("EXPECTED.txt", "RUN.md"):
+            present = PIN_ONLY | {extra}
+            skippable = declares_abandoned(ABANDONED) and not problems(
+                present, ABANDONED
+            )
+            self.assertFalse(skippable, f"{extra} must block the skip")
+
+    def test_ordinary_probe_is_never_skippable(self) -> None:
+        skippable = declares_abandoned(SCIENTIFIC) and not problems(
+            COMPLETE, SCIENTIFIC
+        )
+        self.assertFalse(skippable)
+
+
 if __name__ == "__main__":
     unittest.main()

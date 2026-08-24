@@ -13,6 +13,11 @@ import re
 import subprocess
 import sys
 
+try:  # pragma: no cover - import shim, see check_ledger.py
+    from tools import probe_records as _records
+except ImportError:  # pragma: no cover
+    import probe_records as _records
+
 ROOT = Path(__file__).resolve().parents[1]
 PROBES = ROOT / "probes"
 EMPTY_SHA256 = hashlib.sha256(b"").hexdigest()
@@ -478,6 +483,23 @@ def reproduce(probe: Path) -> None:
     verifier = probe / "verify.py"
     expected_path = probe / "EXPECTED.txt"
     run_path = probe / "RUN.md"
+
+    # An abandoned pin has no completed gate, so there is no exact stdout to
+    # reproduce and no run record to audit.  Only the full abandoned shape is
+    # skipped, and probe_records requires that shape to carry no run
+    # artefacts, so a probe that did complete can never reach this branch.
+    # The same module backs check_policy.py, so the two gates cannot drift.
+    result_path = probe / "RESULT.md"
+    result_text = (
+        result_path.read_text(encoding="utf-8") if result_path.is_file() else None
+    )
+    present = {item.name for item in probe.iterdir() if item.is_file()}
+    if _records.declares_abandoned(result_text) and not _records.problems(
+        present, result_text
+    ):
+        print(f"VERIFY ABANDONED {name} no completed gate, nothing to reproduce")
+        return
+
     for path in (verifier, expected_path, run_path):
         if not path.is_file():
             fail(f"{name} lacks {path.name}")
