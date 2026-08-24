@@ -1,0 +1,7 @@
+PASS B2-01 (1-i)^4 = -4, the integer certificate of theta = pi/4
+PASS B2-02 symbolic route, lengths normalized: Re[(1-i)^2((u+1)+i)^4] = 8u(u+1)(u+2) exactly
+PASS B2-03 independent route: five-point evaluation certificate at u = 0..4, degree bound four on both sides
+PASS B2-04 positivity and boundary zero: 8u(u+1)(u+2) > 0 for u > 0 and = 0 at u = 0, by the factored form; spot samples agree
+PASS B2-05 k_min(1,1) = 3 by the Re form (Re at k = 2 is exactly 0, at k = 3 exactly -2), while pi/(2 theta) = 2 exactly: the ceiling form gives 2 and is wrong at resonance
+GATES 5/5 PASS
+DECISION AUDIT-PASS

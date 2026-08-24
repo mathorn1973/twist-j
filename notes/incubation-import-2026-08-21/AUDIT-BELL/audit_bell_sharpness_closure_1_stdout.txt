@@ -1,0 +1,26 @@
+AUDIT-BELL-SHARPNESS-CLOSURE-1   exact, Q(i) hand-rolled, no float
+prereg sha256 83dde6936a5264cc22c42cca886be67119f211143abde32820d589c5d239affc
+
+A1-single quarter turn invariants are diag(a,b,a)    HOLDS dim of invariant symmetric space = 2
+A2a-hermiticity holds iff c is purely imaginary      HOLDS 
+A2b-G_r = diag(1, r^2, 1)                            HOLDS 
+A3a-sharpness (cK)^2 = I  <=>  c = +- i              HOLDS rational solutions of c^2 = -1: ['+-i']
+A3b-E^2 - E = ((r^2-1)/4) I exactly                  HOLDS 
+A4a-Clifford triple: hermitian, square I, anticommute, Gram = I_3 HOLDS 
+A4b-<C_y,C_z> has order exactly 24, all det +1       HOLDS order = 24
+A4c-only symmetric M invariant under both is M = q I_3 HOLDS dim of invariant space = 1
+A5a-eta(A) is hermitian                              HOLDS 
+A5b-(1/2)Tr(eta(A) eta(B)) = xx' + yy' + zz'         HOLDS 
+A5c--det eta(A) = x^2 + y^2 + z^2                    HOLDS 
+A6a-C = T except C_22 = -T_22, symbolically in Z[a,b,c,d] HOLDS 
+A6b-C^T C = T^T T symbolically                       HOLDS 
+A6c-Spec(T^T T) = {Q^2, R^2, R^2} as a polynomial identity HOLDS 
+A7a-traceless 2x2: H^2 = -det(H) I identically       HOLDS 
+A7b-traceless 2x2: Tr(H^2) = -2 det(H) identically   HOLDS 
+A7c-hermitian traceless: ||H||_F^2 = Tr(H^2) identically HOLDS 
+A7d-CLOSURE: sharpness and the equal-norm condition are ONE equation HOLDS H^2 = (x^2+y^2+z^2) I  and  ||H||_F^2 - 2 = 2(x^2+y^2+z^2 - 1)
+A8-BREAK ATTEMPT on the zero pattern: no counterexample HOLDS symbolic zero + 6561 integer matrices, 0 nonzero off-block values
+A8b-reason: M^T S M is symmetric for S symmetric, so Tr(sym.anti) = 0 HOLDS holds over any commutative ring of characteristic not two
+
+GATES 20 of 20 PASS
+FINDINGS 0

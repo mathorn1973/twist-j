@@ -357,6 +357,22 @@ def run_script(root: Path, script: str, *args: str) -> tuple[bool, str]:
     return result.returncode == 0, output
 
 
+FULL_REPLAY_CHECKS = (
+    ("check_verifier.py", "full public-probe replay failed"),
+    ("check_reproduce.py", "full reproduction replay failed"),
+)
+
+
+def full_replay_blockers(root: Path) -> list[str]:
+    blockers: list[str] = []
+    for script, failure in FULL_REPLAY_CHECKS:
+        passed, output = run_script(root, script)
+        print(output)
+        if not passed:
+            blockers.append(failure)
+    return blockers
+
+
 def neutral_platform() -> str:
     fields: dict[str, str] = {}
     path = Path("/etc/os-release")
@@ -473,10 +489,7 @@ def main() -> None:
                 blockers.append(f"{script} failed")
 
     if args.full:
-        passed, output = run_script(root, "check_reproduce.py")
-        print(output)
-        if not passed:
-            blockers.append("full reproduction replay failed")
+        blockers.extend(full_replay_blockers(root))
 
     try:
         blockers.extend(view_blockers(root))
