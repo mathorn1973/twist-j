@@ -1,0 +1,23 @@
+P-SPLIT-RAPIDITY-QUANTITATIVE-SEPARATION-1 verifier
+AUDIT of two written theorem proofs at finite scope; no universal quantifier
+exact integers in Z[phi]; no float, logarithm, trigonometric evaluation, or eigensolver
+PASS G1.effective_vector_merging_and_diagonal
+PASS G2.sharp_witness_norm_minus451
+PASS G3.sharp_pair_421_431_positive_norm_channel
+PASS G4.split_generators_reduced_exactly
+PASS G5.determinant_nonzero_and_nearest_channel_unique
+PASS G6.parity_lattices_and_exact_metric_numerators
+PASS G7.minimum_ordered_by_exact_cross_multiplication
+PASS B1.independent_relation_and_tie_breaker
+PASS B2.positive_norm_even_unit_gauge_invariant
+PASS B3.orientation_and_coefficient_reversal_invariant
+PASS F1.two_address_product_budget_at_most_X_squared
+PASS F2.normalized_fejer_weights_sum_to_one
+PASS F3.two_points_per_circular_shell
+PASS F4.singleton_gram_matrix_is_identity
+PASS N1.positive_norm_generators_491_1429
+PASS N2.ordinary_signed_channels_rungs_22_182
+PASS N3.doubled_vector_trace_and_product_budget
+PASS N4.naive_doubled_X_bound_falsified_by_841
+INVENTORY 18 checks executed
+SUMMARY PASS=18 FAIL=0

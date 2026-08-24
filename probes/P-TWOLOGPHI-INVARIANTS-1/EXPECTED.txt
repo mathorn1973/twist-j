@@ -1,0 +1,48 @@
+P-TWOLOGPHI-INVARIANTS-1 verify
+minimal polynomial of J: x^4 - 3x^3 + 4x^2 - 2x + 1 = Phi_5(x - 1)
+squared moduli: phi^2, phi^2, phi^-2, phi^-2; M(J) = phi^2
+regulator entry: 2 log phi; class number: 1 for Q(zeta_5) and Q(sqrt5)
+|N(J^n - 1)| for n = 1..10:
+  n =  1  1
+  n =  2  11
+  n =  3  31
+  n =  4  55
+  n =  5  121
+  n =  6  341
+  n =  7  911
+  n =  8  2255
+  n =  9  5611
+  n = 10  14641
+Lucas closed forms on n divisible by 5 in 1..40: 8 of 8
+off-residue perfect squares among 32 values: 1
+A1 two independently coded multiplications on Z[zeta_5] agree on all 16 basis pairs and on 100 declared element pairs, and are commutative PASS
+A2 M_J built column by column from the basis products J . j^k equals the public step matrix [[1,0,-1,1],[0,1,-1,0],[1,0,0,0],[0,1,-1,1]] PASS
+A3 det M_J = 1 = N(J) and trace M_J = 3 = Tr(J) PASS
+A4 the characteristic polynomial of M_J by exact Faddeev-LeVerrier is x^4 - 3x^3 + 4x^2 - 2x + 1 PASS
+A5 the same polynomial equals Phi_5(x - 1), expanded independently by integer polynomial arithmetic PASS
+A6 the polynomial is irreducible over Q: monic with constant term 1, no root in {1, -1}, and no monic integer quadratic pair over the derived range |a| <= 6 with b d = 1 PASS
+B1 complex conjugation j -> j^4 sends J to Jbar = 1 + j^3 and fixes phi; J . Jbar = 2 + j^2 + j^3 = 2 - phi = phi^-2 exactly in Z[zeta_5] PASS
+B2 the characteristic polynomial of multiplication by J . Jbar is (x^2 - 3x + 1)^2 = x^4 - 6x^3 + 11x^2 - 6x + 1 PASS
+B3 the four archimedean squared moduli are exactly phi^2, phi^2, phi^-2, phi^-2, the two roots of x^2 - 3x + 1, and exactly two conjugates lie outside the unit circle PASS
+B4 M(J) = phi . phi = phi^2 exactly, since the product of the squared moduli outside the unit circle is phi^4 = (phi^2)^2; hence log M(J) = 2 log phi PASS
+B5 phi^2 has minimal polynomial x^2 - 3x + 1, whose trace 3 is Tr(J) and whose norm 1 is N(J) PASS
+B6 phi < 2 < phi^2 exactly, so 1 < log_phi 2 < 2 PASS
+C1 Phi_5 has no real root, since (x - 1) Phi_5(x) = x^5 - 1 whose only real solution is x = 1 and Phi_5(1) = 5; hence r_1 = 0, r_2 = 2 and the unit rank r_1 + r_2 - 1 is 1 PASS
+C2 phi = -j^2 - j^3 lies in Z[zeta_5], is fixed by j -> j^4 hence totally real, satisfies phi^2 = phi + 1 and phi (phi - 1) = 1, and has norm 1 PASS
+C3 the two infinite places give |sigma_1(phi)| = phi and |sigma_2(phi)| = phi^-1, exact reciprocals in Z[phi] PASS
+C4 phi is the fundamental unit of Z[phi]: over the derived bounds |2a + b| <= 2 and |b| <= 1, widened here to the box |a| <= 4, |b| <= 4, no unit lies strictly between 1 and phi PASS
+C5 with unit rank one and both infinite places complex of local degree 2, the regulator is the 1 x 1 determinant |2 log |sigma(phi)|| = 2 log phi: the moduli are exactly phi^1 and phi^-1, so the entry is 2 or -2 and its absolute value is 2 at either place PASS
+D1 the trace form on 1, j, j^2, j^3 has determinant 125, matching the registered disc(K_5) = 5^3 PASS
+D2 Machin's formula pi = 16 arctan(1/5) - 4 arctan(1/239) with strictly decreasing alternating terms gives an exact rational enclosure PI_LO < pi < PI_HI with both bounds between 3 and 4 PASS
+D3 the Minkowski bound M_K = (4/pi)^2 (4!/4^4) sqrt125 = (15 sqrt5)/(2 pi^2) is below 2, since that is equivalent to 1125 < 16 pi^4 and the exact lower enclosure already exceeds it; hence every ideal class of Q(zeta_5) contains an ideal of norm 1 and h = 1 PASS
+D4 for Q(sqrt5) the Minkowski bound is sqrt5/2 < 2, equivalent to 5 < 16, with no transcendental input; sqrt5 = 2 phi - 1 squares to 5 and is below 4 in the exact Z[phi] order; hence h(Q(sqrt5)) = 1 PASS
+E1 the ring-norm route |N(J^n - 1)| and the matrix route |det(M_J^n - I)| agree for every n in 1..40 PASS
+E2 the first six values are 1, 11, 31, 55, 121, 341 PASS
+E3 the Lucas closed forms hold on the declared range: L_n^2 when n = 5 mod 10 and (L_n - 2)^2 when n = 0 mod 10, for all eight n divisible by 5 in 1..40 PASS
+E4 the pin: |N(J^15 - 1)| = 1860496 = 1364^2 = L_15^2 PASS
+E5 among the 32 values with 5 not dividing n and 1 <= n <= 40 exactly one is a perfect square, namely n = 1 with value 1 PASS
+E6 the two-sided bracket (phi^n - 1)^2 (1 - phi^-n)^2 <= |N(J^n - 1)| <= (phi^n + 1)^2 (1 + phi^-n)^2 holds exactly in Z[phi] for every n in 1..40, including n = 1 to 5 PASS
+F1 no float appears anywhere in this verifier: every NUMBER token of its own token stream parses as a Python int, so the gate cannot match its own probe strings PASS
+F2 the verifier imports only ast, math, sys, tokenize and fractions, all standard library, and names no source of randomness, time, network or process state PASS
+DECISION: 2 log phi is anchored arithmetically as log M(J) and as Reg(Q(zeta_5)); no layer bridge is created
+RESULT 29/29 ALL PASS

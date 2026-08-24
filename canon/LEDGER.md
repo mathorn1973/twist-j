@@ -34,11 +34,18 @@ history or the private development archive into scientific evidence:
   retirement ends a chain and permits the claim to leave the current registry.
   It does not fabricate a detailed pre-public transition history; the legacy
   cutover audit is only a reconciliation record.
-- `GATES.tsv` gives every currently declared cross-layer lift a stable gate ID,
-  an owning normative item, and a public decision condition. Items without an
-  explicit L1--L6 role remain `NOT_APPLICABLE`; that value does not invent a
-  protocol placement. Every declared dependency that actually crosses two
-  distinct protocol layers must name a matching gate.
+- `GATES.tsv` gives every declared layer gate a stable gate ID, an owning
+  normative item, a closed `gate_kind`, and a public decision condition.
+  Cross-layer gate kinds have distinct concrete L1--L6 endpoints. The sole
+  same-layer kind is `OPEN_DECISION`; it has equal concrete endpoints and an
+  open-obligation owner on that same concrete layer, and it represents a
+  decision rather than a lift. `tools/check_gate_contract.py` validates every
+  gate row directly: the gate kind fixes the required owner semantic type and
+  public status, and a concrete cross-layer owner must land at `to_layer`.
+  `MULTI` and `NOT_APPLICABLE` do not disable that cross-layer owner contract
+  and may not own `OPEN_DECISION`. Separately, every declared dependency that
+  actually crosses two distinct protocol layers must still name a matching
+  cross-layer gate with the correct endpoints.
 - `CORE_SELECTION.tsv` is the explicit, reviewable selection of closed claims
   used to generate the short core claim badges. Selection is policy, while
   statuses and scopes always come from `REGISTRY.tsv`.
@@ -53,10 +60,14 @@ history or the private development archive into scientific evidence:
   `REGISTRY.tsv`, `DEPENDENCIES.tsv`, `NORMATIVE.tsv`, `GATES.tsv`, and
   `EVIDENCE.tsv`.
 
-`tools/check_ledger.py` requires an acyclic dependency graph, exact agreement
-with `REGISTRY.tsv`, valid evidence hashes, continuous status history, and the
-status firewall: theorem rows cannot require lower-status claims, and
-dictionary rows cannot require open or falsified claims.
+`tools/check_ledger.py` preserves the complete pre-maintenance validator in
+`tools/check_ledger_core.py`, requires the explicit gate contract, and then
+applies the existing acyclic dependency, registry agreement, evidence hash,
+continuous history and status-firewall checks. The historical cross-layer
+rule remains unchanged: every dependency crossing two concrete protocol
+layers requires a matching cross-layer gate. Same-layer `OPEN_DECISION` rows
+are removed only from that cross-layer pass after the explicit gate-contract
+checker has validated them; they remain counted public ledger objects.
 
 These files are the machine-auditable companion-ledger surface of the current
 Public Canon series.

@@ -20,6 +20,20 @@ class WorkflowArchitectureTests(unittest.TestCase):
         self.assertEqual(self.text.count("runner: ubuntu-24.04-arm"), 1)
         self.assertIn("runs-on: ${{ matrix.runner }}", self.text)
 
+    def test_timeouts_match_policy(self) -> None:
+        architecture_at = self.text.index("\n  architecture:")
+        check_at = self.text.index("\n  check:")
+        publication_at = self.text.index("\n  publication:")
+        architecture_block = self.text[architecture_at:check_at]
+        check_block = self.text[check_at:publication_at]
+        publication_block = self.text[publication_at:]
+        self.assertIn("timeout-minutes: 25", architecture_block)
+        self.assertIn("timeout-minutes: 5", check_block)
+        self.assertIn("timeout-minutes: 30", publication_block)
+        self.assertEqual(self.text.count("timeout-minutes: 25"), 1)
+        self.assertEqual(self.text.count("timeout-minutes: 30"), 1)
+        self.assertEqual(self.text.count("timeout-minutes: 5"), 1)
+
     def test_aggregate_check_depends_on_architecture(self) -> None:
         block = (
             "  check:\n"

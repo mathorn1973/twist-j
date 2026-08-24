@@ -1,0 +1,63 @@
+G01a-D5-identity PASS
+G01b-Phi5(D)=0 PASS
+G01c-motor-powers-independent PASS
+G02a-vertex-sum-zero PASS
+G02b-gram-table PASS
+G02c-u2-is-minus-one PASS
+G03a-faithful-120 PASS
+G03b-G-orthogonal-all-120 PASS
+G03c-vertex-action-600 PASS
+G03d-homomorphism-14400 PASS
+G03e-motor-is-rho(01234) PASS
+G04a-stabilizer-order-24 PASS
+G04b-Pk-projector PASS
+G04c-ranks PASS
+G04d-Pk-image-is-uk-line PASS
+G05a-Hk-order-4 PASS
+G05b-Hk-cyclic-gen-order-4 PASS
+G05c-AGL-order-20 PASS
+G05d-Hk-equals-AGL-cap-Sk PASS
+G06a-closures-over-Hk PASS orders {8:4, 24:16, other:0}
+G06b-unique-D4 PASS
+G06c-closures-over-Dk-all-S4 PASS
+G07-Dk-dihedral-relations PASS
+G08-product-table PASS
+G09a-dims-3-2-1 PASS got (3,2,1)
+G09b-H-basis-RCJ PASS
+G09c-D-basis-RC PASS
+G09d-S-basis-Q PASS
+G10a-H-circle-witnesses-admitted PASS
+G10b-five-distinct-physical-classes PASS
+G10c-injective-rational-family PASS
+G11a-D-four-members-admitted-covariant PASS
+G11b-exactly-two-classes PASS
+G11c-Rk-Ck-components-nonzero PASS
+G11d-nonterminal-witness PASS
+G12-S-unique-class-idempotent-plusQ PASS
+G13a-motor-commutant-dim-4 PASS
+G13b-motor-commutant-basis PASS
+G13c-motor-with-record-anchor-zero PASS
+G13d-Qk-nonzero PASS
+G13e-transitive-witnesses-empty PASS
+G14a-motor-transports-ladder PASS
+G14b-dims-3-2-1-all-tokens PASS
+G15-target-last-P2-Elow-Q2-Ehigh PASS
+G16 FIREWALLS: candidate labels only; O1 and O2 remain open; L4
+  apparatus/support only, no L5/L6 lift; SAMPLING NOT PROVIDED is
+  untouched; apparatus records are not public D_clock records; the
+  lattice quantifies only over subgroups containing H_k; premises
+  discarding the architecture residual are out of scope; the
+  naturality-versus-normalizer axis is separate and sealed; the
+  registered post-state equivalence T ~ -T is used unchanged.
+G16-firewalls-printed PASS
+gates: 45 PASS, 0 FAIL
+E1 LATTICE: {H_k, D_k, S_k} complete, D_k unique dihedral order 8
+E2 CENTRALIZERS: dims 3, 2, 1 with bases {R,C,J}, {R,C}, {Q}
+E3 CLASSES: H rung rational circle (nonselection, injective
+   family); D rung exactly two physical classes [Q] and [R-C];
+   S rung exactly one physical class [Q], idempotence selects +Q
+E4 MOTOR: commutant Q[D], no admitted law; EMPTY for every
+   subgroup of S_5 containing the motor cycle
+E5 TRANSPORT: the motor conjugates the complete ladder token to
+   token; dims 3-2-1 at all five tokens
+DECISION: ERASURE-LADDER

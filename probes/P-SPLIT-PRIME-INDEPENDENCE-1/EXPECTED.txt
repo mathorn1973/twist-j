@@ -1,0 +1,23 @@
+P-SPLIT-PRIME-INDEPENDENCE-1 verifier
+AUDIT of the written proofs at finite scope; no universal quantifier
+exact integers in Z[phi] throughout; no logarithm, no float, no numerical eigenvalue
+PASS G1.split_census_matches_residue_rule
+PASS G1.generators_have_absolute_norm_p
+PASS G1.tested_ideals_are_principal_by_exhibited_generator
+G1 split primes below 120: 12, generators exhibited
+PASS G2.lucas_trace_test_matches_direct_power_comparison
+PASS G3.no_integer_relation_in_the_frozen_boxes
+PASS G2.class_zero_decision_two_independent_paths_agree
+G3 families 368, coefficient vectors tested 38352, relations found 0
+G2 path-B cross-checks 5478, disagreements 0
+PASS G4.positive_controls_all_fire
+G4 positive controls 26 of 26 fired under both paths
+PASS G5.reduced_representative_exists_and_is_unique
+PASS G5.half_period_endpoint_never_attained
+PASS G5.reduced_generator_has_both_embeddings_above_one
+PASS G5.height_identity_product_of_embeddings_equals_p
+PASS G5.unreduced_generator_fails_the_embedding_test
+PASS G6.verdicts_are_invariant_under_the_declared_gauge
+G6 gauge instances 66, exponents -2,-1,1,3
+INVENTORY 13 checks executed
+SUMMARY PASS=13 FAIL=0

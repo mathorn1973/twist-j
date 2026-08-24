@@ -1,0 +1,83 @@
+{
+  "contract_version": "DEF-TYPED-APPARATUS-RECORD-CONTRACT-v0",
+  "profile_id": "UNRESOLVED",
+  "profile_version": 0,
+  "owner_issue": 539,
+  "basis_commit": "25440d1dd872e1e91f6a4e01d85bad45a4062eb8",
+  "status": "STOP-DEFINITION",
+  "layers": {
+    "source_layer": "UNRESOLVED",
+    "support_layer": "L4",
+    "stream_layer": "L5"
+  },
+  "feeds_U": false,
+  "gate": {
+    "gate_id": "UNRESOLVED",
+    "source_layer": "L4",
+    "target_layer": "L5",
+    "state": "UNCREATED"
+  },
+  "carriers": [
+    {"role": "Source", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED"},
+    {"role": "SupportedSource", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED"},
+    {"role": "ContextKey", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED"},
+    {"role": "ReadyState", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED"},
+    {"role": "ApparatusState", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED"},
+    {"role": "SupportCarrier", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED", "layer": "L4"},
+    {"role": "Outcome", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED"},
+    {"role": "RecordDelta", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED"},
+    {"role": "EventRecord", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED"},
+    {"role": "HistoryState", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED", "layer": "L5"},
+    {"role": "ZeroDisposition", "carrier_id": "UNRESOLVED", "equality_id": "UNRESOLVED"}
+  ],
+  "maps": [
+    {"map_id": "context_of", "kind": "UNRESOLVED", "domain": ["Source"], "codomain": "ContextKey"},
+    {"map_id": "support_map", "kind": "UNRESOLVED", "domain": ["Source"], "codomain": "UNSUPPORTED+SupportedSource"},
+    {"map_id": "ready_select", "kind": "UNRESOLVED", "domain": ["SupportedSource", "ContextKey"], "codomain": "ReadyState"},
+    {"map_id": "prepare", "kind": "UNRESOLVED", "domain": ["SupportedSource", "ContextKey", "ReadyState"], "codomain": "SupportCarrier+ApparatusState"},
+    {"map_id": "step", "kind": "UNRESOLVED", "domain": ["SupportCarrier", "ApparatusState", "ContextKey"], "codomain": "Outcome+SupportCarrier+ApparatusState+RecordDelta"},
+    {"map_id": "emit", "kind": "UNRESOLVED", "domain": ["Outcome", "SupportCarrier", "ApparatusState", "RecordDelta"], "codomain": "EventRecord"},
+    {"map_id": "append", "kind": "UNRESOLVED", "domain": ["HistoryState", "EventRecord"], "codomain": "HistoryState"},
+    {"map_id": "persist", "kind": "UNRESOLVED", "domain": ["ApparatusState", "Outcome", "EventRecord"], "codomain": "ApparatusState"},
+    {"map_id": "reset", "kind": "UNRESOLVED", "domain": ["ApparatusState", "ContextKey"], "codomain": "ReadyState+ApparatusState"},
+    {"map_id": "terminal", "kind": "UNRESOLVED", "domain": ["EventRecord"], "codomain": "BIT"},
+    {"map_id": "zero_support", "kind": "UNRESOLVED", "domain": ["Source"], "codomain": "ZeroDisposition"}
+  ],
+  "event_record_fields": [],
+  "history_contract": {
+    "empty_history_id": "UNRESOLVED",
+    "length_id": "UNRESOLVED",
+    "order_access_id": "UNRESOLVED",
+    "passive_reread_rule_id": "UNRESOLVED",
+    "fresh_interaction_rule_id": "UNRESOLVED"
+  },
+  "law_decisions": {
+    "LAW-TYPE-CLOSURE": "UNRESOLVED",
+    "LAW-DOMAIN-TOTALITY": "UNRESOLVED",
+    "LAW-ZERO-DISPOSITION": "UNRESOLVED",
+    "LAW-CONTEXT-PRESELECTION": "UNRESOLVED",
+    "LAW-READY-PRESELECTION": "UNRESOLVED",
+    "LAW-STEP-FUNCTIONALITY": "UNRESOLVED",
+    "LAW-PERSIST-COHERENCE": "UNRESOLVED",
+    "LAW-RESET-SEPARATION": "UNRESOLVED",
+    "LAW-RECORD-FIELD-OWNERSHIP": "UNRESOLVED",
+    "LAW-RECORD-FAITHFULNESS": "UNRESOLVED",
+    "LAW-APPEND-TOTALITY": "UNRESOLVED",
+    "LAW-ORDER-PRESERVATION": "UNRESOLVED",
+    "LAW-REREAD-FRESH-SEPARATION": "UNRESOLVED",
+    "LAW-NO-FEEDBACK": "UNRESOLVED",
+    "LAW-NO-HIDDEN-INPUT": "UNRESOLVED",
+    "LAW-DEPENDENCY-ACYCLICITY": "UNRESOLVED",
+    "LAW-L4-L5-GATE-DECLARATION": "UNRESOLVED",
+    "LAW-L6-EXCLUSION": "UNRESOLVED",
+    "LAW-DECISION-ROUTING": "UNRESOLVED"
+  },
+  "dependency_ids": [],
+  "profile_adapter": "UNRESOLVED",
+  "decision_routes": {
+    "POSITIVE": "UNRESOLVED",
+    "NEGATIVE": "UNRESOLVED",
+    "EMPTY": "UNRESOLVED",
+    "STOP": "one or more required definition slots are unresolved"
+  }
+}

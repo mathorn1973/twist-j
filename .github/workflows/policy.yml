@@ -24,7 +24,7 @@ jobs:
           - architecture: aarch64
             runner: ubuntu-24.04-arm
     runs-on: ${{ matrix.runner }}
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
@@ -37,6 +37,7 @@ jobs:
       - run: python -m unittest discover -s tools -p 'test_*.py'
       - run: python tools/check_canon.py
       - run: python tools/check_ledger.py
+      - run: python tools/check_gate_contract.py
       - name: Reproduce changed public probes
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
@@ -62,7 +63,7 @@ jobs:
   publication:
     if: github.ref_type == 'tag' || github.event_name == 'release'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
@@ -75,6 +76,7 @@ jobs:
       - run: python -m unittest discover -s tools -p 'test_*.py'
       - run: python tools/check_canon.py
       - run: python tools/check_ledger.py
+      - run: python tools/check_gate_contract.py
       - name: Run activation readback on immutable publication events
         env:
           PUBLICATION_TAG: ${{ github.event.release.tag_name || github.ref_name }}
