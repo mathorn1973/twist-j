@@ -31,7 +31,10 @@ ORPHAN      1    unrelated history, no merge base with main at all.
 ```
 
 The snapshot includes the cleanup branch that carries it, which is divergent
-until its own pull request lands.
+until its own pull request lands. That one row is self-referential and drifts
+as the branch grows, so regenerating will differ from the committed file on
+its `ahead` and `adds_files` values. It is never a prune candidate, so the
+drift is harmless; every other row reproduces exactly.
 
 Only the 107 `MERGED` refs are prunable. Deleting a ref is not deleting
 history: every commit remains reachable from `main`.

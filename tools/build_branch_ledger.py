@@ -70,17 +70,33 @@ def require_full_history() -> None:
         )
 
 
-def branch_names(remote: str) -> list[str]:
-    listing = git(
-        "for-each-ref", "--format=%(refname:short)", f"refs/remotes/{remote}"
-    )
+def parse_branch_names(listing: str, remote: str) -> list[str]:
+    """Extract branch names from `for-each-ref --format=%(refname)` output.
+
+    Parsing full refnames rather than short ones is deliberate.  The short
+    name of `refs/remotes/origin/HEAD` is `origin`, not `origin/HEAD`, so a
+    filter written against the short form misses the symbolic ref, derives an
+    empty branch name from it, and asks git about `refs/remotes/origin/`.
+    Nearly every clone has that symref, so the mistake is not exotic.
+    """
+    prefix = f"refs/remotes/{remote}/"
     names = []
     for line in listing.splitlines():
-        short = line.strip()
-        if not short or short == f"{remote}/HEAD":
+        ref = line.strip()
+        if not ref.startswith(prefix):
             continue
-        names.append(short[len(remote) + 1:])
+        name = ref[len(prefix):]
+        if not name or name == "HEAD":
+            continue
+        names.append(name)
     return sorted(names)
+
+
+def branch_names(remote: str) -> list[str]:
+    listing = git(
+        "for-each-ref", "--format=%(refname)", f"refs/remotes/{remote}"
+    )
+    return parse_branch_names(listing, remote)
 
 
 def measure(base: str, head: str, orphan: bool) -> tuple[int, int, int]:
