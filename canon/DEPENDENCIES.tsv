@@ -1,4 +1,5 @@
 item_id	depends_on	relation	basis
+J-SIGNED-TRACE-MAHLER-RIGIDITY	J-MAHLER-MEASURE	REQUIRES	the existing row owns the target polynomial, its exact two-outside/two-inside conjugate split and M(J)=phi^2; the new theorem adds only rigidity in the frozen signed-trace class
 AFFINE-READING-DEGREE-CENSUS	J-UNIT	REQUIRES	the full affine carrier uses the registered algebraic unit J
 AFFINE-READING-DEGREE-CENSUS	J-STEP	REQUIRES	the full step M_J and motor D_J=M_J-I are the registered exact matrices
 AFFINE-QUADRATIC-FORM-UNIQUENESS	AFFINE-READING-DEGREE-CENSUS	REQUIRES	the unique positive quadratic ray refines the one-dimensional invariant symmetric line

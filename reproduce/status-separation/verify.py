@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 202, "D": 43, "C": 33, "F": 16,
+    expected_counts = {"T": 203, "D": 43, "C": 33, "F": 16,
                        "O": 27, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v63",
-        len(rows) == 324
+        "registry and companion-ledger counts match Public Canon v64",
+        len(rows) == 325
         and counts == expected_counts
-        and len(normative) == 370
-        and len(dependencies) == 581
-        and len(evidence) == 324
-        and two_architecture == 240
-        and len(history) == 846
+        and len(normative) == 371
+        and len(dependencies) == 582
+        and len(evidence) == 325
+        and two_architecture == 241
+        and len(history) == 847
         and len(gates) == 11
         and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -3463,6 +3463,8 @@ def run():
         and scope_contains_all(index, "J-TORAL-PERIODIC-POINTS",
                                ("l_n^2", "(l_n - 2)^2", "finite-range"))
         and arith_edges == {
+            ("J-SIGNED-TRACE-MAHLER-RIGIDITY",
+             "J-MAHLER-MEASURE", "REQUIRES"),
             ("J-MAHLER-MEASURE", "J-STEP", "REQUIRES"),
             ("J-MAHLER-MEASURE", "ENTROPY-LAYER-BRIDGE", "BOUNDED_BY"),
             ("REGULATOR-TWO-LOG-PHI", "J-PROJECTIONS", "REQUIRES"),
@@ -4067,14 +4069,74 @@ def run():
         "V63-HYGIENE",
         "v63 moves no registry row, evidence pointer or lifecycle event; the "
         "fold is repository hygiene and fifteen terminal pin records",
-        not v63_events
-        and len(rows) == 324
-        and counts == expected_counts
-        and counts["H"] + counts["O"] == 30
-        and len(history) == 846
-        and len(evidence) == 324
-        and len(dependencies) == 581
-        and len(gates) == 11,
+        not v63_events,
+    ))
+
+    v64_claim = "J-SIGNED-TRACE-MAHLER-RIGIDITY"
+    v64_events = [
+        row for row in history
+        if row["claim_id"] == v64_claim
+        and row["event_id"] == "CANON64-DECLARE-J-SIGNED-TRACE-MAHLER-RIGIDITY"
+    ]
+    checks.append((
+        "V64-MAHLER",
+        "signed-trace Mahler rigidity enters at T/L1 on its completed "
+        "two-architecture public probe while broader binary facts remain "
+        "non-owning probe controls and no matrix, selector, physical or higher-layer claim moves",
+        has_status(index, v64_claim, "T")
+        and index[v64_claim]["canon_section"]
+        == "1. The axiom and the two projections"
+        and index[v64_claim]["evidence"]
+        == "probes/P-J-SIGNED-TRACE-MAHLER-RIGIDITY-1"
+        and scope_sha256(index, v64_claim)
+        == "fa27353483b531477c53e4b34b9c1035571e9a334882eb9b11592a8b67312f09"
+        and scope_contains_all(index, v64_claim, (
+            "every monic integer quartic",
+            "no unit-circle root",
+            "exactly two roots outside and two inside",
+            "m(f)>=phi^2",
+            "equality iff",
+            "j-mahler-measure retains ownership",
+            "this row owns only the global lower bound and unique equality case",
+            "characteristic-polynomial classification only",
+            "no integral conjugacy",
+            "no integral conjugacy, ideal-class, marked-lift, basis, selector, decoder, generation, sampling, physical or l2-l6 claim",
+        ))
+        and normative[v64_claim]["item_type"] == "THEOREM"
+        and normative[v64_claim]["status"] == "T"
+        and normative[v64_claim]["layer"] == "L1"
+        and normative[v64_claim]["gate_ids"] == ""
+        and evidence[v64_claim]["evidence_id"]
+        == "EV-J-SIGNED-TRACE-MAHLER-RIGIDITY"
+        and evidence[v64_claim]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence[v64_claim]["location"]
+        == "probes/P-J-SIGNED-TRACE-MAHLER-RIGIDITY-1"
+        and evidence[v64_claim]["sha256"]
+        == "bad0139dd99002460039021687a7770822a877993ab1d40f97ebfb587407f7e5"
+        and evidence[v64_claim]["hash_mode"] == "bundle-manifest-sha256-v1"
+        and evidence[v64_claim]["architecture_requirement"] == "two-architecture"
+        and {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == v64_claim
+        } == {("J-MAHLER-MEASURE", "REQUIRES")}
+        and has_status(index, "J-MAHLER-MEASURE", "T")
+        and all(row["owner_item_id"] != v64_claim for row in gates.values())
+        and v64_claim not in programs
+        and len(v64_events) == 1
+        and v64_events[0]["event_sequence"] == "1"
+        and v64_events[0]["event_date"] == "2026-08-25"
+        and v64_events[0]["release"] == "canon-v64-candidate"
+        and v64_events[0]["event_type"] == "DECLARE"
+        and v64_events[0]["previous_status"] == "-"
+        and v64_events[0]["new_status"] == "T"
+        and v64_events[0]["scope_sha256"]
+        == "fa27353483b531477c53e4b34b9c1035571e9a334882eb9b11592a8b67312f09"
+        and v64_events[0]["evidence_id"]
+        == "EV-J-SIGNED-TRACE-MAHLER-RIGIDITY"
+        and v64_events[0]["evidence_location"]
+        == "probes/P-J-SIGNED-TRACE-MAHLER-RIGIDITY-1"
+        and v64_events[0]["evidence_sha256"]
+        == "bad0139dd99002460039021687a7770822a877993ab1d40f97ebfb587407f7e5",
     ))
 
     checks.append((
