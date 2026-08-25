@@ -1,6 +1,6 @@
 # P-JIPC-WP3E-EFFECTIVE-MELLIN-SEEDS-1 result
 
-Status: **candidate-T / L1 / JIPC-WP3E-EFFECTIVE-MELLIN-SEEDS-CONFIRMED / PUBLIC CANON STATUS UNCHANGED.**
+Status: **candidate-T / L1 / ARCHITECTURE-GATE-PENDING / PUBLIC CANON STATUS UNCHANGED.**
 
 The first formal execution of the immutable public verifier exited zero,
 wrote empty stderr and produced the exact committed `EXPECTED.txt` bytes. All
@@ -60,6 +60,16 @@ STOP        NOT SELECTED
 None of the frozen F1-F10 scientific falsifiers fired. The public claim lock
 is issue 566 and the immutable preregistration pin is
 `46004772f3a6510791adf2ae4afd14a8a9f7f5af`.
+
+## Runtime trust boundary
+
+The verifier itself is zero-input and its sole import is
+`fractions.Fraction`. The formal run was recorded with no inherited Python
+path or user site, but plain `python3` and the repository checker do not
+enforce Python isolated mode. Interpreter, standard-library and site startup
+and the runner environment therefore remain trusted. The current five-file
+probe tree contains no shadow module; the pending GitHub architecture replays
+are independent reproductions, not operating-system sandbox proofs.
 
 ## Scope firewall
 
