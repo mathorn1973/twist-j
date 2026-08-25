@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 203, "D": 43, "C": 33, "F": 16,
+    expected_counts = {"T": 205, "D": 43, "C": 33, "F": 16,
                        "O": 27, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v64",
-        len(rows) == 325
+        "registry and companion-ledger counts match Public Canon v65",
+        len(rows) == 327
         and counts == expected_counts
-        and len(normative) == 371
-        and len(dependencies) == 582
-        and len(evidence) == 325
-        and two_architecture == 241
-        and len(history) == 847
+        and len(normative) == 373
+        and len(dependencies) == 585
+        and len(evidence) == 327
+        and two_architecture == 243
+        and len(history) == 849
         and len(gates) == 11
         and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -4150,6 +4150,89 @@ def run():
                            "DEF-QDD-QPAIR", "DEF-QDD-QCARRIER-EQUALITY",
                            "DEF-QDD-PROJECTOR-LOW", "DEF-QDD-PROJECTOR-HIGH",
                            "DEF-QDD-BRANCH-WEIGHT-PAIRING", "DEF-QDD-FACTOR-MAP"},
+    ))
+
+    v65_period = "J-RESIDUE-PERIOD"
+    v65_collapse = "J-RESIDUE-COLLAPSE-FIVE"
+    v65_probe = "probes/P-J-RESIDUE-PERIOD-1"
+    v65_bundle = "c09e55027c62d7af1e2deb256275a1a392f2374218c0e74d1dca088b45f2708e"
+    v65_events = {
+        row["claim_id"]: row for row in history
+        if row["event_id"] in (
+            "CANON65-DECLARE-J-RESIDUE-PERIOD",
+            "CANON65-DECLARE-J-RESIDUE-COLLAPSE-FIVE",
+        )
+    }
+    checks.append((
+        "V65-RESIDUE",
+        "the rational-modulus residue period of J and the exact five-fold "
+        "collapse at one chosen prime enter at T/L1 on their completed "
+        "two-architecture public probe, with the inert prime two left to "
+        "J-BINARY-NORM-INDEX and no archimedean, automaton, spectrum, "
+        "selector, physical or higher-layer claim moving",
+        all(has_status(index, claim, "T") for claim in (v65_period, v65_collapse))
+        and all(index[claim]["canon_section"] == "1. The axiom and the two projections"
+                for claim in (v65_period, v65_collapse))
+        and all(index[claim]["evidence"] == v65_probe
+                for claim in (v65_period, v65_collapse))
+        and scope_sha256(index, v65_period)
+        == "41567caea0bb7f7373f0d2468a62bfdcfdac9b0c0cf85dd0e53b561b195854a8"
+        and scope_sha256(index, v65_collapse)
+        == "77228dcd68dc66bbc0eab3d22ed6a428579baadfa18195e1fdc5a55f626d98b2"
+        and scope_contains_all(index, v65_period, (
+            "every rational integer m >= 2",
+            "the pisano period of m",
+            "det m_j = 1 makes x -> jx a permutation",
+            "the word rational is load-bearing",
+            "j-binary-norm-index and is cited here, not restated",
+            "no automaton interpretation",
+            "no hamiltonian spectrum",
+        ))
+        and scope_contains_all(index, v65_collapse, (
+            "the quotient l/k divides 5",
+            "the prime ideal above 11 carrying zeta_5 -> 3 in f_11",
+            "the cost of that choice is exactly the factor five",
+            "no physical reading of the collapse factor",
+        ))
+        and scope_lacks(index, v65_period, ("gravity", "electromagnetism", "hamiltonian spectrum is"))
+        and all(normative[claim]["item_type"] == "THEOREM"
+                and normative[claim]["status"] == "T"
+                and normative[claim]["layer"] == "L1"
+                and normative[claim]["gate_ids"] == ""
+                for claim in (v65_period, v65_collapse))
+        and all(evidence[claim]["evidence_id"] == "EV-" + claim
+                and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+                and evidence[claim]["location"] == v65_probe
+                and evidence[claim]["sha256"] == v65_bundle
+                and evidence[claim]["hash_mode"] == "bundle-manifest-sha256-v1"
+                and evidence[claim]["architecture_requirement"] == "two-architecture"
+                for claim in (v65_period, v65_collapse))
+        and {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == v65_period
+        } == {("J-UNIT", "REQUIRES"), ("J-STEP", "REQUIRES")}
+        and {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == v65_collapse
+        } == {(v65_period, "REQUIRES")}
+        and all(has_status(index, claim, "T")
+                for claim in ("J-UNIT", "J-STEP", "J-BINARY-NORM-INDEX"))
+        and all(row["owner_item_id"] not in (v65_period, v65_collapse)
+                for row in gates.values())
+        and v65_period not in programs
+        and v65_collapse not in programs
+        and set(v65_events) == {v65_period, v65_collapse}
+        and all(v65_events[claim]["event_sequence"] == "1"
+                and v65_events[claim]["event_date"] == "2026-08-25"
+                and v65_events[claim]["release"] == "canon-v65-candidate"
+                and v65_events[claim]["event_type"] == "DECLARE"
+                and v65_events[claim]["previous_status"] == "-"
+                and v65_events[claim]["new_status"] == "T"
+                and v65_events[claim]["scope_sha256"] == scope_sha256(index, claim)
+                and v65_events[claim]["evidence_id"] == "EV-" + claim
+                and v65_events[claim]["evidence_location"] == v65_probe
+                and v65_events[claim]["evidence_sha256"] == v65_bundle
+                for claim in (v65_period, v65_collapse)),
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
