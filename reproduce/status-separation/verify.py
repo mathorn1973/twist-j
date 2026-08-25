@@ -145,7 +145,7 @@ def run():
                        "O": 27, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v62",
+        "registry and companion-ledger counts match Public Canon v63",
         len(rows) == 324
         and counts == expected_counts
         and len(normative) == 370
@@ -4060,6 +4060,23 @@ def run():
                 fw_seen.add(fw_nxt)
                 fw_stack.append(fw_nxt)
     fw_qdd = {x for x in fw_seen if x.startswith("DEF-QDD-") or x.startswith("QDD-")}
+    v63_events = [
+        row for row in history if row["release"].startswith("canon-v63")
+    ]
+    checks.append((
+        "V63-HYGIENE",
+        "v63 moves no registry row, evidence pointer or lifecycle event; the "
+        "fold is repository hygiene and fifteen terminal pin records",
+        not v63_events
+        and len(rows) == 324
+        and counts == expected_counts
+        and counts["H"] + counts["O"] == 30
+        and len(history) == 846
+        and len(evidence) == 324
+        and len(dependencies) == 581
+        and len(gates) == 11,
+    ))
+
     checks.append((
         "QDD-DIRECT-FIREWALL",
         "the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)",

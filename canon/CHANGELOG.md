@@ -1,11 +1,72 @@
 # Canon changelog (public series)
 
-## Public Canon v62
+## Public Canon v63
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
 Registry snapshot: 324 claims; 0 T-LOCK, 202 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v63 is a hygiene release. It adds no scientific claim, status
+move, scope move, dependency move, gate verdict, physical dictionary or layer
+lift, and it moves no evidence pointer. Every registry, evidence, dependency,
+gate and history row is byte identical to v61 and v62 except where this text
+says otherwise, and it says otherwise nowhere: the v63 ledger delta is empty.
+
+The fold records work that was already owed rather than work newly done.
+
+Three things closed. The repository gained a written branch-retention rule and
+a generator that determines it, replacing an oral convention under which a
+merged-ref audit could not be run safely. One hundred and seven merged refs
+were pruned against a dated ledger held in `main` as the receipt for what was
+deleted and where its content still lives; no divergent or orphan ref was
+touched. Fifteen abandoned preregistrations received terminal records: ten
+under `probes/` and five in the notes lane.
+
+An abandoned pin is a preregistration whose formal gate never completed. Until
+this series that state had no way to be closed: the gates required the full
+five-file probe record, so a directory holding only a pin, its accepted
+verifier and an abandonment note could not be landed at all. `POLICY.md` now
+defines the record and both `check_policy.py` and `check_verifier.py` accept
+it, from a single shared predicate so the two cannot drift. The rule is
+two-sided by construction: such a record may not carry `EXPECTED.txt` or
+`RUN.md`, so a probe whose gate did complete cannot be relabelled to keep a
+fired falsifier out of the public record.
+
+Two integrity errata are disclosed without rewriting either manifest, because
+silently repairing an integrity record destroys the evidence a reader needs to
+judge it. Neither defect touches published bytes: one manifest asserts a hash
+that matches no blob in the repository's history while the file it names still
+reproduces its pinned output byte for byte, and the other records a path one
+directory away from where policy requires the file to live.
+
+Nothing here promotes a candidate. The `FOLD` dispositions recorded during the
+cleanup are deliberately not part of this release; each is ordinary scientific
+work and enters a later Canon under its own issue, pin, gate and pull request.
+
+The v63 ledger change is:
+
+```text
+claims: 324, unchanged,
+T: 202, D: 43, C: 33, H: 3, O: 27, F: 16, unchanged,
+live H/O: 30, unchanged,
+normative items: 370, unchanged,
+dependencies: 581, unchanged,
+evidence rows: 324, unchanged,
+gates: 11, unchanged,
+history rows: 846, unchanged,
+two-architecture evidence: 240, unchanged,
+reproductions: 23, unchanged.
+```
+
+`canon/CANON.md` changes only its own release identity; no sentence of
+scientific content is edited, so `CANON_SHA256` moves for the version string
+alone.
+
+## Public Canon v62
+
+Registry snapshot: 324 claims; 0 T-LOCK, 202 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v62 is an integrity and evidence-maintenance release. It adds no
 scientific claim, status move, scope move, dependency move, gate verdict,
