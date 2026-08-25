@@ -1,11 +1,58 @@
 # Canon changelog (public series)
 
-## Public Canon v63
+## Public Canon v64
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 324 claims; 0 T-LOCK, 202 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Registry snapshot: 325 claims; 0 T-LOCK, 203 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v64 is a one-row exact L1 fold. It records the proof-first public
+probe P-J-SIGNED-TRACE-MAHLER-RIGIDITY-1 without a second formal execution or
+evidence record and adds no second scientific object.
+
+J-SIGNED-TRACE-MAHLER-RIGIDITY [T] states that every monic integer quartic
+
+    f(X)=X^4-3X^3+bX^2+cX+1,   b,c even,
+
+with no unit-circle root and exactly two roots outside and two inside has
+Mahler measure at least phi^2, with equality exactly for
+Phi_5(X-1)=X^4-3X^3+4X^2-2X+1. The universal quantifier rests on the
+self-contained sign and exterior-resolvent proof; the exact finite verifier
+audits the complete at-or-below-threshold coefficient surface. The public
+probe is byte-identical on x86_64 and aarch64.
+
+As non-owning probe controls, the broader primitive order-15 binary class and
+its oriented subclass remain nonselective under this criterion: the frozen
+strict-lower and equality-tie controls survive unchanged. They are not
+additional registered claims. The new theorem classifies characteristic
+polynomials only. It adds no integral conjugacy or ideal-class result,
+selector, decoder, generation count, sampling statement, physical
+dictionary, frontier move, gate, or L2-L6 lift. J-MAHLER-MEASURE [T] retains
+the target polynomial and exact value phi^2 as its existing arithmetic
+anchor.
+
+The v64 ledger change is:
+
+    claims: 324 + 1 T = 325,
+    T: 202 + 1 = 203,
+    D: 43, C: 33, H: 3, O: 27, F: 16, unchanged,
+    live H/O: 30, unchanged,
+    normative items: 370 + 1 = 371,
+    dependencies: 581 + 1 = 582,
+    evidence rows: 324 + 1 = 325,
+    gates: 11, unchanged,
+    history rows: 846 + 1 declaration = 847,
+    two-architecture evidence: 240 + 1 = 241,
+    reproductions: 23, unchanged.
+
+The separate JIPC WP3E/WP3F draft package, its ZIP archives, bounded replay,
+unfrozen TCBs and protocol status are not part of this release.
+
+## Public Canon v63
+
+Registry snapshot: 324 claims; 0 T-LOCK, 202 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v63 is a hygiene release. It adds no scientific claim, status
 move, scope move, dependency move, gate verdict, physical dictionary or layer

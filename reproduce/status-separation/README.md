@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its fifty-four checks cover the current
+and emits deterministic text. Its fifty-seven checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 56/56 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 57/57 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -93,7 +93,9 @@ determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
 
-The v63 count check reads the hygiene tree (324 claims, 23 reproductions, 11 gates). The V63-HYGIENE check requires the fold to move nothing: no HISTORY row is released under canon-v63, and the registry, status counts, evidence rows, dependencies and gates are all identical to v62. v63 closes fifteen abandoned preregistrations and prunes merged refs; neither touches a Canon row.
+The v64 count check reads the one-row fold (325 claims, 23 reproductions, 11 gates). The V64-MAHLER check pins J-SIGNED-TRACE-MAHLER-RIGIDITY at T and L1 to the completed two-architecture public probe, its exact scope hash, one dependency on J-MAHLER-MEASURE and no gate or frontier ownership. The broader binary-class facts remain non-owning probe controls; the registered row excludes integral-matrix, selector, decoder, physical and higher-layer claims. The permanent QDD direct-write firewall remains the final check.
+
+The historical v63 count check read the hygiene tree (324 claims, 23 reproductions, 11 gates). At the current v64 tree, V63-HYGIENE retains the durable ledger invariant that no HISTORY row is released under canon-v63; the v63 witness itself records the then-byte-identical registry, status counts, evidence rows, dependencies and gates relative to v62. v63 closed fifteen abandoned preregistrations and pruned merged refs; neither touched a Canon row.
 
 The v62 count check reads the maintenance tree (324 claims, 23 reproductions, 11 gates). The V62-MAINTENANCE check requires the odd-motor theorem to retain its T status, exact scope, dependencies, layer and no-gate boundary while its single current evidence pointer moves to the completed two-architecture COVERAGE-2 bundle and HISTORY records exactly one sequence-2 EVIDENCE_CHANGE. No scientific count or status moves.
 

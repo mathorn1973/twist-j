@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v63
+# TWIST-J Public Canon v64
 
-**Release identity.** Public Canon v63. Normative authority and activation
+**Release identity.** Public Canon v64. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v63 also declares the discrete
+algebraic axiom is J. Public Canon v64 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v63 does not claim
+seed of the two algebraic projections. Public Canon v64 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v63 contains no such
+deriving the architecture from J; Public Canon v64 contains no such
 theorem.
 
 ---
@@ -156,6 +156,65 @@ coincidence is worth stating plainly: `phi^2` has minimal polynomial
 `x^2 - 3x + 1`, whose trace 3 is `Tr(J)` and whose norm 1 is `N(J)`. Exactly
 `phi < 2 < phi^2`, so `1 < log_phi 2 < 2`. This is arithmetic about `J` and
 its conjugates. It creates no dynamical, entropic or physical reading.
+
+
+The value phi^2 is also rigid in one larger, precisely typed arithmetic class
+(J-SIGNED-TRACE-MAHLER-RIGIDITY [T],
+probes/P-J-SIGNED-TRACE-MAHLER-RIGIDITY-1). Let
+
+    f(X) = X^4 - 3X^3 + bX^2 + cX + 1 in Z[X],   b,c even.
+
+If f has no root on the unit circle and has exactly two roots outside and two
+inside it, counted with multiplicity, then
+
+    M(f) >= phi^2,
+
+with equality if and only if
+
+    f(X) = Phi_5(X - 1) = X^4 - 3X^3 + 4X^2 - 2X + 1.
+
+The proof is global, not an inference from a finite coefficient scan. Put
+E=f(1)=b+c-1 and A=f(-1)=b-c+5. Both are nonzero odd integers. If N_+ counts
+real roots greater than one and N_- counts real roots less than minus one,
+then sign(E)=(-1)^{N_+} and sign(A)=(-1)^{N_-}. Nonreal exterior roots occur
+in conjugate pairs; since exactly two roots are exterior, N_+ and N_- have
+the same parity. Thus E and A have the same sign. The exterior resolvent is
+
+    H(Z) = Z^3 - bZ^2 + (-3c - 4)Z + (4b - 9 - c^2).
+
+Its three roots are q+q^-1 for the three complementary root-pair products. In
+the positive-sign branch the exterior-pair product is M=M(f)>1. If
+M<=phi^2, the product of the two cross-pair factors at Z=3 is positive and
+
+    H(3) = (3-M-M^-1)(3-X_1)(3-X_2) >= 0,
+
+because phi^2+phi^-2=3. Since H(3)=6-5b-9c-c^2 and E>0, one has
+
+    5(1-c) < 5b <= 6-9c-c^2,
+
+so (c+2)^2<5. Even c leaves only -4,-2,0. The values -4 and 0 contradict
+H(3)>=0 at the least allowed even b; c=-2 forces b>=4 and b<=4, hence
+b=4. In the negative-sign branch the four real roots lie one in each of
+(-infinity,-1), (-1,0), (0,1), and (1,infinity). Writing them as
+-Y,-v,u,X with X,Y>1 and 0<u,v<1 gives M=XY, uv=M^-1 and
+3=X-Y+u-v<M-M^-1; hence
+
+    M(f) > (3 + sqrt(13))/2 > phi^2.
+
+By J-MAHLER-MEASURE [T], the target polynomial is admissible and has Mahler
+measure phi^2. The argument above adds only the lower-bound rigidity and
+uniqueness in the displayed class.
+
+The public row asserts sufficiency only for the frozen class above. As
+non-owning controls, the evidence probe separately records that the wider
+primitive order-15 binary class and its oriented p_R subclass fail the same
+lower-bound-and-uniqueness criterion: X^4-X^3+1 is an exact strict-lower
+witness, while f_J(-X) and the reciprocal of f_J are non-target equality ties
+in the probe's frozen A0/A1 tiers. These controls are not additional
+registered claims. This theorem classifies characteristic polynomials only.
+It selects no integral conjugacy class, ideal class, marked lift, basis,
+binary orientation, exponent, prime, physical carrier, generation count,
+decoder, sampling law, or L2-L6 lift.
 
 
 ### The harmonic seam
