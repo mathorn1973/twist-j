@@ -1,4 +1,7 @@
 item_id	depends_on	relation	basis
+J-RESIDUE-PERIOD	J-UNIT	REQUIRES	the period is the multiplicative order of the registered algebraic unit J in a residue ring
+J-RESIDUE-PERIOD	J-STEP	REQUIRES	the permutation of the m^4 residues is reduction of the registered exact step matrix M_J, whose determinant one makes it a bijection
+J-RESIDUE-COLLAPSE-FIVE	J-RESIDUE-PERIOD	REQUIRES	the collapse theorem states and prices the exact failure of the rational-modulus period law at one chosen prime above a split prime
 J-SIGNED-TRACE-MAHLER-RIGIDITY	J-MAHLER-MEASURE	REQUIRES	the existing row owns the target polynomial, its exact two-outside/two-inside conjugate split and M(J)=phi^2; the new theorem adds only rigidity in the frozen signed-trace class
 AFFINE-READING-DEGREE-CENSUS	J-UNIT	REQUIRES	the full affine carrier uses the registered algebraic unit J
 AFFINE-READING-DEGREE-CENSUS	J-STEP	REQUIRES	the full step M_J and motor D_J=M_J-I are the registered exact matrices

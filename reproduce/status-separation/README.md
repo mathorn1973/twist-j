@@ -72,7 +72,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 57/57 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 58/58 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -93,7 +93,9 @@ determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
 
-The v64 count check reads the one-row fold (325 claims, 23 reproductions, 11 gates). The V64-MAHLER check pins J-SIGNED-TRACE-MAHLER-RIGIDITY at T and L1 to the completed two-architecture public probe, its exact scope hash, one dependency on J-MAHLER-MEASURE and no gate or frontier ownership. The broader binary-class facts remain non-owning probe controls; the registered row excludes integral-matrix, selector, decoder, physical and higher-layer claims. The permanent QDD direct-write firewall remains the final check.
+The v65 count check reads the two-row fold (327 claims, 23 reproductions, 11 gates). The V65-RESIDUE check pins J-RESIDUE-PERIOD and J-RESIDUE-COLLAPSE-FIVE at T and L1 to the completed two-architecture public probe, their exact scope hashes, the two declared edges of the period row to J-UNIT and J-STEP, the single edge of the collapse row to the period row, and no gate or frontier ownership. The period row carries the word rational in its scope, leaves the inert prime two to J-BINARY-NORM-INDEX, and excludes archimedean, automaton, spectrum, selector, decoder, physical and higher-layer claims. The permanent QDD direct-write firewall remains the final check.
+
+The historical v64 count check read the one-row fold (325 claims, 23 reproductions, 11 gates). The V64-MAHLER check pins J-SIGNED-TRACE-MAHLER-RIGIDITY at T and L1 to the completed two-architecture public probe, its exact scope hash, one dependency on J-MAHLER-MEASURE and no gate or frontier ownership. The broader binary-class facts remain non-owning probe controls; the registered row excludes integral-matrix, selector, decoder, physical and higher-layer claims. The permanent QDD direct-write firewall remains the final check.
 
 The historical v63 count check read the hygiene tree (324 claims, 23 reproductions, 11 gates). At the current v64 tree, V63-HYGIENE retains the durable ledger invariant that no HISTORY row is released under canon-v63; the v63 witness itself records the then-byte-identical registry, status counts, evidence rows, dependencies and gates relative to v62. v63 closed fifteen abandoned preregistrations and pruned merged refs; neither touched a Canon row.
 

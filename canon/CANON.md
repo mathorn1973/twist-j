@@ -1,13 +1,13 @@
-# TWIST-J Public Canon v64
+# TWIST-J Public Canon v65
 
-**Release identity.** Public Canon v64. Normative authority and activation
+**Release identity.** Public Canon v65. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
 geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v64 also declares the discrete
+algebraic axiom is J. Public Canon v65 also declares the discrete
 architecture used to read that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -17,7 +17,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v64 does not claim
+seed of the two algebraic projections. Public Canon v65 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +94,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v64 contains no such
+deriving the architecture from J; Public Canon v65 contains no such
 theorem.
 
 ---
@@ -215,6 +215,61 @@ registered claims. This theorem classifies characteristic polynomials only.
 It selects no integral conjugacy class, ideal class, marked lift, basis,
 binary orientation, exponent, prime, physical carrier, generation count,
 decoder, sampling law, or L2-L6 lift.
+
+
+### The residue-ring period of J
+
+Reduction modulo a rational integer turns the step into a finite permutation,
+and that permutation has an exactly factored period (J-RESIDUE-PERIOD [T],
+probes/P-J-RESIDUE-PERIOD-1). Let `m >= 2` be a rational integer and
+`R_m = O_K/(m)`. Since `det M_J = 1`, the map `x -> J x` permutes the `m^4`
+elements of `R_m`, and
+
+```text
+ord_m(j) = 5,
+ord_m(J) = lcm(5, ord_m(phi)),
+```
+
+where `ord_m(phi)` is the Pisano period of `m`, because
+`phi^n = F_n phi + F_(n-1)`.
+
+Both are proved, not scanned. If `j^k = 1` in `R_m` for some `1 <= k <= 4`,
+then `m` divides `1 - j^k`, so `m^4` divides `N(1 - j^k) = 5`, impossible for
+`m >= 2`. For the period, complex conjugation `j -> j^-1` fixes `phi` and
+descends to `R_m` because `m` is rational; from `J phi = j` and `J^n = 1` one
+gets `j^n = phi^n`, and conjugating gives `j^-n = phi^n`, so `j^(2n) = 1`,
+hence `5 | n`, hence `phi^n = 1`. A second and independent proof uses the
+`Z[phi]`-basis `{1, j}`: the `j`-coordinates of `j, j^2, j^3, j^4` are
+`1, phi-1, 1-phi, -1`, all units of `Z[phi]`, so no nontrivial power of `j` is
+congruent modulo `m` to a real element and the two cyclic subgroups meet
+trivially.
+
+The period therefore splits into an invariant part, the prime five carried by
+the torsion of the unit group, and a part `ord_m(phi)` that belongs to the
+chosen modulus and to nothing else.
+
+The word rational is load-bearing, and the exact price of dropping it is known
+(J-RESIDUE-COLLAPSE-FIVE [T], same probe). In any quotient of `O_K` in which
+`j` has order exactly five, with `L = lcm(5, ord(phi))` and `k = ord(J)`,
+
+```text
+L / k divides 5.
+```
+
+Indeed `k | L`, and `J^k = 1` gives `j^k = phi^k`, whose fifth power gives
+`phi^(5k) = 1`, so `L | 5k`; writing `L = k t` leaves `t | 5`. The value five
+is attained, so the period law does not extend to one chosen prime ideal: above
+`11`, on the prime carrying `j -> 3` in `F_11`, `phi` maps to `8` of order ten
+and `J` maps to `-1` of order two against `L = 10`. Conjugation permutes the
+primes above a split prime and fixes none of them, which is exactly the step
+the first proof loses there. Choosing one prime above `p` costs the factor
+five, the phase, and nothing else.
+
+At the inert prime two this is not new: J-BINARY-NORM-INDEX [T] already owns
+`ord(Jbar) = 15` there, and the period law reproduces that value rather than
+adding to it. Neither row makes an archimedean statement, defines a Hamiltonian
+or a spectrum, reads the permutation as a physical automaton, or lifts anything
+above L1.
 
 
 ### The harmonic seam
