@@ -1,11 +1,64 @@
 # Canon changelog (public series)
 
-## Public Canon v64
+## Public Canon v65
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 325 claims; 0 T-LOCK, 203 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Registry snapshot: 327 claims; 0 T-LOCK, 205 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v65 is a two-row exact L1 fold. It records the proof-first public
+probe P-J-RESIDUE-PERIOD-1 and adds no second scientific object.
+
+J-RESIDUE-PERIOD [T] states that for every rational integer m >= 2, in
+Z[zeta_5]/(m),
+
+    ord_m(zeta_5) = 5   and   ord_m(J) = lcm(5, ord_m(phi)),
+
+where ord_m(phi) is the Pisano period of m. Since det M_J = 1, the map
+x -> Jx permutes the m^4 residues, so the period of that permutation factors
+into an invariant part five, carried by the torsion of the unit group, and a
+part that belongs to the chosen modulus. The universal statement rests on two
+independent written proofs, one by complex conjugation and one by
+Z[phi]-coordinates; the exact verifier audits every modulus up to one thousand
+and, by a second representation, the complete orbit census at six of them.
+
+J-RESIDUE-COLLAPSE-FIVE [T] prices the boundary. In any quotient in which
+zeta_5 has order exactly five, the quotient lcm(5, ord(phi)) / ord(J) divides
+five, and the value five is attained at the prime above eleven carrying
+zeta_5 to 3 in F_11, where phi has order ten and J has order two. The period
+law therefore does not extend to one chosen prime above a split prime, and the
+exact cost of that choice is the factor five, the phase, and nothing else. The
+audited carrier is every prime ideal above every split prime below four
+thousand: 536 ideals, ratio one in 438 and ratio five in 98, no other value.
+
+The word rational in the first row is load-bearing and is stated there. At the
+inert prime two the period law reproduces the value already owned by
+J-BINARY-NORM-INDEX [T] and adds nothing to it; the unit-group structure
+remains owned by J-HARMONIC-SEAM [T]. Neither new row makes an archimedean
+statement, defines a Hamiltonian or a spectrum, reads the permutation as a
+physical automaton, claims an energy quantum, moves the frontier, adds a gate,
+or lifts anything above L1. The public probe is byte-identical on x86_64 and
+aarch64.
+
+The v65 ledger change is:
+
+    claims: 325 + 2 T = 327,
+    T: 203 + 2 = 205,
+    D: 43, C: 33, H: 3, O: 27, F: 16, unchanged,
+    live H/O: 30, unchanged,
+    normative items: 371 + 2 = 373,
+    dependencies: 582 + 3 = 585,
+    evidence rows: 325 + 2 = 327,
+    gates: 11, unchanged,
+    history rows: 847 + 2 declarations = 849,
+    two-architecture evidence: 241 + 2 = 243,
+    reproductions: 23, unchanged.
+
+## Public Canon v64
+
+Registry snapshot: 325 claims; 0 T-LOCK, 203 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v64 is a one-row exact L1 fold. It records the proof-first public
 probe P-J-SIGNED-TRACE-MAHLER-RIGIDITY-1 without a second formal execution or
