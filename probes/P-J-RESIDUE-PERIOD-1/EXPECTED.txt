@@ -1,0 +1,13 @@
+P-J-RESIDUE-PERIOD-1 exact audit
+G1 J . phi = zeta_5                        PASS
+G2 det M_J = 1                             PASS
+G3 char M_J = X^4-3X^3+4X^2-2X+1           PASS
+G4 zeta_5^5 = I                            PASS
+A  rational moduli 2..1000 rows 999 ord_zeta_firings 0 period_law_firings 0
+B  census moduli 2,3,4,5,7,11 orbit_lcm_vs_period_firings 0
+C  split primes below 4000 count 134 prime ideals 536 ratio_1 438 ratio_5 98 ratio_other 0
+D  oriented witness p 11 zeta 3 phi 8 ord_phi 10 ord_J 2 lcm 10 ratio 5
+E  lattice sup norms 1 1 3 5 8 8 13 34 55 89 89 144
+DECISION J-RESIDUE-PERIOD-CONFIRMED
+SCOPE L1 exact residue arithmetic only
+digest a1142052bde0cfd86f20b4085690f317097dd89c08488b016a5adbc804fb166b
