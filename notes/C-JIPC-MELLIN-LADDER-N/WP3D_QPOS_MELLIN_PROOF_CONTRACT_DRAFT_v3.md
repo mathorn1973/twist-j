@@ -1,11 +1,29 @@
 # JIPC WP3D-QPOS-MELLIN — návrh důkazového kontraktu (DRAFT v3)
 
-Stav: **DRAFT / NOTES LANE / NON-CANONICAL / UNREGISTERED / NEZMRAZENO**.
-Verze 3 zapracovává governance verdikt druhého kola
-(`QPOS_* = PASS_MATHEMATICALLY`, `FREEZE_READY = BLOCKED_AS_WRITTEN`):
-šest freeze blokátorů a tři upřesnění. Matematické jádro (§3–§6) je
-proti v2 beze změny; nová je algoritmická a správní vrstva. Tento
-dokument je návrh, ne certifikát; nemění Canon ani stav JIPC.
+
+Stav: **DRAFT / NOTES LANE / NON-CANONICAL / UNREGISTERED / NEZMRAZENO /
+PUBLIC-FREEZE-READY: NO**.
+
+Veřejný audit nad Public Canon v65 rozlišuje matematické jádro od
+připravenosti veřejného protokolu:
+
+```text
+NOTES_LANE_MERGE              = PASS
+QPOS_CORE_IDENTITIES          = NO_COUNTEREXAMPLE_FOUND
+WRITTEN_PROOF_CARRIER         = INCOMPLETE
+PUBLIC_PARENT_PROVENANCE      = BLOCKED
+MACHINE_CONTRACT              = UNFROZEN
+PUBLIC_FREEZE_READY           = BLOCKED
+```
+
+Historický interní verdikt `QPOS_* = PASS_MATHEMATICALLY` znamená
+pouze, že audit nenašel protipříklad k rovnicím (MP), (DUP) a (EOC).
+Neznamená sebeobsažný veřejný důkaz, veřejně přípustnou premisovou
+stopu ani připravenost k pinu. §4–§5 níže opravují algebraický nosič,
+ale úplný řezový důkaz musí být před veřejným pinem ještě uzavřen.
+§10a je nezmrazený návrh a §0.1 používá neveřejného rodiče. Tento
+dokument je poznámka, ne certifikát; nemění Canon, registr, veřejnou
+mapu bran ani stav JIPC.
 
 ## 0. Přesný cíl: racionální mezistupeň, ne vybití WP2
 
@@ -49,10 +67,12 @@ a při typové rovnici `C(1/2)² = pi_atan` (§3.2) oblečený řez
 \tag{EOC}
 \]
 
-### 0.1 Přímý rodič a plný parent-lock
+### 0.1 Interní provenance a parent-lock — bez veřejné autority
 
-Přímým rodičem je `I-JIPC-WP3C-GAUSSIAN-BRIDGE-v1@0.1.0`. Vnější
-freeze obal (mimo archiv):
+Historickým interním rodičem je `I-JIPC-WP3C-GAUSSIAN-BRIDGE-v1@0.1.0`.
+Tento vztah je v notes lane pouze discovery context. Budoucí veřejná
+proba jej nesmí použít jako premisu, evidenci ani hranu důkazového
+grafu. Vnější interní freeze obal (mimo archiv):
 
 ```text
 WP3C archive sha256          56db8d0283219aa4489b7976b77fe2e76873df3fb96e6598f457b1be0ec2908e
@@ -337,42 +357,127 @@ C(\tfrac12)^2=\pi_{\mathrm{atan}},
 \tag{BRIDGE}
 \]
 
-— uzel `BRIDGE_SPECIALIZATION_QPOS`, jediné místo, kde primární graf
-spotřebovává WP3C.
+— uzel `BRIDGE_SPECIALIZATION_QPOS`, jediné místo, kde interní
+primární graf spotřebovává WP3C. Ve veřejné cestě je tato hrana
+zakázána a nahrazuje ji sebeobsažný most podle §11.0.
+
 
 ## 4. Produktová identita na racionálním řezu
 
-Beze změny proti v2 (matematicky schváleno): kompaktní krok pro
-`p,q≥1` (čtverec `[0,R]²`, diagonála, směrnice `y=xt`, kompaktní
-Fubini, `w=x(1+t)`, stejnoměrné sevření (M∞') s `R(1+t)≥R` a vahou
-`≤1`, spojitost částečných integrálů jako výslovná součást
-FUBINI-COMPACT), identita (TRI), půlicí pullback `u=t/(1+t)`
-(diagonála `t=1` ↦ střed `u=1/2`, platnost jen `p,q≥1`), a dvoukrokový
-sestup přes (REC) + (B-REC) na celé `Q_{>0}²` — uzel
-`MELLIN_PRODUCT_IDENTITY_QPOS`.
+**AUDITNÍ STAV:** matematická cesta je konzistentní, ale úplný
+kompaktní a limitní důkaz ještě musí být před veřejným pinem rozepsán
+v `PREREG.md`. Odkaz na neveřejnou v2 není důkaz.
+
+### 4.1 Kompaktní krok pro `p,q≥1`
+
+Rozklad čtverce `[0,R]²` podél diagonály, substituce `y=xt` v obou
+trojúhelnících a poté `w=x(1+t)` musí na úrovni řezů dát
+
+\[
+\begin{aligned}
+C(p)C(q)=C(p+q)\biggl(
+ &\int_0^1\frac{t^{q-1}}{(1+t)^{p+q}}\,dt\\
++&\int_0^1\frac{t^{p-1}}{(1+t)^{p+q}}\,dt
+\biggr).
+\end{aligned}
+\tag{TRI}
+\]
+
+První integrál se při `u=t/(1+t)` a následné reflexi stane horní
+polovinou `B(p,q)`, druhý dolní polovinou. Tím má kompaktní krok
+uzavřít
+
+\[
+C(p)C(q)=C(p+q)B(p,q),\qquad p,q\ge1.
+\tag{MP>=1}
+\]
+
+Veřejná verze musí zvlášť dokázat stejnoměrné mizení ocasu pro
+`t∈[0,1]` a nesmí použít Tonelliho větu na nekonečné oblasti.
+
+### 4.2 Půlicí rozklad
+
+(TRI) smí být citována jen v oblasti `p,q≥1`. Půlicí rozklad přes
+`u=t/(1+t)` je omezen na tento kompaktní krok; nesmí být přímo
+citován pro `p<1` nebo `q<1`.
+
+### 4.3 Konečný sestup na `Q_{>0}²`
+
+Jestliže (MP) platí v `(p+1,q)`, pak z (REC) a (B-REC)
+
+\[
+\begin{aligned}
+p\,C(p)C(q)
+ &=C(p+1)C(q)\\
+ &=C(p+q+1)B(p+1,q)\\
+ &=(p+q)C(p+q)\frac{p}{p+q}B(p,q)\\
+ &=p\,C(p+q)B(p,q).
+\end{aligned}
+\]
+
+Protože `p>0`, krácení dává (MP) v `(p,q)`. Druhý argument se
+snižuje symetricky. Pro každé `p,q∈Q_{>0}` se nejprve zvolí konečné
+celé posuny do oblasti `≥1` a pak se provede konečně mnoho těchto
+kroků. Koncovým uzlem je `MELLIN_PRODUCT_IDENTITY_QPOS`.
+
 
 ## 5. Bezodmocninová duplikace na racionálním řezu
 
-Beze změny proti v2: (B-HALF) `B(p,p)=2^{1-2p}B(1/2,p)` pro `p≥1`
-(afinní `u=(1+v)/2`, sudost, `v=w^{1/2}` s TRUNC-0 usmířením), pak
-diagonální dvojkrokový sestup
+**AUDITNÍ STAV:** výsledná identita a algebraický sestup jsou správné,
+ale řezová substituční část musí být před veřejným pinem doplněna.
+
+### 5.1 Základní půlicí identita
+
+Pro `p≥1` má afinní substituce `u=(1+v)/2`, sudost a následný
+řezový pullback `w=v²` dát
 
 \[
-B(p{+}1,p)=\tfrac12 B(p,p),\quad
-B(p{+}1,p{+}1)=\tfrac{p}{2p+1}B(p{+}1,p),\quad
-B(\tfrac12,p{+}1)=\tfrac{2p}{2p+1}B(\tfrac12,p)
+B(p,p)=2^{1-2p}B(\tfrac12,p).
+\tag{B-HALF>=1}
 \]
 
-s přesným krácením mocnin dvojky — uzel `BETA_HALF_IDENTITY_QPOS`;
-a duplikační řez
+Veřejná verze musí vést poslední substituci na řezech `[η,1]`,
+dokázat kofinalitu při `η\downarrow0` a zapsat okrajové odhady.
+
+### 5.2 Diagonální sestup
 
 \[
-\boxed{C(p)\,C(p+\tfrac12)=2^{1-2p}\,C(\tfrac12)\,C(2p)}
+B(p+1,p)=\tfrac12B(p,p),
+\]
+
+\[
+B(p+1,p+1)=\frac{p}{2p+1}B(p+1,p)
+          =\frac{p}{2(2p+1)}B(p,p),
+\]
+
+\[
+B(\tfrac12,p+1)=\frac{2p}{2p+1}B(\tfrac12,p).
+\]
+
+Dosazení (B-HALF) v bodě `p+1` a krácení kladného `p/(2p+1)` vrátí
+identitu v bodě `p`. Konečný celočíselný posun ji rozšíří na všechna
+`p∈Q_{>0}`. Uzel je `BETA_HALF_IDENTITY_QPOS`.
+
+### 5.3 Duplikace
+
+\[
+B(p,p)=\frac{C(p)^2}{C(2p)},\qquad
+B(\tfrac12,p)=
+\frac{C(\tfrac12)C(p)}{C(p+\tfrac12)}.
+\]
+
+Tyto dvě instance (MP), (B-HALF) a kladnost dělených členů dávají
+
+\[
+\boxed{
+C(p)C(p+\tfrac12)
+=2^{1-2p}C(\tfrac12)C(2p)
+}.
 \tag{DUP}
 \]
 
-(dvakrát (MP), jednou (B-HALF), dělení kladnými `C(p+1/2)`, `C(p)`)
-— uzel `DUPLICATION_SCALAR_QPOS`.
+Koncovým uzlem je `DUPLICATION_SCALAR_QPOS`. Veřejný theorem-grade
+stav zůstává zablokovaný do uzavření řezových důkazů §4.1 a §5.1.
 
 ## 6. Oblečený řez `Ê·Ô=Ĉ` a kotva `s=1`
 
@@ -390,8 +495,13 @@ a duplikační řez
 
 ### 6.2 Výpočet řezu
 
-`x=y·c`, `c=C(1/2)^{-1}` (POW_RAT na kladné konstantě), (E-PULL),
-(JOIN), `w=2\pi_{\mathrm{atan}}x` v (C-QL):
+Pro každou pevnou kladnou reálnou konstantu `a` je zobrazení řezů
+`(δ,R)↦(aδ,aR)` kofinální: ke každému cílovému řezu `(δ',R')` lze
+zvolit `δ≤δ'/a` a `R≥R'/a`. Toto škálovací lemma opravňuje níže
+použité neracionální konstanty.
+
+`x=y·c`, `c=C(1/2)^{-1}`, (E-PULL), (JOIN) a
+`w=2\pi_{\mathrm{atan}}x` v (C-QL) dávají:
 
 \[
 \hat E(s)=C(\tfrac12)^{-s}C(\tfrac s2),
@@ -420,22 +530,34 @@ spotřebovává (BRIDGE)): `\hat E(1)=C(\tfrac12)^{-1}C(\tfrac12)=1`,
 rodičovský uzel `P_GAUSSIAN_NORMALIZED` — křížová kontrola
 `S1_ANCHOR_IDENTIFICATION_AUDIT`, mimo primární graf.
 
-## 7. Měřítkový falzifikátor: právě tři algebraické rovnostní detektory
 
-Při `dμ_λ=λdx` škálují všechna semena lineárně. (MP) i (DUP) jsou
-homogenní stupně 2 na obou stranách — kalibraci nedetekují. **Právě
-tři algebraické rovnostní detektory** jsou
+## 7. Měřítkový falzifikátor: tři normalizační zbytky
+
+Při `dμ_λ=λdx`, `λ∈Q_{>0}`, škálují všechna jednorozměrná semena
+lineárně. (MP) a (DUP) jsou homogenní stupně dva, a proto kalibraci
+nedetekují. Tři pojmenované primitivní detektory jsou zbytky vůči
+původním rovnicím:
 
 \[
-C_λ(1)=λ,\qquad
-C_λ(\tfrac12)^2=λ^2\pi_{\mathrm{atan}},\qquad
-\hat E_λ\hat O_λ=λ\,\hat C_λ
+R_1(\lambda)=C_\lambda(1)-1=\lambda-1,
 \]
 
-(uzly `C_UNIT_ANCHOR_QPOS`, `BRIDGE_SPECIALIZATION_QPOS`,
-`DRESSED_EOC_QPOS`; poslední proto, že levá strana má stupeň 2 a
-pravá 1). Ocasní **moduly** jsou změnou míry citlivé také, ale nejsou
-rovnostními detektory — jejich mutace se testuje samostatně (§10).
+\[
+R_2(\lambda)=C_\lambda(\tfrac12)^2-\pi_{\mathrm{atan}}
+=(\lambda^2-1)\pi_{\mathrm{atan}},
+\]
+
+\[
+R_3(\lambda;s)=
+\hat E_\lambda(s)\hat O_\lambda(s)-\hat C_\lambda(s)
+=\lambda(\lambda-1)\hat C(s).
+\]
+
+Pro `λ>0`, `λ≠1` jsou všechny tři nenulové. Škálované transformační
+zákony nesmějí být použity jako PASS podmínky mutovaného modelu.
+Zmrazená fixture zvolí přesnou racionální hodnotu, například `λ=2`,
+ponechá původní normalizační rovnice a vyžádá odmítnutí na všech
+třech strážích. Ocasní moduly se testují samostatně.
 
 ## 8. Co přesně přehrává exaktní konečný kernel
 
@@ -471,11 +593,11 @@ jsou rozlišené. Bez plovoucí čárky se přehrává:
   kotva `s=1`. Neomezené tvrzení jen s explicitním indukčním
   certifikátem (symbolický rekurentní krok + báze); jinak platí
   pouze zmrazený rozsah;
-- dosažitelnost: jediný sink `WP3D_QPOS_SCALAR_SLICE`; každý primární
-  uzel je jeho předkem; vrstvu semen (včetně `C_UNIT_ANCHOR_QPOS`)
-  váže povinný agregátor `QPOS_SEED_PACKAGE` s povinnými předchůdci
-  `MELLIN_PRODUCT_IDENTITY_QPOS` a `BRIDGE_SPECIALIZATION_QPOS` na
-  cestě k sinku.
+- dosažitelnost: jediný sink je `WP3D_QPOS_SCALAR_SLICE`.
+  `QPOS_SEED_PACKAGE` spotřebovává uzly existence, modulů, kotvy a
+  rekurencí; není předkem svých vlastních složek. Produktová,
+  duplikační a oblečená větev dosahují sinku vlastními skutečnými
+  hranami. Orientaci `premisa -> spotřebitel` uvádí §10a.
 
 Kernel nepřehrává limitní analýzu, moduly ani intervalové obaly;
 stav `PASS_RELATIVE_TO_MELLIN_CALCULUS_TCB`, nikdy
@@ -548,10 +670,27 @@ Validátor musí odmítnout alespoň (1–23 jako ve v2, s úpravami):
     zděděné hodnotě (§11.A) — včetně „vylepšených“ blokačních kódů
     v mapě bran; mrtvý primární uzel (uzel bez cesty k sinku).
 
-## 10a. Strojová smlouva (skeleton ke zmrazení před kernelem)
 
-Whitelist, DAG a no-go musí být zmrazeny jako strojové položky, ne
-próza. Skeleton (hodnoty finalizuje freeze):
+## 10a. Strojová smlouva — NEZMRAZENÝ NÁVRH
+
+Následující blok nesmí být použit jako pin ani spuštěn:
+
+```text
+FZ1_BRIDGE_SOURCE           = TBD_PUBLIC_PROOF_OR_INTERNAL_ONLY
+FZ2_WRITTEN_PROOF_4_5      = INCOMPLETE
+FZ3_ALLOWED_IMPORTS         = TBD
+FZ4_RAT_AND_AST_POLICY      = TBD
+FZ5_RESOURCE_AND_JSON_CAPS  = TBD
+FZ6_ARTIFACT_SET_AND_HASHES = TBD
+FREEZE_READY                = NO
+```
+
+Před změnou `FREEZE_READY` musí být uzavřen veřejně přípustný most,
+doplněny řezové důkazy, určeny všechny strojové hodnoty, napsány a
+staticky přijaty artefakty a zmrazen jejich úplný inventář a hashe.
+Žádná hodnota se nesmí doplnit až při freeze.
+
+Nezmrazený skeleton:
 
 ```text
 allowed_types        : Nat, Int, Rat (redukované a/c), Real(parent),
@@ -563,7 +702,8 @@ allowed_operations   : tělesové operace a přesné nerovnosti; kompaktní
                        substituce + reflexe; exp řada s racionálním
                        zbytkem; supremový kořen (POW_RAT_ANALYTIC graf);
                        monotónní sup přes racionální síť řezů;
-                       kofinální přechod (δ,R)↦(δ²,R²)
+                       kofinální přechody (δ,R)↦(δ²,R²) a
+                       (δ,R)↦(aδ,aR) pro pevné a>0
 proof_registry       : uzly §2–§6 pod kanonickými ID z §11.C,
                        agregátor QPOS_SEED_PACKAGE, sink WP3D_QPOS_SCALAR_SLICE
 semantic_rules       : import = závislost, ne jméno (§0.2); oddělení
@@ -574,8 +714,9 @@ allowed_source_ast   : bez ast.Div (pravé dělení; celočíselné `//`
                        povoleno), bez float literálů, bez importů mimo
                        allowed_imports, AST whitelist po vzoru WP3C
                        kernel auditu
-allowed_imports      : žádné (kernel je uzavřený; fractions-ekvivalent
-                       vlastní implementací, rozhodne freeze)
+allowed_imports      : TBD_FREEZE_BLOCKER; zvolit právě jedno:
+                       přesně `from fractions import Fraction`, nebo
+                       vlastní normalizovaný Rat; hybrid je zakázán
 audit_only_registry  : BRIDGE_REDERIVATION_AUDIT,
                        S1_ANCHOR_IDENTIFICATION_AUDIT,
                        WALLIS_LATTICE_CROSSCHECK
@@ -584,23 +725,68 @@ measure_binding      : rodičovská aditivní délková míra; součinová
                        detektory kalibrace (§7)
 parameter_domains    : s,p,q ∈ Q_{>0} redukované; b ∈ Nat;
                        N_input=6, N_value=12, EOC ∈ {1,2,3}
-resource_bounds      : po vzoru rodiče (max_certificate_rational_bits,
-                       max_fixtures, json limity) — čísla určí freeze
-result_dependencies  : hrany DAG: QPOS_SEED_PACKAGE →
-                       {E_HALF_PULLBACK_QPOS, ODD_EVEN_SHIFT_JOIN_QPOS,
-                        BRIDGE_SPECIALIZATION_QPOS} →
-                       MELLIN_PRODUCT_IDENTITY_QPOS →
-                       {BETA_HALF_IDENTITY_QPOS, DUPLICATION_SCALAR_QPOS} →
-                       {C_QUADRATIC_TO_LINEAR_PULLBACK_QPOS, DRESSED_EOC_QPOS} →
-                       WP3D_QPOS_SCALAR_SLICE
+resource_bounds      : TBD_FREEZE_BLOCKER; před pinem určit přesná
+                       celá maxima pro čas, racionální bity, fixtures,
+                       JSON, stdout a paměťový povrch
+edge_direction       : premise -> consumer
+bridge_source        : BRIDGE_SOURCE_QPOS = TBD_FREEZE_BLOCKER
+result_dependencies  :
+  WP3D_QPOS_MELLIN_FAMILIES -> WP3D_QPOS_TAIL_MODULI
+  WP3D_QPOS_MELLIN_FAMILIES -> C_UNIT_ANCHOR_QPOS
+  WP3D_QPOS_MELLIN_FAMILIES -> C_SHIFT_RECURRENCE_QPOS
+  WP3D_QPOS_MELLIN_FAMILIES -> E_HALF_PULLBACK_QPOS
+  WP3D_QPOS_MELLIN_FAMILIES -> ODD_EVEN_SHIFT_JOIN_QPOS
+  WP3D_QPOS_MELLIN_FAMILIES -> C_QUADRATIC_TO_LINEAR_PULLBACK_QPOS
+  WP3D_QPOS_MELLIN_FAMILIES -> BETA_MIDPOINT_SPLIT_QPOS
+  WP3D_QPOS_MELLIN_FAMILIES -> BETA_RECURRENCE_DESCENT_QPOS
+  WP3D_QPOS_TAIL_MODULI -> QPOS_SEED_PACKAGE
+  C_UNIT_ANCHOR_QPOS -> QPOS_SEED_PACKAGE
+  C_SHIFT_RECURRENCE_QPOS -> QPOS_SEED_PACKAGE
+  BETA_MIDPOINT_SPLIT_QPOS -> QPOS_SEED_PACKAGE
+  BETA_RECURRENCE_DESCENT_QPOS -> QPOS_SEED_PACKAGE
+  C_SHIFT_RECURRENCE_QPOS -> MELLIN_PRODUCT_IDENTITY_QPOS
+  BETA_RECURRENCE_DESCENT_QPOS -> MELLIN_PRODUCT_IDENTITY_QPOS
+  BETA_MIDPOINT_SPLIT_QPOS -> BETA_HALF_IDENTITY_QPOS
+  BETA_RECURRENCE_DESCENT_QPOS -> BETA_HALF_IDENTITY_QPOS
+  MELLIN_PRODUCT_IDENTITY_QPOS -> DUPLICATION_SCALAR_QPOS
+  BETA_HALF_IDENTITY_QPOS -> DUPLICATION_SCALAR_QPOS
+  BRIDGE_SOURCE_QPOS -> BRIDGE_SPECIALIZATION_QPOS
+  E_HALF_PULLBACK_QPOS -> DRESSED_EOC_QPOS
+  ODD_EVEN_SHIFT_JOIN_QPOS -> DRESSED_EOC_QPOS
+  C_QUADRATIC_TO_LINEAR_PULLBACK_QPOS -> DRESSED_EOC_QPOS
+  BRIDGE_SPECIALIZATION_QPOS -> DRESSED_EOC_QPOS
+  DUPLICATION_SCALAR_QPOS -> DRESSED_EOC_QPOS
+  QPOS_SEED_PACKAGE -> WP3D_QPOS_SCALAR_SLICE
+  MELLIN_PRODUCT_IDENTITY_QPOS -> WP3D_QPOS_SCALAR_SLICE
+  DUPLICATION_SCALAR_QPOS -> WP3D_QPOS_SCALAR_SLICE
+  DRESSED_EOC_QPOS -> WP3D_QPOS_SCALAR_SLICE
 ```
 
 ## 11. Výsledkové štítky
 
-### 11.A Zděděná mapa bran — bajtově, beze změn
+### 11.0 Veřejná a interní premisová hranice
 
-Převzato doslovně z `jipc_wp3c_gauss_universe.json` (hodnoty se
-nesmějí přeformulovat; nová vysvětlení patří do `blocker_details`):
+```text
+INTERNAL ROUTE:
+  WP3C/WP2 locky mohou být interními premisami;
+  žádný veřejný candidate-T ani veřejný pin z nich neplyne.
+
+PUBLIC ROUTE:
+  neveřejný archiv, attachment, interní hash, universe gate ani
+  PI_ATAN_GAUSS_TYPED_IDENTITY jsou pouze discovery context;
+  nesmějí být premisou, evidencí ani hranou veřejného grafu.
+```
+
+Ve veřejné cestě se §9.A přesune do primárního grafu a sebeobsažně
+dokáže `C(1/2)^2=4∫_0^1dt/(1+t^2)`. Integrální konstanta dostane
+odlišný název, například `p_I`; rovnost `p_M=p_I` musí vlastnit
+výslovný veřejný Machinův most. Interní štítky níže nejsou veřejné
+statusy `T/D/C/H/O/F`.
+
+### 11.A Interní kompatibilitní mapa — bez veřejné autority
+
+Následující mapa je pouze interní kompatibilitní údaj. V notes lane
+nemění žádnou veřejnou bránu a do veřejné preregistrace se nepřenese.
 
 ```text
 ARCHIMEDEAN_PLACE_CONSTRUCTION      = BLOCKED
@@ -624,9 +810,15 @@ WP2_SCALAR_NORMALIZATION_OBSTRUCTION= CLEARED_RELATIVE_TO_GAUSSIAN_CALCULUS_TCB
 WP2_SCALAR_SEAM                     = BLOCKED_BY_MELLIN_PRODUCT_IDENTITY
 ```
 
-Zděděný kontrolní výsledek `SCALAR_GAMMA_ORBIT_THEOREM = NONUNIQUE…`
-se přebírá **bajtově z WP2 universe** (přesnou hodnotu vloží freeze
-z locknutého souboru; zde se nesmí přepisovat po paměti).
+Zděděná hodnota `SCALAR_GAMMA_ORBIT_THEOREM` není v tomto dokumentu
+zmrazena:
+
+```text
+SCALAR_GAMMA_ORBIT_THEOREM = TBD_PRIVATE_READBACK
+```
+
+To je freeze blokátor interní cesty; ve veřejné cestě se tento řádek
+i celá interní mapa §11.A vypouštějí.
 
 ### 11.B `blocker_details` (vysvětlení, ne hodnoty bran)
 
@@ -695,5 +887,7 @@ rovnici ani archimédovském místě.
 4. globální WP2 skalární šev                  (O-SCALAR-SEAM)
 ```
 
-Fourierův a Poissonův krok až potom. Nejdřív se zmrazí tento QPOS
-mezistupeň: kernel, validátor a fixtures se staví nad §10a smlouvou.
+Fourierův a Poissonův krok až potom. Dalším krokem není pin ani běh.
+Nejprve musí být uzavřen veřejný most, doplněny řezové důkazy,
+serializován DAG a určeny všechny `TBD_FREEZE_BLOCKER` hodnoty. Teprve
+potom lze vytvořit dosud nespouštěný kernel, validátor a fixtures.
