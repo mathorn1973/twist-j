@@ -1,11 +1,87 @@
 # Canon changelog (public series)
 
-## Public Canon v65
+## Public Canon v66
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
 Registry snapshot: 327 claims; 0 T-LOCK, 205 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v66 is a dependency-ledger maintenance fold. It records work that
+was already owed rather than work newly done, and it registers no scientific
+object: no claim enters, moves, or is retired, no status changes, no scope or
+falsifier is amended, no gate is created, no evidence pointer moves, and no
+lifecycle event is released under `canon-v66`.
+
+The fold corrects one omission. `QUADRATIC-DECODER-DATA [O]` is STOP until
+fourteen named inputs are public: the coefficient ring, effective carrier,
+common total domain, orbit-to-amplitude bridge, Gram, dagger, transpose,
+QCarrier equality, `Q`, effects, Born pairing, MatterData schema, write map,
+and complete dependency graph. Thirteen of those objects are published as the
+`DEF-QDD-*` block of the QDD Route A dictionary, and the row named every one of
+them in prose while `canon/DEPENDENCIES.tsv` recorded no edge to any of them.
+The row carried five `REQUIRES` edges, all to lineage rather than to
+completion-grade objects, so the dependency ledger did not connect the open
+quadratic `D_matter` action to the coefficient ring, carrier, Gram, `Q`,
+effects, schema, or write map the action is stated over. The child obligation
+`QDD-TERMINAL-EVENT-SEMANTICS` reached the whole block through the theorem
+chain while its parent reached none of it.
+
+v66 adds the fourteen missing `REQUIRES` edges, one per named object, each with
+a basis naming the STOP-clause item it discharges. The edges record a
+dependency the registry text already asserted; they neither create it nor
+strengthen it.
+
+The consequence is bounded, and is stated here so that it is not inferred
+later. The dependency ledger now shows what the registry always said, so the
+fourteen-item STOP clause is discharged as an inventory of public objects. That
+is not a closure of the row, and no closure is claimed. The row stays `O`, its
+scheduler label stays as `canon/FRONTIER_PROGRAMS.tsv` carries it, and the
+positive-closure condition is untouched: `QDD-ALGEBRAIC-FACTORIZATION [T]`
+supplies the exact factor identity on the frozen finite domain only, and four
+obligations remain outside the fourteen items. There is no QDD or `D_matter`
+binding gate in `canon/GATES.tsv`. `DEF-QDD-DOMAIN-K0` declares `K_QDD` total
+for the quadratic leg while `DEF-DECODER-MATTER` keeps `dom(D_matter)` a
+declared subset of `K`, and no `K_QDD = K` identity is registered. On `V_eff`
+the two typed slots of `Q_QDD` coincide by
+`QDD-QCARRIER-DIAGONAL-BOUNDARY [T]`, so the frozen domain does not test the
+pair structure. The Born pairing of `DEF-QDD-BRANCH-WEIGHT-PAIRING` remains an
+adopted dictionary input, not derived from `J`.
+
+The `EFFECT_SHADOW_MINIMAL` independence firewall is unaffected. Every new edge
+leaves `QUADRATIC-DECODER-DATA`, so the definitional closure of
+`DEF-QDD-DIRECT-WRITE` is unchanged from v65: the direct write still names no
+factor-side object, and the transitive firewall enforced by the
+status-separation witness still holds.
+
+The status-separation reproduction gains V66-QDD-WIRING, which asserts that the
+fold added exactly the fourteen edges, that the row's status, gate slot and
+program row did not move, that no history row is released under `canon-v66`,
+and that the direct-write firewall closure is unchanged.
+
+`canon/CANON.md` and `canon/CORE.md` change only their own release identity, so
+`CANON_SHA256` moves for the version string alone and no sentence of scientific
+content is edited. `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
+`canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`, `canon/GATES.tsv`,
+`canon/FRONTIER.md` and `canon/FRONTIER_PROGRAMS.tsv` do not change.
+
+The v66 ledger change is:
+
+    claims: 327, unchanged,
+    T: 205, D: 43, C: 33, H: 3, O: 27, F: 16, all unchanged,
+    live H/O: 30, unchanged,
+    normative items: 373, unchanged,
+    dependencies: 585 + 14 = 599,
+    evidence rows: 327, unchanged,
+    gates: 11, unchanged,
+    history rows: 849, unchanged,
+    two-architecture evidence: 243, unchanged,
+    reproductions: 23, unchanged.
+
+## Public Canon v65
+
+Registry snapshot: 327 claims; 0 T-LOCK, 205 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v65 is a two-row exact L1 fold. It records the proof-first public
 probe P-J-RESIDUE-PERIOD-1 and adds no second scientific object.

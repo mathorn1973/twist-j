@@ -15,8 +15,19 @@ PROBE / PREREGISTRATION:   NONE
 BINDING GATE:              MISSING
 CANON/TABLE/STATUS CHANGE: NONE
 QDD STATUS:                O / STOP, unchanged
-RESULT:                    PUBLIC 13 / MISSING 1
+RESULT AS FOUND (v65):     PUBLIC 13 / MISSING 1
+OWNER RULING:              WIRE-THE-ROW, 2026-08-26
+OUTCOME:                   folded as Public Canon v66; re-runs PUBLIC 14 / MISSING 0
 ```
+
+> **Outcome.** This audit was written against Public Canon v65 and found item 14
+> missing. The owner selected `WIRE-THE-ROW` on 2026-08-26 and the fourteen
+> `REQUIRES` edges were folded into the dependency ledger as **Public Canon
+> v66**. The checker reads the live Canon version, so it now reports
+> `PUBLIC 14 / MISSING 0` and check 12 passes. Sections 3, 5 and 7 below
+> describe the v65 state that motivated the fold and are kept as the record of
+> it; section 7 records which route was taken. The four residuals of section 6
+> are untouched by the fold and remain open.
 
 ## 1. Why this file exists
 
@@ -150,7 +161,8 @@ row's dependency closure.** The row names its fourteen required inputs in prose
 and reaches none of them through the ledger.
 
 The wiring is not absent from the Canon — it is routed around the parent. The
-frontier debt map the checker emits makes this visible:
+frontier debt map the checker emits makes this visible. As read at v65, before
+the fold:
 
 ```text
 live O/H rows                        30
@@ -163,6 +175,9 @@ METRO-ADMISSIBILITY-DIM              +1
 LAMBDA-COCYCLE-ANGLES                +1
 rows owning no definition above it   24 of 30
 ```
+
+At v66 the same map reads `QUADRATIC-DECODER-DATA +14` and `23 of 30`, which is
+the whole effect of the fold.
 
 `QDD-TERMINAL-EVENT-SEMANTICS`, a *child* obligation, reaches all seventeen
 `DEF-QDD-*` definitions through the theorem chain. `QUADRATIC-DECODER-DATA`,
@@ -242,6 +257,14 @@ CLAUSE-INCOMPLETE
 These are not exclusive: `WIRE-THE-ROW` is a hygiene fold that should happen
 regardless of how the owner rules on the clause, because a dependency ledger
 that omits the edges is wrong independently of what it implies for scheduling.
+
+**Owner ruling, 2026-08-26: `WIRE-THE-ROW`.** The fourteen edges were folded
+into `canon/DEPENDENCIES.tsv` as Public Canon v66, one edge per named object,
+each with a basis naming the STOP-clause item it discharges. The fold moves no
+claim, status, scope, evidence pointer or gate, and releases no lifecycle
+event. `CLAUSE-INCOMPLETE` was not taken and remains available: the registry
+falsifier still names exactly the fourteen items, and whether the binding gate
+or the domain-exhaustion obligation belongs among them is still undecided.
 
 What is not tenable is describing the lane as blocked on missing typed
 definitions. It has not been since the binding package was folded. Thirteen of

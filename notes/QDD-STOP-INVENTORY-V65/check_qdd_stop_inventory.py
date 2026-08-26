@@ -21,6 +21,7 @@ Run from the repository root. Standard library only. Deterministic output.
 import csv
 import hashlib
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -90,6 +91,15 @@ CLOSURE_SEED = [i for _, ids in RESOLUTION for i, _ in ids] + [
 def read_tsv(name):
     with (CANON / name).open(encoding="utf-8") as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
+
+
+def canon_version():
+    """Read the live Canon version from the CANON.md title."""
+    title = (CANON / "CANON.md").read_text(encoding="utf-8").splitlines()[0]
+    match = re.fullmatch(r"# TWIST-J Public Canon v([1-9][0-9]*)", title)
+    if not match:
+        raise SystemExit("CANON.md lacks a Public Canon vN title")
+    return match.group(1)
 
 
 def canon_definitions():
@@ -224,15 +234,18 @@ def main():
     # 12 item 14 has two halves: the closure, and the row's edge into it.
     row_req = sorted(requires.get("QUADRATIC-DECODER-DATA", ()))
     qdd_defs = sorted(n for n in closure if n.startswith("DEF-QDD-"))
-    reached = sorted(set(row_req) & set(qdd_defs))
-    check("12", "ROWEDGE", False,
-          "QUADRATIC-DECODER-DATA carries %d REQUIRES edges, %d of which reach "
-          "the %d-node DEF-QDD-* block"
-          % (len(row_req), len(reached), len(qdd_defs)))
-    gaps.append(("BINDING",
-                 "item 14 is complete and acyclic for the definitions but the "
-                 "open row is not wired into it: %s"
-                 % ", ".join(row_req)))
+    named = sorted({i for _, pair in RESOLUTION for i, _ in pair})
+    unwired = sorted(set(named) - set(row_req))
+    check("12", "ROWEDGE", not unwired,
+          "QUADRATIC-DECODER-DATA carries %d REQUIRES edges reaching %d of the "
+          "%d STOP-named definitions (%d-node DEF-QDD-* block)"
+          % (len(row_req), len(named) - len(unwired), len(named),
+             len(qdd_defs)))
+    if unwired:
+        gaps.append(("BINDING",
+                     "item 14 is complete and acyclic for the definitions but "
+                     "the open row does not reach %d of them: %s"
+                     % (len(unwired), ", ".join(unwired))))
 
     # residuals: outside the fourteen-item inventory, still open
     qdd_gates = [g for g in gates
@@ -253,8 +266,10 @@ def main():
                       "DEF-QDD-BRANCH-WEIGHT-PAIRING is an adopted dictionary "
                       "input, not derived from J"))
 
+    version = canon_version()
     print("TWIST-J QDD STOP inventory refresh (NON-CANONICAL)")
-    print("Public Canon v65; authority is canon/REGISTRY.tsv, not this script")
+    print("Public Canon v%s; authority is canon/REGISTRY.tsv, not this script"
+          % version)
     print()
     for ok, tag, name, detail in results:
         print("%s %s %-9s %s" % ("PASS" if ok else "GAP ", tag, name, detail))
@@ -270,7 +285,8 @@ def main():
     rowedge = all(r[0] for r in results if r[1] == "12")
     structural = all(r[0] for r in results if r[1] in ("08", "09")) and rowedge
     public = (13 - len(unresolved)) + (1 if structural else 0)
-    print("INVENTORY v65          PUBLIC %2d / MISSING %2d" % (public, 14 - public))
+    print("INVENTORY v%-3s         PUBLIC %2d / MISSING %2d"
+          % (version, public, 14 - public))
     print("STOP CLAUSE            %s"
           % ("DISCHARGED" if public == 14
              else "DISCHARGED FOR %d OF 14; 1 BINDING GAP" % public))
