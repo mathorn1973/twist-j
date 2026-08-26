@@ -1,0 +1,43 @@
+TWIST-J QDD STOP inventory refresh (NON-CANONICAL)
+Public Canon v66; authority is canon/REGISTRY.tsv, not this script
+
+PASS 01 ROW       QUADRATIC-DECODER-DATA is O and carries the pinned STOP clause
+PASS 02 ITEMS     the STOP clause names exactly 14 required public inputs
+PASS 03 RESOLVE   13/13 definitional inputs resolve to 14 public normative IDs
+PASS 04 TYPES     all 14 resolving IDs are registered DEFINITION rows
+PASS 05 LAYER     all 14 resolving IDs are declared at layer L1
+PASS 06 TEXT      all 14 resolving IDs carry definition text in canon/CANON.md
+PASS 07 ANCHOR    each resolution is anchored by an exact canon phrase
+PASS 08 CLOSURE   the QDD closure is 27 nodes, every node registered in NORMATIVE.tsv
+PASS 09 ACYCLIC   the closure is acyclic; 27 nodes in dependency order
+PASS 10 FIREWALL  DEF-QDD-DIRECT-WRITE closure (17 nodes) names no factor-side object
+PASS 11 FACTOR    QDD-ALGEBRAIC-FACTORIZATION is T on two-architecture evidence
+PASS 12 ROWEDGE   QUADRATIC-DECODER-DATA carries 19 REQUIRES edges reaching 14 of the 14 STOP-named definitions (17-node DEF-QDD-* block)
+
+
+RESID 13 GATE      canon/GATES.tsv carries no QDD binding gate (11 gates, 0 QDD)
+RESID 14 DOMAIN    K_QDD is total for the quadratic leg and is the n = 0 headed pointed-orbit set; DEF-DECODER-MATTER keeps dom(D_matter) a declared subset of K and no K_QDD = K identity is registered
+RESID 15 SLOTS     QDD-QCARRIER-DIAGONAL-BOUNDARY: the two typed slots of Q_QDD coincide on V_eff, so the frozen domain does not test the pair structure
+RESID 16 ADOPTED   DEF-QDD-BRANCH-WEIGHT-PAIRING is an adopted dictionary input, not derived from J
+
+INVENTORY v27          PUBLIC  0 / MISSING 14
+INVENTORY v66          PUBLIC 14 / MISSING  0
+STOP CLAUSE            DISCHARGED
+POSITIVE CLOSURE       NOT CLAIMED; 4 residuals outside the inventory
+QUADRATIC-DECODER-DATA O / STOP, unchanged by this audit
+
+closure order sha256   4c281d1c7bb5bda8b6da6cdd3511a3d1c3baaebe9e414cbd54702f92df1958a9
+
+FRONTIER DEFINITIONAL DEBT
+  live O/H rows                        30
+  shared architecture baseline         9 definitions
+  QDD-TERMINAL-EVENT-SEMANTICS           +18
+  QUADRATIC-DECODER-DATA                 +16
+  QDD-INSTRUMENT-APPARATUS               +5
+  TRACEKERNEL-CURVATURE-FORCING          +2
+  MINIMAL-READ-DERIVATION                +1
+  METRO-ADMISSIBILITY-DIM                +1
+  LAMBDA-COCYCLE-ANGLES                  +1
+  rows owning no definition above it   23 of 30
+
+RESULT 11/11 audit checks hold; 0 gap, 4 residuals

@@ -352,6 +352,20 @@ QUADRATIC-DECODER-DATA	DEF-DECODER-MATTER	REQUIRES	the open action and its froze
 QUADRATIC-DECODER-DATA	READING-SPLIT	REQUIRES	the row concerns only the registered quadratic/Born decoder leg and explicitly excludes the linear CODEC-TR4 and binary Thue-Morse/census legs
 QUADRATIC-DECODER-DATA	COUPLINGS-DETERMINE	REQUIRES	the exact Gram-normalized density and Born identity are inherited inputs, not an instrument-selection theorem
 QUADRATIC-DECODER-DATA	MEASURE-BORN-VERB	REQUIRES	the physical data effect uses the registered Born-square measure dictionary
+QUADRATIC-DECODER-DATA	DEF-QDD-COEFFICIENT-Q	REQUIRES	the coefficient ring named by the STOP clause: rational coefficients with the trivial involution on the matrix side, and the amplitude field K with bar = sigma_4
+QUADRATIC-DECODER-DATA	DEF-QDD-BALANCED-PISTON	REQUIRES	the effective carrier named by the STOP clause: V_eff = ell(F_5)^4, the frozen carrier the quadratic pair is restricted to
+QUADRATIC-DECODER-DATA	DEF-QDD-DOMAIN-K0	REQUIRES	the common total domain named by the STOP clause: K_QDD, declared total for the quadratic D_matter leg
+QUADRATIC-DECODER-DATA	DEF-QDD-AMPLITUDE-B0	REQUIRES	the orbit-to-amplitude bridge named by the STOP clause: Amp_QDD = iota_B0 o beta_QDD
+QUADRATIC-DECODER-DATA	DEF-QDD-GRAM	REQUIRES	the Gram named by the STOP clause: G = I_4 - (1/5) 1 1^T, the matrix of the trace pairing in B0
+QUADRATIC-DECODER-DATA	DEF-QDD-DAGGER	REQUIRES	the dagger named by the STOP clause: the involution carrying the first typed slot of Q
+QUADRATIC-DECODER-DATA	DEF-QDD-TRANSPOSE	REQUIRES	the transpose named by the STOP clause: the operation carrying the second typed slot of Q
+QUADRATIC-DECODER-DATA	DEF-QDD-QCARRIER-EQUALITY	REQUIRES	the QCarrier equality named by the STOP clause: ordered componentwise rational matrix equality on im(Q_QDD | V_eff)
+QUADRATIC-DECODER-DATA	DEF-QDD-QPAIR	REQUIRES	the map Q named by the STOP clause and displayed in the row scope as Q(psi) = (psi psi^dagger, psi psi^T)
+QUADRATIC-DECODER-DATA	DEF-QDD-PROJECTOR-LOW	REQUIRES	the first member of the ordered effect pair named by the STOP clause; ALGEBRAIC_READOUT only, the physical realization remains in QDD-INSTRUMENT-APPARATUS
+QUADRATIC-DECODER-DATA	DEF-QDD-PROJECTOR-HIGH	REQUIRES	the second member of the ordered effect pair named by the STOP clause; the same labels
+QUADRATIC-DECODER-DATA	DEF-QDD-BRANCH-WEIGHT-PAIRING	REQUIRES	the Born pairing named by the STOP clause: the factor-route Born trace pairing, an adopted dictionary input and not derived from J
+QUADRATIC-DECODER-DATA	DEF-QDD-MATTER-RECORD	REQUIRES	the MatterData schema named by the STOP clause: the five typed fields of MatterData_QDD
+QUADRATIC-DECODER-DATA	DEF-QDD-DIRECT-WRITE	REQUIRES	the exact write map named by the STOP clause: D_QDD_direct = R_cyc o iota_B0 o beta_QDD : K_QDD -> MatterData_QDD
 SQRT-PHI-TIME-GRAVITY	DEF-DECODER-CLOCK	REQUIRES	the clock leg targets the declared D_clock and ObservableHistory interface
 SQRT-PHI-TIME-GRAVITY	METRO-TICK	REQUIRES	the registered dimensionless tick is an inherited clock input, not the missing bridge
 SQRT-PHI-TIME-GRAVITY	GRAVITY-BRIDGE-LAW	REQUIRES	the existing equation-layer gravity dictionary is an input but supplies no Y-to-source map
