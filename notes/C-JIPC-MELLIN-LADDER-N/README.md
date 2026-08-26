@@ -42,3 +42,31 @@ the public-review disposition and repairs are recorded in these
 audit-amended v3/v2 notes. These files are discovery context in the
 sense of the probe discipline: they are not evidence, not a premise,
 and not an instruction for any probe.
+
+## Public probe draft deposit (route A, step 1)
+
+Added after the governance review above, as preparation for the
+selected public route A:
+
+- `WP3D_QPOS_PUBLIC_PREREG_DRAFT_v1.md` — a self-contained draft
+  preregistration for the future public probe
+  `P-JIPC-WP3D-QPOS-MELLIN-1` (identifier NOT claimed). The bridge
+  is public: `C(1/2)^2 = p_I` via the Beta-midpoint route inside the
+  primary graph, with the public Machin bridge `p_I = p_M` consuming
+  only the merged WP3E name (well-definedness of `A_q` re-proven
+  internally). All freeze blockers FZ1-FZ6 are resolved with
+  concrete values; full written proofs Q1-Q8 are carried in the
+  draft itself; FIRED is separated from STOP with the WP3E exit
+  contract and a BOUNDED-AUDIT-C fallback.
+- `wp3d_qpos_public_verify_draft.py` — the matching draft verifier:
+  exact `Fraction`-only audit (ring `Q[g,g^-1]`, `p_hat = g^2`;
+  lattice `N_input=6`, `N_value=12`, EOC on `s in {1,2,3}`; modulus,
+  Machin, form-identity and residual gates; 23 negative controls
+  wired to the same guards the PASS path consumes). Static audit
+  only: `py_compile` plus an AST scan (zero `ast.Div`, zero float
+  literals, single import). **Never executed** — `DEV_EXECUTION =
+  NONE`; the first run is the formal run after claim lock and pin.
+
+Both files are notes-lane drafts: no claim, no pin, no run, no
+gate change. Claim lock, move to `probes/`, pin, and the formal run
+are maintainer steps.
