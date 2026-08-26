@@ -2,6 +2,10 @@
 
 ```text
 status   NON-CANONICAL. Process note. Moves nothing, proposes one contract line.
+revision 2. Owner public review of 2026-08-26 applied: two factual errors in
+         the verified section corrected (7.1, 7.3) and the owner's refined
+         formulation recorded (section 8). Sections 1-6 reproduce the original
+         ruling unaltered.
 date     2026-08-26
 origin   owner ruling, in his words: it makes no sense at all to look for why
          five should be forced, if we build J as an axiom. An axiom is an
@@ -130,7 +134,10 @@ section records only what was checked against `mathorn1973/twist-j` at Public
 Canon v66, so that the cross-references above are not read as claims about this
 repository's contents.
 
-### 7.1 Four of the five referenced documents are not here
+### 7.1 None of the five referenced documents is held here
+
+*(Revision 2: the revision-1 heading said "four of the five" while the table
+below marks all five absent; the count is corrected.)*
 
 ```text
 FOLD-RECORD-CANON-v65_2026-08-25.md      NOT PRESENT. There is no claude/
@@ -184,8 +191,13 @@ the phrasing the note says reads as a derivation on a quick read. This is the
 same defect the note records against `DVE-MINIMALITY-A-SEV`, one layer up, in
 normative text rather than in a note.
 
-`canon/CORE.md` does not carry the phrase. The short orientation document, where
-a quick reader is most exposed, is clean.
+*(Revision 2 correction.)* Revision 1 claimed `canon/CORE.md` does not carry
+the phrase; that was wrong — a case-sensitive search missed the heading.
+`canon/CORE.md` line 58 is titled `## Why five, twice`, so the flagged framing
+sits in the short orientation document as well, where a quick reader is most
+exposed. The finding is therefore *stronger* than revision 1 stated: both
+normative documents carry the "why five" framing, and neither carries the
+ruling's sentence that none of it is evidence for the axiom.
 
 Recording this is not a proposal to edit the Canon. Under the contract line of
 section 5 the fix is a label, not a row change, and any wording change to
@@ -209,3 +221,28 @@ It creates no claim, definition, probe, evidence row, gate or dependency. It
 proposes one contract line and records four repository facts. It does not amend
 `POLICY.md`, `AGENTS.md` or any `canon/` file, and the contract line of section
 5 is not in force until a sealed fold puts it there.
+
+---
+
+## 8. Owner review refinement (revision 2, 2026-08-26)
+
+On public review the owner kept the core of the rule and refined its
+formulation. The refined contract line, recorded verbatim:
+
+```text
+TWIST-J posits J = 1 + zeta_5^2 as a primitive axiom. No theorem internal to
+TWIST-J is presented as deriving or justifying it. Where a well-typed
+comparison family exists, uniform and p = 5-specific content are
+distinguished for attribution only.
+```
+
+One substantive correction to the reproduced ruling: impermissible framing is
+**not automatically scientific `[F]`**. The axiom of one theory can be a
+theorem of a stronger theory; within TWIST-J it is simply primitive. The
+sentence "Any argument of this shape is [F] on sight" in section 2 stands as
+the owner's original wording and is superseded by this refinement: a
+derivation-shaped argument is a process violation to be corrected or
+re-titled, not a registered scientific falsification.
+
+Like the section-5 line it refines, this formulation is not in force until a
+sealed fold adopts it.
