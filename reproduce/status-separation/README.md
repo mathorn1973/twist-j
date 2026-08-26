@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its fifty-seven checks cover the current
+and emits deterministic text. Its fifty-nine checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -92,6 +92,8 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v66 count check reads the maintenance tree (327 claims, 23 reproductions, 11 gates, 599 dependency edges). The V66-QDD-WIRING check requires QUADRATIC-DECODER-DATA to carry exactly nineteen REQUIRES edges: its five inherited lineage edges and the fourteen new edges to the DEF-QDD-* definitions its STOP clause names. It requires the row to stay O with an empty gate slot, no gate to name it as owner, its DECODER_CORE/ROOT/STOP program row to be unchanged, and HISTORY to release no row under canon-v66. It also requires the fourteen new edges to leave the row only, so the transitive closure of DEF-QDD-DIRECT-WRITE acquires no factor-side object. No claim, status, scope, evidence pointer, gate or science count moves. The permanent QDD direct-write firewall remains the final check.
 
 The v65 count check reads the two-row fold (327 claims, 23 reproductions, 11 gates). The V65-RESIDUE check pins J-RESIDUE-PERIOD and J-RESIDUE-COLLAPSE-FIVE at T and L1 to the completed two-architecture public probe, their exact scope hashes, the two declared edges of the period row to J-UNIT and J-STEP, the single edge of the collapse row to the period row, and no gate or frontier ownership. The period row carries the word rational in its scope, leaves the inert prime two to J-BINARY-NORM-INDEX, and excludes archimedean, automaton, spectrum, selector, decoder, physical and higher-layer claims. The permanent QDD direct-write firewall remains the final check.
 

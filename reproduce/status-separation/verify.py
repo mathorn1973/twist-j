@@ -145,11 +145,11 @@ def run():
                        "O": 27, "H": 3}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v65",
+        "registry and companion-ledger counts match Public Canon v66",
         len(rows) == 327
         and counts == expected_counts
         and len(normative) == 373
-        and len(dependencies) == 585
+        and len(dependencies) == 599
         and len(evidence) == 327
         and two_architecture == 243
         and len(history) == 849
@@ -4233,6 +4233,49 @@ def run():
                 and v65_events[claim]["evidence_location"] == v65_probe
                 and v65_events[claim]["evidence_sha256"] == v65_bundle
                 for claim in (v65_period, v65_collapse)),
+    ))
+
+    v66_row = "QUADRATIC-DECODER-DATA"
+    v66_named = {
+        "DEF-QDD-COEFFICIENT-Q", "DEF-QDD-BALANCED-PISTON", "DEF-QDD-DOMAIN-K0",
+        "DEF-QDD-AMPLITUDE-B0", "DEF-QDD-GRAM", "DEF-QDD-DAGGER",
+        "DEF-QDD-TRANSPOSE", "DEF-QDD-QCARRIER-EQUALITY", "DEF-QDD-QPAIR",
+        "DEF-QDD-PROJECTOR-LOW", "DEF-QDD-PROJECTOR-HIGH",
+        "DEF-QDD-BRANCH-WEIGHT-PAIRING", "DEF-QDD-MATTER-RECORD",
+        "DEF-QDD-DIRECT-WRITE",
+    }
+    v66_lineage = {
+        "DEF-ARCHITECTURE", "DEF-DECODER-MATTER", "READING-SPLIT",
+        "COUPLINGS-DETERMINE", "MEASURE-BORN-VERB",
+    }
+    v66_edges = {
+        row["depends_on"] for row in dependencies
+        if row["item_id"] == v66_row and row["relation"] == "REQUIRES"
+    }
+    v66_events = [
+        row for row in history if row["release"].startswith("canon-v66")
+    ]
+    checks.append((
+        "V66-QDD-WIRING",
+        "the open quadratic row gains exactly the fourteen REQUIRES edges to "
+        "the definitions its STOP clause names, while its status, gate slot, "
+        "program row and the direct-write firewall stay fixed and the fold "
+        "releases no lifecycle event",
+        v66_edges == v66_named | v66_lineage
+        and len(v66_edges) == 19
+        and has_status(index, v66_row, "O")
+        and normative[v66_row]["item_type"] == "OBLIGATION"
+        and normative[v66_row]["gate_ids"] == ""
+        and all(row["owner_item_id"] != v66_row for row in gates.values())
+        and programs[v66_row]["program_id"] == "DECODER_CORE"
+        and programs[v66_row]["queue_role"] == "ROOT"
+        and programs[v66_row]["work_state"] == "STOP"
+        and not v66_events
+        and not fw_qdd & (v66_named - {
+            "DEF-QDD-COEFFICIENT-Q", "DEF-QDD-BALANCED-PISTON",
+            "DEF-QDD-DOMAIN-K0", "DEF-QDD-AMPLITUDE-B0",
+            "DEF-QDD-MATTER-RECORD", "DEF-QDD-DIRECT-WRITE",
+        }),
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
