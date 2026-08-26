@@ -1,0 +1,10 @@
+P-J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL-1 verify
+scope: exact L1 shell, local Reynolds descent, group-ring Mobius lift; no analytic or RH claim
+G1 fixed-line cross-label p<=997 (168 primes; split=78 inert=89 ramified=1); same-root p=11 FIRED-AS-EXPECTED PASS
+G2 finite-phi odd subspace rank one (156 oriented split lines; p=2,5 boundaries) PASS
+G3 integral sign extension index=2; normalized local invariant lift requires 1/2 PASS
+G4 unique frozen Reynolds weights a=b=1/2; squarefree local product through degree 8 PASS
+G5 global locally relabeling-invariant Mobius lift n<=5000; independent convolution n<=2000 PASS
+G6 augmentation=M(N) and constant-term=no-split Mobius sum at 4 checkpoints through N=5000 PASS
+G7 scalar correction tail 2-u-u^-1 in degrees 2..8 FIRED-AS-EXPECTED PASS
+RESULT 7/7 ALL PASS
