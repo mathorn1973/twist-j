@@ -1,12 +1,12 @@
 cff-version: 1.2.0
-message: "If you use TWIST-J Public Canon v66, cite it as below."
+message: "If you use TWIST-J Public Canon v67, cite it as below."
 title: "TWIST-J Public Canon"
 authors:
   - family-names: "Thorn"
     given-names: "A. M."
     orcid: "https://orcid.org/0009-0008-5463-278X"
-version: "66"
-date-released: 2026-08-26
+version: "67"
+date-released: 2026-08-27
 license: Apache-2.0
 repository-code: "https://github.com/mathorn1973/twist-j"
 url: "https://twistj.com/canon/"

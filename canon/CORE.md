@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v66. Normative authority and activation
+**Release identity:** Public Canon v67. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -11,7 +11,12 @@ probability, and fields are readings. Its single algebraic axiom is
 J = 1 + zeta_5^2.
 ```
 
-Public Canon v66 also declares a discrete architecture. It does not
+TWIST-J posits this as a primitive axiom. No theorem within TWIST-J is
+presented as deriving or justifying it. Where a well-typed comparison family
+exists, uniform and `p = 5`-specific content are distinguished for attribution
+only.
+
+Public Canon v67 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -55,9 +60,10 @@ no surviving factor, classification, universality, carrier, physical
 bridge, completion-wide terminality result, evidence, or status change,
 and it authorizes no verifier or probe.
 
-## Why five, twice
+## Two field characterisations involving five
 
-Two independent L1 theorems now answer two different arithmetic questions.
+Two independent L1 theorems characterize two narrow arithmetic classes
+involving five. Neither derives or justifies the primitive axiom.
 
 - QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T] says that among full
   quartic cyclotomic fields, the complete total-ramification locus is exactly
@@ -68,9 +74,10 @@ Two independent L1 theorems now answer two different arithmetic questions.
   even on CM conjugation, `Q(zeta_5)` is the unique absolute-discriminant
   minimizer, with minimum `125`.
 
-These are separate frozen classes, not a physical-selection chain. Total
-ramification is not a premise of the minimum theorem, and neither theorem says
-that its class or optimization rule is forced by `J`, the decoder, or Nature.
+These are separate frozen classes, not a physical-selection chain or evidence
+for the axiom. Total ramification is not a premise of the minimum theorem,
+and neither theorem says that its class or optimization rule is forced by
+`J`, the decoder, or Nature.
 TWO-PLACE-PHYSICS remains [D], and no live H or O row moves.
 
 <!-- BEGIN GENERATED CORE CLAIMS -->
