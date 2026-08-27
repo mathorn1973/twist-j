@@ -1,0 +1,4 @@
+# Candidate note text is intentionally unpinned; review wording may still move before merge.
+# The non-formal draft executable and its archived stdout remain pinned below.
+020209da354da08f506bc3d99fdd5abdc61dbdcb65942a6719fee91707157b6c  C-RAPIDITY-GOLDEN-LADDER-1_verifier.py
+138c1a1ba1de0f5556d9d175b8cc818191e52594beab0a07fe19a5aa234c1aba  stdout_rapidity_golden_ladder_1.txt
