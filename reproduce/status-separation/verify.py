@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 205, "D": 43, "C": 33, "F": 16,
-                       "O": 27, "H": 3}
+    expected_counts = {"T": 213, "D": 43, "C": 33, "F": 17,
+                       "O": 28, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v66",
-        len(rows) == 327
+        "registry and companion-ledger counts match Public Canon v67",
+        len(rows) == 336
         and counts == expected_counts
-        and len(normative) == 373
-        and len(dependencies) == 599
-        and len(evidence) == 327
-        and two_architecture == 243
-        and len(history) == 849
+        and len(normative) == 382
+        and len(dependencies) == 616
+        and len(evidence) == 336
+        and two_architecture == 251
+        and len(history) == 859
         and len(gates) == 11
         and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -648,10 +648,10 @@ def run():
                 "integrity STOP, not a scientific falsifier",
             )
         )
-        and "## Why five, twice" in core_text
+        and "## Two field characterisations involving five" in core_text
         and "{(K_5,5),(K_8,2)}" in core_text
         and "unique absolute-discriminant" in core_text
-        and "separate frozen classes, not a physical-selection chain"
+        and "separate frozen classes, not a physical-selection chain or evidence"
         in core_text
         and has_status(index, "TWO-PLACE-PHYSICS", "D")
         and abelian_cm not in programs,
@@ -2106,7 +2106,10 @@ def run():
             == "two-architecture"
             and all(row["item_id"] != claim for row in dependencies)
             and all(
-                row["item_id"] in INDEPENDENCE_ROWS
+                row["item_id"] in (
+                    *INDEPENDENCE_ROWS,
+                    "J-IDEAL-RAPIDITY-CHARACTER-LIFT",
+                )
                 for row in dependencies
                 if row["depends_on"] == claim
             )
@@ -3254,18 +3257,24 @@ def run():
     }
     checks.append((
         "DE-W-CONSTANT",
-        "the armed dark-energy reading enters at H on the completed public probe with exactly its three declared edges, while the register dictionary and the conformal-weight obligation keep their statuses and no gate, layer lift, or selection premise is created",
-        has_status(index, "DE-W-CONSTANT", "H")
-        and index["DE-W-CONSTANT"]["evidence"] == "probes/P-DE-W-ARMING-1"
-        and index["DE-W-CONSTANT"]["canon_section"] == "18. The frontier"
+        "the immutable dark-energy reading fires at F on the exact DESI DR2 R1 witness while its three declared edges remain fixed, the register dictionary and conformal-weight obligation do not move, and its L6 reading-only layer creates no gate, frontier program or replacement selection premise",
+        has_status(index, "DE-W-CONSTANT", "F")
+        and index["DE-W-CONSTANT"]["evidence"] == "probes/P-DE-W-ARMING-2"
+        and index["DE-W-CONSTANT"]["canon_section"] == "13. Gravity and cosmology"
+        and normative["DE-W-CONSTANT"]["item_type"] == "FALSIFIED"
+        and normative["DE-W-CONSTANT"]["status"] == "F"
         and evidence["DE-W-CONSTANT"]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence["DE-W-CONSTANT"]["location"]
+        == "probes/P-DE-W-ARMING-2"
+        and evidence["DE-W-CONSTANT"]["sha256"]
+        == "de047b7352a06cfa2ab5a71f128bc9f57bef41c9be4456af3ddc21e2863b5f17"
+        and evidence["DE-W-CONSTANT"]["hash_mode"]
+        == "bundle-manifest-sha256-v1"
         and evidence["DE-W-CONSTANT"]["architecture_requirement"]
         == "two-architecture"
-        and normative["DE-W-CONSTANT"]["layer"] == "NOT_APPLICABLE"
+        and normative["DE-W-CONSTANT"]["layer"] == "L6"
         and normative["DE-W-CONSTANT"]["gate_ids"] == ""
-        and tuple(programs["DE-W-CONSTANT"][field] for field in
-                  ("program_id", "queue_role", "work_state", "work_mode"))
-        == ("COSMOLOGY", "FOLLOWUP", "BLOCKED", "EMPIRICAL")
+        and "DE-W-CONSTANT" not in programs
         and de_w_edges == {
             ("COSMOLOGY-REGISTER", "DE-W-CONSTANT", "BOUNDED_BY"),
             ("DE-CONFORMAL-WEIGHT", "DE-W-CONSTANT", "BOUNDED_BY"),
@@ -3273,8 +3282,9 @@ def run():
         }
         and scope_contains_all(
             index, "DE-W-CONSTANT",
-            ("-14/15", "constant in a", "no derivation from j",
-             "no dictionary source", "no selection premise"),
+            ("-14/15", "constantly in a", "-211/200 +- 9/250",
+             "365/108", "322/125", "45625>34776", "10849/13500",
+             "only the committed register reading"),
         )
         and has_status(index, "COSMOLOGY-REGISTER", "D")
         and has_status(index, "DE-CONFORMAL-WEIGHT", "O")
@@ -3463,6 +3473,12 @@ def run():
         and scope_contains_all(index, "J-TORAL-PERIODIC-POINTS",
                                ("l_n^2", "(l_n - 2)^2", "finite-range"))
         and arith_edges == {
+            ("J-IDEAL-COUNT-QUADRATIC-CHARACTER",
+             "REGULATOR-TWO-LOG-PHI", "REQUIRES"),
+            ("J-IDEAL-COUNT-QUADRATIC-CHARACTER",
+             "CYCLOTOMIC-CLASS-NUMBER-ONE", "REQUIRES"),
+            ("J-IDEAL-RAPIDITY-CHARACTER-LIFT",
+             "CYCLOTOMIC-CLASS-NUMBER-ONE", "REQUIRES"),
             ("J-SIGNED-TRACE-MAHLER-RIGIDITY",
              "J-MAHLER-MEASURE", "REQUIRES"),
             ("J-MAHLER-MEASURE", "J-STEP", "REQUIRES"),
@@ -4276,6 +4292,235 @@ def run():
             "DEF-QDD-DOMAIN-K0", "DEF-QDD-AMPLITUDE-B0",
             "DEF-QDD-MATTER-RECORD", "DEF-QDD-DIRECT-WRITE",
         }),
+    ))
+
+    v67_theorems = (
+        "J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL",
+        "J-IDEAL-COUNT-QUADRATIC-CHARACTER",
+        "J-IDEAL-RATIONAL-MOBIUS-DESCENT",
+        "J-MERTENS-IDEAL-TWOSUM",
+        "J-IDEAL-RAPIDITY-CHARACTER-LIFT",
+        "J-RAPIDITY-TERNARY-SHELL-CENSUS",
+        "J-ZERO-RAPIDITY-ORIENTATION-FACTORIZATION",
+        "J-RAPIDITY-TERM-WISE-TRIANGLE-NOGO",
+    )
+    v67_bridge = "TRIVIAL-RAPIDITY-EVALUATION-BRIDGE"
+    v67_probe_contract = {
+        "J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL": (
+            "probes/P-J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL-1",
+            "99570433ba6df1b0af9d122b8d346626c00c1d9987a93f9c766624af05fbdb7c",
+        ),
+        "J-IDEAL-COUNT-QUADRATIC-CHARACTER": (
+            "probes/P-J-IDEAL-RATIONAL-MOBIUS-DESCENT-1",
+            "91bc03ae58804f952e83b59567eb2f257f06f533ec473a2b99c77c7d032e46ee",
+        ),
+        "J-IDEAL-RATIONAL-MOBIUS-DESCENT": (
+            "probes/P-J-IDEAL-RATIONAL-MOBIUS-DESCENT-1",
+            "91bc03ae58804f952e83b59567eb2f257f06f533ec473a2b99c77c7d032e46ee",
+        ),
+        "J-MERTENS-IDEAL-TWOSUM": (
+            "probes/P-J-IDEAL-RATIONAL-MOBIUS-DESCENT-1",
+            "91bc03ae58804f952e83b59567eb2f257f06f533ec473a2b99c77c7d032e46ee",
+        ),
+        "J-IDEAL-RAPIDITY-CHARACTER-LIFT": (
+            "probes/P-J-IDEAL-RAPIDITY-CHARACTER-LIFT-1",
+            "2463bbddbd5bc7158599d1493029331b2e7eb6a7bdfe6d87b15f52e154f11163",
+        ),
+        "J-RAPIDITY-TERNARY-SHELL-CENSUS": (
+            "probes/P-J-IDEAL-RAPIDITY-CHARACTER-LIFT-1",
+            "2463bbddbd5bc7158599d1493029331b2e7eb6a7bdfe6d87b15f52e154f11163",
+        ),
+        "J-ZERO-RAPIDITY-ORIENTATION-FACTORIZATION": (
+            "probes/P-J-IDEAL-RAPIDITY-CHARACTER-LIFT-1",
+            "2463bbddbd5bc7158599d1493029331b2e7eb6a7bdfe6d87b15f52e154f11163",
+        ),
+        "J-RAPIDITY-TERM-WISE-TRIANGLE-NOGO": (
+            "probes/P-J-IDEAL-RAPIDITY-CHARACTER-LIFT-1",
+            "2463bbddbd5bc7158599d1493029331b2e7eb6a7bdfe6d87b15f52e154f11163",
+        ),
+    }
+    v67_dependency_contract = {
+        "J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL": {
+            "SPLIT-PRIME-RAPIDITY-INDEPENDENCE",
+        },
+        "J-IDEAL-COUNT-QUADRATIC-CHARACTER": {
+            "J-GOLDEN-BRIDGE",
+            "REGULATOR-TWO-LOG-PHI",
+            "CYCLOTOMIC-CLASS-NUMBER-ONE",
+        },
+        "J-IDEAL-RATIONAL-MOBIUS-DESCENT": {
+            "J-IDEAL-COUNT-QUADRATIC-CHARACTER",
+        },
+        "J-MERTENS-IDEAL-TWOSUM": {
+            "J-IDEAL-RATIONAL-MOBIUS-DESCENT",
+        },
+        "J-IDEAL-RAPIDITY-CHARACTER-LIFT": {
+            "J-IDEAL-RATIONAL-MOBIUS-DESCENT",
+            "J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL",
+            "ARITHMETIC-RAPIDITY-DECOMPOSITION",
+            "SPLIT-PRIME-RAPIDITY-CLASS",
+            "SPLIT-PRIME-RAPIDITY-INDEPENDENCE",
+            "CYCLOTOMIC-CLASS-NUMBER-ONE",
+        },
+        "J-RAPIDITY-TERNARY-SHELL-CENSUS": {
+            "J-IDEAL-RAPIDITY-CHARACTER-LIFT",
+            "SPLIT-PRIME-RAPIDITY-INDEPENDENCE",
+        },
+        "J-ZERO-RAPIDITY-ORIENTATION-FACTORIZATION": {
+            "J-IDEAL-RAPIDITY-CHARACTER-LIFT",
+        },
+        "J-RAPIDITY-TERM-WISE-TRIANGLE-NOGO": {
+            "J-IDEAL-RAPIDITY-CHARACTER-LIFT",
+        },
+        v67_bridge: {
+            "J-IDEAL-RAPIDITY-CHARACTER-LIFT",
+        },
+    }
+    v67_actual_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in (*v67_theorems, v67_bridge)
+    }
+    v67_history_rows = [
+        row for row in history if row["release"] == "canon-v67-candidate"
+    ]
+    v67_events = {row["claim_id"]: row for row in v67_history_rows}
+    v67_event_claims = {*v67_theorems, v67_bridge, "DE-W-CONSTANT"}
+    checks.append((
+        "V67-RAPIDITY",
+        "eight exact rapidity and ideal rows enter at T/L1 on their frozen public probes, the trivial-evaluation transfer stays an inline O/STOP obligation, and the exact dependency, lifecycle, gate and frontier boundaries create no analytic, physical or higher-layer promotion",
+        all(has_status(index, claim, "T") for claim in v67_theorems)
+        and all(index[claim]["canon_section"] == "10. Relativity as counting"
+                for claim in v67_theorems)
+        and all(normative[claim]["item_type"] == "THEOREM"
+                and normative[claim]["status"] == "T"
+                and normative[claim]["layer"] == "L1"
+                and normative[claim]["gate_ids"] == ""
+                for claim in v67_theorems)
+        and all(evidence[claim]["evidence_id"] == "EV-" + claim
+                and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+                and evidence[claim]["location"] == v67_probe_contract[claim][0]
+                and evidence[claim]["sha256"] == v67_probe_contract[claim][1]
+                and evidence[claim]["hash_mode"]
+                == "bundle-manifest-sha256-v1"
+                and evidence[claim]["architecture_requirement"]
+                == "two-architecture"
+                for claim in v67_theorems)
+        and all(v67_actual_dependencies[claim] == {
+                    (dependency, "REQUIRES")
+                    for dependency in v67_dependency_contract[claim]
+                }
+                for claim in v67_theorems)
+        and all(row["owner_item_id"] not in v67_theorems
+                for row in gates.values())
+        and all(claim not in programs for claim in v67_theorems)
+        and scope_contains_all(
+            index, "J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL",
+            ("without choosing an orientation", "nonsplit extension",
+             "normalized Reynolds factor", "no global orientation"),
+        )
+        and scope_contains_all(
+            index, "J-IDEAL-COUNT-QUADRATIC-CHARACTER",
+            ("chi_A = chi_5", "exactly (1*chi_5)(n)",
+             "sharp complete coefficient bound", "no rapidity orientation"),
+        )
+        and scope_contains_all(
+            index, "J-IDEAL-RATIONAL-MOBIUS-DESCENT",
+            ("mu = b*chi_5 = b*chi_A", "before scalarization",
+             "no cancellation"),
+        )
+        and scope_contains_all(
+            index, "J-MERTENS-IDEAL-TWOSUM",
+            ("for every N>=1", "exact identities", "not an estimate"),
+        )
+        and scope_contains_all(
+            index, "J-IDEAL-RAPIDITY-CHARACTER-LIFT",
+            ("integral group-ring function bold_mu",
+             "augmentation sends every local factor to 1-T",
+             "distinct from the rational squarefree Reynolds lift"),
+        )
+        and scope_contains_all(
+            index, "J-RAPIDITY-TERNARY-SHELL-CENSUS",
+            ("exactly 3^a", "squarefree-only", "augmentation zero"),
+        )
+        and scope_contains_all(
+            index, "J-ZERO-RAPIDITY-ORIENTATION-FACTORIZATION",
+            ("C_0(s)", "O_5(s)",
+             "neither a rapidity character nor a twist"),
+        )
+        and scope_contains_all(
+            index, "J-RAPIDITY-TERM-WISE-TRIANGLE-NOGO",
+            ("T(N)", "N/4", "narrow attack-route no-go",
+             "l2 cancellation"),
+        )
+        and has_status(index, v67_bridge, "O")
+        and index[v67_bridge]["evidence"] == "inline"
+        and index[v67_bridge]["canon_section"] == "18. The frontier"
+        and normative[v67_bridge]["item_type"] == "OBLIGATION"
+        and normative[v67_bridge]["status"] == "O"
+        and normative[v67_bridge]["layer"] == "NOT_APPLICABLE"
+        and normative[v67_bridge]["gate_ids"] == ""
+        and evidence[v67_bridge]["evidence_id"] == "EV-" + v67_bridge
+        and evidence[v67_bridge]["evidence_kind"] == "INLINE_CANON"
+        and evidence[v67_bridge]["location"] == "inline"
+        and evidence[v67_bridge]["sha256"] == scope_sha256(index, v67_bridge)
+        and evidence[v67_bridge]["hash_mode"]
+        == "registry-scope-sha256-v1"
+        and evidence[v67_bridge]["architecture_requirement"] == "none"
+        and v67_actual_dependencies[v67_bridge] == {
+            ("J-IDEAL-RAPIDITY-CHARACTER-LIFT", "REQUIRES"),
+        }
+        and tuple(programs[v67_bridge][field] for field in
+                  ("program_id", "queue_role", "work_state", "work_mode"))
+        == ("ENRICHMENT", "ROOT", "STOP", "ENRICHMENT")
+        and all(row["owner_item_id"] != v67_bridge for row in gates.values())
+        and scope_contains_all(
+            index, v67_bridge,
+            ("uniform growing-mode diagonal route",
+             "non-diagonal mixing or kernel route",
+             "fixed nonzero integer mode", "no Hecke"),
+        )
+        and len(v67_history_rows) == 10
+        and set(v67_events) == v67_event_claims
+        and all(v67_events[claim]["event_sequence"] == "1"
+                and v67_events[claim]["event_date"] == "2026-08-27"
+                and v67_events[claim]["event_type"] == "DECLARE"
+                and v67_events[claim]["previous_status"] == "-"
+                and v67_events[claim]["new_status"] == "T"
+                and v67_events[claim]["scope_sha256"]
+                == scope_sha256(index, claim)
+                and v67_events[claim]["evidence_id"] == "EV-" + claim
+                and v67_events[claim]["evidence_location"]
+                == v67_probe_contract[claim][0]
+                and v67_events[claim]["evidence_sha256"]
+                == v67_probe_contract[claim][1]
+                for claim in v67_theorems)
+        and v67_events[v67_bridge]["event_sequence"] == "1"
+        and v67_events[v67_bridge]["event_date"] == "2026-08-27"
+        and v67_events[v67_bridge]["event_type"] == "DECLARE"
+        and v67_events[v67_bridge]["previous_status"] == "-"
+        and v67_events[v67_bridge]["new_status"] == "O"
+        and v67_events[v67_bridge]["scope_sha256"]
+        == scope_sha256(index, v67_bridge)
+        and v67_events[v67_bridge]["evidence_id"] == "EV-" + v67_bridge
+        and v67_events[v67_bridge]["evidence_location"] == "inline"
+        and v67_events[v67_bridge]["evidence_sha256"]
+        == scope_sha256(index, v67_bridge)
+        and v67_events["DE-W-CONSTANT"]["event_sequence"] == "2"
+        and v67_events["DE-W-CONSTANT"]["event_date"] == "2026-08-27"
+        and v67_events["DE-W-CONSTANT"]["event_type"] == "STATUS_CHANGE"
+        and v67_events["DE-W-CONSTANT"]["previous_status"] == "H"
+        and v67_events["DE-W-CONSTANT"]["new_status"] == "F"
+        and v67_events["DE-W-CONSTANT"]["scope_sha256"]
+        == scope_sha256(index, "DE-W-CONSTANT")
+        and v67_events["DE-W-CONSTANT"]["evidence_id"]
+        == "EV-DE-W-CONSTANT"
+        and v67_events["DE-W-CONSTANT"]["evidence_location"]
+        == "probes/P-DE-W-ARMING-2"
+        and v67_events["DE-W-CONSTANT"]["evidence_sha256"]
+        == "de047b7352a06cfa2ab5a71f128bc9f57bef41c9be4456af3ddc21e2863b5f17",
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

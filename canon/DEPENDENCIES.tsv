@@ -1,4 +1,21 @@
 item_id	depends_on	relation	basis
+J-IDEAL-COUNT-QUADRATIC-CHARACTER	J-GOLDEN-BRIDGE	REQUIRES	the quadratic character is the exact projective fixed-line deficit of the registered golden companion action
+J-IDEAL-COUNT-QUADRATIC-CHARACTER	REGULATOR-TWO-LOG-PHI	REQUIRES	the canonical associate domain uses the registered rank-one unit lattice and its exact two-log-phi regulator normalization
+J-IDEAL-COUNT-QUADRATIC-CHARACTER	CYCLOTOMIC-CLASS-NUMBER-ONE	REQUIRES	the ideal-count and unique principal-ideal representatives use the registered class-number-one theorem for the golden field
+J-IDEAL-RATIONAL-MOBIUS-DESCENT	J-IDEAL-COUNT-QUADRATIC-CHARACTER	REQUIRES	the scalar descent uses the exact identity chi_A = chi_5 and the ideal-count convolution owned by the character row
+J-MERTENS-IDEAL-TWOSUM	J-IDEAL-RATIONAL-MOBIUS-DESCENT	REQUIRES	the exact two-sum is coefficient summation of the registered ideal-to-rational Mobius convolution
+J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL	SPLIT-PRIME-RAPIDITY-INDEPENDENCE	REQUIRES	the squarefree group-ring lift uses independence of the distinct split-prime rapidity classes
+J-IDEAL-RAPIDITY-CHARACTER-LIFT	J-IDEAL-RATIONAL-MOBIUS-DESCENT	REQUIRES	the integral lift begins with the ideal-Mobius function before scalar descent
+J-IDEAL-RAPIDITY-CHARACTER-LIFT	J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL	REQUIRES	the integral shell retains the same exact root-to-ideal cross-label while changing the coefficient ring
+J-IDEAL-RAPIDITY-CHARACTER-LIFT	ARITHMETIC-RAPIDITY-DECOMPOSITION	REQUIRES	the Laurent exponents are the registered additive arithmetic rapidities of the golden field
+J-IDEAL-RAPIDITY-CHARACTER-LIFT	SPLIT-PRIME-RAPIDITY-CLASS	REQUIRES	each chosen prime ideal above a split prime supplies one orientation of the registered unordered rapidity class
+J-IDEAL-RAPIDITY-CHARACTER-LIFT	SPLIT-PRIME-RAPIDITY-INDEPENDENCE	REQUIRES	independence prevents collisions among Laurent words carried by distinct split primes
+J-IDEAL-RAPIDITY-CHARACTER-LIFT	CYCLOTOMIC-CLASS-NUMBER-ONE	REQUIRES	the ideal-first construction uses principal generators only under the registered class-number-one theorem
+J-RAPIDITY-TERNARY-SHELL-CENSUS	J-IDEAL-RAPIDITY-CHARACTER-LIFT	REQUIRES	the ternary shell is the squarefree coefficient census of the registered integral rapidity lift
+J-RAPIDITY-TERNARY-SHELL-CENSUS	SPLIT-PRIME-RAPIDITY-INDEPENDENCE	REQUIRES	rapidity independence makes all exponent words in the ternary shell distinct
+J-ZERO-RAPIDITY-ORIENTATION-FACTORIZATION	J-IDEAL-RAPIDITY-CHARACTER-LIFT	REQUIRES	the neutral coefficient and its Euler series are extracted from the registered integral rapidity lift
+J-RAPIDITY-TERM-WISE-TRIANGLE-NOGO	J-IDEAL-RAPIDITY-CHARACTER-LIFT	REQUIRES	the direct term-wise bound applies the augmentation inequality to the registered integral rapidity lift
+TRIVIAL-RAPIDITY-EVALUATION-BRIDGE	J-IDEAL-RAPIDITY-CHARACTER-LIFT	REQUIRES	the open transfer problem is defined at the distinguished augmentation of the integral rapidity lift
 J-RESIDUE-PERIOD	J-UNIT	REQUIRES	the period is the multiplicative order of the registered algebraic unit J in a residue ring
 J-RESIDUE-PERIOD	J-STEP	REQUIRES	the permutation of the m^4 residues is reduction of the registered exact step matrix M_J, whose determinant one makes it a bijection
 J-RESIDUE-COLLAPSE-FIVE	J-RESIDUE-PERIOD	REQUIRES	the collapse theorem states and prices the exact failure of the rational-modulus period law at one chosen prime above a split prime

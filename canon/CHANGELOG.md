@@ -1,11 +1,112 @@
 # Canon changelog (public series)
 
-## Public Canon v66
+## Public Canon v67
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 327 claims; 0 T-LOCK, 205 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Registry snapshot: 336 claims; 0 T-LOCK, 213 T, 43 D, 33 C, 2 H, 28 O, 17 F; 30 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v67 is a consolidated exact-arithmetic fold over the four public
+probes merged after v66. It registers eight theorem rows at L1 or formal
+Euler-factor scope, exposes one successor obligation, and records one frozen
+empirical falsifier. No theorem in this release crosses into a physical
+dictionary, probability or measure, an analytic cancellation estimate, a
+zeta-zero statement, or L2--L6.
+
+The ideal-to-rational package registers three rows. The projective fixed-line
+deficit of the golden companion action is exactly `chi_5`, the nonzero
+integral-ideal count is `1*chi_5`, and every principal ideal has one generator
+in the frozen half-open unit domain with the sharp `isqrt(n)` coefficient
+bound. Ideal Mobius then descends coefficientwise as
+`mu=(N_*mu_F)*chi_5`, and summation gives the two exact all-N Mertens two-sum
+identities. These are algebraic incidence identities, not estimates.
+
+The equivariant rapidity package registers the exact two-point split-prime
+shell, its root-to-opposite-ideal cross-label, rank-one odd space and nonsplit
+index-two integral permutation lattice. In the frozen two-resolvent class,
+independent relabelling and augmentation uniquely give the rational Reynolds
+factor and its squarefree group-ring lift. The lift is orientation-free,
+star-invariant and has exact augmentation and coefficient-norm readings; it
+selects no global orientation and supplies no summatory estimate.
+
+The integral ideal-rapidity package registers four more rows. The ideal-first
+Laurent-group-ring lift has the exact split, inert and ramified local factors
+and augments to rational Mobius. Its squarefree shell has exactly `3^a`
+distinct ternary monomials and the frozen coefficient norms, while a split
+prime power retains the stated nonzero refined residue with zero augmentation.
+The neutral coefficient and orientation-independent split-prime factor have
+the registered Euler products and multiply to `1/zeta` only as formal series
+and in the domain of absolute convergence. Finally, the direct
+coefficient-`l1` term-wise triangle route is proved not to be `o(N)`; the
+no-go is narrow and leaves other norms, growing modes and non-diagonal kernels
+open.
+
+`TRIVIAL-RAPIDITY-EVALUATION-BRIDGE [O]` makes that remaining transfer problem
+explicit. RH-strength positive closure must derive the all-epsilon Mertens
+bound from nontrivial information on the refined shell without importing an
+equivalent estimate or zero theorem. Its evidence is the canonical scope
+itself, not evidence credit from the predecessor probe; it is ROOT, STOP and
+keeps both a uniform growing-mode diagonal route and a controlled
+non-diagonal route admissible.
+
+`DE-W-CONSTANT` moves from H to F and leaves every other cosmology row
+untouched. The inherited R1 rule is evaluated on the first eligible DESI DR2
+headline flat-wCDM DESI+CMB record, `w=-211/200 +- 9/250`. Against the frozen
+`w=-14/15` reading, the exact witness is
+
+```text
+365/108 > 322/125,
+45625 > 34776,
+margin = 10849/13500.
+```
+
+The fired object is only the committed constant-w reading. It is not a
+derivation from J, does not alter `COSMOLOGY-REGISTER [D]`, and does not close
+or weaken `DE-CONFORMAL-WEIGHT [O]`.
+
+Two merged analysis notes are folded only at their warranted level. The Canon
+adopts the owner-refined axiom contract: J is primitive; theorems within
+TWIST-J do not derive or justify it; comparison families separate uniform from
+five-specific content for attribution only. The former "why five" passages
+are accordingly labelled as narrow field characterisations. The unit and
+two-place C60 identities from the Boolean-carry note are included as
+derived zero-credit synthesis of existing registered theorem rows, with the
+Gaussian and mod-5 controls stated. They create no claim, evidence,
+dependency, status, selector, physical bit, or odd-cyclotomic uniqueness
+result. The non-canonical frontier attack map remains an orientation plan and
+is not promoted into dependencies, gates, or scientific authority.
+
+The four evidence bundles are byte-identical under their accepted x86_64 and
+aarch64 runs. The release is frozen as one complete content commit followed by
+one release-form commit changing only `STATUS.md`, `README.md` and
+`CITATION.cff`; this entry records content and does not pre-authorize the tag.
+
+The v67 ledger change is:
+
+```text
+claims: 327 + 8 T + 1 O = 336,
+T: 205 + 8 = 213,
+D: 43 and C: 33, unchanged,
+H: 3 - 1 = 2,
+O: 27 + 1 = 28,
+F: 16 + 1 = 17,
+live H/O: 30, unchanged,
+normative items: 373 + 9 = 382,
+dependencies: 599 + 17 = 616,
+evidence rows: 327 + 9 = 336,
+gates: 11, unchanged,
+history rows: 849 + 9 declarations + 1 status change = 859,
+two-architecture evidence: 243 + 8 = 251,
+frontier scheduler rows: 30, unchanged,
+frontier program identifiers: 7, unchanged,
+reproductions: 23, unchanged.
+```
+
+## Public Canon v66
+
+Registry snapshot: 327 claims; 0 T-LOCK, 205 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v66 is a dependency-ledger maintenance fold. It records work that
 was already owed rather than work newly done, and it registers no scientific

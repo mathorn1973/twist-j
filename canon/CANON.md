@@ -1,14 +1,17 @@
-# TWIST-J Public Canon v66
+# TWIST-J Public Canon v67
 
-**Release identity.** Public Canon v66. Normative authority and activation
+**Release identity.** Public Canon v67. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
-geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v66 also declares the discrete
-architecture used to read that axiom. Those architectural definitions
+geometry, probability, and fields are readings of it. TWIST-J posits
+J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
+presented as deriving or justifying it. Where a well-typed comparison family
+exists, uniform and p = 5-specific content are distinguished for attribution
+only. Public Canon v67 also declares the discrete architecture used to read
+that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
 forms; the single SI calibration anchor is the electron mass m_e.
@@ -17,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v66 does not claim
+seed of the two algebraic projections. Public Canon v67 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -94,7 +97,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v66 contains no such
+deriving the architecture from J; Public Canon v67 contains no such
 theorem.
 
 ---
@@ -3262,6 +3265,100 @@ ramification in all number fields, identify a unique physical field or place,
 strengthen TWO-PLACE-PHYSICS [D], or define a decoder, Born measure, physical
 bit, clock, force, observable, or lift to L2-L6.
 
+### The unit decomposition and two-place C60 synthesis
+
+The registered L1 arithmetic above has the following zero-credit synthesis.
+Put `h = 1-J = -zeta_5^2`. Then
+
+```text
+h^5 = -1,       h^6 = J-1 = zeta_5^2,
+h^8 = zeta_5 = (J-1)^3.
+```
+
+The exponents 5 and 6 are the complementary CRT idempotents modulo 10, so on
+`<h> = mu_10` the maps `x -> x^5` and `x -> x^6` project to its `C_2` and
+`C_5` factors. They are not projections on the whole infinite unit group.
+Using `O^x = mu_10 x <phi>` and `J phi = zeta_5 = h^8` gives
+
+```text
+O^x = <1-J> x <J> ~= C_10 x Z,
+u = (1-J)^a J^b,       a in Z/10Z, b in Z,
+```
+
+with a unique normal form for every unit. Here and below `x` between displayed
+groups denotes a direct product inside `O^x`, not a Cartesian product of
+unrelated carriers.
+
+Put
+
+```text
+A = O/((2)(1-zeta_5)) ~= F_16 x F_5.
+```
+
+Let `red_A: O -> A` denote reduction. Then `A^x ~= C_15 x C_4 ~= C_60`.
+With the ordered CRT idempotents
+`e_2=(1,0)` and `e_5=(0,1)`, set
+
+```text
+r = (J mod 2,1),       w = (1,2),       g = red_A(J) = r w.
+```
+
+Then `ord(r)=15`, `ord(w)=4`, and `ord(g)=60`, so `g` generates all of
+`A^x`. Put `C_10 = red_A(<1-J>) <= A^x` and `C_15 = <r> <= A^x`. The
+torsion and inert directions form the exact fork
+
+```text
+C_10 intersect C_15 = C_5,
+<C_10,C_15> = C_30.
+```
+
+The remaining doubling
+
+```text
+1 -> C_30 -> C_60 -> C_2 -> 1
+```
+
+is nonsplit. For the normalized section `s(0)=1`, `s(1)=w`, its factor
+cocycle is
+
+```text
+c(a,b) = s(a)s(b)s(a XOR b)^-1 = red_A(-1)^(ab),
+c(1,1) = w^2 = (1,-1) = red_A(-1).
+```
+
+On the local `1 -> C_2 -> C_4 -> C_2 -> 1` restriction, the exponent `ab`
+is exactly AND and is the unique nonzero normalized `C_2` cocycle. No
+uniqueness among all normalized `C_30`-valued representatives is asserted.
+
+Two controls delimit this synthesis. The Gaussian quotient
+`Z[i]/((2)(2+i))` has the same four-element idempotent algebra as `A` but unit
+group `C_2 x C_4`, so CRT idempotents alone do not determine the unit profile,
+the element `red_A(-1)`, or the cocycle. In the different nonreduced ring
+`O/(5)`, the order-five directions `<J^4>` and `<zeta_5>` are transverse:
+
+```text
+<J^4> intersect <zeta_5> = {1},
+<J^4,zeta_5> ~= C_5 x C_5.
+```
+
+Consequently the two order-twenty subgroups are distinct and have exactly
+their shared order-four scalar factor in common:
+
+```text
+C_20^J = <J> = <2> x <J^4>,
+C_20^zeta = <2> x <zeta_5>,
+C_20^J intersect C_20^zeta = <2> ~= C_4.
+```
+
+Thus order 20 alone does not select the J-generated subgroup. This entire
+subsection is only a derived synthesis of existing registered theorem rows,
+reconciled from `notes/C-BOOLEAN-CARRY-J-ORBIT-1.md`. It creates no Registry,
+Evidence, Dependency, Gate, Frontier, or status row and earns no new evidence
+credit. It does not select `J` from its Galois orbit, establish the note's
+separate odd-cyclotomic uniqueness target, identify a physical bit or place,
+strengthen TWO-PLACE-PHYSICS [D], or provide a decoder, measure, SI statement,
+or lift to L2-L6.
+
 A second exact theorem answers a different minimization question
 (ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM [T],
 `probes/P-ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM-1`). For a finite
@@ -3336,19 +3433,22 @@ Equality forces both conductors to be five. An order-four character modulo
 five is faithful on `(Z/5Z)^x=C_4`, so its field is the full `Q(zeta_5)`.
 Conversely `Q(zeta_5)` belongs to `A` and has discriminant `5^3=125`.
 
-The two L1 results now supply two independent answers to "why five":
+The two L1 results are independent field characterisations involving five:
 
 ```text
-ramification answer: among full quartic cyclotomic fields, the complete
-                     total-ramification locus is {(K_5,5),(K_8,2)};
-minimum answer:      in the abelian Galois CM unique-even-bit class A,
-                     K_5 is the unique absolute-discriminant minimizer.
+ramification characterisation: among full quartic cyclotomic fields, the
+                               complete total-ramification locus is
+                               {(K_5,5),(K_8,2)};
+minimum characterisation:      in the abelian Galois CM unique-even-bit
+                               class A, K_5 is the unique
+                               absolute-discriminant minimizer.
 ```
 
-The answers use different frozen classes and are not a physical selection
-chain. Total ramification is not a premise of the minimum theorem; the class
-`A` and discriminant minimization are not claimed to be forced by `J`, the
-decoder, or Nature. In particular `K_8` has Galois group `C_2 x C_2` and does
+The characterisations use different frozen classes and are not a physical
+selection chain. Neither derives or justifies the primitive axiom. Total
+ramification is not a premise of the minimum theorem; the class `A` and
+discriminant minimization are not claimed to be forced by `J`, the decoder,
+or Nature. In particular `K_8` has Galois group `C_2 x C_2` and does
 not satisfy the unique-bit premise. Neither theorem promotes
 TWO-PLACE-PHYSICS [D], derives a write/read assignment, or supplies a decoder,
 Born measure, physical bit, clock, force, observable, or lift to L2-L6.
@@ -5173,6 +5273,224 @@ inert or ramified diagonalization, gamma or polar term, completed-zeta
 compression, Weil positivity, RH or zero-simplicity statement, decoder,
 measure, physical or SI reading, or L2--L6 lift.
 
+### J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL [T]
+
+For every split rational prime `p` and every root `t` of
+`t^2-t-1 = 0 mod p`, the `phi` fixed line is cross-labelled by the other
+prime ideal:
+
+```text
+E_t = F_p(1,t) = p_(1-t)/p O_F.
+```
+
+Branch exchange moves the line, ideal, oriented rapidity, and odd coordinate
+`2t-1` together, without choosing an orientation. The odd coefficient space
+is the one-dimensional line `F_p(2t-1)`, with `(2t-1)^2=5`. Integrally, the
+two-point permutation module is a nonsplit extension of the trivial lattice
+by the sign lattice; the sum/difference sublattice has index two. Inside the
+frozen rational span of the two oriented resolvents, independent relabelling
+and scalar augmentation therefore uniquely force the normalized Reynolds
+factor
+
+```text
+Ctilde_p(T) = (1/2) ((1-u_p T)^-1 + (1-u_p^-1 T)^-1).
+```
+
+The resulting squarefree group-ring lift is
+
+```text
+mutilde(n) = mu(n)/2^|S(n)|
+             sum_(epsilon_p=+-1) prod_(p in S(n)) u_p^epsilon_p
+```
+
+for squarefree `n`, and zero otherwise. It is star invariant and independently
+relabelling invariant, with
+
+```text
+aug(mutilde(n)) = mu(n),       ||mutilde(n)||_1 = |mu(n)|.
+```
+
+For `P_N=sum_(n<=N)mutilde(n)`, augmentation is `M(N)` and the constant term
+is the sum of `mu(n)` over `n<=N` having no split prime divisor. Reynolds
+uniqueness is asserted only in the displayed two-resolvent correction class.
+This L1 theorem selects no global orientation and supplies no probability,
+Haar, Hecke, automorphic, summatory, RH, physical, or L2--L6 statement.
+
+### Ideal count, rational descent, and exact Mertens two-sum
+
+Let
+
+```text
+F = Q(sqrt5),       O_F = Z[phi],       A = [[0,1],[1,1]],
+e_p = #Fix([A] on P^1(F_p)),            chi_A(p) = e_p-1.
+```
+
+With complete multiplicative extension, quadratic reciprocity and the direct
+checks at 2 and 5 give `chi_A=chi_5`. If `a_F(n)` counts nonzero integral
+ideals of norm `n`, then
+
+```text
+a_F = 1 * chi_5.
+```
+
+Modulo sign and `O_F^x={+-phi^k}`, every nonzero principal ideal has exactly
+one generator `a+b phi` in the half-open domain
+`1 <= |sigma+(x)|/|sigma-(x)| < phi^2` with `a>0`. Its exact integer test and
+sharp complete bound are
+
+```text
+b(2a+b) >= 0,       a(2b-a) < 0,
+|a|,|b| <= sqrt(|N(x)|),       B(n) = isqrt(n).
+```
+
+These statements form J-IDEAL-COUNT-QUADRATIC-CHARACTER [T]. The fixed line
+`E_t` is again cross-labelled by the ideal `p_(1-t)`; no rapidity orientation
+is selected.
+
+For the ideal Mobius descent
+
+```text
+b(n) = sum_(N(a)=n) mu_F(a),
+```
+
+the split, inert, and ramified prime-local factors are respectively
+
+```text
+(1-T)^2,       1-T^2,       1-T.
+```
+
+Multiplication by the local `chi_5` series gives `1-T` in every case. Hence,
+coefficient by coefficient for all `n>=1`,
+
+```text
+mu = b * chi_5 = b * chi_A.
+```
+
+This is J-IDEAL-RATIONAL-MOBIUS-DESCENT [T]. It is proved from ideal
+valuations before scalarization, without using rational `mu`, zeta, or an
+L-function as a construction input.
+
+Finally, put `S_5(m)=sum_(d<=m)chi_5(d)`. Its exact residue law is
+
+```text
+S_5(m) =  1  for m = 1 mod 5,
+         -1  for m = 3 mod 5,
+          0  for m = 0,2,4 mod 5.
+```
+
+For every `N>=1`, summing the descent identity gives
+
+```text
+M(N) = sum_(a<=N) b(a) S_5(floor(N/a))
+     = sum_(a<=N, floor(N/a)=1 mod 5) b(a)
+       - sum_(a<=N, floor(N/a)=3 mod 5) b(a).
+```
+
+This is J-MERTENS-IDEAL-TWOSUM [T]. Both formulas are exact algebraic
+incidence identities, not estimates, convergence results, zero statements,
+or RH input. All three rows in this subsection are L1 only and add no
+physical reading or lift to L2--L6.
+
+### The integral ideal-rapidity lift and ternary shells
+
+Choose one prime ideal above every split rational prime and write `X_p` and
+`X_p^-1` for its two independent rapidity directions. Let `bold_b` retain
+the actual ideal valuations and rapidities in the ideal Mobius sum, and set
+
+```text
+bold_mu = bold_b * (chi_5[0]).
+```
+
+Its local factor is
+
+```text
+((1-X_p T)(1-X_p^-1 T))/(1-T)   at a split prime,
+1-T                              at an inert prime or p=5.
+```
+
+Thus at a split prime
+
+```text
+bold_mu(p)   = 1-X_p-X_p^-1,
+bold_mu(p^k) = 2-X_p-X_p^-1       for every k>=2.
+```
+
+Augmentation `X_p->1` sends every local factor to `1-T`, so
+`aug(bold_mu(n))=mu(n)` for every positive integer. The root-to-ideal
+cross-label is preserved before scalarization. This is
+J-IDEAL-RAPIDITY-CHARACTER-LIFT [T], at L1 and formal Euler-factor scope.
+It is integral and has a nonzero split-prime-power tail; it is not the
+rational, squarefree Reynolds lift above.
+
+If squarefree `n` has `a` split prime factors and `b` inert or ramified prime
+factors, then
+
+```text
+bold_mu(n) = (-1)^b prod_(p split, p|n)(1-X_p-X_p^-1).
+```
+
+Rapidity independence makes all words in `{-1,0,1}^a` distinct, and hence
+
+```text
+|supp bold_mu(n)| = ||bold_mu(n)||_1 = ||bold_mu(n)||_2^2 = 3^a,
+aug(bold_mu(n)) = (-1)^(a+b) = mu(n),
+```
+
+with every coefficient equal to `+-1`. At a split prime every exponent
+`k>=2` leaves the nonzero residue `2-X_p-X_p^-1`, of support 3, coefficient
+`l1` norm 4 and squared coefficient `l2` norm 6, while its augmentation is
+zero; an inert or ramified square kills its local factor. This squarefree
+census and the stated prime-power boundary form
+J-RAPIDITY-TERNARY-SHELL-CENSUS [T] at L1. They make no probabilistic,
+cancellation, RH, physical, or L2--L6 claim.
+
+### Zero rapidity and the direct-triangle boundary
+
+Let `c_0(n)` be the identity-monomial coefficient of `bold_mu(n)`. Its local
+series is `(1+T^2)/(1-T)` at split primes and `1-T` at inert primes and 5.
+As a formal Euler identity, and as an absolutely convergent Euler product for
+`Re(s)>1`,
+
+```text
+C_0(s) = sum_(n>=1) c_0(n)n^-s
+       = L(s,chi_5)L(2s,chi_5)/zeta(4s)
+         * (1-5^-s)/(1-5^-4s).
+```
+
+The orientation-independent scalar split-prime product
+
+```text
+O_5(s) = prod_(chi_5(p)=1) (1-p^-s)^2/(1+p^-2s)
+```
+
+is neither a rapidity character nor a twist, and satisfies
+
+```text
+1/zeta(s) = C_0(s) O_5(s),
+O_5(s) = zeta(4s)/(zeta(s)L(s,chi_5)L(2s,chi_5))
+         * (1-5^-4s)/(1-5^-s).
+```
+
+The ramified ratio has the infinite one-prime expansion
+`(1-T)/(1-T^4)=sum_(j>=0)(T^(4j)-T^(4j+1))`. These exact formal and
+`Re(s)>1` statements form J-ZERO-RAPIDITY-ORIENTATION-FACTORIZATION [T].
+They assert no continuation, zero location, cancellation, RH, or physical
+reading.
+
+For every Laurent polynomial `f`, `|aug(f)|<=||f||_1`. Therefore
+
+```text
+T(N) := sum_(n<=N)||bold_mu(n)||_1
+     >= sum_(n<=N)|mu(n)| > N/4        for every N>=1,
+```
+
+where the strict final inequality is the elementary squarefree union bound.
+Consequently the direct coefficient-`l1` termwise triangle upper bound for
+this lift is not `o(N)`. This is J-RAPIDITY-TERM-WISE-TRIANGLE-NOGO [T], a
+narrow exact-arithmetic attack-route no-go. It says nothing against `l2`
+cancellation, a uniform growing mode, a non-diagonal kernel, another norm,
+an RH-strength transfer, physics, or L2--L6.
+
 ### SUZUKI-LOCAL-CAPACITY-NOGO [T]
 
 One classical no-go complex on the screw function of the Riemann zeta
@@ -6435,16 +6753,32 @@ Its proton and cosmology assignments belong only to that dictionary.
 GYRON-DENSITY itself is not a mass density, cosmological parameter,
 Born multiplier, physical probability, or L5-to-L6 measure statement.
 
-The committed dark-energy form is additionally armed as a live empirical
-hypothesis. DE-W-CONSTANT [H] carries w_DE(a) = -14/15 = -1 + 1/(d p) with
-d = 3 and p = 5, exactly and constant in a, equivalently rho_DE proportional
-to a^(-1/5), in the standard flat FRW fluid convention, and its falsifier is
-frozen on the named survey carrier DESI, DES, Euclid and CMB-S4
-(probes/P-DE-W-ARMING-1). The row is a reading of the committed register
-form and derives nothing: COSMOLOGY-REGISTER [D] remains the source of that
-form with its comparisons fenced, no dictionary source is selected, and
-DE-CONFORMAL-WEIGHT [O] remains open and untouched, with DE-W-CONSTANT
-refused as a selection premise there by the CIRCULAR clause of that row.
+The committed dark-energy reading has fired its frozen empirical rule.
+DE-W-CONSTANT [F] still names the exact constant form
+`w_DE(a)=-14/15=-1+1/(d p)` with `d=3`, `p=5`, equivalently
+`rho_DE` proportional to `a^(-1/5)` in the standard flat FRW fluid
+convention. The frozen DESI DR2 headline flat constant-`w` fit DESI+CMB is
+
+```text
+w_mean = -1.055 = -211/200,       sigma = 0.036 = 9/250.
+```
+
+Against the immutable two-sided witness bar `322/125`, the exact Gaussian
+readback is
+
+```text
+|w_mean+14/15|/sigma = 365/108 > 322/125,
+365*125 = 45625 > 34776 = 322*108,
+365/108-322/125 = 10849/13500.
+```
+
+Rule R1 therefore fires and falsifies the committed reading
+(`probes/P-DE-W-ARMING-2`). The result says nothing about evolving `w0waCDM`
+fits and refutes no derivation of `w` from `J`: COSMOLOGY-REGISTER [D]
+remains the source of the committed form with its comparisons fenced.
+DE-CONFORMAL-WEIGHT [O] remains open and untouched, no dictionary source is
+selected, and its CIRCULAR clause continues to refuse DE-W-CONSTANT as a
+selection premise.
 
 Independently, freeze the six golden projective lines with representatives
 
@@ -7515,6 +7849,35 @@ positively and what closes it negatively. The COIN-MINIMAL-READ [D]
 paragraph below is status-separation context for its live O owner, not a
 frontier row.
 
+### TRIVIAL-RAPIDITY-EVALUATION-BRIDGE [O]
+
+The integral ideal-rapidity lift in section 10 recovers rational Mobius by
+the distinguished augmentation `X_p->1`, but independence of the nontrivial
+rapidity directions does not make that evaluation small. This obligation
+asks for controlled summatory cancellation at the augmentation directly from
+nontrivial information on the full refined shell.
+
+RH-strength positive closure requires, for every `epsilon>0`, a non-circular
+derivation of
+
+```text
+|sum_(n<=N) aug(bold_mu(n))| = O_epsilon(N^(1/2+epsilon))
+```
+
+without assuming an equivalent Mertens estimate, a zeta-zero statement, or
+the target bound itself. At least two mathematically distinct routes remain
+admissible: a uniform growing-mode diagonal route `h=h(N)` with explicit
+approximation and transfer error, and a non-diagonal mixing or kernel route
+with controlled operator norm and reconstruction error. Bounds for every
+fixed nonzero integer mode do not alone close the row, and a weaker explicit
+cancellation rate is partial progress only.
+
+The row is ROOT, STOP, and action-layer `NOT_APPLICABLE` until a complete
+non-circular transfer mechanism and its domain, approximation or kernel,
+uniform norm, and reconstruction errors are frozen. Failure of one candidate
+or of all fixed-mode estimates is STOP, not negative closure. No Hecke,
+automorphic, Haar, probability, physical, or L1--L6 lift is asserted.
+
 ### BELL-CAUSAL-ACCOUNTING [O]
 
 Before TWIST-J can make a physical Bell, locality, nonlocality,
@@ -7675,7 +8038,8 @@ proof and byte-identical x86_64 and aarch64 transcripts audit its seven exact
 gates, with the full execution-integrity record retained in the evidence
 bundle. The fold adds only the unique absolute-discriminant
 minimum in the frozen abelian Galois CM unique-even-bit class and the concise
-Core synthesis of the two independent "why five" answers. It adds no claim
+Core synthesis of the two independent field-characterisation results, neither
+of which derives or justifies the primitive axiom. It adds no claim
 that the class, total ramification, or discriminant minimization is physically
 selected, no physical-field uniqueness, TWO-PLACE-PHYSICS promotion, decoder,
 measure, or L2-L6 lift, and no live H or O row moves.
@@ -8027,9 +8391,6 @@ COSMOLOGY
                              selecting the dark-energy density character;
                              FRW continuity alone is nonunique and no
                              trace-Gram dictionary is authorized
-  DE-W-CONSTANT              the committed dark-energy form w = -14/15
-                             armed as a live empirical row; falsifier
-                             frozen on DESI, DES, Euclid, CMB-S4
 COLOR
   ALPHA-S-RUNNING            the running above the 3/4 seed
   SCHEME-DICTIONARY          exact seeds to measured couplings; source-seed
@@ -8046,6 +8407,12 @@ PLENUM AND KERNEL
                              one equivalence class of spatial-curvature
                              operator after its carrier, measure,
                              projection, and commutator type are frozen
+RAPIDITY EVALUATION
+  TRIVIAL-RAPIDITY-EVALUATION-BRIDGE
+                             derive controlled summatory cancellation at
+                             augmentation from the full integral rapidity
+                             shell by a non-circular uniform diagonal or
+                             non-diagonal transfer; STOP
 ENTROPY BRIDGE
   ENTROPY-LAYER-BRIDGE       Route A asks whether A_A contains one
                              measurable total
@@ -8065,8 +8432,8 @@ OBSERVER
   MINIMAL-READ-DERIVATION    decide whether a complete typed decoder forces
                              the beta_1 minimum read; L5-to-L1 gate is STOP
 EMPIRICAL HORIZON
-  DESI DR3 (w = -14/15); MOLLER (sin^2 theta_W); future shadow
-  measurements after a public inference rule; CMB-S4 (the tilt)
+  MOLLER (sin^2 theta_W); future shadow measurements after a public
+  inference rule; CMB-S4 (the tilt)
 ```
 
 ## 19. Verification and the registry

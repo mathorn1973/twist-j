@@ -24,18 +24,18 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 327)
+        self.assertEqual(self.report.claims, 336)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 33, "D": 43, "F": 16, "H": 3, "O": 27, "T": 205},
+            {"C": 33, "D": 43, "F": 17, "H": 2, "O": 28, "T": 213},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 44,
+                "none": 45,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 243,
+                "two-architecture": 251,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,7 +43,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 178)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 228
+            len(self.report.transitive_architecture_dependents), 236
         )
         self.assertEqual(len(self.report.dependency_terminals), 50)
         self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
