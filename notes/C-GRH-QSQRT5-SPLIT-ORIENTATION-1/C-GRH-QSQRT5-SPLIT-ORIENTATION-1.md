@@ -46,18 +46,18 @@ AUTHORITY:      none. NON-CANONICAL candidate document per POLICY.md.
                                   [candidate-T on [T-lit] continuation]
 4  The reading itself: GRH(zeta_F) holds if and only if the pure
    split-orientation channel is pole-free on Re(s) > 1/2, if and only
-   if the signed orientation count T_5(N) = sum_{n<=N} o(n) obeys
-   square-root cancellation.  The upward direction (channel bound
-   implies GRH) is elementary given 3; the downward direction is the
-   classical Perron/growth mechanism, imported, not re-proved.
-                        [candidate-T up / candidate-T-lit down]
+   if, for every eps > 0, the signed orientation count
+   T_5(N) = sum_{n<=N} o(n) satisfies O_eps(N^(1/2+eps)). The upward
+   direction (channel bound implies GRH) is elementary given 3; the
+   downward direction is the classical Perron/growth mechanism,
+   imported, not re-proved.                [candidate-T up / candidate-T-lit down]
 5  An unconditional floor: sigma_c(O_5) >= 1/2, so T_5(N) is not
-   O(N^theta) for any theta < 1/2.  Square root is the floor
-   unconditionally and the exact ceiling precisely under GRH(zeta_F).
+   O(N^theta) for any theta < 1/2. Under GRH the matching upper scale is
+   the all-epsilon family O_eps(N^(1/2+eps)); no O(sqrt(N)) claim is made.
                                   [candidate-T on Hardy [T-lit]]
 6  The channel split of GRH data: C_0 is unconditionally holomorphic on
    Re(s) > 1/2 and sees only the L(s,chi_5) zeros (as zeros); O_5 sees
-   the full zeta_F = zeta L(chi_5) zero set (as poles).  The
+   the full zeta_F = zeta L(chi_5) zero divisor (as poles). The
    orientation channel alone carries the whole field GRH. [candidate-T]
 7  A verifier for the L1 algebra only: 7/7 exact integer gates, three
    breakers firing at frozen witnesses 5, 4, 16, stdout pinned.
@@ -273,11 +273,17 @@ factor, as zeros, and can never acquire a pole; the orientation channel
 O_5 sees the whole field zeta_F = zeta L(chi_5), as poles. The divisors
 add back correctly to 1/zeta on Re(s) > 1/2, an internal consistency
 check. In particular, a channel-Mertens statement for O_5 is pinned to
-the FIELD hypothesis GRH(zeta_F), formally finer bookkeeping than the
-Mertens statement for mu, which is pinned to RH for zeta alone [T-lit,
-recorded as literature imports in C-PRIME-BOOLE]: the tracked pole set
-zeros(zeta_F) contains zeros(zeta) strictly, as a set, while the
-relative logical strength of the two hypotheses is of course open.
+the FIELD hypothesis GRH(zeta_F), while the Mertens statement for mu is
+pinned to RH for zeta alone [T-lit, recorded as literature imports in
+C-PRIME-BOOLE]. The precise bookkeeping statement is divisor addition
+with multiplicity,
+
+```text
+div(zeta_F) = div(zeta) + div(L(s,chi_5)),
+```
+
+on the nontrivial zero divisor. No strict set-containment assertion is
+needed or made; possible coincident zeros are handled by multiplicity.
 
 ## 7. Summatory form: floor and bridge
 
@@ -296,8 +302,8 @@ Re(s) > sigma_c, and on that half-plane it agrees with the continuation;
 sigma_c < 1/2 would make the continuation holomorphic at rho.
 Contradiction.
 
-Consequently T_5(N) is not O(N^theta) for any theta < 1/2: the channel
-cannot cancel better than square root, with no hypothesis.
+Consequently T_5(N) is not O(N^theta) for any theta < 1/2: no power-law
+cancellation exponent strictly below 1/2 is possible, with no hypothesis.
 
 ### QS5-SUMMATORY-BRIDGE-UP [candidate-T]
 
@@ -331,10 +337,10 @@ GRH(zeta_F)  <=>  for every eps > 0:  |T_5(N)| = O_eps(N^(1/2+eps)),
 ```
 
 with the upward arrow elementary (given the dictionary) and the downward
-arrow classical. Square-root cancellation of the signed orientation
-count is the whole of the field's GRH, and by the floor it would be
-exactly sharp: square-root fairness of orientations, in the vocabulary
-of C-PRIME-ORDER-READING.
+arrow classical. In this note, "square-root-scale cancellation" means
+exactly this all-epsilon family and never the stronger O(sqrt(N)) bound.
+By the floor, the critical power exponent 1/2 is also the unconditional
+lower boundary for the channel.
 
 ### QS5-TRIANGLE-BOUNDARY [candidate-T]
 
@@ -354,8 +360,9 @@ ln phi = (sqrt5/2) L(1,chi_5) as literature]. Since the coefficients
 |o(n)| are nonnegative, divergence along the real axis as s -> 1+ pins
 the abscissa from below at 1 (Landau), while |o(n)| <= d(n) pins it
 from above at 1; so the l1 series has abscissa exactly 1, and
-sum_(n<=N) |o(n)| is not O(N^(1-delta)) for any delta > 0. A square-root bound on T_5 can never come from termwise
-absolute values; cancellation across signs is essential.
+sum_(n<=N) |o(n)| is not O(N^(1-delta)) for any delta > 0. An
+O_eps(N^(1/2+eps)) bound on T_5 can never come from termwise absolute
+values; cancellation across signs is essential.
 
 ## 8. Non-claims and the bridge-row fence
 
@@ -437,8 +444,9 @@ BR3  Weaken the target to RH for zeta alone: fails; the poles of O_5 on
      the channel is the FIELD hypothesis, not RH(zeta). The channel
      split of section 6 localizes exactly where each factor's zeros
      land.
-BR4  Get square-root from the triangle inequality: closed by
-     QS5-TRIANGLE-BOUNDARY; the l1 mass of the channel has abscissa 1.
+BR4  Get the all-epsilon square-root-scale bound from the triangle
+     inequality: closed by QS5-TRIANGLE-BOUNDARY; the l1 mass of the
+     channel has abscissa 1.
 BR5  Cancel a zeta_F zero against a G zero in the half-plane: G is
      nonvanishing on Re(s) > 1/2 (section 5), and on the closed line
      the only delicate factor is 1/L(2s,chi_5), covered by the
