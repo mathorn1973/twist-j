@@ -3,54 +3,61 @@
 ~~~text
 STATUS:                    NON-CANONICAL / SYNTHESIS NOTE / NO STATUS PROMOTION
 AUTHORITY:                 Public Canon v66 remains unchanged
-PUBLIC BASE:               abe931d3be30b1153c8b63b0764b01f374bef39b
+PUBLIC BASE:               c8587207d08d9c34f58a6bbba985ae7e7de5276e
 PUBLIC CONTENT COMMIT:     8f11ec18825aa769308132254e8de35663006a1a
 PUBLIC CANON SHA-256:      76de4fb05f7d1aed803e581a7d470e6ed8fd63923603ebe780e91990fb0be279
-DATE:                      2026-08-26
-COMPANION CLAIM LOCK:      issue #578
-COMPANION FORMAL PROBE:    PR #579, public replay PASS (x86_64 + aarch64), OPEN
+DATE:                      2026-08-27
+FORMAL CLAIM LOCKS:        issues #581, #578, #583
+MERGED FORMAL PROBES:      PRs #582, #579, #584; x86_64 + aarch64 PASS
 FORMAL RUN FOR THIS NOTE:  NONE
 CANON / REGISTRY CHANGE:   NONE
 ~~~
 
 ## 0. Decision
 
-The useful outcome of this branch is not an RH proof. It is a sharper division
-of the problem into four layers that should no longer be conflated:
+This branch does not prove RH. It now separates the program into five layers
+that must not be conflated:
 
 1. the rank-two congruence carrier recovers the gcd-squared Gram,
-   divisibility, Möbius inversion, the Mertens value at one point, and the
-   Jordan character-shell multiplicities;
+   divisibility, Möbius inversion, the Mertens value at one point, and Jordan
+   character-shell multiplicities;
 2. finite multiplication by \(\varphi\) recovers the splitting character
-   \(\chi_5\) and identifies the two split fixed lines with the two prime-ideal
-   directions;
-3. the Galois-equivariant rapidity shell preserves those two directions before
-   scalar descent and admits an exact group-ring Möbius lift;
-4. no result obtained so far transfers estimates from the nontrivial oriented
-   modes to the trivial character carrying \(M(N)\).
+   \(\chi_5\), while ideal incidence supplies the complementary function
+   \(b\); their merged public descent gives \(\mu=b*\chi_5\);
+3. the normalized Reynolds shell of public PR #579 preserves the two split
+   directions in a rational squarefree lift with \(2^a\) branches and
+   coefficient \(\ell^1\) norm one;
+4. the integral ideal-character lift of public PR #584 preserves the actual
+   ideal-Möbius choices, has \(3^a\) squarefree branches, nonzero split
+   prime-power tails, and the exact \(C_0O_5=1/\zeta\) factorization;
+5. no result obtained so far transfers estimates from the full oriented shell
+   to the distinguished augmentation carrying \(M(N)\).
 
-The strongest closed algebraic part is isolated in the companion public probe
-[P-J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL-1, PR
-#579](https://github.com/mathorn1973/twist-j/pull/579), locked by [issue
-#578](https://github.com/mathorn1973/twist-j/issues/578). This Note records the
-larger synthesis, the failed routes, the analytic candidate-D interface, and
-the corrected open problem. It is not evidence for a Canon status move.
+The three formal algebraic stages are now merged public evidence:
 
-The resulting synthesis frontier (not a public Frontier row) is
+- [ideal-rational Möbius descent, PR #582](https://github.com/mathorn1973/twist-j/pull/582);
+- [normalized Galois-equivariant Reynolds shell, PR #579](https://github.com/mathorn1973/twist-j/pull/579);
+- [integral ideal-rapidity character lift, PR #584](https://github.com/mathorn1973/twist-j/pull/584).
+
+They remain evidence only. Public Canon v66 is unchanged and no row is
+promoted by this Note.
+
+The exact synthesis frontier, still only a Note-local label, is
 
 \[
-\boxed{\texttt{J-RAPIDITY-TRIVIAL-CHARACTER-TRANSFER}.}
+\boxed{\texttt{TRIVIAL-RAPIDITY-EVALUATION-BRIDGE}.}
 \]
 
 It explicitly permits two routes: a uniform growing-mode route
-\(h=h(x)\to\infty\), and a genuinely non-diagonal transfer operator. Current
-work does not prove that the second route is necessary.
+\(h=h(N)\to\infty\), and a genuinely non-diagonal transfer operator. Current
+work proves neither route and does not prove that the second is necessary.
+
 
 ## 1. Public inputs and the corrected support statement
 
 The public authority is [Public Canon
-v66](../../canon/CANON.md), not this Note and not PR #579. The inputs used here
-are already registered:
+v66](../../canon/CANON.md), not this Note and not any of the three merged
+probes. The inputs used here are already registered:
 
 - \(\varphi\) is on the J-derived real floor;
 - [J-RESIDUE-PERIOD
@@ -85,10 +92,19 @@ congruence carrier does not lose the inert primes.
 This is a statement about consequences of the J-derived real floor. It is not
 a derivation or justification of the primitive J axiom.
 
+The scalar descent is now public probe evidence in
+[P-J-IDEAL-RATIONAL-MOBIUS-DESCENT-1](../../probes/P-J-IDEAL-RATIONAL-MOBIUS-DESCENT-1/RESULT.md).
+The normalized Reynolds shell and the integral ideal-character shell are
+independent public probe evidence in
+[P-J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL-1](../../probes/P-J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL-1/RESULT.md)
+and
+[P-J-IDEAL-RAPIDITY-CHARACTER-LIFT-1](../../probes/P-J-IDEAL-RAPIDITY-CHARACTER-LIFT-1/RESULT.md).
+None of those merges changes the authority hierarchy.
+
 ## 2. The rank-two congruence carrier
 
 This section records an elementary candidate-T package that is not part of the
-formal scope of PR #579.
+formal scope of any of the three merged probes.
 
 Let
 
@@ -364,8 +380,8 @@ readings:
 b*\chi_5=\mu.
 \]
 
-This is elementary candidate-T mathematics in this Note. It has not been
-promoted by a public probe or Canon fold.
+This all-prime identity is now carried as evidence by merged public probe
+PR #582. It has not been promoted by a Canon fold.
 
 ## 4. Why route (i) still does not produce cancellation
 
@@ -400,8 +416,12 @@ cannot acquire cancellation merely by changing to the orbit basis.
 
 ## 5. The Galois-equivariant oriented shell
 
-The companion public probe retains the split pair before scalarization. With
-one temporary orientation above each split prime, let \(u_p\) denote the
+Two merged public probes retain the split pair before scalarization, but they
+construct different lifts. Sections 5.1--5.3 describe the rationally
+normalized Reynolds object from PR #579. Section 5.4 describes the integral
+ideal-character object from PR #584. They must not be identified.
+
+With one temporary orientation above each split prime, let \(u_p\) denote the
 corresponding formal rapidity generator and let \(u_p^*=u_p^{-1}\).
 
 The local two-point shell is
@@ -516,7 +536,121 @@ and
 Here CT denotes the algebraic identity coefficient. No Haar or probabilistic
 interpretation is used in this result.
 
-### 5.4 Global Galois symmetry is not the local gauge group
+### 5.4 The integral ideal-character lift
+
+Public PR #584 retains the actual ideal-Möbius valuations before scalar
+augmentation. Define
+
+\[
+\mathbf b(n)=
+\sum_{N\mathfrak a=n}\mu_F(\mathfrak a)[r(\mathfrak a)],
+\qquad
+\boxed{\boldsymbol\mu=\mathbf b*(\chi_5[0]).}
+\]
+
+At a split prime, after one auxiliary orientation
+\(X_p=[r_p]\), the local factor is
+
+\[
+\boxed{
+U_p(T)=\frac{(1-X_pT)(1-X_p^{-1}T)}{1-T}.
+}
+\]
+
+At an inert prime and at \(p=5\), it is simply \(1-T\). Hence
+
+\[
+\boldsymbol\mu(p)=1-X_p-X_p^{-1},
+\]
+
+and for every split \(p\) and \(k\ge2\),
+
+\[
+\boxed{\boldsymbol\mu(p^k)=2-X_p-X_p^{-1}.}
+\]
+
+The split prime-power coefficient is nonzero, has support 3,
+\(\ell^1=4\), and \(\ell_2^2=6\), but its augmentation is zero. Thus scalar
+square-killing is cancellation inside the refined coefficient, not absence of
+an oriented object.
+
+Augmentation is exactly rational Möbius:
+
+\[
+\boxed{\operatorname{aug}\boldsymbol\mu(n)=\mu(n)}
+\qquad(n\ge1).
+\]
+
+If squarefree \(n\) has \(a\) split and \(b\) nonsplit prime factors, public
+rapidity independence makes the ternary words distinct and gives
+
+\[
+\boldsymbol\mu(n)=
+(-1)^b\prod_{\substack{p\mid n\\p\ \mathrm{split}}}
+(1-X_p-X_p^{-1}),
+\]
+
+\[
+\boxed{
+|\operatorname{supp}\boldsymbol\mu(n)|
+=\|\boldsymbol\mu(n)\|_1
+=\|\boldsymbol\mu(n)\|_2^2
+=3^a.
+}
+\]
+
+Let \(c_0(n)\) be the coefficient of the identity rapidity. Its Dirichlet
+series is, first as a formal local identity and then for
+\(\operatorname{Re}s>1\),
+
+\[
+\boxed{
+C_0(s)=
+\frac{L(s,\chi_5)L(2s,\chi_5)}{\zeta(4s)}
+\frac{1-5^{-s}}{1-5^{-4s}}.
+}
+\]
+
+The purely scalar split-prime orientation factor is
+
+\[
+\boxed{
+O_5(s)=
+\prod_{\chi_5(p)=1}
+\frac{(1-p^{-s})^2}{1+p^{-2s}},
+}
+\]
+
+and prime by prime
+
+\[
+\boxed{\frac1{\zeta(s)}=C_0(s)O_5(s)}
+\qquad(\operatorname{Re}s>1).
+\]
+
+This exact factorization exposes rather than removes the analytic wall. The
+neutral channel contains the quadratic \(L\)-sector, and the direct
+coefficient triangle estimate is provably too large:
+
+\[
+\boxed{
+\sum_{n\le N}\|\boldsymbol\mu(n)\|_1
+\ge\sum_{n\le N}|\mu(n)|>N/4.
+}
+\]
+
+That is a no-go only for the displayed termwise \(\ell^1\) route. It leaves
+growing modes, \(\ell^2\) structure, and non-diagonal mixing open.
+
+The integral lift is not the Reynolds lift of section 5.3. The Reynolds
+object is rationally normalized, squarefree, and satisfies the global identity
+\(\|\widetilde\mu(n)\|_1=|\mu(n)|\). The integral object has a neutral
+degree-one term, split power tails, and squarefree \(\ell^1=3^a\). They
+share augmentation and involution, not their local coefficients, support,
+norms, integrality, or constant term.
+
+
+### 5.5 Global Galois symmetry is not the local gauge group
 
 The factor \(2^{-|S(n)|}\) is not forced by the single global group
 
@@ -560,6 +694,7 @@ The following labels are local to this Note. They do not create Registry rows.
 | J-residue orders as a universal orientation selector | **[F]** | the partial \(p=11\) success does not persist; explicit failures occur at \(p=89,281\), and the lcm passage is not multiplicative |
 | a second finite local odd direction on the frozen two-point shell | **[F]** | every tested algebraic reading lies in the single line \(B_p^-\) |
 | ordinary scalar correction | **[F]** | the tail \((2-u-u^{-1})T/(1-T)\) remains |
+| direct termwise \(\ell^1\) control of the integral lift | **[F] as an attack route** | public PR #584 proves the displayed bound is at least the squarefree count, hence greater than \(N/4\) |
 | a raw fixed nonzero Hecke-mode sum as a direct square-root surrogate for \(M(N)\) | **[F]**, conditional on the candidate-D factorization and \(G_h(1)\ne0\) | its expected summatory scale is \(x/(\log x)^{3/2}\), not square-root scale |
 | “\(h=0\) is isolated in the full rapidity dual” | **[F]** | large integer modes return arbitrarily close to the trivial character on every fixed finite prime set |
 
@@ -568,8 +703,8 @@ repaired into weaker success statements.
 
 ## 7. Candidate-D Hecke interface
 
-This section is an analytic interpretation, not part of PR #579 and not a
-public theorem.
+This section is an analytic interpretation, not a theorem of PR #579 or of
+PR #584 and not a public analytic result.
 
 Let
 
@@ -713,112 +848,141 @@ It does not exclude a renormalized fixed-mode remainder, nor a diagonal
 sequence \(h=h(x)\to\infty\) that approximates the trivial character on a
 growing prime set.
 
-## 8. The open transfer contract
+## 8. The open evaluation bridge
 
-The next question is not “do the nonzero modes exist?” They do. It is:
+The remaining question is no longer whether an oriented carrier exists. Two
+different public oriented lifts exist. Both summatory lifts augment to
+\(M(N)\), but their nontrivial evaluations act on different coefficient data
+and cannot be interchanged. The integral lift has the exact distinguished
+evaluation
 
 \[
-\boxed{\text{how can estimates on oriented nontrivial modes control
-the trivial character without inserting the desired cancellation?}}
+\operatorname{aug}\boldsymbol\mu(n)=\mu(n).
 \]
 
-A valid \(\texttt{J-RAPIDITY-TRIVIAL-CHARACTER-TRANSFER}\) result must start
-from the companion probe's explicitly defined oriented rapidity shell, ideal
-incidence, and finite \(\varphi\)-dynamics, and must account quantitatively for every coefficient,
-conductor, and approximation error. Importing RH, a zero-free statement
-equivalent to RH, or \(M(N)=O(N^{1/2+\varepsilon})\) as an assumption is
-circular.
+Put
+
+\[
+\mathbf P_N=\sum_{n\le N}\boldsymbol\mu(n).
+\]
+
+Then
+
+\[
+\boxed{\operatorname{aug}\mathbf P_N=M(N).}
+\]
+
+The open problem is therefore precise:
+
+\[
+\boxed{
+\text{how can controlled nontrivial information on the oriented shell bound
+the distinguished evaluation }X_p\mapsto1
+\text{ without assuming it?}}
+\]
+
+A valid `TRIVIAL-RAPIDITY-EVALUATION-BRIDGE [O]` must declare which public
+lift it acts on. If it uses the normalized Reynolds object
+\(\widetilde\mu\), it must also provide an exact, bounded transfer to the
+integral ideal-character object or directly to augmentation; the two lifts
+cannot be substituted for one another.
+
+Importing RH, an equivalent zeta-zero statement, or
+\(M(N)=O(N^{1/2+\varepsilon})\) as an assumption is circular.
 
 ### Route A: uniform growing-mode diagonal transfer
 
-Choose nonzero integers \(h=h(N)\) such that the characters approach one on
-the split-prime support relevant to \(P_N\). Two estimates are required
-simultaneously:
+For a declared shell \(P_N^{\rm shell}\), choose nonzero integers \(h=h(N)\)
+whose evaluations approach augmentation on the split-prime support actually
+used. Two estimates are required simultaneously:
 
 1. a reconstruction bound
    \[
-   |\operatorname{aug}P_N-\operatorname{ev}_{h(N)}P_N|
+   |\operatorname{aug}P_N^{\rm shell}
+   -\operatorname{ev}_{h(N)}P_N^{\rm shell}|
    \le E_{\rm rec}(N);
    \]
 2. a mode bound uniform in the growing archimedean conductor
    \[
-   |\operatorname{ev}_{h(N)}P_N|
+   |\operatorname{ev}_{h(N)}P_N^{\rm shell}|
    \le E_{\rm mode}(N,h(N)).
    \]
 
-Success requires
+Success at RH strength requires
 
 \[
 E_{\rm rec}+E_{\rm mode}
 =O_\varepsilon(N^{1/2+\varepsilon}).
 \]
 
-A recurrence theorem alone supplies no usable rate. A fixed-\(h\)
-Selberg-Delange estimate is not uniform in this regime. Both the simultaneous
-approximation cost and the analytic conductor growth must enter the same
-inequality.
+Finite-set recurrence alone supplies no usable rate. A fixed-\(h\)
+Selberg--Delange estimate is not uniform in this regime. The simultaneous
+approximation cost, the growth of the relevant prime support, the analytic
+conductor, and the norm of the chosen shell must enter one inequality.
 
-A negative theorem showing that every such recurrence forces a conductor cost
-too large for the target bound would close this route without closing Route B.
+A negative theorem proving that every such recurrence forces excessive cost
+would close Route A without closing Route B.
 
 ### Route B: non-diagonal mode mixing
 
-Let \(V_N\) be the span of all group-ring monomials that actually occur for
-\(n\le N\). Construct a finite or absolutely summable kernel \(K_N\) over
-nonzero modes and an error functional \(\mathcal E_N\) such that
+Let \(V_N\) be the span of all monomials occurring in the declared public
+shell up to \(N\). Construct a finite or absolutely summable kernel \(K_N\)
+over nonzero modes and an error functional \(\mathcal E_N\) such that
 
 \[
 \operatorname{aug}f
-=
-\sum_{h\ne0}K_N(h)\operatorname{ev}_h f+\mathcal E_N(f)
+=\sum_{h\ne0}K_N(h)\operatorname{ev}_h f+\mathcal E_N(f)
 \qquad(f\in V_N).
 \]
 
-The identity for \(P_N\) must follow from this functional identity; fitting one
-numerical equality only to \(P_N\) is not admissible. A valid result must prove:
+The identity for the summatory shell must follow from this functional
+identity; fitting one numerical equality only to \(\mathbf P_N\),
+\(\widetilde P_N\), or \(M(N)\) is not admissible. A valid result must prove:
 
-- the functional identity on all of \(V_N\), not merely pointwise convergence
-  for one fixed support vector;
+- the functional identity on all of \(V_N\);
 - finiteness or absolute summability of \(K_N\), with a declared norm strong
-  enough to survive the available mode estimates;
+  enough for the available mode estimates;
 - a uniform analytic estimate across every mode used;
-- an independently constructed dual-norm bound
-  \(\|\mathcal E_N\|_{V_N^*}\le\delta_N\), including an explicit consequence
-  \(|\mathcal E_N(P_N)|\le E_{\rm err}(N)\);
-- no augmentation or trivial-character component hidden in \(\mathcal E_N\),
-  and no kernel or error functional fitted using \(P_N\) or \(M(N)\).
+- an independently constructed dual-norm bound on \(\mathcal E_N\), including
+  a quantitative summatory consequence;
+- no augmentation or trivial-character mass hidden in \(\mathcal E_N\), and
+  no kernel fitted using the target summatory value;
+- if the Reynolds shell is used, an explicit transfer error to the integral
+  shell or directly to augmentation.
 
-In particular, a useful transfer must close the joint estimate
+The joint RH-strength target is
 
 \[
 \sum_{h\ne0}|K_N(h)|E_{\rm mode}(N,h)+E_{\rm err}(N)
 =O_\varepsilon(N^{1/2+\varepsilon}).
 \]
 
-Without these error conditions, the vacuous choice
-\(K_N=0,\ \mathcal E_N=\operatorname{aug}\) would satisfy the displayed
-identity and prove nothing.
+Without the error conditions, the vacuous choice
+\(K_N=0,\ \mathcal E_N=\operatorname{aug}\) proves nothing.
 
-This route may be formulated adelically or as an operator on the Hecke-mode
-lattice, but the carrier alone is not evidence for cancellation. Number-field
-Bost-Connes systems show that profinite, ideal, and adelic arithmetic dynamics
-are natural objects; they do not supply this transfer. See Marcelo Laca,
-Nadia S. Larsen, and Sergey Neshveyev, [On Bost-Connes type systems for number
+This route may be adelic or operator-theoretic, but the carrier alone is not
+evidence for cancellation. Number-field Bost--Connes systems show that
+profinite, ideal, and adelic arithmetic dynamics are natural; they do not
+supply the missing bridge. See Marcelo Laca, Nadia S. Larsen, and Sergey
+Neshveyev, [On Bost-Connes type systems for number
 fields](https://arxiv.org/abs/0710.3452).
+
 
 ## 9. Status map
 
-These are synthesis labels only.
+These are synthesis labels only. Merged probe evidence does not itself create
+a Canon status.
 
-| object or statement | status in this Note | public consequence |
+| object or statement | evidence state | public consequence |
 |---|---|---|
-| rank-two congruence gcd frame and Jordan shell count | candidate-T, elementary, not formally probed here | none |
-| fixed-point formula \(\chi_5(p)=e_p-1\) and \(\mu=b*\chi_5\) | candidate-T, local verifier history only | none |
-| Galois-equivariant prime shell, index-two descent, frozen Reynolds lift, group-ring \(\widetilde\mu\) | candidate-T under review in public PR #579; Canon fold not performed | none yet |
-| Hecke character and automorphic-induction interface | candidate-D | none |
-| factorization of \(D_h\) and fixed-\(h\) Selberg-Delange asymptotic | candidate-D | none |
+| rank-two congruence gcd frame, point/mean duality, and Jordan shell count | candidate-T, elementary, not formally probed | none |
+| fixed-point formula \(\chi_5(p)=e_p-1\), ideal count, \(\mu=b*\chi_5\), and Mertens two-sum | merged public probe #582 | evidence only; no Canon row moved |
+| normalized two-point Reynolds lift \(\widetilde\mu\) | merged public probe #579 | evidence only; no Canon row moved |
+| integral ideal-character lift \(\boldsymbol\mu\), \(3^a\) census, \(C_0\), \(O_5\), and narrow \(\ell^1\) no-go | merged public probe #584 | evidence only; no Canon row moved |
+| Hecke character and automorphic-induction interface for Reynolds modes | candidate-D | none |
+| factorization of \(D_h\) and fixed-\(h\) Selberg--Delange asymptotic | candidate-D | none |
 | failures listed in section 6 | [F] inside this Note only | no Registry row |
-| \(\texttt{J-RAPIDITY-TRIVIAL-CHARACTER-TRANSFER}\) | [O] inside this Note only | no Frontier row |
+| `TRIVIAL-RAPIDITY-EVALUATION-BRIDGE` | [O] inside this Note only | no Frontier row |
 
 ## 10. Governance boundary
 
@@ -827,6 +991,9 @@ gate, workflow, probe, or reproduction. It contains no formal run. Its
 candidate-T, candidate-D, [F], and [O] annotations are a research map, not
 public statuses.
 
-The companion probe may be merged or rejected independently. Even if merged,
-it records evidence only. A later sealed Canon fold would be required to
-register any theorem or frontier row.
+The formal evidence is carried independently by merged PRs #582, #579, and
+#584. A later sealed Canon fold would be required to register any theorem or
+frontier row. Until such a fold, Public Canon v66, content commit
+`8f11ec18825aa769308132254e8de35663006a1a`, SHA-256
+`76de4fb05f7d1aed803e581a7d470e6ed8fd63923603ebe780e91990fb0be279`,
+and 339260-byte content remain unchanged.
