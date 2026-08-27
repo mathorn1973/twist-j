@@ -1,0 +1,9 @@
+G01 golden ring [-6,6]^4; fixed-line character p<=997 n<=20000 PASS
+G02 canonical ideals and valuation Mobius n<=2000 Bmax=isqrt(2000) PASS
+G03 mu=b*chi_A n<=30000; trial<=30000 Rota<=5000 PASS
+G04 Dirichlet inversion n<=3000; enum overlap n<=2000 PASS
+G05 S5 m<=10000; both Mertens two-sums N<=5000 PASS
+G06 prime norm census p<=300 and cross-label p=11 PASS
+G07 mutations fired principal=2 inert=2 ramified=5 sign=1 B4=11 bound=4 PASS
+G08 exact-source AST and construction firewalls PASS
+VERIFY RESULT 8/8 ALL PASS
