@@ -479,3 +479,15 @@ candidate-T going in. The analytic dictionary (sections 5-7) enters, if
 ever, only through the release procedure with its [T-lit] imports named
 in the preregistration; the bridge-down direction stays a literature
 import unless independently proved. Nothing is requested now.
+
+Addendum 2026-08-27: the divisor-dictionary half was subsequently pinned
+as the formal public probe P-O5-DEDEKIND-GRH-READ-1 (issue #587), whose
+H_5 is the H of section 6 and whose widehat_O_5 is the continued read of
+section 5. Its single formal run failed the frozen empty-stderr
+threshold on a host-injected interpreter-startup artifact; the probe is
+recorded ABANDONED with its pin consumed, no accepted run, no protocol
+verdict, and no evidence in either direction (see
+probes/P-O5-DEDEKIND-GRH-READ-1/RESULT.md). Any successor lane must use
+a fresh identifier, name that abandoned predecessor, and freeze a clean
+interpreter-startup control before the scientific command. This note
+remains NON-CANONICAL and gains no status from that lane.
