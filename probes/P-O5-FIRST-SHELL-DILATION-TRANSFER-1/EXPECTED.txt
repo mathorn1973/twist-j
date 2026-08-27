@@ -1,0 +1,9 @@
+G01 PASS split and tail coefficient census
+G02 PASS optional-11 and first-shell identities
+G03 PASS three finite dilation inversions
+G04 PASS Dirichlet local-factor quotient
+G05 PASS exact Neumann operator algebra
+G06 PASS weighted geometric constants
+G07 PASS breakers B1=11 B2=11 B3=1 B4=121 B5=1/4
+G08 PASS exact-rational stdlib firewall
+VERIFY RESULT 8/8 ALL PASS
