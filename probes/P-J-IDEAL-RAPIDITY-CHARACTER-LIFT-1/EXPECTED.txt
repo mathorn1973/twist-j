@@ -1,0 +1,11 @@
+G01 projective-fixed-line-character p<=997 PASS
+G02 ideal-choice-local-lift e<=8 PASS
+G03 global-character-lift n<=20000 PASS
+G04 orientation-shell-census split6 multipliers=1,2,5,10 PASS
+G05 zero-rapidity-channel n<=10000 PASS
+G06 C0-analytic-convolution n<=10000 PASS
+G07 C0-O5 local e<=8 global n<=5000 PASS
+G08 direct-l1-triangle no-go checkpoints<=5000 PASS
+G09 pipeline-breakers 6/6 FIRE 11,11,5,11,5,209
+G10 Reynolds-distinction AST-LF-callgraph-firewall PASS
+VERIFY RESULT 10/10 ALL PASS
