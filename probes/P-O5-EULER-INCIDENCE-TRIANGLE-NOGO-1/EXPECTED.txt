@@ -1,0 +1,9 @@
+G01 PASS chi_5 split census and first split prime 11
+G02 PASS finite oriented faces are duplicate-free and simplicial
+G03 PASS squarefree split sum equals augmented face-parity sum
+G04 PASS face dimensions equal 2^omega support multiplicities
+G05 PASS strict isolated-vertex theorem and N=209 boundary
+G06 PASS maximum incidence matchings obey isolated-cell floors
+G07 PASS breakers FIRE B1=11 B2=121 B3=2 B4=(209,19) B5=1
+G08 PASS exact-integer stdlib source firewall
+VERIFY RESULT 8/8 ALL PASS
