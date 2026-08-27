@@ -1,0 +1,78 @@
+==========================================================================
+check_quantum_claims.py -- arithmetic audit of the 2026-08-27 challenge
+NON-CANONICAL. Rules on arithmetic only. No Canon claim, no probe.
+==========================================================================
+
+pinned atom count      : 10**80 (standard range 10**78 .. 10**82)
+pinned universe age    : 435084631200000000 s (13.787 Gyr)
+pinned TSP instance    : n=20, LCG seed 20260827, integer isqrt metric
+pinned Atari model     : MOS 6507 @ 1190000 Hz, 1000 cycles/tour
+
+COMBINATORIAL EXPLOSION  -- '20 stops > atoms in the universe'
+--------------------------------------------------------------------------
+  [PASS] [EXACT] A1 20! evaluates to 2432902008176640000
+           20! = 2432902008176640000
+  [PASS] [EXACT] A2 20! is SMALLER than the atom count, not larger
+           20! = 2432902008176640000 < 10**80
+  [PASS] [EXACT] A3 the miss is at least 61 orders of magnitude
+           20! * 10**61 = 24329020081766400000000000000000000000000000000000000000000000000000000000000000 < 10**80
+  [PASS] [EXACT] A4 n! first exceeds 10**80 at n = 59, not n = 20
+           smallest n with n! > 10**80 is n = 59
+  [PASS] [EXACT] A5 distinct 20-stop tours number 19!/2, smaller still
+           19!/2 = 60822550204416000
+
+SEQUENTIAL SEARCH        -- 'one by one' / 'age of the universe'
+--------------------------------------------------------------------------
+  [PASS] [EXACT] B1 exhaustive enumeration is not required: the DP is exact and skips 99.9999999% of tours
+           49807360 steps sufficed to prove optimality over 60822550204416000 tours
+  [PASS] [MODEL] B2 brute force on a 1.19 MHz 6507 takes ~1.6 million years
+           51111386726400 s at 1190 tours/s = 1619622 years
+  [PASS] [MODEL] B3 that is FAR SHORTER than the age of the universe, so the text's stated reason is false
+           51111386726400 s < 435084631200000000 s (shorter by a factor of 8512)
+  [PASS] [EXACT] B4 the real Atari 2600 obstruction is RAM, not the age of the universe
+           Held-Karp table = 19922944 bytes vs 128 bytes of RAM
+
+AMPLITUDE AMPLIFICATION  -- 'reveals the ideal plan instantly'
+--------------------------------------------------------------------------
+  [PASS] [EXACT] C1 amplitude amplification needs ~sqrt(N) queries, ~2.5e8 here, not one
+           sqrt(19!/2) = 246622282 oracle queries, each a full reversible tour evaluation
+  [PASS] [EXACT] C2 from n = 21 upward, classical Held-Karp needs FEWER steps than Grover needs queries
+           crossover at n = 21
+  [PASS] [EXACT] C3 and the classical margin widens without bound (n = 30 shown)
+           n=30: Grover 2102589117462052 vs Held-Karp 966367641600 (ratio 2175:1)
+  [PASS] [EXACT] C4 Grover's speedup is quadratic, so an exponential space stays exponential
+           n=40: 100989806617295399588481 queries remains astronomically large
+
+CLASSICAL FEASIBILITY    -- exact 20-node optimum on one core
+--------------------------------------------------------------------------
+  [PASS] [EXACT] D1 Held-Karp returns a proven optimum for the 20-node instance
+           optimal closed tour cost = 33636
+  [PASS] [EXACT] D2 the returned tour visits all 20 nodes exactly once
+           tour = [0, 14, 3, 11, 12, 4, 10, 15, 18, 6, 16, 19, 2, 17, 9, 1, 8, 7, 5, 13]
+  [PASS] [EXACT] D3 the returned tour's cost equals the reported optimum
+           recomputed cost = 33636
+  [PASS] [EXACT] D4 control: DP equals exhaustive search at n = 10
+           held_karp = 24772, brute_force = 24772
+  [PASS] [EXACT] D5 the DP examines ~5e7 states, not 6e16 tours
+           Held-Karp inner steps = 49807360 vs 60822550204416000 tours (ratio 1221155873:1)
+
+==========================================================================
+18/18 gates pass (16 exact, 2 model-dependent)
+==========================================================================
+
+VERDICT
+--------------------------------------------------------------------------
+The four numerical assertions in the challenge text are false as
+stated. 20! is 61 orders of magnitude SMALLER than the atom count,
+not larger. Exact optimization of the named 20-node instance is a
+seconds-to-minutes job on one core using a 1962 algorithm, and it
+returns a PROVEN optimum, which no annealer or sampler does. Even a
+perfect fault-tolerant Grover search loses to that algorithm from 21
+nodes upward. The Atari claim is directionally right but for the
+wrong reason: 128 bytes of RAM stops it, not the age of the universe,
+which it beats by four orders of magnitude.
+
+This settles arithmetic only. It does not touch whether the Ford
+Otosan or Pattison deployments occurred; see AUDIT.md, which finds
+those real but benchmarked against the incumbent process rather than
+against a tuned classical solver.
