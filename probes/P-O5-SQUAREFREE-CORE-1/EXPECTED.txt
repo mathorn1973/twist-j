@@ -1,0 +1,10 @@
+G01 PASS local O_p = A_p (1-2T)
+G02 PASS dressing and inverse have exact cubic onset
+G03 PASS first split prime 11 and exact 9/20 guard
+G04 PASS s_5=mu*a_F*1_(5nmid) through n=50000
+G05 PASS local formal series through degree 16
+G06 PASS exact local majorants 26*p^(-3theta), 7*p^(-3theta)
+G07 PASS both Dirichlet convolutions through n=20000
+G08 PASS stdlib-only exact-integer source firewall
+G09 PASS breakers FIRE B1=11 B2=121 B3=5 B4=2 B5=local
+VERIFY RESULT 9/9 ALL PASS
