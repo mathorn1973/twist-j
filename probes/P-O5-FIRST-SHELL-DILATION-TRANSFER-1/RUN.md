@@ -47,11 +47,11 @@ not imported or executed.
 
 ```text
 preflight_command: env -i PATH=/usr/bin:/bin LC_ALL=C PYTHONHASHSEED=0 TZ=UTC /usr/bin/python3 -c "print('PYTHON_STARTUP_CLEAN')"
-exit_code: 0
-stdout_sha256: 6a35d478a26afbc04957801fbb8b5470693d3ee1f2093354dc03ea48c484ac17
-stdout_bytes: 21
-stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-stderr_bytes: 0
+preflight_exit_code: 0
+preflight_stdout_sha256: 6a35d478a26afbc04957801fbb8b5470693d3ee1f2093354dc03ea48c484ac17
+preflight_stdout_bytes: 21
+preflight_stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+preflight_stderr_bytes: 0
 ```
 
 The preflight passed immediately before the single accepted scientific
