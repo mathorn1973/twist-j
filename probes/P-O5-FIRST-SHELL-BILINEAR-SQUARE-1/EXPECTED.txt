@@ -1,0 +1,9 @@
+G01 PASS nu b c r q coefficient census
+G02 PASS coprime bilinear identity B1=361
+G03 PASS ordinary-square dressing algebra
+G04 PASS half-plane majorant guards
+G05 PASS direct annular convolution transfer
+G06 PASS bilinear annulus and hyperbola identities
+G07 PASS color no-go and breakers B2-B5
+G08 PASS exact-rational stdlib firewall
+VERIFY RESULT 8/8 ALL PASS
