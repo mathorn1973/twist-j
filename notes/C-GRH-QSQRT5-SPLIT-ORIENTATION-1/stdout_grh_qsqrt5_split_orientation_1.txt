@@ -1,0 +1,16 @@
+C-GRH-QSQRT5-SPLIT-ORIENTATION-1 VERIFIER
+STATUS NON-CANONICAL
+V01 local (1-T)^2/(1+T^2) e<=12 1,-2,0,2,0,-2,0,2,0,-2,0,2,0 PASS
+V02 closed identity n<=100000 PASS
+V03 mu = c_0 * o n<=100000 PASS
+V04 o * a_F * e_2 = zeta(4s)-times-5-block n<=100000 PASS
+V05 support census and sign law n<=100000 PASS
+V06 readout N=10 T5=1 isqrt(N)=3
+V06 readout N=100 T5=-19 isqrt(N)=10
+V06 readout N=1000 T5=-103 isqrt(N)=31
+V06 readout N=10000 T5=-377 isqrt(N)=100
+V06 readout N=100000 T5=-947 isqrt(N)=316
+V06 readout N=500000 T5=-1869 isqrt(N)=707
+V06 frozen integer readouts, no estimate claimed PASS
+V07 breakers 3/3 FIRE 5,4,16 PASS
+VERIFY RESULT 7/7 ALL PASS
