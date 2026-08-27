@@ -1,0 +1,9 @@
+G01 PASS Lucas Pell and exact unit-scale floor
+G02 PASS complete golden shell and product geometry
+G03 PASS exact eleven-between-rungs inequalities
+G04 PASS full-axis five-diagonal band
+G05 PASS Lucas-top four-diagonal refinement
+G06 PASS ordinary bilinear Q11 carrier agreement
+G07 PASS breakers B1=k1 B2=alpha2 B3=322 B4=361 B5=19x19/41x41
+G08 PASS exact-integer stdlib firewall
+VERIFY RESULT 8/8 ALL PASS
