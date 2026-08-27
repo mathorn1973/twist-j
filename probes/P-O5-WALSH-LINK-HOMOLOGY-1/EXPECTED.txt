@@ -1,0 +1,8 @@
+G01 PASS Walsh Q-bases
+G02 PASS exact character boundary
+G03 PASS shifted link chain isomorphisms
+G04 PASS rational Betti direct sum
+G05 PASS reduced Euler link sum
+G06 PASS breakers B1=11 B2=11 B3=11 B4=(209;11,19) B5=char2
+G07 PASS exact-rational stdlib firewall
+VERIFY RESULT 7/7 ALL PASS
