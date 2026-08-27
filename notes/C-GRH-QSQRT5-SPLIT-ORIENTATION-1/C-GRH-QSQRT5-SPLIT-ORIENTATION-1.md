@@ -16,8 +16,7 @@ PARENTS:        probes/P-J-IDEAL-RAPIDITY-CHARACTER-LIFT-1 (the frozen C_0,
                 notes/incubation-import-2026-08-21/C-PRIME-BOOLE
                 (Mertens-form RH equivalences as literature imports);
                 notes/incubation-import-2026-08-21/C-PRIME-ORDER-READING
-                (zeta_F = zeta L(chi_5) for F = Q(sqrt5); square-root
-                fairness vocabulary).
+                (zeta_F = zeta L(chi_5) for F = Q(sqrt5)).
 LAYER:          L1 exact Euler-factor algebra, plus classical analytic
                 continuation facts imported as [T-lit]. No decoder, measure,
                 physical, SI, or L2-L6 lift is claimed.
