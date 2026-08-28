@@ -32,7 +32,8 @@ architecture:      x86_64
 python:            Python 3.13.5
 working_directory: isolated exact-pin verifier directory
 environment:       LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC
-command:           python3 verify.py
+command:           python3 probes/P-CM-PERIOD-LATTICE-NONSELECTION-1/verify.py
+local_command:     python3 verify.py
 exit_code:         0
 stderr_bytes:      0
 stderr_sha256:     e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -43,6 +44,11 @@ expected_bytes:    580
 expected_lines:    7
 expected_sha256:   de9393e0d0b2f2156e997d226d862b7afe99429733376c95f05509602567eeac
 ```
+
+The `command` field is the canonical repository-root replay command required
+by the public checker. The actual first local execution used the byte-identical
+pinned verifier in an isolated directory and is recorded separately as
+`local_command`.
 
 The verifier process was executed once after remote readback. Its stdout was
 captured byte for byte as `EXPECTED.txt`; its captured stderr was empty.
