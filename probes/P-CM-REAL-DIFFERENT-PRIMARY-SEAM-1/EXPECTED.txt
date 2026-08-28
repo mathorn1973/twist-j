@@ -1,0 +1,13 @@
+PROBE P-CM-REAL-DIFFERENT-PRIMARY-SEAM-1
+G01 source_scope_firewall PASS
+G02 public_pullback_and_primary_projector PASS
+G03 real_quadratic_order_and_unit_action PASS
+G04 different_and_codifferent PASS
+G05 ramified_chord_generates_different PASS
+G06 projector_image_equals_codifferent_lattice PASS
+G07 canonical_seam_exact_sequence PASS
+G08 seam_residue_functional PASS
+G09 annihilator_and_minus_one_action PASS
+G10 resultant_nilpotent_layer_guard PASS
+G11 scope_and_trivialization_guard PASS
+DECISION CM-REAL-DIFFERENT-PRIMARY-SEAM-CONFIRMED
