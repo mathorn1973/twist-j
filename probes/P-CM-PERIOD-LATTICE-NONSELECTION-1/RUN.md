@@ -33,8 +33,8 @@ python:            Python 3.13.5
 working_directory: isolated exact-pin verifier directory
 environment:       LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC
 command:           python3 verify.py
-verifier_exit:     0
-verifier_stderr:   0 bytes
+exit_code:         0
+stderr_bytes:      0
 stderr_sha256:     e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 stdout_bytes:      580
 stdout_lines:      7
