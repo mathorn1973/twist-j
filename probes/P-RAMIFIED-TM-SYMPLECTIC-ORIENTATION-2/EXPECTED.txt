@@ -1,0 +1,9 @@
+PASS 1: frozen Pfaffian pencil formula
+PASS 2: Fibonacci Pell orientation sign
+PASS 3: ramified quadratic character
+PASS 4: Thue-Morse symplectic character composition
+PASS 5: checkpoint obstruction carries opposite characters
+PASS 6: direct Pfaffian reduction is QR-only
+PASS 7: omega and minus omega share 4D orientation
+PASS 8: first twenty counter values split 10/10
+RESULT 8/8 ALL PASS
