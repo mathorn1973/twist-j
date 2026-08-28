@@ -1,11 +1,66 @@
 # Canon changelog (public series)
 
-## Public Canon v68
+## Public Canon v69
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 337 claims; 0 T-LOCK, 214 T, 43 D, 33 C, 2 H, 28 O, 17 F; 30 live H/O.
+Registry snapshot: 342 claims; 0 T-LOCK, 219 T, 43 D, 33 C, 2 H, 28 O, 17 F; 30 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v69 is a focused L1 CM-lattice and ramification fold. It
+registers exactly five theorem rows and no dictionary, hypothesis,
+obligation, falsifier, Frontier, gate, scheduler, reproduction or
+CORE-selection row.
+
+CM-ALTERNATING-PRIMARY-LATTICE-SEAM [T] identifies the public CM pencil as
+the rational hyperbolic primary plane, computes the full integral primary
+lattices and their index-five seam, fixes its minus-one quotient action, and
+proves the exact denominator-five equivariant no-retraction boundary.
+CM-REAL-DIFFERENT-PRIMARY-SEAM [T] identifies the projector image with the
+real codifferent lattice and the seam with its intrinsic reduced residue
+line, while separating it from the nonreduced order-25 resultant layer.
+
+RAMIFIED-TM-SYMPLECTIC-ORIENTATION [T] realizes the same binary count
+character on the real symplectic-orientation and ramified quadratic-character
+carriers and proves that it does not factor through the checkpoint alone.
+CM-RAMIFIED-PFAFFIAN-ROOT [T] lifts that character to the C2 quotient of a
+marked ramified C4 phase with exact Pell, carry and J-pullback intertwiners.
+The marking is load-bearing: no unmarked or Galois-invariant phase selector is
+claimed, and the multiplicative order-four phase is not the additive
+order-five primary seam.
+
+CM-PERIOD-LATTICE-NONSELECTION [T] proves that the algebraic integral period
+subgroup is the coefficient-gcd image, equals Z on every unimodular CM member,
+and is invariant under GL4 pullback. One J-pullback therefore maps this
+primitive Z to the same Z rather than scaling it by phi^-2. The theorem also
+gives two exact natural-cell nonselection guards. This integer pairing image
+is not a geometric period or action.
+
+All five rows remain at L1. No action, h, hbar, 2 pi, SI normalization,
+physical U(1), electromagnetic phase, decoder, checkpoint coordinate, torus,
+continuum, apparatus, event, measure or L2-L6 bridge is added. The v69 ledger
+change is:
+
+```text
+claims: 337 + 5 T = 342,
+T: 214 + 5 = 219,
+D: 43, C: 33, H: 2, O: 28 and F: 17, unchanged,
+live H/O: 30, unchanged,
+normative items: 383 + 5 = 388,
+dependencies: 616 + 14 = 630,
+evidence rows: 337 + 5 = 342,
+gates: 11, unchanged,
+history rows: 860 + 5 declarations = 865,
+two-architecture evidence: 252 + 5 = 257,
+frontier scheduler rows: 30, unchanged,
+frontier program identifiers: 7, unchanged,
+reproductions: 23, unchanged.
+```
+
+## Public Canon v68
+
+Registry snapshot: 337 claims; 0 T-LOCK, 214 T, 43 D, 33 C, 2 H, 28 O, 17 F; 30 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v68 adds one proof-first L1 theorem,
 SO3-FINITE-ANISOTROPY-MAXIMUM [T]. The complete finite-rotation
