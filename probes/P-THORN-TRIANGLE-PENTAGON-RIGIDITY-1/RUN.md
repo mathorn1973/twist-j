@@ -8,7 +8,7 @@ The flat fields below are the machine-readable local record required by
 ```text
 pin_commit: df66bcb7230a03898ef0a97273c51370400d3d39
 verifier_sha256: 543c02726e7dbbc319a3cce12cf90db7fc89c97d7be1379d7e31691e9b8ca04b
-command: PYTHONDONTWRITEBYTECODE=1 python3 -I probes/P-THORN-TRIANGLE-PENTAGON-RIGIDITY-1/verify.py
+command: python3 probes/P-THORN-TRIANGLE-PENTAGON-RIGIDITY-1/verify.py
 platform: Linux
 architecture: x86_64
 python: Python 3.13.5
@@ -41,13 +41,17 @@ final LF. Static compilation occurred before the pin; the accepted verifier
 was not imported or executed before the pin. The first formal execution
 occurred only after remote readback.
 
-The accepted verifier was executed from the probe's byte-identical local
-working directory with an isolated interpreter, bytecode disabled, and stdout
-and stderr captured separately. `EXPECTED.txt` is the complete raw stdout:
-471 bytes in 13 LF-terminated lines. Standard error was empty.
+The first execution used the same pinned bytes through an isolated-interpreter
+wrapper with bytecode disabled. After the repository checker required the
+canonical command spelling in the flat record, the verifier was reproduced
+from a repository-shaped working directory using exactly the command printed
+above. Both executions exited zero, wrote empty stderr, and produced the same
+committed stdout SHA-256 and the same 471 bytes in 13 LF-terminated lines.
+`EXPECTED.txt` is those complete raw stdout bytes. The second execution is a
+reproduction only and adds no independent evidential credit.
 
-The local run is one x86_64 lane. It is not a two-architecture computation
-gate. The proposed theorem status is proof-first from `PREREG.md`; the exact
-verifier is its audit. The pull-request workflow must still reproduce the
-committed bytes independently on x86_64 and aarch64 and pass aggregate
-`check`.
+The local executions are one x86_64 lane. They are not a two-architecture
+computation gate. The proposed theorem status is proof-first from
+`PREREG.md`; the exact verifier is its audit. The pull-request workflow must
+still reproduce the committed bytes independently on x86_64 and aarch64 and
+pass aggregate `check`.
