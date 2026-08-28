@@ -1,6 +1,6 @@
 # P-THORN-TRIANGLE-ROOT-CIRCLE-RIGIDITY-1 result
 
-Status: **ABANDONED**.
+Status: ABANDONED.
 
 The formal gate never ran. After the immutable preregistration pin was pushed
 and read back, the accepted verifier's source firewall was found to require the
