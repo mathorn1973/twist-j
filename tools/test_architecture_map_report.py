@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 336)
+        self.assertEqual(self.report.claims, 337)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 33, "D": 43, "F": 17, "H": 2, "O": 28, "T": 213},
+            {"C": 33, "D": 43, "F": 17, "H": 2, "O": 28, "T": 214},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 45,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 251,
+                "two-architecture": 252,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -45,7 +45,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(
             len(self.report.transitive_architecture_dependents), 236
         )
-        self.assertEqual(len(self.report.dependency_terminals), 50)
+        self.assertEqual(len(self.report.dependency_terminals), 51)
         self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
         self.assertNotIn(
             "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
@@ -57,6 +57,18 @@ class ArchitectureMapReportTests(unittest.TestCase):
         )
         self.assertIn(
             "DEF-DQRC-INTEGER-CENSUS", self.report.dependency_terminals
+        )
+        self.assertIn(
+            "SO3-FINITE-ANISOTROPY-MAXIMUM",
+            self.report.dependency_terminals,
+        )
+        self.assertNotIn(
+            "SO3-FINITE-ANISOTROPY-MAXIMUM",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "SO3-FINITE-ANISOTROPY-MAXIMUM",
+            self.report.transitive_architecture_dependents,
         )
         self.assertIn(
             "DE-W-CONSTANT", self.report.direct_architecture_requires

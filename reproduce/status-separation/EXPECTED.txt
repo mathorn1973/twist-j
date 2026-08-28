@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v67
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v68
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -61,5 +61,6 @@ PASS 57 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in 
 PASS 58 V65-RESIDUE the rational-modulus residue period of J and the exact five-fold collapse at one chosen prime enter at T/L1 on their completed two-architecture public probe, with the inert prime two left to J-BINARY-NORM-INDEX and no archimedean, automaton, spectrum, selector, physical or higher-layer claim moving
 PASS 59 V66-QDD-WIRING the open quadratic row gains exactly the fourteen REQUIRES edges to the definitions its STOP clause names, while its status, gate slot, program row and the direct-write firewall stay fixed and the fold releases no lifecycle event
 PASS 60 V67-RAPIDITY eight exact rapidity and ideal rows enter at T/L1 on their frozen public probes, the trivial-evaluation transfer stays an inline O/STOP obligation, and the exact dependency, lifecycle, gate and frontier boundaries create no analytic, physical or higher-layer promotion
+PASS 61 V68-SO3    the finite SO(3) harmonic-depth maximum enters at T/L1 on its proof-first two-architecture public probe while no boost, Lorentz-density, J, physical p=5, decoder, measure, dynamics or higher-layer selection moves
 
-RESULT 60/60 ALL PASS
+RESULT 61/61 ALL PASS

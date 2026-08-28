@@ -1,11 +1,50 @@
 # Canon changelog (public series)
 
-## Public Canon v67
+## Public Canon v68
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 336 claims; 0 T-LOCK, 213 T, 43 D, 33 C, 2 H, 28 O, 17 F; 30 live H/O.
+Registry snapshot: 337 claims; 0 T-LOCK, 214 T, 43 D, 33 C, 2 H, 28 O, 17 F; 30 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v68 adds one proof-first L1 theorem,
+SO3-FINITE-ANISOTROPY-MAXIMUM [T]. The complete finite-rotation
+classification gives harmonic depths 1,2,3,4,6 for C_n,D_n,A_4,S_4,A_5,
+so A_5 is the unique finite rotation type attaining depth six. Its order-five
+trace field is Q(sqrt5). The source probe passed the required x86_64 and
+aarch64 replay with byte-identical stdout. The fold consumes no Lorentz-density
+paper and makes no boost, J, physical p=5, decoder, measure, dynamics or
+higher-layer selection claim.
+
+The theorem strengthens the finite-rotation foundation without closing a live
+frontier row. It states that A_5 uniquely postpones the first invariant
+harmonic scalar to degree six; it does not eliminate anisotropy, classify
+boosts, derive Lorentz invariance, select the primitive axiom, or lift the
+result beyond L1. No dependency edge, gate, scheduler row, core-selection row
+or reproduction is added, and the live H/O set remains unchanged.
+
+The v68 ledger change is:
+
+```text
+claims: 336 + 1 T = 337,
+T: 213 + 1 = 214,
+D: 43, C: 33, H: 2, O: 28 and F: 17, unchanged,
+live H/O: 30, unchanged,
+normative items: 382 + 1 = 383,
+dependencies: 616, unchanged,
+evidence rows: 336 + 1 = 337,
+gates: 11, unchanged,
+history rows: 859 + 1 declaration = 860,
+two-architecture evidence: 251 + 1 = 252,
+frontier scheduler rows: 30, unchanged,
+frontier program identifiers: 7, unchanged,
+reproductions: 23, unchanged.
+```
+
+## Public Canon v67
+
+Registry snapshot: 336 claims; 0 T-LOCK, 213 T, 43 D, 33 C, 2 H, 28 O, 17 F; 30 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v67 is a consolidated exact-arithmetic fold over the four public
 probes merged after v66. It registers eight theorem rows at L1 or formal
