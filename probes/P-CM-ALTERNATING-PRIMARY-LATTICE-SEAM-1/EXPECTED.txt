@@ -1,0 +1,14 @@
+PROBE P-CM-ALTERNATING-PRIMARY-LATTICE-SEAM-1
+G01 pullback_and_pfaffian_covariance PASS
+G02 characteristic_primary_factorization PASS
+G03 rational_primary_decomposition PASS
+G04 cm_pencil_identification PASS
+G05 hyperbolic_integral_saturation PASS
+G06 circular_integral_saturation PASS
+G07 index_five_cyclic_seam PASS
+G08 seam_action_minus_one PASS
+G09 resultant_and_ramification PASS
+G10 exact_primary_projector_denominator_five PASS
+G11 null_rank_two_real_eigenforms PASS
+G12 scope_and_exact_source_firewalls PASS
+DECISION CM-ALTERNATING-PRIMARY-LATTICE-SEAM-CONFIRMED
