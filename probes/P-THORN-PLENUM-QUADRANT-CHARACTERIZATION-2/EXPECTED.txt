@@ -1,0 +1,13 @@
+G01 source_scope_firewall PASS
+G02 cyclotomic_20_carrier PASS
+G03 source_closure_four_roots PASS
+G04 fixed_i_quadrant_table PASS
+G05 fixed_i_exact_coordinates PASS
+G06 plenum_mount_identities PASS
+G07 contraction_and_conjugation_signs PASS
+G08 fixed_i_first_quadrant_unique PASS
+G09 full_galois_first_quadrant_nonunique PASS
+G10 fixed_i_stabilizer_unique PASS
+G11 mounted_third_root_lift_guard PASS
+G12 scope_nonselector_guard PASS
+DECISION THORN-PLENUM-QUADRANT-CHARACTERIZATION-CONFIRMED
