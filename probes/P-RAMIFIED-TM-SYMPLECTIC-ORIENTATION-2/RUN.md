@@ -29,7 +29,8 @@ platform:          Debian GNU/Linux 13
 architecture:      x86_64
 python:            3.13.5
 working_directory: repository root
-command:           LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC python3 probes/P-RAMIFIED-TM-SYMPLECTIC-ORIENTATION-2/verify.py
+environment:       LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC
+command:           python3 probes/P-RAMIFIED-TM-SYMPLECTIC-ORIENTATION-2/verify.py
 exit_code:         0
 stderr_bytes:      0
 stderr_sha256:     e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -41,7 +42,8 @@ expected_lines:    9
 expected_sha256:   8445d1c0fcb96db62f033932732f448759d5cd685b5aeb13e5c976c0a1c6af8a
 ```
 
-The stdout was copied byte for byte to `EXPECTED.txt`. The local execution is
-one architecture lane only. It is a reproduction of the written proof audit,
-not the two-architecture public gate. The required GitHub x86_64, aarch64 and
+The displayed command was executed under the displayed environment. The
+stdout was copied byte for byte to `EXPECTED.txt`. The local execution is one
+architecture lane only. It is a reproduction of the written proof audit, not
+the two-architecture public gate. The required GitHub x86_64, aarch64 and
 aggregate checks remain pending at this record.
