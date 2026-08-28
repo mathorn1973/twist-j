@@ -141,18 +141,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 213, "D": 43, "C": 33, "F": 17,
+    expected_counts = {"T": 214, "D": 43, "C": 33, "F": 17,
                        "O": 28, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v67",
-        len(rows) == 336
+        "registry and companion-ledger counts match Public Canon v68",
+        len(rows) == 337
         and counts == expected_counts
-        and len(normative) == 382
+        and len(normative) == 383
         and len(dependencies) == 616
-        and len(evidence) == 336
-        and two_architecture == 251
-        and len(history) == 859
+        and len(evidence) == 337
+        and two_architecture == 252
+        and len(history) == 860
         and len(gates) == 11
         and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -4521,6 +4521,71 @@ def run():
         == "probes/P-DE-W-ARMING-2"
         and v67_events["DE-W-CONSTANT"]["evidence_sha256"]
         == "de047b7352a06cfa2ab5a71f128bc9f57bef41c9be4456af3ddc21e2863b5f17",
+    ))
+
+    v68_claim = "SO3-FINITE-ANISOTROPY-MAXIMUM"
+    v68_events = [
+        row for row in history
+        if row["event_id"]
+        == "CANON68-DECLARE-SO3-FINITE-ANISOTROPY-MAXIMUM"
+    ]
+    checks.append((
+        "V68-SO3",
+        "the finite SO(3) harmonic-depth maximum enters at T/L1 on its "
+        "proof-first two-architecture public probe while no boost, "
+        "Lorentz-density, J, physical p=5, decoder, measure, dynamics or "
+        "higher-layer selection moves",
+        has_status(index, v68_claim, "T")
+        and index[v68_claim]["canon_section"] == "10. Relativity as counting"
+        and index[v68_claim]["evidence"]
+        == "probes/P-SO3-FINITE-ANISOTROPY-DEPTH-1"
+        and scope_sha256(index, v68_claim)
+        == "e5641ef4a454429e4756d652b9215dea4e80560613607050626eb9fa892ef75b"
+        and scope_contains_all(index, v68_claim, (
+            "for every finite subgroup g <= so(3)",
+            "a(c_n)=1",
+            "a(d_n)=2",
+            "a(a_4)=3",
+            "a(s_4)=4",
+            "a(a_5)=6",
+            "equality iff g is conjugate to the rotational icosahedral group a_5",
+            "difference sqrt5 generates character field q(sqrt5)",
+            "finite-rotation representation theory only",
+            "no selection of j",
+            "physical prime p=5",
+            "no selection of j, the physical prime p=5, a boost or rapidity, lorentz density, decoder, measure, dynamics or l2-l6 lift",
+        ))
+        and normative[v68_claim]["item_type"] == "THEOREM"
+        and normative[v68_claim]["status"] == "T"
+        and normative[v68_claim]["layer"] == "L1"
+        and normative[v68_claim]["gate_ids"] == ""
+        and evidence[v68_claim]["evidence_id"] == "EV-" + v68_claim
+        and evidence[v68_claim]["evidence_kind"] == "PUBLIC_PROBE"
+        and evidence[v68_claim]["location"]
+        == "probes/P-SO3-FINITE-ANISOTROPY-DEPTH-1"
+        and evidence[v68_claim]["sha256"]
+        == "0fd88c1b604fd351ad147e8b0fdecc553e6e27c96f7c861f28fc10b0eb527a15"
+        and evidence[v68_claim]["hash_mode"] == "bundle-manifest-sha256-v1"
+        and evidence[v68_claim]["architecture_requirement"]
+        == "two-architecture"
+        and not any(row["item_id"] == v68_claim for row in dependencies)
+        and all(row["owner_item_id"] != v68_claim for row in gates.values())
+        and v68_claim not in programs
+        and f"- {v68_claim} [" not in core_text
+        and len(v68_events) == 1
+        and v68_events[0]["event_sequence"] == "1"
+        and v68_events[0]["event_date"] == "2026-08-28"
+        and v68_events[0]["release"] == "canon-v68-candidate"
+        and v68_events[0]["claim_id"] == v68_claim
+        and v68_events[0]["event_type"] == "DECLARE"
+        and v68_events[0]["previous_status"] == "-"
+        and v68_events[0]["new_status"] == "T"
+        and v68_events[0]["scope_sha256"] == scope_sha256(index, v68_claim)
+        and v68_events[0]["evidence_id"] == "EV-" + v68_claim
+        and v68_events[0]["evidence_location"]
+        == "probes/P-SO3-FINITE-ANISOTROPY-DEPTH-1"
+        and v68_events[0]["evidence_sha256"]
+        == "0fd88c1b604fd351ad147e8b0fdecc553e6e27c96f7c861f28fc10b0eb527a15",
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
