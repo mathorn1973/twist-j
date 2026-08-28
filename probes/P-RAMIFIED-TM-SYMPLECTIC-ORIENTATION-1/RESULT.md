@@ -1,6 +1,6 @@
 # P-RAMIFIED-TM-SYMPLECTIC-ORIENTATION-1 result
 
-Status: **ABANDONED**.
+Status: ABANDONED.
 
 The preregistration identifier is consumed and must not be reused, renamed,
 resumed, amended or reinterpreted.
