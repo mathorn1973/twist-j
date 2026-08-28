@@ -1,0 +1,32 @@
+TWIST-J P-J-QUADRATIC-CARRY-NORM-SEAM-2
+exact arithmetic in Q(zeta_5); no floats
+q0 coefficients: 2,2,2,2,-1,-1,-1,-1,-1,-1
+q1 coefficients: 0,0,0,0,1,-1,-1,1,-1,1
+difference gcd: 2
+common mod2: e2
+face q0: 8,3,3,3,3
+face q1: 0,1,-1,-1,1
+face H (A+B*sqrt5): 4;(3/2,1/2);(3/2,-1/2);(3/2,-1/2);(3/2,1/2)
+
+PASS 01 K1 sqrt5^2=5 :: sqrt5 exact in Q(zeta5)
+PASS 02 K2 D^5=I :: D=M_J-I is multiplication by j^2
+PASS 03 G1 q0 field=polynomial :: q0 coefficients exact
+PASS 04 G1 q1 field=polynomial :: q1 coefficients exact
+PASS 05 G1 q0=q_plus :: q_plus=(5/2)(I-(1/5)11^T)
+PASS 06 G1 2q1=q_minus :: public epsilon-line matrix
+PASS 07 G1 affine character law :: q0 invariant; q1 epsilon under U
+PASS 08 G2 coefficient gcd=2 :: q0 mod ell=q1 mod ell iff ell divides 2
+PASS 09 G2 common mod2=e2 :: binary carry polynomial shape
+PASS 10 G3 H reconstruction :: H=(q0+sqrt5*q1)/2 coefficientwise
+PASS 11 G3 uH reconstruction :: uH=(q0-sqrt5*q1)/2 coefficientwise
+PASS 12 G4 two character lines independent :: affine covariance leaves two coefficients
+PASS 13 G4 normalization A=1/2 :: F(1)=2A
+PASS 14 G4 witness values :: x=1+j gives (3,1); x^2 gives (7,3)
+PASS 15 G4 multiplicativity factor :: derived polynomial is (5/4)(1-4B^2)
+PASS 16 G4 multiplicative pair=H,uH :: B=+/-1/2 are the two norm embeddings
+PASS 17 G5 q0 face vector :: (8,3,3,3,3)
+PASS 18 G5 q1 face vector :: (0,1,-1,-1,1)
+PASS 19 G5 exact face weights :: 4,(3+s)/2,(3-s)/2,(3-s)/2,(3+s)/2
+PASS 20 G6 invariant-only no-go :: q0=3 on both, relative norms are conjugate and unequal
+
+RESULT 20/20 SEAM-CERTIFIED
