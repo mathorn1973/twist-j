@@ -17,7 +17,7 @@ No Canon, Registry, Frontier, dependency, gate or public status changes.
 
 The square-class distinction has a canonical independently defined algebraic meaning.
 
-It tells whether a nonradical null Hermitian form is already a Hermitian square over the first ramified neighborhood, or becomes one only after the quadratic residue-field extension.
+It tells whether a nonradical null Hermitian form is already a Hermitian square over the first ramified neighborhood, or becomes one only after quadratic scalar extension of the residue field.
 
 It does not presently have a physical meaning in TWIST-J.
 
@@ -179,14 +179,14 @@ nonsquare sheet:  delta_fac(X)=2.
 This gives the independently defined total type
 
 ```text
-FactorizationType={NATIVE_FACTOR,QUADRATIC_EXTENSION},
-D_desc(X)=NATIVE_FACTOR       iff X=v v^dagger over B_(p,1),
-          QUADRATIC_EXTENSION otherwise.
+FactorizationType={NATIVE_FACTOR,QUADRATIC_SCALAR_EXTENSION},
+D_desc(X)=NATIVE_FACTOR             iff X=v v^dagger over B_(p,1),
+          QUADRATIC_SCALAR_EXTENSION otherwise.
 ```
 
 Its two fibres are exactly the two square-class sheets.
 
-The definition of `D_desc` does not mention a sheet label. It asks an existence question in a fixed extension tower. It is also invariant under a change of Hermitian basis: for every invertible `g`,
+The definition of `D_desc` does not mention a sheet label. It asks an existence question in a fixed scalar-extension tower. It is invariant under every base-defined Hermitian basis change. For `g in GL_2(B_(p,1))`,
 
 ```text
 X=v v^dagger
@@ -194,7 +194,7 @@ iff
 g X g^dagger=(g v)(g v)^dagger.
 ```
 
-Thus the minimal residue-extension degree is a congruence invariant.
+The same implication holds after every scalar extension, so the minimal residue-extension degree is a congruence invariant.
 
 ## 4. Stronger p=5 form
 
@@ -228,20 +228,14 @@ D_sign(X)=[mu(X)]
 
 is canonical.
 
-This is a comparison to an existing public algebraic carrier. It is not a public L4-to-L1 gate and it is not a physical qubit statement.
+This is a comparison to an existing public algebraic carrier. It is not a public layer gate and it is not a physical qubit statement.
 
-## 5. Base spinor versus tau spinor
+## 5. Base factorization versus quadratic scalar extension
 
 The public ramified element is
 
 ```text
-J_lambda=2,
-```
-
-and the public quadratic extension is
-
-```text
-F_25=F_5[tau]/(tau^2-2).
+J_lambda=2.
 ```
 
 Every nonsquare in `F_5^*` is `2` times a square. Therefore the p=5 result can be stated without choosing coordinates:
@@ -251,21 +245,39 @@ D_desc(X)=NATIVE_FACTOR
 iff
 X=v v^dagger over B_(5,1),
 
-D_desc(X)=QUADRATIC_EXTENSION
+D_desc(X)=QUADRATIC_SCALAR_EXTENSION
 iff
 X=2 v v^dagger over B_(5,1)
 and X is not a native Hermitian square.
 ```
 
-After adjoining `tau`,
+The required scalar extension is the underlying quadratic field
+
+```text
+E_2=F_25=F_5[tau]/(tau^2-2).
+```
+
+In the scalar-extended ramified Hermitian algebra
+
+```text
+B_(5,2)=B_(5,1) tensor_(F_5) F_25,
+```
+
+the involution is extended as
+
+```text
+bar tensor id.
+```
+
+It fixes `tau`. Therefore, on this specifically typed scalar extension,
 
 ```text
 2 v v^dagger=(tau v)(tau v)^dagger.
 ```
 
-Thus the nonsquare sheet is exactly the sheet whose strict spinor factorization first appears after adjoining the public square root of `J_lambda`.
+This use of `F_25` must not be confused with the public read-place or norm carrier when that carrier uses the Frobenius involution `x->x^5`. The underlying finite field and polynomial root are the same; the involution datum is different. No equality of those Hermitian carriers is claimed.
 
-This is an exact field-of-definition statement. The words state, preparation, particle, Born and foreign qubit are not earned by it.
+Thus the nonsquare sheet is exactly the sheet whose strict factorization first appears after quadratic scalar extension. It is an exact field-of-definition statement. The words state, preparation, particle, Born and foreign qubit are not earned by it.
 
 Equivalently, there is a unique exponent
 
@@ -343,7 +355,7 @@ Owns a quadratic-class bit on a different L1 scalar sheet automaton. Its theorem
 
 ### PENTIT-ROOT-FACTS and PENTIT-ROOT-READING
 
-Own the arithmetic field `F_25`, the root `tau`, and the declared root reading at their scope. They do not classify the present Hermitian support as a physical preparation or outcome.
+Own the underlying arithmetic field `F_25`, the root `tau`, and the declared root reading at their scope. They do not identify the scalar-extended ramified involution with the public finite-field norm involution, and they do not classify the present Hermitian support as a physical preparation or outcome.
 
 ### CENTRAL-LIFT-PHASE
 
@@ -369,14 +381,14 @@ The strongest independently derived statement is:
 
 ```text
 square class      = native Hermitian-square factorization,
-nonsquare class   = quadratic-extension Hermitian-square factorization.
+nonsquare class   = quadratic-scalar-extension Hermitian-square factorization.
 ```
 
 For TWIST-J at `p=5`, this becomes:
 
 ```text
-class [1] = factorization without tau,
-class [2] = factorization first available after adjoining tau=sqrt(J_lambda).
+class [1] = factorization over the base first neighborhood,
+class [2] = factorization first after scalar extension to F_25.
 ```
 
 This is a genuine type distinction. It is a descent obstruction, not a future/past label.
@@ -416,6 +428,6 @@ repeat:          byte-identical
 verdict:         BREAKER NO BREAK
 ```
 
-The checker exhausts the native factor image for `p=3,5,7,11`, constructs every one of the 120 nonradical p=5 points over `F_25`, checks every nilpotent coordinate, audits even/odd extension degree through six for seven primes, verifies the literal p=5 quotient, exhausts the p=5 `R` sheet toggle and records the first clock mismatch at `n=2`.
+The checker exhausts the native factor image for `p=3,5,7,11`, constructs every one of the 120 nonradical p=5 points over the trivially involuted scalar extension `F_25`, checks every nilpotent coordinate, audits even/odd extension degree through six for seven primes, verifies the literal p=5 quotient, exhausts the p=5 `R` sheet toggle and records the first clock mismatch at `n=2`.
 
 This is one same-session x86_64 audit. It is not independent confirmation, not a formal public run and not a two-architecture gate. The written proof is the basis for candidate-T.
