@@ -15,10 +15,10 @@ public series. They may be named once in a cutover audit, but not carried as
 the public version sequence.
 
 If an internal extraction is informally called "Canon v1", that name has no
-public authority. It is only the synthesis surface and may be named once in
-the reconciliation audit. The normative v1 is exclusively **Public Canon
-v1** in this repository. The internal extraction is intentionally not a valid
-public Canon bundle and must not be copied around the public checks.
+public authority. It is only the synthesis surface and may be named once in the
+reconciliation audit. The normative v1 is exclusively **Public Canon v1** in
+this repository. The internal extraction is intentionally not a valid public
+Canon bundle and must not be copied around the public checks.
 
 Throughout `GENESIS`, `https://twistj.com/canon/` continues to serve the
 legacy line and must not be repointed or cited as the Public Canon v1 landing
@@ -35,7 +35,7 @@ No summary may exceed the status or scope of its source.
 The public registry has one exact schema:
 
 ```text
-claim_id	status	scope	canon_section	evidence	falsifier
+claim_id\tstatus\tscope\tcanon_section\tevidence\tfalsifier
 ```
 
 `claim_id` is stable and unique. `status` is one of the seven public statuses
@@ -208,6 +208,28 @@ For new public probes:
   open obligation at that same concrete layer, and `MULTI` or
   `NOT_APPLICABLE` may not be used to evade the placement. Other gate kinds
   may not use equal endpoints.
+
+### Reading-family discipline
+
+Public work does not presume global decoder uniqueness.
+
+Nonuniqueness is a scientific falsifier only when the frozen claim being
+tested explicitly asserts uniqueness in a declared class and equivalence
+relation.
+
+A proposed family of physical readings must freeze the domain, codomain,
+context keys, equality or equivalence relation, and overlap rules needed by
+its claim. If two admitted readings in the same context produce inequivalent
+physical outputs, the work must provide an independent selection or occurrence
+rule, prove the readings physically equivalent at the claimed scope, or leave
+the physical conclusion open.
+
+A reading may never be selected after inspection of the target measurement or
+result it is used to explain.
+
+Completeness of a reading family does not mean cardinality one. It means that
+all admitted alternatives relevant to the claimed outputs are classified and
+that no undeclared choice remains.
 
 ## 5. Canon
 
