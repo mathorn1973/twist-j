@@ -55,7 +55,7 @@ and at least the same scope.
 4. `canon/REGISTRY.tsv`: every public claim with the exact columns:
 
    ```text
-   claim_id	status	scope	canon_section	evidence	falsifier
+   claim_id\tstatus\tscope\tcanon_section\tevidence\tfalsifier
    ```
 
 5. `canon/CHANGELOG.md`: a Public Canon v1 genesis entry. Later entries
@@ -112,6 +112,27 @@ item must be reconciled into the seven public statuses without promotion.
 
 The private repository may remain as an immutable development archive. It is
 not part of the public Canon series.
+
+### Reading-family discipline
+
+Agents must not treat global decoder uniqueness as an unstated program goal.
+One primitive axiom may admit more than one typed physical reading.
+
+- Preserve every local uniqueness or nonuniqueness claim at its registered
+  scope and equivalence relation.
+- Do not turn a scoped nonuniqueness theorem into a global falsification of
+  TWIST-J.
+- Do not turn a scoped uniqueness theorem into a claim that the whole decoder
+  is unique.
+- When a physical claim admits several readings, freeze their domains,
+  codomains, context keys, equivalence, and overlap rules before using them.
+- If overlapping readings give inequivalent physical outputs, require an
+  independent relation, selection, or occurrence law; otherwise keep the
+  physical conclusion open.
+- Never choose a reading after inspecting the target measurement or result it
+  is meant to explain.
+- Treat completeness as classification of every output-relevant admitted
+  alternative, not as proof that the family has cardinality one.
 
 ## 4. Public Canon v1 procedure
 
@@ -317,133 +338,3 @@ neutral formal records. This refresh creates no PR, merge, or activation.
     python3 tools/check_activation.py --full \
       --content-commit FULL_SYNTHESIS_MERGE_SHA
     ```
-
-    Review this exact tree one to one with the intended release. Then open the
-    separate activation pull request from it. No content, record, workflow, or
-    other documentation change is allowed in that pull request.
-18. Merge the activation pull request without changing its tree, verify that
-    the public `main` tree is byte identical to the reviewed release-form
-    staging tree, and tag the activation merge commit `canon-v1`. Record that
-    tag target as
-    `ACTIVATION_COMMIT` in the release manifest. Create the release as a draft,
-    attach the successful tag-job `activation-manifest.json` and recorded
-    `canon/SHA256SUMS`, download and validate both draft assets, and only then
-    publish the immutable release. Never substitute a locally generated
-    manifest.
-    The read-only release workflow downloads both assets, checks the complete
-    file inventory and content/activation commit pins, and compares the hash
-    manifest byte for byte.
-19. Repoint `twistj.com/canon/` from the legacy line to Public Canon v1,
-    then verify the tag, release, public readback, hashes, registry, and all
-    required checks.
-20. Freeze the internal repository for scientific writes and replace its root
-    notice with a pointer to this repository. Only then is cutover complete.
-
-## 5. Startup after cutover
-
-At the start of every session:
-
-1. Fetch public `main`; do not work from an attachment or mirror.
-2. Read `STATUS.md`, `POLICY.md`, this file, `canon/CORE.md`, and
-   `canon/FRONTIER.md`.
-3. Confirm the declared public tag and commit are ancestors of `main`, the
-   Canon hash matches, and required checks are green.
-4. Search open issues, `probes/`, and the registry for collisions, and scan
-   the remote branches explicitly:
-
-   ```text
-   git ls-remote --heads origin
-   ```
-
-   A local branch list is not a collision scan. Work in flight lives on refs
-   that were never merged and therefore appear in no local checkout, in no
-   `probes/` directory, and in no registry row. Duplicate lanes have been
-   started this way.
-5. Claim exactly one named probe in a public issue before committing.
-
-## 5a. Branch retention
-
-A ref is deleted only when deleting it destroys nothing.
-
-```text
-MERGED     an ancestor of `main`. Its content is in `main` for ever, so the
-           ref holds nothing. It may be pruned.
-DIVERGENT  content exists only on this ref. NEVER delete.
-ORPHAN     unrelated history, no merge base with `main` at all. Content exists
-           only on this ref. NEVER delete.
-BASE       `main` itself. Never delete.
-```
-
-Deleting a merged ref is not deleting history: every commit stays reachable
-from `main`. Deleting an unmerged ref hides evidence, and no cleanup, tidiness,
-or age argument outweighs that.
-
-Determine the states with `tools/build_branch_ledger.py`, never by eye and
-never with an ad-hoc shell loop. Three faults make a hand-rolled ledger
-authorise the wrong deletion, and the tool guards each:
-
-- a shallow clone has no common history to find, so `merge-base` reports
-  merged branches as unrelated;
-- `git diff main...branch` errors on a true orphan, and a pipeline that
-  discards the error records the branch as contributing no files;
-- `main` is an ancestor of itself, so a naive ancestor test files it under
-  MERGED and a prune list built from that column deletes the default branch.
-
-Record the ledger before pruning, so that what was deleted, and where it still
-lives, stays auditable afterwards.
-
-Agents with access to the internal archive may read it only for audit. Missing
-material is never copied opportunistically into a public probe. A justified
-addition uses a named `legacy/` pull request, a manifest, and a security
-review.
-
-## 6. Formal work after cutover
-
-1. Create `probe/P-NAME` and `probes/P-NAME/`.
-2. Freeze the six preregistration fields and action layer required by
-   `POLICY.md`.
-3. Commit and push `PREREG.md` and the accepted exact verifier before any
-   formal gate execution. Record commit and file hashes.
-4. Run the pinned verifier locally from the repository root on Linux or a
-   Linux-compatible environment. Save exact stdout as `EXPECTED.txt` and
-   record neutral fields in `RUN.md`, for example
-   `platform: Ubuntu 24.04` and `architecture: aarch64`. Never record a
-   machine nickname.
-5. Open a pull request changing at most one probe directory. The required
-   check independently reruns the changed verifier on GitHub x86_64
-   `ubuntu-latest` and compares hashes and exact bytes.
-6. If the local and GitHub architectures differ, their byte-identical output
-   satisfies the two-architecture computation gate. If they are the same, the
-   result is reproduced but a computation-only claim remains at most `C`.
-   Independent proof may establish `T`; the verifier then audits it.
-7. Add `RESULT.md`. A fired falsifier is merged, not hidden. Update the
-   registry, frontier, and Canon only to the earned status and scope.
-8. Pass policy and scientific checks, security-audit the named files, and merge
-   without squash or rebase.
-9. A public Canon release is a separate declared fold with deterministic
-   output, `SHA256SUMS`, immutable tag `canon-vN`, and updated `STATUS.md`.
-   After v1 activation, one reviewed release branch may carry exactly two
-   frozen commits: first the complete content fold, then a release-form
-   commit changing exactly `STATUS.md`, `README.md`, and `CITATION.cff` and
-   naming the content commit. The pull-request head must pass the active
-   release gate. Merge without squash or rebase, tag the merge only after
-   public readback, and publish assets only after tag readback passes.
-
-Notes and incomplete proposals live under `notes/`, carry `NON-CANONICAL`,
-need no verifier, and never edit `canon/CANON.md`. Canon patch proposals live
-under `notes/canon/`; only a later sealed public fold changes the Canon.
-
-Do not add or loosen GitHub workflows without an explicit policy change.
-`pull_request_target`, mutable action tags, persisted checkout credentials,
-and write permissions are forbidden.
-
-Commit as `A. M. Thorn <thorn@twistj.com>` unless the author explicitly names
-another contributor identity.
-
-## 7. Stop conditions
-
-Stop without guessing if authority is unclear, the internal basis moves during
-synthesis, a public claim lacks equal-or-stronger support, a hash differs,
-evidence is missing, a license is uncertain, a probe collides, formal data were
-opened before the pin, a threshold moved, a layer lift is unnamed, or public
-safety is in doubt.
