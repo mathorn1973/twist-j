@@ -91,3 +91,30 @@ decision:        BREAKER NO BREAK
 ```
 
 The two breaker stdout files were byte-identical. This breaker was written and frozen before the positive verifier, but it is same-session work. It is not blind independent confirmation.
+
+## Repository two-architecture reproduction
+
+The repository workflow ran on evidence commit `83df9bde5e4d9cfe3fd41fd7e355a8816286dbbe` through pull request #661.
+
+```text
+workflow run:     33269931412
+PR merge test:    931a455d178dafe55682f4bf6b992cfaa88b2d3d
+
+x86_64:
+  OS:             Ubuntu 24.04.4
+  Python:         CPython 3.12.14 x64
+  verifier sha:   0f6eaf58024ab9a48be68422e4b84b6c74628418debc76cf9da65c3eb20c403b
+  stdout sha:     35eed8bd25608414804228fae3d7beb7c947e56846be7761885867eb8e76c069
+  verdict:        PASS
+
+aarch64:
+  OS:             Ubuntu 24.04.4
+  Python:         CPython 3.12.14 arm64
+  verifier sha:   0f6eaf58024ab9a48be68422e4b84b6c74628418debc76cf9da65c3eb20c403b
+  stdout sha:     35eed8bd25608414804228fae3d7beb7c947e56846be7761885867eb8e76c069
+  verdict:        PASS
+
+aggregate:        TWO-ARCHITECTURE CHECK PASS
+```
+
+Both architecture jobs also passed policy, 142 tool tests, Canon v71 with 342 claims, the ledger, and the gate contract. The verifier and stdout hashes match the local accepted record and each other exactly. The two architecture runs are repository reproductions of one pinned proof carrier. They are not independent mathematical confirmation.

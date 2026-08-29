@@ -8,9 +8,9 @@ Date: 2026-08-29
 T at frozen L1 proof scope
 ```
 
-**Local evidence gate: COMPLETE. Public Canon and Registry status: unchanged. Repository two-architecture checks: pending.**
+**Probe evidence gate: COMPLETE. Repository two-architecture check: PASS. Public Canon and Registry status: unchanged.**
 
-The exact written proof closes T1 to T4. The pinned standard-library verifier returned `ALL PASS`; the same-session adversarial checker returned `BREAKER NO BREAK`. Both were repeated byte-identically with empty stderr. The proof, not the finite audit, carries the theorem status at the probe scope.
+The exact written proof closes T1 to T4. The pinned standard-library verifier returned `ALL PASS`; the same-session adversarial checker returned `BREAKER NO BREAK`. Both local executions were repeated byte-identically with empty stderr. The repository then reproduced the same verifier and the same 729-byte stdout on x86_64 and native aarch64. The proof, not the finite audit, carries the theorem status at the probe scope.
 
 ## The exact seam
 
@@ -105,12 +105,15 @@ This wording is a reading of the theorem. It is not an additional T claim.
 final pin:       06572b7b9c59ffcccacbe14d0e163b79e4ae57cb
 verifier sha256: 0f6eaf58024ab9a48be68422e4b84b6c74628418debc76cf9da65c3eb20c403b
 stdout sha256:   35eed8bd25608414804228fae3d7beb7c947e56846be7761885867eb8e76c069
+stdout bytes:    729
 local x86_64:    PASS, empty stderr, repeated byte-identically
 breaker:         NO BREAK, same-session only
-GitHub x86_64:   PENDING
-GitHub aarch64:  PENDING
-aggregate check: PENDING
+workflow run:    33269931412
+GitHub x86_64:   PASS, Ubuntu 24.04.4, CPython 3.12.14
+GitHub aarch64:  PASS, Ubuntu 24.04.4, CPython 3.12.14
+architecture hashes: verifier and stdout byte-identical
+aggregate check: TWO-ARCHITECTURE CHECK PASS
 Canon fold:      not started
 ```
 
-The next public step is review and repository CI on the one-probe pull request. Any Registry or Canon fold is a later separate action.
+The probe is ready for reviewed merge as an L1 result. Any Registry or Canon fold is a later separate action.
