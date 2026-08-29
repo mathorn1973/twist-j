@@ -10,7 +10,7 @@ issue:           #668
 branch:          notes/c-ramified-sheet-descent-type-n
 prereg commit:   2d8446c4e18cd5cb2870ed04df05ebf30cd38d91
 breaker commit:  53c8df15f2a72bf8ab67a7d034eac91cf25d7bc4
-result commit:   43c75afd4bb0d995748cf56824dd1e3e284b90fd
+result commit:   b6aef3ea92e1af3dac651680681c00bbbe4a9b91
 ```
 
 ## Promotion recommendation
@@ -29,12 +29,13 @@ Possible scope:
 
 ```text
 at L4 exact algebra for every odd prime p, every m>=1, and every
-nonradical null X in Herm_2(F_p[eps]/eps^2): X is a Hermitian square
-over F_(p^m)[eps]/eps^2 iff its rank-one residue coefficient is a
-square in F_(p^m); consequently the minimal residue-extension degree
-is one on the square sheet and two on the nonsquare sheet, and the
-type is invariant under Hermitian congruence; no physical, decoder,
-Born, causal, event, stream or measure meaning.
+nonradical null X in Herm_2(F_p[eps]/eps^2): after scalar extension
+with involution bar tensor id, X is a Hermitian square over
+F_(p^m)[eps]/eps^2 iff its rank-one residue coefficient is a square
+in F_(p^m); consequently the minimal residue-extension degree is one
+on the square sheet and two on the nonsquare sheet, and the type is
+invariant under base-defined Hermitian congruence; no physical,
+decoder, Born, causal, event, stream or measure meaning.
 ```
 
 The proof in `RESULT.md` is theorem-grade. The checker is an audit only.
@@ -53,11 +54,13 @@ This comparison must preserve public ownership:
 
 ```text
 QUBIT-FROM-F5 owns V_+,
-PENTIT-ROOT-FACTS owns F_25 and tau^2=2,
+PENTIT-ROOT-FACTS owns the underlying field F_25 and tau^2=2,
 RAMIFIED-TM-LIFT owns its phase-to-Thue-Morse quotient.
 ```
 
-It must also retain the exact negative control
+The scalar-extension involution is `bar tensor id` and fixes `tau`. It is not the Frobenius or Born involution on another public `F_25` carrier. Equality of the underlying field does not identify those involutive carriers.
+
+The comparison must also retain the exact negative control
 
 ```text
 n=2:
@@ -82,7 +85,7 @@ occurrence or selection rule where required,
 named layer gate.
 ```
 
-A future physical candidate may not define its output as `NATIVE_FACTOR` or `QUADRATIC_EXTENSION` and then cite that definition as independent evidence for the same output. It must have a consequence outside the sheet selector target.
+A future physical candidate may not define its output as `NATIVE_FACTOR` or `QUADRATIC_SCALAR_EXTENSION` and then cite that definition as independent evidence for the same output. It must have a consequence outside the sheet selector target.
 
 ## Scientific falsifier for an algebraic probe
 
@@ -92,7 +95,7 @@ A future formal theorem probe fires if any of the following is exact:
 2. a square-class point fails to factor there;
 3. a nonsquare base-field coefficient becomes square in an odd residue degree;
 4. a nilpotent coordinate obstructs factorization after the residue coefficient has a square root;
-5. the minimal depth changes under Hermitian congruence.
+5. the minimal depth changes under base-defined Hermitian congruence.
 
 Integrity failures remain STOP.
 
@@ -107,8 +110,8 @@ sheet class = Hermitian spinor descent obstruction.
 For p=5:
 
 ```text
-[1] = base factorization,
-[2] = factorization first after adjoining tau=sqrt(J_lambda).
+[1] = factorization over the base first neighborhood,
+[2] = factorization first after scalar extension to F_25.
 ```
 
 The unresolved question is not what the sheets mean algebraically. That is now answered. The unresolved question is whether any independent public physical reading consumes this descent type.
