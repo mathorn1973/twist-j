@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v70
+# TWIST-J Public Canon v71
 
-**Release identity.** Public Canon v70. Normative authority and activation
+**Release identity.** Public Canon v71. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v70 also declares the discrete architecture used to read
+only. Public Canon v71 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v70 does not claim
+seed of the two algebraic projections. Public Canon v71 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -35,6 +35,33 @@ the modulus to gravity and scale and of the argument to
 electromagnetism and phase is the public dictionary
 AXIOM-PROJECTION-DICTIONARY [D], not part of the algebraic theorem.
 Plenum, not vacuum.
+
+**Reading plurality.** A single axiom does not imply a single physical
+reading. TWIST-J may admit a family R = {D_alpha}_{alpha in A} of
+typed partial readings of the same autonomous integer substrate. More
+than one reading is admissible when the domain, codomain, physical
+context, equality or equivalence relation, and overlap rule needed by
+the claim are declared publicly.
+
+Distinct readings may be equivalent, complementary, or context-scoped.
+Their multiplicity is not by itself a failure of the program. What is
+not admissible is an untyped or outcome-dependent choice among
+incompatible readings. If two readings apply to the same declared
+physical context and give inequivalent physical outputs, the Canon
+must either provide an independent rule relating, selecting, or
+assigning occurrence among them, prove the readings physically
+equivalent at the claimed scope, or leave the corresponding physical
+claim open.
+
+A uniqueness theorem is therefore a scoped result only where a
+registered claim explicitly asks for uniqueness. Global decoder
+uniqueness is not a requirement of TWIST-J.
+
+Decoder completion means that the admitted reading family is
+explicitly typed and sufficiently classified to determine every
+physical output claimed by the Canon, including every overlap or
+branch that can change such an output. It does not require that the
+family contain exactly one reading.
 
 **Conventions.** No em dashes. No decimals unless justified: integers
 and ratios are primary; decimals appear only as computed or measured
@@ -97,7 +124,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v70 contains no such
+deriving the architecture from J; Public Canon v71 contains no such
 theorem.
 
 ---
