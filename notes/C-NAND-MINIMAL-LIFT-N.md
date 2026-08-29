@@ -82,7 +82,7 @@ This gives four height-one lifts. Quotienting by global sign pairs them as
 \{1-xy,-1+xy\},
 \]
 
-so exactly two classes remain. `square`
+so exactly two classes remain. \(\square\)
 
 Thus the result is a classification, not a search witness.
 
