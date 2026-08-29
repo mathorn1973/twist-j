@@ -1,11 +1,21 @@
 # Canon changelog (public series)
 
-## Public Canon v70
+## Public Canon v71
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
 Registry snapshot: 342 claims; 0 T-LOCK, 219 T, 44 D, 33 C, 2 H, 27 O, 17 F; 29 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v71 is a framework-wording fold. It records no new scientific
+claim and changes no status. It makes explicit that the primitive axiom is an
+asserted starting point rather than a derivation target within TWIST-J, and
+that global decoder uniqueness is not a program requirement. A complete
+physical reading may be a classified typed family; output-relevant
+alternatives, overlaps, equivalences and any selection or occurrence rule must
+be explicit. Scoped uniqueness and nonuniqueness claims remain unchanged.
+
+## Public Canon v70
 
 Public Canon v70 executes the owner-choice accounting transaction frozen in
 `QDD-ALGEBRAIC-DMATTER-SUCCESSOR-V70`. It records no new scientific theorem,
