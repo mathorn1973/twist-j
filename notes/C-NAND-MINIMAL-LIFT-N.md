@@ -1,14 +1,21 @@
 # C-NAND-MINIMAL-LIFT-N
 
-**Status:** NON-CANONICAL incubation. candidate-T / L1 only. No authority. No Canon status change.
+**Status:** NON-CANONICAL incubation. No authority. No Canon status change.
 
 **Date:** 2026-08-29
 
-**Purpose:** Record the exact negative result from the NAND exercise: the binary NAND polynomial shadow does not determine its minimal integer lift. Under the chosen cyclotomic diagonal read at `j = zeta_5`, the two minimal lift classes become respectively a unit of norm `1` and a ramified element of norm `5`.
+**Purpose:** Record the exact results of the NAND / lifted-Sheffer exercise while preserving the failed route that led to the stronger invariant.
 
-No computation is used in this note. The result is a self-contained exact proof.
+This note contains four separate outcomes:
 
-## 1. Scope and convention
+1. a complete minimal coefficient-height classification of literal integer lifts of the NAND ANF polynomial;
+2. an exact seed-target obstruction for the lifted Sheffer operation `s(x,y)=1-xy` from the seed `zeta_5`, obtained from the ramified residue class modulo `lambda=1-zeta_5`;
+3. a falsified exploratory claim that `zeta_5` is the only unit in the Sheffer closure, with an explicit constructive counterexample;
+4. a finite characteristic-two control showing that the ramified-place obstruction is absent in `F_16`.
+
+No physical, decoder, measure, apparatus, or L2-L6 claim is made.
+
+## 1. Literal minimal integer lifts of the NAND polynomial
 
 Write the Boolean NAND polynomial in algebraic normal form as
 
@@ -16,7 +23,7 @@ Write the Boolean NAND polynomial in algebraic normal form as
 N(x,y)=1+xy \in \mathbf F_2[x,y].
 \]
 
-This note studies **literal coefficientwise polynomial lifts**
+This section studies **literal coefficientwise polynomial lifts**
 
 \[
 P(x,y)\in\mathbf Z[x,y],\qquad P\bmod 2=N
@@ -24,7 +31,7 @@ P(x,y)\in\mathbf Z[x,y],\qquad P\bmod 2=N
 
 as an equality in `F_2[x,y]`.
 
-This scope is load-bearing. It is **not** the larger class of arbitrary integer polynomials that merely induce the same Boolean function on `{0,1}^2`; Boolean-function identities such as `x^2=x` are not quotiented here.
+This scope is load-bearing. It is not the larger class of arbitrary integer polynomials that merely induce the same Boolean function on `{0,1}^2`.
 
 For
 
@@ -40,9 +47,7 @@ H(P):=\max_{a,b}|c_{ab}|.
 
 Two lifts are identified up to global sign when `P ~ -P`.
 
-## 2. Minimal integer lift classification
-
-### Proposition
+### Candidate theorem: minimal lift classification
 
 Among integer polynomial lifts of `N(x,y)=1+xy` of minimal coefficient height, the complete list is
 
@@ -74,19 +79,11 @@ Therefore every lift has `H(P) >= 1`. At height one, the two odd coefficients ca
 P=\pm1\pm xy.
 \]
 
-This gives four height-one lifts. Quotienting by global sign pairs them as
-
-\[
-\{1+xy,-1-xy\},
-\qquad
-\{1-xy,-1+xy\},
-\]
-
-so exactly two classes remain. \(\square\)
+This gives four height-one lifts. Quotienting by global sign leaves exactly two classes.
 
 Thus the result is a classification, not a search witness.
 
-## 3. The two classes have the same binary shadow
+## 2. The two minimal classes have the same binary shadow
 
 Modulo two,
 
@@ -94,19 +91,23 @@ Modulo two,
 R_+(x,y)\equiv R_-(x,y)\equiv1+xy.
 \]
 
-Therefore the reduction map from the two global-sign classes of minimal lifts to the NAND polynomial shadow is non-injective:
+Therefore the reduction map from the two global-sign classes of minimal lifts to the NAND polynomial shadow is non-injective.
+
+The binary shadow alone does not determine which of the two minimal coefficientwise lift classes was present before reduction. An additional choice can select a lift, but that choice is not contained in the one-bit polynomial shadow.
+
+This is a narrow one-bit no-go only. It does not say that finer `2^k` information can never distinguish the two classes.
+
+Indeed, at `x=y=1`,
 
 \[
-\{[R_+],[R_-]\}\longrightarrow\{N\}.
+1+xy=2,\qquad 1-xy=0,
 \]
 
-There is no reconstruction map from the NAND shadow that recovers both original lift classes. A section can of course be imposed by an additional choice, but that choice is not contained in the binary shadow.
+so the two values are distinct modulo four.
 
-This is the exact no-go.
+## 3. Chosen cyclotomic diagonal read
 
-## 4. Chosen cyclotomic diagonal read
-
-Now make an additional, explicitly chosen read:
+Make the additional, explicitly chosen read
 
 \[
 x=y=j,\qquad j=\zeta_5.
@@ -115,19 +116,14 @@ x=y=j,\qquad j=\zeta_5.
 For the positive lift,
 
 \[
-R_+(j,j)=1+j^2=J.
+R_+(j,j)=1+j^2=J,
 \]
 
-Its norm is
+with
 
 \[
-N_{\mathbf Q(j)/\mathbf Q}(J)
-=\prod_{a=1}^{4}(1+j^{2a})
-=\Phi_5(-1)
-=1.
+N_{\mathbf Q(j)/\mathbf Q}(J)=\Phi_5(-1)=1.
 \]
-
-So the positive class gives the TWIST-J unit.
 
 For the negative lift,
 
@@ -141,13 +137,10 @@ Since
 N(1+j)=\Phi_5(-1)=1,
 \]
 
-`1+j` is a unit, so `1-j^2` is associated to the standard ramified element `1-j`. Equivalently,
+`1+j` is a unit, so `1-j^2` is associated to `1-j`, and
 
 \[
-N(1-j^2)
-=\prod_{a=1}^{4}(1-j^{2a})
-=\Phi_5(1)
-=5.
+N(1-j^2)=\Phi_5(1)=5.
 \]
 
 Hence
@@ -162,47 +155,324 @@ N(R_-(j,j))=5.
 }
 \]
 
-The two minimal integer lift classes that are identical in the NAND shadow become arithmetically distinct under this chosen cyclotomic diagonal read:
+This does not derive `J` from NAND, does not select `p=5`, and does not imply that characteristic two generally identifies the TWIST-J axiom with ramification.
+
+For every odd prime `p`, the same elementary cyclotomic contrast `Phi_p(-1)=1`, `Phi_p(1)=p` is available, so this contrast is not a selector of five.
+
+## 4. Lifted Sheffer operation
+
+Now separate the previous coefficient-lift question from a different question.
+
+Define the characteristic-zero lifted Sheffer operation
 
 \[
-\begin{array}{ccl}
-1+xy &\mapsto& J=1+j^2,\quad N=1,\quad \text{unit branch},\\[1mm]
-1-xy &\mapsto& 1-j^2,\quad N=5,\quad \text{ramified branch}.
+s(x,y)=1-xy
+\]
+
+on
+
+\[
+\mathcal O_5=\mathbf Z[\zeta_5].
+\]
+
+Let `C_s(a)` denote the smallest subset of `O_5` containing a seed `a` and closed under `s`.
+
+The operation is not associative and has no neutral element. Its Boolean functional completeness does not by itself give a semigroup, ring, or additive-multiplicative algebra structure upstairs.
+
+The relevant question here is therefore not whether Sheffer is functionally complete on bits. It is whether a specified target is reachable from a specified seed under repeated use of the lifted operation.
+
+## 5. General residue-closure lemma
+
+Let `R` be a ring, `I` an ideal, and
+
+\[
+\rho:R\to R/I
+\]
+
+the quotient homomorphism. For
+
+\[
+s(x,y)=1-xy,
+\]
+
+one has
+
+\[
+\rho(s(x,y))=1-\rho(x)\rho(y)=s(\rho(x),\rho(y)).
+\]
+
+Therefore for every seed `a`,
+
+\[
+\boxed{\rho(C_s(a))\subseteq C_s(\rho(a)).}
+\]
+
+### Consequence
+
+A target `t` is impossible from `a` whenever
+
+\[
+\rho(t)\notin C_s(\rho(a)).
+\]
+
+This is only a necessary obstruction. If the residue closure contains `rho(t)`, reachability of `t` upstairs remains undecided.
+
+## 6. Complete `F_5` Sheffer-subalgebra classification
+
+Work in `F_5` with
+
+\[
+s(a,b)=1-ab.
+\]
+
+The complete list of nonempty subsets closed under `s` is
+
+\[
+\boxed{\{2\},\qquad\{0,1\},\qquad\mathbf F_5.}
+\]
+
+This was independently checked by exhaustive enumeration of all `32` subsets of `F_5`. It also has a direct proof.
+
+### Proof without enumeration
+
+- If a closed set contains `0`, then `s(0,0)=1`, so it contains `{0,1}`.
+- If such a set contains any additional element `2`, `3`, or `4`, repeated application of `s` generates all of `F_5`.
+- If a nonempty closed set does not contain `0`, it cannot contain `1` because `s(1,1)=0`, and it cannot contain `4` because `s(4,4)=0`.
+- If it contains `3`, then `s(3,3)=2` and `s(3,2)=0`, contradiction.
+- The only remaining possibility is `{2}`, and indeed `s(2,2)=2`.
+
+Hence exactly the three displayed closed subsets occur.
+
+Equivalently, singleton seed closures are
+
+\[
+\begin{array}{c|c}
+\text{seed}&C_s(\text{seed})\\
+\hline
+0&\{0,1\}\\
+1&\{0,1\}\\
+2&\{2\}\\
+3&\mathbf F_5\\
+4&\mathbf F_5.
 \end{array}
 \]
 
-## 5. No-go statement
+## 7. Ramified seed-target barrier for `zeta_5`
 
-**candidate-T / L1 / NON-CANONICAL.**
-
-> Reduction modulo two identifies the two global-sign classes of coefficient-height-one integer polynomial lifts of the NAND algebraic-normal-form polynomial `1+xy`. Under the additional diagonal read `x=y=zeta_5`, one class maps to the unit `J=1+zeta_5^2` of norm `1`, while the other maps to `1-zeta_5^2`, an associate of the ramified element `1-zeta_5`, of norm `5`. Therefore the binary NAND polynomial shadow does not contain the information required to reconstruct which of these two minimal integer lift classes was present before reduction.
-
-Equivalently:
+Let
 
 \[
-\boxed{\text{NAND is a shadow, not a sufficient lift.}}
+\lambda=1-\zeta_5.
 \]
 
-A compact reading is:
+Then
 
-> NAND knows the relation, but the binary shadow does not determine the sign of its minimal integer lift. Under the chosen cyclotomic diagonal read, that lost sign separates a unit branch from a ramified branch.
+\[
+\mathcal O_5/(\lambda)\cong\mathbf F_5,
+\qquad
+\zeta_5\mapsto1.
+\]
 
-## 6. What this does not prove
+By the residue-closure lemma and the `F_5` classification,
 
-This note does **not** claim any of the following:
+\[
+C_s(\zeta_5)\bmod\lambda\subseteq\{0,1\}.
+\]
 
-- that characteristic two generally identifies the TWIST-J axiom with ramification;
-- that `J` or `Q(zeta_5)` is derived from NAND;
-- that no richer NAND circuit, typed carrier, external orientation, or additional datum can select `R_+`;
-- that NAND alone produces the five-point carry pentad;
-- that NAND selects an oriented `C_5`, a primitive generator `j`, or the exponent `2` in `J=1+j^2`;
-- that Thue-Morse is derived from NAND; functional completeness only means that a NAND circuit can implement its Boolean operations;
-- that the chosen diagonal read `x=y=zeta_5` is forced;
-- any decoder, physical, measure, apparatus, or L2-L6 statement.
+In fact both residues occur because the seed has residue `1` and
 
-The no-go is narrower and exact: **within the frozen minimal-lift class, the binary shadow is non-injective. Additional structure is required to select a lift.**
+\[
+s(\zeta_5,\zeta_5)=1-\zeta_5^2\equiv0\pmod\lambda.
+\]
 
-## 7. Relation to Public Canon v69
+Therefore
+
+\[
+\boxed{C_s(\zeta_5)\bmod\lambda=\{0,1\}.}
+\]
+
+Now
+
+\[
+J=1+\zeta_5^2\equiv2\pmod\lambda,
+\]
+
+while
+
+\[
+\phi=-\zeta_5^2-\zeta_5^3\equiv-2\equiv3\pmod5.
+\]
+
+Since neither `2` nor `3` lies in `{0,1}`,
+
+\[
+\boxed{J\notin C_s(\zeta_5),\qquad \phi\notin C_s(\zeta_5).}
+\]
+
+This is an all-depth exact seed-target separation. No coefficient bound, search depth, norm census, or limiting argument enters the proof.
+
+The first Sheffer step lands in the ramified ideal:
+
+\[
+s(\zeta_5,\zeta_5)=1-\zeta_5^2=(1-\zeta_5)(1+\zeta_5),
+\]
+
+so its residue is `0` modulo `lambda` and its norm is `5`.
+
+The correct interpretation is narrow:
+
+> From the seed `zeta_5`, the lifted Sheffer operation cannot reach `J` or `phi` because seed and targets lie in different `s`-invariant residue classes modulo `lambda`.
+
+This is a theorem about the pair `seed + target`, not a theorem that the Sheffer operation is globally algebraically insufficient.
+
+## 8. Uniform odd-prime form
+
+For any odd prime `p`, set
+
+\[
+\zeta=\zeta_p,\qquad \lambda_p=1-\zeta.
+\]
+
+Then
+
+\[
+\mathbf Z[\zeta_p]/(\lambda_p)\cong\mathbf F_p,
+\qquad \zeta\mapsto1.
+\]
+
+The set `{0,1}` is closed under `s(a,b)=1-ab` in every residue characteristic. Therefore the Sheffer closure of the seed `zeta` has residue contained in `{0,1}` modulo `lambda_p`, while
+
+\[
+1+\zeta^2\equiv2\pmod{\lambda_p}.
+\]
+
+For odd `p`, `2` is distinct from `0` and `1`, so
+
+\[
+1+\zeta_p^2\notin C_s(\zeta_p).
+\]
+
+Thus the residue obstruction is uniform over odd primes and does not select `p=5`.
+
+## 9. Falsified exploratory route: unique unit in the closure
+
+An earlier exploratory claim was:
+
+> `zeta_5` is the only norm-one unit in `C_s(zeta_5)`.
+
+This claim is **FALSIFIED** in this incubation. It is not silently repaired and is not a public Registry `F` row.
+
+A constructive counterexample is
+
+\[
+\phi^{-4}=5+3\zeta_5^2+3\zeta_5^3,
+\qquad
+N(\phi^{-4})=1.
+\]
+
+Using `z=\zeta_5` and `s(x,y)=1-xy`, define
+
+\[
+u=s(z,z),
+\]
+
+\[
+v=s(z,u),
+\]
+
+\[
+b=s(z,v),
+\]
+
+\[
+c=s(u,b),
+\]
+
+\[
+a=s(z,c).
+\]
+
+In the basis `(1,z,z^2,z^3)` these are
+
+```text
+u = ( 1, 0,-1, 0)
+v = ( 1,-1, 0, 1)
+b = ( 2, 0, 2, 1) = 2 + 2 z^2 + z^3
+c = (-2,-2,-2,-3)
+a = (-2,-1,-1,-1) = -2 - z - z^2 - z^3
+```
+
+and the final step is
+
+\[
+\boxed{s(a,b)=5+3z^2+3z^3=\phi^{-4}.}
+\]
+
+Hence a second unit appears at the next closure level under the convention
+
+\[
+C_{d+1}=C_d\cup s(C_d,C_d).
+\]
+
+The unrestricted closure sizes through that stage are
+
+```text
+1, 2, 4, 11, 67, 2273
+```
+
+for `C_0` through `C_5`; the displayed final `s(a,b)` lies one application beyond the operands `a,b` and therefore supplies the explicit deeper witness.
+
+The failed norm argument is therefore replaced, not patched, by the residue-subalgebra invariant. This replacement is structurally stronger because
+
+\[
+\phi^{-4}\equiv1\pmod\lambda
+\]
+
+is permitted by the barrier, whereas
+
+\[
+J\equiv2,\qquad\phi\equiv3
+\]
+
+are excluded regardless of how many further units the closure contains.
+
+## 10. Characteristic-two control
+
+At the prime `2`,
+
+\[
+\mathcal O_5/(2)\cong\mathbf F_{16}.
+\]
+
+In characteristic two,
+
+\[
+1-xy=1+xy.
+\]
+
+A finite exhaustive closure calculation starting from the residue class of `zeta_5` gives all `16` elements of `F_16`.
+
+Within this finite control,
+
+\[
+J\bmod2=1+\zeta_5^2=s(\zeta_5,\zeta_5)
+\]
+
+is present immediately, and
+
+\[
+\phi\bmod2=\zeta_5^2+\zeta_5^3
+\]
+
+also lies in the closure.
+
+This control is recorded at computation-grade incubation scope only. No public status is claimed here.
+
+Its role is to delimit the ramified-place theorem: the `lambda` obstruction above is an odd-prime ramified residue obstruction. It is absent in the characteristic-two `F_16` control because the sign distinction collapses and the seed closure is the whole finite field.
+
+This does not make the prime `2` a physical selector and does not strengthen any public two-place dictionary.
+
+## 11. Relation to Public Canon v69
 
 At the time of writing, Public Canon v69 is the active public authority. This note changes none of its claims.
 
@@ -210,14 +480,31 @@ Relevant existing public rows are contextual only:
 
 - `CARRY-QUADRATIC-SYMMETRY [T]` classifies the permutation-invariant pure quadratic Boolean form and explicitly states that five is an output cardinality, not a selected rational prime.
 - `CARRY-PENTAD [T]` gives the five-point singular set and its `O^-(4,2) ~= S_5` symmetry, while explicitly selecting no cycle, orientation, exponent, `J`, or physical reading.
-- `J-BINARY-NORM-DESCENT [T]` gives the exact binary norm descent at the prime `2` and explicitly does not select `J`, `2`, `5`, or order five.
-- `RAMIFIED-TM-LIFT [T]` gives the separate ramified `F_5` phase lift and the universal carry identity, with no claim that the binary quotient alone selects the lift.
+- `J-BINARY-NORM-DESCENT [T]` gives `O_5/(2) ~= F_16` and `O_(Q(phi))/(2) ~= F_4`, with no uniqueness of `J`, `2`, `5`, or order five.
+- `RAMIFIED-TM-LIFT [T]` gives the separate ramified `F_5` lift and universal carry identity, without asserting the present Sheffer seed-target theorem.
 
-The present note does not strengthen, merge, or reinterpret those rows. It records a separate exact L1 obstruction discovered by the NAND exercise.
+The present note does not strengthen, merge, or reinterpret those rows.
 
-## 8. Falsifier
+## 12. Scientific ledger inside this incubation
 
-The classification fails if any integer polynomial `P` exists such that
+The current local accounting is:
+
+```text
+candidate-T  literal minimal coefficient-height NAND lift classification
+candidate-T  residue-closure lemma rho(C_s(a)) subseteq C_s(rho(a))
+candidate-T  complete nonempty s-closed subset classification in F_5
+candidate-T  C_s(zeta_5) mod lambda = {0,1}; hence J and phi are unreachable
+FALSIFIED    "zeta_5 is the only unit in C_s(zeta_5)"
+             witness phi^-4 = 5 + 3 zeta_5^2 + 3 zeta_5^3
+candidate-C  F_16 closure control: seed zeta_5 generates all 16 elements under s
+OPEN         reachability of J from lifted Sheffer seeds whose mod-lambda residue is 3 or 4
+```
+
+The word `FALSIFIED` above records the disposition of an exploratory candidate only. It is not a public Canon `F` status.
+
+## 13. Falsifiers and boundaries
+
+The minimal-lift classification fails if there exists a literal coefficientwise integer polynomial `P` with
 
 \[
 H(P)=1,
@@ -225,20 +512,14 @@ H(P)=1,
 P\bmod2=1+xy
 \]
 
-as a literal equality in `F_2[x,y]`, but `P` is not one of `+-1 +- xy`.
+that is not one of `+-1 +- xy`.
 
-The cyclotomic corollary fails if
+The `F_5` classification fails if a nonempty proper `s`-closed subset exists other than `{2}` or `{0,1}`.
 
-\[
-N(1+j^2)\ne1
-\]
+The seed-target theorem fails if an exact Sheffer expression in the single seed `zeta_5` evaluates in `Z[zeta_5]` to `J` or to `phi`, or if the quotient-homomorphism induction is wrong.
 
-or
+A seed whose residue is `3` or `4` modulo `lambda` does not falsify the theorem; it lies outside the frozen seed scope. Failure of the residue obstruction to decide such a seed is an acknowledged open reachability question.
 
-\[
-N(1-j^2)\ne5
-\]
+The finite `F_16` control is falsified by an exact exhaustive closure different from all `16` field elements.
 
-for `j=zeta_5`.
-
-A different lift class obtained only after enlarging the declared scope, or a selector using additional typed data, does not falsify this note.
+No statement here selects `p=5`, derives the TWIST-J axiom, derives `phi`, supplies a decoder, or moves any L2-L6 claim.
