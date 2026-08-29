@@ -1,6 +1,6 @@
 # P-QDD-REPEATABLE-POINTER-DEPHASING-1 result
 
-Status: `PROVED IN THE FROZEN L4 CLASS / LOCAL FORMAL AUDIT PASS / PUBLIC REPLAY PENDING / CANON UNCHANGED`.
+Status: `PROVED AND TWO-ARCHITECTURE AUDITED IN THE FROZEN L4 CLASS / CANON UNCHANGED`.
 
 ## Decision
 
@@ -8,7 +8,7 @@ Status: `PROVED IN THE FROZEN L4 CLASS / LOCAL FORMAL AUDIT PASS / PUBLIC REPLAY
 REPEATABLE-POINTER-DEPHASING-PASS
 ```
 
-The written proof in the frozen preregistration establishes the universal L4 statement. The accepted exact verifier ran only after the public pin and returned `9/9 ALL PASS`, exit code zero and empty stderr. Repository x86_64/aarch64 replay is pending at this record revision.
+The written proof in the frozen preregistration establishes the universal L4 statement. The accepted exact verifier ran only after the public pin and returned `9/9 ALL PASS`, exit code zero and empty stderr. Pull request #672 then reproduced the same pinned verifier and exact stdout on GitHub-hosted x86_64 and aarch64, and the aggregate `check` passed.
 
 ## 1. Exact theorem in the frozen class
 
@@ -148,6 +148,23 @@ No Registry or Canon change is made by this probe itself.
 
 `QDD-INSTRUMENT-APPARATUS [O]` remains unchanged. The public theory still lacks physical ownership of the effects, apparatus carrier, ready phase, coupling, pointer, reduction, realized event and L1-to-L5 event bridge. This probe only shows that if a future physical apparatus lands inside the already classified pure/repeatable orthogonal-record class, block dephasing requires no additional within-branch instrument selector.
 
+## 7. Public reproduction
+
+Pull request #672 workflow run `33275989088` reproduced the pinned verifier and exact `EXPECTED.txt` on both required repository architectures:
+
+```text
+x86_64:   Ubuntu 24.04.4, CPython 3.12.14, VERIFY PASS
+aarch64:  Ubuntu 24.04.4, CPython 3.12.14, VERIFY PASS
+aggregate: TWO-ARCHITECTURE CHECK PASS
+```
+
+Both architecture legs reported verifier SHA-256
+`c366b9e6bfcc2727fbcd2e49fde87d76f6867dfecea6f4e99bffaa7a572f77c5`
+and stdout SHA-256
+`d734fb338f315db08d69a6b8a80d555a45e57a7a531c492e037b502120f42240`, identical to the public pin/local record. Both also passed policy, 142 tool tests, Canon v71 with 342 claims, ledger and gate contract.
+
+This is two-architecture reproduction, not independent mathematical confirmation.
+
 ## Scope firewall
 
 No physical decoherence claim. No environment. No collapse. No physical apparatus adoption. No event generation or sampling. No randomness or independence. No L5 stream. No L6 measure. No photon bridge or photon-window repair. No SI rate or time. No decoder completion. No move of `QDD-INSTRUMENT-APPARATUS [O]`, `QDD-INSTRUMENT-CLASS-COMPLETENESS [O]` or `QDD-TERMINAL-EVENT-SEMANTICS [O]`.
@@ -156,6 +173,7 @@ No physical decoherence claim. No environment. No collapse. No physical apparatu
 
 ```text
 claim issue:       #671
+pull request:      #672
 base commit:       842b43e2f258469712aedf121f879767d1bd072c
 pin commit:        254127da12f4570c16e80293244fd3770a604cd3
 PREREG sha256:     2866bfa490257afccf32a2370dda6ade69a123f894353ca2726b0e598e41fe60
@@ -163,5 +181,9 @@ verifier sha256:   c366b9e6bfcc2727fbcd2e49fde87d76f6867dfecea6f4e99bffaa7a572f7
 stdout sha256:     d734fb338f315db08d69a6b8a80d555a45e57a7a531c492e037b502120f42240
 local architecture: x86_64
 local result:      9/9 ALL PASS
-public replay:     PENDING
+workflow run:      33275989088
+x86_64 replay:     PASS
+aarch64 replay:    PASS
+aggregate check:   PASS
+Canon status:      unchanged
 ```
