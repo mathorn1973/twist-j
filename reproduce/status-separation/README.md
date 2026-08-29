@@ -10,7 +10,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
 `canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
 minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its sixty-one checks cover the current
+and emits deterministic text. Its sixty-two checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -65,6 +65,14 @@ theorems, one falsified universal transfer with its fired witness
 147965 = 5.101.293, and two finite classifications at computation grade, all
 on the shared public two-architecture probe, with no dependencies, no gates,
 no frontier queue entries, and no physical or higher-layer lift.
+The v69 check pins the focused five-row CM lattice and ramification fold at
+T and L1 on its five frozen two-architecture public-probe bundles. It requires
+the exact Registry rows and scope hashes, all fourteen dependency edges, all
+five lifecycle declarations, and the unchanged gate, Frontier, scheduler, and
+CORE-selection boundaries. It keeps the additive order-five seam, the
+nonreduced order-25 resultant layer, and the marked multiplicative C4 phase
+distinct; treats `Per_Z` only as an integral image subgroup; and admits no
+action, physical phase, SI, decoder, or L2-L6 bridge.
 The v68 check pins the complete finite SO(3) harmonic-depth classification at
 T and L1 on its proof-first two-architecture public probe. It requires the
 exact scope and lifecycle hashes, no dependency, gate, frontier or core
@@ -83,7 +91,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 61/61 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 62/62 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -103,6 +111,8 @@ locks the positive-norm `421/431` controls, the parity-sensitive absolute
 determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
+
+The v69 count check reads the focused five-row fold (342 claims, 23 reproductions, 11 gates, 630 dependency edges). V69-CM requires CM-ALTERNATING-PRIMARY-LATTICE-SEAM, CM-REAL-DIFFERENT-PRIMARY-SEAM, RAMIFIED-TM-SYMPLECTIC-ORIENTATION, CM-RAMIFIED-PFAFFIAN-ROOT, and CM-PERIOD-LATTICE-NONSELECTION to remain T at L1 on their five frozen two-architecture bundles, with exact Registry rows, scope and lifecycle hashes, fourteen exact REQUIRES edges, and no gate, Frontier, scheduler or CORE-selection change. It preserves the marked C4 and algebraic-period nonselection firewalls and creates no action or higher-layer bridge. The aggregate partition is T219/D43/C33/H2/O28/F17, the live H+O count remains 30, and the two-architecture evidence count becomes 257.
 
 The v68 count check reads the one-row fold (337 claims, 23 reproductions, 11 gates, 616 dependency edges). V68-SO3 requires SO3-FINITE-ANISOTROPY-MAXIMUM to remain T at L1 on its frozen two-architecture bundle, with the exact scope and declaration hashes, no dependency, gate, frontier or core-selection ownership, and no promotion from finite-rotation representation theory into Lorentz, axiom, physical-prime, decoder, measure, dynamics or higher-layer claims. The aggregate partition is T214/D43/C33/H2/O28/F17, the live H+O count remains 30, and the two-architecture evidence count becomes 252.
 

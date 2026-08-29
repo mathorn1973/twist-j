@@ -22,6 +22,8 @@ HISTORY = ROOT / "canon" / "HISTORY.tsv"
 GATES = ROOT / "canon" / "GATES.tsv"
 FRONTIER_PROGRAMS = ROOT / "canon" / "FRONTIER_PROGRAMS.tsv"
 CORE = ROOT / "canon" / "CORE.md"
+CORE_SELECTION = ROOT / "canon" / "CORE_SELECTION.tsv"
+FRONTIER = ROOT / "canon" / "FRONTIER.md"
 REPRODUCE = ROOT / "reproduce"
 
 
@@ -109,6 +111,15 @@ def scope_sha256(index, claim_id):
     return hashlib.sha256(index[claim_id]["scope"].encode("utf-8")).hexdigest()
 
 
+def registry_row_sha256(index, claim_id):
+    row = index[claim_id]
+    fields = (
+        "claim_id", "status", "scope", "canon_section", "evidence", "falsifier",
+    )
+    payload = "\t".join(row[field] for field in fields)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
 INDEPENDENCE_ROWS = (
     "SPLIT-PRIME-RAPIDITY-INDEPENDENCE",
     "REDUCED-SPLIT-GENERATOR-HEIGHT",
@@ -141,18 +152,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 214, "D": 43, "C": 33, "F": 17,
+    expected_counts = {"T": 219, "D": 43, "C": 33, "F": 17,
                        "O": 28, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v68",
-        len(rows) == 337
+        "registry and companion-ledger counts match Public Canon v69",
+        len(rows) == 342
         and counts == expected_counts
-        and len(normative) == 383
-        and len(dependencies) == 616
-        and len(evidence) == 337
-        and two_architecture == 252
-        and len(history) == 860
+        and len(normative) == 388
+        and len(dependencies) == 630
+        and len(evidence) == 342
+        and two_architecture == 257
+        and len(history) == 865
         and len(gates) == 11
         and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 7
@@ -4586,6 +4597,262 @@ def run():
         == "probes/P-SO3-FINITE-ANISOTROPY-DEPTH-1"
         and v68_events[0]["evidence_sha256"]
         == "0fd88c1b604fd351ad147e8b0fdecc553e6e27c96f7c861f28fc10b0eb527a15",
+    ))
+
+    v69_contract = {
+        "CM-ALTERNATING-PRIMARY-LATTICE-SEAM": {
+            "section": "4. The two places",
+            "path": "probes/P-CM-ALTERNATING-PRIMARY-LATTICE-SEAM-1",
+            "scope_sha": (
+                "4350d7f162389982e612565e05ab9e89c2ec772da28b0de56331b0ea1cdb8625"
+            ),
+            "row_sha": (
+                "758bad67f00df98996e256861438780a3c031c615dee36c09b1bf952ac2f434a"
+            ),
+            "bundle": (
+                "7261b8e5aaf485df7e5494c74239de8689c5247b6b13484544ffe763ac0f6cb6"
+            ),
+            "dependencies": {"CM-ALTERNATING-PENCIL", "J-STEP"},
+            "scope_markers": (
+                "index five and quotient Q=Z/5",
+                "exact denominator five",
+                "no Z[P]-linear retraction",
+                "no action, h, hbar, phase, 2 pi",
+                "L2-L6 lift is selected",
+            ),
+        },
+        "CM-REAL-DIFFERENT-PRIMARY-SEAM": {
+            "section": "4. The two places",
+            "path": "probes/P-CM-REAL-DIFFERENT-PRIMARY-SEAM-1",
+            "scope_sha": (
+                "ea6f8e80853a919499a4fa35b620c42c6e03edc144d4d45c674193c99753db64"
+            ),
+            "row_sha": (
+                "84be744f266a347462aa82183d9f91717967999d31676c8470a5eaf25d34830a"
+            ),
+            "bundle": (
+                "2a6e4157d03890af972b8f6c29cea6b425e420802551daf6875825e9bbb7ba9e"
+            ),
+            "dependencies": {
+                "CM-ALTERNATING-PRIMARY-LATTICE-SEAM",
+                "CM-ALTERNATING-PENCIL",
+                "PLENUM-POINT",
+            },
+            "scope_markers": (
+                "e_H(E_Z)=d_F^-1 H_Z",
+                "Ann_O(Q_seam)=d_F",
+                "nonreduced order-25 resultant layer",
+                "reduced order-five residue line O/d_F",
+                "no discriminant-form isometry",
+                "h, hbar, phase law, decoder, SI normalization or L2-L6 lift",
+            ),
+        },
+        "RAMIFIED-TM-SYMPLECTIC-ORIENTATION": {
+            "section": "3. The kernel and the census",
+            "path": "probes/P-RAMIFIED-TM-SYMPLECTIC-ORIENTATION-2",
+            "scope_sha": (
+                "2dbd861d1def2874297db0699f13bdf01db85e634bd2ba011bcdf1786df7f696"
+            ),
+            "row_sha": (
+                "e8b9bc06a16ac6fbcd8a87e0b31c836fd8a708ce474998fd68f9b3a07ccfcd63"
+            ),
+            "bundle": (
+                "216fb9aebba6456046edfd16a5c29d8172db2364797011bcdfed37880d69d452"
+            ),
+            "dependencies": {
+                "CM-ALTERNATING-PENCIL",
+                "RAMIFIED-TM-LIFT",
+                "CARRY-J-CHECKPOINT",
+            },
+            "scope_markers": (
+                "epsilon(Omega_k)=chi_5(2^k)=(-1)^k",
+                "equality of one binary count character on two different carriers",
+                "psi_4=psi_6 carries opposite values",
+                "direct Pfaffian reduction is not the QR/NQR bridge",
+                "Pf(-w)=Pf(w)",
+                "no action, h, hbar, 2 pi, phase law",
+                "L2-L6 lift is selected",
+            ),
+        },
+        "CM-RAMIFIED-PFAFFIAN-ROOT": {
+            "section": "4. The two places",
+            "path": "probes/P-CM-RAMIFIED-PFAFFIAN-ROOT-1",
+            "scope_sha": (
+                "553ae20d6f268b1ea093c4bc40979092e3074e4d769ded06f4c5cd8bed18fd1d"
+            ),
+            "row_sha": (
+                "f102891bdd444e21ab188ca9263ad47607b7ea1b49cb55feb4f45524cd1cfbcc"
+            ),
+            "bundle": (
+                "5c949e8f15a411942c41f6a9c85316642b37f3c25ede2a439a68f73d3094d722"
+            ),
+            "dependencies": {
+                "CM-ALTERNATING-PENCIL",
+                "RAMIFIED-TM-LIFT",
+                "J-HARMONIC-SEAM",
+                "J-GOLDEN-BRIDGE",
+                "RAMIFIED-TM-SYMPLECTIC-ORIENTATION",
+            },
+            "scope_markers": (
+                "five is the unique rational prime",
+                "C2 quotient of this marked C4 phase",
+                "kernel <-phi^2>",
+                "marked is load-bearing",
+                "the additive index-five primary-lattice seam is a different object",
+                "no unmarked or Galois-invariant selector",
+                "selector, action, h, hbar, 2 pi, SI normalization",
+                "L2-L6 lift is selected",
+            ),
+        },
+        "CM-PERIOD-LATTICE-NONSELECTION": {
+            "section": "4. The two places",
+            "path": "probes/P-CM-PERIOD-LATTICE-NONSELECTION-1",
+            "scope_sha": (
+                "0308870109048b23a7d0a6a9cf9a0f9b551735cd794d5e3f2718e67054b76a7b"
+            ),
+            "row_sha": (
+                "95e6cf05f176c25f7f563fd6710a6fa739efa4f41952411d617dc14fe3c3fd0c"
+            ),
+            "bundle": (
+                "a8b728effa5c936929e06a9da61447d8ae133dda4ba9b3030b0b84065ea2dc31"
+            ),
+            "dependencies": {"CM-ALTERNATING-PENCIL"},
+            "scope_markers": (
+                "Per_Z(Omega)={Omega(C):C in Lambda^2 L}",
+                "every GL_4(Z) pullback preserves Per_Z",
+                "one J-pullback does not scale it by phi^-2",
+                "can return a unit-period bivector",
+                "no nonzero decomposable rational fixed bivector",
+                "integer image subgroup rather than a geometric period integral",
+                "no torus, manifold, homology, cohomology, action, h, hbar, 2 pi",
+                "L2-L6 lift is selected",
+            ),
+        },
+    }
+    v69_claims = tuple(v69_contract)
+    v69_actual_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in v69_claims
+    }
+    v69_history_rows = [
+        row for row in history if row["release"].startswith("canon-v69")
+    ]
+    v69_events = {row["claim_id"]: row for row in v69_history_rows}
+    v69_excluded_claims = {
+        "J-QUADRATIC-CARRY-NORM-SEAM",
+        "THORN-PLENUM-QUADRANT-CHARACTERIZATION",
+        "THORN-TRIANGLE-PENTAGON-RIGIDITY",
+    }
+    v69_excluded_evidence_locations = {
+        "probes/P-J-QUADRATIC-CARRY-NORM-SEAM-1",
+        "probes/P-J-QUADRATIC-CARRY-NORM-SEAM-2",
+        "probes/P-RAMIFIED-TM-SYMPLECTIC-ORIENTATION-1",
+        "probes/P-THORN-PLENUM-QUADRANT-CHARACTERIZATION-1",
+        "probes/P-THORN-PLENUM-QUADRANT-CHARACTERIZATION-2",
+        "probes/P-THORN-TRIANGLE-PENTAGON-RIGIDITY-1",
+    }
+    v69_unchanged_boundaries = {
+        GATES: "144e8c1b32446426222c3ca06f22577218ce84adb1c974aedb0cbe914d53ad9b",
+        FRONTIER_PROGRAMS: (
+            "5850828835ddbbda4877f992ff33d2dc8ac702d3d05f43e764cbc7fee862c2f5"
+        ),
+        CORE_SELECTION: (
+            "eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e"
+        ),
+        FRONTIER: (
+            "85769fe010d1d54fa2a36df7591e99fc88a05ec1d737e3f3abfac9857eefca30"
+        ),
+    }
+    checks.append((
+        "V69-CM",
+        "five focused L1 CM lattice and ramification theorems keep exact "
+        "scopes, evidence, dependencies and nonselection firewalls with no "
+        "gate, Frontier, CORE or action bridge",
+        all(has_status(index, claim, "T") for claim in v69_claims)
+        and all(
+            index[claim]["canon_section"] == v69_contract[claim]["section"]
+            and index[claim]["evidence"] == v69_contract[claim]["path"]
+            and scope_sha256(index, claim) == v69_contract[claim]["scope_sha"]
+            and registry_row_sha256(index, claim)
+            == v69_contract[claim]["row_sha"]
+            and scope_contains_all(
+                index, claim, v69_contract[claim]["scope_markers"]
+            )
+            for claim in v69_claims
+        )
+        and all(
+            normative[claim]["item_type"] == "THEOREM"
+            and normative[claim]["claim_id"] == claim
+            and normative[claim]["status"] == "T"
+            and normative[claim]["layer"] == "L1"
+            and normative[claim]["gate_ids"] == ""
+            and normative[claim]["statement_source"]
+            == f"canon/CANON.md::{claim} [T]"
+            for claim in v69_claims
+        )
+        and all(
+            evidence[claim]["evidence_id"] == "EV-" + claim
+            and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+            and evidence[claim]["location"] == v69_contract[claim]["path"]
+            and evidence[claim]["sha256"] == v69_contract[claim]["bundle"]
+            and evidence[claim]["hash_mode"] == "bundle-manifest-sha256-v1"
+            and evidence[claim]["architecture_requirement"]
+            == "two-architecture"
+            for claim in v69_claims
+        )
+        and all(
+            v69_actual_dependencies[claim] == {
+                (dependency, "REQUIRES")
+                for dependency in v69_contract[claim]["dependencies"]
+            }
+            for claim in v69_claims
+        )
+        and all(
+            normative[dependency]["status"] == "T"
+            and normative[dependency]["layer"] in {"L1", "NOT_APPLICABLE"}
+            for claim in v69_claims
+            for dependency in v69_contract[claim]["dependencies"]
+        )
+        and len(v69_history_rows) == 5
+        and set(v69_events) == set(v69_claims)
+        and all(
+            v69_events[claim]["event_id"] == f"CANON69-DECLARE-{claim}"
+            and v69_events[claim]["event_sequence"] == "1"
+            and v69_events[claim]["event_date"] == "2026-08-29"
+            and v69_events[claim]["release"] == "canon-v69-candidate"
+            and v69_events[claim]["event_type"] == "DECLARE"
+            and v69_events[claim]["previous_status"] == "-"
+            and v69_events[claim]["new_status"] == "T"
+            and v69_events[claim]["scope_sha256"]
+            == v69_contract[claim]["scope_sha"]
+            and v69_events[claim]["evidence_id"] == "EV-" + claim
+            and v69_events[claim]["evidence_location"]
+            == v69_contract[claim]["path"]
+            and v69_events[claim]["evidence_sha256"]
+            == v69_contract[claim]["bundle"]
+            for claim in v69_claims
+        )
+        and all(row["owner_item_id"] not in v69_claims for row in gates.values())
+        and all(claim not in programs for claim in v69_claims)
+        and all(f"- {claim} [" not in core_text for claim in v69_claims)
+        and all(
+            claim not in index
+            and claim not in normative
+            and claim not in evidence
+            and claim not in programs
+            for claim in v69_excluded_claims
+        )
+        and all(
+            row["location"] not in v69_excluded_evidence_locations
+            for row in evidence.values()
+        )
+        and all(
+            hashlib.sha256(path.read_bytes()).hexdigest() == expected
+            for path, expected in v69_unchanged_boundaries.items()
+        ),
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
