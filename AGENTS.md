@@ -338,3 +338,88 @@ neutral formal records. This refresh creates no PR, merge, or activation.
     python3 tools/check_activation.py --full \
       --content-commit FULL_SYNTHESIS_MERGE_SHA
     ```
+
+18. Open the activation pull request. It must state the exact content commit,
+    Canon SHA-256, byte count, release-form tree, and required checks. Merge it
+    with a merge commit only after review and green `check`.
+19. Read back merged public `main`. Confirm that the activation merge has the
+    reviewed release-form tree and that `CONTENT_COMMIT` is its ancestor.
+20. Create the annotated tag `canon-v1` on the activation merge and publish the
+    immutable release only after the tag-triggered publication workflow passes
+    and its `activation-manifest.json` and tagged `canon/SHA256SUMS` validate.
+21. Re-read `STATUS.md`, the tag target, release assets, hashes, byte counts,
+    and `main` ancestry. Only then is Public Canon v1 active and public `main`
+    the sole authority.
+
+## 5. Daily post-cutover procedure
+
+For every public task:
+
+1. Read `STATUS.md`, `POLICY.md`, this file, `canon/CORE.md`, and
+   `canon/FRONTIER.md` from public `main`.
+2. Confirm the declared tag, content commit, Canon SHA-256 and byte count.
+3. Run or inspect the repository checks required by the task. If authority,
+   hashes, ancestry, release identity, or required checks disagree, stop.
+4. Search issues, branches, probes, registry, evidence, gates, and current
+   candidates for collisions before claiming work.
+5. Claim one scoped item before editing. One named session owns one candidate
+   or probe.
+6. Use exact arithmetic first. Decimals are labeled measured or computed
+   witnesses only.
+7. Preserve status and layer boundaries. No summary exceeds its sources; no
+   unnamed lift crosses L1 to L6.
+8. Run the repository-prescribed verifier and checkers rather than an ad hoc
+   formal tool unless the probe itself explicitly pins that tool.
+9. Push through a reviewed pull request. Never push directly to `main`.
+10. Read back the merged result and update any release surface only through the
+    release procedure.
+
+For reading questions specifically, preserve the reading-family discipline in
+POLICY.md. Global decoder uniqueness is not a default premise. A local
+uniqueness or nonuniqueness result stays local to its frozen class, equality,
+and scope.
+
+## 6. Non-canonical incubation
+
+Work outside the public probe protocol is `NON-CANONICAL` incubation. Name it
+`C-<TOPIC>-N`, declare no authority, and keep it under `notes/`.
+
+Before computation, freeze the question, carrier, exact arithmetic, success and
+failure conditions, and the maximum possible later public status. Compute only
+after that preregistration. Try to break the candidate through an independent
+route. Record only candidate-T, candidate-D, or candidate-C. Package any
+survivor as `PROMO-<id>` for a later public fold.
+
+Incubation creates no public status, evidence credit, dependency, gate, or
+permission to edit Canon files. Promotion occurs only through the normal public
+fold and release process.
+
+## 7. Blind confirmation
+
+For a blind two-agent confirmation, freeze the breaker from the public
+preregistration without reading `verify.py`. Commit and pin `break.py` before
+comparison. Only then compare its result with the verifier result.
+
+If the second agent merely runs `verify.py`, record reproduction only. It is
+not independent confirmation.
+
+## 8. Naming drift and layer discipline
+
+Resolve naming drift by content, not by identifier alone. Historical names may
+land under a shorter public claim identifier or probe directory. Follow the
+public registry, scope text, and evidence path.
+
+Never move a threshold, reopen a fired falsifier, reuse a sealed probe, or make
+an unnamed lift between L1 state, L2 manifold, L3 boundary, L4 support, L5
+stream, and L6 measure.
+
+## 9. Stop conditions
+
+Stop immediately on stale basis, hash mismatch, unclear authority, missing
+required evidence, licence uncertainty, secret or private-host exposure,
+non-fast-forward formal staging, duplicate claim ownership, or any repository
+checker stop condition.
+
+A stop condition is not permission to repair history silently. Preserve the
+record, open a fresh successor where policy allows it, and keep negative
+results first class.
