@@ -24,7 +24,11 @@ FRONTIER_PROGRAMS = ROOT / "canon" / "FRONTIER_PROGRAMS.tsv"
 CORE = ROOT / "canon" / "CORE.md"
 CORE_SELECTION = ROOT / "canon" / "CORE_SELECTION.tsv"
 FRONTIER = ROOT / "canon" / "FRONTIER.md"
+CANON = ROOT / "canon" / "CANON.md"
 REPRODUCE = ROOT / "reproduce"
+SUCCESSOR_MANIFEST_DIR = (
+    ROOT / "notes" / "canon" / "QDD-ALGEBRAIC-DMATTER-SUCCESSOR-V70"
+)
 
 
 def load_table(path):
@@ -142,8 +146,52 @@ def run():
         gates,
         programs,
     ) = load_rows()
+    canon_text = CANON.read_text(encoding="utf-8")
     core_text = CORE.read_text(encoding="utf-8")
+    frontier_text = FRONTIER.read_text(encoding="utf-8")
+    core_selection_rows = load_table(CORE_SELECTION)
     checks = []
+
+    qdd_predecessor = "QUADRATIC-DECODER-DATA"
+    qdd_successor = "ALGEBRAIC-DMATTER"
+    qdd_apparatus = "QDD-INSTRUMENT-APPARATUS"
+    qdd_current_split = (
+        qdd_predecessor not in index
+        and qdd_predecessor not in normative
+        and qdd_predecessor not in evidence
+        and qdd_predecessor not in programs
+        and all(
+            row["item_id"] != qdd_predecessor
+            and row["depends_on"] != qdd_predecessor
+            for row in dependencies
+        )
+        and has_status(index, qdd_successor, "D")
+        and normative.get(qdd_successor, {}).get("item_type") == "DICTIONARY"
+        and normative.get(qdd_successor, {}).get("status") == "D"
+        and normative.get(qdd_successor, {}).get("layer") == "L1"
+        and normative.get(qdd_successor, {}).get("gate_ids") == ""
+        and evidence.get(qdd_successor, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(qdd_successor, {}).get("location") == "inline"
+        and evidence.get(qdd_successor, {}).get("sha256")
+        == scope_sha256(index, qdd_successor)
+        and evidence.get(qdd_successor, {}).get("hash_mode")
+        == "registry-scope-sha256-v1"
+        and evidence.get(qdd_successor, {}).get("architecture_requirement") == "none"
+        and qdd_successor not in programs
+        and all(row["owner_item_id"] != qdd_successor for row in gates.values())
+        and has_status(index, qdd_apparatus, "O")
+        and normative.get(qdd_apparatus, {}).get("item_type") == "OBLIGATION"
+        and normative.get(qdd_apparatus, {}).get("status") == "O"
+        and normative.get(qdd_apparatus, {}).get("layer") == "MULTI"
+        and normative.get(qdd_apparatus, {}).get("gate_ids") == ""
+        and programs.get(qdd_apparatus) == {
+            "claim_id": qdd_apparatus,
+            "program_id": "DECODER_CORE",
+            "queue_role": "FOLLOWUP",
+            "work_state": "STOP",
+            "work_mode": "FORMAL",
+        }
+    )
 
     counts = {}
     for row in rows:
@@ -152,21 +200,22 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 219, "D": 43, "C": 33, "F": 17,
-                       "O": 28, "H": 2}
+    expected_counts = {"T": 219, "D": 44, "C": 33, "F": 17,
+                       "O": 27, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v69",
+        "registry and companion-ledger counts match Public Canon v70",
         len(rows) == 342
         and counts == expected_counts
         and len(normative) == 388
-        and len(dependencies) == 630
+        and len(dependencies) == 632
         and len(evidence) == 342
         and two_architecture == 257
-        and len(history) == 865
+        and len(history) == 871
         and len(gates) == 11
-        and len(programs) == 30
+        and len(programs) == 29
         and len({row["program_id"] for row in programs.values()}) == 7
+        and len(core_selection_rows) == 30
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
     ))
 
@@ -538,9 +587,7 @@ def run():
                 "integrity STOP, not a scientific falsifier",
             )
         )
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_state")
-        == "STOP"
+        and qdd_current_split
         and central not in programs,
     ))
 
@@ -757,7 +804,7 @@ def run():
     }
     checks.append((
         "CM-2I",
-        "marked semilinear pair stays T at L4; decoder and measure stay O/STOP",
+        "marked semilinear pair stays T at L4; the algebraic decoder dictionary stays D while physical apparatus and measure stay O/STOP",
         has_status(index, cm_pair, "T")
         and normative.get(cm_pair, {}).get("item_type") == "THEOREM"
         and normative.get(cm_pair, {}).get("status") == "T"
@@ -809,16 +856,8 @@ def run():
             )
         )
         and has_status(index, "SPIN-LIFT-FORCED", "F")
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and qdd_current_split
         and has_status(index, "COLOR-MEASURE-SELECTION", "O")
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("program_id")
-        == "DECODER_CORE"
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("queue_role")
-        == "ROOT"
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_state")
-        == "STOP"
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_mode")
-        == "FORMAL"
         and programs.get("COLOR-MEASURE-SELECTION", {}).get("program_id")
         == "NONABELIAN_QCD"
         and programs.get("COLOR-MEASURE-SELECTION", {}).get("queue_role")
@@ -1861,7 +1900,7 @@ def run():
         and has_status(index, "TWO-PLACE-PHYSICS", "D")
         and has_status(index, "BOOST-COUNT-LADDER", "D")
         and has_status(index, "LOG-AXES-INDEPENDENCE", "T")
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and qdd_current_split
         and seam not in programs,
     ))
 
@@ -2299,7 +2338,7 @@ def run():
     qdd_path = "reproduce/qdd-route-a"
     checks.append((
         "QDD-ROUTE-A",
-        "the QDD Route A algebra is three L1 theorems on two-architecture evidence; the apparatus is a separate O; QUADRATIC-DECODER-DATA stays O with its ROOT/STOP program row; no gate and no L6 row exist",
+        "the QDD Route A algebra stays three L1 theorems on two-architecture evidence while the retired composite is split into an algebraic D and a separate apparatus O; no physical gate or L6 row exists",
         all(
             has_status(index, claim, "T")
             and normative.get(claim, {}).get("layer") == "L1"
@@ -2310,34 +2349,25 @@ def run():
             for claim in ("QDD-ALGEBRAIC-FACTORIZATION", "QDD-PROJECTOR-PAIR-TR4",
                           "QDD-QCARRIER-DIAGONAL-BOUNDARY")
         )
-        and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
-        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("program_id")
-        == "DECODER_CORE"
-        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("queue_role")
-        == "FOLLOWUP"
-        and programs.get("QDD-INSTRUMENT-APPARATUS", {}).get("work_state")
-        == "STOP"
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("queue_role")
-        == "ROOT"
-        and programs.get("QUADRATIC-DECODER-DATA", {}).get("work_state")
-        == "STOP"
+        and qdd_current_split
         and "QDD-BORN-READOUT-MEASURE" not in index
         and "DEF-BRIDGE-QDD-TR4-EFFECT-SELECTION" not in normative
         and "GATE-L1-L6-QDD-BORN-READOUT" not in gates
         and normative.get("DEF-QDD-PROJECTOR-LOW", {}).get("item_type")
         == "DEFINITION"
-        and scope_lacks(index, "QDD-ALGEBRAIC-FACTORIZATION",
-                        ("apparatus", "occurrence"))
         and scope_contains_all(index, "QDD-ALGEBRAIC-FACTORIZATION",
-                               ("no completion-contract field is filled",))
+                               ("ordered algebraic projector pair",
+                                "algebraic branch-weight pairing",
+                                "not its definition source",
+                                "does not mathematically force",
+                                "supplies no independent readout, physical effect or apparatus"))
         and scope_contains_all(index, "QDD-PROJECTOR-PAIR-TR4",
                                ("no uniqueness-from-j",))
         and scope_contains_all(index, "QDD-QCARRIER-DIAGONAL-BOUNDARY",
                                ("a_dagger = a_t = v v^t",
                                 "no physical central phase"))
-        and scope_contains_all(index, "QDD-INSTRUMENT-APPARATUS",
-                               ("filling no field of the decoder completion contract",)),
+        and "GATE-L1-L5-QDD-INSTRUMENT-APPARATUS" not in gates
+        and "GATE-L1-L6-QDD-BORN-READOUT" not in gates,
     ))
 
     nonselection = "QDD-INSTRUMENT-NONSELECTION"
@@ -2374,6 +2404,7 @@ def run():
             ("DEF-QDD-PROJECTOR-LOW", "REQUIRES"),
             ("DEF-QDD-PROJECTOR-HIGH", "REQUIRES"),
             ("DEF-QDD-GRAM", "REQUIRES"),
+            ("DEF-DECODER-COMPLETION-CONTRACT", "REQUIRES"),
         }
         and scope_contains_all(
             index, nonselection,
@@ -2387,16 +2418,17 @@ def run():
         )
         and scope_contains_all(
             index, "QDD-INSTRUMENT-APPARATUS",
-            ("O2 is the compatible conjunction of QDD-TERMINAL-EVENT-SEMANTICS",
+            ("sole owner of the physical debt split from QUADRATIC-DECODER-DATA",
+             "transferred but not satisfied",
+             "all remain UNRESOLVED",
+             "O2 is the compatible conjunction of QDD-TERMINAL-EVENT-SEMANTICS",
              "QDD-INSTRUMENT-CLASS-COMPLETENESS",
-             "O1 remains a separate typed realized-event/sampling obligation",
-             "post-v59 pure-record, COMM-SAT and finite-memory theorems remove mathematical ambiguities",
-             "adopt no terminal semantics, global class, phase gauge or equality",
+             "O1 remains the typed realized-event and sampling obligation",
              "SAMPLING NOT PROVIDED",
              "rather than impossible"),
         )
         and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O"),
+        and qdd_current_split,
     ))
 
     qdd_v59_rows = (
@@ -2557,7 +2589,7 @@ def run():
         and evidence["QDD-INSTRUMENT-APPARATUS"]["sha256"]
         == scope_sha256(index, "QDD-INSTRUMENT-APPARATUS")
         and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and qdd_current_split
         and "QDD-RELABELING-CEILING" not in normative
         and "QDD-CLASS-IDEMPOTENCE-SELECTION" not in normative,
     ))
@@ -2719,8 +2751,10 @@ def run():
         )
         and scope_contains_all(
             index, "QDD-INSTRUMENT-APPARATUS",
-            ("qdd-u-induced-channel", "frozen 900 record-delay pairs",
-             "does not exclude another admissible apparatus class"),
+            ("pure-record, COMM-SAT, finite-memory and 22-context carry-bank results",
+             "delimit frozen mathematical classes",
+             "adopt no physical effect, instrument, carrier, complete family",
+             "do not close or partially satisfy this row"),
         )
         and evidence["QDD-INSTRUMENT-APPARATUS"]["sha256"]
         == scope_sha256(index, "QDD-INSTRUMENT-APPARATUS")
@@ -3249,7 +3283,7 @@ def run():
         )
         and has_status(index, "BELL-CAUSAL-ACCOUNTING", "O")
         and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and qdd_current_split
         and has_status(index, "BELL-MAGIC-BOUNDARY", "T")
         and has_status(index, "PURE-QUBIT-RELATIONAL-CHSH", "T")
         and has_status(index, "TWO-PLACE-PHYSICS", "D")
@@ -3853,10 +3887,8 @@ def run():
         and "GATE-L1-L5-QDD-EVENT-CARRY-BANK" not in gates
         and has_status(index, "CARRY-PENTAD", "T")
         and has_status(index, "QDD-INSTRUMENT-APPARATUS", "O")
-        and has_status(index, "QUADRATIC-DECODER-DATA", "O")
+        and qdd_current_split
         and has_status(index, "BELL-CAUSAL-ACCOUNTING", "O")
-        and evidence["QDD-INSTRUMENT-APPARATUS"]["sha256"]
-        == "0b10264cce9764c2e1dbddb91166aef061af041b8db73226445377801cd902d1"
         and evidence["QDD-INSTRUMENT-APPARATUS"]["sha256"]
         == scope_sha256(index, "QDD-INSTRUMENT-APPARATUS")
         and programs.get("QDD-INSTRUMENT-APPARATUS") == {
@@ -3884,13 +3916,14 @@ def run():
         )
         and scope_contains_all(
             index, "QDD-INSTRUMENT-APPARATUS",
-            ("O2 is the compatible conjunction of QDD-TERMINAL-EVENT-SEMANTICS",
-             "QDD-INSTRUMENT-CLASS-COMPLETENESS",
-             "O1 remains a separate typed realized-event/sampling obligation",
-             "all B initial phase vectors preserve the frequencies and remain future-output distinguishable within that frozen transducer class",
-             "no physical reduced-p context key",
-             "registered L1-to-L5 gate",
-             "supply no L6 measure, randomness or independence law",
+            ("sole owner of the physical debt split from QUADRATIC-DECODER-DATA",
+             "effect_ids, instrument_ids, apparatus_carrier_id",
+             "target-independence and class-completeness certificates",
+             "persistence/update/reset law",
+             "all remain UNRESOLVED",
+             "L1-to-L5 gate",
+             "any L6 measure requiring a separate gate",
+             "sampling, randomness or independence",
              "SAMPLING NOT PROVIDED rather than impossible"),
         ),
     ))
@@ -4168,7 +4201,7 @@ def run():
 
     checks.append((
         "QDD-DIRECT-FIREWALL",
-        "the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)",
+        "the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the branch-weight pairing, the factor map)",
         fw_qdd == {"DEF-QDD-DOMAIN-K0", "DEF-QDD-BALANCED-PISTON",
                    "DEF-QDD-AMPLITUDE-B0", "DEF-QDD-COEFFICIENT-Q",
                    "DEF-QDD-TRACE-PAIRING", "DEF-QDD-LOW-LINE",
@@ -4272,31 +4305,31 @@ def run():
         "DEF-QDD-DIRECT-WRITE",
     }
     v66_lineage = {
-        "DEF-ARCHITECTURE", "DEF-DECODER-MATTER", "READING-SPLIT",
-        "COUPLINGS-DETERMINE", "MEASURE-BORN-VERB",
+        "DEF-ARCHITECTURE", "DEF-DECODER-MATTER",
+        "DEF-DECODER-COMPLETION-CONTRACT", "COUPLINGS-DETERMINE",
+        "QDD-ALGEBRAIC-FACTORIZATION",
     }
     v66_edges = {
         row["depends_on"] for row in dependencies
         if row["item_id"] == v66_row and row["relation"] == "REQUIRES"
+    }
+    v70_successor_edges = {
+        row["depends_on"] for row in dependencies
+        if row["item_id"] == qdd_successor and row["relation"] == "REQUIRES"
     }
     v66_events = [
         row for row in history if row["release"].startswith("canon-v66")
     ]
     checks.append((
         "V66-QDD-WIRING",
-        "the open quadratic row gains exactly the fourteen REQUIRES edges to "
-        "the definitions its STOP clause names, while its status, gate slot, "
-        "program row and the direct-write firewall stay fixed and the fold "
-        "releases no lifecycle event",
-        v66_edges == v66_named | v66_lineage
-        and len(v66_edges) == 19
-        and has_status(index, v66_row, "O")
-        and normative[v66_row]["item_type"] == "OBLIGATION"
-        and normative[v66_row]["gate_ids"] == ""
-        and all(row["owner_item_id"] != v66_row for row in gates.values())
-        and programs[v66_row]["program_id"] == "DECODER_CORE"
-        and programs[v66_row]["queue_role"] == "ROOT"
-        and programs[v66_row]["work_state"] == "STOP"
+        "the historical nineteen-edge quadratic wiring is transferred exactly "
+        "to the algebraic dictionary, with the Born lineage removed, the "
+        "predecessor inactive, and the direct-write firewall unchanged",
+        not v66_edges
+        and v70_successor_edges == v66_named | v66_lineage
+        and len(v70_successor_edges) == 19
+        and "MEASURE-BORN-VERB" not in v70_successor_edges
+        and qdd_current_split
         and not v66_events
         and not fw_qdd & (v66_named - {
             "DEF-QDD-COEFFICIENT-Q", "DEF-QDD-BALANCED-PISTON",
@@ -4756,14 +4789,8 @@ def run():
     }
     v69_unchanged_boundaries = {
         GATES: "144e8c1b32446426222c3ca06f22577218ce84adb1c974aedb0cbe914d53ad9b",
-        FRONTIER_PROGRAMS: (
-            "5850828835ddbbda4877f992ff33d2dc8ac702d3d05f43e764cbc7fee862c2f5"
-        ),
         CORE_SELECTION: (
             "eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e"
-        ),
-        FRONTIER: (
-            "85769fe010d1d54fa2a36df7591e99fc88a05ec1d737e3f3abfac9857eefca30"
         ),
     }
     checks.append((
@@ -4853,6 +4880,302 @@ def run():
             hashlib.sha256(path.read_bytes()).hexdigest() == expected
             for path, expected in v69_unchanged_boundaries.items()
         ),
+    ))
+
+    v70_contract = {
+        "ALGEBRAIC-DMATTER": {
+            "event_id": "CANON70-DECLARE-ALGEBRAIC-DMATTER",
+            "sequence": "1",
+            "event_type": "DECLARE",
+            "previous": "-",
+            "new": "D",
+            "scope_sha": "b542d0f6d40c8ade93589334670156c2b5788ef5414a3a3efddc777ea7635d75",
+            "row_sha": "41d4f53def45ba05ecd5d532ff2a145a0d16259a6df75a86d68a2e25950d71d4",
+            "evidence_id": "EV-ALGEBRAIC-DMATTER",
+            "evidence_location": "inline",
+            "evidence_sha": "b542d0f6d40c8ade93589334670156c2b5788ef5414a3a3efddc777ea7635d75",
+        },
+        "READING-SPLIT": {
+            "event_id": "CANON70-SCOPE-READING-SPLIT",
+            "sequence": "14",
+            "event_type": "SCOPE_CHANGE",
+            "previous": "D",
+            "new": "D",
+            "scope_sha": "b503f0f6a30965623a09e826795bce4ce626b171340b2fecfa86fd0cf2818922",
+            "row_sha": "e762db5b7554d1b57f9d7666338a672aec6d957235dbcfc7b6f2081c0d5b8151",
+            "evidence_id": "EV-READING-SPLIT",
+            "evidence_location": "inline",
+            "evidence_sha": "b503f0f6a30965623a09e826795bce4ce626b171340b2fecfa86fd0cf2818922",
+        },
+        "QDD-ALGEBRAIC-FACTORIZATION": {
+            "event_id": "CANON70-SCOPE-QDD-ALGEBRAIC-FACTORIZATION",
+            "sequence": "2",
+            "event_type": "SCOPE_CHANGE",
+            "previous": "T",
+            "new": "T",
+            "scope_sha": "873c418ffee3ad66eaf9d7e279929aaa4172785a12c2081c4d2734e041ea939f",
+            "row_sha": "8655df8ba78aca0c007ee5808605161247546d172935a43ead51f6f45fbe1999",
+            "evidence_id": "EV-QDD-ALGEBRAIC-FACTORIZATION",
+            "evidence_location": "reproduce/qdd-route-a",
+            "evidence_sha": "897f18e27e822a96ece61048cb17d4a5488b267d014f2bb10787f1a56edc8c6a",
+        },
+        "QPAIR-HERM-INTEGER-NONDESCENT": {
+            "event_id": "CANON70-SCOPE-QPAIR-HERM-INTEGER-NONDESCENT",
+            "sequence": "2",
+            "event_type": "SCOPE_CHANGE",
+            "previous": "T",
+            "new": "T",
+            "scope_sha": "54c0338ff722ffe8e69a7435477adf43c704c15bbbf82967c50184f89dc4c697",
+            "row_sha": "84ee9b37aaac46311ff4458ea3ea117258c8c4e418813c420284dc23b20706b3",
+            "evidence_id": "EV-QPAIR-HERM-INTEGER-NONDESCENT",
+            "evidence_location": "probes/P-QPAIR-C4-2I-MINIMALITY-1",
+            "evidence_sha": "6f1d5a5859a193cb68eb53f6ed58f5da21b25f3c0084c3875eede690317ea592",
+        },
+        "QDD-INSTRUMENT-APPARATUS": {
+            "event_id": "CANON70-SCOPE-QDD-INSTRUMENT-APPARATUS",
+            "sequence": "6",
+            "event_type": "SCOPE_CHANGE",
+            "previous": "O",
+            "new": "O",
+            "scope_sha": "2aa1688ede2fa319cd0fad5467195f1df8a1ab5308f6cf725c0030abf48cb6f5",
+            "row_sha": "06288f428275ed4dd79e399c3ea0b8f298e838ba32d4ab5d427c1cbed3133d21",
+            "evidence_id": "EV-QDD-INSTRUMENT-APPARATUS",
+            "evidence_location": "inline",
+            "evidence_sha": "2aa1688ede2fa319cd0fad5467195f1df8a1ab5308f6cf725c0030abf48cb6f5",
+        },
+    }
+    v70_retirement = {
+        "event_id": "CANON70-RETIRE-QUADRATIC-DECODER-DATA",
+        "sequence": "14",
+        "event_type": "RETIRE",
+        "previous": "O",
+        "new": "RETIRED",
+        "scope_sha": "8b2b79b5060bbea943429afda25f24affcda2bd9a55961965cf63a962b3cee8d",
+        "evidence_id": "EV-QUADRATIC-DECODER-DATA",
+        "evidence_location": "inline",
+        "evidence_sha": "8b2b79b5060bbea943429afda25f24affcda2bd9a55961965cf63a962b3cee8d",
+    }
+    v70_history_rows = [
+        row for row in history if row["release"] == "canon-v70-candidate"
+    ]
+    v70_events = {row["claim_id"]: row for row in v70_history_rows}
+    v70_successor_dependencies = {
+        "DEF-ARCHITECTURE", "DEF-DECODER-MATTER",
+        "DEF-DECODER-COMPLETION-CONTRACT", "COUPLINGS-DETERMINE",
+        "QDD-ALGEBRAIC-FACTORIZATION", "DEF-QDD-COEFFICIENT-Q",
+        "DEF-QDD-BALANCED-PISTON", "DEF-QDD-DOMAIN-K0",
+        "DEF-QDD-AMPLITUDE-B0", "DEF-QDD-GRAM", "DEF-QDD-DAGGER",
+        "DEF-QDD-TRANSPOSE", "DEF-QDD-QCARRIER-EQUALITY",
+        "DEF-QDD-QPAIR", "DEF-QDD-PROJECTOR-LOW",
+        "DEF-QDD-PROJECTOR-HIGH", "DEF-QDD-BRANCH-WEIGHT-PAIRING",
+        "DEF-QDD-MATTER-RECORD", "DEF-QDD-DIRECT-WRITE",
+    }
+    v70_reading_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == "READING-SPLIT"
+    }
+    v70_apparatus_dependencies = {
+        (row["depends_on"], row["relation"])
+        for row in dependencies if row["item_id"] == qdd_apparatus
+    }
+    v70_successor_consumers = {
+        (row["item_id"], row["relation"])
+        for row in dependencies if row["depends_on"] == qdd_successor
+    }
+    v70_live_frontier = {
+        row["claim_id"] for row in rows if row["status"] in {"H", "O"}
+    }
+    v70_apparatus_manifest_lines = (
+        "apparatus_manifest.projector_target_ids =",
+        "apparatus_manifest.effect_ids = (UNRESOLVED)",
+        "apparatus_manifest.instrument_ids = (UNRESOLVED)",
+        "apparatus_manifest.apparatus_carrier_id = UNRESOLVED",
+        "apparatus_manifest.ready_state_id = UNRESOLVED",
+        "apparatus_manifest.physical_context_key_id = UNRESOLVED",
+        "apparatus_manifest.selected_ready_phase_id = UNRESOLVED",
+        "apparatus_manifest.coupling_id = UNRESOLVED",
+        "apparatus_manifest.pointer_id = UNRESOLVED",
+        "apparatus_manifest.reduction_id = UNRESOLVED",
+        "apparatus_manifest.target_comparison_relation_id = UNRESOLVED",
+        "apparatus_manifest.target_comparison_domain_id = UNRESOLVED",
+        "apparatus_manifest.complete_apparatus_family_class_id = UNRESOLVED",
+        "apparatus_manifest.apparatus_family_equality_id = UNRESOLVED",
+        "apparatus_manifest.phase_equality_id = UNRESOLVED",
+        "apparatus_manifest.target_independence_certificate_id = UNRESOLVED",
+        "apparatus_manifest.class_completeness_certificate_id = UNRESOLVED",
+        "apparatus_manifest.realization_certificate_ids = (UNRESOLVED)",
+        "apparatus_manifest.realized_outcome_ids = (UNRESOLVED)",
+        "apparatus_manifest.realized_event_semantics_id = UNRESOLVED",
+        "apparatus_manifest.occurrence_law_id = UNRESOLVED",
+        "apparatus_manifest.post_state_instrument_ids = (UNRESOLVED)",
+        "apparatus_manifest.persistence_update_reset_law_id = UNRESOLVED",
+        "apparatus_manifest.zero_support_semantics_id = UNRESOLVED",
+        "apparatus_manifest.l1_to_l5_gate_id = UNRESOLVED",
+        "apparatus_manifest.l6_measure_boundary = REQUIRES_SEPARATE_GATE",
+    )
+    v70_algebraic_manifest_lines = (
+        "stage_id = D_matter",
+        "leg_id = D_quadratic",
+        "domain_id = DEF-QDD-DOMAIN-K0",
+        "codomain_id = DEF-QDD-MATTER-RECORD",
+        "write_map_id = DEF-QDD-DIRECT-WRITE",
+        "totality_domain_id = DEF-QDD-DOMAIN-K0",
+        "(support_state, total_weight, branch_weights,",
+        "density_state, normalized_weight_state)",
+        "quadratic_manifest.coefficient_ring_id = DEF-QDD-COEFFICIENT-Q",
+        "quadratic_manifest.effective_carrier_id = DEF-QDD-BALANCED-PISTON",
+        "quadratic_manifest.orbit_to_amplitude_bridge_id = DEF-QDD-AMPLITUDE-B0",
+        "quadratic_manifest.gram_id = DEF-QDD-GRAM",
+        "quadratic_manifest.dagger_id = DEF-QDD-DAGGER",
+        "quadratic_manifest.transpose_id = DEF-QDD-TRANSPOSE",
+        "quadratic_manifest.qcarrier_id = DEF-QDD-QCARRIER-EQUALITY",
+        "quadratic_manifest.q_equality_id = DEF-QDD-QCARRIER-EQUALITY",
+        "quadratic_manifest.q_map_id = DEF-QDD-QPAIR",
+        "quadratic_manifest.projector_ids =",
+        "(DEF-QDD-PROJECTOR-LOW, DEF-QDD-PROJECTOR-HIGH)",
+        "quadratic_manifest.branch_weight_pairing_id =",
+        "DEF-QDD-BRANCH-WEIGHT-PAIRING",
+        "quadratic_manifest.factorization_map_id = DEF-QDD-FACTOR-MAP",
+        "quadratic_manifest.slot_boundary_id = QDD-QCARRIER-DIAGONAL-BOUNDARY",
+        "quadratic_manifest.factorization_theorem_id =",
+        "QDD-ALGEBRAIC-FACTORIZATION",
+    )
+    v70_frozen_manifest = {
+        "EXPECTED.txt": (1145, "931b8de96b408a7a427103949e2d0a53111081df0a4d7072ad3b6788264f3880"),
+        "MANIFEST.json": (16083, "561cfd403c126981342393c473846acbb7d54c2194cecff43ae1b3dc835636c7"),
+        "README.md": (7162, "948df790610f4fde4e64013192ceda52dc0990bdfe1a16c650631700337154fa"),
+        "verify.py": (34325, "32510c01386db17589104190424ddb76f47a05b4a7f429a613e2b83dd78af58e"),
+    }
+    v70_actual_manifest = {
+        path.name: (
+            path.stat().st_size,
+            hashlib.sha256(path.read_bytes()).hexdigest(),
+        )
+        for path in SUCCESSOR_MANIFEST_DIR.iterdir() if path.is_file()
+    }
+    checks.append((
+        "V70-QDD-SPLIT",
+        "the composite quadratic O retires as a split; ALGEBRAIC-DMATTER is "
+        "an owner-selected D/L1 dictionary with exact algebraic wiring and no "
+        "gate, while all transferred physical debt stays on "
+        "QDD-INSTRUMENT-APPARATUS at O/STOP",
+        qdd_current_split
+        and len(v70_history_rows) == 6
+        and set(v70_events) == set(v70_contract) | {qdd_predecessor}
+        and all(
+            v70_events[claim]["event_id"] == contract["event_id"]
+            and v70_events[claim]["event_sequence"] == contract["sequence"]
+            and v70_events[claim]["event_date"] == "2026-08-29"
+            and v70_events[claim]["event_type"] == contract["event_type"]
+            and v70_events[claim]["previous_status"] == contract["previous"]
+            and v70_events[claim]["new_status"] == contract["new"]
+            and v70_events[claim]["scope_sha256"] == contract["scope_sha"]
+            and v70_events[claim]["evidence_id"] == contract["evidence_id"]
+            and v70_events[claim]["evidence_location"]
+            == contract["evidence_location"]
+            and v70_events[claim]["evidence_sha256"] == contract["evidence_sha"]
+            and scope_sha256(index, claim) == contract["scope_sha"]
+            and registry_row_sha256(index, claim) == contract["row_sha"]
+            and evidence[claim]["evidence_id"] == contract["evidence_id"]
+            and evidence[claim]["location"] == contract["evidence_location"]
+            and evidence[claim]["sha256"] == contract["evidence_sha"]
+            for claim, contract in v70_contract.items()
+        )
+        and all(
+            v70_events[qdd_predecessor][field] == expected
+            for field, expected in {
+                "event_id": v70_retirement["event_id"],
+                "event_sequence": v70_retirement["sequence"],
+                "event_type": v70_retirement["event_type"],
+                "previous_status": v70_retirement["previous"],
+                "new_status": v70_retirement["new"],
+                "scope_sha256": v70_retirement["scope_sha"],
+                "evidence_id": v70_retirement["evidence_id"],
+                "evidence_location": v70_retirement["evidence_location"],
+                "evidence_sha256": v70_retirement["evidence_sha"],
+            }.items()
+        )
+        and v70_events[qdd_predecessor]["event_date"] == "2026-08-29"
+        and all(
+            phrase in v70_events[qdd_predecessor]["rationale"].lower()
+            for phrase in ("no falsifier fired",
+                           "no positive closure or scientific result is recorded",
+                           "rather than satisfied")
+        )
+        and v70_successor_edges == v70_successor_dependencies
+        and v70_reading_dependencies == {
+            ("DEF-ARCHITECTURE", "REQUIRES"),
+            ("CODEC-TR4", "REQUIRES"),
+            (qdd_successor, "REQUIRES"),
+        }
+        and v70_apparatus_dependencies == {
+            ("DEF-QDD-PROJECTOR-LOW", "REQUIRES"),
+            ("DEF-QDD-PROJECTOR-HIGH", "REQUIRES"),
+            ("DEF-QDD-GRAM", "REQUIRES"),
+            ("DEF-DECODER-COMPLETION-CONTRACT", "REQUIRES"),
+        }
+        and v70_successor_consumers == {("READING-SPLIT", "REQUIRES")}
+        and "MEASURE-BORN-VERB" not in v70_successor_edges
+        and scope_contains_all(
+            index, qdd_successor,
+            ("owner-adopted L1 algebraic dictionary binds only",
+             "D_matter|_(K_QDD,D_quadratic) := D_QDD_direct",
+             "exactly five fields", "ordered algebraic projector pair",
+             "algebraic branch-weight pairing", "total only on K_QDD",
+             "owner architecture choice",
+             "not a mathematically forced, unique or canonical route",
+             "PHYSICAL-DMATTER remains unadopted, not falsified and not shown complete"),
+        )
+        and index[qdd_successor]["falsifier"] == ""
+        and scope_contains_all(
+            index, "READING-SPLIT",
+            ("ALGEBRAIC-DMATTER only on (K_QDD,D_quadratic)",
+             "L1 algebraic data", "not a physical effect, apparatus",
+             "no totality beyond K_QDD", "other-leg closure"),
+        )
+        and scope_contains_all(
+            index, "QPAIR-HERM-INTEGER-NONDESCENT",
+            ("no bridge to DEF-QDD-QPAIR", "algebraic branch-weight pairing",
+             "decoder write map", "or ALGEBRAIC-DMATTER",
+             "no physical U(1), apparatus"),
+        )
+        and scope_contains_all(
+            index, qdd_apparatus,
+            ("sole owner of the physical debt split from QUADRATIC-DECODER-DATA",
+             "transferred but not satisfied", "projector_target_ids",
+             "are algebraic targets and are not aliases for physical effects",
+             "effect_ids, instrument_ids, apparatus_carrier_id",
+             "target-independence and class-completeness certificates",
+             "persistence/update/reset law", "all remain UNRESOLVED",
+             "any L6 measure requiring a separate gate",
+             "do not close or partially satisfy this row",
+             "PHYSICAL-DMATTER remains unadopted, not falsified and not shown complete",
+             "SAMPLING NOT PROVIDED rather than impossible"),
+        )
+        and all(line in canon_text for line in v70_algebraic_manifest_lines)
+        and all(line in canon_text for line in v70_apparatus_manifest_lines)
+        and "an `ALGEBRAIC_ONLY` L1 `READOUT`" in canon_text
+        and "there is no sixth field" in canon_text
+        and "no `effect_ids` or `born_pairing_id`" in canon_text
+        and "no algebraic identifier is an alias for a physical" in canon_text
+        and "The debt is TRANSFERRED_NOT_SATISFIED." in canon_text
+        and "PHYSICAL-DMATTER" not in index
+        and "PHYSICAL-DMATTER" not in normative
+        and "PHYSICAL-DMATTER" not in evidence
+        and "PHYSICAL-DMATTER" not in programs
+        and "QDD-PROJECTOR-APPARATUS" not in index
+        and v70_live_frontier == set(programs)
+        and len(v70_live_frontier) == 29
+        and f"- {qdd_predecessor} [" not in frontier_text
+        and f"- {qdd_successor} [" not in frontier_text
+        and f"- {qdd_apparatus} [O]:" in frontier_text
+        and all(row["claim_id"] != qdd_successor for row in core_selection_rows)
+        and f"- {qdd_successor} [" not in core_text
+        and hashlib.sha256(GATES.read_bytes()).hexdigest()
+        == "144e8c1b32446426222c3ca06f22577218ce84adb1c974aedb0cbe914d53ad9b"
+        and hashlib.sha256(CORE_SELECTION.read_bytes()).hexdigest()
+        == "eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e"
+        and v70_actual_manifest == v70_frozen_manifest,
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

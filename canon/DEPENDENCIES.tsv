@@ -117,6 +117,7 @@ AXIOM-PROJECTION-DICTIONARY	J-MODULUS-CHORD	REQUIRES	registry scope names the th
 AXIOM-PROJECTION-DICTIONARY	J-RAMIFIED-CHORD	REQUIRES	registry scope names the theorem input
 BOOST-COUNT-LADDER	BOOST-READING-SPLIT	REQUIRES	count dictionary rests on the exact split
 READING-SPLIT	CODEC-TR4	REQUIRES	linear leg is CODEC-TR4
+READING-SPLIT	ALGEBRAIC-DMATTER	REQUIRES	the quadratic leg is the owner-adopted L1 algebraic D_matter binding on exactly K_QDD and D_quadratic; no physical meaning or other-leg closure is inherited
 SILVER-SIBLING	SILVER-RING-FACTS	REQUIRES	dictionary rests on finite ring facts
 CENTRAL-LIFT-PHASE	J-PROJECTIONS	REQUIRES	the principal embedding, exact modulus, and oriented phase of J are inherited public inputs
 CENTRAL-LIFT-PHASE	J-TENTH-ROOT	REQUIRES	the primitive tenth-root identity 1-J = -zeta_5^2 supplies the frozen mu_10 outside mu_5 obstruction
@@ -269,7 +270,7 @@ SCHEME-DICTIONARY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every dow
 GENERATIONS-L3	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 SPIN-LIFT-FORCED	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 TM-SYM2-MEASURE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
-QUADRATIC-DECODER-DATA	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
+ALGEBRAIC-DMATTER	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the owner-adopted algebraic binding is conditional on the declared architecture and does not make the choice mathematically forced
 NEUTRON-DELTA-EM	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 PROTON-RESIDUAL-IS-QCD	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 SQRT-PHI-TIME-GRAVITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
@@ -365,24 +366,24 @@ SQRT-PHI-DIGIT-LIFT	QUBIT-FROM-F5	REQUIRES	the sign quotient supplies the final 
 SQRT-PHI-DIGIT-LIFT	RAMIFIED-TM-LIFT	REQUIRES	the binary digit recursion and chronological carry law are lifted through the two square-root branches without adding a physical reading
 SQRT-PHI-TIME-GRAVITY	SQRT-PHI-DIGIT-LIFT	REQUIRES	the exact L1 digit lift is a necessary algebraic input, while the typed clock and gravity bridge remains open
 TM-SYM2-MEASURE	GOLDEN-SIX-LINE-SYM2-FRAME	REQUIRES	the exact golden frame supplies only the candidate coefficient ratio; Thue-Morse selection, Born halving, and a physical measure remain open
-QUADRATIC-DECODER-DATA	DEF-DECODER-MATTER	REQUIRES	the open action and its frozen fields are the write performed by the declared D_matter interface
-QUADRATIC-DECODER-DATA	READING-SPLIT	REQUIRES	the row concerns only the registered quadratic/Born decoder leg and explicitly excludes the linear CODEC-TR4 and binary Thue-Morse/census legs
-QUADRATIC-DECODER-DATA	COUPLINGS-DETERMINE	REQUIRES	the exact Gram-normalized density and Born identity are inherited inputs, not an instrument-selection theorem
-QUADRATIC-DECODER-DATA	MEASURE-BORN-VERB	REQUIRES	the physical data effect uses the registered Born-square measure dictionary
-QUADRATIC-DECODER-DATA	DEF-QDD-COEFFICIENT-Q	REQUIRES	the coefficient ring named by the STOP clause: rational coefficients with the trivial involution on the matrix side, and the amplitude field K with bar = sigma_4
-QUADRATIC-DECODER-DATA	DEF-QDD-BALANCED-PISTON	REQUIRES	the effective carrier named by the STOP clause: V_eff = ell(F_5)^4, the frozen carrier the quadratic pair is restricted to
-QUADRATIC-DECODER-DATA	DEF-QDD-DOMAIN-K0	REQUIRES	the common total domain named by the STOP clause: K_QDD, declared total for the quadratic D_matter leg
-QUADRATIC-DECODER-DATA	DEF-QDD-AMPLITUDE-B0	REQUIRES	the orbit-to-amplitude bridge named by the STOP clause: Amp_QDD = iota_B0 o beta_QDD
-QUADRATIC-DECODER-DATA	DEF-QDD-GRAM	REQUIRES	the Gram named by the STOP clause: G = I_4 - (1/5) 1 1^T, the matrix of the trace pairing in B0
-QUADRATIC-DECODER-DATA	DEF-QDD-DAGGER	REQUIRES	the dagger named by the STOP clause: the involution carrying the first typed slot of Q
-QUADRATIC-DECODER-DATA	DEF-QDD-TRANSPOSE	REQUIRES	the transpose named by the STOP clause: the operation carrying the second typed slot of Q
-QUADRATIC-DECODER-DATA	DEF-QDD-QCARRIER-EQUALITY	REQUIRES	the QCarrier equality named by the STOP clause: ordered componentwise rational matrix equality on im(Q_QDD | V_eff)
-QUADRATIC-DECODER-DATA	DEF-QDD-QPAIR	REQUIRES	the map Q named by the STOP clause and displayed in the row scope as Q(psi) = (psi psi^dagger, psi psi^T)
-QUADRATIC-DECODER-DATA	DEF-QDD-PROJECTOR-LOW	REQUIRES	the first member of the ordered effect pair named by the STOP clause; ALGEBRAIC_READOUT only, the physical realization remains in QDD-INSTRUMENT-APPARATUS
-QUADRATIC-DECODER-DATA	DEF-QDD-PROJECTOR-HIGH	REQUIRES	the second member of the ordered effect pair named by the STOP clause; the same labels
-QUADRATIC-DECODER-DATA	DEF-QDD-BRANCH-WEIGHT-PAIRING	REQUIRES	the Born pairing named by the STOP clause: the factor-route Born trace pairing, an adopted dictionary input and not derived from J
-QUADRATIC-DECODER-DATA	DEF-QDD-MATTER-RECORD	REQUIRES	the MatterData schema named by the STOP clause: the five typed fields of MatterData_QDD
-QUADRATIC-DECODER-DATA	DEF-QDD-DIRECT-WRITE	REQUIRES	the exact write map named by the STOP clause: D_QDD_direct = R_cyc o iota_B0 o beta_QDD : K_QDD -> MatterData_QDD
+ALGEBRAIC-DMATTER	DEF-DECODER-MATTER	REQUIRES	the scoped binding is the write performed by the declared D_matter stage on K_QDD and D_quadratic only
+ALGEBRAIC-DMATTER	DEF-DECODER-COMPLETION-CONTRACT	REQUIRES	the exact field, stage, leg and quadratic manifests are typed against the public completion-contract schema without submitting a whole-decoder completion candidate
+ALGEBRAIC-DMATTER	COUPLINGS-DETERMINE	REQUIRES	the exact Gram-normalized algebraic density identity is an inherited L1 input, not a physical effect or instrument-selection theorem
+ALGEBRAIC-DMATTER	QDD-ALGEBRAIC-FACTORIZATION	REQUIRES	the independent theorem audits equality of the direct and factor expressions on K_QDD without defining or selecting the architecture
+ALGEBRAIC-DMATTER	DEF-QDD-COEFFICIENT-Q	REQUIRES	the quadratic manifest resolves the rational coefficient ring and the amplitude field K with bar = sigma_4
+ALGEBRAIC-DMATTER	DEF-QDD-BALANCED-PISTON	REQUIRES	the effective carrier is V_eff = ell(F_5)^4, the frozen carrier to which the quadratic pair is restricted
+ALGEBRAIC-DMATTER	DEF-QDD-DOMAIN-K0	REQUIRES	the totality domain is exactly K_QDD for the D_quadratic binding, with no K_QDD = K inference
+ALGEBRAIC-DMATTER	DEF-QDD-AMPLITUDE-B0	REQUIRES	the orbit-to-amplitude bridge is Amp_QDD = iota_B0 o beta_QDD
+ALGEBRAIC-DMATTER	DEF-QDD-GRAM	REQUIRES	the algebraic Gram is G = I_4 - (1/5) 1 1^T, the matrix of the trace pairing in B0
+ALGEBRAIC-DMATTER	DEF-QDD-DAGGER	REQUIRES	the dagger is the typed first slot of Q_QDD
+ALGEBRAIC-DMATTER	DEF-QDD-TRANSPOSE	REQUIRES	the transpose is the typed second slot of Q_QDD
+ALGEBRAIC-DMATTER	DEF-QDD-QCARRIER-EQUALITY	REQUIRES	the QCarrier equality is ordered componentwise rational matrix equality on im(Q_QDD | V_eff)
+ALGEBRAIC-DMATTER	DEF-QDD-QPAIR	REQUIRES	the quadratic map is Q_QDD(v) = (v v^dagger, v v^T)
+ALGEBRAIC-DMATTER	DEF-QDD-PROJECTOR-LOW	REQUIRES	the first ordered projector is an algebraic readout target, not a physical effect identifier
+ALGEBRAIC-DMATTER	DEF-QDD-PROJECTOR-HIGH	REQUIRES	the second ordered projector is an algebraic readout target, not a physical effect identifier
+ALGEBRAIC-DMATTER	DEF-QDD-BRANCH-WEIGHT-PAIRING	REQUIRES	the factor-route branch-weight pairing is an adopted algebraic dictionary input and is not derived from J
+ALGEBRAIC-DMATTER	DEF-QDD-MATTER-RECORD	REQUIRES	the codomain has exactly the five typed fields of MatterData_QDD
+ALGEBRAIC-DMATTER	DEF-QDD-DIRECT-WRITE	REQUIRES	the defining write is D_QDD_direct = R_cyc o iota_B0 o beta_QDD : K_QDD -> MatterData_QDD
 SQRT-PHI-TIME-GRAVITY	DEF-DECODER-CLOCK	REQUIRES	the clock leg targets the declared D_clock and ObservableHistory interface
 SQRT-PHI-TIME-GRAVITY	METRO-TICK	REQUIRES	the registered dimensionless tick is an inherited clock input, not the missing bridge
 SQRT-PHI-TIME-GRAVITY	GRAVITY-BRIDGE-LAW	REQUIRES	the existing equation-layer gravity dictionary is an input but supplies no Y-to-source map
@@ -524,9 +525,10 @@ QDD-PROJECTOR-PAIR-TR4	CODEC-TR4	REQUIRES	Tr_4 is the registered piston characte
 QDD-QCARRIER-DIAGONAL-BOUNDARY	DEF-QDD-QPAIR	REQUIRES	the two typed slots whose coincidence on V_eff is stated
 QDD-QCARRIER-DIAGONAL-BOUNDARY	DEF-QDD-DAGGER	REQUIRES	the dagger is the transpose over Q on the frozen carrier
 QDD-QCARRIER-DIAGONAL-BOUNDARY	DEF-QDD-TRANSPOSE	REQUIRES	the second slot
-QDD-INSTRUMENT-APPARATUS	DEF-QDD-PROJECTOR-LOW	REQUIRES	the instrument family must realize the frozen E_low exactly
-QDD-INSTRUMENT-APPARATUS	DEF-QDD-PROJECTOR-HIGH	REQUIRES	the instrument family must realize the frozen E_high exactly
-QDD-INSTRUMENT-APPARATUS	DEF-QDD-GRAM	REQUIRES	E_a = K_a^sharp K_a is taken in the frozen Gram form
+QDD-INSTRUMENT-APPARATUS	DEF-QDD-PROJECTOR-LOW	REQUIRES	E_low is the first ordered algebraic projector target for a future separately typed physical effect and exact target-comparison relation; projector_id is not effect_id
+QDD-INSTRUMENT-APPARATUS	DEF-QDD-PROJECTOR-HIGH	REQUIRES	E_high is the second ordered algebraic projector target for a future separately typed physical effect and exact target-comparison relation; projector_id is not effect_id
+QDD-INSTRUMENT-APPARATUS	DEF-QDD-GRAM	REQUIRES	the frozen algebraic target comparison uses the Gram form; it does not resolve a physical effect, coupling, reduction, or realization certificate
+QDD-INSTRUMENT-APPARATUS	DEF-DECODER-COMPLETION-CONTRACT	REQUIRES	the transferred physical debt is recorded in the apparatus_manifest; all physical identifier slots remain UNRESOLVED and are not aliases of the algebraic projector targets
 TM-SHEET-SYNCHRONIZING-GRAPH	KERNEL-Z6-SYNCHRONIZATION	BOUNDED_BY	the sheet pair and its table are re-derived from the same declared generators and selector; the moving-layer theorem is lineage and its exclusion of census meaning for the value pair is inherited unchanged
 TM-SHEET-SYNCHRONIZING-GRAPH	RAMIFIED-TM-LIFT	BOUNDED_BY	clause (viii) quotes the registered phase dictionary Theta_n^2 = (-1)^theta_n as a reading of the standalone congruence 4 + 2 theta = -(-1)^theta mod 5; nothing is inherited as a premise
 TM-SHEET-SYNCHRONIZING-GRAPH	FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT	BOUNDED_BY	clause (v) states a partition coincidence with the zero orientation of the cut classification; no derivation is claimed in either direction, per the owner ruling of 2026-08-18
