@@ -209,6 +209,28 @@ For new public probes:
   `NOT_APPLICABLE` may not be used to evade the placement. Other gate kinds
   may not use equal endpoints.
 
+### Reading-family discipline
+
+Public work does not presume global decoder uniqueness.
+
+Nonuniqueness is a scientific falsifier only when the frozen claim being
+tested explicitly asserts uniqueness in a declared class and equivalence
+relation.
+
+A proposed family of physical readings must freeze the domain, codomain,
+context keys, equality or equivalence relation, and overlap rules needed by
+its claim. If two admitted readings in the same context produce inequivalent
+physical outputs, the work must provide an independent selection or occurrence
+rule, prove the readings physically equivalent at the claimed scope, or leave
+the physical conclusion open.
+
+A reading may never be selected after inspection of the target measurement or
+result it is used to explain.
+
+Completeness of a reading family does not mean cardinality one. It means that
+all admitted alternatives relevant to the claimed outputs are classified and
+that no undeclared choice remains.
+
 ## 5. Canon
 
 The current files have stable paths:
