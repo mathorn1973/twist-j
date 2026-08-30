@@ -1,4 +1,4 @@
-# P-TM-CORR-ZEROS-1 first formal run
+# P-TM-CORR-ZEROS-1 formal run and architecture replay
 
 Date: 2026-08-30
 
@@ -21,7 +21,7 @@ stderr_bytes: 0
 ```
 
 ```text
-RUN STATE:            FIRST FORMAL RUN / X86_64 ONLY
+RUN STATE:            FORMAL RUN / TWO-ARCHITECTURE REPLAY COMPLETE
 PUBLIC PIN:           f594c8ddd39e63432ac58026dd402b756f4893ad
 PIN BASE:             7f4c102e27e7b2ebdf5ca9215db5c5ab846ebbe2
 PREREG SHA-256:       fc92c07cb17670872cde748d52ddf8b3b11b8e0f35ea0f20a84ffd45b8740d9b
@@ -33,7 +33,7 @@ STDOUT BYTES:         901
 STDOUT SHA-256:       355eb61bb6fac32e3346fd4e0e76bbf6034eb9d15b372f27d1cbef91050845be
 STDERR BYTES:         0
 DECISION:             PROOF-SURVIVES / 7 OF 7 PASS
-AARCH64 REPLAY:       PENDING
+AARCH64 REPLAY:       BYTE-IDENTICAL PASS
 SCIENTIFIC STATUS:    UNCHANGED
 PRIORITY CLAIM:       NONE
 ```
@@ -60,8 +60,23 @@ SHA-256
 `355eb61bb6fac32e3346fd4e0e76bbf6034eb9d15b372f27d1cbef91050845be`,
 and produced zero stderr bytes.
 
-This record is neutral. It does not create a Canon or Registry row, does not
-satisfy the required aarch64 replay, and does not by itself move any
-scientific status. The next gate is byte-identical GitHub x86_64 and aarch64
-replay of the pinned verifier. `RESULT.md` records only the resulting
-proof-survival candidate and keeps that architecture gate explicitly pending.
+## Repository two-architecture replay
+
+Pull request #696 triggered policy workflow run `33316650855` on evidence
+head `9e49b77f8e90f3e35afbe329b6328bf4ff74a13e`. The changed-probe step ran
+the pinned verifier independently on both required architectures:
+
+| Architecture | Job | Conclusion | Verifier SHA-256 | Stdout SHA-256 |
+| --- | --- | --- | --- | --- |
+| x86_64 | `99271221495` | `VERIFY PASS` | `a4f95475eb4b859c83b0e38256d3b9d5bc92772d6e06a57ad620ef50220a7861` | `355eb61bb6fac32e3346fd4e0e76bbf6034eb9d15b372f27d1cbef91050845be` |
+| aarch64 | `99271221574` | `VERIFY PASS` | `a4f95475eb4b859c83b0e38256d3b9d5bc92772d6e06a57ad620ef50220a7861` | `355eb61bb6fac32e3346fd4e0e76bbf6034eb9d15b372f27d1cbef91050845be` |
+
+Aggregate job `99271304174` concluded success and emitted
+`TWO-ARCHITECTURE CHECK PASS`. The workflow also passed policy, 142 tool
+tests, Canon v71, ledger, gate contract, and the unchanged reproduction
+checks on both runners.
+
+This record is neutral with respect to the public theory. It completes the
+probe's architecture audit but creates no Canon or Registry row and moves no
+scientific status. The theorem grade rests on the written proof; the two
+architecture jobs reproduce the frozen proof-audit carrier and exact stdout.

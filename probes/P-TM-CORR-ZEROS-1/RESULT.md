@@ -1,6 +1,6 @@
 # P-TM-CORR-ZEROS-1 result record
 
-Status: `PROOF-SURVIVES / TWO-ARCHITECTURE REPLAY PENDING / CANON UNCHANGED`.
+Status: `PROVED AND TWO-ARCHITECTURE AUDITED AT THE FROZEN L5 SCOPE / CANON UNCHANGED`.
 
 ## Decision
 
@@ -14,11 +14,12 @@ byte-for-byte readback, the accepted verifier returned exit code zero,
 empty stderr, `SCIENTIFIC DECISION PROOF-SURVIVES`, and `SUMMARY 7/7 PASS`.
 Its exact stdout is `EXPECTED.txt`.
 
-This result record does not by itself complete the repository gate. The
-single-probe pull request must replay the pinned verifier on GitHub-hosted
-x86_64 and aarch64, and both jobs must reproduce `EXPECTED.txt` byte for byte.
-Any architecture, hash, stdout, stderr, exit, or policy failure has STOP
-precedence and remains public; it is not repaired in place.
+Pull request #696 policy workflow run `33316650855` replayed the pinned
+verifier on GitHub-hosted x86_64 and aarch64. Both jobs reproduced
+`EXPECTED.txt` byte for byte with the frozen verifier hash, and aggregate job
+`99271304174` returned `TWO-ARCHITECTURE CHECK PASS`. This is architecture
+reproduction of the proof-audit carrier, not independent mathematical
+confirmation.
 
 ## Frozen theorem scope
 
@@ -54,8 +55,8 @@ for any theorem clause or proof step.
 
 No Canon, Registry, NORMATIVE, GATES, dependency, evidence, or scientific
 status change occurs in this probe. A later separately reviewed fold may
-propose only the theorem at this exact L5 scope after the required
-two-architecture gate succeeds.
+propose only the theorem at this exact L5 scope. The completed probe supplies
+no priority language and no authority for a broader claim.
 
 ## Formal record
 
@@ -70,6 +71,9 @@ local architecture:  x86_64
 local Python:        3.12.13
 local exit/stderr:   0 / 0 bytes
 local decision:      PROOF-SURVIVES / 7 OF 7 PASS
-GitHub x86_64:       PENDING
-GitHub aarch64:      PENDING
+evidence head:       9e49b77f8e90f3e35afbe329b6328bf4ff74a13e
+workflow run:        33316650855 / success
+GitHub x86_64:       job 99271221495 / VERIFY PASS / byte-identical
+GitHub aarch64:      job 99271221574 / VERIFY PASS / byte-identical
+aggregate:           job 99271304174 / TWO-ARCHITECTURE CHECK PASS
 ```
