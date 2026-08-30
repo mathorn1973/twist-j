@@ -1,11 +1,25 @@
 # Canon changelog (public series)
 
-## Public Canon v71
+## Public Canon v72
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 342 claims; 0 T-LOCK, 219 T, 44 D, 33 C, 2 H, 27 O, 17 F; 29 live H/O.
+Registry snapshot: 346 claims; 0 T-LOCK, 221 T, 44 D, 33 C, 2 H, 29 O, 17 F; 31 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v72 registers two proof-first photon-boundary theorems and opens
+two separately typed successor roots. FCC-WEIGHTED-SHELL-SYMBOL [T] proves
+the exact displayed L2 weighted-shell moments, unique positive integral
+minimum, fourth-order isotropy and sixth-order anisotropy.
+PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP [T] proves direct
+finite-coupling nonmembership of the exact Z_5 five-vector under positive
+scale, automorphism and optional Fourier exchange. PHOTON-CONE-CONVERGENCE
+[O] and PHOTON-MASSLESS-PHASE [O] are ROOT and STOP with three named
+cross-layer gates. The fold does not reopen the falsified Kappa/window route,
+does not register roughening, does not import Froehlich-Spencer, and makes no
+Lorentz, continuum, propagator or physical-photon claim.
+
+## Public Canon v71
 
 Public Canon v71 is a framework-wording fold. It records no new scientific
 claim and changes no status. It makes explicit that the primitive axiom is an
