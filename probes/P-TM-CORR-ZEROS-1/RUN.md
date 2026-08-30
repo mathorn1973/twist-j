@@ -2,6 +2,24 @@
 
 Date: 2026-08-30
 
+The flat fields below are the machine-readable local record required by
+`tools/check_verifier.py`.
+
+```text
+pin_commit: f594c8ddd39e63432ac58026dd402b756f4893ad
+verifier_sha256: a4f95475eb4b859c83b0e38256d3b9d5bc92772d6e06a57ad620ef50220a7861
+command: python3 probes/P-TM-CORR-ZEROS-1/verify.py
+platform: Linux
+architecture: x86_64
+python: 3.12.13
+exit_code: 0
+stdout_sha256: 355eb61bb6fac32e3346fd4e0e76bbf6034eb9d15b372f27d1cbef91050845be
+stdout_bytes: 901
+stdout_lines: 16
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+```
+
 ```text
 RUN STATE:            FIRST FORMAL RUN / X86_64 ONLY
 PUBLIC PIN:           f594c8ddd39e63432ac58026dd402b756f4893ad
@@ -45,4 +63,5 @@ and produced zero stderr bytes.
 This record is neutral. It does not create a Canon or Registry row, does not
 satisfy the required aarch64 replay, and does not by itself move any
 scientific status. The next gate is byte-identical GitHub x86_64 and aarch64
-replay of the pinned verifier. No `RESULT.md` exists at this stage.
+replay of the pinned verifier. `RESULT.md` records only the resulting
+proof-survival candidate and keeps that architecture gate explicitly pending.
