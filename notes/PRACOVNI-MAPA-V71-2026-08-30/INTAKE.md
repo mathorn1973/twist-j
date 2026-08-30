@@ -6,7 +6,7 @@ AUTORITA:          ŽÁDNÁ; mapa je navigační vrstva, ne Canon
 VEŘEJNÝ CANON:     Public Canon v71 / canon-v71
 CONTENT COMMIT:    a77d720433c19976f9ab663d023ec9364eac34eb
 CANON SHA-256:     0306abb2e7f855ceb4fcbfdf14265a9d2c5c8bd23b35868b74a92aae16b5e279
-MAIN PŘI ZAŘAZENÍ: b7d7ba55f3596f421e4517a94d6ba4d95a99c96e
+MAIN PŘI ZAŘAZENÍ: b7d7ba5d0b9f42c3ac30eda4e70e19e1494eed23
 FORMAL RUN:        NONE
 PROBE/PREREG:      NONE
 CANON/REGISTRY:    BEZE ZMĚNY
@@ -34,7 +34,7 @@ neautorizovaný ke sloučení. Po uzávěrce mapy, dne 2026-08-30, vlastník
 provedl nezávislý readback a ruční bezpečnostní kontrolu přesné hlavy
 `1fddfefc3daa21b4389662db30c528a50d00e26b` s výsledkem PASS a PR #683
 sloučil; merge commit je
-`b7d7ba55f3596f421e4517a94d6ba4d95a99c96e` na `main`. Věty mapy o otevřeném
+`b7d7ba5d0b9f42c3ac30eda4e70e19e1494eed23` na `main`. Věty mapy o otevřeném
 PR #683 jsou proto historické k její uzávěrce a startovací podmínka kroku
 §9.1 („PR #683 musí být nejdřív sloučen nebo explicitně odložen") je
 splněna sloučením.
