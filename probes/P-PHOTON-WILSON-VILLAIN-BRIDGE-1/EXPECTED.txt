@@ -1,0 +1,17 @@
+P-PHOTON-WILSON-VILLAIN-BRIDGE-1
+ARITHMETIC exact-Qsqrt5-and-support
+G01 public five-center weight has full support PASS
+G02 exact DFT equals 10,5,0,0,5 PASS
+G03 Fourier-square normalization audit PASS
+G04 public unordered bi-support is 3,5 PASS
+G05 Wilson positive-series residue witnesses complete PASS
+G06 Wilson beta-positive and beta-zero supports excluded PASS
+G07 Villain positive character and position terms excluded PASS
+G08 all four Z5 automorphisms preserve bi-support PASS
+G09 optional Fourier exchange preserves unordered bi-support PASS
+G10 every frozen finite-coupling family is a nonmember PASS
+S01 zero-removal mutation destroys obstruction PASS
+S02 beta-zero endpoint control PASS
+S03 fresh-state deterministic replay PASS
+OUTCOME FINITE-COUPLING-NONMEMBER
+RESULT 13/13 ALL PASS
