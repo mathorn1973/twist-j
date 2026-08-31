@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its sixty-four checks cover the current
+and emits deterministic text. Its sixty-five checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -111,13 +111,26 @@ obligation with an explicit STOP program. It also records the exact DESI DR2
 R1 firing of the immutable dark-energy reading without moving its dictionary
 or conformal-weight neighbors.
 
+The v73 check pins the four rows of the current fold. `C8-MARKING-RIGIDITY`
+and `C8-PAULI-QUOTIENT-TRANSPORT` enter at `T/L1` in section 3 on their frozen
+two-architecture public probes, each fenced to the `I-BILOCATED [D]` marking
+as an input rather than a derivation. `FCC-WEIGHTED-SHELL-REMAINDER` enters at
+`T/L2` in section 9 and requires `FCC-WEIGHTED-SHELL-SYMBOL`, whose recorded
+consumer set grows by exactly that edge while the v72 row itself does not move.
+`PHOTON-Z5-STAR-QUADRATURE` enters at `C/L4` in section 9, carrying its sharp
+constant and the refuted `HALF` predicate, which is folded and preserved rather
+than relabelled. The check requires exact Registry, Normative, Evidence and
+lifecycle contracts for all four, their exact dependency topology, a matching
+`### CLAIM [status]` heading in `canon/CANON.md`, and that none of the four
+owns a gate, a Frontier program row or a live Frontier entry.
+
 Run from the repository root:
 
 ```text
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 64/64 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 65/65 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -138,9 +151,9 @@ determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
 
-The current v72 count check reads 346 claims, 23 reproductions, 14 gates and
-639 dependency edges. The active partition is T221/D44/C33/H2/O29/F17, so
-the live H+O count is 31 and the two-architecture evidence count is 259.
+The current v73 count check reads 350 claims, 23 reproductions, 14 gates and
+643 dependency edges. The active partition is T224/D44/C34/H2/O29/F17, so
+the live H+O count is 31 and the two-architecture evidence count is 263.
 `V72-PHOTON` requires the four new rows to retain their exact Registry,
 Normative, Evidence and lifecycle contracts, the exact seven-edge topology,
 the two open Frontier roots and the three open lifts. It also requires the
