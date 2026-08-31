@@ -631,3 +631,10 @@ CM-RAMIFIED-PFAFFIAN-ROOT	J-HARMONIC-SEAM	REQUIRES	the public real-unit classifi
 CM-RAMIFIED-PFAFFIAN-ROOT	J-GOLDEN-BRIDGE	REQUIRES	the public cyclotomic identities determine phi=3 at the ramified residue and hence the inverse generator 2
 CM-RAMIFIED-PFAFFIAN-ROOT	RAMIFIED-TM-SYMPLECTIC-ORIENTATION	REQUIRES	the already registered binary character is identified as the C2 quotient of the marked C4 phase without identifying the carriers
 CM-PERIOD-LATTICE-NONSELECTION	CM-ALTERNATING-PENCIL	REQUIRES	the public integral CM forms, Pfaffian, unimodular locus, Pell shift, J-pullback and root-of-unity kernel are the frozen inputs
+PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP	PHOTON-WINDOW-COORDINATES	REQUIRES	the exact five-vector and its unnormalised Fourier transform are the fixed algebraic input; this dependency alone does not create a complete L4 action carrier
+PHOTON-CONE-CONVERGENCE	DEF-ACTION-LAYERS	REQUIRES	the two route endpoints and both cross-layer lifts must remain explicitly typed at L2, L4 and L5
+PHOTON-CONE-CONVERGENCE	FCC-WEIGHTED-SHELL-SYMBOL	BOUNDED_BY	the exact weighted-shell theorem supplies one displayed L2 scalar symbol but neither selects its transfer datum nor derives a temporal characteristic
+PHOTON-CONE-CONVERGENCE	CENTRAL-LIFT-PHASE	BOUNDED_BY	the registered L4 normalized Hermitian action constrains the quadratic route but explicitly supplies no Herm2 positive or causal cone
+PHOTON-MASSLESS-PHASE	DEF-ACTION-LAYERS	REQUIRES	the action datum and the massless-phase conclusion require a named typed L4-to-L6 lift
+PHOTON-MASSLESS-PHASE	PHOTON-WINDOW-COORDINATES	REQUIRES	the exact Z_5 five-vector is the algebraic datum whose embedding into a complete L4 action carrier remains to be frozen
+PHOTON-MASSLESS-PHASE	PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP	BOUNDED_BY	direct finite-coupling nonmembership excludes only the frozen literal Wilson and Villain equality orbit and does not decide broader membership, comparison or a massless phase
