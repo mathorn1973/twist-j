@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v73
+# TWIST-J Public Canon v74
 
-**Release identity.** Public Canon v73. Normative authority and activation
+**Release identity.** Public Canon v74. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v73 also declares the discrete architecture used to read
+only. Public Canon v74 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v73 does not claim
+seed of the two algebraic projections. Public Canon v74 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -124,7 +124,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v73 contains no such
+deriving the architecture from J; Public Canon v74 contains no such
 theorem.
 
 ---
@@ -4725,27 +4725,31 @@ physical photon.
 The preceding theorems do not repair or reopen `PHOTON-KAPPA-LEMMA [F]` or
 `PHOTON-WINDOW-PROOF [F]`. They delimit two separate successor roots.
 
-`PHOTON-CONE-CONVERGENCE [O]` asks whether one publicly selected and
-completely typed L2 spatial-transfer datum yields an exact L5 temporal
-characteristic
+`PHOTON-CONE-CONVERGENCE [O]` now has its first route fixed. The complete
+owner-adopted tuple `PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]`, supported by
+`PHOTON-TEMPORAL-CHARACTERISTIC [T]`, yields the exact L5 characteristic
 
 ```text
 K_op = {(omega,k) : det C(omega,k)=0},
 ```
 
-and whether a separately public L4 Herm2 carrier and cone `K_quad` admit an
+on the selected `D3` quotient. The L2-to-L5 temporal-characteristic gate is
+therefore closed positively as a dictionary lift. The remaining question is
+whether a separately public L4 Herm2 carrier and cone `K_quad` admit an
 independently frozen total typed map
 
 ```text
 iota : carrier(K_quad) -> carrier(K_op)
 ```
 
-with `iota(K_quad)=K_op` as exact equality of null sets. The weighted-shell
-theorem supplies only one displayed scalar symbol. `CENTRAL-LIFT-PHASE`
+with `iota(K_quad)=K_op` as exact equality of null sets. `CENTRAL-LIFT-PHASE`
 supplies only L4 quadratic-support action, not a positive or causal Herm2
-cone. The L2-to-L5 temporal-characteristic gate and the L4-to-L5
-identification gate therefore remain open. Here convergence means agreement
-of two typed routes, not a continuum limit.
+cone. The L4-to-L5 identification gate therefore remains `OPEN_LIFT`. Here
+convergence means agreement of two typed routes, not a continuum limit. The
+two registered temporal branches are unit-modulus phases; they are not a
+contraction/expansion pair in transfer-amplitude sense. A broader
+contraction/expansion, matter/light or visible/invisible interpretation is
+neither assumed nor refuted by this closure.
 
 `PHOTON-MASSLESS-PHASE [O]` separately owns the L4-to-L6 mathematical phase
 question. Before it can move, the exact five-vector must be embedded in a
@@ -5420,6 +5424,143 @@ polarizations. This statement selects no carrier, quotient, weight, physical
 scale or flux, and supplies no temporal transfer, temporal characteristic,
 Herm2 identification, cone, Lorentz statement, Gibbs measure, massless phase,
 propagator, polarization count, decoder, apparatus readout or SI quantity.
+
+### PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]
+
+At `MULTI`, the owner adopts exactly the following L2-to-L5 dictionary. Put
+
+```text
+D3 = {x in Z^3 : x1+x2+x3 is even},
+Gamma_D3 = 2 pi Z^3 union (pi(1,1,1)+2 pi Z^3),
+T_D3 = R^3/Gamma_D3,
+V = Map(D3,C),                         H = V x V.
+```
+
+Real-space points, functions and states have literal equality. Momentum
+equality is `k~k'` exactly when `k-k'` lies in `Gamma_D3`. Signed coordinate
+permutations are symmetries, not an additional quotient. Use every vector in
+`S_n` for `n in {2,4,8,10,16}`, shell weights
+`W*=(6,1,15,1,1)`, dimensionless spatial unit one, operator scale `1/324`,
+and the fixed edgewise trivial flux
+
+```text
+F0(x,v)=1.
+```
+
+Flux equality is literal equality in this fixed gauge. Define the total
+operator on `V` by
+
+```text
+(A_F0 f)(x)
+  = (1/324) sum_(n,v) w_n [f(x)-F0(x,v)f(x+v)]
+  = (1/324) sum_(n,v) w_n [f(x)-f(x+v)].
+```
+
+Time is the forward counter `m in N0` with dimensionless unit update. Put
+
+```text
+X_m=(psi_(m+1),psi_m),                 X_0 arbitrary,
+lambda=exp(-i omega),                  omega in R/2 pi Z.
+```
+
+Inside only the frozen scalar, translation-invariant, nearest-neighbour,
+time-reversal-symmetric affine class
+
+```text
+psi_(m+2)+psi_m+(a+b s(k))psi_(m+1)=0,
+```
+
+the zero-mode condition forces `a=-2` and the unit-tangent normalization
+forces `b=1`. The dictionary therefore adopts
+
+```text
+psi_(m+2)-2psi_(m+1)+psi_m+A_F0 psi_(m+1)=0,
+X_(m+1)=T_op X_m,
+T_op=[[2I-A_F0,-I],[I,0]].
+```
+
+This is an owner selection at status `D`, not a proof that the architecture
+forces `D3`, `W*`, the scale, flat flux, temporal class or clock rule. The
+selection claims no completeness or uniqueness outside the displayed class,
+no bilateral physical time and no SI speed or scale.
+
+### PHOTON-TEMPORAL-CHARACTERISTIC [T]
+
+Conditional on exactly the tuple registered by
+`PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]`, every character
+`chi_k(x)=exp(i<k,x>)` satisfies `A_F0 chi_k=s(k)chi_k`, where
+
+```text
+s(k)=(1/324) sum_(n,v) w_n(1-cos(<k,v>)),
+0<=s(k)<=16/9,
+s(k)=0 exactly for k in Gamma_D3.
+```
+
+No Fourier completeness or diagonalization of all `Map(D3,C)` is claimed.
+Within the frozen two-parameter temporal class, the zero-mode and unit-tangent
+conditions uniquely give `(a,b)=(-2,1)`. On each character,
+
+```text
+T(k)=[[2-s(k),-1],[1,0]],              det T(k)=1,
+C(omega,k)=exp(-i omega)I_2-T(k),
+```
+
+and direct expansion gives
+
+```text
+det C(omega,k)
+  = exp(-i omega)[s(k)-4 sin^2(omega/2)].
+```
+
+Thus the total L5 characteristic is exactly
+
+```text
+K_op = {([omega],[k]) in (R/2 pi Z)xT_D3 :
+        4 sin^2(omega/2)=s(k)}.
+```
+
+For every nonzero spatial character there are exactly two distinct frequency
+classes
+
+```text
+omega_+(k)=+2 asin(sqrt(s(k))/2),
+omega_-(k)=-2 asin(sqrt(s(k))/2)       modulo 2 pi,
+```
+
+whose multipliers are reciprocal conjugates of modulus one. The transfer is
+elliptic for `s>0`. At the unique zero character the branches meet at
+`lambda=1`; `T(0)` is non-identity unipotent with `(T(0)-I)^2=0`, hence
+parabolic with algebraic multiplicity two.
+
+For `epsilon>0`, `Omega in R` and `k in R^3`, the lifted universal-cover
+function
+
+```text
+q_epsilon(Omega,k)
+ = 4 sin^2(epsilon Omega/2)/epsilon^2
+   -s(epsilon k)/epsilon^2
+```
+
+obeys
+
+```text
+-(epsilon^2/12) Omega^4
+ <= q_epsilon(Omega,k)-(Omega^2-|k|^2)
+ <= (11/27) epsilon^2 |k|^4.
+```
+
+Hence `q_epsilon` converges uniformly on bounded lifted sets to
+`Omega^2-|k|^2`. This is characteristic-function convergence only, not
+null-set, cone, state, propagator or physical-continuum convergence. The
+theorem does not promote or derive its dictionary premise. The two temporal
+branches are unit-modulus phases, not a contraction/expansion pair in
+transfer-amplitude sense. The two ambient spatial-zero representatives are
+one point on the `D3` quotient; they are not two photons, polarizations,
+visible/invisible sectors or Born halves. No Herm2 carrier, positive cone,
+Born rule, causal ontology, Lorentz invariance, physical continuum, massless
+phase, propagator, polarization, apparatus, readout or physical photon is
+established. A broader contraction/expansion, matter/light or
+visible/invisible interpretation is neither assumed nor refuted.
 
 ### PHOTON-Z5-STAR-QUADRATURE [C]
 
