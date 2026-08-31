@@ -472,9 +472,12 @@ Its role is to delimit the ramified-place theorem: the `lambda` obstruction abov
 
 This does not make the prime `2` a physical selector and does not strengthen any public two-place dictionary.
 
-## 11. Relation to Public Canon v69
+## 11. Relation to Public Canon v72
 
-At the time of writing, Public Canon v69 is the active public authority. This note changes none of its claims.
+Public Canon v72 is the active public authority. This note changes none of its
+claims. The note was written against v69; the four contextual rows below are
+byte-identical in the v69 and v72 registries, so the relation is restated at
+v72 with no change of content.
 
 Relevant existing public rows are contextual only:
 
