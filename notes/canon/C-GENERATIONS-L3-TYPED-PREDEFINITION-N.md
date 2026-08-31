@@ -26,7 +26,7 @@ turns the current prose question into an exact list of types and decisions
 that must be public before a formal probe can exist.
 
 The present local definition disposition is `STOP-PREDEFINITION`. It is
-neither a Canon status nor a scientific result. Public v71 supplies a gate
+neither a Canon status nor a scientific result. Public v72 supplies a gate
 and a comparison with three, but it does not supply the source, target, lift
 class, generation object, or count functional to which that comparison could
 be applied.
@@ -34,15 +34,15 @@ be applied.
 ## 1. Authority, collision, and routing pin
 
 ```text
-Canon:                    Public Canon v71
+Canon:                    Public Canon v72
 state:                    ACTIVE
 authority:                mathorn1973/twist-j main
 lock base commit:         b7d7ba5d0b9f42c3ac30eda4e70e19e1494eed23
-audit/main commit:        7f4c102e27e7b2ebdf5ca9215db5c5ab846ebbe2
-tag:                      canon-v71
-content commit:           a77d720433c19976f9ab663d023ec9364eac34eb
-Canon SHA-256:            0306abb2e7f855ceb4fcbfdf14265a9d2c5c8bd23b35868b74a92aae16b5e279
-Canon bytes:              369836
+audit/main commit:        43cfd9e4ca570a51f9aa548a8b0e61dad45f5b7f
+tag:                      canon-v72
+content commit:           aac8a3a4aff027beb2b08edbde1ae8e59224914c
+Canon SHA-256:            39ca6e5c49d3ec2b78464045312af75618c4601f87dfa178dfd689d8a4942c70
+Canon bytes:              374406
 owner:                    GENERATIONS-L3 [O]
 scheduler:                NONABELIAN_QCD / ROOT / READY / FORMAL
 normative layer:          L3
@@ -57,6 +57,28 @@ companion PR:             #688 MERGED / COMPATIBLE
 reserved future probe:    NONE
 formal pin/run/result:    ABSENT / NOT AUTHORIZED / ABSENT
 ```
+
+Repin record. This note was first pinned against Public Canon v71 at audit
+base `7f4c102e27e7b2ebdf5ca9215db5c5ab846ebbe2`. On 2026-08-31 the owner
+repinned it against Public Canon v72 at audit base
+`43cfd9e4ca570a51f9aa548a8b0e61dad45f5b7f`. The v71-to-v72 delta is additive
+and confined to the photon lane: four registry rows
+(`FCC-WEIGHTED-SHELL-SYMBOL`,
+`PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP`,
+`PHOTON-CONE-CONVERGENCE`, `PHOTON-MASSLESS-PHASE`), their three gates, the
+matching dependency and evidence rows, and the release-identity string in
+`canon/CORE.md`. No registry row, gate, dependency, layer definition, or
+scheduler label cited by this note changed between the two releases, so every
+disposition below is restated at v72 with no change of content. The
+coordination lock base of issue #685 stays at
+`b7d7ba5d0b9f42c3ac30eda4e70e19e1494eed23`, which is history and is not
+repinned. The definition disposition remains `STOP-PREDEFINITION`.
+
+A rescan at the new audit base found no competing open issue, pull request,
+branch, probe, Registry row, or path claiming the typed-predefinition scope.
+Issue #685 remains the sole exact lock. Pull request #699, which carried an
+unpinned draft of this lane under the relinquished `P-GENERATIONS-L3-1`
+identifier, was closed terminally on 2026-08-31 without merge.
 
 A fresh pre-lock scan on the stated lock base found no open issue, pull
 request, branch, probe, Registry row, divergent-head file, or path with
@@ -113,7 +135,7 @@ EVIDENCE
   INLINE_CANON only
 ```
 
-Public v71 defines the layer names as `L1 state`, `L2 manifold`, `L3
+Public v72 defines the layer names as `L1 state`, `L2 manifold`, `L3
 boundary`, `L4 support`, `L5 stream`, and `L6 measure`. It does not thereby
 define a particular object at any layer. The complete dependency closure of
 `GENERATIONS-L3` contains no concrete L2 carrier. `DEF-ARCHITECTURE` supplies
@@ -249,7 +271,7 @@ explicitly permits it and a public basis for non-applicability is supplied.
 
 The current disposition of the tuple is:
 
-| Block | Required content | Public v71 disposition |
+| Block | Required content | Public v72 disposition |
 | --- | --- | --- |
 | authority | owner, layer endpoints, gate, dependency floor | `FROZEN` |
 | L2 source | nonempty source universe and equality, complete admitted class, category, carrier, action, structure, transports, owner, context and selection, adoption, or completeness rule | `UNRESOLVED` |
@@ -1077,7 +1099,7 @@ relation, status_ceiling, source_commit.
 ```
 
 Every edge must say exactly which data are read. At this audit pin, inherited
-nodes must resolve at `7f4c102e27e7b2ebdf5ca9215db5c5ab846ebbe2`.
+nodes must resolve at `43cfd9e4ca570a51f9aa548a8b0e61dad45f5b7f`.
 Any later accepted `S_gen` must repin after the definition fold is merged and
 read back, so newly adopted definition nodes resolve at that later public
 commit.
@@ -1295,7 +1317,7 @@ identification, or positive closure.
 
 ## 16. Required owner decisions
 
-Public v71 does not determine the following choices. They require an explicit
+Public v72 does not determine the following choices. They require an explicit
 owner-reviewed decision before this note can leave `STOP-PREDEFINITION`:
 
 ```text
