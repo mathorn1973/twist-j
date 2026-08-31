@@ -1,0 +1,24 @@
+P-PHOTON-TEMPORAL-CHARACTERISTIC-1 EXACT CERTIFICATE AUDIT
+G01 complete-shells-positive-selected-weights PASS
+G02 exact-48-signed-permutation-symmetry PASS
+G03 exact-second-fourth-moments-and-weighted-count PASS
+G04 selected-scale-unit-tangent-and-global-bound PASS
+G05 complete-support-lattice-is-D3 PASS
+G06 exact-reciprocal-two-coset-lattice PASS
+G07 fixed-trivial-flux-reversal-and-holonomy PASS
+G08 Fourier-symbol-shell-reversal-certificate PASS
+G09 selected-temporal-class-unique-coefficients PASS
+G10 transfer-determinant-one PASS
+G11 exact-total-characteristic-polynomial PASS
+G12 reciprocal-unit-circle-root-algebra PASS
+G13 certified-stability-range-from-global-bound PASS
+G14 double-root-parabolic-apex PASS
+G15 global-scalar-cosine-remainder-chain PASS
+G16 exact-temporal-spatial-scaling-constants PASS
+G17 unique-zero-character-after-D3-quotient PASS
+G18 negative-spatial-data-and-scale-controls-rejected PASS
+G19 negative-dual-and-flux-controls-rejected PASS
+G20 negative-temporal-transfer-and-bound-controls-rejected PASS
+ALL EXACT CERTIFICATES PASS: 20/20
+Owner datum is D; the conditional characteristic is proof-first T.
+L2-to-L5 only; Herm2 identification and physical photon remain open.
