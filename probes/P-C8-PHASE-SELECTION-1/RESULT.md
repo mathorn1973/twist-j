@@ -1,6 +1,6 @@
 # P-C8-PHASE-SELECTION-1 result
 
-Status: **SCIENTIFIC RESULT; LOCAL EXACT RUN PASS; REQUIRED TWO-ARCHITECTURE WORKFLOW PENDING; PUBLIC CLAIM UNREGISTERED**
+Status: **SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS; PUBLIC CLAIM UNREGISTERED**
 
 ## Decision
 
@@ -99,7 +99,7 @@ This is a relative naturality no-go, not an impossibility theorem for every larg
 
 ### G4 — C4 orientation firewall
 
-The preceding no-go cannot be reused to kill the second binary choice. The power maps which would exchange the two source C4 orientations satisfy
+The preceding no-go cannot be reused to kill the second binary choice. The **abstract `C8` power automorphisms** with exponents `3` and `7` would exchange the two C4 orientations, but they are not automorphisms of the marked field extension over `F5`. Indeed
 
 ```text
 (tau^3)^2=(tau^7)^2=tau^6=3=2^-1,
@@ -107,7 +107,7 @@ The preceding no-go cannot be reused to kill the second binary choice. The power
 
 so they send `J_lambda=2` to `J_lambda^-1=3` and therefore do not preserve the marked source datum.
 
-Correspondingly, the Frobenius action `B` preserves the two representation pairs
+Correspondingly, the actual source Frobenius action `B` preserves the two representation pairs
 
 ```text
 {1,5}: J_lambda -> S,
@@ -142,6 +142,24 @@ result:               ALL FROZEN GATES PASS
 ```
 
 `EXPECTED.txt` is the exact stdout of this execution. The frozen `PREREG.md` and `verify.py` remain byte-identical to the public pin.
+
+## Required two-architecture workflow
+
+```text
+pull request:          722
+formal evidence head: a8ec828ca537a2969b7b79cb4252fabaea9b30b5
+workflow run:          33376963569
+x86_64 job:            99440516542  success
+aarch64 job:           99440516949  success
+aggregate check job:   99440581493  success
+verifier SHA-256:      4de6bfeb43dd8f3c1a4a38388de22000d003efcf262c3bfeccee3ce82603213b
+stdout SHA-256:        482b050912678b69fe858aea7ae282ef2fecaab1bc1e3059cd6c0b92ba177c25
+stdout bytes/lines:   490 / 6
+byte identity:         PASS against committed EXPECTED.txt
+gate:                  PASS
+```
+
+Both architecture jobs passed repository policy, unit tests, Canon checks, ledger checks, gate-contract checks, and `Reproduce changed public probes`. The aggregate job reported the two-architecture check as successful. `RUN.md` remains the neutral local execution record; this close-gate commit changes only `RESULT.md`.
 
 ## Scope firewall
 
