@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v71
+# TWIST-J Public Canon v72
 
-**Release identity.** Public Canon v71. Normative authority and activation
+**Release identity.** Public Canon v72. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v71 also declares the discrete architecture used to read
+only. Public Canon v72 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v71 does not claim
+seed of the two algebraic projections. Public Canon v72 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -124,7 +124,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v71 contains no such
+deriving the architecture from J; Public Canon v72 contains no such
 theorem.
 
 ---
@@ -4500,6 +4500,135 @@ the declared self duality import (the 4D Z_N window opens only for
 N >= 5), the first prime passing both doors is p = 5
 (CENTER-SPLIT-SELECTION [D]). The photon belongs to the null light
 branch, E+ E- = 0 identically.
+
+### FCC-WEIGHTED-SHELL-SYMBOL [T]
+
+At L2 only, put
+
+```text
+N = {2,4,8,10,16},
+S_n = {v in Z^3 : v_1^2+v_2^2+v_3^2=n},
+W* = (w2,w4,w8,w10,w16) = (6,1,15,1,1),
+S(k) = sum_(n in N) w_n sum_(v in S_n)(cos(<k,v>)-1).
+```
+
+The five complete shell sizes are `(12,6,12,24,6)`. The weight `W*` is the
+unique positive integral solution of minimum total weight, equal to `24`, to
+
+```text
+-4w2+32w4-64w8+440w10+512w16=0.
+```
+
+For
+
+```text
+M_d(k) = sum_(n in N) w_n sum_(v in S_n)<k,v>^d,
+```
+
+the exact moments are
+
+```text
+M_2 = 648 |k|^2,
+M_4 = 3168 |k|^4,
+M_6 = 21888 sum_i k_i^6
+      + 63360 sum_(i != j) k_i^4 k_j^2
+      + 0 k_x^2 k_y^2 k_z^2,
+```
+
+where the last sum uses ordered pairs. The weighted multiset is invariant
+under all 48 signed coordinate permutations. Consequently the formal Taylor
+coefficients give
+
+```text
+S(k) = -324 |k|^2 + 132 |k|^4 + terms of degree at least six,
+```
+
+while the exact sixth-order term is anisotropic.
+
+The written finite proof enumerates every shell, proves the unique minimum by
+complete elimination, and derives the moment coefficients exactly.
+`P-FCC-WEIGHTED-SHELL-SYMBOL-1` independently audits the proof on both
+required architectures.
+
+This is one displayed L2 scalar symbol. It does not select the FCC carrier,
+`W*`, its scale or flux from the architecture, and supplies no temporal
+characteristic, Herm2 identification, cone, Lorentz statement, continuum
+limit, phase, propagator or physical photon. No global remainder bound is
+claimed.
+
+### PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP [T]
+
+At L4 one-face algebra, with the unnormalised `Z_5` Fourier transform,
+
+```text
+w  = (4,phi^2,phi^-2,phi^-2,phi^2),
+Fw = (10,5,0,0,5),
+Sigma(w) = sort(|supp w|,|supp Fw|) = (3,5).
+```
+
+For every finite Wilson coupling `beta>0`, both the position vector and its
+Fourier transform have full support, so `Sigma(W_beta)=(5,5)`. At the admitted
+endpoint `beta=0`, `Sigma(W_0)=(1,5)`. For every finite Villain parameter
+`t>0`, both sides are strictly positive, so `Sigma(V_t)=(5,5)`.
+
+Positive normalization and `Z_5` automorphisms preserve both support sizes,
+and optional Fourier exchange only swaps them. Therefore no element of
+
+```text
+O(f) = {c P_u F^epsilon f :
+        c>0, u in F_5^x, epsilon in {0,1}}
+```
+
+of a finite-coupling Wilson or Villain vector equals `w`.
+`P-PHOTON-WILSON-VILLAIN-BRIDGE-1` supplies the universal proof and the
+two-architecture exact audit.
+
+This is direct finite-coupling nonmembership only. It excludes no parameter
+limit, projective closure, broader action class, domination, comparison,
+blocking, RG or universality bridge. It proves no Gibbs state, thermodynamic
+limit, roughening, Coulomb or massless phase, propagator, continuum limit or
+physical photon.
+
+### Photon successor roots
+
+The preceding theorems do not repair or reopen `PHOTON-KAPPA-LEMMA [F]` or
+`PHOTON-WINDOW-PROOF [F]`. They delimit two separate successor roots.
+
+`PHOTON-CONE-CONVERGENCE [O]` asks whether one publicly selected and
+completely typed L2 spatial-transfer datum yields an exact L5 temporal
+characteristic
+
+```text
+K_op = {(omega,k) : det C(omega,k)=0},
+```
+
+and whether a separately public L4 Herm2 carrier and cone `K_quad` admit an
+independently frozen total typed map
+
+```text
+iota : carrier(K_quad) -> carrier(K_op)
+```
+
+with `iota(K_quad)=K_op` as exact equality of null sets. The weighted-shell
+theorem supplies only one displayed scalar symbol. `CENTRAL-LIFT-PHASE`
+supplies only L4 quadratic-support action, not a positive or causal Herm2
+cone. The L2-to-L5 temporal-characteristic gate and the L4-to-L5
+identification gate therefore remain open. Here convergence means agreement
+of two typed routes, not a continuum limit.
+
+`PHOTON-MASSLESS-PHASE [O]` separately owns the L4-to-L6 mathematical phase
+question. Before it can move, the exact five-vector must be embedded in a
+complete L4 action carrier with equality and normalization, and one exact
+primary-source theorem chain must freeze its action class, finite-volume
+measure, boundary conditions, thermodynamic limit, observable, quantitative
+hypotheses and the `N=5` regime. Closure may use exact membership or a complete
+theorem-preserving comparison with explicit constants. The finite
+Wilson/Villain nonmembership theorem is boundary information only; it is not
+negative closure of this broader obligation.
+
+Both successor roots are `ROOT / STOP / FORMAL`. Neither adopts a roughening
+slogan, an uncited Froehlich-Spencer import, Lorentz invariance, a continuum
+propagator, polarization, apparatus, physical readout or a physical photon.
 
 The electron: g = 2 = (2 pi/5) / (pi/5) is the vertex flux over the
 spinor half angle, the reading ELECTRON-G-TREE [D] on exact pillars:

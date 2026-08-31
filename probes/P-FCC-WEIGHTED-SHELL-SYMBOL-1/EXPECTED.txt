@@ -1,0 +1,19 @@
+P-FCC-WEIGHTED-SHELL-SYMBOL-1
+ARITHMETIC exact-integer
+G01 shell sizes 12,6,12,24,6 PASS
+G02 FCC even-coordinate-sum carrier PASS
+G03 48 signed permutations and five single orbits PASS
+G04 Wstar positive and cone value zero PASS
+G05 Wstar unique minimum total 24 by two routes PASS
+G06 M2 equals 648 times norm-square PASS
+G07 M4 equals 3168 times norm-fourth PASS
+G08 M6 coefficient block 21888,63360,0 PASS
+G09 sixth-order isotropy refuted exactly PASS
+G10 weighted mass 288 and full group invariance PASS
+G11 Taylor coefficients -324 and 132 PASS
+S01 norm-nine split-orbit control 6,24 PASS
+S02 uniform and weight-mutation controls PASS
+S03 dropped-vector symmetry breaker PASS
+S04 fresh-state deterministic replay PASS
+OUTCOME SYMBOL-PROVED
+RESULT 15/15 ALL PASS
