@@ -1,6 +1,6 @@
 # P-C8-PAULI-QUOTIENT-TRANSPORT-1 result
 
-Status: SCIENTIFIC RESULT; LOCAL EXACT AUDIT PASS; REQUIRED TWO-ARCHITECTURE WORKFLOW PENDING; PUBLIC CLAIM UNREGISTERED.
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS; PUBLIC CLAIM UNREGISTERED.
 
 ## Recorded decision
 
@@ -9,7 +9,7 @@ Status: SCIENTIFIC RESULT; LOCAL EXACT AUDIT PASS; REQUIRED TWO-ARCHITECTURE WOR
     stderr: empty
     stdout: 664 bytes, 8 lines; identical to EXPECTED.txt
 
-No frozen falsifier fired in the local audit. The negative statements in G5
+No frozen falsifier fired in the local audit or either required architecture replay. The negative statements in G5
 and G7 are proved boundaries, not failures of the probe. The independent
 universal proofs are in the immutable PREREG.md; the verifier audits their
 finite field, exponent, and operator-basis ingredients.
@@ -100,5 +100,42 @@ blob IDs before execution and remain unchanged afterwards.
 
 ## Required two-architecture workflow
 
-Pending at this result commit. No architecture count, repository checker,
-or manual security review is inferred from the local mathematical audit.
+The required public workflow completed successfully on both architectures.
+Both job logs were read and contain the same VERIFY PASS hash pair.
+
+    pull request: 725
+    evidence head: 632f601a5f82d8e514a4df11fe142cf5666a23d9
+    refreshed main base: ae6b24f1bff592b3a09d46c059628c63067ff28b
+    checked-out merge: b0c8f885af2865bc612a2f80662c93f794192996
+    workflow run: 33381798471
+    x86_64 job: 99455607401 success
+    aarch64 job: 99455607191 success
+    aggregate check: 99455668401 success
+    publication: skipped
+    platform: Ubuntu 24.04.4 LTS, native x86_64 and aarch64
+    Python: CPython 3.12.14 on both architectures
+    verifier SHA-256: 091c2c924ab4ce530e556ebd8c99a128abc8b76bfb7ac764217efb8de452de2f
+    stdout SHA-256: 7b947696bae49095be87d37d6551825537b67c7833df5405953d9b75dc3e79c6
+    stdout bytes/lines: 664 / 8
+    exit/stderr: 0 / 0 bytes on both architectures
+    byte identity: PASS against unchanged EXPECTED.txt
+    architecture gate: PASS
+
+Both native jobs passed policy, all 142 tool unit tests, Canon v72 with
+346 claims, the ledger and gate contract. The changed-probe checker verified
+the pinned verifier, its ancestry, exact expected bytes and successful actual
+execution. The minimal-reproduction check was NOT APPLICABLE, as expected.
+
+Two earlier CI stops are retained, not counted as reproductions. Run
+33380984891 rejected only the absolute spelling of RUN.md's command before
+execution; RUN.md now preserves that initial invocation and a second real
+local run using the required portable spelling. Run 33381553568 compared a
+new synthetic merge against the old PR base after concurrent #726, and stopped
+at the one-probe path guard. The refreshed main delta contains only the other
+photon note and probe, with no changed Canon or shared checker. Merge commit
+632f601a incorporates that main without changing any C8 payload blob or
+rewriting the preregistration history. Details are preserved in PR comment
+5476942085. This close-gate commit changes only RESULT.md.
+
+Manual security review is separate from the scientific and architecture gates;
+this result record does not substitute for a review of the final PR head.
