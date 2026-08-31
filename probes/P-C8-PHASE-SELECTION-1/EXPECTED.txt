@@ -1,0 +1,6 @@
+G1 PASS: R={tau,-tau}; Frobenius fixes F5 and J_lambda and swaps both roots
+G2 PASS: B:k->5k and O:k->-k generate a free transitive Klein-four action
+G3 PASS: Frobenius-fixed source datum has no fixed root or fixed phase representation
+G4 PASS: Frobenius preserves C4 orientation; target conjugation exchanges S and S^-1
+G5 PASS: with both binary choices unselected, no symmetry-fixed k exists
+VERDICT PASS: sign-branch relative no-go; C4 orientation remains a separate open selection debt
