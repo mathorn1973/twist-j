@@ -37,13 +37,13 @@ STOP-PREDEFINITION.
 
 ~~~text
 repository:                mathorn1973/twist-j
-audit/main commit:         7f4c102e27e7b2ebdf5ca9215db5c5ab846ebbe2
-Public Canon:              v71
+audit/main commit:         43cfd9e4ca570a51f9aa548a8b0e61dad45f5b7f
+Public Canon:              v72
 Canon state:               ACTIVE
-tag:                       canon-v71
-content commit:            a77d720433c19976f9ab663d023ec9364eac34eb
-Canon SHA-256:             0306abb2e7f855ceb4fcbfdf14265a9d2c5c8bd23b35868b74a92aae16b5e279
-Canon bytes:               369836
+tag:                       canon-v72
+content commit:            aac8a3a4aff027beb2b08edbde1ae8e59224914c
+Canon SHA-256:             39ca6e5c49d3ec2b78464045312af75618c4601f87dfa178dfd689d8a4942c70
+Canon bytes:               374406
 owner:                     QUANT-SUBSTRATE [O]
 scheduler:                 QUANTUM_EM / ROOT / READY / FORMAL
 work-object issue:         #689
@@ -54,6 +54,36 @@ Rev 3 prereg draft SHA:   1797e3a7c18f4e965f96ffbe64d1d2a0c426b0b73c2179d91b0d03
 Rev 3 disposition:        UNRATIFIED / SUPERSEDED FOR RE-KEYING
 formal pin/run/result:     ABSENT / NOT AUTHORIZED / ABSENT
 ~~~
+
+Repin record. This note was first pinned against Public Canon v71 at audit
+base `7f4c102e27e7b2ebdf5ca9215db5c5ab846ebbe2`. On 2026-08-31 the owner
+repinned it against Public Canon v72 at audit base
+`43cfd9e4ca570a51f9aa548a8b0e61dad45f5b7f`. The v71-to-v72 delta is additive
+and confined to the photon lane: four registry rows
+(`FCC-WEIGHTED-SHELL-SYMBOL`,
+`PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP`,
+`PHOTON-CONE-CONVERGENCE`, `PHOTON-MASSLESS-PHASE`), the three gates
+`GATE-L2-L5-PHOTON-TEMPORAL-CHARACTERISTIC`,
+`GATE-L4-L5-PHOTON-CONE-IDENTIFICATION` and
+`GATE-L4-L6-PHOTON-MASSLESS-PHASE`, the matching dependency and evidence
+rows, and the release-identity string in `canon/CORE.md`. `QUANT-SUBSTRATE`,
+`SUBSTRATE-KNIT`, `ELECTRON-G-RATIO` and `ELECTRON-G-DOUBLE-COVER` are
+unchanged, and the two proposed Schwinger gates are still absent, so every
+disposition below is restated at v72 with no change of content. The
+commissioning history stays as written: option (a) in issue #689 commissioned
+Rev 4 against v71, and that sentence is a record of the commission, not a
+live pin.
+
+Owner ruling of 2026-08-31: this lane stays at `STOP-PREDEFINITION`. The
+algebraically degenerate action/state pair is recorded as the reason for the
+stop, and no replacement pair or gate topology is sought in this round until
+it is settled what a nondegenerate pair must satisfy. No partial ANO is
+granted by this repin, and the repin is not a readback.
+
+A rescan at the new audit base found no competing open issue, pull request,
+branch, probe, Registry row, or path claiming the Rev 4 scope. Pull request
+#699, which carried an unratified `P-QS-COUPLING-1` Rev 4 draft of this lane,
+was closed terminally on 2026-08-31 without merge.
 
 The owner selected option (a) in issue #689: commission Rev 4 against
 Public Canon v71. No partial ANO was granted to Rev 3. Rev 1 remains
@@ -153,7 +183,7 @@ The parts of Rev 3 are handled as follows:
 
 | Rev 3 item | Rev 4 disposition |
 | --- | --- |
-| v20 authority pin | rejected; replaced by the v71 pin in section 1 |
+| v20 authority pin | rejected; replaced by the v72 pin in section 1 |
 | proposed carrier ring A' | retained only as candidate A1, not adopted |
 | finite deposit-pair vertex class | retained only as candidate A2, not adopted |
 | rest point and coin branch | retained only as candidate A3, not adopted |
@@ -1066,7 +1096,7 @@ FREE_PARAMETER_UNRESOLVED(reason)
 
 The distinction is essential. PROVED_REQUIRED can feed the proposed future
 negative route only after the separate gate fold adopts it.
-FREE_PARAMETER_UNRESOLVED is STOP. At v71, the free-parameter leaf is not a
+FREE_PARAMETER_UNRESOLVED is STOP. At v72, the free-parameter leaf is not a
 registered scoped scientific falsifier of QUANT-SUBSTRATE; it is only a
 definition diagnostic.
 
@@ -1253,7 +1283,7 @@ instead.
 
 Several inequivalent classes or substantive contexts with the same exact K
 are value multiplicity. A NONUNIQUE route requires at least two exact
-distinct values with witnesses. At v71 this route is a proposed owner route,
+distinct values with witnesses. At v72 this route is a proposed owner route,
 not a registered scoped uniqueness falsifier.
 
 ## 13. Phase A artifact and checker
@@ -1706,7 +1736,7 @@ the registered target predates this definition. No priority claim follows
 from any outcome.
 
 NEGATIVE-FREE-PARAMETER and NONUNIQUE are proposed owner routes, not current
-v71 scientific falsifiers. They become scientific only if the separate
+v72 scientific falsifiers. They become scientific only if the separate
 Canon/gate fold explicitly freezes their scopes, class, equality, and
 decision conditions. Until then all six labels in this note are definition
 constructors only.
@@ -1773,7 +1803,7 @@ The comparison definition order is:
 
 ## 16. Future gate-row proposal
 
-The following rows are proposals only. They are absent from Public Canon v71.
+The following rows are proposals only. They are absent from Public Canon v72.
 Tabs shown below are schema fields, not an edit to canon/GATES.tsv.
 
 ~~~text
@@ -1905,7 +1935,7 @@ Reasons:
    completeness proofs do not yet exist at public scope.
 4. No exact target-independent per-coupling record or class-completeness
    certificate exists.
-5. The two Schwinger gates are absent from v71 and the parent/Larmor topology
+5. The two Schwinger gates are absent from v72 and the parent/Larmor topology
    is unresolved.
 6. No immutable Phase A schema implementation or checker exists.
 
