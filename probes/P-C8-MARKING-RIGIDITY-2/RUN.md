@@ -13,7 +13,8 @@ platform: Debian GNU/Linux 13 (trixie)
 architecture: x86_64
 python: CPython 3.13.5
 clean_checkout: exact frozen PREREG.md and verify.py bytes materialized from the public pin; Git blob identities matched remote readback
-architecture_gate: local exact x86_64 leg recorded; required GitHub-hosted x86_64 and aarch64 workflow pending
+architecture_gate: PASS; GitHub workflow run 33413792559 reproduced EXPECTED.txt on architecture-x86_64 and architecture-aarch64; aggregate check SUCCESS; publication SKIPPED
+local_leg_scope: exact x86_64 reproduction only; the public two-architecture gate rests on the workflow's distinct x86_64 and aarch64 jobs
 deterministic_executions: 1
 exit_code: 0
 stdout_sha256: 906b2bdc60e70cc4d225606609449f81c34dbb471c75b0045ac59cd3c80fc7e6
@@ -24,4 +25,4 @@ stderr_bytes: 0
 result: 6/6 ALL PASS
 pinned_files_unchanged_after_execution: yes
 
-The accepted verifier was executed exactly once after public pin readback. The local execution is an audit leg only and does not by itself satisfy the public two-architecture computation gate.
+The accepted verifier was executed exactly once after public pin readback. The public pull-request workflow independently replayed the same committed verifier and exact EXPECTED.txt bytes on both required architectures.

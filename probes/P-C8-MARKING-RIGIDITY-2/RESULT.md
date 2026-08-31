@@ -1,8 +1,8 @@
 # P-C8-MARKING-RIGIDITY-2 result
 
-Status: **SCIENTIFIC RESULT; LOCAL EXACT RUN PASS; TWO-ARCHITECTURE GATE PENDING; PUBLIC CLAIM UNREGISTERED.**
+Status: **SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS; PUBLIC CLAIM UNREGISTERED.**
 
-## Recorded local decision
+## Recorded decision
 
 ```text
 verdict:      6/6 ALL PASS
@@ -12,7 +12,7 @@ stdout:       766 bytes, 7 lines
 stdout sha256 906b2bdc60e70cc4d225606609449f81c34dbb471c75b0045ac59cd3c80fc7e6
 ```
 
-No frozen scientific falsifier fired in the single formal execution from the immutable pin. The required public x86_64/aarch64 workflow remains pending at this record commit.
+No frozen scientific falsifier fired in the single formal local execution from the immutable pin. GitHub workflow run `33413792559` independently replayed the committed verifier from clean checkouts: `architecture-x86_64` SUCCESS, `architecture-aarch64` SUCCESS, aggregate `check` SUCCESS, `publication` correctly SKIPPED. Both architecture jobs reproduced the same committed `EXPECTED.txt` bytes.
 
 ## Integrity repair
 
@@ -37,4 +37,4 @@ The predecessor remains immutable provenance and is not promotion evidence.
 
 The marking `J_lambda=2` remains an input at its existing dictionary scope. No derivation of quantum mechanics, physical qubit, gate, state, apparatus, Born rule, measurement law, Born-norm transport, quantum advantage, universality or speedup is claimed. No unique C8 orientation is selected, and no statement says an independently oriented object cannot pay the orientation debt.
 
-A successful two-architecture workflow will repair the public evidence package only. It will not register or promote a Canon claim. Any fold is separate.
+The successful two-architecture workflow repairs the public evidence package only. It does not register or promote a Canon claim. Any fold is separate.
