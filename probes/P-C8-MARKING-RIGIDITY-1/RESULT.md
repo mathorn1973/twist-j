@@ -1,6 +1,6 @@
 # P-C8-MARKING-RIGIDITY-1 result
 
-Status: SCIENTIFIC RESULT; LOCAL FORMAL AUDIT PASS; TWO-ARCHITECTURE COMPUTATION GATE REQUIRED; PUBLIC CLAIM UNREGISTERED.
+Status: SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS; PUBLIC CLAIM UNREGISTERED.
 
 ## Recorded decision
 
@@ -8,6 +8,12 @@ Status: SCIENTIFIC RESULT; LOCAL FORMAL AUDIT PASS; TWO-ARCHITECTURE COMPUTATION
     exit: 0
     stderr: empty
     stdout: 709 bytes, 7 lines; identical to EXPECTED.txt
+
+Both required architecture legs replayed the frozen verifier from a clean
+checkout in workflow run 33388842864 and both reproduced EXPECTED.txt exactly:
+architecture-x86_64 SUCCESS, architecture-aarch64 SUCCESS, the aggregate check
+SUCCESS, publication correctly skipped. The local leg is aarch64, so the run
+record carries two distinct architectures.
 
 No frozen falsifier fired. The negative statement in G6 is a proved boundary,
 not a failure of the probe. The universal arguments live in the immutable
