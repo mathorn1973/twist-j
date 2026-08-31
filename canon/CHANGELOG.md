@@ -1,11 +1,376 @@
 # Canon changelog (public series)
 
-## Public Canon v65
+## Public Canon v72
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 327 claims; 0 T-LOCK, 205 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Registry snapshot: 346 claims; 0 T-LOCK, 221 T, 44 D, 33 C, 2 H, 29 O, 17 F; 31 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v72 registers two proof-first photon-boundary theorems and opens
+two separately typed successor roots. FCC-WEIGHTED-SHELL-SYMBOL [T] proves
+the exact displayed L2 weighted-shell moments, unique positive integral
+minimum, fourth-order isotropy and sixth-order anisotropy.
+PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP [T] proves direct
+finite-coupling nonmembership of the exact Z_5 five-vector under positive
+scale, automorphism and optional Fourier exchange. PHOTON-CONE-CONVERGENCE
+[O] and PHOTON-MASSLESS-PHASE [O] are ROOT and STOP with three named
+cross-layer gates. The fold does not reopen the falsified Kappa/window route,
+does not register roughening, does not import Froehlich-Spencer, and makes no
+Lorentz, continuum, propagator or physical-photon claim.
+
+## Public Canon v71
+
+Public Canon v71 is a framework-wording fold. It records no new scientific
+claim and changes no status. It makes explicit that the primitive axiom is an
+asserted starting point rather than a derivation target within TWIST-J, and
+that global decoder uniqueness is not a program requirement. A complete
+physical reading may be a classified typed family; output-relevant
+alternatives, overlaps, equivalences and any selection or occurrence rule must
+be explicit. Scoped uniqueness and nonuniqueness claims remain unchanged.
+
+## Public Canon v70
+
+Public Canon v70 executes the owner-choice accounting transaction frozen in
+`QDD-ALGEBRAIC-DMATTER-SUCCESSOR-V70`. It records no new scientific theorem,
+no formal probe and no promotion. The former composite
+`QUADRATIC-DECODER-DATA [O]` is retired as a split, not as a falsification or
+positive closure. Its exact v69 scope and evidence tuple remain in terminal
+history, and its physical debt is transferred rather than satisfied.
+
+`ALGEBRAIC-DMATTER [D]` is the new owner-adopted L1 dictionary. Its entire
+binding is
+
+```text
+D_matter|_(K_QDD,D_quadratic) := D_QDD_direct
+    : K_QDD -> MatterData_QDD.
+```
+
+The codomain has exactly the five registered algebraic fields
+`support_state`, `total_weight`, ordered `branch_weights`, `density_state`,
+and `normalized_weight_state`. Its quadratic manifest names the ordered
+algebraic projectors and algebraic branch-weight pairing; it does not use the
+physical slots `effect_ids` or `born_pairing_id`. The independent
+`QDD-ALGEBRAIC-FACTORIZATION [T]` identity audits equality of the direct and
+factor expressions, but it is not the definition source and did not force,
+uniquely select or canonize the architecture. No `K_QDD = K`, full
+`dom(D_matter) = K`, other-leg closure, cross-leg or state reconstruction,
+whole-decoder completion, physical effect, instrument, event, sampling law,
+randomness, independence or L6 measure is inherited.
+
+`QDD-INSTRUMENT-APPARATUS [O]` remains STOP as the sole physical owner. Its
+two resolved `projector_target_ids` are algebraic targets, not physical-effect
+aliases. Every physical effect, instrument, carrier, ready phase, context,
+coupling, pointer, reduction, target-comparison, complete-family, equality,
+realization, event, occurrence, post-state, persistence/reset, ZERO_SUPPORT
+and L1-to-L5 identifier remains `UNRESOLVED`; an L6 measure still requires a
+separate gate. `PHYSICAL-DMATTER` is an unadopted route label, not a public
+claim, and is neither falsified nor shown complete.
+
+The six lifecycle events are exact: one retirement without result, one `D`
+declaration, and scope-only events for `READING-SPLIT`,
+`QDD-ALGEBRAIC-FACTORIZATION`, `QPAIR-HERM-INTEGER-NONDESCENT`, and
+`QDD-INSTRUMENT-APPARATUS`. The old composite's 19 outgoing edges are removed,
+the algebraic successor receives its exact 19-edge set, and only two ownership
+edges are added: `READING-SPLIT -> ALGEBRAIC-DMATTER` and
+`QDD-INSTRUMENT-APPARATUS -> DEF-DECODER-COMPLETION-CONTRACT`. No
+`MEASURE-BORN-VERB` edge, gate, scientific evidence, reproduction directory,
+program identifier, or CORE-selection row is added. The status-separation
+witness changes only to audit this current ledger and the unchanged direct-
+write firewall.
+
+The v70 ledger change is:
+
+```text
+claims: 342, unchanged by one retirement and one declaration,
+T: 219, C: 33, H: 2 and F: 17, unchanged,
+D: 43 + 1 = 44,
+O: 28 - 1 = 27,
+live H/O: 30 - 1 = 29,
+normative items: 388, unchanged,
+dependencies: 630 - 19 + 19 + 2 = 632,
+evidence rows: 342, unchanged,
+history rows: 865 + 6 = 871,
+gates: 11, unchanged,
+frontier scheduler rows: 30 - 1 = 29,
+frontier program identifiers: 7, unchanged,
+CORE-selection rows: 30, unchanged,
+two-architecture evidence: 257, unchanged,
+reproductions: 23, unchanged.
+```
+
+## Public Canon v69
+
+Public Canon v69 is a focused L1 CM-lattice and ramification fold. It
+registers exactly five theorem rows and no dictionary, hypothesis,
+obligation, falsifier, Frontier, gate, scheduler, reproduction or
+CORE-selection row.
+
+CM-ALTERNATING-PRIMARY-LATTICE-SEAM [T] identifies the public CM pencil as
+the rational hyperbolic primary plane, computes the full integral primary
+lattices and their index-five seam, fixes its minus-one quotient action, and
+proves the exact denominator-five equivariant no-retraction boundary.
+CM-REAL-DIFFERENT-PRIMARY-SEAM [T] identifies the projector image with the
+real codifferent lattice and the seam with its intrinsic reduced residue
+line, while separating it from the nonreduced order-25 resultant layer.
+
+RAMIFIED-TM-SYMPLECTIC-ORIENTATION [T] realizes the same binary count
+character on the real symplectic-orientation and ramified quadratic-character
+carriers and proves that it does not factor through the checkpoint alone.
+CM-RAMIFIED-PFAFFIAN-ROOT [T] lifts that character to the C2 quotient of a
+marked ramified C4 phase with exact Pell, carry and J-pullback intertwiners.
+The marking is load-bearing: no unmarked or Galois-invariant phase selector is
+claimed, and the multiplicative order-four phase is not the additive
+order-five primary seam.
+
+CM-PERIOD-LATTICE-NONSELECTION [T] proves that the algebraic integral period
+subgroup is the coefficient-gcd image, equals Z on every unimodular CM member,
+and is invariant under GL4 pullback. One J-pullback therefore maps this
+primitive Z to the same Z rather than scaling it by phi^-2. The theorem also
+gives two exact natural-cell nonselection guards. This integer pairing image
+is not a geometric period or action.
+
+All five rows remain at L1. No action, h, hbar, 2 pi, SI normalization,
+physical U(1), electromagnetic phase, decoder, checkpoint coordinate, torus,
+continuum, apparatus, event, measure or L2-L6 bridge is added. The v69 ledger
+change is:
+
+```text
+claims: 337 + 5 T = 342,
+T: 214 + 5 = 219,
+D: 43, C: 33, H: 2, O: 28 and F: 17, unchanged,
+live H/O: 30, unchanged,
+normative items: 383 + 5 = 388,
+dependencies: 616 + 14 = 630,
+evidence rows: 337 + 5 = 342,
+gates: 11, unchanged,
+history rows: 860 + 5 declarations = 865,
+two-architecture evidence: 252 + 5 = 257,
+frontier scheduler rows: 30, unchanged,
+frontier program identifiers: 7, unchanged,
+reproductions: 23, unchanged.
+```
+
+## Public Canon v68
+
+Registry snapshot: 337 claims; 0 T-LOCK, 214 T, 43 D, 33 C, 2 H, 28 O, 17 F; 30 live H/O.
+Reproduction witnesses: 23.
+
+Public Canon v68 adds one proof-first L1 theorem,
+SO3-FINITE-ANISOTROPY-MAXIMUM [T]. The complete finite-rotation
+classification gives harmonic depths 1,2,3,4,6 for C_n,D_n,A_4,S_4,A_5,
+so A_5 is the unique finite rotation type attaining depth six. Its order-five
+trace field is Q(sqrt5). The source probe passed the required x86_64 and
+aarch64 replay with byte-identical stdout. The fold consumes no Lorentz-density
+paper and makes no boost, J, physical p=5, decoder, measure, dynamics or
+higher-layer selection claim.
+
+The theorem strengthens the finite-rotation foundation without closing a live
+frontier row. It states that A_5 uniquely postpones the first invariant
+harmonic scalar to degree six; it does not eliminate anisotropy, classify
+boosts, derive Lorentz invariance, select the primitive axiom, or lift the
+result beyond L1. No dependency edge, gate, scheduler row, core-selection row
+or reproduction is added, and the live H/O set remains unchanged.
+
+The v68 ledger change is:
+
+```text
+claims: 336 + 1 T = 337,
+T: 213 + 1 = 214,
+D: 43, C: 33, H: 2, O: 28 and F: 17, unchanged,
+live H/O: 30, unchanged,
+normative items: 382 + 1 = 383,
+dependencies: 616, unchanged,
+evidence rows: 336 + 1 = 337,
+gates: 11, unchanged,
+history rows: 859 + 1 declaration = 860,
+two-architecture evidence: 251 + 1 = 252,
+frontier scheduler rows: 30, unchanged,
+frontier program identifiers: 7, unchanged,
+reproductions: 23, unchanged.
+```
+
+## Public Canon v67
+
+Registry snapshot: 336 claims; 0 T-LOCK, 213 T, 43 D, 33 C, 2 H, 28 O, 17 F; 30 live H/O.
+Reproduction witnesses: 23.
+
+Public Canon v67 is a consolidated exact-arithmetic fold over the four public
+probes merged after v66. It registers eight theorem rows at L1 or formal
+Euler-factor scope, exposes one successor obligation, and records one frozen
+empirical falsifier. No theorem in this release crosses into a physical
+dictionary, probability or measure, an analytic cancellation estimate, a
+zeta-zero statement, or L2--L6.
+
+The ideal-to-rational package registers three rows. The projective fixed-line
+deficit of the golden companion action is exactly `chi_5`, the nonzero
+integral-ideal count is `1*chi_5`, and every principal ideal has one generator
+in the frozen half-open unit domain with the sharp `isqrt(n)` coefficient
+bound. Ideal Mobius then descends coefficientwise as
+`mu=(N_*mu_F)*chi_5`, and summation gives the two exact all-N Mertens two-sum
+identities. These are algebraic incidence identities, not estimates.
+
+The equivariant rapidity package registers the exact two-point split-prime
+shell, its root-to-opposite-ideal cross-label, rank-one odd space and nonsplit
+index-two integral permutation lattice. In the frozen two-resolvent class,
+independent relabelling and augmentation uniquely give the rational Reynolds
+factor and its squarefree group-ring lift. The lift is orientation-free,
+star-invariant and has exact augmentation and coefficient-norm readings; it
+selects no global orientation and supplies no summatory estimate.
+
+The integral ideal-rapidity package registers four more rows. The ideal-first
+Laurent-group-ring lift has the exact split, inert and ramified local factors
+and augments to rational Mobius. Its squarefree shell has exactly `3^a`
+distinct ternary monomials and the frozen coefficient norms, while a split
+prime power retains the stated nonzero refined residue with zero augmentation.
+The neutral coefficient and orientation-independent split-prime factor have
+the registered Euler products and multiply to `1/zeta` only as formal series
+and in the domain of absolute convergence. Finally, the direct
+coefficient-`l1` term-wise triangle route is proved not to be `o(N)`; the
+no-go is narrow and leaves other norms, growing modes and non-diagonal kernels
+open.
+
+`TRIVIAL-RAPIDITY-EVALUATION-BRIDGE [O]` makes that remaining transfer problem
+explicit. RH-strength positive closure must derive the all-epsilon Mertens
+bound from nontrivial information on the refined shell without importing an
+equivalent estimate or zero theorem. Its evidence is the canonical scope
+itself, not evidence credit from the predecessor probe; it is ROOT, STOP and
+keeps both a uniform growing-mode diagonal route and a controlled
+non-diagonal route admissible.
+
+`DE-W-CONSTANT` moves from H to F and leaves every other cosmology row
+untouched. The inherited R1 rule is evaluated on the first eligible DESI DR2
+headline flat-wCDM DESI+CMB record, `w=-211/200 +- 9/250`. Against the frozen
+`w=-14/15` reading, the exact witness is
+
+```text
+365/108 > 322/125,
+45625 > 34776,
+margin = 10849/13500.
+```
+
+The fired object is only the committed constant-w reading. It is not a
+derivation from J, does not alter `COSMOLOGY-REGISTER [D]`, and does not close
+or weaken `DE-CONFORMAL-WEIGHT [O]`.
+
+Two merged analysis notes are folded only at their warranted level. The Canon
+adopts the owner-refined axiom contract: J is primitive; theorems within
+TWIST-J do not derive or justify it; comparison families separate uniform from
+five-specific content for attribution only. The former "why five" passages
+are accordingly labelled as narrow field characterisations. The unit and
+two-place C60 identities from the Boolean-carry note are included as
+derived zero-credit synthesis of existing registered theorem rows, with the
+Gaussian and mod-5 controls stated. They create no claim, evidence,
+dependency, status, selector, physical bit, or odd-cyclotomic uniqueness
+result. The non-canonical frontier attack map remains an orientation plan and
+is not promoted into dependencies, gates, or scientific authority.
+
+The four evidence bundles are byte-identical under their accepted x86_64 and
+aarch64 runs. The release is frozen as one complete content commit followed by
+one release-form commit changing only `STATUS.md`, `README.md` and
+`CITATION.cff`; this entry records content and does not pre-authorize the tag.
+
+The v67 ledger change is:
+
+```text
+claims: 327 + 8 T + 1 O = 336,
+T: 205 + 8 = 213,
+D: 43 and C: 33, unchanged,
+H: 3 - 1 = 2,
+O: 27 + 1 = 28,
+F: 16 + 1 = 17,
+live H/O: 30, unchanged,
+normative items: 373 + 9 = 382,
+dependencies: 599 + 17 = 616,
+evidence rows: 327 + 9 = 336,
+gates: 11, unchanged,
+history rows: 849 + 9 declarations + 1 status change = 859,
+two-architecture evidence: 243 + 8 = 251,
+frontier scheduler rows: 30, unchanged,
+frontier program identifiers: 7, unchanged,
+reproductions: 23, unchanged.
+```
+
+## Public Canon v66
+
+Registry snapshot: 327 claims; 0 T-LOCK, 205 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
+
+Public Canon v66 is a dependency-ledger maintenance fold. It records work that
+was already owed rather than work newly done, and it registers no scientific
+object: no claim enters, moves, or is retired, no status changes, no scope or
+falsifier is amended, no gate is created, no evidence pointer moves, and no
+lifecycle event is released under `canon-v66`.
+
+The fold corrects one omission. `QUADRATIC-DECODER-DATA [O]` is STOP until
+fourteen named inputs are public: the coefficient ring, effective carrier,
+common total domain, orbit-to-amplitude bridge, Gram, dagger, transpose,
+QCarrier equality, `Q`, effects, Born pairing, MatterData schema, write map,
+and complete dependency graph. Thirteen of those objects are published as the
+`DEF-QDD-*` block of the QDD Route A dictionary, and the row named every one of
+them in prose while `canon/DEPENDENCIES.tsv` recorded no edge to any of them.
+The row carried five `REQUIRES` edges, all to lineage rather than to
+completion-grade objects, so the dependency ledger did not connect the open
+quadratic `D_matter` action to the coefficient ring, carrier, Gram, `Q`,
+effects, schema, or write map the action is stated over. The child obligation
+`QDD-TERMINAL-EVENT-SEMANTICS` reached the whole block through the theorem
+chain while its parent reached none of it.
+
+v66 adds the fourteen missing `REQUIRES` edges, one per named object, each with
+a basis naming the STOP-clause item it discharges. The edges record a
+dependency the registry text already asserted; they neither create it nor
+strengthen it.
+
+The consequence is bounded, and is stated here so that it is not inferred
+later. The dependency ledger now shows what the registry always said, so the
+fourteen-item STOP clause is discharged as an inventory of public objects. That
+is not a closure of the row, and no closure is claimed. The row stays `O`, its
+scheduler label stays as `canon/FRONTIER_PROGRAMS.tsv` carries it, and the
+positive-closure condition is untouched: `QDD-ALGEBRAIC-FACTORIZATION [T]`
+supplies the exact factor identity on the frozen finite domain only, and four
+obligations remain outside the fourteen items. There is no QDD or `D_matter`
+binding gate in `canon/GATES.tsv`. `DEF-QDD-DOMAIN-K0` declares `K_QDD` total
+for the quadratic leg while `DEF-DECODER-MATTER` keeps `dom(D_matter)` a
+declared subset of `K`, and no `K_QDD = K` identity is registered. On `V_eff`
+the two typed slots of `Q_QDD` coincide by
+`QDD-QCARRIER-DIAGONAL-BOUNDARY [T]`, so the frozen domain does not test the
+pair structure. The Born pairing of `DEF-QDD-BRANCH-WEIGHT-PAIRING` remains an
+adopted dictionary input, not derived from `J`.
+
+The `EFFECT_SHADOW_MINIMAL` independence firewall is unaffected. Every new edge
+leaves `QUADRATIC-DECODER-DATA`, so the definitional closure of
+`DEF-QDD-DIRECT-WRITE` is unchanged from v65: the direct write still names no
+factor-side object, and the transitive firewall enforced by the
+status-separation witness still holds.
+
+The status-separation reproduction gains V66-QDD-WIRING, which asserts that the
+fold added exactly the fourteen edges, that the row's status, gate slot and
+program row did not move, that no history row is released under `canon-v66`,
+and that the direct-write firewall closure is unchanged.
+
+`canon/CANON.md` and `canon/CORE.md` change only their own release identity, so
+`CANON_SHA256` moves for the version string alone and no sentence of scientific
+content is edited. `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
+`canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`, `canon/GATES.tsv`,
+`canon/FRONTIER.md` and `canon/FRONTIER_PROGRAMS.tsv` do not change.
+
+The v66 ledger change is:
+
+    claims: 327, unchanged,
+    T: 205, D: 43, C: 33, H: 3, O: 27, F: 16, all unchanged,
+    live H/O: 30, unchanged,
+    normative items: 373, unchanged,
+    dependencies: 585 + 14 = 599,
+    evidence rows: 327, unchanged,
+    gates: 11, unchanged,
+    history rows: 849, unchanged,
+    two-architecture evidence: 243, unchanged,
+    reproductions: 23, unchanged.
+
+## Public Canon v65
+
+Registry snapshot: 327 claims; 0 T-LOCK, 205 T, 43 D, 33 C, 3 H, 27 O, 16 F; 30 live H/O.
+Reproduction witnesses: 23.
 
 Public Canon v65 is a two-row exact L1 fold. It records the proof-first public
 probe P-J-RESIDUE-PERIOD-1 and adds no second scientific object.

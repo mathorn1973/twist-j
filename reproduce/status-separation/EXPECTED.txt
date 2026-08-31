@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v65
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v72
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -15,7 +15,7 @@ PASS 11 QUARTIC    quartic total ramification stays T at L1; no field selection 
 PASS 12 ABELIAN-CM unique even-bit minimum stays T at L1; its class is not a physical selector
 PASS 13 CM-PENCIL  alternating trace pencil stays T at L1; repaired similitude boundary stays exact
 PASS 14 COLOR      finite group and invariant rungs stay T; the color reading is D
-PASS 15 CM-2I      marked semilinear pair stays T at L4; decoder and measure stay O/STOP
+PASS 15 CM-2I      marked semilinear pair stays T at L4; the algebraic decoder dictionary stays D while physical apparatus and measure stay O/STOP
 PASS 16 COSMOLOGY  exact L1 Gyron theorems stay T; their physical reading stays D
 PASS 17 SCHWINGER  the exact target stays T while its physical realization stays O
 PASS 18 C20        the L1 C20 theorem stays separate from time and decoder readings
@@ -33,7 +33,7 @@ PASS 29 TM-HANKEL  Hankel divisor block splits T, F, and C exactly; no physical 
 PASS 30 RAPIDITY   arithmetic rapidity rows split T and C exactly; no physical lift
 PASS 31 INDEPENDENCE split-prime independence rows stay exact L1 arithmetic with no analytic or ordering lift
 PASS 32 SEPARATION quantitative separation and finite Fejer rows stay exact, distinct, and normalization-fenced
-PASS 33 QDD-ROUTE-A the QDD Route A algebra is three L1 theorems on two-architecture evidence; the apparatus is a separate O; QUADRATIC-DECODER-DATA stays O with its ROOT/STOP program row; no gate and no L6 row exist
+PASS 33 QDD-ROUTE-A the QDD Route A algebra stays three L1 theorems on two-architecture evidence while the retired composite is split into an algebraic D and a separate apparatus O; no physical gate or L6 row exists
 PASS 34 QDD-NONSELECTION the L4 fibre theorem remains exact while the apparatus O is sharpened to independent selection of law and equality plus realized-event sampling
 PASS 35 QDD-SELECTION-BOUNDARY eight public L4 QDD rows register exact nonselectors and conditional selectors while O2, O1, the weaker-hypothesis strengthening, and sampling stay open
 PASS 36 SUZUKI-CAPACITY-NOGO the L1 no-go complex for the Suzuki completion capacity enters at T with two finite C computations, all pinned to the two-architecture public probe bundle and free of dependency, gate and frontier ownership
@@ -47,7 +47,7 @@ PASS 43 PISTON-WEDGE the rational piston reshape, occurrence-weight boundary, an
 PASS 44 PURE-QUBIT conditional pure-two-qubit area, Pythagoras, CHSH, and reading stay on the external standard-QM scope
 PASS 45 BELL-CAUSAL the Bell row remains an inline O/STOP accounting barrier with no experiment or causal conclusion
 PASS 46 DQRC       the deterministic integer census and four boundary theorems stay exact L1 results while coefficient, origin, apparatus, event, measure, Bell, and physical readings remain unselected
-PASS 47 DE-W-CONSTANT the armed dark-energy reading enters at H on the completed public probe with exactly its three declared edges, while the register dictionary and the conformal-weight obligation keep their statuses and no gate, layer lift, or selection premise is created
+PASS 47 DE-W-CONSTANT the immutable dark-energy reading fires at F on the exact DESI DR2 R1 witness while its three declared edges remain fixed, the register dictionary and conformal-weight obligation do not move, and its L6 reading-only layer creates no gate, frontier program or replacement selection premise
 PASS 48 J-LI-WALL-CLOSURES the pentagon-tower dilation route is dead by the exact constant deficiency with the fired route recorded at F, and every finite-dimensional cyclic carrier is excluded, while the three registered carrier no-gos and the live cocycle-vector hypothesis keep their statuses and no gate or program row is created
 PASS 49 ENTROPY-KERNEL-ANCHORS the subset landscape decides the exact 32-entry table with connectivity iff dim U_S = 6, and the rate 2 log phi enters with the toral anchor, the zero-entropy driver, and the binary residue bracket, while the layer-bridge obligation keeps its exact scope and no gate or program row is created
 PASS 50 TWOLOGPHI-ARITHMETIC-ANCHOR 2 log phi gains its arithmetic anchor as a Mahler measure and a regulator, with class number one proved rather than imported and the periodic-point structure entering at C, while the entropy bridge keeps its exact scope and every new row carries the fence as a ledger edge
@@ -57,7 +57,13 @@ PASS 53 V61-EXACT  four post-v60 L1 rows keep exact status, evidence, dependenci
 PASS 54 V62-MAINTENANCE v62 changes only the odd-motor evidence pointer and one lifecycle event while status, scope, dependencies, gates and science counts stay fixed
 PASS 55 V63-HYGIENE v63 moves no registry row, evidence pointer or lifecycle event; the fold is repository hygiene and fifteen terminal pin records
 PASS 56 V64-MAHLER signed-trace Mahler rigidity enters at T/L1 on its completed two-architecture public probe while broader binary facts remain non-owning probe controls and no matrix, selector, physical or higher-layer claim moves
-PASS 57 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the Born pairing, the factor map)
+PASS 57 QDD-DIRECT-FIREWALL the definitional closure of DEF-QDD-DIRECT-WRITE in the dependency ledger is exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, and contains no factor-side object (Gram, dagger, transpose, Q_QDD, the carrier equality, the projectors, the branch-weight pairing, the factor map)
 PASS 58 V65-RESIDUE the rational-modulus residue period of J and the exact five-fold collapse at one chosen prime enter at T/L1 on their completed two-architecture public probe, with the inert prime two left to J-BINARY-NORM-INDEX and no archimedean, automaton, spectrum, selector, physical or higher-layer claim moving
+PASS 59 V66-QDD-WIRING the historical nineteen-edge quadratic wiring is transferred exactly to the algebraic dictionary, with the Born lineage removed, the predecessor inactive, and the direct-write firewall unchanged
+PASS 60 V67-RAPIDITY eight exact rapidity and ideal rows enter at T/L1 on their frozen public probes, the trivial-evaluation transfer stays an inline O/STOP obligation, and the exact dependency, lifecycle, gate and frontier boundaries create no analytic, physical or higher-layer promotion
+PASS 61 V68-SO3    the finite SO(3) harmonic-depth maximum enters at T/L1 on its proof-first two-architecture public probe while no boost, Lorentz-density, J, physical p=5, decoder, measure, dynamics or higher-layer selection moves
+PASS 62 V69-CM     five focused L1 CM lattice and ramification theorems keep exact scopes, evidence, dependencies and nonselection firewalls with no gate, Frontier, CORE or action bridge
+PASS 63 V70-QDD-SPLIT the composite quadratic O retires as a split; ALGEBRAIC-DMATTER is an owner-selected D/L1 dictionary with exact algebraic wiring and no gate, while all transferred physical debt stays on QDD-INSTRUMENT-APPARATUS at O/STOP
+PASS 64 V72-PHOTON two exact photon boundary theorems enter at T while cone agreement and a massless phase remain O/STOP behind three named lifts
 
-RESULT 58/58 ALL PASS
+RESULT 64/64 ALL PASS

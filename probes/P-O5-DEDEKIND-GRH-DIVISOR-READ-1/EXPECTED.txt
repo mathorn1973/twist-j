@@ -1,0 +1,9 @@
+PASS G01: split inert ramified local factor table
+PASS G02: global H5 times O5 factor bookkeeping
+PASS G03: H5 half-plane unit guard
+PASS G04: divisor multiplicity identity
+PASS G05: functional-equation symmetry implication
+PASS G06: unordered pure split support
+PASS G07: production breakers B1_INERT_CONTAMINATION,B2_MISSING_L2,B3_REVERSED_RAMIFIED,B4_MISSING_CHI,B5_ONE_ORIENTATION
+PASS G08: exact stdlib source firewall
+VERIFY RESULT 8/8 ALL PASS

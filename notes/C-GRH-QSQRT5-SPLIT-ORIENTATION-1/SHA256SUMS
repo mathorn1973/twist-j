@@ -1,0 +1,4 @@
+# Candidate note text is intentionally unpinned; review wording may still move before merge.
+# The non-formal executable and its archived stdout remain pinned below.
+5fda458115d4b26b5432bbbf937b59e480e1aa7b5d280cc726c7b71659d17d4e  C-GRH-QSQRT5-SPLIT-ORIENTATION-1_verifier.py
+4b66eab905ec980db9ba7b37840eeb7d32bea1dabd4a1bd93726e737638ca9c3  stdout_grh_qsqrt5_split_orientation_1.txt

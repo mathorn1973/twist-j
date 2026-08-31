@@ -1,14 +1,17 @@
-# TWIST-J Public Canon v65
+# TWIST-J Public Canon v72
 
-**Release identity.** Public Canon v65. Normative authority and activation
+**Release identity.** Public Canon v72. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
-geometry, probability, and fields are readings of it. Its single
-algebraic axiom is J. Public Canon v65 also declares the discrete
-architecture used to read that axiom. Those architectural definitions
+geometry, probability, and fields are readings of it. TWIST-J posits
+J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
+presented as deriving or justifying it. Where a well-typed comparison family
+exists, uniform and p = 5-specific content are distinguished for attribution
+only. Public Canon v72 also declares the discrete architecture used to read
+that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
 forms; the single SI calibration anchor is the electron mass m_e.
@@ -17,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v65 does not claim
+seed of the two algebraic projections. Public Canon v72 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -32,6 +35,33 @@ the modulus to gravity and scale and of the argument to
 electromagnetism and phase is the public dictionary
 AXIOM-PROJECTION-DICTIONARY [D], not part of the algebraic theorem.
 Plenum, not vacuum.
+
+**Reading plurality.** A single axiom does not imply a single physical
+reading. TWIST-J may admit a family R = {D_alpha}_{alpha in A} of
+typed partial readings of the same autonomous integer substrate. More
+than one reading is admissible when the domain, codomain, physical
+context, equality or equivalence relation, and overlap rule needed by
+the claim are declared publicly.
+
+Distinct readings may be equivalent, complementary, or context-scoped.
+Their multiplicity is not by itself a failure of the program. What is
+not admissible is an untyped or outcome-dependent choice among
+incompatible readings. If two readings apply to the same declared
+physical context and give inequivalent physical outputs, the Canon
+must either provide an independent rule relating, selecting, or
+assigning occurrence among them, prove the readings physically
+equivalent at the claimed scope, or leave the corresponding physical
+claim open.
+
+A uniqueness theorem is therefore a scoped result only where a
+registered claim explicitly asks for uniqueness. Global decoder
+uniqueness is not a requirement of TWIST-J.
+
+Decoder completion means that the admitted reading family is
+explicitly typed and sufficiently classified to determine every
+physical output claimed by the Canon, including every overlap or
+branch that can change such an output. It does not require that the
+family contain exactly one reading.
 
 **Conventions.** No em dashes. No decimals unless justified: integers
 and ratios are primary; decimals appear only as computed or measured
@@ -94,7 +124,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v65 contains no such
+deriving the architecture from J; Public Canon v72 contains no such
 theorem.
 
 ---
@@ -581,15 +611,30 @@ m = D_matter(kappa),  g = D_geom(kappa, m).
 ```
 
 Functional order is matter, then geometry, then clock. D_matter reads
-only the orbit and the registered quadratic/Born and matter maps;
+only the orbit and the registered algebraic and matter maps;
 D_geom reads the orbit plus MatterData and the registered linear,
 boundary, wedge, and chain maps; D_clock reads the counter projection
 plus the accumulated records and is terminal. None of these outputs
 feeds U, so the declared dependency graph is acyclic. Totality,
-uniqueness, and completeness of D are not claimed. The typed quadratic/Born
-`D_matter` action, including its exact factorization through the declared
-quadratic pair, remains in QUADRATIC-DECODER-DATA [O]. No umbrella
-full-decoder completeness claim is registered.
+uniqueness, and completeness of D are not claimed. The owner-adopted
+algebraic restriction is now the dictionary
+
+```
+ALGEBRAIC-DMATTER [D]
+    D_matter|_(K_QDD,D_quadratic) := D_QDD_direct
+        : K_QDD -> MatterData_QDD.
+```
+
+It is total only on the named `K_QDD` domain for the named quadratic leg and
+has exactly the five L1 fields `support_state`, `total_weight`,
+`branch_weights`, `density_state`, and `normalized_weight_state` typed below.
+It asserts neither `K_QDD = K` nor `dom(D_matter) = K`, and it closes no other
+leg, stage, cross-leg relation, state reconstruction, or whole decoder. The
+choice is an owner-adopted architecture, not a theorem of mathematical
+forcing, uniqueness, or canonicity. `PHYSICAL-DMATTER` is only the unadopted
+counterroute label: it is not a public claim, has not been falsified, and has
+not been shown complete. No umbrella full-decoder completeness claim is
+registered.
 
 The preceding read-only clause defines only the declared partial interface.
 No registered nonempty complete admissible class of future nontrivial
@@ -690,9 +735,39 @@ quadratic_manifest:
   qcarrier_id
   q_equality_id
   q_map_id
-  effect_ids
-  born_pairing_id
+  projector_ids
+  branch_weight_pairing_id
   factorization_map_id
+  slot_boundary_id
+  factorization_theorem_id
+
+apparatus_manifest:
+  projector_target_ids
+  effect_ids
+  instrument_ids
+  apparatus_carrier_id
+  ready_state_id
+  physical_context_key_id
+  selected_ready_phase_id
+  coupling_id
+  pointer_id
+  reduction_id
+  target_comparison_relation_id
+  target_comparison_domain_id
+  complete_apparatus_family_class_id
+  apparatus_family_equality_id
+  phase_equality_id
+  target_independence_certificate_id
+  class_completeness_certificate_id
+  realization_certificate_ids
+  realized_outcome_ids
+  realized_event_semantics_id
+  occurrence_law_id
+  post_state_instrument_ids
+  persistence_update_reset_law_id
+  zero_support_semantics_id
+  l1_to_l5_gate_id
+  l6_measure_boundary
 
 physics_manifest:
   source_id
@@ -740,10 +815,15 @@ its public gate identifier; absence of that gate leaves the requirement
 unresolved. A terminal record `emit_rule_id` is distinct from a write target
 and does not by itself establish that the output cannot feed `U`.
 
-Only fields owned by `D_quadratic` under QUADRATIC-DECODER-DATA are tested
-for factorization through `Q`. No factorization, status, evidence, or closure
-is inherited by `D_linear` or `D_binary`, or transferred between
-`D_matter`, `D_geom`, and `D_clock`.
+Only the five fields owned by `D_quadratic` under `ALGEBRAIC-DMATTER` are
+tested for factorization through `Q`. In that dictionary, `projector_ids`
+and `branch_weight_pairing_id` are algebraic slots; the legacy physical keys
+`effect_ids` and `born_pairing_id` are forbidden from its
+`quadratic_manifest`. They may occur only with their physical types in an
+`apparatus_manifest`, and no algebraic identifier is an alias for a physical
+one. No factorization, status, evidence, or closure is inherited by
+`D_linear` or `D_binary`, or transferred between `D_matter`, `D_geom`, and
+`D_clock`.
 
 This contract is a schema, not an existence, totality, uniqueness,
 canonicity, or completeness statement. Syntactic conformance, a resolved
@@ -1206,9 +1286,11 @@ maximality, or nonconstancy item is unresolved.
 The reading split (READING-SPLIT [D], inline) is therefore a public
 dictionary at the registered legs, not a completeness theorem: the
 linear readout is CODEC-TR4, the binary cut drives the census, and the
-quadratic registration is the Born square. The L1 Thue-Morse sliding-pair
-density is rho = 1/6 (GYRON-DENSITY [T], registered in section 3). The
-self similar
+quadratic registration is the owner-adopted `ALGEBRAIC-DMATTER [D]`
+binding on exactly `(K_QDD,D_quadratic)` through `D_QDD_direct`. That
+registration is algebraic: it is not a physical effect, apparatus, event,
+occurrence law, sampling law, or L6 measure. The L1 Thue-Morse sliding-pair
+density is rho = 1/6 (GYRON-DENSITY [T], registered in section 3). The self similar
 time quantum (TIME-QUANTUM-TOWER [C], reproduce/foundations-places):
 on Z/5^k, M_J^(5^k) = i_5 I with i_5^4 = 1 and period exactly
 4 x 5^k, computed for k = 1 to 4. No all-k theorem and no generic
@@ -1236,15 +1318,19 @@ its component rows.
 
 ### QDD Route A dictionary
 
-The quadratic leg of `D_matter` gains its exact algebra as public definitions
-and theorems on the finite balanced piston carrier. The Route A factorization
-block is L1 exact algebra. The later instrument nonselection theorem is L4
-apparatus/support mathematics. Nothing here fills the decoder completion
-contract, claims an L6 reading, selects a physical instrument, derives the
-architecture or the effect pair from J, or changes
-`QUADRATIC-DECODER-DATA`, which remains an open obligation [O]. The physical
-instrument realization remains the separate obligation
-`QDD-INSTRUMENT-APPARATUS`.
+The quadratic leg of `D_matter` has exact public algebra on the finite
+balanced piston carrier. The owner adopts that algebra as
+`ALGEBRAIC-DMATTER [D]` at L1 on exactly `K_QDD` and `D_quadratic`. This is
+an architectural choice, not a consequence of the factorization theorem,
+the relative uniqueness of the projectors, J, or any canonicity result. The
+counterroute `PHYSICAL-DMATTER` is unadopted, not falsified, not shown
+complete, and not a public claim. The Route A factorization block remains L1
+exact algebra. The later instrument nonselection theorem is L4
+apparatus/support mathematics. Nothing here fills the whole decoder
+completion contract, claims an L6 reading, selects a physical effect or
+instrument, or resolves any physical apparatus identifier. All such debt is
+owned by the separate `QDD-INSTRUMENT-APPARATUS [O]` row and is transferred,
+not satisfied.
 
 Definitions.
 
@@ -1289,20 +1375,23 @@ DEF-QDD-LOW-LINE
     <lambda_B,lambda_B>_tr = 4/5; the LOW LINE is Q lambda_B. It is neither
     the rational line Q.1 nor the trace kernel of K.
 DEF-QDD-PROJECTOR-LOW
-    E_low = (1/4) 1 1^T; the first member of the frozen ordered effect pair
-    of the EFFECT_SHADOW_MINIMAL owner freeze; ALGEBRAIC_READOUT, not a
-    physical apparatus selection, not a realized outcome, not a post-state
-    instrument, and not claimed to be forced by J.
+    E_low = (1/4) 1 1^T; the first member of the ordered algebraic projector
+    pair and the LOW algebraic target of the EFFECT_SHADOW_MINIMAL owner
+    freeze; ALGEBRAIC_READOUT only, not a physical effect identifier,
+    apparatus selection, realized outcome, or post-state instrument, and not
+    claimed to be forced by J.
 DEF-QDD-PROJECTOR-HIGH
-    E_high = I_4 - E_low; the second member of the frozen ordered pair; the
-    same labels.
+    E_high = I_4 - E_low; the second member of the ordered algebraic
+    projector pair and the HIGH algebraic target; the same type wall.
 DEF-QDD-BRANCH-WEIGHT-PAIRING
-    the factor-route Born trace pairing, on the transpose slot A_T = v v^T of
+    the factor-route algebraic branch-weight trace pairing, on the transpose
+    slot A_T = v v^T of
     QCarrier_QDD: m(A_T) = Tr(A_T G), w_low(A_T) = Tr(E_low A_T G),
     w_high(A_T) = Tr(E_high A_T G), density A_T G / m(A_T); the owner-frozen
-    Born trace pairing of the EFFECT_SHADOW_MINIMAL freeze, an adopted
-    dictionary input, not derived from J or from the projector identities; a
-    factor-branch helper: the direct write does not name it.
+    algebraic pairing of the EFFECT_SHADOW_MINIMAL freeze, an adopted
+    dictionary input, not a Born or physical-effect slot and not derived from
+    J or from the projector identities; a factor-branch helper: the direct
+    write does not name it.
 DEF-QDD-MATTER-RECORD
     MatterData_QDD, a pure type schema of five typed fields:
     support_state in {ZERO_SUPPORT, SUPPORTED}; total_weight in Q_(>=0);
@@ -1331,11 +1420,57 @@ DEF-QDD-DIRECT-WRITE
     EFFECT_SHADOW_MINIMAL freeze and of the DICTIONARY-DIRECT amendment
     section 6 holds by construction: neither the map nor its definitional
     closure names Q_QDD, the Gram matrix, the dagger or transpose slots, the
-    effect pair, the Born pairing or the factor map.
+    algebraic projector pair, the branch-weight pairing or the factor map.
 DEF-QDD-FACTOR-MAP
     F_QDD : QCarrier_QDD -> MatterData_QDD by the displayed Gram/projector
     formulas on the transpose slot.
 ```
+
+The adopted dictionary is exactly
+
+```
+ALGEBRAIC-DMATTER [D]
+    D_matter|_(K_QDD,D_quadratic) := D_QDD_direct
+        : K_QDD -> MatterData_QDD.
+
+    stage_id = D_matter,
+    leg_id = D_quadratic,
+    domain_id = DEF-QDD-DOMAIN-K0,
+    codomain_id = DEF-QDD-MATTER-RECORD,
+    write_map_id = DEF-QDD-DIRECT-WRITE,
+    totality_domain_id = DEF-QDD-DOMAIN-K0.
+
+    record_field_manifest =
+      (support_state, total_weight, branch_weights,
+       density_state, normalized_weight_state).
+
+    quadratic_manifest.coefficient_ring_id = DEF-QDD-COEFFICIENT-Q,
+    quadratic_manifest.effective_carrier_id = DEF-QDD-BALANCED-PISTON,
+    quadratic_manifest.orbit_to_amplitude_bridge_id = DEF-QDD-AMPLITUDE-B0,
+    quadratic_manifest.gram_id = DEF-QDD-GRAM,
+    quadratic_manifest.dagger_id = DEF-QDD-DAGGER,
+    quadratic_manifest.transpose_id = DEF-QDD-TRANSPOSE,
+    quadratic_manifest.qcarrier_id = DEF-QDD-QCARRIER-EQUALITY,
+    quadratic_manifest.q_equality_id = DEF-QDD-QCARRIER-EQUALITY,
+    quadratic_manifest.q_map_id = DEF-QDD-QPAIR,
+    quadratic_manifest.projector_ids =
+      (DEF-QDD-PROJECTOR-LOW, DEF-QDD-PROJECTOR-HIGH),
+    quadratic_manifest.branch_weight_pairing_id =
+      DEF-QDD-BRANCH-WEIGHT-PAIRING,
+    quadratic_manifest.factorization_map_id = DEF-QDD-FACTOR-MAP,
+    quadratic_manifest.slot_boundary_id = QDD-QCARRIER-DIAGONAL-BOUNDARY,
+    quadratic_manifest.factorization_theorem_id =
+      QDD-ALGEBRAIC-FACTORIZATION.
+```
+
+The ordered fields have exactly the types in `DEF-QDD-MATTER-RECORD`; each is
+an `ALGEBRAIC_ONLY` L1 `READOUT`, and there is no sixth field. The manifest
+also resolves the registered coefficient
+ring, balanced carrier, amplitude bridge, Gram, dagger, transpose, QCarrier
+equality, Q map, factor map, slot boundary and factorization theorem. It has
+no `effect_ids` or `born_pairing_id`. The binding supplies no physical
+meaning and creates no result for any other leg, stage, carrier, CM or
+primary seam, Psi object, writeback, event, sampling law, or measure.
 
 L1 theorems, the L4 instrument nonselection theorem, and the separate
 apparatus obligation.
@@ -1351,8 +1486,11 @@ QDD-ALGEBRAIC-FACTORIZATION [T]
     540 of 625. The direct write and its definitional closure in the
     dependency ledger name no factor-side object (the transitive firewall,
     enforced by the status-separation witness). An identity of the adopted
-    definitions, not an independent readout, not a physical selection, and
-    not a completion, totality or uniqueness claim for D_matter.
+    definitions that audits equality of the direct and factor expressions
+    used by `ALGEBRAIC-DMATTER`; it is not the dictionary's definition source,
+    did not force, uniquely select, or canonize the owner choice, and supplies
+    no independent readout, physical effect or apparatus, whole-decoder
+    completion, totality beyond K_QDD, or uniqueness claim for D_matter.
 QDD-PROJECTOR-PAIR-TR4 [T]
     E_low is the unique G-self-adjoint idempotent with kernel ker Tr_4, since
     a G-self-adjoint idempotent has image (ker)^perp_G and G^-1 1 = 5 1
@@ -1711,28 +1849,62 @@ QDD-INSTRUMENT-CLASS-COMPLETENESS [O]
     architectures, and must freeze equality on whole apparatus families rather
     than silently erase phase, transitions or future-output dependence.
 QDD-INSTRUMENT-APPARATUS [O]
-    Exact target-independent rational J-simplex classes contain members
-    realizing E_low,E_high after target comparison, but the parent remains
-    open on three compatible obligations. O2a is
+    This is the sole owner of the physical debt split from the retired
+    QUADRATIC-DECODER-DATA composite. The debt is TRANSFERRED_NOT_SATISFIED.
+    Its current machine-readable boundary is
+
+    apparatus_manifest.projector_target_ids =
+      (DEF-QDD-PROJECTOR-LOW, DEF-QDD-PROJECTOR-HIGH),
+    apparatus_manifest.effect_ids = (UNRESOLVED),
+    apparatus_manifest.instrument_ids = (UNRESOLVED),
+    apparatus_manifest.apparatus_carrier_id = UNRESOLVED,
+    apparatus_manifest.ready_state_id = UNRESOLVED,
+    apparatus_manifest.physical_context_key_id = UNRESOLVED,
+    apparatus_manifest.selected_ready_phase_id = UNRESOLVED,
+    apparatus_manifest.coupling_id = UNRESOLVED,
+    apparatus_manifest.pointer_id = UNRESOLVED,
+    apparatus_manifest.reduction_id = UNRESOLVED,
+    apparatus_manifest.target_comparison_relation_id = UNRESOLVED,
+    apparatus_manifest.target_comparison_domain_id = UNRESOLVED,
+    apparatus_manifest.complete_apparatus_family_class_id = UNRESOLVED,
+    apparatus_manifest.apparatus_family_equality_id = UNRESOLVED,
+    apparatus_manifest.phase_equality_id = UNRESOLVED,
+    apparatus_manifest.target_independence_certificate_id = UNRESOLVED,
+    apparatus_manifest.class_completeness_certificate_id = UNRESOLVED,
+    apparatus_manifest.realization_certificate_ids = (UNRESOLVED),
+    apparatus_manifest.realized_outcome_ids = (UNRESOLVED),
+    apparatus_manifest.realized_event_semantics_id = UNRESOLVED,
+    apparatus_manifest.occurrence_law_id = UNRESOLVED,
+    apparatus_manifest.post_state_instrument_ids = (UNRESOLVED),
+    apparatus_manifest.persistence_update_reset_law_id = UNRESOLVED,
+    apparatus_manifest.zero_support_semantics_id = UNRESOLVED,
+    apparatus_manifest.l1_to_l5_gate_id = UNRESOLVED,
+    apparatus_manifest.l6_measure_boundary = REQUIRES_SEPARATE_GATE.
+
+    The two resolved projector targets are algebraic targets, not physical
+    effect identifiers or aliases. Exact target-independent rational J-simplex
+    classes contain mathematical members over those targets, but the parent
+    remains open on three compatible obligations. O2a is
     QDD-TERMINAL-EVENT-SEMANTICS; O2b is
     QDD-INSTRUMENT-CLASS-COMPLETENESS. O2 closes only when both children close
     at compatible scope and equality. The post-v59 theorems fix the ordered
     source and unique port only in the frozen direct read-only class, the
-    complete named rational branch fibre, the exact
-    COMM-SAT conditional selector, and the finite-memory pointwise boundary;
-    they adopt no physical event semantics, complete apparatus-family equality
+    complete named rational branch fibre, the exact COMM-SAT conditional
+    selector, and the finite-memory pointwise boundary; they adopt no physical
+    effect, instrument, event semantics, complete apparatus-family equality,
     or phase gauge. O1 remains the separate typed realized-event and sampling
     obligation. The exact 22-context carry bank is schedule invariant and
-    minimal in its frozen probability-keyed rank-exact finite
-    deterministic-machine class, but the active
-    architecture does not identify reduced w_low/m as the physical context,
-    select one ready phase, provide persistent update/reset semantics or pass
-    a future registered L1-to-L5 gate. The parent closes positively only when O1 and both
-    O2 children close and one frozen apparatus realizes the ordered effects and
-    occurrence law exactly. These results fill no decoder-completion-contract
-    field and remain separate from QUADRATIC-DECODER-DATA.
-    SAMPLING NOT PROVIDED; SAMPLING IMPOSSIBLE is not claimed. No L6 measure,
-    randomness or independence statement follows.
+    minimal in its frozen probability-keyed rank-exact finite deterministic-
+    machine class, but the active architecture does not identify reduced
+    w_low/m as a physical context, select one ready phase, provide persistent
+    update/reset semantics, or pass a registered L1-to-L5 gate. The parent
+    closes positively only when O1 and both O2 children close and one selected
+    complete apparatus family realizes the physical effects and occurrence
+    law exactly. `ALGEBRAIC-DMATTER` and the factorization theorem do not fill
+    or partially satisfy any physical identifier. `PHYSICAL-DMATTER` remains
+    unadopted, not falsified, and not shown complete. SAMPLING NOT PROVIDED;
+    SAMPLING IMPOSSIBLE is not claimed. No L6 measure, randomness, or
+    independence statement follows.
 ```
 
 ### Piston reshape and wedge
@@ -1848,8 +2020,8 @@ These are L1 statements on the rational piston carrier. "Piston wedge"
 does not mean the cell-pair wedge of the `KERNEL-WEDGE-*` rows.
 No concurrence, entanglement, physical factorization, instrument, event,
 measure, Bell statement, or bridge to the integral QPAIR carrier is asserted.
-`QUADRATIC-DECODER-DATA [O]` and `QDD-INSTRUMENT-APPARATUS [O]` remain
-unchanged.
+`ALGEBRAIC-DMATTER [D]` remains confined to its exact K_QDD quadratic
+binding, and `QDD-INSTRUMENT-APPARATUS [O]` remains STOP.
 
 
 Disclosure. `|QCarrier_QDD| = 313 = 1 + (5^4 - 1)/2` arises from the sign
@@ -2349,6 +2521,45 @@ on `C` (CARRY-J-CHECKPOINT [T] at L1,
 probes/P-CARRY-J-CHECKPOINT-1). The theorem decides no restricted carrier,
 selector offset, physical carry, phase, time, or gravity reading, decoder
 completeness, parity on all of `Z_2`, or lift to L2-L6.
+
+### RAMIFIED-TM-SYMPLECTIC-ORIENTATION [T]
+
+For the public CM Pell orbit
+
+    Omega_k=F_(k+1)Omega_1+F_k Omega_2,
+
+let epsilon(Omega_k)=Pf(Omega_k) relative to the fixed orientation of Z^4.
+Let chi_5 be the quadratic character on F_5^*, and retain the public
+
+    theta_n=s_2(n) mod 2,
+    Theta_n=2^s_2(n) mod 5.
+
+Then, for every k>=0,
+
+    epsilon(Omega_k)=chi_5(2^k)=(-1)^k,
+
+and consequently, for every n>=0,
+
+    epsilon(Omega_(s_2(n)))
+      =chi_5(Theta_n)
+      =(-1)^theta_n.
+
+This is equality of one binary count character on two different carriers.
+It does not identify the real alternating form with the ramified residue
+phase. The character factors through the complete autonomous state (n,psi),
+but not through the checkpoint psi alone on the full forward carrier: the
+public collision psi_4=psi_6 carries opposite character values.
+
+Direct Pfaffian reduction is not the QR/NQR bridge. Along the Pell orbit,
+Pf(Omega_k) modulo five is always 1 or 4, and both are quadratic residues.
+Moreover, for every alternating form in four dimensions,
+
+    Pf(-w)=Pf(w),
+
+so w and -w have the same symplectic orientation. No action, h, hbar, 2 pi,
+phase law, SI normalization, real-place selection, checkpoint coordinate,
+attractor map, decoder, torus, continuum, physical discreteness, apparatus,
+event, measure, or L2-L6 lift is selected.
 
 KERNEL-Z6-SYNCHRONIZATION [T] is the exact L1 theorem for the declared
 autonomous update `U` on `X = F_5^6`. For `z in F_5`, put
@@ -3262,6 +3473,100 @@ ramification in all number fields, identify a unique physical field or place,
 strengthen TWO-PLACE-PHYSICS [D], or define a decoder, Born measure, physical
 bit, clock, force, observable, or lift to L2-L6.
 
+### The unit decomposition and two-place C60 synthesis
+
+The registered L1 arithmetic above has the following zero-credit synthesis.
+Put `h = 1-J = -zeta_5^2`. Then
+
+```text
+h^5 = -1,       h^6 = J-1 = zeta_5^2,
+h^8 = zeta_5 = (J-1)^3.
+```
+
+The exponents 5 and 6 are the complementary CRT idempotents modulo 10, so on
+`<h> = mu_10` the maps `x -> x^5` and `x -> x^6` project to its `C_2` and
+`C_5` factors. They are not projections on the whole infinite unit group.
+Using `O^x = mu_10 x <phi>` and `J phi = zeta_5 = h^8` gives
+
+```text
+O^x = <1-J> x <J> ~= C_10 x Z,
+u = (1-J)^a J^b,       a in Z/10Z, b in Z,
+```
+
+with a unique normal form for every unit. Here and below `x` between displayed
+groups denotes a direct product inside `O^x`, not a Cartesian product of
+unrelated carriers.
+
+Put
+
+```text
+A = O/((2)(1-zeta_5)) ~= F_16 x F_5.
+```
+
+Let `red_A: O -> A` denote reduction. Then `A^x ~= C_15 x C_4 ~= C_60`.
+With the ordered CRT idempotents
+`e_2=(1,0)` and `e_5=(0,1)`, set
+
+```text
+r = (J mod 2,1),       w = (1,2),       g = red_A(J) = r w.
+```
+
+Then `ord(r)=15`, `ord(w)=4`, and `ord(g)=60`, so `g` generates all of
+`A^x`. Put `C_10 = red_A(<1-J>) <= A^x` and `C_15 = <r> <= A^x`. The
+torsion and inert directions form the exact fork
+
+```text
+C_10 intersect C_15 = C_5,
+<C_10,C_15> = C_30.
+```
+
+The remaining doubling
+
+```text
+1 -> C_30 -> C_60 -> C_2 -> 1
+```
+
+is nonsplit. For the normalized section `s(0)=1`, `s(1)=w`, its factor
+cocycle is
+
+```text
+c(a,b) = s(a)s(b)s(a XOR b)^-1 = red_A(-1)^(ab),
+c(1,1) = w^2 = (1,-1) = red_A(-1).
+```
+
+On the local `1 -> C_2 -> C_4 -> C_2 -> 1` restriction, the exponent `ab`
+is exactly AND and is the unique nonzero normalized `C_2` cocycle. No
+uniqueness among all normalized `C_30`-valued representatives is asserted.
+
+Two controls delimit this synthesis. The Gaussian quotient
+`Z[i]/((2)(2+i))` has the same four-element idempotent algebra as `A` but unit
+group `C_2 x C_4`, so CRT idempotents alone do not determine the unit profile,
+the element `red_A(-1)`, or the cocycle. In the different nonreduced ring
+`O/(5)`, the order-five directions `<J^4>` and `<zeta_5>` are transverse:
+
+```text
+<J^4> intersect <zeta_5> = {1},
+<J^4,zeta_5> ~= C_5 x C_5.
+```
+
+Consequently the two order-twenty subgroups are distinct and have exactly
+their shared order-four scalar factor in common:
+
+```text
+C_20^J = <J> = <2> x <J^4>,
+C_20^zeta = <2> x <zeta_5>,
+C_20^J intersect C_20^zeta = <2> ~= C_4.
+```
+
+Thus order 20 alone does not select the J-generated subgroup. This entire
+subsection is only a derived synthesis of existing registered theorem rows,
+reconciled from `notes/C-BOOLEAN-CARRY-J-ORBIT-1.md`. It creates no Registry,
+Evidence, Dependency, Gate, Frontier, or status row and earns no new evidence
+credit. It does not select `J` from its Galois orbit, establish the note's
+separate odd-cyclotomic uniqueness target, identify a physical bit or place,
+strengthen TWO-PLACE-PHYSICS [D], or provide a decoder, measure, SI statement,
+or lift to L2-L6.
+
 A second exact theorem answers a different minimization question
 (ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM [T],
 `probes/P-ABELIAN-CM-UNIQUE-EVEN-BIT-DISCRIMINANT-MINIMUM-1`). For a finite
@@ -3336,19 +3641,22 @@ Equality forces both conductors to be five. An order-four character modulo
 five is faithful on `(Z/5Z)^x=C_4`, so its field is the full `Q(zeta_5)`.
 Conversely `Q(zeta_5)` belongs to `A` and has discriminant `5^3=125`.
 
-The two L1 results now supply two independent answers to "why five":
+The two L1 results are independent field characterisations involving five:
 
 ```text
-ramification answer: among full quartic cyclotomic fields, the complete
-                     total-ramification locus is {(K_5,5),(K_8,2)};
-minimum answer:      in the abelian Galois CM unique-even-bit class A,
-                     K_5 is the unique absolute-discriminant minimizer.
+ramification characterisation: among full quartic cyclotomic fields, the
+                               complete total-ramification locus is
+                               {(K_5,5),(K_8,2)};
+minimum characterisation:      in the abelian Galois CM unique-even-bit
+                               class A, K_5 is the unique
+                               absolute-discriminant minimizer.
 ```
 
-The answers use different frozen classes and are not a physical selection
-chain. Total ramification is not a premise of the minimum theorem; the class
-`A` and discriminant minimization are not claimed to be forced by `J`, the
-decoder, or Nature. In particular `K_8` has Galois group `C_2 x C_2` and does
+The characterisations use different frozen classes and are not a physical
+selection chain. Neither derives or justifies the primitive axiom. Total
+ramification is not a premise of the minimum theorem; the class `A` and
+discriminant minimization are not claimed to be forced by `J`, the decoder,
+or Nature. In particular `K_8` has Galois group `C_2 x C_2` and does
 not satisfy the unique-bit premise. Neither theorem promotes
 TWO-PLACE-PHYSICS [D], derives a write/read assignment, or supplies a decoder,
 Born measure, physical bit, clock, force, observable, or lift to L2-L6.
@@ -3525,6 +3833,256 @@ C^T Omega_lam C = -Omega_lam.
 These statements form CM-ALTERNATING-PENCIL [T] at L1, evidenced by
 `probes/P-CM-ALTERNATING-PENCIL-1`.
 
+### CM-ALTERNATING-PRIMARY-LATTICE-SEAM [T]
+
+Let `P(W)=M_J^T W M_J` act on
+`E_Z=Alt^2(Z^4)=Z^6` in upper-triangular coordinate order, and put
+
+```text
+q(x)=x^2-3x+1,
+r(x)=Phi_10(x)=x^4-x^3+x^2-x+1.
+```
+
+Exactly
+
+```text
+chi_P(x)=q(x)r(x).
+```
+
+Both irreducible factors occur once. Hence
+
+```text
+E_Q=H_Q direct-sum C_Q,
+H_Q=ker q(P),
+C_Q=ker r(P),
+```
+
+and `P|C_Q` has exact order ten. The hyperbolic plane is exactly the public
+CM pencil, with full integral intersection
+
+```text
+H_Z=Z Omega_1 direct-sum Z Omega_2.
+```
+
+The full circular intersection has basis
+
+```text
+c1=(-1, 0,1,0,0,0),
+c2=( 0,-1,0,1,0,0),
+c3=( 0,-1,0,0,1,0),
+c4=(-1, 0,0,0,0,1).
+```
+
+These intersections are automatically saturated. The nontrivial integral
+statement is
+
+```text
+[E_Z:H_Z direct-sum C_Z]=5,
+Q=E_Z/(H_Z direct-sum C_Z)=Z/5.
+```
+
+Both `q(P)` and `r(P)` annihilate `Q`. The exact identity
+
+```text
+(8-3x)r(x)+(3x^3-2x^2+2x-3)q(x)=5
+```
+
+forces `5Q=0`; the index is the independently computed lattice datum. Since
+`q=(x+1)^2` and `r=(x+1)^4` modulo five, one-dimensionality then forces
+`P|Q=-1`. Moreover `chi_P=(x+1)^6` modulo five, so `-P` is unipotent on
+`E_Z/5E_Z`. The two reduced primary lattices lose transversality along the
+line generated by `Omega_1+2 Omega_2`; they do not become equal.
+
+The unique rational `P`-primary projector is
+
+```text
+E_H=((8-3P)r(P))/5.
+```
+
+Its smallest denominator is exactly five. Equivalently, there is no
+`Z[P]`-linear retraction `E_Z -> H_Z`: after tensoring with the rational
+field, any such retraction must equal `E_H` because the two primary types are
+coprime.
+
+Pfaffian covariance gives `Pf(PW)=Pf(W)`. Every nonzero eigenform with
+eigenvalue `phi^2` or `phi^-2` is therefore Pfaffian-null and has rank two;
+it is not symplectic.
+
+The ramified ideal `(lambda_1)=(1-zeta_5)` is canonical, but `lambda_1` is a
+chosen generator and `Omega_1` its associated displayed basis form, not a
+canonical origin or action unit. On either fixed
+Pfaffian locus, signed unimodular forms form two antipodal `J`-orbits; only an
+explicit quotient `Omega~-Omega` turns them into one `Z`-torsor. No action,
+`h`, `hbar`, phase, `2 pi`, entropy-area carrier, physical place, time
+orientation, decoder or L2-L6 lift follows.
+
+### CM-REAL-DIFFERENT-PRIMARY-SEAM [T]
+
+Put
+
+    F=Q(sqrt(5)),  beta=phi^-1,  u=phi^-2=beta^2=1-beta,
+    O=Z[beta]=Z[u],  delta=sqrt(5),  q(x)=x^2-3x+1.
+
+The real different and codifferent are
+
+    d_F=(q'(u))=(delta)=(s_J^2),
+    d_F^-1=delta^-1 O,
+    s_J^4=5u.
+
+Let E_Z=Alt^2(Z^4), let H_Z and C_Z be the full public integral primary
+lattices, and let e_H be the unique rational primary projector. The complete
+integral image is
+
+    e_H(E_Z)=d_F^-1 H_Z.
+
+Projection therefore gives the exact Z[x]-module sequence
+
+    0 -> H_Z direct-sum C_Z -> E_Z
+      -> d_F^-1 H_Z/H_Z -> 0,
+
+where x acts as P on the source and as u on the target. The source action does
+not factor through O: q(P) remains nonzero on the circular source sector. The
+target action does factor through O, and
+
+    Q_seam ~= d_F^-1 H_Z/H_Z,
+    Ann_O(Q_seam)=d_F,
+    P|Q_seam=-1.
+
+Thus the index-five primary seam is intrinsically the residue line of the
+codifferent quotient. Under the explicitly noncanonical trivialization
+
+    iota(a Omega_1+b Omega_2)=a+b beta,
+
+multiplication by delta gives the seam functional ell=2A+B modulo five,
+whereas multiplication by s_J^2 gives 2ell. The abstract quotient and its
+annihilator are intrinsic; this scalar residue coordinate is not.
+
+There are two distinct five-primary objects:
+
+    Z[x]/(q,Phi_10) ~= O/(5) ~= F_5[epsilon]/(epsilon^2)
+
+is the nonreduced order-25 resultant layer, while the integral lattice seam is
+only its reduced order-five residue line O/d_F. This theorem asserts no
+discriminant-form isometry and constructs no integral retraction, canonical
+generator, action unit, period, cycle, current, polarization, physical area,
+time direction, chirality, h, hbar, phase law, decoder, SI normalization, or
+L2-L6 lift.
+
+### CM-RAMIFIED-PFAFFIAN-ROOT [T]
+
+For the public marked CM pencil, write
+
+    Omega_(a,b)=a Omega_1+b Omega_2,
+    q(a,b)=Pf(Omega_(a,b))=a^2-ab-b^2,
+    rho(Omega_(a,b))=a+2b mod 5.
+
+Exactly
+
+    q(a,b)=rho(Omega_(a,b))^2 mod 5,
+
+and five is the unique rational prime at which q becomes the square of a
+nonzero linear form. On the unimodular locus q=+/-1, rho is nonzero; define
+
+    R(Omega)=rho(Omega)^-1 in F_5^*.
+
+Then
+
+    Pf(Omega) mod 5=R(Omega)^2=chi_5(R(Omega)),
+
+with -1 represented by 4 in F_5. Hence the registered binary symplectic
+orientation character is precisely the C2 quotient of this marked C4 phase.
+
+Residue inversion extends to a surjection
+
+    R:Z[phi]^* -> F_5^*,
+    R(phi)=2,
+    ker R=<-phi^2>.
+
+For the Pell orbit and its Thue-Morse composition,
+
+    R(Omega_k)=2^k,
+    R(Omega_(s_2(n)))=Theta_n,
+    R(Omega_(s_2(n)))^2=(-1)^theta_n.
+
+If S is the public Pell shift, then
+
+    R(S Omega)=2R(Omega),
+    Pf(S Omega)=-Pf(Omega).
+
+The chronological shift uses exponent 1-nu_2(n+1). The public J-pullback
+satisfies
+
+    R(P_J Omega)=-R(Omega),
+    Pf(P_J Omega)=Pf(Omega).
+
+Direct Pfaffian reduction is QR-only. Negation instead gives
+
+    R(-Omega)=-R(Omega),
+    Pf(-Omega)=Pf(Omega).
+
+The marking is load-bearing: no unmarked or Galois-invariant phase selector
+has been constructed. This multiplicative C4 quotient is not the additive
+index-five primary-lattice seam. No action, h, hbar, 2 pi, SI normalization,
+physical U(1), electromagnetic phase, checkpoint coordinate, attractor map,
+decoder, torus, continuum geometry, apparatus, event, measure, or L2-L6 lift
+is selected.
+
+### CM-PERIOD-LATTICE-NONSELECTION [T]
+
+Let L=Z^4. For an integral alternating form Omega with upper coefficients
+
+    (w01,w02,w03,w12,w13,w23),
+
+define only the algebraic image subgroup
+
+    Per_Z(Omega)={Omega(C):C in Lambda^2 L}.
+
+The six basis bivectors and Bezout identity give
+
+    Per_Z(Omega)
+      =gcd(w01,w02,w03,w12,w13,w23)Z.
+
+For the public CM pencil,
+
+    Per_Z(Omega_(a,b))=gcd(a,b)Z.
+
+Every integral unimodular or Pell member therefore has primitive subgroup Z.
+For every A in GL_4(Z),
+
+    Per_Z(A^*Omega)=Per_Z(Omega),
+
+because Lambda^2 A is a lattice automorphism. Thus the Pell shift and
+J-pullback preserve this subgroup; one J-pullback does not scale it by
+phi^-2.
+
+For Omega_1, the four integral symplectic transvections attached to the
+displayed basis vectors have common fixed bivector lattice
+
+    Z(1,0,1,0,0,1),
+
+and Omega_1 evaluates to two on its primitive generator. Therefore a selector
+depending only on the unmarked form and natural under all integral symplectic
+automorphisms cannot return a unit-period bivector.
+
+The zeta_5 root-of-unity kernel fixes the full CM pencil. Its rational fixed
+bivector space is
+
+    C(a,b)=(b,a,b,a,a,b),
+
+and
+
+    Pf_biv(C(a,b))=-(a^2-ab-b^2).
+
+Since a^2-ab-b^2 has no nonzero rational zero, this fixed space contains no
+nonzero decomposable rational bivector. The pencil alone therefore cannot
+supply a natural fixed nonzero rank-two cell through this kernel either.
+
+Invariant nondecomposable classes, cell orbits, and selectors using additional
+typed data remain outside these no-go statements. Per_Z is an integer image
+subgroup, not a geometric period integral. No torus, manifold, homology,
+cohomology, action, h, hbar, 2 pi, prequantization, physical U(1), decoder,
+apparatus, event, measure, or L2-L6 lift is selected.
+
 Separately, the exact arithmetic uses two places, disjoint over Q:
 Q(zeta_5) cap Q(zeta_8) = Q. Their physical assignment is the
 TWO-PLACE-PHYSICS dictionary [D]:
@@ -3639,8 +4197,8 @@ These are L4 quadratic-support theorems only. They define no positive,
 Born, or causal cone, boundary, split-unit projector, rigidity or common
 carrier, integral tick, physical time, bit, U(1), electromagnetic channel,
 decoder `Q` or `QCarrier`, `MatterData`, L5 stream, L6 measure, or
-cross-layer lift. In particular QUADRATIC-DECODER-DATA [O] remains STOP
-and unchanged.
+cross-layer lift. In particular they supply no consequence for
+`ALGEBRAIC-DMATTER [D]`, and `QDD-INSTRUMENT-APPARATUS [O]` remains STOP.
 
 The golden and silver numbers are the positive roots of the two simplest
 metallic laws `x^2 = t x + 1`, at `t = 1` and `t = 2`
@@ -3942,6 +4500,135 @@ the declared self duality import (the 4D Z_N window opens only for
 N >= 5), the first prime passing both doors is p = 5
 (CENTER-SPLIT-SELECTION [D]). The photon belongs to the null light
 branch, E+ E- = 0 identically.
+
+### FCC-WEIGHTED-SHELL-SYMBOL [T]
+
+At L2 only, put
+
+```text
+N = {2,4,8,10,16},
+S_n = {v in Z^3 : v_1^2+v_2^2+v_3^2=n},
+W* = (w2,w4,w8,w10,w16) = (6,1,15,1,1),
+S(k) = sum_(n in N) w_n sum_(v in S_n)(cos(<k,v>)-1).
+```
+
+The five complete shell sizes are `(12,6,12,24,6)`. The weight `W*` is the
+unique positive integral solution of minimum total weight, equal to `24`, to
+
+```text
+-4w2+32w4-64w8+440w10+512w16=0.
+```
+
+For
+
+```text
+M_d(k) = sum_(n in N) w_n sum_(v in S_n)<k,v>^d,
+```
+
+the exact moments are
+
+```text
+M_2 = 648 |k|^2,
+M_4 = 3168 |k|^4,
+M_6 = 21888 sum_i k_i^6
+      + 63360 sum_(i != j) k_i^4 k_j^2
+      + 0 k_x^2 k_y^2 k_z^2,
+```
+
+where the last sum uses ordered pairs. The weighted multiset is invariant
+under all 48 signed coordinate permutations. Consequently the formal Taylor
+coefficients give
+
+```text
+S(k) = -324 |k|^2 + 132 |k|^4 + terms of degree at least six,
+```
+
+while the exact sixth-order term is anisotropic.
+
+The written finite proof enumerates every shell, proves the unique minimum by
+complete elimination, and derives the moment coefficients exactly.
+`P-FCC-WEIGHTED-SHELL-SYMBOL-1` independently audits the proof on both
+required architectures.
+
+This is one displayed L2 scalar symbol. It does not select the FCC carrier,
+`W*`, its scale or flux from the architecture, and supplies no temporal
+characteristic, Herm2 identification, cone, Lorentz statement, continuum
+limit, phase, propagator or physical photon. No global remainder bound is
+claimed.
+
+### PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP [T]
+
+At L4 one-face algebra, with the unnormalised `Z_5` Fourier transform,
+
+```text
+w  = (4,phi^2,phi^-2,phi^-2,phi^2),
+Fw = (10,5,0,0,5),
+Sigma(w) = sort(|supp w|,|supp Fw|) = (3,5).
+```
+
+For every finite Wilson coupling `beta>0`, both the position vector and its
+Fourier transform have full support, so `Sigma(W_beta)=(5,5)`. At the admitted
+endpoint `beta=0`, `Sigma(W_0)=(1,5)`. For every finite Villain parameter
+`t>0`, both sides are strictly positive, so `Sigma(V_t)=(5,5)`.
+
+Positive normalization and `Z_5` automorphisms preserve both support sizes,
+and optional Fourier exchange only swaps them. Therefore no element of
+
+```text
+O(f) = {c P_u F^epsilon f :
+        c>0, u in F_5^x, epsilon in {0,1}}
+```
+
+of a finite-coupling Wilson or Villain vector equals `w`.
+`P-PHOTON-WILSON-VILLAIN-BRIDGE-1` supplies the universal proof and the
+two-architecture exact audit.
+
+This is direct finite-coupling nonmembership only. It excludes no parameter
+limit, projective closure, broader action class, domination, comparison,
+blocking, RG or universality bridge. It proves no Gibbs state, thermodynamic
+limit, roughening, Coulomb or massless phase, propagator, continuum limit or
+physical photon.
+
+### Photon successor roots
+
+The preceding theorems do not repair or reopen `PHOTON-KAPPA-LEMMA [F]` or
+`PHOTON-WINDOW-PROOF [F]`. They delimit two separate successor roots.
+
+`PHOTON-CONE-CONVERGENCE [O]` asks whether one publicly selected and
+completely typed L2 spatial-transfer datum yields an exact L5 temporal
+characteristic
+
+```text
+K_op = {(omega,k) : det C(omega,k)=0},
+```
+
+and whether a separately public L4 Herm2 carrier and cone `K_quad` admit an
+independently frozen total typed map
+
+```text
+iota : carrier(K_quad) -> carrier(K_op)
+```
+
+with `iota(K_quad)=K_op` as exact equality of null sets. The weighted-shell
+theorem supplies only one displayed scalar symbol. `CENTRAL-LIFT-PHASE`
+supplies only L4 quadratic-support action, not a positive or causal Herm2
+cone. The L2-to-L5 temporal-characteristic gate and the L4-to-L5
+identification gate therefore remain open. Here convergence means agreement
+of two typed routes, not a continuum limit.
+
+`PHOTON-MASSLESS-PHASE [O]` separately owns the L4-to-L6 mathematical phase
+question. Before it can move, the exact five-vector must be embedded in a
+complete L4 action carrier with equality and normalization, and one exact
+primary-source theorem chain must freeze its action class, finite-volume
+measure, boundary conditions, thermodynamic limit, observable, quantitative
+hypotheses and the `N=5` regime. Closure may use exact membership or a complete
+theorem-preserving comparison with explicit constants. The finite
+Wilson/Villain nonmembership theorem is boundary information only; it is not
+negative closure of this broader obligation.
+
+Both successor roots are `ROOT / STOP / FORMAL`. Neither adopts a roughening
+slogan, an uncited Froehlich-Spencer import, Lorentz invariance, a continuum
+propagator, polarization, apparatus, physical readout or a physical photon.
 
 The electron: g = 2 = (2 pi/5) / (pi/5) is the vertex flux over the
 spinor half angle, the reading ELECTRON-G-TREE [D] on exact pillars:
@@ -4543,6 +5230,51 @@ reading, and no L2--L6 lift. The successor question at `k = 4` is not a
 registered claim of this Canon.
 
 ## 10. Relativity as counting
+
+### SO3-FINITE-ANISOTROPY-MAXIMUM [T]
+
+For a finite subgroup `G <= SO(3)`, let `H_l(R^3)` be the real homogeneous
+harmonic polynomials of degree `l` and define
+
+```text
+a(G) = min { l >= 1 : H_l(R^3)^G != 0 }.
+```
+
+The complete finite-rotation classification has five types, with two infinite
+families, and the exact harmonic depths are
+
+```text
+a(C_n) = 1,  n >= 1,
+a(D_n) = 2,  n >= 2,
+a(A_4) = 3,
+a(S_4) = 4,
+a(A_5) = 6.
+```
+
+Hence `a(G) <= 6` for every finite `G <= SO(3)`, with equality if and only if
+`G` is conjugate to the rotational icosahedral group `A_5`. For `A_5`, exact
+class-angle character averaging gives no invariant harmonic in degrees `1`
+through `5` and multiplicity one in degree `6`. Independently, the exact
+Molien series is
+
+```text
+(1 + t^15) / ((1 - t^2)(1 - t^6)(1 - t^10)).
+```
+
+The two order-five rotation classes in the winning three-dimensional `A_5`
+representation have traces `phi` and `1 - phi`; their difference is `sqrt5`,
+so the character field of the equality branch is `Q(sqrt5)`.
+
+The universal quantifier is proved from the complete finite-subgroup
+classification of `SO(3)` plus symbolic cyclic and rotational-dihedral
+arguments. `P-SO3-FINITE-ANISOTROPY-DEPTH-1` independently audits the three
+polyhedral cases by exact character and Molien arithmetic over `Q(sqrt5)`.
+
+Scope: L1 finite-rotation representation theory only. This theorem does not
+select `J`, the physical prime `p = 5`, a boost or rapidity, Lorentz density, a
+decoder, a measure, dynamics, or any L2-L6 lift. It says that `A_5` uniquely
+postpones the first invariant harmonic scalar to degree six; it does not
+eliminate anisotropy.
 
 The group generated by the icosahedral rotations and the J boost is
 dense in SO+(3,1); the boost rapidity is ln phi. The exact boost
@@ -5172,6 +5904,224 @@ no unrestricted least-gap or prime-distribution result, Pell parametrization,
 inert or ramified diagonalization, gamma or polar term, completed-zeta
 compression, Weil positivity, RH or zero-simplicity statement, decoder,
 measure, physical or SI reading, or L2--L6 lift.
+
+### J-RAPIDITY-GALOIS-EQUIVARIANT-PRIME-SHELL [T]
+
+For every split rational prime `p` and every root `t` of
+`t^2-t-1 = 0 mod p`, the `phi` fixed line is cross-labelled by the other
+prime ideal:
+
+```text
+E_t = F_p(1,t) = p_(1-t)/p O_F.
+```
+
+Branch exchange moves the line, ideal, oriented rapidity, and odd coordinate
+`2t-1` together, without choosing an orientation. The odd coefficient space
+is the one-dimensional line `F_p(2t-1)`, with `(2t-1)^2=5`. Integrally, the
+two-point permutation module is a nonsplit extension of the trivial lattice
+by the sign lattice; the sum/difference sublattice has index two. Inside the
+frozen rational span of the two oriented resolvents, independent relabelling
+and scalar augmentation therefore uniquely force the normalized Reynolds
+factor
+
+```text
+Ctilde_p(T) = (1/2) ((1-u_p T)^-1 + (1-u_p^-1 T)^-1).
+```
+
+The resulting squarefree group-ring lift is
+
+```text
+mutilde(n) = mu(n)/2^|S(n)|
+             sum_(epsilon_p=+-1) prod_(p in S(n)) u_p^epsilon_p
+```
+
+for squarefree `n`, and zero otherwise. It is star invariant and independently
+relabelling invariant, with
+
+```text
+aug(mutilde(n)) = mu(n),       ||mutilde(n)||_1 = |mu(n)|.
+```
+
+For `P_N=sum_(n<=N)mutilde(n)`, augmentation is `M(N)` and the constant term
+is the sum of `mu(n)` over `n<=N` having no split prime divisor. Reynolds
+uniqueness is asserted only in the displayed two-resolvent correction class.
+This L1 theorem selects no global orientation and supplies no probability,
+Haar, Hecke, automorphic, summatory, RH, physical, or L2--L6 statement.
+
+### Ideal count, rational descent, and exact Mertens two-sum
+
+Let
+
+```text
+F = Q(sqrt5),       O_F = Z[phi],       A = [[0,1],[1,1]],
+e_p = #Fix([A] on P^1(F_p)),            chi_A(p) = e_p-1.
+```
+
+With complete multiplicative extension, quadratic reciprocity and the direct
+checks at 2 and 5 give `chi_A=chi_5`. If `a_F(n)` counts nonzero integral
+ideals of norm `n`, then
+
+```text
+a_F = 1 * chi_5.
+```
+
+Modulo sign and `O_F^x={+-phi^k}`, every nonzero principal ideal has exactly
+one generator `a+b phi` in the half-open domain
+`1 <= |sigma+(x)|/|sigma-(x)| < phi^2` with `a>0`. Its exact integer test and
+sharp complete bound are
+
+```text
+b(2a+b) >= 0,       a(2b-a) < 0,
+|a|,|b| <= sqrt(|N(x)|),       B(n) = isqrt(n).
+```
+
+These statements form J-IDEAL-COUNT-QUADRATIC-CHARACTER [T]. The fixed line
+`E_t` is again cross-labelled by the ideal `p_(1-t)`; no rapidity orientation
+is selected.
+
+For the ideal Mobius descent
+
+```text
+b(n) = sum_(N(a)=n) mu_F(a),
+```
+
+the split, inert, and ramified prime-local factors are respectively
+
+```text
+(1-T)^2,       1-T^2,       1-T.
+```
+
+Multiplication by the local `chi_5` series gives `1-T` in every case. Hence,
+coefficient by coefficient for all `n>=1`,
+
+```text
+mu = b * chi_5 = b * chi_A.
+```
+
+This is J-IDEAL-RATIONAL-MOBIUS-DESCENT [T]. It is proved from ideal
+valuations before scalarization, without using rational `mu`, zeta, or an
+L-function as a construction input.
+
+Finally, put `S_5(m)=sum_(d<=m)chi_5(d)`. Its exact residue law is
+
+```text
+S_5(m) =  1  for m = 1 mod 5,
+         -1  for m = 3 mod 5,
+          0  for m = 0,2,4 mod 5.
+```
+
+For every `N>=1`, summing the descent identity gives
+
+```text
+M(N) = sum_(a<=N) b(a) S_5(floor(N/a))
+     = sum_(a<=N, floor(N/a)=1 mod 5) b(a)
+       - sum_(a<=N, floor(N/a)=3 mod 5) b(a).
+```
+
+This is J-MERTENS-IDEAL-TWOSUM [T]. Both formulas are exact algebraic
+incidence identities, not estimates, convergence results, zero statements,
+or RH input. All three rows in this subsection are L1 only and add no
+physical reading or lift to L2--L6.
+
+### The integral ideal-rapidity lift and ternary shells
+
+Choose one prime ideal above every split rational prime and write `X_p` and
+`X_p^-1` for its two independent rapidity directions. Let `bold_b` retain
+the actual ideal valuations and rapidities in the ideal Mobius sum, and set
+
+```text
+bold_mu = bold_b * (chi_5[0]).
+```
+
+Its local factor is
+
+```text
+((1-X_p T)(1-X_p^-1 T))/(1-T)   at a split prime,
+1-T                              at an inert prime or p=5.
+```
+
+Thus at a split prime
+
+```text
+bold_mu(p)   = 1-X_p-X_p^-1,
+bold_mu(p^k) = 2-X_p-X_p^-1       for every k>=2.
+```
+
+Augmentation `X_p->1` sends every local factor to `1-T`, so
+`aug(bold_mu(n))=mu(n)` for every positive integer. The root-to-ideal
+cross-label is preserved before scalarization. This is
+J-IDEAL-RAPIDITY-CHARACTER-LIFT [T], at L1 and formal Euler-factor scope.
+It is integral and has a nonzero split-prime-power tail; it is not the
+rational, squarefree Reynolds lift above.
+
+If squarefree `n` has `a` split prime factors and `b` inert or ramified prime
+factors, then
+
+```text
+bold_mu(n) = (-1)^b prod_(p split, p|n)(1-X_p-X_p^-1).
+```
+
+Rapidity independence makes all words in `{-1,0,1}^a` distinct, and hence
+
+```text
+|supp bold_mu(n)| = ||bold_mu(n)||_1 = ||bold_mu(n)||_2^2 = 3^a,
+aug(bold_mu(n)) = (-1)^(a+b) = mu(n),
+```
+
+with every coefficient equal to `+-1`. At a split prime every exponent
+`k>=2` leaves the nonzero residue `2-X_p-X_p^-1`, of support 3, coefficient
+`l1` norm 4 and squared coefficient `l2` norm 6, while its augmentation is
+zero; an inert or ramified square kills its local factor. This squarefree
+census and the stated prime-power boundary form
+J-RAPIDITY-TERNARY-SHELL-CENSUS [T] at L1. They make no probabilistic,
+cancellation, RH, physical, or L2--L6 claim.
+
+### Zero rapidity and the direct-triangle boundary
+
+Let `c_0(n)` be the identity-monomial coefficient of `bold_mu(n)`. Its local
+series is `(1+T^2)/(1-T)` at split primes and `1-T` at inert primes and 5.
+As a formal Euler identity, and as an absolutely convergent Euler product for
+`Re(s)>1`,
+
+```text
+C_0(s) = sum_(n>=1) c_0(n)n^-s
+       = L(s,chi_5)L(2s,chi_5)/zeta(4s)
+         * (1-5^-s)/(1-5^-4s).
+```
+
+The orientation-independent scalar split-prime product
+
+```text
+O_5(s) = prod_(chi_5(p)=1) (1-p^-s)^2/(1+p^-2s)
+```
+
+is neither a rapidity character nor a twist, and satisfies
+
+```text
+1/zeta(s) = C_0(s) O_5(s),
+O_5(s) = zeta(4s)/(zeta(s)L(s,chi_5)L(2s,chi_5))
+         * (1-5^-4s)/(1-5^-s).
+```
+
+The ramified ratio has the infinite one-prime expansion
+`(1-T)/(1-T^4)=sum_(j>=0)(T^(4j)-T^(4j+1))`. These exact formal and
+`Re(s)>1` statements form J-ZERO-RAPIDITY-ORIENTATION-FACTORIZATION [T].
+They assert no continuation, zero location, cancellation, RH, or physical
+reading.
+
+For every Laurent polynomial `f`, `|aug(f)|<=||f||_1`. Therefore
+
+```text
+T(N) := sum_(n<=N)||bold_mu(n)||_1
+     >= sum_(n<=N)|mu(n)| > N/4        for every N>=1,
+```
+
+where the strict final inequality is the elementary squarefree union bound.
+Consequently the direct coefficient-`l1` termwise triangle upper bound for
+this lift is not `o(N)`. This is J-RAPIDITY-TERM-WISE-TRIANGLE-NOGO [T], a
+narrow exact-arithmetic attack-route no-go. It says nothing against `l2`
+cancellation, a uniform growing mode, a non-diagonal kernel, another norm,
+an RH-strength transfer, physics, or L2--L6.
 
 ### SUZUKI-LOCAL-CAPACITY-NOGO [T]
 
@@ -5858,14 +6808,15 @@ inserts the parity, `beta=4` is not selected by the census identities, and
 the finite deficit is not selected without an origin. The five DQRC theorem
 rows are exact L1 statements only; they create no physical DQRC reading and
 move no `BELL-CAUSAL-ACCOUNTING`, `QDD-INSTRUMENT-APPARATUS`,
-`QUADRATIC-DECODER-DATA`, `BELL-MAGIC-BOUNDARY`, `TWO-PLACE-PHYSICS`,
+`ALGEBRAIC-DMATTER`, `BELL-MAGIC-BOUNDARY`, `TWO-PLACE-PHYSICS`,
 `SILVER-RING-FACTS`, or `SILVER-SIBLING` status.
 
 The product-composition, cyclotomic-area, and conditional pure-two-qubit rows
 remain at their registered L1 scopes. They do not supply the separately
-registered `BELL-CAUSAL-ACCOUNTING [O]` contract, do not close
-`QUADRATIC-DECODER-DATA [O]`, and create no bridge to rational
-`V_eff`. The `zeta_5` instances are exact carrier witnesses only and carry
+registered `BELL-CAUSAL-ACCOUNTING [O]` contract, do not extend the exact
+scope of `ALGEBRAIC-DMATTER [D]` or close
+`QDD-INSTRUMENT-APPARATUS [O]`, and create no bridge to rational `V_eff`.
+The `zeta_5` instances are exact carrier witnesses only and carry
 no fifth-prime physical or selection content. `QDD-QCARRIER-DIAGONAL-BOUNDARY`
 retains its registered scope and status.
 
@@ -6262,9 +7213,10 @@ Simultaneous stability under the two pullback families supplies neither
 registered `COLOR-CM-2I-SEMILINEAR-PAIR`.
 
 All statements in this block are L1 carrier algebra. They create no bridge
-to rational \(V_{\rm eff}\), `DEF-QDD-QPAIR`, MatterData, a Born pairing,
-decoder write map, physical `U(1)`, instrument, L5 stream, or L6 measure,
-and they move no QDD or color-selection parent.
+to rational \(V_{\rm eff}\), `DEF-QDD-QPAIR`, MatterData, the algebraic
+branch-weight pairing, decoder write map, or `ALGEBRAIC-DMATTER`, and they
+create no physical `U(1)`, instrument, L5 stream, or L6 measure and imply no
+move of a color-selection parent.
 
 The marked CM closure of Rung 11 (COLOR-CM-2I-SEMILINEAR-PAIR [T],
 probes/P-CM-2I-QCARRIER-1) is relative to exactly the displayed marked
@@ -6354,8 +7306,8 @@ These are L4 representation-theoretic statements only. They assert neither
 uniqueness nor selection of the displayed marked lift; SPIN-LIFT-FORCED [F]
 remains unchanged. They do not define decoder `Q` or `QCarrier`, a decoder
 Gram, an orbit-to-amplitude map, `MatterData`, a physical U(1), or an L5-L6
-measure lift. QUADRATIC-DECODER-DATA [O] and COLOR-MEASURE-SELECTION [O]
-remain STOP and unchanged.
+measure lift. They create no implication for `ALGEBRAIC-DMATTER [D]`;
+`QDD-INSTRUMENT-APPARATUS [O]` and COLOR-MEASURE-SELECTION [O] remain STOP.
 
 COLOR-MEASURE-TRANSPORT [T] (reproduce/color-ladder): the golden dual
 measure is transported from D5 onto the 2I core through the exact
@@ -6435,16 +7387,32 @@ Its proton and cosmology assignments belong only to that dictionary.
 GYRON-DENSITY itself is not a mass density, cosmological parameter,
 Born multiplier, physical probability, or L5-to-L6 measure statement.
 
-The committed dark-energy form is additionally armed as a live empirical
-hypothesis. DE-W-CONSTANT [H] carries w_DE(a) = -14/15 = -1 + 1/(d p) with
-d = 3 and p = 5, exactly and constant in a, equivalently rho_DE proportional
-to a^(-1/5), in the standard flat FRW fluid convention, and its falsifier is
-frozen on the named survey carrier DESI, DES, Euclid and CMB-S4
-(probes/P-DE-W-ARMING-1). The row is a reading of the committed register
-form and derives nothing: COSMOLOGY-REGISTER [D] remains the source of that
-form with its comparisons fenced, no dictionary source is selected, and
-DE-CONFORMAL-WEIGHT [O] remains open and untouched, with DE-W-CONSTANT
-refused as a selection premise there by the CIRCULAR clause of that row.
+The committed dark-energy reading has fired its frozen empirical rule.
+DE-W-CONSTANT [F] still names the exact constant form
+`w_DE(a)=-14/15=-1+1/(d p)` with `d=3`, `p=5`, equivalently
+`rho_DE` proportional to `a^(-1/5)` in the standard flat FRW fluid
+convention. The frozen DESI DR2 headline flat constant-`w` fit DESI+CMB is
+
+```text
+w_mean = -1.055 = -211/200,       sigma = 0.036 = 9/250.
+```
+
+Against the immutable two-sided witness bar `322/125`, the exact Gaussian
+readback is
+
+```text
+|w_mean+14/15|/sigma = 365/108 > 322/125,
+365*125 = 45625 > 34776 = 322*108,
+365/108-322/125 = 10849/13500.
+```
+
+Rule R1 therefore fires and falsifies the committed reading
+(`probes/P-DE-W-ARMING-2`). The result says nothing about evolving `w0waCDM`
+fits and refutes no derivation of `w` from `J`: COSMOLOGY-REGISTER [D]
+remains the source of the committed form with its comparisons fenced.
+DE-CONFORMAL-WEIGHT [O] remains open and untouched, no dictionary source is
+selected, and its CIRCULAR clause continues to refuse DE-W-CONSTANT as a
+selection premise.
 
 Independently, freeze the six golden projective lines with representatives
 
@@ -6756,10 +7724,10 @@ dressing insertion bookkeeping carries the exact witness 72 alpha^4
 (about 0.204 ppm, labeled) with the form decision gated on the integer
 crossing count (DRESS-CROSSCOUNT). No end-to-end Lorentz closure is
 asserted; the former compound A2/A3/K6 row is retired until its
-operators can be registered as separate gates. `QUADRATIC-DECODER-DATA`
-[O] asks for a
-publicly typed action on data; no unregistered closure of state-update,
-Gram, dagger, or data-effect clauses is asserted.
+operators can be registered as separate gates. `ALGEBRAIC-DMATTER [D]`
+registers only its exact L1 quadratic write on K_QDD; no unregistered closure
+of state-update or physical data-effect clauses is asserted, and no
+apparatus field is filled.
 
 The rational finite-state boundary itself is exact
 (METRO-FINITE-STATE-RATIONALITY [T] at L5). Let `q >= 2`, let `S` be the
@@ -7515,6 +8483,35 @@ positively and what closes it negatively. The COIN-MINIMAL-READ [D]
 paragraph below is status-separation context for its live O owner, not a
 frontier row.
 
+### TRIVIAL-RAPIDITY-EVALUATION-BRIDGE [O]
+
+The integral ideal-rapidity lift in section 10 recovers rational Mobius by
+the distinguished augmentation `X_p->1`, but independence of the nontrivial
+rapidity directions does not make that evaluation small. This obligation
+asks for controlled summatory cancellation at the augmentation directly from
+nontrivial information on the full refined shell.
+
+RH-strength positive closure requires, for every `epsilon>0`, a non-circular
+derivation of
+
+```text
+|sum_(n<=N) aug(bold_mu(n))| = O_epsilon(N^(1/2+epsilon))
+```
+
+without assuming an equivalent Mertens estimate, a zeta-zero statement, or
+the target bound itself. At least two mathematically distinct routes remain
+admissible: a uniform growing-mode diagonal route `h=h(N)` with explicit
+approximation and transfer error, and a non-diagonal mixing or kernel route
+with controlled operator norm and reconstruction error. Bounds for every
+fixed nonzero integer mode do not alone close the row, and a weaker explicit
+cancellation rate is partial progress only.
+
+The row is ROOT, STOP, and action-layer `NOT_APPLICABLE` until a complete
+non-circular transfer mechanism and its domain, approximation or kernel,
+uniform norm, and reconstruction errors are frozen. Failure of one candidate
+or of all fixed-mode estimates is STOP, not negative closure. No Hecke,
+automorphic, Haar, probability, physical, or L1--L6 lift is asserted.
+
 ### BELL-CAUSAL-ACCOUNTING [O]
 
 Before TWIST-J can make a physical Bell, locality, nonlocality,
@@ -7549,8 +8546,9 @@ controllable signalling are separate tests.
 `PURE-QUBIT-RELATIONAL-CHSH` is an optimized standard-QM pure-state comparison
 only; the DQRC rows are L1 formal-census, reencoding, nonselection, and
 field-boundary theorems only. None supplies this contract.
-`QUADRATIC-DECODER-DATA [O]`
-and `QDD-INSTRUMENT-APPARATUS [O]` remain separate and unchanged. Neither the
+`ALGEBRAIC-DMATTER [D]` remains an algebraic dictionary and
+`QDD-INSTRUMENT-APPARATUS [O]` remains its separate physical boundary.
+Neither the
 integral QPAIR carrier nor the rational piston carrier is identified with a
 physical bipartite system, and no conclusion about latent-variable models,
 nonlocal influence, superdeterminism, or retrocausality is selected in
@@ -7675,7 +8673,8 @@ proof and byte-identical x86_64 and aarch64 transcripts audit its seven exact
 gates, with the full execution-integrity record retained in the evidence
 bundle. The fold adds only the unique absolute-discriminant
 minimum in the frozen abelian Galois CM unique-even-bit class and the concise
-Core synthesis of the two independent "why five" answers. It adds no claim
+Core synthesis of the two independent field-characterisation results, neither
+of which derives or justifies the primitive axiom. It adds no claim
 that the class, total ramification, or discriminant minimization is physically
 selected, no physical-field uniqueness, TWO-PLACE-PHYSICS promotion, decoder,
 measure, or L2-L6 lift, and no live H or O row moves.
@@ -7957,13 +8956,6 @@ MEASUREMENT AND METROLOGY
                              the meter over the single m_e bridge)
   DRESS-CROSSCOUNT           the integer crossing count per observable;
                              witness 72 alpha^4, labeled
-  QUADRATIC-DECODER-DATA     the typed quadratic/Born D_matter action and its
-                             exact factorization through Q; carrier, bridge,
-                             Gram, dagger, transpose, QCarrier equality,
-                             effects, MatterData schema, write map, domain, and
-                             complete dependencies remain open; linear, binary,
-                             reconstruction, and post-state instrument claims
-                             are outside this row
   QDD-INSTRUMENT-NONSELECTION
                              the L4 rational fibre, diagonal-orbit and
                              dilation classification; fixed effects, weights
@@ -7995,11 +8987,12 @@ MEASUREMENT AND METROLOGY
                              weak S_4 quotient covariance leaves 24 sign
                              classes; collapse to one requires a new gauge
                              equality
-  QDD-INSTRUMENT-APPARATUS   O2 now asks for independent physical selection
-                             through the two children below; O1 remains a
-                             typed realized-event / sampling obligation after
-                             the exact carry-bank boundary; SAMPLING NOT
-                             PROVIDED, not impossible
+  QDD-INSTRUMENT-APPARATUS   sole owner of the transferred physical debt;
+                             algebraic projector targets are not physical
+                             effect identifiers, every physical apparatus
+                             field remains unresolved, O2 stays with the two
+                             children below and O1 remains realized-event /
+                             sampling; SAMPLING NOT PROVIDED, not impossible
   QDD-TERMINAL-EVENT-SEMANTICS
                              the independently justified physical meaning of
                              a completed terminal event; no saturation law is
@@ -8027,9 +9020,6 @@ COSMOLOGY
                              selecting the dark-energy density character;
                              FRW continuity alone is nonunique and no
                              trace-Gram dictionary is authorized
-  DE-W-CONSTANT              the committed dark-energy form w = -14/15
-                             armed as a live empirical row; falsifier
-                             frozen on DESI, DES, Euclid, CMB-S4
 COLOR
   ALPHA-S-RUNNING            the running above the 3/4 seed
   SCHEME-DICTIONARY          exact seeds to measured couplings; source-seed
@@ -8046,6 +9036,12 @@ PLENUM AND KERNEL
                              one equivalence class of spatial-curvature
                              operator after its carrier, measure,
                              projection, and commutator type are frozen
+RAPIDITY EVALUATION
+  TRIVIAL-RAPIDITY-EVALUATION-BRIDGE
+                             derive controlled summatory cancellation at
+                             augmentation from the full integral rapidity
+                             shell by a non-circular uniform diagonal or
+                             non-diagonal transfer; STOP
 ENTROPY BRIDGE
   ENTROPY-LAYER-BRIDGE       Route A asks whether A_A contains one
                              measurable total
@@ -8065,8 +9061,8 @@ OBSERVER
   MINIMAL-READ-DERIVATION    decide whether a complete typed decoder forces
                              the beta_1 minimum read; L5-to-L1 gate is STOP
 EMPIRICAL HORIZON
-  DESI DR3 (w = -14/15); MOLLER (sin^2 theta_W); future shadow
-  measurements after a public inference rule; CMB-S4 (the tilt)
+  MOLLER (sin^2 theta_W); future shadow measurements after a public
+  inference rule; CMB-S4 (the tilt)
 ```
 
 ## 19. Verification and the registry

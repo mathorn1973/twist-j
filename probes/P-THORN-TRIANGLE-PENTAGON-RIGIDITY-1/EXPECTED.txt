@@ -1,0 +1,13 @@
+G01 source_scope_firewall PASS
+G02 unit_circle_laurent_reduction PASS
+G03 closure_equals_phi5 PASS
+G04 primitive_fifth_order PASS
+G05 scale_polynomial PASS
+G06 thorn_inverse_and_quartic PASS
+G07 quadratic_branch_values PASS
+G08 contracting_expanding_census PASS
+G09 weaker_triangle_third_root_control PASS
+G10 gaussian_rational_controls PASS
+G11 principal_golden_chord_square PASS
+G12 scope_and_nonselection_guard PASS
+DECISION THORN-TRIANGLE-PENTAGON-RIGIDITY-CONFIRMED

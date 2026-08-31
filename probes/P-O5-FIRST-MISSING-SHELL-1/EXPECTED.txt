@@ -1,0 +1,9 @@
+G01 PASS split order and link carrier
+G02 PASS terminal cone quotient
+G03 PASS link Betti terminal counts
+G04 PASS sign-reversing terminal-pair involution
+G05 PASS first-missing terminal-shell identity
+G06 PASS primorial terminal-shell identity
+G07 PASS breakers B1=B2=B3=B4=B5=11
+G08 PASS exact-rational stdlib firewall
+VERIFY RESULT 8/8 ALL PASS
