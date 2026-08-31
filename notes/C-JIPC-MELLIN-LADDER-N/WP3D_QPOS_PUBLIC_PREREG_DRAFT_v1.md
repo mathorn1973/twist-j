@@ -24,14 +24,25 @@ DEV_EXECUTION       NONE (verify.py syntax-checked only; never run)
 Authority (frozen basis tuple):
 
 ```text
-CANON           Public Canon v65
-TAG             canon-v65
-TAG_OBJECT      aadef49c08c3a42d2b4739e1cb729eb54ba53f96
-CONTENT_COMMIT  de0806dd579e303e102f9961c068852095e19f07
-CANON_SHA256    34a2833153a917441c3e4df7e2406f34cf0e62ecafbf366eddfa6615dc8fb6d2
-CANON_BYTES     339260
+CANON           Public Canon v72
+TAG             canon-v72
+TAG_OBJECT      78fa07d8337649e4aba629e38adf23595fedb4bb
+CONTENT_COMMIT  aac8a3a4aff027beb2b08edbde1ae8e59224914c
+CANON_SHA256    39ca6e5c49d3ec2b78464045312af75618c4601f87dfa178dfd689d8a4942c70
+CANON_BYTES     374406
 BASE_COMMIT     TBD at pin (maintainer)
 ```
+
+Repin record. The frozen basis tuple above was first written against Public
+Canon v65 and was moved to v72 on 2026-08-31, while the draft was still
+unpinned. `PIN` and `BASE_COMMIT` stay `TBD` and no execution record is
+affected: `DEV_EXECUTION` is `NONE` and the draft verifier has never been
+run. This note cites no TWIST-J Registry row, so the seven releases between
+v65 and v72 change nothing in it; the public parent
+`P-JIPC-WP3E-EFFECTIVE-MELLIN-SEEDS-1` merged at
+`9a4b479b0a7a9ce39772f77f16dd363602ec72c7` is still an ancestor of main. The
+status stays DRAFT / NOTES LANE / NON-CANONICAL / UNREGISTERED, and a formal
+pin must refreeze every field of the tuple at that time.
 
 ## 0. Aim, parents, and the provenance fence
 
