@@ -1,11 +1,105 @@
 # Canon changelog (public series)
 
-## Public Canon v69
+## Public Canon v72
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 342 claims; 0 T-LOCK, 219 T, 43 D, 33 C, 2 H, 28 O, 17 F; 30 live H/O.
+Registry snapshot: 346 claims; 0 T-LOCK, 221 T, 44 D, 33 C, 2 H, 29 O, 17 F; 31 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v72 registers two proof-first photon-boundary theorems and opens
+two separately typed successor roots. FCC-WEIGHTED-SHELL-SYMBOL [T] proves
+the exact displayed L2 weighted-shell moments, unique positive integral
+minimum, fourth-order isotropy and sixth-order anisotropy.
+PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP [T] proves direct
+finite-coupling nonmembership of the exact Z_5 five-vector under positive
+scale, automorphism and optional Fourier exchange. PHOTON-CONE-CONVERGENCE
+[O] and PHOTON-MASSLESS-PHASE [O] are ROOT and STOP with three named
+cross-layer gates. The fold does not reopen the falsified Kappa/window route,
+does not register roughening, does not import Froehlich-Spencer, and makes no
+Lorentz, continuum, propagator or physical-photon claim.
+
+## Public Canon v71
+
+Public Canon v71 is a framework-wording fold. It records no new scientific
+claim and changes no status. It makes explicit that the primitive axiom is an
+asserted starting point rather than a derivation target within TWIST-J, and
+that global decoder uniqueness is not a program requirement. A complete
+physical reading may be a classified typed family; output-relevant
+alternatives, overlaps, equivalences and any selection or occurrence rule must
+be explicit. Scoped uniqueness and nonuniqueness claims remain unchanged.
+
+## Public Canon v70
+
+Public Canon v70 executes the owner-choice accounting transaction frozen in
+`QDD-ALGEBRAIC-DMATTER-SUCCESSOR-V70`. It records no new scientific theorem,
+no formal probe and no promotion. The former composite
+`QUADRATIC-DECODER-DATA [O]` is retired as a split, not as a falsification or
+positive closure. Its exact v69 scope and evidence tuple remain in terminal
+history, and its physical debt is transferred rather than satisfied.
+
+`ALGEBRAIC-DMATTER [D]` is the new owner-adopted L1 dictionary. Its entire
+binding is
+
+```text
+D_matter|_(K_QDD,D_quadratic) := D_QDD_direct
+    : K_QDD -> MatterData_QDD.
+```
+
+The codomain has exactly the five registered algebraic fields
+`support_state`, `total_weight`, ordered `branch_weights`, `density_state`,
+and `normalized_weight_state`. Its quadratic manifest names the ordered
+algebraic projectors and algebraic branch-weight pairing; it does not use the
+physical slots `effect_ids` or `born_pairing_id`. The independent
+`QDD-ALGEBRAIC-FACTORIZATION [T]` identity audits equality of the direct and
+factor expressions, but it is not the definition source and did not force,
+uniquely select or canonize the architecture. No `K_QDD = K`, full
+`dom(D_matter) = K`, other-leg closure, cross-leg or state reconstruction,
+whole-decoder completion, physical effect, instrument, event, sampling law,
+randomness, independence or L6 measure is inherited.
+
+`QDD-INSTRUMENT-APPARATUS [O]` remains STOP as the sole physical owner. Its
+two resolved `projector_target_ids` are algebraic targets, not physical-effect
+aliases. Every physical effect, instrument, carrier, ready phase, context,
+coupling, pointer, reduction, target-comparison, complete-family, equality,
+realization, event, occurrence, post-state, persistence/reset, ZERO_SUPPORT
+and L1-to-L5 identifier remains `UNRESOLVED`; an L6 measure still requires a
+separate gate. `PHYSICAL-DMATTER` is an unadopted route label, not a public
+claim, and is neither falsified nor shown complete.
+
+The six lifecycle events are exact: one retirement without result, one `D`
+declaration, and scope-only events for `READING-SPLIT`,
+`QDD-ALGEBRAIC-FACTORIZATION`, `QPAIR-HERM-INTEGER-NONDESCENT`, and
+`QDD-INSTRUMENT-APPARATUS`. The old composite's 19 outgoing edges are removed,
+the algebraic successor receives its exact 19-edge set, and only two ownership
+edges are added: `READING-SPLIT -> ALGEBRAIC-DMATTER` and
+`QDD-INSTRUMENT-APPARATUS -> DEF-DECODER-COMPLETION-CONTRACT`. No
+`MEASURE-BORN-VERB` edge, gate, scientific evidence, reproduction directory,
+program identifier, or CORE-selection row is added. The status-separation
+witness changes only to audit this current ledger and the unchanged direct-
+write firewall.
+
+The v70 ledger change is:
+
+```text
+claims: 342, unchanged by one retirement and one declaration,
+T: 219, C: 33, H: 2 and F: 17, unchanged,
+D: 43 + 1 = 44,
+O: 28 - 1 = 27,
+live H/O: 30 - 1 = 29,
+normative items: 388, unchanged,
+dependencies: 630 - 19 + 19 + 2 = 632,
+evidence rows: 342, unchanged,
+history rows: 865 + 6 = 871,
+gates: 11, unchanged,
+frontier scheduler rows: 30 - 1 = 29,
+frontier program identifiers: 7, unchanged,
+CORE-selection rows: 30, unchanged,
+two-architecture evidence: 257, unchanged,
+reproductions: 23, unchanged.
+```
+
+## Public Canon v69
 
 Public Canon v69 is a focused L1 CM-lattice and ramification fold. It
 registers exactly five theorem rows and no dictionary, hypothesis,
