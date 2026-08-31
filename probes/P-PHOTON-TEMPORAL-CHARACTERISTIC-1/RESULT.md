@@ -1,16 +1,16 @@
 # P-PHOTON-TEMPORAL-CHARACTERISTIC-1 result
 
-Status: `LOCAL CHARACTERISTIC-PROVED CANDIDATE / PROOF-FIRST / PUBLIC
-TWO-ARCHITECTURE GATE PENDING / CANON UNCHANGED`
+Status: `CHARACTERISTIC-PROVED / PROOF-FIRST / PUBLIC TWO-ARCHITECTURE GATE
+PASS / CANON UNCHANGED`
 
 The immutable verifier completed with exit zero, empty stderr and exact stdout
 equal to `EXPECTED.txt`. All twenty certificate gates passed and no frozen
-scientific falsifier fired. The local result meets the mathematical and local
-transcript clauses of `CHARACTERISTIC-PROVED`; the final public outcome remains
-conditional only on the required clean pull-request architecture, aggregate
-and security checks.
+scientific falsifier fired. Clean public x86_64 and aarch64 jobs reproduced
+the same verifier and stdout byte for byte, and the aggregate check passed.
+The frozen outcome is therefore `CHARACTERISTIC-PROVED` at exactly the
+preregistered scope.
 
-## Exact local return
+## Exact return
 
 ```text
 ALL EXACT CERTIFICATES PASS: 20/20
@@ -125,8 +125,8 @@ Thus it converges uniformly on bounded lifted sets to
 PHOTON-TEMPORAL-CHARACTERISTIC [T], L5,
 ```
 
-subject to the remaining public integrity gate and a later separate Canon
-fold.
+with the public integrity gate now passed, and subject only to a later
+separate Canon fold.
 
 ## Audit disposition
 
@@ -145,18 +145,18 @@ occurred before a verifier process existed and carries no scientific verdict.
 
 ## Public status disposition
 
-Until the unchanged pull-request head passes both architecture jobs plus the
-aggregate and security checks:
+The public two-architecture computation gate is complete. This probe earns
+evidence for the complete proposed `D` tuple and conditional proof-first `T`
+theorem, but it does not directly edit the Registry or Canon. Therefore:
 
-- the public two-architecture computation gate is pending;
 - the public Registry and Canon remain unchanged;
 - `GATE-L2-L5-PHOTON-TEMPORAL-CHARACTERISTIC` remains open;
 - `PHOTON-CONE-CONVERGENCE [O]` remains open.
 
-After those checks, a separate sealed Canon fold may register the complete
-`D` tuple and conditional `T` theorem and close only the L2-to-L5 temporal
-characteristic gate. This probe itself makes no Canon, Registry, dependency,
-evidence, gate, frontier, release or workflow edit.
+A separate sealed Canon fold may now register the complete `D` tuple and
+conditional `T` theorem and close only the L2-to-L5 temporal characteristic
+gate. This probe itself makes no Canon, Registry, dependency, evidence, gate,
+frontier, release or workflow edit.
 
 ## Scope firewall
 
@@ -192,4 +192,8 @@ local exit:               0
 local stderr bytes:       0
 local stdout bytes:       1208
 local stdout SHA-256:     a317ee20f5060cce80aef535ebe3f55a1e74d422f4d619ece8978767bbc12645
+public workflow:          33447090686
+public x86_64 job:        99668497852 PASS
+public aarch64 job:       99668497583 PASS
+public aggregate job:     99668558513 PASS
 ```

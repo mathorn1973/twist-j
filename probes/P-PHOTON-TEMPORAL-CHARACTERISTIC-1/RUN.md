@@ -2,11 +2,11 @@
 
 Date: 2026-09-01
 
-Status: `LOCAL FORMAL EXECUTION PASS / PUBLIC X86_64+AARCH64 REPRODUCTION
-PENDING`
+Status: `FORMAL EXECUTION PASS / PUBLIC X86_64+AARCH64 REPRODUCTION PASS /
+AGGREGATE PASS`
 
-The flat fields below are the machine-readable local-leg record required by
-`tools/check_verifier.py`.
+The flat fields below are the machine-readable local and public aarch64 leg
+record required by `tools/check_verifier.py`.
 
 ```text
 pin_commit: fe5cbb4bc83dabd8e6704314e3b01c951e77cf42
@@ -21,6 +21,18 @@ stdout_bytes: 1208
 stdout_lines: 24
 stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 stderr_bytes: 0
+github_platform: Ubuntu 24.04.4 LTS
+github_architecture: aarch64
+github_python: CPython 3.12.14
+github_verifier_sha256: 3eecf0a389d084db9bc986a792adde247b54f23b405f82e2cf97730ea9e0b23e
+github_stdout_sha256: a317ee20f5060cce80aef535ebe3f55a1e74d422f4d619ece8978767bbc12645
+github_exit_code: 0
+github_stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+github_stderr_bytes: 0
+github_status: PASS
+github_verdict: VERIFY PASS
+github_byte_identity: PASS
+github_replay: PASS
 ```
 
 ## Authority and immutable pin
@@ -118,19 +130,45 @@ final LF. The clean detached checkout remained unchanged after execution.
 
 ## Reproduction disposition
 
-The local x86_64 record is complete. It does not alone claim the public
-two-architecture computation gate. The pull-request workflow must still run
-the unchanged verifier on its clean x86_64 and aarch64 jobs, reproduce the
-same committed stdout byte for byte, and pass the aggregate and security
-checks.
+Pull request #735 tested result head
+`442d66a1764650e49036f2eabd4e17cc427218b3` in public workflow
+`33447090686`. Both clean architecture jobs used CPython 3.12.14, exited zero,
+wrote empty stderr and reproduced the unchanged verifier hash and committed
+stdout hash exactly.
 
 ```text
-GitHub x86_64:           PENDING
-GitHub aarch64:          PENDING
-aggregate check:         PENDING
-security checks:         PENDING
+WORKFLOW = 33447090686
+EVIDENCE_HEAD = 442d66a1764650e49036f2eabd4e17cc427218b3
+TESTED_MERGE = 9b635c57468ba233142441c21c601e14e9673398
+
+X86_JOB = 99668497852
+X86_RESULT = success
+X86_PLATFORM = Ubuntu 24.04.4 LTS
+X86_ARCH = x86_64
+X86_PYTHON = CPython 3.12.14
+X86_VERIFIER_SHA256 = 3eecf0a389d084db9bc986a792adde247b54f23b405f82e2cf97730ea9e0b23e
+X86_STDOUT_SHA256 = a317ee20f5060cce80aef535ebe3f55a1e74d422f4d619ece8978767bbc12645
+
+ARM_JOB = 99668497583
+ARM_RESULT = success
+ARM_PLATFORM = Ubuntu 24.04.4 LTS
+ARM_ARCH = aarch64
+ARM_PYTHON = CPython 3.12.14
+ARM_VERIFIER_SHA256 = 3eecf0a389d084db9bc986a792adde247b54f23b405f82e2cf97730ea9e0b23e
+ARM_STDOUT_SHA256 = a317ee20f5060cce80aef535ebe3f55a1e74d422f4d619ece8978767bbc12645
+
+AGGREGATE_JOB = 99668558513
+AGGREGATE_RESULT = success
+AGGREGATE_TERMINAL = TWO-ARCHITECTURE CHECK PASS
+PUBLICATION_JOB = 99668498904
+PUBLICATION_RESULT = skipped as required for a pull request
 ```
 
-The proposed theorem status is proof-first from the self-contained exact
-proof in `PREREG.md`; the executable is its independent finite audit. No
-public Canon status or gate movement is claimed by this local record.
+Each architecture also passed repository policy, all 142 unit tests, Canon,
+ledger and gate-contract checks before reproducing the changed public probe.
+The aggregate job depended on both successful architecture jobs. The required
+public two-architecture computation gate is therefore complete.
+
+The theorem status remains proof-first from the self-contained exact proof in
+`PREREG.md`; the executable is its independent finite audit. This completed
+probe still makes no public Canon edit or gate movement by itself.
