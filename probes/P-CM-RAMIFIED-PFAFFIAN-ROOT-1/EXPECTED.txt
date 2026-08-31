@@ -1,0 +1,11 @@
+G1 PASS  q(a,b) mod 5 = (a+2b)^2 on all 25 residue pairs
+G2 PASS  discriminant audit: linear-square prime is uniquely 5; primes<=997 checked
+G3 PASS  unit quotient: R(phi)=2, image=F_5^*, kernel=< -phi^2 >
+G4 PASS  Pell parameter eta_k=phi^k through k=1024; written induction is all-k
+G5 PASS  R(Omega_k)=2^k and Pf(Omega_k)=R(Omega_k)^2=chi_5(R) through k=4096
+G6 PASS  R(Omega_s2(n))=Theta_n and orientation quotient through n<2^18
+G7 PASS  chronological C4 successor law matches 1-nu_2(n+1) through n<2^18
+G8 PASS  Pell shift flips Pfaffian sign and multiplies full phase by 2
+G9 PASS  J-pullback preserves Pfaffian and sends marked C4 phase R to -R
+G10 PASS direct Pfaffian reduction is QR-only; -Omega flips C4 phase, not orientation
+ALL PASS CM-RAMIFIED-PFAFFIAN-ROOT exact audit

@@ -1,0 +1,20 @@
+P-FCC-WEIGHTED-SHELL-REMAINDER-1 EXACT CERTIFICATE AUDIT
+G01 complete-shell-census-and-positive-weights PASS
+G02 weighted-cardinality-288 PASS
+G03 complete-quadratic-moment PASS
+G04 complete-quartic-moment PASS
+G05 complete-sextic-moment-including-mixed-zero PASS
+G06 scalar-second-derivative-chain PASS
+G07 scalar-evenness-initial-values-additive-identities PASS
+G08 nonnegative-even-monomial-M6-gap PASS
+G09 exact-normalization-and-global-bound-constants PASS
+G10 complete-support-lattice-D3-certificate PASS
+G11 exact-dual-basis-and-two-cosets PASS
+G12 scaling-degrees-two-four-six PASS
+G13 negative-weight-and-missing-vector-controls-rejected PASS
+G14 negative-scalar-sign-and-bound-constant-controls-rejected PASS
+G15 negative-dual-control-rejected-despite-same-residues PASS
+G16 negative-scaling-exponent-control-rejected PASS
+ALL EXACT CERTIFICATES PASS: 16/16
+Universal real-variable conclusions rest on the written proof.
+L2 ONLY; no carrier selection, temporal rule, phase, or physical photon.

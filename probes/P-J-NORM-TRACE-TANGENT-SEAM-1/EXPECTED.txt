@@ -1,0 +1,11 @@
+PASS G0: exact cyclotomic ring initialized
+PASS G1: norm derivative equals field trace on exact regular-representation audit
+PASS G2: split norm-one chart closes by one reciprocal coordinate
+PASS G3: integral trace-zero lattice is A3 and reduces exactly to W5
+PASS G4: real norm-one dimension 3 and integral-unit free rank 1 stay separate
+PASS G5: J lies on norm one with exact place moduli phi^-1 and phi
+PASS G5L: weighted log-modulus vector is (-2 log(phi), +2 log(phi))
+PASS G6: reciprocal refactorization preserves the matched product
+PASS B1-B3: degree, split-algebra and rank controls survive
+PASS B8: trace-zero and norm-one are tangent-related, not equal sets
+ALL PASS: public norm-one trace-tangent seam audit complete

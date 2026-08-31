@@ -1,0 +1,19 @@
+TWIST-J QDD repeatable pointer dephasing audit
+exact Fraction arithmetic; L4 only; no physical decoherence claim
+
+PASS 01 CARRIER        exact G inverse and complementary self-adjoint projectors
+PASS 02 HIGH-BASIS     r,f,g are an exact G-orthonormal basis of im(Q)
+PASS 03 PHASE-FIBRE    five rational phase representatives satisfy effects and repeatability
+PASS 04 POINTER-REDUCE orthogonal pointer contraction equals the two-branch channel on 5x16 audit basis
+PASS 05 DEPHASING      LOW/HIGH cross blocks vanish on the complete 5x16 audit basis
+PASS 06 TRACE          the reduced channel preserves matrix trace on the complete 5x16 audit basis
+PASS 07 CONTROL-N1     pointer overlap gamma=3/5 retains exactly 3/5 of the frozen cross block
+PASS 08 CONTROL-N2     effect-preserving nonrepeatable HIGH branch produces a nonzero cross block
+PASS 09 WITNESSES      source norm is 10 and both negative controls have explicit nonzero entries
+
+DATA phase_representatives=5 matrix_basis=16
+DATA control_n1_gamma=3/5 source_norm=10/1
+DATA control_n1_first_nonzero=(0,0)=9/40
+DATA control_n2_first_nonzero=(0,0)=105/256
+
+RESULT 9/9 ALL PASS

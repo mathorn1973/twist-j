@@ -1,0 +1,13 @@
+P-SO3-FINITE-ANISOTROPY-DEPTH-1
+G01 A4 harmonic depth=3 PASS
+G02 S4 harmonic depth=4 PASS
+G03 A5 harmonic void degrees 1..5 PASS
+G04 A5 harmonic degree 6 multiplicity=1 PASS
+G05 A4 Molien identity PASS
+G06 S4 Molien identity PASS
+G07 A5 Molien identity PASS
+G08 character-Molien harmonic agreement through degree 16 PASS
+G09 A5 Molien coefficients degree 0..16 PASS
+G10 A5 order-5 traces are phi and 1-phi PASS
+G11 A5 order-5 trace field is Q(sqrt5) PASS
+ALL PASS 11/11

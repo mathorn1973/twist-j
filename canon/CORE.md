@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v67. Normative authority and activation
+**Release identity:** Public Canon v72. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v67 also declares a discrete architecture. It does not
+Public Canon v72 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -48,9 +48,15 @@ D_clock  : dom(D_clock) subset K x MatterData x GeometryData
 ```
 
 Here `K` is the set of forward `U`-orbits. Decoder outputs never feed
-the state update. Totality, uniqueness, and completeness remain open;
-the public reading split is a dictionary at its registered legs
-(READING-SPLIT [D]), not a completeness theorem.
+the state update. The public theory may contain more than one
+admissible typed reading of the same substrate. Totality,
+classification of the admissible reading family, compatibility on
+overlaps, and physical completeness remain open. Global uniqueness is
+not a program requirement. Individual registered claims may still ask
+whether a particular operator, selector, reading leg, or restricted
+class is unique at its frozen scope. The public reading split is a
+dictionary at its registered legs (READING-SPLIT [D]), not a
+completeness theorem.
 `DEF-DECODER-COMPLETION-CONTRACT` supplies only the finite typed manifest
 shape against which a future candidate can be audited. Its optional
 factor-canonicity overlay freezes one stage, leg, scope, factor datum, and
@@ -83,7 +89,7 @@ TWO-PLACE-PHYSICS remains [D], and no live H or O row moves.
 <!-- BEGIN GENERATED CORE CLAIMS -->
 The stable orientation claims are generated from the registry:
 
-- READING-SPLIT [D]: the partial decoder interface reads the registered legs by linear projection, binary Thue-Morse cut, and quadratic registration; the linear leg is CODEC-TR4, the binary cut drives the census, and the quadratic leg is the Born square; no totality, uniqueness, or completeness of the decoder is claimed
+- READING-SPLIT [D]: the partial decoder interface reads the registered legs by linear projection, binary Thue-Morse cut, and the owner-adopted algebraic quadratic registration; the linear leg is CODEC-TR4, the binary cut drives the census, and the quadratic leg is ALGEBRAIC-DMATTER only on (K_QDD,D_quadratic) through D_QDD_direct; the quadratic registration is L1 algebraic data, not a physical effect, apparatus, realized event, occurrence law, sampling law or L6 measure, and no totality beyond K_QDD, other-leg closure, uniqueness, or completeness of the decoder is claimed
 - J-UNIT [T]: Q(zeta_5)
 - J-PROJECTIONS [T]: in the principal archimedean embedding, J = 1 + zeta_5^2 has modulus 1/phi and principal argument 2 pi/5
 - PLENUM-POINT [T]: in Z[i, zeta_5], T_pl = s_J + i phi = 2i(1 - J), with s_J^2 = 3 - phi, abs(T_pl) = 2, arg(T_pl) = 3 pi/10, zeta_5 T_pl^2 + 4 = 0, T_pl^10 = -2^10, and T_pl/2 = zeta_20^3 = zeta_4^-1 zeta_5^2

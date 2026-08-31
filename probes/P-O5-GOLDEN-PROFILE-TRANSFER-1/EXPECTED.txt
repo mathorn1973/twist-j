@@ -1,0 +1,9 @@
+G01 PASS Lucas cutoff recurrence and residue 5-cycle
+G02 PASS lower cutoff forcing and order-seven transfer
+G03 PASS exact golden skew-product multiplication
+G04 PASS arbitrary-profile kernels and Lucas thresholds
+G05 PASS scalar shell-mass closure no-go
+G06 PASS actual nu Q values and recurrence failure
+G07 PASS breakers B1-B5 frozen witnesses
+G08 PASS exact-quadratic stdlib AST firewall
+VERIFY RESULT 8/8 ALL PASS

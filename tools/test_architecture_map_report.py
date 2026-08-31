@@ -24,18 +24,18 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 336)
+        self.assertEqual(self.report.claims, 346)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 33, "D": 43, "F": 17, "H": 2, "O": 28, "T": 213},
+            {"C": 33, "D": 44, "F": 17, "H": 2, "O": 29, "T": 221},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 45,
+                "none": 47,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 251,
+                "two-architecture": 259,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,9 +43,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 178)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 236
+            len(self.report.transitive_architecture_dependents), 240
         )
-        self.assertEqual(len(self.report.dependency_terminals), 50)
+        self.assertEqual(len(self.report.dependency_terminals), 52)
         self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
         self.assertNotIn(
             "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
@@ -57,6 +57,42 @@ class ArchitectureMapReportTests(unittest.TestCase):
         )
         self.assertIn(
             "DEF-DQRC-INTEGER-CENSUS", self.report.dependency_terminals
+        )
+        self.assertIn(
+            "SO3-FINITE-ANISOTROPY-MAXIMUM",
+            self.report.dependency_terminals,
+        )
+        self.assertNotIn(
+            "SO3-FINITE-ANISOTROPY-MAXIMUM",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "SO3-FINITE-ANISOTROPY-MAXIMUM",
+            self.report.transitive_architecture_dependents,
+        )
+        self.assertIn(
+            "FCC-WEIGHTED-SHELL-SYMBOL", self.report.dependency_terminals
+        )
+        self.assertNotIn(
+            "FCC-WEIGHTED-SHELL-SYMBOL",
+            self.report.transitive_architecture_dependents,
+        )
+        for claim in (
+            "PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP",
+            "PHOTON-MASSLESS-PHASE",
+        ):
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+            self.assertIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+            self.assertNotIn(claim, self.report.dependency_terminals)
+        self.assertNotIn(
+            "PHOTON-CONE-CONVERGENCE",
+            self.report.direct_architecture_requires,
+        )
+        self.assertNotIn(
+            "PHOTON-CONE-CONVERGENCE",
+            self.report.transitive_architecture_dependents,
         )
         self.assertIn(
             "DE-W-CONSTANT", self.report.direct_architecture_requires
@@ -192,6 +228,25 @@ class ArchitectureMapReportTests(unittest.TestCase):
             "CM-ALTERNATING-PENCIL",
             self.report.transitive_architecture_dependents,
         )
+        for claim in (
+            "CM-ALTERNATING-PRIMARY-LATTICE-SEAM",
+            "CM-REAL-DIFFERENT-PRIMARY-SEAM",
+            "CM-PERIOD-LATTICE-NONSELECTION",
+        ):
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+            self.assertNotIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+            self.assertNotIn(claim, self.report.dependency_terminals)
+        for claim in (
+            "RAMIFIED-TM-SYMPLECTIC-ORIENTATION",
+            "CM-RAMIFIED-PFAFFIAN-ROOT",
+        ):
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+            self.assertIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+            self.assertNotIn(claim, self.report.dependency_terminals)
         self.assertNotIn(
             "J-HARMONIC-SEAM",
             self.report.direct_architecture_requires,

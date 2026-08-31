@@ -8,9 +8,11 @@ Canon fold; the theorem/dictionary boundary checks stay structural.
 
 The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/DEPENDENCIES.tsv`, `canon/EVIDENCE.tsv`, `canon/HISTORY.tsv`,
-`canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`, and the
-minimal-reproduction directory inventory, uses the Python standard library,
-and emits deterministic text. Its sixty checks cover the current
+`canon/GATES.tsv`, `canon/FRONTIER_PROGRAMS.tsv`, `canon/CORE.md`,
+`canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
+v70 successor-manifest package, and the minimal-reproduction directory
+inventory, uses the Python standard library,
+and emits deterministic text. Its sixty-four checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -65,6 +67,43 @@ theorems, one falsified universal transfer with its fired witness
 147965 = 5.101.293, and two finite classifications at computation grade, all
 on the shared public two-architecture probe, with no dependencies, no gates,
 no frontier queue entries, and no physical or higher-layer lift.
+The v69 check pins the focused five-row CM lattice and ramification fold at
+T and L1 on its five frozen two-architecture public-probe bundles. It requires
+the exact Registry rows and scope hashes, all fourteen dependency edges, all
+five lifecycle declarations, no gate, Frontier or scheduler ownership by
+those rows, and the unchanged CORE-selection ledger. It keeps the additive order-five seam, the
+nonreduced order-25 resultant layer, and the marked multiplicative C4 phase
+distinct; treats `Per_Z` only as an integral image subgroup; and admits no
+action, physical phase, SI, decoder, or L2-L6 bridge.
+The v70 check consumes the frozen successor manifest without creating new
+scientific evidence. It requires the old composite
+`QUADRATIC-DECODER-DATA` obligation to be terminally retired as a split, the
+new owner-selected `ALGEBRAIC-DMATTER` dictionary to remain at the `D` ceiling
+on exactly `(K_QDD,D_quadratic)`, and every physical identifier and sampling
+debt to remain unresolved on `QDD-INSTRUMENT-APPARATUS` at `O/STOP`. It pins
+the exact dependency transfer, six lifecycle rows, targeted gate and CORE
+selection non-ownership, and the permanent direct-write firewall.
+The v72 check pins two exact photon boundary theorems and two open successor
+roots. `FCC-WEIGHTED-SHELL-SYMBOL` remains a theorem at L2 and the exact
+finite-coupling Wilson/Villain nonmembership remains a theorem at L4, both on
+their frozen two-architecture public probes. `PHOTON-CONE-CONVERGENCE` and
+`PHOTON-MASSLESS-PHASE` remain `O/MULTI` and `ROOT/STOP/FORMAL` under the
+single `PHOTON_CONTINUUM` program, with exactly seven dependencies and three
+named `OPEN_LIFT` gates. Full dependency bases, incoming-consumer boundaries,
+gate decision rows and lifecycle rationales are exact-pinned, and the Canon
+prose firewalls remain explicit. The complete 4569-byte photon insertion from
+the FCC heading to the electron paragraph is pinned by SHA-256, so additional
+positive prose cannot hide beside the required negative phrases. The check
+keeps direct finite-coupling nonmembership as a boundary rather than a
+massless-phase closure, keeps both
+older Kappa rows at `F`, admits no roughening row, and creates no CORE
+selection or
+physical-photon conclusion.
+The v68 check pins the complete finite SO(3) harmonic-depth classification at
+T and L1 on its proof-first two-architecture public probe. It requires the
+exact scope and lifecycle hashes, no dependency, gate, frontier or core
+ownership, and the explicit firewall against boost, Lorentz-density, J,
+physical p=5, decoder, measure, dynamics and every higher-layer selection.
 The v67 check pins eight new theorem-grade rapidity and ideal rows to their
 three exact public-probe bundles and seventeen declared dependency edges, while
 the distinguished trivial-evaluation transfer remains an inline open
@@ -78,7 +117,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 60/60 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 64/64 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -99,9 +138,44 @@ determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
 
+The current v72 count check reads 346 claims, 23 reproductions, 14 gates and
+639 dependency edges. The active partition is T221/D44/C33/H2/O29/F17, so
+the live H+O count is 31 and the two-architecture evidence count is 259.
+`V72-PHOTON` requires the four new rows to retain their exact Registry,
+Normative, Evidence and lifecycle contracts, the exact seven-edge topology,
+the two open Frontier roots and the three open lifts. It also requires the
+two theorem rows to own neither a gate nor a program, leaves the old Kappa
+failures terminal, and keeps roughening unregistered.
+
+The v70 count check reads 342 claims, 23 reproductions, 11 gates and 632
+dependency edges. The active partition is T219/D44/C33/H2/O27/F17, so the
+live H+O count is 29 and the two-architecture evidence count remains 257.
+`V70-QDD-SPLIT` requires `QUADRATIC-DECODER-DATA` to be absent from every
+active ledger and preserved by its terminal `RETIRE` row, requires
+`ALGEBRAIC-DMATTER` to be `DICTIONARY/D/L1` with inline scope evidence, no
+gate, no Frontier row and exactly nineteen algebraic dependencies, and
+requires `QDD-INSTRUMENT-APPARATUS` to stay `OBLIGATION/O/MULTI` and
+`DECODER_CORE/FOLLOWUP/STOP/FORMAL`. The algebraic writer is referenced by
+`READING-SPLIT`; the apparatus alone carries the transferred physical debt,
+including unresolved effects, instruments, physical carrier, ready phase,
+context, coupling, pointer, reduction, complete-family equality,
+certificates, realized outcomes, event semantics, occurrence law, post-state
+instruments, persistence/reset, zero-support semantics and the L1-to-L5 gate.
+No `PHYSICAL-DMATTER` claim, physical alias, L6 measure or new gate is created.
+
+The v69 count check reads the focused five-row fold (342 claims, 23 reproductions, 11 gates, 630 dependency edges). V69-CM requires CM-ALTERNATING-PRIMARY-LATTICE-SEAM, CM-REAL-DIFFERENT-PRIMARY-SEAM, RAMIFIED-TM-SYMPLECTIC-ORIENTATION, CM-RAMIFIED-PFAFFIAN-ROOT, and CM-PERIOD-LATTICE-NONSELECTION to remain T at L1 on their five frozen two-architecture bundles, with exact Registry rows, scope and lifecycle hashes, fourteen exact REQUIRES edges, and no gate, Frontier, scheduler or CORE-selection ownership by those claims. It preserves the marked C4 and algebraic-period nonselection firewalls and creates no action or higher-layer bridge. The v70 split changes only the unrelated QDD Frontier accounting. The v69 aggregate partition was T219/D43/C33/H2/O28/F17, with 30 live H+O rows and 257 two-architecture evidence rows.
+
+The v68 count check reads the one-row fold (337 claims, 23 reproductions, 11 gates, 616 dependency edges). V68-SO3 requires SO3-FINITE-ANISOTROPY-MAXIMUM to remain T at L1 on its frozen two-architecture bundle, with the exact scope and declaration hashes, no dependency, gate, frontier or core-selection ownership, and no promotion from finite-rotation representation theory into Lorentz, axiom, physical-prime, decoder, measure, dynamics or higher-layer claims. The aggregate partition is T214/D43/C33/H2/O28/F17, the live H+O count remains 30, and the two-architecture evidence count becomes 252.
+
 The v67 count check reads the consolidated tree (336 claims, 23 reproductions, 11 gates, 616 dependency edges). V67-RAPIDITY requires the eight exact rapidity and ideal rows to stay T at L1 with their three frozen two-architecture bundle hashes, exact dependency sets, lifecycle declarations, and no gate or frontier ownership. TRIVIAL-RAPIDITY-EVALUATION-BRIDGE stays O at NOT_APPLICABLE with inline scope-hash evidence and the ENRICHMENT/ROOT/STOP/ENRICHMENT program tuple; its single edge to the integral lift preserves both the diagonal growing-mode and non-diagonal kernel routes without claiming cancellation. DE-W-CONSTANT moves H to F only on the exact P-DE-W-ARMING-2 witness at its explicit L6 reading-only layer, leaves its three edges and two neighboring rows fixed, and leaves the frontier queue. The aggregate partition is T213/D43/C33/H2/O28/F17, so the live H+O count remains 30 and the two-architecture count becomes 251. The permanent QDD direct-write firewall remains enforced.
 
-The v66 count check read the maintenance tree (327 claims, 23 reproductions, 11 gates, 599 dependency edges). The V66-QDD-WIRING check requires QUADRATIC-DECODER-DATA to carry exactly nineteen REQUIRES edges: its five inherited lineage edges and the fourteen new edges to the DEF-QDD-* definitions its STOP clause names. It requires the row to stay O with an empty gate slot, no gate to name it as owner, its DECODER_CORE/ROOT/STOP program row to be unchanged, and HISTORY to release no row under canon-v66. It also requires the fourteen new edges to leave the row only, so the transitive closure of DEF-QDD-DIRECT-WRITE acquires no factor-side object. No claim, status, scope, evidence pointer, gate or science count moves. The permanent QDD direct-write firewall remains enforced.
+The v66 maintenance fold originally wired the then-open composite to nineteen
+inputs without moving a status. At v70, `V66-QDD-WIRING` verifies the durable
+successor invariant instead: all active predecessor edges are gone, exactly
+nineteen algebraic edges are transferred to `ALGEBRAIC-DMATTER`, the physical
+`MEASURE-BORN-VERB` lineage is not inherited, and the transitive closure of
+`DEF-QDD-DIRECT-WRITE` still acquires no factor-side object. The v66 release
+still has no lifecycle row; the separate v70 lifecycle records the split.
 
 The v65 count check reads the two-row fold (327 claims, 23 reproductions, 11 gates). The V65-RESIDUE check pins J-RESIDUE-PERIOD and J-RESIDUE-COLLAPSE-FIVE at T and L1 to the completed two-architecture public probe, their exact scope hashes, the two declared edges of the period row to J-UNIT and J-STEP, the single edge of the collapse row to the period row, and no gate or frontier ownership. The period row carries the word rational in its scope, leaves the inert prime two to J-BINARY-NORM-INDEX, and excludes archimedean, automaton, spectrum, selector, decoder, physical and higher-layer claims. The permanent QDD direct-write firewall remains the final check.
 
@@ -125,7 +199,7 @@ The v56 count check reads the folded tree (287 claims, 23 reproductions, 10 gate
 
 The historical v55 fold introduced DE-W-CONSTANT at H on its completed two-architecture arming bundle, with NOT_APPLICABLE layer, the COSMOLOGY/FOLLOWUP/BLOCKED/EMPIRICAL tuple, and exactly three dependency edges. The current v67 audit supersedes those live-status and program assertions: the immutable R1 rule has fired, so the row is F and absent from the frontier queue while the three edges, COSMOLOGY-REGISTER at D, DE-CONFORMAL-WEIGHT at O, and NS-TILT at H remain fixed. No gate is owned by the row.
 
-The v54 count check reads the folded tree (279 claims, 23 reproductions, 10 gates). The new DQRC check pins one exact L1 definition, five L1 theorem rows, their fourteen dependency edges and shared two-architecture public probe bundle. It requires the determinant/comparator census, external pure-qubit reencoding, coefficient nonselection, origin nonselection and corrected field boundary while preserving BELL-CAUSAL-ACCOUNTING, both QDD obligations, the decoder obligation, the existing Bell and pure-qubit theorems, both silver rows and TWO-PLACE-PHYSICS at their prior statuses. It forbids a physical DQRC row and leaves P-DQRC-FINITE-DEFICIT-1 unauthorized. The permanent QDD direct-write firewall remains the final check.
+The v54 count check reads the folded tree (279 claims, 23 reproductions, 10 gates). The new DQRC check pins one exact L1 definition, five L1 theorem rows, their fourteen dependency edges and shared two-architecture public probe bundle. It requires the determinant/comparator census, external pure-qubit reencoding, coefficient nonselection, origin nonselection and corrected field boundary while preserving BELL-CAUSAL-ACCOUNTING, the QDD apparatus obligation, the algebraic QDD dictionary boundary, the decoder obligation, the existing Bell and pure-qubit theorems, both silver rows and TWO-PLACE-PHYSICS at their prior statuses. It forbids a physical DQRC row and leaves P-DQRC-FINITE-DEFICIT-1 unauthorized. The permanent QDD direct-write firewall remains the final check.
 
 The v53 count check reads the folded tree (274 claims, 23 reproductions, 10 gates). Four new checks pin the two QPAIR determinant-area theorems and definitions; the rational piston reshape, occurrence-weight boundary and lift census; the conditional pure-two-qubit theorem/dictionary split on the corrected two-architecture bundle; and the independent inline BELL-CAUSAL-ACCOUNTING O/STOP contract with exactly its two BOUNDED_BY edges and QUANTUM_EM frontier tuple. The permanent QDD direct-write firewall remains the final check.
 
@@ -147,6 +221,15 @@ The v50 count check reads the folded tree (249 claims, 23 reproductions, 10 gate
 
 The v49 count check reads the folded tree (246 claims, 23 reproductions, 10 gates). The new QDD-NONSELECTION check pins the theorem at L4 on the completed two-architecture public probe, its self-contained frozen inputs and absence of dependency, gate or frontier ownership. It requires the injective rational post-state family at fixed effects, weights and C = 0, rational orthogonal-dilation nonselection, target-control circularity and the positive-root mathematics-only boundary. QDD-INSTRUMENT-APPARATUS stays O at DECODER_CORE/FOLLOWUP/STOP with exactly O2 independent physical instrument selection and O1 realized event generation / sampling. SAMPLING NOT PROVIDED; no L5 stream, L6 measure or decoder completion.
 
-The v48 count check reads the folded tree (245 claims, 23 reproductions, 10 gates). The CENTRAL, CM-2I and J-SEAM checks are unchanged and keep reading QUADRATIC-DECODER-DATA as an open obligation. The new QDD-ROUTE-A check requires the three L1 theorems on two-architecture qdd-route-a evidence, the separate apparatus obligation at DECODER_CORE/FOLLOWUP/STOP, QUADRATIC-DECODER-DATA still O with its ROOT/STOP program row, the absence of any Born-readout row, effect-selection bridge or L1-L6 gate, and the exact scope phrases of the factorization, the projector pair and the slot boundary. The new QDD-DIRECT-FIREWALL check computes the transitive closure of DEF-QDD-DIRECT-WRITE in canon/DEPENDENCIES.tsv and requires it to be exactly the domain, the balanced piston, the amplitude, the coefficient data, the trace pairing, the LOW LINE and the record schema, with no factor-side object.
+The v48 fold introduced the three Route A L1 theorems on two-architecture
+`qdd-route-a` evidence and separated the apparatus at
+`DECODER_CORE/FOLLOWUP/STOP`. At v70, the CENTRAL, CM-2I, J-SEAM and
+QDD-ROUTE-A checks consume the terminal split: the old composite is inactive,
+the algebraic dictionary is `D/L1`, and the physical apparatus remains
+`O/STOP`, with no physical-readout row or cross-layer gate. The
+QDD-DIRECT-FIREWALL check still computes the transitive closure of
+`DEF-QDD-DIRECT-WRITE` and requires exactly the domain, balanced piston,
+amplitude, coefficient data, trace pairing, LOW LINE and record schema, with
+no factor-side object.
 
 The v47 count and TM-SYM2 checks additionally require the two new L5 definition rows, the retired MEASURE frontier entry, the DICTIONARY_LIFT gate, the public Born-halving probe evidence, and the explicit absence of GYRON-DENSITY as a dependency of the physical six-line measure.

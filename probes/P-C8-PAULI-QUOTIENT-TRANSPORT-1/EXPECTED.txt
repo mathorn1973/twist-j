@@ -1,0 +1,8 @@
+G1 PASS: two left-Z classes; extra X-frame equivalence would merge them
+G2 PASS: beta_plus(2)=i fixes one extension orbit, not one C8 lift
+G3 PASS: existing bilinear shadow descends exactly; all outputs lie in mu4
+G4 PASS: even total degree descends; every odd-total-degree scalar separates branches
+G5 PASS: fixed one-copy Z-blind linear reads are diagonal and phase-blind; gates differ
+G6 PASS: common-branch two-use XY read separates orientations; independent branches fail
+G7 PASS: Frobenius is not complex conjugation; transport preserves no Born norm or field sum
+RESULT 7/7 ALL PASS: conditional L1 readout transport only; no physical gauge or qubit bridge
