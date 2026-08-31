@@ -1,6 +1,6 @@
 # P-CARRY-C8-QUANTUM-PHASE-BRIDGE-1 result
 
-Status: **SCIENTIFIC RESULT; LOCAL EXACT RUN PASS; REQUIRED TWO-ARCHITECTURE WORKFLOW PENDING; PUBLIC CLAIM UNREGISTERED**
+Status: **SCIENTIFIC RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS; PUBLIC CLAIM UNREGISTERED**
 
 ## Recorded decision
 
@@ -11,7 +11,7 @@ stderr:  empty
 stdout:  byte-identical to EXPECTED.txt
 ```
 
-No preregistered falsifier fired in the recorded local execution. This is an L1 algebra/operator result only. It changes no Canon, Registry, Frontier, dependency, dictionary, physical claim, or status row.
+No preregistered falsifier fired. The required public workflow reproduced the probe successfully on both x86_64 and aarch64 and its aggregate `check` passed. This is an L1 algebra/operator result only. It changes no Canon, Registry, Frontier, dependency, dictionary, physical claim, or status row.
 
 ## Independent exact proof
 
@@ -92,6 +92,24 @@ result:               ALL FROZEN GATES PASS
 ```
 
 `EXPECTED.txt` is the exact stdout of this execution. The frozen `PREREG.md` and `verify.py` remain byte-identical to the public pin.
+
+## Required two-architecture workflow
+
+```text
+pull request:          717
+formal evidence head: 9380e9767c1c62183efecd85f2048f7922098784
+workflow run:          33374960000
+x86_64 job:            99434265658  success
+aarch64 job:           99434266171  success
+aggregate check job:   99434329352  success
+verifier SHA-256:      9d4f025257c60878225880bcf656381dd2dcdaad75c4017862a8c159d7c55fcc
+stdout SHA-256:        3b2676d3840765918771680d25998afcf95c91861c24fb1da5a18d183ef528dc
+stdout bytes/lines:   478 / 7
+byte identity:         PASS against committed EXPECTED.txt
+gate:                  PASS
+```
+
+Both architecture jobs passed repository policy, unit tests, Canon checks, ledger checks, gate-contract checks, and `Reproduce changed public probes`. The aggregate job reported the two-architecture check as successful. `RUN.md` remains the neutral local execution record; this close-gate commit changes only `RESULT.md`.
 
 ## Auxiliary breaker
 
