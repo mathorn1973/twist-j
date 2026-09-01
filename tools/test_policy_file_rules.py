@@ -12,8 +12,8 @@ from tools.policy_file_rules import (
 
 
 class PolicyFileRulesTests(unittest.TestCase):
-    def test_exact_twenty_public_transcripts_are_allowed(self) -> None:
-        self.assertEqual(len(PUBLIC_PROBE_TRANSCRIPTS), 20)
+    def test_exact_thirty_two_public_transcripts_are_allowed(self) -> None:
+        self.assertEqual(len(PUBLIC_PROBE_TRANSCRIPTS), 32)
         for path in PUBLIC_PROBE_TRANSCRIPTS:
             with self.subTest(path=path):
                 self.assertFalse(is_forbidden_repository_file(path))
@@ -28,6 +28,9 @@ class PolicyFileRulesTests(unittest.TestCase):
             "probes/P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/L6_cold_r1.log.bak",
             "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/primal_L6_cold_r2.log",
             "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L6_cold_r3.jsonl",
+            "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/primal_L6_cold_r2.log",
+            "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/dual_L6_cold_r3.jsonl",
+            "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/dual_L6_surface_r1.jsonl",
         )
         for path in rejected:
             with self.subTest(path=path):

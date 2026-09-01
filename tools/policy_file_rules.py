@@ -49,6 +49,18 @@ PUBLIC_PROBE_TRANSCRIPTS = frozenset(
         "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L8_cold_r2.jsonl",
         "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L8_surface_r1.jsonl",
         "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L8_surface_r2.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/primal_L6_cold_r1.log",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/primal_L6_hot_r1.log",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/primal_L8_cold_r1.log",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/primal_L8_hot_r1.log",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/dual_L6_cold_r1.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/dual_L6_cold_r2.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/dual_L6_stratified_r1.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/dual_L6_stratified_r2.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/dual_L8_cold_r1.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/dual_L8_cold_r2.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/dual_L8_stratified_r1.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-2/dual_L8_stratified_r2.jsonl",
     }
 )
 
