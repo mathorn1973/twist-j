@@ -9,4 +9,3 @@ V4 fixed=(3:-2,5:-1,7:2) densities=(1/4,3/4,0-unramified-inert)
 P5 ordered=(x^2-2,x^2-3) i=(2,3) sigma5=within sigma7=swap
 P5_UNITS full=C24xC24 swap-norm-one=C24 marking=external-[D]
 EXECUTED_SHA256 0aa69d8280b02a081023d40eebf95808875c786db50894f971e79c0ed14b6b25 pin=matched
-
