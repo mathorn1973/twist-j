@@ -1,6 +1,6 @@
 # P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1 result
 
-Status: **candidate-T / L1 / CONFIRMED LOCALLY / PUBLIC CANON UNCHANGED**.
+Status: **candidate-T / L1 / TWO-ARCHITECTURE COMPUTATION GATE PASS / PUBLIC CLAIM UNREGISTERED**.
 
 The first and only local formal execution of the immutable public verifier
 exited zero, wrote empty stderr, and produced the exact 946-byte committed
@@ -15,8 +15,20 @@ CONFIRMED          SELECTED LOCALLY
 SCIENTIFIC-FIRED   NOT SELECTED
 STOP               NOT SELECTED
 ABANDONED-PIN      NOT SELECTED
-ARCHITECTURE GATE  PENDING
+ARCHITECTURE GATE  PASS
 ```
+
+GitHub workflow run `33566203534` independently replayed the committed
+verifier from clean checkouts. Job `100049844531` (`architecture-x86_64`)
+and job `100049844150` (`architecture-aarch64`) both reported
+
+```text
+VERIFY PASS P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1 d166b47b1e3c7f9ae517e04bf033c6c79a5f66f400eff88c241edd8c50805c74 07e9abad023a504f256f45da3d21b647ccf830327dd4316fb28137b4ee232764
+```
+
+Thus both architectures reproduced the same frozen verifier and exact
+committed `EXPECTED.txt` bytes. Aggregate job `100049922920` passed and
+publication job `100049845380` was correctly skipped.
 
 ## Candidate mathematical scope
 
@@ -33,6 +45,6 @@ about invariant measures, Haar measure, `A_A`, decoders, event streams,
 physical time reversal, arrows of time, trials, or observations. Natural
 extension coordinates are auxiliary L1 states, not L5 records.
 
-The required GitHub x86_64/aarch64 byte-identity gate and manual security
-review remain open. Active `[T]` status, dependencies, and any Canon text
-belong only to a separately reviewed v75 fold.
+The public two-architecture evidence package is complete. This result still
+does not register or promote the claim. Active `[T]` status, dependencies,
+and any Canon text belong only to a separately reviewed v75 fold.
