@@ -1,0 +1,13 @@
+{"bitstream":"PASS","development_only":true,"detailed_balance_orbits":"PASS","formal_firewall":"PASS","lattice_L3":"PASS","lattice_L4":"PASS","sha256":"PASS","state_2bit_base64":"PASS","swap_score_table":"PASS","type":"selftest"}
+{"bitstream":"PASS","development_only":true,"detailed_balance_orbits":"PASS","lattice_L3":"PASS","lattice_L4":"PASS","sha256":"PASS","swap_score_table":"PASS","type":"selftest"}
+ENGINE_SELFTEST status=PASS
+ENGINE_PARITY L=3 start=cold checkpoints=24 common_sha256=0ff4ed5de0995479c7c821b86df0949f41b64ad1aecb3c2e8bb1191b257b835a packed_stream_sha256=151e73affe369bd6af31a907347c19bd871fca9e2daba7d42a153611e7591167 status=PASS
+ENGINE_PARITY L=4 start=stratified checkpoints=24 common_sha256=28563b695469bf5a4b9986b0422fda6b8477c4fa6b6164c0530aab4377505917 packed_stream_sha256=353875e0b9d6e16c6303654bb7e094c2d108bb47f4ba1cb3f74b33a4eccd841b status=PASS
+ENGINE_FIREWALL formal_seed_values=8 alias_spellings=2 development_L_max=4 status=PASS
+STATE_READER_FIXTURE L=2 support=4 H2=1,0,0,0,0,0 j_nnz=0 status=PASS
+STATE_READER_FIXTURE L=3 support=21 H2=0,0,0,0,0,0 j_nnz=4 j2_sum=4 status=PASS
+STATE_READER_CORRUPTION_GATES count=7 status=PASS
+INHERITED_WARD_CONTRACT sources=4 families=4 primal_block=32 primal_samples=512 status=PASS
+AUDIT_SELECTION checkpoints=2048 stride=16 frames=128 includes_2048=YES status=PASS
+OUTPUT_BOUND upper_bytes=4940504 max_bytes=5000000 audit_stride=16 status=PASS
+STATE_READER_FIXTURE PASS
