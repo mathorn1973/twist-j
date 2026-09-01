@@ -1,17 +1,16 @@
 # P-JIPC-WP3D-QPOS-MELLIN-1 result
 
-Status: **candidate-T / L1 / ARCHITECTURE-GATE-PENDING / PUBLIC CANON STATUS UNCHANGED.**
+Status: **candidate-T / L1 / JIPC-WP3D-QPOS-MELLIN-CONFIRMED / PUBLIC CANON STATUS UNCHANGED.**
 
-Here `candidate-T` names the provisional theorem ceiling carried by the
-written proof; it does not select the frozen `CONFIRMED` decision while the
-architecture gate is pending.
+The frozen `CONFIRMED` decision is now selected at candidate-T / L1. This is
+not an active public `[T]` row: any Canon or Registry treatment remains a
+separately claimed and sealed fold.
 
 The first and only local formal execution of the immutable public verifier
 exited zero, wrote empty stderr, and produced the exact 365-byte committed
 `EXPECTED.txt`. All four scientific audit gates passed, all PASS-candidate
 integrity gates passed, and all 23 named negative mutations were rejected at
-their guards. No
-frozen scientific falsifier fired and no threshold moved.
+their guards. No frozen scientific falsifier fired and no threshold moved.
 
 ## Local formal result
 
@@ -26,21 +25,62 @@ last line:        RESULT PASS
 theorem carrier:  WRITTEN_PROOF_NOT_FINITE_AUDIT
 ```
 
-The public readback and FZ7 receipt is recorded on claim-lock issue #777. The
-first public workflow attempt, run `33562354298`, passed policy, unit, Canon,
-Ledger and gate-contract checks on both architectures but stopped in
-`check_verifier.py` before either verifier replay because the initial
-`RUN.md` command field contained the deterministic wrapper instead of the
-required portable spelling. The aggregate check consequently failed. The
-metadata correction is recorded in `RUN.md`; no verifier was rerun and no
-pinned or stdout byte changed. The required GitHub Python 3.12 x86_64 and
-aarch64 replays and successful aggregate `check` have not yet completed, so
-`CONFIRMED` is not selected by this pre-architecture record.
+The public readback and FZ7 receipt is recorded on claim-lock issue #777.
 
-## Provisional decision
+## First workflow disposition
+
+The first public workflow attempt, run `33562354298`, passed policy, unit,
+Canon, Ledger and gate-contract checks on both architectures but stopped in
+`check_verifier.py` before either verifier replay because the initial
+`RUN.md` command field contained the deterministic environment wrapper instead
+of the required portable spelling. The aggregate check consequently failed.
+The additive metadata correction is recorded in `RUN.md`; no verifier was
+rerun and no pinned or stdout byte changed. This pre-replay schema stop is
+preserved as provenance, not relabelled as a scientific result.
+
+## GitHub two-architecture close gate
 
 ```text
-CONFIRMED          PENDING — ARCHITECTURE GATE
+pull request:         778
+tested head:          d577c91747bb9d9b78b83ac679ee96f417a3b9ac
+checked merge:        f8e61513c2c96a173c468e0bea8145a07eb39e9d
+workflow run:         33562924835, SUCCESS
+
+x86_64 job:           100039411536, SUCCESS
+aarch64 job:          100039411248, SUCCESS
+aggregate job:        100039502905, SUCCESS
+aggregate result:     TWO-ARCHITECTURE CHECK PASS
+publication:          SKIPPED (correct for a pull request)
+
+workflow Python:      3.12.14
+verifier SHA-256:     238e587f1343e7fef07505e9bd6c8f75c9edf6a1efdeb98989f35ee5285151c0
+stdout SHA-256:       f0a46170e5a8958fb953ab782a00353720ae7178fdc461dd8a189ca06683f554
+stdout bytes/lines:   365 / 10
+exit/stderr:          0 / empty on both verifier legs
+byte identity:        PASS on x86_64 and aarch64
+```
+
+Both architecture jobs also passed repository policy, all 148 tool unit
+tests, Public Canon v74 with 352 claims, the public Ledger and the gate-contract
+check. Each emitted the exact `VERIFY PASS` line with the frozen verifier and
+stdout hashes. Aggregate `check` passed.
+
+`RUN.md` remains the neutral historical record of the sole local formal leg
+and its pre-close architecture state; this `RESULT.md` is the close-gate
+record for the public workflow receipts and frozen decision.
+
+Manual named-file security and theorem-scope review passed: the five-file
+probe tree is confined to one probe directory; the pinned files and
+`EXPECTED.txt` retain their public blobs; the verifier has its one frozen
+`Fraction as Fr` import, exact arithmetic, no forbidden dynamic or external
+I/O, and all 23 controls remain wired to their named guards. This close-gate
+update changes only `RESULT.md`; the unchanged verifier and `EXPECTED.txt`
+must pass the complete pull-request workflow again on this update.
+
+## Frozen decision
+
+```text
+CONFIRMED          SELECTED
 SCIENTIFIC-FIRED   NOT SELECTED
 BOUNDED-AUDIT-C    NOT SELECTED
 STOP               NOT SELECTED
@@ -49,9 +89,9 @@ ABANDONED          NOT SELECTED
 
 The theorem-grade carrier is the self-contained written proof Q1-Q8 in
 `PREREG.md`; the finite verifier is an exact audit, not a sampled replacement
-for the universal arguments. The bounded fallback is therefore not selected
-at this stage, but final `CONFIRMED` remains conditional on the frozen
-two-architecture byte-identity gate and manual security review.
+for the universal arguments. The frozen two-architecture byte-identity gate
+and manual security review are complete, so the bounded fallback is not
+selected.
 
 ## Candidate mathematical scope
 
@@ -81,7 +121,7 @@ The verifier is zero-input and its sole import is
 variables recorded in `RUN.md`; a separate preflight checked clean Python
 startup. Interpreter, standard-library and operating-system behavior remain
 trusted. The public-pin checkout contained no `fractions.py`,
-`sitecustomize.py` or `usercustomize.py` shadow file. The pending GitHub jobs
+`sitecustomize.py` or `usercustomize.py` shadow file. The completed GitHub jobs
 are independent replays, not operating-system sandbox proofs.
 
 ## Scope firewall
