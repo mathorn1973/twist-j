@@ -7,8 +7,16 @@ import subprocess
 
 try:  # pragma: no cover - import shim, see check_ledger.py
     from tools import probe_records as _records
+    from tools.policy_file_rules import (
+        is_forbidden_repository_file,
+        public_transcript_integrity_problem,
+    )
 except ImportError:  # pragma: no cover
     import probe_records as _records
+    from policy_file_rules import (
+        is_forbidden_repository_file,
+        public_transcript_integrity_problem,
+    )
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,10 +26,6 @@ ALLOWED_ROOT = {
     ".gitattributes", ".github", ".gitignore", "AGENTS.md", "CITATION.cff",
     "CLAUDE.md", "LICENSE", "POLICY.md", "README.md", "STATUS.md", "canon",
     "data", "legacy", "notes", "probes", "reproduce", "tools",
-}
-FORBIDDEN_SUFFIXES = {
-    ".bak", ".bin", ".dll", ".dylib", ".env", ".exe", ".jam", ".key",
-    ".log", ".pem", ".pt", ".pth", ".pyc", ".so", ".token",
 }
 BASE_STATUS_FIELDS = {"STATE", "CANON", "AUTHORITY", "CUTOVER"}
 ACTIVE_STATUS_FIELDS = {
@@ -45,7 +49,7 @@ def tracked_files():
     for name in completed.stdout.decode("utf-8").split("\0"):
         if name:
             path = ROOT / name
-            if path.is_file():
+            if path.is_file() or path.is_symlink():
                 yield path
 
 
@@ -67,8 +71,11 @@ for path in tracked_files():
     relative = path.relative_to(ROOT)
     if path.stat().st_size > MAX_BYTES:
         fail(f"file exceeds 5 MiB: {relative}")
-    if path.suffix.lower() in FORBIDDEN_SUFFIXES or path.name.startswith(".env"):
+    if is_forbidden_repository_file(relative):
         fail(f"forbidden file: {relative}")
+    transcript_problem = public_transcript_integrity_problem(path, relative)
+    if transcript_problem is not None:
+        fail(f"invalid public probe transcript: {relative}: {transcript_problem}")
 
 status = read_status()
 missing_status = sorted(BASE_STATUS_FIELDS - status.keys())
