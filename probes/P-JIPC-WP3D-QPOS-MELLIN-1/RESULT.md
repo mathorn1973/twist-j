@@ -27,9 +27,15 @@ theorem carrier:  WRITTEN_PROOF_NOT_FINITE_AUDIT
 ```
 
 The public readback and FZ7 receipt is recorded on claim-lock issue #777. The
-required GitHub Python 3.12 x86_64 and aarch64 replays and aggregate `check`
-have not yet run on the formal-evidence head, so `CONFIRMED` is not selected
-by this pre-architecture record.
+first public workflow attempt, run `33562354298`, passed policy, unit, Canon,
+Ledger and gate-contract checks on both architectures but stopped in
+`check_verifier.py` before either verifier replay because the initial
+`RUN.md` command field contained the deterministic wrapper instead of the
+required portable spelling. The aggregate check consequently failed. The
+metadata correction is recorded in `RUN.md`; no verifier was rerun and no
+pinned or stdout byte changed. The required GitHub Python 3.12 x86_64 and
+aarch64 replays and successful aggregate `check` have not yet completed, so
+`CONFIRMED` is not selected by this pre-architecture record.
 
 ## Provisional decision
 

@@ -29,8 +29,10 @@ preflight_stdout_lines: 1
 preflight_stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 preflight_stderr_bytes: 0
 
-command: env -i PATH=/usr/bin:/bin LC_ALL=C PYTHONHASHSEED=0 TZ=UTC /usr/bin/python3 probes/P-JIPC-WP3D-QPOS-MELLIN-1/verify.py
-external_timeout: /usr/bin/timeout --signal=TERM 600s
+command: python3 probes/P-JIPC-WP3D-QPOS-MELLIN-1/verify.py
+formal_invocation: /usr/bin/timeout --signal=TERM 600s /usr/bin/env -i PATH=/usr/bin:/bin LC_ALL=C PYTHONHASHSEED=0 TZ=UTC /usr/bin/python3 probes/P-JIPC-WP3D-QPOS-MELLIN-1/verify.py
+environment: env -i PATH=/usr/bin:/bin LC_ALL=C PYTHONHASHSEED=0 TZ=UTC
+external_timeout_seconds: 600
 platform: Ubuntu 24.04
 kernel: Linux
 architecture: x86_64
@@ -68,5 +70,18 @@ to both the frozen block in `PREREG.md` and `EXPECTED.txt`. The pinned
 
 This is one local x86_64 formal leg. The required clean GitHub Python 3.12
 x86_64 and aarch64 replays and aggregate `check` remain the public
-architecture gate; this record does not anticipate their result. No hostname,
-machine nickname, private address or fleet label is recorded.
+architecture gate. The first workflow attempt and its pre-replay stop are
+recorded below; no architecture replay has completed. No hostname, machine
+nickname, private address or fleet label is recorded.
+
+## Command-field normalization
+
+The first public workflow, run `33562354298`, stopped in
+`check_verifier.py` before either architecture executed this verifier. The
+checker requires the portable repository command shown in `command`; the
+initial record had placed the deterministic environment wrapper in that field
+and recorded the timeout separately. This metadata correction uses the
+required portable spelling for clean public replays and preserves the exact
+combined environment-and-timeout wrapper in `formal_invocation`. No verifier
+was rerun, no scientific output was regenerated, and `PREREG.md`, `verify.py`,
+and `EXPECTED.txt` are unchanged.
