@@ -108,12 +108,15 @@ The single-link heat-bath kernel therefore satisfies detailed balance with the
 fixed `t=1` measure. Any declared composition of these link kernels preserves
 that measure, even when a systematic sweep is not itself reversible.
 
-Strict positivity gives every link value positive conditional probability.
-Any complete link field can therefore reach any other one through a finite
-sequence of single-link assignments with positive probability. Retaining the
-current value also has positive probability. On every finite periodic lattice
-the chain is consequently irreducible and aperiodic and has the displayed
-measure as its unique stationary distribution.
+For the chain claimed here, one Markov step is one complete systematic sweep
+that visits every oriented link exactly once in a fixed order. Strict
+positivity gives every candidate value positive conditional probability, so
+one such sweep can take any complete link field to any other with positive
+probability. Choosing the current value at every visit also gives every state
+a positive self-loop probability. On every finite periodic lattice this
+complete-sweep chain is consequently irreducible and aperiodic and has the
+displayed measure as its unique stationary distribution. This conclusion
+would not apply to a schedule that permanently omits a link.
 
 This is an existence and integrity statement. It supplies no useful mixing-time
 bound.
