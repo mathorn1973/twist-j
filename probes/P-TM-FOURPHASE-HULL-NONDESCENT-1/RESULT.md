@@ -1,6 +1,6 @@
 # P-TM-FOURPHASE-HULL-NONDESCENT-1 result
 
-Status: **candidate-T / L5 / CONFIRMED LOCALLY / PUBLIC CANON UNCHANGED**.
+Status: **candidate-T / L5 / TWO-ARCHITECTURE COMPUTATION GATE PASS / PUBLIC CLAIM UNREGISTERED**.
 
 The first and only local formal execution of the immutable public verifier
 exited zero, wrote empty stderr, and produced the exact 705-byte committed
@@ -15,8 +15,20 @@ CONFIRMED          SELECTED LOCALLY
 SCIENTIFIC-FIRED   NOT SELECTED
 STOP               NOT SELECTED
 ABANDONED-PIN      NOT SELECTED
-ARCHITECTURE GATE  PENDING
+ARCHITECTURE GATE  PASS
 ```
+
+GitHub workflow run `33566198786` independently replayed the committed
+verifier from clean checkouts. Job `100049829547` (`architecture-x86_64`)
+and job `100049829986` (`architecture-aarch64`) both reported
+
+```text
+VERIFY PASS P-TM-FOURPHASE-HULL-NONDESCENT-1 59840bfb1437cb4bb68423072ca7fd4bb8e54d99fb933facdc2ace260c5dddb0 2e01952c3e5c6716e13f4269067bc2780f02a33463553517d8fbdbadc6300c59
+```
+
+Thus both architectures reproduced the same frozen verifier and exact
+committed `EXPECTED.txt` bytes. Aggregate job `100049914627` passed and
+publication job `100049830711` was correctly skipped.
 
 ## Candidate mathematical scope
 
@@ -34,5 +46,6 @@ This is exact L5 symbolic-stream mathematics. It does not identify
 cross-layer gate. It moves no selector, checkpoint graph, decoder, clock,
 measure, causal statement, or physical phase.
 
-The required GitHub x86_64/aarch64 byte-identity gate and manual security
-review remain open. Any active `[T]` row belongs only to a separate v75 fold.
+The public two-architecture evidence package is complete. This result still
+does not register or promote the claim; any active `[T]` row belongs only to
+a separate v75 fold.
