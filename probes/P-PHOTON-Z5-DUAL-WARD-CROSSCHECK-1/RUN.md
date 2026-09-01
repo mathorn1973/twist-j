@@ -86,6 +86,38 @@ mode also had zero variance in three `L=6` chains and all four `L=8` chains.
 These failures select `STOP_DUAL_MIXING` before any statistical dictionary
 residual can acquire decision authority.
 
-The required public x86_64/aarch64 deterministic-verifier leg is recorded after
-the evidence commit is pushed. It reproduces this record only; it does not
+## Public deterministic replay
+
+```text
+status: PASS
+workflow_run_id: 33518375898
+workflow_url: https://github.com/mathorn1973/twist-j/actions/runs/33518375898
+event: pull_request
+evidence_head: f14986b53ba063cb77abc54bc4ef6710082deded
+tested_merge_commit: 7d1de970b226e3563ffda54b799d370600e1db2f
+base_commit: ec84f7bd153a32068b8a267ea75dfc179ad8ba47
+x86_64_job_id: 99891064719
+x86_64_job_url: https://github.com/mathorn1973/twist-j/actions/runs/33518375898/job/99891064719
+x86_64_result: success
+aarch64_job_id: 99891064984
+aarch64_job_url: https://github.com/mathorn1973/twist-j/actions/runs/33518375898/job/99891064984
+aarch64_result: success
+aggregate_job_id: 99891196408
+aggregate_job_url: https://github.com/mathorn1973/twist-j/actions/runs/33518375898/job/99891196408
+aggregate_terminal: TWO-ARCHITECTURE CHECK PASS
+X86_VERIFIER_SHA256 = c25c2ac1305f9244375bb02008e822201f8e6768cd269a58af86b2884d7f450d
+X86_STDOUT_SHA256 = 33279470394266ebbbce1b4cba24751e424583cca2faf1b51dfd4384f9a881dc
+X86_STDOUT_BYTES = 511
+X86_STDOUT_LINES = 7
+X86_BYTE_IDENTITY = PASS
+ARM_VERIFIER_SHA256 = c25c2ac1305f9244375bb02008e822201f8e6768cd269a58af86b2884d7f450d
+ARM_STDOUT_SHA256 = 33279470394266ebbbce1b4cba24751e424583cca2faf1b51dfd4384f9a881dc
+ARM_STDOUT_BYTES = 511
+ARM_STDOUT_LINES = 7
+ARM_BYTE_IDENTITY = PASS
+```
+
+Both public jobs passed policy, all 148 tool tests, Canon, Ledger and gate
+contract checks before reproducing the canonical verifier output byte for
+byte. They replayed only the committed deterministic record and did not
 regenerate any chain.
