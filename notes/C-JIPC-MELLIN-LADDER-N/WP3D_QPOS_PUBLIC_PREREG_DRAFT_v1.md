@@ -3,7 +3,8 @@
 Status: **DRAFT / NOTES LANE / NON-CANONICAL / UNREGISTERED /
 NOT PINNED / NOT RUN**. The probe identifier is **not yet claimed**:
 this file becomes a preregistration only after a public claim-lock
-issue is opened and this exact content is moved to
+issue is opened and this content — with the authority tuple and
+`BASE_COMMIT` refrozen — is moved to
 `probes/P-JIPC-WP3D-QPOS-MELLIN-1/` and pinned by the maintainer.
 Until then it changes nothing: no Canon, registry, gate, or JIPC
 status.
@@ -24,25 +25,28 @@ DEV_EXECUTION       NONE (verify.py syntax-checked only; never run)
 Authority (frozen basis tuple):
 
 ```text
-CANON           Public Canon v72
-TAG             canon-v72
-TAG_OBJECT      78fa07d8337649e4aba629e38adf23595fedb4bb
-CONTENT_COMMIT  aac8a3a4aff027beb2b08edbde1ae8e59224914c
-CANON_SHA256    39ca6e5c49d3ec2b78464045312af75618c4601f87dfa178dfd689d8a4942c70
-CANON_BYTES     374406
+CANON           Public Canon v74
+TAG             canon-v74
+TAG_OBJECT      796b09aef958a9021b93cff0df7f300ef95f5337
+CONTENT_COMMIT  2561f7dcadcbbf683ce7b36219ea67378d879a5a
+CANON_SHA256    2db550cb68f6f4ee33b9194f1f6b3bc4d8fec19cd79e79a702c5357577a92c0e
+CANON_BYTES     389246
 BASE_COMMIT     TBD at pin (maintainer)
 ```
 
 Repin record. The frozen basis tuple above was first written against Public
-Canon v65 and was moved to v72 on 2026-08-31, while the draft was still
-unpinned. `PIN` and `BASE_COMMIT` stay `TBD` and no execution record is
-affected: `DEV_EXECUTION` is `NONE` and the draft verifier has never been
-run. This note cites no TWIST-J Registry row, so the seven releases between
-v65 and v72 change nothing in it; the public parent
+Canon v65, moved to v72 on 2026-08-31 (owner decision), and moved to v74 on
+2026-09-01 with this deposit, while the draft was still unpinned. `PIN` and
+`BASE_COMMIT` stay `TBD` and no execution record is affected:
+`DEV_EXECUTION` is `NONE` and the draft verifier has never been run. This
+note cites no TWIST-J Registry row, so the nine releases between v65 and v74
+change nothing in it; the public parent
 `P-JIPC-WP3E-EFFECTIVE-MELLIN-SEEDS-1` merged at
 `9a4b479b0a7a9ce39772f77f16dd363602ec72c7` is still an ancestor of main. The
 status stays DRAFT / NOTES LANE / NON-CANONICAL / UNREGISTERED, and a formal
-pin must refreeze every field of the tuple at that time.
+pin must refreeze every field of the tuple at that time. The prepared
+claim-lock text is `CLAIM_LOCK_DRAFT_P-JIPC-WP3D-QPOS-MELLIN-1.md` in this
+directory (not posted).
 
 ## 0. Aim, parents, and the provenance fence
 
@@ -67,6 +71,17 @@ P-JIPC-WP3E-EFFECTIVE-MELLIN-SEEDS-1
 Only the *name* is consumed: the well-definedness of `A_q` (existence
 and uniqueness of the common point) is re-proven inside this probe
 (Q7 Step 0), so no WP3E theorem is a premise.
+
+**Reading-family discipline (POLICY.md §4): NOT_APPLICABLE.** This
+probe proposes no family of physical readings, no decoder, no
+selection and no occurrence clause. The only uniqueness statements it
+asserts are mathematical and name their class and equivalence:
+(1) the unique real common point of the nested alternating rational
+Machin intervals `hull(S_(q,N), S_(q,N+1))` — class: real numbers
+contained in every such hull; equivalence: equality in `R`
+(Q7 Step 0); (2) the unique positive real `n`-th root of a positive
+real — class: positive reals `y` with `y^n = x`; equivalence:
+equality in `R` (TCB item 7). No other uniqueness is claimed.
 
 **Provenance fence.** No private artifact is a premise: the internal
 WP3B/WP3C/WP2 lineage, `PI_ATAN_GAUSS_TYPED_IDENTITY`, and the
@@ -625,9 +640,27 @@ conditions of the mutated model. Tail moduli are tested separately.
 `verify.py` is a closed exact audit of a frozen bounded surface; the
 theorem carrier is the written proof above. Obligations: zero
 arguments; reads no file, archive, stdin, environment variable,
-clock, or network; single import `from fractions import Fraction`;
-hard timeout 600 s; byte-identical stdout on x86_64 and aarch64
-under Python 3.12.
+clock, or network; writes nothing but stdout; single import
+`from fractions import Fraction`; no floating point anywhere (no
+`** 0.5`, no `math.sqrt`, no float or complex literal); no `ast.Div`
+(integer `//` and the `Fraction` constructor are the only quotients);
+no random, subprocess, dynamic import, `eval` or `exec`; hard timeout
+600 s; byte-identical stdout on x86_64 and aarch64 under Python 3.12.
+`EXPECTED.txt` is the only stdout artifact; no transcript with a
+forbidden suffix (`.log`, `.jsonl`, ...) will be produced or
+requested, so the POLICY.md §7 transcript allowlist is never invoked.
+Static audit recorded for the draft (2026-08-26, repeated
+2026-09-01; to be repeated at pin): `py_compile` OK; AST scan: 0
+`ast.Div` nodes, 0 float/complex literals, 1 import statement.
+
+Preflight, run immediately before the single formal execution
+(integrity check, not a scientific gate; failure is STOP):
+
+```text
+env -i PATH=/usr/bin:/bin LC_ALL=C PYTHONHASHSEED=0 TZ=UTC \
+  /usr/bin/python3 -c "print('PYTHON_STARTUP_CLEAN')"
+required: exit 0; stdout exactly PYTHON_STARTUP_CLEAN plus LF; stderr empty
+```
 
 Replay ring: Laurent polynomials `Q[g, g^(-1)]` with the token
 relation `p_hat := g^2` (the verifier never evaluates `g`
@@ -754,8 +787,18 @@ FZ5_RESOURCE_CAPS   = time 600 s (workflow-enforced); enforced by
                       23 fixtures, stdout exactly 10 lines on PASS,
                       no recursion anywhere in the code
 FZ6_ARTIFACT_SET    = PREREG.md, verify.py, EXPECTED.txt, RUN.md,
-                      RESULT.md; SHA-256 of PREREG.md and verify.py
-                      recorded in the claim-lock issue at pin
+                      RESULT.md; SHA-256 of verify.py frozen in the
+                      claim-lock issue (verifier bytes are final before
+                      the lock); SHA-256 of the pinned PREREG.md recorded
+                      as a lock-issue comment at pin, after the tuple
+                      and BASE_COMMIT refreeze
+FZ7_STATIC_AUDIT    = py_compile OK; AST scan 0 ast.Div, 0 float or
+                      complex literals, 1 import (draft audit
+                      2026-08-26, repeated 2026-09-01; repeated at pin
+                      before readback)
+FZ8_RUN_METADATA    = RUN.md carries neutral public metadata only
+                      (OS, architecture, Python version); no machine
+                      nickname, hostname, private address, fleet label
 ```
 
 ## 7. Falsifiers, FIRED versus STOP
@@ -796,19 +839,41 @@ This probe does not prove: effective holomorphic seeds (owned by
 public WP3E), any identity beyond the rational slice, meromorphic
 continuation, a functional equation, Fourier or Poisson theory, a
 Gamma object, a circle constant, an archimedean place, any WP2
-obligation, any L2-L6 lift; SAMPLING NOT PROVIDED. The public gates
-`MELLIN_SEEDS`, `MELLIN_PRODUCT_IDENTITY`, `WP2_SCALAR_SEAM` and
-both pi-identification gates are not touched by this probe; any
-later Canon treatment is a separately claimed fold.
+obligation, any L2-L6 lift; SAMPLING NOT PROVIDED. The gate names
+`MELLIN_SEEDS`, `MELLIN_PRODUCT_IDENTITY`, `WP2_SCALAR_SEAM` and the
+two pi-identification names belong to the private JIPC lineage:
+Public Canon v74 carries no such gate or registry row, none is
+created here, and any later Canon treatment is a separately claimed
+fold.
 
 ## 9. Formal order
 
-1. Public claim-lock issue (maintainer) freezing this PREREG's
-   SHA-256 and the verifier's SHA-256.
-2. Pin commit on a `probe/P-JIPC-WP3D-QPOS-MELLIN-1` branch; public
-   readback.
-3. Exactly one formal run; commit `EXPECTED.txt` (audited stdout),
-   `RUN.md`, `RESULT.md` afterward.
-4. Two-architecture byte-identity gate (x86_64, aarch64,
-   Python 3.12).
-5. Review and provenance-preserving merge (merge commit only).
+1. Public claim-lock issue (maintainer; prepared text in
+   `CLAIM_LOCK_DRAFT_P-JIPC-WP3D-QPOS-MELLIN-1.md`) after a fresh
+   authority readback and collision scan (`git ls-remote --heads
+   origin`, issues, pull requests, `probes/`, registry rows,
+   object and claim locks), freezing the identifier, branch,
+   attempt ref, path, owner, layer, mode and the verifier's SHA-256
+   (the verifier bytes are final before the lock; this file's bytes
+   change at step 2, so its hash is recorded at step 3).
+2. Create only `probe/P-JIPC-WP3D-QPOS-MELLIN-1` and its one probe
+   directory from the exact base commit; move this file and the
+   never-executed `verify.py` there, refreezing every field of the
+   authority tuple and `BASE_COMMIT`.
+3. Before any import or execution, commit and push the complete
+   `PREREG.md` and `verify.py` as the immutable pin; publish the
+   attempt ref `refs/heads/probe-attempts/P-JIPC-WP3D-QPOS-MELLIN-1`
+   at the pin; record the pinned PREREG SHA-256 as a comment on the
+   claim-lock issue.
+4. Read both remote blobs back; record exact commit, SHA-256, bytes,
+   LF and final LF; repeat the static audit (FZ7).
+5. Run the preflight (§5); only after public readback execute the
+   pinned verifier formally exactly once in a deterministic
+   environment.
+6. Add only `EXPECTED.txt` (audited stdout), `RUN.md` (FZ8) and
+   `RESULT.md` after the completed run; open one probe-only pull
+   request and require byte-identical x86_64 and aarch64 jobs plus
+   the aggregate `check` and manual security review.
+7. Never amend, rebase, squash, force-push, rename, resume or reuse
+   this probe after the pin; review and provenance-preserving merge
+   (merge commit only).

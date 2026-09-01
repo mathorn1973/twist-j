@@ -1,4 +1,4 @@
-# C-JIPC-MELLIN-LADDER-N — Mellin ladder drafts (WP3D-QPOS, WP3F)
+# C-JIPC-MELLIN-LADDER-N — Mellin ladder drafts (WP3D-QPOS, WP3F, WP3G)
 
 Status: NOTES LANE / NON-CANONICAL / UNREGISTERED. No claim, no pin,
 no run. Nothing here changes the Canon, the registry, or any gate.
@@ -70,3 +70,43 @@ selected public route A:
 Both files are notes-lane drafts: no claim, no pin, no run, no
 gate change. Claim lock, move to `probes/`, pin, and the formal run
 are maintainer steps.
+
+## Route A package (2026-09-01, Public Canon v74)
+
+Deposited after the Canon moved from v65 to v74 while the drafts sat
+unpinned; every file below is NOTES LANE / NON-CANONICAL and claims
+nothing.
+
+- `WP3D_QPOS_PUBLIC_PREREG_DRAFT_v1.md` — basis tuple refrozen to v74
+  (repin record kept); reading-family discipline stated as
+  NOT_APPLICABLE with the two mathematical uniqueness classes named;
+  verifier hygiene, transcript rule, preflight, attempt ref and
+  neutral run metadata added (FZ7, FZ8; seven-step formal order).
+- `CLAIM_LOCK_DRAFT_P-JIPC-WP3D-QPOS-MELLIN-1.md` — the prepared
+  claim-lock issue text in the current house form (authority
+  readback, disposition, collision scan, lock block, frozen scope,
+  integrity requirements, firewalls, decision rule, formal order).
+  **Not posted**; posting is a maintainer act after a fresh readback.
+- `WP3F_EOC_HOLOMORPHIC_PREREG_DRAFT_v3.md` — supersedes v2: one
+  lifting lemma `LIFT_QPOS_TO_D` applied to five identities in
+  dressed currency (`EOC-D`; `REC-D: Chat(s+1) = s Chat(s)/(2 p_M)`;
+  `DUP-D: Chat(s) Chat(s+1/2) = 2^(3/2-2s) Chat(2s)`;
+  `EPULL-D: Ehat(s) = 2^(s/2-1) Chat(s/2)`; `JOIN-D: Ohat(s) =
+  Ehat(s+1)`), WP3D as a public merged-probe parent (Machin bridge
+  cited, not re-proven), a frozen half-integer table of `Chat(k/2)`
+  in the replay ring, uniqueness classes in the reading-family
+  vocabulary, and the current verifier obligations. v2 is kept as
+  history.
+- `WP3G_CONTINUATION_PREREG_DRAFT_v1.md` — skeleton of the successor:
+  recurrent meromorphic continuation of `Chat, Ehat, Ohat` via
+  `REC-D`, poles and residues `Res_(s=-k) Chat = 2 (2 p_M)^k (-1)^k / k!`,
+  and the three identities as global meromorphic identities by the
+  identity theorem — no Fourier needed; the functional equation is
+  explicitly out of scope (it would first require identifying the
+  period of `exp_C` with `2 p_M`, a separate future probe).
+
+State of the queue at this deposit: PR #572 carries the v72 version
+of the WP3D draft; this branch carries the v74 refreeze and the route-A
+package and supersedes #572 (one notes-lane PR should remain).
+Ladder order: merge the v74 notes-lane PR -> claim lock -> pin ->
+formal run -> merge WP3D -> WP3F claim lock -> ... -> WP3G.
