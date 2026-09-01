@@ -219,4 +219,3 @@ Canonu lze případně převzít jen krátké rámcové rozdělení po samostatn
 review a release foldu. Konkrétní realizační a selekční tvrzení musí dostat
 vlastní identifikátory, obory, falsifikátory a brány. Tento soubor jim
 nepředjímá stav.
-
