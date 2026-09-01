@@ -80,8 +80,9 @@ nothing.
 - `WP3D_QPOS_PUBLIC_PREREG_DRAFT_v1.md` — basis tuple refrozen to v74
   (repin record kept); reading-family discipline stated as
   NOT_APPLICABLE with the two mathematical uniqueness classes named;
-  verifier hygiene, transcript rule, preflight, attempt ref and
-  neutral run metadata added (FZ7, FZ8; seven-step formal order).
+  verifier hygiene, transcript rule, preflight, abandoned-pin
+  disposition and neutral run metadata added (FZ7, FZ8; seven-step
+  formal order, one formal branch only).
 - `CLAIM_LOCK_DRAFT_P-JIPC-WP3D-QPOS-MELLIN-1.md` — the prepared
   claim-lock issue text in the current house form (authority
   readback, disposition, collision scan, lock block, frozen scope,
@@ -100,7 +101,7 @@ nothing.
 - `WP3G_CONTINUATION_PREREG_DRAFT_v1.md` — skeleton of the successor:
   recurrent meromorphic continuation of `Chat, Ehat, Ohat` via
   `REC-D`, poles and residues `Res_(s=-k) Chat = 2 (2 p_M)^k (-1)^k / k!`,
-  and the three identities as global meromorphic identities by the
+  and all five identities as global meromorphic identities by the
   identity theorem — no Fourier needed; the functional equation is
   explicitly out of scope (it would first require identifying the
   period of `exp_C` with `2 p_M`, a separate future probe).

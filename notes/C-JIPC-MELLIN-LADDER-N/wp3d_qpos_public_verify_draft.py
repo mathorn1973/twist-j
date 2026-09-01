@@ -93,11 +93,12 @@ R_G = {1: Fr(1)}
 # ---------------------------------------------------------------------------
 
 PROVENANCE = {"O_independent": True, "dressed_weight": "p_M"}
-LABELS = {
-    "MELLIN_SEEDS": "BLOCKED",
-    "MELLIN_PRODUCT_IDENTITY": "BLOCKED",
-    "WP2_SCALAR_SEAM": "BLOCKED_BY_MELLIN_PRODUCT_IDENTITY",
-}
+FROZEN_LABELS = (
+    ("MELLIN_SEEDS", "BLOCKED"),
+    ("MELLIN_PRODUCT_IDENTITY", "BLOCKED"),
+    ("WP2_SCALAR_SEAM", "BLOCKED_BY_MELLIN_PRODUCT_IDENTITY"),
+)
+LABELS = dict(FROZEN_LABELS)
 
 
 def check_provenance(prov):
@@ -111,7 +112,7 @@ def check_provenance(prov):
 
 def check_labels(lab):
     errs = []
-    for key, val in LABELS.items():
+    for key, val in FROZEN_LABELS:
         if lab.get(key) != val:
             errs.append("LABEL_" + key)
     return errs
@@ -168,10 +169,15 @@ def build_B(anchor_11=None, brec_coeff=None):
     return B
 
 
-def check_lattice(C, B, dup_factor=None, dup_half_index=1):
+def check_lattice(C, B, dup_factor=None, dup_half_index=1,
+                  diag_factor=None):
     # dup_factor(k) is 2^(1-2p) at p = k/2, i.e. 2^(1-k).
     if dup_factor is None:
         dup_factor = lambda k: Fr(1, 2 ** (k - 1))
+    # diagonal two-step descent at p=k/2:
+    # B(p+1,p+1)=p/[2(2p+1)] B(p,p)=k/[4(k+1)] B(p,p).
+    if diag_factor is None:
+        diag_factor = lambda k: Fr(k, 4 * k + 4)
     errs = []
     for (j, k), v in B.items():
         if (k, j) in B and not req(v, B[(k, j)]):
@@ -200,6 +206,11 @@ def check_lattice(C, B, dup_factor=None, dup_half_index=1):
         rhs = rscale(dup_factor(k), B[(1, k)])
         if not req(lhs, rhs):
             errs.append("B_HALF(%d/2)" % k)
+    for k in range(1, N_INPUT - 1):
+        lhs = B[(k + 2, k + 2)]
+        rhs = rscale(diag_factor(k), B[(k, k)])
+        if not req(lhs, rhs):
+            errs.append("B_DIAG_DESCENT(%d/2)" % k)
     if not req(B[(1, 1)], {2: Fr(1)}):
         errs.append("BRIDGE_ANCHOR")
     return errs
@@ -236,7 +247,7 @@ def check_eoc(C):
 
 
 # ---------------------------------------------------------------------------
-# Gate 2 -- MODULUS_SCHEDULE (integer-exponent arithmetic only)
+# Gate 2 -- MODULUS_CORE_SAMPLE (integer-exponent arithmetic only)
 # D_b(a/c) = 2^-ceil(c(b+1+c)/a); audited: the ceiling inequality, the
 # 1/r <= 2^c step, and the k-schedule inequalities k >= 0, k c >= a-c.
 # The value (k+2)! 2^(b+1) is replayed as the frozen R_b.
@@ -256,7 +267,7 @@ def ceil_div(x, y):
     return -((-x) // y)
 
 
-def check_modulus(pairs=MODULUS_PAIRS, ceil_shift=1):
+def check_modulus(pairs=MODULUS_PAIRS, ceil_shift=1, tail_shift=2):
     # ceil_shift=1 is frozen: the exponent uses b + ceil_shift + c.
     errs = []
     for (a, c, b) in pairs:
@@ -277,7 +288,7 @@ def check_modulus(pairs=MODULUS_PAIRS, ceil_shift=1):
             errs.append("MOD_K(%d/%d)" % (a, c))
         # frozen tail value replay: (k+2)!/R_b = 2^-(b+1) with
         # R_b = (k+2)! 2^(b+1); replayed as the frozen pair (k, R_b).
-        R = factorial(k + 2) * 2 ** (b + 1)
+        R = factorial(k + tail_shift) * 2 ** (b + 1)
         if Fr(factorial(k + 2), R) != Fr(1, 2 ** (b + 1)):
             errs.append("MOD_TAIL(%d/%d,b=%d)" % (a, c, b))
     return errs
@@ -399,6 +410,7 @@ def lf_scale(k, x):
 def check_forms(upull_target_1mu=lf(-1, 1, 0, 0), slope_jac=lf(1),
                 epull_factor=Fr(1, 2), ql_factor=Fr(1, 2),
                 sqrt_jac_exp=Fr(-1, 2), sqrt_factor=Fr(1, 2),
+                sqrt_carry=lf(-1, 1, 0, 0),
                 join_left=lf(0, 0, 0, 1)):
     errs = []
     # F1 slope y = x t: y^(q-1) dy = x^(q-1) t^(q-1) * (x dt):
@@ -418,7 +430,7 @@ def check_forms(upull_target_1mu=lf(-1, 1, 0, 0), slope_jac=lf(1),
     # carried unchanged; frozen Jacobian exponent -1/2 and factor 1/2.
     if sqrt_jac_exp != Fr(-1, 2) or sqrt_factor != Fr(1, 2):
         errs.append("FORM_SQRT")
-    if lf(-1, 1, 0, 0) != lf(-1, 1, 0, 0):
+    if sqrt_carry != lf(-1, 1, 0, 0):
         errs.append("FORM_SQRT_CARRY")
     # F5 y = x^2: x^(s-1) dx = (1/2) y^(s/2-1) dy; exponent check
     # (s-1)/2 - 1/2 = s/2 - 1 and frozen factor 1/2.
@@ -463,15 +475,17 @@ def residuals(C, lam=Fr(2), law="original"):
     return r1, r2, r3s
 
 
-def check_scale(C):
+def check_scale(C, lam=Fr(2)):
     errs = []
-    r1, r2, r3s = residuals(C)
+    r1, r2, r3s = residuals(C, lam=lam)
     if rzero(r1) or not req(r1, {0: Fr(1)}):
         errs.append("SCALE_R1")
     if rzero(r2) or not req(r2, {2: Fr(3)}):
         errs.append("SCALE_R2")
     for s, r3 in zip(EOC_DOMAIN, r3s):
-        if rzero(r3):
+        _ehat, _ohat, chat = eoc_parts(C, s)
+        want = rscale(lam * (lam - 1), chat)
+        if rzero(r3) or not req(r3, want):
             errs.append("SCALE_R3(%d)" % s)
     return errs
 
@@ -502,14 +516,10 @@ def run_controls():
     # 4 mutated B-REC coefficient j/(j+k+1)
     control("BREC_COEFF", check_lattice(C0,
             build_B(brec_coeff=lambda j, jk: Fr(j, jk + 1))))
-    # 5 one-step diagonal-descent witness: the correct chain factor is
-    # p/(2(2p+1)) = k/(4k+4); the mutated one-step claim p/(2p+1)
-    # = k/(2k+2) must FAIL for every k.
-    one_step_rejected = True
-    for k in range(1, N_INPUT - 1):
-        if req(B0[(k + 2, k + 2)], rscale(Fr(k, 2 * k + 2), B0[(k, k)])):
-            one_step_rejected = False
-    control("DIAG_ONESTEP", one_step_rejected)
+    # 5 one-step diagonal-descent witness: mutate the frozen two-step
+    # factor k/[4(k+1)] to k/[2(k+1)] through check_lattice itself.
+    control("DIAG_ONESTEP", check_lattice(
+            C0, B0, diag_factor=lambda k: Fr(k, 2 * k + 2)))
     # 6 mutated bridge anchor g^2 + 1
     control("BRIDGE_ANCHOR", check_lattice(C0,
             build_B(anchor_11={2: Fr(1), 0: Fr(1)})))
@@ -521,14 +531,9 @@ def run_controls():
             (not dup_input_ok(N_INPUT + 1)) and ((N_VALUE + 1) not in C0))
     # 9 mutated D_b ceiling (b+c instead of b+1+c)
     control("MOD_CEIL", check_modulus(ceil_shift=0))
-    # 10 mutated schedule factorial: (k+1)!/R_b != 2^-(b+1)
-    fact_mut_rejected = True
-    for (a, c, b) in MODULUS_PAIRS:
-        k = max(0, ceil_div(a - c, c))
-        R = factorial(k + 2) * 2 ** (b + 1)
-        if Fr(factorial(k + 1), R) == Fr(1, 2 ** (b + 1)):
-            fact_mut_rejected = False
-    control("MOD_FACT", fact_mut_rejected)
+    # 10 mutated schedule factorial: build R_b with (k+1)! while the
+    # same check_modulus guard still requires the frozen (k+2)! tail.
+    control("MOD_FACT", check_modulus(tail_shift=1))
     # 11 mutated Machin polynomial coefficient
     control("MACHIN_POLY", check_machin(poly_coeff=Fr(2)))
     # 12 mutated cross witness
@@ -545,23 +550,29 @@ def run_controls():
     control("FORM_UPULL", check_forms(upull_target_1mu=lf(0, 1, 0, 0)))
     # 17 mutated E-PULL factor
     control("FORM_EPULL", check_forms(epull_factor=Fr(1)))
-    # 18 mutated square-root and quadratic-linear Jacobians (both
-    # halves of the mutation must be rejected)
+    # 18 mutated square-root factor/carry and quadratic-linear Jacobian
+    # (all parts of the mutation must be rejected by check_forms)
     control("FORM_SQRT_QL",
-            check_forms(sqrt_factor=Fr(1)) and check_forms(ql_factor=Fr(1)))
+            check_forms(sqrt_factor=Fr(1)) and
+            check_forms(sqrt_carry=lf(0, 1, 0, 0)) and
+            check_forms(ql_factor=Fr(1)))
     # 19 JOIN as definition: mutated provenance table rejected by the
     # same guard the PASS path consumes
     mut_prov = dict(PROVENANCE)
     mut_prov["O_independent"] = False
     control("JOIN_CROSSREAD", check_provenance(mut_prov))
-    # 20 lambda = 2 model accepted by the mutated scaled-law guard:
-    # the same residual code path must accept (all zero) under the
-    # scaled law and reject under the original law
+    # 20 lambda = 2 mutated scaled-law guard: the two residual code
+    # paths must differ by exactly lambda(lambda-1) Chat.  This tests
+    # the mutation independently of the gate-1 EOC premise.
     _r1, _r2, r3_orig = residuals(build_C(), law="original")
     _r1b, _r2b, r3_scaled = residuals(build_C(), law="scaled")
-    control("SCALE_MUTGUARD",
-            all(rzero(r) for r in r3_scaled) and
-            all(not rzero(r) for r in r3_orig))
+    scale_delta_ok = True
+    for s, r_orig, r_scaled in zip(EOC_DOMAIN, r3_orig, r3_scaled):
+        _ehat, _ohat, chat = eoc_parts(C0, s)
+        delta = rsub(r_orig, r_scaled)
+        if rzero(delta) or not req(delta, rscale(Fr(2), chat)):
+            scale_delta_ok = False
+    control("SCALE_MUTGUARD", scale_delta_ok)
     # 21 dressed weight renamed away from p_M (provenance guard; a
     # name/graph test, never a numeric envelope test)
     mut_prov2 = dict(PROVENANCE)
@@ -571,10 +582,14 @@ def run_controls():
     # (irrational exponents are excluded by the reduced-integer-pair
     # input type itself)
     control("EXP_DOMAIN", check_modulus(pairs=((-1, 2, 4),)))
-    # 23 claim label above the slice rejected by the label guard
-    mut_lab = dict(LABELS)
-    mut_lab["MELLIN_SEEDS"] = "PASS"
-    control("LABEL_CAP", check_labels(mut_lab))
+    # 23 every claim label above the slice is rejected by the same guard
+    labels_rejected = True
+    for key, _expected in FROZEN_LABELS:
+        mut_lab = dict(LABELS)
+        mut_lab[key] = "PASS"
+        if not check_labels(mut_lab):
+            labels_rejected = False
+    control("LABEL_CAP", labels_rejected)
 
     return results
 
@@ -598,18 +613,32 @@ def main():
             stop("RATIONAL_BITS_CAP")
             break
 
+    # Integrity prechecks have priority over every scientific verdict.
+    if STOP_LIST:
+        for msg in STOP_LIST:
+            print("STOP " + msg)
+        raise SystemExit(1)
+
     # scientific gates 1-4 (a completed exact negation is FIRED)
     for e in check_lattice(C, B) + check_eoc(C):
         fired("RING_LATTICE_REPLAY " + e)
     for e in check_modulus():
-        fired("MODULUS_SCHEDULE " + e)
+        fired("MODULUS_CORE_SAMPLE " + e)
     for e in check_machin():
         fired("MACHIN_WITNESSES " + e)
     for e in check_forms():
         fired("FORM_IDENTITY_REPLAY " + e)
 
-    # gate 5: the residuals are frozen ring constants; a mismatch can
-    # only be a verifier defect, hence integrity STOP, not FIRED
+    # A completed scientific negation is final.  PASS-candidate
+    # calibration and mutation controls below cannot relabel it STOP.
+    if FIRED_LIST:
+        for msg in FIRED_LIST:
+            print("FIRED " + msg)
+        print("RESULT FIRED")
+        return
+
+    # Gates 5-6 are PASS-candidate integrity checks.  In particular,
+    # gate 5 reaches R3 only after its gate-1 EOC premise has passed.
     for e in check_scale(C):
         stop("SCALE_RESIDUALS " + e)
 
@@ -626,16 +655,10 @@ def main():
             print("STOP " + msg)
         raise SystemExit(1)
 
-    if FIRED_LIST:
-        for msg in FIRED_LIST:
-            print("FIRED " + msg)
-        print("RESULT FIRED")
-        return
-
     print("P_JIPC_WP3D_QPOS_MELLIN_AUDIT 1")
     print("ARITHMETIC Q_EXACT_FRACTION PASS")
     print("RING_LATTICE_REPLAY N_INPUT=6 N_VALUE=12 EOC=1,2,3 PASS")
-    print("MODULUS_SCHEDULE PAIRS=4 PASS")
+    print("MODULUS_CORE_SAMPLE C_PAIRS=4 PASS")
     print("MACHIN_WITNESSES POLY,CROSS3,DOMAINS,INDEXING PASS")
     print("FORM_IDENTITY_REPLAY FORMS=8 PASS")
     print("SCALE_RESIDUALS LAMBDA=2 GUARDS=3 PASS")

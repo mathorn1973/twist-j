@@ -5,7 +5,9 @@ public claim-lock issue for the probe below, in the current house
 form (cf. issue #731). Before posting, the maintainer (1) re-runs the
 authority readback and fills `BASE_COMMIT` with the full SHA of
 public `main` at lock time, (2) re-runs the collision scan and
-updates the scan sentence if anything changed, (3) drops this header.
+updates the scan sentence and dispositions, (3) computes the final
+`verify.py` SHA-256 and replaces the placeholder below, and (4) drops
+this header.
 Depositing this file claims nothing.
 
 ---
@@ -20,6 +22,7 @@ CANON:          Public Canon v74
 AUTHORITY:      mathorn1973/twist-j main
 TAG:            canon-v74
 TAG_OBJECT:     796b09aef958a9021b93cff0df7f300ef95f5337
+TAG_TARGET:     05a74b21df4b7d8c5c53cfa75255684929c1b76c
 CONTENT_COMMIT: 2561f7dcadcbbf683ce7b36219ea67378d879a5a
 CANON_SHA256:   2db550cb68f6f4ee33b9194f1f6b3bc4d8fec19cd79e79a702c5357577a92c0e
 CANON_BYTES:    389246
@@ -54,23 +57,24 @@ finite exact audit of a frozen bounded surface and has never been
 executed (`DEV_EXECUTION = NONE`).
 
 Collision search before this lock (2026-09-01, to be repeated at
-lock time): no ref named `probe/P-JIPC-WP3D-QPOS-MELLIN-1` or
-`probe-attempts/P-JIPC-WP3D-QPOS-MELLIN-1` among the remote heads;
-the only JIPC refs are `probe/P-JIPC-WP3E-EFFECTIVE-MELLIN-SEEDS-1`
-and the notes-lane draft branches; `probes/` contains only the WP3E
-probe in this family; issue and pull-request search for `WP3D` and
-`QPOS` returns nothing; the only JIPC/MELLIN claim is the closed WP3E
-claim #566 (PR #569); no registry row, object lock or claim lock
-names this probe.
+lock time): no ref named `probe/P-JIPC-WP3D-QPOS-MELLIN-1` among the
+remote heads; the only JIPC refs are
+`probe/P-JIPC-WP3E-EFFECTIVE-MELLIN-SEEDS-1` and the two notes-lane
+draft branches. Search for `WP3D` and `QPOS` returns the non-formal
+notes lineage #571, #572 and #775 plus the closed WP3E parent claim
+#566/PR #569; these are discovery deposits or the named parent, not
+competing claim locks. `probes/` contains only WP3E in this family,
+and no registry row, object lock, formal issue or claim lock names
+this probe. The current state and disposition of every returned item
+must be rewritten from a fresh search immediately before posting.
 
 ## Public claim lock
 
 ```text
 probe:          P-JIPC-WP3D-QPOS-MELLIN-1
 branch:         probe/P-JIPC-WP3D-QPOS-MELLIN-1
-attempt_ref:    refs/heads/probe-attempts/P-JIPC-WP3D-QPOS-MELLIN-1 (immutable at the pin)
 path:           probes/P-JIPC-WP3D-QPOS-MELLIN-1/
-owner:          A. M. Thorn / current owner session
+owner:          A. M. Thorn
 layer:          L1 exact rational algebra and real analysis only
 target:         rational-slice Mellin package on Q_{>0}: seed existence with
                 algorithmic tail moduli, product identity, square-root-free
@@ -81,7 +85,7 @@ mode:           result-exposed; written proof carries universal statements;
 verify_sha256:  <SHA-256 of the final verify.py; the verifier bytes are final
                 before this lock and do not change at the pin>
 prereg_sha256:  recorded in a comment on this issue at pin time, after the
-                authority tuple and BASE_COMMIT are refrozen in PREREG.md
+                locked authority tuple and BASE_COMMIT are copied into PREREG.md
 ```
 
 No Canon, Registry, Frontier, dependency, gate, workflow, release or
@@ -125,7 +129,7 @@ class and equivalence explicitly:
 
 The accepted `verify.py` is newly authored from the frozen statements
 above and imports no predecessor code. Standard library only,
-exactly one import (`from fractions import Fraction`), deterministic
+exactly one import (`from fractions import Fraction as Fr`), deterministic
 exact arithmetic, no floating point anywhere (no `** 0.5`, no
 `math.sqrt`, no float or complex literal), no `ast.Div` (integer `//`
 and the `Fraction` constructor are the only quotients), no random,
@@ -171,20 +175,30 @@ CONFIRMED (candidate-T, L1)
 
 SCIENTIFIC-FIRED
     One exact mathematical counterexample to a frozen Q1-Q8 statement
-    on the audited surface: a ring inequality on the lattice, a failed
+    on the audited surface: a ring equality on the lattice, a failed
     exact Machin witness, a failed exponent-form identity, or a failed
     integer modulus inequality. Recorded, preserved, folded.
 
 BOUNDED-AUDIT-C
     The audit completes RESULT PASS but the written universal proof is
     not accepted as theorem-grade in review: exactly the frozen finite
-    surface stands, no universal claim.
+    surface stands (including only the four-pair D_b plus bare-C
+    schedule sample), no universal claim.
 
 STOP
-    Authority, collision, pin, exactness, security, metadata,
-    post-pin mutation, nondeterminism, nonzero exit, nonempty stderr,
-    preflight, transcript or architecture integrity fails; a negative
-    control passes its guard; a gate-5 residual mismatch.
+    Before pin: authority, collision, exactness, security, metadata or
+    hash integrity fails and no formal probe is created. After a
+    completed formal gate: stdout-byte, transcript or architecture
+    integrity fails; the completed evidence is preserved and RESULT.md
+    records integrity STOP.
+
+ABANDONED-PIN
+    After the immutable pin, readback, static audit, preflight, timeout,
+    nonzero exit, nonempty stderr, resource cap, negative-control or
+    gate-5 integrity failure prevents the formal gate from completing.
+    Preserve unchanged PREREG.md and verify.py; add only RESULT.md with
+    `Status: ABANDONED`, no EXPECTED.txt and no RUN.md. The identifier is
+    consumed and must never be reused or resumed.
 ```
 
 `CONFIRMED` registers no public claim and changes nothing in Public
@@ -192,23 +206,29 @@ Canon v74; any registration is a separate fold decision.
 
 ## Formal order
 
-1. This lock freezes the identifier, branch, attempt ref, path,
+1. This lock freezes the identifier, single branch, path,
    owner, layer, mode and `verify_sha256`; the verifier bytes are
    final before the lock.
 2. Create only `probe/P-JIPC-WP3D-QPOS-MELLIN-1` and its one probe
    directory from the exact base above; move the draft `PREREG.md`
-   and the never-executed `verify.py` there, refreezing the authority
-   tuple and `BASE_COMMIT` in `PREREG.md`.
+   and the never-executed `verify.py` there. Convert every draft
+   marker to `PREREGISTERED / UNRUN / NON-CANONICAL`, insert this
+   issue number, state that the pin SHA is recorded externally, and
+   copy this locked authority tuple and `BASE_COMMIT` byte for byte.
 3. Before any import or execution, commit and push the complete
-   `PREREG.md` and `verify.py` as the immutable pin; publish the
-   attempt ref; record `prereg_sha256` as a comment on this issue.
+   `PREREG.md` and `verify.py` as the immutable pin; record the full
+   pin commit and `prereg_sha256` as a comment on this issue. No
+   second remote branch or attempt ref is created.
 4. Read both remote blobs back and record exact commit, SHA-256,
-   bytes, LF and final LF; repeat the static audit (FZ7).
+   bytes, LF and final LF on this issue; repeat the static audit (FZ7)
+   on those read-back bytes.
 5. Run the preflight; only after public readback execute the pinned
    verifier formally once in a deterministic environment.
-6. Add only `EXPECTED.txt`, `RUN.md`, and `RESULT.md` after the
-   completed run.
-7. Open one probe-only pull request and require byte-identical
-   x86_64 and aarch64 jobs plus aggregate `check` and manual security
-   review. Never amend, rebase, squash, force-push, rename, resume or
-   reuse this probe after the pin.
+6. After a completed run add only `EXPECTED.txt`, `RUN.md`, and
+   `RESULT.md`. If no run completes after the pin, add only the
+   mandatory `RESULT.md` with `Status: ABANDONED`, with no
+   `EXPECTED.txt` or `RUN.md`.
+7. Open one probe-only pull request. The completed route requires
+   byte-identical x86_64 and aarch64 jobs plus aggregate `check` and
+   manual security review. Never amend, rebase, squash, force-push,
+   rename, resume or reuse this probe after the pin.

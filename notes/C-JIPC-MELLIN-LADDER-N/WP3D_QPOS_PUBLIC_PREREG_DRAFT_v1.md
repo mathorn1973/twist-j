@@ -3,8 +3,8 @@
 Status: **DRAFT / NOTES LANE / NON-CANONICAL / UNREGISTERED /
 NOT PINNED / NOT RUN**. The probe identifier is **not yet claimed**:
 this file becomes a preregistration only after a public claim-lock
-issue is opened and this content — with the authority tuple and
-`BASE_COMMIT` refrozen — is moved to
+issue is opened and this content — with the locked authority tuple
+and `BASE_COMMIT` copied unchanged — is moved to
 `probes/P-JIPC-WP3D-QPOS-MELLIN-1/` and pinned by the maintainer.
 Until then it changes nothing: no Canon, registry, gate, or JIPC
 status.
@@ -16,9 +16,11 @@ ACTION_LAYER        L1 (exact rational algebra and real analysis only)
 THEOREM_CARRIER     WRITTEN_PROOF_NOT_FINITE_AUDIT
 DATE                2026-08-26
 AUTHOR_OF_RECORD    A. M. Thorn
-OWNER               mathorn1973
-CLAIM_LOCK          TBD (maintainer)
-PIN                 TBD (maintainer)
+OWNER               A. M. Thorn
+CLAIM_LOCK          TBD (must be replaced by the public issue number before pin)
+PIN                 EXTERNAL (the immutable commit containing these bytes;
+                    full SHA recorded on the claim-lock issue and, on the
+                    completed-run route, in RUN.md)
 DEV_EXECUTION       NONE (verify.py syntax-checked only; never run)
 ```
 
@@ -28,23 +30,26 @@ Authority (frozen basis tuple):
 CANON           Public Canon v74
 TAG             canon-v74
 TAG_OBJECT      796b09aef958a9021b93cff0df7f300ef95f5337
+TAG_TARGET      05a74b21df4b7d8c5c53cfa75255684929c1b76c
 CONTENT_COMMIT  2561f7dcadcbbf683ce7b36219ea67378d879a5a
 CANON_SHA256    2db550cb68f6f4ee33b9194f1f6b3bc4d8fec19cd79e79a702c5357577a92c0e
 CANON_BYTES     389246
-BASE_COMMIT     TBD at pin (maintainer)
+BASE_COMMIT     TBD at claim lock (lock-time public main; direct parent of pin)
 ```
 
 Repin record. The frozen basis tuple above was first written against Public
 Canon v65, moved to v72 on 2026-08-31 (owner decision), and moved to v74 on
-2026-09-01 with this deposit, while the draft was still unpinned. `PIN` and
-`BASE_COMMIT` stay `TBD` and no execution record is affected:
+2026-09-01 with this deposit, while the draft was still unpinned. The pin
+commit does not yet exist, `BASE_COMMIT` stays unfilled, and no execution
+record is affected:
 `DEV_EXECUTION` is `NONE` and the draft verifier has never been run. This
 note cites no TWIST-J Registry row, so the nine releases between v65 and v74
 change nothing in it; the public parent
 `P-JIPC-WP3E-EFFECTIVE-MELLIN-SEEDS-1` merged at
 `9a4b479b0a7a9ce39772f77f16dd363602ec72c7` is still an ancestor of main. The
 status stays DRAFT / NOTES LANE / NON-CANONICAL / UNREGISTERED, and a formal
-pin must refreeze every field of the tuple at that time. The prepared
+claim lock must refreeze every field of the tuple and `BASE_COMMIT`; the pin
+then copies that locked tuple without changing it. The prepared
 claim-lock text is `CLAIM_LOCK_DRAFT_P-JIPC-WP3D-QPOS-MELLIN-1.md` in this
 directory (not posted).
 
@@ -531,7 +536,10 @@ A(1/q) = S_(q,N+1) + (-1)^(N+1) rho_N,   0 <= rho_N <= a_(q,N+1),
 where `rho_N = int_0^(1/q) t^(2N+2)/(1+t^2) dt <= a_(q,N+1)` by the
 pointwise bound `t^(2N+2)/(1+t^2) <= t^(2N+2)` and FTC. The
 remainder has sign `(-1)^(N+1)` and size `<= a_(q,N+1)`, hence
-`A(1/q)` lies in `hull(S_(q,N), S_(q,N+1))` for every `N`, and by
+`A(1/q)` lies in `hull(S_(q,N), S_(q,N+1))` for every `N`: explicitly,
+`A-S_(N+1)=(-1)^(N+1) rho_N` and
+`A-S_N=(-1)^N(a_(q,N)-rho_N)`, whose signs are opposite because
+`0 <= rho_N <= a_(q,N+1) < a_(q,N)`. By
 Step 0's uniqueness, `A(1/q) = A_q`.
 
 *Step 2 (addition law, by substitution — no chain rule).* For
@@ -641,7 +649,7 @@ conditions of the mutated model. Tail moduli are tested separately.
 theorem carrier is the written proof above. Obligations: zero
 arguments; reads no file, archive, stdin, environment variable,
 clock, or network; writes nothing but stdout; single import
-`from fractions import Fraction`; no floating point anywhere (no
+`from fractions import Fraction as Fr`; no floating point anywhere (no
 `** 0.5`, no `math.sqrt`, no float or complex literal); no `ast.Div`
 (integer `//` and the `Fraction` constructor are the only quotients);
 no random, subprocess, dynamic import, `eval` or `exec`; hard timeout
@@ -650,11 +658,13 @@ no random, subprocess, dynamic import, `eval` or `exec`; hard timeout
 forbidden suffix (`.log`, `.jsonl`, ...) will be produced or
 requested, so the POLICY.md §7 transcript allowlist is never invoked.
 Static audit recorded for the draft (2026-08-26, repeated
-2026-09-01; to be repeated at pin): `py_compile` OK; AST scan: 0
-`ast.Div` nodes, 0 float/complex literals, 1 import statement.
+2026-09-01; after pin, to be repeated on the read-back remote blob
+before preflight): `py_compile` OK; AST scan: 0 `ast.Div` nodes,
+0 float/complex literals, 1 import statement.
 
 Preflight, run immediately before the single formal execution
-(integrity check, not a scientific gate; failure is STOP):
+(integrity check, not a scientific gate; after the immutable pin,
+failure invokes the abandoned-pin disposition in §7):
 
 ```text
 env -i PATH=/usr/bin:/bin LC_ALL=C PYTHONHASHSEED=0 TZ=UTC \
@@ -672,20 +682,28 @@ N_value  = 12     # dependency closure: DUP at p=k/2 needs half-index 2k <= 12
 EOC_replay_domain = { 1, 2, 3 }   # integer s only
 ```
 
-Gates (stdout lines are value-free; frozen block below):
+Gates (stdout lines are value-free; frozen block below). Gates 1–4
+are the scientific phase. If any of them fires, `RESULT FIRED` is
+emitted before gates 5–6; those two are PASS-candidate integrity
+checks and cannot relabel a completed scientific negation:
 
-1. `RING_LATTICE_REPLAY` — build `C(k/2)` for `k = 1..12` in the
-   ring from `C(1/2) = g`, `C(1) = 1` by REC; verify (DUP) as exact
-   ring equalities for `p = k/2`, `k = 1..6`; verify
-   `B(1/2,1/2) = g^2` and B-REC consistency on the lattice; verify
-   (EOC) for `s` in `{1,2,3}` with
+1. `RING_LATTICE_REPLAY` — build `C(k/2)` for `k = 1..12` from
+   `C(1/2) = g`, `C(1) = 1` by REC and build `B` from its three
+   anchors by B-REC. Verify B symmetry, (MP), (DUP) for
+   `p = k/2`, `k = 1..6`, B-HALF, the two-step diagonal descent
+   `B(p+1,p+1) = p B(p,p)/(2(2p+1))`, and
+   `B(1/2,1/2) = g^2` as exact ring equalities; verify (EOC) for
+   `s` in `{1,2,3}` with
    `Ehat(s) = g^(-s) C(s/2)`, `Ohat(s) = g^(-(s+1)) C((s+1)/2)`,
    `Chat(s) = 2^(1-s) g^(-2s) C(s)`, and the `s = 1` anchor.
-2. `MODULUS_SCHEDULE` — for the frozen pairs
+2. `MODULUS_CORE_SAMPLE` — for the frozen pairs
    `(s, b)` in `{(1/2,4), (3/2,4), (7/5,6), (1/7,6)}` verify the
-   integer-exponent inequalities behind `D_b` and the schedule sums
-   (`a m >= n(b+1+n)`; `n <= 2^n`; `(k+2)!/R_b = 2^(-(b+1))`),
-   entirely in exact arithmetic.
+   integer-exponent inequalities behind `D_b` and the bare-`C` tail
+   schedule (`a m >= n(b+1+n)`; `n <= 2^n`;
+   `(k+2)!/R_b = 2^(-(b+1))`), entirely in exact arithmetic. This
+   finite gate does not audit the separate `E`, `O`, or two-ended `B`
+   schedules of Q1; those universal algorithms remain carried by the
+   written proof only.
 3. `MACHIN_WITNESSES` — expand `(1-uv)^2 + (u+v)^2 - (1+u^2)(1+v^2)`
    as an exact polynomial in `u, v` and require the zero polynomial;
    verify the three composition equalities division-free
@@ -709,7 +727,10 @@ Gates (stdout lines are value-free; frozen block below):
 5. `SCALE_RESIDUALS` — with `lambda = 2`: verify `R_1 = 1`,
    `R_2 = 3 p_hat`, and `R_3(s) = 2 Chat(s)` nonzero in the ring for
    `s` in `{1,2,3}`; require rejection of the mutated model at all
-   three guards.
+   three guards. This PASS-candidate phase is reached only after the
+   gate-1 EOC premise has passed; if EOC itself fails, that failure
+   already exits as scientific gate-1 `FIRED` and is not reclassified
+   by the algebraically overlapping R3 check.
 6. `PROOF_CONTROLS` — exactly 23 negative mutations, one per item of
    the mutation list below; each must be rejected at its named
    semantic guard, exercised through the same code path the PASS
@@ -723,7 +744,7 @@ Frozen stdout (exact bytes fixed at pin; LF endings):
 P_JIPC_WP3D_QPOS_MELLIN_AUDIT 1
 ARITHMETIC Q_EXACT_FRACTION PASS
 RING_LATTICE_REPLAY N_INPUT=6 N_VALUE=12 EOC=1,2,3 PASS
-MODULUS_SCHEDULE PAIRS=4 PASS
+MODULUS_CORE_SAMPLE C_PAIRS=4 PASS
 MACHIN_WITNESSES POLY,CROSS3,DOMAINS,INDEXING PASS
 FORM_IDENTITY_REPLAY FORMS=8 PASS
 SCALE_RESIDUALS LAMBDA=2 GUARDS=3 PASS
@@ -735,12 +756,15 @@ RESULT PASS
 Exit contract (WP3E register): a completed `RESULT PASS` or a
 completed scientific `RESULT FIRED` (gates 1-4 negation lines
 followed by `RESULT FIRED`) exits **zero** with empty stderr; any
-integrity `STOP` exits nonzero. A gate-5 mismatch is a verifier
-defect and therefore `STOP`, not `FIRED`. The finite audit never
+integrity `STOP` exits nonzero. The scientific result is emitted
+before the PASS-candidate gates 5–6. A gate-5 mismatch under its satisfied
+gate-1 EOC premise is a verifier defect and therefore `STOP`, not
+`FIRED`; a failed EOC premise retains its gate-1 `FIRED`
+classification. The finite audit never
 pronounces the scientific status: status selection belongs to
 `RESULT.md`.
 
-Mutation list (each with its named guard): (1) mutated REC
+PASS-candidate mutation list (each with its named guard): (1) mutated REC
 coefficient; (2) mutated DUP factor `2^(1-2p) -> 2^(-2p)`; (3)
 displaced `C(1/2)` in DUP; (4) mutated B-REC coefficient; (5)
 one-step diagonal-descent witness for B-HALF; (6) `B(1/2,1/2) ->
@@ -754,12 +778,12 @@ schedule factorial; (11) mutated Machin polynomial coefficient;
 domain condition (`uv >= 1`); (14) mutated Q7 Step-1 sign; (15)
 mutated slope Jacobian (missing `x`); (16) mutated `u = t/(1+t)`
 bookkeeping (`p-1 -> p`); (17) mutated E-PULL factor (`1/2 -> 1`);
-(18) mutated `v = w^(1/2)` and `x = r^2` pullback Jacobians (both
-halves rejected); (19) JOIN as definition — mutated provenance
-table rejected by the same provenance guard the PASS path consumes;
-(20) `lambda = 2` model under the mutated scaled-law guard: the same
-ring code path must accept (all residuals zero) under the scaled law
-and reject under the original law; (21) dressed weight renamed away
+(18) mutated `v = w^(1/2)` factor/carry and `x = r^2` pullback
+Jacobian (all parts rejected); (19) JOIN as definition — mutated provenance
+   table rejected by the same provenance guard the PASS path consumes;
+   (20) `lambda = 2` model under the mutated scaled-law guard: the two
+   residual code paths must differ exactly by `lambda(lambda-1) Chat`,
+   independently of the gate-1 EOC premise; (21) dressed weight renamed away
 from `p_M` — rejected by the provenance guard (a name/graph test,
 never a numeric envelope test); (22) nonpositive exponent rejected
 at the modulus domain guard (irrational exponents are excluded by
@@ -773,7 +797,7 @@ the PASS path consumes.
 ```text
 FZ1_BRIDGE_SOURCE   = PUBLIC_SELF_CONTAINED (Q6; Q7 owns p_I = p_M)
 FZ2_WRITTEN_PROOFS  = CARRIED IN THIS PREREG (Q1-Q8 above)
-FZ3_ALLOWED_IMPORTS = exactly `from fractions import Fraction`;
+FZ3_ALLOWED_IMPORTS = exactly `from fractions import Fraction as Fr`;
                       hybrid or additional imports forbidden
 FZ4_AST_POLICY      = no ast.Div (integer `//` allowed), no float
                       or complex literals, no imports beyond FZ3,
@@ -786,39 +810,50 @@ FZ5_RESOURCE_CAPS   = time 600 s (workflow-enforced); enforced by
                       structural (no runtime guard needed): exactly
                       23 fixtures, stdout exactly 10 lines on PASS,
                       no recursion anywhere in the code
-FZ6_ARTIFACT_SET    = PREREG.md, verify.py, EXPECTED.txt, RUN.md,
-                      RESULT.md; SHA-256 of verify.py frozen in the
+FZ6_ARTIFACT_SET    = completed-run route: PREREG.md, verify.py,
+                      EXPECTED.txt, RUN.md, RESULT.md; abandoned-pin
+                      route: unchanged PREREG.md, unchanged verify.py,
+                      RESULT.md only, with no EXPECTED.txt or RUN.md;
+                      SHA-256 of verify.py frozen in the
                       claim-lock issue (verifier bytes are final before
                       the lock); SHA-256 of the pinned PREREG.md recorded
-                      as a lock-issue comment at pin, after the tuple
-                      and BASE_COMMIT refreeze
+                      as a lock-issue comment at pin, after the locked
+                      tuple and BASE_COMMIT are copied into PREREG.md
 FZ7_STATIC_AUDIT    = py_compile OK; AST scan 0 ast.Div, 0 float or
                       complex literals, 1 import (draft audit
-                      2026-08-26, repeated 2026-09-01; repeated at pin
-                      before readback)
+                      2026-08-26, repeated 2026-09-01; after the pin,
+                      repeated on the read-back remote blob before preflight)
 FZ8_RUN_METADATA    = RUN.md carries neutral public metadata only
                       (OS, architecture, Python version); no machine
                       nickname, hostname, private address, fleet label
 ```
 
-## 7. Falsifiers, FIRED versus STOP
+## 7. Falsifiers, FIRED, STOP, and abandoned pins
 
 `FIRED` arises only from a completed exact mathematical negation:
 
-- F1: any ring equality of gate 1 fails (a counterexample to DUP,
-  B-HALF consistency, the bridge value, or EOC on the frozen
-  lattice);
+- F1: any ring equality of gate 1 fails (B symmetry, MP, DUP,
+  B-HALF, two-step diagonal descent, the bridge value, or EOC on the
+  frozen lattice);
 - F2: a Machin witness of gate 3 fails as exact arithmetic;
 - F3: a form identity of gate 4 fails as exponent algebra;
-- F4: a modulus inequality of gate 2 fails as integer arithmetic.
+- F4: a frozen `D_b` or bare-`C` schedule inequality of gate 2 fails
+  as integer arithmetic.
 
-`STOP` (integrity, not science): a negative mutation passes its
-guard; a gate-5 residual mismatch (the residuals are frozen ring
-constants, so a mismatch can only be a verifier defect); stdout
-deviates from the frozen bytes; the two-architecture gate disagrees;
-the pinned artifacts' hashes mismatch; an enforced resource cap
-fires; any run happens before the pin. A STOP is recorded and the
-probe halts without a scientific verdict.
+`STOP` is integrity, not science. Before the pin, an authority,
+collision, exactness, security, metadata, transcript or hash failure
+halts the lane and creates no formal probe. After the pin, a negative
+mutation that passes, a gate-5 residual mismatch, hash/readback or
+preflight failure, nonzero exit, nonempty stderr, timeout, or other
+failure before one completed formal gate invokes the abandoned-pin
+route required by `POLICY.md`: the immutable `PREREG.md` and
+`verify.py` remain unchanged, `RESULT.md` records `Status: ABANDONED`
+and why the gate never completed, `EXPECTED.txt` and `RUN.md` are
+absent, and the identifier is consumed forever. If the formal gate
+completed and a later stdout-byte or architecture-integrity check
+fails, the completed stdout and run record are preserved and
+`RESULT.md` records integrity `STOP`; a completed gate is never
+relabeled `ABANDONED`.
 
 `CONFIRMED` is a status of `RESULT.md`, never of stdout: it may be
 selected only after a completed `RESULT PASS` run, byte-identical on
@@ -829,8 +864,9 @@ theorem carrier. **Status ceiling:** candidate-T at L1; any public
 **Bounded fallback.** If the finite audit completes `RESULT PASS`
 but the written universal proof is not accepted as theorem-grade in
 review, the maximal salvageable status is `BOUNDED-AUDIT-C`: exactly
-the frozen finite surface (the lattice, schedule, witness, form,
-and residual checks), with no universal claim. The fallback is
+the frozen finite surface (the lattice, four-pair `D_b` plus bare-`C`
+schedule sample, witness, form, and residual checks), with no
+universal claim. The fallback is
 selected in `RESULT.md`, never by the verifier.
 
 ## 8. Non-claims and untouched gates
@@ -852,28 +888,35 @@ fold.
    `CLAIM_LOCK_DRAFT_P-JIPC-WP3D-QPOS-MELLIN-1.md`) after a fresh
    authority readback and collision scan (`git ls-remote --heads
    origin`, issues, pull requests, `probes/`, registry rows,
-   object and claim locks), freezing the identifier, branch,
-   attempt ref, path, owner, layer, mode and the verifier's SHA-256
+   object and claim locks), freezing the identifier, single branch,
+   path, owner, layer, mode and the verifier's SHA-256
    (the verifier bytes are final before the lock; this file's bytes
    change at step 2, so its hash is recorded at step 3).
 2. Create only `probe/P-JIPC-WP3D-QPOS-MELLIN-1` and its one probe
-   directory from the exact base commit; move this file and the
-   never-executed `verify.py` there, refreezing every field of the
-   authority tuple and `BASE_COMMIT`.
+   directory from the exact lock-time `BASE_COMMIT`. Move this file
+   and the never-executed `verify.py` there. Before commit, replace
+   the draft status by `PREREGISTERED / UNRUN / NON-CANONICAL`, mark
+   the identifier claimed, insert the claim-lock issue number, state
+   that the pin SHA is recorded externally, and copy the locked
+   authority tuple and `BASE_COMMIT` byte for byte; do not select a
+   newer base at pin time.
 3. Before any import or execution, commit and push the complete
-   `PREREG.md` and `verify.py` as the immutable pin; publish the
-   attempt ref `refs/heads/probe-attempts/P-JIPC-WP3D-QPOS-MELLIN-1`
-   at the pin; record the pinned PREREG SHA-256 as a comment on the
-   claim-lock issue.
+   `PREREG.md` and `verify.py` as the immutable pin; record the full
+   pin commit and pinned PREREG SHA-256 as a comment on the
+   claim-lock issue. No second remote branch or attempt ref is created.
 4. Read both remote blobs back; record exact commit, SHA-256, bytes,
-   LF and final LF; repeat the static audit (FZ7).
+   LF and final LF on the claim issue; repeat the static audit (FZ7)
+   on those read-back bytes.
 5. Run the preflight (§5); only after public readback execute the
    pinned verifier formally exactly once in a deterministic
    environment.
-6. Add only `EXPECTED.txt` (audited stdout), `RUN.md` (FZ8) and
-   `RESULT.md` after the completed run; open one probe-only pull
-   request and require byte-identical x86_64 and aarch64 jobs plus
-   the aggregate `check` and manual security review.
+6. If the gate completes, add only `EXPECTED.txt` (audited stdout),
+   `RUN.md` (FZ8) and `RESULT.md`. If it never completes after the
+   pin, add only the mandatory `RESULT.md` with `Status: ABANDONED`,
+   no `EXPECTED.txt` and no `RUN.md`. In either route open one
+   probe-only pull request; the completed route requires byte-identical
+   x86_64 and aarch64 jobs plus aggregate `check` and manual security
+   review.
 7. Never amend, rebase, squash, force-push, rename, resume or reuse
    this probe after the pin; review and provenance-preserving merge
    (merge commit only).

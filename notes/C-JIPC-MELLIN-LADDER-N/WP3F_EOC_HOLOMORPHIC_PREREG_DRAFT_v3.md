@@ -19,7 +19,7 @@ PUBLIC_WP3D_PARENT       = MISSING (draft only; PR #572 nese v72 verzi,
                            v74 balík je na notes větvi tohoto PR)
 WRITTEN_CONTRACT         = v3 IN NOTES
 PUBLIC_PIN_READY         = BLOCKED
-BASIS_AT_DRAFT           = Public Canon v74 (refreeze při pinu)
+BASIS_AT_DRAFT           = Public Canon v74 (refreeze při claim locku)
 ```
 
 Tento dokument zůstává návrhem. Nevytváří claim, pin, veřejnou
@@ -114,11 +114,14 @@ aritmetika, intervaly a komplexní boxy s vnějším zaokrouhlením,
 `exp_R`/`exp_C` řadou s explicitním ocasem, `log_R`, kompaktní
 Riemannova integrace + FTC, `C¹` substituce, midpoint lemma,
 Cauchy-limitní jednoznačnost a lepení, holomorfnost lokálně
-stejnoměrné limity, archimédovská kofinalita). Přírůstky (dva):
+stejnoměrné limity, archimédovská kofinalita). Přírůstky (tři):
 
-**IT-SEGMENT (registrované pravidlo):** nechť `r ∈ R_{>0}`, `c ∈ C`
-a `B(c,r) ⊆ D` je otevřený eukleidovský disk (nikoli obdélníková
-complex-ball reprezentace evaluátoru WP3E).
+**IT-SEGMENT (registrované pravidlo):** nechť `Ω ⊆ C` je otevřená,
+`f` je holomorfní na `Ω`, `r ∈ R_{>0}`, `c ∈ C` a
+`B(c,r) ⊆ Ω` je otevřený eukleidovský disk (nikoli obdélníková
+complex-ball reprezentace evaluátoru WP3E). V tomto WP3F se používá
+`Ω=D`; domain-generic znění je později použitelné i na komplementu
+pólů ve WP3G.
 (i) Je-li `c ∈ R` a `f = 0` na reálném průměru `{c+x : x ∈ (−r,r)}`,
 pak `f = 0` na `B(c,r)`.
 (ii) Pro libovolné `c ∈ C`: je-li `f = 0` na neprázdné otevřené
@@ -130,6 +133,24 @@ normalizační konstanta nevstupuje do tvrzení ani do výpočtu.
 **POW-EXPLOG-ID (drobné registrované rozhraní):** jednoznačnost
 kladného `n`-tého kořene ve třídě a ekvivalenci §0.1(1). Nic
 dalšího; žádný POW_RAT kalkul se nepřenáší.
+
+**EFFECTIVE-NAME-ALGEBRA (registrované rozšíření nosiče):** rodičovský
+WP3E aproximant zůstává konečným součtem celých exponenciál. Pro
+odvozené rozdíly N4 je však přípustným aproximantem konečný výrazový
+strom postavený z rodičovských aproximantů, racionálních afinních
+pullbacků argumentu, součtu, rozdílu, součinu, násobení souřadnicí
+`s` a efektivních jmen `kappa`, `lambda(s)`, `mu(s)`. Každý uzel nese
+racionální uniformní sup-mez, vnější chybovou obálku a ukončující
+complex-ball evaluátor. Zejména
+
+```text
+sup_K |s(P-F)| <= sup_K|s| * sup_K|P-F|,
+```
+
+takže REC rozdíl je typovaný jako konečný exponenciální polynom;
+není falešně nazýván konečným součtem exponenciál. Součinové a
+součtové chyby jsou přesně pravidla použitá v N4. Rozhraní nepřidává
+reciproční nebo meromorfní uzávěr; ten patří až WP3G.
 
 Jména konstant použitá v N4 jsou přesně tři: `1/(2p_M)` (racionální
 obálka z WP3E `3 < p_M < 16/5`, tedy `5/32 < 1/(2p_M) < 1/6`),
@@ -226,7 +247,9 @@ pro každý další sčítanec `+1`. Každé `f` dostává rozvrh
 h := \min\{k : 2^k \ge \text{součet koeficientů}\},\qquad m := n+h+2,
 \]
 
-celková chyba `≤ 2^{-(n+3)}`. Před pinem se zmrazí jediný
+celková chyba `≤ 2^{-(n+3)}`. Výsledné aproximanty jsou výrazové
+stromy `EFFECTIVE-NAME-ALGEBRA`, nikoli nutně holé konečné součty
+exponenciál. Před pinem se zmrazí jediný
 deterministický algoritmus obálek, pořadí součtů a vnější
 zaokrouhlení. Každé `f` je holomorfní na `D` s efektivním jménem na
 každém racionálním kompaktním obdélníku.
@@ -300,8 +323,9 @@ Rodičovské hashe (WP3D, WP3E) jsou zámek v textu PREREG, který
 kontroluje reviewer při pinu — verifier je nečte a žádnou „readback“
 bránu netiskne.
 
-**Přehrávací okruh:** `Q[g, g^{-1}, h, h^{-1}] / (g^2 - π̂, h^2 - 2)`,
-kde `g` je token `C(½)` (`π̂ = g^2`) a `h` token `2^{1/2}`; `h`
+**Přehrávací okruh:** `Q[g, g^{-1}, h, h^{-1}] / (h^2 - 2)`,
+kde `g` je token `C(½)`, `p_M := π̂ := g^2` je odvozená zkratka a
+`h` je token `2^{1/2}`; `h`
 vstupuje do každé půlceločíselné hodnoty `Ĉ(k+½)` přes
 `(2p_M)^{-(k+½)} = h^{-(2k+1)} g^{-(2k+1)}`, nejen do koeficientu
 DUP-D. Žádná numerická hodnota `g` ani `h` se nevyhodnocuje.
@@ -324,7 +348,7 @@ Zmrazený formát stdout (hodnotově prostý):
 JIPC_WP3F_LIFT_AUDIT 1
 ARITHMETIC Q_INTERVAL_COMPLEX_BOX PASS
 PARENT_SENTENCE_REPLAY MACHIN POLY,CROSS3,DOMAINS PASS
-SLICE_WITNESS_REPLAY EOC,REC,DUP,EPULL,JOIN S=1,2,3 RING=Q[g,g^-1,h,h^-1] PASS
+SLICE_WITNESS_REPLAY EOC,REC,DUP,EPULL,JOIN S=1,2,3 RING=Q[g,g^-1,h,h^-1]/(h^2-2) PASS
 NAME_SCHEDULES K=[1,3/2]x[-1/2,1/2] F=5 N=1 PASS
 SAMPLE_BALL_OVERLAP S=3/2+i/2 BITS=2,3 F=5 PASS
 CHAIN_GEOMETRY S=3/2+i/2 R=3/4 K=2 PASS
@@ -378,14 +402,18 @@ Brány:
 - F3: exaktní výpočet vyvrátí zmrazenou doménovou podmínku,
   rozvrh jmen nebo geometrii řetězu, nikoli jen implementaci.
 
-`STOP`, nikoli `FIRED`: průchod negativní mutace, drift rodičovského
-hashe či textu, selhání autority, collision scanu, claim locku,
-pinu, readbacku, preflightu, bezpečnosti, timeoutu, determinismu,
-bajtů, transkriptového pravidla nebo architekturní integrity, a
-každé selhání, které může být vadou verifieru. Projde-li omezený
-audit, ale univerzální důkaz není přijat, výsledek je nejvýše
-`BOUNDED-AUDIT-C` (týž štítek jako u WP3D) na zmrazeném konečném
-povrchu.
+`STOP`, nikoli `FIRED`, je integrity stav. Před pinem selhání
+autority, collision scanu, claim locku, rodičovského hashe, přesnosti
+nebo bezpečnosti zastaví lane bez formální proby. Po immutable pinu
+selhání readbacku, preflightu, timeoutu, determinismu, negativní
+kontroly nebo verifieru před dokončením brány vyžaduje pouze
+`RESULT.md` se `Status: ABANDONED`, beze změny PREREG/verifieru a bez
+`EXPECTED.txt`/`RUN.md`; identifikátor je spotřebovaný. Selhání
+bajtů, transkriptového pravidla nebo architekturní integrity až po
+dokončené bráně se zachová jako `STOP`, nikdy se nepřeznačí na
+`ABANDONED`. Projde-li omezený audit, ale univerzální důkaz není
+přijat, výsledek je nejvýše `BOUNDED-AUDIT-C` (týž štítek jako u
+WP3D) na zmrazeném konečném povrchu.
 
 ## §5. Rozhodovací kontrakt a co žebřík staví
 
@@ -397,7 +425,8 @@ CANDIDATE-T      = oba veřejní rodiče (WP3D merged + WP3E merged) +
 BOUNDED-AUDIT-C  = audit PASS, ale univerzální důkaz nebo rodič není
                    theorem-grade; platí jen konečný zmrazený povrch
 FIRED            = hotová exaktní matematická negace
-STOP             = integrita, kód, mutace, běh nebo autorita selhala
+STOP             = pre-pin integrita nebo post-completion integrita selhala
+ABANDONED        = pinned gate se nedokončila; jen povinný RESULT.md
 ```
 
 Stdout vyjadřuje pouze omezený audit; výběr stavu patří do
@@ -408,8 +437,10 @@ Stdout vyjadřuje pouze omezený audit; výběr stavu patří do
 `C` na `Q_{>0}` až na exponenciální faktor: v klasické měně je každé
 kladné řešení tvaru `C(s) = b^{s}·Γ(s)` (podíl `C/Γ` je
 multiplikativní, `φ(p)φ(q) = φ(p+q)`, tedy `φ(s) = b^{s}` z
-jednoznačnosti kladného kořene). Most `C(½)^2 = p_M` pak dává
-`b·Γ(½)^2 = p_M`, tj. `b = 1`: kontrakt + most fixují `C = Γ` přesně,
+jednoznačnosti kladného kořene). Přímo z kontraktu v
+`p=q=1/2`, mostu `C(1/2)^2=p_M` a WP3D věty
+`B(1/2,1/2)=p_M` plyne `C(1)=1`; protože `C(1)=b Γ(1)=b`, je
+`b=1`. Kontrakt + most tedy fixují `C = Γ` přesně,
 a `C(½)^2 = p_M` je výrok `Γ_R(1) = 1` v Γ-substitute měně.
 (EPULL-D) je pak vztah reálného a komplexního místního faktoru
 `Γ_R(s) = 2^{s/2-1}Γ_C(s/2)` bez importu Γ. To je feeder pro
@@ -435,9 +466,10 @@ neimportuje a žádné místní čtení se netvrdí.
 3. **Veřejný WP3D-QPOS lock:** stav při tomto psaní: PR #572 nese
    v72 verzi draftu; refreeze na v74 a tento balík jsou na notes
    větvi téhož rodu (notes-lane PR nahrazující #572). Pořadí: merge
-   notes-lane PR → claim-lock issue (text připraven) →
-   `probe/P-JIPC-WP3D-QPOS-MELLIN-1` + attempt ref → pin → readback
-   → preflight → jediný formální běh → `EXPECTED/RUN/RESULT` →
+   notes-lane PR → claim-lock issue (text připraven) → jediná větev
+   `probe/P-JIPC-WP3D-QPOS-MELLIN-1` → pin → vzdálený readback →
+   preflight → jediný formální běh → při dokončení
+   `EXPECTED/RUN/RESULT`, při nedokončení pouze `RESULT: ABANDONED` →
    x86_64+aarch64 → merge. Skončí-li WP3D pouze `BOUNDED-AUDIT-C`,
    strop WP3F klesá na `BOUNDED-AUDIT-C`.
 
@@ -447,11 +479,14 @@ neimportuje a žádné místní čtení se netvrdí.
    readback tuple, reading-family NOT_APPLICABLE + třídy
    jednoznačnosti §0.1, L1, result-exposed.
 
-5. **Autorita a base:** tuple a `BASE_COMMIT` z tehdejšího `main`;
-   refreeze každého pole při pinu.
+5. **Autorita a base:** tuple a `BASE_COMMIT` se zmrazí z tehdejšího
+   `main` už v claim locku; pin je přímý potomek tohoto base a beze
+   změny kopíruje uzamčená pole. Jeho SHA se zaznamená externě v
+   claim issue a na completed-run route později také v `RUN.md`.
 
 6. **TCB a strojová smlouva:** před pinem zmrazit TCB/v2 (IT-SEGMENT,
-   POW-EXPLOG-ID), úplný DAG včetně N0, algoritmus jmen a obálek
+   POW-EXPLOG-ID, EFFECTIVE-NAME-ALGEBRA), úplný DAG včetně N0,
+   algoritmus jmen a obálek
    (včetně `κ, λ, μ`), zaokrouhlení, prostředkové meze, všech 19
    kontrol, přehrávací okruh s generovanou tabulkou a přesné stdout
    bajty.
