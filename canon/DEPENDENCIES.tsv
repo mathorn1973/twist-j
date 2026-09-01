@@ -633,8 +633,17 @@ CM-RAMIFIED-PFAFFIAN-ROOT	RAMIFIED-TM-SYMPLECTIC-ORIENTATION	REQUIRES	the alread
 CM-PERIOD-LATTICE-NONSELECTION	CM-ALTERNATING-PENCIL	REQUIRES	the public integral CM forms, Pfaffian, unimodular locus, Pell shift, J-pullback and root-of-unity kernel are the frozen inputs
 PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP	PHOTON-WINDOW-COORDINATES	REQUIRES	the exact five-vector and its unnormalised Fourier transform are the fixed algebraic input; this dependency alone does not create a complete L4 action carrier
 PHOTON-CONE-CONVERGENCE	DEF-ACTION-LAYERS	REQUIRES	the two route endpoints and both cross-layer lifts must remain explicitly typed at L2, L4 and L5
-PHOTON-CONE-CONVERGENCE	FCC-WEIGHTED-SHELL-SYMBOL	BOUNDED_BY	the exact weighted-shell theorem supplies one displayed L2 scalar symbol but neither selects its transfer datum nor derives a temporal characteristic
 PHOTON-CONE-CONVERGENCE	CENTRAL-LIFT-PHASE	BOUNDED_BY	the registered L4 normalized Hermitian action constrains the quadratic route but explicitly supplies no Herm2 positive or causal cone
 PHOTON-MASSLESS-PHASE	DEF-ACTION-LAYERS	REQUIRES	the action datum and the massless-phase conclusion require a named typed L4-to-L6 lift
 PHOTON-MASSLESS-PHASE	PHOTON-WINDOW-COORDINATES	REQUIRES	the exact Z_5 five-vector is the algebraic datum whose embedding into a complete L4 action carrier remains to be frozen
 PHOTON-MASSLESS-PHASE	PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP	BOUNDED_BY	direct finite-coupling nonmembership excludes only the frozen literal Wilson and Villain equality orbit and does not decide broader membership, comparison or a massless phase
+C8-MARKING-RIGIDITY	I-BILOCATED	BOUNDED_BY	the marking J_lambda=2 is consumed as an input at its existing dictionary scope; rigidity of the prime and delivery of the C8 level are conditional on it and do not derive it
+C8-PAULI-QUOTIENT-TRANSPORT	C8-BILINEAR-SHADOW	REQUIRES	the complete already registered multiplicative record, all indices and contexts included, is the exact object whose descent into mu_4 is proved
+C8-PAULI-QUOTIENT-TRANSPORT	I-BILOCATED	BOUNDED_BY	the supplied marking beta_+(2)=i fixes the first extension orbit only; the positive transport is conditional on that dictionary comparison and proves no field embedding or Born norm
+FCC-WEIGHTED-SHELL-REMAINDER	FCC-WEIGHTED-SHELL-SYMBOL	REQUIRES	the displayed shells, positive integral weights and exact moments are the frozen algebraic input; the remainder theorem strengthens the analysis of that one symbol without enlarging the predecessor's evidence or scope
+PHOTON-SPATIAL-TEMPORAL-TRANSFER	DEF-ACTION-LAYERS	REQUIRES	the owner-adopted dictionary has exactly the registered L2-to-L5 endpoints and does not create a physical continuum bridge
+PHOTON-SPATIAL-TEMPORAL-TRANSFER	FCC-WEIGHTED-SHELL-SYMBOL	REQUIRES	the exact shells, W* and moment normalization are consumed mathematical inputs and do not themselves force the owner selection
+PHOTON-SPATIAL-TEMPORAL-TRANSFER	FCC-WEIGHTED-SHELL-REMAINDER	REQUIRES	the global symbol range, zero lattice and spatial remainder are consumed mathematical inputs while carrier, flux and clock remain selected dictionary data
+PHOTON-TEMPORAL-CHARACTERISTIC	PHOTON-SPATIAL-TEMPORAL-TRANSFER	BOUNDED_BY	the theorem is conditional on the complete owner-adopted D tuple and neither derives nor promotes that dictionary choice
+PHOTON-CONE-CONVERGENCE	PHOTON-SPATIAL-TEMPORAL-TRANSFER	REQUIRES	the positively closed dictionary lift fixes the complete L2-to-L5 route consumed by the remaining comparison
+PHOTON-CONE-CONVERGENCE	PHOTON-TEMPORAL-CHARACTERISTIC	REQUIRES	the remaining L4-to-L5 comparison consumes the exact canonical K_op proved on the selected tuple

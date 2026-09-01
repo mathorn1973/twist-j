@@ -429,6 +429,14 @@ review.
    release gate. Merge without squash or rebase, tag the merge only after
    public readback, and publish assets only after tag readback passes.
 
+The sole post-cutover raw-transcript exception is an exact repository path in
+the public-policy allowlist. It is available only for deterministic printable
+text evidence whose name and path were publicly preregistered and read back
+before execution, whose bytes are required by the clean verifier replay, and
+whose size and SHA-256 are bound by the ordinary policy limit and a public
+custody manifest. It never applies to Canon synthesis payloads, private logs,
+development logs, failed-run diaries or third-party material.
+
 Notes and incomplete proposals live under `notes/`, carry `NON-CANONICAL`,
 need no verifier, and never edit `canon/CANON.md`. Canon patch proposals live
 under `notes/canon/`; only a later sealed public fold changes the Canon.

@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its sixty-four checks cover the current
+and emits deterministic text. Its sixty-six checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -83,19 +83,19 @@ on exactly `(K_QDD,D_quadratic)`, and every physical identifier and sampling
 debt to remain unresolved on `QDD-INSTRUMENT-APPARATUS` at `O/STOP`. It pins
 the exact dependency transfer, six lifecycle rows, targeted gate and CORE
 selection non-ownership, and the permanent direct-write firewall.
-The v72 check pins two exact photon boundary theorems and two open successor
-roots. `FCC-WEIGHTED-SHELL-SYMBOL` remains a theorem at L2 and the exact
-finite-coupling Wilson/Villain nonmembership remains a theorem at L4, both on
-their frozen two-architecture public probes. `PHOTON-CONE-CONVERGENCE` and
-`PHOTON-MASSLESS-PHASE` remain `O/MULTI` and `ROOT/STOP/FORMAL` under the
-single `PHOTON_CONTINUUM` program, with exactly seven dependencies and three
-named `OPEN_LIFT` gates. Full dependency bases, incoming-consumer boundaries,
-gate decision rows and lifecycle rationales are exact-pinned, and the Canon
-prose firewalls remain explicit. The complete 4569-byte photon insertion from
-the FCC heading to the electron paragraph is pinned by SHA-256, so additional
-positive prose cannot hide beside the required negative phrases. The check
-keeps direct finite-coupling nonmembership as a boundary rather than a
-massless-phase closure, keeps both
+The v72 check pins the immutable four-row declaration history and the parts
+of that fold not superseded by the v74 successor. `FCC-WEIGHTED-SHELL-SYMBOL`
+remains a theorem at L2 and the exact finite-coupling Wilson/Villain
+nonmembership remains a theorem at L4, both on their frozen two-architecture
+public probes. `PHOTON-MASSLESS-PHASE` remains `O/MULTI` and
+`ROOT/STOP/FORMAL`; the Herm2-cone and massless lifts remain the two surviving
+`OPEN_LIFT` gates inherited from v72. The original
+`PHOTON-CONE-CONVERGENCE` declaration tuple remains exact-pinned in HISTORY,
+while its current scope and gate ownership are audited by `V74-PHOTON`.
+The stable 2740-byte boundary-theorem block from the FCC heading to the
+successor-root heading is pinned by SHA-256. The check keeps direct
+finite-coupling nonmembership as a boundary rather than a massless-phase
+closure, keeps both
 older Kappa rows at `F`, admits no roughening row, and creates no CORE
 selection or
 physical-photon conclusion.
@@ -111,13 +111,40 @@ obligation with an explicit STOP program. It also records the exact DESI DR2
 R1 firing of the immutable dark-energy reading without moving its dictionary
 or conformal-weight neighbors.
 
+The v73 check pins the four rows of that fold. `C8-MARKING-RIGIDITY`
+and `C8-PAULI-QUOTIENT-TRANSPORT` enter at `T/L1` in section 3 on their frozen
+two-architecture public probes, each fenced to the `I-BILOCATED [D]` marking
+as an input rather than a derivation. `FCC-WEIGHTED-SHELL-REMAINDER` enters at
+`T/L2` in section 9 and requires `FCC-WEIGHTED-SHELL-SYMBOL`, whose recorded
+consumer set grows by exactly that edge while the v72 row itself does not move.
+`PHOTON-Z5-STAR-QUADRATURE` enters at `C/L4` in section 9, carrying its sharp
+constant and the refuted `HALF` predicate, which is folded and preserved rather
+than relabelled. The check requires exact Registry, Normative, Evidence and
+lifecycle contracts for all four, their exact dependency topology, a matching
+`### CLAIM [status]` heading in `canon/CANON.md`, and that none of the four
+owns a gate, a Frontier program row or a live Frontier entry.
+
+The v74 check pins `PHOTON-SPATIAL-TEMPORAL-TRANSFER` at
+`DICTIONARY/D/MULTI`, `PHOTON-TEMPORAL-CHARACTERISTIC` at `THEOREM/T/L5`,
+and the revised `PHOTON-CONE-CONVERGENCE` parent at `OBLIGATION/O/MULTI`.
+It requires their exact Registry, Normative, Evidence and three-event
+lifecycle contracts, their shared completed two-architecture probe bundle,
+and the exact `3/1/4` dependency topology for dictionary/theorem/parent. It
+also pins all eight dependency rows and incoming consumers, transfers the
+L2-to-L5 gate to the dictionary as a closed `DICTIONARY_LIFT`, and leaves
+only the unchanged L4-to-L5 Herm2 comparison on the parent as `OPEN_LIFT`.
+The D/T Canon block and the full successor-root block are byte- and
+SHA-256-pinned. The parent remains `PHOTON_CONTINUUM/ROOT/STOP/FORMAL`; the
+new closed rows own no Frontier or CORE selection, and no Herm2, Born,
+continuum or physical-photon conclusion is admitted.
+
 Run from the repository root:
 
 ```text
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 64/64 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 66/66 ALL PASS`,
 exit 0, and empty stderr.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
@@ -138,14 +165,15 @@ determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
 
-The current v72 count check reads 346 claims, 23 reproductions, 14 gates and
-639 dependency edges. The active partition is T221/D44/C33/H2/O29/F17, so
-the live H+O count is 31 and the two-architecture evidence count is 259.
-`V72-PHOTON` requires the four new rows to retain their exact Registry,
-Normative, Evidence and lifecycle contracts, the exact seven-edge topology,
-the two open Frontier roots and the three open lifts. It also requires the
-two theorem rows to own neither a gate nor a program, leaves the old Kappa
-failures terminal, and keeps roughening unregistered.
+The current v74 count check reads 352 claims, 23 reproductions, 14 gates and
+648 dependency edges. The active partition is T225/D45/C34/H2/O29/F17, so
+the live H+O count is 31 and the two-architecture evidence count is 265.
+`V72-PHOTON` preserves the immutable declarations, stable boundary theorems,
+the two surviving open lifts and the terminal Kappa and roughening boundary.
+`V74-PHOTON` requires the selected D3 transfer and conditional characteristic
+to retain their exact `D/MULTI` and `T/L5` contracts, the parent to stay
+`O/ROOT/STOP`, the L2-to-L5 lift alone to be closed, and the independent
+Herm2 route to remain open.
 
 The v70 count check reads 342 claims, 23 reproductions, 11 gates and 632
 dependency edges. The active partition is T219/D44/C33/H2/O27/F17, so the

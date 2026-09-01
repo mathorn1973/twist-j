@@ -1,11 +1,102 @@
 # Canon changelog (public series)
 
-## Public Canon v72
+## Public Canon v74
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 346 claims; 0 T-LOCK, 221 T, 44 D, 33 C, 2 H, 29 O, 17 F; 31 live H/O.
+Registry snapshot: 352 claims; 0 T-LOCK, 225 T, 45 D, 34 C, 2 H, 29 O, 17 F; 31 live H/O.
 Reproduction witnesses: 23.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v74 folds the exact result already earned by merged public probe
+`P-PHOTON-TEMPORAL-CHARACTERISTIC-1`. It registers one complete
+owner-adopted dictionary at `D` and one conditional proof-first theorem at
+`T`.
+
+`PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]` selects the parity carrier `D3`, its
+reciprocal momentum quotient, every vector in the five frozen weighted
+shells, normalization `1/324`, the fixed trivial flux, the dimensionless
+forward counter, the two-slice state and exactly one member of the frozen
+scalar nearest-neighbour reversible temporal class. The zero mode and unit
+tangent select `(a,b)=(-2,1)` inside that class. This is a complete owner
+choice, not a derivation of the carrier, flux, scale or clock from `J` or from
+the architecture, and it claims no uniqueness outside the displayed class.
+
+`PHOTON-TEMPORAL-CHARACTERISTIC [T]` proves on that tuple the exact transfer
+determinant
+
+```text
+det C(omega,k)=exp(-i omega)[s(k)-4 sin^2(omega/2)],
+```
+
+the total characteristic `K_op`, its reciprocal conjugate unit-modulus
+branches, the nontrivial parabolic apex at the unique zero character and the
+global two-sided lifted characteristic-function remainder bound. The
+function converges uniformly on bounded lifted sets to
+`Omega^2-|k|^2`; this is not null-set, state, propagator or physical-continuum
+convergence.
+
+The fold closes only
+`GATE-L2-L5-PHOTON-TEMPORAL-CHARACTERISTIC` positively as a
+`DICTIONARY_LIFT`. `PHOTON-CONE-CONVERGENCE [O]` remains
+`ROOT / STOP / FORMAL`, because the independent L4 Herm2 carrier, positive or
+causal cone, total typed map `iota` and exact null-set comparison are still
+absent; `GATE-L4-L5-PHOTON-CONE-IDENTIFICATION` remains `OPEN_LIFT`.
+`PHOTON-MASSLESS-PHASE [O]` and the terminal falsified Kappa/window route do
+not move.
+
+The two temporal branches are phases of modulus one, not a mathematical
+contraction/expansion pair in transfer amplitude, and the two ambient
+spatial-zero representatives are one point of the selected quotient rather
+than two photons, polarizations or Born halves. A broader
+contraction/expansion, matter/light or visible/invisible interpretation is
+recorded only as motivation: it is neither assumed nor refuted. No Herm2,
+Born, causal, Lorentz, propagator, polarization, apparatus or physical-photon
+claim is added.
+
+## Public Canon v73
+
+Public Canon v73 folds four exact results that were already earned by merged
+public probes and were held unregistered pending this reviewed public fold. Three enter
+at proof-first `T` and one at computation status `C`.
+
+`C8-MARKING-RIGIDITY [T]` proves that, under the existing nonsquare dictionary
+marking, the residue prime is rigid at five and the C8 level of the phase tower
+is delivered rather than selected, and records the relative no-go that no
+Hermitian observable with rational matrix entries separates the two conjugate
+target orientations. `C8-PAULI-QUOTIENT-TRANSPORT [T]` proves the exact left-Z
+quotient with its two fibres and the complete conditional descent of the
+already registered bilinear shadow into `mu_4`, together with the exact parity
+boundary, the one-copy readout obstruction and the involution and norm
+firewalls. Both remain conditional on the `I-BILOCATED [D]` marking, which is
+an input and is not derived, and neither promotes a physical qubit, gate, Born
+rule, Born-norm transport, universality or speedup.
+
+`FCC-WEIGHTED-SHELL-REMAINDER [T]` closes the global remainder boundary that
+Public Canon v72 explicitly left unproved for the displayed L2 weighted-shell
+symbol, adding two-sided remainder control, the complete zero locus and
+compact-uniform mathematical rescaling to the squared Euclidean norm. It claims
+no sharpness for its constants and selects no carrier, weight, flux or temporal
+rule. `PHOTON-Z5-STAR-QUADRATURE [C]` registers the complete finite L4
+star-quadrature classification, its sharp constant `(82+50 sqrt(5))/361`, the
+unique degree-five maximizer and the five global maximizers. Its frozen
+predicate `HALF` is refuted at that finite scope and is folded and preserved
+rather than suppressed or relabelled, while the separately frozen `STRICT_UNIT`
+passes.
+
+The fold consumes no new physical reading. `PHOTON-CONE-CONVERGENCE [O]` and
+`PHOTON-MASSLESS-PHASE [O]` remain ROOT and STOP, and the terminal
+`PHOTON-KAPPA-LEMMA [F]` and `PHOTON-WINDOW-PROOF [F]` are not reopened. No
+Lorentz, continuum, propagator, apparatus or physical-photon claim is added,
+and no cross-layer gate is opened or closed.
+
+Three merged public probes are deliberately not registered by this fold.
+`P-CARRY-C8-QUANTUM-PHASE-BRIDGE-1`, `P-C8-PHASE-SELECTION-1` and
+`P-C8-MARKING-RIGIDITY-1` each record that they change no Canon row; the first
+two state so explicitly, and the third is superseded for promotion purposes by
+its own successor, which repaired two evidence-integrity defects. Their results
+remain public probe records and are not Canon claims.
+
+## Public Canon v72
 
 Public Canon v72 registers two proof-first photon-boundary theorems and opens
 two separately typed successor roots. FCC-WEIGHTED-SHELL-SYMBOL [T] proves

@@ -1,0 +1,11 @@
+PROBE P-PHOTON-Z5-DUAL-WORM-CROSSCHECK-1
+KERNEL CLOSED_SURFACE_RANDOM_WORD_METROPOLIS
+CYCLE_SPAN L=2 rank_d2=45 cycle_dim=51 generators=70 generator_rank=51 status=PASS
+CYCLE_SPAN L=3 rank_d2=240 cycle_dim=246 generators=330 generator_rank=246 status=PASS
+DYADIC_METROPOLIS_BALANCE support_sizes=0..96 status=PASS
+FIXTURE L=2 steps=2000 accepted=1045 invalid_support=340 word_letters=2056 state_sha256=580174dde4d285c6763bb69db5478bf2e90f56de9dfa08176e3e27a6ba2a2188 status=PASS
+PROPOSAL_SYMMETRY sign_involution=PASS
+IRREDUCIBILITY generator_span_plus_geometric_word=PASS
+APERIODICITY zero_length_word_probability=1/2 status=PASS
+EVIDENTIAL_STATUS ZERO_ENGINEERING_ONLY
+RESULT PASS

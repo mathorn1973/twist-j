@@ -299,6 +299,13 @@ private logs, personal data, binary models, compiled objects, or unreviewed
 third-party material. Files over 5 MiB require an explicit policy change.
 External or large data use a manifest with source, version, license, and hash.
 
+A deterministic public probe transcript with a normally forbidden suffix may
+be tracked only when its exact repository path is enumerated in
+`tools/policy_file_rules.py`, the path was frozen by a public preregistration
+before execution, the transcript is required for clean verifier replay, and its
+bytes are covered by a committed custody manifest. This narrow exception does
+not admit private, ad hoc, failed-run, development, or machine logs.
+
 Every pull request must pass the required `check`, which aggregates the x86_64
 and aarch64 architecture jobs, plus manual security review.
 Apache-2.0 applies unless a file states an approved compatible license.

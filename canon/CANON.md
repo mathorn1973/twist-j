@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v72
+# TWIST-J Public Canon v74
 
-**Release identity.** Public Canon v72. Normative authority and activation
+**Release identity.** Public Canon v74. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v72 also declares the discrete architecture used to read
+only. Public Canon v74 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v72 does not claim
+seed of the two algebraic projections. Public Canon v74 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -124,7 +124,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v72 contains no such
+deriving the architecture from J; Public Canon v74 contains no such
 theorem.
 
 ---
@@ -3379,6 +3379,137 @@ Born, probability, observer, decoder, force, spacetime, SI or L2-L6 reading.
 Evidence is `probes/P-J-ODD-MOTOR-MEDIATED-BRIDGE-COVERAGE-2`.
 
 
+### C8-MARKING-RIGIDITY [T]
+
+At L1 only, and conditional on the dictionary marking `J_lambda = 2` at its
+existing `I-BILOCATED [D]` scope, put
+
+```text
+K = F_25 = F_5[tau]/(tau^2-2).
+```
+
+The marked datum satisfies
+
+```text
+tau^2 = 2,  tau^4 = -1,  ord(tau) = 8,
+ord_5(2) = 4,  F_5 nonsquares = {2,3}.
+```
+
+**Rigidity of the residue prime.** Let `p` be an odd prime and suppose
+`tau in F_(p^2)` satisfies `tau^2=2` and `ord(tau)=8`. Then `ord(tau^2)=4`,
+hence `ord_p(2)=4`, hence `p` divides `2^4-1=15` and does not divide
+`2^2-1=3`. The only surviving prime is `p=5`. Characteristic two is excluded
+because every finite multiplicative group in characteristic two has odd
+order. The exact integer scan of primes below `20000`, which returns exactly
+`[5]`, audits this divisor proof and is not its source.
+
+**The layer is delivered, not selected.** Over `F_5` each nonsquare marking
+has exactly two square roots in `F_25` and both have exact order eight, while
+no root of a square marking has order eight. The C8 level of the phase tower
+therefore follows from a nonsquare marking, and under that marking no other
+level is available. Order eight is a consequence of the pentad together with
+the marking, not a selection among the levels of the Clifford hierarchy.
+
+**Source orientation.** The nonsquares of `F_5` are exactly `2` and
+`3 = 2^-1`, and
+
+```text
+(tau^3)^2 = (tau^7)^2 = 3,     (tau^5)^2 = 2.
+```
+
+Orientation-reversing source maps carry the marked multiplier to its inverse,
+while the sign branch preserves it.
+
+**Character arithmetic.** On the four faithful C8 characters indexed by
+`{1,3,5,7}`, Frobenius acts by exponent `5` and complex conjugation by
+exponent `7`. These are distinct commuting involutions, they generate
+`(Z/8)^*`, and they act freely and transitively on the four indices.
+
+**Relative rational-observable no-go.** In the external standard-QM two-use
+comparison the `k=1` and `k=7` states are entrywise complex conjugates. The
+ten two-qubit Pauli products with rational matrix entries span the Hermitian
+rational-entry matrices, and none of them separates the two states, while
+`X tensor Y` and `Y tensor X` separate them with expectation `+1` and `-1`.
+By rational linearity every Hermitian observable with rational matrix entries
+is orientation-blind on this pair. This is a relative statement: it does not
+exclude a target observable that already carries an orientation through `i`.
+
+`P-C8-MARKING-RIGIDITY-2` audits the finite field, order, exponent and
+operator-basis ingredients on both required architectures.
+
+The marking `J_lambda = 2` is an input and is not derived here, the prime five
+is not derived without it, and no unique C8 generator orientation is selected.
+No derivation of quantum mechanics, physical qubit, state, phase, gate,
+apparatus, Born rule, measurement law, Born-norm transport, quantum advantage,
+universality or speedup is claimed.
+
+### C8-PAULI-QUOTIENT-TRANSPORT [T]
+
+At L1 only, with `K=F_25`, `H=<tau>`, `H0=F_5^*=<tau^2>` and
+`sigma(x)=x^5`, restriction gives a bijection
+
+```text
+E/<sigma> -> Iso(F_5^*, mu_4),
+```
+
+with fibres `{1,5}` and `{3,7}`. On normalized generator matrices these are
+exactly the left-`Z` classes. The further equality
+`X P_k X = zeta_8^k P_-k` would merge the remaining orientations only if
+input/output frame relabelling were also adopted, and it is not adopted here.
+
+**Conditional transport.** The explicitly supplied marking `beta_+(2)=i`
+determines exactly the first extension orbit, not one extension. On the
+complete already registered `C8-BILINEAR-SHADOW` record, all indices and
+contexts included, both extensions give exactly `beta_+(V)`:
+
+```text
+Theta_n                -> i^s2(n),
+Y_n, s2(n) even        -> i^(3 s2(n)/2),
+Y_n Y_m, both odd      -> i^(3(s2(n)+s2(m))/2).
+```
+
+No branch selector, new coordinate, lost component or new physical gauge is
+needed for this equality. The four-character readout family has exactly the
+two displayed fibres, separated by `Theta_1=2`. All output scalars lie in
+`mu_4`, and their diagonal gate realization is an `S` power, not a
+non-Clifford output.
+
+**Exact parity boundary.** A nonzero scalar monomial `tau^n` is invariant
+under the character-branch flip if and only if `n` is even, and for a product
+the total exponent must be even. Mixed-parity `Y` products therefore do not
+descend. This bounds this scalar descent and asserts nothing about all
+possible nonlinear readouts.
+
+**One-copy readout obstruction.** In the complete frozen class of fixed
+real-linear expectation readouts on one externally supplied qubit, branch
+invariance for every density matrix is equivalent to `[A,Z]=0`, hence to
+`A = aI + bZ`. It therefore destroys sensitivity to all diagonal phases. The
+operators themselves are not equal, since `P_k|+>` and `Z P_k|+>` are
+orthogonal.
+
+**Two-use control.** Applying the same `P_k` to both factors of an externally
+supplied Bell pair produces `(|00> + i^k|11>)/sqrt2`. A common `Z tensor Z`
+branch acts trivially there, and fixed `X tensor Y` has exact eigenvalue `+1`
+for `{1,5}` and `-1` for `{3,7}`; a branch change on only one factor reverses
+the result. This is a labelled comparison construction with a fixed reference,
+not a physical implementation or a derived common-branch law.
+
+**Involution and norm firewalls.** A faithful character cannot intertwine
+source Frobenius (exponent `5`) with complex conjugation (exponent `-1`),
+because only `k=0,4` satisfy `6k=0` modulo `8`. Concretely `N(tau)=3` maps to
+`-i` under `beta_+`, whereas every complex character image of `tau` has
+modulus squared `1`. The transport is not additive either, so this
+multiplicative descent must not be called a Born-norm or a field embedding.
+
+`P-C8-PAULI-QUOTIENT-TRANSPORT-1` audits the finite field, exponent and
+operator-basis ingredients on both required architectures.
+
+This is a complete transport for one named multiplicative record. It is not a
+quantum-state, apparatus or universal-computation bridge, it does not prove
+the marking forced by `J`, and it supplies no physical carrier, preparation,
+coupling, branch occurrence, Born rule, common-branch law in Nature, decoder
+completion, speedup, universality, clock, gravity, SI quantity or L2-L6 lift.
+
 ## 4. The two places
 
 The total-ramification census among full quartic cyclotomic fields is exact
@@ -4594,27 +4725,31 @@ physical photon.
 The preceding theorems do not repair or reopen `PHOTON-KAPPA-LEMMA [F]` or
 `PHOTON-WINDOW-PROOF [F]`. They delimit two separate successor roots.
 
-`PHOTON-CONE-CONVERGENCE [O]` asks whether one publicly selected and
-completely typed L2 spatial-transfer datum yields an exact L5 temporal
-characteristic
+`PHOTON-CONE-CONVERGENCE [O]` now has its first route fixed. The complete
+owner-adopted tuple `PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]`, supported by
+`PHOTON-TEMPORAL-CHARACTERISTIC [T]`, yields the exact L5 characteristic
 
 ```text
 K_op = {(omega,k) : det C(omega,k)=0},
 ```
 
-and whether a separately public L4 Herm2 carrier and cone `K_quad` admit an
+on the selected `D3` quotient. The L2-to-L5 temporal-characteristic gate is
+therefore closed positively as a dictionary lift. The remaining question is
+whether a separately public L4 Herm2 carrier and cone `K_quad` admit an
 independently frozen total typed map
 
 ```text
 iota : carrier(K_quad) -> carrier(K_op)
 ```
 
-with `iota(K_quad)=K_op` as exact equality of null sets. The weighted-shell
-theorem supplies only one displayed scalar symbol. `CENTRAL-LIFT-PHASE`
+with `iota(K_quad)=K_op` as exact equality of null sets. `CENTRAL-LIFT-PHASE`
 supplies only L4 quadratic-support action, not a positive or causal Herm2
-cone. The L2-to-L5 temporal-characteristic gate and the L4-to-L5
-identification gate therefore remain open. Here convergence means agreement
-of two typed routes, not a continuum limit.
+cone. The L4-to-L5 identification gate therefore remains `OPEN_LIFT`. Here
+convergence means agreement of two typed routes, not a continuum limit. The
+two registered temporal branches are unit-modulus phases; they are not a
+contraction/expansion pair in transfer-amplitude sense. A broader
+contraction/expansion, matter/light or visible/invisible interpretation is
+neither assumed nor refuted by this closure.
 
 `PHOTON-MASSLESS-PHASE [O]` separately owns the L4-to-L6 mathematical phase
 question. Before it can move, the exact five-vector must be embedded in a
@@ -5228,6 +5363,261 @@ displayed finite compressions, no `J` coupling, no `p=5` selection, no
 decoder, measure, Born, observer, force, spacetime, physical, or SI
 reading, and no L2--L6 lift. The successor question at `k = 4` is not a
 registered claim of this Canon.
+
+### FCC-WEIGHTED-SHELL-REMAINDER [T]
+
+At L2 only, keep the ambient carrier `Z^3`, the shells `S_n`, the positive
+integral weights `W*` and the symbol `S(k)` exactly as in
+`FCC-WEIGHTED-SHELL-SYMBOL`, and put
+
+```text
+r = |k|,     s(k) = L(k)/324.
+```
+
+For every real `k in R^3`,
+
+```text
+0 <= r^2-s(k) <= (11/27) r^4,
+
+0 <= s(k)-r^2+(11/27) r^4 <= (38/405) r^6,
+
+0 <= s(k) <= 16/9.
+```
+
+The complete zero locus is
+
+```text
+{k in R^3 : s(k)=0} = 2 pi Z^3 union (pi(1,1,1)+2 pi Z^3).
+```
+
+For every real `epsilon>0`, with `s_epsilon(k) = s(epsilon k)/epsilon^2`,
+
+```text
+0 <= r^2-s_epsilon(k) <= (11/27) epsilon^2 r^4,
+
+0 <= s_epsilon(k)-r^2+(11/27) epsilon^2 r^4
+  <= (38/405) epsilon^4 r^6,
+```
+
+and therefore, for every `R>=0`,
+
+```text
+sup_(|k|<=R) |s_epsilon(k)-|k|^2| <= (11/27) epsilon^2 R^4.
+```
+
+Thus `s_epsilon` converges to the squared Euclidean norm uniformly on every
+bounded `k`-ball as `epsilon` tends to zero through positive real values.
+
+The written proof uses the global scalar second-derivative chain with zero
+initial data and evenness, positive weighted summation, the explicit
+nonnegative sextic polynomial gap, the complete support span `D3` with both
+inclusions of its reciprocal zero lattice, and exact positive-`epsilon`
+substitution. Finite samples of `k` or `epsilon` are not used as a universal
+proof. `P-FCC-WEIGHTED-SHELL-REMAINDER-1` audits the sixteen exact
+certificates on both required architectures.
+
+No sharpness claim for the displayed constants or for the bound `16/9` is
+included. The rescaling `k -> epsilon k` stays inside the same L2 function
+domain and is not an architecture-to-physical-continuum lift. The two zeros on
+the displayed `Z^3` Fourier torus are not two photons and not two
+polarizations. This statement selects no carrier, quotient, weight, physical
+scale or flux, and supplies no temporal transfer, temporal characteristic,
+Herm2 identification, cone, Lorentz statement, Gibbs measure, massless phase,
+propagator, polarization count, decoder, apparatus readout or SI quantity.
+
+### PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]
+
+At `MULTI`, the owner adopts exactly the following L2-to-L5 dictionary. Put
+
+```text
+D3 = {x in Z^3 : x1+x2+x3 is even},
+Gamma_D3 = 2 pi Z^3 union (pi(1,1,1)+2 pi Z^3),
+T_D3 = R^3/Gamma_D3,
+V = Map(D3,C),                         H = V x V.
+```
+
+Real-space points, functions and states have literal equality. Momentum
+equality is `k~k'` exactly when `k-k'` lies in `Gamma_D3`. Signed coordinate
+permutations are symmetries, not an additional quotient. Use every vector in
+`S_n` for `n in {2,4,8,10,16}`, shell weights
+`W*=(6,1,15,1,1)`, dimensionless spatial unit one, operator scale `1/324`,
+and the fixed edgewise trivial flux
+
+```text
+F0(x,v)=1.
+```
+
+Flux equality is literal equality in this fixed gauge. Define the total
+operator on `V` by
+
+```text
+(A_F0 f)(x)
+  = (1/324) sum_(n,v) w_n [f(x)-F0(x,v)f(x+v)]
+  = (1/324) sum_(n,v) w_n [f(x)-f(x+v)].
+```
+
+Time is the forward counter `m in N0` with dimensionless unit update. Put
+
+```text
+X_m=(psi_(m+1),psi_m),                 X_0 arbitrary,
+lambda=exp(-i omega),                  omega in R/2 pi Z.
+```
+
+Inside only the frozen scalar, translation-invariant, nearest-neighbour,
+time-reversal-symmetric affine class
+
+```text
+psi_(m+2)+psi_m+(a+b s(k))psi_(m+1)=0,
+```
+
+the zero-mode condition forces `a=-2` and the unit-tangent normalization
+forces `b=1`. The dictionary therefore adopts
+
+```text
+psi_(m+2)-2psi_(m+1)+psi_m+A_F0 psi_(m+1)=0,
+X_(m+1)=T_op X_m,
+T_op=[[2I-A_F0,-I],[I,0]].
+```
+
+This is an owner selection at status `D`, not a proof that the architecture
+forces `D3`, `W*`, the scale, flat flux, temporal class or clock rule. The
+selection claims no completeness or uniqueness outside the displayed class,
+no bilateral physical time and no SI speed or scale.
+
+### PHOTON-TEMPORAL-CHARACTERISTIC [T]
+
+Conditional on exactly the tuple registered by
+`PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]`, every character
+`chi_k(x)=exp(i<k,x>)` satisfies `A_F0 chi_k=s(k)chi_k`, where
+
+```text
+s(k)=(1/324) sum_(n,v) w_n(1-cos(<k,v>)),
+0<=s(k)<=16/9,
+s(k)=0 exactly for k in Gamma_D3.
+```
+
+No Fourier completeness or diagonalization of all `Map(D3,C)` is claimed.
+Within the frozen two-parameter temporal class, the zero-mode and unit-tangent
+conditions uniquely give `(a,b)=(-2,1)`. On each character,
+
+```text
+T(k)=[[2-s(k),-1],[1,0]],              det T(k)=1,
+C(omega,k)=exp(-i omega)I_2-T(k),
+```
+
+and direct expansion gives
+
+```text
+det C(omega,k)
+  = exp(-i omega)[s(k)-4 sin^2(omega/2)].
+```
+
+Thus the total L5 characteristic is exactly
+
+```text
+K_op = {([omega],[k]) in (R/2 pi Z)xT_D3 :
+        4 sin^2(omega/2)=s(k)}.
+```
+
+For every nonzero spatial character there are exactly two distinct frequency
+classes
+
+```text
+omega_+(k)=+2 asin(sqrt(s(k))/2),
+omega_-(k)=-2 asin(sqrt(s(k))/2)       modulo 2 pi,
+```
+
+whose multipliers are reciprocal conjugates of modulus one. The transfer is
+elliptic for `s>0`. At the unique zero character the branches meet at
+`lambda=1`; `T(0)` is non-identity unipotent with `(T(0)-I)^2=0`, hence
+parabolic with algebraic multiplicity two.
+
+For `epsilon>0`, `Omega in R` and `k in R^3`, the lifted universal-cover
+function
+
+```text
+q_epsilon(Omega,k)
+ = 4 sin^2(epsilon Omega/2)/epsilon^2
+   -s(epsilon k)/epsilon^2
+```
+
+obeys
+
+```text
+-(epsilon^2/12) Omega^4
+ <= q_epsilon(Omega,k)-(Omega^2-|k|^2)
+ <= (11/27) epsilon^2 |k|^4.
+```
+
+Hence `q_epsilon` converges uniformly on bounded lifted sets to
+`Omega^2-|k|^2`. This is characteristic-function convergence only, not
+null-set, cone, state, propagator or physical-continuum convergence. The
+theorem does not promote or derive its dictionary premise. The two temporal
+branches are unit-modulus phases, not a contraction/expansion pair in
+transfer-amplitude sense. The two ambient spatial-zero representatives are
+one point on the `D3` quotient; they are not two photons, polarizations,
+visible/invisible sectors or Born halves. No Herm2 carrier, positive cone,
+Born rule, causal ontology, Lorentz invariance, physical continuum, massless
+phase, propagator, polarization, apparatus, readout or physical photon is
+established. A broader contraction/expansion, matter/light or
+visible/invisible interpretation is neither assumed nor refuted.
+
+### PHOTON-Z5-STAR-QUADRATURE [C]
+
+At L4 only, fix `zeta = exp(2 pi i/5)` in its principal embedding and use
+exactly the finite polynomial class, coefficient conventions and
+normalization frozen in `P-PHOTON-Z5-STAR-QUADRATURE-1`. Write
+`theta(k) = abs(F)/D` with `D = C0+F > 0`. Over the `462` phase-count vectors
+of total degree zero through six the exact classification is
+
+```text
+degree 0..4:   max theta = 0,
+degree 5:      max theta = 1/2,
+degree 6:      max theta = (82+50 sqrt(5))/361.
+```
+
+The sharp constant for the entire declared class is therefore
+
+```text
+theta_star = (82+50 sqrt(5))/361,
+1/2 < theta_star < 1,
+abs(F) <= theta_star D.
+```
+
+The unique degree-five maximizer is `(1,1,1,1,1)`, with `C0=2`, `F=2`, `D=4`.
+Exactly five count vectors attain the global maximum,
+
+```text
+(0,2,0,2,2), (0,2,2,0,2), (2,0,2,0,2), (2,0,2,2,0), (2,2,0,2,0),
+```
+
+each with
+
+```text
+C0 = 79-29 sqrt(5),   F = 4-4 sqrt(5),   D = 83-33 sqrt(5).
+```
+
+Two predicates were frozen before execution:
+
+```text
+HALF:         theta(k) <= 1/2 for every admitted k,
+STRICT_UNIT:  theta(k) < 1    for every admitted k.
+```
+
+Exactly the five vectors above refute `HALF`, and `STRICT_UNIT` passes. The
+recorded outcome is `CLASSIFIED / FAIL_HALF / PASS_UNIT`. Neither threshold
+moved after the preregistration pin, and the refuted predicate is preserved
+here rather than relabelled as passing because the other predicate holds.
+
+The status is `C`: this is a complete finite classification audited on both
+required architectures, not an independently theorem-grade proof.
+
+Multiplicity counts phase-count vectors only, and not ordered factor lists,
+edge backgrounds, physical degrees of freedom or sampled events. The finite
+character averages are algebraic definitions and adopt no L6 probability law.
+No action, source, Gibbs state, physical carrier or reading is adopted, and no
+infinite-volume tail, covariance screening, correlation decay, phase, cone,
+propagator, polarization, apparatus or SI claim follows.
 
 ## 10. Relativity as counting
 
