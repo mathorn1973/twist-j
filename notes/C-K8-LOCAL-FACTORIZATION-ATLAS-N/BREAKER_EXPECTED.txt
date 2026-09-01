@@ -1,0 +1,12 @@
+BREAKER C-K8-LOCAL-FACTORIZATION-ATLAS-N
+STATUS NO_FALSIFIER_FOUND
+AUTHORITY NON_CANONICAL candidate-T/L1 audit-only
+SCAN AUDIT_NOT_PROOF
+PRIMES exact-sieve <= 1000000: 78498
+ODD_ROWS 1:19552 3:19653 5:19623 7:19669
+P2 mod-2=(x+1)^4 Q2=irreducible profile=(4,1,1) wild
+V4 fixed=(3:-2,5:-1,7:2) densities=(1/4,3/4,0-unramified-inert)
+P5 ordered=(x^2-2,x^2-3) i=(2,3) sigma5=within sigma7=swap
+P5_UNITS full=C24xC24 swap-norm-one=C24 marking=external-[D]
+EXECUTED_SHA256 0aa69d8280b02a081023d40eebf95808875c786db50894f971e79c0ed14b6b25 pin=matched
+
