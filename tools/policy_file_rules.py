@@ -15,6 +15,7 @@ FORBIDDEN_SUFFIXES = frozenset(
         ".env",
         ".exe",
         ".jam",
+        ".jsonl",
         ".key",
         ".log",
         ".pem",
@@ -36,6 +37,18 @@ PUBLIC_PROBE_TRANSCRIPTS = frozenset(
         "probes/P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/L8_cold_r2.log",
         "probes/P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/L8_hot_r1.log",
         "probes/P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/L8_hot_r2.log",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/primal_L6_cold_r1.log",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/primal_L6_hot_r1.log",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/primal_L8_cold_r1.log",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/primal_L8_hot_r1.log",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L6_cold_r1.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L6_cold_r2.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L6_surface_r1.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L6_surface_r2.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L8_cold_r1.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L8_cold_r2.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L8_surface_r1.jsonl",
+        "probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/dual_L8_surface_r2.jsonl",
     }
 )
 
