@@ -1,6 +1,6 @@
 # P-QDD-DIRECT-RECORD-E-NONCONGRUENCE-1 result
 
-Status: **candidate-T / L1 / CONFIRMED LOCALLY / PUBLIC CANON UNCHANGED**.
+Status: **candidate-T / L1 / TWO-ARCHITECTURE COMPUTATION GATE PASS / PUBLIC CLAIM UNREGISTERED**.
 
 The first and only local formal execution of the immutable public verifier
 exited zero, wrote empty stderr, and produced the exact 532-byte committed
@@ -15,8 +15,20 @@ CONFIRMED          SELECTED LOCALLY
 SCIENTIFIC-FIRED   NOT SELECTED
 STOP               NOT SELECTED
 ABANDONED-PIN      NOT SELECTED
-ARCHITECTURE GATE  PENDING
+ARCHITECTURE GATE  PASS
 ```
+
+GitHub workflow run `33566201013` independently replayed the committed
+verifier from clean checkouts. Job `100049836634` (`architecture-x86_64`)
+and job `100049836916` (`architecture-aarch64`) both reported
+
+```text
+VERIFY PASS P-QDD-DIRECT-RECORD-E-NONCONGRUENCE-1 00bef39293ce531f3e9e72ea4389ab1e47a9a4ca8565347f1d1f1ac227a35a90 c15f312833df9ce38e6b2aa724045afd08be3e0c720691769891fcdfa4428054
+```
+
+Thus both architectures reproduced the same frozen verifier and exact
+committed `EXPECTED.txt` bytes. Aggregate job `100049952319` passed and
+publication job `100049838018` was correctly skipped.
 
 ## Candidate mathematical scope
 
@@ -31,6 +43,6 @@ reversor, or physical time reversal. It does not move
 exclude a contextual, stream-level, relational, multivalued, signed,
 phase-sensitive, or expanded decoder record.
 
-The required GitHub x86_64/aarch64 byte-identity gate and manual security
-review remain open. Any active `[T]` row and dependency ledger entry belong
-only to a separate v75 fold.
+The public two-architecture evidence package is complete. This result still
+does not register or promote the claim; any active `[T]` row and dependency
+ledger entry belong only to a separate v75 fold.
