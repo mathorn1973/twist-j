@@ -1,0 +1,13 @@
+C-C40-RECIPROCAL-RAMIFIED-SEAM-N independent arithmetic breaker
+PASS: compositum/generators/degrees
+PASS: cyclotomic derivation
+PASS: registered local dependencies
+PASS: ramified identities/profiles/non-etaleness
+PASS: complete modulo-40 atlas/densities
+PASS: group exponent/no unramified inertness
+PASS: Canon dependency firewall
+PASS: finite prime scan audit
+CLASS REPRESENTATIVES (AUDIT ONLY; NOT PROOF): 1->41, 3->3, 7->7, 9->89, 11->11, 13->13, 17->17, 19->19, 21->61, 23->23, 27->67, 29->29, 31->31, 33->73, 37->37, 39->79
+FINITE PRIME SCAN (AUDIT ONLY; NOT PROOF): 168 primes <= 1000 (166 unramified)
+RAMIFIED SEMANTICS: nonreduced single-polynomial quotients; no field-merger or etale-product interpretation
+candidate-T / L1

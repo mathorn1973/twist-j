@@ -1,0 +1,15 @@
+C40_RECIPROCAL_RAMIFIED_SEAM verifier=v1
+DEPENDENCIES DQRC,QUARTIC_RAMIFICATION,J_BINARY_NORM,BORN_SPLIT=IMPORTED audit=self_contained
+COMPOSITUM conductors=5,8 intersection=Q degrees=4x4=16 exponents=8,5,1 PASS
+PHI40 coefficients=1,0,0,0,-1,0,0,0,1,0,0,0,-1,0,0,0,1 PASS
+RAMIFIED p=2 identity=Phi5^4 irreducible_degree=4 profile=(4,4,1) PASS
+RAMIFIED p=5 identity=Phi8^4=q2^4*q3^4 irreducible_degrees=2,2 profile=(4,2,2) PASS
+LOCAL p=2 Q2_factors=1 degrees=16; p=5 Q5_factors=2 degrees=8,8 PASS
+ATLAS order=1 classes=1 type=1^16 density=1/16
+ATLAS order=2 classes=9,11,19,21,29,31,39 type=2^8 density=7/16
+ATLAS order=4 classes=3,7,13,17,23,27,33,37 type=4^4 density=1/2
+GROUP units=16 structure=C4xC2xC2 exponent=4 order16_elements=0 PASS
+UNIVERSAL Phi40_mod_p=reducible_for_every_rational_prime proof=ramified_identities_plus_exponent
+AUDIT bound=200000 primes=17984 unramified=17982 order1=1110 order2=7852 order4=9020 inert=0
+INTERPRETATION seam=arithmetic_only prime_exchange_symmetry=NO field_merger=NO selector=NO physical_claim=NO RH_claim=NO
+RESULT candidate-T/L1 PASS
