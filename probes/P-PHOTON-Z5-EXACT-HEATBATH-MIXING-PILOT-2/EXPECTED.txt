@@ -1,0 +1,182 @@
+PILOT_VERIFY P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2 V1
+EXACT_LOCAL_AUDIT environments=15625 candidates=78125 positivity=PASS covariance=PASS
+EXACT_LOCAL_DETAILED_BALANCE pairs=390625 status=PASS
+EXACT_LOCAL_Q witness=all_zero mass=4096 total=4740 probability=1024/1185 nondyadic=PASS
+PINNED_INVENTORY files=14 sha256sums=07ee9dbd69f34875af1e7e1a1cf41e8284217e58c2807dfd57babcbc5e3bf6d2 status=PASS
+REFERENCE_CHECK bytes=753 sha256=6c86ca3be9c94b0581fe9af2fde41352db0b7f20c48d6b7e066bcebe1476d7be status=PASS
+RAW_CUSTODY logs=8 samples=4096 heatbath_decisions=439418880 bytes=2978050 manifest_sha256=1e80dedab5c503836c7627de497aac908e7b6499c42e95db90ff08ff3e44bd81 status=PASS
+ANALYZER_CUSTODY bytes=28997 sha256=3cf1bb420648757473646ecfbbd7c59dc35a020a1235a3f40c5b0ed52d364330 status=PASS
+ANALYZER_STDOUT_BEGIN
+PILOT_ANALYSIS P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2 V1
+CHAIN file=L6_cold_r1.log sha256=ce741456b8e5cc9e73c4ae2aeaf174a110f28e450285a79ce8b6e1c82c1d958f L=6 start=cold replica=1 seed=16669236192851525889 samples=512 unique_state_fraction=1 line_nonzero_0=1984 line_nonzero_1=1900 line_nonzero_2=1921 line_nonzero_3=1873
+METRIC L=6 start=cold replica=1 name=logw mean=1.16005149394 mcse=0.000289747911424 tau_int=0.609451716157 ess=420.049682712 half_drift_z=0.433833420971
+METRIC L=6 start=cold replica=1 name=polyakov_radius_mean mean=0.346226776119 mcse=0.00122942524407 tau_int=0.654650480533 ess=391.04836491 half_drift_z=0.40006398259
+METRIC L=6 start=cold replica=1 name=polyakov_radius_0 mean=0.344253095672 mcse=0.00271290644338 tau_int=0.740346924162 ess=345.7838368 half_drift_z=0.416026547466
+METRIC L=6 start=cold replica=1 name=polyakov_radius_1 mean=0.345889954938 mcse=0.00242765317827 tau_int=0.569845559494 ess=449.244529039 half_drift_z=0.0575913802877
+METRIC L=6 start=cold replica=1 name=polyakov_radius_2 mean=0.34817668104 mcse=0.00243755049205 tau_int=0.621751279285 ess=411.7402063 half_drift_z=0.159198673934
+METRIC L=6 start=cold replica=1 name=polyakov_radius_3 mean=0.346587372825 mcse=0.00220219928973 tau_int=0.508970948654 ess=502.975662318 half_drift_z=0.22532942447
+METRIC L=6 start=cold replica=1 name=vortex_density mean=0.456572858394 mcse=0.000355733734165 tau_int=0.56842682757 ess=450.365794828 half_drift_z=0.68929950354
+METRIC L=6 start=cold replica=1 name=monopole_density mean=0.0109335816937 mcse=0.000167574004131 tau_int=0.611269951313 ess=418.800236213 half_drift_z=0.658412811185
+METRIC L=6 start=cold replica=1 name=score_mean mean=-9.94252311116e-05 mcse=0.000263087341888 tau_int=0.739850212892 ess=346.015984775 half_drift_z=0.334563959242
+METRIC L=6 start=cold replica=1 name=flux_asym_14 mean=8.03755144033e-06 mcse=0.000153931878251 tau_int=0.66906418782 ess=382.623976384 half_drift_z=0.383650951968
+METRIC L=6 start=cold replica=1 name=flux_asym_23 mean=-2.53685217335e-05 mcse=8.31989991444e-05 tau_int=0.865375014111 ess=295.825504349 half_drift_z=0.0792770309639
+METRIC L=6 start=cold replica=1 name=flux_fraction_0 mean=0.543427141606 mcse=0.000355733734165 tau_int=0.56842682757 ess=450.365794828 half_drift_z=0.68929950354
+METRIC L=6 start=cold replica=1 name=flux_fraction_1 mean=0.219792369952 mcse=0.00016342049972 tau_int=0.520038505244 ess=492.271240338 half_drift_z=0.518377611153
+METRIC L=6 start=cold replica=1 name=flux_fraction_2 mean=0.00848539375965 mcse=6.14499156276e-05 tau_int=0.742506078971 ess=344.778322024 half_drift_z=0.0370338339139
+METRIC L=6 start=cold replica=1 name=flux_fraction_3 mean=0.00851076228138 mcse=5.98192730788e-05 tau_int=0.57746075109 ess=443.320172872 half_drift_z=0.149542525949
+METRIC L=6 start=cold replica=1 name=flux_fraction_4 mean=0.219784332401 mcse=0.000183929986147 tau_int=0.582135024983 ess=439.760517773 half_drift_z=0.774223567698
+CHAIN file=L6_cold_r2.log sha256=86a17a86a23b41a118bfa8418cacc8b7c0a23e7c95fda5a32fe547c4737d84fd L=6 start=cold replica=2 seed=16669236192851525890 samples=512 unique_state_fraction=1 line_nonzero_0=1951 line_nonzero_1=1986 line_nonzero_2=1910 line_nonzero_3=1956
+METRIC L=6 start=cold replica=2 name=logw mean=1.15978906099 mcse=0.00027606890859 tau_int=0.528763689703 ess=484.148221569 half_drift_z=0.574329834135
+METRIC L=6 start=cold replica=2 name=polyakov_radius_mean mean=0.34495611651 mcse=0.00122454759764 tau_int=0.520383847968 ess=491.944554005 half_drift_z=0.492063858196
+METRIC L=6 start=cold replica=2 name=polyakov_radius_0 mean=0.347518947475 mcse=0.00299617702785 tau_int=0.804334824484 ess=318.275414923 half_drift_z=0.621993562061
+METRIC L=6 start=cold replica=2 name=polyakov_radius_1 mean=0.342659976585 mcse=0.00244639273462 tau_int=0.588415915786 ess=435.066409885 half_drift_z=1.1801265338
+METRIC L=6 start=cold replica=2 name=polyakov_radius_2 mean=0.341952038822 mcse=0.00250466803625 tau_int=0.616733813416 ess=415.089937395 half_drift_z=0.397538618336
+METRIC L=6 start=cold replica=2 name=polyakov_radius_3 mean=0.347693503161 mcse=0.00237975142888 tau_int=0.535284932453 ess=478.249964606 half_drift_z=1.07630308101
+METRIC L=6 start=cold replica=2 name=vortex_density mean=0.456776811262 mcse=0.000341372399627 tau_int=0.532630551048 ess=480.633338618 half_drift_z=0.516521953878
+METRIC L=6 start=cold replica=2 name=monopole_density mean=0.0110797646605 mcse=0.00017973130486 tau_int=0.657111819712 ess=389.583617766 half_drift_z=0.461984456725
+METRIC L=6 start=cold replica=2 name=score_mean mean=8.09701988069e-05 mcse=0.000205470799795 tau_int=0.5 ess=512 half_drift_z=0.842098076022
+METRIC L=6 start=cold replica=2 name=flux_asym_14 mean=-0.000100971739969 mcse=0.000146973861307 tau_int=0.5 ess=512 half_drift_z=1.07918862028
+METRIC L=6 start=cold replica=2 name=flux_asym_23 mean=4.29506655093e-05 mcse=6.09459007428e-05 tau_int=0.500592437349 ess=511.394062115 half_drift_z=0.052965601959
+METRIC L=6 start=cold replica=2 name=flux_fraction_0 mean=0.543223188738 mcse=0.000341372399627 tau_int=0.532630551048 ess=480.633338618 half_drift_z=0.516521953878
+METRIC L=6 start=cold replica=2 name=flux_fraction_1 mean=0.219794128167 mcse=0.000165940233522 tau_int=0.524059507909 ess=488.494142624 half_drift_z=0.845940486943
+METRIC L=6 start=cold replica=2 name=flux_fraction_2 mean=0.00856526692708 mcse=5.48546262995e-05 tau_int=0.5 ess=512 half_drift_z=0.430909123512
+METRIC L=6 start=cold replica=2 name=flux_fraction_3 mean=0.00852231626157 mcse=5.33854670363e-05 tau_int=0.5 ess=512 half_drift_z=0.381576676057
+METRIC L=6 start=cold replica=2 name=flux_fraction_4 mean=0.219895099907 mcse=0.000171303547425 tau_int=0.500887726627 ess=511.092579017 half_drift_z=0.0802486361659
+CHAIN file=L6_hot_r1.log sha256=225b09fb6906d7a314eb03f2d2d72220df795b8463add3375accf2b049b1d4e4 L=6 start=hot replica=1 seed=16669236192851526145 samples=512 unique_state_fraction=1 line_nonzero_0=1973 line_nonzero_1=2026 line_nonzero_2=1936 line_nonzero_3=1956
+METRIC L=6 start=hot replica=1 name=logw mean=1.15971811339 mcse=0.000275679636953 tau_int=0.558127469712 ess=458.676581771 half_drift_z=1.00205259689
+METRIC L=6 start=hot replica=1 name=polyakov_radius_mean mean=0.345973345506 mcse=0.00117083753385 tau_int=0.586971424251 ess=436.137074862 half_drift_z=1.59960546388
+METRIC L=6 start=hot replica=1 name=polyakov_radius_0 mean=0.34616163588 mcse=0.00249058646363 tau_int=0.605630924857 ess=422.699683079 half_drift_z=0.338291456555
+METRIC L=6 start=hot replica=1 name=polyakov_radius_1 mean=0.345590797371 mcse=0.00236532591423 tau_int=0.574759735794 ess=445.403503512 half_drift_z=0.308210985857
+METRIC L=6 start=hot replica=1 name=polyakov_radius_2 mean=0.346068172446 mcse=0.00221182754071 tau_int=0.568913942844 ess=449.980182803 half_drift_z=2.55823710191
+METRIC L=6 start=hot replica=1 name=polyakov_radius_3 mean=0.346072776328 mcse=0.00271305227062 tau_int=0.761882868551 ess=336.009655246 half_drift_z=0.763523955169
+METRIC L=6 start=hot replica=1 name=vortex_density mean=0.456808459121 mcse=0.000341552228557 tau_int=0.527879879534 ess=484.958813406 half_drift_z=0.153728899211
+METRIC L=6 start=hot replica=1 name=monopole_density mean=0.0111792293596 mcse=0.000171197646697 tau_int=0.596190712985 ess=429.3928007 half_drift_z=0.316834896996
+METRIC L=6 start=hot replica=1 name=score_mean mean=7.89170744481e-05 mcse=0.000227234808822 tau_int=0.553794153827 ess=462.265623844 half_drift_z=0.400710326471
+METRIC L=6 start=hot replica=1 name=flux_asym_14 mean=5.55093396348e-05 mcse=0.000134806052785 tau_int=0.5 ess=512 half_drift_z=0.00558419146673
+METRIC L=6 start=hot replica=1 name=flux_asym_23 mean=5.52581661523e-06 mcse=6.52961241478e-05 tau_int=0.55514783607 ess=461.13842722 half_drift_z=0.348945391149
+METRIC L=6 start=hot replica=1 name=flux_fraction_0 mean=0.543191540879 mcse=0.000341552228557 tau_int=0.527879879534 ess=484.958813406 half_drift_z=0.15372889921
+METRIC L=6 start=hot replica=1 name=flux_fraction_1 mean=0.219873247814 mcse=0.000171882263267 tau_int=0.534815366564 ess=478.669866284 half_drift_z=0.228248621017
+METRIC L=6 start=hot replica=1 name=flux_fraction_2 mean=0.00856149932485 mcse=5.51734305168e-05 tau_int=0.55798245511 ess=458.795787673 half_drift_z=1.41848229343
+METRIC L=6 start=hot replica=1 name=flux_fraction_3 mean=0.00855597350823 mcse=5.67518808001e-05 tau_int=0.567909924842 ess=450.775710728 half_drift_z=0.932011430801
+METRIC L=6 start=hot replica=1 name=flux_fraction_4 mean=0.219817738474 mcse=0.000165363480846 tau_int=0.5 ess=512 half_drift_z=0.240518441259
+CHAIN file=L6_hot_r2.log sha256=2b28e29538187c3a5065447b805c1337c166ea24107d885f4666468fdb0ba88e L=6 start=hot replica=2 seed=16669236192851526146 samples=512 unique_state_fraction=1 line_nonzero_0=1927 line_nonzero_1=1912 line_nonzero_2=1887 line_nonzero_3=1928
+METRIC L=6 start=hot replica=2 name=logw mean=1.15951193131 mcse=0.000275975919728 tau_int=0.564646214578 ess=453.381238359 half_drift_z=1.61155169582
+METRIC L=6 start=hot replica=2 name=polyakov_radius_mean mean=0.345597368794 mcse=0.00133421444065 tau_int=0.629814757755 ess=406.468722506 half_drift_z=1.42473274677
+METRIC L=6 start=hot replica=2 name=polyakov_radius_0 mean=0.341181104011 mcse=0.00271196753916 tau_int=0.653641139431 ess=391.652214888 half_drift_z=0.772062238375
+METRIC L=6 start=hot replica=2 name=polyakov_radius_1 mean=0.347155766299 mcse=0.00291586005668 tau_int=0.813692992513 ess=314.614974389 half_drift_z=1.70369953615
+METRIC L=6 start=hot replica=2 name=polyakov_radius_2 mean=0.34859737526 mcse=0.00262446472914 tau_int=0.68898307726 ess=371.562101377 half_drift_z=1.23616459836
+METRIC L=6 start=hot replica=2 name=polyakov_radius_3 mean=0.345455229606 mcse=0.00253324994616 tau_int=0.650578785936 ess=393.495769512 half_drift_z=0.691050956334
+METRIC L=6 start=hot replica=2 name=vortex_density mean=0.45693103178 mcse=0.000326612540423 tau_int=0.503560368106 ess=508.379960407 half_drift_z=1.98714468333
+METRIC L=6 start=hot replica=2 name=monopole_density mean=0.011255711685 mcse=0.000175749987886 tau_int=0.636765605476 ess=402.031764591 half_drift_z=2.45336586325
+METRIC L=6 start=hot replica=2 name=score_mean mean=9.79263589999e-05 mcse=0.000214327027095 tau_int=0.5 ess=512 half_drift_z=0.145664356688
+METRIC L=6 start=hot replica=2 name=flux_asym_14 mean=0.000107502250514 mcse=0.000168970699633 tau_int=0.684762497405 ess=373.852249459 half_drift_z=0.165655561274
+METRIC L=6 start=hot replica=2 name=flux_asym_23 mean=-2.26056134259e-06 mcse=6.51667782636e-05 tau_int=0.518600485917 ess=493.636251704 half_drift_z=0.0171753859073
+METRIC L=6 start=hot replica=2 name=flux_fraction_0 mean=0.54306896822 mcse=0.000326612540423 tau_int=0.503560368106 ess=508.379960407 half_drift_z=1.98714468333
+METRIC L=6 start=hot replica=2 name=flux_fraction_1 mean=0.219920468428 mcse=0.000167991391059 tau_int=0.5 ess=512 half_drift_z=1.74526264464
+METRIC L=6 start=hot replica=2 name=flux_fraction_2 mean=0.00859766830633 mcse=5.95606365382e-05 tau_int=0.601103206615 ess=425.883603985 half_drift_z=0.718441132496
+METRIC L=6 start=hot replica=2 name=flux_fraction_3 mean=0.00859992886767 mcse=5.23357935604e-05 tau_int=0.513005067576 ess=499.020411649 half_drift_z=0.805585849587
+METRIC L=6 start=hot replica=2 name=flux_fraction_4 mean=0.219812966178 mcse=0.00016428405001 tau_int=0.533503341542 ess=479.84704137 half_drift_z=1.64486585352
+CHAIN file=L8_cold_r1.log sha256=f80740acaf14bdaabe0ae2af099b22a75bbe6e49423b78651d2800a9ad3682b2 L=8 start=cold replica=1 seed=16669238391874781441 samples=512 unique_state_fraction=1 line_nonzero_0=1744 line_nonzero_1=1722 line_nonzero_2=1769 line_nonzero_3=1742
+METRIC L=8 start=cold replica=1 name=logw mean=1.15991233655 mcse=0.000149810688802 tau_int=0.5 ess=512 half_drift_z=1.34039694915
+METRIC L=8 start=cold replica=1 name=polyakov_radius_mean mean=0.228651950214 mcse=0.000801818466491 tau_int=0.5 ess=512 half_drift_z=0.914223697984
+METRIC L=8 start=cold replica=1 name=polyakov_radius_0 mean=0.230735570752 mcse=0.00168158682662 tau_int=0.575894420266 ess=444.525925224 half_drift_z=1.1214443825
+METRIC L=8 start=cold replica=1 name=polyakov_radius_1 mean=0.226938989979 mcse=0.00159727219741 tau_int=0.5 ess=512 half_drift_z=1.01162873892
+METRIC L=8 start=cold replica=1 name=polyakov_radius_2 mean=0.228113969993 mcse=0.0017423334923 tau_int=0.585485708435 ess=437.243806829 half_drift_z=0.688585553098
+METRIC L=8 start=cold replica=1 name=polyakov_radius_3 mean=0.228819270131 mcse=0.00154131517918 tau_int=0.5 ess=512 half_drift_z=0.909272066537
+METRIC L=8 start=cold replica=1 name=vortex_density mean=0.45659661293 mcse=0.000191376183473 tau_int=0.522624687713 ess=489.835260405 half_drift_z=0.831495905427
+METRIC L=8 start=cold replica=1 name=monopole_density mean=0.0111154317856 mcse=8.87500750932e-05 tau_int=0.5 ess=512 half_drift_z=2.25709817871
+METRIC L=8 start=cold replica=1 name=score_mean mean=-6.89892671968e-05 mcse=0.000125248394032 tau_int=0.543343777019 ess=471.156587832 half_drift_z=0.642011414519
+METRIC L=8 start=cold replica=1 name=flux_asym_14 mean=1.95503234863e-05 mcse=8.36709238483e-05 tau_int=0.542651585422 ess=471.757582356 half_drift_z=0.943674484982
+METRIC L=8 start=cold replica=1 name=flux_asym_23 mean=-2.09013621012e-05 mcse=3.8105499976e-05 tau_int=0.564536918388 ess=453.469014446 half_drift_z=1.00389892227
+METRIC L=8 start=cold replica=1 name=flux_fraction_0 mean=0.54340338707 mcse=0.000191376183473 tau_int=0.522624687713 ess=489.835260405 half_drift_z=0.831495905427
+METRIC L=8 start=cold replica=1 name=flux_fraction_1 mean=0.219776471456 mcse=9.59470971437e-05 tau_int=0.5 ess=512 half_drift_z=0.0248246512478
+METRIC L=8 start=cold replica=1 name=flux_fraction_2 mean=0.00852115948995 mcse=3.1651375771e-05 tau_int=0.5 ess=512 half_drift_z=1.7789493492
+METRIC L=8 start=cold replica=1 name=flux_fraction_3 mean=0.00854206085205 mcse=2.99681755421e-05 tau_int=0.504526870315 ess=507.406076985 half_drift_z=0.575366634323
+METRIC L=8 start=cold replica=1 name=flux_fraction_4 mean=0.219756921132 mcse=0.000107532990466 tau_int=0.67518436157 ess=379.155701125 half_drift_z=0.795993848849
+CHAIN file=L8_cold_r2.log sha256=85c8a88f1b87149c5e1aa31994a5be4581b516059061425966481ece08eab853 L=8 start=cold replica=2 seed=16669238391874781442 samples=512 unique_state_fraction=1 line_nonzero_0=1765 line_nonzero_1=1723 line_nonzero_2=1709 line_nonzero_3=1725
+METRIC L=8 start=cold replica=2 name=logw mean=1.16007166694 mcse=0.00014279852479 tau_int=0.5 ess=512 half_drift_z=0.0967992770437
+METRIC L=8 start=cold replica=2 name=polyakov_radius_mean mean=0.22820889142 mcse=0.000858923694215 tau_int=0.555719931538 ess=460.663700313 half_drift_z=0.835564843971
+METRIC L=8 start=cold replica=2 name=polyakov_radius_0 mean=0.227600188859 mcse=0.00163636282968 tau_int=0.541742618928 ess=472.549123985 half_drift_z=0.0545476619578
+METRIC L=8 start=cold replica=2 name=polyakov_radius_1 mean=0.2276346217 mcse=0.00187676984186 tau_int=0.703903956281 ess=363.685979764 half_drift_z=1.14204746247
+METRIC L=8 start=cold replica=2 name=polyakov_radius_2 mean=0.231314733 mcse=0.00165152472961 tau_int=0.597144465526 ess=428.706979264 half_drift_z=0.0331336981897
+METRIC L=8 start=cold replica=2 name=polyakov_radius_3 mean=0.22628602212 mcse=0.00154647454476 tau_int=0.5 ess=512 half_drift_z=0.413769262797
+METRIC L=8 start=cold replica=2 name=vortex_density mean=0.456491390864 mcse=0.000178022944346 tau_int=0.5 ess=512 half_drift_z=0.547380848747
+METRIC L=8 start=cold replica=2 name=monopole_density mean=0.0112195014954 mcse=9.52260846622e-05 tau_int=0.632155416809 ess=404.963705432 half_drift_z=1.26471239828
+METRIC L=8 start=cold replica=2 name=score_mean mean=0.000136160198535 mcse=0.00013312389036 tau_int=0.560906712456 ess=456.403880209 half_drift_z=0.43920353965
+METRIC L=8 start=cold replica=2 name=flux_asym_14 mean=0.000137170155843 mcse=8.28106176414e-05 tau_int=0.575736101285 ess=444.648163332 half_drift_z=0.720311783802
+METRIC L=8 start=cold replica=2 name=flux_asym_23 mean=-2.38418579102e-07 mcse=3.861999781e-05 tau_int=0.595758881027 ess=429.704043284 half_drift_z=0.0102390784361
+METRIC L=8 start=cold replica=2 name=flux_fraction_0 mean=0.543508609136 mcse=0.000178022944346 tau_int=0.5 ess=512 half_drift_z=0.547380848747
+METRIC L=8 start=cold replica=2 name=flux_fraction_1 mean=0.219812472661 mcse=8.7156029631e-05 tau_int=0.5 ess=512 half_drift_z=1.06322428851
+METRIC L=8 start=cold replica=2 name=flux_fraction_2 mean=0.00850168863932 mcse=3.01855151076e-05 tau_int=0.522661326367 ess=489.800922865 half_drift_z=0.451382965683
+METRIC L=8 start=cold replica=2 name=flux_fraction_3 mean=0.0085019270579 mcse=3.06610346584e-05 tau_int=0.53574460636 ess=477.839621643 half_drift_z=0.454391792409
+METRIC L=8 start=cold replica=2 name=flux_fraction_4 mean=0.219675302505 mcse=9.18921313097e-05 tau_int=0.5 ess=512 half_drift_z=0.362063700098
+CHAIN file=L8_hot_r1.log sha256=f0e865a029abbb618fecaaac4a9357cad56027fc261d434278e9fcc048fe1f32 L=8 start=hot replica=1 seed=16669238391874781697 samples=512 unique_state_fraction=1 line_nonzero_0=1742 line_nonzero_1=1740 line_nonzero_2=1730 line_nonzero_3=1650
+METRIC L=8 start=hot replica=1 name=logw mean=1.15967494683 mcse=0.000170569193484 tau_int=0.634362725178 ess=403.554606599 half_drift_z=0.086836913096
+METRIC L=8 start=hot replica=1 name=polyakov_radius_mean mean=0.228651866026 mcse=0.000969895753291 tau_int=0.723356105587 ess=353.905908892 half_drift_z=0.256596651726
+METRIC L=8 start=hot replica=1 name=polyakov_radius_0 mean=0.229055375392 mcse=0.0016772412553 tau_int=0.553574710481 ess=462.448871224 half_drift_z=0.410585048661
+METRIC L=8 start=hot replica=1 name=polyakov_radius_1 mean=0.228936580671 mcse=0.0018018230055 tau_int=0.624021881443 ess=410.242024539 half_drift_z=1.11743106367
+METRIC L=8 start=hot replica=1 name=polyakov_radius_2 mean=0.229363139304 mcse=0.00199255224622 tau_int=0.772116545991 ess=331.556163806 half_drift_z=0.55168452664
+METRIC L=8 start=hot replica=1 name=polyakov_radius_3 mean=0.227252368735 mcse=0.00190137043728 tau_int=0.680222151007 ess=376.347638225 half_drift_z=0.401332453932
+METRIC L=8 start=hot replica=1 name=vortex_density mean=0.456967194875 mcse=0.000202642156984 tau_int=0.550762319394 ess=464.810301986 half_drift_z=0.229509751115
+METRIC L=8 start=hot replica=1 name=monopole_density mean=0.011197924614 mcse=8.3943649033e-05 tau_int=0.5 ess=512 half_drift_z=0.411302177788
+METRIC L=8 start=hot replica=1 name=score_mean mean=-1.26898110111e-06 mcse=0.000122252797264 tau_int=0.511300512151 ess=500.684028113 half_drift_z=0.664736902562
+METRIC L=8 start=hot replica=1 name=flux_asym_14 mean=3.57627868652e-05 mcse=7.9529917528e-05 tau_int=0.5 ess=512 half_drift_z=0.613373956685
+METRIC L=8 start=hot replica=1 name=flux_asym_23 mean=-8.74201456706e-06 mcse=3.5415483003e-05 tau_int=0.508642858742 ess=503.300096719 half_drift_z=0.873900999599
+METRIC L=8 start=hot replica=1 name=flux_fraction_0 mean=0.543032805125 mcse=0.000202642156984 tau_int=0.550762319394 ess=464.810301986 half_drift_z=0.229509751116
+METRIC L=8 start=hot replica=1 name=flux_fraction_1 mean=0.219949007034 mcse=9.87622691717e-05 tau_int=0.529926608774 ess=483.085762748 half_drift_z=0.068784774067
+METRIC L=8 start=hot replica=1 name=flux_fraction_2 mean=0.00854810078939 mcse=3.07429643717e-05 tau_int=0.515850132185 ess=496.26816788 half_drift_z=0.206249206463
+METRIC L=8 start=hot replica=1 name=flux_fraction_3 mean=0.00855684280396 mcse=3.08321985943e-05 tau_int=0.551615111524 ess=464.091709331 half_drift_z=0.770658791693
+METRIC L=8 start=hot replica=1 name=flux_fraction_4 mean=0.219913244247 mcse=9.5316407548e-05 tau_int=0.5 ess=512 half_drift_z=0.597443571744
+CHAIN file=L8_hot_r2.log sha256=d7037f179e5e8b42c1e467c386a36fc9c41125d3cf0d62ce4db29d8e3dd644ed L=8 start=hot replica=2 seed=16669238391874781698 samples=512 unique_state_fraction=1 line_nonzero_0=1736 line_nonzero_1=1744 line_nonzero_2=1638 line_nonzero_3=1744
+METRIC L=8 start=hot replica=2 name=logw mean=1.15972909625 mcse=0.000146620192959 tau_int=0.5 ess=512 half_drift_z=0.876462062924
+METRIC L=8 start=hot replica=2 name=polyakov_radius_mean mean=0.227285319755 mcse=0.000944053821013 tau_int=0.640597513268 ess=399.626902537 half_drift_z=0.208210913504
+METRIC L=8 start=hot replica=2 name=polyakov_radius_0 mean=0.226268328601 mcse=0.00178380442043 tau_int=0.599127117126 ess=427.288287714 half_drift_z=1.94563824305
+METRIC L=8 start=hot replica=2 name=polyakov_radius_1 mean=0.228334096976 mcse=0.0017099899573 tau_int=0.605481695592 ess=422.803863211 half_drift_z=0.862986928825
+METRIC L=8 start=hot replica=2 name=polyakov_radius_2 mean=0.227654369967 mcse=0.00183600530062 tau_int=0.611684876487 ess=418.516150784 half_drift_z=0.574131890776
+METRIC L=8 start=hot replica=2 name=polyakov_radius_3 mean=0.226884483477 mcse=0.00185945203373 tau_int=0.663894517041 ess=385.603425588 half_drift_z=0.173777364204
+METRIC L=8 start=hot replica=2 name=vortex_density mean=0.456725041072 mcse=0.000185186611496 tau_int=0.5 ess=512 half_drift_z=0.617118152237
+METRIC L=8 start=hot replica=2 name=monopole_density mean=0.0112422704697 mcse=8.69062536677e-05 tau_int=0.50911225078 ess=502.836063379 half_drift_z=0.782573387976
+METRIC L=8 start=hot replica=2 name=score_mean mean=0.000293031492526 mcse=0.000122691059631 tau_int=0.530332194074 ess=482.716310381 half_drift_z=1.00829747173
+METRIC L=8 start=hot replica=2 name=flux_asym_14 mean=-7.08897908529e-05 mcse=8.06758349495e-05 tau_int=0.51040994013 ess=501.557630195 half_drift_z=1.11348804316
+METRIC L=8 start=hot replica=2 name=flux_asym_23 mean=8.59101613363e-05 mcse=3.51839070204e-05 tau_int=0.5 ess=512 half_drift_z=1.4355748475
+METRIC L=8 start=hot replica=2 name=flux_fraction_0 mean=0.543274958928 mcse=0.000185186611496 tau_int=0.5 ess=512 half_drift_z=0.617118152237
+METRIC L=8 start=hot replica=2 name=flux_fraction_1 mean=0.219762007395 mcse=9.78013577169e-05 tau_int=0.54728966884 ess=467.759606248 half_drift_z=0.095189360041
+METRIC L=8 start=hot replica=2 name=flux_fraction_2 mean=0.0086080233256 mcse=3.10796179451e-05 tau_int=0.5 ess=512 half_drift_z=1.49189719956
+METRIC L=8 start=hot replica=2 name=flux_fraction_3 mean=0.00852211316427 mcse=2.85501407513e-05 tau_int=0.5 ess=512 half_drift_z=0.158515151091
+METRIC L=8 start=hot replica=2 name=flux_fraction_4 mean=0.219832897186 mcse=9.56697819839e-05 tau_int=0.529834765399 ess=483.169502491 half_drift_z=0.867931898813
+POOLED L=6 name=logw rank_rhat=0.999885981397 folded_rhat=0.998518859742 bulk_ess=1930.30887081 tail_ess=2048 cold_mean=1.15992027747 hot_mean=1.15961502235 hot_cold_z=1.09241131355
+POOLED L=6 name=polyakov_radius_mean rank_rhat=0.999903370585 folded_rhat=1.0029716017 bulk_ess=1817.38420923 tail_ess=1911.17815775 cold_mean=0.345591446315 hot_mean=0.34578535715 hot_cold_z=0.156232545924
+POOLED L=6 name=polyakov_radius_0 rank_rhat=0.999719410179 folded_rhat=1.00239195867 bulk_ess=1514.46534639 tail_ess=1653.05022213 cold_mean=0.345886021573 hot_mean=0.343671369946 hot_cold_z=0.690540825544
+POOLED L=6 name=polyakov_radius_1 rank_rhat=1.00029784329 folded_rhat=0.999226499465 bulk_ess=1790.29222518 tail_ess=2048 cold_mean=0.344274965762 hot_mean=0.346373281835 hot_cold_z=0.823417797925
+POOLED L=6 name=polyakov_radius_2 rank_rhat=1.00205751313 folded_rhat=1.00001776538 bulk_ess=1698.41002154 tail_ess=1841.35415691 cold_mean=0.345064359931 hot_mean=0.347332773853 hot_cold_z=0.638254849753
+POOLED L=6 name=polyakov_radius_3 rank_rhat=0.999002441911 folded_rhat=1.00246011165 bulk_ess=1786.99161193 tail_ess=2029.79399484 cold_mean=0.347140437993 hot_mean=0.345764002967 hot_cold_z=0.558552307268
+POOLED L=6 name=vortex_density rank_rhat=0.999545714844 folded_rhat=0.999221772579 bulk_ess=2038.52179815 tail_ess=2037.1545405 cold_mean=0.456674834828 hot_mean=0.456869745451 hot_cold_z=0.570793631074
+POOLED L=6 name=monopole_density rank_rhat=1.00094716842 folded_rhat=0.999703934849 bulk_ess=1752.05496039 tail_ess=1803.47687915 cold_mean=0.0110066731771 hot_mean=0.0112174705223 hot_cold_z=1.21410303763
+POOLED L=6 name=score_mean rank_rhat=0.998500096635 folded_rhat=0.999138406353 bulk_ess=2039.00012029 tail_ess=1821.48076246 cold_mean=-9.22751615234e-06 hot_mean=8.8421716724e-05 hot_cold_z=0.427189494926
+POOLED L=6 name=flux_asym_14 rank_rhat=0.998769953218 folded_rhat=0.999574207434 bulk_ess=1932.25302746 tail_ess=1955.08828624 cold_mean=-4.64670942644e-05 hot_mean=8.15057950746e-05 hot_cold_z=0.843736041751
+POOLED L=6 name=flux_asym_23 rank_rhat=0.998243450405 folded_rhat=0.999703296085 bulk_ess=1930.11993267 tail_ess=2031.57476231 cold_mean=8.79107188786e-06 hot_mean=1.63262763632e-06 hot_cold_z=0.103466770302
+POOLED L=6 name=flux_fraction_0 rank_rhat=0.999545714844 folded_rhat=0.999225362531 bulk_ess=2038.52179815 tail_ess=2037.1545405 cold_mean=0.543325165172 hot_mean=0.543130254549 hot_cold_z=0.570793631075
+POOLED L=6 name=flux_fraction_1 rank_rhat=0.999388263814 folded_rhat=1.00078157851 bulk_ess=2048 tail_ess=1993.70001021 cold_mean=0.21979324906 hot_mean=0.219896858121 hot_cold_z=0.619163111555
+POOLED L=6 name=flux_fraction_2 rank_rhat=0.999584417015 folded_rhat=1.00048647764 bulk_ess=1863.51584585 tail_ess=1931.34983441 cold_mean=0.00852533034336 hot_mean=0.00857958381559 hot_cold_z=0.938173272579
+POOLED L=6 name=flux_fraction_3 rank_rhat=0.999087095581 folded_rhat=0.999478376926 bulk_ess=1964.37035744 tail_ess=1959.34389694 cold_mean=0.00851653927148 hot_mean=0.00857795118795 hot_cold_z=1.103517334
+POOLED L=6 name=flux_fraction_4 rank_rhat=0.999024525828 folded_rhat=0.999558938026 bulk_ess=2048 tail_ess=1644.2918081 cold_mean=0.219839716154 hot_mean=0.219815352326 hot_cold_z=0.142147450238
+POOLED L=8 name=logw rank_rhat=1.00007148215 folded_rhat=0.999566880799 bulk_ess=2048 tail_ess=2048 cold_mean=1.15999200174 hot_mean=1.15970202154 hot_cold_z=1.89742442296
+POOLED L=8 name=polyakov_radius_mean rank_rhat=0.998980534137 folded_rhat=1.00047726699 bulk_ess=1818.46354481 tail_ess=1678.19220442 cold_mean=0.228430420817 hot_mean=0.22796859289 hot_cold_z=0.512501007655
+POOLED L=8 name=polyakov_radius_0 rank_rhat=1.00109382072 folded_rhat=1.00044395991 bulk_ess=1909.1124102 tail_ess=2025.87319978 cold_mean=0.229167879805 hot_mean=0.227661851997 hot_cold_z=0.718006295749
+POOLED L=8 name=polyakov_radius_1 rank_rhat=0.999794419753 folded_rhat=0.9998883169 bulk_ess=1900.31421086 tail_ess=1796.15264366 cold_mean=0.227286805839 hot_mean=0.228635338823 hot_cold_z=0.770773543967
+POOLED L=8 name=polyakov_radius_2 rank_rhat=0.999284354368 folded_rhat=1.00007239292 bulk_ess=1615.05896522 tail_ess=1913.24342149 cold_mean=0.229714351497 hot_mean=0.228508754635 hot_cold_z=0.574973438965
+POOLED L=8 name=polyakov_radius_3 rank_rhat=0.998790141859 folded_rhat=0.998708680322 bulk_ess=1908.70389986 tail_ess=1837.72901038 cold_mean=0.227552646125 hot_mean=0.227068426106 hot_cold_z=0.263672526106
+POOLED L=8 name=vortex_density rank_rhat=0.999453481885 folded_rhat=1.00257893215 bulk_ess=2048 tail_ess=1939.64304821 cold_mean=0.456544001897 hot_mean=0.456846117973 hot_cold_z=1.59409178321
+POOLED L=8 name=monopole_density rank_rhat=1.00077068263 folded_rhat=1.00043148175 bulk_ess=2048 tail_ess=1784.81769087 cold_mean=0.0111674666405 hot_mean=0.0112200975418 hot_cold_z=0.592671012934
+POOLED L=8 name=score_mean rank_rhat=1.0000705906 folded_rhat=0.999701419844 bulk_ess=1957.82812664 tail_ess=1953.51790707 cold_mean=3.3585465669e-05 hot_mean=0.000145881255712 hot_cold_z=0.626045304786
+POOLED L=8 name=flux_asym_14 rank_rhat=0.999989994906 folded_rhat=0.999333705189 bulk_ess=1969.33893526 tail_ess=1997.87745272 cold_mean=7.83602396647e-05 hot_mean=-1.75635019938e-05 hot_cold_z=1.17426302333
+POOLED L=8 name=flux_asym_23 rank_rhat=1.00079001586 folded_rhat=0.998852016805 bulk_ess=1977.99941659 tail_ess=1844.09653633 cold_mean=-1.05698903402e-05 hot_mean=3.85840733846e-05 hot_cold_z=0.901090080763
+POOLED L=8 name=flux_fraction_0 rank_rhat=0.999453481885 folded_rhat=1.00257893215 bulk_ess=2048 tail_ess=1939.64304821 cold_mean=0.543455998103 hot_mean=0.543153882027 hot_cold_z=1.59409178321
+POOLED L=8 name=flux_fraction_1 rank_rhat=0.999062328067 folded_rhat=1.00076394794 bulk_ess=2048 tail_ess=1746.62783806 cold_mean=0.219794472059 hot_mean=0.219855507215 hot_cold_z=0.536496961279
+POOLED L=8 name=flux_fraction_2 rank_rhat=1.00163300971 folded_rhat=0.9993459037 bulk_ess=2048 tail_ess=1989.80459591 cold_mean=0.00851142406464 hot_mean=0.0085780620575 hot_cold_z=1.79649125908
+POOLED L=8 name=flux_fraction_3 rank_rhat=0.998962102095 folded_rhat=0.998776491997 bulk_ess=2048 tail_ess=2048 cold_mean=0.00852199395498 hot_mean=0.00853947798411 hot_cold_z=0.582483474835
+POOLED L=8 name=flux_fraction_4 rank_rhat=0.999576553215 folded_rhat=1.00350941353 bulk_ess=2048 tail_ess=1982.78842893 cold_mean=0.219716111819 hot_mean=0.219873070717 hot_cold_z=1.60518889911
+PILOT_FAILURES NONE
+RESULT PILOT_READY_FOR_PRODUCTION_PREREG
+ANALYZER_STDOUT_END
+RESULT PILOT_READY_FOR_PRODUCTION_PREREG
