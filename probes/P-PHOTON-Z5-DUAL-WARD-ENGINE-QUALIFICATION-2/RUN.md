@@ -74,3 +74,29 @@ and established old-path choice/draw/bit/successor parity. Its integrated
 synthetic supervisor retained both failure legs, bounded both streams,
 cancelled queued work, killed and reaped the running sibling, passed the
 injected cleanup faults and reported zero survivors.
+
+## Selected public aarch64 leg
+
+```text
+github_workflow_run: 33556718173
+github_job: 100019224672
+github_head_commit: 5fb82f00fc328408b660cba01a01452d9236057f
+github_tested_merge_commit: 705ab1ec65f29bb2ac2f2593c77f91dab36080f5
+github_base_commit: d0bc920b27117ea4a409282e3481340f50433763
+github_platform: Ubuntu 24.04.4 LTS
+github_architecture: aarch64
+github_python: CPython 3.12.14
+github_verifier_sha256: d01b594d1e546fbc3480b48e8f59ca361913b1fc39b7e9de8977509b3f5601b4
+github_stdout_sha256: bd919866d3ffc40f7022530dcb099a267a904cbd4c9a111f3ff7f082235cbb35
+github_exit_code: 0
+github_stderr_bytes: 0
+github_stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+github_status: PASS
+github_verdict: VERIFY PASS
+github_byte_identity: PASS
+github_replay: PASS
+```
+
+The selected native aarch64 job replayed the unchanged verifier from the first
+PR workflow against the displayed synthetic merge commit. The parallel
+x86_64 job and aggregate `check` also passed before this receipt was appended.
