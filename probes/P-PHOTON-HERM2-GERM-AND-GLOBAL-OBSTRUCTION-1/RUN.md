@@ -13,7 +13,7 @@ verifier_sha256: 37cd038c1a9e6ff8bf5ba485d2a69ea0c7b735e9e224c117797b7740b12eb23
 command: python3 probes/P-PHOTON-HERM2-GERM-AND-GLOBAL-OBSTRUCTION-1/verify.py
 ```
 
-## Local formal leg
+## Local execution record
 
 ```text
 platform: Linux
