@@ -22,7 +22,8 @@ No `L=6,8` decision chain existed before that public readback.
 ## Sole formal local leg
 
 ```text
-command: python3 run_crosscheck.py
+command: python3 probes/P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1/verify.py
+orchestration_command: python3 run_crosscheck.py
 environment: LC_ALL=C LANG=C TZ=UTC PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0
 platform: Ubuntu 22.04.5 LTS / Linux 6.6.87.2-microsoft-standard-WSL2
 architecture: x86_64
