@@ -1,6 +1,7 @@
 # P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2 result
 
-Status: `PILOT_READY_FOR_PRODUCTION_PREREG / ZERO_PILOT_ONLY / PUBLIC REPLAY PENDING`.
+Status: `PILOT_READY_FOR_PRODUCTION_PREREG / ZERO_PILOT_ONLY / PUBLIC
+X86_64+AARCH64 REPRODUCTION PASS / NON-CANONICAL`.
 
 ## Recorded decision
 
@@ -56,6 +57,10 @@ All sixteen registered metrics passed every frozen gate at both `L=6` and
 The analyzer therefore emitted `PILOT_FAILURES NONE`. This is an engineering
 mixing/readiness result for the frozen finite volumes, not phase evidence.
 
+Clean public GitHub jobs on x86_64 and native aarch64 both reproduced the
+unchanged verifier and the 29,872-byte `EXPECTED.txt` byte for byte. Workflow
+`33496135026` concluded with `TWO-ARCHITECTURE CHECK PASS`.
+
 ## Authorized consequence and scope firewall
 
 This terminal authorizes only drafting the separate production preregistration
@@ -66,5 +71,4 @@ matter/light split, or visible/invisible sector.
 
 The independent dual/Ward obligation #756 and reader obligation #748 remain
 open. No Canon, Registry, Frontier, program-status or authority movement is
-made by this pilot. Required clean GitHub x86_64 and aarch64 byte-identity
-replays, review and merge remain pending.
+made by this pilot.

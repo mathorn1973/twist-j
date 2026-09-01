@@ -1,7 +1,7 @@
 # P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2 formal run record
 
-Status: one authorized local pilot execution complete; public architecture
-replay pending.
+Status: `PILOT_READY_FOR_PRODUCTION_PREREG / ZERO_PILOT_ONLY / PUBLIC
+X86_64+AARCH64 REPRODUCTION PASS`.
 
 ## Immutable public pin
 
@@ -15,6 +15,7 @@ readback_receipt: https://github.com/mathorn1973/twist-j/issues/755#issuecomment
 pin_manifest_sha256: 07ee9dbd69f34875af1e7e1a1cf41e8284217e58c2807dfd57babcbc5e3bf6d2
 pin_manifest_bytes: 1155
 pin_entries: 14
+verifier_sha256: 3857ca1e08ea027c86c6696dd78e80adff6bef8fe75bf939d071410c324896d1
 ```
 
 The public branch ref, commit, parent, tree, all fifteen pre-run Git blobs and
@@ -22,7 +23,7 @@ the raw `SHA256SUMS` bytes were read back before execution. The public raw
 manifest was 1,155 bytes and matched the local file byte for byte. No decision
 artifact existed before that readback.
 
-## Local execution record
+## Local formal leg
 
 ```text
 command: python3 probes/P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/verify.py
@@ -39,13 +40,12 @@ runner_exit_code: 0
 exit_code: 0
 stderr_bytes: 0
 stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-verifier_sha256: 3857ca1e08ea027c86c6696dd78e80adff6bef8fe75bf939d071410c324896d1
 stdout_bytes: 29872
 stdout_lines: 182
 stdout_sha256: 1ee2040148459d161264108598848c12c7dd8bfb744066a37d96f46bd137926a
 result: PILOT_READY_FOR_PRODUCTION_PREREG
 evidential_status: ZERO_PILOT_ONLY
-architecture_gate: local x86_64 complete; required GitHub x86_64 and aarch64 replays pending
+architecture_gate: local x86_64 plus public GitHub x86_64 and aarch64 replays complete
 ```
 
 The sole orchestration command first revalidated all pinned hashes, rebuilt the
@@ -75,5 +75,76 @@ log has 516 LF-only lines, exit zero, empty stderr, and the byte count and
 SHA-256 recorded in that manifest. The frozen analyzer transcript is
 byte-identical to the transcript embedded by the wrapper in `EXPECTED.txt`.
 
-Public pull-request replays on Linux x86_64 and native aarch64 remain pending
-at the time of this first run record.
+## Required GitHub leg
+
+```text
+status: PASS
+workflow_run_id: 33496135026
+workflow_url: https://github.com/mathorn1973/twist-j/actions/runs/33496135026
+job_id: 99818654540
+job_url: https://github.com/mathorn1973/twist-j/actions/runs/33496135026/job/99818654540
+check_name: architecture-aarch64
+event: pull_request
+tested_head_commit: 0f5fbec4ba507b31ceb454e87166d39ed7f9edef
+checkout_merge_commit: bec7f7efc0fd4f32ea8819e091d74cb6d5a2ea6f
+base_commit: 54d35a41ad898a7877ca46272169194e1b5db023
+platform: GitHub-hosted Ubuntu 24.04.4 LTS / ubuntu-24.04-arm 20260823.101.1
+architecture: aarch64
+python: CPython 3.12.14
+verifier_sha256: 3857ca1e08ea027c86c6696dd78e80adff6bef8fe75bf939d071410c324896d1
+stdout_sha256: 1ee2040148459d161264108598848c12c7dd8bfb744066a37d96f46bd137926a
+stdout_bytes: 29872
+stdout_lines: 182
+exit_code: 0
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr_bytes: 0
+byte_identity: PASS
+replay: PASS
+verdict: VERIFY PASS
+```
+
+## Complete GitHub matrix receipts
+
+```text
+WORKFLOW = 33496135026
+WORKFLOW_URL = https://github.com/mathorn1973/twist-j/actions/runs/33496135026
+EVIDENCE_HEAD = 0f5fbec4ba507b31ceb454e87166d39ed7f9edef
+TESTED_MERGE = bec7f7efc0fd4f32ea8819e091d74cb6d5a2ea6f
+BASE_COMMIT = 54d35a41ad898a7877ca46272169194e1b5db023
+
+X86_JOB = 99818654875
+X86_JOB_URL = https://github.com/mathorn1973/twist-j/actions/runs/33496135026/job/99818654875
+X86_RESULT = success
+X86_PLATFORM = GitHub-hosted Ubuntu 24.04.4 LTS / ubuntu-24.04 20260823.283.1
+X86_ARCH = x86_64
+X86_PYTHON = CPython 3.12.14
+X86_VERIFIER_SHA256 = 3857ca1e08ea027c86c6696dd78e80adff6bef8fe75bf939d071410c324896d1
+X86_STDOUT_SHA256 = 1ee2040148459d161264108598848c12c7dd8bfb744066a37d96f46bd137926a
+X86_STDOUT_BYTES = 29872
+X86_STDOUT_LINES = 182
+X86_BYTE_IDENTITY = PASS
+
+ARM_JOB = 99818654540
+ARM_JOB_URL = https://github.com/mathorn1973/twist-j/actions/runs/33496135026/job/99818654540
+ARM_RESULT = success
+ARM_PLATFORM = GitHub-hosted Ubuntu 24.04.4 LTS / ubuntu-24.04-arm 20260823.101.1
+ARM_ARCH = aarch64
+ARM_PYTHON = CPython 3.12.14
+ARM_VERIFIER_SHA256 = 3857ca1e08ea027c86c6696dd78e80adff6bef8fe75bf939d071410c324896d1
+ARM_STDOUT_SHA256 = 1ee2040148459d161264108598848c12c7dd8bfb744066a37d96f46bd137926a
+ARM_STDOUT_BYTES = 29872
+ARM_STDOUT_LINES = 182
+ARM_BYTE_IDENTITY = PASS
+
+AGGREGATE_JOB = 99818770578
+AGGREGATE_JOB_URL = https://github.com/mathorn1973/twist-j/actions/runs/33496135026/job/99818770578
+AGGREGATE_RESULT = success
+AGGREGATE_TERMINAL = TWO-ARCHITECTURE CHECK PASS
+```
+
+Both public jobs checked out the signed synthetic merge commit
+`bec7f7efc0fd4f32ea8819e091d74cb6d5a2ea6f`, whose parents are the policy base
+`54d35a41ad898a7877ca46272169194e1b5db023` and evidence head
+`0f5fbec4ba507b31ceb454e87166d39ed7f9edef`. Policy, all 148 tool tests,
+Canon v74, Ledger and the gate contract passed before the unchanged verifier
+reproduced `EXPECTED.txt` byte for byte on both architectures.
