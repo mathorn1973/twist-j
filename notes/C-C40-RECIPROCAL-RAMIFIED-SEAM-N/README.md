@@ -37,7 +37,7 @@ Public Canon v74 already owns the compositum and intersection through
 `DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY [T]`. The self-contained check here is:
 
 \[
-\zeta_5=\zeta_{40}^8,qquad
+\zeta_5=\zeta_{40}^8,\qquad
 \zeta_8=\zeta_{40}^5,qquad
 8\cdot2+5\cdot(-3)=1,
 \]
@@ -147,4 +147,3 @@ note does not merge fields, choose a component or orientation, promote
 - `RESULT.md` — terminal assessment;
 - `PROMO-C-C40-RECIPROCAL-RAMIFIED-SEAM-N.md` — later-fold handoff only;
 - `SHA256SUMS` — content hashes for the packet.
-
