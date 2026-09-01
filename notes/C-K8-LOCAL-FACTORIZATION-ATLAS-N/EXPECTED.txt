@@ -2,4 +2,3 @@ C-K8-LOCAL-FACTORIZATION-ATLAS-N
 STATUS PASS
 {"audit_role":"finite audit, not proof","class_counts":{"1":19552,"3":19653,"5":19623,"7":19669},"density_theorem":{"complete_split":"1/4","two_quadratics":"3/4","unramified_inert":"0"},"fixed_fields":{"sigma_3":"Q(sqrt(-2))","sigma_5":"Q(i)","sigma_7":"Q(sqrt(2))"},"limit":1000000,"odd_primes_checked":78497,"p2":{"factor_mod_2":"(x+1)^4","irreducible_over_Q2":true,"profile":[4,1,1]},"p5":{"diagonal":false,"factor_order":["x^2-2","x^2-3"],"full_unit_group":"C24 x C24","i_image":[2,3],"norm_one_subgroup_order":24,"sigma_5_i_image":[2,3],"sigma_7_i_image":[3,2]},"route_counts":{"-1":39175,"-2":39205,"2":39221},"type_counts":{"1+1+1+1":19552,"2+2":58945}}
 SUMMARY_SHA256 d0ccaaf2c88bd1f162cda9ba88fe1eb94a1c5582056d58ceb57fbe2155b90fe2
-
