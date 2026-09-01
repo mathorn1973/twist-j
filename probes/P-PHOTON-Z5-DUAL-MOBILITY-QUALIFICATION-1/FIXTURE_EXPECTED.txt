@@ -1,0 +1,4 @@
+{"bitstream":"PASS","development_only":true,"detailed_balance_orbits":"PASS","lattice_L3":"PASS","lattice_L4":"PASS","sha256":"PASS","swap_score_table":"PASS","type":"selftest"}
+PARITY L=3 start=stratified bottom_attempts=128 transitions=7374 support=15 j_nnz=0 H2=1,0,0,0,0,0 walker=3 state_sha256=89569d555ac60227824fb4201825c2f9cb79156f0fe56cec20002184776a3878 status=PASS
+PARITY L=4 start=cold bottom_attempts=128 transitions=8831 support=24 j_nnz=0 H2=0,0,0,0,0,0 walker=4 state_sha256=526359134136967047a247e076ffd628c93858fdb68e95949abfb8a5f5b4a2b7 status=PASS
+FIXTURE_RESULT PASS
