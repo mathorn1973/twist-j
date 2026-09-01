@@ -1,0 +1,40 @@
+PILOT_ANALYSIS E-PHOTON-Z5-PHASE-MEASUREMENT-1 V1
+CHAIN file=pilot-L6-cold.txt sha256=8a71d012e15065e737af1ee893b02a020abfa0c87b32a955166f51ced7de5366 L=6 start=cold seed=16663888168294023169 samples=256 unique_state_fraction=1
+METRIC L=6 start=cold name=logw mean=1.15961700447 conservative_se=0.000481448141546 tau_int=0.658561307784 ess=194.363073699
+METRIC L=6 start=cold name=polyakov_radius mean=0.345044052522 conservative_se=0.00251945935962 tau_int=0.77148606214 ess=165.913561218
+METRIC L=6 start=cold name=vortex_density mean=0.456750438047 conservative_se=0.000578125003106 tau_int=0.799708144073 ess=160.058392488
+METRIC L=6 start=cold name=monopole_density mean=0.0110925745081 conservative_se=0.00024619832057 tau_int=0.634489883647 ess=201.736864998
+METRIC L=6 start=cold name=monopole_weighted_density mean=0.0110933280285 conservative_se=0.000246309994262 tau_int=0.634536521565 ess=201.722037503
+METRIC L=6 start=cold name=score_mean mean=0.000107897666718 conservative_se=0.000316376636098 tau_int=0.561913590537 ess=227.793031092
+CHAIN file=pilot-L6-hot.txt sha256=e76f3594b3aff8055432d1d756c001566838874e918fecb48fe3e1ec44975bc1 L=6 start=hot seed=16663888168294023170 samples=256 unique_state_fraction=1
+METRIC L=6 start=hot name=logw mean=1.16035441216 conservative_se=0.000382372160239 tau_int=0.5 ess=256
+METRIC L=6 start=hot name=polyakov_radius mean=0.347841907969 conservative_se=0.00174301017144 tau_int=0.550960113483 ess=232.321717793
+METRIC L=6 start=hot name=vortex_density mean=0.456322438432 conservative_se=0.000481439508162 tau_int=0.5 ess=256
+METRIC L=6 start=hot name=monopole_density mean=0.0109019338349 conservative_se=0.000209827600807 tau_int=0.5 ess=256
+METRIC L=6 start=hot name=monopole_weighted_density mean=0.0109019338349 conservative_se=0.000209827600807 tau_int=0.5 ess=256
+METRIC L=6 start=hot name=score_mean mean=0.000161207483269 conservative_se=0.000304107687837 tau_int=0.5 ess=256
+CHAIN file=pilot-L8-cold.txt sha256=86b94e5307ed900cc113d24c0240bc045d3d8163f5aa0d650fd65cb0c86f589e L=8 start=cold seed=16663890367317278721 samples=256 unique_state_fraction=1
+METRIC L=8 start=cold name=logw mean=1.15985372481 conservative_se=0.000209221073603 tau_int=0.5 ess=256
+METRIC L=8 start=cold name=polyakov_radius mean=0.228602994276 conservative_se=0.0012100232161 tau_int=0.649247567167 ess=197.151297091
+METRIC L=8 start=cold name=vortex_density mean=0.456827640533 conservative_se=0.000265143919145 tau_int=0.5 ess=256
+METRIC L=8 start=cold name=monopole_density mean=0.0110442638397 conservative_se=0.0001147327938 tau_int=0.5 ess=256
+METRIC L=8 start=cold name=monopole_weighted_density mean=0.0110445022583 conservative_se=0.000114736666831 tau_int=0.5 ess=256
+METRIC L=8 start=cold name=score_mean mean=-1.08767027251e-05 conservative_se=0.000242357567565 tau_int=0.571103382623 ess=224.127546596
+CHAIN file=pilot-L8-hot.txt sha256=ad8a7d5644ecc4de498646b9ea4034d68e1e15f95301309bb8d63fc6dd965c8d L=8 start=hot seed=16663890367317278722 samples=256 unique_state_fraction=1
+METRIC L=8 start=hot name=logw mean=1.15892918512 conservative_se=0.000236867992212 tau_int=0.580686347398 ess=220.42880907
+METRIC L=8 start=hot name=polyakov_radius mean=0.142222342979 conservative_se=0.00101669202134 tau_int=0.5 ess=256
+METRIC L=8 start=hot name=vortex_density mean=0.457616488139 conservative_se=0.000301518144469 tau_int=0.650517947723 ess=196.766285155
+METRIC L=8 start=hot name=monopole_density mean=0.0115602016449 conservative_se=0.000138026237946 tau_int=0.5 ess=256
+METRIC L=8 start=hot name=monopole_weighted_density mean=0.0115604400635 conservative_se=0.000138082029707 tau_int=0.5 ess=256
+METRIC L=8 start=hot name=score_mean mean=0.0134293654537 conservative_se=0.000180266009678 tau_int=0.5 ess=256
+HOT_COLD L=6 name=logw cold=1.15961700447 hot=1.16035441216 z=1.19939245763
+HOT_COLD L=6 name=polyakov_radius cold=0.345044052522 hot=0.347841907969 z=0.913251831647
+HOT_COLD L=6 name=vortex_density cold=0.456750438047 hot=0.456322438432 z=0.568892697381
+HOT_COLD L=6 name=monopole_density cold=0.0110925745081 hot=0.0109019338349 z=0.589337578672
+HOT_COLD L=8 name=logw cold=1.15985372481 hot=1.15892918512 z=2.92540839424
+HOT_COLD L=8 name=polyakov_radius cold=0.228602994276 hot=0.142222342979 z=54.6557684643
+HOT_COLD L=8 name=vortex_density cold=0.456827640533 hot=0.457616488139 z=1.96467661372
+HOT_COLD L=8 name=monopole_density cold=0.0110442638397 hot=0.0115602016449 z=2.87454593068
+PRODUCTION_BLOCKERS DUAL_WARD_ENGINE,CORRELATOR_RAW_JACKKNIFE,PRODUCTION_THRESHOLDS,CHECKPOINT_RESTART,SECOND_FULL_IMPLEMENTATION_OR_FROZEN_SUBSET
+PILOT_FAILURES hot_cold_L8_polyakov_radius
+RESULT STOP_MIXING_OR_INTEGRITY
