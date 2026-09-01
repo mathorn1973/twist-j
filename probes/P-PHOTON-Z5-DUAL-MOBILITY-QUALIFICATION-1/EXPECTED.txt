@@ -1,0 +1,30 @@
+PROBE P-PHOTON-Z5-DUAL-MOBILITY-QUALIFICATION-1
+PIN commit=a4b9ca828e8c17c5125fef98c6d8cf34e4e1dfb6 receipt=https://github.com/mathorn1973/twist-j/issues/756#issuecomment-5497343780
+SOURCE_CUSTODY PASS manifest_sha256=6f8b8df01293abd065cd69f1dddb7d3df956bf651b046993fec0d55eaadd2001
+INPUT_CUSTODY PASS manifest_sha256=5ea7eba13b04de8276a26f1231299334b1c04048b4e061b545aead30368d0eeb
+FIXTURE_CUSTODY PASS fixture_sha256=e752e3c113356b293d3cebde65912760395fb154ba4b2a7cd8f8ba35a1f1d82f
+CHAIN L3_cold_r1 bytes=681710 sha256=79b23210c7129743bceea6ea91c1b77f76a2f208af5998f25fc825427d1e77f9 transitions=32423653 final_state_sha256=d427dfce0dd460983c48db49ecf86b44fe23cb5c6e1e8ba7f7532d42829e3848
+CHAIN L3_cold_r2 bytes=684117 sha256=3783cc601a053f44e03a0fa88807a6fc3b3553484a4a4b5ebc7474cd50ec6b6a transitions=32378155 final_state_sha256=c796db90f5a0838c9bc9bb1d641161d27ea5c5ec30f0e1df93fa6e6e7d92d1a7
+CHAIN L3_stratified_r1 bytes=682711 sha256=0e1a31772d2ab9f1472e3ede01dbb4d828f22f5f413602bb56108842cfad36df transitions=32419974 final_state_sha256=2d22c2a88590492775745aeebc00010f7d060ca61e60ff780b54ff12bd21064f
+CHAIN L3_stratified_r2 bytes=683631 sha256=b22eaf7d64b43327c452a69e6fbd9e3b7c53b01c6b913c12954c49f2b8b51b30 transitions=32371058 final_state_sha256=951d47914da2eef1f7a59bc22fcda42ccc19d197ad9b900661ee5175754762dd
+CHAIN L4_cold_r1 bytes=699257 sha256=afeea0d222a4ce7413cce465991ac7d08bb36f9e6f5e16938316411b3f04feaa transitions=34672246 final_state_sha256=61f8708f58e4fa171658b7bd2cccccb70336fb0a125e63d406a83fadc3e82f02
+CHAIN L4_cold_r2 bytes=697112 sha256=2754fb46a4c4752bb8122d7dadbe9f57c128087a09a5dfbf0b129fc420e7c362 transitions=34576173 final_state_sha256=4e423a71021f9cc4795f5943abac4a2a92bcdbff408b8fd1af4c8f76ef45079e
+CHAIN L4_stratified_r1 bytes=693476 sha256=e31286ffc6edae47e87147e2f381b8f83185a8dbc1e0b921dbbc60a0100320cf transitions=34676903 final_state_sha256=97aee91ab6e64b15c3b5696a52b2783a9ad2628d212305dda9e8ee28509a10c9
+CHAIN L4_stratified_r2 bytes=697646 sha256=8b1443b5131aeac4c7f4a0b852f6d901177f74876eb9ac27f88e86486fcc1301 transitions=34581587 final_state_sha256=3bf0642faff050662f5ae84a5e51bd46ec06292ba9c857ecdf45ca919d81f9fc
+L3 MOB L3_cold_r1 PASS current=395/395 target=396/396 census=395 hashes=184 walkers=16 io=395/395 localJ0=1/1 edgeJ=395/395 H2=5858/330407 edgeH2=435182/435181 localH2bd=1257/1257 swap=0.830633 trips=7757/16 unique=1/1
+L3 MOB L3_cold_r2 PASS current=466/466 target=468/468 census=467 hashes=221 walkers=16 io=466/467 localJ0=2/1 edgeJ=468/467 H2=5953/327620 edgeH2=433950/433950 localH2bd=1200/1200 swap=0.830925 trips=7292/16 unique=1/1
+L3 MOB L3_stratified_r1 PASS current=381/381 target=382/382 census=381 hashes=199 walkers=16 io=381/382 localJ0=1/0 edgeJ=382/381 H2=5962/328884 edgeH2=434292/434292 localH2bd=1202/1202 swap=0.829516 trips=7850/16 unique=1/1
+L3 MOB L3_stratified_r2 PASS current=410/410 target=411/411 census=410 hashes=213 walkers=16 io=410/410 localJ0=1/1 edgeJ=410/410 H2=5995/329299 edgeH2=433123/433123 localH2bd=1155/1155 swap=0.827977 trips=7886/16 unique=1/1
+L3 MIX PASS metrics=15 minESS=1414.65 maxRhat=1.00038 maxFolded=1.00098 minBulk=6405.31 minTail=7052.97 maxDrift=1.96731 maxStarts=1.77039
+L4 MOB L4_cold_r1 PASS current=1317/1316 target=1318/1317 census=1331 hashes=424 walkers=17 io=1317/1317 localJ0=1/0 edgeJ=1331/1331 H2=3917/328942 edgeH2=436359/436361 localH2bd=182/182 swap=0.831977 trips=2574/17 unique=1/1
+L4 MOB L4_cold_r2 PASS current=1278/1278 target=1278/1278 census=1281 hashes=396 walkers=17 io=1278/1277 localJ0=0/1 edgeJ=1280/1281 H2=3991/325031 edgeH2=437990/437990 localH2bd=238/238 swap=0.834769 trips=2677/17 unique=1/1
+L4 MOB L4_stratified_r1 PASS current=1004/1004 target=1004/1004 census=1005 hashes=341 walkers=17 io=1004/1004 localJ0=0/0 edgeJ=1005/1005 H2=4026/327938 edgeH2=437043/437042 localH2bd=200/200 swap=0.831662 trips=2697/17 unique=1/1
+L4 MOB L4_stratified_r2 PASS current=1108/1108 target=1108/1108 census=1108 hashes=400 walkers=17 io=1108/1106 localJ0=0/2 edgeJ=1106/1108 H2=4038/331891 edgeH2=435693/435693 localH2bd=193/193 swap=0.832771 trips=2707/17 unique=1/1
+L4 MIX PASS metrics=15 minESS=657.985 maxRhat=1.00119 maxFolded=1.00119 minBulk=3151.5 minTail=3327.78 maxDrift=3.57926 maxStarts=1.7375
+SCALE PASS current=2008/932 H2=325031/330407 roundtrips=2574/7886
+ANALYSIS PASS failures=0
+PROSPECTIVE_MAP L6 warm_bottom=98304 checkpoints=2048 thin=1536 transition_cap=1073741824
+PROSPECTIVE_MAP L8 warm_bottom=262144 checkpoints=2048 thin=4096 transition_cap=4294967296
+TERMINAL DUAL_MOBILITY_QUALIFICATION_PASS
+EVIDENTIAL_STATUS ZERO_ENGINEERING_ONLY
+SCOPE L3_L4_ONLY NO_WARD NO_F3 NO_PHASE NO_CANON_MOVEMENT

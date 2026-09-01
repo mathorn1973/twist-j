@@ -205,18 +205,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 221, "D": 44, "C": 33, "F": 17,
+    expected_counts = {"T": 225, "D": 45, "C": 34, "F": 17,
                        "O": 29, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v72",
-        len(rows) == 346
+        "registry and companion-ledger counts match Public Canon v74",
+        len(rows) == 352
         and counts == expected_counts
-        and len(normative) == 392
-        and len(dependencies) == 639
-        and len(evidence) == 346
-        and two_architecture == 259
-        and len(history) == 875
+        and len(normative) == 398
+        and len(dependencies) == 648
+        and len(evidence) == 352
+        and two_architecture == 265
+        and len(history) == 882
         and len(gates) == 14
         and len(programs) == 31
         and len({row["program_id"] for row in programs.values()}) == 8
@@ -5258,15 +5258,14 @@ def run():
             ),
         },
     }
+    v72_current_contract = {
+        claim: contract for claim, contract in v72_contract.items()
+        if claim != "PHOTON-CONE-CONVERGENCE"
+    }
     v72_dependencies = {
         "FCC-WEIGHTED-SHELL-SYMBOL": set(),
         "PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP": {
             ("PHOTON-WINDOW-COORDINATES", "REQUIRES"),
-        },
-        "PHOTON-CONE-CONVERGENCE": {
-            ("DEF-ACTION-LAYERS", "REQUIRES"),
-            ("FCC-WEIGHTED-SHELL-SYMBOL", "BOUNDED_BY"),
-            ("CENTRAL-LIFT-PHASE", "BOUNDED_BY"),
         },
         "PHOTON-MASSLESS-PHASE": {
             ("DEF-ACTION-LAYERS", "REQUIRES"),
@@ -5279,21 +5278,11 @@ def run():
     }
     v72_dependency_hashes = {
         ("PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP", "PHOTON-WINDOW-COORDINATES", "REQUIRES"): "ba3ec189da893464ac7fb1b579abd73fad28760bbf0d80e85363d3f939d2a189",
-        ("PHOTON-CONE-CONVERGENCE", "DEF-ACTION-LAYERS", "REQUIRES"): "4bd6904d69bdb26a28fdaa500e0a8183cce88f603174400904bf57e398b35849",
-        ("PHOTON-CONE-CONVERGENCE", "FCC-WEIGHTED-SHELL-SYMBOL", "BOUNDED_BY"): "b4519f24035dcea9ffc1ad8bfed5554b67380c70d4eb10695f21a3dbbdaab175",
-        ("PHOTON-CONE-CONVERGENCE", "CENTRAL-LIFT-PHASE", "BOUNDED_BY"): "0f5cf0861f55dbe6ba17ca92dbebad344ece685bdd1fba2eb8e44710a3fd573e",
         ("PHOTON-MASSLESS-PHASE", "DEF-ACTION-LAYERS", "REQUIRES"): "5a205f0cb5e04826724742c39e59c521126cd0b3527b5e44519915a2ecc116f7",
         ("PHOTON-MASSLESS-PHASE", "PHOTON-WINDOW-COORDINATES", "REQUIRES"): "ba559c1dd1a9b6e4879e61df82fc067be6c6045aa753ba5d341a1524ea9df66d",
         ("PHOTON-MASSLESS-PHASE", "PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP", "BOUNDED_BY"): "898d9103e3f4a17b53b8888f33eeaaba959bb313d39989c0692e51110dea958d",
     }
     v72_gate_contract = {
-        "GATE-L2-L5-PHOTON-TEMPORAL-CHARACTERISTIC": {
-            "owner": "PHOTON-CONE-CONVERGENCE",
-            "source": "L2",
-            "target": "L5",
-            "markers": ("temporal normalization", "otherwise STOP"),
-            "row_sha": "7f471584209030dc43432d961064054e1bc6bdf0432a8aa3252af4e8c6f01211",
-        },
         "GATE-L4-L5-PHOTON-CONE-IDENTIFICATION": {
             "owner": "PHOTON-CONE-CONVERGENCE",
             "source": "L4",
@@ -5329,20 +5318,16 @@ def run():
             (row["depends_on"], row["relation"])
             for row in dependencies if row["item_id"] == claim
         }
-        for claim in v72_claims
+        for claim in v72_current_contract
     }
     v72_actual_dependency_hashes = {
         (row["item_id"], row["depends_on"], row["relation"]): table_row_sha256(row)
-        for row in dependencies if row["item_id"] in v72_claims
+        for row in dependencies if row["item_id"] in v72_current_contract
     }
     v72_expected_consumers = {
-        "FCC-WEIGHTED-SHELL-SYMBOL": {
-            ("PHOTON-CONE-CONVERGENCE", "BOUNDED_BY"),
-        },
         "PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP": {
             ("PHOTON-MASSLESS-PHASE", "BOUNDED_BY"),
         },
-        "PHOTON-CONE-CONVERGENCE": set(),
         "PHOTON-MASSLESS-PHASE": set(),
     }
     v72_actual_consumers = {
@@ -5350,7 +5335,7 @@ def run():
             (row["item_id"], row["relation"])
             for row in dependencies if row["depends_on"] == claim
         }
-        for claim in v72_claims
+        for claim in v72_expected_consumers
     }
     v72_photon_gate_ids = set(v72_gate_contract)
     v72_owned_gate_ids = {
@@ -5359,7 +5344,7 @@ def run():
     }
     v72_canon_start = canon_text.find("### FCC-WEIGHTED-SHELL-SYMBOL [T]")
     v72_canon_end = (
-        canon_text.find("\nThe electron:", v72_canon_start)
+        canon_text.find("### Photon successor roots", v72_canon_start)
         if v72_canon_start >= 0 else -1
     )
     v72_canon_block = (
@@ -5368,8 +5353,8 @@ def run():
     )
     checks.append((
         "V72-PHOTON",
-        "two exact photon boundary theorems enter at T while cone agreement "
-        "and a massless phase remain O/STOP behind three named lifts",
+        "the v72 boundary theorems and declarations remain pinned while the "
+        "Herm2-cone and massless routes stay O/STOP",
         all(
             has_status(index, claim, contract["status"])
             and scope_sha256(index, claim) == contract["scope_sha"]
@@ -5389,7 +5374,7 @@ def run():
             and evidence[claim]["hash_mode"] == contract["hash_mode"]
             and evidence[claim]["architecture_requirement"]
             == contract["architecture"]
-            for claim, contract in v72_contract.items()
+            for claim, contract in v72_current_contract.items()
         )
         and v72_actual_dependencies == v72_dependencies
         and v72_actual_dependency_hashes == v72_dependency_hashes
@@ -5450,9 +5435,9 @@ def run():
         )
         and all(row["claim_id"] not in v72_claims for row in core_selection_rows)
         and all(f"- {claim} [" not in core_text for claim in v72_claims)
-        and len(v72_canon_block.encode("utf-8")) == 4569
+        and len(v72_canon_block.encode("utf-8")) == 2740
         and hashlib.sha256(v72_canon_block.encode("utf-8")).hexdigest()
-        == "ee5ce5e018d80fc97a1edb7e041fce0734922ff4507255969bbebf82de9c2277"
+        == "dcb94cbfd9283e371a1c9904f5f8d84541bcc2dc48081a547dfa7bf43ccd3fd0"
         and all(
             phrase in canon_text
             for phrase in (
@@ -5460,7 +5445,6 @@ def run():
                 "This is direct finite-coupling nonmembership only.",
                 "It proves no Gibbs state, thermodynamic",
                 "The preceding theorems do not repair or reopen `PHOTON-KAPPA-LEMMA [F]`",
-                "The weighted-shell\ntheorem supplies only one displayed scalar symbol.",
                 "Wilson/Villain nonmembership theorem is boundary information only; it is not",
                 "Both successor roots are `ROOT / STOP / FORMAL`.",
                 "Neither adopts a roughening",
@@ -5481,6 +5465,497 @@ def run():
             and "ROUGHEN" not in row["depends_on"]
             for row in dependencies
         ),
+    ))
+
+    v73_contract = {
+        "C8-MARKING-RIGIDITY": {
+            "status": "T",
+            "item_type": "THEOREM",
+            "layer": "L1",
+            "section": "3. The kernel and the census",
+            "row_sha": "d341c1696adf64fba058f0b0e931aad1050ec724f51fda391ee2515157308b82",
+            "scope_sha": "1de8ab00e9113b12983eb54caae4340d491aad6b614d086376670db6979a8627",
+            "evidence_kind": "PUBLIC_PROBE",
+            "location": "probes/P-C8-MARKING-RIGIDITY-2",
+            "evidence_sha": "85310f5ac782aed62c976c8ad35be241d8076e48d2b9c6fc91a0e5cce0b7b378",
+            "hash_mode": "bundle-manifest-sha256-v1",
+            "architecture": "two-architecture",
+            "scope_markers": (
+                "the marking J_lambda=2 is an input and is not derived",
+                "no unique C8 generator orientation is selected",
+                "relative no-go",
+            ),
+        },
+        "C8-PAULI-QUOTIENT-TRANSPORT": {
+            "status": "T",
+            "item_type": "THEOREM",
+            "layer": "L1",
+            "section": "3. The kernel and the census",
+            "row_sha": "26358db400f51ca40d3321c867e793a073b66cc230fee9a75008348705a175fb",
+            "scope_sha": "2b7897be4bdad094e8a90c82dc9f99b04de2b7408d1b63003057f66e68d11a57",
+            "evidence_kind": "PUBLIC_PROBE",
+            "location": "probes/P-C8-PAULI-QUOTIENT-TRANSPORT-1",
+            "evidence_sha": "d86f710667b0afe241d8f115325c1c2fd074e27bbd20714891ce9184b221c016",
+            "hash_mode": "bundle-manifest-sha256-v1",
+            "architecture": "two-architecture",
+            "scope_markers": (
+                "complete transport for one named multiplicative record",
+                "not a Born-norm or field embedding",
+                "no branch selector, new coordinate, lost component or new physical gauge",
+            ),
+        },
+        "FCC-WEIGHTED-SHELL-REMAINDER": {
+            "status": "T",
+            "item_type": "THEOREM",
+            "layer": "L2",
+            "section": "9. The photon and the electron",
+            "row_sha": "f22893357599a98ca6b2fc927620cc23559dad731c46957b5a396f6a1be8c749",
+            "scope_sha": "648be021804c48838c3156e155d861475ec36371fa4848e7939b1265277009a2",
+            "evidence_kind": "PUBLIC_PROBE",
+            "location": "probes/P-FCC-WEIGHTED-SHELL-REMAINDER-1",
+            "evidence_sha": "64dd69e762b3bd8be2ebf1f1a4e693e8c70f934beb8151f22e02c10114ecafba",
+            "hash_mode": "bundle-manifest-sha256-v1",
+            "architecture": "two-architecture",
+            "scope_markers": (
+                "no sharpness claim for the displayed constants",
+                "not an architecture-to-physical-continuum lift",
+                "are not two photons or two polarizations",
+            ),
+        },
+        "PHOTON-Z5-STAR-QUADRATURE": {
+            "status": "C",
+            "item_type": "COMPUTATION",
+            "layer": "L4",
+            "section": "9. The photon and the electron",
+            "row_sha": "37a277e979fbb4d1c1424e44e5b71a8c21967796cedc79ed8b987dcdd207d698",
+            "scope_sha": "0f3a6cd2a3916d47bc26c65327e9d8dd46ccc0d5c47178ff62ddcd86dd0749f1",
+            "evidence_kind": "PUBLIC_PROBE",
+            "location": "probes/P-PHOTON-Z5-STAR-QUADRATURE-1",
+            "evidence_sha": "942901869d5296f6d6bdf41423b0fb0d438ac582bf3d582c73fb9a21999aa6a9",
+            "hash_mode": "bundle-manifest-sha256-v1",
+            "architecture": "two-architecture",
+            "scope_markers": (
+                "theta_star=(82+50 sqrt(5))/361",
+                "exactly these five refute the frozen predicate HALF",
+                "adopt no L6 probability law",
+            ),
+        },
+    }
+    v73_dependencies = {
+        "C8-MARKING-RIGIDITY": {
+            ("I-BILOCATED", "BOUNDED_BY"),
+        },
+        "C8-PAULI-QUOTIENT-TRANSPORT": {
+            ("C8-BILINEAR-SHADOW", "REQUIRES"),
+            ("I-BILOCATED", "BOUNDED_BY"),
+        },
+        "FCC-WEIGHTED-SHELL-REMAINDER": {
+            ("FCC-WEIGHTED-SHELL-SYMBOL", "REQUIRES"),
+        },
+        "PHOTON-Z5-STAR-QUADRATURE": set(),
+    }
+    v73_dependency_hashes = {
+        ("C8-MARKING-RIGIDITY", "I-BILOCATED", "BOUNDED_BY"): "282225ab1380251e5ee7efa8be5d1fa05ceee0b5ea0d8230225308e26a938a64",
+        ("C8-PAULI-QUOTIENT-TRANSPORT", "C8-BILINEAR-SHADOW", "REQUIRES"): "242b8fc98b282b93e216500f5d4d63d0a0f842b738276e44299d7f5b178592c4",
+        ("C8-PAULI-QUOTIENT-TRANSPORT", "I-BILOCATED", "BOUNDED_BY"): "7b9462114648b25db6c69a25730eb948e7c721cf26f251fd2cc0016bba5d7bf2",
+        ("FCC-WEIGHTED-SHELL-REMAINDER", "FCC-WEIGHTED-SHELL-SYMBOL", "REQUIRES"): "fa3e42047adb81fd43ecc8e2ec843d5b3f4f0ca3ab96836a0a16dbd12d4d3dd9",
+    }
+    v73_history_hashes = {
+        "C8-MARKING-RIGIDITY": "a6613333db41ea9fd1f57b4c312fc6a796397c433fc8258caae08f0ad3967006",
+        "C8-PAULI-QUOTIENT-TRANSPORT": "2847f6d1aaa748fa2be11a9b0c5982f38b8aec9f783f16cbd5148460c13ebb51",
+        "FCC-WEIGHTED-SHELL-REMAINDER": "9632a74512c5f6590ce37f729ff646f10bb3d75a3158f607abc372e8621a166b",
+        "PHOTON-Z5-STAR-QUADRATURE": "a7c3360606a580a25ab36ca5a47ecb36cf1b847f37cf75fdf3bd3d38d64de05c",
+    }
+    v73_claims = tuple(v73_contract)
+    v73_history_rows = [
+        row for row in history if row["release"] == "canon-v73-candidate"
+    ]
+    v73_events = {row["claim_id"]: row for row in v73_history_rows}
+    v73_actual_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in v73_claims
+    }
+    v73_actual_dependency_hashes = {
+        (row["item_id"], row["depends_on"], row["relation"]): table_row_sha256(row)
+        for row in dependencies if row["item_id"] in v73_claims
+    }
+    checks.append((
+        "V73-FOLD",
+        "three proof-first rows and one complete finite classification enter at "
+        "their earned status, the C8 marking stays a dictionary input, the "
+        "refuted HALF predicate is preserved, and no gate, program or frontier "
+        "row moves",
+        all(
+            has_status(index, claim, contract["status"])
+            and scope_sha256(index, claim) == contract["scope_sha"]
+            and registry_row_sha256(index, claim) == contract["row_sha"]
+            and index[claim]["canon_section"] == contract["section"]
+            and scope_contains_all(index, claim, contract["scope_markers"])
+            and normative[claim]["item_type"] == contract["item_type"]
+            and normative[claim]["claim_id"] == claim
+            and normative[claim]["status"] == contract["status"]
+            and normative[claim]["layer"] == contract["layer"]
+            and normative[claim]["gate_ids"] == ""
+            and normative[claim]["statement_source"]
+            == "canon/CANON.md::" + contract["section"]
+            and evidence[claim]["evidence_id"] == "EV-" + claim
+            and evidence[claim]["evidence_kind"] == contract["evidence_kind"]
+            and evidence[claim]["location"] == contract["location"]
+            and evidence[claim]["sha256"] == contract["evidence_sha"]
+            and evidence[claim]["hash_mode"] == contract["hash_mode"]
+            and evidence[claim]["architecture_requirement"]
+            == contract["architecture"]
+            and "### " + claim + " [" + contract["status"] + "]" in canon_text
+            for claim, contract in v73_contract.items()
+        )
+        and v73_actual_dependencies == v73_dependencies
+        and v73_actual_dependency_hashes == v73_dependency_hashes
+        and len(v73_history_rows) == 4
+        and set(v73_events) == set(v73_claims)
+        and all(
+            v73_events[claim]["event_id"] == "CANON73-DECLARE-" + claim
+            and v73_events[claim]["event_sequence"] == "1"
+            and v73_events[claim]["event_date"] == "2026-08-31"
+            and v73_events[claim]["event_type"] == "DECLARE"
+            and v73_events[claim]["previous_status"] == "-"
+            and v73_events[claim]["new_status"] == contract["status"]
+            and v73_events[claim]["scope_sha256"] == contract["scope_sha"]
+            and v73_events[claim]["evidence_id"] == "EV-" + claim
+            and v73_events[claim]["evidence_location"] == contract["location"]
+            and v73_events[claim]["evidence_sha256"] == contract["evidence_sha"]
+            and table_row_sha256(v73_events[claim]) == v73_history_hashes[claim]
+            for claim, contract in v73_contract.items()
+        )
+        and not any(
+            row["owner_item_id"] in v73_claims for row in gates.values()
+        )
+        and all(claim not in programs for claim in v73_claims)
+        and all("- " + claim + " [" not in frontier_text for claim in v73_claims)
+        and has_status(index, "I-BILOCATED", "D")
+        and has_status(index, "C8-BILINEAR-SHADOW", "T")
+        and has_status(index, "FCC-WEIGHTED-SHELL-SYMBOL", "T")
+        and has_status(index, "PHOTON-CONE-CONVERGENCE", "O")
+        and has_status(index, "PHOTON-MASSLESS-PHASE", "O")
+        and has_status(index, "PHOTON-KAPPA-LEMMA", "F")
+        and has_status(index, "PHOTON-WINDOW-PROOF", "F")
+    ))
+
+    v74_bundle = (
+        "5216488c404111736d9e6d4d60b81ff52ae36791f693c21bf7d99dc6b4e035f3"
+    )
+    v74_contract = {
+        "PHOTON-SPATIAL-TEMPORAL-TRANSFER": {
+            "status": "D",
+            "item_type": "DICTIONARY",
+            "layer": "MULTI",
+            "gate_ids": "GATE-L2-L5-PHOTON-TEMPORAL-CHARACTERISTIC",
+            "row_sha": "77976e84dde6735e836e1e8bdcbfba42a3a028d2dbdc37539319427aed482474",
+            "scope_sha": "e916ffddedaffad5ed980436438481e4fbfd5254e5011276432551db2e9b0a6e",
+            "evidence_kind": "PUBLIC_PROBE",
+            "location": "probes/P-PHOTON-TEMPORAL-CHARACTERISTIC-1",
+            "evidence_sha": v74_bundle,
+            "hash_mode": "bundle-manifest-sha256-v1",
+            "architecture": "two-architecture",
+            "scope_markers": (
+                "owner-adopted L2-to-L5 dictionary",
+                "(a,b)=(-2,1)",
+                "claims no completeness or uniqueness outside the displayed class",
+                "SI speed",
+                "physical photon",
+            ),
+        },
+        "PHOTON-TEMPORAL-CHARACTERISTIC": {
+            "status": "T",
+            "item_type": "THEOREM",
+            "layer": "L5",
+            "gate_ids": "",
+            "row_sha": "33eb50d4ea884fef565ff376f8750425a967579beeb6c371ba3cd968595f1424",
+            "scope_sha": "626c8fd13d05da7180f9ddcf05e57b52a840074bb1d68998f2ce265656207c3c",
+            "evidence_kind": "PUBLIC_PROBE",
+            "location": "probes/P-PHOTON-TEMPORAL-CHARACTERISTIC-1",
+            "evidence_sha": v74_bundle,
+            "hash_mode": "bundle-manifest-sha256-v1",
+            "architecture": "two-architecture",
+            "scope_markers": (
+                "total exact characteristic",
+                "reciprocal conjugate unit-modulus multipliers",
+                "uniformly on bounded lifted sets",
+                "unit phases rather than contraction/expansion amplitudes",
+                "Herm2 carrier",
+                "physical photon",
+            ),
+        },
+        "PHOTON-CONE-CONVERGENCE": {
+            "status": "O",
+            "item_type": "OBLIGATION",
+            "layer": "MULTI",
+            "gate_ids": "GATE-L4-L5-PHOTON-CONE-IDENTIFICATION",
+            "row_sha": "448d04f1dfdec5090b0ef962a14e32aa97cb72ca8be735b75ab225a2c265854c",
+            "scope_sha": "f67b713037517aac2a0f2ca119b7f7176e0c49f6ad4414031353cd67c9577853",
+            "evidence_kind": "INLINE_CANON",
+            "location": "inline",
+            "evidence_sha": "f67b713037517aac2a0f2ca119b7f7176e0c49f6ad4414031353cd67c9577853",
+            "hash_mode": "registry-scope-sha256-v1",
+            "architecture": "none",
+            "scope_markers": (
+                "remaining open MULTI decision after the L2-to-L5 route is fixed",
+                "separately public L4 Herm2 quadratic carrier",
+                "not characteristic-function convergence",
+                "no Lorentz invariance",
+                "physical-photon conclusion",
+            ),
+        },
+    }
+    v74_dependencies = {
+        "PHOTON-SPATIAL-TEMPORAL-TRANSFER": {
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+            ("FCC-WEIGHTED-SHELL-SYMBOL", "REQUIRES"),
+            ("FCC-WEIGHTED-SHELL-REMAINDER", "REQUIRES"),
+        },
+        "PHOTON-TEMPORAL-CHARACTERISTIC": {
+            ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "BOUNDED_BY"),
+        },
+        "PHOTON-CONE-CONVERGENCE": {
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+            ("CENTRAL-LIFT-PHASE", "BOUNDED_BY"),
+            ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "REQUIRES"),
+            ("PHOTON-TEMPORAL-CHARACTERISTIC", "REQUIRES"),
+        },
+    }
+    v74_dependency_hashes = {
+        ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "DEF-ACTION-LAYERS", "REQUIRES"):
+            "53493f4ac821a8a456fc075f17fe5fe2b50f6d0d400c9d45db8e83acb4f90b03",
+        ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "FCC-WEIGHTED-SHELL-SYMBOL", "REQUIRES"):
+            "81660bd76e84a9ecda54055acfc894564529fcf69d971188b0d71e6eb0d28c1c",
+        ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "FCC-WEIGHTED-SHELL-REMAINDER", "REQUIRES"):
+            "0ba4d0fe90d4d1d6f5c00c5c1b493d80c97e0fc58366a881d68a49e0d05e7453",
+        ("PHOTON-TEMPORAL-CHARACTERISTIC", "PHOTON-SPATIAL-TEMPORAL-TRANSFER", "BOUNDED_BY"):
+            "748aab7ab1efbc50cf12fe28c21917d183b7a10d483bf554bfab0202510263a7",
+        ("PHOTON-CONE-CONVERGENCE", "DEF-ACTION-LAYERS", "REQUIRES"):
+            "4bd6904d69bdb26a28fdaa500e0a8183cce88f603174400904bf57e398b35849",
+        ("PHOTON-CONE-CONVERGENCE", "CENTRAL-LIFT-PHASE", "BOUNDED_BY"):
+            "0f5cf0861f55dbe6ba17ca92dbebad344ece685bdd1fba2eb8e44710a3fd573e",
+        ("PHOTON-CONE-CONVERGENCE", "PHOTON-SPATIAL-TEMPORAL-TRANSFER", "REQUIRES"):
+            "84fc6f9c21f0ca9ba369693a6e8dce02ba13c91f8087ed8bdfef1dae4dc26d88",
+        ("PHOTON-CONE-CONVERGENCE", "PHOTON-TEMPORAL-CHARACTERISTIC", "REQUIRES"):
+            "0e570e01ecf4de0a817614223895e6980f8b739b630c31c55eeaccdaa97ce3c2",
+    }
+    v74_expected_consumers = {
+        "FCC-WEIGHTED-SHELL-SYMBOL": {
+            ("FCC-WEIGHTED-SHELL-REMAINDER", "REQUIRES"),
+            ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "REQUIRES"),
+        },
+        "FCC-WEIGHTED-SHELL-REMAINDER": {
+            ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "REQUIRES"),
+        },
+        "PHOTON-SPATIAL-TEMPORAL-TRANSFER": {
+            ("PHOTON-TEMPORAL-CHARACTERISTIC", "BOUNDED_BY"),
+            ("PHOTON-CONE-CONVERGENCE", "REQUIRES"),
+        },
+        "PHOTON-TEMPORAL-CHARACTERISTIC": {
+            ("PHOTON-CONE-CONVERGENCE", "REQUIRES"),
+        },
+        "PHOTON-CONE-CONVERGENCE": set(),
+    }
+    v74_actual_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in v74_contract
+    }
+    v74_actual_dependency_hashes = {
+        (row["item_id"], row["depends_on"], row["relation"]):
+            table_row_sha256(row)
+        for row in dependencies if row["item_id"] in v74_contract
+    }
+    v74_actual_consumers = {
+        claim: {
+            (row["item_id"], row["relation"])
+            for row in dependencies if row["depends_on"] == claim
+        }
+        for claim in v74_expected_consumers
+    }
+    v74_history_rows = [
+        row for row in history if row["release"] == "canon-v74-candidate"
+    ]
+    v74_history_by_event = {
+        row["event_id"]: row for row in v74_history_rows
+    }
+    v74_history_contract = {
+        "CANON74-DECLARE-PHOTON-SPATIAL-TEMPORAL-TRANSFER": {
+            "claim": "PHOTON-SPATIAL-TEMPORAL-TRANSFER",
+            "sequence": "1", "type": "DECLARE", "previous": "-", "new": "D",
+            "scope": "e916ffddedaffad5ed980436438481e4fbfd5254e5011276432551db2e9b0a6e",
+            "evidence": "EV-PHOTON-SPATIAL-TEMPORAL-TRANSFER",
+            "location": "probes/P-PHOTON-TEMPORAL-CHARACTERISTIC-1",
+            "evidence_sha": v74_bundle,
+            "row_sha": "30c6733f64f5115f7a9bc07435c79424d5ca92d875b953eb46b0a85e7027d826",
+        },
+        "CANON74-DECLARE-PHOTON-TEMPORAL-CHARACTERISTIC": {
+            "claim": "PHOTON-TEMPORAL-CHARACTERISTIC",
+            "sequence": "1", "type": "DECLARE", "previous": "-", "new": "T",
+            "scope": "626c8fd13d05da7180f9ddcf05e57b52a840074bb1d68998f2ce265656207c3c",
+            "evidence": "EV-PHOTON-TEMPORAL-CHARACTERISTIC",
+            "location": "probes/P-PHOTON-TEMPORAL-CHARACTERISTIC-1",
+            "evidence_sha": v74_bundle,
+            "row_sha": "e999bf6e3a6fb8a33858e06711c15b9cf1523e7cebfd814f935a3f6a0b4f5df0",
+        },
+        "CANON74-SCOPE-PHOTON-CONE-CONVERGENCE": {
+            "claim": "PHOTON-CONE-CONVERGENCE",
+            "sequence": "2", "type": "SCOPE_CHANGE", "previous": "O", "new": "O",
+            "scope": "f67b713037517aac2a0f2ca119b7f7176e0c49f6ad4414031353cd67c9577853",
+            "evidence": "EV-PHOTON-CONE-CONVERGENCE",
+            "location": "inline",
+            "evidence_sha": "f67b713037517aac2a0f2ca119b7f7176e0c49f6ad4414031353cd67c9577853",
+            "row_sha": "1156887c7abfb280fd615d32f972e00a5fb2ffd54cda4086786fdcab5294ff16",
+        },
+    }
+    v74_gate_contract = {
+        "GATE-L2-L5-PHOTON-TEMPORAL-CHARACTERISTIC": {
+            "owner": "PHOTON-SPATIAL-TEMPORAL-TRANSFER",
+            "source": "L2", "target": "L5", "kind": "DICTIONARY_LIFT",
+            "markers": ("closed at status D", "supported by", "no Herm2 carrier"),
+            "row_sha": "14e3328125b6b1dd653b697178ecd1320c1923434d787b21b381a9613937c74d",
+        },
+        "GATE-L4-L5-PHOTON-CONE-IDENTIFICATION": {
+            "owner": "PHOTON-CONE-CONVERGENCE",
+            "source": "L4", "target": "L5", "kind": "OPEN_LIFT",
+            "markers": ("exact equality of null sets", "otherwise STOP"),
+            "row_sha": "324b9bf5abdbb44539a0f4e4dec1d0a239a8885cfba4c38fd4c65010be21ea63",
+        },
+    }
+    v74_dt_start = canon_text.find(
+        "### PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]"
+    )
+    v74_dt_end = canon_text.find(
+        "### PHOTON-Z5-STAR-QUADRATURE [C]", v74_dt_start
+    )
+    v74_dt_block = (
+        canon_text[v74_dt_start:v74_dt_end]
+        if v74_dt_start >= 0 and v74_dt_end >= 0 else ""
+    )
+    v74_successor_start = canon_text.find("### Photon successor roots")
+    v74_successor_end = canon_text.find(
+        "The electron:", v74_successor_start
+    )
+    v74_successor_block = (
+        canon_text[v74_successor_start:v74_successor_end]
+        if v74_successor_start >= 0 and v74_successor_end >= 0 else ""
+    )
+    checks.append((
+        "V74-PHOTON",
+        "selected D3 transfer enters at D/MULTI and its exact characteristic "
+        "at T/L5, closing only the L2-to-L5 dictionary lift while the Herm2 "
+        "cone route stays O/STOP",
+        all(
+            has_status(index, claim, contract["status"])
+            and scope_sha256(index, claim) == contract["scope_sha"]
+            and registry_row_sha256(index, claim) == contract["row_sha"]
+            and index[claim]["canon_section"] == "9. The photon and the electron"
+            and scope_contains_all(index, claim, contract["scope_markers"])
+            and normative[claim]["item_type"] == contract["item_type"]
+            and normative[claim]["claim_id"] == claim
+            and normative[claim]["status"] == contract["status"]
+            and normative[claim]["layer"] == contract["layer"]
+            and normative[claim]["gate_ids"] == contract["gate_ids"]
+            and normative[claim]["statement_source"]
+            == "canon/CANON.md::9. The photon and the electron"
+            and evidence[claim]["evidence_id"] == "EV-" + claim
+            and evidence[claim]["evidence_kind"] == contract["evidence_kind"]
+            and evidence[claim]["location"] == contract["location"]
+            and evidence[claim]["sha256"] == contract["evidence_sha"]
+            and evidence[claim]["hash_mode"] == contract["hash_mode"]
+            and evidence[claim]["architecture_requirement"]
+            == contract["architecture"]
+            for claim, contract in v74_contract.items()
+        )
+        and v74_actual_dependencies == v74_dependencies
+        and v74_actual_dependency_hashes == v74_dependency_hashes
+        and v74_actual_consumers == v74_expected_consumers
+        and len(v74_history_rows) == 3
+        and set(v74_history_by_event) == set(v74_history_contract)
+        and all(
+            v74_history_by_event[event_id]["claim_id"] == contract["claim"]
+            and v74_history_by_event[event_id]["event_sequence"]
+            == contract["sequence"]
+            and v74_history_by_event[event_id]["event_date"] == "2026-09-01"
+            and v74_history_by_event[event_id]["event_type"] == contract["type"]
+            and v74_history_by_event[event_id]["previous_status"]
+            == contract["previous"]
+            and v74_history_by_event[event_id]["new_status"] == contract["new"]
+            and v74_history_by_event[event_id]["scope_sha256"] == contract["scope"]
+            and v74_history_by_event[event_id]["evidence_id"]
+            == contract["evidence"]
+            and v74_history_by_event[event_id]["evidence_location"]
+            == contract["location"]
+            and v74_history_by_event[event_id]["evidence_sha256"]
+            == contract["evidence_sha"]
+            and table_row_sha256(v74_history_by_event[event_id])
+            == contract["row_sha"]
+            for event_id, contract in v74_history_contract.items()
+        )
+        and all(
+            gate_id in gates
+            and gates[gate_id]["owner_item_id"] == contract["owner"]
+            and gates[gate_id]["from_layer"] == contract["source"]
+            and gates[gate_id]["to_layer"] == contract["target"]
+            and gates[gate_id]["gate_kind"] == contract["kind"]
+            and table_row_sha256(gates[gate_id]) == contract["row_sha"]
+            and all(
+                marker.lower() in gates[gate_id]["decision_condition"].lower()
+                for marker in contract["markers"]
+            )
+            for gate_id, contract in v74_gate_contract.items()
+        )
+        and sum(row["gate_kind"] == "OPEN_LIFT" for row in gates.values()) == 7
+        and sum(
+            row["gate_kind"] == "DICTIONARY_LIFT" for row in gates.values()
+        ) == 3
+        and programs.get("PHOTON-CONE-CONVERGENCE") == {
+            "claim_id": "PHOTON-CONE-CONVERGENCE",
+            "program_id": "PHOTON_CONTINUUM",
+            "queue_role": "ROOT",
+            "work_state": "STOP",
+            "work_mode": "FORMAL",
+        }
+        and all(
+            claim not in programs
+            for claim in (
+                "PHOTON-SPATIAL-TEMPORAL-TRANSFER",
+                "PHOTON-TEMPORAL-CHARACTERISTIC",
+            )
+        )
+        and "- PHOTON-CONE-CONVERGENCE [O]:" in frontier_text
+        and all(
+            "- " + claim + " [" not in frontier_text
+            and "- " + claim + " [" not in core_text
+            and all(row["claim_id"] != claim for row in core_selection_rows)
+            for claim in (
+                "PHOTON-SPATIAL-TEMPORAL-TRANSFER",
+                "PHOTON-TEMPORAL-CHARACTERISTIC",
+            )
+        )
+        and has_status(index, "PHOTON-MASSLESS-PHASE", "O")
+        and len(v74_dt_block.encode("utf-8")) == 4216
+        and hashlib.sha256(v74_dt_block.encode("utf-8")).hexdigest()
+        == "04de7998932b896c0a62a9c9d7e1a29e31a2e5ce3c37f23d2b3e56e64428ad2d"
+        and len(v74_successor_block.encode("utf-8")) == 2198
+        and hashlib.sha256(v74_successor_block.encode("utf-8")).hexdigest()
+        == "112b95be0baeff5bbee514c9ee2ca0a0f396634881766bdb6f8ffd20e37415ca"
+        and all(
+            phrase in canon_text
+            for phrase in (
+                "The L2-to-L5 temporal-characteristic gate is\ntherefore closed positively as a dictionary lift.",
+                "The L4-to-L5 identification gate therefore remains `OPEN_LIFT`.",
+                "unit-modulus phases; they are not a\ncontraction/expansion pair",
+                "No Herm2 carrier, positive cone,\nBorn rule",
+                "interpretation is neither assumed nor refuted.",
+            )
+        )
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

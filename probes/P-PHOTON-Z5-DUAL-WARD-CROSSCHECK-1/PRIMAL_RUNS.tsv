@@ -1,0 +1,5 @@
+filename	kind	L	start	seed	thermal	measurements	between	bytes	sha256	exit_code	stderr_bytes
+primal_L6_cold_r1.log	primal_replay	6	cold	0xe755060000000101	512	512	4	265645	607b9d73b6b24a6a8c22375ecb6de6c1aedc5c6cd512f642ea40fe12b327043b	0	0
+primal_L6_hot_r1.log	primal_replay	6	hot	0xe755060000000201	512	512	4	265613	6d981042cd9f94d3450d53705b5c85b834f2d3ac8083709cb8e2cd94a63d6d2f	0	0
+primal_L8_cold_r1.log	primal_replay	8	cold	0xe755080000000101	1024	512	8	267498	0c0c180d0953bfaeaa2eb99b1f11f253bc07048eb2e7a70f99f6f30c3a6b7f87	0	0
+primal_L8_hot_r1.log	primal_replay	8	hot	0xe755080000000201	1024	512	8	267532	645cb1d3d6992d585ed0903a3e28f72f226572ae0732fbc728b69244adf8e0b5	0	0

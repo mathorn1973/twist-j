@@ -1,0 +1,180 @@
+PROBE P-PHOTON-Z5-DUAL-WARD-CROSSCHECK-1
+EVIDENTIAL_SCOPE ZERO_ENGINEERING_ONLY
+INPUT_CUSTODY public_pilot_logs=8 primal_replays=4 dual_chains=8 status=PASS
+MIXING L=6 primal=PASS dual=FAIL primal_failures=0 dual_failures=57
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:n_mean:variance
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:n_mean:variance
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:n_mean:variance
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:n2_mean:ess=3.67712
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:n2_mean:ess=5.21627
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:n2_mean:ess=8.55925
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:n2_mean:ess=4.04906
+MIXING_FAILURE L=6 n2_mean:rhat=1.42846
+MIXING_FAILURE L=6 n2_mean:folded=1.1629
+MIXING_FAILURE L=6 n2_mean:bulk_ess=8.2086
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:pair_inline1:ess=5.82611
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:pair_inline1:ess=22.9801
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:pair_inline1:ess=21.1651
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:pair_inline1:ess=14.1411
+MIXING_FAILURE L=6 pair_inline1:rhat=1.16241
+MIXING_FAILURE L=6 pair_inline1:folded=1.05642
+MIXING_FAILURE L=6 pair_inline1:bulk_ess=18.6074
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:pair_transverse1:ess=10.4208
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:pair_transverse1:ess=28.1018
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:pair_transverse1:ess=32.4712
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:pair_transverse1:ess=16.1261
+MIXING_FAILURE L=6 pair_transverse1:rhat=1.06903
+MIXING_FAILURE L=6 pair_transverse1:bulk_ess=62.0902
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:pair_inline2:ess=20.9829
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:pair_inline2:ess=20.9631
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:pair_inline2:ess=35.2002
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:pair_inline2:ess=24.4425
+MIXING_FAILURE L=6 pair_inline2:bulk_ess=99.3721
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:pair_transverse2:ess=29.1945
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:pair_transverse2:ess=29.0284
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:pair_transverse2:ess=19.8634
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:pair_transverse2:ess=16.7945
+MIXING_FAILURE L=6 pair_transverse2:bulk_ess=93.8114
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:j2_mean:variance
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:j2_mean:variance
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:j2_mean:variance
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:j2_mean:variance
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:j_nonzero_density:variance
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:j_nonzero_density:variance
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:j_nonzero_density:variance
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:j_nonzero_density:variance
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:sj_power_0:variance
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:sj_power_0:variance
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:sj_power_0:variance
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:sj_power_0:variance
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:sj_power_1:variance
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:sj_power_1:variance
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:sj_power_1:variance
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:sj_power_1:variance
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:sj_power_2:variance
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:sj_power_2:variance
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:sj_power_2:variance
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:sj_power_2:variance
+MIXING_FAILURE L=6 dual_L6_cold_r1.jsonl:sj_power_3:variance
+MIXING_FAILURE L=6 dual_L6_cold_r2.jsonl:sj_power_3:variance
+MIXING_FAILURE L=6 dual_L6_surface_r1.jsonl:sj_power_3:variance
+MIXING_FAILURE L=6 dual_L6_surface_r2.jsonl:sj_power_3:variance
+MIXING_DETAIL L=6 ensemble=primal g_mean:min_ess=346.015985,rhat=0.998557,folded=0.998321,bulk_ess=869.551428,drift=0.400710,starts=0.513015
+MIXING_DETAIL L=6 ensemble=primal x2_mean:min_ess=433.595259,rhat=1.000110,folded=0.998509,bulk_ess=928.834470,drift=1.321557,starts=0.924244
+MIXING_DETAIL L=6 ensemble=primal pair_inline1:min_ess=512.000000,rhat=0.999426,folded=0.998330,bulk_ess=1024.000000,drift=1.033021,starts=0.213220
+MIXING_DETAIL L=6 ensemble=primal pair_transverse1:min_ess=512.000000,rhat=0.999320,folded=1.001187,bulk_ess=1024.000000,drift=1.108986,starts=0.755949
+MIXING_DETAIL L=6 ensemble=primal pair_inline2:min_ess=447.095924,rhat=0.998905,folded=0.999773,bulk_ess=1024.000000,drift=0.816432,starts=0.612956
+MIXING_DETAIL L=6 ensemble=primal pair_transverse2:min_ess=376.389490,rhat=0.998862,folded=1.001734,bulk_ess=906.224005,drift=0.346122,starts=0.928004
+MIXING_DETAIL L=6 ensemble=primal rho_power_0:min_ess=391.321623,rhat=0.999708,folded=1.000475,bulk_ess=938.718446,drift=0.234685,starts=1.059539
+MIXING_DETAIL L=6 ensemble=primal rho_power_1:min_ess=491.364873,rhat=0.998991,folded=1.003527,bulk_ess=967.833301,drift=0.278971,starts=0.110621
+MIXING_DETAIL L=6 ensemble=primal rho_power_2:min_ess=466.317916,rhat=0.999285,folded=1.001059,bulk_ess=1004.645206,drift=1.118617,starts=0.663549
+MIXING_DETAIL L=6 ensemble=primal rho_power_3:min_ess=454.848010,rhat=0.998959,folded=0.999412,bulk_ess=856.951169,drift=0.874177,starts=0.924937
+MIXING_DETAIL L=6 ensemble=dual n_mean:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=1.000000,starts=1.000000
+MIXING_DETAIL L=6 ensemble=dual n2_mean:min_ess=3.677118,rhat=1.428455,folded=1.162898,bulk_ess=8.208596,drift=3.502316,starts=0.630464
+MIXING_DETAIL L=6 ensemble=dual pair_inline1:min_ess=5.826108,rhat=1.162407,folded=1.056416,bulk_ess=18.607355,drift=2.897226,starts=0.573123
+MIXING_DETAIL L=6 ensemble=dual pair_transverse1:min_ess=10.420762,rhat=1.069027,folded=1.023552,bulk_ess=62.090196,drift=2.871071,starts=0.083321
+MIXING_DETAIL L=6 ensemble=dual pair_inline2:min_ess=20.963141,rhat=1.033788,folded=1.009819,bulk_ess=99.372123,drift=2.407087,starts=0.258191
+MIXING_DETAIL L=6 ensemble=dual pair_transverse2:min_ess=16.794489,rhat=1.048041,folded=1.005012,bulk_ess=93.811411,drift=3.208185,starts=0.533582
+MIXING_DETAIL L=6 ensemble=dual j2_mean:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=6 ensemble=dual j_nonzero_density:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=6 ensemble=dual sj_power_0:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=6 ensemble=dual sj_power_1:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=6 ensemble=dual sj_power_2:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=6 ensemble=dual sj_power_3:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+IDENTITY L=6 name=contact residual=-0.0368677295182 se=0.00328076866613 four_se=0.0131230746645 precision_limit=0.03 status=DICTIONARY_FAIL
+IDENTITY L=6 name=inline1 residual=-0.0103258436442 se=0.00100032708028 four_se=0.00400130832113 precision_limit=0.02 status=DICTIONARY_FAIL
+IDENTITY L=6 name=transverse1 residual=0.00188400365969 se=0.000744335842047 four_se=0.00297734336819 precision_limit=0.02 status=PASS
+IDENTITY L=6 name=inline2 residual=-0.00352388347379 se=0.00069344472601 four_se=0.00277377890404 precision_limit=0.02 status=DICTIONARY_FAIL
+IDENTITY L=6 name=transverse2 residual=0.000523155111293 se=0.000705547774894 four_se=0.00282219109958 precision_limit=0.02 status=PASS
+SCREENING L=6 R_lowest=0.28807688837 se=0.00328165049234 four_se=0.0131266019694 contact_baseline=2.1463886779 baseline_se=0.0048859731611 decision_authority=NONE
+MIXING L=8 primal=PASS dual=FAIL primal_failures=0 dual_failures=60
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:n_mean:variance
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:n_mean:variance
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:n_mean:variance
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:n_mean:variance
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:n2_mean:ess=3.56722
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:n2_mean:ess=3.60725
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:n2_mean:ess=3.65688
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:n2_mean:ess=3.79084
+MIXING_FAILURE L=8 n2_mean:rhat=1.66461
+MIXING_FAILURE L=8 n2_mean:folded=1.11267
+MIXING_FAILURE L=8 n2_mean:bulk_ess=6.33387
+MIXING_FAILURE L=8 n2_mean:drift=5.26172
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:pair_inline1:ess=3.94432
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:pair_inline1:ess=15.8799
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:pair_inline1:ess=5.21133
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:pair_inline1:ess=4.30544
+MIXING_FAILURE L=8 pair_inline1:rhat=1.3824
+MIXING_FAILURE L=8 pair_inline1:folded=1.09971
+MIXING_FAILURE L=8 pair_inline1:bulk_ess=8.61783
+MIXING_FAILURE L=8 pair_inline1:drift=5.19994
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:pair_transverse1:ess=22.807
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:pair_transverse1:ess=30.2935
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:pair_transverse1:ess=32.6326
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:pair_transverse1:ess=35.7722
+MIXING_FAILURE L=8 pair_transverse1:bulk_ess=119.165
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:pair_inline2:ess=17.9002
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:pair_inline2:ess=45.9498
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:pair_inline2:ess=27.4999
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:pair_inline2:ess=18.4534
+MIXING_FAILURE L=8 pair_inline2:rhat=1.06904
+MIXING_FAILURE L=8 pair_inline2:bulk_ess=51.7033
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:pair_transverse2:ess=28.0388
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:pair_transverse2:ess=26.9682
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:pair_transverse2:ess=39.6555
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:pair_transverse2:ess=13.8665
+MIXING_FAILURE L=8 pair_transverse2:bulk_ess=102.629
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:j2_mean:variance
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:j2_mean:variance
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:j2_mean:variance
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:j2_mean:variance
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:j_nonzero_density:variance
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:j_nonzero_density:variance
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:j_nonzero_density:variance
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:j_nonzero_density:variance
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:sj_power_0:variance
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:sj_power_0:variance
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:sj_power_0:variance
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:sj_power_0:variance
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:sj_power_1:variance
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:sj_power_1:variance
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:sj_power_1:variance
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:sj_power_1:variance
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:sj_power_2:variance
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:sj_power_2:variance
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:sj_power_2:variance
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:sj_power_2:variance
+MIXING_FAILURE L=8 dual_L8_cold_r1.jsonl:sj_power_3:variance
+MIXING_FAILURE L=8 dual_L8_cold_r2.jsonl:sj_power_3:variance
+MIXING_FAILURE L=8 dual_L8_surface_r1.jsonl:sj_power_3:variance
+MIXING_FAILURE L=8 dual_L8_surface_r2.jsonl:sj_power_3:variance
+MIXING_DETAIL L=8 ensemble=primal g_mean:min_ess=471.156588,rhat=0.998748,folded=0.999039,bulk_ess=991.270300,drift=0.664737,starts=0.386923
+MIXING_DETAIL L=8 ensemble=primal x2_mean:min_ess=353.414308,rhat=0.999996,folded=0.998566,bulk_ess=964.535683,drift=1.480772,starts=0.735759
+MIXING_DETAIL L=8 ensemble=primal pair_inline1:min_ess=455.416863,rhat=1.000105,folded=1.000455,bulk_ess=985.920115,drift=0.800317,starts=1.561617
+MIXING_DETAIL L=8 ensemble=primal pair_transverse1:min_ess=492.744432,rhat=1.001141,folded=1.002068,bulk_ess=1024.000000,drift=1.940457,starts=0.575941
+MIXING_DETAIL L=8 ensemble=primal pair_inline2:min_ess=512.000000,rhat=0.999078,folded=1.001639,bulk_ess=1024.000000,drift=0.876841,starts=0.844780
+MIXING_DETAIL L=8 ensemble=primal pair_transverse2:min_ess=436.981644,rhat=1.002224,folded=1.000274,bulk_ess=998.185457,drift=1.425887,starts=1.664139
+MIXING_DETAIL L=8 ensemble=primal rho_power_0:min_ess=489.620569,rhat=0.999413,folded=0.999257,bulk_ess=1024.000000,drift=1.087480,starts=1.093108
+MIXING_DETAIL L=8 ensemble=primal rho_power_1:min_ess=507.813376,rhat=0.999985,folded=0.998600,bulk_ess=1003.670113,drift=0.854131,starts=1.780486
+MIXING_DETAIL L=8 ensemble=primal rho_power_2:min_ess=482.089336,rhat=0.999236,folded=0.998683,bulk_ess=1024.000000,drift=0.805647,starts=0.481288
+MIXING_DETAIL L=8 ensemble=primal rho_power_3:min_ess=459.684685,rhat=1.003841,folded=1.001825,bulk_ess=985.927256,drift=1.709539,starts=1.547147
+MIXING_DETAIL L=8 ensemble=dual n_mean:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=8 ensemble=dual n2_mean:min_ess=3.567225,rhat=1.664613,folded=1.112672,bulk_ess=6.333867,drift=5.261720,starts=0.152902
+MIXING_DETAIL L=8 ensemble=dual pair_inline1:min_ess=3.944323,rhat=1.382396,folded=1.099707,bulk_ess=8.617834,drift=5.199938,starts=0.053364
+MIXING_DETAIL L=8 ensemble=dual pair_transverse1:min_ess=22.806984,rhat=1.033986,folded=1.025824,bulk_ess=119.164820,drift=1.734770,starts=0.117222
+MIXING_DETAIL L=8 ensemble=dual pair_inline2:min_ess=17.900182,rhat=1.069045,folded=1.007936,bulk_ess=51.703330,drift=3.289076,starts=1.217450
+MIXING_DETAIL L=8 ensemble=dual pair_transverse2:min_ess=13.866523,rhat=1.012333,folded=1.034052,bulk_ess=102.628656,drift=1.063314,starts=0.099670
+MIXING_DETAIL L=8 ensemble=dual j2_mean:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=8 ensemble=dual j_nonzero_density:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=8 ensemble=dual sj_power_0:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=8 ensemble=dual sj_power_1:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=8 ensemble=dual sj_power_2:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+MIXING_DETAIL L=8 ensemble=dual sj_power_3:min_ess=512.000000,rhat=1.000000,folded=1.000000,bulk_ess=2048.000000,drift=0.000000,starts=0.000000
+IDENTITY L=8 name=contact residual=-0.0210314065881 se=0.00290202963009 four_se=0.0116081185204 precision_limit=0.03 status=DICTIONARY_FAIL
+IDENTITY L=8 name=inline1 residual=-0.00509630708865 se=0.000783137797024 four_se=0.0031325511881 precision_limit=0.02 status=DICTIONARY_FAIL
+IDENTITY L=8 name=transverse1 residual=8.09736881519e-05 se=0.000425233856613 four_se=0.00170093542645 precision_limit=0.02 status=PASS
+IDENTITY L=8 name=inline2 residual=-0.00137695086891 se=0.000426029937852 four_se=0.00170411975141 precision_limit=0.02 status=PASS
+IDENTITY L=8 name=transverse2 residual=-0.000585338460961 se=0.000444565600904 four_se=0.00177826240362 precision_limit=0.02 status=PASS
+SCREENING L=8 R_lowest=0.287857374572 se=0.00246706563708 four_se=0.00986826254832 contact_baseline=2.12224805355 baseline_se=0.00433811079355 decision_authority=NONE
+TERMINAL STOP_DUAL_MIXING
+EVIDENTIAL_STATUS ZERO_ENGINEERING_ONLY
