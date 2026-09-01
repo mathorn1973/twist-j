@@ -70,5 +70,5 @@ Born selection, continuum limit, SI quantity, contraction/expansion law,
 matter/light split, or visible/invisible sector.
 
 The independent dual/Ward obligation #756 and reader obligation #748 remain
-open. No Canon, Registry, Frontier, program-status or authority movement is
-made by this pilot.
+open. No Canon, Registry, Gate, Frontier, program-status or authority movement
+is made by this pilot.
