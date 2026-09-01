@@ -1,0 +1,152 @@
+{
+  "schema": "PHOTON-PRODUCTION-PREREG-FREEZE-1/V1",
+  "status": "FINAL_FREEZE_UNEXECUTED_NONCANONICAL",
+  "authority": {
+    "issue": 757,
+    "parent_experiment": 742,
+    "canon": "v74",
+    "freeze_base": "3bb9087cdea293c494ae86b5824e9d8d221fbbfb"
+  },
+  "production_start_requires": {
+    "prereg_merged_and_readback": true,
+    "issue_748_reader_frozen_and_fixture_pass": true,
+    "issue_756_terminal": "DUAL_CROSSCHECK_PASS"
+  },
+  "measure": {
+    "t": 1,
+    "sizes": [8, 12, 16, 24, 32],
+    "weight": "W(f)=2+2*cos(2*pi*f/5)",
+    "topological_sectors": "ALL"
+  },
+  "seeds": {
+    "8": {
+      "cold_r1": "0xE757080000000101",
+      "cold_r2": "0xE757080000000102",
+      "hot_r1": "0xE757080000000201",
+      "hot_r2": "0xE757080000000202"
+    },
+    "12": {
+      "cold_r1": "0xE7570C0000000101",
+      "cold_r2": "0xE7570C0000000102",
+      "hot_r1": "0xE7570C0000000201",
+      "hot_r2": "0xE7570C0000000202"
+    },
+    "16": {
+      "cold_r1": "0xE757100000000101",
+      "cold_r2": "0xE757100000000102",
+      "hot_r1": "0xE757100000000201",
+      "hot_r2": "0xE757100000000202"
+    },
+    "24": {
+      "cold_r1": "0xE757180000000101",
+      "cold_r2": "0xE757180000000102",
+      "hot_r1": "0xE757180000000201",
+      "hot_r2": "0xE757180000000202"
+    },
+    "32": {
+      "cold_r1": "0xE757200000000101",
+      "cold_r2": "0xE757200000000102",
+      "hot_r1": "0xE757200000000201",
+      "hot_r2": "0xE757200000000202"
+    }
+  },
+  "thermalisation": {
+    "candidate_endpoints_macrocycles": [1024, 2048, 4096, 8192],
+    "rolling_window": 512,
+    "accept_earliest_passing": true,
+    "failure_at_max": "STOP_MIXING",
+    "gates": {
+      "unique_state_fraction_min": 0.99,
+      "per_chain_ess_min": 64,
+      "rhat_max": 1.05,
+      "folded_rhat_max": 1.05,
+      "bulk_ess_min": 400,
+      "tail_ess_min": 200,
+      "hot_cold_z_max": 4,
+      "half_drift_z_max": 4
+    }
+  },
+  "measurement": {
+    "samples_per_chain": 1024,
+    "macrocycles_between_samples": 1,
+    "post_gates": {
+      "unique_state_fraction_min": 0.99,
+      "per_chain_ess_min": 128,
+      "rhat_max": 1.03,
+      "folded_rhat_max": 1.03,
+      "bulk_ess_min": 800,
+      "tail_ess_min": 400,
+      "hot_cold_z_max": 3,
+      "half_drift_z_max": 3
+    }
+  },
+  "uncertainty": {
+    "tau": "Geyer_IMS_per_chain",
+    "block_length": "next_power_of_two(max(16,ceil(4*max_chain_tau_int)))",
+    "minimum_complete_blocks_per_chain": 16,
+    "estimator": "chain_preserving_delete_one_block_jackknife",
+    "confidence": 0.99
+  },
+  "polyakov": {
+    "fit_sizes": [12, 16, 24, 32],
+    "models": [
+      "y_L=y_inf+a/L",
+      "y_L=y_inf+a/L^2"
+    ],
+    "positive_limit": "lower_99pct_y_inf_gt_0_in_both_models",
+    "zero_compatible": "zero_inside_99pct_y_inf_interval_in_both_models",
+    "photon": "R=POSITIVE_LIMIT and A5=ZERO_COMPATIBLE",
+    "confined": "R=ZERO_COMPATIBLE",
+    "z5_broken": "R=POSITIVE_LIMIT and A5=POSITIVE_LIMIT"
+  },
+  "topology": {
+    "terminal_sizes": [24, 32],
+    "wrapping": "lower_99pct_probability_gt_0.5_at_both_sizes",
+    "nonwrapping": "upper_99pct_probability_lt_0.5_at_both_sizes",
+    "photon": "vortex=WRAPPING and monopole=NONWRAPPING and monopole_largest_component=ZERO_COMPATIBLE",
+    "confined": "vortex=WRAPPING and monopole=WRAPPING and monopole_largest_component=POSITIVE_LIMIT",
+    "z5_broken": "vortex=NONWRAPPING"
+  },
+  "correlator": {
+    "diagnostic_sizes": [8, 12],
+    "decision_sizes": [16, 24, 32],
+    "windows": {
+      "16": [2, 3, 4],
+      "24": [3, 4, 5, 6],
+      "32": [4, 5, 6, 7, 8]
+    },
+    "point_resolution_sigma_min": 4,
+    "photon": "p_GLS_gte_0.01_and_99pct_K_excludes_0_at_L24_and_L32",
+    "rejects_photon": "p_GLS_lt_1e-4_at_L24_and_L32"
+  },
+  "size_local_transition_signature": {
+    "sizes": [16, 24, 32],
+    "wrapping_tag_at_each_L": {
+      "WRAPPING_L": "lower_99pct_probability_gt_0.5",
+      "NONWRAPPING_L": "upper_99pct_probability_lt_0.5",
+      "otherwise": "UNRESOLVED_L"
+    },
+    "correlator_tag_at_each_L": {
+      "PHOTON_L": "p_GLS_gte_0.01_and_99pct_K_excludes_0",
+      "REJECT_L": "p_GLS_lt_1e-4",
+      "otherwise": "UNRESOLVED_L"
+    },
+    "phase_signature_at_each_L": {
+      "PHOTON_L": "vortex=WRAPPING_L and monopole=NONWRAPPING_L and correlator=PHOTON_L",
+      "CONFINED_L": "vortex=WRAPPING_L and monopole=WRAPPING_L and correlator=REJECT_L",
+      "Z5_BROKEN_L": "vortex=NONWRAPPING_L and correlator=REJECT_L",
+      "otherwise": "UNRESOLVED_L"
+    },
+    "MULTIPHASE_OR_TRANSITION": "signature_L16 and signature_L32 are both decisive, are different, and signature_L24 is one of {signature_L16,signature_L32,UNRESOLVED_L}"
+  },
+  "terminals_precedence": [
+    "STOP_INTEGRITY",
+    "STOP_MIXING",
+    "MULTIPHASE_OR_TRANSITION",
+    "PHOTON_EVIDENCE",
+    "CONFINED_EVIDENCE",
+    "Z5_BROKEN_EVIDENCE",
+    "AMBIGUOUS_FINITE_SIZE"
+  ],
+  "status_ceiling": "FINITE_SIZE_EVIDENCE_ONLY"
+}
