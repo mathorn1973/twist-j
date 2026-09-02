@@ -20,17 +20,23 @@ TAG:             canon-v74
 CONTENT_COMMIT:  2561f7dcadcbbf683ce7b36219ea67378d879a5a
 CANON_SHA256:    2db550cb68f6f4ee33b9194f1f6b3bc4d8fec19cd79e79a702c5357577a92c0e
 CANON_BYTES:     389246
-BASE_MAIN:       8c53ed0f1ab0ed60e10566cc4e3b5ae74334e0e9
+BASE_MAIN:       dfc21dfe97ed69ebe15ea9af1a7922bb666854f8
 REGISTRY_ROWS:   352
 LIVE_H_O:        31
 CHECKERS:        check_canon PASS, check_ledger PASS, check_policy PASS
 ```
 
+Updated 2026-09-02 after the merges of PR #779 (maintenance), PR #784
+(`P-QDD-DIRECT-RECORD-E-NONCONGRUENCE-1`) and PR #785
+(`P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1`) into `main`. The v74 content
+identity is unchanged; only the base `main` commit and the probe inventory
+moved.
+
 ## 2. Verdict
 
-Public `main` already carries three merged probes after v74 whose
-`candidate-T` results were never registered. Together with the three headless
-probes now in review, that is one honest "earned results" fold in which
+Public `main` already carries five merged probes after v74 whose
+`candidate-T` results were never registered. Together with the one headless
+probe still in review, that is one honest "earned results" fold in which
 statuses actually move.
 
 The foundational wording package
@@ -53,19 +59,18 @@ v76   framework-wording fold: the already drafted A0 and CORE split,
 | `P-JIPC-WP3D-QPOS-MELLIN-1` (PR #778) | candidate-T / L1 | 1 T | pure addition |
 | `P-MATTER-SCALAR-TEMPORAL-CHARACTERISTIC-1` | candidate-T | `MATTER-SCALAR-TEMPORAL-CHARACTERISTIC`, `MATTER-SCALAR-BRANCH-CLASSIFICATION`, `MATTER-SCALAR-MASSIVE-GERM` | opens the massive-kinematics lane as a separate lane |
 | `P-PHOTON-HERM2-GERM-AND-GLOBAL-OBSTRUCTION-1` | candidate-T | `PHOTON-HERM2-TANGENT-GERM`, `PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION`; `PHOTON-MASSIVE-SCALAR-GERM` duplicates the matter row | the only gate disposition available |
+| `P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1` (PR #785, issue #780, merged 2026-09-02) | candidate-T / L1, two-architecture PASS | 1 T / L1 | pure addition; no gate, no measure, no physical carrier |
+| `P-QDD-DIRECT-RECORD-E-NONCONGRUENCE-1` (PR #784, issue #782, merged 2026-09-02) | candidate-T / L1, two-architecture PASS | 1 T / L1 | negative boundary for pointwise record transformation only |
 
 ### 3.2 In review, fold only after merge
 
 | Probe | Public state | Proposed row |
 | --- | --- | --- |
-| `P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1` (PR #785, issue #780) | two-architecture PASS, unmerged | 1 T / L1 |
 | `P-TM-FOURPHASE-HULL-NONDESCENT-1` (PR #783, issue #781) | two-architecture PASS, unmerged | 1 T / L5 |
-| `P-QDD-DIRECT-RECORD-E-NONCONGRUENCE-1` (PR #784, issue #782) | two-architecture PASS, unmerged | 1 T / L1 |
 | `P-TM-CORR-ZEROS-1` (PR #696, issue #694) | two-architecture PASS since 2026-08-31, unmerged | optional 1 T / L5; promotion note already in `notes/canon/PROMO-C-TM-CORR-ZEROS-1.md` |
 
-None of these moves a gate or an `O` row. The QDD direct-`e` result is a
-negative boundary for pointwise record transformation only; the dynamic
-reversor corollary stays outside v75.
+Neither of these moves a gate or an `O` row. The dynamic reversor corollary
+built on the now public stable-image result stays outside v75.
 
 ### 3.3 The one gate disposition
 
@@ -109,12 +114,12 @@ gates     14 -> 15
 
 ## 5. Order of operations
 
-1. Merge PR #779 (maintenance: status-separation reproduction count
-   23 to 24).
+1. PR #779 (maintenance: status-separation reproduction count 23 to 24),
+   PR #784 and PR #785 are merged as of 2026-09-02.
 2. Merge PR #786 (legacy disposition) and PR #787 (intake notes) with no
    status movement.
-3. Review and merge PRs #783, #784, #785 independently; decide PR #696.
-   Each requires its own manual scope and security review.
+3. Review and merge PR #783; decide PR #696. Each requires its own manual
+   scope and security review.
 4. Open `synthesis/canon-v75` from `main` after those merges. Exactly two
    frozen commits: the complete content fold, then a release-form commit
    changing only `STATUS.md`, `README.md`, and `CITATION.cff`.
@@ -142,8 +147,8 @@ gates     14 -> 15
 
 - Rebase or close stale PRs #693, #695, #650, and #595 with a pointer.
 - Close claim-lock issues whose probes are merged and folded in v73
-  (#716, #721, #724, #731) after verification; #694 after the PR #696
-  decision.
+  (#716, #721, #724, #731) after verification; #780 and #782 once their
+  merged probes are folded; #694 after the PR #696 decision.
 - Nine registry rows carry one-architecture evidence only
   (`ALPHA-VALUE-DIGITS`, `HYPERPLANE-BOUNDARY-REALIZATION`,
   `KERNEL-CELL-COMPONENTS`, `TIME-QUANTUM-TOWER`, `SILVER-RING-FACTS`,
