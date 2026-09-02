@@ -1,11 +1,57 @@
 # Canon changelog (public series)
 
-## Public Canon v74
+## Public Canon v75
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 352 claims; 0 T-LOCK, 225 T, 45 D, 34 C, 2 H, 29 O, 17 F; 31 live H/O.
-Reproduction witnesses: 23.
+Registry snapshot: 360 claims; 0 T-LOCK, 233 T, 45 D, 34 C, 2 H, 29 O, 17 F; 31 live H/O.
+Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v75 folds eight theorem-grade results already earned by five
+completed public two-architecture probe bundles. It adds no dictionary,
+computation, hypothesis, open obligation or falsified row, and it leaves the
+active `H/O` count unchanged.
+
+At L1, `JIPC-WP3D-QPOS-SCALAR-SLICE [T]` registers the self-contained
+positive-rational Mellin package through its seed existence and tail moduli,
+recurrences, product, beta and square-root-free duplication identities,
+`C(1/2)^2=p_I=p_M`, and the dressed `Ehat Ohat=Chat` slice. It makes no
+circle, Gamma, continuation, functional-equation, Fourier, Poisson, WP2 or
+higher-layer identification. `QDD-DIRECT-RECORD-E-NONCONGRUENCE [T]` proves
+that the 312 nonzero sign fibres of the current five-field direct record are
+all split by the declared affine generator `e`; it supplies no contextual
+record no-go or apparatus result. `TM-CHECKPOINT-HULL-STABLE-IMAGE [T]`
+registers the exact least nine-step stable image, reversible restriction,
+checkpoint reversor, full-hull collision and natural-extension conjugacy;
+the auxiliary hull is not identified with `U` or a physical history.
+
+The scalar-matter lane gains three exact rows. The temporal characteristic
+and its complete parabolic/elliptic/hyperbolic branch classification enter at
+L5 for an inserted dimensionless `mu`. The massive Hermitian germ enters at
+`MULTI`, with `alpha=1` the unique member of
+`mu_epsilon=epsilon^alpha M` leaving a finite nonzero mass term for fixed
+`M>0`, and with the inherited exact two-sided remainder.
+No value of `mu`, species, spin, charge, interaction, apparatus or physical
+mass is derived.
+
+The photon lane gains two distinct theorem rows. The selected characteristic
+has the standard `Herm_2(C)` determinant as its exact quadratic tangent germ,
+with an effective bounded-set convergence modulus. Separately, the complete
+reciprocal two-torsion census proves empty the natural total single-chart
+separated inversion-equivariant vector-square-root class. This is not a no-go
+for multichart, twisted, frequency-mixing, higher-rank, symmetry-breaking or
+otherwise differently typed global carriers outside that separated class.
+
+Accordingly the old `GATE-L4-L5-PHOTON-CONE-IDENTIFICATION` is replaced,
+not passed, by `GATE-L4-L5-PHOTON-GLOBAL-CARRIER`. The local germ is closed
+mathematics and owns no gate; `PHOTON-CONE-CONVERGENCE [O]` remains
+`ROOT / STOP / FORMAL` only for a complete broader global-carrier class and
+exact global null-set map. Gate count, Frontier programs and CORE selection
+do not move. The integrity-stopped four-phase probe is explicitly excluded
+from every active and lifecycle ledger, and the older optional correlation-
+zeros candidate is not promoted in this fold.
+
+## Public Canon v74
 
 Public Canon v74 folds the exact result already earned by merged public probe
 `P-PHOTON-TEMPORAL-CHARACTERISTIC-1`. It registers one complete
