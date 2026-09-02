@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v74
+# TWIST-J Public Canon v75
 
-**Release identity.** Public Canon v74. Normative authority and activation
+**Release identity.** Public Canon v75. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v74 also declares the discrete architecture used to read
+only. Public Canon v75 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v74 does not claim
+seed of the two algebraic projections. Public Canon v75 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -124,7 +124,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v74 contains no such
+deriving the architecture from J; Public Canon v75 contains no such
 theorem.
 
 ---
@@ -1907,6 +1907,44 @@ QDD-INSTRUMENT-APPARATUS [O]
     independence statement follows.
 ```
 
+### QDD-DIRECT-RECORD-E-NONCONGRUENCE [T]
+
+On the exact L1 piston block `P = F_5^4`, let `D_P(p)` be the complete
+five-field `MatterData_QDD` record obtained from the balanced lift with the
+two unused checkpoint coordinates fixed to zero. The factorization theorem
+gives the exact equivalence
+
+```text
+D_P(p) = D_P(p')  iff  p'=p or p'=-p.
+```
+
+Thus the 625 pistons have exactly 313 record classes: the singleton zero
+class and 312 two-element sign classes. The declared shifted mirror restricts
+to
+
+```text
+e_P(p)=c-p,                    c=(2,1,3,4) in F_5^4.
+```
+
+For every `p!=0`, the two residues `c-p` and `c+p` are neither equal nor
+negatives. Consequently every one of the 312 nonzero sign fibres is split:
+
+```text
+D_P(e_P(p)) != D_P(e_P(-p)).
+```
+
+There is therefore no set map `bar_e` on `im(D_P)` satisfying
+`D_P(e_P(p))=bar_e(D_P(p))` for every piston. The exact direct-record
+equivalence is not a congruence for the declared generator `e`. In the
+zero-centre control, `p -> -p` does descend, isolating the nonzero affine
+centre as the obstruction. This theorem is finite L1 algebra only. It does
+not alter the involutivity of `e`, exclude contextual, stream-level,
+relational, multivalued, signed or enlarged records, move
+`ALGEBRAIC-DMATTER [D]` or `QDD-INSTRUMENT-APPARATUS [O]`, or provide an
+instrument, event, occurrence law, sampling law, measure, decoder completion
+or higher-layer lift. Evidence is
+`probes/P-QDD-DIRECT-RECORD-E-NONCONGRUENCE-1`.
+
 ### Piston reshape and wedge
 
 On the balanced piston of `DEF-QDD-BALANCED-PISTON`, write
@@ -3261,6 +3299,49 @@ KERNEL-Z6-SYNCHRONIZATION [T] is lineage: the sheet laws and the table
 are re-derived above, not imported. The partition coincidence of G5
 carries no derivation in either direction.
 
+### TM-CHECKPOINT-HULL-STABLE-IMAGE [T]
+
+At L1, let `K_TM` be the two-sided Thue-Morse subshift, let
+`X_cp=F_5^6`, put `X_hull=K_TM x X_cp`, and define the checkpoint skew
+product `V_hull:X_hull->X_hull` by
+
+```text
+V_hull(kappa,psi)=(S_K kappa,F_(kappa_0)(psi)),
+h(kappa)=4+2 kappa_(-1) mod 5,
+X_stab={(kappa,psi):z_6(psi)=h(kappa)}.
+```
+
+The public sheet theorem and the complete four-edge branch table give
+
+```text
+V_hull^9(X_hull)=X_stab=intersection_(n>=0) V_hull^n(X_hull),
+```
+
+and nine is least, witnessed by the occurring nonsynchronizing word
+`10100101`. The restriction `V_stab=V_hull|X_stab` is a homeomorphism.
+With
+
+```text
+(rho kappa)_m=kappa_(-m-1),
+i_stab(kappa)=4+2(kappa_(-1)+kappa_0) mod 5,
+R_cp(kappa,psi)=(rho kappa,g_(i_stab(kappa))(psi)),
+```
+
+`R_cp` is an involutive homeomorphism of `X_stab` and
+`R_cp V_stab R_cp=V_stab^-1`. The full `V_hull` is nevertheless
+non-injective: the frozen `b`/`d` collision gives two distinct checkpoint
+states with the same image. Finally evaluation at zero is a homeomorphism
+from the natural extension of `V_hull` onto `X_stab` and conjugates its shift
+with `V_stab`.
+
+This is an exact theorem about the auxiliary checkpoint hull and its stable
+restriction. It does not identify that hull with the public autonomous state
+`U`, select a physical carrier, invariant measure or attractor, dispose of
+transient states, or establish a decoder, event stream, arrow of time,
+physical time reversal or any L2-L6 reading. The four-phase hull is a
+separate lane. Evidence is
+`probes/P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1`.
+
 The driver contributes no entropy. The Thue-Morse driver
 theta_n = s_2(n) mod 2 has linear factor complexity: the exact counts
 are p(1..4) = 2, 4, 6, 10 with the stabilization witness p(20) = 60,
@@ -3511,6 +3592,70 @@ coupling, branch occurrence, Born rule, common-branch law in Nature, decoder
 completion, speedup, universality, clock, gravity, SI quantity or L2-L6 lift.
 
 ## 4. The two places
+
+### JIPC-WP3D-QPOS-SCALAR-SLICE [T]
+
+At L1 and only for positive rational arguments, define the four bare seeds
+by two-ended compact cut limits
+
+```text
+C(s)=integral_0^inf x^(s-1)e^(-x) dx,
+B(p,q)=integral_0^1 u^(p-1)(1-u)^(q-1) du,
+E(s)=integral_0^inf x^(s-1)e^(-x^2) dx,
+O(s)=integral_0^inf x^(s-1)(x e^(-x^2)) dx.
+```
+
+The self-contained written proof establishes existence, finiteness and
+positivity, with explicit rational output-form tail moduli for these bare
+seeds. It proves `C(1)=1`, the `C` recurrence, the `B` split, parts,
+recurrence and symmetry identities, the pullback `E(s)=C(s/2)/2`, the
+independently defined join `O(s)=E(s+1)`, and for positive rationals
+
+```text
+C(p)C(q)=C(p+q)B(p,q).
+```
+
+The square-cut beta midpoint and a square-root-free duplication argument give
+
+```text
+C(p)C(p+1/2)=2^(1-2p) C(1/2)C(2p),
+C(1/2)^2=p_I,
+```
+
+where
+`p_I=4 integral_0^1 dt/(1+t^2)`. A separate exact rational Machin bridge
+gives `p_I=p_M`, with `p_M=16 A_5-4 A_239`. Here `A_q` is the unique common
+point of the alternating intervals
+`hull(S_(q,N),S_(q,N+1))`, where
+`S_(q,N)=sum_(n=0)^(N-1) (-1)^n/((2n+1)q^(2n+1))` for integers
+`N>=0`, with the empty sum `S_(q,0)=0`.
+
+On the same positive-rational slice the dressed seeds are independently
+defined by
+
+```text
+Ehat(s)=2 integral_0^inf e^(-p_M x^2)x^(s-1) dx,
+Ohat(s)=2 integral_0^inf e^(-p_M x^2)x^s dx,
+Chat(s)=4 integral_0^inf e^(-2p_M r^2)r^(2s-1) dr.
+```
+
+The proof then establishes the quadratic-to-linear pullback and product,
+together with the exact anchors,
+
+```text
+Chat(s)=2 integral_0^inf e^(-2p_M x)x^(s-1) dx,
+Ehat(s) Ohat(s)=Chat(s),
+Ehat(1)=1,        Ohat(1)=Chat(1)=1/p_M.
+```
+
+The written proof, not its finite exact audit, carries these universal
+rational-slice statements. The symbols
+`p_I` and `p_M` are distinct Cauchy names joined by the proved bridge; neither
+is identified here with a circle, Gaussian, Gamma, library, SI or physical
+constant. No irrational or complex argument, holomorphic seed, meromorphic
+continuation, functional equation, Fourier or Poisson theorem, archimedean
+place, WP2 obligation or L2-L6 lift is included. Evidence is
+`probes/P-JIPC-WP3D-QPOS-MELLIN-1`.
 
 The total-ramification census among full quartic cyclotomic fields is exact
 (QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T],
@@ -4725,8 +4870,9 @@ physical photon.
 The preceding theorems do not repair or reopen `PHOTON-KAPPA-LEMMA [F]` or
 `PHOTON-WINDOW-PROOF [F]`. They delimit two separate successor roots.
 
-`PHOTON-CONE-CONVERGENCE [O]` now has its first route fixed. The complete
-owner-adopted tuple `PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]`, supported by
+`PHOTON-CONE-CONVERGENCE [O]` is now narrowed to the unresolved global
+carrier problem. The complete owner-adopted tuple
+`PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]`, supported by
 `PHOTON-TEMPORAL-CHARACTERISTIC [T]`, yields the exact L5 characteristic
 
 ```text
@@ -4734,20 +4880,32 @@ K_op = {(omega,k) : det C(omega,k)=0},
 ```
 
 on the selected `D3` quotient. The L2-to-L5 temporal-characteristic gate is
-therefore closed positively as a dictionary lift. The remaining question is
-whether a separately public L4 Herm2 carrier and cone `K_quad` admit an
-independently frozen total typed map
+closed positively as a dictionary lift. `PHOTON-HERM2-TANGENT-GERM [T]`
+also proves that the rescaled characteristic has the standard Hermitian
+Minkowski determinant as its exact quadratic germ, with an effective bounded-
+set modulus. That local/scaling comparison is closed mathematics and is not
+owned by an open gate.
+
+Globally, `PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION [T]` proves that the
+natural single-chart separated inversion-equivariant vector-square-root
+class is empty. The remaining obligation first requires a separately frozen
+complete admissible L4 class `A_global` of pairs `(X_quad,K_quad)`, with
+`K_quad` a null subset of its carrier `X_quad`; the class may include
+multichart or twisted-bundle, frequency-mixing, higher-rank or otherwise
+differently typed constructions. It then asks whether there exist
+`(X_quad,K_quad) in A_global` and an admissible total map
 
 ```text
-iota : carrier(K_quad) -> carrier(K_op)
+iota : X_quad -> carrier(K_op)
 ```
 
-with `iota(K_quad)=K_op` as exact equality of null sets. `CENTRAL-LIFT-PHASE`
+with `iota(K_quad)=K_op` as exact equality of global null sets. This is
+`GATE-L4-L5-PHOTON-GLOBAL-CARRIER`, still `OPEN_LIFT`. Failure of the frozen
+separated class does not decide that broader class. `CENTRAL-LIFT-PHASE`
 supplies only L4 quadratic-support action, not a positive or causal Herm2
-cone. The L4-to-L5 identification gate therefore remains `OPEN_LIFT`. Here
-convergence means agreement of two typed routes, not a continuum limit. The
-two registered temporal branches are unit-modulus phases; they are not a
-contraction/expansion pair in transfer-amplitude sense. A broader
+cone. Here convergence means agreement of two typed routes, not a continuum
+limit. The two registered temporal branches are unit-modulus phases; they are
+not a contraction/expansion pair in transfer-amplitude sense. A broader
 contraction/expansion, matter/light or visible/invisible interpretation is
 neither assumed nor refuted by this closure.
 
@@ -5561,6 +5719,129 @@ Born rule, causal ontology, Lorentz invariance, physical continuum, massless
 phase, propagator, polarization, apparatus, readout or physical photon is
 established. A broader contraction/expansion, matter/light or
 visible/invisible interpretation is neither assumed nor refuted.
+
+### PHOTON-HERM2-TANGENT-GERM [T]
+
+Freeze the independent mathematical carrier `V_H=Herm_2(C)` with literal
+matrix equality and
+
+```text
+H(Omega,x,y,z)=[[Omega+z,x-i y],[x+i y,Omega-z]],
+det H=Omega^2-x^2-y^2-z^2.
+```
+
+Its positive-semidefinite boundary is the future null cone as a mathematical
+Hermitian cone. For the rescaled canonical characteristic, the inherited
+global estimate is exactly
+
+```text
+-(epsilon^2/12) Omega^4
+ <=q_epsilon(Omega,k)-det H(Omega,k)
+ <=(11/27) epsilon^2 |k|^4.
+```
+
+Thus the L5 characteristic and the standard Hermitian determinant have the
+same quadratic germ, with an effective modulus uniform on every bounded
+subset of `R^4`. This is equality of the limiting quadratic germ, not exact
+equality of finite-lattice global null sets. It selects no spinor, Lorentz
+group, causal ontology, continuum state or physical time orientation.
+Evidence is `probes/P-PHOTON-HERM2-GERM-AND-GLOBAL-OBSTRUCTION-1`.
+
+### PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION [T]
+
+For the natural separated inversion-equivariant vector-square-root class
+
+```text
+p:T_D3->R^3,          p(-[k])=-p([k]),
+|p([k])|^2=s(k),
+```
+
+the complete reciprocal two-torsion census has symbol values
+
+```text
+s=0 once,             s=1/3 four times,
+s=32/81 three times.
+```
+
+Each two-torsion class is fixed by inversion, so oddness forces `p=0`, while
+all seven nonzero classes have positive `s`. The frozen global separated
+class is therefore empty. This excludes neither a multichart or twisted
+bundle, nor a frequency-mixing, higher-rank, symmetry-breaking or otherwise
+differently typed carrier outside the frozen separated class. In particular
+it is not a no-go for all global cone dictionaries. Evidence is
+`probes/P-PHOTON-HERM2-GERM-AND-GLOBAL-OBSTRUCTION-1`.
+
+### MATTER-SCALAR-TEMPORAL-CHARACTERISTIC [T]
+
+For a declared real dimensionless spectral parameter `mu>=0`, put
+`q_mu(k)=s(k)+mu^2`. The scalar temporal recurrence has
+
+```text
+P_q(zeta)=zeta^2+(q-2)zeta+1,
+T_q=[[2-q,-1],[1,0]],        det T_q=1,
+Delta_q=q(q-4).
+```
+
+At the unique spatial zero, `q_mu(0)=mu^2` and
+`cos omega_0=1-mu^2/2`: `0<mu<2` gives a positive dimensionless angular
+gap, `mu=2` the negative parabolic endpoint, and `mu>2` no real
+zero-momentum frequency. The global estimate `s<=16/9` gives the sufficient,
+not asserted sharp, all-momentum real-branch range `0<=mu^2<=20/9`. The
+parameter is inserted; its value and physical origin are not derived.
+Evidence is `probes/P-MATTER-SCALAR-TEMPORAL-CHARACTERISTIC-1`.
+
+### MATTER-SCALAR-BRANCH-CLASSIFICATION [T]
+
+For every real `q>=0`, the preceding exact polynomial has the complete
+classification
+
+```text
+q=0       non-identity parabolic double root at +1,
+0<q<4     two distinct elliptic unit-modulus roots,
+q=4       non-identity parabolic double root at -1,
+q>4       real reciprocal hyperbolic roots and no real omega.
+```
+
+At `mu^2=4`, only the spatial zero is parabolic and every nonzero momentum is
+hyperbolic; above four every momentum is hyperbolic. This is scalar transfer
+kinematics, not particle content, contraction/expansion ontology or a
+physical matter law. Evidence is
+`probes/P-MATTER-SCALAR-TEMPORAL-CHARACTERISTIC-1`.
+
+### MATTER-SCALAR-MASSIVE-GERM [T]
+
+On the same standard Hermitian carrier the scalar massive shell is
+`det H=M^2`. For `epsilon>0` and `M>0`, the scaling
+`mu_epsilon=epsilon M` gives
+
+```text
+q_(epsilon,M)(Omega,k)
+ =4 sin^2(epsilon Omega/2)/epsilon^2
+  -s(epsilon k)/epsilon^2-M^2.
+```
+
+For fixed `M>0`, the unique member of the power family
+
+```text
+mu_epsilon=epsilon^alpha M
+```
+
+that leaves a finite nonzero massive germ has `alpha=1`. It satisfies
+
+```text
+-(epsilon^2/12) Omega^4
+ <=q_(epsilon,M)-(Omega^2-|k|^2-M^2)
+ <=(11/27) epsilon^2 |k|^4.
+```
+
+For the same fixed `M>0`, `alpha>1` has a massless germ and `alpha<1`
+diverges; a fixed nonzero lattice `mu` is not a finite continuum mass. The
+photon Herm2 probe independently reaches the same conditional
+massive formula, but this single registered claim is carried by the later
+matter proof package. It derives no value of `mu`, particle species,
+multiplicity, spin, charge, coupling, interaction, stability, occurrence or
+apparatus law, physical units or SI mass. Evidence is
+`probes/P-MATTER-SCALAR-TEMPORAL-CHARACTERISTIC-1`.
 
 ### PHOTON-Z5-STAR-QUADRATURE [C]
 

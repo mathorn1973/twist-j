@@ -632,8 +632,8 @@ CM-RAMIFIED-PFAFFIAN-ROOT	J-GOLDEN-BRIDGE	REQUIRES	the public cyclotomic identit
 CM-RAMIFIED-PFAFFIAN-ROOT	RAMIFIED-TM-SYMPLECTIC-ORIENTATION	REQUIRES	the already registered binary character is identified as the C2 quotient of the marked C4 phase without identifying the carriers
 CM-PERIOD-LATTICE-NONSELECTION	CM-ALTERNATING-PENCIL	REQUIRES	the public integral CM forms, Pfaffian, unimodular locus, Pell shift, J-pullback and root-of-unity kernel are the frozen inputs
 PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP	PHOTON-WINDOW-COORDINATES	REQUIRES	the exact five-vector and its unnormalised Fourier transform are the fixed algebraic input; this dependency alone does not create a complete L4 action carrier
-PHOTON-CONE-CONVERGENCE	DEF-ACTION-LAYERS	REQUIRES	the two route endpoints and both cross-layer lifts must remain explicitly typed at L2, L4 and L5
-PHOTON-CONE-CONVERGENCE	CENTRAL-LIFT-PHASE	BOUNDED_BY	the registered L4 normalized Hermitian action constrains the quadratic route but explicitly supplies no Herm2 positive or causal cone
+PHOTON-CONE-CONVERGENCE	DEF-ACTION-LAYERS	REQUIRES	the remaining global-carrier obligation is exactly a typed MULTI comparison from a separately frozen L4 carrier class to the canonical L5 characteristic
+PHOTON-CONE-CONVERGENCE	CENTRAL-LIFT-PHASE	BOUNDED_BY	the registered L4 normalized Hermitian support action constrains one source route but explicitly supplies no complete admissible global carrier class or total cone map
 PHOTON-MASSLESS-PHASE	DEF-ACTION-LAYERS	REQUIRES	the action datum and the massless-phase conclusion require a named typed L4-to-L6 lift
 PHOTON-MASSLESS-PHASE	PHOTON-WINDOW-COORDINATES	REQUIRES	the exact Z_5 five-vector is the algebraic datum whose embedding into a complete L4 action carrier remains to be frozen
 PHOTON-MASSLESS-PHASE	PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP	BOUNDED_BY	direct finite-coupling nonmembership excludes only the frozen literal Wilson and Villain equality orbit and does not decide broader membership, comparison or a massless phase
@@ -645,5 +645,19 @@ PHOTON-SPATIAL-TEMPORAL-TRANSFER	DEF-ACTION-LAYERS	REQUIRES	the owner-adopted di
 PHOTON-SPATIAL-TEMPORAL-TRANSFER	FCC-WEIGHTED-SHELL-SYMBOL	REQUIRES	the exact shells, W* and moment normalization are consumed mathematical inputs and do not themselves force the owner selection
 PHOTON-SPATIAL-TEMPORAL-TRANSFER	FCC-WEIGHTED-SHELL-REMAINDER	REQUIRES	the global symbol range, zero lattice and spatial remainder are consumed mathematical inputs while carrier, flux and clock remain selected dictionary data
 PHOTON-TEMPORAL-CHARACTERISTIC	PHOTON-SPATIAL-TEMPORAL-TRANSFER	BOUNDED_BY	the theorem is conditional on the complete owner-adopted D tuple and neither derives nor promotes that dictionary choice
-PHOTON-CONE-CONVERGENCE	PHOTON-SPATIAL-TEMPORAL-TRANSFER	REQUIRES	the positively closed dictionary lift fixes the complete L2-to-L5 route consumed by the remaining comparison
-PHOTON-CONE-CONVERGENCE	PHOTON-TEMPORAL-CHARACTERISTIC	REQUIRES	the remaining L4-to-L5 comparison consumes the exact canonical K_op proved on the selected tuple
+PHOTON-CONE-CONVERGENCE	PHOTON-SPATIAL-TEMPORAL-TRANSFER	REQUIRES	the positively closed dictionary lift fixes the selected T_D3 carrier and normalized symbol consumed by the remaining global comparison
+PHOTON-CONE-CONVERGENCE	PHOTON-TEMPORAL-CHARACTERISTIC	REQUIRES	the remaining L4-to-L5 global comparison consumes the exact canonical K_op proved on the selected tuple
+MATTER-SCALAR-TEMPORAL-CHARACTERISTIC	PHOTON-TEMPORAL-CHARACTERISTIC	REQUIRES	the inserted scalar shift extends the exact selected L5 characteristic without reselecting its carrier, symbol or clock
+MATTER-SCALAR-BRANCH-CLASSIFICATION	MATTER-SCALAR-TEMPORAL-CHARACTERISTIC	REQUIRES	the complete branch classification is the exact root and discriminant disposition of the registered scalar temporal polynomial
+MATTER-SCALAR-MASSIVE-GERM	MATTER-SCALAR-TEMPORAL-CHARACTERISTIC	REQUIRES	the massive rescaling consumes the registered discrete scalar characteristic as its source
+MATTER-SCALAR-MASSIVE-GERM	PHOTON-HERM2-TANGENT-GERM	REQUIRES	the massive germ consumes the standard Hermitian carrier and inherited massless tangent remainder without selecting spin or a physical mass
+PHOTON-HERM2-TANGENT-GERM	PHOTON-TEMPORAL-CHARACTERISTIC	REQUIRES	the theorem consumes the exact canonical K_op rescaling and its temporal remainder
+PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION	PHOTON-SPATIAL-TEMPORAL-TRANSFER	BOUNDED_BY	the emptiness theorem is conditional on the selected T_D3 carrier and normalized s and states nothing about another dictionary
+QDD-DIRECT-RECORD-E-NONCONGRUENCE	DEF-AUTONOMOUS-STATE	REQUIRES	the finite piston block and declared generator e are inherited from the exact autonomous checkpoint state
+QDD-DIRECT-RECORD-E-NONCONGRUENCE	QDD-ALGEBRAIC-FACTORIZATION	REQUIRES	the complete five-field direct-record equivalence and its 313 fibres are consumed exact algebraic inputs
+QDD-DIRECT-RECORD-E-NONCONGRUENCE	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the pointwise L1 noncongruence supplies no physical instrument, contextual record action, event law or apparatus closure
+TM-CHECKPOINT-HULL-STABLE-IMAGE	DEF-KERNEL-GENERATORS	REQUIRES	the five public affine involutions supply the exact checkpoint branches used by the hull skew product and reversor
+TM-CHECKPOINT-HULL-STABLE-IMAGE	DEF-SELECTOR	REQUIRES	the live sheet selector supplies the branch law lifted from the sheet graph to the full checkpoint hull
+TM-CHECKPOINT-HULL-STABLE-IMAGE	TM-SHEET-SYNCHRONIZING-GRAPH	REQUIRES	the invariant sheet graph and sharp nine-step synchronization are the exact inputs lifted to the full checkpoint stable image
+PHOTON-CONE-CONVERGENCE	PHOTON-HERM2-TANGENT-GERM	REQUIRES	the exact local Hermitian tangent germ is a fixed consumed endpoint and is no longer part of the remaining global debt
+PHOTON-CONE-CONVERGENCE	PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION	BOUNDED_BY	the natural separated inversion-equivariant single-chart vector class is empty while broader multichart, twisted, frequency-mixing and higher-rank classes remain unclassified

@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 352)
+        self.assertEqual(self.report.claims, 360)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 34, "D": 45, "F": 17, "H": 2, "O": 29, "T": 225},
+            {"C": 34, "D": 45, "F": 17, "H": 2, "O": 29, "T": 233},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 47,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 265,
+                "two-architecture": 273,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,9 +43,13 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 178)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 241
+            len(self.report.transitive_architecture_dependents), 242
         )
-        self.assertEqual(len(self.report.dependency_terminals), 53)
+        self.assertEqual(len(self.report.dependency_terminals), 54)
+        self.assertIn(
+            "JIPC-WP3D-QPOS-SCALAR-SLICE",
+            self.report.dependency_terminals,
+        )
         self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
         self.assertNotIn(
             "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
