@@ -205,23 +205,23 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 225, "D": 45, "C": 34, "F": 17,
+    expected_counts = {"T": 233, "D": 45, "C": 34, "F": 17,
                        "O": 29, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v74",
-        len(rows) == 352
+        "registry and companion-ledger counts match Public Canon v75",
+        len(rows) == 360
         and counts == expected_counts
-        and len(normative) == 398
-        and len(dependencies) == 648
-        and len(evidence) == 352
-        and two_architecture == 265
-        and len(history) == 882
+        and len(normative) == 406
+        and len(dependencies) == 662
+        and len(evidence) == 360
+        and two_architecture == 273
+        and len(history) == 891
         and len(gates) == 14
         and len(programs) == 31
         and len({row["program_id"] for row in programs.values()}) == 8
         and len(core_selection_rows) == 30
-        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
+        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 24,
     ))
 
     checks.append((
@@ -5283,13 +5283,6 @@ def run():
         ("PHOTON-MASSLESS-PHASE", "PHOTON-WILSON-VILLAIN-FINITE-COUPLING-NONMEMBERSHIP", "BOUNDED_BY"): "898d9103e3f4a17b53b8888f33eeaaba959bb313d39989c0692e51110dea958d",
     }
     v72_gate_contract = {
-        "GATE-L4-L5-PHOTON-CONE-IDENTIFICATION": {
-            "owner": "PHOTON-CONE-CONVERGENCE",
-            "source": "L4",
-            "target": "L5",
-            "markers": ("exact equality of null sets", "otherwise STOP"),
-            "row_sha": "324b9bf5abdbb44539a0f4e4dec1d0a239a8885cfba4c38fd4c65010be21ea63",
-        },
         "GATE-L4-L6-PHOTON-MASSLESS-PHASE": {
             "owner": "PHOTON-MASSLESS-PHASE",
             "source": "L4",
@@ -5340,7 +5333,7 @@ def run():
     v72_photon_gate_ids = set(v72_gate_contract)
     v72_owned_gate_ids = {
         gate_id for gate_id, row in gates.items()
-        if row["owner_item_id"] in v72_claims
+        if row["owner_item_id"] == "PHOTON-MASSLESS-PHASE"
     }
     v72_canon_start = canon_text.find("### FCC-WEIGHTED-SHELL-SYMBOL [T]")
     v72_canon_end = (
@@ -5354,7 +5347,7 @@ def run():
     checks.append((
         "V72-PHOTON",
         "the v72 boundary theorems and declarations remain pinned while the "
-        "Herm2-cone and massless routes stay O/STOP",
+        "massless route stays O/STOP and later folds own the cone route",
         all(
             has_status(index, claim, contract["status"])
             and scope_sha256(index, claim) == contract["scope_sha"]
@@ -5688,26 +5681,6 @@ def run():
                 "physical photon",
             ),
         },
-        "PHOTON-CONE-CONVERGENCE": {
-            "status": "O",
-            "item_type": "OBLIGATION",
-            "layer": "MULTI",
-            "gate_ids": "GATE-L4-L5-PHOTON-CONE-IDENTIFICATION",
-            "row_sha": "448d04f1dfdec5090b0ef962a14e32aa97cb72ca8be735b75ab225a2c265854c",
-            "scope_sha": "f67b713037517aac2a0f2ca119b7f7176e0c49f6ad4414031353cd67c9577853",
-            "evidence_kind": "INLINE_CANON",
-            "location": "inline",
-            "evidence_sha": "f67b713037517aac2a0f2ca119b7f7176e0c49f6ad4414031353cd67c9577853",
-            "hash_mode": "registry-scope-sha256-v1",
-            "architecture": "none",
-            "scope_markers": (
-                "remaining open MULTI decision after the L2-to-L5 route is fixed",
-                "separately public L4 Herm2 quadratic carrier",
-                "not characteristic-function convergence",
-                "no Lorentz invariance",
-                "physical-photon conclusion",
-            ),
-        },
     }
     v74_dependencies = {
         "PHOTON-SPATIAL-TEMPORAL-TRANSFER": {
@@ -5717,12 +5690,6 @@ def run():
         },
         "PHOTON-TEMPORAL-CHARACTERISTIC": {
             ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "BOUNDED_BY"),
-        },
-        "PHOTON-CONE-CONVERGENCE": {
-            ("DEF-ACTION-LAYERS", "REQUIRES"),
-            ("CENTRAL-LIFT-PHASE", "BOUNDED_BY"),
-            ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "REQUIRES"),
-            ("PHOTON-TEMPORAL-CHARACTERISTIC", "REQUIRES"),
         },
     }
     v74_dependency_hashes = {
@@ -5734,14 +5701,6 @@ def run():
             "0ba4d0fe90d4d1d6f5c00c5c1b493d80c97e0fc58366a881d68a49e0d05e7453",
         ("PHOTON-TEMPORAL-CHARACTERISTIC", "PHOTON-SPATIAL-TEMPORAL-TRANSFER", "BOUNDED_BY"):
             "748aab7ab1efbc50cf12fe28c21917d183b7a10d483bf554bfab0202510263a7",
-        ("PHOTON-CONE-CONVERGENCE", "DEF-ACTION-LAYERS", "REQUIRES"):
-            "4bd6904d69bdb26a28fdaa500e0a8183cce88f603174400904bf57e398b35849",
-        ("PHOTON-CONE-CONVERGENCE", "CENTRAL-LIFT-PHASE", "BOUNDED_BY"):
-            "0f5cf0861f55dbe6ba17ca92dbebad344ece685bdd1fba2eb8e44710a3fd573e",
-        ("PHOTON-CONE-CONVERGENCE", "PHOTON-SPATIAL-TEMPORAL-TRANSFER", "REQUIRES"):
-            "84fc6f9c21f0ca9ba369693a6e8dce02ba13c91f8087ed8bdfef1dae4dc26d88",
-        ("PHOTON-CONE-CONVERGENCE", "PHOTON-TEMPORAL-CHARACTERISTIC", "REQUIRES"):
-            "0e570e01ecf4de0a817614223895e6980f8b739b630c31c55eeaccdaa97ce3c2",
     }
     v74_expected_consumers = {
         "FCC-WEIGHTED-SHELL-SYMBOL": {
@@ -5754,9 +5713,12 @@ def run():
         "PHOTON-SPATIAL-TEMPORAL-TRANSFER": {
             ("PHOTON-TEMPORAL-CHARACTERISTIC", "BOUNDED_BY"),
             ("PHOTON-CONE-CONVERGENCE", "REQUIRES"),
+            ("PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION", "BOUNDED_BY"),
         },
         "PHOTON-TEMPORAL-CHARACTERISTIC": {
             ("PHOTON-CONE-CONVERGENCE", "REQUIRES"),
+            ("MATTER-SCALAR-TEMPORAL-CHARACTERISTIC", "REQUIRES"),
+            ("PHOTON-HERM2-TANGENT-GERM", "REQUIRES"),
         },
         "PHOTON-CONE-CONVERGENCE": set(),
     }
@@ -5821,18 +5783,12 @@ def run():
             "markers": ("closed at status D", "supported by", "no Herm2 carrier"),
             "row_sha": "14e3328125b6b1dd653b697178ecd1320c1923434d787b21b381a9613937c74d",
         },
-        "GATE-L4-L5-PHOTON-CONE-IDENTIFICATION": {
-            "owner": "PHOTON-CONE-CONVERGENCE",
-            "source": "L4", "target": "L5", "kind": "OPEN_LIFT",
-            "markers": ("exact equality of null sets", "otherwise STOP"),
-            "row_sha": "324b9bf5abdbb44539a0f4e4dec1d0a239a8885cfba4c38fd4c65010be21ea63",
-        },
     }
     v74_dt_start = canon_text.find(
         "### PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]"
     )
     v74_dt_end = canon_text.find(
-        "### PHOTON-Z5-STAR-QUADRATURE [C]", v74_dt_start
+        "### PHOTON-HERM2-TANGENT-GERM [T]", v74_dt_start
     )
     v74_dt_block = (
         canon_text[v74_dt_start:v74_dt_end]
@@ -5849,8 +5805,8 @@ def run():
     checks.append((
         "V74-PHOTON",
         "selected D3 transfer enters at D/MULTI and its exact characteristic "
-        "at T/L5, closing only the L2-to-L5 dictionary lift while the Herm2 "
-        "cone route stays O/STOP",
+        "at T/L5, closing the L2-to-L5 dictionary lift while v75 owns the "
+        "later Herm2 and global-carrier disposition",
         all(
             has_status(index, claim, contract["status"])
             and scope_sha256(index, claim) == contract["scope_sha"]
@@ -5943,19 +5899,270 @@ def run():
         and len(v74_dt_block.encode("utf-8")) == 4216
         and hashlib.sha256(v74_dt_block.encode("utf-8")).hexdigest()
         == "04de7998932b896c0a62a9c9d7e1a29e31a2e5ce3c37f23d2b3e56e64428ad2d"
-        and len(v74_successor_block.encode("utf-8")) == 2198
-        and hashlib.sha256(v74_successor_block.encode("utf-8")).hexdigest()
-        == "112b95be0baeff5bbee514c9ee2ca0a0f396634881766bdb6f8ffd20e37415ca"
         and all(
             phrase in canon_text
             for phrase in (
-                "The L2-to-L5 temporal-characteristic gate is\ntherefore closed positively as a dictionary lift.",
-                "The L4-to-L5 identification gate therefore remains `OPEN_LIFT`.",
-                "unit-modulus phases; they are not a\ncontraction/expansion pair",
+                "The L2-to-L5 temporal-characteristic gate is\nclosed positively as a dictionary lift.",
+                "unit-modulus phases, not a contraction/expansion pair",
                 "No Herm2 carrier, positive cone,\nBorn rule",
                 "interpretation is neither assumed nor refuted.",
             )
         )
+    ))
+
+    v75_contract = {
+        "JIPC-WP3D-QPOS-SCALAR-SLICE": {
+            "layer": "L1", "section": "4. The two places",
+            "source": "canon/CANON.md::4. The two places",
+            "scope": "a51bdf354575dfd530f0ca5574f3b0b3cf3b1e7862a1390d15c810b645195dc7",
+            "row": "2191b0c35918bf45d95e6c0016fd856326fc1688ee3f76fdad272a3940fec89c",
+            "location": "probes/P-JIPC-WP3D-QPOS-MELLIN-1",
+            "bundle": "11d95eb9b0ede432f55bb2d2d7bafa37182ad51304b3a353005bcdda0bd116ad",
+            "markers": ("positive rational", "written proof", "no irrational or complex"),
+        },
+        "MATTER-SCALAR-TEMPORAL-CHARACTERISTIC": {
+            "layer": "L5", "section": "9. The photon and the electron",
+            "source": "canon/CANON.md::9. The photon and the electron",
+            "scope": "d4c4487c1d3cf13feb03da42a56de833f55a47dffbccda8e8996b418a4fea5eb",
+            "row": "9a14d7195d3cfc31a92e944ff68bb0d16978c3ff00c0d61d5cd1cb73dcb77c55",
+            "location": "probes/P-MATTER-SCALAR-TEMPORAL-CHARACTERISTIC-1",
+            "bundle": "ca4917c2e2c48cc4a3c62d33a3d0be5211b00740a5bb8d3096f4ba1eb5d4d1f2",
+            "markers": ("dimensionless", "20/9", "physical mass"),
+        },
+        "MATTER-SCALAR-BRANCH-CLASSIFICATION": {
+            "layer": "L5", "section": "9. The photon and the electron",
+            "source": "canon/CANON.md::9. The photon and the electron",
+            "scope": "485032bc07738f9147600648718aec7e0a4f84592b9b792643e256220ce31e6e",
+            "row": "22fb41d08e4a3048e525008e192a72db30b76c8a28db297efeb1f09870098fe3",
+            "location": "probes/P-MATTER-SCALAR-TEMPORAL-CHARACTERISTIC-1",
+            "bundle": "ca4917c2e2c48cc4a3c62d33a3d0be5211b00740a5bb8d3096f4ba1eb5d4d1f2",
+            "markers": ("q=0", "q>4", "not particle content"),
+        },
+        "MATTER-SCALAR-MASSIVE-GERM": {
+            "layer": "MULTI", "section": "9. The photon and the electron",
+            "source": "canon/CANON.md::9. The photon and the electron",
+            "scope": "351027804da90de69abf8d1de75c2ee18ff6fd021c51feee14711cc51a695fcb",
+            "row": "fa1bd34b2b6a39dabfe6370fb2aa84996cbe7e1c19fae29f5829f86315ae4941",
+            "location": "probes/P-MATTER-SCALAR-TEMPORAL-CHARACTERISTIC-1",
+            "bundle": "ca4917c2e2c48cc4a3c62d33a3d0be5211b00740a5bb8d3096f4ba1eb5d4d1f2",
+            "markers": ("fixed M>0", "unique member of the power family", "SI mass"),
+        },
+        "PHOTON-HERM2-TANGENT-GERM": {
+            "layer": "MULTI", "section": "9. The photon and the electron",
+            "source": "canon/CANON.md::9. The photon and the electron",
+            "scope": "0d21b720c172ebcacd7c306890dad64c822be68cad98ce26868aa415b0f0e685",
+            "row": "15eba91ea36f4570e2fe269b48f454ed0cf6d299bcea08543882b8e6a71c329e",
+            "location": "probes/P-PHOTON-HERM2-GERM-AND-GLOBAL-OBSTRUCTION-1",
+            "bundle": "6a5d66e6770a2514af48422db58e79dd6abcc1b4b2df13bc2fa77f5aec0aaa70",
+            "markers": ("same exact quadratic germ", "not exact equality", "apparatus or photon"),
+        },
+        "PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION": {
+            "layer": "MULTI", "section": "9. The photon and the electron",
+            "source": "canon/CANON.md::9. The photon and the electron",
+            "scope": "ef1f18ffb0e38bba049b80e81cea3024b038705ee938ecccc25ef2482b1c0448",
+            "row": "1c69d06947e880e0c6503b569fa1deb8958b11aea62e0b8101fd4993dba9ecbb",
+            "location": "probes/P-PHOTON-HERM2-GERM-AND-GLOBAL-OBSTRUCTION-1",
+            "bundle": "6a5d66e6770a2514af48422db58e79dd6abcc1b4b2df13bc2fa77f5aec0aaa70",
+            "markers": ("two-torsion", "is empty", "multichart or twisted-bundle"),
+        },
+        "QDD-DIRECT-RECORD-E-NONCONGRUENCE": {
+            "layer": "L1", "section": "2. Time, space, and the decoder",
+            "source": "canon/CANON.md::QDD Route A dictionary",
+            "scope": "d973ba0e43d2ef928bc89e3bef90ddd93bbb8a0350ece971f0d5291681d4d477",
+            "row": "77b7f34d29a85a0bd6d530b4332b080c3ac2c60508231b4b02f194d97435a687",
+            "location": "probes/P-QDD-DIRECT-RECORD-E-NONCONGRUENCE-1",
+            "bundle": "e84e94d407c2f9e1c1d3d5d6bca6681dd11fecd363e202f60b9c92d4e6d823b0",
+            "markers": ("exactly 313", "zero-centre control", "contextual, stream-level"),
+        },
+        "TM-CHECKPOINT-HULL-STABLE-IMAGE": {
+            "layer": "L1", "section": "3. The kernel and the census",
+            "source": "canon/CANON.md::3. The kernel and the census",
+            "scope": "f5cf225cf3abba81040b62e97cd2391fbaf52a1befb719bf023d9dbddfa05f0d",
+            "row": "3abd4793c875b13cddd219114533aa6df19bdb0d85d4a4bd21c3b4cd90eb3ecb",
+            "location": "probes/P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1",
+            "bundle": "2ff3871d715eddfc2c5346d236949039975aeefcd18e964a29d97bdc44d7eebb",
+            "markers": ("exactly V_hull^9", "involutive reversor", "not identified with public U"),
+        },
+    }
+    v75_dependencies = {
+        "JIPC-WP3D-QPOS-SCALAR-SLICE": set(),
+        "MATTER-SCALAR-TEMPORAL-CHARACTERISTIC": {
+            ("PHOTON-TEMPORAL-CHARACTERISTIC", "REQUIRES"),
+        },
+        "MATTER-SCALAR-BRANCH-CLASSIFICATION": {
+            ("MATTER-SCALAR-TEMPORAL-CHARACTERISTIC", "REQUIRES"),
+        },
+        "MATTER-SCALAR-MASSIVE-GERM": {
+            ("MATTER-SCALAR-TEMPORAL-CHARACTERISTIC", "REQUIRES"),
+            ("PHOTON-HERM2-TANGENT-GERM", "REQUIRES"),
+        },
+        "PHOTON-HERM2-TANGENT-GERM": {
+            ("PHOTON-TEMPORAL-CHARACTERISTIC", "REQUIRES"),
+        },
+        "PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION": {
+            ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "BOUNDED_BY"),
+        },
+        "QDD-DIRECT-RECORD-E-NONCONGRUENCE": {
+            ("DEF-AUTONOMOUS-STATE", "REQUIRES"),
+            ("QDD-ALGEBRAIC-FACTORIZATION", "REQUIRES"),
+            ("QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"),
+        },
+        "TM-CHECKPOINT-HULL-STABLE-IMAGE": {
+            ("DEF-KERNEL-GENERATORS", "REQUIRES"),
+            ("DEF-SELECTOR", "REQUIRES"),
+            ("TM-SHEET-SYNCHRONIZING-GRAPH", "REQUIRES"),
+        },
+        "PHOTON-CONE-CONVERGENCE": {
+            ("DEF-ACTION-LAYERS", "REQUIRES"),
+            ("CENTRAL-LIFT-PHASE", "BOUNDED_BY"),
+            ("PHOTON-SPATIAL-TEMPORAL-TRANSFER", "REQUIRES"),
+            ("PHOTON-TEMPORAL-CHARACTERISTIC", "REQUIRES"),
+            ("PHOTON-HERM2-TANGENT-GERM", "REQUIRES"),
+            ("PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION", "BOUNDED_BY"),
+        },
+    }
+    v75_dependency_hashes = {
+        ("MATTER-SCALAR-TEMPORAL-CHARACTERISTIC", "PHOTON-TEMPORAL-CHARACTERISTIC", "REQUIRES"): "e12254c46974cef93079fc707512b0dbe4d853ceff6ff2fc560acb51a699fb4d",
+        ("MATTER-SCALAR-BRANCH-CLASSIFICATION", "MATTER-SCALAR-TEMPORAL-CHARACTERISTIC", "REQUIRES"): "b5b004eab60fcc6fe9304d721c2e87e4897b329b01e55dc3c94f4fa439845336",
+        ("MATTER-SCALAR-MASSIVE-GERM", "MATTER-SCALAR-TEMPORAL-CHARACTERISTIC", "REQUIRES"): "b919cced8cb4e2621e7e18b27858463af222768319756f3028a3a465f56b2543",
+        ("MATTER-SCALAR-MASSIVE-GERM", "PHOTON-HERM2-TANGENT-GERM", "REQUIRES"): "3d2673981183a0a22ca4b0fb7923da90984c587eec30a407f44ae526ab1ac466",
+        ("PHOTON-HERM2-TANGENT-GERM", "PHOTON-TEMPORAL-CHARACTERISTIC", "REQUIRES"): "f849b94ec7e3af9ce98a3fa82187c8d98a1f6859805a536e84c5c81fed527f49",
+        ("PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION", "PHOTON-SPATIAL-TEMPORAL-TRANSFER", "BOUNDED_BY"): "53bd6c9f8ecb204d67352eac8ce631d9f561c80bd85fdd68140750a9662f54d4",
+        ("QDD-DIRECT-RECORD-E-NONCONGRUENCE", "DEF-AUTONOMOUS-STATE", "REQUIRES"): "5d9fa8ffcad76d839b63d651ef5da289f02e47eb639909a63fbeb7fc6cd59a2f",
+        ("QDD-DIRECT-RECORD-E-NONCONGRUENCE", "QDD-ALGEBRAIC-FACTORIZATION", "REQUIRES"): "6b2c84e924cba822d3b21df270e76ba984c18e263b4aa09cee93846c68d11f89",
+        ("QDD-DIRECT-RECORD-E-NONCONGRUENCE", "QDD-INSTRUMENT-APPARATUS", "BOUNDED_BY"): "a3ddc744d6d52cefc31f6eabcfef1a0fa5348d255ddd19c1f4599d8154244a80",
+        ("TM-CHECKPOINT-HULL-STABLE-IMAGE", "DEF-KERNEL-GENERATORS", "REQUIRES"): "bdcd3400914bd682964691b80ac97cb7c5e6e1855f4874dce36f64e7a22e171a",
+        ("TM-CHECKPOINT-HULL-STABLE-IMAGE", "DEF-SELECTOR", "REQUIRES"): "33a1cd35b8c656db5db105eea003d02d8889544293a73f9a756fdbe48b017ddf",
+        ("TM-CHECKPOINT-HULL-STABLE-IMAGE", "TM-SHEET-SYNCHRONIZING-GRAPH", "REQUIRES"): "84f312a338a4f58897b6c0a49b7a71e6aa361cde05b23299915d44798fe288d5",
+        ("PHOTON-CONE-CONVERGENCE", "DEF-ACTION-LAYERS", "REQUIRES"): "c638f52b92f436f365576bd18fca072d588bd15b866f8a0807e031eb1d9850e8",
+        ("PHOTON-CONE-CONVERGENCE", "CENTRAL-LIFT-PHASE", "BOUNDED_BY"): "4c4c10082e52ca01a32de03b681e875427ba5228214df234b87eeaeb31c22a1d",
+        ("PHOTON-CONE-CONVERGENCE", "PHOTON-SPATIAL-TEMPORAL-TRANSFER", "REQUIRES"): "878e099160b534bd12c4e96a8f2f0caaf9b93a14ab5a17bb7a56153c3d2d42f9",
+        ("PHOTON-CONE-CONVERGENCE", "PHOTON-TEMPORAL-CHARACTERISTIC", "REQUIRES"): "a0bbff1c179b980ea2312bd9d2b2b43243ea8e07a5c6523c0a727140d6eac656",
+        ("PHOTON-CONE-CONVERGENCE", "PHOTON-HERM2-TANGENT-GERM", "REQUIRES"): "37cfcecd1fae146081128cc3dbc313d449815bdf2cfe00d8dd280d427aeb3fb4",
+        ("PHOTON-CONE-CONVERGENCE", "PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION", "BOUNDED_BY"): "f4cca9141354150a654333da2507bab2ba5b0f1fc8eb41fa0401d1b4fc4f38c9",
+    }
+    v75_history_hashes = {
+        "CANON75-DECLARE-JIPC-WP3D-QPOS-SCALAR-SLICE": "df0e1308b39898304c0e1ee4e6365ccf4b6ae52a918ca1d6fd35a02f511b0181",
+        "CANON75-DECLARE-MATTER-SCALAR-TEMPORAL-CHARACTERISTIC": "9d79390cccc9cd42b3211dc82ac2152fd4c603db5d90e3914094985025da8391",
+        "CANON75-DECLARE-MATTER-SCALAR-BRANCH-CLASSIFICATION": "283089f336688d641520ccf90bc68456220639c9886057395324bb89d4385fb2",
+        "CANON75-DECLARE-MATTER-SCALAR-MASSIVE-GERM": "27dc70b5ad3bab4a7fc851a20cd6221d56e51c64d0aa35516f269952fb9409d2",
+        "CANON75-DECLARE-PHOTON-HERM2-TANGENT-GERM": "3b938f1424a2dda6fbdedec636f5f27640f881a89e903fde6aad77320c65a3b7",
+        "CANON75-DECLARE-PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION": "3e633e148443b62b7cac4aeebdb2aa81da4f3e7da6955fa897ba966edd6e0677",
+        "CANON75-DECLARE-QDD-DIRECT-RECORD-E-NONCONGRUENCE": "080e19f029cee606fed6f73b82a0da1d60b9116c632ac20ab479bcb224136931",
+        "CANON75-DECLARE-TM-CHECKPOINT-HULL-STABLE-IMAGE": "09e7a15b430232a2d42ef83c24ddef51f3124375c2b65fac76085b1c31956915",
+        "CANON75-SCOPE-PHOTON-CONE-CONVERGENCE": "af639028ecaaded685c17842ea79bcf5ae279a9aa15e4ac538e70cf588d1a663",
+    }
+    v75_claims = set(v75_contract)
+    v75_dependency_items = v75_claims | {"PHOTON-CONE-CONVERGENCE"}
+    v75_actual_dependencies = {
+        claim: {
+            (row["depends_on"], row["relation"])
+            for row in dependencies if row["item_id"] == claim
+        }
+        for claim in v75_dependency_items
+    }
+    v75_actual_dependency_hashes = {
+        (row["item_id"], row["depends_on"], row["relation"]):
+            table_row_sha256(row)
+        for row in dependencies if row["item_id"] in v75_dependency_items
+    }
+    v75_history = [
+        row for row in history if row["release"] == "canon-v75-candidate"
+    ]
+    v75_history_by_event = {row["event_id"]: row for row in v75_history}
+    v75_bad_claim = "TM-FOURPHASE-HULL-NONDESCENT"
+    v75_bad_probe = "P-TM-FOURPHASE-HULL-NONDESCENT-1"
+    checks.append((
+        "V75-CLOSURE",
+        "eight qualified theorems enter at exact scope while the photon germ "
+        "closes locally, the broader global carrier stays O, and the stopped "
+        "four-phase probe remains excluded",
+        all(
+            has_status(index, claim, "T")
+            and scope_sha256(index, claim) == contract["scope"]
+            and registry_row_sha256(index, claim) == contract["row"]
+            and index[claim]["canon_section"] == contract["section"]
+            and scope_contains_all(index, claim, contract["markers"])
+            and normative[claim]["item_type"] == "THEOREM"
+            and normative[claim]["claim_id"] == claim
+            and normative[claim]["status"] == "T"
+            and normative[claim]["layer"] == contract["layer"]
+            and normative[claim]["gate_ids"] == ""
+            and normative[claim]["statement_source"] == contract["source"]
+            and evidence[claim]["evidence_id"] == "EV-" + claim
+            and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+            and evidence[claim]["location"] == contract["location"]
+            and evidence[claim]["sha256"] == contract["bundle"]
+            and evidence[claim]["hash_mode"] == "bundle-manifest-sha256-v1"
+            and evidence[claim]["architecture_requirement"] == "two-architecture"
+            and f"### {claim} [T]" in canon_text
+            for claim, contract in v75_contract.items()
+        )
+        and v75_actual_dependencies == v75_dependencies
+        and v75_actual_dependency_hashes == v75_dependency_hashes
+        and len(v75_history) == 9
+        and set(v75_history_by_event) == set(v75_history_hashes)
+        and all(
+            row["event_date"] == "2026-09-02"
+            and row["release"] == "canon-v75-candidate"
+            and table_row_sha256(row) == v75_history_hashes[event_id]
+            and row["scope_sha256"] == scope_sha256(index, row["claim_id"])
+            and row["evidence_id"] == evidence[row["claim_id"]]["evidence_id"]
+            and row["evidence_location"] == evidence[row["claim_id"]]["location"]
+            and row["evidence_sha256"] == evidence[row["claim_id"]]["sha256"]
+            and (
+                row["event_sequence"] == "1"
+                and row["event_type"] == "DECLARE"
+                and row["previous_status"] == "-"
+                and row["new_status"] == "T"
+                if row["claim_id"] in v75_claims
+                else row["event_sequence"] == "3"
+                and row["event_type"] == "SCOPE_CHANGE"
+                and row["previous_status"] == "O"
+                and row["new_status"] == "O"
+            )
+            for event_id, row in v75_history_by_event.items()
+        )
+        and has_status(index, "PHOTON-CONE-CONVERGENCE", "O")
+        and scope_sha256(index, "PHOTON-CONE-CONVERGENCE")
+        == "5c97f9bed2b084b792ed3f83e75507dd0bf9880d8191c7ff0e53712cdd9db245"
+        and registry_row_sha256(index, "PHOTON-CONE-CONVERGENCE")
+        == "d28ab8402d271dae36fe19861d007f807b03c3033bcf2c36f0a355b2c24119fc"
+        and normative["PHOTON-CONE-CONVERGENCE"]["gate_ids"]
+        == "GATE-L4-L5-PHOTON-GLOBAL-CARRIER"
+        and evidence["PHOTON-CONE-CONVERGENCE"]["sha256"]
+        == "5c97f9bed2b084b792ed3f83e75507dd0bf9880d8191c7ff0e53712cdd9db245"
+        and "GATE-L4-L5-PHOTON-CONE-IDENTIFICATION" not in gates
+        and "GATE-L4-L5-PHOTON-GLOBAL-CARRIER" in gates
+        and gates["GATE-L4-L5-PHOTON-GLOBAL-CARRIER"]["owner_item_id"]
+        == "PHOTON-CONE-CONVERGENCE"
+        and gates["GATE-L4-L5-PHOTON-GLOBAL-CARRIER"]["from_layer"] == "L4"
+        and gates["GATE-L4-L5-PHOTON-GLOBAL-CARRIER"]["to_layer"] == "L5"
+        and gates["GATE-L4-L5-PHOTON-GLOBAL-CARRIER"]["gate_kind"] == "OPEN_LIFT"
+        and table_row_sha256(gates["GATE-L4-L5-PHOTON-GLOBAL-CARRIER"])
+        == "a0ba8c014ec012acf082f8a45e010d0161b7e6a5e5077472dd2266318596a711"
+        and all(
+            claim not in programs
+            and all(row["owner_item_id"] != claim for row in gates.values())
+            and all(row["claim_id"] != claim for row in core_selection_rows)
+            and f"- {claim} [" not in frontier_text
+            and f"- {claim} [" not in core_text
+            for claim in v75_claims
+        )
+        and v75_bad_claim not in index
+        and v75_bad_claim not in normative
+        and v75_bad_claim not in evidence
+        and v75_bad_claim not in programs
+        and all(
+            v75_bad_claim not in row["item_id"]
+            and v75_bad_claim not in row["depends_on"]
+            for row in dependencies
+        )
+        and all(v75_bad_claim not in row["claim_id"] for row in history)
+        and all(v75_bad_probe not in row["location"] for row in evidence.values())
+        and all(v75_bad_probe not in row["evidence_location"] for row in history)
+        and v75_bad_claim not in canon_text
+        and v75_bad_probe not in canon_text
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
