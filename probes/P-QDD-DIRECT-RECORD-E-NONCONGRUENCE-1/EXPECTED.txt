@@ -1,0 +1,8 @@
+PASS G1 balanced F5 piston carrier and negation law
+PASS G2 declared e piston action is the affine involution c-p
+PASS G3 complete record quotient has 313 classes with profile 1+312x2
+PASS G4 all 312 nonzero sign pairs have equal five-field input records
+PASS G5 shifted mirror e splits exactly 312 of 312 nonzero record fibres
+PASS G6 explicit witness has one input record and two exact output records
+PASS G7 zero-centre mirror descends; the nonzero affine centre is decisive
+RESULT 7/7 ALL PASS QDD-DIRECT-RECORD-E-NONCONGRUENCE

@@ -221,7 +221,7 @@ def run():
         and len(programs) == 31
         and len({row["program_id"] for row in programs.values()}) == 8
         and len(core_selection_rows) == 30
-        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 23,
+        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 24,
     ))
 
     checks.append((

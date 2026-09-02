@@ -165,7 +165,7 @@ determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
 
-The current v74 count check reads 352 claims, 23 reproductions, 14 gates and
+The current v74 count check reads 352 claims, 24 reproductions, 14 gates and
 648 dependency edges. The active partition is T225/D45/C34/H2/O29/F17, so
 the live H+O count is 31 and the two-architecture evidence count is 265.
 `V72-PHOTON` preserves the immutable declarations, stable boundary theorems,

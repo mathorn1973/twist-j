@@ -1,0 +1,16 @@
+P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1 exact L1 audit
+target claim=TM-CHECKPOINT-HULL-STABLE-IMAGE
+authority=canon-v74 base=8c53ed0f1ab0ed60e10566cc4e3b5ae74334e0e9
+content commit=2561f7dcadcbbf683ce7b36219ea67378d879a5a
+canon sha256=2db550cb68f6f4ee33b9194f1f6b3bc4d8fec19cd79e79a702c5357577a92c0e
+I01 identity arguments=0 environment=5 claim-lock-resolved: PASS
+C01 generators involutions (bc)^5 trace-laws sheet-maps: PASS
+C02 all-ten-sheet-arrows full-leaf-bijections: PASS
+L01 substitution-popcount factor-counts finite-reversal dyadic-audit: PASS
+S01 SC1 branch-table=e,b,b,d invariant-full-leaf-maps: PASS
+S02 SC2 two-sided-inverse instances=112500: PASS
+S03 SC3 rho-and-reversor instances=112500: PASS
+S04 SC4 nine-step-stable-image unique-eight-obstruction sharp-witness: PASS
+S05 SC5 explicit-full-hull-collision: PASS
+S06 SC6 finite-natural-extension-reductions written-proof-load-bearing: PASS
+RESULT PASS gates=9 scope=SC1-SC6 layer=L1
