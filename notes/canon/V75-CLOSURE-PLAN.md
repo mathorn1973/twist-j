@@ -1,165 +1,113 @@
-# V75 closure plan
+# V75 closure plan and reconciliation
 
-**Status:** `NON-CANONICAL / PLANNING NOTE / NO AUTHORITY / NO STATUS CHANGE`
+**Status:** `NON-CANONICAL / PLANNING NOTE / RECONCILED AGAINST canon-v75 / NO AUTHORITY / NO STATUS CHANGE`
 
-**Date:** 2026-09-02
+**Date:** 2026-09-02, written before the v75 fold and reconciled the same day
+after the activation of Public Canon v75
 
-This note proposes what a Public Canon v75 fold can close and what it must
-leave open. It is not a probe, preregistration, result, promotion package,
-evidence record, or release instruction. It creates no claim, status, scope,
-dependency, gate, or evidence credit. Every item below moves only through the
-ordinary reviewed fold procedure in `POLICY.md` and `AGENTS.md`.
+This note records what was proposed for Public Canon v75, what the released
+fold actually did, and what carries forward. It is not a probe,
+preregistration, result, promotion package, evidence record, or release
+instruction. It creates no claim, status, scope, dependency, gate, or evidence
+credit.
 
-## 1. Authority at writing
+## 1. Authority at reconciliation
 
 ```text
 STATE:           ACTIVE
-CANON:           Public Canon v74
+CANON:           Public Canon v75
 AUTHORITY:       mathorn1973/twist-j main
-TAG:             canon-v74
-CONTENT_COMMIT:  2561f7dcadcbbf683ce7b36219ea67378d879a5a
-CANON_SHA256:    2db550cb68f6f4ee33b9194f1f6b3bc4d8fec19cd79e79a702c5357577a92c0e
-CANON_BYTES:     389246
-BASE_MAIN:       dfc21dfe97ed69ebe15ea9af1a7922bb666854f8
-REGISTRY_ROWS:   352
+TAG:             canon-v75
+CONTENT_COMMIT:  e32e85ed7297d4320df5b345e4488d78323d550c
+CANON_SHA256:    44130160a3ce29bfcdc757e255d2d1c25a010b22911edfe66cf6b132be081fbe
+CANON_BYTES:     399513
+BASE_MAIN:       c4f00e1d9c89f503d913224dc3c09dc760dcec9d
+REGISTRY_ROWS:   360
 LIVE_H_O:        31
-CHECKERS:        check_canon PASS, check_ledger PASS, check_policy PASS
 ```
 
-Updated 2026-09-02 after the merges of PR #779 (maintenance), PR #784
-(`P-QDD-DIRECT-RECORD-E-NONCONGRUENCE-1`) and PR #785
-(`P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1`) into `main`. The v74 content
-identity is unchanged; only the base `main` commit and the probe inventory
-moved.
+The plan below was drafted against Public Canon v74 at `main`
+`8c53ed0f1ab0ed60e10566cc4e3b5ae74334e0e9` with 352 registry rows.
 
-## 2. Verdict
+## 2. What was proposed
 
-Public `main` already carries five merged probes after v74 whose
-`candidate-T` results were never registered. Together with the one headless
-probe still in review, that is one honest "earned results" fold in which
-statuses actually move.
+The plan proposed one "earned results" fold registering only theorem-grade
+results already carried by merged two-architecture probes, and it proposed
+deferring the foundational wording package
+`notes/canon/PROMO-FOUNDATIONAL-SPLIT-V75.md` to a separate fold because that
+package requires a byte-identical Registry, Frontier, `NORMATIVE.tsv`,
+`DEPENDENCIES.tsv`, and `GATES.tsv`.
 
-The foundational wording package
-`notes/canon/PROMO-FOUNDATIONAL-SPLIT-V75.md` cannot share that fold: it
-requires byte-identical `REGISTRY.tsv`, `FRONTIER.md`, `NORMATIVE.tsv`,
-`DEPENDENCIES.tsv`, and `GATES.tsv`. Proposed split:
+Proposed content:
 
-```text
-v75   earned-results fold: registered theorems and one gate disposition
-v76   framework-wording fold: the already drafted A0 and CORE split,
-      with its "v75" references renumbered to "v76"
-```
-
-## 3. Content of the v75 fold
-
-### 3.1 Already merged on main, unregistered
-
-| Probe | Local status | Proposed rows | Effect |
-| --- | --- | --- | --- |
-| `P-JIPC-WP3D-QPOS-MELLIN-1` (PR #778) | candidate-T / L1 | 1 T | pure addition |
-| `P-MATTER-SCALAR-TEMPORAL-CHARACTERISTIC-1` | candidate-T | `MATTER-SCALAR-TEMPORAL-CHARACTERISTIC`, `MATTER-SCALAR-BRANCH-CLASSIFICATION`, `MATTER-SCALAR-MASSIVE-GERM` | opens the massive-kinematics lane as a separate lane |
-| `P-PHOTON-HERM2-GERM-AND-GLOBAL-OBSTRUCTION-1` | candidate-T | `PHOTON-HERM2-TANGENT-GERM`, `PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION`; `PHOTON-MASSIVE-SCALAR-GERM` duplicates the matter row | the only gate disposition available |
-| `P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1` (PR #785, issue #780, merged 2026-09-02) | candidate-T / L1, two-architecture PASS | 1 T / L1 | pure addition; no gate, no measure, no physical carrier |
-| `P-QDD-DIRECT-RECORD-E-NONCONGRUENCE-1` (PR #784, issue #782, merged 2026-09-02) | candidate-T / L1, two-architecture PASS | 1 T / L1 | negative boundary for pointwise record transformation only |
-
-### 3.2 In review, fold only after merge
-
-| Probe | Public state | Proposed row |
+| Source | Proposed rows | Proposed effect |
 | --- | --- | --- |
-| `P-TM-FOURPHASE-HULL-NONDESCENT-1` (PR #783, issue #781) | two-architecture PASS, unmerged | 1 T / L5 |
-| `P-TM-CORR-ZEROS-1` (PR #696, issue #694) | two-architecture PASS since 2026-08-31, unmerged | optional 1 T / L5; promotion note already in `notes/canon/PROMO-C-TM-CORR-ZEROS-1.md` |
+| `P-JIPC-WP3D-QPOS-MELLIN-1` (PR #778) | 1 T / L1 | pure addition |
+| `P-MATTER-SCALAR-TEMPORAL-CHARACTERISTIC-1` | 3 T | separate massive-kinematics lane |
+| `P-PHOTON-HERM2-GERM-AND-GLOBAL-OBSTRUCTION-1` | 2 T, with the massive-germ duplicate merged into the matter row | gate disposition |
+| `P-TM-CHECKPOINT-HULL-STABLE-IMAGE-1` (PR #785) | 1 T / L1 | pure addition |
+| `P-QDD-DIRECT-RECORD-E-NONCONGRUENCE-1` (PR #784) | 1 T / L1 | pointwise negative boundary |
+| `P-TM-FOURPHASE-HULL-NONDESCENT-1` (PR #783) | 1 T / L5, only after merge | pure addition |
+| `P-TM-CORR-ZEROS-1` (PR #696) | optional 1 T / L5 | optional |
+| photon cone gate | replace `GATE-L4-L5-PHOTON-CONE-IDENTIFICATION` by a germ disposition and a global-carrier gate; `SCOPE_CHANGE` on `PHOTON-CONE-CONVERGENCE [O]` | the only gate disposition available |
 
-Neither of these moves a gate or an `O` row. The dynamic reversor corollary
-built on the now public stable-image result stays outside v75.
+## 3. What Public Canon v75 did
 
-### 3.3 The one gate disposition
+Release PR #790, content commit `e32e85e`, activation commit `e1b5e8e`.
 
-`GATE-L4-L5-PHOTON-CONE-IDENTIFICATION` does not close as written: the
-Herm2 probe proves exact agreement of the quadratic germ, while the natural
-global separated equivariant class is empty and the arbitrary total class is
-unclassified. Following `notes/canon/PHOTON-PROGRAM-CLOSURE-V74.md`, the fold
-may replace the gate by two gates:
+| Item | Outcome in v75 | Agreement with the plan |
+| --- | --- | --- |
+| `JIPC-WP3D-QPOS-SCALAR-SLICE [T]` | declared | as proposed, under the released name |
+| `MATTER-SCALAR-TEMPORAL-CHARACTERISTIC [T]`, `MATTER-SCALAR-BRANCH-CLASSIFICATION [T]` | declared at L5 | as proposed |
+| `MATTER-SCALAR-MASSIVE-GERM [T]` | declared once at `MULTI` | duplicate merged as proposed |
+| `PHOTON-HERM2-TANGENT-GERM [T]`, `PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION [T]` | declared | as proposed |
+| `QDD-DIRECT-RECORD-E-NONCONGRUENCE [T]` | declared at L1 | as proposed |
+| `TM-CHECKPOINT-HULL-STABLE-IMAGE [T]` | declared at L1 | as proposed |
+| photon cone gate | `GATE-L4-L5-PHOTON-CONE-IDENTIFICATION` replaced, not passed, by `GATE-L4-L5-PHOTON-GLOBAL-CARRIER`; the local germ owns no gate; `PHOTON-CONE-CONVERGENCE [O]` scoped to the global-carrier question and kept `ROOT / STOP / FORMAL` | as proposed, with the germ gate omitted rather than closed |
+| `P-TM-FOURPHASE-HULL-NONDESCENT-1` | excluded; owner integrity review on PR #783 found the frozen `PREREG.md` verifier hash and byte count differ from the pinned and replayed `verify.py`, so the frozen threshold routes STOP with no scientific conclusion | deviation from the plan, forced by the integrity stop |
+| `P-TM-CORR-ZEROS-1` | not promoted | the plan left it optional |
+| foundational wording | not folded; A0 and CORE wording unchanged apart from the release identity | as proposed |
+| framework counts | claims 352 to 360, T 225 to 233, gates 14, live H/O 31, reproductions 24 | within the indicative range |
 
-```text
-GATE-L4-L5-PHOTON-CONE-GERM             closes AGREE on PHOTON-HERM2-TANGENT-GERM
-GATE-L4-L5-PHOTON-GLOBAL-CARRIER        remains OPEN_LIFT, research lane
-```
+The plan's indicative count of one additional gate did not materialize
+because the fold retired the old gate and declared exactly one successor.
 
-`PHOTON-CONE-CONVERGENCE [O]` then receives a `SCOPE_CHANGE` narrowing it to
-the global carrier question and stays `O / ROOT / STOP`. This is an owner
-governance decision recorded in `HISTORY.tsv`, not an automatic closure.
+## 4. Carry-forward after v75
 
-### 3.4 Indicative count movement
+1. **Framework wording fold.** `PROMO-FOUNDATIONAL-SPLIT-V75` is still
+   unapplied. Its `v75` references must be renumbered to the next version
+   before a framework-only fold with a byte-identical Registry.
+2. **Four-phase successor.** PR #783 and issue #781 are STOP on integrity and
+   must not be amended, rebased, repinned, or merged. Any retry needs a
+   separately claimed successor identifier and a fresh public pin.
+3. **PR #696 decision.** `P-TM-CORR-ZEROS-1` remains merge-ready with a
+   two-architecture PASS from 2026-08-31 and a promotion note under
+   `notes/canon/`. Registration stays optional.
+4. **Intake notes.** PRs #786 and #787 remain open as noncanonical material
+   with no status movement.
+5. **Dynamic QDD reversor corollary.** Now unblocked on the public
+   `TM-CHECKPOINT-HULL-STABLE-IMAGE [T]` dependency, but still requires its
+   own reserved identifier, definitions, and fold.
+6. **`PHOTON-MASSLESS-PHASE [O]`.** Production at `t=1` remains forbidden
+   until the F1 through F3 firewall in
+   `notes/canon/PHOTON-PRODUCTION-PREREG-FREEZE-1.md` holds.
+7. **Housekeeping.** Issues #780 and #782 may close now that their probes are
+   folded; #781 stays open until the successor decision. Stale PRs #693,
+   #695, #650, and #595 should be rebased or closed. Nine registry rows still
+   carry one-architecture evidence only and can be replayed through the
+   two-architecture workflow.
 
-```text
-claims   352 -> 361 or 362
-T        225 -> 234 or 235
-gates     14 -> 15
-```
+## 5. Deliberately still open
 
-## 4. Deliberately left open by v75
+`PHOTON-MASSLESS-PHASE [O]`, `PHOTON-CONE-CONVERGENCE [O]` at its narrowed
+global-carrier scope, `ENTROPY-LAYER-BRIDGE [O]`, the QDD apparatus block,
+the `READY` roots `GENERATIONS-L3`, `QUANT-SUBSTRATE`, and
+`TT-VECTOR-STATE-NORMALIZATION`, and the terminal `PHOTON-KAPPA-LEMMA [F]`
+and `PHOTON-WINDOW-PROOF [F]`. None received new input in v75.
 
-- `PHOTON-MASSLESS-PHASE [O]`: the production preregistration at `t=1` is
-  frozen, but the F1 through F3 execution firewall does not yet hold and no
-  production output exists. Nothing enters v75.
-- Dynamic QDD reversor corollary, invariant measures, and any physical
-  reading: a separate later fold, and the corollary depends on `X_stab`
-  first becoming public.
-- `GENERATIONS-L3`, `QUANT-SUBSTRATE`, `TT-VECTOR-STATE-NORMALIZATION`:
-  `READY` roots with predefinition notes only and no probe; PRs #693 and
-  #695 are far behind `main`.
-- `ENTROPY-LAYER-BRIDGE [O]` and the QDD apparatus block: no new input.
-- `PHOTON-KAPPA-LEMMA [F]`, `PHOTON-WINDOW-PROOF [F]`: terminal, not
-  reopened.
+## 6. Stop conditions
 
-## 5. Order of operations
-
-1. PR #779 (maintenance: status-separation reproduction count 23 to 24),
-   PR #784 and PR #785 are merged as of 2026-09-02.
-2. Merge PR #786 (legacy disposition) and PR #787 (intake notes) with no
-   status movement.
-3. Review and merge PR #783; decide PR #696. Each requires its own manual
-   scope and security review.
-4. Open `synthesis/canon-v75` from `main` after those merges. Exactly two
-   frozen commits: the complete content fold, then a release-form commit
-   changing only `STATUS.md`, `README.md`, and `CITATION.cff`.
-5. Content fold: new rows in `REGISTRY.tsv`, `EVIDENCE.tsv`,
-   `DEPENDENCIES.tsv`, `HISTORY.tsv`; the gate split in `GATES.tsv`;
-   Canon text; regenerated `FRONTIER.md`, `STATUS_COUNTS.tsv`,
-   `SHA256SUMS`; extended `reproduce/status-separation`.
-6. Tag `canon-v75` only after public readback; publish assets only after tag
-   readback passes.
-7. Open v76 immediately afterwards with the framework wording and a
-   byte-identical Registry.
-
-## 6. Decisions reserved to the owner
-
-- **Massive-germ duplicate.** `MATTER-SCALAR-MASSIVE-GERM` and
-  `PHOTON-MASSIVE-SCALAR-GERM` prove the same statement from two probes.
-  Proposed: one registered row, both probes cited as evidence.
-- **Gate split.** Replacing the cone gate changes a decision condition; it
-  does not satisfy the existing one. It must be an explicit owner
-  disposition.
-- **TM-CORR-ZEROS registration.** The probe states `CANON UNCHANGED` and
-  claims no priority. Registration is legitimate but optional.
-
-## 7. Breadth housekeeping with no scientific cost
-
-- Rebase or close stale PRs #693, #695, #650, and #595 with a pointer.
-- Close claim-lock issues whose probes are merged and folded in v73
-  (#716, #721, #724, #731) after verification; #780 and #782 once their
-  merged probes are folded; #694 after the PR #696 decision.
-- Nine registry rows carry one-architecture evidence only
-  (`ALPHA-VALUE-DIGITS`, `HYPERPLANE-BOUNDARY-REALIZATION`,
-  `KERNEL-CELL-COMPONENTS`, `TIME-QUANTUM-TOWER`, `SILVER-RING-FACTS`,
-  `COULOMB-GREEN-COMPUTATION`, `MONOPOLE-COST`, `KAPPA-SHAPES`,
-  `METRO-REDUCTION-ARROWS`). Replaying them through the two-architecture
-  workflow is the cheapest ledger-debt reduction. Not for v75.
-
-## 8. Stop conditions
-
-STOP if public authority or any normative input moves before the fold; if
-any probe in section 3.2 is folded before its merge; if the foundational
-wording and the scientific rows are combined in one fold; if a candidate row
-is registered above the status its probe earned; or if the gate split is
-presented as satisfying the existing decision condition.
+STOP if this note is read as authority for any status; if the foundational
+wording and scientific rows are combined in one fold; if the four-phase
+identifier is reused for a retry; or if a candidate row is registered above
+the status its probe earned.
