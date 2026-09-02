@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v74
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v75
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -64,8 +64,9 @@ PASS 60 V67-RAPIDITY eight exact rapidity and ideal rows enter at T/L1 on their 
 PASS 61 V68-SO3    the finite SO(3) harmonic-depth maximum enters at T/L1 on its proof-first two-architecture public probe while no boost, Lorentz-density, J, physical p=5, decoder, measure, dynamics or higher-layer selection moves
 PASS 62 V69-CM     five focused L1 CM lattice and ramification theorems keep exact scopes, evidence, dependencies and nonselection firewalls with no gate, Frontier, CORE or action bridge
 PASS 63 V70-QDD-SPLIT the composite quadratic O retires as a split; ALGEBRAIC-DMATTER is an owner-selected D/L1 dictionary with exact algebraic wiring and no gate, while all transferred physical debt stays on QDD-INSTRUMENT-APPARATUS at O/STOP
-PASS 64 V72-PHOTON the v72 boundary theorems and declarations remain pinned while the Herm2-cone and massless routes stay O/STOP
+PASS 64 V72-PHOTON the v72 boundary theorems and declarations remain pinned while the massless route stays O/STOP and later folds own the cone route
 PASS 65 V73-FOLD   three proof-first rows and one complete finite classification enter at their earned status, the C8 marking stays a dictionary input, the refuted HALF predicate is preserved, and no gate, program or frontier row moves
-PASS 66 V74-PHOTON selected D3 transfer enters at D/MULTI and its exact characteristic at T/L5, closing only the L2-to-L5 dictionary lift while the Herm2 cone route stays O/STOP
+PASS 66 V74-PHOTON selected D3 transfer enters at D/MULTI and its exact characteristic at T/L5, closing the L2-to-L5 dictionary lift while v75 owns the later Herm2 and global-carrier disposition
+PASS 67 V75-CLOSURE eight qualified theorems enter at exact scope while the photon germ closes locally, the broader global carrier stays O, and the stopped four-phase probe remains excluded
 
-RESULT 66/66 ALL PASS
+RESULT 67/67 ALL PASS

@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its sixty-six checks cover the current
+and emits deterministic text. Its sixty-seven checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -88,10 +88,10 @@ of that fold not superseded by the v74 successor. `FCC-WEIGHTED-SHELL-SYMBOL`
 remains a theorem at L2 and the exact finite-coupling Wilson/Villain
 nonmembership remains a theorem at L4, both on their frozen two-architecture
 public probes. `PHOTON-MASSLESS-PHASE` remains `O/MULTI` and
-`ROOT/STOP/FORMAL`; the Herm2-cone and massless lifts remain the two surviving
-`OPEN_LIFT` gates inherited from v72. The original
+`ROOT/STOP/FORMAL`; its massless lift remains the surviving v72 `OPEN_LIFT`,
+while later folds own the Herm2/global-carrier disposition. The original
 `PHOTON-CONE-CONVERGENCE` declaration tuple remains exact-pinned in HISTORY,
-while its current scope and gate ownership are audited by `V74-PHOTON`.
+while its current scope and gate ownership are audited by `V75-CLOSURE`.
 The stable 2740-byte boundary-theorem block from the FCC heading to the
 successor-root heading is pinned by SHA-256. The check keeps direct
 finite-coupling nonmembership as a boundary rather than a massless-phase
@@ -125,18 +125,13 @@ lifecycle contracts for all four, their exact dependency topology, a matching
 owns a gate, a Frontier program row or a live Frontier entry.
 
 The v74 check pins `PHOTON-SPATIAL-TEMPORAL-TRANSFER` at
-`DICTIONARY/D/MULTI`, `PHOTON-TEMPORAL-CHARACTERISTIC` at `THEOREM/T/L5`,
-and the revised `PHOTON-CONE-CONVERGENCE` parent at `OBLIGATION/O/MULTI`.
-It requires their exact Registry, Normative, Evidence and three-event
-lifecycle contracts, their shared completed two-architecture probe bundle,
-and the exact `3/1/4` dependency topology for dictionary/theorem/parent. It
-also pins all eight dependency rows and incoming consumers, transfers the
-L2-to-L5 gate to the dictionary as a closed `DICTIONARY_LIFT`, and leaves
-only the unchanged L4-to-L5 Herm2 comparison on the parent as `OPEN_LIFT`.
-The D/T Canon block and the full successor-root block are byte- and
-SHA-256-pinned. The parent remains `PHOTON_CONTINUUM/ROOT/STOP/FORMAL`; the
-new closed rows own no Frontier or CORE selection, and no Herm2, Born,
-continuum or physical-photon conclusion is admitted.
+`DICTIONARY/D/MULTI` and `PHOTON-TEMPORAL-CHARACTERISTIC` at
+`THEOREM/T/L5`. It requires their exact Registry, Normative, Evidence,
+lifecycle and `3/1` dependency contracts, their shared completed
+two-architecture probe bundle and current incoming consumers. The L2-to-L5
+gate remains a closed `DICTIONARY_LIFT`, and the original D/T Canon block is
+byte- and SHA-256-pinned. The later Herm2 and global-carrier disposition is
+owned by v75 rather than retroactively written into the v74 contract.
 
 Run from the repository root:
 
@@ -144,8 +139,19 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 66/66 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 67/67 ALL PASS`,
 exit 0, and empty stderr.
+
+The v75 check pins eight new theorem rows at their exact scopes and frozen
+two-architecture evidence: the positive-rational JIPC Mellin slice; three
+scalar-matter temporal, branch and massive-germ results; the local Hermitian
+tangent germ and the exact obstruction to the separated inversion-equivariant
+global class; the QDD direct-record noncongruence; and the checkpoint-hull
+stable image. It requires exactly fourteen added dependency edges, nine
+lifecycle events, no new T-owned gate, and replacement of the old cone gate
+by `GATE-L4-L5-PHOTON-GLOBAL-CARRIER`. The local germ is closed mathematics,
+the broader global-carrier parent remains `O/STOP`, and the stopped
+four-phase probe is absent from every active and lifecycle ledger.
 
 The thirtieth check pins the arithmetic rapidity fold: the decomposition and
 split-prime class rows at T and the finite construction-agreement row at C,
@@ -165,15 +171,15 @@ determinant lattices, acceptance of negative determinants, and the separation
 of the ordinary `491/1429` rungs from the `(2,2)`, `phi^-3 x^2`, trace-29,
 numerator-841 doubled-phase normalization falsifier with product budget `P^2`.
 
-The current v74 count check reads 352 claims, 24 reproductions, 14 gates and
-648 dependency edges. The active partition is T225/D45/C34/H2/O29/F17, so
-the live H+O count is 31 and the two-architecture evidence count is 265.
+The current v75 count check reads 360 claims, 24 reproductions, 14 gates and
+662 dependency edges. The active partition is T233/D45/C34/H2/O29/F17, so
+the live H+O count is 31 and the two-architecture evidence count is 273.
 `V72-PHOTON` preserves the immutable declarations, stable boundary theorems,
-the two surviving open lifts and the terminal Kappa and roughening boundary.
+the surviving massless lift and the terminal Kappa and roughening boundary.
 `V74-PHOTON` requires the selected D3 transfer and conditional characteristic
-to retain their exact `D/MULTI` and `T/L5` contracts, the parent to stay
-`O/ROOT/STOP`, the L2-to-L5 lift alone to be closed, and the independent
-Herm2 route to remain open.
+to retain their exact `D/MULTI` and `T/L5` contracts and the L2-to-L5 lift to
+remain closed. `V75-CLOSURE` owns the Herm2 theorem pair, the global-carrier
+gate replacement and the narrowed `O/ROOT/STOP` parent.
 
 The v70 count check reads 342 claims, 23 reproductions, 11 gates and 632
 dependency edges. The active partition is T219/D44/C33/H2/O27/F17, so the
