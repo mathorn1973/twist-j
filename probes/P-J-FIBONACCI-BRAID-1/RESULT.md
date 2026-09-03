@@ -1,6 +1,6 @@
 # P-J-FIBONACCI-BRAID-1 result
 
-Status: **candidate-T / L1 / TWO CLAIMS CONFIRMED LOCALLY / ARCHITECTURE GATE PENDING / PUBLIC CANON UNCHANGED**
+Status: **candidate-T / L1 / TWO CLAIMS CONFIRMED / TWO-ARCHITECTURE COMPUTATION GATE PASS / PUBLIC CLAIMS UNREGISTERED / CANON UNCHANGED**
 
 ## Recorded decision
 
@@ -13,13 +13,51 @@ stdout:                                        byte-identical to EXPECTED.txt
 SCIENTIFIC-FIRED-A/B:                          NOT SELECTED
 STOP:                                          NOT SELECTED
 ABANDONED-PIN:                                 NOT SELECTED
-ARCHITECTURE GATE:                             PENDING
+ARCHITECTURE GATE:                             PASS
+MANUAL SECURITY REVIEW:                       PASS
 ```
 
 The immutable verifier was executed exactly once after its public pin and
 byte-for-byte remote readback. Its 23-line stdout has SHA-256
 `09886942e87b9962b85f9823eeac8b4fb36b9f41489ecae3731dac9a30240999`.
 No preregistered falsifier fired.
+
+## Required two-architecture workflow
+
+```text
+pull_request:          796
+tested_head:           c0518fc2bc02a8ca78b5c5c4006449c14496ccfd
+workflow_run:          33793354343
+x86_64_job:            100775018150 success
+aarch64_job:           100775018233 success
+aggregate_check_job:   100775105189 success
+verifier_sha256:       d30193d720e57a8e35c0ee40161406f50150ff024d96d240c44c699b869b1b77
+stdout_sha256:         09886942e87b9962b85f9823eeac8b4fb36b9f41489ecae3731dac9a30240999
+stdout_bytes/lines:    1391 / 23
+byte_identity:         PASS on x86_64 and aarch64
+manual_security:       PASS on the five named probe files
+```
+
+Both architecture jobs passed repository policy, all 148 unit tests, Canon,
+ledger, gate-contract, changed-probe reproduction, and exact transcript
+comparison. The aggregate job reported `TWO-ARCHITECTURE CHECK PASS`. Their
+common verifier receipt is
+
+```text
+VERIFY PASS P-J-FIBONACCI-BRAID-1 d30193d720e57a8e35c0ee40161406f50150ff024d96d240c44c699b869b1b77 09886942e87b9962b85f9823eeac8b4fb36b9f41489ecae3731dac9a30240999
+```
+
+Manual security review found only fixed exact inputs, bounded small-matrix
+loops, deterministic ordered output, and standard-library `Fraction` and
+`combinations` imports. It found no file, network, subprocess, shell, dynamic
+execution, environment read, random, clock, secret, or private-machine data
+surface. The recorded invocation trusts the named system Python and its normal
+site startup; it does not use `-I` or `-S`. The empty environment and absence
+of hook modules in the reviewed tree bound that non-blocking trust assumption.
+
+`RUN.md` remains the immutable historical record of the sole local formal leg
+and therefore retains `architecture_gate: PENDING`; this result section closes
+that gate with the public workflow receipt above.
 
 ## Claim A: exact projective nonmembership
 
