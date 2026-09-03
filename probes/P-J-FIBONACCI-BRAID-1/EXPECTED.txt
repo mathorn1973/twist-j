@@ -1,0 +1,23 @@
+SPEC FIB_CM_EXACT_V1
+MODE RESULT-EXPOSED PROOF-FIRST
+CHECK G01 FIELD PASS phi5=0 order_zeta=5 involution=conjugation
+CHECK G02 J_REGULAR PASS det=1 norm=1 charpoly=Phi5(x-1)
+CHECK G03 CM_FORMS PASS omega1=(1,0,0,1,0,1) omega2=(0,1,-1,0,1,0) saturated=yes
+CHECK G04 PULLBACK PASS convention=covariant det=1 pfaffian=invariant
+CHECK G05 PRIMARY PASS charpoly=q*Phi10 rank_qP=4 rank_phi10P=2 H_kernel=yes
+CHECK G06 A_CM PASS matrix=((1,-1),(-1,2)) trace=3 det=1 kappa=9
+CHECK G07 FIB_GAUGE PASS integral=yes det_F=-1 det_B1=det_B2=1-J
+CHECK G08 FIB_BRAID PASS relation=yes noncommuting=yes
+CHECK G09 FIB_HERMITIAN PASS generator_invariance=yes selected_a_interval=(1/2,2/3)
+CHECK G10 A_PROOF_INPUTS PASS target_kappa=9 unitary_range=[0,4]
+RESULT CLAIM_A J-CM-FIBONACCI-BRAID-PROJECTIVE-NONMEMBERSHIP CONFIRMED
+CHECK G11 C_LATTICE PASS rank=4 saturated=yes seam_index=5
+CHECK G12 C_ACTION PASS charpoly=Phi10 order=10
+CHECK G13 C_ORBIT PASS determinant=1
+CHECK G14 DELTA PASS value=1-J=-zeta^2 order=10 zeta=-delta^3
+CHECK G15 MODULE PASS companion_intertwiner=yes
+CHECK G16 GENERATOR_DETERMINANTS PASS value=1-J
+CHECK G17 CHARACTER_PROOF_INPUTS PASS presentation=checked inverses=yes intertwiner=yes
+RESULT CLAIM_B J-CIRCULAR-FIBONACCI-DETERMINANT-CHARACTER CONFIRMED
+SCOPE raw_M_J=TYPE_BOUNDARY galois_branch=OUT_OF_SCOPE physical_tau_identification=NONE
+RESULT OVERALL PASS gates=17 claims=2
