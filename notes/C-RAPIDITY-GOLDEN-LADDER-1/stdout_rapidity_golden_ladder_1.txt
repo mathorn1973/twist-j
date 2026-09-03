@@ -1,0 +1,35 @@
+C-RAPIDITY-GOLDEN-LADDER-1 DRAFT VERIFIER
+STATUS NON-CANONICAL DRAFT
+V01 golden unit facts k<=6, Pell m<=322 PASS
+V02 local tables tau=+-L_2k k<=4 e<=8 PASS
+V03 full-lift ladder at tau=2 equals mu n<=100000 PASS
+V04 full-lift ladder at tau=-2 is (-1)^b 3^a on squarefree n<=100000 PASS
+V05 shell ladder at tau=3 equals s_5 = mu a_F 1_(5!|n) n<=100000 PASS
+V06 layer identity taus 2,3,7,18,-2,-3 PASS
+V07 Vandermonde recovers B_0..B_3 at x=20000 PASS
+V08 m_tau = sigma_tau * w_tau tau=2,3 n<=100000 PASS
+V09 readout Mflat 2 x=1000 value=2
+V09 readout Mflat 3 x=1000 value=24
+V09 readout Mflat 7 x=1000 value=252
+V09 readout Mflat 18 x=1000 value=2034
+V09 readout Mflat 2 x=10000 value=-23
+V09 readout Mflat 3 x=10000 value=75
+V09 readout Mflat 7 x=10000 value=647
+V09 readout Mflat 18 x=10000 value=-6855
+V09 readout Mflat 2 x=100000 value=-48
+V09 readout Mflat 3 x=100000 value=483
+V09 readout Mflat 7 x=100000 value=-4473
+V09 readout Mflat 18 x=100000 value=-279792
+V09 readout Sigma 2 x=1000 value=-64
+V09 readout Sigma 3 x=1000 value=-103
+V09 readout Sigma 2 x=10000 value=-395
+V09 readout Sigma 3 x=10000 value=-381
+V09 readout Sigma 2 x=100000 value=-2432
+V09 readout Sigma 3 x=100000 value=-925
+V09 readout Layer 0 x=100000 value=-363
+V09 readout Layer 1 x=100000 value=-53
+V09 readout Layer 2 x=100000 value=339
+V09 readout Layer 3 x=100000 value=77
+V09 exact readouts, no estimate claimed PASS
+V10 breakers 5/5 FIRE 11,2,phi-odd,near-miss,singular PASS
+VERIFY RESULT 10/10 ALL PASS
