@@ -1,6 +1,6 @@
 # P-RAPIDITY-GOLDEN-LADDER-1 formal run record
 
-Status: local accepted formal record. Public two-architecture replay pending.
+Status: local accepted formal record. Public two-architecture replay PASS.
 
 The flat fields below are the machine-readable local execution record.
 
@@ -55,7 +55,13 @@ stderr_bytes: 0
 frozen_stdout_byte_identity: PASS
 result: PASS
 pinned_files_unchanged_after_execution: yes
-architecture_gate: PENDING
+architecture_gate: PASS
+replay_workflow_run: 33739353913
+replay_pr_head: 9b01afb6d626ec101738b72dd4aa43958c316167
+replay_python: Python 3.12.14
+replay_job_x86_64: 100597369775
+replay_job_aarch64: 100597369515
+replay_check_job: 100597443866
 ```
 
 ## Pin readback before execution
@@ -85,7 +91,22 @@ pinned `PREREG.md` and `verify.py` were re-hashed after execution and were
 unchanged. No theorem, threshold, breaker witness, carrier, or pinned byte
 moved after the pin.
 
-This is one local x86_64 formal leg. The required clean GitHub Python 3.12
-x86_64 and aarch64 replays and the aggregate `check` remain pending. No
-hostname, machine nickname, private address, or internal fleet label is
-recorded.
+This is one local x86_64 formal leg. No hostname, machine nickname, private
+address, or internal fleet label is recorded.
+
+## Required GitHub replay
+
+Pull request #792 replayed the unchanged pinned verifier from clean
+checkouts on both required GitHub-hosted architectures under Python 3.12.14
+(workflow run 33739353913 on PR head 9b01afb6d626ec101738b72dd4aa43958c316167).
+Job 100597369775 (`architecture-x86_64`) and job 100597369515
+(`architecture-aarch64`) both reported
+
+```text
+VERIFY PASS P-RAPIDITY-GOLDEN-LADDER-1 d501dd73cbb870fe296ec31472ff6de1cdfc963d3016f8351430b5630b1fae04 b1ea5b711ad0f6a167cbbd8e53e34bc598364c07685e8009889afc46350e6a2a
+```
+
+so the one committed 1653-byte `EXPECTED.txt` is reproduced byte for byte
+from the unchanged pinned verifier on x86_64 and aarch64. Aggregate job
+100597443866 (`check`) passed. The two-architecture computation gate is
+satisfied by that byte identity. This record changes no pinned byte.

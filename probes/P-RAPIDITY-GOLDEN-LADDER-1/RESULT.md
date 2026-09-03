@@ -1,6 +1,6 @@
 # P-RAPIDITY-GOLDEN-LADDER-1 result
 
-Status: **CANDIDATE-T / PROOF-FIRST / LOCAL FORMAL LEG PASS / PUBLIC TWO-ARCHITECTURE REPLAY PENDING / CANON UNCHANGED**
+Status: **CANDIDATE-T / PROOF-FIRST / LOCAL FORMAL LEG PASS / TWO-ARCHITECTURE COMPUTATION GATE PASS / CANON UNCHANGED**
 
 ## Verdict
 
@@ -147,10 +147,27 @@ stderr bytes:    0
 result:          VERIFY RESULT 11/11 ALL PASS
 ```
 
-The repository pull-request workflow must replay the unchanged pinned
-verifier with Python 3.12 on GitHub-hosted x86_64 and aarch64 and require
-byte identity with `EXPECTED.txt`. Until that workflow passes, the public
-two-architecture replay is pending.
+The required pull-request workflow (run 33739353913 on PR #792, head
+`9b01afb6d626ec101738b72dd4aa43958c316167`) replayed the unchanged pinned
+verifier from clean checkouts under Python 3.12.14. Job 100597369775
+(`architecture-x86_64`) and job 100597369515 (`architecture-aarch64`) both
+reported
+
+```text
+VERIFY PASS P-RAPIDITY-GOLDEN-LADDER-1 d501dd73cbb870fe296ec31472ff6de1cdfc963d3016f8351430b5630b1fae04 b1ea5b711ad0f6a167cbbd8e53e34bc598364c07685e8009889afc46350e6a2a
+```
+
+and aggregate job 100597443866 (`check`) passed. Both architectures
+reproduced the same frozen verifier and the exact committed `EXPECTED.txt`
+bytes, so the two-architecture computation gate is satisfied.
+
+```text
+CONFIRMED          SELECTED LOCALLY AND ON BOTH REQUIRED ARCHITECTURES
+SCIENTIFIC-FIRED   NOT SELECTED
+STOP               NOT SELECTED
+ABANDONED-PIN      NOT SELECTED
+ARCHITECTURE GATE  PASS
+```
 
 The written proofs, not architecture count, are the proposed theorem-grade
 source. The verifier audits them.
