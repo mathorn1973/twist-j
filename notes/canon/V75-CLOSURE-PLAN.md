@@ -3,7 +3,7 @@
 **Status:** `NON-CANONICAL / PLANNING NOTE / RECONCILED AGAINST canon-v75 / NO AUTHORITY / NO STATUS CHANGE`
 
 **Date:** 2026-09-02, written before the v75 fold and reconciled the same day
-after the activation of Public Canon v75
+after the activation of Public Canon v75; base pin refreshed 2026-09-03
 
 This note records what was proposed for Public Canon v75, what the released
 fold actually did, and what carries forward. It is not a probe,
@@ -21,7 +21,7 @@ TAG:             canon-v75
 CONTENT_COMMIT:  e32e85ed7297d4320df5b345e4488d78323d550c
 CANON_SHA256:    44130160a3ce29bfcdc757e255d2d1c25a010b22911edfe66cf6b132be081fbe
 CANON_BYTES:     399513
-BASE_MAIN:       c4f00e1d9c89f503d913224dc3c09dc760dcec9d
+BASE_MAIN:       4f08791bd5401ee1616270661f7788d743f5fc26
 REGISTRY_ROWS:   360
 LIVE_H_O:        31
 ```
@@ -93,7 +93,9 @@ because the fold retired the old gate and declared exactly one successor.
    `notes/canon/PHOTON-PRODUCTION-PREREG-FREEZE-1.md` holds.
 7. **Housekeeping.** Issues #780 and #782 may close now that their probes are
    folded; #781 stays open until the successor decision. Stale PRs #693,
-   #695, #650, and #595 should be rebased or closed. Nine registry rows still
+   #695, and #650 should be rebased or closed; PR #595 was merged on
+   2026-09-03 as a noncanonical note and its successor probe PR #792 is a
+   separate lane outside this plan. Nine registry rows still
    carry one-architecture evidence only and can be replayed through the
    two-architecture workflow.
 
