@@ -2,7 +2,7 @@
 
 Status: **candidate-T / L1 / TWO MATHEMATICAL CLAIMS CONFIRMED / ONE
 PHYSICAL HYPOTHESIS UNTESTED AT STOP / TWO-ARCHITECTURE COMPUTATION GATE
-PENDING / PUBLIC CLAIMS UNREGISTERED / CANON UNCHANGED**
+PASS / PUBLIC CLAIMS UNREGISTERED / CANON UNCHANGED**
 
 ## Recorded decision
 
@@ -16,8 +16,8 @@ stdout:                                byte-identical to EXPECTED.txt
 SCIENTIFIC-FIRED-A/B:                  NOT SELECTED
 STOP for mathematical execution:       NOT SELECTED
 ABANDONED-PIN:                         NOT SELECTED
-ARCHITECTURE GATE:                     PENDING
-MANUAL SECURITY REVIEW:                PENDING
+ARCHITECTURE GATE:                     PASS
+MANUAL SECURITY REVIEW:                PASS
 ```
 
 The immutable verifier was executed exactly once after public pin
@@ -170,6 +170,44 @@ resolution, preparation, and read cut missing from
 If the H row were later adopted, it would provide no randomness of one run.
 Every pair would be realized, and `which result do I see?` would be a finite
 self-location question. This probe establishes no self-location fact.
+
+## Required two-architecture workflow
+
+```text
+pull_request:          810
+tested_head:           7709b8bcd15e976676278d5b2efdffe9a4f92b7b
+workflow_run:          33890851219
+x86_64_job:            101081857222 success
+aarch64_job:           101081857459 success
+aggregate_check_job:   101081960912 success
+verifier_sha256:       b2cf94f68bc6d6a2d4963827a27ff733537209a18ea37fd07f35f660d47e4eb5
+stdout_sha256:         d489a8786305d1d41b79dc8d63ba07283e6b796d5309a92303e3f06d72190c2b
+stdout_bytes/lines:    1768 / 23
+byte_identity:         PASS on x86_64 and aarch64
+manual_security:       PASS, review 5115047692 on all five named probe files
+```
+
+Both architecture jobs passed repository policy, all unit tests, Canon,
+ledger, gate-contract, changed-probe reproduction, and exact transcript
+comparison. The aggregate job reported `TWO-ARCHITECTURE CHECK PASS`. Their
+common verifier receipt is
+
+```text
+VERIFY PASS P-J-COINCIDENCE-RECORD-BOUNDARY-1 b2cf94f68bc6d6a2d4963827a27ff733537209a18ea37fd07f35f660d47e4eb5 d489a8786305d1d41b79dc8d63ba07283e6b796d5309a92303e3f06d72190c2b
+```
+
+Manual security review of all five files passed without importing or
+executing the verifier. It found fixed exact inputs, bounded loops,
+deterministic output, and only the standard-library `Fraction` and `product`
+imports. It found no file input, network, subprocess, shell, environment read,
+dynamic execution, secret, personal data, or private-machine identifier. It
+also confirmed that the verifier can only report the physical row as
+`UNTESTED STOP`.
+
+`RUN.md` remains the immutable historical record of the sole local formal leg
+and therefore retains `architecture_gate: PENDING`; this result section closes
+that gate with the public workflow receipt. The physical H hypothesis remains
+at STOP after the architecture gate closes.
 
 ## Earned scope and firewalls
 
