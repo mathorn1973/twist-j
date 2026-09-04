@@ -1,0 +1,23 @@
+SPEC J_COINCIDENCE_RECORD_BOUNDARY_EXACT_V1
+MODE RESULT-EXPOSED PROOF-FIRST
+CHECK G01 RESIDUAL_FIBRES PASS states=381 signed_ordinal=yes cardinality=absolute_value
+CHECK G02 NORMAL_FORM PASS reduced_pair_unique=yes reconstruction=exact
+CHECK G03 CELL_COVARIANCE PASS five_cycle_transports_fibres=yes token_persistence=NONE
+CHECK G04 CANCELLATION_AMBIGUITY PASS net=1 historical_survivor_choices=2 invariant=cardinality
+CHECK G05 TAGGED_COPIES PASS system_record_disjoint=yes equal_marginal_size=absolute_value
+CHECK G06 CARTESIAN_CARDINALITY PASS complete_within_cell_pairs=d_k_squared
+CHECK G07 SIGN_SQUARE PASS nonzero_pair_sign=positive zero_fibre=empty
+CHECK G08 GRAM_SEAM PASS cartesian_counts=diag_Kd_Gram cross_cells=zero
+CHECK G09 EXPOSED_WITNESSES PASS vertex=16,1,1,1,1 hole=25,0,25,25,25 totals=20,100
+CHECK G10 COMBINATORIAL_DARKNESS PASS complete_pair_cell_empty_iff_d_k_zero
+CHECK G11 FINITE_RATIO PASS nonzero_complete_relation_normalizes_to_square_profile
+CHECK G12 RELATION_NONSELECTION PASS same_marginals_allow_counts_0_through_n_squared diagonal=n
+CHECK G13 A_PAIR_EXTENSIVITY PASS A_star_A=5I-N pair_total_multiplier=5_on_V
+CHECK G14 SINGLE_UNIT_NONSELECTION PASS A_l1_ratios=5/2,3 no_state_independent_unit_yield
+CHECK G15 SCALE_FORK PASS raw_J_totals=20,30,70,180 U5_normalization_not_integer_count_map
+CHECK G16 HYPOTHESIS_FIREWALL PASS physical_row=UNTESTED_STOP computation_cannot_confirm_H
+RESULT CLAIM_A J-RESIDUAL-UNIT-NORMAL-FORM CONFIRMED
+RESULT CLAIM_B J-COINCIDENCE-CARTESIAN-GRAM-SEAM CONFIRMED
+HYPOTHESIS COINCIDENCE-RECORD-FREQUENCY UNTESTED STOP
+SCOPE L1_only physical_records=NONE frequency_law=NONE probability=NONE self_location_fact=NONE single_run_randomness=NONE L2-L6=NONE
+RESULT OVERALL PASS gates=16 claims=2 hypothesis=1
