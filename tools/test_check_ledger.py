@@ -231,10 +231,15 @@ class LedgerTests(unittest.TestCase):
         self.fixture.write()
         self.assertEqual(validate(self.root).claims, 2)
 
-    def test_public_probe_is_a_five_file_evidence_bundle(self) -> None:
-        location = "probes/P-FIXTURE-1"
-        probe = self.root / location
-        probe.mkdir(parents=True)
+    def _public_probe_evidence(
+        self,
+        location: str = "probes/P-FIXTURE-1/RESULT.md",
+        *,
+        bundle_location: str = "probes/P-FIXTURE-1",
+        kind: str = "PUBLIC_PROBE",
+    ) -> Path:
+        probe = self.root / bundle_location
+        probe.mkdir(parents=True, exist_ok=True)
         for name in ("PREREG.md", "verify.py", "EXPECTED.txt", "RUN.md", "RESULT.md"):
             (probe / name).write_text(f"{name}\n", encoding="utf-8")
         digest = bundle_sha256(probe, self.root)
@@ -242,7 +247,7 @@ class LedgerTests(unittest.TestCase):
         self.fixture.evidence[1] = {
             "claim_id": "O-CLAIM",
             "evidence_id": "EV-O-CLAIM",
-            "evidence_kind": "PUBLIC_PROBE",
+            "evidence_kind": kind,
             "location": location,
             "sha256": digest,
             "hash_mode": "bundle-manifest-sha256-v1",
@@ -251,7 +256,105 @@ class LedgerTests(unittest.TestCase):
         self.fixture.history[1]["evidence_location"] = location
         self.fixture.history[1]["evidence_sha256"] = digest
         self.fixture.write()
+        return probe
+
+    def test_public_probe_is_a_five_file_evidence_bundle(self) -> None:
+        self._public_probe_evidence("probes/P-FIXTURE-1")
         self.assertEqual(validate(self.root).claims, 2)
+
+    def test_public_probe_result_entrypoint_uses_complete_bundle(self) -> None:
+        probe = self._public_probe_evidence()
+        digest = self.fixture.evidence[1]["sha256"]
+        self.assertEqual(digest, bundle_sha256(probe, self.root))
+        self.assertEqual(validate(self.root).claims, 2)
+        result_digest = bundle_sha256(probe / "RESULT.md", self.root)
+        self.assertNotEqual(digest, result_digest)
+        self.fixture.evidence[1]["sha256"] = result_digest
+        self.fixture.history[1]["evidence_sha256"] = result_digest
+        self.fixture.write()
+        with self.assertRaisesRegex(LedgerError, "reproduction hash differs"):
+            validate(self.root)
+
+    def test_public_probe_result_entrypoint_pins_other_bundle_files(self) -> None:
+        probe = self._public_probe_evidence()
+        breaker = probe / "breaker.py"
+        breaker.write_text("pinned breaker\n", encoding="utf-8")
+        digest = bundle_sha256(probe, self.root)
+        self.fixture.evidence[1]["sha256"] = digest
+        self.fixture.history[1]["evidence_sha256"] = digest
+        self.fixture.write()
+        self.assertEqual(validate(self.root).claims, 2)
+        breaker.write_text("changed breaker\n", encoding="utf-8")
+        self.assertNotEqual(digest, bundle_sha256(probe, self.root))
+        with self.assertRaisesRegex(LedgerError, "reproduction hash differs"):
+            validate(self.root)
+
+    def test_public_probe_result_entrypoint_requires_all_bundle_members(self) -> None:
+        for missing in ("PREREG.md", "verify.py", "EXPECTED.txt", "RUN.md", "RESULT.md"):
+            with self.subTest(missing=missing):
+                probe = self._public_probe_evidence()
+                (probe / missing).unlink()
+                digest = bundle_sha256(probe, self.root)
+                self.fixture.evidence[1]["sha256"] = digest
+                self.fixture.history[1]["evidence_sha256"] = digest
+                self.fixture.write()
+                failure = "reproduction is missing" if missing == "RESULT.md" else f"lacks {missing}"
+                with self.assertRaisesRegex(LedgerError, failure):
+                    validate(self.root)
+
+    def test_public_probe_result_entrypoint_keeps_architecture_requirement(self) -> None:
+        self._public_probe_evidence()
+        for architecture in ("one-architecture", "two-architecture"):
+            with self.subTest(architecture=architecture):
+                self.fixture.evidence[1]["architecture_requirement"] = architecture
+                self.fixture.write()
+                self.assertEqual(validate(self.root).claims, 2)
+        self.fixture.evidence[1]["architecture_requirement"] = "none"
+        self.fixture.write()
+        with self.assertRaisesRegex(LedgerError, "public probe lacks an architecture gate"):
+            validate(self.root)
+
+    def test_public_probe_result_entrypoint_requires_literal_ledger_agreement(self) -> None:
+        self._public_probe_evidence()
+        self.fixture.registry[1]["evidence"] = "probes/P-FIXTURE-1"
+        self.fixture.write()
+        with self.assertRaisesRegex(LedgerError, "evidence location differs from REGISTRY.tsv"):
+            validate(self.root)
+        self._public_probe_evidence()
+        self.fixture.history[1]["evidence_location"] = "probes/P-FIXTURE-1"
+        self.fixture.write()
+        with self.assertRaisesRegex(LedgerError, "HISTORY.tsv latest evidence differs"):
+            validate(self.root)
+
+    def test_file_entrypoints_are_restricted_to_exact_public_probe_result_path(self) -> None:
+        cases = (
+            ("PUBLIC_PROBE", "probes/P-FIXTURE-1/RUN.md", "probes/P-FIXTURE-1"),
+            ("PUBLIC_PROBE", "probes/P-FIXTURE-1/nested/RESULT.md", "probes/P-FIXTURE-1/nested"),
+            ("PUBLIC_PROBE", "other/P-FIXTURE-1/RESULT.md", "other/P-FIXTURE-1"),
+            ("PUBLIC_PROBE", "probes/P-FIXTURE-1/result.md", "probes/P-FIXTURE-1"),
+            ("PUBLIC_PROBE", "probes//P-FIXTURE-1/RESULT.md", "probes/P-FIXTURE-1"),
+            ("PUBLIC_PROBE", "probes/./P-FIXTURE-1/RESULT.md", "probes/P-FIXTURE-1"),
+            ("PUBLIC_PROBE", "probes/./RESULT.md", "probes"),
+            ("PUBLIC_PROBE", r"probes\P-FIXTURE-1\RESULT.md", "probes/P-FIXTURE-1"),
+            ("PUBLIC_PROBE", "reproduce/P-FIXTURE-1/RESULT.md", "reproduce/P-FIXTURE-1"),
+            ("REPRODUCTION", "probes/P-FIXTURE-1/RESULT.md", "probes/P-FIXTURE-1"),
+            ("REPRODUCTION", "reproduce/P-FIXTURE-1/RESULT.md", "reproduce/P-FIXTURE-1"),
+        )
+        for kind, location, bundle_location in cases:
+            with self.subTest(kind=kind, location=location):
+                self._public_probe_evidence(location, bundle_location=bundle_location, kind=kind)
+                with self.assertRaisesRegex(LedgerError, "reproduction is missing"):
+                    validate(self.root)
+
+    def test_public_probe_result_entrypoint_rejects_unsafe_locations(self) -> None:
+        for location in (
+            "probes/P-FIXTURE-1/../P-FIXTURE-1/RESULT.md",
+            str(self.root / "probes/P-FIXTURE-1/RESULT.md"),
+        ):
+            with self.subTest(location=location):
+                self._public_probe_evidence(location)
+                with self.assertRaisesRegex(LedgerError, "has unsafe location"):
+                    validate(self.root)
 
     def test_bundle_hash_uses_case_sensitive_posix_path_order(self) -> None:
         bundle = self.root / "bundle"

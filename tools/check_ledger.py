@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Validate Public Canon companion ledgers.
 
-The complete pre-maintenance validator lives in check_ledger_core.py byte-for-
-byte. This wrapper adds one representation rule: same-layer OPEN_DECISION rows
+The core ledger validator lives in check_ledger_core.py. This wrapper adds one
+representation rule: same-layer OPEN_DECISION rows
 are validated by check_gate_contract.py and are not cross-layer dependency
-gates. All other ledger validation is delegated to the unchanged core.
+gates. All other ledger validation is delegated to the core.
 """
 
 from __future__ import annotations

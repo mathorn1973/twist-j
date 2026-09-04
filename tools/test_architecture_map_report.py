@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 360)
+        self.assertEqual(self.report.claims, 371)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 34, "D": 45, "F": 17, "H": 2, "O": 29, "T": 233},
+            {"C": 34, "D": 45, "F": 17, "H": 2, "O": 29, "T": 244},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 47,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 273,
+                "two-architecture": 284,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -45,7 +45,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(
             len(self.report.transitive_architecture_dependents), 242
         )
-        self.assertEqual(len(self.report.dependency_terminals), 54)
+        self.assertEqual(len(self.report.dependency_terminals), 58)
         self.assertIn(
             "JIPC-WP3D-QPOS-SCALAR-SLICE",
             self.report.dependency_terminals,

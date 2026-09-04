@@ -1,4 +1,19 @@
 item_id	depends_on	relation	basis
+J-CM-FIBONACCI-BRAID-PROJECTIVE-NONMEMBERSHIP	CM-ALTERNATING-PENCIL	REQUIRES	the exact CM restriction A_CM and its trace and determinant are the registered pencil action
+J-CM-FIBONACCI-BRAID-PROJECTIVE-NONMEMBERSHIP	J-GOLDEN-BRIDGE	REQUIRES	the frozen positive Fibonacci coefficient a=phi^-1 is the registered golden cyclotomic identity
+J-CIRCULAR-FIBONACCI-DETERMINANT-CHARACTER	CM-ALTERNATING-PRIMARY-LATTICE-SEAM	REQUIRES	the full saturated circular primary lattice C_Z and its ordered basis supply the target integral module
+J-CIRCULAR-FIBONACCI-DETERMINANT-CHARACTER	J-TENTH-ROOT	REQUIRES	delta_10=1-J=-zeta_5^2 supplies the exact primitive tenth-root scalar action
+J-CIRCULAR-FIBONACCI-DETERMINANT-CHARACTER	J-GOLDEN-BRIDGE	REQUIRES	the golden coefficient identity fixes the displayed Fibonacci gauge whose generator determinants are compared with delta_10
+J-GALOIS-CIRCULAR-QUOTIENT-SEMIDIRECT-UNITARY	CM-ALTERNATING-PRIMARY-LATTICE-SEAM	REQUIRES	the full H_Z and C_Z intersections and covariant pullback define the integral quotient and its natural circular injection
+J-GALOIS-CIRCULAR-QUOTIENT-SEMIDIRECT-UNITARY	J-CIRCULAR-FIBONACCI-DETERMINANT-CHARACTER	REQUIRES	the marked integral Psi map supplies the O_K coordinates extended rationally to identify the quotient fractional ideal
+J-GALOIS-CIRCULAR-ODD-CHARACTER	J-GALOIS-CIRCULAR-QUOTIENT-SEMIDIRECT-UNITARY	REQUIRES	the exact descended P_L and S_L matrices and forty-element semidirect presentation define the representation whose eigenlines and character are classified
+J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE	J-STEP	REQUIRES	the registered multiplication matrix M_J supplies the independently reconstructed pure L1 motor D=M_J-I and its integral simplex
+J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE	J-GALOIS-CIRCULAR-QUOTIENT-SEMIDIRECT-UNITARY	REQUIRES	the marked quotient L with P_L,S_L and the explicit common G_L form supplies the target metric lattice and its circular injection
+J-CIRCULAR-QDD-SIGNED-AFFINE-PROJECTOR-INTERTWINER	J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE	REQUIRES	the signed marked isometry T and oriented simplex w_x supply the source and target of the affine and projector transport
+J-CIRCULAR-QDD-SIGNED-AFFINE-PROJECTOR-INTERTWINER	J-GALOIS-CIRCULAR-QUOTIENT-SEMIDIRECT-UNITARY	REQUIRES	the full group G_C and primary quotient action provide the ambient central-sign group and the separate L/C_Z seam comparison
+J-COINCIDENCE-CARTESIAN-GRAM-SEAM	J-RESIDUAL-UNIT-NORMAL-FORM	REQUIRES	the two tagged input fibres use the fixed reduced signed ordinal normal form and its absolute cardinality
+J-COINCIDENCE-CARTESIAN-GRAM-SEAM	J-SIMPLEX-TIGHT-FRAME-DILATION	REQUIRES	the full marked-cell copy supplies its exact diagonal coefficient Gram contractions before any simplex compression
+J-COINCIDENCE-CARTESIAN-GRAM-SEAM	J-PLENUM-POLAR-ORBIT-SEPARATION	REQUIRES	the scaling ledger uses the integral-A quadratic multiplier and the distinct raw-J_reg and normalized-U_5 roles
 J-IDEAL-COUNT-QUADRATIC-CHARACTER	J-GOLDEN-BRIDGE	REQUIRES	the quadratic character is the exact projective fixed-line deficit of the registered golden companion action
 J-IDEAL-COUNT-QUADRATIC-CHARACTER	REGULATOR-TWO-LOG-PHI	REQUIRES	the canonical associate domain uses the registered rank-one unit lattice and its exact two-log-phi regulator normalization
 J-IDEAL-COUNT-QUADRATIC-CHARACTER	CYCLOTOMIC-CLASS-NUMBER-ONE	REQUIRES	the ideal-count and unique principal-ideal representatives use the registered class-number-one theorem for the golden field
