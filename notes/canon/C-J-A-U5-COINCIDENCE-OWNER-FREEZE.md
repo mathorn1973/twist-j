@@ -25,13 +25,20 @@ ACTIVATION COMMIT:       c4f00e1d9c89f503d913224dc3c09dc760dcec9d
 CONTENT COMMIT:          e32e85ed7297d4320df5b345e4488d78323d550c
 CANON SHA-256:           44130160a3ce29bfcdc757e255d2d1c25a010b22911edfe66cf6b132be081fbe
 CANON BYTES:             399513
-PUBLIC MAIN BASE:        54c07a376615c5ab95002f5da66d534d292202aa
+PUBLIC MAIN BASE:        a7ef8ba676a7a26ebac4b0d5a0b31c47bc41cc9c
 OWNER RULING DATE:       2026-09-04
 ```
 
 This note records the owner's answer to the fork left open by
+`C-J-PLENUM-BORN-CHAIN-1-N`, refined by
 `C-J-RESIDUAL-INTEGER-UNIT-1-N` and
 `P-J-COINCIDENCE-RECORD-BOUNDARY-1`.
+
+It resolves only the still-open routing choice in section 8 of the Born-chain
+note. Every other authority boundary, mathematical caveat, and STOP in that
+note remains in force. For this coincidence-count port it supersedes the
+earlier candidate-H design preference for raw-`J` branch (a). It does not
+declare raw `J` unphysical or alter its algebraic role outside this port.
 
 The adopted route is:
 

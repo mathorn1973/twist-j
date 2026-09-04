@@ -6,7 +6,8 @@ STATUS:                  OWNER-ROUTED PREDEFINITION /
 AUTHORITY:               NOT CANON
 SCOPE:                   PROPOSAL-LOCAL / L1 TYPING /
                          PHYSICAL REALIZATION OPEN
-DEPENDS ON:              C-J A/U5 coincidence-channel owner freeze
+DEPENDS ON:              C-J A/U5 coincidence-channel owner freeze /
+                         C-J plenum Born-chain proposal
 COUNT INPUT:             a_n=A^n d in V_Z
 ALGEBRAIC COPY:          full marked cell register before compression
 FINITE PAIR CARRIER:     separately defined Cartesian incidence
@@ -21,7 +22,7 @@ DEPENDENCY CHANGE:       NONE
 GATE CHANGE:             NONE
 PUBLIC BASE:             Public Canon v75
 PUBLIC CANON TAG:        canon-v75
-PUBLIC MAIN BASE:        54c07a376615c5ab95002f5da66d534d292202aa
+PUBLIC MAIN BASE:        a7ef8ba676a7a26ebac4b0d5a0b31c47bc41cc9c
 ```
 
 This note fixes the smallest tensor interface compatible with the owner's
