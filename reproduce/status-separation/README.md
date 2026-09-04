@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its sixty-seven checks cover the current
+and emits deterministic text. Its sixty-eight checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -267,3 +267,11 @@ amplitude, coefficient data, trace pairing, LOW LINE and record schema, with
 no factor-side object.
 
 The v47 count and TM-SYM2 checks additionally require the two new L5 definition rows, the retired MEASURE frontier entry, the DICTIONARY_LIFT gate, the public Born-halving probe evidence, and the explicit absence of GYRON-DENSITY as a dependency of the physical six-line measure.
+
+The v76 check pins eleven new L1 theorem rows, their public probe evidence,
+declaration events and dependencies. It also pins every prior registry,
+normative, dependency, evidence and history row plus the complete unchanged
+gate, Frontier-program and CORE-selection tables. The fired combined
+polar/Gauss claim, abandoned predecessor and physical coincidence hypothesis
+are excluded. This is release-boundary bookkeeping, not a new scientific
+probe or an apparatus realization.

@@ -21,6 +21,14 @@ history or the private development archive into scientific evidence:
   names a stable three-file bundle under `reproduce/`; `PUBLIC_PROBE` requires
   the five-file preregistration, verifier, expected-output, run, and result core
   under `probes/`, while additional pinned breaker files may be included.
+  A `PUBLIC_PROBE` location may also name the existing file
+  `probes/<single-probe>/RESULT.md` with exactly those three POSIX path
+  components. This entrypoint resolves to its parent probe directory for the
+  same complete bundle hash and required-file and architecture checks. It
+  never hashes only `RESULT.md`. Other filenames, nested paths, and
+  `REPRODUCTION` file entrypoints are not aliases; directory locations retain
+  their existing meaning. The literal entrypoint must agree in `REGISTRY.tsv`,
+  `EVIDENCE.tsv`, and the latest `HISTORY.tsv` event.
   Reproduction hashes deliberately exclude `RUNS/`: immutable candidate
   content is pinned before formal run records arrive. The final activation
   gate checks every declared reproduction architecture requirement; public
@@ -60,7 +68,7 @@ history or the private development archive into scientific evidence:
   `REGISTRY.tsv`, `DEPENDENCIES.tsv`, `NORMATIVE.tsv`, `GATES.tsv`, and
   `EVIDENCE.tsv`.
 
-`tools/check_ledger.py` preserves the complete pre-maintenance validator in
+`tools/check_ledger.py` delegates ledger validation to
 `tools/check_ledger_core.py`, requires the explicit gate contract, and then
 applies the existing acyclic dependency, registry agreement, evidence hash,
 continuous history and status-firewall checks. The historical cross-layer

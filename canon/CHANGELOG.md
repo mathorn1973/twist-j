@@ -1,11 +1,44 @@
 # Canon changelog (public series)
 
-## Public Canon v75
+## Public Canon v76
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 360 claims; 0 T-LOCK, 233 T, 45 D, 34 C, 2 H, 29 O, 17 F; 31 live H/O.
+Registry snapshot: 371 claims; 0 T-LOCK, 244 T, 45 D, 34 C, 2 H, 29 O, 17 F; 31 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v76 registers eleven L1 theorem results from six completed
+public two-architecture probe bundles. Existing claim rows, live scopes,
+Frontier programs, gates and CORE selection remain unchanged. No dictionary,
+computation, hypothesis, open obligation or falsified row is added.
+
+The alternating-form line gains the projective Fibonacci nonmembership and
+the distinct circular determinant character; the actual circular quotient
+gains its semidirect unitary action and faithful odd character. The marked
+QDD bridge identifies the metric dual lattice and its signed affine
+projector transport without identifying a physical state or effect.
+
+The five-cell line gains the independently confirmed orbit-separation
+result, the full-register copy and simplex-compression obstruction, the
+conditional PSD support theorem, the residual integer normal form and the
+complete-Cartesian/Gram cardinality seam. Quadratic response, complete
+incidence and any physical realization remain distinct premises.
+
+The combined polar/Gauss claim whose centering gate fired is excluded;
+its independently confirmed orbit claim alone enters this fold. The
+abandoned dual-simplex predecessor contributes no evidence. The candidate
+coincidence-frequency hypothesis and the separate incidence-breaker
+incubation are not registered. No apparatus, event, occurrence, sampling,
+self-location, phase, propagator or decoder-completion conclusion moves.
+
+The separation reproduction now audits the eleven additions and exact
+preservation of the prior claim, gate, program and lifecycle tables.
+
+Public-probe evidence may name its `RESULT.md` entrypoint. The same complete
+probe bundle, required files and architecture gate remain validated and hashed;
+the entrypoint is not a result-file-only evidence hash.
+
+## Public Canon v75
 
 Public Canon v75 folds eight theorem-grade results already earned by five
 completed public two-architecture probe bundles. It adds no dictionary,
