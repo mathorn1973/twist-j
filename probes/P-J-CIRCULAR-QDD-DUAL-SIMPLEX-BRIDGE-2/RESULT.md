@@ -1,6 +1,6 @@
 # P-J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE-2 result
 
-Status: **candidate-T / L1 / TWO CLAIMS CONFIRMED / ARCHITECTURE GATE PENDING / PUBLIC CLAIMS UNREGISTERED / CANON UNCHANGED**
+Status: **candidate-T / L1 / TWO CLAIMS CONFIRMED / TWO-ARCHITECTURE COMPUTATION GATE PASS / PUBLIC CLAIMS UNREGISTERED / CANON UNCHANGED**
 
 ## Recorded decision
 
@@ -13,8 +13,8 @@ stdout:                                              byte-identical to EXPECTED.
 SCIENTIFIC-FIRED-A/B:                                NOT SELECTED
 STOP:                                                NOT SELECTED
 ABANDONED-PIN:                                       NOT SELECTED
-ARCHITECTURE GATE:                                   PENDING
-MANUAL SECURITY REVIEW:                              PENDING
+ARCHITECTURE GATE:                                   PASS
+MANUAL SECURITY REVIEW:                              PASS
 ```
 
 The immutable successor verifier was executed exactly once after public pin
@@ -22,6 +22,14 @@ The immutable successor verifier was executed exactly once after public pin
 readback. Its 26-line stdout has SHA-256
 `6d512d1efe4f93505f69fc3cfe21182f02b7fd40cb052a59a7eb5095013f7e5a`.
 Every frozen gate passed and no scientific falsifier fired.
+
+Manual security review of all five named probe files passed without
+re-executing or importing the verifier. The pinned files and exact transcript
+remain byte-identical to the recorded hashes. The verifier is deterministic,
+bounded, standard-library-only, and free of file input, network, subprocess,
+shell, dynamic execution, secrets, personal data, or private-machine
+identifiers. The L1 scope and every physical and cross-layer firewall remain
+intact.
 
 The predecessor `P-J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE-1` remains
 permanently `ABANDONED` on `main`. Its failed evidence custody is not an
@@ -117,13 +125,34 @@ tr(Pi_i Pi_j)=1/16 for i!=j.
 They are rank-one, idempotent and `G_L`-self-adjoint, but fractional,
 pairwise nonorthogonal, and not a PVM or integral endomorphism family.
 
-## Pending public reproduction
+## Required two-architecture workflow
 
-The sole local x86_64 leg is complete. Independent GitHub-hosted x86_64 and
-aarch64 replay, exact transcript comparison, aggregate `check`, and a named
-manual security review remain pending. `RUN.md` permanently records this
-historical point with `architecture_gate: PENDING`; only this result file may
-later close those gates with immutable receipts.
+```text
+pull_request:          802
+tested_head:           ab0124db12e01e4acd0eea82c176fdf6e4fe7c1b
+workflow_run:          33860898742
+x86_64_job:            100984855796 success
+aarch64_job:           100984856055 success
+aggregate_check_job:   100984934491 success
+verifier_sha256:       bc7ab7565cc21c387485487fb23ce2d9cee0cf35a8a10869376de61874da9318
+stdout_sha256:         6d512d1efe4f93505f69fc3cfe21182f02b7fd40cb052a59a7eb5095013f7e5a
+stdout_bytes/lines:    1858 / 26
+byte_identity:         PASS on x86_64 and aarch64
+manual_security:       PASS on the five named probe files
+```
+
+Both architecture jobs passed repository policy, all 148 unit tests, Canon,
+ledger, gate-contract, changed-probe reproduction, and exact transcript
+comparison. The aggregate job reported `TWO-ARCHITECTURE CHECK PASS`. Their
+common verifier receipt is
+
+```text
+VERIFY PASS P-J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE-2 bc7ab7565cc21c387485487fb23ce2d9cee0cf35a8a10869376de61874da9318 6d512d1efe4f93505f69fc3cfe21182f02b7fd40cb052a59a7eb5095013f7e5a
+```
+
+`RUN.md` remains the immutable historical record of the sole local formal leg
+and therefore retains `architecture_gate: PENDING`; this result section closes
+that gate with the public workflow receipt above.
 
 ## Earned scope and firewalls
 
