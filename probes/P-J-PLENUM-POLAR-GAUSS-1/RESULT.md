@@ -1,7 +1,7 @@
 # P-J-PLENUM-POLAR-GAUSS-1 result
 
 Status: **L1 / CLAIM A SCIENTIFIC-FIRED / CLAIM B candidate-T CONFIRMED /
-TWO-ARCHITECTURE COMPUTATION GATE PENDING / PUBLIC CLAIMS UNREGISTERED /
+TWO-ARCHITECTURE COMPUTATION GATE PASS / PUBLIC CLAIMS UNREGISTERED /
 CANON UNCHANGED**
 
 ## Recorded decision
@@ -17,8 +17,8 @@ SCIENTIFIC-FIRED-A:               SELECTED
 SCIENTIFIC-FIRED-B:               NOT SELECTED
 STOP:                             NOT SELECTED
 ABANDONED-PIN:                    NOT SELECTED
-ARCHITECTURE GATE:                PENDING
-MANUAL SECURITY REVIEW:           PENDING
+ARCHITECTURE GATE:                PASS
+MANUAL SECURITY REVIEW:           PASS
 ```
 
 The immutable verifier was executed exactly once after public pin
@@ -116,6 +116,41 @@ that `J` has no state-independent quadratic-norm multiplier. By contrast,
 
 This is a publicly unregistered candidate-T/L1 conclusion supported by the
 written proof and passed exact gates. It is not a physical reading.
+
+## Required two-architecture workflow
+
+```text
+pull_request:          805
+tested_head:           ce17e289111ec2e914d193c11c76010dc2763135
+workflow_run:          33887779022
+x86_64_job:            101071711231 success
+aarch64_job:           101071711048 success
+aggregate_check_job:   101071809766 success
+verifier_sha256:       7f7e0fddc72b8e282e77f56d11c6f1f28dff0ac2bac85c45d8beae2db06c8ebc
+stdout_sha256:         34ec9a43130413fbb98c272af1b6d6f0fcd9ae487876c72b0d7b8c2914e71a61
+stdout_bytes/lines:    1469 / 22
+byte_identity:         PASS on x86_64 and aarch64
+manual_security:       PASS, review 5114702058 on all five named probe files
+```
+
+Both architecture jobs passed repository policy, all unit tests, Canon,
+ledger, gate-contract, changed-probe reproduction, and exact transcript
+comparison. The aggregate job reported `TWO-ARCHITECTURE CHECK PASS`. Their
+common verifier receipt is
+
+```text
+VERIFY PASS P-J-PLENUM-POLAR-GAUSS-1 7f7e0fddc72b8e282e77f56d11c6f1f28dff0ac2bac85c45d8beae2db06c8ebc 34ec9a43130413fbb98c272af1b6d6f0fcd9ae487876c72b0d7b8c2914e71a61
+```
+
+Manual security review of all five files passed without importing or
+executing the verifier. It found fixed exact inputs, bounded loops,
+deterministic output, and only the standard-library `Fraction` import. It
+found no file input, network, subprocess, shell, environment read, dynamic
+execution, secret, personal data, or private-machine identifier.
+
+`RUN.md` remains the immutable historical record of the sole local formal leg
+and therefore retains `architecture_gate: PENDING`; this result section closes
+that gate with the public workflow receipt.
 
 ## Passed but unearned claim-A components
 
