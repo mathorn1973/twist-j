@@ -205,18 +205,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 233, "D": 45, "C": 34, "F": 17,
+    expected_counts = {"T": 244, "D": 45, "C": 34, "F": 17,
                        "O": 29, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v75",
-        len(rows) == 360
+        "registry and companion-ledger counts match Public Canon v76",
+        len(rows) == 371
         and counts == expected_counts
-        and len(normative) == 406
-        and len(dependencies) == 662
-        and len(evidence) == 360
-        and two_architecture == 273
-        and len(history) == 891
+        and len(normative) == 417
+        and len(dependencies) == 677
+        and len(evidence) == 371
+        and two_architecture == 284
+        and len(history) == 902
         and len(gates) == 14
         and len(programs) == 31
         and len({row["program_id"] for row in programs.values()}) == 8
@@ -6163,6 +6163,104 @@ def run():
         and all(v75_bad_probe not in row["evidence_location"] for row in history)
         and v75_bad_claim not in canon_text
         and v75_bad_probe not in canon_text
+    ))
+
+
+    # The v76 theorem-only fold preserves every previously registered row.
+    v76_contract = {'J-CM-FIBONACCI-BRAID-PROJECTIVE-NONMEMBERSHIP': {'row': '358774de5e5ee215c2a728be0b3e66ef1a9d1ae24385c7c32cc663fa64a88bab',
+                                                       'normative': '00b4f90e1fb8f23ae50c445ffeb5dc3c9eb40505951088bc60acd8824f59e8e0',
+                                                       'evidence': 'bd80d92c79e3d1c90c5aea2e46d8471440ed536a95eebcd897a32c799caf9956',
+                                                       'history': '42c3cb7a1d2a6f0f206baacce922124527b3486fb4e1870557124ecdbce84366'},
+     'J-CIRCULAR-FIBONACCI-DETERMINANT-CHARACTER': {'row': '5690ac4968c4b98857f7c82b92f7261dfe5c07a8654f9204317121903d5c52bf',
+                                                    'normative': 'aa29bf8beb36f9742ba196f937624cccd7b5ad41367685568a9678a95241a965',
+                                                    'evidence': '2e327e2c17f8d4855fc08df04cef2b191b502837e5cf6f1f967aac4d316636e5',
+                                                    'history': 'bd4698c5e95053c1390794234f4a7ccdff5b4db7a71254cf807ab957343ff6c7'},
+     'J-GALOIS-CIRCULAR-QUOTIENT-SEMIDIRECT-UNITARY': {'row': '8877881b741ce23e0d9adb9a3cbacb66d8eb190175ac29e3cb7daf4dbd2ad74f',
+                                                       'normative': '440412ff54080b6bdca372d59bb96a04bac4c97c79887d48a5d2d0b18ff89c02',
+                                                       'evidence': '52ba8b1782ffd2125bffd78166398ca8a35c6a30246040c080ad4b8524558a17',
+                                                       'history': '367391e45b6502101ff206ac1e2955dc646b158f8c7ba9c3e7c359aae6c0fd2c'},
+     'J-GALOIS-CIRCULAR-ODD-CHARACTER': {'row': '24ec2afdbe23223048bc35ed8ab21433efd8bdc6c39a018af4483736ad604dc6',
+                                         'normative': '9b160fd532587af6f6905256423c44d3d286194a132cdd376100995f4ecfa31f',
+                                         'evidence': '228de8f5c40a71ad4104a49e41de03c408d851ea26fa30fadb033e526a7cdb0b',
+                                         'history': 'bd82fdfd31663ac159e4c75a979a57a91186e08b8e10f1e0dd10a885dec6529e'},
+     'J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE': {'row': 'd8d72ed56e8f729412e283f471a97717cdc5df343cb01ab6d3e10abc33880219',
+                                            'normative': 'f685588556141102dd1d7a33e30e3d8aff1b772a61aeeb48416bd583e7202ba2',
+                                            'evidence': '8781ffcd362f96df760ca7e50679568aa2310f6f65de5fe74869abb6031b73c2',
+                                            'history': '206df14ea810d41183fc6df9b282aa3d1e46a62497dc59d476f627f284652aea'},
+     'J-CIRCULAR-QDD-SIGNED-AFFINE-PROJECTOR-INTERTWINER': {'row': '6bc065bb2b38653430db68e659f472a4c7e1d2bc276654dc37c63f62a0a58fb2',
+                                                            'normative': '3e922beb8819b0a3cbc5454fcce65dd7c73309edd603d9248eb63186eacb45e7',
+                                                            'evidence': '8f7611ee3e8d5d8ff43cc12e10bce38170aaafbcb62e269aa1458a7c48d5710a',
+                                                            'history': 'b45b42390bbcf8d480ceaf31dccc81b3d079d6512c9fe11b27d6b8226d3f138e'},
+     'J-PLENUM-POLAR-ORBIT-SEPARATION': {'row': '0e85fd7a784863aeee31410282b8f8241b9f9403cab3402f6bcdabc4bebc8306',
+                                         'normative': '771b5bfa55bcb7092f88e2273b178e05d0508611cae2621592f9e1fd5d185605',
+                                         'evidence': 'ed570dc8064008f8f75ed1359b43d1201e35c2cb40839abb534d400c9dd0dbd8',
+                                         'history': 'ba503dcf6dc601eb8fe06d309a7f0dbcc21fc7be3c182602bb4a38875d11be8c'},
+     'J-SIMPLEX-TIGHT-FRAME-DILATION': {'row': '55701198cd97fd9baa7c0527aa4ea797cb6bac8f8f1c11b403347f3b1dd5f342',
+                                        'normative': '60615a56933f26d8fb52fb401a39510dfe4acb00b5aba640895c524c88f9e884',
+                                        'evidence': 'd79621a7f140ddaa4e09dda2cdafde0212fc7f5b8e35ff1f53edf86bb1e6d734',
+                                        'history': 'ec2eb048e9a3bc0f1b03b8070c510ef835557266642da9a9bc48963e32ab3bad'},
+     'J-SIMPLEX-QUADRATIC-SUPPORT-RIGIDITY': {'row': 'd8ac3d8b478c4b0bc174281ce3f76ac2270576cf35b0fef63b12f7f4876f8df5',
+                                              'normative': '48224ca86cac176ead49768f4b4f0384d7f1607c52c5fa0e4cb2078d00016a81',
+                                              'evidence': 'c79faf19c9343a2448686341831666bd54d19b98027b856f5aca4714c912d57f',
+                                              'history': 'f2fc4fc0a489e6cb8491e74e2fe430e3cfe2873355563f886f4d8684a4a566ed'},
+     'J-RESIDUAL-UNIT-NORMAL-FORM': {'row': '095f1e8c42bd695ff8715afb9f1049d22a0d02c0ceb869df516794e1cf4a3492',
+                                     'normative': 'aab1281b4230094b0422769291348d6639b1bdb88425260711de4c0d8506668c',
+                                     'evidence': '2e01a4aac5ad9c215cfcc68bff0c2a2528f591509836ae4b6b0c8cfdbf9aa2b5',
+                                     'history': '9887673d9c22068dd10b412f2fd9ce5f4c8092ace78fdd8d78bcc853c25b91be'},
+     'J-COINCIDENCE-CARTESIAN-GRAM-SEAM': {'row': '0e77b99202f6e9eb487e8d6f5d6e836645ed2d9ccbfaf8b0ee70041988bd5cf3',
+                                           'normative': '1a33eed8f78033a2714486cfe8f99c663b8d671092e57e5c0a34ffd98c1ee9df',
+                                           'evidence': '079aa2bd48f8c416844fbc9b6ed402a36c32485871f9c3e1d5287151f8e920b5',
+                                           'history': '07ee8a05121dc9706d4d9003ebc2a69cf0700cde3a5aa7dc61b9f557b75c6832'}}
+    v76_prior = {'CORE_SELECTION': 'a6fbcb3d9f353d9e86afb71a0c4ac770333eb1d070dbe782d1d2e4de9147e225',
+     'DEPENDENCIES': 'b19d307f9054354ceb69c42692c42503f326e7d75c550c46cab8306feca6a8e9',
+     'EVIDENCE': '9a0d70bdcff8edc24abdd930828f6d16ff637c3eed2a33f97ae36798cfa060f6',
+     'FRONTIER_PROGRAMS': '5266805122ab90ee1e643c2026838c08dcbe6f707d09e46058b71dc891b21877',
+     'GATES': 'dba992ba687c15778ad8873fbccaba372633a8d2a3579c387c4b79c5dec3be6b',
+     'HISTORY': '9a2a53fb9e6017071dca75f4c8a61904ba5048c06d134a23f7882ca57863c6dd',
+     'NORMATIVE': '6f5b7026cf1dfe4455d91dc28894c930d10d61f4a21a80dc7250dbe47973b33c',
+     'REGISTRY': '60b85789e1a2cda52c089c8fc3e34b7db3418ca831477e497b9012a30c9582c8'}
+    v76_dependency_hash = 'b9d85c1321ca35ff9be5e027cc2c77d5a32da6b62e6e83ee515420bd314123f1'
+    v76_names = set(v76_contract)
+    def v76_table_hash(table):
+        return hashlib.sha256("\n".join(sorted(
+            table_row_sha256(row) for row in table
+        )).encode("utf-8")).hexdigest()
+    v76_events = [row for row in history if row["release"] == "canon-v76-candidate"]
+    v76_events_by_claim = {row["claim_id"]: row for row in v76_events}
+    v76_old_tables = {
+        "REGISTRY": [r for r in rows if r["claim_id"] not in v76_names],
+        "NORMATIVE": [r for k,r in normative.items() if k not in v76_names],
+        "DEPENDENCIES": [r for r in dependencies if r["item_id"] not in v76_names],
+        "EVIDENCE": [r for k,r in evidence.items() if k not in v76_names],
+        "HISTORY": [r for r in history if r["release"] != "canon-v76-candidate"],
+        "GATES": list(gates.values()),
+        "FRONTIER_PROGRAMS": list(programs.values()),
+        "CORE_SELECTION": core_selection_rows,
+    }
+    checks.append((
+        "V76-L1-FOLD",
+        "eleven L1 theorem rows enter with exact probe evidence; prior claims, "
+        "gates and frontier stay fixed; fired polar-A and physical coincidence stay excluded",
+        len(v76_contract) == 11
+        and all(v76_table_hash(v76_old_tables[k]) == h for k,h in v76_prior.items())
+        and len(v76_events) == 11 and set(v76_events_by_claim) == v76_names
+        and v76_table_hash([r for r in dependencies if r["item_id"] in v76_names])
+            == v76_dependency_hash
+        and all(
+            has_status(index, claim, "T")
+            and registry_row_sha256(index, claim) == contract["row"]
+            and table_row_sha256(normative[claim]) == contract["normative"]
+            and normative[claim]["layer"] == "L1" and not normative[claim]["gate_ids"]
+            and table_row_sha256(evidence[claim]) == contract["evidence"]
+            and evidence[claim]["architecture_requirement"] == "two-architecture"
+            and table_row_sha256(v76_events_by_claim[claim]) == contract["history"]
+            and claim not in programs
+            for claim,contract in v76_contract.items()
+        )
+        and "J-PLENUM-POLAR-GAUSS" not in index
+        and "COINCIDENCE-RECORD-FREQUENCY" not in index
+        and all("P-J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE-1" not in r["location"]
+                for r in evidence.values())
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

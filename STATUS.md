@@ -2,18 +2,18 @@
 
 ```text
 STATE:          ACTIVE
-CANON:          Public Canon v75
+CANON:          Public Canon v76
 AUTHORITY:      mathorn1973/twist-j main
 CUTOVER:        2026-08-21
-TAG:            canon-v75
-CONTENT_COMMIT: e32e85ed7297d4320df5b345e4488d78323d550c
-CANON_SHA256:   44130160a3ce29bfcdc757e255d2d1c25a010b22911edfe66cf6b132be081fbe
-CANON_BYTES:    399513
+TAG:            canon-v76
+CONTENT_COMMIT: 07910adb8418742bf52a0d204577b84b38009b18
+CANON_SHA256:   c151a19997dba95d78836c46f38463ab2735ae1c98674f87888d519d7a500112
+CANON_BYTES:    420539
 ```
 
-Public Canon v75 is the normative public ledger of TWIST-J. Authority begins
+Public Canon v76 is the normative public ledger of TWIST-J. Authority begins
 only when this activation form is merged into public `main` and the merge
-commit is published under the tag `canon-v75`; the same form on any other
+commit is published under the tag `canon-v76`; the same form on any other
 branch is an activation candidate, not an activation.
 
 ## Independent archival
@@ -27,11 +27,11 @@ Archived 2026-07-30 from `https://github.com/mathorn1973/twist-j`. The
 identifiers below are SWHIDs, intrinsic content-addressed identifiers
 standardised as ISO/IEC 18670, and each pins bytes rather than a location:
 
-- the content of `canon/CANON.md` at Public Canon v27 —
+- the content of `canon/CANON.md` at Public Canon v27 â€”
   `swh:1:cnt:99fbf396ad353267c1dae996e47c5562399cf29a`
-- the revision named as the content commit of Public Canon v27 —
+- the revision named as the content commit of Public Canon v27 â€”
   `swh:1:rev:116b62edf505914d96fcd65318d97f3675c53f85`
-- the snapshot of the origin at the archiving visit —
+- the snapshot of the origin at the archiving visit â€”
   `swh:1:snp:735c0fe3dbf7f8fbe3f8559411a5309d1305e9d3`
 
 Software Heritage independently reports the archived `canon/CANON.md` as

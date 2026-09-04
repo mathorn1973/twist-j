@@ -401,6 +401,17 @@ def validate(root: Path) -> Snapshot:
             if relative.is_absolute() or ".." in relative.parts:
                 fail(f"{evidence_id} has unsafe location")
             artifact = root / relative
+            if (
+                kind == "PUBLIC_PROBE"
+                and re.fullmatch(r"probes/[^/\\:]+/RESULT\.md", location)
+                and location.split("/")[1] != "."
+                and artifact.is_file()
+            ):
+                if not artifact.resolve().is_relative_to(root.resolve()):
+                    fail(f"{evidence_id} has unsafe location")
+                # RESULT.md is an entrypoint to the same complete probe bundle.
+                # Keep the literal location in all ledger agreement checks.
+                artifact = artifact.parent
             if not artifact.is_dir() or mode != "bundle-manifest-sha256-v1":
                 fail(f"{evidence_id} reproduction is missing")
             if not SHA256.fullmatch(digest) or digest != bundle_sha256(artifact, root):

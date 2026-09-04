@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v75
+# TWIST-J Public Canon v76
 
-**Release identity.** Public Canon v75. Normative authority and activation
+**Release identity.** Public Canon v76. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v75 also declares the discrete architecture used to read
+only. Public Canon v76 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v75 does not claim
+seed of the two algebraic projections. Public Canon v76 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -124,7 +124,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v75 contains no such
+deriving the architecture from J; Public Canon v76 contains no such
 theorem.
 
 ---
@@ -2180,6 +2180,242 @@ scope.
 
 
 
+For the following five L1 statements, let the full marked register be
+`E_Q=Q^5`, with orthonormal columns `e_0,...,e_4`, and put
+
+```text
+1=(1,1,1,1,1)^T,  N=11^T,  g e_k=e_(k+1 mod 5),
+P_V=I-N/5,  V_Q=ker(1^T),  V_R=V_Q tensor_Q R,
+V_Z=V_Q intersect Z^5,  q(d)=d^T d,
+J_reg=I+g^2,  Gamma=g+g^4-g^2-g^3,
+A=g Gamma=I+g^2-g^3-g^4,  U_5=A/sqrt(5),
+H=Gamma/sqrt(5),  B=(5I-Gamma)/(2sqrt(5)),
+phi=(1+sqrt(5))/2,
+u_k=P_V e_k,  E_k=u_k u_k^T.
+```
+
+The positive real embedding of `sqrt(5)` is used. `J_reg` names a register
+operator; it is distinct in type from the scalar cyclotomic axiom `J`.
+The operators involving `sqrt(5)` act on `V_R` unless a full-register
+identity is explicitly given. All iteration indices n and m below are nonnegative integers. The terms cell, copy, residual unit and relation are algebraic
+or finite-set terms here.
+
+### J-PLENUM-POLAR-ORBIT-SEPARATION [T]
+
+On the full register, exact multiplication gives
+
+```text
+Gamma^2=5I-N,  Gamma N=0,
+2J_reg-g(Gamma-I)=N,
+A^2=5g^2-N,  A^T A=5I-N.
+```
+
+Consequently `q(A^n d)=5^n q(d)` for every `d in V_R`. On this sector set
+`P_+=(I_V+H)/2` and `P_-=(I_V-H)/2`. They are orthogonal projectors,
+`U_5` is orthogonal, and direct substitution yields
+
+```text
+B=phi^-1 P_+ + phi P_-,
+J_reg|V=U_5 B=B U_5.
+```
+
+For `d_0=5e_0-1=(4,-1,-1,-1,-1)`, the complete integral-mixer orbit is
+
+```text
+A^(2m)d_0=5^m g^(2m)d_0,
+A^(2m+1)d_0=5^m g^(2m)(5,0,5,-5,-5).
+```
+
+Thus its normalized coordinate-square profiles alternate between shifts of
+`(16,1,1,1,1)/20` and `(25,0,25,25,25)/100`; under `U_5` this profile has
+exact period ten. The even cuts put the unique largest coordinate at each
+of the five cells, the odd cuts put the unique zero at each cell, and an
+even profile cannot equal an odd profile.
+
+The raw orbit obeys
+
+```text
+J_reg^n d_0=5(I+g^2)^n e_0-2^n 1,
+q_n=q(J_reg^n d_0)=10(phi^(2n)+phi^(-2n)),
+q_0=20,  q_1=30,  q_(n+2)=3q_(n+1)-q_n.
+```
+
+Every coordinate of the displayed integer orbit is congruent to
+`-2^n modulo 5`, so none is zero. The norm formula follows from
+`q(P_+d_0)=q(P_-d_0)=10` and the two scalar actions of `B`. More generally,
+where the denominator is nonzero,
+
+```text
+q(P_- J_reg^n d)/q(P_+ J_reg^n d)
+  =phi^(4n) q(P_-d)/q(P_+d).
+```
+
+The commuting orthogonal factor preserves both sector norms. The orbit
+formulas follow by induction from `A^2=5g^2` on `V`, and the recurrence
+uses `phi^2+phi^-2=3`; finite orbit samples are not the universal proof.
+
+The exact one-step square lists of `Bd_0` and `J_reg d_0` are respectively
+`(20,5,0,0,5)` and `(9,4,9,4,4)`. Their normalized profiles differ. Also
+`q(J_reg d_0)/q(d_0)=3/2`, whereas `q(J_reg(e_0-e_1))/q(e_0-e_1)=2`.
+Raw `J_reg` therefore has no state-independent quadratic multiplier.
+These distinctions select no physical step and supply no path population,
+Born law, apparatus, event, decoder completion or L2--L6 lift.
+
+Evidence: `probes/P-J-PLENUM-POLAR-GAUSS-1/RESULT.md`, claim B, with its
+proof in that probe's `PREREG.md` sections 4.2--4.3 and 5.
+
+### J-SIMPLEX-TIGHT-FRAME-DILATION [T]
+
+The elementary simplex identities are
+
+```text
+sum_k u_k=0,  <u_i,u_j>=delta_ij-1/5,
+sum_k E_k=P_V,  E_k^2=(4/5)E_k,
+<d,E_k d>=d_k^2 for d in V_Q.
+```
+
+Equip the tensor register with the product Euclidean form
+`<x tensor y,x' tensor y'>=<x,x'><y,y'>`, and write
+`q_tensor(t)=<t,t>` for its squared norm. Define
+
+```text
+C_add(e_i tensor e_j)=e_i tensor e_(j+i mod 5),
+K e_k=e_k tensor e_k.
+```
+
+The controlled addition is an integral permutation of determinant one and
+exact order five: its `i=0` block is the identity and each nonzero `i`
+block is a five-cycle. Its ready-column restriction is
+`C_add(d tensor e_0)=Kd`, and the five columns of `K` are orthonormal.
+For a joint vector with coefficient matrix `M`, define its two algebraic
+contractions as `MM^T` and `M^TM`. The coefficient matrix of `Kd` is
+`diag(d_k)`, so both contractions equal `diag(d_k^2)` for every `d in E_Q`.
+
+After compression, the five marked images are `u_k tensor u_k`. Their Gram
+matrix has diagonal `16/25` and off-diagonal `1/25`, hence eigenvalues
+`3/5` four times and `4/5` once. They are linearly independent, and
+`q_tensor(sum_k u_k tensor u_k)=4`. Because their source vectors satisfy
+`sum_k u_k=0`, no linear map `L:V_Q -> V_Q tensor V_Q` sends every
+`u_k` to `u_k tensor u_k`. Equivalently, `(P_V tensor P_V)K` cannot
+factor through `P_V`.
+
+This is a full-cell-copy and compression statement. It assigns no physical
+dilation, effect, partial trace, record population, probability or L2--L6
+meaning to the tensor factors or contractions.
+
+Evidence: `probes/P-J-SIMPLEX-TIGHT-FRAME-DILATION-BOUNDARY-1/RESULT.md`,
+claim A, with the exact proof in that probe's `PREREG.md` section 5.
+
+### J-SIMPLEX-QUADRATIC-SUPPORT-RIGIDITY [T]
+
+Let `W_k` be rational symmetric positive-semidefinite operators on `V_Q`,
+extended symmetrically to `E_Q` by annihilating `1`, and assume
+
+```text
+d_k=0 implies d^T W_k d=0 for every d in V_Q,
+g W_k g^-1=W_(k+1),
+sum_k W_k=I_V.
+```
+
+Then `W_k=E_k` and `d^T W_k d=d_k^2`. Indeed, the dark hyperplane is
+`H_k=u_k^perp` within `V_Q`. PSD Cauchy--Schwarz gives
+`|x^T W_k y|^2 <= (x^T W_k x)(y^T W_k y)`. For `y in H_k` the right
+side vanishes, hence `W_k y=0`. Symmetry puts the image in `Q u_k`, so
+`W_k=c_k E_k` with `c_k>=0`. Cyclic covariance makes all coefficients equal;
+`sum_k E_k=I_V` then forces the common coefficient to be one.
+
+The darkness assumption is substantive. For rational `0<=t<=1`,
+`F_k^(t)=tE_k+(1-t)I_V/5` is PSD, covariant and normalized, but its response
+on a nonzero `d in H_k` is `(1-t)q(d)/5`. Darkness selects `t=1` in this
+family. Separately, for nonzero `h in H_k`, the symmetric cross operator
+`u_k h^T+h u_k^T` is indefinite, vanishes quadratically on `H_k`, and is
+not proportional to `E_k`. This last single-cell control shows why darkness
+alone cannot replace the PSD kernel argument.
+
+The conclusion is conditional on the stated quadratic PSD class and its
+three hypotheses. It neither classifies arbitrary responses nor adopts
+physical darkness, a Born law, an apparatus or any L2--L6 lift.
+
+Evidence: `probes/P-J-SIMPLEX-TIGHT-FRAME-DILATION-BOUNDARY-1/RESULT.md`,
+claim B, with the universal proof in that probe's `PREREG.md` section 6.
+
+### J-RESIDUAL-UNIT-NORMAL-FORM [T]
+
+For `d in Z^5`, let `[n]={1,...,n}`, with `[0]=empty`, and define
+
+```text
+U_k^+(d)={(k,+,m):m in [max(d_k,0)]},
+U_k^-(d)={(k,-,m):m in [max(-d_k,0)]},
+U_k(d)=U_k^+(d) disjoint-union U_k^-(d).
+```
+
+These fibres reconstruct `d_k=|U_k^+|-|U_k^-|` and have total cell
+cardinality `|U_k|=abs(d_k)`. At most one sign fibre is nonempty. For
+nonnegative integers `a,b` satisfying `ab=0` and `a-b=c`, the positive,
+negative and zero cases respectively force `(a,b)=(c,0)`, `(0,-c)` and
+`(0,0)`. Thus the reduced multiplicity pair is unique, and the fixed
+ordinal convention supplies one normal-form representative.
+
+The map `(k,sign,m)->(k+1 mod 5,sign,m)` is a bijection between the fibres
+of `d` and `gd`. This cycle covariance supplies no token identity under a
+general linear update. A labelled presentation with positive words `{a,b}`
+and negative word `{c}` has residual coefficient one whether cancellation
+leaves `a` or `b`. Integer summation fixes the sign and residual cardinality,
+but supplies no rule selecting either surviving label.
+
+These are fresh finite normal-form tokens at a chosen cut. They are not
+particles, persistent paths, a physical preparation or an L2--L6 object.
+
+Evidence: `probes/P-J-COINCIDENCE-RECORD-BOUNDARY-1/RESULT.md`, claim A,
+with the universal integer proof in that probe's `PREREG.md` sections 3--4.
+
+### J-COINCIDENCE-CARTESIAN-GRAM-SEAM [T]
+
+For each cell make disjoint tagged copies
+`U_k^S={S} x U_k(d)` and `U_k^R={R} x U_k(d)`, and explicitly define
+
+```text
+C_k^x(d)=U_k^S x U_k^R,
+C^x(d)=disjoint-union_k C_k^x(d).
+```
+
+The finite-product rule and the full-cell-copy coefficient matrix give
+
+```text
+|C_k^x(d)|=d_k^2,
+|C^x(d)|=q(d),
+(|C_k^x(d)|)_k=diag(M_d M_d^T)=diag(M_d^T M_d),
+M_d=diag(d_k).
+```
+
+The cell relation is empty exactly when `d_k=0`. For `d!=0`, its normalized
+finite ratio is `|C_k^x(d)|/|C^x(d)|=d_k^2/q(d)`. The linear copy has only
+`abs(d_k)` reduced coefficient units in cell `(k,k)`; the square cardinality
+arises from the separately defined complete product.
+
+The same available endpoint sets of common size `n` admit an empty
+relation, the ordinal diagonal of size `n`, and subsets of their product of
+every size from zero through `n^2`. Therefore those available endpoint
+counts and the linear copy do not select complete incidence. This statement
+does not identify the actual projection-marginals of all those relations.
+
+For `d in V_Z`, the integral norm identity gives
+`|C^x(Ad)|=5|C^x(d)|`. The residual single-unit total
+`L(d)=sum_k abs(d_k)` has no state-independent multiplier: `d_0` gives
+`L(Ad_0)/L(d_0)=20/8=5/2`, whereas `5(-1,1,0,0,0)` gives `30/10=3`.
+The normalized `U_5d` generally leaves the integer-fibre domain, and raw
+`J_reg` has the distinct norm-ratio witnesses of
+`J-PLENUM-POLAR-ORBIT-SEPARATION`.
+
+The construction and its scaling are L1 statements. A Gram entry, an empty
+finite relation and a normalized cardinality ratio are not by themselves a
+realized record, physical darkness or observed frequency. No occurrence,
+sampling, self-location, decoder-completion or L2--L6 claim follows.
+
+Evidence: `probes/P-J-COINCIDENCE-RECORD-BOUNDARY-1/RESULT.md`, claim B,
+with the finite-set proof and scaling ledger in that probe's `PREREG.md`
+sections 5--9.
+
 ## 3. The kernel and the census
 
 F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
@@ -4191,6 +4427,341 @@ Pfaffian locus, signed unimodular forms form two antipodal `J`-orbits; only an
 explicit quotient `Omega~-Omega` turns them into one `Z`-torsor. No action,
 `h`, `hbar`, phase, `2 pi`, entropy-area carrier, physical place, time
 orientation, decoder or L2-L6 lift follows.
+
+### J-CM-FIBONACCI-BRAID-PROJECTIVE-NONMEMBERSHIP [T]
+
+Use the covariant form carrier `E_Z`, its full primary lattices `H_Z,C_Z`,
+and their ordered bases above. Put `delta_10=1-J=-zeta_5^2`. In the principal
+embedding let `a=phi^-1=zeta_5+zeta_5^-1`, so `a^2+a=1` and `a>0`.
+Fix the chiral Fibonacci fusion basis `(1,tau)` and linear ribbon lift
+
+```text
+F_0=[[a,sqrt(a)],[sqrt(a),-a]],
+R=diag(zeta_5^-2,-zeta_5^-1),
+rho(sigma_1)=R,             rho(sigma_2)=F_0 R F_0.
+```
+
+The nonorthonormal gauge `D_F=diag(sqrt(a),1)` gives
+
+```text
+F_O=D_F^-1 F_0 D_F=[[a,1],[a,-a]],
+B_1=R,                     B_2=F_O R F_O,
+G_Fib=diag(a,1).
+```
+
+Direct multiplication gives `F_O^2=I`, the braid relation
+`B_1 B_2 B_1=B_2 B_1 B_2`, and `B_i^*G_Fib B_i=G_Fib`. Hence every braid
+word preserves one positive Hermitian form and is conjugate to a unitary
+matrix. For an invertible two-by-two matrix, the quantity
+
+```text
+kappa(X)=tr(X)^2/det(X)
+```
+
+is invariant under conjugacy and nonzero scalar multiplication. On unitary
+eigenvalues `exp(i alpha_1),exp(i alpha_2)` it equals
+`2+2 cos(alpha_1-alpha_2)` and lies in `[0,4]`. The public CM restriction
+`A_CM=[[1,-1],[-1,2]]` has `kappa(A_CM)=9`. Therefore no `w in B_3`,
+`lambda in C^x`, and `G in GL_2(C)` satisfy
+
+```text
+A_CM=lambda G^-1 rho(w)G.
+```
+
+Continuity of `kappa` also excludes the closure of this comparison class
+inside the invertible projective matrix space. This is an exact L1
+nonmembership statement for the fixed chiral lift. A nonunitary Galois
+branch, another enriched carrier, and physical anyon identification are
+outside its scope.
+
+### J-CIRCULAR-FIBONACCI-DETERMINANT-CHARACTER [T]
+
+On `C_Z`, the orbit of `c_2` is
+
+```text
+c_2, P c_2=c_1, P^2 c_2=c_1-c_4, P^3 c_2=c_2-c_3.
+```
+
+Its coordinate matrix and the multiplication-by-`delta_10` companion are
+
+```text
+T_C=[[0,1,1, 0],           K_delta=[[0,0,0,-1],
+     [1,0,0, 1],                    [1,0,0, 1],
+     [0,0,0,-1],                    [0,1,0,-1],
+     [0,0,-1,0]],                   [0,0,1, 1]].
+```
+
+Here `det T_C=1` and `P_C T_C=T_C K_delta`, including the fourth companion
+recurrence. Since `delta_10^5=-1` and `zeta_5=-delta_10^3`, its order is ten
+and `Z[delta_10]=O_K`. Thus
+
+```text
+Psi: O_K -> C_Z,            Psi(delta_10^n)=P^n c_2,  n=0,1,2,3
+```
+
+is an integral `Z[x]`-module isomorphism, where `x` acts by `delta_10` on
+the source and by `P_C` on the target. In the fixed Fibonacci ribbon lift,
+`det B_1=det B_2=delta_10`. For exponent-sum abelianization `e:B_3->Z`,
+determinant multiplicativity and the generator intertwiner give, for every
+word including inverse generators,
+
+```text
+det rho(w)=delta_10^e(w),
+chi_C(w)=P_C^e(w),
+Psi(delta_10^e(w)u)=chi_C(w)Psi(u).
+```
+
+This is an abelian rank-one `O_K` determinant channel on its underlying
+integral lattice. It is not the rank-two Fibonacci representation and its
+determinant depends on the fixed linear ribbon lift, not just its projective
+class. Both Fibonacci claims are audited by `probes/P-J-FIBONACCI-BRAID-1`.
+
+### J-GALOIS-CIRCULAR-QUOTIENT-SEMIDIRECT-UNITARY [T]
+
+Let `gamma_2^Gal(zeta_5)=zeta_5^2`, with matrix `U_2` on the public power
+basis, and let `S_E(W)=U_2^T W U_2`. Both `P` and `S_E` preserve `H_Z` and
+`C_Z`. The integral quotient
+
+```text
+L=E_Z/H_Z,
+b_L=(bar e_03,bar e_12,bar e_13,bar e_23),
+bar e_01=-bar e_12-bar e_23,     bar e_02=bar e_03-bar e_13
+```
+
+is free of rank four. In this basis the descended operators are
+
+```text
+P_L=[[ 0, 1, 0, 0],       S_L=[[-1, 0, 0, 0],
+     [ 0, 1, 0,-1],            [ 0, 1, 0,-1],
+     [ 0,-1, 1, 1],            [ 1,-1, 0, 0],
+     [-1, 1,-1,-1]],           [ 0, 1, 1, 0]].
+```
+
+The injection of `C_Z` has index five, with `P_L=-1` and `S_L=2` on
+`L/C_Z`. Extend `Psi^-1` rationally after this injection. Exact lattice
+transition matrices identify the resulting image of `L` as
+
+```text
+I=O_K+Z*(2+delta_10+delta_10^2+2 delta_10^3)/5
+ =(1+delta_10)^-1 O_K.
+```
+
+For example, `1,delta_10,delta_10^3` and the displayed fifth-denominator
+element form a basis of `I`; multiplication by `1+delta_10` sends this
+basis to an integral unimodular basis of `O_K`. In this model,
+
+```text
+P_L=m_delta_10,
+S_L=m_(delta_10^4) o gamma_3^Gal,
+gamma_3^Gal=(gamma_2^Gal)^-1.
+```
+
+In particular `S_L` is Galois-semilinear, not scalar `O_K`-linear. The
+relations
+
+```text
+P_L^10=I,  P_L^5=-I,  S_L^4=I,  S_L P_L S_L^-1=P_L^3
+```
+
+reduce every word to `P_L^a S_L^b`, `0<=a<10`, `0<=b<4`. The forty
+normal forms are distinct. Consequently
+
+```text
+G_C=<P_L,S_L> ~= C_10 semidirect_3 C_4 ~= C_2 x AGL_1(F_5).
+```
+
+The central factor is generated by `P_L^5`; the subgroup
+`<P_L^6,S_L>` has order twenty and excludes this involution. The linear
+representation is faithful, and its projective kernel is exactly `{I,-I}`,
+so the projective image has order twenty. The explicit form
+
+```text
+G_L=[[2, 0,1, 0],
+     [0, 2,0,-1],
+     [1, 0,2, 1],
+     [0,-1,1, 2]]
+```
+
+satisfies `P_L^T G_L P_L=S_L^T G_L S_L=G_L`. Its leading principal
+minors are `(2,4,6,5)`, proving positive definiteness and common Hermitian
+unitarizability after scalar restriction and complexification. These are
+integral quotient and L1 representation statements; they select no physical
+gate, state or Born normalization.
+
+### J-GALOIS-CIRCULAR-ODD-CHARACTER [T]
+
+The polynomial `Phi_10` gives four simple eigenvalues of `P_L`, indexed by
+`k in {1,3,7,9}` as `delta_10^k`. The normalizer relation sends eigenline
+`k` under `S_L` to eigenline `7k mod 10`. Every `P_L`-invariant complex
+subspace is a sum of its eigenlines, and this transitive permutation forces
+a subspace invariant under both generators to be zero or the whole space.
+The representation is therefore irreducible and monomial in this spectral
+basis.
+
+Its complete character is
+
+```text
+chi(P_L^a S_L^b)=0,                 b=1,2,3,
+(chi(P_L^a))_(a=0,...,9)=(4,1,-1,1,-1,-4,-1,1,-1,1).
+```
+
+The norm of this character is one and `chi(P_L^5)=-4`. Equivalently it is
+the faithful odd induced representation
+`Ind_(C_10)^(G_C)(lambda_1)`, with `lambda_1(P_L)=delta_10`: restriction
+to `C_10` has exactly its four conjugate odd characters, and induction has
+the displayed values off that subgroup as well.
+
+Multiplication by three on the character indices `Z/10` has orbits
+`{0}`, `{5}`, `{1,3,7,9}` and `{2,4,6,8}`. Each fixed orbit has four
+linear extensions over the split `C_4`; each free orbit induces one
+irreducible of dimension four. Their squared dimensions sum to
+`8+2*16=40`, so these exhaust the complex irreducibles. The even
+four-dimensional representation has kernel `<P_L^5>` and is different
+from the faithful odd representation here. Monomial eigenline transport
+does not assert physical superposition or interference. Both quotient
+representation claims are audited by
+`probes/P-J-GALOIS-CIRCULAR-SEMIDIRECT-UNITARY-1`.
+
+### J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE [T]
+
+On a separate L1 rational carrier set
+
+```text
+G_Q=I_4-(1/5)11^T,   D=M_J-I_4,   u_x=D^x e_0,  x in F_5,
+rho(c,b)u_x=u_(b+cx),              c in F_5^*, b in F_5.
+```
+
+The first four `u_x` form an integral unimodular basis, their sum with
+`u_4` is zero, and their Gram has diagonal `4/5` and off-diagonal `-1/5`.
+The twenty integral maps `rho(c,b)` preserve this form and realize the
+affine group. This full lattice `Z^4` is distinct from the finite balanced
+domain of `D_QDD_direct`; no apparatus or decoder ownership is inferred.
+
+The simultaneous rational intertwiner equations
+
+```text
+X D=(-P_L)X,                  X rho(3,0)=(-S_L)X
+```
+
+have a one-dimensional solution space. Clearing denominators, making the
+integer entries primitive and requiring the first nonzero row-major entry
+to be positive gives
+
+```text
+A=5T=[[ 4,-1,-1,-1],
+      [ 1, 1, 1,-4],
+      [-3, 2, 2, 2],
+      [ 2,-3, 2,-3]],             det T=-1/5.
+```
+
+Direct exact identities are
+
+```text
+T^T G_L T=G_Q,
+G_L T=[[1, 0,0, 0],
+       [0, 1,0,-1],
+       [0, 0,1, 0],
+       [0,-1,1, 0]],             det(G_L T)=-1.
+```
+
+Thus metric compatibility leaves exactly `+T,-T` before sign
+normalization. Since `G_L T` is unimodular, `T Z^4=G_L^-1 Z^4=L#`, the
+metric dual of `L`. This proves equality of the full lattices, not just
+their rational spans or determinants. For `lambda=zeta_5-1`, exact lattice
+transition matrices give
+
+```text
+T(lambda^2 O_K)=C_Z,   T(lambda O_K)=L,   T O_K=L#,
+C_Z=(I+P_L)L,
+[L:C_Z]=[L#:L]=5,     Smith(L#/C_Z)=(1,1,5,5).
+```
+
+The operator identity in this chain also follows from `I+P_L` corresponding
+to `I-D`: `1-zeta_5^2=-(zeta_5-1)(zeta_5+1)`, with `zeta_5+1` a unit.
+In the integral basis
+
+```text
+B=[[1, 0,0,0],
+   [0, 0,0,1],
+   [0,-1,0,0],
+   [0, 0,1,0]],                  det B=-1,
+```
+
+the matrix `B^T G_L B` is the `A4` Cartan matrix. Hence `(L,G_L)` is
+the even root lattice `A4` of determinant five. It has no integral
+orthogonal basis: four positive even diagonal Gram entries would have
+product divisible by sixteen, contradicting determinant five.
+
+Put `w_x=T u_x`. The complete minimum shell of `L#` is
+`{+w_x,-w_x:x in F_5}`, with squared norm `4/5`, ten vectors and five
+antipodal classes. One direct completeness proof writes, for
+`n in Z^4` and `n_4=0`,
+
+```text
+5 n^T G_Q n=sum_(0<=i<j<=4)(n_i-n_j)^2.
+```
+
+A nonzero `n` gives a nonconstant five-tuple. A cut between consecutive
+distinct integer values splits it into `k` and `5-k` entries and contributes
+at least `k(5-k)>=4`. Equality requires a `1+4` partition with unit
+difference, giving exactly `+/-e_i` and `+/-(1,1,1,1)`, the signed
+simplex vertices. The four differences `w_i-w_0`, `1<=i<=4`, form an
+integral unimodular basis of `L`. The marked bridge chooses an oriented
+pentad but provides no unmarked canonical orientation or physical selector.
+
+### J-CIRCULAR-QDD-SIGNED-AFFINE-PROJECTOR-INTERTWINER [T]
+
+The signs in `TD=(-P_L)T` and `T rho(3,0)=(-S_L)T` are necessary. For
+`c=3^r mod 5` the complete affine transport is
+
+```text
+T rho(c,b)=(-P_L)^b(-S_L)^r T.
+```
+
+Consequently `H_Q=<-P_L,-S_L>` is an order-twenty affine subgroup that
+preserves the oriented pentad. It excludes `-I`, and
+
+```text
+G_C=H_Q disjoint-union (-H_Q) ~= C_2 x H_Q.
+```
+
+The other complement `<-P_L,S_L>` has the same projective image but is a
+different linear subgroup, with intersection of order ten. The two quotient
+seams also remain distinct:
+
+```text
+(P_L,S_L) on L/C_Z =(-1, 2) mod 5,
+(P_L,S_L) on L#/L  =(-1,-1) mod 5.
+```
+
+For each simplex vertex, independently average its four affine stabilizers:
+
+```text
+Q_k=(1/4) sum_(c in F_5^*) rho(c,(1-c)k)
+   =(5/4)u_k u_k^T G_Q,
+Pi_k=T Q_k T^-1=(5/4)w_k w_k^T G_L.
+```
+
+These maps are rank-one, self-adjoint for their respective metrics, and
+idempotent. The simplex inner products and exact sum give
+
+```text
+sum_k Pi_k=(5/4)I,          tr(Pi_i Pi_j)=1/16 for i!=j.
+```
+
+They covary under the same affine permutations. The action of `G_C` on
+the five projectors has kernel exactly `{I,-I}` and image of order twenty.
+The matrices `Pi_k` are fractional, not integral endomorphisms of `L`, and
+are pairwise nonorthogonal, so this family is not a PVM. Although
+`(4/5)Pi_k` sum algebraically to the identity, no physical effect, POVM,
+Born normalization or occurrence law is supplied. The displayed groups are
+proper subgroups of the full simplex and lattice automorphism groups.
+Both marked bridge claims are audited by
+`probes/P-J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE-2`.
+
+All six claims above are L1 algebra. They supply no preparation, detector,
+apparatus, realized event, sampling, physical anyon, action quantum, SI
+scale, decoder completion or L2-L6 lift.
 
 ### CM-REAL-DIFFERENT-PRIMARY-SEAM [T]
 
