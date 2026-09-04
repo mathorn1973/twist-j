@@ -49,7 +49,7 @@ alternator, not chosen.
 is the unique squarefree-supported rung: `m_tau` is squarefree-supported iff
 `tau = 2`.
 
-**D. Layer decomposition.** With `B_a(x)` the inert-signed count of
+**D. Layer decomposition.** With `B_a(x)` the non-split-signed count (including the ramified prime 5) of
 squarefree `n <= x` carrying exactly `a` split prime factors,
 
 ```text
@@ -174,3 +174,26 @@ source. The verifier audits them.
 
 No Canon, Registry, Frontier, dependency, gate, evidence, workflow, Note,
 reproduction, or existing probe is changed by this result.
+## Post-pin review clarification (2026-09-05)
+
+Independent proof and verifier reviews found no mathematical defect in the
+frozen statements A-E. The layer sign in D counts every non-split prime
+factor, including the ramified prime 5; thus n=5 contributes -1 to B_0.
+The earlier shorthand "inert-signed" has been corrected above to agree with
+the unchanged frozen definition and verifier.
+
+The ungated sentence in PREREG.md section 6 saying that no summatory bound
+below abscissa 1 transfers "by this convolution route" is read only at the
+scope justified by its argument: a direct black-box transfer requiring a
+finite sum of weighted absolute coefficients of w_tau or its inverse.
+Divergence of that absolute sum does not exclude a signed-convolution
+argument exploiting cancellation, a truncation argument with controlled
+error, or a different transfer mechanism. No such broader no-go is claimed
+or available as a premise. This clarification changes no statement A-E,
+frozen threshold, source constructor, or scientific decision.
+
+The verifier's redundant G10 line-ending check reads through Python text
+newline normalization. LF-only custody is therefore checked independently
+on raw bytes and by the pin hashes; the text check alone cannot distinguish
+CRLF. Actual PREREG.md, verify.py and EXPECTED.txt bytes are LF-only and
+unchanged. No pinned verifier edit or new formal execution is made.
