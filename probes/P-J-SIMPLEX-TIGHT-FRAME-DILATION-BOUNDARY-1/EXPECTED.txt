@@ -1,0 +1,21 @@
+SPEC J_SIMPLEX_DILATION_BOUNDARY_EXACT_V1
+MODE RESULT-EXPOSED PROOF-FIRST
+CHECK G01 AUGMENTATION_CARRIER PASS g_order=5 P_V_rank=4 full_cells=5
+CHECK G02 SIMPLEX PASS Gram_diag=4/5 offdiag=-1/5 rank=4 unique_relation=sum
+CHECK G03 TIGHT_FRAME PASS sum_E=P_V E2=4E/5 response=d_k_squared
+CHECK G04 PROJECTOR_GUARD PASS Pi=5E/4 sum=5P_V/4 cross_trace=1/16
+CHECK G05 CONTROLLED_ADD PASS integral_permutation=yes order=5 determinant=1
+CHECK G06 FULL_CELL_COPY PASS C_add(d_tensor_e0)=sum_dk_ek_tensor_ek isometry=yes
+CHECK G07 JOINT_GRAM PASS both_contractions=diag(d_k_squared) universal=polarized
+CHECK G08 GRAM_WITNESSES PASS vertex=16,1,1,1,1 hole=25,0,25,25,25 totals=20,100
+CHECK G09 COPY_COMPRESSION PASS source_rank=4 target_rank=5 sum_source=0 sum_target_norm2=4
+CHECK G10 NO_SIMPLEX_COPY PASS input_Gram_rank=4 output_Gram_rank=5 linear_factorization=impossible
+CHECK G11 DARK_HYPERPLANES PASS d_k=0 iff d_in_u_k_perp dimension=3
+CHECK G12 KERNEL_RIGIDITY PASS symmetric_sector_kernel_dim=1 generator=E_k
+CHECK G13 RIGID_FAMILY PASS PSD_plus_darkness_plus_covariance_plus_sumI implies_Wk=E_k
+CHECK G14 NECESSITY_CONTROLS PASS darkness_selects_t=1 PSD_excludes_indefinite_cross=yes
+CHECK G15 BOUNDARY_FIREWALL PASS copy_before_compression=yes physical_semantics=NONE
+RESULT CLAIM_A J-SIMPLEX-TIGHT-FRAME-DILATION CONFIRMED
+RESULT CLAIM_B J-SIMPLEX-QUADRATIC-SUPPORT-RIGIDITY CONFIRMED
+SCOPE L1_only Born=NONE probability=NONE apparatus=NONE outcomes=NONE records=NONE physical_partial_trace=NONE L2-L6=NONE
+RESULT OVERALL PASS gates=15 claims=2
