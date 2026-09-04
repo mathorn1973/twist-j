@@ -1,6 +1,6 @@
 # P-J-GALOIS-CIRCULAR-SEMIDIRECT-UNITARY-1 result
 
-Status: **candidate-T / L1 / TWO CLAIMS CONFIRMED LOCALLY / ARCHITECTURE GATE PENDING / PUBLIC CLAIMS UNREGISTERED / CANON UNCHANGED**
+Status: **candidate-T / L1 / TWO CLAIMS CONFIRMED / TWO-ARCHITECTURE COMPUTATION GATE PASS / PUBLIC CLAIMS UNREGISTERED / CANON UNCHANGED**
 
 ## Recorded decision
 
@@ -13,7 +13,7 @@ stdout:                                        byte-identical to EXPECTED.txt
 SCIENTIFIC-FIRED-A/B:                          NOT SELECTED
 STOP:                                          NOT SELECTED
 ABANDONED-PIN:                                 NOT SELECTED
-ARCHITECTURE GATE:                             PENDING
+ARCHITECTURE GATE:                             PASS
 MANUAL SECURITY REVIEW:                        PASS
 ```
 
@@ -30,9 +30,34 @@ shell, dynamic execution, secrets, personal data, or private-machine
 identifiers. The L1 scope and every physical and cross-layer firewall remain
 intact.
 
-The required GitHub-hosted x86_64 and aarch64 replay and aggregate policy
-check remain pending. This file records the local result without pre-claiming
-those gates.
+## Required two-architecture workflow
+
+```text
+pull_request:          798
+tested_head:           cdb3f8b5a8e6ca730cd5902ff68a6366300004ae
+workflow_run:          33846084766
+x86_64_job:            100938173661 success
+aarch64_job:           100938173514 success
+aggregate_check_job:   100938246279 success
+verifier_sha256:       c895c7cc8cf36bf3fba61e331cfa9b7a6d38188911538273cb58cb231a0b7207
+stdout_sha256:         f9f873397fc41389084e2d6aa9873858909303b60c5b8a304235a46013de32f6
+stdout_bytes/lines:    1809 / 26
+byte_identity:         PASS on x86_64 and aarch64
+manual_security:       PASS on the five named probe files
+```
+
+Both architecture jobs passed repository policy, all 148 unit tests, Canon,
+ledger, gate-contract, changed-probe reproduction, and exact transcript
+comparison. The aggregate job reported `TWO-ARCHITECTURE CHECK PASS`. Their
+common verifier receipt is
+
+```text
+VERIFY PASS P-J-GALOIS-CIRCULAR-SEMIDIRECT-UNITARY-1 c895c7cc8cf36bf3fba61e331cfa9b7a6d38188911538273cb58cb231a0b7207 f9f873397fc41389084e2d6aa9873858909303b60c5b8a304235a46013de32f6
+```
+
+`RUN.md` remains the immutable historical record of the sole local formal leg
+and therefore retains `architecture_gate: PENDING`; this result section closes
+that gate with the public workflow receipt above.
 
 ## Claim A: quotient semidirect action and common positive form
 
