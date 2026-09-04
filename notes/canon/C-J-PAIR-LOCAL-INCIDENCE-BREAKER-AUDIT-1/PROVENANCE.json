@@ -1,0 +1,138 @@
+{
+  "audit": "C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1",
+  "status": "NON-CANONICAL; LOCAL INCUBATION; POST-EXPOSURE; NO FORMAL PUBLIC PROBE",
+  "base_main": "fbf33fa1116d9e3526ac4ae057356cf2d2bddb6e",
+  "transport_scope": "Selective public handoff. Five pinned scientific input files are byte-identical. The new response and this provenance record are post-run documents.",
+  "temporal_attestation": "Timestamps and pin hashes record local custody. No pre-execution public timestamp or blind result is claimed.",
+  "local_base_pin": {
+    "original_file": "PIN.json",
+    "bytes": 989,
+    "sha256": "a20b2cce00ce1d7c2ba7ea2cd72a2ca6658bcea144bd20c673a351c852839dcc",
+    "record": {
+      "audit": "C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1",
+      "pinned_utc": "2026-09-04T16:34:27.4046189Z",
+      "mode": "local-incubation-post-exposure",
+      "files": [
+        {
+          "path": "PREREG.md",
+          "sha256": "591f5af4ebaf1da56327f67d176d9b4eb142f5a82c4e6a421fd92befee6fdd2c",
+          "bytes": 4090
+        },
+        {
+          "path": "verify_incubation.py",
+          "sha256": "7be0910c24cdf43e226faa01babd37c15bc7ffafef0c6a5e80eb50b5ffe8b77e",
+          "bytes": 7367
+        },
+        {
+          "path": "source/candidate_model.py",
+          "sha256": "0fd889c19b8d00e50045d7efa9620479ca177b7b98c9664d779f759b95612c6f",
+          "bytes": 4907
+        },
+        {
+          "path": "source/C-J-PAIR-LOCAL-INCIDENCE-CENSUS-N.md",
+          "sha256": "3537190de41fa88ac46e8761347b37004776fa07422a961aebda5c83a6e78cfd",
+          "bytes": 18559
+        },
+        {
+          "path": "source/README-cs.md",
+          "sha256": "846adb8cad6be42c127e173b1701276200a53abf08dd28c1622a8e749bef2cdd",
+          "bytes": 5041
+        }
+      ]
+    }
+  },
+  "local_run_pin": {
+    "original_file": "RUN-PIN.json",
+    "bytes": 482,
+    "sha256": "f5812251a22be0792d5f5c3fea3a1c2de7e0bbd39f0a43f46df130801bae9007",
+    "record": {
+      "base_pin_sha256": "a20b2cce00ce1d7c2ba7ea2cd72a2ca6658bcea144bd20c673a351c852839dcc",
+      "sealed_utc": "2026-09-04T16:35:05.4369653Z",
+      "additional_files": [
+        {
+          "path": "PREREG-ADDENDUM-1.md",
+          "sha256": "1922259410cc7391d0985d53fe76ceac51d871ef2be3bcd17bb9755c751dc2c9",
+          "bytes": 455
+        },
+        {
+          "path": "run_once.py",
+          "sha256": "07b1b51e25a3441dc96add915a335f77460e7299a9c5c380eb090c1f51d849a1",
+          "bytes": 2302
+        }
+      ]
+    }
+  },
+  "local_run": {
+    "audit": "C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1",
+    "mode": "local-incubation-post-exposure",
+    "started_utc": "2026-09-04T16:35:12.500240+00:00",
+    "finished_utc": "2026-09-04T16:35:12.583940+00:00",
+    "exit_code": 0,
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "python": "3.12.10",
+    "environment": {
+      "LC_ALL": "C",
+      "PYTHONHASHSEED": "0",
+      "TZ": "UTC",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "stdout_bytes": 3138,
+    "stderr_bytes": 0,
+    "stdout_sha256": "3bd5da46af8393f9c9c99b44385145f6151baf58c4686f709f025ffa76fe7e72",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "run_pin_sha256": "f5812251a22be0792d5f5c3fea3a1c2de7e0bbd39f0a43f46df130801bae9007"
+  },
+  "excluded_local_files": [
+    "source/README-cs.md",
+    "run_once.py",
+    "STDOUT.txt",
+    "STDERR.txt"
+  ],
+  "replay": {
+    "cwd": "notes/canon/C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1",
+    "command": [
+      "python",
+      "verify_incubation.py"
+    ],
+    "environment": {
+      "LC_ALL": "C",
+      "PYTHONHASHSEED": "0",
+      "TZ": "UTC",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "scope": "A fresh recipient incubation run, not a replacement for the original local run or a registered formal public probe."
+  },
+  "public_payload_without_this_record": [
+    {
+      "path": "notes/canon/C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/PREREG-ADDENDUM-1.md",
+      "bytes": 455,
+      "sha256": "1922259410cc7391d0985d53fe76ceac51d871ef2be3bcd17bb9755c751dc2c9"
+    },
+    {
+      "path": "notes/canon/C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/PREREG.md",
+      "bytes": 4090,
+      "sha256": "591f5af4ebaf1da56327f67d176d9b4eb142f5a82c4e6a421fd92befee6fdd2c"
+    },
+    {
+      "path": "notes/canon/C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/source/C-J-PAIR-LOCAL-INCIDENCE-CENSUS-N.md",
+      "bytes": 18559,
+      "sha256": "3537190de41fa88ac46e8761347b37004776fa07422a961aebda5c83a6e78cfd"
+    },
+    {
+      "path": "notes/canon/C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/source/candidate_model.py",
+      "bytes": 4907,
+      "sha256": "0fd889c19b8d00e50045d7efa9620479ca177b7b98c9664d779f759b95612c6f"
+    },
+    {
+      "path": "notes/canon/C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/verify_incubation.py",
+      "bytes": 7367,
+      "sha256": "7be0910c24cdf43e226faa01babd37c15bc7ffafef0c6a5e80eb50b5ffe8b77e"
+    },
+    {
+      "path": "notes/canon/C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1.md",
+      "bytes": 12788,
+      "sha256": "66b0cb94557f3627a7f4df543da6b373f54383a2caaed3f84b0b7b137f22cadd"
+    }
+  ]
+}
