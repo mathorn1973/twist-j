@@ -1,0 +1,17 @@
+P-RAPIDITY-TARGET-RECONSTRUCTION-1 EXACT AUDIT m=1..16
+G1 PASS: nodes and rational reference weights
+G2 PASS: independent exact Qsqrt5 q-product formula
+G3 PASS: all monomials and independent dense rational solve
+G4 PASS: alternating signs, sum one, individual envelopes
+G5 PASS: absolute amplification increasing and below 19/10
+G6 PASS: all finite tail bounds and tail beyond one below 1/2
+G7 PASS: relative monomial bounds and exact reference values
+G8 PASS: exact absolute and relative error extremizers
+BREAKER BLOCK
+B1 PASS: wrong target zero rejected by monomial reconstruction
+B2 PASS: absolute-valued weights rejected by constant reconstruction
+B3 PASS: repeated node rejected
+B4 PASS: target included as node rejected
+B5 PASS: relative cap 19/10 refuted by kappa_1=4
+BREAKER RESULT 5/5 ALL PASS
+VERIFY RESULT 8/8 ALL PASS
