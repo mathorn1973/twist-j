@@ -1,0 +1,22 @@
+SPEC J_PLENUM_POLAR_GAUSS_EXACT_V1
+MODE RESULT-EXPOSED PROOF-FIRST
+CHECK G01 CARRIER PASS g_order=5 rank_V=4 projector=exact
+CHECK G02 CENTERING FAIL falsifier=G02
+CHECK G03 RAW_J PASS augmentation_multiplier=2 det_full=2 det_V=1
+CHECK G04 INTEGRAL_GAUSS PASS GammaN=0 Gamma2=5I-N quotient_identity=safe
+CHECK G05 GAUSS_SECTORS PASS H2=P_V projectors=orthogonal_complete
+CHECK G06 NORMALIZED_MIXER PASS U5=A/sqrt5 unitary_on_V order=10
+CHECK G07 POSITIVE_BOOST PASS eigenvalues=phi^-1,phi positive_on_V=yes
+CHECK G08 POLAR PASS B2=JstarJ_on_V J=U5B=BU5 full_correction=2N/5
+CHECK G09 GALOIS PASS g_to_g3 H_to_minusH B_to_Binv U5_to_minusU5cubed
+CHECK G10 MARKED_GROUP PASS linear=80 scalar_kernel=2 projective=40 type=C10_semidirect_3_C4
+CHECK G11 INTEGER_MIXER PASS A2=5g2-N norm_multiplier=5 signed_words=4^n
+CHECK G12 SUPPORTED_ORBIT PASS vertex=16,1,1,1,1 hole=25,0,25,25,25 period=10
+CHECK G13 RAW_ORBIT PASS formula=5(1+g2)^n_e0-2^nN zero_cells=none n8=29,29,-76,94,-76
+CHECK G14 RAW_NORMS PASS q=20,30,70,180,470,1230,3220,8430,22070 recurrence=3q1-q0
+CHECK G15 PLANE_SEPARATION PASS Pplus_scale=phi^-1 Pminus_scale=phi ratio_multiplier=phi^4
+CHECK G16 ORBIT_SEPARATION PASS boost_profile=20,5,0,0,5 raw_profile=9,4,9,4,4 J_ratios=3/2,2
+RESULT CLAIM_A J-PLENUM-POLAR-GAUSS FIRED
+RESULT CLAIM_B J-PLENUM-POLAR-ORBIT-SEPARATION CONFIRMED
+SCOPE born=NONE probability=NONE outcomes=NONE records=NONE action_layer=L1
+RESULT OVERALL SCIENTIFIC-FIRED gates=16 claims=2
