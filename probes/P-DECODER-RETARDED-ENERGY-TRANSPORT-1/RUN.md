@@ -32,8 +32,8 @@ public_readback: PASS before formal execution
 all_pinned_sources_pre_post_match: yes
 worktree_clean_before_and_after: yes
 result: CONFIRMED
-architecture_gate: PENDING independent GitHub replay
-post_result_security_review: PENDING
+architecture_gate: PASS aarch64 and x86_64; workflow 33930810340
+post_result_security_review: PASS independent read-only proof/code/contract/inventory review
 ```
 
 ## Complete immutable source inventory
@@ -65,3 +65,30 @@ Frozen source documents retain their pre-execution labels. RUN.md and
 RESULT.md record later evidence without rewriting those source documents.
 Independent architecture evidence is recorded separately when available.
 Public claims remain unregistered; Canon v76 and physical gates are unchanged.
+
+## Independent architecture evidence
+
+[Required workflow 33930810340](https://github.com/mathorn1973/twist-j/actions/runs/33930810340)
+completed successfully on result commit
+`83a429d3c5f292e5602a4cbdb4e3bd1897d1ac78`. This commit adds only the three
+result records to the immutable source pin. Both jobs independently executed
+the changed-probe validator against EXPECTED.txt and reported the same
+verifier hash `ff8ed5cce4e12a78ed74248a4343461985b9e14e50aaff33ae51f26e2a32a568`
+and stdout hash `615c95d924b8e496bbf713c63707d3257818b34517eddad6874e3f3f2ed77c1b`.
+
+| Architecture | Job | Exact changed-probe replay |
+|---|---|---|
+| aarch64 | [101208838101](https://github.com/mathorn1973/twist-j/actions/runs/33930810340/job/101208838101) | PASS |
+| x86_64 | [101208838173](https://github.com/mathorn1973/twist-j/actions/runs/33930810340/job/101208838173) | PASS |
+
+The aggregate `check` job also passed. The workflow and both job logs were
+read back before this evidence was recorded. All 155 tool tests and policy,
+Canon, ledger and gate-contract checks passed on both jobs. Separate local
+Linux validation also passed status-label and changed-probe checks;
+changed minimal reproductions were not applicable.
+
+Independent static and post-result review found no blocking issue in the
+proof, code, exact source inventory, result scope, licensing or security.
+Only standard-library and pinned local modules are used; no new external
+data, network/process execution, runtime file writes or private material is
+introduced. No frozen source, scientific choice, test or threshold changed.

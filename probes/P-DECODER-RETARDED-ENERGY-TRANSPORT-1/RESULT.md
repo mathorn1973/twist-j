@@ -65,8 +65,13 @@ NOT_SATISFIED; production #742 remains FORBIDDEN. No L6 measure gate passes.
 
 ## Evidence status
 
-Local formal audit: **PASS, 9/9**. Independent GitHub architecture replay and
-post-result review are pending and will be recorded as subsequent evidence.
+Local formal audit: **PASS, 9/9**. Independent GitHub **aarch64 and x86_64
+replay PASS**, with exact verifier/stdout hash agreement in required workflow
+[33930810340](https://github.com/mathorn1973/twist-j/actions/runs/33930810340).
+RUN.md records both job links and their result commit. Independent post-result
+proof/code/scope/integrity and security/license review passed without a
+blocking finding. All 155 tool tests and required policy/Canon/ledger gates
+passed. The seven frozen source files remain byte-identical to the pin.
 The uniform proof supplies the conditional theorem argument; no public T/C
 status is assigned by this result. Registration requires a separate earned
 Canon fold. Public Canon v76 and its hashes remain unchanged.
