@@ -42,9 +42,12 @@ the implementation rather than enumerate the unbounded set of trajectories.
 G01--G10 all report PASS. The exact transcript is EXPECTED.txt. This is a
 conditional theorem about the fixed chosen model, supported by the supplied
 uniform argument and its exact conformance audit. It does not prove uniqueness
-or physical necessity of the selected choices. At this initial recording,
-independent GitHub x86_64/aarch64 replay is pending; its later evidence belongs
-in RUN.md and the reviewed public PR.
+or physical necessity of the selected choices. Independent GitHub x86_64 and
+aarch64 replay subsequently passed with identical verifier/output hashes and
+exact byte comparison; both architecture jobs and the aggregate workflow
+passed. RUN.md records the jobs, environment and successful independent
+security/scope review. The theorem-grade conditional mathematical result
+remains unregistered pending any separately declared Canon fold.
 
 ## Choices and unresolved physical completion
 

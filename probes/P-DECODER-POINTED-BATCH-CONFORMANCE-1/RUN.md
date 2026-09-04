@@ -32,8 +32,8 @@ public_readback: PASS before formal execution
 all_pinned_sources_pre_post_match: yes
 worktree_clean_before_and_after: yes
 result: LOCAL CONFIRMED; 10/10 gates; one conditional mathematical claim
-architecture_gate: PENDING independent GitHub replay
-post_result_security_review: PENDING
+architecture_gate: PASS x86_64 and aarch64 exact public replay
+post_result_security_review: PASS independent read-only review of all fourteen files
 ```
 
 ## Complete immutable source inventory
@@ -71,6 +71,53 @@ now resolves to the actual source_commit above. The preregistration PROFILE
 retains its pre-execution evidence states; this later record and RESULT.md
 supply the evidence without rewriting that frozen profile.
 
-Independent architecture replay and manual post-result review will be recorded
-as subsequent evidence. Mathematical conformance is not physical realization.
+Independent architecture replay and manual post-result review are recorded
+below as subsequent evidence. Mathematical conformance is not physical realization.
 Public claims remain unregistered and Canon v76 is unchanged.
+
+## Independent replay and security review
+
+The public policy workflow
+[33928937450](https://github.com/mathorn1973/twist-j/actions/runs/33928937450)
+completed successfully on PR head `3ac929d1e1076147a340d394826e7540c1910a71`.
+Both architecture jobs printed the same verifier/output hash pair and
+`VERIFY PASS`. Their required runner check compared exact stdout bytes and
+required exit zero and empty stderr. The aggregate check also passed.
+
+| Architecture | Platform | Python | Successful job |
+|---|---|---|---|
+| x86_64 | Ubuntu 24.04.4 | CPython 3.12.14 | [101203375858](https://github.com/mathorn1973/twist-j/actions/runs/33928937450/job/101203375858) |
+| aarch64 | Ubuntu 24.04.4 | CPython 3.12.14 | [101203376160](https://github.com/mathorn1973/twist-j/actions/runs/33928937450/job/101203376160) |
+
+The required architecture pair is the original local x86_64 leg above and
+the independent public aarch64 leg below. The additional public x86_64 job
+is recorded in the table, without reinterpreting the original local run.
+
+```text
+github_platform: Ubuntu 24.04.4
+github_architecture: aarch64
+github_python: CPython 3.12.14
+github_verifier_sha256: 3552a6e7617cdcd4a6b1fa21fa2e49c71a0771fa42edc9e9643650f688cb35ad
+github_stdout_sha256: daa88d06662b436550ff461b73fff2a8d357f1f35b9adf7c2a192e6b260e6213
+github_exit_code: 0
+github_stderr_bytes: 0
+github_stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+github_status: PASS
+github_verdict: VERIFY PASS
+github_byte_identity: PASS
+github_replay: PASS
+```
+
+The clean Linux validation also passed policy, all 155 tools unit tests,
+Canon, ledger, gate contract, status labels and exact changed-probe replay.
+No minimal reproduction changed. Both public architecture jobs passed the
+required full tools suite and policy/Canon/ledger/gate checks as well.
+
+Independent post-result review matched all eleven pinned files against the
+immutable Git blobs, and matched EXPECTED.txt against captured stdout hex.
+It reviewed all fourteen submitted files for imports, file/network/process
+operations, secrets, binary/symlink content, scope, typed carrier separation
+and physical overclaim. No blocking finding was found: the accepted code
+uses only the standard library and pinned modules; no Canon, workflow, tool
+or prior probe is changed. The source/current/propagator/detector physical
+coupling and all other explicitly unresolved obligations remain unresolved.
