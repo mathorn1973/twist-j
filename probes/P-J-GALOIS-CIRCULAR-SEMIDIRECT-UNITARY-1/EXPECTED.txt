@@ -1,0 +1,26 @@
+PROBE P-J-GALOIS-CIRCULAR-SEMIDIRECT-UNITARY-1
+SPEC J_GALOIS_CIRCULAR_EXACT_V1
+MODE RESULT-EXPOSED PROOF-FIRST
+CHECK G01 FIELD PASS Phi5=0 delta10_order=10 gamma2=power7 gamma3=power3
+CHECK G02 SOURCE PASS M_J=public U2=derived_gamma2Gal dets=(1,-1) U2_order=4
+CHECK G03 PULLBACK PASS carrier=Alt2_dual convention=A^TWA orders_reconstructed
+CHECK G04 PRIMARY_QUOTIENT PASS H,C_saturated seam_index=5 L=free_rank4
+CHECK G05 QUOTIENT_ACTION PASS Pbar,Sbar_derived in fixed quotient basis
+CHECK G06 SEAM PASS 0->C_Z->L->Z/5 P=-1 S=2
+CHECK G07 FRACTIONAL_IDEAL PASS L=(1+delta10)^-1 O_K C_Z=O_K index=5
+CHECK G08 CONTRAVARIANCE PASS S=m_delta10^4 o gamma3 relation=SPS^-1=P^3
+CHECK G09 TYPE PASS gamma3_semilinear=yes O_K_linear=no noncommuting=yes
+CHECK G10 GROUP PASS C10_semidirect_3_C4 order=40 normal_forms=40
+CHECK G11 CENTRAL_PROJECTIVE PASS C2xAGL1F5 linear=40 projective=20
+CHECK G12 POSITIVE_FORM PASS Gram=explicit Sylvester=(2,4,6,5)
+CHECK G13 UNITARY PASS Pbar,Sbar preserve one explicit positive form
+CHECK G14 SPECTRUM PASS charpoly=Phi10 eigenvalues=delta10^{1,3,7,9} simple=yes
+CHECK G15 EIGENLINE_SYSTEM PASS normalizer_action=3 dual_action=7 transitive_monomial=yes
+CHECK G16 ODD_CHARACTER PASS all40_values=yes norm=1 chi(P^5)=-4
+CHECK G17 IRREP_CENSUS PASS irreps=8x1D+2x4D odd=faithful even_kernel=<P^5>
+CHECK G18 FINITE_MONOMIAL_BOUNDARY PASS finite=40 every_element_normalizes_eigenline_system
+RESULT CLAIM_A J-GALOIS-CIRCULAR-QUOTIENT-SEMIDIRECT-UNITARY CONFIRMED
+RESULT CLAIM_B J-GALOIS-CIRCULAR-ODD-CHARACTER CONFIRMED
+BOUNDARY linear_group_order=40 projective_group_order=20 spectral_action=monomial superposition_mixer=NOT_CLAIMED
+SCOPE L1_only Born=NONE probability=NONE physical_qudit=NONE Clifford=NONE universality=NONE space=NONE L2-L6=NONE
+RESULT OVERALL PASS gates=18 claims=2

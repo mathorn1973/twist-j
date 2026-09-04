@@ -1,0 +1,26 @@
+PROBE P-J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE-2
+BASE 3b15217d28575726da1ff3af4de71cba4544637d
+CLAIM_LOCK 801
+CANON v75
+SPEC J_CIRCULAR_QDD_DUAL_SIMPLEX_EXACT_V1
+MODE RESULT-EXPOSED PROOF-FIRST
+CHECK G01 FIELD_SOURCE PASS identity_guards=exact Phi5=0 M_J,D_J,U2=reconstructed
+CHECK G02 ALT2_QUOTIENT PASS P_L,S_L derived C=(I+P)L primary_seam=(-1,2)
+CHECK G03 COMMON_FORM_GUARD PASS dim_P=2 dim_PS=1 primitive_Gram positive
+CHECK G04 A4_ROOT_AND_NONORTHOGONALITY PASS L=A4 even det=5 discriminant=Z/5
+CHECK G05 QDD_SIMPLEX PASS simplex_Gram=(4,-1)/5 rho_family=20 faithful_orthogonal
+CHECK G06 BRIDGE_RECONSTRUCTION PASS Hom_dim=1 primitive_A=5T detT=-1/5
+CHECK G07 DUAL_LATTICE PASS T(lambda2O,lambdaO,O)=(C,L,Ldual) indices=(5,5)
+CHECK G08 METRIC_ISOMETRY PASS T^T_G_L_T=G_QDD exact
+CHECK G09 SIGNED_INTERTWINING PASS D->-P rho30->-S oriented_simplex_preserved
+CHECK G10 DISCRIMINANT_SEAMS PASS Ldual/L=(-1,-1) L/C=(-1,2) kept_distinct
+CHECK G11 MINIMUM_SHELL PASS min=4/5 vectors=10 antipodal_classes=5 bound=625
+CHECK G12 PROJECTOR_FORMULAS PASS averages_transported sum=5/4I cross_trace=1/16 fractional=yes
+CHECK G13 AFFINE_TRANSPORT PASS signed_formula family=20 projector_transport=exact
+CHECK G14 SPLIT_SIGN_GROUP PASS affine_subgroup=20 full=40 split=yes projective_kernel=2 old_intersection=10
+CHECK G15 NEGATIVE_CONTROLS_AND_FIREWALL PASS typed_carriers_distinct signs_fixed shell=10 seams_distinct physical_scope=NONE
+RESULT CLAIM_A J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE CONFIRMED
+RESULT CLAIM_B J-CIRCULAR-QDD-SIGNED-AFFINE-PROJECTOR-INTERTWINER CONFIRMED
+BOUNDARY root_lattice=A4 dual_lattice=A4star minimal_vectors=10 antipodal_classes=5 linear_group=40 projective_projector_group=20
+SCOPE L1_only Born=NONE probability=NONE measurement=NONE apparatus=NONE physical_qudit=NONE decoder_completion=NONE L2-L6=NONE
+RESULT OVERALL PASS gates=15 claims=2
