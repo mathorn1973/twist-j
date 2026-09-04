@@ -1,7 +1,7 @@
 # P-J-PLENUM-CENTERING-INDEX-1 result
 
 Status: **candidate-T / L1 / LOCAL MATHEMATICAL CLAIM CONFIRMED /
-TWO-ARCHITECTURE COMPUTATION GATE PENDING / PUBLIC CLAIM UNREGISTERED /
+TWO-ARCHITECTURE COMPUTATION GATE PASS / PUBLIC CLAIM UNREGISTERED /
 CANON UNCHANGED**.
 
 ## Recorded local decision
@@ -15,7 +15,7 @@ stdout:                        328 bytes / 10 lines
 stdout SHA-256:                a48a88c3545f9d355b89b125e873882968ddad4771502c9462e1a9dd489d983c
 scientific falsifier:          NOT FIRED
 integrity disposition:         captured hashes and counts PASS
-architecture gate:             PENDING
+architecture gate:             PASS
 post-result security review:   PASS, A. M. Thorn
 ```
 
@@ -90,15 +90,27 @@ Both correct determinants and their distinction were exposed before this
 execution. This is proof-first verification of a disclosed result, not a
 blind prediction.
 
-## Remaining validation and scope
+## Public reproduction and scope
 
-Required public x86_64 and aarch64 jobs must reproduce the same verifier and
-the same `EXPECTED.txt` bytes with exit zero and empty stderr. The aggregate
-`check` remain pending. Post-result manual security review by A. M. Thorn
-passed: the five named text files contain only exact mathematics and neutral
-run metadata, with no secrets, private infrastructure, executable payloads
-beyond the accepted verifier, external data or unreviewed dependencies. No public
-architecture receipt is asserted by this local result.
+The required public run
+[33920298035](https://github.com/mathorn1973/twist-j/actions/runs/33920298035)
+completed successfully on tested head
+`c5aa637e1413cf627917c66352a37e8b0a4524c5`. Its x86_64 job
+`101176825237`, aarch64 job `101176825465` and aggregate `check`
+`101176902860` all passed. Both job logs report the identical verifier hash
+`e5ef4861a42004d709cec63dfcf299be6dcc4186e89a7d5ba5a9243cc6f5a900`
+and exact stdout hash
+`a48a88c3545f9d355b89b125e873882968ddad4771502c9462e1a9dd489d983c`.
+The required replay enforces exit zero, empty stderr and byte identity against
+the same committed 328-byte `EXPECTED.txt`. Thus the two-architecture
+computation gate is satisfied. The earlier local RUN.md remains unchanged.
+
+Post-result manual security review by A. M. Thorn passed: the five named text
+files contain only exact mathematics and neutral run metadata, with no secrets,
+private infrastructure, executable payloads beyond the accepted verifier,
+external data or unreviewed dependencies. This receipt-only descendant changes
+neither source pin nor mathematical result; its own PR head still requires
+successful checks before merge.
 
 The claim is limited to exact p=5 integer lattices and their finite matrix
 certificates at L1. No polar decomposition, Gauss sum, finite polar group,
