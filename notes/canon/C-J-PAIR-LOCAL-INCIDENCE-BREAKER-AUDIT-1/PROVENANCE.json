@@ -131,8 +131,13 @@
     },
     {
       "path": "notes/canon/C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1.md",
-      "bytes": 12788,
-      "sha256": "66b0cb94557f3627a7f4df543da6b373f54383a2caaed3f84b0b7b137f22cadd"
+      "bytes": 13674,
+      "sha256": "319e4747cd79e328ef47d50b1f3addf697defa836a6b12a36683a68b3c78b24c"
     }
-  ]
+  ],
+  "publication_revision": {
+    "previous_public_commit": "b39823543b32136d5c9c9f62e259a88d7c635b82",
+    "change": "English publication exposition; the five frozen scientific input files are unchanged.",
+    "scope": "Maintenance pull request containing NON-CANONICAL notes. No public formal probe or scientific status promotion."
+  }
 }

@@ -1,150 +1,168 @@
-# C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1 (NON-CANONICAL)
+# Pair-local incidence: breaker audit and signed-reduction boundary (NON-CANONICAL)
 
-Datum: 2026-09-04. **Předání inkubačního auditu, L1; žádná veřejná formální
-sonda, registrace výsledku ani uzavření fyzikálního čtení.** Veřejný základ:
-`fbf33fa1116d9e3526ac4ae057356cf2d2bddb6e`, Public Canon v75.
-`COINCIDENCE-RECORD-FREQUENCY` zůstává `candidate-H / UNTESTED / STOP`;
-`QDD-INSTRUMENT-APPARATUS` zůstává `O / STOP`.
+```text
+IDENTIFIER:          C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1
+DATE:                2026-09-04
+SCOPE:               L1 mathematics and finite model consistency
+STATUS:              POST-EXPOSURE INCUBATION AUDIT / NON-CANONICAL
+PUBLIC FORMAL PROBE: NONE
+PUBLIC BASE:         fbf33fa1116d9e3526ac4ae057356cf2d2bddb6e
+CANON:               Public Canon v75, unchanged
+```
 
-**Výsledek:** numerické svědky B1–B4 jsme reprodukovali druhou implementační
-cestou. Vyvracejí neznaménkovou autonomní dynamiku, banku nad surovými
-příchody a tvrzení, že A je automorfismus celé pevné celočíselné mřížky.
-Zmrazená banka má ale jiný vstup: nejprve spočítá znaménkové koeficienty,
-potom z nich vytvoří redukovaná vlákna. V tmavé buňce breakeru skutečně
-vrátila 0. Podmíněný census tím drží; fyzické provedení redukce stále chybí.
+The supplied B1–B4 numerical witnesses reproduce through a second code path.
+They exclude autonomous evolution from unsigned populations alone, direct
+raw-arrival pair counting as the reduced census, and A as an automorphism of
+the entire fixed integer lattice. The frozen model instead evolves signed
+coefficients before preparing reduced fibres. It returns **0**, not 16, in
+the challenged dark cell. Its conditional census construction survives these
+witnesses; a physical implementation of signed reduction remains absent.
 
-## 1. Co přesně bylo předáno a ověřeno
+`COINCIDENCE-RECORD-FREQUENCY` remains `candidate-H / UNTESTED / STOP` and
+`QDD-INSTRUMENT-APPARATUS` remains `O / STOP`. Candidate labels in this note
+describe proposal-local conclusions, not registered public statuses. No
+physical occurrence law, frequency law, self-location rule, or cross-layer
+closure is adopted.
 
-Přiložený [původní kandidátní text](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/source/C-J-PAIR-LOCAL-INCIDENCE-CENSUS-N.md)
-a [původní model](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/source/candidate_model.py)
-jsou bajtově nezměněné snímky před tímto auditem. Jejich tehdejší formulace
-„unexecuted“ popisuje stav při zmrazení; model byl následně vykonán v níže
-uvedeném místním inkubačním běhu. Veřejná formální sonda vykonána nebyla.
+## 1. Audited specification and provenance
 
-Vstupem oponentury byl uživatelem předaný text B1–B4. Původní skript
-externího breakeru jsme nedostali. Dva jím jmenované české dokumenty
-`NAVRH-APARATU-RETEZ-AXIOM-BORN_2026-09-04_CZ.md` a
-`NOTE-KUDY-K-BORNOVU-CTENI_2026-09-04_CZ.md` nebyly v tomto workspace
-dostupné. Jejich úplný obsah tedy tento audit neposuzuje. Posuzuje přiložený
-konkrétní model a výslovně uvedené námitky, nikoli domnělou totožnost balíků.
+The attached [candidate specification](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/source/C-J-PAIR-LOCAL-INCIDENCE-CENSUS-N.md)
+and [candidate model](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/source/candidate_model.py)
+are byte-identical snapshots frozen before this audit. Their original
+wording "unexecuted" describes the snapshot at that time. The model was
+subsequently exercised in the local incubation run recorded in section 7;
+no formal public probe was executed.
 
-[Verifier](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/verify_incubation.py)
-nejprve počítá vlastní konvoluci rozesíláním zdrojových sloupců a determinant
-Gaussovou eliminací nad `Fraction`. Teprve poté importuje nezměněný model,
-který používá řádkové posuny, a porovnává výsledky. Jde o druhou kódovou
-cestu se známými svědky, nikoli slepý test nebo nezávislé objevení nálezů.
-Dřívější statické kontroly více agentů nebyly nezávislé exekuční reprodukce.
+The external review supplied the B1–B4 witnesses in text. Its original
+breaker script was not available. The two documents it named,
+`NAVRH-APARATU-RETEZ-AXIOM-BORN_2026-09-04_CZ.md` and
+`NOTE-KUDY-K-BORNOVU-CTENI_2026-09-04_CZ.md`, were also unavailable to this
+audit. This note therefore evaluates the attached model and the explicitly
+stated objections; it does not assume that the external review had inspected
+this exact package or assess the complete contents of those two documents.
 
-## 2. B1: absolutní populace není úplný dynamický stav
+The [audit code](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/verify_incubation.py)
+first computes convolution by distributing source columns and computes the
+determinant by Gaussian elimination over `Fraction`. Only then does it import
+the frozen model, whose update uses row shifts, and compare results. This is
+a second implementation with disclosed, already known witnesses. It is not
+a blind prediction or an independent discovery of the counterexamples.
+Earlier static reviews by multiple agents were not independent executable
+reproductions.
 
-Používáme `A=1+g²−g³−g⁴`, `g e_k=e_(k+1 mod 5)`. Pro předané vstupy vychází:
+## 2. B1: absolute populations do not determine the next state
+
+Use `A=1+g²−g³−g⁴`, with `g e_k=e_(k+1 mod 5)`. The supplied inputs give:
 
 ```text
 d  = (-3, 0,-1, 1, 3)     A d  = (-1,3,-8, 1,5)
 d' = (-3, 0, 1,-1, 3)     A d' = (-5,3,-4,-1,7)
 ```
 
-Stejné `|d|`, různé `|Ad|`: žádná mapa G pouze nad absolutními populacemi
-nemůže na všech těchto stavech splňovat `G(|d|)=|Ad|`.
-Původní dvojice není v našem nosiči
-`L_D={d∈Z⁵: Σd_k=0, d_i≡d_j (mod 5)}`. Námitku to neodstraňuje:
-vynásobení obou vstupů pěti dává svědky uvnitř L_D:
+Equal `|d|` and unequal `|Ad|` exclude a map G on unsigned populations with
+`G(|d|)=|Ad|` for all such inputs. The original pair lies outside the model's
+carrier `L_D={d∈Z⁵: Σd_k=0, d_i≡d_j (mod 5)}`. This does not remove the
+obstruction: multiplication by five gives witnesses inside L_D:
 
 ```text
 D  = (-15,0,-5, 5,15)     A D  = ( -5,15,-40, 5,25)
 D' = (-15,0, 5,-5,15)     A D' = (-25,15,-20,-5,35)
 ```
 
-Model uchovává znaménkovou přípravu i znaménkové koeficienty řezu. Záznamový
-census nenahrazuje tento stav a nesmí se použít jako jediný vstup dalšího
-kroku A. B1 je platný zákaz takového rozšíření.
+The frozen model retains both the signed preparation and the signed
+coefficients at the read cut. Its record census does not replace that state
+and cannot be the sole input to the next A step. B1 correctly excludes such
+an extension.
 
-## 3. B2 a B3: přesná poloha interference
+## 3. B2 and B3: reduction precedes the bank
 
-Ze semene `a₀=(4,−1,−1,−1,−1)` dostáváme následující exaktní hodnoty.
-„Příchody“ v každém řádku vycházejí z již redukovaného předchozího stavu;
-nejde o celý strom dosud nevyrušených historií ze semene.
+For the seed `a₀=(4,−1,−1,−1,−1)`, exact arithmetic gives the following table.
+Each row counts one-step arrivals from the already reduced preceding state;
+it does not count the entire unreduced history tree from the original seed.
 
-| Krok | Nový znaménkový stav | Čtverce surových počtů příchodů, součet | Čtverce redukovaných koeficientů, součet | Poměr |
+| Step | New signed state | Sum of squared raw arrival counts | Sum of squared reduced coefficients | Ratio |
 |---|---|---:|---:|---:|
 | 0→1 | (5,0,5,−5,−5) | 212 | 100 | 53/25 |
 | 1→2 | (−5,−5,20,−5,−5) | 1300 | 500 | 13/5 |
 | 2→3 | (−25,−25,25,0,25) | 5300 | 2500 | 53/25 |
 | 3→4 | (−25,−25,−25,−25,100) | 32500 | 12500 | 13/5 |
 
-Obecně položme `C=|A|=N−g`, kde N je matice samých jedniček,
-`q(a)=Σa_k²` a `L(a)=Σ|a_k|`. Pak `CᵀC=I+3N`, tedy
+More generally, let `C=|A|=N−g`, where N is the all-ones matrix, and let
+`q(a)=Σa_k²`, `L(a)=Σ|a_k|`. Then `CᵀC=I+3N`, so
 
 ```text
-q(C|a|)=q(a)+3L(a)²,          q(Aa)=5q(a) pro Σa_k=0.
+q(C|a|)=q(a)+3L(a)²,          q(Aa)=5q(a) when Σa_k=0.
 ```
 
-V buňce 1 prvního kroku jsou příspěvky `(-1,-1,+1,+1)`:
+At cell 1 of the first step, the contributions are `(-1,-1,+1,+1)`:
 
-| Co se počítá | Hodnota |
+| Quantity | Value |
 |---|---:|
-| Surové nezáporné páry | (2+2)² = 16 |
-| Znaménkový součet párů | (2−2)² = 0 |
-| Skutečný výstup přiloženého modelu v buňce 1 | 0 |
+| Unsigned raw pair count | (2+2)² = 16 |
+| Signed pair sum | (2−2)² = 0 |
+| Actual attached-model output at cell 1 | 0 |
 
-Přiložený model provádí právě toto pořadí:
+The attached model uses this order:
 
 ```text
-znaménkové d → znaménková aritmetika A^n d
-             → nová redukovaná vlákna velikosti |(A^n d)_k|
-             → úplná dvourolová banka párů
-             → jediné XOR porovnání buněk → census.
+signed d → signed arithmetic A^n d
+         → fresh reduced fibres of sizes |(A^n d)_k|
+         → complete two-role pair bank
+         → one same-cell XOR activation → census.
 ```
 
-XOR interference neprovádí. Její algebraické vyhodnocení je před ním.
-Proto přijímáme `candidate-F` pro **rozšíření na surové nezáporné příchody**
-a odmítáme tvrzení, že tato banka sama fyzicky odvodila interferenci.
-Svědek B3 však nedává `candidate-F` doslovnému modelu s redukovaným vstupem:
-ten nevytváří oněch šestnáct adres ve tmavé buňce. Hradlo nečte numerický
-Bornův cíl; přesto celý census závisí na silném předpokladu přípravy vláken.
-Absence čtení cílového poměru sama o sobě není fyzikálním odvozením.
+The XOR gate does not perform interference. Signed arithmetic evaluates the
+cancellation before the bank is prepared. Thus the **unsigned raw-arrival
+extension** is refuted (`candidate-F`), and the bank alone does not supply a
+physical derivation of interference. B3 does not refute the literal model
+with reduced inputs: that model never creates those sixteen same-cell
+addresses in the dark cell. The gate does not read a numerical Born target,
+but the complete census still depends on the strong fibre-preparation
+premise. Not reading the target ratio is insufficient to establish a physical
+derivation.
 
-## 4. Obecná překážka pro kladnou banku surových párů
+## 4. No-go for a nonnegative separately additive raw-pair recorder
 
-Uvažujme pravidlo konečných nezáporných záznamů, odděleně aditivní vůči
-disjunktnímu přidávání surových jednotek v každé ze dvou rolí. Elementární
-odpovědi podle znamének označme nezápornými celými čísly
-`w₊₊, w₊₋, w₋₊, w₋₋`. Na dvou stejných vstupech s p kladnými a m zápornými
-jednotkami dává rozklad na singletony
+Consider a finite nonnegative record rule separately additive under disjoint
+addition of raw units in each input role. Denote the elementary sign-pair
+responses by nonnegative integers `w₊₊, w₊₋, w₋₊, w₋₋`. Decomposition into
+singletons gives, for two identical inputs containing p positive and m
+negative units,
 
 ```text
 R(p,m)=w₊₊ p²+(w₊₋+w₋₊)pm+w₋₋ m².
 ```
 
-Jednotková odezva čistých znamének vyžaduje `w₊₊=w₋₋=1`.
-Pokud má výstup záviset na redukovaném koeficientu prostřednictvím jeho
-čtverce, musí platit `R(p,m)=(p−m)²`. Avšak
+Unit response to each pure sign requires `w₊₊=w₋₋=1`. Factoring the response
+through the reduced coefficient's square would require `R(p,m)=(p−m)²`.
+However,
 
 ```text
 R(1,1)=2+w₊₋+w₋₊ ≥ 2,          (1−1)²=0.
 ```
 
-Zde `p=m=1` označuje lokální nulový vstup v uvedené rozšířené třídě surových
-portů, nikoli nenulovou globální přípravu modelu. Pro skutečnou buňku B3
-s `p=m=2` stejná argumentace dává alespoň 8 proti nule; úplná neznaménková
-incidence dává 16. Fyzická dostupnost singleton kalibrací je předpoklad
-tohoto no-go, nikoli jeho závěr.
+Here `p=m=1` is a local null input in the explicitly enlarged class of raw
+ports, not an admitted nonzero global preparation of the frozen model. For
+the actual B3 cell, `p=m=2`, the same argument gives at least 8 against the
+required zero; complete unsigned incidence gives 16. Physical availability
+of the singleton calibrations is a premise of this no-go, not its conclusion.
 
-To je spor. **Nezápornost, surová oddělená aditivita, jednotková kalibrace
-a nulový výstup po vyrušení nemohou platit současně.** Jde o podmíněnou
-konečně množinovou větu (`candidate-T` na úrovni důkazu), nikoli o výsledek
-registrace nebo vyvrácení všech možných fyzikálních aparátů.
+Hence **nonnegativity, separate additivity on raw inputs, unit calibration,
+and null output after cancellation are incompatible**. This is a conditional
+finite-set theorem (`candidate-T` at the proof level), not a registered
+status or a refutation of every possible physical apparatus.
 
-Znaménkový součet sám je lineární. Převedení na nezáporné redukované počty
-`|p−m|` ale není aditivní vůči surovému disjunktnímu sjednocení. Součinová
-věta přiloženého kandidáta tedy platí **po redukci**; její aditivitu nelze
-přenést přes vyrušení. Znaménkové váhy poskytují algebraický rozdíl, nikoli
-kladnou kardinalitu fyzických událostí. Jiná kladná konstrukce by musela
-změnit předpoklady, například připustit rušení či kontextovou selekci.
+Signed summation itself is linear. Conversion to nonnegative reduced counts
+`|p−m|` is not additive under raw disjoint union. The candidate's product
+theorem therefore applies **after reduction**; its additivity cannot be
+transported through cancellation. Signed weights give an algebraic
+difference, not a positive cardinality of physical events. Another positive
+construction would have to change the premises, for example by allowing
+cancellation of records or context-dependent selection.
 
-## 5. B4: tři odlišné otázky vratnosti
+## 5. B4: coefficient evolution, presentation loss, and bank reversibility
 
-Na kořenové mřížce `A₄={d∈Z⁵:Σd_k=0}`, v bázi `e_i−e_4`, má A matici
+On the root lattice `A₄={d∈Z⁵:Σd_k=0}`, in the basis `e_i−e_4`, A has matrix
 
 ```text
  1 -1 -1  1
@@ -153,85 +171,100 @@ Na kořenové mřížce `A₄={d∈Z⁵:Σd_k=0}`, v bázi `e_i−e_4`, má A ma
  0  2  1  2
 ```
 
-a determinant 25. Obraz má index 25; A není automorfismus celé této pevné
-mřížky. Totéž platí na invariantní plnorozměrné podmřížce L_D.
-Na sektoru se součtem nula ale `AᵀA=5I`, takže A je injektivní a
-`A⁻¹=Aᵀ/5`. Na obrazu existuje jednoznačný celočíselný předchůdce.
-Pro obecný cíl tomu tak není: předobraz `e₀−e₄` je
-`(2/5,0,−2/5,1/5,−1/5)`.
+and determinant 25. Its image has index 25, so A is not an automorphism of
+the entire fixed lattice. The same holds on the invariant full-rank
+sublattice L_D. On the augmentation-zero sector, however, `AᵀA=5I`; A is
+injective and `A⁻¹=Aᵀ/5`. Every point in the lattice image has one integral
+predecessor. An arbitrary lattice target need not: the preimage of `e₀−e₄`
+is `(2/5,0,−2/5,1/5,−1/5)`.
 
-To není důkaz mnohoznačného slévání znaménkových stavů. Mnohoznačná je jiná
-mapa: z libovolně označených surových příchodů na jejich výsledný koeficient;
-ta zapomíná jejich prezentaci a původ. Fyzická vratnost takové realizace by
-vyžadovala jejich uchování v úplném stavu nebo prostředí.
+This does not prove many-to-one loss of signed coefficient states. A
+different map, from arbitrarily labelled raw arrivals to their net
+coefficient, forgets presentation and ancestry. A reversible physical
+realization of that reduction would have to retain the discarded information
+in its complete state or environment.
 
-Tvrzená involuce banky drží koeficient a pevný a mění pouze b:
-`(a,b)↦(a,b XOR h_a)`. Neprovádí krok A. B4 ji nevyvrací a ona naopak
-nedokazuje vratnost celé přípravy či autonomní dynamiky. Například
-`(a,z)↦(a,z+Aa)` má celočíselnou inverzi `(a,z)↦(a,z−Aa)` při uchování a.
-Je to výpočetní rozšíření s pamětí, nikoli dodaný fyzikální mechanismus.
-Z determinantu samotného tedy neplyne nutnost fyzické anihilace.
+The claimed bank involution fixes a and changes only b:
+`(a,b)↦(a,b XOR h_a)`. It does not advance a by A. B4 does not refute this
+involution, and the involution does not prove reversibility of preparation
+or autonomous dynamics. For example, `(a,z)↦(a,z+Aa)` has the integer inverse
+`(a,z)↦(a,z−Aa)` while retaining a. This is a computational extension with
+memory, not a supplied physical mechanism. The determinant alone therefore
+does not force physical annihilation.
 
-## 6. Co drží a co je další přesná povinnost
+## 6. Surviving result and remaining physical contract
 
-Oddělená aditivita za předpokladů původního textu dává součin vláken.
-**Výběr stejné buňky je další předpoklad.** Ve vícebarevné verzi vzniká
-`F(X,Y) ≅ ⨿ᵢⱼ X_i×Y_j×W_ij`; diagonálu určuje teprve kalibrace jednoho
-záznamu pro stejnou buňku a žádného pro různé buňky. Součinová věta sama
-tuto kalibraci ani její fyzikální oprávnění nedodává.
+Separate additivity under the original specification's assumptions gives a
+product of fibres. **Selecting equal cells is an additional premise.** In
+the multicolour version,
+`F(X,Y) ≅ ⨿ᵢⱼ X_i×Y_j×W_ij`; the diagonal follows only after calibrating one
+record for an equal-cell pair and none for a different-cell pair. The product
+theorem supplies neither that calibration nor its physical justification.
 
-Další krok musí dodat fyzický nosič znaménka a redukce, nezávisle na cílovém
-poměru. Musí přesně určit:
+Further work must supply a physical carrier of sign and reduction,
+independently of the target ratio. Its contract must specify:
 
-1. úplný stav a znaménkový krok, přičemž census nenahrazuje dynamický stav;
-2. proč různé surové prezentace téhož koeficientu vytvářejí stejný čitelný
-   výstup a proč se zrušené příspěvky nepočítají jako samostatné záznamy;
-3. kde je případná paměť prezentace, pokud se požaduje fyzická vratnost;
-4. vznik redukovaných vláken, dva vstupní porty, kapacitu, prázdnou přípravu,
-   jedno sepnutí a uchování záznamů při pevném řezu;
-5. nezávislé oprávnění diagonální odezvy a samostatnou hranici mezi censusem
-   celé populace a sebelokací jednoho čtenáře.
+1. The complete state and signed update, with census outputs not replacing
+   the dynamical state.
+2. Why different raw presentations of one coefficient produce the same
+   readable output, and why cancelled contributions are not independently
+   counted as records.
+3. Where presentation information is retained if physical reversibility is
+   required.
+4. Preparation of reduced fibres, two input roles, full capacity, a blank
+   bank, one activation, and retention at a fixed read cut.
+5. Independent justification of the diagonal response, and the separate
+   boundary between a population census and one reader's self-location.
 
-Matematická definice jednotky již existuje v
+The mathematical unit definition already exists in
 [C-J-RESIDUAL-INTEGER-UNIT-1-N](https://github.com/mathorn1973/twist-j/blob/fbf33fa1116d9e3526ac4ae057356cf2d2bddb6e/notes/canon/C-J-RESIDUAL-INTEGER-UNIT-1-N.md).
-To neřeší její fyzickou realizaci. Proto nelze na aktuální balík bez dalšího
-přenést tvrzení, že vůbec nemá definici jednotky. Rovněž platí
-[přijaté rozdělení A/U5 a otevřeného B](https://github.com/mathorn1973/twist-j/blob/fbf33fa1116d9e3526ac4ae057356cf2d2bddb6e/notes/canon/C-J-A-U5-COINCIDENCE-OWNER-FREEZE.md);
-breaker toto rozhodnutí sám neruší a nepovoluje přivést raw J či B do
-celočíselného count portu. [PR #803](https://github.com/mathorn1973/twist-j/pull/803)
-bylo sloučeno jako `a7ef8ba676a7a26ebac4b0d5a0b31c47bc41cc9c`.
+It does not establish physical realization. The objection that no unit
+definition exists therefore does not apply directly to the attached package.
+The [adopted A/U5 split with a separate open B channel](https://github.com/mathorn1973/twist-j/blob/fbf33fa1116d9e3526ac4ae057356cf2d2bddb6e/notes/canon/C-J-A-U5-COINCIDENCE-OWNER-FREEZE.md)
+also remains in force. The breaker does not override that ruling or admit
+raw J or B to the integer count port. The design predecessor
+[PR #803](https://github.com/mathorn1973/twist-j/pull/803) was merged as
+`a7ef8ba676a7a26ebac4b0d5a0b31c47bc41cc9c`.
 
-## 7. Inkubační protokol a přenositelnost
+## 7. Incubation protocol and reproducibility
 
-Původní obecný požadavek veřejného zámku před jakýmkoli místním ověřením byl
-příliš silný. Pro tento uživatelem schválený inkubační audit jsme nejprve
-zmrazili [PREREG se šesti poli](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/PREREG.md)
-a SHA-256. Ještě před spuštěním vzniklo samostatně zapečetěné
-[erratum](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/PREREG-ADDENDUM-1.md):
-jedna věta měla přehozené číslo buňky a počet nula. Vstupy, kód a práh se
-nezměnily. Veřejný protokol formálních sond tím není nahrazen.
+This audit followed an authorized local incubation procedure: freeze the
+[six-field PREREG](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/PREREG.md) and its
+SHA-256 before execution. A separately sealed
+[pre-execution erratum](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/PREREG-ADDENDUM-1.md)
+corrected a phrase that interchanged the cell index and its zero count.
+Inputs, code, and failure threshold did not change. This procedure does not
+replace the repository's public formal-probe protocol. A local pin is not a
+pre-execution public timestamp, and publication through this notes pull
+request does not retroactively confer formal-probe status.
 
-Lokální běh 2026-09-04 v 16:35:12 UTC: Python 3.12.10, Windows AMD64,
-`LC_ALL=C`, `PYTHONHASHSEED=0`, `TZ=UTC`, `PYTHONDONTWRITEBYTECODE=1`.
-Návratový kód 0; stdout 3138 bajtů; stderr 0 bajtů. Exaktně prošly
-znaménkové stavy a census pro n=0…4, svědci B1–B4 i involuce při pevném
-vstupu. Obecné závěry výše nesou důkazy, nikoli velikost tohoto vzorku.
+The local run completed on 2026-09-04 at 16:35:12 UTC using Python 3.12.10
+on Windows AMD64, with `LC_ALL=C`, `PYTHONHASHSEED=0`, `TZ=UTC`, and
+`PYTHONDONTWRITEBYTECODE=1`. Exit code was 0, stdout was 3138 bytes, and
+stderr was empty. Exact checks covered signed states and census for n=0…4,
+B1–B4, and the fixed-input involution. The general statements above rest on
+their proofs, not on the size of this finite sample.
 
-Veřejný handoff obsahuje minimální přenosnou specifikaci, kód, PREREG,
-erratum a [provenienci s SHA-256](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/PROVENANCE.json).
-Původní místní organizační README, spouštěcí obálka a surové provozní výstupy
-nejsou součástí tohoto výběru; jejich relevantní hashe jsou zaznamenány.
-Nejde tedy o bajtově totožný přenos celé místní složky. Oba vědecké zdrojové
-snímky, verifier, PREREG a erratum jsou přeneseny beze změny.
+The public package contains the minimal specification, code, PREREG,
+erratum, and [SHA-256 provenance](C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/PROVENANCE.json).
+The original local organizational README, execution wrapper, and raw run
+outputs are omitted; relevant hashes are recorded. This is a selective
+scientific package, not a byte-identical copy of the entire local directory.
+The two scientific source snapshots, audit code, PREREG, and erratum retain
+their original bytes. The English exposition and its current manifest entry
+are publication documents written after the run; they are not frozen inputs.
 
-Pro nové inkubační přehrání stačí v adresáři této poznámky spustit
-`python C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/verify_incubation.py`
-se stejným prostředím. Verifier používá jen standardní knihovnu a soubory
-z tohoto handoff. Nový běh je vlastní reprodukce příjemce; není původním
-zmrazeným během ani automaticky veřejnou formální sondou.
+For a fresh incubation replay, from the directory containing this note run
+`python C-J-PAIR-LOCAL-INCIDENCE-BREAKER-AUDIT-1/verify_incubation.py` with the
+same environment. The script uses only the standard library and the attached
+model. A new run is the recipient's own reproduction, not the original
+recorded run or automatically a formal public probe. Repository CI checks
+for this notes-only change do not execute this incubation script or establish
+two-architecture scientific reproduction of its output.
 
-Tento identifikátor označuje audit, nerezervuje veřejný claim ani nepřebírá
-`C-J-COINCIDENCE-RECORD-1` jiné linky. Externí
-`BREAKER-RECORD-C-J-COINCIDENCE-RECORD-1` má smysl zabalit již nyní, s přesným
-kódem, vstupy, výstupem a verzí napadeného textu; na fyzickou realizaci
-jednotky čekat nemusí. Jeho původní skript tento handoff nenahrazuje.
+This identifier names an audit and reserves no public claim or formal probe;
+it does not take over `C-J-COINCIDENCE-RECORD-1` from another line. An external
+`BREAKER-RECORD-C-J-COINCIDENCE-RECORD-1` should independently identify its
+exact script, inputs, output, and challenged source version. The attached
+second implementation does not substitute for that unavailable original
+breaker record.
