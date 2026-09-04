@@ -1,7 +1,7 @@
 # P-J-SIMPLEX-TIGHT-FRAME-DILATION-BOUNDARY-1 result
 
 Status: **candidate-T / L1 / TWO CLAIMS CONFIRMED / TWO-ARCHITECTURE
-COMPUTATION GATE PENDING / PUBLIC CLAIMS UNREGISTERED / CANON UNCHANGED**
+COMPUTATION GATE PASS / PUBLIC CLAIMS UNREGISTERED / CANON UNCHANGED**
 
 ## Recorded decision
 
@@ -14,8 +14,8 @@ stdout:                                   byte-identical to EXPECTED.txt
 SCIENTIFIC-FIRED-A/B:                     NOT SELECTED
 STOP:                                     NOT SELECTED
 ABANDONED-PIN:                            NOT SELECTED
-ARCHITECTURE GATE:                        PENDING
-MANUAL SECURITY REVIEW:                   PENDING
+ARCHITECTURE GATE:                        PASS
+MANUAL SECURITY REVIEW:                   PASS
 ```
 
 The immutable verifier was executed exactly once after public pin
@@ -110,6 +110,41 @@ is not proportional to `E_k`.
 This is a conditional uniqueness theorem within an assumed PSD quadratic
 class. It does not derive quadraticity for arbitrary responses and does not
 adopt exact darkness as a physical law.
+
+## Required two-architecture workflow
+
+```text
+pull_request:          807
+tested_head:           ea6ed6a87e3c04277dd993225a899320880f2316
+workflow_run:          33889091910
+x86_64_job:            101076071935 success
+aarch64_job:           101076072392 success
+aggregate_check_job:   101076167052 success
+verifier_sha256:       f964e45237315095221dd26f3e331c1e2f01b41920daf2b35e0399e4dbc4dc64
+stdout_sha256:         5366e476df3c4c3e4f6b9219b334919b398932e725759008f956738e9da9aae7
+stdout_bytes/lines:    1550 / 21
+byte_identity:         PASS on x86_64 and aarch64
+manual_security:       PASS, review 5114864736 on all five named probe files
+```
+
+Both architecture jobs passed repository policy, all unit tests, Canon,
+ledger, gate-contract, changed-probe reproduction, and exact transcript
+comparison. The aggregate job reported `TWO-ARCHITECTURE CHECK PASS`. Their
+common verifier receipt is
+
+```text
+VERIFY PASS P-J-SIMPLEX-TIGHT-FRAME-DILATION-BOUNDARY-1 f964e45237315095221dd26f3e331c1e2f01b41920daf2b35e0399e4dbc4dc64 5366e476df3c4c3e4f6b9219b334919b398932e725759008f956738e9da9aae7
+```
+
+Manual security review of all five files passed without importing or
+executing the verifier. It found fixed exact inputs, bounded loops,
+deterministic output, and only the standard-library `Fraction` import. It
+found no file input, network, subprocess, shell, environment read, dynamic
+execution, secret, personal data, or private-machine identifier.
+
+`RUN.md` remains the immutable historical record of the sole local formal leg
+and therefore retains `architecture_gate: PENDING`; this result section closes
+that gate with the public workflow receipt.
 
 ## Earned scope and firewalls
 
