@@ -1,0 +1,1324 @@
+{
+  "A_qualification": "QUALIFIED",
+  "B_run_record_onehot": "ONEHOT",
+  "declared_record_layout": "<QQQ",
+  "endianness_is_declared_not_identified": true,
+  "manifest_sha256": "653e5dd17b041ecf38244bcd8312fa724863eb681f940795e38974182f7bbe8a",
+  "metadata_channel_64_second_word_is_not_timetag": true,
+  "notice_sha256": "b6d19a283ede826cb41910e80db567f71f95e2cc3258fce2f03e0d1525471ec2",
+  "objects": [
+    {
+      "A_qualification": "QUALIFIED",
+      "B_onehot": "NOT_APPLICABLE",
+      "archive_bytes": 2119875,
+      "archive_sha256": "e54d30d866a642dd23d1a40e3ae3418cf6420fa6beb616bac2d21601a6b0d485",
+      "id": "alice-sync",
+      "qualification_violations": [],
+      "records": {
+        "all_channel_histogram": {
+          "complete_histogram_sha256": "3b897310f9757cf850ed58925a6a2bf94fc79bcb7df377c8613af7785c93d00f",
+          "count": 485503,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 64,
+          "minimum": 0,
+          "support_size": 6,
+          "top8_by_count_then_value": [
+            [
+              6,
+              194915
+            ],
+            [
+              2,
+              98650
+            ],
+            [
+              4,
+              96265
+            ],
+            [
+              0,
+              95669
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              64,
+              2
+            ]
+          ]
+        },
+        "bookkeeping": {
+          "all_rows_partitioned": true,
+          "calendar_count": true,
+          "channel_counts_sum": true,
+          "detection_census_count": true,
+          "interval_count": true,
+          "physical_comparison_count": true,
+          "rng_census_count": true,
+          "rng_class_count": true,
+          "sync_delta_count": true,
+          "transfer_comparison_count": true
+        },
+        "calendar_metadata_64": {
+          "invalid": 0,
+          "invalid_first8_record_indices": [],
+          "rows": 2,
+          "second_word_is_not_timetag": true,
+          "timezone_or_clock_calibration_claim": false,
+          "valid_YYYYMMDDhhmmss": 2
+        },
+        "channel_counts": [
+          [
+            0,
+            95669
+          ],
+          [
+            2,
+            98650
+          ],
+          [
+            4,
+            96265
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            194915
+          ],
+          [
+            64,
+            2
+          ]
+        ],
+        "physical_timetag_differences_in_source_order": {
+          "counts": {
+            "negative": 0,
+            "positive": 485500,
+            "zero": 0
+          },
+          "first8_record_index_pairs": {
+            "negative": [],
+            "positive": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "zero": []
+          }
+        },
+        "recognized_physical_rows": 485501,
+        "rows": 485503,
+        "sync": {
+          "NO_RECORDED_DETECTOR_ROW_intervals": 119673,
+          "all_rows_unanchored_if_no_sync": false,
+          "closed_interior_rows": 290586,
+          "closed_source_order_intervals": 194914,
+          "onehot_failed_first8": [],
+          "onehot_failed_intervals": 0,
+          "physical_trial_or_no_detection_certificate": false,
+          "prefix_rows_before_first_sync": 0,
+          "raw_detection_rows_per_interval_census": [
+            [
+              0,
+              119673
+            ],
+            [
+              1,
+              57967
+            ],
+            [
+              2,
+              14488
+            ],
+            [
+              3,
+              2447
+            ],
+            [
+              4,
+              312
+            ],
+            [
+              5,
+              25
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "rng_class_counts": {
+            "both": 0,
+            "exact0": 98649,
+            "exact1": 96265,
+            "missing": 0,
+            "repeated_one_setting": 0
+          },
+          "rng_joint_census": [
+            [
+              0,
+              1,
+              96265
+            ],
+            [
+              1,
+              0,
+              98649
+            ]
+          ],
+          "rows": 194915,
+          "signed_delta_ticks": {
+            "complete_histogram_sha256": "9cb4b391922efe6df4515016946eff386427ac16884778e8ed0a8ecea8a93f43",
+            "count": 194914,
+            "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+            "maximum": 129108,
+            "minimum": 129100,
+            "support_size": 9,
+            "top8_by_count_then_value": [
+              [
+                129104,
+                83648
+              ],
+              [
+                129105,
+                51162
+              ],
+              [
+                129103,
+                41123
+              ],
+              [
+                129106,
+                10763
+              ],
+              [
+                129102,
+                6356
+              ],
+              [
+                129107,
+                915
+              ],
+              [
+                129101,
+                829
+              ],
+              [
+                129108,
+                91
+              ]
+            ]
+          },
+          "suffix_rows_after_last_sync": 2
+        },
+        "transfer_counter_differences_all_rows": {
+          "counts": {
+            "negative": 0,
+            "positive": 1,
+            "zero": 485501
+          },
+          "first8_record_index_pairs": {
+            "negative": [],
+            "positive": [
+              [
+                239018,
+                239019
+              ]
+            ],
+            "zero": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                7,
+                8
+              ]
+            ]
+          }
+        },
+        "unknown_channel_first8_record_indices": [],
+        "unknown_channel_rows": 0
+      },
+      "role": "SYNC",
+      "selected_member": {
+        "full_member_crc_verified": true,
+        "name": "00_03_find_sync.T1.dat",
+        "scope": "FULL_MEMBER",
+        "selected_record_bytes": 11652072,
+        "selected_records": 485503,
+        "total_records_declared_by_zip": 485503,
+        "total_uncompressed_bytes_declared_by_zip": 11652072,
+        "unread_tail_crc_required": false,
+        "whole_archive_sha256_verified": true
+      },
+      "station": "alice",
+      "whole_archive_verified_before_zip_access": true,
+      "zip_descriptor_sha256": "e16259383ec89f87234df31e6e5f2dc015ccd4b2f92d79ae5fbee3e0c81ff790",
+      "zip_entry_count": 1,
+      "zip_member_descriptors": [
+        {
+          "compressed_bytes": 2119677,
+          "compression_method": 8,
+          "contents_extracted": false,
+          "flags": 0,
+          "header_crc32_hex": "00796c77",
+          "index": 0,
+          "is_directory": false,
+          "name_excerpt": "00_03_find_sync.T1.dat",
+          "name_truncated": false,
+          "name_utf8_sha256": "9bfe396e0d3362cf80b49d7a91da5b6ad1e209cae8e8142613ddb0e6b855effe",
+          "uncompressed_bytes": 11652072
+        }
+      ]
+    },
+    {
+      "A_qualification": "QUALIFIED",
+      "B_onehot": "NOT_APPLICABLE",
+      "archive_bytes": 2238398,
+      "archive_sha256": "33c294c778babfebc6e4eddf30519a30c25728c704ea78e24ee4f40a49ad1cec",
+      "id": "bob-sync",
+      "qualification_violations": [],
+      "records": {
+        "all_channel_histogram": {
+          "complete_histogram_sha256": "bb3f3568b4e093dcac0d7c12a4f1317fc6da70e94a001ed9db54f0cf8e9ae342",
+          "count": 489229,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 64,
+          "minimum": 0,
+          "support_size": 6,
+          "top8_by_count_then_value": [
+            [
+              6,
+              197215
+            ],
+            [
+              2,
+              98814
+            ],
+            [
+              4,
+              98401
+            ],
+            [
+              0,
+              94795
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              64,
+              2
+            ]
+          ]
+        },
+        "bookkeeping": {
+          "all_rows_partitioned": true,
+          "calendar_count": true,
+          "channel_counts_sum": true,
+          "detection_census_count": true,
+          "interval_count": true,
+          "physical_comparison_count": true,
+          "rng_census_count": true,
+          "rng_class_count": true,
+          "sync_delta_count": true,
+          "transfer_comparison_count": true
+        },
+        "calendar_metadata_64": {
+          "invalid": 0,
+          "invalid_first8_record_indices": [],
+          "rows": 2,
+          "second_word_is_not_timetag": true,
+          "timezone_or_clock_calibration_claim": false,
+          "valid_YYYYMMDDhhmmss": 2
+        },
+        "channel_counts": [
+          [
+            0,
+            94795
+          ],
+          [
+            2,
+            98814
+          ],
+          [
+            4,
+            98401
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            197215
+          ],
+          [
+            64,
+            2
+          ]
+        ],
+        "physical_timetag_differences_in_source_order": {
+          "counts": {
+            "negative": 0,
+            "positive": 489226,
+            "zero": 0
+          },
+          "first8_record_index_pairs": {
+            "negative": [],
+            "positive": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "zero": []
+          }
+        },
+        "recognized_physical_rows": 489227,
+        "rows": 489229,
+        "sync": {
+          "NO_RECORDED_DETECTOR_ROW_intervals": 121995,
+          "all_rows_unanchored_if_no_sync": false,
+          "closed_interior_rows": 292011,
+          "closed_source_order_intervals": 197214,
+          "onehot_failed_first8": [],
+          "onehot_failed_intervals": 0,
+          "physical_trial_or_no_detection_certificate": false,
+          "prefix_rows_before_first_sync": 1,
+          "raw_detection_rows_per_interval_census": [
+            [
+              0,
+              121995
+            ],
+            [
+              1,
+              58496
+            ],
+            [
+              2,
+              14217
+            ],
+            [
+              3,
+              2187
+            ],
+            [
+              4,
+              293
+            ],
+            [
+              5,
+              25
+            ],
+            [
+              6,
+              1
+            ]
+          ],
+          "rng_class_counts": {
+            "both": 0,
+            "exact0": 98814,
+            "exact1": 98400,
+            "missing": 0,
+            "repeated_one_setting": 0
+          },
+          "rng_joint_census": [
+            [
+              0,
+              1,
+              98400
+            ],
+            [
+              1,
+              0,
+              98814
+            ]
+          ],
+          "rows": 197215,
+          "signed_delta_ticks": {
+            "complete_histogram_sha256": "9bcf8067aefe250ceb8bd8cc51178c9561f954fb61780c82ae10732e50e209f8",
+            "count": 197214,
+            "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+            "maximum": 129109,
+            "minimum": 129100,
+            "support_size": 10,
+            "top8_by_count_then_value": [
+              [
+                129104,
+                72175
+              ],
+              [
+                129105,
+                50602
+              ],
+              [
+                129103,
+                45858
+              ],
+              [
+                129106,
+                15097
+              ],
+              [
+                129102,
+                10119
+              ],
+              [
+                129107,
+                2316
+              ],
+              [
+                129101,
+                857
+              ],
+              [
+                129108,
+                157
+              ]
+            ]
+          },
+          "suffix_rows_after_last_sync": 2
+        },
+        "transfer_counter_differences_all_rows": {
+          "counts": {
+            "negative": 0,
+            "positive": 1,
+            "zero": 489227
+          },
+          "first8_record_index_pairs": {
+            "negative": [],
+            "positive": [
+              [
+                257231,
+                257232
+              ]
+            ],
+            "zero": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                7,
+                8
+              ]
+            ]
+          }
+        },
+        "unknown_channel_first8_record_indices": [],
+        "unknown_channel_rows": 0
+      },
+      "role": "SYNC",
+      "selected_member": {
+        "full_member_crc_verified": true,
+        "name": "00_03_find_sync.T2.dat",
+        "scope": "FULL_MEMBER",
+        "selected_record_bytes": 11741496,
+        "selected_records": 489229,
+        "total_records_declared_by_zip": 489229,
+        "total_uncompressed_bytes_declared_by_zip": 11741496,
+        "unread_tail_crc_required": false,
+        "whole_archive_sha256_verified": true
+      },
+      "station": "bob",
+      "whole_archive_verified_before_zip_access": true,
+      "zip_descriptor_sha256": "35587f5708ba0df5f4e1bf022a403472ec53e0ff661ad695c0656c86a5359b30",
+      "zip_entry_count": 1,
+      "zip_member_descriptors": [
+        {
+          "compressed_bytes": 2238200,
+          "compression_method": 8,
+          "contents_extracted": false,
+          "flags": 0,
+          "header_crc32_hex": "894a1932",
+          "index": 0,
+          "is_directory": false,
+          "name_excerpt": "00_03_find_sync.T2.dat",
+          "name_truncated": false,
+          "name_utf8_sha256": "b1ad0fb40f89457d9a834842e2455d3d9836843c99faa857c10eab0aa0b2cd0b",
+          "uncompressed_bytes": 11741496
+        }
+      ]
+    },
+    {
+      "A_qualification": "QUALIFIED",
+      "B_onehot": "ONEHOT",
+      "archive_bytes": 363415009,
+      "archive_sha256": "d581080c9fa6853a1bfb8ce511782563f433512f3ce7efb612202a5179c5ee6c",
+      "id": "alice-run3",
+      "qualification_violations": [],
+      "records": {
+        "all_channel_histogram": {
+          "complete_histogram_sha256": "1426a2378bb943b55cad5af43d9befabe0018efb9c418a4d71bc3dc7863d88b8",
+          "count": 1048576,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 64,
+          "minimum": 0,
+          "support_size": 6,
+          "top8_by_count_then_value": [
+            [
+              6,
+              512048
+            ],
+            [
+              2,
+              258393
+            ],
+            [
+              4,
+              253655
+            ],
+            [
+              0,
+              24469
+            ],
+            [
+              64,
+              6
+            ],
+            [
+              5,
+              5
+            ]
+          ]
+        },
+        "bookkeeping": {
+          "all_rows_partitioned": true,
+          "calendar_count": true,
+          "channel_counts_sum": true,
+          "detection_census_count": true,
+          "interval_count": true,
+          "physical_comparison_count": true,
+          "rng_census_count": true,
+          "rng_class_count": true,
+          "sync_delta_count": true,
+          "transfer_comparison_count": true
+        },
+        "calendar_metadata_64": {
+          "invalid": 0,
+          "invalid_first8_record_indices": [],
+          "rows": 6,
+          "second_word_is_not_timetag": true,
+          "timezone_or_clock_calibration_claim": false,
+          "valid_YYYYMMDDhhmmss": 6
+        },
+        "channel_counts": [
+          [
+            0,
+            24469
+          ],
+          [
+            2,
+            258393
+          ],
+          [
+            4,
+            253655
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            512048
+          ],
+          [
+            64,
+            6
+          ]
+        ],
+        "physical_timetag_differences_in_source_order": {
+          "counts": {
+            "negative": 0,
+            "positive": 1048569,
+            "zero": 0
+          },
+          "first8_record_index_pairs": {
+            "negative": [],
+            "positive": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "zero": []
+          }
+        },
+        "recognized_physical_rows": 1048570,
+        "rows": 1048576,
+        "sync": {
+          "NO_RECORDED_DETECTOR_ROW_intervals": 488341,
+          "all_rows_unanchored_if_no_sync": false,
+          "closed_interior_rows": 536527,
+          "closed_source_order_intervals": 512047,
+          "onehot_failed_first8": [],
+          "onehot_failed_intervals": 0,
+          "physical_trial_or_no_detection_certificate": false,
+          "prefix_rows_before_first_sync": 0,
+          "raw_detection_rows_per_interval_census": [
+            [
+              0,
+              488341
+            ],
+            [
+              1,
+              22960
+            ],
+            [
+              2,
+              730
+            ],
+            [
+              3,
+              15
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "rng_class_counts": {
+            "both": 0,
+            "exact0": 258392,
+            "exact1": 253655,
+            "missing": 0,
+            "repeated_one_setting": 0
+          },
+          "rng_joint_census": [
+            [
+              0,
+              1,
+              253655
+            ],
+            [
+              1,
+              0,
+              258392
+            ]
+          ],
+          "rows": 512048,
+          "signed_delta_ticks": {
+            "complete_histogram_sha256": "9292325c10ea7333fc861c9c728b843c27764fd3a3c345488dd166020aa1fc77",
+            "count": 512047,
+            "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+            "maximum": 129109,
+            "minimum": 129100,
+            "support_size": 10,
+            "top8_by_count_then_value": [
+              [
+                129104,
+                220181
+              ],
+              [
+                129105,
+                135987
+              ],
+              [
+                129103,
+                106059
+              ],
+              [
+                129106,
+                28929
+              ],
+              [
+                129102,
+                15982
+              ],
+              [
+                129107,
+                2518
+              ],
+              [
+                129101,
+                2049
+              ],
+              [
+                129108,
+                276
+              ]
+            ]
+          },
+          "suffix_rows_after_last_sync": 1
+        },
+        "transfer_counter_differences_all_rows": {
+          "counts": {
+            "negative": 0,
+            "positive": 6,
+            "zero": 1048569
+          },
+          "first8_record_index_pairs": {
+            "negative": [],
+            "positive": [
+              [
+                22247,
+                22248
+              ],
+              [
+                244658,
+                244659
+              ],
+              [
+                454523,
+                454524
+              ],
+              [
+                645838,
+                645839
+              ],
+              [
+                833441,
+                833442
+              ],
+              [
+                1046193,
+                1046194
+              ]
+            ],
+            "zero": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                7,
+                8
+              ]
+            ]
+          }
+        },
+        "unknown_channel_first8_record_indices": [],
+        "unknown_channel_rows": 0
+      },
+      "role": "RUN",
+      "selected_member": {
+        "full_member_crc_verified": false,
+        "name": "00_44_CH_pockel_100kHz.run3.alice.dat",
+        "scope": "PREFIX_ONLY",
+        "selected_record_bytes": 25165824,
+        "selected_records": 1048576,
+        "total_records_declared_by_zip": 84710778,
+        "total_uncompressed_bytes_declared_by_zip": 2033058672,
+        "unread_tail_crc_required": false,
+        "whole_archive_sha256_verified": true
+      },
+      "station": "alice",
+      "whole_archive_verified_before_zip_access": true,
+      "zip_descriptor_sha256": "59a3e415f80201484ea182dd511f40d95dc0e5c8d549bfebca36c4f0d9c7293f",
+      "zip_entry_count": 1,
+      "zip_member_descriptors": [
+        {
+          "compressed_bytes": 363414781,
+          "compression_method": 8,
+          "contents_extracted": false,
+          "flags": 0,
+          "header_crc32_hex": "cdf599f3",
+          "index": 0,
+          "is_directory": false,
+          "name_excerpt": "00_44_CH_pockel_100kHz.run3.alice.dat",
+          "name_truncated": false,
+          "name_utf8_sha256": "9c502d650d2e22b850b7195d6d9a99f8fa24d10b8dd84f14a094007d98e23191",
+          "uncompressed_bytes": 2033058672
+        }
+      ]
+    },
+    {
+      "A_qualification": "QUALIFIED",
+      "B_onehot": "ONEHOT",
+      "archive_bytes": 379105464,
+      "archive_sha256": "f42204b41289c26ef779d39957062604c8d4008a4892724b7f2078afd7ddd5d4",
+      "id": "bob-run3",
+      "qualification_violations": [],
+      "records": {
+        "all_channel_histogram": {
+          "complete_histogram_sha256": "37e3f14a3fc90632e8e38bb4df02b7d56634f25b5ede52fa4487917ebfe8ffec",
+          "count": 1048576,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 64,
+          "minimum": 0,
+          "support_size": 6,
+          "top8_by_count_then_value": [
+            [
+              6,
+              514204
+            ],
+            [
+              4,
+              257383
+            ],
+            [
+              2,
+              256820
+            ],
+            [
+              0,
+              20159
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              64,
+              5
+            ]
+          ]
+        },
+        "bookkeeping": {
+          "all_rows_partitioned": true,
+          "calendar_count": true,
+          "channel_counts_sum": true,
+          "detection_census_count": true,
+          "interval_count": true,
+          "physical_comparison_count": true,
+          "rng_census_count": true,
+          "rng_class_count": true,
+          "sync_delta_count": true,
+          "transfer_comparison_count": true
+        },
+        "calendar_metadata_64": {
+          "invalid": 0,
+          "invalid_first8_record_indices": [],
+          "rows": 5,
+          "second_word_is_not_timetag": true,
+          "timezone_or_clock_calibration_claim": false,
+          "valid_YYYYMMDDhhmmss": 5
+        },
+        "channel_counts": [
+          [
+            0,
+            20159
+          ],
+          [
+            2,
+            256820
+          ],
+          [
+            4,
+            257383
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            514204
+          ],
+          [
+            64,
+            5
+          ]
+        ],
+        "physical_timetag_differences_in_source_order": {
+          "counts": {
+            "negative": 0,
+            "positive": 1048570,
+            "zero": 0
+          },
+          "first8_record_index_pairs": {
+            "negative": [],
+            "positive": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "zero": []
+          }
+        },
+        "recognized_physical_rows": 1048571,
+        "rows": 1048576,
+        "sync": {
+          "NO_RECORDED_DETECTOR_ROW_intervals": 494432,
+          "all_rows_unanchored_if_no_sync": false,
+          "closed_interior_rows": 534372,
+          "closed_source_order_intervals": 514203,
+          "onehot_failed_first8": [],
+          "onehot_failed_intervals": 0,
+          "physical_trial_or_no_detection_certificate": false,
+          "prefix_rows_before_first_sync": 0,
+          "raw_detection_rows_per_interval_census": [
+            [
+              0,
+              494432
+            ],
+            [
+              1,
+              19392
+            ],
+            [
+              2,
+              370
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          "rng_class_counts": {
+            "both": 0,
+            "exact0": 256820,
+            "exact1": 257383,
+            "missing": 0,
+            "repeated_one_setting": 0
+          },
+          "rng_joint_census": [
+            [
+              0,
+              1,
+              257383
+            ],
+            [
+              1,
+              0,
+              256820
+            ]
+          ],
+          "rows": 514204,
+          "signed_delta_ticks": {
+            "complete_histogram_sha256": "511a74c7ee61116469c592935a37d2110f56ff93ef5f9431b0c552b2644127f5",
+            "count": 514203,
+            "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+            "maximum": 129110,
+            "minimum": 129099,
+            "support_size": 12,
+            "top8_by_count_then_value": [
+              [
+                129104,
+                186842
+              ],
+              [
+                129105,
+                134001
+              ],
+              [
+                129103,
+                116446
+              ],
+              [
+                129106,
+                40954
+              ],
+              [
+                129102,
+                26928
+              ],
+              [
+                129107,
+                6190
+              ],
+              [
+                129101,
+                2381
+              ],
+              [
+                129108,
+                379
+              ]
+            ]
+          },
+          "suffix_rows_after_last_sync": 0
+        },
+        "transfer_counter_differences_all_rows": {
+          "counts": {
+            "negative": 0,
+            "positive": 5,
+            "zero": 1048570
+          },
+          "first8_record_index_pairs": {
+            "negative": [],
+            "positive": [
+              [
+                73468,
+                73469
+              ],
+              [
+                271262,
+                271263
+              ],
+              [
+                472601,
+                472602
+              ],
+              [
+                688590,
+                688591
+              ],
+              [
+                889569,
+                889570
+              ]
+            ],
+            "zero": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                7,
+                8
+              ]
+            ]
+          }
+        },
+        "unknown_channel_first8_record_indices": [],
+        "unknown_channel_rows": 0
+      },
+      "role": "RUN",
+      "selected_member": {
+        "full_member_crc_verified": false,
+        "name": "00_43_CH_pockel_100kHz.run3.bob.dat",
+        "scope": "PREFIX_ONLY",
+        "selected_record_bytes": 25165824,
+        "selected_records": 1048576,
+        "total_records_declared_by_zip": 84389064,
+        "total_uncompressed_bytes_declared_by_zip": 2025337536,
+        "unread_tail_crc_required": false,
+        "whole_archive_sha256_verified": true
+      },
+      "station": "bob",
+      "whole_archive_verified_before_zip_access": true,
+      "zip_descriptor_sha256": "dbc148a513e67736685f3241f120803346fb1c25a089edc8133b38003c9a11a6",
+      "zip_entry_count": 1,
+      "zip_member_descriptors": [
+        {
+          "compressed_bytes": 379105240,
+          "compression_method": 8,
+          "contents_extracted": false,
+          "flags": 0,
+          "header_crc32_hex": "08a84acb",
+          "index": 0,
+          "is_directory": false,
+          "name_excerpt": "00_43_CH_pockel_100kHz.run3.bob.dat",
+          "name_truncated": false,
+          "name_utf8_sha256": "f18df96792efbc92f035e46f2705be74a67262494879258d8347797a4414dc78",
+          "uncompressed_bytes": 2025337536
+        }
+      ]
+    }
+  ],
+  "physical_trial_window_calibration_bell_or_born_claim": false,
+  "record_indices_are_zero_based": true,
+  "schema": "nist-raw-record-qualification/1",
+  "scope": "Authenticated archive prefixes; source-order record partition only",
+  "selected_record_cap_per_object": 1048576
+}
