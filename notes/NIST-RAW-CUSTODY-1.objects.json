@@ -1,0 +1,51 @@
+{
+  "schema": "nist-opaque-custody-lock/1",
+  "status": "NON-CANONICAL",
+  "metadata_date": "2026-09-05",
+  "public_base": "af2240d0a2c4807fc6a01c0c5c3132a22ace6015",
+  "notice_file": "NIST-RAW-CUSTODY-1.md",
+  "method": "EXACT_URL_GET_IF_MATCH_NO_REDIRECT_IDENTITY_ENCODING",
+  "socket_timeout_seconds": 60,
+  "objects": [
+    {
+      "id": "alice-sync",
+      "station": "alice",
+      "role": "STANDALONE_SYNC",
+      "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/rawdata_from_servers/alice/2015_09_18/00_03_find_sync.T1.dat.zip",
+      "archive_bytes": 2119875,
+      "etag": "\"de0dfe9bd60dcc9fe415b05ee2d186bb\"",
+      "last_modified": "Wed, 09 Dec 2015 20:17:53 GMT",
+      "version_id": null
+    },
+    {
+      "id": "bob-sync",
+      "station": "bob",
+      "role": "STANDALONE_SYNC",
+      "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/rawdata_from_servers/bob/2015_09_18/00_03_find_sync.T2.dat.zip",
+      "archive_bytes": 2238398,
+      "etag": "\"21ab5ec2c67a843dc10e240fb2959d95\"",
+      "last_modified": "Wed, 09 Dec 2015 20:19:27 GMT",
+      "version_id": null
+    },
+    {
+      "id": "alice-run3",
+      "station": "alice",
+      "role": "RUN3",
+      "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/rawdata_from_servers/alice/2015_09_18/00_44_CH_pockel_100kHz.run3.alice.dat.zip",
+      "archive_bytes": 363415009,
+      "etag": "\"7740613b772fc8312a9d21d7cf9f8a84-44\"",
+      "last_modified": "Wed, 09 Dec 2015 20:17:53 GMT",
+      "version_id": null
+    },
+    {
+      "id": "bob-run3",
+      "station": "bob",
+      "role": "RUN3",
+      "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/rawdata_from_servers/bob/2015_09_18/00_43_CH_pockel_100kHz.run3.bob.dat.zip",
+      "archive_bytes": 379105464,
+      "etag": "\"440efdd464e50f47defb9947cfdf1a00-46\"",
+      "last_modified": "Wed, 09 Dec 2015 20:19:27 GMT",
+      "version_id": null
+    }
+  ]
+}
