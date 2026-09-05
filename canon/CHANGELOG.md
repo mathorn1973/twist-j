@@ -1,11 +1,45 @@
 # Canon changelog (public series)
 
-## Public Canon v76
+## Public Canon v77
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 371 claims; 0 T-LOCK, 244 T, 45 D, 34 C, 2 H, 29 O, 17 F; 31 live H/O.
+Registry snapshot: 383 claims; 0 T-LOCK, 252 T, 45 D, 38 C, 2 H, 29 O, 17 F; 31 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v77 registers twelve conclusions from nine completed public
+probe bundles: eight mathematical theorems and four bounded archived-record
+computations. All have exact two-architecture audits. All 371 previously
+registered rows keep their statuses, scopes and evidence; the 31 live H/O
+rows, fourteen gates, Frontier programs and CORE selection remain fixed.
+
+The centering image theorem distinguishes the index 125 from the restriction
+determinant 625. Its new evidence does not alter the fired combined polar/Gauss
+claim. The arithmetic line gains the golden evaluation ladder and exact
+target reconstruction with separate absolute and relative error bounds.
+Neither gives a cancellation estimate or closes the rapidity bridge.
+
+The decoder line gains the explicitly chosen pointed prefix construction,
+retarded local energy transport, reversible reservoir accounting, induced
+quadratic energy partition and the obstruction to sharp QDD postprocessing
+within its declared nonnegative class. These are conditional L1 constructions;
+their source, coupling, record and threshold choices are not physical results.
+
+The NIST line registers four C rows for the authenticated bounded archive
+portions, one-setting syntax, lossless indexed records and the finite causal
+prefix audit. They do not identify physical trials, no-clicks, an apparatus
+realization or Born frequencies. Repeated architecture replay is not a second
+experiment. The rapidity rows retain protocol layer NOT_APPLICABLE; the NIST
+rows concern the conditional L5 archive interface without an added layer gate.
+
+The conditional Born derivation, measurement wrappers and physical realization
+proposals remain non-canonical. No physical owner, dictionary, hypothesis,
+open obligation or falsified row moves. The candidate coincidence-frequency
+hypothesis remains unregistered and untested. The separation reproduction
+audits the exact additions and the complete preservation of prior ledgers,
+including the preceding release's fixed projection.
+
+## Public Canon v76
 
 Public Canon v76 registers eleven L1 theorem results from six completed
 public two-architecture probe bundles. Existing claim rows, live scopes,

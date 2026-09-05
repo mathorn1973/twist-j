@@ -205,18 +205,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 244, "D": 45, "C": 34, "F": 17,
+    expected_counts = {"T": 252, "D": 45, "C": 38, "F": 17,
                        "O": 29, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v76",
-        len(rows) == 371
+        "registry and companion-ledger counts match Public Canon v77",
+        len(rows) == 383
         and counts == expected_counts
-        and len(normative) == 417
-        and len(dependencies) == 677
-        and len(evidence) == 371
-        and two_architecture == 284
-        and len(history) == 902
+        and len(normative) == 429
+        and len(dependencies) == 697
+        and len(evidence) == 383
+        and two_architecture == 296
+        and len(history) == 914
         and len(gates) == 14
         and len(programs) == 31
         and len({row["program_id"] for row in programs.values()}) == 8
@@ -2164,6 +2164,7 @@ def run():
                 row["item_id"] in (
                     *INDEPENDENCE_ROWS,
                     "J-IDEAL-RAPIDITY-CHARACTER-LIFT",
+                    "RAPIDITY-GOLDEN-LADDER",
                 )
                 for row in dependencies
                 if row["depends_on"] == claim
@@ -5115,7 +5116,10 @@ def run():
             ("DEF-QDD-GRAM", "REQUIRES"),
             ("DEF-DECODER-COMPLETION-CONTRACT", "REQUIRES"),
         }
-        and v70_successor_consumers == {("READING-SPLIT", "REQUIRES")}
+        and v70_successor_consumers == {
+            ("READING-SPLIT", "REQUIRES"),
+            ("POINTED-DECODER-PREFIX-CONSISTENCY", "BOUNDED_BY"),
+        }
         and "MEASURE-BORN-VERB" not in v70_successor_edges
         and scope_contains_all(
             index, qdd_successor,
@@ -5714,6 +5718,8 @@ def run():
             ("PHOTON-TEMPORAL-CHARACTERISTIC", "BOUNDED_BY"),
             ("PHOTON-CONE-CONVERGENCE", "REQUIRES"),
             ("PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION", "BOUNDED_BY"),
+            ("POINTED-DECODER-PREFIX-CONSISTENCY", "BOUNDED_BY"),
+            ("DECODER-RETARDED-LOCAL-ENERGY-TRANSPORT", "BOUNDED_BY"),
         },
         "PHOTON-TEMPORAL-CHARACTERISTIC": {
             ("PHOTON-CONE-CONVERGENCE", "REQUIRES"),
@@ -6166,6 +6172,81 @@ def run():
     ))
 
 
+    # Current additions are excluded only from the immutable v76 projection.
+    v77_contract = {'J-CENTERING-IMAGE-INDEX': {'row': '7d24294dd1aede7199dc689145625078bac07409b74f9f847b83f480dc3e8cf6',
+                                 'normative': '94bbcc18f771807885c4dffcd5045d18124ca0c456d6c038eb0c29b4d3f4c6bf',
+                                 'evidence': '7c858185c0efd43083557ca58cf04248fb933c222064fafab32a408bde9b0877',
+                                 'history': 'b0e4a2664c3592fa0fc61040ceebe477e79ddd0d66edf9e84ed867efb94634cd',
+                                 'status': 'T',
+                                 'layer': 'L1'},
+     'RAPIDITY-GOLDEN-LADDER': {'row': 'd362173c2aba511bb23a402d6b3f45cb705a599c4d763c761ec09f8237882afb',
+                                'normative': '4b465d1ebdd060943be2a34a5c9e94f9e5c58b6fe61432dab8f61ef523468ed9',
+                                'evidence': 'baec375dc9d24d8b498c1ec1472957e140c6b86e8681eb33d6271b1d4d610e1b',
+                                'history': '663a9b8c031ad6906f4c6dd8103e7528a908e436891be6977ef203adf2df713e',
+                                'status': 'T',
+                                'layer': 'NOT_APPLICABLE'},
+     'RAPIDITY-TARGET-RECONSTRUCTION': {'row': '00c6ad9bb30bfc932c0cb2123e7cb5ce68ace447f7aff8c1d77ff368be0e73cd',
+                                        'normative': 'b576ccce3821159f5f48904f0df847b8fd6a0290a7ea84411ea86382cbf237f8',
+                                        'evidence': '114690f085c0e5e9888c753892dd5cac59386c2e6247a0cb547b082790b79299',
+                                        'history': 'd6dd31b766f5600c7ac3c594ae43b4b8ac5082e9c6f0b5244a98d2dfe1f278f9',
+                                        'status': 'T',
+                                        'layer': 'NOT_APPLICABLE'},
+     'POINTED-DECODER-PREFIX-CONSISTENCY': {'row': 'a0fc8e6aa1875e36cb373aa0408a718c9c2a7a44ecaa136391f5dfa4020ac1db',
+                                            'normative': '14797cb7f7855ab67fe42a16c493cef38d51eaa03e77dbd212631bdeeff79171',
+                                            'evidence': '6e35671bada33dd81061c445d718cd1f316518f9e362e7a20cb864e2bc0c175c',
+                                            'history': '142dff01c8ba8bad3badc70dcca0c54beaa5f480e366ed28b615134ca5081dee',
+                                            'status': 'T',
+                                            'layer': 'L1'},
+     'DECODER-RETARDED-LOCAL-ENERGY-TRANSPORT': {'row': '2b8b2deae4b73c7021a37293d55ab4731a4682f781e6cccf51a8e24bd85cab1c',
+                                                 'normative': 'd2e0f694673bcce9447842191c23ae40abe72bdb337ea3319e1af8242af6534f',
+                                                 'evidence': '1d8faa525f1d112dddd01e6e3625bf87a85d1d8a650310ce6a82a9fc5548e4b3',
+                                                 'history': 'dada3835357bb39800d930b651411b911f94b9d5e5d24431cba53c5e2090356c',
+                                                 'status': 'T',
+                                                 'layer': 'L1'},
+     'DECODER-RESERVOIR-RECORD-ACCOUNTING': {'row': '6da1dfaffc3ff259d665b4b68910a87b4ff7d1e8b712d0c4d0db668e8ab0c653',
+                                             'normative': '9361aaee2fde659b8d1db7748e6c369ea532cbaa365bbde1dec39dbcce331f5e',
+                                             'evidence': '8b8b90db46a974ae871fba8de9d0ec35267d69a4b0fff3e319b332283c546d17',
+                                             'history': 'fc560d73e40f5b270e77fda1c9345bfa89f6dd82c5e664ba40b6bd04fed62e9a',
+                                             'status': 'T',
+                                             'layer': 'L1'},
+     'DECODER-RESERVOIR-QUADRATIC-PARTITION': {'row': 'e7a2d32f343379c2967f3b163aba3dd90829e2b3d7e816739ad90389c7bdfb79',
+                                               'normative': 'e3401903aca4e826690b2a397292d8441ff966a8b3953d73c31b40fe180c64cf',
+                                               'evidence': '6eb13ac7c515ea772713d8b2ca55f4424ad8192eb604850fcbd0a71087dbb91f',
+                                               'history': 'ff029d4bf642ad336a93b1c12f36229a41207066b64023cb049c47dc59dc41c6',
+                                               'status': 'T',
+                                               'layer': 'L1'},
+     'DECODER-RESERVOIR-QDD-POSTPROCESSING-OBSTRUCTION': {'row': 'f1446d0cdc1b244842993f48e6fc4b11328663faee8f038d848cc099bdd7960d',
+                                                          'normative': '7ac9ac88063f45a74d331de2fcdca8b9c5a35e01f48dc43fe792ef5a6b7300f3',
+                                                          'evidence': '7fed264024c7e459b5bc58d572a8567b096b72ce15b7356b18023f75ad1bed4a',
+                                                          'history': '8a7bf1555809878c81d10137531c7664aae5b9eeaae734ae5dc845e8167b5f86',
+                                                          'status': 'T',
+                                                          'layer': 'L1'},
+     'NIST-RAW-PREFIX-CODEC-QUALIFICATION': {'row': 'f5c71075e26df473a44721561494e18acd95e3b1ba5fff5630c8036793f445bb',
+                                             'normative': '522fb368f9dc724c6c49e5b2dcbc7f5aa9357d42ce7294101c514eef66500398',
+                                             'evidence': 'ce4162911bdb70492f5c355535192d4d770c1d6b1455b0e0ccecb7f94d7ffdfb',
+                                             'history': '6f5d382cee789546470600d1eeed35f7d7c3a768105a21e6972e93042a68ffbc',
+                                             'status': 'C',
+                                             'layer': 'L5'},
+     'NIST-RUN3-RECORD-INTERVAL-ONEHOT': {'row': '4405ed039b7fd46d0147a7b3e5c66553173dfa320753a5ea9bb72cac3c868fcc',
+                                          'normative': '5574f321aa847cc7bea3848e93e366b6a1015166a848f150ae44f9180abcd1e4',
+                                          'evidence': '6240cb652cbbe5a3b8e803f2e5deb507f0fddb4682992fcef669e7b3a8fb165f',
+                                          'history': '07fa151ba1c3ed8fbb09277bb5527deb1419cf16e1e6541c4c1d77b0c33f7fca',
+                                          'status': 'C',
+                                          'layer': 'L5'},
+     'NIST-LOCAL-OBSERVATION-LOSSLESS': {'row': 'be4a6e19d7ecd61b026611d19cc1a78b8ce2ebe66340404c471be9335b0e9d43',
+                                         'normative': '85015a1fcd44bc5a5da4ac809b9590fa13037a2ca929b7650e405c19fe83e6f1',
+                                         'evidence': 'd1b478997155e2e6b5cf12a1871914cfa2ef75eaae85773e3772037e48b8f233',
+                                         'history': '445ef8ccda0ccb4673eae6f515e588890d1e90b874ce2fa108493e89f6794967',
+                                         'status': 'C',
+                                         'layer': 'L5'},
+     'NIST-LOCAL-OBSERVATION-PREFIX-CAUSALITY': {'row': '8ee08bf22c87f84ca34dd1d17460eaba16c63ddbd63de015590da4f64eafc50a',
+                                                 'normative': '72fa9ed9b3fc633d85502d6f4e2853bae54c53069fdef2b073501c7fbb1f3c26',
+                                                 'evidence': 'e07a810ecdfed6d176757ea0521267c78f6299ceab7d483b2c9dc65646c894b4',
+                                                 'history': '627495b12b5835396b797869b8de7744265059c0ead14b7f707015a5731734bd',
+                                                 'status': 'C',
+                                                 'layer': 'L5'}}
+    v77_names = set(v77_contract)
+
     # The v76 theorem-only fold preserves every previously registered row.
     v76_contract = {'J-CM-FIBONACCI-BRAID-PROJECTIVE-NONMEMBERSHIP': {'row': '358774de5e5ee215c2a728be0b3e66ef1a9d1ae24385c7c32cc663fa64a88bab',
                                                        'normative': '00b4f90e1fb8f23ae50c445ffeb5dc3c9eb40505951088bc60acd8824f59e8e0',
@@ -6228,11 +6309,11 @@ def run():
     v76_events = [row for row in history if row["release"] == "canon-v76-candidate"]
     v76_events_by_claim = {row["claim_id"]: row for row in v76_events}
     v76_old_tables = {
-        "REGISTRY": [r for r in rows if r["claim_id"] not in v76_names],
-        "NORMATIVE": [r for k,r in normative.items() if k not in v76_names],
-        "DEPENDENCIES": [r for r in dependencies if r["item_id"] not in v76_names],
-        "EVIDENCE": [r for k,r in evidence.items() if k not in v76_names],
-        "HISTORY": [r for r in history if r["release"] != "canon-v76-candidate"],
+        "REGISTRY": [r for r in rows if r["claim_id"] not in v76_names | v77_names],
+        "NORMATIVE": [r for k,r in normative.items() if k not in v76_names | v77_names],
+        "DEPENDENCIES": [r for r in dependencies if r["item_id"] not in v76_names | v77_names],
+        "EVIDENCE": [r for k,r in evidence.items() if k not in v76_names | v77_names],
+        "HISTORY": [r for r in history if r["release"] not in {"canon-v76-candidate", "canon-v77-candidate"}],
         "GATES": list(gates.values()),
         "FRONTIER_PROGRAMS": list(programs.values()),
         "CORE_SELECTION": core_selection_rows,
@@ -6261,6 +6342,53 @@ def run():
         and "COINCIDENCE-RECORD-FREQUENCY" not in index
         and all("P-J-CIRCULAR-QDD-DUAL-SIMPLEX-BRIDGE-1" not in r["location"]
                 for r in evidence.values())
+    ))
+
+
+    # The v77 release boundary requires exactly the new rows and the complete old ledger.
+    v77_prior = {'CORE_SELECTION': 'a6fbcb3d9f353d9e86afb71a0c4ac770333eb1d070dbe782d1d2e4de9147e225',
+     'DEPENDENCIES': '8a6ca647d68b2b260aa1d57dbb0773ca5d4924e8400f5b628714b59352dfa962',
+     'EVIDENCE': '1982e26df439c2bd4528a5a1c89d2b1882fd97ff618e6ea677f599fa15bf55ea',
+     'FRONTIER_PROGRAMS': '5266805122ab90ee1e643c2026838c08dcbe6f707d09e46058b71dc891b21877',
+     'GATES': 'dba992ba687c15778ad8873fbccaba372633a8d2a3579c387c4b79c5dec3be6b',
+     'HISTORY': '0cf95b030a24d6b3593528da5085381f577fea721e3b9201ec68fdcf69237245',
+     'NORMATIVE': 'ac011815c65131d869730af5f66a2ab172f9dcadfd2045284883c4d4fa8726b6',
+     'REGISTRY': '7a8f37d291dbbb8bb0ce0ad7a1e196328e18f093778b46b1fe74dfae8b3c2eae'}
+    v77_dependency_hash = 'c0c8b11ac70c3504128f706649ed1df44c7a4a5805cec0a6c72c7af8e80da5cf'
+    v77_events = [r for r in history if r["release"] == "canon-v77-candidate"]
+    v77_events_by_claim = {r["claim_id"]: r for r in v77_events}
+    v77_old_tables = {
+        "REGISTRY": [r for r in rows if r["claim_id"] not in v77_names],
+        "NORMATIVE": [r for k,r in normative.items() if k not in v77_names],
+        "DEPENDENCIES": [r for r in dependencies if r["item_id"] not in v77_names],
+        "EVIDENCE": [r for k,r in evidence.items() if k not in v77_names],
+        "HISTORY": [r for r in history if r["release"] != "canon-v77-candidate"],
+        "GATES": list(gates.values()),
+        "FRONTIER_PROGRAMS": list(programs.values()),
+        "CORE_SELECTION": core_selection_rows,
+    }
+    checks.append((
+        "V77-EARNED-FOLD",
+        "eight conditional theorems and four bounded archive computations; exact source "
+        "evidence and prior ledgers persist; physical Born and apparatus owners stay open",
+        len(v77_contract) == 12
+        and all(v76_table_hash(v77_old_tables[k]) == h for k,h in v77_prior.items())
+        and len(v77_events) == 12 and set(v77_events_by_claim) == v77_names
+        and v76_table_hash([r for r in dependencies if r["item_id"] in v77_names]) == v77_dependency_hash
+        and all(
+            has_status(index, claim, contract["status"])
+            and registry_row_sha256(index, claim) == contract["row"]
+            and table_row_sha256(normative[claim]) == contract["normative"]
+            and normative[claim]["layer"] == contract["layer"]
+            and not normative[claim]["gate_ids"]
+            and table_row_sha256(evidence[claim]) == contract["evidence"]
+            and evidence[claim]["architecture_requirement"] == "two-architecture"
+            and table_row_sha256(v77_events_by_claim[claim]) == contract["history"]
+            and claim not in programs
+            for claim,contract in v77_contract.items()
+        )
+        and "J-PLENUM-POLAR-GAUSS" not in index
+        and "COINCIDENCE-RECORD-FREQUENCY" not in index
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

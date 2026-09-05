@@ -1,4 +1,24 @@
 item_id	depends_on	relation	basis
+RAPIDITY-GOLDEN-LADDER	J-IDEAL-RAPIDITY-CHARACTER-LIFT	REQUIRES	registered integral Laurent local factors supply the diagonal evaluations
+RAPIDITY-GOLDEN-LADDER	ARITHMETIC-RAPIDITY-DECOMPOSITION	REQUIRES	registered O_F unit group and signed norm/Pell identities supply the integrality classification
+RAPIDITY-GOLDEN-LADDER	J-IDEAL-COUNT-QUADRATIC-CHARACTER	REQUIRES	registered ideal-count local values identify the sigma_3 anchor
+RAPIDITY-TARGET-RECONSTRUCTION	RAPIDITY-GOLDEN-LADDER	REQUIRES	only the finite arithmetic corollary uses the registered split-count polynomial and golden-rung source identification; polynomial proof is self-contained
+POINTED-DECODER-PREFIX-CONSISTENCY	DEF-ARCHITECTURE	REQUIRES	the registered autonomous U and five affine generators define the actual checkpoint input independently of all readouts
+POINTED-DECODER-PREFIX-CONSISTENCY	ALGEBRAIC-DMATTER	BOUNDED_BY	the theorem is conditional on the explicitly displayed mathematical choice and does not derive or promote the dictionary: agreement is with the registered five-field direct write on K_QDD only; the arbitrary-counter anchor remains a conditional choice
+POINTED-DECODER-PREFIX-CONSISTENCY	DEF-QDD-DIRECT-WRITE	REQUIRES	the registered direct-write definition supplies the exact five-field comparison rule without consuming factor-side constructions
+POINTED-DECODER-PREFIX-CONSISTENCY	CODEC-TR4	REQUIRES	the actual checkpoint supplies the registered piston-sum covector in the linear leg
+POINTED-DECODER-PREFIX-CONSISTENCY	METRO-TICK	REQUIRES	the clock uses the registered counter-to-cycle coordinate without SI identification
+POINTED-DECODER-PREFIX-CONSISTENCY	PHOTON-SPATIAL-TEMPORAL-TRANSFER	BOUNDED_BY	the theorem is conditional on the explicitly displayed mathematical choice and does not derive or promote the dictionary: only the selected homogeneous scalar stencil and pair recurrence are restricted to rational finite support; no physical photon realization is used
+POINTED-DECODER-PREFIX-CONSISTENCY	MAXWELL-BIANCHI	REQUIRES	the tesseract injection uses the registered integer coboundary and its square-zero identity
+POINTED-DECODER-PREFIX-CONSISTENCY	MAXWELL-AMPERE-CHAIN	REQUIRES	the distinct torus injection uses the registered chain boundary and conserved zero-winding face-boundary current
+POINTED-DECODER-PREFIX-CONSISTENCY	J-COINCIDENCE-CARTESIAN-GRAM-SEAM	REQUIRES	the complete marked-cell Cartesian population and its reduced-fibre cardinality supply the conditional atomic batch
+DECODER-RETARDED-LOCAL-ENERGY-TRANSPORT	PHOTON-SPATIAL-TEMPORAL-TRANSFER	BOUNDED_BY	the theorem is conditional on the explicitly displayed mathematical choice and does not derive or promote the dictionary: the fixed five-shell flat scalar stencil is restricted to rational finite support; the forced preparation, energy and readout are explicitly additional mathematical choices
+DECODER-RESERVOIR-RECORD-ACCOUNTING	DECODER-RETARDED-LOCAL-ENERGY-TRANSPORT	REQUIRES	the same fixed wave recurrence, positive two-slice energy and local work identity supply the coupling energy budget
+DECODER-RESERVOIR-QUADRATIC-PARTITION	DECODER-RESERVOIR-RECORD-ACCOUNTING	REQUIRES	linear cold coupling and its exact total-energy ledger supply the finite partition
+DECODER-RESERVOIR-QUADRATIC-PARTITION	DECODER-RETARDED-LOCAL-ENERGY-TRANSPORT	REQUIRES	the actual positive residual-wave quadratic energy and centered source norm supply R_n and G
+DECODER-RESERVOIR-QDD-POSTPROCESSING-OBSTRUCTION	DECODER-RESERVOIR-QUADRATIC-PARTITION	REQUIRES	complete PSD fine partition and retained residual justify the nonnegative postprocessing contradiction
+NIST-LOCAL-OBSERVATION-LOSSLESS	NIST-RAW-PREFIX-CODEC-QUALIFICATION	REQUIRES	the inherited frozen source manifest and candidate codec supply the exact audited row domains
+NIST-LOCAL-OBSERVATION-PREFIX-CAUSALITY	NIST-RAW-PREFIX-CODEC-QUALIFICATION	REQUIRES	the inherited frozen source manifest and candidate codec supply the exact audited row domains
 J-CM-FIBONACCI-BRAID-PROJECTIVE-NONMEMBERSHIP	CM-ALTERNATING-PENCIL	REQUIRES	the exact CM restriction A_CM and its trace and determinant are the registered pencil action
 J-CM-FIBONACCI-BRAID-PROJECTIVE-NONMEMBERSHIP	J-GOLDEN-BRIDGE	REQUIRES	the frozen positive Fibonacci coefficient a=phi^-1 is the registered golden cyclotomic identity
 J-CIRCULAR-FIBONACCI-DETERMINANT-CHARACTER	CM-ALTERNATING-PRIMARY-LATTICE-SEAM	REQUIRES	the full saturated circular primary lattice C_Z and its ordered basis supply the target integral module

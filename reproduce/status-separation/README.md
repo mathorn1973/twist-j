@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its sixty-eight checks cover the current
+and emits deterministic text. Its sixty-nine checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -275,3 +275,13 @@ gate, Frontier-program and CORE-selection tables. The fired combined
 polar/Gauss claim, abandoned predecessor and physical coincidence hypothesis
 are excluded. This is release-boundary bookkeeping, not a new scientific
 probe or an apparatus realization.
+
+The v77 check pins eight conditional T rows and four bounded archived-record C
+rows, their exact source bundles, layers, declarations and dependency edges.
+It preserves all preceding tables and excludes the new rows only from the
+fixed v76 projection, whose historical hash constants remain unchanged.
+The live physical owners, gates, Frontier programs and CORE selection remain
+fixed. Current totals are 383 claims, 24 reproductions, 14 gates,
+T252/D45/C38/H2/O29/F17, 31 live H/O and 296 two-architecture evidence rows.
+The conditional Born note and proposed measurement/realization wrappers do
+not supply a new physical claim or a passed owner gate.
