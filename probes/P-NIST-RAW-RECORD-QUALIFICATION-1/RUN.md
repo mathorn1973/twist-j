@@ -32,7 +32,7 @@ public_readback: PASS before first semantic payload opening and formal execution
 all_pinned_sources_pre_post_match: yes
 worktree_clean_before_and_after: yes
 result: A QUALIFIED; B ONEHOT; both conditional record claims CONFIRMED
-architecture_gate: PENDING public aarch64 and x86_64 replay
+architecture_gate: PASS aarch64 and x86_64; workflow 33960329681
 ```
 
 ## Immutable source inventory
@@ -69,6 +69,36 @@ comment predates the first semantic opening; pre- and post-run hashes match.
 Both frozen predicates passed on their declared scopes. The two sync members
 were read completely with CRC verification; only the nominated prefix of each
 run3 member was decoded. The run3 tails remain uninspected by this probe.
-All future replays use the same frozen scope. Two-architecture reproduction
-and post-result independent review will be recorded after completion; neither
-can promote this conditional data audit to physical apparatus certification.
+All future replays use the same frozen scope. The independent architecture
+and review evidence below supplements the initial run record; neither
+promotes this conditional data audit to physical apparatus certification.
+
+## Independent architecture and post-result review evidence
+
+[Workflow 33960329681](https://github.com/mathorn1973/twist-j/actions/runs/33960329681)
+passed on result commit `999d309677ff2337bebf80bc3c7de6ac5242bf83`, which
+adds only EXPECTED.txt, RUN.md and RESULT.md to the immutable analytical pin.
+
+| Architecture | Job | Exact cold replay |
+|---|---|---|
+| aarch64 | [101290995070](https://github.com/mathorn1973/twist-j/actions/runs/33960329681/job/101290995070) | PASS |
+| x86_64 | [101290995257](https://github.com/mathorn1973/twist-j/actions/runs/33960329681/job/101290995257) | PASS |
+
+Both public jobs fetched the four original NIST objects without the local
+cache hint, verified all complete compressed hashes, and replayed the same
+bounded record audit. Each changed-probe step completed in approximately
+17 seconds, within the unchanged 600-second verifier timeout. Both logs
+explicitly identify the architecture and report verifier SHA-256
+`0e63ea7ee01bff85558af311c8d819440f7155e34a8582b003929701ee1d4bf7`
+and stdout SHA-256
+`ac5edf54c34e40613fc22a55c2423169ac3f8c719ff9472d5c2532b75b135439`.
+The aggregate required check and all 155 tool tests passed on both jobs.
+Clean Linux policy, Canon, ledger, gate-contract, status-label and exact
+changed-probe replay checks also passed; no changed minimal reproduction
+was applicable.
+
+Independent post-result review verified all unchanged pinned sources, exact
+stdout versus the first capture, empty stderr, every result-table count,
+source provenance, NIST notice and the ten-file text-only inventory. It found
+no material scope, integrity, privacy or license blocker. Reproduction concerns
+the same archived bytes, not independent experiments or physical certification.

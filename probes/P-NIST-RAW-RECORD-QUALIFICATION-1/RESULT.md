@@ -76,8 +76,13 @@ RUN.md binds the command, environment, source hashes and custody provenance.
 Neither frozen scientific falsifier fired. Exact row-accounting invariants
 passed. All four nominated members were found uniquely; all use DEFLATED
 compression. Agreement with the chosen codec is a conditional qualification,
-not an independent proof of the apparatus interpretation. Architecture replay
-and post-result review are pending in the initial result record.
+not an independent proof of the apparatus interpretation. Independent cold
+replay on **aarch64 and x86_64 passed** in
+[workflow 33960329681](https://github.com/mathorn1973/twist-j/actions/runs/33960329681),
+with the same exact verifier and stdout hashes. The aggregate required check,
+all 155 tool tests and repository checks passed. Independent post-result
+scope, integrity, security and license review passed; RUN.md gives the evidence.
+These are reproducible audits of the same archive, not independent experiments.
 
 ## Physical boundary and next decision
 
