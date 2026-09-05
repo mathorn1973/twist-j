@@ -1,0 +1,13 @@
+NON-CANONICAL LOCAL AUDIT; no physical or two-architecture result
+source: Public Canon v77 at 8ea01cd36ade943af10718593b0e1348d6837a3b
+single-origin first row a = (Fraction(1421, 1620), Fraction(-349, 1620), Fraction(-349, 1620), Fraction(-349, 1620))
+single-origin independent row b = (Fraction(-53999, 87480), Fraction(4757, 29160), Fraction(4757, 29160), Fraction(4757, 29160))
+two-row (z0,z1+z2+z3) determinant = 8959/885735
+single-origin invisible source plane: z0=0, z1+z2+z3=0
+four-port matrix: M=(1770 I-v 1^T)/1620; v= (349, 354, 354, 348)
+det M = 14992667/51018336
+M^-1 = (54/59)(I+v 1^T/365)
+signed basis tests: g=1/2,2,5; first two origin transitions and first four-port transition PASS
+two source-dark witnesses through three steps: PASS; all-time conclusion relies on symmetry proof
+heat-only equal first-step outputs; rational source low weights: 313290/380329 0
+ALL LOCAL AUDIT CHECKS PASS
