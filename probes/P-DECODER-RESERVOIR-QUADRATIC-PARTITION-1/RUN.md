@@ -32,8 +32,8 @@ public_readback: PASS before formal execution
 all_pinned_sources_pre_post_match: yes
 worktree_clean_before_and_after: yes
 result: CONFIRMED both conditional claims
-architecture_gate: PENDING independent GitHub replay
-post_result_security_review: PENDING
+architecture_gate: PASS aarch64 and x86_64; workflow 33955143771
+post_result_security_review: PASS independent scope, pin, exact bytes, sources, security and license review
 ```
 
 ## Complete immutable source inventory
@@ -70,3 +70,29 @@ Frozen source files keep their pre-execution labels. RUN.md and RESULT.md
 record later evidence without editing those inputs. Independent architecture
 evidence will be added after public replay. Physical apparatus/occurrence and
 Canon v76 status remain unchanged; public claims are unregistered.
+
+## Independent architecture and review evidence
+
+[Workflow 33955143771](https://github.com/mathorn1973/twist-j/actions/runs/33955143771)
+passed on result commit `9b589dbeef755e640fc8565929da68393a389705`, which adds
+only EXPECTED.txt, RUN.md and RESULT.md to the immutable source pin.
+
+| Architecture | Job | Exact replay |
+|---|---|---|
+| aarch64 | [101276999494](https://github.com/mathorn1973/twist-j/actions/runs/33955143771/job/101276999494) | PASS |
+| x86_64 | [101276999652](https://github.com/mathorn1973/twist-j/actions/runs/33955143771/job/101276999652) | PASS |
+
+Both public logs report verifier SHA-256
+`c9b140dced94518b596fef12053c38791cc8e34dea60aa5b938e5a60d89b1d17`
+and stdout SHA-256
+`9ee2b5a125f975babb4ae1707c9c58d83d8268a50ac8c251044219c915464331`.
+The two architecture jobs and aggregate check were read back as successful.
+All 155 tool tests and policy, Canon, ledger and gate-contract checks passed;
+clean Linux validation also passed status labels and exact changed-probe
+record/replay validation. No changed minimal reproduction was applicable.
+
+Independent post-result review confirmed the exact three-file result diff,
+all eight unchanged source hashes and byte counts, the 613-byte/16-line
+transcript, both claim scopes and neutral provenance. No blocking security
+or license issue was found. These are mathematical evidence records; no
+physical effect, apparatus, occurrence or Canon status is adopted.

@@ -71,9 +71,14 @@ prefix/grouping, G-metric traces, both exact witnesses, zero handling and
 threshold/scaling boundaries. No required scientific falsifier fired.
 Its finite coverage audits the uniform proof, not a physical experiment.
 
-Independent GitHub x86_64/aarch64 replay and post-result review are pending.
-No architecture gate or formal public registration is claimed by this
-initial result record.
+Independent GitHub **x86_64 and aarch64 replay PASS** in
+[workflow 33955143771](https://github.com/mathorn1973/twist-j/actions/runs/33955143771),
+with the same exact verifier and stdout hashes on both architectures.
+RUN.md records the jobs and source/result pins. The aggregate required check,
+all 155 tool tests and repository checks passed. Independent post-result
+scope, integrity and security/license review passed. The uniform proof and
+its independent computation audit concern only the two stated conditional
+mathematical claims; formal public registration still requires a separate fold.
 
 ## Choices and physical boundary
 
