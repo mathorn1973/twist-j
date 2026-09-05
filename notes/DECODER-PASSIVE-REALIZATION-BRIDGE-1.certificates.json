@@ -1,0 +1,493 @@
+{
+  "inventory_id": "PRB1-INVENTORY",
+  "status": [
+    "NON-CANONICAL",
+    "DESIGN-NOTES",
+    "UNREGISTERED",
+    "NO_DATA",
+    "NO_PHYSICAL_CERTIFICATES",
+    "NOT_EXECUTABLE"
+  ],
+  "basis": {
+    "main_commit": "a2d2ee778aa0df6f8ac6712f7d87f09163af858a",
+    "canon": "Public Canon v76",
+    "canon_content_commit": "07910adb8418742bf52a0d204577b84b38009b18",
+    "canon_sha256": "c151a19997dba95d78836c46f38463ab2735ae1c98674f87888d519d7a500112",
+    "canon_bytes": 420539,
+    "definition_issue": 832
+  },
+  "note": "DECODER-PASSIVE-REALIZATION-BRIDGE-1.md",
+  "scope": {
+    "selected_candidate": "Two unrolled static classical optical three-mode stages; four external input/output modes.",
+    "mathematical_review": "STATIC_DERIVATION_REVIEWED_NONCANONICAL",
+    "formal_execution": "NONE",
+    "hardware": "NONE_IDENTIFIED",
+    "physical_data": "NONE",
+    "physical_realization": "UNRESOLVED",
+    "scientific_owner": "QDD-INSTRUMENT-APPARATUS",
+    "owner_status": "O",
+    "feeds_U": "FALSE",
+    "whole_decoder_complete": false,
+    "mechanical_POC1": "Separate candidate; its physical interpretation is not inherited."
+  },
+  "definitions": {
+    "PRB1-INVENTORY": "This candidate certificate graph, not issued certificates.",
+    "PRB1-SOURCE-RRP1": "Pinned RRP1 source/profile references.",
+    "PRB1-SOURCE-POC1": "Pinned generic calibration/uncertainty boundaries; mechanical choices remain separate.",
+    "PRB1-SOURCE-COUPLING": "Pinned exact general coupling law.",
+    "PRB1-DESIGN": "Exact finite component and two-stage matrix design below.",
+    "PRB1-PACKET": "Immutable proposed measurement-packet schema below.",
+    "PRB1-C-MATH": "Finite component algebra certificate specification.",
+    "PRB1-C-SYNTH": "Exact synthesis and routing certificate specification.",
+    "PRB1-C-SENSOR": "Independent readout/energy calibration certificate specification.",
+    "PRB1-C-COMPONENT": "Unconstrained measured component transfer certificate specification.",
+    "PRB1-C-PREPARE": "Launched state, phase and dark-port preparation certificate specification.",
+    "PRB1-C-BOUNDARY": "Passivity/loss/external-power and measurement boundary specification.",
+    "PRB1-C-HELDOUT": "Independent finite-horizon response/energy validation specification.",
+    "PRB1-C-BUFFER": "Separate finite-buffer to infinite-D3 prefix proof specification.",
+    "PRB1-C-U-SOURCE": "Separate physical U-source/context embedding specification.",
+    "PRB1-C-RECORD": "Future physical pointer/history/threshold certificate specification."
+  },
+  "source_handles": [
+    {
+      "source_id": "PRB1-SOURCE-RRP1",
+      "commit": "a2d2ee778aa0df6f8ac6712f7d87f09163af858a",
+      "paths": [
+        "notes/DECODER-RESERVOIR-PHYSICAL-PROFILE-1.md",
+        "notes/DECODER-RESERVOIR-PHYSICAL-PROFILE-1.json"
+      ],
+      "local_symbols": [
+        "RRP1-PROFILE",
+        "RRP1-COLD-LAW",
+        "RRP1-LEDGER-LAW"
+      ]
+    },
+    {
+      "source_id": "PRB1-SOURCE-POC1",
+      "commit": "a2d2ee778aa0df6f8ac6712f7d87f09163af858a",
+      "paths": [
+        "notes/DECODER-PORT-OBSERVABLE-CALIBRATION-1.md",
+        "notes/DECODER-PORT-OBSERVABLE-CALIBRATION-1.template.json"
+      ],
+      "local_symbols": [
+        "POC1-TEMPLATE"
+      ],
+      "boundary": "Reuse provenance, disjoint validation and uncertainty requirements only; not mechanical F/V/SI identification."
+    },
+    {
+      "source_id": "PRB1-SOURCE-COUPLING",
+      "commit": "550420d188a45c4929e300ca6aabcde812f4d65a",
+      "paths": [
+        "probes/P-DECODER-RESERVOIR-COUPLING-1/coupling.py",
+        "probes/P-DECODER-RESERVOIR-COUPLING-1/PROOF.md"
+      ],
+      "symbols": [
+        "couple",
+        "reverse",
+        "DECODER-RESERVOIR-RECORD-ACCOUNTING"
+      ]
+    }
+  ],
+  "design": {
+    "design_id": "PRB1-DESIGN",
+    "finite_component": {
+      "sites": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "boundary": "Zero extension / Dirichlet",
+      "L": "8/9",
+      "g": "2",
+      "scope": "New one-site component; not the five-site source or an asserted infinite-RRP1 prefix."
+    },
+    "state": {
+      "pair_order": [
+        "u",
+        "v"
+      ],
+      "q": "(u+v)/2",
+      "d": "v-u",
+      "normalized_input": [
+        "X=2*sqrt(2)*q/3",
+        "Y=sqrt(7)*d/3",
+        "A=2*a"
+      ],
+      "normalized_output": [
+        "X_next=2*sqrt(2)*(v+w)/6",
+        "Y_next=sqrt(7)*(w-v)/3",
+        "B=2*b"
+      ],
+      "energy": "E_pair+g*a^2=(X^2+Y^2+A^2)/2; output energy uses X_next,Y_next,B."
+    },
+    "O3": [
+      [
+        "7/9",
+        "sqrt(14)/9",
+        "sqrt(2)/3"
+      ],
+      [
+        "-sqrt(14)/9",
+        "-2/9",
+        "sqrt(7)/3"
+      ],
+      [
+        "sqrt(2)/3",
+        "-sqrt(7)/3",
+        "0"
+      ]
+    ],
+    "factorization": {
+      "column_vector_order": "Rightmost factor acts first.",
+      "R12": "[[c,-s,0],[s,c,0],[0,0,1]]",
+      "R23_pi_over_2": "[[1,0,0],[0,0,-1],[0,1,0]]",
+      "c": "-sqrt(7)/3",
+      "s": "sqrt(2)/3",
+      "identity": "O3=R12(alpha)*R23(pi/2)*R12(alpha); c^2+s^2=1."
+    },
+    "two_stage": {
+      "stage_count": 2,
+      "input_order": [
+        "X0",
+        "Y0",
+        "A0",
+        "A1"
+      ],
+      "intermediate_order": [
+        "X1",
+        "Y1",
+        "B0",
+        "A1"
+      ],
+      "output_order": [
+        "X2",
+        "Y2",
+        "B0",
+        "B1"
+      ],
+      "map": "U4=embed_(1,2,4)(O3)*embed_(1,2,3)(O3), using one-based indices; each embedding is identity on its unused coordinate.",
+      "cold_input": "A0=A1=0 ideally; actual classical dark-field bounds require a certificate.",
+      "routing": "Stage-1 state channels X1,Y1 physically propagate to stage 2 through declared delays; no intermediate measurement and remodulation. B0 never returns. Collect B0,B1 and final X2,Y2 only at terminal output planes.",
+      "energy": "U4^T*U4=I4 implies sum(input_i^2)/2=sum(output_i^2)/2 in the ideal model.",
+      "proposed_validation": {
+        "input": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        "output": [
+          "35/81",
+          "-5*sqrt(14)/81",
+          "sqrt(2)/3",
+          "14*sqrt(2)/27"
+        ],
+        "launched_energy_fractions": {
+          "final_state": "175/729",
+          "first_reservoir": "162/729",
+          "second_reservoir": "392/729"
+        },
+        "status": "REVIEWED_EXACT_DESIGN_PREDICTION_NOT_DATA",
+        "interpretation": "Fractions of launched model energy, not probabilities; physical preparation and E_star remain uncertified."
+      }
+    },
+    "physical_mapping": {
+      "interpretation": "Real signed coordinates proposed as phase-referenced classical optical modal amplitudes.",
+      "optical_mode_basis": "UNRESOLVED:SPATIAL_TEMPORAL_POLARIZATION_MODE_BASIS",
+      "energy_scale": "UNRESOLVED:INDEPENDENT_OPTICAL_E_STAR",
+      "form": "If independently calibrated, optical amplitude vector=sqrt(E_star/2)*z and signal energy=E_star*||z||^2/2.",
+      "phase_rule": "One fixed reference determines relative signs/phases across channels and trials; no per-output alignment to O3.",
+      "quantum_boundary": "No quantum-vacuum, photon-count or Born-probability assumption. Dark classical inputs have measured bounds, not asserted exact zeros."
+    },
+    "raw_T3": [
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "5/9",
+        "2"
+      ],
+      [
+        "1/2",
+        "-5/18",
+        "0"
+      ]
+    ],
+    "J3": [
+      [
+        "sqrt(2)/3",
+        "sqrt(2)/3",
+        "0"
+      ],
+      [
+        "-sqrt(7)/3",
+        "sqrt(7)/3",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "2"
+      ]
+    ],
+    "matrix_names": "raw_T3 acts on chi=(u,v,a), returning (v,w,b); O3=J3*raw_T3*J3^-1 acts on (X,Y,A). J3 is the declared energy factor, not the principal symmetric square root."
+  },
+  "certificates": [
+    {
+      "certificate_id": "PRB1-C-MATH",
+      "state": "REVIEWED_MATHEMATICAL_DESIGN_NOT_FORMAL_RESULT",
+      "depends_on": [
+        "PRB1-SOURCE-COUPLING",
+        "PRB1-DESIGN"
+      ],
+      "payload": [
+        "Derive the one-site Dirichlet g=2 map from the pinned port law.",
+        "Prove the q,d energy identity, invertible J3 and O3=J3*raw_T3*J3^-1.",
+        "Verify O3 orthogonality/factorization and ordered U4 composition."
+      ],
+      "exclusion": "No formal PASS, hardware or infinite-D3 claim."
+    },
+    {
+      "certificate_id": "PRB1-C-SYNTH",
+      "state": "REVIEWED_IDEAL_DESIGN_PHYSICAL_INSTANCE_UNSUPPLIED",
+      "depends_on": [
+        "PRB1-C-MATH"
+      ],
+      "payload": [
+        "Exact ordered rotations, interconnections and all mode/phase labels.",
+        "State-link delays; fresh ports isolated, B0/B1 never return.",
+        "No intermediate measure/remodulate; actual parts/settings await readback."
+      ],
+      "physical_issue_id": "UNRESOLVED:PHYSICAL_SYNTHESIS_CERTIFICATE"
+    },
+    {
+      "certificate_id": "PRB1-C-SENSOR",
+      "state": "UNISSUED_NO_DATA",
+      "depends_on": [
+        "PRB1-SOURCE-POC1"
+      ],
+      "payload": [
+        "Pinned POC1 independent calibration requirements specialized to optical I/Q modes: gain, phase/polarity, skew, bandwidth and loading.",
+        "Independent pulse-energy scale/integration standard.",
+        "Joint calibration region and standard/software/data provenance."
+      ],
+      "anti_circularity": "Do not use desired O3/U4 to set readout gains, phase, timing or energy scale.",
+      "certificate_data": "UNRESOLVED:SENSOR_CALIBRATION_PACKET"
+    },
+    {
+      "certificate_id": "PRB1-C-COMPONENT",
+      "state": "UNISSUED_NO_DATA",
+      "depends_on": [
+        "PRB1-C-SENSOR",
+        "PRB1-C-SYNTH"
+      ],
+      "payload": [
+        "Unconstrained measured complex transfers versus setting/band, including leakage/loss.",
+        "Spanning probes, phase superpositions, amplitude/linearity domain and estimator conditioning.",
+        "Measured link delay/dispersion, crosstalk, drift and joint uncertainty."
+      ],
+      "anti_circularity": "Tune toward O3, but never constrain measured transfer to O3 or discard quadrature leakage.",
+      "certificate_data": "UNRESOLVED:COMPONENT_SETUP_PACKET"
+    },
+    {
+      "certificate_id": "PRB1-C-PREPARE",
+      "state": "UNISSUED_NO_DATA",
+      "depends_on": [
+        "PRB1-C-SENSOR",
+        "PRB1-C-SYNTH"
+      ],
+      "payload": [
+        "Target and independently measured launched four-mode state, pulse shape and reference phase.",
+        "Synchronization, unwanted-mode leakage and separate dark A0/A1 bounds.",
+        "Source/pair identity, amplitude range and drift; electronics zero is insufficient."
+      ],
+      "certificate_data": "UNRESOLVED:PREPARATION_PACKET"
+    },
+    {
+      "certificate_id": "PRB1-C-BOUNDARY",
+      "state": "UNISSUED_NO_DATA",
+      "depends_on": [
+        "PRB1-C-SENSOR",
+        "PRB1-C-COMPONENT"
+      ],
+      "payload": [
+        "Complete input/output/loss/link and reservoir termination boundary.",
+        "Control/pump injection bounds; no hidden gain compensation.",
+        "Signal/LO energy separation and actual passivity in the declared norm.",
+        "Terminal detection/taps and their transfer effects."
+      ],
+      "memory_boundary": "Terminal detection is not lossless optical storage; digital records and absorbed/exported optical energy are not two stores.",
+      "certificate_data": "UNRESOLVED:ENERGY_BOUNDARY_PACKET"
+    },
+    {
+      "certificate_id": "PRB1-C-HELDOUT",
+      "state": "UNISSUED_NO_DATA",
+      "depends_on": [
+        "PRB1-C-MATH",
+        "PRB1-C-SYNTH",
+        "PRB1-C-SENSOR",
+        "PRB1-C-COMPONENT",
+        "PRB1-C-PREPARE",
+        "PRB1-C-BOUNDARY"
+      ],
+      "payload": [
+        "Frozen disjoint preparations, settings and acquisition order.",
+        "Full complex four-mode response after two physical stages.",
+        "Independent input/final/reservoir/loss energy observations.",
+        "Joint error budget, fixed decision predicates and every invalid attempt."
+      ],
+      "scope": "Tested classical component, modes, settings, amplitudes, band and two-stage horizon only.",
+      "certificate_data": "UNRESOLVED:HELDOUT_RESPONSE_AND_ENERGY_PACKETS"
+    },
+    {
+      "certificate_id": "PRB1-C-BUFFER",
+      "state": "FULL_RRP1_INSTANCE_UNSPECIFIED",
+      "depends_on": [
+        "PRB1-SOURCE-RRP1",
+        "PRB1-SOURCE-COUPLING"
+      ],
+      "payload": [
+        "The accompanying note Section 1 supplies the general finite-propagation/buffer derivation; no formal status is assigned here.",
+        "A concrete full-RRP1 instance must still freeze its Dirichlet Lambda, source, ports and horizon satisfying that derivation.",
+        "Bind the finite positive energy form and explicit source/record transports to that same instance; no silent zero-mode quotient."
+      ],
+      "boundary": "Not supplied by the one-site component and not required for its narrower transfer test."
+    },
+    {
+      "certificate_id": "PRB1-C-U-SOURCE",
+      "state": "UNISSUED_PHYSICAL_OWNER_UNRESOLVED",
+      "depends_on": [
+        "PRB1-SOURCE-RRP1",
+        "PRB1-C-PREPARE"
+      ],
+      "payload": [
+        "Physical K_c, context ownership and pointed-head preparation map.",
+        "Independent signed-source/ready/clock realization.",
+        "Explicit layer-gate admission; no optical write to U."
+      ],
+      "boundary": "Laboratory preparation does not establish U-source embedding."
+    },
+    {
+      "certificate_id": "PRB1-C-RECORD",
+      "state": "UNISSUED_PHYSICAL_OWNER_UNRESOLVED",
+      "depends_on": [
+        "PRB1-SOURCE-RRP1",
+        "PRB1-C-BOUNDARY",
+        "PRB1-C-HELDOUT"
+      ],
+      "payload": [
+        "Independent reservoir/pointer response, capacity, delay and energy boundary.",
+        "Full ordered raw/derived equality and q/ambiguity calibration.",
+        "Separate event, reset/domain and typed layer-gate rulings."
+      ],
+      "boundary": "Energy/IQ outputs do not establish full RRP1 apparatus, signed-tape realization or Born occurrence."
+    }
+  ],
+  "dataset_partition": {
+    "roles": [
+      "INDEPENDENT_SENSORS",
+      "SETUP_COMPONENTS",
+      "HELDOUT_VALIDATION"
+    ],
+    "dataset_manifest": "UNRESOLVED:FROZEN_DISJOINT_DATASET_MANIFEST",
+    "rule": "Disjoint raw datasets across roles; shared standards retain joint uncertainty dependence.",
+    "setup_scope": "Characterize/tune components, preparation and bounded energy before validation freeze.",
+    "heldout_scope": "Freeze settings, extraction, source/phase/cut, model and budgets before validation acquisition or opening.",
+    "data_state": "NO_DATA"
+  },
+  "measurement_packet": {
+    "packet_id": "PRB1-PACKET",
+    "physical_packet_instance": "UNRESOLVED:ACTUAL_PACKET_ID",
+    "required_fields": [
+      "packet_id",
+      "schema_version",
+      "kind",
+      "dataset_role",
+      "context_id",
+      "model_pin",
+      "component_config_pin",
+      "attempt_number",
+      "source_preparation_id",
+      "mode_basis_id",
+      "phase_reference_id",
+      "input_output_planes",
+      "timestamps_and_windows",
+      "cut_assignment",
+      "raw_manifest_ids",
+      "sensor_certificate_ids",
+      "component_certificate_ids",
+      "complete_complex_input_output_estimates",
+      "joint_uncertainty_id",
+      "independent_energy_observations",
+      "loss_background_control_power_observations",
+      "quality_flags",
+      "invalid_reason",
+      "decision_rule_id"
+    ],
+    "raw_manifest_fields": [
+      "public_path",
+      "sha256",
+      "bytes",
+      "format",
+      "acquisition_provenance",
+      "custody_readback",
+      "license_or_permission",
+      "privacy_review"
+    ],
+    "hash_timing": "Pin existing inputs first; hash future raw data at acquisition. No prehash of nonexistent data.",
+    "state": "NO_ACTUAL_PACKETS",
+    "invalid_rule": "Retain every attempt; missing/clipped/mistimed data are invalid records, not zeros or silent omissions."
+  },
+  "commuting_contract": {
+    "ideal": "For complete chi=(u,v,a), chi'=raw_T3*chi and J3*chi'=O3*J3*chi; the two-stage external four-mode map is U4.",
+    "physical": "Dec(P_phys(Enc(z)))=U4*z+r(z), with independently frozen Enc/Dec and bounded residual on a declared domain.",
+    "encoder_id": "UNRESOLVED:PHYSICAL_STATE_ENCODER",
+    "decoder_id": "UNRESOLVED:INDEPENDENT_COMPLEX_SIGNAL_DECODER",
+    "plant_id": "UNRESOLVED:ACTUAL_TWO_STAGE_PLANT",
+    "domain_id": "UNRESOLVED:PHYSICAL_MODES_BAND_AMPLITUDE_CONTEXT",
+    "residual_bound": "UNRESOLVED:JOINT_OPERATOR_AND_ADDITIVE_BOUND",
+    "exclusion": "Intensity-only fits or target-dependent phase/readout do not compare complete signed states."
+  },
+  "finite_horizon_error": {
+    "scope": "Two cold stages; norm is the independently calibrated full complex modal norm, including quadrature leakage.",
+    "definitions": "z_t=(X_t,Y_t) contains only the two memory coordinates; e_t=||actual_state-ideal_state|| is the error norm. Ideal cold norm<=R. L_t bounds actual decoded memory transfer, epsilon_t mismatch, nu_t dark/leakage/model contributions. Complete one-step chi also includes a.",
+    "recurrence": "e_(t+1)<=L_t*e_t+epsilon_t*R+nu_t.",
+    "two_step": "e_2<=L_1*L_0*e_0+L_1*(epsilon_0*R+nu_0)+epsilon_1*R+nu_1.",
+    "passivity_rule": "L_t<=1 needs an independent bound in calibrated coordinates; physical optical passivity alone is insufficient. Otherwise retain the product.",
+    "terminal_energy_bound": "For ||ideal output||<=R and full-output error<=delta: absolute normalized energy error <= (2*R*delta+delta^2)/2. Multiply by E_star only with its joint calibration uncertainty.",
+    "parameter_region": "UNRESOLVED:JOINT_E0_R_L_EPSILON_NU_ESTAR_REGION",
+    "numerical_tolerance": "UNRESOLVED:PREREGISTERED_NUMERICAL_BUDGET",
+    "threshold_rule": "Independent q/energy uncertainty required; resolve a crossing only if all admitted values give the same floor(heat/q), else retain ambiguity.",
+    "threshold_certificate": "UNRESOLVED:INDEPENDENT_POINTER_Q_CERTIFICATE",
+    "no_probability": "No Gaussian independence, L6 measure or Born frequency is inferred from these bounds."
+  },
+  "decision_routing": {
+    "current": "STOP-DEFINITION / NO_DATA / NO_PHYSICAL_PASS",
+    "missing_definition": "STOP for missing required certificate/premise, circular calibration, changed context or incomplete budget.",
+    "invalid_acquisition": "Retained INVALID packet under the frozen quality rule; not a scientific counterexample.",
+    "physical_rejection": "With premises/integrity satisfied, an out-of-budget held-out response rejects only this realization/dictionary/domain.",
+    "physical_compatibility": "Tested component/domain/horizon compatibility only; no exact universal, source, family or decoder closure.",
+    "required_before_heldout_test": [
+      "PRB1-C-MATH",
+      "PRB1-C-SYNTH",
+      "PRB1-C-SENSOR",
+      "PRB1-C-COMPONENT",
+      "PRB1-C-PREPARE",
+      "PRB1-C-BOUNDARY"
+    ],
+    "produced_by_heldout_test": "PRB1-C-HELDOUT",
+    "separate_open_extensions": [
+      "PRB1-C-BUFFER",
+      "PRB1-C-U-SOURCE",
+      "PRB1-C-RECORD"
+    ],
+    "future_preregistration": "UNRESOLVED:COMPLETE_PHYSICAL_TEST_PREREG_AND_PIN",
+    "administrative_checker": "Future schema/hash/partition checks report administrative completeness, never physical certification.",
+    "canonical_boundary": "No QDD owner status, Born target, occurrence, terminality, class completeness, SI derivation, mechanical POC1 contract or F3/production restriction changes."
+  }
+}
