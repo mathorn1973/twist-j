@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v76
+# TWIST-J Public Canon v77
 
-**Release identity.** Public Canon v76. Normative authority and activation
+**Release identity.** Public Canon v77. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v76 also declares the discrete architecture used to read
+only. Public Canon v77 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v76 does not claim
+seed of the two algebraic projections. Public Canon v77 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -124,7 +124,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v76 contains no such
+deriving the architecture from J; Public Canon v77 contains no such
 theorem.
 
 ---
@@ -2415,6 +2415,616 @@ sampling, self-location, decoder-completion or L2--L6 claim follows.
 Evidence: `probes/P-J-COINCIDENCE-RECORD-BOUNDARY-1/RESULT.md`, claim B,
 with the finite-set proof and scaling ledger in that probe's `PREREG.md`
 sections 5--9.
+
+### J-CENTERING-IMAGE-INDEX [T]
+
+Let \(E=\mathbb Z^5\), \(u=(1,1,1,1,1)^T\),
+\(\epsilon(c)=u^Tc\), and \(V_{\mathbb Z}=\ker\epsilon\). Write \(e_k\)
+for the coordinate vectors, with indices modulo five, and define
+$$
+g e_k=e_{k+1},\qquad D=5I-uu^T,\qquad J_{\mathrm{reg}}=I+g^2.
+$$
+These are specified integer-lattice maps. The name \(J_{\mathrm{reg}}\)
+distinguishes this regular five-coordinate operator from a scalar action
+on another carrier.
+
+The exact image and kernel are
+$$
+\ker D=\mathbb Zu,\qquad
+D(E)=\{d\in V_{\mathbb Z}:d_i\equiv d_j\pmod5\text{ for all }i,j\}.
+$$
+The lattice index and quotient are
+$$
+(V_{\mathbb Z}:D(E))=125,\qquad
+V_{\mathbb Z}/D(E)\cong(\mathbb Z/5\mathbb Z)^3.
+$$
+By contrast, the restriction \(D|_{V_{\mathbb Z}}\) is multiplication by
+five and has determinant \(625\). In addition,
+$$
+D^2=5D,\qquad Dg=gD,\qquad DJ_{\mathrm{reg}}=J_{\mathrm{reg}}D.
+$$
+
+For the kernel, \(Dc=0\) implies that all coordinates of \(c\) equal
+\(\epsilon(c)/5\), hence \(c\in\mathbb Zu\); the reverse inclusion is
+immediate. For any \(d=Dc\), its sum is zero and
+\(d_i=5c_i-\epsilon(c)\), so its coordinates agree modulo five. Conversely,
+if \(d\) has these properties, choose an integer \(r\) representing their
+common residue and put \(c=(d-ru)/5\). This is integral,
+\(\epsilon(c)=-r\), and \(Dc=d\). This supplies a preimage for every
+vector in the stated image, without a bounded search.
+
+Let \(f_i=e_i-e_4\) for \(0\le i<4\), and let \(F\) have columns \(f_i\).
+These form an integer basis of \(V_{\mathbb Z}\). The five columns of
+\(D\) sum to zero, so the first four generate \(D(E)\), with
+$$
+(D(e_0)\ D(e_1)\ D(e_2)\ D(e_3))=F M,\qquad
+M=5I_4-u_4u_4^T,\quad u_4=(1,1,1,1)^T.
+$$
+Over \(\mathbb Q\), the \(u_4\) line has eigenvalue one and its
+sum-zero complement eigenvalue five. Thus \(\det M=125\).
+The following integral certificate also determines the quotient:
+$$
+U_s=
+\begin{pmatrix}
+1&1&1&1\\1&2&1&1\\1&1&2&1\\1&1&1&2
+\end{pmatrix},\qquad
+V_s=
+\begin{pmatrix}
+1&-1&-1&-1\\0&1&0&0\\0&0&1&0\\0&0&0&1
+\end{pmatrix},
+$$
+$$
+\det U_s=\det V_s=1,\qquad U_sMV_s=\operatorname{diag}(1,5,5,5).
+$$
+Indeed, summing the rows of \(M\) gives \((1,1,1,1)\); the other
+rows of \(U_sM\) are \(5e_1^T,5e_2^T,5e_3^T\). Subtracting the first
+column from each later column yields the displayed diagonal.
+Unimodularity and its divisibility chain give the stated Smith quotient.
+
+Since \(\epsilon\) vanishes on \(V_{\mathbb Z}\), \(DF=F(5I_4)\), so
+\(D(V_{\mathbb Z})=5V_{\mathbb Z}\) and
+\(\det(D|_{V_{\mathbb Z}})=5^4=625\). This restriction uses a different
+domain from the map \(D:E\to V_{\mathbb Z}\) whose image index is \(125\).
+Finally, \((uu^T)^2=5uu^T\) proves \(D^2=5D\); \(g\) fixes \(u\) and
+preserves \(\epsilon\), proving both commutation identities.
+
+The statement is exact L1 lattice algebra. It asserts no polar
+decomposition, Gauss sum, finite polar-group census, Born selection,
+preparation, apparatus, event or occurrence law, and no L2–L6 or physical
+decoder conclusion. The combined polar/Gauss claim remains outside this
+theorem. An exact counterexample to any displayed kernel, image, Smith,
+restriction or commutation clause fires this claim.
+
+The proof is audited by
+[the centering-index result](../probes/P-J-PLENUM-CENTERING-INDEX-1/RESULT.md)
+and its pinned exact six-gate reproduction. The finite matrices audit the
+proof; they do not replace its universal preimage argument.
+
+### POINTED-DECODER-PREFIX-CONSISTENCY [T]
+
+There is an exact total **chosen encoded model** on pointed sources
+`h=(n0,x) in N_0 x F_5^6`, with compatible finite prefixes. This is a
+conditional construction, not a physical completion or a selection theorem
+for the decoder. The following choices define its scope.
+
+The source is the forward pointed orbit `kappa_h(t)=U^t(h)`, with the literal
+head retained as provenance. Matter is written first, geometry retains that
+write and adds its records, and clock retains both and appends its records.
+These three stages are distinct from the linear, binary and quadratic
+field-owner legs. Put `v=ell(x[:4])`, `ell=(0,1,2,-2,-1)`. The five-field
+QDD write is the direct cyclotomic rule on `w=sum_i v_i zeta_5^i`, using
+`<a,b>=Tr(a conjugate(b))/5` and the line spanned by
+`lambda=1+zeta_5+zeta_5^2+zeta_5^3`. For `w!=0` it writes the support,
+`m=<w,w>`, the two orthogonal branch norms, `T_w/m` where
+`T_w(b)=w<b,w>`, and the branch norms divided by `m`. For `w=0` it writes
+ZERO_SUPPORT, zero total and branch weights, and ZERO_DENOMINATOR in both
+normalized slots. On `n0=0` these are ALGEBRAIC-DMATTER. Using the same
+head rule for `n0>0` is an additional anchor choice, not an extension of
+the physical dictionary. At cut `t`, the linear piston covector and binary
+leg read the actual checkpoint and `theta(n0+t)`; the QDD fields stay
+head anchored.
+
+Three different geometry carriers are chosen. On the oriented tesseract,
+set the edge cochain values `A(e1,0),A(e2,0),A(e3,0),A(e2,1)` to the four
+entries of `v`, with every other edge zero, and put `F=dA`. Here `(e_i,j)`
+is the edge from vertex `e_i` in direction `j`, with indices starting at
+zero. On the separate periodic `2^4` torus put those four entries on
+faces `(0,01),(0,02),(0,03),(0,12)`, all other faces zero, and set
+`j=boundary G_face`. On `D3={y in Z^3:sum_i y_i even}`, choose
+`y0=(000),y1=(110),y2=(101),y3=(011)` and equal initial slices
+`psi0=psi1=sum_i v_i delta_yi`. Evolve the selected homogeneous rule
+`psi_(t+2)=2psi_(t+1)-psi_t-L psi_(t+1)` with the five complete squared-norm
+shells `(2,4,8,10,16)`, weights `(6,1,15,1,1)/324` and
+`(Lf)(y)=sum_z c_z(f(y)-f(y+z))`. Its age is `t`, not the absolute counter.
+Neither the tesseract field nor the torus current is identified with this
+scalar wave.
+
+The separate five-cell population uses
+
+```text
+d=5(v0,v1,v2,v3,0)-sum(v)(1,1,1,1,1),
+a_t=A^t d,    A=I+g^2-g^3-g^4,    g e_k=e_(k+1 mod 5).
+```
+
+One A step per relative U tick is chosen; no intertwiner with U is asserted.
+At each cut and cell, independently tagged S and R fibres each have
+`|a_t[k]|` units of sign `sign(a_t[k])`, with ordinals `1,...,|a_t[k]|`;
+empty fibres have sign zero. Their identities are fresh at that cut.
+The population is the **defined complete** disjoint
+union `C_t=union_k(S_(t,k) x R_(t,k))`. Each entire population is one
+atomic BATCH_EVENT, or a recorded empty ZERO_EVENT. The five counts are
+`a_t[k]^2`; their normalized finite population ratios have an explicit
+zero-denominator case. They are distinct from the two QDD branch slots.
+Within a nonempty cell of size `r`, the address `(i,j)` has rank
+`(i-1)r+(j-1)`; Euclidean division gives the inverse. Concatenating cells
+in marked order gives a bijection for the full population.
+
+The mathematical writer has a singleton context and EMPTY_READY state.
+Its controller retains `next_cut` and the last batch. A step caches the
+complete batch and advances the cut. Persistence returns that controller;
+reset clears only the cache, preserving the next cut. Ordered append starts
+at cut zero and admits no duplicate or skipped cuts. Passive queries inspect
+existing records. The reported coordinates are absolute counter `n0+t`,
+relative age `t`, and cycle coordinate `(n0+t)/5`. No readout feeds U or
+uses a future record. Literal structural equality includes the source
+header; equality after discarding provenance is a different open question.
+The exact eighteen schemas, sixty-nine fields, stage owners and leg
+assignments are the chosen finite manifest in
+`probes/P-DECODER-POINTED-BATCH-CONFORMANCE-1/PROFILE.json`.
+
+**Proof.** The QDD norm is `m=sum v_i^2-(sum v_i)^2/5`, at least
+`sum v_i^2/5`, and `<lambda,lambda>=4/5`; hence every required nonzero
+division exists. Orthogonality gives the two weights and `T_w^2=mT_w`.
+The zero branch divides by nothing. Alternating boundary cancellation gives
+`d^2=0` and `boundary^2=0`. Four tesseract origin faces recover `-v`, and
+four distinct shifted torus edges recover `v`; thus both injections have
+exactly the zero source as zero fibre. The winding cut covectors annihilate
+face boundaries, so all four torus windings vanish. A finite stencil applied
+to finite support gives finite support; induction proves the rational wave
+exists at every finite age. Centering and the integer matrix A give a finite
+integer population at every finite cut. Rank/unrank and ordered append prove
+the batch laws, including zero, cache reset and persistence. Every constructor
+uses only the head and already completed transitions, independently of the
+requested final length. Induction therefore gives unique finite output and
+`truncate_M(D_*^{<L}(h))=D_*^{<M}(h)` for `0<=M<=L`. These compatible
+prefixes define a unique infinite presented stream.
+
+The exact ten-gate conformance audit and its scope are in
+`probes/P-DECODER-POINTED-BATCH-CONFORMANCE-1/RESULT.md`. Finite execution
+audits the construction and does not enumerate all pointed orbits. All
+fourteen named choices remain choices, and the unbounded stream assumes
+ideal resources with finite use at each finite cut. The writer is not a
+certificate of physical effects, a detector, an exclusive outcome, or a
+frequency law. Fresh residual units are never transported through A or U.
+
+### DECODER-RETARDED-LOCAL-ENERGY-TRANSPORT [T]
+
+On `V=C_c(D3,Q)`, fix the same scalar stencil L but the pair convention
+`(u,v)=(previous,current)`. Write `N` for its sixty displacements,
+`B={0} union N` and `c_xy=c_(y-x)` for neighbours. The shell sizes are
+`12,6,12,24,6`, so `sum_z c_z=8/9`. All sums below are finite on support
+and its stencil halo. Directed edge sums include both orientations.
+
+For any finite-support forcing, the step and energy are
+
+```text
+w=2v-u-Lv+f,
+E(u,v)=||v-u||^2/2+<u,Lv>/2,
+e_x(u,v)=5(v_x-u_x)^2/18
+         +sum_y c_xy[(v_y-u_x)^2+(u_y-v_x)^2]/8.
+```
+
+Every local density is nonnegative, `sum_x e_x=E`, and `E=0` exactly at
+the zero pair on this infinite finite-support carrier. Define
+
+```text
+D_xy(u,v)=c_xy[(v_y-u_y)^2-(v_x-u_x)^2]/8,
+s=w-u,
+J_xy=c_xy(v_x-v_y)(s_x+s_y)/4-D_xy(v,w)+D_xy(u,v).
+```
+
+Then `J_yx=-J_xy` and the exact local and global identities are
+
+```text
+e_x(v,w)-e_x(u,v)+sum_y J_xy=s_x f_x/2,
+E(v,w)-E(u,v)=<s,f>/2.
+```
+
+For each declared finite aperture R, let `E_R=sum_(x in R)e_x`, let
+`Phi_R=sum_(x in R,y outside R)J_xy`, and let
+`W_R=sum_(x in R)s_x f_x/2`. Interior edges cancel, giving
+`E_R(v,w)-E_R(u,v)+Phi_R=W_R` and `0<=E_R<=E`. Set unions and
+intersections obey inclusion-exclusion, for energy, flux and work. An empty
+aperture gives zero. Reading a completed pair or triple needs its values on
+`R+B`; computing the successor itself has its own stencil requirement.
+The current is a signed transfer, and it is read only after w exists.
+
+For the ready pair `(u_0,v_0)=(0,0)` put `H=2I-L` and
+
+```text
+G_0=I, G_1=H, G_(r+1)=H G_r-G_(r-1),
+G_r=sum_(j=0)^floor(r/2)(-1)^j binom(r-j,j) H^(r-2j),
+v_n=sum_(s=0)^(n-1)G_(n-1-s)f_s,   u_n=v_(n-1)   for n>=1.
+```
+
+This is the unique retarded continuation. In particular
+`supp(G_r f) subset supp(f)+rB`, so every finite force prefix has finite
+state and readout support. This is a discrete dependency bound, with no
+claim of an SI propagation speed.
+
+A **different source preparation** from the equal-slice four-site model is
+chosen here. For `z in Q^4`, `s=sum_i z_i`, put
+
+```text
+S z=(z0-s/5,z1-s/5,z2-s/5,z3-s/5,-s/5)
+    at (000),(110),(101),(011),(200), respectively,
+G=I_4-e e^T/5,   e=(1,1,1,1)^T,   m(z)=z^T G z.
+```
+
+Distinct site deltas are orthonormal, so `||Sz||^2=m(z)` and the
+coefficients recover z by subtracting the fifth value. A single kick
+`f_0=Sz` from the ready zero pair yields the prepared pair `(0,Sz)`;
+call this the post-kick cut zero. Subsequent free evolution has
+`2E=m(z)` and `0<=2E_R<=m(z)` at every finite cut. The source isometry,
+five sites, preparation convention, density/current and aperture are choices;
+the norm match was exposed in the source design.
+
+**Proof.** Edge reversal gives self-adjoint L and
+`<a,La>=sum_(x,y)c_xy(a_y-a_x)^2/2`, bounded above by
+`16||a||^2/9`. Expansion of the displayed squares proves `sum e_x=E`.
+If it vanishes, the onsite term forces u=v and the remaining squares force
+u constant on the connected norm-two graph. A constant with finite support
+on D3 is zero. Difference of squares gives the global source-work identity.
+For the local identity, set
+`p_x=(v_x-u_x)^2/2+sum_y c_xy(u_y-u_x)(v_y-v_x)/4`.
+Expansion gives `e_x-p_x=sum_y D_xy`; the natural flux for p is the first
+term of J. Substitution of the recurrence and the redistribution D proves
+the displayed law. Pascal's identity proves the Green polynomial formula;
+the recurrence then proves the forced sum and uniqueness by induction.
+Each H application enlarges support by at most B. The source norm identity
+and conservation prove the post-kick bounds. Records formed after each
+completed transition append uniquely and retain immutable compatible prefixes.
+
+`probes/P-DECODER-RETARDED-ENERGY-TRANSPORT-1/RESULT.md` records the
+nine-gate exact audit. The finite-support assumption is essential: periodic
+constant pairs have zero energy, and no uniform coercivity in the two-slice
+norm is claimed. A distant aperture may be dark for a nonzero state.
+Repeated passive readings do not constitute separate absorptions. This
+encoded source-wave-local-reading chain supplies no physical source,
+photon, detector interaction, occurrence law, or physical identification
+with the separate tesseract and torus injections.
+
+### DECODER-RESERVOIR-RECORD-ACCOUNTING [T]
+
+Retain the preceding wave, energy, density, current and source preparation.
+Choose a finite conductance map `Gamma:R->Q_(>0)`, extended by zero off R,
+and a common threshold `q in Q_(>0)`. Empty R is allowed. Context equality
+includes every site, conductance and q; it is fixed for a history. Incoming
+and outgoing ports are rational vectors on R, including their zero entries.
+
+For incoming port a define the full coupling by
+
+```text
+w_x=[2v_x-(Lv)_x-(1-gamma_x/2)u_x+2gamma_x a_x]/(1+gamma_x/2),
+p_x=(w_x-u_x)/2,  f_x=gamma_x(2a_x-p_x),  b_x=a_x-p_x.
+```
+
+Off R this is the free recurrence and there is no port. The complete map
+`((u,v),a)->((v,w),b)` is a rational bijection. Its inverse is
+
+```text
+u_x=[2v_x-(Lv)_x-(1-gamma_x/2)w_x+2gamma_x b_x]/(1+gamma_x/2),
+a_x=b_x+(w_x-u_x)/2.
+```
+
+The denominators are positive, including at conductance two. Substitution
+proves the inverse, and `p_x f_x=gamma_x(a_x^2-b_x^2)` combines with the
+transport identity to give
+
+```text
+E(v,w)+sum_x gamma_x b_x^2=E(u,v)+sum_x gamma_x a_x^2,
+e_x(v,w)-e_x(u,v)+sum_y J_xy=gamma_x(a_x^2-b_x^2).
+```
+
+The chosen cold forward process supplies fresh zero a at each transition,
+retains every signed outgoing b in an immutable tape, and initializes
+`H_(0,x)=0`. Let
+
+```text
+H_(n,x)=sum_(t<n) gamma_x b_(t,x)^2,
+N_(n,x)=floor(H_(n,x)/q),  r_(n,x)=H_(n,x)-q N_(n,x).
+```
+
+Each deposit is nonnegative; `0<=r<q`. A complete atomic batch emits exactly
+the newly crossed lifetime ordinals `N_(n,x)+1,...,N_(n+1,x)` per channel,
+possibly several or none. No ordinal is reissued. The retained tape, its
+heat summary and its floor/remainder partition account for the same store;
+they are not three additive energies. Summing the balance gives
+
+```text
+E(P_n)+sum_x H_(n,x)=E(P_0),
+sum_x N_(n,x)<=floor(E(P_0)/q),
+2(E(P_n)+sum_x H_(n,x))=m(z)  when P_0=(0,Sz).
+```
+
+The signed tape in reverse order reconstructs every earlier wave and zero
+incoming slot through the displayed inverse. Squared heat alone does not
+retain these signs. Every finite prefix uses finite rational operations and
+finite fresh storage. Induction proves immutable prefix compatibility,
+ordered append and no duplicate threshold accounting; passive reading
+changes nothing. No erasure or reset is part of this reservoir process.
+Fixed per-channel counters have the stated overlap laws; flooring pooled
+heat is a different operation.
+
+These equations and the inverse are the uniform proof, audited by the seven
+gates in `probes/P-DECODER-RESERVOIR-COUPLING-1/RESULT.md`. On the general
+pair carrier, complete absorption is not universal: an inversion-odd wave has zero amplitude at
+the sole origin port forever. It is not impossible either: with origin
+conductance two, `(2 delta_origin,0)` deposits energy two in one step and
+is recoverable from the signed port. These controls need not belong to the
+image of the chosen source preparation. Positive subthreshold heat can emit
+no ordinal. Conductance, fresh cold inputs, threshold, channel partition,
+unbounded fresh capacity and the atomic convention remain explicit choices.
+This mathematical interaction does not identify ordinals with photons,
+exclusive QDD outcomes, trials, probabilities or Born frequencies.
+
+### DECODER-RESERVOIR-QUADRATIC-PARTITION [T]
+
+For the same scalar wave, source `Bz=(0,Sz)` and a fixed finite positive
+rational conductance context (possibly empty), use cold incoming slots at
+every transition. For any finite horizon n, the wave `P_t(z)=T_Gamma^t Bz`
+and outgoing ports depend rationally and linearly on z. Write
+`b_(t,x)(z)=ell_(t,x)z` and define
+
+```text
+M_(t,x)=2gamma_x ell_(t,x)^T ell_(t,x),
+z^T R_n z=2E(P_n(z)),
+sum_(t<n,x in R) M_(t,x)+R_n=G.
+```
+
+All these matrices are rational symmetric positive semidefinite. The
+residual is defined by actual remaining wave energy. Its positivity
+follows by substituting the four linear source-coordinate maps into the
+nonnegative density squares, independently of the final partition identity.
+Telescoping the energy balance gives that identity as a quadratic form on
+all rational z; basis vectors and their pair sums identify the matrix.
+Earlier port matrices persist at longer horizons and
+`R_n=R_(n+1)+sum_x M_(n,x)`. At horizon zero, or at any horizon with no
+ports, the residual is G. No zero residual limit is asserted.
+
+Preselected disjoint complete groups of port slots give positive matrices
+A_j, with R_n retained as a separate residual group, and `sum_j A_j=G`.
+For `z!=0`,
+
+```text
+w_j=z^T A_j z/(z^T G z),
+F_j=G^(-1)A_j,  rho_z=z z^T G/(z^T G z),
+tr(rho_z F_j)=w_j,  sum_j F_j=I,  sum_j w_j=1.
+```
+
+Here `G^(-1)=I+e e^T`; the operators are positive and self-adjoint in the
+G metric, without a claim of ordinary Euclidean symmetry. The shares are
+invariant under nonzero rational scaling of z and undefined at zero source.
+Heat and wave records at zero remain defined. This trace spelling is
+algebraic energy accounting. Fixed-threshold counts can change under source
+scaling, so they are a different reading. Warm inputs, source-dependent
+contexts, omitted residuals with renormalization and postselection lie
+outside the statement. The uniform proof and its eight-gate audit are in
+`probes/P-DECODER-RESERVOIR-QUADRATIC-PARTITION-1/RESULT.md`.
+
+### DECODER-RESERVOIR-QDD-POSTPROCESSING-OBSTRUCTION [T]
+
+In that same source and coupling, let the origin be an active port and
+`n>=1`. The two sharp algebraic QDD target forms are
+
+```text
+L_QDD=e e^T/20,  H_QDD=I-e e^T/4,  L_QDD+H_QDD=G.
+```
+
+Admit the complete state-independent nonnegative two-output processing
+class: one real `a_j in [0,1]` for every fine port slot and the residual,
+with output forms `sum_j a_j A_j` and `sum_j(1-a_j)A_j`. Coefficients may
+depend on the fixed context and horizon. No member of this class gives both
+QDD target weights for all sources. Deterministic grouping and prior
+pooling are included.
+
+**Proof.** At the first origin transition the source and stencil give
+
+```text
+h=(1421,-349,-349,-349)/1620,
+ell_(0,0)=-h/(2+gamma_0),
+M_(0,0)=2gamma_0 h^T h/(2+gamma_0)^2.
+```
+
+For `z_H=(1,-1,0,0)`, LOW vanishes but `h z_H=59/54`; for
+`z_L=(1,1,1,1)`, HIGH vanishes but `h z_L=187/810`. The origin slot is
+strictly positive on both. Matching LOW on the first vector forces its
+coefficient to zero, because all terms are nonnegative. Matching HIGH on
+the second forces that same coefficient to one. Additional slots and the
+residual cannot cancel a positive term. The contradiction applies to every
+positive origin conductance and every positive finite horizon, with no
+finite sampling of processing coefficients. The exact audit and result are
+`probes/P-DECODER-RESERVOIR-QUADRATIC-PARTITION-1/RESULT.md`.
+
+This is a restricted mathematical obstruction, not a physical falsification
+of all apparatuses or Born laws. Coherent amplitude mixing, different
+interactions and nonlinear or source-dependent rules are different classes.
+The scalar source, ports and normalized energy shares establish no physical
+effects, instruments, preparation, occurrence law, complex polarization
+carrier or measure. QDD-INSTRUMENT-APPARATUS, its terminal-event and
+class-completeness obligations, Bell accounting and photon realization keep
+their own open boundaries. COINCIDENCE-RECORD-FREQUENCY remains candidate-H
+/ UNTESTED / STOP outside the registry. The conditional Born derivation
+and proposed physical contracts under `notes/` are not evidence for any
+closed physical claim here.
+
+### Archived observation records
+
+The following four C results concern a fixed external byte contract and its
+conditional L5 archived-record interpretation. They establish neither a
+TWIST-J source realization nor a physical measurement instrument.
+
+The source contract is
+`probes/P-NIST-RAW-RECORD-QUALIFICATION-1/SOURCE.json`. It names four NIST
+archives, their retrieval URLs and the following complete compressed
+identities. SHA-256 is a custody identity computed from the complete bytes,
+not a provider signature or an acquisition-software certificate.
+
+```text
+object       archive bytes  SHA-256
+alice-sync      2119875     e54d30d866a642dd23d1a40e3ae3418cf6420fa6beb616bac2d21601a6b0d485
+bob-sync        2238398     33c294c778babfebc6e4eddf30519a30c25728c704ea78e24ee4f40a49ad1cec
+alice-run3    363415009     d581080c9fa6853a1bfb8ce511782563f433512f3ce7efb612202a5179c5ee6c
+bob-run3      379105464     f42204b41289c26ef779d39957062604c8d4008a4892724b7f2078afd7ddd5d4
+```
+
+The nominated member basenames are respectively
+`00_03_find_sync.T1.dat`, `00_03_find_sync.T2.dat`,
+`00_44_CH_pockel_100kHz.run3.alice.dat`, and
+`00_43_CH_pockel_100kHz.run3.bob.dat`. Each basename must select exactly one
+member. The admitted ZIP structure has at most 100 entries; the selected
+member is a file, is unencrypted, uses STORED or DEFLATED compression, has
+declared uncompressed size at most 16 GiB, and has size divisible by 24.
+These are qualification predicates, not claims about every possible ZIP file.
+
+The candidate codec is little-endian `<QQQ`: three unsigned 64-bit words per
+row, with the original zero-based row index retained. Exactly
+`min(1048576, member_size/24)` rows are selected. The admitted channel alphabet
+is `{0,2,4,5,6,64}`; the dictionary associates 0 with detector rows, 2 and 4
+with the two setting labels, 5 with PPS rows, and 6 with sync rows. At channel
+64 the second word is checked as a 14-digit Gregorian calendar field, not
+treated as an event timetag or a certified UTC reading. This codec and label
+dictionary are explicit conditions of the results.
+
+Let the selected input be `r_i=(i,c_i,t_i,x_i)`, `0<=i<N`, and let
+`j_0<...<j_(K-1)` be precisely the indices with `c_i=6`. A closed record-order
+interval has strict interior `j_k<i<j_(k+1)`. The setting and detector counts
+refer to all such interior rows; no sorting, station alignment, coincidence
+window, or record deletion is applied. The second raw word need not increase.
+
+### NIST-RAW-PREFIX-CODEC-QUALIFICATION [C]
+
+All four specified portions satisfy the admitted archive/member structure,
+size divisibility, complete nominated-prefix reading, channel alphabet and
+calendar-format predicates. Their exact selected extents are:
+
+| Object | Selected rows | Extent | Closed record intervals |
+|---|---:|---|---:|
+| alice-sync | 485,503 | complete member | 194,914 |
+| bob-sync | 489,229 | complete member | 197,214 |
+| alice-run3 | 1,048,576 | prefix | 512,047 |
+| bob-run3 | 1,048,576 | prefix | 514,203 |
+
+The total is 3,071,884 rows. Both complete sync members have verified ZIP CRC;
+the run3 tails are not semantically qualified or covered by a full-member CRC
+claim. Complete compressed authentication does not extend the interpreted
+prefix. The selected members all use DEFLATED compression.
+
+The exact zero-tolerance falsifier is an admitted structural, member,
+prefix-reading, channel or calendar counterexample on these authenticated
+objects. Retrieval failure, an identity mismatch or a bookkeeping
+error is an integrity/execution failure, not a substituted empirical
+counterexample. Successful decoding does not certify the acquisition version,
+physical channel semantics, absence of loss, or a clock calibration. Diagnostic
+timetag and transfer-counter comparisons establish no additional claim.
+
+### NIST-RUN3-RECORD-INTERVAL-ONEHOT [C]
+
+Both selected run3 prefixes contain closed record-order intervals, and every
+one of their 1,026,250 station-local intervals has exactly one setting row:
+
+| Run3 object | `(n_2,n_4)=(1,0)` | `(n_2,n_4)=(0,1)` | Missing, repeated or both |
+|---|---:|---:|---:|
+| alice-run3 | 258,392 | 253,655 | 0 |
+| bob-run3 | 256,820 | 257,383 | 0 |
+
+The falsifier is a parsed run3 prefix with no closed interval, or any closed
+interval whose setting counts differ from `(1,0)` and `(0,1)`. An unparsed
+prefix leaves the predicate unevaluated. The claim does not include the sync
+members' analogous diagnostic or imply station-to-station pairing.
+
+Detector multiplicity remains separate: alice-run3 has 488,341 intervals with
+no detector row, 22,960 with one, and 746 with at least two; bob-run3 has
+494,432, 19,392 and 379 respectively. `NO_RECORDED_DETECTOR_ROW` means only
+that the selected strict interior has zero rows of channel 0. It is not a
+certified no-click, source failure, absent photon or QDD zero-support outcome.
+The one-setting predicate is a syntactic property, not a physical trial law.
+
+### NIST-LOCAL-OBSERVATION-LOSSLESS [C]
+
+On those same four selected portions, the chosen archived-record adapter
+preserves every original indexed row exactly once in source order. Its packet
+ownership is:
+
+```text
+K=0: UNANCHORED snapshot owns indices 0<=i<N.
+K>0: nonempty PREFIX owns indices 0<=i<j_0;
+     CLOSED_INTERVAL(k) owns indices j_k<=i<j_(k+1), 0<=k<K-1;
+     PENDING_SUFFIX snapshot owns indices j_(K-1)<=i<N.
+```
+
+Each closed packet additionally carries its complete right sync row as a
+nonowning reference. That row becomes the next packet's owned left boundary.
+Concatenating owned rows and the pending suffix reconstructs the original
+input directly; agreement of cryptographic digests is not used as an
+injectivity premise. Setting, detector, calendar and signed-delay views agree
+with independent raw-row references and preserve multiplicity. A detector's
+left-sync difference uses the named left row; a unique-setting difference is
+defined only when the interval contains exactly one setting row. Missing and
+ambiguous references remain explicit, and negative differences are retained.
+
+There are 1,418,378 closed intervals and 1,418,379 emitted packets. The extra
+packet is bob-sync's one-row initial PREFIX, containing a detector row before
+the first sync. All four final suffixes remain pending. The equality audit
+also includes the complete frozen synthetic family: all 2,801 channel words
+of lengths zero through four over `{0,2,4,5,6,64,99}`, with the verifier's fixed
+numeric-word and transfer assignments. Channel 99 tests retention of unknown
+rows. These fixtures are not experimental observations.
+
+Any exact failure of the synthetic reference, actual lossless reconstruction
+or actual derived-reference comparison falsifies this finite audit claim
+(`G01`, `G02`, `G04` of the interval probe). It asserts no general correctness
+theorem about every Python execution or every uint64 assignment.
+
+### NIST-LOCAL-OBSERVATION-PREFIX-CAUSALITY [C]
+
+On the same declared audit, packets emit only when the required right sync
+arrives; the nonempty initial PREFIX emits at the first sync. The emission
+index is that boundary row's original index. Snapshots are nonmutating,
+previously emitted packets remain unchanged under extension, and continuous
+input agrees with the fixed 31-row chunking. The actual prefix checkpoints
+are the values in
+`{0,1,2,3,7,31,127,1023,8191,65535,262143,N}` that do not exceed `N`.
+The synthetic audit compares all 13,539 prefixes and all 13,539 two-chunk
+splits in its declared family.
+
+The transducer keeps emitted ownership as an initial input segment and the
+pending rows as its complementary suffix. A new nonsync row extends that
+suffix; a new sync emits the pending interval and becomes the next left
+anchor. This explains the audited causal invariant and chunk independence.
+The computational claim remains restricted to the stated data, checkpoints
+and fixtures. End of input creates a snapshot, not another closed event.
+
+An exact failure of the synthetic reference, actual prefix/chunk comparison
+or actual derived-reference gate falsifies this claim (`G01`, `G03`, `G04`).
+Packet closure is a software boundary condition, not physical measurement
+completion, apparatus reset or COMM-SAT.
+
+The public exact audits reproduce byte for byte on aarch64 and x86_64. They
+are repeated computations on the same archived objects, not independent
+experiments. The first two results are supported by
+`probes/P-NIST-RAW-RECORD-QUALIFICATION-1/RESULT.md`; the last two by
+`probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/RESULT.md`, whose dependency manifest
+binds the inherited source verifier, source manifest and NIST notice.
+
+None of these results supplies physical trial selection, timing-window
+membership, acquisition coverage, calibrated no-clicks, efficiency, dead
+time, post-state, reset, source distribution, photon identification, Born
+occurrence or an L6 law. The NIST apparatus is not identified with U or a
+TWIST-J realization. The separate NIST semantic/certificate wrappers are
+specifications, not tested implementations of this adapter. No output feeds
+U; the QDD apparatus, terminality, complete-family and Bell causal owners
+remain unchanged.
 
 ## 3. The kernel and the census
 
@@ -7437,6 +8047,327 @@ the byte-identical two-architecture audit, twelve certified gates and
 the two finite computations above, with frozen attribution to Suzuki
 and to Mittermeier in its preregistration. It makes no statement about
 the Riemann hypothesis.
+
+### RAPIDITY-GOLDEN-LADDER [T]
+
+Put \(F=\mathbb Q(\sqrt5)\), \(\phi=(1+\sqrt5)/2\), and
+\(\mathcal O_F=\mathbb Z[\phi]\). The registered unit group is
+\(\mathcal O_F^\times=\{\pm\phi^k:k\in\mathbb Z\}\), with
+\(N(\phi^k)=(-1)^k\). Let \(\chi_5\) be the quadratic character modulo
+five. A prime is split when \(\chi_5(p)=1\); here “non-split” includes
+both inert primes and the ramified prime \(5\).
+
+The registered integral rapidity lift has split local factor
+$$
+\frac{(1-X_pT)(1-X_p^{-1}T)}{1-T}
+$$
+and non-split local factor \(1-T\). For a unit \(t\) of a commutative
+ring, send every \(X_p\) to \(t\) and put \(\tau=t+t^{-1}\).
+The resulting multiplicative function \(m_\tau\), with \(m_\tau(1)=1\),
+has
+$$
+\begin{array}{c|cc}
+ & e=1&e\ge2\\ \hline
+p\text{ split}&1-\tau&2-\tau\\
+p\text{ non-split}&-1&0
+\end{array}
+\qquad\text{for }m_\tau(p^e).
+$$
+Every coefficient is a polynomial in \(\tau\) with integer coefficients.
+Inversion \(t\mapsto t^{-1}\) leaves the evaluation unchanged and selects
+no orientation above a split prime.
+
+For \(t\in F^\times\), the following are equivalent:
+$$
+m_{t+t^{-1}}(n)\in\mathbb Z\quad\text{for every }n\ge1,
+\qquad t+t^{-1}\in\mathbb Z,\qquad
+t=\pm\phi^{2k}\quad(k\in\mathbb Z).
+$$
+Thus the integer rungs are exactly
+\(\tau=\pm L_{2k}\), \(k\ge0\), where
+$$
+L_{2k}=\phi^{2k}+\phi^{-2k},\qquad L_0=2.
+$$
+Equivalently, the nonnegative integer first coordinates of
+\(a^2-5b^2=4\) are exactly \(a=L_{2k}\), with \(|b|=F_{2k}\).
+
+To prove the local table, expand
+\((1-\tau T+T^2)/(1-T)\). Since \(11\) is split,
+\(m_\tau(11)=1-\tau\) proves that all coefficients can be integral only
+when \(\tau\in\mathbb Z\); the table proves the converse. A rational
+\(t\) satisfying \(t^2-\tau t+1=0\) with integer \(\tau\) must be
+\(\pm1\). If \(t\) is not rational, that polynomial is its minimal
+polynomial, so \(t\) is an algebraic integer of norm one. Its inverse is
+also integral; hence it is a unit of \(\mathcal O_F\).
+The registered unit group and signed norm then force an even power of
+\(\phi\). Conversely each such power has the integer trace \(\pm L_{2k}\).
+For the Pell formulation, \(a^2-5b^2=4\) makes \(a,b\) the same parity,
+so \((a+b\sqrt5)/2\in\mathcal O_F\) has norm one. The same unit argument
+and the even-index Fibonacci–Lucas identity prove the classification.
+
+For \(n\ge1\), define the squarefree pure-split shell function
+$$
+\sigma_\tau(n)=
+\begin{cases}
+(1-\tau)^{\omega(n)},&
+n\text{ squarefree and every prime divisor of }n\text{ split},\\
+0,&\text{otherwise}.
+\end{cases}
+$$
+The empty product gives \(\sigma_\tau(1)=1\).
+There are three exact anchors:
+$$
+m_2=\mu,\qquad
+m_{-2}(n)=(-1)^{b(n)}3^{a(n)}\ \text{for squarefree }n,\qquad
+\sigma_3(n)=\mu(n)a_F(n)\mathbf1_{\gcd(n,5)=1}.
+$$
+Here \(a(n)\) counts split prime divisors, \(b(n)\) counts all non-split
+prime divisors, and \(a_F=1*\chi_5\) is the registered ideal-count
+function. Moreover \(m_\tau\) is supported on squarefree integers
+exactly when \(\tau=2\).
+
+These identities follow prime by prime. At a split prime the values for
+\(m_2\) are \(-1,0,0,\ldots\), those of \(\mu\), while the squarefree
+value of \(m_{-2}\) is \(3\). For the shell anchor, \(a_F(p)\) equals
+\(2,0,1\) at a split, inert, or ramified prime, respectively.
+The coprimality indicator removes the last case and \(\mu\) removes
+higher powers. Finally \(m_\tau(11^2)=2-\tau\) proves the uniqueness
+of the squarefree-supported rung.
+
+For every real \(x\ge1\), put
+$$
+B_a(x)=
+\sum_{\substack{n\le x,\ n\ {\rm squarefree}\\a(n)=a}}(-1)^{b(n)}.
+$$
+Then
+$$
+\sum_{n\le x}\mu(n)^2m_\tau(n)
+ =\sum_{a=0}^{A(x)}(1-\tau)^aB_a(x),\qquad
+\sum_{a=0}^{A(x)}(-1)^aB_a(x)=M(x),
+$$
+where \(A(x)=\max_{n\le x,\ n\ {\rm squarefree}}a(n)\) and
+\(M(x)=\sum_{n\le x}\mu(n)\). Since the least split prime is \(11\),
+\(11^{a(n)}\le n\), so \(A(x)\le\lfloor\log x/\log11\rfloor\).
+For any \(A(x)+1\) distinct integer rungs \(\tau_i\), the corresponding
+sums uniquely determine every \(B_a(x)\) over \(\mathbb Q\).
+Indeed, the squarefree local table gives the first identity by grouping
+integers with the same \(a(n)\). At \(\tau=2\) it gives the second.
+The determinant of the matrix \(((1-\tau_i)^a)\) is the product of the
+nonzero pairwise node differences, proving finite reconstruction.
+
+There is also an exact formal convolution
+$$
+m_\tau=\sigma_\tau*w_\tau.
+$$
+The multiplicative function \(w_\tau\) has non-split local factor
+\(1-T\); its split factor and coefficients are
+$$
+W_{\tau,p}(T)=
+\frac{1-\tau T+T^2}{(1-T)(1+(1-\tau)T)},\qquad
+w_\tau(p^e)=1-(\tau-1)^{e-1}\quad(e\ge1).
+$$
+The exponent zero means one, so its linear coefficient is always zero.
+Writing \(v=\tau-1\), the coefficient beyond the constant term is
+\((1-v)(1+v+\cdots+v^{e-2})=1-v^{e-1}\) for \(e\ge2\);
+the linear coefficient vanishes directly. Local multiplication proves
+the convolution at every integer, with no convergence assumption.
+At \(\tau=2\) all nonconstant split coefficients vanish.
+
+This theorem concerns exact arithmetic and formal coefficient algebra;
+its protocol action layer is NOT_APPLICABLE and it supplies no
+L1–L6 lift. Its finite layer inversion makes no summatory estimate,
+uniform bound for reconstruction of the whole growing coefficient
+vector, cancellation statement, Hecke identification, or RH claim.
+No absolute-convergence obstruction is part of this theorem.
+An exact counterexample to the evaluation table, integrality
+classification, anchors, layer identity, finite distinct-node inversion,
+or connecting-unit identity fires the claim.
+
+The proof uses J-IDEAL-RAPIDITY-CHARACTER-LIFT,
+ARITHMETIC-RAPIDITY-DECOMPOSITION and J-IDEAL-COUNT-QUADRATIC-CHARACTER.
+Its exact finite audits and negative controls are recorded in
+[the golden-ladder result](../probes/P-RAPIDITY-GOLDEN-LADDER-1/RESULT.md).
+
+### RAPIDITY-TARGET-RECONSTRUCTION [T]
+
+Let
+$$
+q=\phi^{-2}=\frac{3-\sqrt5}{2},\qquad
+x_k=1-L_{2k}=1-q^{-k}-q^k,\qquad
+P_j=\prod_{\ell=1}^{j}(1-q^\ell),\quad P_0=1.
+$$
+For an integer \(m\ge1\), use exactly the source nodes \(x_1,\ldots,x_m\).
+The target is \(-1\); it is not among these nodes.
+For every real polynomial \(Q\) of degree at most \(m-1\), the unique
+linear evaluation formula is
+$$
+Q(-1)=\sum_{k=1}^{m}w_{m,k}Q(x_k),
+$$
+with rational weights
+$$
+w_{m,k}
+=\prod_{\substack{1\le j\le m\\j\ne k}}
+       \frac{-1-x_j}{x_k-x_j}
+=(-1)^{k-1}q^{k(k-1)/2}(1+q^k)
+       \frac{P_m^2}{P_{m-k}P_{m+k}}.
+$$
+
+Here \(q^2-3q+1=0\) and \(0<q<1\).
+The numbers \(q^{-k}+q^k\) satisfy the integer recurrence
+\(L_{2(k+1)}=3L_{2k}-L_{2(k-1)}\), beginning with \(2,3\).
+They strictly increase for \(k\ge1\), so the nodes are distinct integers
+decreasing from \(x_1=-2\). Their Lagrange basis reproduces the whole
+degree-\((m-1)\) polynomial space: the difference between a polynomial
+and its interpolant has \(m\) distinct roots and degree at most \(m-1\).
+Evaluating at the target proves the first product and rationality.
+Evaluation on the individual Lagrange basis polynomials proves
+uniqueness of the weights.
+
+For the second product, write
+$$
+y_k=L_{2k}-2=q^{-k}(1-q^k)^2,\qquad x_k=-1-y_k.
+$$
+Then
+$$
+y_j-y_k=q^{-j}(1-q^{j-k})(1-q^{j+k}),\qquad
+w_{m,k}=\prod_{j\ne k}\frac{y_j}{y_j-y_k}.
+$$
+The \(k-1\) negative factors contribute
+\((-1)^{k-1}q^{k(k-1)/2}\).
+The absolute differences contribute \(P_{k-1}P_{m-k}\);
+the \(j+k\) factors contribute \(P_{m+k}/(P_k(1-q^{2k}))\);
+the numerator contributes \(P_m^2/(1-q^k)^2\).
+Their quotient is the displayed \(q\)-product. In particular,
+\(\operatorname{sgn}(w_{m,k})=(-1)^{k-1}\).
+
+The exact absolute evaluation norm
+\(\Lambda_m=\sum_{k=1}^m|w_{m,k}|\) satisfies
+$$
+1=\Lambda_1<\Lambda_2<\cdots<C(q),\qquad
+\lim_{m\to\infty}\Lambda_m=C(q),
+$$
+$$
+C(q)=1+2\sum_{j\ge1}q^{j(j+1)/2}
+ <3-\frac{\sqrt5}{2}<\frac{19}{10}.
+$$
+To prove this, put \(c_k=q^{k(k-1)/2}(1+q^k)\) and
+$$
+R_{m,k}=\frac{P_m^2}{P_{m-k}P_{m+k}}
+       =\prod_{j=0}^{k-1}\frac{1-q^{m-j}}{1-q^{m+j+1}}.
+$$
+For fixed \(k\), every factor is strictly between zero and one,
+increases with \(m\), and tends to one. For example
+\((1-At)/(1-Bt)\) decreases in \(t\) when \(A>B>0\), while here
+\(t=q^m\) decreases. Thus \(|w_{m,k}|=c_kR_{m,k}<c_k\);
+every existing term increases and the new term is positive.
+The summable majorant \(\sum c_k=C(q)\) gives the limit by taking
+first finitely many terms and then bounding the remaining tail.
+For \(j\ge2\), \(j(j+1)/2\ge3(j-1)\), strictly for \(j\ge4\).
+Consequently
+$$
+C(q)<1+2q+\frac{2q^3}{1-q^3}
+     =3-\frac{\sqrt5}{2}<\frac{19}{10};
+$$
+the equality uses \(q^2-3q+1=0\), and the last strict inequality
+follows from \(5>(11/5)^2\).
+
+Extend \(w_{m,k}=0\) for \(k>m\). For every integer \(K\ge0\),
+$$
+\sum_{k>K}|w_{m,k}|
+\le q^{K(K+1)/2}
+   \left(1+\frac{2q^{K+1}}{1-q^{K+2}}\right).
+$$
+Indeed,
+$$
+\sum_{k>K}c_k
+=q^{K(K+1)/2}
+  +2\sum_{j\ge K+1}q^{j(j+1)/2},
+$$
+and the successive exponents in the last sum differ by at least
+\(K+2\). A geometric bound proves the claim. At \(K=1\) its right
+side equals \(1/2\), while each finite weight tail is strictly
+smaller than the positive infinite majorant; hence the tail beyond
+the first source is strictly less than \(1/2\).
+
+For independent real input errors \(|e_k|\le\epsilon_k\),
+\(\epsilon_k\ge0\), the exact worst target error is
+$$
+\sup\left|\sum_{k=1}^m w_{m,k}e_k\right|
+   =\sum_{k=1}^m|w_{m,k}|\epsilon_k.
+$$
+The triangle inequality gives the upper bound, and the choice
+\(e_k=\epsilon_k\operatorname{sgn}(w_{m,k})\) attains it.
+Thus uniformly bounded absolute input errors are amplified by
+exactly \(\Lambda_m<19/10\). If only the first \(K\) source values
+are retained, the valid error bound is
+$$
+\sum_{k\le K}|w_{m,k}|\epsilon_k
++\sum_{k>K}|w_{m,k}|\,|Q(x_k)|.
+$$
+A bound on weights alone does not bound omitted polynomial values.
+
+The same formula has a distinct relative-error boundary. For
+\(d=m-1\ge1\), set \(S=d(d+1)/2\), \(a_k=-x_k=L_{2k}-1\), and
+$$
+\kappa_d=\sum_{k=1}^{d+1}|w_{d+1,k}|a_k^d.
+$$
+For the explicit witness \(Q(z)=z^d\), independent errors
+\(|e_k|\le\eta|Q(x_k)|\), \(\eta\ge0\), have exact worst target error
+\(\eta\kappa_d\), while \(|Q(-1)|=1\), and
+$$
+q^{2-S}<\kappa_d<6q^{-S}.
+$$
+For the lower bound, the last term alone is
+$$
+|w_{d+1,d+1}|a_{d+1}^{d}
+=\prod_{j=1}^d\frac{a_j-1}{1-a_j/a_{d+1}}
+>\prod_{j=1}^d(L_{2j}-2)
+=q^{-S}\prod_{j=1}^d(1-q^j)^2.
+$$
+The finite-product inequality
+\(\prod_j(1-u_j)\ge1-\sum_j u_j\) for \(u_j\in[0,1]\)
+and the strict finite geometric sum give
+$$
+\prod_{j=1}^d(1-q^j)>1-\frac q{1-q}=q.
+$$
+For the upper bound, \(1<a_k<q^{-k}\) and
+\(|w_{m,k}|<2q^{k(k-1)/2}\). With \(r=d+1-k\),
+$$
+\frac{k(k-1)}2-kd=-S+\frac{r(r-1)}2,
+$$
+so
+$$
+\kappa_d
+<2q^{-S}\sum_{r=0}^d q^{r(r-1)/2}
+\le2q^{-S}\left(2+\frac q{1-q}\right)
+=2q^{-S-1}<6q^{-S}.
+$$
+The same independent-error extremizer proves the exact value
+\(\eta\kappa_d\). The uniform absolute bound and this relative
+growth are therefore compatible statements about different error
+domains.
+
+For the finite arithmetic interpretation of RAPIDITY-GOLDEN-LADDER,
+define \(Q_N(z)=\sum_aB_a(N)z^a\). Then
+$$
+Q_N(1-\tau)=\sum_{n\le N}\mu(n)^2m_\tau(n),\qquad
+Q_N(-1)=M(N).
+$$
+Any integer \(d\) at least the degree of \(Q_N\) permits reconstruction
+from the \(d+1\) positive golden rungs \(k=1,\ldots,d+1\), without
+using the target rung as a source. This supplies no estimate for
+those source sums or cancellation in \(M(N)\). In particular,
+the monomial relative-error witness does not assert a condition
+number for the actual arithmetic coefficient family or correlated
+errors. It creates no RH, Fourier/Hecke, physical or L1–L6 claim;
+the protocol action layer is NOT_APPLICABLE.
+TRIVIAL-RAPIDITY-EVALUATION-BRIDGE remains open.
+
+An exact counterexample to a displayed polynomial reconstruction,
+weight product, norm, tail or independent-error statement fires this
+claim. The universal conclusions follow from the proof; the bounded
+exact audit, including its negative controls, is recorded in
+[the target-reconstruction result](../probes/P-RAPIDITY-TARGET-RECONSTRUCTION-1/RESULT.md).
 
 ## 11. The pentit ring and the magic boundary
 
