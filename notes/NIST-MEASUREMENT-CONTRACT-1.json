@@ -1,0 +1,1807 @@
+{
+  "schema": "nist-measurement-contract/1",
+  "profile_id": "NIST-MEASUREMENT-CONTRACT-1",
+  "profile_version": 1,
+  "owner_issue": "https://github.com/mathorn1973/twist-j/issues/839",
+  "adapter_issue": "https://github.com/mathorn1973/twist-j/issues/838",
+  "basis_commit": "11556f685f0c51c06fec6da32118a1d1e63d7fa4",
+  "status": "NON-CANONICAL / CONDITIONAL_CONTRACT / PHYSICAL_STOP-DEFINITION",
+  "public_claims": "UNREGISTERED",
+  "canon_changed": false,
+  "canon_version": 76,
+  "canon_sha256": "c151a19997dba95d78836c46f38463ab2735ae1c98674f87888d519d7a500112",
+  "canon_bytes": 420539,
+  "authority_scope": "Root coordinator checked active public authority; local basis/Canon hash confirmed. This document creates no gate or status.",
+  "source_layer": "EXTERNAL_L5_ARCHIVED_RECORDS",
+  "support_layer": "EXTERNAL_ARCHIVAL_SUPPORT; NOT_CLAIMED_L4",
+  "stream_layer": "EXTERNAL_L5_OBSERVATION",
+  "feeds_U": false,
+  "physical_profile_ready": false,
+  "contract539_conformance": false,
+  "contract539_amendment_needed": "Reset codomain has no rejection tag; this external profile's STOP_PHYSICAL reset needs a separately reviewed adapter/amendment and physical support-to-stream evidence.",
+  "dependencies": [
+    {
+      "id": "D-SOURCE",
+      "path": "../probes/P-NIST-RAW-RECORD-QUALIFICATION-1/SOURCE.json",
+      "sha256": "653e5dd17b041ecf38244bcd8312fa724863eb681f940795e38974182f7bbe8a",
+      "bytes": 4058,
+      "role": "Exact four source objects and inherited notice"
+    },
+    {
+      "id": "D-PREREG",
+      "path": "../probes/P-NIST-RAW-RECORD-QUALIFICATION-1/PREREG.md",
+      "sha256": "482a4afd1a9010987c2afca5cb39805b29990b79b7a7b1f3234dc31893328f9c",
+      "bytes": 11503,
+      "role": "Existing scoped analytical pin"
+    },
+    {
+      "id": "D-QUALIFICATION",
+      "path": "../probes/P-NIST-RAW-RECORD-QUALIFICATION-1/RESULT.md",
+      "sha256": "f4312bd7c6b03ecb6d399be24e36256bd8257fcd12ec1414faa9585aba812bf7",
+      "bytes": 5607,
+      "role": "Completed finite qualification, not physical event certificate"
+    },
+    {
+      "id": "D-EXPECTED",
+      "path": "../probes/P-NIST-RAW-RECORD-QUALIFICATION-1/EXPECTED.txt",
+      "sha256": "ac5edf54c34e40613fc22a55c2423169ac3f8c719ff9472d5c2532b75b135439",
+      "bytes": 32414,
+      "role": "Already public exact qualification output"
+    },
+    {
+      "id": "D-VERIFIER",
+      "path": "../probes/P-NIST-RAW-RECORD-QUALIFICATION-1/verify.py",
+      "sha256": "0e63ea7ee01bff85558af311c8d819440f7155e34a8582b003929701ee1d4bf7",
+      "bytes": 24560,
+      "role": "Inherited verifier identity; not imported or run here"
+    },
+    {
+      "id": "D-CONTRACT539",
+      "path": "canon/DEF-TYPED-APPARATUS-RECORD-CONTRACT.md",
+      "sha256": "b3a47205c8bfcc8548e6e9c95cfbe53d6f9fc95531fe92bec59cc7732df5c63f",
+      "bytes": 12309,
+      "role": "Typed physical obligations and reset codomain boundary"
+    },
+    {
+      "id": "D-OPEN-DATA",
+      "path": "DECODER-OPEN-DATA-BRIDGE-1.md",
+      "sha256": "418995781854f48d6d513fd5b9cb064deef68475f0d66227d752a5bffcf4c257",
+      "bytes": 15270,
+      "role": "Earlier source/observation distinction; dated future steps do not undo completed qualification"
+    },
+    {
+      "id": "D-PHYSICAL-MAP",
+      "path": "DECODER-PHYSICAL-BORN-MAP.md",
+      "sha256": "f52e6513408b9ffe82c7669cd1d95d6bbc8906a1e47ecc6f28581a25dd61c2bb",
+      "bytes": 25767,
+      "role": "Outcome, occurrence and Born boundaries; not a new formal result"
+    },
+    {
+      "id": "D-NOTICE",
+      "path": "NIST-RAW-CUSTODY-1.md",
+      "sha256": "b6d19a283ede826cb41910e80db567f71f95e2cc3258fce2f03e0d1525471ec2",
+      "bytes": 5906,
+      "role": "Inherited NIST reuse notice and custody scope"
+    },
+    {
+      "id": "D-ADAPTER-RESULT",
+      "url": "https://github.com/mathorn1973/twist-j/blob/0630ab38a07ecb9d57d2097aa76ac26f00a5815e/probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/RESULT.md",
+      "commit": "0630ab38a07ecb9d57d2097aa76ac26f00a5815e",
+      "sha256": "df0086a42816ac6de7906aa166d454b124f91c4bb3809a040ac60c0a47aca7e9",
+      "bytes": 6231,
+      "role": "External commit-pinned kernel result and architecture evidence: A/B CONFIRMED, four finite gates and aarch64/x86_64 cold replay PASS. NMC wrapper adoption prospective; no physical certificate."
+    },
+    {
+      "id": "D-ADAPTER-RUN",
+      "url": "https://github.com/mathorn1973/twist-j/blob/0630ab38a07ecb9d57d2097aa76ac26f00a5815e/probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/RUN.md",
+      "commit": "0630ab38a07ecb9d57d2097aa76ac26f00a5815e",
+      "sha256": "78e16c0a9d0cffd8517d8909c13141e57c53e2b4c3625c3178082b334a293e49",
+      "bytes": 6271,
+      "role": "External commit-pinned source inventory, first x86_64 run receipt and public aarch64/x86_64 cold replay receipts. Workflow ran on original result commit, not the later evidence commit."
+    }
+  ],
+  "source_manifest_sha256": "653e5dd17b041ecf38244bcd8312fa724863eb681f940795e38974182f7bbe8a",
+  "qualification_source_pin": "dc8abb7e8e5ccaad4ff561776b747801a4d4a373",
+  "source_objects": [
+    {
+      "id": "alice-sync",
+      "station": "alice",
+      "role": "SYNC",
+      "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/rawdata_from_servers/alice/2015_09_18/00_03_find_sync.T1.dat.zip",
+      "archive_bytes": 2119875,
+      "archive_sha256": "e54d30d866a642dd23d1a40e3ae3418cf6420fa6beb616bac2d21601a6b0d485",
+      "member_basename": "00_03_find_sync.T1.dat",
+      "qualified_rows": 485503,
+      "qualified_extent": "FULL_MEMBER",
+      "full_member_crc_verified": true,
+      "closed_intervals": 194914
+    },
+    {
+      "id": "bob-sync",
+      "station": "bob",
+      "role": "SYNC",
+      "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/rawdata_from_servers/bob/2015_09_18/00_03_find_sync.T2.dat.zip",
+      "archive_bytes": 2238398,
+      "archive_sha256": "33c294c778babfebc6e4eddf30519a30c25728c704ea78e24ee4f40a49ad1cec",
+      "member_basename": "00_03_find_sync.T2.dat",
+      "qualified_rows": 489229,
+      "qualified_extent": "FULL_MEMBER",
+      "full_member_crc_verified": true,
+      "closed_intervals": 197214
+    },
+    {
+      "id": "alice-run3",
+      "station": "alice",
+      "role": "RUN",
+      "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/rawdata_from_servers/alice/2015_09_18/00_44_CH_pockel_100kHz.run3.alice.dat.zip",
+      "archive_bytes": 363415009,
+      "archive_sha256": "d581080c9fa6853a1bfb8ce511782563f433512f3ce7efb612202a5179c5ee6c",
+      "member_basename": "00_44_CH_pockel_100kHz.run3.alice.dat",
+      "qualified_rows": 1048576,
+      "qualified_extent": "PREFIX_ONLY",
+      "full_member_crc_verified": false,
+      "closed_intervals": 512047
+    },
+    {
+      "id": "bob-run3",
+      "station": "bob",
+      "role": "RUN",
+      "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/rawdata_from_servers/bob/2015_09_18/00_43_CH_pockel_100kHz.run3.bob.dat.zip",
+      "archive_bytes": 379105464,
+      "archive_sha256": "f42204b41289c26ef779d39957062604c8d4008a4892724b7f2078afd7ddd5d4",
+      "member_basename": "00_43_CH_pockel_100kHz.run3.bob.dat",
+      "qualified_rows": 1048576,
+      "qualified_extent": "PREFIX_ONLY",
+      "full_member_crc_verified": false,
+      "closed_intervals": 514203
+    }
+  ],
+  "source_identity_limit": "Local whole-object custody hashes, not provider-signed immutable release or proved exact acquisition build",
+  "prior_exposure": {
+    "published_catalogues_documentation_source_code_and_summaries": true,
+    "qualification_output_known": true,
+    "qualified_run_prefixes_known": true,
+    "contract_informed_by_qualification": true,
+    "blind_claim": false,
+    "run_tails_semantically_opened_for_contract": false,
+    "experimental_payloads_opened_for_contract": false,
+    "new_outcomes_computed_for_contract": false,
+    "new_scientific_execution": false,
+    "adapter_result_known": true,
+    "contract_informed_by_adapter_result": true
+  },
+  "external_sources": [
+    {
+      "id": "E-FORMAT",
+      "url": "https://www.nist.gov/document/bell-test-data-file-folder-descriptions",
+      "version": "2015-12-23",
+      "locator": "pages1-4",
+      "status": "EXTERNAL_DOCUMENTED_FACT",
+      "used_for": "Word widths, nominal tick, channel dictionary and format metadata caveats",
+      "certificate": false
+    },
+    {
+      "id": "E-CLOCK",
+      "source": "E-FORMAT",
+      "locator": "page1",
+      "status": "EXTERNAL_DOCUMENTED_FACT",
+      "used_for": "Common 10 MHz reference; different origins; approximate PPS jitter of 10 ns and possible 100 ns jumps.",
+      "hard_uncertainty_bound": false
+    },
+    {
+      "id": "E-STROBE",
+      "source": "E-FORMAT",
+      "locator": "page1",
+      "status": "EXTERNAL_DOCUMENTED_FACT",
+      "used_for": "QRNG-sampled sync after 18 feet of coax; no propagation delay or velocity factor supplied.",
+      "numerical_delay_admitted": false
+    },
+    {
+      "id": "E-WINDOW",
+      "source": "E-FORMAT",
+      "locator": "pages3-4",
+      "status": "EXTERNAL_DOCUMENTED_FACT",
+      "used_for": "16 processed pulse slots; YAML/HDF5 delay, radius and initial alignment metadata are needed.",
+      "processed_payload_admitted": false
+    },
+    {
+      "id": "E-RUN3",
+      "source": "E-FORMAT",
+      "locator": "page2",
+      "status": "EXTERNAL_DOCUMENTED_FACT",
+      "used_for": "Run3 unsuccessful experimental delay correction retained"
+    },
+    {
+      "id": "E-PROCESS",
+      "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/code/analysis/DataProcessingDescription.pdf",
+      "version": "2015-12-23",
+      "locator": "page1",
+      "status": "EXTERNAL_DOCUMENTED_HISTORICAL_PROCEDURE",
+      "used_for": "Common-PPS/nextsync narrative, timingjump caveat and historical bothsettings->0 rule",
+      "historical_both_to_zero_adopted": false
+    },
+    {
+      "id": "E-DAQ",
+      "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/code/daq/bell_server.zip",
+      "bytes": 17507,
+      "sha256": "858c7bfdb2eaabdb4dec5ecd12a7f974428d5fe2c846634a4e1ff52b36c348c7",
+      "member": "bell_server/ttag_stream.py",
+      "member_bytes": 5097,
+      "member_sha256": "f4458333fc010f71d991f524f9c384971bd5c1a2deb59c9337c561acce149ce5",
+      "locator": "ttag_stream.py lines 115-149; source read as documentation only",
+      "status": "EXTERNAL_ACQUISITION_SOURCE_DESCRIPTION",
+      "used_for": "Native uint64 words; calendar 64; nonempty-transfer counter; no complete loss ledger.",
+      "imported": false,
+      "executed": false,
+      "copied_into_artifacts": false,
+      "exact_run_build_identified": false
+    }
+  ],
+  "record_dictionary": {
+    "codec": "<QQQ",
+    "record_bytes": 24,
+    "nominal_tick_ps": {
+      "numerator": 625,
+      "denominator": 8,
+      "status": "EXTERNAL_DOCUMENTED_NOMINAL_NOT_CALIBRATION"
+    },
+    "channels": [
+      {
+        "code": 0,
+        "meaning": "DOCUMENTED_DETECTOR_ROW",
+        "word2": "raw_timetag"
+      },
+      {
+        "code": 2,
+        "meaning": "DOCUMENTED_SETTING_0_ROW",
+        "word2": "raw_timetag"
+      },
+      {
+        "code": 4,
+        "meaning": "DOCUMENTED_SETTING_1_ROW",
+        "word2": "raw_timetag"
+      },
+      {
+        "code": 5,
+        "meaning": "DOCUMENTED_GPS_PPS_ROW",
+        "word2": "raw_timetag"
+      },
+      {
+        "code": 6,
+        "meaning": "DOCUMENTED_SYNC_ROW",
+        "word2": "raw_timetag"
+      },
+      {
+        "code": 64,
+        "meaning": "CALENDAR_METADATA",
+        "word2": "YYYYMMDDhhmmss; Gregorian seconds 00..59; neither a timetag nor certified UTC"
+      }
+    ],
+    "unknown_policy": "Retain raw row and diagnostics; do not silently reinterpret or discard",
+    "calendar_origin": "The DAQ variant may use serial GPS or computer UTC; a same-run association certificate is required.",
+    "transfer_policy": "Raw counter only; no inference of unit increments or complete coverage.",
+    "source_time_order": "Preserve original row-index order; timetag reversal is diagnostic, never automatically repaired.",
+    "prefix_cap_per_object": 1048576
+  },
+  "carriers": [
+    {
+      "id": "NMC1-ROW",
+      "role": "RawRow",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "index",
+          "type": "nonnegative integer",
+          "ownership": "NMC1-ROW",
+          "definition": "Original zero-based row index in the nominated member"
+        },
+        {
+          "name": "channel",
+          "type": "u64",
+          "ownership": "NMC1-ROW",
+          "definition": "First word under declared <QQQ codec"
+        },
+        {
+          "name": "word2",
+          "type": "u64",
+          "ownership": "NMC1-ROW",
+          "definition": "Raw second word; timestamp only for declared physical channels, calendar for 64"
+        },
+        {
+          "name": "transfer",
+          "type": "u64",
+          "ownership": "NMC1-ROW",
+          "definition": "Third raw word; not inferred live-time coverage"
+        }
+      ],
+      "construction": "u64 means 0 <= value < 2^64; no sorting or renumbering",
+      "equality": "Componentwise exact four-field equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-SOURCE",
+      "role": "Source and SupportedSource",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "stream_id",
+          "type": "pair[manifest_sha256,object_id]",
+          "ownership": "NMC1-SOURCE",
+          "definition": "Identifies one of source_objects"
+        },
+        {
+          "name": "archive_hash",
+          "type": "SHA256",
+          "ownership": "NMC1-SOURCE",
+          "definition": "Complete inherited archive identity"
+        },
+        {
+          "name": "member_basename",
+          "type": "literal string",
+          "ownership": "NMC1-SOURCE",
+          "definition": "Exact inherited basename; no alternate matching after inspection"
+        },
+        {
+          "name": "codec",
+          "type": "literal <QQQ",
+          "ownership": "NMC1-SOURCE",
+          "definition": "Explicit qualified codec hypothesis"
+        },
+        {
+          "name": "nominated_extent",
+          "type": "pair[FULL_MEMBER|PREFIX_ONLY,nonnegative row count]",
+          "ownership": "NMC1-SOURCE",
+          "definition": "Exact qualified extent; not the unread run tail"
+        }
+      ],
+      "construction": "SupportedSource equals one of the four source_objects with successful inherited identity/codec checks; separate generic finite-row test carrier does not enlarge empirical support",
+      "equality": "Componentwise exact source descriptor equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-ROW-REF",
+      "role": "RowRef",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "stream_id",
+          "type": "pair[manifest_sha256,object_id]",
+          "ownership": "NMC1-SOURCE",
+          "definition": "Owning immutable member"
+        },
+        {
+          "name": "index",
+          "type": "nonnegative integer",
+          "ownership": "NMC1-ROW-REF",
+          "definition": "Resolves to uncompressed member bytes [24*index,24*index+24); no compressed byte-offset claim"
+        }
+      ],
+      "construction": "Resolution validates source identity, bounds, three decoded words and the original row index.",
+      "equality": "Exact stream_id and index equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-CONTEXT",
+      "role": "ContextKey",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "profile_version",
+          "type": "literal 1",
+          "ownership": "NMC1-CONTEXT",
+          "definition": "This conditional contract version"
+        },
+        {
+          "name": "source",
+          "type": "NMC1-SOURCE",
+          "ownership": "NMC1-CONTEXT",
+          "definition": "Source fixed before target comparison"
+        },
+        {
+          "name": "record_rules",
+          "type": "ordered tuple[choice IDs]",
+          "ownership": "NMC1-CONTEXT",
+          "definition": "C-CODEC,C-PARTITION,C-OWNERSHIP,C-POINTER,C-DELAY,C-EOF"
+        },
+        {
+          "name": "certificate_bundle_id",
+          "type": "content-bound bundle identity",
+          "ownership": "NMC1-CONTEXT",
+          "definition": "Current EMPTY bundle; cannot be selected to improve outcomes"
+        }
+      ],
+      "construction": "All context fields explicit; no input or feedback to U",
+      "equality": "Componentwise exact equality, including source and certificate bundle",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-READY",
+      "role": "ReadyState",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "source",
+          "type": "NMC1-SOURCE",
+          "ownership": "NMC1-READY",
+          "definition": "Archive identity"
+        },
+        {
+          "name": "context",
+          "type": "NMC1-CONTEXT",
+          "ownership": "NMC1-READY",
+          "definition": "Literal matching context"
+        },
+        {
+          "name": "cursor",
+          "type": "literal 0",
+          "ownership": "NMC1-READY",
+          "definition": "Fresh archival replay cursor"
+        },
+        {
+          "name": "pending",
+          "type": "empty tuple",
+          "ownership": "NMC1-READY",
+          "definition": "No consumed rows"
+        },
+        {
+          "name": "emitted",
+          "type": "empty tuple",
+          "ownership": "NMC1-READY",
+          "definition": "No packet history"
+        }
+      ],
+      "construction": "Fresh replay invocation only; not physical apparatus preparation/reset",
+      "equality": "Componentwise exact equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-SUPPORT",
+      "role": "SupportCarrier",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "source",
+          "type": "NMC1-SOURCE",
+          "ownership": "NMC1-SUPPORT",
+          "definition": "Qualified external source descriptor"
+        },
+        {
+          "name": "qualified_extent",
+          "type": "pair[scope,row count]",
+          "ownership": "NMC1-SUPPORT",
+          "definition": "Bound to source_objects and inherited result"
+        }
+      ],
+      "construction": "External archived support; not the L4 support carrier of #539",
+      "equality": "Componentwise exact equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-STATE",
+      "role": "ArchiveState, archival apparatus-state analogue",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "source",
+          "type": "NMC1-SOURCE",
+          "ownership": "NMC1-STATE",
+          "definition": "Fixed across accepted steps"
+        },
+        {
+          "name": "context",
+          "type": "NMC1-CONTEXT",
+          "ownership": "NMC1-STATE",
+          "definition": "Fixed across accepted steps"
+        },
+        {
+          "name": "next_index",
+          "type": "nonnegative integer",
+          "ownership": "NMC1-STATE",
+          "definition": "Exactly the next raw index"
+        },
+        {
+          "name": "phase",
+          "type": "UNANCHORED|ANCHORED",
+          "ownership": "NMC1-STATE",
+          "definition": "Whether a first sync has been consumed"
+        },
+        {
+          "name": "pending",
+          "type": "tuple[NMC1-ROW]",
+          "ownership": "NMC1-STATE",
+          "definition": "Initial fragment or last sync plus all following rows"
+        },
+        {
+          "name": "emitted_packets",
+          "type": "tuple[NMC1-PACKET]",
+          "ownership": "NMC1-STATE",
+          "definition": "Append-only emitted PREFIX/CLOSED_INTERVAL packets"
+        }
+      ],
+      "construction": "Semantic wrapper states reachable from prepare by finite valid single-row steps; Source/Context and emitted_packets history are wrapper-owned specification fields, not stored fields of the #838 Python machine. No identified physical post-state.",
+      "equality": "Componentwise exact complete-state equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-PACKET",
+      "role": "Packet and archival EventRecord",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "stream_id",
+          "type": "pair[manifest_sha256,object_id]",
+          "ownership": "NMC1-PACKET",
+          "definition": "Common source of every owned and borrowed row"
+        },
+        {
+          "name": "kind",
+          "type": "PREFIX|CLOSED_INTERVAL|PENDING_SUFFIX|UNANCHORED",
+          "ownership": "NMC1-PACKET",
+          "definition": "Only first two are emitted events"
+        },
+        {
+          "name": "owned_rows",
+          "type": "tuple[NMC1-ROW]",
+          "ownership": "NMC1-PACKET",
+          "definition": "Sole raw-row ownership; borrowed boundary excluded"
+        },
+        {
+          "name": "right_sync_reference",
+          "type": "NMC1-ROW|NONE",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Complete borrowed row value with channel6; identity stream_id+index; NONE for snapshots"
+        },
+        {
+          "name": "emitted_at",
+          "type": "nonnegative integer|NONE",
+          "ownership": "NMC1-PACKET",
+          "definition": "Index of consumed right sync; NONE for snapshots; not a physical timestamp"
+        }
+      ],
+      "construction": "API Packet(stream_id,kind,owned_rows,right_sync_reference,emitted_at); NONE serializes as JSON null",
+      "equality": "Componentwise exact packet equality; borrowed references do not duplicate ownership",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-DELTA",
+      "role": "RecordDelta",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "before_state",
+          "type": "NMC1-STATE",
+          "ownership": "NMC1-DELTA",
+          "definition": "Complete immutable transition input"
+        },
+        {
+          "name": "accepted_row",
+          "type": "NMC1-ROW",
+          "ownership": "NMC1-DELTA",
+          "definition": "One consumed row"
+        },
+        {
+          "name": "emitted_packet",
+          "type": "NMC1-PACKET|NO_EMISSION",
+          "ownership": "NMC1-DELTA",
+          "definition": "Already fixed emission from the update rule"
+        },
+        {
+          "name": "after_state",
+          "type": "NMC1-STATE",
+          "ownership": "NMC1-DELTA",
+          "definition": "Complete immutable transition result"
+        }
+      ],
+      "construction": "Finite transition witness; immutable exact references may represent full states without changing their semantics",
+      "equality": "Complete before/input/output/after equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-HISTORY",
+      "role": "HistoryState",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "emitted_packets",
+          "type": "tuple[NMC1-PACKET]",
+          "ownership": "NMC1-HISTORY",
+          "definition": "Append-only events"
+        },
+        {
+          "name": "current_nonemitting_snapshot",
+          "type": "NMC1-PACKET",
+          "ownership": "NMC1-HISTORY",
+          "definition": "PENDING_SUFFIX or UNANCHORED; replaced when prefix extends, never appended"
+        }
+      ],
+      "construction": "Owned-row concatenation exactly reconstructs inspected prefix",
+      "equality": "Exact complete ordered-history equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-OBSERVED-OUTCOME",
+      "role": "ObservedOutcome",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "setting_tag",
+          "type": "ONEHOT_0|ONEHOT_1|MISSING|REPEATED_0|REPEATED_1|BOTH",
+          "ownership": "DERIVED_FROM_PACKET",
+          "definition": "Exact channel2/channel4 interior counts"
+        },
+        {
+          "name": "setting_reference",
+          "type": "UNIQUE(RowRef)|MISSING|AMBIGUOUS(tuple[RowRef])",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Unique only when exactly one setting row"
+        },
+        {
+          "name": "detector_tag",
+          "type": "NO_RECORDED_DETECTOR_ROW|SINGLE_RECORDED_DETECTOR_ROW|MULTIPLE_RECORDED_DETECTOR_ROWS",
+          "ownership": "DERIVED_FROM_PACKET",
+          "definition": "Raw channel0 interior multiplicity"
+        },
+        {
+          "name": "detector_multiplicity",
+          "type": "nonnegative integer",
+          "ownership": "DERIVED_FROM_PACKET",
+          "definition": "Every raw detection retained"
+        },
+        {
+          "name": "invalid_or_ambiguous_reasons",
+          "type": "ordered tuple[reason ID,tuple[RowRef]]",
+          "ownership": "DERIVED_FROM_PACKET",
+          "definition": "Record diagnostics; not automatically physical invalidity"
+        }
+      ],
+      "construction": "Defined only for CLOSED_INTERVAL; other packet kinds retain no fabricated interval outcome",
+      "equality": "Exact tags, multiplicities, reasons and referenced packet equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-LOCAL-OBSERVED-INTERVAL",
+      "role": "LocalObservedInterval",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "source",
+          "type": "NMC1-SOURCE",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Owning source"
+        },
+        {
+          "name": "context",
+          "type": "NMC1-CONTEXT",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Chosen observation and certificate context"
+        },
+        {
+          "name": "packet",
+          "type": "NMC1-PACKET",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "CLOSED_INTERVAL owning all local content"
+        },
+        {
+          "name": "left_ref",
+          "type": "NMC1-ROW-REF",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "First owned sync"
+        },
+        {
+          "name": "right_ref",
+          "type": "NMC1-ROW-REF",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Borrowed next sync"
+        },
+        {
+          "name": "raw_timetags",
+          "type": "pair[u64,u64]",
+          "ownership": "DERIVED_FROM_PACKET",
+          "definition": "Left/right raw word2; no clock calibration claim"
+        },
+        {
+          "name": "interior_rows",
+          "type": "tuple[NMC1-ROW]",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Every strict interior row, without sorting"
+        },
+        {
+          "name": "role_references",
+          "type": "ordered per-role tuple[RowRef]",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Setting0/setting1/detector/PPS/calendar/other/transfer roles"
+        },
+        {
+          "name": "outcome",
+          "type": "NMC1-OBSERVED-OUTCOME",
+          "ownership": "DERIVED_FROM_PACKET",
+          "definition": "Observed tags only"
+        },
+        {
+          "name": "delays",
+          "type": "tuple[RowRef,signed integer,UNIQUE(signed integer)|MISSING|AMBIGUOUS]",
+          "ownership": "DERIVED_FROM_PACKET",
+          "definition": "Detector word2-left sync and, if one setting row, detector word2-setting word2"
+        },
+        {
+          "name": "diagnostics",
+          "type": "finite reason/reference tuple",
+          "ownership": "DERIVED_FROM_PACKET",
+          "definition": "Unknown/calendar/timing anomalies retained"
+        },
+        {
+          "name": "provenance",
+          "type": "tuple[source pin,RowRef]",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "All derived fields resolve to packet/source"
+        }
+      ],
+      "construction": "Deterministic non-owning semantic view of a CLOSED_INTERVAL packet after Source/Context and explicit wire-identity validation; UNKNOWN/PPS/calendar rows retained. Distinct from the mutable Python streaming machine named LocalObservedInterval in #838.",
+      "equality": "Exact source/context/packet/view equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-CERTIFICATE",
+      "role": "EvidenceCertificate",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "id",
+          "type": "stable string",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "One physical premise owner"
+        },
+        {
+          "name": "identity",
+          "type": "hash or immutable source locator",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "Evidence bytes/version"
+        },
+        {
+          "name": "issuer_and_procedure",
+          "type": "explicit strings",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "External evidence origin and admission procedure"
+        },
+        {
+          "name": "source_scope",
+          "type": "tuple[object hash,station,run]",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "Same-run applicability"
+        },
+        {
+          "name": "quantity_and_units",
+          "type": "explicit tagged quantities",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "No unit inference from field names"
+        },
+        {
+          "name": "calibration_inputs",
+          "type": "tuple[evidence locators]",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "Separate from evaluated outcomes"
+        },
+        {
+          "name": "parameter_uncertainty",
+          "type": "bounded rational polytope with units|NOT_APPLICABLE",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "Includes correlations and finite rational constraints"
+        },
+        {
+          "name": "validity_segments",
+          "type": "finite certified intervals",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "No outcome-optimized boundaries"
+        },
+        {
+          "name": "exposure_and_selection",
+          "type": "explicit record",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "Who knew which inputs, and fixed selection"
+        },
+        {
+          "name": "assumptions",
+          "type": "tuple[explicit assumption IDs]",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "Separated from measured evidence"
+        },
+        {
+          "name": "admission_receipt",
+          "type": "external owner receipt",
+          "ownership": "NMC1-CERTIFICATE",
+          "definition": "Well-formed syntax or self-asserted acceptance is insufficient"
+        }
+      ],
+      "construction": "No certificate currently admitted; future certificates require separately reviewable evidence/receipts",
+      "equality": "Exact evidence identity, scope, quantity, assumptions and receipt equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    },
+    {
+      "id": "NMC1-PHYSICAL-DECISION",
+      "role": "PhysicalDecision",
+      "layer": "EXTERNAL_L5_OR_SPECIFICATION",
+      "fields": [
+        {
+          "name": "tag",
+          "type": "CONDITIONAL_PHYSICAL_READOUT|INVALID_PHYSICAL_ATTEMPT|STOP_PHYSICAL",
+          "ownership": "NMC1-PHYSICAL-DECISION",
+          "definition": "Conditional evidence decision, not a new Canon status"
+        },
+        {
+          "name": "source",
+          "type": "NMC1-SOURCE",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Exactly interval_view.source on every physical decision branch"
+        },
+        {
+          "name": "context",
+          "type": "NMC1-CONTEXT",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Exactly interval_view.context; consumed bundle identity must match the bound certificate_bundle_id"
+        },
+        {
+          "name": "retained_interval_view",
+          "type": "NMC1-LOCAL-OBSERVED-INTERVAL",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Complete immutable semantic input view, retained on READOUT/INVALID/STOP without loss of Source/Context or provenance"
+        },
+        {
+          "name": "retained_packet",
+          "type": "NMC1-PACKET",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Never removed on STOP/INVALID"
+        },
+        {
+          "name": "reason_ids",
+          "type": "sorted unique tuple[string]",
+          "ownership": "NMC1-PHYSICAL-DECISION",
+          "definition": "Every failed prerequisite remains explicit"
+        },
+        {
+          "name": "certificate_ids",
+          "type": "ordered tuple[string]",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Actual admitted evidence consumed"
+        },
+        {
+          "name": "assumption_ids",
+          "type": "ordered tuple[string]",
+          "ownership": "NONOWNING_REFERENCE",
+          "definition": "Every conditional premise"
+        },
+        {
+          "name": "payload",
+          "type": "CONDITIONAL_REGISTRATION|NO_PHYSICAL_PAYLOAD",
+          "ownership": "NMC1-PHYSICAL-DECISION",
+          "definition": "Trial/setting labels, in/out/ambiguous RowRefs, multiplicity and provenance only when supported"
+        },
+        {
+          "name": "post_state",
+          "type": "literal UNIDENTIFIED",
+          "ownership": "NMC1-PHYSICAL-DECISION",
+          "definition": "Limited readout does not create a complete instrument"
+        }
+      ],
+      "construction": "Output of NMC1-PHYSICAL-INTERPRET for a valid semantic interval view. EMPTY bundle returns STOP_PHYSICAL retaining that view, Source, Context and packet. Malformed requests return the separate STOP_INPUT envelope with retained raw input; no Source/Context is fabricated.",
+      "equality": "Exact complete decision equality",
+      "nonempty_decision": "Finite structural validation of the declared construction; no physical existence claim",
+      "finite_decision": "Every instantiated archive state, packet, certificate and selected prefix is finite"
+    }
+  ],
+  "choices": [
+    {
+      "id": "C-CODEC",
+      "state": "ACCEPTED_EXPLICIT_CHOICE",
+      "definition": "<QQQ; no alternative decoding selected after outcomes",
+      "evidence": [
+        "D-SOURCE",
+        "D-QUALIFICATION",
+        "E-DAQ"
+      ]
+    },
+    {
+      "id": "C-PARTITION",
+      "state": "ACCEPTED_EXPLICIT_CHOICE",
+      "definition": "Consecutive recorded channel6 anchors in unchanged row order; no detector-dependent trials",
+      "evidence": [
+        "D-QUALIFICATION"
+      ]
+    },
+    {
+      "id": "C-OWNERSHIP",
+      "state": "ACCEPTED_EXPLICIT_CHOICE",
+      "definition": "Nonempty PREFIX owns initial fragment; interval owns left sync plus strict interior; borrowed right sync becomes next pending anchor. No empty emitted packet.",
+      "evidence": [
+        "NMC1-STEP"
+      ]
+    },
+    {
+      "id": "C-POINTER",
+      "state": "ACCEPTED_EXPLICIT_CHOICE",
+      "definition": "Exact setting tags and detector multiplicity; retain unknown and invalid data; no exclusive physical outcome coercion",
+      "evidence": [
+        "D-QUALIFICATION",
+        "E-PROCESS"
+      ]
+    },
+    {
+      "id": "C-DELAY",
+      "state": "ACCEPTED_EXPLICIT_CHOICE",
+      "definition": "Signed detector-to-left-sync and unique-setting differences are descriptive; no acceptance windows",
+      "evidence": [
+        "NMC1-LOCAL-OBSERVED-INTERVAL"
+      ]
+    },
+    {
+      "id": "C-EOF",
+      "state": "ACCEPTED_EXPLICIT_CHOICE",
+      "definition": "PENDING_SUFFIX/UNANCHORED snapshots nonemitting with null emitted_at/right_sync_reference, including empty input",
+      "evidence": [
+        "NMC1-FINISH"
+      ]
+    },
+    {
+      "id": "C-CLOCK",
+      "state": "CONDITIONAL_FAMILY_CHOICE_NO_NUMERICAL_CERTIFICATE",
+      "definition": "Affine on each independently certified validity segment; positive slope and bounded rational uncertainty polytope with correlations",
+      "evidence": [
+        "E-CLOCK",
+        "NMC1-G-CLOCK"
+      ]
+    },
+    {
+      "id": "C-WINDOW",
+      "state": "CONDITIONAL_FAMILY_CHOICE_NO_NUMERICAL_CERTIFICATE",
+      "definition": "Finite disjoint half-open pulse windows with exact fixed rational L,U, or admitted affine uncertain endpoints on the same joint rational polytope as row times. Use exact joint extrema of t-L and t-U; unsupported endpoint dependence or missing joint bounds STOP. No invented delay/radius.",
+      "evidence": [
+        "E-WINDOW",
+        "NMC1-G-WINDOW"
+      ]
+    },
+    {
+      "id": "C-PAIRING",
+      "state": "CONDITIONAL_ALGORITHM_CHOICE_NO_CERTIFICATE",
+      "definition": "Unique certified physical trial labels in a same-run common clock validity domain; retain unmatched and ambiguous packets",
+      "evidence": [
+        "E-PROCESS",
+        "NMC1-G-CLOCK"
+      ]
+    },
+    {
+      "id": "C-COVERAGE",
+      "state": "ACCEPTED_EXPLICIT_CHOICE",
+      "definition": "Recording/live and loss/gap evidence plus complete physical-window candidates inside submitted packet owned strict interior and pinned inspected extent. Certify order/registration-latency/window containment for all admitted parameters. All zero/single/multiple physical readouts require this; otherwise STOP without neighboring packets.",
+      "evidence": [
+        "NMC1-G-COVERAGE",
+        "NMC1-G-POINTER"
+      ]
+    },
+    {
+      "id": "C-RESET",
+      "state": "ACCEPTED_EXPLICIT_STOP_CHOICE",
+      "definition": "Physical reset returns STOP_PHYSICAL unchanged; fresh archive replay is a separate prepare call retaining old history",
+      "evidence": [
+        "D-CONTRACT539"
+      ]
+    },
+    {
+      "id": "C-BORN",
+      "state": "DISABLED_UNRESOLVED",
+      "definition": "Optional tr(rho E) benchmark must declare Born dependence and independently supply state/effect/response/statistical premises; no current benchmark",
+      "evidence": [
+        "D-PHYSICAL-MAP"
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "id": "NMC1-CONTEXT-OF",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "NMC1-SOURCE",
+        "frozen certificate bundle identity"
+      ],
+      "output": "NMC1-CONTEXT|STOP_INPUT",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Bind source and exact choice IDs before target comparison; default EMPTY bundle",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "NMC1-SOURCE",
+        "C-CODEC",
+        "C-PARTITION"
+      ],
+      "emitted_field_owners": [
+        "NMC1-CONTEXT"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-SUPPORT-MAP",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "NMC1-SOURCE"
+      ],
+      "output": "SUPPORTED(NMC1-SUPPORT)|UNSUPPORTED(reason)",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Literal membership in the four inherited descriptors and qualified extents; no detection-based admission",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "D-SOURCE",
+        "D-QUALIFICATION"
+      ],
+      "emitted_field_owners": [
+        "NMC1-SUPPORT"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-READY-SELECT",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "NMC1-SUPPORT",
+        "NMC1-CONTEXT"
+      ],
+      "output": "NMC1-READY|STOP_INPUT",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Fresh cursor0, pending/emitted empty, exact source/context agreement",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "NMC1-SUPPORT",
+        "NMC1-CONTEXT"
+      ],
+      "emitted_field_owners": [
+        "NMC1-READY"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-PREPARE",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "NMC1-SOURCE",
+        "NMC1-CONTEXT"
+      ],
+      "output": "OK(NMC1-STATE)|STOP_INPUT",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Validate agreement; construct next_index0, phaseUNANCHORED, pending(), emitted_packets()",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "NMC1-READY-SELECT"
+      ],
+      "emitted_field_owners": [
+        "NMC1-STATE"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-STEP",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "NMC1-STATE",
+        "NMC1-ROW"
+      ],
+      "output": "OK(NMC1-DELTA)|STOP_INPUT",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Require next row index within nominated extent. Non6 appends pending/no emission. First6 emits PREFIX iff pending is nonempty, otherwise NO_EMISSION; it borrows r when emitted and starts pending(r). Later6 emits CLOSED_INTERVAL owning pending, borrows r, starts pending(r). Increment index and append determined packet once.",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "C-PARTITION",
+        "C-OWNERSHIP",
+        "NMC1-STATE"
+      ],
+      "emitted_field_owners": [
+        "NMC1-STATE",
+        "NMC1-DELTA",
+        "NMC1-PACKET"
+      ],
+      "feeds_U": false,
+      "implementation_boundary": "Single-row OK/STOP and immutable delta/history wrapper is specified, not implemented by #838 core. A core feed_many call does not roll back already accepted earlier rows."
+    },
+    {
+      "id": "NMC1-EMIT",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "NMC1-DELTA"
+      ],
+      "output": "NMC1-PACKET|NO_EMISSION|STOP_INPUT",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Return determined packet only; no second state transition or append",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "NMC1-STEP"
+      ],
+      "emitted_field_owners": [
+        "NMC1-PACKET"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-APPEND",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "before history",
+        "NMC1-DELTA"
+      ],
+      "output": "after history|STOP_INPUT",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Validate complete before-history and unique next emitted packet; duplicate/out-of-order packet rejected; step already owns the one append",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "NMC1-DELTA"
+      ],
+      "emitted_field_owners": [
+        "NMC1-HISTORY"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-PERSIST",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "after state",
+        "packet orNO_EMISSION",
+        "NMC1-DELTA"
+      ],
+      "output": "same after state|STOP_INPUT",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Check full transition witness and return after unchanged; do not consume another row",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "NMC1-DELTA"
+      ],
+      "emitted_field_owners": [
+        "NMC1-STATE"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-FINISH",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "NMC1-STATE"
+      ],
+      "output": "NMC1-PACKET",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Read-only snapshot owns pending. ANCHORED=>PENDING_SUFFIX, otherwiseUNANCHORED includingempty. No borrowed row or emitted index.",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "C-EOF"
+      ],
+      "emitted_field_owners": [
+        "NMC1-PACKET"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-PASSIVE-READ",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "NMC1-PACKET|NMC1-HISTORY"
+      ],
+      "output": "same immutable value",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "No state, cursor or history change and no event",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "NMC1-PACKET",
+        "NMC1-HISTORY"
+      ],
+      "emitted_field_owners": [],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-VIEW",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "NMC1-PACKET",
+        "NMC1-CONTEXT"
+      ],
+      "output": "NMC1-LOCAL-OBSERVED-INTERVAL|NO_COMPLETE_INTERVAL|STOP_INPUT",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Only CLOSED_INTERVAL has a semantic interval view. Validate packet identity against Context.source through NMC1-WIRE-IDENTITY; preserve Source, Context, all owned rows, borrowed boundary, derived references/counts/tags/delays. Not the Python streaming machine LocalObservedInterval.",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "C-POINTER",
+        "C-DELAY",
+        "NMC1-WIRE-IDENTITY",
+        "NMC1-CONTEXT"
+      ],
+      "emitted_field_owners": [
+        "NMC1-LOCAL-OBSERVED-INTERVAL",
+        "NMC1-OBSERVED-OUTCOME"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-ARCHIVAL-COMPLETE",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "NMC1-PACKET"
+      ],
+      "output": "boolean",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "True for emitted PREFIX/CLOSED_INTERVAL frames; no physical terminality or COMM-SAT meaning",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "NMC1-PACKET"
+      ],
+      "emitted_field_owners": [],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-ZERO-DISPOSITION",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "empty inspected prefix"
+      ],
+      "output": "UNANCHORED empty snapshot",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "No emitted interval and no physical zero/no-click inference",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "C-EOF"
+      ],
+      "emitted_field_owners": [
+        "NMC1-PACKET"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-PHYSICAL-RESET",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "archive state",
+        "context",
+        "physical-reset request"
+      ],
+      "output": "STOP_PHYSICAL(reason_ids,unchanged_archive_state,retained_request)|STOP_INPUT",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "No physical reset certificate/map supplied; no #539-conformance claim because its reset codomain has no STOP tag",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "C-RESET",
+        "D-CONTRACT539"
+      ],
+      "emitted_field_owners": [
+        "NMC1-STATE",
+        "NMC1-CONTEXT"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-PHYSICAL-INTERPRET",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "interval_view:NMC1-LOCAL-OBSERVED-INTERVAL",
+        "pre-admitted certificate bundle"
+      ],
+      "output": "NMC1-PHYSICAL-DECISION|STOP_INPUT",
+      "domain": "Valid enriched semantic interval view and finite bundle; total wrapper returns STOP_INPUT on malformed/mismatched requests. The Python streaming machine of the same descriptive name is not this input carrier.",
+      "rule": "Validate semantic interval Source/Context/packet identity and bundle identity against Context; require trial/setting attribution and clock/window/pointer/coverage/activity evidence. Coverage must certify all relevant registrations of every physical window, for every admitted parameter, lie in the submitted packet's owned strict interior and pinned inspected extent, with order/latency bounds. Otherwise STOP; no adjacent packets. Apply fixed-endpoint or joint-correlated-extrema membership. Missing/ambiguous=>STOP_PHYSICAL; supported invalid=>INVALID retained; otherwise conditional registration. All physical branches retain complete interval_view, Source, Context and packet. EMPTY bundle always STOP_PHYSICAL. Malformed view=>STOP_INPUT retaining raw request.",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "NMC1-G-TRIAL",
+        "NMC1-G-CLOCK",
+        "NMC1-G-WINDOW",
+        "NMC1-G-COVERAGE",
+        "NMC1-G-POINTER"
+      ],
+      "emitted_field_owners": [
+        "NMC1-PHYSICAL-DECISION"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-PAIR",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "two station-local histories",
+        "pre-admitted same-run clock/trial certificate"
+      ],
+      "output": "matched plus unmatched packets|STOP_PHYSICAL",
+      "domain": "Declared well-typed finite inputs; malformed or mismatched requests return typed STOP with retained input",
+      "rule": "Use unique certified physical trial IDs on common valid domain; keep every unmatched/ambiguous local packet, no nearest-detection/favorable-coincidence search This specified pairing-result/STOP envelope retains both source/context-bearing histories; it is not the interval-specific NMC1-PHYSICAL-DECISION carrier.",
+      "totality": "Complete specified branch on every input; no guessed physical premise",
+      "functionality": "One output by fixed rule; no alternative selected after observing desired outcomes",
+      "surjectivity": "NOT_CLAIMED",
+      "injectivity": "NOT_CLAIMED except complete owned-row reconstruction below",
+      "consumed_ids": [
+        "C-PAIRING",
+        "NMC1-G-CLOCK",
+        "NMC1-G-TRIAL"
+      ],
+      "emitted_field_owners": [
+        "NMC1-PACKET",
+        "NMC1-HISTORY"
+      ],
+      "feeds_U": false
+    },
+    {
+      "id": "NMC1-WIRE-IDENTITY",
+      "map_kind": "FUNCTION",
+      "inputs": [
+        "wire object_id string",
+        "fixed inherited SOURCE manifest hash"
+      ],
+      "output": "semantic pair[manifest_sha256,object_id]|STOP_INPUT",
+      "domain": "Four admitted object IDs under inherited manifest only",
+      "rule": "Map wire object_id string to semantic pair with fixed manifest SHA; inverse projects object_id only after exact same-hash check. Convert packet stream identity while preserving raw rows, borrowed boundary and emitted_at. Wrong hash/unknown ID STOP_INPUT.",
+      "totality": "Typed STOP for all unsupported inputs",
+      "functionality": "Unique fixed scoped pair",
+      "surjectivity": "Bijection on the four admitted IDs and fixed-hash semantic pairs",
+      "injectivity": "Yes on admitted domain; not a literal identity of types",
+      "consumed_ids": [
+        "D-SOURCE",
+        "NMC1-SOURCE"
+      ],
+      "emitted_field_owners": [
+        "NMC1-SOURCE",
+        "NMC1-PACKET"
+      ],
+      "feeds_U": false
+    }
+  ],
+  "reconstruction_invariants": [
+    "Owned rows of emitted packets followed by current snapshot equal r[0:n] exactly, once each.",
+    "Emitted packets at n form a prefix of emitted packets at m for n<=m; only final pending snapshot changes.",
+    "Each CLOSED_INTERVAL owns left sync plus strict interior and borrows right sync; no duplicated boundary ownership.",
+    "An emitted_at index equals the right boundary consumed by that step; no future row is used.",
+    "PREFIX emitted at first sync only if pending is nonempty; empty emitted packets excluded. No-sync and empty input yield only UNANCHORED snapshot.",
+    "Metadata/unknown rows participate in provenance ownership, never in physical timetag arithmetic unless documented.",
+    "emit/persist/passive_read never produce a second transition or append."
+  ],
+  "current_certificate_bundle": {
+    "id": "EMPTY",
+    "certificates": [],
+    "admission_receipts": [],
+    "physical_decision": "STOP_PHYSICAL"
+  },
+  "physical_decision_algorithm": [
+    "Input is the enriched semantic interval_view, not the Python streaming machine. Malformed input returns STOP_INPUT retaining the request without fabricating Source/Context.",
+    "Validate interval_view.source/context/packet identity, bound bundle identity and externally admitted evidence receipts. Every physical decision retains the complete view, Source, Context and packet.",
+    "Require a complete interval and unique same-run physical trial/setting attribution. Supported invalidity gives INVALID_PHYSICAL_ATTEMPT; ambiguity or missing evidence gives STOP_PHYSICAL.",
+    "Require applicable clock, window, pointer, recording-coverage and activity evidence. Candidate completeness must prove that all relevant registrations for every declared physical window and admitted parameter belong to this packet's owned strict interior and the pinned inspected extent, using registration-latency and record-order bounds. Otherwise STOP; no implicit neighboring packets.",
+    "Only then classify supplied candidates by exact fixed-endpoint or joint-correlated-extrema rules. Preserve every definite-out, ambiguous, inactive or unmatched row and reason; no implicit denominator deletion.",
+    "Return a conditional zero/single/multiple registration result only if all limited-readout premises pass. Candidate completeness is required for all three. Never manufacture a quantum post-state or complete instrument.",
+    "Sort and deduplicate STOP reason IDs. The empty bundle always returns STOP_PHYSICAL retaining the complete interval view, Source, Context and packet."
+  ],
+  "clock_and_window": {
+    "clock_family": "T_s(q)=a_s*q+b_s on each independently certified validity segment; a_s>0.",
+    "parameter_domain": "A nonempty bounded rational polytope with explicit units, correlations, calibration sources and an external admission receipt.",
+    "parameters_current": "UNRESOLVED",
+    "pps_association": "A same-run certificate identifies a common physical second, the serial-calendar/PPS relation, latency/jitter and possible jumps. Calendar 64 and separate 00_03 files alone are insufficient.",
+    "pairing_rule": "Only unique certified physical trial labels on a common valid domain; unmatched and ambiguous packets remain visible.",
+    "windows": "Finite disjoint half-open intervals [L_j,U_j), relative to a certified trial reference, with explicit pulse indexing, grouping, setting association and units. Fixed-endpoint branch requires exact fixed rational L_j<U_j.",
+    "window_parameters_current": "UNRESOLVED",
+    "row_relative_time": "[A,B] are exact extrema of the row's relative time over the certificate uncertainty polytope. The A/B membership formulas below apply only to exact fixed L,U.",
+    "definite_in": "FIXED EXACT ENDPOINTS ONLY: A>=L and B<U",
+    "definite_out": "FIXED EXACT ENDPOINTS ONLY: B<L or A>=U",
+    "otherwise": "AMBIGUOUS -> STOP_PHYSICAL for that claimed classification",
+    "multiple_pulses": "Retain separate pulse indices and raw multiplicity; group only by a predeclared union.",
+    "forbidden_inferences": [
+      "No exact 100 kHz equality from the filename.",
+      "No propagation delay from 18 feet without a velocity factor.",
+      "No hard 10 ns/100 ns bound from approximate narrative.",
+      "No calibration from the observed 129xxx spacing range.",
+      "No outcome-optimized clock, window, segment or pairing.",
+      "No cw45 radius without same-run timing metadata."
+    ],
+    "uncertain_endpoint_extension": {
+      "domain": "Affine t(theta), L(theta), U(theta) on the same nonempty bounded rational polytope P; all joint correlations retained; ordered disjoint windows certified throughout P.",
+      "differences": "dL(theta)=t(theta)-L(theta); dU(theta)=t(theta)-U(theta)",
+      "definite_in": "min_P dL>=0 and max_P dU<0",
+      "definite_out": "max_P dL<0 or min_P dU>=0",
+      "otherwise": "AMBIGUOUS -> STOP_PHYSICAL",
+      "unsupported": "STOP_PHYSICAL for unsupported endpoint dependence or missing joint bounds; do not substitute separate marginal ranges for the correlated differences."
+    }
+  },
+  "coverage_and_response": {
+    "no_detection_meaning": "No registered detection in a supported active or explicitly declared apparatus window with recording coverage; not no incoming photon.",
+    "required_for_limited_readout": [
+      "Trial/window/setting attribution",
+      "Registration meaning",
+      "Recording and live coverage",
+      "Known activity and gap disposition",
+      "Complete candidate registration set inside submitted packet owned strict interior and pinned inspected extent",
+      "Certified physical-window containment, record-order and registration-latency bounds"
+    ],
+    "required_additionally_for_source_or_born_prediction": [
+      "Efficiency and background bounds",
+      "Dead-time, recovery and afterpulsing model",
+      "Multiple-pulse/source and memory response",
+      "Independent calibration exposure"
+    ],
+    "loss_policy": "An UNKNOWN missing-trial count remains an explicit gap; it does not become zero.",
+    "inactive_policy": "Supported invalid activity remains INVALID_PHYSICAL_ATTEMPT; unresolved activity returns STOP_PHYSICAL. Neither is dropped.",
+    "multiple_hits_policy": "No first-click selection, binary detector coarsening or invented exclusive outcome.",
+    "candidate_completeness": {
+      "owner_gate": "NMC1-G-COVERAGE",
+      "requirement": "For every admitted theta and declared W_j(theta), Reg(W_j,theta) is a subset of {RowRef(Source.stream_id,i): j_left<i<j_right and 0<=i<N_pinned}. Reg means all relevant recorded registrations attributed to that physical window under the certified registration model.",
+      "resolution": "Every candidate reference resolves in the submitted packet's owned strict interior. Together with recording/loss evidence this excludes unaccounted relevant registrations outside the candidate set.",
+      "applies_to": "NO_DETECTION_WITH_COVERAGE, SINGLE_REGISTRATION and MULTIPLE_REGISTRATIONS alike",
+      "required_evidence": [
+        "same-run registration semantics",
+        "record-order guarantees",
+        "registration-latency bounds and correlations",
+        "physical-window containment",
+        "pinned inspected-extent containment",
+        "recording completeness and loss/gap dispositions"
+      ],
+      "insufficient": "Archival packet closure, consecutive transfer IDs, narrow observed sync spacing or absence of a row in the packet alone do not prove completeness.",
+      "failure": "STOP_PHYSICAL when containment, order or latency is unresolved or the window may require registrations outside this owned interior/inspected extent.",
+      "neighboring_packets": "Not consulted implicitly. Borrowed right sync does not supply neighboring interior. A multi-packet collector requires a separately specified ownership/coverage contract and inspection scope."
+    }
+  },
+  "readiness_gates": [
+    {
+      "id": "NMC1-G-ARCHIVE",
+      "status": "EXISTING_FINITE_RESULT",
+      "requires": [
+        "D-SOURCE",
+        "D-QUALIFICATION"
+      ],
+      "decision": "Four selected source identities and qualified extents only"
+    },
+    {
+      "id": "NMC1-G-ADAPTER",
+      "status": "CONDITIONAL_EXACT_KERNEL_PASS / WRAPPER_STOP",
+      "requires": [
+        "NMC1-STEP",
+        "NMC1-FINISH",
+        "NMC1-VIEW",
+        "D-ADAPTER-RESULT",
+        "D-ADAPTER-RUN"
+      ],
+      "decision": "A/B CONFIRMED and four gates PASS for one pinned Python kernel; public aarch64/x86_64 cold replay PASS in workflow 33962156745 on original result commit, recorded by the architecture-evidence commit. NMC Source/Context/OK/STOP/history/persistence/physical wrappers remain NOT_IMPLEMENTED / UNTESTED, so complete wrapper composition remains STOP. No physical certificate follows."
+    },
+    {
+      "id": "NMC1-G-TRIAL",
+      "status": "UNRESOLVED",
+      "requires": [
+        "same-run trial eligibility and physical sync/setting/preparation attribution certificate"
+      ],
+      "decision": "Unique supported physical trial label; otherwise STOP_PHYSICAL"
+    },
+    {
+      "id": "NMC1-G-CLOCK",
+      "status": "UNRESOLVED",
+      "requires": [
+        "same-run PPS association",
+        "positive affine clock parameters/uncertainty",
+        "validity/jump disposition",
+        "unique pairing if claimed"
+      ],
+      "decision": "Same physical seconds/trials must be independently evidenced; 00_03 files or calendar 64 alone are insufficient."
+    },
+    {
+      "id": "NMC1-G-WINDOW",
+      "status": "UNRESOLVED",
+      "requires": [
+        "Pulse index and group convention",
+        "Setting/cable/response delay evidence",
+        "Half-open disjoint window endpoints",
+        "Uncertainty and correlations",
+        "exact fixed endpoints or joint affine row/endpoint polytope"
+      ],
+      "decision": "Fixed-endpoint extrema rules or joint extrema of t-L and t-U only; preserve correlations; unsupported dependence/missing bounds/ambiguous membership=>STOP_PHYSICAL."
+    },
+    {
+      "id": "NMC1-G-COVERAGE",
+      "status": "UNRESOLVED",
+      "requires": [
+        "acquisition/live boundaries",
+        "loss/gap disposition",
+        "registration coverage through windows",
+        "all relevant window registrations provably inside submitted packet owned strict interior",
+        "pinned inspected-extent containment",
+        "record-order and registration-latency evidence"
+      ],
+      "decision": "All zero/single/multiple physical registration results require complete candidates under every admitted parameter. Any unresolved containment/order/latency=>STOP_PHYSICAL; no implicit adjacent packets. Unknown trial count retained UNKNOWN; transfer/sync regularity alone insufficient."
+    },
+    {
+      "id": "NMC1-G-POINTER",
+      "status": "UNRESOLVED",
+      "requires": [
+        "channel-to-physical-registration evidence",
+        "activity model",
+        "multiplicity-preserving readout dictionary"
+      ],
+      "decision": "No exclusive binary outcome, photon number or absence claim follows from raw counts."
+    },
+    {
+      "id": "NMC1-G-INSTRUMENT",
+      "status": "UNRESOLVED",
+      "requires": [
+        "physical ready state",
+        "post-state and environment",
+        "memory/persistence law",
+        "physical reset law or separately reviewed schema amendment"
+      ],
+      "decision": "Finite archive equality does not identify complete instruments"
+    },
+    {
+      "id": "NMC1-G-RESPONSE",
+      "status": "UNRESOLVED",
+      "requires": [
+        "Efficiency/background bounds",
+        "Dead time, recovery and afterpulsing",
+        "Source-to-record response and memory model"
+      ],
+      "decision": "Required for quantitative source/Born comparison, not inferred from no-record"
+    },
+    {
+      "id": "NMC1-G-SOURCE",
+      "status": "UNRESOLVED",
+      "requires": [
+        "independent U-to-physical source/context dictionary",
+        "compatible same-outcome carrier"
+      ],
+      "decision": "FOREIGN_NIST remains distinct from U4/RRP1; no fitted U head and no feedback to U."
+    },
+    {
+      "id": "NMC1-G-OCCURRENCE",
+      "status": "UNRESOLVED",
+      "requires": [
+        "Complete preparation/context/ready-state schedule",
+        "Independent measure, ordered deterministic theorem or explicit postulate",
+        "Finite or asymptotic quantifiers"
+      ],
+      "decision": "No occurrence law follows from one-hot or a finite normalized tally"
+    },
+    {
+      "id": "NMC1-G-BORN",
+      "status": "UNRESOLVED",
+      "requires": [
+        "independent physical state/effect identification",
+        "complete outcome/selection/response contract",
+        "declared statistical rule",
+        "Born-assumption inventory"
+      ],
+      "decision": "Born-dependent calibration supports conditional consistency, not independent derivation"
+    }
+  ],
+  "family_and_equality": {
+    "archival_family": "Four literal supported source objects under one fixed algorithm, indexed by explicit certificate bundles.",
+    "archival_equality": "Exact source/context and complete ordered packet/history equality.",
+    "physical_family_status": "UNRESOLVED; no exhaustive admissibility or completeness classification.",
+    "instrument_equality": "The complete physical preparation-to-outcome, post-state and sequential law over the declared family; not decided by finite archive equality.",
+    "effects_vs_instruments": "Equal effects or counts cannot identify post-states, reset or future laws.",
+    "physical_persist_status": "UNRESOLVED; archival persist only returns the accepted after-state.",
+    "physical_reset_status": "STOP_PHYSICAL; a #539 reset-codomain amendment is required.",
+    "physical_terminal_status": "UNRESOLVED; archival frame completion is not COMM-SAT.",
+    "physical_zero_status": "UNRESOLVED; an empty row prefix and no recorded detection are not physical zero support.",
+    "foreign_vs_model": "FOREIGN_NIST and CHOSEN_RRP1/U4 are disjoint tags until a separately proved adapter supplies an identification."
+  },
+  "born_and_occurrence": {
+    "benchmark_enabled": false,
+    "admitted_quantum_calibration_sources": [],
+    "documentation_born_role": "E-FORMAT/E-PROCESS/E-DAQ are used only for records and timing. No probability or state identification is sourced from them.",
+    "optional_benchmark_equation": "p(y|rho,c)=tr(rho E_(c,y))",
+    "optional_benchmark_assumption_status": "BORN_ASSUMED_IF_ENABLED, not independently derived",
+    "tomography_guard": "Calibration using Born must be explicitly Born-dependent; reanalysis can then test conditional consistency only.",
+    "required_model_slots": [
+      "Preparation and state map",
+      "Physical effects or complete instrument",
+      "Loss, no-registration and multiple-registration alphabet",
+      "Independent response calibration",
+      "Memory and statistical premises",
+      "Finite falsifier or ordered-frequency quantifiers"
+    ],
+    "occurrence_route": "UNRESOLVED: an independently selected measure, deterministic ordered-frequency theorem or explicit postulate is required.",
+    "normalization_guard": "A finite tally or quadratic normalization supplies no L6 measure or occurrence theorem.",
+    "qdd_guard": "Do not relabel click/no-click or Alice/Bob setting 0/1 as LOW/HIGH.",
+    "unchanged_boundary": "The existing scoped reservoir nonnegative-postprocessing obstruction and QDD/photon physical-owner obligations remain unchanged."
+  },
+  "field_ownership_rule": "Each carrier field explicitly declares its owner or nonowning/derived basis. RawRow ownership resides solely in packet.owned_rows plus currentpending snapshot. Derived references never add ownership. Certificate quantities are never inferred from counts. PhysicalDecision retains the submitted interval_view, Source, Context and packet on every physical branch. These fields are semantic wrapper requirements, not core Python fields.",
+  "implementation_status": {
+    "new_source_code_in_this_note": false,
+    "new_scientific_execution": false,
+    "adapter_probe_result_claimed": true,
+    "physical_interpretation_implemented_as_empirical_certificate": false,
+    "definition_scope": "Concrete finite semantic algorithm and conditional decision interface; no physical slot silently filled.",
+    "core_api_scope": "#838 defines RawRow, Packet, mutable streaming machine LocalObservedInterval, tuple-valued emissions/snapshots and ValueError validation.",
+    "semantic_wrapper_scope": "NMC Source/Context, enriched immutable interval_view, OK/STOP envelopes, RecordDelta, stored emitted history, persistence and physical-decision wrappers are specifications; their implementation is not claimed.",
+    "name_disambiguation": "NMC1-LOCAL-OBSERVED-INTERVAL is an enriched semantic value, not the Python streaming machine named LocalObservedInterval.",
+    "core_mapping_obligation": "Explicit NMC1-WIRE-IDENTITY plus Source/Context validation, core result/exception translation and caller-owned history accumulation are required; no rollback of prior accepted rows is inferred from core feed_many.",
+    "adapter_probe_result_scope": "Cited existing external result only: conditional exact kernel PASS at pinned commit; no newly executed result in this note.",
+    "nmc_wrapper_implemented": false,
+    "nmc_wrapper_tested": false,
+    "nmc_wrapper_gate": "WRAPPER_STOP",
+    "adapter_architecture_gate": "PASS_PUBLIC_AARCH64_AND_X86_64_COLD_REPLAY"
+  },
+  "output_boundary": {
+    "canon_writes": false,
+    "github_actions": false,
+    "experimental_access_authorized_by_document": false,
+    "automatic_further_semantic_opening": false
+  },
+  "wire_identity": {
+    "implementation_stream_id": "string object_id",
+    "semantic_stream_id": "pair[source_manifest_sha256,object_id]",
+    "adapter_id": "NMC1-WIRE-IDENTITY",
+    "scope": "Exactly the four inherited objects under SOURCE hash 653e5dd17b041ecf38244bcd8312fa724863eb681f940795e38974182f7bbe8a",
+    "not_literal_type_equality": true
+  },
+  "adapter_evidence": {
+    "issue": "https://github.com/mathorn1973/twist-j/issues/838",
+    "pull_request": "https://github.com/mathorn1973/twist-j/pull/841",
+    "source_pin": "0ddc026fa5f2eefcfbc122d38585f475bd6418cc",
+    "result_commit": "f37cb6b803ccab9c8adb4c7f310f7392cfe6494c",
+    "result_url": "https://github.com/mathorn1973/twist-j/blob/0630ab38a07ecb9d57d2097aa76ac26f00a5815e/probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/RESULT.md",
+    "run_url": "https://github.com/mathorn1973/twist-j/blob/0630ab38a07ecb9d57d2097aa76ac26f00a5815e/probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/RUN.md",
+    "status": "A_CONFIRMED / B_CONFIRMED",
+    "claim_A": {
+      "scope": "Conditional lossless ownership and exact derived references in frozen archived-record audit",
+      "gates": [
+        "G01_SYNTHETIC_REFERENCE",
+        "G02_ACTUAL_LOSSLESS",
+        "G04_ACTUAL_DERIVED_REFERENCE"
+      ]
+    },
+    "claim_B": {
+      "scope": "Conditional causal emission, immutable snapshots and frozen prefix/chunk-independent audit",
+      "gates": [
+        "G01_SYNTHETIC_REFERENCE",
+        "G03_ACTUAL_PREFIX_CHUNKING",
+        "G04_ACTUAL_DERIVED_REFERENCE"
+      ]
+    },
+    "gates": [
+      {
+        "id": "G01_SYNTHETIC_REFERENCE",
+        "status": "PASS"
+      },
+      {
+        "id": "G02_ACTUAL_LOSSLESS",
+        "status": "PASS"
+      },
+      {
+        "id": "G03_ACTUAL_PREFIX_CHUNKING",
+        "status": "PASS"
+      },
+      {
+        "id": "G04_ACTUAL_DERIVED_REFERENCE",
+        "status": "PASS"
+      }
+    ],
+    "execution": {
+      "count": 1,
+      "platform": "Ubuntu 24.04.3 LTS",
+      "architecture": "x86_64",
+      "python": "3.12.3",
+      "exit_code": 0,
+      "stderr_bytes": 0,
+      "stdout_bytes": 58096,
+      "stdout_lines": 1419,
+      "stdout_sha256": "c10825ec57fd5672e7a05d9caba1d1946cbea420d9cbf10968b596c7cb847836"
+    },
+    "architecture_gate": "PASS_PUBLIC_AARCH64_AND_X86_64_COLD_REPLAY",
+    "source_files_unchanged_from_pin": true,
+    "immutable_source_files": [
+      {
+        "path": "probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/DEPENDENCIES.json",
+        "url": "https://github.com/mathorn1973/twist-j/blob/0ddc026fa5f2eefcfbc122d38585f475bd6418cc/probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/DEPENDENCIES.json",
+        "sha256": "99875763b8b918ed951534ad0128e09813084aa685482e7579d32b13cfd06dd0",
+        "bytes": 905
+      },
+      {
+        "path": "probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/PREREG.md",
+        "url": "https://github.com/mathorn1973/twist-j/blob/0ddc026fa5f2eefcfbc122d38585f475bd6418cc/probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/PREREG.md",
+        "sha256": "7841ead15690dddc67967de6a0176d124c228074d10bdb613d6cdaf5c2e47498",
+        "bytes": 9870
+      },
+      {
+        "path": "probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/PROOF.md",
+        "url": "https://github.com/mathorn1973/twist-j/blob/0ddc026fa5f2eefcfbc122d38585f475bd6418cc/probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/PROOF.md",
+        "sha256": "06634045e87a8720216a41e96b4034fc793a03cbb7623dc8ee2f7d00c78639e6",
+        "bytes": 3514
+      },
+      {
+        "path": "probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/README.md",
+        "url": "https://github.com/mathorn1973/twist-j/blob/0ddc026fa5f2eefcfbc122d38585f475bd6418cc/probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/README.md",
+        "sha256": "226b30a0dcfd51840c4f713302709d2b8407adf977e78ba7cdef9aad917747e6",
+        "bytes": 1489
+      },
+      {
+        "path": "probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/adapter.py",
+        "url": "https://github.com/mathorn1973/twist-j/blob/0ddc026fa5f2eefcfbc122d38585f475bd6418cc/probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/adapter.py",
+        "sha256": "13cd74be2c5e48f30de15e6eb3c949736eeb0634bfe7463e20c6da8300ca7bf4",
+        "bytes": 8278
+      },
+      {
+        "path": "probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/verify.py",
+        "url": "https://github.com/mathorn1973/twist-j/blob/0ddc026fa5f2eefcfbc122d38585f475bd6418cc/probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/verify.py",
+        "sha256": "e7bab46a821edd7c1e4accb89bfee106d3f8076086667b3dfaec5991a1491cc5",
+        "bytes": 29924
+      }
+    ],
+    "scope": "One pinned Python kernel on the same four nominated member portions and frozen finite synthetic fixtures. The general induction proof addresses the defined mathematical relation; finite checks do not establish all Python executions.",
+    "nmc_wrapper_status": "NOT_IMPLEMENTED / UNTESTED / WRAPPER_STOP",
+    "interface_adoption": "PROSPECTIVE: explicit wire identity, Source/Context binding, OK/STOP, history/persistence and physical-decision composition are not tested by this kernel result.",
+    "physical_certificates_added": [],
+    "public_claims": "UNREGISTERED",
+    "canon_changed": false,
+    "architecture_evidence_commit": "0630ab38a07ecb9d57d2097aa76ac26f00a5815e",
+    "architecture_replay": {
+      "workflow_id": 33962156745,
+      "workflow_url": "https://github.com/mathorn1973/twist-j/actions/runs/33962156745",
+      "workflow_commit": "f37cb6b803ccab9c8adb4c7f310f7392cfe6494c",
+      "evidence_commit": "0630ab38a07ecb9d57d2097aa76ac26f00a5815e",
+      "verifier_sha256": "e7bab46a821edd7c1e4accb89bfee106d3f8076086667b3dfaec5991a1491cc5",
+      "stdout_sha256": "c10825ec57fd5672e7a05d9caba1d1946cbea420d9cbf10968b596c7cb847836",
+      "jobs": [
+        {
+          "architecture": "aarch64",
+          "job_id": 101295794608,
+          "url": "https://github.com/mathorn1973/twist-j/actions/runs/33962156745/job/101295794608",
+          "status": "PASS"
+        },
+        {
+          "architecture": "x86_64",
+          "job_id": 101295794350,
+          "url": "https://github.com/mathorn1973/twist-j/actions/runs/33962156745/job/101295794350",
+          "status": "PASS"
+        }
+      ],
+      "scope": "Exact archived-record cold replay on the original result commit; evidence-only successor records receipts. Not independent physical experiments or NMC wrapper tests."
+    }
+  }
+}

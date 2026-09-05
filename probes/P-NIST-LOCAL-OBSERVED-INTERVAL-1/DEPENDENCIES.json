@@ -1,0 +1,29 @@
+{
+  "schema": "nist-local-interval-dependencies/1",
+  "files": [
+    {
+      "role": "adapter",
+      "path": "probes/P-NIST-LOCAL-OBSERVED-INTERVAL-1/adapter.py",
+      "bytes": 8278,
+      "sha256": "13cd74be2c5e48f30de15e6eb3c949736eeb0634bfe7463e20c6da8300ca7bf4"
+    },
+    {
+      "role": "source_verifier",
+      "path": "probes/P-NIST-RAW-RECORD-QUALIFICATION-1/verify.py",
+      "bytes": 24560,
+      "sha256": "0e63ea7ee01bff85558af311c8d819440f7155e34a8582b003929701ee1d4bf7"
+    },
+    {
+      "role": "source_manifest",
+      "path": "probes/P-NIST-RAW-RECORD-QUALIFICATION-1/SOURCE.json",
+      "bytes": 4058,
+      "sha256": "653e5dd17b041ecf38244bcd8312fa724863eb681f940795e38974182f7bbe8a"
+    },
+    {
+      "role": "notice",
+      "path": "notes/NIST-RAW-CUSTODY-1.md",
+      "bytes": 5906,
+      "sha256": "b6d19a283ede826cb41910e80db567f71f95e2cc3258fce2f03e0d1525471ec2"
+    }
+  ]
+}
