@@ -1,0 +1,1419 @@
+{
+  "adapter_sha256": "13cd74be2c5e48f30de15e6eb3c949736eeb0634bfe7463e20c6da8300ca7bf4",
+  "chunk_cycle": [
+    31
+  ],
+  "claim_A": "CONFIRMED",
+  "claim_B": "CONFIRMED",
+  "data_qualification": "QUALIFIED",
+  "dependencies_sha256": "99875763b8b918ed951534ad0128e09813084aa685482e7579d32b13cfd06dd0",
+  "gates": {
+    "G01_SYNTHETIC_REFERENCE": {
+      "checked_conditions": 91973,
+      "failed_conditions": 0,
+      "first8_failures": [],
+      "status": "PASS"
+    },
+    "G02_ACTUAL_LOSSLESS": {
+      "checked_conditions": 8510562,
+      "failed_conditions": 0,
+      "first8_failures": [],
+      "status": "PASS"
+    },
+    "G03_ACTUAL_PREFIX_CHUNKING": {
+      "checked_conditions": 4255473,
+      "failed_conditions": 0,
+      "first8_failures": [],
+      "status": "PASS"
+    },
+    "G04_ACTUAL_DERIVED_REFERENCE": {
+      "checked_conditions": 3307036,
+      "failed_conditions": 0,
+      "first8_failures": [],
+      "status": "PASS"
+    }
+  },
+  "notice_sha256": "b6d19a283ede826cb41910e80db567f71f95e2cc3258fce2f03e0d1525471ec2",
+  "objects": [
+    {
+      "archive_bytes": 2119875,
+      "archive_sha256": "e54d30d866a642dd23d1a40e3ae3418cf6420fa6beb616bac2d21601a6b0d485",
+      "audit": {
+        "checkpoints": [
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "UNANCHORED",
+            "pending_owned_rows": 0,
+            "pending_packet_sha256": "75d9e7ddb6a1d66479b5d07042ed6c3cb617676d9dc04e4b3e82b02c3bb4158c",
+            "prefix_rows": 0,
+            "raw_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "reconstructed_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "1a243f24bd95c496bcc2fd519e0b3d2c13f1e7edd126ab5fe493cd6654a980d9",
+            "prefix_rows": 1,
+            "raw_prefix_sha256": "b5adc88eafaf849bd8849169cb3f1954e3c9015220b62746fb22e0395f0f9236",
+            "reconstructed_prefix_sha256": "b5adc88eafaf849bd8849169cb3f1954e3c9015220b62746fb22e0395f0f9236"
+          },
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "15ea535998d3a396c04934ff275c73a696e56a603623d5d20339635998849b8d",
+            "prefix_rows": 2,
+            "raw_prefix_sha256": "2d46e37f05f7872e1a1c43c06c293bbc164726cfadebe76bcb7a86f8b8df9754",
+            "reconstructed_prefix_sha256": "2d46e37f05f7872e1a1c43c06c293bbc164726cfadebe76bcb7a86f8b8df9754"
+          },
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 3,
+            "pending_packet_sha256": "ff312e240c0e1aeac0d422c916e162b09351a6c465efce0efae256a9eb7be28e",
+            "prefix_rows": 3,
+            "raw_prefix_sha256": "37feb8a3b2ff34d56a80c64541cad7911013e963d939bfc97985a77b0f8e67b3",
+            "reconstructed_prefix_sha256": "37feb8a3b2ff34d56a80c64541cad7911013e963d939bfc97985a77b0f8e67b3"
+          },
+          {
+            "emitted_packet_stream_sha256": "c3e1855ace5a68dc041ec2de46dcbc269d41448f3f48b7feef9f9620a6c67dc4",
+            "emitted_packets": 2,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "e8cf32b6dff6e838e8b6fb06d254e78eeedfebf593b77e583359e21a588ec026",
+            "prefix_rows": 7,
+            "raw_prefix_sha256": "353f02ebfb9d831d7c2235b41b150e943184dfe58d7fe738153b54f518399062",
+            "reconstructed_prefix_sha256": "353f02ebfb9d831d7c2235b41b150e943184dfe58d7fe738153b54f518399062"
+          },
+          {
+            "emitted_packet_stream_sha256": "74238aea24460769a330c538555b850e3c9ae6204450eb6a0350fc8fc64efd39",
+            "emitted_packets": 11,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "559cb735d3b99bc55f6a9428955ca7ea0283f5c67a99f6093280604f65d98849",
+            "prefix_rows": 31,
+            "raw_prefix_sha256": "b7aaf7e9756afd68c8db8185b6cd637dd4030588266a58d75f1da26c074a21af",
+            "reconstructed_prefix_sha256": "b7aaf7e9756afd68c8db8185b6cd637dd4030588266a58d75f1da26c074a21af"
+          },
+          {
+            "emitted_packet_stream_sha256": "63139b1c4193996e4fdd63588f4169c18fd29662a2505f39cfe07ffa8c31cbf9",
+            "emitted_packets": 52,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "ec1abc88aa06014ef764ab8156e767706c9eb1bb9e6ebd96ba84662b6eb01219",
+            "prefix_rows": 127,
+            "raw_prefix_sha256": "6fb485653556d4aa6cd82599d5c35614eff6c62104103a87bfc8517370016cf1",
+            "reconstructed_prefix_sha256": "6fb485653556d4aa6cd82599d5c35614eff6c62104103a87bfc8517370016cf1"
+          },
+          {
+            "emitted_packet_stream_sha256": "2a8993abe760f6debcc94f2bdeffcd0061a08e940e7e43371540bc80cda7bc33",
+            "emitted_packets": 416,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "0b16d04882ca541426a0d93fedc2d10e92b49c3c050f83071aaf7b831629df61",
+            "prefix_rows": 1023,
+            "raw_prefix_sha256": "dd553ed70f8cafeef4605ae028f520aa35d63c31fdeb0732213e4ae3629418f9",
+            "reconstructed_prefix_sha256": "dd553ed70f8cafeef4605ae028f520aa35d63c31fdeb0732213e4ae3629418f9"
+          },
+          {
+            "emitted_packet_stream_sha256": "5d17951b2b1f0c2033585dd181c321e5ac174f118f01a38b763d9907b95f273e",
+            "emitted_packets": 3306,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "966acd9f6e5cc96d269f9eb29228453c58460c8ec3300ea66216006540f0f40b",
+            "prefix_rows": 8191,
+            "raw_prefix_sha256": "51b76957af90f9e89f8acb4d07a6409436b70a076e25d3ccacf492c9c994934b",
+            "reconstructed_prefix_sha256": "51b76957af90f9e89f8acb4d07a6409436b70a076e25d3ccacf492c9c994934b"
+          },
+          {
+            "emitted_packet_stream_sha256": "6dde33f8be6713a347d0e1e0005f0f89f82a3519b8286383356e9a56a7adf372",
+            "emitted_packets": 26295,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 3,
+            "pending_packet_sha256": "97407ab9c9b5b67689d9cfadfcdf8e3f81559e61483ae04d5ea464a341a1b5d5",
+            "prefix_rows": 65535,
+            "raw_prefix_sha256": "d61a71a65f6228d6afac9dd5881f45bec38f67f7fd2f6282214e0018ab71633d",
+            "reconstructed_prefix_sha256": "d61a71a65f6228d6afac9dd5881f45bec38f67f7fd2f6282214e0018ab71633d"
+          },
+          {
+            "emitted_packet_stream_sha256": "692be2c852aa05d8640897c73ea620b9aea5e8e5ec828777dfcd14e859f58eda",
+            "emitted_packets": 105224,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "a7fd3f98c9ee7efa99745a0b78c56d6f64fc3388f6203c4cab31e447176e0024",
+            "prefix_rows": 262143,
+            "raw_prefix_sha256": "2fc0cf6a99008a9ba02b6b33e4e9c2c45c2935371ae2566ea9d8580c511581f1",
+            "reconstructed_prefix_sha256": "2fc0cf6a99008a9ba02b6b33e4e9c2c45c2935371ae2566ea9d8580c511581f1"
+          },
+          {
+            "emitted_packet_stream_sha256": "a279794cdb20d9a150f11fa3778fbf9d7851bb9e2fb90c7c0a0186fda73aa36e",
+            "emitted_packets": 194914,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 3,
+            "pending_packet_sha256": "a4d478c751d49ebd372ed4bdd4c7089812cacff0009864a1a276d1abdfacf081",
+            "prefix_rows": 485503,
+            "raw_prefix_sha256": "09d1ea355122481f08a914692bd7e3f69d1184301372097ed1301a2a5776713f",
+            "reconstructed_prefix_sha256": "09d1ea355122481f08a914692bd7e3f69d1184301372097ed1301a2a5776713f"
+          }
+        ],
+        "closed_detector_delta_from_left_sync_ticks": {
+          "complete_histogram_sha256": "8c79b6d2db92d7bc29f5d81271bce928e7af0e566c2cf353e002c50bb4a0d0cc",
+          "count": 95669,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 129085,
+          "minimum": 3,
+          "support_size": 9093,
+          "top8_by_count_then_value": [
+            [
+              25426,
+              58
+            ],
+            [
+              89010,
+              58
+            ],
+            [
+              70290,
+              57
+            ],
+            [
+              8482,
+              55
+            ],
+            [
+              5093,
+              54
+            ],
+            [
+              25588,
+              53
+            ],
+            [
+              29622,
+              53
+            ],
+            [
+              44308,
+              53
+            ]
+          ]
+        },
+        "closed_detector_delta_from_unique_setting_ticks": {
+          "complete_histogram_sha256": "deb83906a353f034ce8cf6f6a87c1222fc839ad060f6a366f4df6891f733c63e",
+          "count": 95669,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 129036,
+          "minimum": -60,
+          "support_size": 13883,
+          "top8_by_count_then_value": [
+            [
+              74746,
+              37
+            ],
+            [
+              55555,
+              35
+            ],
+            [
+              82492,
+              35
+            ],
+            [
+              1331,
+              34
+            ],
+            [
+              24395,
+              34
+            ],
+            [
+              70241,
+              34
+            ],
+            [
+              3578,
+              32
+            ],
+            [
+              16649,
+              32
+            ]
+          ]
+        },
+        "closed_detector_setting_delta_undefined": 0,
+        "closed_detector_tags": {
+          "MULTIPLE_RECORDED_DETECTOR_ROWS": 17274,
+          "NO_RECORDED_DETECTOR_ROW": 119673,
+          "SINGLE_RECORDED_DETECTOR_ROW": 57967
+        },
+        "closed_intervals": 194914,
+        "closed_setting_tags": {
+          "ONEHOT_0": 98649,
+          "ONEHOT_1": 96265
+        },
+        "emitted_packet_stream_sha256": "a279794cdb20d9a150f11fa3778fbf9d7851bb9e2fb90c7c0a0186fda73aa36e",
+        "emitted_packets": 194914,
+        "first8_emitted_packet_witnesses": [
+          {
+            "canonical_packet_sha256": "a8315d5dd07d5df51d8c524f15d878b5e82e55b8a9db51a4650295176ebde491",
+            "detector_tag": "SINGLE_RECORDED_DETECTOR_ROW",
+            "emitted_at": 3,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 3,
+            "packet_ordinal": 0,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "5449dfa9e51f907407b70a6717881b6738fd595e212555845f8e63ba9ed7f385",
+            "detector_tag": "SINGLE_RECORDED_DETECTOR_ROW",
+            "emitted_at": 6,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 3,
+            "packet_ordinal": 1,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "e8fc245b006cf1ac98ab324774a87dd1f702728be874ced388236afb8597d5c2",
+            "detector_tag": "SINGLE_RECORDED_DETECTOR_ROW",
+            "emitted_at": 9,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 3,
+            "packet_ordinal": 2,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "2ec733cff5cbec050e8aa1c187b118f9898f8328f8ef5e337ae9101abb1f785b",
+            "detector_tag": "MULTIPLE_RECORDED_DETECTOR_ROWS",
+            "emitted_at": 13,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 4,
+            "packet_ordinal": 3,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "54ef5c826f9dff2242f10edcbd7f107a52e3af25064120cfce3854c40dabbfff",
+            "detector_tag": "SINGLE_RECORDED_DETECTOR_ROW",
+            "emitted_at": 16,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 3,
+            "packet_ordinal": 4,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "38914056b6c0b5ed51e40c2aaeb60e05d280d17b444924aaae94f45417ff2c24",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 18,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 5,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "bbda35b31b7995504992a2261fbf3a3775d85fcd6d3a3da33bc5c46ecedb92ce",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 20,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 6,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "475fffa47190eb9786c12af60d1745a6e11924c176fa7985500463b284fe1ddf",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 22,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 7,
+            "setting_tag": "ONEHOT_0"
+          }
+        ],
+        "raw_prefix_sha256": "09d1ea355122481f08a914692bd7e3f69d1184301372097ed1301a2a5776713f",
+        "rows": 485503
+      },
+      "full_archive_verified_before_zip_access": true,
+      "gates": {
+        "G02_ACTUAL_LOSSLESS": {
+          "checked_conditions": 1169556,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        },
+        "G03_ACTUAL_PREFIX_CHUNKING": {
+          "checked_conditions": 584826,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        },
+        "G04_ACTUAL_DERIVED_REFERENCE": {
+          "checked_conditions": 581190,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        }
+      },
+      "id": "alice-sync",
+      "member": {
+        "full_member_crc_verified_each_pass": true,
+        "name": "00_03_find_sync.T1.dat",
+        "passes": 2,
+        "scope": "FULL_MEMBER",
+        "selected_rows": 485503,
+        "uncompressed_bytes_declared_by_zip": 11652072,
+        "unread_tail_interpreted": false
+      },
+      "qualification": "QUALIFIED",
+      "qualification_failures": [],
+      "role": "SYNC",
+      "station": "alice"
+    },
+    {
+      "archive_bytes": 2238398,
+      "archive_sha256": "33c294c778babfebc6e4eddf30519a30c25728c704ea78e24ee4f40a49ad1cec",
+      "audit": {
+        "checkpoints": [
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "UNANCHORED",
+            "pending_owned_rows": 0,
+            "pending_packet_sha256": "d2b7fa95ed0fbf97c2cec4b410e1d873733592c8f43399786eaf20827b808a2e",
+            "prefix_rows": 0,
+            "raw_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "reconstructed_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "UNANCHORED",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "788e21d70041bdbff4ee3d0b30bf69975344d87a07b2e70dccf4fdf4020d9d2e",
+            "prefix_rows": 1,
+            "raw_prefix_sha256": "934f379d319fb603e5eaba6d3f13bc93b8f30e330678897c4bfef16a83d876db",
+            "reconstructed_prefix_sha256": "934f379d319fb603e5eaba6d3f13bc93b8f30e330678897c4bfef16a83d876db"
+          },
+          {
+            "emitted_packet_stream_sha256": "5e5c45ea88f8879bcef5e00d947240a5a699e2daf41388c47460e320c20ecda6",
+            "emitted_packets": 1,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "c55496edd051ae14764d66ab2c1135bc8cceab21a12bf5d018c90f9de58e389d",
+            "prefix_rows": 2,
+            "raw_prefix_sha256": "73fa0df2bd79342f7622d57f6bac99514d8fc49255e92a87762e8cdee0a3ac36",
+            "reconstructed_prefix_sha256": "73fa0df2bd79342f7622d57f6bac99514d8fc49255e92a87762e8cdee0a3ac36"
+          },
+          {
+            "emitted_packet_stream_sha256": "5e5c45ea88f8879bcef5e00d947240a5a699e2daf41388c47460e320c20ecda6",
+            "emitted_packets": 1,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "f052a4a913525021ecdf96b5f74db75e9f5e2f36e111f6d4a6c3bd74ef444888",
+            "prefix_rows": 3,
+            "raw_prefix_sha256": "8232d15cb46e5449a712950f622909f89295b62e3688fd4d966f0b83127d6f54",
+            "reconstructed_prefix_sha256": "8232d15cb46e5449a712950f622909f89295b62e3688fd4d966f0b83127d6f54"
+          },
+          {
+            "emitted_packet_stream_sha256": "02280e5a650ebda18a0ce9ee8096f526038029d26ed6866d72b9dc612be9f1bf",
+            "emitted_packets": 2,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "d0af30f88e110a88455d8eebc51c2aa91ca91bffb2d65c4e1b8feb094011dcaa",
+            "prefix_rows": 7,
+            "raw_prefix_sha256": "140eb2249506d5d51119851da12d82bf59e66af0372699ac6c5f9ec496aa5f30",
+            "reconstructed_prefix_sha256": "140eb2249506d5d51119851da12d82bf59e66af0372699ac6c5f9ec496aa5f30"
+          },
+          {
+            "emitted_packet_stream_sha256": "18e1ed97c74d301960c69c94f86ae4c8cd7b632fab92a3ff5be3e76b4592c885",
+            "emitted_packets": 12,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "5669193b8bba06ef7424d08e4e2aa08ac57bd2cfb4148fca6a7795c818b7cbca",
+            "prefix_rows": 31,
+            "raw_prefix_sha256": "21bb95dfb8ff9381637e9fe4fe6c726b27f17e16336689feffa9f719ece7d890",
+            "reconstructed_prefix_sha256": "21bb95dfb8ff9381637e9fe4fe6c726b27f17e16336689feffa9f719ece7d890"
+          },
+          {
+            "emitted_packet_stream_sha256": "8b268b859667c079d421900b2dbacf31156cab64713c33dd48dff18584476c90",
+            "emitted_packets": 51,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "06b1c53ab7c9f4f1456fdffa0dbb9093e1e422bed59b6f5fc6e6f7f90aaed9f8",
+            "prefix_rows": 127,
+            "raw_prefix_sha256": "0e681de8b8912bb0f98426008b1a0d6424d897e2e107ef44cf096dd6cd5a5c59",
+            "reconstructed_prefix_sha256": "0e681de8b8912bb0f98426008b1a0d6424d897e2e107ef44cf096dd6cd5a5c59"
+          },
+          {
+            "emitted_packet_stream_sha256": "3e053c1742f8b9e423341df35cda079356fb83e93a93bf2ef3d5f193ff5c2e42",
+            "emitted_packets": 412,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "078f6c707876477c3d336261517a400d9c02fa0d7012bb666345567fcdd47a51",
+            "prefix_rows": 1023,
+            "raw_prefix_sha256": "ab3e0b4a05750faa6f93458d100d2b365e94378ffd9e879f092a01454527c751",
+            "reconstructed_prefix_sha256": "ab3e0b4a05750faa6f93458d100d2b365e94378ffd9e879f092a01454527c751"
+          },
+          {
+            "emitted_packet_stream_sha256": "f23af03ff983d5889f0fce2e12489834a4a4fc1d908d9bc302ddbcef2515bbbc",
+            "emitted_packets": 3327,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "3ca6354e4637578f6d7a5aef16654608c0f76583daf6e61cdad653dffd8bf267",
+            "prefix_rows": 8191,
+            "raw_prefix_sha256": "e3159ca67528f5a034f692fc95c265a046251635ef05daa6311cd5230d3998a7",
+            "reconstructed_prefix_sha256": "e3159ca67528f5a034f692fc95c265a046251635ef05daa6311cd5230d3998a7"
+          },
+          {
+            "emitted_packet_stream_sha256": "43567aa14776ff9cb8cdfcfe6963defaf06a5f20b3a5543b23bf6ba16674ea5d",
+            "emitted_packets": 26452,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 3,
+            "pending_packet_sha256": "413337b93a2c0c05f731d893864fdf22b80598e59c36195d2b3b0d275209e5ef",
+            "prefix_rows": 65535,
+            "raw_prefix_sha256": "2929498e7808b593da81977186a205fca02cc90bda3781f095b577dabf066a49",
+            "reconstructed_prefix_sha256": "2929498e7808b593da81977186a205fca02cc90bda3781f095b577dabf066a49"
+          },
+          {
+            "emitted_packet_stream_sha256": "f8540aab20bd90ea66337b4e1059aa7f038baeadb342a4577b79d83220d442d9",
+            "emitted_packets": 105682,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "822ca047c6ae9269896afda53847afb11fb97fa22fcbee7681aca81f39711862",
+            "prefix_rows": 262143,
+            "raw_prefix_sha256": "385d3812d7c21e6ad641b35438ffd463520515e91e650cdf382f154cbd2c115d",
+            "reconstructed_prefix_sha256": "385d3812d7c21e6ad641b35438ffd463520515e91e650cdf382f154cbd2c115d"
+          },
+          {
+            "emitted_packet_stream_sha256": "22f96c431bab2cdfd149182f954c71e7895b432cfdaa4b22c09ce751534cea0d",
+            "emitted_packets": 197215,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 3,
+            "pending_packet_sha256": "3176b3488fb3581cea3815270dfb19259e3b34fff567d05515ab9ee135f38c00",
+            "prefix_rows": 489229,
+            "raw_prefix_sha256": "fa00ca6e657d47cd5b55bd067fbd160440f4aff5ffb5003f3f62d1c9214be569",
+            "reconstructed_prefix_sha256": "fa00ca6e657d47cd5b55bd067fbd160440f4aff5ffb5003f3f62d1c9214be569"
+          }
+        ],
+        "closed_detector_delta_from_left_sync_ticks": {
+          "complete_histogram_sha256": "6c0203ed1c08ef7da07a3f543d7996e5cd7909f9b70b27308346425876ddfafd",
+          "count": 94794,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 129071,
+          "minimum": 122,
+          "support_size": 6453,
+          "top8_by_count_then_value": [
+            [
+              26915,
+              65
+            ],
+            [
+              6420,
+              60
+            ],
+            [
+              108896,
+              60
+            ],
+            [
+              31111,
+              59
+            ],
+            [
+              26593,
+              58
+            ],
+            [
+              772,
+              57
+            ],
+            [
+              6743,
+              57
+            ],
+            [
+              66615,
+              56
+            ]
+          ]
+        },
+        "closed_detector_delta_from_unique_setting_ticks": {
+          "complete_histogram_sha256": "983597488a3726d9c9afcf28b164e72eef2a3812bea849146c18c8b89bf22452",
+          "count": 94794,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 128720,
+          "minimum": -242,
+          "support_size": 10812,
+          "top8_by_count_then_value": [
+            [
+              26564,
+              40
+            ],
+            [
+              108546,
+              38
+            ],
+            [
+              5410,
+              35
+            ],
+            [
+              56581,
+              35
+            ],
+            [
+              58840,
+              35
+            ],
+            [
+              121119,
+              34
+            ],
+            [
+              30746,
+              33
+            ],
+            [
+              67070,
+              33
+            ]
+          ]
+        },
+        "closed_detector_setting_delta_undefined": 0,
+        "closed_detector_tags": {
+          "MULTIPLE_RECORDED_DETECTOR_ROWS": 16723,
+          "NO_RECORDED_DETECTOR_ROW": 121995,
+          "SINGLE_RECORDED_DETECTOR_ROW": 58496
+        },
+        "closed_intervals": 197214,
+        "closed_setting_tags": {
+          "ONEHOT_0": 98814,
+          "ONEHOT_1": 98400
+        },
+        "emitted_packet_stream_sha256": "22f96c431bab2cdfd149182f954c71e7895b432cfdaa4b22c09ce751534cea0d",
+        "emitted_packets": 197215,
+        "first8_emitted_packet_witnesses": [
+          {
+            "canonical_packet_sha256": "5e5c45ea88f8879bcef5e00d947240a5a699e2daf41388c47460e320c20ecda6",
+            "detector_tag": "SINGLE_RECORDED_DETECTOR_ROW",
+            "emitted_at": 1,
+            "kind": "PREFIX",
+            "owned_rows": 1,
+            "packet_ordinal": 0,
+            "setting_tag": "MISSING"
+          },
+          {
+            "canonical_packet_sha256": "5053c204f8fee3994c430cfa6ba273f5e4ec406c706a78c2a1fddc7394b0df0a",
+            "detector_tag": "MULTIPLE_RECORDED_DETECTOR_ROWS",
+            "emitted_at": 5,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 4,
+            "packet_ordinal": 1,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "12daae0f17aeb37144f8498c872192ddcac2e8f2cdeac8f47fd74bec03a14b03",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 7,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 2,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "15d9b4af6877d7a810c83d4a1bae2cbfa4a0b479d1134b2076015bead99da666",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 9,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 3,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "a4a30a29610f0d90a55c35ce1fd4ff091596e657a74ebb9baa2e35880d6a8a88",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 11,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 4,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "8b3dbc9458df2d9bf4c2d925ec5df643a15419886fc07fa53d337d10cbb8eafb",
+            "detector_tag": "MULTIPLE_RECORDED_DETECTOR_ROWS",
+            "emitted_at": 15,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 4,
+            "packet_ordinal": 5,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "b20b993785e0f17d98561cc7e36cbd7d1e801d2541f51f44afdf43165433386d",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 17,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 6,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "9da6d6ba0a268fd1245e9326162efe6b8cc9b5e85b6ce41cece5996a7ece75ab",
+            "detector_tag": "SINGLE_RECORDED_DETECTOR_ROW",
+            "emitted_at": 20,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 3,
+            "packet_ordinal": 7,
+            "setting_tag": "ONEHOT_1"
+          }
+        ],
+        "raw_prefix_sha256": "fa00ca6e657d47cd5b55bd067fbd160440f4aff5ffb5003f3f62d1c9214be569",
+        "rows": 489229
+      },
+      "full_archive_verified_before_zip_access": true,
+      "gates": {
+        "G02_ACTUAL_LOSSLESS": {
+          "checked_conditions": 1183362,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        },
+        "G03_ACTUAL_PREFIX_CHUNKING": {
+          "checked_conditions": 591729,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        },
+        "G04_ACTUAL_DERIVED_REFERENCE": {
+          "checked_conditions": 584042,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        }
+      },
+      "id": "bob-sync",
+      "member": {
+        "full_member_crc_verified_each_pass": true,
+        "name": "00_03_find_sync.T2.dat",
+        "passes": 2,
+        "scope": "FULL_MEMBER",
+        "selected_rows": 489229,
+        "uncompressed_bytes_declared_by_zip": 11741496,
+        "unread_tail_interpreted": false
+      },
+      "qualification": "QUALIFIED",
+      "qualification_failures": [],
+      "role": "SYNC",
+      "station": "bob"
+    },
+    {
+      "archive_bytes": 363415009,
+      "archive_sha256": "d581080c9fa6853a1bfb8ce511782563f433512f3ce7efb612202a5179c5ee6c",
+      "audit": {
+        "checkpoints": [
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "UNANCHORED",
+            "pending_owned_rows": 0,
+            "pending_packet_sha256": "0625c0d7afcebe87e88895b7a8cf51a9dc46fd65725d844082aaba9dcf57fdb6",
+            "prefix_rows": 0,
+            "raw_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "reconstructed_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "8b1ff6abab0c39d7ce617f3c3ceb94e181cee08e97abcbf6003913f51d1bc3c6",
+            "prefix_rows": 1,
+            "raw_prefix_sha256": "08055d7bad1ed22b8c125865bfe8ce8aacd234c1eb73cb939543b16352813e5b",
+            "reconstructed_prefix_sha256": "08055d7bad1ed22b8c125865bfe8ce8aacd234c1eb73cb939543b16352813e5b"
+          },
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "e88e33d2735ddfc54a1582c8062f6e06643650aac12ae537839337272b9d0d86",
+            "prefix_rows": 2,
+            "raw_prefix_sha256": "f7d6df724972a55fe8ba42e43ea2b4481e3d18f4c42fd85faa0a86c0a0e69921",
+            "reconstructed_prefix_sha256": "f7d6df724972a55fe8ba42e43ea2b4481e3d18f4c42fd85faa0a86c0a0e69921"
+          },
+          {
+            "emitted_packet_stream_sha256": "458870b8e24fd2577de7f8b849f3dc8415305a5ee5286f5799ccf4ec48380721",
+            "emitted_packets": 1,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "38329a3dc0abb00fde346b6be01c40ba019fc7eba147a6d55480a8d36edb8acd",
+            "prefix_rows": 3,
+            "raw_prefix_sha256": "f513efe167d2d79260315ebdc711164e835b10be83dd25e2bf0af124178e4eca",
+            "reconstructed_prefix_sha256": "f513efe167d2d79260315ebdc711164e835b10be83dd25e2bf0af124178e4eca"
+          },
+          {
+            "emitted_packet_stream_sha256": "9100ae3c91b2e738a45fb47fe94bc330ba048805e8ecd75730311c28423967e1",
+            "emitted_packets": 3,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "910291d7655c7e973f6f17dfd07cad694c785bf021e52dd385fe91d8abf8ea51",
+            "prefix_rows": 7,
+            "raw_prefix_sha256": "727222a2231758f5c470cc8b03ce5d95e9a26da4c8f62af62fc4fccea560027d",
+            "reconstructed_prefix_sha256": "727222a2231758f5c470cc8b03ce5d95e9a26da4c8f62af62fc4fccea560027d"
+          },
+          {
+            "emitted_packet_stream_sha256": "b3dd273219d41421b4960277a978fd4f2c6aa0f357d4424bad813ed5989d2a3a",
+            "emitted_packets": 14,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "a5b063d61e78e7316d37948de7a6e67c331fb56d78f73ec6ad6135fa26752cdd",
+            "prefix_rows": 31,
+            "raw_prefix_sha256": "ba2b8a78a1fc766759f151cf32788847b97431510ccb5e338ee35742107bef0f",
+            "reconstructed_prefix_sha256": "ba2b8a78a1fc766759f151cf32788847b97431510ccb5e338ee35742107bef0f"
+          },
+          {
+            "emitted_packet_stream_sha256": "463234108294d9b852507c01258e1c2d9bd57901bab2c906b5a6c136cae5254c",
+            "emitted_packets": 61,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "0ecf43bc259946adebaac7c2e0cc91b4caa3e00aee48490c8cd9ff3131e351db",
+            "prefix_rows": 127,
+            "raw_prefix_sha256": "0ae2d6e1e0bed3452eb1ca97bb8c7c1ebc5bf4ba92d6dbae10979641791c3216",
+            "reconstructed_prefix_sha256": "0ae2d6e1e0bed3452eb1ca97bb8c7c1ebc5bf4ba92d6dbae10979641791c3216"
+          },
+          {
+            "emitted_packet_stream_sha256": "32df269a10765e13f6053cd714833a5e074903a61fc1d891936f24e8fd04a3b9",
+            "emitted_packets": 499,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "66a43becd9f3b2d6967ca869881aad7d59ab4eafcb6a8d211b8d46e021c2316f",
+            "prefix_rows": 1023,
+            "raw_prefix_sha256": "7dd2b92e95096232bed6d7df9eb9254b2d55f424f97e65b660f5b5fbd0bb92df",
+            "reconstructed_prefix_sha256": "7dd2b92e95096232bed6d7df9eb9254b2d55f424f97e65b660f5b5fbd0bb92df"
+          },
+          {
+            "emitted_packet_stream_sha256": "be03bb2ed0339446ce264cf76273ae08a860ec3ed43f988198560a1c31eedac6",
+            "emitted_packets": 3988,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "b4a292a63ee3dd1a1366e6c41912e4a8da323b6acf99c91dc03ffae9402ab7ba",
+            "prefix_rows": 8191,
+            "raw_prefix_sha256": "cfe65111f07ed921f69d28cc27949eced358823d28553beb0b1ebf123d139652",
+            "reconstructed_prefix_sha256": "cfe65111f07ed921f69d28cc27949eced358823d28553beb0b1ebf123d139652"
+          },
+          {
+            "emitted_packet_stream_sha256": "5ab23bca8f456e5f31d2f0f9b945df7b55c7071194edb1b28fb0d31cdbc82f92",
+            "emitted_packets": 31960,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "b04dc20d69736bea3fca1a69e9decb3275d4c63fe790661805aa1fb5ba010e9d",
+            "prefix_rows": 65535,
+            "raw_prefix_sha256": "831d4064545bcabd2c26f49a4f1713e8f5878421c96ed3bd7c1c24e7c769caba",
+            "reconstructed_prefix_sha256": "831d4064545bcabd2c26f49a4f1713e8f5878421c96ed3bd7c1c24e7c769caba"
+          },
+          {
+            "emitted_packet_stream_sha256": "25e0c7bc3596231625b040265b055b344e65b020ea3a9154db8726856ec60b4c",
+            "emitted_packets": 127970,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "c22c0fe821d22c77dd01d5f034ff5a4d314ef4713ed6f0785c98f12dc9bc6082",
+            "prefix_rows": 262143,
+            "raw_prefix_sha256": "43f57dd135fa0097810dd80d77f4d33b587c93c5fd2193f5e435d5f8a7ecc031",
+            "reconstructed_prefix_sha256": "43f57dd135fa0097810dd80d77f4d33b587c93c5fd2193f5e435d5f8a7ecc031"
+          },
+          {
+            "emitted_packet_stream_sha256": "5adee6584f13e37abed2c1fd3f589eb8a65b09264a8a8b00b6b56a77763532dd",
+            "emitted_packets": 512047,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "1913f8ed8129aeab32aef6f891fc22030db34cc831701fec27a8d332c9bcc503",
+            "prefix_rows": 1048576,
+            "raw_prefix_sha256": "b7ce5618fa026dedbc5251656b1996bbec2c7bfc0e3d2a760de5e32ca4e140f1",
+            "reconstructed_prefix_sha256": "b7ce5618fa026dedbc5251656b1996bbec2c7bfc0e3d2a760de5e32ca4e140f1"
+          }
+        ],
+        "closed_detector_delta_from_left_sync_ticks": {
+          "complete_histogram_sha256": "f601ceb3286cd3f8798eeb6f9c89955362e66098746bc212375c1e42d9c206cd",
+          "count": 24469,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 129038,
+          "minimum": 7,
+          "support_size": 10859,
+          "top8_by_count_then_value": [
+            [
+              4770,
+              24
+            ],
+            [
+              5415,
+              20
+            ],
+            [
+              6867,
+              19
+            ],
+            [
+              5254,
+              18
+            ],
+            [
+              6545,
+              18
+            ],
+            [
+              6868,
+              18
+            ],
+            [
+              5576,
+              17
+            ],
+            [
+              6222,
+              17
+            ]
+          ]
+        },
+        "closed_detector_delta_from_unique_setting_ticks": {
+          "complete_histogram_sha256": "45d455703cd3b5678b49e44ab6451cce65474ff5aace5c173eb4fc1104911471",
+          "count": 24469,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 128986,
+          "minimum": -43,
+          "support_size": 13583,
+          "top8_by_count_then_value": [
+            [
+              5675,
+              18
+            ],
+            [
+              5837,
+              16
+            ],
+            [
+              5031,
+              15
+            ],
+            [
+              5513,
+              15
+            ],
+            [
+              5836,
+              15
+            ],
+            [
+              5514,
+              14
+            ],
+            [
+              5353,
+              13
+            ],
+            [
+              5191,
+              12
+            ]
+          ]
+        },
+        "closed_detector_setting_delta_undefined": 0,
+        "closed_detector_tags": {
+          "MULTIPLE_RECORDED_DETECTOR_ROWS": 746,
+          "NO_RECORDED_DETECTOR_ROW": 488341,
+          "SINGLE_RECORDED_DETECTOR_ROW": 22960
+        },
+        "closed_intervals": 512047,
+        "closed_setting_tags": {
+          "ONEHOT_0": 258392,
+          "ONEHOT_1": 253655
+        },
+        "emitted_packet_stream_sha256": "5adee6584f13e37abed2c1fd3f589eb8a65b09264a8a8b00b6b56a77763532dd",
+        "emitted_packets": 512047,
+        "first8_emitted_packet_witnesses": [
+          {
+            "canonical_packet_sha256": "458870b8e24fd2577de7f8b849f3dc8415305a5ee5286f5799ccf4ec48380721",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 2,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 0,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "8c78303a8406a4c4e8a35dc25cb86436b6cfc4ee0e47c49d4dd20ad97a7b9316",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 4,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 1,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "40c8d09d1de7c4b8ac9d8d912800740a003231207cf94965d636f5a896203dd8",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 6,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 2,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "7f2bb850c82063f445423ffe05b3e73bc26c722a593cced993d6131e2a1c1b29",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 8,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 3,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "28cd923659d4bebf8a0c5b85b0757dd499084bd93fc363fb05c5c5c86d092847",
+            "detector_tag": "SINGLE_RECORDED_DETECTOR_ROW",
+            "emitted_at": 11,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 3,
+            "packet_ordinal": 4,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "b78de69fe5b1b114ee939ee518ed7f14ba3e3384e2f76448df027fe5e4aa31f9",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 13,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 5,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "c4d8835811f98ff6bbffcdd8b3de24a0ddc784269e2043afaf3c75742b0fd40d",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 15,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 6,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "eebf6911605ca28b930859990eab6e479b6b73a0084f0d6fe5047f4c46079be2",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 17,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 7,
+            "setting_tag": "ONEHOT_1"
+          }
+        ],
+        "raw_prefix_sha256": "b7ce5618fa026dedbc5251656b1996bbec2c7bfc0e3d2a760de5e32ca4e140f1",
+        "rows": 1048576
+      },
+      "full_archive_verified_before_zip_access": true,
+      "gates": {
+        "G02_ACTUAL_LOSSLESS": {
+          "checked_conditions": 3072354,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        },
+        "G03_ACTUAL_PREFIX_CHUNKING": {
+          "checked_conditions": 1536225,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        },
+        "G04_ACTUAL_DERIVED_REFERENCE": {
+          "checked_conditions": 1073056,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        }
+      },
+      "id": "alice-run3",
+      "member": {
+        "full_member_crc_verified_each_pass": false,
+        "name": "00_44_CH_pockel_100kHz.run3.alice.dat",
+        "passes": 2,
+        "scope": "PREFIX_ONLY",
+        "selected_rows": 1048576,
+        "uncompressed_bytes_declared_by_zip": 2033058672,
+        "unread_tail_interpreted": false
+      },
+      "qualification": "QUALIFIED",
+      "qualification_failures": [],
+      "role": "RUN",
+      "station": "alice"
+    },
+    {
+      "archive_bytes": 379105464,
+      "archive_sha256": "f42204b41289c26ef779d39957062604c8d4008a4892724b7f2078afd7ddd5d4",
+      "audit": {
+        "checkpoints": [
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "UNANCHORED",
+            "pending_owned_rows": 0,
+            "pending_packet_sha256": "b19f4c747b882a42eb64ad94251b67ed8ed01b597c3a034c9a79f20a38991c5a",
+            "prefix_rows": 0,
+            "raw_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "reconstructed_prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "6fc6e7bf4cf6f53a7c19c5258bb49880c61b59d4b8155a1f11b6ab9655db81e6",
+            "prefix_rows": 1,
+            "raw_prefix_sha256": "1bad985aff641d88da34de0fb6cad12719decf18daa33f5463ecca0fd5ce6b42",
+            "reconstructed_prefix_sha256": "1bad985aff641d88da34de0fb6cad12719decf18daa33f5463ecca0fd5ce6b42"
+          },
+          {
+            "emitted_packet_stream_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "emitted_packets": 0,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "b987f09ad90b2c590bf63a4b9275dd99c09f5649682c886dd921bfd58392e767",
+            "prefix_rows": 2,
+            "raw_prefix_sha256": "1ffbe6d84674e6a4ab1bcfeebae0eb393e7a2fd2f9051fb5e22b519b704f053b",
+            "reconstructed_prefix_sha256": "1ffbe6d84674e6a4ab1bcfeebae0eb393e7a2fd2f9051fb5e22b519b704f053b"
+          },
+          {
+            "emitted_packet_stream_sha256": "0ae7ed938bf26e167b2555f02a0cfec0332f0494c3182976463dabd602a49f64",
+            "emitted_packets": 1,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "f1bfa0f1a1cf0336eb34e60fefaa02d779fc7feb4a8063e5cbd31e485fa69819",
+            "prefix_rows": 3,
+            "raw_prefix_sha256": "1cacda6be326153b12d4ae70865ae1ae8a85e9d5d0f6218caa1704d6457ca9e9",
+            "reconstructed_prefix_sha256": "1cacda6be326153b12d4ae70865ae1ae8a85e9d5d0f6218caa1704d6457ca9e9"
+          },
+          {
+            "emitted_packet_stream_sha256": "88ac16630690b8441d6eda049304ecabc9aed6b5430fa8740c6f421fe085aabb",
+            "emitted_packets": 2,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 3,
+            "pending_packet_sha256": "b191c625f44a83aa46d3442cd8618c3bd8eaca2416c70179b85aeb8bda35e87b",
+            "prefix_rows": 7,
+            "raw_prefix_sha256": "e58c4d585e7ecb81b696c170e53d71fc69ebba2b9b84ed1dc9bc18b95e69fb2b",
+            "reconstructed_prefix_sha256": "e58c4d585e7ecb81b696c170e53d71fc69ebba2b9b84ed1dc9bc18b95e69fb2b"
+          },
+          {
+            "emitted_packet_stream_sha256": "d4886b19a9920ec1a6634fddbb32f56e94c98a465d0f3af97d28faf39ce015c6",
+            "emitted_packets": 14,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "e30b16d9550491369a9175affae4b31b08a3f5bb1e615131a70ac9c8329753d8",
+            "prefix_rows": 31,
+            "raw_prefix_sha256": "b19e3614198f3550970ff6301c3003d7110553d608a08a222b5dbc7da62aee88",
+            "reconstructed_prefix_sha256": "b19e3614198f3550970ff6301c3003d7110553d608a08a222b5dbc7da62aee88"
+          },
+          {
+            "emitted_packet_stream_sha256": "72ec3135f0ff82d2509417a968f28d40ffddfd3df1140257cca810080124403a",
+            "emitted_packets": 62,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "c1071a24fabd126a464b42b9ec53d542411e95246719e7a7b6df6debabb48af3",
+            "prefix_rows": 127,
+            "raw_prefix_sha256": "d3ac41f267fbd90be7ee878d8a7d7cfaa8dbce66c5ae7f3acb73e046dd5460af",
+            "reconstructed_prefix_sha256": "d3ac41f267fbd90be7ee878d8a7d7cfaa8dbce66c5ae7f3acb73e046dd5460af"
+          },
+          {
+            "emitted_packet_stream_sha256": "bf72fba9cfab03f77570717949435c6013ed26ef40d6e944dc013b0390be62fb",
+            "emitted_packets": 500,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "03444cf19b2ff4da17729467ea9e646217847a608f1d47e3f34a0f5a3d44bb85",
+            "prefix_rows": 1023,
+            "raw_prefix_sha256": "cad172b736dca67102b607dd9b4523812f6748855ed4d9bc2b691c2a4eeffdd1",
+            "reconstructed_prefix_sha256": "cad172b736dca67102b607dd9b4523812f6748855ed4d9bc2b691c2a4eeffdd1"
+          },
+          {
+            "emitted_packet_stream_sha256": "b4be71263244e36e3f5059388e3a4efbe1d29c7345a69557ec8dab15ee7ddcc1",
+            "emitted_packets": 4008,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 3,
+            "pending_packet_sha256": "e61dea603b26e3157587f6dfc47d7b6f8de2d6ce34b9c1257873611bcfdcbd1a",
+            "prefix_rows": 8191,
+            "raw_prefix_sha256": "d04a8a5a822b2f7f216707c271549d8bbe057309e2d94396cb0d99d6836bf7ee",
+            "reconstructed_prefix_sha256": "d04a8a5a822b2f7f216707c271549d8bbe057309e2d94396cb0d99d6836bf7ee"
+          },
+          {
+            "emitted_packet_stream_sha256": "542162570f217d35231621f0cbdfdb9408bfc06ffc0bbbf6f61fe74deecaaaab",
+            "emitted_packets": 32110,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 2,
+            "pending_packet_sha256": "70d554b24a72ac2d2d3ad9f19750adbb9a4c46453b2667fc7bcbcd99d4d31560",
+            "prefix_rows": 65535,
+            "raw_prefix_sha256": "6bcebbb805fce88fcbc44555c2713ce1f3540a71f85c2b134614ef5a692c7575",
+            "reconstructed_prefix_sha256": "6bcebbb805fce88fcbc44555c2713ce1f3540a71f85c2b134614ef5a692c7575"
+          },
+          {
+            "emitted_packet_stream_sha256": "d40c085b0da8f4df65d7d2a8d95665f24358c10af396feccfef1ebd1e32e38f8",
+            "emitted_packets": 128577,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "04c8d9b511b04eda82095981d725a7364113a0690d145e2681c34f22ea1e0fdb",
+            "prefix_rows": 262143,
+            "raw_prefix_sha256": "d5a2205d804bf5610bc7e6804b84ab2ffb211bd320bdaa695060935a9dee1fcf",
+            "reconstructed_prefix_sha256": "d5a2205d804bf5610bc7e6804b84ab2ffb211bd320bdaa695060935a9dee1fcf"
+          },
+          {
+            "emitted_packet_stream_sha256": "0a28121aa3712ec92839b6eb439c98118086d55a5a23890eb0c3caacb24c7e03",
+            "emitted_packets": 514203,
+            "pending_kind": "PENDING_SUFFIX",
+            "pending_owned_rows": 1,
+            "pending_packet_sha256": "b09f2a3148aecd2c0f6db8fa6aa71c3bf85c308d19e2aa942bb06684679aa301",
+            "prefix_rows": 1048576,
+            "raw_prefix_sha256": "1828e020271dd8c731e6573383439a0d514d8810698e6378e7351df99c5e4e87",
+            "reconstructed_prefix_sha256": "1828e020271dd8c731e6573383439a0d514d8810698e6378e7351df99c5e4e87"
+          }
+        ],
+        "closed_detector_delta_from_left_sync_ticks": {
+          "complete_histogram_sha256": "a8844ee559fb04eb18396d026dfcc898af2c878f38c61470cd4ccf30fe5661cc",
+          "count": 20159,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 129070,
+          "minimum": 125,
+          "support_size": 6297,
+          "top8_by_count_then_value": [
+            [
+              6097,
+              27
+            ],
+            [
+              7226,
+              23
+            ],
+            [
+              6904,
+              22
+            ],
+            [
+              7872,
+              22
+            ],
+            [
+              6258,
+              21
+            ],
+            [
+              7550,
+              21
+            ],
+            [
+              8195,
+              21
+            ],
+            [
+              7873,
+              20
+            ]
+          ]
+        },
+        "closed_detector_delta_from_unique_setting_ticks": {
+          "complete_histogram_sha256": "f2197f6d1b099ed095da85abb66ce4db262d24fc47c916790b41424d52542765",
+          "count": 20159,
+          "hash_encoding": "ASCII ascending signed integer, TAB count, LF per bin",
+          "maximum": 128720,
+          "minimum": -240,
+          "support_size": 8930,
+          "top8_by_count_then_value": [
+            [
+              5733,
+              21
+            ],
+            [
+              5894,
+              19
+            ],
+            [
+              6862,
+              19
+            ],
+            [
+              5732,
+              18
+            ],
+            [
+              7508,
+              17
+            ],
+            [
+              6701,
+              16
+            ],
+            [
+              7507,
+              16
+            ],
+            [
+              8314,
+              16
+            ]
+          ]
+        },
+        "closed_detector_setting_delta_undefined": 0,
+        "closed_detector_tags": {
+          "MULTIPLE_RECORDED_DETECTOR_ROWS": 379,
+          "NO_RECORDED_DETECTOR_ROW": 494432,
+          "SINGLE_RECORDED_DETECTOR_ROW": 19392
+        },
+        "closed_intervals": 514203,
+        "closed_setting_tags": {
+          "ONEHOT_0": 256820,
+          "ONEHOT_1": 257383
+        },
+        "emitted_packet_stream_sha256": "0a28121aa3712ec92839b6eb439c98118086d55a5a23890eb0c3caacb24c7e03",
+        "emitted_packets": 514203,
+        "first8_emitted_packet_witnesses": [
+          {
+            "canonical_packet_sha256": "0ae7ed938bf26e167b2555f02a0cfec0332f0494c3182976463dabd602a49f64",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 2,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 0,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "0c700542f7e6e17bb97688512281f09f1c0dc6e8dc443b5853b1aec18f314de0",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 4,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 1,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "215370d203babf172798a102ec080b7e046fe59e8635348c2f137ad95082a8d0",
+            "detector_tag": "SINGLE_RECORDED_DETECTOR_ROW",
+            "emitted_at": 7,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 3,
+            "packet_ordinal": 2,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "8db0e59e87c3611ebd26f25b27a4fb6e528f68a4ecfbc0662ef7e822d0565cf5",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 9,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 3,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "b5fcc3d573d6c52613e415b26cc06e3373dde9d68ac03bbd9c5ee5a36b27d63e",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 11,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 4,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "dcad65b2b4e96999334159714cac15c5b716838c6d0191c0f563d748d0adb94b",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 13,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 5,
+            "setting_tag": "ONEHOT_1"
+          },
+          {
+            "canonical_packet_sha256": "cb36842670345e742dc77bec257b3abb9be57912909caff37d051e40d1360dfe",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 15,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 6,
+            "setting_tag": "ONEHOT_0"
+          },
+          {
+            "canonical_packet_sha256": "8a0f10102f0b4bd236828897bdad8189717156f9438d6a78bbee48c3787147c2",
+            "detector_tag": "NO_RECORDED_DETECTOR_ROW",
+            "emitted_at": 17,
+            "kind": "CLOSED_INTERVAL",
+            "owned_rows": 2,
+            "packet_ordinal": 7,
+            "setting_tag": "ONEHOT_1"
+          }
+        ],
+        "raw_prefix_sha256": "1828e020271dd8c731e6573383439a0d514d8810698e6378e7351df99c5e4e87",
+        "rows": 1048576
+      },
+      "full_archive_verified_before_zip_access": true,
+      "gates": {
+        "G02_ACTUAL_LOSSLESS": {
+          "checked_conditions": 3085290,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        },
+        "G03_ACTUAL_PREFIX_CHUNKING": {
+          "checked_conditions": 1542693,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        },
+        "G04_ACTUAL_DERIVED_REFERENCE": {
+          "checked_conditions": 1068748,
+          "failed_conditions": 0,
+          "first8_failures": [],
+          "status": "PASS"
+        }
+      },
+      "id": "bob-run3",
+      "member": {
+        "full_member_crc_verified_each_pass": false,
+        "name": "00_43_CH_pockel_100kHz.run3.bob.dat",
+        "passes": 2,
+        "scope": "PREFIX_ONLY",
+        "selected_rows": 1048576,
+        "uncompressed_bytes_declared_by_zip": 2025337536,
+        "unread_tail_interpreted": false
+      },
+      "qualification": "QUALIFIED",
+      "qualification_failures": [],
+      "role": "RUN",
+      "station": "bob"
+    }
+  ],
+  "packet_serialization": "compact sorted-key ASCII JSON plus LF per packet",
+  "pending_snapshot_is_not_an_emitted_event": true,
+  "physical_trial_calibrated_no_click_bell_or_born_claim": false,
+  "prior_source_prefix_exposure_declared": true,
+  "raw_serialization": "<QQQ in original row ownership order; nonowning references omitted",
+  "record_cap_per_object": 1048576,
+  "schema": "nist-local-observed-interval-audit/1",
+  "source_manifest_sha256": "653e5dd17b041ecf38244bcd8312fa724863eb681f940795e38974182f7bbe8a",
+  "synthetic": {
+    "all_prefix_checks": 13539,
+    "all_two_chunk_split_checks": 13539,
+    "alphabet": [
+      0,
+      2,
+      4,
+      5,
+      6,
+      64,
+      99
+    ],
+    "cases": 2801,
+    "fixture_rows_sha256": "20f0a5edcd04e1ce826f4d553ab808cc52c726b05c183001b61f322355e807f6",
+    "gate": {
+      "checked_conditions": 91973,
+      "failed_conditions": 0,
+      "first8_failures": [],
+      "status": "PASS"
+    },
+    "lengths": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}
