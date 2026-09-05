@@ -32,7 +32,7 @@ all_pinned_sources_pre_post_match: yes
 worktree_clean_before_and_after: yes
 claim_A: CONFIRMED
 claim_B: CONFIRMED
-architecture_gate: PENDING public aarch64 and x86_64 cold replay
+architecture_gate: PASS aarch64 and x86_64; workflow 33962156745
 ```
 
 ## Complete immutable source inventory
@@ -75,3 +75,29 @@ fixtures are visibly separate from experimental records.
 Independent public cold replay and post-result review will supplement this
 initial record. Their scope is exact archived-record reconstruction; no physical
 clock pairing, trial, post-state, no-click, apparatus or Born claim is made.
+
+## Independent architecture and post-result review evidence
+
+[Workflow 33962156745](https://github.com/mathorn1973/twist-j/actions/runs/33962156745) passed on result commit
+`f37cb6b803ccab9c8adb4c7f310f7392cfe6494c`. This commit adds only EXPECTED.txt, RUN.md and
+RESULT.md to the immutable analytical pin.
+
+| Architecture | Public job | Exact cold replay |
+|---|---|---|
+| aarch64 | [101295794608](https://github.com/mathorn1973/twist-j/actions/runs/33962156745/job/101295794608) | PASS |
+| x86_64 | [101295794350](https://github.com/mathorn1973/twist-j/actions/runs/33962156745/job/101295794350) | PASS |
+
+Both public jobs retrieved the same four original NIST archives without the
+local cache hint. Each verified their complete compressed hashes before the
+same bounded audit and independently reported the actual runner architecture,
+verifier SHA-256 and the exact stdout SHA-256 recorded above. The unchanged
+600-second timeout was met. These runs reproduced archived evidence, not an
+independent experiment. The aggregate required check and all 155 tool tests
+passed on both jobs.
+
+Clean Linux policy, Canon, ledger, gate-contract, status-label, tool-test and
+exact changed-probe replay checks passed. No changed minimal reproduction was
+applicable. Independent post-result scope, source-integrity, evidence-count,
+privacy and license review passed. The nine new files are printable text;
+raw archives remain outside Git under the unchanged NIST notice. Neither
+review nor architecture agreement changes any public registry status.

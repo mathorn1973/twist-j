@@ -69,9 +69,13 @@ exact **58,096-byte, 1,419-line** JSON stdout with SHA-256
 `c10825ec57fd5672e7a05d9caba1d1946cbea420d9cbf10968b596c7cb847836`.
 RUN.md records the complete pin and execution inventory.
 
-The initial run used x86_64 Linux. Independent public cold replay on aarch64
-and x86_64 is pending. No computation-only public T status is claimed from
-this first run, and no registry change is made.
+Independent public cold replay on **aarch64 and x86_64 passed** in
+[workflow 33962156745](https://github.com/mathorn1973/twist-j/actions/runs/33962156745), with identical verifier and stdout hashes.
+The required aggregate check, all 155 tool tests, repository checks and
+independent post-result scope/integrity/license review passed. RUN.md gives
+the job references and exact evidence. The two-architecture computation gate
+is satisfied for this conditional audit; claims remain unregistered and
+no public status is changed.
 
 ## Signed-delay diagnostics and physical boundary
 
