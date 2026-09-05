@@ -1,0 +1,392 @@
+{
+  "template_id": "POC1-TEMPLATE",
+  "status": [
+    "NON-CANONICAL",
+    "TEMPLATE",
+    "NOT_EXECUTABLE",
+    "NO_DATA",
+    "STOP-DEFINITION"
+  ],
+  "basis": {
+    "main_commit": "60f7649747fd5dba4279ae8f840da3b0f3ae9729",
+    "canon": "Public Canon v76",
+    "content_commit": "07910adb8418742bf52a0d204577b84b38009b18",
+    "canon_sha256": "c151a19997dba95d78836c46f38463ab2735ae1c98674f87888d519d7a500112",
+    "canon_bytes": 420539
+  },
+  "administration": {
+    "definition_issue": 830,
+    "definition_issue_url": "https://github.com/mathorn1973/twist-j/issues/830",
+    "typed_definition_issue": 539,
+    "typed_definition_issue_state": "OPEN",
+    "typed_definition_issue_note": "OPEN is an informational issue-state readback, not a scientific status.",
+    "scientific_owner": "QDD-INSTRUMENT-APPARATUS",
+    "scientific_owner_registry_status": "O",
+    "profile": "RRP1-PROFILE",
+    "note": "DECODER-PORT-OBSERVABLE-CALIBRATION-1.md"
+  },
+  "scope": {
+    "purpose": "Prospective observation/calibration for one context; no hardware, data, certificate, executable map or physical ID.",
+    "mathematical_outputs_are_physical_ids": false,
+    "whole_decoder_completion": false,
+    "reset_ruling": "UNRESOLVED:RRP1-TYPED-RESET-RULING",
+    "feeds_U": "FALSE",
+    "physical_input_to_U": false,
+    "thresholds_are_probabilities": false
+  },
+  "definitions": {
+    "POC1-TEMPLATE": "Unresolved non-executable template.",
+    "POC1-SRC-RRP1": "Pinned RRP1 profile files.",
+    "POC1-SRC-CANON": "Pinned Canon apparatus/metrology boundaries.",
+    "POC1-SRC-PORT": "Pinned general port law.",
+    "POC1-RAW": "Immutable complete raw sample.",
+    "POC1-SENSOR-CAL": "Independent sensor calibration.",
+    "POC1-TRACE": "Immutable raw trace plus derived feature.",
+    "POC1-PORT-FEATURE": "Signed estimate, not physical ID.",
+    "POC1-SI-DICTIONARY": "Unresolved proposed scales.",
+    "POC1-WAVE-SEPARATION": "Independent directional or cold force/velocity route.",
+    "POC1-PREPARATION": "Source/ready certificate.",
+    "POC1-CUT": "Physical timestamp-to-cut bridge.",
+    "POC1-MODEL-IDENTIFICATION": "Designated identification data.",
+    "POC1-VALIDATION": "Disjoint held-out prediction.",
+    "POC1-WORK": "Work into the wave.",
+    "POC1-BUDGET": "Joint error budget.",
+    "POC1-DIAGNOSTICS": "Planned pulses, no data.",
+    "POC1-ROUTING": "STOP on missing premises."
+  },
+  "source_handles": [
+    {
+      "source_id": "POC1-SRC-RRP1",
+      "commit": "60f7649747fd5dba4279ae8f840da3b0f3ae9729",
+      "paths": [
+        "notes/DECODER-RESERVOIR-PHYSICAL-PROFILE-1.md",
+        "notes/DECODER-RESERVOIR-PHYSICAL-PROFILE-1.json"
+      ],
+      "symbols": [
+        "RRP1-PROFILE",
+        "RRP1-PROSPECTIVE-WARM-PULSE",
+        "RRP1-PROSPECTIVE-COLD-PULSE",
+        "RRP1-CALIBRATION-DOMAIN"
+      ]
+    },
+    {
+      "source_id": "POC1-SRC-CANON",
+      "commit": "60f7649747fd5dba4279ae8f840da3b0f3ae9729",
+      "paths": [
+        "canon/CANON.md",
+        "canon/REGISTRY.tsv"
+      ],
+      "locators": [
+        "Canon lines 648-840",
+        "Canon lines 1832-1907",
+        "Canon lines 8950-8972 and 10182-10198",
+        "REGISTRY line 312"
+      ]
+    },
+    {
+      "source_id": "POC1-SRC-PORT",
+      "commit": "550420d188a45c4929e300ca6aabcde812f4d65a",
+      "paths": [
+        "probes/P-DECODER-RESERVOIR-COUPLING-1/coupling.py",
+        "probes/P-DECODER-RESERVOIR-COUPLING-1/PROOF.md"
+      ],
+      "symbols": [
+        "couple",
+        "reverse",
+        "DECODER-RESERVOIR-RECORD-ACCOUNTING"
+      ]
+    }
+  ],
+  "observation": {
+    "contract_id": "POC1-RAW",
+    "mode": "UNRESOLVED:OBSERVATION_MODE",
+    "allowed_modes": [
+      "DIRECT_SIGNED_AB",
+      "EFFORT_FLOW_WITH_INDEPENDENT_SEPARATION",
+      "COLD_FORCE_VELOCITY"
+    ],
+    "physical_observable_ids": [
+      "UNRESOLVED:PHYSICAL_CHANNEL_1",
+      "UNRESOLVED:PHYSICAL_CHANNEL_2"
+    ],
+    "sensor_ids": [
+      "UNRESOLVED:SENSOR_1",
+      "UNRESOLVED:SENSOR_2"
+    ],
+    "channel_assignments": "UNRESOLVED:CHANNEL_TO_PORT_ROLE",
+    "site_orientation_map": "UNRESOLVED:SENSOR_TO_MARKED_SITE",
+    "raw_sample_fields": [
+      "trace_id",
+      "context_id",
+      "channel_id",
+      "sequence",
+      "native_timestamp",
+      "native_code",
+      "quality_flags"
+    ],
+    "raw_equality": "Literal complete sample equality, including time/channel/flags/context.",
+    "native_code_type": "UNRESOLVED:NATIVE_CODE_SCHEMA",
+    "native_timestamp_type": "UNRESOLVED:NATIVE_TIME_SCHEMA",
+    "acquisition_model": "UNRESOLVED:BANDWIDTH_RANGE_LINEARITY_SAMPLING_MODEL",
+    "range_clipping_missing_rules": "UNRESOLVED:PREDECLARED_ACQUISITION_QUALITY_RULES",
+    "force_velocity_channels": "Proposed mechanical observables, physically unresolved."
+  },
+  "trace": {
+    "contract_id": "POC1-TRACE",
+    "fields": [
+      "trace_id",
+      "context_id",
+      "ordered_raw_samples",
+      "raw_manifest_id",
+      "acquisition_config_id",
+      "window_spec_id",
+      "sensor_calibration_id",
+      "preparation_id",
+      "cut_bridge_id"
+    ],
+    "raw_retention": "Retain immutable raw bytes; no overwrite by corrected data.",
+    "raw_readback": "UNRESOLVED:LOSSLESS_DEVICE_READBACK_AND_EXPORT",
+    "baseline_window": "UNRESOLVED:BASELINE_HALF_OPEN_WINDOW",
+    "pulse_window": "UNRESOLVED:PULSE_HALF_OPEN_WINDOW",
+    "window_weights": "UNRESOLVED:FIXED_FEATURE_WEIGHTS",
+    "feature_map": "UNRESOLVED:EXACT_DECLARED_EXTRACTION_OPERATOR",
+    "window_rule": "Freeze windows/weights before validation; no peak or target-based selection.",
+    "data_quality_rule": "Invalid/clipped/missing samples retain flags; never fabricated zero or silent omission."
+  },
+  "sensor_calibration": {
+    "contract_id": "POC1-SENSOR-CAL",
+    "sensor_standard_manifest": "UNRESOLVED:INDEPENDENT_SENSOR_REFERENCE",
+    "calibration_dataset_ids": [
+      "UNRESOLVED:SENSOR_CALIBRATION_DATASET"
+    ],
+    "calibration_function_id": "UNRESOLVED:INDEPENDENT_SENSOR_CALIBRATION_MAP",
+    "offsets": "UNRESOLVED:CHANNEL_OFFSETS_AND_DRIFT",
+    "positive_gains": "UNRESOLVED:CHANNEL_GAINS",
+    "relative_gain": "UNRESOLVED:INDEPENDENT_RELATIVE_GAIN",
+    "relative_polarity": "UNRESOLVED:INDEPENDENT_RELATIVE_POLARITY",
+    "time_offsets_skew": "UNRESOLVED:CHANNEL_TIME_ALIGNMENT",
+    "dynamic_response": "UNRESOLVED:INDEPENDENT_GAIN_PHASE_RESPONSE",
+    "cross_talk": "UNRESOLVED:CROSSTALK_BOUND_OR_CERTIFIED_SEPARATION",
+    "valid_range_bandwidth": "UNRESOLVED:CALIBRATED_DOMAIN",
+    "expiry_drift_rule": "UNRESOLVED:CALIBRATION_VALIDITY_RULE",
+    "mathematical_form": "If certified affine: raw_i=offset_i+polarity_i*gain_i*model_i+noise_i, gain_i>0, polarity_i in {-1,+1}; corrected_i=polarity_i*(raw_i-offset_i)/gain_i. Otherwise require an independent dynamic transfer.",
+    "independence": "Never fit sensor gain/sign/phase/offset/window through the tested g-law. Relative gain confounds b/a; polarity flip exchanges g and 4/g.",
+    "baseline_boundary": "Electronics zero is not zero pair, cold a=0, empty reservoir or reset.",
+    "certificate_id": "UNRESOLVED:SENSOR_CALIBRATION_CERTIFICATE"
+  },
+  "decoder_scales": {
+    "contract_id": "POC1-SI-DICTIONARY",
+    "amplitude_scale_A0": "UNRESOLVED:A0_VALUE_UNITS_AND_PHYSICAL_DICTIONARY",
+    "time_scale_tau": "UNRESOLVED:TAU_VALUE_UNITS_AND_PHYSICAL_DICTIONARY",
+    "energy_scale_E_star": "UNRESOLVED:E_STAR_VALUE_UNITS_AND_PHYSICAL_DICTIONARY",
+    "joint_scale_region": "UNRESOLVED:SCALE_JOINT_UNCERTAINTY",
+    "scale_provenance": "UNRESOLVED:INDEPENDENT_SCALE_REFERENCE_MANIFEST",
+    "no_unit_identification": "Symbol definitions are not physical IDs/SI certificates; sensor calibration and decoder scales are distinct.",
+    "proposed_forms": "Proposed A0 [m], tau [s], E_star [J]: V0=A0/tau, F0=E_star/A0, Z0=E_star*tau/A0^2; V=V0*p, F=F0*f, Z=Z0*g. Here p=(w-u)/2 is a centered discrete coefficient, not an interval mean. Values and physical dictionary unresolved.",
+    "metrology_gate": "UNRESOLVED:PHYSICAL_UNIT_AND_METROLOGY_GATE"
+  },
+  "wave_separation": {
+    "contract_id": "POC1-WAVE-SEPARATION",
+    "map_id": "UNRESOLVED:INDEPENDENT_CHANNEL_TO_AB_MAP",
+    "direct_ab_certificate": "UNRESOLVED:DIRECT_SIGNED_AB_OBSERVABLE_CERTIFICATE",
+    "reference_impedance": "UNRESOLVED:INDEPENDENT_REFERENCE_IMPEDANCE",
+    "reference_impedance_provenance": "UNRESOLVED:REFERENCE_IMPEDANCE_MANIFEST",
+    "observation_backaction": "UNRESOLVED:SENSOR_LOADING_AND_BACKACTION_BOUND",
+    "rule": "Separation reference must be independent, not fitted Z(g).",
+    "circularity_witness": "Using Z=Z0*g in r=(F-ZV)/(F+ZV)=(2-g)/(2+g) leaves F=2*Z0*V; g cancels.",
+    "alternatives": "Routes A/B below remain unselected; each needs its own physical certificates.",
+    "certificate_id": "UNRESOLVED:WAVE_SEPARATION_CERTIFICATE",
+    "selected_route": "UNRESOLVED:PHYSICAL_IDENTIFICATION_ROUTE",
+    "routes": {
+      "A": "Independent signed directional readout, independent Z_ref and independently justified relation to model Z; no trial Z(g).",
+      "B": "COLD_FORCE_VELOCITY: independently calibrated F,V with certified a=0 and V excluding zero give Z=-F/V, g=(-F/V)/Z0 with independent Z0. No directional wave separation required; validate one frozen response on held-out records."
+    },
+    "route_guard": "UNRESOLVED:ROUTE_SPECIFIC_GATE_SELECTION",
+    "route_B_requires_separation": false,
+    "route_B_required": [
+      "UNRESOLVED:INDEPENDENT_FORCE_VELOCITY_CALIBRATION",
+      "UNRESOLVED:COLD_PREPARATION_CERTIFICATE",
+      "UNRESOLVED:INDEPENDENT_Z0",
+      "UNRESOLVED:VELOCITY_REGION_EXCLUDING_ZERO"
+    ]
+  },
+  "preparation_and_cut": {
+    "preparation_contract_id": "POC1-PREPARATION",
+    "cut_contract_id": "POC1-CUT",
+    "physical_source_context": "UNRESOLVED:PHYSICAL_SOURCE_AND_CONTEXT_OWNER",
+    "source_prepare_map": "UNRESOLVED:PHYSICAL_SOURCE_TO_PAIR_MAP",
+    "zero_pair_certificate": "UNRESOLVED:ZERO_PAIR_PREPARATION_CERTIFICATE",
+    "cold_incoming_certificate": "UNRESOLVED:FRESH_COLD_INCOMING_CERTIFICATE",
+    "five_site_source_certificate": "UNRESOLVED:SIGNED_FIVE_SITE_PREPARATION_CERTIFICATE",
+    "source_amplitude_uncertainty": "UNRESOLVED:SOURCE_AND_PREPARATION_JOINT_REGION",
+    "native_time_to_cut": "UNRESOLVED:NATIVE_TIME_TO_DISCRETE_CUT_MAP",
+    "trigger_rule": "UNRESOLVED:PREDECLARED_TRIGGER_RULE",
+    "delay_jitter_bounds": "UNRESOLVED:TIMING_DELAY_JITTER_REGION",
+    "model_convention": "P0 postkick; transition t available at n0+t+1. Counter labels are not physical time.",
+    "reset_semantics": "UNRESOLVED:RRP1-TYPED-RESET-RULING",
+    "fresh_trial_rule": "UNRESOLVED:INDEPENDENT_TRIAL_PREPARATION_WITHOUT_ASSUMED_RESET"
+  },
+  "context": {
+    "context_id": "UNRESOLVED:FROZEN_PHYSICAL_CONTEXT",
+    "fields": [
+      "sensor_configuration",
+      "channel_orientation",
+      "observation_mode",
+      "separation_reference",
+      "source_preparation",
+      "coupling_setting",
+      "exposure",
+      "clock_cut_bridge",
+      "threshold_setting",
+      "environment_bounds"
+    ],
+    "equality_id": "UNRESOLVED:PHYSICAL_CONTEXT_EQUALITY",
+    "parameter_rule": "Freeze settings/provenance before comparison; estimates label a conditional context, not a derivation from U.",
+    "changed_context_rule": "Changed settings need new context or frozen drift rule; no held-out refit.",
+    "g_value": "UNRESOLVED:FIXED_CANDIDATE_G_OR_IDENTIFIED_REGION",
+    "q_value": "UNRESOLVED:INDEPENDENT_THRESHOLD_SETTING",
+    "global_uniqueness_required": false
+  },
+  "model_identification": {
+    "contract_id": "POC1-MODEL-IDENTIFICATION",
+    "dataset_ids": [
+      "UNRESOLVED:MODEL_IDENTIFICATION_DATASET"
+    ],
+    "sensor_calibration_frozen_before_identification": true,
+    "estimator_id": "UNRESOLVED:PREDECLARED_G_ESTIMATOR",
+    "estimator_form": "For independently calibrated warm signed amplitudes A!=0, r=B/A and g=2*(1-r)/(1+r), valid for -1<r<1.",
+    "output": "g-region with full data/calibration/context/budget provenance; not physical ID.",
+    "rationality_boundary": "Finite estimates do not prove rational g. A rational nominal g0 needs predeclared selection and model-error budget; no target snapping.",
+    "allowed_fit_inputs": "Designated identification data only; no Born targets, held-out data or unknown sensor gain/phase.",
+    "route_B_form": "g=(-F/V)/Z0; independent cold certificate, F/V calibration, Z0 and V-region excluding zero required."
+  },
+  "held_out_validation": {
+    "contract_id": "POC1-VALIDATION",
+    "dataset_ids": [
+      "UNRESOLVED:HELD_OUT_VALIDATION_DATASET"
+    ],
+    "membership_manifest": "UNRESOLVED:PREDECLARED_DISJOINT_DATASET_MEMBERSHIP",
+    "disjoint_from": [
+      "sensor_calibration.calibration_dataset_ids",
+      "model_identification.dataset_ids"
+    ],
+    "freeze_commit": "UNRESOLVED:COMPLETE_TEST_CONTRACT_PUBLIC_PIN",
+    "predictions_id": "UNRESOLVED:FROZEN_PREDICTIONS_AND_DOMAIN",
+    "aggregation_rule": "UNRESOLVED:PRESPECIFIED_RESIDUALS_AND_JOINT_DECISION",
+    "no_refit": true,
+    "law": "Freeze route-specific predictions/g-region; cold e0 also needs its source and scale certificate.",
+    "outcome_labels": [
+      "STOP",
+      "CONSISTENT_WITH_PREDECLARED_BOUNDS",
+      "REJECTED_AT_DECLARED_SCOPE"
+    ],
+    "no_closure": "Compatibility is not exact equality, realization, family completeness, occurrence, Born or owner closure."
+  },
+  "measured_work": {
+    "contract_id": "POC1-WORK",
+    "effort_flow_observables": [
+      "UNRESOLVED:PHYSICAL_EFFORT_OBSERVABLE",
+      "UNRESOLVED:PHYSICAL_FLOW_OBSERVABLE"
+    ],
+    "work_data_manifest": "UNRESOLVED:INDEPENDENT_EFFORT_FLOW_TRACE",
+    "orientation": "Positive work into the wave; physical channel polarity mapping remains unresolved.",
+    "integration_map": "UNRESOLVED:MEASURED_WORK_INTEGRAL_AND_QUADRATURE",
+    "cut_interval": "UNRESOLVED:WORK_INTEGRATION_INTERVAL",
+    "continuous_work": "W=integral effort(time)*flow(time) dtime on the declared interval.",
+    "model_work": "Single port E_star*g*(a^2-b^2); generally E_star*sum_x Gamma_x*(a_x^2-b_x^2).",
+    "bridge_certificate": "UNRESOLVED:CONTINUOUS_TO_DISCRETE_WORK_CERTIFICATE",
+    "bridge_warning": "Integral of product need not equal duration times product of means; bound phase/bandwidth/intra-cut variation.",
+    "independent_energy_readout": "UNRESOLVED:OPTIONAL_INDEPENDENT_ENERGY_SENSOR_CERTIFICATE",
+    "non_circularity": "g*b^2 from the same b is not independently observed heat. Heat, tape and q*count+remainder are one store."
+  },
+  "uncertainty_and_thresholds": {
+    "contract_id": "POC1-BUDGET",
+    "joint_region": "UNRESOLVED:JOINT_CALIBRATION_SOURCE_TIME_MODEL_REGION",
+    "components": [
+      "raw_resolution",
+      "offset_and_drift",
+      "relative_gain",
+      "relative_polarity",
+      "dynamic_phase",
+      "cross_talk",
+      "time_alignment",
+      "integration",
+      "source_preparation",
+      "cold_leakage",
+      "sensor_loading",
+      "model_discrepancy"
+    ],
+    "dependence_rule": "Justified joint/worst-case regions; no assumed Gaussian independence or missing-error-zero convention.",
+    "ratio_form": "A excludes 0; R=B/A. For -1<r_min<=r_max<1, G=[2*(1-r_max)/(1+r_max),2*(1-r_min)/(1+r_min)].",
+    "ill_conditioning": "An A interval containing 0 can prevent a finite ratio bound; reaching r=-1 can prevent a finite upper bound for g. Unresolved relative polarity prevents branch-resolved identification but may leave a bounded union: retain both admissible branches or apply the predeclared polarity STOP gate.",
+    "residual_budget": "UNRESOLVED:NUMERICAL_VALIDATION_BUDGET",
+    "acceptance_threshold": "UNRESOLVED:PREREGISTERED_DECISION_THRESHOLD",
+    "coverage_semantics": "UNRESOLVED:DETERMINISTIC_BOUNDS_OR_DECLARED_STATISTICAL_COVERAGE",
+    "pointer_threshold_calibration": "UNRESOLVED:INDEPENDENT_Q_CALIBRATION",
+    "threshold_uncertainty": "UNRESOLVED:HEAT_AND_Q_JOINT_REGION",
+    "threshold_rule": "Resolve floor(heat/q) only if the entire joint region yields one integer; otherwise retain ambiguity.",
+    "event_scope": "Zero/multiple crossings per batch; one accounting EventRecord per step. No probability/L6 lift."
+  },
+  "diagnostics": {
+    "contract_id": "POC1-DIAGNOSTICS",
+    "state": "PLANNED_NO_DATA",
+    "warm_plan": "Independent zero pair; freeze zero, paired +/-A and multiple amplitudes, ordering, windows and repetitions in calibrated range. Sensor/model data remain separate.",
+    "warm_amplitude_plan": "UNRESOLVED:WARM_AMPLITUDES_ORDER_REPETITIONS",
+    "warm_formula": "w=4*g*A/(2+g), b=(2-g)*A/(2+g); g symbolic, not assigned.",
+    "cold_plan": "Independent signed e0=(1,0,0,0), RRP1 five-site P0=(0,Sz), origin g>0.",
+    "cold_formula": "h=1421/1620; first w0=2*h/(2+g), b0=-h/(2+g), deposited model energy g*h^2/(2+g)^2.",
+    "ambiguity": "Cold eta=deposit/h^2 is invariant g<->4/g and has maximum 1/8 at g=2. Unknown warm polarity restores the reciprocal ambiguity. No Born-based branch choice.",
+    "cold_test_manifest": "UNRESOLVED:COLD_PREPARATION_AND_VALIDATION_PLAN"
+  },
+  "data_custody": {
+    "state": "NO_DATA",
+    "raw_dataset_manifests": [
+      "UNRESOLVED:RAW_DATA_MANIFEST"
+    ],
+    "required_manifest_fields": [
+      "exact_public_path",
+      "content_hash",
+      "byte_count",
+      "format_version",
+      "acquisition_context",
+      "source_provenance",
+      "license_or_permission",
+      "privacy_review",
+      "custody_and_readback"
+    ],
+    "calibration_certificate_manifests": [
+      "UNRESOLVED:CALIBRATION_CERTIFICATE_MANIFEST"
+    ],
+    "software_and_source_pins": "UNRESOLVED:ACQUISITION_EXTRACTION_AND_TEST_PINS",
+    "pre_data_partition_pin": "UNRESOLVED:DATASET_PARTITION_AND_TEST_CONTRACT_PIN",
+    "security_license_review": "UNRESOLVED:PUBLIC_DATA_SECURITY_LICENSE_REVIEW",
+    "no_fixtures": "No synthetic data, hardware names, tolerances or calibrations.",
+    "hash_timing": "Hash existing code, reference inputs and calibration artifacts before the test pin. Future raw-data hashes are recorded after acquisition in the custody/readback manifest; no prehash of unacquired data is required."
+  },
+  "readiness": {
+    "routing_id": "POC1-ROUTING",
+    "sensor_observable_gate": "UNRESOLVED:SENSOR_OBSERVABLE_GATE",
+    "source_cut_gate": "UNRESOLVED:SOURCE_PREPARATION_CUT_GATE",
+    "independent_separation_gate": "UNRESOLVED:ROUTE_A_SEPARATION_OR_ROUTE_B_COLD_FV_GATE",
+    "calibration_gate": "UNRESOLVED:CALIBRATION_VALIDITY_GATE",
+    "physical_layer_gate": "UNRESOLVED:L1_TO_PHYSICAL_OBSERVATION_GATE",
+    "formal_test_gate": "UNRESOLVED:FORMAL_PREREG_PIN_AND_DATA_READINESS",
+    "record_falsification_gate": "UNRESOLVED:PHYSICAL_RECORD_FALSIFIER_ADMISSION",
+    "current_verdict": "STOP-DEFINITION",
+    "STOP": "Missing field/certificate/data, overlapping validation, source/cut mismatch, circular fit, invalid trace, missing budget or integrity.",
+    "limited_rejection": "Reject only the frozen law/dictionary/context once physical and integrity premises are supplied.",
+    "unchanged": "Owner O, realization, reset, family, terminality, occurrence, Born and L6 remain unresolved."
+  },
+  "external_primary_references": [
+    {
+      "title": "Kurokawa (1965), Power Waves and the Scattering Matrix",
+      "url": "https://cseweb.ucsd.edu/classes/fa12/cse291-c/papers/ScatteringMatrix.pdf",
+      "use": "Reference-impedance conventions, not TWIST-J physical identification."
+    },
+    {
+      "title": "NIST dynamic calibration article",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5990289/",
+      "use": "Dynamic gain/phase calibration, not a supplied sensor certificate."
+    }
+  ]
+}
