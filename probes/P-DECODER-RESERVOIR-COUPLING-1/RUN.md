@@ -32,8 +32,8 @@ public_readback: PASS before formal execution
 all_pinned_sources_pre_post_match: yes
 worktree_clean_before_and_after: yes
 result: CONFIRMED
-architecture_gate: PENDING independent GitHub replay
-post_result_security_review: PENDING
+architecture_gate: PASS aarch64 and x86_64; workflow 33932023196
+post_result_security_review: PASS independent proof/code/scope/integrity and security/license review
 ```
 
 ## Complete immutable source inventory
@@ -66,3 +66,39 @@ Frozen source documents retain their pre-execution labels. RUN.md and
 RESULT.md record later evidence without rewriting those source documents.
 Independent architecture evidence is recorded separately when available.
 Public claims remain unregistered; Canon v76 and physical gates are unchanged.
+
+## Independent architecture and review evidence
+
+[Required workflow 33932023196](https://github.com/mathorn1973/twist-j/actions/runs/33932023196)
+passed on result commit `7169986170b9a1b6eb35e8f700e4f78192e60980`, which
+adds only EXPECTED.txt, RUN.md and RESULT.md to the source pin. Both jobs
+independently replayed the changed probe against the same exact output.
+
+| Architecture | Job | Exact replay |
+|---|---|---|
+| x86_64 | [101212405725](https://github.com/mathorn1973/twist-j/actions/runs/33932023196/job/101212405725) | PASS |
+| aarch64 | [101212405886](https://github.com/mathorn1973/twist-j/actions/runs/33932023196/job/101212405886) | PASS |
+
+Both public logs report verifier SHA-256
+`8daa2f935c005b9a09221d6ca0172582f0fda028e5b65230f98b383cf294b16d`
+and stdout SHA-256
+`370ae19a621222b100dd22d6e9d7eea6fff09774746e29081edf3bab722be326`.
+Their job status and exact hash lines were read back before this record was
+written. The aggregate required check, all 155 tool tests, policy, Canon,
+ledger and gate-contract checks passed. Separate clean Linux validation also
+passed status labels and changed-probe reproduction; changed minimal
+reproductions were not applicable.
+
+Independent post-result review verified the source pin/tree, every source
+hash and Git blob including the inherited dependency, exact 437-byte/14-line
+LF transcript and unchanged scientific scope. Code/proof/contract and security
+review found no blocking issue. The package contains the repository's own
+standard-library code and text, no new external data or license material,
+and no scientific runtime network, process execution or file writes.
+
+The inherited transport.py hash is checked separately by coupling.py before
+its import, in addition to the four hashes enforced by verify.py. All seven
+new source files and that inherited dependency remain unchanged. A separate
+post-pin execution of the README's Python example verified continuation and
+produced an exact budget residual of zero; it is presentation only, not a
+new formal gate or a physical measurement.
