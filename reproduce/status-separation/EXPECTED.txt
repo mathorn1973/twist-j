@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v76
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v77
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -69,5 +69,6 @@ PASS 65 V73-FOLD   three proof-first rows and one complete finite classification
 PASS 66 V74-PHOTON selected D3 transfer enters at D/MULTI and its exact characteristic at T/L5, closing the L2-to-L5 dictionary lift while v75 owns the later Herm2 and global-carrier disposition
 PASS 67 V75-CLOSURE eight qualified theorems enter at exact scope while the photon germ closes locally, the broader global carrier stays O, and the stopped four-phase probe remains excluded
 PASS 68 V76-L1-FOLD eleven L1 theorem rows enter with exact probe evidence; prior claims, gates and frontier stay fixed; fired polar-A and physical coincidence stay excluded
+PASS 69 V77-EARNED-FOLD eight conditional theorems and four bounded archive computations; exact source evidence and prior ledgers persist; physical Born and apparatus owners stay open
 
-RESULT 68/68 ALL PASS
+RESULT 69/69 ALL PASS
