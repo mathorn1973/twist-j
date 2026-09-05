@@ -2,6 +2,7 @@
 from pathlib import Path
 import hashlib
 import json
+import subprocess
 import sys
 import urllib.request
 
@@ -19,6 +20,17 @@ def main():
     if len(pin) != 40 or any(c not in '0123456789abcdef' for c in pin):
         raise RuntimeError('Full public custody commit required')
     note_dir = Path(__file__).resolve().parent
+    checkout = note_dir.parent
+    git = ['git', '-C', str(checkout)]
+    if subprocess.check_output(git + ['rev-parse', 'HEAD']).decode().strip() != pin:
+        raise RuntimeError('Checkout is not the declared custody commit')
+    common_git = Path(subprocess.check_output(git + ['rev-parse', '--path-format=absolute', '--git-common-dir']).decode().strip()).resolve()
+    if destination.is_relative_to(checkout) or checkout.is_relative_to(destination) or destination.is_relative_to(common_git):
+        raise RuntimeError('Custody destination must be outside this checkout and Git metadata')
+    for name in ['NIST-RAW-CUSTODY-1.md', 'NIST-RAW-CUSTODY-1.objects.json', 'NIST-RAW-CUSTODY-1.fetch.py']:
+        committed = subprocess.check_output(git + ['show', pin + ':notes/' + name])
+        if committed != (note_dir / name).read_bytes():
+            raise RuntimeError('Local custody file differs from its pin: ' + name)
     raw_manifest = (note_dir / 'NIST-RAW-CUSTODY-1.objects.json').read_bytes()
     manifest = json.loads(raw_manifest)
     destination.mkdir(parents=True, exist_ok=False)
