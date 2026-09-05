@@ -1,0 +1,155 @@
+{
+  "schema": "decoder-open-data-source-candidates/1",
+  "status": "NON-CANONICAL",
+  "scope": "Metadata-only source qualification; not accepted scientific inputs",
+  "owner_issue": "https://github.com/mathorn1973/twist-j/issues/834",
+  "physical_owner_issue": "https://github.com/mathorn1973/twist-j/issues/539",
+  "public_base_commit": "50d11b2818883fd5f9a5178d56a5c12162a95cb3",
+  "canon_version": 76,
+  "metadata_access_date": "2026-09-05",
+  "resource_constraint": "PUBLICLY_ACCESSIBLE_DATA_ONLY_NO_NEW_LAB_ACQUISITION",
+  "payload_downloaded": false,
+  "payload_semantically_opened": false,
+  "scientific_analysis_executed": false,
+  "formal_preregistration_commit": null,
+  "formal_verifier": null,
+  "admitted_scientific_sources": [],
+  "priority_source_id": "OD-SRC-NIST-BELL-2015",
+  "priority_meaning": "First metadata/custody qualification; not admitted for analysis",
+  "prior_exposure": {
+    "published_conclusions_known": true,
+    "published_aggregate_summaries_encountered": true,
+    "catalogues_methods_and_format_documents_read": true,
+    "blind_analysis_claim": false,
+    "note": "Historical published results and author processing choices are known. No archive preview, raw event payload or new outcome statistic was read or computed. A future held-out claim needs its own justified independence and exposure record."
+  },
+  "common_admission_requirements": [
+    "Exact source version and literal object inventory with station/run pairing",
+    "Resolved reuse terms, required notices and attribution",
+    "Provider fingerprints distinguished from computed SHA-256 and byte counts",
+    "Per-object schema, byte order, counter/overflow and archive rules",
+    "Documented trial eligibility, clocks, windows, settings and coverage",
+    "Calibration provenance and bounds sufficient for the specified question",
+    "Frozen selection, exclusion, no-detection, multiple-hit and invalid-data rules",
+    "Source-specific prior exposure and data-role partition",
+    "Feasible deterministic replay without changing existing workflow policy",
+    "Complete accepted verifier and public formal pin before semantic opening"
+  ],
+  "sources": [
+    {
+      "source_id": "OD-SRC-NIST-BELL-2015",
+      "title": "NIST Bell Test Research Software and Data",
+      "role": "PRIMARY_QUALIFICATION_TARGET",
+      "admission_status": "NOT_ADMITTED",
+      "landing_url": "https://www.nist.gov/pml/applied-physics-division/bell-test-research-software-and-data",
+      "catalogue_url": "https://www.nist.gov/pml/applied-physics-division/bell-test-research-software-and-data/repository-bell-test-research",
+      "raw_catalogue_url": "https://www.nist.gov/pml/applied-physics-division/bell-test-research-software-and-data/repository-bell-test-research-3",
+      "documentation": [
+        {
+          "url": "https://www.nist.gov/document/bell-test-data-file-folder-descriptions",
+          "declared_version": "2015-12-23",
+          "kind": "FORMAT_AND_PROCESSING_DOCUMENTATION"
+        },
+        {
+          "url": "https://s3.amazonaws.com/nist-belltestdata/belldata/File_Folder_Descriptions_Addendum_2017_02.pdf",
+          "declared_version": "2017-02 addendum",
+          "kind": "RELEASE_AND_REUSE_DOCUMENTATION"
+        }
+      ],
+      "source_version": {
+        "kind": "MUTABLE_ARCHIVE",
+        "immutable_release_id": null,
+        "catalogue_page_updated": "2025-04-15",
+        "note": "A page update date does not identify immutable data bytes."
+      },
+      "license": {
+        "label": "NIST belltestdata notice",
+        "verified_notice_url": "https://www.nist.gov/pml/applied-physics-division/bell-test-research-software-and-data",
+        "status": "SOURCE_NOTICE_READ_NO_DATA_IMPORTED",
+        "requirements": "Retain the complete notice, acknowledge NIST, identify date and nature of modifications. Apply the actual notice to reused objects; do not silently relabel third-party material as repository Apache-2.0."
+      },
+      "documented_raw_schema": {
+        "words": ["channel", "local_timetag", "buffer_transfer_counter"],
+        "word_type": "uint64",
+        "tick_picoseconds": "625/8",
+        "stored_channel_codes": {"detection": 0, "setting_0": 2, "setting_1": 4, "gps_pps": 5, "sync": 6},
+        "byte_order": null,
+        "scope": "Original raw representation only; compressed variants require distinct binding"
+      },
+      "selected_payload_objects": [],
+      "computed_sha256": null,
+      "remaining_qualification": [
+        "Literal paired-object inventory and per-object identity/size",
+        "Byte order and raw/compressed representation binding",
+        "Run and date reconciliation from documentation and acquisition metadata",
+        "Independent clock-alignment inputs and exact observation-window rules",
+        "Coverage and invalid-setting semantics",
+        "Raw-data replay resource budget"
+      ],
+      "excluded_as_automatic_substitutes": [
+        "cw45 files without complete event-construction metadata",
+        "Derived spreadsheets as a complete raw-attempt ledger",
+        "Any archive labeled blind as evidence of current analyst blindness"
+      ],
+      "possible_scope_after_admission": "Reconstruction of documented external attempts and detections with explicit selection and coverage; subsequent separately pinned apparatus-model comparison",
+      "not_supplied": ["U-source physical dictionary", "PR833 U4 calibration", "QDD physical effects", "complete post-state instrument", "Born derivation"]
+    },
+    {
+      "source_id": "OD-SRC-HENSEN-2016",
+      "title": "Loophole-free Bell test using electron spins in diamond: second experiment and additional analysis",
+      "role": "SECONDARY_BELL_CANDIDATE",
+      "admission_status": "DEFERRED_LICENSE_AND_SCHEMA",
+      "doi": "10.4121/uuid:53644d31-d862-4f9f-9ad2-0b571874b829",
+      "landing_url": "https://data.4tu.nl/articles/dataset/Loophole-free_Bell_test_using_electron_spins_in_diamond_second_experiment_and_additional_analysis/12694403",
+      "version": "1",
+      "published": "2016-04-08",
+      "license": {
+        "catalogue_label": "4TU General Terms of Use",
+        "full_terms_verified": false,
+        "reuse_admitted": false,
+        "note": "The catalogue label is not an established CC license; full applicable terms remain unresolved."
+      },
+      "catalogue_files": [
+        {
+          "name": "data.zip",
+          "bytes": 131394,
+          "provider_checksum": {"algorithm": "MD5", "value": "de565fc8e550cdd6684b4182d4235d1f"},
+          "computed_sha256": null,
+          "payload_downloaded": false
+        }
+      ],
+      "documentation_url": "https://arxiv.org/abs/1603.05705",
+      "remaining_qualification": ["Applicable full reuse terms", "Archive member/schema and attempt coverage", "Herald/setting/outcome and calibration semantics"],
+      "possible_scope_after_admission": "A separately specified audit of the electron-spin experiment's archived observations",
+      "not_supplied": ["verified complete no-detection ledger", "photon U4 realization", "U source", "Born derivation"]
+    },
+    {
+      "source_id": "OD-SRC-BRIGHTEYES-TTM-V2",
+      "title": "BrightEyes-TTM Datasets",
+      "role": "SECONDARY_DETECTOR_RECORD_CANDIDATE",
+      "admission_status": "NOT_ADMITTED_SCHEMA_AND_CUSTODY_PENDING",
+      "doi": "10.5281/zenodo.6782161",
+      "landing_url": "https://zenodo.org/records/6782161",
+      "metadata_api_url": "https://zenodo.org/api/records/6782161",
+      "version_label_on_page": "v2",
+      "record_created": "2022-06-30",
+      "catalogue_publication_date": "2021-06-08",
+      "license": {"id": "CC-BY-4.0", "evidence": "record API metadata.license.id = cc-by-4.0", "data_imported": false},
+      "documentation_url": "https://doi.org/10.1038/s41467-022-35064-0",
+      "catalogue_files_scope": "One candidate object, not the whole five-file v2 inventory",
+      "catalogue_files": [
+        {
+          "name": "FLIM_80MHz_512x512pixel_120FOV_pixeldwelltime200us.ttr",
+          "bytes": 82394908,
+          "provider_checksum": {"algorithm": "MD5", "value": "2543b2d42c877eda0e2addbed5f976f6"},
+          "computed_sha256": null,
+          "payload_downloaded": false,
+          "candidate_reason": "Smallest listed v2 object; selection is for record-format qualification, not outcome comparison"
+        }
+      ],
+      "remaining_qualification": ["Exact format variant and reference-channel mapping", "Counter and suppressed-record semantics", "Availability and relevance of original calibration records", "SHA-256 custody and replay path"],
+      "possible_scope_after_admission": "Detector-record parsing, channel/time preservation and synchronization handling",
+      "not_supplied": ["signed optical amplitudes", "independent input pulse energies", "U4 transfer", "complete no-detection trial ledger", "U source", "Born derivation"]
+    }
+  ]
+}
