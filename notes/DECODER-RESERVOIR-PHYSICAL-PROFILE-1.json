@@ -1,0 +1,1684 @@
+{
+  "format": "TWISTJ-NONCANONICAL-PHYSICAL-PROFILE-DRAFT",
+  "profile_id": "RRP1-PROFILE",
+  "status": "STOP-DEFINITION",
+  "canonical_status": "NON-CANONICAL",
+  "physical_status": "UNRESOLVED",
+  "earned_scientific_status": "NONE_FOR_THIS_PROFILE",
+  "note": "DECODER-RESERVOIR-PHYSICAL-PROFILE-1.md",
+  "basis": {
+    "main_commit": "4e794a01aec719a4536f2028ecbfd2f876a19e2b",
+    "canon": "Public Canon v76",
+    "tag": "canon-v76",
+    "content_commit": "07910adb8418742bf52a0d204577b84b38009b18",
+    "canon_sha256": "c151a19997dba95d78836c46f38463ab2735ae1c98674f87888d519d7a500112",
+    "canon_bytes": 420539
+  },
+  "scope": {
+    "mathematical_layer": "L1",
+    "mathematical_domain": "All declared pointed U heads for each preselected c=(Gamma,q,N); finite prefixes up to N; operational incoming always zero.",
+    "physical_source_subset_id": "UNRESOLVED:RRP1-K-C",
+    "physical_source_to_context_id": "UNRESOLVED:RRP1-CONTEXT-OWNER",
+    "proposed_support_layer": "L4",
+    "proposed_stream_layer": "L5",
+    "physical_lifts": "UNRESOLVED",
+    "whole_decoder_completion": false,
+    "typed539_schema_complete": false,
+    "mathematical_interface_state": "SELECTED_COMPLETE_ON_DECLARED_DOMAINS",
+    "wrapper_implementation": "NOT_IMPLEMENTED",
+    "formal_execution": "NONE"
+  },
+  "sources": [
+    {
+      "source_id": "RRP1-SRC-CANON",
+      "path": "canon/CANON.md",
+      "commit": "4e794a01aec719a4536f2028ecbfd2f876a19e2b",
+      "symbols": [
+        "DEF-DECODER-COMPLETION-CONTRACT; lines 648-840",
+        "QDD-INSTRUMENT-APPARATUS; lines 1851-1907",
+        "QDD terminality and family-completeness boundaries; lines 1832-1850"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-TYPED539",
+      "path": "notes/canon/DEF-TYPED-APPARATUS-RECORD-CONTRACT.md",
+      "commit": "4e794a01aec719a4536f2028ecbfd2f876a19e2b",
+      "symbols": [
+        "carriers/equalities; lines 100-138",
+        "maps; lines 163-190",
+        "record and history ownership; lines 234-282"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-TYPED539-TEMPLATE",
+      "path": "notes/canon/DEF-TYPED-APPARATUS-RECORD-CONTRACT.template.json",
+      "commit": "4e794a01aec719a4536f2028ecbfd2f876a19e2b",
+      "symbols": [
+        "contract_version DEF-TYPED-APPARATUS-RECORD-CONTRACT-v0"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-POINTED",
+      "path": "probes/P-DECODER-POINTED-BATCH-CONFORMANCE-1/kernel.py",
+      "commit": "69c9dc34f57d5f9943681761eb6386a17d4bfc47",
+      "symbols": [
+        "validate_head",
+        "u_step",
+        "balanced_head"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-POINTED-RESULT",
+      "path": "probes/P-DECODER-POINTED-BATCH-CONFORMANCE-1/RESULT.md",
+      "commit": "4e794a01aec719a4536f2028ecbfd2f876a19e2b",
+      "symbols": [
+        "unregistered mathematical result; does not prove this wrapper"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-WAVE",
+      "path": "probes/P-DECODER-RETARDED-ENERGY-TRANSPORT-1/transport.py",
+      "commit": "30ab237b4dcb339115517f67b883ca4cc3e00c32",
+      "symbols": [
+        "Pair",
+        "laplacian",
+        "source",
+        "prepare",
+        "energy",
+        "current",
+        "local_work"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-WAVE-PROOF",
+      "path": "probes/P-DECODER-RETARDED-ENERGY-TRANSPORT-1/PROOF.md",
+      "commit": "30ab237b4dcb339115517f67b883ca4cc3e00c32",
+      "symbols": [
+        "positive energy and local continuity"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-WAVE-RESULT",
+      "path": "probes/P-DECODER-RETARDED-ENERGY-TRANSPORT-1/RESULT.md",
+      "commit": "4e794a01aec719a4536f2028ecbfd2f876a19e2b",
+      "symbols": [
+        "unregistered mathematical result"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-COUPLING",
+      "path": "probes/P-DECODER-RESERVOIR-COUPLING-1/coupling.py",
+      "commit": "550420d188a45c4929e300ca6aabcde812f4d65a",
+      "symbols": [
+        "Context",
+        "couple",
+        "reverse",
+        "advance",
+        "threshold_counts",
+        "remainders",
+        "crossings",
+        "History",
+        "extend",
+        "prefix"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-COUPLING-PROOF",
+      "path": "probes/P-DECODER-RESERVOIR-COUPLING-1/PROOF.md",
+      "commit": "550420d188a45c4929e300ca6aabcde812f4d65a",
+      "symbols": [
+        "DECODER-RESERVOIR-RECORD-ACCOUNTING"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-COUPLING-RESULT",
+      "path": "probes/P-DECODER-RESERVOIR-COUPLING-1/RESULT.md",
+      "commit": "4e794a01aec719a4536f2028ecbfd2f876a19e2b",
+      "symbols": [
+        "unregistered mathematical result"
+      ]
+    },
+    {
+      "source_id": "RRP1-SRC-COINCIDENCE",
+      "path": "notes/canon/C-J-A-U5-COINCIDENCE-OWNER-FREEZE.md",
+      "commit": "4e794a01aec719a4536f2028ecbfd2f876a19e2b",
+      "symbols": [
+        "candidate-H / UNTESTED / STOP; simultaneous complete incidence population"
+      ]
+    }
+  ],
+  "definition_registry": {
+    "RRP1-SRC-CANON": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "canon/CANON.md",
+      "basis_ids": []
+    },
+    "RRP1-SRC-TYPED539": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "notes/canon/DEF-TYPED-APPARATUS-RECORD-CONTRACT.md",
+      "basis_ids": []
+    },
+    "RRP1-SRC-TYPED539-TEMPLATE": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "notes/canon/DEF-TYPED-APPARATUS-RECORD-CONTRACT.template.json",
+      "basis_ids": []
+    },
+    "RRP1-SRC-POINTED": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "probes/P-DECODER-POINTED-BATCH-CONFORMANCE-1/kernel.py",
+      "basis_ids": []
+    },
+    "RRP1-SRC-POINTED-RESULT": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "probes/P-DECODER-POINTED-BATCH-CONFORMANCE-1/RESULT.md",
+      "basis_ids": []
+    },
+    "RRP1-SRC-WAVE": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "probes/P-DECODER-RETARDED-ENERGY-TRANSPORT-1/transport.py",
+      "basis_ids": []
+    },
+    "RRP1-SRC-WAVE-PROOF": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "probes/P-DECODER-RETARDED-ENERGY-TRANSPORT-1/PROOF.md",
+      "basis_ids": []
+    },
+    "RRP1-SRC-WAVE-RESULT": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "probes/P-DECODER-RETARDED-ENERGY-TRANSPORT-1/RESULT.md",
+      "basis_ids": []
+    },
+    "RRP1-SRC-COUPLING": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "probes/P-DECODER-RESERVOIR-COUPLING-1/coupling.py",
+      "basis_ids": []
+    },
+    "RRP1-SRC-COUPLING-PROOF": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "probes/P-DECODER-RESERVOIR-COUPLING-1/PROOF.md",
+      "basis_ids": []
+    },
+    "RRP1-SRC-COUPLING-RESULT": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "probes/P-DECODER-RESERVOIR-COUPLING-1/RESULT.md",
+      "basis_ids": []
+    },
+    "RRP1-SRC-COINCIDENCE": {
+      "kind": "PUBLIC_SOURCE_HANDLE",
+      "definition": "notes/canon/C-J-A-U5-COINCIDENCE-OWNER-FREEZE.md",
+      "basis_ids": []
+    },
+    "RRP1-PROFILE": {
+      "kind": "PROFILE",
+      "definition": "One proposed L1 mathematical source-to-cold-reservoir reading family indexed by fixed c=(Gamma,q,N). Proposed physical identification remains unresolved.",
+      "basis_ids": []
+    },
+    "RRP1-ENCODING": {
+      "kind": "ENCODING",
+      "definition": "Integers exclude booleans; rational numbers are reduced numerator/positive-denominator pairs; sites are integer triples of even coordinate sum; fields are lexicographically sorted unique site/rational tuples with zero entries omitted; count vectors include every active site.",
+      "basis_ids": []
+    },
+    "RRP1-CONTEXT-FAMILY": {
+      "kind": "CONTEXT_FAMILY",
+      "definition": "Finite rational Gamma:D3->Q>=0 with positive entries on finite R and no duplicate sites, rational q>0, integer N>=0. Empty R and N=0 are permitted. Source map, pair order, cold preparation, clock and complete literal equalities fixed by RRP1-PROFILE. Each c defines one reading on all mathematical pointed U sources; no physical completeness asserted.",
+      "basis_ids": [
+        "RRP1-PROFILE",
+        "RRP1-SRC-COUPLING"
+      ]
+    },
+    "RRP1-WAVE-OPERATOR": {
+      "kind": "OPERATOR",
+      "definition": "(Lv)(x)=sum_d c_d(v(x)-v(x+d)); complete symmetric squared-length shells 2,4,8,10,16 have weights 6,1,15,1,1 divided by 324; sum_d c_d=8/9.",
+      "basis_ids": [
+        "RRP1-SRC-WAVE"
+      ]
+    },
+    "RRP1-WAVE-ENERGY": {
+      "kind": "QUADRATIC_FORM",
+      "definition": "E(u,v)=||v-u||^2/2+<u,Lv>/2 on finite rational wave fields.",
+      "basis_ids": [
+        "RRP1-WAVE-OPERATOR",
+        "RRP1-SRC-WAVE-PROOF"
+      ]
+    },
+    "RRP1-COLD-LAW": {
+      "kind": "CONSTITUTIVE_LAW",
+      "definition": "w_x=[2v_x-(Lv)_x-(1-Gamma_x/2)u_x]/(1+Gamma_x/2); pair'=(v,w), b_x=-(w_x-u_x)/2 and deposit_x=Gamma_x*b_x^2 on R. Each step uses new incoming a=0; outgoing slots are not recycled.",
+      "basis_ids": [
+        "RRP1-WAVE-OPERATOR",
+        "RRP1-SRC-COUPLING"
+      ]
+    },
+    "RRP1-PORT-LAW": {
+      "kind": "CONSTITUTIVE_LAW",
+      "definition": "General diagnostic port law: p=(w-u)/2; f=Gamma(2a-p); b=a-p; w=[2v-Lv-(1-Gamma/2)u+2Gamma*a]/(1+Gamma/2). E(after)+sum Gamma*b^2=E(before)+sum Gamma*a^2. This general incoming domain is separate from the cold operational profile.",
+      "basis_ids": [
+        "RRP1-SRC-COUPLING",
+        "RRP1-SRC-COUPLING-PROOF"
+      ]
+    },
+    "RRP1-LEDGER-LAW": {
+      "kind": "ACCOUNTING_LAW",
+      "definition": "For generated prefixes heat_t(x)=sum_(s<t) Gamma_x*b_s(x)^2, Count_t(x)=floor(heat_t(x)/q), rem_t(x)=heat_t(x)-q*Count_t(x). Signed tape energy, heat and q*Count+rem are the same store, never three stores. E(P_t)+sum heat_t=||S(z)||^2/2.",
+      "basis_ids": [
+        "RRP1-COLD-LAW",
+        "RRP1-WAVE-ENERGY"
+      ]
+    },
+    "RRP1-TAPE-CAPACITY": {
+      "kind": "RESOURCE_CHOICE",
+      "definition": "At most N times cardinality(R) fresh cold slots in one exposure, all outgoing signed values retained. Family permits arbitrarily large finite exposures, without certifying physical supply or a uniform finite capacity.",
+      "basis_ids": []
+    },
+    "RRP1-TARGET-LOW": {
+      "kind": "ALGEBRAIC_TARGET_HANDLE",
+      "definition": "Exact external Canon identifier DEF-QDD-PROJECTOR-LOW. Algebraic comparison target only, not a physical effect or pointer.",
+      "basis_ids": [
+        "RRP1-SRC-CANON"
+      ]
+    },
+    "RRP1-TARGET-HIGH": {
+      "kind": "ALGEBRAIC_TARGET_HANDLE",
+      "definition": "Exact external Canon identifier DEF-QDD-PROJECTOR-HIGH. Algebraic comparison target only, not a physical effect or pointer.",
+      "basis_ids": [
+        "RRP1-SRC-CANON"
+      ]
+    },
+    "RRP1-CARRIER-PointedHead": {
+      "kind": "CARRIER",
+      "definition": "N_0 x F_5^6, represented by (n0,(x0,...,x5)) with residues 0,...,4; later checkpoints U^t(head).",
+      "basis_ids": [
+        "RRP1-SRC-POINTED"
+      ]
+    },
+    "RRP1-EQ-PointedHead": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed PointedHead values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-PointedHead",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-Source": {
+      "kind": "CARRIER",
+      "definition": "SourceRecord(head,z), z=(beta(x0),...,beta(x3)), beta=(0,1,2,-2,-1). Full head retained.",
+      "basis_ids": [
+        "RRP1-SRC-POINTED"
+      ]
+    },
+    "RRP1-EQ-Source": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed Source values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-Source",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-SupportedSource": {
+      "kind": "CARRIER",
+      "definition": "The subtype of Source with z!=0; a mathematical amplitude-support predicate, not a physical occurrence statement.",
+      "basis_ids": [
+        "RRP1-SRC-POINTED"
+      ]
+    },
+    "RRP1-EQ-SupportedSource": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed SupportedSource values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-SupportedSource",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-ContextKey": {
+      "kind": "CARRIER",
+      "definition": "c=(Gamma,q,N) as RRP1-CONTEXT-FAMILY; one immutable preselected c per history.",
+      "basis_ids": [
+        "RRP1-CONTEXT-FAMILY"
+      ]
+    },
+    "RRP1-EQ-ContextKey": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed ContextKey values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-ContextKey",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-ReadyState": {
+      "kind": "CARRIER",
+      "definition": "The singleton COLD_FRESH_EMPTY: no prior interaction, empty outgoing tape, zero ledger, unused zero incoming slots.",
+      "basis_ids": [
+        "RRP1-TAPE-CAPACITY"
+      ]
+    },
+    "RRP1-EQ-ReadyState": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed ReadyState values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-ReadyState",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-Wave": {
+      "kind": "CARRIER",
+      "definition": "C_c(D3,Q), exact finite rational fields with RRP1-ENCODING.",
+      "basis_ids": [
+        "RRP1-SRC-WAVE"
+      ]
+    },
+    "RRP1-EQ-Wave": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed Wave values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-Wave",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-SupportCarrier": {
+      "kind": "CARRIER",
+      "definition": "Pair(previous,current) in Wave x Wave, in that order.",
+      "basis_ids": [
+        "RRP1-SRC-WAVE"
+      ]
+    },
+    "RRP1-EQ-SupportCarrier": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed SupportCarrier values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-SupportCarrier",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-ApparatusState": {
+      "kind": "CARRIER",
+      "definition": "(source,c,t,tape,heat), 0<=t<=N, tape a tuple of t signed port fields on R, heat the exact weighted-square summary. Source/context and every earlier tape value retained.",
+      "basis_ids": [
+        "RRP1-LEDGER-LAW"
+      ]
+    },
+    "RRP1-EQ-ApparatusState": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed ApparatusState values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-ApparatusState",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-Outcome": {
+      "kind": "CARRIER",
+      "definition": "Tagged value NO_CROSSINGS or THRESHOLD_CROSSINGS carrying every nonempty crossing interval, with literal tag and content equality.",
+      "basis_ids": [
+        "RRP1-LEDGER-LAW"
+      ]
+    },
+    "RRP1-EQ-Outcome": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed Outcome values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-Outcome",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-RecordDelta": {
+      "kind": "CARRIER",
+      "definition": "Record(source,c,t,pair_before,pair_after,apparatus_before,apparatus_after,outgoing,deposit,heat_before,heat_after,counts_before,counts_after,remainder_after,crossings,kind,start_checkpoint,completion_checkpoint), on compatible cold step outputs. The apparatus snapshots contain their full immutable source,c,t,tape,heat, including all earlier signed tape values. Complete value equality applies even if immutable prefixes share storage. ApparatusState contains no EventRecord, so snapshots introduce no reference cycle. Repeated descriptions are not additional energy stores.",
+      "basis_ids": [
+        "RRP1-COLD-LAW"
+      ]
+    },
+    "RRP1-EQ-RecordDelta": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed RecordDelta values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-RecordDelta",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-EventRecord": {
+      "kind": "CARRIER",
+      "definition": "Complete RecordDelta, including full apparatus_before and apparatus_after snapshots, plus transition_complete=TRUE. This preserves every field of the compatible STEP output tuple. It is a complete computed transition record, not physical terminality or COMM-SAT.",
+      "basis_ids": [
+        "RRP1-COLD-LAW"
+      ]
+    },
+    "RRP1-EQ-EventRecord": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed EventRecord values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-EventRecord",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-HistoryState": {
+      "kind": "CARRIER",
+      "definition": "(source,c,P0,current_pair,current_apparatus,events), events an immutable ordered tuple of consecutive complete compatible EventRecords starting at t=0, length<=N, initialized from that source and context.",
+      "basis_ids": [
+        "RRP1-LEDGER-LAW"
+      ]
+    },
+    "RRP1-EQ-HistoryState": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed HistoryState values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-HistoryState",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-ZeroDisposition": {
+      "kind": "CARRIER",
+      "definition": "NO_EVENT_ZERO_SOURCE containing its unique N-step zero-wave, zero-ledger History with exactly N mathematical EventRecords, each NO_CROSSINGS. Direct initialization P0=(0,0), apparatus=(source,c,0,empty tape,zero heat), followed by STEP/EMIT/APPEND. PREPARE is not called on the unsupported zero source. The tag is no threshold crossings, not absence of computed transition records or adoption of physical #539 NO_EVENT semantics.",
+      "basis_ids": [
+        "RRP1-COLD-LAW"
+      ]
+    },
+    "RRP1-EQ-ZeroDisposition": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed ZeroDisposition values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-ZeroDisposition",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-ResetDisposition": {
+      "kind": "CARRIER",
+      "definition": "REJECTED_RESET_DISABLED carrying the exact unchanged ApparatusState; no conversion to ReadyState is supplied.",
+      "basis_ids": [
+        "RRP1-PROFILE"
+      ]
+    },
+    "RRP1-EQ-ResetDisposition": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed ResetDisposition values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-ResetDisposition",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-CARRIER-Bit": {
+      "kind": "CARRIER",
+      "definition": "The two exact values 0,1; terminal_M returns 1 only on its declared complete EventRecord domain.",
+      "basis_ids": [
+        "RRP1-PROFILE"
+      ]
+    },
+    "RRP1-EQ-Bit": {
+      "kind": "MATHEMATICAL_EQUALITY",
+      "definition": "Literal equality of complete typed Bit values under RRP1-ENCODING; no sign, heat, count, target-weight or projective quotient.",
+      "basis_ids": [
+        "RRP1-CARRIER-Bit",
+        "RRP1-ENCODING"
+      ]
+    },
+    "RRP1-MAP-SIGNED-HEAD": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Retain head, set z_i=beta(x_i) for i=0,...,3; do not recover sign from QDD output.",
+      "basis_ids": [
+        "RRP1-SRC-POINTED"
+      ]
+    },
+    "RRP1-MAP-CONTEXT": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Return that c constantly for every mathematical source. Physical C and physical K_c are not supplied.",
+      "basis_ids": [
+        "RRP1-CONTEXT-FAMILY"
+      ]
+    },
+    "RRP1-MAP-SUPPORT": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Return SUPPORTED iff z!=0, otherwise UNSUPPORTED_ZERO; chosen before division or thresholding.",
+      "basis_ids": [
+        "RRP1-CARRIER-SupportedSource"
+      ]
+    },
+    "RRP1-MAP-SOURCE-INJECTION": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "At sites (0,0,0),(1,1,0),(1,0,1),(0,1,1),(2,0,0), coefficients are (z,0)-sum(z)/5*ones. Norm squared m(z)=sum z_i^2-sum(z)^2/5. Disclosed QDD-norm-exposed choice.",
+      "basis_ids": [
+        "RRP1-SRC-WAVE"
+      ]
+    },
+    "RRP1-MAP-READY": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Return COLD_FRESH_EMPTY, with fresh unused zero incoming capacity for the exposure.",
+      "basis_ids": [
+        "RRP1-CARRIER-ReadyState"
+      ]
+    },
+    "RRP1-MAP-PREPARE": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "P0=(0,S(z)); apparatus=(source,c,0,empty tape,zero heat). Source kick is complete before coupling.",
+      "basis_ids": [
+        "RRP1-SRC-WAVE"
+      ]
+    },
+    "RRP1-MAP-CLOCK": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Return (U^t(head),U^(t+1)(head)); counters n0+t and n0+t+1. Batch t is available only after completion. Labels, not a physical or intertwining theorem.",
+      "basis_ids": [
+        "RRP1-SRC-POINTED"
+      ]
+    },
+    "RRP1-MAP-STEP": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Apply cold law; append signed outgoing tape, add deposit, calculate all threshold crossing intervals atomically, increment t, and construct complete before/after wave and apparatus snapshots plus clock provenance. STEP owns apparatus_before and apparatus_after, preserving the full old and appended signed tape. The domain permits coherent tape/heat states, not only preparation-reachable histories; READ_N and HistoryState separately retain their generated-history restriction.",
+      "basis_ids": [
+        "RRP1-COLD-LAW"
+      ]
+    },
+    "RRP1-MAP-EMIT": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Preserve the entire delta, including full apparatus_before and apparatus_after, and add transition_complete=TRUE. The outcome, next pair and next apparatus of the compatible STEP tuple are all recoverable from the delta. No new interaction or energy store is created.",
+      "basis_ids": [
+        "RRP1-CARRIER-EventRecord"
+      ]
+    },
+    "RRP1-MAP-PERSIST": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Require literal equality of the old apparatus with event.RecordDelta.apparatus_before and the matching outcome/coherent STEP extension. Return event.RecordDelta.apparatus_after, the complete state already specified by STEP, not a second update.",
+      "basis_ids": [
+        "RRP1-LEDGER-LAW"
+      ]
+    },
+    "RRP1-MAP-APPEND": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Append exactly one EventRecord immutably and adopt the recorded next pair/apparatus; never rescan as a new interaction.",
+      "basis_ids": [
+        "RRP1-CARRIER-HistoryState"
+      ]
+    },
+    "RRP1-MAP-TERMINAL-M": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Return 1. This Boolean means computed transition completion only.",
+      "basis_ids": [
+        "RRP1-CARRIER-EventRecord"
+      ]
+    },
+    "RRP1-MAP-ZERO-SUPPORT": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "For z=0 directly initialize Pair=(0,0) and apparatus=(source,c,0,empty tape,zero heat), without calling PREPARE. ApparatusState admits zero sources. Iterate STEP/EMIT/APPEND N times: exactly N mathematical EventRecords, all NO_CROSSINGS, with zero pair/deposit/heat and ordinary successive checkpoint labels. Return NO_EVENT_ZERO_SOURCE containing this History; no physical NO_EVENT semantics adopted.",
+      "basis_ids": [
+        "RRP1-CARRIER-ZeroDisposition"
+      ]
+    },
+    "RRP1-MAP-RESET-REQUEST": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Return REJECTED_RESET_DISABLED with unchanged state. Does not inhabit #539 reset codomain ReadyState x ApparatusState.",
+      "basis_ids": [
+        "RRP1-CARRIER-ResetDisposition"
+      ]
+    },
+    "RRP1-MAP-READ-N": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "For supported sources PREPARE once and perform exactly N cold transitions, appending every EventRecord. For z=0 return the History contained in ZERO_SUPPORT: it initializes directly, not via PREPARE. All branches have exactly N mathematical EventRecords, including N zero NO_CROSSINGS records for z=0. N=0 retains the initialized pair and no EventRecords.",
+      "basis_ids": [
+        "RRP1-COLD-LAW"
+      ]
+    },
+    "RRP1-MAP-REREAD": {
+      "kind": "MATHEMATICAL_MAP",
+      "definition": "Identity; no STEP, no tape append and no counter increment.",
+      "basis_ids": [
+        "RRP1-CARRIER-EventRecord"
+      ]
+    },
+    "RRP1-PREFIX-LAW": {
+      "kind": "MATHEMATICAL_COMPATIBILITY",
+      "definition": "For k<=N, prefixes keep the same c. Across c differing only in N, generated wave/tape/crossing values agree at common cuts after explicit relabeling of exposure metadata; whole context-tagged records remain unequal.",
+      "basis_ids": [
+        "RRP1-MAP-READ-N",
+        "RRP1-EQ-ContextKey"
+      ]
+    },
+    "RRP1-TOTALITY-BASIS": {
+      "kind": "CONSTRUCTIVE_ARGUMENT",
+      "definition": "Finite rational inputs, finite stencil and positive 1+Gamma/2 make every cold step defined with finite support. Finite induction constructs each prefix. Tape/heat/count/range arithmetic is exact. Other maps are functions on their stated compatible domains or STEP image. This selects a mathematical interface; no new formal execution or earned scientific status is asserted.",
+      "basis_ids": [
+        "RRP1-COLD-LAW",
+        "RRP1-MAP-READ-N",
+        "RRP1-LEDGER-LAW"
+      ]
+    },
+    "RRP1-OWNERSHIP": {
+      "kind": "OWNERSHIP",
+      "definition": "SOURCE owns head/z; CONTEXT owns c; CLOCK owns checkpoint labels; STEP owns pair/outgoing/deposit/heat, full apparatus_before/apparatus_after snapshots and threshold projections; EMIT references those complete fields and adds only completion tag; APPEND owns history extension. Snapshots preserve complete signed tape values without cycles or energy double counting. No field depends on its target comparison, and no output feeds U.",
+      "basis_ids": []
+    },
+    "RRP1-NO-FEEDBACK": {
+      "kind": "CLOSURE",
+      "definition": "U is autonomous. Its head gives signed z once. c is preselected. Wave state and Gamma determine wave evolution; q determines only thresholds, N bounds exposure, recorded outputs never become incoming ports or U inputs.",
+      "basis_ids": [
+        "RRP1-MAP-SIGNED-HEAD",
+        "RRP1-COLD-LAW"
+      ]
+    },
+    "RRP1-TARGET-SUPPORT-PAIR": {
+      "kind": "FUNCTIONAL_OUTPUT_TARGET",
+      "definition": "Construct a new immutable SupportCarrier Pair in PREPARE, ZERO_SUPPORT or STEP; no in-place mutation of the prior Pair or autonomous state.",
+      "basis_ids": ["RRP1-CARRIER-SupportCarrier", "RRP1-MAP-PREPARE", "RRP1-MAP-ZERO-SUPPORT", "RRP1-MAP-STEP"]
+    },
+    "RRP1-TARGET-APPARATUS-STATE": {
+      "kind": "FUNCTIONAL_OUTPUT_TARGET",
+      "definition": "Construct a new immutable ApparatusState with source/context, tick, retained signed tape and exact heat summary. Old state remains available; no independent extra energy store is introduced.",
+      "basis_ids": ["RRP1-CARRIER-ApparatusState", "RRP1-MAP-STEP"]
+    },
+    "RRP1-TARGET-RECORD-DELTA": {
+      "kind": "FUNCTIONAL_OUTPUT_TARGET",
+      "definition": "Construct the immutable complete RecordDelta, including before/after wave and full apparatus snapshots, from STEP outputs and prior owned provenance.",
+      "basis_ids": ["RRP1-CARRIER-RecordDelta", "RRP1-MAP-STEP"]
+    },
+    "RRP1-TARGET-EVENT-RECORD": {
+      "kind": "FUNCTIONAL_OUTPUT_TARGET",
+      "definition": "Construct one immutable EventRecord per completed step by lossless EMIT; zero or multiple threshold crossings are contents of that one record.",
+      "basis_ids": ["RRP1-CARRIER-EventRecord", "RRP1-MAP-EMIT"]
+    },
+    "RRP1-TARGET-HISTORY-STATE": {
+      "kind": "FUNCTIONAL_OUTPUT_TARGET",
+      "definition": "Construct an extended immutable HistoryState by APPEND, retaining prior events and adopting the recorded successor pair/apparatus. No historical value is overwritten.",
+      "basis_ids": ["RRP1-CARRIER-HistoryState", "RRP1-MAP-APPEND"]
+    },
+    "RRP1-PROSPECTIVE-WARM-PULSE": {
+      "kind": "PROSPECTIVE_DISCRIMINANT",
+      "definition": "Separate diagnostic domain: pair=(0,0), a=A delta_x, A!=0 and Gamma_x=g>0. w_x=4gA/(2+g), b_x=(2-g)A/(2+g), E_new=8g^2 A^2/(2+g)^2. r=b_x/A in (-1,1), g=2(1-r)/(1+r). Requires physical ownership and common signed calibration of a,b; warm transfer Gamma(b^2-a^2) is signed.",
+      "basis_ids": [
+        "RRP1-PORT-LAW"
+      ]
+    },
+    "RRP1-PROSPECTIVE-COLD-PULSE": {
+      "kind": "PROSPECTIVE_DISCRIMINANT",
+      "definition": "Supported z=(1,0,0,0), origin port Gamma_0=g>0, postkick P0=(0,Sz). h=((2I-L)Sz)_0=1421/1620. First response w_0=2h/(2+g), b_0=-h/(2+g), deposit_0=g*h^2/(2+g)^2. Signed response yields g=-h/b_0-2, with -h/2<b_0<0. Energy alone eta=deposit_0/h^2 is invariant g<->4/g, maximum 1/8 at g=2.",
+      "basis_ids": [
+        "RRP1-MAP-SOURCE-INJECTION",
+        "RRP1-WAVE-OPERATOR",
+        "RRP1-COLD-LAW"
+      ]
+    },
+    "RRP1-CALIBRATION-DOMAIN": {
+      "kind": "DOMAIN_SEPARATION",
+      "definition": "Warm incoming diagnostics and arbitrary rational amplitudes form a separate calibration domain; they are not external runtime inputs to D^c or U. The cold e0 source lies in the balanced-head image. Identify Gamma and signed units on one preregistered diagnostic and validate a distinct withheld response without refitting or Born-target branch selection.",
+      "basis_ids": [
+        "RRP1-PROSPECTIVE-WARM-PULSE",
+        "RRP1-PROSPECTIVE-COLD-PULSE"
+      ]
+    },
+    "RRP1-CHOICE-SIGNED-POINTING": {
+      "kind": "CHOICE",
+      "definition": "Read signed balanced first four coordinates at the declared head; retain full U provenance; no phase reset.",
+      "basis_ids": [
+        "RRP1-MAP-SIGNED-HEAD"
+      ]
+    },
+    "RRP1-CHOICE-SOURCE-INJECTION": {
+      "kind": "CHOICE",
+      "definition": "Use the five marked sites and centered source from #823; QDD-norm exposure disclosed.",
+      "basis_ids": [
+        "RRP1-MAP-SOURCE-INJECTION"
+      ]
+    },
+    "RRP1-CHOICE-CONTEXT": {
+      "kind": "CHOICE",
+      "definition": "Index family by fixed finite rational Gamma, positive rational q and finite exposure N; no numerical example promoted to derived constants.",
+      "basis_ids": [
+        "RRP1-CONTEXT-FAMILY"
+      ]
+    },
+    "RRP1-CHOICE-CLOCK": {
+      "kind": "CHOICE",
+      "definition": "One coupled transition per next U update; completed batch t available at n0+t+1.",
+      "basis_ids": [
+        "RRP1-MAP-CLOCK"
+      ]
+    },
+    "RRP1-CHOICE-COLD-TAPE": {
+      "kind": "CHOICE",
+      "definition": "Fresh zero incoming slots, retained outgoing tape, no recycling; finite N|R| resource budget.",
+      "basis_ids": [
+        "RRP1-COLD-LAW",
+        "RRP1-TAPE-CAPACITY"
+      ]
+    },
+    "RRP1-CHOICE-ATOMIC-THRESHOLD": {
+      "kind": "CHOICE",
+      "definition": "Emit all new site/ordinal intervals in one batch; zero or multiple threshold crossings per batch are allowed, with exactly one accounting EventRecord per step.",
+      "basis_ids": [
+        "RRP1-LEDGER-LAW"
+      ]
+    },
+    "RRP1-CHOICE-COMPLETE-EQUALITY": {
+      "kind": "CHOICE",
+      "definition": "Literal complete signed records; no quotient by counts, energy, ±source or target weights.",
+      "basis_ids": [
+        "RRP1-ENCODING",
+        "RRP1-OWNERSHIP"
+      ]
+    },
+    "RRP1-CHOICE-NO-RESET": {
+      "kind": "CHOICE",
+      "definition": "No destructive reset; fresh construction is another history. Tagged rejection is outside current #539 reset codomain.",
+      "basis_ids": [
+        "RRP1-MAP-RESET-REQUEST"
+      ]
+    },
+    "RRP1-CHOICE-SUPPORTED": {
+      "kind": "CHOICE",
+      "definition": "Mathematical support z!=0, explicit zero source branch; not a particle-presence predicate.",
+      "basis_ids": [
+        "RRP1-MAP-SUPPORT",
+        "RRP1-MAP-ZERO-SUPPORT"
+      ]
+    }
+  },
+  "carrier_inventory": [
+    {
+      "role": "PointedHead",
+      "carrier_id": "RRP1-CARRIER-PointedHead",
+      "equality_id": "RRP1-EQ-PointedHead",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-PointedHead",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-PointedHead"
+    },
+    {
+      "role": "Source",
+      "carrier_id": "RRP1-CARRIER-Source",
+      "equality_id": "RRP1-EQ-Source",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-Source",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-Source"
+    },
+    {
+      "role": "SupportedSource",
+      "carrier_id": "RRP1-CARRIER-SupportedSource",
+      "equality_id": "RRP1-EQ-SupportedSource",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-SupportedSource",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-SupportedSource"
+    },
+    {
+      "role": "ContextKey",
+      "carrier_id": "RRP1-CARRIER-ContextKey",
+      "equality_id": "RRP1-EQ-ContextKey",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-ContextKey",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-ContextKey"
+    },
+    {
+      "role": "ReadyState",
+      "carrier_id": "RRP1-CARRIER-ReadyState",
+      "equality_id": "RRP1-EQ-ReadyState",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-ReadyState",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-ReadyState"
+    },
+    {
+      "role": "Wave",
+      "carrier_id": "RRP1-CARRIER-Wave",
+      "equality_id": "RRP1-EQ-Wave",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-Wave",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-Wave"
+    },
+    {
+      "role": "SupportCarrier",
+      "carrier_id": "RRP1-CARRIER-SupportCarrier",
+      "equality_id": "RRP1-EQ-SupportCarrier",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-SupportCarrier",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-SupportCarrier"
+    },
+    {
+      "role": "ApparatusState",
+      "carrier_id": "RRP1-CARRIER-ApparatusState",
+      "equality_id": "RRP1-EQ-ApparatusState",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-ApparatusState",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-ApparatusState"
+    },
+    {
+      "role": "Outcome",
+      "carrier_id": "RRP1-CARRIER-Outcome",
+      "equality_id": "RRP1-EQ-Outcome",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-Outcome",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-Outcome"
+    },
+    {
+      "role": "RecordDelta",
+      "carrier_id": "RRP1-CARRIER-RecordDelta",
+      "equality_id": "RRP1-EQ-RecordDelta",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-RecordDelta",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-RecordDelta"
+    },
+    {
+      "role": "EventRecord",
+      "carrier_id": "RRP1-CARRIER-EventRecord",
+      "equality_id": "RRP1-EQ-EventRecord",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-EventRecord",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-EventRecord"
+    },
+    {
+      "role": "HistoryState",
+      "carrier_id": "RRP1-CARRIER-HistoryState",
+      "equality_id": "RRP1-EQ-HistoryState",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-HistoryState",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-HistoryState"
+    },
+    {
+      "role": "ZeroDisposition",
+      "carrier_id": "RRP1-CARRIER-ZeroDisposition",
+      "equality_id": "RRP1-EQ-ZeroDisposition",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-ZeroDisposition",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-ZeroDisposition"
+    },
+    {
+      "role": "ResetDisposition",
+      "carrier_id": "RRP1-CARRIER-ResetDisposition",
+      "equality_id": "RRP1-EQ-ResetDisposition",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-ResetDisposition",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-ResetDisposition"
+    },
+    {
+      "role": "Bit",
+      "carrier_id": "RRP1-CARRIER-Bit",
+      "equality_id": "RRP1-EQ-Bit",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "physical_carrier_id": "UNRESOLVED:RRP1-PHYSICAL-Bit",
+      "physical_equality_id": "UNRESOLVED:RRP1-PHYSICAL-EQ-Bit"
+    }
+  ],
+  "map_inventory": [
+    {
+      "map_id": "RRP1-MAP-SIGNED-HEAD",
+      "label": "SOURCE",
+      "domain": "PointedHead",
+      "codomain": "Source",
+      "domain_condition": "Full source head; no orbit phase reset.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-SIGNED-HEAD"
+    },
+    {
+      "map_id": "RRP1-MAP-CONTEXT",
+      "label": "CONTEXT_c",
+      "domain": "Source",
+      "codomain": "ContextKey",
+      "domain_condition": "One preselected c is fixed outside the source comparison.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-CONTEXT"
+    },
+    {
+      "map_id": "RRP1-MAP-SUPPORT",
+      "label": "SUPPORT",
+      "domain": "Source",
+      "codomain": "SUPPORTED(Source)+UNSUPPORTED_ZERO(Source)",
+      "domain_condition": "Every mathematical source.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-SUPPORT"
+    },
+    {
+      "map_id": "RRP1-MAP-SOURCE-INJECTION",
+      "label": "S",
+      "domain": "z in {-2,-1,0,1,2}^4",
+      "codomain": "Wave",
+      "domain_condition": "Source auxiliary signed vector.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-SOURCE-INJECTION"
+    },
+    {
+      "map_id": "RRP1-MAP-READY",
+      "label": "READY",
+      "domain": "SupportedSource x matching ContextKey",
+      "codomain": "ReadyState",
+      "domain_condition": "Context fixed before outcomes.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-READY"
+    },
+    {
+      "map_id": "RRP1-MAP-PREPARE",
+      "label": "PREPARE",
+      "domain": "SupportedSource x matching ContextKey x ReadyState",
+      "codomain": "SupportCarrier x ApparatusState",
+      "domain_condition": "Ready singleton only; fresh independent history.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-PREPARE"
+    },
+    {
+      "map_id": "RRP1-MAP-CLOCK",
+      "label": "CLOCK",
+      "domain": "PointedHead x t in {0,...,N-1}",
+      "codomain": "(start_checkpoint,completion_checkpoint)",
+      "domain_condition": "t labels an actual completed coupled transition.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-CLOCK"
+    },
+    {
+      "map_id": "RRP1-MAP-STEP",
+      "label": "STEP",
+      "domain": "SupportCarrier x coherent ApparatusState x matching ContextKey with t<N",
+      "codomain": "Outcome x SupportCarrier x ApparatusState x RecordDelta",
+      "domain_condition": "Finite exact pair, coherent tape/heat, same source/c; exposure not exhausted. Preparation reachability is not required here; full before/after apparatus snapshots preserve arbitrary coherent prior tape. READ_N and HistoryState separately require generated histories.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-STEP"
+    },
+    {
+      "map_id": "RRP1-MAP-EMIT",
+      "label": "EMIT",
+      "domain": "The compatible output tuple in STEP's image",
+      "codomain": "EventRecord",
+      "domain_condition": "Exact domain is STEP image, not arbitrary Cartesian tuples.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-EMIT"
+    },
+    {
+      "map_id": "RRP1-MAP-PERSIST",
+      "label": "PERSIST",
+      "domain": "Old ApparatusState x Outcome x compatible EventRecord",
+      "codomain": "ApparatusState",
+      "domain_condition": "Old apparatus literally equals event.RecordDelta.apparatus_before, including full prior signed tape; outcome matches and event is from a coherent compatible STEP extension. Result is exactly event.RecordDelta.apparatus_after.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-PERSIST"
+    },
+    {
+      "map_id": "RRP1-MAP-APPEND",
+      "label": "APPEND",
+      "domain": "HistoryState x compatible EventRecord",
+      "codomain": "HistoryState",
+      "domain_condition": "Same source/context, next sequential tick, matching previous current pair/apparatus, correct P0 initialization.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-APPEND"
+    },
+    {
+      "map_id": "RRP1-MAP-TERMINAL-M",
+      "label": "TERMINAL_M",
+      "domain": "EventRecord",
+      "codomain": "Bit",
+      "domain_condition": "Only complete records in the declared EventRecord carrier.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-TERMINAL-M"
+    },
+    {
+      "map_id": "RRP1-MAP-ZERO-SUPPORT",
+      "label": "ZERO_SUPPORT",
+      "domain": "Zero-amplitude Source x ContextKey",
+      "codomain": "ZeroDisposition",
+      "domain_condition": "z=0 only.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-ZERO-SUPPORT"
+    },
+    {
+      "map_id": "RRP1-MAP-RESET-REQUEST",
+      "label": "RESET_REQUEST",
+      "domain": "ApparatusState x matching ContextKey",
+      "codomain": "ResetDisposition",
+      "domain_condition": "Any mathematical state, including t=N.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-RESET-REQUEST"
+    },
+    {
+      "map_id": "RRP1-MAP-READ-N",
+      "label": "READ_N",
+      "domain": "Source x fixed ContextKey",
+      "codomain": "HistoryState",
+      "domain_condition": "Every source and every c in the selected mathematical family.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-READ-N"
+    },
+    {
+      "map_id": "RRP1-MAP-REREAD",
+      "label": "REREAD",
+      "domain": "EventRecord",
+      "codomain": "EventRecord",
+      "domain_condition": "Previously available immutable record.",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "implementation_state": "WRAPPER_NOT_IMPLEMENTED",
+      "physical_map_id": "UNRESOLVED:RRP1-PHYSICAL-MAP-REREAD"
+    }
+  ],
+  "choice_manifest": [
+    {
+      "choice_id": "RRP1-CHOICE-SIGNED-POINTING",
+      "epistemic_status": "CHOICE",
+      "physical_resolution": "UNRESOLVED:RRP1-PHYSICAL-SOURCE"
+    },
+    {
+      "choice_id": "RRP1-CHOICE-SOURCE-INJECTION",
+      "epistemic_status": "CHOICE",
+      "physical_resolution": "UNRESOLVED:RRP1-PHYSICAL-SOURCE-INJECTION"
+    },
+    {
+      "choice_id": "RRP1-CHOICE-CONTEXT",
+      "epistemic_status": "CHOICE",
+      "physical_resolution": "UNRESOLVED:RRP1-PHYSICAL-CONTEXT"
+    },
+    {
+      "choice_id": "RRP1-CHOICE-CLOCK",
+      "epistemic_status": "CHOICE",
+      "physical_resolution": "UNRESOLVED:RRP1-PHYSICAL-CLOCK"
+    },
+    {
+      "choice_id": "RRP1-CHOICE-COLD-TAPE",
+      "epistemic_status": "CHOICE",
+      "physical_resolution": "UNRESOLVED:RRP1-PHYSICAL-COLD-RESOURCE"
+    },
+    {
+      "choice_id": "RRP1-CHOICE-ATOMIC-THRESHOLD",
+      "epistemic_status": "CHOICE",
+      "physical_resolution": "UNRESOLVED:RRP1-PHYSICAL-OCCURRENCE"
+    },
+    {
+      "choice_id": "RRP1-CHOICE-COMPLETE-EQUALITY",
+      "epistemic_status": "CHOICE",
+      "physical_resolution": "UNRESOLVED:RRP1-PHYSICAL-RECORD-EQUALITY"
+    },
+    {
+      "choice_id": "RRP1-CHOICE-NO-RESET",
+      "epistemic_status": "CHOICE",
+      "physical_resolution": "UNRESOLVED:RRP1-TYPED-RESET-RULING"
+    },
+    {
+      "choice_id": "RRP1-CHOICE-SUPPORTED",
+      "epistemic_status": "CHOICE",
+      "physical_resolution": "UNRESOLVED:RRP1-PHYSICAL-SUPPORT"
+    }
+  ],
+  "parameter_provenance": [
+    {
+      "parameter": "signed source z",
+      "mathematical_value_id": "RRP1-MAP-SIGNED-HEAD",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "provenance": "Balanced beta inherited; new pointed-head composition chosen; no QDD-sign recovery.",
+      "physical_id": "UNRESOLVED:RRP1-PHYSICAL-SOURCE",
+      "physical_state": "UNRESOLVED"
+    },
+    {
+      "parameter": "five marked sites and centering",
+      "mathematical_value_id": "RRP1-MAP-SOURCE-INJECTION",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "provenance": "Inherited #823 QDD-norm-exposed mathematical choice.",
+      "physical_id": "UNRESOLVED:RRP1-PHYSICAL-SOURCE-INJECTION",
+      "physical_state": "UNRESOLVED"
+    },
+    {
+      "parameter": "L and 1/324",
+      "mathematical_value_id": "RRP1-WAVE-OPERATOR",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "provenance": "Fixed mathematical dependency; not an adjustable fit.",
+      "physical_id": "UNRESOLVED:RRP1-PHYSICAL-PROPAGATOR",
+      "physical_state": "UNRESOLVED"
+    },
+    {
+      "parameter": "E convention",
+      "mathematical_value_id": "RRP1-WAVE-ENERGY",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "provenance": "Fixed mathematical energy; E(P0)=m(z)/2.",
+      "physical_id": "UNRESOLVED:RRP1-PHYSICAL-ENERGY",
+      "physical_state": "UNRESOLVED"
+    },
+    {
+      "parameter": "Gamma",
+      "mathematical_value_id": "RRP1-CONTEXT-FAMILY",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "provenance": "Context index fixed before outputs, positive rational at each active site; no derived universal value.",
+      "physical_id": "UNRESOLVED:RRP1-PHYSICAL-GAMMA-CALIBRATION",
+      "physical_state": "UNRESOLVED"
+    },
+    {
+      "parameter": "q",
+      "mathematical_value_id": "RRP1-CONTEXT-FAMILY",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "provenance": "Positive rational context threshold independent of source and generated counts.",
+      "physical_id": "UNRESOLVED:RRP1-PHYSICAL-THRESHOLD-CALIBRATION",
+      "physical_state": "UNRESOLVED"
+    },
+    {
+      "parameter": "N",
+      "mathematical_value_id": "RRP1-CONTEXT-FAMILY",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "provenance": "Preselected finite exposure; no postselection on whether a crossing occurred.",
+      "physical_id": "UNRESOLVED:RRP1-PHYSICAL-EXPOSURE",
+      "physical_state": "UNRESOLVED"
+    },
+    {
+      "parameter": "U step labels",
+      "mathematical_value_id": "RRP1-MAP-CLOCK",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "provenance": "New correspondence of elapsed coupled transitions and U checkpoint counters; no SI time asserted.",
+      "physical_id": "UNRESOLVED:RRP1-PHYSICAL-CLOCK",
+      "physical_state": "UNRESOLVED"
+    },
+    {
+      "parameter": "cold incoming and tape",
+      "mathematical_value_id": "RRP1-TAPE-CAPACITY",
+      "mathematical_state": "SELECTED_MATHEMATICAL",
+      "provenance": "Fresh slots, no incoming reuse, no reset, full retained signed output.",
+      "physical_id": "UNRESOLVED:RRP1-PHYSICAL-READY-CAPACITY",
+      "physical_state": "UNRESOLVED"
+    }
+  ],
+  "field_ownership": [
+    {
+      "owner_map_id": "RRP1-MAP-SIGNED-HEAD",
+      "owned_fields": [
+        "SourceRecord.head",
+        "SourceRecord.z"
+      ]
+    },
+    {
+      "owner_map_id": "RRP1-MAP-CONTEXT",
+      "owned_fields": [
+        "ContextKey.Gamma",
+        "ContextKey.q",
+        "ContextKey.N"
+      ]
+    },
+    {
+      "owner_map_id": "RRP1-MAP-CLOCK",
+      "owned_fields": [
+        "RecordDelta.start_checkpoint",
+        "RecordDelta.completion_checkpoint"
+      ],
+      "basis": "Batch t describes the transition begun at n0+t and available only at n0+t+1."
+    },
+    {
+      "owner_map_id": "RRP1-MAP-STEP",
+      "owned_fields": [
+        "RecordDelta.t",
+        "RecordDelta.pair_before",
+        "RecordDelta.pair_after",
+        "RecordDelta.apparatus_before",
+        "RecordDelta.apparatus_after",
+        "RecordDelta.outgoing",
+        "RecordDelta.deposit",
+        "RecordDelta.heat_before",
+        "RecordDelta.heat_after",
+        "RecordDelta.counts_before",
+        "RecordDelta.counts_after",
+        "RecordDelta.remainder_after",
+        "RecordDelta.crossings",
+        "RecordDelta.kind"
+      ],
+      "reference_fields": [
+        "RecordDelta.source",
+        "RecordDelta.c"
+      ],
+      "basis": "References to SOURCE/CONTEXT fields preserve prior ownership. STEP owns complete before/after apparatus snapshots including signed tape; snapshot fields preserve earlier values. Projections and crossing intervals are computed once. Shared immutable prefix storage cannot weaken complete value equality or create an extra energy store."
+    },
+    {
+      "owner_map_id": "RRP1-MAP-EMIT",
+      "owned_fields": [
+        "EventRecord.transition_complete"
+      ],
+      "reference_fields": [
+        "EventRecord.RecordDelta"
+      ],
+      "basis": "Lossless complete wrapping; no new event by reread."
+    },
+    {
+      "owner_map_id": "RRP1-MAP-APPEND",
+      "owned_fields": [
+        "HistoryState.events"
+      ],
+      "reference_fields": [
+        "HistoryState.source",
+        "HistoryState.c",
+        "HistoryState.P0",
+        "HistoryState.current_pair",
+        "HistoryState.current_apparatus"
+      ],
+      "basis": "Append-only history; current pair/apparatus reference PREPARE or STEP outputs."
+    }
+  ],
+  "context_family": {
+    "definition_id": "RRP1-CONTEXT-FAMILY",
+    "mathematical_context_map_id": "RRP1-MAP-CONTEXT",
+    "physical_context_id": "UNRESOLVED:RRP1-PHYSICAL-CONTEXT",
+    "physical_membership_id": "UNRESOLVED:RRP1-K-C",
+    "physical_selection_rule_id": "UNRESOLVED:RRP1-CONTEXT-OWNER",
+    "family_completeness_id": "UNRESOLVED:RRP1-PHYSICAL-FAMILY-COMPLETENESS",
+    "global_uniqueness_required": false,
+    "same_physical_context_rule": "Competing inequivalent readings require independent selection/occurrence or physical equivalence; otherwise remain open."
+  },
+  "apparatus_manifest": {
+    "projector_target_ids": {
+      "value_state": "RESOLVED_ALGEBRAIC_ONLY",
+      "value": [
+        "DEF-QDD-PROJECTOR-LOW",
+        "DEF-QDD-PROJECTOR-HIGH"
+      ],
+      "local_handle_ids": [
+        "RRP1-TARGET-LOW",
+        "RRP1-TARGET-HIGH"
+      ],
+      "physical_effect_identification": "UNRESOLVED"
+    },
+    "effect_ids": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-EFFECT_IDS",
+      "mathematical_basis_ids": [
+        "RRP1-WAVE-ENERGY",
+        "RRP1-LEDGER-LAW"
+      ],
+      "proposed_role": "No physical effects assigned; calorimetric accounting is only a candidate observable.",
+      "required_resolution": "Physical effect/domain and positive pairing certificates; no alias from targets."
+    },
+    "instrument_ids": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-INSTRUMENT_IDS",
+      "mathematical_basis_ids": [
+        "RRP1-MAP-STEP"
+      ],
+      "proposed_role": "Chosen pair/port transition proposed as a physical interaction model.",
+      "required_resolution": "Physical instrument and post-state carrier, action and equality."
+    },
+    "apparatus_carrier_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-APPARATUS_CARRIER_ID",
+      "mathematical_basis_ids": [
+        "RRP1-CARRIER-ApparatusState",
+        "RRP1-TAPE-CAPACITY"
+      ],
+      "proposed_role": "Finite marked cold port array plus retained signed tape.",
+      "required_resolution": "Physical degrees of freedom, marked-site correspondence, finite exposure capacity and record carrier."
+    },
+    "ready_state_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-READY_STATE_ID",
+      "mathematical_basis_ids": [
+        "RRP1-CARRIER-ReadyState"
+      ],
+      "proposed_role": "Fresh empty tape, zero ledger and cold unused ports.",
+      "required_resolution": "Physical preparation and availability of the claimed ready state."
+    },
+    "physical_context_key_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-PHYSICAL_CONTEXT_KEY_ID",
+      "mathematical_basis_ids": [
+        "RRP1-CONTEXT-FAMILY",
+        "RRP1-MAP-CONTEXT"
+      ],
+      "proposed_role": "Fixed Gamma,q,N plus fixed profile conventions.",
+      "required_resolution": "Physical K_c and either context identification or source-to-context C; physical context equality."
+    },
+    "selected_ready_phase_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-SELECTED_READY_PHASE_ID",
+      "mathematical_basis_ids": [
+        "RRP1-MAP-READY"
+      ],
+      "proposed_role": "No selectable phase in the chosen singleton ready state.",
+      "required_resolution": "Independent physical readiness/phase rule; singleton choice does not eliminate physical phases."
+    },
+    "coupling_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-COUPLING_ID",
+      "mathematical_basis_ids": [
+        "RRP1-COLD-LAW",
+        "RRP1-PORT-LAW"
+      ],
+      "proposed_role": "Rational port response with cold incoming slots.",
+      "required_resolution": "Independent constitutive identification, units and pulse response test."
+    },
+    "pointer_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-POINTER_ID",
+      "mathematical_basis_ids": [
+        "RRP1-LEDGER-LAW",
+        "RRP1-CARRIER-EventRecord"
+      ],
+      "proposed_role": "Signed outgoing signal, deposited energy and all threshold intervals.",
+      "required_resolution": "Physical signal, threshold, resolution and complete pointer equality."
+    },
+    "reduction_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-REDUCTION_ID",
+      "mathematical_basis_ids": [
+        "RRP1-CARRIER-SupportCarrier",
+        "RRP1-CARRIER-RecordDelta"
+      ],
+      "proposed_role": "None beyond deterministic record projection selected.",
+      "required_resolution": "Physical state/reduction map and its exact domain; no assumed Lüders law."
+    },
+    "target_comparison_relation_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-TARGET_COMPARISON_RELATION_ID",
+      "mathematical_basis_ids": [
+        "RRP1-TARGET-LOW",
+        "RRP1-TARGET-HIGH"
+      ],
+      "proposed_role": "Targets available only for later comparison.",
+      "required_resolution": "Independently frozen physical comparison; no target-based construction of Gamma, source, phase, pointer or q."
+    },
+    "target_comparison_domain_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-TARGET_COMPARISON_DOMAIN_ID",
+      "mathematical_basis_ids": [
+        "RRP1-CARRIER-SupportedSource",
+        "RRP1-CONTEXT-FAMILY"
+      ],
+      "proposed_role": "Mathematical nonzero balanced-head sources for each fixed c.",
+      "required_resolution": "Physical source/domain membership and the family on which target equality would be meaningful."
+    },
+    "complete_apparatus_family_class_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-COMPLETE_APPARATUS_FAMILY_CLASS_ID",
+      "mathematical_basis_ids": [
+        "RRP1-CONTEXT-FAMILY"
+      ],
+      "proposed_role": "Chosen finite rational cold family, without exclusion of alternatives.",
+      "required_resolution": "Independently defined complete admissible physical class; account for nonlinear, mixed, irrational, differently typed and memory alternatives."
+    },
+    "apparatus_family_equality_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-APPARATUS_FAMILY_EQUALITY_ID",
+      "mathematical_basis_ids": [
+        "RRP1-EQ-ContextKey",
+        "RRP1-EQ-ApparatusState",
+        "RRP1-EQ-HistoryState"
+      ],
+      "proposed_role": "Complete literal mathematical equality for this family.",
+      "required_resolution": "Physical family equality covering readiness, hidden states, transitions and future response."
+    },
+    "phase_equality_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-PHASE_EQUALITY_ID",
+      "mathematical_basis_ids": [
+        "RRP1-EQ-ReadyState",
+        "RRP1-EQ-ApparatusState"
+      ],
+      "proposed_role": "Literal singleton/complete tape equality.",
+      "required_resolution": "Physical phase equivalence and relation to apparatus-family equality."
+    },
+    "target_independence_certificate_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-TARGET_INDEPENDENCE_CERTIFICATE_ID",
+      "mathematical_basis_ids": [
+        "RRP1-MAP-SOURCE-INJECTION",
+        "RRP1-CALIBRATION-DOMAIN"
+      ],
+      "proposed_role": "Source norm match is disclosed; Gamma/q/N must be fixed independently of target outcomes.",
+      "required_resolution": "Certificate specifying allowed inputs and exposed target relations; mathematical norm choice cannot certify physical independence."
+    },
+    "class_completeness_certificate_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-CLASS_COMPLETENESS_CERTIFICATE_ID",
+      "mathematical_basis_ids": [
+        "RRP1-CONTEXT-FAMILY"
+      ],
+      "proposed_role": "No completeness certificate proposed.",
+      "required_resolution": "Positive completeness for the defined physical class, or an independently admitted exact negative witness under the owner contract."
+    },
+    "realization_certificate_ids": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-REALIZATION_CERTIFICATE_IDS",
+      "mathematical_basis_ids": [
+        "RRP1-MAP-PREPARE",
+        "RRP1-MAP-STEP",
+        "RRP1-MAP-EMIT"
+      ],
+      "proposed_role": "Source kick, cold interaction and full threshold batch proposed as physical roles.",
+      "required_resolution": "Source/coupling/record realization for the same frozen context; conditional algebra is not realization."
+    },
+    "realized_outcome_ids": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-REALIZED_OUTCOME_IDS",
+      "mathematical_basis_ids": [
+        "RRP1-CARRIER-Outcome"
+      ],
+      "proposed_role": "NO_CROSSINGS or all site/ordinal intervals in an atomic batch.",
+      "required_resolution": "Physical occurrence of zero, one or multiple threshold crossings in a batch; the mathematical interface creates exactly one accounting EventRecord per step and makes no forced single LOW/HIGH choice."
+    },
+    "realized_event_semantics_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-REALIZED_EVENT_SEMANTICS_ID",
+      "mathematical_basis_ids": [
+        "RRP1-CARRIER-EventRecord",
+        "RRP1-MAP-TERMINAL-M"
+      ],
+      "proposed_role": "Complete computed transition with full signed provenance.",
+      "required_resolution": "Physical event completion; transition_complete does not imply COMM-SAT."
+    },
+    "occurrence_law_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-OCCURRENCE_LAW_ID",
+      "mathematical_basis_ids": [
+        "RRP1-LEDGER-LAW",
+        "RRP1-MAP-READ-N"
+      ],
+      "proposed_role": "Deterministic enumeration of mathematical threshold crossings.",
+      "required_resolution": "Ordered realized-event law and frequency meaning; temporal clicks do not supply simultaneous incidence self-location."
+    },
+    "post_state_instrument_ids": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-POST_STATE_INSTRUMENT_IDS",
+      "mathematical_basis_ids": [
+        "RRP1-MAP-STEP",
+        "RRP1-MAP-PERSIST"
+      ],
+      "proposed_role": "Updated wave pair and retained tape.",
+      "required_resolution": "Physical post-state instrument and agreement with persisted memory."
+    },
+    "persistence_update_reset_law_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-PERSISTENCE_UPDATE_RESET_LAW_ID",
+      "mathematical_basis_ids": [
+        "RRP1-MAP-PERSIST",
+        "RRP1-MAP-RESET-REQUEST"
+      ],
+      "proposed_role": "Append-only tape; reset rejected with unchanged state.",
+      "required_resolution": "Physical memory law and compatible #539 reset/domain ruling or separate schema change."
+    },
+    "zero_support_semantics_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-ZERO_SUPPORT_SEMANTICS_ID",
+      "mathematical_basis_ids": [
+        "RRP1-MAP-SUPPORT",
+        "RRP1-MAP-ZERO-SUPPORT"
+      ],
+      "proposed_role": "z=0 has a NO_EVENT_ZERO_SOURCE wrapper containing N computed NO_CROSSINGS transition records. Dark/subthreshold nonzero sources remain supported; no physical NO_EVENT semantics adopted.",
+      "required_resolution": "Physical no-support/zero-event semantics distinct from absence of crossings."
+    },
+    "l1_to_l5_gate_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-L1_TO_L5_GATE_ID",
+      "mathematical_basis_ids": [
+        "RRP1-PROFILE",
+        "RRP1-SRC-TYPED539"
+      ],
+      "proposed_role": "L1 model proposes source, L4 support/apparatus and L5 record roles.",
+      "required_resolution": "Named accepted source/L4/L5 layer gates for this profile."
+    },
+    "l6_measure_boundary": {
+      "value_state": "UNRESOLVED",
+      "boundary": "REQUIRES_SEPARATE_GATE",
+      "physical_id": "UNRESOLVED:RRP1-L6-MEASURE",
+      "mathematical_basis_ids": [
+        "RRP1-SRC-CANON",
+        "RRP1-SRC-COINCIDENCE"
+      ],
+      "proposed_role": "No L6 lift, probability or self-location supplied.",
+      "required_resolution": "Separate L6 measure, normalization and occurrence/frequency contract; do not use temporal threshold counts as its substitute."
+    }
+  },
+  "physics_manifest": {
+    "source_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-SOURCE",
+      "mathematical_basis_ids": [
+        "RRP1-MAP-SIGNED-HEAD",
+        "RRP1-MAP-SOURCE-INJECTION"
+      ],
+      "proposed_role": "Signed head to postkick wave source.",
+      "required_resolution": "Physical source carrier, marked-site dictionary, coupling and admissible K_c."
+    },
+    "current_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-CURRENT",
+      "mathematical_basis_ids": [
+        "RRP1-SRC-WAVE",
+        "RRP1-PORT-LAW"
+      ],
+      "proposed_role": "Mathematical local wave flux and signed port work.",
+      "required_resolution": "Physical current/flux variables and units."
+    },
+    "conservation_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-CONSERVATION",
+      "mathematical_basis_ids": [
+        "RRP1-LEDGER-LAW",
+        "RRP1-WAVE-ENERGY"
+      ],
+      "proposed_role": "Exact wave-plus-signed-tape accounting.",
+      "required_resolution": "Physical energy, complete modeled system boundary and conservation identification."
+    },
+    "propagator_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-PROPAGATOR",
+      "mathematical_basis_ids": [
+        "RRP1-WAVE-OPERATOR",
+        "RRP1-COLD-LAW"
+      ],
+      "proposed_role": "Fixed D3 scalar wave propagation with chosen port response.",
+      "required_resolution": "Physical propagation, spacetime, polarization and source relation; #744 remains open."
+    },
+    "detector_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-DETECTOR",
+      "mathematical_basis_ids": [
+        "RRP1-LEDGER-LAW",
+        "RRP1-CARRIER-EventRecord"
+      ],
+      "proposed_role": "Calorimetric threshold-batch candidate.",
+      "required_resolution": "Physical detector, pointer, occurrence, post-state and complete record semantics."
+    }
+  },
+  "measure_manifest": {
+    "measure_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-MEASURE",
+      "mathematical_basis_ids": [
+        "RRP1-SRC-CANON"
+      ],
+      "proposed_role": "No probability or self-location measure supplied.",
+      "required_resolution": "Separate L6 gate."
+    },
+    "normalization_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-NORMALIZATION",
+      "mathematical_basis_ids": [
+        "RRP1-LEDGER-LAW"
+      ],
+      "proposed_role": "Only energy accounting identity; no occurrence normalization.",
+      "required_resolution": "Physical probability/frequency meaning and normalization contract."
+    },
+    "metrology_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-METROLOGY",
+      "mathematical_basis_ids": [
+        "RRP1-CALIBRATION-DOMAIN"
+      ],
+      "proposed_role": "Prospective independent signed input/output calibration.",
+      "required_resolution": "Dimensional dictionary and allowed calibration scheme; no SI values introduced."
+    },
+    "scheme_id": {
+      "value_state": "UNRESOLVED",
+      "physical_id": "UNRESOLVED:RRP1-SCHEME",
+      "mathematical_basis_ids": [
+        "RRP1-CALIBRATION-DOMAIN"
+      ],
+      "proposed_role": "Frozen context and disjoint calibration/validation observations proposed.",
+      "required_resolution": "Physical selection, calibration and evaluation scheme with no target-based parameter fit."
+    }
+  },
+  "closure_manifest": {
+    "write_target_ids": [
+      "RRP1-TARGET-SUPPORT-PAIR",
+      "RRP1-TARGET-APPARATUS-STATE",
+      "RRP1-TARGET-RECORD-DELTA",
+      "RRP1-TARGET-EVENT-RECORD",
+      "RRP1-TARGET-HISTORY-STATE"
+    ],
+    "construction_semantics": "These targets name functional construction of immutable successor/output values, not in-place mutation. Prior records/states remain intact; Omega/U, the autonomous kernel and selector are not mutation targets.",
+    "feeds_U": "FALSE",
+    "terminal_output_ids": [
+      "RRP1-CARRIER-EventRecord",
+      "RRP1-CARRIER-HistoryState"
+    ],
+    "terminality_basis_id": "RRP1-MAP-TERMINAL-M",
+    "physical_terminality_basis_id": "UNRESOLVED:RRP1-PHYSICAL-TERMINALITY",
+    "mathematical_closure_basis_id": "RRP1-NO-FEEDBACK",
+    "scope": "Read-only interface; transition completion is not physical saturation or a theorem excluding future new architectures."
+  },
+  "schema_adaptation": {
+    "source_contract_id": "RRP1-SRC-TYPED539-TEMPLATE",
+    "state": "STOP-DEFINITION",
+    "reset": {
+      "proposed_map_id": "RRP1-MAP-RESET-REQUEST",
+      "proposed_codomain": "ResetDisposition",
+      "required_current_codomain": "ReadyState x ApparatusState",
+      "compatible": false,
+      "resolution": "UNRESOLVED:RRP1-TYPED-RESET-RULING",
+      "explanation": "Tagged rejection with unchanged state is not the current #539 reset function. Needs compatible typed domain/reset ruling or separate reviewed schema change; no #821 reset silently imported."
+    },
+    "domain_totality": {
+      "basis_id": "RRP1-TOTALITY-BASIS",
+      "state": "SELECTED_MATHEMATICAL",
+      "scope": "Explicit compatible subdomains, STEP image and finite exposure; not unrestricted Cartesian products; no claim all #539 law decisions have passed."
+    },
+    "physical_layer_conformance": "UNRESOLVED",
+    "decoder_stage_leg_field_inventory": "UNRESOLVED:INTEGRATED-DECODER-INVENTORY",
+    "law_decisions": "UNRESOLVED:PROFILE-BY-PROFILE-TYPED539-REVIEW",
+    "zero_branch": {
+      "initialization": "Direct zero Pair and zero ledger, with source and c retained; bypasses nonzero PREPARE.",
+      "transition_count": "Exactly N STEP/EMIT/APPEND records, all NO_CROSSINGS.",
+      "read_n": "The same History as the one wrapped by ZERO_SUPPORT.",
+      "physical_semantics": "UNRESOLVED:RRP1-PHYSICAL-ZERO-SUPPORT"
+    }
+  },
+  "prospective_discriminants": {
+    "status": "ANALYTIC_PROPOSAL_NO_MEASUREMENT_OR_FORMAL_EXECUTION",
+    "warm_id": "RRP1-PROSPECTIVE-WARM-PULSE",
+    "cold_id": "RRP1-PROSPECTIVE-COLD-PULSE",
+    "calibration_domain_id": "RRP1-CALIBRATION-DOMAIN",
+    "energy_only_ambiguity": "Gamma and 4/Gamma give the same normalized first cold origin deposit; no Born-weight branch selection allowed.",
+    "physical_signed_observable_id": "UNRESOLVED:RRP1-PHYSICAL-SIGNED-PORT-OBSERVABLE",
+    "physical_amplitude_calibration_id": "UNRESOLVED:RRP1-PHYSICAL-AMPLITUDE-CALIBRATION",
+    "future_test_contract_id": "UNRESOLVED:RRP1-PULSE-RESPONSE-PREREG",
+    "failure_interpretation": "A response mismatch under an independently fixed physical dictionary rejects that specific constitutive candidate or dictionary scope. It does not prove general apparatus impossibility."
+  },
+  "decision": {
+    "current": "STOP-DEFINITION",
+    "next_construction": "Review this narrowed source/context and record interface, especially reset typing; then implement and pin its exact wrapper in its own authorized lane if selected.",
+    "next_physical_test": "A single constitutive test requires its frozen physical source/context, signed observable, calibration, parameters and test contract; full physical family enumeration is not a prerequisite to such a limited test.",
+    "positive_decoder_closure": "Requires the same frozen physical profile, resolved source/context ownership, typed support/record/reset, realization, terminality, family completeness/equality, occurrence and relevant layer gates.",
+    "negative_owner_route": "One fully independently admitted witness may refute the exact owner's terminality/class claim. This profile supplies no such physical admission and attempts no owner closure.",
+    "unchanged": [
+      "QDD-INSTRUMENT-APPARATUS remains OPEN",
+      "physical terminality and class-completeness unresolved",
+      "COINCIDENCE-RECORD-FREQUENCY remains candidate-H / UNTESTED / STOP, unregistered",
+      "reservoir temporal threshold histories are not A/U5 simultaneous full-incidence populations",
+      "Bell/L6 remains separate",
+      "photon identification owner #744 remains open",
+      "#756 F3 NOT_SATISFIED",
+      "production #742 FORBIDDEN"
+    ],
+    "no_canonical_mutations": true,
+    "no_probe_mutations": true
+  }
+}
