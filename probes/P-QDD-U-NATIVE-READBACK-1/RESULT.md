@@ -16,7 +16,8 @@ closed-form mathematical decoder for the synchronized native trajectory.
 The clock remains part of the input; no new native register is introduced.
 
 For an arbitrary initial record on an admitted origin-zero preparation set,
-exact recovery from a later native checkpoint is possible if and only if the
+exact recovery from a native checkpoint at or after tick three is possible
+if and only if the
 record is constant on each admitted first-three-tick fiber. The actual full
 registered QDD record fails this criterion on the full supported domain.
 The frozen two supported heads merge after one tick but have old normalized
