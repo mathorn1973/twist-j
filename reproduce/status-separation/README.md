@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its seventy checks cover the current
+and emits deterministic text. Its seventy-three checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -304,6 +304,25 @@ The v76 and v77 projections exclude only these new additions and retain
 every historical hash constant. This verifier needs no Git access at replay:
 the reviewed base-file hashes are fixed in its source.
 
-Current totals are 385 claims, T254/D45/C38/H2/O29/F17, 431 normative items,
-701 dependency edges, 385 evidence rows (298 two-architecture), 916 history
-events, 14 gates, 31 live H/O, 30 CORE selections and 24 reproductions.
+The v79 checks separate the exact curvature-obligation closure, its fired
+trace-readout strengthening, and seven native decoder/incidence claims.
+The source-to-incidence implementation retains a finite `C` row; its
+universal identities and explicitly conditional symbolic transformations
+are separate `T` rows. Reader-stream spectra have an L5 carrier and a named
+definition projection. Neither that mathematical stream nor a first-record
+query supplies physical occurrence or an L6 first-outcome law. The QDD
+apparatus and both physical children retain their complete prior contracts.
+
+Historical checks reconstruct the exact v78 ledgers from the current tables.
+Only literal SHA-256-pinned v79 rows are removed; replaced or deleted v78
+rows are restored at their original line positions from the public base
+`07b123a4082f174c37bf09c9aa8815bd2c0e1660`. Each reconstructed whole file
+must match its original byte hash before it is used by the v74 gate-count
+or v76/v77/v78 preservation checks. All historical hash constants remain
+unchanged. Separate current-v79 contracts pin every accepted replacement,
+addition, gate transition and scheduler removal. Replay needs no Git access,
+and this maintenance introduces no scientific execution or evidence.
+
+Current totals are 393 claims, T261/D45/C39/H2/O28/F18, 442 normative items,
+731 dependency edges, 393 evidence rows (305 two-architecture), 926 history
+events, 15 gates, 30 live H/O, 30 CORE selections and 24 reproductions.

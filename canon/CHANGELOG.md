@@ -1,11 +1,48 @@
 # Canon changelog (public series)
 
-## Public Canon v78
+## Public Canon v79
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 385 claims; 0 T-LOCK, 254 T, 45 D, 38 C, 2 H, 29 O, 17 F; 31 live H/O.
+Registry snapshot: 393 claims; 0 T-LOCK, 261 T, 45 D, 39 C, 2 H, 28 O, 18 F; 30 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v79 closes CURVATURE-OPERATOR-CANONICAL by an exact inline
+NONUNIQUE theorem on the now-declared complete self-adjoint native-word
+class. The historical carrier, projection and all selector-preserving
+relabelings are explicit adopted definitions. Zero and the historical
+operator with trace-square -881/8 are inequivalent admitted witnesses.
+The total trace subrecord is separately UNDERDETERMINED; its failed
+single-output assertion owns the transferred FIRED_NEGATIVE curvature gate.
+No preferred operator or physical geometry is selected.
+
+The fold reconciles four completed public decoder probes into six exact
+conditional theorems and one finite C result. The native chart, protected
+invariant, finite-history phase decoder, complete fixed-reader spectra,
+apparatus-history factor and conditional incidence/record algebra now have
+one explicit scope boundary. Long-run spectra are typed at L5 through a
+named mathematical stream definition projection. This does not realize a
+physical apparatus or define an individual-outcome probability law.
+
+The four-coordinate incidence identity is proved algebraically; agreement
+on 624 supported preparations remains C. Source capture, fixed lift,
+incidence coupling, chronological phase calendar and fresh writable cells
+are conditions in the scopes. A zero sum gives no LOW slot. Uniform shifts
+of four coordinates change both numerator and denominator, and the exact
+whole-cycle count identity is not asserted on arbitrary prefixes. First-hit
+order is a separate finite property, not an extension of a limiting law.
+
+The O count falls from 29 to 28, with no new O introduced. The three physical
+QDD obligations and the separate Hodge-home bridge remain unchanged. Only
+the closed curvature scope and TIME-CUT-READING's referenced boundary change
+among prior registry rows. The preserved historical ledger is audited with
+exact reconstruction of those declared changes. No completed probe, scientific
+threshold, workflow or release procedure is changed.
+
+## Public Canon v78
+
+Registry snapshot: 385 claims; 0 T-LOCK, 254 T, 45 D, 38 C, 2 H, 29 O, 17 F; 31 live H/O.
+Reproduction witnesses: 24.
 
 Public Canon v78 registers two conditional L4 theorems from the completed
 P-QDD-STABILIZER-APPARATUS-1 public probe and its exact two-architecture

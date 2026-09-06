@@ -9,6 +9,7 @@ are carried by explicit D, C, H, or O rows.
 
 import csv
 import hashlib
+import io
 import sys
 from pathlib import Path
 
@@ -29,6 +30,233 @@ REPRODUCE = ROOT / "reproduce"
 SUCCESSOR_MANIFEST_DIR = (
     ROOT / "notes" / "canon" / "QDD-ALGEBRAIC-DMATTER-SUCCESSOR-V70"
 )
+
+
+# Frozen from public base 07b123a4082f174c37bf09c9aa8815bd2c0e1660.
+# Prior rows and hashes are never inferred from filtered current data.
+# Each patch removes only SHA-256-pinned new/replacement rows and restores the
+# literal old rows at their original line positions. The complete reconstructed
+# byte stream must match its immutable base hash before a historical check uses it.
+V79_LEDGER_PATCH = {'REGISTRY.tsv': {'prior_sha256': 'cb8ebc384e6159551a1554472c944eb28a2ae943b7fa915b94443e6fa0808aef',
+                  'remove': ('08c0e1b5538c8174600ed423b101badf2d63869a94413496b02a6d3f98964d1b',
+                             '11fa7bbdc751a945e0606ecd6e052deb6c765b5aee50118ef64503e16acb677e',
+                             '1716108b26a3253cf7052930d90592d0a46d98bcdaa7d17e149dbeeb54b76e6e',
+                             '181477c4f05668561b5c0d3137255dab4c4248dc6b9be6630b6387fa77656813',
+                             '30480bd591cb8c18371471651ad5d4afc4836a1771f919025314e2a1e42ec119',
+                             '3ce6fbcd6616f3cc0fceed6cb1b4fe6e2b1b5b6c456a09b2e1c7ff0c48d09f1f',
+                             '482bc8a1e2b5657750cfb7fcd5b777b02f9c3abd937f416c4c6d82a5711bb56c',
+                             '7250248196c76efbc04ed67ea933944427305cf9ea7ab521b9a93482fe228694',
+                             '8d8a9f8cc0285cb0bd51e8249d849581bf15b497425d4d88ec1848abef97878b',
+                             'b6fd7c11a0400e72bfedd047e02f75c09e024a4685f5c9597ad6e331c91b3a84'),
+                  'restore': ((225,
+                               'CURVATURE-OPERATOR-CANONICAL\tO\twhether the public architecture '
+                               'determines exactly one equivalence class of spatial-curvature operator '
+                               'after its carrier, measure, projection group, and ambient versus '
+                               'intrinsic commutator choice are fixed publicly\t2. Time, space, and the '
+                               'decoder\tinline\tcloses UNIQUE if exactly one class survives, NONUNIQUE '
+                               'if at least two survive, EMPTY if none survives, and STOP if the '
+                               'classification is incomplete or inexact\n'),
+                              (282,
+                               'TIME-CUT-READING\tD\tthe dictionary composition of registered public '
+                               'rows: the counter n is cut by theta_n = s_2(n) mod 2 into the selection '
+                               'law i = (z5 + 2 theta_n) mod 5, and the ramified lift realizes the cut '
+                               'as the sign quotient of the four-phase J-channel (RAMIFIED-TM-LIFT); '
+                               'the matter channel reads the named isolated pair (theta_(n-1), theta_n) '
+                               '= (0, 0), density 1/6 (GYRON-DENSITY), each knot bracketed 1 00 1 by '
+                               'cube-freeness of the drive; the spatial channel does not sit on the '
+                               'noncommutativity of the fired steps, which is exactly the fiber '
+                               'translation plane (FIRED-COMMUTATOR-NOGO), but on the silent pair a, c, '
+                               'never fired on the sheet, whose commutator reading is carried by '
+                               'CURVATURE-HISTORICAL-TRACE and KERNEL-MACRO-READING with the canonical '
+                               'operator open (CURVATURE-OPERATOR-CANONICAL); the dimensionless proper '
+                               'time is the terminal reading delta tau hat = 2 pi/5 per tick '
+                               '(METRO-TICK); no forcing, uniqueness, or completeness of this '
+                               'dictionary is claimed, and no component row is strengthened by the '
+                               'composition\t2. Time, space, and the decoder\tinline\tfires if any '
+                               'cited component row falls or is re-scoped below the use made of it '
+                               'here, or if any clause misstates the scope of the row it names\n'))},
+ 'NORMATIVE.tsv': {'prior_sha256': 'fe93c49aefdefe6ec767d70ee450634ab9337d7e815c84d62161614881f43c0b',
+                   'remove': ('09fbebc7fc9fc0301116738b92804171390056d36e4b4f86665f7371e6d58a86',
+                              '31784b596a397b8a360b8a4d90e445a7da0fc134de76776926952887bf08c348',
+                              '35ef7ad72854a6183b3968581a81784304791b6e2222ac639be244b806f06eea',
+                              '422063a262a4f5c01243822512388ab139dfba03d8bb8b2d417b81e9a706d439',
+                              '4dac061e5c2c2a8f73925c5459fd1b4c91d02b9a61c7fb9a28d1045107c6c592',
+                              '5758066044bc5ade045cf792d1968b1fd99a34d8eb61ae381563e8d4f6cc8cab',
+                              '68662b7451728234d974ee89265e37c192d3cd874e5bccc0e167a5301be90e5b',
+                              '6f9e21045b6d80ccc9485f0a868c29dda0d58f23642fcc3abcd24d871a7de181',
+                              '9b9fd5ddd05b0eeaa40370ab13981b08ffc1a52d2fcdf12789c6dd732f76c4f7',
+                              'a0bf7fd0e4888c58fad7666c72818a588c6676b82c408d1ed994ba9b8c725226',
+                              'b3002857a4811f819967be8aed94b799e1d03d633b48fb1aa75e0cbdfb387ead',
+                              'ba9300cff8f6015e4006dabadc8cc45dabcb98478bfd27e9ceb1afae7604c902'),
+                   'restore': ((224,
+                                'CURVATURE-OPERATOR-CANONICAL\tOBLIGATION\t'
+                                'CURVATURE-OPERATOR-CANONICAL\tO\tL2\tGATE-L1-L2-CURVATURE-CANONICAL\t'
+                                'canon/CANON.md::2. Time, space, and the decoder\n'),)},
+ 'DEPENDENCIES.tsv': {'prior_sha256': '0c953243f9c48bcefd5f5b4d29639066cdd6c513fb6ccff17b5cba5479846ab8',
+                      'remove': ('00e2c1b269df092cb7ef27f2f1f7d95e7df85394875b455bb1b7e7be1c65f784',
+                                 '0d582a041a95800033a369226b18319384782eca54238858a5b879b4c2c9efb7',
+                                 '211857c0f4e037641b09fed54676eea5db79751541edb6a35635d74737b047f4',
+                                 '214adbff2d75f3a62264167bea5bb11f6caff896990a3adb67bce2ddd458a42f',
+                                 '3d2bfdbc0a4db542d6ec9ef5d0e12b37a37830e3fd8c4ae1108dd941c7e3b80d',
+                                 '3dad08565a207053c4c8b3748de0a3ce49a507ad4cc6127404b0ec945ba23c30',
+                                 '4866423cea076e1633d5f1f796160daec7be6064db47d1080d759235c50c5a9a',
+                                 '4a80d54e28e716e63a3dd1a3344bc3af7cda9884027310595b311487b9c8704d',
+                                 '573ae11915980e486a7cd7c2878f2242b0318219a0ee326e2b5a55ee00b318ab',
+                                 '5b0383d1b4429c653e8031292538da0bcabf7ca38db02b10f97da595bc047fe6',
+                                 '67e7fe11547c7f8fcfedb11058cbb972265cb59db823c25942911d504ae893ca',
+                                 '6cab77bef598d21baf67c165eee3b0200995dbe7cc9cd6fea6f164a19f79d0f2',
+                                 '6ec4e46332e40fa07f5bdcdd374e507a1743b701c4dc7928dbfcb151a12ce76f',
+                                 '71fdb34b519984a274d511b4256882ab597bf7938cecaed098adcbc8553a3a8c',
+                                 '730ab53848dcc691c83e454b773c1f5356ba42b56bdf1159617cf91e1578b296',
+                                 '7486532de6f135ae5bbf5bd08a5507b74284ecffb8b9e3d11ccce547db257df9',
+                                 '75e1f92e72249ce597ea5bc9f1f77a379789797705f9a3c3329be13856bfee64',
+                                 '7bf68eafc32967b2e52a9d02a35480b2e0d55c2340a9245e786d69c4b7c86654',
+                                 '8932f460a35c96b1e54ae8ff0dce3721c9b74e72a8b499ba82686f10d9742c2f',
+                                 '898ac363e30033ca8162df81e8d8e42b4c0006bbed36241897bf1de783a808cc',
+                                 '8d8fc04005113acf810bdc7bce5bec5bbae7a5dad2d96d56c0dcfc4e12fe5816',
+                                 '8ec6b5a69be8bb673f79f172e1044e7a21a81e3bd62b39a470923d686e704ee6',
+                                 '950089c8f4bdcb22b4ee5b44ba2ae14d41811f830e18b9db62d69f9061131518',
+                                 '9722f7f8c19e8c0043fc70272624d5866ac6a09b9de98ef062b135e1fdfb277e',
+                                 '9e600a921b517ee432614f661045536acfeff68c5c0ea546c7343b12507413e2',
+                                 'aac85484d53c24ee47ee178dbe7ce2dc694b4e3a746e873c67e8d1bb2a5e4d66',
+                                 'af308bdfe54e0bbf8131b0313a0ea57a169dea61fa89c7f415164a7b203cdc5e',
+                                 'b4c21111e36bf45ebb97f3f0fd716a6ee2d7e9c5e02d46d1833849fe8382de77',
+                                 'b5f45d00a125ba6913bbdb8e5b0e5614afb5c54abd69a57ba0f3ae99b0efe564',
+                                 'c30d22fcaf92848f173363d83ce8403ebec87e33985ff6107246a64b46ca8255',
+                                 'c55dc0bb9699cc903fc026b2d27c3207ead7b8ca60704ff3124b1d83ac28648d',
+                                 'dcedb272de1cbf5b87c9fb7b569bbafb3bff06bc808721a92d29f1a04aac9f0e',
+                                 'eb79bc3780c5546fdddb2cc350e59cc124dc6b245d3740e76ff36b9b98af822a',
+                                 'f7b691a62b90ba2054cb088fb67019a1e4b050d529484952d9eb61f6086e9654'),
+                      'restore': ((318,
+                                   'CURVATURE-OPERATOR-CANONICAL\tDEF-ARCHITECTURE\tREQUIRES\tCanon '
+                                   'definition boundary: canonical spatial-curvature selection is '
+                                   'conditional on the declared architecture\n'),
+                                  (364,
+                                   'CURVATURE-OPERATOR-CANONICAL\tCURVATURE-HISTORICAL-GAUSS-SPLIT\t'
+                                   'BOUNDED_BY\tthe exact historical equality constrains one declared '
+                                   'full-carrier candidate but does not select a canonical operator '
+                                   'class\n'),
+                                  (440,
+                                   'TIME-CUT-READING\tCURVATURE-OPERATOR-CANONICAL\tBOUNDED_BY\tthe '
+                                   'canonical curvature operator remains explicitly open and is not '
+                                   'selected by this composition\n'),
+                                  (636,
+                                   'TRACEKERNEL-CURVATURE-FORCING\tCURVATURE-OPERATOR-CANONICAL\t'
+                                   'REQUIRES\tthe forcing classification cannot advance until the '
+                                   'upstream obligation publishes the carrier and complete admissible '
+                                   'L2 operator or commutator class; UNIQUE versus NONUNIQUE does not '
+                                   'itself decide the common Hodge-home property\n'))},
+ 'EVIDENCE.tsv': {'prior_sha256': 'd3705a2a51c904e2c0f7cfd1aa87e07bf62073550ce48ccb9aab6e27e763e93f',
+                  'remove': ('35a07e370d07d36f615ab187392cfd0fb98ef945aee7a0e37f586ff3809876de',
+                             '46f10be5d7e1c79eff371ff365cf68bbb206a5b1640795f57c07907001ddc05b',
+                             '5648ab9eff0b83a4a52487c5e3d43b1784d6e0ad0a6b44c47db4947caad2ec89',
+                             '8d904838594e1756ac235de7bc72b13dd45c3081cf9cc66ebfd949472d577c9a',
+                             'a85f9e1eaf26e5643a2c5f3470fe4f5848485b9849108b0474da2e31edf6de03',
+                             'd49ac9e4335950a4460d9b6275d5bc542987187558dcde37e9a18186a9f268fd',
+                             'd7342964254e066db6268d9af89ca500595659a01a1fac2796cbfff213f7ffd1',
+                             'def693f319b1238ca65961625fb41db8b9274b7b43e7db6dfc33fee3739ddaed',
+                             'f429679060fec4500e55c5d16c97837b0d1cdd11ce876c1895c0119043209d9e',
+                             'fa6121b3434f278df50f5d80a492c1f04ed1539ab6e462e434776271bb4c1f58'),
+                  'restore': ((216,
+                               'CURVATURE-OPERATOR-CANONICAL\tEV-CURVATURE-OPERATOR-CANONICAL\t'
+                               'INLINE_CANON\tinline\t'
+                               '253142e1d51b0d18d8dcb866ad3de64579ee1782e32983f2b4d0fe0c2d3bbfa5\t'
+                               'registry-scope-sha256-v1\tnone\n'),
+                              (273,
+                               'TIME-CUT-READING\tEV-TIME-CUT-READING\tINLINE_CANON\tinline\t'
+                               '4f1455918565d3a87602223bb72d189913da408963d0f25012468c857bc584c9\t'
+                               'registry-scope-sha256-v1\tnone\n'))},
+ 'HISTORY.tsv': {'prior_sha256': 'a2517350a13a5617ae57a4c0b50bd381dbe8ce332435dd9fd50f5b5e2432d573',
+                 'remove': ('2dc6071647d988e4552a48957d188b2dce574c472c4fba41cff8eaae316d781c',
+                            '3adce02895643fbbf917c4f0f4fb8e0aacb48fef7f3649cb2d05bf20df590f6b',
+                            '728691534a357947a149ae236fdd6c5b18ba8b3d7bf961f5e5aa4a98cd10aae3',
+                            '8e7712301ede7be79134aac79e4c22e890c4863e0bba61dc2c9b086fa8374831',
+                            '9b070870cbb297b1901186a1565313c3ecf2571409f6a82bec056d293393ef20',
+                            'd993b02e301001e2389019e27049d5c5272a564e35982b410e5bab63adffb196',
+                            'e6b246469efec396c2c58746d8a8fde7b22fa75611815fc259aea7c11877e8f3',
+                            'e6be34e6a48390c4219b10ce7e5c8bb8983ab920281236622b0e5a85d5964cfb',
+                            'efde8eea7cb1315265718cbcf508a9f2299332274ae0acb09190781bcdef5941',
+                            'fb9efe08ea494d15eee9d2d5e59ce02c53e6847aca890fb5ad5fd206334d60e7'),
+                 'restore': ()},
+ 'GATES.tsv': {'prior_sha256': '4f38b0d8c95a43d37190e57f416e865e6c1adf70378c0f9d4625c63bf8842ca3',
+               'remove': ('17eefc1dd4d98d9fdc61c5dce355252af94dcb8356784cf885f4f80b1d889d91',
+                          'b06fcdd3bff4bcfff6a6e092dd40c1edec65503156d7f3a36b261dae169cab05'),
+               'restore': ((2,
+                            'GATE-L1-L2-CURVATURE-CANONICAL\tCURVATURE-OPERATOR-CANONICAL\tL1\tL2\t'
+                            'OPEN_LIFT\tcloses UNIQUE if exactly one equivalence class survives the '
+                            'frozen public classification, NONUNIQUE if at least two survive, EMPTY if '
+                            'none survives, and STOP if completeness or exactness fails\n'),)},
+ 'FRONTIER_PROGRAMS.tsv': {'prior_sha256': 'd7f7205acd461ff05ec7b31c45cc8e3b0ca3d4960432eb6053556fc5357da0d8',
+                           'remove': (),
+                           'restore': ((4,
+                                        'CURVATURE-OPERATOR-CANONICAL\tDECODER_CORE\tROOT\tSTOP\t'
+                                        'FORMAL\n'),)},
+ 'CORE_SELECTION.tsv': {'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'remove': (),
+                        'restore': ()}}
+V79_NATIVE_ROWS = {
+    "U-NATIVE-CHART-AND-QDD-READBACK": ("T", "L1"),
+    "U-NATIVE-INVARIANT-AND-NOWRITE": ("T", "L1"),
+    "U-FINITE-HISTORY-CLOCK-PHASE": ("T", "L1"),
+    "U-NATIVE-READER-STREAM-SPECTRA": ("T", "L5"),
+    "U-NATIVE-APPARATUS-HISTORY-FACTOR": ("T", "L1"),
+    "QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD": ("T", "L1"),
+    "QDD-CONDITIONAL-INCIDENCE-FINITE-AUDIT": ("C", "L1"),
+}
+
+
+def v79_previous_bytes(path):
+    patch = V79_LEDGER_PATCH[path.name]
+    lines = path.read_bytes().splitlines(keepends=True)
+    removed = {digest: 0 for digest in patch["remove"]}
+    kept = []
+    for position, line in enumerate(lines):
+        digest = hashlib.sha256(line).hexdigest()
+        if position and digest in removed:
+            removed[digest] += 1
+        else:
+            kept.append(line)
+    if any(count != 1 for count in removed.values()):
+        return None
+    for position, old_line in patch["restore"]:
+        if position > len(kept):
+            return None
+        kept.insert(position, old_line.encode("utf-8"))
+    previous = b"".join(kept)
+    if hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]:
+        return None
+    return previous
+
+
+def v79_previous_rows(path):
+    previous = v79_previous_bytes(path)
+    if previous is None:
+        return []
+    return list(csv.DictReader(io.StringIO(previous.decode("utf-8")), delimiter="\t"))
+
+
+def v79_historical_tables(excluded_claims, excluded_releases):
+    previous = {
+        "REGISTRY": v79_previous_rows(REGISTRY),
+        "NORMATIVE": v79_previous_rows(NORMATIVE),
+        "DEPENDENCIES": v79_previous_rows(DEPENDENCIES),
+        "EVIDENCE": v79_previous_rows(EVIDENCE),
+        "HISTORY": v79_previous_rows(HISTORY),
+        "GATES": v79_previous_rows(GATES),
+        "FRONTIER_PROGRAMS": v79_previous_rows(FRONTIER_PROGRAMS),
+        "CORE_SELECTION": v79_previous_rows(CORE_SELECTION),
+    }
+    for name, column in (
+        ("REGISTRY", "claim_id"), ("NORMATIVE", "item_id"),
+        ("DEPENDENCIES", "item_id"), ("EVIDENCE", "claim_id"),
+    ):
+        previous[name] = [
+            row for row in previous[name] if row[column] not in excluded_claims
+        ]
+    previous["HISTORY"] = [
+        row for row in previous["HISTORY"] if row["release"] not in excluded_releases
+    ]
+    return previous
 
 
 def load_table(path):
@@ -135,7 +363,10 @@ def projected_file_sha256(path, column=None, excluded=()):
     The frozen selector columns contain unquoted ASCII identifiers. Keep the
     header, every retained row, its order and its exact line ending unchanged.
     """
-    lines = path.read_bytes().splitlines(keepends=True)
+    previous = v79_previous_bytes(path)
+    if previous is None:
+        return "INVALID-V79-RECONSTRUCTION"
+    lines = previous.splitlines(keepends=True)
     if column is None:
         return hashlib.sha256(b"".join(lines)).hexdigest()
     fields = lines[0].rstrip(b"\r\n").decode("utf-8").split("\t")
@@ -224,20 +455,20 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 254, "D": 45, "C": 38, "F": 17,
-                       "O": 29, "H": 2}
+    expected_counts = {"T": 261, "D": 45, "C": 39, "F": 18,
+                       "O": 28, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v78",
-        len(rows) == 385
+        "registry and companion-ledger counts match Public Canon v79",
+        len(rows) == 393
         and counts == expected_counts
-        and len(normative) == 431
-        and len(dependencies) == 701
-        and len(evidence) == 385
-        and two_architecture == 298
-        and len(history) == 916
-        and len(gates) == 14
-        and len(programs) == 31
+        and len(normative) == 442
+        and len(dependencies) == 731
+        and len(evidence) == 393
+        and two_architecture == 305
+        and len(history) == 926
+        and len(gates) == 15
+        and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 8
         and len(core_selection_rows) == 30
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 24,
@@ -5892,9 +6123,11 @@ def run():
             )
             for gate_id, contract in v74_gate_contract.items()
         )
-        and sum(row["gate_kind"] == "OPEN_LIFT" for row in gates.values()) == 7
+        # Historical v74 count: the independently pinned v79 check below owns
+        # the later curvature-gate transition rather than changing this constant.
+        and sum(row["gate_kind"] == "OPEN_LIFT" for row in v79_previous_rows(GATES)) == 7
         and sum(
-            row["gate_kind"] == "DICTIONARY_LIFT" for row in gates.values()
+            row["gate_kind"] == "DICTIONARY_LIFT" for row in v79_previous_rows(GATES)
         ) == 3
         and programs.get("PHOTON-CONE-CONVERGENCE") == {
             "claim_id": "PHOTON-CONE-CONVERGENCE",
@@ -6331,16 +6564,10 @@ def run():
         )).encode("utf-8")).hexdigest()
     v76_events = [row for row in history if row["release"] == "canon-v76-candidate"]
     v76_events_by_claim = {row["claim_id"]: row for row in v76_events}
-    v76_old_tables = {
-        "REGISTRY": [r for r in rows if r["claim_id"] not in v76_names | v77_names | v78_names],
-        "NORMATIVE": [r for k,r in normative.items() if k not in v76_names | v77_names | v78_names],
-        "DEPENDENCIES": [r for r in dependencies if r["item_id"] not in v76_names | v77_names | v78_names],
-        "EVIDENCE": [r for k,r in evidence.items() if k not in v76_names | v77_names | v78_names],
-        "HISTORY": [r for r in history if r["release"] not in {"canon-v76-candidate", "canon-v77-candidate", "canon-v78-candidate"}],
-        "GATES": list(gates.values()),
-        "FRONTIER_PROGRAMS": list(programs.values()),
-        "CORE_SELECTION": core_selection_rows,
-    }
+    v76_old_tables = v79_historical_tables(
+        v76_names | v77_names | v78_names,
+        {"canon-v76-candidate", "canon-v77-candidate", "canon-v78-candidate"},
+    )
     checks.append((
         "V76-L1-FOLD",
         "eleven L1 theorem rows enter with exact probe evidence; prior claims, "
@@ -6380,16 +6607,10 @@ def run():
     v77_dependency_hash = 'c0c8b11ac70c3504128f706649ed1df44c7a4a5805cec0a6c72c7af8e80da5cf'
     v77_events = [r for r in history if r["release"] == "canon-v77-candidate"]
     v77_events_by_claim = {r["claim_id"]: r for r in v77_events}
-    v77_old_tables = {
-        "REGISTRY": [r for r in rows if r["claim_id"] not in v77_names | v78_names],
-        "NORMATIVE": [r for k,r in normative.items() if k not in v77_names | v78_names],
-        "DEPENDENCIES": [r for r in dependencies if r["item_id"] not in v77_names | v78_names],
-        "EVIDENCE": [r for k,r in evidence.items() if k not in v77_names | v78_names],
-        "HISTORY": [r for r in history if r["release"] not in {"canon-v77-candidate", "canon-v78-candidate"}],
-        "GATES": list(gates.values()),
-        "FRONTIER_PROGRAMS": list(programs.values()),
-        "CORE_SELECTION": core_selection_rows,
-    }
+    v77_old_tables = v79_historical_tables(
+        v77_names | v78_names,
+        {"canon-v77-candidate", "canon-v78-candidate"},
+    )
     checks.append((
         "V77-EARNED-FOLD",
         "eight conditional theorems and four bounded archive computations; exact source "
@@ -6492,6 +6713,103 @@ def run():
             "QDD-INSTRUMENT-CLASS-COMPLETENESS",
         ))
         and qdd_current_split
+    ))
+
+    checks.append((
+        "V79-PRIOR-LEDGERS",
+        "exact pinned row replacements reconstruct every byte of the prior v78 "
+        "ledger; no earlier hash, lifecycle row or unlisted claim is relaxed",
+        set(V79_LEDGER_PATCH) == {
+            "REGISTRY.tsv", "NORMATIVE.tsv", "DEPENDENCIES.tsv", "EVIDENCE.tsv",
+            "HISTORY.tsv", "GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv",
+        }
+        and all(
+            v79_previous_bytes(ROOT / "canon" / name) is not None
+            for name in V79_LEDGER_PATCH
+        ),
+    ))
+    curvature = "CURVATURE-OPERATOR-CANONICAL"
+    trace_claim = "CURVATURE-TRACE-READOUT-UNIQUE"
+    curvature_gate = "GATE-L1-L2-CURVATURE-CANONICAL"
+    checks.append((
+        "V79-CURVATURE",
+        "raw-class nonuniqueness closes the named O at T; the separate trace "
+        "readout strengthening is F and owns the terminal gate; time cut stays D",
+        has_status(index, curvature, "T")
+        and normative.get(curvature, {}).get("item_type") == "THEOREM"
+        and normative.get(curvature, {}).get("layer") == "L2"
+        and normative.get(curvature, {}).get("gate_ids") == ""
+        and curvature not in programs
+        and has_status(index, trace_claim, "F")
+        and normative.get(trace_claim, {}).get("item_type") == "FALSIFIED"
+        and normative.get(trace_claim, {}).get("layer") == "L2"
+        and normative.get(trace_claim, {}).get("gate_ids") == curvature_gate
+        and gates.get(curvature_gate, {}).get("owner_item_id") == trace_claim
+        and gates.get(curvature_gate, {}).get("gate_kind") == "FIRED_NEGATIVE"
+        and gates.get(curvature_gate, {}).get("from_layer") == "L1"
+        and gates.get(curvature_gate, {}).get("to_layer") == "L2"
+        and has_status(index, "TIME-CUT-READING", "D")
+        and any(
+            row["claim_id"] == curvature and row["event_type"] == "STATUS_CHANGE"
+            and row["previous_status"] == "O" and row["new_status"] == "T"
+            and row["release"] == "canon-v79-candidate"
+            for row in history
+        )
+        and any(
+            row["claim_id"] == "TIME-CUT-READING"
+            and row["event_type"] == "SCOPE_CHANGE"
+            and row["previous_status"] == row["new_status"] == "D"
+            and row["release"] == "canon-v79-candidate"
+            for row in history
+        )
+        and all(
+            normative.get(name, {}).get("item_type") == "DEFINITION"
+            and normative.get(name, {}).get("layer") == "L2"
+            for name in (
+                "DEF-NATIVE-WORD-CURVATURE-CLASS", "DEF-CURVATURE-TRACE-SUBRECORD",
+            )
+        ),
+    ))
+    stream_definition = "DEF-NATIVE-READER-STREAM"
+    stream_gate = "GATE-L1-L5-NATIVE-READER-STREAM"
+    checks.append((
+        "V79-NATIVE-DECODER",
+        "six conditional mathematical theorems and one finite C audit retain "
+        "their exact sources; L5 spectra use a typed projection and physical QDD stays O",
+        all(
+            has_status(index, claim, status)
+            and normative.get(claim, {}).get("layer") == layer
+            and normative.get(claim, {}).get("item_type")
+                == ("THEOREM" if status == "T" else "COMPUTATION")
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("hash_mode") == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement") == "two-architecture"
+            and claim not in programs
+            and any(
+                row["claim_id"] == claim and row["event_type"] == "DECLARE"
+                and row["previous_status"] == "-" and row["new_status"] == status
+                and row["release"] == "canon-v79-candidate"
+                for row in history
+            )
+            for claim, (status, layer) in V79_NATIVE_ROWS.items()
+        )
+        and normative.get(stream_definition, {}).get("item_type") == "DEFINITION"
+        and normative.get(stream_definition, {}).get("layer") == "L5"
+        and normative.get(stream_definition, {}).get("gate_ids") == stream_gate
+        and gates.get(stream_gate, {}).get("owner_item_id") == stream_definition
+        and gates.get(stream_gate, {}).get("gate_kind") == "DEFINITION_PROJECTION"
+        and gates.get(stream_gate, {}).get("from_layer") == "L1"
+        and gates.get(stream_gate, {}).get("to_layer") == "L5"
+        and any(
+            row["item_id"] == "U-NATIVE-READER-STREAM-SPECTRA"
+            and row["depends_on"] == stream_definition and row["relation"] == "REQUIRES"
+            for row in dependencies
+        )
+        and all(has_status(index, claim, "O") for claim in (
+            "QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS",
+            "QDD-INSTRUMENT-CLASS-COMPLETENESS",
+        ))
+        and qdd_current_split,
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

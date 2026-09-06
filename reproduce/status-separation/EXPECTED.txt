@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v78
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v79
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -71,5 +71,8 @@ PASS 67 V75-CLOSURE eight qualified theorems enter at exact scope while the phot
 PASS 68 V76-L1-FOLD eleven L1 theorem rows enter with exact probe evidence; prior claims, gates and frontier stay fixed; fired polar-A and physical coincidence stay excluded
 PASS 69 V77-EARNED-FOLD eight conditional theorems and four bounded archive computations; exact source evidence and prior ledgers persist; physical Born and apparatus owners stay open
 PASS 70 V78-QDD-STABILIZER two conditional L4 circuit and lattice theorems enter on exact probe evidence; the complete prior ledger and every physical open obligation remain unchanged
+PASS 71 V79-PRIOR-LEDGERS exact pinned row replacements reconstruct every byte of the prior v78 ledger; no earlier hash, lifecycle row or unlisted claim is relaxed
+PASS 72 V79-CURVATURE raw-class nonuniqueness closes the named O at T; the separate trace readout strengthening is F and owns the terminal gate; time cut stays D
+PASS 73 V79-NATIVE-DECODER six conditional mathematical theorems and one finite C audit retain their exact sources; L5 spectra use a typed projection and physical QDD stays O
 
-RESULT 70/70 ALL PASS
+RESULT 73/73 ALL PASS
