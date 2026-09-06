@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its seventy-three checks cover the current
+and emits deterministic text. Its seventy-six checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -323,6 +323,36 @@ unchanged. Separate current-v79 contracts pin every accepted replacement,
 addition, gate transition and scheduler removal. Replay needs no Git access,
 and this maintenance introduces no scientific execution or evidence.
 
-Current totals are 393 claims, T261/D45/C39/H2/O28/F18, 442 normative items,
+The v79 totals were 393 claims, T261/D45/C39/H2/O28/F18, 442 normative items,
 731 dependency edges, 393 evidence rows (305 two-architecture), 926 history
 events, 15 gates, 30 live H/O, 30 CORE selections and 24 reproductions.
+
+The v80 maintenance adds an outer byte reconstruction: exactly three new
+Registry, Normative, Evidence and History rows and thirteen new dependency
+rows are removed only by their frozen line SHA-256 values. Every resulting
+whole table must match `git show` of public v79 parent
+`a51df34fe1f1f433062faeb18f5e03fd0a8082b2`. Gates, Frontier programs and CORE
+selection match that parent with no removal. These recovered v79 bytes feed
+the existing v79 reconstruction, so every older snapshot, row replacement,
+lifecycle record and historical hash remains enforced without alteration.
+
+The separate v80 intake guard fixes three theorem rows, their L1/L1/L4
+layers, the exact completed public probe bundle, declaration events,
+thirteen dependencies and the written proof-file hashes. It requires the
+full-state/common-ready recovery conditions, the complete common-onset
+obstruction and conditional permutation scope, and the full real/complex CP
+three-pass theorem with its two-pass and depolarizing counterexamples.
+No new claim owns a gate, Frontier entry or CORE selection, and no dependency
+composes the joint probe's L1 and L4 conclusions into a physical derivation.
+
+A separate physical-owner guard pins the complete v79 registry rows of
+QDD-INSTRUMENT-APPARATUS, QDD-TERMINAL-EVENT-SEMANTICS and
+QDD-INSTRUMENT-CLASS-COMPLETENESS at O/STOP. Virtual history regeneration,
+conditional onset laws and a reduced-channel selector do not supply
+preparation, physical writing, a realized occurrence law or an L6 measure.
+
+Current v80 totals are 396 claims, T264/D45/C39/H2/O28/F18, 445 normative
+items, 744 dependency edges, 396 evidence rows (308 two-architecture),
+929 history events, 15 gates, 30 live H/O, 30 CORE selections and
+24 reproductions. This verifier maintenance is release bookkeeping,
+not a new formal scientific gate.
