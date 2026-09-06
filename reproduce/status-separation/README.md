@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its sixty-nine checks cover the current
+and emits deterministic text. Its seventy checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 67/67 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 70/70 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -281,7 +281,29 @@ rows, their exact source bundles, layers, declarations and dependency edges.
 It preserves all preceding tables and excludes the new rows only from the
 fixed v76 projection, whose historical hash constants remain unchanged.
 The live physical owners, gates, Frontier programs and CORE selection remain
-fixed. Current totals are 383 claims, 24 reproductions, 14 gates,
+fixed. The v77 totals were 383 claims, 24 reproductions, 14 gates,
 T252/D45/C38/H2/O29/F17, 31 live H/O and 296 two-architecture evidence rows.
 The conditional Born note and proposed measurement/realization wrappers do
 not supply a new physical claim or a passed owner gate.
+
+The v78 check pins `QDD-STABILIZER-UNCOMPUTE-POSTSTATES` and
+`QDD-STABILIZER-COMMON-LATTICE-OBSTRUCTION` at T/L4 to their exact Registry,
+Normative, Evidence and declaration rows, the four dependency edges, and the
+completed `P-QDD-STABILIZER-APPARATUS-1` two-architecture bundle. It requires
+their Canon headings and excludes gate, Frontier and CORE ownership. The
+conditional circuit construction and obstruction for the specified common
+lattice do not close an apparatus, event, physical-class or occurrence debt.
+
+The complete old Registry, Normative, Dependencies, Evidence and History
+tables are recovered by removing only the two v78 claims and their named
+declaration events. Their raw byte hashes, including row order and line
+endings, must match `git show` of public comparison base
+`b349ffd76591b48fb7c2cccd1a2f42cf2066df6e`; the complete Gates,
+Frontier-program and CORE-selection files match that base without removal.
+The v76 and v77 projections exclude only these new additions and retain
+every historical hash constant. This verifier needs no Git access at replay:
+the reviewed base-file hashes are fixed in its source.
+
+Current totals are 385 claims, T254/D45/C38/H2/O29/F17, 431 normative items,
+701 dependency edges, 385 evidence rows (298 two-architecture), 916 history
+events, 14 gates, 31 live H/O, 30 CORE selections and 24 reproductions.

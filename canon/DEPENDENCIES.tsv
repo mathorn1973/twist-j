@@ -1,4 +1,8 @@
 item_id	depends_on	relation	basis
+QDD-STABILIZER-UNCOMPUTE-POSTSTATES	QDD-J-AFFINE-APPARATUS-NONSELECTION	REQUIRES	the construction uses the registered L4 rational simplex and stabilizer support with the rank-one/rank-three split; its retained-path mixed instrument lies outside the earlier restricted pure affine class
+QDD-STABILIZER-UNCOMPUTE-POSTSTATES	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the chosen finite circuit and coarse post-state maps identify no physical apparatus, select no unique architecture, establish no complete physical class and supply no occurrences, sampling or physical reset
+QDD-STABILIZER-COMMON-LATTICE-OBSTRUCTION	QDD-STABILIZER-UNCOMPUTE-POSTSTATES	REQUIRES	the obstruction uses the two default E circuits on the fixed carrier and their path-zero flag-minus reflection restrictions
+QDD-STABILIZER-COMMON-LATTICE-OBSTRUCTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	failure of a common lattice for two fixed settings on the specified carrier is not nonexistence of all physical apparatuses or realizations on different carriers
 RAPIDITY-GOLDEN-LADDER	J-IDEAL-RAPIDITY-CHARACTER-LIFT	REQUIRES	registered integral Laurent local factors supply the diagonal evaluations
 RAPIDITY-GOLDEN-LADDER	ARITHMETIC-RAPIDITY-DECOMPOSITION	REQUIRES	registered O_F unit group and signed norm/Pell identities supply the integrality classification
 RAPIDITY-GOLDEN-LADDER	J-IDEAL-COUNT-QUADRATIC-CHARACTER	REQUIRES	registered ideal-count local values identify the sigma_3 anchor

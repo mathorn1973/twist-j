@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v77
+# TWIST-J Public Canon v78
 
-**Release identity.** Public Canon v77. Normative authority and activation
+**Release identity.** Public Canon v78. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v77 also declares the discrete architecture used to read
+only. Public Canon v78 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v77 does not claim
+seed of the two algebraic projections. Public Canon v78 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -124,7 +124,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v77 contains no such
+deriving the architecture from J; Public Canon v78 contains no such
 theorem.
 
 ---
@@ -2857,6 +2857,241 @@ their own open boundaries. COINCIDENCE-RECORD-FREQUENCY remains candidate-H
 / UNTESTED / STOP outside the registry. The conditional Born derivation
 and proposed physical contracts under `notes/` are not evidence for any
 closed physical claim here.
+
+### QDD-STABILIZER-UNCOMPUTE-POSTSTATES [T]
+
+This is a conditional L4 theorem for a selected rational apparatus carrier.
+It gives the complete system maps of a concrete reversible circuit and a
+retained-path control, including their different subsequent readings. It
+does not identify either circuit with a physical apparatus or the public
+integer update. The input projector targets were known when the design was
+chosen; absence of a projector gate in the implementation is not a physical
+selection argument.
+
+Use the ordered five-cell space
+
+```text
+V = {v in Q^5 : 1^T v = 0},   q(v)=v^T v,
+u_k=e_k-1/5,                 u_k^T u_k=4/5,
+u_i^T u_j=-1/5 (i!=j).
+```
+
+The full carrier has 40 coordinates `(path,flag,cell)` in
+`Q^4 tensor Q^2 tensor Q^5`; the invariant zero-cell-sum subspace has
+dimension 32. Prepared inputs are `|0,0>v`, including zero. Amplitude
+equality is literal ordered rational-coordinate equality. System-map
+equality means equality on every rational operator supported on V. It
+permits later system operations acting equally on every retained path,
+but excludes access to old fine paths or auxiliary records. Reduced-map
+equality does not identify complete auxiliary histories.
+
+For each setting `k in F_5`, let `g_k e_x=e_(k+2(x-k))`. Its four-cycle is
+`(k+1,k+2,k+4,k+3)`, and `g_k^4=I`. Set
+
+```text
+H = ((1, 1, 1, 1), (1,-1, 1,-1),
+     (1, 1,-1,-1), (1,-1,-1, 1)),
+W=H/2,  D_k=diag(I,g_k,g_k^2,g_k^3),
+V_k=(W tensor I) D_k (W tensor I).
+```
+
+Here V_k acts independently in each flag copy. Since `H^T=H`, `H^2=4I`
+and each g_k is a permutation, V_k is rational orthogonal and has fourth
+power identity. The circuit uses only this split, controlled routing and
+recombination. Its implementation contains no P or Q gate.
+
+For analysis, suppress k and let I denote identity on V, represented on all
+five cells by `Pi=I_5-11^T/5`. Define
+
+```text
+P=(I+g+g^2+g^3)/4=(5/4)u_k u_k^T,
+R=(I-g+g^2-g^3)/4,   C=I-P-R,   Q=I-P,   J_C=g C.
+```
+
+P,R,C are orthogonal projections of ranks 1,1,2 on V, with
+`J_C^T=-J_C` and `J_C^2=-C`. The first column of V_k gives the four
+prepared path maps
+
+```text
+K_0=P,   K_1=R,   K_2=(C+J_C)/2,   K_3=(C-J_C)/2.
+```
+
+Their effects are `P,R,C/2,C/2`, summing to I. These equations follow by
+expanding the signed Hadamard rows against the four group powers. The
+rank-one stabilizer target itself belongs to the earlier affine result;
+the new result is its concrete circuit and complete post-state transport.
+
+Let F flip the flag exactly on paths other than zero. The coherent
+uncompute circuit is `E_k=V_k^{-1} F V_k`. It is an orthogonal involution
+on all 40 modes and satisfies
+
+```text
+E_k(|0,0>v) = |0,0>Pv + |0,1>Qv.
+```
+
+Indeed V_k fixes prepared Pv, while prepared Qv has zero path-zero
+component. F leaves the first component's flag and flips the second;
+the inverse returns each component to path zero. With the flag initially
+one, the two flags exchange. Thus the ordered LOW/HIGH system maps are
+
+```text
+Phi_L^E(rho)=P rho P,        Phi_H^E(rho)=Q rho Q.
+```
+
+The retained-path control stops after `F V_k`, keeping the fine paths
+distinct. LOW is path zero; HIGH is the three other paths. Summing their
+outer-product maps, rather than their amplitudes, gives
+
+```text
+Phi_L^R(rho)=P rho P,
+Phi_H^R(rho)=R rho R + (C rho C + J_C rho J_C^T)/2
+           =T_k(rho)-P rho P,
+T_k(rho)=(1/4) sum_(a=0)^3 g_k^a rho g_k^(-a).
+```
+
+The cross terms between K_2 and K_3 cancel in the sum of their maps.
+Alternatively orthogonality of W cancels cross terms between different
+group powers. This proves equality on every operator, not only equality
+of weights. Both controls have first energies `q(Pv),q(Qv)`.
+Since `T_k^2=T_k` and `T_k Phi_L=Phi_L T_k=Phi_L`, the generally mixed
+HIGH map is also idempotent and has zero cross-compositions with LOW.
+It nevertheless differs from `Q rho Q`. This is outside the earlier
+pure single-branch class and does not contradict its conditional selectors.
+
+These same coarse maps hold for every rational orthogonal four-path
+mixer A whose first column has entries `+/-1/2`, every permutation sigma
+of the four powers, and
+`V_A=A^T diag(g^sigma(r)) A`, with its matching inverse for E.
+Writing `L_r=sum_t A_(t,r) A_(t,0) g^sigma(t)` gives `L_0=P` and
+
+```text
+sum_r L_r rho L_r^T
+  =sum_t A_(t,0)^2 g^sigma(t) rho g^(-sigma(t))=T_k(rho).
+```
+
+The prepared P component stays at path zero, so the uncompute proof also
+applies to every member. Positive balanced-column completions are precisely
+`W diag(1,B)` with `B in O(3,Q)`; independent row signs give the signed
+columns. This is completeness of this stated mixer class only. Fine path
+amplitudes and their full records need not coincide.
+
+Each interaction in a sequence uses fresh path/flag auxiliaries prepared
+in `|0,0>`; earlier auxiliaries are retained and are not fed back into the
+next circuit. For any ordered pair of settings and either control at each stage, the
+second-stage branch map is exactly `Phi_(l,b) Phi_(k,a)`. Its fine maps
+are the ordered products of the two stage Kraus maps, with all histories kept
+distinct. Linearity extends the assertion to further finite system
+operations subject to the same auxiliary-access restriction.
+
+There are exact discriminating preparations. If `(a,b,c,d)` is the
+g_k-cycle and `v=e_a-e_c`, then `q(v)=2` and first HIGH has normalized
+energy one. A subsequent LOW analyzer at b gives E energy fraction zero
+and R fraction `5/16`; at a the fractions are `5/8` and `5/16`.
+For `u_j`, `j!=k`, first HIGH is `15/16`. The joint HIGH_k then LOW_j
+fractions are respectively `225/256` and `75/256`; division by the same
+nonzero HIGH fraction gives `15/16` and `5/16`. To verify the latter,
+use `sum_l P_l=(5/4)I`, `P_k P_j P_k=P_k/16` and
+`Phi_H^R(P_j)=(5/16)Q_k`. These are energy fractions, or conditional
+density-model weights under that extra interpretation, not derived
+photon occurrence probabilities.
+
+The direct circuit and a separate projector/twirl reference agree on all
+16 ordered operators formed from the rational basis `e_i-e_4`, all
+5-by-5 ordered setting pairs, both controls at each stage, and all four
+binary branch histories. Full 40-coordinate and 32-dimensional checks
+audit reversibility and carrier invariance. The infinite mixer assertion
+rests on the displayed proof; the finite controls do not enumerate O(3,Q).
+The source result and exact replay are
+`probes/P-QDD-STABILIZER-APPARATUS-1/RESULT.md`.
+
+**Selected terminal-account corollary.** The same apparatus outputs may be
+swapped as complete signed vectors into fresh zero reservoirs. Choose a
+fixed channel order, rational quantum epsilon>0 and immutable context.
+Each appended batch retains every signed output, supplied energy, pulse
+index, local count and remainder, and lifetime mark ordinal. READ is
+identity; END closes the administrative run idempotently and forbids
+further deposits. RESET archives the entire old run and creates fresh
+local counters while preserving the old signed store, residuals and
+lifetime ordinals. Induction over these operations gives
+
+```text
+total supplied energy = total stored signed-vector energy
+                      =sum_(all runs and channels)(epsilon N+c).
+```
+
+Counts and remainders describe the same stored energy, not additional
+stores. The complete chosen account and induction are in the probe's
+`RECORD-CONTRACT.md`; its exact history audit is included in the same
+verifier. This is a composition of the selected model, not a new general
+reservoir theorem or a physical completion law. Fresh repeated pulses
+require explicit new energy. Two channels receiving epsilon/2 per pulse
+give zero marks on odd pulses and two on even pulses; reset after every
+pulse gives zero marks while retaining the energy in the archives.
+Aggregation of fine-channel counts occurs after their separate thresholds.
+An uncertainty interval crossing a threshold returns AMBIGUOUS. No noise
+law, detector calibration, old-wave reset or exclusive outcome is supplied.
+
+The decoder-source comparison also needs explicit typing. Its ordered
+sites Y0,...,Y4 map to phase labels through
+`beta=(0,1,3,4,2)`, `Y_j -> beta(j)`. For the centered source S(z), the
+permutation T_beta gives `T_beta S(z)=sum_(i<4) z_i u_beta(i)` and hence
+`q(P_2 T_beta S(z))=(sum z)^2/20`, with total
+`q(T_beta S(z))=z^T (I_4-11^T/5)z`. No implicit label transport is applied
+by the circuit. The decoder wave energy has the separate normalization
+`(1/2)z^T G z`; these quantities cannot silently be identified. This
+comparison supplies no physical L1-to-L4 gate, passive source preparation
+or calibration. Both branches remain in the full linear output.
+QDD-INSTRUMENT-APPARATUS and its two physical children remain open.
+
+### QDD-STABILIZER-COMMON-LATTICE-OBSTRUCTION [T]
+
+This second conditional L4 theorem concerns the same fixed default
+Hadamard circuit and carrier. Write `L=A_4={x in Z^5:sum x=0}`.
+The lattice `Lambda_*=(H^{-1} tensor I)L^4` satisfies
+
+```text
+L^4 subset Lambda_* subset (1/4)L^4,
+(H tensor I)V_k(H^{-1} tensor I)=D_k.
+```
+
+It is therefore preserved by every routing circuit V_k. Path projection
+need not preserve it: for primitive x in L, the vector x/4 in all four
+paths belongs to Lambda_*, but projecting it to path zero leaves its
+H-image outside L^4. An invariant lattice for V_k does not automatically
+serve the flag or readout operations.
+
+Default V_k entries have denominators dividing four, so E_k entries have
+denominators dividing 16. For one fixed setting the full-rank lattice
+`L^8+E_k L^8`, between `L^8` and `(1/16)L^8`, is E_k-invariant because
+`E_k^2=I`. This is invariance under the complete single-setting operation,
+not necessarily under each constituent gate.
+
+For two distinct settings i,j there is no common full-rank discrete
+lattice preserved by E_i and E_j on the same 32-dimensional carrier, or
+on its full 40-dimensional extension. On the invariant subspace
+`path0 tensor (flag0-flag1) tensor V`, E_k acts as `2P_k-I`. On
+the plane spanned by u_i,u_j the two reflection matrices are
+
+```text
+((1,2c),(0,-1)),    ((-1,0),(2c,1)),    c=-1/4.
+```
+
+Their product has determinant one, trace `-7/4` and irreducible monic
+minimal polynomial `lambda^2+(7/4)lambda+1`, with discriminant `-15/16`.
+Its roots are not algebraic integers. A map preserving a full-rank
+discrete lattice has an integer matrix in a lattice basis and only
+algebraic-integer eigenvalues. A common invariant lattice would also be
+preserved by the product, giving a contradiction.
+
+The proof excludes every lattice on this fixed carrier, not merely the
+displayed candidates. It does not exclude larger architectures or
+differently typed carriers. In particular `M_k=16E_k` is integral and
+`(z,s)->(M_k z,16s)` represents E_k(z/s) exactly, with
+`q(M_k z)=256q(z)`. This growing-denominator encoding is not common
+fixed-lattice dynamics and is not an identification with Omega,U.
+The source result is the same complete public probe bundle. The negative
+theorem is an intended proved boundary, not a fired probe falsifier or
+negative closure of a physical O.
 
 ### Archived observation records
 
