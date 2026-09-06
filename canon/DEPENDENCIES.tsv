@@ -316,7 +316,7 @@ SQRT-PHI-TIME-GRAVITY	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every
 KERNEL-CONNECT-ALL-K	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 CURVATURE-HISTORICAL-TRACE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the frozen historical operator is conditional on the declared checkpoint architecture
 CURVATURE-TRACE-VALUE	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the falsified historical proposal is conditional on the declared checkpoint architecture
-CURVATURE-OPERATOR-CANONICAL	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: canonical spatial-curvature selection is conditional on the declared architecture
+CURVATURE-OPERATOR-CANONICAL	DEF-ARCHITECTURE	REQUIRES	the complete native-word construction uses the declared checkpoint generators and common-driver selector
 PHOTON-WINDOW-COORDINATES	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 PHOTON-UNIVERSAL-BIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 MONOPOLE-FIFTHS	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
@@ -362,7 +362,7 @@ ENTROPY-LAYER-BRIDGE	ENTROPY-COMPONENT-NOGO	BOUNDED_BY	the exact zero counts exc
 ENTROPY-LAYER-BRIDGE	ENTROPY-MIRROR-LAW	BOUNDED_BY	the finite mirror law is a compatibility constraint and not a construction of an element of A_A
 CURVATURE-HISTORICAL-GAUSS-SPLIT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: the frozen historical full-carrier split is conditional on the declared checkpoint architecture
 CURVATURE-HISTORICAL-GAUSS-SPLIT	CURVATURE-HISTORICAL-TRACE	REQUIRES	the ambient member of the split is the previously typed historical operator and retains its exact trace anchor
-CURVATURE-OPERATOR-CANONICAL	CURVATURE-HISTORICAL-GAUSS-SPLIT	BOUNDED_BY	the exact historical equality constrains one declared full-carrier candidate but does not select a canonical operator class
+CURVATURE-OPERATOR-CANONICAL	CURVATURE-HISTORICAL-GAUSS-SPLIT	REQUIRES	the intrinsic historical presentation equals the admitted ambient nonzero witness on the same V
 WALL-LI2-RUNG	J-PROJECTIONS	REQUIRES	the two archimedean channel locations and exact modulus dichotomy are registered here
 WALL-LI2-RUNG	PI-FROM-J	REQUIRES	the principal logarithm fixes the pi normalization and tenth-root branch used in the proof
 PENTAGON-NORMALIZATION	J-GOLDEN-BRIDGE	REQUIRES	the identity j = (J - 1)^3 identifies the fifth-root filter with the J-generated pentagon
@@ -438,7 +438,7 @@ TIME-CUT-READING	GYRON-DENSITY	REQUIRES	the matter-channel pair 00 has the regis
 TIME-CUT-READING	FIRED-COMMUTATOR-NOGO	REQUIRES	the spatial channel uses the exact fired-algebra no-go before reading the silent pair
 TIME-CUT-READING	CURVATURE-HISTORICAL-TRACE	REQUIRES	the silent-pair commutator has the registered exact historical trace reading
 TIME-CUT-READING	KERNEL-MACRO-READING	REQUIRES	the spatial dictionary inherits the registered macro-space commutator reading
-TIME-CUT-READING	CURVATURE-OPERATOR-CANONICAL	BOUNDED_BY	the canonical curvature operator remains explicitly open and is not selected by this composition
+TIME-CUT-READING	CURVATURE-OPERATOR-CANONICAL	BOUNDED_BY	the dictionary selects no curvature operator; the declared complete raw class is proved nonunique
 TIME-CUT-READING	METRO-TICK	REQUIRES	the terminal dimensionless proper-time reading is the registered exact tick
 TM-SYM2-MEASURE	DEF-ACTION-LAYERS	REQUIRES	the lane's layer endpoints and both lane gates use the registered six-layer protocol
 TM-SYM2-MEASURE	RAMIFIED-TM-LIFT	REQUIRES	the window carrier reads the registered drive cut and its sign-quotient realization theta_n = s_2(n) mod 2
@@ -634,7 +634,7 @@ TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY	COLOR-CORE-2I	BOUNDED_BY	the Lie algebra sl
 TRACEKERNEL-CURVATURE-FORCING	DEF-ARCHITECTURE	REQUIRES	the obligation asks what the declared public architecture forces and makes no derivation from J alone
 TRACEKERNEL-CURVATURE-FORCING	DEF-EXACT-HODGE-HOME-CLOSURE	REQUIRES	the obligation classifies whether every fully admissible realization satisfies the exact named two-stage predicate
 TRACEKERNEL-CURVATURE-FORCING	TRACEKERNEL-F5-AUTOMORPHISM-BOUNDARY	REQUIRES	the full-equivariance negative route uses the exact registered eight-of-480 block-action boundary
-TRACEKERNEL-CURVATURE-FORCING	CURVATURE-OPERATOR-CANONICAL	REQUIRES	the forcing classification cannot advance until the upstream obligation publishes the carrier and complete admissible L2 operator or commutator class; UNIQUE versus NONUNIQUE does not itself decide the common Hodge-home property
+TRACEKERNEL-CURVATURE-FORCING	CURVATURE-OPERATOR-CANONICAL	REQUIRES	the complete native-word class is public and nonunique, but its V has dimension818; the same-carrier bracket and bridge to W_5 remain required and are not supplied by this raw classification
 QDD-J-AFFINE-APPARATUS-NONSELECTION	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the four-member target-independent affine class is a restricted exact refinement of the registered L4 fixed-effect post-state nonselection boundary
 QDD-J-AFFINE-APPARATUS-NONSELECTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the restricted affine classification neither derives a physical selector nor supplies realized events or sampling
 QDD-J-CENTRALIZER-NONSELECTION	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the complete affine-stabilizer centralizer class refines the registered L4 fixed-effect post-state nonselection boundary
@@ -700,3 +700,33 @@ TM-CHECKPOINT-HULL-STABLE-IMAGE	DEF-SELECTOR	REQUIRES	the live sheet selector su
 TM-CHECKPOINT-HULL-STABLE-IMAGE	TM-SHEET-SYNCHRONIZING-GRAPH	REQUIRES	the invariant sheet graph and sharp nine-step synchronization are the exact inputs lifted to the full checkpoint stable image
 PHOTON-CONE-CONVERGENCE	PHOTON-HERM2-TANGENT-GERM	REQUIRES	the exact local Hermitian tangent germ is a fixed consumed endpoint and is no longer part of the remaining global debt
 PHOTON-CONE-CONVERGENCE	PHOTON-HERM2-SEPARATED-GLOBAL-OBSTRUCTION	BOUNDED_BY	the natural separated inversion-equivariant single-chart vector class is empty while broader multichart, twisted, frequency-mixing and higher-rank classes remain unclassified
+DEF-NATIVE-WORD-CURVATURE-CLASS	DEF-ARCHITECTURE	REQUIRES	the adopted word group is generated by all five native affine checkpoint maps
+DEF-NATIVE-WORD-CURVATURE-CLASS	CURVATURE-HISTORICAL-TRACE	REQUIRES	the fixed carrier and historical projection are inherited exactly
+CURVATURE-OPERATOR-CANONICAL	DEF-NATIVE-WORD-CURVATURE-CLASS	REQUIRES	the theorem is conditional on the complete adopted class, including zeros and both modes
+CURVATURE-OPERATOR-CANONICAL	CURVATURE-HISTORICAL-TRACE	REQUIRES	the inherited nonzero trace-square separates the admitted historical witness from zero
+DEF-CURVATURE-TRACE-SUBRECORD	DEF-NATIVE-WORD-CURVATURE-CLASS	REQUIRES	the adopted record uses exactly the fixed carrier, basis, Gram and rational trace
+CURVATURE-TRACE-READOUT-UNIQUE	DEF-CURVATURE-TRACE-SUBRECORD	REQUIRES	the failed uniqueness assertion concerns this complete exact scalar subrecord
+CURVATURE-TRACE-READOUT-UNIQUE	CURVATURE-OPERATOR-CANONICAL	REQUIRES	the two admitted raw operators have distinct exact trace-square outputs
+TIME-CUT-READING	CURVATURE-TRACE-READOUT-UNIQUE	BOUNDED_BY	the adopted trace readout is underdetermined and supplies no chosen physical curvature
+U-NATIVE-CHART-AND-QDD-READBACK	KERNEL-Z6-SYNCHRONIZATION	REQUIRES	the conserved chart refines the exact origin-zero synchronized sheets and fixed-time five-to-one fibers
+U-NATIVE-CHART-AND-QDD-READBACK	QDD-DIRECT-RECORD-E-NONCONGRUENCE	REQUIRES	the original complete QDD record has exact piston equality up to common sign
+U-NATIVE-INVARIANT-AND-NOWRITE	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	the complete chart supplies the native synchronized trajectory and distinguishes present-state invariants from saved labels
+U-FINITE-HISTORY-CLOCK-PHASE	U-NATIVE-INVARIANT-AND-NOWRITE	REQUIRES	the finite-window recurrence proof uses the primitive native clock and the complete synchronized invariant fibers
+U-NATIVE-APPARATUS-HISTORY-FACTOR	DEF-ARCHITECTURE	REQUIRES	summing the four piston coordinates and using the five declared generators closes the exact apparatus quotient
+QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD	QDD-ALGEBRAIC-FACTORIZATION	REQUIRES	the four-coordinate symbolic incidence ratio agrees algebraically with the inherited normalized QDD target; this does not derive its physical occurrence
+QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD	DEF-QDD-DIRECT-WRITE	REQUIRES	the balanced four-coordinate lift and exact target support are those of the declared direct record
+QDD-CONDITIONAL-INCIDENCE-FINITE-AUDIT	QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD	REQUIRES	the finite source/address and cell audit checks the separately proved conditional incidence contract
+QDD-CONDITIONAL-INCIDENCE-FINITE-AUDIT	U-FINITE-HISTORY-CLOCK-PHASE	REQUIRES	the finite direct-bit wrapper uses the complete fixed-window phase map after warmup
+DEF-NATIVE-READER-STREAM	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	the projected native trajectory has the exact indexed chart
+DEF-NATIVE-READER-STREAM	U-NATIVE-INVARIANT-AND-NOWRITE	REQUIRES	the fixed instantaneous reader is evaluated on the declared invariant fibers
+DEF-NATIVE-READER-STREAM	U-FINITE-HISTORY-CLOCK-PHASE	REQUIRES	the causal finite-window branch has the proved phase and legal-word domain
+DEF-NATIVE-READER-STREAM	QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD	REQUIRES	the optional captured-source branch uses the explicit bounded incidence calendar and symbolic cell contract
+DEF-NATIVE-READER-STREAM	DEF-ARCHITECTURE	REQUIRES	the whole projected word is derived from the autonomous origin-zero U orbit without feedback
+U-NATIVE-READER-STREAM-SPECTRA	DEF-NATIVE-READER-STREAM	REQUIRES	all limits concern only the declared complete consecutive mathematical stream and its admitted fixed-reader classes
+U-NATIVE-CHART-AND-QDD-READBACK	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
+U-NATIVE-INVARIANT-AND-NOWRITE	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
+U-FINITE-HISTORY-CLOCK-PHASE	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
+U-NATIVE-READER-STREAM-SPECTRA	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
+U-NATIVE-APPARATUS-HISTORY-FACTOR	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
+QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
+QDD-CONDITIONAL-INCIDENCE-FINITE-AUDIT	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
