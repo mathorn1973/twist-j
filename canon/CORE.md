@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v79. Normative authority and activation
+**Release identity:** Public Canon v80. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v79 also declares a discrete architecture. It does not
+Public Canon v80 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -70,10 +70,15 @@ The complete declared native-word curvature class is nonunique, and its
 total trace subrecord is underdetermined. This decides the corresponding
 operator question without choosing a physical geometry. The native decoder
 has exact readback and memory boundaries, a finite-history phase reader,
-and complete mathematical reader spectra. Its conditional source-to-record
-construction assumes captured source data, incidence coupling, a fixed
-calendar and fresh storage. Those mathematical results do not realize the
-physical QDD apparatus or select a law for individual physical outcomes.
+and complete mathematical reader spectra. A fixed common ready now permits
+recovery of every original piston source from the full current state and
+native counter; regenerating a history is not material recording. The
+conditional incidence construction still declares its coupling and calendar.
+No common onset law makes its chronological first outcomes agree with all
+QDD ratios; a permutation scan repairs the marginal only with an additional
+order carrier and law. Three fixed attenuation observables select identity
+even among mixed CP channels, but their physical preservation remains a
+premise. Physical preparation, writing, reset and occurrence remain open.
 
 ## Two field characterisations involving five
 

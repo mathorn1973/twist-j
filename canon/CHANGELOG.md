@@ -1,9 +1,35 @@
 # Canon changelog (public series)
 
+## Public Canon v80
+
+Three new T claims state exact common-ready native recovery, the complete
+chronological first-hit onset boundary and its conditional permutation
+alternative, and mixed-channel rigidity under three attenuation tests.
+The same 28 O and 2 H remain; no prior claim changes status or scope.
+
+Of 25 common readies, 21 preserve every piston source and four have exactly
+125 double fibres. Selected ready (0,1) admits a complete all-n inverse
+from current native state and counter. This gives mathematical source
+recovery and virtual archive regeneration, not physical record writing.
+
+Two sources have identical first LOW/HIGH at every chronological onset but
+target ratios 1/6 and 1/26. No common onset law can realize both. Uniform
+permutation scans give exact uniform first-occupied-slot counts in a
+different order class; the associated physical law and resources are not
+derived. Three attenuation observables select the identity reduced channel
+in the complete real/complex CP class; a rational two-pass counterexample
+makes the stated nested criterion sharp. Physical attenuation preservation
+remains unproved. No physical decoder closure is asserted.
+
+All results use one completed pinned public probe and its two-architecture
+replay. The status-separation maintenance preserves every v79 ledger byte
+after removing only the exact v80 addition, then replays all historical
+hash guards. No workflow, old probe or source dataset changes.
+
 ## Public Canon v79
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 393 claims; 0 T-LOCK, 261 T, 45 D, 39 C, 2 H, 28 O, 18 F; 30 live H/O.
+Registry snapshot: 396 claims; 0 T-LOCK, 264 T, 45 D, 39 C, 2 H, 28 O, 18 F; 30 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 

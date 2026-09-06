@@ -32,6 +32,59 @@ SUCCESSOR_MANIFEST_DIR = (
 )
 
 
+# Frozen from public v79 parent a51df34fe1f1f433062faeb18f5e03fd0a8082b2.
+# Remove only these exact new v80 lines, then verify every restored v79 byte.
+# This outer reconstruction feeds the unchanged historical v79 patch below.
+V80_LEDGER_PATCH = {'REGISTRY.tsv': {'prior_sha256': '97df96660bd4502149e94aecc7d99b5d10d20834caaf11e1deec6068f800e23d',
+                  'remove': ('e581493eabe1fdfb95bf0fed207930a926f15ffb41ebfd3bb1c8b113adb40866',
+                             'a2b1416e67e9d9068bb9dd2fed64501cd4ef7f76ebe1f033e673fd4a1feeb281',
+                             '5f2665447865a37ef7413ef0908bd7b7dd595c57233a8df0d1cdeff4e56e7779')},
+ 'NORMATIVE.tsv': {'prior_sha256': '8c9e096e4475f087d133c2bcb90a5de9ca7fa7e0d3caad54fe05baddffad7e37',
+                   'remove': ('b02eacd455ba0715dbaadbce2caf8ad348329c02b919af20e500d71953da44f0',
+                              'fecd1c8d16d9feb6763b8db27914cb6cc5ac0a6e0d8670ee428ca0cc825f3c52',
+                              'ea40943c980076493b7bdc5bc02a8832a25b11a2655078c5de4b78493f4e80be')},
+ 'DEPENDENCIES.tsv': {'prior_sha256': 'edec64ae31f78eaa8fcbc1908d0e2b1bbf322ade5c3204537950b007373ada4a',
+                      'remove': ('1b479bf69300de6622ba5300af491291eed9ef7cdfb4cc343ec4398304eec2ab',
+                                 'ea028000987e8b184a4a9564f7be0182f51d5ee4ceabea488cd1f8ab06e83d91',
+                                 'e64872f23a0ecdb9f367df4de706a99d2c25237fc8992f298ecc7a020190ce1b',
+                                 '9f694374e926e92960dac2db4f3aef80209004937101514d2be8b5dc8f18d1e9',
+                                 'b4fe4130f4d96a4f0982c45847d833ce14b3e9ed96c4829e21141e18c6c0e1c6',
+                                 '4ee1ec7540e7c94a2ff29334c53491af10ad04515706d010d9c470670dde47c7',
+                                 'a375781aa68903eb7055b4db6a28e5bcbfd6617f702c856ee636173193d3bf7e',
+                                 '07dabeb78b4af65d003d62a129493bdbf759c9f14216a152fdf71c474babc7c7',
+                                 'fbb50a0fdde33aef730ed7cb6cf2b388b9e35a5a1ca8d4bfc5c82057769ee909',
+                                 '001b7425a22e73e2b2db9c288359d0c8e17a3afed2a00f763618558e3825edcb',
+                                 'cc0c9a2450e3f583b1372098cc4351e7fc7f58b10bbac98c1ab7c81429d30e6f',
+                                 '0ef8c82c60030253a2a2e93db7359b8a09849f9492828ba36092b2ba0c841399',
+                                 'c6a85e2ba37b4b587d92eeedfbb6fd807baeeb01c8bb689cc75cbbfbc391090b')},
+ 'EVIDENCE.tsv': {'prior_sha256': 'db34b27c5317130f8698ff3b980d6e5575f02e78cbfb11b36cc870405b93682c',
+                  'remove': ('008444b38c2e1e11cc397e9ba7af07133fb9077d4180ec8bd2d7ccf8b84af3c7',
+                             '7f1f03a97935c703ce6a0c9c5e11e9255f04573e46dd59ec5b8f4029a29c0f21',
+                             '4d273df907444fd3d795e48077c09d3e7b997ce2795faee84a386a87492f2a76')},
+ 'HISTORY.tsv': {'prior_sha256': 'ef5b47d2f789e517d6302d679de6ff175d5b3162d5441ec153741f078906bd03',
+                 'remove': ('dd8bbb3f3d9b3fe2bbacfcd918deea83ff5544703ac25c45873892026a5c2903',
+                            'dac9d93ff566214b25418717b41f6c69e55a0356155595250c0a730e798aaa27',
+                            '189e37aeaca0bcdb864b5a9491e79cd726f0510dcf2e6455069daffc78e2226c')},
+ 'GATES.tsv': {'prior_sha256': 'f1f7fb10abf68f248c47933bd220209dc13f7c45ec60c0d44d26a92ee0e1a333',
+               'remove': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'prior_sha256': '95db755bb7b2f49e2642123649767a7036fd69099db5d2148ef43fac655b97e2',
+                           'remove': ()},
+ 'CORE_SELECTION.tsv': {'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'remove': ()}}
+V80_ROWS = {'U-NATIVE-COMMON-READY-SOURCE-RETENTION': ('L1', 'NATIVE-PROOF.md'),
+ 'QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION': ('L1', 'OCCURRENCE-PROOF.md'),
+ 'QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY': ('L4', 'MIXED-PROOF.md')}
+V80_PROOF_HASHES = {'NATIVE-PROOF.md': '97c592f2b00ca2e03b8c0fc74abd658c4a804d6b6f20bc7722af881b9a76a295',
+ 'OCCURRENCE-PROOF.md': '4fa925dbe8de9841c787033567f07f00782be2affe002bdc92d75edbe878633c',
+ 'MIXED-PROOF.md': '93e08d44c30e670257779ce57c102d719d6449a0e861554c2f53d1efcf1e3a8d',
+ 'PREREG.md': '61b1fb07bb7508d84ba4b8211ef64b1a9b7875272dbe87d75a45f75143dacea8'}
+V80_PHYSICAL_ROW_HASHES = {'QDD-INSTRUMENT-APPARATUS': '06288f428275ed4dd79e399c3ea0b8f298e838ba32d4ab5d427c1cbed3133d21',
+ 'QDD-TERMINAL-EVENT-SEMANTICS': '192a82f813a7412cc36e88c23a7d125e71fb61df2545b5e36c43a63db96cd384',
+ 'QDD-INSTRUMENT-CLASS-COMPLETENESS': '9fb047888d6c1df4b2045ab3170efa87475e21e9440d7b161277f205f3b8f40a'}
+V80_PROBE = "probes/P-QDD-V80-CLOSURE-BOUNDARIES-1"
+V80_BUNDLE_SHA256 = "11a94b96b9879450f216d8079adecf828687fd51f587df4e71d98a6dde81d505"
+
+
 # Frozen from public base 07b123a4082f174c37bf09c9aa8815bd2c0e1660.
 # Prior rows and hashes are never inferred from filtered current data.
 # Each patch removes only SHA-256-pinned new/replacement rows and restores the
@@ -205,9 +258,31 @@ V79_NATIVE_ROWS = {
 }
 
 
+def v80_previous_bytes(path):
+    """Recover byte-identical v79 tables using only the frozen v80 additions."""
+    patch = V80_LEDGER_PATCH[path.name]
+    removed = {digest: 0 for digest in patch["remove"]}
+    kept = []
+    for position, line in enumerate(path.read_bytes().splitlines(keepends=True)):
+        digest = hashlib.sha256(line).hexdigest()
+        if position and digest in removed:
+            removed[digest] += 1
+        else:
+            kept.append(line)
+    if any(count != 1 for count in removed.values()):
+        return None
+    previous = b"".join(kept)
+    if hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]:
+        return None
+    return previous
+
+
 def v79_previous_bytes(path):
     patch = V79_LEDGER_PATCH[path.name]
-    lines = path.read_bytes().splitlines(keepends=True)
+    current_v79 = v80_previous_bytes(path)
+    if current_v79 is None:
+        return None
+    lines = current_v79.splitlines(keepends=True)
     removed = {digest: 0 for digest in patch["remove"]}
     kept = []
     for position, line in enumerate(lines):
@@ -455,18 +530,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 261, "D": 45, "C": 39, "F": 18,
+    expected_counts = {"T": 264, "D": 45, "C": 39, "F": 18,
                        "O": 28, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v79",
-        len(rows) == 393
+        "registry and companion-ledger counts match Public Canon v80",
+        len(rows) == 396
         and counts == expected_counts
-        and len(normative) == 442
-        and len(dependencies) == 731
-        and len(evidence) == 393
-        and two_architecture == 305
-        and len(history) == 926
+        and len(normative) == 445
+        and len(dependencies) == 744
+        and len(evidence) == 396
+        and two_architecture == 308
+        and len(history) == 929
         and len(gates) == 15
         and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 8
@@ -6810,6 +6885,122 @@ def run():
             "QDD-INSTRUMENT-CLASS-COMPLETENESS",
         ))
         and qdd_current_split,
+    ))
+
+    checks.append((
+        "V80-PRIOR-LEDGERS",
+        "only exact pinned v80 additions are removed to recover every v79 byte; "
+        "the unchanged v79 reconstruction still enforces every older ledger hash",
+        set(V80_LEDGER_PATCH) == set(V79_LEDGER_PATCH)
+        and tuple(len(V80_LEDGER_PATCH[name]["remove"]) for name in (
+            "REGISTRY.tsv", "NORMATIVE.tsv", "DEPENDENCIES.tsv", "EVIDENCE.tsv",
+            "HISTORY.tsv", "GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv",
+        )) == (3, 3, 13, 3, 3, 0, 0, 0)
+        and all(
+            v80_previous_bytes(ROOT / "canon" / name) is not None
+            and v79_previous_bytes(ROOT / "canon" / name) is not None
+            for name in V80_LEDGER_PATCH
+        ),
+    ))
+    v80_names = set(V80_ROWS)
+    v80_events = [row for row in history if row["release"] == "canon-v80-candidate"]
+    v80_dependencies = [row for row in dependencies if row["item_id"] in v80_names]
+    checks.append((
+        "V80-CLOSURE-BOUNDARIES",
+        "three proof-backed T rows retain complete-source and onset conditions at L1 "
+        "and full CP three-pass rigidity at L4 on one exact two-architecture probe",
+        len(v80_names) == 3
+        and len(v80_events) == 3
+        and {row["claim_id"] for row in v80_events} == v80_names
+        and len(v80_dependencies) == 13
+        and all(
+            has_status(index, claim, "T")
+            and index[claim]["evidence"] == V80_PROBE + "/RESULT.md"
+            and normative.get(claim, {}).get("item_type") == "THEOREM"
+            and normative.get(claim, {}).get("status") == "T"
+            and normative.get(claim, {}).get("layer") == layer
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("location") == V80_PROBE + "/RESULT.md"
+            and evidence.get(claim, {}).get("sha256") == V80_BUNDLE_SHA256
+            and evidence.get(claim, {}).get("hash_mode") == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement") == "two-architecture"
+            and f"### {claim} [T]" in canon_text
+            and proof in V80_PROOF_HASHES
+            and claim not in programs
+            and claim not in frontier_text
+            and all(row["owner_item_id"] != claim for row in gates.values())
+            and all(row["claim_id"] != claim for row in core_selection_rows)
+            for claim, (layer, proof) in V80_ROWS.items()
+        )
+        and all(
+            (ROOT / V80_PROBE / name).is_file()
+            and hashlib.sha256((ROOT / V80_PROBE / name).read_bytes()).hexdigest() == digest
+            for name, digest in V80_PROOF_HASHES.items()
+        )
+        and all(
+            row["event_type"] == "DECLARE"
+            and row["event_sequence"] == "1"
+            and row["previous_status"] == "-" and row["new_status"] == "T"
+            and row["scope_sha256"] == scope_sha256(index, row["claim_id"])
+            and row["evidence_location"] == V80_PROBE + "/RESULT.md"
+            and row["evidence_sha256"] == V80_BUNDLE_SHA256
+            for row in v80_events
+        )
+        and all(
+            row["depends_on"] not in v80_names
+            and (
+                row["relation"] != "REQUIRES"
+                or normative[row["item_id"]]["layer"]
+                   == normative[row["depends_on"]]["layer"]
+            )
+            for row in v80_dependencies
+        )
+        and scope_contains_all(index, "U-NATIVE-COMMON-READY-SOURCE-RETENTION", (
+            "all 25 common source-independent readies", "at the 21 readies",
+            "125 double and 375 single fibres", "at least 124 pairs are supported",
+            "factor exactly through F3", "full-state access and common readiness are conditions",
+            "virtual readback supplies no physical preparation",
+        ))
+        and scope_contains_all(index, "QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION", (
+            "inclusive predecessor-gap partition", "empty support NO_EVENT and no ratio",
+            "identical first-label functions at all 1024 onsets", "1/6 and 1/26",
+            "excluding every common source-independent onset law",
+            "when A,B>0 the accepted cyclic word", "without-replacement ordered law",
+            "not derived physical occurrence, storage, reset or L6 measure",
+        ))
+        and scope_contains_all(index, "QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY", (
+            "supports over R or C", "complete CP repeatable branch fibre",
+            "full unnormalized operators", "spanning determinant -1024",
+            "first two B_n admit a rational nonidentity pinching channel",
+            "rational 72-Kraus depolarizing witness", "exact reduced-channel equality",
+            "no physical attenuation-preservation law",
+        )),
+    ))
+    checks.append((
+        "V80-PHYSICAL-OWNERS",
+        "all three physical QDD obligations retain their exact v79 rows at O; "
+        "readback, conditional onset laws and mixed-channel selection create no physical gate",
+        all(
+            has_status(index, claim, "O")
+            and registry_row_sha256(index, claim) == digest
+            and normative.get(claim, {}).get("item_type") == "OBLIGATION"
+            and normative.get(claim, {}).get("status") == "O"
+            and programs.get(claim, {}).get("work_state") == "STOP"
+            for claim, digest in V80_PHYSICAL_ROW_HASHES.items()
+        )
+        and qdd_current_split
+        and scope_contains_all(index, "QDD-INSTRUMENT-APPARATUS", (
+            "SAMPLING NOT PROVIDED", "UNRESOLVED",
+            "PHYSICAL-DMATTER remains unadopted",
+        ))
+        and "GATE-L1-L5-QDD-INSTRUMENT-APPARATUS" not in gates
+        and "GATE-L1-L6-QDD-BORN-READOUT" not in gates
+        and "QDD-BORN-READOUT-MEASURE" not in index
+        and all(
+            not V80_LEDGER_PATCH[name]["remove"]
+            for name in ("GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv")
+        ),
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
