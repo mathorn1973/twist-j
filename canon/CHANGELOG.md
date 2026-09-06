@@ -1,11 +1,42 @@
 # Canon changelog (public series)
 
-## Public Canon v77
+## Public Canon v78
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 383 claims; 0 T-LOCK, 252 T, 45 D, 38 C, 2 H, 29 O, 17 F; 31 live H/O.
+Registry snapshot: 385 claims; 0 T-LOCK, 254 T, 45 D, 38 C, 2 H, 29 O, 17 F; 31 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Public Canon v78 registers two conditional L4 theorems from the completed
+P-QDD-STABILIZER-APPARATUS-1 public probe and its exact two-architecture
+audit. The concrete stabilizer circuit, binary flag and coherent uncompute
+produce the complete projection post-state maps. The retained-path control
+has the same first weights and a different generally mixed, idempotent HIGH
+map. The proof covers the complete declared balanced rational mixer class
+and ordered subsequent system maps, with exact discriminating preparations.
+The selected signed terminal account is supporting composition, not a
+duplicate general reservoir claim or a physical event law.
+
+The second theorem proves the fixed-carrier common-lattice obstruction for
+two distinct default settings while retaining the single-setting invariant
+lattices. It rules out a complete stated mathematical class, not every
+physical architecture. Growing denominators do not remove that obstruction.
+
+The pre-fold audit examines every one of the 29 open obligations. No complete
+O is closed positively or negatively: the apparatus occurrence law, physical
+completion, complete physical instrument family and layer bridges remain
+absent. All 383 prior registry rows, scopes, evidence and lifecycle entries
+are preserved, as are the 31 live H/O rows, fourteen gates, eight Frontier
+programs and CORE selection. Four new dependency/boundary edges are added.
+
+The post-v77 port-observability note remains NON-CANONICAL under this
+completed-probe intake. Local METRO candidates and unmerged work supply no
+release evidence. The earlier conditional Born note remains outside the
+Canon; proof-only evidence is permitted by policy, but is not adopted here.
+The maintained separation reproduction pins both additions and checks the
+entire preserved prior ledger without changing historical hash constants.
+
+## Public Canon v77
 
 Public Canon v77 registers twelve conclusions from nine completed public
 probe bundles: eight mathematical theorems and four bounded archived-record

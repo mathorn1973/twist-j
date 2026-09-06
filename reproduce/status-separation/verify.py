@@ -129,6 +129,25 @@ def table_row_sha256(row):
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
+def projected_file_sha256(path, column=None, excluded=()):
+    """Hash original TSV bytes after removing only named release rows.
+
+    The frozen selector columns contain unquoted ASCII identifiers. Keep the
+    header, every retained row, its order and its exact line ending unchanged.
+    """
+    lines = path.read_bytes().splitlines(keepends=True)
+    if column is None:
+        return hashlib.sha256(b"".join(lines)).hexdigest()
+    fields = lines[0].rstrip(b"\r\n").decode("utf-8").split("\t")
+    position = fields.index(column)
+    excluded_bytes = {value.encode("utf-8") for value in excluded}
+    kept = [lines[0]] + [
+        line for line in lines[1:]
+        if line.rstrip(b"\r\n").split(b"\t")[position] not in excluded_bytes
+    ]
+    return hashlib.sha256(b"".join(kept)).hexdigest()
+
+
 INDEPENDENCE_ROWS = (
     "SPLIT-PRIME-RAPIDITY-INDEPENDENCE",
     "REDUCED-SPLIT-GENERATOR-HEIGHT",
@@ -205,18 +224,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 252, "D": 45, "C": 38, "F": 17,
+    expected_counts = {"T": 254, "D": 45, "C": 38, "F": 17,
                        "O": 29, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v77",
-        len(rows) == 383
+        "registry and companion-ledger counts match Public Canon v78",
+        len(rows) == 385
         and counts == expected_counts
-        and len(normative) == 429
-        and len(dependencies) == 697
-        and len(evidence) == 383
-        and two_architecture == 296
-        and len(history) == 914
+        and len(normative) == 431
+        and len(dependencies) == 701
+        and len(evidence) == 385
+        and two_architecture == 298
+        and len(history) == 916
         and len(gates) == 14
         and len(programs) == 31
         and len({row["program_id"] for row in programs.values()}) == 8
@@ -6172,7 +6191,11 @@ def run():
     ))
 
 
-    # Current additions are excluded only from the immutable v76 projection.
+    # Later additions are excluded only from the immutable earlier projections.
+    v78_names = {
+        "QDD-STABILIZER-UNCOMPUTE-POSTSTATES",
+        "QDD-STABILIZER-COMMON-LATTICE-OBSTRUCTION",
+    }
     v77_contract = {'J-CENTERING-IMAGE-INDEX': {'row': '7d24294dd1aede7199dc689145625078bac07409b74f9f847b83f480dc3e8cf6',
                                  'normative': '94bbcc18f771807885c4dffcd5045d18124ca0c456d6c038eb0c29b4d3f4c6bf',
                                  'evidence': '7c858185c0efd43083557ca58cf04248fb933c222064fafab32a408bde9b0877',
@@ -6309,11 +6332,11 @@ def run():
     v76_events = [row for row in history if row["release"] == "canon-v76-candidate"]
     v76_events_by_claim = {row["claim_id"]: row for row in v76_events}
     v76_old_tables = {
-        "REGISTRY": [r for r in rows if r["claim_id"] not in v76_names | v77_names],
-        "NORMATIVE": [r for k,r in normative.items() if k not in v76_names | v77_names],
-        "DEPENDENCIES": [r for r in dependencies if r["item_id"] not in v76_names | v77_names],
-        "EVIDENCE": [r for k,r in evidence.items() if k not in v76_names | v77_names],
-        "HISTORY": [r for r in history if r["release"] not in {"canon-v76-candidate", "canon-v77-candidate"}],
+        "REGISTRY": [r for r in rows if r["claim_id"] not in v76_names | v77_names | v78_names],
+        "NORMATIVE": [r for k,r in normative.items() if k not in v76_names | v77_names | v78_names],
+        "DEPENDENCIES": [r for r in dependencies if r["item_id"] not in v76_names | v77_names | v78_names],
+        "EVIDENCE": [r for k,r in evidence.items() if k not in v76_names | v77_names | v78_names],
+        "HISTORY": [r for r in history if r["release"] not in {"canon-v76-candidate", "canon-v77-candidate", "canon-v78-candidate"}],
         "GATES": list(gates.values()),
         "FRONTIER_PROGRAMS": list(programs.values()),
         "CORE_SELECTION": core_selection_rows,
@@ -6358,11 +6381,11 @@ def run():
     v77_events = [r for r in history if r["release"] == "canon-v77-candidate"]
     v77_events_by_claim = {r["claim_id"]: r for r in v77_events}
     v77_old_tables = {
-        "REGISTRY": [r for r in rows if r["claim_id"] not in v77_names],
-        "NORMATIVE": [r for k,r in normative.items() if k not in v77_names],
-        "DEPENDENCIES": [r for r in dependencies if r["item_id"] not in v77_names],
-        "EVIDENCE": [r for k,r in evidence.items() if k not in v77_names],
-        "HISTORY": [r for r in history if r["release"] != "canon-v77-candidate"],
+        "REGISTRY": [r for r in rows if r["claim_id"] not in v77_names | v78_names],
+        "NORMATIVE": [r for k,r in normative.items() if k not in v77_names | v78_names],
+        "DEPENDENCIES": [r for r in dependencies if r["item_id"] not in v77_names | v78_names],
+        "EVIDENCE": [r for k,r in evidence.items() if k not in v77_names | v78_names],
+        "HISTORY": [r for r in history if r["release"] not in {"canon-v77-candidate", "canon-v78-candidate"}],
         "GATES": list(gates.values()),
         "FRONTIER_PROGRAMS": list(programs.values()),
         "CORE_SELECTION": core_selection_rows,
@@ -6389,6 +6412,86 @@ def run():
         )
         and "J-PLENUM-POLAR-GAUSS" not in index
         and "COINCIDENCE-RECORD-FREQUENCY" not in index
+    ))
+
+    # Raw prior-table pins are from git show at the reviewed public main base
+    # b349ffd76591b48fb7c2cccd1a2f42cf2066df6e, not from a filtered current tree.
+    v78_prior = {
+        "REGISTRY": "2e108c589cc1c1b7369d213ca9422c92f90da1ad7566a91c496b6e5444e9780d",
+        "NORMATIVE": "24402d66df973634fd4ed5de704f9169a438e52453012332837ed2a1cf0e0aac",
+        "DEPENDENCIES": "b61b5e15df5ec241565e49ff0480085a1f486be11c9a79dfea57209a870f76d3",
+        "EVIDENCE": "6e2041809541b04f25cc5b1bc6a0aeda9e9810af3777da32786a5ddad58f1790",
+        "HISTORY": "ba90121202a1ce00a9f75779b3cb15fd6e7123f51e80c2413a34defb6c1bb926",
+        "GATES": "4f38b0d8c95a43d37190e57f416e865e6c1adf70378c0f9d4625c63bf8842ca3",
+        "FRONTIER_PROGRAMS": "d7f7205acd461ff05ec7b31c45cc8e3b0ca3d4960432eb6053556fc5357da0d8",
+        "CORE_SELECTION": "eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e",
+    }
+    v78_contract = {
+        "QDD-STABILIZER-UNCOMPUTE-POSTSTATES": {
+            "row": "83e0a539945f02ba955dc1e88b40d1d548a18ef2c541b10f8f5afc11d21edc19",
+            "normative": "f0b779d954fd739848942383ca10ff285c884f5632afaf459d37248a7913e22b",
+            "evidence": "17794136dd02bddf589a65813fd3d0e59b6dedaa46141fc7c98360dc399a48fb",
+            "history": "53bf05395db17f08fa0eb50485ff45abb481563e872825700a0f889a85bdcf46",
+        },
+        "QDD-STABILIZER-COMMON-LATTICE-OBSTRUCTION": {
+            "row": "1e3a26b3739e05b9cb4b182aea3a1a476f82991063da3a5e3504369c01502ebb",
+            "normative": "b408b2624331f2524bbdc0a77c620b4242857c9288a7713bb3783e988b9c3f5b",
+            "evidence": "99101e0a95c4b63859e47d6f904534c98daa9de14a8bfe541c38d7a58ae8a634",
+            "history": "e1d8fae4e00799c32952350412c1eda5df0b0c39a7d6668c7c03844bf8b47d1f",
+        },
+    }
+    v78_projection = {
+        "REGISTRY": (REGISTRY, "claim_id", v78_names),
+        "NORMATIVE": (NORMATIVE, "item_id", v78_names),
+        "DEPENDENCIES": (DEPENDENCIES, "item_id", v78_names),
+        "EVIDENCE": (EVIDENCE, "claim_id", v78_names),
+        "HISTORY": (HISTORY, "release", {"canon-v78-candidate"}),
+        "GATES": (GATES, None, ()),
+        "FRONTIER_PROGRAMS": (FRONTIER_PROGRAMS, None, ()),
+        "CORE_SELECTION": (CORE_SELECTION, None, ()),
+    }
+    v78_events = [r for r in history if r["release"] == "canon-v78-candidate"]
+    v78_events_by_claim = {r["claim_id"]: r for r in v78_events}
+    v78_dependencies = [r for r in dependencies if r["item_id"] in v78_names]
+    checks.append((
+        "V78-QDD-STABILIZER",
+        "two conditional L4 circuit and lattice theorems enter on exact probe evidence; "
+        "the complete prior ledger and every physical open obligation remain unchanged",
+        set(v78_contract) == v78_names
+        and all(
+            projected_file_sha256(*v78_projection[name]) == digest
+            for name, digest in v78_prior.items()
+        )
+        and len(v78_events) == 2 and set(v78_events_by_claim) == v78_names
+        and len(v78_dependencies) == 4
+        and v76_table_hash(v78_dependencies)
+        == "a2d3c505df9a24a387272cd9158bfa3bb6e72ab4477a5c5a364241ebcca29fb2"
+        and all(
+            has_status(index, claim, "T")
+            and registry_row_sha256(index, claim) == contract["row"]
+            and table_row_sha256(normative[claim]) == contract["normative"]
+            and normative[claim]["item_type"] == "THEOREM"
+            and normative[claim]["layer"] == "L4" and not normative[claim]["gate_ids"]
+            and table_row_sha256(evidence[claim]) == contract["evidence"]
+            and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+            and evidence[claim]["location"] == "probes/P-QDD-STABILIZER-APPARATUS-1/RESULT.md"
+            and evidence[claim]["hash_mode"] == "bundle-manifest-sha256-v1"
+            and evidence[claim]["sha256"]
+            == "c1d33c7dbd7513862431a17b24b231f8ca53f94df274c9914f1a196c938058f3"
+            and evidence[claim]["architecture_requirement"] == "two-architecture"
+            and table_row_sha256(v78_events_by_claim[claim]) == contract["history"]
+            and f"### {claim} [T]" in canon_text
+            and claim not in programs
+            and all(r["owner_item_id"] != claim for r in gates.values())
+            and all(r["claim_id"] != claim for r in core_selection_rows)
+            and claim not in frontier_text
+            for claim, contract in v78_contract.items()
+        )
+        and all(has_status(index, claim, "O") for claim in (
+            "QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS",
+            "QDD-INSTRUMENT-CLASS-COMPLETENESS",
+        ))
+        and qdd_current_split
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
