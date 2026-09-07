@@ -373,3 +373,52 @@ unmarked carriers is an additional premise: transporting a matching under
 relabeling does not erase it. The next physical target must explain that
 premise or declare a narrower independently motivated mechanism, rather than
 derive it from the desired square.
+
+## 9. Second attack completed: the missing occurrence law
+
+The proof-first
+[P-RECORD-OCCURRENCE-SYMMETRY-1](../probes/P-RECORD-OCCURRENCE-SYMMETRY-1/RESULT.md)
+now separates the next three questions exactly. It is L1 mathematical
+evidence, with no Canon promotion or physical gate closure.
+
+**Selection and ensemble.** An equivariant deterministic selector exists
+exactly when each ready-state stabilizer fixes an outcome. A fully symmetric
+ready cannot select one of several transitively equivalent outcomes. With
+an independently supplied invariant ready ensemble, an equivariant selector
+has uniform fine output on a transitive outcome set; coarse ratios then
+equal fibre cardinalities. Covariance does not supply that ensemble, and
+the physical symmetry action itself still needs justification.
+
+**One realized run.** For a finite reversible autonomous model with declared
+accepted labels, every start gives a prescribed frequency vector q exactly
+when every dynamical cycle has accepted events and its accepted branch
+counts have ratio q. Uniform stationarity is insufficient: identity dynamics
+is fully relabeling-covariant and has uniform stationary ensemble marginals,
+but each individual stream is constant. A single cycle through an already
+given pair-incidence carrier positively gives its quadratic ratios from
+every start; the cyclic update is an added mechanism, not derived from U.
+
+**Repeated-trial law.** Correct frequencies and even all adjacent-pair laws
+do not establish independence. Under uniform phase the four-cycle 0011 has
+fair single bits and all four pairs with probability 1/4, but no 000 triple.
+For exactly independent Bernoulli(a/b) blocks of length k, with a/b reduced,
+a closed deterministic model uniformly prepared on N states must have b^k
+dividing N. A single reversible cycle on b^k states attains that bound and
+the every-start a/b frequency, using a word-graph Euler cycle; independence
+then fails at length k+1. For arbitrary nonuniform preparation the general
+support bound is 2^k. All-order independence is impossible at fixed finite N.
+
+This result does not apply the finite-state bound to the native checkpoint:
+the full native U state includes an unbounded counter. It does not add an
+independence requirement to the physical apparatus owner. Uniform initial
+phase, word order, finite versus unbounded resources, and the trial protocol
+remain explicit premises wherever they are used.
+
+**Program consequence.** The occurrence question now has exact positive
+criteria and explicit negative controls. A proposed native bridge must supply
+its full ready/update/event contract and prove its actual trajectory or
+ensemble law. Reversibility, a correct cardinality and an invariant ensemble
+cannot be substituted for that proof. Aim C remains STOP-DEFINITION at the
+physical level; neither this attack nor the first falsifies empirical Born
+statistics. The broader census of native algebraic relation types remains
+a separate unfinished Aim B.
