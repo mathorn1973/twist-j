@@ -1,7 +1,8 @@
 # Conditional record-chain closure and preparation identifiability
 
-NON-CANONICAL. Analytic derivation with a proposed executable audit.
-The new audit has not been publicly pinned or executed. Public Canon v80 is
+NON-CANONICAL. Analytic derivation with an exact executable audit.
+The [pinned probe result](../probes/P-TRC1-END-TO-END-IDENTIFIABILITY-1/RESULT.md)
+records 52,401 passing exact checks and zero failures. Public Canon v80 is
 unchanged. This note does not supply a physical realization certificate.
 
 ## 1. The chain that is actually specified
@@ -18,7 +19,7 @@ pointed U head h
     -> pushforward of a preparation ensemble selected once.
 ```
 
-The proposed [probe](../probes/P-TRC1-END-TO-END-IDENTIFIABILITY-1/PREREG.md)
+The [probe](../probes/P-TRC1-END-TO-END-IDENTIFIABILITY-1/PREREG.md)
 implements the missing composition around three existing immutable engines.
 It retains source identity, actual U checkpoint labels, both wave snapshots,
 both apparatus snapshots, signed outgoing amplitudes, deposits, threshold
