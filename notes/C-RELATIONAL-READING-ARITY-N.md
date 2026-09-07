@@ -8,8 +8,9 @@ content `b00171ef21ecb0d905593224f66f5e8a0f6c28e5`;
 Canon SHA-256 `8b076ee3d940e4a3639d3ffca06ae86e7df69dfc87f90d06ea99d4f9fca6b66c`,
 541516 bytes. The identifier names an incubation, not public status C.
 H and T-candidate below are proposed local roles, not Registry entries.
-This note records a research program and elementary arguments; it reports no
-formal run, physical realization, new public theorem or status transition.
+This note records a research program and elementary arguments. Section 8 links
+the separately preregistered first formal attack; this document itself grants
+no physical realization, new Canon status or status transition.
 
 ## 1. Proposed relational principle
 
@@ -322,3 +323,53 @@ physics out of invariant selection. Aim C proceeds only when its physical
 class, record equality and bridges are defined. Any future formal probe needs
 its own public identifier, claim lock, preregistration and frozen evidence.
 This note itself authorizes no formal execution or Canon fold.
+
+## 8. First attack completed: the missing selection premise
+
+The separate proof-first probe
+[P-BINARY-RECORD-QUADRATIC-SELECTION-1](https://github.com/mathorn1973/twist-j/pull/886)
+was publicly pinned at `c157fa9258ed01fb71320feba5a2c223daeb749e` before
+execution. Its all-domain arguments are in
+[PROOF.md](https://github.com/mathorn1973/twist-j/blob/c157fa9258ed01fb71320feba5a2c223daeb749e/probes/P-BINARY-RECORD-QUADRATIC-SELECTION-1/PROOF.md).
+The first Linux audit and both GitHub architectures matched the same exact
+stdout, with 109538 checks. These are mathematical results under their stated
+premises; no Canon promotion or physical realization is inferred.
+
+**Aim A, decided at the frozen scope.** On equality-only binary carriers with
+injection-stable nonnegative atomic weights, the complete class is
+
+```text
+W(d)=a*d+b*d*(d-1),
+W(d)=c*d^2 for all d iff a=b=c.
+```
+
+A total involutive faithful writer can retain its source and older cells,
+respect all simultaneous symbol relabelings and still produce a diagonal
+active graph of size d. Thus binary structure, reversibility and faithful
+writing do not force the full Cartesian count. A nonnegative separately
+additive pairing on signed groups must vanish, exposing a separate obstacle
+to deriving unsigned counts directly from signed composition.
+
+**Aim B, one complete elementary census.** Equality-only k-ary relations split
+into equality-partition orbits of size (d)_r. Their injection-stable atomic
+valuations are exactly nonnegative combinations of those orbit counts.
+Triples can consequently have linear, quadratic or cubic counts. The broader
+census of native relations with additional algebraic structure remains open.
+
+**Native scalar test.** Keeping the adopted v80 channel forms, every positive
+integer power p gives normalized weights from |sum z|^p and
+5*sum_(i<j)|z_i-z_j|^p with the listed sign/permutation symmetries, scaling
+behavior and zero classes. At (1,1,0,0), LOW is 1/11 for p=1 and 1/6 for p=2.
+These scalar laws therefore do not select p=2. Full rational-frame additivity,
+QDD record conformance and physical admission are not claimed for p=1.
+
+**Aim C, revised decision.** The unrestricted structural implication from
+binary faithful recording to a square is refuted. The physical measurement-cut
+hypothesis remains STOP-DEFINITION. At the classified binary scope a positive
+physical route must independently justify equal matching/nonmatching weights
+(or a different explicitly typed positive pairing) and then its event law.
+Replacing correspondence-preserving symmetry by independent permutations of
+unmarked carriers is an additional premise: transporting a matching under
+relabeling does not erase it. The next physical target must explain that
+premise or declare a narrower independently motivated mechanism, rather than
+derive it from the desired square.
