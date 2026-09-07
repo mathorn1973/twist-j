@@ -422,3 +422,47 @@ cannot be substituted for that proof. Aim C remains STOP-DEFINITION at the
 physical level; neither this attack nor the first falsifies empirical Born
 statistics. The broader census of native algebraic relation types remains
 a separate unfinished Aim B.
+
+## 10. Third attack: the actual native trajectory and finite horizons
+
+The proof-first
+[P-U-FINITE-READER-INDEPENDENCE-1](../probes/P-U-FINITE-READER-INDEPENDENCE-1/RESULT.md)
+addresses unchanged native U with its unbounded counter. Its first local
+formal audit passed; the required two-architecture reproduction is separate
+evidence attached to the reviewed PR head.
+The result remains NON-CANONICAL L1 mathematics, with no physical gate closure.
+
+**One fixed finite reader.** For every origin-zero head, the inherited exact
+chart codes the synchronized decorated trajectory `(x_n,theta_n)` by a
+length-two morphism of the primitive 100-letter native clock. Its distinct
+length-t words number at most `20,000 t`. This is an actual trajectory bound;
+the finite checkpoint is not substituted for the complete autonomous state.
+
+Fix a finite length-L causal reader with outputs LOW, HIGH and SILENT,
+applied at every consecutive synchronized tick. If it accepts one legal
+window, that window recurs with a finite bounded gap G. After chronological
+SILENT deletion, the number of distinct k-event words is at most
+`20,000[L+G(k-1)]`. Eventually this is smaller than `2^k`, so an event word
+that every nondegenerate Bernoulli product would weight positively is absent.
+The accepted stream cannot have those product block frequencies at all orders.
+Empty acceptance is NO_EVENT, with no ratio. Finite initial transients do not
+remove the frequency obstruction, and a finite-union version covers mixing
+the head classes for one fixed global reader.
+
+**A finite horizon still survives.** For any prechosen h, the existing causal
+phase reader of length `5*2^(h-1)` can drive a binary de Bruijn cycle of period
+`2^h`. Its deterministic all-prefix block frequencies equal the fair product
+values through h, then fail at h+1. Thus there is no one finite failure
+horizon that excludes every finite-window reader. The construction selects
+its reader and cycle before use; it does not supply an actual stochastic
+trial law, a minimal memory cost, or a physical realization.
+
+**Program consequence.** Correct marginal counts still do not settle the
+ordered event law, and exact all-order independence is too strong for this
+fixed finite-window class. This does not falsify Born's marginal rule or
+automatically rule out any specified finite experiment. Arbitrary explicit
+counter readings, growing histories, additional apparatus memory and altered
+acquisition schedules lie outside the bound. The physical next step is to
+freeze one independently motivated event protocol, its complete resources
+and trial semantics, and test its actual ordered law at the required horizon.
+Aim C and the existing physical QDD owners remain STOP-DEFINITION.
