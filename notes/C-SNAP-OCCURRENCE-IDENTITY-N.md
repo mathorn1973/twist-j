@@ -162,3 +162,81 @@ desired output is known. Until that profile is supplied, the physical Snap
 question and the existing QDD apparatus and terminal-event obligations remain
 STOP-DEFINITION. The mathematical identity and serialization results do not
 falsify Born's marginal law or promote a new canonical physical reading.
+
+## 6. Concrete attack: arrivals, readback and finite storage
+
+The new lane [#895](https://github.com/mathorn1973/twist-j/issues/895),
+[P-SNAP-INTERACTION-READBACK-1](../probes/P-SNAP-INTERACTION-READBACK-1/PROOF.md),
+tests a specified mathematical mechanism and its limits. The statements below
+belong to that proof's frozen classes; this note supplies no run evidence or
+physical promotion. Fresh-slot SWAP and reservoir accounting are prior work.
+The new questions concern erasing operation information, classifying all
+perfect two-port loaders, and replacing operation commands by a fixed update.
+
+**The zero-input distinction.** In the existing terminal account,
+DEPOSIT(0) appends an explicit zero-pulse batch; READ appends nothing. After
+forgetting the operation, presence flag, pulse ordinal, new-slot address and
+archive shape/length, their zero-amplitude port data and energies coincide.
+No function of that projection can reproduce
+the required difference in batch identity. A recorded batch is not a threshold
+mark: the zero pulse issues no marks, so this counterexample does not assert
+different threshold counts or establish a physical event at zero input.
+
+**Reusing the same two ports.** Let V have a positive rational quadratic form
+with Gram matrix G. Every orthogonal linear map on V plus V satisfying
+`T(x,0)=(0,x)` for all x has exactly the block form
+
+```
+T = [[0,B],[I,0]],       B^T G B = G.
+```
+
+It therefore sends `(0,x)` to `(Bx,0)` on reuse. Stored nonzero content is
+exported; this step is not passive retention. Even without linearity, an
+injective map cannot both load `(x,0)` into `(0,x)` and fix `(0,x)` for nonzero
+x. A changing controller, cursor or extra port changes this declared class.
+
+With an additional protected old bank and a fresh bank F, an orthogonal
+perfect loader exists exactly when V admits an isometric embedding into F.
+At least dim(V) fresh orthogonal dimensions are necessary. That dimension
+inequality alone is not sufficient over rational quadratic forms: the forms
+must admit the embedding. An isometric fresh copy attains the dimension bound
+by exchanging it with the incoming port and fixing the old bank. This concerns
+arbitrary faithfully retained amplitudes in the stated linear class, not a
+general bound on physical bits, compressed equal payloads or storage energy.
+
+**A fixed finite mechanism.** Give the apparatus N input cells, N receiver
+cells and a cursor modulo N. A cell contains either BLANK or an element of
+`Q^m`, with the zero vector distinct from BLANK. At every step the same update
+swaps the complete incoming and receiver cells at the cursor, then advances
+the cursor. Its emitter detects a receiver change from BLANK to occupied.
+There is no READ/DEPOSIT opcode selecting a different update.
+
+If all receiver cells start BLANK, the first lap transfers each preloaded
+arrival once. Equal arrivals at different cells produce distinct positional
+records. An incoming zero vector is an arrival; a BLANK input is no arrival.
+Earlier receiver cells stay unchanged during this first lap. Repeated queries
+of one stored cell return its payload without emission under the chosen
+observation contract; this is not a physical nondisturbance certificate.
+
+The cursor and two banks return to their complete initial state after 2N
+steps. The second lap swaps recorded contents back out, and the third repeats
+the first. Thus the finite bank is a recorder only through its declared first
+lap, not a sustained append-only recorder. Retaining an external emitted log
+would add another state resource. A nonrepeating cursor with indefinitely
+fresh addresses can avoid reuse mathematically, but that larger carrier and
+its preparation are additional premises, not a physical consequence here.
+
+The occupancy distinction also carries a debt: assigning no amplitude energy
+to its tag does not prove that its physical preparation or retention is free.
+Amplitude energy alone cannot replace complete field equality either. On
+general port inputs, SWAP sends `(1,-1)` to `(-1,1)`; both port energies stay
+the same while the signed fields change. Zero net energy transfer is therefore
+not a universal test for passive reading.
+
+**Next physical obligation.** Supply the independent mechanism that produces
+an arrival/presence distinction and exposes a genuinely fresh receiver while
+preserving old records. Specify how its emitter and passive observation are
+realized, including zero inputs, routing and storage resources. This belongs
+to the existing #539 apparatus contract. The mathematical constructions do
+not select a universal Snap, derive the mechanism from native U, close a
+physical owner, or create a new Canon claim or layer gate.
