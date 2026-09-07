@@ -1,0 +1,93 @@
+{
+  "schema": "snap-physical-registration-source-audit/1",
+  "status": "NON-CANONICAL",
+  "owner_issue": "https://github.com/mathorn1973/twist-j/issues/897",
+  "parent_owner_issues": [539, 830, 832, 834],
+  "public_base_commit": "a9a990343d9d2f63d67b70fddc4a644858d9bed8",
+  "canon_version": 80,
+  "access_date": "2026-09-07",
+  "scope": "Primary apparatus-document qualification and explicitly conditional interpretation",
+  "resource_constraint": "PUBLIC_SOURCES_ONLY_NO_NEW_LAB_ACQUISITION",
+  "exposure": {
+    "published_conclusions_read": true,
+    "published_equations_and_figures_read": true,
+    "blind_analysis_claim": false,
+    "raw_measurement_payload_acquired": false,
+    "raw_measurement_payload_opened": false,
+    "figure_digitization_or_refit": false,
+    "new_scientific_execution": false
+  },
+  "formal_preregistration_commit": null,
+  "accepted_measurement_sources": [],
+  "issued_physical_certificates": [],
+  "source_identity_policy": "Bibliographic and document locators only; no claim of immutable fetched PDF bytes. A future payload admission needs its own version, license, byte count and hash custody.",
+  "sources": [
+    {
+      "source_id": "S1",
+      "title": "Strong Loophole-Free Test of Local Realism",
+      "authors": "Shalm et al.",
+      "publication": "Physical Review Letters 115, 250402 (2015)",
+      "doi": "10.1103/PhysRevLett.115.250402",
+      "url": "https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.115.250402",
+      "locators": ["250402-4, Fig. 2", "250402-5, synchronization paragraph"],
+      "role": "Published registration chain and adopted endpoint",
+      "does_not_supply": ["Native U realization", "Universal terminality", "Joined physical retention certificate"],
+      "reuse": "Citation and original paraphrase only; paper and figures not copied into the repository"
+    },
+    {
+      "source_id": "S2",
+      "title": "Supplemental Material for Strong Loophole-Free Test of Local Realism",
+      "authors": "Shalm et al.",
+      "parent_doi": "10.1103/PhysRevLett.115.250402",
+      "url": "https://journals.aps.org/prl/supplemental/10.1103/PhysRevLett.115.250402/LHFSupplementary.pdf",
+      "locators": ["Section II, detector and electrical signal path", "Section III, Fig. S3"],
+      "role": "Component identification and signal-path documentation",
+      "does_not_supply": ["Run-specific SNSPD recovery from the separate RNG SPAD discussion", "U-source dictionary"],
+      "reuse": "Citation and original paraphrase only; no third-party payload included"
+    },
+    {
+      "source_id": "S3",
+      "title": "Kinetic-inductance-limited reset time of superconducting nanowire photon counters",
+      "authors": "Kerman et al.",
+      "publication": "Applied Physics Letters 88, 111116 (2006)",
+      "doi": "10.1063/1.2183810",
+      "url": "https://qnn-rle.mit.edu/documents/kerman-published-version-2006.pdf",
+      "locators": ["111116-1, circuit description", "111116-2, Fig. 3", "111116-3, notes 21-23"],
+      "role": "Published pulse-pair intervention and recovery model",
+      "does_not_supply": ["Heralded single-photon pair input", "NIST-device calibration", "Complete microscopic reset equality", "Storage audit"],
+      "reuse": "AIP copyright notice on source. Citation and original paraphrase only; no PDF, figure or extracted dataset redistributed"
+    },
+    {
+      "source_id": "S4",
+      "title": "Bell Test Data File Folder Descriptions",
+      "provider": "NIST",
+      "declared_version": "2015-12-23",
+      "url": "https://www.nist.gov/document/bell-test-data-file-folder-descriptions",
+      "locators": ["Page 1, raw format and reference", "Page 2, run3 caveat"],
+      "role": "Archive and transfer semantics",
+      "does_not_supply": ["Complete acquisition loss ledger", "Interleaved retention experiment", "Unlimited physical capacity"],
+      "reuse": "Citation and original paraphrase only; existing repository admission and NIST notices are not modified"
+    }
+  ],
+  "repository_basis": [
+    "probes/P-SNAP-INTERACTION-READBACK-1/PROOF.md",
+    "notes/C-SNAP-OCCURRENCE-IDENTITY-N.md",
+    "notes/DECODER-OPEN-DATA-BRIDGE-1.md",
+    "notes/NIST-MEASUREMENT-CONTRACT-1.md",
+    "notes/DECODER-PASSIVE-REALIZATION-BRIDGE-1.md",
+    "notes/DECODER-RESERVOIR-PHYSICAL-PROFILE-1.md",
+    "canon/CORE.md"
+  ],
+  "qualification": {
+    "external_registration_chain": "PUBLISHED_DOCUMENTATION",
+    "sequential_recovery": "PUBLISHED_EXTERNAL_RESULT_WITH_ASSUMPTIONS",
+    "joined_same_apparatus_test": "NOT_ADMITTED",
+    "same_run_nist_recovery": "UNRESOLVED",
+    "capacity_and_loss": "UNRESOLVED",
+    "interleaved_physical_retention": "UNRESOLVED",
+    "native_physical_source_and_arrival": "STOP-DEFINITION",
+    "born_or_occurrence_law": "NOT_DERIVED"
+  },
+  "next_access_gate": "A new numerical test requires separate public preregistration, accepted verifier and immutable data custody before semantic opening; this source audit admits no new measurement payload.",
+  "canon_modified": false
+}
