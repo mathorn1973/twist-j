@@ -38,7 +38,11 @@ Linux x86_64, Python 3.10.12; exit 0, empty stderr, approximately 6.504 s.
 Stdout: one line, 4,538 bytes; SHA-256:
 `d4d23bda513d680a01f63f8ef8e354ce41916ca4776e9b1ecaa14bb44d3ed3b1`.
 [EXPECTED.txt](EXPECTED.txt) preserves stdout; [RUN.md](RUN.md) supplies
-provenance. Independent CI replay is pending.
+provenance. [Independent PR CI](https://github.com/mathorn1973/twist-j/actions/runs/34169291542)
+passed on x86_64 and aarch64 with Python 3.12 at reviewed head
+`bd0184ea4df627ee3d376fcef933f52beb68a83a`; both returned the same stdout
+hash above, and the aggregate check passed. This evidence update changes no
+accepted source or EXPECTED.txt byte.
 
 Physical preparation, realization, occurrence selection, clock/observation
 identification and frequency convergence remain STOP. Fresh cold slots and
