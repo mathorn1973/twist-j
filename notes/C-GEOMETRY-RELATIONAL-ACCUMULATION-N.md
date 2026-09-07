@@ -132,3 +132,8 @@ carrier/limit and its intrinsic spatial filtration. Merely choosing the
 fired integer lift, appending a count axis or adopting W_5's already known
 rank would not discharge that obligation. No canonical status is promoted
 by this note or its accompanying L1 audit.
+
+The next shared occurrence question is developed in
+[C-SNAP-OCCURRENCE-IDENTITY-N](C-SNAP-OCCURRENCE-IDENTITY-N.md).
+It distinguishes tagged incidence cardinality from actual new log entries
+and fixes the emission budget needed to identify the two counts.

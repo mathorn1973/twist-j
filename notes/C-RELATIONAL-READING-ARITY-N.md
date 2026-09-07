@@ -466,3 +466,12 @@ acquisition schedules lie outside the bound. The physical next step is to
 freeze one independently motivated event protocol, its complete resources
 and trial semantics, and test its actual ordered law at the required horizon.
 Aim C and the existing physical QDD owners remain STOP-DEFINITION.
+
+## 11. Occurrence identity before physical Snap
+
+[C-SNAP-OCCURRENCE-IDENTITY-N](C-SNAP-OCCURRENCE-IDENTITY-N.md)
+joins this branch to the geometric counting question. It separates recurring
+payloads, indexed occurrences, recoverable histories and physical records,
+and states the native finite-reader obstruction to producing fresh IDs.
+An address or an ordered mathematical log does not itself supply a physical
+emission law. The existing apparatus contract remains the physical owner.
