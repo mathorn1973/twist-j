@@ -1,4 +1,17 @@
 item_id	depends_on	relation	basis
+U-NATIVE-COMMON-READY-SOURCE-RETENTION	DEF-AUTONOMOUS-STATE	REQUIRES	the exact origin-zero native carrier and deterministic update
+U-NATIVE-COMMON-READY-SOURCE-RETENTION	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	synchronized sheet bijections, conserved chart and initial phase inverses
+U-NATIVE-COMMON-READY-SOURCE-RETENTION	U-NATIVE-APPARATUS-HISTORY-FACTOR	REQUIRES	the complete common-ready apparatus table and its separate port boundary
+U-NATIVE-COMMON-READY-SOURCE-RETENTION	QDD-DIRECT-RECORD-E-NONCONGRUENCE	REQUIRES	complete original QDD equality is exactly common piston-sign equality
+U-NATIVE-COMMON-READY-SOURCE-RETENTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	full-state recovery and regenerated history are not physical preparation or material recording
+QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION	QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD	REQUIRES	the fixed four-coordinate source, complete Cartesian slot map and exact A/D comparison
+QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION	U-FINITE-HISTORY-CLOCK-PHASE	REQUIRES	native chronological use of the fixed calendar has the inherited exact phase address
+QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	complete common-onset nonselection and conditional permutation counts neither exclude nor realize the complete physical apparatus class
+QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-COMMUTATOR-READOUT-EQUALITY-FORK	REQUIRES	the registered L4 moving support and exact compressed motor, without assuming its pure-class selection conclusion
+QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the registered L4 effect/support setting and distinction between reduced post-state and complete apparatus selection
+QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	preservation of the three attenuation observables is neither physically derived nor adopted
+QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-INSTRUMENT-CLASS-COMPLETENESS	BOUNDED_BY	pointwise CP channel completeness is not completeness of physical memory families or their equality
+QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the mathematical reduced-channel selector supplies no physical effects or occurrence, preparation, persistence or reset law
 QDD-STABILIZER-UNCOMPUTE-POSTSTATES	QDD-J-AFFINE-APPARATUS-NONSELECTION	REQUIRES	the construction uses the registered L4 rational simplex and stabilizer support with the rank-one/rank-three split; its retained-path mixed instrument lies outside the earlier restricted pure affine class
 QDD-STABILIZER-UNCOMPUTE-POSTSTATES	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the chosen finite circuit and coarse post-state maps identify no physical apparatus, select no unique architecture, establish no complete physical class and supply no occurrences, sampling or physical reset
 QDD-STABILIZER-COMMON-LATTICE-OBSTRUCTION	QDD-STABILIZER-UNCOMPUTE-POSTSTATES	REQUIRES	the obstruction uses the two default E circuits on the fixed carrier and their path-zero flag-minus reflection restrictions

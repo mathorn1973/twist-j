@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v79
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v80
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -74,5 +74,9 @@ PASS 70 V78-QDD-STABILIZER two conditional L4 circuit and lattice theorems enter
 PASS 71 V79-PRIOR-LEDGERS exact pinned row replacements reconstruct every byte of the prior v78 ledger; no earlier hash, lifecycle row or unlisted claim is relaxed
 PASS 72 V79-CURVATURE raw-class nonuniqueness closes the named O at T; the separate trace readout strengthening is F and owns the terminal gate; time cut stays D
 PASS 73 V79-NATIVE-DECODER six conditional mathematical theorems and one finite C audit retain their exact sources; L5 spectra use a typed projection and physical QDD stays O
+PASS 74 V80-PRIOR-LEDGERS only exact pinned v80 additions are removed to recover every v79 byte; the unchanged v79 reconstruction still enforces every older ledger hash
+PASS 75 V80-CLOSURE-BOUNDARIES three proof-backed T rows retain complete-source and onset conditions at L1 and full CP three-pass rigidity at L4 on one exact two-architecture probe
+PASS 76 V80-PHYSICAL-OWNERS all three physical QDD obligations retain their exact v79 rows at O; readback, conditional onset laws and mixed-channel selection create no physical gate
+PASS 77 V80-READING-BOUNDARIES two later L4 theorems bound the quadratic decoder on self-contained inline Canon proof; they add no dependency, gate, program or CORE selection and leave every physical QDD owner open
 
-RESULT 73/73 ALL PASS
+RESULT 77/77 ALL PASS
