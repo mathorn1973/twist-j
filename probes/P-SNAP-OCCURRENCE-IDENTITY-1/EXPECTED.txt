@@ -1,0 +1,1 @@
+{"counts":{"AUTONOMOUS_MAPS":1345841,"BOUNDED_EMISSION":534216,"FINITE_EQUIVALENCE":79482,"LOG_EQUALITY":32,"SILENT_ERASURE":911,"TAGGED_GEOMETRY":64953},"failures":[],"name":"P-SNAP-OCCURRENCE-IDENTITY-1","result":"PROOF_AUDIT_PASS","scope":"L1 finite exact audit; occurrence equality and emission resources are explicit","total":2025435}
