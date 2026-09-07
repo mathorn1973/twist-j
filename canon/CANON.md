@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v79
+# TWIST-J Public Canon v80
 
-**Release identity.** Public Canon v79. Normative authority and activation
+**Release identity.** Public Canon v80. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v79 also declares the discrete architecture used to read
+only. Public Canon v80 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v79 does not claim
+seed of the two algebraic projections. Public Canon v80 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -125,7 +125,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v79 contains no such
+deriving the architecture from J; Public Canon v80 contains no such
 theorem.
 
 ---
@@ -4170,6 +4170,632 @@ TWIST-J realization. The separate NIST semantic/certificate wrappers are
 specifications, not tested implementations of this adapter. No output feeds
 U; the QDD apparatus, terminality, complete-family and Bell causal owners
 remain unchanged.
+
+### Complete conditional preparation, occurrence and channel classes
+
+The following three mathematical results resolve distinct interfaces.
+The native common-ready inverse can supply the original balanced source
+to the incidence calculation at a later query, with the actual native
+counter as its clock input. This removes a separately saved source only
+on the declared preparation slice; it does not realize physical capture
+or a material archive. The onset theorem tests the existing chronological
+calendar, and the mixed theorem tests a separate L4 channel class. Their
+common evidence bundle creates no cross-layer implication or physical closure.
+
+### U-NATIVE-COMMON-READY-SOURCE-RETENTION [T]
+
+Use unchanged U on `Omega=N_0 x F_5^6`, with common origin zero and
+`theta_n=s_2(n) mod 2`. Write `x=(p1,p4,p1p,p4p,q,r)=(p,a)` and
+`D_a={(p,a):p in F_5^4}` for a common ready `a=(q,r)`, independent of p.
+Let F_n be the checkpoint after n native ticks. The reader receives the
+complete current checkpoint and its actual counter `(n,F_n(x))`, with a
+known. It receives no saved source or retained early-history buffer.
+
+For each of the 25 common readies, the following are equivalent:
+
+1. Every original p is recoverable from `(n,F_n(p,a))` at every n.
+2. F3 is injective on D_a.
+3. `a` is outside `{(0,0),(3,0),(3,3),(1,3)}`.
+
+For each of the 21 good readies the image has 625 states at every n.
+For each exceptional ready, at every `n>=3`, there are 500 image states:
+125 fibres of size two and 375 singleton fibres. Each double fibre has
+different original complete QDD records. At least 124 of those pairs
+contain two supported sources, so exceptional readies also fail universal
+original QDD readback on all supported sources.
+
+**Proof.** All arithmetic in this proof is in F5 unless stated otherwise.
+The first-three-tick maps indexed by initial phase z are, with composition
+right to left,
+
+```text
+H0=eca, H1=d, H2=e, H3=dbd, H4=dbe.
+```
+
+These follow from the declared generators and the initial driver 011.
+All outputs have total phase one. The apparatus coordinates are
+
+| Initial z | `(q3,r3)` |
+| --- | --- |
+| 0 | `(q+1,r+1)` |
+| 1 | `(1-q,1-r)` |
+| 2 | `(2-q,1-r)` |
+| 3 | `(2-q,2-r)` |
+| 4 | `(3-q,2-r)` |
+
+The last four rows are pairwise distinct. Equality of the first with rows
+1,2,3,4 occurs only at `(0,0),(3,0),(3,3),(1,3)`, respectively, by solving
+the two affine equations using `2^{-1}=3`. Each initial phase subset of
+D_a has 125 points. H_z is injective there because each generator is an
+involution. Its image lies in the set with total phase one and the fixed
+displayed `(q3,r3)`. That set also has 125 points: the four output pistons
+obey one fixed sum. The image therefore equals the entire set.
+
+Distinct rows give disjoint images. At an exceptional ready exactly two
+initial phase subsets map onto the same 125-point image, proving the
+complete fibre counts. Later synchronized transitions are bijections, so
+the partition persists. An earlier merger would persist to tick three;
+thus a good ready is injective at every earlier time as well.
+
+For the QDD assertion, write the common tick-three checkpoint as
+`y=(a,b,c,d,q,r)`. Its inverse piston classes for initial phases
+`0; 1,2; 3,4` are respectively
+
+```text
+A=(d+3-r,c+4,b+4+r,a),
+B=(2-a,1-b,3-c,4-d),
+C=(-c,-d,-a,-b).
+```
+
+Complete QDD equality is exactly common piston-sign equality. The following
+equalities would impose incompatible values of r:
+
+| Equality | Required values |
+| --- | --- |
+| `A=B` | `r=0` and `r=2` |
+| `A=-B` | `r=4` and `r=3` |
+| `A=C` | `r=4` and `r=1` |
+| `A=-C` | `r=2` and `r=1` |
+
+Each exceptional double fibre pairs phase zero with one other phase and
+therefore pairs A with B or C. Their QDD records differ. There is only one
+zero source in D_a, so at least 124 conflicting pairs are supported.
+
+**Chosen all-source inverse.** Common ready `(q,r)=(0,1)` has the distinct
+rows `(1,2),(1,0),(2,0),(2,1),(3,1)`. It admits all 625 piston sources,
+including every one of the 624 supported sources, with no source-dependent
+ready choice. At `n>=3`, recover the five conserved chart labels by
+
+```text
+S(M)=M-floor(M/2)+floor(M/4)-...,
+t_n=(-1)^(n-3), h_n=(-1)^(n+theta_(n-1)),
+N_n=S(floor((n-1)/2))-1,
+alpha=t_n(p1+p1p), beta=t_n(p4+p4p),
+gamma=h_n(p1-p1p-2), delta=h_n(p4-p4p-1),
+epsilon=t_n*r-N_n.
+```
+
+The finite alternating sum is integer-valued; reduce the labels modulo
+five. Their exact tick-three inverse is
+
+```text
+y1=3(alpha+2+gamma), y1p=3(alpha-2-gamma),
+y4=3(beta+1+delta), y4p=3(beta-1-delta),
+yr=epsilon, yq=1-alpha-beta-epsilon.
+```
+
+The native chart theorem gives `y=F3(x0)` for every n. Its `(yq,yr)`
+identifies z in the table; applying `H_z^{-1}` recovers the full head.
+These inverse compositions are `ace,d,e,dbd,ebd`, respectively. For
+`n=0,1,2`, compute the at most three native transitions to tick three
+and apply the same inverse. These are calculations from the given state,
+with no future measured record as input. This proves the all-n inverse.
+Zero is recovered by the same operations without division; its subsequent
+QDD reading remains ZERO_SUPPORT, with no assigned event or probability.
+
+**Regenerable-archive corollary.** For any origin-zero preparation subset
+D and stipulated history `H:D->Y^N_0`, with literal ordered equality,
+write H_n for the prefix through tick n. Exact H_n readback from only
+`(n,F_n(x))` for every `n>=3` exists iff H is constant on F3 fibres in D.
+Equal F3 values give equal later states and therefore every equal finite
+prefix, hence equal full histories. Conversely assign the common history
+to each attained F3 value, recover that value with the chart, and truncate.
+An executable reader additionally requires a finite-prefix algorithm for H.
+
+Thus at most `|F3(D)|<=3125` different complete archives can be recovered
+this way, although archive length and clock dependence can be unbounded.
+On a good common-ready slice every computable source-dependent history
+can be regenerated from current state and counter. This includes the
+already specified source-incidence calendar when its start and ordering
+are fixed. It is virtual readback, with no asserted runtime or locality
+bound, and supplies no fresh physical BLANK cell or independently writable
+storage. The source and earlier records need not be additional inputs to
+this computation; their material realization is a different question.
+
+The good-ready choice and full-state access are explicit mathematical
+conditions. This theorem derives no physical preparation, full-state
+measurement, apparatus coupling, ready/reset mechanism, exclusive outcome,
+or occurrence law. The native `(q,r)`-only source-sum obstruction and the
+arbitrary-head merger theorem remain unchanged on their respective domains.
+No physical apparatus-completeness or decoder obligation is closed.
+
+The exact finite audit checks all 25 readies and all 625 sources at tick
+three, all good-ready inverses there, every exceptional conflicting pair,
+and all selected-ready sources at every `n=0,...,64`, including zero.
+The written proof supplies the universal n and archive statements.
+
+### QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION [T]
+
+Action layer: L1 exact finite words, combinatorial counts and conditional
+mathematical onset vectors. No physical occurrence or L6 measure is adopted.
+
+Fix an integer M>=1 and a total word
+`e:Z/M->{LOW,HIGH,SILENT}`. Observation begins at an inclusive onset r and
+then inspects every consecutive phase. Occupied onsets are accepted
+immediately; SILENT is skipped. The source and word remain fixed and there
+is no thinning, reordering, feedback or reset during this scan. Output
+equality is literal ordered coarse-label equality. It does not identify
+complete signed records, sources, fine addresses or waiting times.
+
+For a nonempty accepted set `S={t_0<...<t_(D-1)}`, put `c_i=e(t_i)`,
+`t_(-1)=t_(D-1)-M`, and
+
+```text
+J_i={t_(i-1)+1,...,t_i} modulo M, g_i=|J_i|.
+```
+
+The J_i are a disjoint partition of all M phases. Every onset in J_i
+produces the entire accepted sequence `c_i,c_(i+1),...`, with indices
+modulo D. Therefore every mathematical vector `mu_r>=0, sum_r mu_r=1`
+gives the following exact law for every k>=1 and prescribed label word w:
+
+```text
+P_mu(first k accepted labels=w)
+  =sum_i mu(J_i) product_(j=0)^(k-1) 1[c_(i+j)=w_j].
+```
+
+Conversely every vector of masses on the D accepted starting indices is
+realized by an onset vector: place its i-th mass at t_i. Thus all induced
+ordered laws are precisely mixtures of the cyclic deterministic accepted
+sequences; different indices need not give distinct sequences. Uniform
+onset gives starting mass g_i/M, whereas uniform accepted-address selection
+gives 1/D. If S is empty there is NO_EVENT and no accepted-label law.
+
+For the selected incidence calendar, the source is
+`v in {-2,-1,0,1,2}^4`, with ordinary integer quantities
+
+```text
+s=sum_i v_i, Q=sum_i v_i^2,
+A=s^2, B=5(4Q-s^2), D=A+B, M=1024.
+```
+
+Its LOW addresses are `8a+b`, `0<=a,b<|s|`. Its HIGH addresses are
+`64+16(5j+c)+4a+b`, where j indexes
+`((0,1),(0,2),(0,3),(1,2),(1,3),(2,3))`, `0<=c<5`, and
+`0<=a,b<|v_i-v_k|` for the j-th pair `(i,k)`. All other addresses are
+SILENT. Capture, the balanced lift, complete Cartesian incidence and this
+slot order remain explicit construction premises. Valid native phase
+acquisition supplies the chronological address but does not select onset.
+
+When A,B>0, let j_* be the last nonzero pair difference and d_* its
+absolute value. Then
+
+```text
+L_max=9(|s|-1), H_max=123+80j_*+5d_*,
+first-LOW onset set F_v={0,...,L_max} union {H_max+1,...,1023}.
+```
+
+There is **no source-independent onset vector** whose first-LOW marginal
+equals A/D for all supported sources. In fact
+
+```text
+v=(1,0,1,0):   A=4, B=20,  A/D=1/6,
+w=(2,-1,1,0):  A=4, B=100, A/D=1/26,
+F_v=F_w={0,...,9} union {529,...,1023}.
+```
+
+The first coarse label agrees at every one of the 1024 phases, so every
+common onset vector gives equal marginals, contradicting the unequal
+targets. This also excludes any common distribution of valid absolute
+onset times after residue pushforward. For `(1,0,0,0)`, uniform onset gives
+first LOW `23/32`, while A/D is `1/16`. If A=0<D every first label is HIGH;
+if B=0<D every first label is LOW; v=0 has no accepted event or ratio.
+
+Deleting SILENT from one full incidence cycle yields exactly
+`LOW^A HIGH^B`. For A,B>0 its cyclic adjacent-pair counts are
+
+```text
+LL=A-1, LH=1, HL=1, HH=B-1 per D cyclic pairs.
+```
+
+Every prefix of N=qD+t consecutive accepted pairs consists of q complete
+cyclic pair lists and its actual t-pair remainder. No stream in this class
+contains A+1 consecutive LOW labels. Therefore no mixture of onsets gives
+a nondegenerate independent Bernoulli law on accepted indices: such a law
+assigns positive mass to that forbidden word. For `(1,0,0,0)` even LL is
+absent, while Bernoulli(1/16) assigns it mass 1/256. Independence is not
+asserted as a physical requirement; this is a conditional-law distinction.
+
+A different, source-independent **order class** supplies a positive finite
+count. For any nonempty S in Z/M, among all M! permutations of the addresses
+each t in S appears first among S in exactly M!/D orders. Each ordered
+list of k distinct accepted addresses appears first in exactly
+`M!/(D)_k` orders, where `(D)_k=D(D-1)...(D-k+1)`, including `(D)_0=1`.
+Conditional uniform normalization therefore gives first-label marginals
+A/D and B/D. A prescribed k-label pattern with a LOW and b HIGH symbols
+has conditional mass `(A)_a(B)_b/(D)_k`, a+b=k<=D. This is sampling without
+replacement. Independently renewed permutations for fresh trials would
+suffice for independent first outcomes; that extra trial law is not supplied.
+At S empty a complete M-address scan returns NO_EVENT.
+
+**Proof.** A cyclic gap ends at exactly its next accepted address, giving
+the partition and all ordered outputs. All LOW addresses precede all HIGH
+addresses, giving the extremal formula, two-source contradiction, cyclic
+word and pair counts. For permutation counts, any relabeling of S extends
+to a bijection of all M! orders. It carries any specified first accepted
+slot or ordered k-slot list to any other. The corresponding equal-sized
+classes partition all orders; their numbers are D and `(D)_k` respectively.
+These arguments hold for all M and all stated mixtures, independently of
+the bounded implementation audit.
+
+The permutation alternative changes chronological observation. It needs
+an order carrier and its law, retained scan position, access to the listed
+addresses and any fresh-trial resupply. The periodic native clock permits
+waiting for each listed residue while maintaining chronological bit
+acquisition, but those selected invocations are a different schedule.
+Neither these resources nor their physical law follow from U. The theorem
+excludes only the complete fixed-calendar/common-onset class; it excludes
+neither other calendars nor a complete physical apparatus class. No
+physical storage, reset, instrument, occurrence mechanism or measure is
+derived. Existing QDD physical obligations remain open.
+
+**Evidence.** `probes/P-QDD-V80-CLOSURE-BOUNDARIES-1/OCCURRENCE-PROOF.md`,
+sections 1--4, with the probe's exact `onset_audit.py` and shared verifier.
+The audit covers all ternary words M=1..6, every onset and first three
+labels, all 625 incidence sources and 640000 slots, and all nonempty
+subsets and permutations M=1..6. It does not replace the universal proof.
+
+**Falsifier.** An admitted failure of the gap partition or ordered formula;
+wrong extremal address, same-map witness or QDD rational comparison;
+wrong cyclic word/pair count; an admitted nondegenerate Bernoulli mixture;
+or a wrong permutation or ordered-prefix count. A changed observation or
+physical apparatus class is outside scope. Integrity failures are STOP.
+
+### QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY [T]
+
+Let `V=F^4`, `F=R` or `C`, with `G=I_4-11^T/5`, and define the marked
+J simplex by `u_k=D_J^k e_0`, where
+
+```text
+D_J=[[0,0,-1,1],[0,0,-1,0],[1,0,-1,0],[0,1,-1,0]].
+```
+
+For any marked token k, let P be the G-orthogonal projector onto Fu_k and
+Q=I-P. These are algebraic support projectors. In the basis
+`(e_0-e_3,e_1-e_3,e_2-e_3)` of W=QV at k=2,
+
+```text
+H=[[2,1,1],[1,2,1],[1,1,2]],
+A=QD_JQ|W=[[-1,-1,-3/4],[0,0,1/4],[1,0,1/4]],
+X^sharp=H^-1 X* H,   Ad_A(X)=AXA^sharp,
+B_n=(A^sharp)^n A^n,   B_0=I_W.
+```
+
+Here * denotes transpose over R and conjugate transpose over C. D_J
+conjugates successive token supports and their compressed motors, so the
+same theorem holds at every token. The complete named channel class is
+all finite-dimensional completely positive trace-preserving linear maps
+
+```text
+E(X)=sum_j K_j X K_j^sharp,   sum_j K_j^sharp K_j=I_W,
+E*(Y)=sum_j K_j^sharp Y K_j,
+```
+
+with arbitrary real or complex Kraus entries. Neither rationality, purity,
+invertibility, symmetry, idempotence nor unitality of E is assumed. Equality
+is exact equality of channels on the full operator algebra, not equality
+of Kraus presentations or complete apparatus implementations.
+
+First, the complete mixed repeatable branch fibre with effect Q is exactly
+`Phi_Q(X)=E_Q(QXQ)` for an arbitrary such channel E_Q on QV. The rank-one
+P-support channel is necessarily the identity. Second, on the displayed W,
+
+```text
+E*(B_1)=B_1, E*(B_2)=B_2, E*(B_3)=B_3
+    iff E=id
+    iff E o Ad_A = Ad_A o E.
+```
+
+The first two attenuation observables alone do not suffice, even for
+rational Kraus maps. The identity and depolarizing channels also prove
+that ordinary repeatability, strict channel idempotence and complete S4
+record-partition covariance do not jointly select the identity channel.
+
+**Proof.** For branch Kraus maps L_j, exact effect
+`sum_j L_j^sharp L_j=Q` gives `sum_j ||L_j Pv||^2=0`, hence L_jP=0
+for every j. Ordinary repeatability gives `sum_j ||PL_jv||^2=0`, hence
+PL_j=0. The restrictions to QV are precisely arbitrary trace-preserving
+CP channels; their converse is immediate. A channel on the one-dimensional
+P support is the identity. Completeness of the finite Kraus description
+follows by decomposing the positive Choi matrix into positive rank-one
+matrices and reshaping their vectors; trace preservation gives the displayed
+Kraus-square identity. This argument holds over both R and C.
+
+For the rigidity implication, exact multiplication gives
+
+```text
+H-A^T H A=diag(0,0,5/4),
+I-A^sharp A=(15/16) Proj_H(d0),
+d0=(-1,-1,3), d1=(11,-5,-1), d2=(-9,-25,-5),
+A^sharp d0=d1/4, A^sharp d1=d2/4,
+det[d0 d1 d2]=-1024,
+<d0,d1>_H=-4, <d0,d2>_H=-20.
+```
+
+Thus `B_n-B_(n+1)` for n=0,1,2 is a positive multiple of the rank-one
+projector R_n onto Fd_n, with respective multipliers
+`15/16`, `215/256`, `2815/4096`. Since E* fixes B0 by trace preservation,
+preserving B1,B2,B3 fixes R0,R1,R2. If E*(R)=R for an orthogonal projector,
+then for v in ker R the identity `sum_j ||RK_jv||^2=0` makes every Kraus
+map preserve ker R. For v in im R, trace preservation gives
+`sum_j ||(I-R)K_jv||^2=0`, so every Kraus map preserves im R as well.
+Each K_j therefore commutes with R0,R1,R2. Their three spanning lines and
+the two nonzero overlaps force K_j=c_jI. The Kraus-square identity gives
+`sum_j |c_j|^2=1`; therefore E=id. No unitality of E is used.
+
+Identity implies covariance. Conversely covariance iterates, and
+`tr(B_nE(X))=tr(Ad_A^n(E(X)))=tr(E(Ad_A^n(X)))=tr(B_nX)`;
+nondegeneracy of the trace pairing gives E*(B_n)=B_n for every n.
+
+For the two-pass boundary let S=span(d0,d1), R_S its H-orthogonal
+projector, and `E_S(X)=R_SXR_S+(I-R_S)X(I-R_S)`. This rational CP
+trace-preserving channel fixes R0,R1 and hence B1,B2. But d2 has nonzero
+components in S and its orthogonal complement, by the displayed overlap
+and determinant. Pinching removes a nonzero off-block part of R2, so B3
+is not fixed. This establishes necessity of the third member of this
+specific nested observable family, not minimality among all test families.
+
+Finally `E_dep(X)=tr(X)I_W/3` differs from identity while both channels
+are CP, trace-preserving, idempotent and covariant under every orthogonal
+or unitary basis change. Pure-input output purities are 1/3 and 1.
+The depolarizing witness has rational Kraus maps: for each of the 24
+coordinate permutations restricted to the four-coordinate sum-zero
+support, take `rho/6,rho/12,rho/12`. Their 72 maps form the S4 twirl,
+equal to `tr(X)I_W/3`; the rational equality is checked on all nine matrix
+units. In the ambient support these give branches `tr(QX)Q/3` and QXQ
+with the same Q effect and ordinary repeatability. QED.
+
+The three attenuation conditions are conditional sequential tests on all
+supported densities, `tr(A^nE(rho)(A^sharp)^n)=tr(A^nrho(A^sharp)^n)`
+for n=1,2,3. No physical law requiring their preservation is derived or
+adopted. Complete positivity is substantive: transpose in a real orthonormal basis of the complexified W fixes all Bn and commutes with Ad_A but is not the identity or
+CP. Pointwise CP classification does not classify every memory family,
+nonlinear or differently typed apparatus, or correlated quantum memory.
+It supplies no occurrence selector, physical readiness, source capture,
+fresh storage, reset, L1-to-L5 gate or L6 measure. The physical apparatus,
+terminal-event and class-completeness owners remain open.
+
+### A4-RATIONAL-FRAME-WEIGHT-NONUNIQUENESS [T]
+
+Let
+
+```text
+A4 = {v in Z^5 : sum_i v_i = 0},
+V  = A4 tensor_Z Q,
+q(v)=sum_i v_i^2.
+```
+
+A ray is a one-dimensional rational subspace of V and a complete frame is any
+four mutually orthogonal rational rays spanning V. For a nonzero rational
+number `a=3^k u`, with numerator and denominator of u prime to 3, define
+
+```text
+h_3(a)=0   if k is even,
+       -1  if k is odd and u=1 mod 3,
+       +1  if k is odd and u=2 mod 3,
+H([v])=h_3(q(v)).
+```
+
+Multiplying a ray representative by a rational scalar multiplies its norm by a
+square, so H is projectively well defined. The binary diagonal-change identity
+
+```text
+h_3(a)+h_3(b)
+  = h_3(a+b)+h_3(ab/(a+b))     mod 4
+```
+
+for nonzero `a,b,a+b` makes the sum of H over a rational orthogonal basis an
+invariant modulo four. On the explicit A4 orthogonal basis with norms
+`4,4,4,20` this invariant is zero. For any rational orthogonal basis with
+coordinate matrix C in an integral A4 basis,
+
+```text
+prod_i q(v_i)=5(det C)^2.
+```
+
+After removing powers of three, the unit part of the product is therefore 2
+modulo 3. Hence the four H values cannot all equal +1 or all equal -1. Since
+each lies in {-1,0,+1} and their sum is zero modulo four, the only remaining
+possibility is the exact integer identity
+
+```text
+sum_i H([v_i])=0.
+```
+
+Consequently, for every rational `|t|<=1/4`,
+
+```text
+w_t([v])=1/4+t H([v])
+```
+
+is a nonnegative normalized weight on every complete rational orthogonal
+frame; for `|t|<1/4` it is uniformly strictly positive. The thirty inner
+Cl(4) rays have primitive norms 2,4 or 20, hence H=0 and weight 1/4 for every
+t.
+
+This family is nevertheless not quadratic for nonzero t. In the rational plane
+`U_012`, let
+
+```text
+d1=( 2,-1,-1,0,0)   r1=(0, 1,-1,0,0)
+d2=(-1, 2,-1,0,0)   r2=(1, 0,-1,0,0)
+d3=(-1,-1, 2,0,0)   r3=(1,-1, 0,0,0).
+```
+
+The two triples have the same projector cover,
+
+```text
+sum_m P_(d_m)=sum_m P_(r_m)=(3/2)P_U,
+```
+
+while the d rays have norm 6 and the r rays norm 2. Thus
+
+```text
+sum_m w_t(d_m)-sum_m w_t(r_m)=3t.
+```
+
+Any single quadratic representation `w([v])=tr(WP_v)` would assign equal sums
+to equal projector covers, so every nonzero-t member is nonquadratic.
+Therefore positivity plus noncontextual additivity on all complete rational A4
+records do not force the owner-adopted quadratic reading.
+
+This is an L4 theorem about mathematical weights. It does not assert that the
+nonquadratic family is physically realized, does not reject the chosen
+quadratic decoder, and supplies no effect, apparatus, event, occurrence law,
+sampling law or L6 measure. Global decoder uniqueness remains unnecessary.
+
+### QDD-SIMPLEX-PAIR-INCIDENCE [T]
+
+For every integer `N>=2`, let
+
+```text
+V_N={x in Q^N : sum_r x_r=0},
+u_k=e_k-(1/N)1,
+P_k=(N/(N-1))u_k u_k^T,
+Q_k=I-P_k.
+```
+
+Choose a setting k and any bijection beta from `N-1` integer source
+coordinates `z_i` to all simplex vertices except k. Put
+
+```text
+s=sum_i z_i,
+S2=sum_i z_i^2,
+x=sum_i z_i u_(beta(i)),
+U=N(N-1),
+A=s^2,
+B=N sum_(i<j)(z_i-z_j)^2,
+D=A+B.
+```
+
+The primitive integral generator of the LOW ray is
+
+```text
+a_k=N e_k-1,
+q(a_k)=N(N-1)=U.
+```
+
+For every y in V_N, `u_k^T y=y_k`. Since the missing k coordinate of x is
+`-s/N`,
+
+```text
+P_k x=-(s/U)a_k.
+```
+
+Taking a source with s=1 shows that every positive integer M that makes
+`M P_kx` integral for all integer sources must satisfy `U | M`. Conversely
+`U=N(N-1)` clears both x and its LOW projection. Thus U is the least universal
+integral scale for the prepared relation and its LOW branch.
+
+With `X=Ux`,
+
+```text
+X_k=-(N-1)s,
+X_(beta(i))=N(N-1)z_i-(N-1)s,
+P_kX=-s a_k,
+Q_kX=X-P_kX.
+```
+
+All three vectors are integral and sum to zero. The lift loses no source
+information:
+
+```text
+z_i=(X_(beta(i))-X_k)/U.
+```
+
+The ordered branch pair also reconstructs X by addition.
+
+Now form a second-order relation census. The ordered Cartesian square of
+`|s|` signed amplitude units has cardinality
+
+```text
+A=s^2.
+```
+
+For HIGH take N separately labelled copies of the ordered Cartesian square of
+every difference fibre `|z_i-z_j|`. Its cardinality is
+
+```text
+B=N sum_(i<j)(z_i-z_j)^2.
+```
+
+Using
+
+```text
+sum_(i<j)(z_i-z_j)^2=(N-1)S2-s^2
+```
+
+and orthogonality of P_k and Q_k gives exactly
+
+```text
+q(P_kx)=A/U,
+q(Q_kx)=B/U,
+q(x)=D/U.
+```
+
+Equivalently on the integer lift,
+
+```text
+q(P_kX)=UA,
+q(Q_kX)=UB,
+q(X)=UD.
+```
+
+Thus the owner-adopted quadratic P/Q scalar reading is exactly the same chosen
+second-order relation read as a normalized integer Cartesian-pair census. The
+scale U is not fitted to these counts; it was already forced by the primitive
+simplex ray and universal integrality.
+
+For every nonzero source D>0 and
+
+```text
+q(P_kx)/q(x)=A/D,
+q(Q_kx)/q(x)=B/D.
+```
+
+Zero has no normalized ratio; `s=0` kills LOW; HIGH is zero exactly when all
+source coordinates are equal.
+
+At the TWIST-J specialization `N=p=5`,
+
+```text
+U=20=q(5u_k),
+A=s^2,
+B=5(4S2-s^2),
+D=4(5S2-s^2).
+```
+
+For the public QDD transport `k=2`, `beta=(0,1,3,4)`, these A,B,D quantities
+are exactly those already owned by QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD,
+and P/Q is the existing algebraic simplex split. The new theorem identifies
+their common structure and explains the factor 20 by the minimal integral
+simplex scale.
+
+This is an L4 structural reason for the chosen quadratic reading, not a
+uniqueness theorem and not a physical detector model. The Cartesian pairs are
+mathematical relations, not realized clicks. No physical effect, apparatus,
+exclusive event, occurrence or sampling law, post-state selection, reset, L5
+stream or L6 measure follows.
 
 ## 3. The kernel and the census
 
