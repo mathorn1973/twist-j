@@ -1,4 +1,4 @@
-# Po v81: dokončená čtení a rozhodnutí K1–geometrie
+# Po v81: zvolený lineární dekodér K1–metrika
 
 **NON-CANONICAL. Pracovní program a konkrétní konstrukce, 2026-09-08.**
 
@@ -35,18 +35,38 @@ Jeho skalární stopa má nenulovou konečnou kovarianci, ale není doloženým
 kosmologickým skalárem. Nejde o číselné `r_T=0` ani o zamítnutí všech
 geometrických čtení.
 
-K1 zůstává přesným modelem čtení pole. Hlavní další teoretická práce patří
-chybějícímu zákonu spojujícímu pole s fyzikální geometrií a skalárním
-srovnáním v témže kontextu. Stávající homogenní FRW akce tento tensorový
-a inhomogenní skalární zákon nedodává. Další úprava korelace nebo příprav
-tuto chybějící vazbu nenahradí; původní klauzule vlastníků se nezmenšují.
+Nová [konstrukce K1–metrika](V81-K1-LINEAR-METRIC-DECODER-1.md) přijímá
+výslovný pracovní slovník: dva původní lokální čtverce K1 jsou první dva
+řezy metrického TT strainu. Veřejný prostorový stencil `L` je dále vyvíjí
+rovnicí `h_(n+1)=(2I-L)h_n-h_(n-1)`. Volba nemění slova, jejich zákon ani
+amplitudu K1. Je slučitelná s uvedenou kvadratickou akcí s lapse a shiftem;
+identifikace s fyzikální metrikou není odvozena z axiomu ani změřena.
+
+Tato vybraná lineární mapa je matematicky úplná pro každé slovo K1 a každý
+nezáporný krok: má jediný racionální výstup, slučitelné konečné prefixy
+a všechny lineární vazby. Analytický důkaz dává
+`-59/100 < h_n(r) < 99/100`, tedy pozitivní prostorovou metriku
+`diag(1+h,1-h,1)` ve všech krocích bez zmenšování amplitudy. Pozdější řezy
+jsou vývojem počáteční dvojice, nikoli dalšími zdrojovými okny K1.
+
+Základem nové poznámky je main `39055fcd6d33627b4f30b40f395a4b66bf666b9a`,
+který již obsahuje omezené zamítnutí #908 a rozbor lapse #909. Úplné
+lineární rovnice bere z výslovně uvedené hlavy návrhu
+[#910](https://github.com/mathorn1973/twist-j/pull/910),
+`5dfbcbaa91934289de6308298963dfe0ed4e2ff1`. Pozitivita zvoleného přesného
+maticového zástupce neprokazuje malost nelineárních oprav. Další teoretický
+úkol patří nelineárním vazbám, TT vlastnímu zdroji a homogenní odezvě ve
+vymezené větvi [#911](https://github.com/mathorn1973/twist-j/issues/911),
+spolu s fyzikálním odůvodněním slovníku a skalárním srovnáním. Nevytváří se
+druhá souběžná konstrukce obecné ADM akce; původní klauzule vlastníků se
+nezmenšují.
 
 | Pořadí | Větev A: jeden měřicí řetězec | Větev B: normalizace TT |
 |---|---|---|
 | První etapa, zpracována zde | Uzavřený omezený audit dostupnosti metadat NIST run3; konkrétní návrh dvouexpoziční obnovy RRP1/TRC1 | Přesný rozklad momentů potřebných pro kvadratický odečet; audit existujících zdrojů a přesné chybějící mapy K1 |
 | Dokončená podpůrná revize #905 | Dvě konvence převzaty do revidovaného návrhu #539; úplný APPEND oddělen od přípustnosti; implementace přesně dvou expozic a její softwarové kontroly | Jedna konkrétní konečná mapa K1, úplný společný zdrojový zákon a analytické kontrakce spotřebovaných momentů |
 | Dokončená dodávka #906 | Pozorovací rovnice pro podepsaný poměr `-349/1421`; dokončená omezená kvalifikace tří zdrojových kandidátů bez kvalifikovaného archivu | Jedno čtení lokální kvadratické anizotropie podepsaného E-pole; čtverec před Fourierovou transformací, úplná kovariance a přesné sousední korelace |
-| Nynější dispozice | Aktivní hledání ukončeno; naváže jen nový konkrétní podklad k přípravám, přechodu a kalibrované cestě | Přímé dosazení do Kählerova metrického koeficientu je neslučitelné s požadovaným TT čtvercem; K1 zůstává modelem čtení pole a další teoretický úkol je chybějící fyzikální geometrický zákon |
+| Nynější dispozice | Aktivní hledání ukončeno; naváže jen nový konkrétní podklad k přípravám, přechodu a kalibrované cestě | Jeden výslovně zvolený lineární dekodér K1–metrika je matematicky úplný a zachovává signaturu ve všech krocích; nelineární vazby navazují v #911, fyzikální identifikace a skalární srovnání zůstávají otevřené |
 
 Pořadí vyjadřuje skutečné závislosti, nikoli odhad doby objevu chybějícího
 fyzikálního mostu. `READY` v rozvrhu Canon samo nepovoluje výpočet sondy.
@@ -206,18 +226,21 @@ otevřenou. Omezený neúspěch K1 se nesmí vydávat za univerzální zákaz.
 
 ## Co se počítá jako výsledek
 
-Podpůrná práce #905 i čtení #906 jsou dokončeny. Nynější analytická dodávka
-má jeden určitý geometrický převod s vlastní skalární stopou a prokazuje
-jeho neslučitelnost s požadovanou TT identifikací. Toto omezené zamítnutí
-ponechává obecný fyzikální převod otevřený. Neproběhlo vyhodnocení
-fyzikálního záznamu.
+Podpůrná práce #905 i čtení #906 jsou dokončeny. Omezené zamítnutí
+skalárního Kählerova převodu v #908 zůstává v platnosti. Nynější analytická
+dodávka uzavírá jednu vybranou matematickou mapu K1–lineární metrika:
+obsahuje úplnou definici, odvození z vybrané kvadratické akce a důkaz
+signatury pro všechny časy. Je to přiznaná pracovní volba, nikoli důkaz
+fyzikální pravdivosti slovníku, nelineární gravitační řešení nebo číselné
+`r_T`. Neproběhl nový formální výpočet ani vyhodnocení fyzikálního záznamu.
 **Uzavřených původních O/H: 0. Nových formálních vět a fyzikálních
 testů: 0.** Příslušná otevřená klauzule se rozhodne až dodáním jejích
 vlastních vstupů a evidence, nikoli změnou názvu dílčí práce.
 
-Aktivní teoretický úkol je geometrický zákon, nikoli další zdroj K1 či
-archivní hledání TRC1. Odložení jiných větví není záporný výsledek a nemění
-již zmrazené testy.
+Aktivní teoretický úkol je doplnit nebo konkrétní vazbou zamítnout
+nelineární pokračování zvoleného geometrického zákona a odůvodnit jeho
+fyzikální čtení. Další zdroj K1 či archivní hledání TRC1 tomu nepředchází.
+Odložení jiných větví není záporný výsledek a nemění již zmrazené testy.
 Další formální sonda dostane vlastní veřejné vymezení, přijatý verifier
 a neměnný zveřejněný pin před svým prvním během podle
 [POLICY.md](../POLICY.md).
