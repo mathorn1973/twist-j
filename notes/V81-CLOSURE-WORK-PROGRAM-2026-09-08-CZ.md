@@ -14,20 +14,55 @@ nestávají přijatou definicí, hypotézou nebo oprávněním k formálnímu b�
 
 ## Rozvrh podle závislostí
 
-První větev má dodat jedno úplné fyzikální čtení uspořádaného záznamu.
-Druhá má dodat normalizaci vedoucí k určitému `r_T(k)`. Nejvýše tyto dvě
-nové vědecké práce běží souběžně; kontrola definic a kvalifikace zdrojů jsou
-jejich dílčí kroky. Již zmrazené sondy mají nadále svou vlastní dispozici.
+Podpůrná etapa [#905](https://github.com/mathorn1973/twist-j/pull/905) je po
+závěrečné recenzi sloučena do veřejného main v commitu
+`67a7c03b7a4f37fb9d1d3e0f1150c0b87fc70960`. Zahrnuje návrh obnovy, APPEND,
+implementaci přesně dvou expozic a pevnou K1. Tím je tato programová etapa
+dokončena. Nevydává se nový Canon a nepřidává se kapacita obnovy ani K2/K3.
+
+Dodávka #906 uzavírá přesné podmíněné čtení: párový poměr TRC1 a lokální
+kvadratický odečet K1. Aktivní kvalifikace archivů TRC1 je ukončena a naváže
+jen konkrétní nový veřejný podklad k přípravě a prvnímu přechodu. Hlavní
+další úkol je jedno rozhodnutí o připuštění pevné K1 do geometrického čtení:
+určit její roli, skutečný spojující zákon a skalární srovnání ve stejném
+fyzikálním rámci. Původní klauzule vlastníků se tím nezmenšují.
 
 | Pořadí | Větev A: jeden měřicí řetězec | Větev B: normalizace TT |
 |---|---|---|
 | První etapa, zpracována zde | Uzavřený omezený audit dostupnosti metadat NIST run3; konkrétní návrh dvouexpoziční obnovy RRP1/TRC1 | Přesný rozklad momentů potřebných pro kvadratický odečet; audit existujících zdrojů a přesné chybějící mapy K1 |
-| Nynější revize po recenzi | Dvě konvence převzaty do revidovaného návrhu #539; úplný APPEND oddělen od přípustnosti; přidána implementace přesně dvou expozic a její softwarové kontroly | Dodána jedna konkrétní konečná mapa K1, úplný společný zdrojový zákon a analytické kontrakce spotřebovaných momentů |
-| Následující věcný krok | Kvalifikovat fyzikální slovník, úplné pokusy a nezávislou kalibraci pro stejný kontext. Pro data potřebujeme nový doložitelný podklad; stejný audit run3 neopakovat | Rozhodnout fyzikální připuštění konkrétní K1 mapy, její převod na prostor/čas a normalizaci akce vůči skalárnímu sektoru |
-| Až s úplným zadáním | Předvýsledkově zmrazit kalibrační a ověřovací rozsah, rozhodovací pravidlo a verifier; pak jeden test | Předvýsledkově zmrazit kandidáta a rozhodovací rozsah; pak spočítat `r_T(k)` a směrovat výsledek podle původní klauzule |
+| Dokončená podpůrná revize #905 | Dvě konvence převzaty do revidovaného návrhu #539; úplný APPEND oddělen od přípustnosti; implementace přesně dvou expozic a její softwarové kontroly | Jedna konkrétní konečná mapa K1, úplný společný zdrojový zákon a analytické kontrakce spotřebovaných momentů |
+| Nynější konkrétní dodávka | Pozorovací rovnice pro podepsaný poměr `-349/1421`; dokončená omezená kvalifikace tří zdrojových kandidátů bez kvalifikovaného archivu | Jedno čtení lokální kvadratické anizotropie podepsaného E-pole; čtverec před Fourierovou transformací, úplná kovariance a přesné sousední korelace |
+| Chybějící fyzikální evidence | Doložené přípravy `S(e0), S(e1)`, stejný port a první přechod, nezávisle kalibrovaná znaménková cesta; poté předem vymezený test | Doložená realizace zdrojového zákona a podepsaných polí v pevných bodech/oknech; pro `r_T(k)` navíc fyzikální tensorové a skalární čtení se společnou normalizací a kladným skalárním výkonem |
 
 Pořadí vyjadřuje skutečné závislosti, nikoli odhad doby objevu chybějícího
 fyzikálního mostu. `READY` v rozvrhu Canon samo nepovoluje výpočet sondy.
+
+[Párová pozorovací rovnice TRC1](V81-TRC1-PAIRED-SIGNED-OBSERVATION-1.md)
+vybírá jeden podepsaný výstup a kontrast
+`1421 beta_1/alpha_1 + 349 beta_0/alpha_0`. Společné měřítko i `g` odpadají;
+relativní zisk, polarita, příprava a časový řez musí být doloženy nezávisle.
+[Kvalifikace zdrojů](V81-TRC1-SIGNED-RESPONSE-SOURCE-QUALIFICATION-1.md)
+uzavírá vymezený audit OGW #4, dEchorate v2 a jednoho optického zdroje
+dispozicí `SOURCE_NOT_QUALIFIED_FOR_THIS_TEST`. Nejde o obecnou neexistenci
+archivu ani o neúspěch fyzikálního modelu.
+
+[Lokální odečet K1](V81-K1-LOCAL-SQUARE-OBSERVATION-1.md) určuje funkcionál
+kalibrovaných příčných E-komponent. Lokální čtverec dává po transformaci
+konvoluci, nikoli čtverec jednotlivých Fourierových koeficientů. Proto
+prohazuje přiřazení dvou korelačních hodnot mezi pozicemi `1,4` a `2,3`.
+Poznámka dodává plnou kovarianci i její přenos; fyzikální realizace tohoto
+zdrojového zákona a převod na gravitační strain zůstávají nedoložené.
+Deterministická slotová norma neposkytuje nenulový skalární jmenovatel.
+
+Navíc na podpoře pevné K1 platí `b^2=b/sqrt(2)`. Její normalizované
+korelace po stejném pevném lineárním zpracování proto nerozlišují tento
+kvadratický odečet od lineárního s jiným společným měřítkem. Potvrzení
+těchto korelací samo nerozhodne fyzikální nutnost čtverce. Geometrické
+připuštění musí vyjít z existující akce, dynamiky nebo nezávisle odůvodněného
+slovníku; další korelace ani naprogramování zadaných vah je nenahradí.
+
+Následující oddíly zachycují dokončený podpůrný základ. Nejsou zadáním
+k jeho dalšímu rozšiřování ani k opakování stejného hledání NIST run3.
 
 ## A: co první etapa rozhodla a co následuje
 
@@ -86,8 +121,8 @@ výslovně převzaty dvě oddělené konvence:
 2. Je přípustný reset na výslovné vlastní podmnožině vstupního součinu,
    když dokončení druhé expozice znamená konec dostupné kapacity.
 
-Toto přijetí platí uvnitř revidovaného návrhu; nepředstírá jeho začlenění
-do veřejného main ani změnu Canon. Přidaná
+Toto přijetí platí uvnitř revidovaného nekánonického návrhu, nyní sloučeného
+do veřejného main; nemění Canon. Přidaná
 [implementace](RRP1-TWO-EXPOSURE-RESET-1/README.md) má oddělené kontroly
 uchování úplné historie, pásky a nenulového zbytku přes druhou přípravu
 a závislostí výpočtu nových jádrových výstupů. Zahrnuje nulové i vícenásobné
@@ -157,16 +192,17 @@ otevřenou. Omezený neúspěch K1 se nesmí vydávat za univerzální zákaz.
 
 ## Co se počítá jako výsledek
 
-Práce nyní dodává jednu dokončenou omezenou kvalifikaci zdroje, revidovanou
-definici a implementaci dvouexpoziční obnovy, opravu úplnosti APPEND a jednu
-konkrétní konečnou zdrojovou mapu K1 s analytickými momenty.
+Podpůrná práce #905 je dokončena. Navazující dodávka obsahuje jednu párovou
+pozorovací rovnici TRC1 s přesně vymezeným nedostatkem archivní evidence a
+jeden lokální kvadratický funkcionál K1 s úplnou kovariancí a opraveným
+přiřazením korelací. Oba fyzikální převody zůstávají podmíněné uvedenou
+externí evidencí; neproběhlo vyhodnocení fyzikálního záznamu.
 **Uzavřených původních O/H: 0. Nových formálních vět a fyzikálních
 testů: 0.** Příslušná otevřená klauzule se rozhodne až dodáním jejích
 vlastních vstupů a evidence, nikoli změnou názvu dílčí práce.
 
-Nové metrologické, generační, fotonové a jiné větve se do této práce
-přidají pouze tehdy, dodají-li jmenovaný nutný vstup jedné z uvedených
-klauzulí. Jejich odložení není záporný výsledek a nemění již zmrazené testy.
+Rozsah další práce zůstává u těchto dvou fyzikálních vazeb. Odložení jiných
+větví není záporný výsledek a nemění již zmrazené testy.
 Další formální sonda dostane vlastní veřejné vymezení, přijatý verifier
 a neměnný zveřejněný pin před svým prvním během podle
 [POLICY.md](../POLICY.md).
