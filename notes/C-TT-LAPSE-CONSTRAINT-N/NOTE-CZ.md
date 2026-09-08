@@ -2,19 +2,22 @@
 
 **NON-CANONICAL. Žádný status, žádné uzavření O/H, žádná změna kánonu.**
 Základ v81, `main` c6d90f1. Prereg zmrazen před výpočtem
-(`e0bb6984…f0af8`), verifier 24 z 24 přesných kontrol (po opravě jedné
-fixtury, obojí zachováno). Podrobnosti v README.md a RESULT.md.
+(`e0bb6984…f0af8`), dva zmrazené verifiery beze změny (24 z 24 po opravě
+jedné fixtury, obojí zachováno), po recenzi 2026-09-08 přidán třetí,
+zmrazený addendum certifikát (10 z 10, obě architektury bajtově shodně).
+Závěry přepsány do doloženého rozsahu. Podrobnosti v README.md a RESULT.md.
 
 ## Stavba
 
-Diskrétní linearizovaná ADM akce s lapsem a nulovým shiftem na planárním
-nosiči `Z/5` (osa slotů K1) s veřejným stencilem `L`, indefinitní DeWittova
-forma, prefaktor `1/(2 lambda)`, `lambda = 216 pi` z FRW-CANONICAL-FORM.
+Diskrétní linearizovaná ADM akce s lapsem na planárním nosiči `Z/5`
+(osa slotů K1) s veřejným stencilem `L`, indefinitní DeWittova forma,
+prefaktor `1/(2 lambda)`, `lambda = 216 pi` z FRW-CANONICAL-FORM. Shift
+nastaven na nulu před variací: deklarované omezení s důsledkem níže.
 Planární pravidlo: součin dvou prvních diferencí je `<f, L g>`, druhá
-diference je `-L`. Nic jiného se nezavádí. Dvě čtení K1 zmrazena: zdrojové
-(K1 jako předepsané napětí, kovektorová energie s lapsem, tj. předchůdce
-plus lapse) a dekodérové (`h_+ = v^2 = iota` je přímo strain, žádná hmota,
-skalár ze druhého řádu vazby).
+diference je `-L`. Dvě čtení K1 zmrazena: zdrojové (K1 jako předepsané
+napětí, předchůdce plus lapse) a dekodérové (`h_+ = v^2 = iota` je přímo
+strain, skalár ve druhém řádu z deklarované transkripce, ne z variace
+kvadratické akce).
 
 ## Sektorový rozklad [candidate-T]
 
@@ -24,13 +27,17 @@ gradient   (1/2)<tau,L tau> - (1/2)<h_+,L h_+> - (1/2)<h_x,L h_x>
 lapse      n . 2 L tau
 ```
 
-`ell` (podélná) a vektor nemají žádnou gradientní energii: kalibrační
-směry. Lapse násobí jen `tau`. TT pár má fyzikální znaménko vlny, `tau` má
-opačné gradientní znaménko a kinetiku jen přes vazbu na `ell`. To je
-konformní faktor Einsteinovy akce na mřížce; přesně to, co pozitivně
-definitní `B+` smazalo.
+`ell` a vektor bez gradientní energie, lapse násobí jen `tau`, TT pár má
+fyzikální znaménko vlny, `tau` opačné gradientní znaménko a kinetiku jen
+přes vazbu na `ell`. Konformní faktor Einsteinovy akce na mřížce; přesně
+to, co pozitivně definitní `B+` smazalo. Chybějící gradientní energie sama
+nedokazuje, že `ell` a vektor jsou kalibrace; viz níže.
 
-## Rovnice (přesnou variací explicitní akce, dvě hodnoty lambda)
+## Rovnice [candidate-T jako polynomiální identity]
+
+Sedm sektorových rovnic je certifikováno jako polynomiální identity ve
+všech 105 polních, 15 zdrojových proměnných a v `1/lambda` (addendum A4),
+ne jen na náhodných konfiguracích:
 
 ```text
 (a) lapse     (1/lambda) L tau = iota/2
@@ -40,111 +47,148 @@ definitní `B+` smazalo.
 (e) vektor    Delta^2 h_13 = Delta^2 h_23 = 0
 ```
 
-Lapse je v akci lineárně, bez `n^2` a bez `Delta n`: F2 nestřílí. Při
-`ell = 0` určí (a) `tau` okamžitě ze zdroje, (c) určí `n`, (b) je
-konzistence. Žádný volný skalární mód: F3 nestřílí. Relativní koeficient
-zdroj/geometrie, který předchůdce nastavil ručně (`rho = 1`), je tu
-`lambda`, vynucený C1: F5 nestřílí.
+Lapse je v akci jen lineárně a jeho rovnice žádný lapse neobsahuje (A5): v
+uvedené kvadratické akci nepropaguje. To je celý obsah záznamu F2.
+
+Při `ell = 0` určí (a) nenulové módy `tau` okamžitě, (c) určí `n`, (b) je
+konzistence. Žádný čistě stopový radiační mód. Ale soustava nemá hybnostní
+vazby, protože shift byl vynulován před variací. Bezzdrojová konfigurace
+`h_13(n,r) = n f(r)`, `f` nekonstantní s nulovým průměrem, splňuje všechny
+uvedené rovnice (A7). Hybnostní vazba by nehomogenní vektorovou rychlost
+vyloučila; tahle soustava ne. Vektorový sektor tedy není doložen jako
+kalibrace a „TT je jediný radiační sektor“ není doloženo. Zmrazit `ell` po
+nevyšlé konzistenci by byl nový kandidát, ne oprava tohoto.
+
+Soupis koeficientů je spočítaný (A6): 370 monomů, každý koeficient
+racionální násobek `lambda^0` nebo `lambda^-1`. Relativní koeficient
+zdroj/geometrie, který předchůdce nastavil ručně, je tu `lambda` volbou
+společného prefaktoru. Záznam normalizace zvolené akce, ne fyzikální
+normalizace skalárního srovnání.
 
 ## Homogenní limita
 
-`H = 2 Phi I`: na místo vychází `-(3/lambda)(Delta Phi)^2`, znaménko i
-koeficient FRW-CANONICAL-FORM. Předchůdce dával `+24`. F1 nestřílí
-(v linearizovaném rozsahu; nelineární homogenní sektor je FRW deklarací).
+`H = 2 Phi I`: na místo `-(3/lambda)(Delta Phi)^2`, znaménko i koeficient
+FRW-CANONICAL-FORM; předchůdce `+24`. Záznam F1: kvadratický homogenní
+koeficient souhlasí; úplná nelineární diskrétní FRW redukce (`e^(3 Phi)`,
+plná závislost na lapse, Friedmannovy identity) je deklarace, ne výsledek
+tohoto běhu.
 
-## Nulový mód: plochý statický nosič K1 neunese [candidate-T]
+## Nulový mód: statický plochý nosič je s K1 neslučitelný [candidate-T]
 
-`L` zabíjí konstanty, takže `k = 0` složka (a) zní `0 = iota_hat_0/2`,
-a `sum_r iota = a^2 > 0` pro každé slovo a řez. Hamiltonovská vazba nemá na
-statickém plochém kompaktním nosiči řešení pro žádné slovo K1, v obou
-čteních (v dekodérovém je nulový mód zdroje `53/864`, `161/864`, `269/864`
-podle třídy `u_0 = u_1`, sousední, protilehlé; shodně pro obě mřížkové
-transkripce).
+`1^T L = 0`, takže `k = 0` složka (a) zní `0 = iota_hat_0/2`, a
+`sum iota = a^2 > 0` pro každé slovo. Úplná rovnice `L tau = sigma` nemá na
+statickém plochém kompaktním nosiči řešení pro žádné slovo, v obou čteních
+(dekodérové nulové módy `53/864`, `161/864`, `269/864` podle třídy, shodně
+pro obě transkripce).
 
-`k = 0` složka vazby je Friedmannova rovnice `3H^2 = lambda rho` při nulové
-expanzi. Energie K1 musí jít do dynamického homogenního sektoru. C1 tedy
-není limita ke kontrole, je vynucena C2 na kompaktním nosiči. To je přesný
-smysl, v jakém je skalární jmenovatel TT programu ohraničen FRW-INHOM:
-nulový mód každého vázaného skalárního sektoru na tomhle nosiči je
-homogenní FRW sektor. Podporuje to tvoje BOUNDED_BY, ne REQUIRES:
-nenulové módy tu stojí na plochém pozadí podmíněně.
+Užší a správná formulace místo „C1 plyne z C2“: zvolený statický plochý
+podklad je neslučitelný s kladným zdrojem vazby; v FRW pokračování se
+homogenní příspěvek musí zahrnout a vyřešit, ne odstranit projekcí.
+Spočítaná pole řeší projektovanou rovnici a mají vůči úplné vazbě
+zbytek `L tau - sigma = -mean(sigma) 1 != 0` (A3). Nejsou to počáteční
+data na dynamickém pozadí; to pozadí ani jeho rovnice nenulových módů
+dodány nejsou. Samotný lapse a nulový mód neodvozují nelineární FRW větev.
+Překážka je ale přesná: nulový mód skalárního jmenovatele patří
+homogennímu sektoru, který vlastní FRW-INHOM.
 
-## Zdrojové čtení: zachování, F6 střílí
+## Zdrojové čtení: zachování, F6 střílí v testovaném rozsahu
 
-(a) a (b) dohromady dávají na nenulových módech `Delta^2 iota = L iota`:
-linearizované zachování předepsaného napětí. Pokračování, které zákon
-vyžaduje z obou řezů,
+(a) a (b) dávají na nenulových módech `Delta^2 iota = L iota`. Pokračování,
+které to žádá z obou řezů, není tvaru K1 pro žádné z deseti slov, 20 z 20;
+i čtyři statická slova padají. Spolu s nulovým módem: pevná K1 nemůže být
+předepsaným zdrojem této ploché vázané soustavy bez změny. **F6 střílí pro
+zdrojové čtení v tomto rozsahu.** Není to věta o každém zachovávaném
+zdroji ani o FRW rozšíření. Emisní mapa pod TT-SOURCE ano, vázaný zdroj
+ne, dokud K1 nemá vlastní zákon zachování.
 
-```text
-iota_-1 = 2 iota_0 - iota_1 + L iota_0,   iota_2 = 2 iota_1 - iota_0 + L iota_1,
-```
+## Dekodérové čtení: projektovaný vázaný skalár [candidate-T pro přesná pole]
 
-není tvaru K1 (dvě sousední místa s `a^2/2`) pro žádné z deseti slov,
-20 z 20. Čtyři statická slova padají také, protože statické podélné napětí
-závislé na ose má `partial_3 T_33 != 0`. Spolu s nulovým módem: pevná K1
-nemůže být předepsaným zdrojem vázané dynamiky bez změny. **F6 střílí pro
-zdrojové čtení.** Uzavírá to na úrovni kandidáta cestu, kterou jsi už
-odkázal pod TT-SOURCE: emisní mapa ano, vázaný gravitační zdroj ne, dokud
-K1 nemá vlastní zákon zachování (dluh zpětné reakce předchůdce).
-
-## Dekodérové čtení: vázaný skalár [candidate-T pro přesná pole]
-
-`h_+ = iota`, žádná hmota. Vazba ve druhém řádu s transkripcí (i):
+V bezzdrojové kvadratické akci dá variace lapse jen `L tau = 0`. Zdroj
+kvadratický v `h` potřebuje kubické členy (lapse krát kvadratické
+tenzorové výrazy), které uvedená akce nemá. Druhý řád je proto dodán
+deklarovanou transkripcí, dvěma:
 
 ```text
-L tau = sigma = (1/4)[(Delta h_+)^2 + g(h_+)] = lambda eps_GW,   lambda se krátí,
-tau = L^+ (sigma - mean sigma),   L^+ racionální symetrický cirkulant.
+(i)  L tau = (1/4)(Delta h)^2 + (1/4) g(h)
+(ii) L tau = (1/4)(Delta h)^2 - (3/4) g(h) + h L h
 ```
 
-Skalár je zdrojován diskrétní energií TT pole, tou samou formou, kterou
-předchůdce dokázal nezápornou. Pro deset slov vyšla přesná racionální pole
-`tau` (jmenovatel `1715360 = 32 . 5 . 71 . 151`), řádu `a^4` proti
-`h_+ = O(a^2)`, translačně kovariantní v `u`. `sigma` je kvadratická
-v `h = v^2`, tedy skalár spotřebovává přesně čtvrté momenty dubletu, ty,
-které TT-VECTOR-MOMENT-UNDERDETERMINATION žádá zmrazit a K1 dodává.
+**Přesný vztah obou transkripcí** (tvůj nález, certifikován jako A1, A2):
+pro tento `L` a `g` platí polynomiální identita
 
-Transkripce (ii), doslovné `(3/2) h'^2 + 2 h h''`, dává stejný nulový mód a
-jiná pole na všech nenulových módech. Vidlice je reálná a deklarovaná: je to
-mřížkový zbytek chybějícího produktového pravidla.
+```text
+L(h^2) = 2 h (L h) - 2 g(h),
+```
 
-**Co ten skalár není:** kosmologická porucha křivosti, `P_S(k)`, ani
-poměr. Žádný poměr se netvoří. K1 se nehnula; strain za dvěma řezy se
-prodlužuje volnou TT rovnicí (d) bez zdroje, což je dynamika, ne změna K1.
-**F6 v dekodérovém čtení nestřílí.**
+tedy `sigma_ii - sigma_i = (1/2) L(h^2)` a `tau_ii - tau_i = (1/2) Pi(h^2)`.
+Nulové módy shodné, rozdíl nenulových módů v uzavřeném tvaru: v řezu 0
+`+3/40` na obsazeném a `-1/20` na prázdném místě, pro každé slovo. Vidlice
+je zúžena na jeden místní člen, ne rozhodnuta: při proměnném lapse
+`<nu, sigma_ii - sigma_i> = (1/2)<L nu, h^2>` obecně nemizí, takže člen s
+nulovým součtem nelze zahodit před variací lapse.
+
+**Časové umístění.** Součet `Z_n = sum sigma_i = (1/4)(||h_(n+1) - h_n||^2
++ <h_n, L h_n>)` se volnou TT rovnicí nezachovává: pro `h_0 = h_1 = f`,
+`Lf != 0`, je `Z_1 - Z_0 = (1/4)||L f||^2 > 0` (A8; slovo `0101`:
+`14189/279936`). Zachovaný tvar má mezikrokový člen `<h_n, L h_(n+1)>`,
+jako v energetické větě předchůdce. `sigma_i` tedy není „táž zachovaná
+diskrétní energie“; časové umístění musí určit odvození vazby, ne převzatý
+spojitý výraz.
+
+S těmito mezemi jsou projektovaná pole přesná: `tau = L^+ (sigma_i - mean)`,
+racionální pro deset slov (jmenovatel `1715360 = 32 . 5 . 71 . 151`),
+translačně kovariantní v `u`, škálování `a^4`.
+
+**Momenty a amplituda.** `h = Q(v)` je kvadratické v dubletu, `sigma`
+kvadratická v `h`, `tau` lineární v `sigma`: `tau` je čtvrtého stupně v
+dubletu. Obecně `E[tau]` potřebuje společné momenty do 4. stupně,
+`Cov(tau,tau)` do 8., `Cov(h,tau)` do 6. Úplný desetislovný zákon K1 je
+na svém dvouokenním oboru všechny určuje, nový zákon není třeba; obecná
+specifikace čtvrtých momentů ale výkon veličiny kvadratické v `h` neurčí.
+`h ~ a^2`, `tau ~ a^4`, `Cov(tau,tau) ~ a^8`; formální poměr by šel jako
+`a^-4`. Vykrácení `lambda` není vykrácení amplitudy. Žádný poměr se
+netvoří; `tau` není kosmologická porucha ani `P_S(k)`.
+
+Dvě okna K1 se nehnula. Strain za nimi se prodlužuje volnou rovnicí (d),
+deklarované prodloužení; existence úplného vázaného pokračování
+slučitelného s ním prokázaná není. Záznam F6 pro dekodérové čtení: okna
+zachována, dokončení otevřené.
 
 ## Spin (C4)
 
-Na plochém stupni sektory nešíří jeden operátor: TT `Delta^2 + L`, skalár
-eliptická vazba `L`, lapse algebraický, podélná a vektor bez gradientní
-energie. F4 nestřílí. Registrované `c = 1 - s^2` (`-3` při `s = 2`) je
-Reggeův-Wheelerův koeficient na hmotném pozadí, kubický řád; kvadratická
-plochá akce ho ukázat nemůže. C4 splněno jen ve slabé podobě, silná
-otevřená, nepředstírá se.
+Na plochém stupni sektory nešíří jeden operátor; to je popis plochého
+rozkladu. Registrované `c = 1 - s^2` na hmotném pozadí zůstává neotestované,
+silná podmínka otevřená.
 
-## Účet
+## Doložený rozsah a otevřené povinnosti
 
 ```text
-                     zdrojové čtení          dekodérové čtení
-F1 ne FRW            nestřílí                nestřílí
-F2 lapse propaguje   nestřílí                nestřílí
-F3 zbylá stopa       nestřílí                nestřílí
-F4 spinově slepé     nestřílí (RW otevřeno)  nestřílí (RW otevřeno)
-F5 nový koeficient   nestřílí                nestřílí
-F6 změna K1          STŘÍLÍ                  nestřílí
+F1  kvadratický homogenní koeficient souhlasí; úplná nelineární FRW redukce deklarace
+F2  v uvedené kvadratické akci lapse nepropaguje (polynomiálně)
+F3  projektované tau určeno podmíněně; úplná vazbová redukce (shift, hybnost,
+    globální řešitelnost) nedoložena
+F4  plochý rozklad popsán; koeficient na hmotném pozadí neotestován
+F5  koeficienty zvolené akce spočteny; fyzikální normalizace otevřená
+F6  zdrojové čtení: testované pokračování opouští třídu K1 (střílí v rozsahu);
+    dekodérové čtení: okna zachována, úplné vázané pokračování neprokázáno
 
 Uzavřených O/H:      0
 Posunů statusu:      0
 ```
 
-Otevřené položky, pojmenované, aby další krok byl úzký: (1) diskrétní
-Bianchiho identita ve druhém řádu, rozhodne, jestli je mřížková vázaná
-teorie konzistentní, nebo se `ell` musí zmrazit další volbou; (2) výběr
-mezi transkripcemi (i) a (ii); (3) rovnice nenulových módů na FRW pozadí,
-které nulový mód vynucuje; (4) 3D nosič, diskrétní gradient slučitelný
-s `L`; (5) RW koeficient na hmotném pozadí.
+„Nestřílí v provedené kontrole“ není „podmínka splněna“. Žádná z C1 až C5
+se nehlásí jako splněná.
 
-Krátce: třída s lapsem přežila všech šest falsifikátorů v dekodérovém
-čtení a vydala první skalár ve stejném kontextu, který není ani radiační
-stopa, ani přejmenovaný čtverec. Nulový mód říká, kdo je jeho rodič: FRW.
-Zdrojové čtení je pod vazbami mrtvé. To je, myslím, přesně ten užší
-problém, který jsi chtěl.
+Otevřené povinnosti v pořadí, v jakém je musí příští konstrukce splnit:
+(1) hybnostní vazby, shift až do variace nebo doplnění a důkaz ekvivalence;
+(2) jedna společná variační soustava v potřebném řádu, z níž vypadne
+Hamiltonova vazba, hybnostní vazby, podélná rovnice, časové umístění
+zdroje druhého řádu a jejich zachování, transkripce (i)/(ii) nahrazeny tím,
+co ta akce dá, sporný člen je lokalizován rozdílem `(1/2) L(h^2)` a jeho
+lapsovou vahou `(1/2)<L nu, h^2>`; (3) homogenní složka jako součást
+počátečních dat, ne projekce, rovnice nenulových módů na témže pozadí;
+(4) 3D gradient slučitelný s `L`; (5) RW koeficient.
+
+Přijímací objekt dalšího kroku: úplná kompatibilní konstrukce počátečních
+dat a propagace vazeb, nebo přesný protipříklad. Ne další tabulka
+kovariancí, ne přejmenovaný skalární jmenovatel.

@@ -1,8 +1,10 @@
 # C-TT-LAPSE-CONSTRAINT-N: local result record
 
 **NON-CANONICAL. No authority, no public verifier gate, no Canon promotion,
-no O/H closure.** Conditional mathematics candidate-T; construction and its
-declared choices candidate-D.
+no O/H closure.** Exact identities and arrays candidate-T; construction and
+its declared choices candidate-D. Conclusions rescoped after the owner review
+of 2026-09-08; the frozen preregistration and the first two verifiers are
+unchanged.
 
 ## Freeze and execution order
 
@@ -18,12 +20,17 @@ verify_fixture_corrected.py (successor, frozen before its run)
   run                      exit 0, 24 checks, 0 failed, stderr empty
   stdout                   EXPECTED.txt
                            sha256 741c8128fa777d5d7f5443aea2f9cdc13dfddec0c147a328b14860c7efe0bfa2
+verify_review_addendum.py (frozen 2026-09-08T16:20:38Z, after the review, before its run)
+  sha256                   1ac036812809675ff0560d2eb424a71da3fd659968165b2ac6c8c73cec3c62f2
+  run                      exit 0, 10 checks, 0 failed, stderr empty
+  stdout                   EXPECTED-addendum.txt
+                           sha256 ba7a54b61c9aae0fd3b4943a16b95cb64cdb722c6881b1b58ac03cc548a3bda6
 environment, leg 1         x86_64, Ubuntu 24.04, Python 3.11.15,
                            LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC
 environment, leg 2         arm64, macOS 26.5, Python 3.13.13, same variables;
-                           both verifiers rerun from the same frozen bytes:
-                           exit codes 1 and 0, stderr empty, stdout byte-identical
-                           to leg 1 (same two SHA-256 above)
+                           all three verifiers rerun from the same frozen bytes:
+                           exit codes 1, 0, 0, stderr empty, stdout byte-identical
+                           to leg 1 (same three SHA-256 above)
 ```
 
 Two architectures, byte-identical stdout, one author and one code path. This
@@ -42,34 +49,52 @@ first in exactly two characters of that expected value (`diff` retained in
 the pull request description) and was frozen before execution. The failed
 run is not counted as a success and the first file is not modified.
 
-## What the run establishes, at scope
+## Kinds of check, stated plainly
 
-- The planar sector decomposition of the discrete linearized ADM action:
-  TT pair with the physical wave sign, transverse trace with the opposite
-  gradient sign and a kinetic term only through the longitudinal coupling,
-  longitudinal and vector directions without gradient energy, lapse
-  multiplying only the transverse trace.
-- The seven sector equations by exact variation of the explicit action, at
-  two values of `lambda`; the lapse equation is algebraic (F2 no fire).
-- The homogeneous limit gives `-(3/lambda)(Delta Phi)^2` per site, the sign
-  and coefficient of `FRW-CANONICAL-FORM` (F1 no fire at linearized scope);
-  the predecessor's pairing gives `+24` at the same place.
-- The zero mode of the Hamiltonian constraint has no static flat solution for
-  any K1 word in either reading; the homogeneous FRW sector is forced.
+In `verify_fixture_corrected.py`: the sector decompositions (K1) are exact
+polynomial identities; the constraint arrays (K6) are exact finite-array
+equations with assertions inside `solve_tau`; the variation check (K3)
+audits random exact configurations at two values of `lambda`, which is not a
+universal certificate; the K7/F5 line is `check(..., True)`, a declaration;
+the F4 line counts distinct strings in a hand-written sector table. The
+review addendum replaces the declarative and sampled items by certificates:
+A4 symbolic Euler-Lagrange identities in all 105 field, 15 source and the
+`1/lambda` variables; A5 lapse linear and its equation lapse-free; A6
+computed coefficient census (370 monomials, coefficients rational multiples
+of `lambda^0` or `lambda^(-1)`). The F4 statement remains descriptive.
+
+## What the runs establish, at scope
+
+- The planar sector decomposition of the discrete linearized ADM action
+  (polynomial identities).
+- The seven sector equations as polynomial identities in all variables; the
+  lapse equation algebraic and lapse-free (F2 record).
+- Homogeneous quadratic coefficient `-(3/lambda)(Delta Phi)^2` per site,
+  the `FRW-CANONICAL-FORM` sign and coefficient; the predecessor's pairing
+  gives `+24` at the same place (F1 record at quadratic scope).
+- Zero mode: the complete constraint `L tau = sigma` has no solution on the
+  static flat compact carrier for any K1 word in either reading; the
+  projected arrays satisfy `L tau - sigma = -mean(sigma) 1 != 0` (A3).
 - Source reading: the conservation continuation is not K1-form in twenty of
-  twenty cases (F6 fires there).
-- Decoder reading: the constrained scalar `tau = L^+ (sigma - mean sigma)`
-  is exact and rational for all ten words, `O(a^4)`, `lambda`-free; the two
-  declared lattice transcriptions agree on the zero mode and differ on every
-  nonzero-mode array (F6 no fire there; the fork is open).
-- Flat-level spin structure: three distinct sector behaviours (F4 no fire at
-  that level; the Regge-Wheeler coefficient is not reached).
+  twenty cases (F6 fires at that scope).
+- Decoder reading: projected `tau = L^+ (sigma - mean sigma)` exact and
+  rational for all ten words; the two declared transcriptions differ by
+  exactly `(1/2) L(h^2)` in the source and `(1/2) Pi(h^2)` in `tau`, from the
+  polynomial identity `L(h^2) = 2 h L h - 2 g(h)` (A1, A2); `+3/40` at
+  occupied and `-1/20` at empty sites at cut 0.
+- The vector witness `h_13 = n f(r)` satisfies every displayed equation
+  (A7): the system, having no shift, has no momentum constraints.
+- `Z_n = sum sigma_i` is not conserved by the free TT equation,
+  `Z_1 - Z_0 = (1/4)||L f||^2`; the staggered cross-slice form is (A8).
 
-## What it does not establish
+## What they do not establish
 
-No `P_S`, no `r_T(k)`, no cosmological identification of `tau`, no physical
-amplitude, no discrete Bianchi identity at second order, no FRW-background
-`k != 0` equations, no three-dimensional carrier, no RW coefficient. One
-author, one code path, two local architectures: not an independent
-confirmation and not the public two-architecture gate. No original O/H
-closes.
+No complete constrained gravitational model; no momentum constraints; no
+solution of the full Hamiltonian constraint (only of its projection); no
+FRW background or its nonzero-mode equations; no common cubic action for the
+second-order source and no derived time placement; no `P_S`, no `r_T(k)`, no
+cosmological identification of `tau`, no physical amplitude; no
+three-dimensional carrier; no Regge-Wheeler coefficient. No owner condition
+C1 to C5 is claimed complete. One author, one code path, two local
+architectures: not an independent confirmation and not the public
+two-architecture gate. No original O/H closes.
