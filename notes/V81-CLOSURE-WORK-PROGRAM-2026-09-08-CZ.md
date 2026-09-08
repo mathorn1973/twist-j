@@ -1,4 +1,4 @@
-# Po v81: pracovní program dvou konkrétních uzávěrů
+# Po v81: dokončená čtení a rozhodnutí K1–geometrie
 
 **NON-CANONICAL. Pracovní program a konkrétní konstrukce, 2026-09-08.**
 
@@ -20,19 +20,33 @@ závěrečné recenzi sloučena do veřejného main v commitu
 implementaci přesně dvou expozic a pevnou K1. Tím je tato programová etapa
 dokončena. Nevydává se nový Canon a nepřidává se kapacita obnovy ani K2/K3.
 
-Dodávka #906 uzavírá přesné podmíněné čtení: párový poměr TRC1 a lokální
-kvadratický odečet K1. Aktivní kvalifikace archivů TRC1 je ukončena a naváže
-jen konkrétní nový veřejný podklad k přípravě a prvnímu přechodu. Hlavní
-další úkol je jedno rozhodnutí o připuštění pevné K1 do geometrického čtení:
-určit její roli, skutečný spojující zákon a skalární srovnání ve stejném
-fyzikálním rámci. Původní klauzule vlastníků se tím nezmenšují.
+Dodávka [#906](https://github.com/mathorn1973/twist-j/pull/906) je sloučena
+v commitu `c6d90f148f6ea7295cb42c629b6cf735060ebfd4`. Uzavírá přesné
+podmíněné čtení: párový poměr TRC1 a lokální kvadratický odečet K1. Aktivní
+kvalifikace archivů TRC1 je ukončena a naváže jen konkrétní nový veřejný
+podklad k přípravě a prvnímu přechodu.
+
+[Rozhodnutí K1–geometrie](V81-K1-GEOMETRY-ADMISSION-1.md) nyní skutečně
+aplikuje zveřejněný metrický koeficient
+`m_K(xi)=phi^2/(1+|xi|^2)` na jedinou kandidátní vazbu `xi=a b`. V pevném
+rámci dává konformní matici a nulovou bezstopou složku, která nemůže být
+nenulovým TT čtvercem K1. Tento konkrétní převod je proto omezeně zamítnut.
+Jeho skalární stopa má nenulovou konečnou kovarianci, ale není doloženým
+kosmologickým skalárem. Nejde o číselné `r_T=0` ani o zamítnutí všech
+geometrických čtení.
+
+K1 zůstává přesným modelem čtení pole. Hlavní další teoretická práce patří
+chybějícímu zákonu spojujícímu pole s fyzikální geometrií a skalárním
+srovnáním v témže kontextu. Stávající homogenní FRW akce tento tensorový
+a inhomogenní skalární zákon nedodává. Další úprava korelace nebo příprav
+tuto chybějící vazbu nenahradí; původní klauzule vlastníků se nezmenšují.
 
 | Pořadí | Větev A: jeden měřicí řetězec | Větev B: normalizace TT |
 |---|---|---|
 | První etapa, zpracována zde | Uzavřený omezený audit dostupnosti metadat NIST run3; konkrétní návrh dvouexpoziční obnovy RRP1/TRC1 | Přesný rozklad momentů potřebných pro kvadratický odečet; audit existujících zdrojů a přesné chybějící mapy K1 |
 | Dokončená podpůrná revize #905 | Dvě konvence převzaty do revidovaného návrhu #539; úplný APPEND oddělen od přípustnosti; implementace přesně dvou expozic a její softwarové kontroly | Jedna konkrétní konečná mapa K1, úplný společný zdrojový zákon a analytické kontrakce spotřebovaných momentů |
-| Nynější konkrétní dodávka | Pozorovací rovnice pro podepsaný poměr `-349/1421`; dokončená omezená kvalifikace tří zdrojových kandidátů bez kvalifikovaného archivu | Jedno čtení lokální kvadratické anizotropie podepsaného E-pole; čtverec před Fourierovou transformací, úplná kovariance a přesné sousední korelace |
-| Chybějící fyzikální evidence | Doložené přípravy `S(e0), S(e1)`, stejný port a první přechod, nezávisle kalibrovaná znaménková cesta; poté předem vymezený test | Doložená realizace zdrojového zákona a podepsaných polí v pevných bodech/oknech; pro `r_T(k)` navíc fyzikální tensorové a skalární čtení se společnou normalizací a kladným skalárním výkonem |
+| Dokončená dodávka #906 | Pozorovací rovnice pro podepsaný poměr `-349/1421`; dokončená omezená kvalifikace tří zdrojových kandidátů bez kvalifikovaného archivu | Jedno čtení lokální kvadratické anizotropie podepsaného E-pole; čtverec před Fourierovou transformací, úplná kovariance a přesné sousední korelace |
+| Nynější dispozice | Aktivní hledání ukončeno; naváže jen nový konkrétní podklad k přípravám, přechodu a kalibrované cestě | Přímé dosazení do Kählerova metrického koeficientu je neslučitelné s požadovaným TT čtvercem; K1 zůstává modelem čtení pole a další teoretický úkol je chybějící fyzikální geometrický zákon |
 
 Pořadí vyjadřuje skutečné závislosti, nikoli odhad doby objevu chybějícího
 fyzikálního mostu. `READY` v rozvrhu Canon samo nepovoluje výpočet sondy.
@@ -192,17 +206,18 @@ otevřenou. Omezený neúspěch K1 se nesmí vydávat za univerzální zákaz.
 
 ## Co se počítá jako výsledek
 
-Podpůrná práce #905 je dokončena. Navazující dodávka obsahuje jednu párovou
-pozorovací rovnici TRC1 s přesně vymezeným nedostatkem archivní evidence a
-jeden lokální kvadratický funkcionál K1 s úplnou kovariancí a opraveným
-přiřazením korelací. Oba fyzikální převody zůstávají podmíněné uvedenou
-externí evidencí; neproběhlo vyhodnocení fyzikálního záznamu.
+Podpůrná práce #905 i čtení #906 jsou dokončeny. Nynější analytická dodávka
+má jeden určitý geometrický převod s vlastní skalární stopou a prokazuje
+jeho neslučitelnost s požadovanou TT identifikací. Toto omezené zamítnutí
+ponechává obecný fyzikální převod otevřený. Neproběhlo vyhodnocení
+fyzikálního záznamu.
 **Uzavřených původních O/H: 0. Nových formálních vět a fyzikálních
 testů: 0.** Příslušná otevřená klauzule se rozhodne až dodáním jejích
 vlastních vstupů a evidence, nikoli změnou názvu dílčí práce.
 
-Rozsah další práce zůstává u těchto dvou fyzikálních vazeb. Odložení jiných
-větví není záporný výsledek a nemění již zmrazené testy.
+Aktivní teoretický úkol je geometrický zákon, nikoli další zdroj K1 či
+archivní hledání TRC1. Odložení jiných větví není záporný výsledek a nemění
+již zmrazené testy.
 Další formální sonda dostane vlastní veřejné vymezení, přijatý verifier
 a neměnný zveřejněný pin před svým prvním během podle
 [POLICY.md](../POLICY.md).
