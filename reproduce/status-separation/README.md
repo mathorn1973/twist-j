@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its seventy-seven checks cover the current
+and emits deterministic text. Its seventy-nine checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 77/77 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 79/79 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -362,8 +362,36 @@ dependency edge, gate, Frontier entry or CORE selection, and all three physical
 QDD owners remain O. Decoder plurality and a pair-incidence reading of the
 chosen decoder supply no apparatus, occurrence law or L6 measure.
 
-Current v80 totals are 398 claims, T266/D45/C39/H2/O28/F18, 447 normative
+The v80 totals were 398 claims, T266/D45/C39/H2/O28/F18, 447 normative
 items, 744 dependency edges, 398 evidence rows (308 two-architecture),
 931 history events, 15 gates, 30 live H/O, 30 CORE selections and
+24 reproductions.
+
+The v81 maintenance adds an outermost byte reconstruction: exactly eight new
+Registry, Normative, Evidence and History rows and twenty-nine new dependency
+rows are removed only by their frozen line SHA-256 values. Every resulting
+whole table must match `git show` of the public v80 activation commit
+`4577448dba85c492b27773a64e5fd557abc02b30`. Gates, Frontier programs and CORE
+selection match that commit with no removal. These recovered v80 bytes feed
+the unchanged v80 and v79 reconstructions, so every older snapshot, row
+replacement, lifecycle record and historical hash remains enforced.
+
+The separate v81 decoder-boundary guard pins eight L1 theorem rows, each on
+its own completed public probe bundle with a frozen manifest hash and
+two-architecture requirement: the equality-pattern valuation census and its
+exact square condition, the occurrence-selection criteria, the growth and
+saturation boundary, the native finite-reader independence obstruction, the
+occurrence-address and log-equality classification, the loader and retention
+class, the registration-pair recovery inverse, and the TRC1 calibration
+identifiability criterion. It requires their declaration events, scope
+hashes, Canon headings and complete probe cores, and it requires every
+declared dependency to be either a same-layer L1 requirement on a theorem or
+definition or an explicit boundary on a named open owner. No new claim owns
+a gate, Frontier entry or CORE selection, and all three physical QDD owners
+remain O.
+
+Current v81 totals are 406 claims, T274/D45/C39/H2/O28/F18, 455 normative
+items, 773 dependency edges, 406 evidence rows (316 two-architecture),
+939 history events, 15 gates, 30 live H/O, 30 CORE selections and
 24 reproductions. This verifier maintenance is release bookkeeping,
 not a new formal scientific gate.

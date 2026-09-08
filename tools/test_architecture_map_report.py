@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 398)
+        self.assertEqual(self.report.claims, 406)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 45, "F": 18, "H": 2, "O": 28, "T": 266},
+            {"C": 39, "D": 45, "F": 18, "H": 2, "O": 28, "T": 274},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 50,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 308,
+                "two-architecture": 316,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,9 +43,30 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 182)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 258
+            len(self.report.transitive_architecture_dependents), 265
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # The eight v81 decoder-boundary theorems declare same-layer L1
+        # requirements and owner boundaries only. Seven reach the architecture
+        # transitively through registered native rows; the renewal inverse
+        # declares no requirement, so it is neither an architecture dependent
+        # nor, because of its declared owner boundaries, a terminal.
+        for claim in (
+            "BINARY-RECORD-VALUATION-NONSELECTION",
+            "RECORD-OCCURRENCE-SELECTION-CRITERIA",
+            "RELATIONAL-GROWTH-SATURATION-BOUNDARY",
+            "U-FINITE-READER-INDEPENDENCE-OBSTRUCTION",
+            "OCCURRENCE-ADDRESS-AND-LOG-EQUALITY",
+            "RECORD-LOADER-RETENTION-CLASS",
+            "TRC1-CALIBRATION-IDENTIFIABILITY",
+        ):
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+            self.assertIn(claim, self.report.transitive_architecture_dependents)
+            self.assertNotIn(claim, self.report.dependency_terminals)
+        renewal = "REGISTRATION-PAIR-RECOVERY-INVERSE"
+        self.assertNotIn(renewal, self.report.direct_architecture_requires)
+        self.assertNotIn(renewal, self.report.transitive_architecture_dependents)
+        self.assertNotIn(renewal, self.report.dependency_terminals)
         # The two v80 reading-boundary theorems declare no dependency edge, so
         # they are declared-dependency terminals and add no architecture
         # coupling in either direction.
