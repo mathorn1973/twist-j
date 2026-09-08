@@ -1,4 +1,33 @@
 item_id	depends_on	relation	basis
+TRC1-CALIBRATION-IDENTIFIABILITY	DECODER-RESERVOIR-RECORD-ACCOUNTING	REQUIRES	the cold coupling, positive energy balance, signed tape and once-per-ordinal threshold emission composed end to end
+TRC1-CALIBRATION-IDENTIFIABILITY	DECODER-RESERVOIR-QUADRATIC-PARTITION	REQUIRES	the first-origin response coefficients and deposit forms used by the equal-calibration witness
+TRC1-CALIBRATION-IDENTIFIABILITY	DECODER-RESERVOIR-QDD-POSTPROCESSING-OBSTRUCTION	REQUIRES	the inherited pointwise obstruction to state-independent nonnegative LOW/HIGH processing, retained under ensemble averaging
+TRC1-CALIBRATION-IDENTIFIABILITY	POINTED-DECODER-PREFIX-CONSISTENCY	REQUIRES	exact unique prefix-consistent outputs of the pointed head under autonomous U without feedback
+TRC1-CALIBRATION-IDENTIFIABILITY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	no physical preparation law, port, clock or observable identification, fresh cold slot or contract-conforming reset is supplied
+TRC1-CALIBRATION-IDENTIFIABILITY	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	a selected preparation mixture and exact pushforward supply no independent occurrence law or frequency convergence
+REGISTRATION-PAIR-RECOVERY-INVERSE	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	renewal transforms and their counterexamples calibrate no detector, admit no measurement payload and supply no native source, coupling or record map
+REGISTRATION-PAIR-RECOVERY-INVERSE	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	all-pairs weights, first-gap laws and hazards are different objects; no physical registration semantics is selected
+RECORD-LOADER-RETENTION-CLASS	DECODER-RESERVOIR-RECORD-ACCOUNTING	REQUIRES	the existing zero-batch versus readback account with its persistent signed tape and once-per-ordinal threshold emission
+RECORD-LOADER-RETENTION-CLASS	BINARY-RECORD-VALUATION-NONSELECTION	REQUIRES	the reversible blank-cell symbolic writer and its declared fresh-cell resources
+RECORD-LOADER-RETENTION-CLASS	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	loader classification, fresh-space embedding and the finite bank supply no physical occupancy carrier, passive query, persistence or reset law
+OCCURRENCE-ADDRESS-AND-LOG-EQUALITY	U-FINITE-READER-INDEPENDENCE-OBSTRUCTION	REQUIRES	the native length-L window bound and bounded-gap recurrence applied to identity readers
+OCCURRENCE-ADDRESS-AND-LOG-EQUALITY	RELATIONAL-GROWTH-SATURATION-BOUNDARY	REQUIRES	the explicit integer lift whose tagged hexagonal balls are serialized
+OCCURRENCE-ADDRESS-AND-LOG-EQUALITY	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	address quotients, log congruences and emission budgets choose no physical event equality or emission law
+OCCURRENCE-ADDRESS-AND-LOG-EQUALITY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	counter labels and list positions supply no physical write, persistence or reset
+U-FINITE-READER-INDEPENDENCE-OBSTRUCTION	DEF-AUTONOMOUS-STATE	REQUIRES	the unchanged origin-zero native carrier, unbounded counter and deterministic update
+U-FINITE-READER-INDEPENDENCE-OBSTRUCTION	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	the synchronized chart labels and exact clock coding of every actual trajectory
+U-FINITE-READER-INDEPENDENCE-OBSTRUCTION	U-FINITE-HISTORY-CLOCK-PHASE	REQUIRES	phase recovery from a fixed-length legal driver window and bounded-gap recurrence of legal windows
+U-FINITE-READER-INDEPENDENCE-OBSTRUCTION	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	the fixed finite-window class bounds an accepted language; it selects no physical event reader, trial semantics or comparison horizon
+U-FINITE-READER-INDEPENDENCE-OBSTRUCTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	no reader resources, preparation, memory or acquisition schedule is physically supplied
+RELATIONAL-GROWTH-SATURATION-BOUNDARY	BINARY-RECORD-VALUATION-NONSELECTION	REQUIRES	injection-stable equality-pattern valuations whose tagged accumulation is computed
+RELATIONAL-GROWTH-SATURATION-BOUNDARY	FIRED-COMMUTATOR-NOGO	REQUIRES	the registered 25 fiber translations, displayed fired commutators and silent control of the finite native carrier
+RELATIONAL-GROWTH-SATURATION-BOUNDARY	TRACEKERNEL-CURVATURE-FORCING	BOUNDED_BY	no carrier, intrinsic radius, limit regime or geometric bridge is selected; the same-carrier curvature bridge remains open
+RECORD-OCCURRENCE-SELECTION-CRITERIA	BINARY-RECORD-VALUATION-NONSELECTION	REQUIRES	the already classified pair carrier and branch labels whose cardinalities are turned into occurrences
+RECORD-OCCURRENCE-SELECTION-CRITERIA	QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION	REQUIRES	the registered separation of full-cycle incidence ratios from chronological first-hit protocols
+RECORD-OCCURRENCE-SELECTION-CRITERIA	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	cycle balance, invariant ensembles and finite independent horizons are mathematical conditions, not a physically realized event or trial law
+RECORD-OCCURRENCE-SELECTION-CRITERIA	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	no ready selection, symmetry action, autonomous update or accepted-event map is physically supplied
+BINARY-RECORD-VALUATION-NONSELECTION	QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD	REQUIRES	the adopted four-coordinate integer source and its channel cardinalities A=s^2, B=5(4Q-s^2) as the fixed comparison class
+BINARY-RECORD-VALUATION-NONSELECTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	equality-only valuations, symbolic writers and scalar reading families supply no physical apparatus, complete-incidence law or occurrence law
 U-NATIVE-COMMON-READY-SOURCE-RETENTION	DEF-AUTONOMOUS-STATE	REQUIRES	the exact origin-zero native carrier and deterministic update
 U-NATIVE-COMMON-READY-SOURCE-RETENTION	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	synchronized sheet bijections, conserved chart and initial phase inverses
 U-NATIVE-COMMON-READY-SOURCE-RETENTION	U-NATIVE-APPARATUS-HISTORY-FACTOR	REQUIRES	the complete common-ready apparatus table and its separate port boundary

@@ -32,6 +32,82 @@ SUCCESSOR_MANIFEST_DIR = (
 )
 
 
+# Frozen from public v80 activation 4577448dba85c492b27773a64e5fd557abc02b30.
+# Remove only these exact new v81 lines, then verify every restored v80 byte.
+# This outermost reconstruction feeds the unchanged v80 and v79 patches below.
+V81_LEDGER_PATCH = {'REGISTRY.tsv': {'prior_sha256': '3ccc7a32b115c9433874497126fd975fe3bca33406ba735456ae60c5e5f2300a',
+                  'remove': ('6a2d0243d5bfb58f741be64f25b8868a76411f752889ba3facbb1b90202590e6',
+                             'dd5bde630c1428dea5c754f55cfbcf0328dc896aaac076d7e21630d143c9f7a7',
+                             '310f4671cca9680b4bba5ea878750b0804cb9c43152f22740650bb3957b132b7',
+                             'cfcbc6bebf8789ecdc5ac17227338edb449ef825356317eb4eb3ad782e9d6337',
+                             'db8cf9a9b30133fbcab74f9347b923bfefb41d7b530ce870fb452466089f771f',
+                             'd62838f75a4a2e4d46ff9286eb543354dfaa1973f88f9474202ffa0f2f3dd3f5',
+                             '9e15d35b7febeb70d5143ef1ac3ca8b7c5c7bb2cd849f8aceff54095bfb9583a',
+                             '1bb68b57fcd1b34bf1d023e2bbb9172aa4d203a3b0604d10a69c47ad7661e5a9')},
+ 'NORMATIVE.tsv': {'prior_sha256': '588f49ef42a2ae5bc79ea406bc0d545f67487d4c2360a38d3860d160d27d5520',
+                   'remove': ('03296814759c641185477b60f387f8dadc9bca0747a433a25fc454ae73f37cd6',
+                              'c5051bf6032004ff97a98e5f307f3c3eb3e65aa764600dfe8739c90a408c000b',
+                              'ba55f633e019c39113ccd93b4793b63069215015ac892343c9897dbff0a436fe',
+                              '643fc2a59274672127390a4f1482bb1594fb1f40d52b051fa2a93fd91651f308',
+                              '35fd7a058179e6f3de4a01df34f9fddad4309a93e3a572fa797d4628b36af551',
+                              '98257fcacb8136a169d615de91d4351e8dd06e8eb09e5fb165fafefcff4de600',
+                              '3f79cfc35a873744f1ff30e8780d21ba87884be6bebe5901247d13f1f36ce391',
+                              'e3c75143aeb60c40fd92010114188740f5521eec551ebef14e834d65688b0aa0')},
+ 'DEPENDENCIES.tsv': {'prior_sha256': 'ded15d0852ca9c3da2c6eabcc1ca24059e3599663f1b2d864ddff766d4621228',
+                      'remove': ('eeaa5c04dbff7e2b7752bee5f9bc41709a535f3d1d321713bbf79b502cb46c64',
+                                 'f80a80dabdc14ee0f903dd17e8b745618bc83854ee334c8888c3367508a0f4ed',
+                                 '9f66bc671c393c7e9876d557e45780d6fabd6f683a61958efdd927995b886bb0',
+                                 'd9b580d2e2a56b106a38775351961e61b8b3f253ab78fe129aae4368dfc7c61b',
+                                 '46b9dfbd46f2c18405e57c195a49d41ca28f734b8aef7122a204680a9d16ec44',
+                                 '39beeb168ad1ddc6c62e83c40593a5a702b1c8ab1f594141ee5b3ef4838ffcd7',
+                                 '2c0876237518c194959e3fca139f73e247835c8f9bfcfe91c413f865c1a641b1',
+                                 '7bad33667ac4944779ed54acf73b148386e6b58ce3b56eb1405ef68a1571a72d',
+                                 'edb2293ec92c5b9731749eb337e4dec48e25b4da09850ff625c3855ee1439d86',
+                                 'fbf8e4b64849b20ca8a1a9f320347595924aa689c57243f94319a63bd532e3f6',
+                                 'f0b0cbf8068684d348b6f2e9c2e1e5de1ff16e141a36c17e0cbeb81ed30d3d98',
+                                 'f1064d2b32adcac064c7ded79fadd6a361b4b5c0e702078736d3108941ef2793',
+                                 '1513311dc355ff97bdbf67109a0db4c330a500200bbc1a465893b517fe31b9af',
+                                 '02c5b99979df30635e817542eb2f99602913145641a152367283a847eac20427',
+                                 'b1a6120da62a46eeb7e4649c20d76a958b190ca46d54478a903901f387cae82d',
+                                 '3205161165af13149445e93ddf62f1581e4b70202af9b0d46d42e60c9278089c',
+                                 '2fe600873d605b1e80811edc07ee83a310f511029ea8c41d3434cacdd7f3c34e',
+                                 'e31e1858e1e097d27440a98947f7496c503f34586fd5ec7a2d1457f3fa4e18a9',
+                                 '724207204bde022de1308de18ae99ad306eec035e5da4dc747276759a4de98fe',
+                                 '61d97e5b0658dee9fede84531eb4aa983864c6b14b7df2072f6d72c9c95a0957',
+                                 '12cf2310e4294d20f45092fd0b7eda0d902a8aa46a40498493ce52e65e6d4bde',
+                                 'f1ff5c72aa6a6f11cac87826ffe2b8fc73a015fc969ee2b937aae5191b2eb5e1',
+                                 'dd8c7499043f5889a8d9da2757dbedd1f82ef62681ae7e5c5fe9ac9498fed395',
+                                 '1631c1543da0daef71b05356a765f8bbaf0f0d04dcb092dff8594fc1ffc80410',
+                                 'df1581a84e461e106ce8f0842f82efdc827872eb5cfa2338b0ed277fff379c98',
+                                 'dde5f0ae921cfac71495292262e5dd0d2ff4b155bb49f3c30de01ed989250fb8',
+                                 'bf0ae5bcdae67df9878846e6b04b83a25f55abf0cff5a44ce5f3828da6cbf9dd',
+                                 'efa86964dcfd542dd0bdcb7c9b8451dc2c4fd67a17ca45ae5fa0d930198023a6',
+                                 '426dd0f2b7b40a657e418e22795cc1f8c8e0a16eff21576f950147d640ecb2b1')},
+ 'EVIDENCE.tsv': {'prior_sha256': '8aad6feefac1694b5424a257c3ff438ff77973bc77849a423e5ed636da05eeb2',
+                  'remove': ('37c156052427d5e219d45c5aa8cdf4905c5c36c4fa4d9ae698b5cba1ea5e5e80',
+                             '0d9cc3629325c06b7ed524941a22c6fb742af6602a35d6a8e963b2bc7c3123fe',
+                             '7b9f7821a6e4c1547de20ed21aafb63fe54cb09860a915d2f0a0613c855cd648',
+                             'ed74e42c785f9165a3b5562bff8c029c6b0fc6adb174f873d75998c0c226acc0',
+                             'b72fff00d73f0c96b6aaa30e9fa94bf8b08a175ad7ebff5ed92d604370564d37',
+                             '91acf13c325db68d0fa4c7716e89728c18a394c9dfd193ed551ebf17667fb8bd',
+                             '95c977bbde3d6b289f63d64bee3a084b8a4184ce84c47249e52f58b26a359e4f',
+                             '00bfc76cc4c06b49d9bc5ba6e65c6a9473beb090c3c416a087c9f7a386ea2ab8')},
+ 'HISTORY.tsv': {'prior_sha256': '99f899ff2d23f11ba99ecf3db259b24b80f12e5caa67bbd240aef4c651573ffd',
+                 'remove': ('d7296f932bc9782cc43c48f6e75876a608132ab0701d89531d9c0ad415bab7a2',
+                            '8a4f85d06c1d75ca300f1df2b571cbf528ccaa461b19180e6d142aa2bec76d30',
+                            'f82eecbaa15361eaa61710703f6f2b761ec0fd62870638644797c37d6530a937',
+                            '44370370ea7c2999e7550956ad914c2022afb9ddb114d489130628ae6de37294',
+                            'a8c2444fa3e4fe66605bc6b7d86e67b80985afcd45e096193bf75f0d8bebb9ce',
+                            'd8f2d88f61e49a84c79acbb1f7bff1b60319ee19df8c2083f8b7a4c13c921d2f',
+                            '471b0db481f53926ef93d65281dd884f1f18256c11313ac381b4a52d6d800b90',
+                            'fc1248e0133f7352d5c91bad9f7d51f3f27dd42b96f6672e75c5ce202583228a')},
+ 'GATES.tsv': {'prior_sha256': 'f1f7fb10abf68f248c47933bd220209dc13f7c45ec60c0d44d26a92ee0e1a333',
+               'remove': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'prior_sha256': '95db755bb7b2f49e2642123649767a7036fd69099db5d2148ef43fac655b97e2',
+                           'remove': ()},
+ 'CORE_SELECTION.tsv': {'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'remove': ()}}
+
 # Frozen from public v79 parent a51df34fe1f1f433062faeb18f5e03fd0a8082b2.
 # Remove only these exact new v80 lines, then verify every restored v79 byte.
 # This outer reconstruction feeds the unchanged historical v79 patch below.
@@ -100,6 +176,39 @@ V80_R3_ROWS = {
         ('L4', 'd39e676eaf7ec15b9f1e36ba0afa561d0674c4e4650df79ec998933b8ab6d8f0'),
 }
 V80_R3_SECTION = "2. Time, space, and the decoder"
+# The eight v81 decoder-boundary theorems, each on its own completed public
+# probe bundle, keyed by probe directory and frozen bundle manifest hash.
+V81_ROWS = {
+    'BINARY-RECORD-VALUATION-NONSELECTION':
+        ('probes/P-BINARY-RECORD-QUADRATIC-SELECTION-1',
+         '6bf433d1594b1ed19441033790f1ef0df7a5da17f68fd575c0d1a5521b9e11c9'),
+    'RECORD-OCCURRENCE-SELECTION-CRITERIA':
+        ('probes/P-RECORD-OCCURRENCE-SYMMETRY-1',
+         '65ce6a38beddbd27cd809b4ae505cf87dcf05bd04424a76647d9f74097f9dd46'),
+    'RELATIONAL-GROWTH-SATURATION-BOUNDARY':
+        ('probes/P-RELATIONAL-GROWTH-SATURATION-1',
+         '0d1161f53fcfadedbc96ce104dd435de97f920ebe1e01ecb1de35528ebe2ec65'),
+    'U-FINITE-READER-INDEPENDENCE-OBSTRUCTION':
+        ('probes/P-U-FINITE-READER-INDEPENDENCE-1',
+         'f92442e562b04743bcd1c77eae4c24143c72d9a172bf79207200eac502abf5b0'),
+    'OCCURRENCE-ADDRESS-AND-LOG-EQUALITY':
+        ('probes/P-SNAP-OCCURRENCE-IDENTITY-1',
+         '7218d3848c5b089316eaa8a50ac919f12b9cf82fbf1c5f431b70f065afc90f7a'),
+    'RECORD-LOADER-RETENTION-CLASS':
+        ('probes/P-SNAP-INTERACTION-READBACK-1',
+         'd67d6cb185640e24430fa69dcbca22837b5230b00e762d38ba349cbeb4a47a9e'),
+    'REGISTRATION-PAIR-RECOVERY-INVERSE':
+        ('probes/P-REGISTRATION-PAIR-RECOVERY-1',
+         '0277e3c0e8d6356836a3ce741b2ff02aa62cb2e088e4307e547ad738ab056725'),
+    'TRC1-CALIBRATION-IDENTIFIABILITY':
+        ('probes/P-TRC1-END-TO-END-IDENTIFIABILITY-1',
+         '28dde06306d6799f33ff0f8aabcdaad753f66866a6f8c2e65e9576aa02b9520e'),
+}
+V81_SECTION = "2. Time, space, and the decoder"
+V81_OWNERS = (
+    "QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS",
+    "TRACEKERNEL-CURVATURE-FORCING",
+)
 
 
 # Frozen from public base 07b123a4082f174c37bf09c9aa8815bd2c0e1660.
@@ -275,12 +384,34 @@ V79_NATIVE_ROWS = {
 }
 
 
-def v80_previous_bytes(path):
-    """Recover byte-identical v79 tables using only the frozen v80 additions."""
-    patch = V80_LEDGER_PATCH[path.name]
+def v81_previous_bytes(path):
+    """Recover byte-identical v80 tables using only the frozen v81 additions."""
+    patch = V81_LEDGER_PATCH[path.name]
     removed = {digest: 0 for digest in patch["remove"]}
     kept = []
     for position, line in enumerate(path.read_bytes().splitlines(keepends=True)):
+        digest = hashlib.sha256(line).hexdigest()
+        if position and digest in removed:
+            removed[digest] += 1
+        else:
+            kept.append(line)
+    if any(count != 1 for count in removed.values()):
+        return None
+    previous = b"".join(kept)
+    if hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]:
+        return None
+    return previous
+
+
+def v80_previous_bytes(path):
+    """Recover byte-identical v79 tables using only the frozen v80 additions."""
+    patch = V80_LEDGER_PATCH[path.name]
+    current_v80 = v81_previous_bytes(path)
+    if current_v80 is None:
+        return None
+    removed = {digest: 0 for digest in patch["remove"]}
+    kept = []
+    for position, line in enumerate(current_v80.splitlines(keepends=True)):
         digest = hashlib.sha256(line).hexdigest()
         if position and digest in removed:
             removed[digest] += 1
@@ -547,18 +678,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 266, "D": 45, "C": 39, "F": 18,
+    expected_counts = {"T": 274, "D": 45, "C": 39, "F": 18,
                        "O": 28, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v80",
-        len(rows) == 398
+        "registry and companion-ledger counts match Public Canon v81",
+        len(rows) == 406
         and counts == expected_counts
-        and len(normative) == 447
-        and len(dependencies) == 744
-        and len(evidence) == 398
-        and two_architecture == 308
-        and len(history) == 931
+        and len(normative) == 455
+        and len(dependencies) == 773
+        and len(evidence) == 406
+        and two_architecture == 316
+        and len(history) == 939
         and len(gates) == 15
         and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 8
@@ -7083,6 +7214,90 @@ def run():
             "second-order integer pair-incidence census", "at N=p=5, U=20",
             "no uniqueness, physical apparatus, occurrence, sampling or L6 measure is claimed",
         ))
+        and all(has_status(index, claim, "O") for claim in (
+            "QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS",
+            "QDD-INSTRUMENT-CLASS-COMPLETENESS",
+        )),
+    ))
+    checks.append((
+        "V81-PRIOR-LEDGERS",
+        "only exact pinned v81 additions are removed to recover every v80 byte; "
+        "the unchanged v80 and v79 reconstructions still enforce every older ledger hash",
+        set(V81_LEDGER_PATCH) == set(V80_LEDGER_PATCH)
+        and tuple(len(V81_LEDGER_PATCH[name]["remove"]) for name in (
+            "REGISTRY.tsv", "NORMATIVE.tsv", "DEPENDENCIES.tsv", "EVIDENCE.tsv",
+            "HISTORY.tsv", "GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv",
+        )) == (8, 8, 29, 8, 8, 0, 0, 0)
+        and all(
+            v81_previous_bytes(ROOT / "canon" / name) is not None
+            for name in V81_LEDGER_PATCH
+        ),
+    ))
+    v81_names = set(V81_ROWS)
+    v81_events = [
+        row for row in history
+        if row["release"] == "canon-v81-candidate" and row["claim_id"] in v81_names
+    ]
+    v81_dependencies = [row for row in dependencies if row["item_id"] in v81_names]
+    checks.append((
+        "V81-DECODER-BOUNDARY",
+        "eight L1 theorems delimit relational reading, occurrence, native readers, "
+        "addresses, loaders, registration pairs and the composed record chain on exact "
+        "two-architecture probes; they add no gate, program or CORE selection, declare "
+        "only same-layer requirements and owner boundaries, and leave every physical "
+        "QDD owner open",
+        len(v81_names) == 8
+        and len(v81_events) == 8
+        and {row["claim_id"] for row in v81_events} == v81_names
+        and not (v81_names & v80_names)
+        and not (v81_names & set(V80_R3_ROWS))
+        and all(
+            has_status(index, claim, "T")
+            and index[claim]["evidence"] == probe + "/RESULT.md"
+            and index[claim]["canon_section"] == V81_SECTION
+            and normative.get(claim, {}).get("item_type") == "THEOREM"
+            and normative.get(claim, {}).get("status") == "T"
+            and normative.get(claim, {}).get("layer") == "L1"
+            and normative.get(claim, {}).get("gate_ids") == ""
+            and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+            and evidence.get(claim, {}).get("location") == probe + "/RESULT.md"
+            and evidence.get(claim, {}).get("sha256") == digest
+            and evidence.get(claim, {}).get("hash_mode") == "bundle-manifest-sha256-v1"
+            and evidence.get(claim, {}).get("architecture_requirement") == "two-architecture"
+            and f"### {claim} [T]" in canon_text
+            and all(
+                (ROOT / probe / name).is_file()
+                for name in ("PREREG.md", "PROOF.md", "verify.py", "EXPECTED.txt",
+                             "RUN.md", "RESULT.md")
+            )
+            and claim not in programs
+            and claim not in frontier_text
+            and all(row["owner_item_id"] != claim for row in gates.values())
+            and all(row["claim_id"] != claim for row in core_selection_rows)
+            for claim, (probe, digest) in V81_ROWS.items()
+        )
+        and all(
+            row["event_type"] == "DECLARE"
+            and row["event_sequence"] == "1"
+            and row["previous_status"] == "-" and row["new_status"] == "T"
+            and row["scope_sha256"] == scope_sha256(index, row["claim_id"])
+            and row["evidence_location"] == V81_ROWS[row["claim_id"]][0] + "/RESULT.md"
+            and row["evidence_sha256"] == V81_ROWS[row["claim_id"]][1]
+            for row in v81_events
+        )
+        and len(v81_dependencies) == 29
+        and all(
+            (
+                row["relation"] == "REQUIRES"
+                and normative[row["depends_on"]]["layer"] == "L1"
+                and normative[row["depends_on"]]["item_type"] in ("THEOREM", "DEFINITION")
+            ) or (
+                row["relation"] == "BOUNDED_BY"
+                and row["depends_on"] in V81_OWNERS
+                and has_status(index, row["depends_on"], "O")
+            )
+            for row in v81_dependencies
+        )
         and all(has_status(index, claim, "O") for claim in (
             "QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS",
             "QDD-INSTRUMENT-CLASS-COMPLETENESS",

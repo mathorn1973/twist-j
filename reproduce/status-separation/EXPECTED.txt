@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v80
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v81
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -78,5 +78,7 @@ PASS 74 V80-PRIOR-LEDGERS only exact pinned v80 additions are removed to recover
 PASS 75 V80-CLOSURE-BOUNDARIES three proof-backed T rows retain complete-source and onset conditions at L1 and full CP three-pass rigidity at L4 on one exact two-architecture probe
 PASS 76 V80-PHYSICAL-OWNERS all three physical QDD obligations retain their exact v79 rows at O; readback, conditional onset laws and mixed-channel selection create no physical gate
 PASS 77 V80-READING-BOUNDARIES two later L4 theorems bound the quadratic decoder on self-contained inline Canon proof; they add no dependency, gate, program or CORE selection and leave every physical QDD owner open
+PASS 78 V81-PRIOR-LEDGERS only exact pinned v81 additions are removed to recover every v80 byte; the unchanged v80 and v79 reconstructions still enforce every older ledger hash
+PASS 79 V81-DECODER-BOUNDARY eight L1 theorems delimit relational reading, occurrence, native readers, addresses, loaders, registration pairs and the composed record chain on exact two-architecture probes; they add no gate, program or CORE selection, declare only same-layer requirements and owner boundaries, and leave every physical QDD owner open
 
-RESULT 77/77 ALL PASS
+RESULT 79/79 ALL PASS

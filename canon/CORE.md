@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v80. Normative authority and activation
+**Release identity:** Public Canon v81. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v80 also declares a discrete architecture. It does not
+Public Canon v81 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -79,6 +79,18 @@ QDD ratios; a permutation scan repairs the marginal only with an additional
 order carrier and law. Three fixed attenuation observables select identity
 even among mixed CP channels, but their physical preservation remains a
 premise. Physical preparation, writing, reset and occurrence remain open.
+
+The relational-reading boundary is now exact. Binary structure, reversible
+faithful writing and the listed scalar symmetries do not select a quadratic
+count; a square is exactly equal matching and nonmatching weight. Occurrence
+needs cycle balance or an independently supplied ensemble, correct pair laws
+do not give independence, and a fixed finite-window reader of the actual
+native trajectory cannot carry all-order product frequencies while every
+finite horizon remains attainable. Addresses, logs, loaders, a finite
+occupancy bank, the registration-pair inverse and the composed record chain
+have exact classifications and identifiability limits. None supplies a
+physical apparatus, event, occurrence law, persistence, reset, spatial
+dimension or measure; those owners remain open.
 
 ## Two field characterisations involving five
 

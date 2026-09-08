@@ -1,5 +1,53 @@
 # Canon changelog (public series)
 
+## Public Canon v81
+
+Eight new T claims fold the relational-reading decoder programme completed
+after v80: an exact valuation census with the equality condition for a
+square, exact occurrence-selection criteria, a growth-saturation boundary, a
+native finite-reader independence obstruction, the classification of
+occurrence addresses and recoverable logs, the perfect-loader and retention
+class, the registration-pair recovery inverse, and the TRC1 calibration
+identifiability criterion. The same 28 O and 2 H remain; no prior claim
+changes status or scope.
+
+Binary arity, reversible faithful covariant writing and the listed scalar
+symmetries do not select a quadratic count; at the classified binary scope
+the square is exactly the equality of matching and nonmatching weights, and
+every positive integer power gives a distinct normalized reading on the
+adopted channels. Reversibility, covariance and a uniform stationary ensemble
+do not give every-start frequencies, correct pair laws do not give
+independence, and an exact independent horizon of length k costs at least
+2^k supported initial states. On the actual unbounded-counter native
+trajectory, every fixed finite-window reader has an accepted language bounded
+by 20,000[L+G(k-1)] and so cannot carry Bernoulli block frequencies at all
+orders, while each prechosen finite horizon is attainable.
+
+Successor-compatible address quotients are equality or eventually periodic, a
+fixed native window cannot print forever-fresh identities, and a cubic tagged
+carrier serializes at one atomic entry per tick with counts cubic in radius
+and linear in ticks. Tagged accumulation of quadratic layers is exactly cubic
+on the explicit integer lift, while the literal native fired-commutator
+quotient saturates at 25 and the general local dimension inference from cubic
+asymptotics is false. Perfect two-port loaders are classified and export old
+records on reuse; protected retention needs a rational isometric fresh
+embedding; a finite occupancy bank records only during its first lap.
+All-pairs registration weights have an exact renewal inverse with
+admissibility conditions, normalized pairs are not normalized recovery, and
+complete pair data do not certify the renewal premise. The composed TRC1
+chain has exactly one history per head and context, and calibration
+determines prediction for every mixture exactly when the kernel inclusion
+holds; two mixtures with identical scalar QDD calibration predict crossing
+probabilities 1/3 and 2/3.
+
+All results use the eight completed pinned public probes and their
+two-architecture replays. Neither theorem family supplies a physical
+apparatus, occurrence law, sampling law, persistence or reset law, spatial
+dimension or L6 measure; the three physical QDD owners remain O / STOP. The
+status-separation maintenance preserves every v80 ledger byte after removing
+only the exact v81 additions, then replays all historical hash guards. No
+workflow, old probe or source dataset changes.
+
 ## Public Canon v80
 
 Three new T claims state exact common-ready native recovery, the complete
@@ -38,7 +86,7 @@ a structural reason for the chosen reading. No physical QDD O owner moves.
 ## Public Canon v79
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 398 claims; 0 T-LOCK, 266 T, 45 D, 39 C, 2 H, 28 O, 18 F; 30 live H/O.
+Registry snapshot: 406 claims; 0 T-LOCK, 274 T, 45 D, 39 C, 2 H, 28 O, 18 F; 30 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 
