@@ -1,6 +1,6 @@
 # Po v81: pracovní program dvou konkrétních uzávěrů
 
-**NON-CANONICAL. Pracovní návrh a první věcné výstupy, 2026-09-08.**
+**NON-CANONICAL. Pracovní program a konkrétní konstrukce, 2026-09-08.**
 
 Základem je veřejný Canon v81, tag `canon-v81`, commit
 `82d536a71025032d6dd4093db61ecb9f31990250`. Rozhodovací klauzule zůstávají
@@ -22,8 +22,8 @@ jejich dílčí kroky. Již zmrazené sondy mají nadále svou vlastní dispozic
 | Pořadí | Větev A: jeden měřicí řetězec | Větev B: normalizace TT |
 |---|---|---|
 | První etapa, zpracována zde | Uzavřený omezený audit dostupnosti metadat NIST run3; konkrétní návrh dvouexpoziční obnovy RRP1/TRC1 | Přesný rozklad momentů potřebných pro kvadratický odečet; audit existujících zdrojů a přesné chybějící mapy K1 |
-| Následující krok | Posoudit dvě navržená pravidla v #539. Pro data zvolit nový doložitelný zdroj metadat; stejný audit run3 neopakovat bez nové evidence | Vypracovat jediný typovaný návrh `V(source,x,t)->(v_1,v_2)` s nezávislým zdůvodněním zdroje a významu souřadnic |
-| Po doplnění těchto vstupů | Implementovat přijatou obnovu; kvalifikovat fyzikální slovník, úplné pokusy a nezávislou kalibraci pro stejný kontext | Odvodit zákon spotřebovaný odečtem, normalizaci akce/převodu a skalární jmenovatel; rozhodnout připuštění kandidáta |
+| Nynější revize po recenzi | Dvě konvence převzaty do revidovaného návrhu #539; úplný APPEND oddělen od přípustnosti; přidána implementace přesně dvou expozic a její softwarové kontroly | Dodána jedna konkrétní konečná mapa K1, úplný společný zdrojový zákon a analytické kontrakce spotřebovaných momentů |
+| Následující věcný krok | Kvalifikovat fyzikální slovník, úplné pokusy a nezávislou kalibraci pro stejný kontext. Pro data potřebujeme nový doložitelný podklad; stejný audit run3 neopakovat | Rozhodnout fyzikální připuštění konkrétní K1 mapy, její převod na prostor/čas a normalizaci akce vůči skalárnímu sektoru |
 | Až s úplným zadáním | Předvýsledkově zmrazit kalibrační a ověřovací rozsah, rozhodovací pravidlo a verifier; pak jeden test | Předvýsledkově zmrazit kandidáta a rozhodovací rozsah; pak spočítat `r_T(k)` a směrovat výsledek podle původní klauzule |
 
 Pořadí vyjadřuje skutečné závislosti, nikoli odhad doby objevu chybějícího
@@ -77,20 +77,35 @@ Návrh obsahuje přesné nosiče, rovnosti, domény a mapy. Pro pevné `H,c` je
 množina dostupných stavů konečná; celá rodina nemá tvrzenou jednotnou kapacitu paměti.
 Nejde o certifikát fyzikální izolace, ceny resetu ani přístroje NIST.
 
-Před implementací jsou v
-[#539](https://github.com/mathorn1973/twist-j/issues/539) dvě oddělené
-definiční otázky s konkrétním návrhem v poznámce:
+Po recenzi jsou do [revidovaného nekánonického návrhu #539](canon/DEF-TYPED-APPARATUS-RECORD-CONTRACT.md)
+výslovně převzaty dvě oddělené konvence:
 
-1. Zda ReadyState může uchovávat úplnou starou historii v odděleném poli,
+1. ReadyState může uchovávat úplnou starou historii v odděleném poli,
    když výběr další přípravy a generované jádrové výstupy nového nosiče
    na této historii nezávisí; úplný záznam starou historii zachovává.
-2. Zda je přípustný reset na výslovné vlastní podmnožině vstupního součinu,
+2. Je přípustný reset na výslovné vlastní podmnožině vstupního součinu,
    když dokončení druhé expozice znamená konec dostupné kapacity.
 
-Po jejich rozhodnutí má implementace ověřit zejména přežití úplné historie
-a nenulového zbytku přes druhou přípravu, nulové i vícenásobné průchody,
-`N=0`, prázdné porty, pasivní čtení a odmítnutí neúplné nebo vyčerpané
-obnovy. Současné zapečetěné implementace RRP1/TRC1 se tím nepřepisují.
+Toto přijetí platí uvnitř revidovaného návrhu; nepředstírá jeho začlenění
+do veřejného main ani změnu Canon. Přidaná
+[implementace](RRP1-TWO-EXPOSURE-RESET-1/README.md) má oddělené kontroly
+uchování úplné historie, pásky a nenulového zbytku přes druhou přípravu
+a závislostí výpočtu nových jádrových výstupů. Zahrnuje nulové i vícenásobné
+průchody, `N=0`, prázdné porty, pasivní čtení a neúplnou nebo vyčerpanou
+obnovu. Jde o softwarové ověření omezené implementace, nikoli průchod
+vědeckou branou. Zapečetěné implementace RRP1/TRC1 se tím nepřepisují.
+
+Recenzní nález APPEND se řeší přímo v této konstrukci: `HistoryState` je
+typ všech konečných posloupností EventRecord a `append` je úplné připojení.
+Samostatný predikát kontroluje přípustnost s protokolovou pozicí a správním
+deníkem. Nesoudržný nebo delší zápis je hodnota typu, nikoli přípustný běh;
+ten vytvoří nejvýše `2*N` interakčních záznamů. Při `N=0` deník rozlišuje
+obě přípravy a reset i při prázdné interakční historii.
+
+Dvouexpoziční obnova pomocí rezervovaného nosiče nečistí znovu tentýž
+detektor, neodvozuje statistickou nezávislost hlav a nedodává zákon dlouhé
+posloupnosti pro `S11`. Pro ten stále musíme rozlišit řezy jedné připravené
+historie a opakované přípravy.
 
 ### Přechod od kalibrace k jedné předpovědi
 
@@ -116,11 +131,19 @@ jsou nutná, pokud je spotřebovává časový filtr nebo vývoj; lze je také
 odvodit z úplného počátečního zákona a deterministického vývoje. Nevyžadujeme
 zbytečně širší zákon, než používá skutečný odečet.
 
-K1 má konkrétní typovou mezeru: pětisložkový koeficientový vektor TM-SYM2
-není reálná TT dvojice. Další výstup proto musí napsat skutečnou mapu `V`,
-její společný zákon ve více bodech a nezávislé opodstatnění amplitudy.
-Bornovy normalizované váhy samy amplitudu vůči skalárnímu sektoru neurčí:
-škálování `v -> a*v` násobí výkon kvadratického pole faktorem `a^4`.
+Nová [mapa K1](V81-TT-K1-SOURCE-MAP-1.md) řeší tuto konkrétní konstrukční
+mezeru: z jedné čtyřbitové Thue-Morseovy zdrojové veličiny vezme dvě
+překrývající se tříbitová okna, jejich znaménkové posuny použije v monomiálním
+zdvihu a reálnou a imaginární část jeho normovaného Fourierova obrazu
+vrátí jako dvojici. Poznámka uvádí všech deset zdrojových slov s vahami,
+jedinou mapu, úplný společný zákon obou řezů a analytický výpočet momentů.
+
+Zde `x` označuje konečný Fourierův slot a `t` jedno ze dvou oken; fyzikální
+prostor a čas se tím nezavádějí. Amplituda vychází z výslovně zvolené
+jednotkové koeficientové normy a unitární Fourierovy konvence. Je to úplně
+určená konečná konstrukce, jejíž fyzikální připuštění a normalizace akce
+vůči skalárnímu sektoru zůstávají otevřené. Bornovy normalizované váhy je
+samy neurčí: škálování `v -> a*v` násobí výkon kvadratického pole `a^4`.
 
 K2 a K3 v dodané mapě nemají přesné definice; nevytvářejí zatím připuštěnou
 třídu tří kandidátů. Žádný stav se nevybírá podle příznivého `r_T`.
@@ -130,9 +153,10 @@ otevřenou. Omezený neúspěch K1 se nesmí vydávat za univerzální zákaz.
 
 ## Co se počítá jako výsledek
 
-Tato první etapa dodává jednu dokončenou omezenou kvalifikaci zdroje,
-jeden konkrétní návrh obnovy k definičnímu posouzení a přesný TT vstupní
-rozbor. **Uzavřených původních O/H: 0. Nových formálních vět a fyzikálních
+Práce nyní dodává jednu dokončenou omezenou kvalifikaci zdroje, revidovanou
+definici a implementaci dvouexpoziční obnovy, opravu úplnosti APPEND a jednu
+konkrétní konečnou zdrojovou mapu K1 s analytickými momenty.
+**Uzavřených původních O/H: 0. Nových formálních vět a fyzikálních
 testů: 0.** Příslušná otevřená klauzule se rozhodne až dodáním jejích
 vlastních vstupů a evidence, nikoli změnou názvu dílčí práce.
 

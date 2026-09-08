@@ -1,6 +1,6 @@
-# RRP1: a finite reset adapter for two declared exposures
+# RRP1: two-exposure reset using a reserved carrier
 
-**NON-CANONICAL / PROPOSED DEFINITION / NOT IMPLEMENTED / NO FORMAL RUN.**
+**NON-CANONICAL / REVISED DEFINITION / NO FORMAL RUN.**
 Physical use and full #539 conformance remain **STOP-DEFINITION**.
 
 Basis: Public Canon v81, public commit
@@ -10,7 +10,9 @@ surface is [#539](https://github.com/mathorn1973/twist-j/issues/539).
 
 This work supplies a concrete candidate for the missing reset codomain,
 including the information that must survive into the next preparation.
-It reuses the existing TRC1 exposure law. It does not identify an external
+It reuses the existing TRC1 exposure law. The accompanying
+[implementation](RRP1-TWO-EXPOSURE-RESET-1/README.md) realizes only this
+restricted protocol. It does not identify an external
 apparatus, select an occurrence law, or classify the physical apparatus family.
 
 ## 1. The actual incompatibility
@@ -32,9 +34,13 @@ cannot retain an old apparatus archive unless ReadyState carries it: prepare
 has no ApparatusState argument. Changing the return tag alone fixes neither.
 
 The proposal below gives both values explicit ownership. It also exposes a
-third issue: #539 section 5 prohibits a later record selecting ReadyState.
-Preserving an old record in a ready token needs an explicit separation of
-custody from selection; the current wording does not automatically grant it.
+third issue in the v81-basis #539 proposal: section 5 prohibits a later record
+selecting ReadyState. This revision uses the explicit custody/selection
+separation and restricted reset domain now incorporated into the revised
+non-canonical contract. The revision also repairs partial session APPEND
+without relaxing LAW-APPEND-TOTALITY. These are declared conventions of the
+revised proposal, not retroactive changes to the public v81 basis or its
+already sealed profiles.
 
 ## 2. One finite session, fixed before its first record
 
@@ -129,9 +135,9 @@ leaving the input unchanged, but that error is not a value of the mathematical
 reset codomain. A COMPLETE second bank terminates the finite session.
 
 Thus `D_reset` is a proper subset of `ApparatusState x ContextKey`.
-Whether #539 admits that restricted domain under its displayed product
-signature is a separate **OPEN domain ruling**. Listing exact domain
-metadata does not itself settle that ruling or make the reset total.
+The revised #539 proposal expressly admits this restricted signature under
+section 6's conditions. Totality is on `D_reset`; no total reset on the
+full Cartesian product is claimed.
 
 Admitted action histories preserve the order
 `prepare_0, N core steps, reset, prepare_1, N core steps`.
@@ -143,14 +149,41 @@ history; this is a protocol rule, not a claim that a copyable token enforces
 physical single use. Starting a new session requires a new explicitly owned
 resource allocation.
 
-HistoryState is the ordered sequence of full session EventRecords, including
-`j`, the core event and complete `A_before/A_after` snapshots. The ordered
-tagged core-event sequence is only a named projection of HistoryState, not
-its replacement. A session APPEND requires the next compatible action
-position and full step image; it never stores a session event back inside A.
-Core histories inside A contain only the unmodified core snapshot type.
-This avoids a cycle of session events containing their own apparatus_after
-snapshots.
+The write carrier and reachable histories are different objects:
+
+```text
+HistoryState = EventRecord*
+append : HistoryState x EventRecord -> HistoryState
+append(h,e) = h + (e,)
+admissible_append : ProtocolPosition x HistoryState x EventRecord -> {0,1}.
+```
+
+Every EventRecord retains `j`, the core event and complete
+`A_before/A_after` snapshots. HistoryEq is literal ordered equality of all
+these records. Empty history is `()`, length and order access are the
+ordinary finite-sequence operations, and iterated append agrees with
+sequence concatenation. APPEND accepts every typed finite history and
+typed event, including repeated, discontinuous or over-capacity sequences.
+It does not impose run admissibility. Such values are in the write carrier
+but need not occur in any admitted run.
+
+The separate predicate checks the exact pre-step protocol position, the
+previous complete session history, and the full next step image. A protocol
+position includes the apparatus and an explicit action journal; its
+compatibility rule must bind both to the predeclared plan. The journal
+records preparations, reset and interaction positions without converting
+administrative actions into EventRecords. In particular, for N=0 the
+positions before preparation 0, after preparation 0, after reset and after
+preparation 1 are distinct while every interaction history is empty.
+The implementation README specifies the actual journal representation and
+the exact compatibility predicate.
+
+An admitted run performs only admissible appends and creates at most `2*N`
+interaction records. The larger finite-sequence write carrier makes no
+claim about physical memory or admissible unbounded repetition. The tagged
+core-event sequence is only a projection of HistoryState. No session event
+is stored back inside A: core histories inside A contain only unmodified
+core snapshots, avoiding a cycle through session apparatus_after snapshots.
 
 ## 5. What the resource account actually consumes
 
@@ -180,10 +213,13 @@ continued evolution of that residual, the two wave carriers, cold supply,
 storage, two preparation kicks and reset duration/work. No zero physical
 reset cost, passive storage law or physical time assignment is claimed.
 
-## 6. Exact proposed #539 ruling, not an adopted amendment
+## 6. Two conventions incorporated into the revised #539 proposal
 
-The following is proposed review text for LAW-READY-PRESELECTION, alongside
-the existing ban on output-selected preparations:
+Following the review of PR #905 at `701e7bcd`, this profile and the revised
+non-canonical #539 proposal adopt the following limited conventions.
+Their adoption here neither merges the proposal nor gives it scientific
+or Canon authority. LAW-READY-PRESELECTION retains its ban on output-selected
+preparations:
 
 > A ready carrier may contain separately typed selection and immutable
 > custody fields. Full ReadyEq retains both. Selection of the next source,
@@ -206,14 +242,15 @@ This field-dependency obligation is necessary because the counterfactual
 history comparison alone can be vacuous for deterministic TRC1 at fixed
 `H,c` and cut.
 
-This is an observable independence obligation for a later implementation
-review, not permission to ignore full record equality. Ready's custody does
-depend on old records. Consequently the existing literal #539 prohibition
-does not by itself certify this proposal. The proposed ruling and every
-other #539 law still require review; this note does not mark the shared
-schema complete or change its current wording.
+The implementation owes two separate checks: full residual/tape/record
+retention through reset and preparation 1, and structural noninterference
+with preparation 1 and the new bank's core outputs. Full session outputs
+retain the past and need not be equal when prior custody differs.
+Noninterference supplies no statistical independence: H remains an explicit
+ordered pair with no inferred joint preparation law. These two conventions
+do not establish every other #539 law or a complete physical profile.
 
-A second, independent proposed ruling concerns the reset domain:
+A second, independent adopted convention of this revision concerns the reset domain:
 
 > A finite preallocated profile may declare
 > `reset : D_reset -> ReadyState x ApparatusState`, with `D_reset` an
@@ -231,26 +268,29 @@ A second, independent proposed ruling concerns the reset domain:
 > the full Cartesian product.
 
 Here `D_reset` is exactly the coherent matching states with phase COMPLETE,
-j=0, a complete N-step bank-0 history and bank 1 UNPREPARED. This rule and
-its application remain proposed and unadopted. Neither the custody proposal
-nor an implementation can silently amend #539's total-signature
-interpretation. Both rulings remain open.
+j=0, a complete N-step bank-0 history and bank 1 UNPREPARED. The change from
+the v81-basis product signature is explicit and confined to this revised
+proposal. It does not turn incomplete or exhausted operations into successful
+resets, select a favorable outcome denominator or retroactively alter another
+profile's frozen domain.
 
 ## 7. Disposition and the next concrete work
 
 The missing residual-state and preparation-custody inputs now have explicit
 candidate carriers, and the reset returns the requested product on one
 specified domain, finite for each frozen `H,c`. This is a design disposition,
-with **no execution evidence and no physical closure**. The existing RRP1/TRC1 reset functions
-and all completed probe files are unchanged.
+with **no formal scientific run and no physical closure**. The existing
+RRP1/TRC1 reset functions and all completed probe files are unchanged.
 
-The next bounded implementation is this adapter after decisions on both
-the custody/selection and restricted-domain rulings. Its acceptance cases
-are: complete first exposure with nonzero residual and signed tape; zero-crossing and multiple
-crossing records; N=0; empty R; repeated passive reads; incomplete/exhausted
-reset rejection; exact archive survival through the second prepare; and
-absence of record-to-source/context/bank selection. A formal claim needs its
-own public pin and accepted verifier before execution. None has been run here.
+The executable implementation and its bounded software checks are in
+[RRP1-TWO-EXPOSURE-RESET-1](RRP1-TWO-EXPOSURE-RESET-1/README.md). Their
+acceptance cases cover complete first exposure with nonzero residual and
+signed tape; zero-crossing and multiple-crossing records; N=0; empty R;
+passive reads; incomplete/exhausted reset rejection; exact archive survival
+through preparation 1; total APPEND versus run admissibility; and the separate
+structural field-dependency obligation. Software checks are not a formal
+scientific gate or evidence for the full physical owner. A future formal
+claim still needs its own public pin and accepted verifier before execution.
 
 For physical use, neither the descriptor advance nor a second mathematical
 bank is a detector reset certificate. In particular the NIST observation
@@ -259,7 +299,7 @@ complete calibrated realization and finite capacity/retention/reset evidence
 remain required, along with the unchanged apparatus-family and occurrence
 obligations.
 
-## Sources at the pinned public basis
+## Inherited sources and revised contract
 
 - [RRP1](DECODER-RESERVOIR-PHYSICAL-PROFILE-1.md), sections 2-4: finite cold
   capacity, full signed tape, exact reset mismatch.
@@ -268,7 +308,9 @@ obligations.
 - [TRC1 proof](../probes/P-TRC1-END-TO-END-IDENTIFIABILITY-1/PROOF.md),
   section 1: generated complete histories and energy account; no reset claim.
 - [Typed contract](canon/DEF-TYPED-APPARATUS-RECORD-CONTRACT.md), sections
-  3-9: distinct equalities, map domains, preselection and acyclic ownership.
+  3-9: distinct equalities, map domains, preselection and acyclic ownership;
+  this link is the revised proposal, whose v81 predecessor supplies the
+  original incompatibilities in section 1.
 - [Canon](../canon/CANON.md), RECORD-LOADER-RETENTION-CLASS and
   OCCURRENCE-ADDRESS-AND-LOG-EQUALITY: fresh-space, retention and identity
   boundaries; no physical certificate follows from symbolic storage.

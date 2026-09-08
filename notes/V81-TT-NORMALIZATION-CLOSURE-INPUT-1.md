@@ -194,14 +194,20 @@ own independently justified admission and may not erase the old result.
 
 ## 5. Next bounded decision and routing
 
-The next deliverable is one **typed source-and-field decision for K1**, before
-an `r_T` computation: name an existing source law or explicitly propose a
+The required **typed source-and-field decision for K1**, before
+an `r_T` computation, must name an existing source law or explicitly propose a
 new dictionary input; give the actual `V` map with point/time semantics;
 derive `(mu,Gamma)` on its consumed domain; and show where the amplitude,
 action/readout conversion and scalar comparison come from. A generic
 instruction to take a Born square is not that deliverable. If K2/K3 are to
 be compared, obtain their exact source definitions first; no three-way class
 is currently specified by the supplied map.
+
+The subsequent [finite K1 construction](V81-TT-K1-SOURCE-MAP-1.md) now
+supplies one actual map and complete two-window moment law, using an
+explicit unitary Fourier normalization. It resolves that finite construction
+task; admission as a physical TT normalization still requires the action,
+coordinate/readout and scalar comparison at the candidate's claimed scope.
 
 Candidate admission is decided before target values are inspected:
 
