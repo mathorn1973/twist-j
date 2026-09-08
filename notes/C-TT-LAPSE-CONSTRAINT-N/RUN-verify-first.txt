@@ -1,0 +1,68 @@
+C-TT-LAPSE-CONSTRAINT-N verifier, exact arithmetic
+PASS K0 planar stencil: rates 29,29,65,65 /324 and diagonal 188/324
+PASS K0 g_density sums to <f,Lf>
+PASS K0 word weights sum to 1
+PASS K0 K1 intensities are K1-form for all words and both cuts
+PASS K1 gradient form = (1/2)(d tau)^2 - (1/2)(d h_+)^2 - (1/2)(d h_x)^2, no ell, no vector
+PASS K1 kinetic form = (1/2)[Dh_+^2 + Dh_x^2 + Dh_13^2 + Dh_23^2 - Dtau^2] - Dtau Dell
+PASS K1 R_1 = -2 (second difference of tau): no ell, no TT, no vector
+PASS K3 exact variation of the discrete action reproduces the seven sector equations (lambda = 3 and 7)
+PASS K3/F2 lapse enters linearly: no n^2 term, no Delta n term, its equation is algebraic in the fields
+PASS K2/F1 homogeneous limit H = 2 Phi I: action = sum over 5 sites of -(3/lambda)(Delta Phi)^2, FRW-CANONICAL-FORM sign and coefficient
+PASS K2 contrast: predecessor B+ pairing gives +24 (Delta Phi)^2 per site, opposite sign
+PASS K4 source reading: sum_r iota_t(r) = a^2 for every word and cut (lapse constraint has no k=0 solution on a static flat carrier)
+PASS K4 decoder reading, choice (i): sum_r sigma > 0 for every word (same obstruction)
+PASS K4 decoder reading, choice (ii): sum_r sigma != 0 for every word
+PASS K5/F6 source reading: the conserved continuation is not K1-form for any word at either cut (20 of 20 fail)
+PASS K5 the four static words 0011,0101,1010,1100 also fail (L iota != 0)
+PASS K6 exact eigenpairs: L cos(2 pi r/5) = lambda_1 cos, L cos(4 pi r/5) = lambda_2 cos
+PASS K6 L L^+ = I - J/5 exactly in Q(sqrt5)
+PASS K6 L^+ entries lie in Q(sqrt5), symmetric circulant
+PASS K6 constrained scalar tau solves L tau = sigma - mean(sigma) exactly, zero mean, all ten words, both choices
+PASS K6 choices (i) and (ii) give different tau for every word (declared fork is real)
+FAIL K6 tau is a function of (u_0,u_1): 8 classes, words 0101 and 1010 share (0,0)
+PASS K7/F5 every coefficient is a rational multiple of lambda^0 or lambda^-1, lambda = 216 pi public; the only amplitude is K1's own a
+PASS K1/F4 flat level: the sectors are not propagated by one operator (three distinct behaviours)
+checks: 24 failed: 1
+
+sector operators (flat, planar):
+  h_+ (s=2)          Delta^2 + L, sourced
+  h_x (s=2)          Delta^2 + L
+  h_13, h_23 (s=1)   Delta^2 only, no gradient energy (gauge)
+  tau (s=0)          constraint L tau = source (elliptic), kinetic -1 paired with ell
+  ell (s=0)          no gradient energy (gauge); its equation is the source consistency
+  n (lapse)          algebraic, no kinetic term
+
+zero mode of the constraint source, decoder reading, choice (i) [unit a^2], per (u0,u1) class:
+  (u0,u1)=(-1,-1) words 1100         sum sigma_i = 53/864   sum sigma_ii = 53/864
+  (u0,u1)=(-1, 0) words 1101         sum sigma_i = 161/864   sum sigma_ii = 161/864
+  (u0,u1)=(-1, 1) words 1001         sum sigma_i = 269/864   sum sigma_ii = 269/864
+  (u0,u1)=( 0,-1) words 0100         sum sigma_i = 161/864   sum sigma_ii = 161/864
+  (u0,u1)=( 0, 0) words 0101,1010    sum sigma_i = 53/864   sum sigma_ii = 53/864
+  (u0,u1)=( 0, 1) words 1011         sum sigma_i = 161/864   sum sigma_ii = 161/864
+  (u0,u1)=( 1,-1) words 0110         sum sigma_i = 269/864   sum sigma_ii = 269/864
+  (u0,u1)=( 1, 0) words 0010         sum sigma_i = 161/864   sum sigma_ii = 161/864
+  (u0,u1)=( 1, 1) words 0011         sum sigma_i = 53/864   sum sigma_ii = 53/864
+
+constrained scalar tau (decoder reading, choice (i), unit a^2, cut 0), r = 0..4:
+  (u0,u1)=(-1,-1): [6951/1715360, -845/171536, 1499/857680, -845/171536, 6951/1715360]
+  (u0,u1)=(-1, 0): [-77289/1715360, 47291/857680, -28957/857680, -34681/857680, 109983/1715360]
+  (u0,u1)=(-1, 1): [25743/1715360, 5171/857680, 22559/857680, -65137/857680, 49071/1715360]
+  (u0,u1)=( 0,-1): [-77289/1715360, 109983/1715360, -34681/857680, -28957/857680, 47291/857680]
+  (u0,u1)=( 0, 0): [6951/1715360, 6951/1715360, -845/171536, 1499/857680, -845/171536]
+  (u0,u1)=( 0, 1): [109983/1715360, -77289/1715360, 47291/857680, -28957/857680, -34681/857680]
+  (u0,u1)=( 1,-1): [5171/857680, 25743/1715360, 49071/1715360, -65137/857680, 22559/857680]
+  (u0,u1)=( 1, 0): [47291/857680, -77289/1715360, 109983/1715360, -34681/857680, -28957/857680]
+  (u0,u1)=( 1, 1): [-845/171536, 6951/1715360, 6951/1715360, -845/171536, 1499/857680]
+
+source reading, conservation continuation iota_-1 = 2 iota_0 - iota_1 + L iota_0 (word 0010, u0=1,u1=0):
+  iota_0  = [Fraction(0, 1), Fraction(1, 2), Fraction(1, 2), Fraction(0, 1), Fraction(0, 1)]
+  iota_-1 = [Fraction(-209, 324), Fraction(161, 216), Fraction(269, 216), Fraction(-47, 324), Fraction(-65, 324)]  K1-form: False
+
+verdicts at the stated scope:
+  F1 homogeneous limit not FRW ........ no fire (coefficient -(3/lambda) per site, negative)
+  F2 lapse propagates ................. no fire (linear, algebraic equation)
+  F3 leftover trace radiative mode .... no fire (tau fixed by the constraint, ell gauge)
+  F4 spin-blind TT propagation ........ no fire at the flat level; RW coefficient 1-s^2 not reached (needs a mass background)
+  F5 new free dimensionless coefficient no fire (lambda = 216 pi public; a is K1's own)
+  F6 K1 must change ................... FIRES in the source reading (zero mode + conservation); no fire in the decoder reading
