@@ -178,6 +178,12 @@ required pair of initial fields and common first TRC1 transition together with
 the selected calibrated outgoing readout. Its disposition is
 `SOURCE_NOT_QUALIFIED_FOR_THIS_TEST` for that inspected scope.
 
+The paired test is ready as a conditional equation. Active source
+qualification is finished; it resumes only with a new concrete public
+archival input documenting the missing preparation and transition. There
+is no continuing general wave-archive search, laboratory commission or
+synthetic preparation from arbitrary archived responses under this scope.
+
 A physical test becomes concrete only with that missing linked evidence.
 Agreement would test this preparation/readout/response link in its declared
 range. It would not establish a Born occurrence law, physical preservation of

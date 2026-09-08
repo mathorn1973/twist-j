@@ -326,6 +326,17 @@ justify a new scalar spectrum, determine an action normalization or
 produce a tensor-to-scalar ratio. The predicted finite signed correlation
 is conditional on the complete source and observation equation above.
 
+There is a further limitation specific to this fixed K1 support:
+`h=b^2=b/sqrt(2)` implies `Cov(h)=Cov(b)/2`, including every space/time
+block. After the same fixed linear processing `M`,
+`Cov(M h)=Cov(M b)/2` still holds. Wherever the marginal variances are
+nonzero, normalized correlations therefore cannot distinguish this local
+quadratic reading from the linear reading with a different common scale.
+This is not a general equivalence of linear and quadratic laws; it is an
+exact restriction of this source and this statistic. A measured agreement
+could test the source law and its signal transfer, but these correlations
+alone would not establish that physics requires a quadratic reading.
+
 ## 6. What this physical reading does and does not establish
 
 The observation functional now has physical record semantics: signed
@@ -337,6 +348,11 @@ identities do not establish that the electric-field anisotropy is a
 gravitational field or satisfies a TT propagation equation. Neither a
 physical source/preparation realizing the ten-word law nor the required
 record/calibration instance has been supplied or certified in this work.
+Programming a preparation to realize exactly these fields and word weights
+would test a realization of the supplied model. It would not independently
+test that a physical process selects those weights. Any later comparison
+must distinguish inputs imposed by preparation from outputs produced by
+the independently tested dynamics.
 
 There is no scalar denominator hidden in the construction. The original
 slot norm

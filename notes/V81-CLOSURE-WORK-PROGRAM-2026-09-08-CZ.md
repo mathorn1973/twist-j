@@ -20,9 +20,12 @@ závěrečné recenzi sloučena do veřejného main v commitu
 implementaci přesně dvou expozic a pevnou K1. Tím je tato programová etapa
 dokončena. Nevydává se nový Canon a nepřidává se kapacita obnovy ani K2/K3.
 
-Další úsilí míří na dvě konkrétní fyzikální vazby: podepsaný poměr prvních
-odezev TRC1 a lokální kvadratický odečet K1 se zachovanou úplnou kovariancí.
-Původní klauzule vlastníků zůstávají širší; tyto dílčí vazby je nenahrazují.
+Dodávka #906 uzavírá přesné podmíněné čtení: párový poměr TRC1 a lokální
+kvadratický odečet K1. Aktivní kvalifikace archivů TRC1 je ukončena a naváže
+jen konkrétní nový veřejný podklad k přípravě a prvnímu přechodu. Hlavní
+další úkol je jedno rozhodnutí o připuštění pevné K1 do geometrického čtení:
+určit její roli, skutečný spojující zákon a skalární srovnání ve stejném
+fyzikálním rámci. Původní klauzule vlastníků se tím nezmenšují.
 
 | Pořadí | Větev A: jeden měřicí řetězec | Větev B: normalizace TT |
 |---|---|---|
@@ -50,6 +53,13 @@ prohazuje přiřazení dvou korelačních hodnot mezi pozicemi `1,4` a `2,3`.
 Poznámka dodává plnou kovarianci i její přenos; fyzikální realizace tohoto
 zdrojového zákona a převod na gravitační strain zůstávají nedoložené.
 Deterministická slotová norma neposkytuje nenulový skalární jmenovatel.
+
+Navíc na podpoře pevné K1 platí `b^2=b/sqrt(2)`. Její normalizované
+korelace po stejném pevném lineárním zpracování proto nerozlišují tento
+kvadratický odečet od lineárního s jiným společným měřítkem. Potvrzení
+těchto korelací samo nerozhodne fyzikální nutnost čtverce. Geometrické
+připuštění musí vyjít z existující akce, dynamiky nebo nezávisle odůvodněného
+slovníku; další korelace ani naprogramování zadaných vah je nenahradí.
 
 Následující oddíly zachycují dokončený podpůrný základ. Nejsou zadáním
 k jeho dalšímu rozšiřování ani k opakování stejného hledání NIST run3.
