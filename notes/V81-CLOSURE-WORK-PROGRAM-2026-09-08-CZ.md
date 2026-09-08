@@ -95,6 +95,10 @@ průchody, `N=0`, prázdné porty, pasivní čtení a neúplnou nebo vyčerpanou
 obnovu. Jde o softwarové ověření omezené implementace, nikoli průchod
 vědeckou branou. Zapečetěné implementace RRP1/TRC1 se tím nepřepisují.
 
+Po kontrole a zveřejnění kódu i rozsahu ověření prošlo všech 13 lokálních
+regresních testů implementace. Přesný commit, příkaz, prostředí a hashe jsou
+v jejím README; nejde o nový formální vědecký výsledek.
+
 Recenzní nález APPEND se řeší přímo v této konstrukci: `HistoryState` je
 typ všech konečných posloupností EventRecord a `append` je úplné připojení.
 Samostatný predikát kontroluje přípustnost s protokolovou pozicí a správním

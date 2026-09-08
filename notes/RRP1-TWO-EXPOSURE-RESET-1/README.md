@@ -1,6 +1,6 @@
 # RRP1 two-exposure reset: software implementation
 
-**NON-CANONICAL / NOT YET EXECUTED / NO PHYSICAL CONFORMANCE RESULT.**
+**NON-CANONICAL / SOFTWARE CHECKS PASS / NO PHYSICAL CONFORMANCE RESULT.**
 
 This is the bounded software implementation of
 [the two-exposure definition](../V81-RRP1-FINITE-RESET-ADAPTER-1.md), on Public
@@ -13,8 +13,8 @@ selection from observations or statistical independence is implemented.
 Files: [adapter.py](adapter.py), [test_adapter.py](test_adapter.py). These are
 implementation regression checks under `notes/`, not a formal scientific
 probe, empirical test, complete #539 verifier or owner-closing result. The
-scientific owner `QDD-INSTRUMENT-APPARATUS` remains open. A successful test run
-would establish only the listed finite software behavior.
+scientific owner `QDD-INSTRUMENT-APPARATUS` remains open. The successful test
+run establishes only the listed finite software behavior.
 
 ## Dependency and execution boundary
 
@@ -26,10 +26,11 @@ An occupied import name or unexpected source identity/origin stops import.
 Use one fresh Python process for these checks; no other TRC1 engine should
 already occupy its module names. No sealed source is edited or copied.
 
-Only source inspection and compilation/AST parsing are allowed during this
-preparation. The complete implementation, tests and this scope are to be
-reviewed, publicly committed, pushed and read back before first execution.
-The intended ordinary software-test command, from the repository root, is:
+Source inspection and compilation/AST parsing preceded execution. The
+complete implementation, tests and scope were independently reviewed,
+committed, pushed and read back at
+`f76ceedce5a2246067154aa3a96a293d477562dd` before the first execution.
+The ordinary software-test command, from the repository root, is:
 
 ```text
 python -B -m unittest discover -s notes/RRP1-TWO-EXPOSURE-RESET-1 -p test_adapter.py -v
@@ -38,8 +39,19 @@ python -B -m unittest discover -s notes/RRP1-TWO-EXPOSURE-RESET-1 -p test_adapte
 Use Python 3.12 and its standard library. Running this command
 imports and executes the sealed engine and the new adapter. It accesses no
 experimental data or network and writes no scientific `EXPECTED`/`RUN` record.
-There is currently no execution result. The actual software check outcome
-will be recorded after the reviewed public pin; this README asserts no PASS.
+
+On 2026-09-08, this command completed on Windows x86_64 with Python 3.12.10:
+**13 tests passed, zero failures, zero skips, exit 0**. Source identities:
+
+| File | SHA-256 |
+|---|---|
+| `adapter.py` | `2f3e863c9970e6bac2ff6d98ca007e454f869be4f0c2dffe91e9d30a2738922e` |
+| `test_adapter.py` | `3058c2eda9e0971bc57cdd5629cb6b21305826b7da547ae94e12726f5e294084` |
+
+The two source files are unchanged from the public pre-execution commit.
+This is a local software-test result. The required repository CI separately
+checks repository policy and its own tests; it does not execute these
+`notes/` regressions. No cross-architecture scientific result is asserted.
 
 ## Carriers, exact domains and history admission
 
