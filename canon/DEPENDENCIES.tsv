@@ -772,3 +772,10 @@ U-NATIVE-READER-STREAM-SPECTRA	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated ma
 U-NATIVE-APPARATUS-HISTORY-FACTOR	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
 QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
 QDD-CONDITIONAL-INCIDENCE-FINITE-AUDIT	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
+DEF-K1-LINEAR-METRIC	DEF-ARCHITECTURE	REQUIRES	the complete K1 word packet, unit normalization, marked coordinates, square, recurrence and output are explicit added mathematical choices within the declared architecture; they are not derived from J
+K1-LINEAR-METRIC-COMPLETION	DEF-K1-LINEAR-METRIC	REQUIRES	the theorem is conditional on exactly the fully displayed mathematical input, action and literal output equality
+K1-LINEAR-METRIC-COMPLETION	TT-SQUARING-DECODER	BOUNDED_BY	the local algebraic square is fixed in the definition; its use does not inherit or promote the physical tensor dictionary
+K1-LINEAR-METRIC-COMPLETION	PHOTON-SPATIAL-TEMPORAL-TRANSFER	BOUNDED_BY	the planar L and recurrence are explicit mathematical choices; no physical photon interpretation or additional lift is imported
+K1-LINEAR-METRIC-COMPLETION	FRW-INHOM	BOUNDED_BY	the linear vacuum action supplies no higher-order TT source or homogeneous nonlinear gravitational response
+K1-LINEAR-METRIC-COMPLETION	TT-SOURCE	BOUNDED_BY	an initial packet-to-matrix map is not a derived physical emission map or source realization
+K1-LINEAR-METRIC-COMPLETION	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	fixed a=1 and a complete finite input law supply no physical scalar comparison, action-unit identification or numerical r_T

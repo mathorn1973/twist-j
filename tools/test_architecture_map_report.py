@@ -24,15 +24,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 406)
+        self.assertEqual(self.report.claims, 407)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 45, "F": 18, "H": 2, "O": 28, "T": 274},
+            {"C": 39, "D": 45, "F": 18, "H": 2, "O": 28, "T": 275},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 50,
+                "none": 51,
                 "one-architecture": 9,
                 "recorded-audit": 31,
                 "two-architecture": 316,
@@ -41,11 +41,20 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 182)
+        self.assertEqual(len(self.report.direct_architecture_requires), 183)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 265
+            len(self.report.transitive_architecture_dependents), 267
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v82 adds an explicit mathematical definition requiring the
+        # architecture and a theorem requiring only that definition.
+        self.assertIn("DEF-K1-LINEAR-METRIC", self.report.direct_architecture_requires)
+        self.assertNotIn(
+            "K1-LINEAR-METRIC-COMPLETION", self.report.direct_architecture_requires
+        )
+        for item in ("DEF-K1-LINEAR-METRIC", "K1-LINEAR-METRIC-COMPLETION"):
+            self.assertIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.dependency_terminals)
         # The eight v81 decoder-boundary theorems declare same-layer L1
         # requirements and owner boundaries only. Seven reach the architecture
         # transitively through registered native rows; the renewal inverse
