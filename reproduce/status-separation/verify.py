@@ -32,6 +32,61 @@ SUCCESSOR_MANIFEST_DIR = (
 )
 
 
+# Frozen from the public v82 proposal merge, still carrying the v81 ledgers:
+# dc10fba7c0501e08d6843aaab49ae32d1239a79f. Remove only the exact v82 additions;
+# every recovered byte must equal that immutable base before older guards run.
+V82_LEDGER_PATCH = {
+    "REGISTRY.tsv": {
+        "prior_sha256": "ce8906de1b427d0b79714a2abece6d8b7efe5f74ebd53ec46f8b195373a354eb",
+        "remove": ("a22f3ca417a67c98766a6e43c5e8090b35baac40a4c1c14d90465e9af97e8f45",),
+    },
+    "NORMATIVE.tsv": {
+        "prior_sha256": "8f3e71ad64e56b2cfd0ce0b0ceef1db15ec28a6eca0ea8e51562642a8fa58486",
+        "remove": (
+            "60cef2d630857d230ab87e9049596f0be6d709d17ab8df337da2785b9001b580",
+            "e323ca695286544bcf321f7e3a31470e9c6d65fa3ce2d44fb2394f959fb41227",
+        ),
+    },
+    "DEPENDENCIES.tsv": {
+        "prior_sha256": "eb68977b3e5b886c07d4d897bfeaef1152c4632a651d457de2bb2d1bdb76060c",
+        "remove": (
+            "b776e8404c557538ea7a434a3eee8719be67af19cda36fa31730e8c4b7fbf86b",
+            "99c5ea6d1605dca026e0ce4409da313192fd86501febb9bdeeadff396d817bcc",
+            "61ac2c3e724be1404ec15f113d5f36affbcb234d768eb8954efd4d7c6d6bc749",
+            "6ec4941f7fa705796ad1c1e352383d130ca44f615c416241995bd24f40a77caa",
+            "90f10ecc5f53cc886f447c426a19f31faa753cfc7e991c6a1fe2e143a050d9a8",
+            "faf98c74fbe9df95ba08414514ee92890f27d0471ae2b41ec3afb174e5a0611d",
+            "7854a49740827f3cfddc34d4ffae20095ff6a52461bf93c1fa351d4da2acddb4",
+        ),
+    },
+    "EVIDENCE.tsv": {
+        "prior_sha256": "8981e3ef5349dc3e2990cc8d475fba70eb45fa150f6fdd4ffb7b0f697a32ff9d",
+        "remove": ("bcd371f77365535676b89aa5c0c7a546b27dd1f6481e4bfc580914f6f7936732",),
+    },
+    "HISTORY.tsv": {
+        "prior_sha256": "dd0f10a0355820cecc633ba6bfce25ef1bc1d8da9b1a6b5df64093b010e372ff",
+        "remove": ("88906bab82b9599477b6501fd6aee92845d5840188b82dde7b7108e1b8edf611",),
+    },
+    "GATES.tsv": {
+        "prior_sha256": "f1f7fb10abf68f248c47933bd220209dc13f7c45ec60c0d44d26a92ee0e1a333",
+        "remove": (),
+    },
+    "FRONTIER_PROGRAMS.tsv": {
+        "prior_sha256": "95db755bb7b2f49e2642123649767a7036fd69099db5d2148ef43fac655b97e2",
+        "remove": (),
+    },
+    "CORE_SELECTION.tsv": {
+        "prior_sha256": "eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e",
+        "remove": (),
+    },
+}
+V82_DEFINITION = "DEF-K1-LINEAR-METRIC"
+V82_CLAIM = "K1-LINEAR-METRIC-COMPLETION"
+V82_SCOPE_SHA256 = "fccb3c0857cb84865abcc9dfd84199d25dc905c361a541bf664104ebe99697f1"
+V82_CANON_BYTES = 11800
+V82_CANON_SHA256 = "374f23a670a5a6df3d8c4ebc3c7dc36339a13434408954e6671e232305b72f45"
+
+
 # Frozen from public v80 activation 4577448dba85c492b27773a64e5fd557abc02b30.
 # Remove only these exact new v81 lines, then verify every restored v80 byte.
 # This outermost reconstruction feeds the unchanged v80 and v79 patches below.
@@ -384,12 +439,34 @@ V79_NATIVE_ROWS = {
 }
 
 
-def v81_previous_bytes(path):
-    """Recover byte-identical v80 tables using only the frozen v81 additions."""
-    patch = V81_LEDGER_PATCH[path.name]
+def v82_previous_bytes(path):
+    """Recover byte-identical v81 tables using only the frozen v82 additions."""
+    patch = V82_LEDGER_PATCH[path.name]
     removed = {digest: 0 for digest in patch["remove"]}
     kept = []
     for position, line in enumerate(path.read_bytes().splitlines(keepends=True)):
+        digest = hashlib.sha256(line).hexdigest()
+        if position and digest in removed:
+            removed[digest] += 1
+        else:
+            kept.append(line)
+    if any(count != 1 for count in removed.values()):
+        return None
+    previous = b"".join(kept)
+    if hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]:
+        return None
+    return previous
+
+
+def v81_previous_bytes(path):
+    """Recover byte-identical v80 tables using only the frozen v81 additions."""
+    patch = V81_LEDGER_PATCH[path.name]
+    current_v81 = v82_previous_bytes(path)
+    if current_v81 is None:
+        return None
+    removed = {digest: 0 for digest in patch["remove"]}
+    kept = []
+    for position, line in enumerate(current_v81.splitlines(keepends=True)):
         digest = hashlib.sha256(line).hexdigest()
         if position and digest in removed:
             removed[digest] += 1
@@ -678,18 +755,18 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 274, "D": 45, "C": 39, "F": 18,
+    expected_counts = {"T": 275, "D": 45, "C": 39, "F": 18,
                        "O": 28, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v81",
-        len(rows) == 406
+        "registry and companion-ledger counts match Public Canon v82",
+        len(rows) == 407
         and counts == expected_counts
-        and len(normative) == 455
-        and len(dependencies) == 773
-        and len(evidence) == 406
+        and len(normative) == 457
+        and len(dependencies) == 780
+        and len(evidence) == 407
         and two_architecture == 316
-        and len(history) == 939
+        and len(history) == 940
         and len(gates) == 15
         and len(programs) == 30
         and len({row["program_id"] for row in programs.values()}) == 8
@@ -6213,10 +6290,19 @@ def run():
             table_row_sha256(row)
         for row in dependencies if row["item_id"] in v74_contract
     }
+    # Keep the historical consumer contract unchanged. The exact v82 intake
+    # below owns its added BOUNDED_BY consumer; only a byte-verified v81
+    # dependency table may feed this older boundary check.
+    v81_dependency_bytes = v82_previous_bytes(DEPENDENCIES)
+    v81_dependency_rows = (
+        list(csv.DictReader(io.StringIO(v81_dependency_bytes.decode("utf-8")),
+                            delimiter="\t"))
+        if v81_dependency_bytes is not None else []
+    )
     v74_actual_consumers = {
         claim: {
             (row["item_id"], row["relation"])
-            for row in dependencies if row["depends_on"] == claim
+            for row in v81_dependency_rows if row["depends_on"] == claim
         }
         for claim in v74_expected_consumers
     }
@@ -7302,6 +7388,94 @@ def run():
             "QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS",
             "QDD-INSTRUMENT-CLASS-COMPLETENESS",
         )),
+    ))
+
+    checks.append((
+        "V82-PRIOR-LEDGERS",
+        "only exact pinned v82 additions are removed to recover every v81 byte; "
+        "the unchanged v81, v80 and v79 contracts still enforce every older ledger hash",
+        set(V82_LEDGER_PATCH) == set(V81_LEDGER_PATCH)
+        and tuple(len(V82_LEDGER_PATCH[name]["remove"]) for name in (
+            "REGISTRY.tsv", "NORMATIVE.tsv", "DEPENDENCIES.tsv", "EVIDENCE.tsv",
+            "HISTORY.tsv", "GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv",
+        )) == (1, 2, 7, 1, 1, 0, 0, 0)
+        and all(
+            v82_previous_bytes(ROOT / "canon" / name) is not None
+            for name in V82_LEDGER_PATCH
+        ),
+    ))
+    v82_items = {V82_DEFINITION, V82_CLAIM}
+    v82_boundaries = {
+        "TT-SQUARING-DECODER": "D",
+        "PHOTON-SPATIAL-TEMPORAL-TRANSFER": "D",
+        "FRW-INHOM": "O",
+        "TT-SOURCE": "O",
+        "TT-VECTOR-STATE-NORMALIZATION": "O",
+    }
+    v82_expected_edges = {
+        (V82_DEFINITION, "DEF-ARCHITECTURE", "REQUIRES"),
+        (V82_CLAIM, V82_DEFINITION, "REQUIRES"),
+    } | {(V82_CLAIM, owner, "BOUNDED_BY") for owner in v82_boundaries}
+    v82_actual_edges = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies
+        if row["item_id"] in v82_items or row["depends_on"] in v82_items
+    }
+    v82_events = [row for row in history if row["claim_id"] == V82_CLAIM]
+    v82_start = canon_text.find("### DEF-K1-LINEAR-METRIC\n")
+    v82_end = canon_text.find("## 15. Couplings, instruments, and metrology", v82_start)
+    v82_block = (
+        canon_text[v82_start:v82_end].encode("utf-8")
+        if v82_start >= 0 and v82_end > v82_start else b""
+    )
+    checks.append((
+        "V82-K1-LINEAR-METRIC",
+        "one explicit L1 definition and one inline-proof theorem fix the K1 matrix "
+        "history, full linear equations and all-time signature; exact boundary edges "
+        "preserve physical readings and open owners without a native-U or nonlinear closure",
+        has_status(index, V82_CLAIM, "T")
+        and V82_DEFINITION not in index
+        and V82_DEFINITION not in evidence
+        and scope_sha256(index, V82_CLAIM) == V82_SCOPE_SHA256
+        and index[V82_CLAIM]["canon_section"] == "14. The gravitational wave program"
+        and index[V82_CLAIM]["evidence"] == "inline"
+        and normative.get(V82_DEFINITION) == {
+            "item_id": V82_DEFINITION, "item_type": "DEFINITION", "claim_id": "",
+            "status": "", "layer": "L1", "gate_ids": "",
+            "statement_source": "canon/CANON.md::" + V82_DEFINITION,
+        }
+        and normative.get(V82_CLAIM) == {
+            "item_id": V82_CLAIM, "item_type": "THEOREM", "claim_id": V82_CLAIM,
+            "status": "T", "layer": "L1", "gate_ids": "",
+            "statement_source": "canon/CANON.md::" + V82_CLAIM,
+        }
+        and evidence.get(V82_CLAIM) == {
+            "claim_id": V82_CLAIM, "evidence_id": "EV-" + V82_CLAIM,
+            "evidence_kind": "INLINE_CANON", "location": "inline",
+            "sha256": V82_SCOPE_SHA256, "hash_mode": "registry-scope-sha256-v1",
+            "architecture_requirement": "none",
+        }
+        and len(v82_events) == 1
+        and v82_events[0]["event_id"] == "CANON82-DECLARE-" + V82_CLAIM
+        and v82_events[0]["event_sequence"] == "1"
+        and v82_events[0]["release"] == "canon-v82-candidate"
+        and v82_events[0]["event_type"] == "DECLARE"
+        and v82_events[0]["previous_status"] == "-"
+        and v82_events[0]["new_status"] == "T"
+        and v82_events[0]["scope_sha256"] == V82_SCOPE_SHA256
+        and v82_events[0]["evidence_id"] == "EV-" + V82_CLAIM
+        and v82_events[0]["evidence_location"] == "inline"
+        and v82_events[0]["evidence_sha256"] == V82_SCOPE_SHA256
+        and not any(row["claim_id"] == V82_DEFINITION for row in history)
+        and v82_actual_edges == v82_expected_edges
+        and len(v82_block) == V82_CANON_BYTES
+        and hashlib.sha256(v82_block).hexdigest() == V82_CANON_SHA256
+        and b"### K1-LINEAR-METRIC-COMPLETION [T]" in v82_block
+        and all(has_status(index, owner, status)
+                for owner, status in v82_boundaries.items())
+        and all(item not in programs and item not in frontier_text for item in v82_items)
+        and all(row["owner_item_id"] not in v82_items for row in gates.values())
+        and all(row["claim_id"] not in v82_items for row in core_selection_rows),
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
