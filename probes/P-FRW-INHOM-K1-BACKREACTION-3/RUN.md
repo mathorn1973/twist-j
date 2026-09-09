@@ -41,3 +41,13 @@ The independent pre-result audit already public in issue #923 is
 corroboration, not an additional blind run. Subsequent homogeneous time
 bridge constructions are outside this frozen execution and are not
 attributed to it.
+
+## Public replay evidence
+
+[Workflow 34342847790](https://github.com/mathorn1973/twist-j/actions/runs/34342847790)
+completed successfully for the first result commit of PR #925. Both required
+Linux architecture jobs, x86_64 and aarch64 with Python 3.12, ran the ordinary
+probe verifier gate and matched this exact `EXPECTED.txt`. The aggregate
+`check` passed. No scientific input, accepted verifier or expected output
+changed to obtain the public match. The final documentation head retains
+the same scientific bytes and must independently pass the required checks.

@@ -1,11 +1,13 @@
 # Result: P-FRW-INHOM-K1-BACKREACTION-3
 
-**Status: PASS-CONSTRUCT-CANDIDATE locally; G12 public replay required.**
+**Status: PASS-CONSTRUCT.**
 
 The accepted verifier completed with exit zero, empty stderr and every
 scientific gate G1 through G11 passing. `EXPECTED.txt` is its exact output.
-No frozen scientific falsifier fired. The final `PASS-CONSTRUCT` disposition
-requires the public two-architecture workflow to reproduce these bytes.
+No frozen scientific falsifier fired. Public workflow `34342847790` replayed
+the accepted verifier on both x86_64 and aarch64 at the first result head
+of PR #925, with exact stdout identity and aggregate check success. This
+completes G12; the final documentation head is also subject to both jobs.
 
 The result concerns the one selected typed construction on `X=(Z/5)^3`:
 the incidence Laplacian and exact planar reduction, the ten fixed K1 inputs,
