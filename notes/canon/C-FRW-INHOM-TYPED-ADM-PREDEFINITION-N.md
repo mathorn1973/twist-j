@@ -207,6 +207,15 @@ It is not a second lapse or a new dynamical degree. `ell_perp` has zero spatial
 mean. Therefore the constant and mean-zero Hamiltonian equations are both
 retained and cannot be confused by projection.
 
+This higher-order typed completion deliberately places its perturbative lapse
+on the time links where the conserved K1 Noether energy lives. The v82
+comparison action placed its auxiliary quadratic lapse on integer slices. That
+older placement was explicitly a mathematical choice, not a uniqueness theorem.
+This note does not claim to inherit it. What is inherited unchanged from v82 is
+the K1 output, the plus tensor, the public `L`, and the complete TT recurrence.
+The link-lapse placement is a new declared physical-reading choice and is part
+of the future falsifier.
+
 The gauge parameter `xi_n` is mean-zero and acts only on the local split. The
 homogeneous time reparametrization remains owned by the public FRW background.
 
@@ -299,16 +308,29 @@ identity.
 
 ## 9. Constraint action and cubic Noether completion
 
-Let `V_0` be the mean-zero vertex subspace and write `Pi_0` for subtraction of
-the spatial mean. Let the typed edge momentum be
+Let `V_perp` be the mean-zero vertex subspace and write `Pi_0` for subtraction
+of the spatial mean. Every edge field `P` has the unique divergence Hodge split
+
+```text
+P = W B tau + p_perp,
+tau in V_perp,
+p_perp in ker(B^T),
+```
+
+because `L3 tau = B^T P` has one unique mean-zero solution and
+`im(WB) intersect ker(B^T)={0}`. This is an algebraic direct sum; no claim of
+orthogonality in the unweighted edge product is made.
+
+For the time-dependent typed edge momentum freeze
 
 ```text
 p_perp_n in ker(B^T),
 P_n = W B [tau_(n+1/2)-tau_(n-1/2)] + p_perp_n.
 ```
 
-Here `p_perp_n` is an auxiliary geometric field varied inside `ker(B^T)`. It is
-not selected after inspecting the source. Its equation and the shift equation
+Here `p_perp_n` is the co-closed part forced by the full typed edge carrier. It
+is an auxiliary geometric field varied inside `ker(B^T)`, not a source-specific
+extra branch introduced after inspection. Its equation and the shift equation
 together determine the co-closed part of the momentum constraint.
 
 Before the common factor `1/(2 lambda)`, freeze the local constraint terms
@@ -569,9 +591,9 @@ G4  Global energy identity and all-time conservation conditional on R_n=0.
 G5  Cubic Noether identity delta_0 A3 + delta_1 A2 = 0 exactly.
 G6  Coefficient solve: alpha=beta, gamma=alpha/2; source convention fixes alpha=1.
 G7  Hamiltonian constraint has a unique mean-zero tau solution for every admitted source.
-G8  Momentum solution p_perp exists in ker(B^T), with its on-shell value fixed by the shift equation.
+G8  Divergence Hodge split is exact and the momentum solution p_perp exists in ker(B^T), with its on-shell value fixed by the shift equation.
 G9  Total-lapse split is exact: local source is Pi_0 e, homogeneous source is bar_e, no zero mode is discarded, and h=0 returns every registered FRW identity unchanged.
-G10 No new free dimensionless coefficient appears.
+G10 No new free dimensionless coefficient appears, including no compensating coefficient for the new link-lapse placement.
 G11 K1 source law, amplitudes, words, and ordering remain byte-identical to the public definition inputs consumed.
 G12 Security, policy, action-layer and dependency checks pass.
 ```
@@ -614,6 +636,7 @@ This predefinition does not claim:
 - a Schwarzschild or Regge-Wheeler pullback;
 - QCD or matter-source closure;
 - an all-epoch cosmological transfer function;
+- identity of the new link-lapse staggering with the v82 auxiliary comparison-action staggering;
 - a status move for `FRW-INHOM`, `TT-SOURCE`, or
   `TT-VECTOR-STATE-NORMALIZATION`.
 
