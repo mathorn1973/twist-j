@@ -323,6 +323,17 @@ directory is untouched, and a changed-path check cannot see that. The
 one-probe-per-pull-request rule is unaffected: it still counts only the probe
 directories the diff names.
 
+A sealed probe that explicitly froze its complete runtime authority context
+may be registered in `tools/probe_replay_contexts.json` for historical replay.
+The reviewed registration binds its original ancestor pin, unchanged verifier
+and preregistration, and every admitted context file by Git blob, SHA-256 and
+byte count. The runner materializes only those exact files from that pin in a
+temporary tree; current run records and expected stdout remain authoritative
+for the byte comparison. No probe is skipped and no scientific threshold is
+changed. This reproduces evidence in its declared historical context; current
+Canon, ledger, gate and activation checks still run against the current tree.
+Changes to the context registration or runner also replay the registered probes.
+
 The publication job reruns policy, unit, Canon, ledger and explicit gate
 contract checks, then performs the activation readback. Tag and release events
 skip changed-path checks because those events do not supply a valid comparison

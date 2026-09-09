@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "probes": {
+    "P-FRW-INHOM-K1-BACKREACTION-3": {
+      "pin_commit": "1f3a3d5b074547991919ad52824d6c7f6f591550",
+      "verifier": {
+        "git_blob": "34a26da1a7ae50622258ab26b081350de5297961",
+        "sha256": "12da283759b30ed9a1a388f4e022a0230e2362bd3ed2e420dacb31cc1d1c6596",
+        "bytes": 16525
+      },
+      "prereg": {
+        "git_blob": "9cb721b66ac48d9ed05235923a05b13242e6a1bd",
+        "sha256": "958373cde52385702694fc5afe477cd08ae8fbdc6d85fe27cee79daf7e720b67",
+        "bytes": 7243
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "956bd2399d5c4c94de039b04dbf0519b8a611fa6",
+          "sha256": "5dcbf2abac151af1e6019ea4c009c7631cb773824a850bc5f5ff61bb324f9146",
+          "bytes": 580724
+        },
+        "STATUS.md": {
+          "git_blob": "3ba864420c8730c9b9f8330c2e1fcee2a621b4a0",
+          "sha256": "ccaf9a3d3456d67d8fe509a9db92dac404f9a126f1f2cc9d63d38ba2760c8b83",
+          "bytes": 2386
+        },
+        "notes/canon/C-FRW-INHOM-TYPED-ADM-PREDEFINITION-N.md": {
+          "git_blob": "aaa5fb116b681e7fdf941598736fb4ef76809065",
+          "sha256": "dec0394d37b73b5e58d9fa50ee11863ae1bd783595347a19401d4bd4c7b41466",
+          "bytes": 21696
+        }
+      }
+    }
+  }
+}
