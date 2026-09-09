@@ -27,7 +27,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(self.report.claims, 407)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 45, "F": 18, "H": 2, "O": 28, "T": 275},
+            {"C": 39, "D": 46, "F": 18, "H": 2, "O": 27, "T": 275},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -41,11 +41,18 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 183)
+        self.assertEqual(len(self.report.direct_architecture_requires), 184)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 267
+            len(self.report.transitive_architecture_dependents), 268
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v83 adds one explicit hybrid definition. FRW-INHOM changes O to D
+        # while retaining its architecture dependency through the selected gate.
+        hybrid = "DEF-K1-HYBRID-FRW-CELL-METRIC"
+        self.assertIn(hybrid, self.report.direct_architecture_requires)
+        self.assertIn(hybrid, self.report.transitive_architecture_dependents)
+        self.assertNotIn(hybrid, self.report.dependency_terminals)
+        self.assertIn("FRW-INHOM", self.report.direct_architecture_requires)
         # v82 adds an explicit mathematical definition requiring the
         # architecture and a theorem requiring only that definition.
         self.assertIn("DEF-K1-LINEAR-METRIC", self.report.direct_architecture_requires)

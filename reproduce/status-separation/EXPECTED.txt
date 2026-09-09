@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v82
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v83
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -81,6 +81,8 @@ PASS 77 V80-READING-BOUNDARIES two later L4 theorems bound the quadratic decoder
 PASS 78 V81-PRIOR-LEDGERS only exact pinned v81 additions are removed to recover every v80 byte; the unchanged v80 and v79 reconstructions still enforce every older ledger hash
 PASS 79 V81-DECODER-BOUNDARY eight L1 theorems delimit relational reading, occurrence, native readers, addresses, loaders, registration pairs and the composed record chain on exact two-architecture probes; they add no gate, program or CORE selection, declare only same-layer requirements and owner boundaries, and leave every physical QDD owner open
 PASS 80 V82-PRIOR-LEDGERS only exact pinned v82 additions are removed to recover every v81 byte; the unchanged v81, v80 and v79 contracts still enforce every older ledger hash
-PASS 81 V82-K1-LINEAR-METRIC one explicit L1 definition and one inline-proof theorem fix the K1 matrix history, full linear equations and all-time signature; exact boundary edges preserve physical readings and open owners without a native-U or nonlinear closure
+PASS 81 V82-K1-LINEAR-METRIC at v82, one explicit L1 definition and one inline-proof theorem fix the K1 matrix history, full linear equations and all-time signature; exact boundary edges preserve physical readings and open owners without a native-U or nonlinear closure
+PASS 82 V83-PRIOR-LEDGERS exact current v83 row hashes precede the only allowed removals and restores; every v82 byte is recovered before the unchanged v82-to-v81 and older hash guards
+PASS 83 V83-FRW-HYBRID one O-to-D existence closure adopts the exact joint-action proof and named L1-to-L2 hybrid dictionary; no theorem is promoted, the wider scalar-action boundary survives, and TT emission, normalization and SI owners remain open
 
-RESULT 81/81 ALL PASS
+RESULT 83/83 ALL PASS

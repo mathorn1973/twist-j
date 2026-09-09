@@ -57,9 +57,6 @@ Closed claims are excluded.
 - DE-CONFORMAL-WEIGHT [O]: the typed homogeneous dictionary, if any, selecting the dark-energy density character Delta_DE defined by d rho_DE / d chi = -Delta_DE rho_DE for chi = log a; no dictionary source, physical trace-to-density transport, inhomogeneous extension, SI statement, or measured fit is included
   Queue: FOLLOWUP; STOP; FORMAL.
   Decision: DE-TRACE-DENSITY-UNDERDETERMINATION proves FRW continuity alone is nonunique; closes positively only when an explicit registered source and complete typed dictionary uniquely select Delta_DE; closes negatively only after a frozen complete admissible source class excludes every such dictionary; STOP while the carrier, source map, equality, admissible class, or dependencies are incomplete; reject as CIRCULAR any closure that assumes w = -14/15, Delta_DE = 1/p, rho_DE proportional to a^(-1/p), or Delta_DE := gamma_tr, or that uses COSMOLOGY-REGISTER or COSMOLOGY-READING-DICTIONARY to choose the source or dictionary
-- FRW-INHOM [O]: the inhomogeneous sector, the named classical horizon
-  Queue: FOLLOWUP; BLOCKED; FORMAL.
-  Decision: closes positively by an inhomogeneous source construction that reproduces the public FRW-CANONICAL-FORM identities in the homogeneous limit; closes negatively if every inhomogeneous extension breaks the exact chain of twelves
 - NS-TILT [H]: the scalar tilt read as n_s - 1 = -5 alpha
   Queue: FOLLOWUP; BLOCKED; EMPIRICAL.
   Decision: live: the tilt n_s - 1 = -5 alpha fails against CMB-S4
@@ -121,4 +118,4 @@ Closed claims are excluded.
   Queue: ROOT; STOP; ENRICHMENT.
   Decision: STOP until a non-circular transfer mechanism, its complete domain, approximation or kernel, uniform norm and reconstruction errors are frozen; closes positively at RH strength only by deriving the displayed all-epsilon estimate from the refined shell, and closes negatively only after a frozen complete admissible transfer class containing both route families is proved empty or incapable of any such transfer; failure of one candidate or every fixed-mode estimate is STOP, not negative closure
 
-Live total: 30.
+Live total: 29.
