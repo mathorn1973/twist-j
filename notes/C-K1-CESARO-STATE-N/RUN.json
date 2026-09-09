@@ -1,0 +1,29 @@
+{
+  "architecture": "x86_64",
+  "independent_author": false,
+  "initial_exploratory_algebra": "SymPy exact arithmetic after PREREG; shipped scripts require standard library only",
+  "platform": "Linux",
+  "prereg_sha256": "ec96b436725ed88fc91fe43258b89f9df85148bfd7fa2c5e268c81b61bcb9485",
+  "public_owner_closed": false,
+  "python": "3.13.5",
+  "records": [
+    {
+      "exact_replay": true,
+      "exit_code": 0,
+      "script": "verify.py",
+      "stderr_bytes": 0,
+      "stdout_bytes": 2741,
+      "stdout_sha256": "6691723ab3f499451a57fbc23ac9e19a63afc6f7701dcd561a5135a04165845f"
+    },
+    {
+      "exact_replay": true,
+      "exit_code": 0,
+      "script": "break.py",
+      "stderr_bytes": 0,
+      "stdout_bytes": 2546,
+      "stdout_sha256": "5d24e87d5bac768d86f0bfeaedfbb0564f2065fcb6c8e09f06b2bafd2dca5df0"
+    }
+  ],
+  "status": "NON-CANONICAL; same-agent single-architecture exact audit",
+  "two_architecture_gate": false
+}

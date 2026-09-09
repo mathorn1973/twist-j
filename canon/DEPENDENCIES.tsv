@@ -223,7 +223,6 @@ TM-SYM2-MEASURE	GYRON-DENSITY	REQUIRES	registered measure residual uses rho = 1/
 MASS-LADDER-FORMS	NEUTRON-DELTA-EM	BOUNDED_BY	neutron comparison remains open
 TT-QUADRATIC-INDUCED	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	normalization remains open
 COSMOLOGY-REGISTER	NS-TILT	BOUNDED_BY	tilt remains a live hypothesis
-CONFORMAL-PREFACTOR	FRW-INHOM	BOUNDED_BY	inhomogeneous action remains open
 CONFORMAL-PREFACTOR	METRO-EDGE-SCALE	BOUNDED_BY	SI clause remains open
 STRONG-SEED	ALPHA-S-RUNNING	BOUNDED_BY	running remains open
 STRONG-SEED	SCHEME-DICTIONARY	BOUNDED_BY	measurement scheme remains open
@@ -772,3 +771,13 @@ U-NATIVE-READER-STREAM-SPECTRA	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated ma
 U-NATIVE-APPARATUS-HISTORY-FACTOR	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
 QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
 QDD-CONDITIONAL-INCIDENCE-FINITE-AUDIT	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the stated mathematical proof or finite computation supplies no target-independent complete physical apparatus, realized event, occurrence law or physical reset
+DEF-K1-LINEAR-METRIC	DEF-ARCHITECTURE	REQUIRES	the complete K1 word packet, unit normalization, marked coordinates, square, recurrence and output are explicit added mathematical choices within the declared architecture; they are not derived from J
+K1-LINEAR-METRIC-COMPLETION	DEF-K1-LINEAR-METRIC	REQUIRES	the theorem is conditional on exactly the fully displayed mathematical input, action and literal output equality
+K1-LINEAR-METRIC-COMPLETION	TT-SQUARING-DECODER	BOUNDED_BY	the local algebraic square is fixed in the definition; its use does not inherit or promote the physical tensor dictionary
+K1-LINEAR-METRIC-COMPLETION	PHOTON-SPATIAL-TEMPORAL-TRANSFER	BOUNDED_BY	the planar L and recurrence are explicit mathematical choices; no physical photon interpretation or additional lift is imported
+K1-LINEAR-METRIC-COMPLETION	TT-SOURCE	BOUNDED_BY	an initial packet-to-matrix map is not a derived physical emission map or source realization
+K1-LINEAR-METRIC-COMPLETION	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	fixed a=1 and a complete finite input law supply no physical scalar comparison, action-unit identification or numerical r_T
+DEF-K1-HYBRID-FRW-CELL-METRIC	DEF-ARCHITECTURE	REQUIRES	the graph, action, cell-clock bridge and mathematical output are explicit choices within the declared architecture, not consequences of J
+DEF-K1-HYBRID-FRW-CELL-METRIC	DEF-K1-LINEAR-METRIC	REQUIRES	retain the exact ten-word source packet, unit-amplitude local initial squares and rational propagator
+FRW-INHOM	DEF-K1-HYBRID-FRW-CELL-METRIC	REQUIRES	the named L1-to-L2 gate adopts precisely the displayed joint functional, complete first-variation proof and marked metric reading
+FRW-INHOM	K1-LINEAR-METRIC-COMPLETION	REQUIRES	the unchanged conditional L1 all-counter bound ensures Lorentz signature of every marked inhomogeneous matrix under the selected gate

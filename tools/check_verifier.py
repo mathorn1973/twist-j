@@ -15,8 +15,10 @@ import sys
 
 try:  # pragma: no cover - import shim, see check_ledger.py
     from tools import probe_records as _records
+    from tools import probe_replay_context as _context
 except ImportError:  # pragma: no cover
     import probe_records as _records
+    import probe_replay_context as _context
 
 ROOT = Path(__file__).resolve().parents[1]
 PROBES = ROOT / "probes"
@@ -116,6 +118,11 @@ def changed_probes(base: str | None) -> list[Path]:
     if touches_canon(changed):
         print("VERIFY FULL SWEEP canon change")
         return sorted(path for path in PROBES.iterdir() if path.is_dir())
+    if _context.REPLAY_CONTROL_PATHS.intersection(changed):
+        try:
+            names.update(_context.registrations(ROOT))
+        except _context.ReplayContextError as error:
+            fail(str(error))
     return [PROBES / name for name in sorted(names)]
 
 
@@ -574,13 +581,17 @@ def reproduce(probe: Path) -> None:
             "TZ": "UTC",
         }
     )
-    result = subprocess.run(
-        [sys.executable, relative_verifier],
-        cwd=ROOT,
-        env=environment,
-        capture_output=True,
-        timeout=600,
-    )
+    try:
+        with _context.execution_root(ROOT, name, fields["pin_commit"], verifier_bytes) as replay_root:
+            result = subprocess.run(
+                [sys.executable, relative_verifier],
+                cwd=replay_root,
+                env=environment,
+                capture_output=True,
+                timeout=600,
+            )
+    except _context.ReplayContextError as error:
+        fail(str(error))
     if result.returncode != 0:
         fail(f"{name} GitHub run exits {result.returncode}")
     if result.stderr:

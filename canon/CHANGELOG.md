@@ -1,5 +1,52 @@
 # Canon changelog (public series)
 
+## Public Canon v83
+
+FRW-INHOM moves from O to D under its existing positive existence clause.
+One explicitly selected hybrid dictionary connects the unchanged K1 source
+to a continuous homogeneous FRW metric and separate marked finite
+inhomogeneous metric and constraint records. The complete inline proof
+checks every field variation of one joint cubic cell-lapse action, the
+conserved source, the expanding vacuum background for all future time,
+Lorentz signature and literal arbitrary-matter source-off FRW recovery.
+
+DEF-K1-HYBRID-FRW-CELL-METRIC adds no Registry claim. The one new named
+L1-to-L2 DICTIONARY_LIFT belongs to FRW-INHOM. No new T is declared, and the
+K1 linear theorem keeps its scope. The broader inhomogeneous scalar action
+outside CONFORMAL-PREFACTOR remains unsupplied; its stale open-owner
+reference is clarified without widening that homogeneous dictionary.
+TT-SOURCE, TT-VECTOR-STATE-NORMALIZATION and the SI owners remain open.
+
+The completed local-source probe audits its own frozen finite source and
+constraint construction. The new cell bridge, full joint-action solution
+and continuous background rest on the self-contained Canon proof and are
+not attributed to that earlier probe. No new formal scientific run is made
+for this dictionary adoption.
+
+<!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 407 claims; 0 T-LOCK, 275 T, 46 D, 39 C, 2 H, 27 O, 18 F; 29 live H/O.
+Reproduction witnesses: 24.
+<!-- END GENERATED CURRENT COUNTS -->
+
+## Public Canon v82
+
+One new L1 theorem records the explicitly selected K1 linear matrix
+construction. Its complete inline proof establishes unique rational
+prefix-consistent output, the retained spatial mean, an all-time Lorentz
+signature bound at the fixed unit amplitude, and all field equations of the
+stated quadratic lapse/shift action. The source packet, initial square,
+propagator, coordinates and output convention are explicit choices.
+
+The definition adds no second Registry claim. No physical geometry,
+nonlinear gravitational solution, scalar comparison or numerical r_T is
+established. All 28 O and 2 H retain their exact scopes and statuses. No new
+scientific probe is run; the theorem uses its self-contained exact proof.
+
+The release audit removes only the exact v82 ledger additions to recover
+every v81 ledger byte and then retains all earlier hash guards. Repository
+audit counts and their expected output follow the new release; workflows,
+frozen public probes and source datasets are unchanged.
+
 ## Public Canon v81
 
 Eight new T claims fold the relational-reading decoder programme completed
@@ -84,11 +131,6 @@ integral scale U=N(N-1) and U=20 at p=5. Thus v80 records both plurality and
 a structural reason for the chosen reading. No physical QDD O owner moves.
 
 ## Public Canon v79
-
-<!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 406 claims; 0 T-LOCK, 274 T, 45 D, 39 C, 2 H, 28 O, 18 F; 30 live H/O.
-Reproduction witnesses: 24.
-<!-- END GENERATED CURRENT COUNTS -->
 
 Public Canon v79 closes CURVATURE-OPERATOR-CANONICAL by an exact inline
 NONUNIQUE theorem on the now-declared complete self-adjoint native-word
