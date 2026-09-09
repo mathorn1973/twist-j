@@ -1,5 +1,33 @@
 # Canon changelog (public series)
 
+## Public Canon v83
+
+FRW-INHOM moves from O to D under its existing positive existence clause.
+One explicitly selected hybrid dictionary connects the unchanged K1 source
+to a continuous homogeneous FRW metric and separate marked finite
+inhomogeneous metric and constraint records. The complete inline proof
+checks every field variation of one joint cubic cell-lapse action, the
+conserved source, the expanding vacuum background for all future time,
+Lorentz signature and literal arbitrary-matter source-off FRW recovery.
+
+DEF-K1-HYBRID-FRW-CELL-METRIC adds no Registry claim. The one new named
+L1-to-L2 DICTIONARY_LIFT belongs to FRW-INHOM. No new T is declared, and the
+K1 linear theorem keeps its scope. The broader inhomogeneous scalar action
+outside CONFORMAL-PREFACTOR remains unsupplied; its stale open-owner
+reference is clarified without widening that homogeneous dictionary.
+TT-SOURCE, TT-VECTOR-STATE-NORMALIZATION and the SI owners remain open.
+
+The completed local-source probe audits its own frozen finite source and
+constraint construction. The new cell bridge, full joint-action solution
+and continuous background rest on the self-contained Canon proof and are
+not attributed to that earlier probe. No new formal scientific run is made
+for this dictionary adoption.
+
+<!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 407 claims; 0 T-LOCK, 275 T, 46 D, 39 C, 2 H, 27 O, 18 F; 29 live H/O.
+Reproduction witnesses: 24.
+<!-- END GENERATED CURRENT COUNTS -->
+
 ## Public Canon v82
 
 One new L1 theorem records the explicitly selected K1 linear matrix
@@ -18,11 +46,6 @@ The release audit removes only the exact v82 ledger additions to recover
 every v81 ledger byte and then retains all earlier hash guards. Repository
 audit counts and their expected output follow the new release; workflows,
 frozen public probes and source datasets are unchanged.
-
-<!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 407 claims; 0 T-LOCK, 275 T, 45 D, 39 C, 2 H, 28 O, 18 F; 30 live H/O.
-Reproduction witnesses: 24.
-<!-- END GENERATED CURRENT COUNTS -->
 
 ## Public Canon v81
 

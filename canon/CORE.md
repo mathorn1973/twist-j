@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v82. Normative authority and activation
+**Release identity:** Public Canon v83. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v82 also declares a discrete architecture. It does not
+Public Canon v83 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -150,6 +150,12 @@ The stable orientation claims are generated from the registry:
 Time is a counter. Space is read through commutators. The modulus and
 argument of J provide two exact algebraic projections. Their physical
 interpretations are only as strong as the registered dictionary rows.
+
+The selected FRW-INHOM dictionary supplies one continuous homogeneous FRW
+metric with separately marked finite inhomogeneous source and constraint
+records. Its complete joint-action proof closes the positive existence
+clause; it supplies no full continuous inhomogeneous metric, physical TT
+emission, scalar-spectrum comparison or SI calibration.
 
 The authoritative current state is `canon/REGISTRY.tsv`.
 `canon/CANON.md` gives complete scopes and `canon/FRONTIER.md` gives
