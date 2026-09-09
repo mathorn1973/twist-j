@@ -1,0 +1,16 @@
+P-TM-CORR-ZEROS-1 verifier
+basis: Public Canon v71; lock base 7f4c102e27e7b2ebdf5ca9215db5c5ab846ebbe2; issue #694
+posture: proof-first; result-exposed; no priority claim
+scope: L5 abstract drive word; no general discrepancy bound
+arithmetic: int and Fraction only
+
+G1 DYADIC-FINITE PASS  both identities; 0<=m,N<=300; direct word
+G2 LIMIT-BASE-CERTIFICATE PASS  E recurrences and base-limit certificate; 0<=N<=2^18
+G3 RECURRENCE-RING PASS  recurrence, 3c(k) in Z[1/2], and |c(k)|<=1/3
+G4 PARITY-CERTIFICATE PASS  four bases, two transfers, 2 parity states, 4<=m<=2^18
+G5 ZERO-NEIGHBOR PASS  zero set and neighbouring coincidence; range 1..200000
+G6 INDEPENDENT-MATRIX-DEEP PASS  matrix overlap, deep pins, 130065 q-shifts, 256 hash cases
+G7 CONVENTION-FIREWALL PASS  complement k<=64 n<1024; reversal/alphabet N<=512; lag<=20000; weighted<=200000
+
+SCIENTIFIC DECISION PROOF-SURVIVES
+SUMMARY 7/7 PASS
