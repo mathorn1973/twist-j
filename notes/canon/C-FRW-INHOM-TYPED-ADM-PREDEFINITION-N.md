@@ -38,7 +38,7 @@ S_inhom = (
   translation_actions     = three commuting Z/5 translations on X,
   V_h                     = Q^X, selected plus TT amplitude,
   V_K                     = typed edge momentum P,
-  V_n                     = homogeneous FRW lapse plus mean-zero local lapse ell,
+  V_n                     = homogeneous FRW lapse slot ell_0 plus mean-zero local lapse ell_perp,
   V_N                     = typed edge shift N,
   V_source                = derived TT Noether pair (e,j) and registered FRW matter source,
   inner_products           = normalized vertex and edge counting products,
@@ -54,8 +54,8 @@ S_inhom = (
   action_domain            = finite-support variations of the displayed semidiscrete action,
   truncation_rule          = keep orders <= 3 in inhomogeneous perturbations,
   S2                      = Public K1 TT quadratic term plus typed scalar/vector constraints,
-  S3                      = lapse/shift coupling to the derived quadratic TT Noether pair,
-  homogeneous_embedding    = constant spatial mode carried only by the public FRW background,
+  S3                      = total-lapse/shift coupling to the derived quadratic TT Noether pair,
+  homogeneous_embedding    = constant spatial mode carried by the public FRW background,
   FRW_restriction          = literal FRW-CANONICAL-FORM background action and constraint,
   EL_map                   = variations of S2+S3 and the public FRW background action,
   Hamiltonian_constraint   = section 10,
@@ -177,7 +177,7 @@ R_n := h_(n+1)-2 h_n+h_(n-1)+L3 h_n = 0.
 
 On the embedded K1 sector this is exactly the v82 recurrence.
 
-## 5. Time placement
+## 5. Time placement and lapse split
 
 The placement is fixed by the local Noether identity below, not selected after
 a source result.
@@ -188,15 +188,27 @@ d_n=h_(n+1)-h_n             vertex, half-slice n+1/2
 e_(n+1/2)                   vertex, half-slice n+1/2
 j_n                         edge, integer slice n
 tau_(n+1/2)                 mean-zero vertex scalar, half-slice n+1/2
-ell_(n+1/2)                 mean-zero local lapse, half-slice n+1/2
+ell_perp_(n+1/2)            mean-zero local lapse, half-slice n+1/2
+ell_0_(n+1/2)               homogeneous FRW lapse variation slot, half-slice n+1/2
 P_n                         edge momentum, integer slice n
+p_perp_n                    varied edge field in ker(B^T), integer slice n
 N_n                         edge shift multiplier, integer slice n
 xi_n                        mean-zero gauge parameter, integer slice n
 ```
 
-The homogeneous FRW lapse and scale factor are the background variables of
-`FRW-CANONICAL-FORM`. The local `ell` has zero spatial mean, so it never
-projects away or duplicates the homogeneous lapse equation.
+The total lapse perturbation read by the TT source is
+
+```text
+ell_total_(n+1/2) = ell_0_(n+1/2) * 1 + ell_perp_(n+1/2).
+```
+
+`ell_0` is the perturbative variation slot of the public homogeneous FRW lapse.
+It is not a second lapse or a new dynamical degree. `ell_perp` has zero spatial
+mean. Therefore the constant and mean-zero Hamiltonian equations are both
+retained and cannot be confused by projection.
+
+The gauge parameter `xi_n` is mean-zero and acts only on the local split. The
+homogeneous time reparametrization remains owned by the public FRW background.
 
 ## 6. The quadratic TT action
 
@@ -288,30 +300,53 @@ identity.
 ## 9. Constraint action and cubic Noether completion
 
 Let `V_0` be the mean-zero vertex subspace and write `Pi_0` for subtraction of
-the spatial mean. Let
+the spatial mean. Let the typed edge momentum be
 
 ```text
-p_n^perp in ker(B^T),
-P_n = W B [tau_(n+1/2)-tau_(n-1/2)] + p_n^perp.
+p_perp_n in ker(B^T),
+P_n = W B [tau_(n+1/2)-tau_(n-1/2)] + p_perp_n.
 ```
 
-Before the common factor `1/(2 lambda)`, freeze
+Here `p_perp_n` is an auxiliary geometric field varied inside `ker(B^T)`. It is
+not selected after inspecting the source. Its equation and the shift equation
+together determine the co-closed part of the momentum constraint.
+
+Before the common factor `1/(2 lambda)`, freeze the local constraint terms
 
 ```text
 A2_constraint
   = sum_n [
-      2 <ell_(n+1/2), L3 tau_(n+1/2)>_V
+      2 <ell_perp_(n+1/2), L3 tau_(n+1/2)>_V
     + 2 <N_n, P_n>_E
-    ],
-
-A3_source
-  = sum_n [
-      - <ell_(n+1/2), e_(n+1/2)>_V
-      + <N_n, j_n>_E
     ].
 ```
 
-Because `ell` is mean-zero, its source is automatically `Pi_0 e`.
+The full cubic TT source coupling is one total-lapse plus shift pairing:
+
+```text
+A3_source
+  = sum_n [
+      - V0 * ell_0_(n+1/2) * bar_e_(n+1/2)
+      - <ell_perp_(n+1/2), e_(n+1/2)>_V
+      + <N_n, j_n>_E
+    ],
+```
+
+where
+
+```text
+V0 = <1,1>_V = 5,
+bar_e = <1,e>_V / V0.
+```
+
+Equivalently the two lapse terms are exactly
+
+```text
+- <ell_total_(n+1/2), e_(n+1/2)>_V.
+```
+
+Thus no source component is dropped: `ell_0` sees the exact spatial mean and
+`ell_perp` sees the exact mean-zero component.
 
 The coefficient `1` in both cubic source couplings is frozen by the existing
 public prescribed-source convention: lapse couples as `-n rho` and shift as
@@ -324,22 +359,25 @@ J_TT   = j/(2 lambda).
 
 No target observable is used in this normalization.
 
-The gauge transformation through the required order is
+The local gauge transformation through the required order is
 
 ```text
-delta_0 ell_(n+1/2) = xi_(n+1)-xi_n,
-delta_0 N_n         = B xi_n,
-delta_0 tau          = 0,
-delta_0 p^perp       = 0,
-delta_0 h            = 0,
+delta_0 ell_perp_(n+1/2) = xi_(n+1)-xi_n,
+delta_0 N_n               = B xi_n,
+delta_0 tau                = 0,
+delta_0 p_perp             = 0,
+delta_0 h                  = 0,
 
-delta_1 h_n          = (1/2) xi_n q_n.
+delta_1 h_n                = (1/2) xi_n q_n.
 ```
 
-The coefficient `1/2` is not chosen. For a general ansatz
+`ell_0` is inert under this mean-zero local gauge family because homogeneous
+time reparametrization belongs to the public FRW background.
+
+The coefficient `1/2` is not chosen. For a general local ansatz
 
 ```text
--alpha <ell,e> + beta <N,j>,
+-alpha <ell_perp,e> + beta <N,j>,
 delta_1 h = gamma xi q,
 ```
 
@@ -347,24 +385,32 @@ the off-shell balance identity forces `alpha=beta` and
 `gamma=alpha/2`. The public source normalization fixes `alpha=1`, hence
 `beta=1` and `gamma=1/2`.
 
-Under these transformations,
+The quadratic constraint term is exactly invariant under `delta_0` because
+
+```text
+B^T P_n = L3[tau_(n+1/2)-tau_(n-1/2)]
+```
+
+by `B^T p_perp=0`. The local source term varies as the balance identity.
+Therefore
 
 ```text
 delta_0(A2_constraint+A3_source)
   = +(1/2) sum_n <xi_n q_n,R_n>_V,
 
 delta_1 A2_TT
-  = -(1/2) sum_n <xi_n q_n,R_n>_V.
+  = -(1/2) sum_n <xi_n q_n,R_n>_V,
 ```
 
-Therefore
+and hence
 
 ```text
 delta_0 A3 + delta_1 A2 = 0
 ```
 
-through cubic order, off shell, exactly. This is the frozen nonlinear gauge
-gate for the selected scalar backreaction class.
+through cubic order, off shell, exactly, for the declared local gauge family.
+This is the frozen nonlinear gauge gate for the selected scalar backreaction
+class.
 
 ## 10. Hamiltonian and momentum constraints
 
@@ -390,31 +436,38 @@ Variation with respect to the typed shift gives
 2 P_n + j_n = 0.
 ```
 
-Once the Hamiltonian constraint holds on the adjacent half-slices, the source
-balance identity gives
+Variation of `p_perp` within `ker(B^T)` gives the co-closed projection of
+`N_n` equal to zero. The remaining longitudinal shift is a local gauge
+multiplier, as intended.
+
+On the TT equation `R_n=0`, the source balance identity and the two adjacent
+Hamiltonian constraints imply
 
 ```text
 B^T[-j_n/2 - W B(tau_(n+1/2)-tau_(n-1/2))] = 0.
 ```
 
-Hence the required
+Therefore the shift equation determines
 
 ```text
-p_n^perp = -j_n/2 - W B(tau_(n+1/2)-tau_(n-1/2))
+p_perp_n = -j_n/2 - W B(tau_(n+1/2)-tau_(n-1/2))
 ```
 
-lies in `ker(B^T)` exactly and solves the full typed momentum constraint.
-No longitudinality assumption on the K1 current is made. Harmonic and
-coexact current are carried by `p^perp` rather than discarded.
+inside `ker(B^T)` exactly. This is an Euler-Lagrange solution for the varied
+auxiliary field, not a post-result selector. No longitudinality assumption on
+the K1 current is made. Harmonic and coexact current are carried by `p_perp`
+rather than discarded.
 
 The two constraint expressions obey the exact Bianchi relation, with the
 quadratic TT equation as the off-shell remainder. On shell, Hamiltonian
-constraint propagation follows from the momentum constraint and vice versa.
+constraint propagation and momentum solvability are the same local balance
+identity.
 
 ## 11. Homogeneous FRW mode
 
 The zero spatial mode is not put through `L3` and is not projected away. It is
-owned by the public rank-1 FRW background.
+owned by the public rank-1 FRW background and is coupled by the explicit
+`ell_0` term in `A3_source`.
 
 For the normalized 3D carrier
 
@@ -423,20 +476,24 @@ V0 = <1,1>_V = 5,
 bar_e_(n+1/2) = E_(n+1/2)/V0.
 ```
 
-The homogeneous TT source read from the same cubic lapse coupling is
+The homogeneous TT source read from the same total-lapse coupling is
 
 ```text
 bar_rho_TT = bar_e/(2 lambda).
 ```
 
-At the selected local FRW tangent the homogeneous lapse equation is therefore
+Vary the total action with respect to the public homogeneous FRW lapse at the
+selected local FRW tangent. The public matter term contributes `rho_matter` and
+the explicit cubic TT term contributes `bar_e/(2 lambda)`. The homogeneous
+lapse equation is therefore
 
 ```text
-3 H^2 = lambda rho_matter + bar_e/2.
+3 H^2 = lambda [rho_matter + bar_rho_TT]
+      = lambda rho_matter + bar_e/2.
 ```
 
-This is not a new value of `lambda`. It is the public canonical constraint
-with the derived TT contribution added under the same lapse variation.
+This is not a new value of `lambda`. It is the public canonical constraint with
+the derived TT contribution added under the same lapse variation.
 
 When the inhomogeneous field is removed, `h=0` gives `e=j=0`, so the complete
 homogeneous restriction is literally
@@ -464,6 +521,7 @@ The selected class has no adjustable dimensionless coefficient.
 w_1,w_2         public K1 stencil, fixed
 1/25            forced by exact planar norm preservation
 1/2 in e,j      fixed by symmetric endpoint polarization
+ell_total split identity + mean-zero decomposition, fixed
 alpha=beta=1    fixed by the public lapse/shift source convention
 gamma=1/2       forced by cubic Noether cancellation
 lambda=216 pi   public FRW value
@@ -471,8 +529,8 @@ K1 amplitude    unchanged v82 unit amplitude
 ```
 
 A future checker must treat any additional coefficient multiplying
-`e`, `j`, `tau`, `P`, the planar embedding, or the FRW source as a fired
-free-parameter falsifier.
+`e`, `j`, `tau`, `P`, the planar embedding, either lapse component, or the FRW
+source as a fired free-parameter falsifier.
 
 ## 13. Selected admissible class and equality
 
@@ -483,10 +541,11 @@ recipe from:
 2. one public FRW background satisfying `FRW-CANONICAL-FORM`, and
 3. an integer counter interval with compactly supported variations.
 
-There is no structural branch inside the class. `p^perp` is not a choice: it
-is fixed by the momentum equation in section 10. `tau` is not a choice: it is
-the unique mean-zero solution of the Hamiltonian constraint. Translations of
-`X` are symmetries but are not quotiented by `ObjectEq`.
+There is no structural branch inside the class. `tau` is the unique mean-zero
+solution of the Hamiltonian constraint. `p_perp` is a varied auxiliary field
+whose on-shell value is fixed by the momentum equation. The lapse split is the
+unique constant plus mean-zero decomposition. Translations of `X` are
+symmetries but are not quotiented by `ObjectEq`.
 
 `ObjectEq` is literal equality of the marked background, word, counter,
 vertex fields, edge fields, and source records.
@@ -510,8 +569,8 @@ G4  Global energy identity and all-time conservation conditional on R_n=0.
 G5  Cubic Noether identity delta_0 A3 + delta_1 A2 = 0 exactly.
 G6  Coefficient solve: alpha=beta, gamma=alpha/2; source convention fixes alpha=1.
 G7  Hamiltonian constraint has a unique mean-zero tau solution for every admitted source.
-G8  Momentum solution p^perp exists, lies in ker(B^T), and is unique after the displayed definition.
-G9  Homogeneous split: no zero mode is projected away; h=0 returns every registered FRW identity unchanged.
+G8  Momentum solution p_perp exists in ker(B^T), with its on-shell value fixed by the shift equation.
+G9  Total-lapse split is exact: local source is Pi_0 e, homogeneous source is bar_e, no zero mode is discarded, and h=0 returns every registered FRW identity unchanged.
 G10 No new free dimensionless coefficient appears.
 G11 K1 source law, amplitudes, words, and ordering remain byte-identical to the public definition inputs consumed.
 G12 Security, policy, action-layer and dependency checks pass.
