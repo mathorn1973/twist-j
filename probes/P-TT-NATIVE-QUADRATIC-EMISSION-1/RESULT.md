@@ -9,12 +9,17 @@ Pin: a8e35e95d8adb891a28233779f2547a2441d70f1.
 
 ## Decision
 
-The single accepted local formal execution completed with exit code 0, empty
-captured stderr and exact stdout matching `EXPECTED.txt`. None of the frozen
-scientific falsifiers F1 through F9 fired on the audited surfaces. The written
-proof in `PROOF.md` supplies the universal derivations. The public x86_64 and
-aarch64 workflow replay is still required before computation-grade theorem
-status is earned by the repository procedure.
+The accepted local formal execution of the exact public pinned verifier
+completed with exit code 0, empty captured stderr and exact stdout matching
+`EXPECTED.txt`. None of the frozen scientific falsifiers F1 through F9 fired
+on the audited surfaces. The written proof in `PROOF.md` supplies the universal
+derivations. The public x86_64 and aarch64 workflow replay is still required
+before computation-grade theorem status is earned by the repository procedure.
+
+An earlier attempted local execution is explicitly excluded from evidence
+because its local draft differed by eight unused bytes from the public pin.
+`RUN.md` records the complete custody correction. The pinned verifier itself
+was never changed.
 
 ## Scientific result at current evidence grade
 
@@ -58,22 +63,29 @@ spatial mean is zero. This construction contains no action pullback through a
 square and therefore does not inherit the singular zero-amplitude branch of
 the PR #930 mechanism.
 
-[candidate-T] Conservation compatibility. The corresponding pure transverse
-stress
+[candidate-T] Conservation compatibility. The linear transverse stress is
+frozen as
 
     rho=J_i=S_i3=0,
     S11=Phi_plus/(2 lambda),
     S22=-Phi_plus/(2 lambda),
-    S12=S21=Phi_cross/(2 lambda)
+    S12=S21=Phi_cross/(2 lambda).
 
-satisfies the registered planar source conservation laws identically. The
-exact off-shell field identity
+It satisfies the registered linear planar source conservation laws identically.
+Separately, the quadratic radiative work ledger obeys
 
-    Delta e+B^T j=q R_L h/2
+    Delta e+B^T j=q R_L h/2,
 
-and the frozen source channel `e_src=Phi^2/2` cancel pointwise at onset. After
-the impulse the source is off and the field conserves locally. The v83
-auxiliary construction then gives `B^T p=0` exactly.
+and the frozen source radiative channel `e_src=Phi^2/2` cancels the field gain
+pointwise at onset. After the impulse the source is off and the field conserves
+locally. The v83 auxiliary construction then gives `B^T p=0` exactly.
+
+The two statements live at different perturbative orders and are not
+identified. `rho=0` is the linear Hamiltonian source density of the pure
+transverse TT stress. `e_src=Phi^2/2` is the second-order radiative work channel
+frozen from the K1 kinetic difference. The probe does not claim that
+`e_src` is the complete physical source energy or that the linear `rho` must
+equal it. A nonlinear stress-energy completion is outside this probe.
 
 [candidate-T] Spin compatibility. The source doublet has weight one and its
 quadratic image weight two, so the registered rule `c(s)=1-s^2` gives
@@ -100,28 +112,31 @@ F9  a new dimensionless source coefficient is required ....... no fire
 ## Evidence and integrity
 
 ```text
-PREREG sha256   e5e75500ab88cf0e2a9e877e3134d85b832411baf2bb546a25a062cd881a5eb3
-verify sha256   0834461e61788dd9221f90af8769fbdc74e80005fc11b19486843ecbe49e0416
-stdout sha256   e66a90283d718825c0aa3190cf4c7f955b1cab709dd602cac20c4f89b40e18ac
-stderr sha256   e3b0c44298fc1c149afbf4c8996fb92427ae41e464b934ca495991b7852b855
-stdout bytes    558
-stderr bytes    0
+PREREG sha256    e5e75500ab88cf0e2a9e877e3134d85b832411baf2bb546a25a062cd881a5eb3
+verify sha256    3e05906a2113305ae21de00c5eb306a139e913d0d6f7d6a12369feb5fbaab692
+verify bytes     17699
+verify git blob  6f838218ad880cda5e98839da0d20f8f2f1398ac
+stdout sha256    e66a90283d718825c0aa3190cf4c7f955b1cab709dd602cac20c4f89b40e18ac
+stdout bytes     558
+stderr bytes     0
 exact assertions 2010
-local arch      x86_64
+local arch       x86_64
 ```
 
-The local environment could not perform a network clone, so no fresh-clone
-claim is made. Public pin/readback preceded execution. The required PR workflow
-must still replay the unchanged verifier from clean GitHub checkouts on both
-architectures and compare it byte for byte with `EXPECTED.txt`.
+The accepted exact-pinned execution used the public pinned blob bytes and
+matched `EXPECTED.txt`. The local environment could not perform a network
+clone, so no fresh-clone claim is made. The required PR workflow must replay
+the unchanged verifier from clean GitHub checkouts on both architectures and
+compare it byte for byte with `EXPECTED.txt`.
 
 ## Scope boundary
 
 This probe supplies no outgoing vector dynamics, fourth-moment state
 normalization, scalar comparison, numerical `r_T(k)`, detector, apparatus,
 physical occurrence law, SI scale, irreversible radiation flux,
-overlapping-source law, full FRW reaction, full inhomogeneous GR or Stage-B
-pullback. It neither closes nor changes `TT-VECTOR-STATE-NORMALIZATION`.
+overlapping-source law, nonlinear source stress-energy completion, full FRW
+reaction, full inhomogeneous GR or Stage-B pullback. It neither closes nor
+changes `TT-VECTOR-STATE-NORMALIZATION`.
 
 `TT-SOURCE [O]` remains O until a separate reviewed Canon fold decides whether
 the proven typed map and source dependency satisfy its registered positive
