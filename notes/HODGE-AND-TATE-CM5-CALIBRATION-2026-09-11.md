@@ -268,7 +268,232 @@ a^2-ab-b^2=\pm1,
 
 up to the declared generator, sign, and Galois choices.
 
-Computing those exact coordinates is the cleanest first calibration task.
+The coordinate and positivity part of this calibration can already be solved
+exactly inside the public CM pencil, as follows. An explicit integral homology
+basis for the Jacobian is still a separate formal gate.
+
+## 5A. Exact CM5 polarization-coordinate calibration
+
+In the fixed public basis `(1,j,j^2,j^3)`, Canon v83 displays
+
+\[
+\Omega_1=
+\begin{pmatrix}
+0&1&0&0\\
+-1&0&1&0\\
+0&-1&0&1\\
+0&0&-1&0
+\end{pmatrix},
+\]
+
+and
+
+\[
+\Omega_2=
+\begin{pmatrix}
+0&0&1&-1\\
+0&0&0&1\\
+-1&0&0&0\\
+1&-1&0&0
+\end{pmatrix}.
+\]
+
+The full `j`-invariant alternating family in the same basis may equivalently
+be written
+
+\[
+\Omega_{e,f}=
+\begin{pmatrix}
+0&f&e&-e\\
+-f&0&f&e\\
+-e&-f&0&f\\
+e&-e&-f&0
+\end{pmatrix}.
+\]
+
+Comparison is coefficient-by-coefficient and requires no basis change:
+
+\[
+\boxed{\Omega_1=\Omega_{0,1}},
+\qquad
+\boxed{\Omega_2=\Omega_{1,0}}.
+\]
+
+Therefore for the Canon coordinates
+
+\[
+\Omega_{(a,b)}=a\Omega_1+b\Omega_2
+\]
+
+one has simply
+
+\[
+\boxed{e=b,\qquad f=a}.
+\]
+
+The Pfaffian becomes
+
+\[
+\operatorname{Pf}(\Omega_{e,f})
+ =f^2-ef-e^2
+ =a^2-ab-b^2,
+\]
+
+so the two parametrizations are not merely equivalent quadratic forms. They
+are the same trace-form pencil in the same integral basis. In particular,
+
+\[
+\operatorname{Pf}(\Omega_1)=1,
+\qquad
+\operatorname{Pf}(\Omega_2)=-1,
+\]
+
+and both displayed forms are unimodular.
+
+Now impose the CM type selected by the Jacobian,
+
+\[
+\Phi=\{\sigma_1,\sigma_2\},
+\qquad
+\sigma_r(j)=j^r.
+\]
+
+For
+
+\[
+\xi_{e,f}
+ =\frac{f(j-j^{-1})+e(j^2-j^{-2})}{5},
+\]
+
+the two relevant imaginary parts have, up to a common positive real factor,
+the signs of
+
+\[
+\varphi f+e
+\]
+
+and
+
+\[
+f-\varphi e.
+\]
+
+Thus, up to the global sign convention for the Riemann form, the polarization
+cone is characterized by
+
+\[
+\varphi f+e>0,
+\qquad
+f-\varphi e>0.
+\]
+
+For the two public basis forms this gives
+
+\[
+\Omega_1:\quad (e,f)=(0,1),
+\qquad
+(\varphi f+e,\ f-\varphi e)=(\varphi,1),
+\]
+
+whereas
+
+\[
+\Omega_2:\quad (e,f)=(1,0),
+\qquad
+(\varphi f+e,\ f-\varphi e)=(1,-\varphi).
+\]
+
+Consequently
+
+\[
+\boxed{\Omega_1\text{ lies in the CM polarization cone}}
+\]
+
+while
+
+\[
+\boxed{\Omega_2\text{ does not lie in either global-sign polarization cone}}
+\]
+
+for the Jacobian CM type. Negating `Omega_2` reverses both signs and therefore
+does not repair their mismatch.
+
+There is also a useful classification statement. Write
+
+\[
+\lambda=a\lambda_1+b\lambda_2
+       =\lambda_1\eta,
+\qquad
+\eta=(a-b)+b\varphi
+     =f+e\varphi^{-1}.
+\]
+
+Then
+
+\[
+\operatorname{Pf}(\Omega_{a,b})
+ =N_{K^+/\mathbf Q}(\eta).
+\]
+
+A positive principal polarization in this CM type requires `eta` to be a
+totally positive unit of norm `+1`. Since
+
+\[
+\mathcal O_{K^+}^{\times}=\{\pm\varphi^n:n\in\mathbf Z\},
+\]
+
+the totally positive units are exactly
+
+\[
+\varphi^{2n}.
+\]
+
+Changing the generator of the rank-one `O_K`-module by the unit
+`u=varphi^n` multiplies the trace parameter by
+
+\[
+u\bar u=\varphi^{2n}.
+\]
+
+Hence all `j`-invariant principal polarizations compatible with this CM type
+form one `O_K^times`-equivalence class, represented by
+
+\[
+\boxed{[\Omega_1]}.
+\]
+
+This does **not** mean that the bare public CM pencil canonically selects
+`Omega_1`. The selection here uses additional external data: the algebraic
+curve, its CM type, and the requirement of a positive principal polarization.
+It therefore preserves the public `CM-PERIOD-LATTICE-NONSELECTION [T]`
+boundary.
+
+Finally the `J` action agrees without a convention change. In `(e,f)`
+coordinates, pullback by `J=1+j^2` gives
+
+\[
+(e,f)\longmapsto(2e-f,\ f-e).
+\]
+
+Since `(a,b)=(f,e)`, this is exactly
+
+\[
+\binom{a'}{b'}
+=
+\begin{pmatrix}
+1&-1\\
+-1&2
+\end{pmatrix}
+\binom{a}{b},
+\]
+
+which is the public Canon matrix `A_J`.
+
+The coordinate, Pfaffian, positivity, principal-polarization-class, and
+`J`-pullback checks therefore agree exactly. What remains for a formal
+Jacobian calibration is not this classification, but the construction of an
+explicit integral homology basis and `O_K`-module identification carrying the
+canonical Jacobian intersection form into that class.
 
 ## 6. Hodge calibration
 
@@ -411,25 +636,20 @@ multiplication-by-`j` matrix.
 
 ### Gate B: principal polarization coordinates
 
-Pull the canonical Jacobian intersection form through `P` and solve exactly
-for
+Using the same frozen `P`, pull the canonical Jacobian intersection form into
+the public lattice and verify that it lies in the `O_K^times`-equivalence
+class `[Omega_1]` identified in section 5A. Record its exact `(a,b)` and
+`(e,f)` representative and all dependence on the fractional-ideal generator,
+orientation, and Galois choice.
 
-\[
-E_A=\Omega_{a,b}.
-\]
-
-Check
-
-\[
-a^2-ab-b^2=\pm1.
-\]
-
-Record all dependence on the fractional-ideal generator, orientation, and
-Galois choice.
+The abstract coordinate and positivity classification of section 5A is a
+note-level exact derivation. This gate asks for the explicit Jacobian homology
+realization, not a second derivation of the same pencil identity.
 
 ### Gate C: Hodge positivity
 
-Verify the Riemann positivity condition at the selected CM type
+Independently verify on the explicit Gate-B representative the Riemann
+positivity condition at the selected CM type
 
 \[
 \Phi=\{\sigma_1,\sigma_2\}.
@@ -536,8 +756,12 @@ TWIST-J exact CM pencil
  -> only then exceptional cycles.
 ```
 
-The first three arrows are sufficiently exact to justify a formal probe if an
-explicit integral polarization match is obtained.
+The coordinate and positivity subproblem of the first arrow is now solved at
+note level: the two public basis forms are `(e,f)=(0,1)` and `(1,0)`, and the
+Jacobian CM type selects the principal-polarization class `[Omega_1]`. The
+remaining first-arrow work is the explicit integral homology identification
+and an independent formal reproduction. No Hodge or Tate conjecture claim is
+created by this calibration.
 
 ## References
 
