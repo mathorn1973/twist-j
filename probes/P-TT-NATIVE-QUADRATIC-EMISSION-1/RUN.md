@@ -2,8 +2,8 @@
 
 Date: 2026-09-10
 
-Status: local formal exact run, one architecture. This record does not by
-itself satisfy the public two-architecture computation gate and changes no
+Status: accepted local formal exact run, one architecture. This record does not
+by itself satisfy the public two-architecture computation gate and changes no
 Canon status.
 
 The flat fields below are the machine-readable record required by
@@ -11,7 +11,7 @@ The flat fields below are the machine-readable record required by
 
 ```text
 pin_commit: a8e35e95d8adb891a28233779f2547a2441d70f1
-verifier_sha256: 0834461e61788dd9221f90af8769fbdc74e80005fc11b19486843ecbe49e0416
+verifier_sha256: 3e05906a2113305ae21de00c5eb306a139e913d0d6f7d6a12369feb5fbaab692
 command: python3 probes/P-TT-NATIVE-QUADRATIC-EMISSION-1/verify.py
 platform: Debian GNU/Linux 13
 architecture: x86_64
@@ -30,20 +30,44 @@ stderr_bytes: 0
 PREREG sha256: e5e75500ab88cf0e2a9e877e3134d85b832411baf2bb546a25a062cd881a5eb3
 PREREG bytes:  9651
 PREREG blob:   c830c92de61f263a9817d94ab1f9be98a8e9e1a5
-verify sha256: 0834461e61788dd9221f90af8769fbdc74e80005fc11b19486843ecbe49e0416
-verify bytes:  17707
-verify blob:   73b267205a03f6582af8b2d3993cea43110c6fb4
+verify sha256: 3e05906a2113305ae21de00c5eb306a139e913d0d6f7d6a12369feb5fbaab692
+verify bytes:  17699
+verify blob:   6f838218ad880cda5e98839da0d20f8f2f1398ac
 EXPECTED sha256: e66a90283d718825c0aa3190cf4c7f955b1cab709dd602cac20c4f89b40e18ac
 EXPECTED bytes:  558
 ```
 
 `PREREG.md` was pushed first. The accepted `verify.py` was then pushed at the
-pin commit above. Before the first formal execution, the public branch ref was
-read back at exactly the pin commit and both public files were read back from
-that ref. Only static inspection and Python bytecode compilation occurred
-before the pin.
+pin commit above. Only static inspection and Python bytecode compilation
+occurred before that pin.
 
-The execution environment was
+## Custody correction retained
+
+The first local execution attempted after the public pin used a local draft
+whose SHA-256 was
+
+    0834461e61788dd9221f90af8769fbdc74e80005fc11b19486843ecbe49e0416
+
+and whose byte count was 17707. The public pinned blob was instead 17699 bytes
+with Git blob
+
+    6f838218ad880cda5e98839da0d20f8f2f1398ac.
+
+The difference was exactly eight unused source bytes: the local draft assigned
+`freq4 = tm_factor_theorem()` while the public pin calls
+`tm_factor_theorem()` directly. The returned value is not used. The attempted
+local draft run is therefore excluded from the formal evidence record even
+though it produced the same stdout. The pinned verifier was not edited,
+resumed, amended or repinned.
+
+The exact public pinned bytes were then reconstructed from the public blob
+readback and independently checked against both its public Git blob identifier
+and public byte count. Their SHA-256 is the value recorded in the machine
+fields above. Those exact bytes were placed at the repository-relative probe
+path in a materialized repository-root layout and executed with the canonical
+command above.
+
+The accepted execution environment was
 
 ```text
 LC_ALL=C
@@ -51,20 +75,18 @@ LANG=C
 PYTHONDONTWRITEBYTECODE=1
 PYTHONHASHSEED=0
 TZ=UTC
+TERM=dumb
 ```
 
-The execution environment available to this session could not make an outbound
-DNS clone of GitHub. The first formal invocation therefore executed the exact
-pinned verifier bytes after public connector readback rather than from a fresh
-network clone. A second invocation placed the same pinned files at the exact
-repository-relative path in a materialized repository-root layout and used the
-canonical command printed above. The two x86_64 invocations had byte-identical
-stdout and empty captured stderr. This second invocation is same-architecture
-reproduction only, not independent confirmation and not the public gate.
+The accepted exact-pinned execution exited zero, captured empty stderr, and
+matched `EXPECTED.txt` byte for byte. A direct execution of the same exact
+pinned blob also produced the same stdout. Both are one x86_64 environment and
+therefore only same-architecture reproduction.
 
-The pull-request workflow performs the required clean GitHub checkouts and
-replays the unchanged verifier on x86_64 and aarch64. Those jobs, not the local
-materialization, decide the repository computation gate.
+The session environment could not make an outbound DNS clone of GitHub. No
+fresh-local-clone claim is made. The pull-request workflow performs the
+required clean GitHub checkouts and replays the unchanged public verifier on
+x86_64 and aarch64. Those jobs decide the repository computation gate.
 
 ## Accepted local result
 
