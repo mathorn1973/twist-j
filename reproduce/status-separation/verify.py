@@ -32,6 +32,92 @@ SUCCESSOR_MANIFEST_DIR = (
 )
 
 
+
+# Exact v84-to-v83 reconstruction; all older guards retain their frozen hashes.
+V84_LEDGER_PATCH = {'REGISTRY.tsv': {'current_sha256': '95c6676f5cadfb78dc707190fe58d03eaf64b94b97e716242b9bdd9bb58bf758',
+                  'prior_sha256': 'a764a066d0123c22af03f10c2ade58bf0e6f2d55d1644c3269b48ec5f016a415',
+                  'remove': ('50f6a1a27d639f9bcf9894c9d6af43cdf055ba0822ac16041fa04abe5c5d9c2a',),
+                  'restore': ((226,
+                               'TT-SOURCE\tO\tthe emission map from an explicitly defined public '
+                               'source object\t18. The frontier\tinline\tcloses positively by '
+                               'deriving the typed emission map and its source dependency; closes '
+                               'negatively if no map satisfies the registered TT propagation and '
+                               'conservation constraints\n'),)},
+ 'NORMATIVE.tsv': {'current_sha256': '04759387d31c83cb2e26bb8304d0971410fe83ac8dffa42ab7ba33c6b3722ec3',
+                   'prior_sha256': '9f8935a381c8a9a4da23dd65f2a14522a92bb1e2df512f1add5580371ac01269',
+                   'remove': ('179d31c1ce7d0918503e4617d751d930de492a0c12ef362729d4168e2b0b5cf9',
+                              '0aac7e55e67e8c32b662c609c87e789504fdb3969b1fd012733b3935bf4c8632'),
+                   'restore': ((228,
+                                'TT-SOURCE\tOBLIGATION\tTT-SOURCE\tO\tNOT_APPLICABLE\t\t'
+                                'canon/CANON.md::18. The frontier\n'),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': 'f53807ca201d5fa89ffd3f0b2efbc7f97dde218834e295c8dbd211a40908c9f5',
+                      'prior_sha256': '5ddc9fd5ea7442b43ccdb833e4efa6131536502b962ae2aee6bee804348287a0',
+                      'remove': ('0b5d55729e3d7480792f36aa4e6264ee3509051ed9f9975db5da2e13332dcadb',
+                                 '6e4a1ae0a298746638ee41349ebba64a8b3145bf77ad81ed502e7137d1d20f31',
+                                 '985fd522969e1f4647e07089bcd2250b903ce600376b7ad28ff984c90c50144f',
+                                 'db312f9c16c9cd624eb6045016c58e761d83dbd484bddbdabdf9e8afd2f723e8',
+                                 '485a51a4b69a6a9843c5b8298fbd925272611750580de81446c9d6daf31cb10c',
+                                 '83100077485c5ea535fdea31ec6074d1cac25012d9de8330a4c176870477069f',
+                                 'd76406d31506107611dead9b035050057690bd2d261a48efb141d4bd943aef3c'),
+                      'restore': ((441,
+                                   'POL-READ\tTT-SOURCE\tBOUNDED_BY\tthe component readout does '
+                                   'not construct the still-open emission map\n'),
+                                  (777,
+                                   'K1-LINEAR-METRIC-COMPLETION\tTT-SOURCE\tBOUNDED_BY\tan initial '
+                                   'packet-to-matrix map is not a derived physical emission map or '
+                                   'source realization\n'))},
+ 'EVIDENCE.tsv': {'current_sha256': 'ac2ebbf62918a5b3213dea7cf09cf28a5850ea3588d8441354a025e1d38094b1',
+                  'prior_sha256': '4929e08937b9818df659e07747d7922aa1ef84c0c09b4092dee117546f7042c5',
+                  'remove': ('2da7ccefd87e5f9e4e3ff11125cc9e08d5c7637323a77e4f9d26a243bfff2fae',),
+                  'restore': ((217,
+                               'TT-SOURCE\tEV-TT-SOURCE\tINLINE_CANON\tinline\t'
+                               'e4ef90d122fedd52a7fe7ff6a1724c1a97003adcca8492ab2ba494171b351131\t'
+                               'registry-scope-sha256-v1\tnone\n'),)},
+ 'HISTORY.tsv': {'current_sha256': 'ddb88a83ba187d0d5132ef2d81ec194549724560d278e0c5adf7c3a146eaeb12',
+                 'prior_sha256': 'bf64db2936e80a96e2f00e01071110b9d8896c991aee0345d520fe4f1b93a916',
+                 'remove': ('dcee6b2cf5b0c922dcd0e67a59df20ad96f314c989f7d4528dad12d96408a206',),
+                 'restore': ()},
+ 'GATES.tsv': {'current_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'prior_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'remove': (),
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
+                           'prior_sha256': 'c46ac45c4740e8e4e2318b6b62c37e23351acf225c8e288c41de4cb1e31c2008',
+                           'remove': (),
+                           'restore': ((28, 'TT-SOURCE\tTENSOR\tFOLLOWUP\tBLOCKED\tFORMAL\n'),)},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'remove': (),
+                        'restore': ()}}
+V84_CANON_RESTORE = ((0, 1, '# TWIST-J Public Canon v83\n'),
+ (2, 3, '**Release identity.** Public Canon v83. Normative authority and activation\n'),
+ (12, 13, 'only. Public Canon v83 also declares the discrete architecture used to read\n'),
+ (22, 23, 'seed of the two algebraic projections. Public Canon v83 does not claim\n'),
+ (127, 128, 'deriving the architecture from J; Public Canon v83 contains no such\n'),
+ (12533,
+  12536,
+  'scale. `TT-SOURCE [O]` and `TT-VECTOR-STATE-NORMALIZATION [O]` retain their\n'
+  'full decision clauses. The broader inhomogeneous scalar action excluded by\n'),
+ (12632,
+  12637,
+  'shadow-to-mu inference rule. The emission map and the quasinormal mu decision\n'
+  'after such a rule remain open (TT-SOURCE, QNM-LEAVER-MU).\n'),
+ (12955,
+  12960,
+  'this L1 theorem. `TT-SOURCE [O]` and\n'
+  '`TT-VECTOR-STATE-NORMALIZATION [O]` keep their full registered\n'
+  'decision clauses. The theorem neither adopts nor promotes a physical\n'),
+ (12962, 13148, ''),
+ (14454, 14454, '  TT-SOURCE                  the emission map\n'))
+V84_NORMATIVE_SHA256 = {'CANON.md': 'f53c27f042cc3e940c2c5dd90ae0dba851c063c4af334732d250469ae832f2ad', 'CORE.md': 'df7c0621d462f32dae25da3482b24d4db9f186b71393cfe135264431a97c8b56', 'FRONTIER.md': '9fd15da19d83bbf85a5d389374d30617c0330b992edbac452cdb53e620c7ffa2', 'REGISTRY.tsv': '95c6676f5cadfb78dc707190fe58d03eaf64b94b97e716242b9bdd9bb58bf758', 'CHANGELOG.md': 'a1f8dc88447685fac87a1286e0ec61bcb118faba487d21bfc180211ca6669405'}
+V84_CANON_BYTES = 609802
+V84_BLOCK_BYTES = 8317
+V84_BLOCK_SHA256 = '40e181e0bfe5c65702d2d389980f0dee9ffa83f9036d80ca3f99602c0518ba9b'
+V84_SCOPE_SHA256 = '637eebf0a2b439c1cc2ff2d79640234124f7d89f7420d61451baecb444db756b'
+V84_DEFINITION = 'DEF-K1-ISOLATED-TT-EMISSION'
+V84_PROBE = 'probes/P-TT-NATIVE-QUADRATIC-EMISSION-1'
+V84_PROBE_SHA256 = '15279f5ff1b1b3ae1e94202b23479e71eced835c3dbd6f8793a10f3cbfca6f3b'
+
 # Frozen v83 ledger changes against public v82 at b3f94908eaa095771294e84c3cc29f9361aec89e.
 # Current row hashes are checked before exact removals/restores recover every v82 byte.
 V83_LEDGER_PATCH = {'REGISTRY.tsv': {'current_sha256': 'a764a066d0123c22af03f10c2ade58bf0e6f2d55d1644c3269b48ec5f016a415',
@@ -518,10 +604,76 @@ V79_NATIVE_ROWS = {
 }
 
 
+def v84_previous_bytes(path):
+    """Check the exact v84 table and reconstruct every original v83 byte."""
+    patch = V84_LEDGER_PATCH[path.name]
+    current = path.read_bytes()
+    if hashlib.sha256(current).hexdigest() != patch["current_sha256"]:
+        return None
+    removed = {value: 0 for value in patch["remove"]}
+    kept = []
+    for position, line in enumerate(current.splitlines(keepends=True)):
+        value = hashlib.sha256(line).hexdigest()
+        if position and value in removed:
+            removed[value] += 1
+        else:
+            kept.append(line)
+    if any(count != 1 for count in removed.values()):
+        return None
+    for position, old_line in patch["restore"]:
+        if position > len(kept):
+            return None
+        kept.insert(position, old_line.encode("utf-8"))
+    previous = b"".join(kept)
+    if hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]:
+        return None
+    return previous
+
+
+def v84_previous_rows(path):
+    previous = v84_previous_bytes(path)
+    if previous is None:
+        return []
+    return list(csv.DictReader(io.StringIO(previous.decode("utf-8")), delimiter="\t"))
+
+
+def v84_previous_canon_bytes():
+    """Invert only the frozen v84 text edits, checking both complete file hashes."""
+    current = CANON.read_bytes()
+    if (len(current) != V84_CANON_BYTES
+            or hashlib.sha256(current).hexdigest() != V84_NORMATIVE_SHA256["CANON.md"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(V84_CANON_RESTORE):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != V83_CANON_FILE_BYTES
+            or hashlib.sha256(previous).hexdigest() != V83_CANON_FILE_SHA256):
+        return None
+    return previous
+
+
+def v84_probe_bundle_sha256():
+    """The existing manifest hash convention, including every public probe file."""
+    directory = ROOT / V84_PROBE
+    lines = []
+    for path in sorted(directory.rglob("*"), key=lambda p: p.relative_to(ROOT).as_posix()):
+        if (not path.is_file() or "__pycache__" in path.parts
+                or path.suffix == ".pyc" or "RUNS" in path.relative_to(directory).parts):
+            continue
+        lines.append(hashlib.sha256(path.read_bytes()).hexdigest()
+                     + "  " + path.relative_to(ROOT).as_posix() + "\n")
+    return hashlib.sha256("".join(lines).encode("utf-8")).hexdigest()
+
+
 def v83_previous_bytes(path):
     """Verify the exact v83 ledger, then reconstruct every original v82 byte."""
     patch = V83_LEDGER_PATCH[path.name]
-    current = path.read_bytes()
+    current = v84_previous_bytes(path)
+    if current is None:
+        return None
     if hashlib.sha256(current).hexdigest() != patch["current_sha256"]:
         return None
     removed = {digest: 0 for digest in patch["remove"]}
@@ -817,6 +969,8 @@ def run():
         programs,
     ) = load_rows()
     canon_text = CANON.read_text(encoding="utf-8")
+    v83_canon_bytes = v84_previous_canon_bytes()
+    v83_canon_text = (v83_canon_bytes or b"").decode("utf-8")
     core_text = CORE.read_text(encoding="utf-8")
     frontier_text = FRONTIER.read_text(encoding="utf-8")
     core_selection_rows = load_table(CORE_SELECTION)
@@ -870,20 +1024,20 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 275, "D": 46, "C": 39, "F": 18,
-                       "O": 27, "H": 2}
+    expected_counts = {"T": 275, "D": 47, "C": 39, "F": 18,
+                       "O": 26, "H": 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v83",
+        "registry and companion-ledger counts match Public Canon v84",
         len(rows) == 407
         and counts == expected_counts
-        and len(normative) == 458
-        and len(dependencies) == 782
+        and len(normative) == 459
+        and len(dependencies) == 787
         and len(evidence) == 407
-        and two_architecture == 316
-        and len(history) == 942
+        and two_architecture == 317
+        and len(history) == 943
         and len(gates) == 16
-        and len(programs) == 29
+        and len(programs) == 28
         and len({row["program_id"] for row in programs.values()}) == 8
         and len(core_selection_rows) == 30
         and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 24,
@@ -7546,10 +7700,10 @@ def run():
         if row["item_id"] in v82_items or row["depends_on"] in v82_items
     }
     v82_events = [row for row in v82_history if row["claim_id"] == V82_CLAIM]
-    v82_start = canon_text.find("### DEF-K1-LINEAR-METRIC\n")
-    v82_end = canon_text.find("## 15. Couplings, instruments, and metrology", v82_start)
+    v82_start = v83_canon_text.find("### DEF-K1-LINEAR-METRIC\n")
+    v82_end = v83_canon_text.find("## 15. Couplings, instruments, and metrology", v82_start)
     v82_block = (
-        canon_text[v82_start:v82_end].encode("utf-8")
+        v83_canon_text[v82_start:v82_end].encode("utf-8")
         if v82_start >= 0 and v82_end > v82_start else b""
     )
     # Restore only the exact changed owner-boundary sentence. Both the current
@@ -7625,11 +7779,19 @@ def run():
         and all(v83_previous_bytes(ROOT / "canon" / name) is not None
                 for name in V83_LEDGER_PATCH),
     ))
+    # The old v83 guard reads only the completely hash-verified reconstruction.
+    v83_index = {row["claim_id"]: row for row in v84_previous_rows(REGISTRY)}
+    v83_normative = {row["item_id"]: row for row in v84_previous_rows(NORMATIVE)}
+    v83_dependencies = v84_previous_rows(DEPENDENCIES)
+    v83_evidence = {row["claim_id"]: row for row in v84_previous_rows(EVIDENCE)}
+    v83_history = v84_previous_rows(HISTORY)
+    v83_gates = {row["gate_id"]: row for row in v84_previous_rows(GATES)}
+    v83_programs = {row["claim_id"]: row for row in v84_previous_rows(FRONTIER_PROGRAMS)}
     v83_claim = "FRW-INHOM"
-    v83_proof_start = canon_text.find("### " + V83_DEFINITION + "\n")
-    v83_proof_end = canon_text.find("## 14. The gravitational wave program", v83_proof_start)
+    v83_proof_start = v83_canon_text.find("### " + V83_DEFINITION + "\n")
+    v83_proof_end = v83_canon_text.find("## 14. The gravitational wave program", v83_proof_start)
     v83_proof = (
-        canon_text[v83_proof_start:v83_proof_end].encode("utf-8")
+        v83_canon_text[v83_proof_start:v83_proof_end].encode("utf-8")
         if v83_proof_start >= 0 and v83_proof_end > v83_proof_start else b""
     )
     v83_expected_edges = {
@@ -7642,53 +7804,53 @@ def run():
     }
     v83_actual_edges = {
         (row["item_id"], row["depends_on"], row["relation"])
-        for row in dependencies
+        for row in v83_dependencies
         if row["item_id"] in {v83_claim, V83_DEFINITION}
         or row["depends_on"] in {v83_claim, V83_DEFINITION}
     }
-    v83_events = [row for row in history if row["release"] == "canon-v83-candidate"]
+    v83_events = [row for row in v83_history if row["release"] == "canon-v83-candidate"]
     v83_events_by_claim = {row["claim_id"]: row for row in v83_events}
-    v83_current_canon = CANON.read_bytes()
+    v83_current_canon = v83_canon_bytes or b""
     checks.append((
         "V83-FRW-HYBRID",
-        "one O-to-D existence closure adopts the exact joint-action proof and named "
+        "at v83, one O-to-D existence closure adopts the exact joint-action proof and named "
         "L1-to-L2 hybrid dictionary; no theorem is promoted, the wider scalar-action "
         "boundary survives, and TT emission, normalization and SI owners remain open",
-        has_status(index, v83_claim, "D")
-        and scope_sha256(index, v83_claim) == V83_SCOPE_SHA256
-        and index[v83_claim]["canon_section"] == "13. Gravity and cosmology"
-        and index[v83_claim]["evidence"] == "inline"
-        and V83_DEFINITION not in index and V83_DEFINITION not in evidence
-        and normative.get(V83_DEFINITION) == {
+        has_status(v83_index, v83_claim, "D")
+        and scope_sha256(v83_index, v83_claim) == V83_SCOPE_SHA256
+        and v83_index[v83_claim]["canon_section"] == "13. Gravity and cosmology"
+        and v83_index[v83_claim]["evidence"] == "inline"
+        and V83_DEFINITION not in v83_index and V83_DEFINITION not in v83_evidence
+        and v83_normative.get(V83_DEFINITION) == {
             "item_id": V83_DEFINITION, "item_type": "DEFINITION", "claim_id": "",
             "status": "", "layer": "L1", "gate_ids": "",
             "statement_source": "canon/CANON.md::" + V83_DEFINITION,
         }
-        and normative.get(v83_claim) == {
+        and v83_normative.get(v83_claim) == {
             "item_id": v83_claim, "item_type": "DICTIONARY", "claim_id": v83_claim,
             "status": "D", "layer": "L2", "gate_ids": V83_GATE,
             "statement_source": "canon/CANON.md::" + v83_claim,
         }
-        and evidence.get(v83_claim) == {
+        and v83_evidence.get(v83_claim) == {
             "claim_id": v83_claim, "evidence_id": "EV-" + v83_claim,
             "evidence_kind": "INLINE_CANON", "location": "inline",
             "sha256": V83_SCOPE_SHA256, "hash_mode": "registry-scope-sha256-v1",
             "architecture_requirement": "none",
         }
-        and gates.get(V83_GATE, {}).get("owner_item_id") == v83_claim
-        and gates.get(V83_GATE, {}).get("from_layer") == "L1"
-        and gates.get(V83_GATE, {}).get("to_layer") == "L2"
-        and gates.get(V83_GATE, {}).get("gate_kind") == "DICTIONARY_LIFT"
+        and v83_gates.get(V83_GATE, {}).get("owner_item_id") == v83_claim
+        and v83_gates.get(V83_GATE, {}).get("from_layer") == "L1"
+        and v83_gates.get(V83_GATE, {}).get("to_layer") == "L2"
+        and v83_gates.get(V83_GATE, {}).get("gate_kind") == "DICTIONARY_LIFT"
         and v83_actual_edges == v83_expected_edges
         and not any(row["item_id"] in {V82_CLAIM, "CONFORMAL-PREFACTOR"}
-                    and row["depends_on"] == v83_claim for row in dependencies)
-        and has_status(index, V82_CLAIM, "T")
-        and index.get(V82_CLAIM) == v82_index.get(V82_CLAIM)
-        and normative.get(V82_CLAIM) == v82_normative.get(V82_CLAIM)
-        and has_status(index, "CONFORMAL-PREFACTOR", "D")
-        and scope_sha256(index, "CONFORMAL-PREFACTOR") == V83_CONFORMAL_SCOPE_SHA256
-        and evidence.get("CONFORMAL-PREFACTOR") == v82_evidence.get("CONFORMAL-PREFACTOR")
-        and all(has_status(index, owner, "O") and index.get(owner) == v82_index.get(owner)
+                    and row["depends_on"] == v83_claim for row in v83_dependencies)
+        and has_status(v83_index, V82_CLAIM, "T")
+        and v83_index.get(V82_CLAIM) == v82_index.get(V82_CLAIM)
+        and v83_normative.get(V82_CLAIM) == v82_normative.get(V82_CLAIM)
+        and has_status(v83_index, "CONFORMAL-PREFACTOR", "D")
+        and scope_sha256(v83_index, "CONFORMAL-PREFACTOR") == V83_CONFORMAL_SCOPE_SHA256
+        and v83_evidence.get("CONFORMAL-PREFACTOR") == v82_evidence.get("CONFORMAL-PREFACTOR")
+        and all(has_status(v83_index, owner, "O") and v83_index.get(owner) == v82_index.get(owner)
                 for owner in ("TT-SOURCE", "TT-VECTOR-STATE-NORMALIZATION", "METRO-EDGE-SCALE"))
         and len(v83_events) == 2
         and set(v83_events_by_claim) == {v83_claim, "CONFORMAL-PREFACTOR"}
@@ -7698,20 +7860,110 @@ def run():
             and v83_events_by_claim[claim]["event_type"] == event.replace("-", "_")
             and v83_events_by_claim[claim]["previous_status"] == old_status
             and v83_events_by_claim[claim]["new_status"] == "D"
-            and v83_events_by_claim[claim]["scope_sha256"] == scope_sha256(index, claim)
+            and v83_events_by_claim[claim]["scope_sha256"] == scope_sha256(v83_index, claim)
             for claim, event, sequence, old_status in (
                 (v83_claim, "STATUS-CHANGE", "14", "O"),
                 ("CONFORMAL-PREFACTOR", "SCOPE-CHANGE", "2", "D"),
             )
         )
-        and v83_claim not in programs and v83_claim not in frontier_text
-        and V83_DEFINITION not in programs and V83_DEFINITION not in frontier_text
+        and v83_claim not in v83_programs and v83_claim not in frontier_text
+        and V83_DEFINITION not in v83_programs and V83_DEFINITION not in frontier_text
         and "The selected FRW-INHOM dictionary supplies one continuous homogeneous FRW\n" in core_text
         and len(v83_current_canon) == V83_CANON_FILE_BYTES
         and hashlib.sha256(v83_current_canon).hexdigest() == V83_CANON_FILE_SHA256
         and len(v83_proof) == V83_PROOF_BYTES
         and hashlib.sha256(v83_proof).hexdigest() == V83_PROOF_SHA256
         and b"### FRW-INHOM [D]" in v83_proof,
+    ))
+
+    checks.append((
+        "V84-PRIOR-LEDGERS",
+        "exact v84 bytes reconstruct every v83 table and the complete Canon before "
+        "all unchanged historical hash guards",
+        set(V84_LEDGER_PATCH) == set(V83_LEDGER_PATCH)
+        and tuple((len(V84_LEDGER_PATCH[name]["remove"]),
+                   len(V84_LEDGER_PATCH[name]["restore"])) for name in (
+            "REGISTRY.tsv", "NORMATIVE.tsv", "DEPENDENCIES.tsv", "EVIDENCE.tsv",
+            "HISTORY.tsv", "GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv",
+        )) == ((1, 1), (2, 1), (7, 2), (1, 1), (1, 0), (0, 0), (0, 1), (0, 0))
+        and all(v84_previous_bytes(ROOT / "canon" / name) is not None
+                for name in V84_LEDGER_PATCH)
+        and v83_canon_bytes is not None
+        and all(hashlib.sha256((ROOT / "canon" / name).read_bytes()).hexdigest() == value
+                for name, value in V84_NORMATIVE_SHA256.items()),
+    ))
+    v84_claim = "TT-SOURCE"
+    v84_start = canon_text.find("### " + V84_DEFINITION + "\n")
+    v84_end = canon_text.find("## 15. Couplings, instruments, and metrology", v84_start)
+    v84_block = (canon_text[v84_start:v84_end].encode("utf-8")
+                 if v84_start >= 0 and v84_end > v84_start else b"")
+    v84_expected_edges = {
+        (v84_claim, "DEF-ARCHITECTURE", "REQUIRES"),
+        ("POL-READ", v84_claim, "BOUNDED_BY"),
+        (V82_CLAIM, v84_claim, "BOUNDED_BY"),
+        (V84_DEFINITION, V82_DEFINITION, "REQUIRES"),
+        (V84_DEFINITION, V83_DEFINITION, "REQUIRES"),
+        (v84_claim, V84_DEFINITION, "REQUIRES"),
+        (v84_claim, "TT-SQUARING-DECODER", "REQUIRES"),
+        (v84_claim, "TT-VECTOR-STATE-NORMALIZATION", "BOUNDED_BY"),
+    }
+    v84_actual_edges = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies
+        if row["item_id"] in {v84_claim, V84_DEFINITION}
+        or row["depends_on"] in {v84_claim, V84_DEFINITION}
+    }
+    v84_events = [row for row in history if row["release"] == "canon-v84-candidate"]
+    checks.append((
+        "V84-ISOLATED-TT",
+        "one selected L1 source dictionary closes O to D on the frozen native emission "
+        "probe; complete transfer and sign stay choices, all other claims and "
+        "normalization remain unchanged",
+        has_status(index, v84_claim, "D")
+        and set(index) == set(v83_index)
+        and all(row == v83_index[claim] for claim, row in index.items() if claim != v84_claim)
+        and scope_sha256(index, v84_claim) == V84_SCOPE_SHA256
+        and index[v84_claim]["canon_section"] == "14. The gravitational wave program"
+        and index[v84_claim]["evidence"] == V84_PROBE
+        and normative.get(v84_claim) == {
+            "item_id": v84_claim, "item_type": "DICTIONARY", "claim_id": v84_claim,
+            "status": "D", "layer": "L1", "gate_ids": "",
+            "statement_source": "canon/CANON.md::" + v84_claim,
+        }
+        and normative.get(V84_DEFINITION) == {
+            "item_id": V84_DEFINITION, "item_type": "DEFINITION", "claim_id": "",
+            "status": "", "layer": "L1", "gate_ids": "",
+            "statement_source": "canon/CANON.md::" + V84_DEFINITION,
+        }
+        and V84_DEFINITION not in index and V84_DEFINITION not in evidence
+        and evidence.get(v84_claim) == {
+            "claim_id": v84_claim, "evidence_id": "EV-" + v84_claim,
+            "evidence_kind": "PUBLIC_PROBE", "location": V84_PROBE,
+            "sha256": V84_PROBE_SHA256, "hash_mode": "bundle-manifest-sha256-v1",
+            "architecture_requirement": "two-architecture",
+        }
+        and v84_probe_bundle_sha256() == V84_PROBE_SHA256
+        and v84_actual_edges == v84_expected_edges
+        and all(row["owner_item_id"] not in {v84_claim, V84_DEFINITION}
+                for row in gates.values())
+        and v84_claim not in programs and v84_claim not in frontier_text
+        and V84_DEFINITION not in programs and V84_DEFINITION not in frontier_text
+        and all(row["claim_id"] not in {v84_claim, V84_DEFINITION} for row in core_selection_rows)
+        and has_status(index, "TT-VECTOR-STATE-NORMALIZATION", "O")
+        and len(v84_events) == 1
+        and v84_events[0]["claim_id"] == v84_claim
+        and v84_events[0]["event_id"] == "CANON84-STATUS-CHANGE-TT-SOURCE"
+        and v84_events[0]["event_sequence"] == "14"
+        and v84_events[0]["event_type"] == "STATUS_CHANGE"
+        and v84_events[0]["previous_status"] == "O"
+        and v84_events[0]["new_status"] == "D"
+        and v84_events[0]["scope_sha256"] == V84_SCOPE_SHA256
+        and v84_events[0]["evidence_location"] == V84_PROBE
+        and v84_events[0]["evidence_sha256"] == V84_PROBE_SHA256
+        and len(v84_block) == V84_BLOCK_BYTES
+        and hashlib.sha256(v84_block).hexdigest() == V84_BLOCK_SHA256
+        and b"### TT-SOURCE [D]" in v84_block
+        and b"No\nL2-L6 output or lift is adopted" in v84_block,
     ))
 
     print("TWIST-J theorem/dictionary separation audit")

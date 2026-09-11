@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its eighty-three checks cover the current
+and emits deterministic text. Its eighty-five checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -460,3 +460,16 @@ events, 16 gates, 29 live H/O, 30 CORE selections and 24 reproductions.
 This remains per-release structural bookkeeping, with no new scientific
 claim. The v83 expected output was saved after all 83 release-audit checks
 passed; formal release replay uses the completed immutable content pin.
+
+The v84 check first validates every current table byte, then reverses only
+the pinned v84 row replacements, additions and deletion to reconstruct each
+complete v83 table. A separate exact inverse of the text edits reconstructs
+the entire v83 Canon. Both ends retain full SHA-256 checks. The existing
+v83-to-v82 and older guards therefore run on verified historical bytes,
+including the unchanged v83 proof and its then-open TT-SOURCE boundary.
+The new current-state check pins the selected isolated TT source at D and L1,
+its complete proof, definition, dependency set, public probe manifest and one
+lifecycle event. It verifies that every other Registry row is identical to
+v83 and that normalization remains O. The initial frozen v84 candidate omitted
+this routine release-witness update and failed this audit in PR #950; that
+candidate remains preserved. No mathematical probe or threshold is changed.
