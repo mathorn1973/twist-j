@@ -7,235 +7,109 @@
 
 **Date:** 2026-09-11.
 
-This note starts **Gate W2I**. W2H-B proved that ordinary semiregularity is impossible for the minimal non-external Postnikov lane, but found a genuine equivariant dimension window at order 80. The next task is therefore not another abstract Ext estimate. It is to build one explicit order-80 quotient on which the scale-one source class can be treated equivariantly.
+**Coordinate correction:** this file replaces the first version merged in PR #957. The quotient lattice and descended polarization in that version were correct, but the displayed quotient coordinates of the correction six-form `bar Q` were transcribed incorrectly. The corrected pullback computation is given in Section 5 below and is reproduced by the companion verifier. The main W2I conclusion is unchanged: `bar Q` descends integrally and primitively, while `bar L/2` does not descend as an honest line bundle.
 
-A first surprise is that the most obvious factorized order-80 quotients are poor geometric carriers for the original simple divisor-supported source. A mixed five-primary line fixes this defect at the level of the polarization: the quotient becomes a non-product polarized abelian fourfold of type `(1,1,1,5)`, while the correction class still descends integrally.
-
-The note does **not** yet construct the final equivariant source perfect complex or compute its exact invariant `Ext^1`. It isolates a concrete quotient and shows why the next source object should naturally live in a **twisted/root-gerbe category**, which is exactly within Perry's framework.
+This note starts **Gate W2I**. W2H-B proved that ordinary semiregularity is impossible for the minimal non-external Postnikov lane, but found a genuine equivariant dimension window at order 80. The target is therefore one explicit order-80 quotient on which the scale-one source class can be treated equivariantly.
 
 No `canon/` or registry file is changed. No algebraicity theorem is claimed.
 
 ---
 
-## 1. Start from one passing two-primary plane
+## 1. Fixed order-80 subgroup
 
-Use the exact W2E theta audit. Fix the passing two-primary maximal isotropic plane
+Let
 
 \[
-H_2=H_{2,A}\oplus H_{2,B}
-\subset K(L)[2]
+X=B\times B,
+\qquad B=\operatorname{Jac}(y^2=x^5-1),
 \]
 
-whose generators in the fixed eight-dimensional homology basis are
+and let `L` and `Q` be the scale-one support polarization and correction class from W2E.
+
+Fix the W2E-passing two-primary plane generated in the fixed eight-dimensional homology basis by
 
 \[
 (1,0,1,0,0,0,0,0),
 \]
-
 \[
 (0,1,0,0,0,0,0,0),
 \]
-
 \[
 (0,0,0,0,1,0,1,0),
 \]
-
 \[
 (0,0,0,0,0,1,0,0).
 \]
 
-This is one of the 25 factorized passing two-primary Lagrangians counted in W2H-B.
-
-The five-primary kernel basis on one CM5 factor contains
+In the five-primary kernel, use
 
 \[
-u_1=(1,3,1,0).
+u_1=(1,3,1,0)
 \]
 
-W2E proved that every one-dimensional five-primary line is compatible with the correction class `Q` once the chosen two-primary plane passes.
+on one CM5 factor.
 
-We compare two choices of the five-primary line.
+A fully factorized order-80 choice puts the five-line in only one factor. That quotient is useful arithmetically but poor for the old simple divisor-supported source: the descended polarization splits as a product with factor types `(1,1)` and `(1,5)`, so one factor has only one section and every divisor in the external-product linear system is reducible.
 
----
-
-## 2. Why the fully factorized order-80 quotient is a bad source carrier
-
-First choose the five-primary line wholly in the first factor. Then
-
-\[
-H=H_A\times H_B,
-\qquad |H_A|=20,\quad |H_B|=4.
-\]
-
-The quotient remains a product of two abelian surfaces.
-
-An exact overlattice basis for the first factor is given, in the original CM5 homology basis, by the columns of
-
-\[
-B_A=
-\begin{pmatrix}
-1&0&1/10&0\\
-0&1/2&3/10&0\\
-0&0&1/10&0\\
-0&0&0&1
-\end{pmatrix},
-\]
-
-with determinant
-
-\[
-\det B_A=1/20.
-\]
-
-For the second factor one may take
-
-\[
-B_B=
-\begin{pmatrix}
-1&0&1/2&0\\
-0&1/2&0&0\\
-0&0&1/2&0\\
-0&0&0&1
-\end{pmatrix},
-\]
-
-with
-
-\[
-\det B_B=1/4.
-\]
-
-Transforming the alternating form of the scale-one support polarization `L` gives
-
-\[
-\bar L_A=
-\begin{pmatrix}
-0&2&1&2\\
--2&0&0&-1\\
--1&0&0&0\\
--2&1&0&0
-\end{pmatrix},
-\]
-
-and
-
-\[
-\bar L_B=
-\begin{pmatrix}
-0&3&1&-2\\
--3&0&0&1\\
--1&0&0&2\\
-2&-1&-2&0
-\end{pmatrix}.
-\]
-
-Their Pfaffians are
-
-\[
-\boxed{\operatorname{Pf}(\bar L_A)=1,}
-\qquad
-\boxed{\operatorname{Pf}(\bar L_B)=5.}
-\]
-
-Thus the descended factor polarizations have types
-
-\[
-(1,1)
-\quad\text{and}\quad
-(1,5),
-\]
-
-and
-
-\[
-h^0(\bar L_A)=1,
-\qquad
-h^0(\bar L_B)=5.
-\]
-
-The total descended line bundle is an external product
-
-\[
-\bar{\mathcal L}
-=\bar{\mathcal L}_A\boxtimes\bar{\mathcal L}_B.
-\]
-
-Because the first factor has only one section, every section of `bar L` is a pure tensor. Every divisor in the complete linear system therefore has the reducible form
-
-\[
-\boxed{
-(\Theta_A\times B')+(A'\times D_B).
-}
-\]
-
-So the fully factorized quotient destroys the smooth integral support geometry used to prove simplicity of the W2E-B sheaf.
-
-This does not make the factorized order-80 groups useless for all derived constructions, but it makes them poor carriers for the **same** simple divisor-supported source ansatz.
-
----
-
-## 3. Replace the five-line by a diagonal mixed line
-
-Keep exactly the same passing two-primary plane, but choose the five-primary line generated by
+Instead choose the diagonal five-primary line generated by
 
 \[
 (u_1,u_1)
 =(1,3,1,0,1,3,1,0)
-\quad\text{mod }5.
+\quad\bmod 5.
 \]
 
 Call the resulting order-80 subgroup
 
 \[
-H_{\mathrm{mix}}.
+H_{\rm mix}.
 \]
 
-It is still isotropic and still passes the W2E correction-class descent test, but it no longer factors between the two abelian-surface coordinates.
+It remains isotropic and passes the exact W2E correction-class descent test.
+
+---
+
+## 2. Exact quotient lattice
 
 The quotient lattice is
 
 \[
-\Lambda_{\mathrm{mix}}
-=
-\Lambda
-+\frac12H_2
-+\frac15\mathbf Z(u_1,u_1).
+\Lambda_{\rm mix}
+=\Lambda+rac12H_2+rac15\mathbf Z(u_1,u_1).
 \]
 
 An exact basis is given by the columns of
 
 \[
-B_{\mathrm{mix}}=
-\frac1{10}
+B_{\rm mix}=
 \begin{pmatrix}
-10&0&5&0&0&0&1&0\\
-0&5&0&0&0&0&3&0\\
-0&0&5&0&0&0&1&0\\
-0&0&0&10&0&0&0&0\\
-0&0&0&0&10&0&1&0\\
-0&0&0&0&0&5&3&0\\
-0&0&0&0&0&0&1&0\\
-0&0&0&0&0&0&0&10
+1&0&1/2&0&0&0&1/10&0\\
+0&1/2&0&0&0&0&3/10&0\\
+0&0&1/2&0&0&0&1/10&0\\
+0&0&0&1&0&0&0&0\\
+0&0&0&0&1&0&1/10&0\\
+0&0&0&0&0&1/2&3/10&0\\
+0&0&0&0&0&0&1/10&0\\
+0&0&0&0&0&0&0&1
 \end{pmatrix}.
 \]
 
 Its determinant is
 
 \[
-\boxed{\det B_{\mathrm{mix}}=1/80,}
+\boxed{\det B_{\rm mix}=1/80.}
 \]
 
-as required.
+Thus this is exactly the order-80 quotient lattice.
 
 ---
 
-## 4. The descended polarization is integral and genuinely mixed
+## 3. Descended polarization
 
-Let `L` be the original scale-one polarization form in the public CM5 homology basis. The descended alternating form is
+The descended alternating form is
 
 \[
-\bar L
-=B_{\mathrm{mix}}^T L B_{\mathrm{mix}}.
+\bar L=B_{\rm mix}^{T}LB_{\rm mix}.
 \]
 
 Exact calculation gives
@@ -256,104 +130,172 @@ Exact calculation gives
 }
 \]
 
-The form is integral. It has a genuine cross term between the old factors, for example
+The cross entry `bar L_(0,6)=1` shows that the polarization is genuinely mixed rather than an external product.
 
-\[
-\bar L_{0,6}=1,
-\]
-
-so it is not the external product polarization from Section 2.
-
-Its Smith data are
+Its integral alternating Smith data are
 
 \[
 (1,1,1,1,1,1,5,5),
 \]
 
-or equivalently the polarization type is
+so the polarization type is
 
 \[
 \boxed{(1,1,1,5).}
 \]
 
-Thus
+Hence
 
 \[
 \boxed{h^0(\bar L)=5.}
 \]
 
-This is the correct order-80 quotient size, but now the polarization is genuinely mixed.
+The determinant is
+
+\[
+\det(\bar L)=25.
+\]
 
 ---
 
-## 5. The correction class descends at scale one
+## 4. The original correction six-form
 
-Write
+In the original integral dual basis `x_0,...,x_7`, W2E fixed
+
+\[
+\boxed{
+\begin{aligned}
+Q=40(&x_{012345}+x_{012356}+x_{012367}\\
+&+x_{014567}+x_{124567}+x_{234567}).
+\end{aligned}
+}
+\]
+
+The quotient coordinates must therefore be obtained directly by evaluating this alternating six-form on six columns of `B_mix`. This is the coordinate transformation audited below.
+
+---
+
+## 5. Corrected quotient coordinates of Q
+
+Let
 
 \[
 y_0,\ldots,y_7
 \]
 
-for the integral dual basis of the mixed quotient lattice. Transforming the exact six-form `Q` from W2E gives
+be the integral dual basis of the quotient lattice. Direct evaluation gives
 
 \[
 \boxed{
 \begin{aligned}
-\bar Q={}&y_{012345}+y_{012367}
-+5y_{014567}\\
-&+3y_{024567}+y_{234567}.
+\bar Q={}&5y_{012345}
++3y_{012346}
++y_{012367}\\
+&-y_{013456}
++y_{014567}
++3y_{023456}
++y_{234567}.
 \end{aligned}
 }
 \]
 
-All coefficients are integers. Their gcd is one, so this is not merely a hidden common multiple of a smaller descended class.
-
-Hence the mixed quotient satisfies the exact scale-one descent relation
+Every coefficient is integral, and their gcd is one. Therefore
 
 \[
-\boxed{\pi^*\bar Q=Q.}
+\boxed{\pi^*\bar Q=Q}
 \]
 
-The class remains of Hodge type because the quotient is isogenous to the original CM abelian fourfold.
+with `bar Q` primitive in these integral quotient coordinates.
 
-Moreover `Q` is an effective/strongly positive curve class on the cover. Isogenies preserve the real positivity cone, so `bar Q` lies in the pseudoeffective cone of curve classes on the quotient. For curve classes on abelian varieties, the pseudoeffective and nef/strong positivity descriptions coincide. This is useful, but it does **not** yet produce an integral effective curve with class exactly `bar Q`; scale-one effectivity remains a geometric obligation.
+This is the corrected form. The five-term expression in the first version of this note was a coordinate-transcription error; it is not used further.
+
+There is a useful consistency identity. Let `Delta_+` and `Delta_-` be the diagonal and anti-diagonal abelian surfaces upstairs. One has
+
+\[
+Q=2L([\Delta_+]+[\Delta_-]).
+\]
+
+For the present subgroup,
+
+\[
+|H_{\rm mix}\cap\Delta_+|=20,
+\qquad
+|H_{\rm mix}\cap\Delta_-|=4.
+\]
+
+If `bar Delta_+` and `bar Delta_-` denote their quotient images, then
+
+\[
+\pi^*[\bar\Delta_+]=4[\Delta_+],
+\qquad
+\pi^*[\bar\Delta_-]=20[\Delta_-].
+\]
+
+Consequently, rationally,
+
+\[
+\boxed{
+\bar Q
+=
+\frac12\,\bar L[\bar\Delta_+]
++
+\frac1{10}\,\bar L[\bar\Delta_-].
+}
+\]
+
+This identity is useful for the next effectivity analysis. It also shows why integral scale-one effectivity is subtler than real pseudoeffectivity: the most obvious quotient surface decomposition carries denominators `2` and `10`.
 
 ---
 
-## 6. A new obstruction: the half-polarization no longer descends honestly
+## 6. Positivity and what is not yet proved
 
-The original scale-one source sheaf used a line bundle `M` satisfying
+Upstairs, `Q` is represented by an effective curve cycle and lies in the strongly positive cone. A finite isogeny preserves the real positivity cone, so `bar Q` is pseudoeffective/strongly positive as a **real** curve class downstairs.
+
+This does **not** prove that the primitive integral class `bar Q` itself is represented by an integral effective curve. The rational diagonal/anti-diagonal formula above makes the remaining denominator issue explicit.
+
+Thus the following remains open:
+
+\[
+\boxed{
+\bar Q\stackrel{?}{=} [\bar C]
+\text{ for an integral/effective algebraic curve cycle }\bar C.
+}
+\]
+
+A perfect-complex correction could also suffice for Perry's derived framework, but its Schur property and deformation space would still need to be controlled.
+
+---
+
+## 7. The half-polarization obstruction and root gerbe
+
+The original scale-one source used a line bundle `M` satisfying
 
 \[
 2c_1(M)=L.
 \]
 
-On the mixed quotient, `bar L` is **not** divisible by two in the integral Neron-Severi lattice. This is already visible from the odd matrix entries above.
-
-Therefore there is no honest quotient line bundle `bar M` with
+The quotient matrix `bar L` has odd entries. Therefore `bar L` is not divisible by two in the integral Neron-Severi lattice, and there is no honest quotient line bundle `bar M` with
 
 \[
 2c_1(\bar M)=\bar L.
 \]
 
-This explains why an honest quotient sheaf is not the natural object for W2I.
-
-The correct replacement is the square-root gerbe
+The natural carrier is the square-root gerbe
 
 \[
 \boxed{
 \mathfrak X
-:=\sqrt[2]{\bar{\mathcal L}/\bar X},
+=\sqrt[2]{\bar{\mathcal L}/\bar X},
 }
 \]
 
-which carries a tautological weight-one line object `mathscr M` with
+with tautological weight-one line object `mathscr M` satisfying
 
 \[
 \mathscr M^{\otimes2}\simeq\bar{\mathcal L}.
 \]
 
-On this gerbe the old half-divisor formula becomes honest again:
+For a divisor `bar Y in |bar L|`, the old half-divisor Chern-character identity becomes honest on the gerbe:
 
 \[
 \operatorname{ch}
@@ -362,104 +304,65 @@ On this gerbe the old half-divisor formula becomes honest again:
 \bar L+\frac1{24}\bar L^3.
 \]
 
-Thus the source target is naturally a **twisted perfect/coherent object** whose remaining correction is precisely `bar Q`.
+The remaining correction is exactly the primitive class `bar Q` above.
 
-This is not an artificial escape. Perry's equivariant semiregularity theorem is explicitly formulated for twisted derived/invariant categories, so the root-gerbe carrier is structurally aligned with the theorem we are trying to use.
-
----
-
-## 7. What W2I has now reduced to
-
-The mixed order-80 quotient removes the factorized support defect but exposes the exact remaining source problem.
-
-We now have:
-
-```text
-order-80 subgroup                           EXPLICIT
-quotient lattice                            EXPLICIT
-polarization                                type (1,1,1,5)
-polarization product split                  NO
-h^0(bar L)                                  5
-scale-one correction descent                YES, integral primitive bar Q
-honest square root bar L/2                  NO
-root-gerbe square root                      YES, tautological
-real pseudoeffectivity of bar Q             YES
-integral effective curve for bar Q          OPEN
-source twisted perfect/coherent object      OPEN
-exact invariant Ext^1 r_H                   OPEN
-```
-
-The next source construction should therefore be performed on `mathfrak X`, not by forcing an honest half-polarization line bundle onto the quotient.
+Perry's 2026 semiregularity theorem explicitly includes twisted derived categories, so this carrier is within the intended framework rather than an ad hoc enlargement.
 
 ---
 
-## 8. Next gate: W2I-B twisted correction geometry
+## 8. W2I-B target
 
-The next exact gate is:
+The next exact gate is now:
 
-1. choose an effective divisor
-   \[
-   \bar Y\in|\bar L|;
-   \]
-2. work on the root gerbe `mathfrak X` with tautological `mathscr M`;
-3. realize the primitive curve class
-   \[
-   \bar Q
-   \]
-   by an integral algebraic curve/perfect correction in the correct twist sector;
-4. construct a simple or at least Schur twisted source object `bar G` with
+1. choose a suitable divisor `bar Y in |bar L|`;
+2. work on `mathfrak X` with the tautological twisted line `mathscr M`;
+3. realize the corrected primitive class `bar Q` by an integral curve or a controlled twisted perfect correction;
+4. construct a Schur/simple twisted source object `bar G` with
    \[
    \operatorname{ch}(\bar G)=\bar\delta;
    \]
 5. compute
    \[
-   r_H
-   =\dim\operatorname{Ext}^1(\bar G,\bar G),
+   r_H=\dim\operatorname{Ext}^1(\bar G,\bar G);
    \]
-   which equals the invariant source dimension upstairs;
 6. test the W2H-B necessary window
    \[
    \boxed{r_H\le30.}
    \]
 
-If this succeeds, the invariant mixed space automatically has dimension at least `144`, so an equivariant non-external Postnikov plane `(mu,nu)` exists and the final semiregularity calculation becomes finite.
+If this succeeds, the invariant mixed sector is automatically large enough to choose the two independent Postnikov classes needed for the non-external outer object.
 
 ---
 
 ## 9. Reproduction
 
-The companion exact verifier
+The companion verifier
 
 ```text
 notes/HODGE-TATE-CM5-W2I-MIXED-ORDER80-VERIFY.py
 ```
 
-checks:
+checks from the original W2E six-form, rather than from hard-coded quotient coordinates:
 
-- the chosen two-primary plane is one of the accepted W2E passing planes;
-- the factorized quotient indices `20` and `4`;
-- Pfaffians `1` and `5` of the factorized descended polarizations;
-- the mixed quotient index `80`;
-- integrality of the displayed mixed polarization matrix;
-- polarization type `(1,1,1,5)` via determinant/Pfaffian data;
-- the five exact nonzero coefficients of `bar Q`;
-- primitivity of `bar Q`.
+- the selected two-primary plane passes W2E;
+- quotient index `80`;
+- the displayed descended polarization matrix;
+- polarization type `(1,1,1,5)`;
+- the corrected seven nonzero coefficients of `bar Q`;
+- integrality and primitivity of `bar Q`;
+- non-divisibility of `bar L` by two.
 
-All arithmetic is exact `Fraction`/integer arithmetic.
+All calculations are exact `Fraction`/integer arithmetic.
 
 ---
 
 ## 10. Verdict
 
-W2I is now an explicit quotient problem rather than a group search.
-
-The fully factorized order-80 quotients are a breaker for the **old simple support ansatz** because their descended line bundle has a fixed principal factor and hence only reducible divisors.
-
-A mixed five-primary line gives a better carrier:
+The order-80 mixed quotient remains valid after the coordinate repair:
 
 \[
 \boxed{
-\bar X=X/H_{\mathrm{mix}},
+\bar X=X/H_{\rm mix},
 \qquad
 \operatorname{type}(\bar L)=(1,1,1,5),
 \qquad
@@ -467,4 +370,4 @@ A mixed five-primary line gives a better carrier:
 }
 \]
 
-The price is also exact: `bar L/2` does not exist as an honest line bundle. The next candidate therefore lives naturally on the square-root gerbe of `bar L`, where Perry's twisted semiregularity machinery is available.
+The corrected `bar Q` is integral and primitive. The root-gerbe conclusion is unchanged. Scale-one integral effectivity of `bar Q` remains the next genuine geometric obligation.
