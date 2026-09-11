@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v83
+# TWIST-J Public Canon v84
 
-**Release identity.** Public Canon v83. Normative authority and activation
+**Release identity.** Public Canon v84. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v83 also declares the discrete architecture used to read
+only. Public Canon v84 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v83 does not claim
+seed of the two algebraic projections. Public Canon v84 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -125,7 +125,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v83 contains no such
+deriving the architecture from J; Public Canon v84 contains no such
 theorem.
 
 ---
@@ -12531,8 +12531,9 @@ inhomogeneous spacetime, full GR or Einstein equations for those records,
 all-order gauge completion, tau-to-full-metric identification, arbitrary
 matter-jet continuation, physical occurrence or emission law, physical
 radiation pressure, scalar fluctuation spectrum, numerical `r_T`, or SI
-scale. `TT-SOURCE [O]` and `TT-VECTOR-STATE-NORMALIZATION [O]` retain their
-full decision clauses. The broader inhomogeneous scalar action excluded by
+scale. The separate selected `TT-SOURCE [D]` isolated emission construction
+does not enlarge this FRW dictionary. `TT-VECTOR-STATE-NORMALIZATION [O]`
+retains its full decision clause. The broader inhomogeneous scalar action excluded by
 `CONFORMAL-PREFACTOR` is still unsupplied: its homogeneous coefficient does
 not acquire an inhomogeneous action or a new L5-to-L2 interpretation from
 this selected hybrid construction. Its SI boundary remains with
@@ -12629,8 +12630,11 @@ the explicit dictionary inputs mu = 1 and Z_L2 = 1/2
 (TT-QUADRATIC-GERM [D]); neither the action germ, a Gaussian-state
 boundary, nor a Stage B pullback is derived by that bookkeeping
 identity. No numerical mu corridor is retained without a public
-shadow-to-mu inference rule. The emission map and the quasinormal mu decision
-after such a rule remain open (TT-SOURCE, QNM-LEAVER-MU).
+shadow-to-mu inference rule. The selected isolated emission map is given by
+TT-SOURCE [D] below.
+The quasinormal mu decision after such an inference rule remains open
+(QNM-LEAVER-MU). No curved-background source map follows from the
+isolated planar construction.
 
 ### DEF-K1-LINEAR-METRIC
 
@@ -12949,11 +12953,199 @@ classification or unique selection of all reading families. The linear
 scalar representative is zero; `det(gamma)=1-h^2` is not thereby a
 cosmological scalar. No `P_S` or `r_T`, including zero or infinity,
 follows. The separate `FRW-INHOM [D]` hybrid dictionary does not enlarge
-this L1 theorem. `TT-SOURCE [O]` and
-`TT-VECTOR-STATE-NORMALIZATION [O]` keep their full registered
-decision clauses. The theorem neither adopts nor promotes a physical
+this L1 theorem. The separate `TT-SOURCE [D]` isolated reading supplies
+its own explicitly chosen source-to-field map, not a physical source
+realization from this initial-value theorem.
+`TT-VECTOR-STATE-NORMALIZATION [O]` keeps its full registered decision
+clause. The theorem neither adopts nor promotes a physical
 reading in `TT-SQUARING-DECODER [D]` or
 `PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]`.
+
+### DEF-K1-ISOLATED-TT-EMISSION
+
+This definition selects one L1 source-to-field reading on the unchanged
+ten-word alphabet W and initial source data of DEF-K1-LINEAR-METRIC.
+It does not identify source amplitudes with an outgoing vector field.
+For w=(w0,w1,w2,w3), t=0,1 and r in Z/5, retain
+
+```text
+u_t=w_(t+2)-w_t,
+b_t(r)=[delta_(r,u_t)+delta_(r,u_t+1)]/sqrt(2),
+H_t(r)=b_t(r)^2,
+Src(w)=(w,u0,u1,b0,b1,H0,H1),
+Phi(Src(w))=H1-H0=b1^2-b0^2.
+```
+
+The context fixes five labelled sites, the selected plus frame, a marked
+local emission onset, zero outgoing initial data, the public planar L,
+one isolated impulse, and the forward relative sign. The source-work
+convention transfers the complete K1 kinetic channel (H1-H0)^2/2 into
+the outgoing quadratic field energy at onset. Complete transfer is an
+adopted condition, not a consequence of conservation or J alone.
+
+The source class consists of local real homogeneous quadratic maps
+from two ordered spin-one O(2) doublets to a spin-two doublet, equivariant
+under rotations and reflection and antisymmetric under slice exchange.
+The selected real source data occupy its plus frame. The outgoing h has
+its own marked counter m and obeys
+
+```text
+L=[188I-29(S+S^-1)-65(S^2+S^-2)]/324,
+h0=h1=0,
+h_(m+1)=(2I-L)h_m-h_(m-1)+delta_(m,1)*Phi,  m>=1.
+```
+
+The total map sends Src(w) to every finite prefix (h0,...,hN), N>=1,
+of this rational history. Equality is literal equality of the source
+descriptor, context labels and all outgoing entries and counter labels.
+Longer prefixes restrict to shorter ones. This definition supplies no
+composition rule for overlapping source windows or physical onset clock.
+
+For the linear stress at the impulse fix, with lambda=216*pi,
+
+```text
+rho=J_i=S_i3=0,
+S11=Phi_plus/(2*lambda),  S22=-Phi_plus/(2*lambda),
+S12=S21=Phi_cross/(2*lambda).
+```
+
+All stress components vanish at other steps. These are the coefficients
+of the chosen source coupling (1/2)*sum S_ij*H_ij added to A2/(2*lambda),
+where A2 is the full quadratic action of DEF-K1-LINEAR-METRIC; lapse,
+shift and all independent metric entries are retained through variation.
+
+For the quadratic work record use the same oriented incidence B and
+positive edge weights W_e as DEF-K1-HYBRID-FRW-CELL-METRIC, so L=B^T W_e B.
+For each real TT component set
+
+```text
+q_n=h_(n+1)-h_(n-1),
+e_(n+1/2)(x)=(h_(n+1)(x)-h_n(x))^2/2
+  +(1/4)*sum_(edge incident x) w_edge*(B h_(n+1))_edge*(B h_n)_edge,
+j_n(edge)=(w_edge/4)*(B h_n)_edge*(q_n(tail)+q_n(head)).
+```
+
+Sum these records over the two components if both are present. The
+preregistered source radiative channel is
+
+```text
+e_src,1/2=Phi^2/2,
+e_src,n+1/2=0 for n>=1,
+j_src=0.
+```
+
+Here Phi is real in the selected source frame; for two real components
+the right side is their sum of squares divided by two. This channel is
+not identified with the complete physical source energy. Its prescribed
+depletion is part of the isolated transfer convention. The auxiliary
+record fixes mean(tau)=0 and
+
+```text
+2L*tau_(n+1/2)=Pi0(e_(n+1/2)+e_src,n+1/2),
+p_n=-j_n/2-W_e B*(tau_(n+1/2)-tau_(n-1/2)).
+```
+
+### TT-SOURCE [D]
+
+The selected isolated emission dictionary of DEF-K1-ISOLATED-TT-EMISSION
+adopts Phi=H1-H0 as the source of the independently evolved outgoing TT
+field. It supplies one typed emission map, its native packet dependency,
+and compatibility with the declared planar propagation and conservation
+constraints. Locality, degree, representation class, complete transfer,
+relative sign, onset and outgoing initial condition are explicit choices.
+This D adoption is not a derivation of those choices from the axiom.
+
+**Native dependency.** The even/odd child-window decomposition of the
+Thue-Morse substitution 0->01, 1->10 gives the stationary pair equations
+
+```text
+f00=f10/2,  f01=1/4+f11/2,
+f10=1/4+f00/2,  f11=f01/2.
+```
+
+Their unique solution is f00=f11=1/6, f01=f10=1/3. Existence follows
+directly from finite prefix counts: their normalized recurrence has
+linear part of max-norm at most 1/2 and boundary error O(1/N), with the
+one-letter balance converging to 1/2. Iteration down dyadic scales gives
+convergence. The child triples a,(1-a),b and (1-a),b,(1-b) yield exactly
+001,010,011,100,101,110, each with mass 1/6. The even four-letter windows
+a,(1-a),b,(1-b) give 0101,0110,1001,1010. The odd windows
+(1-a),b,(1-b),c give 0010,0011,0100,1011,1100,1101. Hence the full alphabet
+is precisely W, with masses 1/6 for 0110 and 1001 and 1/12 otherwise.
+These equal the optional K1 law but do not adopt a physical event law
+or an L6 measure. The identities u0=w2-w0, u1=w3-w1 use only native L1
+bits; agreement with the formula omega(a,b,c)=c-a is a comparison,
+not an L5-to-L1 dependency.
+
+**Source classification and coefficient.** In complex spin coordinates,
+rotation weight two admits exactly A*x^2+B*x*y+C*y^2. Reflection makes
+A,B,C real, and slice antisymmetry implies B=0, C=-A. Thus the complete
+declared class is kappa*(y^2-x^2). At zero outgoing initial data the
+deposited energy is kappa^2*Phi^2/2, since the spatial cross term vanishes.
+The adopted complete-transfer convention forces |kappa|=1 on a nonstatic
+packet; the adopted relative orientation chooses +1. Energy and
+antisymmetry alone do not choose its sign. No adjustable magnitude
+remains within the stated convention. No uniqueness outside this local
+quadratic class is claimed.
+
+**Total output and propagation.** The successor coefficient in the
+recurrence is the identity, so induction proves existence, uniqueness
+and prefix consistency at every counter. In particular h2=Phi. There
+are four static packets with Phi=0 and six active ones with Phi nonzero.
+Every H_t has sum one, hence Phi and all outgoing slices have mean zero.
+The outgoing field is not obtained by pulling an action back through
+h=v^2. Source weight one gives output weight two, compatible with
+c(s)=1-s^2 and c(1)=0,c(2)=-3. This is planar representation/propagation
+compatibility, not a new curved-background theorem.
+
+**Linear source equations.** At the transverse representative the TT
+variation of A2/(2*lambda) is -R_L h/(2*lambda). The declared symmetric
+stress coupling varies as S11*delta h_plus+S12*delta h_cross. It gives
+R_L h_plus=2*lambda*S11=-2*lambda*S22 and R_L h_cross=2*lambda*S12.
+The planar source laws (1-E)rho=D J3 and (E^-1-1)J_i=D S_i3 hold
+identically. No failing longitudinal source is projected away. These
+linear equations do not equate rho with quadratic source-work energy.
+
+**Quadratic local balance.** The identity
+
+```text
+[(c-b)^2-(b-a)^2]/2=(c-a)*(c-2b+a)/2
+```
+
+gives the kinetic work. For an edge from x to y, take their three time
+values to be (a,b,c) and (d,e,f). The endpoint-split spatial-energy
+difference at x minus its oriented edge current equals
+w_edge*(c-a)*(b-e)/2; at y the corresponding sum equals
+w_edge*(f-d)*(e-b)/2. Summing edges proves, off shell,
+
+```text
+Delta e+B^T j=q_n*R_L h_n/2.
+```
+
+At onset q1=Phi, R_L h1=Phi and j1=0. Thus the field gains Phi^2/2,
+exactly cancelling the declared source-channel decrease. Afterwards the
+source vanishes and the field conserves locally. Consequently
+Delta(e+e_src)+B^T j=0 on every isolated history. The connected graph
+has only constants in ker L, so the mean-zero tau solution exists and
+is unique. Taking B^T of p and using this balance gives B^T p=0.
+This auxiliary compatibility does not assert a joint nonlinear emitter
+and FRW action.
+
+The complete mathematical construction satisfies the positive existence
+condition for the typed source-to-field map at this selected scope.
+The exact probe P-TT-NATIVE-QUADRATIC-EMISSION-1 audits the coefficient,
+packet and polynomial identities; the induction and off-shell proof
+give the unrestricted counter quantifiers. No new T claim is introduced
+by the dictionary adoption.
+
+The result supplies no microscopic full-source depletion law, physical
+occurrence or onset law, repeated-source composition, irreversible flux,
+outgoing vector state, detector, full nonlinear gravitational reaction,
+physical geometry for the outgoing history or SI scale. The vector
+state and its fourth moments, action normalization and scalar comparison
+remain the complete separate TT-VECTOR-STATE-NORMALIZATION [O] obligation.
+There is no numerical r_T(k), even zero, from this construction. No
+L2-L6 output or lift is adopted by this L1 dictionary.
 
 ## 15. Couplings, instruments, and metrology
 
@@ -14260,7 +14452,6 @@ THE WALL
                              lift; target carrier, equivalence, observables,
                              action, normalization, and constraints are STOP
 GRAVITATIONAL WAVE
-  TT-SOURCE                  the emission map
   QNM-LEAVER-MU              the quasinormal mu decision
   TT-VECTOR-STATE-NORMALIZATION  the only gate yielding a numerical r_T(k)
 COSMOLOGY
