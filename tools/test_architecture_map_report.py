@@ -27,15 +27,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(self.report.claims, 407)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 46, "F": 18, "H": 2, "O": 27, "T": 275},
+            {"C": 39, "D": 47, "F": 18, "H": 2, "O": 26, "T": 275},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 51,
+                "none": 50,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 316,
+                "two-architecture": 317,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,9 +43,16 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 184)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 268
+            len(self.report.transitive_architecture_dependents), 269
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v84 adds one isolated-emission definition through existing K1
+        # definitions. TT-SOURCE changes O to D and retains its direct edge.
+        emission = "DEF-K1-ISOLATED-TT-EMISSION"
+        self.assertNotIn(emission, self.report.direct_architecture_requires)
+        self.assertIn(emission, self.report.transitive_architecture_dependents)
+        self.assertNotIn(emission, self.report.dependency_terminals)
+        self.assertIn("TT-SOURCE", self.report.direct_architecture_requires)
         # v83 adds one explicit hybrid definition. FRW-INHOM changes O to D
         # while retaining its architecture dependency through the selected gate.
         hybrid = "DEF-K1-HYBRID-FRW-CELL-METRIC"

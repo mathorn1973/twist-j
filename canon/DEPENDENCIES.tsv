@@ -439,7 +439,7 @@ METAL-TRACE-CASCADE	Z2-PLACES-SPLIT	REQUIRES	the discriminants 5 and 8 are place
 METAL-TRACE-CASCADE	J-UNIT	REQUIRES	the golden pure form uses the registered exact norm N(J) = 1
 METAL-TRACE-CASCADE	J-MODULUS-CHORD	REQUIRES	the golden recurrence uses the registered exact phi arithmetic
 POL-READ	TT-SQUARING-DECODER	REQUIRES	the plus/cross components, conjugation parity, and doubled-angle covariance are exact polynomial consequences of the registered complex square; no independent propagation law is introduced
-POL-READ	TT-SOURCE	BOUNDED_BY	the component readout does not construct the still-open emission map
+POL-READ	TT-SOURCE	BOUNDED_BY	the component readout alone does not implement the selected isolated source-to-field dictionary or its source-work convention
 POL-READ	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the component readout does not select a state normalization or produce a numerical r_T(k)
 SQRT-PHI-DIGIT-LIFT	PENTIT-ROOT-FACTS	REQUIRES	the registered F_25 block J = 2, phi = 3, tau^3 = sqrt(phi), and tau of order eight supplies the inherited field input; root uniqueness, the restricted norm, and nonsplitting are proved by this claim
 SQRT-PHI-DIGIT-LIFT	QUBIT-FROM-F5	REQUIRES	the sign quotient supplies the final C4 to C2 projection
@@ -775,9 +775,14 @@ DEF-K1-LINEAR-METRIC	DEF-ARCHITECTURE	REQUIRES	the complete K1 word packet, unit
 K1-LINEAR-METRIC-COMPLETION	DEF-K1-LINEAR-METRIC	REQUIRES	the theorem is conditional on exactly the fully displayed mathematical input, action and literal output equality
 K1-LINEAR-METRIC-COMPLETION	TT-SQUARING-DECODER	BOUNDED_BY	the local algebraic square is fixed in the definition; its use does not inherit or promote the physical tensor dictionary
 K1-LINEAR-METRIC-COMPLETION	PHOTON-SPATIAL-TEMPORAL-TRANSFER	BOUNDED_BY	the planar L and recurrence are explicit mathematical choices; no physical photon interpretation or additional lift is imported
-K1-LINEAR-METRIC-COMPLETION	TT-SOURCE	BOUNDED_BY	an initial packet-to-matrix map is not a derived physical emission map or source realization
+K1-LINEAR-METRIC-COMPLETION	TT-SOURCE	BOUNDED_BY	the initial-value theorem does not construct the separate isolated emission reading or a physical source realization
 K1-LINEAR-METRIC-COMPLETION	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	fixed a=1 and a complete finite input law supply no physical scalar comparison, action-unit identification or numerical r_T
 DEF-K1-HYBRID-FRW-CELL-METRIC	DEF-ARCHITECTURE	REQUIRES	the graph, action, cell-clock bridge and mathematical output are explicit choices within the declared architecture, not consequences of J
 DEF-K1-HYBRID-FRW-CELL-METRIC	DEF-K1-LINEAR-METRIC	REQUIRES	retain the exact ten-word source packet, unit-amplitude local initial squares and rational propagator
 FRW-INHOM	DEF-K1-HYBRID-FRW-CELL-METRIC	REQUIRES	the named L1-to-L2 gate adopts precisely the displayed joint functional, complete first-variation proof and marked metric reading
 FRW-INHOM	K1-LINEAR-METRIC-COMPLETION	REQUIRES	the unchanged conditional L1 all-counter bound ensures Lorentz signature of every marked inhomogeneous matrix under the selected gate
+DEF-K1-ISOLATED-TT-EMISSION	DEF-K1-LINEAR-METRIC	REQUIRES	retain the native ten-word source descriptor, unit initial source squares, planar L and full quadratic constrained action
+DEF-K1-ISOLATED-TT-EMISSION	DEF-K1-HYBRID-FRW-CELL-METRIC	REQUIRES	use only the L1 weighted incidence, local work and auxiliary recipe; no L2 FRW output or dictionary is imported
+TT-SOURCE	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	adopt exactly the selected L1 descriptor-to-field reading, complete-transfer and sign conventions, isolated onset and literal equality
+TT-SOURCE	TT-SQUARING-DECODER	REQUIRES	the adopted source square uses the existing spin-one to spin-two interpretation without importing outgoing-vector dynamics or a curved source law
+TT-SOURCE	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the isolated source transfer does not choose an outgoing vector state, fourth moments, action normalization, scalar comparison or numerical r_T
