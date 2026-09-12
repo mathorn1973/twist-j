@@ -1,5 +1,31 @@
 # Canon changelog (public series)
 
+## Public Canon v84
+
+TT-SOURCE moves from O to D for one selected isolated native K1 packet
+emission dictionary. Phi=H1-H0 drives an independent zero-start TT field
+under the unchanged planar L. The native word theorem, quadratic source
+classification, stress factors, local source-work identity and auxiliary
+co-closure provide its exact mathematical construction.
+
+The complete-transfer condition, relative sign, onset, source frame and
+initial outgoing state are explicit input conventions. There is no new T
+claim or free fitted source coefficient. The definition and adoption are
+entirely L1 and create no L2-L6 lift. The original probe and all its pins
+remain unchanged. The mathematical proof is included in the Canon and
+the completed public probe supplies the exact computational audit.
+
+TT-VECTOR-STATE-NORMALIZATION retains its full scope: no outgoing vector
+state, fourth-moment selection, scalar comparison, action normalization or
+numerical r_T is obtained. No complete microscopic emitter dynamics,
+physical occurrence, nonlinear source/FRW completion, detector or SI scale
+is promoted. Every other registered claim is unchanged.
+
+<!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 407 claims; 0 T-LOCK, 275 T, 47 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
+Reproduction witnesses: 24.
+<!-- END GENERATED CURRENT COUNTS -->
+
 ## Public Canon v83
 
 FRW-INHOM moves from O to D under its existing positive existence clause.
@@ -22,11 +48,6 @@ constraint construction. The new cell bridge, full joint-action solution
 and continuous background rest on the self-contained Canon proof and are
 not attributed to that earlier probe. No new formal scientific run is made
 for this dictionary adoption.
-
-<!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 407 claims; 0 T-LOCK, 275 T, 46 D, 39 C, 2 H, 27 O, 18 F; 29 live H/O.
-Reproduction witnesses: 24.
-<!-- END GENERATED CURRENT COUNTS -->
 
 ## Public Canon v82
 

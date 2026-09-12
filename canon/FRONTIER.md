@@ -69,9 +69,6 @@ Closed claims are excluded.
 - QNM-LEAVER-MU [O]: the quasinormal mu decision after a public inference rule maps an external shadow measurement to a preregistered mu interval
   Queue: FOLLOWUP; BLOCKED; FORMAL.
   Decision: closes positively when the public continued fraction computation and the preregistered inference rule decide mu; closes negatively when the exact spectrum is incompatible with that public interval
-- TT-SOURCE [O]: the emission map from an explicitly defined public source object
-  Queue: FOLLOWUP; BLOCKED; FORMAL.
-  Decision: closes positively by deriving the typed emission map and its source dependency; closes negatively if no map satisfies the registered TT propagation and conservation constraints
 
 ## Nonabelian and QCD (`NONABELIAN_QCD`)
 
@@ -118,4 +115,4 @@ Closed claims are excluded.
   Queue: ROOT; STOP; ENRICHMENT.
   Decision: STOP until a non-circular transfer mechanism, its complete domain, approximation or kernel, uniform norm and reconstruction errors are frozen; closes positively at RH strength only by deriving the displayed all-epsilon estimate from the refined shell, and closes negatively only after a frozen complete admissible transfer class containing both route families is proved empty or incapable of any such transfer; failure of one candidate or every fixed-mode estimate is STOP, not negative closure
 
-Live total: 29.
+Live total: 28.
