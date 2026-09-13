@@ -33,6 +33,356 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v85-to-v84 reconstruction; every older hash remains unchanged.
+V85_PRIOR_COMMIT = 'f10fca3806385a491b32ef40157c51bca08576ab'
+V85_LEDGER_PATCH = {'REGISTRY.tsv': {'current_sha256': '57381befe3997d73ba6267d44d496d519955660bd0a648b10b2c38e65fd44b52',
+                  'prior_sha256': '95c6676f5cadfb78dc707190fe58d03eaf64b94b97e716242b9bdd9bb58bf758',
+                  'remove': ('b5ccf8d11a69ddbf9b171e39171684ee4c0895f2f0bdd3851c3ec64333d57403',
+                             'e7ad11495abce330d8726db065434ed4b6285e1b87b17f61623d08b726e507bc',
+                             '75e842aad37ce9d51da0e2ebc70b1e7d453cbe603745cce78ba4c02ddd8d1d0d',
+                             'ae6dc18c37418b98197883b34b98e439265415ac45ae9466d59e9e8d48f0422c'),
+                  'restore': ()},
+ 'NORMATIVE.tsv': {'current_sha256': '12fecf7bf880f44652912dd666de88e5531e5c4a99867c0ec2b1e03d92eca6f6',
+                   'prior_sha256': '04759387d31c83cb2e26bb8304d0971410fe83ac8dffa42ab7ba33c6b3722ec3',
+                   'remove': ('921aa9ef393c4e8beaf4adc337b69ca02dea8dd7e7b4513138b23e612c2a744c',
+                              '24e9dfc9f41bd0dea7d57f6b5f8ca2dca86e655a9d10a08f689d1bf789bce707',
+                              '27e40d00de0d97768a22bc8009c650d7c1f15e77d05dd738974637b152511b85',
+                              'e74f4e3d9549a9bbd7ae4037cca169ee6427ef560a911a17d94f0b545bf0524b'),
+                   'restore': ()},
+ 'DEPENDENCIES.tsv': {'current_sha256': 'a4217aa44f848c7801d40deea58169b953b4d32aa6b3ff9a434dbbd38723cbc3',
+                      'prior_sha256': 'f53807ca201d5fa89ffd3f0b2efbc7f97dde218834e295c8dbd211a40908c9f5',
+                      'remove': ('8c85757e6d8e41f517c316eee463fc7505206566cfca4cfa5a34a3bf65c48bcc',
+                                 '50b476232b783c08dfe3f9ac1bbe5cb9bb11b8766a5092e4addfae8f41a586bf',
+                                 '5ae0d516efbb7038a99cb82a870a0753c20afda4ec82b88465ee4ad64b654464',
+                                 'e4cdafd6395f13ce18febe629462515778b8558aaa5901f993ae8f7ad59e0d6d',
+                                 '1ee7689060b5f14b388b145231fcc4828d571e9f8b106461f308fdb3bf374a83',
+                                 '6df12dbe2a403c18adcd1829735b945f6d5b8b9f525a35097e90b28cc3234a08'),
+                      'restore': ()},
+ 'EVIDENCE.tsv': {'current_sha256': '3a6446f8c512866f60d2d85d22622f6d750763325419edaa35e97d3f571e75aa',
+                  'prior_sha256': 'ac2ebbf62918a5b3213dea7cf09cf28a5850ea3588d8441354a025e1d38094b1',
+                  'remove': ('e9d701f5241bbcd80a6c5c9f1ec829f269bb325ccc304c58f3e8806dca661d92',
+                             '19885424af3203138e0375d349a57cc113a7300a2889aeaf86437301167cb43e',
+                             '7708bad8441a0872a6ae54e0d7f508c8104decb0fc716f4a56e8e68ca31ff0b1',
+                             '54081d05d0a8be7e7cbe20545773a13146a7db84a9498a652baa8abbeae735c1'),
+                  'restore': ()},
+ 'HISTORY.tsv': {'current_sha256': '2d720bf4e458f02600940d8246bbc8cc2c500d61e2424761c152a2a3cb513a55',
+                 'prior_sha256': 'ddb88a83ba187d0d5132ef2d81ec194549724560d278e0c5adf7c3a146eaeb12',
+                 'remove': ('30114b23aa68239ea3b6d99e205ed63c356fbf5e2d25a18712f2b21cfd1491a9',
+                            'e0c1cecca91fa62eae7f5f148175af4ad66f8051e0371f0954b194a00c1a9146',
+                            'c841746d30ca224697d7b748c298917515df459e13538ce7f5ca5e02bdae60d4',
+                            '601a34e8b684f992db6f6c914953dbf239c821c29f9baceac0cb5379a1d1af15'),
+                 'restore': ()},
+ 'GATES.tsv': {'current_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'prior_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'remove': (),
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
+                           'prior_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
+                           'remove': (),
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'remove': (),
+                        'restore': ()}}
+V85_TEXT_PATCH = {'CANON.md': {'current_sha256': 'c96d06521305c7c6ab046de0be62a3309f05908eb8a82ed1f1f1c86575718a41',
+              'current_bytes': 617994,
+              'prior_sha256': 'f53c27f042cc3e940c2c5dd90ae0dba851c063c4af334732d250469ae832f2ad',
+              'prior_bytes': 609802,
+              'restore': ((0, 1, '# TWIST-J Public Canon v84\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v84. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v84 also declares the discrete architecture used to '
+                           'read\n'),
+                          (22,
+                           23,
+                           'seed of the two algebraic projections. Public Canon v84 does not '
+                           'claim\n'),
+                          (127,
+                           128,
+                           'deriving the architecture from J; Public Canon v84 contains no such\n'),
+                          (13016,
+                           13020,
+                           'For the quadratic work record use the same oriented incidence B and\n'
+                           'positive edge weights W_e as DEF-K1-HYBRID-FRW-CELL-METRIC, so L=B^T '
+                           'W_e B.\n'),
+                          (13049, 13350, ''),
+                          (13360,
+                           13366,
+                           '**Native dependency.** The even/odd child-window decomposition of the\n'
+                           'Thue-Morse substitution 0->01, 1->10 gives the stationary pair '
+                           'equations\n'
+                           '\n'
+                           '```text\n'
+                           'f00=f10/2,  f01=1/4+f11/2,\n'
+                           'f10=1/4+f00/2,  f11=f01/2.\n'
+                           '```\n'
+                           '\n'
+                           'Their unique solution is f00=f11=1/6, f01=f10=1/3. Existence follows\n'
+                           'directly from finite prefix counts: their normalized recurrence has\n'
+                           'linear part of max-norm at most 1/2 and boundary error O(1/N), with '
+                           'the\n'
+                           'one-letter balance converging to 1/2. Iteration down dyadic scales '
+                           'gives\n'
+                           'convergence. The child triples a,(1-a),b and (1-a),b,(1-b) yield '
+                           'exactly\n'
+                           '001,010,011,100,101,110, each with mass 1/6. The even four-letter '
+                           'windows\n'
+                           'a,(1-a),b,(1-b) give 0101,0110,1001,1010. The odd windows\n'
+                           '(1-a),b,(1-b),c give 0010,0011,0100,1011,1100,1101. Hence the full '
+                           'alphabet\n'
+                           'is precisely W, with masses 1/6 for 0110 and 1001 and 1/12 otherwise.\n'
+                           'These equal the optional K1 law but do not adopt a physical event law\n'
+                           'or an L6 measure. The identities u0=w2-w0, u1=w3-w1 use only native '
+                           'L1\n'
+                           'bits; agreement with the formula omega(a,b,c)=c-a is a comparison,\n'
+                           'not an L5-to-L1 dependency.\n'
+                           '\n'
+                           '**Source classification and coefficient.** In complex spin '
+                           'coordinates,\n'
+                           'rotation weight two admits exactly A*x^2+B*x*y+C*y^2. Reflection '
+                           'makes\n'
+                           'A,B,C real, and slice antisymmetry implies B=0, C=-A. Thus the '
+                           'complete\n'
+                           'declared class is kappa*(y^2-x^2). At zero outgoing initial data the\n'
+                           'deposited energy is kappa^2*Phi^2/2, since the spatial cross term '
+                           'vanishes.\n'
+                           'The adopted complete-transfer convention forces |kappa|=1 on a '
+                           'nonstatic\n'
+                           'packet; the adopted relative orientation chooses +1. Energy and\n'
+                           'antisymmetry alone do not choose its sign. No adjustable magnitude\n'
+                           'remains within the stated convention. No uniqueness outside this '
+                           'local\n'
+                           'quadratic class is claimed.\n'
+                           '\n'
+                           '**Total output and propagation.** The successor coefficient in the\n'
+                           'recurrence is the identity, so induction proves existence, uniqueness\n'
+                           'and prefix consistency at every counter. In particular h2=Phi. There\n'
+                           'are four static packets with Phi=0 and six active ones with Phi '
+                           'nonzero.\n'
+                           'Every H_t has sum one, hence Phi and all outgoing slices have mean '
+                           'zero.\n'
+                           'The outgoing field is not obtained by pulling an action back through\n'
+                           'h=v^2. Source weight one gives output weight two, compatible with\n'
+                           'c(s)=1-s^2 and c(1)=0,c(2)=-3. This is planar '
+                           'representation/propagation\n'
+                           'compatibility, not a new curved-background theorem.\n'),
+                          (13375,
+                           13378,
+                           '**Quadratic local balance.** The identity\n'
+                           '\n'
+                           '```text\n'
+                           '[(c-b)^2-(b-a)^2]/2=(c-a)*(c-2b+a)/2\n'
+                           '```\n'
+                           '\n'
+                           'gives the kinetic work. For an edge from x to y, take their three '
+                           'time\n'
+                           'values to be (a,b,c) and (d,e,f). The endpoint-split spatial-energy\n'
+                           'difference at x minus its oriented edge current equals\n'
+                           'w_edge*(c-a)*(b-e)/2; at y the corresponding sum equals\n'
+                           'w_edge*(f-d)*(e-b)/2. Summing edges proves, off shell,\n'
+                           '\n'
+                           '```text\n'
+                           'Delta e+B^T j=q_n*R_L h_n/2.\n'
+                           '```\n'
+                           '\n'
+                           'At onset q1=Phi, R_L h1=Phi and j1=0. Thus the field gains Phi^2/2,\n'
+                           'exactly cancelling the declared source-channel decrease. Afterwards '
+                           'the\n'
+                           'source vanishes and the field conserves locally. Consequently\n'
+                           'Delta(e+e_src)+B^T j=0 on every isolated history. The connected graph\n'
+                           'has only constants in ker L, so the mean-zero tau solution exists and\n'
+                           'is unique. Taking B^T of p and using this balance gives B^T p=0.\n'
+                           'This auxiliary compatibility does not assert a joint nonlinear '
+                           'emitter\n'
+                           'and FRW action.\n'
+                           '\n'
+                           'The complete mathematical construction satisfies the positive '
+                           'existence\n'
+                           'condition for the typed source-to-field map at this selected scope.\n'
+                           'The exact probe P-TT-NATIVE-QUADRATIC-EMISSION-1 audits the '
+                           'coefficient,\n'
+                           'packet and polynomial identities; the induction and off-shell proof\n'
+                           'give the unrestricted counter quantifiers. No new T claim is '
+                           'introduced\n'
+                           'by the dictionary adoption.\n'))},
+ 'CORE.md': {'current_sha256': '8d1912faa5320153e5e2502386da4ae3c63cfba467300553c84d0bdc731da76f',
+             'current_bytes': 14813,
+             'prior_sha256': 'df7c0621d462f32dae25da3482b24d4db9f186b71393cfe135264431a97c8b56',
+             'prior_bytes': 14813,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v84. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v84 also declares a discrete architecture. It does '
+                          'not\n'))},
+ 'FRONTIER.md': {'current_sha256': '9fd15da19d83bbf85a5d389374d30617c0330b992edbac452cdb53e620c7ffa2',
+                 'current_bytes': 29069,
+                 'prior_sha256': '9fd15da19d83bbf85a5d389374d30617c0330b992edbac452cdb53e620c7ffa2',
+                 'prior_bytes': 29069,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': '828cbb3483b414a26e494e9bff801ffa98f52a8f48e85a44daf57fc0b9ec6b57',
+                  'current_bytes': 177908,
+                  'prior_sha256': 'a1f8dc88447685fac87a1286e0ec61bcb118faba487d21bfc180211ca6669405',
+                  'prior_bytes': 176791,
+                  'restore': ((1, 21, ''),
+                              (44,
+                               45,
+                               'Registry snapshot: 407 claims; 0 T-LOCK, 275 T, 47 D, 39 C, 2 H, '
+                               '26 O, 18 F; 28 live H/O.\n'))}}
+V85_CLAIMS = {'TT-NATIVE-FOUR-WORD-LAW': {'registry_sha256': 'c3d8d54486be474fd1c65ef28e052d78c5179a1d0ded3a7c4dc08825bca49f9c',
+                             'scope_sha256': '536193e4d4da4b626e81ed00ddc21135583068bb7f33ba1591392941e72d74e4',
+                             'normative': {'item_id': 'TT-NATIVE-FOUR-WORD-LAW',
+                                           'item_type': 'THEOREM',
+                                           'claim_id': 'TT-NATIVE-FOUR-WORD-LAW',
+                                           'status': 'T',
+                                           'layer': 'L1',
+                                           'gate_ids': '',
+                                           'statement_source': 'canon/CANON.md::TT-NATIVE-FOUR-WORD-LAW'},
+                             'evidence': {'claim_id': 'TT-NATIVE-FOUR-WORD-LAW',
+                                          'evidence_id': 'EV-TT-NATIVE-FOUR-WORD-LAW',
+                                          'evidence_kind': 'PUBLIC_PROBE',
+                                          'location': 'probes/P-TT-NATIVE-QUADRATIC-EMISSION-1',
+                                          'sha256': '15279f5ff1b1b3ae1e94202b23479e71eced835c3dbd6f8793a10f3cbfca6f3b',
+                                          'hash_mode': 'bundle-manifest-sha256-v1',
+                                          'architecture_requirement': 'two-architecture'},
+                             'event': {'event_id': 'CANON85-DECLARE-TT-NATIVE-FOUR-WORD-LAW',
+                                       'event_sequence': '1',
+                                       'event_date': '2026-09-13',
+                                       'release': 'canon-v85-candidate',
+                                       'claim_id': 'TT-NATIVE-FOUR-WORD-LAW',
+                                       'event_type': 'DECLARE',
+                                       'previous_status': '-',
+                                       'new_status': 'T',
+                                       'scope_sha256': '536193e4d4da4b626e81ed00ddc21135583068bb7f33ba1591392941e72d74e4',
+                                       'evidence_id': 'EV-TT-NATIVE-FOUR-WORD-LAW',
+                                       'evidence_location': 'probes/P-TT-NATIVE-QUADRATIC-EMISSION-1',
+                                       'evidence_sha256': '15279f5ff1b1b3ae1e94202b23479e71eced835c3dbd6f8793a10f3cbfca6f3b',
+                                       'rationale': 'Declare the independently reviewed exact L1 '
+                                                    'theorem from the unchanged sealed native TT '
+                                                    'emission probe; source-class, transfer and '
+                                                    'readout conventions remain explicit premises, '
+                                                    'and no existing claim or physical owner is '
+                                                    'promoted.'}},
+ 'TT-QUADRATIC-SOURCE-CLASSIFICATION': {'registry_sha256': '6d2d97ec62b947ee429008a8cbb3b080f238e42e7185a1070c9109c951c9b3d6',
+                                        'scope_sha256': '0948b688b8ddd1948362397f162e041ea3facede27f0babf0b442ad883c8734f',
+                                        'normative': {'item_id': 'TT-QUADRATIC-SOURCE-CLASSIFICATION',
+                                                      'item_type': 'THEOREM',
+                                                      'claim_id': 'TT-QUADRATIC-SOURCE-CLASSIFICATION',
+                                                      'status': 'T',
+                                                      'layer': 'L1',
+                                                      'gate_ids': '',
+                                                      'statement_source': 'canon/CANON.md::TT-QUADRATIC-SOURCE-CLASSIFICATION'},
+                                        'evidence': {'claim_id': 'TT-QUADRATIC-SOURCE-CLASSIFICATION',
+                                                     'evidence_id': 'EV-TT-QUADRATIC-SOURCE-CLASSIFICATION',
+                                                     'evidence_kind': 'PUBLIC_PROBE',
+                                                     'location': 'probes/P-TT-NATIVE-QUADRATIC-EMISSION-1',
+                                                     'sha256': '15279f5ff1b1b3ae1e94202b23479e71eced835c3dbd6f8793a10f3cbfca6f3b',
+                                                     'hash_mode': 'bundle-manifest-sha256-v1',
+                                                     'architecture_requirement': 'two-architecture'},
+                                        'event': {'event_id': 'CANON85-DECLARE-TT-QUADRATIC-SOURCE-CLASSIFICATION',
+                                                  'event_sequence': '1',
+                                                  'event_date': '2026-09-13',
+                                                  'release': 'canon-v85-candidate',
+                                                  'claim_id': 'TT-QUADRATIC-SOURCE-CLASSIFICATION',
+                                                  'event_type': 'DECLARE',
+                                                  'previous_status': '-',
+                                                  'new_status': 'T',
+                                                  'scope_sha256': '0948b688b8ddd1948362397f162e041ea3facede27f0babf0b442ad883c8734f',
+                                                  'evidence_id': 'EV-TT-QUADRATIC-SOURCE-CLASSIFICATION',
+                                                  'evidence_location': 'probes/P-TT-NATIVE-QUADRATIC-EMISSION-1',
+                                                  'evidence_sha256': '15279f5ff1b1b3ae1e94202b23479e71eced835c3dbd6f8793a10f3cbfca6f3b',
+                                                  'rationale': 'Declare the independently reviewed '
+                                                               'exact L1 theorem from the '
+                                                               'unchanged sealed native TT '
+                                                               'emission probe; source-class, '
+                                                               'transfer and readout conventions '
+                                                               'remain explicit premises, and no '
+                                                               'existing claim or physical owner '
+                                                               'is promoted.'}},
+ 'TT-ISOLATED-EMISSION-TOTALITY': {'registry_sha256': 'dc4d61984ee7495944faa3078771dd23266a3656f1cafd507069c3f0e7720122',
+                                   'scope_sha256': '0a486d6b115e76e4734639c35464cadefc9f0a5ac160d6f7a90acf1f7566189b',
+                                   'normative': {'item_id': 'TT-ISOLATED-EMISSION-TOTALITY',
+                                                 'item_type': 'THEOREM',
+                                                 'claim_id': 'TT-ISOLATED-EMISSION-TOTALITY',
+                                                 'status': 'T',
+                                                 'layer': 'L1',
+                                                 'gate_ids': '',
+                                                 'statement_source': 'canon/CANON.md::TT-ISOLATED-EMISSION-TOTALITY'},
+                                   'evidence': {'claim_id': 'TT-ISOLATED-EMISSION-TOTALITY',
+                                                'evidence_id': 'EV-TT-ISOLATED-EMISSION-TOTALITY',
+                                                'evidence_kind': 'PUBLIC_PROBE',
+                                                'location': 'probes/P-TT-NATIVE-QUADRATIC-EMISSION-1',
+                                                'sha256': '15279f5ff1b1b3ae1e94202b23479e71eced835c3dbd6f8793a10f3cbfca6f3b',
+                                                'hash_mode': 'bundle-manifest-sha256-v1',
+                                                'architecture_requirement': 'two-architecture'},
+                                   'event': {'event_id': 'CANON85-DECLARE-TT-ISOLATED-EMISSION-TOTALITY',
+                                             'event_sequence': '1',
+                                             'event_date': '2026-09-13',
+                                             'release': 'canon-v85-candidate',
+                                             'claim_id': 'TT-ISOLATED-EMISSION-TOTALITY',
+                                             'event_type': 'DECLARE',
+                                             'previous_status': '-',
+                                             'new_status': 'T',
+                                             'scope_sha256': '0a486d6b115e76e4734639c35464cadefc9f0a5ac160d6f7a90acf1f7566189b',
+                                             'evidence_id': 'EV-TT-ISOLATED-EMISSION-TOTALITY',
+                                             'evidence_location': 'probes/P-TT-NATIVE-QUADRATIC-EMISSION-1',
+                                             'evidence_sha256': '15279f5ff1b1b3ae1e94202b23479e71eced835c3dbd6f8793a10f3cbfca6f3b',
+                                             'rationale': 'Declare the independently reviewed '
+                                                          'exact L1 theorem from the unchanged '
+                                                          'sealed native TT emission probe; '
+                                                          'source-class, transfer and readout '
+                                                          'conventions remain explicit premises, '
+                                                          'and no existing claim or physical owner '
+                                                          'is promoted.'}},
+ 'TT-ISOLATED-EMISSION-WORK-BALANCE': {'registry_sha256': 'c43c426f349b9c815ae00d96dd8204980e37fd025d811042c9cedb4253a889dc',
+                                       'scope_sha256': '6196f20e912b3c4254d60f607ffa94802451a3b7498431cf442a196ea2d39752',
+                                       'normative': {'item_id': 'TT-ISOLATED-EMISSION-WORK-BALANCE',
+                                                     'item_type': 'THEOREM',
+                                                     'claim_id': 'TT-ISOLATED-EMISSION-WORK-BALANCE',
+                                                     'status': 'T',
+                                                     'layer': 'L1',
+                                                     'gate_ids': '',
+                                                     'statement_source': 'canon/CANON.md::TT-ISOLATED-EMISSION-WORK-BALANCE'},
+                                       'evidence': {'claim_id': 'TT-ISOLATED-EMISSION-WORK-BALANCE',
+                                                    'evidence_id': 'EV-TT-ISOLATED-EMISSION-WORK-BALANCE',
+                                                    'evidence_kind': 'PUBLIC_PROBE',
+                                                    'location': 'probes/P-TT-NATIVE-QUADRATIC-EMISSION-1',
+                                                    'sha256': '15279f5ff1b1b3ae1e94202b23479e71eced835c3dbd6f8793a10f3cbfca6f3b',
+                                                    'hash_mode': 'bundle-manifest-sha256-v1',
+                                                    'architecture_requirement': 'two-architecture'},
+                                       'event': {'event_id': 'CANON85-DECLARE-TT-ISOLATED-EMISSION-WORK-BALANCE',
+                                                 'event_sequence': '1',
+                                                 'event_date': '2026-09-13',
+                                                 'release': 'canon-v85-candidate',
+                                                 'claim_id': 'TT-ISOLATED-EMISSION-WORK-BALANCE',
+                                                 'event_type': 'DECLARE',
+                                                 'previous_status': '-',
+                                                 'new_status': 'T',
+                                                 'scope_sha256': '6196f20e912b3c4254d60f607ffa94802451a3b7498431cf442a196ea2d39752',
+                                                 'evidence_id': 'EV-TT-ISOLATED-EMISSION-WORK-BALANCE',
+                                                 'evidence_location': 'probes/P-TT-NATIVE-QUADRATIC-EMISSION-1',
+                                                 'evidence_sha256': '15279f5ff1b1b3ae1e94202b23479e71eced835c3dbd6f8793a10f3cbfca6f3b',
+                                                 'rationale': 'Declare the independently reviewed '
+                                                              'exact L1 theorem from the unchanged '
+                                                              'sealed native TT emission probe; '
+                                                              'source-class, transfer and readout '
+                                                              'conventions remain explicit '
+                                                              'premises, and no existing claim or '
+                                                              'physical owner is promoted.'}}}
+V85_INCIDENT_EDGES = (('TT-ISOLATED-EMISSION-TOTALITY', 'DEF-K1-ISOLATED-TT-EMISSION', 'REQUIRES'),
+ ('TT-ISOLATED-EMISSION-WORK-BALANCE', 'DEF-K1-ISOLATED-TT-EMISSION', 'REQUIRES'),
+ ('TT-ISOLATED-EMISSION-WORK-BALANCE', 'TT-ISOLATED-EMISSION-TOTALITY', 'REQUIRES'),
+ ('TT-NATIVE-FOUR-WORD-LAW', 'DEF-ARCHITECTURE', 'REQUIRES'),
+ ('TT-NATIVE-FOUR-WORD-LAW', 'DEF-K1-LINEAR-METRIC', 'REQUIRES'),
+ ('TT-QUADRATIC-SOURCE-CLASSIFICATION', 'DEF-K1-ISOLATED-TT-EMISSION', 'REQUIRES'))
+
+
 # Exact v84-to-v83 reconstruction; all older guards retain their frozen hashes.
 V84_LEDGER_PATCH = {'REGISTRY.tsv': {'current_sha256': '95c6676f5cadfb78dc707190fe58d03eaf64b94b97e716242b9bdd9bb58bf758',
                   'prior_sha256': 'a764a066d0123c22af03f10c2ade58bf0e6f2d55d1644c3269b48ec5f016a415',
@@ -604,10 +954,59 @@ V79_NATIVE_ROWS = {
 }
 
 
+def v85_previous_bytes(path):
+    """Require current v85 bytes and restore only the exact frozen v84 input."""
+    current = path.read_bytes()
+    if path.name in V85_LEDGER_PATCH:
+        patch = V85_LEDGER_PATCH[path.name]
+        if hashlib.sha256(current).hexdigest() != patch["current_sha256"]:
+            return None
+        removed = {value: 0 for value in patch["remove"]}
+        kept = []
+        for position, line in enumerate(current.splitlines(keepends=True)):
+            value = hashlib.sha256(line).hexdigest()
+            if position and value in removed:
+                removed[value] += 1
+            else:
+                kept.append(line)
+        if any(count != 1 for count in removed.values()):
+            return None
+        for position, old_line in patch["restore"]:
+            if position > len(kept):
+                return None
+            kept.insert(position, old_line.encode("utf-8"))
+        previous = b"".join(kept)
+    else:
+        patch = V85_TEXT_PATCH[path.name]
+        if (len(current) != patch["current_bytes"]
+                or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+            return None
+        lines = current.decode("utf-8").splitlines(keepends=True)
+        for first, last, original in reversed(patch["restore"]):
+            if not 0 <= first <= last <= len(lines):
+                return None
+            lines[first:last] = original.splitlines(keepends=True)
+        previous = "".join(lines).encode("utf-8")
+        if len(previous) != patch["prior_bytes"]:
+            return None
+    if hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]:
+        return None
+    return previous
+
+
+def v85_previous_rows(path):
+    previous = v85_previous_bytes(path)
+    if previous is None:
+        return []
+    return list(csv.DictReader(io.StringIO(previous.decode("utf-8")), delimiter="\t"))
+
+
 def v84_previous_bytes(path):
     """Check the exact v84 table and reconstruct every original v83 byte."""
     patch = V84_LEDGER_PATCH[path.name]
-    current = path.read_bytes()
+    current = v85_previous_bytes(path)
+    if current is None:
+        return None
     if hashlib.sha256(current).hexdigest() != patch["current_sha256"]:
         return None
     removed = {value: 0 for value in patch["remove"]}
@@ -639,7 +1038,9 @@ def v84_previous_rows(path):
 
 def v84_previous_canon_bytes():
     """Invert only the frozen v84 text edits, checking both complete file hashes."""
-    current = CANON.read_bytes()
+    current = v85_previous_bytes(CANON)
+    if current is None:
+        return None
     if (len(current) != V84_CANON_BYTES
             or hashlib.sha256(current).hexdigest() != V84_NORMATIVE_SHA256["CANON.md"]):
         return None
@@ -1024,18 +1425,17 @@ def run():
         row["architecture_requirement"] == "two-architecture"
         for row in evidence.values()
     )
-    expected_counts = {"T": 275, "D": 47, "C": 39, "F": 18,
-                       "O": 26, "H": 2}
+    expected_counts = {'T': 279, 'C': 39, 'F': 18, 'O': 26, 'D': 47, 'H': 2}
     checks.append((
         "COUNTS",
-        "registry and companion-ledger counts match Public Canon v84",
-        len(rows) == 407
+        "registry and companion-ledger counts match Public Canon v85",
+        len(rows) == 411
         and counts == expected_counts
-        and len(normative) == 459
-        and len(dependencies) == 787
-        and len(evidence) == 407
-        and two_architecture == 317
-        and len(history) == 943
+        and len(normative) == 463
+        and len(dependencies) == 793
+        and len(evidence) == 411
+        and two_architecture == 321
+        and len(history) == 947
         and len(gates) == 16
         and len(programs) == 28
         and len({row["program_id"] for row in programs.values()}) == 8
@@ -7889,13 +8289,24 @@ def run():
         and all(v84_previous_bytes(ROOT / "canon" / name) is not None
                 for name in V84_LEDGER_PATCH)
         and v83_canon_bytes is not None
-        and all(hashlib.sha256((ROOT / "canon" / name).read_bytes()).hexdigest() == value
+        and all(hashlib.sha256(v85_previous_bytes(ROOT / "canon" / name) or b"").hexdigest() == value
                 for name, value in V84_NORMATIVE_SHA256.items()),
     ))
+    # The v84 intake guard consumes the complete verified v84 snapshot.
+    v84_canon_text = (v85_previous_bytes(CANON) or b"").decode("utf-8")
+    v84_frontier_text = (v85_previous_bytes(FRONTIER) or b"").decode("utf-8")
+    v84_index = {row["claim_id"]: row for row in v85_previous_rows(REGISTRY)}
+    v84_normative = {row["item_id"]: row for row in v85_previous_rows(NORMATIVE)}
+    v84_dependencies = v85_previous_rows(DEPENDENCIES)
+    v84_evidence = {row["claim_id"]: row for row in v85_previous_rows(EVIDENCE)}
+    v84_history = v85_previous_rows(HISTORY)
+    v84_gates = {row["gate_id"]: row for row in v85_previous_rows(GATES)}
+    v84_programs = {row["claim_id"]: row for row in v85_previous_rows(FRONTIER_PROGRAMS)}
+    v84_core_selection_rows = v85_previous_rows(CORE_SELECTION)
     v84_claim = "TT-SOURCE"
-    v84_start = canon_text.find("### " + V84_DEFINITION + "\n")
-    v84_end = canon_text.find("## 15. Couplings, instruments, and metrology", v84_start)
-    v84_block = (canon_text[v84_start:v84_end].encode("utf-8")
+    v84_start = v84_canon_text.find("### " + V84_DEFINITION + "\n")
+    v84_end = v84_canon_text.find("## 15. Couplings, instruments, and metrology", v84_start)
+    v84_block = (v84_canon_text[v84_start:v84_end].encode("utf-8")
                  if v84_start >= 0 and v84_end > v84_start else b"")
     v84_expected_edges = {
         (v84_claim, "DEF-ARCHITECTURE", "REQUIRES"),
@@ -7909,34 +8320,34 @@ def run():
     }
     v84_actual_edges = {
         (row["item_id"], row["depends_on"], row["relation"])
-        for row in dependencies
+        for row in v84_dependencies
         if row["item_id"] in {v84_claim, V84_DEFINITION}
         or row["depends_on"] in {v84_claim, V84_DEFINITION}
     }
-    v84_events = [row for row in history if row["release"] == "canon-v84-candidate"]
+    v84_events = [row for row in v84_history if row["release"] == "canon-v84-candidate"]
     checks.append((
         "V84-ISOLATED-TT",
         "one selected L1 source dictionary closes O to D on the frozen native emission "
         "probe; complete transfer and sign stay choices, all other claims and "
         "normalization remain unchanged",
-        has_status(index, v84_claim, "D")
-        and set(index) == set(v83_index)
-        and all(row == v83_index[claim] for claim, row in index.items() if claim != v84_claim)
-        and scope_sha256(index, v84_claim) == V84_SCOPE_SHA256
-        and index[v84_claim]["canon_section"] == "14. The gravitational wave program"
-        and index[v84_claim]["evidence"] == V84_PROBE
-        and normative.get(v84_claim) == {
+        has_status(v84_index, v84_claim, "D")
+        and set(v84_index) == set(v83_index)
+        and all(row == v83_index[claim] for claim, row in v84_index.items() if claim != v84_claim)
+        and scope_sha256(v84_index, v84_claim) == V84_SCOPE_SHA256
+        and v84_index[v84_claim]["canon_section"] == "14. The gravitational wave program"
+        and v84_index[v84_claim]["evidence"] == V84_PROBE
+        and v84_normative.get(v84_claim) == {
             "item_id": v84_claim, "item_type": "DICTIONARY", "claim_id": v84_claim,
             "status": "D", "layer": "L1", "gate_ids": "",
             "statement_source": "canon/CANON.md::" + v84_claim,
         }
-        and normative.get(V84_DEFINITION) == {
+        and v84_normative.get(V84_DEFINITION) == {
             "item_id": V84_DEFINITION, "item_type": "DEFINITION", "claim_id": "",
             "status": "", "layer": "L1", "gate_ids": "",
             "statement_source": "canon/CANON.md::" + V84_DEFINITION,
         }
-        and V84_DEFINITION not in index and V84_DEFINITION not in evidence
-        and evidence.get(v84_claim) == {
+        and V84_DEFINITION not in v84_index and V84_DEFINITION not in v84_evidence
+        and v84_evidence.get(v84_claim) == {
             "claim_id": v84_claim, "evidence_id": "EV-" + v84_claim,
             "evidence_kind": "PUBLIC_PROBE", "location": V84_PROBE,
             "sha256": V84_PROBE_SHA256, "hash_mode": "bundle-manifest-sha256-v1",
@@ -7945,11 +8356,11 @@ def run():
         and v84_probe_bundle_sha256() == V84_PROBE_SHA256
         and v84_actual_edges == v84_expected_edges
         and all(row["owner_item_id"] not in {v84_claim, V84_DEFINITION}
-                for row in gates.values())
-        and v84_claim not in programs and v84_claim not in frontier_text
-        and V84_DEFINITION not in programs and V84_DEFINITION not in frontier_text
-        and all(row["claim_id"] not in {v84_claim, V84_DEFINITION} for row in core_selection_rows)
-        and has_status(index, "TT-VECTOR-STATE-NORMALIZATION", "O")
+                for row in v84_gates.values())
+        and v84_claim not in v84_programs and v84_claim not in v84_frontier_text
+        and V84_DEFINITION not in v84_programs and V84_DEFINITION not in v84_frontier_text
+        and all(row["claim_id"] not in {v84_claim, V84_DEFINITION} for row in v84_core_selection_rows)
+        and has_status(v84_index, "TT-VECTOR-STATE-NORMALIZATION", "O")
         and len(v84_events) == 1
         and v84_events[0]["claim_id"] == v84_claim
         and v84_events[0]["event_id"] == "CANON84-STATUS-CHANGE-TT-SOURCE"
@@ -7964,6 +8375,70 @@ def run():
         and hashlib.sha256(v84_block).hexdigest() == V84_BLOCK_SHA256
         and b"### TT-SOURCE [D]" in v84_block
         and b"No\nL2-L6 output or lift is adopted" in v84_block,
+    ))
+
+    checks.append((
+        "V85-PRIOR-BYTES",
+        "exact v85 bytes reconstruct all v84 ledgers and normative texts before every "
+        "unchanged historical hash guard",
+        set(V85_LEDGER_PATCH) == set(V84_LEDGER_PATCH)
+        and set(V85_TEXT_PATCH) | {"REGISTRY.tsv"} == set(V84_NORMATIVE_SHA256)
+        and all(v85_previous_bytes(ROOT / "canon" / name) is not None
+                for name in (*V85_LEDGER_PATCH, *V85_TEXT_PATCH)),
+    ))
+    v85_ids = set(V85_CLAIMS)
+    v85_edges = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies
+        if row["item_id"] in v85_ids or row["depends_on"] in v85_ids
+    }
+    checks.append((
+        "V85-TT-THEOREMS",
+        "four exact L1 theorems enter separately on the frozen native-emission probe; "
+        "every scope, evidence tuple, declaration and incident dependency is pinned, "
+        "with no gate, Frontier or CORE ownership",
+        len(V85_CLAIMS) == 4
+        and set(index) == set(v84_index) | v85_ids
+        and all(
+            has_status(index, claim, "T")
+            and registry_row_sha256(index, claim) == contract["registry_sha256"]
+            and scope_sha256(index, claim) == contract["scope_sha256"]
+            and index[claim]["canon_section"] == "14. The gravitational wave program"
+            and index[claim]["evidence"] == V84_PROBE
+            and normative.get(claim) == contract["normative"]
+            and normative[claim]["item_type"] == 'THEOREM'
+            and normative[claim]["layer"] == "L1"
+            and normative[claim]["gate_ids"] == ""
+            and evidence.get(claim) == contract["evidence"]
+            and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+            and evidence[claim]["location"] == V84_PROBE
+            and evidence[claim]["sha256"] == V84_PROBE_SHA256
+            and evidence[claim]["architecture_requirement"] == "two-architecture"
+            and [row for row in history if row["claim_id"] == claim] == [contract["event"]]
+            and contract["event"]["release"] == "canon-v85-candidate"
+            and contract["event"]["event_type"] == "DECLARE"
+            and contract["event"]["new_status"] == "T"
+            and "### " + claim + " [T]" in canon_text
+            and claim not in programs and claim not in frontier_text
+            for claim, contract in V85_CLAIMS.items()
+        )
+        and v84_probe_bundle_sha256() == V84_PROBE_SHA256
+        and v85_edges == set(V85_INCIDENT_EDGES)
+        and all(row["owner_item_id"] not in v85_ids for row in gates.values())
+        and all(row["claim_id"] not in v85_ids for row in core_selection_rows),
+    ))
+    checks.append((
+        "V85-OWNER-BOUNDARY",
+        "all 407 prior Registry rows are unchanged; TT-SOURCE stays the selected L1 "
+        "dictionary and normalization remains O, without a scalar ratio or physical lift",
+        len(v84_index) == 407
+        and all(index.get(claim) == row for claim, row in v84_index.items())
+        and has_status(index, "TT-SOURCE", "D")
+        and has_status(index, "TT-VECTOR-STATE-NORMALIZATION", "O")
+        and has_status(index, "COSMOLOGY-READING-DICTIONARY", "D")
+        and gates == v84_gates
+        and programs == v84_programs
+        and core_selection_rows == v84_core_selection_rows,
     ))
 
     print("TWIST-J theorem/dictionary separation audit")
