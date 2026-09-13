@@ -1,5 +1,25 @@
 # Canon changelog (public series)
 
+## Public Canon v85
+
+Four separate L1 theorems register the mathematical content of the public
+native TT emission probe: the native four-letter language and frequencies,
+the complete declared local quadratic source class, the unique rational
+zero-start outgoing history, and the declared-channel local balance with
+auxiliary co-closure. The Canon states each proof once under its own T row.
+The planar incidence carrier is explicit. Complete transfer and relative
+sign remain chosen conventions; no physical-emission theorem is asserted.
+
+All 407 earlier Registry rows retain their exact bytes. TT-SOURCE remains D
+and TT-VECTOR-STATE-NORMALIZATION remains O with its complete obligation.
+The K1 finite doublet, the old homogeneous K1 Cesaro state and the distinct
+zero-start outgoing field are not identified. No outgoing vector state,
+action normalization, scalar spectrum or numerical r_T is supplied.
+
+The release witness reconstructs the complete v84 tables and normative
+files before applying every earlier historical guard. No public probe,
+preregistration, scientific threshold, gate or workflow is changed.
+
 ## Public Canon v84
 
 TT-SOURCE moves from O to D for one selected isolated native K1 packet
@@ -22,7 +42,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 407 claims; 0 T-LOCK, 275 T, 47 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
+Registry snapshot: 411 claims; 0 T-LOCK, 279 T, 47 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 

@@ -1,7 +1,7 @@
 TWIST-J theorem/dictionary separation audit
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v84
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -86,5 +86,8 @@ PASS 82 V83-PRIOR-LEDGERS exact current v83 row hashes precede the only allowed 
 PASS 83 V83-FRW-HYBRID at v83, one O-to-D existence closure adopts the exact joint-action proof and named L1-to-L2 hybrid dictionary; no theorem is promoted, the wider scalar-action boundary survives, and TT emission, normalization and SI owners remain open
 PASS 84 V84-PRIOR-LEDGERS exact v84 bytes reconstruct every v83 table and the complete Canon before all unchanged historical hash guards
 PASS 85 V84-ISOLATED-TT one selected L1 source dictionary closes O to D on the frozen native emission probe; complete transfer and sign stay choices, all other claims and normalization remain unchanged
+PASS 86 V85-PRIOR-BYTES exact v85 bytes reconstruct all v84 ledgers and normative texts before every unchanged historical hash guard
+PASS 87 V85-TT-THEOREMS four exact L1 theorems enter separately on the frozen native-emission probe; every scope, evidence tuple, declaration and incident dependency is pinned, with no gate, Frontier or CORE ownership
+PASS 88 V85-OWNER-BOUNDARY all 407 prior Registry rows are unchanged; TT-SOURCE stays the selected L1 dictionary and normalization remains O, without a scalar ratio or physical lift
 
-RESULT 85/85 ALL PASS
+RESULT 88/88 ALL PASS

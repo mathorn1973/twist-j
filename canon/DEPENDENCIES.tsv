@@ -786,3 +786,9 @@ DEF-K1-ISOLATED-TT-EMISSION	DEF-K1-HYBRID-FRW-CELL-METRIC	REQUIRES	use only the 
 TT-SOURCE	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	adopt exactly the selected L1 descriptor-to-field reading, complete-transfer and sign conventions, isolated onset and literal equality
 TT-SOURCE	TT-SQUARING-DECODER	REQUIRES	the adopted source square uses the existing spin-one to spin-two interpretation without importing outgoing-vector dynamics or a curved source law
 TT-SOURCE	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the isolated source transfer does not choose an outgoing vector state, fourth moments, action normalization, scalar comparison or numerical r_T
+TT-NATIVE-FOUR-WORD-LAW	DEF-ARCHITECTURE	REQUIRES	the native driver theta_n=s_2(n) mod 2 is the declared L1 bit sequence
+TT-NATIVE-FOUR-WORD-LAW	DEF-K1-LINEAR-METRIC	REQUIRES	the comparison alphabet W, optional K1 word law and two source coordinates are the displayed mathematical input definitions
+TT-QUADRATIC-SOURCE-CLASSIFICATION	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	the local degree-two representation class, zero outgoing initial data, K1 radiative channel, complete-transfer condition and separate sign choice are explicit mathematical premises
+TT-ISOLATED-EMISSION-TOTALITY	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	the five labelled sites, K1 source descriptor, rational planar L, isolated force sequence, zero-start data and literal prefix equality are the complete fixed mathematical inputs
+TT-ISOLATED-EMISSION-WORK-BALANCE	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	the local energy/current, prescribed isolated source channel and mean-zero auxiliary recipe are explicit mathematical premises at their planar restriction
+TT-ISOLATED-EMISSION-WORK-BALANCE	TT-ISOLATED-EMISSION-TOTALITY	REQUIRES	the exact rational recurrence supplies every source-on and source-off slice for the all-counter local-balance and auxiliary conclusions
