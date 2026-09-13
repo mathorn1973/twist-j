@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v84
+# TWIST-J Public Canon v85
 
-**Release identity.** Public Canon v84. Normative authority and activation
+**Release identity.** Public Canon v85. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v84 also declares the discrete architecture used to read
+only. Public Canon v85 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v84 does not claim
+seed of the two algebraic projections. Public Canon v85 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -125,7 +125,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v84 contains no such
+deriving the architecture from J; Public Canon v85 contains no such
 theorem.
 
 ---
@@ -13014,8 +13014,10 @@ of the chosen source coupling (1/2)*sum S_ij*H_ij added to A2/(2*lambda),
 where A2 is the full quadratic action of DEF-K1-LINEAR-METRIC; lapse,
 shift and all independent metric entries are retained through variation.
 
-For the quadratic work record use the same oriented incidence B and
-positive edge weights W_e as DEF-K1-HYBRID-FRW-CELL-METRIC, so L=B^T W_e B.
+For the quadratic work record use the five-site planar restriction of
+DEF-K1-HYBRID-FRW-CELL-METRIC: B=B_5, with oriented edges (r,r+k) for
+r in Z/5 and k=1,2, (B_5 f)(r,k)=f(r+k)-f(r), and weights
+w_1=29/324, w_2=65/324. Thus the planar L=B_5^T W_e B_5.
 For each real TT component set
 
 ```text
@@ -13045,6 +13047,307 @@ record fixes mean(tau)=0 and
 p_n=-j_n/2-W_e B*(tau_(n+1/2)-tau_(n-1/2)).
 ```
 
+### TT-NATIVE-FOUR-WORD-LAW [T]
+
+For the native bits `theta_n=s_2(n) mod 2`, the complete length-four
+factor language is exactly the ten-word K1 alphabet. The limiting forward
+factor frequencies exist and agree with the optional K1 weights.
+
+**Proof.** The native sequence obeys
+`theta_(2n)=theta_n`, `theta_(2n+1)=1-theta_n`, hence is the fixed point
+of `0->01, 1->10`. All four binary pairs occur in its prefix `01101001`.
+Every child pair starting at an even position is `01` or `10`, according
+to its parent bit; every odd-start pair is the indicated image of its
+parent pair:
+
+```text
+00 -> 10,  01 -> 11,  10 -> 00,  11 -> 01.
+```
+
+The first N native bits have one-letter imbalance at most one because
+each complete adjacent child pair contains one bit of each kind.
+Let p_N be the vector of pair frequencies counted over starting positions
+0<=n<N, and let P be the permutation matrix of the displayed odd-start
+map. Splitting starts by parity gives
+
+```text
+p_(2M)=c+(1/2)P p_M+O(1/M),
+c=(0,1/4,1/4,0),  in pair order (00,01,10,11).
+```
+
+An odd terminal start changes normalized counts by O(1/N). The affine
+map has max-norm contraction factor 1/2, and its fixed point satisfies
+
+```text
+f00=f10/2,       f01=1/4+f11/2,
+f10=1/4+f00/2,   f11=f01/2.
+```
+
+Its unique solution is `f00=f11=1/6`, `f01=f10=1/3`.
+Iterating the finite-count estimate down dyadic scales bounds the
+difference from this fixed point by O(log N/N). Thus the frequencies
+exist; merely solving stationary equations is not being substituted for
+this existence argument.
+
+For a parent pair ab, the even and odd child triples are respectively
+`a,(1-a),b` and `(1-a),b,(1-b)`. Their union is exactly
+`{001,010,011,100,101,110}`; weighting each parity by 1/2 gives
+frequency 1/6 for every triple. Every triple is attained because its
+parent pair occurs, and every triple start has one of these two forms.
+
+An even-start four-letter window from ab is `a,(1-a),b,(1-b)`;
+an odd-start one from abc is `(1-a),b,(1-b),c`. Their images are
+
+```text
+even: {0101,0110,1001,1010},
+odd:  {0010,0011,0100,1011,1100,1101}.
+```
+
+The sets are disjoint and their union is exactly W. Multiplying the
+parent pair or triple frequencies by 1/2 gives 1/6 for 0110 and 1001,
+and 1/12 for each other word. These are limiting frequencies along the
+native integer sequence. Shifting the initial counting position by any
+fixed integer changes only finitely many counts, so the same limiting
+factor masses are stationary in that sense.
+
+Finally, substitution into the algebraic formula
+`omega(a,b,c)=c-a` gives `omega(w0,w1,w2)=u0` and
+`omega(w1,w2,w3)=u1`. This is a comparison of L1 expressions; it
+imports no L5 source object or cross-layer map. Equality with the
+declared K1 law supplies no physical event law or L6 measure.
+
+### TT-QUADRATIC-SOURCE-CLASSIFICATION [T]
+
+In the local homogeneous quadratic class of
+DEF-K1-ISOLATED-TT-EMISSION, the space of source maps has real dimension
+one:
+
+```text
+Q_kappa(x,y)=kappa*(y^2-x^2),  kappa in R.
+```
+
+Under the additional declared complete-transfer condition, every
+nonstatic K1 packet forces `kappa^2=1`. The forward relative sign
+remains the separate convention selecting `kappa=+1`.
+
+**Proof.** Each input is a real two-dimensional spin-one representation.
+Identify it with C, so a rotation acts by
+`(x,y)->(exp(i alpha)x,exp(i alpha)y)`; the real two-dimensional
+output acts by multiplication by `exp(2i alpha)`. Reflection is
+complex conjugation on both sides.
+
+Any real homogeneous quadratic map has a complex-valued polynomial
+expression in `x,conjugate(x),y,conjugate(y)`. Rotation covariance
+retains only monomials of weight two, hence precisely
+
+```text
+Q(x,y)=A*x^2+B*x*y+C*y^2,  A,B,C in C.
+```
+
+Weight-zero and weight-minus-two monomials cannot contribute to a
+weight-two polynomial identity for every alpha. Reflection covariance
+`Q(conjugate(x),conjugate(y))=conjugate(Q(x,y))` makes A,B,C real.
+Comparison in `Q(y,x)=-Q(x,y)` gives `C=-A` and `B=0`.
+Conversely every real multiple of `y^2-x^2` satisfies all these
+conditions. The dimension statement is over R; it is not a
+classification of arbitrary maps or a claim about spatial dimension.
+
+For the selected real K1 source slices, write `Phi=H1-H0`.
+The zero initial outgoing slices and the impulse `kappa*Phi` give
+`h2=kappa*Phi` directly from the recurrence. At its first nonzero
+half-slice the spatial cross term contains `h1=0`, so the deposited
+field channel at each site is `kappa^2*Phi^2/2`. The declared source
+channel is `Phi^2/2`.
+
+The source positions satisfy `u0,u1 in {-1,0,1}`.
+For two distinct such positions modulo five, the supports
+`{u0,u0+1}` and `{u1,u1+1}` differ. Thus a nonstatic packet has
+`Phi!=0` at some site. Equality of the deposited channel and the
+complete source channel therefore forces `kappa^2=1`; either sign
+satisfies the equality. The adopted forward relative orientation
+chooses +1. Neither the energy equality nor slice antisymmetry
+derives that sign, and complete transfer itself is a stated premise.
+No adjustable magnitude remains after those conventions are fixed.
+
+### TT-ISOLATED-EMISSION-TOTALITY [T]
+
+For every declared K1 packet, the isolated outgoing recurrence has
+exactly one rational history for all integer counters m>=0.
+Its finite prefixes restrict literally, `h2=Phi`, and
+`mean(h_m)=0` for every m. Exactly four packets are static:
+
+```text
+{0011,0101,1010,1100}.
+```
+
+Each of the other six has a nonzero first emitted slice.
+
+**Proof.** On the five labelled sites `r in Z/5`, retain
+
+```text
+L=[188I-29(S+S^-1)-65(S^2+S^-2)]/324,
+H_t(r)=[delta_(r,u_t)+delta_(r,u_t+1)]/2,
+Phi=H1-H0,  h0=h1=0,
+h_(m+1)=(2I-L)h_m-h_(m-1)+delta_(m,1)*Phi,  m>=1.
+```
+
+The source and L have rational entries. The coefficient of each
+successor is the identity, so induction gives one and only one
+rational next slice at every finite counter. No choice depends on
+a terminal horizon. Applying the same induction to two different
+horizons proves equality on their common prefix, and therefore a
+unique total sequence with those prefixes. At m=1 the recurrence
+gives `h2=Phi`.
+
+Each H_t has sum one. The displayed L is symmetric and its row sum
+is `(188-2*29-2*65)/324=0`. Taking spatial sums in the recurrence
+therefore gives `s_(m+1)=2s_m-s_(m-1)`, with `s0=s1=0`, so
+every sum and every spatial mean is zero.
+
+The ten source words have ordered source pairs
+
+```text
+0010:(1,0),   0011:(1,1),   0100:(0,-1),  0101:(0,0),
+0110:(1,-1),  1001:(-1,1),  1010:(0,0),   1011:(0,1),
+1100:(-1,-1), 1101:(-1,0).
+```
+
+The two marked supports `{u,u+1}` for u in {-1,0,1}, reduced modulo
+five, are distinct. Hence `Phi=0` exactly when `u0=u1`, giving
+the four displayed static words and six active ones. The recurrence
+then vanishes identically for a static word and starts with
+`h2!=0` for every active word.
+
+This argument concerns the independent outgoing field h. It
+uses no pullback through an outgoing square root, imposes no
+physical onset clock, and asserts no all-counter nonvanishing,
+physical outgoing metric or overlapping-source composition.
+
+### TT-ISOLATED-EMISSION-WORK-BALANCE [T]
+
+On every selected isolated history, the prescribed total work record
+conserves locally for all integers n>=1, and its auxiliary momentum
+record is co-closed at every such counter. This is a theorem about the
+declared radiative channel, whose depletion is prescribed in the
+definition.
+
+**Planar carrier.** The incidence used here is explicitly the five-site
+planar restriction of the hybrid construction. Orient one edge from r
+to r+k for each `r in Z/5` and `k in {1,2}`, and set
+
+```text
+(B_5 f)(r,k)=f(r+k)-f(r),
+w_1=29/324,  w_2=65/324,  W_e=diag(w_k),
+L=B_5^T W_e B_5.
+```
+
+Vertex and edge products are their ordinary finite sums.
+Thus `B_5^T` contributes minus at an edge tail and plus at its head.
+Expanding the last expression gives precisely the five-by-five
+planar L in DEF-K1-ISOLATED-TT-EMISSION. No 125-site operator is
+being identified with a five-site matrix.
+
+For any three successive real field slices define
+
+```text
+q_n=h_(n+1)-h_(n-1),
+R_L h_n=h_(n+1)-2h_n+h_(n-1)+L h_n,
+e_(n+1/2)(x)=(h_(n+1)(x)-h_n(x))^2/2
+  +(1/4)*sum_(edge incident x) w_edge*(B_5 h_(n+1))_edge*(B_5 h_n)_edge,
+j_n(edge)=(w_edge/4)*(B_5 h_n)_edge*(q_n(tail)+q_n(head)).
+```
+
+Here Delta on a half-slice record denotes its value at n+1/2 minus
+its value at n-1/2. The exact off-shell identity is
+
+```text
+Delta e+B_5^T j_n=q_n*(R_L h_n)/2,
+```
+
+where multiplication on the right is pointwise.
+
+**Local identity.** The kinetic difference at a vertex with values
+(a,b,c) is
+
+```text
+[(c-b)^2-(b-a)^2]/2=(c-a)*(c-2b+a)/2.
+```
+
+For one edge take tail values (a,b,c) and head values (d,e,f).
+Its endpoint-split spatial-energy difference is the same at each
+endpoint:
+
+```text
+delta_share=(w_edge/4)*(e-b)*[(f-c)-(d-a)],
+j_edge=(w_edge/4)*(e-b)*[(c-a)+(f-d)].
+```
+
+Direct subtraction at the tail and addition at the head give
+
+```text
+delta_share-j_edge=(w_edge/2)*(c-a)*(b-e),
+delta_share+j_edge=(w_edge/2)*(f-d)*(e-b).
+```
+
+Summing incident edges supplies `q_n*Lh_n/2` at each vertex.
+Together with the kinetic identity this proves the off-shell equation
+for arbitrary real three-slice data, without invoking the recurrence
+or a finite-history extrapolation. Summing scalar identities proves
+the corresponding record for two real TT components.
+
+**Isolated transfer.** On the selected histories,
+`h0=h1=0`, `h2=Phi`. Hence at n=1 the current is zero and
+the field energy changes from zero to `Phi^2/2` pointwise.
+The prescribed source channel changes from that same
+`e_src,1/2=Phi^2/2` to zero. At n>=2 the force and the source
+channel vanish. Applying the off-shell identity at each counter
+therefore gives
+
+```text
+Delta(e+e_src)+B_5^T j_n=0,  n>=1.
+```
+
+No `h_-1`, initial boundary equation or source law before the
+declared onset is needed.
+
+**Auxiliary solution.** For every real v,
+
+```text
+<v,Lv>=sum_edge w_edge*(B_5 v)_edge^2.
+```
+
+All weights are positive, and the k=1 edges alone connect the five
+sites. Consequently `ker L` consists exactly of constants.
+The restriction of L to mean-zero vectors is invertible. It has a
+rational matrix in a rational basis, so its inverse carries rational
+inputs to rational outputs. At every half-slice the recurrence gives
+rational energy data, and subtraction of their mean gives
+`Pi0(e+e_src)` in that subspace. Thus
+
+```text
+2L*tau_(n+1/2)=Pi0(e_(n+1/2)+e_src,n+1/2),
+mean(tau_(n+1/2))=0
+```
+
+has exactly one rational solution.
+
+Let `E_tot=e+e_src`. Local balance makes
+`Delta E_tot=-B_5^T j_n`, which has zero spatial sum because
+`B_5 1=0`. The difference of the auxiliary equations therefore is
+`2L*Delta tau=Pi0(Delta E_tot)=Delta E_tot`.
+For the defined record `p_n=-j_n/2-W_e B_5 Delta tau`,
+
+```text
+B_5^T p_n=-(B_5^T j_n)/2-L*Delta tau
+         =-(B_5^T j_n+Delta E_tot)/2=0.
+```
+
+The local polynomial identity and recurrence induction establish all
+counter quantifiers. The channel `e_src` remains the stipulated
+finite transfer record; it is not a derived evolution of the complete
+microscopic source. Pointwise positivity of e, irreversible radiation,
+and a nonlinear source or FRW action are not conclusions of this balance.
+
 ### TT-SOURCE [D]
 
 The selected isolated emission dictionary of DEF-K1-ISOLATED-TT-EMISSION
@@ -13055,48 +13358,12 @@ constraints. Locality, degree, representation class, complete transfer,
 relative sign, onset and outgoing initial condition are explicit choices.
 This D adoption is not a derivation of those choices from the axiom.
 
-**Native dependency.** The even/odd child-window decomposition of the
-Thue-Morse substitution 0->01, 1->10 gives the stationary pair equations
-
-```text
-f00=f10/2,  f01=1/4+f11/2,
-f10=1/4+f00/2,  f11=f01/2.
-```
-
-Their unique solution is f00=f11=1/6, f01=f10=1/3. Existence follows
-directly from finite prefix counts: their normalized recurrence has
-linear part of max-norm at most 1/2 and boundary error O(1/N), with the
-one-letter balance converging to 1/2. Iteration down dyadic scales gives
-convergence. The child triples a,(1-a),b and (1-a),b,(1-b) yield exactly
-001,010,011,100,101,110, each with mass 1/6. The even four-letter windows
-a,(1-a),b,(1-b) give 0101,0110,1001,1010. The odd windows
-(1-a),b,(1-b),c give 0010,0011,0100,1011,1100,1101. Hence the full alphabet
-is precisely W, with masses 1/6 for 0110 and 1001 and 1/12 otherwise.
-These equal the optional K1 law but do not adopt a physical event law
-or an L6 measure. The identities u0=w2-w0, u1=w3-w1 use only native L1
-bits; agreement with the formula omega(a,b,c)=c-a is a comparison,
-not an L5-to-L1 dependency.
-
-**Source classification and coefficient.** In complex spin coordinates,
-rotation weight two admits exactly A*x^2+B*x*y+C*y^2. Reflection makes
-A,B,C real, and slice antisymmetry implies B=0, C=-A. Thus the complete
-declared class is kappa*(y^2-x^2). At zero outgoing initial data the
-deposited energy is kappa^2*Phi^2/2, since the spatial cross term vanishes.
-The adopted complete-transfer convention forces |kappa|=1 on a nonstatic
-packet; the adopted relative orientation chooses +1. Energy and
-antisymmetry alone do not choose its sign. No adjustable magnitude
-remains within the stated convention. No uniqueness outside this local
-quadratic class is claimed.
-
-**Total output and propagation.** The successor coefficient in the
-recurrence is the identity, so induction proves existence, uniqueness
-and prefix consistency at every counter. In particular h2=Phi. There
-are four static packets with Phi=0 and six active ones with Phi nonzero.
-Every H_t has sum one, hence Phi and all outgoing slices have mean zero.
-The outgoing field is not obtained by pulling an action back through
-h=v^2. Source weight one gives output weight two, compatible with
-c(s)=1-s^2 and c(1)=0,c(2)=-3. This is planar representation/propagation
-compatibility, not a new curved-background theorem.
+The exact construction rests on the four separately registered L1
+theorems above: the native word law, local quadratic class, regular
+zero-start history, and declared-channel work/co-closure identity. These
+theorems do not derive the adopted source class, transfer, frame or onset
+conventions from J. Their public computational audit is the unchanged
+P-TT-NATIVE-QUADRATIC-EMISSION-1 proof and verifier bundle.
 
 **Linear source equations.** At the transverse representative the TT
 variation of A2/(2*lambda) is -R_L h/(2*lambda). The declared symmetric
@@ -13106,37 +13373,9 @@ The planar source laws (1-E)rho=D J3 and (E^-1-1)J_i=D S_i3 hold
 identically. No failing longitudinal source is projected away. These
 linear equations do not equate rho with quadratic source-work energy.
 
-**Quadratic local balance.** The identity
-
-```text
-[(c-b)^2-(b-a)^2]/2=(c-a)*(c-2b+a)/2
-```
-
-gives the kinetic work. For an edge from x to y, take their three time
-values to be (a,b,c) and (d,e,f). The endpoint-split spatial-energy
-difference at x minus its oriented edge current equals
-w_edge*(c-a)*(b-e)/2; at y the corresponding sum equals
-w_edge*(f-d)*(e-b)/2. Summing edges proves, off shell,
-
-```text
-Delta e+B^T j=q_n*R_L h_n/2.
-```
-
-At onset q1=Phi, R_L h1=Phi and j1=0. Thus the field gains Phi^2/2,
-exactly cancelling the declared source-channel decrease. Afterwards the
-source vanishes and the field conserves locally. Consequently
-Delta(e+e_src)+B^T j=0 on every isolated history. The connected graph
-has only constants in ker L, so the mean-zero tau solution exists and
-is unique. Taking B^T of p and using this balance gives B^T p=0.
-This auxiliary compatibility does not assert a joint nonlinear emitter
-and FRW action.
-
-The complete mathematical construction satisfies the positive existence
-condition for the typed source-to-field map at this selected scope.
-The exact probe P-TT-NATIVE-QUADRATIC-EMISSION-1 audits the coefficient,
-packet and polynomial identities; the induction and off-shell proof
-give the unrestricted counter quantifiers. No new T claim is introduced
-by the dictionary adoption.
+Source weight one gives output weight two, compatible with
+c(s)=1-s^2 and c(1)=0,c(2)=-3. This is planar representation/propagation
+compatibility, not a new curved-background theorem.
 
 The result supplies no microscopic full-source depletion law, physical
 occurrence or onset law, repeated-source composition, irreversible flux,

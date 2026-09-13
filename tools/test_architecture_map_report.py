@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 407)
+        self.assertEqual(self.report.claims, 411)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 47, "F": 18, "H": 2, "O": 26, "T": 275},
+            {"C": 39, "D": 47, "F": 18, "H": 2, "O": 26, "T": 279},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,17 +35,30 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 50,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 317,
+                "two-architecture": 321,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 184)
+        self.assertEqual(len(self.report.direct_architecture_requires), 185)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 269
+            len(self.report.transitive_architecture_dependents), 273
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v85 separates four L1 mathematical results from the existing
+        # isolated-emission dictionary. Only the native word-law theorem
+        # adds a direct architecture edge; all four reach it transitively.
+        word_law = "TT-NATIVE-FOUR-WORD-LAW"
+        self.assertIn(word_law, self.report.direct_architecture_requires)
+        for claim in (
+            word_law,
+            "TT-QUADRATIC-SOURCE-CLASSIFICATION",
+            "TT-ISOLATED-EMISSION-TOTALITY",
+            "TT-ISOLATED-EMISSION-WORK-BALANCE",
+        ):
+            self.assertIn(claim, self.report.transitive_architecture_dependents)
+            self.assertNotIn(claim, self.report.dependency_terminals)
         # v84 adds one isolated-emission definition through existing K1
         # definitions. TT-SOURCE changes O to D and retains its direct edge.
         emission = "DEF-K1-ISOLATED-TT-EMISSION"

@@ -473,3 +473,36 @@ lifecycle event. It verifies that every other Registry row is identical to
 v83 and that normalization remains O. The initial frozen v84 candidate omitted
 this routine release-witness update and failed this audit in PR #950; that
 candidate remains preserved. No mathematical probe or threshold is changed.
+
+The v85 maintenance adds an outer reconstruction against the unchanged v84
+public tables and normative text at
+`f10fca3806385a491b32ef40157c51bca08576ab`. It requires the complete current
+hash of each of the eight ledgers and each of the five normative files. Only
+four new Registry, Normative, Evidence and History rows and six new dependency
+rows are removed, by exact line SHA-256 including LF; no old ledger row is
+replaced. Gates, Frontier programs and CORE selection remain byte-identical.
+The exact inverse of the normative text edits restores the complete v84
+Canon, CORE, Frontier and Changelog, with full hashes checked at both ends.
+Those verified bytes feed the unchanged v84-to-v83 and older inverses. The
+historical v84 intake guard reads that verified v84 snapshot, retaining its
+original complete source proof and all historical hash constants.
+
+The current v85 intake guard separately requires four `T/L1` contracts:
+`TT-NATIVE-FOUR-WORD-LAW`, `TT-QUADRATIC-SOURCE-CLASSIFICATION`,
+`TT-ISOLATED-EMISSION-TOTALITY` and `TT-ISOLATED-EMISSION-WORK-BALANCE`.
+Their exact Registry rows, scope hashes, Normative rows, two-architecture
+public-probe Evidence tuples, single declaration events, Canon headings and
+six incident dependency edges are pinned. They share the unchanged
+`P-TT-NATIVE-QUADRATIC-EMISSION-1` public bundle. None owns a gate, Frontier
+program or CORE selection. A separate owner check requires all 407 prior
+Registry rows to remain unchanged: the selected TT source stays at `D`,
+normalization remains `O`, and the cosmology dictionary remains `D`. The
+mathematical claims do not select complete transfer or sign, supply the
+scalar denominator of a tensor ratio, or adopt a physical lift.
+
+The v85 totals are 411 claims, T279/D47/C39/H2/O26/F18, 463 normative items,
+793 dependency edges, 411 Evidence rows (321 requiring two architectures),
+947 History events, 16 gates, 28 live H/O and Frontier-program rows,
+30 CORE selections and 24 reproductions. EXPECTED is saved only after all
+88 release-audit checks pass. This is deterministic release bookkeeping,
+not a new mathematical probe or formal scientific gate.
