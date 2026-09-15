@@ -1,5 +1,22 @@
 # Canon changelog (public series)
 
+## Public Canon v87
+
+One selected passive QDD observable family closes at D on the existing
+K_QDD domain through its balanced head map. Three L1 definitions fix the
+five named partitions, exactly five coherent record fields, the zero branch
+and total typed coarsening maps. A separate T row proves the three-atom
+Boolean algebra, its five partitions, exact weights and refinement laws.
+The completed public passive-family probe supplies the independent audit.
+
+The owner chooses the family; J and the theorem do not select it. The
+existing ALGEBRAIC-DMATTER binding, all 414 prior Registry rows, all open
+QDD apparatus obligations, gates, Frontier programs and CORE selections
+retain their exact bytes. No physical occurrence, instrument, sampling,
+measure, apparatus-profile conformance or higher-layer lift is adopted.
+The release witness reconstructs every exact v86 input before all earlier
+guards and separately checks this two-claim, three-definition addition.
+
 ## Public Canon v86
 
 Native coherent QDD carrier and point-source boundary.
@@ -64,7 +81,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 414 claims; 0 T-LOCK, 282 T, 47 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
+Registry snapshot: 416 claims; 0 T-LOCK, 283 T, 48 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 
