@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v86
+# TWIST-J Public Canon v87
 
-**Release identity.** Public Canon v86. Normative authority and activation
+**Release identity.** Public Canon v87. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v86 also declares the discrete architecture used to read
+only. Public Canon v87 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v86 does not claim
+seed of the two algebraic projections. Public Canon v87 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -125,7 +125,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v86 contains no such
+deriving the architecture from J; Public Canon v87 contains no such
 theorem.
 
 ---
@@ -3188,6 +3188,172 @@ carrier and exact algebraic split exist in the specified representation;
 their physical preparation/adoption, actual coarse event, occurrence law,
 persistent post-event record, reset/repetition, complete apparatus family
 and L1-to-L5 gate remain unresolved. Any L6 measure needs its separate gate.
+
+### Passive QDD observable family
+
+The owner selects a family of five parallel L1 algebraic views of the existing
+source `K_QDD`. A view chooses which block weights to return. It neither selects
+one realized outcome nor changes the source. The existing five-field
+`ALGEBRAIC-DMATTER` binding and its record remain unchanged.
+
+#### Definitions
+
+`DEF-QDD-PASSIVE-PARTITION-FAMILY` fixes the rational space `V=Q^4`,
+the displayed matrix `G=I_4-uu^T/5`, `u=(1,1,1,1)^T`, and
+`chi=(1,-1,-1,1)^T`. This extends the same matrix formula to V for the
+mathematical theorem without extending any existing decoder domain. Set
+
+```text
+P_t = uu^T/4,
+P_l = chi chi^T/4,
+P_r = I_4-P_t-P_l.
+
+A = {t,l,r}, with order t<l<r.
+P_S = sum_(a in S) P_a for S subset A.
+```
+
+The admitted family consists exactly of these partitions of A, with the
+literal displayed block order:
+
+```text
+PI-ALL    ((t,l,r))
+PI-TRACE  ((t),(l,r))
+PI-LEG    ((t,r),(l))
+PI-PAIR   ((t,l),(r))
+PI-ATOMS  ((t),(l),(r))
+```
+
+Partition equality is equality of its displayed ID and blocks. These are
+five views in one declared algebra, not all possible projector-valued readings.
+There is no quotient that identifies different partition IDs merely because
+their weights coincide at one source.
+
+`DEF-QDD-PASSIVE-WEIGHT-RECORD` defines `PassiveWeightRecord` with exactly
+five fields:
+
+```text
+partition_id: one of the five displayed IDs;
+support_state: ZERO_SUPPORT or SUPPORTED;
+total_weight: a nonnegative rational;
+block_weights: an ordered tuple of nonnegative rationals, one per block;
+normalized_weight_state: ZERO_DENOMINATOR or NORMALIZED(q),
+                         where q is an ordered rational tuple of the same size.
+```
+
+Only coherent tuples belong to this type. For a literal partition ID pi,
+let `Record_pi` be the following subclass. A ZERO_SUPPORT record has total
+weight zero, every block weight zero, and ZERO_DENOMINATOR. A SUPPORTED
+record has total weight m>0, nonnegative block weights summing to m, and
+exactly NORMALIZED(q) with q_B=w_B/m for every displayed block. Both tuple
+lengths are fixed by pi. No other tag combination or inconsistent total or
+normalization is admitted. `PassiveWeightRecord` is the disjoint union of
+the five `Record_pi` types, with the literal partition ID retained.
+
+Record equality is literal equality of all five coherent typed fields,
+including the partition ID, branch tags, tuple lengths and rational entries. No phase,
+ensemble, pointer, instrument, event ordinal or additional source argument is
+part of this record.
+
+`DEF-QDD-PASSIVE-READING-MAPS` defines for each fixed partition pi a map
+`R_pi:K_QDD -> PassiveWeightRecord`. Its only source input is the existing
+balanced head vector `v=beta_QDD(kappa)` from `DEF-QDD-BALANCED-PISTON`.
+Put `Q=v^T v`, `s=u^T v`, `ell=chi^T v`, and
+
+```text
+m_t = s^2/20,
+m_l = ell^2/4,
+m_r = ((v1-v4)^2+(v2-v3)^2)/2,
+m   = m_t+m_l+m_r = Q-s^2/5.
+w_B = sum_(a in B) m_a, for each displayed block B of pi.
+```
+
+For v=0 return `(pi,ZERO_SUPPORT,0,(0,...,0),ZERO_DENOMINATOR)`.
+For v!=0 return `(pi,SUPPORTED,m,(w_B)_B,NORMALIZED((w_B/m)_B))`.
+Zero-weight blocks remain zero; no branch state is produced or normalized.
+
+For a refinement sigma of pi, define the total typed map
+`C_(sigma,pi):Record_sigma -> Record_pi`. Its domain consists only of the
+coherent records carrying literal sigma ID. It retains the support and total
+weight fields, sums fine block weights into the displayed coarse blocks,
+and sums normalized entries on supported records. On zero records it
+retains ZERO_DENOMINATOR. It replaces the partition ID by pi. This is a
+map of algebraic records, not an operation on the source or a history.
+
+### QDD-THREE-ATOM-PARTITION-COMPLETENESS [T]
+
+At L1 on V=Q^4, `P_t,P_l,P_r` are pairwise orthogonal rational
+G-self-adjoint projectors of ranks 1,1,2 summing to I. Their eight subset
+sums form the complete Boolean algebra generated by these three atoms:
+`P_S P_T=P_(S intersection T)` and `I-P_S=P_(A minus S)`.
+Its projector-valued partitions into nonzero disjoint blocks are exactly
+the five displayed partitions, up to the fixed naming and order convention.
+Their quadratic weights are the displayed nonnegative rationals and sum
+to `v^T G v`. The readout maps are total on K_QDD, and all refinement
+maps on these coherent record types obey
+
+```text
+C_(sigma,pi) R_sigma = R_pi,
+C_(pi,tau) C_(sigma,pi) = C_(sigma,tau)
+```
+
+whenever sigma refines pi and pi refines tau. These are algebraic
+equalities of one-snapshot records, with no sampling interpretation.
+
+**Proof.** `u^T chi=0`, `u^T u=chi^T chi=4`. G acts as 1/5 on Qu and
+as the identity on its ordinary orthogonal complement; hence G commutes
+with the two displayed rank-one projectors. Their complement has rank two
+and is G-self-adjoint. Orthogonality proves all subset-product and complement
+identities; the three projectors are nonzero, so their eight sums are distinct.
+Every partition in this Boolean algebra partitions three nonzero atoms.
+There is one one-block partition, three choices of the singleton in a
+two-block partition, and one three-block partition. This proves completeness
+at the stated scope.
+
+Direct multiplication gives `v^T G P_t v=s^2/20`,
+`v^T G P_l v=ell^2/4`, and
+`v^T G P_r v=((v1-v4)^2+(v2-v3)^2)/2`.
+The sum is `v^T G v=Q-s^2/5`. Since `s^2<=4Q`, this is at least Q/5,
+strictly positive for v!=0; the zero branch is explicitly defined.
+Every operation is exact rational arithmetic. A coarser block is the
+disjoint union of its finer blocks, so both raw and normalized sums agree;
+associativity of finite addition proves the second refinement identity
+on every coherent Record_sigma, not only records in the image of R_sigma.
+Coarsening preserves nonnegativity, total weight and the normalization
+equations, so it lands in the stated Record_pi type. The explicit zero
+case lands in its coherent zero branch.
+
+This proof classifies only the declared three-atom algebra. It makes no
+claim that this is the complete physical apparatus class or the only
+possible passive reading of the source.
+
+### QDD-OBSERVABLE-READING-FAMILY [D]
+
+The owner adopts exactly the five `R_pi` maps as parallel named passive
+L1 weight-record views of K_QDD. Selection of pi is an explicit reading
+choice, not a consequence of J, the Gram matrix, or the completeness theorem.
+PI-TRACE has the same total and ordered LOW/HIGH weights as the existing
+algebraic QDD reading. The other partition IDs select different records
+with the explicit refinement relationships above. All admitted output
+fields, zero branches and overlap rules of this selected family are resolved.
+
+This is a complete selected passive record family on its named domain.
+It does not extend K_QDD, alter the five-field ALGEBRAIC-DMATTER binding,
+add a post-state instrument or actual event, select a physical apparatus,
+provide occurrence frequencies or a probability law, or cross from L1 to
+L4, L5 or L6. A normalized rational tuple here is data, not a measure claim.
+The three QDD physical O owners and their exact clauses remain unchanged.
+No conformance claim to the L4-to-L5 apparatus profile proposed in issue
+#539 is made, and no exception to that profile is created.
+
+The independent T row audits the selected maps. It does not choose or
+canonize the reading family. The source and partition data determine one
+record, with no output feedback into U.
+
+**Public audit.** The separately completed public probe
+`probes/P-QDD-PASSIVE-READING-FAMILY-1` audits the exact matrix
+identities, all finite native heads, the coherent record contract
+and refinement laws. The proof above supplies the universal
+algebraic statement; the owner adoption supplies the D choice.
 
 The time counter has an exact entropy anchor. The step matrix of
 J = 1 + zeta_5^2 induces a hyperbolic automorphism T_J of the torus
