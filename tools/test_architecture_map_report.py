@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 414)
+        self.assertEqual(self.report.claims, 416)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 47, "F": 18, "H": 2, "O": 26, "T": 282},
+            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 283},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,17 +35,38 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 50,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 324,
+                "two-architecture": 326,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 187)
+        self.assertEqual(len(self.report.direct_architecture_requires), 188)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 276
+            len(self.report.transitive_architecture_dependents), 279
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v87 adds one direct owner-selected passive dictionary. Its source
+        # maps and theorem reach architecture through the existing K_QDD
+        # domain; the partition/record definitions require only exact algebra.
+        reading = "QDD-OBSERVABLE-READING-FAMILY"
+        self.assertIn(reading, self.report.direct_architecture_requires)
+        self.assertIn(reading, self.report.transitive_architecture_dependents)
+        self.assertNotIn(reading, self.report.dependency_terminals)
+        for item in (
+            "DEF-QDD-PASSIVE-READING-MAPS",
+            "QDD-THREE-ATOM-PARTITION-COMPLETENESS",
+        ):
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.dependency_terminals)
+        for item in (
+            "DEF-QDD-PASSIVE-PARTITION-FAMILY",
+            "DEF-QDD-PASSIVE-WEIGHT-RECORD",
+        ):
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertNotIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.dependency_terminals)
         # v86 adds two direct native requirements and one dependent split.
         code = "U-GALOIS-FIBER-CODE"
         split = "U-GALOIS-FIBER-QDD-SPLIT"

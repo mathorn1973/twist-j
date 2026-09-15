@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its ninety-one checks cover the current
+and emits deterministic text. Its ninety-four checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 81/81 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 94/94 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -519,3 +519,18 @@ inverse patch reconstructs the frozen v85 input. All earlier guard code and
 historical hash values remain unchanged and consume that verified v85
 snapshot. Three additional checks consume actual v86 files, including both
 full probe-bundle hashes. Neither path changes or reruns an incubation audit.
+
+
+The v87 maintenance adds an exact outer inverse from the current thirteen
+Canon inputs to public v86 at d008270c9c979f457f73087e17672b1db85ee6ad.
+Every input is checked by full byte count and SHA-256 before reconstruction;
+all v86 and earlier hash constants and guard predicates are retained. Three
+new current-state checks separately pin the two declarations, three L1
+definitions, thirteen dependencies, completed passive-family probe bundle,
+and all prior Registry rows, gates, Frontier programs and CORE selections.
+The theorem audits the chosen three-atom algebra and coherent record maps;
+the dictionary adopts only the passive family on existing K_QDD. No physical
+owner, apparatus law, sampling law or layer lift is promoted. The current
+totals are 416 claims, T283/D48/C39/H2/O26/F18 and 28 live H/O.
+The transcript is deterministic release bookkeeping, not a new scientific
+probe or replacement of the independently frozen mathematical audit.
