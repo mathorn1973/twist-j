@@ -792,3 +792,14 @@ TT-QUADRATIC-SOURCE-CLASSIFICATION	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	the loca
 TT-ISOLATED-EMISSION-TOTALITY	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	the five labelled sites, K1 source descriptor, rational planar L, isolated force sequence, zero-start data and literal prefix equality are the complete fixed mathematical inputs
 TT-ISOLATED-EMISSION-WORK-BALANCE	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	the local energy/current, prescribed isolated source channel and mean-zero auxiliary recipe are explicit mathematical premises at their planar restriction
 TT-ISOLATED-EMISSION-WORK-BALANCE	TT-ISOLATED-EMISSION-TOTALITY	REQUIRES	the exact rational recurrence supplies every source-on and source-off slice for the all-counter local-balance and auxiliary conclusions
+U-GALOIS-FIBER-CODE	DEF-ARCHITECTURE	REQUIRES	the declared generators, selector, counter and actual origin-zero native update
+U-GALOIS-FIBER-CODE	DEF-QDD-GRAM	REQUIRES	the exact rational source trace pairing and its explicitly shifted isometric chart
+U-GALOIS-FIBER-CODE	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the L1 theorem supplies no physical preparation/adoption, actual event, occurrence, persistent record/reset, complete apparatus family or physical layer gate
+U-GALOIS-FIBER-QDD-SPLIT	U-GALOIS-FIBER-CODE	REQUIRES	the specified coherent code, full Gram identity and invertible final map
+U-GALOIS-FIBER-QDD-SPLIT	DEF-QDD-AMPLITUDE-B0	REQUIRES	multiplication by j explicitly shifts the registered source marking
+U-GALOIS-FIBER-QDD-SPLIT	DEF-QDD-PROJECTOR-LOW	REQUIRES	the first algebraic comparison target, not a physical effect
+U-GALOIS-FIBER-QDD-SPLIT	DEF-QDD-PROJECTOR-HIGH	REQUIRES	the complementary algebraic comparison target, not a realized event
+U-GALOIS-FIBER-QDD-SPLIT	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the L1 theorem supplies no physical preparation/adoption, actual event, occurrence, persistent record/reset, complete apparatus family or physical layer gate
+U-POINT-SOURCE-SHARP-READOUT-NOGO	DEF-ARCHITECTURE	REQUIRES	every finite actual native protocol defines a deterministic point map
+U-POINT-SOURCE-SHARP-READOUT-NOGO	DEF-QDD-GRAM	REQUIRES	the five-simplex contrast realization has the registered four-coordinate Gram
+U-POINT-SOURCE-SHARP-READOUT-NOGO	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the L1 theorem supplies no physical preparation/adoption, actual event, occurrence, persistent record/reset, complete apparatus family or physical layer gate

@@ -1,4 +1,5 @@
 TWIST-J theorem/dictionary separation audit
+historical guards: exact reconstructed v85; current boundary: v86
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -89,5 +90,8 @@ PASS 85 V84-ISOLATED-TT one selected L1 source dictionary closes O to D on the f
 PASS 86 V85-PRIOR-BYTES exact v85 bytes reconstruct all v84 ledgers and normative texts before every unchanged historical hash guard
 PASS 87 V85-TT-THEOREMS four exact L1 theorems enter separately on the frozen native-emission probe; every scope, evidence tuple, declaration and incident dependency is pinned, with no gate, Frontier or CORE ownership
 PASS 88 V85-OWNER-BOUNDARY all 407 prior Registry rows are unchanged; TT-SOURCE stays the selected L1 dictionary and normalization remains O, without a scalar ratio or physical lift
+PASS 89 V86-PRIOR-BYTES every current input is pinned and reconstructs exact v85 bytes before all unchanged historical guards
+PASS 90 V86-THREE-THEOREMS exactly three L1 theorems use the two separately promoted frozen probes; all scopes, evidence bundles, declarations and dependencies are pinned
+PASS 91 V86-APPARATUS-BOUNDARY all 411 prior statuses and 410 prior Registry rows are unchanged; apparatus scope acknowledges the code but remains O and STOP, with no new dictionary, open debt, gate, program or CORE selection
 
-RESULT 88/88 ALL PASS
+RESULT 91/91 ALL PASS

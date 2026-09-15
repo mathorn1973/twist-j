@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its eighty-five checks cover the current
+and emits deterministic text. Its ninety-one checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -506,3 +506,16 @@ The v85 totals are 411 claims, T279/D47/C39/H2/O26/F18, 463 normative items,
 30 CORE selections and 24 reproductions. EXPECTED is saved only after all
 88 release-audit checks pass. This is deterministic release bookkeeping,
 not a new mathematical probe or formal scientific gate.
+
+The v86 boundary adds exactly three L1 theorem rows from two separately
+promoted public probes. Their current scopes, evidence bundles, declarations
+and incident dependencies are pinned. The apparatus remains O and STOP;
+physical preparation/adoption and realized coarse-event semantics are not
+supplied by the mathematical carrier and conditional post-state identity.
+No dictionary, open claim, gate, program or CORE-selection entry is added.
+
+Every v86 input file is checked by byte count and SHA-256 before an exact
+inverse patch reconstructs the frozen v85 input. All earlier guard code and
+historical hash values remain unchanged and consume that verified v85
+snapshot. Three additional checks consume actual v86 files, including both
+full probe-bundle hashes. Neither path changes or reruns an incubation audit.
