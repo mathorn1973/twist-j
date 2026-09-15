@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v85
+# TWIST-J Public Canon v86
 
-**Release identity.** Public Canon v85. Normative authority and activation
+**Release identity.** Public Canon v86. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v85 also declares the discrete architecture used to read
+only. Public Canon v86 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v85 does not claim
+seed of the two algebraic projections. Public Canon v86 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -125,7 +125,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v85 contains no such
+deriving the architecture from J; Public Canon v86 contains no such
 theorem.
 
 ---
@@ -3023,6 +3023,171 @@ No result closes `QDD-INSTRUMENT-APPARATUS`: O2 is now split into
 `QDD-INSTRUMENT-CLASS-COMPLETENESS`, both STOP, while O1 realized event
 generation or sampling remains STOP. The frozen classes license no conclusion
 about instruments outside them.
+
+### U-GALOIS-FIBER-CODE [T]
+
+The declared free linear representation of actual native U admits the
+following specified four-dimensional coherent code. All native coordinates
+in this construction lie in F_5; they are original checkpoint addresses.
+The representation and its coherent preparation are mathematical choices,
+with no physical amplitude-bridge adoption.
+
+Write X_s={x:sum(x)=s}. Summing the registered native generator formulas
+gives the two sheet maps tau_0=(0,4,0,4,4) and tau_1=(2,1,1,3,1).
+Each step on a known sheet is one affine involution, hence a bijection onto
+its target sheet. Actual origin-zero U has first bits 011. Its chronological
+words on s=0,1,2,3,4 are ace,bbd,cce,dbd,ebd. Thus its three-step
+restrictions, with the rightmost map applied first, are eca,d,e,dbd,dbe.
+All five are bijections onto X_1. There are 5^5 outputs, each with one
+antecedent in every initial sheet.
+
+Order the nonzero marks as h_k=(1,2,4,3). Select four output addresses
+Y_h=(h,0,0,0,1-h,0), and their sixteen antecedents on nonzero sheets:
+
+```text
+X_(1,h)=(2-h,1,3,4,h,1),
+X_(2,h)=(2-h,1,3,4,h+1,1),
+X_(3,h)=(0,0,-h,0,h+1,2),
+X_(4,h)=(0,0,-h,0,h+2,2).
+```
+
+Their traces are their first indices. At the first step s=1,3,4 meet at
+R_h=(2,1,h+3,4,-h,4), while s=2 reaches S_h=(4,3,h,4,-h,4). The second
+step sends these to X_(1,h),X_(2,h), and the third sends both to Y_h.
+Thus every h has the same prefix partitions: discrete, {1,3,4}|{2},
+{1,3,4}|{2}, indiscrete. Different h cannot meet before their distinct
+deterministic final outputs. The native support sizes are exactly
+16 -> 8 -> 8 -> 4. After time three, known-sheet bijectivity preserves the
+four distinct endpoints at every subsequent actual time. The origin-zero
+onset, coordinate placement and zero remainder are declared conventions;
+inverse words define initial addresses and are never executed.
+
+Let K=Q(j), Phi_5(j)=0, with principal embedding and conjugation j->j^4.
+Put g=1+2j+2j^4, so g is real, g^2=5, and c=g/10. In the explicitly
+shifted source chart A(v)=sum_(i=1)^4 v_i j^i=j iota_B0(v), the positive
+trace pairing Tr(A bar(B))/5 has Gram G=I_4-ones_4/5. This follows from
+Tr(1)=4 and Tr(j^m)=-1 for m not divisible by five. Its eigenvalues are
+1,1,1,1/5. In Galois order a=(1,2,4,3), choose
+
+```text
+H=((1,1,1,1),(1,-1,1,-1),(1,1,-1,-1),(1,-1,-1,1)),
+V(A)=c sum_(k,a) H_(k,a) sigma_a(A) e_(X_(a,h_k)).
+```
+
+The code is Q-linear in the source field A, with coefficients in K; it is
+not K-linear in field multiplication and is not a single native checkpoint.
+Its four source-basis columns also define a complex-linear extension.
+The free native pushforward is N_n e_x=e_(U^n x), with the common counter
+understood. For a prefix merger partition P_n, the cross-inner product is
+
+```text
+|c|^2 sum_(B in P_n) sum_(a,b in B)
+  conjugate(sigma_a(A)) sigma_b(A') sum_k H_(k,a) H_(k,b).
+```
+
+Column orthogonality gives the last sum as 4 delta_ab. Every a appears in
+exactly one block, and 4|c|^2=1/5. Thus all cross terms cancel and
+(N_n V)^*(N_n V)=G at every prefix n=0,1,2,3. Known-sheet bijectivity
+then proves this identity for every n>=3. No norm repair, filtering,
+postselection or extra forward operation is used. The square final map is
+W=N_3V, with y_k(A)=c sum_a H_(k,a)sigma_a(A), W^*W=G and
+W^-1=G^-1 W^*, where G^-1=I_4+ones_4. The inverse is a comparison map.
+
+In the complex scalar extension, replacing H/2 by any real orthogonal T
+gives the same prefix proof using sum_k T_(k,a)T_(k,b)=delta_ab.
+Rational T retains K-valued coefficients; T=I is already a distinct exact
+alternative. Native merger and isometry therefore do not uniquely select
+the character template. For the specified code, the address vectors
+b_a=(H_(k,a)/2)_k are orthonormal, not one common ready independent of a.
+The nonsingular Galois embedding matrix spans all four channels, so these
+specified preparation correlations are substantive. Physical preparation
+of them is not supplied, and no necessity theorem about all other codes is
+asserted. Evidence: probes/P-U-GALOIS-FIBER-CODE-1.
+
+### U-GALOIS-FIBER-QDD-SPLIT [T]
+
+For the specified code, the unique normalized real row invariant under the cyclic
+Galois permutation is +/-(1,1,1,1)/2: invariance forces equal entries and
+normalization fixes their magnitude. Its invariant output is
+y_0(A)=Tr(A)/(2g). The criterion is arithmetic, not a physical selection law
+or a claim that Galois symmetry is covariance of full U.
+
+Let ell(A)=Tr(A)/4 and A_perp=A-ell(A). The other three rows sum to zero,
+so D_0 W(A)=W(ell(A)) and (I-D_0)W(A)=W(A_perp), where D_0 selects
+Y_1, equivalently p1=1 on the four output addresses at time three.
+Since Tr(A(v))=-sum_i v_i and sum_(i=1)^4 j^i=-1, the source matrices are
+P_LOW=ones_4/4 and P_HIGH=I_4-P_LOW. Multiplication by j is a trace-form
+isometry carrying the registered unshifted LOW line Q*(-j^4) onto Q*1;
+this explicitly declared chart gives exactly DEF-QDD-PROJECTOR-LOW and
+DEF-QDD-PROJECTOR-HIGH. No change of physical context is inferred.
+
+The coefficient-form identities are W^*D_oW=G P_o; using the source
+G-adjoint gives the effect P_o itself. The two branch weights sum to
+v^*Gv, and LOW weight is |sum_i v_i|^2/20. Zero input and zero-weight
+branches are not divided by zero.
+
+Only conditional on the ideal COARSE operation sigma->D_o sigma D_o,
+operator transport between the source G metric and output counting metric
+gives, for every source operator rho,
+
+```text
+D_o W rho W^-1 D_o = W P_o rho P_o W^-1.
+```
+
+This follows by intertwining on both sides and retains all HIGH coherences.
+Fine discrimination of the three HIGH coordinates followed by forgetting
+removes off-diagonal entries and is a different operation. No physically
+realized coarse projection, exclusive event, occurrence, material pointer
+factor, durable record or reset is supplied. The code does not extend the
+adopted ALGEBRAIC-DMATTER domain. Evidence: probes/P-U-GALOIS-FIBER-CODE-1.
+
+### U-POINT-SOURCE-SHARP-READOUT-NOGO [T]
+
+Choose any five distinct native preparations at common clock phase and
+any finite deterministic native protocol. Each mark s has one endpoint
+f(s). A deterministically assigned history or terminal-time label may enlarge
+the mathematical output, without supplying physical history writing.
+Use N_f e_s=e_f(s) with counting forms and H=ker(sum:Q^5->Q),
+Pi=I_5-ones_5/5. Real or complex scalar extension is explicit for general
+real response weights. The final reader is a diagonal effect 0<=D<=I,
+including classical randomized postprocessing.
+
+If f(s)=f(t), the nonzero d=e_s-e_t in H has squared norm two but N_f d=0.
+Every subsequent linear branch map also annihilates it, so a complete
+instrument on all H cannot be restored from that endpoint. Conversely,
+injective f maps the five basis vectors to orthonormal vectors and is
+isometric. In this case N_f^*D N_f=diag(w), 0<=w_s<=1, so the complete
+effect class on H is F(w)=Pi diag(w) Pi. Every such tuple is obtained by
+assigning the corresponding responses to the five distinct endpoint labels.
+
+For any isometry V, P_C=VV^* and F=V^*DV, expansion gives
+
+```text
+F-F^2=V^*D(I-D)V+V^*D(I-P_C)DV.
+```
+
+Both terms are positive semidefinite. For binary D, sharpness is equivalent
+to D preserving ran(V), hence to D P_C=P_C D by self-adjointness. Apply this
+lemma to the inclusion of H, with P_C=Pi. If F(w) is sharp, the first
+term forces w_s(1-w_s)=0 on every coordinate, since each occurs in a
+contrast e_s-e_t. The second forces DH subset H; summing the coordinates
+of D(e_s-e_t) gives w_s-w_t=0. Thus all w_s are zero or all are one.
+The only sharp projectors are 0 and I_H over the full continuous class.
+
+With u_s=Pi e_s, the isomorphism Bv=sum_(i=1)^4 v_i u_i has B^*B=G
+and transports the registered LOW projector to (5/4)u_0u_0^*. This and
+its HIGH complement are nontrivial, so neither is realized by the stated
+five-point encoding and classical endpoint read. Other coherent encodings
+and non-diagonal coherent output operations are outside this class. In
+particular the sixteen-state Galois-fiber code is compatible with this
+theorem. No complete physical apparatus class is excluded. Evidence:
+probes/P-U-POINT-SOURCE-READOUT-DICHOTOMY-1.
+
+QDD-INSTRUMENT-APPARATUS [O] remains STOP. The native mathematical coherent
+carrier and exact algebraic split exist in the specified representation;
+their physical preparation/adoption, actual coarse event, occurrence law,
+persistent post-event record, reset/repetition, complete apparatus family
+and L1-to-L5 gate remain unresolved. Any L6 measure needs its separate gate.
 
 The time counter has an exact entropy anchor. The step matrix of
 J = 1 + zeta_5^2 induces a hyperbolic automorphism T_J of the torus
