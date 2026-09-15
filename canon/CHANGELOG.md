@@ -1,5 +1,27 @@
 # Canon changelog (public series)
 
+## Public Canon v86
+
+Native coherent QDD carrier and point-source boundary.
+
+Two separately completed formal probes support three new L1 theorem rows:
+the specified sixteen-state native coherent Galois-fiber code with every-step
+Gram preservation and template nonselection; its exact algebraic LOW/HIGH
+split and encoded post-states conditional on ideal coarse read; and the
+complete five-point deterministic/classical-endpoint sharp-readout boundary.
+The source marking, free linear representation, coherent preparation and
+conditional projection are explicit. No physical preparation or event is
+derived from the mathematical code.
+
+QDD-INSTRUMENT-APPARATUS stays O and STOP. Its scope now acknowledges the
+native mathematical carrier and split while preserving physical
+preparation/adoption, occurrence, record/reset, complete apparatus family
+and layer-gate obligations. No new open claim, physical dictionary or
+physical gate is introduced. Every other earlier Registry row is unchanged.
+The status-separation audit checks the current boundary and reconstructs
+the exact v85 inputs for all earlier guards. Formal probes and scientific
+thresholds are unchanged.
+
 ## Public Canon v85
 
 Four separate L1 theorems register the mathematical content of the public
@@ -42,7 +64,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 411 claims; 0 T-LOCK, 279 T, 47 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
+Registry snapshot: 414 claims; 0 T-LOCK, 282 T, 47 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 
