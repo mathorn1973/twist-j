@@ -1,0 +1,28 @@
+CHECK 01 PASS: split local factor (1-2x)/(1-x)^2 = 1 - x^2/(1-x)^2 = 1 - sum_{j>=2}(j-1)x^j to order x^12 [coefficients 1,0,-1,-2,-3,-4,...]
+CHECK 02 PASS: zeta L local factors (split 1/(1-x)^2, inert 1/(1-x^2), p=5 1/(1-x)) and G_k local table: infinite factors are 1+O(x^2)
+CHECK 03 PASS: F^{(1)} local / O_5 local = (1-2x)(1+x^2)/(1-x)^2 = 1 - 2x^3/(1-x)^2 as formal series to x^12 (convergence: text; zero-freeness: CHECK 17)
+CHECK 04 PASS: chi_5 table (0,1,-1,-1,1); split primes <= 2000 counted; smallest split prime is 11; 2^2 < 11 so |p^{-s}| < 1/2 on Re s >= 1/2 [146 split, 156 inert]
+CHECK 05 PASS: coefficients of prod_{p split}(1-2p^{-s}) agree with f(r)=(-2)^omega(r) on R and vanish off R, all r <= 2000 [180 nonzero coefficients; f(11)=-2, f(209)=4, f(121)=0, f(7)=0]
+CHECK 06 PASS: coefficients of prod_{p split, p not | k}(1-2p^{-s}) equal f(r) 1_{(r,k)=1}, r <= 2000, for k in {11, 209, 6061}
+CHECK 07 PASS: Euler-product identity F^{(k)} zeta L = G_k at coefficient level: (f^{(k)} * (1*chi))(n) = g_k(n), n <= 2000, k in {1, 11, 209} [g_1(11)=0, g_1(121)=-1, g_1(1331)=-2, g_1(4)=1, g_1(2)=0, g_1(5)=1]
+CHECK 08 PASS: g_1(n) = 0 for every squarefree n > 1 with 5 not | n, n <= 2000 (Euler factors are 1+O(p^{-2s}))
+CHECK 09 PASS: threshold identity (2-k)(3-2k) = (2-k)(4-2k) - (4-2k)/2 as polynomials in kappa, i.e. U^{beta-sigma} = U^{1-sigma}T^{-1/2} at U=T^{2-kappa} iff beta = (3-2kappa)/(4-2kappa) [both sides = 6 - 7k + 2k^2]
+CHECK 10 PASS: beta*(kappa) = beta_pole(kappa, 1/2); table beta*(0)=3/4, beta*(0.98)=26/51, beta*(0.99)=51/101, beta*(0.999)=501/1001, beta*(1)=1/2; sigma cancels
+CHECK 11 PASS: nu(51/200) = 7069361/33791184; 0 < nu < sigma and 2 nu < 1 at sigma in {1/4, 13/50}; tail target exponent 1 - 3 sigma/2 = 247/400 [proved tail exponent = 1220036831/1689559200, excess nu/2 = 7069361/67582368]
+CHECK 12 PASS: normalized mean value U^{1-2s}(1+U/T) sits exactly at the (M37) target exponent for all kappa in [0,1]; the unnormalized exponent (T+U)U^{1-2s} of Proposition 6, formed independently, exceeds the target by exactly 1; (M32) gap 2nu is neither 0 nor 1 [at kappa=0 (U=Y=T^2): MV 99/50 = target 99/50, unnormalized 149/50; 2nu = 7069361/16895592]
+CHECK 13 PASS: single-pole ratio exponent 2w - 2(2-kappa)(1-beta) (affine in beta, slope 2(2-kappa) > 0, zero at beta_pole): negative for all beta<1 under (W) (w=0); nonpositive iff beta <= 1 - w/(2-kappa) (sampled 5 betas x 6 kappas plus the affine identity); beta_pole(kappa,nu) > beta*(kappa) since 2nu < 1 [beta_pole(0.99, nu) = 676493371/853227396 ~ 0.79286 (truncated, exact integer division)]
+CHECK 14 PASS: |rho - s|^2 = (beta-sigma)^2 + (gamma-t)^2 (three exact sample points); b-range endpoints 1/2 - 13/50 = 6/25 and 1 - 1/4 = 3/4 exact; window inequality b^2 <= b^2 + d^2 <= b^2 + 1 at d in {0, 1/2, 1} and b at both endpoints
+CHECK 15 PASS: |f(r)| = a_chi(r) and f(r)^2 = (a_chi*a_chi)(r) on R, r <= 2000 (input of the mean-value bound (A60))
+CHECK 16 PASS: residue k-factor: G_{k,p}/G_{1,p} = 1/(1-2x) (formal series to x^12, coefficients 2^j), not (1-x)^2/(1-2x); at p=11, s=2 the ratio is 121/119 (old display 14400/14399); coefficient level (G_k/G_1)(n) = 2^Omega(n) on n supported on p|k, 0 otherwise, n <= 2000, k in {11, 209} [k=11: (G_k/G_1)(11)=2, (121)=4, (1331)=8, (209)=0, (19)=0; k=209: (G_k/G_1)(11)=2, (121)=4, (1331)=8, (209)=4, (19)=2]
+CHECK 17 PASS: F^{(1)}/O_5 correction factor 1 - 2x^3/(1-x)^2 is zero-free at every split prime on Re s >= 1/2: |2x^3/(1-x)^2| < 1/8 at y = 11^{-1/2}, reduced exactly to 1/11 < (6/19)^2 (361 < 396); rational witness y_w = 0.302 > 11^{-1/2} (0.302^2 * 11 > 1) with 2y_w^3/(1-y_w)^2 < 1/8; monotonicity of 2y^3/(1-y)^2 sampled on y = 0.001..0.399 [2 y_w^3/(1-y_w)^2 = 3442951/30450250]
+DIAGNOSTIC (floats, no assertions):
+  nu(51/200) = 0.209207260, 2nu = 0.418414519, proved tail exponent = 0.722103630, target = 0.6175
+  kappa=0      beta*=0.75000  beta_pole(kappa,nu)=0.89540  beta_pole(kappa,0)=1
+  kappa=49/50  beta*=0.50980  beta_pole(kappa,nu)=0.79489  beta_pole(kappa,0)=1
+  kappa=99/100 beta*=0.50495  beta_pole(kappa,nu)=0.79286  beta_pole(kappa,0)=1
+  kappa=999/1000 beta*=0.50050  beta_pole(kappa,nu)=0.79100  beta_pole(kappa,0)=1
+  kappa=1      beta*=0.50000  beta_pole(kappa,nu)=0.79079  beta_pole(kappa,0)=1
+  beta-sigma=0.24: Lorentzian mass fraction inside |t-gamma|<=1 = 0.8500
+  beta-sigma=0.50: Lorentzian mass fraction inside |t-gamma|<=1 = 0.7048
+  beta-sigma=0.75: Lorentzian mass fraction inside |t-gamma|<=1 = 0.5903
+CHECKS: 17 of 17 PASS
