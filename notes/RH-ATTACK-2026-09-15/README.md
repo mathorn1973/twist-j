@@ -17,6 +17,11 @@ GATE           STATUS.md ACTIVE; tag and content commit ancestors of main;
 LAYER          NOT_APPLICABLE (analytic number theory; no L1-L6 lift)
 PREVIOUS PAGE  twistj-handoff ZETA-RH-STATUS-2026-09-08.md (Public Canon v81)
 COUNTING       notes/RH-ONE-WALL-CROSSREF_2026-08-17.md applies to every file here
+ADDENDUM       REVIEW-2026-09-16/ (added 2026-09-16, after Public Canon v87 was
+               activated): the controlling correction of two compressed
+               summary sentences below (lane B wording) and one new exact
+               finite obstruction; where this README and that addendum
+               differ, the addendum is the intended reading
 ```
 
 ## 1. What this directory is
@@ -63,6 +68,7 @@ the branches are non-normative and may still be amended.
 | `verify_f_watch.py`, `verify_f_watch.stdout` | lane D verifier, 7 of 7 PASS; records the watch state, asserts nothing about zeta |
 | `REFEREE-D-F-WATCH-2026-09-15.md`, `REFEREE-LANE-D-EVIDENCE-CODE-2026-09-15.md`, `rerun.stdout.txt` | lane D referee records; `rerun.stdout.txt` is the evidence referee's rerun of the pre-repair lane D verifier, kept because the lane's review record names it |
 | `SHA256SUMS` | hashes of every file above |
+| `REVIEW-2026-09-16/README.md`, `verify_2026_09_16.py`, `EXPECTED.txt`, `SHA256SUMS-2026-09-16` | review addendum of 2026-09-16: the Hardy-space object is the pole-subtracted Mellin transform `M_eps`, not the bare quotient; one fixed `eps` gives an `eps`-shadow multiplicity condition, an accumulating family `eps_j -> eps_*` gives the zero-free half-plane `Re s > 1/2 + eps_*/2`; exact finite obstruction: no `q` in `span{r_2..r_72}` meets target (29) of #979 (truncated H-norm minimum in `(7601923, 7601924)/10^9`, above `7000 * 9/2^23`); own verifier and hashes, re-run by the coordinator on 2026-09-16, byte-identical |
 
 All four verifiers were re-run by the session coordinator from a clean shell
 (`env -i PATH=/usr/bin:/bin LC_ALL=C PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1
@@ -171,6 +177,14 @@ as two theorems. Lane C is a further reading at the capacity/Gram level.
 Lane D is not a wall result. Zero genuinely new structure: no new level,
 carrier, or positive construction. The bridge row, the lambda row and RH
 are exactly where the 2026-09-08 page left them.
+
+The 2026-09-16 addendum narrows two compressed sentences of this README's
+lane B paragraph: read "the Mellin transform ... into the Hardy space" as the
+pole-subtracted `M_eps`, and read "(41) at fixed eps sits ... at the
+quasi-Riemann hypothesis" as a shadow condition at one `eps`, which becomes
+a zero-free half-plane only for an accumulating family of `eps` values.
+The same corrections are deposited as addenda on #979, #933 and #856, and a
+fresh declaration proposal on Public Canon v87 is draft PR #1021.
 
 Two residual wordings flagged by the critic were fixed before assembly:
 the lane A verdict row V10r no longer says "equivalent up to constants"
