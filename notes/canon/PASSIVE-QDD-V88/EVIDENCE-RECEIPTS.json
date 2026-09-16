@@ -1,0 +1,125 @@
+[
+  {
+    "claim_id": "QDD-PASSIVE-QUADRATIC-CALIBRATION",
+    "probe": "P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1",
+    "issue": 1023,
+    "public_evidence_commit": "757492055ab5a0a39e14a4089650f3f76ed9cf47",
+    "commit_url": "https://github.com/mathorn1973/twist-j/commit/757492055ab5a0a39e14a4089650f3f76ed9cf47",
+    "bundle_sha256": "8d0c6c808a7932b37b7ff8ea6ec8de33740d883e0b6bac39afa314b36a540701",
+    "files": [
+      {
+        "path": "probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1/EXPECTED.txt",
+        "bytes": 461,
+        "sha256": "62f0748afdfe00a2f898d0f0516d3576d67c3a6eba5d0dbf57342fa0e2600f5c"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1/PREREG.md",
+        "bytes": 10636,
+        "sha256": "45bed0e39bdd31a0615922b7c544bde64076708a3acc37d0fa36ebdc491152c8"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1/PROOF.md",
+        "bytes": 14419,
+        "sha256": "bc2b9bf4af48ea95b9c366e1df19a2f011795d1a6051b3a537d47abd3a3729f7"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1/RESULT.md",
+        "bytes": 3751,
+        "sha256": "893a70c222a3a737fb85606645f3295d31a838135917e05b7ba8969004fdfde3"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1/RUN.md",
+        "bytes": 649,
+        "sha256": "911ac8fe06b6394a99ea9e4282db769e8c4f58766e62a6a276950ef9a420add9"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1/verify.py",
+        "bytes": 12284,
+        "sha256": "94caa303885f9c3ccf9629ae70c0df3fe68447b437ce613db94138e5cdb01c0e"
+      }
+    ],
+    "eligibility": "PROPOSED_ONLY; public proof/result review, required checks, merge and separate fold remain separate decisions"
+  },
+  {
+    "claim_id": "QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION",
+    "probe": "P-QDD-PASSIVE-THRESHOLD-MOMENT-1",
+    "issue": 1024,
+    "public_evidence_commit": "4931bd53c8c787ff1158907ab34360e0029b1c9a",
+    "commit_url": "https://github.com/mathorn1973/twist-j/commit/4931bd53c8c787ff1158907ab34360e0029b1c9a",
+    "bundle_sha256": "3259a367ca2b496ea5b43e4952c66eab4a1d064b1c451127b08bf54fad7b80c2",
+    "files": [
+      {
+        "path": "probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1/EXPECTED.txt",
+        "bytes": 286,
+        "sha256": "e9089180e6a025f911d34fc1f51924be2f759fed8ad4e3cf10791afc980444b0"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1/PREREG.md",
+        "bytes": 9726,
+        "sha256": "4236b649fcebe974e624c87251698c554ee789c9ceb7007936ce05ac5dd21ecf"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1/PROOF.md",
+        "bytes": 7405,
+        "sha256": "6193454e995f0b3ebefc3bb65f8bf106d50948f359805e3f9684c8b0625bf06e"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1/RESULT.md",
+        "bytes": 3067,
+        "sha256": "79c7dc7c2b6cd9ac25b1dce5dc987e5328ef7b9602aa61117afca0dea1aefa21"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1/RUN.md",
+        "bytes": 643,
+        "sha256": "e3bd5f7bc939063539cb33f6b48b2bd90514649f0387a1991c51366014dc0a03"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1/verify.py",
+        "bytes": 10742,
+        "sha256": "64c442f2ea7a19f20fcf863bfcd19526140fbdffbe1d6f7806f16a5b4dacee8a"
+      }
+    ],
+    "eligibility": "PROPOSED_ONLY; public proof/result review, required checks, merge and separate fold remain separate decisions"
+  },
+  {
+    "claim_id": "QDD-PASSIVE-NATIVE-MEMORY",
+    "probe": "P-QDD-PASSIVE-NATIVE-MEMORY-1",
+    "issue": 1025,
+    "public_evidence_commit": "c1a6341ceec61439789f0108905f0b3ea15b259f",
+    "commit_url": "https://github.com/mathorn1973/twist-j/commit/c1a6341ceec61439789f0108905f0b3ea15b259f",
+    "bundle_sha256": "52d133dc89b07d89947e6a0eacac0d5fbd6e003d844813f397a065fdc5ed74a8",
+    "files": [
+      {
+        "path": "probes/P-QDD-PASSIVE-NATIVE-MEMORY-1/EXPECTED.txt",
+        "bytes": 1315,
+        "sha256": "dfc9c0c47c814fbc6b58437f8cc40f9d60452c898094811a28cb2ffc15c0833d"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-NATIVE-MEMORY-1/PREREG.md",
+        "bytes": 13545,
+        "sha256": "2e617f37d1ff4d8d41c52d4c60977016b3355466c98385baf717c24daee58caf"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-NATIVE-MEMORY-1/PROOF.md",
+        "bytes": 11563,
+        "sha256": "98e0641dde6e178834eb7aa5cdc5979a17a59df417299bfe54e7e2471a2231a9"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-NATIVE-MEMORY-1/RESULT.md",
+        "bytes": 3342,
+        "sha256": "5770cd2037946f316f5a2a4f4e5d0d29c0c39a224a3a64fbaddcdaaaa4a89878"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-NATIVE-MEMORY-1/RUN.md",
+        "bytes": 641,
+        "sha256": "727a08141b4e72ea86ad9f22bdf1137404ac2d50b61a8ff68f80dafe4a432946"
+      },
+      {
+        "path": "probes/P-QDD-PASSIVE-NATIVE-MEMORY-1/verify.py",
+        "bytes": 12855,
+        "sha256": "589a93c7bee27799e57f96eaa216983ed5ffd2b0faf41f6a5d6e95f448cfe25c"
+      }
+    ],
+    "eligibility": "PROPOSED_ONLY; public proof/result review, required checks, merge and separate fold remain separate decisions"
+  }
+]
