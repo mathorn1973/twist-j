@@ -34,6 +34,390 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v87 input contract and reversible v86 reconstruction.
+V87_PRIOR_COMMIT = 'd008270c9c979f457f73087e17672b1db85ee6ad'
+V87_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'faa4eb411509a8bb3bcbf4969c1974745cb58057a21f89e540ee21dd27b8b1e0',
+                  'current_bytes': 403063,
+                  'prior_sha256': '74b854c632fa7e0477940c579e1467bcac5e29b693917e0591661593aa751fcf',
+                  'prior_bytes': 400294,
+                  'restore': ((415, 417, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': 'ad27f142c9c7be8a8ac61a1a877f309735ee1e284aef61657dbec4b996b62b11',
+                   'current_bytes': 53096,
+                   'prior_sha256': '022c1cf44bbbe2761b69b464884a8578ff434a7dbc48f519d8376d82584d2daf',
+                   'prior_bytes': 52556,
+                   'restore': ((467, 472, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': '11d7bbcf18a0267acc6ea0b1439cf6a4e44932cd37af0de6078e95aadf53466f',
+                      'current_bytes': 129656,
+                      'prior_sha256': '18abc886999421ab24e1820a7b74ff470e747462858162638545bf5712482057',
+                      'prior_bytes': 127503,
+                      'restore': ((805, 818, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': '55cecbdbb8a2de1f7ef778b0df38d1496b1558f326d2d750bfdca5310b37be75',
+                  'current_bytes': 84636,
+                  'prior_sha256': '12551fc0e517890d5fa587570c41f61ee59c231d5a0bce6bff77eed72dc1bb4a',
+                  'prior_bytes': 84176,
+                  'restore': ((415, 417, ''),)},
+ 'HISTORY.tsv': {'current_sha256': '75ab6342051eacceff564f4072abd236e00a032e46aa12192edd0ec754090b0b',
+                 'current_bytes': 420900,
+                 'prior_sha256': '5ca4ca76dbb3988ccd3169b1b98697613d671eecf9f607b05bac6e0d919007ba',
+                 'prior_bytes': 419856,
+                 'restore': ((952, 954, ''),)},
+ 'GATES.tsv': {'current_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'current_bytes': 7792,
+               'prior_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'prior_bytes': 7792,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
+                           'current_bytes': 1588,
+                           'prior_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
+                           'prior_bytes': 1588,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': 'a2517c6d8efb1969a7258f94d9874cca3b5b9beb1aecdfd2e39b56f33961a917',
+              'current_bytes': 634207,
+              'prior_sha256': 'cfec639d2f952bc8d38f565b5ffc01851e53b39e764e10e95cfb6a1581b11b61',
+              'prior_bytes': 626540,
+              'restore': ((0, 1, '# TWIST-J Public Canon v86\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v86. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v86 also declares the discrete architecture used to '
+                           'read\n'),
+                          (22,
+                           23,
+                           'seed of the two algebraic projections. Public Canon v86 does not '
+                           'claim\n'),
+                          (127,
+                           128,
+                           'deriving the architecture from J; Public Canon v86 contains no such\n'),
+                          (3190, 3356, ''))},
+ 'CORE.md': {'current_sha256': '075136c372331189f9ae96f4c468e0f45d4e254e4c29771188e3c6cc76951b3f',
+             'current_bytes': 15281,
+             'prior_sha256': 'acae9ee63cdd1d031051f46ac6c3a7a625ef328987f57e959e43e2bcf978a321',
+             'prior_bytes': 15281,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v86. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v86 also declares a discrete architecture. It does '
+                          'not\n'))},
+ 'FRONTIER.md': {'current_sha256': 'fb282cdadd2ff041dd9417a97e4abfb8c379b870cb092852fd62258d97d20bcc',
+                 'current_bytes': 29627,
+                 'prior_sha256': 'fb282cdadd2ff041dd9417a97e4abfb8c379b870cb092852fd62258d97d20bcc',
+                 'prior_bytes': 29627,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': 'de2f84c0a963aa1e9cd64640c41d47639bb3b4ef161d7a297a929c5fb806a521',
+                  'current_bytes': 180043,
+                  'prior_sha256': '69dc820d5ba0c3b4a96a1aa899543a183db5e4bac80ec5124ca58ec949ccb14a',
+                  'prior_bytes': 179075,
+                  'restore': ((1, 18, ''),
+                              (83,
+                               84,
+                               'Registry snapshot: 414 claims; 0 T-LOCK, 282 T, 47 D, 39 C, 2 H, '
+                               '26 O, 18 F; 28 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '08f27458b73ab378f60e2ac2f7095d1665bf671f85235034102d1c1510762609',
+                       'current_bytes': 243,
+                       'prior_sha256': '8153774faedf3b9d2036d58eb8d3aef9d839f2eb1a58b3c69d80e6cf25890143',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t414\n'),
+                                   (3, 5, 'status_T\t282\nstatus_D\t47\n'),
+                                   (14, 15, 'evidence_two-architecture\t324\n'))}}
+V87_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                   'status': 'T',
+                   'scope': 'at L1 on V=Q^4 with G=I4-uu^T/5, u=(1,1,1,1) and chi=(1,-1,-1,1), the '
+                            'rational G-self-adjoint projectors P_t=uu^T/4, P_l=chi chi^T/4 and '
+                            'P_r=I-P_t-P_l have ranks 1,1,2 and are pairwise orthogonal; their '
+                            'eight subset sums form exactly the Boolean algebra generated by the '
+                            'three atoms and its projector-valued partitions are exactly the five '
+                            'declared block partitions with fixed order; the nonnegative rational '
+                            'weights are s^2/20,ell^2/4,((v1-v4)^2+(v2-v3)^2)/2 and sum to '
+                            'm=v^TGv>0 for v!=0, while v=0 is explicitly tagged without '
+                            'normalization; the five passive maps R_pi on existing K_QDD are total '
+                            'and their typed coarsening on all coherent Record_sigma records with '
+                            'literal sigma ID commutes with reading and composes by refinement; no '
+                            'classification of all rational PVMs or physical apparatuses, '
+                            'post-state instrument, occurrence law, frequency, sampling, measure, '
+                            'or L2-L6 lift is claimed',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-QDD-PASSIVE-READING-FAMILY-1',
+                   'falsifier': 'fires if any displayed projector identity rank subset-product '
+                                'completeness count exact weight positivity zero disposition '
+                                'totality or refinement equality fails at the declared algebraic '
+                                'scope; failure of an apparatus or sampling interpretation is '
+                                'outside scope'},
+                  {'claim_id': 'QDD-OBSERVABLE-READING-FAMILY',
+                   'status': 'D',
+                   'scope': 'the owner selects exactly the five named passive L1 maps '
+                            'R_pi:K_QDD->PassiveWeightRecord from DEF-QDD-PASSIVE-READING-MAPS, '
+                            'with partition_id support_state total_weight ordered block_weights '
+                            'and normalized_weight_state as the five exact coherent typed fields, '
+                            'with m=0 all-zero ZERO_SUPPORT records and m>0 SUPPORTED records '
+                            'whose nonnegative block weights sum to m and normalized tuple is '
+                            'exactly raw/m; pi is a declared reading choice, equality is literal '
+                            'including partition and tags, and every overlap under refinement is '
+                            'the explicitly proved additive map Record_sigma->Record_pi on '
+                            'coherent records with literal sigma ID; PI-TRACE agrees with the '
+                            'existing algebraic LOW/HIGH total and ordered weights, while the '
+                            'existing five-field ALGEBRAIC-DMATTER binding and all three physical '
+                            'QDD O owners remain unchanged; completeness is only of this selected '
+                            'three-atom passive family, with no forcing by J, whole-decoder '
+                            'completion, post-state instrument, physical apparatus, actual event, '
+                            'occurrence frequency, sampling, L6 measure or cross-layer lift and no '
+                            '#539 apparatus-profile conformance claim',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-QDD-PASSIVE-READING-FAMILY-1',
+                   'falsifier': 'fires if an admitted source or partition lacks the declared typed '
+                                'record or zero branch, exact PI-TRACE weight agreement fails, or '
+                                'two declared refinement paths produce different records; an '
+                                'extension of the family or a physical apparatus/event/measure '
+                                'interpretation requires a separate scope decision'}],
+ 'NORMATIVE.tsv': [{'item_id': 'DEF-QDD-PASSIVE-PARTITION-FAMILY',
+                    'item_type': 'DEFINITION',
+                    'claim_id': '',
+                    'status': '',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::Passive QDD observable family'},
+                   {'item_id': 'DEF-QDD-PASSIVE-WEIGHT-RECORD',
+                    'item_type': 'DEFINITION',
+                    'claim_id': '',
+                    'status': '',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::Passive QDD observable family'},
+                   {'item_id': 'DEF-QDD-PASSIVE-READING-MAPS',
+                    'item_type': 'DEFINITION',
+                    'claim_id': '',
+                    'status': '',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::Passive QDD observable family'},
+                   {'item_id': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::Passive QDD observable family'},
+                   {'item_id': 'QDD-OBSERVABLE-READING-FAMILY',
+                    'item_type': 'DICTIONARY',
+                    'claim_id': 'QDD-OBSERVABLE-READING-FAMILY',
+                    'status': 'D',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::Passive QDD observable family'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'DEF-QDD-PASSIVE-PARTITION-FAMILY',
+                       'depends_on': 'DEF-QDD-GRAM',
+                       'relation': 'REQUIRES',
+                       'basis': 'the same exact rational matrix formula is explicitly extended to '
+                                'Q^4 for the new algebraic theorem without extending an existing '
+                                'decoder domain'},
+                      {'item_id': 'DEF-QDD-PASSIVE-PARTITION-FAMILY',
+                       'depends_on': 'DEF-QDD-PROJECTOR-LOW',
+                       'relation': 'REQUIRES',
+                       'basis': 'the trace atom is literally the existing algebraic LOW projector '
+                                'and is not a physical effect alias'},
+                      {'item_id': 'DEF-QDD-PASSIVE-WEIGHT-RECORD',
+                       'depends_on': 'DEF-QDD-PASSIVE-PARTITION-FAMILY',
+                       'relation': 'REQUIRES',
+                       'basis': 'partition IDs block order and record tuple lengths are fixed by '
+                                'the declared five-member family'},
+                      {'item_id': 'DEF-QDD-PASSIVE-READING-MAPS',
+                       'depends_on': 'DEF-QDD-DOMAIN-K0',
+                       'relation': 'REQUIRES',
+                       'basis': 'each fixed-partition readout has exactly the existing pointed '
+                                'orbit domain K_QDD'},
+                      {'item_id': 'DEF-QDD-PASSIVE-READING-MAPS',
+                       'depends_on': 'DEF-QDD-BALANCED-PISTON',
+                       'relation': 'REQUIRES',
+                       'basis': 'only the existing balanced head vector is read; no phase seed '
+                                'environment or later checkpoint enters'},
+                      {'item_id': 'DEF-QDD-PASSIVE-READING-MAPS',
+                       'depends_on': 'DEF-QDD-PASSIVE-PARTITION-FAMILY',
+                       'relation': 'REQUIRES',
+                       'basis': 'block projectors and weights use the explicitly chosen three-atom '
+                                'algebra'},
+                      {'item_id': 'DEF-QDD-PASSIVE-READING-MAPS',
+                       'depends_on': 'DEF-QDD-PASSIVE-WEIGHT-RECORD',
+                       'relation': 'REQUIRES',
+                       'basis': 'all output fields equalities and zero tags have this independent '
+                                'passive record type'},
+                      {'item_id': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                       'depends_on': 'DEF-QDD-PASSIVE-PARTITION-FAMILY',
+                       'relation': 'REQUIRES',
+                       'basis': 'the proof classifies only the Boolean algebra generated by the '
+                                'three defined projectors'},
+                      {'item_id': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                       'depends_on': 'DEF-QDD-PASSIVE-READING-MAPS',
+                       'relation': 'REQUIRES',
+                       'basis': 'the exact formulas define the totality and refinement identities '
+                                'being proved'},
+                      {'item_id': 'QDD-OBSERVABLE-READING-FAMILY',
+                       'depends_on': 'DEF-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the family is an owner-selected algebraic reading conditional on '
+                                'the declared architecture not a forcing theorem'},
+                      {'item_id': 'QDD-OBSERVABLE-READING-FAMILY',
+                       'depends_on': 'DEF-QDD-PASSIVE-READING-MAPS',
+                       'relation': 'REQUIRES',
+                       'basis': 'the dictionary adopts these exact five source-to-record maps and '
+                                'no apparatus profile'},
+                      {'item_id': 'QDD-OBSERVABLE-READING-FAMILY',
+                       'depends_on': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                       'relation': 'REQUIRES',
+                       'basis': 'the independent proof audits the adopted total maps and overlaps '
+                                'but does not choose the reading family'},
+                      {'item_id': 'QDD-OBSERVABLE-READING-FAMILY',
+                       'depends_on': 'DEF-QDD-BRANCH-WEIGHT-PAIRING',
+                       'relation': 'REQUIRES',
+                       'basis': 'PI-TRACE comparison uses the existing algebraic LOW/HIGH weight '
+                                'convention without changing its owner or adopting a Born '
+                                'pairing'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                   'evidence_id': 'EV-QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-QDD-PASSIVE-READING-FAMILY-1',
+                   'sha256': 'ba849ab4c3d71b1b08169aebbf8ffa2dc5868391544cecd0509870652181fd4d',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'QDD-OBSERVABLE-READING-FAMILY',
+                   'evidence_id': 'EV-QDD-OBSERVABLE-READING-FAMILY',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-QDD-PASSIVE-READING-FAMILY-1',
+                   'sha256': 'ba849ab4c3d71b1b08169aebbf8ffa2dc5868391544cecd0509870652181fd4d',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON87-DECLARE-QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-15',
+                  'release': 'canon-v87-candidate',
+                  'claim_id': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'bea9f760d22ca5c84f25faabcff5f662a5d4e549d967968fd644afc3be34716e',
+                  'evidence_id': 'EV-QDD-THREE-ATOM-PARTITION-COMPLETENESS',
+                  'evidence_location': 'probes/P-QDD-PASSIVE-READING-FAMILY-1',
+                  'evidence_sha256': 'ba849ab4c3d71b1b08169aebbf8ffa2dc5868391544cecd0509870652181fd4d',
+                  'rationale': 'Declare the exact L1 three-atom Boolean partition and coherent '
+                               'passive-record theorem with its separately completed public audit; '
+                               'no physical reading or apparatus is selected.'},
+                 {'event_id': 'CANON87-DECLARE-QDD-OBSERVABLE-READING-FAMILY',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-15',
+                  'release': 'canon-v87-candidate',
+                  'claim_id': 'QDD-OBSERVABLE-READING-FAMILY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'D',
+                  'scope_sha256': 'cd7f230df34d634bff4e9070f8b9873fd25a754bbbb9d3622a5896d7f4c9d72f',
+                  'evidence_id': 'EV-QDD-OBSERVABLE-READING-FAMILY',
+                  'evidence_location': 'probes/P-QDD-PASSIVE-READING-FAMILY-1',
+                  'evidence_sha256': 'ba849ab4c3d71b1b08169aebbf8ffa2dc5868391544cecd0509870652181fd4d',
+                  'rationale': 'Adopt the owner-selected five-member passive L1 reading family on '
+                               'existing K_QDD with coherent records and explicit refinement maps; '
+                               'retain every prior Registry row and physical obligation '
+                               'unchanged.'}]}
+
+def v87_previous_bytes(path):
+    """Require exact current input, then recover the complete public v86 bytes."""
+    patch = V87_INPUT_PATCH[path.name]
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v87_table_bytes(data):
+    return list(csv.DictReader(io.StringIO((data or b"").decode("utf-8")), delimiter="\t"))
+
+
+def v87_current_checks():
+    """Audit v87 separately; historical predicates consume verified old bytes."""
+    files = tuple(V87_ADDITIONS)
+    previous = {name: v87_table_bytes(v87_previous_bytes(ROOT / "canon" / name))
+                for name in files}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in files}
+    rows = current["REGISTRY.tsv"]
+    index = {row["claim_id"]: row for row in rows}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    new_ids = {row["claim_id"] for row in V87_ADDITIONS["REGISTRY.tsv"]}
+    new_items = {row["item_id"] for row in V87_ADDITIONS["NORMATIVE.tsv"]}
+    definitions = new_items - new_ids
+    canon_text = CANON.read_text(encoding="utf-8")
+    counts = {status: sum(row["status"] == status for row in rows)
+              for status in {row["status"] for row in rows}}
+    unchanged_names = ("GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv", "FRONTIER.md")
+    exact_extensions = all(current[name] == previous[name] + V87_ADDITIONS[name]
+                           for name in files)
+    return [
+        ("V87-PRIOR-BYTES",
+         "every current input is pinned and reconstructs exact public v86 bytes "
+         "before all unchanged v86 and earlier historical guards",
+         len(V87_INPUT_PATCH) == 13
+         and all(v87_previous_bytes(ROOT / "canon" / name) is not None
+                 for name in V87_INPUT_PATCH)),
+        ("V87-PASSIVE-FAMILY",
+         "one L1 theorem and one owner-selected passive dictionary use the completed "
+         "probe; three definitions, coherent record maps and thirteen edges are pinned",
+         exact_extensions
+         and len(new_ids) == 2 and len(definitions) == 3
+         and new_ids == {"QDD-THREE-ATOM-PARTITION-COMPLETENESS", "QDD-OBSERVABLE-READING-FAMILY"}
+         and {claim: index.get(claim, {}).get("status") for claim in new_ids}
+             == {"QDD-THREE-ATOM-PARTITION-COMPLETENESS": "T", "QDD-OBSERVABLE-READING-FAMILY": "D"}
+         and all(normative[item]["layer"] == "L1" and normative[item]["gate_ids"] == ""
+                 for item in new_items)
+         and all(normative[item]["item_type"] == "DEFINITION" for item in definitions)
+         and normative["QDD-THREE-ATOM-PARTITION-COMPLETENESS"]["item_type"] == "THEOREM"
+         and normative["QDD-OBSERVABLE-READING-FAMILY"]["item_type"] == "DICTIONARY"
+         and len(V87_ADDITIONS["DEPENDENCIES.tsv"]) == 13
+         and all(evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+                 and evidence[claim]["architecture_requirement"] == "two-architecture"
+                 and evidence[claim]["location"] == "probes/P-QDD-PASSIVE-READING-FAMILY-1"
+                 and v86_probe_bundle_sha256(evidence[claim]["location"]) == evidence[claim]["sha256"]
+                 and "### " + claim + " [" + index[claim]["status"] + "]" in canon_text
+                 for claim in new_ids)
+         and all(event["event_type"] == "DECLARE" and event["previous_status"] == "-"
+                 and event["release"] == "canon-v87-candidate"
+                 for event in V87_ADDITIONS["HISTORY.tsv"])
+         and "C_(sigma,pi):Record_sigma -> Record_pi" in canon_text
+         and "R_pi:K_QDD -> PassiveWeightRecord" in canon_text
+         and "PI-LEG    ((t,r),(l))" in canon_text),
+        ("V87-OWNER-BOUNDARY",
+         "all 414 prior Registry rows and every physical open obligation are unchanged; "
+         "no gate, Frontier, CORE-selection, apparatus, event or measure lift is added",
+         exact_extensions and len(previous["REGISTRY.tsv"]) == 414
+         and len(rows) == 416
+         and counts == {"T": 283, "D": 48, "C": 39, "H": 2, "O": 26, "F": 18}
+         and all(index.get(row["claim_id"]) == row for row in previous["REGISTRY.tsv"])
+         and all((ROOT / "canon" / name).read_bytes() == v87_previous_bytes(ROOT / "canon" / name)
+                 for name in unchanged_names)
+         and "The three QDD physical O owners and their exact clauses remain unchanged." in canon_text
+         and "A normalized rational tuple here is data, not a measure claim." in canon_text
+         and "No conformance claim to the L4-to-L5 apparatus profile" in canon_text),
+    ]
+
+
 # Exact current-v86 input contract and reversible v85 reconstruction.
 V86_PRIOR_COMMIT = '90aa0c6847d30350f54f2a171f23c2755c0b2ec2'
 V86_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '74b854c632fa7e0477940c579e1467bcac5e29b693917e0591661593aa751fcf',
@@ -330,7 +714,9 @@ V86_APPARATUS_EVENT = {'event_id': 'CANON86-SCOPE-CHANGE-QDD-INSTRUMENT-APPARATU
 def v86_previous_bytes(path):
     """Require every current byte, then recover the exact prior v85 input."""
     patch = V86_INPUT_PATCH[path.name]
-    current = path.read_bytes()
+    current = v87_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -347,9 +733,11 @@ def v86_previous_bytes(path):
 
 
 def v86_current_table(path):
-    """Read actual current rows without applying the historical projection."""
-    with path.open(newline="", encoding="utf-8") as handle:
-        return list(csv.DictReader(handle, delimiter="\t"))
+    """Read the verified v86 rows for the unchanged v86 boundary checks."""
+    data = v87_previous_bytes(path)
+    if data is None:
+        return []
+    return list(csv.DictReader(io.StringIO(data.decode("utf-8")), delimiter="\t"))
 
 
 def v86_probe_bundle_sha256(relative):
@@ -377,8 +765,8 @@ def v86_current_checks(prior_index, prior_normative, prior_dependencies,
     gates = {r["gate_id"]: r for r in v86_current_table(GATES)}
     programs = {r["claim_id"]: r for r in v86_current_table(FRONTIER_PROGRAMS)}
     selection = v86_current_table(CORE_SELECTION)
-    canon_text = CANON.read_text(encoding="utf-8")
-    frontier_text = FRONTIER.read_text(encoding="utf-8")
+    canon_text = (v87_previous_bytes(CANON) or b"").decode("utf-8")
+    frontier_text = (v87_previous_bytes(FRONTIER) or b"").decode("utf-8")
     ids = set(V86_CLAIMS)
     owner = "QDD-INSTRUMENT-APPARATUS"
     actual_edges = {(r["item_id"], r["depends_on"], r["relation"])
@@ -8869,8 +9257,10 @@ def run():
         core_selection_rows,
     ))
 
+    checks.extend(v87_current_checks())
+
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v85; current boundary: v86")
+    print("historical guards: exact reconstructed v86 and v85; current boundary: v87")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

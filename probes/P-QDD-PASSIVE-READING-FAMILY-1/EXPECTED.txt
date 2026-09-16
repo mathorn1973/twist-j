@@ -1,0 +1,87 @@
+{
+  "Q4_role": "mathematical extension only",
+  "balanced_sources_including_zero": 625,
+  "boolean_complement_checks": 8,
+  "boolean_effects": 8,
+  "boolean_product_checks": 64,
+  "coefficient_matrix_identities": 3,
+  "coherent_domain_composition_checks": 22,
+  "coherent_domain_refinement_checks": 12,
+  "declared_decoder_domain": "K_QDD through existing beta_QDD head factorization",
+  "incoherent_records_rejected": 6,
+  "independently_generated_partitions": 5,
+  "literal_source_id_mismatch_checks": 1,
+  "native_five_field_records_checked": 78125,
+  "native_heads_checked": 15625,
+  "non_refinement_rejection_checks": 1,
+  "not_claimed": [
+    "instrument",
+    "event occurrence",
+    "probability resource",
+    "pointer",
+    "reset",
+    "physical apparatus"
+  ],
+  "partition_family": {
+    "PI-ALL": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "PI-ATOMS": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "PI-LEG": [
+      [
+        0,
+        2
+      ],
+      [
+        1
+      ]
+    ],
+    "PI-PAIR": [
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "PI-TRACE": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "passive_readings_checked": 3125,
+  "projector_ranks": [
+    1,
+    1,
+    2
+  ],
+  "record_coarsening_equalities": 7500,
+  "record_composition_equalities": 13750,
+  "refinement_chains": 22,
+  "refinement_pairs": 12,
+  "scope": "chosen algebraic effects and passive weights only",
+  "status": "PUBLIC_PROBE_EXACT_PASSIVE_FAMILY_AUDIT",
+  "supported_branch_weight_comparisons": 6240,
+  "unused_qr_invariance_checks": 78125,
+  "verdict": "PASS"
+}
