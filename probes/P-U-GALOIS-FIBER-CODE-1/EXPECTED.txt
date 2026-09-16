@@ -1,0 +1,7 @@
+NATIVE sheets=5 size=3125 complete_state_domain=15625 PASS
+NATIVE support=16,8,8,4 common_partitions=discrete;134|2;134|2;1234 PASS
+GRAM every_prefix=I4-ones4/5 all_later_times=sheet_bijection_induction PASS
+LOW/HIGH shifted_chart=j*iota_B0 effects=ones4/4,I4-ones4/4 PASS
+POST_STATE ideal_coarse_read operator_basis=16 per_branch PASS
+PREPARATION alternative_orthogonal_template=isometric selection=NOT_DERIVED PASS
+PHYSICAL preparation,event,occurrence,record,reset,family,layer_gate=NOT_SUPPLIED

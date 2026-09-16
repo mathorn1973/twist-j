@@ -1,5 +1,90 @@
 # Canon changelog (public series)
 
+## Public Canon v87
+
+One selected passive QDD observable family closes at D on the existing
+K_QDD domain through its balanced head map. Three L1 definitions fix the
+five named partitions, exactly five coherent record fields, the zero branch
+and total typed coarsening maps. A separate T row proves the three-atom
+Boolean algebra, its five partitions, exact weights and refinement laws.
+The completed public passive-family probe supplies the independent audit.
+
+The owner chooses the family; J and the theorem do not select it. The
+existing ALGEBRAIC-DMATTER binding, all 414 prior Registry rows, all open
+QDD apparatus obligations, gates, Frontier programs and CORE selections
+retain their exact bytes. No physical occurrence, instrument, sampling,
+measure, apparatus-profile conformance or higher-layer lift is adopted.
+The release witness reconstructs every exact v86 input before all earlier
+guards and separately checks this two-claim, three-definition addition.
+
+## Public Canon v86
+
+Native coherent QDD carrier and point-source boundary.
+
+Two separately completed formal probes support three new L1 theorem rows:
+the specified sixteen-state native coherent Galois-fiber code with every-step
+Gram preservation and template nonselection; its exact algebraic LOW/HIGH
+split and encoded post-states conditional on ideal coarse read; and the
+complete five-point deterministic/classical-endpoint sharp-readout boundary.
+The source marking, free linear representation, coherent preparation and
+conditional projection are explicit. No physical preparation or event is
+derived from the mathematical code.
+
+QDD-INSTRUMENT-APPARATUS stays O and STOP. Its scope now acknowledges the
+native mathematical carrier and split while preserving physical
+preparation/adoption, occurrence, record/reset, complete apparatus family
+and layer-gate obligations. No new open claim, physical dictionary or
+physical gate is introduced. Every other earlier Registry row is unchanged.
+The status-separation audit checks the current boundary and reconstructs
+the exact v85 inputs for all earlier guards. Formal probes and scientific
+thresholds are unchanged.
+
+## Public Canon v85
+
+Four separate L1 theorems register the mathematical content of the public
+native TT emission probe: the native four-letter language and frequencies,
+the complete declared local quadratic source class, the unique rational
+zero-start outgoing history, and the declared-channel local balance with
+auxiliary co-closure. The Canon states each proof once under its own T row.
+The planar incidence carrier is explicit. Complete transfer and relative
+sign remain chosen conventions; no physical-emission theorem is asserted.
+
+All 407 earlier Registry rows retain their exact bytes. TT-SOURCE remains D
+and TT-VECTOR-STATE-NORMALIZATION remains O with its complete obligation.
+The K1 finite doublet, the old homogeneous K1 Cesaro state and the distinct
+zero-start outgoing field are not identified. No outgoing vector state,
+action normalization, scalar spectrum or numerical r_T is supplied.
+
+The release witness reconstructs the complete v84 tables and normative
+files before applying every earlier historical guard. No public probe,
+preregistration, scientific threshold, gate or workflow is changed.
+
+## Public Canon v84
+
+TT-SOURCE moves from O to D for one selected isolated native K1 packet
+emission dictionary. Phi=H1-H0 drives an independent zero-start TT field
+under the unchanged planar L. The native word theorem, quadratic source
+classification, stress factors, local source-work identity and auxiliary
+co-closure provide its exact mathematical construction.
+
+The complete-transfer condition, relative sign, onset, source frame and
+initial outgoing state are explicit input conventions. There is no new T
+claim or free fitted source coefficient. The definition and adoption are
+entirely L1 and create no L2-L6 lift. The original probe and all its pins
+remain unchanged. The mathematical proof is included in the Canon and
+the completed public probe supplies the exact computational audit.
+
+TT-VECTOR-STATE-NORMALIZATION retains its full scope: no outgoing vector
+state, fourth-moment selection, scalar comparison, action normalization or
+numerical r_T is obtained. No complete microscopic emitter dynamics,
+physical occurrence, nonlinear source/FRW completion, detector or SI scale
+is promoted. Every other registered claim is unchanged.
+
+<!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 416 claims; 0 T-LOCK, 283 T, 48 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
+Reproduction witnesses: 24.
+<!-- END GENERATED CURRENT COUNTS -->
+
 ## Public Canon v83
 
 FRW-INHOM moves from O to D under its existing positive existence clause.
@@ -22,11 +107,6 @@ constraint construction. The new cell bridge, full joint-action solution
 and continuous background rest on the self-contained Canon proof and are
 not attributed to that earlier probe. No new formal scientific run is made
 for this dictionary adoption.
-
-<!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 407 claims; 0 T-LOCK, 275 T, 46 D, 39 C, 2 H, 27 O, 18 F; 29 live H/O.
-Reproduction witnesses: 24.
-<!-- END GENERATED CURRENT COUNTS -->
 
 ## Public Canon v82
 

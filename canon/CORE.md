@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v83. Normative authority and activation
+**Release identity:** Public Canon v87. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v83 also declares a discrete architecture. It does not
+Public Canon v87 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -92,6 +92,14 @@ have exact classifications and identifiability limits. None supplies a
 physical apparatus, event, occurrence law, persistence, reset, spatial
 dimension or measure; those owners remain open.
 
+U-GALOIS-FIBER-CODE [T] supplies a specified coherent four-dimensional
+Galois-fiber code over sixteen original checkpoints whose free native
+pushforward preserves the complete QDD Gram at every step. Under
+U-GALOIS-FIBER-QDD-SPLIT [T], its coarse final coordinates match the
+algebraic LOW/HIGH pair in an explicit shifted source chart. Physical
+preparation/adoption of this correlated code and realization of the
+instrument remain under QDD-INSTRUMENT-APPARATUS [O].
+
 ## Two field characterisations involving five
 
 Two independent L1 theorems characterize two narrow arithmetic classes
@@ -156,6 +164,13 @@ metric with separately marked finite inhomogeneous source and constraint
 records. Its complete joint-action proof closes the positive existence
 clause; it supplies no full continuous inhomogeneous metric, physical TT
 emission, scalar-spectrum comparison or SI calibration.
+
+The selected TT-SOURCE dictionary maps the unchanged native K1 packet to
+one zero-start outgoing TT history through Phi=H1-H0. The complete-transfer
+condition, relative sign and isolated onset are explicit choices. Its linear
+source equations and quadratic work/auxiliary records are compatible; no
+complete microscopic source depletion, physical occurrence, outgoing vector
+state, scalar comparison, numerical r_T or L2-L6 output is supplied.
 
 The authoritative current state is `canon/REGISTRY.tsv`.
 `canon/CANON.md` gives complete scopes and `canon/FRONTIER.md` gives

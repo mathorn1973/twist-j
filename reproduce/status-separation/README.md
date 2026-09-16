@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its eighty-three checks cover the current
+and emits deterministic text. Its ninety-four checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 81/81 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 94/94 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -460,3 +460,77 @@ events, 16 gates, 29 live H/O, 30 CORE selections and 24 reproductions.
 This remains per-release structural bookkeeping, with no new scientific
 claim. The v83 expected output was saved after all 83 release-audit checks
 passed; formal release replay uses the completed immutable content pin.
+
+The v84 check first validates every current table byte, then reverses only
+the pinned v84 row replacements, additions and deletion to reconstruct each
+complete v83 table. A separate exact inverse of the text edits reconstructs
+the entire v83 Canon. Both ends retain full SHA-256 checks. The existing
+v83-to-v82 and older guards therefore run on verified historical bytes,
+including the unchanged v83 proof and its then-open TT-SOURCE boundary.
+The new current-state check pins the selected isolated TT source at D and L1,
+its complete proof, definition, dependency set, public probe manifest and one
+lifecycle event. It verifies that every other Registry row is identical to
+v83 and that normalization remains O. The initial frozen v84 candidate omitted
+this routine release-witness update and failed this audit in PR #950; that
+candidate remains preserved. No mathematical probe or threshold is changed.
+
+The v85 maintenance adds an outer reconstruction against the unchanged v84
+public tables and normative text at
+`f10fca3806385a491b32ef40157c51bca08576ab`. It requires the complete current
+hash of each of the eight ledgers and each of the five normative files. Only
+four new Registry, Normative, Evidence and History rows and six new dependency
+rows are removed, by exact line SHA-256 including LF; no old ledger row is
+replaced. Gates, Frontier programs and CORE selection remain byte-identical.
+The exact inverse of the normative text edits restores the complete v84
+Canon, CORE, Frontier and Changelog, with full hashes checked at both ends.
+Those verified bytes feed the unchanged v84-to-v83 and older inverses. The
+historical v84 intake guard reads that verified v84 snapshot, retaining its
+original complete source proof and all historical hash constants.
+
+The current v85 intake guard separately requires four `T/L1` contracts:
+`TT-NATIVE-FOUR-WORD-LAW`, `TT-QUADRATIC-SOURCE-CLASSIFICATION`,
+`TT-ISOLATED-EMISSION-TOTALITY` and `TT-ISOLATED-EMISSION-WORK-BALANCE`.
+Their exact Registry rows, scope hashes, Normative rows, two-architecture
+public-probe Evidence tuples, single declaration events, Canon headings and
+six incident dependency edges are pinned. They share the unchanged
+`P-TT-NATIVE-QUADRATIC-EMISSION-1` public bundle. None owns a gate, Frontier
+program or CORE selection. A separate owner check requires all 407 prior
+Registry rows to remain unchanged: the selected TT source stays at `D`,
+normalization remains `O`, and the cosmology dictionary remains `D`. The
+mathematical claims do not select complete transfer or sign, supply the
+scalar denominator of a tensor ratio, or adopt a physical lift.
+
+The v85 totals are 411 claims, T279/D47/C39/H2/O26/F18, 463 normative items,
+793 dependency edges, 411 Evidence rows (321 requiring two architectures),
+947 History events, 16 gates, 28 live H/O and Frontier-program rows,
+30 CORE selections and 24 reproductions. EXPECTED is saved only after all
+88 release-audit checks pass. This is deterministic release bookkeeping,
+not a new mathematical probe or formal scientific gate.
+
+The v86 boundary adds exactly three L1 theorem rows from two separately
+promoted public probes. Their current scopes, evidence bundles, declarations
+and incident dependencies are pinned. The apparatus remains O and STOP;
+physical preparation/adoption and realized coarse-event semantics are not
+supplied by the mathematical carrier and conditional post-state identity.
+No dictionary, open claim, gate, program or CORE-selection entry is added.
+
+Every v86 input file is checked by byte count and SHA-256 before an exact
+inverse patch reconstructs the frozen v85 input. All earlier guard code and
+historical hash values remain unchanged and consume that verified v85
+snapshot. Three additional checks consume actual v86 files, including both
+full probe-bundle hashes. Neither path changes or reruns an incubation audit.
+
+
+The v87 maintenance adds an exact outer inverse from the current thirteen
+Canon inputs to public v86 at d008270c9c979f457f73087e17672b1db85ee6ad.
+Every input is checked by full byte count and SHA-256 before reconstruction;
+all v86 and earlier hash constants and guard predicates are retained. Three
+new current-state checks separately pin the two declarations, three L1
+definitions, thirteen dependencies, completed passive-family probe bundle,
+and all prior Registry rows, gates, Frontier programs and CORE selections.
+The theorem audits the chosen three-atom algebra and coherent record maps;
+the dictionary adopts only the passive family on existing K_QDD. No physical
+owner, apparatus law, sampling law or layer lift is promoted. The current
+totals are 416 claims, T283/D48/C39/H2/O26/F18 and 28 live H/O.
+The transcript is deterministic release bookkeeping, not a new scientific
+probe or replacement of the independently frozen mathematical audit.
