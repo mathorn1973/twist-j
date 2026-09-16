@@ -1,0 +1,6 @@
+RESIDUE exact_pairs=62250 rational_values=250 PASS
+A4_FRAMES count=2000 attempts=2000 odd_valuation_counts=1025,975 PASS
+INNER_CL4 rays=30 norms=2:10,4:15,20:5 H=0 PASS
+COVER equal_projectors D=3t endpoint_D=3/4 strict_positive_D=3/8 PASS
+OUTSIDE_CONTROL standard_Q4 norm=3x4 sum_H=-4 PASS
+PASS exact_assertions=85517

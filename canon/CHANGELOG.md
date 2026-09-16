@@ -1,11 +1,284 @@
 # Canon changelog (public series)
 
-## Public Canon v77
+## Public Canon v87
+
+One selected passive QDD observable family closes at D on the existing
+K_QDD domain through its balanced head map. Three L1 definitions fix the
+five named partitions, exactly five coherent record fields, the zero branch
+and total typed coarsening maps. A separate T row proves the three-atom
+Boolean algebra, its five partitions, exact weights and refinement laws.
+The completed public passive-family probe supplies the independent audit.
+
+The owner chooses the family; J and the theorem do not select it. The
+existing ALGEBRAIC-DMATTER binding, all 414 prior Registry rows, all open
+QDD apparatus obligations, gates, Frontier programs and CORE selections
+retain their exact bytes. No physical occurrence, instrument, sampling,
+measure, apparatus-profile conformance or higher-layer lift is adopted.
+The release witness reconstructs every exact v86 input before all earlier
+guards and separately checks this two-claim, three-definition addition.
+
+## Public Canon v86
+
+Native coherent QDD carrier and point-source boundary.
+
+Two separately completed formal probes support three new L1 theorem rows:
+the specified sixteen-state native coherent Galois-fiber code with every-step
+Gram preservation and template nonselection; its exact algebraic LOW/HIGH
+split and encoded post-states conditional on ideal coarse read; and the
+complete five-point deterministic/classical-endpoint sharp-readout boundary.
+The source marking, free linear representation, coherent preparation and
+conditional projection are explicit. No physical preparation or event is
+derived from the mathematical code.
+
+QDD-INSTRUMENT-APPARATUS stays O and STOP. Its scope now acknowledges the
+native mathematical carrier and split while preserving physical
+preparation/adoption, occurrence, record/reset, complete apparatus family
+and layer-gate obligations. No new open claim, physical dictionary or
+physical gate is introduced. Every other earlier Registry row is unchanged.
+The status-separation audit checks the current boundary and reconstructs
+the exact v85 inputs for all earlier guards. Formal probes and scientific
+thresholds are unchanged.
+
+## Public Canon v85
+
+Four separate L1 theorems register the mathematical content of the public
+native TT emission probe: the native four-letter language and frequencies,
+the complete declared local quadratic source class, the unique rational
+zero-start outgoing history, and the declared-channel local balance with
+auxiliary co-closure. The Canon states each proof once under its own T row.
+The planar incidence carrier is explicit. Complete transfer and relative
+sign remain chosen conventions; no physical-emission theorem is asserted.
+
+All 407 earlier Registry rows retain their exact bytes. TT-SOURCE remains D
+and TT-VECTOR-STATE-NORMALIZATION remains O with its complete obligation.
+The K1 finite doublet, the old homogeneous K1 Cesaro state and the distinct
+zero-start outgoing field are not identified. No outgoing vector state,
+action normalization, scalar spectrum or numerical r_T is supplied.
+
+The release witness reconstructs the complete v84 tables and normative
+files before applying every earlier historical guard. No public probe,
+preregistration, scientific threshold, gate or workflow is changed.
+
+## Public Canon v84
+
+TT-SOURCE moves from O to D for one selected isolated native K1 packet
+emission dictionary. Phi=H1-H0 drives an independent zero-start TT field
+under the unchanged planar L. The native word theorem, quadratic source
+classification, stress factors, local source-work identity and auxiliary
+co-closure provide its exact mathematical construction.
+
+The complete-transfer condition, relative sign, onset, source frame and
+initial outgoing state are explicit input conventions. There is no new T
+claim or free fitted source coefficient. The definition and adoption are
+entirely L1 and create no L2-L6 lift. The original probe and all its pins
+remain unchanged. The mathematical proof is included in the Canon and
+the completed public probe supplies the exact computational audit.
+
+TT-VECTOR-STATE-NORMALIZATION retains its full scope: no outgoing vector
+state, fourth-moment selection, scalar comparison, action normalization or
+numerical r_T is obtained. No complete microscopic emitter dynamics,
+physical occurrence, nonlinear source/FRW completion, detector or SI scale
+is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 383 claims; 0 T-LOCK, 252 T, 45 D, 38 C, 2 H, 29 O, 17 F; 31 live H/O.
+Registry snapshot: 416 claims; 0 T-LOCK, 283 T, 48 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
+
+## Public Canon v83
+
+FRW-INHOM moves from O to D under its existing positive existence clause.
+One explicitly selected hybrid dictionary connects the unchanged K1 source
+to a continuous homogeneous FRW metric and separate marked finite
+inhomogeneous metric and constraint records. The complete inline proof
+checks every field variation of one joint cubic cell-lapse action, the
+conserved source, the expanding vacuum background for all future time,
+Lorentz signature and literal arbitrary-matter source-off FRW recovery.
+
+DEF-K1-HYBRID-FRW-CELL-METRIC adds no Registry claim. The one new named
+L1-to-L2 DICTIONARY_LIFT belongs to FRW-INHOM. No new T is declared, and the
+K1 linear theorem keeps its scope. The broader inhomogeneous scalar action
+outside CONFORMAL-PREFACTOR remains unsupplied; its stale open-owner
+reference is clarified without widening that homogeneous dictionary.
+TT-SOURCE, TT-VECTOR-STATE-NORMALIZATION and the SI owners remain open.
+
+The completed local-source probe audits its own frozen finite source and
+constraint construction. The new cell bridge, full joint-action solution
+and continuous background rest on the self-contained Canon proof and are
+not attributed to that earlier probe. No new formal scientific run is made
+for this dictionary adoption.
+
+## Public Canon v82
+
+One new L1 theorem records the explicitly selected K1 linear matrix
+construction. Its complete inline proof establishes unique rational
+prefix-consistent output, the retained spatial mean, an all-time Lorentz
+signature bound at the fixed unit amplitude, and all field equations of the
+stated quadratic lapse/shift action. The source packet, initial square,
+propagator, coordinates and output convention are explicit choices.
+
+The definition adds no second Registry claim. No physical geometry,
+nonlinear gravitational solution, scalar comparison or numerical r_T is
+established. All 28 O and 2 H retain their exact scopes and statuses. No new
+scientific probe is run; the theorem uses its self-contained exact proof.
+
+The release audit removes only the exact v82 ledger additions to recover
+every v81 ledger byte and then retains all earlier hash guards. Repository
+audit counts and their expected output follow the new release; workflows,
+frozen public probes and source datasets are unchanged.
+
+## Public Canon v81
+
+Eight new T claims fold the relational-reading decoder programme completed
+after v80: an exact valuation census with the equality condition for a
+square, exact occurrence-selection criteria, a growth-saturation boundary, a
+native finite-reader independence obstruction, the classification of
+occurrence addresses and recoverable logs, the perfect-loader and retention
+class, the registration-pair recovery inverse, and the TRC1 calibration
+identifiability criterion. The same 28 O and 2 H remain; no prior claim
+changes status or scope.
+
+Binary arity, reversible faithful covariant writing and the listed scalar
+symmetries do not select a quadratic count; at the classified binary scope
+the square is exactly the equality of matching and nonmatching weights, and
+every positive integer power gives a distinct normalized reading on the
+adopted channels. Reversibility, covariance and a uniform stationary ensemble
+do not give every-start frequencies, correct pair laws do not give
+independence, and an exact independent horizon of length k costs at least
+2^k supported initial states. On the actual unbounded-counter native
+trajectory, every fixed finite-window reader has an accepted language bounded
+by 20,000[L+G(k-1)] and so cannot carry Bernoulli block frequencies at all
+orders, while each prechosen finite horizon is attainable.
+
+Successor-compatible address quotients are equality or eventually periodic, a
+fixed native window cannot print forever-fresh identities, and a cubic tagged
+carrier serializes at one atomic entry per tick with counts cubic in radius
+and linear in ticks. Tagged accumulation of quadratic layers is exactly cubic
+on the explicit integer lift, while the literal native fired-commutator
+quotient saturates at 25 and the general local dimension inference from cubic
+asymptotics is false. Perfect two-port loaders are classified and export old
+records on reuse; protected retention needs a rational isometric fresh
+embedding; a finite occupancy bank records only during its first lap.
+All-pairs registration weights have an exact renewal inverse with
+admissibility conditions, normalized pairs are not normalized recovery, and
+complete pair data do not certify the renewal premise. The composed TRC1
+chain has exactly one history per head and context, and calibration
+determines prediction for every mixture exactly when the kernel inclusion
+holds; two mixtures with identical scalar QDD calibration predict crossing
+probabilities 1/3 and 2/3.
+
+All results use the eight completed pinned public probes and their
+two-architecture replays. Neither theorem family supplies a physical
+apparatus, occurrence law, sampling law, persistence or reset law, spatial
+dimension or L6 measure; the three physical QDD owners remain O / STOP. The
+status-separation maintenance preserves every v80 ledger byte after removing
+only the exact v81 additions, then replays all historical hash guards. No
+workflow, old probe or source dataset changes.
+
+## Public Canon v80
+
+Three new T claims state exact common-ready native recovery, the complete
+chronological first-hit onset boundary and its conditional permutation
+alternative, and mixed-channel rigidity under three attenuation tests.
+The same 28 O and 2 H remain; no prior claim changes status or scope.
+
+Of 25 common readies, 21 preserve every piston source and four have exactly
+125 double fibres. Selected ready (0,1) admits a complete all-n inverse
+from current native state and counter. This gives mathematical source
+recovery and virtual archive regeneration, not physical record writing.
+
+Two sources have identical first LOW/HIGH at every chronological onset but
+target ratios 1/6 and 1/26. No common onset law can realize both. Uniform
+permutation scans give exact uniform first-occupied-slot counts in a
+different order class; the associated physical law and resources are not
+derived. Three attenuation observables select the identity reduced channel
+in the complete real/complex CP class; a rational two-pass counterexample
+makes the stated nested criterion sharp. Physical attenuation preservation
+remains unproved. No physical decoder closure is asserted.
+
+All results use one completed pinned public probe and its two-architecture
+replay. The status-separation maintenance preserves every v79 ledger byte
+after removing only the exact v80 addition, then replays all historical
+hash guards. No workflow, old probe or source dataset changes.
+
+Two later L4 theorems delimit the quadratic decoder without selecting a
+physical apparatus. A4-RATIONAL-FRAME-WEIGHT-NONUNIQUENESS proves that
+positivity and complete rational-frame additivity do not make quadratic
+reading globally unique. QDD-SIMPLEX-PAIR-INCIDENCE proves, independently,
+that the owner-adopted quadratic P/Q branch is exactly a second-order integer
+Cartesian-pair census on the regular-simplex relation, with the minimal
+integral scale U=N(N-1) and U=20 at p=5. Thus v80 records both plurality and
+a structural reason for the chosen reading. No physical QDD O owner moves.
+
+## Public Canon v79
+
+Public Canon v79 closes CURVATURE-OPERATOR-CANONICAL by an exact inline
+NONUNIQUE theorem on the now-declared complete self-adjoint native-word
+class. The historical carrier, projection and all selector-preserving
+relabelings are explicit adopted definitions. Zero and the historical
+operator with trace-square -881/8 are inequivalent admitted witnesses.
+The total trace subrecord is separately UNDERDETERMINED; its failed
+single-output assertion owns the transferred FIRED_NEGATIVE curvature gate.
+No preferred operator or physical geometry is selected.
+
+The fold reconciles four completed public decoder probes into six exact
+conditional theorems and one finite C result. The native chart, protected
+invariant, finite-history phase decoder, complete fixed-reader spectra,
+apparatus-history factor and conditional incidence/record algebra now have
+one explicit scope boundary. Long-run spectra are typed at L5 through a
+named mathematical stream definition projection. This does not realize a
+physical apparatus or define an individual-outcome probability law.
+
+The four-coordinate incidence identity is proved algebraically; agreement
+on 624 supported preparations remains C. Source capture, fixed lift,
+incidence coupling, chronological phase calendar and fresh writable cells
+are conditions in the scopes. A zero sum gives no LOW slot. Uniform shifts
+of four coordinates change both numerator and denominator, and the exact
+whole-cycle count identity is not asserted on arbitrary prefixes. First-hit
+order is a separate finite property, not an extension of a limiting law.
+
+The O count falls from 29 to 28, with no new O introduced. The three physical
+QDD obligations and the separate Hodge-home bridge remain unchanged. Only
+the closed curvature scope and TIME-CUT-READING's referenced boundary change
+among prior registry rows. The preserved historical ledger is audited with
+exact reconstruction of those declared changes. No completed probe, scientific
+threshold, workflow or release procedure is changed.
+
+## Public Canon v78
+
+Registry snapshot: 385 claims; 0 T-LOCK, 254 T, 45 D, 38 C, 2 H, 29 O, 17 F; 31 live H/O.
+Reproduction witnesses: 24.
+
+Public Canon v78 registers two conditional L4 theorems from the completed
+P-QDD-STABILIZER-APPARATUS-1 public probe and its exact two-architecture
+audit. The concrete stabilizer circuit, binary flag and coherent uncompute
+produce the complete projection post-state maps. The retained-path control
+has the same first weights and a different generally mixed, idempotent HIGH
+map. The proof covers the complete declared balanced rational mixer class
+and ordered subsequent system maps, with exact discriminating preparations.
+The selected signed terminal account is supporting composition, not a
+duplicate general reservoir claim or a physical event law.
+
+The second theorem proves the fixed-carrier common-lattice obstruction for
+two distinct default settings while retaining the single-setting invariant
+lattices. It rules out a complete stated mathematical class, not every
+physical architecture. Growing denominators do not remove that obstruction.
+
+The pre-fold audit examines every one of the 29 open obligations. No complete
+O is closed positively or negatively: the apparatus occurrence law, physical
+completion, complete physical instrument family and layer bridges remain
+absent. All 383 prior registry rows, scopes, evidence and lifecycle entries
+are preserved, as are the 31 live H/O rows, fourteen gates, eight Frontier
+programs and CORE selection. Four new dependency/boundary edges are added.
+
+The post-v77 port-observability note remains NON-CANONICAL under this
+completed-probe intake. Local METRO candidates and unmerged work supply no
+release evidence. The earlier conditional Born note remains outside the
+Canon; proof-only evidence is permitted by policy, but is not adopted here.
+The maintained separation reproduction pins both additions and checks the
+entire preserved prior ledger without changing historical hash constants.
+
+## Public Canon v77
 
 Public Canon v77 registers twelve conclusions from nine completed public
 probe bundles: eight mathematical theorems and four bounded archived-record

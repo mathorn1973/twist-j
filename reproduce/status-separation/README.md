@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its sixty-nine checks cover the current
+and emits deterministic text. Its ninety-four checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 67/67 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 94/94 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -281,7 +281,256 @@ rows, their exact source bundles, layers, declarations and dependency edges.
 It preserves all preceding tables and excludes the new rows only from the
 fixed v76 projection, whose historical hash constants remain unchanged.
 The live physical owners, gates, Frontier programs and CORE selection remain
-fixed. Current totals are 383 claims, 24 reproductions, 14 gates,
+fixed. The v77 totals were 383 claims, 24 reproductions, 14 gates,
 T252/D45/C38/H2/O29/F17, 31 live H/O and 296 two-architecture evidence rows.
 The conditional Born note and proposed measurement/realization wrappers do
 not supply a new physical claim or a passed owner gate.
+
+The v78 check pins `QDD-STABILIZER-UNCOMPUTE-POSTSTATES` and
+`QDD-STABILIZER-COMMON-LATTICE-OBSTRUCTION` at T/L4 to their exact Registry,
+Normative, Evidence and declaration rows, the four dependency edges, and the
+completed `P-QDD-STABILIZER-APPARATUS-1` two-architecture bundle. It requires
+their Canon headings and excludes gate, Frontier and CORE ownership. The
+conditional circuit construction and obstruction for the specified common
+lattice do not close an apparatus, event, physical-class or occurrence debt.
+
+The complete old Registry, Normative, Dependencies, Evidence and History
+tables are recovered by removing only the two v78 claims and their named
+declaration events. Their raw byte hashes, including row order and line
+endings, must match `git show` of public comparison base
+`b349ffd76591b48fb7c2cccd1a2f42cf2066df6e`; the complete Gates,
+Frontier-program and CORE-selection files match that base without removal.
+The v76 and v77 projections exclude only these new additions and retain
+every historical hash constant. This verifier needs no Git access at replay:
+the reviewed base-file hashes are fixed in its source.
+
+The v79 checks separate the exact curvature-obligation closure, its fired
+trace-readout strengthening, and seven native decoder/incidence claims.
+The source-to-incidence implementation retains a finite `C` row; its
+universal identities and explicitly conditional symbolic transformations
+are separate `T` rows. Reader-stream spectra have an L5 carrier and a named
+definition projection. Neither that mathematical stream nor a first-record
+query supplies physical occurrence or an L6 first-outcome law. The QDD
+apparatus and both physical children retain their complete prior contracts.
+
+Historical checks reconstruct the exact v78 ledgers from the current tables.
+Only literal SHA-256-pinned v79 rows are removed; replaced or deleted v78
+rows are restored at their original line positions from the public base
+`07b123a4082f174c37bf09c9aa8815bd2c0e1660`. Each reconstructed whole file
+must match its original byte hash before it is used by the v74 gate-count
+or v76/v77/v78 preservation checks. All historical hash constants remain
+unchanged. Separate current-v79 contracts pin every accepted replacement,
+addition, gate transition and scheduler removal. Replay needs no Git access,
+and this maintenance introduces no scientific execution or evidence.
+
+The v79 totals were 393 claims, T261/D45/C39/H2/O28/F18, 442 normative items,
+731 dependency edges, 393 evidence rows (305 two-architecture), 926 history
+events, 15 gates, 30 live H/O, 30 CORE selections and 24 reproductions.
+
+The v80 maintenance adds an outer byte reconstruction: exactly five new
+Registry, Normative, Evidence and History rows and thirteen new dependency
+rows are removed only by their frozen line SHA-256 values. Every resulting
+whole table must match `git show` of public v79 parent
+`a51df34fe1f1f433062faeb18f5e03fd0a8082b2`. Gates, Frontier programs and CORE
+selection match that parent with no removal. These recovered v79 bytes feed
+the existing v79 reconstruction, so every older snapshot, row replacement,
+lifecycle record and historical hash remains enforced without alteration.
+
+The separate v80 intake guard fixes three theorem rows, their L1/L1/L4
+layers, the exact completed public probe bundle, declaration events,
+thirteen dependencies and the written proof-file hashes. It requires the
+full-state/common-ready recovery conditions, the complete common-onset
+obstruction and conditional permutation scope, and the full real/complex CP
+three-pass theorem with its two-pass and depolarizing counterexamples.
+No new claim owns a gate, Frontier entry or CORE selection, and no dependency
+composes the joint probe's L1 and L4 conclusions into a physical derivation.
+
+A separate physical-owner guard pins the complete v79 registry rows of
+QDD-INSTRUMENT-APPARATUS, QDD-TERMINAL-EVENT-SEMANTICS and
+QDD-INSTRUMENT-CLASS-COMPLETENESS at O/STOP. Virtual history regeneration,
+conditional onset laws and a reduced-channel selector do not supply
+preparation, physical writing, a realized occurrence law or an L6 measure.
+
+A separate reading-boundary guard pins the two later L4 theorems
+A4-RATIONAL-FRAME-WEIGHT-NONUNIQUENESS and QDD-SIMPLEX-PAIR-INCIDENCE at T on
+their self-contained inline Canon proofs, keyed by the exact registry scope
+hash rather than a probe bundle. It requires the exact global rational A4
+frame-weight family with its zero frame sum, unchanged inner Cl(4) weights and
+equal-projector defect, and the uniform regular-simplex pair-incidence census
+with its minimal integral scale and p=5 specialization. Neither claim carries a
+dependency edge, gate, Frontier entry or CORE selection, and all three physical
+QDD owners remain O. Decoder plurality and a pair-incidence reading of the
+chosen decoder supply no apparatus, occurrence law or L6 measure.
+
+The v80 totals were 398 claims, T266/D45/C39/H2/O28/F18, 447 normative
+items, 744 dependency edges, 398 evidence rows (308 two-architecture),
+931 history events, 15 gates, 30 live H/O, 30 CORE selections and
+24 reproductions.
+
+The v81 maintenance adds an outermost byte reconstruction: exactly eight new
+Registry, Normative, Evidence and History rows and twenty-nine new dependency
+rows are removed only by their frozen line SHA-256 values. Every resulting
+whole table must match `git show` of the public v80 activation commit
+`4577448dba85c492b27773a64e5fd557abc02b30`. Gates, Frontier programs and CORE
+selection match that commit with no removal. These recovered v80 bytes feed
+the unchanged v80 and v79 reconstructions, so every older snapshot, row
+replacement, lifecycle record and historical hash remains enforced.
+
+The separate v81 decoder-boundary guard pins eight L1 theorem rows, each on
+its own completed public probe bundle with a frozen manifest hash and
+two-architecture requirement: the equality-pattern valuation census and its
+exact square condition, the occurrence-selection criteria, the growth and
+saturation boundary, the native finite-reader independence obstruction, the
+occurrence-address and log-equality classification, the loader and retention
+class, the registration-pair recovery inverse, and the TRC1 calibration
+identifiability criterion. It requires their declaration events, scope
+hashes, Canon headings and complete probe cores, and it requires every
+declared dependency to be either a same-layer L1 requirement on a theorem or
+definition or an explicit boundary on a named open owner. No new claim owns
+a gate, Frontier entry or CORE selection, and all three physical QDD owners
+remain O.
+
+The v81 totals were 406 claims, T274/D45/C39/H2/O28/F18, 455 normative
+items, 773 dependency edges, 406 evidence rows (316 two-architecture),
+939 history events, 15 gates, 30 live H/O, 30 CORE selections and
+24 reproductions. This verifier maintenance is release bookkeeping,
+not a new formal scientific gate.
+
+The v82 maintenance adds one outer byte reconstruction. It removes exactly
+one Registry row, two Normative rows, seven dependency rows, one Evidence
+row and one History row, each selected by its full line SHA-256 including
+the line ending. Every remaining byte must equal the frozen public proposal
+merge `dc10fba7c0501e08d6843aaab49ae32d1239a79f`, whose ledgers are still v81.
+Gates, Frontier programs and CORE selection must match without any removal.
+These recovered v81 bytes feed the existing v81, v80 and v79 reconstruction
+contracts; no prior hash, replacement row or lifecycle check is weakened.
+The v74 incoming-consumer check reads this verified v81 dependency snapshot,
+retaining its exact old expected set. The separate v82 guard owns the one
+new boundary consumer of the photon-transfer dictionary.
+
+The historical v82 K1 guard pins the complete 11,800-byte inline definition and proof,
+including the Markdown escapes in the four absolute-value table cells,
+by SHA-256 `374f23a670a5a6df3d8c4ebc3c7dc36339a13434408954e6671e232305b72f45`.
+It also requires the exact L1 definition and T theorem, the scope digest,
+inline Evidence tuple, single declaration, two REQUIRES edges and five
+BOUNDED_BY edges, including all incoming edges of the new items. The selected
+rational matrix history, all-time signature and full linear equations do
+not become a physical metric identification, a native-U decoder, a
+nonlinear gravitational solution or a scalar comparison. In that v82
+snapshot, the named physical dictionaries and three gravitational O owners
+retain their existing status; the new items own no gate, Frontier program
+or CORE selection.
+
+The v82 totals were 407 claims, T275/D45/C39/H2/O28/F18, 457 normative
+items, 780 dependency edges, 407 evidence rows (51 with no architecture
+requirement and the unchanged 316 requiring two architectures), 940 History
+events, 15 gates, 30 live H/O, 30 CORE selections and 24 reproductions.
+For that release, the added expected labels and count were determined from
+the fixed print statements before formal replay on the immutable content pin.
+
+The v83 maintenance adds a new outer reconstruction against the unchanged
+public v82 ledgers at `b3f94908eaa095771294e84c3cc29f9361aec89e`. It first
+requires the SHA-256 of each complete current table. It then removes only
+the exact hashed v83 rows and restores the exact changed or removed v82
+lines at their original positions. All eight reconstructed tables must
+match their frozen v82 byte hashes before the unchanged v82-to-v81 and
+older reconstruction contracts run. The only changed Registry rows are
+FRW-INHOM and CONFORMAL-PREFACTOR. The new definition, gate, dependencies
+and two history events are accounted for explicitly; the closed owner's
+Frontier program is restored only in the historical view. CORE selection
+is unchanged.
+
+The historical v82 K1 guard reads those verified v82 ledgers. Its proof
+check first pins the current 11,864-byte K1 block, then restores only the
+exact changed FRW-INHOM owner-boundary sentence and verifies the original
+11,800-byte v82 proof hash. No mathematical statement is replaced by this
+restoration. A separate current v83 guard pins the 601,172-byte Canon and
+the complete 20,441-byte hybrid definition and joint-action proof. It
+requires the new L1 definition, the FRW-INHOM O-to-D dictionary at L2, the
+named DICTIONARY_LIFT gate, all incident dependency edges, current scope
+digests, inline evidence and both history events. The K1 theorem and
+TT-SOURCE, TT-VECTOR-STATE-NORMALIZATION and METRO-EDGE-SCALE retain their
+exact v82 registry rows. CONFORMAL-PREFACTOR remains D with the explicit
+wider scalar-action boundary and unchanged evidence bundle.
+
+Current v83 totals are 407 claims, T275/D46/C39/H2/O27/F18, 458 normative
+items, 782 dependency edges, 407 evidence rows (51 with no architecture
+requirement and the unchanged 316 requiring two architectures), 942 History
+events, 16 gates, 29 live H/O, 30 CORE selections and 24 reproductions.
+This remains per-release structural bookkeeping, with no new scientific
+claim. The v83 expected output was saved after all 83 release-audit checks
+passed; formal release replay uses the completed immutable content pin.
+
+The v84 check first validates every current table byte, then reverses only
+the pinned v84 row replacements, additions and deletion to reconstruct each
+complete v83 table. A separate exact inverse of the text edits reconstructs
+the entire v83 Canon. Both ends retain full SHA-256 checks. The existing
+v83-to-v82 and older guards therefore run on verified historical bytes,
+including the unchanged v83 proof and its then-open TT-SOURCE boundary.
+The new current-state check pins the selected isolated TT source at D and L1,
+its complete proof, definition, dependency set, public probe manifest and one
+lifecycle event. It verifies that every other Registry row is identical to
+v83 and that normalization remains O. The initial frozen v84 candidate omitted
+this routine release-witness update and failed this audit in PR #950; that
+candidate remains preserved. No mathematical probe or threshold is changed.
+
+The v85 maintenance adds an outer reconstruction against the unchanged v84
+public tables and normative text at
+`f10fca3806385a491b32ef40157c51bca08576ab`. It requires the complete current
+hash of each of the eight ledgers and each of the five normative files. Only
+four new Registry, Normative, Evidence and History rows and six new dependency
+rows are removed, by exact line SHA-256 including LF; no old ledger row is
+replaced. Gates, Frontier programs and CORE selection remain byte-identical.
+The exact inverse of the normative text edits restores the complete v84
+Canon, CORE, Frontier and Changelog, with full hashes checked at both ends.
+Those verified bytes feed the unchanged v84-to-v83 and older inverses. The
+historical v84 intake guard reads that verified v84 snapshot, retaining its
+original complete source proof and all historical hash constants.
+
+The current v85 intake guard separately requires four `T/L1` contracts:
+`TT-NATIVE-FOUR-WORD-LAW`, `TT-QUADRATIC-SOURCE-CLASSIFICATION`,
+`TT-ISOLATED-EMISSION-TOTALITY` and `TT-ISOLATED-EMISSION-WORK-BALANCE`.
+Their exact Registry rows, scope hashes, Normative rows, two-architecture
+public-probe Evidence tuples, single declaration events, Canon headings and
+six incident dependency edges are pinned. They share the unchanged
+`P-TT-NATIVE-QUADRATIC-EMISSION-1` public bundle. None owns a gate, Frontier
+program or CORE selection. A separate owner check requires all 407 prior
+Registry rows to remain unchanged: the selected TT source stays at `D`,
+normalization remains `O`, and the cosmology dictionary remains `D`. The
+mathematical claims do not select complete transfer or sign, supply the
+scalar denominator of a tensor ratio, or adopt a physical lift.
+
+The v85 totals are 411 claims, T279/D47/C39/H2/O26/F18, 463 normative items,
+793 dependency edges, 411 Evidence rows (321 requiring two architectures),
+947 History events, 16 gates, 28 live H/O and Frontier-program rows,
+30 CORE selections and 24 reproductions. EXPECTED is saved only after all
+88 release-audit checks pass. This is deterministic release bookkeeping,
+not a new mathematical probe or formal scientific gate.
+
+The v86 boundary adds exactly three L1 theorem rows from two separately
+promoted public probes. Their current scopes, evidence bundles, declarations
+and incident dependencies are pinned. The apparatus remains O and STOP;
+physical preparation/adoption and realized coarse-event semantics are not
+supplied by the mathematical carrier and conditional post-state identity.
+No dictionary, open claim, gate, program or CORE-selection entry is added.
+
+Every v86 input file is checked by byte count and SHA-256 before an exact
+inverse patch reconstructs the frozen v85 input. All earlier guard code and
+historical hash values remain unchanged and consume that verified v85
+snapshot. Three additional checks consume actual v86 files, including both
+full probe-bundle hashes. Neither path changes or reruns an incubation audit.
+
+
+The v87 maintenance adds an exact outer inverse from the current thirteen
+Canon inputs to public v86 at d008270c9c979f457f73087e17672b1db85ee6ad.
+Every input is checked by full byte count and SHA-256 before reconstruction;
+all v86 and earlier hash constants and guard predicates are retained. Three
+new current-state checks separately pin the two declarations, three L1
+definitions, thirteen dependencies, completed passive-family probe bundle,
+and all prior Registry rows, gates, Frontier programs and CORE selections.
+The theorem audits the chosen three-atom algebra and coherent record maps;
+the dictionary adopts only the passive family on existing K_QDD. No physical
+owner, apparatus law, sampling law or layer lift is promoted. The current
+totals are 416 claims, T283/D48/C39/H2/O26/F18 and 28 live H/O.
+The transcript is deterministic release bookkeeping, not a new scientific
+probe or replacement of the independently frozen mathematical audit.

@@ -1,0 +1,7 @@
+PRIMITIVE N=2..32 sampled_smaller=2624 PASS
+UNIFORM N=2..8 contexts=330 PASS
+QDD_CONTEXTS settings=5 betas=24 sources=10 contexts=1200 PASS
+QDD_BOUNDED public_context sources=625 PASS
+QDD_EXTENDED contexts=405 source_alphabet=-4,0,4 PASS
+PAIR_SETS sources=625 low_total=5000 high_total=75000 PASS
+PASS exact_assertions=104768 contexts=2560

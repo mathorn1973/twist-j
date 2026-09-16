@@ -1,7 +1,8 @@
 TWIST-J theorem/dictionary separation audit
+historical guards: exact reconstructed v86 and v85; current boundary: v87
 exact algebra and finite computations remain distinct from physical readings
 
-PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v77
+PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
 PASS 02 AXIOM      J and plenum algebra stay T; projection and plenum physics are D
 PASS 03 PLACES     field and Galois facts stay T; place and CPT physics are D
 PASS 04 CARRY      carry, synchronization, and C8 shadow theorems stay T and physically fenced
@@ -70,5 +71,30 @@ PASS 66 V74-PHOTON selected D3 transfer enters at D/MULTI and its exact characte
 PASS 67 V75-CLOSURE eight qualified theorems enter at exact scope while the photon germ closes locally, the broader global carrier stays O, and the stopped four-phase probe remains excluded
 PASS 68 V76-L1-FOLD eleven L1 theorem rows enter with exact probe evidence; prior claims, gates and frontier stay fixed; fired polar-A and physical coincidence stay excluded
 PASS 69 V77-EARNED-FOLD eight conditional theorems and four bounded archive computations; exact source evidence and prior ledgers persist; physical Born and apparatus owners stay open
+PASS 70 V78-QDD-STABILIZER two conditional L4 circuit and lattice theorems enter on exact probe evidence; the complete prior ledger and every physical open obligation remain unchanged
+PASS 71 V79-PRIOR-LEDGERS exact pinned row replacements reconstruct every byte of the prior v78 ledger; no earlier hash, lifecycle row or unlisted claim is relaxed
+PASS 72 V79-CURVATURE raw-class nonuniqueness closes the named O at T; the separate trace readout strengthening is F and owns the terminal gate; time cut stays D
+PASS 73 V79-NATIVE-DECODER six conditional mathematical theorems and one finite C audit retain their exact sources; L5 spectra use a typed projection and physical QDD stays O
+PASS 74 V80-PRIOR-LEDGERS only exact pinned v80 additions are removed to recover every v79 byte; the unchanged v79 reconstruction still enforces every older ledger hash
+PASS 75 V80-CLOSURE-BOUNDARIES three proof-backed T rows retain complete-source and onset conditions at L1 and full CP three-pass rigidity at L4 on one exact two-architecture probe
+PASS 76 V80-PHYSICAL-OWNERS all three physical QDD obligations retain their exact v79 rows at O; readback, conditional onset laws and mixed-channel selection create no physical gate
+PASS 77 V80-READING-BOUNDARIES two later L4 theorems bound the quadratic decoder on self-contained inline Canon proof; they add no dependency, gate, program or CORE selection and leave every physical QDD owner open
+PASS 78 V81-PRIOR-LEDGERS only exact pinned v81 additions are removed to recover every v80 byte; the unchanged v80 and v79 reconstructions still enforce every older ledger hash
+PASS 79 V81-DECODER-BOUNDARY eight L1 theorems delimit relational reading, occurrence, native readers, addresses, loaders, registration pairs and the composed record chain on exact two-architecture probes; they add no gate, program or CORE selection, declare only same-layer requirements and owner boundaries, and leave every physical QDD owner open
+PASS 80 V82-PRIOR-LEDGERS only exact pinned v82 additions are removed to recover every v81 byte; the unchanged v81, v80 and v79 contracts still enforce every older ledger hash
+PASS 81 V82-K1-LINEAR-METRIC at v82, one explicit L1 definition and one inline-proof theorem fix the K1 matrix history, full linear equations and all-time signature; exact boundary edges preserve physical readings and open owners without a native-U or nonlinear closure
+PASS 82 V83-PRIOR-LEDGERS exact current v83 row hashes precede the only allowed removals and restores; every v82 byte is recovered before the unchanged v82-to-v81 and older hash guards
+PASS 83 V83-FRW-HYBRID at v83, one O-to-D existence closure adopts the exact joint-action proof and named L1-to-L2 hybrid dictionary; no theorem is promoted, the wider scalar-action boundary survives, and TT emission, normalization and SI owners remain open
+PASS 84 V84-PRIOR-LEDGERS exact v84 bytes reconstruct every v83 table and the complete Canon before all unchanged historical hash guards
+PASS 85 V84-ISOLATED-TT one selected L1 source dictionary closes O to D on the frozen native emission probe; complete transfer and sign stay choices, all other claims and normalization remain unchanged
+PASS 86 V85-PRIOR-BYTES exact v85 bytes reconstruct all v84 ledgers and normative texts before every unchanged historical hash guard
+PASS 87 V85-TT-THEOREMS four exact L1 theorems enter separately on the frozen native-emission probe; every scope, evidence tuple, declaration and incident dependency is pinned, with no gate, Frontier or CORE ownership
+PASS 88 V85-OWNER-BOUNDARY all 407 prior Registry rows are unchanged; TT-SOURCE stays the selected L1 dictionary and normalization remains O, without a scalar ratio or physical lift
+PASS 89 V86-PRIOR-BYTES every current input is pinned and reconstructs exact v85 bytes before all unchanged historical guards
+PASS 90 V86-THREE-THEOREMS exactly three L1 theorems use the two separately promoted frozen probes; all scopes, evidence bundles, declarations and dependencies are pinned
+PASS 91 V86-APPARATUS-BOUNDARY all 411 prior statuses and 410 prior Registry rows are unchanged; apparatus scope acknowledges the code but remains O and STOP, with no new dictionary, open debt, gate, program or CORE selection
+PASS 92 V87-PRIOR-BYTES every current input is pinned and reconstructs exact public v86 bytes before all unchanged v86 and earlier historical guards
+PASS 93 V87-PASSIVE-FAMILY one L1 theorem and one owner-selected passive dictionary use the completed probe; three definitions, coherent record maps and thirteen edges are pinned
+PASS 94 V87-OWNER-BOUNDARY all 414 prior Registry rows and every physical open obligation are unchanged; no gate, Frontier, CORE-selection, apparatus, event or measure lift is added
 
-RESULT 69/69 ALL PASS
+RESULT 94/94 ALL PASS

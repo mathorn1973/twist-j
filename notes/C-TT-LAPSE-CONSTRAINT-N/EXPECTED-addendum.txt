@@ -1,0 +1,21 @@
+C-TT-LAPSE-CONSTRAINT-N review addendum certificate, exact arithmetic
+PASS stencil rates 29,65,65,29 /324
+PASS A1 L(h^2) = 2 h L h - 2 g(h) holds as a polynomial identity in h_0..h_4
+PASS A2 sigma_ii - sigma_i = (1/2) L(h^2) and tau_ii - tau_i = (1/2) Pi(h^2) = +3/40 occupied, -1/20 empty, all ten words
+PASS A3 projected residual: L tau_i - sigma_i = -mean(sigma_i) 1 for all ten words (not a solution of the full constraint)
+PASS A4 Euler-Lagrange certificate: the seven sector equations at the interior slice hold as polynomial identities in all 105 field, 15 source and il variables
+PASS A5 lapse occurs only linearly in the action; the lapse equation contains no lapse variable (F2 as a polynomial statement)
+PASS A6 every action coefficient is a rational multiple of il^0 or il^1 (computed census, not a declaration)
+PASS A7 witness profile is nonconstant with zero mean and L f != 0
+PASS A7 h_13(n,r) = n f(r), all else zero, no source: every displayed equation is satisfied; the system does not exclude this inhomogeneous vector velocity
+PASS A8 Z_n = sum sigma_i is not conserved by the free TT equation (Z_1 - Z_0 = (1/4)||L f||^2 > 0 for h_0 = h_1 = f), the staggered <h_n, L h_(n+1)> form is conserved; holds for the four static K1 words
+checks: 10 failed: 0
+
+action polynomial: 370 monomials; coefficient census by il-degree:
+  il^0: [Fraction(-1, 2), Fraction(-1, 4), Fraction(1, 2)]
+  il^1: [Fraction(-1, 1), Fraction(-1, 2), Fraction(-115, 324), Fraction(-65, 324), Fraction(-17, 162), Fraction(-65, 648), Fraction(-29, 324), Fraction(-29, 648), Fraction(29, 648), Fraction(65, 648), Fraction(17, 162), Fraction(1, 4), Fraction(115, 324), Fraction(1, 2), Fraction(47, 81)]
+
+transcription difference at cut 0, unit a^2 (tau_ii - tau_i), word 0010: ['-1/20', '3/40', '3/40', '-1/20', '-1/20']
+projected residual, word 0010: L tau_i - sigma_i = ['-161/4320', '-161/4320', '-161/4320', '-161/4320', '-161/4320']
+vector witness f = ['1', '-2', '3', '-1', '-1']  L f = ['145/324', '-181/162', '217/108', '-181/324', '-253/324']
+static word 0101: Z_1 - Z_0 = 14189/279936

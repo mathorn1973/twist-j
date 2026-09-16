@@ -24,28 +24,139 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 383)
+        self.assertEqual(self.report.claims, 416)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 38, "D": 45, "F": 17, "H": 2, "O": 29, "T": 252},
+            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 283},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 47,
+                "none": 50,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 296,
+                "two-architecture": 326,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 179)
+        self.assertEqual(len(self.report.direct_architecture_requires), 188)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 245
+            len(self.report.transitive_architecture_dependents), 279
         )
-        self.assertEqual(len(self.report.dependency_terminals), 61)
+        self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v87 adds one direct owner-selected passive dictionary. Its source
+        # maps and theorem reach architecture through the existing K_QDD
+        # domain; the partition/record definitions require only exact algebra.
+        reading = "QDD-OBSERVABLE-READING-FAMILY"
+        self.assertIn(reading, self.report.direct_architecture_requires)
+        self.assertIn(reading, self.report.transitive_architecture_dependents)
+        self.assertNotIn(reading, self.report.dependency_terminals)
+        for item in (
+            "DEF-QDD-PASSIVE-READING-MAPS",
+            "QDD-THREE-ATOM-PARTITION-COMPLETENESS",
+        ):
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.dependency_terminals)
+        for item in (
+            "DEF-QDD-PASSIVE-PARTITION-FAMILY",
+            "DEF-QDD-PASSIVE-WEIGHT-RECORD",
+        ):
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertNotIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.dependency_terminals)
+        # v86 adds two direct native requirements and one dependent split.
+        code = "U-GALOIS-FIBER-CODE"
+        split = "U-GALOIS-FIBER-QDD-SPLIT"
+        point = "U-POINT-SOURCE-SHARP-READOUT-NOGO"
+        for claim in (code, point):
+            self.assertIn(claim, self.report.direct_architecture_requires)
+        self.assertNotIn(split, self.report.direct_architecture_requires)
+        for claim in (code, split, point):
+            self.assertIn(claim, self.report.transitive_architecture_dependents)
+            self.assertNotIn(claim, self.report.dependency_terminals)
+        # v85 separates four L1 mathematical results from the existing
+        # isolated-emission dictionary. Only the native word-law theorem
+        # adds a direct architecture edge; all four reach it transitively.
+        word_law = "TT-NATIVE-FOUR-WORD-LAW"
+        self.assertIn(word_law, self.report.direct_architecture_requires)
+        for claim in (
+            word_law,
+            "TT-QUADRATIC-SOURCE-CLASSIFICATION",
+            "TT-ISOLATED-EMISSION-TOTALITY",
+            "TT-ISOLATED-EMISSION-WORK-BALANCE",
+        ):
+            self.assertIn(claim, self.report.transitive_architecture_dependents)
+            self.assertNotIn(claim, self.report.dependency_terminals)
+        # v84 adds one isolated-emission definition through existing K1
+        # definitions. TT-SOURCE changes O to D and retains its direct edge.
+        emission = "DEF-K1-ISOLATED-TT-EMISSION"
+        self.assertNotIn(emission, self.report.direct_architecture_requires)
+        self.assertIn(emission, self.report.transitive_architecture_dependents)
+        self.assertNotIn(emission, self.report.dependency_terminals)
+        self.assertIn("TT-SOURCE", self.report.direct_architecture_requires)
+        # v83 adds one explicit hybrid definition. FRW-INHOM changes O to D
+        # while retaining its architecture dependency through the selected gate.
+        hybrid = "DEF-K1-HYBRID-FRW-CELL-METRIC"
+        self.assertIn(hybrid, self.report.direct_architecture_requires)
+        self.assertIn(hybrid, self.report.transitive_architecture_dependents)
+        self.assertNotIn(hybrid, self.report.dependency_terminals)
+        self.assertIn("FRW-INHOM", self.report.direct_architecture_requires)
+        # v82 adds an explicit mathematical definition requiring the
+        # architecture and a theorem requiring only that definition.
+        self.assertIn("DEF-K1-LINEAR-METRIC", self.report.direct_architecture_requires)
+        self.assertNotIn(
+            "K1-LINEAR-METRIC-COMPLETION", self.report.direct_architecture_requires
+        )
+        for item in ("DEF-K1-LINEAR-METRIC", "K1-LINEAR-METRIC-COMPLETION"):
+            self.assertIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.dependency_terminals)
+        # The eight v81 decoder-boundary theorems declare same-layer L1
+        # requirements and owner boundaries only. Seven reach the architecture
+        # transitively through registered native rows; the renewal inverse
+        # declares no requirement, so it is neither an architecture dependent
+        # nor, because of its declared owner boundaries, a terminal.
+        for claim in (
+            "BINARY-RECORD-VALUATION-NONSELECTION",
+            "RECORD-OCCURRENCE-SELECTION-CRITERIA",
+            "RELATIONAL-GROWTH-SATURATION-BOUNDARY",
+            "U-FINITE-READER-INDEPENDENCE-OBSTRUCTION",
+            "OCCURRENCE-ADDRESS-AND-LOG-EQUALITY",
+            "RECORD-LOADER-RETENTION-CLASS",
+            "TRC1-CALIBRATION-IDENTIFIABILITY",
+        ):
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+            self.assertIn(claim, self.report.transitive_architecture_dependents)
+            self.assertNotIn(claim, self.report.dependency_terminals)
+        renewal = "REGISTRATION-PAIR-RECOVERY-INVERSE"
+        self.assertNotIn(renewal, self.report.direct_architecture_requires)
+        self.assertNotIn(renewal, self.report.transitive_architecture_dependents)
+        self.assertNotIn(renewal, self.report.dependency_terminals)
+        # The two v80 reading-boundary theorems declare no dependency edge, so
+        # they are declared-dependency terminals and add no architecture
+        # coupling in either direction.
+        for claim in (
+            "A4-RATIONAL-FRAME-WEIGHT-NONUNIQUENESS",
+            "QDD-SIMPLEX-PAIR-INCIDENCE",
+        ):
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+            self.assertNotIn(
+                claim, self.report.transitive_architecture_dependents
+            )
+            self.assertIn(claim, self.report.dependency_terminals)
+        for claim in (
+            "U-NATIVE-COMMON-READY-SOURCE-RETENTION",
+            "QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION",
+        ):
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+            self.assertIn(claim, self.report.transitive_architecture_dependents)
+            self.assertNotIn(claim, self.report.dependency_terminals)
+        mixed_claim = "QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY"
+        self.assertNotIn(mixed_claim, self.report.direct_architecture_requires)
+        self.assertNotIn(mixed_claim, self.report.transitive_architecture_dependents)
+        self.assertNotIn(mixed_claim, self.report.dependency_terminals)
         self.assertIn(
             "JIPC-WP3D-QPOS-SCALAR-SLICE",
             self.report.dependency_terminals,

@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v77. Normative authority and activation
+**Release identity:** Public Canon v87. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v77 also declares a discrete architecture. It does not
+Public Canon v87 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -65,6 +65,40 @@ equivalence, completeness, maximality, and nonconstancy slots. It supplies
 no surviving factor, classification, universality, carrier, physical
 bridge, completion-wide terminality result, evidence, or status change,
 and it authorizes no verifier or probe.
+
+The complete declared native-word curvature class is nonunique, and its
+total trace subrecord is underdetermined. This decides the corresponding
+operator question without choosing a physical geometry. The native decoder
+has exact readback and memory boundaries, a finite-history phase reader,
+and complete mathematical reader spectra. A fixed common ready now permits
+recovery of every original piston source from the full current state and
+native counter; regenerating a history is not material recording. The
+conditional incidence construction still declares its coupling and calendar.
+No common onset law makes its chronological first outcomes agree with all
+QDD ratios; a permutation scan repairs the marginal only with an additional
+order carrier and law. Three fixed attenuation observables select identity
+even among mixed CP channels, but their physical preservation remains a
+premise. Physical preparation, writing, reset and occurrence remain open.
+
+The relational-reading boundary is now exact. Binary structure, reversible
+faithful writing and the listed scalar symmetries do not select a quadratic
+count; a square is exactly equal matching and nonmatching weight. Occurrence
+needs cycle balance or an independently supplied ensemble, correct pair laws
+do not give independence, and a fixed finite-window reader of the actual
+native trajectory cannot carry all-order product frequencies while every
+finite horizon remains attainable. Addresses, logs, loaders, a finite
+occupancy bank, the registration-pair inverse and the composed record chain
+have exact classifications and identifiability limits. None supplies a
+physical apparatus, event, occurrence law, persistence, reset, spatial
+dimension or measure; those owners remain open.
+
+U-GALOIS-FIBER-CODE [T] supplies a specified coherent four-dimensional
+Galois-fiber code over sixteen original checkpoints whose free native
+pushforward preserves the complete QDD Gram at every step. Under
+U-GALOIS-FIBER-QDD-SPLIT [T], its coarse final coordinates match the
+algebraic LOW/HIGH pair in an explicit shifted source chart. Physical
+preparation/adoption of this correlated code and realization of the
+instrument remain under QDD-INSTRUMENT-APPARATUS [O].
 
 ## Two field characterisations involving five
 
@@ -124,6 +158,19 @@ The stable orientation claims are generated from the registry:
 Time is a counter. Space is read through commutators. The modulus and
 argument of J provide two exact algebraic projections. Their physical
 interpretations are only as strong as the registered dictionary rows.
+
+The selected FRW-INHOM dictionary supplies one continuous homogeneous FRW
+metric with separately marked finite inhomogeneous source and constraint
+records. Its complete joint-action proof closes the positive existence
+clause; it supplies no full continuous inhomogeneous metric, physical TT
+emission, scalar-spectrum comparison or SI calibration.
+
+The selected TT-SOURCE dictionary maps the unchanged native K1 packet to
+one zero-start outgoing TT history through Phi=H1-H0. The complete-transfer
+condition, relative sign and isolated onset are explicit choices. Its linear
+source equations and quadratic work/auxiliary records are compatible; no
+complete microscopic source depletion, physical occurrence, outgoing vector
+state, scalar comparison, numerical r_T or L2-L6 output is supplied.
 
 The authoritative current state is `canon/REGISTRY.tsv`.
 `canon/CANON.md` gives complete scopes and `canon/FRONTIER.md` gives

@@ -1,0 +1,9 @@
+P-RECORD-OCCURRENCE-SYMMETRY-1
+PASS symmetry: 862 exact checks
+PASS cycles: 2561686 exact checks
+PASS countermodels: 892 exact checks
+PASS capacity: 22224 exact checks
+WITNESS uniform stationary identity: every path is constant
+WITNESS 0011: fair pairs; P(000)=0 != 1/8
+BOUND uniform ready p=1/16, k=20: N divisible by 2^80
+PASS total: 2585664 exact checks

@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v77
+# TWIST-J Public Canon v87
 
-**Release identity.** Public Canon v77. Normative authority and activation
+**Release identity.** Public Canon v87. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v77 also declares the discrete architecture used to read
+only. Public Canon v87 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v77 does not claim
+seed of the two algebraic projections. Public Canon v87 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -74,10 +74,11 @@ architectures; the action layer protocol names six layers (L1 state,
 L2 manifold, L3 boundary, L4 support, L5 stream, L6 measure) and any
 lift between layers requires its own named gate.
 
-For GATE-L1-L5-TM-SYM2-SELECTOR-STREAM only, gate kind
-FIRED_NEGATIVE records that the preregistered scientific negative route
-has fired. It is terminal and grants no execution, reopening, definition
-swap, or threshold repair.
+Gate kind FIRED_NEGATIVE records a terminal scientific negative route at
+its exact registered scope. GATE-L1-L5-TM-SYM2-SELECTOR-STREAM retains its
+frozen selector negative; GATE-L1-L2-CURVATURE-CANONICAL records the
+proved underdetermination of the declared trace subrecord. Neither grants
+execution, reopening, definition substitution, or threshold repair.
 
 **Statuses.** Rigid order T-LOCK > T > D > C > H > O > F. T-LOCK
 immutable theorem; T theorem; D derived; C computed at finite range;
@@ -124,7 +125,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v77 contains no such
+deriving the architecture from J; Public Canon v87 contains no such
 theorem.
 
 ---
@@ -541,11 +542,371 @@ exterior term is exact cancellation, not invariance of `V` under `A` and
 probes/P-CURVATURE-GAUSS-SPLIT-1. It is an algebraic identity for the frozen
 historical operator, not a differential-geometric Gauss equation, embedding
 theorem, spectrum, or physical interpretation. None of these facts selects a
-canonical spatial-curvature operator. CURVATURE-OPERATOR-CANONICAL [O]
-asks whether the public architecture determines exactly one equivalence
-class after the carrier, measure, projection group, and ambient versus
-intrinsic commutator choice are fixed publicly. No golden spectrum or
-continuum-curvature reading is asserted.
+canonical spatial-curvature operator. The complete class is now adopted
+below and its raw uniqueness question is decided negatively. No golden
+spectrum or continuum-curvature reading is asserted.
+
+### DEF-NATIVE-WORD-CURVATURE-CLASS
+
+This definition adopts the following data; their selection is not forced
+by the earlier architecture:
+
+1. the historical full checkpoint carrier `X=F5^6` and function space
+   `F=Q^X`;
+2. the unnormalized counting form `<f,h>=sum_(x in X) f(x)h(x)`;
+3. the historical projection subgroup `H=<b,d>`, its exact Reynolds
+   projector, and removal of the constant function;
+4. every self-adjoint native-word Koopman permutation, paired with every
+   other such permutation, in both ambient and intrinsic commutator modes;
+5. coefficients `+1,-1`, with ordered pairs retaining their actual signs,
+   and with zero operators retained;
+6. equivalence induced by every selector-preserving relabeling of the
+   complete finite architecture, including nonaffine relabelings;
+7. the exact carrier/Gram/ordinary-trace-square subrecord in the trace-subrecord definition below.
+
+These choices introduce no measured target or fitted scalar. Choosing the
+historical projection is nevertheless a choice, not a uniqueness theorem
+about all possible projections. The declared word class does not exhaust
+arbitrary linear combinations, other carriers, other projections, or every
+possible physical curvature dictionary. Its completeness is exactly the
+complete generative class specified here, adopted here as the complete class of the raw-operator question.
+
+For `x=(p1,p4,p1p,p4p,q,r)`, all checkpoint arithmetic is in `F5`:
+
+```text
+a(x) = (p4,p1,p4p,p1p,q,r),
+b(x) = (-p1p,-p4p,-p1,-p4,-q,-r),
+c(x) = (-p1p+2,-p4p+1+r,-p1+2,-p4+1-r,1-q,-r),
+d(x) = (2-p1,1-p4,3-p1p,4-p4p,1-q,1-r),
+e(x) = (2-p1,1-p4,3-p1p,4-p4p,2-q,1-r).
+```
+
+Let `Gamma=<a,b,c,d,e>` be the subgroup of permutations of `X` generated
+by all finite words in these maps. The generators are involutions, so
+positive words already generate the group. Define
+
+```text
+(T_g f)(x) = f(g^(-1)x),
+I_Gamma = {g in Gamma : g^2=id},
+R_H = (1/|H|) sum_(h in H) T_h,
+P0 f = f - (1/|X|)(sum_x f(x)) 1_X,
+P = P0 R_H = R_H P0,
+V = image(P).
+```
+
+The identity belongs to `I_Gamma`. The full admitted presentation set is
+
+```text
+I_Gamma x I_Gamma x {AMB,INT}.
+
+K_AMB(u,v) = P(T_u T_v - T_v T_u)P|V,
+K_INT(u,v) = [(PT_uP)|V,(PT_vP)|V].
+```
+
+Ordered pairs, including equal pairs, are admitted. Swapping a pair
+produces the actual negative operator; it is not an independently licensed
+sign quotient. Mode and word labels are provenance. Presentations yielding
+the same typed linear operator represent one operator. No rank, nonzero,
+trace, historical-value, spectral, or output filter is applied.
+
+#### All-word completeness and exact finite bounds
+
+Every native generator is affine and invertible on `F5^6`; composition
+remains affine and invertible. Consequently
+
+```text
+Gamma <= AGL_6(F5),
+|Gamma| <= B,
+B = 5^6 product_(j=0,...,5) (5^6-5^j).
+```
+
+The product counts ordered independent columns of an invertible matrix;
+`5^6` counts translations. This is an exact finite bound, not an observed
+group order. A shortest word for any group element has no repeated prefix
+element: deleting a segment between equal prefixes would shorten it.
+Therefore every element of `Gamma` has a representative of length at most
+`|Gamma|-1 <= B-1`.
+
+An exact breadth-first closure starting with the identity, composing by all
+five generators, and retaining distinct affine pairs `(M,t)` terminates
+after at most `B` elements. Its closure under generators proves that every
+native word is represented; induction on word length proves that nothing
+outside `Gamma` is inserted. Equality of affine pairs is equality of the
+underlying permutations, as evaluation at zero and the six coordinate
+vectors recovers `t` and `M`. Testing `g^2=id` gives exactly `I_Gamma`.
+There are at most `2 B^2` semantic presentations of the admitted operators.
+
+This supplies a terminating full-class construction, independently of the
+two witnesses used below. It supplies no practical running-time claim and
+no computed value of `|Gamma|`, `|I_Gamma|`, or the number of operator
+classes. None of that enumeration is executed for this proof.
+
+The involution condition has an exact structural meaning. Counting makes
+every Koopman permutation orthogonal and
+
+```text
+T_g^star = T_(g^(-1)).
+```
+
+The action on `Q^X` is faithful. Hence `T_g` is self-adjoint if and only if
+`g=g^(-1)`, equivalently `g^2=id`. Thus `I_Gamma` contains all, and
+exactly, the self-adjoint native-word Koopman permutations. It is not a
+convenient short-word sample. An unrestricted word need not be an
+involution; its raw commutator need not be skew-adjoint. Such words are
+outside this stated self-adjoint class, rather than silently included.
+
+#### Canonical finite carrier, Gram matrix, and operator equality
+
+Order `X` lexicographically using representatives `0,1,2,3,4`. Order the
+`H`-orbits `O0,...,O_(m-1)` by their least points and put `n_i=|O_i|`.
+Every orbit is nonempty. The invariant functions are exactly the functions
+constant on each orbit, so their mean-zero subspace has dimension `m-1`.
+The inherited historical dimension gives `m=819`.
+
+A canonical rational basis of `V` is
+
+```text
+b_i = 1_(O_i) - (n_i/n_0) 1_(O_0),      i=1,...,m-1.
+```
+
+The vectors are mean-zero and independent by evaluation on `O_i`.
+Every invariant mean-zero function is their linear combination, again by
+its values on those orbits. Their counting Gram matrix is
+
+```text
+G_ij = delta_ij n_i + n_i n_j/n_0.
+```
+
+It is positive definite because it is the restriction of a positive
+counting form to a basis. Reynolds averaging acts as exact orbit averaging.
+It commutes with `P0`, so `P` is the rational orthogonal projector onto
+exactly this `V`.
+
+For any admitted presentation, apply its operator expression to all
+`m-1=818` basis vectors. The output is invariant and mean-zero because of
+the surrounding projectors. Its unique coordinate vector consists of its
+constant values on `O_i`, `i>0`. This constructs an exact rational matrix
+`M_K`. Two operators on this fixed typed carrier are equal if and only if
+these complete matrices agree entrywise. This is a terminating equality
+decision, not a sampled-column test, trace test, spectrum test, or hash
+substitute.
+
+For every admitted presentation, its operator maps `V` to `V`, has rational
+coefficients, and is skew-adjoint. Indeed the two uncompressed Koopman
+operators are self-adjoint, as are their orthogonal compressions, and a
+commutator of self-adjoint operators is skew-adjoint. The standard
+compression identity is
+
+```text
+K_AMB(u,v) - K_INT(u,v)
+ = (PT_u(I-P)T_vP - PT_v(I-P)T_uP)|V.
+```
+
+Its exterior term is diagnostic, not a third candidate mode. Its
+vanishing is not asserted for all pairs: the inherited zero exterior term
+concerns the historical pair `(a,c)` only.
+
+#### Every selector-preserving architecture relabeling
+
+Write `g_0=a,...,g_4=e` and `z(x)=sum(x) in F5`. The adopted relabeling
+group consists of **all** pairs `(h,pi)`, with `h` an arbitrary permutation
+of `X` and `pi` a permutation of the numeric generator labels, satisfying
+
+```text
+h g_i h^(-1) = g_(pi(i))                         for every i,
+pi(z(x)+2 epsilon) = z(h(x))+2 epsilon           for every x and epsilon=0,1.
+```
+
+The clock and its driver bit are fixed. The identity, inverses, and
+composites satisfy these equations, so this is a group. No assumption that
+`h` is affine is made.
+
+Since `z` is surjective, comparison of the selector equations at zero and
+one gives
+
+```text
+pi(z+2)=pi(z)+2          for every z in F5.
+```
+
+Because two generates the additive group of `F5`, it follows that
+`pi(z)=z+c` for one constant `c`. Conjugacy by any permutation preserves
+the number of fixed points. The complete generator fixed-point counts
+follow directly from the displayed native formulas:
+
+| Generator | Fixed-point constraints | Count |
+| --- | --- | ---: |
+| `a` | `p1=p4`, `p1p=p4p`; `q,r` free | `5^4=625` |
+| `b` | `p1p=-p1`, `p4p=-p4`, `q=r=0` | `5^2=25` |
+| `c` | `p1p=2-p1`, `p4p=1-p4`, `q=3,r=0` | `5^2=25` |
+| `d` | the single point `(1,3,4,2,3,3)` | `1` |
+| `e` | the single point `(1,3,4,2,1,3)` | `1` |
+
+Thus `a` is the unique generator with 625 fixed points. Necessarily
+`pi(0)=0`, so `c=0` and `pi=id`. Every allowed `h` therefore commutes with
+each of the five generators, hence with every word in `Gamma`, and
+preserves `z`.
+
+The corresponding `T_h` commutes with `R_H` and with `P0`, preserves `V`,
+and is an isometry of its counting form. It commutes with each candidate
+operator in both modes. Therefore
+
+```text
+(T_h|V) K (T_h|V)^(-1) = K
+```
+
+for every admitted operator and every allowed relabeling. The full induced
+architecture equivalence
+
+```text
+K ~K K' iff K'=(T_h|V)K(T_h|V)^(-1) for some allowed h
+```
+
+is consequently exact operator equality. The converse uses the
+identity relabeling. The canonical matrix decision of the canonical-basis definition above decides
+this complete equivalence. No automorphism census, affine restriction,
+unproved rigidity theorem, or rational-isometry existence algorithm is
+needed. The group of `h` itself is not asserted to be trivial; its action
+on this entire operator class is proved trivial.
+
+#### Exact complete-class decision and certificate
+
+Let `K_adm` be the set of typed operator values of all presentations in
+the candidate definition above. It is finite by the all-word completeness proof above and carries the exact equivalence of
+the architecture-equivalence proof above. A full decision procedure can enumerate `Gamma`, retain
+`I_Gamma`, form both modes for every ordered pair, and collapse exact
+matrices. Its zero/one/at-least-two decision is complete by the all-word
+construction. This is a mathematical termination proof, not a report that
+the procedure has been run.
+
+For the negative decision an exact certificate consists of two admitted
+presentations and a proved invariant discrepancy. Such a certificate
+decides that the entire admitted class has at least two classes: adding
+its remaining members cannot identify two already inequivalent operators.
+It need not enumerate the whole quotient or state its exact cardinality.
+The all-word completeness, total operator construction, and decidable
+equivalence are proved independently above. A negative certificate is not
+being substituted for any of those definitions or proofs.
+
+The certificate in the two-witness proof below uses literal native words and the inherited
+trace theorem. A checker of it verifies the displayed generator identities,
+their membership in `I_Gamma`, the historical projector/carrier identity,
+and the trace discrepancy. The proof here supplies those checks in exact
+algebra. No new scientific verifier or formal run is introduced.
+
+#### Raw nonuniqueness on the adopted complete class
+
+The words `a,b,c` all lie in `I_Gamma`. Direct composition gives
+
+```text
+a b(x) = b a(x)
+       = (-p4p,-p1p,-p4,-p1,-q,-r).
+```
+
+Hence the admitted ambient pair `(a,b)` gives
+
+```text
+K0 = K_AMB(a,b) = 0.
+```
+
+The admitted ambient pair `(a,c)` is exactly the historical operator:
+
+```text
+K1 = K_AMB(a,c) = K_hist,
+Tr_V(K0^2)=0,
+Tr_V(K1^2)=-881/8.
+```
+
+In particular `K1!=0`. The discrepancy excludes equivalence under the
+complete adopted relation, and even under every invertible intertwiner,
+since ordinary trace is similarity invariant. Both operators use the same
+carrier, projection, form, normalization, and candidate mode. Their
+distinction cannot be attributed to different carrier dimensions or a free
+scalar normalization.
+
+CURVATURE-OPERATOR-CANONICAL [T] is the exact conclusion that
+`K_adm/~K` is nonempty and has at least two elements:
+
+```text
+RAW_NONUNIQUE.
+```
+
+The intrinsic historical presentation gives the same `K1` by the inherited
+Gauss-split theorem and is collapsed as exact equality. No full class count,
+canonical representative selection, preferred operator, or continuum
+interpretation is part of the conclusion.
+
+### DEF-CURVATURE-TRACE-SUBRECORD
+
+Define one complete formal subrecord `GeometryData_space_trace` with these
+fields and no implicit additional fields:
+
+```text
+carrier_id   = the X,H,V carrier of the candidate and canonical-basis definitions above,
+basis_id     = the canonical orbit basis of the canonical-basis definition above,
+gram         = its exact rational counting Gram matrix G,
+trace_square = a rational scalar t.
+```
+
+The carrier and basis identifiers refer to the full definitions above.
+They do not stand for an unspecified physical space. Equality is literal
+equality of those identifiers, entrywise equality of the Gram matrices,
+and equality in `Q` of the scalar. Define the adopted readout
+
+```text
+R_space(K) = (carrier_id,basis_id,G,Tr_V(K^2)).
+```
+
+Every admitted operator is a finite rational endomorphism, so its ordinary
+trace is defined exactly. Thus `R_space` is total on all of `K_adm`.
+Equivalent presentations give the same operator and hence the same
+record. More generally the scalar trace is invariant under every
+intertwiner; the declared relabelings also preserve the carrier form.
+The readout therefore descends to
+
+```text
+bar(R_space): K_adm/~K -> GeometryData_space_trace.
+```
+
+But `R_space(K0)` and `R_space(K1)` have unequal trace-square fields, zero
+and `-881/8`. Its descended image has at least two values. Consequently
+CURVATURE-TRACE-READOUT-UNIQUE [F] is the failed single-output assertion:
+
+```text
+TRACE_READOUT_UNDERDETERMINED.
+```
+
+This is a complete negative decision for the declared trace subrecord.
+It is not a failure of totality or representation independence, and it
+does not rule out a different declared readout that identifies these
+operators. It supplies no complete `GeometryData`, physical spatial
+curvature, empirical geometry, or positive L1-to-L2 realization. No
+operator is selected after inspecting its trace. A constant or otherwise
+coarser new readout would be a different future definition, not a repair
+of this failed uniqueness assertion.
+
+The inline proof closes the former raw operator obligation by NONUNIQUE
+on this now-declared complete class. It neither proves uniqueness of the
+adopted definition nor exhausts all conceivable physical curvature models.
+The trace readout is a complete specified subrecord of GeometryData, with
+its carrier, basis, Gram and scalar fields owned by the definitions above;
+no unlisted GeometryData field is supplied.
+
+GATE-L1-L2-CURVATURE-CANONICAL now belongs to
+CURVATURE-TRACE-READOUT-UNIQUE and is FIRED_NEGATIVE: the total readout
+descends but has at least the two exact outputs with scalar fields 0 and
+-881/8. Raw nonuniqueness alone is not a claim against every possible
+geometric readout. A different coarser readout would be a new definition,
+not a repair or reopening of this negative result.
+
+Falsifiers of the raw theorem are an admitted architecture relabeling
+moving a word operator, failure of the complete finite construction or
+canonical matrix equality, inadmissibility of either witness, or failure of
+the inherited historical trace. The readout negative is overturned only by
+failure of its total factorization or of the displayed unequal outputs
+under its fixed equality. No new formal probe or scientific run establishes
+these deductions: the proof is inline and the historical evidence is
+unchanged. The old -21/8 proposal remains falsified.
+
 
 The trace-kernel route isolates a sharper L1 closure question.
 
@@ -586,14 +947,562 @@ admissible class, equivalence, completeness, or layer bridge is unfixed or
 inexact.
 
 This forcing obligation neither closes nor duplicates
-CURVATURE-OPERATOR-CANONICAL [O], which asks for uniqueness of the operator
-class rather than for a common Hodge-home property of every admissible class.
+CURVATURE-OPERATOR-CANONICAL [T], which decides raw nonuniqueness
+on the adopted class rather than a common Hodge-home property.
 Its named
 GATE-L2-L1-TRACEKERNEL-HODGE-HOME records the still-open selection from the
 complete admissible L2 spatial-commutator class back to the exact L1
-trace-kernel property. It cannot advance until the upstream carrier and
-complete class tracked by CURVATURE-OPERATOR-CANONICAL are public; the gate
-adds no carrier identification and selects no curvature operator.
+trace-kernel property. The native-word class is now public, but its
+818-dimensional V is not the three-dimensional W_5. The required same-carrier
+bracket and layer bridge remain unfixed; the gate remains open. The raw
+negative does not identify these carriers or decide their Hodge-home relation.
+
+### Native readback, reader streams and conditional recording
+
+The following seven claims close the stated mathematical construction and
+classification scopes. State information, long-run mathematical streams,
+finite implementation and physical completion remain separately typed.
+Universal statements rest on the linked exact proofs, not on extrapolating
+the finite audits. No completed public evidence file changes in this fold.
+
+### DEF-NATIVE-READER-STREAM
+
+
+The complete source is a pointed origin-zero U-orbit ((n,x_n)) and a fixed
+descriptor (kind,L,Sigma,f,parameters). Sigma is a named finite alphabet;
+L is positive for window kinds. The kind specifies exactly one input:
+checkpoint x_n in X14; decorated checkpoint (x_n,theta_n); the legal
+past-and-current length-L TM word; or the legal length-L decorated
+checkpoint word on the declared synchronized carrier. Checkpoint domains
+contain every stated checkpoint; clock-word domains contain every legal
+TM factor; native-word domains contain every legal factor of the declared
+synchronized carrier. The fixed finite function f is total on that domain.
+
+The descriptor and parameters remain unchanged throughout the orbit.
+A rational constructor parameter or retained source vector is explicit
+input; its acquisition is an additional premise, not performed by the
+projection. The index n labels the stream but is not an argument supplied
+to f. Descriptor equality is literal equality of all these data.
+
+Output at every natural index has precisely (status,symbol):
+(UNAVAILABLE,NONE) before warmup and (VALUE,f(input)) afterwards.
+Checkpoint kinds begin at n=3, clock windows at n=L-1, and wholly
+synchronized native windows at n=L+2. Output equality is literal
+tag-and-symbol equality at every index. No shift quotient, fractional
+symbol allocation, changing reader, or feedback to U is allowed.
+Off-domain runtime calls return ERROR with no accepted symbol and are
+outside the legal-orbit source domain. ERROR, UNAVAILABLE and SILENT are
+distinct. Administrative tags are not accepted symbols. Cell/archive
+state is a separate resource, not an implicit stream field.
+
+GATE-L1-L5-NATIVE-READER-STREAM is adopted, owner DEF-NATIVE-READER-STREAM,
+endpoints L1 to L5, kind DEFINITION_PROJECTION. This definition owns the
+named L1 architecture, chart, invariant/recurrence, phase and conditional
+incidence inputs. Their crossings occur through this gate. The L5
+spectrum row depends on this L5 definition rather than adding ungated
+direct L1 dependencies. It is a total mathematical projection, not a
+physical realization gate or a new physical O owner.
+
+Symbol density is its count divided by available prefix length when the
+limit exists. Acceptance for LOW/HIGH/SILENT is LOW or HIGH; an accepted
+limit is asserted only at positive limiting acceptance density. Empty
+acceptance is UNDEFINED. Conditioning on a bit uses the same orbit's
+specified bit subsequence. Convergence and exact values are row 4 theorem
+content, not part of the definition. Incorrect input slices, legal-domain
+totality, warmup, equality, changing parameters or feedback violate this
+contract. No first-outcome probability law is supplied.
+
+### 1. U-NATIVE-CHART-AND-QDD-READBACK [T]
+
+Action layer: L1.
+
+**Scope and statement.** Let `F_n(x0)` be the checkpoint obtained from an
+origin-zero head `x0 in F5^6` by the unchanged native update, including its
+existing counter `n` and `theta_n=s_2(n) mod 2`. Put
+
+```text
+S(0)=0, S(m)=m-S(floor(m/2)),
+t_n=(-1)^(n-3), h_n=(-1)^(n+theta_(n-1)),
+N_n=S(floor((n-1)/2))-1.
+```
+
+For every `n>=3`, the reachable sheet is
+`X_n={x:z(x)=4-3 theta_(n-1)}`. The following map is a bijection from
+`X_n` to `F5^5` and is constant along each synchronized native trajectory:
+
+```text
+L(n,x)=(alpha,beta,gamma,delta,epsilon),
+alpha=t_n(p1+p1p),       beta=t_n(p4+p4p),
+gamma=h_n(p1-p1p-2),     delta=h_n(p4-p4p-1),
+epsilon=t_n r-N_n.
+```
+
+Its inverse sets `A=t_n alpha`, `B=t_n beta`, `C=2+h_n gamma`,
+`D=1+h_n delta` and then
+
+```text
+p1=3(A+C), p1p=3(A-C), p4=3(B+D), p4p=3(B-D),
+r=t_n(epsilon+N_n), q=4-3 theta_(n-1)-A-B-r.
+```
+
+All these checkpoint operations are in `F5`. Encoding the same labels at
+another clock gives the exact trajectory jump; the digit-sum and finite
+alternating-sum calculations require logarithmically many integer
+arithmetic steps in that clock, without speeding up physical time.
+
+For every preparation subset `D0` and every required initial record
+`rho:D0->Y`, recovery from the indexed current native state at any
+`n>=3` exists if and only if `rho` is constant on every admitted `F_3`
+fibre. The synchronized chart transports this criterion to every later
+time. The full pointed orbit retains its head and is a different input.
+
+For the inherited complete five-field QDD record, equality is piston
+equality up to simultaneous sign. The supported heads
+`(4,1,0,0,0,0)` and `(2,1,1,2,1,0)` both become
+`(1,4,0,0,0,0)` after one tick but have original LOW values `0` and
+`9/14`. Hence universal late readback fails. A separately added static
+label of initial-phase classes `{0},{1,2},{3,4}` restores all five original
+fields at every time; three distinguishable labels are necessary and
+sufficient. Full-head recovery instead requires and is attained by five
+labels. These are correctly initialized extensions, not new native
+coordinates. Without added state, the maximum full-QDD-readable domain
+has `125*4+3000*2=6500` of the 15625 heads, also attainable using supported
+heads only; restricting the domain is an explicit change of preparation.
+
+**Proof and dependencies.** The exact coordinate inverse, update identity,
+merger criterion, fibre multiplicities and optimality witnesses are in
+[native readback PROOF](../probes/P-QDD-U-NATIVE-READBACK-1/PROOF.md),
+sections 1-6. Dependencies are `DEF-ARCHITECTURE`,
+`KERNEL-Z6-SYNCHRONIZATION`, the inherited QDD algebraic record and its
+sign-equality lemma. No saved-label physical implementation is a dependency
+or conclusion.
+
+**Falsifier.** An exact failure of either chart inverse or its update law;
+a nonconstant initial record recoverable on one merged fibre; a failed
+specified merger or memory lower-bound witness; or an incorrect
+three/five-label bound, fibre multiplicity, or 6500 maximum.
+
+### 2. U-NATIVE-INVARIANT-AND-NOWRITE [T]
+
+Action layer: L1.
+
+**Scope and statement.** On `X14={x:z(x) in {1,4}}`, define
+
+```text
+V(x)=(p1+p1p, p4+p4p,
+      chi(z)(p1-p1p-2), chi(z)(p4-p4p-1)),
+chi(1)=1, chi(4)=-1, R(x)={V(x),-V(x)}.
+```
+
+For every one of the 6250 checkpoints and both control bits,
+`V(next)=-V(x)`. The complete free-control graph has exactly the 313
+`R` fibres as its strongly connected components: 312 of size 20 and one
+of size 10. Every invariant fixed checkpoint reader factors uniquely
+through `R`; this includes nonlinear readers. Conversely a fixed
+correlated preparation encodes and reads each of the 313 labels. This is
+static coding, not a derived write interaction or independent ready state.
+
+Every actual synchronized chart trajectory visits its whole R fibre
+arbitrarily late, by the primitive clock-word proof. Therefore a fixed
+checkpoint reader eventually equal to one value already has that value
+at every point of the fibre. It cannot change from a distinct synchronized
+BLANK to a permanent WRITTEN value under unchanged U. This row asserts
+recurrence, not long-run density. Finite retention is not ruled out.
+Clock-dependent readings, outside memory, changed context and interventions
+lie outside this fixed-checkpoint class.
+
+R is not the QDD record despite the coincident cardinality 313: one R
+fibre has different current LOW values 1/16 and 1/136. The separate
+original-head merger obstructs universal late recovery of the original record.
+
+**Proof and dependencies.**
+[MEMORY-PROOF](../probes/P-U-NATIVE-MEMORY-EVENT-1/MEMORY-PROOF.md),
+[CLOCK-PROOF](../probes/P-U-NATIVE-MEMORY-EVENT-1/CLOCK-PROOF.md), and
+[FREQUENCY-PROOF](../probes/P-U-NATIVE-MEMORY-EVENT-1/FREQUENCY-PROOF.md).
+Use the preceding chart row and the inherited QDD record for the final
+comparison. Graph connectivity proves the invariant classification;
+primitive word containment proves actual repeated visits and the eventual-constancy obstruction.
+
+**Falsifier.** A failed transition identity, component count or universal
+factorization; failure of whole-fibre recurrence; or an admitted eventually constant fixed checkpoint reader differing at an earlier synchronized checkpoint.
+
+### 3. U-FINITE-HISTORY-CLOCK-PHASE [T]
+
+Action layer: L1.
+
+**Scope and statement.** For fixed finite `L`, a causal clock reader sees
+only the legal word `(theta_(n-L+1),...,theta_n)`, using the same function
+at every occurrence. It receives no counter, future bits, growing memory,
+or changing source parameter. For every `k>=1`, length
+`L_k=5*2^(k-1)` suffices to reconstruct `n mod 2^k` at every eligible
+endpoint. In particular 640 bits suffice for phase modulo 256; minimality
+is not claimed. Empty-buffer acquisition returns UNAVAILABLE until full,
+and the accepted interface rejects illegal complete words and nonbinary
+input. The retained finite buffer is an admitted observer resource.
+
+
+For M=2^k a length-3M word recognizes phase and three causal parent bits,
+whose six legal triples give 6M labels. Their frequencies are L5 row 4.
+The residue assignment LOW for r<a, HIGH for a<=r<b, SILENT otherwise is
+a fixed finite construction for integers 0<=a<=b<=M, b>0. Native histories
+supply theta_(n-1) through z_n=4-3 theta_(n-1), so phase decoding needs
+the +1 correction; a 640-checkpoint window is wholly synchronized by n=642.
+No limiting frequency is claimed in this L1 row.
+
+**Scope and statement.** On each fixed synchronized chart trajectory,
+every finite legal decorated-checkpoint word recurs with bounded gaps.
+For every fixed finite `L` and every fixed reader of
+
+```text
+((x_(n-L+1),theta_(n-L+1)),...,(x_n,theta_n)),
+```
+
+eventual equality to one value implies equality to that value at every
+fully synchronized window, including all earlier such windows. A window
+is fully synchronized when `n>=L+2`. Therefore such a reader cannot move
+from a distinct BLANK value at a fully synchronized window to a permanent
+WRITTEN value under unchanged U. UNAVAILABLE during filling is not BLANK.
+The statement allows arbitrary nonlinear fixed readers and every finite
+length, but not a length growing with time, an external persistent label,
+changed context or intervention. It excludes neither finite retention nor
+a message already present in preparation.
+
+The original-head merger in row 1 also survives any finite window once
+the entire window lies at or after their common tick-one successor.
+Equal subsequent inputs cannot
+recover the two different original records. This is distinct from a full
+pointed-orbit functional, which still sees the head.
+
+**Proof and dependencies.**
+[finite-history MEMORY-PROOF](../probes/P-U-FINITE-HISTORY-EVENT-1/MEMORY-PROOF.md),
+sections 2-5. The primitive 100-letter clock from row 2 maps through a
+length-two morphism to each decorated native trajectory. Primitivity
+places every legal word in all sufficiently large substitution blocks.
+Recurrence then transports eventual constant readout back to every
+earlier legal window. Single-point positive frequency alone would not
+justify the finite-word recurrence step.
+
+**Falsifier.** A legal synchronized finite word without the proved
+recurrence; an admitted fixed finite-window reader eventually constant
+but different on an earlier fully synchronized window; or successful
+original-record separation on the two identical late-window inputs.
+
+
+Phase proof: P-U-FINITE-HISTORY-EVENT-1/CLOCK-PROOF.md, using five-bit
+recognition and recursive decimation. Additional falsifiers are a legal
+wrong-phase window, incorrect native +1 adapter, or wrong finite residue
+allocation. Both phase and finite-window no-write have the single primary
+evidence bundle P-U-FINITE-HISTORY-EVENT-1; their L1 dependencies are
+native synchronization and the preceding chart/invariant rows.
+
+### 4. U-NATIVE-READER-STREAM-SPECTRA [T]
+
+Action layer: L5.
+
+**Scope.** Exactly the L5 DEF-NATIVE-READER-STREAM domain and literal
+equality above. Every limiting result is an all-prefix statement after
+finite warmup. No physical occurrence is inferred.
+
+For every origin-zero synchronized chart trajectory, every point of its
+`R` fibre has positive all-prefix limiting density, uniformly `1/20` on
+nonzero fibres and `1/10` on the zero fibre. The independent all-prefix
+clock proof uses the primitive 100-letter substitution, not stationarity
+alone. Let `F_D={a/b:0<=a<=b<=D}`, as a set of reduced rational values.
+Complete per-orbit spectra for fixed present-state readings are:
+
+| Read domain and statistic | Nonzero `V` | Zero `V` |
+| --- | --- | --- |
+| Binary checkpoint LOW density | `k/20`, `0<=k<=20` | `k/10`, `0<=k<=10` |
+| `(checkpoint,driver bit)` LOW density | `k/60`, `0<=k<=60` | `k/30`, `0<=k<=30` |
+| LOW density conditional on either bit | `k/30`, `0<=k<=30` | `k/15`, `0<=k<=15` |
+| Absolute LOW density restricted to either bit | `k/60`, `0<=k<=30` | `k/30`, `0<=k<=15` |
+| LOW fraction among positive-density accepted symbols | `F_60` | `F_30` |
+| Accepted LOW fraction restricted to either bit | `F_30` | `F_15` |
+
+Each atom receives one whole LOW/HIGH/SILENT assignment. Empty acceptance
+is UNDEFINED. These are complete per-orbit spectra, not an assertion that
+one global reader realizes independently prescribed targets on every
+overlapping orbit. Eight of the 22 supported QDD LOW values lie outside
+even `F_60`: `1/256,1/176,1/136,1/96,9/224,9/104,9/64,49/64`.
+Thus the complete supported law is unavailable in this fixed-input class.
+The equal cardinalities 313 do not identify `R` with the original QDD
+record: one `R` fibre already contains current LOW values `1/16` and
+`1/136`.
+
+
+Every legal finite Thue–Morse factor has an exact all-prefix rational
+frequency. For `M=2^k`, a length-`3M` word recognizes `6M` disjoint
+classes of equal density `1/(6M)`, specified by phase and three causal
+parent bits. Taking the union over all finite clock-word lengths gives
+exactly
+
+```text
+unconditional LOW densities = {j/(3*2^k): k>=0, 0<=j<=3*2^k},
+positive-acceptance LOW ratios = Q intersect [0,1].
+```
+
+This union is not the spectrum at each individual length and is not the
+spectrum of all checkpoint-history readers. Given any rational `a/b` in
+`[0,1]`, choose `M=2^k>=b`; from decoded residue `r` output LOW when
+`r<a`, HIGH when `a<=r<b`, SILENT otherwise. Every `M` consecutive
+available ticks contain `a`, `b-a`, and `M-b` symbols respectively.
+The accepted ratio is `a/b`, with no supplied absolute counter.
+
+On native synchronized histories `z_n=4-3 theta_(n-1)` gives the
+preceding bit. Decoding that word requires a **+1** phase correction.
+A length-640 checkpoint window is wholly synchronized by `n=642`.
+The family contains all 22 supported QDD rational values as parameters;
+this does not derive which parameter a preparation supplies.
+
+
+For the fixed conditional incidence word e_v of row 6, capture/retention,
+complete Cartesian incidence and its fixed slot convention are explicit
+premises. The L5 reading is admitted through the same definition with the
+captured source as a fixed parameter. With A,B,D,Delta as in row 6:
+The source is fixed and natural ticks are observed consecutively after
+valid warmup. For prefix length `n=qM+t`, and `T` the actual `t`
+consecutive residual addresses from the chosen start, exact counts are
+
+```text
+C_LOW=qA+|O_LOW intersect T|,
+C_HIGH=qB+|O_HIGH intersect T|,
+C_ACC=qD+|(O_LOW union O_HIGH) intersect T|.
+```
+
+Bounded remainders give the formal-word densities `A/M,B/M,D/M`, and,
+for `v!=0`, accepted ratio
+`A/D=s^2/[4(5Q-s^2)]`, agreeing with the inherited QDD LOW value.
+For complete cycles, with LOW/accepted counts `L,N`, exactly
+`4 L Delta=N s^2`. This equality is **not** an arbitrary-prefix identity:
+for source `1000` at first address zero, `L=N=1`, `Delta=4`, and
+`16!=1`. When `s=0,v!=0`, no address emits LOW and some emit HIGH;
+when `v=0`, there is no accepted symbol and the ratio is UNDEFINED.
+Neither `kappa=0` nor a centered five-vector's zero sum replaces `s=0`.
+
+
+**Primary evidence:** P-U-FINITE-HISTORY-EVENT-1 for complete causal clock
+spectra. Its CLOCK-PROOF supplies pair-word frequencies, the 6M equal-mass
+classes and the all-prefix extension. The inherited instantaneous
+classification and primitive 100-state clock proof remain explicitly
+evidenced by P-U-NATIVE-MEMORY-EVENT-1/CLOCK-PROOF.md and
+FREQUENCY-PROOF.md. The conditional periodic-word corollary is
+P-U-PREPARATION-EVENT-RECORD-1/INCIDENCE-PROOF.md section 6.
+A single primary EVIDENCE entry must not conceal those proof sources.
+
+**Dependency:** DEF-NATIVE-READER-STREAM at L5. Its owned projection gate
+transports the named L1 chart/invariant, phase and incidence inputs.
+**Falsifier:** a wrong all-prefix atom/factor limit, an exact member or
+nonmember error in either complete spectrum, a whole-atom allocation
+failure, or failure of the fixed-source consecutive-tick count/remainder
+identity. Arbitrary invocation schedules are outside that corollary;
+empty acceptance stays UNDEFINED. First-hit ordering is separate from
+every limiting law here.
+
+### 5. U-NATIVE-APPARATUS-HISTORY-FACTOR [T]
+
+Action layer: L1.
+
+**Scope and statement.** Split the native source as four pistons `p` and
+the observed port `A=(q,r)`. A ready `a in F5^2` is common and independent
+of `p`; all runs have the same binary driver `b`. Put
+`kappa=sum(p) mod 5`, `z=kappa+q+r`, and `pi(x)=(z,q,r)`. The native
+generators close exactly on this quotient:
+
+| Generator | New `(z,q,r)` |
+| --- | --- |
+| `a` | `(z,q,r)` |
+| `b` | `(-z,-q,-r)` |
+| `c` | `(2-z,1-q,-r)` |
+| `d` | `(2-z,1-q,1-r)` |
+| `e` | `(3-z,2-q,1-r)` |
+
+The selector also depends only on `z,b`. Thus the commuting identity and
+induction prove the following complete, all-time quantifier:
+
+```text
+for every common ready a, common infinite driver b,
+p,p' with equal kappa, every set Y, and every
+F:image(H_(a,b))->Y,
+F(H_(a,b)(p))=F(H_(a,b)(p')),
+where H_(a,b)(p)=(A0,A1,...).
+```
+
+No linearity, computability, causality or finite-memory restriction is
+needed for this functional statement. An arbitrary deterministic causal
+processor with common source-independent initial memory and other common
+inputs likewise has identical reader choices, symbols, records, stopping
+decisions on equal histories. Its
+memory may be unbounded. Additional source access and feedback are outside
+the contract.
+
+For the fixed-origin TM driver the maximal label is `kappa` at 24 readies;
+at ready `(3,0)` it identifies just `2~4`. Complete histories are already
+classified by `(A0,A1,A2)`. Minimum recognition horizons are tick 1 for
+21 generic readies, tick 2 for `(0,0),(3,3),(1,3)`, and tick 1 for the
+four observable classes at `(3,0)`; five-class recovery at the latter
+ready is impossible. For every source subset and source quantity, exact
+readback exists if and only if that quantity is constant on these classes.
+
+Late tails have four classes at `(0,0),(3,0),(3,3),(1,3)` and five at
+the other 21 readies. At the first and last of those four the late
+identification is `0~1`; at the middle two it is `2~4`. At `(0,0),(3,3),
+(1,3)` the missing distinction occurs at tick 2 and is absent from every
+tick-three-and-later tail. Full-history storage can retain it.
+
+Sources `1000` and `2400` have the same `kappa` and original LOW
+`1/16` versus `1/96`; `0000` and `1400` have the same `kappa` but
+different support tags. They cannot be separated by this port or any of
+its history processors, for any common ready/driver. Their full states
+nevertheless never merge, since equal quotients select common bijective
+generators forever. The augmented port `(z,A)` reveals `kappa` at tick
+zero but still fails both same-sum witnesses. The full pointed orbit can
+read its original source directly. None of these observations implies a
+no-go for every apparatus split or a physically selected capture axiom.
+
+**Proof and dependencies.**
+[NATIVE-PROOF](../probes/P-U-PREPARATION-EVENT-RECORD-1/NATIVE-PROOF.md),
+sections 2–9, the native generator definitions and inherited QDD record.
+This all-time induction extends beyond the earlier finite U-induced
+reader/delay census and does not reinterpret its system-side conditioning.
+
+**Falsifier.** Failure of the commuting identity, complete TM class or
+minimum-horizon/tail classification; a source quantity recovered despite
+being nonconstant on an observable fibre; divergence of any stipulated
+common-input processor on equal port histories; or failure of either
+exact QDD/support or full-state nonmerger witness.
+
+### 6. QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD [T]
+
+Action layer: L1.
+
+**Scope and statement.** This is an explicit conditional extension. Capture
+and retain before tick one the **four-coordinate** balanced source
+`v in V={-2,-1,0,1,2}^4`, with `ell=(0,1,2,-2,-1)`. Use ordinary
+integer sums `s=sum_(i=0)^3 v_i`, `Q=sum_(i=0)^3 v_i^2` and
+`Delta=5Q-s^2`, not a field sum or a 31-coordinate source. Admit one LOW
+channel of signed amplitude `s` and five copies of each of the six pair
+differences. An integer amplitude `a` occupies the complete Cartesian
+square `{0,...,|a|-1}^2`, retaining its sign. These choices were made with
+the QDD target known; they are not independently derived detector laws.
+
+For every real four-vector the exact quadratic identities are
+
+```text
+sum_(i<j)(v_i-v_j)^2=4Q-s^2,
+A=s^2, B=5(4Q-s^2), D=A+B=4Delta,
+Delta>=Q, with Delta=0 iff v=0.
+```
+
+For integer sources the declared complete Cartesian fibres have those
+cardinalities. Their fixed 544-slot embedding applies only to `V`: 64
+LOW slots `r=8a+b`, 480 HIGH slots
+`r=64+16(5j+c)+4a+b`, and 480 empty padding slots give `M=1024`.
+The ordered pairs at indices `j=0,...,5` are
+`(0,1),(0,2),(0,3),(1,2),(1,3),(2,3)`, and copies have `c=0,...,4`.
+LOW row and column indices `a,b` range from 0 through 7; HIGH indices
+range from 0 through 3. LOW occupancy requires `a,b<|s|`; HIGH occupancy
+requires `a,b<|v_i-v_k|` for the pair `(i,k)` at index `j` and copy `c`.
+The bounds `|s|<=8` and
+`|v_i-v_j|<=4` prevent truncation. The label word `e_v(r)` is
+single-valued LOW/HIGH/SILENT, not a physical exclusive occurrence.
+
+Given ordered direct TM-bit acquisition and the row-3 phase reader with
+`k=10`, 2560 past-and-current bits address `n mod 1024`. The proved
+native `z` adapter has the separate +1 correction. The executable record
+wrapper uses direct bits; a separate end-to-end `z` wrapper is not claimed.
+The resulting e_v is a finite single-valued residue word. Its limiting
+count interpretation belongs exclusively to L5 row 4 through the declared
+projection. At integer s=0, v!=0 there are no LOW slots and some HIGH
+slots; at v=0 no accepted slot and no accepted ratio. Neither kappa=0 nor
+a centered five-vector's zero sum is the hypothesis s=0. The static
+cardinality ratio A/D equals the inherited QDD LOW expression on v!=0.
+
+The four-coordinate common shift is not a symmetry: `1000` to `2111`
+changes LOW from `1/16` to `5/8`. Indeed
+`s'=s+4c`, `Q'=Q+2cs+4c^2`, `Delta'=Delta+2cs+4c^2`.
+The balanced lift and reference choice are part of the input contract.
+The 31 channel outputs cannot be substituted back as the source dimension.
+
+For storage, additionally supply fresh cells `{BLANK,LOW,HIGH}` and an
+archive. The control LOW or HIGH swaps that symbol with BLANK and fixes
+the third; SILENT acts as identity and appends nothing. Accepted writes
+require a fresh BLANK cell. Append the exact tuple
+`(source_before,source_after,phase,fine_slot,sign,event,old_cell,written_cell)`;
+the retained source does not change, and every earlier record is preserved.
+A passive reread does not step or append. These are conditional
+permutation and induction theorems, not physical allocation/reset or
+reversibility of the whole growing-buffer/archive protocol.
+
+The archived first symbol is not selected by the count limit. Source
+`1000` with onsets 3072 and 3136 has first LOW and first HIGH respectively,
+while the corresponding L5 limits are recorded only in row 4. Phase-zero-only and
+phase-64-only invocation schedules give all LOW and all HIGH. Thus neither
+arbitrary calendars nor a probability law for fresh preparations follows.
+Storage supplies persistence; the algebraic count ratio does not require
+that archive. No controlled comparison of old `0/900` instrument cases
+against `624/624` source vectors was performed.
+
+**Proof and dependencies.**
+[INCIDENCE-PROOF](../probes/P-U-PREPARATION-EVENT-RECORD-1/INCIDENCE-PROOF.md),
+sections 1-7; row 3 for phase addressing; inherited QDD factorization for
+the final algebraic comparison; the retrospective audit for the explicit
+four-dimensional, shift, prefix and layer distinctions. Row 5 explains
+why the extra captured source is not supplied by the natural port alone.
+
+**Falsifier.** A wrong four-dimensional identity or support decision; a
+truncated incidence fibre inside `V`; an addressed LOW at integer `s=0`;
+failure of the controlled-cell inverse, fresh-cell
+precondition, unchanged captured source, or preservation/passive reread of
+an older record. No physical realization is claimed for this falsifier.
+
+
+No retained source, buffer, archive or selected symbol feeds back to U.
+### 7. QDD-CONDITIONAL-INCIDENCE-FINITE-AUDIT [C]
+
+Action layer: finite L1 implementation audit.
+
+**Scope and statement.** The publicly pinned implementation agrees exactly with
+the specified four-dimensional incidence counts and supported QDD ratios
+on all 624 nonzero sources of `V`, with the zero source separately typed.
+Its complete source/address check covers `625*1024=640000` pairs. The
+causal record audit covers seven frozen sources at two frozen onsets,
+14336 stream updates, including complete payload and every-prefix checks.
+The corresponding phase audit covers 16384 generating contexts for 8188
+legal length-2560 words. The complete run has 1082026 exact comparisons;
+that total is not a count of independent experiments.
+
+The implementation claim assumes captured and retained `v`, complete
+Cartesian incidence, fixed slot order, correct ordered bit acquisition and
+consecutive observation. Fresh cells and an archive are additional
+premises for its record checks. It says nothing about all integer sources,
+all finite streams or a physically available apparatus. Universal
+identities and processor invariance belong to their L1 proof rows, and
+all long-run word frequencies to L5 row 4, not to extrapolation from this C row.
+
+**Evidence and dependencies.** The unchanged
+[verify.py](../probes/P-U-PREPARATION-EVENT-RECORD-1/verify.py),
+[EXPECTED](../probes/P-U-PREPARATION-EVENT-RECORD-1/EXPECTED.txt),
+[RUN](../probes/P-U-PREPARATION-EVENT-RECORD-1/RUN.md), and
+[RESULT](../probes/P-U-PREPARATION-EVENT-RECORD-1/RESULT.md).
+EXPECTED is 8352 bytes, SHA-256
+`5d56f69ce88fff71c433903cfa95305c2c5c7e51c1db16fb7064715f7338d7ef`.
+The finite comparison depends on the frozen implementation contract and
+inherited QDD formula; the independently stated mathematics is row 6.
+
+**Falsifier.** An exact admitted source/address discrepancy, wrong zero
+disposition, or failed frozen record/phase case. A byte or source mismatch
+without mathematical negation is integrity STOP. This bounded C status
+does not weaken the independently proved universal mathematics.
+
+#### Physical boundary
+
+The seven rows classify native readback, invariant storage, mathematical
+frequency capacity, fixed-window permanence, the natural apparatus port,
+and one conditional source-to-symbol/archive construction. The adopted L5 projection is mathematical. These rows do not
+select a physical reader, source capture, coupling, occurrence mechanism,
+post-measurement instrument, storage supply or reset. They do not close or create a QDD physical O owner or physical realization gate. The existing owners retain
+their exact obligations. No new retrospective hand example is passed off
+as a comparison in an earlier frozen run.
 
 The decoder is a typed partial interface, not a completed total map.
 Let K be the set of forward U-orbits. Let MatterData, GeometryData,
@@ -1311,7 +2220,8 @@ fired steps, whose commutator subgroup is exactly the fiber translation
 plane by FIRED-COMMUTATOR-NOGO. It sits on the silent pair a,c, never
 fired on the sheet, whose commutator reading is carried by
 CURVATURE-HISTORICAL-TRACE and KERNEL-MACRO-READING while
-CURVATURE-OPERATOR-CANONICAL remains open. The dimensionless proper-time
+CURVATURE-OPERATOR-CANONICAL proves raw nonuniqueness on its declared
+class; the declared trace subrecord is underdetermined. The dimensionless proper-time
 reading is delta tau hat = 2 pi/5 per tick by METRO-TICK. This dictionary
 claims no forcing, uniqueness, or completeness, and strengthens none of
 its component rows.
@@ -2114,6 +3024,337 @@ No result closes `QDD-INSTRUMENT-APPARATUS`: O2 is now split into
 generation or sampling remains STOP. The frozen classes license no conclusion
 about instruments outside them.
 
+### U-GALOIS-FIBER-CODE [T]
+
+The declared free linear representation of actual native U admits the
+following specified four-dimensional coherent code. All native coordinates
+in this construction lie in F_5; they are original checkpoint addresses.
+The representation and its coherent preparation are mathematical choices,
+with no physical amplitude-bridge adoption.
+
+Write X_s={x:sum(x)=s}. Summing the registered native generator formulas
+gives the two sheet maps tau_0=(0,4,0,4,4) and tau_1=(2,1,1,3,1).
+Each step on a known sheet is one affine involution, hence a bijection onto
+its target sheet. Actual origin-zero U has first bits 011. Its chronological
+words on s=0,1,2,3,4 are ace,bbd,cce,dbd,ebd. Thus its three-step
+restrictions, with the rightmost map applied first, are eca,d,e,dbd,dbe.
+All five are bijections onto X_1. There are 5^5 outputs, each with one
+antecedent in every initial sheet.
+
+Order the nonzero marks as h_k=(1,2,4,3). Select four output addresses
+Y_h=(h,0,0,0,1-h,0), and their sixteen antecedents on nonzero sheets:
+
+```text
+X_(1,h)=(2-h,1,3,4,h,1),
+X_(2,h)=(2-h,1,3,4,h+1,1),
+X_(3,h)=(0,0,-h,0,h+1,2),
+X_(4,h)=(0,0,-h,0,h+2,2).
+```
+
+Their traces are their first indices. At the first step s=1,3,4 meet at
+R_h=(2,1,h+3,4,-h,4), while s=2 reaches S_h=(4,3,h,4,-h,4). The second
+step sends these to X_(1,h),X_(2,h), and the third sends both to Y_h.
+Thus every h has the same prefix partitions: discrete, {1,3,4}|{2},
+{1,3,4}|{2}, indiscrete. Different h cannot meet before their distinct
+deterministic final outputs. The native support sizes are exactly
+16 -> 8 -> 8 -> 4. After time three, known-sheet bijectivity preserves the
+four distinct endpoints at every subsequent actual time. The origin-zero
+onset, coordinate placement and zero remainder are declared conventions;
+inverse words define initial addresses and are never executed.
+
+Let K=Q(j), Phi_5(j)=0, with principal embedding and conjugation j->j^4.
+Put g=1+2j+2j^4, so g is real, g^2=5, and c=g/10. In the explicitly
+shifted source chart A(v)=sum_(i=1)^4 v_i j^i=j iota_B0(v), the positive
+trace pairing Tr(A bar(B))/5 has Gram G=I_4-ones_4/5. This follows from
+Tr(1)=4 and Tr(j^m)=-1 for m not divisible by five. Its eigenvalues are
+1,1,1,1/5. In Galois order a=(1,2,4,3), choose
+
+```text
+H=((1,1,1,1),(1,-1,1,-1),(1,1,-1,-1),(1,-1,-1,1)),
+V(A)=c sum_(k,a) H_(k,a) sigma_a(A) e_(X_(a,h_k)).
+```
+
+The code is Q-linear in the source field A, with coefficients in K; it is
+not K-linear in field multiplication and is not a single native checkpoint.
+Its four source-basis columns also define a complex-linear extension.
+The free native pushforward is N_n e_x=e_(U^n x), with the common counter
+understood. For a prefix merger partition P_n, the cross-inner product is
+
+```text
+|c|^2 sum_(B in P_n) sum_(a,b in B)
+  conjugate(sigma_a(A)) sigma_b(A') sum_k H_(k,a) H_(k,b).
+```
+
+Column orthogonality gives the last sum as 4 delta_ab. Every a appears in
+exactly one block, and 4|c|^2=1/5. Thus all cross terms cancel and
+(N_n V)^*(N_n V)=G at every prefix n=0,1,2,3. Known-sheet bijectivity
+then proves this identity for every n>=3. No norm repair, filtering,
+postselection or extra forward operation is used. The square final map is
+W=N_3V, with y_k(A)=c sum_a H_(k,a)sigma_a(A), W^*W=G and
+W^-1=G^-1 W^*, where G^-1=I_4+ones_4. The inverse is a comparison map.
+
+In the complex scalar extension, replacing H/2 by any real orthogonal T
+gives the same prefix proof using sum_k T_(k,a)T_(k,b)=delta_ab.
+Rational T retains K-valued coefficients; T=I is already a distinct exact
+alternative. Native merger and isometry therefore do not uniquely select
+the character template. For the specified code, the address vectors
+b_a=(H_(k,a)/2)_k are orthonormal, not one common ready independent of a.
+The nonsingular Galois embedding matrix spans all four channels, so these
+specified preparation correlations are substantive. Physical preparation
+of them is not supplied, and no necessity theorem about all other codes is
+asserted. Evidence: probes/P-U-GALOIS-FIBER-CODE-1.
+
+### U-GALOIS-FIBER-QDD-SPLIT [T]
+
+For the specified code, the unique normalized real row invariant under the cyclic
+Galois permutation is +/-(1,1,1,1)/2: invariance forces equal entries and
+normalization fixes their magnitude. Its invariant output is
+y_0(A)=Tr(A)/(2g). The criterion is arithmetic, not a physical selection law
+or a claim that Galois symmetry is covariance of full U.
+
+Let ell(A)=Tr(A)/4 and A_perp=A-ell(A). The other three rows sum to zero,
+so D_0 W(A)=W(ell(A)) and (I-D_0)W(A)=W(A_perp), where D_0 selects
+Y_1, equivalently p1=1 on the four output addresses at time three.
+Since Tr(A(v))=-sum_i v_i and sum_(i=1)^4 j^i=-1, the source matrices are
+P_LOW=ones_4/4 and P_HIGH=I_4-P_LOW. Multiplication by j is a trace-form
+isometry carrying the registered unshifted LOW line Q*(-j^4) onto Q*1;
+this explicitly declared chart gives exactly DEF-QDD-PROJECTOR-LOW and
+DEF-QDD-PROJECTOR-HIGH. No change of physical context is inferred.
+
+The coefficient-form identities are W^*D_oW=G P_o; using the source
+G-adjoint gives the effect P_o itself. The two branch weights sum to
+v^*Gv, and LOW weight is |sum_i v_i|^2/20. Zero input and zero-weight
+branches are not divided by zero.
+
+Only conditional on the ideal COARSE operation sigma->D_o sigma D_o,
+operator transport between the source G metric and output counting metric
+gives, for every source operator rho,
+
+```text
+D_o W rho W^-1 D_o = W P_o rho P_o W^-1.
+```
+
+This follows by intertwining on both sides and retains all HIGH coherences.
+Fine discrimination of the three HIGH coordinates followed by forgetting
+removes off-diagonal entries and is a different operation. No physically
+realized coarse projection, exclusive event, occurrence, material pointer
+factor, durable record or reset is supplied. The code does not extend the
+adopted ALGEBRAIC-DMATTER domain. Evidence: probes/P-U-GALOIS-FIBER-CODE-1.
+
+### U-POINT-SOURCE-SHARP-READOUT-NOGO [T]
+
+Choose any five distinct native preparations at common clock phase and
+any finite deterministic native protocol. Each mark s has one endpoint
+f(s). A deterministically assigned history or terminal-time label may enlarge
+the mathematical output, without supplying physical history writing.
+Use N_f e_s=e_f(s) with counting forms and H=ker(sum:Q^5->Q),
+Pi=I_5-ones_5/5. Real or complex scalar extension is explicit for general
+real response weights. The final reader is a diagonal effect 0<=D<=I,
+including classical randomized postprocessing.
+
+If f(s)=f(t), the nonzero d=e_s-e_t in H has squared norm two but N_f d=0.
+Every subsequent linear branch map also annihilates it, so a complete
+instrument on all H cannot be restored from that endpoint. Conversely,
+injective f maps the five basis vectors to orthonormal vectors and is
+isometric. In this case N_f^*D N_f=diag(w), 0<=w_s<=1, so the complete
+effect class on H is F(w)=Pi diag(w) Pi. Every such tuple is obtained by
+assigning the corresponding responses to the five distinct endpoint labels.
+
+For any isometry V, P_C=VV^* and F=V^*DV, expansion gives
+
+```text
+F-F^2=V^*D(I-D)V+V^*D(I-P_C)DV.
+```
+
+Both terms are positive semidefinite. For binary D, sharpness is equivalent
+to D preserving ran(V), hence to D P_C=P_C D by self-adjointness. Apply this
+lemma to the inclusion of H, with P_C=Pi. If F(w) is sharp, the first
+term forces w_s(1-w_s)=0 on every coordinate, since each occurs in a
+contrast e_s-e_t. The second forces DH subset H; summing the coordinates
+of D(e_s-e_t) gives w_s-w_t=0. Thus all w_s are zero or all are one.
+The only sharp projectors are 0 and I_H over the full continuous class.
+
+With u_s=Pi e_s, the isomorphism Bv=sum_(i=1)^4 v_i u_i has B^*B=G
+and transports the registered LOW projector to (5/4)u_0u_0^*. This and
+its HIGH complement are nontrivial, so neither is realized by the stated
+five-point encoding and classical endpoint read. Other coherent encodings
+and non-diagonal coherent output operations are outside this class. In
+particular the sixteen-state Galois-fiber code is compatible with this
+theorem. No complete physical apparatus class is excluded. Evidence:
+probes/P-U-POINT-SOURCE-READOUT-DICHOTOMY-1.
+
+QDD-INSTRUMENT-APPARATUS [O] remains STOP. The native mathematical coherent
+carrier and exact algebraic split exist in the specified representation;
+their physical preparation/adoption, actual coarse event, occurrence law,
+persistent post-event record, reset/repetition, complete apparatus family
+and L1-to-L5 gate remain unresolved. Any L6 measure needs its separate gate.
+
+### Passive QDD observable family
+
+The owner selects a family of five parallel L1 algebraic views of the existing
+source `K_QDD`. A view chooses which block weights to return. It neither selects
+one realized outcome nor changes the source. The existing five-field
+`ALGEBRAIC-DMATTER` binding and its record remain unchanged.
+
+#### Definitions
+
+`DEF-QDD-PASSIVE-PARTITION-FAMILY` fixes the rational space `V=Q^4`,
+the displayed matrix `G=I_4-uu^T/5`, `u=(1,1,1,1)^T`, and
+`chi=(1,-1,-1,1)^T`. This extends the same matrix formula to V for the
+mathematical theorem without extending any existing decoder domain. Set
+
+```text
+P_t = uu^T/4,
+P_l = chi chi^T/4,
+P_r = I_4-P_t-P_l.
+
+A = {t,l,r}, with order t<l<r.
+P_S = sum_(a in S) P_a for S subset A.
+```
+
+The admitted family consists exactly of these partitions of A, with the
+literal displayed block order:
+
+```text
+PI-ALL    ((t,l,r))
+PI-TRACE  ((t),(l,r))
+PI-LEG    ((t,r),(l))
+PI-PAIR   ((t,l),(r))
+PI-ATOMS  ((t),(l),(r))
+```
+
+Partition equality is equality of its displayed ID and blocks. These are
+five views in one declared algebra, not all possible projector-valued readings.
+There is no quotient that identifies different partition IDs merely because
+their weights coincide at one source.
+
+`DEF-QDD-PASSIVE-WEIGHT-RECORD` defines `PassiveWeightRecord` with exactly
+five fields:
+
+```text
+partition_id: one of the five displayed IDs;
+support_state: ZERO_SUPPORT or SUPPORTED;
+total_weight: a nonnegative rational;
+block_weights: an ordered tuple of nonnegative rationals, one per block;
+normalized_weight_state: ZERO_DENOMINATOR or NORMALIZED(q),
+                         where q is an ordered rational tuple of the same size.
+```
+
+Only coherent tuples belong to this type. For a literal partition ID pi,
+let `Record_pi` be the following subclass. A ZERO_SUPPORT record has total
+weight zero, every block weight zero, and ZERO_DENOMINATOR. A SUPPORTED
+record has total weight m>0, nonnegative block weights summing to m, and
+exactly NORMALIZED(q) with q_B=w_B/m for every displayed block. Both tuple
+lengths are fixed by pi. No other tag combination or inconsistent total or
+normalization is admitted. `PassiveWeightRecord` is the disjoint union of
+the five `Record_pi` types, with the literal partition ID retained.
+
+Record equality is literal equality of all five coherent typed fields,
+including the partition ID, branch tags, tuple lengths and rational entries. No phase,
+ensemble, pointer, instrument, event ordinal or additional source argument is
+part of this record.
+
+`DEF-QDD-PASSIVE-READING-MAPS` defines for each fixed partition pi a map
+`R_pi:K_QDD -> PassiveWeightRecord`. Its only source input is the existing
+balanced head vector `v=beta_QDD(kappa)` from `DEF-QDD-BALANCED-PISTON`.
+Put `Q=v^T v`, `s=u^T v`, `ell=chi^T v`, and
+
+```text
+m_t = s^2/20,
+m_l = ell^2/4,
+m_r = ((v1-v4)^2+(v2-v3)^2)/2,
+m   = m_t+m_l+m_r = Q-s^2/5.
+w_B = sum_(a in B) m_a, for each displayed block B of pi.
+```
+
+For v=0 return `(pi,ZERO_SUPPORT,0,(0,...,0),ZERO_DENOMINATOR)`.
+For v!=0 return `(pi,SUPPORTED,m,(w_B)_B,NORMALIZED((w_B/m)_B))`.
+Zero-weight blocks remain zero; no branch state is produced or normalized.
+
+For a refinement sigma of pi, define the total typed map
+`C_(sigma,pi):Record_sigma -> Record_pi`. Its domain consists only of the
+coherent records carrying literal sigma ID. It retains the support and total
+weight fields, sums fine block weights into the displayed coarse blocks,
+and sums normalized entries on supported records. On zero records it
+retains ZERO_DENOMINATOR. It replaces the partition ID by pi. This is a
+map of algebraic records, not an operation on the source or a history.
+
+### QDD-THREE-ATOM-PARTITION-COMPLETENESS [T]
+
+At L1 on V=Q^4, `P_t,P_l,P_r` are pairwise orthogonal rational
+G-self-adjoint projectors of ranks 1,1,2 summing to I. Their eight subset
+sums form the complete Boolean algebra generated by these three atoms:
+`P_S P_T=P_(S intersection T)` and `I-P_S=P_(A minus S)`.
+Its projector-valued partitions into nonzero disjoint blocks are exactly
+the five displayed partitions, up to the fixed naming and order convention.
+Their quadratic weights are the displayed nonnegative rationals and sum
+to `v^T G v`. The readout maps are total on K_QDD, and all refinement
+maps on these coherent record types obey
+
+```text
+C_(sigma,pi) R_sigma = R_pi,
+C_(pi,tau) C_(sigma,pi) = C_(sigma,tau)
+```
+
+whenever sigma refines pi and pi refines tau. These are algebraic
+equalities of one-snapshot records, with no sampling interpretation.
+
+**Proof.** `u^T chi=0`, `u^T u=chi^T chi=4`. G acts as 1/5 on Qu and
+as the identity on its ordinary orthogonal complement; hence G commutes
+with the two displayed rank-one projectors. Their complement has rank two
+and is G-self-adjoint. Orthogonality proves all subset-product and complement
+identities; the three projectors are nonzero, so their eight sums are distinct.
+Every partition in this Boolean algebra partitions three nonzero atoms.
+There is one one-block partition, three choices of the singleton in a
+two-block partition, and one three-block partition. This proves completeness
+at the stated scope.
+
+Direct multiplication gives `v^T G P_t v=s^2/20`,
+`v^T G P_l v=ell^2/4`, and
+`v^T G P_r v=((v1-v4)^2+(v2-v3)^2)/2`.
+The sum is `v^T G v=Q-s^2/5`. Since `s^2<=4Q`, this is at least Q/5,
+strictly positive for v!=0; the zero branch is explicitly defined.
+Every operation is exact rational arithmetic. A coarser block is the
+disjoint union of its finer blocks, so both raw and normalized sums agree;
+associativity of finite addition proves the second refinement identity
+on every coherent Record_sigma, not only records in the image of R_sigma.
+Coarsening preserves nonnegativity, total weight and the normalization
+equations, so it lands in the stated Record_pi type. The explicit zero
+case lands in its coherent zero branch.
+
+This proof classifies only the declared three-atom algebra. It makes no
+claim that this is the complete physical apparatus class or the only
+possible passive reading of the source.
+
+### QDD-OBSERVABLE-READING-FAMILY [D]
+
+The owner adopts exactly the five `R_pi` maps as parallel named passive
+L1 weight-record views of K_QDD. Selection of pi is an explicit reading
+choice, not a consequence of J, the Gram matrix, or the completeness theorem.
+PI-TRACE has the same total and ordered LOW/HIGH weights as the existing
+algebraic QDD reading. The other partition IDs select different records
+with the explicit refinement relationships above. All admitted output
+fields, zero branches and overlap rules of this selected family are resolved.
+
+This is a complete selected passive record family on its named domain.
+It does not extend K_QDD, alter the five-field ALGEBRAIC-DMATTER binding,
+add a post-state instrument or actual event, select a physical apparatus,
+provide occurrence frequencies or a probability law, or cross from L1 to
+L4, L5 or L6. A normalized rational tuple here is data, not a measure claim.
+The three QDD physical O owners and their exact clauses remain unchanged.
+No conformance claim to the L4-to-L5 apparatus profile proposed in issue
+#539 is made, and no exception to that profile is created.
+
+The independent T row audits the selected maps. It does not choose or
+canonize the reading family. The source and partition data determine one
+record, with no output feedback into U.
+
+**Public audit.** The separately completed public probe
+`probes/P-QDD-PASSIVE-READING-FAMILY-1` audits the exact matrix
+identities, all finite native heads, the coherent record contract
+and refinement laws. The proof above supplies the universal
+algebraic statement; the owner adoption supplies the D choice.
+
 The time counter has an exact entropy anchor. The step matrix of
 J = 1 + zeta_5^2 induces a hyperbolic automorphism T_J of the torus
 R^4/Z^4 with eigenvalue moduli exactly phi, phi, phi^-1, phi^-1: the
@@ -2858,6 +4099,241 @@ their own open boundaries. COINCIDENCE-RECORD-FREQUENCY remains candidate-H
 and proposed physical contracts under `notes/` are not evidence for any
 closed physical claim here.
 
+### QDD-STABILIZER-UNCOMPUTE-POSTSTATES [T]
+
+This is a conditional L4 theorem for a selected rational apparatus carrier.
+It gives the complete system maps of a concrete reversible circuit and a
+retained-path control, including their different subsequent readings. It
+does not identify either circuit with a physical apparatus or the public
+integer update. The input projector targets were known when the design was
+chosen; absence of a projector gate in the implementation is not a physical
+selection argument.
+
+Use the ordered five-cell space
+
+```text
+V = {v in Q^5 : 1^T v = 0},   q(v)=v^T v,
+u_k=e_k-1/5,                 u_k^T u_k=4/5,
+u_i^T u_j=-1/5 (i!=j).
+```
+
+The full carrier has 40 coordinates `(path,flag,cell)` in
+`Q^4 tensor Q^2 tensor Q^5`; the invariant zero-cell-sum subspace has
+dimension 32. Prepared inputs are `|0,0>v`, including zero. Amplitude
+equality is literal ordered rational-coordinate equality. System-map
+equality means equality on every rational operator supported on V. It
+permits later system operations acting equally on every retained path,
+but excludes access to old fine paths or auxiliary records. Reduced-map
+equality does not identify complete auxiliary histories.
+
+For each setting `k in F_5`, let `g_k e_x=e_(k+2(x-k))`. Its four-cycle is
+`(k+1,k+2,k+4,k+3)`, and `g_k^4=I`. Set
+
+```text
+H = ((1, 1, 1, 1), (1,-1, 1,-1),
+     (1, 1,-1,-1), (1,-1,-1, 1)),
+W=H/2,  D_k=diag(I,g_k,g_k^2,g_k^3),
+V_k=(W tensor I) D_k (W tensor I).
+```
+
+Here V_k acts independently in each flag copy. Since `H^T=H`, `H^2=4I`
+and each g_k is a permutation, V_k is rational orthogonal and has fourth
+power identity. The circuit uses only this split, controlled routing and
+recombination. Its implementation contains no P or Q gate.
+
+For analysis, suppress k and let I denote identity on V, represented on all
+five cells by `Pi=I_5-11^T/5`. Define
+
+```text
+P=(I+g+g^2+g^3)/4=(5/4)u_k u_k^T,
+R=(I-g+g^2-g^3)/4,   C=I-P-R,   Q=I-P,   J_C=g C.
+```
+
+P,R,C are orthogonal projections of ranks 1,1,2 on V, with
+`J_C^T=-J_C` and `J_C^2=-C`. The first column of V_k gives the four
+prepared path maps
+
+```text
+K_0=P,   K_1=R,   K_2=(C+J_C)/2,   K_3=(C-J_C)/2.
+```
+
+Their effects are `P,R,C/2,C/2`, summing to I. These equations follow by
+expanding the signed Hadamard rows against the four group powers. The
+rank-one stabilizer target itself belongs to the earlier affine result;
+the new result is its concrete circuit and complete post-state transport.
+
+Let F flip the flag exactly on paths other than zero. The coherent
+uncompute circuit is `E_k=V_k^{-1} F V_k`. It is an orthogonal involution
+on all 40 modes and satisfies
+
+```text
+E_k(|0,0>v) = |0,0>Pv + |0,1>Qv.
+```
+
+Indeed V_k fixes prepared Pv, while prepared Qv has zero path-zero
+component. F leaves the first component's flag and flips the second;
+the inverse returns each component to path zero. With the flag initially
+one, the two flags exchange. Thus the ordered LOW/HIGH system maps are
+
+```text
+Phi_L^E(rho)=P rho P,        Phi_H^E(rho)=Q rho Q.
+```
+
+The retained-path control stops after `F V_k`, keeping the fine paths
+distinct. LOW is path zero; HIGH is the three other paths. Summing their
+outer-product maps, rather than their amplitudes, gives
+
+```text
+Phi_L^R(rho)=P rho P,
+Phi_H^R(rho)=R rho R + (C rho C + J_C rho J_C^T)/2
+           =T_k(rho)-P rho P,
+T_k(rho)=(1/4) sum_(a=0)^3 g_k^a rho g_k^(-a).
+```
+
+The cross terms between K_2 and K_3 cancel in the sum of their maps.
+Alternatively orthogonality of W cancels cross terms between different
+group powers. This proves equality on every operator, not only equality
+of weights. Both controls have first energies `q(Pv),q(Qv)`.
+Since `T_k^2=T_k` and `T_k Phi_L=Phi_L T_k=Phi_L`, the generally mixed
+HIGH map is also idempotent and has zero cross-compositions with LOW.
+It nevertheless differs from `Q rho Q`. This is outside the earlier
+pure single-branch class and does not contradict its conditional selectors.
+
+These same coarse maps hold for every rational orthogonal four-path
+mixer A whose first column has entries `+/-1/2`, every permutation sigma
+of the four powers, and
+`V_A=A^T diag(g^sigma(r)) A`, with its matching inverse for E.
+Writing `L_r=sum_t A_(t,r) A_(t,0) g^sigma(t)` gives `L_0=P` and
+
+```text
+sum_r L_r rho L_r^T
+  =sum_t A_(t,0)^2 g^sigma(t) rho g^(-sigma(t))=T_k(rho).
+```
+
+The prepared P component stays at path zero, so the uncompute proof also
+applies to every member. Positive balanced-column completions are precisely
+`W diag(1,B)` with `B in O(3,Q)`; independent row signs give the signed
+columns. This is completeness of this stated mixer class only. Fine path
+amplitudes and their full records need not coincide.
+
+Each interaction in a sequence uses fresh path/flag auxiliaries prepared
+in `|0,0>`; earlier auxiliaries are retained and are not fed back into the
+next circuit. For any ordered pair of settings and either control at each stage, the
+second-stage branch map is exactly `Phi_(l,b) Phi_(k,a)`. Its fine maps
+are the ordered products of the two stage Kraus maps, with all histories kept
+distinct. Linearity extends the assertion to further finite system
+operations subject to the same auxiliary-access restriction.
+
+There are exact discriminating preparations. If `(a,b,c,d)` is the
+g_k-cycle and `v=e_a-e_c`, then `q(v)=2` and first HIGH has normalized
+energy one. A subsequent LOW analyzer at b gives E energy fraction zero
+and R fraction `5/16`; at a the fractions are `5/8` and `5/16`.
+For `u_j`, `j!=k`, first HIGH is `15/16`. The joint HIGH_k then LOW_j
+fractions are respectively `225/256` and `75/256`; division by the same
+nonzero HIGH fraction gives `15/16` and `5/16`. To verify the latter,
+use `sum_l P_l=(5/4)I`, `P_k P_j P_k=P_k/16` and
+`Phi_H^R(P_j)=(5/16)Q_k`. These are energy fractions, or conditional
+density-model weights under that extra interpretation, not derived
+photon occurrence probabilities.
+
+The direct circuit and a separate projector/twirl reference agree on all
+16 ordered operators formed from the rational basis `e_i-e_4`, all
+5-by-5 ordered setting pairs, both controls at each stage, and all four
+binary branch histories. Full 40-coordinate and 32-dimensional checks
+audit reversibility and carrier invariance. The infinite mixer assertion
+rests on the displayed proof; the finite controls do not enumerate O(3,Q).
+The source result and exact replay are
+`probes/P-QDD-STABILIZER-APPARATUS-1/RESULT.md`.
+
+**Selected terminal-account corollary.** The same apparatus outputs may be
+swapped as complete signed vectors into fresh zero reservoirs. Choose a
+fixed channel order, rational quantum epsilon>0 and immutable context.
+Each appended batch retains every signed output, supplied energy, pulse
+index, local count and remainder, and lifetime mark ordinal. READ is
+identity; END closes the administrative run idempotently and forbids
+further deposits. RESET archives the entire old run and creates fresh
+local counters while preserving the old signed store, residuals and
+lifetime ordinals. Induction over these operations gives
+
+```text
+total supplied energy = total stored signed-vector energy
+                      =sum_(all runs and channels)(epsilon N+c).
+```
+
+Counts and remainders describe the same stored energy, not additional
+stores. The complete chosen account and induction are in the probe's
+`RECORD-CONTRACT.md`; its exact history audit is included in the same
+verifier. This is a composition of the selected model, not a new general
+reservoir theorem or a physical completion law. Fresh repeated pulses
+require explicit new energy. Two channels receiving epsilon/2 per pulse
+give zero marks on odd pulses and two on even pulses; reset after every
+pulse gives zero marks while retaining the energy in the archives.
+Aggregation of fine-channel counts occurs after their separate thresholds.
+An uncertainty interval crossing a threshold returns AMBIGUOUS. No noise
+law, detector calibration, old-wave reset or exclusive outcome is supplied.
+
+The decoder-source comparison also needs explicit typing. Its ordered
+sites Y0,...,Y4 map to phase labels through
+`beta=(0,1,3,4,2)`, `Y_j -> beta(j)`. For the centered source S(z), the
+permutation T_beta gives `T_beta S(z)=sum_(i<4) z_i u_beta(i)` and hence
+`q(P_2 T_beta S(z))=(sum z)^2/20`, with total
+`q(T_beta S(z))=z^T (I_4-11^T/5)z`. No implicit label transport is applied
+by the circuit. The decoder wave energy has the separate normalization
+`(1/2)z^T G z`; these quantities cannot silently be identified. This
+comparison supplies no physical L1-to-L4 gate, passive source preparation
+or calibration. Both branches remain in the full linear output.
+QDD-INSTRUMENT-APPARATUS and its two physical children remain open.
+
+### QDD-STABILIZER-COMMON-LATTICE-OBSTRUCTION [T]
+
+This second conditional L4 theorem concerns the same fixed default
+Hadamard circuit and carrier. Write `L=A_4={x in Z^5:sum x=0}`.
+The lattice `Lambda_*=(H^{-1} tensor I)L^4` satisfies
+
+```text
+L^4 subset Lambda_* subset (1/4)L^4,
+(H tensor I)V_k(H^{-1} tensor I)=D_k.
+```
+
+It is therefore preserved by every routing circuit V_k. Path projection
+need not preserve it: for primitive x in L, the vector x/4 in all four
+paths belongs to Lambda_*, but projecting it to path zero leaves its
+H-image outside L^4. An invariant lattice for V_k does not automatically
+serve the flag or readout operations.
+
+Default V_k entries have denominators dividing four, so E_k entries have
+denominators dividing 16. For one fixed setting the full-rank lattice
+`L^8+E_k L^8`, between `L^8` and `(1/16)L^8`, is E_k-invariant because
+`E_k^2=I`. This is invariance under the complete single-setting operation,
+not necessarily under each constituent gate.
+
+For two distinct settings i,j there is no common full-rank discrete
+lattice preserved by E_i and E_j on the same 32-dimensional carrier, or
+on its full 40-dimensional extension. On the invariant subspace
+`path0 tensor (flag0-flag1) tensor V`, E_k acts as `2P_k-I`. On
+the plane spanned by u_i,u_j the two reflection matrices are
+
+```text
+((1,2c),(0,-1)),    ((-1,0),(2c,1)),    c=-1/4.
+```
+
+Their product has determinant one, trace `-7/4` and irreducible monic
+minimal polynomial `lambda^2+(7/4)lambda+1`, with discriminant `-15/16`.
+Its roots are not algebraic integers. A map preserving a full-rank
+discrete lattice has an integer matrix in a lattice basis and only
+algebraic-integer eigenvalues. A common invariant lattice would also be
+preserved by the product, giving a contradiction.
+
+The proof excludes every lattice on this fixed carrier, not merely the
+displayed candidates. It does not exclude larger architectures or
+differently typed carriers. In particular `M_k=16E_k` is integral and
+`(z,s)->(M_k z,16s)` represents E_k(z/s) exactly, with
+`q(M_k z)=256q(z)`. This growing-denominator encoding is not common
+fixed-lattice dynamics and is not an identification with Omega,U.
+The source result is the same complete public probe bundle. The negative
+theorem is an intended proved boundary, not a fired probe falsifier or
+negative closure of a physical O.
+
 ### Archived observation records
 
 The following four C results concern a fixed external byte contract and its
@@ -3025,6 +4501,1139 @@ TWIST-J realization. The separate NIST semantic/certificate wrappers are
 specifications, not tested implementations of this adapter. No output feeds
 U; the QDD apparatus, terminality, complete-family and Bell causal owners
 remain unchanged.
+
+### Complete conditional preparation, occurrence and channel classes
+
+The following three mathematical results resolve distinct interfaces.
+The native common-ready inverse can supply the original balanced source
+to the incidence calculation at a later query, with the actual native
+counter as its clock input. This removes a separately saved source only
+on the declared preparation slice; it does not realize physical capture
+or a material archive. The onset theorem tests the existing chronological
+calendar, and the mixed theorem tests a separate L4 channel class. Their
+common evidence bundle creates no cross-layer implication or physical closure.
+
+### U-NATIVE-COMMON-READY-SOURCE-RETENTION [T]
+
+Use unchanged U on `Omega=N_0 x F_5^6`, with common origin zero and
+`theta_n=s_2(n) mod 2`. Write `x=(p1,p4,p1p,p4p,q,r)=(p,a)` and
+`D_a={(p,a):p in F_5^4}` for a common ready `a=(q,r)`, independent of p.
+Let F_n be the checkpoint after n native ticks. The reader receives the
+complete current checkpoint and its actual counter `(n,F_n(x))`, with a
+known. It receives no saved source or retained early-history buffer.
+
+For each of the 25 common readies, the following are equivalent:
+
+1. Every original p is recoverable from `(n,F_n(p,a))` at every n.
+2. F3 is injective on D_a.
+3. `a` is outside `{(0,0),(3,0),(3,3),(1,3)}`.
+
+For each of the 21 good readies the image has 625 states at every n.
+For each exceptional ready, at every `n>=3`, there are 500 image states:
+125 fibres of size two and 375 singleton fibres. Each double fibre has
+different original complete QDD records. At least 124 of those pairs
+contain two supported sources, so exceptional readies also fail universal
+original QDD readback on all supported sources.
+
+**Proof.** All arithmetic in this proof is in F5 unless stated otherwise.
+The first-three-tick maps indexed by initial phase z are, with composition
+right to left,
+
+```text
+H0=eca, H1=d, H2=e, H3=dbd, H4=dbe.
+```
+
+These follow from the declared generators and the initial driver 011.
+All outputs have total phase one. The apparatus coordinates are
+
+| Initial z | `(q3,r3)` |
+| --- | --- |
+| 0 | `(q+1,r+1)` |
+| 1 | `(1-q,1-r)` |
+| 2 | `(2-q,1-r)` |
+| 3 | `(2-q,2-r)` |
+| 4 | `(3-q,2-r)` |
+
+The last four rows are pairwise distinct. Equality of the first with rows
+1,2,3,4 occurs only at `(0,0),(3,0),(3,3),(1,3)`, respectively, by solving
+the two affine equations using `2^{-1}=3`. Each initial phase subset of
+D_a has 125 points. H_z is injective there because each generator is an
+involution. Its image lies in the set with total phase one and the fixed
+displayed `(q3,r3)`. That set also has 125 points: the four output pistons
+obey one fixed sum. The image therefore equals the entire set.
+
+Distinct rows give disjoint images. At an exceptional ready exactly two
+initial phase subsets map onto the same 125-point image, proving the
+complete fibre counts. Later synchronized transitions are bijections, so
+the partition persists. An earlier merger would persist to tick three;
+thus a good ready is injective at every earlier time as well.
+
+For the QDD assertion, write the common tick-three checkpoint as
+`y=(a,b,c,d,q,r)`. Its inverse piston classes for initial phases
+`0; 1,2; 3,4` are respectively
+
+```text
+A=(d+3-r,c+4,b+4+r,a),
+B=(2-a,1-b,3-c,4-d),
+C=(-c,-d,-a,-b).
+```
+
+Complete QDD equality is exactly common piston-sign equality. The following
+equalities would impose incompatible values of r:
+
+| Equality | Required values |
+| --- | --- |
+| `A=B` | `r=0` and `r=2` |
+| `A=-B` | `r=4` and `r=3` |
+| `A=C` | `r=4` and `r=1` |
+| `A=-C` | `r=2` and `r=1` |
+
+Each exceptional double fibre pairs phase zero with one other phase and
+therefore pairs A with B or C. Their QDD records differ. There is only one
+zero source in D_a, so at least 124 conflicting pairs are supported.
+
+**Chosen all-source inverse.** Common ready `(q,r)=(0,1)` has the distinct
+rows `(1,2),(1,0),(2,0),(2,1),(3,1)`. It admits all 625 piston sources,
+including every one of the 624 supported sources, with no source-dependent
+ready choice. At `n>=3`, recover the five conserved chart labels by
+
+```text
+S(M)=M-floor(M/2)+floor(M/4)-...,
+t_n=(-1)^(n-3), h_n=(-1)^(n+theta_(n-1)),
+N_n=S(floor((n-1)/2))-1,
+alpha=t_n(p1+p1p), beta=t_n(p4+p4p),
+gamma=h_n(p1-p1p-2), delta=h_n(p4-p4p-1),
+epsilon=t_n*r-N_n.
+```
+
+The finite alternating sum is integer-valued; reduce the labels modulo
+five. Their exact tick-three inverse is
+
+```text
+y1=3(alpha+2+gamma), y1p=3(alpha-2-gamma),
+y4=3(beta+1+delta), y4p=3(beta-1-delta),
+yr=epsilon, yq=1-alpha-beta-epsilon.
+```
+
+The native chart theorem gives `y=F3(x0)` for every n. Its `(yq,yr)`
+identifies z in the table; applying `H_z^{-1}` recovers the full head.
+These inverse compositions are `ace,d,e,dbd,ebd`, respectively. For
+`n=0,1,2`, compute the at most three native transitions to tick three
+and apply the same inverse. These are calculations from the given state,
+with no future measured record as input. This proves the all-n inverse.
+Zero is recovered by the same operations without division; its subsequent
+QDD reading remains ZERO_SUPPORT, with no assigned event or probability.
+
+**Regenerable-archive corollary.** For any origin-zero preparation subset
+D and stipulated history `H:D->Y^N_0`, with literal ordered equality,
+write H_n for the prefix through tick n. Exact H_n readback from only
+`(n,F_n(x))` for every `n>=3` exists iff H is constant on F3 fibres in D.
+Equal F3 values give equal later states and therefore every equal finite
+prefix, hence equal full histories. Conversely assign the common history
+to each attained F3 value, recover that value with the chart, and truncate.
+An executable reader additionally requires a finite-prefix algorithm for H.
+
+Thus at most `|F3(D)|<=3125` different complete archives can be recovered
+this way, although archive length and clock dependence can be unbounded.
+On a good common-ready slice every computable source-dependent history
+can be regenerated from current state and counter. This includes the
+already specified source-incidence calendar when its start and ordering
+are fixed. It is virtual readback, with no asserted runtime or locality
+bound, and supplies no fresh physical BLANK cell or independently writable
+storage. The source and earlier records need not be additional inputs to
+this computation; their material realization is a different question.
+
+The good-ready choice and full-state access are explicit mathematical
+conditions. This theorem derives no physical preparation, full-state
+measurement, apparatus coupling, ready/reset mechanism, exclusive outcome,
+or occurrence law. The native `(q,r)`-only source-sum obstruction and the
+arbitrary-head merger theorem remain unchanged on their respective domains.
+No physical apparatus-completeness or decoder obligation is closed.
+
+The exact finite audit checks all 25 readies and all 625 sources at tick
+three, all good-ready inverses there, every exceptional conflicting pair,
+and all selected-ready sources at every `n=0,...,64`, including zero.
+The written proof supplies the universal n and archive statements.
+
+### QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION [T]
+
+Action layer: L1 exact finite words, combinatorial counts and conditional
+mathematical onset vectors. No physical occurrence or L6 measure is adopted.
+
+Fix an integer M>=1 and a total word
+`e:Z/M->{LOW,HIGH,SILENT}`. Observation begins at an inclusive onset r and
+then inspects every consecutive phase. Occupied onsets are accepted
+immediately; SILENT is skipped. The source and word remain fixed and there
+is no thinning, reordering, feedback or reset during this scan. Output
+equality is literal ordered coarse-label equality. It does not identify
+complete signed records, sources, fine addresses or waiting times.
+
+For a nonempty accepted set `S={t_0<...<t_(D-1)}`, put `c_i=e(t_i)`,
+`t_(-1)=t_(D-1)-M`, and
+
+```text
+J_i={t_(i-1)+1,...,t_i} modulo M, g_i=|J_i|.
+```
+
+The J_i are a disjoint partition of all M phases. Every onset in J_i
+produces the entire accepted sequence `c_i,c_(i+1),...`, with indices
+modulo D. Therefore every mathematical vector `mu_r>=0, sum_r mu_r=1`
+gives the following exact law for every k>=1 and prescribed label word w:
+
+```text
+P_mu(first k accepted labels=w)
+  =sum_i mu(J_i) product_(j=0)^(k-1) 1[c_(i+j)=w_j].
+```
+
+Conversely every vector of masses on the D accepted starting indices is
+realized by an onset vector: place its i-th mass at t_i. Thus all induced
+ordered laws are precisely mixtures of the cyclic deterministic accepted
+sequences; different indices need not give distinct sequences. Uniform
+onset gives starting mass g_i/M, whereas uniform accepted-address selection
+gives 1/D. If S is empty there is NO_EVENT and no accepted-label law.
+
+For the selected incidence calendar, the source is
+`v in {-2,-1,0,1,2}^4`, with ordinary integer quantities
+
+```text
+s=sum_i v_i, Q=sum_i v_i^2,
+A=s^2, B=5(4Q-s^2), D=A+B, M=1024.
+```
+
+Its LOW addresses are `8a+b`, `0<=a,b<|s|`. Its HIGH addresses are
+`64+16(5j+c)+4a+b`, where j indexes
+`((0,1),(0,2),(0,3),(1,2),(1,3),(2,3))`, `0<=c<5`, and
+`0<=a,b<|v_i-v_k|` for the j-th pair `(i,k)`. All other addresses are
+SILENT. Capture, the balanced lift, complete Cartesian incidence and this
+slot order remain explicit construction premises. Valid native phase
+acquisition supplies the chronological address but does not select onset.
+
+When A,B>0, let j_* be the last nonzero pair difference and d_* its
+absolute value. Then
+
+```text
+L_max=9(|s|-1), H_max=123+80j_*+5d_*,
+first-LOW onset set F_v={0,...,L_max} union {H_max+1,...,1023}.
+```
+
+There is **no source-independent onset vector** whose first-LOW marginal
+equals A/D for all supported sources. In fact
+
+```text
+v=(1,0,1,0):   A=4, B=20,  A/D=1/6,
+w=(2,-1,1,0):  A=4, B=100, A/D=1/26,
+F_v=F_w={0,...,9} union {529,...,1023}.
+```
+
+The first coarse label agrees at every one of the 1024 phases, so every
+common onset vector gives equal marginals, contradicting the unequal
+targets. This also excludes any common distribution of valid absolute
+onset times after residue pushforward. For `(1,0,0,0)`, uniform onset gives
+first LOW `23/32`, while A/D is `1/16`. If A=0<D every first label is HIGH;
+if B=0<D every first label is LOW; v=0 has no accepted event or ratio.
+
+Deleting SILENT from one full incidence cycle yields exactly
+`LOW^A HIGH^B`. For A,B>0 its cyclic adjacent-pair counts are
+
+```text
+LL=A-1, LH=1, HL=1, HH=B-1 per D cyclic pairs.
+```
+
+Every prefix of N=qD+t consecutive accepted pairs consists of q complete
+cyclic pair lists and its actual t-pair remainder. No stream in this class
+contains A+1 consecutive LOW labels. Therefore no mixture of onsets gives
+a nondegenerate independent Bernoulli law on accepted indices: such a law
+assigns positive mass to that forbidden word. For `(1,0,0,0)` even LL is
+absent, while Bernoulli(1/16) assigns it mass 1/256. Independence is not
+asserted as a physical requirement; this is a conditional-law distinction.
+
+A different, source-independent **order class** supplies a positive finite
+count. For any nonempty S in Z/M, among all M! permutations of the addresses
+each t in S appears first among S in exactly M!/D orders. Each ordered
+list of k distinct accepted addresses appears first in exactly
+`M!/(D)_k` orders, where `(D)_k=D(D-1)...(D-k+1)`, including `(D)_0=1`.
+Conditional uniform normalization therefore gives first-label marginals
+A/D and B/D. A prescribed k-label pattern with a LOW and b HIGH symbols
+has conditional mass `(A)_a(B)_b/(D)_k`, a+b=k<=D. This is sampling without
+replacement. Independently renewed permutations for fresh trials would
+suffice for independent first outcomes; that extra trial law is not supplied.
+At S empty a complete M-address scan returns NO_EVENT.
+
+**Proof.** A cyclic gap ends at exactly its next accepted address, giving
+the partition and all ordered outputs. All LOW addresses precede all HIGH
+addresses, giving the extremal formula, two-source contradiction, cyclic
+word and pair counts. For permutation counts, any relabeling of S extends
+to a bijection of all M! orders. It carries any specified first accepted
+slot or ordered k-slot list to any other. The corresponding equal-sized
+classes partition all orders; their numbers are D and `(D)_k` respectively.
+These arguments hold for all M and all stated mixtures, independently of
+the bounded implementation audit.
+
+The permutation alternative changes chronological observation. It needs
+an order carrier and its law, retained scan position, access to the listed
+addresses and any fresh-trial resupply. The periodic native clock permits
+waiting for each listed residue while maintaining chronological bit
+acquisition, but those selected invocations are a different schedule.
+Neither these resources nor their physical law follow from U. The theorem
+excludes only the complete fixed-calendar/common-onset class; it excludes
+neither other calendars nor a complete physical apparatus class. No
+physical storage, reset, instrument, occurrence mechanism or measure is
+derived. Existing QDD physical obligations remain open.
+
+**Evidence.** `probes/P-QDD-V80-CLOSURE-BOUNDARIES-1/OCCURRENCE-PROOF.md`,
+sections 1--4, with the probe's exact `onset_audit.py` and shared verifier.
+The audit covers all ternary words M=1..6, every onset and first three
+labels, all 625 incidence sources and 640000 slots, and all nonempty
+subsets and permutations M=1..6. It does not replace the universal proof.
+
+**Falsifier.** An admitted failure of the gap partition or ordered formula;
+wrong extremal address, same-map witness or QDD rational comparison;
+wrong cyclic word/pair count; an admitted nondegenerate Bernoulli mixture;
+or a wrong permutation or ordered-prefix count. A changed observation or
+physical apparatus class is outside scope. Integrity failures are STOP.
+
+### QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY [T]
+
+Let `V=F^4`, `F=R` or `C`, with `G=I_4-11^T/5`, and define the marked
+J simplex by `u_k=D_J^k e_0`, where
+
+```text
+D_J=[[0,0,-1,1],[0,0,-1,0],[1,0,-1,0],[0,1,-1,0]].
+```
+
+For any marked token k, let P be the G-orthogonal projector onto Fu_k and
+Q=I-P. These are algebraic support projectors. In the basis
+`(e_0-e_3,e_1-e_3,e_2-e_3)` of W=QV at k=2,
+
+```text
+H=[[2,1,1],[1,2,1],[1,1,2]],
+A=QD_JQ|W=[[-1,-1,-3/4],[0,0,1/4],[1,0,1/4]],
+X^sharp=H^-1 X* H,   Ad_A(X)=AXA^sharp,
+B_n=(A^sharp)^n A^n,   B_0=I_W.
+```
+
+Here * denotes transpose over R and conjugate transpose over C. D_J
+conjugates successive token supports and their compressed motors, so the
+same theorem holds at every token. The complete named channel class is
+all finite-dimensional completely positive trace-preserving linear maps
+
+```text
+E(X)=sum_j K_j X K_j^sharp,   sum_j K_j^sharp K_j=I_W,
+E*(Y)=sum_j K_j^sharp Y K_j,
+```
+
+with arbitrary real or complex Kraus entries. Neither rationality, purity,
+invertibility, symmetry, idempotence nor unitality of E is assumed. Equality
+is exact equality of channels on the full operator algebra, not equality
+of Kraus presentations or complete apparatus implementations.
+
+First, the complete mixed repeatable branch fibre with effect Q is exactly
+`Phi_Q(X)=E_Q(QXQ)` for an arbitrary such channel E_Q on QV. The rank-one
+P-support channel is necessarily the identity. Second, on the displayed W,
+
+```text
+E*(B_1)=B_1, E*(B_2)=B_2, E*(B_3)=B_3
+    iff E=id
+    iff E o Ad_A = Ad_A o E.
+```
+
+The first two attenuation observables alone do not suffice, even for
+rational Kraus maps. The identity and depolarizing channels also prove
+that ordinary repeatability, strict channel idempotence and complete S4
+record-partition covariance do not jointly select the identity channel.
+
+**Proof.** For branch Kraus maps L_j, exact effect
+`sum_j L_j^sharp L_j=Q` gives `sum_j ||L_j Pv||^2=0`, hence L_jP=0
+for every j. Ordinary repeatability gives `sum_j ||PL_jv||^2=0`, hence
+PL_j=0. The restrictions to QV are precisely arbitrary trace-preserving
+CP channels; their converse is immediate. A channel on the one-dimensional
+P support is the identity. Completeness of the finite Kraus description
+follows by decomposing the positive Choi matrix into positive rank-one
+matrices and reshaping their vectors; trace preservation gives the displayed
+Kraus-square identity. This argument holds over both R and C.
+
+For the rigidity implication, exact multiplication gives
+
+```text
+H-A^T H A=diag(0,0,5/4),
+I-A^sharp A=(15/16) Proj_H(d0),
+d0=(-1,-1,3), d1=(11,-5,-1), d2=(-9,-25,-5),
+A^sharp d0=d1/4, A^sharp d1=d2/4,
+det[d0 d1 d2]=-1024,
+<d0,d1>_H=-4, <d0,d2>_H=-20.
+```
+
+Thus `B_n-B_(n+1)` for n=0,1,2 is a positive multiple of the rank-one
+projector R_n onto Fd_n, with respective multipliers
+`15/16`, `215/256`, `2815/4096`. Since E* fixes B0 by trace preservation,
+preserving B1,B2,B3 fixes R0,R1,R2. If E*(R)=R for an orthogonal projector,
+then for v in ker R the identity `sum_j ||RK_jv||^2=0` makes every Kraus
+map preserve ker R. For v in im R, trace preservation gives
+`sum_j ||(I-R)K_jv||^2=0`, so every Kraus map preserves im R as well.
+Each K_j therefore commutes with R0,R1,R2. Their three spanning lines and
+the two nonzero overlaps force K_j=c_jI. The Kraus-square identity gives
+`sum_j |c_j|^2=1`; therefore E=id. No unitality of E is used.
+
+Identity implies covariance. Conversely covariance iterates, and
+`tr(B_nE(X))=tr(Ad_A^n(E(X)))=tr(E(Ad_A^n(X)))=tr(B_nX)`;
+nondegeneracy of the trace pairing gives E*(B_n)=B_n for every n.
+
+For the two-pass boundary let S=span(d0,d1), R_S its H-orthogonal
+projector, and `E_S(X)=R_SXR_S+(I-R_S)X(I-R_S)`. This rational CP
+trace-preserving channel fixes R0,R1 and hence B1,B2. But d2 has nonzero
+components in S and its orthogonal complement, by the displayed overlap
+and determinant. Pinching removes a nonzero off-block part of R2, so B3
+is not fixed. This establishes necessity of the third member of this
+specific nested observable family, not minimality among all test families.
+
+Finally `E_dep(X)=tr(X)I_W/3` differs from identity while both channels
+are CP, trace-preserving, idempotent and covariant under every orthogonal
+or unitary basis change. Pure-input output purities are 1/3 and 1.
+The depolarizing witness has rational Kraus maps: for each of the 24
+coordinate permutations restricted to the four-coordinate sum-zero
+support, take `rho/6,rho/12,rho/12`. Their 72 maps form the S4 twirl,
+equal to `tr(X)I_W/3`; the rational equality is checked on all nine matrix
+units. In the ambient support these give branches `tr(QX)Q/3` and QXQ
+with the same Q effect and ordinary repeatability. QED.
+
+The three attenuation conditions are conditional sequential tests on all
+supported densities, `tr(A^nE(rho)(A^sharp)^n)=tr(A^nrho(A^sharp)^n)`
+for n=1,2,3. No physical law requiring their preservation is derived or
+adopted. Complete positivity is substantive: transpose in a real orthonormal basis of the complexified W fixes all Bn and commutes with Ad_A but is not the identity or
+CP. Pointwise CP classification does not classify every memory family,
+nonlinear or differently typed apparatus, or correlated quantum memory.
+It supplies no occurrence selector, physical readiness, source capture,
+fresh storage, reset, L1-to-L5 gate or L6 measure. The physical apparatus,
+terminal-event and class-completeness owners remain open.
+
+### A4-RATIONAL-FRAME-WEIGHT-NONUNIQUENESS [T]
+
+Let
+
+```text
+A4 = {v in Z^5 : sum_i v_i = 0},
+V  = A4 tensor_Z Q,
+q(v)=sum_i v_i^2.
+```
+
+A ray is a one-dimensional rational subspace of V and a complete frame is any
+four mutually orthogonal rational rays spanning V. For a nonzero rational
+number `a=3^k u`, with numerator and denominator of u prime to 3, define
+
+```text
+h_3(a)=0   if k is even,
+       -1  if k is odd and u=1 mod 3,
+       +1  if k is odd and u=2 mod 3,
+H([v])=h_3(q(v)).
+```
+
+Multiplying a ray representative by a rational scalar multiplies its norm by a
+square, so H is projectively well defined. The binary diagonal-change identity
+
+```text
+h_3(a)+h_3(b)
+  = h_3(a+b)+h_3(ab/(a+b))     mod 4
+```
+
+for nonzero `a,b,a+b` makes the sum of H over a rational orthogonal basis an
+invariant modulo four. On the explicit A4 orthogonal basis with norms
+`4,4,4,20` this invariant is zero. For any rational orthogonal basis with
+coordinate matrix C in an integral A4 basis,
+
+```text
+prod_i q(v_i)=5(det C)^2.
+```
+
+After removing powers of three, the unit part of the product is therefore 2
+modulo 3. Hence the four H values cannot all equal +1 or all equal -1. Since
+each lies in {-1,0,+1} and their sum is zero modulo four, the only remaining
+possibility is the exact integer identity
+
+```text
+sum_i H([v_i])=0.
+```
+
+Consequently, for every rational `|t|<=1/4`,
+
+```text
+w_t([v])=1/4+t H([v])
+```
+
+is a nonnegative normalized weight on every complete rational orthogonal
+frame; for `|t|<1/4` it is uniformly strictly positive. The thirty inner
+Cl(4) rays have primitive norms 2,4 or 20, hence H=0 and weight 1/4 for every
+t.
+
+This family is nevertheless not quadratic for nonzero t. In the rational plane
+`U_012`, let
+
+```text
+d1=( 2,-1,-1,0,0)   r1=(0, 1,-1,0,0)
+d2=(-1, 2,-1,0,0)   r2=(1, 0,-1,0,0)
+d3=(-1,-1, 2,0,0)   r3=(1,-1, 0,0,0).
+```
+
+The two triples have the same projector cover,
+
+```text
+sum_m P_(d_m)=sum_m P_(r_m)=(3/2)P_U,
+```
+
+while the d rays have norm 6 and the r rays norm 2. Thus
+
+```text
+sum_m w_t(d_m)-sum_m w_t(r_m)=3t.
+```
+
+Any single quadratic representation `w([v])=tr(WP_v)` would assign equal sums
+to equal projector covers, so every nonzero-t member is nonquadratic.
+Therefore positivity plus noncontextual additivity on all complete rational A4
+records do not force the owner-adopted quadratic reading.
+
+This is an L4 theorem about mathematical weights. It does not assert that the
+nonquadratic family is physically realized, does not reject the chosen
+quadratic decoder, and supplies no effect, apparatus, event, occurrence law,
+sampling law or L6 measure. Global decoder uniqueness remains unnecessary.
+
+### QDD-SIMPLEX-PAIR-INCIDENCE [T]
+
+For every integer `N>=2`, let
+
+```text
+V_N={x in Q^N : sum_r x_r=0},
+u_k=e_k-(1/N)1,
+P_k=(N/(N-1))u_k u_k^T,
+Q_k=I-P_k.
+```
+
+Choose a setting k and any bijection beta from `N-1` integer source
+coordinates `z_i` to all simplex vertices except k. Put
+
+```text
+s=sum_i z_i,
+S2=sum_i z_i^2,
+x=sum_i z_i u_(beta(i)),
+U=N(N-1),
+A=s^2,
+B=N sum_(i<j)(z_i-z_j)^2,
+D=A+B.
+```
+
+The primitive integral generator of the LOW ray is
+
+```text
+a_k=N e_k-1,
+q(a_k)=N(N-1)=U.
+```
+
+For every y in V_N, `u_k^T y=y_k`. Since the missing k coordinate of x is
+`-s/N`,
+
+```text
+P_k x=-(s/U)a_k.
+```
+
+Taking a source with s=1 shows that every positive integer M that makes
+`M P_kx` integral for all integer sources must satisfy `U | M`. Conversely
+`U=N(N-1)` clears both x and its LOW projection. Thus U is the least universal
+integral scale for the prepared relation and its LOW branch.
+
+With `X=Ux`,
+
+```text
+X_k=-(N-1)s,
+X_(beta(i))=N(N-1)z_i-(N-1)s,
+P_kX=-s a_k,
+Q_kX=X-P_kX.
+```
+
+All three vectors are integral and sum to zero. The lift loses no source
+information:
+
+```text
+z_i=(X_(beta(i))-X_k)/U.
+```
+
+The ordered branch pair also reconstructs X by addition.
+
+Now form a second-order relation census. The ordered Cartesian square of
+`|s|` signed amplitude units has cardinality
+
+```text
+A=s^2.
+```
+
+For HIGH take N separately labelled copies of the ordered Cartesian square of
+every difference fibre `|z_i-z_j|`. Its cardinality is
+
+```text
+B=N sum_(i<j)(z_i-z_j)^2.
+```
+
+Using
+
+```text
+sum_(i<j)(z_i-z_j)^2=(N-1)S2-s^2
+```
+
+and orthogonality of P_k and Q_k gives exactly
+
+```text
+q(P_kx)=A/U,
+q(Q_kx)=B/U,
+q(x)=D/U.
+```
+
+Equivalently on the integer lift,
+
+```text
+q(P_kX)=UA,
+q(Q_kX)=UB,
+q(X)=UD.
+```
+
+Thus the owner-adopted quadratic P/Q scalar reading is exactly the same chosen
+second-order relation read as a normalized integer Cartesian-pair census. The
+scale U is not fitted to these counts; it was already forced by the primitive
+simplex ray and universal integrality.
+
+For every nonzero source D>0 and
+
+```text
+q(P_kx)/q(x)=A/D,
+q(Q_kx)/q(x)=B/D.
+```
+
+Zero has no normalized ratio; `s=0` kills LOW; HIGH is zero exactly when all
+source coordinates are equal.
+
+At the TWIST-J specialization `N=p=5`,
+
+```text
+U=20=q(5u_k),
+A=s^2,
+B=5(4S2-s^2),
+D=4(5S2-s^2).
+```
+
+For the public QDD transport `k=2`, `beta=(0,1,3,4)`, these A,B,D quantities
+are exactly those already owned by QDD-CONDITIONAL-INCIDENCE-AND-SYMBOLIC-RECORD,
+and P/Q is the existing algebraic simplex split. The new theorem identifies
+their common structure and explains the factor 20 by the minimal integral
+simplex scale.
+
+This is an L4 structural reason for the chosen quadratic reading, not a
+uniqueness theorem and not a physical detector model. The Cartesian pairs are
+mathematical relations, not realized clicks. No physical effect, apparatus,
+exclusive event, occurrence or sampling law, post-state selection, reset, L5
+stream or L6 measure follows.
+
+### BINARY-RECORD-VALUATION-NONSELECTION [T]
+
+Let X be a finite set with d elements carrying only equality, let X^k be
+its ordered k-tuples for a fixed k>=1, and let simultaneous relabeling act
+on every coordinate by one bijection of X. An atomic valuation assigns each
+tuple a nonnegative integer weight and is injection-stable when
+
+```text
+v_Y(f(t_1),...,f(t_k)) = v_X(t_1,...,t_k)
+```
+
+for every injection f:X->Y. Write pi(t) for the equality partition of the
+positions, b(pi) for its number of blocks and (d)_r for the falling factorial,
+with (d)_0=1 and (d)_r=0 when d<r.
+
+The simultaneous S_d orbits on X^k are exactly the equality partitions with
+at most d blocks; the orbit of a partition with r blocks has (d)_r tuples;
+every invariant support is a union of orbits. Injection-stable valuations
+correspond bijectively to assignments c_pi in N_0, with full-carrier count
+
+```text
+W_k(d) = sum_pi c_pi (d)_(b(pi)).
+```
+
+The degree of a nonzero valuation is its largest occupied block count. Full
+Cartesian counting has every c_pi=1, giving d^k=sum_pi (d)_(b(pi)) without
+a power-law assumption. On triples the supports all-equal, first-two-equal
+and unconstrained have counts d, d^2 and d^3.
+
+For k=2 the two orbits are the diagonal and its complement, so
+
+```text
+W_2(d) = a d + b d(d-1),        a,b in N_0,
+W_2(d) = c d^2 for every d  iff  a=b=c.
+```
+
+Positivity, additivity over disjoint edge sets, simultaneous relabeling
+covariance and injection stability permit every a,b>=0; strict positivity
+permits a=1, b=2 with W=d(2d-1). For two unmarked carriers S,T the product
+action Sym(S) x Sym(T) is transitive on S x T, so an invariant relation is
+empty or complete and unit normalization gives |S||T|. If a bijection f:S->T
+is part of the data, relabeling both carriers independently while
+transporting f to tau f sigma^(-1) keeps the graph of f and its complement
+as two orbits and does not force a=b.
+
+For every nonempty finite symbol set S let B={blank} disjoint-union S, let
+tau_s transpose blank and s on B, and put
+
+```text
+T(s,r) = (s, tau_s(r)).
+```
+
+T is a total involutive bijection of S x B; it preserves the source, sends
+(s,blank) to (s,s), is covariant under every relabeling of S, has active
+source-to-record graph {(s,s)} of size |S|, and extends to any finite
+collection of cells by acting on one addressed cell, so that consecutive
+writes to fresh cells preserve every older record and the whole sequence
+is invertible. At d=2 the active graph has 2 edges while full Cartesian
+incidence on the two active carriers has 4. Binary representation, source
+retention, reversibility, covariance and preservation of older records
+therefore do not force the full Cartesian count.
+
+On the adopted four-coordinate integer source z with s=sum_i z_i, for every
+integer p>=1 put
+
+```text
+A_p = |s|^p,     B_p = 5 sum_(i<j) |z_i-z_j|^p,     D_p = A_p+B_p,
+```
+
+with normalized pair (A_p/D_p, B_p/D_p) when D_p>0 and no normalized ratio
+at z=0. Every member has nonnegative integer branch weights, total zero iff
+z=0, LOW zero iff s=0, HIGH zero iff all coordinates are equal, invariance
+under coordinate permutations and global sign reversal, degree-p homogeneity
+under integer scaling and a scale-invariant normalized pair. Distinct p give
+distinct readings: at z=(1,1,0,0), A_p=2^p, B_p=20 and LOW=2^p/(2^p+20) is
+strictly increasing in p, equal to 1/11 at p=1 and 1/6 at p=2. The member
+p=2 is exactly the adopted A=s^2 and B=5(4 sum_i z_i^2 - s^2).
+
+If B:G x H -> R_(>=0) is additive in each argument on abelian groups then
+B=0: additivity gives B(0,h)=2B(0,h) and 0=B(g,h)+B(-g,h) with both terms
+nonnegative. Unsigned nonzero pair counting on a positive monoid is therefore
+not a nonnegative bilinear law on its signed completion; for raw arrivals
+(+1,-1) the unsigned pair count is 4 while the reduced residual count is 0.
+
+The implications "binary arity forces a square" and "reversible faithful
+covariant record writing forces complete incidence" are refuted by these
+exact examples; at the classified binary scope quadratic selection is
+exactly the additional equality a=b. This is an L1 theorem about
+equality-only relations, symbolic writers and the listed scalar laws. It
+does not classify native relations carrying additional algebraic structure,
+does not assert that any member of the power family satisfies complete
+rational-frame additivity, the QDD record contract or physical admission,
+and supplies no physical apparatus, complete-incidence law, occurrence law,
+sampling law or L6 measure. Born's empirical rule, QDD-SIMPLEX-PAIR-INCIDENCE
+and every physical QDD owner retain their scopes.
+
+### RECORD-OCCURRENCE-SELECTION-CRITERIA [T]
+
+Let a finite group G act on a finite set R of ready states and a nonempty
+finite set E of fine outcomes, with G_r the stabilizer of r and E^(G_r) its
+fixed set. An equivariant selector F:R->E, F(gr)=gF(r), exists if and only
+if E^(G_r) is nonempty for one representative r of every G-orbit of R; the
+complete class is obtained by choosing e_r in E^(G_r) per representative and
+setting F(gr)=g e_r, so the number of selectors is the product of |E^(G_r)|
+over ready orbits. If E is transitive with |E|>1, no fully symmetric ready
+state admits a deterministic equivariant selection of one outcome, and a
+deterministic equivariant update cannot lower a stabilizer. The invariant
+probability laws on R are exactly the laws constant on each orbit; an
+equivariant F pushes an invariant law to an invariant law on E, uniform when
+E is transitive, so a declared coarse partition E=disjoint-union E_j then
+has P(j)=|E_j|/|E|. Invariance of the input law is an additional premise,
+not a consequence of covariance; with several outcome orbits their total
+masses remain free.
+
+Let Omega be a nonempty finite set, T a permutation of Omega and
+e:Omega->{1,...,r} disjoint-union {SILENT}, observed along e(T^t x) with no
+reset, new input or external rule. For a cycle C put l_C=|C|,
+m_(C,j)=|{x in C: e(x)=j}| and d_C=sum_j m_(C,j). A start on a cycle with
+d_C=0 gives NO_EVENT forever; otherwise the accepted stream is periodic with
+period d_C, its accepted frequency is q_(C,j)=m_(C,j)/d_C, and its prefix
+count satisfies |K_j(n)-n q_(C,j)|<d_C. Every start has limiting accepted
+frequencies q if and only if
+
+```text
+d_C>0 and m_(C,j)=q_j d_C for every cycle C and every j.
+```
+
+Every stationary law has the form mu(x)=gamma_C/l_C on C with gamma_C>=0
+summing to one; the stationary single-tick law conditioned on acceptance is
+the mixture of the q_C with weights proportional to gamma_C d_C/l_C, every
+such mixture is attained, and uniform mu gives the global counting ratio
+without implying cycle balance. For d>=2 the identity dynamics on E with
+e(x)=x is reversible and fully equivariant with a uniform invariant law, yet
+every realized stream is constant and P(e_t=e_s)=1 for t!=s. Cycling once
+through a supplied incidence carrier with branch fibres of sizes d_j gives
+d_j^2/sum_i d_i^2 from every start when |E_j|=d_j^2; the cyclic update is
+adopted, not derived. The four-state cycle with coarse word 0011 has every
+start at frequency 1/2 and, under uniform phase, each adjacent pair at
+probability 1/4, while 000 never occurs.
+
+For a closed deterministic autonomous model with N initial states and one
+binary output per step: if the first k>=1 outputs have exactly the
+independent Bernoulli(p) law with 0<p<1 then the support of the initial law
+has at least 2^k states, so no fixed finite model has that law at all
+horizons; if the initial law is uniform and p=a/b in lowest terms then b^k
+divides N; and for each a,b,k a reversible single cycle on exactly b^k
+states, built from an Euler circuit of the b-ary de Bruijn graph, attains
+that law through k under uniform phase with every-start frequency a/b and
+fails it at k+1. For the adopted source (1,0,0,0) with p=1/16, twenty exact
+independent outputs under a uniform finite ready ensemble require N
+divisible by 2^80.
+
+This is an L1 theorem about finite selectors, cycles and initial ensembles.
+It refutes the implication from reversibility, relabeling covariance and a
+uniform stationary ensemble to every-start counting frequencies, and from
+correct one- and two-output laws to independence. The finite obstruction
+does not apply to native U, whose complete state has an unbounded counter,
+nor to an open apparatus with fresh input. It supplies no physical ready
+selection, symmetry action, update, event map, realized trial, occurrence
+law, sampling law or L6 measure, and it adds no independence requirement to
+any physical owner.
+
+### RELATIONAL-GROWTH-SATURATION-BOUNDARY [T]
+
+Pascal's identity gives the exact antidifference
+sum_(k=0)^(n-1) binom(k,r)=binom(n,r+1), hence
+sum_(k=1)^n (k)_r=r! binom(n+1,r+1) for r>=1. For a fixed arity and the
+injection-stable equality-pattern weights c_pi of
+BINARY-RECORD-VALUATION-NONSELECTION, the layer count on k labels is
+S_k=sum_pi c_pi (k)_(r_pi) and its tagged disjoint accumulation is exactly
+
+```text
+V_n = sum_pi c_pi r_pi! binom(n+1, r_pi+1),
+```
+
+of degree R+1 with R the largest occupied block count. For binary weights
+a,b this is V_n=a n(n+1)/2+b n(n+1)(n-1)/3: every b>0 gives cubic growth,
+so cubic accumulation does not select complete incidence, and a=b=1 is the
+sum of squares n(n+1)(2n+1)/6. The carrier is the disjoint union with the
+layer index retained; forgetting tags leaves the largest layer.
+
+The statement "V_n ~ c n^d implies n(V_n-V_(n-1))/V_n -> d" is false: the
+strictly increasing integer sequence V_n=n^3+(-1)^n n^2+n is asymptotic to
+n^3, yet its shell ratio is exactly 1 on odd n and tends to 5 on even n.
+Sufficient repairs are a polynomial V with positive leading coefficient, an
+error e_n=V_n-c n^d with e_n-e_(n-1)=o(n^(d-1)), or eventually monotone
+shells, each proved by direct squeezing. Without shell regularity the valid
+macroscopic consequences are log(V_n)/log(n)->d and
+V_floor(lambda n)/V_n -> lambda^d for each fixed lambda>1. Replacing the
+radius by floor(m^alpha) changes the inferred exponent to alpha d.
+
+For a finite group acting on a finite set with a fixed finite generating
+set and exact semantic equality, word balls are nested and constant from
+radius M-1 on an M-element reachable carrier; their growth exponent is zero
+and their tagged accumulation is Mn+constant, of exponent one. This applies
+to the registered finite native word group and its finite commutator images;
+it is not applied to the complete autonomous U state with its unbounded
+counter.
+
+With the displayed fired translations a0=(3,0), b0=(3,3), c0=a0+b0 of
+FIRED-COMMUTATOR-NOGO as unit steps, the torsion-free carrier Z^2 has exact
+word norm rho(x,y)=max(|x|,|y|,|x-y|) and ball count
+
+```text
+H_r = 3r(r+1)+1 = (r+1)^3 - r^3,     sum_(r=0)^n H_r = (n+1)^3,
+```
+
+with shells of 6r members and growth exponent two. The native quotient has
+ball sizes 1,7,19,25,25,... and tagged accumulation 25n-23 for n>=2, so the
+cubes 1,8,27 are followed by 52 rather than 64 at radius three. Interpreting
+the same signed affine formulas of b,d,e over Z^6 gives involutions whose
+derived group is the free rank-two lattice L=Z t1+Z t2 with
+
+```text
+t1=[d,e]=(0,0,0,0,-2,0),   t2=[b,d]=(-5,-5,-5,-5,-2,-2),   [b,e]=t1+t2,
+```
+
+acting freely, with reduction modulo five onto the 25 fired translations
+and kernel exactly 5L; its nonzero piston translations vanish natively, and
+the lift is a declared additional choice. The silent group commutator
+[a,c](x)=x+v(r) with v(r)=(-1-r,1+r,-1+r,1-r,0,0) has a five-point native
+orbit and an infinite cyclic lifted orbit with balls 2n+1 and tagged
+accumulation (n+1)^2; it is a group commutator of state maps, not the
+additive Koopman curvature.
+
+This is an L1 theorem about exact counts and their limits. It proves cubic
+accumulation in its explicit counting class, falsifies the general inference
+from cubic volume asymptotics to the local shell ratio, and excludes the
+literal finite native-word route to an asymptotic exponent three. It
+supplies no geometric carrier, intrinsic radius, nonduplicating measure,
+limit regime, spatial dimension, metric, physical length or decoder bridge,
+and the same-carrier curvature bridge remains open.
+
+### U-FINITE-READER-INDEPENDENCE-OBSTRUCTION [T]
+
+For the unchanged origin-zero native U on every one of the 15,625 heads
+(0,x_0), with unbounded counter and decorated letters d_n=(x_n,theta_n),
+fix a length L>=1 and one function f from legal length-L decorated windows
+to {0,1,SILENT}, applied at every tick n>=L+2 with no absolute counter,
+growing window, separate memory, changed context, feedback or added input.
+Deleting SILENT outputs chronologically yields the accepted word.
+
+The registered chart coding writes each synchronized trajectory as a
+length-two morphic image of the primitive length-two substitution on the
+100-letter clock alphabet, every letter of which occurs in every depth-77
+substituted letter. Consequently the number of distinct length-t native
+factors on one chart is at most
+
+```text
+p_d(t) <= 20,000 t,
+```
+
+and at most 62,500,000 t across all charts. If the reader accepts one legal
+window on a chart, that window occurs in every aligned superblock of some
+length B=2^(j+78), so acceptance is infinite and consecutive accepted
+endpoints differ by at most G=2^(j+79); otherwise the disposition is
+NO_EVENT with no accepted ratio, and there is no third case. A block of k
+accepted symbols is determined by a native factor of length L+G(k-1), so
+
+```text
+p_accepted(k) <= 20,000 [L+G(k-1)].
+```
+
+Once 2^k exceeds this linear bound some binary k-word never occurs in the
+synchronized accepted tail, while every nondegenerate Bernoulli product
+gives it positive weight; the accepted stream therefore cannot have those
+block frequencies at all orders, finitely many unsynchronized outputs do not
+change this, and for one fixed global reader the finite union over heads is
+excluded once 2^k>62,500,000[L+G(k-1)].
+
+No single finite horizon defeats every finite-window reader. For any h>=1
+the binary de Bruijn cycle D_h of length 2^h contains every h-word once, so
+its all-prefix block frequencies equal the fair product values through h and
+fail at h+1; composing the registered phase reader of length 5 2^(h-1) with
+D_h gives one fixed finite-window reader that emits D_h[n mod 2^h] on every
+origin-zero trajectory after synchronization, with no SILENT output.
+Arbitrary explicit counter dependence admits the reader F(n,x)=b_n for any
+prescribed sequence, so the bound concerns the fixed finite-window class and
+not every reading of the complete carrier.
+
+This is an L1 theorem about the actual native trajectory and a declared
+reader class; it is not a finite periodic surrogate and it is distinct from
+the driver-only entropy statement. It selects no physical event reader,
+resources, preparation, accepted-trial semantics or comparison horizon,
+asserts no minimal window or approximate-independence bound, does not
+presume that any experiment requires all-order independence, and does not
+falsify Born's marginal rule.
+
+### OCCURRENCE-ADDRESS-AND-LOG-EQUALITY [T]
+
+An equivalence relation E on N_0 with n E m implying (n+1) E (m+1) is
+equality or has unique mu>=0 and p>=1 with n E m iff n=m or both n,m>=mu
+and p divides n-m, giving mu+p classes; adding the cancellation
+(n+1) E (m+1) implies n E m leaves exactly equality and reduction modulo p.
+The kernel of a deterministic address read h:N_0->A has the successor
+property if and only if an autonomous map T on h(N_0) satisfies
+h(n+1)=T(h(n)); an arbitrary repeated address need not qualify. On a finite
+prefix {0,...,N} there are 1+N(N+1)/2 such relations and N+1 cancellative
+ones. Constant addresses, phase tags n mod p and fresh tags n all satisfy
+both laws, so homogeneity and cancellation do not select freshness.
+
+Right congruences on finite words are exactly the kernels of pointed
+deterministic history readers; two-sided monoid congruences include exact
+words, total identification, length modulo p, Parikh counts and occurring
+letter sets, and even cancellation of an appended known symbol holds for
+length residues and Parikh counts without recovering the history. The
+contract that the class of the empty word is a singleton and that
+ua E vb implies a=b and u E v forces exact word equality, so repeated equal
+payloads occupy distinct positions; the morphism erasing SILENT keeps
+accepted multiplicity while losing tick timing.
+
+For a fixed length-L decorated-window reader emitting identity labels or
+SILENT on the origin-zero native trajectory, the chart coding and bounded-gap
+recurrence of U-FINITE-READER-INDEPENDENCE-OBSTRUCTION give at most 20,000 L
+distinct labels per trajectory, each recurring infinitely often with bounded
+gaps, at most 62,500,000 L across charts, and at most |A| 20,000 L labels
+when a fixed finite apparatus state is also read; a nonempty reader of this
+class cannot issue a fresh literal identity at every accepted occurrence,
+even with an infinite label codomain. The counter tag (n,id_n) and
+accepted-rank tagging are fresh within their enlarged read domains.
+
+An append-only log with at most c atomic entries per tick holds at most
+L_0+cN entries after N ticks, sharply, so V fresh entries need at least
+ceil(V/c) ticks. On the lifted hexagonal balls B_r of
+RELATIONAL-GROWTH-SATURATION-BOUNDARY, with rows of length
+ell_r(x)=2r+1-|x| and lexicographic rank k_r(x,y), the map
+(r,x,y) -> n=r^3+k_r(x,y) bijects the tagged disjoint union onto N_0 with
+the intervals [r^3,(r+1)^3) as layers and an explicit integer inverse, so
+one entry per tick completes radius R after exactly (R+1)^3 ticks and c
+entries per tick attain ceil((R+1)^3/c); the count is cubic in the chosen
+radius and linear in elapsed ticks.
+
+This is an L1 theorem about address quotients, log congruences, a native
+reader class and emission budgets. Repeated labels do not prove one physical
+event, distinct events identified by external history positions are not
+excluded, and the serialization is a chosen enumeration. It selects no
+physical Snap, event equality, emission law, persistent record or spatial
+radius, and closes no physical owner.
+
+### RECORD-LOADER-RETENTION-CLASS [T]
+
+In the registered reservoir account, a READ leaves the complete state
+unchanged while a valid DEPOSIT of zero input energy and zero channel
+vectors appends one zero batch; under the projection retaining only the
+zero-port amplitudes before and after and their energies, the two
+transitions coincide as the tuple (0,0;0,0), so the completed-batch
+increment, 0 versus 1, is not a function of that projection: for pi:X->Y
+and d:X->D a factorization d=e pi exists iff d is constant on every
+pi-fibre. Both transitions emit zero threshold marks.
+
+Let source and record each be Q^m with the same rational positive definite
+Gram matrix G. An orthogonal rational W with W(s,0)=(0,s) for all s has
+exactly the block form
+
+```text
+W = [[0,B],[I,0]],       B^T G B = G,
+```
+
+hence W(0,r)=(Br,0): reapplying the same perfect loader exports a stored
+nonzero record into the source port. For V=S orthogonal-sum R
+finite-dimensional, an orthogonal W with W(R) contained in R satisfies
+W(S) contained in S, and the passive condition P_R W(0,r)=r already forces
+W(0,r)=(0,r); a rational shear (s,r)->(s,r+s) and the infinite
+shift W e_j=e_(j+1) on finitely supported sequences delimit these premises.
+With a pointwise protected old bank O and fresh capacity F, an orthogonal W
+with W(s,o,0)=(0,o,Js) exists iff a rational isometric embedding J:S->F
+exists, realized by the involution
+
+```text
+W(s,o,f) = (J^* f, o, J s + (I_F - J J^*) f);
+```
+
+dim F>=dim S is necessary but not sufficient over Q, since the form <1> has
+no rational isometry into <2>, while (s/2,s/2) embeds <1> into <2,2>.
+
+A cell carrier C={BLANK} disjoint-union {occupied(v): v in Q^m}, with
+occupied(0) distinct from BLANK, a head j in Z/N and two length-N arrays
+S,R has the single update FLOW swapping S_j with R_j and advancing the head,
+a bijection with FLOW^N(j,S,R)=(j,R,S) and FLOW^(2N)=identity, conserving
+total occupancy and energy. Its emitter returns (j,v) exactly when the
+record cell changes from BLANK to occupied(v). From an all-BLANK record
+bank, the first lap records every preloaded arrival once at a distinct
+address, including zero payloads, leaves earlier records unchanged, and
+emits nothing for BLANK sources or stipulated passive queries; the second
+lap empties the records and the third reissues the same addresses. Erasing
+the occupancy tag makes a zero arrival and an idle slot indistinguishable,
+and the record-energy change s^T G s - r^T G r detects nonzero cold loading
+but not a zero arrival or the warm swap (1,-1)->(-1,1).
+
+This is an L1 theorem about the displayed linear couplings, symbolic
+carriers and transition classes. It is not a physical bit bound, an energy
+cost per event, a nondisturbance certificate or a no-go for larger
+controllers, nonlinear storage or additional ports. Which interactions are
+records, which queries are passive, how occupancy is realized and how
+records persist remain with the physical apparatus owner.
+
+### REGISTRATION-PAIR-RECOVERY-INVERSE [T]
+
+In a discrete renewal model with rational hazard h_k in [0,1] at age k since
+the last registration, no further state and independent identically
+distributed gaps, put S_0=1, w_k=h_k S_(k-1), S_k=S_(k-1)(1-h_k), u_0=1 and
+u_n=sum_(j=1)^n w_j u_(n-j). Then S_k is the weight of no registration
+through age k, w_k the first-gap weight and u_n the anchored all-pairs weight
+of any registration at lag n; every binary word has weight equal to the
+product of its age-path factors, and the three sequences are different
+objects. Given rational u_1..u_N with u_0=1, the unique candidate first-gap
+prefix is
+
+```text
+w_n = u_n - sum_(j=1)^(n-1) w_j u_(n-j),
+```
+
+admissible as a renewal prefix iff every w_n>=0 and sum_n w_n<=1; where
+S_(n-1)>0 the only compatible hazard is h_n=w_n/S_(n-1), and an age with
+S_(n-1)=0 is UNREACHABLE rather than of zero hazard. Finite prefixes do not
+identify the stationary intensity, and an arbitrarily normalized or
+early-truncated curve does not satisfy the inverse's input contract.
+
+For d dead steps followed by constant hazard a in (0,1], the gaps are
+w_n=a(1-a)^(n-d-1) for n>=d+1, the mean gap is d+1/a, the intensity is
+lambda=a/(1+da), and the j-th subsequent registration at lag n has weight
+binom(n-jd-1,j-1) a^j (1-a)^(n-j(d+1)). For d=1 and a=1/2, lambda=1/3,
+u_2,u_3,u_4=1/2,1/4,3/8, the normalized pair values are 3/2, 3/4, 9/8 while
+the normalized hazard is already 1, and u_n=1/3+(2/3)(-1/2)^n; the exact
+substitution of normalized all-pairs counts for normalized recovery is
+false. If h_j=a eta_j with 0<=eta_j<=1 and 0<a<=1 then
+
+```text
+|u_k - h_k| <= a(1-S_(k-1)) <= a^2 (k-1),    |u_k/a - eta_k| <= a(k-1),
+```
+
+attained at k=2, in units of the admitted opportunity rate rather than the
+registration intensity or a finite-lag normalization. For a finite nonzero
+hazard prefix with maximum m, every a in [m,1] with eta_j=h_j/a gives the
+same registration tree, so opportunity rate and efficiency are not
+separately identified by registrations. The period-12 patterns {0,1,4,6}
+and {0,1,3,7} under uniform phase have identical absolute pair weights at
+every lag, with numerator 4 at lag 0, 2 at lag 6 and 1 otherwise, and the
+same intensity 1/3, yet cyclic gaps (1,3,2,6) and (1,2,4,5) with age-3
+hazards 1/2 and 0; complete pair data do not certify the renewal premise.
+
+This is an L1 theorem of exact rational coefficient calculus and finite
+weighted event trees. It supplies no observation map, absolute scale,
+binning, physical opportunity model, detector calibration, admitted
+measurement payload or empirical result, asserts no published experiment
+wrong, and provides no native source, coupling, record map or physical
+registration semantics.
+
+### TRC1-CALIBRATION-IDENTIFIABILITY [T]
+
+For a head h in N_0 x F_5^6, read its first four checkpoint coordinates once
+with the balanced lift (0,1,2,-2,-1) to z in {-2,...,2}^4, and fix a context
+(Gamma,q,N) with Gamma a finite nonnegative rational field on the even
+sublattice of Z^3 with support R, q>0 rational and horizon N>=0. With
+s=sum z_i and the five sites y_0..y_4, prepare S(z)=sum_j((z,0)_j-s/5)
+delta_(y_j), so that m(z)=z^T G z=||S(z)||^2 with G=I_4-ee^T/5 positive
+definite. The fixed stencil with shell weights (6,1,15,1,1)/324 summing to
+8/9 defines L, and the cold transition on P=(u,v) is
+
+```text
+w_x = [2v_x - (Lv)_x - (1-Gamma_x/2)u_x] / (1+Gamma_x/2),
+b_x = -(w_x-u_x)/2  (x in R),      D_x = Gamma_x b_x^2,
+P' = (v,w),   heat' = heat + D,   tape' = tape appended with b,
+```
+
+with finite rational support at every cut and the exact balance
+E(P_t)+sum_R H_x(t)=m(z)/2. Counts C_x=floor(H_x/q) are nondecreasing, every
+newly crossed ordinal is emitted once, and one accounting record is emitted
+per coupled transition, including zero-crossing batches; rereading a record
+appends nothing and administrative END adds no interaction. Induction defines
+exactly one complete history through N for every admitted head and context;
+z=0 gives N zero-crossing records. Visible packets retain context, relative
+cut, crossing category, site multiplicities and ordinal ranges and discard
+head identity, signed fields and tape; since deposits are even in z, at
+most 313 distinct visible histories occur per context and horizon. A
+preparation ensemble p on finitely many heads, drawn once, pushes forward to
+Pr(prefix=y)=sum_i p_i 1[v_i=y], normalized and prefix-consistent.
+
+For rational calibration rows A and validation rows B on the same finite
+head list, with C the matrix A extended by the all-ones row, the following
+are equivalent: Ap=Aq implies Bp=Bq for all probability vectors p,q; ker C
+is contained in ker B; every row of B lies in the row space of C; B=KC for
+a rational K. When the inclusion fails, a rational d with Cd=0 and Bd!=0
+yields two strictly positive interior mixtures with equal calibration and
+predictions differing by 2 epsilon Bd. For the heads e0=(1,0,0,0) and
+e1=(0,1,0,0), both have total 4/5, LOW weight 1/20, HIGH weight 3/4 and
+normalized weights (1/16,15/16); at origin conductance 1, horizon 1 and
+q=1/16 the first-origin row (1421,-349,-349,-349)/1620 gives deposits
+1421^2/4860^2 and 349^2/4860^2, hence counts 1 and 0, and the mixtures
+(1/3,2/3) and (2/3,1/3) share the scalar calibration while predicting
+crossing probabilities 1/3 and 2/3. For e0 against 2e0 at q=1/8 the counts
+are 0 and 2 although normalized weights agree. Appending the calibration row
+(1,0) restores full rank and determines every prediction on that pair. The
+inherited obstruction survives: on z_H=(1,-1,0,0) and z_L=(1,1,1,1) the
+first origin form is strictly positive while the LOW and HIGH targets vanish
+respectively, so no state-independent complete nonnegative two-output
+processing recovers both targets, and ensemble averaging does not repair
+this pointwise contradiction.
+
+This is a conditional L1 theorem about the composed mathematical record
+chain and its finite-ensemble identifiability. The source design, lift,
+context, one update per counter label, fresh cold slots and the preparation
+ensemble are choices. It supplies no physical preparation law, port, clock
+or observable identification, realization certificate, reset satisfying the
+apparatus contract, independent occurrence law, frequency convergence, Born
+derivation or admitted measurement payload.
 
 ## 3. The kernel and the census
 
@@ -9792,9 +12401,487 @@ The conformal mode prefactor K_chi5 =
 1/(864 pi) is derived at the homogeneous L5 scope from the single
 layer 5 action, with c_hom = 12 K_chi5 = 1/(72 pi)
 (CONFORMAL-PREFACTOR) [D]; the
-inhomogeneous scalar action and the SI clause stay open (FRW-INHOM,
-METRO-EDGE-SCALE). N is the cosmic clock, carried at its committed
+broader inhomogeneous scalar action remains outside the selected
+FRW-INHOM dictionary below, and the SI clause stays open
+(METRO-EDGE-SCALE). N is the cosmic clock, carried at its committed
 labels within COSMOLOGY-REGISTER.
+
+### DEF-K1-HYBRID-FRW-CELL-METRIC
+
+This definition fixes one mathematical construction on the unchanged ten-word
+K1 packet of `DEF-K1-LINEAR-METRIC`, at its fixed unit amplitude. The source
+word, both local initial squares and the public rational propagator are
+retained. `K1-LINEAR-METRIC-COMPLETION` supplies the exact all-counter bound
+used below; its independent proof and original L1 scope remain in section 14.
+
+The additional choices are the cell-integrated homogeneous lapse, its
+attachment to the discrete source, the absence of homogeneous scale factors
+in the TT/constraint terms, the expanding vacuum background, and the metric
+reading defined below. They are explicit dictionary choices, not consequences
+of the axiom. The mathematical functional is an L1 definition; only the
+separately named gate of `FRW-INHOM` adopts its stated L2 output.
+
+The cubic polynomial in the inhomogeneous fields and multipliers is the exact
+defining functional of this restricted hybrid model. It is not an
+approximation asserted to control the remainder of a larger gravitational
+action. No all-order local gauge symmetry, Einstein-Hilbert identification
+or physical TT radiation equation of state is assumed.
+
+#### Carriers, time cells, and the action domain
+
+Let `X=(Z/5)^3`. An oriented edge is `(x,a,k)` with tail `x` and head
+`x+k e_a`, for `a=1,2,3` and `k=1,2`. Define
+
+```text
+(Bf)(x,a,k)=f(x+k e_a)-f(x),
+w_1=29/324, w_2=65/324, W=diag(w_k),
+<f,g>_V=(1/25) sum_X f g,
+<u,v>_E=(1/25) sum_edges u v,
+L3=B^top W B, V0=<1,1>_V=5.
+```
+
+`B^top` is the adjoint for these products. The graph is connected, all weights
+are positive, and `ker L3` consists exactly of constants. Consequently `L3`
+is invertible on the mean-zero vertex space `V_perp`. Its inverse there is
+rational in a rational basis. Write `Pi_0` for subtraction of the spatial
+mean and `K_E=ker B^top` for the co-closed edge space.
+
+The planar embedding is `(iota f)(x)=f(x_3)`. Direct substitution gives
+
+```text
+<iota f,iota g>_V=sum_(r in Z/5) f(r)g(r),
+L3 iota=iota L,
+L=[188I-29(S+S^-1)-65(S^2+S^-2)]/324.
+```
+
+There are two distinct time carriers:
+
+* Continuous chart time `t>=0` carries the homogeneous fields
+  `chi(t)=log a(t)` and `nu(t)>0`. They are locally smooth enough for the
+  displayed variations; `chi` and `nu` may be taken smooth. This chart has
+  no SI calibration.
+* Integer and half-integer labels carry the finite-space fields. `h_n` is
+  a vertex field at integers; `tau_(n+1/2)` and `ell_(n+1/2)` belong to
+  `V_perp`; `p_n` belongs to `K_E`, and the shift multiplier `N_n` is an
+  arbitrary edge field, at integers `n>=1`.
+
+The new, explicit bridge is
+
+```text
+I_n=[n,n+1],
+eta_n=integral_(I_n) nu(t) dt,
+ell_hom,n=eta_n-1.
+```
+
+Here a counter step is assigned one unit of the chosen coordinate chart,
+and `eta_n` is its homogeneous lapse integral. This is a mathematical
+clock dictionary. It does not assert that the native counter already was
+measured cosmic time. The distinguished solution uses `nu=1`, so every
+cell has unit proper-time length in this dictionary. The local fields are
+not silently interpolated into continuous functions of `t`.
+
+For precision, define the action first on `[0,T_max]` with integer `T_max>=2`.
+TT links and half-slice variables have `0<=n<T_max`; integer shift and
+co-closed variables have `1<=n<T_max`. Fix the homogeneous and TT endpoint
+values when varying. The TT field at an interior integer is varied
+independently before selecting its initial data. Lapse variations have
+compact support in `(0,T_max)`. Other interior variations are arbitrary in
+their declared linear spaces. No `h_-1`, `tau_-1/2`, or `j_0` is consumed.
+
+The future-time action means stationarity against finite-support
+variations, equivalently these compatible finite restrictions. It does
+not mean that an infinite numerical action sum converges. There is no
+boundary equation imposed at `t=0` in addition to the chosen initial data.
+
+#### Discrete source and the single joint action
+
+For `0<=n<T_max` and `1<=m<T_max`, put
+
+```text
+d_n=h_(n+1)-h_n,
+g_n=B h_n,
+q_m=h_(m+1)-h_(m-1),
+R_m=h_(m+1)-2h_m+h_(m-1)+L3 h_m,
+
+e_(n+1/2)(x)=d_n(x)^2/2
+  +(1/4) sum_(edge e incident to x) w_e g_(n+1)(e)g_n(e),
+j_m(e)=(w_e/4)g_m(e)[q_m(tail e)+q_m(head e)],
+
+E_n=<1,e_(n+1/2)>_V
+   =(1/2)[<d_n,d_n>_V+<h_(n+1),L3 h_n>_V],
+P_m=WB[tau_(m+1/2)-tau_(m-1/2)]+p_m.
+```
+
+The endpoint polarization gives the exact identities
+
+```text
+e_(m+1/2)-e_(m-1/2)+B^top j_m=(q_m*R_m)/2,
+E_m-E_(m-1)=<q_m,R_m>_V/2.
+```
+
+For example, the kinetic difference is
+`q_m(h_(m+1)-2h_m+h_(m-1))/2`. On each oriented edge, the difference
+of the endpoint-split spatial product plus the incidence divergence is
+the endpoint contribution to `q_m L3 h_m/2`. Summing edges proves the
+pointwise identity; summing vertices cancels the divergence. This is an
+algebraic identity, without a statistical or continuum approximation.
+
+Let `rho_m(chi)` be any smooth matter density function admitted by the
+public homogeneous action. It is a fixed matter input, independent of
+the K1 word. The common functional is
+
+```text
+S_(T_max) = S_FRW,T_max[rho_m] + (1/(2 lambda)) A_(T_max),
+lambda=216 pi,
+
+S_FRW,T_max[rho_m] = V0 integral_0^T_max dt nu exp(3chi)
+                 [-(3/lambda)(dot chi/nu)^2-rho_m(chi)],
+
+A_(T_max) = sum_(n=0)^(T_max-1) {
+        (1/2)[<d_n,d_n>_V-<h_n,L3 h_n>_V]
+        -(eta_n-1) E_n
+        +2<ell_(n+1/2),L3 tau_(n+1/2)>_V
+        -<ell_(n+1/2),e_(n+1/2)>_V
+      }
+      +sum_(m=1)^(T_max-1) {
+        2<N_m,P_m>_E+<N_m,j_m>_E
+      }.
+```
+
+This is the only action chosen here. There is no additional
+`-integral nu E/(2 lambda)` term and no additional homogeneous
+`-ell_hom E/(2 lambda)` term. The source occurs exactly once.
+
+In particular, replacing `-(eta_n-1)E_n` by `-eta_n E_n` is not harmless:
+`E_n` is a quadratic functional of the varied `h`, not a constant during
+that variation. At `eta=1` the displayed coupling has zero `h` variation
+while retaining its nonzero lapse variation. This is why the original K1
+equation survives. No on-shell substitution is made before variation.
+
+The TT and local constraint terms contain no `chi`. This absence is an
+explicit continuation choice of this dictionary, not a claim about how an
+actual gravitational wave redshifts.
+
+The action is local on the declared discrete time cells and graph, with
+the homogeneous lapse integrated over its own cell. It is not presented
+as a pointwise continuous Lagrangian density in all fields. In particular,
+no continuous velocity is assigned to `h` or `tau`.
+
+#### Explicit selected solution and every field variation
+
+The total explicit decoder below has one of the ten unchanged K1 words
+as its input, and fixes vacuum matter `rho_m=0`. The action also has the
+source-off restriction for arbitrary `rho_m` proved below; that functional
+statement does not require a total decoder for arbitrary
+matter histories.
+
+For a word `w=(w_0,w_1,w_2,w_3)`, retain
+
+```text
+u_t=w_(t+2)-w_t,
+h_t=iota[(delta_(r,u_t)+delta_(r,u_t+1))/2], t=0,1,
+h_(n+1)=(2I-L3)h_n-h_(n-1), n>=1.
+```
+
+This is the unchanged planar K1 evolution at every integer. Its rational
+initial pair and rational recurrence give one rational history.
+Conservation gives `E_n=E(w)` at every link. Direct substitution in the
+initial pair gives
+
+| abs(u_1-u_0) | E(w) |
+| --- | --- |
+| 0 | 53/432 |
+| 1 | 713/2592 |
+| 2 | 67/162 |
+
+For displacement zero, `<h_0,Lh_0>=53/216` and `d_0=0`. For displacement
+one the squared difference and cross pairing are `1/2` and `65/1296`.
+For displacement two they are `1` and `-14/81`. These give the three
+entries and prove strict positivity for every word. No occurrence law is
+needed. Local `e(x)` is not claimed pointwise nonnegative.
+
+Define for every link and interior integer
+
+```text
+tau_(n+1/2)=(1/2)(L3|V_perp)^(-1) Pi_0 e_(n+1/2),
+p_m=-j_m/2-WB[tau_(m+1/2)-tau_(m-1/2)],
+ell_(n+1/2)=0, N_m=0, nu(t)=1.
+```
+
+The energy balance and the two adjacent tau equations imply `B^top p_m=0`.
+Thus `p_m` belongs to the space in which it is varied; this is not an
+extra projector applied to discard an unsatisfied source component.
+All these records are rational and determined by the marked K1 history.
+
+The continuous background is
+
+```text
+H0=sqrt(E/(6V0))=sqrt(E/30), choosing the positive root,
+F(t)=1+(3/2)H0 t,
+a(t)=F(t)^(2/3), chi(t)=(2/3)log F(t),
+H(t)=H0/F(t), nu(t)=1, t>=0.
+```
+
+`F(t)>0` for all future time, so this background exists smoothly on the
+entire stated domain. No finite upper time cutoff is selected from data.
+At `t=0`, `H^2=E/30`, `dot H=-E/20`, and `ddot a=-E/60`.
+Consequently `a(t)^2=1+2sqrt(E/30)t+(E/60)t^2 mod t^3`. The action
+selects the displayed entire continuation; a local 2-jet alone does not
+uniquely select it.
+
+All variations are checked on this representative, after retaining the
+full independent variables in the action:
+
+**TT field.** At `eta=1`, `ell=N=0`, the first variation with respect to
+an interior `h_m` is `-<R_m,delta h_m>_V/(2 lambda)`. The source-coupling
+variations vanish because their multipliers vanish. The recurrence makes
+every such variation zero.
+
+**Mean-zero lapse.** Its equation is exactly
+`2L3 tau_(n+1/2)-Pi_0 e_(n+1/2)=0`, solved by the displayed unique tau.
+
+**Shift.** Its equation is exactly `2P_m+j_m=0`, solved by the displayed
+co-closed `p_m`, including any harmonic or coexact current.
+
+**Co-closed field.** Variation inside `K_E` gives
+`2 Proj_(K_E) N_m=0` in the declared unweighted edge product. It holds
+because `N_m=0`.
+
+**Tau.** With absent endpoint shifts interpreted only for this equation
+as `N_0=N_(T_max)=0`, its expression before the common factor is
+
+```text
+2[L3 ell_(n+1/2)+B^top W(N_n-N_(n+1))].
+```
+
+It lies in `V_perp` and vanishes for `ell=N=0`. This includes the first
+and last half-slice equations of every finite restriction.
+
+**Continuous homogeneous lapse.** An arbitrary smooth variation inside
+a time cell has `delta eta_n=integral_(I_n) delta nu dt`. Holding the
+independent `h` variables fixed during this variation gives
+
+```text
+delta_nu A_(T_max)=-sum_n E_n integral_(I_n) delta nu dt.
+```
+
+Since the selected K1 solution has the same E on every cell, this is
+exactly `-integral_0^T_max E delta nu dt`, including variations that cross
+cell boundaries. There are no point impulses at the boundaries. The
+resulting homogeneous equation is
+
+```text
+3H^2=lambda rho_m(chi)+E/(2V0 a^3).
+```
+
+It is an equation obtained from the one common action, not an equation
+added afterwards. On the explicit vacuum solution,
+`a^3=F^2` and `3H0^2=E/(2V0)`, so it holds for every `t>=0`.
+
+**Homogeneous scale.** The discrete terms have zero chi variation. The
+remaining equation, in the selected proper-time gauge, is
+
+```text
+(6/lambda) dot H+(9/lambda) H^2-3rho_m-partial_chi rho_m=0.
+```
+
+In vacuum `dot H=-(3/2)H^2`, which proves this equation for every future
+time. Therefore every independent field equation of `S_(T_max)` holds on
+every finite restriction of the selected history.
+
+This proves existence of a solution of the full stated hybrid variational
+model, not uniqueness of every solution of that action. The explicit
+decoder is unique after its input, branch, gauge, initial scale, clock
+bridge, and representative have been selected.
+
+#### Source interpretation, conservation, and canonical background
+
+On the proved representative the homogeneous equations can be written
+using
+
+```text
+rho_K(t)=E/(2 lambda V0 a(t)^3), p_K(t)=0,
+rho_total=rho_m+rho_K,
+partial_chi rho_K=-3rho_K.
+```
+
+The constant comoving source is a consequence of the selected action and
+its on-shell K1 conservation. Thus the homogeneous fixed-charge
+functional `S_FRW[rho_m]-integral nu E/(2 lambda)` reproduces the
+homogeneous variations on this solution. It is **not** asserted to be a
+Routh reduction of the full TT action; it must not be added to that action.
+
+The scale equation is exactly the public scale equation for this total
+source because `3rho_K+partial_chi rho_K=0`. Define the matter pressure
+as in the public homogeneous continuity clause,
+`p_matter=-rho_m-(partial_chi rho_m)/3`, distinct from the edge field `p_m`.
+The total source then obeys
+
+```text
+dot rho_total=-3H(rho_total+p_matter),
+2dot H=-lambda(rho_total+p_matter),
+3H^2=lambda rho_total.
+```
+
+These identities apply wherever the proved on-shell constant E and a
+homogeneous solution occur; the explicit global witness is vacuum.
+For that witness they hold at every future time, with `p_matter=0`.
+
+The homogeneous canonical variables on the witness are
+
+```text
+pi_chi=-6V0 a^3 H/lambda=-6V0 H0 F/lambda,
+C_H=-lambda pi_chi^2/(12V0 a^3)+V0 a^3 rho_total=0,
+dot pi_chi=-3E/(2lambda).
+```
+
+Both public homogeneous Hamilton equations follow from these expressions.
+This is the canonical description of the homogeneous solution and source;
+it does not claim a fully continuous Hamiltonian formulation of all the
+discrete fields. The public `lambda=216 pi`, `lambda/3=72 pi`, chain
+`864=12*72=4*216`, and forced fiber identity remain unchanged dependencies.
+
+The local constraint propagation is exact at every interior integer:
+the two tau equations and
+`e_(m+1/2)-e_(m-1/2)+B^top j_m=0` imply the required co-closed momentum
+solution. No large-time estimate replaces this identity.
+
+The source balance and the complete first-variation calculation prove the
+stated existence and propagation assertions. They make no claim of an
+all-order local gauge symmetry for the exact cubic action.
+
+#### Literal source-off action and compatible restrictions
+
+For arbitrary homogeneous fields `chi,nu` and arbitrary admitted
+`rho_m(chi)`, set all inhomogeneous fields to zero:
+
+```text
+h=0, tau=0, p=0, ell=0, N=0.
+```
+
+Then `d=e=j=E=P=0` and the full functional restricts **literally** to
+`S_FRW,T_max[rho_m]`. This holds before any homogeneous equation or vacuum
+specialization. It recovers every public homogeneous identity by the
+same variations and the same constants, not merely one numerical
+Friedmann equality. At this restriction the inhomogeneous first
+variations vanish as well, so any admitted public homogeneous solution
+embeds as a source-off solution of the hybrid model.
+
+The formal source-off object is not an eleventh K1 word or an adjustable
+K1 amplitude. In the explicit vacuum decoder it has `E=0`, `H0=0`,
+`a=nu=1`, giving the Minkowski background and emitted matrices.
+
+For two finite endpoints `T_max<T_max'`, the continuous solution restricts from
+`[0,T_max']` to `[0,T_max]`; the discrete arrays restrict to exactly the links
+and interior integers of the action domain above. Each tau depends on its
+own link source and each interior p on its adjacent links. No constructor
+uses the final horizon. Thus the solution family and its marked outputs
+are compatible under every such restriction.
+
+#### Named metric reading and equality
+
+`K1-HYBRID-FRW-CELL-METRIC-DICTIONARY` reads the preceding construction
+through `GATE-L1-L2-K1-HYBRID-FRW-CELL-METRIC`. Its continuous homogeneous
+output is the metric on the selected chart `M=(0,infinity) x R^3`, with
+coordinates `(t,y_1,y_2,y_3)` and the smooth one-sided extension to `t=0`,
+
+```text
+g_FRW = -nu(t)^2 dt^2 + a(t)^2 (dy_1^2+dy_2^2+dy_3^2).
+```
+
+`V0=5` is the normalization of the graph inner product. It is not the
+Euclidean volume of this chart. The chart and the unit cell-clock bridge
+are selected coordinate conventions, with no SI calibration. No point of
+the finite graph is silently identified with a point of `R^3`.
+
+Separately, at marked integer counters and finite sites, emit
+
+```text
+g_n(x)=diag(-nu(n)^2,
+            a(n)^2(1+h_n(x)),
+            a(n)^2(1-h_n(x)),
+            a(n)^2), n>=0, x in X.
+```
+
+The output also retains the complete labelled `h`, half-slice `e,tau`, and
+interior integer `j,P,p` records. The auxiliary tau and edge momentum solve
+the scalar/vector constraints of this action. Tau is not identified with
+an additional component of the emitted metric and is not discarded when
+its multiplier is zero. There is no continuous inhomogeneous interpolation
+in time or space: these inhomogeneous matrices remain separate marked
+records on the finite torus. They are not a complete `GeometryData` object.
+
+The public K1 bound `-59/100<h_n(x)<99/100`, together with `a(n)>0` and
+`nu=1`, proves Lorentz signature of every emitted inhomogeneous matrix at
+every nonnegative integer. The continuous homogeneous metric is Lorentzian
+on its entire stated domain. This is a signature result for these outputs,
+not an Einstein-Hilbert identification of the joint action.
+
+Equality is literal equality of every marked source label, all displayed
+fields, continuous homogeneous functions, and metric records in the chosen
+chart. The context fixes the graph, cell-clock bridge, action, source packet,
+vacuum matter, expanding branch, `a(0)=nu=1`, and representative. No sign or
+coordinate quotient or adjustable K1 amplitude is implicit. All discrete
+`h,e,j,tau,P,p` source and constraint records are rational. The emitted
+integer metric entries are exact real algebraic numbers and need not be
+rational. The continuous output is the exact displayed real function with
+positive algebraic constant `H0`. No floating equality or numerical
+integration is used. Words sharing energy and homogeneous background are
+not identified when their complete labelled outputs differ.
+
+This dictionary admits precisely this one selected reading in the stated
+context, with the separate zero-source restriction. It neither asserts that
+other readings are impossible nor claims global completeness of a physical
+reading family. No target observation selects a word, branch or convention.
+
+### FRW-INHOM [D]
+
+The registered positive existence clause is adjudicated literally:
+
+> closes positively by an inhomogeneous source construction that reproduces the public FRW-CANONICAL-FORM identities in the homogeneous limit; closes negatively if every inhomogeneous extension breaks the exact chain of twelves
+
+`DEF-K1-HYBRID-FRW-CELL-METRIC` gives one such source construction. Its
+nonconstant finite source and full labelled scalar/vector constraints belong
+to the same joint action as the continuous homogeneous background. Every
+independent first variation vanishes on the displayed solution for every
+K1 word and every finite future restriction. The explicit nonzero source
+obeys the public homogeneous equations with `rho_total`; setting the
+inhomogeneous fields to zero recovers the public FRW action literally for
+arbitrary admitted matter. The exact chain of twelves is unchanged.
+
+`FRW-INHOM` therefore adopts `K1-HYBRID-FRW-CELL-METRIC-DICTIONARY` through
+the named `DICTIONARY_LIFT` gate from L1 to L2. The positive clause asks for
+existence of one construction; the proof does not invoke its universal
+negative alternative. The adopted status is a dictionary, not a new
+theorem claiming that this reading is forced by the axiom.
+
+The L2 output consists exactly of the continuous homogeneous metric on its
+declared chart together with the separate marked finite inhomogeneous
+metric and auxiliary records. It supplies no complete continuous
+inhomogeneous spacetime, full GR or Einstein equations for those records,
+all-order gauge completion, tau-to-full-metric identification, arbitrary
+matter-jet continuation, physical occurrence or emission law, physical
+radiation pressure, scalar fluctuation spectrum, numerical `r_T`, or SI
+scale. The separate selected `TT-SOURCE [D]` isolated emission construction
+does not enlarge this FRW dictionary. `TT-VECTOR-STATE-NORMALIZATION [O]`
+retains its full decision clause. The broader inhomogeneous scalar action excluded by
+`CONFORMAL-PREFACTOR` is still unsupplied: its homogeneous coefficient does
+not acquire an inhomogeneous action or a new L5-to-L2 interpretation from
+this selected hybrid construction. Its SI boundary remains with
+`METRO-EDGE-SCALE [O]`.
+
+The joint action is even in `h`, its `e,j,E` sources are quadratic, and at
+`nu=1,ell=N=0` the h equation is the homogeneous recurrence `R[h]=0`:
+there is no independent emitting variable or additive source in that
+equation. A zero initial pair remains identically zero even on an admitted
+nonzero-matter homogeneous background, while nonzero K1 histories enter
+through their imposed initial pair; this explains why this construction
+does not supply `TT-SOURCE`, without asserting a universal negative
+emission theorem.
+
+The exact proof is the complete construction and first-variation argument
+above, together with the separately proved K1 bound in this Canon. No
+external draft or numerical source fixture is a premise of this closure.
 
 ## 14. The gravitational wave program
 
@@ -9874,8 +12961,761 @@ the explicit dictionary inputs mu = 1 and Z_L2 = 1/2
 (TT-QUADRATIC-GERM [D]); neither the action germ, a Gaussian-state
 boundary, nor a Stage B pullback is derived by that bookkeeping
 identity. No numerical mu corridor is retained without a public
-shadow-to-mu inference rule. The emission map and the quasinormal mu decision
-after such a rule remain open (TT-SOURCE, QNM-LEAVER-MU).
+shadow-to-mu inference rule. The selected isolated emission map is given by
+TT-SOURCE [D] below.
+The quasinormal mu decision after such an inference rule remains open
+(QNM-LEAVER-MU). No curved-background source map follows from the
+isolated planar construction.
+
+### DEF-K1-LINEAR-METRIC
+
+This is a definition of one selected L1 mathematical construction. Its
+source alphabet, normalization, marked coordinates, initial square and
+continuation are explicit inputs, not conclusions derived from the axiom.
+
+Let
+
+```text
+W={0010,0011,0100,0101,0110,1001,1010,1011,1100,1101},
+r in Z/5,  n in N_0,  w=(w_0,w_1,w_2,w_3).
+```
+
+For the optional finite weighted law set
+`nu(0110)=nu(1001)=1/6` and `nu(w)=1/12` for each other word. These
+positive weights sum to one and are part of the declared K1 input. No
+physical preparation or occurrence law is supplied by this declaration.
+For `t=0,1` fix
+
+```text
+u_t=w_(t+2)-w_t,
+b_t(r)=[delta_(r,u_t)+delta_(r,u_t+1)]/sqrt(2),
+h_t(r)=b_t(r)^2=[delta_(r,u_t)+delta_(r,u_t+1)]/2.
+```
+
+All positions are reduced modulo five; `sqrt(2)>0`. This is the unit
+amplitude `a=1` convention. The joint input, which is not replaced by
+independent draws, is
+
+| w | nu(w) | (u_0,u_1) |
+| --- | --- | --- |
+| 0010 | 1/12 | (1,0) |
+| 0011 | 1/12 | (1,1) |
+| 0100 | 1/12 | (0,-1) |
+| 0101 | 1/12 | (0,0) |
+| 0110 | 1/6 | (1,-1) |
+| 1001 | 1/6 | (-1,1) |
+| 1010 | 1/12 | (0,0) |
+| 1011 | 1/12 | (0,1) |
+| 1100 | 1/12 | (-1,-1) |
+| 1101 | 1/12 | (-1,0) |
+
+For `S f(r)=f(r+1)` fix
+
+```text
+L=[188I-29(S+S^-1)-65(S^2+S^-2)]/324,
+h_(n+1)=(2I-L)h_n-h_(n-1),  n>=1,
+H_n(r)=diag(h_n(r),-h_n(r),0),
+gamma_n(r)=I3+H_n(r),
+g_n(r)=diag(-1,1+h_n(r),1-h_n(r),1).
+```
+
+The selected function and finite prefixes are
+
+```text
+D_K1: W x N_0 -> (Sym_4(Q))^(Z/5),
+D_K1(w,n)=(g_n(r))_r,
+P_N(w)=((n,D_K1(w,n)))_(0<=n<=N).
+```
+
+Equality is literal equality of all marked matrix entries and counter
+labels. The context is fixed: five labelled sites, the plus polarization
+displayed above, zero cross component, two initial slices, unit forward
+counter and the specified `L`. No source, Fourier-slot, polarization,
+position or time average is implicit.
+
+The domain begins with an available four-bit packet. The first output
+needs its first three bits and the second and later outputs may use the
+whole packet. The counter does not assert a physical acquisition clock.
+For `n>=2` the outputs are evolved matrices of this initial packet, not
+fresh squares of later native windows. No output feeds the update `U`.
+This defines neither a total native-orbit `D_geom` nor a selected physical
+reading among all admissible alternatives.
+
+For the comparison action use the Euclidean spatial inner product on
+`R^(Z/5)`, the unitary transform
+`F_kr=exp(2 pi i k r/5)/sqrt(5)`, and the positive real roots
+
+```text
+s=sqrt(5),
+lambda_0=0,
+lambda_1=lambda_4=(235+18s)/324,
+lambda_2=lambda_3=(235-18s)/324,
+kappa=(0,sqrt(lambda_1),sqrt(lambda_2),-sqrt(lambda_2),-sqrt(lambda_1)),
+D=F^dagger diag(i kappa) F.
+```
+
+The marked Fourier slots fix this derivative branch. Conjugate pairing
+makes `D` real, `D^T=-D`, and `-D^2=L`. Its entries are real
+algebraic numbers; a quadratic coefficient field is not asserted.
+Only the rational `L` occurs in `D_K1`.
+
+Write `ell_0` for the lapse perturbation, `N_i` for the shift,
+`Delta=E-1`, and `Delta_c^2=E+E^-1-2`. All six independent entries of
+the symmetric `H` and `ell_0` are on integer slices. The shift and
+`K_ij` are on half slices. The displayed placement is a choice, with no
+uniqueness theorem. Only the spatial derivative in direction 3 is
+nonzero. Set
+
+```text
+K_11=Delta H_11/2,  K_22=Delta H_22/2,  K_12=Delta H_12/2,
+K_13=(Delta H_13-D N_1)/2,  K_23=(Delta H_23-D N_2)/2,
+K_33=(Delta H_33-2D N_3)/2,  K=Tr(K_ij),
+
+G2(H)=1/2 <D H_3j,D H_3j>-1/2 <D H_33,D Tr H>
+      +1/4 <D Tr H,D Tr H>-1/4 <D H_ij,D H_ij>,
+R1(H)=D^2 H_33-D^2 Tr H,
+
+A2=sum_n {<K_ij,K_ij>-<K,K>+G2(H)+<ell_0,R1(H)>}.
+```
+
+Repeated spatial indices run from 1 to 3, so off-diagonal terms in an
+`ij` sum occur twice. The full variables `H,ell_0,N` remain present
+until variation. There is no prescribed source. Variation has finite time
+support in the interior `n>=1`; the first two slices are initial data.
+The sum denotes a local variational principle, not a convergent infinite
+action value. Multiplying `A2` by the common nonzero constant
+`1/(2 lambda)`, including the convention `lambda=216 pi`, does not
+change its stationary equations or fix a scalar-to-tensor normalization.
+
+### K1-LINEAR-METRIC-COMPLETION [T]
+
+For the selected construction `DEF-K1-LINEAR-METRIC`, every word and
+counter has one rational output, finite prefixes restrict consistently,
+and `mean(h_n)=1/5`. At every site and counter,
+
+```text
+-59/100<h_n(r)<99/100.
+```
+
+Thus every eigenvalue of `gamma_n(r)` exceeds `1/100`, and
+`g_n(r)` has signature `(-,+,+,+)`. The representative
+`H=diag(h,-h,0), ell_0=0, N_i=0` solves every interior field equation
+of the full displayed quadratic action. The optional finite law `nu`
+has exactly one deterministic history pushforward, consistent under all
+prefix restrictions. These are L1 algebraic conclusions at the selected
+scope.
+
+**Existence, uniqueness and prefix proof.** The initial pair is rational.
+A multiplication by `2I-L` and subtraction give exactly one rational
+successor. Induction proves the assertion for every finite counter.
+Equivalently,
+
+```text
+T_L=[[2I-L,-I],[I,0]],
+(h_(n+1),h_n)^T=T_L^n(h_1,h_0)^T.
+```
+
+The construction has no horizon-dependent choice, proving prefix
+restriction. Since `1^T L=0` and both initial sums are one, the scalar
+recurrence for `sum h_n` has constant solution one. No spatial zero mode
+has been removed. For any finite prefix set `A` the pushed weight is
+`sum_{w:P_N(w) in A}nu(w)`. Fibres partition `W`, and prefix
+restriction partitions the same fibres, proving normalization and
+consistency. This finite weighted-sum fact is not an occurrence theorem.
+
+**Full first variation.** At the stated representative, `Tr H=K=0`,
+`H_3j=0`, and `R1=0`. The kinetic first variation is
+
+```text
+(1/2) sum_n <Delta h,Delta(delta H_11-delta H_22)>.
+```
+
+The spatial first variation is
+`-(1/2)sum_n <Dh,D(delta H_11-delta H_22)>`. All terms linear in
+`delta ell_0`, `delta N_i` and the other field variations vanish
+before any restriction on those variations. Spatial
+`D^T D=L` and time summation by parts therefore give
+
+```text
+delta A2=-(1/2)sum_n <(Delta_c^2+L)h,delta H_11-delta H_22>.
+```
+
+The recurrence makes this zero for every independent, compactly
+supported interior variation. It proves the lapse and three momentum
+constraints together with all six metric equations. It proves a solution
+in the chosen representative, not uniqueness modulo gauge of the full
+unrestricted constrained system. Restricting the action afterwards gives
+`A2_TT=(1/2)sum_n [<Delta h,Delta h>-<h,Lh>]`.
+
+**Uniform signature proof.**
+We prove for every source word, site and `n>=0` that
+
+```text
+-59/100 < h_n(r) < 99/100.
+```
+
+Consequently every eigenvalue of `gamma_n(r)` exceeds `1/100`, and
+`g_n(r)` has one negative and three positive eigenvalues at all times.
+This is an all-time analytic bound, not a finite-horizon check.
+
+**Fourier solution.**
+
+The four nonzero eigenvalues listed above lie strictly between 0 and 4.
+For `k=1,2`, define `omega_k in (0,pi)` by
+`cos omega_k=1-lambda_k/2`, and write `t_k=lambda_k/4`.
+Let `Delta_u=u_1-u_0` and
+
+```text
+theta_k=2 pi k (u_0+Delta_u/2+1/2-r)/5,
+delta_k=pi k Delta_u/5.
+```
+
+The paired `k,-k` contribution `y_(k,n)(r)` to the real inverse transform
+is exactly
+
+```text
+(2/5) cos(pi k/5) [
+  cos(theta_k) cos(delta_k) cos((n-1/2)omega_k)/cos(omega_k/2)
+ -sin(theta_k) sin(delta_k) sin((n-1/2)omega_k)/sin(omega_k/2)].
+```
+
+It agrees with both initial slices and solves their scalar recurrence,
+which proves the formula for all `n`. Since the sine and cosine share the
+same time argument, its absolute value is bounded by `A_kr`, where
+
+```text
+A_kr^2=(4/25) cos^2(pi k/5) [
+ cos^2(theta_k) cos^2(delta_k)/(1-t_k)
+ +sin^2(theta_k) sin^2(delta_k)/t_k].
+h_n(r)=1/5+y_(1,n)(r)+y_(2,n)(r).
+```
+
+**Complete amplitude bound.**
+
+Put
+
+```text
+F1=(3+s)/50, F2=(3-s)/50,
+C_plus=(3+s)/8, C_minus=(3-s)/8,
+S_plus=(5+s)/8, S_minus=(5-s)/8,     s=sqrt(5).
+```
+
+Here `Fk=(4/25)cos^2(pi k/5)`;
+`C_plus+C_minus=3/4`, and `1-C_plus=S_minus`, `1-C_minus=S_plus`.
+The elementary bounds `20/9<s<9/4` imply
+
+```text
+t1>7/33, 1-t1>3/4, t2>3/20, 1-t2>4/5,
+F1<21/200, F2<2/125.
+```
+
+Translations and sign reversal of `Delta_u` do not change the set of
+angle classes. All nine possible `(u_0,u_1)` pairs are therefore covered
+by `|Delta_u|=0,1,2`. The following strict rational bounds cover every site:
+
+| Class | Upper bound for `A_1r^2` | Upper bound for `A_2r^2` | Hence `A_1r+A_2r` is less than |
+| --- | --- | --- | --- |
+| `Delta_u=0` | `7/50 < (2/5)^2` | `1/50 < (3/20)^2` | `11/20` |
+| `\|Delta_u\|=1` | `693/4000 < (21/50)^2` | `29/300 < (8/25)^2` | `37/50` |
+| `\|Delta_u\|=2`, `(cos^2 theta_1,cos^2 theta_2)=(1,1)` | `7/500 < (3/25)^2` | `21/1600 < (3/25)^2` | `6/25` |
+| `\|Delta_u\|=2`, pair `(C_plus,C_minus)` | `523/3200 < (21/50)^2` | `83/2400 < (1/5)^2` | `31/50` |
+| `\|Delta_u\|=2`, pair `(C_minus,C_plus)` | `782313/1920000 < (16/25)^2` | `10397/480000 < (3/20)^2` | `79/100` |
+
+For `Delta_u=0`, drop `cos^2 theta<=1` in the first term. For
+`|Delta_u|=1`, the bracket is a convex combination; bound it by the larger
+of its two terms, using `cos^2 delta_1=C_plus`,
+`sin^2 delta_1=S_minus`, `cos^2 delta_2=C_minus`,
+`sin^2 delta_2=S_plus`.
+
+For `|Delta_u|=2`, `theta_1` is an odd multiple of `pi/5` and
+`theta_2=2 theta_1`, giving exactly the three pairs in the table. The
+middle pair uses `C_plus C_minus=1/16` and `S_plus S_minus=5/16`.
+For the last, most restrictive pair, use
+
+```text
+C_minus^2<1/100, S_plus^2<105/128,
+C_plus^2<55/128, S_minus^2<49/400.
+
+A_1r^2 < (21/200)[1/75+495/128] = 782313/1920000,
+A_2r^2 < (2/125)[275/512+49/60] = 10397/480000.
+```
+
+The gaps to `(16/25)^2` and `(3/20)^2` are respectively
+`4119/1920000` and `403/480000`, both positive. For clarity, the preceding four rows follow from these explicit substitutions:
+
+```text
+Delta_u=0:
+ A_1r^2 < (21/200)/(3/4) = 7/50,
+ A_2r^2 < (2/125)/(4/5) = 1/50.
+
+|Delta_u|=1:
+ C_plus/(1-t1) < 7/8 < 33/20,
+ S_minus/t1 < (7/20)/(7/33) = 33/20,
+ C_minus/(1-t2) < 1/8 < 145/24,
+ S_plus/t2 < (29/32)/(3/20) = 145/24.
+ Hence A_1r^2 < (21/200)(33/20) = 693/4000
+ and A_2r^2 < (2/125)(145/24) = 29/300.
+
+|Delta_u|=2, pair (1,1):
+ A_1r^2 < (21/200)(1/10)/(3/4) = 7/500,
+ A_2r^2 < (2/125)(21/32)/(4/5) = 21/1600.
+
+|Delta_u|=2, pair (C_plus,C_minus):
+ A_1r^2 < (21/200)[(1/16)/(3/4)+(5/16)/(7/33)] = 523/3200,
+ A_2r^2 < (2/125)[(1/16)/(4/5)+(5/16)/(3/20)] = 83/2400.
+```
+
+All displayed square comparisons are strict rational inequalities. Thus `A_1r+A_2r<79/100`
+uniformly. Adding the unchanged zero mode `1/5` proves the stated interval.
+
+**Boundary of the result.** The map and its continuation are selected
+mathematical data. Positive matrices at the chosen amplitude do not
+control a perturbative remainder or solve nonlinear gravitational
+constraints. The lapse equation here has no second-order TT self-source;
+that source needs higher-order action terms and a compatible homogeneous
+response. In particular a constant retained mean in this linear vacuum
+solution does not solve the source obstruction on a flat compact
+background.
+
+The theorem supplies no physical realization of the source or geometry,
+no total map on native `U`-orbits, no general three-dimensional manifold,
+no physical clock or scale, no Schwarzschild/RW comparison, and no
+classification or unique selection of all reading families. The linear
+scalar representative is zero; `det(gamma)=1-h^2` is not thereby a
+cosmological scalar. No `P_S` or `r_T`, including zero or infinity,
+follows. The separate `FRW-INHOM [D]` hybrid dictionary does not enlarge
+this L1 theorem. The separate `TT-SOURCE [D]` isolated reading supplies
+its own explicitly chosen source-to-field map, not a physical source
+realization from this initial-value theorem.
+`TT-VECTOR-STATE-NORMALIZATION [O]` keeps its full registered decision
+clause. The theorem neither adopts nor promotes a physical
+reading in `TT-SQUARING-DECODER [D]` or
+`PHOTON-SPATIAL-TEMPORAL-TRANSFER [D]`.
+
+### DEF-K1-ISOLATED-TT-EMISSION
+
+This definition selects one L1 source-to-field reading on the unchanged
+ten-word alphabet W and initial source data of DEF-K1-LINEAR-METRIC.
+It does not identify source amplitudes with an outgoing vector field.
+For w=(w0,w1,w2,w3), t=0,1 and r in Z/5, retain
+
+```text
+u_t=w_(t+2)-w_t,
+b_t(r)=[delta_(r,u_t)+delta_(r,u_t+1)]/sqrt(2),
+H_t(r)=b_t(r)^2,
+Src(w)=(w,u0,u1,b0,b1,H0,H1),
+Phi(Src(w))=H1-H0=b1^2-b0^2.
+```
+
+The context fixes five labelled sites, the selected plus frame, a marked
+local emission onset, zero outgoing initial data, the public planar L,
+one isolated impulse, and the forward relative sign. The source-work
+convention transfers the complete K1 kinetic channel (H1-H0)^2/2 into
+the outgoing quadratic field energy at onset. Complete transfer is an
+adopted condition, not a consequence of conservation or J alone.
+
+The source class consists of local real homogeneous quadratic maps
+from two ordered spin-one O(2) doublets to a spin-two doublet, equivariant
+under rotations and reflection and antisymmetric under slice exchange.
+The selected real source data occupy its plus frame. The outgoing h has
+its own marked counter m and obeys
+
+```text
+L=[188I-29(S+S^-1)-65(S^2+S^-2)]/324,
+h0=h1=0,
+h_(m+1)=(2I-L)h_m-h_(m-1)+delta_(m,1)*Phi,  m>=1.
+```
+
+The total map sends Src(w) to every finite prefix (h0,...,hN), N>=1,
+of this rational history. Equality is literal equality of the source
+descriptor, context labels and all outgoing entries and counter labels.
+Longer prefixes restrict to shorter ones. This definition supplies no
+composition rule for overlapping source windows or physical onset clock.
+
+For the linear stress at the impulse fix, with lambda=216*pi,
+
+```text
+rho=J_i=S_i3=0,
+S11=Phi_plus/(2*lambda),  S22=-Phi_plus/(2*lambda),
+S12=S21=Phi_cross/(2*lambda).
+```
+
+All stress components vanish at other steps. These are the coefficients
+of the chosen source coupling (1/2)*sum S_ij*H_ij added to A2/(2*lambda),
+where A2 is the full quadratic action of DEF-K1-LINEAR-METRIC; lapse,
+shift and all independent metric entries are retained through variation.
+
+For the quadratic work record use the five-site planar restriction of
+DEF-K1-HYBRID-FRW-CELL-METRIC: B=B_5, with oriented edges (r,r+k) for
+r in Z/5 and k=1,2, (B_5 f)(r,k)=f(r+k)-f(r), and weights
+w_1=29/324, w_2=65/324. Thus the planar L=B_5^T W_e B_5.
+For each real TT component set
+
+```text
+q_n=h_(n+1)-h_(n-1),
+e_(n+1/2)(x)=(h_(n+1)(x)-h_n(x))^2/2
+  +(1/4)*sum_(edge incident x) w_edge*(B h_(n+1))_edge*(B h_n)_edge,
+j_n(edge)=(w_edge/4)*(B h_n)_edge*(q_n(tail)+q_n(head)).
+```
+
+Sum these records over the two components if both are present. The
+preregistered source radiative channel is
+
+```text
+e_src,1/2=Phi^2/2,
+e_src,n+1/2=0 for n>=1,
+j_src=0.
+```
+
+Here Phi is real in the selected source frame; for two real components
+the right side is their sum of squares divided by two. This channel is
+not identified with the complete physical source energy. Its prescribed
+depletion is part of the isolated transfer convention. The auxiliary
+record fixes mean(tau)=0 and
+
+```text
+2L*tau_(n+1/2)=Pi0(e_(n+1/2)+e_src,n+1/2),
+p_n=-j_n/2-W_e B*(tau_(n+1/2)-tau_(n-1/2)).
+```
+
+### TT-NATIVE-FOUR-WORD-LAW [T]
+
+For the native bits `theta_n=s_2(n) mod 2`, the complete length-four
+factor language is exactly the ten-word K1 alphabet. The limiting forward
+factor frequencies exist and agree with the optional K1 weights.
+
+**Proof.** The native sequence obeys
+`theta_(2n)=theta_n`, `theta_(2n+1)=1-theta_n`, hence is the fixed point
+of `0->01, 1->10`. All four binary pairs occur in its prefix `01101001`.
+Every child pair starting at an even position is `01` or `10`, according
+to its parent bit; every odd-start pair is the indicated image of its
+parent pair:
+
+```text
+00 -> 10,  01 -> 11,  10 -> 00,  11 -> 01.
+```
+
+The first N native bits have one-letter imbalance at most one because
+each complete adjacent child pair contains one bit of each kind.
+Let p_N be the vector of pair frequencies counted over starting positions
+0<=n<N, and let P be the permutation matrix of the displayed odd-start
+map. Splitting starts by parity gives
+
+```text
+p_(2M)=c+(1/2)P p_M+O(1/M),
+c=(0,1/4,1/4,0),  in pair order (00,01,10,11).
+```
+
+An odd terminal start changes normalized counts by O(1/N). The affine
+map has max-norm contraction factor 1/2, and its fixed point satisfies
+
+```text
+f00=f10/2,       f01=1/4+f11/2,
+f10=1/4+f00/2,   f11=f01/2.
+```
+
+Its unique solution is `f00=f11=1/6`, `f01=f10=1/3`.
+Iterating the finite-count estimate down dyadic scales bounds the
+difference from this fixed point by O(log N/N). Thus the frequencies
+exist; merely solving stationary equations is not being substituted for
+this existence argument.
+
+For a parent pair ab, the even and odd child triples are respectively
+`a,(1-a),b` and `(1-a),b,(1-b)`. Their union is exactly
+`{001,010,011,100,101,110}`; weighting each parity by 1/2 gives
+frequency 1/6 for every triple. Every triple is attained because its
+parent pair occurs, and every triple start has one of these two forms.
+
+An even-start four-letter window from ab is `a,(1-a),b,(1-b)`;
+an odd-start one from abc is `(1-a),b,(1-b),c`. Their images are
+
+```text
+even: {0101,0110,1001,1010},
+odd:  {0010,0011,0100,1011,1100,1101}.
+```
+
+The sets are disjoint and their union is exactly W. Multiplying the
+parent pair or triple frequencies by 1/2 gives 1/6 for 0110 and 1001,
+and 1/12 for each other word. These are limiting frequencies along the
+native integer sequence. Shifting the initial counting position by any
+fixed integer changes only finitely many counts, so the same limiting
+factor masses are stationary in that sense.
+
+Finally, substitution into the algebraic formula
+`omega(a,b,c)=c-a` gives `omega(w0,w1,w2)=u0` and
+`omega(w1,w2,w3)=u1`. This is a comparison of L1 expressions; it
+imports no L5 source object or cross-layer map. Equality with the
+declared K1 law supplies no physical event law or L6 measure.
+
+### TT-QUADRATIC-SOURCE-CLASSIFICATION [T]
+
+In the local homogeneous quadratic class of
+DEF-K1-ISOLATED-TT-EMISSION, the space of source maps has real dimension
+one:
+
+```text
+Q_kappa(x,y)=kappa*(y^2-x^2),  kappa in R.
+```
+
+Under the additional declared complete-transfer condition, every
+nonstatic K1 packet forces `kappa^2=1`. The forward relative sign
+remains the separate convention selecting `kappa=+1`.
+
+**Proof.** Each input is a real two-dimensional spin-one representation.
+Identify it with C, so a rotation acts by
+`(x,y)->(exp(i alpha)x,exp(i alpha)y)`; the real two-dimensional
+output acts by multiplication by `exp(2i alpha)`. Reflection is
+complex conjugation on both sides.
+
+Any real homogeneous quadratic map has a complex-valued polynomial
+expression in `x,conjugate(x),y,conjugate(y)`. Rotation covariance
+retains only monomials of weight two, hence precisely
+
+```text
+Q(x,y)=A*x^2+B*x*y+C*y^2,  A,B,C in C.
+```
+
+Weight-zero and weight-minus-two monomials cannot contribute to a
+weight-two polynomial identity for every alpha. Reflection covariance
+`Q(conjugate(x),conjugate(y))=conjugate(Q(x,y))` makes A,B,C real.
+Comparison in `Q(y,x)=-Q(x,y)` gives `C=-A` and `B=0`.
+Conversely every real multiple of `y^2-x^2` satisfies all these
+conditions. The dimension statement is over R; it is not a
+classification of arbitrary maps or a claim about spatial dimension.
+
+For the selected real K1 source slices, write `Phi=H1-H0`.
+The zero initial outgoing slices and the impulse `kappa*Phi` give
+`h2=kappa*Phi` directly from the recurrence. At its first nonzero
+half-slice the spatial cross term contains `h1=0`, so the deposited
+field channel at each site is `kappa^2*Phi^2/2`. The declared source
+channel is `Phi^2/2`.
+
+The source positions satisfy `u0,u1 in {-1,0,1}`.
+For two distinct such positions modulo five, the supports
+`{u0,u0+1}` and `{u1,u1+1}` differ. Thus a nonstatic packet has
+`Phi!=0` at some site. Equality of the deposited channel and the
+complete source channel therefore forces `kappa^2=1`; either sign
+satisfies the equality. The adopted forward relative orientation
+chooses +1. Neither the energy equality nor slice antisymmetry
+derives that sign, and complete transfer itself is a stated premise.
+No adjustable magnitude remains after those conventions are fixed.
+
+### TT-ISOLATED-EMISSION-TOTALITY [T]
+
+For every declared K1 packet, the isolated outgoing recurrence has
+exactly one rational history for all integer counters m>=0.
+Its finite prefixes restrict literally, `h2=Phi`, and
+`mean(h_m)=0` for every m. Exactly four packets are static:
+
+```text
+{0011,0101,1010,1100}.
+```
+
+Each of the other six has a nonzero first emitted slice.
+
+**Proof.** On the five labelled sites `r in Z/5`, retain
+
+```text
+L=[188I-29(S+S^-1)-65(S^2+S^-2)]/324,
+H_t(r)=[delta_(r,u_t)+delta_(r,u_t+1)]/2,
+Phi=H1-H0,  h0=h1=0,
+h_(m+1)=(2I-L)h_m-h_(m-1)+delta_(m,1)*Phi,  m>=1.
+```
+
+The source and L have rational entries. The coefficient of each
+successor is the identity, so induction gives one and only one
+rational next slice at every finite counter. No choice depends on
+a terminal horizon. Applying the same induction to two different
+horizons proves equality on their common prefix, and therefore a
+unique total sequence with those prefixes. At m=1 the recurrence
+gives `h2=Phi`.
+
+Each H_t has sum one. The displayed L is symmetric and its row sum
+is `(188-2*29-2*65)/324=0`. Taking spatial sums in the recurrence
+therefore gives `s_(m+1)=2s_m-s_(m-1)`, with `s0=s1=0`, so
+every sum and every spatial mean is zero.
+
+The ten source words have ordered source pairs
+
+```text
+0010:(1,0),   0011:(1,1),   0100:(0,-1),  0101:(0,0),
+0110:(1,-1),  1001:(-1,1),  1010:(0,0),   1011:(0,1),
+1100:(-1,-1), 1101:(-1,0).
+```
+
+The two marked supports `{u,u+1}` for u in {-1,0,1}, reduced modulo
+five, are distinct. Hence `Phi=0` exactly when `u0=u1`, giving
+the four displayed static words and six active ones. The recurrence
+then vanishes identically for a static word and starts with
+`h2!=0` for every active word.
+
+This argument concerns the independent outgoing field h. It
+uses no pullback through an outgoing square root, imposes no
+physical onset clock, and asserts no all-counter nonvanishing,
+physical outgoing metric or overlapping-source composition.
+
+### TT-ISOLATED-EMISSION-WORK-BALANCE [T]
+
+On every selected isolated history, the prescribed total work record
+conserves locally for all integers n>=1, and its auxiliary momentum
+record is co-closed at every such counter. This is a theorem about the
+declared radiative channel, whose depletion is prescribed in the
+definition.
+
+**Planar carrier.** The incidence used here is explicitly the five-site
+planar restriction of the hybrid construction. Orient one edge from r
+to r+k for each `r in Z/5` and `k in {1,2}`, and set
+
+```text
+(B_5 f)(r,k)=f(r+k)-f(r),
+w_1=29/324,  w_2=65/324,  W_e=diag(w_k),
+L=B_5^T W_e B_5.
+```
+
+Vertex and edge products are their ordinary finite sums.
+Thus `B_5^T` contributes minus at an edge tail and plus at its head.
+Expanding the last expression gives precisely the five-by-five
+planar L in DEF-K1-ISOLATED-TT-EMISSION. No 125-site operator is
+being identified with a five-site matrix.
+
+For any three successive real field slices define
+
+```text
+q_n=h_(n+1)-h_(n-1),
+R_L h_n=h_(n+1)-2h_n+h_(n-1)+L h_n,
+e_(n+1/2)(x)=(h_(n+1)(x)-h_n(x))^2/2
+  +(1/4)*sum_(edge incident x) w_edge*(B_5 h_(n+1))_edge*(B_5 h_n)_edge,
+j_n(edge)=(w_edge/4)*(B_5 h_n)_edge*(q_n(tail)+q_n(head)).
+```
+
+Here Delta on a half-slice record denotes its value at n+1/2 minus
+its value at n-1/2. The exact off-shell identity is
+
+```text
+Delta e+B_5^T j_n=q_n*(R_L h_n)/2,
+```
+
+where multiplication on the right is pointwise.
+
+**Local identity.** The kinetic difference at a vertex with values
+(a,b,c) is
+
+```text
+[(c-b)^2-(b-a)^2]/2=(c-a)*(c-2b+a)/2.
+```
+
+For one edge take tail values (a,b,c) and head values (d,e,f).
+Its endpoint-split spatial-energy difference is the same at each
+endpoint:
+
+```text
+delta_share=(w_edge/4)*(e-b)*[(f-c)-(d-a)],
+j_edge=(w_edge/4)*(e-b)*[(c-a)+(f-d)].
+```
+
+Direct subtraction at the tail and addition at the head give
+
+```text
+delta_share-j_edge=(w_edge/2)*(c-a)*(b-e),
+delta_share+j_edge=(w_edge/2)*(f-d)*(e-b).
+```
+
+Summing incident edges supplies `q_n*Lh_n/2` at each vertex.
+Together with the kinetic identity this proves the off-shell equation
+for arbitrary real three-slice data, without invoking the recurrence
+or a finite-history extrapolation. Summing scalar identities proves
+the corresponding record for two real TT components.
+
+**Isolated transfer.** On the selected histories,
+`h0=h1=0`, `h2=Phi`. Hence at n=1 the current is zero and
+the field energy changes from zero to `Phi^2/2` pointwise.
+The prescribed source channel changes from that same
+`e_src,1/2=Phi^2/2` to zero. At n>=2 the force and the source
+channel vanish. Applying the off-shell identity at each counter
+therefore gives
+
+```text
+Delta(e+e_src)+B_5^T j_n=0,  n>=1.
+```
+
+No `h_-1`, initial boundary equation or source law before the
+declared onset is needed.
+
+**Auxiliary solution.** For every real v,
+
+```text
+<v,Lv>=sum_edge w_edge*(B_5 v)_edge^2.
+```
+
+All weights are positive, and the k=1 edges alone connect the five
+sites. Consequently `ker L` consists exactly of constants.
+The restriction of L to mean-zero vectors is invertible. It has a
+rational matrix in a rational basis, so its inverse carries rational
+inputs to rational outputs. At every half-slice the recurrence gives
+rational energy data, and subtraction of their mean gives
+`Pi0(e+e_src)` in that subspace. Thus
+
+```text
+2L*tau_(n+1/2)=Pi0(e_(n+1/2)+e_src,n+1/2),
+mean(tau_(n+1/2))=0
+```
+
+has exactly one rational solution.
+
+Let `E_tot=e+e_src`. Local balance makes
+`Delta E_tot=-B_5^T j_n`, which has zero spatial sum because
+`B_5 1=0`. The difference of the auxiliary equations therefore is
+`2L*Delta tau=Pi0(Delta E_tot)=Delta E_tot`.
+For the defined record `p_n=-j_n/2-W_e B_5 Delta tau`,
+
+```text
+B_5^T p_n=-(B_5^T j_n)/2-L*Delta tau
+         =-(B_5^T j_n+Delta E_tot)/2=0.
+```
+
+The local polynomial identity and recurrence induction establish all
+counter quantifiers. The channel `e_src` remains the stipulated
+finite transfer record; it is not a derived evolution of the complete
+microscopic source. Pointwise positivity of e, irreversible radiation,
+and a nonlinear source or FRW action are not conclusions of this balance.
+
+### TT-SOURCE [D]
+
+The selected isolated emission dictionary of DEF-K1-ISOLATED-TT-EMISSION
+adopts Phi=H1-H0 as the source of the independently evolved outgoing TT
+field. It supplies one typed emission map, its native packet dependency,
+and compatibility with the declared planar propagation and conservation
+constraints. Locality, degree, representation class, complete transfer,
+relative sign, onset and outgoing initial condition are explicit choices.
+This D adoption is not a derivation of those choices from the axiom.
+
+The exact construction rests on the four separately registered L1
+theorems above: the native word law, local quadratic class, regular
+zero-start history, and declared-channel work/co-closure identity. These
+theorems do not derive the adopted source class, transfer, frame or onset
+conventions from J. Their public computational audit is the unchanged
+P-TT-NATIVE-QUADRATIC-EMISSION-1 proof and verifier bundle.
+
+**Linear source equations.** At the transverse representative the TT
+variation of A2/(2*lambda) is -R_L h/(2*lambda). The declared symmetric
+stress coupling varies as S11*delta h_plus+S12*delta h_cross. It gives
+R_L h_plus=2*lambda*S11=-2*lambda*S22 and R_L h_cross=2*lambda*S12.
+The planar source laws (1-E)rho=D J3 and (E^-1-1)J_i=D S_i3 hold
+identically. No failing longitudinal source is projected away. These
+linear equations do not equate rho with quadratic source-work energy.
+
+Source weight one gives output weight two, compatible with
+c(s)=1-s^2 and c(1)=0,c(2)=-3. This is planar representation/propagation
+compatibility, not a new curved-background theorem.
+
+The result supplies no microscopic full-source depletion law, physical
+occurrence or onset law, repeated-source composition, irreversible flux,
+outgoing vector state, detector, full nonlinear gravitational reaction,
+physical geometry for the outgoing history or SI scale. The vector
+state and its fourth moments, action normalization and scalar comparison
+remain the complete separate TT-VECTOR-STATE-NORMALIZATION [O] obligation.
+There is no numerical r_T(k), even zero, from this construction. No
+L2-L6 output or lift is adopted by this L1 dictionary.
 
 ## 15. Couplings, instruments, and metrology
 
@@ -11182,12 +15022,9 @@ THE WALL
                              lift; target carrier, equivalence, observables,
                              action, normalization, and constraints are STOP
 GRAVITATIONAL WAVE
-  TT-SOURCE                  the emission map
   QNM-LEAVER-MU              the quasinormal mu decision
   TT-VECTOR-STATE-NORMALIZATION  the only gate yielding a numerical r_T(k)
 COSMOLOGY
-  FRW-INHOM                  the inhomogeneous sector, the named
-                             classical horizon
   NS-TILT                    n_s - 1 = -5 alpha; falsifier live, CMB-S4
   DE-CONFORMAL-WEIGHT        the typed homogeneous dictionary, if any,
                              selecting the dark-energy density character;
@@ -11204,11 +15041,6 @@ PLENUM AND KERNEL
 
   SQRT-PHI-TIME-GRAVITY      the typed clock and gravity bridge remains
                              after the exact L1 digit lift
-  CURVATURE-OPERATOR-CANONICAL
-                             whether the public architecture determines
-                             one equivalence class of spatial-curvature
-                             operator after its carrier, measure,
-                             projection, and commutator type are frozen
 RAPIDITY EVALUATION
   TRIVIAL-RAPIDITY-EVALUATION-BRIDGE
                              derive controlled summatory cancellation at

@@ -1,0 +1,7 @@
+POINT_MAP partitions=52 isometric=1 killed_contrasts=51 PASS
+CONTINUOUS_DEFECT ordered_quadratic_coefficients=25 exact PASS
+SIMPLEX binary_masks=32 sharp_effects=0,I_H PASS
+SHARPNESS_DEFECT trace=k*(5-k)/25 PASS
+COMPRESSION_LEMMA disconnected_control_sharp_effects=4 PASS
+SCOPE five_point_free_encoding;deterministic_finite_map;classical_endpoint_read
+PHYSICAL complete_apparatus_nogo=NOT_CLAIMED

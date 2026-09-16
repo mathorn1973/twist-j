@@ -1,0 +1,13 @@
+G1 PASS |X|=125 |E|=750 rank(L3)=124 planar=L_public norm=exact
+G2 PASS ten K1 words, weights, unit slices and v82 recurrence unchanged
+G3 PASS off-shell pointwise polynomial balance identity terms=3500 bad_vertex=-1
+G4 PASS localized global energy equals staggered invariant; all ten histories conserved; mean=701/2592
+G5 PASS G3 identity gives delta0(A3)=+(1/2)<xi q,R> and delta1(A2)=-(1/2)<xi q,R>
+G6 PASS coefficient solve unique: alpha=1 beta=1 gamma=1/2
+G7 PASS unique mean-zero tau solution certified for both adjacent K1 half-slice sources, all ten words
+G8 PASS divergence Hodge momentum completion: p_perp in ker(B^T) and 2P+j=0, all ten words
+G9 PASS total lapse = homogeneous bar_e plus mean-zero Pi0 e; h=0 returns 3H^2=lambda rho with lambda/3=72*pi
+G10 PASS all dimensionless coefficients frozen; no fitted or compensating coefficient
+G11 PASS Public Canon v82 bytes/hash and frozen K1/predefinition inputs match
+G12 PASS verifier-side deterministic standard-library path; repository policy/security is the external PR gate
+VERIFIER RESULT PASS-CONSTRUCT-CANDIDATE G1-G11; G12 requires public workflow
