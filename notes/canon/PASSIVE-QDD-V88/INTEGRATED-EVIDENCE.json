@@ -1,0 +1,78 @@
+{
+  "scope": "EVIDENCE INTEGRATION ONLY; ACTIVE CANON V87 UNCHANGED",
+  "public_main": "5c9a494de3f4b9856c292a77d35280fb086a0404",
+  "active_canon": "Public Canon v87",
+  "canon_sha256": "a2517c6d8efb1969a7258f94d9874cca3b5b9beb1aecdfd2e39b56f33961a917",
+  "required_main_checks": "PASS",
+  "checks": [
+    {
+      "name": "check",
+      "conclusion": "success",
+      "details_url": "https://github.com/mathorn1973/twist-j/actions/runs/35099456435/job/104804986070"
+    },
+    {
+      "name": "publication",
+      "conclusion": "skipped",
+      "details_url": "https://github.com/mathorn1973/twist-j/actions/runs/35099456435/job/104804889877"
+    },
+    {
+      "name": "architecture-x86_64",
+      "conclusion": "success",
+      "details_url": "https://github.com/mathorn1973/twist-j/actions/runs/35099456435/job/104804888713"
+    },
+    {
+      "name": "architecture-aarch64",
+      "conclusion": "success",
+      "details_url": "https://github.com/mathorn1973/twist-j/actions/runs/35099456435/job/104804888516"
+    }
+  ],
+  "probes": [
+    {
+      "probe": "P-QDD-PASSIVE-THRESHOLD-MOMENT-1",
+      "completed_evidence_commit": "4931bd53c8c787ff1158907ab34360e0029b1c9a",
+      "pr": {
+        "headRefOid": "4931bd53c8c787ff1158907ab34360e0029b1c9a",
+        "mergeCommit": {
+          "oid": "e6bfff478d780ac388426741848ed900670d57fb"
+        },
+        "mergedAt": "2026-09-16T12:53:45Z",
+        "state": "MERGED",
+        "url": "https://github.com/mathorn1973/twist-j/pull/1026"
+      },
+      "bundle_sha256": "3259a367ca2b496ea5b43e4952c66eab4a1d064b1c451127b08bf54fad7b80c2",
+      "all_six_files_unchanged": true
+    },
+    {
+      "probe": "P-QDD-PASSIVE-NATIVE-MEMORY-1",
+      "completed_evidence_commit": "c1a6341ceec61439789f0108905f0b3ea15b259f",
+      "pr": {
+        "headRefOid": "212057a8bce57e43d03d0a1fe2cc60ca81405499",
+        "mergeCommit": {
+          "oid": "330fad1b8e42ade5329ce3d161686b74ee4c742e"
+        },
+        "mergedAt": "2026-09-16T13:01:12Z",
+        "state": "MERGED",
+        "url": "https://github.com/mathorn1973/twist-j/pull/1027"
+      },
+      "bundle_sha256": "52d133dc89b07d89947e6a0eacac0d5fbd6e003d844813f397a065fdc5ed74a8",
+      "all_six_files_unchanged": true
+    },
+    {
+      "probe": "P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1",
+      "completed_evidence_commit": "757492055ab5a0a39e14a4089650f3f76ed9cf47",
+      "pr": {
+        "headRefOid": "9c080a81a083475223c67ba8f9c7e3ceb7ac99f5",
+        "mergeCommit": {
+          "oid": "5c9a494de3f4b9856c292a77d35280fb086a0404"
+        },
+        "mergedAt": "2026-09-16T13:02:58Z",
+        "state": "MERGED",
+        "url": "https://github.com/mathorn1973/twist-j/pull/1028"
+      },
+      "bundle_sha256": "8d0c6c808a7932b37b7ff8ea6ec8de33740d883e0b6bac39afa314b36a540701",
+      "all_six_files_unchanged": true
+    }
+  ],
+  "new_physical_claims": false,
+  "release_created": false
+}

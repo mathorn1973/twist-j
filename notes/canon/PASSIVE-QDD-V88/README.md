@@ -29,8 +29,11 @@ The candidates are:
 Each probe has completed its pinned local run and replay with PASS, public
 readback of all six files, both required architecture jobs and the aggregate
 check at the exact evidence commit below. Prior exploration is disclosed.
-The three evidence PRs are still unmerged at the recorded snapshot; final
-acceptance and a separate reviewed Canon fold remain outstanding. A
+The three evidence PRs are now merged at public main
+`5c9a494de3f4b9856c292a77d35280fb086a0404`, with every evidence byte
+unchanged and required main checks passing. The original receipts below
+remain historical snapshots; INTEGRATED-EVIDENCE.json records integration.
+The separate reviewed Canon fold and release remain outstanding. A
 candidate label is not an earned status; process exit zero is not a
 substitute for the scientific verdict. The proposed T status includes
 mathematical conclusions only.
@@ -66,7 +69,7 @@ the existing case-sensitive `bundle-manifest-sha256-v1` convention, then
 matched against the public API byte-readback receipt. `EVIDENCE-RECEIPTS.json`
 records that independent git-object calculation. `PUBLIC-PROBE-RECEIPTS.json`
 preserves the public checks, pins and file readback. Neither receipt is an
-activation or substitutes for the unmerged evidence review and later fold.
+activation or substitutes for the separately reviewed later fold.
 
 `CHANGELOG-CANDIDATE.md` and `CORE-PARAGRAPH-CANDIDATE.md` are proposed
 editorial additions. No new core-selection badge is requested. Final
@@ -85,3 +88,21 @@ review the combined scope; retain every pre-existing registry row; derive
 the final ledgers/hashes with the repository tools; and perform the ordinary
 separate reviewed Canon fold and activation. This package authorizes none
 of those actions by itself.
+
+## Completed isolated content preview and physical followthrough
+
+`CONTENT.patch` proposes the complete fourteen-file content fold against
+the integrated main above. `CONTENT-PREVIEW.json` binds every before/after
+file hash. In the isolated copy, all 97 status-separation checks, the full
+ledger, generated views and six architecture-map tests passed. Canon
+validation reached exactly the deliberately untouched STATUS release-form
+boundary; this is not full activation PASS. The patch does not change
+STATUS.md, root README.md, CITATION.cff, any old claim row or any probe file.
+Its only notation normalization is E[C] to equivalent E(C) in two inserted
+expressions, avoiding the reserved square-bracket status syntax.
+
+The additional [first-cut realization notes](../../QDD-FIRST-CUT-REALIZATION-1/README.md)
+give a twelve-mode classical analogue design and an explicit transfer-error
+allowance. They remain noncanonical design work outside these three proposed
+T rows. Their source audit distinguishes cryptographic extraction parameters
+from physical timing/coverage certificates; no outcome payload was opened.
