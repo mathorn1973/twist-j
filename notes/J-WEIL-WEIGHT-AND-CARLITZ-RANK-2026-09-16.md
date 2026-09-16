@@ -13,14 +13,19 @@ LAYER        L1 exact algebra in Q(zeta_5) and F_q[t], plus three labeled import
 COMPUTATION  notes/J-WEIL-WEIGHT-AND-CARLITZ-RANK-2026-09-16.check.py, 21/21 PASS,
              byte-identical stdout on x86_64 and arm64, audit input only (see section 1)
 ISSUE LOCK   none; a note only
+LABELS       every fact below is candidate-T inside a NON-CANONICAL note; no public
+             T is claimed or created
+REVISION     rev2, 2026-09-16, after owner review of PR #1022; the five corrections
+             are listed in section 11; the check script and its pins are unchanged
 ```
 
 ## 1. What this note is and is not
 
-This note records three exact facts and one review comment. All three facts
-are elementary; two of them are new to this repository as statements, one is
-already recorded in prior notes and is quoted only because the other two rest
-on it.
+This note records four exact facts and one review comment. All four facts
+are elementary; three of them are new to this repository as statements, one is
+already recorded in prior notes and is quoted only because the others rest on
+it. Every fact carries the label candidate-T and lives in a NON-CANONICAL
+note; nothing here is a public T.
 
 It is not a probe. The arithmetic below was performed in conversation before
 any preregistration, so under POLICY section 3 it cannot be pinned under any
@@ -93,10 +98,14 @@ weight `w` if `|sigma(alpha)| = q^(w/2)` for every complex embedding `sigma`.
 - The Gauss element `Gamma = zeta - zeta^2 - zeta^3 + zeta^4` satisfies
   `Gamma^2 = 5`, `sigma_b(Gamma) = chi_5(b) Gamma` and `|sigma_b(Gamma)|^2 = 5`
   for every `b`. It is a Weil 5-number of weight 1. Gates B1 to B3.
-- On the character line `a` of `C_5`, `J` acts by the product
-  `[chi_5(a) zeta^a] . [phi^(-chi_5(a))]`. The first factor has modulus 1 on
-  every line (weight 0, a root of unity in `mu_10`); the second is the golden
-  scale. Gate B4.
+- Embedding by embedding, `sigma_a(J) = [chi_5(a) zeta^a] . [phi^(-chi_5(a))]`.
+  The first factor has modulus 1 in every embedding and is a root of unity in
+  `mu_10`; the second is the golden scale. Gate B4. This is a per-embedding
+  factorization, equivalently the polar factorization in `K tensor R`, and
+  not a factorization inside `K = Q(zeta_5)`: the quadruple
+  `chi_5(a) zeta^a` is not the Galois orbit of any single element of `K`,
+  since `sigma_2(zeta) = zeta^2` while the quadruple carries `-zeta^2`. No
+  single global weight-0 factor in `K` is claimed.
 - `J` itself is not a Weil `q`-number of any weight, for any `q`. Two proofs.
   (i) Its conjugate moduli take two values, gate A5. (ii) `N(J) = 1`, so a
   Weil weight would have to be 0, so all conjugates would have modulus 1, so
@@ -104,29 +113,41 @@ weight `w` if `|sigma(alpha)| = q^(w/2)` for every complex embedding `sigma`.
   `J^k != 1` for `1 <= k <= 10` and the only roots of unity in `Q(zeta_5)`
   are `mu_10`. Gate B5, B6.
 
-Consequence, stated at the level of the algebra only. The factorization of
-`J` on the character lines separates exactly the part a Frobenius or Weil
-reading can accept (the phase, weight 0; the Gauss element, weight 1) from the
-part it cannot (the golden scale, whose log-modulus is the nonconstant
-character `-chi_5(a) log phi`). The modulus projection of
-`AXIOM-PROJECTION-DICTIONARY [D]` is the non-Weil part. This is a statement
-about which data admit a single weight, not a statement about zeros.
+Consequence, stated at the level of the algebra only. `J` cannot serve
+directly as a Frobenius eigenvalue of one pure weight, because its
+conjugate moduli are not equal; `Gamma` can, with weight 1; the golden scale
+is exactly the part whose log-modulus is the nonconstant character
+`-chi_5(a) log phi`. The modulus projection of `AXIOM-PROJECTION-DICTIONARY [D]`
+is that non-Weil part. This excludes one specific use of `J` (a pure-weight
+eigenvalue) and nothing more; it does not exclude Frobenius or trace-formula
+methods applied to other data of the program, and it is not a statement
+about zeros.
 
 ## 5. Fact 3 and Fact 4: rank-one census in number fields and in Carlitz function fields
 
 ### 5.1 Number fields
 
 Import (Dirichlet). The unit group of `Z[zeta_n]` has rank `phi(n)/2 - 1` for
-`n >= 3`, torsion `mu_n` or `mu_2n`. A unit factors as
-`(root of unity) . (single real fundamental unit)^k`, uniquely up to torsion,
-exactly when the rank is 1, that is `phi(n) = 4`, that is `n in {5, 8, 10, 12}`.
-Among these the prime-power conductors are exactly `5` and `8`, in agreement
-with `QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T]`. The compositum
-`Q(zeta_40)` of `Q(zeta_5)` and `Q(zeta_8)` has degree 16 and unit rank 7, so
-no unit there has a single scale. Gates C1 to C4.
+`n >= 3`, torsion `mu_n` or `mu_2n`. The rank is 1 exactly when `phi(n) = 4`,
+that is `n in {5, 8, 10, 12}`. Import (Hasse unit index; Washington,
+Introduction to Cyclotomic Fields, chapter 4): the index
+`Q = [E : mu E^+]` of the subgroup generated by roots of unity and real units
+is 1 when `n` is a prime power and 2 otherwise. Hence the clean factorization
+`unit = (root of unity) . (real fundamental unit)^k` holds for every unit
+exactly at the prime-power conductors `5` and `8`; at `n = 12` it holds only
+up to index 2, the unit `1 - zeta_12` being a witness (its square, not it,
+is a root of unity times `2 - sqrt3`). The prime-power conductors of rank 1
+are exactly `5` and `8`, in agreement with
+`QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS [T]`. The compositum
+`Q(zeta_40)` of `Q(zeta_5)` and `Q(zeta_8)` has degree 16 and unit rank 7:
+`J = zeta_5 phi^-1` keeps its single scale there, and so does every unit of
+the two subfields, but the unit group as a whole needs seven independent
+scales, so the reading "one phase, one scale" is not available for a general
+unit of the compositum. Gates C1 to C4.
 
-The reading "one phase, one scale" of a unit is therefore available at
-`n = 5` and `n = 8` and at no cyclotomic field above degree 4.
+The reading "one phase, one scale" of every unit of the ring is therefore
+available exactly at `n = 5` and `n = 8`, and at no cyclotomic field above
+degree 4.
 
 ### 5.2 Carlitz cyclotomic function fields
 
@@ -170,51 +191,82 @@ Consequence, at the level of the algebra only. Over `F_5`, the residue
 characteristic of the program, there is no Carlitz cyclotomic ring of unit
 rank one, and in every Carlitz cyclotomic ring the multiplicative torsion is
 the constant field `F_q^x` while the Carlitz torsion `Lambda_M` is additive.
-The object "root of unity divided by a single fundamental unit" that defines
-`J` in `Z[zeta_5]` (and its silver sibling in `Z[zeta_8]`) has no
-function-field counterpart at `q = 5`, and where a rank-one rung exists
-(`q = 2`, `q = 3`) its phase is at most a sign. The wall between the carry
-world `Z` and the carry-free world `F_q[t]`, named "genus" in the carry lane,
-has the sharper name "unit rank and torsion type" on the side of units.
+Within this class (Carlitz cyclotomic extensions of `F_q(t)`, integral
+closure of `F_q[t]`, so `S = {infinity}`), the object "root of unity divided
+by a single fundamental unit" that defines `J` in `Z[zeta_5]` (and its silver
+sibling in `Z[zeta_8]`) has no counterpart at `q = 5`, and where a rank-one
+rung exists (`q = 2`, `q = 3`) its phase is at most a sign. This is a
+statement about the named class only; other base curves, larger `S`, or
+Drinfeld modules of higher rank are not covered and may behave differently.
+Inside the class, the wall between the carry world `Z` and the carry-free
+world `F_q[t]`, named "genus" in the carry lane, has the sharper name "unit
+rank and torsion type" on the side of units.
 
 ## 6. What this means for the RH lanes
 
 Plain and negative.
 
 1. Cyclotomic ascent does not help. `zeta_(Q(zeta_n))(s)` is the product of
-   `L(s,chi)` over all characters modulo `n`, and the trivial character
-   contributes `zeta(s)` itself. Every floor above adds L-functions and never
-   removes the Riemann zeta function. RH for `Q(zeta_5)` contains RH.
-2. The only proven RH-type mechanism (Frobenius, trace formula, positivity)
-   accepts, among the axiom data, exactly the Gauss element and the phase. It
-   rejects the golden scale, which is the part that makes `J` a unit of
-   infinite order rather than a root of unity. Section 4.
-3. On the proven side of the wall the rank-one rung does not exist at `q = 5`.
-   Section 5.2.
+   `L(s,chi*)` over the primitive characters `chi*` attached to the characters
+   modulo `n`; the trivial character has conductor 1 and contributes `zeta(s)`
+   itself (the imprimitive `L(s,chi_0 mod 5) = (1 - 5^-s) zeta(s)` is not the
+   factor). Every floor above adds L-functions and never removes the Riemann
+   zeta function. RH for `Q(zeta_5)` contains RH.
+2. Among the axiom data, `Gamma` and the per-embedding phase admit a single
+   Weil weight and `J` does not, so `J` itself is excluded as a pure-weight
+   Frobenius eigenvalue. Section 4. This excludes that one role; it does not
+   exclude Frobenius or trace-formula methods elsewhere in the program.
+3. In the class of Carlitz cyclotomic extensions of `F_q(t)` the rank-one rung
+   does not exist at `q = 5`. Section 5.2. Other function-field analogues are
+   not covered.
 4. The three walls already recorded in the RH lanes (Li and Toeplitz capacity,
    the Hankel detection ceiling, the Widder depth) are untouched.
 
 Nothing here moves `TRIVIAL-RAPIDITY-EVALUATION-BRIDGE [O]` or
 `LAMBDA-COCYCLE-ANGLES [H]`.
 
-## 7. Review comment on the open RH-PROGRAM-DEPENDENCE proposal
+## 7. Comment on the open RH-PROGRAM-DEPENDENCE proposal, rev2
 
-The unmerged proposal `notes/canon/RH-PROGRAM-DEPENDENCE-PATCH-2026-09-16.md`
-(branch `notes/rh-program-dependence-v87-2026-09-16`) resolves its decision 1
-as the ordinary RH for `zeta(s)` and nothing stronger, on the ground that this
-is the weakest exact statement matching the owner's literal declaration.
+The proposal `notes/canon/RH-PROGRAM-DEPENDENCE-PATCH-2026-09-16.md`
+(PR #1021, branch `notes/rh-program-dependence-v87-2026-09-16`) resolves its
+decision 1 as the ordinary RH for `zeta(s)` and nothing stronger.
 
-This note records one exact fact bearing on that decision and leaves the
-decision to the owner. By Fact 1, the modulus projection of `J` is
-`chi_5` in exponential form. `AXIOM-PROJECTION-DICTIONARY [D]` reads that
-modulus physically. Any physical reading of `|J|` is therefore exposed to
-`L(s,chi_5)` alongside `zeta(s)`, that is to `zeta_F(s) = zeta(s) L(s,chi_5)`,
-`F = Q(sqrt5)`, which is the object the O5 lane and
-`notes/C-GRH-QSQRT5-SPLIT-ORIENTATION-1/` already target. Bare RH is the
-literal declaration; `zeta_F` is what the registered dictionary exposes. The
-two are different statements, and the proposal's own section 4 already keeps
-the GRH lanes as cross-references. This note proposes no row, no edge and no
-wording, and edits no branch.
+Rev1 of this section said that any physical reading of `|J|` is "exposed to"
+`L(s,chi_5)` and hence to `zeta_F`, `F = Q(sqrt5)`. That was an
+over-statement and is withdrawn. What Fact 1 proves is that the conjugate
+moduli of `J` are the character `chi_5` in exponential form. It does not prove
+that any registered reading depends on the location of the zeros of
+`L(s,chi_5)`, and `AXIOM-PROJECTION-DICTIONARY [D]` establishes no such
+dependence.
+
+The program's own arithmetic makes the distinction exact.
+`J-ZERO-RAPIDITY-ORIENTATION-FACTORIZATION [T]` gives, at formal Euler-factor
+scope for `Re(s) > 1`,
+
+$$
+\frac{1}{\zeta(s)} = C_0(s)\,O_5(s), \qquad
+C_0(s) = L(s,\chi_5)\,\frac{L(2s,\chi_5)}{\zeta(4s)}\,\frac{1-5^{-s}}{1-5^{-4s}},
+$$
+
+so `L(s,chi_5)` cancels in the product and survives only in the separate
+split channel `O_5`, where its zeros appear as poles (this is the reading of
+`notes/C-GRH-QSQRT5-SPLIT-ORIENTATION-1/`). Two targets therefore exist:
+the ordinary RH controls the product, that is the full Moebius sum; RH for
+`zeta_F` is the ordinary RH together with a hypothesis on the zeros of
+`L(s,chi_5)`, and is needed only by a reading that consumes the separate
+channel `O_5` rather than the product.
+
+As far as the registry at Public Canon v87 shows, no registered row consumes
+`O_5` separately: `TRIVIAL-RAPIDITY-EVALUATION-BRIDGE [O]` bounds the
+augmentation sum, which is the product, and the O5 cluster itself is
+unregistered (PR #1021, section 4). Hence the ordinary RH is the correct
+program-level condition, as PR #1021 proposes, and `zeta_F` remains a
+separate research target. The exact test that would
+change this: a registered row whose physical output is proved to depend on the
+polar structure of `O_5` alone, not on `C_0 O_5`. Until such a row exists,
+adding `L(s,chi_5)` to the program condition would be a further commitment
+adopted by choice, not a derived necessity. This note proposes no row, no
+edge and no wording, and edits no branch.
 
 ## 8. Falsifiers for a successor probe
 
@@ -258,3 +310,27 @@ env      leg 1: Ubuntu 24.04, x86_64, CPython 3.12.3
          were performed in conversation, so this is an audit input and not a
          preregistered record; no probe status is claimed
 ```
+
+## 11. Review record, rev2
+
+Owner review of PR #1022 (2026-09-16) accepted in full; the check script and
+its pins in section 10 are unchanged.
+
+1. Section 7: the coupling of `|J|` to `chi_5` does not make any registered
+   reading depend on the zeros of `L(s,chi_5)`; the dictionary row establishes
+   no such dependence; `L(s,chi_5)` cancels in `C_0 O_5 = 1/zeta` and survives
+   only in the separate channel `O_5`. The "exposed to `zeta_F`" claim is
+   withdrawn; the ordinary RH stands as the program condition.
+2. Section 5.1: unit rank 7 in `Q(zeta_40)` concerns the whole unit group;
+   `J` keeps its single scale there. The clean factorization
+   `unit = root of unity . real unit` holds for every unit exactly at
+   prime-power conductors (Hasse unit index 1); at `n = 12` it fails by
+   index 2.
+3. Section 4: the weight-0 factor is defined per embedding, in
+   `K tensor R`, and the quadruple `chi_5(a) zeta^a` is not a Galois orbit of
+   one element of `K`; no single global Weil factor in `K` is claimed.
+4. Sections 4 and 6: non-Weilness of `J` excludes only its direct role as a
+   pure-weight eigenvalue, not Frobenius methods in general; the Carlitz
+   census excludes rank one only inside the named class of function fields.
+5. Section 6: the Dedekind zeta factorization uses primitive characters; the
+   principal character modulo 5 gives `(1 - 5^-s) zeta(s)`, not `zeta(s)`.
