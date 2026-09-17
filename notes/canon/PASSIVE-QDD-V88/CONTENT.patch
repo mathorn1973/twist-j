@@ -1,0 +1,1197 @@
+--- a/canon/CANON.md
++++ b/canon/CANON.md
+@@ -1,6 +1,6 @@
+-# TWIST-J Public Canon v87
+-
+-**Release identity.** Public Canon v87. Normative authority and activation
++# TWIST-J Public Canon v88
++
++**Release identity.** Public Canon v88. Normative authority and activation
+ state are declared exclusively by [STATUS.md](../STATUS.md). An identical
+ tree on any other ref is a release candidate, not a second authority.
+ 
+@@ -10,7 +10,7 @@
+ J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
+ presented as deriving or justifying it. Where a well-typed comparison family
+ exists, uniform and p = 5-specific content are distinguished for attribution
+-only. Public Canon v87 also declares the discrete architecture used to read
++only. Public Canon v88 also declares the discrete architecture used to read
+ that axiom. Those architectural definitions
+ are inventoried below and are not claimed to be uniquely derived from
+ J. No fitted dimensionless parameter is introduced in the stated
+@@ -20,7 +20,7 @@
+ algebraic generator is J = 1 + zeta_5^2. The public model has no
+ external boundary and no external clock: after the architecture below
+ is declared, one state determines its successor by one map U. J is the
+-seed of the two algebraic projections. Public Canon v87 does not claim
++seed of the two algebraic projections. Public Canon v88 does not claim
+ that the checkpoint space, the five kernel generators, the selector,
+ or the decoder interface are uniquely forced by J or M_J.
+ 
+@@ -125,7 +125,7 @@
+ This is a definition boundary, not an omitted reduction theorem. Every
+ downstream statement is conditional on the declared architecture.
+ Restoring a stronger compression slogan requires a public theorem
+-deriving the architecture from J; Public Canon v87 contains no such
++deriving the architecture from J; Public Canon v88 contains no such
+ theorem.
+ 
+ ---
+@@ -3355,6 +3355,327 @@
+ and refinement laws. The proof above supplies the universal
+ algebraic statement; the owner adoption supplies the D choice.
+ 
++### Conditional predictions and memory of the selected passive family
++
++The following results are conditional on the existing selected five passive
++QDD maps. They neither force that choice nor complete a physical apparatus.
++Write `Z={-2,-1,0,1,2}^4` for the image of the unchanged balanced head
++map on K_QDD, with coordinates indexed 0 through 3. The rational formulas
++on Q^4 are mathematical extensions, not extensions of the decoder domain.
++With `u=(1,1,1,1)`, `chi=(1,-1,-1,1)` and `G=I-uu^T/5`, put
++
++```text
++P_t=uu^T/4, P_l=chi chi^T/4, P_r=I-P_t-P_l,
++T=GP_t, L_q=GP_l, R=GP_r,
++t=(sum_i z_i)^2/20, l=(z0-z1-z2+z3)^2/4,
++r=((z0-z3)^2+(z1-z2)^2)/2, m=t+l+r.
++```
++
++The IDs and ordered blocks remain PI-ALL `((t,l,r))`, PI-TRACE
++`((t),(l,r))`, PI-LEG `((t,r),(l))`, PI-PAIR `((t,l),(r))` and
++PI-ATOMS `((t),(l),(r))`. A record retains exactly partition_id,
++support_state, total_weight, ordered block_weights and
++normalized_weight_state. At z=0 these are the literal ZERO_SUPPORT,
++zero-total/zero-block and ZERO_DENOMINATOR fields. At z!=0 they are
++SUPPORTED, positive total m, the block sums and NORMALIZED(raw/m).
++Thus the PI-ATOMS record is equivalent to its raw tuple `(t,l,r)`;
++all five records together contain the same information as that tuple.
++No record field is removed or added by the results below.
++
++### QDD-PASSIVE-QUADRATIC-CALIBRATION [T]
++
++For every rational symmetric A, the homogeneous quadratic `z^T A z`
++factors through the complete PI-ATOMS record on Q^4 exactly when
++`A in span_Q(T,L_q,R)`. The same equivalence already holds on Z.
++For arbitrary rational or real probability vectors on Z, supplied as
++mathematical preparation data, the entire passive-record law requires
++exactly seven further fixed scalar expectations to identify every
++homogeneous quadratic mean. The lower bound allows arbitrary rational
++functions Z->Q as the added scalar observables, fixed independently of the
++unknown preparation law and validation output. It is a universal ensemble
++expectation statement, not a minimum for one source or one target.
++
++**Proof of the information boundary.** All four coordinate vectors have
++equal atom records, forcing the four diagonal entries of A to one value d.
++Equal records of `e0+e3,e1+e2` force `A03=A12=a`; equal records of
++`e0+e1,e0+e2,e1+e3,e2+e3` force the other four off-diagonal entries to b.
++These seven independent constraints use only points of Z. Conversely,
++
++```text
++A=5(d+a+2b)T+(d+a-2b)L_q+(d-a)R
++```
++
++has exactly those entries and its quadratic is the corresponding linear
++combination of t,l,r on all Q^4. Let S be all rational functions on Z
++constant on passive-record fibers and V all homogeneous quadratics.
++The full record law supplies expectations for every function in S, which
++includes the constant function. Coordinate and pair-sum evaluations give
++`dim V=10`; the factor theorem gives `dim(S intersect V)=3`. Hence
++`dim((S+V)/S)=7`. Each added scalar expectation supplies at most one
++quotient dimension. Necessity holds for probability laws, not only formal
++signed vectors: failure of row-span containment gives a rational kernel
++vector of zero total and nonzero target pairing; sufficiently small positive
++and negative rational perturbations of the uniform law remain strictly
++positive and have equal calibrations but unequal target means.
++
++A concrete seven-observable completion uses the existing conditional scalar
++source and cold reservoir. Write ZZ for the integers and let
++`D3={x in ZZ^3:sum_i x_i is even}`. Select the full displacement shells of
++squared norms `(2,4,8,10,16)` with per-vector weights `(6,1,15,1,1)/324`.
++Their sizes are `(12,6,12,24,6)` and total weight is 8/9. Let
++`(L_s f)(x)=sum_d c_d[f(x)-f(x+d)]`, `H=2I-L_s`. At the five marked sites
++
++```text
++y=((0,0,0),(1,1,0),(1,0,1),(0,1,1),(2,0,0))
++```
++
++prepare `S(z)=sum_j ((z,0)_j-sum_i z_i/5)delta_(y_j)` and the two-slice
++state `(0,S(z))`. A first cold port with conductance one has signed output
++`b_x=-(H S(z))_x/3` and deposit `D_x=(h_x z)^2/9`, where
++
++```text
++(h_x)_i=sum_(j=0)^4 k(y_j-x)(1_(j=i)-1/5),
++k(0)=10/9, k(d)=c_d on the stencil, k=0 otherwise.
++```
++
++The exact integer response rows `v_j=1620h_(x_j)` are:
++
++| j | x_j | v_j |
++|---|---|---|
++| 1 | (1,1,0) | (-354,1416,-354,-354) |
++| 2 | (1,0,1) | (-354,-354,1416,-354) |
++| 3 | (0,1,1) | (-348,-348,-348,1422) |
++| 4 | (2,0,0) | (-368,-343,-343,-373) |
++| 5 | (-1,-1,0) | (8,53,-22,-22) |
++| 6 | (-1,0,-1) | (8,-22,53,-22) |
++| 7 | (-1,0,1) | (16,-14,-9,16) |
++| 0 | (0,0,0) | (1421,-349,-349,-349) |
++
++In monomial order `00,01,02,03,11,12,13,22,23,33`, let B(v) have diagonal
++coefficients `v_i^2` and cross coefficients `2v_i v_j`. The ten-row integer
++matrix with rows
++
++```text
++B(u), 5B(chi), 10[B(1,0,0,-1)+B(0,1,-1,0)], B(v1),...,B(v7)
++```
++
++has determinant `-176542678173169038600000000000000000`. The first three
++rows are twenty times the atom forms; the last seven are 23619600 times
++the deposit forms. Thus `t,l,r,D1,...,D7` form a quadratic basis, proving
++that seven suffice. These first-step ports can coexist because each uses
++the same prepared S and its own conductance. More generally the fixed cold
++recurrence on a previous/current pair `(u,v)` is
++
++```text
++w_x=[2v_x-(L_s v)_x-(1-gamma_x/2)u_x]/(1+gamma_x/2),
++b_x=-(w_x-u_x)/2 on active ports, D_x=gamma_x b_x^2,
++E(u,v)=||v-u||^2/2+<u,L_s v>/2.
++```
++
++For a finite nonnegative rational conductance field, the active ports are
++its positive support. The denominators are positive and fixed independently
++of z. Finite support and the finite stencil
++give finite support at each finite cut. Induction makes wave and port
++coordinates linear, and deposits and remaining energy quadratic in z.
++Their means are therefore determined for the same preparation law using
++their actual context-specific quadratic forms.
++
++For the unscaled tuple `x=(t,l,r,D1,...,D7)`, coefficient comparison gives
++`D0=c x`, where
++
++```text
++c=(-6480865109/82312993800,
++   6549292699/49387796280,6551015617/49387796280,
++   -111027113/111030330,-111027113/111030330,
++   -9409883/9409350,1556538/1568225,-11092/313645,-11092/313645,0).
++```
++
++The final zero means six added deposits suffice for this particular target;
++seven is the minimum for all quadratic means. Componentwise additive errors
++bounded by epsilon_a on each atom and epsilon_d on each deposit obey
++
++```text
++|delta D0| <= A epsilon_a+B epsilon_d,
++A=84944136907/246938981400, B=751911453/185050550.
++```
++
++These are the absolute coefficient sums. Choosing the signs independently
++attains the bound on the unrestricted additive error box. It bounds neither
++sampling error nor geometry/conductance mismatch; comparison with a measured
++origin adds that origin readout's own error allowance.
++
++The information loss is concrete: e0 and e1 have the same full passive
++family, with atoms `(1/20,1/4,1/2)` and total 4/5, but deposits
++`2019241/23619600` and `121801/23619600` at the origin. At threshold 1/16
++their first counts are one and zero. This extends the existing scalar
++TRC1 collision to the newly selected finest record. It supplies no physical
++preparation, calibrated port or occurrence law.
++
++The standalone public audit is
++`probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1`. Its proof and coefficient
++certificates, not numerical sampling, establish the universal scope.
++
++### QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION [T]
++
++Fix the same source and one cold origin port with conductance one, zero
++initial heat, one update and threshold `q=1/10`. Let E be **all** rational
++preparation laws on Z whose entire passive-record law is the point law
++with atoms `(0,1,5)` and whose raw second-moment matrix is
++
++```text
++Sigma=((1,0,-1/2,-1/2),(0,3/2,-3/2,0),
++       (-1/2,-3/2,5/2,-1/2),(-1/2,0,-1/2,1)).
++```
++
++The exact attainable count laws on `(0,1,5)` are
++
++```text
++(Pr(C=0),Pr(C=1),Pr(C=5))=(3a,1-4a,a),
++a rational, 0<=a<=1/4.
++```
++
++No other count occurs. Real preparation laws give the same real segment.
++Consequently `1/4<=Pr(C>0)<=1` and `1<=E(C)<=5/4` are sharp, despite
++equality of the complete passive law and every quadratic expectation.
++
++**Proof and endpoint construction.** The passive-law condition is exactly
++support in `F={z in Z:(t,l,r)=(0,1,5)}`. It implies s=0 and total six.
++The origin row above gives `D0=(3481/26244)z0^2`. For y=z0^2 in {0,1,4},
++exact flooring at q=1/10 gives C=0,1,5: `1<=34810/26244<2` and
++`5<=139240/26244<6`. The fixed Sigma gives E[y]=1. If a=Pr(y=4),
++normalization gives Pr(y=1)=1-4a and Pr(y=0)=3a, proving containment.
++The following sources all lie in F:
++
++| P source | mass | Q source | mass |
++|---|---:|---|---:|
++| (0,1,-2,1) | 1/2 | (1,-2,1,0) | 1/4 |
++| (0,2,-1,-1) | 1/4 | (1,0,1,-2) | 1/4 |
++| (2,0,-1,-1) | 1/4 | (1,1,-2,0) | 1/2 |
++
++Their outer-product averages both equal Sigma; P has a=1/4 and Q has a=0.
++For every admitted rational a, `4a P+(1-4a)Q` is an admitted rational
++law attaining that point. This proves equality with the complete prediction
++set rather than a bound for a restricted ansatz. Every quadratic mean is
++fixed by Sigma, so additional mean energy calibrations cannot remove this
++ambiguity in any fixed linear cold context.
++
++One additional scalar expectation is necessary and sufficient to identify
++this frozen count law. Take `M4=E[z0^4]`; then
++
++```text
++M4=1+12a, 1<=M4<=4,
++(Pr(C=0),Pr(C=1),Pr(C=5))
++  =((M4-1)/4,(4-M4)/3,(M4-1)/12),
++Pr(C>0)=(5-M4)/4, E(C)=(11+M4)/12,
++M4=(26244/3481)^2 E[D0^2].
++```
++
++These identities prove sufficiency. P and Q prove that zero additional
++expectations cannot suffice. The minimum is for this target law and fixed
++information class; it does not identify every source weight or arbitrary
++future nonlinear response. The added observable is separate from the five
++passive record fields and has no physical calibration certificate here.
++
++Sigma is a raw second moment: P and Q have different means. Independently
++replacing each atom z by equally weighted z and -z preserves every even
++quantity used above and yields two zero-mean endpoints, where Sigma is also
++the centered covariance. The ambient source includes zero and its zero
++count. Its absence from F follows from the stipulated passive law; no
++zero-count outcome is discarded or conditionally renormalized. The public
++proof and exact audit are in `probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1`.
++
++### QDD-PASSIVE-NATIVE-MEMORY [T]
++
++Let `F_n(x)` be the actual checkpoint at counter n from native head `(0,x)`
++and `rho_pi(x)=R_pi(kappa_x)` its original complete passive record. The
++existing native chart theorem gives 3125 F3 fibers of five heads each, one
++per initial phase z(x)=sum(x) mod5, and bijective transport of these fibers
++between every later reachable sheet. For any preparation subset A and
++fixed n>=3, an unaugmented current-checkpoint reader exists exactly when
++rho_pi is constant on each F3 fiber intersected with A.
++
++Every chosen partition and the joint family require exactly three added
++distinguishable read-time states on the full domain or on supported heads
++only, both for each n>=3 and for universal all-time readback. The upper
++bound is the explicitly initialized static tag
++
++```text
++c(x)=0 for z(x)=0, 1 for z(x) in {1,2}, 2 for z(x) in {3,4},
++U'(n,x,c)=(U(n,x),c).
++```
++
++This tag is added information, not a state variable present in unchanged U.
++
++**Proof.** Equal current inputs must have equal outputs; constancy on F3
++fibers is sufficient by the inherited inverse chart. With generator
++composition read right to left, the first-three-tick phase maps are
++`eca,d,e,dbd,dbe`; their inverse heads over y in the phase-one sheet are
++`ace(y),d(y),e(y),dbd(y),ebd(y)`. The second and third have the same four
++pistons, as do the fourth and fifth. The saved phase class selects the
++original piston tuple, hence all passive records. For n<3, any conflicting
++same-checkpoint/same-tag pair would remain conflicting after deterministic
++continuation to F3, which is impossible. Thus the construction works at
++every clock on correctly initialized reachable inputs.
++
++For necessity, the supported origins
++`(4,4,4,0,4,4)`, `(2,1,3,3,2,1)` and `(0,4,0,0,3,2)` all reach
++`(0,0,0,1,0,0)` at n=3, but have original total weights `6/5,64/5,4/5`.
++All five record schemas retain this field, so their three distinct outputs
++require at least three auxiliary states. This bound permits an evolving
++register and imposes no three-state requirement on n=0 alone.
++
++The complete finite inventories are:
++
++| ID | Initial distinct records | (2,2,1) fibers | (3,2) | (4,1) | (5) | Maximum preparations |
++|---|---:|---:|---:|---:|---:|---:|
++| PI-ALL | 19 | 2510 | 200 | 385 | 30 | 7310 |
++| PI-TRACE | 35 | 2774 | 116 | 226 | 9 | 6845 |
++| PI-LEG | 62 | 2922 | 58 | 142 | 3 | 6601 |
++| PI-PAIR | 63 | 2924 | 56 | 143 | 2 | 6598 |
++| PI-ATOMS | 65 | 2946 | 54 | 123 | 2 | 6556 |
++
++Here the pattern lists sizes of equal-complete-record classes in an F3
++fiber. To specify the census independently, let `y=(a,b,c,d,q,r)`, take
++`a,b,c,d,r` freely in F5, and set `q=1-a-b-c-d-r`. The three inverse
++piston classes, with multiplicities 1,2,2, are
++
++```text
++A=(d+3-r,c+4,b+4+r,a),
++B=(2-a,1-b,3-c,4-d), C=(-c,-d,-a,-b).
++```
++
++For balanced pistons v, integer atom keys are
++`T0=(sum v)^2`, `L0=5(v0-v1-v2+v3)^2`,
++`R0=10((v0-v3)^2+(v1-v2)^2)`. The five partition keys are
++`(T0+L0+R0)`, `(T0,L0+R0)`, `(T0+R0,L0)`, `(T0+L0,R0)` and
++`(T0,L0,R0)`, respectively. These are twenty times their raw block tuples
++and preserve complete-record equality at each literal ID. Summing the
++four possible A/B/C equality indicators over the 3125 free tuples gives
++the table, audited against all actual native trajectories by
++`probes/P-QDD-PASSIVE-NATIVE-MEMORY-1`.
++
++An admissible unaugmented preparation can choose at most one equal-record
++class per fiber. Selecting a largest class in every fiber attains
++`2n221+3n32+4n41+5n5`, proving the displayed maxima. The same maxima hold
++with only supported heads: at most one of A,B,C can be the zero piston
++tuple, its class has size at most two, and a supported multiplicity-two
++class always survives. Removing zero heads therefore never reduces a
++fiber maximum. These are cardinality optima, not selected physical
++preparation laws. They also permit simultaneous unaugmented all-time
++readback on the selected subsets by the same continuation argument.
++
++The original head-retaining K_QDD decoder remains valid. This theorem
++classifies recovery from a different, explicitly smaller current-state
++input and a declared initialized extension. It implies no physical memory
++cost, recording device, source occurrence or apparatus realization.
++
++All three theorems concern conditional L1 mathematics. None selects a
++physical preparation or effect, a post-state instrument, ready phase,
++pointer, reset, event-completion law or occurrence measure. The three
++physical QDD O owners, Bell accounting and every other existing live
++decision clause remain unchanged. The physical comparison must separately
++identify the source, port, clock, observable, preparation law and uncertainty.
++
+ The time counter has an exact entropy anchor. The step matrix of
+ J = 1 + zeta_5^2 induces a hyperbolic automorphism T_J of the torus
+ R^4/Z^4 with eigenvalue moduli exactly phi, phi, phi^-1, phi^-1: the
+--- a/canon/CHANGELOG.md
++++ b/canon/CHANGELOG.md
+@@ -1,4 +1,19 @@
+ # Canon changelog (public series)
++
++## Public Canon v88
++
++Add three conditional L1 theorems following the selected passive QDD family:
++its quadratic information boundary and universal minimum seven-expectation
++calibration completion; the sharp threshold-count prediction segment and
++one-expectation fourth-moment repair; and native-current-checkpoint recovery
++with exactly three initialized auxiliary states and exact preparation maxima.
++Each has an independently reviewed proof and its own completed public audit.
++
++All 416 preceding Registry rows retain their exact scopes and statuses.
++The selected passive family remains D. All 28 live H/O clauses, gates,
++Frontier programs and CORE selections remain unchanged. These mathematical
++results select no physical preparation, apparatus, event, occurrence measure,
++accessible calibration, memory device, reset or higher-layer bridge.
+ 
+ ## Public Canon v87
+ 
+@@ -81,7 +96,7 @@
+ is promoted. Every other registered claim is unchanged.
+ 
+ <!-- BEGIN GENERATED CURRENT COUNTS -->
+-Registry snapshot: 416 claims; 0 T-LOCK, 283 T, 48 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
++Registry snapshot: 419 claims; 0 T-LOCK, 286 T, 48 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
+ Reproduction witnesses: 24.
+ <!-- END GENERATED CURRENT COUNTS -->
+ 
+--- a/canon/CORE.md
++++ b/canon/CORE.md
+@@ -1,6 +1,6 @@
+ # TWIST-J core
+ 
+-**Release identity:** Public Canon v87. Normative authority and activation
++**Release identity:** Public Canon v88. Normative authority and activation
+ state are declared exclusively by [STATUS.md](../STATUS.md).
+ 
+ TWIST-J tests whether physical reality can be modeled as a closed,
+@@ -16,7 +16,7 @@
+ exists, uniform and `p = 5`-specific content are distinguished for attribution
+ only.
+ 
+-Public Canon v87 also declares a discrete architecture. It does not
++Public Canon v88 also declares a discrete architecture. It does not
+ claim that the checkpoint space, the five kernel generators, the
+ selector, or the decoder are uniquely derived from J. The architecture
+ contains no fitted dimensionless parameter; its one SI calibration
+@@ -100,6 +100,19 @@
+ preparation/adoption of this correlated code and realization of the
+ instrument remain under QDD-INSTRUMENT-APPARATUS [O].
+ 
++The selected passive QDD family now has exact predictive limits. Seven
++additional fixed scalar expectation calibrations are necessary and
++sufficient to recover every quadratic mean for arbitrary preparation
++ensembles, even when the complete passive-record law is known. A specified
++threshold response still admits a sharp interval of count laws after all
++quadratic means are fixed; one further fourth-moment expectation resolves
++that particular law. Recovering the original passive records from native
++checkpoints at n>=3, and for an all-time reader, requires exactly three
++explicitly initialized auxiliary states, or restricted preparation sets with
++the proved cardinality bounds.
++These are conditional mathematical completions; physical preparation,
++calibration, occurrence, apparatus and reset remain open.
++
+ ## Two field characterisations involving five
+ 
+ Two independent L1 theorems characterize two narrow arithmetic classes
+--- a/canon/DEPENDENCIES.tsv
++++ b/canon/DEPENDENCIES.tsv
+@@ -816,3 +816,29 @@
+ QDD-OBSERVABLE-READING-FAMILY	DEF-QDD-PASSIVE-READING-MAPS	REQUIRES	the dictionary adopts these exact five source-to-record maps and no apparatus profile
+ QDD-OBSERVABLE-READING-FAMILY	QDD-THREE-ATOM-PARTITION-COMPLETENESS	REQUIRES	the independent proof audits the adopted total maps and overlaps but does not choose the reading family
+ QDD-OBSERVABLE-READING-FAMILY	DEF-QDD-BRANCH-WEIGHT-PAIRING	REQUIRES	PI-TRACE comparison uses the existing algebraic LOW/HIGH weight convention without changing its owner or adopting a Born pairing
++QDD-PASSIVE-QUADRATIC-CALIBRATION	DEF-QDD-PASSIVE-READING-MAPS	REQUIRES	the exact existing passive reading-map definition fixes the five source-to-record maps being classified; owner adoption is acknowledged in the theorem scope and is not a lower-status mathematical premise
++QDD-PASSIVE-QUADRATIC-CALIBRATION	DEF-QDD-PASSIVE-PARTITION-FAMILY	REQUIRES	the exact three-atom projectors, named partitions and block orders define the mathematical reading family used here
++QDD-PASSIVE-QUADRATIC-CALIBRATION	DEF-QDD-PASSIVE-WEIGHT-RECORD	REQUIRES	literal five-field record equality, supported normalization and the explicit zero branch define the retained information
++QDD-PASSIVE-QUADRATIC-CALIBRATION	QDD-THREE-ATOM-PARTITION-COMPLETENESS	REQUIRES	the exact atom forms and coarsening make the finest atom record equivalent to the entire chosen passive family
++QDD-PASSIVE-QUADRATIC-CALIBRATION	DECODER-RETARDED-LOCAL-ENERGY-TRANSPORT	REQUIRES	the unchanged centered five-site source and full five-shell linear scalar wave supply the explicitly reconstructed spatial responses
++QDD-PASSIVE-QUADRATIC-CALIBRATION	DECODER-RESERVOIR-RECORD-ACCOUNTING	REQUIRES	the fixed first cold conductance-one update supplies signed port amplitudes and deposited energies
++QDD-PASSIVE-QUADRATIC-CALIBRATION	DECODER-RESERVOIR-QUADRATIC-PARTITION	REQUIRES	linearity and quadratic energy forms identify all later finite fixed-context mean energies as quadratic ensemble targets
++QDD-PASSIVE-QUADRATIC-CALIBRATION	TRC1-CALIBRATION-IDENTIFIABILITY	REQUIRES	the antecedent finite-ensemble row-space criterion and scalar e0/e1 collision are restated independently and compared with the finer selected family
++QDD-PASSIVE-QUADRATIC-CALIBRATION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	mathematical expectation calibration supplies no physical source, port, clock, accessible observable, preparation law, instrument or complete apparatus family
++QDD-PASSIVE-QUADRATIC-CALIBRATION	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	quadratic prediction and conditional threshold calculations supply no independently justified completed physical event or saturation law
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	DEF-QDD-PASSIVE-READING-MAPS	REQUIRES	the exact existing passive reading-map definition fixes the five source-to-record maps being classified; owner adoption is acknowledged in the theorem scope and is not a lower-status mathematical premise
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	DEF-QDD-PASSIVE-PARTITION-FAMILY	REQUIRES	the exact three-atom projectors, named partitions and block orders define the mathematical reading family used here
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	DEF-QDD-PASSIVE-WEIGHT-RECORD	REQUIRES	literal five-field record equality, supported normalization and the explicit zero branch define the retained information
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	QDD-THREE-ATOM-PARTITION-COMPLETENESS	REQUIRES	the exact atom forms, coherent supported and zero records and coarsening identify the frozen (0,1,5) fibre and every chosen passive view
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	TRC1-CALIBRATION-IDENTIFIABILITY	REQUIRES	the existing pointed balanced source, complete conditional cold chain and stipulated preparation-ensemble interpretation supply the comparison setting without a physical occurrence law
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	DECODER-RESERVOIR-RECORD-ACCOUNTING	REQUIRES	the fixed cold origin update, zero initial heat and exact floor threshold retain zero and multiple crossings
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	DECODER-RESERVOIR-QUADRATIC-PARTITION	REQUIRES	linearity of each fixed cold context makes its finite-horizon energy means quadratic in the source, so equality of raw Sigma fixes every such mean
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	exact finite preparation ensembles and a moment repair do not supply physical source or port calibration, an accessible extra observable, post-state/reset, realized occurrence or a complete physical apparatus family
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	conditional mathematical threshold counts and archival records are not an independently justified physical completed event or a saturation law
++QDD-PASSIVE-NATIVE-MEMORY	DEF-QDD-PASSIVE-READING-MAPS	REQUIRES	the exact existing passive reading-map definition fixes the five source-to-record maps being classified; owner adoption is acknowledged in the theorem scope and is not a lower-status mathematical premise
++QDD-PASSIVE-NATIVE-MEMORY	DEF-QDD-PASSIVE-PARTITION-FAMILY	REQUIRES	the exact three-atom projectors, named partitions and block orders define the mathematical reading family used here
++QDD-PASSIVE-NATIVE-MEMORY	DEF-QDD-PASSIVE-WEIGHT-RECORD	REQUIRES	literal five-field record equality, supported normalization and the explicit zero branch define the retained information
++QDD-PASSIVE-NATIVE-MEMORY	QDD-THREE-ATOM-PARTITION-COMPLETENESS	REQUIRES	exact atom weights, positivity, zero support and coarsening underlie complete-record equality and finite census keys
++QDD-PASSIVE-NATIVE-MEMORY	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	the five-to-one F_3 fibers, explicit inverse phase maps and bijective synchronized tail give the all-clock factor criterion and initialized recovery construction
++QDD-PASSIVE-NATIVE-MEMORY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	initialized mathematical tags and preparation cardinality optima supply no physical preparation, writing, persistent register, instrument, reset or realized event law
++QDD-PASSIVE-NATIVE-MEMORY	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	exact information recovery is not a physical event-completion law or an independent saturation principle
+--- a/canon/EVIDENCE.tsv
++++ b/canon/EVIDENCE.tsv
+@@ -415,3 +415,6 @@
+ U-POINT-SOURCE-SHARP-READOUT-NOGO	EV-U-POINT-SOURCE-SHARP-READOUT-NOGO	PUBLIC_PROBE	probes/P-U-POINT-SOURCE-READOUT-DICHOTOMY-1	03b718d594a7cf251f94ed89daee13e124c8d754a1066e05817a455642677a97	bundle-manifest-sha256-v1	two-architecture
+ QDD-THREE-ATOM-PARTITION-COMPLETENESS	EV-QDD-THREE-ATOM-PARTITION-COMPLETENESS	PUBLIC_PROBE	probes/P-QDD-PASSIVE-READING-FAMILY-1	ba849ab4c3d71b1b08169aebbf8ffa2dc5868391544cecd0509870652181fd4d	bundle-manifest-sha256-v1	two-architecture
+ QDD-OBSERVABLE-READING-FAMILY	EV-QDD-OBSERVABLE-READING-FAMILY	PUBLIC_PROBE	probes/P-QDD-PASSIVE-READING-FAMILY-1	ba849ab4c3d71b1b08169aebbf8ffa2dc5868391544cecd0509870652181fd4d	bundle-manifest-sha256-v1	two-architecture
++QDD-PASSIVE-QUADRATIC-CALIBRATION	EV-QDD-PASSIVE-QUADRATIC-CALIBRATION	PUBLIC_PROBE	probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1	8d0c6c808a7932b37b7ff8ea6ec8de33740d883e0b6bac39afa314b36a540701	bundle-manifest-sha256-v1	two-architecture
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	EV-QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	PUBLIC_PROBE	probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1	3259a367ca2b496ea5b43e4952c66eab4a1d064b1c451127b08bf54fad7b80c2	bundle-manifest-sha256-v1	two-architecture
++QDD-PASSIVE-NATIVE-MEMORY	EV-QDD-PASSIVE-NATIVE-MEMORY	PUBLIC_PROBE	probes/P-QDD-PASSIVE-NATIVE-MEMORY-1	52d133dc89b07d89947e6a0eacac0d5fbd6e003d844813f397a065fdc5ed74a8	bundle-manifest-sha256-v1	two-architecture
+--- a/canon/HISTORY.tsv
++++ b/canon/HISTORY.tsv
+@@ -952,3 +952,6 @@
+ CANON86-SCOPE-CHANGE-QDD-INSTRUMENT-APPARATUS	7	2026-09-15	canon-v86-candidate	QDD-INSTRUMENT-APPARATUS	SCOPE_CHANGE	O	O	680f7267e210f52cb7bdc42c2ae084b6c48b229c26138a91c1af65ca81c4da5c	EV-QDD-INSTRUMENT-APPARATUS	inline	680f7267e210f52cb7bdc42c2ae084b6c48b229c26138a91c1af65ca81c4da5c	acknowledge the native mathematical coherent carrier and conditional split while preserving every physical apparatus debt and O STOP status
+ CANON87-DECLARE-QDD-THREE-ATOM-PARTITION-COMPLETENESS	1	2026-09-15	canon-v87-candidate	QDD-THREE-ATOM-PARTITION-COMPLETENESS	DECLARE	-	T	bea9f760d22ca5c84f25faabcff5f662a5d4e549d967968fd644afc3be34716e	EV-QDD-THREE-ATOM-PARTITION-COMPLETENESS	probes/P-QDD-PASSIVE-READING-FAMILY-1	ba849ab4c3d71b1b08169aebbf8ffa2dc5868391544cecd0509870652181fd4d	Declare the exact L1 three-atom Boolean partition and coherent passive-record theorem with its separately completed public audit; no physical reading or apparatus is selected.
+ CANON87-DECLARE-QDD-OBSERVABLE-READING-FAMILY	1	2026-09-15	canon-v87-candidate	QDD-OBSERVABLE-READING-FAMILY	DECLARE	-	D	cd7f230df34d634bff4e9070f8b9873fd25a754bbbb9d3622a5896d7f4c9d72f	EV-QDD-OBSERVABLE-READING-FAMILY	probes/P-QDD-PASSIVE-READING-FAMILY-1	ba849ab4c3d71b1b08169aebbf8ffa2dc5868391544cecd0509870652181fd4d	Adopt the owner-selected five-member passive L1 reading family on existing K_QDD with coherent records and explicit refinement maps; retain every prior Registry row and physical obligation unchanged.
++CANON88-DECLARE-QDD-PASSIVE-QUADRATIC-CALIBRATION	1	2026-09-16	canon-v88-candidate	QDD-PASSIVE-QUADRATIC-CALIBRATION	DECLARE	-	T	1538456267fd1af03ea176caa84875980b097e771af1853d57ff4ddb56360003	EV-QDD-PASSIVE-QUADRATIC-CALIBRATION	probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1	8d0c6c808a7932b37b7ff8ea6ec8de33740d883e0b6bac39afa314b36a540701	Declare the conditional L1 passive quadratic information boundary, universal seven-expectation calibration completion and exact spatial/error certificates on the separate public proof and pinned audit; retain every existing claim and physical owner unchanged.
++CANON88-DECLARE-QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	1	2026-09-16	canon-v88-candidate	QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	DECLARE	-	T	2c3c508d0ab51ad9ef63a737e137e0c48812be54cec6f2870f186fd83742a6ed	EV-QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1	3259a367ca2b496ea5b43e4952c66eab4a1d064b1c451127b08bf54fad7b80c2	Declare the conditional L1 complete threshold-count prediction segment under equal full passive law and raw second moment, with sharp bounds and the minimal one-expectation fourth-moment repair; retain every existing claim and physical owner unchanged.
++CANON88-DECLARE-QDD-PASSIVE-NATIVE-MEMORY	1	2026-09-16	canon-v88-candidate	QDD-PASSIVE-NATIVE-MEMORY	DECLARE	-	T	d263bf46ccf652be42e7fde97dc72314d402acc3253a50f17d681a96b634c881	EV-QDD-PASSIVE-NATIVE-MEMORY	probes/P-QDD-PASSIVE-NATIVE-MEMORY-1	52d133dc89b07d89947e6a0eacac0d5fbd6e003d844813f397a065fdc5ed74a8	Declare the conditional L1 passive native-current-state factor and exact three-state initialized memory theorem with its separately audited complete finite record and preparation inventories; the origin-head decoder and all existing scientific rows and physical owners remain unchanged.
+--- a/canon/NORMATIVE.tsv
++++ b/canon/NORMATIVE.tsv
+@@ -470,3 +470,6 @@
+ DEF-QDD-PASSIVE-READING-MAPS	DEFINITION			L1		canon/CANON.md::Passive QDD observable family
+ QDD-THREE-ATOM-PARTITION-COMPLETENESS	THEOREM	QDD-THREE-ATOM-PARTITION-COMPLETENESS	T	L1		canon/CANON.md::Passive QDD observable family
+ QDD-OBSERVABLE-READING-FAMILY	DICTIONARY	QDD-OBSERVABLE-READING-FAMILY	D	L1		canon/CANON.md::Passive QDD observable family
++QDD-PASSIVE-QUADRATIC-CALIBRATION	THEOREM	QDD-PASSIVE-QUADRATIC-CALIBRATION	T	L1		canon/CANON.md::QDD-PASSIVE-QUADRATIC-CALIBRATION
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	THEOREM	QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	T	L1		canon/CANON.md::QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION
++QDD-PASSIVE-NATIVE-MEMORY	THEOREM	QDD-PASSIVE-NATIVE-MEMORY	T	L1		canon/CANON.md::QDD-PASSIVE-NATIVE-MEMORY
+--- a/canon/REGISTRY.tsv
++++ b/canon/REGISTRY.tsv
+@@ -415,3 +415,6 @@
+ U-POINT-SOURCE-SHARP-READOUT-NOGO	T	for any five distinct native point preparations at common clock phase and any finite deterministic native protocol, in the free counting representation N_f e_s=e_f(s) on H=ker(sum:Q5->Q) with explicit real or complex scalar extension, a collision kills a nonzero norm-two contrast, while injectivity is equivalent to full norm preservation and gives the complete classical endpoint-effect class Pi diag(w) Pi restricted to H for 0<=w_s<=1; its only sharp orthogonal projectors are 0 and I_H, excluding the nontrivial simplex LOW/HIGH pair within exactly this class; other coherent encodings and non-diagonal coherent readouts are outside scope, and no complete physical apparatus class or deterministic theory is excluded	2. Time, space, and the decoder	probes/P-U-POINT-SOURCE-READOUT-DICHOTOMY-1	
+ QDD-THREE-ATOM-PARTITION-COMPLETENESS	T	at L1 on V=Q^4 with G=I4-uu^T/5, u=(1,1,1,1) and chi=(1,-1,-1,1), the rational G-self-adjoint projectors P_t=uu^T/4, P_l=chi chi^T/4 and P_r=I-P_t-P_l have ranks 1,1,2 and are pairwise orthogonal; their eight subset sums form exactly the Boolean algebra generated by the three atoms and its projector-valued partitions are exactly the five declared block partitions with fixed order; the nonnegative rational weights are s^2/20,ell^2/4,((v1-v4)^2+(v2-v3)^2)/2 and sum to m=v^TGv>0 for v!=0, while v=0 is explicitly tagged without normalization; the five passive maps R_pi on existing K_QDD are total and their typed coarsening on all coherent Record_sigma records with literal sigma ID commutes with reading and composes by refinement; no classification of all rational PVMs or physical apparatuses, post-state instrument, occurrence law, frequency, sampling, measure, or L2-L6 lift is claimed	2. Time, space, and the decoder	probes/P-QDD-PASSIVE-READING-FAMILY-1	fires if any displayed projector identity rank subset-product completeness count exact weight positivity zero disposition totality or refinement equality fails at the declared algebraic scope; failure of an apparatus or sampling interpretation is outside scope
+ QDD-OBSERVABLE-READING-FAMILY	D	the owner selects exactly the five named passive L1 maps R_pi:K_QDD->PassiveWeightRecord from DEF-QDD-PASSIVE-READING-MAPS, with partition_id support_state total_weight ordered block_weights and normalized_weight_state as the five exact coherent typed fields, with m=0 all-zero ZERO_SUPPORT records and m>0 SUPPORTED records whose nonnegative block weights sum to m and normalized tuple is exactly raw/m; pi is a declared reading choice, equality is literal including partition and tags, and every overlap under refinement is the explicitly proved additive map Record_sigma->Record_pi on coherent records with literal sigma ID; PI-TRACE agrees with the existing algebraic LOW/HIGH total and ordered weights, while the existing five-field ALGEBRAIC-DMATTER binding and all three physical QDD O owners remain unchanged; completeness is only of this selected three-atom passive family, with no forcing by J, whole-decoder completion, post-state instrument, physical apparatus, actual event, occurrence frequency, sampling, L6 measure or cross-layer lift and no #539 apparatus-profile conformance claim	2. Time, space, and the decoder	probes/P-QDD-PASSIVE-READING-FAMILY-1	fires if an admitted source or partition lacks the declared typed record or zero branch, exact PI-TRACE weight agreement fails, or two declared refinement paths produce different records; an extension of the family or a physical apparatus/event/measure interpretation requires a separate scope decision
++QDD-PASSIVE-QUADRATIC-CALIBRATION	T	at L1 for the selected passive QDD family on the unchanged balanced head grid Z={-2,-1,0,1,2}^4, with mathematical extension to Q^4, a rational symmetric homogeneous quadratic z^T A z factors through the complete PI-ATOMS record on Q^4 if and only if A lies in span_Q(GP_t,GP_l,GP_r), and exactly the same equivalence holds on Z; for all rational or real preparation laws on Z, even when their entire passive-record law is supplied, exactly seven additional fixed scalar expectations are necessary and sufficient to determine every homogeneous quadratic mean, with the lower bound allowing arbitrary rational functions Z->Q fixed independently of the unknown law and validation output; the explicit first-cold-step conductance-one deposits at (1,1,0),(1,0,1),(0,1,1),(2,0,0),(-1,-1,0),(-1,0,-1),(-1,0,1), under the inherited centered five-site source and full five-shell stencil, complete the three atom forms to rank ten, with scaled coefficient determinant -176542678173169038600000000000000000; the displayed unscaled origin-deposit identity has sharp unrestricted componentwise additive-error gains A=84944136907/246938981400 and B=751911453/185050550 for atom and deposit errors, while its seventh added deposit coefficient is zero and an observed-origin comparison needs its own error bound; e0 and e1 share every passive record but have origin deposits 2019241/23619600 and 121801/23619600 and counts one and zero at q=1/16; universal seven concerns all quadratic ensemble means, not one target or a deterministic source, and no physical source, port, clock, instrument, sampling law, error distribution, geometry or conductance mismatch bound, reset, occurrence, L6 measure or cross-layer lift is supplied	2. Time, space, and the decoder	probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1	fires if an independently checked exact counterexample at the declared scope breaks either direction of the quadratic factorization equivalence, the universal seven-scalar expectation lower bound or completion, the fixed spatial coefficient or determinant certificate, the omitted-origin identity, the displayed sharp additive-error gains or the equal-record unequal-deposit witness; a different observable class, target, preparation or physical calibration changes the comparison scope, while authority, pin, transcript, runtime, bundle or architecture defects are STOP and not mathematical refutations; no physical QDD owner is decided
++QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION	T	at L1 on the existing balanced head grid Z={-2,-1,0,1,2}^4 with the selected five passive QDD records, the complete class E of rational preparation ensembles whose full passive-record law has atoms (0,1,5) and whose raw second-moment matrix is Sigma=((1,0,-1/2,-1/2),(0,3/2,-3/2,0),(-1/2,-3/2,5/2,-1/2),(-1/2,0,-1/2,1)) is nonempty; for the existing centered five-site source, fixed five-shell scalar wave, one cold origin port of conductance one, zero initial heat, one update and fixed threshold q=1/10, the deposit on this fibre is D0=(3481/26244)z0^2 and C=floor(D0/q) takes only 0,1,5; the complete attainable ordered count laws are exactly (3a,1-4a,a) for every rational 0<=a<=1/4, with real ensembles giving the real segment, so 1/4<=Pr(C>0)<=1 and 1<=E[C]<=5/4 are sharp despite equality of the full passive law and every quadratic mean; the displayed three-source endpoint ensembles attain both ends, and independent antipodal symmetrization preserves all even data while making both means zero; one additional scalar expectation M4=E[z0^4] is necessary and sufficient to identify this frozen count law, with 1<=M4<=4, a=(M4-1)/12, Pr(C>0)=(5-M4)/4, E[C]=(11+M4)/12 and M4=(26244/3481)^2 E[D0^2]; raw Sigma is not a centered covariance except in the explicitly centered version, zero remains in the ambient source and all zero-count outcomes are retained, and this finite ensemble calculation derives no physical preparation, U occurrence law, iid sampling, empirical frequency, apparatus, reset, accessible fourth-moment calibration, L6 measure or cross-layer lift	2. Time, space, and the decoder	probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1	fires if an independently checked exact admitted counterexample breaks an endpoint full-record law or raw moment, the frozen first-origin deposit/count map, either inclusion of the complete attainable count-law segment, an attained bound, sign-symmetrization preservation, the moment-repair identities or the stated zero-versus-one scalar-expectation minimality at this fixed class; authority, ownership, pin, transcript, runtime, optimization, bundle or architecture defects are STOP and not scientific counterexamples; failure of another threshold, context, physical realization, occurrence interpretation or accessible calibration is outside scope and closes none of the physical QDD owners
++QDD-PASSIVE-NATIVE-MEMORY	T	at L1 for the five selected complete origin-head passive records on existing K_QDD, with literal partition ID, support, total, ordered raw weights and normalized/zero fields retained, recovery from the unchanged indexed native current checkpoint at every fixed n>=3 on a preparation subset exists exactly when the required record is constant on its admitted F_3 fibers; each partition including PI-ALL and the joint family has minimum three additional distinguishable read-time states on the full source or supported source, with the correctly initialized static tag for initial phases {0},{1,2},{3,4} sufficient at all times and three supported origins in one F_3 fiber with original total weights 6/5,64/5,4/5 proving the lower bound; no three-state requirement is asserted at n=0 alone; in order PI-ALL,PI-TRACE,PI-LEG,PI-PAIR,PI-ATOMS the initial distinct record counts are 19,35,62,63,65 and the complete F_3 multiplicity-pattern counts in order (2,2,1),(3,2),(4,1),(5) are (2510,200,385,30),(2774,116,226,9),(2922,58,142,3),(2924,56,143,2),(2946,54,123,2), giving exact maximal unaugmented preparation sizes 7310,6845,6601,6598,6556, equally attainable on supported heads only and for simultaneous all-time readback on those subsets; the initialized tag is added information rather than native memory, the cardinality optima select no physical preparation law, the head-retaining decoder is unchanged, and no physical register cost, apparatus, event, post-state, reset, sampling law or cross-layer lift is supplied	2. Time, space, and the decoder	probes/P-QDD-PASSIVE-NATIVE-MEMORY-1	fires if an independently checked exact admitted counterexample breaks the fixed-schema fiber factor criterion, a stated inverse fiber or initialized all-time readback, the supported three-record lower bound, an initial record census, complete multiplicity inventory, preparation optimum or supported attainment at the declared native origin-zero domain; retaining the original head, removing a record field or changing the preparation domain is a different comparison, while implementation, authority, pin, byte-integrity, incomplete execution, transcript or architecture failures are STOP and not by themselves mathematical counterexamples; no physical QDD obligation is closed
+--- a/canon/SHA256SUMS
++++ b/canon/SHA256SUMS
+@@ -1,5 +1,5 @@
+-a2517c6d8efb1969a7258f94d9874cca3b5b9beb1aecdfd2e39b56f33961a917  canon/CANON.md
+-075136c372331189f9ae96f4c468e0f45d4e254e4c29771188e3c6cc76951b3f  canon/CORE.md
++02c071aaebc2edc384b5e5f36f248a43e8c4e5943514afc8f151768a16140032  canon/CANON.md
++6d9bbe5c87e57e3821b497335495d88d2642374857b9f8bddd365a48f76e4bbd  canon/CORE.md
+ fb282cdadd2ff041dd9417a97e4abfb8c379b870cb092852fd62258d97d20bcc  canon/FRONTIER.md
+-faa4eb411509a8bb3bcbf4969c1974745cb58057a21f89e540ee21dd27b8b1e0  canon/REGISTRY.tsv
+-de2f84c0a963aa1e9cd64640c41d47639bb3b4ef161d7a297a929c5fb806a521  canon/CHANGELOG.md
++82bbc8846d1058a7ebb51faf5cc4ae48facd1ced74c056310cbd62ab723d8fda  canon/REGISTRY.tsv
++1ed57df868f5b11f1c2223f6c4edc8f272eae61480332970aac61732f6298e33  canon/CHANGELOG.md
+--- a/canon/STATUS_COUNTS.tsv
++++ b/canon/STATUS_COUNTS.tsv
+@@ -1,7 +1,7 @@
+ metric	value
+-claims	416
++claims	419
+ status_T-LOCK	0
+-status_T	283
++status_T	286
+ status_D	48
+ status_C	39
+ status_H	2
+@@ -12,4 +12,4 @@
+ evidence_none	50
+ evidence_one-architecture	9
+ evidence_recorded-audit	31
+-evidence_two-architecture	326
++evidence_two-architecture	329
+--- a/reproduce/status-separation/EXPECTED.txt
++++ b/reproduce/status-separation/EXPECTED.txt
+@@ -1,5 +1,5 @@
+ TWIST-J theorem/dictionary separation audit
+-historical guards: exact reconstructed v86 and v85; current boundary: v87
++historical guards: exact reconstructed v87, v86 and v85; current boundary: v88
+ exact algebra and finite computations remain distinct from physical readings
+ 
+ PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
+@@ -96,5 +96,8 @@
+ PASS 92 V87-PRIOR-BYTES every current input is pinned and reconstructs exact public v86 bytes before all unchanged v86 and earlier historical guards
+ PASS 93 V87-PASSIVE-FAMILY one L1 theorem and one owner-selected passive dictionary use the completed probe; three definitions, coherent record maps and thirteen edges are pinned
+ PASS 94 V87-OWNER-BOUNDARY all 414 prior Registry rows and every physical open obligation are unchanged; no gate, Frontier, CORE-selection, apparatus, event or measure lift is added
++PASS 95 V88-PRIOR-BYTES thirteen exact current inputs reconstruct public v87 before all unchanged historical guards
++PASS 96 V88-THREE-THEOREMS three conditional L1 theorems have exact scopes, declarations, twenty-six dependencies and completed probe bundles
++PASS 97 V88-OWNER-BOUNDARY all 416 old rows and 28 live clauses are exact; passive choice stays D with no physical promotion or new gate
+ 
+-RESULT 94/94 ALL PASS
++RESULT 97/97 ALL PASS
+--- a/reproduce/status-separation/README.md
++++ b/reproduce/status-separation/README.md
+@@ -12,7 +12,7 @@
+ `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
+ v70 successor-manifest package, and the minimal-reproduction directory
+ inventory, uses the Python standard library,
+-and emits deterministic text. Its ninety-four checks cover the current
++and emits deterministic text. Its ninety-seven checks cover the current
+ registry partition,
+ the axiom and plenum, the two arithmetic places, the carry lifts, the
+ checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
+@@ -534,3 +534,14 @@
+ totals are 416 claims, T283/D48/C39/H2/O26/F18 and 28 live H/O.
+ The transcript is deterministic release bookkeeping, not a new scientific
+ probe or replacement of the independently frozen mathematical audit.
++
++The v88 maintenance checks the same thirteen complete current inputs before
++reconstructing public v87 at fd512f50d90382124e7c00afa926c8083fd56e06.
++All inherited hash constants and guard predicates remain in force, with v87
++direct reads routed through that verified inverse. Three new checks pin only
++the three conditional L1 theorem additions, their twenty-six dependencies,
++exact proof-audit bundles, all 416 preceding rows and all 28 live clauses.
++Counts become 419 claims, T286/D48/C39/H2/O26/F18. The passive family stays D.
++No physical owner, apparatus, preparation, occurrence or layer gate is adopted.
++The 97-check transcript is saved only after the structural audit succeeds;
++it is release bookkeeping, not a new scientific result or formal probe run.
+--- a/reproduce/status-separation/verify.py
++++ b/reproduce/status-separation/verify.py
+@@ -32,6 +32,519 @@
+ )
+ 
+ 
++
++
++# Exact v88 input contract and reversible v87 reconstruction.
++V88_PRIOR_COMMIT = 'fd512f50d90382124e7c00afa926c8083fd56e06'
++V88_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '82bbc8846d1058a7ebb51faf5cc4ae48facd1ced74c056310cbd62ab723d8fda',
++                  'current_bytes': 410209,
++                  'prior_sha256': 'faa4eb411509a8bb3bcbf4969c1974745cb58057a21f89e540ee21dd27b8b1e0',
++                  'prior_bytes': 403063,
++                  'restore': ((417, 420, ''),)},
++ 'NORMATIVE.tsv': {'current_sha256': '89bdb904e2a1ab422fed0502c81409538d2da1d6b5d2288ddadc7a34c3f69d48',
++                   'current_bytes': 53486,
++                   'prior_sha256': 'ad27f142c9c7be8a8ac61a1a877f309735ee1e284aef61657dbec4b996b62b11',
++                   'prior_bytes': 53096,
++                   'restore': ((472, 475, ''),)},
++ 'DEPENDENCIES.tsv': {'current_sha256': 'd955f3ccce7fe25326c5add31cc6dbcc95c9dc765fe4d5659894d9bb733e44cc',
++                      'current_bytes': 135342,
++                      'prior_sha256': '11d7bbcf18a0267acc6ea0b1439cf6a4e44932cd37af0de6078e95aadf53466f',
++                      'prior_bytes': 129656,
++                      'restore': ((818, 844, ''),)},
++ 'EVIDENCE.tsv': {'current_sha256': '80fbb8ed38bf5aac17d7a3c608530ee10fa945a86ec5db16b79c7ac14d8b93b4',
++                  'current_bytes': 85330,
++                  'prior_sha256': '55cecbdbb8a2de1f7ef778b0df38d1496b1558f326d2d750bfdca5310b37be75',
++                  'prior_bytes': 84636,
++                  'restore': ((417, 420, ''),)},
++ 'HISTORY.tsv': {'current_sha256': '109f53f3087368a713c20d782b3458dba8a25de1d1259200cc47fbd594bbff44',
++                 'current_bytes': 422704,
++                 'prior_sha256': '75ab6342051eacceff564f4072abd236e00a032e46aa12192edd0ec754090b0b',
++                 'prior_bytes': 420900,
++                 'restore': ((954, 957, ''),)},
++ 'GATES.tsv': {'current_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
++               'current_bytes': 7792,
++               'prior_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
++               'prior_bytes': 7792,
++               'restore': ()},
++ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
++                           'current_bytes': 1588,
++                           'prior_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
++                           'prior_bytes': 1588,
++                           'restore': ()},
++ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
++                        'current_bytes': 628,
++                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
++                        'prior_bytes': 628,
++                        'restore': ()},
++ 'CANON.md': {'current_sha256': '02c071aaebc2edc384b5e5f36f248a43e8c4e5943514afc8f151768a16140032',
++              'current_bytes': 649061,
++              'prior_sha256': 'a2517c6d8efb1969a7258f94d9874cca3b5b9beb1aecdfd2e39b56f33961a917',
++              'prior_bytes': 634207,
++              'restore': ((0, 1, '# TWIST-J Public Canon v87\n'),
++                          (2,
++                           3,
++                           '**Release identity.** Public Canon v87. Normative authority and activation\n'),
++                          (12,
++                           13,
++                           'only. Public Canon v87 also declares the discrete architecture used to read\n'),
++                          (22,
++                           23,
++                           'seed of the two algebraic projections. Public Canon v87 does not claim\n'),
++                          (127, 128, 'deriving the architecture from J; Public Canon v87 contains no such\n'),
++                          (3356, 3677, ''))},
++ 'CORE.md': {'current_sha256': '6d9bbe5c87e57e3821b497335495d88d2642374857b9f8bddd365a48f76e4bbd',
++             'current_bytes': 16092,
++             'prior_sha256': '075136c372331189f9ae96f4c468e0f45d4e254e4c29771188e3c6cc76951b3f',
++             'prior_bytes': 15281,
++             'restore': ((2,
++                          3,
++                          '**Release identity:** Public Canon v87. Normative authority and activation\n'),
++                         (18, 19, 'Public Canon v87 also declares a discrete architecture. It does not\n'),
++                         (102, 115, ''))},
++ 'FRONTIER.md': {'current_sha256': 'fb282cdadd2ff041dd9417a97e4abfb8c379b870cb092852fd62258d97d20bcc',
++                 'current_bytes': 29627,
++                 'prior_sha256': 'fb282cdadd2ff041dd9417a97e4abfb8c379b870cb092852fd62258d97d20bcc',
++                 'prior_bytes': 29627,
++                 'restore': ()},
++ 'CHANGELOG.md': {'current_sha256': '1ed57df868f5b11f1c2223f6c4edc8f272eae61480332970aac61732f6298e33',
++                  'current_bytes': 180888,
++                  'prior_sha256': 'de2f84c0a963aa1e9cd64640c41d47639bb3b4ef161d7a297a929c5fb806a521',
++                  'prior_bytes': 180043,
++                  'restore': ((1, 16, ''),
++                              (98,
++                               99,
++                               'Registry snapshot: 416 claims; 0 T-LOCK, 283 T, 48 D, 39 C, 2 H, 26 O, 18 F; '
++                               '28 live H/O.\n'))},
++ 'STATUS_COUNTS.tsv': {'current_sha256': '319b700dfa4b20001cfc6e6623f241be4a881c30d3a7f04b59ba7ce3123c36de',
++                       'current_bytes': 243,
++                       'prior_sha256': '08f27458b73ab378f60e2ac2f7095d1665bf671f85235034102d1c1510762609',
++                       'prior_bytes': 243,
++                       'restore': ((1, 2, 'claims\t416\n'),
++                                   (3, 4, 'status_T\t283\n'),
++                                   (14, 15, 'evidence_two-architecture\t326\n'))}}
++V88_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                   'status': 'T',
++                   'scope': 'at L1 for the selected passive QDD family on the unchanged balanced head grid '
++                            'Z={-2,-1,0,1,2}^4, with mathematical extension to Q^4, a rational symmetric '
++                            'homogeneous quadratic z^T A z factors through the complete PI-ATOMS record on '
++                            'Q^4 if and only if A lies in span_Q(GP_t,GP_l,GP_r), and exactly the same '
++                            'equivalence holds on Z; for all rational or real preparation laws on Z, even '
++                            'when their entire passive-record law is supplied, exactly seven additional '
++                            'fixed scalar expectations are necessary and sufficient to determine every '
++                            'homogeneous quadratic mean, with the lower bound allowing arbitrary rational '
++                            'functions Z->Q fixed independently of the unknown law and validation output; '
++                            'the explicit first-cold-step conductance-one deposits at '
++                            '(1,1,0),(1,0,1),(0,1,1),(2,0,0),(-1,-1,0),(-1,0,-1),(-1,0,1), under the '
++                            'inherited centered five-site source and full five-shell stencil, complete the '
++                            'three atom forms to rank ten, with scaled coefficient determinant '
++                            '-176542678173169038600000000000000000; the displayed unscaled origin-deposit '
++                            'identity has sharp unrestricted componentwise additive-error gains '
++                            'A=84944136907/246938981400 and B=751911453/185050550 for atom and deposit '
++                            'errors, while its seventh added deposit coefficient is zero and an '
++                            'observed-origin comparison needs its own error bound; e0 and e1 share every '
++                            'passive record but have origin deposits 2019241/23619600 and 121801/23619600 '
++                            'and counts one and zero at q=1/16; universal seven concerns all quadratic '
++                            'ensemble means, not one target or a deterministic source, and no physical '
++                            'source, port, clock, instrument, sampling law, error distribution, geometry or '
++                            'conductance mismatch bound, reset, occurrence, L6 measure or cross-layer lift '
++                            'is supplied',
++                   'canon_section': '2. Time, space, and the decoder',
++                   'evidence': 'probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1',
++                   'falsifier': 'fires if an independently checked exact counterexample at the declared '
++                                'scope breaks either direction of the quadratic factorization equivalence, '
++                                'the universal seven-scalar expectation lower bound or completion, the fixed '
++                                'spatial coefficient or determinant certificate, the omitted-origin '
++                                'identity, the displayed sharp additive-error gains or the equal-record '
++                                'unequal-deposit witness; a different observable class, target, preparation '
++                                'or physical calibration changes the comparison scope, while authority, pin, '
++                                'transcript, runtime, bundle or architecture defects are STOP and not '
++                                'mathematical refutations; no physical QDD owner is decided'},
++                  {'claim_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                   'status': 'T',
++                   'scope': 'at L1 on the existing balanced head grid Z={-2,-1,0,1,2}^4 with the selected '
++                            'five passive QDD records, the complete class E of rational preparation '
++                            'ensembles whose full passive-record law has atoms (0,1,5) and whose raw '
++                            'second-moment matrix is '
++                            'Sigma=((1,0,-1/2,-1/2),(0,3/2,-3/2,0),(-1/2,-3/2,5/2,-1/2),(-1/2,0,-1/2,1)) is '
++                            'nonempty; for the existing centered five-site source, fixed five-shell scalar '
++                            'wave, one cold origin port of conductance one, zero initial heat, one update '
++                            'and fixed threshold q=1/10, the deposit on this fibre is D0=(3481/26244)z0^2 '
++                            'and C=floor(D0/q) takes only 0,1,5; the complete attainable ordered count laws '
++                            'are exactly (3a,1-4a,a) for every rational 0<=a<=1/4, with real ensembles '
++                            'giving the real segment, so 1/4<=Pr(C>0)<=1 and 1<=E[C]<=5/4 are sharp despite '
++                            'equality of the full passive law and every quadratic mean; the displayed '
++                            'three-source endpoint ensembles attain both ends, and independent antipodal '
++                            'symmetrization preserves all even data while making both means zero; one '
++                            'additional scalar expectation M4=E[z0^4] is necessary and sufficient to '
++                            'identify this frozen count law, with 1<=M4<=4, a=(M4-1)/12, Pr(C>0)=(5-M4)/4, '
++                            'E[C]=(11+M4)/12 and M4=(26244/3481)^2 E[D0^2]; raw Sigma is not a centered '
++                            'covariance except in the explicitly centered version, zero remains in the '
++                            'ambient source and all zero-count outcomes are retained, and this finite '
++                            'ensemble calculation derives no physical preparation, U occurrence law, iid '
++                            'sampling, empirical frequency, apparatus, reset, accessible fourth-moment '
++                            'calibration, L6 measure or cross-layer lift',
++                   'canon_section': '2. Time, space, and the decoder',
++                   'evidence': 'probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1',
++                   'falsifier': 'fires if an independently checked exact admitted counterexample breaks an '
++                                'endpoint full-record law or raw moment, the frozen first-origin '
++                                'deposit/count map, either inclusion of the complete attainable count-law '
++                                'segment, an attained bound, sign-symmetrization preservation, the '
++                                'moment-repair identities or the stated zero-versus-one scalar-expectation '
++                                'minimality at this fixed class; authority, ownership, pin, transcript, '
++                                'runtime, optimization, bundle or architecture defects are STOP and not '
++                                'scientific counterexamples; failure of another threshold, context, physical '
++                                'realization, occurrence interpretation or accessible calibration is outside '
++                                'scope and closes none of the physical QDD owners'},
++                  {'claim_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                   'status': 'T',
++                   'scope': 'at L1 for the five selected complete origin-head passive records on existing '
++                            'K_QDD, with literal partition ID, support, total, ordered raw weights and '
++                            'normalized/zero fields retained, recovery from the unchanged indexed native '
++                            'current checkpoint at every fixed n>=3 on a preparation subset exists exactly '
++                            'when the required record is constant on its admitted F_3 fibers; each partition '
++                            'including PI-ALL and the joint family has minimum three additional '
++                            'distinguishable read-time states on the full source or supported source, with '
++                            'the correctly initialized static tag for initial phases {0},{1,2},{3,4} '
++                            'sufficient at all times and three supported origins in one F_3 fiber with '
++                            'original total weights 6/5,64/5,4/5 proving the lower bound; no three-state '
++                            'requirement is asserted at n=0 alone; in order '
++                            'PI-ALL,PI-TRACE,PI-LEG,PI-PAIR,PI-ATOMS the initial distinct record counts are '
++                            '19,35,62,63,65 and the complete F_3 multiplicity-pattern counts in order '
++                            '(2,2,1),(3,2),(4,1),(5) are '
++                            '(2510,200,385,30),(2774,116,226,9),(2922,58,142,3),(2924,56,143,2),(2946,54,123,2), '
++                            'giving exact maximal unaugmented preparation sizes 7310,6845,6601,6598,6556, '
++                            'equally attainable on supported heads only and for simultaneous all-time '
++                            'readback on those subsets; the initialized tag is added information rather than '
++                            'native memory, the cardinality optima select no physical preparation law, the '
++                            'head-retaining decoder is unchanged, and no physical register cost, apparatus, '
++                            'event, post-state, reset, sampling law or cross-layer lift is supplied',
++                   'canon_section': '2. Time, space, and the decoder',
++                   'evidence': 'probes/P-QDD-PASSIVE-NATIVE-MEMORY-1',
++                   'falsifier': 'fires if an independently checked exact admitted counterexample breaks the '
++                                'fixed-schema fiber factor criterion, a stated inverse fiber or initialized '
++                                'all-time readback, the supported three-record lower bound, an initial '
++                                'record census, complete multiplicity inventory, preparation optimum or '
++                                'supported attainment at the declared native origin-zero domain; retaining '
++                                'the original head, removing a record field or changing the preparation '
++                                'domain is a different comparison, while implementation, authority, pin, '
++                                'byte-integrity, incomplete execution, transcript or architecture failures '
++                                'are STOP and not by themselves mathematical counterexamples; no physical '
++                                'QDD obligation is closed'}],
++ 'NORMATIVE.tsv': [{'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                    'item_type': 'THEOREM',
++                    'claim_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                    'status': 'T',
++                    'layer': 'L1',
++                    'gate_ids': '',
++                    'statement_source': 'canon/CANON.md::QDD-PASSIVE-QUADRATIC-CALIBRATION'},
++                   {'item_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                    'item_type': 'THEOREM',
++                    'claim_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                    'status': 'T',
++                    'layer': 'L1',
++                    'gate_ids': '',
++                    'statement_source': 'canon/CANON.md::QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION'},
++                   {'item_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                    'item_type': 'THEOREM',
++                    'claim_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                    'status': 'T',
++                    'layer': 'L1',
++                    'gate_ids': '',
++                    'statement_source': 'canon/CANON.md::QDD-PASSIVE-NATIVE-MEMORY'}],
++ 'DEPENDENCIES.tsv': [{'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                       'depends_on': 'DEF-QDD-PASSIVE-READING-MAPS',
++                       'relation': 'REQUIRES',
++                       'basis': 'the exact existing passive reading-map definition fixes the five '
++                                'source-to-record maps being classified; owner adoption is acknowledged in '
++                                'the theorem scope and is not a lower-status mathematical premise'},
++                      {'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                       'depends_on': 'DEF-QDD-PASSIVE-PARTITION-FAMILY',
++                       'relation': 'REQUIRES',
++                       'basis': 'the exact three-atom projectors, named partitions and block orders define '
++                                'the mathematical reading family used here'},
++                      {'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                       'depends_on': 'DEF-QDD-PASSIVE-WEIGHT-RECORD',
++                       'relation': 'REQUIRES',
++                       'basis': 'literal five-field record equality, supported normalization and the '
++                                'explicit zero branch define the retained information'},
++                      {'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                       'depends_on': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
++                       'relation': 'REQUIRES',
++                       'basis': 'the exact atom forms and coarsening make the finest atom record equivalent '
++                                'to the entire chosen passive family'},
++                      {'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                       'depends_on': 'DECODER-RETARDED-LOCAL-ENERGY-TRANSPORT',
++                       'relation': 'REQUIRES',
++                       'basis': 'the unchanged centered five-site source and full five-shell linear scalar '
++                                'wave supply the explicitly reconstructed spatial responses'},
++                      {'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                       'depends_on': 'DECODER-RESERVOIR-RECORD-ACCOUNTING',
++                       'relation': 'REQUIRES',
++                       'basis': 'the fixed first cold conductance-one update supplies signed port amplitudes '
++                                'and deposited energies'},
++                      {'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                       'depends_on': 'DECODER-RESERVOIR-QUADRATIC-PARTITION',
++                       'relation': 'REQUIRES',
++                       'basis': 'linearity and quadratic energy forms identify all later finite '
++                                'fixed-context mean energies as quadratic ensemble targets'},
++                      {'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                       'depends_on': 'TRC1-CALIBRATION-IDENTIFIABILITY',
++                       'relation': 'REQUIRES',
++                       'basis': 'the antecedent finite-ensemble row-space criterion and scalar e0/e1 '
++                                'collision are restated independently and compared with the finer selected '
++                                'family'},
++                      {'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
++                       'relation': 'BOUNDED_BY',
++                       'basis': 'mathematical expectation calibration supplies no physical source, port, '
++                                'clock, accessible observable, preparation law, instrument or complete '
++                                'apparatus family'},
++                      {'item_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                       'depends_on': 'QDD-TERMINAL-EVENT-SEMANTICS',
++                       'relation': 'BOUNDED_BY',
++                       'basis': 'quadratic prediction and conditional threshold calculations supply no '
++                                'independently justified completed physical event or saturation law'},
++                      {'item_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                       'depends_on': 'DEF-QDD-PASSIVE-READING-MAPS',
++                       'relation': 'REQUIRES',
++                       'basis': 'the exact existing passive reading-map definition fixes the five '
++                                'source-to-record maps being classified; owner adoption is acknowledged in '
++                                'the theorem scope and is not a lower-status mathematical premise'},
++                      {'item_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                       'depends_on': 'DEF-QDD-PASSIVE-PARTITION-FAMILY',
++                       'relation': 'REQUIRES',
++                       'basis': 'the exact three-atom projectors, named partitions and block orders define '
++                                'the mathematical reading family used here'},
++                      {'item_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                       'depends_on': 'DEF-QDD-PASSIVE-WEIGHT-RECORD',
++                       'relation': 'REQUIRES',
++                       'basis': 'literal five-field record equality, supported normalization and the '
++                                'explicit zero branch define the retained information'},
++                      {'item_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                       'depends_on': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
++                       'relation': 'REQUIRES',
++                       'basis': 'the exact atom forms, coherent supported and zero records and coarsening '
++                                'identify the frozen (0,1,5) fibre and every chosen passive view'},
++                      {'item_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                       'depends_on': 'TRC1-CALIBRATION-IDENTIFIABILITY',
++                       'relation': 'REQUIRES',
++                       'basis': 'the existing pointed balanced source, complete conditional cold chain and '
++                                'stipulated preparation-ensemble interpretation supply the comparison '
++                                'setting without a physical occurrence law'},
++                      {'item_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                       'depends_on': 'DECODER-RESERVOIR-RECORD-ACCOUNTING',
++                       'relation': 'REQUIRES',
++                       'basis': 'the fixed cold origin update, zero initial heat and exact floor threshold '
++                                'retain zero and multiple crossings'},
++                      {'item_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                       'depends_on': 'DECODER-RESERVOIR-QUADRATIC-PARTITION',
++                       'relation': 'REQUIRES',
++                       'basis': 'linearity of each fixed cold context makes its finite-horizon energy means '
++                                'quadratic in the source, so equality of raw Sigma fixes every such mean'},
++                      {'item_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
++                       'relation': 'BOUNDED_BY',
++                       'basis': 'exact finite preparation ensembles and a moment repair do not supply '
++                                'physical source or port calibration, an accessible extra observable, '
++                                'post-state/reset, realized occurrence or a complete physical apparatus '
++                                'family'},
++                      {'item_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                       'depends_on': 'QDD-TERMINAL-EVENT-SEMANTICS',
++                       'relation': 'BOUNDED_BY',
++                       'basis': 'conditional mathematical threshold counts and archival records are not an '
++                                'independently justified physical completed event or a saturation law'},
++                      {'item_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                       'depends_on': 'DEF-QDD-PASSIVE-READING-MAPS',
++                       'relation': 'REQUIRES',
++                       'basis': 'the exact existing passive reading-map definition fixes the five '
++                                'source-to-record maps being classified; owner adoption is acknowledged in '
++                                'the theorem scope and is not a lower-status mathematical premise'},
++                      {'item_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                       'depends_on': 'DEF-QDD-PASSIVE-PARTITION-FAMILY',
++                       'relation': 'REQUIRES',
++                       'basis': 'the exact three-atom projectors, named partitions and block orders define '
++                                'the mathematical reading family used here'},
++                      {'item_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                       'depends_on': 'DEF-QDD-PASSIVE-WEIGHT-RECORD',
++                       'relation': 'REQUIRES',
++                       'basis': 'literal five-field record equality, supported normalization and the '
++                                'explicit zero branch define the retained information'},
++                      {'item_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                       'depends_on': 'QDD-THREE-ATOM-PARTITION-COMPLETENESS',
++                       'relation': 'REQUIRES',
++                       'basis': 'exact atom weights, positivity, zero support and coarsening underlie '
++                                'complete-record equality and finite census keys'},
++                      {'item_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                       'depends_on': 'U-NATIVE-CHART-AND-QDD-READBACK',
++                       'relation': 'REQUIRES',
++                       'basis': 'the five-to-one F_3 fibers, explicit inverse phase maps and bijective '
++                                'synchronized tail give the all-clock factor criterion and initialized '
++                                'recovery construction'},
++                      {'item_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
++                       'relation': 'BOUNDED_BY',
++                       'basis': 'initialized mathematical tags and preparation cardinality optima supply no '
++                                'physical preparation, writing, persistent register, instrument, reset or '
++                                'realized event law'},
++                      {'item_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                       'depends_on': 'QDD-TERMINAL-EVENT-SEMANTICS',
++                       'relation': 'BOUNDED_BY',
++                       'basis': 'exact information recovery is not a physical event-completion law or an '
++                                'independent saturation principle'}],
++ 'EVIDENCE.tsv': [{'claim_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                   'evidence_id': 'EV-QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                   'evidence_kind': 'PUBLIC_PROBE',
++                   'location': 'probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1',
++                   'sha256': '8d0c6c808a7932b37b7ff8ea6ec8de33740d883e0b6bac39afa314b36a540701',
++                   'hash_mode': 'bundle-manifest-sha256-v1',
++                   'architecture_requirement': 'two-architecture'},
++                  {'claim_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                   'evidence_id': 'EV-QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                   'evidence_kind': 'PUBLIC_PROBE',
++                   'location': 'probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1',
++                   'sha256': '3259a367ca2b496ea5b43e4952c66eab4a1d064b1c451127b08bf54fad7b80c2',
++                   'hash_mode': 'bundle-manifest-sha256-v1',
++                   'architecture_requirement': 'two-architecture'},
++                  {'claim_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                   'evidence_id': 'EV-QDD-PASSIVE-NATIVE-MEMORY',
++                   'evidence_kind': 'PUBLIC_PROBE',
++                   'location': 'probes/P-QDD-PASSIVE-NATIVE-MEMORY-1',
++                   'sha256': '52d133dc89b07d89947e6a0eacac0d5fbd6e003d844813f397a065fdc5ed74a8',
++                   'hash_mode': 'bundle-manifest-sha256-v1',
++                   'architecture_requirement': 'two-architecture'}],
++ 'HISTORY.tsv': [{'event_id': 'CANON88-DECLARE-QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                  'event_sequence': '1',
++                  'event_date': '2026-09-16',
++                  'release': 'canon-v88-candidate',
++                  'claim_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                  'event_type': 'DECLARE',
++                  'previous_status': '-',
++                  'new_status': 'T',
++                  'scope_sha256': '1538456267fd1af03ea176caa84875980b097e771af1853d57ff4ddb56360003',
++                  'evidence_id': 'EV-QDD-PASSIVE-QUADRATIC-CALIBRATION',
++                  'evidence_location': 'probes/P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1',
++                  'evidence_sha256': '8d0c6c808a7932b37b7ff8ea6ec8de33740d883e0b6bac39afa314b36a540701',
++                  'rationale': 'Declare the conditional L1 passive quadratic information boundary, universal '
++                               'seven-expectation calibration completion and exact spatial/error '
++                               'certificates on the separate public proof and pinned audit; retain every '
++                               'existing claim and physical owner unchanged.'},
++                 {'event_id': 'CANON88-DECLARE-QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                  'event_sequence': '1',
++                  'event_date': '2026-09-16',
++                  'release': 'canon-v88-candidate',
++                  'claim_id': 'QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                  'event_type': 'DECLARE',
++                  'previous_status': '-',
++                  'new_status': 'T',
++                  'scope_sha256': '2c3c508d0ab51ad9ef63a737e137e0c48812be54cec6f2870f186fd83742a6ed',
++                  'evidence_id': 'EV-QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION',
++                  'evidence_location': 'probes/P-QDD-PASSIVE-THRESHOLD-MOMENT-1',
++                  'evidence_sha256': '3259a367ca2b496ea5b43e4952c66eab4a1d064b1c451127b08bf54fad7b80c2',
++                  'rationale': 'Declare the conditional L1 complete threshold-count prediction segment under '
++                               'equal full passive law and raw second moment, with sharp bounds and the '
++                               'minimal one-expectation fourth-moment repair; retain every existing claim '
++                               'and physical owner unchanged.'},
++                 {'event_id': 'CANON88-DECLARE-QDD-PASSIVE-NATIVE-MEMORY',
++                  'event_sequence': '1',
++                  'event_date': '2026-09-16',
++                  'release': 'canon-v88-candidate',
++                  'claim_id': 'QDD-PASSIVE-NATIVE-MEMORY',
++                  'event_type': 'DECLARE',
++                  'previous_status': '-',
++                  'new_status': 'T',
++                  'scope_sha256': 'd263bf46ccf652be42e7fde97dc72314d402acc3253a50f17d681a96b634c881',
++                  'evidence_id': 'EV-QDD-PASSIVE-NATIVE-MEMORY',
++                  'evidence_location': 'probes/P-QDD-PASSIVE-NATIVE-MEMORY-1',
++                  'evidence_sha256': '52d133dc89b07d89947e6a0eacac0d5fbd6e003d844813f397a065fdc5ed74a8',
++                  'rationale': 'Declare the conditional L1 passive native-current-state factor and exact '
++                               'three-state initialized memory theorem with its separately audited complete '
++                               'finite record and preparation inventories; the origin-head decoder and all '
++                               'existing scientific rows and physical owners remain unchanged.'}]}
++
++
++def v88_previous_bytes(path):
++    """Validate the complete current file before reconstructing exact v87 bytes."""
++    patch = V88_INPUT_PATCH[path.name]
++    current = path.read_bytes()
++    if (len(current) != patch["current_bytes"]
++            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
++        return None
++    lines = current.decode("utf-8").splitlines(keepends=True)
++    for first, last, original in reversed(patch["restore"]):
++        if not 0 <= first <= last <= len(lines):
++            return None
++        lines[first:last] = original.splitlines(keepends=True)
++    previous = "".join(lines).encode("utf-8")
++    if (len(previous) != patch["prior_bytes"]
++            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
++        return None
++    return previous
++
++
++def v88_current_checks():
++    """Current v88 additions are audited separately from unchanged old guards."""
++    files = tuple(V88_ADDITIONS)
++    previous = {name: v87_table_bytes(v88_previous_bytes(ROOT / "canon" / name))
++                for name in files}
++    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
++               for name in files}
++    rows = current["REGISTRY.tsv"]
++    index = {row["claim_id"]: row for row in rows}
++    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
++    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
++    new_ids = {row["claim_id"] for row in V88_ADDITIONS["REGISTRY.tsv"]}
++    canon_text = CANON.read_text(encoding="utf-8")
++    counts = {status: sum(row["status"] == status for row in rows)
++              for status in {row["status"] for row in rows}}
++    exact_extensions = all(current[name] == previous[name] + V88_ADDITIONS[name]
++                           for name in files)
++    unchanged_names = ("GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv", "FRONTIER.md")
++    prior_live = [row for row in previous["REGISTRY.tsv"] if row["status"] in {"H", "O"}]
++    current_live = [row for row in rows if row["status"] in {"H", "O"}]
++    return [
++        ("V88-PRIOR-BYTES",
++         "thirteen exact current inputs reconstruct public v87 before all unchanged historical guards",
++         len(V88_INPUT_PATCH) == 13
++         and all(v88_previous_bytes(ROOT / "canon" / name) is not None
++                 for name in V88_INPUT_PATCH)),
++        ("V88-THREE-THEOREMS",
++         "three conditional L1 theorems have exact scopes, declarations, twenty-six dependencies and completed probe bundles",
++         exact_extensions
++         and new_ids == {"QDD-PASSIVE-QUADRATIC-CALIBRATION",
++                         "QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION",
++                         "QDD-PASSIVE-NATIVE-MEMORY"}
++         and len(V88_ADDITIONS["NORMATIVE.tsv"]) == 3
++         and len(V88_ADDITIONS["DEPENDENCIES.tsv"]) == 26
++         and len(V88_ADDITIONS["EVIDENCE.tsv"]) == 3
++         and len(V88_ADDITIONS["HISTORY.tsv"]) == 3
++         and all(index[claim]["status"] == "T"
++                 and normative[claim]["item_type"] == "THEOREM"
++                 and normative[claim]["layer"] == "L1"
++                 and normative[claim]["gate_ids"] == ""
++                 and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
++                 and evidence[claim]["architecture_requirement"] == "two-architecture"
++                 and evidence[claim]["hash_mode"] == "bundle-manifest-sha256-v1"
++                 and v86_probe_bundle_sha256(evidence[claim]["location"]) == evidence[claim]["sha256"]
++                 and "### " + claim + " [T]" in canon_text for claim in new_ids)
++         and all(event["event_type"] == "DECLARE" and event["previous_status"] == "-"
++                 and event["new_status"] == "T" and event["release"] == "canon-v88-candidate"
++                 and event["scope_sha256"] == hashlib.sha256(index[event["claim_id"]]["scope"].encode("utf-8")).hexdigest()
++                 and event["evidence_sha256"] == evidence[event["claim_id"]]["sha256"]
++                 for event in V88_ADDITIONS["HISTORY.tsv"])),
++        ("V88-OWNER-BOUNDARY",
++         "all 416 old rows and 28 live clauses are exact; passive choice stays D with no physical promotion or new gate",
++         exact_extensions and len(previous["REGISTRY.tsv"]) == 416 and len(rows) == 419
++         and counts == {"T": 286, "D": 48, "C": 39, "H": 2, "O": 26, "F": 18}
++         and len(prior_live) == 28 and current_live == prior_live
++         and all(index.get(row["claim_id"]) == row for row in previous["REGISTRY.tsv"])
++         and index["QDD-OBSERVABLE-READING-FAMILY"]["status"] == "D"
++         and all(index[claim]["status"] == "O" for claim in
++                 ("QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS", "QDD-INSTRUMENT-CLASS-COMPLETENESS"))
++         and all((ROOT / "canon" / name).read_bytes() == v88_previous_bytes(ROOT / "canon" / name)
++                 for name in unchanged_names)
++         and "All three theorems concern conditional L1 mathematics." in canon_text
++         and "physical QDD O owners, Bell accounting and every other existing live" in canon_text),
++    ]
+ 
+ 
+ # Exact v87 input contract and reversible v86 reconstruction.
+@@ -330,7 +843,9 @@
+ def v87_previous_bytes(path):
+     """Require exact current input, then recover the complete public v86 bytes."""
+     patch = V87_INPUT_PATCH[path.name]
+-    current = path.read_bytes()
++    current = v88_previous_bytes(path)
++    if current is None:
++        return None
+     if (len(current) != patch["current_bytes"]
+             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+         return None
+@@ -355,7 +870,7 @@
+     files = tuple(V87_ADDITIONS)
+     previous = {name: v87_table_bytes(v87_previous_bytes(ROOT / "canon" / name))
+                 for name in files}
+-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
++    current = {name: v87_table_bytes(v88_previous_bytes(ROOT / "canon" / name))
+                for name in files}
+     rows = current["REGISTRY.tsv"]
+     index = {row["claim_id"]: row for row in rows}
+@@ -364,7 +879,7 @@
+     new_ids = {row["claim_id"] for row in V87_ADDITIONS["REGISTRY.tsv"]}
+     new_items = {row["item_id"] for row in V87_ADDITIONS["NORMATIVE.tsv"]}
+     definitions = new_items - new_ids
+-    canon_text = CANON.read_text(encoding="utf-8")
++    canon_text = (v88_previous_bytes(CANON) or b"").decode("utf-8")
+     counts = {status: sum(row["status"] == status for row in rows)
+               for status in {row["status"] for row in rows}}
+     unchanged_names = ("GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv", "FRONTIER.md")
+@@ -410,7 +925,7 @@
+          and len(rows) == 416
+          and counts == {"T": 283, "D": 48, "C": 39, "H": 2, "O": 26, "F": 18}
+          and all(index.get(row["claim_id"]) == row for row in previous["REGISTRY.tsv"])
+-         and all((ROOT / "canon" / name).read_bytes() == v87_previous_bytes(ROOT / "canon" / name)
++         and all(v88_previous_bytes(ROOT / "canon" / name) == v87_previous_bytes(ROOT / "canon" / name)
+                  for name in unchanged_names)
+          and "The three QDD physical O owners and their exact clauses remain unchanged." in canon_text
+          and "A normalized rational tuple here is data, not a measure claim." in canon_text
+@@ -9258,9 +9773,10 @@
+     ))
+ 
+     checks.extend(v87_current_checks())
++    checks.extend(v88_current_checks())
+ 
+     print("TWIST-J theorem/dictionary separation audit")
+-    print("historical guards: exact reconstructed v86 and v85; current boundary: v87")
++    print("historical guards: exact reconstructed v87, v86 and v85; current boundary: v88")
+     print("exact algebra and finite computations remain distinct from physical readings")
+     print()
+     passed = 0
+--- a/tools/test_architecture_map_report.py
++++ b/tools/test_architecture_map_report.py
+@@ -24,10 +24,10 @@
+         cls.report = architecture.audit(ROOT)
+ 
+     def test_anchored_counts_match_the_public_summary(self) -> None:
+-        self.assertEqual(self.report.claims, 416)
++        self.assertEqual(self.report.claims, 419)
+         self.assertEqual(
+             self.report.status_counts,
+-            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 283},
++            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 286},
+         )
+         self.assertEqual(
+             self.report.evidence_counts,
+@@ -35,7 +35,7 @@
+                 "none": 50,
+                 "one-architecture": 9,
+                 "recorded-audit": 31,
+-                "two-architecture": 326,
++                "two-architecture": 329,
+             },
+         )
+         self.assertFalse(self.report.count_mismatches)
+@@ -43,9 +43,19 @@
+     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
+         self.assertEqual(len(self.report.direct_architecture_requires), 188)
+         self.assertEqual(
+-            len(self.report.transitive_architecture_dependents), 279
++            len(self.report.transitive_architecture_dependents), 282
+         )
+         self.assertEqual(len(self.report.dependency_terminals), 63)
++        # v88 adds only three L1 theorem items; all reach architecture
++        # transitively through exact existing passive source definitions.
++        for item in (
++            "QDD-PASSIVE-QUADRATIC-CALIBRATION",
++            "QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION",
++            "QDD-PASSIVE-NATIVE-MEMORY",
++        ):
++            self.assertNotIn(item, self.report.direct_architecture_requires)
++            self.assertIn(item, self.report.transitive_architecture_dependents)
++            self.assertNotIn(item, self.report.dependency_terminals)
+         # v87 adds one direct owner-selected passive dictionary. Its source
+         # maps and theorem reach architecture through the existing K_QDD
+         # domain; the partition/record definitions require only exact algebra.

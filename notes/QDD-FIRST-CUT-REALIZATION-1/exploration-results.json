@@ -1,0 +1,263 @@
+{
+  "status": "NON-CANONICAL EXPLORATION; no formal gate or physical measurement",
+  "signed_output_order": [
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      2,
+      0,
+      0
+    ],
+    [
+      -1,
+      -1,
+      0
+    ],
+    [
+      -1,
+      0,
+      -1
+    ],
+    [
+      -1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "B_definition": "B=-H/4860; outgoing b=B z, gamma=1, first cut only",
+  "H_integer_rows": [
+    [
+      -354,
+      1416,
+      -354,
+      -354
+    ],
+    [
+      -354,
+      -354,
+      1416,
+      -354
+    ],
+    [
+      -348,
+      -348,
+      -348,
+      1422
+    ],
+    [
+      -368,
+      -343,
+      -343,
+      -373
+    ],
+    [
+      8,
+      53,
+      -22,
+      -22
+    ],
+    [
+      8,
+      -22,
+      53,
+      -22
+    ],
+    [
+      16,
+      -14,
+      -9,
+      16
+    ],
+    [
+      1421,
+      -349,
+      -349,
+      -349
+    ]
+  ],
+  "input_energy_metric_P_G_over_2": [
+    [
+      "2/5",
+      "-1/10",
+      "-1/10",
+      "-1/10"
+    ],
+    [
+      "-1/10",
+      "2/5",
+      "-1/10",
+      "-1/10"
+    ],
+    [
+      "-1/10",
+      "-1/10",
+      "2/5",
+      "-1/10"
+    ],
+    [
+      "-1/10",
+      "-1/10",
+      "-1/10",
+      "2/5"
+    ]
+  ],
+  "residual_integer_matrix_23619600_R": [
+    [
+      "6921055",
+      "-1737435",
+      "-1737515",
+      "-1758975"
+    ],
+    [
+      "-1737435",
+      "6953425",
+      "-1717780",
+      "-1739990"
+    ],
+    [
+      "-1737515",
+      "-1717780",
+      "6953540",
+      "-1740070"
+    ],
+    [
+      "-1758975",
+      "-1739990",
+      "-1740070",
+      "6912970"
+    ]
+  ],
+  "positive_leading_principal_minors_integer_matrix": [
+    "6921055",
+    "45106356484150",
+    "261862989829018704375",
+    "1121922794892170797383656250"
+  ],
+  "LDL_lower_unit_L": [
+    [
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-347487/1384211",
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "-347503/1384211",
+      "-596306769277/1804254259366",
+      "1",
+      "0"
+    ],
+    [
+      "-351795/1384211",
+      "-603946848743/1804254259366",
+      "-69828534503468569/139660261242143309",
+      "1"
+    ]
+  ],
+  "LDL_positive_diagonal_d": [
+    "6921055",
+    "9021271296830/1384211",
+    "10474519593160748175/1804254259366",
+    "598358823942491091937950/139660261242143309"
+  ],
+  "exact_radical_residual_factor": "C=diag(sqrt(d_i))/4860 times transpose(L); C^T C=R",
+  "B_rank": 4,
+  "residual_rank": 4,
+  "minimum_residual_real_channels_fixed_metric": 4,
+  "total_separate_output_channels_fixed_metric": 12,
+  "normalized_energy_fraction_trace": "252415/236196",
+  "certified_strict_margins_R_minus_margin_P": [
+    [
+      "1/2",
+      true
+    ],
+    [
+      "2/3",
+      true
+    ],
+    [
+      "7/10",
+      true
+    ],
+    [
+      "3/4",
+      false
+    ],
+    [
+      "4/5",
+      false
+    ]
+  ],
+  "strict_seven_tenths_margin_integer_23619600_times_10R_minus_7P": [
+    [
+      "3075670",
+      "-840630",
+      "-841430",
+      "-1056030"
+    ],
+    [
+      "-840630",
+      "3399370",
+      "-644080",
+      "-866180"
+    ],
+    [
+      "-841430",
+      "-644080",
+      "3400520",
+      "-866980"
+    ],
+    [
+      "-1056030",
+      "-866180",
+      "-866980",
+      "2994820"
+    ]
+  ],
+  "strict_seven_tenths_margin_positive_leading_minors": [
+    "3075670",
+    "9748681531000",
+    "28556753551527975000",
+    "41962619167921990732500000"
+  ],
+  "full_first_cut_Dirichlet_buffer_site_count": 189,
+  "full_wave_plus_port_scattering_mode_count_2n_plus_8": 386,
+  "balanced_source_energy_checks": 625,
+  "independent_sensitivity_metric_norm_check": "PASS",
+  "origin_first_alpha_squared": [
+    "63113/295245",
+    "6962/32805",
+    "6962/32805",
+    "2341/10935",
+    "127309/590490",
+    "413/1180980",
+    "413/1180980",
+    "29/393660"
+  ],
+  "sensitivity_uniform_linear_gain_upper": "320403677788237/69393956250000",
+  "sensitivity_uniform_quadratic_gain": "936962003/185050550",
+  "source_reference": "P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1 proof at 757492055ab5a0a39e14a4089650f3f76ed9cf47"
+}

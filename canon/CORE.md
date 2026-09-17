@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v87. Normative authority and activation
+**Release identity:** Public Canon v88. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v87 also declares a discrete architecture. It does not
+Public Canon v88 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -99,6 +99,19 @@ U-GALOIS-FIBER-QDD-SPLIT [T], its coarse final coordinates match the
 algebraic LOW/HIGH pair in an explicit shifted source chart. Physical
 preparation/adoption of this correlated code and realization of the
 instrument remain under QDD-INSTRUMENT-APPARATUS [O].
+
+The selected passive QDD family now has exact predictive limits. Seven
+additional fixed scalar expectation calibrations are necessary and
+sufficient to recover every quadratic mean for arbitrary preparation
+ensembles, even when the complete passive-record law is known. A specified
+threshold response still admits a sharp interval of count laws after all
+quadratic means are fixed; one further fourth-moment expectation resolves
+that particular law. Recovering the original passive records from native
+checkpoints at n>=3, and for an all-time reader, requires exactly three
+explicitly initialized auxiliary states, or restricted preparation sets with
+the proved cardinality bounds.
+These are conditional mathematical completions; physical preparation,
+calibration, occurrence, apparatus and reset remain open.
 
 ## Two field characterisations involving five
 

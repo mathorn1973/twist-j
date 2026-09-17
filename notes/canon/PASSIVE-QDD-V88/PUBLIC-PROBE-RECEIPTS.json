@@ -1,0 +1,254 @@
+[
+  {
+    "probe": "P-QDD-PASSIVE-THRESHOLD-MOMENT-1",
+    "pr": 1026,
+    "pin": "31b446a79db8747230d611f16e4d7a5b2318f30c",
+    "head": "4931bd53c8c787ff1158907ab34360e0029b1c9a",
+    "public_bytes": "PASS",
+    "files": {
+      "EXPECTED.txt": {
+        "sha256": "e9089180e6a025f911d34fc1f51924be2f759fed8ad4e3cf10791afc980444b0",
+        "bytes": 286
+      },
+      "PREREG.md": {
+        "sha256": "4236b649fcebe974e624c87251698c554ee789c9ceb7007936ce05ac5dd21ecf",
+        "bytes": 9726
+      },
+      "PROOF.md": {
+        "sha256": "6193454e995f0b3ebefc3bb65f8bf106d50948f359805e3f9684c8b0625bf06e",
+        "bytes": 7405
+      },
+      "RESULT.md": {
+        "sha256": "79c7dc7c2b6cd9ac25b1dce5dc987e5328ef7b9602aa61117afca0dea1aefa21",
+        "bytes": 3067
+      },
+      "RUN.md": {
+        "sha256": "e3bd5f7bc939063539cb33f6b48b2bd90514649f0387a1991c51366014dc0a03",
+        "bytes": 643
+      },
+      "verify.py": {
+        "sha256": "64c442f2ea7a19f20fcf863bfcd19526140fbdffbe1d6f7806f16a5b4dacee8a",
+        "bytes": 10742
+      }
+    },
+    "bundle_sha256": "3259a367ca2b496ea5b43e4952c66eab4a1d064b1c451127b08bf54fad7b80c2",
+    "required_checks": "PASS",
+    "pr_snapshot": {
+      "baseRefName": "main",
+      "headRefOid": "4931bd53c8c787ff1158907ab34360e0029b1c9a",
+      "isDraft": false,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:02:59Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077148709/job/104732157855",
+          "name": "architecture-x86_64",
+          "startedAt": "2026-09-16T09:02:43Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:03:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077148709/job/104732157664",
+          "name": "architecture-aarch64",
+          "startedAt": "2026-09-16T09:02:45Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:02:41Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077148709/job/104732158754",
+          "name": "publication",
+          "startedAt": "2026-09-16T09:02:41Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:03:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077148709/job/104732251683",
+          "name": "check",
+          "startedAt": "2026-09-16T09:03:02Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        }
+      ],
+      "url": "https://github.com/mathorn1973/twist-j/pull/1026"
+    }
+  },
+  {
+    "probe": "P-QDD-PASSIVE-NATIVE-MEMORY-1",
+    "pr": 1027,
+    "pin": "2f20f729c0173c856a1bc1ace20190154348edbd",
+    "head": "c1a6341ceec61439789f0108905f0b3ea15b259f",
+    "public_bytes": "PASS",
+    "files": {
+      "EXPECTED.txt": {
+        "sha256": "dfc9c0c47c814fbc6b58437f8cc40f9d60452c898094811a28cb2ffc15c0833d",
+        "bytes": 1315
+      },
+      "PREREG.md": {
+        "sha256": "2e617f37d1ff4d8d41c52d4c60977016b3355466c98385baf717c24daee58caf",
+        "bytes": 13545
+      },
+      "PROOF.md": {
+        "sha256": "98e0641dde6e178834eb7aa5cdc5979a17a59df417299bfe54e7e2471a2231a9",
+        "bytes": 11563
+      },
+      "RESULT.md": {
+        "sha256": "5770cd2037946f316f5a2a4f4e5d0d29c0c39a224a3a64fbaddcdaaaa4a89878",
+        "bytes": 3342
+      },
+      "RUN.md": {
+        "sha256": "727a08141b4e72ea86ad9f22bdf1137404ac2d50b61a8ff68f80dafe4a432946",
+        "bytes": 641
+      },
+      "verify.py": {
+        "sha256": "589a93c7bee27799e57f96eaa216983ed5ffd2b0faf41f6a5d6e95f448cfe25c",
+        "bytes": 12855
+      }
+    },
+    "bundle_sha256": "52d133dc89b07d89947e6a0eacac0d5fbd6e003d844813f397a065fdc5ed74a8",
+    "required_checks": "PASS",
+    "pr_snapshot": {
+      "baseRefName": "main",
+      "headRefOid": "c1a6341ceec61439789f0108905f0b3ea15b259f",
+      "isDraft": false,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:05:31Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077382986/job/104732916666",
+          "name": "architecture-x86_64",
+          "startedAt": "2026-09-16T09:05:12Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:05:33Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077382986/job/104732917045",
+          "name": "architecture-aarch64",
+          "startedAt": "2026-09-16T09:05:14Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:05:09Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077382986/job/104732918465",
+          "name": "publication",
+          "startedAt": "2026-09-16T09:05:10Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:05:39Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077382986/job/104733041766",
+          "name": "check",
+          "startedAt": "2026-09-16T09:05:36Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        }
+      ],
+      "url": "https://github.com/mathorn1973/twist-j/pull/1027"
+    }
+  },
+  {
+    "probe": "P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1",
+    "pr": 1028,
+    "pin": "6e96783644224338aff00b63e2f555db27d71a2d",
+    "head": "757492055ab5a0a39e14a4089650f3f76ed9cf47",
+    "public_bytes": "PASS",
+    "files": {
+      "EXPECTED.txt": {
+        "sha256": "62f0748afdfe00a2f898d0f0516d3576d67c3a6eba5d0dbf57342fa0e2600f5c",
+        "bytes": 461
+      },
+      "PREREG.md": {
+        "sha256": "45bed0e39bdd31a0615922b7c544bde64076708a3acc37d0fa36ebdc491152c8",
+        "bytes": 10636
+      },
+      "PROOF.md": {
+        "sha256": "bc2b9bf4af48ea95b9c366e1df19a2f011795d1a6051b3a537d47abd3a3729f7",
+        "bytes": 14419
+      },
+      "RESULT.md": {
+        "sha256": "893a70c222a3a737fb85606645f3295d31a838135917e05b7ba8969004fdfde3",
+        "bytes": 3751
+      },
+      "RUN.md": {
+        "sha256": "911ac8fe06b6394a99ea9e4282db769e8c4f58766e62a6a276950ef9a420add9",
+        "bytes": 649
+      },
+      "verify.py": {
+        "sha256": "94caa303885f9c3ccf9629ae70c0df3fe68447b437ce613db94138e5cdb01c0e",
+        "bytes": 12284
+      }
+    },
+    "bundle_sha256": "8d0c6c808a7932b37b7ff8ea6ec8de33740d883e0b6bac39afa314b36a540701",
+    "required_checks": "PASS",
+    "pr_snapshot": {
+      "baseRefName": "main",
+      "headRefOid": "757492055ab5a0a39e14a4089650f3f76ed9cf47",
+      "isDraft": false,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:08:14Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077656579/job/104733774925",
+          "name": "architecture-x86_64",
+          "startedAt": "2026-09-16T09:07:57Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:08:14Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077656579/job/104733774831",
+          "name": "architecture-aarch64",
+          "startedAt": "2026-09-16T09:08:00Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:07:55Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077656579/job/104733776169",
+          "name": "publication",
+          "startedAt": "2026-09-16T09:07:56Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-16T09:08:19Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/mathorn1973/twist-j/actions/runs/35077656579/job/104733871493",
+          "name": "check",
+          "startedAt": "2026-09-16T09:08:16Z",
+          "status": "COMPLETED",
+          "workflowName": "policy"
+        }
+      ],
+      "url": "https://github.com/mathorn1973/twist-j/pull/1028"
+    }
+  }
+]

@@ -1,0 +1,176 @@
+{
+  "scope": "ISOLATED CONTENT PREVIEW ONLY; NOT AN ACTIVE RELEASE",
+  "source_head": "5c9a494de3f4b9856c292a77d35280fb086a0404",
+  "baseline_commit": "fd512f50d90382124e7c00afa926c8083fd56e06",
+  "input_pins": {
+    "sha256": "84d4c8d66782cc9f471f658fc0088a9a2a8c797b8fdc2449388de6997c328b65",
+    "bytes": 6848
+  },
+  "reviewed_receipts": [
+    {
+      "probe": "P-QDD-PASSIVE-THRESHOLD-MOMENT-1",
+      "head": "4931bd53c8c787ff1158907ab34360e0029b1c9a",
+      "bundle_sha256": "3259a367ca2b496ea5b43e4952c66eab4a1d064b1c451127b08bf54fad7b80c2"
+    },
+    {
+      "probe": "P-QDD-PASSIVE-NATIVE-MEMORY-1",
+      "head": "c1a6341ceec61439789f0108905f0b3ea15b259f",
+      "bundle_sha256": "52d133dc89b07d89947e6a0eacac0d5fbd6e003d844813f397a065fdc5ed74a8"
+    },
+    {
+      "probe": "P-QDD-PASSIVE-QUADRATIC-CALIBRATION-1",
+      "head": "757492055ab5a0a39e14a4089650f3f76ed9cf47",
+      "bundle_sha256": "8d0c6c808a7932b37b7ff8ea6ec8de33740d883e0b6bac39afa314b36a540701"
+    }
+  ],
+  "changes": {
+    "canon/CANON.md": {
+      "before": {
+        "sha256": "a2517c6d8efb1969a7258f94d9874cca3b5b9beb1aecdfd2e39b56f33961a917",
+        "bytes": 634207
+      },
+      "after": {
+        "sha256": "02c071aaebc2edc384b5e5f36f248a43e8c4e5943514afc8f151768a16140032",
+        "bytes": 649061
+      }
+    },
+    "canon/CHANGELOG.md": {
+      "before": {
+        "sha256": "de2f84c0a963aa1e9cd64640c41d47639bb3b4ef161d7a297a929c5fb806a521",
+        "bytes": 180043
+      },
+      "after": {
+        "sha256": "1ed57df868f5b11f1c2223f6c4edc8f272eae61480332970aac61732f6298e33",
+        "bytes": 180888
+      }
+    },
+    "canon/CORE.md": {
+      "before": {
+        "sha256": "075136c372331189f9ae96f4c468e0f45d4e254e4c29771188e3c6cc76951b3f",
+        "bytes": 15281
+      },
+      "after": {
+        "sha256": "6d9bbe5c87e57e3821b497335495d88d2642374857b9f8bddd365a48f76e4bbd",
+        "bytes": 16092
+      }
+    },
+    "canon/DEPENDENCIES.tsv": {
+      "before": {
+        "sha256": "11d7bbcf18a0267acc6ea0b1439cf6a4e44932cd37af0de6078e95aadf53466f",
+        "bytes": 129656
+      },
+      "after": {
+        "sha256": "d955f3ccce7fe25326c5add31cc6dbcc95c9dc765fe4d5659894d9bb733e44cc",
+        "bytes": 135342
+      }
+    },
+    "canon/EVIDENCE.tsv": {
+      "before": {
+        "sha256": "55cecbdbb8a2de1f7ef778b0df38d1496b1558f326d2d750bfdca5310b37be75",
+        "bytes": 84636
+      },
+      "after": {
+        "sha256": "80fbb8ed38bf5aac17d7a3c608530ee10fa945a86ec5db16b79c7ac14d8b93b4",
+        "bytes": 85330
+      }
+    },
+    "canon/HISTORY.tsv": {
+      "before": {
+        "sha256": "75ab6342051eacceff564f4072abd236e00a032e46aa12192edd0ec754090b0b",
+        "bytes": 420900
+      },
+      "after": {
+        "sha256": "109f53f3087368a713c20d782b3458dba8a25de1d1259200cc47fbd594bbff44",
+        "bytes": 422704
+      }
+    },
+    "canon/NORMATIVE.tsv": {
+      "before": {
+        "sha256": "ad27f142c9c7be8a8ac61a1a877f309735ee1e284aef61657dbec4b996b62b11",
+        "bytes": 53096
+      },
+      "after": {
+        "sha256": "89bdb904e2a1ab422fed0502c81409538d2da1d6b5d2288ddadc7a34c3f69d48",
+        "bytes": 53486
+      }
+    },
+    "canon/REGISTRY.tsv": {
+      "before": {
+        "sha256": "faa4eb411509a8bb3bcbf4969c1974745cb58057a21f89e540ee21dd27b8b1e0",
+        "bytes": 403063
+      },
+      "after": {
+        "sha256": "82bbc8846d1058a7ebb51faf5cc4ae48facd1ced74c056310cbd62ab723d8fda",
+        "bytes": 410209
+      }
+    },
+    "canon/SHA256SUMS": {
+      "before": {
+        "sha256": "7c933d16aa159af1a8f743a62d48e1a4030277f8b4bc6511432adb33a714b337",
+        "bytes": 415
+      },
+      "after": {
+        "sha256": "e9859b834c91753539c59564517480f1c25efaadc7a590723131c21e0b2b9a01",
+        "bytes": 415
+      }
+    },
+    "canon/STATUS_COUNTS.tsv": {
+      "before": {
+        "sha256": "08f27458b73ab378f60e2ac2f7095d1665bf671f85235034102d1c1510762609",
+        "bytes": 243
+      },
+      "after": {
+        "sha256": "319b700dfa4b20001cfc6e6623f241be4a881c30d3a7f04b59ba7ce3123c36de",
+        "bytes": 243
+      }
+    },
+    "reproduce/status-separation/EXPECTED.txt": {
+      "before": {
+        "sha256": "f906b3e6841aa85f196c294bca0cb7bf6818ef26dd9e9246139778025449d43e",
+        "bytes": 15845
+      },
+      "after": {
+        "sha256": "d1726cb42891b618f041ef13893879ffe8d33a327a7002e0db66627307304e7c",
+        "bytes": 16245
+      }
+    },
+    "reproduce/status-separation/README.md": {
+      "before": {
+        "sha256": "96fcf3f2941aee808ef69624bac58f5e1b40fcbd5697385661e63ea2f45fc740",
+        "bytes": 43457
+      },
+      "after": {
+        "sha256": "4c77fabfd7a24c7d346ee5c18de662cba91dad08157c932981b2a2c694fb83e1",
+        "bytes": 44219
+      }
+    },
+    "reproduce/status-separation/verify.py": {
+      "before": {
+        "sha256": "285f73e368092f947babd26661d5f691d0e46b125b76979049047b1848bd6670",
+        "bytes": 495975
+      },
+      "after": {
+        "sha256": "62e15689006e5eb0a12ec4f29df96159b0fc5c920c71e71d0eaa8c0e4437e027",
+        "bytes": 534724
+      }
+    },
+    "tools/test_architecture_map_report.py": {
+      "before": {
+        "sha256": "486e1ff08069cb299b77e2411b18828980f3d811d41f2a2496fd9893652f75df",
+        "bytes": 21145
+      },
+      "after": {
+        "sha256": "ca05d4e1bcf592d97103a7dbfca0447fb7113faf727e8c11a9522b211e82dbf2",
+        "bytes": 21694
+      }
+    }
+  },
+  "old_registry_rows_exact": 416,
+  "new_T_rows": 3,
+  "live_rows_exact": 28,
+  "status_separation": "97/97 ALL PASS",
+  "check_canon": "EXPECTED RELEASE-FORM BOUNDARY; NOT FULL PASS",
+  "activation_files_changed": false,
+  "scientific_verifiers_executed": [],
+  "git_mutations": []
+}

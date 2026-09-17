@@ -1,0 +1,317 @@
+{
+  "schema": "twistj-documentation-source-qualification-1",
+  "audit_date": "2026-09-16",
+  "status": "NON_CANONICAL_DOCUMENTATION_ONLY",
+  "authority": {
+    "canon": "Public Canon v87",
+    "basis_main_at_audit_start": "fd512f50d90382124e7c00afa926c8083fd56e06"
+  },
+  "access": {
+    "detector_outcome_files": false,
+    "mixed_analysis_archives": false,
+    "pulse_payloads": false,
+    "data_api_requests": false,
+    "parameter_api_requests": false,
+    "formal_verifier_execution": false,
+    "software_install_or_import": false,
+    "external_messages": false,
+    "published_aggregate_exposure": true,
+    "blind_empirical_claim": false
+  },
+  "selected_lead": "CURBY_PER_CHUNK_CERTIFICATE_DOCUMENTATION",
+  "params_acquisition_calibration_eligible": false,
+  "physical_test_eligible": false,
+  "old_run3_requalified": false,
+  "sources": [
+    {
+      "id": "CURBY_PAPER",
+      "url": "https://www.nature.com/articles/s41586-025-09054-3",
+      "kind": "author_publication_metadata",
+      "read_level": "publication_and_data_code_availability",
+      "access_result": "read",
+      "documents_public_archive": "https://random.colorado.edu/",
+      "documents_author_code": "https://github.com/buff-beacon-project",
+      "experimental_content_sha256": null
+    },
+    {
+      "id": "CURBY_METHODS",
+      "url": "https://arxiv.org/html/2411.05247v1",
+      "kind": "author_methods",
+      "version": "arXiv:2411.05247v1",
+      "sections": [
+        "Methods II.1",
+        "Supplement I",
+        "Supplement II",
+        "Supplement V.3"
+      ],
+      "read_level": "methods_documentation",
+      "access_result": "read",
+      "documented_method_fields": [
+        "trial_marker",
+        "predefined_detection_window",
+        "per_chunk_spacelike_certificate",
+        "trusted_fixed_latency_assumptions",
+        "live_timing_checks",
+        "invalid_timing_error",
+        "binary_detection_no_detection"
+      ],
+      "exact_round_certificate_instantiated": false,
+      "experimental_content_sha256": null
+    },
+    {
+      "id": "CURBY_API_DOCS",
+      "url": "https://random.colorado.edu/api-docs",
+      "kind": "official_api_documentation",
+      "read_level": "search_indexed_documentation",
+      "direct_read_result": "application_shell_only",
+      "documented_parameter_route": "https://random.colorado.edu/api/curbyq/round/{round}/params",
+      "forbidden_in_this_audit_routes": [
+        "/curbyq/round/{round}/data",
+        "/curbyq/round/{round}/result",
+        "/curbyq/round/{round}",
+        "/chains/{chainCid}/pulses"
+      ],
+      "endpoint_liveness_verified": false,
+      "closed_http_response_schema_verified": false,
+      "consumer_schema_statically_reviewed": true,
+      "known_semantics": "ENTROPY_EXTRACTION_PARAMETERS_NOT_ESTABLISHED_ACQUISITION_CALIBRATION",
+      "route_invoked": false,
+      "experimental_content_sha256": null
+    },
+    {
+      "id": "CURBY_CLIENT_DOCS",
+      "url": "https://curby.gitbook.io/curby-js-client",
+      "kind": "official_client_documentation",
+      "read_level": "documentation",
+      "access_result": "read",
+      "scope": "signature_and_causal_order_checks_with_explicit_certificate_extraction_limit",
+      "author_repository": "https://github.com/buff-beacon-project/curby-js-client",
+      "observed_repository_main": "95397f5e9fcc8ad57ef410c54473862e0b83bc59",
+      "repository_metadata_api": "https://api.github.com/repos/buff-beacon-project/curby-js-client/branches/main",
+      "source_directory_metadata_read": "https://api.github.com/repos/buff-beacon-project/curby-js-client/contents/src?ref=main",
+      "source_code_files_read": true,
+      "client_executed": false
+    },
+    {
+      "id": "CURBY_VERIFIER_README",
+      "url": "https://github.com/buff-beacon-project/curby_verify",
+      "kind": "author_readme",
+      "read_level": "README_only",
+      "access_result": "read",
+      "reason_not_executed": "documented_execution_fetches_raw_data",
+      "executed": false
+    },
+    {
+      "id": "CURBY_PINNED_CLIENT_SOURCE",
+      "url": "https://github.com/buff-beacon-project/curby-js-client/blob/95397f5e9fcc8ad57ef410c54473862e0b83bc59/src/dirng.ts",
+      "commit": "95397f5e9fcc8ad57ef410c54473862e0b83bc59",
+      "git_blob": "50c33ecb35ff2b8e1862e6b24e6a1460940e18b3",
+      "kind": "official_client_source_schema_inspection",
+      "read_level": "static_text_only",
+      "executed_or_imported": false,
+      "fetchRoundParams_lines": [
+        422,
+        438
+      ],
+      "body_type": "unrestricted_JSON_parse",
+      "integrity_field": "result.payload.paramsHash",
+      "integrity_algorithm": "SHA3-512",
+      "client_consumed_parameter_fields": [
+        "seed"
+      ],
+      "linked_pulse_fields": [
+        "ref",
+        "dataHash",
+        "paramsHash",
+        "parameters"
+      ],
+      "physical_timing_certificate_validation_found": false
+    },
+    {
+      "id": "CURBY_PINNED_ORCHESTRATOR",
+      "url": "https://github.com/buff-beacon-project/curby_verify/blob/ddcc8c61b195acf4689d81e480433fd35132423f/index.ts",
+      "commit": "ddcc8c61b195acf4689d81e480433fd35132423f",
+      "kind": "official_orchestrator_static_contract",
+      "read_level": "static_text_only",
+      "executed_or_imported": false,
+      "request_parameters_use": "process_entropy",
+      "fetched_round_params_use": "extract",
+      "raw_data_added_separately": true
+    },
+    {
+      "id": "CURBY_PINNED_EXTRACTOR_CONTRACT",
+      "repository": "https://github.com/buff-beacon-project/trevisan_python_interface",
+      "commit": "a8becf7b656f878123fcc41b04093fa2efbc97d8",
+      "read_level": "README_and_static_source_text_only",
+      "executed_or_imported": false,
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob": "4bdbcc4ff3def62c8357a01e72691fa25aa943ee"
+        },
+        {
+          "path": "python/extractor_server.py",
+          "git_blob": "0bbae95b27652c255986320449cdaec7b01eeb57"
+        },
+        {
+          "path": "python/extractor_jobs.py",
+          "git_blob": "fcab2508a4684a3e56eb4935345805d04b72366a"
+        },
+        {
+          "path": "python/extractor_class.py",
+          "git_blob": "51f506f9c497bb580be4759c6fa82112546fe465"
+        }
+      ],
+      "extraction_fields_read": [
+        "seed",
+        "entropy",
+        "nBitsOut",
+        "errorExtractor",
+        "stoppingCriteria",
+        "isQuantum",
+        "data"
+      ],
+      "readme_precommit_fields": [
+        "nBitsOut",
+        "nBitsThreshold",
+        "errorSmoothness",
+        "errorExtractor",
+        "epsilonBias",
+        "seedLength",
+        "stoppingCriteria",
+        "beta",
+        "isQuantum",
+        "pefs"
+      ],
+      "default_aggregate_record_layout": {
+        "SA": "u1",
+        "SB": "u1",
+        "OA": "u1",
+        "OB": "u1"
+      },
+      "consumer_can_zero_pad_short_arrays": true,
+      "published_round_padding_claim": false,
+      "acquisition_fields_not_found_in_known_consumer": [
+        "numeric_detection_window",
+        "clock_uncertainty",
+        "skipped_attempt_ledger",
+        "original_attempt_indices",
+        "per_chunk_physical_timing_certificate_reference"
+      ],
+      "undocumented_extra_http_fields_excluded": false,
+      "http_route_producer_or_openapi_identified": false,
+      "readme_illustrative_frequency_and_pef_arrays_visible": true,
+      "illustrative_arrays_evaluated": false
+    },
+    {
+      "id": "NIST_2017_CATALOGUE",
+      "url": "https://catalog.data.gov/dataset/experimentally-generated-randomness-certified-by-the-impossibility-of-superluminal-signals",
+      "kind": "government_catalogue_metadata",
+      "doi": "10.18434/T4/1425490",
+      "nist_identifier": "63B8D44FD72FCC6BE0531A57068170351888",
+      "read_level": "complete_displayed_distribution_list",
+      "access_result": "read",
+      "listed_distribution_count": 29,
+      "listed_binary_count": 14,
+      "listed_sha256_sidecar_count": 14,
+      "listed_doi_link_count": 1,
+      "standalone_readme_or_configuration_in_displayed_list": false,
+      "objects_opened": 0,
+      "sidecars_opened": 0,
+      "licence_metadata": "https://www.nist.gov/open/license",
+      "experimental_content_sha256": null,
+      "decision": "WEAKER_METADATA_LEAD_NOT_QUALIFIED"
+    },
+    {
+      "id": "NIST_2018_METHODS",
+      "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=922766",
+      "kind": "author_methods_pdf",
+      "read_level": "methods",
+      "access_result": "read",
+      "experimental_content_sha256": null
+    },
+    {
+      "id": "CORA_CURBY_REPLICATION_METADATA",
+      "url": "https://dataverse.csuc.cat/dataset.xhtml?persistentId=doi%3A10.34810%2Fdata3116",
+      "doi": "10.34810/DATA3116",
+      "kind": "author_deposited_archive_metadata",
+      "version": "1.0",
+      "published": "2026-03-16",
+      "read_level": "search_indexed_primary_catalogue_metadata",
+      "direct_read_result": "502_Bad_Gateway_or_fetch_failure",
+      "licence_metadata": "CC BY-NC 4.0",
+      "files_from_catalogue": [
+        {
+          "name": "Readme.txt",
+          "category": "Documentation",
+          "displayed_size": "8.0 KB",
+          "publisher_md5": "1907fee6daa38e4da6d1f451291a781b",
+          "opened": false,
+          "hash_verified": false
+        },
+        {
+          "name": "41586_2025_9054_MOESM3_ESM (2)_converted.csv",
+          "category": "Data",
+          "opened": false
+        },
+        {
+          "name": "41586_2025_9054_MOESM4_ESM (2)_converted.csv",
+          "category": "Data",
+          "opened": false
+        }
+      ],
+      "columns_known": false,
+      "standalone_readme_locator_resolved": false,
+      "experimental_content_sha256": null,
+      "decision": "NEW_DOCUMENTATION_LOCATOR_PENDING_READBACK"
+    }
+  ],
+  "eligibility": [
+    {
+      "field": "separate_parameter_locator",
+      "status": "EXTRACTION_CONTRACT_ONLY_NOT_ACQUISITION_QUALIFICATION",
+      "source": "CURBY_PINNED_ORCHESTRATOR"
+    },
+    {
+      "field": "same_chunk_timing_certificate",
+      "status": "METHOD_DOCUMENTED_OBJECT_UNINSTANTIATED",
+      "source": "CURBY_METHODS"
+    },
+    {
+      "field": "numeric_window_endpoints_indexing_and_uncertainty",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "field": "original_attempt_order_gaps_live_boundaries_invalids",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "field": "covered_zero_and_full_multiplicity",
+      "status": "NOT_ESTABLISHED_BY_BINARY_SCHEMA"
+    },
+    {
+      "field": "bound_custody_and_integrity_for_selected_round",
+      "status": "UNINSTANTIATED"
+    },
+    {
+      "field": "five_site_cold_head_and_gamma1_eight_port_map",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "field": "independent_absolute_input_output_energy_calibration",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "field": "bounded_joint_systematics",
+      "status": "NOT_ESTABLISHED"
+    },
+    {
+      "field": "source_law_Gamma_q_memory_reset",
+      "status": "NOT_ESTABLISHED"
+    }
+  ],
+  "next_deliverable": "Resolve the standalone CORA README and the producer/schema of the paper's per-chunk spacelike certificate. Require a genuine acquisition-metadata locator before selecting or querying any historical round; params has not supplied it.",
+  "round_selected": null,
+  "scientific_statistic_evaluated": null,
+  "old_claim_statuses_changed": false
+}
