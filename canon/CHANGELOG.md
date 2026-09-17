@@ -1,5 +1,20 @@
 # Canon changelog (public series)
 
+## Public Canon v88
+
+Add three conditional L1 theorems following the selected passive QDD family:
+its quadratic information boundary and universal minimum seven-expectation
+calibration completion; the sharp threshold-count prediction segment and
+one-expectation fourth-moment repair; and native-current-checkpoint recovery
+with exactly three initialized auxiliary states and exact preparation maxima.
+Each has an independently reviewed proof and its own completed public audit.
+
+All 416 preceding Registry rows retain their exact scopes and statuses.
+The selected passive family remains D. All 28 live H/O clauses, gates,
+Frontier programs and CORE selections remain unchanged. These mathematical
+results select no physical preparation, apparatus, event, occurrence measure,
+accessible calibration, memory device, reset or higher-layer bridge.
+
 ## Public Canon v87
 
 One selected passive QDD observable family closes at D on the existing
@@ -81,7 +96,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 416 claims; 0 T-LOCK, 283 T, 48 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
+Registry snapshot: 419 claims; 0 T-LOCK, 286 T, 48 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 
