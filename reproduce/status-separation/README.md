@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its ninety-four checks cover the current
+and emits deterministic text. Its ninety-seven checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -534,3 +534,14 @@ owner, apparatus law, sampling law or layer lift is promoted. The current
 totals are 416 claims, T283/D48/C39/H2/O26/F18 and 28 live H/O.
 The transcript is deterministic release bookkeeping, not a new scientific
 probe or replacement of the independently frozen mathematical audit.
+
+The v88 maintenance checks the same thirteen complete current inputs before
+reconstructing public v87 at fd512f50d90382124e7c00afa926c8083fd56e06.
+All inherited hash constants and guard predicates remain in force, with v87
+direct reads routed through that verified inverse. Three new checks pin only
+the three conditional L1 theorem additions, their twenty-six dependencies,
+exact proof-audit bundles, all 416 preceding rows and all 28 live clauses.
+Counts become 419 claims, T286/D48/C39/H2/O26/F18. The passive family stays D.
+No physical owner, apparatus, preparation, occurrence or layer gate is adopted.
+The 97-check transcript is saved only after the structural audit succeeds;
+it is release bookkeeping, not a new scientific result or formal probe run.

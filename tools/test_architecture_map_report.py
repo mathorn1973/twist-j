@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 416)
+        self.assertEqual(self.report.claims, 419)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 283},
+            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 286},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,7 +35,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 50,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 326,
+                "two-architecture": 329,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,9 +43,19 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 188)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 279
+            len(self.report.transitive_architecture_dependents), 282
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v88 adds only three L1 theorem items; all reach architecture
+        # transitively through exact existing passive source definitions.
+        for item in (
+            "QDD-PASSIVE-QUADRATIC-CALIBRATION",
+            "QDD-PASSIVE-THRESHOLD-MOMENT-COMPLETION",
+            "QDD-PASSIVE-NATIVE-MEMORY",
+        ):
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.dependency_terminals)
         # v87 adds one direct owner-selected passive dictionary. Its source
         # maps and theorem reach architecture through the existing K_QDD
         # domain; the partition/record definitions require only exact algebra.
