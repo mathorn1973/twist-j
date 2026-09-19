@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 419)
+        self.assertEqual(self.report.claims, 422)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 286},
+            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 289},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,17 +35,33 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 50,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 329,
+                "two-architecture": 332,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 188)
+        self.assertEqual(len(self.report.direct_architecture_requires), 189)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 282
+            len(self.report.transitive_architecture_dependents), 285
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v89 adds one direct native point-port theorem and two coherent-code
+        # channel theorems that require architecture through the existing code.
+        point_port = "QDD-NATIVE-POINT-PORT-CAPACITY"
+        self.assertIn(point_port, self.report.direct_architecture_requires)
+        for claim in (
+            point_port,
+            "U-GALOIS-CPTP-POINT-COMPATIBILITY",
+            "U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION",
+        ):
+            self.assertIn(claim, self.report.transitive_architecture_dependents)
+            self.assertNotIn(claim, self.report.dependency_terminals)
+        for claim in (
+            "U-GALOIS-CPTP-POINT-COMPATIBILITY",
+            "U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION",
+        ):
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
         # v88 adds only three L1 theorem items; all reach architecture
         # transitively through exact existing passive source definitions.
         for item in (

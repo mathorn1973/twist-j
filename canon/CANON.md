@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v88
+# TWIST-J Public Canon v89
 
-**Release identity.** Public Canon v88. Normative authority and activation
+**Release identity.** Public Canon v89. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v88 also declares the discrete architecture used to read
+only. Public Canon v89 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v88 does not claim
+seed of the two algebraic projections. Public Canon v89 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -125,7 +125,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v88 contains no such
+deriving the architecture from J; Public Canon v89 contains no such
 theorem.
 
 ---
@@ -3188,6 +3188,220 @@ carrier and exact algebraic split exist in the specified representation;
 their physical preparation/adoption, actual coarse event, occurrence law,
 persistent post-event record, reset/repetition, complete apparatus family
 and L1-to-L5 gate remain unresolved. Any L6 measure needs its separate gate.
+
+### Native point ports and global coherent transfer
+
+These are L1 mathematical statements on two declared state descriptions.
+The original source point and the specified coherent code have different
+preparation contracts. A comparison channel on all complex matrices is an
+additional mathematical framework, not a physical channel derived from U.
+
+### QDD-NATIVE-POINT-PORT-CAPACITY [T]
+
+Let the original source be
+`p in F_5^4`. Fix any deterministic encoder `f:F_5^4 -> F_5^4`, without
+linearity or injectivity assumptions, and prepare exactly one encoded
+native point `f(p)` per source. The origin-zero native clock and U remain
+unchanged. The ready and optional processor randomness have one common
+source-independent law; f is fixed independently of that randomness.
+The processor receives only `A_n=(q_n,r_n)` and stipulated common inputs,
+with no additional source-sensitive input or intervention in native U.
+The same conclusion holds if it receives the entire quotient history
+`Q_n=(z_n,q_n,r_n)`, where z_n is the sum of all six native checkpoint
+coordinates modulo five. Memory, history processing, stopping and
+processor resets cannot change the stated input contract.
+
+For each fixed common seed, equality of
+`kappa_f(p)=sum_i f(p)_i mod 5` gives identical quotient histories and
+identical complete processor responses. Integrating over the common seed
+law gives a factorization of the complete response law through kappa_f,
+with at most five source-conditioned laws. All probabilities invoked here
+belong to that explicitly supplied seed model. Conditioning is allowed
+only on the same fixed measurable response event of positive probability;
+it preserves the factor
+on its domain. An undefined completion-conditional response is not zero.
+This is the deterministic closed quotient and all-history theorem of
+`U-NATIVE-APPARATUS-HISTORY-FACTOR` applied to f and then to common
+randomness, not a second registration of the inherited theorem.
+
+For the balanced lift `v_i in {0,1,2,-2,-1}`, set `s=sum_i v_i` and
+`N=sum_i v_i^2`. The original supported target is
+
+```text
+beta(p) = s^2 / [4(5N-s^2)],       p != 0.
+```
+
+The target remains beta(p), not beta(f(p)). The six balanced sources
+`(1,-1,0,0),(1,0,0,0),(1,1,0,0),(1,1,1,0),(2,1,1,2),(1,1,1,1)`
+have respective targets `0,1/16,1/6,3/8,9/14,1`. These six distinct
+values rule out the full required binary law on all supported original
+sources, while the complete 624-source census has 22 values. On the class
+of total binary response comparisons define
+
+```text
+error(f,b) = max_(p != 0) |b(kappa_f(p))-beta(p)|,
+             b:{0,1,2,3,4}->[0,1].
+```
+
+The exact optimum is `9/128` for arbitrary deterministic f, and `27/64`
+when f is a permutation of all 625 native piston labels.
+Attaining b uses stipulated
+comparison randomness; it does not derive occurrence from U. The null
+source has ZERO_SUPPORT and no beta value. In the permutation class its
+encoded sum fibre also contains supported original sources, supplying a
+separate support-tag obstruction. Neither this point-port result nor the
+older five-point sharp-readout theorem excludes full-state capture,
+correlated coherent preparation or every physical apparatus.
+
+For arbitrary encoding, six supported targets
+`0,9/64,2/7,5/8,49/64,1` have successive gaps at least `9/64`.
+Two must share one of five responses, giving radius at least `9/128`.
+These optima concern the declared relaxed five-response comparison,
+not every fixed ready; for example ready `(3,0)` has only four apparatus
+history classes. All 22 targets are covered by the five blocks
+`[0,1/46]`, `[1/26,1/6]`, `[2/7,3/8]`, `[5/8,49/64]`, `[1,1]`,
+whose centers are `1/92,4/39,37/112,89/128,1` and whose radii are
+at most `9/128`. Encode each block as `(j,0,0,0)`.
+
+For a permutation encoder every sum fibre has 125 labels, hence 124 or
+125 supported sources. Exactly 120 supported sources have target above `5/32`:
+the equivalent inequality `13s^2>25N` excludes mixed signs and includes
+24 same-sign equal-magnitude two-entry, 64 same-sign three-entry and 32
+same-sign four-entry vectors.
+Thus a fibre containing target one also contains a target at most `5/32`,
+giving radius at least `27/64`. Sort supported labels by `(beta,p)` and
+partition into sizes `124,125,125,125,125`. Their target extremes are
+`[0,1/176]`, `[1/176,1/56]`, `[1/56,1/16]`, `[1/16,5/32]`, `[5/32,1]`;
+their midpoints attain the bound. Map each block bijectively to a native
+sum fibre and put the null in the spare slot of the first fibre.
+The exact census follows by summing the multinomial coefficient
+`4!/product_a n_a!` over the 69 non-null multiplicity patterns on
+`a in {-2,-1,0,1,2}` with `sum_a n_a=4` and the displayed beta formula.
+The complete table and independent coefficient-convolution certificate
+are in the [point-port proof](../probes/P-QDD-NATIVE-POINT-PORT-CAPACITY-1/PROOF.md).
+At ready `(0,1)` the five encoded sums have distinct first apparatus
+observations `(0,4),(1,4),(1,0),(2,0),(0,1)`. This reads the comparison
+message; a common external rational randomizer supplies each center.
+
+### U-GALOIS-CPTP-POINT-COMPATIBILITY [T]
+
+Use the unchanged code of
+`U-GALOIS-FIBER-CODE` in normalized complex coordinates. Let the raw
+sixteen-point basis be `e_(k,a)`, with native endpoints `e_k`, and use the
+already fixed real Hadamard matrix H. Put
+
+```text
+C e_a = (1/2) sum_k H_(k,a) e_(k,a),   F=H/2,
+P=CC*,   R=I_16-P,   x_(k,a)=R e_(k,a).
+```
+
+Thus `C*C=I_4`. Writing the four public source-basis columns as `V=C S`
+gives an invertible complex coordinate map S with `S*S=G`, where
+`G=I_4-ones_4/5`; the complex source extension therefore spans all four
+normalized coordinates. No unsupported K-linear extension of the rational
+Galois source is used. Consider **all complex CPTP maps**
+`Phi:M_16(C)->M_4(C)` such that
+
+```text
+Phi(C rho C*) = F rho F*   for every rho in M_4(C).
+```
+
+These external CP/TP and matrix-carrier hypotheses are part of the
+comparison, not a physical reading adopted for individual native points.
+Exact transfer forces the code/complement decomposition
+
+```text
+Phi(X) = F C* X C F* + Psi(R X R),
+```
+
+where Psi is a CPTP channel on the twelve-dimensional complement. One
+common environment vector for every code input and the full four-dimensional
+output rank force the code/complement cross terms to vanish; checking only
+the four pure basis outputs without their complex matrix units is not this
+condition.
+
+Define coordinate agreement and its worst and mean values by
+
+```text
+s_(k,a)(Phi) = <k|Phi(|k,a><k,a|)|k>,
+s_min(Phi) = min_(k,a) s_(k,a)(Phi),
+s_mean(Phi) = (1/16) sum_(k,a) s_(k,a)(Phi).
+```
+
+Both maxima over the complete exact-transfer class are `5/8`, attained
+simultaneously. Consequently the least worst coordinate error
+`max_(k,a)(1-s_(k,a))` is `3/8`. This error is the lost probability in the
+specified endpoint coordinate test; it is not full quantum trace distance,
+an original-QDD weight error or an experimental discrepancy.
+
+For the upper bound put `E_k=Psi*(|k><k|)` on ran R. Then
+`sum_k E_k=R`, `||x_(k,a)||^2=3/4` and
+`s_(k,a)=1/16+<x_(k,a),E_k x_(k,a)>`. For fixed k the four x vectors are
+orthogonal; their outer-product sum is `3/4` times its rank-four support
+projector. Positivity gives total complement agreement at most
+`(3/4)Tr R=9`, hence mean at most `(1+9)/16=5/8`, and the minimum cannot
+exceed the mean. The explicit exact-code channel with
+
+```text
+E_k = sum_a |x_(k,a)><x_(k,a)|
+```
+
+has every agreement equal to `1/16+9/16=5/8`. As a separate control, the
+point-exact control
+`Lambda(X)=sum_a L_a X L_a*`, with `L_a e_(k,b)=delta_ab e_k`,
+has every raw s equal to one but uniform endpoint coordinate populations
+on every normalized code input. For `alpha=(1,1,1,1)/2` its output is
+`I_4/4`, whereas exact code transfer requires `|0><0|`. Thus it does not
+transfer the coherent code.
+
+### U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION [T]
+
+Equality in either optimum
+forces the four complement coordinate effects to be exactly the displayed
+E_k, each rank four. The equality proof includes every positive slack,
+off-block completeness and the independent simplex outer products; equality
+of the objective alone is not a uniqueness proof. These effects do not fix
+one global channel: the seventeen-Kraus and five-Kraus constructions have
+the same optimal coordinate agreement but differ on off-code coherences.
+For raw `e_(0,0)` their output `(0,1)` entries are respectively `1/16`
+and `-1/8` in the fixed real phase convention.
+
+In any pure Stinespring realization of an optimizing channel the code
+uses one common environment direction; the complement is orthogonal to it
+because the code output has full rank. A complement effect of rank four
+requires at least four further environment directions. Hence the purified
+auxiliary dimension is at least five. Four complement Kraus maps obtained
+by grouping the rows of R by a, together with `F C*`, attain five. The bound
+counts every purification degree and cannot be reduced by calling an
+untracked mixed preparation free. Without optimal point agreement a
+four-dimensional pure auxiliary is possible, with raw coordinate agreement
+`1/4` in the exhibited control; four is already the
+dimension lower bound for an isometry from dimension sixteen into
+dimension four times the auxiliary.
+
+A constructive rational orthogonal completion is
+
+```text
+U20 = ((R, C), (F C*, 0_4)).
+```
+
+It maps `(C alpha,0)` to `(0,F alpha)`. Its exact twenty-dimensional
+matrix and component factorization are certificates of the construction,
+not extra public claims or a new law for native U. All residual output
+modes remain part of the map. The matched loader and inverse loader
+cancel explicitly when that factorization is composed. The auxiliary is
+the same fixed state for every code input; it is not a LOW/HIGH outcome
+record. No carrier identification, realized event, occurrence, persistent
+record or reset is supplied.
+
+The [global-channel proof](../probes/P-U-GALOIS-CHANNEL-OPTIMUM-1/PROOF.md)
+gives the complete complex equality argument and rational constructions.
+The corresponding public results are
+[point-port capacity](../probes/P-QDD-NATIVE-POINT-PORT-CAPACITY-1/RESULT.md)
+and [global coherent transfer](../probes/P-U-GALOIS-CHANNEL-OPTIMUM-1/RESULT.md).
+All three theorems concern conditional L1 mathematics.
+Physical preparation, event occurrence, persistence and reset remain
+with their existing open owners.
 
 ### Passive QDD observable family
 
