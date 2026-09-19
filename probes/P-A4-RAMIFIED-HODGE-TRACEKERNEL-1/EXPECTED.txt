@@ -1,0 +1,7 @@
+P-A4-RAMIFIED-HODGE-TRACEKERNEL-1
+K^2 = 5 I_6: PASS
+Kbar^2 = 0, rank Kbar = 3: PASS
+im Kbar = ker Kbar = ell wedge Vbar: PASS
+Hbar quotient to W5 carrier: PASS
+public residual Gram reconstructed: PASS
+ALL EXACT CHECKS PASS
