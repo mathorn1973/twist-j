@@ -1,0 +1,8 @@
+P-J-C5-HODGE-CONIC-ATLAS-1 verifier
+Sylow-5 subgroups / real lines / finite lines: 6 6 6
+cross-image identity over all order-5 elements: 24/24
+real six-line squared angle: 1/5
+real tight-frame sum: 2 I_3
+normalizer order: 10
+finite fixed lines = complete W5 isotropic conic: PASS
+ALL EXACT CHECKS PASS
