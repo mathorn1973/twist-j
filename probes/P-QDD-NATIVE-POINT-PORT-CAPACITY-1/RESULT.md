@@ -19,7 +19,7 @@ but supplies no new source-sensitive observation or intervention in U.
 
 The complete response law factors through the encoded four-piston sum
 `k(p)=sum f(p) mod 5`, so there are at most five source-conditioned
-response values. Pathwise equality for each common seed, integration over
+complete response laws. Pathwise equality for each common seed, integration over
 its fixed law, and conditioning on the same positive-probability completion
 event prove the result for all admitted history processors. Finite prefixes
 are regression checks only. The underlying closed quotient and inherited
