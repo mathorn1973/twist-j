@@ -1,0 +1,11 @@
+PASS native trace and involution identities: 78125 cases
+PASS oriented invariant on every selected edge: 31250 cases
+PASS fibres: 25 oriented; 13 sign classes; 625:1,1250:12
+PASS each oriented fibre on each trace sheet: 125 states
+PASS transient paths and H/G formulas: all 15625 states
+PASS transient translations: exact two-dimensional sum kernel
+PASS quadratic record: 13 matrices; 6 directions each with 2 values
+PASS cone guard: quadratic image 13 differs from full null cone 25
+PASS trace reset: all heads at n=3 have trace/index 1
+PASS selector versus branch sum: 1 versus 2, also unequal modulo constants
+RESULT candidate audit PASS; no native Hodge amplitude selection
