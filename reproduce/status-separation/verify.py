@@ -34,6 +34,437 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v89 input contract and reversible v88 reconstruction.
+V89_PRIOR_COMMIT = 'e57d4506d5b28bf8cb4979c4e29db6b10b2441f2'
+V89_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '0c42301134202f7bd83d50e900addab05a16f1789dcd7dc05e2a7e8856ed108a',
+                  'current_bytes': 416684,
+                  'prior_sha256': '82bbc8846d1058a7ebb51faf5cc4ae48facd1ced74c056310cbd62ab723d8fda',
+                  'prior_bytes': 410209,
+                  'restore': ((420, 423, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': '89d528c1b57d97955f93907670fce3acdf9ad1daf7d96e23c1d8dbd6be5b82ec',
+                   'current_bytes': 53882,
+                   'prior_sha256': '89bdb904e2a1ab422fed0502c81409538d2da1d6b5d2288ddadc7a34c3f69d48',
+                   'prior_bytes': 53486,
+                   'restore': ((475, 478, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': 'bae679cbd3a50204007c18c23c80828b53618dd9f3eca5ebcf59d5543343683f',
+                      'current_bytes': 137013,
+                      'prior_sha256': 'd955f3ccce7fe25326c5add31cc6dbcc95c9dc765fe4d5659894d9bb733e44cc',
+                      'prior_bytes': 135342,
+                      'restore': ((844, 853, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': '268be0f68dcab8c4c8153231b6e520d860f277b2c9deb9f45afacfc23332aea8',
+                  'current_bytes': 86020,
+                  'prior_sha256': '80fbb8ed38bf5aac17d7a3c608530ee10fa945a86ec5db16b79c7ac14d8b93b4',
+                  'prior_bytes': 85330,
+                  'restore': ((420, 423, ''),)},
+ 'HISTORY.tsv': {'current_sha256': '5ed187009a16d394108a9c79b60969a5585b29882e0204a391d1cc1f2b25dcb1',
+                 'current_bytes': 424345,
+                 'prior_sha256': '109f53f3087368a713c20d782b3458dba8a25de1d1259200cc47fbd594bbff44',
+                 'prior_bytes': 422704,
+                 'restore': ((957, 960, ''),)},
+ 'GATES.tsv': {'current_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'current_bytes': 7792,
+               'prior_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'prior_bytes': 7792,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
+                           'current_bytes': 1588,
+                           'prior_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
+                           'prior_bytes': 1588,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': '86a949f688183a096ba5dde5d5c8eb1f47f32a34d46a44aa68788b5582635ede',
+              'current_bytes': 659472,
+              'prior_sha256': '02c071aaebc2edc384b5e5f36f248a43e8c4e5943514afc8f151768a16140032',
+              'prior_bytes': 649061,
+              'restore': ((0, 1, '# TWIST-J Public Canon v88\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v88. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v88 also declares the discrete architecture used to '
+                           'read\n'),
+                          (22,
+                           23,
+                           'seed of the two algebraic projections. Public Canon v88 does not '
+                           'claim\n'),
+                          (127,
+                           128,
+                           'deriving the architecture from J; Public Canon v88 contains no such\n'),
+                          (3190, 3404, ''))},
+ 'CORE.md': {'current_sha256': '7dfdbdc6af730c1ebe6879ed5f0097975d669fd6e27546075f796f953c93d7bd',
+             'current_bytes': 16537,
+             'prior_sha256': '6d9bbe5c87e57e3821b497335495d88d2642374857b9f8bddd365a48f76e4bbd',
+             'prior_bytes': 16092,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v88. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v88 also declares a discrete architecture. It does not\n'),
+                         (101, 109, ''))},
+ 'FRONTIER.md': {'current_sha256': 'fb282cdadd2ff041dd9417a97e4abfb8c379b870cb092852fd62258d97d20bcc',
+                 'current_bytes': 29627,
+                 'prior_sha256': 'fb282cdadd2ff041dd9417a97e4abfb8c379b870cb092852fd62258d97d20bcc',
+                 'prior_bytes': 29627,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': 'a900734e60170bf13df0fb2acb76207faf0da2efd8e917d1f9ab80d293658d21',
+                  'current_bytes': 181789,
+                  'prior_sha256': '1ed57df868f5b11f1c2223f6c4edc8f272eae61480332970aac61732f6298e33',
+                  'prior_bytes': 180888,
+                  'restore': ((1, 17, ''),
+                              (114,
+                               115,
+                               'Registry snapshot: 419 claims; 0 T-LOCK, 286 T, 48 D, 39 C, 2 H, '
+                               '26 O, 18 F; 28 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '4ccf3cb9ba7f48b8e10bd36bfd6f5b10a936626d65912445f98cba663d46ca31',
+                       'current_bytes': 243,
+                       'prior_sha256': '319b700dfa4b20001cfc6e6623f241be4a881c30d3a7f04b59ba7ce3123c36de',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t419\n'),
+                                   (3, 4, 'status_T\t286\n'),
+                                   (14, 15, 'evidence_two-architecture\t329\n'))}}
+V89_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
+                   'status': 'T',
+                   'scope': 'L1 conditional mathematics: for original p in F_5^4, any fixed '
+                            'deterministic encoder f into one native point, unchanged origin-zero '
+                            'U, a common source-independent ready and processor random variable '
+                            'independent of f, and a processor supplied only the apparatus history '
+                            'A=(q,r) or its complete quotient history (z,q,r), z the sum of all '
+                            'six checkpoint coordinates, complete response laws factor through '
+                            'kappa_f(p)=sum_i f(p)_i mod 5. There are at most five '
+                            'source-conditioned laws, including all-history, memory, stopping and '
+                            'processor-reset responses; conditioning on the same fixed measurable '
+                            'response event preserves the factor where its probability is '
+                            'positive. No additional source-sensitive input or native intervention '
+                            'is admitted. The original supported target beta(p)=s^2/[4(5N-s^2)], '
+                            'with balanced lift v, s=sum v and N=sum v_i^2, has 22 values on 624 '
+                            'supported sources and six explicit unequal values, so its complete '
+                            'binary law cannot factor through this port. In the explicitly relaxed '
+                            'total binary comparison max_(p!=0)|b(kappa_f(p))-beta(p)|, the sharp '
+                            'minimum is 9/128 over arbitrary deterministic f and 27/64 over '
+                            'permutations of all 625 labels, with exact lower bounds and attaining '
+                            'encoders and rational centers. Attainment uses ready (0,1) and '
+                            'external comparison randomness, not occurrence derived from U; '
+                            'sharpness is for this relaxed comparison, not for every fixed ready. '
+                            'The faithful null fibre shares 124 supported sources and cannot '
+                            'supply a perfect support tag; beta(0) is undefined ZERO_SUPPORT. No '
+                            'exclusion of full-state capture, correlated coherent preparation or '
+                            'every physical apparatus, and no physical preparation, occurrence, '
+                            'persistent record, reset or layer lift follows.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-QDD-NATIVE-POINT-PORT-CAPACITY-1',
+                   'falsifier': 'An admitted equal-kappa common-seed pair has different complete '
+                                'response laws; the exact 22-value census, six-source obstruction, '
+                                'either minimax lower bound or its attaining complete encoder '
+                                'fails; or a faithful encoder separates the null support tag '
+                                'through the stipulated port. A source-dependent seed or loading '
+                                'law, seed-dependent f, another port, native intervention or '
+                                'coherent preparation changes the hypotheses, not this theorem. An '
+                                'integrity mismatch alone is STOP; no physical F verdict follows.'},
+                  {'claim_id': 'U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                   'status': 'T',
+                   'scope': 'L1 conditional complex-matrix comparison on the unchanged '
+                            'sixteen-address Galois code C e_a=(1/2)sum_k H_(k,a)e_(k,a), F=H/2, '
+                            'C*C=I, R=I-CC*, and x_(k,a)=R e_(k,a). The invertible source '
+                            'coordinate map V=C S has S*S=G and its complex extension spans all '
+                            'four normalized coordinates. Over all complex CPTP maps '
+                            'Phi:M_16(C)->M_4(C) satisfying Phi(C rho C*)=F rho F* for every rho '
+                            'in M_4(C), exact transfer forces Phi(X)=F C* X C F*+Psi(R X R), with '
+                            'Psi CPTP on the twelve-dimensional complement; a common code '
+                            'environment and full output rank eliminate all cross terms. For '
+                            'coordinate agreement s_(k,a)=<k|Phi(|k,a><k,a|)|k>, both max min s '
+                            'and max mean s equal 5/8 and are attained simultaneously. The least '
+                            'worst coordinate error is 3/8, the lost probability in this endpoint '
+                            'coordinate test, not full quantum trace distance, original-QDD weight '
+                            'error or an experimental discrepancy. The effects '
+                            'E_k=sum_a|x_(k,a)><x_(k,a)| attain the bound, while the point-exact '
+                            'control Lambda(X)=sum_a L_a X L_a*, L_a e_(k,b)=delta_ab e_k, has raw '
+                            'coordinate agreement one but uniform endpoint coordinate populations '
+                            'on every normalized code input; for alpha=(1,1,1,1)/2 it outputs '
+                            'I_4/4 instead of the exact target |0><0| and therefore does not '
+                            'transfer the coherent code. CP/TP and the complex carrier are '
+                            'external comparison hypotheses, not a physical channel or '
+                            'native-point law derived from U; no physical preparation/adoption, '
+                            'event, occurrence, persistent record, reset or higher-layer lift is '
+                            'supplied.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-U-GALOIS-CHANNEL-OPTIMUM-1',
+                   'falsifier': 'An exact-transfer complex CPTP map violates the code/complement '
+                                'decomposition, has mean or minimum coordinate agreement greater '
+                                'than 5/8, or the specified attaining and point-exact control maps '
+                                'fail their exact code or coordinate properties. Checking only '
+                                'basis states does not meet the every-complex-operator hypothesis. '
+                                'A different carrier, transfer class or output metric changes the '
+                                'question; an integrity mismatch alone is STOP and no physical F '
+                                'verdict follows.'},
+                  {'claim_id': 'U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION',
+                   'status': 'T',
+                   'scope': 'L1 conditional theorem in the complete exact-transfer complex CPTP '
+                            'class and endpoint coordinate metric of '
+                            'U-GALOIS-CPTP-POINT-COMPATIBILITY. Equality in either the optimal '
+                            'mean or optimal minimum 5/8 forces the four complement coordinate '
+                            'effects E_k=sum_a|R e_(k,a)><R e_(k,a)|, each rank four; positivity '
+                            'slack, complex off-block completeness and independent simplex outer '
+                            'products are included. These effects do not select a unique global '
+                            'channel: the explicit seventeen-Kraus and five-Kraus maps differ on '
+                            'off-code coherences, with raw e_(0,0) output (0,1) entries 1/16 and '
+                            '-1/8 in the fixed real phase convention. Every pure Stinespring '
+                            'realization of an optimizing channel has auxiliary dimension at least '
+                            'five: one common code direction and at least four orthogonal '
+                            'complement directions. Four complement Kraus maps grouped by a and F '
+                            'C* attain five, counting every purification degree. Without point '
+                            'optimality the exhibited four-dimensional auxiliary transfers the '
+                            'code exactly but gives uniform raw coordinate agreement 1/4; four is '
+                            'the dimension lower bound for a 16-to-4 isometry. The rational '
+                            'orthogonal certificate U20=((R,C),(F C*,0)) maps (C alpha,0) to (0,F '
+                            'alpha), with all residual modes retained and exact component '
+                            'factorization, including cancellation of a matched loader and '
+                            'inverse. Certificates create no additional claim or native U law. The '
+                            'fixed code auxiliary is not a LOW/HIGH outcome record; no physical '
+                            'carrier identification, realized event, occurrence, persistence or '
+                            'reset is supplied.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-U-GALOIS-CHANNEL-OPTIMUM-1',
+                   'falsifier': 'An optimizing exact-transfer map has different complement '
+                                'coordinate effects or a purified auxiliary dimension below five, '
+                                'or the five-state construction, four-state nonoptimal control, '
+                                'off-code channel distinction or U20 orthogonality/factorization '
+                                'certificate fails. A mixed auxiliary with uncounted purification '
+                                'changes the dimension contract; another carrier or metric changes '
+                                'the class. An integrity mismatch alone is STOP, not a physical F '
+                                'verdict.'}],
+ 'NORMATIVE.tsv': [{'item_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::QDD-NATIVE-POINT-PORT-CAPACITY'},
+                   {'item_id': 'U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-GALOIS-CPTP-POINT-COMPATIBILITY'},
+                   {'item_id': 'U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
+                       'depends_on': 'U-NATIVE-APPARATUS-HISTORY-FACTOR',
+                       'relation': 'REQUIRES',
+                       'basis': 'The unchanged native quotient and all-history factor are applied '
+                                'to the encoded point and common source-independent seed.'},
+                      {'item_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
+                       'depends_on': 'DEF-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The original native update, selector and common origin-zero '
+                                'counter remain fixed.'},
+                      {'item_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
+                       'depends_on': 'DEF-QDD-GRAM',
+                       'relation': 'REQUIRES',
+                       'basis': 'The original supported norm and undefined zero-support branch fix '
+                                'the beta domain.'},
+                      {'item_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
+                       'depends_on': 'DEF-QDD-PROJECTOR-LOW',
+                       'relation': 'REQUIRES',
+                       'basis': 'The original balanced-lift LOW target is evaluated before '
+                                'encoding.'},
+                      {'item_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
+                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'This conditional L1 mathematics supplies no physical '
+                                'preparation/adoption, event occurrence, persistent record/reset '
+                                'or complete physical apparatus class.'},
+                      {'item_id': 'U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                       'depends_on': 'U-GALOIS-FIBER-CODE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The sixteen original addresses, coherent code columns, normalized '
+                                'source coordinate identification and four endpoints are '
+                                'unchanged.'},
+                      {'item_id': 'U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'This conditional L1 mathematics supplies no physical '
+                                'preparation/adoption, event occurrence, persistent record/reset '
+                                'or complete physical apparatus class.'},
+                      {'item_id': 'U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION',
+                       'depends_on': 'U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                       'relation': 'REQUIRES',
+                       'basis': 'The universal exact-transfer decomposition, endpoint-coordinate '
+                                'metric and optimal value specify the optimizing class.'},
+                      {'item_id': 'U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION',
+                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'This conditional L1 mathematics supplies no physical '
+                                'preparation/adoption, event occurrence, persistent record/reset '
+                                'or complete physical apparatus class.'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
+                   'evidence_id': 'EV-QDD-NATIVE-POINT-PORT-CAPACITY',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-QDD-NATIVE-POINT-PORT-CAPACITY-1',
+                   'sha256': 'c93f4dfbbd10822d0a509950a889a5130c39e683e07ee57b92794bd4b4bb010f',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                   'evidence_id': 'EV-U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-U-GALOIS-CHANNEL-OPTIMUM-1',
+                   'sha256': '70652a40331a78987f5953f1be07a1bcf3a536244ebd8f82658c7a3e0721a32c',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION',
+                   'evidence_id': 'EV-U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-U-GALOIS-CHANNEL-OPTIMUM-1',
+                   'sha256': '70652a40331a78987f5953f1be07a1bcf3a536244ebd8f82658c7a3e0721a32c',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON89-DECLARE-QDD-NATIVE-POINT-PORT-CAPACITY',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-19',
+                  'release': 'canon-v89-candidate',
+                  'claim_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'f8aa1af4c8adbfb81b83223758a87b25666afe6c129b1804092dccec511d2a6e',
+                  'evidence_id': 'EV-QDD-NATIVE-POINT-PORT-CAPACITY',
+                  'evidence_location': 'probes/P-QDD-NATIVE-POINT-PORT-CAPACITY-1',
+                  'evidence_sha256': 'c93f4dfbbd10822d0a509950a889a5130c39e683e07ee57b92794bd4b4bb010f',
+                  'rationale': 'Declare the independently reviewed conditional L1 theorem on its '
+                               'sealed public two-architecture probe; all 419 prior claims and 28 '
+                               'live physical or mathematical obligations retain their exact '
+                               'scopes and statuses.'},
+                 {'event_id': 'CANON89-DECLARE-U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-19',
+                  'release': 'canon-v89-candidate',
+                  'claim_id': 'U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '8c19c38ca19cf2af09c8eb317f1390db2e7a1dee9d375357467a9250055f33ac',
+                  'evidence_id': 'EV-U-GALOIS-CPTP-POINT-COMPATIBILITY',
+                  'evidence_location': 'probes/P-U-GALOIS-CHANNEL-OPTIMUM-1',
+                  'evidence_sha256': '70652a40331a78987f5953f1be07a1bcf3a536244ebd8f82658c7a3e0721a32c',
+                  'rationale': 'Declare the independently reviewed conditional L1 theorem on its '
+                               'sealed public two-architecture probe; all 419 prior claims and 28 '
+                               'live physical or mathematical obligations retain their exact '
+                               'scopes and statuses.'},
+                 {'event_id': 'CANON89-DECLARE-U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-19',
+                  'release': 'canon-v89-candidate',
+                  'claim_id': 'U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '504e4253b16406d23a2424669b6ab662a60fb58e85f6b6c8aada560ad75f0080',
+                  'evidence_id': 'EV-U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION',
+                  'evidence_location': 'probes/P-U-GALOIS-CHANNEL-OPTIMUM-1',
+                  'evidence_sha256': '70652a40331a78987f5953f1be07a1bcf3a536244ebd8f82658c7a3e0721a32c',
+                  'rationale': 'Declare the independently reviewed conditional L1 theorem on its '
+                               'sealed public two-architecture probe; all 419 prior claims and 28 '
+                               'live physical or mathematical obligations retain their exact '
+                               'scopes and statuses.'}]}
+
+def v89_previous_bytes(path):
+    """Validate the complete current file before reconstructing exact v88 bytes."""
+    patch = V89_INPUT_PATCH[path.name]
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v89_current_checks():
+    """Current v89 additions are audited separately from unchanged old guards."""
+    files = tuple(V89_ADDITIONS)
+    previous = {name: v87_table_bytes(v89_previous_bytes(ROOT / "canon" / name))
+                for name in files}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in files}
+    rows = current["REGISTRY.tsv"]
+    index = {row["claim_id"]: row for row in rows}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    new_ids = {row["claim_id"] for row in V89_ADDITIONS["REGISTRY.tsv"]}
+    canon_text = CANON.read_text(encoding="utf-8")
+    counts = {status: sum(row["status"] == status for row in rows)
+              for status in {row["status"] for row in rows}}
+    exact_extensions = all(current[name] == previous[name] + V89_ADDITIONS[name]
+                           for name in files)
+    unchanged_names = ("GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv", "FRONTIER.md")
+    prior_live = [row for row in previous["REGISTRY.tsv"] if row["status"] in {"H", "O"}]
+    current_live = [row for row in rows if row["status"] in {"H", "O"}]
+    return [
+        ("V89-PRIOR-BYTES",
+         "thirteen exact current inputs reconstruct public v88 before all unchanged historical guards",
+         len(V89_INPUT_PATCH) == 13
+         and all(v89_previous_bytes(ROOT / "canon" / name) is not None
+                 for name in V89_INPUT_PATCH)),
+        ("V89-THREE-THEOREMS",
+         "three conditional L1 theorems have exact scopes, declarations, nine dependencies and completed probe bundles",
+         exact_extensions
+         and new_ids == {"QDD-NATIVE-POINT-PORT-CAPACITY",
+                         "U-GALOIS-CPTP-POINT-COMPATIBILITY",
+                         "U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION"}
+         and len(V89_ADDITIONS["NORMATIVE.tsv"]) == 3
+         and len(V89_ADDITIONS["DEPENDENCIES.tsv"]) == 9
+         and len(V89_ADDITIONS["EVIDENCE.tsv"]) == 3
+         and len(V89_ADDITIONS["HISTORY.tsv"]) == 3
+         and all(index[claim]["status"] == "T"
+                 and normative[claim]["item_type"] == "THEOREM"
+                 and normative[claim]["layer"] == "L1"
+                 and normative[claim]["gate_ids"] == ""
+                 and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+                 and evidence[claim]["architecture_requirement"] == "two-architecture"
+                 and evidence[claim]["hash_mode"] == "bundle-manifest-sha256-v1"
+                 and v86_probe_bundle_sha256(evidence[claim]["location"]) == evidence[claim]["sha256"]
+                 and "### " + claim + " [T]" in canon_text for claim in new_ids)
+         and all(event["event_type"] == "DECLARE" and event["previous_status"] == "-"
+                 and event["new_status"] == "T" and event["release"] == "canon-v89-candidate"
+                 and event["scope_sha256"] == hashlib.sha256(index[event["claim_id"]]["scope"].encode("utf-8")).hexdigest()
+                 and event["evidence_sha256"] == evidence[event["claim_id"]]["sha256"]
+                 for event in V89_ADDITIONS["HISTORY.tsv"])),
+        ("V89-OWNER-BOUNDARY",
+         "all 419 old rows and 28 live clauses are exact; point and coherent domains stay separate with no physical promotion or new gate",
+         exact_extensions and len(previous["REGISTRY.tsv"]) == 419 and len(rows) == 422
+         and counts == {"T": 289, "D": 48, "C": 39, "H": 2, "O": 26, "F": 18}
+         and len(prior_live) == 28 and current_live == prior_live
+         and all(index.get(row["claim_id"]) == row for row in previous["REGISTRY.tsv"])
+         and index["QDD-OBSERVABLE-READING-FAMILY"]["status"] == "D"
+         and all(index[claim]["status"] == "O" for claim in
+                 ("QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS", "QDD-INSTRUMENT-CLASS-COMPLETENESS"))
+         and all((ROOT / "canon" / name).read_bytes() == v89_previous_bytes(ROOT / "canon" / name)
+                 for name in unchanged_names)
+         and "All three theorems concern conditional L1 mathematics." in canon_text
+         and "Physical preparation, event occurrence, persistence and reset remain" in canon_text),
+    ]
+
+
 # Exact v88 input contract and reversible v87 reconstruction.
 V88_PRIOR_COMMIT = 'fd512f50d90382124e7c00afa926c8083fd56e06'
 V88_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '82bbc8846d1058a7ebb51faf5cc4ae48facd1ced74c056310cbd62ab723d8fda',
@@ -465,7 +896,9 @@ V88_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'QDD-PASSIVE-QUADRATIC-CALIBRATIO
 def v88_previous_bytes(path):
     """Validate the complete current file before reconstructing exact v87 bytes."""
     patch = V88_INPUT_PATCH[path.name]
-    current = path.read_bytes()
+    current = v89_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -486,14 +919,14 @@ def v88_current_checks():
     files = tuple(V88_ADDITIONS)
     previous = {name: v87_table_bytes(v88_previous_bytes(ROOT / "canon" / name))
                 for name in files}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v89_previous_bytes(ROOT / "canon" / name))
                for name in files}
     rows = current["REGISTRY.tsv"]
     index = {row["claim_id"]: row for row in rows}
     normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
     evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
     new_ids = {row["claim_id"] for row in V88_ADDITIONS["REGISTRY.tsv"]}
-    canon_text = CANON.read_text(encoding="utf-8")
+    canon_text = (v89_previous_bytes(CANON) or b"").decode("utf-8")
     counts = {status: sum(row["status"] == status for row in rows)
               for status in {row["status"] for row in rows}}
     exact_extensions = all(current[name] == previous[name] + V88_ADDITIONS[name]
@@ -540,7 +973,7 @@ def v88_current_checks():
          and index["QDD-OBSERVABLE-READING-FAMILY"]["status"] == "D"
          and all(index[claim]["status"] == "O" for claim in
                  ("QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS", "QDD-INSTRUMENT-CLASS-COMPLETENESS"))
-         and all((ROOT / "canon" / name).read_bytes() == v88_previous_bytes(ROOT / "canon" / name)
+         and all(v89_previous_bytes(ROOT / "canon" / name) == v88_previous_bytes(ROOT / "canon" / name)
                  for name in unchanged_names)
          and "All three theorems concern conditional L1 mathematics." in canon_text
          and "physical QDD O owners, Bell accounting and every other existing live" in canon_text),
@@ -9774,9 +10207,10 @@ def run():
 
     checks.extend(v87_current_checks())
     checks.extend(v88_current_checks())
+    checks.extend(v89_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v87, v86 and v85; current boundary: v88")
+    print("historical guards: exact reconstructed v88, v87, v86 and v85; current boundary: v89")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

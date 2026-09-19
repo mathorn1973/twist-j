@@ -842,3 +842,12 @@ QDD-PASSIVE-NATIVE-MEMORY	QDD-THREE-ATOM-PARTITION-COMPLETENESS	REQUIRES	exact a
 QDD-PASSIVE-NATIVE-MEMORY	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	the five-to-one F_3 fibers, explicit inverse phase maps and bijective synchronized tail give the all-clock factor criterion and initialized recovery construction
 QDD-PASSIVE-NATIVE-MEMORY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	initialized mathematical tags and preparation cardinality optima supply no physical preparation, writing, persistent register, instrument, reset or realized event law
 QDD-PASSIVE-NATIVE-MEMORY	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	exact information recovery is not a physical event-completion law or an independent saturation principle
+QDD-NATIVE-POINT-PORT-CAPACITY	U-NATIVE-APPARATUS-HISTORY-FACTOR	REQUIRES	The unchanged native quotient and all-history factor are applied to the encoded point and common source-independent seed.
+QDD-NATIVE-POINT-PORT-CAPACITY	DEF-ARCHITECTURE	REQUIRES	The original native update, selector and common origin-zero counter remain fixed.
+QDD-NATIVE-POINT-PORT-CAPACITY	DEF-QDD-GRAM	REQUIRES	The original supported norm and undefined zero-support branch fix the beta domain.
+QDD-NATIVE-POINT-PORT-CAPACITY	DEF-QDD-PROJECTOR-LOW	REQUIRES	The original balanced-lift LOW target is evaluated before encoding.
+QDD-NATIVE-POINT-PORT-CAPACITY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	This conditional L1 mathematics supplies no physical preparation/adoption, event occurrence, persistent record/reset or complete physical apparatus class.
+U-GALOIS-CPTP-POINT-COMPATIBILITY	U-GALOIS-FIBER-CODE	REQUIRES	The sixteen original addresses, coherent code columns, normalized source coordinate identification and four endpoints are unchanged.
+U-GALOIS-CPTP-POINT-COMPATIBILITY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	This conditional L1 mathematics supplies no physical preparation/adoption, event occurrence, persistent record/reset or complete physical apparatus class.
+U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION	U-GALOIS-CPTP-POINT-COMPATIBILITY	REQUIRES	The universal exact-transfer decomposition, endpoint-coordinate metric and optimal value specify the optimizing class.
+U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	This conditional L1 mathematics supplies no physical preparation/adoption, event occurrence, persistent record/reset or complete physical apparatus class.
