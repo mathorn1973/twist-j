@@ -1,0 +1,15 @@
+NON-CANONICAL L1 independent implementation audit
+prior exposure: 13 components; sizes 625 and 12*1250; every trace sheet
+states=15625 selected_edges=31250 generator_trace_checks=78125
+oriented_kappa_values=25 fibre_size=625 per_sheet=125
+BFS_components=13 histogram=625:1,1250:12 exact_Q_fibre_equality=PASS
+terminal_BFS_components=313 exact_R_fibre_equality=PASS
+H_bridges=3125 G_bridges=3125 every_V_every_k=PASS transient_escapes=9375
+translation_kernel_size=25 exact_kernel_equality=PASS
+quadratic_image=13 projective_directions=6 multiplicity_per_direction=2
+trace_tables=(0,4,0,4,4);(2,1,1,3,1) reset_z3=1 reset_i3=1
+all_n_trace_induction_cases=4 Q_initial_trace_incidence=13*5
+same_trace_different_Q_witness=((0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 1, 4))
+selector_augmentation=1 J_sum_augmentation=2 A4_det=1 exterior_det=1
+chosen_six_spanning_source_assignment=PASS image_size=7
+RESULT=PASS; finite exact audit, no physical or characteristic-zero source selection
