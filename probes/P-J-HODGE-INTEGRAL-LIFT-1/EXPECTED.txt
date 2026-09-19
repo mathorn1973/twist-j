@@ -1,0 +1,11 @@
+P-J-HODGE-INTEGRAL-LIFT-1
+chart dimensions over Q(sqrt5): 4 4
+Galois conjugate chart: PASS
+sum / intersection dimensions: 6 2
+common rational primary plane rank: 2
+visible periodic plane dimension: 2
+minimum Q-defined carrier dimension: 6
+integral lift rank: 6
+mod-5 Hodge rank / square: 3 0
+universal rational-point and minimality clauses: PROOF.md
+VERDICT: PASS
