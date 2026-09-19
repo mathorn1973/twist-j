@@ -1,0 +1,8 @@
+P-J-HODGE-PREDICTIVE-CLOSURE-1 dry verifier
+A4/J integral conjugacy: PASS
+Hodge dimensions: 3 + 3
+cross ranks: 1 1
+fixed-J observable ranks: 4 4
+A5/J word observable ranks depth 0..3: 3 4 5 6
+decomposable current-output collision: PASS
+ALL EXACT CHECKS PASS
