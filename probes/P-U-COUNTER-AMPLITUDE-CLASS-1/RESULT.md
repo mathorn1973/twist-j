@@ -3,8 +3,9 @@
 Status: **candidate-T, L1, NON-CANONICAL until a separate Canon fold**.
 Verdict: **COUNTER-AMPLITUDE-CLASS PASS**. No preregistered falsifier fired.
 The first pinned local verifier and independent breaker both exited zero
-with empty stderr. Public architecture acceptance is recorded separately
-in ACCEPTANCE.md once its exact head and jobs have passed.
+with empty stderr. Public x86_64, aarch64 and aggregate check passed at
+head 9053491000dd22396a7824c7bc01c47267fd42ef. Exact jobs, source and
+stdout hashes are recorded in [ACCEPTANCE.md](ACCEPTANCE.md).
 
 ## Complete reader classes
 
