@@ -1,0 +1,12 @@
+P-J-HODGE-SEMILINEAR-MEMORY-2
+G1 Hodge twist / periodic commute: PASS
+G2 plus update: x' = A x + B sigma(x), rank(B)=1
+G3 update is Q-linear semilinear and not Q(sqrt5)-linear: PASS
+G4 fixed-J linear predictive dimensions: 3 -> 4
+G5 axial recurrence: y[n+2] = 3 y[n+1] - y[n]
+G6 present triple + one previous axial scalar rank: 4
+G7 boost diagonal / conjugate coupling: 3/2 ; sqrt5/2 magnitude
+G8 P_minus = sigma(P_plus): PASS
+G9 full A5/J minimum 6: inherited accepted boundary
+G10 native-U / physical-time claim: NONE
+VERDICT: PASS
