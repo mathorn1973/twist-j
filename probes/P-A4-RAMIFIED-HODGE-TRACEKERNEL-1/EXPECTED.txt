@@ -1,0 +1,8 @@
+P-A4-RAMIFIED-HODGE-TRACEKERNEL-1 dry verifier
+integral scaled Hodge: K^2 = 5 I_6
+ramified Kbar: square zero, rank 3
+im Kbar = ker Kbar = ell wedge Vbar: PASS
+Vbar/<ell> -> W5 residual isometry: PASS
+transported bracket scalar versus public beta: -1
+A5 equivariance on generators: PASS
+ALL EXACT CHECKS PASS
