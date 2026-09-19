@@ -24,10 +24,10 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 422)
+        self.assertEqual(self.report.claims, 437)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 289},
+            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 304},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -35,17 +35,46 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 50,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 332,
+                "two-architecture": 347,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 189)
+        self.assertEqual(len(self.report.direct_architecture_requires), 195)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 285
+            len(self.report.transitive_architecture_dependents), 300
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v90 adds six direct native requirements. The remaining Hodge and
+        # native theorems reach architecture through CARRY-PENTAD, the digit
+        # lift, or the complete native linear group; no new item is terminal.
+        direct_v90 = (
+            "NATIVE-BC-HODGE-D5-OBSTRUCTION",
+            "NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION",
+            "U-COUNTER-SEPARABLE-QUOTIENT",
+            "U-COUNTER-REACHABLE-AMPLITUDE-CLASS",
+            "U-SELECTOR-AMPLITUDE-COMMON-FACTOR",
+            "U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION",
+        )
+        indirect_v90 = (
+            "J-HODGE-PREDICTIVE-CLOSURE",
+            "A4-RAMIFIED-HODGE-TRACEKERNEL",
+            "J-HODGE-HERM2-LOXODROME",
+            "J-C5-HODGE-CONIC-ATLAS",
+            "U-J-HODGE-FINITE-READER-BOUNDARY",
+            "J-HODGE-RATIONAL-CLOSURE",
+            "NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION",
+            "J-HODGE-COUNTER-CARRY-EXPONENT",
+            "J-HODGE-SEMILINEAR-MEMORY",
+        )
+        for claim in direct_v90:
+            self.assertIn(claim, self.report.direct_architecture_requires)
+        for claim in indirect_v90:
+            self.assertNotIn(claim, self.report.direct_architecture_requires)
+        for claim in direct_v90 + indirect_v90:
+            self.assertIn(claim, self.report.transitive_architecture_dependents)
+            self.assertNotIn(claim, self.report.dependency_terminals)
         # v89 adds one direct native point-port theorem and two coherent-code
         # channel theorems that require architecture through the existing code.
         point_port = "QDD-NATIVE-POINT-PORT-CAPACITY"
