@@ -1,0 +1,14 @@
+P-U-J-HODGE-CHECKPOINT-NOGO-1
+G1_marked_A4: PASS
+G2_integral_Hodge: PASS
+G3_primary_projectors: PASS
+G4_exact_factors: PASS
+G5_periodic_target: PASS
+G6_Hodge_intersection: PASS
+G7_finite_rotor_control: PASS
+G8_hyperbolic_control: PASS
+primary dimensions: hyperbolic=2 periodic=4
+nonzero periodic target order: 10
+periodic part of E_J: dimension 2
+finite-reader and fixed-code universal clauses: PROOF.md
+VERDICT: PASS
