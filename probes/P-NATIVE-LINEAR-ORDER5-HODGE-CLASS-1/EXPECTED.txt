@@ -1,0 +1,13 @@
+P-NATIVE-LINEAR-ORDER5-HODGE-CLASS-1
+Gamma_lin order: 200
+order-5 elements: 24
+Hodge Jordan ranks: 4 3 2 1 0
+native type 1 0 0 0 0 count=24 shortest=bc
+Hodge-type native elements: 0
+shortest Hodge-type witness: NONE
+canonical bc ranks: 1 0 0 0 0
+maximum native order-5 nilpotency index: 2
+fired linear subgroup order / order-5 count: 4 0
+word-level Hodge verdict: WORD-DIFFER
+FIRED-COMMUTATOR-NOGO boundary: unchanged
+VERDICT: COMPLETE
