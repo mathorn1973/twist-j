@@ -1,0 +1,9 @@
+INDEPENDENT finite breaker; expected claims exposed; no blind discovery
+native heads=15625; involutions=5; selected edges=31250
+weak components=13; sizes=1x625,12x1250; exact Q fibres=PASS
+E3 labels=3125; heads per label=5; initial phases per label=5
+head Cartesian product=3125x5; inverse initial words=PASS
+Q label fibres=1x125,12x250; retained-label refinement=STRICT
+inverse-word chart clocks=3..15; state audits=40625
+selector reset=PASS; all-clock and arbitrary-target claims require proof
+BREAKERS=PASS
