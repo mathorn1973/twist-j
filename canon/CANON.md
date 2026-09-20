@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v89
+# TWIST-J Public Canon v90
 
-**Release identity.** Public Canon v89. Normative authority and activation
+**Release identity.** Public Canon v90. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v89 also declares the discrete architecture used to read
+only. Public Canon v90 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v89 does not claim
+seed of the two algebraic projections. Public Canon v90 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -125,7 +125,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v89 contains no such
+deriving the architecture from J; Public Canon v90 contains no such
 theorem.
 
 ---
@@ -6170,6 +6170,155 @@ or observable identification, realization certificate, reset satisfying the
 apparatus contract, independent occurrence law, frequency convergence, Born
 derivation or admitted measurement payload.
 
+### Native finite readers and counter-dependent amplitudes
+
+The autonomous native state remains Omega=N_0 x F5^6, with unchanged
+U(n,x)=(n+1,g_(z(x)+2 theta_n)(x)). Here L, E_+, T and R are the marked exterior J operator, fixed-axis
+predictive chart and primary/periodic projectors defined in section 3.
+The finite-reader hypothesis is distinct from the counter-dependent classes below.
+
+### U-J-HODGE-FINITE-READER-BOUNDARY [T]
+
+The complete periodic-vector
+locus of L is im(R)=ker(L^10-I); every nonzero vector in it has exact period
+ten. Its intersection with E_+ has dimension two. For a fixed function r on
+any finite configuration set and any sequence y_n in that set, exact
+r(y_n)=L^n v for all n>=0 implies Tv=0. No periodic-source assumption is
+needed. If Tv is nonzero, agreement on 0,...,N requires N+1 distinct reader
+configurations. For fixed finite-address free-linear encodings B_src, fixed
+linear output D and arbitrary deterministic pushforwards N_n, the identity
+D N_n B_src=L^n D B_src implies T D B_src=0. The image rank is at most four,
+or at most two inside E_+. Unrestricted counter access is outside the
+finite-reader hypothesis. These bounds neither contradict coherent source
+retention nor construct a native reader of a nonzero periodic L-orbit.
+
+The exact public audit and its scope are in [P-U-J-HODGE-CHECKPOINT-NOGO-1](../probes/P-U-J-HODGE-CHECKPOINT-NOGO-1/RESULT.md).
+
+Use X=F5^6 in native order (p1,p4,p1p,p4p,q,r), z the coordinate sum,
+f_t(x)=g_(z(x)+2t)(x), d_n=f_(theta_n), E_0=id and E_(n+1)=d_n E_n.
+All checkpoint formulas here are modulo five. Distinguish
+the whole Omega=N_0 x X from the origin-zero reachable domain
+
+    D={(n,x):x in X_n},    X_n=E_n(X).
+
+Fix any target set Y and stipulated bijection L:Y->Y. In this section L is
+an arbitrary target, not necessarily the exterior J operator.
+
+### U-COUNTER-SEPARABLE-QUOTIENT [T]
+
+Put
+
+    S=p1+p4+p1p+p4p,    T0=p1+p4-p1p-p4p-3,
+    kappa(x)=(S-1,-T0-2r)  if z=0,
+             (S,T0)        if z=1 or z=2,
+             (S,-T0)       if z=3 or z=4,
+    Q(x)=[kappa(x)] in F5^2/{+1,-1}.
+
+Every selected edge changes kappa by a common sign. Its 25 oriented fibres
+have 625 heads each, 125 on each phase sheet. The Q fibres are exactly the
+weak connected components of the two-control graph: thirteen components,
+one of size 625 and twelve of size 1250. Connectivity is proved by the
+explicit transient excursions, not inferred from the counts. Consequently
+F f_0=F=F f_1 holds precisely when F=g Q for a unique g. Cancellation of
+L^(n+1), since both controls occur, gives the complete whole-Omega
+separable classification
+
+    R U=L R, R(n,x)=L^n F(x)
+      iff R(n,x)=L^n g(Q(x)),    g arbitrary.
+
+This does not classify general nonseparable readers on Omega or identify
+one actual trajectory with a whole weak component.
+
+The exact public audit and its scope are in [P-U-COUNTER-AMPLITUDE-CLASS-1](../probes/P-U-COUNTER-AMPLITUDE-CLASS-1/RESULT.md).
+
+### U-COUNTER-REACHABLE-AMPLITUDE-CLASS [T]
+
+Let Lambda_n
+be the canonical chart of U-NATIVE-CHART-AND-QDD-READBACK for n>=3.
+It is a bijection X_n->F5^5 with Lambda_(n+1)d_n=Lambda_n. Extend it by
+
+    ell_n(x)=Lambda_3(d_2 ... d_n(x)),  0<=n<3, x in X_n;
+    ell_n(x)=Lambda_n(x),              n>=3,   x in X_n.
+
+The first expression composes the chronological maps from tick n to tick
+three on the supplied checkpoint; it is not a future observation port.
+Every ell_n is onto, ell_(n+1)d_n=ell_n, and ell_0 has exactly the canonical
+3125 E_3 fibres, each with five heads, one from every initial phase. These
+counts and the all-clock chart are inherited, not a new retention theorem.
+
+All readers R:D->Y intertwining the stated target are exactly
+
+    R(n,x)=L^n G(ell_n(x)),    G:F5^5->Y arbitrary and unique.
+
+Indeed R(n,E_nx)=L^n R(0,x); equality of E_3 images forces equal initial
+amplitudes by injectivity of L^3. Conversely conserved ell gives the formula
+and intertwining at every reachable state. There are at most 3125 distinct
+initial amplitudes, attainable when Y has at least that many points. This
+class admits every stipulated target bijection and every G, and hence
+selects neither L nor its amplitudes.
+
+In chart coordinates the explicit projection to the smaller invariant is
+
+    Q(x)=qbar(ell_n(x)),
+    qbar(alpha,beta,gamma,delta,epsilon)
+        =[alpha+beta,gamma+delta].
+
+Its fibres have sizes 125 once and 250 twelve times. Restriction of the
+whole-Omega separable class to D is exactly G=g qbar, a strict subclass
+when Y has at least two points. This explains the different counts without
+equating their domains or reader classes. A finite amplitude image may span
+a six-dimensional characteristic-zero vector space but is not surjective
+onto that space.
+
+The exact public audit and its scope are in [P-U-COUNTER-AMPLITUDE-CLASS-1](../probes/P-U-COUNTER-AMPLITUDE-CLASS-1/RESULT.md).
+
+### U-SELECTOR-AMPLITUDE-COMMON-FACTOR [T]
+
+For every head,
+z(E_3x)=i_3(x)=1. A counter-dependent family reading only the current z or
+selected index and realizing L^n a(x) for all heads and times therefore
+forces a to be constant, by cancellation at tick three. Counter dependence,
+nonlinearity and unbounded targets do not remove this conclusion.
+
+The complete phase history, complete selector-index history and prefixes
+containing tick zero each distinguish exactly the five initial-phase
+classes: the phase dynamics is closed and its first index equals z(x).
+Every amplitude from this history is therefore H(z(x)). In contrast,
+
+    x -> (ell_0(x),z(x))
+
+is a bijection X->F5^5 x F5 because every E_3 fibre has exactly one head
+from each phase sheet. Hence G(ell_0(x))=H(z(x)) for every head forces
+both functions to be constant. An amplitude admitting both a current full
+checkpoint invertible-target reader on D and a selector-history reader has
+no nonconstant common factor. This is a source-label product decomposition,
+not a probability distribution, statistical independence or material memory.
+
+The exact public audit and its scope are in [P-U-COUNTER-AMPLITUDE-CLASS-1](../probes/P-U-COUNTER-AMPLITUDE-CLASS-1/RESULT.md).
+
+### U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION [T]
+
+If the
+amplitude G is additionally required to be additive from the declared chart
+group (F5^5,+) to a characteristic-zero vector space W, then
+
+    5G(l)=G(5l)=G(0)=0
+
+forces G=0. This is conditional on adopting chart-group addition. It excludes
+no arbitrary nonlinear map, free function-space linearization or separately
+declared integer lift. The sign quotient Q itself has no inherited vector
+addition without another definition.
+
+The static audit [(u,v)]->(u^2,uv,v^2) gives thirteen rank-at-most-one
+matrices, twelve nonzero in six projective directions. It is an auxiliary
+coordinate description of the quotient, not the complete determinant-zero
+cone or a new Hodge-axis identification. Let C_5 be the coordinate five-cycle on the five-label permutation carrier.
+The selected basis vector C_5^(2t)e_z differs from (I+C_5^2)e_z, including modulo constants over Z and F5.
+The static sum operator must not be substituted for the actual selected
+native update. These auxiliary checks receive no separate physical claim.
+
+The exact public audit and its scope are in [P-U-COUNTER-AMPLITUDE-CLASS-1](../probes/P-U-COUNTER-AMPLITUDE-CLASS-1/RESULT.md).
+
 ## 3. The kernel and the census
 
 F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
@@ -7580,6 +7729,206 @@ quantum-state, apparatus or universal-computation bridge, it does not prove
 the marking forced by `J`, and it supplies no physical carrier, preparation,
 coupling, branch occurrence, Born rule, common-branch law in Nature, decoder
 completion, speedup, universality, clock, gravity, SI quantity or L2-L6 lift.
+
+### Marked exterior J dynamics
+
+Let V=A4 tensor Q in the ordered root basis a_i=e_i-e_0, i=1,...,4, with
+Gram H=I+11^t and its marked orientation. Let C be the coordinate five-cycle,
+M=I+C^2, W=Lambda^2 V, and L=Lambda^2 M. In wedge order 01,02,03,12,13,23,
+let beta be the wedge pairing, G=Lambda^2 H, and K=beta G. Over
+F=Q(sqrt(5)) put P_+=(I+K/sqrt(5))/2, P_-=(I-K/sqrt(5))/2 and
+W_+=im(P_+), W_-=im(P_-). CARRY-PENTAD supplies the marked integral
+conjugacy of M with multiplication by J. This marking is a declared
+mathematical input, not a physical selection.
+
+### J-HODGE-PREDICTIVE-CLOSURE [T]
+
+K is integral, K^2=5I and
+dim_F W_+=dim_F W_-=3. Both directed cross operators have rank one:
+
+    rank(P_- L P_+)=rank(P_+ L P_-)=1.
+
+For each sign, the common kernel of P_sign L^n over n>=0 has dimension two,
+so the least F-linear predictive state for one fixed L has dimension four.
+It is attained by E_+=W_+ + im(P_- L P_+), and similarly for E_-.
+For the full future-word class generated by Lambda^2(A5) and L the common
+invisible space is zero and the minimum is six. A pair of decomposable
+bivectors has equal current plus output and unequal next plus output on the
+full extended carrier. These minima concern the frozen linear classes;
+they are not dimensions of physical space or unrestricted set encodings.
+
+The exact public audit and its scope are in [P-J-HODGE-PREDICTIVE-CLOSURE-1](../probes/P-J-HODGE-PREDICTIVE-CLOSURE-1/RESULT.md).
+
+### J-HODGE-HERM2-LOXODROME [T]
+
+E_+ is L-invariant, beta|E_+ has real
+signature (3,1) in the chosen embedding, and L preserves it. With
+phi=(1+sqrt(5))/2,
+
+    char_(L|E_+)(X)=(X^2-3X+1)(X^2-phi X+1).
+
+The pairs are phi^2,phi^-2 and zeta_10,zeta_10^-1, with j=zeta_5 and zeta_10=-j^3.
+The exact identity -J^-2=phi^2 zeta_10 makes these the modulus and phase
+factors of the normalized diagonal Hermitian action associated with
+diag(-J^-2,1). Equality of these algebraic factors is the complete comparison
+asserted; it supplies no canonical physical Herm2 identification.
+
+Put A=Lambda^2 C,
+
+    T=(I+A+A^2+A^3+A^4)/5,    R=I-T.
+
+These are rational complementary projectors of ranks two and four. They
+commute with L and K. The primary factor on im(T) is X^2-3X+1; the factor
+on im(R) is Phi_10(X)=X^4-X^3+X^2-X+1. The full-carrier projector
+and factor identities are proved in the [finite-reader proof](../probes/P-U-J-HODGE-CHECKPOINT-NOGO-1/PROOF.md).
+
+The exact public audit and its scope are in [P-J-HODGE-HERM2-LOXODROME-1](../probes/P-J-HODGE-HERM2-LOXODROME-1/RESULT.md).
+
+### J-HODGE-SEMILINEAR-MEMORY [T]
+
+Write sigma for the nontrivial
+automorphism of F. For a rational substrate vector w and conjugate plus/minus
+bases B_+, B_-=sigma(B_+), its plus coordinates x determine
+
+    w=B_+ x+B_- sigma(x),
+    x_next=A_0 x+B_0 sigma(x),    rank B_0=1.
+
+This map is Q-linear and is not F-linear. Thus the exact rational-source
+triple already has a closed update when conjugation is allowed. The extra
+coordinate is necessary only for the stated F-linear predictive realization.
+If Obs is the current triple on E_+, the exact ranks are
+
+    rank [Obs; Obs L|E_+]=4,
+    rank [Obs; y (L|E_+)^-1]=4,
+
+where y is a nonzero scalar coordinate of the rank-one primary projection
+of W_+. Its output satisfies y_(n+2)=3y_(n+1)-y_n. The current triple and
+one previous axial value therefore attain the four-dimensional F-linear
+minimum for a fixed marked J.
+
+On the primary and periodic sectors respectively,
+
+    K L K^-1 T=L^-1 T,    (KL-LK)R=0.
+
+The basis-independent primary characteristic data are trace 3 and
+determinant 1. In a conjugate Hodge basis the diagonal entries are 3/2 and
+the cross coefficients obey c_+ c_-=5/4. Individual cross coefficients
+depend on basis scale. The explicitly frozen normalization in the evidence
+gives exactly (1/2)[[3,-sqrt(5)],[-sqrt(5),3]]. The normalization is not an
+additional invariant or a physical time identification.
+
+The exact public audit and its scope are in [P-J-HODGE-SEMILINEAR-MEMORY-2](../probes/P-J-HODGE-SEMILINEAR-MEMORY-2/RESULT.md).
+
+### J-HODGE-RATIONAL-CLOSURE [T]
+
+sigma exchanges E_+ and E_-;
+
+    dim_F E_+=dim_F E_-=4,
+    E_+ intersect E_-=im(T)_F,
+    E_++E_-=W_F.
+
+The intersection has dimension two and is Q-defined. Every Q-subspace U
+whose scalar extension contains the full E_+ also contains E_- and equals
+W_Q. Hence its least Q-dimension is six, without an L-invariance premise.
+The integral lattice Lambda^2 A4 attains rank six and is L-invariant.
+Moreover E_+ intersect W_Q=im(T)_Q, and the visible periodic two-plane
+E_+ intersect im(R)_F has no nonzero rational vector. This is a containing
+carrier theorem, not a bound for every possible additive encoding.
+
+The exact public audit and its scope are in [P-J-HODGE-INTEGRAL-LIFT-1](../probes/P-J-HODGE-INTEGRAL-LIFT-1/RESULT.md).
+
+### Ramified Hodge carrier and six-axis atlas
+
+### A4-RAMIFIED-HODGE-TRACEKERNEL [T]
+
+At the prime five, Kbar^2=0,
+rank(Kbar)=3 and
+
+    im(Kbar)=ker(Kbar)=ell wedge Vbar,
+
+where ell spans the radical of the reduced root Gram. The reduced root Gram Hbar has kernel <ell> and image W_5; its induced
+quotient map Vbar/<ell> to the public residual carrier (W_5,g_5) is an isometry.
+The alternating quotient map descended from Kbar transports to exactly
+minus the public metric-volume bracket of TRACEKERNEL-F5-HODGE-BRACKET in
+the frozen marked orientation. The marked A5 generators preserve the metric
+and commute with that transport. Thus the two characteristic-zero Hodge
+triples become one rank-three image/kernel self-extension at five.
+This identifies exact L1 carriers and brackets; it does not force a spatial
+commutator class or close TRACEKERNEL-CURVATURE-FORCING.
+
+The exact public audit and its scope are in [P-A4-RAMIFIED-HODGE-TRACEKERNEL-1](../probes/P-A4-RAMIFIED-HODGE-TRACEKERNEL-1/RESULT.md).
+
+### J-C5-HODGE-CONIC-ATLAS [T]
+
+The six Sylow-5 subgroups P of the marked A5
+each fix a distinct line T_P in W_-. For all 24 order-five elements c,
+
+    im(P_- Lambda^2(I+c^2) P_+)=T_<c>.
+
+Under the positive metric -beta on W_-, these six lines have pairwise
+squared angle 1/5 and their metric line projectors sum to 2I_3. Each
+normalizer has order ten; the labels form A5/D5. In the ramified W_5 carrier
+the same labels give exactly its six projective isotropic lines. Each
+W_+ direct-sum T_P is a mathematical four-dimensional Lorentzian predictive
+chart. No label is selected as a physical observer or time axis.
+
+The exact public audit and its scope are in [P-J-C5-HODGE-CONIC-ATLAS-1](../probes/P-J-C5-HODGE-CONIC-ATLAS-1/RESULT.md).
+
+### Native linear-word and counter-exponent boundaries
+
+### NATIVE-BC-HODGE-D5-OBSTRUCTION [T]
+
+The canonical native linear b,c
+pair and marked Hodge D5 pair have different F5 modules. For bc the ranks
+of (bc-I)^k, k=1,...,5, are 1,0,0,0,0; for the marked Hodge cycle they are
+4,3,2,1,0. In both frozen cycle orientations the simultaneous intertwiner
+space has dimension eight and contains no invertible map. The native pair
+has an eleven-dimensional space of invariant symmetric forms. Absence of
+an invertible simultaneous intertwiner is not nonuniqueness of transported Hodge data.
+
+The exact public audit and its scope are in [P-NATIVE-BC-HODGE-D5-SEAM-1](../probes/P-NATIVE-BC-HODGE-D5-SEAM-1/RESULT.md).
+
+### NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION [T]
+
+The group generated by the
+five native linear parts has order 200 and exactly 24 elements of order five.
+All have Jordan type J_2(1)+J_1(1)^4, whereas the marked exterior Hodge cycle
+has J_5(1)+J_1(1). No finite native word linear part is conjugate to the
+marked Hodge five-cycle or its inverse. The fired subgroup generated by
+b,d,e has order four and no order-five element.
+
+The exact public audit and its scope are in [P-NATIVE-LINEAR-ORDER5-HODGE-CLASS-1](../probes/P-NATIVE-LINEAR-ORDER5-HODGE-CLASS-1/RESULT.md).
+
+### NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION [T]
+
+The actual reduced exterior
+J step Lambda^2(I+C^2) has order ten and Jordan type J_5(-1)+J_1(-1), with
+ranks of (L+I)^k equal to 4,3,2,1,0,0. In the native linear group the only
+(-1)-unipotent elements are -I and 24 elements with ranks 1,0,0,0,0,0.
+Therefore no finite native word linear part is similar to this actual step.
+These word obstructions do not classify affine, nonlinear, history,
+time-dependent gauge or counter-assisted readings and do not falsify U.
+
+The exact public audit and its scope are in [P-NATIVE-LINEAR-JHODGE-STEP-CLASS-1](../probes/P-NATIVE-LINEAR-JHODGE-STEP-CLASS-1/RESULT.md).
+
+### J-HODGE-COUNTER-CARRY-EXPONENT [T]
+
+With s_2 the binary digit sum,
+
+    s_2(n+1)-s_2(n)=1-nu_2(n+1),
+    C(n)=sum_(m=1)^n nu_2(m)=nu_2(n!)=n-s_2(n).
+
+C is the unique integer sequence starting at zero that complements the digit
+increment to one. In a free cyclic exponent carrier, the unique normalized
+completion of r^s_2(n) to r^n is r^C(n). At the finite order-eight root this
+remains a finite record. Separately, for positive real rho^2=phi the fourth
+power of rho^s_2(n) rho^C(n) is phi^(2n), giving the target hyperbolic
+multiplier and its reciprocal. The torsion phase zeta_10^n remains separate.
+The factorial valuation identity is classical; its typed exponent comparison
+supplies neither a native-Hodge intertwiner nor a physical clock or gravity
+law. SQRT-PHI-TIME-GRAVITY remains open.
+
+The exact public audit and its scope are in [P-J-HODGE-COUNTER-CARRY-FACTOR-1](../probes/P-J-HODGE-COUNTER-CARRY-FACTOR-1/RESULT.md).
 
 ## 4. The two places
 

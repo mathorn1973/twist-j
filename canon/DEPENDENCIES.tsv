@@ -851,3 +851,39 @@ U-GALOIS-CPTP-POINT-COMPATIBILITY	U-GALOIS-FIBER-CODE	REQUIRES	The sixteen origi
 U-GALOIS-CPTP-POINT-COMPATIBILITY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	This conditional L1 mathematics supplies no physical preparation/adoption, event occurrence, persistent record/reset or complete physical apparatus class.
 U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION	U-GALOIS-CPTP-POINT-COMPATIBILITY	REQUIRES	The universal exact-transfer decomposition, endpoint-coordinate metric and optimal value specify the optimizing class.
 U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	This conditional L1 mathematics supplies no physical preparation/adoption, event occurrence, persistent record/reset or complete physical apparatus class.
+J-HODGE-PREDICTIVE-CLOSURE	CARRY-PENTAD	REQUIRES	The marked pentad fixes the integral five-cycle and J conjugacy.
+J-HODGE-PREDICTIVE-CLOSURE	J-STEP	REQUIRES	The regular J multiplication supplies the marked exterior update.
+A4-RAMIFIED-HODGE-TRACEKERNEL	CARRY-PENTAD	REQUIRES	The marked integral A4 carrier and orientation are fixed.
+A4-RAMIFIED-HODGE-TRACEKERNEL	TRACEKERNEL-RESIDUAL-FORM	REQUIRES	The public residual carrier and metric specify the isometry target.
+A4-RAMIFIED-HODGE-TRACEKERNEL	TRACEKERNEL-F5-HODGE-BRACKET	REQUIRES	The public metric-volume bracket fixes the orientation-sensitive comparison.
+J-HODGE-HERM2-LOXODROME	J-HODGE-PREDICTIVE-CLOSURE	REQUIRES	The fixed marked-J F-linear predictive carrier is the comparison domain.
+J-HODGE-HERM2-LOXODROME	J-PROJECTIONS	REQUIRES	The algebraic modulus and phase identify the two characteristic factors.
+J-C5-HODGE-CONIC-ATLAS	J-HODGE-PREDICTIVE-CLOSURE	REQUIRES	The Hodge signs and directed cross images define each fixed-axis chart.
+J-C5-HODGE-CONIC-ATLAS	A4-RAMIFIED-HODGE-TRACEKERNEL	REQUIRES	The marked residual isometry transports the six subgroup labels to the null conic.
+J-C5-HODGE-CONIC-ATLAS	J-HODGE-HERM2-LOXODROME	REQUIRES	The fixed-axis chart signature identifies the mathematical Lorentzian comparison.
+U-J-HODGE-FINITE-READER-BOUNDARY	J-HODGE-HERM2-LOXODROME	REQUIRES	The primary hyperbolic and periodic factors specify the frozen target.
+U-J-HODGE-FINITE-READER-BOUNDARY	J-HODGE-PREDICTIVE-CLOSURE	REQUIRES	The fixed-axis E_+ carrier specifies the restricted rank bound.
+J-HODGE-RATIONAL-CLOSURE	J-HODGE-PREDICTIVE-CLOSURE	REQUIRES	The conjugate fixed-J charts are subspaces of the rational exterior carrier.
+J-HODGE-RATIONAL-CLOSURE	J-HODGE-HERM2-LOXODROME	REQUIRES	The rational primary and periodic projectors fix the intersection statements.
+NATIVE-BC-HODGE-D5-OBSTRUCTION	DEF-ARCHITECTURE	REQUIRES	The canonical native b,c linear parts are unchanged.
+NATIVE-BC-HODGE-D5-OBSTRUCTION	J-HODGE-PREDICTIVE-CLOSURE	REQUIRES	The marked exterior cycle fixes the comparison D5 module.
+NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION	DEF-ARCHITECTURE	REQUIRES	All five declared native linear parts generate the complete finite-word class.
+NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION	NATIVE-BC-HODGE-D5-OBSTRUCTION	REQUIRES	The marked Hodge cycle and both orientations fix the target Jordan type.
+NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION	NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION	REQUIRES	The same complete native linear group fixes the finite-word class.
+NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION	J-HODGE-PREDICTIVE-CLOSURE	REQUIRES	The actual exterior J step is reduced modulo five as the target.
+J-HODGE-COUNTER-CARRY-EXPONENT	SQRT-PHI-DIGIT-LIFT	REQUIRES	The finite order-eight and separate positive characteristic-zero lifts fix the two typed specializations.
+J-HODGE-COUNTER-CARRY-EXPONENT	J-HODGE-HERM2-LOXODROME	REQUIRES	Only the hyperbolic exponent is compared; the torsion factor is separately supplied.
+J-HODGE-SEMILINEAR-MEMORY	J-HODGE-PREDICTIVE-CLOSURE	REQUIRES	The fixed-J observation and predictive spaces fix the F-linear minimum.
+J-HODGE-SEMILINEAR-MEMORY	J-HODGE-HERM2-LOXODROME	REQUIRES	The primary and periodic factors fix the sector identities and recurrence.
+U-COUNTER-SEPARABLE-QUOTIENT	DEF-ARCHITECTURE	REQUIRES	The unchanged update and both native selector controls define the whole-Omega edge graph.
+U-COUNTER-REACHABLE-AMPLITUDE-CLASS	DEF-ARCHITECTURE	REQUIRES	The original origin-zero native dynamics fixes the reachable domain.
+U-COUNTER-REACHABLE-AMPLITUDE-CLASS	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	The canonical all-clock chart provides the conserved 3125 labels.
+U-COUNTER-REACHABLE-AMPLITUDE-CLASS	U-NATIVE-COMMON-READY-SOURCE-RETENTION	REQUIRES	The inherited five-head fibres and phase-sheet bijections specify source retention.
+U-COUNTER-REACHABLE-AMPLITUDE-CLASS	U-COUNTER-SEPARABLE-QUOTIENT	REQUIRES	The smaller sign quotient defines the exact separable subclass.
+U-COUNTER-REACHABLE-AMPLITUDE-CLASS	KERNEL-Z6-SYNCHRONIZATION	REQUIRES	The exact phase synchronization fixes the shared tick-three phase and phase-sheet description.
+U-SELECTOR-AMPLITUDE-COMMON-FACTOR	DEF-ARCHITECTURE	REQUIRES	The unchanged phase and selector dynamics determine tick-three synchronization.
+U-SELECTOR-AMPLITUDE-COMMON-FACTOR	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	The canonical chart and phase-sheet fibres fix the source-label product bijection.
+U-SELECTOR-AMPLITUDE-COMMON-FACTOR	U-COUNTER-REACHABLE-AMPLITUDE-CLASS	REQUIRES	The all-time full-checkpoint reader class defines the amplitudes being compared.
+U-SELECTOR-AMPLITUDE-COMMON-FACTOR	KERNEL-Z6-SYNCHRONIZATION	REQUIRES	The exact phase synchronization fixes the shared tick-three phase and phase-sheet description.
+U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION	DEF-ARCHITECTURE	REQUIRES	The finite native source remains unchanged.
+U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION	U-COUNTER-REACHABLE-AMPLITUDE-CLASS	REQUIRES	The additional additive premise applies to this declared chart-group amplitude assignment.

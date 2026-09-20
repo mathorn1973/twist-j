@@ -34,6 +34,1070 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v90 input contract and reversible v89 reconstruction.
+V90_PRIOR_COMMIT = '9ffd942fe1981f3daf8016fe5cc268ec18397c49'
+V90_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '8b240611af17acc3fd05c29a4b7dac93d1f8394b657d95dbafe21a701aed9fed',
+                  'current_bytes': 429443,
+                  'prior_sha256': '0c42301134202f7bd83d50e900addab05a16f1789dcd7dc05e2a7e8856ed108a',
+                  'prior_bytes': 416684,
+                  'restore': ((423, 438, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': 'c5b2e8241230c6a01992eca378f6a824af24920cfd01ed0f9c6984a48b510909',
+                   'current_bytes': 55736,
+                   'prior_sha256': '89d528c1b57d97955f93907670fce3acdf9ad1daf7d96e23c1d8dbd6be5b82ec',
+                   'prior_bytes': 53882,
+                   'restore': ((478, 493, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': '6e6c942a9e3aa4e69e72e036ca06443f88b880438fca30fdffe9ed80458dfb9f',
+                      'current_bytes': 142046,
+                      'prior_sha256': 'bae679cbd3a50204007c18c23c80828b53618dd9f3eca5ebcf59d5543343683f',
+                      'prior_bytes': 137013,
+                      'restore': ((853, 889, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': '0fa9265a06ced765135596ca914ba89c188d554d38b67b5cd34f32408262bb21',
+                  'current_bytes': 89381,
+                  'prior_sha256': '268be0f68dcab8c4c8153231b6e520d860f277b2c9deb9f45afacfc23332aea8',
+                  'prior_bytes': 86020,
+                  'restore': ((423, 438, ''),)},
+ 'HISTORY.tsv': {'current_sha256': '301b9587aac2171ecd338e9050ef3b8bff9742ce0adeeb3324fc91727bb13bd2',
+                 'current_bytes': 432479,
+                 'prior_sha256': '5ed187009a16d394108a9c79b60969a5585b29882e0204a391d1cc1f2b25dcb1',
+                 'prior_bytes': 424345,
+                 'restore': ((960, 975, ''),)},
+ 'GATES.tsv': {'current_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'current_bytes': 7792,
+               'prior_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'prior_bytes': 7792,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
+                           'current_bytes': 1588,
+                           'prior_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
+                           'prior_bytes': 1588,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': '8ff757009ab1e46a66e0d341d7e9408f5c93cb966633b3e1755083b081c6665f',
+              'current_bytes': 676201,
+              'prior_sha256': '86a949f688183a096ba5dde5d5c8eb1f47f32a34d46a44aa68788b5582635ede',
+              'prior_bytes': 659472,
+              'restore': ((0, 1, '# TWIST-J Public Canon v89\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v89. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v89 also declares the discrete architecture used to '
+                           'read\n'),
+                          (22,
+                           23,
+                           'seed of the two algebraic projections. Public Canon v89 does not '
+                           'claim\n'),
+                          (127,
+                           128,
+                           'deriving the architecture from J; Public Canon v89 contains no such\n'),
+                          (6172, 6321, ''),
+                          (7731, 7931, ''))},
+ 'CORE.md': {'current_sha256': '97dd218ae4e94845e2c7784a2ddbd7e1b63ed9e7b80f44fdd5758d30709aff76',
+             'current_bytes': 17207,
+             'prior_sha256': '7dfdbdc6af730c1ebe6879ed5f0097975d669fd6e27546075f796f953c93d7bd',
+             'prior_bytes': 16537,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v89. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v89 also declares a discrete architecture. It does not\n'),
+                         (123, 133, ''))},
+ 'FRONTIER.md': {'current_sha256': 'fb282cdadd2ff041dd9417a97e4abfb8c379b870cb092852fd62258d97d20bcc',
+                 'current_bytes': 29627,
+                 'prior_sha256': 'fb282cdadd2ff041dd9417a97e4abfb8c379b870cb092852fd62258d97d20bcc',
+                 'prior_bytes': 29627,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': 'f664756ee000e627b80b33579ffc486863f142e5350000b4ac59113563357e3b',
+                  'current_bytes': 182877,
+                  'prior_sha256': 'a900734e60170bf13df0fb2acb76207faf0da2efd8e917d1f9ab80d293658d21',
+                  'prior_bytes': 181789,
+                  'restore': ((1, 20, ''),
+                              (133,
+                               134,
+                               'Registry snapshot: 422 claims; 0 T-LOCK, 289 T, 48 D, 39 C, 2 H, '
+                               '26 O, 18 F; 28 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '33a9d0869713928d7507f6e6d7811a74feacd3ae418fad6d67075e43de30ee46',
+                       'current_bytes': 243,
+                       'prior_sha256': '4ccf3cb9ba7f48b8e10bd36bfd6f5b10a936626d65912445f98cba663d46ca31',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t422\n'),
+                                   (3, 4, 'status_T\t289\n'),
+                                   (14, 15, 'evidence_two-architecture\t332\n'))}}
+V90_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'J-HODGE-PREDICTIVE-CLOSURE',
+                   'status': 'T',
+                   'scope': 'L1 on the marked A4 exterior carrier over F=Q(sqrt(5)): the Hodge '
+                            'signs have dimension 3, each directed J cross block has rank 1, each '
+                            'fixed-J observation kernel has dimension 2 and the least F-linear '
+                            'predictive realization has dimension 4; the complete future-word '
+                            'class generated by Lambda^2(A5) and L has minimum 6; a decomposable '
+                            'current-output collision separates at the next step; no physical '
+                            'dimension, time, native-U bridge or unrestricted encoding bound',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'probes/P-J-HODGE-PREDICTIVE-CLOSURE-1',
+                   'falsifier': 'an exact failure of the marked conjugacy, Hodge ranks, cross '
+                                'ranks, fixed-J observation or invariant-hull rank, joint-word '
+                                'rank-six certificate or decomposable collision; an integrity '
+                                'mismatch without mathematical negation is STOP'},
+                  {'claim_id': 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+                   'status': 'T',
+                   'scope': 'L1 on the marked integral Lambda^2 A4: K is integral with K^2=5I, its '
+                            'mod-5 reduction has square zero and rank 3 with '
+                            'im(Kbar)=ker(Kbar)=ell wedge Vbar; the induced quotient Vbar/<ell> to '
+                            '(W5,g5) is an exact isometry and the descended alternating bracket is '
+                            'exactly minus the public metric-volume bracket in the frozen '
+                            'orientation, with marked A5 equivariance; no spatial-commutator '
+                            'forcing or physical lift',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'probes/P-A4-RAMIFIED-HODGE-TRACEKERNEL-1',
+                   'falsifier': 'an exact failure of the integral or residual Hodge identities, '
+                                'radical or image/kernel description, isometry, fixed orientation '
+                                'scalar -1, bracket or marked A5 equivariance; '
+                                'TRACEKERNEL-CURVATURE-FORCING is outside this theorem'},
+                  {'claim_id': 'J-HODGE-HERM2-LOXODROME',
+                   'status': 'T',
+                   'scope': 'L1 for the marked fixed-J predictive carrier E_+: dimension 4, '
+                            'L-invariance, real wedge signature (3,1), exact beta preservation and '
+                            'characteristic polynomial (X^2-3X+1)(X^2-phi X+1); -J^-2=phi^2 zeta10 '
+                            'gives exactly the same modulus and phase factors as the normalized '
+                            'diagonal Hermitian action associated with diag(-J^-2,1); no canonical '
+                            'physical Herm2 identification, native-U intertwiner or physical time',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'probes/P-J-HODGE-HERM2-LOXODROME-1',
+                   'falsifier': 'an exact failure of dimension, invariance, signature, '
+                                'preservation, either characteristic factor, cyclotomic identity '
+                                'or algebraic Hermitian-factor comparison at the frozen marking'},
+                  {'claim_id': 'J-C5-HODGE-CONIC-ATLAS',
+                   'status': 'T',
+                   'scope': 'L1 for all six Sylow-5 subgroups P in the marked A5: each fixes one '
+                            'distinct line T_P in W_-, every one of the 24 order-five elements c '
+                            'has im(P_- Lambda^2(I+c^2) P_+)=T_<c>, the real lines have squared '
+                            'angle 1/5 and projector sum 2I3, their normalizers have order 10, and '
+                            'the same subgroup labels yield exactly the six projective isotropic '
+                            'lines of residual W5; mathematical predictive charts only, no '
+                            'selected physical chart',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'probes/P-J-C5-HODGE-CONIC-ATLAS-1',
+                   'falsifier': 'an exact failure of the six-subgroup census, fixed-line '
+                                'dimensions or distinctness, any cross-image identity, invariant '
+                                'angle or frame sum, normalizer or transitivity test, or equality '
+                                'with the complete residual conic'},
+                  {'claim_id': 'U-J-HODGE-FINITE-READER-BOUNDARY',
+                   'status': 'T',
+                   'scope': 'L1 for the marked exterior J target: its full periodic-vector locus '
+                            'is im(R)=ker(L^10-I), dimension 4, with every nonzero vector of exact '
+                            'period 10 and intersection with E_+ of dimension 2; every fixed read '
+                            'from finitely many configurations realizing L^n v for all n has Tv=0, '
+                            'while a nonzero hyperbolic target through N requires N+1 '
+                            'configurations; fixed finite-address free-linear encodings with fixed '
+                            'linear output also have zero hyperbolic image, of rank at most 4 or '
+                            'at most 2 inside E_+; source periodicity is unnecessary and '
+                            'unrestricted counter access is outside scope',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-U-J-HODGE-CHECKPOINT-NOGO-1',
+                   'falsifier': 'an exact counterexample to the primary/periodic split, exact '
+                                'period, E_+ intersection, universal finite-image argument or '
+                                'fixed-code rank consequence under the stated fixed finite '
+                                'hypotheses; unbounded or time-dependent output is a different '
+                                'class'},
+                  {'claim_id': 'J-HODGE-RATIONAL-CLOSURE',
+                   'status': 'T',
+                   'scope': 'L1 over F=Q(sqrt(5)): the conjugate fixed-J charts E_+,E_- have '
+                            'dimensions 4, sum W_F of dimension 6 and intersection im(T)_F of '
+                            'dimension 2; every Q-defined subspace whose scalar extension contains '
+                            'the full E_+ equals W_Q, without requiring L-invariance, and Lambda^2 '
+                            'A4 attains integral rank 6; E_+ intersect W_Q=im(T)_Q and its '
+                            'periodic two-plane has no nonzero rational vector; no general '
+                            'additive-encoding or native-checkpoint identification',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'probes/P-J-HODGE-INTEGRAL-LIFT-1',
+                   'falsifier': 'an exact failure of Galois conjugacy, chart sum/intersection, '
+                                'rational intersection, containing-carrier lower bound or integral '
+                                'attaining lattice at the frozen scope'},
+                  {'claim_id': 'NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                   'status': 'T',
+                   'scope': 'L1 over F5 for the frozen canonical native b,c linear pair and marked '
+                            'Hodge D5 pair: the order-five products have Jordan ranks 1,0,0,0,0 '
+                            'and 4,3,2,1,0 respectively; each of the two frozen cycle-orientation '
+                            'simultaneous Hom spaces has dimension 8 and no invertible map; the '
+                            'native pair has invariant symmetric-form dimension 11; DIFFER '
+                            'excludes only this direct representation seam and is not a '
+                            'falsification of native U or a transported-data nonuniqueness theorem',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'probes/P-NATIVE-BC-HODGE-D5-SEAM-1',
+                   'falsifier': 'an exact native/Hodge rank mismatch with the stated certificate, '
+                                'a wrong complete Hom-space dimension, an admitted invertible '
+                                'simultaneous intertwiner, or a wrong invariant symmetric-form '
+                                'dimension'},
+                  {'claim_id': 'NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                   'status': 'T',
+                   'scope': 'L1 for the complete group of the five declared native checkpoint '
+                            'linear parts: order 200, exactly 24 order-five elements, all of '
+                            'Jordan type J2(1)+J1(1)^4; the marked exterior Hodge cycle and '
+                            'inverse have type J5(1)+J1(1), so no finite native word linear part '
+                            'is similar to either; the fired subgroup generated by b,d,e has order '
+                            '4 and no order-five element; affine, nonlinear, history, gauge and '
+                            'counter constructions remain outside this word-linear class',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'probes/P-NATIVE-LINEAR-ORDER5-HODGE-CLASS-1',
+                   'falsifier': 'an exact failure of complete group closure, group or order-five '
+                                'census, Jordan-rank classification or fired-subgroup '
+                                'classification, or an admitted Hodge-type finite native word '
+                                'linear part'},
+                  {'claim_id': 'NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+                   'status': 'T',
+                   'scope': 'L1 over F5: the actual marked target Lambda^2(I+C^2) has order 10 and '
+                            'type J5(-1)+J1(-1), with ranks of (L+I)^k equal to 4,3,2,1,0,0; the '
+                            'complete native linear group has only -I and 24 shallow rank-one '
+                            '(-1)-unipotent elements, hence zero native word linear parts similar '
+                            'to that actual target; STEP-DIFFER does not exclude affine, '
+                            'nonlinear, history-dependent, gauge or counter-assisted readings',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'probes/P-NATIVE-LINEAR-JHODGE-STEP-CLASS-1',
+                   'falsifier': 'an exact failure of target order/Jordan ranks or the complete '
+                                'native (-1)-unipotent census, or an admitted finite native word '
+                                'linear part similar to the frozen actual target'},
+                  {'claim_id': 'J-HODGE-COUNTER-CARRY-EXPONENT',
+                   'status': 'T',
+                   'scope': 'L1 arithmetic: s2(n+1)-s2(n)=1-nu2(n+1), and C(n)=sum_(m=1)^n '
+                            'nu2(m)=nu2(n!)=n-s2(n) is the unique normalized integer complement to '
+                            'one count per step; r^C(n) uniquely completes r^s2(n) to r^n in the '
+                            'free cyclic exponent carrier; the finite order-eight specialization '
+                            'remains finite, while the separate positive characteristic-zero '
+                            'rho^2=phi specialization gives fourth powers phi^(2n) and phi^(-2n), '
+                            'with the loxodromic torsion phase separately supplied; classical '
+                            'identity and typed exponent comparison only, no native-Hodge or '
+                            'physical clock/gravity bridge',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'probes/P-J-HODGE-COUNTER-CARRY-FACTOR-1',
+                   'falsifier': 'an exact counterexample to the all-n digit increment, factorial '
+                                'valuation, uniqueness, free-exponent completion or either '
+                                'separately typed specialization; equating the two carriers or '
+                                'closing SQRT-PHI-TIME-GRAVITY exceeds scope'},
+                  {'claim_id': 'J-HODGE-SEMILINEAR-MEMORY',
+                   'status': 'T',
+                   'scope': 'L1 for rational w on the marked exterior J carrier and F=Q(sqrt(5)): '
+                            'the plus triple reconstructs w through x and sigma(x) and evolves by '
+                            "x'=A0 x+B0 sigma(x), rank(B0)=1, Q-linearly but not F-linearly; the "
+                            'fixed-J F-linear predictive state has minimum 4, attained by the '
+                            'present triple and one prior primary axial value satisfying '
+                            'y_(n+2)=3y_(n+1)-y_n; K L K^-1 T=L^-1 T and (KL-LK)R=0; the primary '
+                            'block has trace 3 and determinant 1, Hodge-basis cross-product 5/4, '
+                            'and the frozen normalization gives (1/2)[[3,-sqrt5],[-sqrt5,3]]; no '
+                            'information-loss claim for the exact rational-source triple or '
+                            'physical time identification',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'probes/P-J-HODGE-SEMILINEAR-MEMORY-2',
+                   'falsifier': 'an exact failure of rational reconstruction, semilinear formula '
+                                'or cross rank, either observability rank-four certificate, axial '
+                                'recurrence, sector identities, invariant primary data or '
+                                'explicitly frozen normalized matrix; changing basis scale without '
+                                'claiming the frozen normalization is not a counterexample'},
+                  {'claim_id': 'U-COUNTER-SEPARABLE-QUOTIENT',
+                   'status': 'T',
+                   'scope': 'L1 on the whole native Omega=N0 x F5^6: for S=p1+p4+p1p+p4p, '
+                            'T0=p1+p4-p1p-p4p-3 and z=S+q+r, the piecewise kappa=(S-1,-T0-2r) at '
+                            'z=0, (S,T0) at z in {1,2}, (S,-T0) at z in {3,4} changes by common '
+                            'sign on every f_t(x)=g_(z(x)+2t)(x); each of its 25 oriented fibres '
+                            'has 625 heads and 125 per phase, and Q=[kappa] in F5^2/{+-1} has '
+                            'exactly the thirteen weak two-control components, sizes 625 once and '
+                            '1250 twelve times; for any stipulated target bijection L, total '
+                            'separable readers R(n,x)=L^n F(x) intertwine U exactly iff F=g Q for '
+                            'unique arbitrary g; no general nonseparable whole-Omega '
+                            'classification or physical superselection',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                   'falsifier': 'an exact failed selected-edge sign identity, wrong oriented fibre '
+                                'or weak-component membership/count, incomplete constructive '
+                                'connectivity proof, or failure of either direction or uniqueness '
+                                'in the total separable-reader classification for an admitted '
+                                'target bijection'},
+                  {'claim_id': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                   'status': 'T',
+                   'scope': 'L1 on D={(n,x):x in E_n(F5^6)} only, using the inherited all-clock '
+                            'native chart extended to conserved onto labels ell_n in F5^5 with '
+                            'ell_0 fibres equal to the 3125 five-head E3 fibres: for every '
+                            'stipulated set Y and bijection L:Y->Y, every exact reader R:D->Y with '
+                            'R(n+1,d_n x)=L R(n,x) has uniquely R(n,x)=L^n G(ell_n(x)), with '
+                            'arbitrary G and at most 3125 initial amplitude values, attained when '
+                            'Y has enough points; Q=qbar ell_n where '
+                            'qbar(alpha,beta,gamma,delta,epsilon)=[alpha+beta,gamma+delta] has one '
+                            'fibre of size 125 and twelve of size 250, and restrictions of '
+                            'whole-Omega separable readers are exactly G=g qbar, strictly fewer '
+                            'when Y has at least two points; the 3125 retention count is '
+                            'inherited, target L and G are unselected, finite spanning is not '
+                            'surjectivity, and no nonseparable classification outside D is '
+                            'asserted',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                   'falsifier': 'an exact counterexample to the conserved onto chart extension, '
+                                'complete arbitrary-target parametrization or uniqueness, attained '
+                                'initial-amplitude bound, Q projection/fibre counts or exact '
+                                'separable-subclass statement on the declared reachable domain; a '
+                                'different source port or an unreachable state changes the class'},
+                  {'claim_id': 'U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                   'status': 'T',
+                   'scope': 'L1 for all origin-zero native heads and a stipulated bijective '
+                            'target: z3=i3=1 forces every counter-dependent current-phase or '
+                            'current-selector reader realizing L^n a(x) at every time to have '
+                            'constant initial amplitude; complete phase/index histories and '
+                            'prefixes containing tick zero distinguish exactly five initial-phase '
+                            'classes; x->(ell_0(x),z(x)) is a bijection F5^6->F5^5 x F5, so an '
+                            'amplitude obtainable both by a current-full-checkpoint '
+                            'invertible-target reader on D and by a selector-history reader is '
+                            'constant; no probability law, statistical independence, physical '
+                            'preparation or material record is supplied',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                   'falsifier': 'an admitted head with noncommon tick-three phase/index, a '
+                                'nonconstant amplitude satisfying the all-time current-selector '
+                                'target equation, a history distinction not determined by initial '
+                                'phase, a failure of the exact product bijection, or a nonconstant '
+                                'common factor on every head under the frozen ports'},
+                  {'claim_id': 'U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION',
+                   'status': 'T',
+                   'scope': 'L1 conditional on requiring the amplitude assignment G to be additive '
+                            'from the declared chart group (F5^5,+) to a characteristic-zero '
+                            'vector space: G=0 because 5G(l)=G(5l)=G(0)=0; more generally the same '
+                            'holds in any additive target without 5-torsion; arbitrary nonlinear '
+                            'amplitudes, free function-space linearization and separately declared '
+                            'integer lifts are outside this additional additive premise, and Q is '
+                            'not assigned inherited vector addition',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                   'falsifier': 'an exact nonzero additive G into a target with no 5-torsion '
+                                'satisfying the declared source-group law, or a failure of the '
+                                'stated torsion proof; a nonadditive assignment or changed '
+                                'source/target group is outside scope'}],
+ 'NORMATIVE.tsv': [{'item_id': 'J-HODGE-PREDICTIVE-CLOSURE',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'J-HODGE-PREDICTIVE-CLOSURE',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::J-HODGE-PREDICTIVE-CLOSURE'},
+                   {'item_id': 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::A4-RAMIFIED-HODGE-TRACEKERNEL'},
+                   {'item_id': 'J-HODGE-HERM2-LOXODROME',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'J-HODGE-HERM2-LOXODROME',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::J-HODGE-HERM2-LOXODROME'},
+                   {'item_id': 'J-C5-HODGE-CONIC-ATLAS',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'J-C5-HODGE-CONIC-ATLAS',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::J-C5-HODGE-CONIC-ATLAS'},
+                   {'item_id': 'U-J-HODGE-FINITE-READER-BOUNDARY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-J-HODGE-FINITE-READER-BOUNDARY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-J-HODGE-FINITE-READER-BOUNDARY'},
+                   {'item_id': 'J-HODGE-RATIONAL-CLOSURE',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'J-HODGE-RATIONAL-CLOSURE',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::J-HODGE-RATIONAL-CLOSURE'},
+                   {'item_id': 'NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::NATIVE-BC-HODGE-D5-OBSTRUCTION'},
+                   {'item_id': 'NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION'},
+                   {'item_id': 'NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION'},
+                   {'item_id': 'J-HODGE-COUNTER-CARRY-EXPONENT',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'J-HODGE-COUNTER-CARRY-EXPONENT',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::J-HODGE-COUNTER-CARRY-EXPONENT'},
+                   {'item_id': 'J-HODGE-SEMILINEAR-MEMORY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'J-HODGE-SEMILINEAR-MEMORY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::J-HODGE-SEMILINEAR-MEMORY'},
+                   {'item_id': 'U-COUNTER-SEPARABLE-QUOTIENT',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-COUNTER-SEPARABLE-QUOTIENT',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-COUNTER-SEPARABLE-QUOTIENT'},
+                   {'item_id': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-COUNTER-REACHABLE-AMPLITUDE-CLASS'},
+                   {'item_id': 'U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-SELECTOR-AMPLITUDE-COMMON-FACTOR'},
+                   {'item_id': 'U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'J-HODGE-PREDICTIVE-CLOSURE',
+                       'depends_on': 'CARRY-PENTAD',
+                       'relation': 'REQUIRES',
+                       'basis': 'The marked pentad fixes the integral five-cycle and J conjugacy.'},
+                      {'item_id': 'J-HODGE-PREDICTIVE-CLOSURE',
+                       'depends_on': 'J-STEP',
+                       'relation': 'REQUIRES',
+                       'basis': 'The regular J multiplication supplies the marked exterior '
+                                'update.'},
+                      {'item_id': 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+                       'depends_on': 'CARRY-PENTAD',
+                       'relation': 'REQUIRES',
+                       'basis': 'The marked integral A4 carrier and orientation are fixed.'},
+                      {'item_id': 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+                       'depends_on': 'TRACEKERNEL-RESIDUAL-FORM',
+                       'relation': 'REQUIRES',
+                       'basis': 'The public residual carrier and metric specify the isometry '
+                                'target.'},
+                      {'item_id': 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+                       'depends_on': 'TRACEKERNEL-F5-HODGE-BRACKET',
+                       'relation': 'REQUIRES',
+                       'basis': 'The public metric-volume bracket fixes the orientation-sensitive '
+                                'comparison.'},
+                      {'item_id': 'J-HODGE-HERM2-LOXODROME',
+                       'depends_on': 'J-HODGE-PREDICTIVE-CLOSURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The fixed marked-J F-linear predictive carrier is the comparison '
+                                'domain.'},
+                      {'item_id': 'J-HODGE-HERM2-LOXODROME',
+                       'depends_on': 'J-PROJECTIONS',
+                       'relation': 'REQUIRES',
+                       'basis': 'The algebraic modulus and phase identify the two characteristic '
+                                'factors.'},
+                      {'item_id': 'J-C5-HODGE-CONIC-ATLAS',
+                       'depends_on': 'J-HODGE-PREDICTIVE-CLOSURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The Hodge signs and directed cross images define each fixed-axis '
+                                'chart.'},
+                      {'item_id': 'J-C5-HODGE-CONIC-ATLAS',
+                       'depends_on': 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+                       'relation': 'REQUIRES',
+                       'basis': 'The marked residual isometry transports the six subgroup labels '
+                                'to the null conic.'},
+                      {'item_id': 'J-C5-HODGE-CONIC-ATLAS',
+                       'depends_on': 'J-HODGE-HERM2-LOXODROME',
+                       'relation': 'REQUIRES',
+                       'basis': 'The fixed-axis chart signature identifies the mathematical '
+                                'Lorentzian comparison.'},
+                      {'item_id': 'U-J-HODGE-FINITE-READER-BOUNDARY',
+                       'depends_on': 'J-HODGE-HERM2-LOXODROME',
+                       'relation': 'REQUIRES',
+                       'basis': 'The primary hyperbolic and periodic factors specify the frozen '
+                                'target.'},
+                      {'item_id': 'U-J-HODGE-FINITE-READER-BOUNDARY',
+                       'depends_on': 'J-HODGE-PREDICTIVE-CLOSURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The fixed-axis E_+ carrier specifies the restricted rank bound.'},
+                      {'item_id': 'J-HODGE-RATIONAL-CLOSURE',
+                       'depends_on': 'J-HODGE-PREDICTIVE-CLOSURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The conjugate fixed-J charts are subspaces of the rational '
+                                'exterior carrier.'},
+                      {'item_id': 'J-HODGE-RATIONAL-CLOSURE',
+                       'depends_on': 'J-HODGE-HERM2-LOXODROME',
+                       'relation': 'REQUIRES',
+                       'basis': 'The rational primary and periodic projectors fix the intersection '
+                                'statements.'},
+                      {'item_id': 'NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                       'depends_on': 'DEF-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The canonical native b,c linear parts are unchanged.'},
+                      {'item_id': 'NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                       'depends_on': 'J-HODGE-PREDICTIVE-CLOSURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The marked exterior cycle fixes the comparison D5 module.'},
+                      {'item_id': 'NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                       'depends_on': 'DEF-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'All five declared native linear parts generate the complete '
+                                'finite-word class.'},
+                      {'item_id': 'NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                       'depends_on': 'NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                       'relation': 'REQUIRES',
+                       'basis': 'The marked Hodge cycle and both orientations fix the target '
+                                'Jordan type.'},
+                      {'item_id': 'NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+                       'depends_on': 'NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                       'relation': 'REQUIRES',
+                       'basis': 'The same complete native linear group fixes the finite-word '
+                                'class.'},
+                      {'item_id': 'NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+                       'depends_on': 'J-HODGE-PREDICTIVE-CLOSURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The actual exterior J step is reduced modulo five as the target.'},
+                      {'item_id': 'J-HODGE-COUNTER-CARRY-EXPONENT',
+                       'depends_on': 'SQRT-PHI-DIGIT-LIFT',
+                       'relation': 'REQUIRES',
+                       'basis': 'The finite order-eight and separate positive characteristic-zero '
+                                'lifts fix the two typed specializations.'},
+                      {'item_id': 'J-HODGE-COUNTER-CARRY-EXPONENT',
+                       'depends_on': 'J-HODGE-HERM2-LOXODROME',
+                       'relation': 'REQUIRES',
+                       'basis': 'Only the hyperbolic exponent is compared; the torsion factor is '
+                                'separately supplied.'},
+                      {'item_id': 'J-HODGE-SEMILINEAR-MEMORY',
+                       'depends_on': 'J-HODGE-PREDICTIVE-CLOSURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The fixed-J observation and predictive spaces fix the F-linear '
+                                'minimum.'},
+                      {'item_id': 'J-HODGE-SEMILINEAR-MEMORY',
+                       'depends_on': 'J-HODGE-HERM2-LOXODROME',
+                       'relation': 'REQUIRES',
+                       'basis': 'The primary and periodic factors fix the sector identities and '
+                                'recurrence.'},
+                      {'item_id': 'U-COUNTER-SEPARABLE-QUOTIENT',
+                       'depends_on': 'DEF-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The unchanged update and both native selector controls define the '
+                                'whole-Omega edge graph.'},
+                      {'item_id': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                       'depends_on': 'DEF-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The original origin-zero native dynamics fixes the reachable '
+                                'domain.'},
+                      {'item_id': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                       'depends_on': 'U-NATIVE-CHART-AND-QDD-READBACK',
+                       'relation': 'REQUIRES',
+                       'basis': 'The canonical all-clock chart provides the conserved 3125 '
+                                'labels.'},
+                      {'item_id': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                       'depends_on': 'U-NATIVE-COMMON-READY-SOURCE-RETENTION',
+                       'relation': 'REQUIRES',
+                       'basis': 'The inherited five-head fibres and phase-sheet bijections specify '
+                                'source retention.'},
+                      {'item_id': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                       'depends_on': 'U-COUNTER-SEPARABLE-QUOTIENT',
+                       'relation': 'REQUIRES',
+                       'basis': 'The smaller sign quotient defines the exact separable subclass.'},
+                      {'item_id': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                       'depends_on': 'KERNEL-Z6-SYNCHRONIZATION',
+                       'relation': 'REQUIRES',
+                       'basis': 'The exact phase synchronization fixes the shared tick-three phase '
+                                'and phase-sheet description.'},
+                      {'item_id': 'U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                       'depends_on': 'DEF-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The unchanged phase and selector dynamics determine tick-three '
+                                'synchronization.'},
+                      {'item_id': 'U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                       'depends_on': 'U-NATIVE-CHART-AND-QDD-READBACK',
+                       'relation': 'REQUIRES',
+                       'basis': 'The canonical chart and phase-sheet fibres fix the source-label '
+                                'product bijection.'},
+                      {'item_id': 'U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                       'depends_on': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                       'relation': 'REQUIRES',
+                       'basis': 'The all-time full-checkpoint reader class defines the amplitudes '
+                                'being compared.'},
+                      {'item_id': 'U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                       'depends_on': 'KERNEL-Z6-SYNCHRONIZATION',
+                       'relation': 'REQUIRES',
+                       'basis': 'The exact phase synchronization fixes the shared tick-three phase '
+                                'and phase-sheet description.'},
+                      {'item_id': 'U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION',
+                       'depends_on': 'DEF-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The finite native source remains unchanged.'},
+                      {'item_id': 'U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION',
+                       'depends_on': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                       'relation': 'REQUIRES',
+                       'basis': 'The additional additive premise applies to this declared '
+                                'chart-group amplitude assignment.'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'J-HODGE-PREDICTIVE-CLOSURE',
+                   'evidence_id': 'EV-J-HODGE-PREDICTIVE-CLOSURE',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-J-HODGE-PREDICTIVE-CLOSURE-1',
+                   'sha256': '5f652c3cc032c96956a5ebaab43fd2f539d8c1de8123186f8c67d00097ac5d9f',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+                   'evidence_id': 'EV-A4-RAMIFIED-HODGE-TRACEKERNEL',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-A4-RAMIFIED-HODGE-TRACEKERNEL-1',
+                   'sha256': '829e4f6c17b76216dbb5fc98328befa22aa1342fb2552d92d999452506fc0547',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'J-HODGE-HERM2-LOXODROME',
+                   'evidence_id': 'EV-J-HODGE-HERM2-LOXODROME',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-J-HODGE-HERM2-LOXODROME-1',
+                   'sha256': '474a7c0417caf090b42ed5f25d3a8f0b225c4f40be242f52ec99a962b0ca41bc',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'J-C5-HODGE-CONIC-ATLAS',
+                   'evidence_id': 'EV-J-C5-HODGE-CONIC-ATLAS',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-J-C5-HODGE-CONIC-ATLAS-1',
+                   'sha256': '2eb4044c2098d2b0f0d83f952d6abf468b29fb7cca7120aaf15aad8e34b45f7c',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'U-J-HODGE-FINITE-READER-BOUNDARY',
+                   'evidence_id': 'EV-U-J-HODGE-FINITE-READER-BOUNDARY',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-U-J-HODGE-CHECKPOINT-NOGO-1',
+                   'sha256': '30ec903a89ca9b67779506fef75a3985cb5c84b196b42ebe0feeee0d520bab8e',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'J-HODGE-RATIONAL-CLOSURE',
+                   'evidence_id': 'EV-J-HODGE-RATIONAL-CLOSURE',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-J-HODGE-INTEGRAL-LIFT-1',
+                   'sha256': '55bfb2acba82e8a15dc3120e434da80c98aa5c526bfe25ccadd7b4cb65710085',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                   'evidence_id': 'EV-NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-NATIVE-BC-HODGE-D5-SEAM-1',
+                   'sha256': '69675a9aeaa50c436f9a94d15e61f29821ac8e544dfb2e3be0927b559c0fb2cc',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                   'evidence_id': 'EV-NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-NATIVE-LINEAR-ORDER5-HODGE-CLASS-1',
+                   'sha256': '4f24b3db17397287232519e8fdb5c6a3caee0d220ef69902d890dd8872fbb875',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+                   'evidence_id': 'EV-NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-NATIVE-LINEAR-JHODGE-STEP-CLASS-1',
+                   'sha256': 'f8dceaa47afce40ad895f5e1edd358b72314bb889fc8a8c1ad9e6cc6b877c4d8',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'J-HODGE-COUNTER-CARRY-EXPONENT',
+                   'evidence_id': 'EV-J-HODGE-COUNTER-CARRY-EXPONENT',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-J-HODGE-COUNTER-CARRY-FACTOR-1',
+                   'sha256': '512c5efb8bc1f76beef07a23c658a07065d5daa1671094ec98b7f8a0501b8fa5',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'J-HODGE-SEMILINEAR-MEMORY',
+                   'evidence_id': 'EV-J-HODGE-SEMILINEAR-MEMORY',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-J-HODGE-SEMILINEAR-MEMORY-2',
+                   'sha256': 'c670830ae7c852e7649b403a7e1bcb296b1f6a522d2615c2f858a7c13b6a0b9e',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'U-COUNTER-SEPARABLE-QUOTIENT',
+                   'evidence_id': 'EV-U-COUNTER-SEPARABLE-QUOTIENT',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                   'sha256': '0f85eaf17a926c46a461e78de2bee7914cd2fbe9a53af7c4d8e5cfb073b4a0d3',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                   'evidence_id': 'EV-U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                   'sha256': '0f85eaf17a926c46a461e78de2bee7914cd2fbe9a53af7c4d8e5cfb073b4a0d3',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                   'evidence_id': 'EV-U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                   'sha256': '0f85eaf17a926c46a461e78de2bee7914cd2fbe9a53af7c4d8e5cfb073b4a0d3',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION',
+                   'evidence_id': 'EV-U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                   'sha256': '0f85eaf17a926c46a461e78de2bee7914cd2fbe9a53af7c4d8e5cfb073b4a0d3',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON90-DECLARE-J-HODGE-PREDICTIVE-CLOSURE',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'J-HODGE-PREDICTIVE-CLOSURE',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '60f73e71bc9bc4bc5bf3b12aaf16a7a1f01c49d7d725eea8a3dbffd138308890',
+                  'evidence_id': 'EV-J-HODGE-PREDICTIVE-CLOSURE',
+                  'evidence_location': 'probes/P-J-HODGE-PREDICTIVE-CLOSURE-1',
+                  'evidence_sha256': '5f652c3cc032c96956a5ebaab43fd2f539d8c1de8123186f8c67d00097ac5d9f',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-A4-RAMIFIED-HODGE-TRACEKERNEL',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '7b47ea6a45710d20c1c17b8dad20132845126e41c8ebd6c82ff1b5abdbea9734',
+                  'evidence_id': 'EV-A4-RAMIFIED-HODGE-TRACEKERNEL',
+                  'evidence_location': 'probes/P-A4-RAMIFIED-HODGE-TRACEKERNEL-1',
+                  'evidence_sha256': '829e4f6c17b76216dbb5fc98328befa22aa1342fb2552d92d999452506fc0547',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-J-HODGE-HERM2-LOXODROME',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'J-HODGE-HERM2-LOXODROME',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '39e27c36b89778367618df591fa844786a8136c53d571cae5534cc6c180addc1',
+                  'evidence_id': 'EV-J-HODGE-HERM2-LOXODROME',
+                  'evidence_location': 'probes/P-J-HODGE-HERM2-LOXODROME-1',
+                  'evidence_sha256': '474a7c0417caf090b42ed5f25d3a8f0b225c4f40be242f52ec99a962b0ca41bc',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-J-C5-HODGE-CONIC-ATLAS',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'J-C5-HODGE-CONIC-ATLAS',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '09229d2cfabd3f04d466f38776fef64039d05b46a2ff186876c85a908db2da94',
+                  'evidence_id': 'EV-J-C5-HODGE-CONIC-ATLAS',
+                  'evidence_location': 'probes/P-J-C5-HODGE-CONIC-ATLAS-1',
+                  'evidence_sha256': '2eb4044c2098d2b0f0d83f952d6abf468b29fb7cca7120aaf15aad8e34b45f7c',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-U-J-HODGE-FINITE-READER-BOUNDARY',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'U-J-HODGE-FINITE-READER-BOUNDARY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '515738710135886b50f631d2eb00730c39b81dd8310933c457f52e3c9b14decb',
+                  'evidence_id': 'EV-U-J-HODGE-FINITE-READER-BOUNDARY',
+                  'evidence_location': 'probes/P-U-J-HODGE-CHECKPOINT-NOGO-1',
+                  'evidence_sha256': '30ec903a89ca9b67779506fef75a3985cb5c84b196b42ebe0feeee0d520bab8e',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-J-HODGE-RATIONAL-CLOSURE',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'J-HODGE-RATIONAL-CLOSURE',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '85ebcd12b7d511d444ab39c70d5e99f6aa51df19a1f4fc912daf89a8295e86c7',
+                  'evidence_id': 'EV-J-HODGE-RATIONAL-CLOSURE',
+                  'evidence_location': 'probes/P-J-HODGE-INTEGRAL-LIFT-1',
+                  'evidence_sha256': '55bfb2acba82e8a15dc3120e434da80c98aa5c526bfe25ccadd7b4cb65710085',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'b6b22edbeed1aaf585fed9328bf858af204e75d7d7c535f7c176f4dd78dfd150',
+                  'evidence_id': 'EV-NATIVE-BC-HODGE-D5-OBSTRUCTION',
+                  'evidence_location': 'probes/P-NATIVE-BC-HODGE-D5-SEAM-1',
+                  'evidence_sha256': '69675a9aeaa50c436f9a94d15e61f29821ac8e544dfb2e3be0927b559c0fb2cc',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '7cf50789adc063330cc72d32d0b826c1e1015d280e7ef833ef958ca8cef51369',
+                  'evidence_id': 'EV-NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+                  'evidence_location': 'probes/P-NATIVE-LINEAR-ORDER5-HODGE-CLASS-1',
+                  'evidence_sha256': '4f24b3db17397287232519e8fdb5c6a3caee0d220ef69902d890dd8872fbb875',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'c062dc56dcbae61f0033c44015c35aa7fa1e60270dfd2d8629ea6d5bf393bfa5',
+                  'evidence_id': 'EV-NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+                  'evidence_location': 'probes/P-NATIVE-LINEAR-JHODGE-STEP-CLASS-1',
+                  'evidence_sha256': 'f8dceaa47afce40ad895f5e1edd358b72314bb889fc8a8c1ad9e6cc6b877c4d8',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-J-HODGE-COUNTER-CARRY-EXPONENT',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'J-HODGE-COUNTER-CARRY-EXPONENT',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '6c36050016a74c343302039a1d3aca06d7d4905b0a08f5175e25eec7db441ae3',
+                  'evidence_id': 'EV-J-HODGE-COUNTER-CARRY-EXPONENT',
+                  'evidence_location': 'probes/P-J-HODGE-COUNTER-CARRY-FACTOR-1',
+                  'evidence_sha256': '512c5efb8bc1f76beef07a23c658a07065d5daa1671094ec98b7f8a0501b8fa5',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-J-HODGE-SEMILINEAR-MEMORY',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'J-HODGE-SEMILINEAR-MEMORY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'a2c9c0dc3863b12adc4d0c6a323d95d7fde3d83dd397f0fc97bb5d9f56de552d',
+                  'evidence_id': 'EV-J-HODGE-SEMILINEAR-MEMORY',
+                  'evidence_location': 'probes/P-J-HODGE-SEMILINEAR-MEMORY-2',
+                  'evidence_sha256': 'c670830ae7c852e7649b403a7e1bcb296b1f6a522d2615c2f858a7c13b6a0b9e',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-U-COUNTER-SEPARABLE-QUOTIENT',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'U-COUNTER-SEPARABLE-QUOTIENT',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '953da9539835cb24e3f53df781cf2d702b0de4b2fbbff040412b7f1551f49fcc',
+                  'evidence_id': 'EV-U-COUNTER-SEPARABLE-QUOTIENT',
+                  'evidence_location': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                  'evidence_sha256': '0f85eaf17a926c46a461e78de2bee7914cd2fbe9a53af7c4d8e5cfb073b4a0d3',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'fb37cc1c95cb6fea1f3a7ae9fb97b6fb0cc5e0a28b0ceff56c75a18ee36f6bdf',
+                  'evidence_id': 'EV-U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                  'evidence_location': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                  'evidence_sha256': '0f85eaf17a926c46a461e78de2bee7914cd2fbe9a53af7c4d8e5cfb073b4a0d3',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '1c3bdc75a833d713cf16718cd86523ec5d16eb484c6c1ab29248931b7dd36788',
+                  'evidence_id': 'EV-U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+                  'evidence_location': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                  'evidence_sha256': '0f85eaf17a926c46a461e78de2bee7914cd2fbe9a53af7c4d8e5cfb073b4a0d3',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'},
+                 {'event_id': 'CANON90-DECLARE-U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-20',
+                  'release': 'canon-v90-candidate',
+                  'claim_id': 'U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '0b56f95cb6c35a472b411b5a8e0d678e12dd72b8692ba6d1f673286273aaa36d',
+                  'evidence_id': 'EV-U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION',
+                  'evidence_location': 'probes/P-U-COUNTER-AMPLITUDE-CLASS-1',
+                  'evidence_sha256': '0f85eaf17a926c46a461e78de2bee7914cd2fbe9a53af7c4d8e5cfb073b4a0d3',
+                  'rationale': 'Declare the exact L1 theorem at its accepted public source scope; '
+                               'all 422 prior Registry rows and all 28 live H/O obligations retain '
+                               'their exact scopes and statuses. No physical selection or layer '
+                               'bridge is supplied.'}]}
+V90_CLAIM_IDS = ('J-HODGE-PREDICTIVE-CLOSURE',
+ 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+ 'J-HODGE-HERM2-LOXODROME',
+ 'J-C5-HODGE-CONIC-ATLAS',
+ 'U-J-HODGE-FINITE-READER-BOUNDARY',
+ 'J-HODGE-RATIONAL-CLOSURE',
+ 'NATIVE-BC-HODGE-D5-OBSTRUCTION',
+ 'NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION',
+ 'NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION',
+ 'J-HODGE-COUNTER-CARRY-EXPONENT',
+ 'J-HODGE-SEMILINEAR-MEMORY',
+ 'U-COUNTER-SEPARABLE-QUOTIENT',
+ 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+ 'U-SELECTOR-AMPLITUDE-COMMON-FACTOR',
+ 'U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION')
+
+def v90_previous_bytes(path):
+    """Validate the complete current file before reconstructing exact v89 bytes."""
+    patch = V90_INPUT_PATCH[path.name]
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v90_current_checks():
+    """Audit current mathematical additions independently of every old guard."""
+    files = tuple(V90_ADDITIONS)
+    previous = {name: v87_table_bytes(v90_previous_bytes(ROOT / "canon" / name))
+                for name in files}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in files}
+    rows = current["REGISTRY.tsv"]
+    index = {row["claim_id"]: row for row in rows}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    new_ids = {row["claim_id"] for row in V90_ADDITIONS["REGISTRY.tsv"]}
+    canon_text = CANON.read_text(encoding="utf-8")
+    counts = {status: sum(row["status"] == status for row in rows)
+              for status in {row["status"] for row in rows}}
+    exact_extensions = all(current[name] == previous[name] + V90_ADDITIONS[name]
+                           for name in files)
+    unchanged_names = ("GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv", "FRONTIER.md")
+    prior_live = [row for row in previous["REGISTRY.tsv"] if row["status"] in {"H", "O"}]
+    current_live = [row for row in rows if row["status"] in {"H", "O"}]
+    return [
+        ("V90-PRIOR-BYTES",
+         "thirteen exact current inputs reconstruct public v89 before all unchanged historical guards",
+         len(V90_INPUT_PATCH) == 13
+         and all(v90_previous_bytes(ROOT / "canon" / name) is not None
+                 for name in V90_INPUT_PATCH)),
+        ("V90-HODGE-NATIVE-THEOREMS",
+         "fifteen L1 theorems have exact scopes, declarations, 36 dependencies and twelve completed probe bundles",
+         exact_extensions and new_ids == set(V90_CLAIM_IDS)
+         and len(V90_CLAIM_IDS) == 15
+         and len(V90_ADDITIONS["NORMATIVE.tsv"]) == 15
+         and len(V90_ADDITIONS["DEPENDENCIES.tsv"]) == 36
+         and len(V90_ADDITIONS["EVIDENCE.tsv"]) == 15
+         and len(V90_ADDITIONS["HISTORY.tsv"]) == 15
+         and len({evidence[claim]["location"] for claim in new_ids}) == 12
+         and all(index[claim]["status"] == "T"
+                 and normative[claim]["item_type"] == "THEOREM"
+                 and normative[claim]["layer"] == "L1"
+                 and normative[claim]["gate_ids"] == ""
+                 and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+                 and evidence[claim]["architecture_requirement"] == "two-architecture"
+                 and evidence[claim]["hash_mode"] == "bundle-manifest-sha256-v1"
+                 and v86_probe_bundle_sha256(evidence[claim]["location"]) == evidence[claim]["sha256"]
+                 and "### " + claim + " [T]" in canon_text for claim in new_ids)
+         and all(event["event_type"] == "DECLARE" and event["previous_status"] == "-"
+                 and event["new_status"] == "T" and event["release"] == "canon-v90-candidate"
+                 and event["scope_sha256"] == hashlib.sha256(index[event["claim_id"]]["scope"].encode("utf-8")).hexdigest()
+                 and event["evidence_sha256"] == evidence[event["claim_id"]]["sha256"]
+                 for event in V90_ADDITIONS["HISTORY.tsv"])),
+        ("V90-OWNER-BOUNDARY",
+         "all 422 old rows and 28 live clauses are exact; marked Hodge and native reader classes supply no selected target, amplitude, physical promotion or new gate",
+         exact_extensions and len(previous["REGISTRY.tsv"]) == 422 and len(rows) == 437
+         and counts == {"T": 304, "D": 48, "C": 39, "H": 2, "O": 26, "F": 18}
+         and len(prior_live) == 28 and current_live == prior_live
+         and all(index.get(row["claim_id"]) == row for row in previous["REGISTRY.tsv"])
+         and index["QDD-OBSERVABLE-READING-FAMILY"]["status"] == "D"
+         and all(index[claim]["status"] == "O" for claim in
+                 ("QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS", "QDD-INSTRUMENT-CLASS-COMPLETENESS"))
+         and all((ROOT / "canon" / name).read_bytes() == v90_previous_bytes(ROOT / "canon" / name)
+                 for name in unchanged_names)
+         and "selects neither L nor its amplitudes." in canon_text
+         and "not a probability distribution, statistical independence or material memory." in canon_text),
+    ]
+
+
 # Exact v89 input contract and reversible v88 reconstruction.
 V89_PRIOR_COMMIT = 'e57d4506d5b28bf8cb4979c4e29db6b10b2441f2'
 V89_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '0c42301134202f7bd83d50e900addab05a16f1789dcd7dc05e2a7e8856ed108a',
@@ -383,7 +1447,9 @@ V89_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'QDD-NATIVE-POINT-PORT-CAPACITY',
 def v89_previous_bytes(path):
     """Validate the complete current file before reconstructing exact v88 bytes."""
     patch = V89_INPUT_PATCH[path.name]
-    current = path.read_bytes()
+    current = v90_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -404,14 +1470,14 @@ def v89_current_checks():
     files = tuple(V89_ADDITIONS)
     previous = {name: v87_table_bytes(v89_previous_bytes(ROOT / "canon" / name))
                 for name in files}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v90_previous_bytes(ROOT / "canon" / name))
                for name in files}
     rows = current["REGISTRY.tsv"]
     index = {row["claim_id"]: row for row in rows}
     normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
     evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
     new_ids = {row["claim_id"] for row in V89_ADDITIONS["REGISTRY.tsv"]}
-    canon_text = CANON.read_text(encoding="utf-8")
+    canon_text = (v90_previous_bytes(CANON) or b"").decode("utf-8")
     counts = {status: sum(row["status"] == status for row in rows)
               for status in {row["status"] for row in rows}}
     exact_extensions = all(current[name] == previous[name] + V89_ADDITIONS[name]
@@ -458,7 +1524,7 @@ def v89_current_checks():
          and index["QDD-OBSERVABLE-READING-FAMILY"]["status"] == "D"
          and all(index[claim]["status"] == "O" for claim in
                  ("QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS", "QDD-INSTRUMENT-CLASS-COMPLETENESS"))
-         and all((ROOT / "canon" / name).read_bytes() == v89_previous_bytes(ROOT / "canon" / name)
+         and all(v90_previous_bytes(ROOT / "canon" / name) == v89_previous_bytes(ROOT / "canon" / name)
                  for name in unchanged_names)
          and "All three theorems concern conditional L1 mathematics." in canon_text
          and "Physical preparation, event occurrence, persistence and reset remain" in canon_text),
@@ -10208,9 +11274,10 @@ def run():
     checks.extend(v87_current_checks())
     checks.extend(v88_current_checks())
     checks.extend(v89_current_checks())
+    checks.extend(v90_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v88, v87, v86 and v85; current boundary: v89")
+    print("historical guards: exact reconstructed v89, v88, v87, v86 and v85; current boundary: v90")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0
