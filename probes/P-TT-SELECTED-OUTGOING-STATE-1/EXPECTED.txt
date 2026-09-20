@@ -1,0 +1,11 @@
+G1 PASS: ten positive source weights, seven impulses, four static words; exact m=0..10 histories
+G2 PASS: 40 labelled atoms, 25 histories, exact prefix masses; rank-four propagators m=2..10
+G3 PASS: positive-root certificates give v^2=h, |v|^2=|h|, zero convention and det=1-h^2
+G4 PASS: free K4 orbits, frame redescription and all 256 fourth-moment sign/conjugation patterns
+G5 PASS: zero vector mean and global pseudocovariance; second moments and TT fourth contraction on all 55x55 pairs
+G6 PASS: source eigenvalues 5/12,1/12; complete prefix covariance factorization and rank two
+G7 PASS: lambda=216*pi action normalization; quadratic h action is quartic in v, not a selected vector action
+G8 PASS: full tensor/intensity Fourier covariances m=0..10; onset powers and ratios exact in Q(sqrt5)
+G9 PASS: fresh signs, biased signs, singular zero pullback, Fourier-before-square and raw intensity are distinct
+G10 PASS: explicit non-Gaussian fourth-moment witness; silent mass 1/3 retained; pre-onset ratios undefined
+VERDICT: SELECTED-OUTGOING-STATE; conditional L1 law, persistent sign lift and intensity comparison adopted
