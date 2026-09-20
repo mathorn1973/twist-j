@@ -26,10 +26,10 @@ and computation checks, not laboratory experiments.
    of that model; no calibration was performed.
 3. An exact coherent isometry implemented by a complete unitary conserving
    the stipulated additive cut energy, with fixed independent normal
-   environment preparation, has a common energy change on energy-basis
-   code inputs. The proof includes mixed and infinite-dimensional
+   environment preparation, has a common energy change on code transitions
+   between energy eigenvectors at both input and output. The proof includes mixed and infinite-dimensional
    environments with unbounded energy, without assuming finite moments.
-4. For equally spaced positive port gaps, the four required entrance
+4. For equal positive port gaps Delta_q=Delta_r=Delta, the four required entrance
    energy changes are (5 Delta,0,0,0). Thus **the entire declared clean
    conserved-energy class is empty for that code target and encoding**.
    This uses LOW--HIGH coherence as well as coherence within HIGH.
