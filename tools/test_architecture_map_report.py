@@ -24,28 +24,45 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 437)
+        self.assertEqual(self.report.claims, 462)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 48, "F": 18, "H": 2, "O": 26, "T": 304},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 320},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 50,
+                "none": 59,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 347,
+                "two-architecture": 363,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 195)
+        self.assertEqual(len(self.report.direct_architecture_requires), 199)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 300
+            len(self.report.transitive_architecture_dependents), 330
         )
-        self.assertEqual(len(self.report.dependency_terminals), 63)
+        self.assertEqual(len(self.report.dependency_terminals), 62)
+        # v91 adds four direct native requirements. The selected dictionaries
+        # consume their explicit mathematical models through separate gates;
+        # the closed TT existence owner now depends on its adopted witness.
+        for item in (
+            "ENTROPY-MEASURABLE-OBSTRUCTION",
+            "U-STABLE-PAIRED-PORT-TRANSPORT",
+            "QDD-PORT-QUOTIENT-ORIGIN-BOUNDARY",
+            "QDD-NATIVE-AFFINE-ENTRANCE-MINIMUM",
+        ):
+            self.assertIn(item, self.report.direct_architecture_requires)
+        for item in (
+            "QDD-SELECTED-BORN", "QDD-SELECTED-PAIR-LAW",
+            "SELECTED-COSMOLOGICAL-COMPARISON",
+            "TT-VECTOR-STATE-NORMALIZATION",
+        ):
+            self.assertIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.dependency_terminals)
         # v90 adds six direct native requirements. The remaining Hodge and
         # native theorems reach architecture through CARRY-PENTAD, the digit
         # lift, or the complete native linear group; no new item is terminal.
@@ -216,7 +233,11 @@ class ArchitectureMapReportTests(unittest.TestCase):
             "JIPC-WP3D-QPOS-SCALAR-SLICE",
             self.report.dependency_terminals,
         )
-        self.assertIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
+        # The adopted v91 accounting witness consumes the three pair gates.
+        self.assertNotIn("BELL-CAUSAL-ACCOUNTING", self.report.dependency_terminals)
+        self.assertIn(
+            "BELL-CAUSAL-ACCOUNTING", self.report.transitive_architecture_dependents
+        )
         self.assertNotIn(
             "DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY",
             self.report.direct_architecture_requires,

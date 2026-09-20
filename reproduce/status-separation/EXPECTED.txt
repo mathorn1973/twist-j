@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v89, v88, v87, v86 and v85; current boundary: v90
+historical guards: exact reconstructed v90, v89, v88, v87, v86 and v85; current boundary: v91
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -105,5 +105,9 @@ PASS 100 V89-OWNER-BOUNDARY all 419 old rows and 28 live clauses are exact; poin
 PASS 101 V90-PRIOR-BYTES thirteen exact current inputs reconstruct public v89 before all unchanged historical guards
 PASS 102 V90-HODGE-NATIVE-THEOREMS fifteen L1 theorems have exact scopes, declarations, 36 dependencies and twelve completed probe bundles
 PASS 103 V90-OWNER-BOUNDARY all 422 old rows and 28 live clauses are exact; marked Hodge and native reader classes supply no selected target, amplitude, physical promotion or new gate
+PASS 104 V91-PRIOR-BYTES thirteen exact current inputs reconstruct public v90 before all 103 unchanged historical guards
+PASS 105 V91-EXACT-RESULTS new conditional theorems have exact scopes, immutable two-architecture probe bundles and declarations; adopted readings remain dictionaries
+PASS 106 V91-EARNED-CLOSURES the complete entropy class closes F; adopted Bell and TT contracts close D with explicit dictionary gates and preserved original decision clauses
+PASS 107 V91-PHYSICAL-BOUNDARY all previous history and decision clauses survive; three physical apparatus owners remain O, with only the apparatus scope acknowledging adopted choices
 
-RESULT 103/103 ALL PASS
+RESULT 107/107 ALL PASS

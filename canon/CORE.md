@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v90. Normative authority and activation
+**Release identity:** Public Canon v91. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v90 also declares a discrete architecture. It does not
+Public Canon v91 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -97,8 +97,9 @@ Galois-fiber code over sixteen original checkpoints whose free native
 pushforward preserves the complete QDD Gram at every step. Under
 U-GALOIS-FIBER-QDD-SPLIT [T], its coarse final coordinates match the
 algebraic LOW/HIGH pair in an explicit shifted source chart. Physical
-preparation/adoption of this correlated code and realization of the
-instrument remain under QDD-INSTRUMENT-APPARATUS [O].
+realization of this correlated code and a complete target-independent
+apparatus family remain under QDD-INSTRUMENT-APPARATUS [O]. Its source,
+coarse instrument and event law are now explicitly selected in ETH-QDD-1.
 
 Native point preparation through the unchanged apparatus-history port has
 an exact five-label information limit. A separate coherent Galois-code
@@ -130,6 +131,35 @@ factor through thirteen invariant classes; general readings on the reachable
 domain allow arbitrary amplitudes on 3125 retained labels. These classes
 select neither the target operator nor its amplitudes. All are L1 results;
 physical time, spatial dimension, apparatus and occurrence remain open.
+
+Public Canon v91 makes three exact dispositions. The complete measurable
+product-source Route A is empty, so ENTROPY-LAYER-BRIDGE closes at F with
+its separate obstruction theorem T. BELL-CAUSAL-ACCOUNTING closes at D
+on the complete adopted ETH-QDD-2 contract: five contexts exclude the
+entire setting-independent Bell-local class although every CHSH slice is
+nonviolating; complete local-record laws permit no controllable message.
+The pair source, records and occurrence measure have distinct D gates.
+
+On the stable native sheets z in {1,4}, U preserves an inserted signed
+port deviation for every finite wait without changing the free source
+trajectory. Entrance and archive interactions are additional resources.
+The exact affine/control, energy and ion-sideband results delimit and
+realize specified mathematical control models. ETH-QDD-1/2 adopt coherent
+preparation, controlled coarse instruments, one-outcome Born occurrence,
+ordered persistent records and explicit renewal resources. These choices
+complete an effective theory; independent physical realization, terminal
+justification and whole apparatus-class completeness remain open.
+
+TT-VECTOR-STATE-NORMALIZATION closes at D on ETH-TT-1/ETH-COS-1. A complete
+non-Gaussian outgoing vector state and a separately prepared dynamical
+curvature scalar share one scalar-clock background, Cauchy surface and
+coordinate/time/scale dictionary. At positive supported powers their
+exact geometric ratios are 60+24sqrt(5) and 60-24sqrt(5). Both powers
+vanish at transfer nodes and the ratio there is undefined. This selected
+decelerating planar finite-band model is not an isotropic primordial CMB
+spectrum, quantum vacuum or SI calibration. All additional model inputs
+are explicit; mathematical replay establishes their consequences, not
+experimental adequacy or derivation from J.
 
 ## Two field characterisations involving five
 

@@ -38,7 +38,7 @@ QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION	U-FINITE-HISTORY-CLOCK-PHASE	REQUIRES	nat
 QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	complete common-onset nonselection and conditional permutation counts neither exclude nor realize the complete physical apparatus class
 QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-COMMUTATOR-READOUT-EQUALITY-FORK	REQUIRES	the registered L4 moving support and exact compressed motor, without assuming its pure-class selection conclusion
 QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-INSTRUMENT-NONSELECTION	REQUIRES	the registered L4 effect/support setting and distinction between reduced post-state and complete apparatus selection
-QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	preservation of the three attenuation observables is neither physically derived nor adopted
+QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-TERMINAL-EVENT-SEMANTICS	BOUNDED_BY	preservation of the three attenuation observables is not physically derived by this theorem; ETH-QDD-1 separately adopts it as CH-ATTENUATION, without supplying the stronger target-independent terminal justification
 QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-INSTRUMENT-CLASS-COMPLETENESS	BOUNDED_BY	pointwise CP channel completeness is not completeness of physical memory families or their equality
 QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the mathematical reduced-channel selector supplies no physical effects or occurrence, preparation, persistence or reset law
 QDD-STABILIZER-UNCOMPUTE-POSTSTATES	QDD-J-AFFINE-APPARATUS-NONSELECTION	REQUIRES	the construction uses the registered L4 rational simplex and stabilizer support with the rank-one/rank-three split; its retained-path mixed instrument lies outside the earlier restricted pure affine class
@@ -142,7 +142,7 @@ QDD-INSTRUMENT-CLASS-COMPLETENESS	QDD-FINITE-MEMORY-O2B-BOUNDARY	REQUIRES	the ph
 QDD-INSTRUMENT-CLASS-COMPLETENESS	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	this is the O2b child of the unchanged parent obligation
 TT-VECTOR-MOMENT-UNDERDETERMINATION	TT-SQUARING-DECODER	BOUNDED_BY	the theorem evaluates the same formal square w=v^2 but does not inherit the lower-status physical decoder reading
 TT-VECTOR-MOMENT-UNDERDETERMINATION	POL-READ	BOUNDED_BY	the plus/cross convention bounds any interpretation of the complex square; no source, propagation, normalization or observable is imported
-TT-VECTOR-MOMENT-UNDERDETERMINATION	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the theorem constrains admissible state closures but supplies neither a normalization nor a numerical r_T(k)
+TT-VECTOR-MOMENT-UNDERDETERMINATION	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the theorem constrains admissible state closures but supplies neither a normalization nor a numerical r_T(k); the now-adopted complete normalization is a separate witness and does not follow from this earlier result alone
 QDD-U-INDUCED-CHANNEL	DEF-AUTONOMOUS-STATE	REQUIRES	the formulas are statements about the registered Omega, selector, generators and autonomous update U
 QDD-U-INDUCED-CHANNEL	DEF-QDD-BALANCED-PISTON	REQUIRES	the piston/fiber split and the equality between sum pi mod 5 and the balanced-piston sum are frozen on the public QDD carrier
 QDD-U-INDUCED-CHANNEL	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact algebraic channel structure supplies no independent physical selector, realized event law or sampling map
@@ -221,7 +221,7 @@ DE-TRACE-DENSITY-UNDERDETERMINATION	FRW-CANONICAL-FORM	REQUIRES	the registered h
 DE-CONFORMAL-WEIGHT	DE-TRACE-DENSITY-UNDERDETERMINATION	BOUNDED_BY	FRW continuity alone has at least two exact density-character solutions, so the open dictionary is not derived from that relation
 TM-SYM2-MEASURE	GYRON-DENSITY	REQUIRES	registered measure residual uses rho = 1/6
 MASS-LADDER-FORMS	NEUTRON-DELTA-EM	BOUNDED_BY	neutron comparison remains open
-TT-QUADRATIC-INDUCED	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	normalization remains open
+TT-QUADRATIC-INDUCED	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the bilinear identity alone does not select a state normalization; the now-adopted complete normalization is a separate witness and does not follow from this earlier result alone
 COSMOLOGY-REGISTER	NS-TILT	BOUNDED_BY	tilt remains a live hypothesis
 CONFORMAL-PREFACTOR	METRO-EDGE-SCALE	BOUNDED_BY	SI clause remains open
 STRONG-SEED	ALPHA-S-RUNNING	BOUNDED_BY	running remains open
@@ -440,7 +440,7 @@ METAL-TRACE-CASCADE	J-UNIT	REQUIRES	the golden pure form uses the registered exa
 METAL-TRACE-CASCADE	J-MODULUS-CHORD	REQUIRES	the golden recurrence uses the registered exact phi arithmetic
 POL-READ	TT-SQUARING-DECODER	REQUIRES	the plus/cross components, conjugation parity, and doubled-angle covariance are exact polynomial consequences of the registered complex square; no independent propagation law is introduced
 POL-READ	TT-SOURCE	BOUNDED_BY	the component readout alone does not implement the selected isolated source-to-field dictionary or its source-work convention
-POL-READ	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the component readout does not select a state normalization or produce a numerical r_T(k)
+POL-READ	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the component readout does not select a state normalization or produce a numerical r_T(k); the now-adopted complete normalization is a separate witness and does not follow from this earlier result alone
 SQRT-PHI-DIGIT-LIFT	PENTIT-ROOT-FACTS	REQUIRES	the registered F_25 block J = 2, phi = 3, tau^3 = sqrt(phi), and tau of order eight supplies the inherited field input; root uniqueness, the restricted norm, and nonsplitting are proved by this claim
 SQRT-PHI-DIGIT-LIFT	QUBIT-FROM-F5	REQUIRES	the sign quotient supplies the final C4 to C2 projection
 SQRT-PHI-DIGIT-LIFT	RAMIFIED-TM-LIFT	REQUIRES	the binary digit recursion and chronological carry law are lifted through the two square-root branches without adding a physical reading
@@ -608,7 +608,7 @@ QDD-QCARRIER-DIAGONAL-BOUNDARY	DEF-QDD-TRANSPOSE	REQUIRES	the second slot
 QDD-INSTRUMENT-APPARATUS	DEF-QDD-PROJECTOR-LOW	REQUIRES	E_low is the first ordered algebraic projector target for a future separately typed physical effect and exact target-comparison relation; projector_id is not effect_id
 QDD-INSTRUMENT-APPARATUS	DEF-QDD-PROJECTOR-HIGH	REQUIRES	E_high is the second ordered algebraic projector target for a future separately typed physical effect and exact target-comparison relation; projector_id is not effect_id
 QDD-INSTRUMENT-APPARATUS	DEF-QDD-GRAM	REQUIRES	the frozen algebraic target comparison uses the Gram form; it does not resolve a physical effect, coupling, reduction, or realization certificate
-QDD-INSTRUMENT-APPARATUS	DEF-DECODER-COMPLETION-CONTRACT	REQUIRES	the transferred physical debt is recorded in the apparatus_manifest; all physical identifier slots remain UNRESOLVED and are not aliases of the algebraic projector targets
+QDD-INSTRUMENT-APPARATUS	DEF-DECODER-COMPLETION-CONTRACT	REQUIRES	the original target-independent complete-family apparatus_manifest retains unresolved physical identifiers distinct from algebraic targets; ETH-QDD-1/2 separately define their selected effective-model fields and do not close that stronger contract
 TM-SHEET-SYNCHRONIZING-GRAPH	KERNEL-Z6-SYNCHRONIZATION	BOUNDED_BY	the sheet pair and its table are re-derived from the same declared generators and selector; the moving-layer theorem is lineage and its exclusion of census meaning for the value pair is inherited unchanged
 TM-SHEET-SYNCHRONIZING-GRAPH	RAMIFIED-TM-LIFT	BOUNDED_BY	clause (viii) quotes the registered phase dictionary Theta_n^2 = (-1)^theta_n as a reading of the standalone congruence 4 + 2 theta = -(-1)^theta mod 5; nothing is inherited as a premise
 TM-SHEET-SYNCHRONIZING-GRAPH	FIELD-ZERO-NONZERO-MULTIPLICATIVE-CUT	BOUNDED_BY	clause (v) states a partition coincidence with the zero orientation of the cut classification; no derivation is claimed in either direction, per the owner ruling of 2026-08-18
@@ -625,22 +625,22 @@ PURE-QUBIT-RELATIONAL-AREA	QPAIR-SYM2-TENSOR-DEFECT	REQUIRES	the external pure-t
 PURE-QUBIT-LOCAL-RELATION-PYTHAGORAS	PURE-QUBIT-RELATIONAL-AREA	REQUIRES	the Pythagoras identity substitutes C^2=4||r||^2 from the pure-state determinant theorem
 PURE-QUBIT-RELATIONAL-CHSH	PURE-QUBIT-RELATIONAL-AREA	REQUIRES	the pure-state CHSH optimization is expressed through the registered norm and standard concurrence
 PURE-QUBIT-RELATIONAL-READING	PURE-QUBIT-RELATIONAL-AREA	REQUIRES	the dictionary reads only the proved pure-state determinant-line norm after the external structure is supplied
-BELL-MAGIC-BOUNDARY	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the finite cyclotomic CHSH functional supplies no source, settings, apparatus, events, probability kernel, premise test, no-signalling test, or causal account
-PURE-QUBIT-RELATIONAL-CHSH	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the optimized standard-QM pure-state value supplies no realized Bell experiment, sampling measure, or causal account
+BELL-MAGIC-BOUNDARY	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the finite cyclotomic CHSH functional supplies no source, settings, apparatus, events, probability kernel, premise test, no-signalling test, or causal account; the separately adopted ETH-QDD-2 contract does not promote this earlier formal result to a physical account
+PURE-QUBIT-RELATIONAL-CHSH	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the optimized standard-QM pure-state value supplies no realized Bell experiment, sampling measure, or causal account; the separately adopted ETH-QDD-2 contract does not promote this earlier formal result to a physical account
 DQRC-INTEGER-CENSUS-ARITHMETIC	DEF-DQRC-INTEGER-CENSUS	REQUIRES	the theorem proves the exact identities of the registered integral comparator census
 DQRC-INTEGER-CENSUS-ARITHMETIC	DEF-ACTION-LAYERS	REQUIRES	the result is confined to L1 exact arithmetic and formal combinatorics and creates no L4 apparatus, L5 event, L6 measure, or cross-layer lift
-DQRC-INTEGER-CENSUS-ARITHMETIC	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the balanced formal margins and inserted parity supply no source, realized settings or outcomes, Bell-premise test, no-signalling intervention test, or causal account
+DQRC-INTEGER-CENSUS-ARITHMETIC	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the balanced formal margins and inserted parity supply no source, realized settings or outcomes, Bell-premise test, no-signalling intervention test, or causal account; the separately adopted ETH-QDD-2 contract does not promote this earlier formal result to a physical account
 DQRC-HORODECKI-REENCODING	DQRC-INTEGER-CENSUS-ARITHMETIC	REQUIRES	the reencoding uses the proved DQRC asymptotic signed-count functional
 DQRC-HORODECKI-REENCODING	PURE-QUBIT-RELATIONAL-CHSH	REQUIRES	the equality target is the already registered externally supplied standard-QM pure-state optimum
-DQRC-HORODECKI-REENCODING	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the exact model-value identity supplies no TWIST-J source, apparatus, realized event stream, sampling law, locality premise, no-signalling test, or causal mechanism
+DQRC-HORODECKI-REENCODING	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the exact model-value identity supplies no TWIST-J source, apparatus, realized event stream, sampling law, locality premise, no-signalling test, or causal mechanism; the separately adopted ETH-QDD-2 contract does not promote this earlier formal result to a physical account
 DQRC-H-COEFFICIENT-NONSELECTION	DQRC-INTEGER-CENSUS-ARITHMETIC	REQUIRES	the nonselection theorem holds fixed the beta-independent integer census identities
 DQRC-H-COEFFICIENT-NONSELECTION	DQRC-HORODECKI-REENCODING	REQUIRES	the coefficient beta=4 is identified only by equality with the already known pure-state target
-DQRC-H-COEFFICIENT-NONSELECTION	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	nonselection of an invariant coefficient supplies neither a Bell model nor a physical mechanism
+DQRC-H-COEFFICIENT-NONSELECTION	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	nonselection of an invariant coefficient supplies neither a Bell model nor a physical mechanism; the separately adopted ETH-QDD-2 contract does not promote this earlier formal result to a physical account
 DQRC-ORIGIN-NONSELECTION	DQRC-INTEGER-CENSUS-ARITHMETIC	REQUIRES	the shifted-origin family preserves the registered exact census identities and asymptotic limit
-DQRC-ORIGIN-NONSELECTION	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the origin witness blocks a finite Bell-data prediction until an intrinsic time address, apparatus, realized-trial map, and sampling law are supplied
+DQRC-ORIGIN-NONSELECTION	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the origin witness blocks a finite Bell-data prediction until an intrinsic time address, apparatus, realized-trial map, and sampling law are supplied; the separately adopted ETH-QDD-2 contract does not promote this earlier formal result to a physical account
 DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY	DQRC-INTEGER-CENSUS-ARITHMETIC	REQUIRES	the maximal-locus slope and S_inf formulas are specializations of the exact DQRC arithmetic
 DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY	DEGREES-BY-PRIME	REQUIRES	the DQRC field application uses the registered separation of the zeta_5 and zeta_8 place fields
-DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the field boundary neither selects a physical place assignment nor supplies a Bell source, apparatus, event law, or causal account
+DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY	BELL-CAUSAL-ACCOUNTING	BOUNDED_BY	the field boundary neither selects a physical place assignment nor supplies a Bell source, apparatus, event law, or causal account; the separately adopted ETH-QDD-2 contract does not promote this earlier formal result to a physical account
 COSMOLOGY-REGISTER	DE-W-CONSTANT	BOUNDED_BY	the committed dark-energy form is additionally armed as a live empirical row
 DE-W-CONSTANT	DEF-ARCHITECTURE	REQUIRES	Canon definition boundary: every downstream statement is conditional on the declared architecture
 DE-CONFORMAL-WEIGHT	DE-W-CONSTANT	BOUNDED_BY	the armed reading supplies no source, no typed dictionary, and no selection premise, and the CIRCULAR clause rejects any closure that assumes w = -14/15
@@ -649,12 +649,12 @@ KERNEL-SUBSET-LANDSCAPE	KERNEL-CONNECT-ALL-K	REQUIRES	the subset-generic lemma c
 KERNEL-SUBSET-LANDSCAPE	KERNEL-WEDGE-AFFINITY	REQUIRES	the verbatim affine letter matrices and translations audited on all 15625 states are the registered kernel census data
 J-TORAL-ENTROPY	J-STEP	REQUIRES	the toral automorphism is induced by the public multiplication-by-J step matrix acting on R^4/Z^4
 J-MAHLER-MEASURE	J-STEP	REQUIRES	the Mahler measure is computed from the public multiplication-by-J step matrix and its characteristic polynomial
-J-MAHLER-MEASURE	ENTROPY-LAYER-BRIDGE	BOUNDED_BY	the arithmetic invariant and the toral entropy carry the same constant; that is a fact about the number phi and not a bridge between layers, and the open obligation governs any dynamical reading
+J-MAHLER-MEASURE	ENTROPY-LAYER-BRIDGE	BOUNDED_BY	the arithmetic invariant and the toral entropy carry the same constant; that is a fact about the number phi and not a bridge between layers, and the whole-class negative disposition now excludes only the registered Route A reading
 REGULATOR-TWO-LOG-PHI	J-PROJECTIONS	REQUIRES	phi is the modulus projection of J registered there; the regulator statement is about the unit lattice of the field that projection lives in
-REGULATOR-TWO-LOG-PHI	ENTROPY-LAYER-BRIDGE	BOUNDED_BY	the field invariant and the toral entropy carry the same constant; no rate of the decoder or of the plenum is asserted and the open obligation governs any such reading
+REGULATOR-TWO-LOG-PHI	ENTROPY-LAYER-BRIDGE	BOUNDED_BY	the field invariant and the toral entropy carry the same constant; no rate of the decoder or of the plenum is asserted and the whole-class negative disposition now excludes only the registered Route A reading
 CYCLOTOMIC-CLASS-NUMBER-ONE	QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	REQUIRES	the discriminant disc(K_5) = 5^3 that the Minkowski bound consumes is the registered census value, recomputed here as the trace-form determinant
 J-TORAL-PERIODIC-POINTS	J-TORAL-ENTROPY	REQUIRES	the fixed-point identity and its witness are registered there; this row adds only the closed forms, the census and the bracket and restates neither
-J-TORAL-PERIODIC-POINTS	ENTROPY-LAYER-BRIDGE	BOUNDED_BY	counting periodic points is not a rate statement; no entropy or measure claim is created and the open obligation keeps its exact scope
+J-TORAL-PERIODIC-POINTS	ENTROPY-LAYER-BRIDGE	BOUNDED_BY	counting periodic points is not a rate statement; no entropy or measure claim is created and the whole-class negative disposition retains the exact registered Route A scope
 METRO-FORBIDDEN-WITNESSES	METRO-REDUCTION-ARROWS	REQUIRES	the four admitted arrows and their exact preconditions are registered there and are used only as the control that exhibits zero obstructions
 METRO-FORBIDDEN-WITNESSES	METRO-REDUCTION-CALCULUS	BOUNDED_BY	the row serves obligation B only, for the five entries section 15 names; obligations D and E are untouched and the parent stays open and STOP
 TRACEKERNEL-RESIDUAL-FORM	DEF-ACTION-LAYERS	REQUIRES	the theorem is confined to exact L1 algebra and creates no lift to the manifold, boundary, support, stream or measure layers
@@ -776,7 +776,7 @@ K1-LINEAR-METRIC-COMPLETION	DEF-K1-LINEAR-METRIC	REQUIRES	the theorem is conditi
 K1-LINEAR-METRIC-COMPLETION	TT-SQUARING-DECODER	BOUNDED_BY	the local algebraic square is fixed in the definition; its use does not inherit or promote the physical tensor dictionary
 K1-LINEAR-METRIC-COMPLETION	PHOTON-SPATIAL-TEMPORAL-TRANSFER	BOUNDED_BY	the planar L and recurrence are explicit mathematical choices; no physical photon interpretation or additional lift is imported
 K1-LINEAR-METRIC-COMPLETION	TT-SOURCE	BOUNDED_BY	the initial-value theorem does not construct the separate isolated emission reading or a physical source realization
-K1-LINEAR-METRIC-COMPLETION	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	fixed a=1 and a complete finite input law supply no physical scalar comparison, action-unit identification or numerical r_T
+K1-LINEAR-METRIC-COMPLETION	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	fixed a=1 and a complete finite input law supply no physical scalar comparison, action-unit identification or numerical r_T; the now-adopted complete normalization is a separate witness and does not follow from this earlier result alone
 DEF-K1-HYBRID-FRW-CELL-METRIC	DEF-ARCHITECTURE	REQUIRES	the graph, action, cell-clock bridge and mathematical output are explicit choices within the declared architecture, not consequences of J
 DEF-K1-HYBRID-FRW-CELL-METRIC	DEF-K1-LINEAR-METRIC	REQUIRES	retain the exact ten-word source packet, unit-amplitude local initial squares and rational propagator
 FRW-INHOM	DEF-K1-HYBRID-FRW-CELL-METRIC	REQUIRES	the named L1-to-L2 gate adopts precisely the displayed joint functional, complete first-variation proof and marked metric reading
@@ -785,7 +785,7 @@ DEF-K1-ISOLATED-TT-EMISSION	DEF-K1-LINEAR-METRIC	REQUIRES	retain the native ten-
 DEF-K1-ISOLATED-TT-EMISSION	DEF-K1-HYBRID-FRW-CELL-METRIC	REQUIRES	use only the L1 weighted incidence, local work and auxiliary recipe; no L2 FRW output or dictionary is imported
 TT-SOURCE	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	adopt exactly the selected L1 descriptor-to-field reading, complete-transfer and sign conventions, isolated onset and literal equality
 TT-SOURCE	TT-SQUARING-DECODER	REQUIRES	the adopted source square uses the existing spin-one to spin-two interpretation without importing outgoing-vector dynamics or a curved source law
-TT-SOURCE	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the isolated source transfer does not choose an outgoing vector state, fourth moments, action normalization, scalar comparison or numerical r_T
+TT-SOURCE	TT-VECTOR-STATE-NORMALIZATION	BOUNDED_BY	the isolated source transfer does not choose an outgoing vector state, fourth moments, action normalization, scalar comparison or numerical r_T; the now-adopted complete normalization is a separate witness and does not follow from this earlier result alone
 TT-NATIVE-FOUR-WORD-LAW	DEF-ARCHITECTURE	REQUIRES	the native driver theta_n=s_2(n) mod 2 is the declared L1 bit sequence
 TT-NATIVE-FOUR-WORD-LAW	DEF-K1-LINEAR-METRIC	REQUIRES	the comparison alphabet W, optional K1 word law and two source coordinates are the displayed mathematical input definitions
 TT-QUADRATIC-SOURCE-CLASSIFICATION	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	the local degree-two representation class, zero outgoing initial data, K1 radiative channel, complete-transfer condition and separate sign choice are explicit mathematical premises
@@ -887,3 +887,70 @@ U-SELECTOR-AMPLITUDE-COMMON-FACTOR	U-COUNTER-REACHABLE-AMPLITUDE-CLASS	REQUIRES	
 U-SELECTOR-AMPLITUDE-COMMON-FACTOR	KERNEL-Z6-SYNCHRONIZATION	REQUIRES	The exact phase synchronization fixes the shared tick-three phase and phase-sheet description.
 U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION	DEF-ARCHITECTURE	REQUIRES	The finite native source remains unchanged.
 U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION	U-COUNTER-REACHABLE-AMPLITUDE-CLASS	REQUIRES	The additional additive premise applies to this declared chart-group amplitude assignment.
+ENTROPY-MEASURABLE-OBSTRUCTION	DEF-ARCHITECTURE	REQUIRES	The exact native generators and selector define F_0,F_1 and their r-coordinate maps.
+ENTROPY-MEASURABLE-OBSTRUCTION	TM-SHEET-SYNCHRONIZING-GRAPH	REQUIRES	Nine-letter constancy forces z=4+2 kappa_-1 for every measurable equivariant reader on an invariant conull set.
+U-STABLE-PAIRED-PORT-TRANSPORT	DEF-ARCHITECTURE	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+U-STABLE-PAIRED-PORT-TRANSPORT	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-UNINTERRUPTED-COARSE-RECORD	U-STABLE-PAIRED-PORT-TRANSPORT	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-UNINTERRUPTED-COARSE-RECORD	U-GALOIS-FIBER-CODE	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-UNINTERRUPTED-COARSE-RECORD	U-GALOIS-FIBER-QDD-SPLIT	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-UNINTERRUPTED-COARSE-RECORD	DEF-QDD-GRAM	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-PORT-QUOTIENT-ORIGIN-BOUNDARY	DEF-ARCHITECTURE	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-PORT-QUOTIENT-ORIGIN-BOUNDARY	U-STABLE-PAIRED-PORT-TRANSPORT	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-PORT-QUOTIENT-ORIGIN-BOUNDARY	QDD-UNINTERRUPTED-COARSE-RECORD	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-PORT-QUOTIENT-ORIGIN-BOUNDARY	QDD-NATIVE-POINT-PORT-CAPACITY	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-ENTRANCE-DEGREE-BOUNDARY	U-STABLE-PAIRED-PORT-TRANSPORT	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-ENTRANCE-DEGREE-BOUNDARY	QDD-UNINTERRUPTED-COARSE-RECORD	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-NATIVE-AFFINE-ENTRANCE-MINIMUM	DEF-ARCHITECTURE	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-NATIVE-AFFINE-ENTRANCE-MINIMUM	QDD-UNINTERRUPTED-COARSE-RECORD	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-NATIVE-AFFINE-ENTRANCE-MINIMUM	QDD-ENTRANCE-DEGREE-BOUNDARY	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-AFFINE-CONTROL-REALIZATION	QDD-NATIVE-AFFINE-ENTRANCE-MINIMUM	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-CLEAN-ENERGY-OBSTRUCTION	QDD-NATIVE-AFFINE-ENTRANCE-MINIMUM	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-CLEAN-ENERGY-OBSTRUCTION	QDD-AFFINE-CONTROL-REALIZATION	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-ION-SIDEBAND-WRITER	U-STABLE-PAIRED-PORT-TRANSPORT	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-ION-SIDEBAND-WRITER	QDD-UNINTERRUPTED-COARSE-RECORD	REQUIRES	The explicit formal definitions and exact earlier identity are used by the self-contained conditional proof; no physical adoption is inferred.
+QDD-SELECTED-INSTRUMENT-LAW	U-GALOIS-FIBER-CODE	REQUIRES	the exact positive source Gram and restricted moving-code preparation/transfer used in the source comparison; the CP attenuation selection is reproved explicitly here
+QDD-SELECTED-INSTRUMENT-LAW	U-GALOIS-FIBER-QDD-SPLIT	REQUIRES	the distinguished LOW/HIGH code split is compared to the marked context-zero projectors; other contexts are explicitly controlled maps
+QDD-SELECTED-ORDERED-HISTORY	QDD-SELECTED-INSTRUMENT-LAW	REQUIRES	the exact reduced sharp coarse instruments and blank-record dilation used at every history node
+QDD-SELECTED-ORDERED-HISTORY	U-GALOIS-FIBER-CODE	REQUIRES	native free waits act as identity on logical source coordinates under the exact moving-code intertwining
+QDD-SELECTED-BIPARTITE-LAW	QDD-SELECTED-INSTRUMENT-LAW	REQUIRES	the local sharp coarse branch maps used in the displayed tensor source and writers
+QDD-SELECTED-BIPARTITE-LAW	QDD-SELECTED-ORDERED-HISTORY	REQUIRES	finite causal CP tree, explicit memory, complete records and full renewal constructions extended to two local factors
+QDD-SELECTED-BIPARTITE-LAW	U-GALOIS-FIBER-CODE	REQUIRES	each factor of the restricted native tensor-code comparison is the existing exact code isometry
+QDD-FIVE-CONTEXT-BELL-SEPARATION	QDD-SELECTED-BIPARTITE-LAW	REQUIRES	the complete marked-pair table and exact fixed local effects whose Bell and CHSH behavior is classified
+QDD-SELECTED-SOURCE	QDD-SELECTED-INSTRUMENT-LAW	REQUIRES	adopt the formal positive source, marked contexts and conditional instrument selection as the selected L4 source/control dictionary
+QDD-SELECTED-SOURCE	QDD-SELECTED-ORDERED-HISTORY	REQUIRES	the specified preparation and control domain supports the exact complete finite-protocol source comparison adopted here
+QDD-SELECTED-SOURCE	U-GALOIS-FIBER-CODE	REQUIRES	the selected physical source has the exact inherited four-column Gram and native free-transfer comparison
+QDD-SELECTED-SOURCE	QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY	REQUIRES	the L4 attenuation test family is adopted on the selected HIGH support by the explicit isometric metric identification; its preservation is a named physical choice
+QDD-SELECTED-RECORD	QDD-SELECTED-SOURCE	REQUIRES	the selected source, context and CP assumptions are read as the complete controlled event/record domain at L5
+QDD-SELECTED-BORN	QDD-SELECTED-RECORD	REQUIRES	the complete specified L5 ordered record domain receives the declared single-event Born and branch-conditioning law
+QDD-SELECTED-PAIR-SOURCE	QDD-SELECTED-SOURCE	REQUIRES	the two-wing carrier retains the chosen one-system source, context and intervention assumptions
+QDD-SELECTED-PAIR-SOURCE	QDD-SELECTED-BIPARTITE-LAW	REQUIRES	the exact marked tensor preparation and local-operation comparison become the selected L4 two-wing physical source domain
+QDD-SELECTED-PAIR-SOURCE	QDD-FIVE-CONTEXT-BELL-SEPARATION	REQUIRES	the selected fixed source and effect family has the proved complete Bell-premise behavior and independent-setting boundary
+QDD-SELECTED-PAIR-RECORD	QDD-SELECTED-PAIR-SOURCE	REQUIRES	the selected L4 pair preparation and local controls are read as completed local coarse events and complete pair records
+QDD-SELECTED-PAIR-RECORD	QDD-SELECTED-RECORD	REQUIRES	each wing retains the already adopted local record, resource, renewal and passive archive semantics
+QDD-SELECTED-PAIR-LAW	QDD-SELECTED-PAIR-RECORD	REQUIRES	the complete L5 pair records, identifier-based pairing and full renewal receive the exact selected normalized occurrence law
+QDD-SELECTED-PAIR-LAW	QDD-SELECTED-BORN	REQUIRES	the one-system Born and positive-weight conditioning dictionary is retained under the explicit tensor composition and selected control law
+DEF-SELECTED-QDD-MEASUREMENT-MODEL	U-GALOIS-FIBER-CODE	REQUIRES	the inherited four-column Gram and moving native code used by the formal selected model
+DEF-SELECTED-QDD-MEASUREMENT-MODEL	U-GALOIS-FIBER-QDD-SPLIT	REQUIRES	the existing exact context-zero algebraic LOW/HIGH split compared to the formal selected projectors
+DEF-SELECTED-QDD-BIPARTITE-MODEL	DEF-SELECTED-QDD-MEASUREMENT-MODEL	REQUIRES	the two formal source factors, metrics, marked contexts and complete local domains
+DEF-SELECTED-QDD-BIPARTITE-MODEL	QDD-SELECTED-INSTRUMENT-LAW	REQUIRES	the fixed local CP branches and blank-pointer maps tensorized in the formal pair contract
+QDD-SELECTED-INSTRUMENT-LAW	DEF-SELECTED-QDD-MEASUREMENT-MODEL	REQUIRES	the complete formal source, metric, marked contexts and conditional CP attenuation class, prior to physical adoption
+QDD-SELECTED-ORDERED-HISTORY	DEF-SELECTED-QDD-MEASUREMENT-MODEL	REQUIRES	the formal finite source/memory/protocol and exact equality domain, prior to physical occurrence adoption
+QDD-SELECTED-BIPARTITE-LAW	DEF-SELECTED-QDD-BIPARTITE-MODEL	REQUIRES	the exact formal tensor source, marked pair, local control and complete record domains
+QDD-FIVE-CONTEXT-BELL-SEPARATION	DEF-SELECTED-QDD-BIPARTITE-MODEL	REQUIRES	the frozen formal setting/outcome domains, pair preparation and Bell-local comparison class
+TT-SELECTED-OUTGOING-STATE	DEF-SELECTED-TT-OUTGOING-STATE	REQUIRES	The complete finite law, persistent signs and literal tensor recurrence are formal premises, without relying on adoption of a physical state dictionary.
+TT-SELECTED-COMPOSITE-POWER	TT-SELECTED-OUTGOING-STATE	REQUIRES	The complete source and sign law fixes every intensity and tensor moment.
+TT-SELECTED-COMPOSITE-POWER	DEF-SELECTED-TT-OUTGOING-STATE	REQUIRES	The finite intensity readout and common action/Fourier convention are explicit conditional inputs.
+SELECTED-COSMO-SCALAR-TENSOR-TRANSFER	DEF-SELECTED-COSMOLOGICAL-COMPARISON	REQUIRES	All scalar action, initial-data, translation, continuum interface, coordinate, clock and scale conventions are explicit mathematical premises.
+SELECTED-COSMO-SCALAR-TENSOR-TRANSFER	TT-SELECTED-OUTGOING-STATE	REQUIRES	The source law and persistent root-sign construction supply the common initial packet and continued moment convention.
+SELECTED-COSMO-SCALAR-TENSOR-TRANSFER	TT-SELECTED-COMPOSITE-POWER	REQUIRES	The older fixed-origin connected onset intensity I is used only in the exact relation J=I+1/80; its finite ratio is not renamed cosmological r_T.
+SELECTED-COSMO-SCALAR-CLOCK	SELECTED-COSMO-SCALAR-TENSOR-TRANSFER	REQUIRES	The conditional L1 theorem supplies the exact action/background/constraint and clock identities consumed by this explicitly selected L2 reading.
+SELECTED-COSMO-PREPARATION	SELECTED-COSMO-SCALAR-CLOCK	REQUIRES	The selected L2 clock, action and continuum Cauchy surface are the input geometry for the separately chosen L4 joint preparation; the associated formal identities are inherited through that gate, not asserted as a new measured lift.
+SELECTED-COSMOLOGICAL-COMPARISON	SELECTED-COSMO-PREPARATION	REQUIRES	The full joint prepared field/momentum law at the selected geometry is mapped to its common-context theoretical geometric powers; this L4-to-L6 reading does not assert an L5 event or sampled data stream.
+DEF-SELECTED-TT-OUTGOING-STATE	DEF-K1-ISOLATED-TT-EMISSION	REQUIRES	The formal unchanged K1 source and primary recurrence are the input to the explicitly selected root law; no TT-SOURCE dictionary adoption is required by the theorem.
+DEF-SELECTED-COSMOLOGICAL-COMPARISON	DEF-SELECTED-TT-OUTGOING-STATE	REQUIRES	The initial finite source and persistent sign inputs are formally retained, while the continuum scalar/action/interface/translation choices are newly declared.
+ENTROPY-LAYER-BRIDGE	ENTROPY-MEASURABLE-OBSTRUCTION	REQUIRES	The complete all-measurable obstruction satisfies the original negative decision clause before Law_W.
+TT-VECTOR-STATE-NORMALIZATION	SELECTED-COSMOLOGICAL-COMPARISON	REQUIRES	One complete public typed dictionary witness supplies the original existential positive decision; geometry and preparation gates are inherited through its explicit chain.
+BELL-CAUSAL-ACCOUNTING	QDD-SELECTED-PAIR-SOURCE	REQUIRES	The complete selected Bell contract consumes this separately adopted pair dictionary and its explicitly owned layer crossing.
+BELL-CAUSAL-ACCOUNTING	QDD-SELECTED-PAIR-RECORD	REQUIRES	The complete selected Bell contract consumes this separately adopted pair dictionary and its explicitly owned layer crossing.
+BELL-CAUSAL-ACCOUNTING	QDD-SELECTED-PAIR-LAW	REQUIRES	The complete selected Bell contract consumes this separately adopted pair dictionary and its explicitly owned layer crossing.
