@@ -1,0 +1,9 @@
+G1 PASS: fixed 28-pulse TSV, exact phases and explicit doublet domains
+G2 PASS: signed local exchanges, X^2 and eight-carrier phase-correct NEG
+G3 PASS: five controlled X^-1 blocks, inverses and all pair matrix units
+G4 PASS: writer on 125 triples and 10000 code matrix units; phases +1
+G5 PASS: 6200 moving-chart cases; n=3..12 and all bit words length<=4
+G6 PASS: SUM +/-1 and SWAP; helper levels and shared mode restored
+G7 PASS: 500 cycles and 40000 code matrix units; 266 blue + (58+8k+16[k odd]) carrier
+G8 PASS: uncompute, parity, pulse-sign, coherence and hot-bus controls
+VERDICT: IDEAL-ION-WRITER; conditional pulse theorem, no device measurement
