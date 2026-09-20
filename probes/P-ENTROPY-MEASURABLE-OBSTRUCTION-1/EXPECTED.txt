@@ -1,0 +1,12 @@
+P-ENTROPY-MEASURABLE-OBSTRUCTION-1
+PASS A01 integer J unit; mod-five orders 20 and 10 for J and J^2
+PASS A02 15625 native states; involutions, traces and stable r law
+PASS A03 24 complete TM length-nine factors; synchronization and alignment
+PASS A04 20 induced two-step r/q cases
+PASS A05 sigma^5 primitive; parity, symmetries and six return-word levels
+PASS A06 20 complete adjacent pairs and exact beta difference law
+PASS A07 65536 digit/increment cases; coprime returns 3 and 349525
+PASS A08 100 CRT cocycle transitions
+PASS A09 three perturbed premises rejected
+PASS finite-premise audit: 9/9
+SCOPE full measurable obstruction: PROOF.md, not finite enumeration
