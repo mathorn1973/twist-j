@@ -1,5 +1,37 @@
 # Canon changelog (public series)
 
+## Public Canon v91
+
+Fold ten accepted public pull requests into sixteen conditional theorem
+rows and nine explicit physical dictionaries. The results cover the full
+measurable entropy obstruction; stable uninterrupted native record transport;
+entrance, control, energy and ion-sideband bounds/constructions; selected
+one-system and two-wing complete measurement laws; the complete outgoing
+TT state; and the common scalar/tensor cosmological transfer.
+
+Three original decisions close: ENTROPY-LAYER-BRIDGE changes O to F by
+whole-class emptiness before Law_W; BELL-CAUSAL-ACCOUNTING changes O to D
+on the adopted complete ETH-QDD-2 contract; TT-VECTOR-STATE-NORMALIZATION
+changes O to D on the adopted ETH-TT-1/ETH-COS-1 normalization witness.
+Their identifiers, original clauses and histories remain. Nine separately
+owned dictionary gates distinguish physical choices from mathematical
+proof. Live H/O decreases from 28 to 25, with no new empirical H claim.
+
+The physical apparatus owner retains O and its complete original decision
+clause; its wording now distinguishes defined selected-model fields from
+unresolved target-independent realization, terminal justification and full
+physical-family classification. Old TT and toral-count pointers receive
+only the necessary editorial scope updates. The cosmology reproduction README explains the original historical normalization
+pointer; its verifier, stdout and two-architecture RUNS remain byte-identical;
+all four current consumers receive explicit evidence history. Every frozen probe
+and its scientific thresholds remain byte-identical.
+
+The effective dictionaries explicitly adopt state, preparation, control,
+one-outcome Born law, records, renewal and cosmological context. No claim
+of native derivation, experimental confirmation, quantum vacuum, isotropic
+primordial spectrum or SI calibration is created. The release audit
+reconstructs exact v90 inputs before running every historical guard.
+
 ## Public Canon v90
 
 Add fifteen exact L1 theorems from twelve completed public probes: marked
@@ -131,7 +163,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 437 claims; 0 T-LOCK, 304 T, 48 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
+Registry snapshot: 462 claims; 0 T-LOCK, 320 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 
