@@ -12,7 +12,7 @@ written review and static syntax inspection were performed.
 ```text
 pin_commit: 6257dfaae9132ef2a2a49ec06300775287d595db
 verifier_sha256: 8cc1b45f70c71037cdade0046e4ae3d485cd5053293cf907ef14a66d66ff2002
-command: python probes/P-TT-SELECTED-OUTGOING-STATE-1/verify.py
+command: python3 probes/P-TT-SELECTED-OUTGOING-STATE-1/verify.py
 platform: Ubuntu 24.04.3 LTS
 architecture: x86_64
 python: 3.12.14
@@ -32,6 +32,20 @@ Environment: `LC_ALL=C`, `LANG=C`, `TZ=UTC`,
 `PYTHONHASHSEED=0`, `PYTHONDONTWRITEBYTECODE=1`.
 Exact stdout is committed unchanged as EXPECTED.txt. All ten gates passed;
 no earlier scientific attempt failed or required a new pin.
+
+### Neutral command-field correction
+
+The first public result head `9a818bca959f7330c70c78249edcbfb98b576c05`
+recorded `python` in the command field. Public run
+[35535183741](https://github.com/mathorn1973/twist-j/actions/runs/35535183741)
+stopped on both architectures before scientific replay because
+`check_verifier.py` requires the literal spelling `python3`. This field
+now uses that required spelling. The first local invocation used
+`sys.executable`; `python`, `python3` and that executable were checked to
+resolve to the same Python 3.12.14 interpreter. No scientific rerun is
+represented as the first run, and none of its recorded bytes or hashes
+changes. The failed public metadata check remains visible in history.
+No frozen file, expected output or scientific threshold was modified.
 
 ## Frozen input custody
 
@@ -54,4 +68,3 @@ This record describes one local architecture. Subsequent public x86_64 and
 aarch64 replay and public acceptance belong to ACCEPTANCE.md and the linked
 pull-request record. Canon v90 and the full registered physical normalization
 owner remain unchanged.
-

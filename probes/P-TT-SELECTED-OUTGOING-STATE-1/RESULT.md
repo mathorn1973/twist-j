@@ -12,6 +12,14 @@ Any later ACCEPTANCE.md must bind the actual immutable public run and check
 records. Final-head and merged-main checks belong to the public pull request;
 they are not anticipated here.
 
+The first public CI attempt, run 35535183741 on result head
+`9a818bca959f7330c70c78249edcbfb98b576c05`, stopped before scientific
+execution on the required literal command field (`python3` versus the
+recorded `python`). RUN.md records the neutral correction and interpreter
+identity check. This was a record-format failure, not a scientific
+counterexample or an abandoned pin. All six frozen files and EXPECTED.txt
+remain unchanged; subsequent acceptance requires fresh public checks.
+
 ## 1. Frozen execution and evidence
 
 | Item | Recorded value |
