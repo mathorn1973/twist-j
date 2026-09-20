@@ -34,6 +34,1656 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+
+
+# Exact v91 input contract and reversible public v90 reconstruction.
+V91_PRIOR_COMMIT = '4a77351eb8a8dad74cefa83f7a5f5f65e7e4ff13'
+V91_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'da052f298ee8f0d0734f61e317da0c822bfa540b53dba2f2153e5d13905070be',
+                  'current_bytes': 456822,
+                  'prior_sha256': '8b240611af17acc3fd05c29a4b7dac93d1f8394b657d95dbafe21a701aed9fed',
+                  'prior_bytes': 429443,
+                  'restore': ((176,
+                               177,
+                               'TT-QUADRATIC-INDUCED\tD\tthe bilinear TT decoder permits induced '
+                               'tensor power at quadratic field order: for the traceless symmetric '
+                               'doublet det(I + H) - 1 = -|h|^2 exactly with no linear term; a '
+                               'numerical r_T(k) stays on the frontier '
+                               '(TT-VECTOR-STATE-NORMALIZATION)\t13. Gravity and cosmology\t'
+                               'reproduce/cosmology-register\t\n'),
+                              (229,
+                               230,
+                               'TT-VECTOR-STATE-NORMALIZATION\tO\tthe vector doublet state, its '
+                               'two point and pseudo covariance spectra, the action normalization, '
+                               'the scalar comparison; the only gate yielding a numerical r_T(k); '
+                               'TT-VECTOR-MOMENT-UNDERDETERMINATION proves that mean, covariance, '
+                               'pseudo-covariance and every polynomial functional through degree '
+                               'three leave the squared-readout spectrum free across a full Z/5 '
+                               'family fixed by the diagonal four-fold action, and that '
+                               'deterministic pointwise modulus forbids Gaussian or Wick closure; '
+                               'an admissible normalization must therefore freeze fourth-moment '
+                               'data, the complete state or an explicit non-Gaussian closure rule; '
+                               'the theorem supplies neither that choice nor a numerical r_T(k)\t'
+                               '18. The frontier\tinline\tcloses positively by a public '
+                               'vector-doublet normalization yielding a numerical r_T(k); closes '
+                               'negatively if every admissible normalization violates the '
+                               'registered TT identities or requires an extra free dimensionless '
+                               'input\n'),
+                              (268,
+                               269,
+                               'ENTROPY-LAYER-BRIDGE\tO\tthe set A_A of mu-almost-everywhere '
+                               'classes of measurable total maps P_5: K_TM x O_(K,lambda) -> '
+                               'F_5^6, where mu is the product of the unique Thue-Morse '
+                               'substitution probability and normalized additive Haar probability, '
+                               'satisfying exact equivariance and the exact pushforward Law_W on '
+                               'W=[512,2048); equal cardinalities do not construct an element of '
+                               'A_A\t3. The kernel and the census\tprobes/P-ENTROPY-BRIDGE-1\t'
+                               'closes positively exactly when A_A is proved nonempty by one '
+                               'exhibited exact map; closes negatively only by a complete theorem '
+                               'A_A=empty; failure of one proposed map is STOP; an exact '
+                               'finite-cylindrical exhibition for any registered (L,c) with 4 <= L '
+                               '<= 32 at any finite lambda-depth would refute '
+                               'ENTROPY-CYLINDER-NOGO-CURSOR rather than close this row; inside '
+                               'the older ENTROPY-CYLINDER-CUT scope it would also require '
+                               'correction of that F row\n'),
+                              (346,
+                               347,
+                               'QDD-INSTRUMENT-APPARATUS\tO\tthe sole owner of the physical debt '
+                               'split from QUADRATIC-DECODER-DATA, transferred but not satisfied: '
+                               'the resolved projector_target_ids '
+                               '(DEF-QDD-PROJECTOR-LOW,DEF-QDD-PROJECTOR-HIGH) are algebraic '
+                               'targets and are not aliases for physical effects, while '
+                               'effect_ids, instrument_ids, apparatus_carrier_id, ready_state_id, '
+                               'physical_context_key_id, selected_ready_phase_id, coupling_id, '
+                               'pointer_id, reduction_id, target comparison relation and domain, '
+                               'complete apparatus-family class and equality, phase equality, '
+                               'target-independence and class-completeness certificates, '
+                               'realization certificates, realized outcomes and event semantics, '
+                               'occurrence law, post-state instruments, persistence/update/reset '
+                               'law, ZERO_SUPPORT semantics and L1-to-L5 gate all remain '
+                               'UNRESOLVED, with any L6 measure requiring a separate gate; O2 is '
+                               'the compatible conjunction of QDD-TERMINAL-EVENT-SEMANTICS and '
+                               'QDD-INSTRUMENT-CLASS-COMPLETENESS, and O1 remains the typed '
+                               'realized-event and sampling obligation; existing '
+                               'target-independent rational J-simplex, pure-record, COMM-SAT, '
+                               'finite-memory and 22-context carry-bank results delimit frozen '
+                               'mathematical classes but adopt no physical effect, instrument, '
+                               'carrier, complete family, ready phase, context key, event '
+                               'semantics, occurrence law, sampling, randomness or independence; '
+                               'the algebraic ALGEBRAIC-DMATTER binding and '
+                               'QDD-ALGEBRAIC-FACTORIZATION do not close or partially satisfy this '
+                               'row, PHYSICAL-DMATTER remains unadopted, not falsified and not '
+                               'shown complete, and SAMPLING NOT PROVIDED rather than impossible; '
+                               'U-GALOIS-FIBER-CODE supplies a specified four-dimensional coherent '
+                               'code preserved by actual native free pushforward and '
+                               'U-GALOIS-FIBER-QDD-SPLIT supplies its exact algebraic LOW/HIGH '
+                               'output comparison, with post-state identity conditional on ideal '
+                               'coarse read, while physical preparation/adoption of that '
+                               'correlated code and the realized coarse event remain unresolved; '
+                               'U-POINT-SOURCE-SHARP-READOUT-NOGO excludes only the five-point '
+                               'free encoding with deterministic native evolution and classical '
+                               'endpoint reading, not the complete physical apparatus class\t2. '
+                               'Time, space, and the decoder\tinline\tSTOP until one '
+                               'target-independent complete physical apparatus contract resolves '
+                               'every apparatus-manifest field, O1 supplies a total typed '
+                               'realized-event transducer on supported preparations with physical '
+                               'context key, selected ready phase, persistence/update/reset '
+                               'semantics, ZERO_SUPPORT handling, exact ordered occurrence law and '
+                               'a passed L1-to-L5 gate, and both O2 children close at compatible '
+                               'scope and equality; algebraic projectors, branch weights, '
+                               'factorization, conditional selectors, carry-bank existence and '
+                               'pointwise finite-memory completeness do not discharge the physical '
+                               'identifiers; closes positively only when the same selected '
+                               'complete family realizes the physical effects and occurrence law '
+                               'exactly; closes negatively only for a frozen complete admissible '
+                               'physical class proved empty or unable to realize the required '
+                               'effects or event law; failure to provide sampling remains STOP, '
+                               'not a sampling-impossibility theorem, and an L6 probability claim '
+                               'requires a separate gate\n'),
+                              (356,
+                               357,
+                               'BELL-CAUSAL-ACCOUNTING\tO\tbefore any TWIST-J physical Bell, '
+                               'locality, nonlocality, no-signalling, communication, or causal '
+                               'claim, one named preregistered typed attack must supply: a source '
+                               'state or variable lambda and normalized distribution; setting '
+                               'spaces X,Y, a setting-selection mechanism and realized x,y; '
+                               'outcome spaces A,B, an apparatus or instrument map and realized '
+                               'a,b; a normalized kernel P(a,b|x,y,lambda) and induced P(a,b|x,y); '
+                               'exact correlation and CHSH conventions; the Bell-local '
+                               'factorization test P(a,b|x,y,lambda)=P(a|x,lambda)P(b|y,lambda); '
+                               'measurement independence P(lambda|x,y)=P(lambda) or one frozen '
+                               'replacement with operational consequences; both no-signalling '
+                               'marginal equalities and a separate '
+                               'controllable-superluminal-signalling test; separately gated '
+                               'L1-to-L4, L4-to-L5, and L5-to-L6 bridges; and a complete '
+                               'dimensional audit with no unnamed dimensionless selector or '
+                               'probability input; any CHSH excess must identify exactly which '
+                               'Bell premise fails, and failure of factorization alone implies '
+                               'neither signalling nor a mechanism; BELL-MAGIC-BOUNDARY and '
+                               'PURE-QUBIT-RELATIONAL-CHSH do not supply this contract, existing '
+                               'QDD obligations remain separate, and no latent-variable, '
+                               'nonlocal-influence, superdeterminist, or retrocausal conclusion is '
+                               'selected in advance\t18. The frontier\tinline\tSTOP until every '
+                               'typed field, normalization, premise test, dimensional audit, and '
+                               'named L1-to-L4-to-L5-to-L6 bridge is present in one preregistered '
+                               'attack; closes positively only with the complete contract and '
+                               'exact premise decision, while a complete internally inconsistent '
+                               'contract or exact impossibility result for a frozen full '
+                               'admissible class may close negatively; partial accounts and failed '
+                               'individual candidates remain STOP and do not promote, close, or '
+                               'falsify the obligation; no controllable superluminal signalling '
+                               'may be inferred without its separate test\n'),
+                              (373,
+                               374,
+                               'J-TORAL-PERIODIC-POINTS\tC\tthe exact structure of the registered '
+                               'fixed-point count of T_J at finite range: for every n divisible by '
+                               '5, |N(J^n - 1)| = L_n^2 when n = 5 mod 10 and (L_n - 2)^2 when n = '
+                               '0 mod 10, since J^n = phi^-n is then totally real and the inner '
+                               'quadratic norm is L_n for odd n and 2 - L_n for even n; among the '
+                               '32 values with 5 not dividing n and 1 <= n <= 40 exactly one is a '
+                               'perfect square, namely n = 1 with value 1; and for every n >= 1 '
+                               'the two-sided bracket (phi^n - 1)^2 (1 - phi^-n)^2 <= |N(J^n - 1)| '
+                               '<= (phi^n + 1)^2 (1 + phi^-n)^2 holds by the triangle inequality '
+                               'on the two conjugate pairs; verified by three independent exact '
+                               'routes on 1 <= n <= 40; the closed-form and bracket clauses carry '
+                               'written all-n proofs and a later fold may lift them under their '
+                               'own gate, and the census clause is finite-range only; no entropy, '
+                               'rate or measure statement is created and ENTROPY-LAYER-BRIDGE '
+                               'remains open at its exact scope\t2. Time, space, and the decoder\t'
+                               'probes/P-TWOLOGPHI-INVARIANTS-1\ta value of |N(J^n - 1)| on 1 <= n '
+                               '<= 40 differing between the ring-norm, matrix-power and Lucas '
+                               'routes, a Lucas closed form failing at any n divisible by 5 in '
+                               'that range, a second perfect square among the 32 off-residue '
+                               'values, or a bracket violation at any n in that range\n'),
+                              (438, 463, ''))},
+ 'NORMATIVE.tsv': {'current_sha256': 'a0e75f23eca170bb6b89bdd11c909b3633062a3c119ee3f49339542efe80db84',
+                   'current_bytes': 59366,
+                   'prior_sha256': 'c5b2e8241230c6a01992eca378f6a824af24920cfd01ed0f9c6984a48b510909',
+                   'prior_bytes': 55736,
+                   'restore': ((231,
+                                232,
+                                'TT-VECTOR-STATE-NORMALIZATION\tOBLIGATION\t'
+                                'TT-VECTOR-STATE-NORMALIZATION\tO\tNOT_APPLICABLE\t\t'
+                                'canon/CANON.md::18. The frontier\n'),
+                               (270,
+                                271,
+                                'ENTROPY-LAYER-BRIDGE\tOBLIGATION\tENTROPY-LAYER-BRIDGE\tO\tMULTI\t'
+                                'GATE-L2-L5-ENTROPY-BRIDGE\tcanon/CANON.md::3. The kernel and the '
+                                'census\n'),
+                               (380,
+                                381,
+                                'BELL-CAUSAL-ACCOUNTING\tOBLIGATION\tBELL-CAUSAL-ACCOUNTING\tO\t'
+                                'MULTI\t\tcanon/CANON.md::18. The frontier\n'),
+                               (493, 522, ''))},
+ 'DEPENDENCIES.tsv': {'current_sha256': 'd39681b357a0995954536bd7fb9b27e0b2d09ab7003a0302fc7d6d00436a9a1c',
+                      'current_bytes': 156684,
+                      'prior_sha256': '6e6c942a9e3aa4e69e72e036ca06443f88b880438fca30fdffe9ed80458dfb9f',
+                      'prior_bytes': 142046,
+                      'restore': ((40,
+                                   41,
+                                   'QDD-MIXED-CHANNEL-ATTENUATION-RIGIDITY\t'
+                                   'QDD-TERMINAL-EVENT-SEMANTICS\tBOUNDED_BY\tpreservation of the '
+                                   'three attenuation observables is neither physically derived '
+                                   'nor adopted\n'),
+                                  (144,
+                                   145,
+                                   'TT-VECTOR-MOMENT-UNDERDETERMINATION\t'
+                                   'TT-VECTOR-STATE-NORMALIZATION\tBOUNDED_BY\tthe theorem '
+                                   'constrains admissible state closures but supplies neither a '
+                                   'normalization nor a numerical r_T(k)\n'),
+                                  (223,
+                                   224,
+                                   'TT-QUADRATIC-INDUCED\tTT-VECTOR-STATE-NORMALIZATION\t'
+                                   'BOUNDED_BY\tnormalization remains open\n'),
+                                  (442,
+                                   443,
+                                   'POL-READ\tTT-VECTOR-STATE-NORMALIZATION\tBOUNDED_BY\tthe '
+                                   'component readout does not select a state normalization or '
+                                   'produce a numerical r_T(k)\n'),
+                                  (610,
+                                   611,
+                                   'QDD-INSTRUMENT-APPARATUS\tDEF-DECODER-COMPLETION-CONTRACT\t'
+                                   'REQUIRES\tthe transferred physical debt is recorded in the '
+                                   'apparatus_manifest; all physical identifier slots remain '
+                                   'UNRESOLVED and are not aliases of the algebraic projector '
+                                   'targets\n'),
+                                  (627,
+                                   629,
+                                   'BELL-MAGIC-BOUNDARY\tBELL-CAUSAL-ACCOUNTING\tBOUNDED_BY\tthe '
+                                   'finite cyclotomic CHSH functional supplies no source, '
+                                   'settings, apparatus, events, probability kernel, premise test, '
+                                   'no-signalling test, or causal account\n'
+                                   'PURE-QUBIT-RELATIONAL-CHSH\tBELL-CAUSAL-ACCOUNTING\t'
+                                   'BOUNDED_BY\tthe optimized standard-QM pure-state value '
+                                   'supplies no realized Bell experiment, sampling measure, or '
+                                   'causal account\n'),
+                                  (631,
+                                   632,
+                                   'DQRC-INTEGER-CENSUS-ARITHMETIC\tBELL-CAUSAL-ACCOUNTING\t'
+                                   'BOUNDED_BY\tthe balanced formal margins and inserted parity '
+                                   'supply no source, realized settings or outcomes, Bell-premise '
+                                   'test, no-signalling intervention test, or causal account\n'),
+                                  (634,
+                                   635,
+                                   'DQRC-HORODECKI-REENCODING\tBELL-CAUSAL-ACCOUNTING\tBOUNDED_BY\t'
+                                   'the exact model-value identity supplies no TWIST-J source, '
+                                   'apparatus, realized event stream, sampling law, locality '
+                                   'premise, no-signalling test, or causal mechanism\n'),
+                                  (637,
+                                   638,
+                                   'DQRC-H-COEFFICIENT-NONSELECTION\tBELL-CAUSAL-ACCOUNTING\t'
+                                   'BOUNDED_BY\tnonselection of an invariant coefficient supplies '
+                                   'neither a Bell model nor a physical mechanism\n'),
+                                  (639,
+                                   640,
+                                   'DQRC-ORIGIN-NONSELECTION\tBELL-CAUSAL-ACCOUNTING\tBOUNDED_BY\t'
+                                   'the origin witness blocks a finite Bell-data prediction until '
+                                   'an intrinsic time address, apparatus, realized-trial map, and '
+                                   'sampling law are supplied\n'),
+                                  (642,
+                                   643,
+                                   'DQRC-MAXIMAL-SECTOR-FIELD-BOUNDARY\tBELL-CAUSAL-ACCOUNTING\t'
+                                   'BOUNDED_BY\tthe field boundary neither selects a physical '
+                                   'place assignment nor supplies a Bell source, apparatus, event '
+                                   'law, or causal account\n'),
+                                  (651,
+                                   652,
+                                   'J-MAHLER-MEASURE\tENTROPY-LAYER-BRIDGE\tBOUNDED_BY\tthe '
+                                   'arithmetic invariant and the toral entropy carry the same '
+                                   'constant; that is a fact about the number phi and not a bridge '
+                                   'between layers, and the open obligation governs any dynamical '
+                                   'reading\n'),
+                                  (653,
+                                   654,
+                                   'REGULATOR-TWO-LOG-PHI\tENTROPY-LAYER-BRIDGE\tBOUNDED_BY\tthe '
+                                   'field invariant and the toral entropy carry the same constant; '
+                                   'no rate of the decoder or of the plenum is asserted and the '
+                                   'open obligation governs any such reading\n'),
+                                  (656,
+                                   657,
+                                   'J-TORAL-PERIODIC-POINTS\tENTROPY-LAYER-BRIDGE\tBOUNDED_BY\t'
+                                   'counting periodic points is not a rate statement; no entropy '
+                                   'or measure claim is created and the open obligation keeps its '
+                                   'exact scope\n'),
+                                  (778,
+                                   779,
+                                   'K1-LINEAR-METRIC-COMPLETION\tTT-VECTOR-STATE-NORMALIZATION\t'
+                                   'BOUNDED_BY\tfixed a=1 and a complete finite input law supply '
+                                   'no physical scalar comparison, action-unit identification or '
+                                   'numerical r_T\n'),
+                                  (787,
+                                   788,
+                                   'TT-SOURCE\tTT-VECTOR-STATE-NORMALIZATION\tBOUNDED_BY\tthe '
+                                   'isolated source transfer does not choose an outgoing vector '
+                                   'state, fourth moments, action normalization, scalar comparison '
+                                   'or numerical r_T\n'),
+                                  (889, 956, ''))},
+ 'EVIDENCE.tsv': {'current_sha256': '0d2eca3bca3bd86324305257f6d04a282a3a2a46075b009a95b374d63489e7fd',
+                  'current_bytes': 94480,
+                  'prior_sha256': '0fa9265a06ced765135596ca914ba89c188d554d38b67b5cd34f32408262bb21',
+                  'prior_bytes': 89381,
+                  'restore': ((166,
+                               168,
+                               'TT-LINEAR-ZERO\tEV-TT-LINEAR-ZERO\tREPRODUCTION\t'
+                               'reproduce/cosmology-register\t'
+                               '98a9425099666e47fb1cf4c48e72ab29fbc30ea9906a319d80ebc6cc1d3bdbdb\t'
+                               'bundle-manifest-sha256-v1\ttwo-architecture\n'
+                               'TT-QUADRATIC-INDUCED\tEV-TT-QUADRATIC-INDUCED\tREPRODUCTION\t'
+                               'reproduce/cosmology-register\t'
+                               '98a9425099666e47fb1cf4c48e72ab29fbc30ea9906a319d80ebc6cc1d3bdbdb\t'
+                               'bundle-manifest-sha256-v1\trecorded-audit\n'),
+                              (172,
+                               174,
+                               'COSMOLOGY-REGISTER\tEV-COSMOLOGY-REGISTER\tREPRODUCTION\t'
+                               'reproduce/cosmology-register\t'
+                               '98a9425099666e47fb1cf4c48e72ab29fbc30ea9906a319d80ebc6cc1d3bdbdb\t'
+                               'bundle-manifest-sha256-v1\trecorded-audit\n'
+                               'CONFORMAL-PREFACTOR\tEV-CONFORMAL-PREFACTOR\tREPRODUCTION\t'
+                               'reproduce/cosmology-register\t'
+                               '98a9425099666e47fb1cf4c48e72ab29fbc30ea9906a319d80ebc6cc1d3bdbdb\t'
+                               'bundle-manifest-sha256-v1\trecorded-audit\n'),
+                              (220,
+                               221,
+                               'TT-VECTOR-STATE-NORMALIZATION\tEV-TT-VECTOR-STATE-NORMALIZATION\t'
+                               'INLINE_CANON\tinline\t'
+                               '1c8d30a458dbe2c476b8fd4eba29629f17dcdf67ed7a1a907198e61004f1057d\t'
+                               'registry-scope-sha256-v1\tnone\n'),
+                              (259,
+                               260,
+                               'ENTROPY-LAYER-BRIDGE\tEV-ENTROPY-LAYER-BRIDGE\tPUBLIC_PROBE\t'
+                               'probes/P-ENTROPY-BRIDGE-1\t'
+                               '96cca583006f7090d094fd4a025a78e6ee4f98fb7627af7c880f829beafccb57\t'
+                               'bundle-manifest-sha256-v1\ttwo-architecture\n'),
+                              (337,
+                               338,
+                               'QDD-INSTRUMENT-APPARATUS\tEV-QDD-INSTRUMENT-APPARATUS\t'
+                               'INLINE_CANON\tinline\t'
+                               '680f7267e210f52cb7bdc42c2ae084b6c48b229c26138a91c1af65ca81c4da5c\t'
+                               'registry-scope-sha256-v1\tnone\n'),
+                              (348,
+                               349,
+                               'BELL-CAUSAL-ACCOUNTING\tEV-BELL-CAUSAL-ACCOUNTING\tINLINE_CANON\t'
+                               'inline\t'
+                               '7636da742da5f742878764eeef2c6a2a56591dc92d23d22c5177aed5a4f6e1fc\t'
+                               'registry-scope-sha256-v1\tnone\n'),
+                              (438, 463, ''))},
+ 'HISTORY.tsv': {'current_sha256': '8d636e7735905adc6c1bdcc71fae3c5d5facdbdef837dd60834ddedc636a915f',
+                 'current_bytes': 449314,
+                 'prior_sha256': '301b9587aac2171ecd338e9050ef3b8bff9742ce0adeeb3324fc91727bb13bd2',
+                 'prior_bytes': 432479,
+                 'restore': ((975, 1009, ''),)},
+ 'GATES.tsv': {'current_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'current_bytes': 12907,
+               'prior_sha256': '7fd5b4c2c7e9fd35110e3065501aab8db57bdaac4300ede0ca0f3f31ea75f15a',
+               'prior_bytes': 7792,
+               'restore': ((8,
+                            9,
+                            'GATE-L2-L5-ENTROPY-BRIDGE\tENTROPY-LAYER-BRIDGE\tL2\tL5\tOPEN_LIFT\t'
+                            'closes positively exactly when A_A is proved nonempty by one exact '
+                            'map of the registered type satisfying mu-almost-everywhere '
+                            'equivariance and pushforward Law_W on [512,2048); closes negatively '
+                            'only by a complete theorem A_A=empty; failure of one proposal is '
+                            'STOP\n'),
+                           (17, 26, ''))},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'current_bytes': 1436,
+                           'prior_sha256': '9a4ceaa14f0d0c74d0b6effc07f4b355fb1acaacabce2f9e6427835ea02af5d1',
+                           'prior_bytes': 1588,
+                           'restore': ((2,
+                                        2,
+                                        'BELL-CAUSAL-ACCOUNTING\tQUANTUM_EM\tROOT\tSTOP\tFORMAL\n'),
+                                       (5,
+                                        5,
+                                        'ENTROPY-LAYER-BRIDGE\tMEASURE\tROOT\tSTOP\tFORMAL\n'),
+                                       (26,
+                                        26,
+                                        'TT-VECTOR-STATE-NORMALIZATION\tTENSOR\tROOT\tREADY\t'
+                                        'FORMAL\n'))},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': '6d49a9dfce95f2146490ccc9ae76066bca01d1614291549562b599d35b2218e1',
+              'current_bytes': 772678,
+              'prior_sha256': '8ff757009ab1e46a66e0d341d7e9408f5c93cb966633b3e1755083b081c6665f',
+              'prior_bytes': 676201,
+              'restore': ((0, 1, '# TWIST-J Public Canon v90\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v90. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v90 also declares the discrete architecture used to '
+                           'read\n'),
+                          (15,
+                           20,
+                           'J. No fitted dimensionless parameter is introduced in the stated\n'
+                           'forms; the single SI calibration anchor is the electron mass m_e.\n'),
+                          (25,
+                           26,
+                           'seed of the two algebraic projections. Public Canon v90 does not '
+                           'claim\n'),
+                          (130,
+                           131,
+                           'deriving the architecture from J; Public Canon v90 contains no such\n'),
+                          (2749,
+                           2752,
+                           '    do not imply saturation, and no physical saturation law is '
+                           'adopted. A\n'),
+                          (2768, 2783, '    Its current machine-readable boundary is\n'),
+                          (2833,
+                           2837,
+                           '    unadopted, not falsified, and not shown complete. SAMPLING NOT '
+                           'PROVIDED;\n'
+                           '    SAMPLING IMPOSSIBLE is not claimed. No L6 measure, randomness, or\n'
+                           '    independence statement follows.\n'),
+                          (3205,
+                           3212,
+                           'QDD-INSTRUMENT-APPARATUS [O] remains STOP. The native mathematical '
+                           'coherent\n'
+                           'carrier and exact algebraic split exist in the specified '
+                           'representation;\n'
+                           'their physical preparation/adoption, actual coarse event, occurrence '
+                           'law,\n'
+                           'persistent post-event record, reset/repetition, complete apparatus '
+                           'family\n'
+                           'and L1-to-L5 gate remain unresolved. Any L6 measure needs its separate '
+                           'gate.\n'),
+                          (3947,
+                           3951,
+                           'binary factors. No identification of the toral rate with the declared\n'
+                           "architecture's tick is made here: that identification is exactly the\n"
+                           'open obligation ENTROPY-LAYER-BRIDGE [O], whose scope is unchanged '
+                           'and\n'
+                           'which is neither closed nor weakened by these rows.\n'),
+                          (3975,
+                           3977,
+                           'measure claim is created here and ENTROPY-LAYER-BRIDGE [O] keeps its '
+                           'exact\n'
+                           'scope.\n'),
+                          (5457,
+                           5460,
+                           'for n=1,2,3. No physical law requiring their preservation is derived '
+                           'or\n'
+                           'adopted. Complete positivity is substantive: transpose in a real '
+                           'orthonormal basis of the complexified W fixes all Bn and commutes with '
+                           'Ad_A but is not the identity or\n'),
+                          (6344, 6919, ''),
+                          (7706,
+                           7708,
+                           'Six completed public probes now delimit the entropy bridge without '
+                           'closing\n'
+                           'it. Write\n'),
+                          (7727,
+                           7728,
+                           'The typed Route A target of ENTROPY-LAYER-BRIDGE [O] is a measurable '
+                           'total map\n'),
+                          (7884,
+                           7889,
+                           'ENTROPY-LAYER-BRIDGE [O] closes positively exactly when `A_A` is\n'
+                           'proved nonempty by one exhibited exact map. It closes negatively only '
+                           'by a\n'
+                           'complete theorem `A_A = empty`. Failure of one proposed construction '
+                           'is STOP,\n'
+                           'not a negative decision. An exact finite-cylindrical exhibition for '
+                           'any registered `(L,c)` with\n'),
+                          (8090, 8385, 'neither closes nor weakens ENTROPY-LAYER-BRIDGE [O].\n'),
+                          (8962,
+                           8964,
+                           'fact about `phi`, not a bridge between layers, and it neither closes '
+                           'nor\n'
+                           'weakens ENTROPY-LAYER-BRIDGE [O].\n'),
+                          (10303, 11007, ''),
+                          (14078,
+                           14079,
+                           'registered `BELL-CAUSAL-ACCOUNTING [O]` contract, do not extend the '
+                           'exact\n'),
+                          (14636,
+                           14640,
+                           '(TT-QUADRATIC-INDUCED) [D]; a numerical r_T(k) waits on the vector '
+                           'state\n'
+                           'normalization (TT-VECTOR-STATE-NORMALIZATION). Dark\n'),
+                          (15348,
+                           15351,
+                           'does not enlarge this FRW dictionary. `TT-VECTOR-STATE-NORMALIZATION '
+                           '[O]`\n'
+                           'retains its full decision clause. The broader inhomogeneous scalar '
+                           'action excluded by\n'),
+                          (15773,
+                           15776,
+                           '`TT-VECTOR-STATE-NORMALIZATION [O]` keeps its full registered '
+                           'decision\n'
+                           'clause. The theorem neither adopts nor promotes a physical\n'),
+                          (16200,
+                           16744,
+                           'remain the complete separate TT-VECTOR-STATE-NORMALIZATION [O] '
+                           'obligation.\n'
+                           'There is no numerical r_T(k), even zero, from this construction. No\n'
+                           'L2-L6 output or lift is adopted by this L1 dictionary.\n'),
+                          (17553,
+                           17553,
+                           '### BELL-CAUSAL-ACCOUNTING [O]\n'
+                           '\n'
+                           'Before TWIST-J can make a physical Bell, locality, nonlocality,\n'
+                           'no-signalling, communication, or causal claim, one named attack must '
+                           'supply\n'
+                           'a single typed contract containing:\n'
+                           '\n'
+                           '1. a source state or variable `lambda` and its normalized '
+                           'distribution;\n'
+                           '2. setting spaces `X,Y`, the setting-selection mechanism, and '
+                           'realized\n'
+                           '   settings `x,y`;\n'
+                           '3. outcome spaces `A,B`, an apparatus or instrument map, and realized\n'
+                           '   outcomes `a,b`;\n'
+                           '4. a normalized kernel `P(a,b|x,y,lambda)` and the induced\n'
+                           '   `P(a,b|x,y)`;\n'
+                           '5. the exact correlation and CHSH conventions;\n'
+                           '6. the Bell-local factorization test\n'
+                           '   `P(a,b|x,y,lambda)=P(a|x,lambda)P(b|y,lambda)`;\n'
+                           '7. measurement independence `P(lambda|x,y)=P(lambda)`, or one '
+                           'explicitly\n'
+                           '   frozen replacement together with its operational consequences;\n'
+                           '8. both no-signalling marginal equalities and a separate test for\n'
+                           '   controllable superluminal signalling;\n'
+                           '9. separately gated bridges from L1 state to L4 apparatus support, L4 '
+                           'to\n'
+                           '   realized L5 events, and L5 to the normalized L6 sampling measure;\n'
+                           '10. a complete dimensional audit in which no dimensionless selector '
+                           'or\n'
+                           '    probability parameter enters unnamed.\n'
+                           '\n'
+                           'If a CHSH excess is obtained, the account must identify exactly which '
+                           'Bell\n'
+                           'premise fails. Failure of Bell-local factorization does not by itself '
+                           'imply a\n'
+                           'signal, force, mechanism, or superluminal communication; no-signalling '
+                           'and\n'
+                           'controllable signalling are separate tests.\n'
+                           '\n'
+                           '`BELL-MAGIC-BOUNDARY` is a finite functional only;\n'
+                           '`PURE-QUBIT-RELATIONAL-CHSH` is an optimized standard-QM pure-state '
+                           'comparison\n'
+                           'only; the DQRC rows are L1 formal-census, reencoding, nonselection, '
+                           'and\n'
+                           'field-boundary theorems only. None supplies this contract.\n'
+                           '`ALGEBRAIC-DMATTER [D]` remains an algebraic dictionary and\n'
+                           '`QDD-INSTRUMENT-APPARATUS [O]` remains its separate physical '
+                           'boundary.\n'
+                           'Neither the\n'
+                           'integral QPAIR carrier nor the rational piston carrier is identified '
+                           'with a\n'
+                           'physical bipartite system, and no conclusion about latent-variable '
+                           'models,\n'
+                           'nonlocal influence, superdeterminism, or retrocausality is selected '
+                           'in\n'
+                           'advance.\n'
+                           '\n'
+                           'The row remains `O` and `STOP` until every field, bridge, '
+                           'normalization,\n'
+                           'and premise test above is present and preregistered in one typed '
+                           'attack.\n'
+                           'Partial accounts and failed individual candidates remain STOP and do '
+                           'not\n'
+                           'promote, close, or falsify the obligation.\n'
+                           '\n'),
+                          (17983,
+                           17989,
+                           '                             effect identifiers, every physical '
+                           'apparatus\n'
+                           '                             field remains unresolved, O2 stays with '
+                           'the two\n'
+                           '                             children below and O1 remains '
+                           'realized-event /\n'
+                           '                             sampling; SAMPLING NOT PROVIDED, not '
+                           'impossible\n'),
+                          (18006,
+                           18006,
+                           '  TT-VECTOR-STATE-NORMALIZATION  the only gate yielding a numerical '
+                           'r_T(k)\n'),
+                          (18029,
+                           18034,
+                           'ENTROPY BRIDGE\n'
+                           '  ENTROPY-LAYER-BRIDGE       Route A asks whether A_A contains one\n'
+                           '                             measurable total\n'
+                           '                             P_5: K_TM x O_(K,lambda) -> F_5^6 with '
+                           'exact\n'
+                           '                             equivariance and Law_W for\n'
+                           '                             512 <= n < 2048; STOP\n'))},
+ 'CORE.md': {'current_sha256': '5856724441b23e8a2c5d88690b2e587e0e0e96eb0e0594c40ad878e2c60636a0',
+             'current_bytes': 19140,
+             'prior_sha256': '97dd218ae4e94845e2c7784a2ddbd7e1b63ed9e7b80f44fdd5758d30709aff76',
+             'prior_bytes': 17207,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v90. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v90 also declares a discrete architecture. It does not\n'),
+                         (99,
+                          102,
+                          'preparation/adoption of this correlated code and realization of the\n'
+                          'instrument remain under QDD-INSTRUMENT-APPARATUS [O].\n'),
+                         (133, 162, ''))},
+ 'FRONTIER.md': {'current_sha256': '9528c31b44f9d7d01e69553969f5284ad147f7fdf556d7da5565b9a0abf365ff',
+                 'current_bytes': 26048,
+                 'prior_sha256': 'fb282cdadd2ff041dd9417a97e4abfb8c379b870cb092852fd62258d97d20bcc',
+                 'prior_bytes': 29627,
+                 'restore': ((32,
+                              33,
+                              '- QDD-INSTRUMENT-APPARATUS [O]: the sole owner of the physical debt '
+                              'split from QUADRATIC-DECODER-DATA, transferred but not satisfied: '
+                              'the resolved projector_target_ids '
+                              '(DEF-QDD-PROJECTOR-LOW,DEF-QDD-PROJECTOR-HIGH) are algebraic '
+                              'targets and are not aliases for physical effects, while effect_ids, '
+                              'instrument_ids, apparatus_carrier_id, ready_state_id, '
+                              'physical_context_key_id, selected_ready_phase_id, coupling_id, '
+                              'pointer_id, reduction_id, target comparison relation and domain, '
+                              'complete apparatus-family class and equality, phase equality, '
+                              'target-independence and class-completeness certificates, '
+                              'realization certificates, realized outcomes and event semantics, '
+                              'occurrence law, post-state instruments, persistence/update/reset '
+                              'law, ZERO_SUPPORT semantics and L1-to-L5 gate all remain '
+                              'UNRESOLVED, with any L6 measure requiring a separate gate; O2 is '
+                              'the compatible conjunction of QDD-TERMINAL-EVENT-SEMANTICS and '
+                              'QDD-INSTRUMENT-CLASS-COMPLETENESS, and O1 remains the typed '
+                              'realized-event and sampling obligation; existing target-independent '
+                              'rational J-simplex, pure-record, COMM-SAT, finite-memory and '
+                              '22-context carry-bank results delimit frozen mathematical classes '
+                              'but adopt no physical effect, instrument, carrier, complete family, '
+                              'ready phase, context key, event semantics, occurrence law, '
+                              'sampling, randomness or independence; the algebraic '
+                              'ALGEBRAIC-DMATTER binding and QDD-ALGEBRAIC-FACTORIZATION do not '
+                              'close or partially satisfy this row, PHYSICAL-DMATTER remains '
+                              'unadopted, not falsified and not shown complete, and SAMPLING NOT '
+                              'PROVIDED rather than impossible; U-GALOIS-FIBER-CODE supplies a '
+                              'specified four-dimensional coherent code preserved by actual native '
+                              'free pushforward and U-GALOIS-FIBER-QDD-SPLIT supplies its exact '
+                              'algebraic LOW/HIGH output comparison, with post-state identity '
+                              'conditional on ideal coarse read, while physical '
+                              'preparation/adoption of that correlated code and the realized '
+                              'coarse event remain unresolved; U-POINT-SOURCE-SHARP-READOUT-NOGO '
+                              'excludes only the five-point free encoding with deterministic '
+                              'native evolution and classical endpoint reading, not the complete '
+                              'physical apparatus class\n'),
+                             (48,
+                              48,
+                              '## Measure selection (`MEASURE`)\n'
+                              '\n'
+                              '- ENTROPY-LAYER-BRIDGE [O]: the set A_A of mu-almost-everywhere '
+                              'classes of measurable total maps P_5: K_TM x O_(K,lambda) -> F_5^6, '
+                              'where mu is the product of the unique Thue-Morse substitution '
+                              'probability and normalized additive Haar probability, satisfying '
+                              'exact equivariance and the exact pushforward Law_W on W=[512,2048); '
+                              'equal cardinalities do not construct an element of A_A\n'
+                              '  Queue: ROOT; STOP; FORMAL.\n'
+                              '  Decision: closes positively exactly when A_A is proved nonempty '
+                              'by one exhibited exact map; closes negatively only by a complete '
+                              'theorem A_A=empty; failure of one proposed map is STOP; an exact '
+                              'finite-cylindrical exhibition for any registered (L,c) with 4 <= L '
+                              '<= 32 at any finite lambda-depth would refute '
+                              'ENTROPY-CYLINDER-NOGO-CURSOR rather than close this row; inside the '
+                              'older ENTROPY-CYLINDER-CUT scope it would also require correction '
+                              'of that F row\n'
+                              '\n'),
+                             (59,
+                              59,
+                              '- TT-VECTOR-STATE-NORMALIZATION [O]: the vector doublet state, its '
+                              'two point and pseudo covariance spectra, the action normalization, '
+                              'the scalar comparison; the only gate yielding a numerical r_T(k); '
+                              'TT-VECTOR-MOMENT-UNDERDETERMINATION proves that mean, covariance, '
+                              'pseudo-covariance and every polynomial functional through degree '
+                              'three leave the squared-readout spectrum free across a full Z/5 '
+                              'family fixed by the diagonal four-fold action, and that '
+                              'deterministic pointwise modulus forbids Gaussian or Wick closure; '
+                              'an admissible normalization must therefore freeze fourth-moment '
+                              'data, the complete state or an explicit non-Gaussian closure rule; '
+                              'the theorem supplies neither that choice nor a numerical r_T(k)\n'
+                              '  Queue: ROOT; READY; FORMAL.\n'
+                              '  Decision: closes positively by a public vector-doublet '
+                              'normalization yielding a numerical r_T(k); closes negatively if '
+                              'every admissible normalization violates the registered TT '
+                              'identities or requires an extra free dimensionless input\n'),
+                             (80,
+                              80,
+                              '- BELL-CAUSAL-ACCOUNTING [O]: before any TWIST-J physical Bell, '
+                              'locality, nonlocality, no-signalling, communication, or causal '
+                              'claim, one named preregistered typed attack must supply: a source '
+                              'state or variable lambda and normalized distribution; setting '
+                              'spaces X,Y, a setting-selection mechanism and realized x,y; outcome '
+                              'spaces A,B, an apparatus or instrument map and realized a,b; a '
+                              'normalized kernel P(a,b|x,y,lambda) and induced P(a,b|x,y); exact '
+                              'correlation and CHSH conventions; the Bell-local factorization test '
+                              'P(a,b|x,y,lambda)=P(a|x,lambda)P(b|y,lambda); measurement '
+                              'independence P(lambda|x,y)=P(lambda) or one frozen replacement with '
+                              'operational consequences; both no-signalling marginal equalities '
+                              'and a separate controllable-superluminal-signalling test; '
+                              'separately gated L1-to-L4, L4-to-L5, and L5-to-L6 bridges; and a '
+                              'complete dimensional audit with no unnamed dimensionless selector '
+                              'or probability input; any CHSH excess must identify exactly which '
+                              'Bell premise fails, and failure of factorization alone implies '
+                              'neither signalling nor a mechanism; BELL-MAGIC-BOUNDARY and '
+                              'PURE-QUBIT-RELATIONAL-CHSH do not supply this contract, existing '
+                              'QDD obligations remain separate, and no latent-variable, '
+                              'nonlocal-influence, superdeterminist, or retrocausal conclusion is '
+                              'selected in advance\n'
+                              '  Queue: ROOT; STOP; FORMAL.\n'
+                              '  Decision: STOP until every typed field, normalization, premise '
+                              'test, dimensional audit, and named L1-to-L4-to-L5-to-L6 bridge is '
+                              'present in one preregistered attack; closes positively only with '
+                              'the complete contract and exact premise decision, while a complete '
+                              'internally inconsistent contract or exact impossibility result for '
+                              'a frozen full admissible class may close negatively; partial '
+                              'accounts and failed individual candidates remain STOP and do not '
+                              'promote, close, or falsify the obligation; no controllable '
+                              'superluminal signalling may be inferred without its separate '
+                              'test\n'),
+                             (105, 106, 'Live total: 28.\n'))},
+ 'CHANGELOG.md': {'current_sha256': '5f7a3927665aefec1172c684e90c327877564d00e88be3e712e268c2a7fc6062',
+                  'current_bytes': 184832,
+                  'prior_sha256': 'f664756ee000e627b80b33579ffc486863f142e5350000b4ac59113563357e3b',
+                  'prior_bytes': 182877,
+                  'restore': ((1, 33, ''),
+                              (165,
+                               166,
+                               'Registry snapshot: 437 claims; 0 T-LOCK, 304 T, 48 D, 39 C, 2 H, '
+                               '26 O, 18 F; 28 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '0b323c1cd8b3327c7dca289265f8c9e77ad9f07cc73a558bd8359719f450ffda',
+                       'current_bytes': 243,
+                       'prior_sha256': '33a9d0869713928d7507f6e6d7811a74feacd3ae418fad6d67075e43de30ee46',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t437\n'),
+                                   (3, 5, 'status_T\t304\nstatus_D\t48\n'),
+                                   (7, 10, 'status_O\t26\nstatus_F\t18\nlive_H_O\t28\n'),
+                                   (11, 12, 'evidence_none\t50\n'),
+                                   (14, 15, 'evidence_two-architecture\t347\n'))}}
+V91_NEW_ROWS = {'ENTROPY-MEASURABLE-OBSTRUCTION': {'claim_id': 'ENTROPY-MEASURABLE-OBSTRUCTION',
+                                    'status': 'T',
+                                    'scope': 'for the complete Route A product source (K_TM x '
+                                             'O_(K,lambda),m_TM x h_lambda,S x '
+                                             'multiplication-by-J), no measurable total map P into '
+                                             'F_5^6 satisfies P(S '
+                                             'kappa,Jy)=F_(kappa_0)(P(kappa,y)) almost everywhere; '
+                                             'therefore the entire registered class A_A is empty '
+                                             'before imposing Law_W, including arbitrary or '
+                                             'variable residue depths, unbounded Thue-Morse '
+                                             'contexts, nonbijective readers and readers factoring '
+                                             'through no finite quotient; the written '
+                                             'substitution-return and pure-point expansion proof '
+                                             'supplies the all-measurable quantifier, while finite '
+                                             'audits check its algebraic premises; different '
+                                             'sources, correlated measures, changed targets or '
+                                             'equalities and physical occurrence questions are '
+                                             'outside scope',
+                                    'canon_section': '3. The kernel and the census',
+                                    'evidence': 'probes/P-ENTROPY-MEASURABLE-OBSTRUCTION-1',
+                                    'falsifier': 'fires if an admitted measurable total map '
+                                                 'satisfies the frozen almost-everywhere '
+                                                 'equivariance, or if a necessary trace, tower, '
+                                                 'five-fiber identification, uniform-return, '
+                                                 'measurable eigenfunction or complete '
+                                                 'source-expansion step is exactly false; '
+                                                 'finite-audit agreement alone does not establish '
+                                                 'the universal quantifier, and a change to the '
+                                                 'frozen source, measure or equality is outside '
+                                                 'scope'},
+ 'U-STABLE-PAIRED-PORT-TRANSPORT': {'claim_id': 'U-STABLE-PAIRED-PORT-TRANSPORT',
+                                    'status': 'T',
+                                    'scope': 'on the unchanged native stable union z in {1,4}, '
+                                             'paired translation '
+                                             'T_delta(p;q,r)=(p;q-delta,r+delta) obeys N_w '
+                                             'T_delta=T_((-1)^k delta)N_w for every binary driver '
+                                             'word w of length k; source, trace and selected '
+                                             'generators agree at every intermediate step, and '
+                                             'h_n(p)=(-1)^(n-3)(a+b+c+d) is transported unchanged '
+                                             'for n>=3; a ready inserted mark has the current '
+                                             'carrier (-1)^(j-n)(r_j-r_j^0), with counter and '
+                                             'reference explicitly consumed; the generator-c '
+                                             'witness excludes extension to all checkpoints and no '
+                                             'entrance, archive, physical write law or fixed '
+                                             'checkpoint reader is derived',
+                                    'canon_section': '2. Time, space, and the decoder',
+                                    'evidence': 'probes/P-QDD-UNINTERRUPTED-RECORD-1',
+                                    'falsifier': 'an admitted stable point, bit, displacement or '
+                                                 'finite word violates the one-step identity, '
+                                                 'prefix trajectory equality or transported-label '
+                                                 'law, or the displayed off-domain witness is '
+                                                 'false'},
+ 'QDD-UNINTERRUPTED-COARSE-RECORD': {'claim_id': 'QDD-UNINTERRUPTED-COARSE-RECORD',
+                                     'status': 'T',
+                                     'scope': 'conditional on the explicitly given C_n, common '
+                                              'ready reference, passive five-state archive and '
+                                              'signed exit exchange, arbitrary initial deviation '
+                                              'e, archive m and native waiting length k give '
+                                              '(e,m)->((-1)^k m,e+f); ready input and a blank cell '
+                                              'restore every freely evolved full native basis '
+                                              'checkpoint and write the transported coarse mark; '
+                                              'on the exact Galois code, every source vector has '
+                                              'joint output W_N P_L v tensor |1>+W_N P_H v tensor '
+                                              '|2>, preserving all HIGH coherences, while partial '
+                                              'trace removes LOW/HIGH cross blocks and repeated '
+                                              'fresh cells record the same observable; source Gram '
+                                              'and endpoint bases remain distinct and no realized '
+                                              'single event or independent trial law is derived',
+                                     'canon_section': '2. Time, space, and the decoder',
+                                     'evidence': 'probes/P-QDD-UNINTERRUPTED-RECORD-1',
+                                     'falsifier': 'an admitted source vector, code matrix unit, '
+                                                  'waiting word, deviation, archive content, '
+                                                  'reference or parity violates the complete '
+                                                  'identity, ready-restoration condition, HIGH '
+                                                  'coherence or repeated-record formula'},
+ 'QDD-PORT-QUOTIENT-ORIGIN-BOUNDARY': {'claim_id': 'QDD-PORT-QUOTIENT-ORIGIN-BOUNDARY',
+                                       'status': 'T',
+                                       'scope': 'the global factor pi(x)=(z,r) is autonomous under '
+                                                'every native generator and both selected steps; '
+                                                'the four prepared code inputs share this factor, '
+                                                'so unchanged native waiting cannot create the '
+                                                "entrance's distinct LOW and HIGH port values; no "
+                                                'classical causal controller whose observations, '
+                                                'actuators, decisions and stopping factor through '
+                                                'pi and source-independent auxiliary input can '
+                                                'realize that exact entrance, including arbitrary '
+                                                'memory and almost-sure finite stopping; q '
+                                                'observations, source-correlated inputs, '
+                                                'source-sensitive actuators and coherent '
+                                                'interference change the class; constant paired '
+                                                'shifts remain available in the commanded word '
+                                                'algebra via chronological b,d,b,e=T_2, without '
+                                                'deriving native commandability or label-dependent '
+                                                'control',
+                                       'canon_section': '2. Time, space, and the decoder',
+                                       'evidence': 'probes/P-QDD-ENTRANCE-NONLINEAR-RESOURCE-1',
+                                       'falsifier': 'an exact factor identity or constant-word '
+                                                    'identity fails, or an admitted complete '
+                                                    'factor-feedback controller supplies the '
+                                                    'required entrance on all four inputs with a '
+                                                    'source-independent preparation and total '
+                                                    'completion'},
+ 'QDD-ENTRANCE-DEGREE-BOUNDARY': {'claim_id': 'QDD-ENTRANCE-DEGREE-BOUNDARY',
+                                  'status': 'T',
+                                  'scope': 'the four freely transported code points remain an '
+                                           'affine line restriction and the required response '
+                                           '(1,2,2,2) has minimum finite-field polynomial degree '
+                                           'three, with interpolant h^3+h^2+h+3; the declared '
+                                           'extension f(0)=0 has reduced degree four; no complete '
+                                           'endpoint map whose native output r has degree at most '
+                                           'two realizes the entrance after any declared free '
+                                           'waiting; this exclusion holds for every independent '
+                                           'coherent or mixed finite auxiliary preparation under a '
+                                           'global monomial unitary whose output-r polynomial has '
+                                           'degree at most two in native inputs for each fixed '
+                                           'auxiliary point, and for source-independent classical '
+                                           'mixtures; degree is coordinate degree, not Hamiltonian '
+                                           'degree, and compositions with higher endpoint degree '
+                                           'or nonmonomial interference are outside scope',
+                                  'canon_section': '2. Time, space, and the decoder',
+                                  'evidence': 'probes/P-QDD-ENTRANCE-NONLINEAR-RESOURCE-1',
+                                  'falsifier': 'an admitted degree-at-most-two endpoint polynomial '
+                                               'or monomial auxiliary implementation realizes all '
+                                               'four required outputs, or the affine-line, '
+                                               'interpolation or nonnegative wrong-output argument '
+                                               'fails'},
+ 'QDD-NATIVE-AFFINE-ENTRANCE-MINIMUM': {'claim_id': 'QDD-NATIVE-AFFINE-ENTRANCE-MINIMUM',
+                                        'status': 'T',
+                                        'scope': 'within the complete six-coordinate no-auxiliary '
+                                                 'class with arbitrary invertible affine '
+                                                 'interventions and actual native selector steps, '
+                                                 'the coherent four-point entrance has minimum '
+                                                 'native-step count two; explicit global affine '
+                                                 'permutations A,B give F_1 B F_0 A=N_(3,2)C_3 on '
+                                                 'the full code at actual launch counter three, '
+                                                 'with all intermediate supports injective and one '
+                                                 'common phase; zero steps are affine and all '
+                                                 'forty one-step trace arrangements for either bit '
+                                                 'fail the HIGH arithmetic-progression condition, '
+                                                 'including the six trace-compatible cases by '
+                                                 'independent r or source-functional witnesses; '
+                                                 'this is a code isometry and resource minimum, '
+                                                 'not global unitarity of U, undisturbed source '
+                                                 'motion during entrance, an all-launch control '
+                                                 'law or physical duration',
+                                        'canon_section': '2. Time, space, and the decoder',
+                                        'evidence': 'probes/P-QDD-ENTRANCE-NONLINEAR-RESOURCE-1',
+                                        'falsifier': 'the explicit timed witness, affine inverses, '
+                                                     'code matrix-unit identity or all-prefix '
+                                                     'injectivity fails, or one admitted zero- or '
+                                                     'one-native-step affine construction meets '
+                                                     'the complete coherent target'},
+ 'QDD-AFFINE-CONTROL-REALIZATION': {'claim_id': 'QDD-AFFINE-CONTROL-REALIZATION',
+                                    'status': 'T',
+                                    'scope': 'the explicit global routing maps A,B have '
+                                             'phase-exact all-state decompositions using sixteen '
+                                             'fixed-gain field additions, two local scalings, four '
+                                             'shifts and two exchanges without a work register; '
+                                             'under the separately admitted six-five-level-system '
+                                             'control model, local Fourier transforms and a '
+                                             'positive-duration pair Hamiltonian -hbar g N_i N_j '
+                                             'implement each addition exactly with no relative '
+                                             'phase, local controls and three additions plus '
+                                             'negation implement the other gates, and an '
+                                             'outside-target Bell-pair calibration identity '
+                                             'follows; B has finite-field linear determinant two '
+                                             'while each fixed native word has determinant one; '
+                                             'this proves conditional finite-duration control, not '
+                                             'a native carrier, clean complete environment, '
+                                             'physical energy dictionary or compatibility of the '
+                                             'gate schedule with native ticks',
+                                    'canon_section': '2. Time, space, and the decoder',
+                                    'evidence': 'probes/P-QDD-AFFINE-ENERGY-CONTROL-1',
+                                    'falsifier': 'an admitted input violates either affine '
+                                                 'factorization, the phased Fourier-pulse '
+                                                 'identity, exchange or calibration identity, or '
+                                                 'the determinant boundary; absent physical '
+                                                 'commandability is not a mathematical '
+                                                 'counterexample'},
+ 'QDD-CLEAN-ENERGY-OBSTRUCTION': {'claim_id': 'QDD-CLEAN-ENERGY-OBSTRUCTION',
+                                  'status': 'T',
+                                  'scope': 'for complete unitaries strongly conserving the '
+                                           'specified additive cut energy H_S tensor I+I tensor '
+                                           'H_E, fixed independent normal environment preparation '
+                                           'and exact coherent code isometry, all transitions '
+                                           'between system energy eigenvectors have one common '
+                                           'energy change, including mixed and '
+                                           'infinite-dimensional environments with unbounded '
+                                           'energy and no finite moments; equal positive port gaps '
+                                           'make the entrance changes (5Delta,0,0,0), excluding '
+                                           'the whole admitted clean class, whereas separate '
+                                           'equally spaced gaps require Delta_r=6Delta_q only as a '
+                                           'necessary condition; independently, globally clean '
+                                           'implementation of the complete B permutation with any '
+                                           'additive diagonal six-register energy forces every '
+                                           'local profile flat by non-axis Fourier support; '
+                                           'different encodings, nonadditive energies, code-only '
+                                           'implementations of B or source-dependent environment '
+                                           'outputs change the class',
+                                  'canon_section': '2. Time, space, and the decoder',
+                                  'evidence': 'probes/P-QDD-AFFINE-ENERGY-CONTROL-1',
+                                  'falsifier': 'one admitted energy-conserving clean '
+                                               'implementation has unequal code energy changes or '
+                                               'realizes the equal-gap target, a nonconstant '
+                                               'additive local energy survives global B, or a '
+                                               'necessary characteristic-function, purification or '
+                                               'finite Fourier proof step fails'},
+ 'QDD-ION-SIDEBAND-WRITER': {'claim_id': 'QDD-ION-SIDEBAND-WRITER',
+                             'status': 'T',
+                             'scope': 'under the stated ideal individually addressed resonant '
+                                      'carrier and blue-sideband Hamiltonians for three five-level '
+                                      'ion registers with auxiliary levels and a common initially '
+                                      'vacuum oscillator, a fixed 28-pulse sequence gives '
+                                      '|s,e,m;0>->|s,e+2-[s=0],m;0> on all logical triples with '
+                                      'every relative phase positive, helpers empty and motion '
+                                      'restored; the reached continuous-pulse invariant subspaces '
+                                      'exclude higher oscillator couplings without truncation; a '
+                                      'time-dependent isometric chart identifies the '
+                                      '100-dimensional native four-label/port/archive domain, '
+                                      'encoded waiting is port negation, and the compiled signed '
+                                      'archive cycle gives (e,m)->((-1)^k m,e+f) using 266 blue '
+                                      'and 58+8k+16(k mod 2) carrier pulses; source level four is '
+                                      'an explicit outside-code hardware extension, and no '
+                                      'measured fidelity, independent natural-U realization, '
+                                      'native clock origin, single event or complete physical '
+                                      'apparatus family follows',
+                             'canon_section': '2. Time, space, and the decoder',
+                             'evidence': 'probes/P-QDD-ION-SIDEBAND-WRITER-1',
+                             'falsifier': 'an admitted logical input or matrix unit violates the '
+                                          'phase-exact pulse, vacuum-restoration, moving-chart or '
+                                          'complete-cycle identity, the invariant-subspace proof '
+                                          'encounters an omitted oscillator coupling, or an exact '
+                                          'declared pulse count is wrong; nonideal hardware errors '
+                                          'or absent laboratory construction do not falsify the '
+                                          'ideal conditional theorem'},
+ 'QDD-SELECTED-INSTRUMENT-LAW': {'claim_id': 'QDD-SELECTED-INSTRUMENT-LAW',
+                                 'status': 'T',
+                                 'scope': 'for the displayed positive G metric and five marked '
+                                          'rank-one/rank-three contexts, the entire '
+                                          'finite-dimensional completely positive reduced branch '
+                                          'class with the exact sharp effects, ordinary '
+                                          'repeatability and preservation of all three fixed HIGH '
+                                          'attenuation tests on every HIGH-supported density '
+                                          'consists exactly of I_L(X)=PXP and I_H(X)=QXQ; the '
+                                          'explicit three-state controlled-unitary writer realizes '
+                                          'these branches on its blank slice and preserves all '
+                                          'within-HIGH coherence; no physical occurrence, unique '
+                                          'coupling, native preparation or complete apparatus '
+                                          'classification is deduced',
+                                 'canon_section': '8. The measure and Born',
+                                 'evidence': 'probes/P-QDD-SELECTED-MEASUREMENT-LAW-1',
+                                 'falsifier': 'fires on an admitted CP branch satisfying every '
+                                              'displayed premise but differing from PXP or QXQ, or '
+                                              'on a failure of the exact blank-slice writer or '
+                                              'HIGH-coherence identity'},
+ 'QDD-SELECTED-ORDERED-HISTORY': {'claim_id': 'QDD-SELECTED-ORDERED-HISTORY',
+                                  'status': 'T',
+                                  'scope': 'conditional on the displayed instruments and complete '
+                                           'initialization, every declared finite causal '
+                                           'context/channel protocol, including explicitly '
+                                           'retained finite quantum memory and bounded local '
+                                           'stopping, has positive normalized prefix-compatible '
+                                           'branch-trace probabilities and correctly typed '
+                                           'positive-weight successors; transported native free '
+                                           'waits are compatible; same-context retained-source '
+                                           'repetition is perfectly correlated, whereas full '
+                                           'source-memory replacement gives product laws only for '
+                                           'the separately specified fixed nonadaptive fresh '
+                                           'preparations; zero support, fresh cells and archive '
+                                           'marginal preservation are explicit, and the fixed '
+                                           'infinite-policy cylinder extension is a mathematical '
+                                           'measure rather than infinite material capacity',
+                                  'canon_section': '8. The measure and Born',
+                                  'evidence': 'probes/P-QDD-SELECTED-MEASUREMENT-LAW-1',
+                                  'falsifier': 'fires on an admitted finite protocol violating '
+                                               'positivity, normalization, prefix compatibility, '
+                                               'post-state or specified record/reset accounting, '
+                                               'on a failure of the stated repetition or renewal '
+                                               'law under all its premises, or on a failure of the '
+                                               'compatible-cylinder measure conclusion'},
+ 'QDD-SELECTED-BIPARTITE-LAW': {'claim_id': 'QDD-SELECTED-BIPARTITE-LAW',
+                                'status': 'T',
+                                'scope': 'the tensor product of the displayed selected local '
+                                         'instruments gives positive normalized joint branches and '
+                                         'both marginal identities for every complex joint '
+                                         'density; every admitted bounded finite local CP protocol '
+                                         'with declared finite memories, fixed initial joint '
+                                         'state, local causal controls and complete retained '
+                                         'leaves has normalized prefix-compatible joint history '
+                                         'law independent of the interleaving of the two local '
+                                         'orders; any message encoded only in one trace-preserving '
+                                         'local protocol leaves every complete opposite-wing '
+                                         'record distribution unchanged; includes the exact '
+                                         'marked-pair 25-context table and restricted two-code '
+                                         'native comparison, but no spacetime or material source '
+                                         'identification',
+                                'canon_section': '8. The measure and Born',
+                                'evidence': 'probes/P-QDD-SELECTED-BIPARTITE-LAW-1',
+                                'falsifier': 'fires on an admitted input/protocol violating a '
+                                             'branch, normalization, prefix, local-order, marginal '
+                                             'or full-record no-message identity, on a failure of '
+                                             'the exact marked table, or on a failure of the '
+                                             'restricted tensor-code comparison'},
+ 'QDD-FIVE-CONTEXT-BELL-SEPARATION': {'claim_id': 'QDD-FIVE-CONTEXT-BELL-SEPARATION',
+                                      'status': 'T',
+                                      'scope': 'for the five frozen local effects and marked '
+                                               'real-aligned pair, the complete table has '
+                                               'five-setting Bell value 35/16 above the sharp '
+                                               'bound 2 for every setting-independent stochastic '
+                                               'Bell-local response model on any latent-variable '
+                                               'probability space, while every ordered two-setting '
+                                               'CHSH sign variant, including repeated settings, '
+                                               'has absolute value at most 2; the fixed-effect '
+                                               'Bell operator has spectrum 35/16 once, 5/4 four '
+                                               'times and -25/16 eleven times, with the marked '
+                                               'pair the unique maximizing density; the declared '
+                                               'depolarizing family violates this witness exactly '
+                                               'above visibility 14/15; a setting-dependent '
+                                               'separable family reproduces the table and both I/4 '
+                                               'marginals, delimiting the independence premise',
+                                      'canon_section': '8. The measure and Born',
+                                      'evidence': 'probes/P-QDD-SELECTED-BIPARTITE-LAW-1',
+                                      'falsifier': 'fires on an admitted setting-independent '
+                                                   'Bell-local model with value above 2, a failure '
+                                                   'of the marked table value or fixed-effect '
+                                                   'spectrum/unique optimum, an admitted CHSH '
+                                                   'restriction above 2, or a failure of the '
+                                                   'specified noise or setting-dependent control '
+                                                   'identity'},
+ 'QDD-SELECTED-SOURCE': {'claim_id': 'QDD-SELECTED-SOURCE',
+                         'status': 'D',
+                         'scope': 'ETH-QDD-1 adopts the complex extension of the four marked '
+                                  'cyclotomic source columns, positive G norm, density-operator '
+                                  'equality, specified correlated Galois-fiber code and five '
+                                  'coherent cyclotomic context controls, with exact moving-code '
+                                  'comparison for n>=3 and no off-code domain; all eight '
+                                  'CH-SOURCE, CH-CONTEXT, CH-CP, CH-ATTENUATION, CH-BORN, '
+                                  'CH-RECORD, CH-RENEWAL and CH-CONTROL choices are explicit; '
+                                  'native preparation, physical availability, control strength, SI '
+                                  'time and uniqueness are not derived',
+                         'canon_section': '8. The measure and Born',
+                         'evidence': 'inline',
+                         'falsifier': 'fires as dictionary STOP if a required source, equality, '
+                                      'metric, code, context or chosen-condition field is missing '
+                                      'or ill-typed, or the exact source/code comparison fails; '
+                                      'failure of physical adequacy requires its own independently '
+                                      'specified realization and error contract'},
+ 'QDD-SELECTED-RECORD': {'claim_id': 'QDD-SELECTED-RECORD',
+                         'status': 'D',
+                         'scope': 'ETH-QDD-1 adopts the controlled sharp coarse instrument as one '
+                                  'completed event with literal ordered record '
+                                  '(preparation_id,invocation_id,n,context_k,outcome), declared '
+                                  'prepare/step/emit/append/persist/reset/terminal semantics, '
+                                  'passive archive rereading and fresh blank cells; ZERO_SUPPORT '
+                                  'gives no event and exhausted capacity is outside supported '
+                                  'trials; source-memory replacement retains the archive marginal '
+                                  'and whole-apparatus comparison uses every finite future record '
+                                  'law under all admitted protocols; no complete physical '
+                                  'apparatus family, passive feeds_U=false profile or '
+                                  'target-independent terminal derivation is supplied',
+                         'canon_section': '8. The measure and Born',
+                         'evidence': 'inline',
+                         'falsifier': 'fires as dictionary STOP if the selected '
+                                      'event/record/resource/renewal semantics are internally '
+                                      'inconsistent or do not yield the declared exact '
+                                      'ordered-record comparison; an unperformed experiment '
+                                      'supplies no physical falsification'},
+ 'QDD-SELECTED-BORN': {'claim_id': 'QDD-SELECTED-BORN',
+                       'status': 'D',
+                       'scope': 'ETH-QDD-1 adopts exactly one supported outcome with probability '
+                                'tr I_(k,o)(rho), its normalized conditional branch only at '
+                                'positive weight, and the complete finite ordered-record '
+                                'probability law from the branch trace with all declared initial '
+                                'correlations and causal controls; zero-weight branches cannot '
+                                'occur; Born occurrence, native sampling, independent setting '
+                                'randomness and fresh-trial independence are not derived from J or '
+                                'U',
+                       'canon_section': '8. The measure and Born',
+                       'evidence': 'inline',
+                       'falsifier': 'fires as dictionary STOP on a contradiction between '
+                                    'occurrence, zero-support, conditioning and the specified '
+                                    'normalized ordered law; empirical disagreement requires an '
+                                    'independently frozen realization and uncertainty contract'},
+ 'QDD-SELECTED-PAIR-SOURCE': {'claim_id': 'QDD-SELECTED-PAIR-SOURCE',
+                              'status': 'D',
+                              'scope': 'ETH-QDD-2 adopts two supplied complex source spaces with '
+                                       'metric G tensor G, literal density equality, marked real '
+                                       'alignment and phi=vec(G^-1)/2 as the fixed normalized pair '
+                                       'source; it retains the eight one-system choices and adds '
+                                       'CH-TENSOR, CH-PAIR-SOURCE, CH-SETTING-INDEPENDENCE, '
+                                       'CH-LOCAL-ACCESS and CH-PAIR-RECORD, including two '
+                                       'independent uniform external setting controls independent '
+                                       'of preparation and past records in fresh trials; '
+                                       'probabilities 1/5 and 1/25 are named inputs; no tensor '
+                                       'decomposition of one native checkpoint or material '
+                                       'preparation/isolation/control mechanism is derived',
+                              'canon_section': '8. The measure and Born',
+                              'evidence': 'inline',
+                              'falsifier': 'fires as dictionary STOP if a selected carrier, '
+                                           'alignment, source law, local-access or setting-control '
+                                           'field is missing, ill-typed or inconsistent with the '
+                                           'exact marked tensor comparison'},
+ 'QDD-SELECTED-PAIR-RECORD': {'claim_id': 'QDD-SELECTED-PAIR-RECORD',
+                              'status': 'D',
+                              'scope': 'ETH-QDD-2 adopts completed local coarse events with full '
+                                       'records '
+                                       '(pair_preparation_id,trial_id,wing_id,local_invocation_id,local_comparison_index,context,outcome), '
+                                       'fresh local capacity and passive retention; joint pairing '
+                                       'uses the prior trial identifier and counts every supported '
+                                       'completed trial without outcome selection or undeclared '
+                                       'loss; fresh repetition replaces the entire operative pair '
+                                       'and both local memories while retaining the archive '
+                                       'marginal; resource and zero-support dispositions remain '
+                                       'explicit and no target-independent physical event '
+                                       'mechanism or complete apparatus class is asserted',
+                              'canon_section': '8. The measure and Born',
+                              'evidence': 'inline',
+                              'falsifier': 'fires as dictionary STOP if local event, full record, '
+                                           'prior-identifier pairing, capacity or whole-pair '
+                                           'renewal conditions are missing or internally '
+                                           'inconsistent, or if the exact stipulated comparison '
+                                           'fails'},
+ 'QDD-SELECTED-PAIR-LAW': {'claim_id': 'QDD-SELECTED-PAIR-LAW',
+                           'status': 'D',
+                           'scope': 'ETH-QDD-2 adopts the normalized complete primary-trial law '
+                                    'Pr(x,y,a,b)=p_Phi(a,b|x,y)/25 with preparation first and '
+                                    'independent uniform settings, one supported local event at '
+                                    'each wing, prior-identifier archive pairing and full fresh '
+                                    'pair-memory renewal before independent repetition; other '
+                                    'admitted finite local protocols use their entire joint '
+                                    'branch-trace law; the full Bell-local factorization and '
+                                    'independence tests, both no-signalling marginals and separate '
+                                    'full-record no-message test have their displayed exact '
+                                    'domains; physical spacetime, mechanism and empirical adequacy '
+                                    'are not inferred',
+                           'canon_section': '8. The measure and Born',
+                           'evidence': 'inline',
+                           'falsifier': 'fires as dictionary STOP if '
+                                        'source/control/occurrence/record laws conflict, fail '
+                                        'normalization or contradict the exact declared premise '
+                                        'tests and history comparison; later empirical use '
+                                        'requires a separate realization and error contract'},
+ 'TT-SELECTED-OUTGOING-STATE': {'claim_id': 'TT-SELECTED-OUTGOING-STATE',
+                                'status': 'T',
+                                'scope': 'at L1 conditional on DEF-SELECTED-TT-OUTGOING-STATE and '
+                                         'the unchanged isolated K1 source and tensor recurrence: '
+                                         'the source-independent persistent sign-coherent lift '
+                                         'class with conditional reflection and halfturn '
+                                         'invariance has the unique uniform four-lift law on each '
+                                         'active source; its forty labelled source/sign atoms give '
+                                         'twenty-five distinct vector histories and seven tensor '
+                                         'histories, literal prefix consistency, v^2=h, zero '
+                                         'vector mean and pseudo-covariance, the displayed '
+                                         'complete unequal-time covariance and sign-parity rule '
+                                         'for every finite joint moment, and rank-two tensor '
+                                         'fourth-moment contraction with onset covariance '
+                                         'eigenvalues 5/12 and 1/12; transfer is invertible on the '
+                                         'mean-zero subspace at every integer counter m>=2, so the '
+                                         'stated slice supports persist; the common-line '
+                                         'O(2)-covariant family is not an isotropic ensemble or a '
+                                         'single-valued equivariant root, and the singular square '
+                                         'pullback does not replace the primary tensor equation',
+                                'canon_section': '14. The gravitational wave program',
+                                'evidence': 'probes/P-TT-SELECTED-OUTGOING-STATE-1',
+                                'falsifier': 'fires if the declared invariant four-lift class '
+                                             'admits unequal sign masses, if any stated support, '
+                                             'prefix, square, mean, covariance, pseudo-covariance, '
+                                             'finite-moment, rank or all-counter transfer identity '
+                                             'fails on an admitted source and counter, or if the '
+                                             'stated singular-pullback boundary is false; '
+                                             'different state classes and physical realizations '
+                                             'are outside scope'},
+ 'TT-SELECTED-COMPOSITE-POWER': {'claim_id': 'TT-SELECTED-COMPOSITE-POWER',
+                                 'status': 'T',
+                                 'scope': 'at L1 conditional on ETH-TT-1 and its separately chosen '
+                                          'finite intensity readout s=|v|^2=|h|, coefficient one, '
+                                          'unitary five-site Fourier transform and connected '
+                                          'ensemble comparison: position kernels are rational at '
+                                          'every integer m>=2, all diagonal unscaled powers and '
+                                          'ratios lie in Q(sqrt(5)), full off-diagonal kernels may '
+                                          'lie in Q(zeta_5), and canonical powers carry '
+                                          '1/(2lambda); every connected intensity denominator is '
+                                          'positive, tensor zero-mode power vanishes and every '
+                                          'other tensor power is positive; at m=2 the k=0 values '
+                                          'are T=0,I=2/15, while the paired nonzero values are '
+                                          'T=(3+/-sqrt(5))/24, I=(7-/+2sqrt(5))/240 and '
+                                          'R_TI=10(31+/-13sqrt(5))/29, with total connected powers '
+                                          '1/2 and 1/4; counters 0 and 1 have undefined quotients '
+                                          'and this finite composite intensity ratio is not '
+                                          'cosmological r_T',
+                                 'canon_section': '14. The gravitational wave program',
+                                 'evidence': 'probes/P-TT-SELECTED-OUTGOING-STATE-1',
+                                 'falsifier': 'fires if an admitted source/counter violates a '
+                                              'displayed exact covariance, Fourier coefficient, '
+                                              'field of values, positivity, zero-mode, onset or '
+                                              'total-power identity; replacing connected powers by '
+                                              'raw powers or the intensity composite by a '
+                                              'propagating curvature scalar is outside scope'},
+ 'SELECTED-COSMO-SCALAR-TENSOR-TRANSFER': {'claim_id': 'SELECTED-COSMO-SCALAR-TENSOR-TRANSFER',
+                                           'status': 'T',
+                                           'scope': 'at L1 conditional on '
+                                                    'DEF-SELECTED-COSMOLOGICAL-COMPARISON '
+                                                    '(ETH-COS-1): the canonical Einstein-scalar '
+                                                    'exponential-potential background has '
+                                                    'epsilon=3/2 and sound speed one, the stated '
+                                                    'lapse/shift constraints and reduced '
+                                                    'scalar/tensor actions hold, and both '
+                                                    'canonical sectors obey '
+                                                    "q_j''+[K_j^2-2/(eta+2/H_*)^2]q_j=0 with "
+                                                    "common G_j(0)=1,G_j'(0)=1/d; the specified "
+                                                    'common translated classical preparation '
+                                                    'supplies all finite-point field/momentum and '
+                                                    'continued vector-root moments, zero vector '
+                                                    'mean and pseudo-covariance, homogeneous '
+                                                    'anisotropic spectra and vanishing '
+                                                    'tensor-scalar two-point kernels without '
+                                                    'independence; the per-mode full tensor '
+                                                    'contraction and scalar curvature variance '
+                                                    'yield r_T=60+24sqrt(5) on j=+/-1 and '
+                                                    '60-24sqrt(5) on j=+/-2 whenever scalar power '
+                                                    'is positive, with raw translated scalar seed '
+                                                    'J=I+1/80; the nontrivial transfer has '
+                                                    'isolated simple arbitrarily late zeros, at '
+                                                    'which the quotient is undefined, as it is at '
+                                                    'zero and unprepared modes; the common '
+                                                    'amplitude/context factors cancel only from '
+                                                    'the non-node ratio, the onset total ratio is '
+                                                    '36 and need not persist, and the finite '
+                                                    'directional classical model supplies no '
+                                                    'isotropic primordial spectrum, quantum vacuum '
+                                                    'or nonlinear error bound',
+                                           'canon_section': '14. The gravitational wave program',
+                                           'evidence': 'probes/P-TT-SCALAR-COSMOLOGICAL-DICTIONARY-1',
+                                           'falsifier': 'fires if any admitted positive context, '
+                                                        'source label or future time violates a '
+                                                        'stated background or constraint equation, '
+                                                        'action coefficient, canonical transfer, '
+                                                        'interpolation/translation identity, '
+                                                        'complete joint-moment formula, root '
+                                                        'identity, spectral normalization, support '
+                                                        'condition or displayed ratio, or if the '
+                                                        'claimed transfer-node properties fail; an '
+                                                        'observational target outside the selected '
+                                                        'finite directional model is not its '
+                                                        'mathematical falsifier'},
+ 'SELECTED-COSMO-SCALAR-CLOCK': {'claim_id': 'SELECTED-COSMO-SCALAR-CLOCK',
+                                 'status': 'D',
+                                 'scope': 'adopt exactly the scalar-clock action, marked context '
+                                          'C=(H_*,d,A,ell_0)>0, canonical-scalar expanding '
+                                          'background, constrained linear geometry and common '
+                                          'conformal/proper coordinate map of ETH-COS-1 for eta>=0 '
+                                          'as one selected L2 geometry; the source is the complete '
+                                          'formal ETH-COS-1 tuple, equality retains its marked '
+                                          'axis, polarization frame, onset, context, action and '
+                                          'all background/constrained-field maps, and scale '
+                                          'conversion uses ell_0 without an assigned SI value; the '
+                                          'exact conditional theorem supports the dictionary but '
+                                          'does not derive its choices from J, assert cosmological '
+                                          'occurrence, nonlinear accuracy, or identify it with the '
+                                          'older hybrid action',
+                                 'canon_section': '14. The gravitational wave program',
+                                 'evidence': 'inline',
+                                 'falsifier': 'fires on a mismatch between the adopted tuple and '
+                                              'its declared action, domain, background, '
+                                              'constraints, coordinate/clock maps, scale or '
+                                              'literal marked equality; the adoption is a model '
+                                              'choice, not a measured adequacy claim'},
+ 'SELECTED-COSMO-PREPARATION': {'claim_id': 'SELECTED-COSMO-PREPARATION',
+                                'status': 'D',
+                                'scope': 'on SELECTED-COSMO-SCALAR-CLOCK adopt the complete joint '
+                                         'classical ETH-COS-1 preparation: unchanged ten-word '
+                                         'source law, independent persistent fair root signs and '
+                                         'one independent common uniform translation on the '
+                                         'length-5d torus, canonical tensor seed A I '
+                                         'Phi/sqrt(2lambda), scalar seed A I '
+                                         'Pi_0|Phi|/sqrt(2lambda), common launch momentum q/d and '
+                                         'one fixed positive context for every source atom; the '
+                                         'carrier is the whole jointly prepared scalar/tensor '
+                                         'field and momentum law with its continued square-root '
+                                         'reading, and equality preserves the marked context and '
+                                         'every finite-point joint law; the scalar propagates '
+                                         'independently after launch, its extra preparation energy '
+                                         'is not recharged to the earlier complete TT-transfer '
+                                         'budget, and no material co-preparation source or quantum '
+                                         'vacuum is supplied',
+                                'canon_section': '14. The gravitational wave program',
+                                'evidence': 'inline',
+                                'falsifier': 'fires if the adopted preparation changes a frozen '
+                                             'seed coefficient, source/translation/sign law, '
+                                             'momentum, context, joint-law equality or independent '
+                                             'propagation rule while retaining this identifier; '
+                                             'microscopic realization is outside the adopted '
+                                             'theoretical contract'},
+ 'SELECTED-COSMOLOGICAL-COMPARISON': {'claim_id': 'SELECTED-COSMOLOGICAL-COMPARISON',
+                                      'status': 'D',
+                                      'scope': 'adopt ETH-TT-1 and ETH-COS-1 through the '
+                                               'registered scalar-clock and joint-preparation '
+                                               'dictionaries as one classical linear cosmological '
+                                               'comparison: on the common marked context, '
+                                               'coordinates, epoch and scale, read P_T=sum_ij '
+                                               'E|gamma_ij,j|^2 and P_S=E|zeta_j|^2 as theoretical '
+                                               'ensemble per-mode powers, and r_T=P_T/P_S only on '
+                                               'positive scalar-power support; equality retains '
+                                               'the full common field/momentum law and marked '
+                                               'context rather than only a numerical ratio; the '
+                                               'output is the two finite directional values '
+                                               '60+/-24sqrt(5), with nodes, zero mode and '
+                                               'unprepared modes explicitly undefined; one '
+                                               'occupied tensor polarization, anisotropy, finite '
+                                               'band, decelerating background, unfixed scale and '
+                                               'additional scalar preparation are retained, with '
+                                               'no L5 observed-event stream, empirical occurrence '
+                                               'law, isotropic primordial CMB identification or '
+                                               'nonlinear accuracy claim',
+                                      'canon_section': '14. The gravitational wave program',
+                                      'evidence': 'inline',
+                                      'falsifier': 'fires if the adopted readout changes the field '
+                                                   'carrier, common context or epoch, '
+                                                   'Fourier/polarization/action normalization, '
+                                                   'positive-support rule or full-law equality, or '
+                                                   'if a conditional exact ratio differs; '
+                                                   'agreement with experiment is not inferred from '
+                                                   'this dictionary'}}
+V91_OLD_REPLACEMENTS = {'TT-QUADRATIC-INDUCED': {'claim_id': 'TT-QUADRATIC-INDUCED',
+                          'status': 'D',
+                          'scope': 'the bilinear TT decoder permits induced tensor power at '
+                                   'quadratic field order: for the traceless symmetric doublet '
+                                   'det(I + H) - 1 = -|h|^2 exactly with no linear term; this '
+                                   'bilinear identity alone supplies no numerical r_T(k); the '
+                                   'complete selected normalization and scalar comparison are '
+                                   'supplied separately by TT-VECTOR-STATE-NORMALIZATION [D]',
+                          'canon_section': '13. Gravity and cosmology',
+                          'evidence': 'reproduce/cosmology-register',
+                          'falsifier': ''},
+ 'TT-VECTOR-STATE-NORMALIZATION': {'claim_id': 'TT-VECTOR-STATE-NORMALIZATION',
+                                   'status': 'D',
+                                   'scope': 'the original existential normalization decision is '
+                                            'closed positively at D by the adopted ETH-TT-1 and '
+                                            'ETH-COS-1 witness: the complete outgoing and '
+                                            'continued vector-doublet state with all joint '
+                                            'moments, two-point and pseudo-covariance spectra, '
+                                            'both scalar and tensor action normalizations, one '
+                                            'shared classical preparation and a common '
+                                            'coordinate/clock/scale contract yield numerical '
+                                            'r_T=60+24sqrt(5) and 60-24sqrt(5) on the two prepared '
+                                            'planar mode pairs at positive scalar power; the three '
+                                            'concrete dictionary gates own geometry, preparation '
+                                            'and comparison; this is one selected decelerating '
+                                            'finite-band classical witness, not a unique '
+                                            'normalization from J or a claim of a quantum vacuum, '
+                                            'isotropic primordial spectrum, microscopic energy '
+                                            'supply, nonlinear accuracy or SI calibration',
+                                   'canon_section': '14. The gravitational wave program',
+                                   'evidence': 'inline',
+                                   'falsifier': 'closed positively under the original clause, a '
+                                                'public vector-doublet normalization yielding a '
+                                                'numerical r_T(k), by the explicitly adopted and '
+                                                'typed ETH-TT-1/ETH-COS-1 witness; an exact '
+                                                'failure of that complete witness reopens this '
+                                                'disposition, while the old universal negative '
+                                                'alternative over every admissible normalization '
+                                                'is not asserted and experimental adequacy remains '
+                                                'a separate question'},
+ 'ENTROPY-LAYER-BRIDGE': {'claim_id': 'ENTROPY-LAYER-BRIDGE',
+                          'status': 'F',
+                          'scope': 'the complete registered Route A class A_A of '
+                                   'mu-almost-everywhere classes of measurable total maps P_5:K_TM '
+                                   'x O_(K,lambda)->F_5^6, with mu the product of the unique '
+                                   'Thue-Morse substitution probability and normalized additive '
+                                   'Haar probability, exact native equivariance and exact '
+                                   'pushforward Law_W on W=[512,2048), is empty by '
+                                   'ENTROPY-MEASURABLE-OBSTRUCTION; equivariance alone is '
+                                   'impossible, so the negative decision covers all measurable '
+                                   'readers without a finite-context or finite-residue '
+                                   'restriction; the source, law, equality and stable identifier '
+                                   'are unchanged and no replacement source or global sampling '
+                                   'impossibility is adopted',
+                          'canon_section': '3. The kernel and the census',
+                          'evidence': 'probes/P-ENTROPY-MEASURABLE-OBSTRUCTION-1',
+                          'falsifier': 'closed negatively by the complete theorem A_A=empty at the '
+                                       'original registered scope; an admitted exact measurable '
+                                       'equivariant map would refute the obstruction and reopen '
+                                       'this disposition, while a different source, correlated '
+                                       'measure, target or equality requires a distinct scope; '
+                                       'historical positive clause was one exhibited exact member '
+                                       'and historical negative clause was complete emptiness, not '
+                                       'failure of one proposal'},
+ 'QDD-INSTRUMENT-APPARATUS': {'claim_id': 'QDD-INSTRUMENT-APPARATUS',
+                              'status': 'O',
+                              'scope': 'the sole owner of the target-independent complete physical '
+                                       'apparatus debt split from QUADRATIC-DECODER-DATA, '
+                                       'transferred but not satisfied: projector_target_ids '
+                                       '(DEF-QDD-PROJECTOR-LOW,DEF-QDD-PROJECTOR-HIGH) remain '
+                                       'algebraic targets and are not aliases for physical '
+                                       'effects; ETH-QDD-1 now separately adopts one coherent '
+                                       'Galois-code source and context domain through '
+                                       'QDD-SELECTED-SOURCE, a controlled coarse instrument with '
+                                       'ready state, event/record, persistence, resource and '
+                                       'renewal semantics through QDD-SELECTED-RECORD, and the '
+                                       'one-supported-outcome ordered Born law through '
+                                       'QDD-SELECTED-BORN, with distinct L1-to-L4, L4-to-L5 and '
+                                       'L5-to-L6 dictionary gates; ETH-QDD-2 separately adopts its '
+                                       'tensor source, complete local pair records and pair law '
+                                       'through QDD-SELECTED-PAIR-SOURCE, QDD-SELECTED-PAIR-RECORD '
+                                       'and QDD-SELECTED-PAIR-LAW; these chosen model fields are '
+                                       'defined, not an assertion that every physical field '
+                                       'remains undefined, but do not supply the original '
+                                       'target-independent complete apparatus-family '
+                                       'class/equality, compatible phase equality, '
+                                       'target-independence and class-completeness certificates or '
+                                       'realization certificates, and do not establish the '
+                                       'original O1/O2 contract by adoption; O2 remains the '
+                                       'compatible conjunction of QDD-TERMINAL-EVENT-SEMANTICS and '
+                                       'QDD-INSTRUMENT-CLASS-COMPLETENESS, while O1 retains its '
+                                       'total typed realized-event and sampling obligations on the '
+                                       'same complete physical family; the exact rational '
+                                       'J-simplex, pure-record, COMM-SAT, finite-memory and '
+                                       '22-context carry-bank results still delimit only their '
+                                       'frozen mathematical classes; ALGEBRAIC-DMATTER and '
+                                       'QDD-ALGEBRAIC-FACTORIZATION do not close or partially '
+                                       'satisfy this parent, and PHYSICAL-DMATTER remains '
+                                       'unadopted, not falsified and not shown complete; the '
+                                       'selected effective occurrence law supplies no native '
+                                       'sampling derivation (SAMPLING NOT PROVIDED for the native '
+                                       'apparatus mechanism) and no sampling-impossibility '
+                                       'theorem; U-GALOIS-FIBER-CODE and U-GALOIS-FIBER-QDD-SPLIT '
+                                       'supply the selected code and algebraic LOW/HIGH '
+                                       'comparison, while physical realization of the required '
+                                       'complete apparatus contract remains open; '
+                                       'U-POINT-SOURCE-SHARP-READOUT-NOGO excludes only the '
+                                       'five-point free encoding with deterministic native '
+                                       'evolution and classical endpoint reading, not the complete '
+                                       'physical apparatus class',
+                              'canon_section': '2. Time, space, and the decoder',
+                              'evidence': 'inline',
+                              'falsifier': 'STOP until one target-independent complete physical '
+                                           'apparatus contract resolves every apparatus-manifest '
+                                           'field, O1 supplies a total typed realized-event '
+                                           'transducer on supported preparations with physical '
+                                           'context key, selected ready phase, '
+                                           'persistence/update/reset semantics, ZERO_SUPPORT '
+                                           'handling, exact ordered occurrence law and a passed '
+                                           'L1-to-L5 gate, and both O2 children close at '
+                                           'compatible scope and equality; algebraic projectors, '
+                                           'branch weights, factorization, conditional selectors, '
+                                           'carry-bank existence and pointwise finite-memory '
+                                           'completeness do not discharge the physical '
+                                           'identifiers; closes positively only when the same '
+                                           'selected complete family realizes the physical effects '
+                                           'and occurrence law exactly; closes negatively only for '
+                                           'a frozen complete admissible physical class proved '
+                                           'empty or unable to realize the required effects or '
+                                           'event law; failure to provide sampling remains STOP, '
+                                           'not a sampling-impossibility theorem, and an L6 '
+                                           'probability claim requires a separate gate'},
+ 'BELL-CAUSAL-ACCOUNTING': {'claim_id': 'BELL-CAUSAL-ACCOUNTING',
+                            'status': 'D',
+                            'scope': 'ETH-QDD-2 is the adopted complete preregistered Bell '
+                                     'accounting contract on its selected complex two-wing '
+                                     'carrier, singleton marked pair source, independent uniform '
+                                     'five-setting controllers, coarse CP instruments, realized '
+                                     'supported ordered records and normalized Born occurrence '
+                                     'law; the separately adopted L1-to-L4, L4-to-L5 and L5-to-L6 '
+                                     'dictionaries, named dimensionless inputs, full '
+                                     'setting-independent Bell-local factorization exclusion, '
+                                     'exact CHSH nonviolation, both marginal identities and '
+                                     'universal complete local-record no-message test satisfy the '
+                                     'original positive accounting decision at D; this does not '
+                                     'derive physical resources from J/U, report an experiment, '
+                                     'classify all physical apparatuses or choose a causal '
+                                     'mechanism; different physical Bell models remain subject to '
+                                     'the complete accounting contract and the independent QDD '
+                                     'physical obligations remain open',
+                            'canon_section': '8. The measure and Born',
+                            'evidence': 'inline',
+                            'falsifier': 'closed positively by the complete ETH-QDD-2 contract and '
+                                         'exact premise decision under the original clause; one '
+                                         'exact inconsistency in any declared field, gate, '
+                                         'normalization or premise test reopens this selected '
+                                         'accounting decision; different apparatuses, unprovided '
+                                         'experiments and alternative causal explanations do not '
+                                         'by themselves negate this bounded D model, and '
+                                         'factorization failure alone grants no signal or '
+                                         'mechanism'},
+ 'J-TORAL-PERIODIC-POINTS': {'claim_id': 'J-TORAL-PERIODIC-POINTS',
+                             'status': 'C',
+                             'scope': 'the exact structure of the registered fixed-point count of '
+                                      'T_J at finite range: for every n divisible by 5, |N(J^n - '
+                                      '1)| = L_n^2 when n = 5 mod 10 and (L_n - 2)^2 when n = 0 '
+                                      'mod 10, since J^n = phi^-n is then totally real and the '
+                                      'inner quadratic norm is L_n for odd n and 2 - L_n for even '
+                                      'n; among the 32 values with 5 not dividing n and 1 <= n <= '
+                                      '40 exactly one is a perfect square, namely n = 1 with value '
+                                      '1; and for every n >= 1 the two-sided bracket (phi^n - 1)^2 '
+                                      '(1 - phi^-n)^2 <= |N(J^n - 1)| <= (phi^n + 1)^2 (1 + '
+                                      'phi^-n)^2 holds by the triangle inequality on the two '
+                                      'conjugate pairs; verified by three independent exact routes '
+                                      'on 1 <= n <= 40; the closed-form and bracket clauses carry '
+                                      'written all-n proofs and a later fold may lift them under '
+                                      'their own gate, and the census clause is finite-range only; '
+                                      'no entropy, rate or measure statement is created and the '
+                                      'complete Route A negative decision ENTROPY-LAYER-BRIDGE [F] '
+                                      'is supplied separately by ENTROPY-MEASURABLE-OBSTRUCTION '
+                                      '[T]',
+                             'canon_section': '2. Time, space, and the decoder',
+                             'evidence': 'probes/P-TWOLOGPHI-INVARIANTS-1',
+                             'falsifier': 'a value of |N(J^n - 1)| on 1 <= n <= 40 differing '
+                                          'between the ring-norm, matrix-power and Lucas routes, a '
+                                          'Lucas closed form failing at any n divisible by 5 in '
+                                          'that range, a second perfect square among the 32 '
+                                          'off-residue values, or a bracket violation at any n in '
+                                          'that range'}}
+V91_CLOSURES = {'ENTROPY-LAYER-BRIDGE': 'F', 'TT-VECTOR-STATE-NORMALIZATION': 'D', 'BELL-CAUSAL-ACCOUNTING': 'D'}
+V91_COUNTS = {'C': 39, 'D': 59, 'F': 19, 'H': 2, 'O': 23, 'T': 320}
+
+def v91_previous_bytes(path):
+    """Pin every current byte and recover the exact public v90 input."""
+    patch = V91_INPUT_PATCH[path.name]
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v91_current_checks():
+    """Audit adopted dictionaries and earned closures separately from old guards."""
+    names = tuple(name for name in V91_INPUT_PATCH if name.endswith(".tsv"))
+    previous = {name: v87_table_bytes(v91_previous_bytes(ROOT / "canon" / name))
+                for name in names}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in names}
+    old_index = {row["claim_id"]: row for row in previous["REGISTRY.tsv"]}
+    index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    gates = {row["gate_id"]: row for row in current["GATES.tsv"]}
+    programs = {row["claim_id"]: row for row in current["FRONTIER_PROGRAMS.tsv"]}
+    new_ids = set(V91_NEW_ROWS)
+    theorems = {claim for claim in new_ids if index.get(claim, {}).get("status") == "T"}
+    dictionaries = new_ids - theorems
+    canon_text = CANON.read_text(encoding="utf-8")
+    counts = {status: sum(row["status"] == status for row in index.values())
+              for status in {row["status"] for row in index.values()}}
+    history = current["HISTORY.tsv"]
+    old_history = previous["HISTORY.tsv"]
+    new_events = history[len(old_history):]
+    old_live = {claim for claim, row in old_index.items() if row["status"] in {"H", "O"}}
+    live = {claim for claim, row in index.items() if row["status"] in {"H", "O"}}
+    old_gate_ids = {row["gate_id"] for row in previous["GATES.tsv"]}
+    new_gates = [row for key, row in gates.items() if key not in old_gate_ids]
+    return [
+        ("V91-PRIOR-BYTES",
+         "thirteen exact current inputs reconstruct public v90 before all 103 unchanged historical guards",
+         len(V91_INPUT_PATCH) == 13
+         and all(v91_previous_bytes(ROOT / "canon" / name) is not None for name in V91_INPUT_PATCH)),
+        ("V91-EXACT-RESULTS",
+         "new conditional theorems have exact scopes, immutable two-architecture probe bundles and declarations; adopted readings remain dictionaries",
+         set(index) == set(old_index) | new_ids
+         and {claim: index.get(claim) for claim in new_ids} == V91_NEW_ROWS
+         and bool(theorems) and bool(dictionaries)
+         and all(normative[claim]["item_type"] == "THEOREM"
+                 and normative[claim]["status"] == "T"
+                 and normative[claim]["gate_ids"] == ""
+                 and evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+                 and evidence[claim]["architecture_requirement"] == "two-architecture"
+                 and evidence[claim]["hash_mode"] == "bundle-manifest-sha256-v1"
+                 and v86_probe_bundle_sha256(evidence[claim]["location"].removesuffix("/RESULT.md"))
+                     == evidence[claim]["sha256"]
+                 for claim in theorems)
+         and all(normative[claim]["item_type"] == "DICTIONARY"
+                 and normative[claim]["status"] == "D" for claim in dictionaries)
+         and all(("### " + claim + " [" + index[claim]["status"] + "]" in canon_text)
+                 or any(line.startswith("### " + claim + ":")
+                        and ("\n".join(canon_text.splitlines()[position + 1:position + 4])).strip().startswith(
+                            claim + " [" + index[claim]["status"] + "]")
+                        for position, line in enumerate(canon_text.splitlines()))
+                 for claim in new_ids)
+         and all(sum(event["claim_id"] == claim and event["event_type"] == "DECLARE"
+                     and event["previous_status"] == "-" and event["new_status"] == index[claim]["status"]
+                     and event["release"] == "canon-v91-candidate"
+                     and event["scope_sha256"] == hashlib.sha256(index[claim]["scope"].encode()).hexdigest()
+                     and event["evidence_sha256"] == evidence[claim]["sha256"]
+                     for event in new_events) == 1 for claim in new_ids)
+         and not (new_ids & set(programs))),
+        ("V91-EARNED-CLOSURES",
+         "the complete entropy class closes F; adopted Bell and TT contracts close D with explicit dictionary gates and preserved original decision clauses",
+         len(old_index) == 437 and counts == V91_COUNTS
+         and {claim: index.get(claim, {}).get("status") for claim in V91_CLOSURES} == V91_CLOSURES
+         and all(old_index[claim]["status"] == "O"
+                 and index[claim]["falsifier"] == V91_OLD_REPLACEMENTS[claim]["falsifier"]
+                 and claim not in programs
+                 and any(event["claim_id"] == claim and event["previous_status"] == "O"
+                         and event["new_status"] == status and event["event_type"] == "STATUS_CHANGE"
+                         and old_index[claim]["falsifier"] in event["rationale"]
+                         for event in new_events) for claim, status in V91_CLOSURES.items())
+         and gates["GATE-L2-L5-ENTROPY-BRIDGE"]["gate_kind"] == "FIRED_NEGATIVE"
+         and bool(new_gates)
+         and all(row["gate_kind"] == "DICTIONARY_LIFT"
+                 and index[row["owner_item_id"]]["status"] == "D" for row in new_gates)
+         and not any(row["owner_item_id"] in theorems for row in gates.values())
+         and len(old_live) == 28 and live == old_live - set(V91_CLOSURES)),
+        ("V91-PHYSICAL-BOUNDARY",
+         "all previous history and decision clauses survive; three physical apparatus owners remain O, with only the apparatus scope acknowledging adopted choices",
+         history[:len(old_history)] == old_history
+         and all(index.get(claim) == V91_OLD_REPLACEMENTS.get(claim, row)
+                 for claim, row in old_index.items())
+         and all(index[claim]["status"] == row["status"] and index[claim]["falsifier"] == row["falsifier"]
+                 for claim, row in old_index.items() if claim not in V91_CLOSURES)
+         and all(index[claim]["status"] == "O" for claim in
+                 ("QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS", "QDD-INSTRUMENT-CLASS-COMPLETENESS"))
+         and all(index[claim] == old_index[claim] for claim in live - {"QDD-INSTRUMENT-APPARATUS"})
+         and (ROOT / "canon" / "CORE_SELECTION.tsv").read_bytes()
+             == v91_previous_bytes(ROOT / "canon" / "CORE_SELECTION.tsv")),
+    ]
+
 # Exact v90 input contract and reversible v89 reconstruction.
 V90_PRIOR_COMMIT = '9ffd942fe1981f3daf8016fe5cc268ec18397c49'
 V90_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '8b240611af17acc3fd05c29a4b7dac93d1f8394b657d95dbafe21a701aed9fed',
@@ -1017,7 +2667,9 @@ V90_CLAIM_IDS = ('J-HODGE-PREDICTIVE-CLOSURE',
 def v90_previous_bytes(path):
     """Validate the complete current file before reconstructing exact v89 bytes."""
     patch = V90_INPUT_PATCH[path.name]
-    current = path.read_bytes()
+    current = v91_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -1038,14 +2690,14 @@ def v90_current_checks():
     files = tuple(V90_ADDITIONS)
     previous = {name: v87_table_bytes(v90_previous_bytes(ROOT / "canon" / name))
                 for name in files}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v91_previous_bytes(ROOT / "canon" / name))
                for name in files}
     rows = current["REGISTRY.tsv"]
     index = {row["claim_id"]: row for row in rows}
     normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
     evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
     new_ids = {row["claim_id"] for row in V90_ADDITIONS["REGISTRY.tsv"]}
-    canon_text = CANON.read_text(encoding="utf-8")
+    canon_text = (v91_previous_bytes(CANON) or b"").decode("utf-8")
     counts = {status: sum(row["status"] == status for row in rows)
               for status in {row["status"] for row in rows}}
     exact_extensions = all(current[name] == previous[name] + V90_ADDITIONS[name]
@@ -1091,7 +2743,7 @@ def v90_current_checks():
          and index["QDD-OBSERVABLE-READING-FAMILY"]["status"] == "D"
          and all(index[claim]["status"] == "O" for claim in
                  ("QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS", "QDD-INSTRUMENT-CLASS-COMPLETENESS"))
-         and all((ROOT / "canon" / name).read_bytes() == v90_previous_bytes(ROOT / "canon" / name)
+         and all(v91_previous_bytes(ROOT / "canon" / name) == v90_previous_bytes(ROOT / "canon" / name)
                  for name in unchanged_names)
          and "selects neither L nor its amplitudes." in canon_text
          and "not a probability distribution, statistical independence or material memory." in canon_text),
@@ -11275,9 +12927,10 @@ def run():
     checks.extend(v88_current_checks())
     checks.extend(v89_current_checks())
     checks.extend(v90_current_checks())
+    checks.extend(v91_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v89, v88, v87, v86 and v85; current boundary: v90")
+    print("historical guards: exact reconstructed v90, v89, v88, v87, v86 and v85; current boundary: v91")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0
