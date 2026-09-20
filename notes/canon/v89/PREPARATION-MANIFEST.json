@@ -1,0 +1,72 @@
+{
+  "status": "NON-CANONICAL; local preparation identities, not public pins",
+  "base_commit": "e57d4506d5b28bf8cb4979c4e29db6b10b2441f2",
+  "scientific_verifiers_executed": false,
+  "files": [
+    {
+      "path": "notes/canon/v89/FOLD-DRAFT.md",
+      "bytes": 19011,
+      "sha256": "9eec7fb00fa94835c3beab894d1526ee102c3646c545c9e7a34265fc150a0be0"
+    },
+    {
+      "path": "notes/canon/v89/galois-channel/PREREG-DRAFT.md",
+      "bytes": 8688,
+      "sha256": "0f3d76b2709e73ea4172d0298585838c95fc5673afaeaaab252080e766d5d2c1"
+    },
+    {
+      "path": "notes/canon/v89/galois-channel/PROOF-DRAFT.md",
+      "bytes": 13669,
+      "sha256": "7d3c03dbb2c9848ad6df881e4bd6a86441a74588b9c2620ecb4081f529e5544d"
+    },
+    {
+      "path": "notes/canon/v89/galois-channel/SOURCE-REVIEW.md",
+      "bytes": 8540,
+      "sha256": "399926a8839d1b6bcc5fd6ab13b1ef979f9f86dafb70c103dc6ba309ab318dc3"
+    },
+    {
+      "path": "notes/canon/v89/galois-channel/verify.py",
+      "bytes": 14428,
+      "sha256": "7fdcfefd748bc7f084d845faad665e0cab29b45ec89388c8b1e55d218af371b9"
+    },
+    {
+      "path": "notes/canon/v89/PHYSICAL-CONTRACT.md",
+      "bytes": 12457,
+      "sha256": "ae3e143bcf857f5a88668003cef96c0a8098d05a01ec982efdf533c4ea5fce78"
+    },
+    {
+      "path": "notes/canon/v89/point-port/PREREG-DRAFT.md",
+      "bytes": 9634,
+      "sha256": "8dcb21668f42f0420ec4a9f53f9c365fa6ca0bdfdee7d9b100f25cd025cd90e0"
+    },
+    {
+      "path": "notes/canon/v89/point-port/PROOF-DRAFT.md",
+      "bytes": 11709,
+      "sha256": "c1e26791e3808d86da4d61e1b961005eda400dd2b49cce6b71f83020f3a4ab42"
+    },
+    {
+      "path": "notes/canon/v89/point-port/SOURCE-REVIEW.md",
+      "bytes": 8451,
+      "sha256": "1c9991b1b828fe88ea7fb221fa88452c3498bc6eb0368c8b35b26d0047fc6f00"
+    },
+    {
+      "path": "notes/canon/v89/point-port/verify.py",
+      "bytes": 12919,
+      "sha256": "db672316a35cd95d693677c1ca906bf7c40c359120196819c6acc56c836256dd"
+    },
+    {
+      "path": "notes/canon/v89/PREFLIGHT.md",
+      "bytes": 3385,
+      "sha256": "7c4483458a9ff245d515bb205faf70c9f99e868ba882852886dc7045da6bdd73"
+    },
+    {
+      "path": "notes/canon/v89/README.md",
+      "bytes": 5925,
+      "sha256": "0cf54b7d93538f092d0f38a2647dd13ad22470874413b9954e337448977deb52"
+    },
+    {
+      "path": "notes/canon/v89/REVIEW.md",
+      "bytes": 9880,
+      "sha256": "548ab1ace2962a4f9265b27979cdbaf153e7f12d5fc9211c0940cd625f713eca"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its ninety-seven checks cover the current
+and emits deterministic text. Its one hundred three checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -545,3 +545,24 @@ Counts become 419 claims, T286/D48/C39/H2/O26/F18. The passive family stays D.
 No physical owner, apparatus, preparation, occurrence or layer gate is adopted.
 The 97-check transcript is saved only after the structural audit succeeds;
 it is release bookkeeping, not a new scientific result or formal probe run.
+
+The v89 maintenance verifies thirteen complete current inputs before
+reconstructing exact public v88 at e57d4506d5b28bf8cb4979c4e29db6b10b2441f2.
+All earlier guard predicates and hash constants remain in force. Three new
+checks pin the three conditional L1 declarations, nine dependency edges,
+their two sealed proof-audit bundles, and the unchanged 419 preceding rows
+and 28 live H/O clauses. Counts are 422 claims, T289/D48/C39/H2/O26/F18.
+The point-port and complex coherent-code contracts stay distinct; no physical
+preparation, event occurrence, persistent record, reset or gate is adopted.
+The 100-check transcript is deterministic release bookkeeping and is saved
+only after all checks pass, not as a new scientific probe result.
+
+The v90 maintenance checks thirteen complete current inputs and reconstructs
+exact public v89 at 9ffd942fe1981f3daf8016fe5cc268ec18397c49. All earlier
+guard predicates and hash constants remain in force. Three new checks pin
+fifteen L1 T declarations, thirty-six dependency edges and twelve completed
+public source bundles. All 422 prior rows, 28 live H/O clauses, gates,
+Frontier programs and CORE selections stay exact. Totals are 437 claims,
+T304/D48/C39/H2/O26/F18. Target operators and amplitudes remain inputs;
+no physical selection or layer bridge follows. The 103-check transcript is
+deterministic release bookkeeping, not a new scientific probe.

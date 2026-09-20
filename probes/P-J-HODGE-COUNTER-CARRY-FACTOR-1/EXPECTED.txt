@@ -1,0 +1,12 @@
+P-J-HODGE-COUNTER-CARRY-FACTOR-1
+audit range n: 0..262144
+digit successor plus carry successor = 1: PASS
+cumulative carry = n-popcount(n): PASS
+unique normalized integer complement: PASS
+finite C8 exponent completion: PASS
+characteristic-zero fourth-power exponent = 2n: PASS
+loxodromic exponent pair (2n,n mod 10): PASS
+power-of-two carry witnesses through 2^18: PASS
+all-n statements: PROOF.md
+physical clock / cross-place carrier: NOT CLAIMED
+VERDICT: PASS

@@ -1,0 +1,5 @@
+P-ENTROPY-MEASURABLE-OBSTRUCTION-1 independent breaker
+native_pairs=4 tower_cases=20 crt_cases=100 PASS
+morse_legal_pairs=20 primitive_power=5 exact_fiber=5 PASS
+height_returns=3,349525 height_gcd=1 PASS
+finite_audit=PASS measurable_scope=WRITTEN_PROOF

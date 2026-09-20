@@ -1,0 +1,6 @@
+P-QDD-UNINTERRUPTED-RECORD-1 independent breaker
+affine_coefficients=5 generators; 15 stable conjugacies; 4 selectors PASS
+reduced_pairs=250; bijection, covariance, readiness and capacity PASS
+cyclotomic_W=16 intertwining and 16 Gram entries; two bases distinguished PASS
+matrix_units=16; joint cross terms=6; coarse/fine survivors=10/4; repetition PASS
+finite_audit=PASS all_durations=WRITTEN_INDUCTION physical_realization=OPEN

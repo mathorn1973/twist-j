@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v88
+# TWIST-J Public Canon v90
 
-**Release identity.** Public Canon v88. Normative authority and activation
+**Release identity.** Public Canon v90. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v88 also declares the discrete architecture used to read
+only. Public Canon v90 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. No fitted dimensionless parameter is introduced in the stated
@@ -20,7 +20,7 @@ forms; the single SI calibration anchor is the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v88 does not claim
+seed of the two algebraic projections. Public Canon v90 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -125,7 +125,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v88 contains no such
+deriving the architecture from J; Public Canon v90 contains no such
 theorem.
 
 ---
@@ -3189,6 +3189,220 @@ their physical preparation/adoption, actual coarse event, occurrence law,
 persistent post-event record, reset/repetition, complete apparatus family
 and L1-to-L5 gate remain unresolved. Any L6 measure needs its separate gate.
 
+### Native point ports and global coherent transfer
+
+These are L1 mathematical statements on two declared state descriptions.
+The original source point and the specified coherent code have different
+preparation contracts. A comparison channel on all complex matrices is an
+additional mathematical framework, not a physical channel derived from U.
+
+### QDD-NATIVE-POINT-PORT-CAPACITY [T]
+
+Let the original source be
+`p in F_5^4`. Fix any deterministic encoder `f:F_5^4 -> F_5^4`, without
+linearity or injectivity assumptions, and prepare exactly one encoded
+native point `f(p)` per source. The origin-zero native clock and U remain
+unchanged. The ready and optional processor randomness have one common
+source-independent law; f is fixed independently of that randomness.
+The processor receives only `A_n=(q_n,r_n)` and stipulated common inputs,
+with no additional source-sensitive input or intervention in native U.
+The same conclusion holds if it receives the entire quotient history
+`Q_n=(z_n,q_n,r_n)`, where z_n is the sum of all six native checkpoint
+coordinates modulo five. Memory, history processing, stopping and
+processor resets cannot change the stated input contract.
+
+For each fixed common seed, equality of
+`kappa_f(p)=sum_i f(p)_i mod 5` gives identical quotient histories and
+identical complete processor responses. Integrating over the common seed
+law gives a factorization of the complete response law through kappa_f,
+with at most five source-conditioned laws. All probabilities invoked here
+belong to that explicitly supplied seed model. Conditioning is allowed
+only on the same fixed measurable response event of positive probability;
+it preserves the factor
+on its domain. An undefined completion-conditional response is not zero.
+This is the deterministic closed quotient and all-history theorem of
+`U-NATIVE-APPARATUS-HISTORY-FACTOR` applied to f and then to common
+randomness, not a second registration of the inherited theorem.
+
+For the balanced lift `v_i in {0,1,2,-2,-1}`, set `s=sum_i v_i` and
+`N=sum_i v_i^2`. The original supported target is
+
+```text
+beta(p) = s^2 / [4(5N-s^2)],       p != 0.
+```
+
+The target remains beta(p), not beta(f(p)). The six balanced sources
+`(1,-1,0,0),(1,0,0,0),(1,1,0,0),(1,1,1,0),(2,1,1,2),(1,1,1,1)`
+have respective targets `0,1/16,1/6,3/8,9/14,1`. These six distinct
+values rule out the full required binary law on all supported original
+sources, while the complete 624-source census has 22 values. On the class
+of total binary response comparisons define
+
+```text
+error(f,b) = max_(p != 0) |b(kappa_f(p))-beta(p)|,
+             b:{0,1,2,3,4}->[0,1].
+```
+
+The exact optimum is `9/128` for arbitrary deterministic f, and `27/64`
+when f is a permutation of all 625 native piston labels.
+Attaining b uses stipulated
+comparison randomness; it does not derive occurrence from U. The null
+source has ZERO_SUPPORT and no beta value. In the permutation class its
+encoded sum fibre also contains supported original sources, supplying a
+separate support-tag obstruction. Neither this point-port result nor the
+older five-point sharp-readout theorem excludes full-state capture,
+correlated coherent preparation or every physical apparatus.
+
+For arbitrary encoding, six supported targets
+`0,9/64,2/7,5/8,49/64,1` have successive gaps at least `9/64`.
+Two must share one of five responses, giving radius at least `9/128`.
+These optima concern the declared relaxed five-response comparison,
+not every fixed ready; for example ready `(3,0)` has only four apparatus
+history classes. All 22 targets are covered by the five blocks
+`[0,1/46]`, `[1/26,1/6]`, `[2/7,3/8]`, `[5/8,49/64]`, `[1,1]`,
+whose centers are `1/92,4/39,37/112,89/128,1` and whose radii are
+at most `9/128`. Encode each block as `(j,0,0,0)`.
+
+For a permutation encoder every sum fibre has 125 labels, hence 124 or
+125 supported sources. Exactly 120 supported sources have target above `5/32`:
+the equivalent inequality `13s^2>25N` excludes mixed signs and includes
+24 same-sign equal-magnitude two-entry, 64 same-sign three-entry and 32
+same-sign four-entry vectors.
+Thus a fibre containing target one also contains a target at most `5/32`,
+giving radius at least `27/64`. Sort supported labels by `(beta,p)` and
+partition into sizes `124,125,125,125,125`. Their target extremes are
+`[0,1/176]`, `[1/176,1/56]`, `[1/56,1/16]`, `[1/16,5/32]`, `[5/32,1]`;
+their midpoints attain the bound. Map each block bijectively to a native
+sum fibre and put the null in the spare slot of the first fibre.
+The exact census follows by summing the multinomial coefficient
+`4!/product_a n_a!` over the 69 non-null multiplicity patterns on
+`a in {-2,-1,0,1,2}` with `sum_a n_a=4` and the displayed beta formula.
+The complete table and independent coefficient-convolution certificate
+are in the [point-port proof](../probes/P-QDD-NATIVE-POINT-PORT-CAPACITY-1/PROOF.md).
+At ready `(0,1)` the five encoded sums have distinct first apparatus
+observations `(0,4),(1,4),(1,0),(2,0),(0,1)`. This reads the comparison
+message; a common external rational randomizer supplies each center.
+
+### U-GALOIS-CPTP-POINT-COMPATIBILITY [T]
+
+Use the unchanged code of
+`U-GALOIS-FIBER-CODE` in normalized complex coordinates. Let the raw
+sixteen-point basis be `e_(k,a)`, with native endpoints `e_k`, and use the
+already fixed real Hadamard matrix H. Put
+
+```text
+C e_a = (1/2) sum_k H_(k,a) e_(k,a),   F=H/2,
+P=CC*,   R=I_16-P,   x_(k,a)=R e_(k,a).
+```
+
+Thus `C*C=I_4`. Writing the four public source-basis columns as `V=C S`
+gives an invertible complex coordinate map S with `S*S=G`, where
+`G=I_4-ones_4/5`; the complex source extension therefore spans all four
+normalized coordinates. No unsupported K-linear extension of the rational
+Galois source is used. Consider **all complex CPTP maps**
+`Phi:M_16(C)->M_4(C)` such that
+
+```text
+Phi(C rho C*) = F rho F*   for every rho in M_4(C).
+```
+
+These external CP/TP and matrix-carrier hypotheses are part of the
+comparison, not a physical reading adopted for individual native points.
+Exact transfer forces the code/complement decomposition
+
+```text
+Phi(X) = F C* X C F* + Psi(R X R),
+```
+
+where Psi is a CPTP channel on the twelve-dimensional complement. One
+common environment vector for every code input and the full four-dimensional
+output rank force the code/complement cross terms to vanish; checking only
+the four pure basis outputs without their complex matrix units is not this
+condition.
+
+Define coordinate agreement and its worst and mean values by
+
+```text
+s_(k,a)(Phi) = <k|Phi(|k,a><k,a|)|k>,
+s_min(Phi) = min_(k,a) s_(k,a)(Phi),
+s_mean(Phi) = (1/16) sum_(k,a) s_(k,a)(Phi).
+```
+
+Both maxima over the complete exact-transfer class are `5/8`, attained
+simultaneously. Consequently the least worst coordinate error
+`max_(k,a)(1-s_(k,a))` is `3/8`. This error is the lost probability in the
+specified endpoint coordinate test; it is not full quantum trace distance,
+an original-QDD weight error or an experimental discrepancy.
+
+For the upper bound put `E_k=Psi*(|k><k|)` on ran R. Then
+`sum_k E_k=R`, `||x_(k,a)||^2=3/4` and
+`s_(k,a)=1/16+<x_(k,a),E_k x_(k,a)>`. For fixed k the four x vectors are
+orthogonal; their outer-product sum is `3/4` times its rank-four support
+projector. Positivity gives total complement agreement at most
+`(3/4)Tr R=9`, hence mean at most `(1+9)/16=5/8`, and the minimum cannot
+exceed the mean. The explicit exact-code channel with
+
+```text
+E_k = sum_a |x_(k,a)><x_(k,a)|
+```
+
+has every agreement equal to `1/16+9/16=5/8`. As a separate control, the
+point-exact control
+`Lambda(X)=sum_a L_a X L_a*`, with `L_a e_(k,b)=delta_ab e_k`,
+has every raw s equal to one but uniform endpoint coordinate populations
+on every normalized code input. For `alpha=(1,1,1,1)/2` its output is
+`I_4/4`, whereas exact code transfer requires `|0><0|`. Thus it does not
+transfer the coherent code.
+
+### U-GALOIS-OPTIMAL-AUXILIARY-DIMENSION [T]
+
+Equality in either optimum
+forces the four complement coordinate effects to be exactly the displayed
+E_k, each rank four. The equality proof includes every positive slack,
+off-block completeness and the independent simplex outer products; equality
+of the objective alone is not a uniqueness proof. These effects do not fix
+one global channel: the seventeen-Kraus and five-Kraus constructions have
+the same optimal coordinate agreement but differ on off-code coherences.
+For raw `e_(0,0)` their output `(0,1)` entries are respectively `1/16`
+and `-1/8` in the fixed real phase convention.
+
+In any pure Stinespring realization of an optimizing channel the code
+uses one common environment direction; the complement is orthogonal to it
+because the code output has full rank. A complement effect of rank four
+requires at least four further environment directions. Hence the purified
+auxiliary dimension is at least five. Four complement Kraus maps obtained
+by grouping the rows of R by a, together with `F C*`, attain five. The bound
+counts every purification degree and cannot be reduced by calling an
+untracked mixed preparation free. Without optimal point agreement a
+four-dimensional pure auxiliary is possible, with raw coordinate agreement
+`1/4` in the exhibited control; four is already the
+dimension lower bound for an isometry from dimension sixteen into
+dimension four times the auxiliary.
+
+A constructive rational orthogonal completion is
+
+```text
+U20 = ((R, C), (F C*, 0_4)).
+```
+
+It maps `(C alpha,0)` to `(0,F alpha)`. Its exact twenty-dimensional
+matrix and component factorization are certificates of the construction,
+not extra public claims or a new law for native U. All residual output
+modes remain part of the map. The matched loader and inverse loader
+cancel explicitly when that factorization is composed. The auxiliary is
+the same fixed state for every code input; it is not a LOW/HIGH outcome
+record. No carrier identification, realized event, occurrence, persistent
+record or reset is supplied.
+
+The [global-channel proof](../probes/P-U-GALOIS-CHANNEL-OPTIMUM-1/PROOF.md)
+gives the complete complex equality argument and rational constructions.
+The corresponding public results are
+[point-port capacity](../probes/P-QDD-NATIVE-POINT-PORT-CAPACITY-1/RESULT.md)
+and [global coherent transfer](../probes/P-U-GALOIS-CHANNEL-OPTIMUM-1/RESULT.md).
+All three theorems concern conditional L1 mathematics.
+Physical preparation, event occurrence, persistence and reset remain
+with their existing open owners.
+
 ### Passive QDD observable family
 
 The owner selects a family of five parallel L1 algebraic views of the existing
@@ -5956,6 +6170,155 @@ or observable identification, realization certificate, reset satisfying the
 apparatus contract, independent occurrence law, frequency convergence, Born
 derivation or admitted measurement payload.
 
+### Native finite readers and counter-dependent amplitudes
+
+The autonomous native state remains Omega=N_0 x F5^6, with unchanged
+U(n,x)=(n+1,g_(z(x)+2 theta_n)(x)). Here L, E_+, T and R are the marked exterior J operator, fixed-axis
+predictive chart and primary/periodic projectors defined in section 3.
+The finite-reader hypothesis is distinct from the counter-dependent classes below.
+
+### U-J-HODGE-FINITE-READER-BOUNDARY [T]
+
+The complete periodic-vector
+locus of L is im(R)=ker(L^10-I); every nonzero vector in it has exact period
+ten. Its intersection with E_+ has dimension two. For a fixed function r on
+any finite configuration set and any sequence y_n in that set, exact
+r(y_n)=L^n v for all n>=0 implies Tv=0. No periodic-source assumption is
+needed. If Tv is nonzero, agreement on 0,...,N requires N+1 distinct reader
+configurations. For fixed finite-address free-linear encodings B_src, fixed
+linear output D and arbitrary deterministic pushforwards N_n, the identity
+D N_n B_src=L^n D B_src implies T D B_src=0. The image rank is at most four,
+or at most two inside E_+. Unrestricted counter access is outside the
+finite-reader hypothesis. These bounds neither contradict coherent source
+retention nor construct a native reader of a nonzero periodic L-orbit.
+
+The exact public audit and its scope are in [P-U-J-HODGE-CHECKPOINT-NOGO-1](../probes/P-U-J-HODGE-CHECKPOINT-NOGO-1/RESULT.md).
+
+Use X=F5^6 in native order (p1,p4,p1p,p4p,q,r), z the coordinate sum,
+f_t(x)=g_(z(x)+2t)(x), d_n=f_(theta_n), E_0=id and E_(n+1)=d_n E_n.
+All checkpoint formulas here are modulo five. Distinguish
+the whole Omega=N_0 x X from the origin-zero reachable domain
+
+    D={(n,x):x in X_n},    X_n=E_n(X).
+
+Fix any target set Y and stipulated bijection L:Y->Y. In this section L is
+an arbitrary target, not necessarily the exterior J operator.
+
+### U-COUNTER-SEPARABLE-QUOTIENT [T]
+
+Put
+
+    S=p1+p4+p1p+p4p,    T0=p1+p4-p1p-p4p-3,
+    kappa(x)=(S-1,-T0-2r)  if z=0,
+             (S,T0)        if z=1 or z=2,
+             (S,-T0)       if z=3 or z=4,
+    Q(x)=[kappa(x)] in F5^2/{+1,-1}.
+
+Every selected edge changes kappa by a common sign. Its 25 oriented fibres
+have 625 heads each, 125 on each phase sheet. The Q fibres are exactly the
+weak connected components of the two-control graph: thirteen components,
+one of size 625 and twelve of size 1250. Connectivity is proved by the
+explicit transient excursions, not inferred from the counts. Consequently
+F f_0=F=F f_1 holds precisely when F=g Q for a unique g. Cancellation of
+L^(n+1), since both controls occur, gives the complete whole-Omega
+separable classification
+
+    R U=L R, R(n,x)=L^n F(x)
+      iff R(n,x)=L^n g(Q(x)),    g arbitrary.
+
+This does not classify general nonseparable readers on Omega or identify
+one actual trajectory with a whole weak component.
+
+The exact public audit and its scope are in [P-U-COUNTER-AMPLITUDE-CLASS-1](../probes/P-U-COUNTER-AMPLITUDE-CLASS-1/RESULT.md).
+
+### U-COUNTER-REACHABLE-AMPLITUDE-CLASS [T]
+
+Let Lambda_n
+be the canonical chart of U-NATIVE-CHART-AND-QDD-READBACK for n>=3.
+It is a bijection X_n->F5^5 with Lambda_(n+1)d_n=Lambda_n. Extend it by
+
+    ell_n(x)=Lambda_3(d_2 ... d_n(x)),  0<=n<3, x in X_n;
+    ell_n(x)=Lambda_n(x),              n>=3,   x in X_n.
+
+The first expression composes the chronological maps from tick n to tick
+three on the supplied checkpoint; it is not a future observation port.
+Every ell_n is onto, ell_(n+1)d_n=ell_n, and ell_0 has exactly the canonical
+3125 E_3 fibres, each with five heads, one from every initial phase. These
+counts and the all-clock chart are inherited, not a new retention theorem.
+
+All readers R:D->Y intertwining the stated target are exactly
+
+    R(n,x)=L^n G(ell_n(x)),    G:F5^5->Y arbitrary and unique.
+
+Indeed R(n,E_nx)=L^n R(0,x); equality of E_3 images forces equal initial
+amplitudes by injectivity of L^3. Conversely conserved ell gives the formula
+and intertwining at every reachable state. There are at most 3125 distinct
+initial amplitudes, attainable when Y has at least that many points. This
+class admits every stipulated target bijection and every G, and hence
+selects neither L nor its amplitudes.
+
+In chart coordinates the explicit projection to the smaller invariant is
+
+    Q(x)=qbar(ell_n(x)),
+    qbar(alpha,beta,gamma,delta,epsilon)
+        =[alpha+beta,gamma+delta].
+
+Its fibres have sizes 125 once and 250 twelve times. Restriction of the
+whole-Omega separable class to D is exactly G=g qbar, a strict subclass
+when Y has at least two points. This explains the different counts without
+equating their domains or reader classes. A finite amplitude image may span
+a six-dimensional characteristic-zero vector space but is not surjective
+onto that space.
+
+The exact public audit and its scope are in [P-U-COUNTER-AMPLITUDE-CLASS-1](../probes/P-U-COUNTER-AMPLITUDE-CLASS-1/RESULT.md).
+
+### U-SELECTOR-AMPLITUDE-COMMON-FACTOR [T]
+
+For every head,
+z(E_3x)=i_3(x)=1. A counter-dependent family reading only the current z or
+selected index and realizing L^n a(x) for all heads and times therefore
+forces a to be constant, by cancellation at tick three. Counter dependence,
+nonlinearity and unbounded targets do not remove this conclusion.
+
+The complete phase history, complete selector-index history and prefixes
+containing tick zero each distinguish exactly the five initial-phase
+classes: the phase dynamics is closed and its first index equals z(x).
+Every amplitude from this history is therefore H(z(x)). In contrast,
+
+    x -> (ell_0(x),z(x))
+
+is a bijection X->F5^5 x F5 because every E_3 fibre has exactly one head
+from each phase sheet. Hence G(ell_0(x))=H(z(x)) for every head forces
+both functions to be constant. An amplitude admitting both a current full
+checkpoint invertible-target reader on D and a selector-history reader has
+no nonconstant common factor. This is a source-label product decomposition,
+not a probability distribution, statistical independence or material memory.
+
+The exact public audit and its scope are in [P-U-COUNTER-AMPLITUDE-CLASS-1](../probes/P-U-COUNTER-AMPLITUDE-CLASS-1/RESULT.md).
+
+### U-COUNTER-ADDITIVE-AMPLITUDE-OBSTRUCTION [T]
+
+If the
+amplitude G is additionally required to be additive from the declared chart
+group (F5^5,+) to a characteristic-zero vector space W, then
+
+    5G(l)=G(5l)=G(0)=0
+
+forces G=0. This is conditional on adopting chart-group addition. It excludes
+no arbitrary nonlinear map, free function-space linearization or separately
+declared integer lift. The sign quotient Q itself has no inherited vector
+addition without another definition.
+
+The static audit [(u,v)]->(u^2,uv,v^2) gives thirteen rank-at-most-one
+matrices, twelve nonzero in six projective directions. It is an auxiliary
+coordinate description of the quotient, not the complete determinant-zero
+cone or a new Hodge-axis identification. Let C_5 be the coordinate five-cycle on the five-label permutation carrier.
+The selected basis vector C_5^(2t)e_z differs from (I+C_5^2)e_z, including modulo constants over Z and F5.
+The static sum operator must not be substituted for the actual selected
+native update. These auxiliary checks receive no separate physical claim.
+
+The exact public audit and its scope are in [P-U-COUNTER-AMPLITUDE-CLASS-1](../probes/P-U-COUNTER-AMPLITUDE-CLASS-1/RESULT.md).
+
 ## 3. The kernel and the census
 
 F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
@@ -7366,6 +7729,206 @@ quantum-state, apparatus or universal-computation bridge, it does not prove
 the marking forced by `J`, and it supplies no physical carrier, preparation,
 coupling, branch occurrence, Born rule, common-branch law in Nature, decoder
 completion, speedup, universality, clock, gravity, SI quantity or L2-L6 lift.
+
+### Marked exterior J dynamics
+
+Let V=A4 tensor Q in the ordered root basis a_i=e_i-e_0, i=1,...,4, with
+Gram H=I+11^t and its marked orientation. Let C be the coordinate five-cycle,
+M=I+C^2, W=Lambda^2 V, and L=Lambda^2 M. In wedge order 01,02,03,12,13,23,
+let beta be the wedge pairing, G=Lambda^2 H, and K=beta G. Over
+F=Q(sqrt(5)) put P_+=(I+K/sqrt(5))/2, P_-=(I-K/sqrt(5))/2 and
+W_+=im(P_+), W_-=im(P_-). CARRY-PENTAD supplies the marked integral
+conjugacy of M with multiplication by J. This marking is a declared
+mathematical input, not a physical selection.
+
+### J-HODGE-PREDICTIVE-CLOSURE [T]
+
+K is integral, K^2=5I and
+dim_F W_+=dim_F W_-=3. Both directed cross operators have rank one:
+
+    rank(P_- L P_+)=rank(P_+ L P_-)=1.
+
+For each sign, the common kernel of P_sign L^n over n>=0 has dimension two,
+so the least F-linear predictive state for one fixed L has dimension four.
+It is attained by E_+=W_+ + im(P_- L P_+), and similarly for E_-.
+For the full future-word class generated by Lambda^2(A5) and L the common
+invisible space is zero and the minimum is six. A pair of decomposable
+bivectors has equal current plus output and unequal next plus output on the
+full extended carrier. These minima concern the frozen linear classes;
+they are not dimensions of physical space or unrestricted set encodings.
+
+The exact public audit and its scope are in [P-J-HODGE-PREDICTIVE-CLOSURE-1](../probes/P-J-HODGE-PREDICTIVE-CLOSURE-1/RESULT.md).
+
+### J-HODGE-HERM2-LOXODROME [T]
+
+E_+ is L-invariant, beta|E_+ has real
+signature (3,1) in the chosen embedding, and L preserves it. With
+phi=(1+sqrt(5))/2,
+
+    char_(L|E_+)(X)=(X^2-3X+1)(X^2-phi X+1).
+
+The pairs are phi^2,phi^-2 and zeta_10,zeta_10^-1, with j=zeta_5 and zeta_10=-j^3.
+The exact identity -J^-2=phi^2 zeta_10 makes these the modulus and phase
+factors of the normalized diagonal Hermitian action associated with
+diag(-J^-2,1). Equality of these algebraic factors is the complete comparison
+asserted; it supplies no canonical physical Herm2 identification.
+
+Put A=Lambda^2 C,
+
+    T=(I+A+A^2+A^3+A^4)/5,    R=I-T.
+
+These are rational complementary projectors of ranks two and four. They
+commute with L and K. The primary factor on im(T) is X^2-3X+1; the factor
+on im(R) is Phi_10(X)=X^4-X^3+X^2-X+1. The full-carrier projector
+and factor identities are proved in the [finite-reader proof](../probes/P-U-J-HODGE-CHECKPOINT-NOGO-1/PROOF.md).
+
+The exact public audit and its scope are in [P-J-HODGE-HERM2-LOXODROME-1](../probes/P-J-HODGE-HERM2-LOXODROME-1/RESULT.md).
+
+### J-HODGE-SEMILINEAR-MEMORY [T]
+
+Write sigma for the nontrivial
+automorphism of F. For a rational substrate vector w and conjugate plus/minus
+bases B_+, B_-=sigma(B_+), its plus coordinates x determine
+
+    w=B_+ x+B_- sigma(x),
+    x_next=A_0 x+B_0 sigma(x),    rank B_0=1.
+
+This map is Q-linear and is not F-linear. Thus the exact rational-source
+triple already has a closed update when conjugation is allowed. The extra
+coordinate is necessary only for the stated F-linear predictive realization.
+If Obs is the current triple on E_+, the exact ranks are
+
+    rank [Obs; Obs L|E_+]=4,
+    rank [Obs; y (L|E_+)^-1]=4,
+
+where y is a nonzero scalar coordinate of the rank-one primary projection
+of W_+. Its output satisfies y_(n+2)=3y_(n+1)-y_n. The current triple and
+one previous axial value therefore attain the four-dimensional F-linear
+minimum for a fixed marked J.
+
+On the primary and periodic sectors respectively,
+
+    K L K^-1 T=L^-1 T,    (KL-LK)R=0.
+
+The basis-independent primary characteristic data are trace 3 and
+determinant 1. In a conjugate Hodge basis the diagonal entries are 3/2 and
+the cross coefficients obey c_+ c_-=5/4. Individual cross coefficients
+depend on basis scale. The explicitly frozen normalization in the evidence
+gives exactly (1/2)[[3,-sqrt(5)],[-sqrt(5),3]]. The normalization is not an
+additional invariant or a physical time identification.
+
+The exact public audit and its scope are in [P-J-HODGE-SEMILINEAR-MEMORY-2](../probes/P-J-HODGE-SEMILINEAR-MEMORY-2/RESULT.md).
+
+### J-HODGE-RATIONAL-CLOSURE [T]
+
+sigma exchanges E_+ and E_-;
+
+    dim_F E_+=dim_F E_-=4,
+    E_+ intersect E_-=im(T)_F,
+    E_++E_-=W_F.
+
+The intersection has dimension two and is Q-defined. Every Q-subspace U
+whose scalar extension contains the full E_+ also contains E_- and equals
+W_Q. Hence its least Q-dimension is six, without an L-invariance premise.
+The integral lattice Lambda^2 A4 attains rank six and is L-invariant.
+Moreover E_+ intersect W_Q=im(T)_Q, and the visible periodic two-plane
+E_+ intersect im(R)_F has no nonzero rational vector. This is a containing
+carrier theorem, not a bound for every possible additive encoding.
+
+The exact public audit and its scope are in [P-J-HODGE-INTEGRAL-LIFT-1](../probes/P-J-HODGE-INTEGRAL-LIFT-1/RESULT.md).
+
+### Ramified Hodge carrier and six-axis atlas
+
+### A4-RAMIFIED-HODGE-TRACEKERNEL [T]
+
+At the prime five, Kbar^2=0,
+rank(Kbar)=3 and
+
+    im(Kbar)=ker(Kbar)=ell wedge Vbar,
+
+where ell spans the radical of the reduced root Gram. The reduced root Gram Hbar has kernel <ell> and image W_5; its induced
+quotient map Vbar/<ell> to the public residual carrier (W_5,g_5) is an isometry.
+The alternating quotient map descended from Kbar transports to exactly
+minus the public metric-volume bracket of TRACEKERNEL-F5-HODGE-BRACKET in
+the frozen marked orientation. The marked A5 generators preserve the metric
+and commute with that transport. Thus the two characteristic-zero Hodge
+triples become one rank-three image/kernel self-extension at five.
+This identifies exact L1 carriers and brackets; it does not force a spatial
+commutator class or close TRACEKERNEL-CURVATURE-FORCING.
+
+The exact public audit and its scope are in [P-A4-RAMIFIED-HODGE-TRACEKERNEL-1](../probes/P-A4-RAMIFIED-HODGE-TRACEKERNEL-1/RESULT.md).
+
+### J-C5-HODGE-CONIC-ATLAS [T]
+
+The six Sylow-5 subgroups P of the marked A5
+each fix a distinct line T_P in W_-. For all 24 order-five elements c,
+
+    im(P_- Lambda^2(I+c^2) P_+)=T_<c>.
+
+Under the positive metric -beta on W_-, these six lines have pairwise
+squared angle 1/5 and their metric line projectors sum to 2I_3. Each
+normalizer has order ten; the labels form A5/D5. In the ramified W_5 carrier
+the same labels give exactly its six projective isotropic lines. Each
+W_+ direct-sum T_P is a mathematical four-dimensional Lorentzian predictive
+chart. No label is selected as a physical observer or time axis.
+
+The exact public audit and its scope are in [P-J-C5-HODGE-CONIC-ATLAS-1](../probes/P-J-C5-HODGE-CONIC-ATLAS-1/RESULT.md).
+
+### Native linear-word and counter-exponent boundaries
+
+### NATIVE-BC-HODGE-D5-OBSTRUCTION [T]
+
+The canonical native linear b,c
+pair and marked Hodge D5 pair have different F5 modules. For bc the ranks
+of (bc-I)^k, k=1,...,5, are 1,0,0,0,0; for the marked Hodge cycle they are
+4,3,2,1,0. In both frozen cycle orientations the simultaneous intertwiner
+space has dimension eight and contains no invertible map. The native pair
+has an eleven-dimensional space of invariant symmetric forms. Absence of
+an invertible simultaneous intertwiner is not nonuniqueness of transported Hodge data.
+
+The exact public audit and its scope are in [P-NATIVE-BC-HODGE-D5-SEAM-1](../probes/P-NATIVE-BC-HODGE-D5-SEAM-1/RESULT.md).
+
+### NATIVE-LINEAR-HODGE-ORDER5-OBSTRUCTION [T]
+
+The group generated by the
+five native linear parts has order 200 and exactly 24 elements of order five.
+All have Jordan type J_2(1)+J_1(1)^4, whereas the marked exterior Hodge cycle
+has J_5(1)+J_1(1). No finite native word linear part is conjugate to the
+marked Hodge five-cycle or its inverse. The fired subgroup generated by
+b,d,e has order four and no order-five element.
+
+The exact public audit and its scope are in [P-NATIVE-LINEAR-ORDER5-HODGE-CLASS-1](../probes/P-NATIVE-LINEAR-ORDER5-HODGE-CLASS-1/RESULT.md).
+
+### NATIVE-LINEAR-JHODGE-STEP-OBSTRUCTION [T]
+
+The actual reduced exterior
+J step Lambda^2(I+C^2) has order ten and Jordan type J_5(-1)+J_1(-1), with
+ranks of (L+I)^k equal to 4,3,2,1,0,0. In the native linear group the only
+(-1)-unipotent elements are -I and 24 elements with ranks 1,0,0,0,0,0.
+Therefore no finite native word linear part is similar to this actual step.
+These word obstructions do not classify affine, nonlinear, history,
+time-dependent gauge or counter-assisted readings and do not falsify U.
+
+The exact public audit and its scope are in [P-NATIVE-LINEAR-JHODGE-STEP-CLASS-1](../probes/P-NATIVE-LINEAR-JHODGE-STEP-CLASS-1/RESULT.md).
+
+### J-HODGE-COUNTER-CARRY-EXPONENT [T]
+
+With s_2 the binary digit sum,
+
+    s_2(n+1)-s_2(n)=1-nu_2(n+1),
+    C(n)=sum_(m=1)^n nu_2(m)=nu_2(n!)=n-s_2(n).
+
+C is the unique integer sequence starting at zero that complements the digit
+increment to one. In a free cyclic exponent carrier, the unique normalized
+completion of r^s_2(n) to r^n is r^C(n). At the finite order-eight root this
+remains a finite record. Separately, for positive real rho^2=phi the fourth
+power of rho^s_2(n) rho^C(n) is phi^(2n), giving the target hyperbolic
+multiplier and its reciprocal. The torsion phase zeta_10^n remains separate.
+The factorial valuation identity is classical; its typed exponent comparison
+supplies neither a native-Hodge intertwiner nor a physical clock or gravity
+law. SQRT-PHI-TIME-GRAVITY remains open.
+
+The exact public audit and its scope are in [P-J-HODGE-COUNTER-CARRY-FACTOR-1](../probes/P-J-HODGE-COUNTER-CARRY-FACTOR-1/RESULT.md).
 
 ## 4. The two places
 

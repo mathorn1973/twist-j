@@ -1,0 +1,18 @@
+PASS native trace and involution identities: 78125 cases
+PASS oriented invariant on every selected edge: 31250 cases
+PASS fibres: 25 oriented; 13 sign classes; 625:1,1250:12
+PASS each oriented fibre on each trace sheet: 125 states
+PASS transient paths and H/G formulas: all 15625 states
+PASS transient translations: exact two-dimensional sum kernel
+PASS quadratic record: 13 matrices; 6 directions each with 2 values
+PASS cone guard: quadratic image 13 differs from full null cone 25
+PASS trace reset: all heads at n=3 have trace/index 1
+PASS selector versus branch sum: 1 versus 2, also unequal modulo constants
+PASS clock identities: n=3..4095; switch-count recurrence m=0..4096
+PASS E3 labels: 3125 fibres, five heads and all five phases each
+PASS head decomposition: (ell_0,initial phase) is a 15625-pair bijection
+PASS conserved labels and Q=qbar(ell_n): all 15625 heads, n=0..31
+PASS reachable chart and both inverse identities: n=3..31, 3125 states each
+PASS chart quotient: 13 fibres; 125:1,250:12
+PASS strict subclass witness: equal Q, distinct retained epsilon labels
+RESULT COUNTER-AMPLITUDE-CLASS PASS; target L and assignment G remain inputs

@@ -1,5 +1,40 @@
 # Canon changelog (public series)
 
+## Public Canon v90
+
+Add fifteen exact L1 theorems from twelve completed public probes: marked
+exterior J predictive and semilinear closure, its Lorentzian factors,
+minimal rational containing carrier, ramified trace-kernel bracket and
+six-axis atlas; finite-reader and complete native-linear-word obstructions;
+the typed classical digit-plus-carry exponent comparison; and complete
+thirteen-class separable versus 3125-label reachable amplitude descriptions,
+their selector common-factor boundary and conditional additive obstruction.
+
+The fixed-axis 3-to-4 minimum is F-linear; the exact rational-source triple
+already has a semilinear update. The 4-to-6 minimum is for Q-defined
+containing carriers. Arbitrary target operators and amplitudes remain inputs.
+No physical time, spatial dimension, apparatus, occurrence or layer bridge
+is selected. All 422 prior Registry rows and all 28 live H/O obligations
+retain their exact scopes and statuses; gates, Frontier programs and CORE
+selections are unchanged. The release audit reconstructs exact v89 inputs
+before every historical guard.
+
+## Public Canon v89
+
+Add three conditional L1 theorems in two completed public probes. A fixed
+deterministic native point encoder preserves the five-law apparatus-port
+capacity; its original beta target has sharp relaxed minimax errors 9/128
+and 27/64 for arbitrary and faithful encoders respectively. On the separate
+complex Galois code, exact CPTP transfer has optimal endpoint coordinate
+agreement 5/8, unique optimizing complement effects but nonunique channels,
+and minimum optimal purified auxiliary dimension five.
+
+All 419 preceding Registry rows and all 28 live H/O obligations retain
+their exact scopes and statuses. No physical preparation, event occurrence,
+persistent record, reset, apparatus completeness, new dictionary or layer
+gate is supplied. Gates, Frontier programs and CORE selections are unchanged.
+The release audit reconstructs exact v88 inputs before all historical guards.
+
 ## Public Canon v88
 
 Add three conditional L1 theorems following the selected passive QDD family:
@@ -96,7 +131,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 419 claims; 0 T-LOCK, 286 T, 48 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
+Registry snapshot: 437 claims; 0 T-LOCK, 304 T, 48 D, 39 C, 2 H, 26 O, 18 F; 28 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 

@@ -1,0 +1,8 @@
+P-J-HODGE-HERM2-LOXODROME-1 verifier
+predictive carrier dimension: 4
+beta restriction signature certificate: 3 + 1
+L preserves beta on E_J: PASS
+characteristic factors: X^2-3X+1 ; X^2-phi X+1
+a_H = -J^-2 = phi^2 zeta_10: PASS
+Herm2 modulus/phase factors match: PASS
+ALL EXACT CHECKS PASS

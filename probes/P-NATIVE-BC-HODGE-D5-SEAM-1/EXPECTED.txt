@@ -1,0 +1,17 @@
+P-NATIVE-BC-HODGE-D5-SEAM-1
+native product order / target cycle order: 5 5
+Jordan ranks native: 1 0 0 0 0
+Jordan ranks Hodge: 4 3 2 1 0
+orientation +1 intertwiner_dim / projective_invertible: 8 0
+orientation -1 intertwiner_dim / projective_invertible: 8 0
+D5 seam verdict: DIFFER
+transported K projective lines: 0
+transported beta projective lines: 0
+native D5 invariant symmetric-form dimension: 11
+K-line canonical: NO
+beta-line canonical: NO
+remaining generators normalize K-line: NA
+remaining generators preserve beta-line as similitudes: NA
+linear extension verdict: DIFFER
+FIRED-COMMUTATOR-NOGO boundary: unchanged
+VERDICT: COMPLETE

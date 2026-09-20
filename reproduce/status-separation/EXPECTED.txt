@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v87, v86 and v85; current boundary: v88
+historical guards: exact reconstructed v89, v88, v87, v86 and v85; current boundary: v90
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -99,5 +99,11 @@ PASS 94 V87-OWNER-BOUNDARY all 414 prior Registry rows and every physical open o
 PASS 95 V88-PRIOR-BYTES thirteen exact current inputs reconstruct public v87 before all unchanged historical guards
 PASS 96 V88-THREE-THEOREMS three conditional L1 theorems have exact scopes, declarations, twenty-six dependencies and completed probe bundles
 PASS 97 V88-OWNER-BOUNDARY all 416 old rows and 28 live clauses are exact; passive choice stays D with no physical promotion or new gate
+PASS 98 V89-PRIOR-BYTES thirteen exact current inputs reconstruct public v88 before all unchanged historical guards
+PASS 99 V89-THREE-THEOREMS three conditional L1 theorems have exact scopes, declarations, nine dependencies and completed probe bundles
+PASS 100 V89-OWNER-BOUNDARY all 419 old rows and 28 live clauses are exact; point and coherent domains stay separate with no physical promotion or new gate
+PASS 101 V90-PRIOR-BYTES thirteen exact current inputs reconstruct public v89 before all unchanged historical guards
+PASS 102 V90-HODGE-NATIVE-THEOREMS fifteen L1 theorems have exact scopes, declarations, 36 dependencies and twelve completed probe bundles
+PASS 103 V90-OWNER-BOUNDARY all 422 old rows and 28 live clauses are exact; marked Hodge and native reader classes supply no selected target, amplitude, physical promotion or new gate
 
-RESULT 97/97 ALL PASS
+RESULT 103/103 ALL PASS

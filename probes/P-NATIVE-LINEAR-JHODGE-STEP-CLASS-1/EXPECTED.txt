@@ -1,0 +1,15 @@
+P-NATIVE-LINEAR-JHODGE-STEP-CLASS-1
+Gamma_lin order: 200
+actual Hodge step order: 10
+actual Hodge step (-1)-ranks: 4 3 2 1 0 0
+marked cycle (+1)-ranks: 4 3 2 1 0 0
+step/cycle rank-sequence match: YES
+native (-1)-type 0 0 0 0 0 0 count=1 shortest=d
+native (-1)-type 1 0 0 0 0 0 count=24 shortest=bcd
+actual-step native candidates: 0
+shortest actual-step witness: NONE
+-bc order / ranks: 10 1 0 0 0 0 0
+-cb order / ranks: 10 1 0 0 0 0 0
+fired subgroup order / actual-step candidates: 4 0
+actual-step verdict: STEP-DIFFER
+VERDICT: COMPLETE
