@@ -1,0 +1,11 @@
+G1 PASS: ten source words, seven tensor impulses, Pi0 intensity launch and retained silent mass 1/3
+G2 PASS: full seed moments, raw-versus-centered distinction and zero tensor-scalar cross covariance
+G3 PASS: continuous character law gives zero means and diagonal mode covariances; five-node audit is only second order
+G4 PASS: exact T and J tables, active-word ratios, Parseval totals 1/2 and 1/6; precentering removes 1/80
+G5 PASS: canonical kinetic normalizations and full TT contraction give r=60+24sqrt5 or 60-24sqrt5
+G6 PASS: Friedmann, Raychaudhuri and scalar equations; epsilon=3/2, background pressure zero, scalar sound speed one
+G7 PASS: a=(1+H_*eta/2)^2, shifted x=eta+2/H_* and common canonical pump 2/x^2
+G8 PASS: exact Laurent-trigonometric basis solves q''+(K^2-2/x^2)q=0; W=K, G(0)=1, G'(0)=1/d
+G9 PASS: transfer cancellation on nonzero band support; simultaneous nodes, zero mode and outside-band ratios undefined
+G10 PASS: graph dispersion, precentering, independent scalar rescaling, dust sound speed and missing TT contraction change the result
+VERDICT: SELECTED-COSMOLOGICAL-DICTIONARY; conditional classical model, scalar action/background/launch/phase/scale adopted
