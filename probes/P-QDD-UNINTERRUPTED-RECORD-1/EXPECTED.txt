@@ -1,0 +1,12 @@
+P-QDD-UNINTERRUPTED-RECORD-1
+PASS A01 stable one-step conjugacy/source/trace: 62500 cases
+PASS A02 global controlled-write permutations: 31250 points/parities
+PASS A03 signed-exchange involutions: 250 port cases
+PASS A04 full-port composition: 7500 reduced / 937500 source cases
+PASS A05 all bit words through length 6: 508 code cases
+PASS A06 actual starts 3..35, delays 0..16: 2244 code cases
+PASS A07 exact Q(j) Gram/projectors/coherence: 16 matrix units
+PASS A08 two records of the same transported outcome: 900 code cases
+PASS A09 scope and readiness negative controls: 5 witnesses
+PASS finite-premise audit: 9/9
+SCOPE all-duration proof: PROOF.md; entrance/exit/archive are admitted
