@@ -7,29 +7,31 @@ The seven frozen files were fetched from the public commit and compared byte
 for byte before local checkout and execution. No scientific gate was run
 before pinning. Static syntax checks and written review preceded the pin.
 
-- Public lock: [#1093](https://github.com/mathorn1973/twist-j/issues/1093).
-- Base: `822ae98c63545d9e800b4d145c0eec8c7bca29a6`.
-- Preregistration commit: `f1a25f6a51cf167094eb95b8a37a5cb7e8dcc368`.
-- Pin tree: `c93f9761557924c9d95dab07e0a4b53a18ba35ee`.
-- Worktree at invocation: clean; HEAD exactly the pin.
-- Working directory: repository root.
-- Date: 2026-09-20.
-- Platform: Ubuntu 24.04.3 LTS.
-- Architecture: x86_64.
-- Python: 3.12.14.
-- Exit code: 0.
-- Standard output: 702 bytes; SHA-256
-  `92c8c4e8f8e0dcf463c2e274a746fd2e279b829df8b0c86818466165c99cc641`.
-- Standard error: 0 bytes; SHA-256
-  `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
-- Exact stdout is committed unchanged as `EXPECTED.txt`.
+## Run fields
 
-Command, with Python 3.12.14 selected:
-
-```sh
-LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 \
-python3 probes/P-QDD-SELECTED-MEASUREMENT-LAW-1/verify.py
+```text
+pin_commit: f1a25f6a51cf167094eb95b8a37a5cb7e8dcc368
+verifier_sha256: cf6b9ca76a9d0914ce9af181e3d173e1b6f55adab2319673c55608c20ace31e2
+command: python3 probes/P-QDD-SELECTED-MEASUREMENT-LAW-1/verify.py
+platform: Ubuntu 24.04.3 LTS
+architecture: x86_64
+python: 3.12.14
+exit_code: 0
+stdout_bytes: 702
+stdout_lines: 9
+stdout_sha256: 92c8c4e8f8e0dcf463c2e274a746fd2e279b829df8b0c86818466165c99cc641
+stderr_bytes: 0
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 ```
+
+Public lock: [#1093](https://github.com/mathorn1973/twist-j/issues/1093).
+Base: `822ae98c63545d9e800b4d145c0eec8c7bca29a6`.
+Pin tree: `c93f9761557924c9d95dab07e0a4b53a18ba35ee`.
+Worktree at invocation: clean; HEAD exactly the pin.
+Working directory: repository root. Date: 2026-09-20.
+Environment: `LC_ALL=C`, `LANG=C`, `TZ=UTC`, `PYTHONHASHSEED=0`,
+`PYTHONDONTWRITEBYTECODE=1`. Exact stdout is committed unchanged as
+`EXPECTED.txt`.
 
 ## Frozen input custody
 
