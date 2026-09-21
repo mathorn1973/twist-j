@@ -1,0 +1,9 @@
+G1 PASS: positive Gram, order-five isometry and five simplex contexts
+G2 PASS: Kraus completeness and branch identities on all 16 matrix units
+G3 PASS: five exact 12-dimensional writers and coherent pointer blocks
+G4 PASS: three-pass rank-eight certificate and two-pass/depolarizing witnesses
+G5 PASS: 6000 ordered histories, 96 adaptive leaves and exact prefix marginals
+G6 PASS: repeated records, 6000 fresh-source histories and joint reset witness
+G7 PASS: ordered interference 1/256 + 225/256 = 113/128; ZERO_SUPPORT guarded
+G8 PASS: missing outcome, wrong inverse, fine HIGH record and port-only reset rejected
+VERDICT: SELECTED-MEASUREMENT-LAW; conditional theorem, physical adoption not derived

@@ -1,0 +1,9 @@
+PASS G1 fixed affine netlists: 2 x 15625 points; exact bijections
+PASS G2 Fourier-phase SUM: 125 exact cyclotomic coefficients
+PASS G3 gains 0..4: 3125 matrix units; 25 SWAP points; entanglement witness
+PASS G4 actual ticks 3,4: 4 injective prefixes; 16 code matrix units
+PASS G5 clean-energy witnesses: (5,0,0,0); tuned-gap boundary verified
+PASS G6 global B Fourier obstruction: det=2; 24 nonaxial frequencies
+PASS G7 four fixed negative controls rejected
+PASS G8 independent additive-energy system: 15625 rows; rank 24 mod 101
+PASS P-QDD-AFFINE-ENERGY-CONTROL-1: 8/8 exact finite checks

@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred three checks cover the current
+and emits deterministic text. Its one hundred seven checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 94/94 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 107/107 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -566,3 +566,27 @@ Frontier programs and CORE selections stay exact. Totals are 437 claims,
 T304/D48/C39/H2/O26/F18. Target operators and amplitudes remain inputs;
 no physical selection or layer bridge follows. The 103-check transcript is
 deterministic release bookkeeping, not a new scientific probe.
+
+
+The v91 audit pins thirteen complete current Canon inputs, then reconstructs
+the exact public v90 bytes from commit
+`4a77351eb8a8dad74cefa83f7a5f5f65e7e4ff13` before running all 103 historical
+guards unchanged. Those historical guards test the status boundaries at their
+own releases, not the current disposition of an owner closed by v91.
+
+Four current guards separately verify the frozen new conditional theorems,
+their unchanged two-architecture probe bundles, the author-adopted dictionary
+rows and typed dictionary gates, and exactly three earned owner dispositions:
+`ENTROPY-LAYER-BRIDGE` goes from O to F on the complete measurable-class
+obstruction, while `TT-VECTOR-STATE-NORMALIZATION` and `BELL-CAUSAL-ACCOUNTING`
+go from O to D under the explicitly selected theoretical contracts. Original
+decision clauses remain byte-exact in the v90 reconstruction and are quoted
+verbatim in the new disposition rationale; reviewed terminal clauses describe
+the current decisions. Every historical lifecycle row remains exact. No empirical
+adequacy or new physical theorem is inferred from adoption.
+
+The three physical QDD apparatus, terminal-event and class-completeness owners
+remain O. The apparatus scope acknowledges the selected source, event and
+control dictionary while retaining its original full closure condition; all
+other surviving live scopes remain exact. This is a release-integrity audit,
+not a new scientific probe or replacement for the written proofs.

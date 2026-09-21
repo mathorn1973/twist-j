@@ -1,0 +1,11 @@
+G1 PASS: tensor Gram, five contexts, four sources and normalized Phi
+G2 PASS: 100 exact branches, joint table, commuting order and completeness
+G3 PASS: both no-signalling identities on 256 units at five settings and four sources
+G4 PASS: 1024 deterministic local strategies bounded by 2; Phi gives 35/16
+G5 PASS: fixed-operator spectrum 35/16 (1), 5/4 (4), -25/16 (11); unique top Phi
+G6 PASS: all 5000 CHSH forms have absolute value at most 2
+G7 PASS: white-noise Bell value (45v-10)/16 and threshold v > 14/15
+G8 PASS: 1024 adaptive joint leaves, 1360 prefix pairs, both policy marginals and renewal
+G9 PASS: steering averages unchanged; 25 dependent separable sources expose independence premise
+G10 PASS: explicit message gives 31/64 versus 1/4; source messages give 1 versus 0; zero guarded
+VERDICT: SELECTED-BIPARTITE-LAW; conditional theorem, tensor source and Born law adopted

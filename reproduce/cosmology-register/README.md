@@ -42,3 +42,16 @@ python3 reproduce/cosmology-register/verify.py
 
 Expected: byte identical to EXPECTED.txt, RESULT 7/7 ALL PASS,
 exit 0, no stderr.
+
+
+The original verifier and transcript are preserved byte-for-byte with their
+recorded architecture runs. In PASS 02, “a numerical r(k) stays on the
+frontier (TT-VECTOR-STATE-NORMALIZATION)” describes the historical scope of
+this reproduction: the bilinear identity alone supplied no selected vector
+state or scalar comparison. Public Canon v91 separately adopts the complete
+ETH-TT-1/ETH-COS-1 state and comparison dictionary and closes
+TT-VECTOR-STATE-NORMALIZATION at D under its original positive existence
+clause. That later dictionary decision does not enlarge this reproduction’s
+mathematical result or retroactively change its recorded stdout. Its evidence
+is the separately registered selected-state and scalar/tensor proofs; this
+README clarification supplies no new mathematical or architecture result.

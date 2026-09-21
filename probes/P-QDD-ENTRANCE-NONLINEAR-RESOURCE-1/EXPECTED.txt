@@ -1,0 +1,16 @@
+P-QDD-ENTRANCE-NONLINEAR-RESOURCE-1
+PASS A01 autonomous native quotient: 78125 generator / 31250 selector cases
+PASS A02 stable label and paired-port transport: 62500 cases
+PASS A03 commanded word b,d,b,e equals T_2: 15625 points
+PASS A04 affine code line: 90 points; 125 quadratics excluded; 5/3125 extensions
+PASS A05 known-sheet two-port reduction and bijection: 100 points
+PASS A06 target-independent commuting two-port family: 3125 maps / 78125 points
+PASS A07 full stable-sheet clean construction: 12500 inputs
+PASS A08 interleaved waiting: 2288 schedules / 9152 code inputs
+PASS A09 coherent comparison: 36608 matrix units with untouched reference
+PASS A10 negative controls: cleanup, parity, nonlinearity, split-port timing
+PASS A11 affine routing with two actual U ticks: 15625 inverse / 16 coherent cases
+PASS A12 one-U obstruction premises: 40 itineraries / 15625 coordinate checks
+PASS finite-premise audit: 12/12
+SCOPE full classes/durations: written proofs; affine controls or arithmetic are admitted
+PHYSICAL entrance primitive, timing, preparation and environment: OPEN
