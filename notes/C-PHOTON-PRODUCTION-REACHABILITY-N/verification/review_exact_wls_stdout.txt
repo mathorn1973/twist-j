@@ -1,0 +1,10 @@
+Independent NON-CANONICAL review: WLS error-profile sensitivity
+Input means: 2478903/5000000, 3853003/10000000, 1163229/5000000, 701559/5000000
+Input standard errors: 1/1000, 1/1000, 1/20, 1/20
+M1: intercept=6688114265299/125675005000000; variance=10001/402160016
+M1: intercept > 10 * SE(intercept): True
+M2: intercept=5968095136697431/24580725245000000; variance=13480337/1966458019600
+M2: intercept > 10 * SE(intercept): True
+Original constant-relative-error profile: M1 negative, M2 positive
+No falsifier of the original restricted audit is claimed.
+RESULT PASS
