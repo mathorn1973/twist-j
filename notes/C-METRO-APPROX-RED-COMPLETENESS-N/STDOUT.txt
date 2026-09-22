@@ -1,0 +1,10 @@
+C-METRO-APPROX-RED-COMPLETENESS-N verify (NON-CANONICAL, L5, exact)
+W-V noncommuting=True start V-futures equal=True Phi equal=False: PASS
+W-S MSD streams equal (exact automaton and n<4096) under ('MSD-E0', 'MSD-Z0'): [True, True]; Phi equal=False: PASS
+W-S LSD streams equal (exact automaton and n<4096) under ('LSD-E0', 'LSD-Z0'): [True, True]; Phi equal=False: PASS
+CEN tuples=1024
+CEN ~V pairs both commuting=5402 Phi-splits=0
+CEN ~V pairs with a noncommuting member=68454 Phi-splits=144
+CEN stream-equal (MSD-E0) pairs both commuting=5422 Phi-splits=20
+FAILURES 0
+RESULT PASS
