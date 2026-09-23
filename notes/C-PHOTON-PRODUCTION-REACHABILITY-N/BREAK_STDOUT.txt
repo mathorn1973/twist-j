@@ -1,0 +1,38 @@
+B1 L=6 beta=0.5 direct=7.959008595053e-02 fft=7.959008595051e-02 rel=2.13e-13
+B1 L=6 beta=1.0 direct=2.770396605238e-01 fft=2.770396605239e-01 rel=2.74e-13
+B1 L=8 beta=0.5 direct=2.957833335714e-02 fft=2.957833335714e-02 rel=1.12e-13
+B1 L=8 beta=1.0 direct=1.673774109361e-01 fft=1.673774109362e-01 rel=6.02e-13
+B2 L=32 G(0)=0.24567655 Watson-G(0)=0.007054 L*(diff)=0.22574
+B2 L=64 G(0)=0.24920328 Watson-G(0)=0.003528 L*(diff)=0.22577
+B2 L=128 G(0)=0.25096709 Watson-G(0)=0.001764 L*(diff)=0.22578
+B3 L=8 rho=0 n=1 realspace=-6.901274252339e-02 fourier=-6.901274252339e-02 diff=0.0e+00
+B3 L=8 rho=0 n=2 realspace=-1.134342167601e-02 fourier=-1.134342167601e-02 diff=0.0e+00
+B3 L=8 rho=0 n=3 realspace=-2.581413137061e-03 fourier=-2.581413137061e-03 diff=3.7e-17
+B3 L=8 rho=2 n=1 realspace=6.876860189839e-02 fourier=6.876860189839e-02 diff=1.4e-17
+B3 L=8 rho=2 n=2 realspace=1.109928105101e-02 fourier=1.109928105101e-02 diff=2.6e-17
+B3 L=8 rho=2 n=3 realspace=2.337272512061e-03 fourier=2.337272512061e-03 diff=0.0e+00
+B3 L=16 rho=0 n=1 realspace=-6.888257333043e-02 fourier=-6.888257333043e-02 diff=6.9e-17
+B3 L=16 rho=0 n=2 realspace=-1.116115027497e-02 fourier=-1.116115027497e-02 diff=1.7e-18
+B3 L=16 rho=0 n=3 realspace=-2.271724573736e-03 fourier=-2.271724573736e-03 diff=1.1e-16
+B3 L=16 rho=2 n=1 realspace=6.886731454137e-02 fourier=6.886731454137e-02 diff=1.4e-17
+B3 L=16 rho=2 n=2 realspace=1.114589148591e-02 fourier=1.114589148591e-02 diff=1.0e-17
+B3 L=16 rho=2 n=3 realspace=2.256465784674e-03 fourier=2.256465784673e-03 diff=1.6e-16
+B4 L=8 long n=1 MC=+4.34973e-02 (imag -4.6e-06) theory=+4.33418e-02
+B4 L=8 long n=2 MC=+6.84865e-03 (imag +6.3e-05) theory=+6.92015e-03
+B4 L=8 trans n=1 MC=+4.32772e-02 (imag -7.2e-05) theory=+4.31832e-02
+B4 L=8 trans n=2 MC=+6.77963e-03 (imag +1.3e-05) theory=+6.77038e-03
+B5 L=64 n=2 K_long=-1.115275e-02 continuum=-6.332574e-03 ratio=1.76117 (ratio-1)*n^2=3.0447
+B5 L=64 n=3 K_long=-2.262268e-03 continuum=-1.250879e-03 ratio=1.80854 (ratio-1)*n^2=7.2769
+B5 L=64 n=4 K_long=-6.054268e-04 continuum=-3.957859e-04 ratio=1.52968 (ratio-1)*n^2=8.4749
+B5 L=64 n=5 K_long=-2.131622e-04 continuum=-1.621139e-04 ratio=1.31489 (ratio-1)*n^2=7.8723
+B5 L=64 n=6 K_long=-9.337479e-05 continuum=-7.817993e-05 ratio=1.19436 (ratio-1)*n^2=6.9969
+B5 L=64 n=7 K_long=-4.768023e-05 continuum=-4.219958e-05 ratio=1.12987 (ratio-1)*n^2=6.3639
+B5 L=64 n=8 K_long=-2.705598e-05 continuum=-2.473662e-05 ratio=1.09376 (ratio-1)*n^2=6.0008
+B5 L=64 n=9 K_long=-1.655674e-05 continuum=-1.544295e-05 ratio=1.07212 (ratio-1)*n^2=5.8419
+B5 L=64 n=10 K_long=-1.072470e-05 continuum=-1.013212e-05 ratio=1.05849 (ratio-1)*n^2=5.8485
+B5 L=64 n=11 K_long=-7.264914e-06 continuum=-6.920373e-06 ratio=1.04979 (ratio-1)*n^2=6.0242
+B5 L=64 n=12 K_long=-5.103747e-06 continuum=-4.886245e-06 ratio=1.04451 (ratio-1)*n^2=6.4099
+B5 L=64 n=13 K_long=-3.696208e-06 continuum=-3.547536e-06 ratio=1.04191 (ratio-1)*n^2=7.0825
+B5 L=64 n=14 K_long=-2.747252e-06 continuum=-2.637474e-06 ratio=1.04162 (ratio-1)*n^2=8.1580
+B5 L=64 n=15 K_long=-2.088580e-06 continuum=-2.001406e-06 ratio=1.04356 (ratio-1)*n^2=9.8002
+B5 L=64 n=16 K_long=-1.619916e-06 continuum=-1.546039e-06 ratio=1.04779 (ratio-1)*n^2=12.2330

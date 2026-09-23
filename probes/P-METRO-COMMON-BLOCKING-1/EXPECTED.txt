@@ -1,0 +1,30 @@
+C-METRO-COMMON-BLOCKING-N verify (NON-CANONICAL, L5, stdlib exact)
+L0 flattening q in (2,3), k in (2,3,4), four conventions, n < 1024: PASS
+W-D1 Stream_P(0,1)=0 Stream_Blk2(0,1)=1: PASS
+W-D2 normalized translated-box averages:
+  m=2 box R((2^m,0),(2^m,2^m)) P:('0', '1') Blk2:('1', '0')
+  m=3 box R((2^m,0),(2^m,2^m)) P:('1', '0') Blk2:('1', '0')
+  m=4 box R((2^m,0),(2^m,2^m)) P:('0', '1') Blk2:('1', '0')
+  m=5 box R((2^m,0),(2^m,2^m)) P:('1', '0') Blk2:('1', '0')
+  m=6 box R((2^m,0),(2^m,2^m)) P:('0', '1') Blk2:('1', '0')
+  m=7 box R((2^m,0),(2^m,2^m)) P:('1', '0') Blk2:('1', '0')
+  m=8 box R((2^m,0),(2^m,2^m)) P:('0', '1') Blk2:('1', '0')
+W-D2 decision P: INADMISSIBLE (alternating limits); Blk2: ADMISSIBLE(PROBABILITY(1,0)): PASS
+B1 q=2 a=1 |S|=3 A0=S tuples=5832 LSD-E0 k=2 Pre_blk_true=2736
+B1 q=2 a=1 |S|=3 A0=S tuples=5832 LSD-E0 k=3 Pre_blk_true=2628
+B1 q=2 a=1 |S|=3 A0=S tuples=5832 LSD-Z0 k=2 Pre_blk_true=2592
+B1 q=2 a=1 |S|=3 A0=S tuples=5832 LSD-Z0 k=3 Pre_blk_true=2604
+B1 q=2 a=1 |S|=3 A0=S tuples=5832 MSD-E0 k=2 Pre_blk_true=2964
+B1 q=2 a=1 |S|=3 A0=S tuples=5832 MSD-E0 k=3 Pre_blk_true=2940
+B1 q=2 a=1 |S|=3 A0=S tuples=5832 MSD-Z0 k=2 Pre_blk_true=2532
+B1 q=2 a=1 |S|=3 A0=S tuples=5832 MSD-Z0 k=3 Pre_blk_true=2832
+B2 q=2 a=2 |S|=2 A0={0} tuples=1024 LSD-E0 k=2 Pre_blk_true=604 commuting=232 commuting_and_Pre_blk=170
+B2 q=2 a=2 |S|=2 A0={0} tuples=1024 LSD-E0 k=3 Pre_blk_true=604 commuting=232 commuting_and_Pre_blk=170
+B2 q=2 a=2 |S|=2 A0={0} tuples=1024 LSD-Z0 k=2 Pre_blk_true=642 commuting=232 commuting_and_Pre_blk=174
+B2 q=2 a=2 |S|=2 A0={0} tuples=1024 LSD-Z0 k=3 Pre_blk_true=642 commuting=232 commuting_and_Pre_blk=174
+B2 q=2 a=2 |S|=2 A0={0} tuples=1024 MSD-E0 k=2 Pre_blk_true=768 commuting=232 commuting_and_Pre_blk=190
+B2 q=2 a=2 |S|=2 A0={0} tuples=1024 MSD-E0 k=3 Pre_blk_true=768 commuting=232 commuting_and_Pre_blk=190
+B2 q=2 a=2 |S|=2 A0={0} tuples=1024 MSD-Z0 k=2 Pre_blk_true=740 commuting=232 commuting_and_Pre_blk=186
+B2 q=2 a=2 |S|=2 A0={0} tuples=1024 MSD-Z0 k=3 Pre_blk_true=804 commuting=232 commuting_and_Pre_blk=194
+FAILURES 0
+RESULT PASS
