@@ -24,13 +24,16 @@ below, not established coefficients of the unconditioned P1 measure. Their
 mass language is conditional on a finite-volume fitting ansatz. The earlier
 hypothesis proposal is not adopted. No P1, P2, S7 or Canon obligation closes.
 
-**Drift reproduction: PENDING.** The supplied record includes one completed
-aarch64 leg and no completed x86_64 drift record. Statements in that record
-that a replacement job was running describe its original timestamp, not
-current remote status. No new simulation or long-chain replay was performed
-for this publication review. See [REPRODUCTION.md](REPRODUCTION.md) for the
-available evidence and concrete completion path. A successful repository
-check does not reproduce these note-only simulations.
+**Drift reproduction: REPRODUCTION_BITWISE, checked 23 September 2026.**
+The completed replacement x86_64 run was recovered from persistent storage.
+All 20 raw-log hashes and END states match the published aarch64 records;
+the unchanged analysis was rerun and reproduced all 1056 output bytes with
+exit 0 and empty stderr. See the dated
+[reproduction record](drift/REPRODUCTION-X86_64-20260923.md) for source
+identity, custody checks and limits. This is recovery and reanalysis of a
+known-result run, not a new simulation or blind confirmation. The historical
+PENDING result is preserved. A successful repository check alone does not
+reproduce these note-only simulations.
 
 The supplied custody account says each preregistration was hashed before its
 first execution in a non-public incubation record. Their bytes and hashes
@@ -45,13 +48,15 @@ v1   controls Z_30, ratio rule          ENGINE_CALIBRATION FAIL  (falsifier fire
 v2   absolute fit, sector conditioning  ENGINE_CALIBRATION FAIL  (falsifier fired)
 v3   odd-N controls Z_13                ENGINE_CALIBRATION PASS
 B3   fixed weight, L = 8 to 24          COULOMB_ORIENTATION
-DR   drift follow-up, L = 24 and 32     NO_DRIFT; reproduction PENDING
+DR   drift follow-up, L = 24 and 32     NO_DRIFT; REPRODUCTION_BITWISE
 ```
 
-B3's supplied record reports byte-identical logs on two architectures.
-The drift record reports a completed aarch64 leg only. Neither was newly
-replayed in this review. The terminals retain their frozen engineering
-meaning; they are not mathematical Coulomb-phase or zero-drift conclusions.
+B3's supplied record reports byte-identical logs on two architectures; its
+full raw-data comparison was not replayed in this review. The recovered
+x86_64 drift logs now match the published aarch64 manifest and END list,
+and their analysis was replayed successfully. The terminals retain their
+frozen engineering meaning; they are not mathematical Coulomb-phase or
+zero-drift conclusions.
 
 At `t = 1`, the supplied sector-filtered samples give contrasts of about
 0.60 over the measured sizes `L = 8` to `L = 32`. Their by-products
@@ -174,7 +179,7 @@ L    new chains  Delta_est(1)      z      b_diag   c_diag
 24   12          0.5962 +- 0.0040  1.21   0.6005   0.0043 +- 0.0040
 32    8          0.6001 +- 0.0071  0.27   0.6005   0.0004 +- 0.0071
 refit, B3 plus new points: Z = 0.6031 +- 0.0012, M = 0.0006 +- 0.0004
-TERMINAL NO_DRIFT; x86_64 reproduction PENDING
+TERMINAL NO_DRIFT; x86_64 reproduction REPRODUCTION_BITWISE
 ```
 
 `NO_DRIFT` means the specified drift was not detected at the stated

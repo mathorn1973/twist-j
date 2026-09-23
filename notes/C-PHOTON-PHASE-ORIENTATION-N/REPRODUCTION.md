@@ -4,6 +4,18 @@ Status: NON-CANONICAL, candidate-C engineering record. Issue #1146.
 This is a custody and procedure assessment, not a new simulation result or
 a formal public pin. The corrected scope is in [README.md](README.md).
 
+## Completion on 23 September 2026
+
+The missing replacement x86_64 drift run has been recovered and checked.
+The [dated record](drift/REPRODUCTION-X86_64-20260923.md) records exact source
+identity, all 20 raw-log hashes, job parameters, measurement counts, END
+states and a fresh unchanged analysis replay. Its disposition is
+`REPRODUCTION_BITWISE`, against the published aarch64 records.
+The sections below preserve the initial publication assessment and the
+completion procedure. Their PENDING and missing-x86 statements describe
+that earlier assessment, not the current drift disposition. B3 and earlier
+calibration raw-data replays remain separately unperformed.
+
 ## Available and missing evidence
 
 | Item | Supplied evidence | Limit |
