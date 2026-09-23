@@ -1,0 +1,23 @@
+ANALYSIS C-PHOTON-PHASE-ORIENTATION-N v3 set=B3 block=200 q2min/4=0.017037
+MODEL TW (TWIST weight W at t = 1)
+  L=8 chains=4 D1=0.599843+-0.0027 D2=0.602553+-0.0021 mono=0.01122+-1.9e-05 polrad=0.228196+-0.0002 fnz=0.126857+-0.00027 cos=0.665285+-3.9e-05 hotcold_z=0.06
+    byproduct d=0.696999+-5.9e-05 b_L=0.600621+-0.0003 25chi_L=0.000777+-0.0027
+  L=12 chains=2 D1=0.602356+-0.0056 D2=0.604161+-0.0036 mono=0.0112331+-1.3e-05 polrad=0.0994077+-0.00017 fnz=0.253221+-0.00028 cos=0.665218+-2e-05 hotcold_z=nan
+    byproduct d=0.697111+-3.1e-05 b_L=0.600510+-0.00042 25chi_L=-0.001846+-0.0056
+  L=16 chains=3 D1=0.589804+-0.0065 D2=0.60305+-0.0026 mono=0.0112316+-5.5e-06 polrad=0.0440416+-8.4e-05 fnz=0.38431+-0.00019 cos=0.665227+-9.1e-06 hotcold_z=0.13
+    byproduct d=0.697105+-1.4e-05 b_L=0.600013+-0.0003 25chi_L=0.010209+-0.0066
+  L=24 chains=2 D1=0.580132+-0.011 D2=0.600327+-0.0059 mono=0.0112343+-3.2e-06 polrad=0.0105896+-3e-05 fnz=0.592379+-0.00012 cos=0.665222+-5e-06 hotcold_z=nan
+    byproduct d=0.697107+-8.3e-06 b_L=0.600493+-0.0003 25chi_L=0.020361+-0.011
+  TRAPPED TW_L12_hot1 ftriv=0.000
+  TRAPPED TW_L12_hot2 ftriv=0.000
+  TRAPPED TW_L16_hot2 ftriv=0.000
+  TRAPPED TW_L24_hot1 ftriv=0.001
+  TRAPPED TW_L24_hot2 ftriv=0.000
+  HOT_TRAPPED_AT_L 12,24 (hot/cold gate not evaluable there)
+  FTRIV L12_cold1=1.000 L12_cold2=1.000 L12_hot1=0.000 L12_hot2=0.000 L16_cold1=1.000 L16_cold2=1.000 L16_hot1=1.000 L16_hot2=0.000 L24_cold1=1.000 L24_cold2=1.000 L24_hot1=0.001 L24_hot2=0.000 L8_cold1=1.000 L8_cold2=1.000 L8_hot1=1.000 L8_hot2=1.000
+  FIT Z=0.604252+-0.0016 M=0.00269367+-0.0011 chi2=2.16 dof=6
+  CORR16 n=2 C=1.92812e-01 Q=4.9399 Q4=5.0503 D=-0.0219 (samples 300, diagnostic)
+  CORR16 n=3 C=3.90318e-02 Q=3.3041 Q4=3.1308 D=+0.0553 (samples 300, diagnostic)
+  CORR16 n=4 C=1.18133e-02 Q=2.2799 Q4=2.3704 D=-0.0382 (samples 300, diagnostic)
+  LABEL TW COULOMB_ORIENTATION
+TERMINAL COULOMB_ORIENTATION
