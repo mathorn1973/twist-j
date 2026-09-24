@@ -352,3 +352,27 @@ znaménko skutečného rozdílu tím určeno není.
 [přesný audit](verify_signed_slices.py) a
 [první úspěšný běh](SIGNED-RUN-20260924.md) zachovávají konečný rozsah
 kontroly. Výsledek je NON-CANONICAL, candidate-T/C. P1 zůstává otevřená.
+
+## 12. Rušení mezi dvěma kopiemi a váha nulového sektoru, 24. září 2026
+
+[REPLICA-CAPS.md](REPLICA-CAPS.md) přesně sčítá dvě původní kopie na
+vymezeném osovém spoji s prázdným okolím a libovolným sečteným vnějškem.
+Opačně orientované neutrální uzávěry dovolují změnu přiřazení mezi kopiemi.
+S jejich skutečnými vahami vychází podmíněná korelace rozdílů proudů
+`(3/5)^(D+1)`. Úplná klasifikace obsahuje `2^(D+2)` místních stavů.
+Toto rušení zatím není odhadem nepodmíněné proudové kovariance.
+
+Druhý výsledek platí přímo v úplné míře: pravděpodobnost globálně nulového
+proudu je nejvýše `(1+2^-41)^(-floor(L/4)^4)`. Stejná mez platí pro celý
+normalizovaný Fourierův druhý moment z tohoto sektoru. Jeho příspěvek
+tedy mizí v termodynamickém limitu. Neutrální složky uvnitř konfigurací
+s proudy tím omezené nejsou; právě pro takové pozadí chybí použitelná
+dolní mez příčné odezvy.
+
+[Předregistrace](REPLICA-PREREG-20260924.md),
+[přesný audit](verify_replica_caps.py) a
+[první úspěšný běh](REPLICA-RUN-20260924.md) zachovávají
+rozsah konečné kontroly a veřejný pin před výpočtem. Výsledky zůstávají
+NON-CANONICAL, candidate-T/C. Stejnoměrná horní mez pro chi a ostré
+porovnání `b_lower > 25 chi_upper` nad všemi původními profily dosud
+nejsou dokázány. P1 zůstává otevřená.
