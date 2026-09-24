@@ -332,3 +332,23 @@ meze platí v úplné míře, ale stále neudávají pokles se vzdáleností.
 [výsledek kontroly](CONNECTED-RUN-20260924.md) uchovávají důkazní rozsah
 i první úspěšný běh. Stav: NON-CANONICAL, candidate-T pro napsané důkazy,
 candidate-C pro konečný výpočet. Rozhodující odhad a P1 zůstávají otevřené.
+
+## 11. Podepsané řezy a vyhodnocená dolní mez, 24. září 2026
+
+[SIGNED-SLICES.md](SIGNED-SLICES.md) nahrazuje hrubý počet stěn složky
+mediánovou normou podepsaných osových řezů, která závisí jen na příslušném
+průmětu proudu. Platí `chi_L(t) <= Xi_L <= M_L/25`. Nový osově orientovaný
+neutrální spoj má tuto normu rovnu dvěma nezávisle na délce, ačkoli obsahuje
+`2D+10` relevantních stěn. Stejnoměrná číselná horní mez pro `Xi_L` však
+dosud chybí.
+
+Přesné vložení izolované složky současně dává ve všech přípustných profilech
+skutečnou dolní mez `b >= 25*2^(-173)`. Stejný důkaz dává `chi >= 2^(-173)`.
+Tato konkrétní dolní mez pro b tedy nemůže splnit ostré porovnání P1 s žádnou
+platnou horní mezí pro chi. Jde o společný příspěvek omezených složek;
+znaménko skutečného rozdílu tím určeno není.
+
+[Předregistrace](SIGNED-PREREG-20260924.md),
+[přesný audit](verify_signed_slices.py) a
+[první úspěšný běh](SIGNED-RUN-20260924.md) zachovávají konečný rozsah
+kontroly. Výsledek je NON-CANONICAL, candidate-T/C. P1 zůstává otevřená.
