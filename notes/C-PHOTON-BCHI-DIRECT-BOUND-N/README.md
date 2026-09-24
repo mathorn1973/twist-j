@@ -380,7 +380,7 @@ nejsou dokázány. P1 zůstává otevřená.
 ## 13. Rozšíření na úplnou míru a mez přepínání, 24. září 2026
 
 [FULL-MEASURE.md](FULL-MEASURE.md) odvozuje přesný zákon dvou kopií při
-libovolném součtu stěn a nové vyhodnocené meze v úplné míře. Pro k předem
+libovolném součtu stěn a nové vyhodnocené meze v úplné míře. Pro k>=1 předem
 určených stěn je pravděpodobnost společného nasycení nejvýše `2^(-k-2)`;
 jejich zcela nasycená událost přispívá do proudové kovariance nejvýše
 `2^(-k-1)` v absolutní hodnotě. Výběr stěn musí být pevný a tento odhad
@@ -388,7 +388,7 @@ sám nekontroluje zbývající příspěvek.
 
 Současně je dokázána překážka dalšího místního přepínání. Jediná souvislá
 neutrální plocha může i bez nasycených rozhraní zachovat podmíněný proudový
-moment `(9/25) F_(D-4)/F_(D+2)`, který neklesá k nule. Přesný součet
+moment `(9/25) F_(D-4)/F_(D+2)` pro lichá D>=5; ten neklesá k nule. Přesný součet
 obsahuje `8 F_(D+2)` dvojic. Jde o podmíněnou rodinu s vlastní vahou,
 nikoli o vyvrácení poklesu v úplné míře.
 
