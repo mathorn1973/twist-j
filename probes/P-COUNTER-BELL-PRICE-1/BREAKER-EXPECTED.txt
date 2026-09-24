@@ -1,0 +1,10 @@
+C-COUNTER-BELL-PRICE-N breaker
+BR4 table rebuilt from marginals and E: B = 35/16, nonnegative True
+BR4 entries diag ['1/4', '0', '0', '3/4'] off ['1/64', '15/64', '15/64', '33/64']
+BR1 full simplex over 1024 types: w* = 15/16, eps_T = 1/16, feasible True, pivots 1067
+BR1 support (|A|, |B|, A==B) multiset: [(1, 1, True), (2, 2, True)]
+BR2 CHSH hill climb, best |S| - 2 - 2eps = 0
+BR2 QDD hill climb, best B - 2 - 8eps = -257871106351/37722976200
+BR3 C5 model reproduces P True, eps 1/16; full merge reproduces P True, eps 1/16; min eps over 200 partial merges 1/16
+BREAKER RESULT NO BREAK
+digest a332a066c1f80bbbd1ec900facee1907ab46957463430e1394edf435b56ef3d9
