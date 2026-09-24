@@ -410,3 +410,27 @@ Jejich odstranění stále nedává dolní mez velkých neutrálních fluktuací
 před výpočtem. Stav je NON-CANONICAL, candidate-T/C. Úplná podepsaná
 kovariance ani ostré porovnání `b_lower > 25 chi_upper` dosud nejsou
 dokázány. P1 zůstává otevřená.
+
+## 14. Součet neutrálních spojení a silnější dolní mez celé míry
+
+[NEUTRAL-SUM.md](NEUTRAL-SUM.md) sečítá úplnou jednokopiovou míru na explicitním
+nosiči, včetně všech neutrálních stavů konců. Pevné podmínění součtem replik
+už není potřeba. Přesná identita pro samostatně uzavřenou restrikci navíc
+odstraňuje požadavek prázdného okolí a zachovává součet vnějších proudů.
+
+Pro výslovně definované generované spojovací geometrie s hřbetem a střídavými
+listy vychází po součtu skutečných vah i všech přípustných tvarů
+`P(union_(D>=R) U_D(e,f)) <= (1/553728)(3375/4096)^R`, R>=3.
+Na těchto událostech je `|j_e j_f|=1`; mez tedy řídí také jejich absolutní
+příspěvek ke korelaci. Pokrývá geometrii původního protikladu z #1159, ale nepokrývá
+všechny neutrální konfigurace ani úplnou proudovou kovarianci.
+
+Podmíněný rozptyl na hranově oddělených 21-stěnových vložkách současně dává
+`b >=25/(36*2^41)` pro všechny původní přípustné limitní profily. Stejný důkaz
+dává `chi >=1/(36*2^41)`, takže tato nová dolní mez sama nemůže vytvořit
+kladnou rezervu `b_lower-25 chi_upper`. Nevyhodnocen zůstává makroskopický
+neutrální příspěvek a doplněk řízené geometrické třídy.
+
+Předregistrace konečné přesné kontroly je v
+[NEUTRAL-PREREG-20260924.md](NEUTRAL-PREREG-20260924.md). Výsledek zůstává
+NON-CANONICAL; P1 není uzavřena a Public Canon v91 se nemění.
