@@ -1,0 +1,83 @@
+ANALYSIS C-PHOTON-PHASE-ORIENTATION-N v3 set=A3 block=200 q2min/4=0.017037
+MODEL C1 (Z13 Wilson beta 3/2, Coulomb control)
+  L=8 chains=3 D1=0.525229+-0.0027 D2=0.534188+-0.0015 mono=0.000388936+-2.8e-06 polrad=0.471504+-0.00023 fnz=0.00424609+-3e-05 cos=0.812625+-2e-05 hotcold_z=1.15
+  L=12 chains=4 D1=0.529825+-0.0028 D2=0.528389+-0.0018 mono=0.000388333+-1.1e-06 polrad=0.308877+-0.00014 fnz=0.00950477+-2.8e-05 cos=0.812614+-7.5e-06 hotcold_z=2.29
+  L=16 chains=2 D1=0.519392+-0.0057 D2=0.531863+-0.003 mono=0.000386895+-9.5e-07 polrad=0.202553+-0.00016 fnz=0.0167464+-4.3e-05 cos=0.812603+-5.8e-06 hotcold_z=nan
+  L=24 chains=2 D1=0.534933+-0.0074 D2=0.526397+-0.0044 mono=0.000388327+-4.2e-07 polrad=0.0866909+-9.5e-05 fnz=0.0371957+-4.1e-05 cos=0.812596+-3e-06 hotcold_z=nan
+  TRAPPED C1_L8_hot1 ftriv=0.000
+  TRAPPED C1_L16_hot1 ftriv=0.000
+  TRAPPED C1_L16_hot2 ftriv=0.000
+  TRAPPED C1_L24_hot1 ftriv=0.026
+  TRAPPED C1_L24_hot2 ftriv=0.000
+  HOT_TRAPPED_AT_L 16,24 (hot/cold gate not evaluable there)
+  FTRIV L12_cold1=1.000 L12_cold2=1.000 L12_hot1=1.000 L12_hot2=1.000 L16_cold1=1.000 L16_cold2=1.000 L16_hot1=0.000 L16_hot2=0.000 L24_cold1=1.000 L24_cold2=1.000 L24_hot1=0.026 L24_hot2=0.000 L8_cold1=1.000 L8_cold2=1.000 L8_hot1=0.000 L8_hot2=1.000
+  FIT Z=0.531208+-0.0012 M=0.000983079+-0.00084 chi2=14.85 dof=6
+  CORR16 n=2 C=1.44606e-01 Q=4.6862 Q4=5.0503 D=-0.0721 (samples 200, diagnostic)
+  CORR16 n=3 C=3.08580e-02 Q=3.2429 Q4=3.1308 D=+0.0358 (samples 200, diagnostic)
+  CORR16 n=4 C=9.51557e-03 Q=1.8588 Q4=2.3704 D=-0.2158 (samples 200, diagnostic)
+  LABEL C1 COULOMB_ORIENTATION
+MODEL C2 (Z13 Wilson beta 7/10, confined control)
+  L=8 chains=4 D1=0.00659331+-0.0015 D2=0.0125542+-0.0015 mono=0.280256+-4.2e-05 polrad=0.0391953+-8.7e-05 fnz=0.775899+-0.00018 cos=0.34605+-3.9e-05 hotcold_z=0.84
+  L=12 chains=4 D1=0.00342186+-0.0018 D2=0.0060609+-0.0016 mono=0.280231+-1.7e-05 polrad=0.0213497+-3.9e-05 fnz=0.850581+-8.6e-05 cos=0.346131+-1.9e-05 hotcold_z=0.63
+  L=16 chains=4 D1=-0.000530046+-0.0016 D2=0.0039907+-0.0016 mono=0.280272+-9.8e-06 polrad=0.0138635+-2.8e-05 fnz=0.887932+-6.2e-05 cos=0.346065+-9.7e-06 hotcold_z=0.15
+  L=24 chains=4 D1=-0.00062251+-0.0015 D2=0.00308574+-0.0017 mono=0.280271+-4.7e-06 polrad=0.00752965+-1.6e-05 fnz=0.925293+-4e-05 cos=0.346075+-4.3e-06 hotcold_z=0.28
+  FTRIV L12_cold1=0.993 L12_cold2=0.995 L12_hot1=0.995 L12_hot2=0.994 L16_cold1=0.995 L16_cold2=0.996 L16_hot1=0.994 L16_hot2=0.996 L24_cold1=0.995 L24_cold2=0.995 L24_hot1=0.994 L24_hot2=0.995 L8_cold1=0.992 L8_cold2=0.993 L8_hot1=0.994 L8_hot2=0.994
+  FIT Z=0.0367199+-0.028 M=3.95541+-4 chi2=5.31 dof=6
+  CORR16 n=2 C=1.92786e-03 Q=-6.7133 Q4=5.0503 D=-2.3293 (samples 400, diagnostic)
+  CORR16 n=3 C=-2.87170e-04 Q=0.6510 Q4=3.1308 D=-0.7921 (samples 400, diagnostic)
+  CORR16 n=4 C=-4.41136e-04 Q=0.3482 Q4=2.3704 D=-0.8531 (samples 400, diagnostic)
+  LABEL C2 MASSIVE_ORIENTATION
+MODEL C3 (Z5 Wilson beta 5, Higgs/frozen control)
+  L=8 chains=4 D1=0.102626+-0.012 D2=0.0604152+-0.011 mono=0.000458855+-8.9e-05 polrad=0.930457+-0.011 fnz=0.0130304+-0.0025 cos=0.995702+-0.00059 hotcold_z=25.47
+  L=12 chains=4 D1=0.0228146+-0.0047 D2=0.0301628+-0.0071 mono=7.2338e-05+-1.4e-05 polrad=0.976051+-0.004 fnz=0.0138889+-0.0027 cos=0.999027+-0.00016 hotcold_z=5.69
+  L=16 chains=4 D1=0.2057+-0.026 D2=0.111813+-0.016 mono=1.46174e-05+-4.3e-06 polrad=0.93497+-0.0084 fnz=0.00169686+-0.00051 cos=0.998412+-0.00021 hotcold_z=17.62
+  L=24 chains=4 D1=0.218004+-0.028 D2=0.240628+-0.028 mono=6.16921e-05+-7.8e-06 polrad=0.751865+-0.031 fnz=0.0884242+-0.012 cos=0.998284+-0.0002 hotcold_z=16.67
+  GATE STATIONARITY C3_L8_hot1 D1 z=4.49
+  GATE HOTCOLD L=8 D1 cold=0.00000 hot=0.20525 z=25.47
+  GATE STATIONARITY C3_L12_hot1 D1 z=4.63
+  GATE HOTCOLD L=12 D1 cold=0.00000 hot=0.04563 z=5.69
+  GATE STATIONARITY C3_L16_hot1 D1 z=7.26
+  GATE STATIONARITY C3_L16_hot2 D1 z=27.60
+  GATE STATIONARITY C3_L16_hot2 mono z=40.65
+  GATE HOTCOLD L=16 D1 cold=0.00000 hot=0.41140 z=17.62
+  GATE STATIONARITY C3_L24_hot1 D1 z=6.53
+  GATE STATIONARITY C3_L24_hot1 mono z=6.48
+  GATE STATIONARITY C3_L24_hot2 D1 z=6.22
+  GATE HOTCOLD L=24 D1 cold=0.00000 hot=0.43601 z=16.67
+  FTRIV L12_cold1=1.000 L12_cold2=1.000 L12_hot1=1.000 L12_hot2=1.000 L16_cold1=1.000 L16_cold2=1.000 L16_hot1=1.000 L16_hot2=1.000 L24_cold1=1.000 L24_cold2=1.000 L24_hot1=1.000 L24_hot2=1.000 L8_cold1=1.000 L8_cold2=1.000 L8_hot1=1.000 L8_hot2=1.000
+  CORR16 n=2 C=2.31350e-02 Q=1.2143 Q4=5.0503 D=-0.7596 (samples 400, diagnostic)
+  CORR16 n=3 C=1.90526e-02 Q=1.1848 Q4=3.1308 D=-0.6216 (samples 400, diagnostic)
+  CORR16 n=4 C=1.60802e-02 Q=1.1521 Q4=2.3704 D=-0.5140 (samples 400, diagnostic)
+  LABEL C3 STOP_MIXING_ORIENTATION
+MODEL C4 (Z13 Wilson beta 11/10, near-edge Coulomb control)
+  L=8 chains=2 D1=0.588348+-0.0043 D2=0.591605+-0.0027 mono=0.0127212+-3.2e-05 polrad=0.287939+-0.00035 fnz=0.139058+-0.00039 cos=0.716827+-5.1e-05 hotcold_z=nan
+  L=12 chains=2 D1=0.59244+-0.0069 D2=0.590343+-0.0031 mono=0.0127108+-1.5e-05 polrad=0.142481+-0.00019 fnz=0.274117+-0.00028 cos=0.716727+-2.9e-05 hotcold_z=nan
+  L=16 chains=2 D1=0.59834+-0.008 D2=0.589655+-0.0046 mono=0.0127099+-7e-06 polrad=0.0709812+-0.00012 fnz=0.41024+-0.00019 cos=0.716714+-1.1e-05 hotcold_z=nan
+  L=24 chains=2 D1=0.588085+-0.0097 D2=0.593456+-0.0063 mono=0.0127134+-3.8e-06 polrad=0.0183094+-4.4e-05 fnz=0.61623+-0.00012 cos=0.71671+-7e-06 hotcold_z=nan
+  TRAPPED C4_L8_hot1 ftriv=0.003
+  TRAPPED C4_L8_hot2 ftriv=0.002
+  TRAPPED C4_L12_hot1 ftriv=0.000
+  TRAPPED C4_L12_hot2 ftriv=0.000
+  TRAPPED C4_L16_hot1 ftriv=0.000
+  TRAPPED C4_L16_hot2 ftriv=0.000
+  TRAPPED C4_L24_hot1 ftriv=0.000
+  TRAPPED C4_L24_hot2 ftriv=0.000
+  HOT_TRAPPED_AT_L 8,12,16,24 (hot/cold gate not evaluable there)
+  FTRIV L12_cold1=1.000 L12_cold2=1.000 L12_hot1=0.000 L12_hot2=0.000 L16_cold1=1.000 L16_cold2=1.000 L16_hot1=0.000 L16_hot2=0.000 L24_cold1=1.000 L24_cold2=1.000 L24_hot1=0.000 L24_hot2=0.000 L8_cold1=1.000 L8_cold2=1.000 L8_hot1=0.003 L8_hot2=0.002
+  FIT Z=0.590746+-0.002 M=-0.000189355+-0.001 chi2=1.65 dof=6
+  CORR16 n=2 C=1.58262e-01 Q=5.6154 Q4=5.0503 D=+0.1119 (samples 200, diagnostic)
+  CORR16 n=3 C=2.81836e-02 Q=6.3546 Q4=3.1308 D=+1.0297 (samples 200, diagnostic)
+  CORR16 n=4 C=4.43513e-03 Q=-4.1321 Q4=2.3704 D=-2.7432 (samples 200, diagnostic)
+  LABEL C4 COULOMB_ORIENTATION
+MODEL C5 (Z13 Wilson beta 9/10, near-edge confined control)
+  L=8 chains=4 D1=0.0173825+-0.0019 D2=0.0604753+-0.0015 mono=0.193225+-6.6e-05 polrad=0.0396751+-8.2e-05 fnz=0.74211+-0.00019 cos=0.469598+-6.5e-05 hotcold_z=0.67
+  L=12 chains=4 D1=0.009603+-0.0018 D2=0.031976+-0.0016 mono=0.193371+-3e-05 polrad=0.0213915+-4.8e-05 fnz=0.828132+-0.00012 cos=0.469397+-3.1e-05 hotcold_z=0.81
+  L=16 chains=4 D1=0.0058528+-0.0019 D2=0.0187513+-0.0016 mono=0.193358+-1.5e-05 polrad=0.0138674+-3e-05 fnz=0.871073+-7.2e-05 cos=0.469417+-1.8e-05 hotcold_z=1.07
+  L=24 chains=4 D1=-0.000576254+-0.0015 D2=0.00928308+-0.0017 mono=0.193342+-7.2e-06 polrad=0.00754451+-1.5e-05 fnz=0.914042+-4.2e-05 cos=0.469435+-7.4e-06 hotcold_z=1.02
+  FTRIV L12_cold1=0.997 L12_cold2=0.997 L12_hot1=0.998 L12_hot2=0.998 L16_cold1=0.998 L16_cold2=0.995 L16_hot1=0.999 L16_hot2=0.997 L24_cold1=0.998 L24_cold2=0.997 L24_hot1=0.997 L24_hot2=0.997 L8_cold1=0.999 L8_cold2=0.997 L8_hot1=0.998 L8_hot2=0.999
+  FIT Z=0.791976+-0.74 M=24.1661+-24 chi2=4.60 dof=6
+  CORR16 n=2 C=1.54753e-02 Q=-178.1354 Q4=5.0503 D=-36.2724 (samples 400, diagnostic)
+  CORR16 n=3 C=-8.68740e-05 Q=-0.2846 Q4=3.1308 D=-1.0909 (samples 400, diagnostic)
+  CORR16 n=4 C=3.05251e-04 Q=-0.1719 Q4=2.3704 D=-1.0725 (samples 400, diagnostic)
+  LABEL C5 UNRESOLVED_ORIENTATION
+ENGINE_CALIBRATION_V3 PASS
