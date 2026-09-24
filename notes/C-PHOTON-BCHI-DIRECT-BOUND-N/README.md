@@ -376,3 +376,37 @@ rozsah konečné kontroly a veřejný pin před výpočtem. Výsledky zůstávaj
 NON-CANONICAL, candidate-T/C. Stejnoměrná horní mez pro chi a ostré
 porovnání `b_lower > 25 chi_upper` nad všemi původními profily dosud
 nejsou dokázány. P1 zůstává otevřená.
+
+## 13. Rozšíření na úplnou míru a mez přepínání, 24. září 2026
+
+[FULL-MEASURE.md](FULL-MEASURE.md) odvozuje přesný zákon dvou kopií při
+libovolném součtu stěn a nové vyhodnocené meze v úplné míře. Pro k>=1 předem
+určených stěn je pravděpodobnost společného nasycení nejvýše `2^(-k-2)`;
+jejich zcela nasycená událost přispívá do proudové kovariance nejvýše
+`2^(-k-1)` v absolutní hodnotě. Výběr stěn musí být pevný a tento odhad
+sám nekontroluje zbývající příspěvek.
+
+Současně je dokázána překážka dalšího místního přepínání. Jediná souvislá
+neutrální plocha může i bez nasycených rozhraní zachovat podmíněný proudový
+moment `(9/25) F_(D-4)/F_(D+2)` pro lichá D>=5; ten neklesá k nule. Přesný součet
+obsahuje `8 F_(D+2)` dvojic. Jde o podmíněnou rodinu s vlastní vahou,
+nikoli o vyvrácení poklesu v úplné míře.
+
+Zpřesnění dřívějšího váženého odhadu cest rozšiřuje dovolený počet
+protilehlých kontaktů jednoduché smyčky z délky/24 na délku/12. Pro pevnou
+hranu a délku alespoň R má tato třída v úplné míře horní mez
+`min(1, (748250/7183)(2472875/2480058)^(R-1))`.
+Není to odhad všech geometrií ani korelací mezi různými smyčkami.
+
+Úplně popsaný proudový sektor má nulovou příčnou osovou odezvu, takže
+kladný odhad nelze žádat zvlášť pro každý proud. Všechny sektory s alespoň
+V proudovými hranami však lze odstranit s chybou nejvýše
+`8V(13824/14641)^(V/8)` v normalizovaném plošném druhém momentu.
+Jejich odstranění stále nedává dolní mez velkých neutrálních fluktuací.
+
+[Předregistrace](FULL-PREREG-20260924.md),
+[přesný program](verify_full_measure.py) a
+[první úspěšný běh](FULL-RUN-20260924.md) zachovávají veřejné zmrazení
+před výpočtem. Stav je NON-CANONICAL, candidate-T/C. Úplná podepsaná
+kovariance ani ostré porovnání `b_lower > 25 chi_upper` dosud nejsou
+dokázány. P1 zůstává otevřená.
