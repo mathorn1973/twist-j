@@ -307,3 +307,28 @@ cirkulace nejvýše `1/129`. Jde o přesně definované místní vzory, nikoli
 [přesný audit](verify_partial_current.py) a
 [výsledek běhu](MARGINAL-RUN-20260924.md) dokládají konečnou kontrolu
 candidate-C. Tato návaznost zůstává NON-CANONICAL a neuzavírá P1.
+
+## 10. Úplná proudová kovariance a neutrální spojení, 24. září 2026
+
+[CONNECTED-CURRENT.md](CONNECTED-CURRENT.md) dává přesnější rozklad úplné
+proudové kovariance podle párování stěn u neutrálních hran. Složky bez
+proudu přispívají přesně nulou. Zbývající horní mez pro proudovou tuhost
+lze přímo odvodit z příslušného plošného momentu složek nesoucích proud;
+jeho užitečná stejnoměrná horní mez však zatím dokázána není.
+
+Výslovná konstrukce pro libovolnou vzdálenost ukazuje, že dva oddělené
+proudové okruhy mohou být spojeny neutrální plošnou trubicí. Při pevném
+obsazeném nosiči jejich znaménka nelze obracet nezávisle. Nejde o
+protipříklad nepodmíněného poklesu korelací ani o vyvrácení fotonové fáze.
+
+Použití dříve známého komplexního zdroje současně zlepšuje mez částečného
+čtyřhranového marginálu na `c < 1/3000`. Pravděpodobnost jedné lokální
+cirkulace je proto menší než `1/1501`; absolutní kovariance dvou vzorů
+s disjunktními 21stěnnými okolími je menší než `1/4500001`. Tyto místní
+meze platí v úplné míře, ale stále neudávají pokles se vzdáleností.
+
+[Předregistrace](CONNECTED-PREREG-20260924.md),
+[přesný ověřovací program](verify_connected_current.py) a
+[výsledek kontroly](CONNECTED-RUN-20260924.md) uchovávají důkazní rozsah
+i první úspěšný běh. Stav: NON-CANONICAL, candidate-T pro napsané důkazy,
+candidate-C pro konečný výpočet. Rozhodující odhad a P1 zůstávají otevřené.
