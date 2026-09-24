@@ -291,3 +291,19 @@ Samostatný agentní přezkum před zveřejněním potvrdil hlavní konečněobj
 Důkaz rozkladu a meze (1) je analytický: používá samostatné obracení souvislých složek, symetrii souřadnic, nerovnost pro kosinus a spočítaný počet stěn v konečném kvádru. Vzorec (6) plyne součinem čtyř jednorozměrných řad. Pomocná kontrola přesnou racionální aritmetikou porovnala prvních dvanáct koeficientů slupkové řady s uvedeným polynomem; nejde o měření korelací \(W\), formální sondu ani další architekturní potvrzení.
 
 Původní nový text: Apache-2.0.
+
+## 9. Navazující částečné proudové marginály, 24. září 2026
+
+[MARGINAL-CURRENT-BOUND.md](MARGINAL-CURRENT-BOUND.md) rozšiřuje bodovou
+Fourierovu mez na částečné proudové marginály pomocí smíšené Haarovy a
+Z5 integrace. Všechny neurčené proudy jsou sečteny v původní míře.
+Výsledkem candidate-T je mez `16^(-k)` pro k slučitelných čtyřhranových
+bloků a po normalizaci pravděpodobnost lokální cirkulace nejvýše `1/9`.
+Pro dva slučitelné bloky je absolutní kovariance indikátorů orientované
+cirkulace nejvýše `1/129`. Jde o přesně definované místní vzory, nikoli
+úplnou proudovou kovarianci; pokles se vzdáleností zůstává otevřený.
+
+[Předregistrace](MARGINAL-PREREG-20260924.md),
+[přesný audit](verify_partial_current.py) a
+[výsledek běhu](MARGINAL-RUN-20260924.md) dokládají konečnou kontrolu
+candidate-C. Tato návaznost zůstává NON-CANONICAL a neuzavírá P1.
