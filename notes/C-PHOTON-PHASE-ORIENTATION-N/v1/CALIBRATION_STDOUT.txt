@@ -1,0 +1,15 @@
+C1_coulomb beta=1.5 L=8 Delta1=0.52321+-0.00531 Delta2=0.53243+-0.00320 mono=0.00047 polrad=0.37094+-0.00041 cos=0.81225 hotcold_z=1.24
+C1_coulomb beta=1.5 L=12 Delta1=0.46362+-0.01713 Delta2=0.52109+-0.00365 mono=0.00055 polrad=0.24340+-0.00045 cos=0.81230 hotcold_z=2.59
+C1_coulomb beta=1.5 L=16 Delta1=0.38825+-0.01940 Delta2=0.50137+-0.00658 mono=0.00057 polrad=0.11852+-0.00053 cos=0.81228 hotcold_z=6.45
+C2_confined beta=0.7 L=8 Delta1=0.00061+-0.00378 Delta2=0.01165+-0.00377 mono=0.28155 polrad=0.03979+-0.00019 cos=0.34618 hotcold_z=0.56
+C2_confined beta=0.7 L=12 Delta1=0.00064+-0.00327 Delta2=0.00371+-0.00341 mono=0.28164 polrad=0.02120+-0.00010 cos=0.34612 hotcold_z=0.00
+C2_confined beta=0.7 L=16 Delta1=0.00117+-0.00398 Delta2=0.00009+-0.00392 mono=0.28163 polrad=0.01384+-0.00007 cos=0.34611 hotcold_z=0.32
+C1_coulomb rho=Delta16/Delta8=0.7421 monos=[0.00047, 0.00055, 0.00057] hotcold_z=[1.24, 2.59, 6.45] -> FAIL
+C2_confined rho=Delta16/Delta8=1.9278 monos=[0.28155, 0.28164, 0.28163] hotcold_z=[0.56, 0.0, 0.32] -> FAIL
+CORR C1_coulomb L=16 n=2 C=1.40694e-01 Q=5.2623 Q4=5.0503 D=+0.0420 (samples 120, no error bars: diagnostic)
+CORR C1_coulomb L=16 n=3 C=2.67363e-02 Q=4.7415 Q4=3.1308 D=+0.5145 (samples 120, no error bars: diagnostic)
+CORR C1_coulomb L=16 n=4 C=5.63881e-03 Q=3.5135 Q4=2.3704 D=+0.4823 (samples 120, no error bars: diagnostic)
+CORR C2_confined L=16 n=2 C=8.36180e-04 Q=-1.6595 Q4=5.0503 D=-1.3286 (samples 120, no error bars: diagnostic)
+CORR C2_confined L=16 n=3 C=-5.03878e-04 Q=0.3305 Q4=3.1308 D=-0.8944 (samples 120, no error bars: diagnostic)
+CORR C2_confined L=16 n=4 C=-1.52449e-03 Q=3.5743 Q4=2.3704 D=+0.5079 (samples 120, no error bars: diagnostic)
+ENGINE_CALIBRATION FAIL

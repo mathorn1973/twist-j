@@ -1,0 +1,11 @@
+ANALYSIS C-PHOTON-CONTRAST-DRIFT-N P_ref=0.602177 SE_P=0.002859 block=200
+  FTRIV L=24 cold3=1.000 cold4=1.000 cold5=1.000 cold6=1.000 cold7=1.000 cold8=1.000 cold9=1.000 cold10=1.000 cold11=1.000 cold12=1.000 cold13=1.000 cold14=1.000
+  L=24 chains=12 D1=0.596245+-0.004 D2=0.604171+-0.002 mono=0.0112364+-1.4e-06 polrad=0.0105968+-1.3e-05 fnz=0.592453+-4.9e-05 cos=0.665217+-2.3e-06
+    byproduct d=0.697112+-3.6e-06 b_L=0.600532+-0.00012 25chi_L=0.004288+-0.004
+    drift d_L=P_ref-Delta_L(1)=0.005932 sigma_L=0.004898 z=1.211
+  FTRIV L=32 cold1=1.000 cold2=1.000 cold3=1.000 cold4=1.000 cold5=1.000 cold6=1.000 cold7=1.000 cold8=1.000
+  L=32 chains=8 D1=0.600097+-0.0071 D2=0.602989+-0.004 mono=0.0112361+-9e-07 polrad=0.00508768+-7.6e-06 fnz=0.711297+-3.8e-05 cos=0.665219+-1.5e-06
+    byproduct d=0.697111+-2.3e-06 b_L=0.600474+-0.00014 25chi_L=0.000377+-0.0071
+    drift d_L=P_ref-Delta_L(1)=0.002080 sigma_L=0.007628 z=0.273
+  INFO_REFIT_B3_PLUS_NEW Z=0.603122+-0.0012 M=0.000581236+-0.00035 chi2=9.34 dof=10 (no decision weight)
+TERMINAL NO_DRIFT

@@ -1,0 +1,3 @@
+B1: tuple-convention-k cases=5832 pair-set mismatches=0
+B2: tuple-convention-k cases=2048 pair-set mismatches=0
+BREAK_RESULT PASS
