@@ -1,0 +1,37 @@
+R01-own-bsum-enclosure: PASS 120 random periodic sequences inside brute-force enclosure
+R02-own-norm-1-and-layers: PASS 
+# own Gram in 5.9s
+R03-calib-gram: PASS 
+# lane verifier executed in-process in 146s; its final line: CHECKS: 20 of 20 PASS
+R04-gram-equals-lane: PASS all 2556 Gram entries equal the lane's (different cycle bookkeeping)
+R05-dK-exact-K<=16: PASS own Gaussian elimination equals lane LDL for 4 targets, K <= 16
+R06-dK-stdout-K<=12: PASS 44 printed exact fractions reproduced
+R07-primes: PASS 
+R08-dK-modular-K<=72: PASS lane's exact d_K(x)^2 for all K <= 72, 4 targets, agree mod three 60-bit primes with own modular LDL
+R09-lane-dK-positive-monotone: PASS 
+  DIAGNOSTIC 1: d_K^2 log K on 32..72 in [0.0969, 0.1004]  (lane sec. 8.2 claims [0.0969, 0.1004]); summary item 2 claims [0.0990, 0.1004] for target 1
+  DIAGNOSTIC A2: d_K^2 log K on 32..72 in [0.0935, 0.1004]  (lane sec. 8.2 claims [0.0935, 0.1004]); summary item 2 claims [0.0990, 0.1004] for target 1
+  DIAGNOSTIC A4: d_K^2 log K on 32..72 in [0.0608, 0.0649]  (lane sec. 8.2 claims [0.0608, 0.0649]); summary item 2 claims [0.0990, 0.1004] for target 1
+  DIAGNOSTIC A8: d_K^2 log K on 32..72 in [0.0283, 0.0305]  (lane sec. 8.2 claims [0.0283, 0.0305]); summary item 2 claims [0.0990, 0.1004] for target 1
+  DIAGNOSTIC d_72(A2)^2/d_72(1)^2 = 0.9407
+R10-tQ-k<=40: PASS 
+R11-tQ-source-pairs: PASS t_Q = sum over source pairs (mQu, m(Qu+1)) -- the backward convention is the one encoded in the Mobius note's (4) and (23)
+R12-bound3-K<=4096: PASS maxima {2: Fraction(1, 6), 4: Fraction(1, 20), 8: Fraction(1, 72)}
+  K attaining max |gamma|: {2: [3, 4], 4: [5, 6, 7, 8], 8: [9, 10, 11, 12, 13, 14, 15, 16]}
+R13-identity-12: PASS 
+R14-gamma-cuts: PASS 
+R15-lemmaC-below-cut: PASS 
+R16-identity-13-n<=600: PASS 
+R17-identity-14-n<=600: PASS 
+R18-forward-shift-all-Q: PASS forward convention shifts p_h(n) = A_Q(n+1) for Q = 2, 4, 8 alike (lane states it only for Q = 4, 8); S(1) != 0 only for Q = 2
+R19-direct-(2,1): PASS stdout fractions for (Q,J)=(2,1) reproduced by direct period-840 evaluation; identity (1) exact
+R20-direct-(4,1): PASS 
+R21-direct-(2,2): PASS period 720720 direct evaluation equals lane tables (63s)
+R22-direct-||A2-p_1||^2: PASS 
+R23-lemmaD-chain-on-lane-values: PASS 
+  DIAGNOSTIC efficiency sharp Q=2: [1.4898, 1.9272, 3.0956, 3.5854]
+  DIAGNOSTIC efficiency avg   Q=2: [1.4898, 1.3218, 1.2299, 1.2073]
+  DIAGNOSTIC ||D_{2,J}||^2: [0.3059, 0.8457, 1.1942, 1.4358]  increments: [0.5398, 0.3485, 0.2416]
+  DIAGNOSTIC ||Y_{2,J}||^2/J: [0.0592, 0.0826, 0.1066, 0.1274]
+R24-lemmaA-random: PASS 
+REFEREE CHECKS: 24 of 24 PASS; failures []; 251s

@@ -1,0 +1,7 @@
+PASS: exact 71x71 weighted Gram system solved by stdlib Bareiss elimination.
+PASS: 7601923/10^9 < min_{span_R{r_2,...,r_72}} E_144 < 7601924/10^9.
+PASS: finite minimum > 7000 * (9/2^23).
+CONCLUSION: no real, rational, or complex q in span{r_2,...,r_72} can satisfy target (29).
+PASS: shadow model reflection, shift cancellation, residue and regularization identities.
+MODEL ONLY: Z(s)=P(s)/(P(1)*(s-1)) is not the Riemann zeta function.
+ALL CHECKS PASS. NON-CANONICAL; no RH status change; one local architecture.
