@@ -36,6 +36,419 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v92 input contract and reversible public v91 reconstruction.
+V92_PRIOR_COMMIT = 'd14971d66cf5b2497ae83927b7b16ced5548d85b'
+V92_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '90cf06bbccb85416ee7c75ecac005eddaae98200274792dba10194ba33c1a697',
+                  'current_bytes': 460414,
+                  'prior_sha256': 'da052f298ee8f0d0734f61e317da0c822bfa540b53dba2f2153e5d13905070be',
+                  'prior_bytes': 456822,
+                  'restore': ((312,
+                               313,
+                               'METRO-REDUCTION-CALCULUS\tO\tthe remaining open L5 '
+                               'reduction-calculus obligations on U_RF tuples '
+                               'P=(q,a,r,S,A0,{delta_(i,u)},enc_q,w) after METRO-REDUCTION-ARROWS '
+                               '[C]: obligation B, the complete forbidden-transformation catalogue '
+                               'with exact witnesses, discharged for the five entries section 15 '
+                               'names by METRO-FORBIDDEN-WITNESSES, whose one frozen reading per '
+                               'entry is the ratified meaning of those five phrases, with any '
+                               'further entry still open; obligation D, common q^k blocking with '
+                               'exact transport of all length-k words, padding, every '
+                               'exponent-residue vector, the pointwise stream, the scientific '
+                               'decision, and the terminal value; and obligation E, completeness '
+                               'of the finite-zig-zag equivalence approx_red for the registered '
+                               'class; obligations A and C are separated into '
+                               'METRO-REDUCTION-ARROWS and do not close B, D, or E; no '
+                               'normalization or cross-layer gate is owned\t15. Couplings, '
+                               'instruments, and metrology\tinline\tcloses positively when every '
+                               'forbidden entry has an exact witness, common q^k blocking and '
+                               'decision and terminal-value transport are decided, and approx_red '
+                               'is complete for the registered class; closes negatively if one '
+                               'transformation is both allowed and forbidden or an admitted arrow '
+                               'changes a frozen decision or terminal value after exact transport; '
+                               'STOP while any forbidden-witness, blocking, decision, '
+                               'terminal-value, or completeness obligation remains; '
+                               'METRO-REDUCTION-ARROWS closes only obligations A and C and leaves '
+                               'this row O and STOP\n'),
+                              (463, 466, ''))},
+ 'NORMATIVE.tsv': {'current_sha256': '5ba418235091153c3fedea618611a6ce790f2ad91daacfd9a27058f9b8a19167',
+                   'current_bytes': 59681,
+                   'prior_sha256': 'a0e75f23eca170bb6b89bdd11c909b3633062a3c119ee3f49339542efe80db84',
+                   'prior_bytes': 59366,
+                   'restore': ((522, 525, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': 'c7407e556ed1a1abae0c7d476eea6c47341fef393065e04a36b997ad67e2869b',
+                      'current_bytes': 157376,
+                      'prior_sha256': 'd39681b357a0995954536bd7fb9b27e0b2d09ab7003a0302fc7d6d00436a9a1c',
+                      'prior_bytes': 156684,
+                      'restore': ((534,
+                                   535,
+                                   'METRO-REDUCTION-CALCULUS\tMETRO-REDUCTION-ARROWS\tREQUIRES\t'
+                                   'obligations A and C are discharged only at the registered '
+                                   'computation scope; the parent retains B, D, and E and remains '
+                                   'O/STOP\n'),
+                                  (956, 959, ''))},
+ 'EVIDENCE.tsv': {'current_sha256': '4627eaf063a73180c83ab8aa73457c15c0656713d704e9fdb2a970f5a1df8cee',
+                  'current_bytes': 95079,
+                  'prior_sha256': '0d2eca3bca3bd86324305257f6d04a282a3a2a46075b009a95b374d63489e7fd',
+                  'prior_bytes': 94480,
+                  'restore': ((303,
+                               304,
+                               'METRO-REDUCTION-CALCULUS\tEV-METRO-REDUCTION-CALCULUS\t'
+                               'INLINE_CANON\tinline\t'
+                               '6cc54ceb510769393c558534ba5d72e371b23e7d06937a8ce56059b8610bece3\t'
+                               'registry-scope-sha256-v1\tnone\n'),
+                              (463, 466, ''))},
+ 'HISTORY.tsv': {'current_sha256': 'd3cf97b59b213bc9250f5b0d15388addfd72a1452d3427d80ae48434b50ea152',
+                 'current_bytes': 451629,
+                 'prior_sha256': '8d636e7735905adc6c1bdcc71fae3c5d5facdbdef837dd60834ddedc636a915f',
+                 'prior_bytes': 449314,
+                 'restore': ((1009, 1013, ''),)},
+ 'GATES.tsv': {'current_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'current_bytes': 12907,
+               'prior_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'prior_bytes': 12907,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'current_bytes': 1436,
+                           'prior_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'prior_bytes': 1436,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': '31783fcd8e5ad2a697efd92a6d9fb92c2a21c101b95b9c282ea50fa7cb245f68',
+              'current_bytes': 797365,
+              'prior_sha256': '6d49a9dfce95f2146490ccc9ae76066bca01d1614291549562b599d35b2218e1',
+              'prior_bytes': 772678,
+              'restore': ((0, 1, '# TWIST-J Public Canon v91\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v91. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v91 also declares the discrete architecture used to '
+                           'read\n'),
+                          (11008, 11194, ''),
+                          (11235, 11442, ''),
+                          (17248,
+                           17251,
+                           '   input indices, and boxes while leaving the ordered output basis '
+                           'fixed.\n'),
+                          (17256,
+                           17261,
+                           'and replacing boxes by an unrelated ordering are forbidden. Common '
+                           '`q^k`\n'
+                           'blocking remains undecided unless all length-`k` words, padding, '
+                           'every\n'
+                           'exponent-residue vector, the pointwise stream, the decision, and the '
+                           'terminal\n'
+                           'value are transported exactly.\n'),
+                          (17302,
+                           17305,
+                           'at a declared finite range, so the result is C, not T. Common `q^k` '
+                           'blocking\n'
+                           'is untouched: it is obligation D below.\n'),
+                          (17306,
+                           17463,
+                           'METRO-REDUCTION-CALCULUS [O] remains the parent for obligations B, D, '
+                           'and E:\n'
+                           'exact witnesses for any forbidden entry beyond the five section 15\n'
+                           'names, the ratified reading of those five having been discharged by\n'
+                           'METRO-FORBIDDEN-WITNESSES; common `q^k` blocking\n'
+                           'with all length-`k` words, padding, exponent-residue vectors, the '
+                           'pointwise\n'
+                           'stream, scientific decision, and terminal value transported; and '
+                           'completeness\n'
+                           'of `approx_red` for the registered class. It remains STOP. Neither row '
+                           'owns\n'
+                           'normalization, L6, or another cross-layer gate.\n'))},
+ 'CORE.md': {'current_sha256': '2a839a1d6c24706a528be9a43fd87acb5939cea89e2249f74158c65908f2714e',
+             'current_bytes': 19735,
+             'prior_sha256': '5856724441b23e8a2c5d88690b2e587e0e0e96eb0e0594c40ad878e2c60636a0',
+             'prior_bytes': 19140,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v91. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v91 also declares a discrete architecture. It does not\n'),
+                         (134,
+                          135,
+                          'Public Canon v91 makes three exact dispositions. The complete '
+                          'measurable\n'),
+                         (162, 171, ''))},
+ 'FRONTIER.md': {'current_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'current_bytes': 26162,
+                 'prior_sha256': '9528c31b44f9d7d01e69553969f5284ad147f7fdf556d7da5565b9a0abf365ff',
+                 'prior_bytes': 26048,
+                 'restore': ((11,
+                              12,
+                              '- METRO-REDUCTION-CALCULUS [O]: the remaining open L5 '
+                              'reduction-calculus obligations on U_RF tuples '
+                              'P=(q,a,r,S,A0,{delta_(i,u)},enc_q,w) after METRO-REDUCTION-ARROWS '
+                              '[C]: obligation B, the complete forbidden-transformation catalogue '
+                              'with exact witnesses, discharged for the five entries section 15 '
+                              'names by METRO-FORBIDDEN-WITNESSES, whose one frozen reading per '
+                              'entry is the ratified meaning of those five phrases, with any '
+                              'further entry still open; obligation D, common q^k blocking with '
+                              'exact transport of all length-k words, padding, every '
+                              'exponent-residue vector, the pointwise stream, the scientific '
+                              'decision, and the terminal value; and obligation E, completeness of '
+                              'the finite-zig-zag equivalence approx_red for the registered class; '
+                              'obligations A and C are separated into METRO-REDUCTION-ARROWS and '
+                              'do not close B, D, or E; no normalization or cross-layer gate is '
+                              'owned\n'),)},
+ 'CHANGELOG.md': {'current_sha256': 'b129e51c78a556606ac95b276b23f6c5c333275560c8bddd279aaea2ba71751c',
+                  'current_bytes': 186560,
+                  'prior_sha256': '5f7a3927665aefec1172c684e90c327877564d00e88be3e712e268c2a7fc6062',
+                  'prior_bytes': 184832,
+                  'restore': ((1, 31, ''),
+                              (195,
+                               196,
+                               'Registry snapshot: 462 claims; 0 T-LOCK, 320 T, 59 D, 39 C, 2 H, '
+                               '23 O, 19 F; 25 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '522d30426ac27c281d7311cf3cd572665e5bdb727e88a9e1944335f1d0d76ff8',
+                       'current_bytes': 243,
+                       'prior_sha256': '0b323c1cd8b3327c7dca289265f8c9e77ad9f07cc73a558bd8359719f450ffda',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t462\n'),
+                                   (3, 4, 'status_T\t320\n'),
+                                   (11, 12, 'evidence_none\t59\n'),
+                                   (14, 15, 'evidence_two-architecture\t363\n'))}}
+V92_NEW_ROWS = {'COUNTER-BELL-PRICE': {'claim_id': 'COUNTER-BELL-PRICE',
+                        'status': 'T',
+                        'scope': 'for finite rational local response models with '
+                                 'setting-conditional latent laws and overlap dependence '
+                                 'eps=1-sum_lambda min_(x,y) mu_xy(lambda), determinization '
+                                 'preserves behavior and eps; the sharp bounds are abs(S)<=2+2eps '
+                                 'for CHSH, B<=2+8eps for the five-context functional, and '
+                                 'remote-setting marginal differences at most eps, attained for '
+                                 'every rational eps in [0,1]; the complete ETH-QDD-2 numerical '
+                                 'table has minimum eps exactly 1/16 by matching local-weight '
+                                 'primal and dual certificates 15/16, whereas its Bell value alone '
+                                 'needs 3/128; the Q(sqrt(2)) extension attains the CHSH value '
+                                 '2sqrt(2) at eps=sqrt(2)-1 and the class has no intrinsic '
+                                 'Tsirelson ceiling; no physical latent-state identification, '
+                                 'causal mechanism or change to the adopted pair law follows',
+                        'canon_section': '8. The measure and Born',
+                        'evidence': 'probes/P-COUNTER-BELL-PRICE-1/RESULT.md',
+                        'falsifier': 'fires on an admitted model exceeding a stated overlap bound, '
+                                     'on a model reproducing the complete table with eps below '
+                                     '1/16, or on failure of an attaining construction, '
+                                     'determinization identity, primal feasibility or dual '
+                                     'certificate'},
+ 'METRO-COMMON-BLOCKING': {'claim_id': 'METRO-COMMON-BLOCKING',
+                           'status': 'T',
+                           'scope': 'for the declared L5 U_RF tuples in '
+                                    'ENC4={MSD-E0,MSD-Z0,LSD-E0,LSD-Z0} and one common integer '
+                                    'k>=2, length-k super-digit flattening inserts exactly '
+                                    'rho_i=(-length(enc_q(n_i))) mod k zeros in the specified '
+                                    'positions; the finite reachable-pair predicate Pre_blk is '
+                                    'necessary and sufficient for pointwise stream equality of '
+                                    'same-carrier Blk_k, which transports every functional of the '
+                                    'identical allowed-start stream family and preserves '
+                                    'cross-coordinate commutation; the explicitly initialized S '
+                                    'times {0,1}^a augmentation gives unconditional exact blocking '
+                                    'for MSD only; the all-m W-D2 witness rejects the '
+                                    'unconditional same-carrier admission rule while leaving every '
+                                    'valid Pre_blk instance admitted; no other encoding family, '
+                                    'LSD augmentation, completeness of approx_red, L6 '
+                                    'normalization or physical lift is established',
+                           'canon_section': '15. Couplings, instruments, and metrology',
+                           'evidence': 'probes/P-METRO-COMMON-BLOCKING-1/RESULT.md',
+                           'falsifier': 'fires if flattening fails in the declared ENC4 class, '
+                                        'Pre_blk disagrees with exact pointwise stream equality, '
+                                        'an admitted same-carrier or MSD augmented construction '
+                                        'changes a transported stream functional or '
+                                        'cross-coordinate commutation, or either exact '
+                                        'forbidden-rule witness fails'},
+ 'PHOTON-CONDITIONAL-VARIANCE-FLOOR': {'claim_id': 'PHOTON-CONDITIONAL-VARIANCE-FLOOR',
+                                       'status': 'T',
+                                       'scope': 'in the explicitly chosen full finite measure '
+                                                'mu_L(n) proportional to 2^(-|supp n|) on ternary '
+                                                'plaquette fields with partial n=0 mod5 on every '
+                                                'even periodic four-torus L>=4, separated '
+                                                'modulo-five-closed insertions a_i on m_i faces '
+                                                'give Var_mu F>=sum_i 2^(1-2m_i)|F(a_i)|^2 for '
+                                                'every complex linear observable; the explicit '
+                                                '21-face cup packing gives S_n,02,02(t '
+                                                'e_1)>=c_L(3+2cos t)^2 and S_n,01,01(t '
+                                                'e_1)>=25c_L, where c_L=2^-41 floor(L/3)^2/(4L^2), '
+                                                'and the midpoint Ward identity gives '
+                                                'chi_L(t)>=c_L at nonzero axis momenta; '
+                                                'consequently every defined thermodynamic-first '
+                                                'then infrared joint profile has b>=25rho and '
+                                                'chi>=rho with rho=1/(36*2^41), also as lower '
+                                                'limits; no profile existence or uniqueness, full '
+                                                'current-moment upper bound, positive P1 contrast, '
+                                                'cross-layer identification or physical photon '
+                                                'conclusion is proved',
+                                       'canon_section': '9. The photon and the electron',
+                                       'evidence': 'inline',
+                                       'falsifier': 'fires on an admitted finite measure, '
+                                                    'separated insertion family or linear '
+                                                    'observable violating the conditional-variance '
+                                                    'bound, on failure of the cup geometry, '
+                                                    'packing, Ward identity or finite floors, or '
+                                                    'on a defined ordered profile violating their '
+                                                    'uniform lower-limit consequences'}}
+V92_NEW_NORMATIVE = {'COUNTER-BELL-PRICE': {'item_id': 'COUNTER-BELL-PRICE',
+                        'item_type': 'THEOREM',
+                        'claim_id': 'COUNTER-BELL-PRICE',
+                        'status': 'T',
+                        'layer': 'L6',
+                        'gate_ids': '',
+                        'statement_source': 'canon/CANON.md::COUNTER-BELL-PRICE'},
+ 'METRO-COMMON-BLOCKING': {'item_id': 'METRO-COMMON-BLOCKING',
+                           'item_type': 'THEOREM',
+                           'claim_id': 'METRO-COMMON-BLOCKING',
+                           'status': 'T',
+                           'layer': 'L5',
+                           'gate_ids': '',
+                           'statement_source': 'canon/CANON.md::METRO-COMMON-BLOCKING'},
+ 'PHOTON-CONDITIONAL-VARIANCE-FLOOR': {'item_id': 'PHOTON-CONDITIONAL-VARIANCE-FLOOR',
+                                       'item_type': 'THEOREM',
+                                       'claim_id': 'PHOTON-CONDITIONAL-VARIANCE-FLOOR',
+                                       'status': 'T',
+                                       'layer': 'L6',
+                                       'gate_ids': '',
+                                       'statement_source': 'canon/CANON.md::PHOTON-CONDITIONAL-VARIANCE-FLOOR'}}
+V92_NEW_EVIDENCE = {'COUNTER-BELL-PRICE': {'claim_id': 'COUNTER-BELL-PRICE',
+                        'evidence_id': 'EV-COUNTER-BELL-PRICE',
+                        'evidence_kind': 'PUBLIC_PROBE',
+                        'location': 'probes/P-COUNTER-BELL-PRICE-1/RESULT.md',
+                        'sha256': 'ae388cce2fb06ed9b9a6e377c78cc1b03a7819439c9f2a8cea27b8ac20611b89',
+                        'hash_mode': 'bundle-manifest-sha256-v1',
+                        'architecture_requirement': 'two-architecture'},
+ 'METRO-COMMON-BLOCKING': {'claim_id': 'METRO-COMMON-BLOCKING',
+                           'evidence_id': 'EV-METRO-COMMON-BLOCKING',
+                           'evidence_kind': 'PUBLIC_PROBE',
+                           'location': 'probes/P-METRO-COMMON-BLOCKING-1/RESULT.md',
+                           'sha256': 'd896e4aad95c8205d624be11e4a96b1c08746b090c9fad58bbc236b690611335',
+                           'hash_mode': 'bundle-manifest-sha256-v1',
+                           'architecture_requirement': 'two-architecture'},
+ 'PHOTON-CONDITIONAL-VARIANCE-FLOOR': {'claim_id': 'PHOTON-CONDITIONAL-VARIANCE-FLOOR',
+                                       'evidence_id': 'EV-PHOTON-CONDITIONAL-VARIANCE-FLOOR',
+                                       'evidence_kind': 'INLINE_CANON',
+                                       'location': 'inline',
+                                       'sha256': '9c617a1b4c239c3c992753dd5eac6a64185d8cb8940420e9d0567d31fbea6ea1',
+                                       'hash_mode': 'registry-scope-sha256-v1',
+                                       'architecture_requirement': 'none'}}
+V92_METRO_PARENT = {'claim_id': 'METRO-REDUCTION-CALCULUS',
+ 'status': 'O',
+ 'scope': 'the remaining open L5 reduction-calculus obligations on U_RF tuples '
+          'P=(q,a,r,S,A0,{delta_(i,u)},enc_q,w): obligations A and C retain the '
+          'METRO-REDUCTION-ARROWS computation scope; obligation B has exact witnesses for the five '
+          'ratified named entries through METRO-FORBIDDEN-WITNESSES and for the sixth '
+          'unconditional same-carrier blocking rule through METRO-COMMON-BLOCKING, while further '
+          'catalogue extensions remain unclassified; obligation D is discharged in the explicitly '
+          'adopted ENC4 family with one common k by Pre_blk same-carrier blocking and the '
+          'initialized MSD-only augmentation, transporting the complete allowed-start pointwise '
+          'stream family, its scientific decision and terminal value; other encoding families are '
+          'not classified; obligation E, completeness of the finite-zig-zag equivalence approx_red '
+          'for the registered class with the adopted fifth arrow, remains open; no normalization '
+          'or cross-layer gate is owned and the parent remains O and STOP',
+ 'canon_section': '15. Couplings, instruments, and metrology',
+ 'evidence': 'inline',
+ 'falsifier': 'closes positively when every forbidden entry has an exact witness, common q^k '
+              'blocking and decision and terminal-value transport are decided, and approx_red is '
+              'complete for the registered class; closes negatively if one transformation is both '
+              'allowed and forbidden or an admitted arrow changes a frozen decision or terminal '
+              'value after exact transport; STOP while any forbidden-witness, blocking, decision, '
+              'terminal-value, or completeness obligation remains; METRO-REDUCTION-ARROWS closes '
+              'only obligations A and C and leaves this row O and STOP'}
+
+def v92_previous_bytes(path):
+    """Check exact candidate bytes before reconstructing every v91 audit input."""
+    patch = V92_INPUT_PATCH[path.name]
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v92_current_checks():
+    names = tuple(name for name in V92_INPUT_PATCH if name.endswith(".tsv"))
+    previous = {name: v87_table_bytes(v92_previous_bytes(ROOT / "canon" / name))
+                for name in names}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in names}
+    old_index = {r["claim_id"]: r for r in previous["REGISTRY.tsv"]}
+    index = {r["claim_id"]: r for r in current["REGISTRY.tsv"]}
+    normative = {r["item_id"]: r for r in current["NORMATIVE.tsv"]}
+    evidence = {r["claim_id"]: r for r in current["EVIDENCE.tsv"]}
+    new_ids = set(V92_NEW_ROWS)
+    parent = "METRO-REDUCTION-CALCULUS"
+    counts = {s: sum(r["status"] == s for r in index.values())
+              for s in {r["status"] for r in index.values()}}
+    old_live = {c for c,r in old_index.items() if r["status"] in {"H","O"}}
+    live = {c for c,r in index.items() if r["status"] in {"H","O"}}
+    history = current["HISTORY.tsv"]
+    prior_history = previous["HISTORY.tsv"]
+    events = history[len(prior_history):]
+    canon_text = CANON.read_text(encoding="utf-8")
+    return [
+        ("V92-PRIOR-BYTES",
+         "thirteen exact current inputs reconstruct public v91 before all 107 unchanged historical guards",
+         len(V92_INPUT_PATCH) == 13 and all(
+             v92_previous_bytes(ROOT / "canon" / name) is not None for name in V92_INPUT_PATCH)),
+        ("V92-EXACT-THEOREMS",
+         "three finite theorem rows retain exact scopes, evidence kinds and declarations; the inline photon proof is not a formal probe",
+         set(index) == set(old_index) | new_ids
+         and {c:index.get(c) for c in new_ids} == V92_NEW_ROWS
+         and {c:normative.get(c) for c in new_ids} == V92_NEW_NORMATIVE
+         and {c:evidence.get(c) for c in new_ids} == V92_NEW_EVIDENCE
+         and all("### " + c + " [T]" in canon_text for c in new_ids)
+         and all(evidence[c]["sha256"] == (
+             hashlib.sha256(index[c]["scope"].encode()).hexdigest()
+             if evidence[c]["evidence_kind"] == "INLINE_CANON" else
+             v86_probe_bundle_sha256(evidence[c]["location"].removesuffix("/RESULT.md")))
+             for c in new_ids)
+         and all(sum(e["claim_id"] == c and e["event_type"] == "DECLARE"
+                     and e["previous_status"] == "-" and e["new_status"] == "T"
+                     and e["release"] == "canon-v92-candidate"
+                     and e["scope_sha256"] == hashlib.sha256(index[c]["scope"].encode()).hexdigest()
+                     and e["evidence_sha256"] == evidence[c]["sha256"] for e in events) == 1
+                 for c in new_ids)),
+        ("V92-METRO-ADOPTION",
+         "ENC4 common-k blocking and initialized MSD augmentation are adopted with exact transport; the original parent decision clause and completeness debt remain",
+         index[parent] == V92_METRO_PARENT
+         and index[parent]["status"] == "O"
+         and index[parent]["falsifier"] == old_index[parent]["falsifier"]
+         and evidence[parent]["sha256"] == hashlib.sha256(index[parent]["scope"].encode()).hexdigest()
+         and sum(e["claim_id"] == parent and e["event_type"] == "SCOPE_CHANGE"
+                 and e["previous_status"] == e["new_status"] == "O"
+                 and e["scope_sha256"] == evidence[parent]["sha256"] for e in events) == 1
+         and any(e["item_id"] == parent and e["depends_on"] == "METRO-COMMON-BLOCKING"
+                 and e["relation"] == "REQUIRES" for e in current["DEPENDENCIES.tsv"])
+         and "No LSD augmentation" in canon_text),
+        ("V92-OPEN-BOUNDARY",
+         "465 claims and 25 live owners preserve every prior status and decision clause; local photon floors do not close P1 or any physical bridge",
+         len(index) == 465 and counts == {"T":323,"D":59,"C":39,"H":2,"O":23,"F":19}
+         and live == old_live and len(live) == 25
+         and all(index[c] == r for c,r in old_index.items() if c != parent)
+         and all(index[c]["status"] == r["status"] and index[c]["falsifier"] == r["falsifier"]
+                 for c,r in old_index.items())
+         and history[:len(prior_history)] == prior_history and len(events) == 4
+         and all(current[name] == previous[name] for name in
+                 ("GATES.tsv","CORE_SELECTION.tsv","FRONTIER_PROGRAMS.tsv"))
+         and "25 rho - 25 chi_upper <= 0" in canon_text
+         and "PHOTON-MASSLESS-PHASE" in live),
+    ]
+
 # Exact v91 input contract and reversible public v90 reconstruction.
 V91_PRIOR_COMMIT = '4a77351eb8a8dad74cefa83f7a5f5f65e7e4ff13'
 V91_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'da052f298ee8f0d0734f61e317da0c822bfa540b53dba2f2153e5d13905070be',
@@ -1577,7 +1990,9 @@ V91_COUNTS = {'C': 39, 'D': 59, 'F': 19, 'H': 2, 'O': 23, 'T': 320}
 def v91_previous_bytes(path):
     """Pin every current byte and recover the exact public v90 input."""
     patch = V91_INPUT_PATCH[path.name]
-    current = path.read_bytes()
+    current = v92_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -1598,7 +2013,7 @@ def v91_current_checks():
     names = tuple(name for name in V91_INPUT_PATCH if name.endswith(".tsv"))
     previous = {name: v87_table_bytes(v91_previous_bytes(ROOT / "canon" / name))
                 for name in names}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v92_previous_bytes(ROOT / "canon" / name))
                for name in names}
     old_index = {row["claim_id"]: row for row in previous["REGISTRY.tsv"]}
     index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
@@ -1609,7 +2024,7 @@ def v91_current_checks():
     new_ids = set(V91_NEW_ROWS)
     theorems = {claim for claim in new_ids if index.get(claim, {}).get("status") == "T"}
     dictionaries = new_ids - theorems
-    canon_text = CANON.read_text(encoding="utf-8")
+    canon_text = (v92_previous_bytes(CANON) or b"").decode("utf-8")
     counts = {status: sum(row["status"] == status for row in index.values())
               for status in {row["status"] for row in index.values()}}
     history = current["HISTORY.tsv"]
@@ -1680,7 +2095,7 @@ def v91_current_checks():
          and all(index[claim]["status"] == "O" for claim in
                  ("QDD-INSTRUMENT-APPARATUS", "QDD-TERMINAL-EVENT-SEMANTICS", "QDD-INSTRUMENT-CLASS-COMPLETENESS"))
          and all(index[claim] == old_index[claim] for claim in live - {"QDD-INSTRUMENT-APPARATUS"})
-         and (ROOT / "canon" / "CORE_SELECTION.tsv").read_bytes()
+         and v92_previous_bytes(ROOT / "canon" / "CORE_SELECTION.tsv")
              == v91_previous_bytes(ROOT / "canon" / "CORE_SELECTION.tsv")),
     ]
 
@@ -12928,9 +13343,10 @@ def run():
     checks.extend(v89_current_checks())
     checks.extend(v90_current_checks())
     checks.extend(v91_current_checks())
+    checks.extend(v92_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v90, v89, v88, v87, v86 and v85; current boundary: v91")
+    print("historical guards: exact reconstructed v91, v90, v89, v88, v87, v86 and v85; current boundary: v92")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

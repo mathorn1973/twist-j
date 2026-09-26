@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v91. Normative authority and activation
+**Release identity:** Public Canon v92. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v91 also declares a discrete architecture. It does not
+Public Canon v92 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -132,7 +132,7 @@ domain allow arbitrary amplitudes on 3125 retained labels. These classes
 select neither the target operator nor its amplitudes. All are L1 results;
 physical time, spatial dimension, apparatus and occurrence remain open.
 
-Public Canon v91 makes three exact dispositions. The complete measurable
+Three decisions have exact dispositions. The complete measurable
 product-source Route A is empty, so ENTROPY-LAYER-BRIDGE closes at F with
 its separate obstruction theorem T. BELL-CAUSAL-ACCOUNTING closes at D
 on the complete adopted ETH-QDD-2 contract: five contexts exclude the
@@ -160,6 +160,15 @@ decelerating planar finite-band model is not an isotropic primordial CMB
 spectrum, quantum vacuum or SI calibration. All additional model inputs
 are explicit; mathematical replay establishes their consequences, not
 experimental adequacy or derivation from J.
+
+The finite counter-model comparison now has a sharp overlap price: the
+complete ETH-QDD-2 numerical table needs exactly 1/16, without selecting a
+physical latent variable or causal mechanism. ENC4 common blocking has an
+exact admission criterion and an initialized MSD augmentation; the broader
+metrology calculus remains open. A self-contained conditional-variance proof
+in the chosen finite photon measure gives b>=25rho and chi>=rho. These common
+local floors do not give a positive b-25chi margin. The 25 live H/O owners
+remain open, including apparatus realization and the physical photon bridge.
 
 ## Two field characterisations involving five
 

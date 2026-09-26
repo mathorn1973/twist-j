@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v90, v89, v88, v87, v86 and v85; current boundary: v91
+historical guards: exact reconstructed v91, v90, v89, v88, v87, v86 and v85; current boundary: v92
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -109,5 +109,9 @@ PASS 104 V91-PRIOR-BYTES thirteen exact current inputs reconstruct public v90 be
 PASS 105 V91-EXACT-RESULTS new conditional theorems have exact scopes, immutable two-architecture probe bundles and declarations; adopted readings remain dictionaries
 PASS 106 V91-EARNED-CLOSURES the complete entropy class closes F; adopted Bell and TT contracts close D with explicit dictionary gates and preserved original decision clauses
 PASS 107 V91-PHYSICAL-BOUNDARY all previous history and decision clauses survive; three physical apparatus owners remain O, with only the apparatus scope acknowledging adopted choices
+PASS 108 V92-PRIOR-BYTES thirteen exact current inputs reconstruct public v91 before all 107 unchanged historical guards
+PASS 109 V92-EXACT-THEOREMS three finite theorem rows retain exact scopes, evidence kinds and declarations; the inline photon proof is not a formal probe
+PASS 110 V92-METRO-ADOPTION ENC4 common-k blocking and initialized MSD augmentation are adopted with exact transport; the original parent decision clause and completeness debt remain
+PASS 111 V92-OPEN-BOUNDARY 465 claims and 25 live owners preserve every prior status and decision clause; local photon floors do not close P1 or any physical bridge
 
-RESULT 107/107 ALL PASS
+RESULT 111/111 ALL PASS

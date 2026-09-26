@@ -24,28 +24,35 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 462)
+        self.assertEqual(self.report.claims, 465)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 320},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 323},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 59,
+                "none": 60,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 363,
+                "two-architecture": 365,
             },
         )
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 199)
+        self.assertEqual(len(self.report.direct_architecture_requires), 200)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 330
+            len(self.report.transitive_architecture_dependents), 331
         )
-        self.assertEqual(len(self.report.dependency_terminals), 62)
+        self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v92 adds one architecture-dependent L5 blocking theorem. The Bell
+        # comparison has only a BOUNDED_BY edge; the self-contained finite
+        # photon measure is one new dependency terminal. These are exact
+        # declared graph additions, not inferred physical dependencies.
+        self.assertIn("METRO-COMMON-BLOCKING", self.report.direct_architecture_requires)
+        self.assertNotIn("COUNTER-BELL-PRICE", self.report.transitive_architecture_dependents)
+        self.assertIn("PHOTON-CONDITIONAL-VARIANCE-FLOOR", self.report.dependency_terminals)
         # v91 adds four direct native requirements. The selected dictionaries
         # consume their explicit mathematical models through separate gates;
         # the closed TT existence owner now depends on its adopted witness.
