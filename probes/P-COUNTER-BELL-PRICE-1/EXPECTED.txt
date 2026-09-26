@@ -1,0 +1,28 @@
+C-COUNTER-BELL-PRICE-N verifier
+prereg sha256 c412e70327439d687edcab82acfb54b4ceb185378b7c02feef4db37383bf3ad8
+B1 CHSH 16 local types max |S| = 2           PASS  values [Fraction(-2, 1), Fraction(2, 1)]
+C1 split nu + r_xy, mass eps (CHSH, 400)     PASS
+C2 determinization keeps p, eps (CHSH, 400)  PASS
+C3 bound |S| <= 2 + 2eps (400 models)        PASS  max slack 0
+C6 bound signalling <= eps (CHSH, 400)       PASS  max slack 0
+C3 attained S = 2 + 2eps, overlap eps (8)    PASS
+C3 Tsirelson: eps = sqrt2-1 gives S = 2sqrt2 PASS  S = (0)+(2)sqrt2
+C3 bracket 2/5 < sqrt2-1 < 5/12 via bound    PASS
+C6 signalling = eps attained (8)             PASS
+B2 1024 types: B = 3c - ab, max 2            PASS
+C1 split nu + r_xy, mass eps (QDD, 400)      PASS
+C2 determinization (QDD, 134 with |L|<=2)    PASS
+C4 bound B <= 2 + 8eps (400 models)          PASS  max slack -5/2
+C6 bound signalling <= eps (QDD, 400)        PASS  max slack 0
+C4 attained B = 2 + 8eps, overlap eps (8)    PASS
+C4 value 35/16 at eps = 3/128                PASS
+T0 table: normalized, marginals 1/4, E, B    PASS
+C5 primal: local weight 15/16, P - wL >= 0   PASS
+C5 counter model reproduces P, eps = 1/16    PASS
+C5 dual: every type covered (min >= 1)       PASS  min 1
+C5 dual objective 15/16 = primal             PASS
+C5 eps_T = 1 - w* = 1/16                     PASS
+C5 lemma: nu-part local, mass 1-eps, <= P    PASS
+failures 0
+RESULT ALL PASS
+digest 714cee7641b8e275fb4778cb70c59916818bdf37c590545473b6b2c4c6159163
