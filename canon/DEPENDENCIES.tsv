@@ -532,7 +532,7 @@ C8-BILINEAR-SHADOW	PENTIT-ROOT-FACTS	REQUIRES	the exact F_25 pair model, tau and
 C8-BILINEAR-SHADOW	RAMIFIED-TM-LIFT	REQUIRES	the Theta_n digit recursion, sign quotient, and chronological all-n carry law supply the registered norm channel
 C8-BILINEAR-SHADOW	SQRT-PHI-DIGIT-LIFT	REQUIRES	the two exact Y branches, their projections, and their all-n successor law are the objects whose Frobenius swap and invariant record are proved
 METRO-REDUCTION-ARROWS	DEF-ARCHITECTURE	REQUIRES	the typed finite rational protocol carrier is conditional on the declared public architecture
-METRO-REDUCTION-CALCULUS	METRO-REDUCTION-ARROWS	REQUIRES	obligations A and C are discharged only at the registered computation scope; the parent retains B, D, and E and remains O/STOP
+METRO-REDUCTION-CALCULUS	METRO-REDUCTION-ARROWS	REQUIRES	obligations A and C retain their registered computation scope; the separate common-blocking theorem decides the adopted ENC4 part of D while completeness and unclassified extensions remain open
 DRIFT-IS-THE-READ	BOOST-READING-SPLIT	REQUIRES	the fixed beta_1 coin and its exact rapidity value use the registered parity-resolved Fibonacci/Lucas boost theorem
 DRIFT-IS-THE-READ	BOOST-COUNT-LADDER	BOUNDED_BY	the word read names only the registered count-to-velocity dictionary and does not make that lower-status dictionary a proof premise
 COIN-SELECTION-CONDITIONAL	BOOST-READING-SPLIT	REQUIRES	the complete odd-rung rigidity proof and beta_1/beta_3 values use the exact parity-resolved boost identities
@@ -954,3 +954,6 @@ TT-VECTOR-STATE-NORMALIZATION	SELECTED-COSMOLOGICAL-COMPARISON	REQUIRES	One comp
 BELL-CAUSAL-ACCOUNTING	QDD-SELECTED-PAIR-SOURCE	REQUIRES	The complete selected Bell contract consumes this separately adopted pair dictionary and its explicitly owned layer crossing.
 BELL-CAUSAL-ACCOUNTING	QDD-SELECTED-PAIR-RECORD	REQUIRES	The complete selected Bell contract consumes this separately adopted pair dictionary and its explicitly owned layer crossing.
 BELL-CAUSAL-ACCOUNTING	QDD-SELECTED-PAIR-LAW	REQUIRES	The complete selected Bell contract consumes this separately adopted pair dictionary and its explicitly owned layer crossing.
+COUNTER-BELL-PRICE	QDD-SELECTED-PAIR-LAW	BOUNDED_BY	the numerical target table is fixed input for an independent finite comparison theorem; relaxing its latent comparison class does not modify the adopted physical pair law
+METRO-COMMON-BLOCKING	DEF-ARCHITECTURE	REQUIRES	the typed U_RF finite rational protocol carrier and pointwise L5 stream conventions are the declared mathematical architecture
+METRO-REDUCTION-CALCULUS	METRO-COMMON-BLOCKING	REQUIRES	the explicitly adopted ENC4 common-k fifth arrow and forbidden unconditional rule have exact transport proofs; the parent retains completeness and unclassified extensions

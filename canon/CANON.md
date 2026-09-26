@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v91
+# TWIST-J Public Canon v92
 
-**Release identity.** Public Canon v91. Normative authority and activation
+**Release identity.** Public Canon v92. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v91 also declares the discrete architecture used to read
+only. Public Canon v92 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -11006,6 +11006,192 @@ No microscopic apparatus classification, independent terminal semantics,
 native pair preparation, or choice among latent-variable, nonlocal-force,
 superdeterminist and retrocausal explanations follows from this adoption.
 
+### COUNTER-BELL-PRICE [T]
+
+At L6 only, fix finite settings `X=Y` with at least two elements, binary
+outcomes, a finite latent set `Lambda`, rational normalized laws
+`mu_xy(lambda)>=0`, and rational normalized local responses
+`alpha(a|x,lambda)`, `beta(b|y,lambda)`, both nonnegative and each summing to one over its outcome. Alice's response has no `y`
+argument and Bob's has no `x` argument. Define
+
+```text
+P(a,b|x,y) = sum_lambda mu_xy(lambda) alpha(a|x,lambda) beta(b|y,lambda),
+eps = 1 - sum_lambda min_(x,y) mu_xy(lambda).
+```
+
+Thus `0<=eps<=1`; eps=0 is precisely setting independence of the latent
+law. This overlap is a property of the specified latent model, not a
+physical fraction of trials with a selected causal mechanism. Put
+`nu(lambda)=min_(x,y) mu_xy(lambda)` and `r_xy=mu_xy-nu`.
+For `X={0,1}` and outcomes `+1,-1`, use
+`E_xy=sum_ab ab P(a,b|x,y)` and `S=E_00+E_01+E_10-E_11`.
+For `X=Z/5` and outcomes `LOW,HIGH`, use
+`B=2 sum_k P(LOW,LOW|k,k)-sum_(k!=l) P(LOW,LOW|k,l)`.
+The complete comparison table, equal numerically to the selected
+ETH-QDD-2 table, is a fixed mathematical input:
+
+```text
+                    LL       LH       HL       HH
+x=y                 1/4      0        0        3/4
+x!=y                1/64     15/64    15/64    33/64.
+```
+
+The sharp bounds are `|S|<=2+2eps`, `B<=2+8eps`, and each remote-setting
+change of a local outcome probability has magnitude at most eps. Each is
+attained for every rational eps in [0,1]. The five-context value `35/16`
+alone requires `eps>=3/128`, with equality attained, while reproducing the complete table
+requires minimum overlap dependence exactly `1/16`. The following proof
+includes matching primal and dual certificates for the latter statement.
+An exact `2 sqrt(2)` CHSH witness uses the explicitly extended real
+`Q(sqrt(2))` coefficient class at `eps=sqrt(2)-1`; it is not asserted to
+belong to the rational class. For overlap budget `0<=e<=1` the rational
+class has supremum `2+2e` (attained when e is rational), so it has no
+intrinsic Tsirelson ceiling. For irrational e the supremum follows by
+approaching e from below through rational overlaps.
+
+**(C1) Canonical split**
+
+`nu >= 0` because every `mu_xy >= 0`, and `r_xy >= 0` by the definition of
+the minimum. Since every `mu_xy` has mass one,
+`mass(r_xy) = 1 - mass(nu) = eps` for every setting pair.
+
+**(C2) Determinization**
+
+Replace `lambda` by `(lambda, s, t)`, where `s` and `t` are deterministic
+response strings, with weight
+
+    w(s,t|lambda) = prod_x alpha(s_x|x,lambda) prod_y beta(t_y|y,lambda),
+    mu'_xy(lambda,s,t) = mu_xy(lambda) w(s,t|lambda).
+
+Summing over the strings other than `s_x` and `t_y` returns
+`alpha(a|x,lambda) beta(b|y,lambda)`, so the behaviour is unchanged. Because
+`w` does not depend on the settings and is nonnegative,
+`min_xy mu'_xy(lambda,s,t) = w(s,t|lambda) nu(lambda)`, and summing over the
+strings gives the same common mass. So eps is unchanged, and every bound
+below may be proved for deterministic responses.
+
+**(C3) CHSH**
+
+With deterministic responses `A_x(lambda), B_y(lambda)` in `{+1,-1}` and
+signs `sigma = (+,+,+,-)`,
+
+    S = sum_lambda nu(lambda) s(lambda)
+        + sum_(x,y) sigma_xy sum_lambda r_xy(lambda) A_x B_y,
+    s(lambda) = A_0 (B_0 + B_1) + A_1 (B_0 - B_1) in {-2, +2}.
+
+The first sum has absolute value at most `2 mass(nu) = 2(1 - eps)`. Each of
+the four remaining terms has absolute value at most `mass(r_xy) = eps`.
+Hence `|S| <= 2 + 2 eps`.
+
+Attainment. Take latent points `c` and `lambda_xy` for the four setting
+pairs, `mu_xy = (1 - eps) delta_c + eps delta_(lambda_xy)`. Let `c` answer
+`+1` everywhere, so `s(c) = 2`. Let `lambda_xy` answer `+1` on Alice at `x`
+and `sigma_xy` on Bob at `y`. Then `E_xy = (1 - eps) + eps sigma_xy` for the
+three plus pairs and `E_11 = (1 - eps) - eps`, so `S = 2 + 2 eps`. The
+common mass is `1 - eps` at `c` and zero at each `lambda_xy`, which is used
+by one setting pair only; the overlap is exactly eps.
+
+Tsirelson value. `2 + 2 eps = 2 sqrt 2` if and only if
+`eps = sqrt 2 - 1`, which lies strictly between 0 and 1. The construction
+above with `eps = sqrt 2 - 1`, evaluated in `Q(sqrt 2)`, gives
+`S = 2 sqrt 2` exactly. Since the bound is linear and strictly increasing in
+eps, the supremum of `|S|` over the class with overlap at most `e` is
+`min(4, 2 + 2e)`; no value of `e` makes `2 sqrt 2` a ceiling except that one
+tuned value.
+
+**(C4) Five-context functional**
+
+For a deterministic type with LOW sets `A`, `B` put `a = |A|`, `b = |B|`,
+`c = |A intersect B|`. The functional of that type is `2c - (ab - c) =
+3c - ab <= 3c - c^2 <= 2`, as in the registered proof of
+QDD-FIVE-CONTEXT-BELL-SEPARATION. On the `r` part, each of the five diagonal
+terms contributes at most `2 mass(r_kk) = 2 eps` and each off-diagonal term
+contributes at most zero. Hence
+
+    B <= 2 (1 - eps) + 10 eps = 2 + 8 eps.
+
+Attainment. `mu_xy = (1 - eps) delta_c + eps delta_(lambda_xy)` with
+`c = ({0},{0})`, `lambda_kk = ({k},{k})` and `lambda_kl = (empty, empty)` for
+`k != l`. Then `B = 2(1 - eps) + 10 eps` and the overlap is eps.
+`2 + 8 eps = 35/16` exactly when `eps = 3/128`.
+
+**(C5) The complete ETH-QDD-2 table**
+
+The nonnegative weights of the finitely many deterministic types, subject
+to their entrywise sum being at most P, form a bounded rational polytope.
+The maximum local mass w* is therefore attained at a rational point.
+
+Lemma, direction one. Let a counter model reproduce `P` with overlap eps.
+The `nu` part defines the setting-independent local behaviour
+`N(a,b|x,y) = sum_lambda nu(lambda) alpha beta` of mass `1 - eps`, and
+`N <= P` entrywise because `nu <= mu_xy`. Define `w*` as the maximum mass of a nonnegative setting-independent local subbehavior dominated entrywise by `P`. Then `1-eps<=w*` directly, including eps=0 and eps=1. For 0<eps<1 this also gives the normalized decomposition `P=(1-eps)L+eps Q` with `L=N/(1-eps)` and `Q=(P-N)/eps`; no division at either endpoint is needed.
+
+Lemma, direction two. Given a local subbehavior `N=sum_d y_d L_d<=P`
+of mass w, give the common deterministic type d weight y_d at every
+setting pair. Add, for each setting pair `(x,y)` and outcome pair `(a,b)`,
+one distinct latent copy used only at `(x,y)`, with weight
+`P(a,b|x,y)-N(a,b|x,y)` and responses a and b. This construction also
+applies directly at w=0 and w=1. The resulting
+counter model reproduces `P`; its common mass is `sum_d y_d = w`, because
+each copy appears at one setting pair only. So the minimal overlap is
+exactly `1 - w*`.
+
+Zeros. `P(LH|k,k) = P(HL|k,k) = 0`, so every type with positive weight in
+`w L` has `A = B`.
+
+Primal point. Weight `10/64` on each of the five types `A = B = {k}` and
+`1/64` on each of the ten types `A = B = {k,l}`; total `50/64 + 10/64 =
+15/16`. Entrywise, with the local sum on the left:
+
+    diagonal LL   10/64 + 4/64  = 14/64 <= 16/64
+    diagonal HH   40/64 + 6/64  = 46/64 <= 48/64
+    diagonal LH, HL                 0 <= 0
+    off LL                      1/64  <= 1/64
+    off LH, HL    10/64 + 3/64  = 13/64 <= 15/64
+    off HH        30/64 + 3/64  = 33/64 <= 33/64
+
+Dual certificate. Let `z = 1` on every diagonal LH and HL entry,
+`z = 1/4` on every off-diagonal LL entry, `z = 1/12` on every off-diagonal
+HH entry, and `z = 0` elsewhere. For a type with `A != B` some diagonal
+entry is LH or HL, so it collects at least 1. For `A = B = S` with
+`|S| = s` it collects
+
+    s(s-1)/4 + (5-s)(4-s)/12,
+
+which equals `5/3, 1, 1, 5/3, 3, 5` for `s = 0, ..., 5`, never below 1. For
+any feasible `y`,
+
+    sum_d y_d <= sum_d y_d sum_e z_e L_d(e) = sum_e z_e sum_d y_d L_d(e)
+              <= sum_e z_e P(e) = 20 (1/64)(1/4) + 20 (33/64)(1/12)
+               = 5/64 + 55/64 = 15/16.
+
+So `w* = 15/16` and the minimal overlap is `1/16`.
+
+**(C6) Signalling**
+
+Define `p_A(a|x,y)=sum_b P(a,b|x,y)` and
+`p_B(b|x,y)=sum_a P(a,b|x,y)`.
+
+`p_A(a|x,y) = sum_lambda nu(lambda) alpha(a|x,lambda)
++ sum_lambda r_xy(lambda) alpha(a|x,lambda)`. The first sum does not depend
+on `y`; the second lies in `[0, eps]`. Hence the difference for `y, y'` has
+absolute value at most eps, and likewise for Bob. Attainment for X={0,1}: latent points
+`c`, `g0`, `g1` with `mu_xy = (1 - eps) delta_c + eps delta_(g_y)`, where
+Alice answers the first letter at `c` and `g0` and the second letter at
+`g1`. Then `p_A(first|x,0) - p_A(first|x,1) = eps`, and the overlap is eps. For a larger X use g_(h(y)) for any surjection
+h:X->{0,1}, comparing settings whose h values differ.
+
+These are finite comparison theorems. Particular positive-overlap models
+can be non-signalling; only at zero overlap does the entire class force
+that property. Independence of two setting controllers alone is not a
+statement that every candidate latent variable is independent of them.
+No latent variable is identified with a TWIST-J state or counter, and no
+nonlocal, superdeterminist or retrocausal mechanism is selected. The adopted
+ETH-QDD-2 law, BELL-CAUSAL-ACCOUNTING and BELL-MAGIC-BOUNDARY retain their
+original statuses and scopes. The public proof and exact audits are in
+`probes/P-COUNTER-BELL-PRICE-1`; the result is proof-first and known-result,
+not a blind experimental prediction.
+
 ## 9. The photon and the electron
 
 The quantum is an integer path count, one bit per tick, on an RP
@@ -11047,6 +11233,213 @@ the declared self duality import (the 4D Z_N window opens only for
 N >= 5), the first prime passing both doors is p = 5
 (CENTER-SPLIT-SELECTION [D]). The photon belongs to the null light
 branch, E+ E- = 0 identically.
+
+### PHOTON-CONDITIONAL-VARIANCE-FLOOR [T]
+
+This is a theorem about one explicitly chosen finite mathematical measure and
+its conditional limit consequences. It does not select a TWIST-J action
+carrier, establish a cross-layer identification, or identify a physical photon.
+
+**Finite model.** Let `L>=4` be even, `V=L^4`, and take the periodic cubical
+complex on `(Z/LZ)^4`. A canonical `r`-cell has increasing coordinate directions;
+its boundary is the alternating sum of its upper and lower faces. Write `P`
+and `E` for the canonical plaquettes and edges. On the full configuration space
+
+```text
+Omega_L = {n in {-1,0,1}^P : partial n = 0 modulo 5},
+mu_L(n) = Z_L^-1 2^(-|supp n|),
+j = partial n/5,
+```
+
+`j` is an integer edge current. The zero configuration has positive weight,
+so `Z_L>0`. Every admissible exterior and every current sector is retained.
+For an orientation `I`, define the midpoint Fourier observable and its density
+
+```text
+F_I(n;q) = sum_x n_I(x) exp(-i q dot midpoint(p_I(x))),
+S_n,II^L(q) = V^-1 Var_mu F_I(n;q).
+```
+
+Variance here is Hermitian: `Var X = E|X-EX|^2`. Global reversal gives
+`E_mu F_I=0`. Define edge Fourier observables with edge midpoints in the same
+way. For an allowed axis character `q=t e_1`, `t=2 pi k/L`, put
+
+```text
+lambda(t) = 4 sin^2(t/2),
+chi_L(t) = S_j,00^L(t e_1)/lambda(t)       (t != 0 modulo 2 pi).
+```
+
+Taking the edge-zero Fourier transform of `partial n=5j` cancels the
+finite differences in directions 2 and 3 and gives, with these conventions,
+
+```text
+5 F_j,0(t e_1) = 2 i sin(t/2) F_01(n;t e_1),
+25 chi_L(t) = S_n,01,01^L(t e_1).                         (1)
+```
+
+**Unconditional empty-set estimate.** For any set `B` of plaquettes,
+
+```text
+P_mu(n|B=0) >= 2^(-|B|).                                 (2)
+```
+
+Indeed, take independent uniform `A_e in Z_5` and let `dA` be the oriented
+plaquette coboundary. Character orthogonality gives exactly
+
+```text
+Z_L = E_A product_p Q((dA)_p),
+Z_emptyB = E_A product_(p not in B) Q((dA)_p),
+Q(f) = 1 + cos(2 pi f/5).
+```
+
+The two nonzero character coefficients of `Q` are both `1/2`; averaging over
+each edge imposes precisely the stated modulo-five constraint. Since
+`0<=Q<=2`, the pointwise product comparison gives
+`Z_L<=2^|B| Z_emptyB`, which proves (2). This is not an estimate conditioned
+on every possible fixed exterior.
+
+**Conditional-variance lemma.** Let `S_i`, `1<=i<=k`, be nonempty plaquette
+sets such that no edge is incident to plaquettes in two different sets. Let
+`a_i` be a ternary field supported exactly on `S_i`, with
+`partial a_i=0 modulo 5`, and write `m_i=|S_i|`. For arbitrary deterministic
+complex coefficients `g_p` and the full linear observable
+`F(n)=sum_p n_p g_p`,
+
+```text
+Var_mu F >= sum_i 2^(1-2m_i) |F(a_i)|^2.                 (3)
+```
+
+To prove this, first fix all faces outside one set `S` and put
+`A=sum_(p in S) a_p g_p`. If the zero filling is permitted, the two distinct
+fillings `+a` and `-a` are also permitted and have probabilities
+`p_+=p_-=2^-m p_0`. For any complex `z`, their three contributions obey
+
+```text
+p_0 |z|^2 + p_+ |A-z|^2 + p_- |-A-z|^2
+ = (1+2^(1-m)) p_0 |z|^2 + 2^(1-m) p_0 |A|^2
+ >= 2^(1-m) p_0 |A|^2.
+```
+
+Putting `z` equal to the conditional mean and discarding all other
+nonnegative variance summands proves the corresponding conditional bound.
+If the zero filling is not permitted, `p_0=0` and that bound is trivial.
+
+For several sets, condition on every face outside `U=union_i S_i`. Each edge
+constraint involves variables from at most one `S_i`, and the face weights
+are products. Thus the conditional law factors across the `S_i`. Conditional
+variances add even though the unconditional patches need not be independent.
+The average probability of a zero filling in the `i`th factor is exactly
+`P_mu(n|S_i=0)`. Total variance, followed by (2), proves (3). No empty halo,
+component isolation, or per-current-sector lower estimate is used.
+
+**Explicit charged insertion.** Denote the canonical plaquette at `z` in
+directions `i,j` by `p_ij(z)` and the canonical cube by `c_ijk(z)`. Define
+
+```text
+U(z) = -c_012(z) + c_012(z-e_2)
+       -c_013(z) + c_013(z-e_3),
+a_01(z) = partial U(z) - 5 p_01(z).
+```
+
+The four cubes contribute `+4` on their common central plaquette. Their
+remaining faces are distinct and have coefficients `+1` or `-1`. Therefore
+`a_01` is ternary on exactly 21 faces: its central coefficient is `-1` and
+its twenty other coefficients are `+1` or `-1`. These faces remain distinct
+for every `L>=4`. The chain identity `partial^2=0` gives
+
+```text
+partial a_01(z) = -5 partial p_01(z).
+```
+
+Let `a_02` be its image under the coordinate permutation interchanging 1
+and 2, with the induced cell orientations. It has the same properties.
+The five 01-oriented coefficients of `a_01` are all `-1` and have the same
+axis-1 midpoint coordinate. For `a_02` the five 02-oriented coefficients
+are all `-1` at axis-1 coordinates `z_1-1,z_1,z_1+1`, with multiplicities
+`1,3,1`. Consequently
+
+```text
+|F_01(a_01(z);t e_1)| = 5,
+|F_02(a_02(z);t e_1)| = |3+2 cos t|.                    (4)
+```
+
+For `a_02(z)`, every vertex lies in the box with ranges `[z_0,z_0+1]` and
+`[z_2,z_2+1]` in directions 0 and 2, and `[z_1-1,z_1+1]` and
+`[z_3-1,z_3+1]` in directions 1 and 3. Choose
+
+```text
+z_0,z_2 in {0,2,...,L-2},
+z_1,z_3 in {1+3r : 0<=r<floor(L/3)}.
+```
+
+These vertex boxes are pairwise disjoint, fit within coordinates
+`0,...,L-1`, and share no incident edge across a periodic seam. Their number
+is `k_L=(L/2)^2 floor(L/3)^2`. For `a_01`, use the coordinate-permuted packing:
+step two in directions 0 and 1, step three in directions 2 and 3. These
+are separate estimates and require no simultaneous packing of both families.
+
+Apply (3) with `m_i=21`, divide by `V`, and use (1) and (4). With
+
+```text
+c_L = 2^-41 k_L/V = 2^-41 floor(L/3)^2/(4 L^2),
+```
+
+the complete finite measure satisfies
+
+```text
+S_n,02,02^L(t e_1) >= c_L (3+2 cos t)^2,
+S_n,01,01^L(t e_1) >= 25 c_L,
+chi_L(t) >= c_L                       (t != 0 modulo 2 pi).   (5)
+```
+
+The first two inequalities include the zero character. They are Fourier
+variance estimates, not local variances substituted for infrared coefficients.
+
+**Ordered-profile corollary and boundary.** Put `rho=1/(36*2^41)`. Directly,
+
+```text
+rho - 2^-41/(6L) <= c_L <= rho,
+25 - (3+2 cos t)^2 = 4(1-cos t)(4+cos t) <= 10 t^2.
+```
+
+Hence the explicit uniform estimate is
+
+```text
+S_n,02,02^L(t e_1)
+ >= 25 rho - 25*2^-41/(6L) - 10 rho t^2.                 (6)
+```
+
+For any jointly admitted Fourier profile, first take its thermodynamic
+limit along even volumes and allowed axis momenta converging to a fixed
+`t!=0`; only then take `t` to zero. Equations (5)--(6) imply
+
+```text
+b^omega >= 25 rho,
+chi^omega >= rho,                                       (7)
+```
+
+whenever these ordered coefficients are defined. The same bounds hold for
+the corresponding infrared lower limits. In particular, for any already
+specified nonempty family of such joint profiles, the infimum `b_*` of the
+transverse infrared lower limits is at least `25 rho`.
+
+This is a conditional consequence for every admitted profile. It proves no
+profile existence, uniqueness, or Fourier-density identification from local
+weak convergence alone; it neither changes the admitted family nor exchanges
+the two limits or replaces them by the lowest torus momentum.
+
+Every valid uniform upper bound `chi_upper` on the same nonempty profile
+family must satisfy `chi_upper>=rho`. Therefore this certified floor gives
+
+```text
+25 rho - 25 chi_upper <= 0.
+```
+
+It does not establish a positive `b-25 chi` margin and does not assert that
+the true margin is nonpositive. The strict P1 comparison, the further limit
+and symmetry controls, the spectral bridge, and PHOTON-MASSLESS-PHASE remain
+open. No statement about the full current moment `Xi_L`, a massless phase,
+propagator, apparatus, or physical photon is part of this theorem.
 
 ### FCC-WEIGHTED-SHELL-SYMBOL [T]
 
@@ -16853,16 +17246,19 @@ start and input. The declared allowed arrows are:
    coordinates `i >= 2`. Under that precondition the quotient maps and
    output `w'([s]) = w(s)` are well defined;
 4. coordinate permutation transporting the ordered input basis, digit maps,
-   input indices, and boxes while leaving the ordered output basis fixed.
+   input indices, and boxes while leaving the ordered output basis fixed;
+5. common blocking within the declared ENC4/common-k scope below: `Blk_k`
+   under its exact `Pre_blk` predicate and initialized `Blk#_k` for MSD only.
 
 Write `P approx_red P'` exactly when `P` and `P'` are joined by a finite
 zig-zag of admitted allowed arrows. This is the generated reduction
 equivalence. Flattening the `N^a` geometry, erasing named coordinate
 digit-word actions, arbitrary factor weights, output-dependent regrouping,
-and replacing boxes by an unrelated ordering are forbidden. Common `q^k`
-blocking remains undecided unless all length-`k` words, padding, every
-exponent-residue vector, the pointwise stream, the decision, and the terminal
-value are transported exactly.
+and replacing boxes by an unrelated ordering are forbidden. A sixth forbidden
+rule is unconditional same-carrier blocking; valid individual `Pre_blk`
+instances remain admitted. All admitted blocking transports the complete
+allowed-start pointwise stream family and every decision and terminal value
+that is a functional of that family, within the exact scope below.
 
 METRO-REDUCTION-ARROWS [C], evidenced by the immutable
 `probes/P-METRO-REDUCTION-ARROWS-4` bundle, registers the exact preconditions
@@ -16904,17 +17300,167 @@ obstructing counts are 16,140 for flattening, 18,666 for erasing names,
 reordering, out of 21,987; the four admitted arrows exhibit zero obstructions
 across both boxes under their own exact preconditions; and every obstruction
 survives reading the composition in the opposite order. This is computation
-at a declared finite range, so the result is C, not T. Common `q^k` blocking
-is untouched: it is obligation D below.
+at a declared finite range, so the result is C, not T. That computation does
+not establish common blocking; the separate theorem below decides its
+explicitly adopted ENC4/common-k scope.
 
-METRO-REDUCTION-CALCULUS [O] remains the parent for obligations B, D, and E:
-exact witnesses for any forbidden entry beyond the five section 15
-names, the ratified reading of those five having been discharged by
-METRO-FORBIDDEN-WITNESSES; common `q^k` blocking
-with all length-`k` words, padding, exponent-residue vectors, the pointwise
-stream, scientific decision, and terminal value transported; and completeness
-of `approx_red` for the registered class. It remains STOP. Neither row owns
-normalization, L6, or another cross-layer gate.
+### METRO-COMMON-BLOCKING [T]
+
+The following choices are explicitly adopted for common blocking in the L5
+reduction calculus: ENC4, one common k for every coordinate, the same-carrier
+construction exactly under Pre_blk, and the initialized augmentation for MSD
+only. These are declared encoding and arrow choices, not unique consequences
+of J. Their exact transport properties are the theorem proved below.
+
+`P = (q,a,r,S,A0,{delta_(i,u)},enc_q,w)` is a `U_RF` tuple of section 15.
+Letters of a word act in reading order:
+`D_i(u_1 ... u_m) = delta_(i,u_m) o ... o delta_(i,u_1)`. Then
+`state_P(s,n) = D_a(enc(n_a)) o ... o D_1(enc(n_1)) (s)` and
+`Stream_P(s,n) = w(state_P(s,n))`.
+
+**Encoding family ENC4.** Canon fixes `enc_q` only as "a fixed digit and
+padding convention". The probe decides obligation D for each of
+
+```text
+MSD-E0  enc(0) = empty word; n > 0: base-q digits, most significant first,
+        no leading zero
+MSD-Z0  as MSD-E0 but enc(0) = "0"
+LSD-E0  enc(0) = empty word; n > 0: base-q digits, least significant first,
+        no trailing zero
+LSD-Z0  as LSD-E0 but enc(0) = "0"
+```
+
+"Common q^k blocking" is read as one block length `k >= 2` for every
+coordinate.
+
+**Blocking.** `word_k(U)`, `U in {0,...,q^k - 1}`, is the length-k base-q
+word of U in the convention's reading order, zeros kept.
+
+```text
+Blk_k(P) = (q^k, a, r, S, A0, {Delta_(i,U)}, enc_(q^k), w),
+Delta_(i,U) = D_i(word_k(U)),
+```
+
+with `enc_(q^k)` the same convention in base `q^k`, and start, input-index
+and output transports the identity.
+
+**L0, flattening.** Concatenate the super-digit words of `enc_(q^k)(n)`. The
+result is `0^rho enc_q(n)` under MSD and `enc_q(n) 0^rho` under LSD, with
+`rho = (-|enc_q(n)|) mod k`, for E0 and Z0 alike. Proof: base `q^k` digits
+are blocks of k base-q digits of the same number. For `n > 0` the block
+containing the most significant digit is padded by exactly `rho` zeros, and
+for Z0 at zero, `0^k = 0^(k-1) "0"`. The vector `(rho_1,...,rho_a)` is the
+exponent-residue vector of the row.
+
+**Pairs.** `Pairs_0 = {(s,s): s in A0}`, and
+
+```text
+Pairs_i = {(D_i(pad(v)) x, D_i(v) y): (x,y) in Pairs_(i-1), v in Enc},
+```
+
+where Enc is the image of `enc_q` and `pad(v)` is the flattening of L0.
+`Pre_blk(P,k)` holds iff `w(x) = w(y)` for every `(x,y)` in `Pairs_a`.
+
+**D1, exact admission criterion.**
+`Pairs_a = {(state_Blk(s,n), state_P(s,n)) : s in A0, n in N^a}`. Hence
+`Blk_k` is an admitted arrow of section 15 (pointwise stream intertwining for
+every allowed start and input) iff `Pre_blk(P,k)`.
+
+Proof. By L0 the blocked run on `n` applies `D_i(pad(enc_q(n_i)))`, so the
+joint runs are exactly the defining recursion of `Pairs`. The padding depends
+on `v` only through `|v| mod k`, and canonicity (no leading zero under MSD, no
+trailing zero under LSD) is a regular constraint. So `Pairs_i` is the
+reachable set of a finite search over
+`(x, y, rho, |v| mod k, canonical-prefix flag)` and is computed exactly.
+Intertwining at every allowed start and input is, by definition, agreement
+of `w` on `Pairs_a`.
+
+Here and below, a commuting tuple means commutation between distinct
+coordinates: delta_(i,u) delta_(j,v) = delta_(j,v) delta_(i,u) for i != j
+and every u,v, as in section 15 of the Canon. No same-coordinate
+commutation of digit maps is asserted or required.
+
+**D2, transport.** Under `Pre_blk` the complete stream family over allowed
+starts is unchanged. Every decision and terminal value that is a function of
+it is therefore unchanged, in particular `Adm_direct` and its terminal `L`.
+`Blk_k` maps commuting tuples to commuting tuples. Proof: each
+`Delta_(i,U)` is a composition of maps of coordinate i, and compositions of
+pairwise commuting maps commute.
+
+**D3, augmented blocking (MSD only).** `Blk#_k(P)` has carrier
+`S x {0,1}^a`, starts `A0 x {0^a}` and output `w#(x,f) = w(x)`. Its maps are
+
+```text
+Delta#_(i,U)(x,f) = (D_i(word_k(U)) x, f)                  if f_i = 1,
+                    (D_i(strip(U)) x, f with f_i := 1)     if f_i = 0,
+```
+
+where `strip(U)` is `word_k(U)` with its leading zeros removed for
+`U != 0`, `strip(0) = "0"` under Z0, and `strip(0)` is the empty word under
+E0. Claim: `state_Blk#((s,0),n) = (state_P(s,n), f(n))`, where
+`f(n)_i = 1` iff `enc_q(n_i)` is nonempty. So `Blk#_k` is exact with no
+precondition, and it preserves this cross-coordinate commutation.
+
+Proof by induction over the super-digits of each coordinate. The first
+super-digit of a canonical MSD encoding is nonzero unless `n_i = 0` under Z0.
+Stripping its leading zeros gives exactly the leading part of
+`enc_q(n_i)`. Under Z0, zero gives "0", and under E0 zero gives no letters and
+the flag stays 0. Every later super-digit acts by its full word. Maps of
+different coordinates touch different flag bits and act on `x` through
+commuting maps.
+
+**Witnesses.**
+
+```text
+W-D1  q=2, a=1, S={0,1}, A0={0}, delta_0 = swap, delta_1 = id, w = (0,1),
+      MSD-E0, k=2:  Stream_P(0,1) = 0 and Stream_Blk(0,1) = 1.
+W-D2  q=2, a=2, S={e,o}, A0={e}, every delta_(1,u) = swap, every
+      delta_(2,u) = id, W5(e) = (1,0), W5(o) = (0,1), MSD-E0, k=2.
+      On the boxes R((2^m,0),(2^m,2^m)), every integer m >= 0, the normalized average
+      is PROBABILITY(1,0) for odd m and PROBABILITY(0,1) for even m, so
+      Adm_direct(P) = INADMISSIBLE, while Blk_2(P) has constant stream W5(e)
+      and Adm_direct(Blk_2 P) = ADMISSIBLE(PROBABILITY(1,0)). The tuple is
+      commuting.
+```
+
+For W-D2, every integer n_1 with 2^m <= n_1 < 2^(m+1) has exactly m+1 binary
+letters. Each letter swaps the first-coordinate state; the second-coordinate
+maps are identities. Thus every point of the box has state e for odd m and o
+for even m. This proves the displayed alternating averages for all m, and
+therefore failure of uniform translated-box convergence. Every two-letter
+blocked map is the identity, so the blocked stream is constant on every
+input. The verifier's m=2..8 scan audits this all-m proof.
+
+W-D2 rejects a proposed unconditional same-carrier admission rule: such a
+rule would purport to admit a map that changes the decision. It does not
+falsify the unchanged registered parent, whose admitted arrows require
+exact transport. Individual same-carrier instances satisfying `Pre_blk`
+remain admitted. The alternative augmentation is scoped to MSD only.
+
+
+**Adopted scope and open parent.** The fifth allowed arrow consists of the
+same-carrier `Blk_k` with identity start, index and output transports under
+`Pre_blk`, and, for MSD, `Blk#_k` with start transport `s -> (s,0^a)`, identity
+input-index transport and output `w#(x,f)=w(x)`. The augmented equality is
+asserted for precisely these initialized allowed starts, not arbitrary flag
+states. The sixth forbidden catalogue entry is the unconditional same-carrier
+blocking rule, witnessed by W-D1 and W-D2. It forbids the rule, not instances
+satisfying Pre_blk. The original five forbidden entries keep their exact
+ratified readings and computational evidence.
+
+METRO-REDUCTION-CALCULUS [O] remains the parent and remains STOP.
+The named blocking obligation D is discharged only within ENC4 and one common
+k. No LSD augmentation or classification of other encodings is supplied.
+Obligation E, completeness of the finite-zig-zag relation approx_red for the
+registered class with the adopted fifth arrow, remains open. Further
+forbidden-catalogue extensions are unclassified. The parent's original complete
+decision clause is preserved; these results neither assert its positive
+closure nor fire its negative clause. The theorem transports stream-family
+functionals, including Adm_direct wherever defined, but does not construct an
+L6 normalization, a cross-alphabet word-future equivalence, or a physical or
+SI interpretation. The public probe `P-METRO-COMMON-BLOCKING-1` audits the
+written proofs; its finite censuses are not universal proofs by extrapolation.
+
 
 Second, METRO-ADMISSIBILITY-DIM [O] is the child on an `N^a`-indexed
 commuting digit-word system, not an additive action. Its input has
