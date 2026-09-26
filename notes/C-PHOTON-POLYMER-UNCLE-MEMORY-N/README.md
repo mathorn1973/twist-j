@@ -71,3 +71,65 @@ The next test should not guess a shape for `q`. It should construct an exact
 supersolution directly by monotone iteration on a fixed rational grid.
 
 Public Canon v92 is unchanged. No `Xi` or P1 conclusion follows.
+
+
+## Post-audit analytic corollary: the whole five-type worst-case system is supercritical
+
+This is a written consequence of the exact frozen census above. It is not an
+additional computational claim.
+
+Let the five-type coefficientwise-majorant map at physical activity be
+
+`
+F_u(q)=(1/16)[B_u(0)+sum_(b=1)^5 B_u(b) q_(b-1)^b].
+`
+
+Suppose any finite nonnegative vector `q=(q0,...,q4)` were a componentwise
+supersolution:
+
+`
+F_u(q)<=q_u.
+`
+
+The exact census gives `B0=B1`, so
+
+`
+F0(q)=F1(q)=S.
+`
+
+Hence
+
+`
+S<=min(q0,q1).
+`
+
+Put `t=min(q0,q1)`. Since `q0>=t`, `q1>=t`, and every omitted term is
+nonnegative,
+
+`
+S >= (1/16)(1+15 q0+74 q1^2)
+  >= (1/16)(1+15 t+74 t^2).
+`
+
+But
+
+`
+(1/16)(1+15t+74t^2)-t
+ = (1-t+74t^2)/16
+ > 0
+`
+
+for every real `t`, because the quadratic has discriminant `-295`.
+
+Thus `S>t`, contradicting `S<=t`.
+
+Therefore **no finite componentwise supersolution exists for the
+coefficientwise-worst five-type uncle-memory majorant at x=1/16**.
+
+This is stronger than the preregistered negative result for vectors
+`q_u=q r^u`. It still does not prove divergence of the real embedded tree
+sum. The overestimate now has a precise source: replacing many geometrically
+different uncle contexts by the coefficientwise maximum `B_u`.
+
+The next absolute attack must retain context identity rather than uncle count
+alone.
