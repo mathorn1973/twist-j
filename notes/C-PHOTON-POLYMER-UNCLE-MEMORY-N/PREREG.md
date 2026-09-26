@@ -127,6 +127,8 @@ root b=6 term -> P6(6) q_4^6.
 
 For `1<=b<=5`, use `q_(b-1)^b`.
 
+Before this convention is accepted, the verifier must enumerate every root sibling set of size six and, for each of its six children, compute the child sibling polynomial after excluding all five root uncles. Every such polynomial must be coefficientwise bounded by `B_4`. Failure of this domination fails the audit; `q_4^6` is not otherwise authorized.
+
 ## 5. Frozen supersolution family
 
 Search only vectors
@@ -215,9 +217,10 @@ The scientific run must:
    filtered child graphs;
 8. verify the `B_u` tables are identical for all six parent entry faces;
 9. derive `P6` independently;
-10. perform only the frozen supersolution search;
-11. verify any displayed certificate by exact integer/rational arithmetic;
-12. print explicit scope boundaries.
+10. enumerate all root-six-child contexts and prove their five-uncle child polynomials are coefficientwise bounded by `B_4`;
+11. perform only the frozen supersolution search;
+12. verify any displayed certificate by exact integer/rational arithmetic;
+13. print explicit scope boundaries.
 
 No floats, randomness, optimization library, external data or fitted threshold
 is admitted.
