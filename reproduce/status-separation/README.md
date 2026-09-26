@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred seven checks cover the current
+and emits deterministic text. Its one hundred eleven checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 107/107 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 111/111 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -590,3 +590,13 @@ remain O. The apparatus scope acknowledges the selected source, event and
 control dictionary while retaining its original full closure condition; all
 other surviving live scopes remain exact. This is a release-integrity audit,
 not a new scientific probe or replacement for the written proofs.
+
+The v92 guard reconstructs all thirteen exact v91 inputs before running the
+107 unchanged historical guards, including the original v91 closures. Four
+new checks pin the three proof scopes and their distinct evidence kinds,
+the explicitly adopted ENC4/common-k arrow and MSD initialization, the
+unchanged complete metrology decision clause, and all 25 live owners. The
+finite-measure photon proof has inline evidence, not a manufactured probe
+record. No local floor is treated as a positive P1 contrast or physical
+photon. Expected output is the preserved historical transcript plus the
+four authored boundary checks, not an output regenerated to hide failures.

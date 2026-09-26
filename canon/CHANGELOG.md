@@ -1,5 +1,35 @@
 # Canon changelog (public series)
 
+## Public Canon v92
+
+Accept three exact theorems without closing a principal physical obligation.
+COUNTER-BELL-PRICE gives sharp finite overlap bounds and the complete
+ETH-QDD-2 table price 1/16. METRO-COMMON-BLOCKING proves the exact ENC4
+common-k criterion, initialized MSD augmentation and forbidden unconditional
+same-carrier rule. PHOTON-CONDITIONAL-VARIANCE-FLOOR supplies a self-contained
+full-original-measure insertion proof, explicit finite Fourier floors and
+conditional ordered-profile lower bounds.
+
+Ratify ENC4 and one common k as the stated blocking reading, admit both
+proved constructions within their scopes, and add the unconditional rule
+to the forbidden catalogue while preserving valid Pre_blk instances.
+The metrology parent remains O/STOP; its complete original decision clause
+and history remain, and completeness and unclassified extensions are open.
+No physical reading or L6 normalization is supplied by stream transport.
+
+The photon theorem is proof-first inline mathematics. The source notes audit
+is not presented as a formal public probe or two-architecture computation.
+Its common local floors b>=25rho and chi>=rho, rho=1/(36*2^41), do not close
+P1. A uniform bound on the full current moment and a separately positive
+macroscopic contrast remain research targets. Limit existence, directional
+symmetry, spectral transfer and identification with a physical photon are
+not consequences of this fold.
+
+Registry grows from 462 to 465 with three T rows. All prior statuses and
+complete decision clauses remain unchanged; live H/O remains 25. Every
+pinned public probe is unchanged. The release audit reconstructs the exact
+v91 inputs before all 107 historical guards and adds distinct v92 checks.
+
 ## Public Canon v91
 
 Fold ten accepted public pull requests into sixteen conditional theorem
@@ -163,7 +193,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 462 claims; 0 T-LOCK, 320 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
+Registry snapshot: 465 claims; 0 T-LOCK, 323 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 
