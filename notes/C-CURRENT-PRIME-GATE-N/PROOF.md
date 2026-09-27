@@ -183,14 +183,16 @@ Thus the current is the union of two separated unit four-edge loops with
 opposite total homology contribution. The same construction contains a
 neutral connecting surface.
 
-A separate exact finite audit of the frozen formula checked
+An exact in-session finite audit of the frozen formula checked
 \(D_s=3,\ldots,12\): every \(n_{D_s}\) remained ternary,
 \(|\operatorname{supp}n_{D_s}|=4D_s+40\),
 \(\partial n_{D_s}=5j_{D_s}\), the current had eight unit edges, and
-\(\partial j_{D_s}=0\).
+\(\partial j_{D_s}=0\). The fact that these eight edges are two four-edge
+loops follows already from the exact displayed formula (10), since each term is
+the boundary of one \(01\)-plaquette.
 
-The finite audit is candidate-C only. Equation (10) and the all-\(D_s\)
-construction are the written mathematical input.
+The finite audit is candidate-C corroboration only. Equation (10) and the
+all-\(D_s\) construction are the written mathematical input.
 
 ## 5. Unit conserved currents are cycle systems
 
@@ -208,16 +210,18 @@ Because
 the resulting finite directed graph has equal indegree and outdegree at every
 vertex.
 
-Choose any unused directed edge and follow unused outgoing edges. Before a
-vertex repeats, every entered vertex has at least one unused outgoing edge:
-on a first visit the path has consumed one incoming edge there and no outgoing
-edge there, while total indegree equals total outdegree. Finiteness forces a
-repeated vertex. The segment between its first and second occurrence is a
-directed simple cycle.
+Use the standard finite Euler-decomposition argument. Start at any vertex
+with an unused outgoing edge and follow unused directed edges until the trail
+cannot continue. At every vertex other than the start, each arrival consumes
+one unused incoming edge. Since the residual graph is balanced before the
+trail starts, inability to leave an entered non-start vertex would imply that
+strictly more outgoing than incoming edges had already been consumed there,
+which is impossible. Hence a maximal trail closes at its starting vertex.
 
-Remove the edges of that cycle. Removal subtracts one incoming and one outgoing
-edge at every vertex of the cycle, so the residual directed graph remains
-balanced. Iterate.
+A closed directed trail may revisit vertices. Split it at repeated vertices
+into directed simple cycles. Remove all edges of those cycles. At every vertex
+the removal deletes equally many incoming and outgoing edges, so the residual
+directed graph is again balanced. Iterate until no edge remains.
 
 Therefore
 
