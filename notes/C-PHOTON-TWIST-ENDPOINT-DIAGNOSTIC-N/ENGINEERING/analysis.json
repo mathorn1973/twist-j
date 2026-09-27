@@ -1,0 +1,2709 @@
+{
+  "analysis": "C-PHOTON-TWIST-ENDPOINT-DIAGNOSTIC-N",
+  "available_run_count": 24,
+  "coverage": "4SE intervals are empirical; no rigorous or simultaneous coverage is claimed",
+  "execution_errors": [],
+  "execution_manifest_sha256": "f9b14a01971153e85e45417844c58a6aad35c7ae9afe1e23e4707cb21ae41452",
+  "limitations": [
+    "Passing mobility gates does not prove equilibration or decorrelation.",
+    "No thermodynamic, phase, scaling, or P1 verdict is produced.",
+    "Squared ranges are formed from signed intervals, not squared noisy point estimates.",
+    "All chain estimates remain visible even when inference is withheld."
+  ],
+  "missing_runs": [],
+  "scope": "NON-CANONICAL engineering diagnostics of finite-volume signed ratios",
+  "status": "INCONCLUSIVE_MOBILITY",
+  "thresholds": {
+    "block_lengths": [
+      128,
+      256,
+      512
+    ],
+    "empirical_se_multiplier": 4.0,
+    "maximum_se_coarsening_ratio": 2.0,
+    "maximum_signed_interval_halfwidth": 0.05,
+    "minimum_completed_roundtrips_per_chain": 8,
+    "minimum_each_endpoint_sweeps_per_chain": 256,
+    "minimum_endpoint_changes_per_chain": 16,
+    "minimum_expected_p0": 0.5,
+    "minimum_final_each_edge_swap_acceptance": 0.05
+  },
+  "volumes": [
+    {
+      "D_empirical_engineering_interval": null,
+      "L": 4,
+      "modes": [
+        {
+          "chains": [
+            {
+              "chain": 0,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.26397103536241223,
+                "mean_Y0": -0.002875897162037491,
+                "mean_Y0_squared": 0.05706408301109973,
+                "mean_action": -1.1607402696351832
+              },
+              "edge_acceptance": [
+                0.00048828125,
+                0.00048828125,
+                0.001953125,
+                0.00244140625,
+                0.0009765625,
+                0.001953125,
+                0.0,
+                0.0322265625
+              ],
+              "endpoint_changes": 116,
+              "endpoint_occupancy": [
+                2460,
+                1636
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.370781554557401,
+                "interval": [
+                  0.13088386597732227,
+                  0.8724469750921243
+                ],
+                "mean": 0.5016654205347233,
+                "mean_T": 0.3012931969031786,
+                "p0": 0.6005859375,
+                "p0_se": 0.04369430630136554,
+                "se": 0.09269538863935026,
+                "se_by_block_length": {
+                  "128": 0.07831798639044868,
+                  "256": 0.09269538863935026,
+                  "512": 0.09243071992540032
+                }
+              },
+              "initial": "cold0",
+              "input_file": "L4_k1_c0.tsv",
+              "input_sha256": "1add25deda97bc9e04370b2fbbc48c20d54939b7ecd5796744126f72686552df",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.5649429718423309,
+                  "interval": [
+                    0.04319547323760231,
+                    1.173081416922264
+                  ],
+                  "mean": 0.6081384450799332,
+                  "mean_T": 0.3385145641558222,
+                  "p0": 0.556640625,
+                  "p0_se": 0.05497159282077066,
+                  "se": 0.14123574296058272,
+                  "se_by_block_length": {
+                    "128": 0.09262442539766347,
+                    "256": 0.1253145881665826,
+                    "512": 0.14123574296058272
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.5175395732984434,
+                  "interval": [
+                    -0.10782812850731038,
+                    0.9272510180895763
+                  ],
+                  "mean": 0.409711444791133,
+                  "mean_T": 0.26407182965053494,
+                  "p0": 0.64453125,
+                  "p0_se": 0.07251780925428027,
+                  "se": 0.12938489332461084,
+                  "se_by_block_length": {
+                    "128": 0.1150078571136757,
+                    "256": 0.12938489332461084,
+                    "512": 0.11776513677339345
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 1,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.22890412006691085,
+                "mean_Y0": -0.0024138394940767115,
+                "mean_Y0_squared": 0.057166966639757275,
+                "mean_action": -1.1610888279403562
+              },
+              "edge_acceptance": [
+                0.0009765625,
+                0.0,
+                0.0009765625,
+                0.00244140625,
+                0.0029296875,
+                0.0009765625,
+                0.0,
+                0.0263671875
+              ],
+              "endpoint_changes": 110,
+              "endpoint_occupancy": [
+                2704,
+                1392
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.3865122708320965,
+                "interval": [
+                  0.008287756973119786,
+                  0.7813122986373128
+                ],
+                "mean": 0.3948000278052163,
+                "mean_T": 0.2606297058557873,
+                "p0": 0.66015625,
+                "p0_se": 0.05412281203370558,
+                "se": 0.09662806770802412,
+                "se_by_block_length": {
+                  "128": 0.07247238328361956,
+                  "256": 0.07583363862377158,
+                  "512": 0.09662806770802412
+                }
+              },
+              "initial": "hot0",
+              "input_file": "L4_k1_c1.tsv",
+              "input_sha256": "b1b32c311453353b418f877ab1a3560d440c38c24ea08ac970a57c71bd1462fd",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.19751699522762226,
+                  "interval": [
+                    0.003256031693835759,
+                    0.39829002214908027
+                  ],
+                  "mean": 0.20077302692145801,
+                  "mean_T": 0.15842246655521297,
+                  "p0": 0.7890625,
+                  "p0_se": 0.040776210975401045,
+                  "se": 0.049379248806905564,
+                  "se_by_block_length": {
+                    "128": 0.049379248806905564,
+                    "256": 0.046656212489765966,
+                    "512": 0.04674550215117636
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.6028649453465951,
+                  "interval": [
+                    0.08012224553596803,
+                    1.2858521362291582
+                  ],
+                  "mean": 0.6829871908825631,
+                  "mean_T": 0.36283694515636167,
+                  "p0": 0.53125,
+                  "p0_se": 0.05472004240097574,
+                  "se": 0.15071623633664877,
+                  "se_by_block_length": {
+                    "128": 0.15071623633664877,
+                    "256": 0.10724620081127408,
+                    "512": 0.08810705233176697
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 2,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.28794441922400876,
+                "mean_Y0": -0.0043652952002554545,
+                "mean_Y0_squared": 0.05329782140650304,
+                "mean_action": -1.1610035295562495
+              },
+              "edge_acceptance": [
+                0.00048828125,
+                0.00048828125,
+                0.001953125,
+                0.00048828125,
+                0.00146484375,
+                0.0009765625,
+                0.0,
+                0.02392578125
+              ],
+              "endpoint_changes": 119,
+              "endpoint_occupancy": [
+                2355,
+                1741
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.4468968287211554,
+                "interval": [
+                  0.1154919993346964,
+                  1.0092856567770072
+                ],
+                "mean": 0.5623888280558518,
+                "mean_T": 0.32334611574011984,
+                "p0": 0.574951171875,
+                "p0_se": 0.049674497070004535,
+                "se": 0.11172420718028885,
+                "se_by_block_length": {
+                  "128": 0.09471029844911118,
+                  "256": 0.09306403147332737,
+                  "512": 0.11172420718028885
+                }
+              },
+              "initial": "cold1",
+              "input_file": "L4_k1_c2.tsv",
+              "input_sha256": "314c94466e3a2d14eef74a7520ad7634d153a7ef7323accf5799d4eac0dc2836",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.37039328692027484,
+                  "interval": [
+                    -0.01736244955163535,
+                    0.7234241242889143
+                  ],
+                  "mean": 0.3530308373686395,
+                  "mean_T": 0.24184680899814512,
+                  "p0": 0.68505859375,
+                  "p0_se": 0.05780158412394902,
+                  "se": 0.09259832173006871,
+                  "se_by_block_length": {
+                    "128": 0.09259832173006871,
+                    "256": 0.069731083398932,
+                    "512": 0.08101499420453415
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.6588753853044856,
+                  "interval": [
+                    0.21205258238808744,
+                    1.5298033529970587
+                  ],
+                  "mean": 0.8709279676925731,
+                  "mean_T": 0.40484542248209454,
+                  "p0": 0.46484375,
+                  "p0_se": 0.04810664896331033,
+                  "se": 0.1647188463261214,
+                  "se_by_block_length": {
+                    "128": 0.1647188463261214,
+                    "256": 0.14951904171890396,
+                    "512": 0.08694890547180406
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 3,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.25445513752174853,
+                "mean_Y0": -0.0003890709175774795,
+                "mean_Y0_squared": 0.054947398258158316,
+                "mean_action": -1.1613259972017218
+              },
+              "edge_acceptance": [
+                0.0009765625,
+                0.0009765625,
+                0.0009765625,
+                0.001953125,
+                0.00146484375,
+                0.0009765625,
+                0.0,
+                0.03076171875
+              ],
+              "endpoint_changes": 116,
+              "endpoint_occupancy": [
+                2532,
+                1564
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.42949057509129146,
+                "interval": [
+                  0.03397233869674443,
+                  0.8929534888793274
+                ],
+                "mean": 0.4634629137880359,
+                "mean_T": 0.2864961176052995,
+                "p0": 0.6181640625,
+                "p0_se": 0.05396578560987791,
+                "se": 0.10737264377282286,
+                "se_by_block_length": {
+                  "128": 0.10737264377282286,
+                  "256": 0.10512594545772194,
+                  "512": 0.1046747447140806
+                }
+              },
+              "initial": "hot1",
+              "input_file": "L4_k1_c3.tsv",
+              "input_sha256": "8809f1bab7ff5a1c030c6b00bcfbe9a761344c7b7cc8ec4372d90af92504387b",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.78178606261243,
+                  "interval": [
+                    -0.3763669954913182,
+                    1.1872051297335418
+                  ],
+                  "mean": 0.4054190671211118,
+                  "mean_T": 0.2626909678074782,
+                  "p0": 0.64794921875,
+                  "p0_se": 0.10739634817439692,
+                  "se": 0.1954465156531075,
+                  "se_by_block_length": {
+                    "128": 0.12802200325784466,
+                    "256": 0.1340486386432711,
+                    "512": 0.1954465156531075
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.7309136996705871,
+                  "interval": [
+                    -0.2035303007978969,
+                    1.2582970985432773
+                  ],
+                  "mean": 0.5273833988726901,
+                  "mean_T": 0.3103012674031209,
+                  "p0": 0.58837890625,
+                  "p0_se": 0.08330398678621294,
+                  "se": 0.18272842491764676,
+                  "se_by_block_length": {
+                    "128": 0.18272842491764676,
+                    "256": 0.17310893677849665,
+                    "512": 0.054677431448760166
+                  }
+                }
+              ]
+            }
+          ],
+          "coarsening_se_ratio": 1.1200558668799698,
+          "degenerate_batch_variance": false,
+          "diagnostic_failures": [
+            "chain_0:roundtrips",
+            "chain_0:adjacent_swap_acceptance",
+            "chain_1:roundtrips",
+            "chain_1:adjacent_swap_acceptance",
+            "chain_2:roundtrips",
+            "chain_2:adjacent_swap_acceptance",
+            "chain_3:roundtrips",
+            "chain_3:adjacent_swap_acceptance"
+          ],
+          "estimate_label": "NONINFERENTIAL_ESTIMATE",
+          "k": 1,
+          "mobility_and_stability_pass": false,
+          "pooled": {
+            "chain_residual_se": 0.035367105392343945,
+            "halfwidth": 0.1978959488532556,
+            "interval": [
+              0.27962370068246845,
+              0.6754155983889796
+            ],
+            "mean": 0.477519649535724,
+            "mean_T": 0.2929412840260963,
+            "p0": 0.61346435546875,
+            "p0_se": 0.024423567859617815,
+            "se": 0.0494739872133139,
+            "se_by_block_length": {
+              "128": 0.044170999569091804,
+              "256": 0.04543965874641589,
+              "512": 0.0494739872133139
+            }
+          },
+          "signed_interval_excludes_zero": true,
+          "width_pass": false
+        },
+        {
+          "chains": [
+            {
+              "chain": 0,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.21880172576700618,
+                "mean_Y0": 0.007496645988634501,
+                "mean_Y0_squared": 0.08119473593292865,
+                "mean_action": -1.1609898623648984
+              },
+              "edge_acceptance": [
+                0.00048828125,
+                0.0009765625,
+                0.0009765625,
+                0.00146484375,
+                0.0029296875,
+                0.001953125,
+                0.0,
+                0.029296875
+              ],
+              "endpoint_changes": 12,
+              "endpoint_occupancy": [
+                3710,
+                386
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.5140975736445963,
+                "interval": [
+                  -0.35995153938377483,
+                  0.6682436079054177
+                ],
+                "mean": 0.15414603426082146,
+                "mean_T": 0.13961957693057803,
+                "p0": 0.90576171875,
+                "p0_se": 0.07078057362483814,
+                "se": 0.12852439341114907,
+                "se_by_block_length": {
+                  "128": 0.08167982874506571,
+                  "256": 0.10817334317705,
+                  "512": 0.12852439341114907
+                }
+              },
+              "initial": "cold0",
+              "input_file": "L4_k2_c0.tsv",
+              "input_sha256": "fc4ff1a0c90ef6c77b88e151d88d5c93154e91efafa0d050fb825aaa8cae004b",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 1.1968371677501193,
+                  "interval": [
+                    -0.852744636397744,
+                    1.5409296991024946
+                  ],
+                  "mean": 0.3440925313523752,
+                  "mean_T": 0.27923915386115605,
+                  "p0": 0.8115234375,
+                  "p0_se": 0.1321321902885486,
+                  "se": 0.2992092919375298,
+                  "se_by_block_length": {
+                    "128": 0.19203371699076,
+                    "256": 0.25506783440722536,
+                    "512": 0.2992092919375298
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 1,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.06280111457578104,
+                "mean_Y0": -0.002270955045692777,
+                "mean_Y0_squared": 0.09222935493250818,
+                "mean_action": -1.160926361507416
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.00048828125,
+                0.001953125,
+                0.00341796875,
+                0.0009765625,
+                0.0,
+                0.02099609375
+              ],
+              "endpoint_changes": 2,
+              "endpoint_occupancy": [
+                3994,
+                102
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.1620342090400333,
+                "interval": [
+                  -0.12253441467321854,
+                  0.20153400340684804
+                ],
+                "mean": 0.03949979436681476,
+                "mean_T": 0.03851615690943802,
+                "p0": 0.97509765625,
+                "p0_se": 0.02490234375,
+                "se": 0.040508552260008324,
+                "se_by_block_length": {
+                  "128": 0.040508552260008324,
+                  "256": 0.04050855226000832,
+                  "512": 0.04050855226000832
+                }
+              },
+              "initial": "hot0",
+              "input_file": "L4_k2_c1.tsv",
+              "input_sha256": "c95e6ef750614276d69ee6974bec2b592adb60f4d504efc85180ef022a67dc0a",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.34127711518266274,
+                  "interval": [
+                    -0.2602071364051406,
+                    0.4223470939601849
+                  ],
+                  "mean": 0.08106997877752216,
+                  "mean_T": 0.07703231381887604,
+                  "p0": 0.9501953125,
+                  "p0_se": 0.0498046875,
+                  "se": 0.08531927879566568,
+                  "se_by_block_length": {
+                    "128": 0.08531927879566568,
+                    "256": 0.08531927879566566,
+                    "512": 0.08531927879566566
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 2,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.8174454140208964,
+                "mean_Y0": 0.005012908796557157,
+                "mean_Y0_squared": 0.06211249811503802,
+                "mean_action": -1.160264402247008
+              },
+              "edge_acceptance": [
+                0.00048828125,
+                0.0009765625,
+                0.0,
+                0.00146484375,
+                0.00146484375,
+                0.00048828125,
+                0.0,
+                0.0263671875
+              ],
+              "endpoint_changes": 54,
+              "endpoint_occupancy": [
+                2722,
+                1374
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 1.0488030146783107,
+                "interval": [
+                  -0.3392545763236251,
+                  1.7583514530329962
+                ],
+                "mean": 0.7095484383546856,
+                "mean_T": 0.47153096904332376,
+                "p0": 0.66455078125,
+                "p0_se": 0.07289795408373767,
+                "se": 0.2622007536695777,
+                "se_by_block_length": {
+                  "128": 0.1933995735673067,
+                  "256": 0.22154812705021162,
+                  "512": 0.2622007536695777
+                }
+              },
+              "initial": "cold1",
+              "input_file": "L4_k2_c2.tsv",
+              "input_sha256": "6684bdbb07c89c901952a45babc2217818d3d77fe944cca80a44ff33870b1d65",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.9988954500668172,
+                  "interval": [
+                    -0.5167414877011813,
+                    1.4810494124324531
+                  ],
+                  "mean": 0.48215396236563596,
+                  "mean_T": 0.35902577764042715,
+                  "p0": 0.74462890625,
+                  "p0_se": 0.08764206389009241,
+                  "se": 0.2497238625167043,
+                  "se_by_block_length": {
+                    "128": 0.17292651357904057,
+                    "256": 0.18865854974488627,
+                    "512": 0.2497238625167043
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 2.162792288408974,
+                  "interval": [
+                    -1.1635391082971451,
+                    3.162045468520803
+                  ],
+                  "mean": 0.9992531801118291,
+                  "mean_T": 0.5840361604462204,
+                  "p0": 0.58447265625,
+                  "p0_se": 0.1133271924393403,
+                  "se": 0.5406980721022435,
+                  "se_by_block_length": {
+                    "128": 0.4043159107986317,
+                    "256": 0.4710646958168526,
+                    "512": 0.5406980721022435
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 3,
+              "descriptive_moments_only": {
+                "mean_T_squared": 1.6175344633635445,
+                "mean_Y0": 0.00395728686197078,
+                "mean_Y0_squared": 0.045709436017029155,
+                "mean_action": -1.1603047802914104
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0009765625,
+                0.00048828125,
+                0.00244140625,
+                0.0009765625,
+                0.0029296875,
+                0.0,
+                0.02392578125
+              ],
+              "endpoint_changes": 44,
+              "endpoint_occupancy": [
+                1944,
+                2152
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 2.7014883530492027,
+                "interval": [
+                  -1.9974962655511859,
+                  3.4054804405472194
+                ],
+                "mean": 0.7039920874980168,
+                "mean_T": 0.3341212446523791,
+                "p0": 0.474609375,
+                "p0_se": 0.10586457428257166,
+                "se": 0.6753720882623007,
+                "se_by_block_length": {
+                  "128": 0.4349493562542131,
+                  "256": 0.5636329270695974,
+                  "512": 0.6753720882623007
+                }
+              },
+              "initial": "hot1",
+              "input_file": "L4_k2_c3.tsv",
+              "input_sha256": "639ba9813cd779f34395a5a1945f6fdd5a94829af2db2d0c739c5fe90fb8d0f2",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 3.2798815348929637,
+                  "interval": [
+                    -3.708300916244655,
+                    2.8514621535412723
+                  ],
+                  "mean": -0.42841938135169155,
+                  "mean_T": -0.24621563078659225,
+                  "p0": 0.57470703125,
+                  "p0_se": 0.20225043188551162,
+                  "se": 0.8199703837232409,
+                  "se_by_block_length": {
+                    "128": 0.5683864560286394,
+                    "256": 0.7189302052769114,
+                    "512": 0.8199703837232409
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 3.7098501590657165,
+                  "interval": [
+                    -1.2681158305819022,
+                    6.151584487549531
+                  ],
+                  "mean": 2.441734328483814,
+                  "mean_T": 0.9144581200913504,
+                  "p0": 0.37451171875,
+                  "p0_se": 0.0909303154258533,
+                  "se": 0.9274625397664291,
+                  "se_by_block_length": {
+                    "128": 0.8846718425757575,
+                    "256": 0.9274625397664291,
+                    "512": 0.745527451714235
+                  }
+                }
+              ]
+            }
+          ],
+          "coarsening_se_ratio": 1.5150304196159468,
+          "degenerate_batch_variance": false,
+          "diagnostic_failures": [
+            "chain_0:endpoint_changes",
+            "chain_0:roundtrips",
+            "chain_0:adjacent_swap_acceptance",
+            "chain_1:endpoint_occupancy",
+            "chain_1:endpoint_changes",
+            "chain_1:roundtrips",
+            "chain_1:adjacent_swap_acceptance",
+            "chain_2:roundtrips",
+            "chain_2:adjacent_swap_acceptance",
+            "chain_3:roundtrips",
+            "chain_3:adjacent_swap_acceptance"
+          ],
+          "estimate_label": "NONINFERENTIAL_ESTIMATE",
+          "k": 2,
+          "mobility_and_stability_pass": false,
+          "pooled": {
+            "chain_residual_se": 0.1707129055850998,
+            "halfwidth": 0.6828516223403992,
+            "interval": [
+              -0.35709613057756134,
+              1.0086071141032371
+            ],
+            "mean": 0.32575549176283786,
+            "mean_T": 0.2459469868839297,
+            "p0": 0.7550048828125,
+            "p0_se": 0.11473594241859791,
+            "se": 0.1707129055850998,
+            "se_by_block_length": {
+              "128": 0.08413534060166733,
+              "256": 0.10628668762830441,
+              "512": 0.12746760037627466
+            }
+          },
+          "signed_interval_excludes_zero": false,
+          "width_pass": false
+        }
+      ],
+      "status": "INCONCLUSIVE_MOBILITY"
+    },
+    {
+      "D_empirical_engineering_interval": null,
+      "L": 6,
+      "modes": [
+        {
+          "chains": [
+            {
+              "chain": 0,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.2064595788838999,
+                "mean_Y0": 0.011175305806347912,
+                "mean_Y0_squared": 0.06994977796176004,
+                "mean_action": -1.1597555448918186
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.00146484375
+              ],
+              "endpoint_changes": 5,
+              "endpoint_occupancy": [
+                2868,
+                1228
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.6600266844850897,
+                "interval": [
+                  -0.33306545899214135,
+                  0.9869879099780381
+                ],
+                "mean": 0.32696122549294837,
+                "mean_T": 0.22893671745941796,
+                "p0": 0.7001953125,
+                "p0_se": 0.10605876392564736,
+                "se": 0.16500667112127243,
+                "se_by_block_length": {
+                  "128": 0.12376458316822199,
+                  "256": 0.16500667112127243,
+                  "512": 0.1541096174365156
+                }
+              },
+              "initial": "cold0",
+              "input_file": "L6_k1_c0.tsv",
+              "input_sha256": "22a474eeaa0a3cdb77caa05ab5fe03da2e4c6e1bd96a587e21c04b1413f831d7",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 1.145985399496132,
+                  "interval": [
+                    -0.7202531508026321,
+                    1.5717176481896318
+                  ],
+                  "mean": 0.4257322486934999,
+                  "mean_T": 0.27148745937192914,
+                  "p0": 0.6376953125,
+                  "p0_se": 0.15619404108629076,
+                  "se": 0.286496349874033,
+                  "se_by_block_length": {
+                    "128": 0.22305768408932497,
+                    "256": 0.28559820906272226,
+                    "512": 0.286496349874033
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.8161383060394289,
+                  "interval": [
+                    -0.5717602792019992,
+                    1.0605163328768585
+                  ],
+                  "mean": 0.24437802683742968,
+                  "mean_T": 0.1863859755469068,
+                  "p0": 0.7626953125,
+                  "p0_se": 0.15137258774929116,
+                  "se": 0.20403457650985724,
+                  "se_by_block_length": {
+                    "128": 0.14125251538257838,
+                    "256": 0.20403457650985724,
+                    "512": 0.18692364992646276
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 1,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.4581064806317744,
+                "mean_Y0": -0.0022506084772669316,
+                "mean_Y0_squared": 0.027634733199593645,
+                "mean_action": -1.159797130931032
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.00244140625
+              ],
+              "endpoint_changes": 8,
+              "endpoint_occupancy": [
+                1190,
+                2906
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 5.047415176180118,
+                "interval": [
+                  -3.240605890821401,
+                  6.854224461538834
+                ],
+                "mean": 1.8068092853587163,
+                "mean_T": 0.5249275023381036,
+                "p0": 0.29052734375,
+                "p0_se": 0.14364375103282617,
+                "se": 1.2618537940450294,
+                "se_by_block_length": {
+                  "128": 0.6696626787430047,
+                  "256": 0.8880518117381839,
+                  "512": 1.2618537940450294
+                }
+              },
+              "initial": "hot0",
+              "input_file": "L6_k1_c1.tsv",
+              "input_sha256": "f0a9cfd3a112c2d2a1f0d71500aa807a1d7c772985d4047814da79aacb06ebca",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 1.7578240454371674,
+                  "interval": [
+                    -1.2273221536162868,
+                    2.288325937258048
+                  ],
+                  "mean": 0.5305018918208806,
+                  "mean_T": 0.30799157684327494,
+                  "p0": 0.58056640625,
+                  "p0_se": 0.20051878560659647,
+                  "se": 0.43945601135929185,
+                  "se_by_block_length": {
+                    "128": 0.24821654944746496,
+                    "256": 0.30787155298269353,
+                    "512": 0.43945601135929185
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 6074.511828993016,
+                  "interval": [
+                    -4555.175528791171,
+                    7593.848129194861
+                  ],
+                  "mean": 1519.3363002018452,
+                  "mean_T": 0.7418634278329322,
+                  "p0": 0.00048828125,
+                  "p0_se": 0.00048828125,
+                  "se": 1518.627957248254,
+                  "se_by_block_length": {
+                    "128": 1516.2354921039812,
+                    "256": 1508.8388355001225,
+                    "512": 1518.627957248254
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 2,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.18493336653021164,
+                "mean_Y0": -0.0009879265276972519,
+                "mean_Y0_squared": 0.07369141910883818,
+                "mean_action": -1.1598723615635202
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.00146484375
+              ],
+              "endpoint_changes": 5,
+              "endpoint_occupancy": [
+                2980,
+                1116
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.6762104854143546,
+                "interval": [
+                  -0.39150805173560604,
+                  0.9609129190931032
+                ],
+                "mean": 0.28470243367874853,
+                "mean_T": 0.20713214169010513,
+                "p0": 0.7275390625,
+                "p0_se": 0.11733273180687691,
+                "se": 0.16905262135358864,
+                "se_by_block_length": {
+                  "128": 0.10944353513039252,
+                  "256": 0.1399746075839512,
+                  "512": 0.16905262135358864
+                }
+              },
+              "initial": "cold1",
+              "input_file": "L6_k1_c2.tsv",
+              "input_sha256": "e579011be9f1585c77a9941f22d8b591a641ceaaeff03703cf82bcd472dca3b0",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 1.5593983307377877,
+                  "interval": [
+                    -1.1987532581604454,
+                    1.92004340331513
+                  ],
+                  "mean": 0.3606450725773422,
+                  "mean_T": 0.24547814022110107,
+                  "p0": 0.6806640625,
+                  "p0_se": 0.23611751871826575,
+                  "se": 0.3898495826844469,
+                  "se_by_block_length": {
+                    "128": 0.19689591778979743,
+                    "256": 0.2701895629930651,
+                    "512": 0.3898495826844469
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.5771432647095147,
+                  "interval": [
+                    -0.359189909608723,
+                    0.7950966198103064
+                  ],
+                  "mean": 0.21795335510079172,
+                  "mean_T": 0.16878614315910923,
+                  "p0": 0.7744140625,
+                  "p0_se": 0.11530469914543608,
+                  "se": 0.14428581617737868,
+                  "se_by_block_length": {
+                    "128": 0.12218786493228415,
+                    "256": 0.14428581617737868,
+                    "512": 0.10529218076920661
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 3,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.33530234810206255,
+                "mean_Y0": 0.003984945887259425,
+                "mean_Y0_squared": 0.047932147895787716,
+                "mean_action": -1.1598544951215355
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0029296875
+              ],
+              "endpoint_changes": 5,
+              "endpoint_occupancy": [
+                2037,
+                2059
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 1.9997451585840422,
+                "interval": [
+                  -1.240937295637542,
+                  2.7585530215305427
+                ],
+                "mean": 0.7588078629465003,
+                "mean_T": 0.3773661173881887,
+                "p0": 0.497314453125,
+                "p0_se": 0.1657079843499881,
+                "se": 0.49993628964601056,
+                "se_by_block_length": {
+                  "128": 0.26423636239317616,
+                  "256": 0.3645852943822346,
+                  "512": 0.49993628964601056
+                }
+              },
+              "initial": "hot1",
+              "input_file": "L6_k1_c3.tsv",
+              "input_sha256": "e600e491178b5b8b53504ecf21d7dbc1ddbb4b1d12d60c1612b03c944744c720",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 32.816354872194005,
+                  "interval": [
+                    -24.194406549267747,
+                    41.43830319512026
+                  ],
+                  "mean": 8.621948322926258,
+                  "mean_T": 0.6862195198422754,
+                  "p0": 0.07958984375,
+                  "p0_se": 0.06959555699929608,
+                  "se": 8.204088718048501,
+                  "se_by_block_length": {
+                    "128": 7.353033470083624,
+                    "256": 8.204088718048501,
+                    "512": 7.9296387445164065
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.3273044427524935,
+                  "interval": [
+                    -0.25243035514041184,
+                    0.4021785303645751
+                  ],
+                  "mean": 0.07487408761208164,
+                  "mean_T": 0.06851271493410205,
+                  "p0": 0.9150390625,
+                  "p0_se": 0.0849609375,
+                  "se": 0.08182611068812337,
+                  "se_by_block_length": {
+                    "128": 0.06215970396524895,
+                    "256": 0.08182611068812336,
+                    "512": 0.08182611068812337
+                  }
+                }
+              ]
+            }
+          ],
+          "coarsening_se_ratio": 1.6670874418709736,
+          "degenerate_batch_variance": false,
+          "diagnostic_failures": [
+            "chain_0:endpoint_changes",
+            "chain_0:roundtrips",
+            "chain_0:adjacent_swap_acceptance",
+            "chain_1:endpoint_changes",
+            "chain_1:roundtrips",
+            "chain_1:adjacent_swap_acceptance",
+            "chain_2:endpoint_changes",
+            "chain_2:roundtrips",
+            "chain_2:adjacent_swap_acceptance",
+            "chain_3:endpoint_changes",
+            "chain_3:roundtrips",
+            "chain_3:adjacent_swap_acceptance"
+          ],
+          "estimate_label": "NONINFERENTIAL_ESTIMATE",
+          "k": 1,
+          "mobility_and_stability_pass": false,
+          "pooled": {
+            "chain_residual_se": 0.24426187365983684,
+            "halfwidth": 0.9770474946393474,
+            "interval": [
+              -0.37297777414619704,
+              1.5811172151324977
+            ],
+            "mean": 0.6040697204931503,
+            "mean_T": 0.3345906197189538,
+            "p0": 0.55389404296875,
+            "p0_se": 0.10170214784635007,
+            "se": 0.24426187365983684,
+            "se_by_block_length": {
+              "128": 0.10381182320171846,
+              "256": 0.13816733752377242,
+              "512": 0.17306338677731462
+            }
+          },
+          "signed_interval_excludes_zero": false,
+          "width_pass": false
+        },
+        {
+          "chains": [
+            {
+              "chain": 0,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.0,
+                "mean_Y0": 0.00172852166071292,
+                "mean_Y0_squared": 0.09848536616132451,
+                "mean_action": -1.159842085922004
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.00341796875
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                4096,
+                0
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.0,
+                "interval": [
+                  0.0,
+                  0.0
+                ],
+                "mean": 0.0,
+                "mean_T": 0.0,
+                "p0": 1.0,
+                "p0_se": 0.0,
+                "se": 0.0,
+                "se_by_block_length": {
+                  "128": 0.0,
+                  "256": 0.0,
+                  "512": 0.0
+                }
+              },
+              "initial": "cold0",
+              "input_file": "L6_k2_c0.tsv",
+              "input_sha256": "fba7fcfde9d28e3c184e71b0370c67299c4ebeed1799dcc4813de556169a8c9e",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 1,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.0,
+                "mean_Y0": -0.2509388153296214,
+                "mean_Y0_squared": 1.0941569387733407,
+                "mean_action": -1.1597697129093554
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0029296875
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                4096,
+                0
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.0,
+                "interval": [
+                  0.0,
+                  0.0
+                ],
+                "mean": 0.0,
+                "mean_T": 0.0,
+                "p0": 1.0,
+                "p0_se": 0.0,
+                "se": 0.0,
+                "se_by_block_length": {
+                  "128": 0.0,
+                  "256": 0.0,
+                  "512": 0.0
+                }
+              },
+              "initial": "hot0",
+              "input_file": "L6_k2_c1.tsv",
+              "input_sha256": "40ba2f7efd2ad1fd1bd7fb12383136b716665db5fa549235027b72f1847aa611",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 2,
+              "descriptive_moments_only": {
+                "mean_T_squared": 2.3689057173927353,
+                "mean_Y0": 0.0,
+                "mean_Y0_squared": 0.0,
+                "mean_action": -1.1595937651452273
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.00341796875
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                0,
+                4096
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": null,
+                "interval": null,
+                "mean": null,
+                "mean_T": 1.5055764198080448,
+                "p0": 0.0,
+                "p0_se": null,
+                "se": null,
+                "se_by_block_length": {}
+              },
+              "initial": "cold1",
+              "input_file": "L6_k2_c2.tsv",
+              "input_sha256": "ad6fbca26943435e00124acd6faaae86cd2803c54009aa5f3e1d7515ae88eadd",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 1.5001818119524406,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 1.510971027663649,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                }
+              ]
+            },
+            {
+              "chain": 3,
+              "descriptive_moments_only": {
+                "mean_T_squared": 3.9682118883359427,
+                "mean_Y0": 0.0,
+                "mean_Y0_squared": 0.0,
+                "mean_action": -1.1592361203887405
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.001953125
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                0,
+                4096
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": null,
+                "interval": null,
+                "mean": null,
+                "mean_T": -0.6204784666923798,
+                "p0": 0.0,
+                "p0_se": null,
+                "se": null,
+                "se_by_block_length": {}
+              },
+              "initial": "hot1",
+              "input_file": "L6_k2_c3.tsv",
+              "input_sha256": "5cd16b8fecee3233cef373eb2fe9934201da37351ece8379efc616377c3995c7",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 0.05232799833481625,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": -1.2932849317195758,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                }
+              ]
+            }
+          ],
+          "coarsening_se_ratio": 1.9250794601576928,
+          "degenerate_batch_variance": false,
+          "diagnostic_failures": [
+            "chain_0:endpoint_occupancy",
+            "chain_0:endpoint_changes",
+            "chain_0:roundtrips",
+            "chain_0:adjacent_swap_acceptance",
+            "chain_1:endpoint_occupancy",
+            "chain_1:endpoint_changes",
+            "chain_1:roundtrips",
+            "chain_1:adjacent_swap_acceptance",
+            "chain_2:endpoint_occupancy",
+            "chain_2:endpoint_changes",
+            "chain_2:roundtrips",
+            "chain_2:adjacent_swap_acceptance",
+            "chain_2:between_chain_disagreement",
+            "chain_2:time_half_disagreement",
+            "chain_2:denominator_below_equilibrium_bound",
+            "chain_3:endpoint_occupancy",
+            "chain_3:endpoint_changes",
+            "chain_3:roundtrips",
+            "chain_3:adjacent_swap_acceptance",
+            "chain_3:between_chain_disagreement",
+            "chain_3:time_half_disagreement",
+            "chain_3:denominator_below_equilibrium_bound"
+          ],
+          "estimate_label": "NONINFERENTIAL_ESTIMATE",
+          "k": 2,
+          "mobility_and_stability_pass": false,
+          "pooled": {
+            "chain_residual_se": 1.0072161431086026,
+            "halfwidth": 4.0288645724344105,
+            "interval": [
+              -3.586315595876578,
+              4.471413548992243
+            ],
+            "mean": 0.44254897655783254,
+            "mean_T": 0.22127448827891627,
+            "p0": 0.5,
+            "p0_se": 0.28867513459481287,
+            "se": 1.0072161431086026,
+            "se_by_block_length": {
+              "128": 0.22445919110554904,
+              "256": 0.3079994390791354,
+              "512": 0.43210177844090275
+            }
+          },
+          "signed_interval_excludes_zero": false,
+          "width_pass": false
+        }
+      ],
+      "status": "INCONCLUSIVE_MOBILITY"
+    },
+    {
+      "D_empirical_engineering_interval": null,
+      "L": 8,
+      "modes": [
+        {
+          "chains": [
+            {
+              "chain": 0,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.0,
+                "mean_Y0": -0.0038483921493941043,
+                "mean_Y0_squared": 0.0997516058251777,
+                "mean_action": -1.159791962548191
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                4096,
+                0
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.0,
+                "interval": [
+                  0.0,
+                  0.0
+                ],
+                "mean": 0.0,
+                "mean_T": 0.0,
+                "p0": 1.0,
+                "p0_se": 0.0,
+                "se": 0.0,
+                "se_by_block_length": {
+                  "128": 0.0,
+                  "256": 0.0,
+                  "512": 0.0
+                }
+              },
+              "initial": "cold0",
+              "input_file": "L8_k1_c0.tsv",
+              "input_sha256": "bce57f06de029ad5ce03dd2cb4f54a62b84d970638d87fefea4634305fb6e21c",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 0,
+                "14": 0,
+                "15": 0,
+                "16": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 1,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.0,
+                "mean_Y0": 0.004366331299922515,
+                "mean_Y0_squared": 0.09919160609799371,
+                "mean_action": -1.1591034283880426
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                4096,
+                0
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.0,
+                "interval": [
+                  0.0,
+                  0.0
+                ],
+                "mean": 0.0,
+                "mean_T": 0.0,
+                "p0": 1.0,
+                "p0_se": 0.0,
+                "se": 0.0,
+                "se_by_block_length": {
+                  "128": 0.0,
+                  "256": 0.0,
+                  "512": 0.0
+                }
+              },
+              "initial": "hot0",
+              "input_file": "L8_k1_c1.tsv",
+              "input_sha256": "6f5948877f1e5faaf79e1f2e81f416a8471193a5f33f1765eda0886311ac0954",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 0,
+                "14": 0,
+                "15": 0,
+                "16": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 2,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.670033059386388,
+                "mean_Y0": 0.0,
+                "mean_Y0_squared": 0.0,
+                "mean_action": -1.1598145160449997
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                0,
+                4096
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": null,
+                "interval": null,
+                "mean": null,
+                "mean_T": 0.7587717704849533,
+                "p0": 0.0,
+                "p0_se": null,
+                "se": null,
+                "se_by_block_length": {}
+              },
+              "initial": "cold1",
+              "input_file": "L8_k1_c2.tsv",
+              "input_sha256": "5da18ea9a3c5e292033050196fdc9eb321189862ed7427e3d79cd7827a6700bd",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 0,
+                "14": 0,
+                "15": 0,
+                "16": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 0.7663021661629524,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 0.7512413748069541,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                }
+              ]
+            },
+            {
+              "chain": 3,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.6459968662642961,
+                "mean_Y0": 0.0,
+                "mean_Y0_squared": 0.0,
+                "mean_action": -1.1590934088713905
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                0,
+                4096
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": null,
+                "interval": null,
+                "mean": null,
+                "mean_T": 0.7409018283291695,
+                "p0": 0.0,
+                "p0_se": null,
+                "se": null,
+                "se_by_block_length": {}
+              },
+              "initial": "hot1",
+              "input_file": "L8_k1_c3.tsv",
+              "input_sha256": "db120852811facddf48c0e42b137b9bad2b9efcb72c4fbbbcba77e3dadf71e97",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 0,
+                "14": 0,
+                "15": 0,
+                "16": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 0.7421688554874281,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 0.7396348011709111,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                }
+              ]
+            }
+          ],
+          "coarsening_se_ratio": 2.0235663326307343,
+          "degenerate_batch_variance": false,
+          "diagnostic_failures": [
+            "chain_0:endpoint_occupancy",
+            "chain_0:endpoint_changes",
+            "chain_0:roundtrips",
+            "chain_0:adjacent_swap_acceptance",
+            "chain_1:endpoint_occupancy",
+            "chain_1:endpoint_changes",
+            "chain_1:roundtrips",
+            "chain_1:adjacent_swap_acceptance",
+            "chain_2:endpoint_occupancy",
+            "chain_2:endpoint_changes",
+            "chain_2:roundtrips",
+            "chain_2:adjacent_swap_acceptance",
+            "chain_2:between_chain_disagreement",
+            "chain_2:time_half_disagreement",
+            "chain_2:denominator_below_equilibrium_bound",
+            "chain_3:endpoint_occupancy",
+            "chain_3:endpoint_changes",
+            "chain_3:roundtrips",
+            "chain_3:adjacent_swap_acceptance",
+            "chain_3:between_chain_disagreement",
+            "chain_3:time_half_disagreement",
+            "chain_3:denominator_below_equilibrium_bound",
+            "pooled:batch_coarsening_instability"
+          ],
+          "estimate_label": "NONINFERENTIAL_ESTIMATE",
+          "k": 1,
+          "mobility_and_stability_pass": false,
+          "pooled": {
+            "chain_residual_se": 0.8658676901229247,
+            "halfwidth": 3.463470760491699,
+            "interval": [
+              -2.7136339610846374,
+              4.213307559898761
+            ],
+            "mean": 0.7498367994070614,
+            "mean_T": 0.3749183997035307,
+            "p0": 0.5,
+            "p0_se": 0.28867513459481287,
+            "se": 0.8658676901229247,
+            "se_by_block_length": {
+              "128": 0.13312418784287233,
+              "256": 0.18897783930830137,
+              "512": 0.26938562457764614
+            }
+          },
+          "signed_interval_excludes_zero": false,
+          "width_pass": false
+        },
+        {
+          "chains": [
+            {
+              "chain": 0,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.0,
+                "mean_Y0": -0.0051794027374592886,
+                "mean_Y0_squared": 0.09649573647994147,
+                "mean_action": -1.1597549166480026
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                4096,
+                0
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.0,
+                "interval": [
+                  0.0,
+                  0.0
+                ],
+                "mean": 0.0,
+                "mean_T": 0.0,
+                "p0": 1.0,
+                "p0_se": 0.0,
+                "se": 0.0,
+                "se_by_block_length": {
+                  "128": 0.0,
+                  "256": 0.0,
+                  "512": 0.0
+                }
+              },
+              "initial": "cold0",
+              "input_file": "L8_k2_c0.tsv",
+              "input_sha256": "9c6be7f05071d8da12257f7eb4add346efab4e47dde50bd6e23d35f97be40589",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 0,
+                "14": 0,
+                "15": 0,
+                "16": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 1,
+              "descriptive_moments_only": {
+                "mean_T_squared": 0.0,
+                "mean_Y0": -0.00303658215485877,
+                "mean_Y0_squared": 0.09585193430854787,
+                "mean_action": -1.1593271456823604
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.00048828125
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                4096,
+                0
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": 0.0,
+                "interval": [
+                  0.0,
+                  0.0
+                ],
+                "mean": 0.0,
+                "mean_T": 0.0,
+                "p0": 1.0,
+                "p0_se": 0.0,
+                "se": 0.0,
+                "se_by_block_length": {
+                  "128": 0.0,
+                  "256": 0.0,
+                  "512": 0.0
+                }
+              },
+              "initial": "hot0",
+              "input_file": "L8_k2_c1.tsv",
+              "input_sha256": "e6a0090685fe1c321eb9169e471aa2e969e4539ec6f91f50967efa25bba76409",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 0,
+                "14": 0,
+                "15": 0,
+                "16": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": 0.0,
+                  "interval": [
+                    0.0,
+                    0.0
+                  ],
+                  "mean": 0.0,
+                  "mean_T": 0.0,
+                  "p0": 1.0,
+                  "p0_se": 0.0,
+                  "se": 0.0,
+                  "se_by_block_length": {
+                    "128": 0.0,
+                    "256": 0.0,
+                    "512": 0.0
+                  }
+                }
+              ]
+            },
+            {
+              "chain": 2,
+              "descriptive_moments_only": {
+                "mean_T_squared": 2.3757814964622352,
+                "mean_Y0": 0.0,
+                "mean_Y0_squared": 0.0,
+                "mean_action": -1.159531111735852
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                0,
+                4096
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": null,
+                "interval": null,
+                "mean": null,
+                "mean_T": 1.5091091619928212,
+                "p0": 0.0,
+                "p0_se": null,
+                "se": null,
+                "se_by_block_length": {}
+              },
+              "initial": "cold1",
+              "input_file": "L8_k2_c2.tsv",
+              "input_sha256": "6d368388c2fb9ce03e4afe8095f206e3c1002cec00dd786a08e52b8aa6d9a63a",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 0,
+                "14": 0,
+                "15": 0,
+                "16": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 1.5086649048692977,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 1.5095534191163444,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                }
+              ]
+            },
+            {
+              "chain": 3,
+              "descriptive_moments_only": {
+                "mean_T_squared": 2.3562038174986433,
+                "mean_Y0": 0.0,
+                "mean_Y0_squared": 0.0,
+                "mean_action": -1.1590550049060702
+              },
+              "edge_acceptance": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "endpoint_changes": 0,
+              "endpoint_occupancy": [
+                0,
+                4096
+              ],
+              "estimate": {
+                "chain_residual_se": null,
+                "halfwidth": null,
+                "interval": null,
+                "mean": null,
+                "mean_T": 1.5027598028168023,
+                "p0": 0.0,
+                "p0_se": null,
+                "se": null,
+                "se_by_block_length": {}
+              },
+              "initial": "hot1",
+              "input_file": "L8_k2_c3.tsv",
+              "input_sha256": "e56cc77a0b087c946be96aadd8edb5822fdf0608d2fd376113555aa072ab539e",
+              "label": "NONINFERENTIAL_ESTIMATE",
+              "roundtrips": 0,
+              "roundtrips_by_replica": {
+                "0": 0,
+                "1": 0,
+                "2": 0,
+                "3": 0,
+                "4": 0,
+                "5": 0,
+                "6": 0,
+                "7": 0,
+                "8": 0,
+                "9": 0,
+                "10": 0,
+                "11": 0,
+                "12": 0,
+                "13": 0,
+                "14": 0,
+                "15": 0,
+                "16": 0
+              },
+              "time_halves": [
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 1.5004226290820002,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                },
+                {
+                  "chain_residual_se": null,
+                  "halfwidth": null,
+                  "interval": null,
+                  "mean": null,
+                  "mean_T": 1.5050969765516045,
+                  "p0": 0.0,
+                  "p0_se": null,
+                  "se": null,
+                  "se_by_block_length": {}
+                }
+              ]
+            }
+          ],
+          "coarsening_se_ratio": 2.023801551290371,
+          "degenerate_batch_variance": false,
+          "diagnostic_failures": [
+            "chain_0:endpoint_occupancy",
+            "chain_0:endpoint_changes",
+            "chain_0:roundtrips",
+            "chain_0:adjacent_swap_acceptance",
+            "chain_1:endpoint_occupancy",
+            "chain_1:endpoint_changes",
+            "chain_1:roundtrips",
+            "chain_1:adjacent_swap_acceptance",
+            "chain_2:endpoint_occupancy",
+            "chain_2:endpoint_changes",
+            "chain_2:roundtrips",
+            "chain_2:adjacent_swap_acceptance",
+            "chain_2:between_chain_disagreement",
+            "chain_2:time_half_disagreement",
+            "chain_2:denominator_below_equilibrium_bound",
+            "chain_3:endpoint_occupancy",
+            "chain_3:endpoint_changes",
+            "chain_3:roundtrips",
+            "chain_3:adjacent_swap_acceptance",
+            "chain_3:between_chain_disagreement",
+            "chain_3:time_half_disagreement",
+            "chain_3:denominator_below_equilibrium_bound",
+            "pooled:batch_coarsening_instability"
+          ],
+          "estimate_label": "NONINFERENTIAL_ESTIMATE",
+          "k": 2,
+          "mobility_and_stability_pass": false,
+          "pooled": {
+            "chain_residual_se": 1.7389052895777433,
+            "halfwidth": 6.955621158310973,
+            "interval": [
+              -5.449686675906161,
+              8.461555640715785
+            ],
+            "mean": 1.5059344824048118,
+            "mean_T": 0.7529672412024059,
+            "p0": 0.5,
+            "p0_se": 0.28867513459481287,
+            "se": 1.7389052895777433,
+            "se_by_block_length": {
+              "128": 0.26729828832730396,
+              "256": 0.3794802843136677,
+              "512": 0.5409586905740585
+            }
+          },
+          "signed_interval_excludes_zero": false,
+          "width_pass": false
+        }
+      ],
+      "status": "INCONCLUSIVE_MOBILITY"
+    }
+  ]
+}

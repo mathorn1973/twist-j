@@ -1,0 +1,8 @@
+{
+  "architecture": "aarch64",
+  "system": "Linux",
+  "python": "3.12.3",
+  "workers": 8,
+  "per_chain_timeout_seconds": 900,
+  "binary_sha256": "4498cd9d48bb344de6dac398aa452c606c1dd51ed98ddc88107d3713d3710cf9"
+}
