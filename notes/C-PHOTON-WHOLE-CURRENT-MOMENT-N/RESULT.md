@@ -1,4 +1,4 @@
-# RESULT — C-PHOTON-WHOLE-CURRENT-MOMENT-N
+# RESULT - C-PHOTON-WHOLE-CURRENT-MOMENT-N
 
 **Verdict:** PASS at the frozen NON-CANONICAL deterministic scope.
 **Ceiling:** candidate-T written theorem; candidate-C finite audit.
