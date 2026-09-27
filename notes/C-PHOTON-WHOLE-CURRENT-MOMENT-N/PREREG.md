@@ -1,4 +1,4 @@
-# PREREG — C-PHOTON-WHOLE-CURRENT-MOMENT-N
+# PREREG - C-PHOTON-WHOLE-CURRENT-MOMENT-N
 
 **Status:** PUBLIC, NON-CANONICAL incubation. No Canon authority.
 **Owner:** A. M. Thorn / photon-whole-current-moment-20260927
