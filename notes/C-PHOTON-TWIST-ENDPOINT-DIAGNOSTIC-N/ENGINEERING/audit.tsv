@@ -1,0 +1,5 @@
+NON-CANONICAL floating-point engineering audit
+geometries	3
+fixture_states	12
+mutations_caught	24
+result	PASS
