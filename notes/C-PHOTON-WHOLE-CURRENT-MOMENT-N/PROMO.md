@@ -1,4 +1,4 @@
-# PROMO — C-PHOTON-WHOLE-CURRENT-MOMENT-N
+# PROMO - C-PHOTON-WHOLE-CURRENT-MOMENT-N
 
 **Request:** mathematical review only. No automatic Canon promotion.
 
