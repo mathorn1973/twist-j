@@ -1,4 +1,4 @@
-# Proof — C-PHOTON-WHOLE-CURRENT-MOMENT-N
+# Proof - C-PHOTON-WHOLE-CURRENT-MOMENT-N
 
 **Status:** candidate-T, PUBLIC NON-CANONICAL.
 **Owner:** #1198.
