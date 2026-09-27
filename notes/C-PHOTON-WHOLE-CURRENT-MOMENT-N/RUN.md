@@ -1,4 +1,4 @@
-# RUN — C-PHOTON-WHOLE-CURRENT-MOMENT-N
+# RUN - C-PHOTON-WHOLE-CURRENT-MOMENT-N
 
 **Status:** candidate-C audit only. Not a formal public probe and not a two-architecture scientific gate.
 **Owner:** #1198.
