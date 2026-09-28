@@ -1,0 +1,14 @@
+TWIST-J P-ZETA5-RESIDUE-STRIP-DECODER-2 exact verifier
+PASS G01_RESIDUE ResK coefficient 4/25; relative quartic coefficient 2/25; denominator fives 5 and 5
+PASS G02_GAUSS S=-3+i; |S|^2=10; |L(1,kappa)|^2/pi^2=2/25
+PASS G03_JUNIT J inverse and norm-one action exact in Z[zeta_5]
+PASS G04_BOX complete coefficient radius 12 for norm<=2500
+PASS G05_NORMWISE strip count equals 10 times Euler ideal count at every norm 1..2500
+PASS G06_COUNTS B_940=3110 B_941=3150 B_1000=3410 B_2500=8440
+PASS G07_NEGCTRL half-width strip 1<=A/B<phi^2 has 4300 representatives at X=2500
+PASS G08_ROUNDTRIP integer-only J-strip decoder round trip on 125 frozen pairs
+PASS G09_CAPACITY global 3125-orbit scalar capacity threshold X_min=941
+PASS G10_MILLION exact ideal count A_K(10^6)=339775
+PASS G11_QDD 5Q-s^2=Tr(alpha bar(alpha))=2(A+B) and incidence rewrite on all 624 supported pistons
+PASS G12_LANDAU degree-four Landau exponent specializes exactly to 3/5
+RESULT 12/12 ALL PASS
