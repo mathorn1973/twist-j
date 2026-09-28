@@ -499,7 +499,7 @@ def v93_current_checks():
         claim for claim, row in index.items()
         if row["status"] in {"H", "O"}
     }
-    canon_text = (v93_previous_bytes(CANON) or b"").decode("utf-8")
+    canon_text = CANON.read_text(encoding="utf-8")
     frontier_current = (ROOT / "canon" / "FRONTIER.md").read_bytes()
     frontier_previous = v93_previous_bytes(ROOT / "canon" / "FRONTIER.md")
     unchanged_tables = ("GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv")
@@ -626,7 +626,7 @@ def v92_current_checks():
     history = current["HISTORY.tsv"]
     prior_history = previous["HISTORY.tsv"]
     events = history[len(prior_history):]
-    canon_text = CANON.read_text(encoding="utf-8")
+    canon_text = (v93_previous_bytes(CANON) or b"").decode("utf-8")
     return [
         ("V92-PRIOR-BYTES",
          "thirteen exact current inputs reconstruct public v91 before all 107 unchanged historical guards",
