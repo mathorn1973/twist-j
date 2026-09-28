@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v92
+# TWIST-J Public Canon v93
 
-**Release identity.** Public Canon v92. Normative authority and activation
+**Release identity.** Public Canon v93. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v92 also declares the discrete architecture used to read
+only. Public Canon v93 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -10063,6 +10063,343 @@ The claim is scoped to `t in {1,2}`: trace does not select a number field
 for general `t` because `t=4` also has squarefree discriminant kernel 5.
 No run/record, time-arrow, force, or other physical reading is included in
 this theorem.
+
+
+### Residue, the J-unit strip, and scalar decoder capacity
+
+### ZETA5-DEDEKIND-RESIDUE [T]
+
+Let `K=Q(zeta_5)` and `k=Q(sqrt(5))`. With the registered exact invariants
+
+```text
+K: r1=0, r2=2, h=1, w=10, |d|=125, R=2 log(phi),
+k: r1=2, r2=0, h=1, w=2,  |d|=5,   R=log(phi),
+```
+
+the analytic class number formula gives
+
+```text
+Res_(s=1) zeta_K(s)
+  = 4 pi^2 log(phi)/(25 sqrt(5))
+  = (2 log(phi)/sqrt(5)) (2 pi^2/25).
+```
+
+For the primitive quartic character modulo five normalized by
+`kappa(2)=i`,
+
+```text
+S = sum_(a=1)^4 conjugate(kappa(a)) a = -3+i,
+|S|^2 = 10,
+|L(1,kappa)|^2 = 2 pi^2/25.
+```
+
+The relative class-number bookkeeping is exactly
+
+```text
+(R_K/R_k) * ((2 pi)^2/2^2) / (sqrt(125/5) * (10/2)).
+```
+
+Thus the numerator factors are `R_K/R_k=2` and `(2 pi)^2/2^2=pi^2`, while
+the two denominator fives are separately `sqrt(125/5)=5` and `10/2=5`.
+The Gaussian factorization `-3+i=(1+i)(-1+2i)` is an exact witness only; it
+is not used as a derivation of the number of roots of unity.
+
+### J-UNIT-STRIP-NORMAL-FORM [T]
+
+For nonzero `alpha in Z[zeta_5]` put
+`A=|sigma_1(alpha)|^2` and `B=|sigma_2(alpha)|^2`. Since
+`J=zeta_5/phi`,
+
+```text
+A(J alpha)/B(J alpha) = phi^-4 A(alpha)/B(alpha).
+```
+
+Therefore `1<=A/B<phi^4` contains exactly one representative of every
+`J^Z` orbit. If `alpha bar(alpha)=u+v phi`, then
+
+```text
+1 <= A/B < phi^4    iff    v >= 0 and u-v > 0.
+```
+
+Thus `n=-floor(log_(phi^4)(A/B))` is an algebraic orbit coordinate; its
+implementation needs only exact comparisons in `Q(sqrt(5))`.
+
+The public unit and class-number theorems give
+`O_K^x=mu_10 x <phi>` and `h_K=1`. Since `J=zeta_5 phi^-1`, quotienting
+the generator torsor of each nonzero integral ideal by `<J>` leaves exactly
+ten classes. Hence, for every `X>=1`,
+
+```text
+|B_X| = 10 A_K(X).
+```
+
+The written proof supplies a complete coefficient box. The two-architecture
+audit agrees norm by norm through 2500; at X=2500 the correct strip has 8440
+elements, while the deliberately wrong half-width `1<=A/B<phi^2` has 4300.
+The root-of-unity factor is invisible to `(A,B)`; the modulus strip alone
+does not recover torsion phase.
+
+### J-SCALAR-CODE-CAPACITY-3125 [T]
+
+U-COUNTER-REACHABLE-AMPLITUDE-CLASS [T] gives
+`R(n,x)=L^n G(ell_n(x))` with 3125 conserved labels. In the frozen class
+where `L(alpha)=J alpha`, scalars are nonzero integral, the reader is
+globally injective across all reachable sheets `n>=3`, and one algebraic
+norm bound X is required, distinct labels must occupy distinct J orbits.
+Therefore
+
+```text
+X_min = min { X : |B_X| >= 3125 }.
+```
+
+The formal two-architecture probe gives `|B_940|=3110` and
+`|B_941|=3150`, so `X_min=941`. An explicit lexicographic injection
+attains the bound. This is a capacity theorem for the declared scalar-reader
+class, not a physical constant or a selected codebook.
+
+### QDD-GALOIS-SUM-RATIO [T]
+
+For the registered Route A balanced piston source let
+
+```text
+alpha = iota_B0(v),    Q = sum_j v_j^2,    s = sum_j v_j,
+A = |sigma_1(alpha)|^2,    B = |sigma_2(alpha)|^2.
+```
+
+Then
+
+```text
+5Q-s^2 = Tr_(K/Q)(alpha bar(alpha)) = 2(A+B).
+```
+
+On every supported source,
+
+```text
+s^2/[4(5Q-s^2)] = s^2/[8(A+B)].
+```
+
+Thus the registered QDD denominator is the symmetric sum `A+B`, while the
+complete incidence ratio still also carries its numerator `s^2`; the J-unit
+strip uses the positive ratio `A/B`. This is an L1 identity, not a physical
+apparatus, occurrence law, Born sampling, decoder-uniqueness or completeness
+theorem.
+
+### ZETA5-IDEAL-COUNT-LANDAU [T]
+
+Conditional on the standard Landau ideal-counting theorem
+
+```text
+A_F(X)=kappa_F X + O_F(X^(1-2/(n+1)))
+```
+
+for a fixed degree-n number field, degree four gives exponent `3/5`. With
+`kappa_K=Res_(s=1) zeta_K(s)`,
+
+```text
+A_K(X) = [4 pi^2 log(phi)/(25 sqrt(5))] X + O_K(X^(3/5)).
+```
+
+The exact audit value `A_K(10^6)=339775` is a finite witness, not a proof of
+the asymptotic theorem.
+
+The possible cardinality identity `25=5*5` for a future native carrier is
+not promoted here. No concrete 25-element carrier, equality, action or
+equivariance contract has been frozen.
+
+
+### J-ENDPOINT-GROWTH [T]
+
+At L1 let \(O=\mathbb Z[\zeta]\), \(\zeta=e^{2\pi i/5}\),
+\(J=1+\zeta^2\) and \(\varphi=(1+\sqrt5)/2\). Fix the complete digit alphabet
+
+$$
+D=\{u+v\zeta:u,v\in\{-2,-1,0,1,2\}\},\qquad
+A_n=\left\{\sum_{k=0}^{n-1}J^k d_k:d_k\in D\right\},\qquad A_0=\{0\}.
+$$
+
+All words in \(D^n\) are admitted independently; endpoint equality is exact
+equality in \(O\). Reversing the independent choices shows that \(A_n\) is
+also the endpoint set of \(\alpha_{t+1}=J\alpha_t+d_t\) from zero.
+For every integer \(n\ge0\),
+
+$$
+\boxed{\varphi^{2n}\le |A_n|\le
+(93890+41760\sqrt5)\varphi^{2n}},\qquad
+\boxed{\lim_{n\to\infty}\frac{\log|A_n|}{n}=2\log\varphi}.
+$$
+
+Write \(C=93890+41760\sqrt5\). Both universal bounds have the following
+complete proof. The finite public
+probe audits its algebra and the census through \(n=4\); finite enumeration
+does not establish the universal quantifier.
+
+#### The expanding embedding
+
+Use the field embedding \(\sigma(\zeta)=\eta=\zeta^2\), and put
+\(\beta=\sigma(J)=1+\eta^2\). In this complex plane \(\varphi\) denotes the
+positive real number \((1+\sqrt5)/2\), not \(\sigma(\varphi)\).
+
+The fifth-root relation gives
+\(\eta+\overline\eta=-\varphi\), hence
+
+$$
+\eta^2+\varphi\eta+1=0,\qquad
+\beta=-\varphi\eta,\qquad |\beta|=\varphi.
+$$
+
+For completeness, if \(t=\zeta+\zeta^{-1}\), dividing the fifth-root
+relation by \(\zeta^2\) gives \(t^2+t-1=0\). Since \(t>0\),
+\(t=\varphi-1\). Thus
+\(\eta+\eta^{-1}=t^2-2=-\varphi\), proving the stated identity.
+
+Since \(\eta\) is nonreal, \((1,\eta)\) is a real basis of \(\mathbb C\).
+For real \(a,b\),
+
+$$
+\beta(a+b\eta)=\varphi b+(-\varphi a+\varphi^2b)\eta.
+$$
+
+The coordinate matrix and determinant are therefore
+
+$$
+B=\begin{pmatrix}0&\varphi\\-\varphi&\varphi^2\end{pmatrix},
+\qquad \det B=\varphi^2.
+$$
+
+#### A finite covering certificate
+
+Let
+
+$$
+P=\{a+b\eta:|a|,|b|\le\tfrac12\},\qquad D'=\sigma(D).
+$$
+
+It is essential that the following equality is an equality of actual sets,
+not merely of their convex hulls:
+
+$$
+\boxed{D'+P=\{a+b\eta:|a|,|b|\le\tfrac52\}=5P.}
+$$
+
+Indeed, the five intervals \(u+[-1/2,1/2]\), for \(u=-2,-1,0,1,2\),
+cover \([-5/2,5/2]\) with only endpoint overlaps, independently in the two
+real coordinates.
+
+For a point of \(P\), multiplication by \(\beta\) produces coordinates
+bounded by
+
+$$
+\frac\varphi2,\qquad
+\frac{\varphi+\varphi^2}{2}.
+$$
+
+Both are strictly smaller than \(5/2\):
+\(\varphi<5\) and
+\(\varphi+\varphi^2=2+\sqrt5<5\).
+Therefore
+
+$$
+\boxed{\beta P\subseteq D'+P.}
+$$
+
+This covering, rather than a lattice-density hypothesis, is the missing
+ingredient in the lower bound.
+
+#### Iterate the covering and compare areas
+
+Write \(S_n=\sigma(A_n)\). Then \(S_0=\{0\}\) and
+\(S_{n+1}=\beta S_n+D'\). The previous inclusion gives, by induction,
+
+$$
+\beta^nP\subseteq S_n+P
+=\bigcup_{s\in S_n}(s+P).
+$$
+
+The base case is equality. If the assertion holds at \(n\), multiplication
+by \(\beta\) and the one-step covering give
+\(\beta^{n+1}P\subseteq\beta S_n+\beta P
+\subseteq\beta S_n+D'+P=S_{n+1}+P\).
+
+The planar area of \(P\) is \(|\operatorname{Im}\eta|>0\).
+Multiplication by \(\beta^n\) multiplies area by
+\(|\beta|^{2n}=\varphi^{2n}\). Finite subadditivity of area therefore gives
+
+$$
+\varphi^{2n}\operatorname{area}(P)
+\le\operatorname{area}(S_n+P)
+\le |S_n|\operatorname{area}(P).
+$$
+
+A field embedding is injective, so \(|S_n|=|A_n|\). Cancelling the positive
+area proves
+
+$$
+\boxed{|A_n|\ge\varphi^{2n}\quad(n\ge0).}
+$$
+
+Overlap among translated parallelograms does not harm the argument: the
+required inequality is subadditivity, not disjointness. The rank-four
+module \(\sigma(O)\) need not be a discrete planar lattice. Only the finite
+set \(S_n\), injectivity and the displayed covering are used.
+
+#### Upper bound
+
+Let \(\sigma_1(\zeta)=\zeta\) and \(\sigma_2=\sigma\). Their sizes are
+\(|\sigma_1(J)|=\varphi^{-1}\) and \(|\sigma_2(J)|=\varphi\).
+The first follows from \(J\varphi=\zeta\), and the second was proved above.
+Every digit satisfies \(|\sigma_i(d)|\le4\). Consequently every endpoint
+satisfies
+
+$$
+|\sigma_1(\alpha)|\le4\varphi^2=:R,
+\qquad |\sigma_2(\alpha)|\le4\varphi(\varphi^n-1)=:T_n.
+$$
+
+For distinct algebraic integers their difference \(\gamma\ne0\) has positive
+integral norm
+\(N(\gamma)=|\sigma_1\gamma|^2|\sigma_2\gamma|^2\ge1\).
+Thus \(|\sigma_1\gamma|^2+|\sigma_2\gamma|^2\ge2\). In
+\(\mathbb C^2\simeq\mathbb R^4\), balls of radius \(1/2\) about distinct
+embedded endpoints are disjoint. They lie in the product of discs with
+radii \(R+1/2\) and \(T_n+1/2\).
+
+A radius-\(1/2\) four-ball has volume \(\pi^2/32\). Comparing volumes gives
+
+$$
+|A_n|\le32(R+1/2)^2(T_n+1/2)^2
+\le32(4\varphi^2+1/2)^2(4\varphi+1/2)^2\varphi^{2n}.
+$$
+
+The constant equals \(93890+41760\sqrt5\). This also holds at \(n=0\).
+Together with the lower bound it proves the theorem. For \(n\ge1\),
+
+$$
+2\log\varphi\le\frac{\log|A_n|}{n}
+\le2\log\varphi+\frac{\log C}{n},
+$$
+
+which proves the limit directly. Any other fixed initial carrier adds the
+common translate \(J^n\alpha_0\), leaving the cardinality unchanged.
+
+#### Scope
+
+This theorem counts the endpoints of the complete specified alphabet. It
+does not establish that every algebraic integer in a four-dimensional strip
+is reachable, that endpoints are equiprobable, or that their Shannon entropy
+has this rate. No probability law is introduced. A deterministic input word
+has one endpoint at each time, regardless of the size of the controlled
+family. Whether a port of the native update supplies every word in \(D^n\)
+is a separate question.
+
+The exponent comes from area expansion by \(\varphi^2\) in one complex
+embedding, together with the finite covering supplied by the chosen digits.
+Its numerical agreement with the toral value \(2\log\varphi\) is not an
+entropy transport or a source-completeness theorem. The negative
+ENTROPY-LAYER-BRIDGE remains unchanged. No physical entropy, decoder,
+apparatus, preparation, event, occurrence, memory/reset mechanism or
+L1-to-L6 lift is adopted.
+
+
 
 ## 5. The force is the curvature
 
