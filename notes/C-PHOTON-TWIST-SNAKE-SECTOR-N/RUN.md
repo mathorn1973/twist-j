@@ -23,7 +23,7 @@ values are those recorded in the issue:
 ## Environment and commands
 
 - Start: 2026-09-28T08:43:21Z. Controller end: 2026-09-28T10:22:15Z. Analysis end: 2026-09-28T10:22:25Z.
-- Platform: Linux; architecture: x86_64; four processors.
+- Platform: Linux; architecture: x86_64; four workers.
 - Compiler: GCC 13.3.0, Ubuntu 24.04 package. Python: 3.11.15.
 - Four concurrent jobs; 600-second audit and 2400-second per-job deadlines.
 - No fast-math, external numerical library or adaptive tuning.
@@ -61,13 +61,13 @@ stderr, each with its full frozen schedule and block records; every
 printed sweep total matched the schedule formula and every restricted
 chain stayed in its class. The longest job (L=10, k=1, class-minus
 chain 1) took 896.994 s. At L=10 the ten unconstrained round-trip jobs
-took 824 s to 848 s, the eight restricted up-only jobs 893 s to 897 s,
-the four restricted top-dwell jobs 165 s to 167 s and the eight step-zero
+took 824 s to 848 s, the eight restricted up-only jobs 868 s to 897 s,
+the four restricted top-dwell jobs 165 s to 168 s and the eight step-zero
 jobs 119 s to 124 s; at L=8 the corresponding ranges were 217-229 s,
-248-260 s, 66-68 s and 48-52 s; the L=6 jobs took 15 s to 68 s and the
+243-260 s, 66-69 s and 48-52 s; the L=6 jobs took 15 s to 68 s and the
 L=4 jobs 3 s to 8 s, including the sixteen control jobs at 41-43 s and
-4.5-5 s. The declared jobs used 23554 CPU-seconds in 99 minutes of wall
-time. No timeout, retry, extension or post-observation change occurred.
+4.5-5 s. The elapsed job times of the 136 jobs sum to 23554 s; the
+controller ran for 99 minutes of wall time on four workers. No timeout, retry, extension or post-observation change occurred.
 Exact per-job byte counts, hashes, durations and process outcomes are in
 `ENGINEERING/execution.json` (42470 bytes, SHA-256
 `3cfc36699a2421b55581aa5652757afbeab02c8c91732040819b1c52f2316e1c`).
