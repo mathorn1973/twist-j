@@ -1,0 +1,20 @@
+{
+  "analysis_timeout_seconds": 180,
+  "architecture": "aarch64",
+  "audit_timeout_seconds": 180,
+  "binary_sha256": "538cd406bb2ed8c5d22d70cad719d0dc6b9684e80b76318967ddafb8ee025c35",
+  "finished_utc": "2026-09-28T07:15:01.208181+00:00",
+  "per_chain_timeout_seconds": 900,
+  "python": "3.12.3",
+  "source_sha256": {
+    "analyze.py": "02d39902b3ed93c02c8e22de6e977e7bc5955c1166b364da622813182cacbf83",
+    "run_pilot.py": "3dbe211fdf85a221f6900d6a7b20f17bcfb4e1ca39633410f242ad86d8e89251",
+    "sample.cpp": "f629b60e71079b8e14623a1cadd9b7aaac303fb72e859679bba7a82eb08f43a3",
+    "test_analyze.py": "f2df50713d330eb60884feac6f4778965e37e84c9bd789a136163958eb2b7ec0"
+  },
+  "started_utc": "2026-09-28T07:14:58.403420+00:00",
+  "status": "NON-CANONICAL engineering only; ZERO scientific evidential weight",
+  "system": "Linux",
+  "test_timeout_seconds": 60,
+  "workers": 8
+}
