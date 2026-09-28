@@ -1,0 +1,105 @@
+{
+  "environment": {
+    "architecture": "x86_64",
+    "deterministic": {
+      "LC_ALL": "C.UTF-8",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONHASHSEED": "0",
+      "TZ": "UTC"
+    },
+    "platform": "Linux",
+    "python": "3.12.14"
+  },
+  "finished_utc": "2026-09-28T13:42:10Z",
+  "frozen": {
+    "ANALYTICAL_REVIEW.md": {
+      "bytes": 9540,
+      "sha256": "f264535c6b7c5fc7dc6b6352950ec28d2502a2cbc00c34a038d6e8c5a6b40cc0"
+    },
+    "AUDIT_SPEC.md": {
+      "bytes": 4733,
+      "sha256": "5fd54716e53699c67b3b04a32d80b4f64e88783be08dd934f108783d4c283ae8"
+    },
+    "INPUTS.json": {
+      "bytes": 8249,
+      "sha256": "cf22524c31cdd0d6e46a97c9b236863f0a761c7506dc23a538311c5435fe8859"
+    },
+    "LOCALIZATION_SPEC.md": {
+      "bytes": 7332,
+      "sha256": "9638da24e625c956f7724e89ba3f9773138082f28536b705f68b3e188ade21c9"
+    },
+    "PREREG.md": {
+      "bytes": 6647,
+      "sha256": "43676149f78b86f44c5d1eb36b81a7758f4fd9f1589a3306ccabbb9d2916533f"
+    },
+    "PROOF.md": {
+      "bytes": 12167,
+      "sha256": "800f7aa4f9cca4e81d74e13e0d1edf60a2257fcae6e9a2943335e233034f358a"
+    },
+    "audit.py": {
+      "bytes": 13027,
+      "sha256": "fbd40a3a1f1bfe60f0df5daa9b9a861d9f091bd33aa268c2512854b401692759"
+    },
+    "localize.py": {
+      "bytes": 17729,
+      "sha256": "498b6a4d92e070bdd322debaf77822379a000b17fcfe22fb1a9b6dfc56599984"
+    },
+    "run_once.py": {
+      "bytes": 4694,
+      "sha256": "89325da4903c0edf5557e234daf77092f579f7e97087297a60b5fbc045ed1793"
+    }
+  },
+  "head_commit": "33cd67b43bdcb1a6508f87ab54b26caaaa84a688",
+  "pin_commit": "33cd67b43bdcb1a6508f87ab54b26caaaa84a688",
+  "scientific_scope": "candidate-C finite exact audit only; localization ZERO scientific evidential weight",
+  "started_utc": "2026-09-28T13:42:08Z",
+  "status": "COMPLETE",
+  "tasks": [
+    {
+      "command": [
+        "python3",
+        "notes/C-PHOTON-RESTRICTED-REACHABILITY-N/audit.py"
+      ],
+      "elapsed_seconds": 1.5896364719992562,
+      "exit_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1070,
+        "sha256": "86d1b927b6b10f65454f545f2b1712e1cd94d548e53c5c494ff2eb871327e6c8"
+      },
+      "success": true,
+      "task": "audit",
+      "timed_out": false,
+      "timeout_seconds": 45
+    },
+    {
+      "command": [
+        "python3",
+        "notes/C-PHOTON-RESTRICTED-REACHABILITY-N/localize.py",
+        "--repo",
+        ".",
+        "--inputs",
+        "notes/C-PHOTON-RESTRICTED-REACHABILITY-N/INPUTS.json",
+        "--output",
+        "notes/C-PHOTON-RESTRICTED-REACHABILITY-N/ENGINEERING/localization"
+      ],
+      "elapsed_seconds": 0.45063961100095185,
+      "exit_code": 0,
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 71,
+        "sha256": "6cb5adcb0af2d8bedc24b8cbf5220967bcf5006a19106044b58ae34d7e357b86"
+      },
+      "success": true,
+      "task": "localization",
+      "timed_out": false,
+      "timeout_seconds": 120
+    }
+  ]
+}
