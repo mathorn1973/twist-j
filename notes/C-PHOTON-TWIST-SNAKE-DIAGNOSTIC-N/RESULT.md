@@ -40,9 +40,9 @@ off. Labels are those of the frozen precedence before the control taint.
 |---|---|---|---|---|---|
 | 4 | 1 | -0.480 (0.052) | +0.7589 (0.0047) | none | GATES_PASSED |
 | 4 | 2 | -1.793 (0.220) | +0.652 (2.545) | G3 chain 4 (mean Y), G7 (mean Y), G9 chain 4 | INCONCLUSIVE_EQUILIBRATION |
-| 6 | 1 | -0.489 (0.078) | +0.7554 (0.0114) | G3 chain 3 (mean Y), G9 chain 3 (pure w=0) | INCONCLUSIVE_EQUILIBRATION |
+| 6 | 1 | -0.489 (0.078) | +0.7554 (0.0115) | G3 chain 3 (mean Y), G9 chain 3 (pure w=0) | INCONCLUSIVE_EQUILIBRATION |
 | 6 | 2 | -1.600 (1.339) | +0.754 (3.015) | G3 all chains (mean Y) and chain 4 (log R), G7 both, G9 all chains | INCONCLUSIVE_EQUILIBRATION |
-| 8 | 1 | -0.487 (0.104) | +0.7541 (0.0051) | none | GATES_PASSED |
+| 8 | 1 | -0.487 (0.105) | +0.7541 (0.0051) | none | GATES_PASSED |
 | 8 | 2 | -0.086 (7.482) | +0.754 (3.013) | G3 all chains (log R and mean Y), G7 both | INCONCLUSIVE_EQUILIBRATION |
 | 10 | 1 | -0.443 (0.135) | +0.7544 (0.0057) | none | GATES_PASSED |
 | 10 | 2 | +0.234 (7.602) | +0.754 (3.015) | G3 all chains (log R and mean Y), G7 (mean Y) | INCONCLUSIVE_EQUILIBRATION |
@@ -89,17 +89,20 @@ five chains) and label changes per chain:
 | L | k=1 pure w=0 | k=1 changes per chain | k=2 pure w=0 / pure w=-1 | k=2 changes per chain |
 |---|---|---|---|---|
 | 4 | 0.590 | about 6500 | 0.400 / 0.097 | about 6500 |
-| 6 | 0.067 | 1700 to 2100 | 0.049 / 0.009 | 1400 to 1900 |
+| 6 | 0.067 | 1702 to 2081 | 0.049 / 0.009 | 1376 to 1883 |
 | 8 | 0.000 | 2 to 8 | 0.000 / 0.000 | 2 to 8 |
 | 10 | 0.000 | 0 | 0.000 / 0.000 | 0 |
 
-At L=8 and L=10 no chain of either mode attained a pure layout at any
-sweep of its twisted dwell, so the pure-layout occupancies compared by
-G9 were all zero and G9 could not fire there; the chain-4 separation at
-those sizes was recorded by G3 instead. The pooled fraction of twisted
+At L=10 no chain of either mode attained a pure layout at any sweep of
+its twisted dwell, and at L=8 each chain attained one in at most four of
+its 16384 dwell sweeps, so the pure-layout occupancies compared by G9
+were zero or below 0.0003 and G9 could not fire there; the chain-4
+separation at those sizes was recorded by G3 instead. The pooled fraction of twisted
 slices with w=-1 at the twisted dwell for k=2 was 0.24, 0.22, 0.23 and
-0.24 at L=4, 6, 8 and 10, of which chain 4 supplies its whole share at
-L=6, 8 and 10. Because no down pass of chain 2 or chain 4 stayed pure,
+0.24 at L=4, 6, 8 and 10. At L=6, 8 and 10 the twisted slices of chain
+4 carried w=-1 in 0.91, 0.87 and 0.81 of their slice-sweeps against
+about 0.05 to 0.10 for each other chain, so chain 4 supplies about 81,
+74 and 66 percent of the pooled fraction there. Because no down pass of chain 2 or chain 4 stayed pure,
 the sector-conditional descriptive was not formed at any size.
 
 ## Disposition under the frozen rules
