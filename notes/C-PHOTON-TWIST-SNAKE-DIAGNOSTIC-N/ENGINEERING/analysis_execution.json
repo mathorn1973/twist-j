@@ -1,0 +1,11 @@
+{
+  "analyzer": "analyze.py",
+  "analyzer_sha256": "051de89c121b1f4eb8fbdd3e52f8e138a4e3deae9fbdfc103cf798bf5bfc128c",
+  "python": "3.11.15",
+  "exit_code": 0,
+  "seconds": 4.313,
+  "stdout_bytes": 639195,
+  "stderr_bytes": 0,
+  "stdout_sha256": "144456b0897bf0d40a0982d89620b412d7e863a16cc18f904956f5f64ae61c43",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,11 @@
+NON-CANONICAL floating-point engineering audit
+geometries	4
+fixture_states	64
+estimator_identities	384
+local_enumerations	96
+invariance_checks	384
+inversion_checks	42
+exercise_sweeps	160
+schedule_rows	320
+mutations_caught	192
+result	PASS
