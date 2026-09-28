@@ -7,8 +7,8 @@ AUTHORITY:      mathorn1973/twist-j main
 CUTOVER:        2026-08-21
 TAG:            canon-v93
 CONTENT_COMMIT: 8690e4b62f19efa20ab6d24c7834c949dd97a8a9
-CANON_SHA256:   59ce4bea4df278ba38c3572d4ff08d859f22fb96a284eed9af030c2f97e0ee83
-CANON_BYTES:    801253
+CANON_SHA256:   56ded31481cae9cd1e5e7bae5a9d690de8c3ee0736f1cac8f53b1dcce7440449
+CANON_BYTES:    801444
 ```
 
 Public Canon v93 is the normative public ledger of TWIST-J. Authority begins
