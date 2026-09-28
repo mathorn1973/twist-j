@@ -1,0 +1,41 @@
+test_batch_ratio_uses_joint_residual_and_all_observations (__main__.AnalyzerTests.test_batch_ratio_uses_joint_residual_and_all_observations) ... ok
+test_between_chain_dispersion_is_not_batch_error (__main__.AnalyzerTests.test_between_chain_dispersion_is_not_batch_error) ... ok
+test_complete_synthetic_transport_fixture (__main__.AnalyzerTests.test_complete_synthetic_transport_fixture) ... ERROR
+test_control_shift_after_mobility (__main__.AnalyzerTests.test_control_shift_after_mobility) ... ok
+test_missing_declared_chain_is_implementation_failure (__main__.AnalyzerTests.test_missing_declared_chain_is_implementation_failure) ... ok
+test_mobility_precedes_exact_identity (__main__.AnalyzerTests.test_mobility_precedes_exact_identity) ... ok
+test_nonfinite_record (__main__.AnalyzerTests.test_nonfinite_record) ... ok
+test_separated_chain_cannot_inflate_its_agreement_error (__main__.AnalyzerTests.test_separated_chain_cannot_inflate_its_agreement_error) ... ok
+test_sign_split_mismatch (__main__.AnalyzerTests.test_sign_split_mismatch) ... ok
+test_wrong_custody_hash (__main__.AnalyzerTests.test_wrong_custody_hash) ... ok
+test_wrong_seed (__main__.AnalyzerTests.test_wrong_seed) ... ok
+test_zero_winding_error_is_not_forced_branch_occupation (__main__.AnalyzerTests.test_zero_winding_error_is_not_forced_branch_occupation) ... ok
+
+======================================================================
+ERROR: test_complete_synthetic_transport_fixture (__main__.AnalyzerTests.test_complete_synthetic_transport_fixture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/twistj-cut-tempering/notes/C-PHOTON-CUT-TEMPERING-TRANSPORT-N/test_analyze.py", line 141, in test_complete_synthetic_transport_fixture
+    inspect(result)
+  File "/tmp/twistj-cut-tempering/notes/C-PHOTON-CUT-TEMPERING-TRANSPORT-N/test_analyze.py", line 137, in inspect
+    inspect(child)
+  File "/tmp/twistj-cut-tempering/notes/C-PHOTON-CUT-TEMPERING-TRANSPORT-N/test_analyze.py", line 140, in inspect
+    inspect(child)
+  File "/tmp/twistj-cut-tempering/notes/C-PHOTON-CUT-TEMPERING-TRANSPORT-N/test_analyze.py", line 137, in inspect
+    inspect(child)
+  File "/tmp/twistj-cut-tempering/notes/C-PHOTON-CUT-TEMPERING-TRANSPORT-N/test_analyze.py", line 140, in inspect
+    inspect(child)
+  File "/tmp/twistj-cut-tempering/notes/C-PHOTON-CUT-TEMPERING-TRANSPORT-N/test_analyze.py", line 137, in inspect
+    inspect(child)
+  File "/tmp/twistj-cut-tempering/notes/C-PHOTON-CUT-TEMPERING-TRANSPORT-N/test_analyze.py", line 135, in inspect
+    self.assertTrue(all("interval" not in key.lower() for key in value))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/twistj-cut-tempering/notes/C-PHOTON-CUT-TEMPERING-TRANSPORT-N/test_analyze.py", line 135, in <genexpr>
+    self.assertTrue(all("interval" not in key.lower() for key in value))
+                                          ^^^^^^^^^
+AttributeError: 'int' object has no attribute 'lower'
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.681s
+
+FAILED (errors=1)
