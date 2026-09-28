@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 111/111 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 114/114 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -600,3 +600,5 @@ finite-measure photon proof has inline evidence, not a manufactured probe
 record. No local floor is treated as a positive P1 contrast or physical
 photon. Expected output is the preserved historical transcript plus the
 four authored boundary checks, not an output regenerated to hide failures.
+
+Public Canon v93 adds a reversible v93-to-v92 input reconstruction and three boundary checks for the five L1 theorems from P-ZETA5-RESIDUE-STRIP-DECODER-2. The historical v92 and earlier guards consume reconstructed prior bytes; no prior scope is reinterpreted.

@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v91, v90, v89, v88, v87, v86 and v85; current boundary: v92
+historical guards: exact reconstructed v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v93
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -114,4 +114,8 @@ PASS 109 V92-EXACT-THEOREMS three finite theorem rows retain exact scopes, evide
 PASS 110 V92-METRO-ADOPTION ENC4 common-k blocking and initialized MSD augmentation are adopted with exact transport; the original parent decision clause and completeness debt remain
 PASS 111 V92-OPEN-BOUNDARY 465 claims and 25 live owners preserve every prior status and decision clause; local photon floors do not close P1 or any physical bridge
 
-RESULT 111/111 ALL PASS
+PASS 112 V93-PRIOR-BYTES thirteen exact v93 inputs reconstruct public v92 before all 111 historical guards
+PASS 113 V93-FIVE-THEOREMS five L1 theorem rows retain exact scopes, probe evidence, declarations and dependency edges
+PASS 114 V93-BOUNDARY 470 claims and 25 live owners preserve every v92 row and gate; no 25-port factorization or physical lift is promoted
+
+RESULT 114/114 ALL PASS
