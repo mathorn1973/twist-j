@@ -1,0 +1,9 @@
+{
+  "architecture": "x86_64",
+  "system": "Linux",
+  "python": "3.11.15",
+  "workers": 4,
+  "audit_timeout_seconds": 600,
+  "per_chain_timeout_seconds": 2400,
+  "binary_sha256": "72ec9f6cdd3107fda4cac98d95171c1d166f030b2777c7b23d6752a7002e8794"
+}
