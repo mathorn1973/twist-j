@@ -1,5 +1,35 @@
 # Canon changelog (public series)
 
+## Public Canon v93
+
+Accept five L1 theorems from the completed public probe
+P-ZETA5-RESIDUE-STRIP-DECODER-2. ZETA5-DEDEKIND-RESIDUE records the exact
+Dedekind residue, its real-subfield/quartic factorization, the quartic Gauss
+numerator and the two distinct denominator fives. J-UNIT-STRIP-NORMAL-FORM
+proves the oriented fundamental strip 1<=A/B<phi^4, its exact integer test,
+the ten-to-one ideal orbit count and the complete bounded-norm search box.
+J-SCALAR-CODE-CAPACITY-3125 gives the sharp value 941 only in the frozen
+globally injective integral U-to-J scalar-reader class. QDD-GALOIS-SUM-RATIO
+identifies the registered QDD denominator with 2(A+B), while the strip reads
+A/B. ZETA5-IDEAL-COUNT-LANDAU specializes the standard Landau theorem to
+degree four with exponent 3/5 and the exact residue coefficient.
+
+The two-architecture probe verifies the finite witnesses norm by norm through
+2500, including |B_940|=3110, |B_941|=3150, |B_1000|=3410,
+|B_2500|=8440, the wrong-width control 4300, A_K(10^6)=339775, 125 exact
+integer strip round trips and the complete 625-piston QDD bridge audit. These
+finite values audit the proofs and do not replace the universal derivations.
+
+No existing claim changes status or scope. No H/O owner closes and live H/O
+remains 25. The lexicographic scalar codebook is an existence witness only.
+No physical clock, decoder uniqueness, preferred codebook, Born law,
+apparatus, occurrence, measure, SI scale or L2-L6 lift is added. A possible
+25-element torsion-times-ramified factorization remains unregistered because
+cardinality alone supplies no carrier or equivariance.
+
+Registry grows from 465 to 470 with five T rows. Status totals become
+0 T-LOCK, 328 T, 59 D, 39 C, 2 H, 23 O and 19 F.
+
 ## Public Canon v92
 
 Accept three exact theorems without closing a principal physical obligation.
