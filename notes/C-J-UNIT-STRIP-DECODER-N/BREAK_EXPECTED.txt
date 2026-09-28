@@ -1,0 +1,5 @@
+NON-BLIND BREAKER; NON-CANONICAL incubation #1269
+PASS independent-factor count at every norm 1..1000
+PASS cumulative strip counts: 3110 at 940; 3150 at 941; 3410 at 1000
+PASS coefficient-bound attack: no norm<=941 reduced point on coordinate shell 10
+RESULT BREAKER PASS; no frozen finite falsifier found
