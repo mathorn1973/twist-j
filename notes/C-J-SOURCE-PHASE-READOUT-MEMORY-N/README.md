@@ -411,6 +411,16 @@ the stated bound follows. For any other fixed initial carrier, the reachable set
 
 This proof is independent of Haar measure or random source assumptions. It nevertheless uses the same geometric expansion `|sigma_2 J|^2=phi^2` that produces the public toral exponent `h`; the number is not an unrelated second appearance.
 
+### Follow-up: exact endpoint growth
+
+The completed public probe `P-J-ENDPOINT-GROWTH-1` proves the matching lower
+bound for the full alphabet used here, with `c=1` and `n_0=0`. Its complete
+proof also restates the upper bound. Public Canon v93 records this precise
+mathematical result as `J-ENDPOINT-GROWTH [T]`. This apparatus note remains
+NON-CANONICAL; its reader, source choice, archive and native-interface model
+are not promoted by that theorem. The original review and local verifier
+retain their original scopes.
+
 ### 8.1 Exact endpoint census
 
 The local verifier included here checks the exact census through length 4:
@@ -433,24 +443,27 @@ The supplied independent one-architecture review extended the same exact census:
 | 9 | 10,693,249 | 2.872 | 1.097 |
 | 10 | 29,816,617 | 2.788 | 1.065 |
 
-These finite values are consistent with, but do not prove, an asymptotic exponent equal to `h`.
+These finite values do not prove the asymptotic exponent. The separate all-n proof named above establishes that exponent at the full-alphabet scope.
 
 ### O-J-ENDPOINT-GROWTH-LOWER-BOUND
 
-**[O]** Prove or refute a matching lower bound, for example
+This was a note-local open question, not a normative Frontier row. It is
+answered by the complete covering and norm-packing proof in
+`probes/P-J-ENDPOINT-GROWTH-1/PROOF.md`, recorded by the v93 fold as
+`J-ENDPOINT-GROWTH [T]`: for every integer \(n\ge0\),
 
 \[
-\exists c>0,\ n_0\quad\forall n\ge n_0:\qquad
-|A_n|\ge c\varphi^{2n}.
-\]
-
-Such a theorem would imply
-
-\[
+\varphi^{2n}\le |A_n|\le(93890+41760\sqrt5)\varphi^{2n},
+\qquad
 \lim_{n\to\infty}\frac{\log|A_n|}{n}=2\log\varphi=h.
 \]
 
-A natural route is a lattice-filling theorem for the reachable set in a strip whose `sigma_1` width stays bounded while its `sigma_2` radius grows like `phi^n`. The census is evidence only; it is not a substitute for this lower bound.
+The lower bound uses the actual covering \(\beta P\subseteq\sigma(D)+P\)
+and area, not a conjectured positive density of reachable lattice points.
+The finite census remains an audit rather than a proof of the exponent.
+All words in the stated digit alphabet must be admitted. No endpoint
+probability law, Shannon entropy equality, native-source completeness or
+physical entropy follows, and no normative H/O owner is closed.
 
 ## 9. Information interpretation under an additional random-source model
 
@@ -570,8 +583,8 @@ The mathematical core has Canon potential, but promotion should not precede the 
 1. retain Theorem A as a self-contained integral decoding theorem;
 2. retain the coherent phase-reader construction and corrected register semantics;
 3. retain Theorem C only as the proved upper bound;
-4. keep `O-J-ENDPOINT-GROWTH-LOWER-BOUND` open until a matching lower bound is proved;
-5. obtain an actual public pin and a second-architecture replay;
-6. only then decide whether the result belongs as a Canon mathematical theorem or remains an apparatus construction under `notes/`.
+4. record the completed lower-bound proof from `P-J-ENDPOINT-GROWTH-1` and its precise endpoint-count scope, promoted separately as `J-ENDPOINT-GROWTH [T]` in Public Canon v93;
+5. use the actual public pin and required two-architecture replay of `P-J-ENDPOINT-GROWTH-1` for that endpoint result; the other apparatus claims still require their own promotion review;
+6. retain the remaining apparatus construction under `notes/` until each additional proposed claim has its own completed evidence and review.
 
 No physical claim should be promoted merely because the exact finite apparatus is reversible.

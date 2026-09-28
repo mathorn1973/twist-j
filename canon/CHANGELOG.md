@@ -1,5 +1,44 @@
 # Canon changelog (public series)
 
+## Public Canon v93
+
+Accept six L1 theorems: five from the completed public probe
+P-ZETA5-RESIDUE-STRIP-DECODER-2 and the full-alphabet endpoint theorem
+from P-J-ENDPOINT-GROWTH-1. ZETA5-DEDEKIND-RESIDUE records the exact
+Dedekind residue, its real-subfield/quartic factorization, the quartic Gauss
+numerator and the two distinct denominator fives. J-UNIT-STRIP-NORMAL-FORM
+proves the oriented fundamental strip 1<=A/B<phi^4, its exact integer test,
+the ten-to-one ideal orbit count and the complete bounded-norm search box.
+J-SCALAR-CODE-CAPACITY-3125 gives the sharp value 941 only in the frozen
+globally injective integral U-to-J scalar-reader class. QDD-GALOIS-SUM-RATIO
+identifies the registered QDD denominator with 2(A+B), while the strip reads
+A/B. ZETA5-IDEAL-COUNT-LANDAU specializes the standard Landau theorem to
+degree four with exponent 3/5 and the exact residue coefficient.
+
+The two-architecture probe verifies the finite witnesses norm by norm through
+2500, including |B_940|=3110, |B_941|=3150, |B_1000|=3410,
+|B_2500|=8440, the wrong-width control 4300, A_K(10^6)=339775, 125 exact
+integer strip round trips and the complete 625-piston QDD bridge audit. These
+finite values audit the proofs and do not replace the universal derivations.
+
+J-ENDPOINT-GROWTH proves phi^(2n)<=|A_n|<=C*phi^(2n) for every n>=0,
+C=93890+41760*sqrt(5), and the exact endpoint-count exponent 2 log(phi)
+for D={u+v*zeta_5: u,v in {-2,-1,0,1,2}} with all words admitted.
+The complete inline proof uses a true planar covering for the lower bound
+and norm-separation volume packing for the upper bound. It introduces no
+endpoint law, Shannon equality, native-source completeness or physical
+entropy. The local lower-bound question was not a normative Frontier row.
+
+No existing claim changes status or scope. No H/O owner closes and live H/O
+remains 25. The lexicographic scalar codebook is an existence witness only.
+No physical clock, decoder uniqueness, preferred codebook, Born law,
+apparatus, occurrence, measure, SI scale or L2-L6 lift is added. A possible
+25-element torsion-times-ramified factorization remains unregistered because
+cardinality alone supplies no carrier or equivariance.
+
+Registry grows from 465 to 471 with six T rows. Status totals become
+0 T-LOCK, 329 T, 59 D, 39 C, 2 H, 23 O and 19 F.
+
 ## Public Canon v92
 
 Accept three exact theorems without closing a principal physical obligation.
@@ -193,7 +232,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 465 claims; 0 T-LOCK, 323 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
+Registry snapshot: 471 claims; 0 T-LOCK, 329 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 

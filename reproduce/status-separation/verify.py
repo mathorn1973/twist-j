@@ -361,10 +361,265 @@ V92_METRO_PARENT = {'claim_id': 'METRO-REDUCTION-CALCULUS',
               'terminal-value, or completeness obligation remains; METRO-REDUCTION-ARROWS closes '
               'only obligations A and C and leaves this row O and STOP'}
 
+
+V93_IDS = (
+    "ZETA5-DEDEKIND-RESIDUE",
+    "J-UNIT-STRIP-NORMAL-FORM",
+    "J-SCALAR-CODE-CAPACITY-3125",
+    "QDD-GALOIS-SUM-RATIO",
+    "ZETA5-IDEAL-COUNT-LANDAU",
+    "J-ENDPOINT-GROWTH",
+)
+V93_PROBE = "probes/P-ZETA5-RESIDUE-STRIP-DECODER-2"
+V93_PROBE_SHA256 = "20239d8cd8e105907d49436c210ac97ceb974f4b8089af45bad7908d0dc94af8"
+V93_ENDPOINT_PROBE = 'probes/P-J-ENDPOINT-GROWTH-1'
+V93_ENDPOINT_PROBE_SHA256 = '9c021adafae54f7642a73017360ed61cfd210f63be02070d909e3f93e64b1069'
+V93_ENDPOINT_PROOF_SHA256 = 'cbee5f3d3123e18791d71be223b4c6f4ee07560464b643f3940b6d698588898e'
+V93_ENDPOINT_PROOF_BYTES = 5998
+V93_SCOPE_SHA256 = {
+    "J-ENDPOINT-GROWTH": '5052191e35f857b68cf9ff09a70268f6f1dfef7cb16f167a1259a80f9c4a5446',
+    "ZETA5-DEDEKIND-RESIDUE": "b0817b9b817b207bb9ad7d81f943b548ed627b3db225304821d9e94e00264515",
+    "J-UNIT-STRIP-NORMAL-FORM": "93877b63b3eb47390e6de3fd68f789a6bbc09101a97fd6f09a16e906a12a6957",
+    "J-SCALAR-CODE-CAPACITY-3125": "31c425b484229da9f7f3609b0953586b5f9e610a831fd0e8f3685f37d02af7bd",
+    "QDD-GALOIS-SUM-RATIO": "147bf2f43371e6058dba7a4d5ddf1294a8227ae33fc44ab03411dbc2ef5b71c2",
+    "ZETA5-IDEAL-COUNT-LANDAU": "f99e5d91beff25351f2895c86c65448cd4bee051fb54e440c0e7cd1c69c35fe5",
+}
+V93_DEPENDENCIES = {
+    ("J-ENDPOINT-GROWTH", "J-PROJECTIONS", "REQUIRES"),
+    ("ZETA5-DEDEKIND-RESIDUE", "REGULATOR-TWO-LOG-PHI", "REQUIRES"),
+    ("ZETA5-DEDEKIND-RESIDUE", "CYCLOTOMIC-CLASS-NUMBER-ONE", "REQUIRES"),
+    ("ZETA5-DEDEKIND-RESIDUE", "J-HARMONIC-SEAM", "REQUIRES"),
+    ("J-UNIT-STRIP-NORMAL-FORM", "J-PROJECTIONS", "REQUIRES"),
+    ("J-UNIT-STRIP-NORMAL-FORM", "J-HARMONIC-SEAM", "REQUIRES"),
+    ("J-UNIT-STRIP-NORMAL-FORM", "CYCLOTOMIC-CLASS-NUMBER-ONE", "REQUIRES"),
+    ("J-SCALAR-CODE-CAPACITY-3125", "J-UNIT-STRIP-NORMAL-FORM", "REQUIRES"),
+    ("J-SCALAR-CODE-CAPACITY-3125", "U-COUNTER-REACHABLE-AMPLITUDE-CLASS", "REQUIRES"),
+    ("QDD-GALOIS-SUM-RATIO", "QDD-ALGEBRAIC-FACTORIZATION", "REQUIRES"),
+    ("QDD-GALOIS-SUM-RATIO", "J-UNIT-STRIP-NORMAL-FORM", "REQUIRES"),
+    ("ZETA5-IDEAL-COUNT-LANDAU", "ZETA5-DEDEKIND-RESIDUE", "REQUIRES"),
+}
+
+
+def v93_previous_bytes(path):
+    """Recover the exact public v92 input from the v93 candidate bytes."""
+    current = path.read_bytes()
+    name = path.name
+    text = current.decode("utf-8")
+
+    if name in {"REGISTRY.tsv", "NORMATIVE.tsv", "EVIDENCE.tsv"}:
+        lines = text.splitlines(keepends=True)
+        text = "".join(
+            line for line in lines
+            if line.split("\t", 1)[0] not in V93_IDS
+        )
+    elif name == "DEPENDENCIES.tsv":
+        lines = text.splitlines(keepends=True)
+        text = "".join(
+            line for line in lines
+            if line.split("\t", 1)[0] not in V93_IDS
+        )
+    elif name == "HISTORY.tsv":
+        lines = text.splitlines(keepends=True)
+        text = "".join(
+            line for line in lines
+            if not line.startswith("CANON93-DECLARE-")
+        )
+    elif name in {"GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv", "FRONTIER.md"}:
+        pass
+    elif name == "CANON.md":
+        start = text.find("\n\n### Residue, the J-unit strip, and scalar decoder capacity\n")
+        end = text.find("\n## 5.", start)
+        if start < 0 or end < 0:
+            return None
+        text = text[:start] + text[end:]
+        text = text.replace("# TWIST-J Public Canon v93", "# TWIST-J Public Canon v92", 1)
+        text = text.replace(
+            "**Release identity.** Public Canon v93.",
+            "**Release identity.** Public Canon v92.", 1)
+        text = text.replace(
+            "only. Public Canon v93 also declares the discrete architecture used to read",
+            "only. Public Canon v92 also declares the discrete architecture used to read", 1)
+    elif name == "CORE.md":
+        text = text.replace(
+            "**Release identity:** Public Canon v93.",
+            "**Release identity:** Public Canon v92.", 1)
+        text = text.replace(
+            "Public Canon v93 also declares a discrete architecture.",
+            "Public Canon v92 also declares a discrete architecture.", 1)
+    elif name == "CHANGELOG.md":
+        start = text.find("## Public Canon v93\n")
+        end = text.find("## Public Canon v92\n", start)
+        if start < 0 or end < 0:
+            return None
+        text = text[:start] + text[end:]
+        text = text.replace(
+            "Registry snapshot: 471 claims; 0 T-LOCK, 329 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.",
+            "Registry snapshot: 465 claims; 0 T-LOCK, 323 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.", 1)
+    elif name == "STATUS_COUNTS.tsv":
+        text = text.replace("claims\t471\n", "claims\t465\n", 1)
+        text = text.replace("status_T\t329\n", "status_T\t323\n", 1)
+        text = text.replace(
+            "evidence_two-architecture\t371\n",
+            "evidence_two-architecture\t365\n", 1)
+    else:
+        return None
+
+    previous = text.encode("utf-8")
+    patch = V92_INPUT_PATCH.get(name)
+    if patch is None:
+        return None
+    if (len(previous) != patch["current_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["current_sha256"]):
+        return None
+    return previous
+
+
+def v93_current_checks():
+    names = tuple(name for name in V92_INPUT_PATCH if name.endswith(".tsv"))
+    previous = {
+        name: v87_table_bytes(v93_previous_bytes(ROOT / "canon" / name))
+        for name in names
+    }
+    current = {
+        name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+        for name in names
+    }
+    old_index = {row["claim_id"]: row for row in previous["REGISTRY.tsv"]}
+    index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    history = current["HISTORY.tsv"]
+    prior_history = previous["HISTORY.tsv"]
+    events = history[len(prior_history):]
+    dependencies = current["DEPENDENCIES.tsv"]
+    incident = {
+        (row["item_id"], row["depends_on"], row["relation"])
+        for row in dependencies
+        if row["item_id"] in V93_IDS or row["depends_on"] in V93_IDS
+    }
+    counts = {
+        status: sum(row["status"] == status for row in index.values())
+        for status in {row["status"] for row in index.values()}
+    }
+    old_live = {
+        claim for claim, row in old_index.items()
+        if row["status"] in {"H", "O"}
+    }
+    live = {
+        claim for claim, row in index.items()
+        if row["status"] in {"H", "O"}
+    }
+    canon_text = CANON.read_text(encoding="utf-8")
+    frontier_current = (ROOT / "canon" / "FRONTIER.md").read_bytes()
+    frontier_previous = v93_previous_bytes(ROOT / "canon" / "FRONTIER.md")
+    unchanged_tables = ("GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv")
+
+    proof_start = canon_text.find("### J-ENDPOINT-GROWTH [T]\n")
+    proof_end = canon_text.find("\n\n## 5.", proof_start)
+    proof = (canon_text[proof_start:proof_end].encode("utf-8")
+             if proof_start >= 0 and proof_end > proof_start else b"")
+
+    return [
+        (
+            "V93-PRIOR-BYTES",
+            "thirteen exact v93 inputs reconstruct public v92 before all 111 historical guards",
+            len(V92_INPUT_PATCH) == 13
+            and all(
+                v93_previous_bytes(ROOT / "canon" / name) is not None
+                for name in V92_INPUT_PATCH
+            ),
+        ),
+        (
+            "V93-SIX-THEOREMS",
+            "six L1 theorem rows retain exact scopes, probe evidence, declarations and dependency edges",
+            set(index) == set(old_index) | set(V93_IDS)
+            and all(index[claim]["status"] == "T" for claim in V93_IDS)
+            and all(
+                hashlib.sha256(index[claim]["scope"].encode("utf-8")).hexdigest()
+                == V93_SCOPE_SHA256[claim]
+                for claim in V93_IDS
+            )
+            and all(
+                normative.get(claim) == {
+                    "item_id": claim,
+                    "item_type": "THEOREM",
+                    "claim_id": claim,
+                    "status": "T",
+                    "layer": "L1",
+                    "gate_ids": "",
+                    "statement_source": "canon/CANON.md::" + claim,
+                }
+                for claim in V93_IDS
+            )
+            and all(
+                evidence.get(claim) == {
+                    "claim_id": claim,
+                    "evidence_id": "EV-" + claim,
+                    "evidence_kind": "PUBLIC_PROBE",
+                    "location": (V93_ENDPOINT_PROBE if claim == "J-ENDPOINT-GROWTH" else V93_PROBE),
+                    "sha256": (V93_ENDPOINT_PROBE_SHA256 if claim == "J-ENDPOINT-GROWTH" else V93_PROBE_SHA256),
+                    "hash_mode": "bundle-manifest-sha256-v1",
+                    "architecture_requirement": "two-architecture",
+                }
+                for claim in V93_IDS
+            )
+            and v86_probe_bundle_sha256(V93_PROBE) == V93_PROBE_SHA256
+            and v86_probe_bundle_sha256(V93_ENDPOINT_PROBE) == V93_ENDPOINT_PROBE_SHA256
+            and incident == V93_DEPENDENCIES
+            and len(events) == 6
+            and all(
+                sum(
+                    event["claim_id"] == claim
+                    and event["event_type"] == "DECLARE"
+                    and event["previous_status"] == "-"
+                    and event["new_status"] == "T"
+                    and event["release"] == "canon-v93-candidate"
+                    and event["scope_sha256"] == V93_SCOPE_SHA256[claim]
+                    and event["evidence_sha256"] == (V93_ENDPOINT_PROBE_SHA256 if claim == "J-ENDPOINT-GROWTH" else V93_PROBE_SHA256)
+                    and event["evidence_location"] == (V93_ENDPOINT_PROBE if claim == "J-ENDPOINT-GROWTH" else V93_PROBE)
+                    for event in events
+                ) == 1
+                for claim in V93_IDS
+            )
+            and all("### " + claim + " [T]" in canon_text for claim in V93_IDS),
+        ),
+        (
+            "V93-BOUNDARY",
+            "471 claims and 25 live owners preserve every v92 row and gate; no 25-port factorization or physical lift is promoted",
+            len(index) == 471
+            and counts == {"T": 329, "D": 59, "C": 39, "H": 2, "O": 23, "F": 19}
+            and live == old_live
+            and len(live) == 25
+            and all(index.get(claim) == row for claim, row in old_index.items())
+            and history[:len(prior_history)] == prior_history
+            and all(
+                current[name] == previous[name]
+                for name in unchanged_tables
+            )
+            and frontier_current == frontier_previous
+            and "PORT25-TORSION-RAMIFIED-FACTOR" not in index
+            and "No concrete 25-element carrier" in canon_text,
+        ),
+        (
+            "V93-ENDPOINT-SCOPE",
+            "the complete all-n covering and packing proof is pinned at L1; full-alphabet cardinality supplies no Shannon law, native completeness or physical lift",
+            len(proof) == V93_ENDPOINT_PROOF_BYTES
+            and hashlib.sha256(proof).hexdigest() == V93_ENDPOINT_PROOF_SHA256
+            and normative["J-ENDPOINT-GROWTH"]["layer"] == "L1"
+            and not normative["J-ENDPOINT-GROWTH"]["gate_ids"]
+            and all(row["owner_item_id"] != "J-ENDPOINT-GROWTH" for row in current["GATES.tsv"])
+            and index["ENTROPY-LAYER-BRIDGE"] == old_index["ENTROPY-LAYER-BRIDGE"]
+            and index["ENTROPY-LAYER-BRIDGE"]["status"] == "F",
+        ),
+    ]
+
+
 def v92_previous_bytes(path):
     """Check exact candidate bytes before reconstructing every v91 audit input."""
     patch = V92_INPUT_PATCH[path.name]
-    current = path.read_bytes()
+    current = v93_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -384,7 +639,7 @@ def v92_current_checks():
     names = tuple(name for name in V92_INPUT_PATCH if name.endswith(".tsv"))
     previous = {name: v87_table_bytes(v92_previous_bytes(ROOT / "canon" / name))
                 for name in names}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v93_previous_bytes(ROOT / "canon" / name))
                for name in names}
     old_index = {r["claim_id"]: r for r in previous["REGISTRY.tsv"]}
     index = {r["claim_id"]: r for r in current["REGISTRY.tsv"]}
@@ -399,7 +654,7 @@ def v92_current_checks():
     history = current["HISTORY.tsv"]
     prior_history = previous["HISTORY.tsv"]
     events = history[len(prior_history):]
-    canon_text = CANON.read_text(encoding="utf-8")
+    canon_text = (v93_previous_bytes(CANON) or b"").decode("utf-8")
     return [
         ("V92-PRIOR-BYTES",
          "thirteen exact current inputs reconstruct public v91 before all 107 unchanged historical guards",
@@ -13344,9 +13599,10 @@ def run():
     checks.extend(v90_current_checks())
     checks.extend(v91_current_checks())
     checks.extend(v92_current_checks())
+    checks.extend(v93_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v91, v90, v89, v88, v87, v86 and v85; current boundary: v92")
+    print("historical guards: exact reconstructed v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v93")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0
