@@ -36,6 +36,17 @@ python3 tools/check_policy.py
 Do not edit `canon/` files to make a checker pass; a failing check means the
 proposed change is wrong or requires the procedure in `AGENTS.md`.
 
+`tools/check_activation.py` belongs to the release procedure rather than to the
+routine checks above, and CI runs it only on tag and release events. It also
+reads git history: it tests with `merge-base` that every reproduction record's
+candidate and run base are ancestors of `HEAD`. A shallow clone has no such
+history, so the tool reports every record as unrelated and exits `1` on ancestry
+blockers that say nothing about the tree. Run it from a full clone, or run
+`git fetch --unshallow` first; `.github/workflows/policy.yml` checks out with
+`fetch-depth: 0`. On a branch that adds commits above the declared
+`CONTENT_COMMIT` it reports the release-delta blockers by design, because the
+active release delta is exactly `STATUS.md`, `README.md`, and `CITATION.cff`.
+
 ## Working rules
 
 - Do not commit directly to `main`; use a branch and open a pull request.
