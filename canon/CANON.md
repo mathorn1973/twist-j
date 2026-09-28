@@ -10093,8 +10093,14 @@ S = sum_(a=1)^4 conjugate(kappa(a)) a = -3+i,
 |L(1,kappa)|^2 = 2 pi^2/25.
 ```
 
-The relative class-number bookkeeping separates the denominator `25` into
-two different arithmetic factors, `sqrt(125/5)=5` and `10/2=5`.
+The relative class-number bookkeeping is exactly
+
+```text
+(R_K/R_k) * ((2 pi)^2/2^2) / (sqrt(125/5) * (10/2)).
+```
+
+Thus the numerator factors are `R_K/R_k=2` and `(2 pi)^2/2^2=pi^2`, while
+the two denominator fives are separately `sqrt(125/5)=5` and `10/2=5`.
 The Gaussian factorization `-3+i=(1+i)(-1+2i)` is an exact witness only; it
 is not used as a derivation of the number of roots of unity.
 
@@ -10172,10 +10178,11 @@ On every supported source,
 s^2/[4(5Q-s^2)] = s^2/[8(A+B)].
 ```
 
-Thus the registered QDD arithmetic uses the symmetric sum `A+B`, while the
-J-unit strip uses the positive ratio `A/B`. This is an L1 identity, not a
-physical apparatus, occurrence law, Born sampling, decoder-uniqueness or
-completeness theorem.
+Thus the registered QDD denominator is the symmetric sum `A+B`, while the
+complete incidence ratio still also carries its numerator `s^2`; the J-unit
+strip uses the positive ratio `A/B`. This is an L1 identity, not a physical
+apparatus, occurrence law, Born sampling, decoder-uniqueness or completeness
+theorem.
 
 ### ZETA5-IDEAL-COUNT-LANDAU [T]
 
