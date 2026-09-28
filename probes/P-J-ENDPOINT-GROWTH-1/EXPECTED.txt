@@ -1,0 +1,9 @@
+cyclotomic_coordinate_identities PASS
+universal_cover_hypotheses PASS row_sums=phi,2+sqrt(5) determinant=phi^2
+cover_boundary_samples PASS coordinates=18
+endpoint_census n=0 count=1 exact_bounds=PASS
+endpoint_census n=1 count=25 exact_bounds=PASS
+endpoint_census n=2 count=625 exact_bounds=PASS
+endpoint_census n=3 count=5449 exact_bounds=PASS
+endpoint_census n=4 count=27233 exact_bounds=PASS
+RESULT PASS finite_audit_only all_n_claim_requires_written_proof
