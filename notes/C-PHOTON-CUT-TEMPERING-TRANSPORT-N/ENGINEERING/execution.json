@@ -1,0 +1,20 @@
+[
+  {
+    "exit_code": 0,
+    "seconds": 0.065,
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 59,
+    "stdout_sha256": "ca77c2a869d00235f493d8923abd08c64af61ac689c43eff1489023ae88840fc",
+    "stem": "audit"
+  },
+  {
+    "exit_code": 1,
+    "seconds": 2.739,
+    "stderr_bytes": 3130,
+    "stderr_sha256": "5e3084d5e785f2830dad9f0562217bb42269929b7536f41bbd86feea2d5f91f2",
+    "stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stem": "analyzer_tests"
+  }
+]

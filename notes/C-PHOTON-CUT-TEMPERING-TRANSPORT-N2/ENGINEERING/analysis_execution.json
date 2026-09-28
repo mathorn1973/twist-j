@@ -1,0 +1,9 @@
+{
+  "exit_code": 0,
+  "seconds": 0.672,
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 703375,
+  "stdout_sha256": "caaf5031c7df41f3570f9ac8808c5166569f5718fd87b594b3049bf23576b3db",
+  "stem": "analysis"
+}
