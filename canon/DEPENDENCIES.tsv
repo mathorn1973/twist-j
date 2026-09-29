@@ -957,3 +957,26 @@ BELL-CAUSAL-ACCOUNTING	QDD-SELECTED-PAIR-LAW	REQUIRES	The complete selected Bell
 COUNTER-BELL-PRICE	QDD-SELECTED-PAIR-LAW	BOUNDED_BY	the numerical target table is fixed input for an independent finite comparison theorem; relaxing its latent comparison class does not modify the adopted physical pair law
 METRO-COMMON-BLOCKING	DEF-ARCHITECTURE	REQUIRES	the typed U_RF finite rational protocol carrier and pointwise L5 stream conventions are the declared mathematical architecture
 METRO-REDUCTION-CALCULUS	METRO-COMMON-BLOCKING	REQUIRES	the explicitly adopted ENC4 common-k fifth arrow and forbidden unconditional rule have exact transport proofs; the parent retains completeness and unclassified extensions
+ZETA5-DEDEKIND-RESIDUE	REGULATOR-TWO-LOG-PHI	REQUIRES	the exact rank-one regulator supplies R_K=2 log phi
+ZETA5-DEDEKIND-RESIDUE	CYCLOTOMIC-CLASS-NUMBER-ONE	REQUIRES	the exact class-number-one theorem supplies h_K=1 and the discriminant input
+ZETA5-DEDEKIND-RESIDUE	J-HARMONIC-SEAM	REQUIRES	the exact unit classification supplies the ten roots-of-unity factor used in the class-number formula
+J-UNIT-STRIP-NORMAL-FORM	J-PROJECTIONS	REQUIRES	the two Galois moduli of J give the exact phi^-4 ratio step
+J-UNIT-STRIP-NORMAL-FORM	J-HARMONIC-SEAM	REQUIRES	the unit group O_K^x=mu_10 x <phi> supplies the ten generator classes modulo <J>
+J-UNIT-STRIP-NORMAL-FORM	CYCLOTOMIC-CLASS-NUMBER-ONE	REQUIRES	class number one makes every nonzero integral ideal principal
+J-SCALAR-CODE-CAPACITY-3125	J-UNIT-STRIP-NORMAL-FORM	REQUIRES	the strip counts the available J orbits under a uniform norm bound
+J-SCALAR-CODE-CAPACITY-3125	U-COUNTER-REACHABLE-AMPLITUDE-CLASS	REQUIRES	the public reachable-reader classification supplies the 3125 conserved labels and U-to-target form
+QDD-GALOIS-SUM-RATIO	QDD-ALGEBRAIC-FACTORIZATION	REQUIRES	the registered Route A cyclotomic write fixes alpha=iota_B0(v) on the balanced piston source
+QDD-GALOIS-SUM-RATIO	J-UNIT-STRIP-NORMAL-FORM	REQUIRES	the complementary ratio reading uses the same two positive Galois magnitudes A and B
+ZETA5-IDEAL-COUNT-LANDAU	ZETA5-DEDEKIND-RESIDUE	REQUIRES	the Landau leading coefficient is the exact Dedekind residue
+J-ENDPOINT-GROWTH	J-PROJECTIONS	REQUIRES	the exact cyclotomic J carrier and its principal modulus supply the contracting embedding; the expanding conjugate and both universal bounds are proved inline
+J-TWO-TRACE-RESIDUE-INVERSE	J-UNIT-STRIP-NORMAL-FORM	REQUIRES	the oriented half-open strip and exact J-unit action normalize every bounded-norm nonzero scalar
+J-TWO-TRACE-RESIDUE-INVERSE	J-PROJECTIONS	REQUIRES	the ordered squared Galois moduli give the two-trace linear inverse and pure-J recurrence
+J-TWO-TRACE-RESIDUE-INVERSE	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	exact scalar inversion supplies no physical acquisition of unbounded traces or residue, apparatus or renewal
+J-OBSERVED-SCALAR-CODE-CAPACITY	J-TWO-TRACE-RESIDUE-INVERSE	REQUIRES	normalization of equal readings and exact norm-941 coefficient box reduce the observed capacity to a complete finite strip census
+J-OBSERVED-SCALAR-CODE-CAPACITY	U-COUNTER-REACHABLE-AMPLITUDE-CLASS	REQUIRES	all 3125 conserved labels occur at every sheet n>=3 and every equivariant reader has the stipulated codebook form
+J-OBSERVED-SCALAR-CODE-CAPACITY	J-SCALAR-CODE-CAPACITY-3125	REQUIRES	the inherited norm-941 scalar alphabet is the frozen capacity budget, with no physical codebook selected
+U-NORMALIZED-SCALAR-READBACK	J-TWO-TRACE-RESIDUE-INVERSE	REQUIRES	the exact inverse returns the chosen normalized codeword and integer exponent with image recognition
+U-NORMALIZED-SCALAR-READBACK	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	the reachable-sheet chart is a bijection with an explicit inverse and retains the original-head merger boundary
+U-NORMALIZED-SCALAR-READBACK	U-COUNTER-REACHABLE-AMPLITUDE-CLASS	REQUIRES	the normalized chosen codebook instantiates the classified pure-J equivariant reader
+U-NORMALIZED-SCALAR-READBACK	J-SCALAR-CODE-CAPACITY-3125	REQUIRES	the complete strip contains enough elements for the explicitly chosen 3125-label injection
+U-NORMALIZED-SCALAR-READBACK	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the mathematical codebook inverse does not derive codebook selection, preparation, source capture or physical measurement

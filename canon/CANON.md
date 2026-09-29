@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v92
+# TWIST-J Public Canon v94
 
-**Release identity.** Public Canon v92. Normative authority and activation
+**Release identity.** Public Canon v94. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v92 also declares the discrete architecture used to read
+only. Public Canon v94 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -23,7 +23,7 @@ calibration anchor remains the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v91 does not claim
+seed of the two algebraic projections. Public Canon v94 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -128,7 +128,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v91 contains no such
+deriving the architecture from J; Public Canon v94 contains no such
 theorem.
 
 ---
@@ -1750,6 +1750,36 @@ cross-layer lift remains owned by its public gate. Missing or `UNRESOLVED`
 fields leave all owning claims unchanged. The contract neither opens nor
 authorizes a verifier or probe.
 
+#### Decoder input and dependency accounting
+
+The completion manifest distinguishes supplied data, selected conventions,
+derived fields and physical premises. A resolvable identifier is not another
+independent numerical input. The following accounting preserves the existing
+domains and owners:
+
+| Interface | Supplied data or fixed choice | Derived content |
+| --- | --- | --- |
+| Exact norm-bounded scalar | Two exact pure-J traces and the full residue modulo 25, on the domain of J-TWO-TRACE-RESIDUE-INVERSE | The scalar, ordered magnitudes, norm, normalized representative and integral orbit coordinate |
+| Selected normalized native code | The preceding D25 datum, a known injection of the 3125 labels into the declared J strip and target multiplication by J | U-NORMALIZED-SCALAR-READBACK recovers the current synchronized state; the codebook and its physical meaning are not selected by the inverse |
+| Balanced QDD head | The declared pointed head, balanced lift, basis, trace pairing and LOW line | The five fields of D_QDD_direct; its Gram/projector factorization is another calculation of these fields, not another source observation |
+| Selected passive QDD family | The source and the declared partition ID | All five views follow from the three atom weights; normalizations and coarsenings are derived |
+| Good common-ready native slice | A fixed known good ready, the full current checkpoint and its counter | The original piston and computable source-dependent histories, by U-NATIVE-COMMON-READY-SOURCE-RETENTION |
+| Selected physical measurement | The adopted ETH-QDD source, controls, instrument, occurrence, records and renewal contract | Its conditional physical predictions; scalar inversion does not supply these premises |
+
+Further pure-J traces are derived from the first two. A code scalar
+`G(ell_n(x))` is not identified with the original balanced QDD amplitude.
+The current synchronized state does not in general identify a pre-merger
+head. The existing three-state QDD and five-state full-head memory bounds,
+and their explicit restricted-preparation alternatives, remain unchanged.
+Regenerating a stipulated history does not supply a material archive.
+
+The scalar orbit coordinate is not an SI clock. The norm budget 941 and
+residue depth two belong to the stated all-sheet scalar observation class,
+which does not receive n separately. Definitions, codebook choices,
+preparation data and empirical calibration are distinct kinds of input;
+none is reclassified by counting manifest slots. The apparatus, occurrence,
+reset and physical-unit owners retain their registered obligations.
+
 ### Factor-canonicity audit overlay
 
 Within the same definition, a candidate may optionally submit a
@@ -2338,6 +2368,18 @@ DEF-QDD-FACTOR-MAP
     F_QDD : QCarrier_QDD -> MatterData_QDD by the displayed Gram/projector
     formulas on the transpose slot.
 ```
+
+**Balanced-coefficient readback.** On this declared head carrier, the
+residue `Amp_QDD mod 5O` already determines the four balanced coordinates:
+in each coordinate the residues `0,1,2,3,4` lift uniquely to `0,1,2,-2,-1`.
+Indeed the difference of two such coefficients lies in `[-4,4]`, whose only
+multiple of five is zero. This includes the zero source. The recovered
+coordinates determine every algebraic field of `R_cyc`; additional scalar
+traces and a modulo-25 residue are unnecessary for this particular input.
+This elementary inverse assumes the residue of the original head amplitude
+is supplied. It does not recover that amplitude from a late native state
+on a merged fibre, or apply the same coefficient bound after an arbitrary
+J shift. The larger scalar class below has a different observation contract.
 
 The adopted dictionary is exactly
 
@@ -10063,6 +10105,547 @@ The claim is scoped to `t in {1,2}`: trace does not select a number field
 for general `t` because `t=4` also has squarefree discriminant kernel 5.
 No run/record, time-arrow, force, or other physical reading is included in
 this theorem.
+
+
+### Residue, the J-unit strip, and scalar decoder capacity
+
+### ZETA5-DEDEKIND-RESIDUE [T]
+
+Let `K=Q(zeta_5)` and `k=Q(sqrt(5))`. With the registered exact invariants
+
+```text
+K: r1=0, r2=2, h=1, w=10, |d|=125, R=2 log(phi),
+k: r1=2, r2=0, h=1, w=2,  |d|=5,   R=log(phi),
+```
+
+the analytic class number formula gives
+
+```text
+Res_(s=1) zeta_K(s)
+  = 4 pi^2 log(phi)/(25 sqrt(5))
+  = (2 log(phi)/sqrt(5)) (2 pi^2/25).
+```
+
+For the primitive quartic character modulo five normalized by
+`kappa(2)=i`,
+
+```text
+S = sum_(a=1)^4 conjugate(kappa(a)) a = -3+i,
+|S|^2 = 10,
+|L(1,kappa)|^2 = 2 pi^2/25.
+```
+
+The relative class-number bookkeeping is exactly
+
+```text
+(R_K/R_k) * ((2 pi)^2/2^2) / (sqrt(125/5) * (10/2)).
+```
+
+Thus the numerator factors are `R_K/R_k=2` and `(2 pi)^2/2^2=pi^2`, while
+the two denominator fives are separately `sqrt(125/5)=5` and `10/2=5`.
+The Gaussian factorization `-3+i=(1+i)(-1+2i)` is an exact witness only; it
+is not used as a derivation of the number of roots of unity.
+
+### J-UNIT-STRIP-NORMAL-FORM [T]
+
+For nonzero `alpha in Z[zeta_5]` put
+`A=|sigma_1(alpha)|^2` and `B=|sigma_2(alpha)|^2`. Since
+`J=zeta_5/phi`,
+
+```text
+A(J alpha)/B(J alpha) = phi^-4 A(alpha)/B(alpha).
+```
+
+Therefore `1<=A/B<phi^4` contains exactly one representative of every
+`J^Z` orbit. If `alpha bar(alpha)=u+v phi`, then
+
+```text
+1 <= A/B < phi^4    iff    v >= 0 and u-v > 0.
+```
+
+Thus `n=-floor(log_(phi^4)(A/B))` is an algebraic orbit coordinate; its
+implementation needs only exact comparisons in `Q(sqrt(5))`.
+
+The public unit and class-number theorems give
+`O_K^x=mu_10 x <phi>` and `h_K=1`. Since `J=zeta_5 phi^-1`, quotienting
+the generator torsor of each nonzero integral ideal by `<J>` leaves exactly
+ten classes. Hence, for every `X>=1`,
+
+```text
+|B_X| = 10 A_K(X).
+```
+
+The written proof supplies a complete coefficient box. The two-architecture
+audit agrees norm by norm through 2500; at X=2500 the correct strip has 8440
+elements, while the deliberately wrong half-width `1<=A/B<phi^2` has 4300.
+The root-of-unity factor is invisible to `(A,B)`; the modulus strip alone
+does not recover torsion phase.
+
+### J-SCALAR-CODE-CAPACITY-3125 [T]
+
+U-COUNTER-REACHABLE-AMPLITUDE-CLASS [T] gives
+`R(n,x)=L^n G(ell_n(x))` with 3125 conserved labels. In the frozen class
+where `L(alpha)=J alpha`, scalars are nonzero integral, the reader is
+globally injective across all reachable sheets `n>=3`, and one algebraic
+norm bound X is required, distinct labels must occupy distinct J orbits.
+Therefore
+
+```text
+X_min = min { X : |B_X| >= 3125 }.
+```
+
+The formal two-architecture probe gives `|B_940|=3110` and
+`|B_941|=3150`, so `X_min=941`. An explicit lexicographic injection
+attains the bound. This is a capacity theorem for the declared scalar-reader
+class, not a physical constant or a selected codebook.
+
+### J-TWO-TRACE-RESIDUE-INVERSE [T]
+
+At L1 let `O=Z[zeta_5]`, with ordered coefficient basis
+`(1,zeta_5,zeta_5^2,zeta_5^3)`, and let `alpha` be nonzero. Put
+
+```text
+alpha bar(alpha)=u+v phi,
+A=|sigma_1(alpha)|^2=u+v phi,
+B=|sigma_2(alpha)|^2=u+v-v phi,
+S(alpha)=Tr(alpha bar(alpha))/2=A+B,
+S0=S(alpha),                 S1=S(J alpha).
+```
+
+The second trace refers to a pure J step, not an affine source-driven update.
+Since `J bar(J)=2-phi`, multiplication sends `(u,v)` to `(2u-v,v-u)`.
+Consequently
+
+```text
+S0=2u+v,                     S1=3u-v,
+u=(S0+S1)/5,                 v=(3S0-2S1)/5,
+N(alpha)=u^2+uv-v^2=(3S0S1-S0^2-S1^2)/5.
+```
+
+The trace-pair integer lattice is exactly `S0+S1=0 mod5`; membership alone
+does not establish scalar realizability. The displayed formulas determine
+the ordered A and B. For every integer n the pure-step traces obey
+
+```text
+S_(n+2)=3S_(n+1)-S_n.
+```
+
+This follows either from the integer update or from its roots `phi^-2` and
+`phi^2`. Thus later such traces contain no further information.
+
+For real `X>=1` and integer `m>=2`, define
+
+```text
+D_m(alpha)=(S(alpha),S(J alpha),alpha mod mO),    0<N(alpha)<=X.
+```
+
+This map is injective whenever `m^4>16X`. Equal readings give equal A and B.
+If `gamma=alpha-beta` is nonzero, the two embedding triangle inequalities
+give `N(gamma)<=16AB<=16X`. Equal residues give `gamma=m eta` with nonzero
+integral eta, hence `N(gamma)=m^4 N(eta)>=m^4`, a contradiction. This is a
+sufficient criterion, not a minimum-modulus assertion.
+
+At `X=941,m=25`, the inverse terminates on every pair of integer traces and
+four canonical residues in `0,...,24`, either returning the unique scalar
+or rejecting a datum outside the exact image. First reject nonpositive
+traces, nonintegral `(u,v)` and N outside `[1,941]`. For a surviving pair
+A and B are positive: their sum S0 and product N are positive. The strip
+conditions `v>=0,u-v>0` are equivalently
+
+```text
+2 S0 < 3 S1,                 2 S1 <= 3 S0.
+```
+
+Start with `k=0` and the supplied residue r. If `v<0`, replace
+`(S0,S1,r,k)` by `(3S0-S1,S0,J^-1 r,k+1)`. If `u-v<=0`, replace it by
+`(S1,3S1-S0,Jr,k-1)`. Recompute `(u,v)` and continue until the strip
+conditions hold. The ratio A/B is multiplied by `phi^4` or `phi^-4`.
+The half-open intervals `phi^(4j)<=A/B<phi^(4j+4)` partition the positive line,
+so the process reaches the unique strip without oscillation. The lower
+endpoint is included and the upper one excluded. No numerical logarithm
+is used, even for inputs whose scalar realizability is not yet known.
+
+For any actual strip representative beta, write `x=sqrt(A/B)`. Then
+`1<=x<phi^2` and
+
+```text
+S(beta)=sqrt(N(beta))(x+x^-1)<3sqrt(N(beta))<93,
+S(beta)<=92.
+```
+
+The last comparison follows from `9*941<93^2`. If c is the coefficient
+vector of beta, put `H=5I-11^T`; direct trace evaluation gives
+
+```text
+2S(beta)=c^T H c,       H^-1=(I+11^T)/5,
+c_i^2 <= (H^-1)_ii c^T H c = 4S(beta)/5 <= 368/5 < 81.
+```
+
+The coefficient bound is therefore `[-8,8]^4`. Center the normalized
+residue coordinates in `[-12,12]`, reject any outside `[-8,8]`, and call
+the resulting element beta. Accept exactly when its recomputed two traces
+equal the normalized pair, returning `alpha=J^k beta`, beta and k. Every
+valid scalar passes and returns its unique strip representative. Conversely
+every accepted beta realizes the checked traces and residue; undoing the
+steps realizes the input datum. This proves complete image recognition as
+well as inversion. The residue uses four coordinates over `Z/25Z`, not a
+field of 25 elements.
+
+The proof and exact implementation are in
+`probes/P-J-TWO-TRACE-RESIDUE-DECODER-1/PROOF.md` and `decoder.py`; its
+completed two-architecture audit covers the full coefficient box and
+independent arithmetic. The two traces are unbounded integers, so this is
+not a finite-state storage theorem. A valid-to-valid corruption need not be
+detected: replacing the residue of 1 by that of zeta preserves traces
+`(2,3)` and produces another valid reading. Physical availability, noise
+tolerance, measurement disturbance and an affine-step extension are outside
+scope.
+
+### J-OBSERVED-SCALAR-CODE-CAPACITY [T]
+
+Fix the whole oriented strip `B_X` of nonzero integral scalars of norm at
+most X and put
+
+```text
+K_m(X)=|{D_m(beta):beta in B_X}|.
+```
+
+Consider the registered class `R(n,x)=J^n G(ell_n(x))`, with nonzero
+integral G of norm at most X. Every label of `F5^5` is available at every
+sheet `n>=3`. The observer receives only `D_m(R(n,x))`, with no separately
+supplied n, and injectivity is required across different sheets as well as
+different labels. The largest usable subset of the 3125 native labels has
+size `min(3125,K_m(X))`.
+
+For attainment choose one strip representative per distinct key. Equality
+of two observations gives the same normalization exponent and the same
+strip key, hence the same sheet and chosen label. For the upper bound,
+normalize arbitrary generators as `G(l)=J^(a_l) beta_l`. If two labels
+have the same strip key, choose `t>=max(a_l,a_l')+3` and compare sheets
+`n=t-a_l`, `n'=t-a_l'`. Both exist and their complete observations coincide.
+Thus shifting codewords along their orbits cannot increase capacity.
+
+The complete finite audit in
+`probes/P-J-TWO-TRACE-RESIDUE-DECODER-1`, with matching exact output on
+x86_64 and aarch64, gives
+
+| Quantity | Exact value |
+| --- | ---: |
+| Strip size at norm bound 940 | 3110 |
+| Strip size at norm bound 941 | 3150 |
+| Two-trace classes at bound 941 | 145 |
+| K_5(941) | 2603 |
+| K_25(941) | 3150 |
+| Usable native labels with modulo 5 | 2603 |
+| Usable native labels with modulo 25 | 3125 |
+| First modulo-5 collision norm | 55 |
+
+Completeness follows from the proved `[-8,8]^4` coefficient box, not from a
+truncation of J powers. At the first collision,
+
+```text
+alpha=zeta+zeta^2-2zeta^3,    beta=zeta+zeta^2+3zeta^3,
+alpha bar(alpha)=beta bar(beta)=7+phi,
+N(alpha)=N(beta)=55,         (S0,S1)=(15,20),
+beta-alpha=5zeta^3.
+```
+
+The identity follows by multiplication. Minimality uses the complete census:
+equal data normalize by the same number of J steps, preserve congruence and
+preserve norm, so every lower-norm collision would occur in that census.
+Modulo five has a native-label shortfall of `3125-2603=522`. Among full
+residues modulo `5^r`, `r>=1`, the first sufficient depth in this frozen
+class is two. This does not minimize a partial residue refinement, another
+observable or a different norm budget.
+
+Supplying `(n,D_m)` changes the class: distinct choices `G(l)=J^(a_l)`
+already separate the finite labels at norm one when n is known. The
+omitted-time condition is therefore essential. Neither the scalar theorem
+nor the capacity count selects a physical codebook.
+
+### U-NORMALIZED-SCALAR-READBACK [T]
+
+Choose and publish a known injection `G:F5^5 -> B_941`, with all codewords
+in the declared oriented strip. Such injections exist by
+J-SCALAR-CODE-CAPACITY-3125. On the synchronized reachable domain
+`{(n,x):n>=3,x in X_n}`, use the chosen target `L(alpha)=J alpha` and read
+
+```text
+alpha=J^n G(Lambda_n(x)),       observed datum=D_25(alpha).
+```
+
+This datum alone has a total inverse onto its image recovering the current
+state `(n,x)`, without n as a separately observed input. Indeed
+J-TWO-TRACE-RESIDUE-INVERSE returns the unique `alpha=J^k beta` with beta
+in the strip. Uniqueness gives `k=n` and `beta=G(Lambda_n(x))`. Apply the
+known finite inverse of G and then the native chart inverse of
+U-NATIVE-CHART-AND-QDD-READBACK. Explicitly, for recovered labels
+`(a,b,c,d,e)` set
+
+```text
+t=(-1)^(n-3), h=(-1)^(n+theta_(n-1)),
+S(m)=m-S(floor(m/2)), S(0)=0, N=S(floor((n-1)/2))-1,
+A=t a, B=t b, C=2+h c, D=1+h d,
+p1=3(A+C), p1p=3(A-C), p4=3(B+D), p4p=3(B-D),
+r=t(e+N), q=4-3theta_(n-1)-A-B-r,
+```
+
+where the checkpoint operations are in F5. A scalar datum outside the D25
+image is rejected by its inverse; additionally reject `k<3` or
+`beta not in image(G)`. Every remaining datum reconstructs one reachable
+state and re-encodes to the input. This is a composition of the exact
+scalar inverse, a selected finite codebook inverse and the native chart
+bijection, not another computational census.
+
+The target and codebook are fixed choices of this L1 theorem. It does not
+recover the five possible pre-merger heads, identify a codeword with the
+original QDD amplitude, select a physical readout, or calibrate the counter
+as physical time. No other decoder stage, physical apparatus, occurrence,
+record/reset, photon or RH obligation is closed.
+
+### QDD-GALOIS-SUM-RATIO [T]
+
+For the registered Route A balanced piston source let
+
+```text
+alpha = iota_B0(v),    Q = sum_j v_j^2,    s = sum_j v_j,
+A = |sigma_1(alpha)|^2,    B = |sigma_2(alpha)|^2.
+```
+
+Then
+
+```text
+5Q-s^2 = Tr_(K/Q)(alpha bar(alpha)) = 2(A+B).
+```
+
+On every supported source,
+
+```text
+s^2/[4(5Q-s^2)] = s^2/[8(A+B)].
+```
+
+Thus the registered QDD denominator is the symmetric sum `A+B`, while the
+complete incidence ratio still also carries its numerator `s^2`; the J-unit
+strip uses the positive ratio `A/B`. This is an L1 identity, not a physical
+apparatus, occurrence law, Born sampling, decoder-uniqueness or completeness
+theorem.
+
+### ZETA5-IDEAL-COUNT-LANDAU [T]
+
+Conditional on the standard Landau ideal-counting theorem
+
+```text
+A_F(X)=kappa_F X + O_F(X^(1-2/(n+1)))
+```
+
+for a fixed degree-n number field, degree four gives exponent `3/5`. With
+`kappa_K=Res_(s=1) zeta_K(s)`,
+
+```text
+A_K(X) = [4 pi^2 log(phi)/(25 sqrt(5))] X + O_K(X^(3/5)).
+```
+
+The exact audit value `A_K(10^6)=339775` is a finite witness, not a proof of
+the asymptotic theorem.
+
+The possible cardinality identity `25=5*5` for a future native carrier is
+not promoted here. No concrete 25-element carrier, equality, action or
+equivariance contract has been frozen.
+
+
+### J-ENDPOINT-GROWTH [T]
+
+At L1 let \(O=\mathbb Z[\zeta]\), \(\zeta=e^{2\pi i/5}\),
+\(J=1+\zeta^2\) and \(\varphi=(1+\sqrt5)/2\). Fix the complete digit alphabet
+
+$$
+D=\{u+v\zeta:u,v\in\{-2,-1,0,1,2\}\},\qquad
+A_n=\left\{\sum_{k=0}^{n-1}J^k d_k:d_k\in D\right\},\qquad A_0=\{0\}.
+$$
+
+All words in \(D^n\) are admitted independently; endpoint equality is exact
+equality in \(O\). Reversing the independent choices shows that \(A_n\) is
+also the endpoint set of \(\alpha_{t+1}=J\alpha_t+d_t\) from zero.
+For every integer \(n\ge0\),
+
+$$
+\boxed{\varphi^{2n}\le |A_n|\le
+(93890+41760\sqrt5)\varphi^{2n}},\qquad
+\boxed{\lim_{n\to\infty}\frac{\log|A_n|}{n}=2\log\varphi}.
+$$
+
+Write \(C=93890+41760\sqrt5\). Both universal bounds have the following
+complete proof. The finite public
+probe audits its algebra and the census through \(n=4\); finite enumeration
+does not establish the universal quantifier.
+
+#### The expanding embedding
+
+Use the field embedding \(\sigma(\zeta)=\eta=\zeta^2\), and put
+\(\beta=\sigma(J)=1+\eta^2\). In this complex plane \(\varphi\) denotes the
+positive real number \((1+\sqrt5)/2\), not \(\sigma(\varphi)\).
+
+The fifth-root relation gives
+\(\eta+\overline\eta=-\varphi\), hence
+
+$$
+\eta^2+\varphi\eta+1=0,\qquad
+\beta=-\varphi\eta,\qquad |\beta|=\varphi.
+$$
+
+For completeness, if \(t=\zeta+\zeta^{-1}\), dividing the fifth-root
+relation by \(\zeta^2\) gives \(t^2+t-1=0\). Since \(t>0\),
+\(t=\varphi-1\). Thus
+\(\eta+\eta^{-1}=t^2-2=-\varphi\), proving the stated identity.
+
+Since \(\eta\) is nonreal, \((1,\eta)\) is a real basis of \(\mathbb C\).
+For real \(a,b\),
+
+$$
+\beta(a+b\eta)=\varphi b+(-\varphi a+\varphi^2b)\eta.
+$$
+
+The coordinate matrix and determinant are therefore
+
+$$
+B=\begin{pmatrix}0&\varphi\\-\varphi&\varphi^2\end{pmatrix},
+\qquad \det B=\varphi^2.
+$$
+
+#### A finite covering certificate
+
+Let
+
+$$
+P=\{a+b\eta:|a|,|b|\le\tfrac12\},\qquad D'=\sigma(D).
+$$
+
+It is essential that the following equality is an equality of actual sets,
+not merely of their convex hulls:
+
+$$
+\boxed{D'+P=\{a+b\eta:|a|,|b|\le\tfrac52\}=5P.}
+$$
+
+Indeed, the five intervals \(u+[-1/2,1/2]\), for \(u=-2,-1,0,1,2\),
+cover \([-5/2,5/2]\) with only endpoint overlaps, independently in the two
+real coordinates.
+
+For a point of \(P\), multiplication by \(\beta\) produces coordinates
+bounded by
+
+$$
+\frac\varphi2,\qquad
+\frac{\varphi+\varphi^2}{2}.
+$$
+
+Both are strictly smaller than \(5/2\):
+\(\varphi<5\) and
+\(\varphi+\varphi^2=2+\sqrt5<5\).
+Therefore
+
+$$
+\boxed{\beta P\subseteq D'+P.}
+$$
+
+This covering, rather than a lattice-density hypothesis, is the missing
+ingredient in the lower bound.
+
+#### Iterate the covering and compare areas
+
+Write \(S_n=\sigma(A_n)\). Then \(S_0=\{0\}\) and
+\(S_{n+1}=\beta S_n+D'\). The previous inclusion gives, by induction,
+
+$$
+\beta^nP\subseteq S_n+P
+=\bigcup_{s\in S_n}(s+P).
+$$
+
+The base case is equality. If the assertion holds at \(n\), multiplication
+by \(\beta\) and the one-step covering give
+\(\beta^{n+1}P\subseteq\beta S_n+\beta P
+\subseteq\beta S_n+D'+P=S_{n+1}+P\).
+
+The planar area of \(P\) is \(|\operatorname{Im}\eta|>0\).
+Multiplication by \(\beta^n\) multiplies area by
+\(|\beta|^{2n}=\varphi^{2n}\). Finite subadditivity of area therefore gives
+
+$$
+\varphi^{2n}\operatorname{area}(P)
+\le\operatorname{area}(S_n+P)
+\le |S_n|\operatorname{area}(P).
+$$
+
+A field embedding is injective, so \(|S_n|=|A_n|\). Cancelling the positive
+area proves
+
+$$
+\boxed{|A_n|\ge\varphi^{2n}\quad(n\ge0).}
+$$
+
+Overlap among translated parallelograms does not harm the argument: the
+required inequality is subadditivity, not disjointness. The rank-four
+module \(\sigma(O)\) need not be a discrete planar lattice. Only the finite
+set \(S_n\), injectivity and the displayed covering are used.
+
+#### Upper bound
+
+Let \(\sigma_1(\zeta)=\zeta\) and \(\sigma_2=\sigma\). Their sizes are
+\(|\sigma_1(J)|=\varphi^{-1}\) and \(|\sigma_2(J)|=\varphi\).
+The first follows from \(J\varphi=\zeta\), and the second was proved above.
+Every digit satisfies \(|\sigma_i(d)|\le4\). Consequently every endpoint
+satisfies
+
+$$
+|\sigma_1(\alpha)|\le4\varphi^2=:R,
+\qquad |\sigma_2(\alpha)|\le4\varphi(\varphi^n-1)=:T_n.
+$$
+
+For distinct algebraic integers their difference \(\gamma\ne0\) has positive
+integral norm
+\(N(\gamma)=|\sigma_1\gamma|^2|\sigma_2\gamma|^2\ge1\).
+Thus \(|\sigma_1\gamma|^2+|\sigma_2\gamma|^2\ge2\). In
+\(\mathbb C^2\simeq\mathbb R^4\), balls of radius \(1/2\) about distinct
+embedded endpoints are disjoint. They lie in the product of discs with
+radii \(R+1/2\) and \(T_n+1/2\).
+
+A radius-\(1/2\) four-ball has volume \(\pi^2/32\). Comparing volumes gives
+
+$$
+|A_n|\le32(R+1/2)^2(T_n+1/2)^2
+\le32(4\varphi^2+1/2)^2(4\varphi+1/2)^2\varphi^{2n}.
+$$
+
+The constant equals \(93890+41760\sqrt5\). This also holds at \(n=0\).
+Together with the lower bound it proves the theorem. For \(n\ge1\),
+
+$$
+2\log\varphi\le\frac{\log|A_n|}{n}
+\le2\log\varphi+\frac{\log C}{n},
+$$
+
+which proves the limit directly. Any other fixed initial carrier adds the
+common translate \(J^n\alpha_0\), leaving the cardinality unchanged.
+
+#### Scope
+
+This theorem counts the endpoints of the complete specified alphabet. It
+does not establish that every algebraic integer in a four-dimensional strip
+is reachable, that endpoints are equiprobable, or that their Shannon entropy
+has this rate. No probability law is introduced. A deterministic input word
+has one endpoint at each time, regardless of the size of the controlled
+family. Whether a port of the native update supplies every word in \(D^n\)
+is a separate question.
+
+The exponent comes from area expansion by \(\varphi^2\) in one complex
+embedding, together with the finite covering supplied by the chosen digits.
+Its numerical agreement with the toral value \(2\log\varphi\) is not an
+entropy transport or a source-completeness theorem. The negative
+ENTROPY-LAYER-BRIDGE remains unchanged. No physical entropy, decoder,
+apparatus, preparation, event, occurrence, memory/reset mechanism or
+L1-to-L6 lift is adopted.
+
+
 
 ## 5. The force is the curvature
 

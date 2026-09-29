@@ -1,0 +1,7 @@
+NON-CANONICAL EXACT REGRESSION; result-exposed incubation #1269
+PASS strip normal form and signed J shifts: 624 inputs, 4368 shifts
+PASS exact half-open boundary powers through +/-10000
+PASS normwise strip count = 10 * Euler ideal count for norms 1..1000
+PASS cumulative capacities: B_940=3110; B_941=3150; B_1000=3410
+PASS explicit ordered 3125-entry integral codebook at norm bound 941
+RESULT PASS; finite capacity evidence remains candidate-C in this notes-only lane

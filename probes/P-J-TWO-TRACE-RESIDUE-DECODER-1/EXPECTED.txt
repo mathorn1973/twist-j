@@ -1,0 +1,14 @@
+P-J-TWO-TRACE-RESIDUE-DECODER-1; exact L1 formal audit
+PASS immutable_input_hashes=6
+TWIST-J two-trace residue decoder audit; NON-CANONICAL L1
+CENSUS {"bound":941,"max_abs_coefficient":7,"mod25_key_count":3150,"mod5_capacity_shortfall":522,"mod5_collision_groups":493,"mod5_first_collision":{"key":[15,20,0,1,1,3],"left":[0,1,1,-2],"norm":55,"right":[0,1,1,3]},"mod5_key_count":2603,"mod5_max_fibre":10,"strip_below":3110,"strip_count":3150,"strip_sha256":"6a08d7de33b4cadb615f942b37202540dd6dea0f59f2412ffb822389c7c1cdab","trace_pair_count":145}
+PASS complete_box=83521 exact_roundtrips=103950 stress_roundtrips=40
+PASS invalid_readings=12 affine_control=1 half_open_boundaries=2
+PASS mod5_collision_preserved=1 valid_to_valid_corruption_control=1
+RESULT PASS; finite audit candidate-C, universal derivations candidate-T pending review
+INDEPENDENT {"collision_differences":645,"roundtrips":15750,"scanned":130321,"summary":{"bound":941,"max_abs_coefficient":7,"mod25_key_count":3150,"mod5_capacity_shortfall":522,"mod5_collision_groups":493,"mod5_first_collision":{"key":[15,20,0,1,1,3],"left":[0,1,1,-2],"norm":55,"right":[0,1,1,3]},"mod5_key_count":2603,"mod5_max_fibre":10,"strip_below":3110,"strip_count":3150,"strip_sha256":"6a08d7de33b4cadb615f942b37202540dd6dea0f59f2412ffb822389c7c1cdab","trace_pair_count":145}}
+PASS independently_authored_census_byte_identity=1
+PASS norm55_explicit_witness=1
+PASS native_label_capacity_mod5=2603 native_label_capacity_mod25=3125
+SCOPE D_m only; no separately supplied sheet index; pure J step
+RESULT PASS; mathematical evidence only, no Canon or physical-owner promotion

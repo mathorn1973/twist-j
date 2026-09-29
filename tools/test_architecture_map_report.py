@@ -24,18 +24,18 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 465)
+        self.assertEqual(self.report.claims, 474)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 323},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 332},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 60,
+                "none": 61,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 365,
+                "two-architecture": 373,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,9 +43,12 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 200)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 331
+            len(self.report.transitive_architecture_dependents), 339
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v94 adds three theorem rows with existing theorem premises: two
+        # public-probe evidence rows and one inline composition. All three
+        # reach the declared architecture transitively, with no new root.
         # v92 adds one architecture-dependent L5 blocking theorem. The Bell
         # comparison has only a BOUNDED_BY edge; the self-contained finite
         # photon measure is one new dependency terminal. These are exact
@@ -53,6 +56,24 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertIn("METRO-COMMON-BLOCKING", self.report.direct_architecture_requires)
         self.assertNotIn("COUNTER-BELL-PRICE", self.report.transitive_architecture_dependents)
         self.assertIn("PHOTON-CONDITIONAL-VARIANCE-FLOOR", self.report.dependency_terminals)
+        # Five v93 L1 theorems have declared premises that eventually
+        # reach the public architecture, but none requires DEF-ARCHITECTURE
+        # directly and none is a declared-dependency terminal.
+        for item in (
+            "ZETA5-DEDEKIND-RESIDUE",
+            "J-UNIT-STRIP-NORMAL-FORM",
+            "J-SCALAR-CODE-CAPACITY-3125",
+            "QDD-GALOIS-SUM-RATIO",
+            "ZETA5-IDEAL-COUNT-LANDAU",
+        ):
+            self.assertIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertNotIn(item, self.report.dependency_terminals)
+        # The sixth v93 theorem depends on the exact J projection and axiom,
+        # not the native architecture. It has a premise, so it is not a terminal.
+        self.assertNotIn("J-ENDPOINT-GROWTH", self.report.transitive_architecture_dependents)
+        self.assertNotIn("J-ENDPOINT-GROWTH", self.report.direct_architecture_requires)
+        self.assertNotIn("J-ENDPOINT-GROWTH", self.report.dependency_terminals)
         # v91 adds four direct native requirements. The selected dictionaries
         # consume their explicit mathematical models through separate gates;
         # the closed TT existence owner now depends on its adopted witness.
