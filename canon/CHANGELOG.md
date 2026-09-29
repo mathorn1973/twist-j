@@ -1,5 +1,40 @@
 # Canon changelog (public series)
 
+## Public Canon v94
+
+Accept three L1 theorems and separate decoder inputs from derived records.
+J-TWO-TRACE-RESIDUE-INVERSE gives the exact two-trace reconstruction,
+the general sufficient bound m^4>16X and the terminating D25 inverse with
+exact image recognition on every nonzero integral scalar of norm at most
+941. The strip representative, orbit coordinate, norm, ordered magnitudes
+and later pure-J traces are derived outputs. J-OBSERVED-SCALAR-CODE-CAPACITY
+gives the observed capacity K_m and usable native capacity min(3125,K_m),
+with no separately supplied sheet number. The complete two-architecture
+census has 3150 strip elements, 145 trace classes, 2603 mod-5 keys and 3150
+mod-25 keys; first collision norm is 55. Thus full residue depth r=2 is
+first sufficient in the frozen family. The public probe remains unchanged.
+
+U-NORMALIZED-SCALAR-READBACK composes the scalar inverse with the existing
+native chart for a chosen known normalized injective codebook. It restores
+the current synchronized state and recognizes that selected image. This
+does not choose the codebook, recover arbitrary lost initial heads or
+identify the orbit exponent with a physical clock.
+
+The decoder account distinguishes balanced original QDD amplitudes,
+norm-bounded scalar orbits and selected native-label codes. A direct proof
+remark records the existing balanced QDD mod-5 lift, including zero, and
+the already specified direct write of all five algebraic fields. The
+existing common-ready source/history inverse is reused. Manifest types,
+identifiers and derived fields are not counted as independent physical
+inputs; the selected effective dictionaries and the unresolved complete
+physical-family obligations keep their distinct scopes.
+
+No existing claim changes status or scope. All 25 H/O owners remain open.
+No physical acquisition, preparation, occurrence, persistent recording,
+renewal, preferred codebook, affine-driven recurrence, SI or L2-L6 lift is
+added. Registry grows from 471 to 474 with three T rows: 0 T-LOCK, 332 T,
+59 D, 39 C, 2 H, 23 O and 19 F.
+
 ## Public Canon v93
 
 Accept six L1 theorems: five from the completed public probe
@@ -232,7 +267,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 471 claims; 0 T-LOCK, 329 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
+Registry snapshot: 474 claims; 0 T-LOCK, 332 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 

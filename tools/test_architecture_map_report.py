@@ -24,18 +24,18 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 471)
+        self.assertEqual(self.report.claims, 474)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 329},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 332},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 60,
+                "none": 61,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 371,
+                "two-architecture": 373,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -43,9 +43,12 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 200)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 336
+            len(self.report.transitive_architecture_dependents), 339
         )
         self.assertEqual(len(self.report.dependency_terminals), 63)
+        # v94 adds three theorem rows with existing theorem premises: two
+        # public-probe evidence rows and one inline composition. All three
+        # reach the declared architecture transitively, with no new root.
         # v92 adds one architecture-dependent L5 blocking theorem. The Bell
         # comparison has only a BOUNDED_BY edge; the self-contained finite
         # photon measure is one new dependency terminal. These are exact

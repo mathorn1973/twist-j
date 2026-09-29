@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v93. Normative authority and activation
+**Release identity:** Public Canon v94. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v93 also declares a discrete architecture. It does not
+Public Canon v94 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -131,6 +131,21 @@ factor through thirteen invariant classes; general readings on the reachable
 domain allow arbitrary amplitudes on 3125 retained labels. These classes
 select neither the target operator nor its amplitudes. All are L1 results;
 physical time, spatial dimension, apparatus and occurrence remain open.
+
+The norm-bounded scalar reader has an exact inverse. Two pure-J traces
+and the full residue modulo 25 determine every nonzero integral scalar of
+norm at most 941, its normalized strip representative and its integer orbit
+coordinate. Norm, ordered magnitudes, normalization and all further pure-J
+traces are derived fields. The observed mod-5 capacity is only 2603 in the
+declared global class without a separately supplied clock; a selected
+normalized codebook with mod-25 reading also restores the current
+synchronized native state. Codebook choice and physical acquisition remain
+premises. This is distinct from the original balanced QDD head amplitude,
+whose four coefficients already have a unique mod-5 lift, including zero.
+The direct QDD write then determines its five algebraic fields; neither this
+representation nor manifest identifiers introduce additional independent
+physical inputs. Lost original heads and the existing physical owners keep
+their stated boundaries.
 
 Three decisions have exact dispositions. The complete measurable
 product-source Route A is empty, so ENTROPY-LAYER-BRIDGE closes at F with
