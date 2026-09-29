@@ -81,3 +81,39 @@ The required pull-request workflow must replay this same pinned verifier and
 EXPECTED.txt on Python 3.12 x86_64 and aarch64. Repository checks alone do not
 stand in for that scientific execution; this probe is included in the actual
 changed-probe runner. No source or threshold may change after the pin.
+
+## Completed two-architecture scientific replay
+
+Required pull-request run 36531067294 completed successfully on result head
+873fdf81de519789cee3fd51cd69557cab9711ef. Both jobs used CPython 3.12.14.
+The public job logs explicitly name this probe, architecture, verifier hash
+and exact stdout hash. The unchanged repository runner requires exit zero,
+empty stderr and byte identity with EXPECTED.txt before emitting VERIFY PASS.
+
+| Architecture | Job | Verifier SHA-256 | Stdout SHA-256 |
+| --- | ---: | --- | --- |
+| x86_64 | 109284642628 | 88de9568e8cb8e65ded78ffd6863c46674e88a5b2c9e85489d9c19a0cd5aa469 | d17ff82883dca610813187679221cb315b7636c79f9013062de691b5988d744d |
+| aarch64 | 109284642776 | 88de9568e8cb8e65ded78ffd6863c46674e88a5b2c9e85489d9c19a0cd5aa469 | d17ff82883dca610813187679221cb315b7636c79f9013062de691b5988d744d |
+
+[Workflow](https://github.com/mathorn1973/twist-j/actions/runs/36531067294).
+The following named aarch64 leg pairs with the flat local x86_64 leg above
+under tools/check_verifier.py. The workflow itself also supplies both legs.
+
+```text
+github_platform: Ubuntu 24.04 (GitHub-hosted ubuntu-24.04-arm)
+github_architecture: aarch64
+github_python: 3.12.14
+github_verifier_sha256: 88de9568e8cb8e65ded78ffd6863c46674e88a5b2c9e85489d9c19a0cd5aa469
+github_stdout_sha256: d17ff82883dca610813187679221cb315b7636c79f9013062de691b5988d744d
+github_exit_code: 0
+github_stderr_bytes: 0
+github_stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+github_status: PASS
+github_verdict: VERIFY PASS
+github_byte_identity: PASS
+```
+
+This readback changes only RUN.md and RESULT.md. It preserves all seven
+pinned inputs and EXPECTED.txt. The final PR head must pass the same required
+jobs again before merge. No code failure, source replacement or threshold
+change occurred between the pin and this completed scientific replay.

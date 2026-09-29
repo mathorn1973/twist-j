@@ -1,10 +1,11 @@
 # Reviewed exact scalar decoder and observed-orbit capacity
 
-Status: PASS at the frozen local scope; required two-architecture replay is
-a separate acceptance gate. PUBLIC, L1, NON-CANONICAL until a separate fold.
+Status: PASS at the frozen scope, with completed two-architecture scientific
+replay. PUBLIC, L1, NON-CANONICAL until a separate fold.
 Proof evidence: candidate-T with independent-agent mathematical review.
-Finite evidence: candidate-C from the completed local x86_64 run; the required
-workflow determines completion of the two-architecture computation gate.
+Finite evidence: exhaustive exact audit on x86_64 and aarch64 with identical
+verifier and stdout hashes. Together with the written completeness reduction
+this supports candidate-T finite capacity/minimality claims for a later fold.
 No frozen mathematical falsifier fired. No source or threshold changed.
 
 Owner: A. M. Thorn. Lock: #1283. Predecessor notes PR: #1282.
@@ -42,7 +43,7 @@ Injectivity is global across sheets. Supplying (n,D_m) changes the class:
 distinct J offsets can then encode the finite labels already at norm one.
 This is an essential observation boundary, not a physical no-go.
 
-## 3. Complete finite evidence [candidate-C pending required replay]
+## 3. Complete finite evidence [candidate-T with exact exhaustive audit]
 
 | Quantity | Exact result |
 | --- | ---: |
@@ -95,13 +96,23 @@ The inherited primary stdout retains its historical candidate/pending-review
 wording; current proof-review disposition is in REVIEW.md and this result.
 RUN.md records the exact pin, commands, custody and evidence limits.
 
+Required GitHub run 36531067294 on head
+873fdf81de519789cee3fd51cd69557cab9711ef completed successfully. The x86_64
+job 109284642628 and aarch64 job 109284642776 both explicitly ran this probe
+under Python 3.12.14 and emitted VERIFY PASS with verifier hash
+88de9568e8cb8e65ded78ffd6863c46674e88a5b2c9e85489d9c19a0cd5aa469
+and the same stdout hash above. The required aggregate check also passed.
+This is actual scientific replay, not merely repository-integrity checking.
+
 ## 5. Promotion boundary
 
 Candidate statements for a later reviewed fold are the two-trace reconstruction,
 the general norm/residue injectivity criterion, total exact image recognition,
 and the corrected observed-orbit capacity theorem with its exact census.
-The required Python 3.12 two-architecture replay must pass before that evidence
-is considered complete. Passing it does not itself edit or activate a Canon.
+The required Python 3.12 two-architecture replay is complete, as recorded
+above and in RUN.md. This supplies the computation gate for the frozen
+finite claims; it does not itself edit or activate a Canon. The final
+record-only PR head must pass the required jobs before merge.
 
 No physical apparatus, preparation, occurrence law, persistence/reset, native
 source completeness, SI scale, photon/P1, RH or higher-layer result is supplied.
