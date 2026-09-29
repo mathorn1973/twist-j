@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred fifteen checks cover the current
+and emits deterministic text. Its one hundred twenty checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 115/115 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 120/120 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -602,3 +602,30 @@ photon. Expected output is the preserved historical transcript plus the
 four authored boundary checks, not an output regenerated to hide failures.
 
 Public Canon v93 adds a reversible v93-to-v92 input reconstruction and four boundary checks for six L1 theorems: the five from P-ZETA5-RESIDUE-STRIP-DECODER-2 and the complete inline endpoint-growth proof from P-J-ENDPOINT-GROWTH-1. The endpoint guard binds the exact proof bytes and preserves the distinction from Shannon entropy, native source completeness and a physical lift. The historical v92 and earlier guards consume reconstructed prior bytes; no prior scope is reinterpreted.
+
+
+The v94 maintenance pins all thirteen complete current Canon inputs by byte
+count and SHA-256, then applies exact inverse edits to reconstruct public v93
+at `e4b426cf631abcecd1516f2110564dd37912d246`. The reconstructed files are
+checked again against their complete public-v93 byte counts and hashes before
+the inherited v93-to-v92 chain sees them. Every historical predicate and hash
+constant is unchanged; the first 115 check lines remain byte-identical.
+
+Five separately authored current guards pin the three L1 theorem rows, all
+scope and lifecycle records, eleven dependency edges, the unchanged complete
+P-J-TWO-TRACE-RESIDUE-DECODER-1 proof/audit bundle, and the inline normalized-code
+composition. The latter requires a known normalized injection, rejects a
+negative or early counter and a codeword outside the selected image, and
+restores the current synchronized state, not lost original heads. Exact
+observations, the target action and codebook remain premises. The balanced
+original QDD head has its existing unique modulo-five coefficient lift,
+including zero; this is not the arbitrary J-shift or all-sheet scalar class.
+The complete prior 471 Registry rows, all 25 H/O owners, gates, Frontier
+programs and CORE selections remain exact. Totals are 474 claims,
+T332/D59/C39/H2/O23/F19; no new physical claim, obligation or layer gate appears.
+
+The 120-check expected transcript preserves the historical check lines and
+adds the five authored boundary lines. This is deterministic release
+bookkeeping permitted by the per-release count contract above. It does not
+execute, amend or replace a scientific probe, nor conceal the recorded failure
+of the earlier release candidate's stale bookkeeping reproduction.

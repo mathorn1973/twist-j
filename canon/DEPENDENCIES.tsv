@@ -969,3 +969,14 @@ QDD-GALOIS-SUM-RATIO	QDD-ALGEBRAIC-FACTORIZATION	REQUIRES	the registered Route A
 QDD-GALOIS-SUM-RATIO	J-UNIT-STRIP-NORMAL-FORM	REQUIRES	the complementary ratio reading uses the same two positive Galois magnitudes A and B
 ZETA5-IDEAL-COUNT-LANDAU	ZETA5-DEDEKIND-RESIDUE	REQUIRES	the Landau leading coefficient is the exact Dedekind residue
 J-ENDPOINT-GROWTH	J-PROJECTIONS	REQUIRES	the exact cyclotomic J carrier and its principal modulus supply the contracting embedding; the expanding conjugate and both universal bounds are proved inline
+J-TWO-TRACE-RESIDUE-INVERSE	J-UNIT-STRIP-NORMAL-FORM	REQUIRES	the oriented half-open strip and exact J-unit action normalize every bounded-norm nonzero scalar
+J-TWO-TRACE-RESIDUE-INVERSE	J-PROJECTIONS	REQUIRES	the ordered squared Galois moduli give the two-trace linear inverse and pure-J recurrence
+J-TWO-TRACE-RESIDUE-INVERSE	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	exact scalar inversion supplies no physical acquisition of unbounded traces or residue, apparatus or renewal
+J-OBSERVED-SCALAR-CODE-CAPACITY	J-TWO-TRACE-RESIDUE-INVERSE	REQUIRES	normalization of equal readings and exact norm-941 coefficient box reduce the observed capacity to a complete finite strip census
+J-OBSERVED-SCALAR-CODE-CAPACITY	U-COUNTER-REACHABLE-AMPLITUDE-CLASS	REQUIRES	all 3125 conserved labels occur at every sheet n>=3 and every equivariant reader has the stipulated codebook form
+J-OBSERVED-SCALAR-CODE-CAPACITY	J-SCALAR-CODE-CAPACITY-3125	REQUIRES	the inherited norm-941 scalar alphabet is the frozen capacity budget, with no physical codebook selected
+U-NORMALIZED-SCALAR-READBACK	J-TWO-TRACE-RESIDUE-INVERSE	REQUIRES	the exact inverse returns the chosen normalized codeword and integer exponent with image recognition
+U-NORMALIZED-SCALAR-READBACK	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	the reachable-sheet chart is a bijection with an explicit inverse and retains the original-head merger boundary
+U-NORMALIZED-SCALAR-READBACK	U-COUNTER-REACHABLE-AMPLITUDE-CLASS	REQUIRES	the normalized chosen codebook instantiates the classified pure-J equivariant reader
+U-NORMALIZED-SCALAR-READBACK	J-SCALAR-CODE-CAPACITY-3125	REQUIRES	the complete strip contains enough elements for the explicitly chosen 3125-label injection
+U-NORMALIZED-SCALAR-READBACK	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the mathematical codebook inverse does not derive codebook selection, preparation, source capture or physical measurement

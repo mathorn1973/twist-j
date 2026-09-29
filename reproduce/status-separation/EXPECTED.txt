@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v93
+historical guards: exact reconstructed v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v94
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -117,5 +117,10 @@ PASS 112 V93-PRIOR-BYTES thirteen exact v93 inputs reconstruct public v92 before
 PASS 113 V93-SIX-THEOREMS six L1 theorem rows retain exact scopes, probe evidence, declarations and dependency edges
 PASS 114 V93-BOUNDARY 471 claims and 25 live owners preserve every v92 row and gate; no 25-port factorization or physical lift is promoted
 PASS 115 V93-ENDPOINT-SCOPE the complete all-n covering and packing proof is pinned at L1; full-alphabet cardinality supplies no Shannon law, native completeness or physical lift
+PASS 116 V94-PRIOR-BYTES thirteen complete v94 inputs reconstruct exact public v93 before all 115 unchanged historical guards
+PASS 117 V94-THREE-THEOREMS three L1 T rows have exact scopes, eleven dependencies and declarations; two use the unchanged decoder probe and one an inline composition
+PASS 118 V94-NORMALIZED-READBACK the pinned inline inverse fixes normalized known G, rejects k<3 and codewords outside its image, and recovers current state without lost heads or physical time
+PASS 119 V94-INPUT-BOUNDARY exact observations and chosen codes remain premises; balanced original QDD coefficients lift modulo five including zero, while global residue depth has the no-separate-n boundary
+PASS 120 V94-OPEN-BOUNDARY all 471 prior rows and 25 H/O owners are unchanged; 474 claims preserve gates, programs and CORE selection with no physical promotion or new debt
 
-RESULT 115/115 ALL PASS
+RESULT 120/120 ALL PASS

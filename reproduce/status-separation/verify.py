@@ -36,6 +36,529 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+
+# Exact v94 release-accounting contract and reversible public v93 reconstruction.
+V94_PRIOR_COMMIT = 'e4b426cf631abcecd1516f2110564dd37912d246'
+V94_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '85c20f131b89a5c9839fa4d65c5e72ae3a986d78a957fa1d596750309a15211a',
+                  'current_bytes': 470120,
+                  'prior_sha256': '39a53252ca13287bdf97b0fd059fbe52c986e222a87964f94b743f9bec2db740',
+                  'prior_bytes': 466558,
+                  'restore': ((472, 475, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': 'd26405bfefef7097377920ccb846090a49748f4b0c160cde6f1ef6c3d925e83d',
+                   'current_bytes': 60638,
+                   'prior_sha256': 'df8a462bdca887d3a9d9409a6155be7f58ecab86df1f485c9103b63aea9069b0',
+                   'prior_bytes': 60281,
+                   'restore': ((531, 534, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': '61e500d64e067a9bb8f7376784f63941c3573c2e0a86af5c514ec151a7af31fb',
+                      'current_bytes': 160931,
+                      'prior_sha256': 'dced92f9e21e7d340694fcca2853b1cec0c2a36dc5a872cb914ce31a2fae36c7',
+                      'prior_bytes': 159042,
+                      'restore': ((971, 982, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': '10e2912f01180544068972deb912e48d0d01cb4053fcd37928b878b0e33952f7',
+                  'current_bytes': 96949,
+                  'prior_sha256': '543d88d85fd4ae31a85d9fb5520969e6bc8c721d5f629bd77b02730f2f36d1c5',
+                  'prior_bytes': 96327,
+                  'restore': ((472, 475, ''),)},
+ 'HISTORY.tsv': {'current_sha256': '5560e6cbc09815c5080e8383a17f5957465dc43a4df5022da290476abb6fe321',
+                 'current_bytes': 456177,
+                 'prior_sha256': '7e2d04e41892877d0bdc00927505e78b70a6936ded28b7ffa9907a00a2bc6796',
+                 'prior_bytes': 454685,
+                 'restore': ((1019, 1022, ''),)},
+ 'GATES.tsv': {'current_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'current_bytes': 12907,
+               'prior_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'prior_bytes': 12907,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'current_bytes': 1436,
+                           'prior_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'prior_bytes': 1436,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': '8084bead12b52a6ae2a15599d4170d28ec10c70242714cfd23ecbd0b58b59137',
+              'current_bytes': 819362,
+              'prior_sha256': '9002c1c0f299f0226fa5ebc05747b0f0be1a11465279f35ee6e43a79f6ccaa21',
+              'prior_bytes': 807444,
+              'restore': ((0, 1, '# TWIST-J Public Canon v93\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v93. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v93 also declares the discrete architecture used to '
+                           'read\n'),
+                          (25,
+                           26,
+                           'seed of the two algebraic projections. Public Canon v91 does not '
+                           'claim\n'),
+                          (130,
+                           131,
+                           'deriving the architecture from J; Public Canon v91 contains no such\n'),
+                          (1752, 1782, ''),
+                          (2370, 2382, ''),
+                          (10200, 10404, ''))},
+ 'CORE.md': {'current_sha256': '72f8326c3cbe1bfcd9baba59ce4084a53763290ae8ac1001d6b9e4e867bae310',
+             'current_bytes': 20716,
+             'prior_sha256': 'c11d6d9b941812e92a4fd066e828eac80cfc6be8861e6dfbb4f262d483460c4a',
+             'prior_bytes': 19735,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v93. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v93 also declares a discrete architecture. It does not\n'),
+                         (133, 148, ''))},
+ 'FRONTIER.md': {'current_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'current_bytes': 26162,
+                 'prior_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'prior_bytes': 26162,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': '39f554b8b780f266bcdd3cd05c639f0c28d4d4be11bce592493eb725db2e6d15',
+                  'current_bytes': 190929,
+                  'prior_sha256': '13384536155c7299b4efba641dc5f4da79be691ab458e68e76b8890067dba0cc',
+                  'prior_bytes': 188866,
+                  'restore': ((1, 36, ''),
+                              (269,
+                               270,
+                               'Registry snapshot: 471 claims; 0 T-LOCK, 329 T, 59 D, 39 C, 2 H, '
+                               '23 O, 19 F; 25 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '1d9d523b6d0ac9725d037fb1a86c8e734f6e10c414a6ae3ceedde7c3a47fdcf6',
+                       'current_bytes': 243,
+                       'prior_sha256': '322ea1c7f656b7565c3a30da5f3fbf4cb4a4daba1019d70271f50c19db2ca3a4',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t471\n'),
+                                   (3, 4, 'status_T\t329\n'),
+                                   (11, 12, 'evidence_none\t60\n'),
+                                   (14, 15, 'evidence_two-architecture\t371\n'))}}
+V94_IDS = ('J-TWO-TRACE-RESIDUE-INVERSE', 'J-OBSERVED-SCALAR-CODE-CAPACITY', 'U-NORMALIZED-SCALAR-READBACK')
+V94_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                   'status': 'T',
+                   'scope': 'at L1 let O=Z[zeta_5], J=1+zeta_5^2, S(alpha)=Tr(alpha bar(alpha))/2 '
+                            'and D_m(alpha)=(S(alpha),S(J alpha),alpha mod mO); the two traces '
+                            'recover alpha bar(alpha)=u+v phi by u=(S0+S1)/5 and v=(3S0-2S1)/5, '
+                            'hence the ordered positive Galois magnitudes and '
+                            'N=(3S0S1-S0^2-S1^2)/5, and determine all pure-J traces by '
+                            'S_(n+2)=3S_(n+1)-S_n; for integral m>=2 and real X>=1, m^4>16X '
+                            'suffices for injectivity on all nonzero alpha with N(alpha)<=X; on '
+                            'N<=941 the exact D25 inverse terminates on every input, recognizes '
+                            'its exact image, and returns the original four coefficients, unique '
+                            'strip representative beta in [-8,8]^4 and k in alpha=J^k beta without '
+                            'numerical logarithms; no physical acquisition, finite-memory cost, '
+                            'noise tolerance or general corruption detection is claimed',
+                   'canon_section': '4. The two places',
+                   'evidence': 'probes/P-J-TWO-TRACE-RESIDUE-DECODER-1',
+                   'falsifier': 'fires on an admitted pair violating trace reconstruction or the '
+                                'pure-J recurrence, a congruent distinct equal-trace pair under '
+                                'm^4>16X, a norm-941 strip coefficient outside [-8,8], or any '
+                                'nontermination, false acceptance, false rejection or incorrect '
+                                'exact inverse of a well-typed D25 input; affine driven steps and '
+                                'physical acquisition are outside scope'},
+                  {'claim_id': 'J-OBSERVED-SCALAR-CODE-CAPACITY',
+                   'status': 'T',
+                   'scope': 'at L1 for the complete oriented nonzero strip B_X and observed datum '
+                            'D_m alone, K_m(X)=|D_m(B_X)| is the arithmetic capacity and '
+                            'min(3125,K_m(X)) is the maximum usable subset of the native retained '
+                            'alphabet under R(n,x)=J^n G(Lambda_n(x)), norm bound X and global '
+                            'comparison across every reachable sheet n>=3 with no separately '
+                            'supplied n; arbitrary codeword J-offsets do not increase this '
+                            'capacity; at X=941 there are 3150 strip elements, 145 two-trace '
+                            'classes, 2603 D5 keys and 3150 D25 keys, so the D5 shortfall is 522 '
+                            'and r=2 is the first sufficient full 5^r residue depth for 3125 '
+                            'labels; the first D5 collision has norm 55, witnessed by (0,1,1,-2) '
+                            'and (0,1,1,3), with common alpha bar(alpha)=beta bar(beta)=7+phi and '
+                            'traces (15,20); this does not minimize arbitrary extra observables, '
+                            'partial residue refinements or interfaces supplying n, and selects no '
+                            'physical codebook',
+                   'canon_section': '4. The two places',
+                   'evidence': 'probes/P-J-TWO-TRACE-RESIDUE-DECODER-1',
+                   'falsifier': 'fires on a reader in the frozen no-separate-n class exceeding '
+                                'K_m(X), a failure of attainment, an incorrect complete norm-941 '
+                                'key census, a D5 collision of smaller positive norm than 55, or '
+                                'failure of the exact norm-55 witness; separately supplied n, '
+                                'fixed-time comparison or another observation changes the reader '
+                                'class; the stated finite census and residue-depth minimality are '
+                                'at X=941'},
+                  {'claim_id': 'U-NORMALIZED-SCALAR-READBACK',
+                   'status': 'T',
+                   'scope': 'at L1 fix any known injection G:F5^5->B_941 into the normalized '
+                            'nonzero strip and the canonical reachable-sheet chart '
+                            'Lambda_n:X_n->F5^5; on n>=3 the chosen reading H_G(n,x)=D25(J^n '
+                            'G(Lambda_n(x))) has a total exact inverse on its image: after the '
+                            'scalar inverse returns (alpha,beta,k), require k>=3 and beta in '
+                            'im(G), then return (k,Lambda_k^-1(G^-1(beta))); these tests also '
+                            'recognize the exact image, and k equals n because G is normalized; '
+                            'the result restores the current synchronized native state, not '
+                            'arbitrary lost initial heads, and leaves G, the target J-action and '
+                            'exact observation availability as explicit premises',
+                   'canon_section': '4. The two places',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on an admitted known normalized injective G or synchronized '
+                                'state for which the composed inverse fails, on an accepted datum '
+                                'outside the exact image, or if its recovered k differs from n; '
+                                'arbitrary unnormalized codebooks, n<3, original-head recovery and '
+                                'physical clock interpretation are outside scope'}],
+ 'NORMATIVE.tsv': [{'item_id': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::J-TWO-TRACE-RESIDUE-INVERSE'},
+                   {'item_id': 'J-OBSERVED-SCALAR-CODE-CAPACITY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'J-OBSERVED-SCALAR-CODE-CAPACITY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::J-OBSERVED-SCALAR-CODE-CAPACITY'},
+                   {'item_id': 'U-NORMALIZED-SCALAR-READBACK',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-NORMALIZED-SCALAR-READBACK',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-NORMALIZED-SCALAR-READBACK'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                   'evidence_id': 'EV-J-TWO-TRACE-RESIDUE-INVERSE',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-J-TWO-TRACE-RESIDUE-DECODER-1',
+                   'sha256': '7b1dac4fc35c1e4aeb3e9709e2002ac7b1c686bda8316ebfd8d261d1bac0c3c5',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'J-OBSERVED-SCALAR-CODE-CAPACITY',
+                   'evidence_id': 'EV-J-OBSERVED-SCALAR-CODE-CAPACITY',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-J-TWO-TRACE-RESIDUE-DECODER-1',
+                   'sha256': '7b1dac4fc35c1e4aeb3e9709e2002ac7b1c686bda8316ebfd8d261d1bac0c3c5',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'U-NORMALIZED-SCALAR-READBACK',
+                   'evidence_id': 'EV-U-NORMALIZED-SCALAR-READBACK',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '5d3dc03838566a1ce9f620068afa992305b4695e63e90e580d9b283c9a7b28db',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON94-DECLARE-J-TWO-TRACE-RESIDUE-INVERSE',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-29',
+                  'release': 'canon-v94',
+                  'claim_id': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '9a620802a49fbe7ddeadf0f2ac0fdd09cf06e280b32514a5663f86c88f9b7909',
+                  'evidence_id': 'EV-J-TWO-TRACE-RESIDUE-INVERSE',
+                  'evidence_location': 'probes/P-J-TWO-TRACE-RESIDUE-DECODER-1',
+                  'evidence_sha256': '7b1dac4fc35c1e4aeb3e9709e2002ac7b1c686bda8316ebfd8d261d1bac0c3c5',
+                  'rationale': 'Accept the reviewed exact proof and complete pinned x86_64/aarch64 '
+                               'audit of the sealed public decoder probe; all existing claim '
+                               'scopes/statuses and all 25 H/O owners are preserved.'},
+                 {'event_id': 'CANON94-DECLARE-J-OBSERVED-SCALAR-CODE-CAPACITY',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-29',
+                  'release': 'canon-v94',
+                  'claim_id': 'J-OBSERVED-SCALAR-CODE-CAPACITY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'bdd13b5180d2e4c4a369b46eaf13a8d44c0b8974510630f23d0e90fd1b6460e7',
+                  'evidence_id': 'EV-J-OBSERVED-SCALAR-CODE-CAPACITY',
+                  'evidence_location': 'probes/P-J-TWO-TRACE-RESIDUE-DECODER-1',
+                  'evidence_sha256': '7b1dac4fc35c1e4aeb3e9709e2002ac7b1c686bda8316ebfd8d261d1bac0c3c5',
+                  'rationale': 'Accept the reviewed exact proof and complete pinned x86_64/aarch64 '
+                               'audit of the sealed public decoder probe; all existing claim '
+                               'scopes/statuses and all 25 H/O owners are preserved.'},
+                 {'event_id': 'CANON94-DECLARE-U-NORMALIZED-SCALAR-READBACK',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-29',
+                  'release': 'canon-v94',
+                  'claim_id': 'U-NORMALIZED-SCALAR-READBACK',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '5d3dc03838566a1ce9f620068afa992305b4695e63e90e580d9b283c9a7b28db',
+                  'evidence_id': 'EV-U-NORMALIZED-SCALAR-READBACK',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '5d3dc03838566a1ce9f620068afa992305b4695e63e90e580d9b283c9a7b28db',
+                  'rationale': 'Declare the self-contained composition of the exact scalar inverse '
+                               'with the existing normalized strip and reachable native chart; the '
+                               'chosen codebook remains an explicit premise and no original-head '
+                               'or physical claim follows.'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                       'depends_on': 'J-UNIT-STRIP-NORMAL-FORM',
+                       'relation': 'REQUIRES',
+                       'basis': 'the oriented half-open strip and exact J-unit action normalize '
+                                'every bounded-norm nonzero scalar'},
+                      {'item_id': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                       'depends_on': 'J-PROJECTIONS',
+                       'relation': 'REQUIRES',
+                       'basis': 'the ordered squared Galois moduli give the two-trace linear '
+                                'inverse and pure-J recurrence'},
+                      {'item_id': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'exact scalar inversion supplies no physical acquisition of '
+                                'unbounded traces or residue, apparatus or renewal'},
+                      {'item_id': 'J-OBSERVED-SCALAR-CODE-CAPACITY',
+                       'depends_on': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                       'relation': 'REQUIRES',
+                       'basis': 'normalization of equal readings and exact norm-941 coefficient '
+                                'box reduce the observed capacity to a complete finite strip '
+                                'census'},
+                      {'item_id': 'J-OBSERVED-SCALAR-CODE-CAPACITY',
+                       'depends_on': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                       'relation': 'REQUIRES',
+                       'basis': 'all 3125 conserved labels occur at every sheet n>=3 and every '
+                                'equivariant reader has the stipulated codebook form'},
+                      {'item_id': 'J-OBSERVED-SCALAR-CODE-CAPACITY',
+                       'depends_on': 'J-SCALAR-CODE-CAPACITY-3125',
+                       'relation': 'REQUIRES',
+                       'basis': 'the inherited norm-941 scalar alphabet is the frozen capacity '
+                                'budget, with no physical codebook selected'},
+                      {'item_id': 'U-NORMALIZED-SCALAR-READBACK',
+                       'depends_on': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the exact inverse returns the chosen normalized codeword and '
+                                'integer exponent with image recognition'},
+                      {'item_id': 'U-NORMALIZED-SCALAR-READBACK',
+                       'depends_on': 'U-NATIVE-CHART-AND-QDD-READBACK',
+                       'relation': 'REQUIRES',
+                       'basis': 'the reachable-sheet chart is a bijection with an explicit inverse '
+                                'and retains the original-head merger boundary'},
+                      {'item_id': 'U-NORMALIZED-SCALAR-READBACK',
+                       'depends_on': 'U-COUNTER-REACHABLE-AMPLITUDE-CLASS',
+                       'relation': 'REQUIRES',
+                       'basis': 'the normalized chosen codebook instantiates the classified pure-J '
+                                'equivariant reader'},
+                      {'item_id': 'U-NORMALIZED-SCALAR-READBACK',
+                       'depends_on': 'J-SCALAR-CODE-CAPACITY-3125',
+                       'relation': 'REQUIRES',
+                       'basis': 'the complete strip contains enough elements for the explicitly '
+                                'chosen 3125-label injection'},
+                      {'item_id': 'U-NORMALIZED-SCALAR-READBACK',
+                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'the mathematical codebook inverse does not derive codebook '
+                                'selection, preparation, source capture or physical measurement'}]}
+V94_SCOPE_SHA256 = {'J-TWO-TRACE-RESIDUE-INVERSE': '9a620802a49fbe7ddeadf0f2ac0fdd09cf06e280b32514a5663f86c88f9b7909',
+ 'J-OBSERVED-SCALAR-CODE-CAPACITY': 'bdd13b5180d2e4c4a369b46eaf13a8d44c0b8974510630f23d0e90fd1b6460e7',
+ 'U-NORMALIZED-SCALAR-READBACK': '5d3dc03838566a1ce9f620068afa992305b4695e63e90e580d9b283c9a7b28db'}
+V94_BLOCKS = {'scalar': {'begin': '### J-TWO-TRACE-RESIDUE-INVERSE [T]\n',
+            'end': '### J-OBSERVED-SCALAR-CODE-CAPACITY [T]\n',
+            'sha256': '81360e4b9039da7696e11bbb3ee59f182555c230e8d5610a96d08f0f2fe7477e',
+            'bytes': 4113},
+ 'capacity': {'begin': '### J-OBSERVED-SCALAR-CODE-CAPACITY [T]\n',
+              'end': '### U-NORMALIZED-SCALAR-READBACK [T]\n',
+              'sha256': '5514bce5b76dd7804873f2d7e55d6d1da3e40c63f838a4f8b64beebe07c91a55',
+              'bytes': 2593},
+ 'native': {'begin': '### U-NORMALIZED-SCALAR-READBACK [T]\n',
+            'end': '### QDD-GALOIS-SUM-RATIO [T]\n',
+            'sha256': '89b243e60de5afdfb375369b0ad767c1032592696826170deadc5ce51a149af6',
+            'bytes': 1781},
+ 'inputs': {'begin': '#### Decoder input and dependency accounting\n',
+            'end': '### Factor-canonicity audit overlay\n',
+            'sha256': '21a8cc20fef2ab8b94de1210ea9e2723bc0c46b34c893d6221ba95532496da69',
+            'bytes': 2615},
+ 'balanced': {'begin': '**Balanced-coefficient readback.**',
+              'end': 'The adopted dictionary is exactly\n',
+              'sha256': 'fb40dbe2f4e4e7af5ea9ee96ea6360a75e18a944e7655f0a39242b3e42a6cd6c',
+              'bytes': 816}}
+
+
+def v94_previous_bytes(path):
+    """Validate every v94 byte, then recover exact public v93 audit input."""
+    patch = V94_INPUT_PATCH.get(path.name)
+    if patch is None:
+        return None
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v94_current_checks():
+    """Audit current release boundaries without executing scientific probes."""
+    names = tuple(name for name in V94_INPUT_PATCH if name.endswith(".tsv"))
+    previous = {
+        name: v87_table_bytes(v94_previous_bytes(ROOT / "canon" / name))
+        for name in names
+    }
+    current = {
+        name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+        for name in names
+    }
+    prior_index = {row["claim_id"]: row for row in previous["REGISTRY.tsv"]}
+    index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    ids = set(V94_IDS)
+    counts = {
+        status: sum(row["status"] == status for row in index.values())
+        for status in {row["status"] for row in index.values()}
+    }
+    prior_live = {
+        claim: row for claim, row in prior_index.items()
+        if row["status"] in {"H", "O"}
+    }
+    live = {
+        claim: row for claim, row in index.items()
+        if row["status"] in {"H", "O"}
+    }
+    canon_text = CANON.read_text(encoding="utf-8")
+    blocks = {}
+    for name, contract in V94_BLOCKS.items():
+        start = canon_text.find(contract["begin"])
+        end = canon_text.find(contract["end"], start)
+        blocks[name] = (canon_text[start:end].encode("utf-8")
+                        if start >= 0 and end > start else b"")
+    blocks_exact = all(
+        len(blocks[name]) == contract["bytes"]
+        and hashlib.sha256(blocks[name]).hexdigest() == contract["sha256"]
+        for name, contract in V94_BLOCKS.items()
+    )
+    native = blocks["native"].decode("utf-8")
+    scalar = blocks["scalar"].decode("utf-8")
+    capacity = blocks["capacity"].decode("utf-8")
+    inputs = blocks["inputs"].decode("utf-8")
+    balanced = blocks["balanced"].decode("utf-8")
+    expected_probe = "probes/P-J-TWO-TRACE-RESIDUE-DECODER-1"
+    expected_probe_hash = "7b1dac4fc35c1e4aeb3e9709e2002ac7b1c686bda8316ebfd8d261d1bac0c3c5"
+    return [
+        (
+            "V94-PRIOR-BYTES",
+            "thirteen complete v94 inputs reconstruct exact public v93 before all 115 unchanged historical guards",
+            len(V94_INPUT_PATCH) == 13
+            and set(V94_INPUT_PATCH) == set(V92_INPUT_PATCH)
+            and V94_PRIOR_COMMIT == "e4b426cf631abcecd1516f2110564dd37912d246"
+            and all(v94_previous_bytes(ROOT / "canon" / name) is not None
+                    for name in V94_INPUT_PATCH),
+        ),
+        (
+            "V94-THREE-THEOREMS",
+            "three L1 T rows have exact scopes, eleven dependencies and declarations; two use the unchanged decoder probe and one an inline composition",
+            set(index) == set(prior_index) | ids
+            and all(current[name] == previous[name] + rows
+                    for name, rows in V94_ADDITIONS.items())
+            and all(
+                index[claim]["status"] == "T"
+                and hashlib.sha256(index[claim]["scope"].encode("utf-8")).hexdigest()
+                    == V94_SCOPE_SHA256[claim]
+                and normative[claim]["item_type"] == "THEOREM"
+                and normative[claim]["layer"] == "L1"
+                and normative[claim]["gate_ids"] == ""
+                and "### " + claim + " [T]" in canon_text
+                for claim in V94_IDS
+            )
+            and len(V94_ADDITIONS["DEPENDENCIES.tsv"]) == 11
+            and all(
+                evidence[claim]["evidence_kind"] == "PUBLIC_PROBE"
+                and evidence[claim]["location"] == expected_probe
+                and evidence[claim]["sha256"] == expected_probe_hash
+                and evidence[claim]["architecture_requirement"] == "two-architecture"
+                for claim in V94_IDS[:2]
+            )
+            and v86_probe_bundle_sha256(expected_probe) == expected_probe_hash
+            and evidence[V94_IDS[2]]["evidence_kind"] == "INLINE_CANON"
+            and evidence[V94_IDS[2]]["location"] == "inline"
+            and evidence[V94_IDS[2]]["sha256"] == V94_SCOPE_SHA256[V94_IDS[2]]
+            and evidence[V94_IDS[2]]["architecture_requirement"] == "none",
+        ),
+        (
+            "V94-NORMALIZED-READBACK",
+            "the pinned inline inverse fixes normalized known G, rejects k<3 and codewords outside its image, and recovers current state without lost heads or physical time",
+            blocks_exact
+            and all(text in native for text in (
+                "known injection `G:F5^5 -> B_941`",
+                "in the declared oriented strip",
+                "`{(n,x):n>=3,x in X_n}`",
+                "observed datum=D_25(alpha)",
+                "Uniqueness gives `k=n`",
+                "reject `k<3`",
+                "`beta not in image(G)`",
+                "state and re-encodes to the input",
+                "The target and codebook are fixed choices",
+                "recover the five possible pre-merger heads",
+                "original QDD amplitude",
+                "as physical time",
+            ))
+            and all(text in index[V94_IDS[2]]["scope"] for text in (
+                "known injection G:F5^5->B_941",
+                "normalized nonzero strip",
+                "require k>=3 and beta in im(G)",
+                "(k,Lambda_k^-1(G^-1(beta)))",
+                "current synchronized native state",
+                "explicit premises",
+            )),
+        ),
+        (
+            "V94-INPUT-BOUNDARY",
+            "exact observations and chosen codes remain premises; balanced original QDD coefficients lift modulo five including zero, while global residue depth has the no-separate-n boundary",
+            blocks_exact
+            and all(text in scalar for text in (
+                "pure J step, not an affine source-driven update",
+                "The two traces are unbounded integers",
+                "not a finite-state storage theorem",
+                "A valid-to-valid corruption need not be",
+            ))
+            and all(text in capacity for text in (
+                "with no separately\nsupplied n",
+                "min(3125,K_m(X))",
+                "Supplying `(n,D_m)` changes the class",
+                "does not minimize a partial residue refinement",
+            ))
+            and all(text in balanced for text in (
+                "residue `Amp_QDD mod 5O`",
+                "`[-4,4]`, whose only\nmultiple of five is zero",
+                "This includes the zero source",
+                "original head amplitude\nis supplied",
+                "on a merged fibre",
+                "after an arbitrary\nJ shift",
+            ))
+            and all(text in inputs for text in (
+                "supplied data, selected conventions",
+                "derived fields and physical premises",
+                "The preceding D25 datum, a known injection",
+                "is not identified with the original balanced QDD amplitude",
+                "three-state QDD and five-state full-head memory bounds",
+                "Regenerating a stipulated history does not supply a material archive",
+                "does not receive n separately",
+            )),
+        ),
+        (
+            "V94-OPEN-BOUNDARY",
+            "all 471 prior rows and 25 H/O owners are unchanged; 474 claims preserve gates, programs and CORE selection with no physical promotion or new debt",
+            len(index) == 474 and len(prior_index) == 471
+            and counts == {"T": 332, "D": 59, "C": 39, "H": 2, "O": 23, "F": 19}
+            and all(index.get(claim) == row for claim, row in prior_index.items())
+            and live == prior_live and len(live) == 25
+            and all(current[name] == previous[name] for name in (
+                "GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv"))
+            and (ROOT / "canon" / "FRONTIER.md").read_bytes()
+                == v94_previous_bytes(ROOT / "canon" / "FRONTIER.md")
+            and all(row["owner_item_id"] not in ids for row in current["GATES.tsv"])
+            and all(row["claim_id"] not in ids for row in current["CORE_SELECTION.tsv"])
+            and all(row["claim_id"] not in ids for row in current["FRONTIER_PROGRAMS.tsv"]),
+        ),
+    ]
+
+
 # Exact v92 input contract and reversible public v91 reconstruction.
 V92_PRIOR_COMMIT = 'd14971d66cf5b2497ae83927b7b16ced5548d85b'
 V92_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '90cf06bbccb85416ee7c75ecac005eddaae98200274792dba10194ba33c1a697',
@@ -402,7 +925,9 @@ V93_DEPENDENCIES = {
 
 def v93_previous_bytes(path):
     """Recover the exact public v92 input from the v93 candidate bytes."""
-    current = path.read_bytes()
+    current = v94_previous_bytes(path)
+    if current is None:
+        return None
     name = path.name
     text = current.decode("utf-8")
 
@@ -481,7 +1006,7 @@ def v93_current_checks():
         for name in names
     }
     current = {
-        name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+        name: v87_table_bytes(v94_previous_bytes(ROOT / "canon" / name))
         for name in names
     }
     old_index = {row["claim_id"]: row for row in previous["REGISTRY.tsv"]}
@@ -509,8 +1034,8 @@ def v93_current_checks():
         claim for claim, row in index.items()
         if row["status"] in {"H", "O"}
     }
-    canon_text = CANON.read_text(encoding="utf-8")
-    frontier_current = (ROOT / "canon" / "FRONTIER.md").read_bytes()
+    canon_text = (v94_previous_bytes(CANON) or b"").decode("utf-8")
+    frontier_current = v94_previous_bytes(ROOT / "canon" / "FRONTIER.md")
     frontier_previous = v93_previous_bytes(ROOT / "canon" / "FRONTIER.md")
     unchanged_tables = ("GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv")
 
@@ -13600,9 +14125,10 @@ def run():
     checks.extend(v91_current_checks())
     checks.extend(v92_current_checks())
     checks.extend(v93_current_checks())
+    checks.extend(v94_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v93")
+    print("historical guards: exact reconstructed v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v94")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0
