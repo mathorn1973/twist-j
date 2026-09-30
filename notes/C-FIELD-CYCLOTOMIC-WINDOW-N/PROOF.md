@@ -1,10 +1,13 @@
 # Finite integer field window and integral Phi5 carrier
 
-PUBLIC / NON-CANONICAL. Action layer: L1. This is a symbolic proof for the
-frozen C-FIELD-CYCLOTOMIC-WINDOW-N assignment, not a run record or a Canon
-promotion. It uses the electric-first convention and the inherited
-FIELD-SHEAR-ENERGY-BOUNDARY identities. No scientific program or scratch
-calculation was executed to obtain this fragment.
+PUBLIC / NON-CANONICAL. Action layer: L1. This is a proof candidate for the
+frozen C-FIELD-CYCLOTOMIC-WINDOW-N assignment, not a Canon promotion.
+Sections 1--8 were independently written before either program executed;
+they use the inherited FIELD-SHEAR-ENERGY-BOUNDARY identities. Sections
+9--15 give the explicit integral construction and independently frozen
+breaker's certificates. The primary program failed a separately hard-coded
+image predicate; that failure is preserved in Section 14 and RUN.md.
+The mathematical arguments below do not turn that failed audit into a pass.
 
 ## 1. Statement and inherited algebra
 
@@ -331,3 +334,431 @@ Sections 4 and 5 have E_0=0; hence their complete orbits also lie in the
 zero-divergence sector whenever DC=0. These are algebraic field-reversal
 and charge-retention statements, with no physical time-reversal,
 interaction, or cross-layer conclusion.
+
+## 9. The selected multigraph and full integral carrier
+
+Use vertices (0,1,2) and ordered oriented edges
+(e0,e1,e2,e3)=(0->1,0->1,0->2,2->1). The first two are distinct parallel
+edges. This is a multigraph with a digon and a triangle, not a simple graph.
+Order the faces c0=e0-e1, c1=-e0+e2+e3. With + at the tail and - at the head,
+
+```text
+C = [[ 1,-1],     D = [[ 1, 1, 1, 0],
+     [-1, 0],          [-1,-1, 0,-1],
+     [ 0, 1],          [ 0, 0,-1, 1]],
+     [ 0, 1]],
+G = C^t C = [[2,-1],[-1,3]],     DC=0.
+```
+
+No minimality or uniqueness claim is needed. The eigenvalues of G are
+(5-sqrt(5))/2 and (5+sqrt(5))/2, both strictly between zero and four.
+Thus the full six-coordinate energy is positive definite. In raw order
+(E0,E1,E2,E3,M0,M1), the integer matrices are
+
+```text
+T = [[ 1, 0, 0, 0, 1,-1],
+     [ 0, 1, 0, 0,-1, 0],
+     [ 0, 0, 1, 0, 0, 1],
+     [ 0, 0, 0, 1, 0, 1],
+     [-1, 1, 0, 0,-1, 1],
+     [ 1, 0,-1,-1, 1,-2]],
+
+T^-1 = [[-1, 1, 1, 1,-1, 1],
+        [ 1, 0, 0, 0, 1, 0],
+        [ 1, 0, 0,-1, 0,-1],
+        [ 1, 0,-1, 0, 0,-1],
+        [ 1,-1, 0, 0, 1, 0],
+        [-1, 0, 1, 1, 0, 1]].
+```
+
+These follow from the two shears, so both products are identity without any
+spectral assumption. The full energy bilinear matrix is
+B_raw=[[2I4,C],[C^t,2I2]], with H(z)=z^t B_raw z/2. This convention keeps
+B integral; its adjoint agrees with that for H's polarized form B/2.
+
+## 10. Saturated active lattice, action and actual module map
+
+Define the embedding P and extraction F by
+
+```text
+P(a,b,c,d)=(a-b,-a,b,b,c,d),
+F(E0,E1,E2,E3,M0,M1)=(-E1,E2,M0,M1),
+
+P = [[1,-1,0,0],[-1,0,0,0],[0,1,0,0],[0,1,0,0],
+     [0,0,1,0],[0,0,0,1]],      FP=I4.
+```
+
+The active rational space is im_Q(C) in the electric entries and Q^2 in
+the magnetic entries. On it the induced action and its inverse are
+
+```text
+A = T_act = [[ 1, 0, 1, 0],      A^-1 = [[-1, 1,-1, 0],
+             [ 0, 1, 0, 1],               [ 1,-2, 0,-1],
+             [-2, 1,-1, 1],               [ 2,-1, 1, 0],
+             [ 1,-3, 1,-2]],              [-1, 3, 0, 1]].
+```
+
+Indeed TP=PA. The energy restricted to these integer coordinates is
+
+```text
+H(a,b,c,d)=2a^2-2ab+3b^2+c^2+d^2+2ac-ad-bc+3bd,
+B=P^t B_raw P = [[ 4,-2, 2,-1],
+                 [-2, 6,-1, 3],
+                 [ 2,-1, 2, 0],
+                 [-1, 3, 0, 2]],     H=x^t B x/2.
+```
+
+This is the actual inherited energy, not a Euclidean substitute. Its leading
+principal minors are 4,20,20,5, and A^t B A=B.
+
+An explicit cyclic module map is available. Set w=(0,0,1,0) and take the
+columns w,Aw,A^2w,A^3w:
+
+```text
+K = [[0, 1, 0, 0],        K^-1 = [[2,-2,1,-1],
+     [0, 0, 1,-1],                [1, 0,0, 0],
+     [1,-1, 0,-1],                [1,-1,0,-1],
+     [0, 1,-2, 1]],               [1,-2,0,-1]],
+
+Z = [[0,0,0,-1],[1,0,0,-1],[0,1,0,-1],[0,0,1,-1]],
+det K=-1,       AK=KZ.
+```
+
+Multiplication of the displayed matrices verifies the inverse and
+intertwining. Z is multiplication by t in the basis (1,t,t^2,t^3) of
+Z[t]/(1+t+t^2+t^3+t^4). It follows that Phi5(A)=0, A^5=I, and A has
+exact order five since A!=I. This is an actual integral module isomorphism:
+
+```text
+sum_(j=0)^3 q_j zeta5^j  -> P K(q0,q1,q2,q3),
+inverse on the raw active lattice: K^-1 F.
+```
+
+The choice is t=zeta5 with A acting by that generator. Another orientation
+or Galois choice would need an explicit changed map. The module statement
+does not follow merely from matching characteristic polynomials. It also
+does not claim the already canonical generic J/cyclotomic bridge is new;
+the new datum here is its map into this particular field lattice and energy.
+
+To identify the lattice in the question exactly, take static columns
+
+```text
+S = [[1,0],[1,0],[0,1],[1,-1],[0,0],[0,0]].
+```
+
+They solve C^t E=0 and M=0, and TS=S. The six columns [P,S] are independent
+(their determinant has absolute value five). Phi5(T) kills P and equals 5I
+on S. Hence ker_Q Phi5(T)=im_Q P. If Px is integral for rational x, then
+x=F(Px) is integral. Thus
+
+```text
+Lambda_act = ker_Q Phi5(T) intersect Z^6 = P Z^4,
+```
+
+and P is saturated, with no suppressed sublattice index. Likewise every
+static integer vector has E0=E1=u, E2=v, E3=u-v, M=0 and is S(u,v),
+so S is saturated. Doubling one P column would preserve its rational span
+but produce index two; the independent control explicitly rejects that move.
+
+In the active coordinates,
+
+```text
+J_act=I+A^2 = [[ 0, 1, 0, 1],
+              [ 1,-1, 1,-1],
+              [ 1,-3, 1,-2],
+              [-3, 4,-2, 3]].
+```
+
+The module map identifies it with the already-given 1+zeta5^2.
+Its characteristic polynomial is Phi5(x-1)=x^4-3x^3+4x^2-2x+1, since
+squaring permutes the four primitive fifth roots. Trace is three and
+determinant is one. Its integral inverse is -A-A^2. It is not an energy
+isometry: x=(1,0,0,0) has H=2 while H(J_act x)=3. The finite-order time
+step is A; the integer unit J_act is a different map.
+
+## 11. Integral gluing and fixed-divergence sectors
+
+Let W=[P,S], and write rational coordinates as (a,b,c,d,u,v). Directly,
+
+```text
+W^-1 = [[ 2/5,-3/5, 1/5, 1/5,0,0],
+        [-1/5,-1/5, 2/5, 2/5,0,0],
+        [   0,   0,   0,   0,1,0],
+        [   0,   0,   0,   0,0,1],
+        [ 2/5, 2/5, 1/5, 1/5,0,0],
+        [ 1/5, 1/5, 3/5,-2/5,0,0]].
+```
+
+One can verify this by solving E0=a-b+u, E1=-a+u, E2=b+v,
+E3=b+u-v. For integer raw states all six coordinates are integral iff
+
+```text
+g(E)=2E0-3E1+E2+E3=0 mod5.
+```
+
+Each numerator in W^-1 is either this residue or its scalar multiple
+modulo five. The map g:Z^6->Z/5 is surjective (the E2 coefficient is one),
+and its kernel is PZ^4+SZ^2. Thus the full gluing quotient is Z/5, not an
+integral direct sum decomposition of all Z^6.
+
+The actual charges rho=DE satisfy rho0+rho1+rho2=0 and
+
+```text
+rho0=E0+E1+E2, rho1=-E0-E1-E3, rho2=-E2+E3,
+g(E)=2rho0+rho2 mod5.
+```
+
+Every integer zero-sum charge is realizable: for example
+(E0,E1,E2,E3)=(rho0,0,0,rho2) has that charge. Two electric fields with
+the same charge differ by C Z^2, because DE=0 implies
+E3=E2 and E0=-E1-E2, exactly the two C columns.
+Consequently each fixed-divergence sector is an affine active integer
+lattice. Its unique orthogonal static part is fixed by rho, but it is
+integer precisely when 2rho0+rho2=0 mod5. In the other four charge residue
+classes the static part and the active part are both rationally glued;
+replacing them independently by integers would lose actual ambient states.
+
+The static Gram is S_E^t S_E=[[3,-1],[-1,2]]. For rational coordinates,
+
+```text
+H(Px+Ss)=H_act(x)+s^t [[3,-1],[-1,2]] s.
+```
+
+Orthogonality follows from C^t S_E=0, also cancelling the magnetic cross
+term. Thus each charge sector has an affine active origin selected by its
+rational static part. No unrecorded integral projection is available.
+
+## 12. L5 energy and exact Smith/Hermite/image certificates
+
+On Lambda_act only, define L=(I-A)(I-A^2). Exact multiplication gives
+
+```text
+L = [[ 1,-3,-1,-2],       N=A^2 L = [[ 1, 2, 1, 2],
+     [-3, 4,-2, 1],                  [ 2,-1, 2,-1],
+     [ 0, 5, 1, 2],                  [ 0,-5, 1,-3],
+     [ 5,-5, 2,-1]],                 [-5, 5,-3, 4]].
+```
+
+All these are identities in the module Z[t]/Phi5. L commutes with A.
+Reducing (1-t)^2(1-t^2)^2 modulo Phi5 gives 5t^3. Therefore
+
+```text
+L^2=5A^3,       NL=LN=5I,       L^-1=N/5 over Q.
+```
+
+Because A is an isometry of B, A^*=A^-1 for *=B^-1 (transpose) B.
+Hence L^*=(I-A^-2)(I-A^-1)=A^-3 L=A^2 L=N. It follows that
+
+```text
+L^* L=5I,        L^t B L=5B,        H(Lx)=5H(x).
+```
+
+The ordinary transpose does not have this property: for example the
+Euclidean squared norm of the first L column is 35 rather than five.
+Finally det(I-A)=Phi5(1)=5 and det(I-A^2)=5, since A^2 has the same
+primitive fifth-root spectrum. Thus det L=25, with positive sign.
+
+A constructive column Hermite certificate is
+
+```text
+V_H = [[ 1, 1, 1, 1],      H_L = [[5,3,0,0],
+       [ 2, 1, 2, 1],             [0,1,0,0],
+       [ 0,-1, 1, 0],             [0,0,5,3],
+       [-5,-2,-3,-1]],            [0,0,0,1]],
+L V_H=H_L,      det V_H=1.
+```
+
+The equality is direct; the determinant also follows from det H_L=det L=25.
+Thus H_L and L generate the same integer lattice. The displayed upper
+triangular form has positive diagonal and reduced residues above each
+row's diagonal (3 is between zero and 5).
+
+For an explicit Smith certificate, put
+
+```text
+U = [[0, 1,0, 0],          V = [[ 1, 1, 1, 1],
+     [0, 0,0, 1],               [ 1, 1, 2, 2],
+     [1,-3,0, 0],               [-1, 0, 0, 1],
+     [0, 0,1,-3]],              [-2,-1,-5,-3]].
+U L V=diag(1,1,5,5),       |det U|=|det V|=1.
+```
+
+This can be checked without a Smith algorithm: subtract three times row
+two from row one and three times row four from row three of H_L, obtaining
+diag(5,1,5,1), then permute rows and columns in order (2,4,1,3).
+These are unimodular operations. The independent code separately computes
+the determinantal divisors 1,1,1,5,25, consistent with this Smith form.
+
+Consequently, for every integer y=(a,b,c,d), not merely a bounded test box,
+
+```text
+y in L Z^4  iff  a+2b=0 mod5 AND c+2d=0 mod5,
+Lambda_act / L Lambda_act ~= (Z/5Z)^2.
+```
+
+Necessity and sufficiency follow at once from H_L's columns: its unique
+coefficient vector is ((a-3b)/5,b,(c-3d)/5,d). Equivalently every entry
+of Ny is divisible by five. The executable exact interface is
+
+```python
+def admit_and_invert(a, b, c, d):
+    if (a + 2*b) % 5 or (c + 2*d) % 5:
+        raise ValueError("outside L5 image")
+    numerators = (a + 2*b + c + 2*d,
+                  2*a - b + 2*c - d,
+                  -5*b + c - 3*d,
+                  -5*a + 5*b - 3*c + 4*d)
+    return tuple(n // 5 for n in numerators)
+```
+
+This is the algebraic interface certified by the frozen break.py's
+admission/partial_inverse methods, not a replacement run of the failed
+primary program. Its two modular checks make every division exact.
+L is a total injective integer map, and this inverse is total only on its
+image. The quotient residues are a canonical admission record in the
+selected coordinates; invertible inputs need no additional hidden residue.
+
+Whole-shell surjectivity is false already for H=1 to H=5. The vector
+y=(0,0,1,-2) has H(y)=5, but c+2d=-3 is not divisible by five and
+Ny=(-3,4,7,-11). Thus it has no integer preimage. Meanwhile w=(0,0,1,0)
+has H=1 and Lw has H=5. The actual bijection is
+
+```text
+{x:H(x)=h} -> {y in L Z^4:H(y)=5h}.
+```
+
+No shell enumeration was used or is claimed. An integer unit J, finite
+rotation A, image index 25 and energy multiplier five are distinct facts;
+none of these numbers is a waiting time, decay exponent or barrier length.
+
+## 13. Full-space obstruction and the Gauss-compatible domain
+
+Since T acts by A on P and by identity on S, T^5=I on the full space but
+Phi5(T) is nonzero there. The rational static projector is
+
+```text
+P_s=Phi5(T)/5 = (1/5) [[2,2, 1, 1,0,0],
+                       [2,2, 1, 1,0,0],
+                       [1,1, 3,-2,0,0],
+                       [1,1,-2, 3,0,0],
+                       [0,0, 0, 0,0,0],
+                       [0,0, 0, 0,0,0]].
+```
+
+It is a projector by its action on the rational direct sum. Define
+L_raw=(I-T)(I-T^2), an integer polynomial in T. It restricts to L on P
+but annihilates S. For example s=(1,1,0,1,0,0) has H=3 and
+DE=(2,-3,1), while L_raw s=0. Thus L_raw is neither injective nor a
+full-space energy similitude and cannot preserve general nonzero charges.
+In fact [D,0]L_raw=0, as [D,0]T=[D,0].
+
+The unique rational linear map equal to L on active vectors and identity
+on static vectors is
+
+```text
+L_tilde = L_raw + P_s.
+```
+
+It preserves the actual D-divergence, but on the raw integer basis vector
+e0=(1,0,0,0,0,0) gives
+
+```text
+L_tilde e0=(17/5,-3/5,-9/5,-9/5,-1,3).
+```
+
+Therefore it is not an integer operation on the full carrier. Because
+L_raw is integral, L_tilde z is integral exactly when P_s z is integral,
+namely on the index-five domain PZ^4+SZ^2, equivalently the sectors
+2rho0+rho2=0 mod5. On that domain it is injective and preserves charges;
+its image consists of active parts in LZ^4 and arbitrary integer static
+parts. Its inverse uses the same admission test after integral splitting.
+Its energy law is
+
+```text
+H(L_tilde(Px+Ss))=5H_act(x)+H_static(s),
+Delta H=4H_act(x),
+```
+
+not five times the entire charged-state energy. On zero-divergence states
+the static part is zero and all of Lambda_act is available. Other affine
+sector constructions would need a separately chosen integer origin and
+their own energy proof; the failed rational extension is not a theorem
+that every possible charge-preserving construction is impossible.
+
+## 14. Preserved primary-audit failure and independence boundary
+
+The frozen primary verify.py used the extra explicit predicate
+
+```text
+a+2b=0 mod5 AND 3a-b+c-d=0 mod5.
+```
+
+It is false. For y=(0,0,1,1), both conditions hold, whereas
+Ny=(3,1,-2,1) is not divisible by five. This is the first disagreement in
+its frozen lexicographic residue loop, which stops at line 290. The
+unreached assertion that (0,0,1,2) is a nonimage H=5 state is also false:
+
+```text
+L(1,0,-1,1)=(0,0,1,2),       H(1,0,-1,1)=1.
+```
+
+Both are diagnosed; neither assertion nor the primary source is repaired,
+rerun or retrospectively called successful. The requested algebraic inverse
+and quotient targets did not assert that erroneous shortcut. The independent
+break.py, written and frozen without seeing the primary, returns the two
+correct congruences, a different true H=5 nonimage witness, and the complete
+625-residue audit. Its exact implementation is independently authored;
+its local execution is still only one x86_64 run. Section 12 proves its
+criterion for all integer vectors rather than extrapolating finite residues.
+
+The status is a reviewed partial candidate with a stopped primary audit,
+not a promotion-ready computation package. Green notes-only repository
+checks do not replay these scientific scripts and do not supply a public
+two-architecture computation gate.
+
+## 15. Exact interface and construction-choice account
+
+The input/output carrier for the proved injection is PZ^4, read locally
+from four edge registers and two face registers in the selected finite
+multigraph. Raw active admission is P F z=z, equivalently E2=E3 and
+E0+E1+E2=0. Extraction alone does not admit arbitrary raw inputs.
+On admission, F extracts its four integer coordinates and P
+embeds the output back without loss. Its D charge is zero and is retained.
+On the larger integral-split charged domain of Section 13 the static field
+and actual node charges are retained separately. Its charge-residue
+admission is an additional condition, not an automatic projection.
+
+A forward operation applies L to every active x, changing h to 5h.
+A reverse operation is available only on the two-congruence image and
+changes 5h to h, releasing exactly 4h. Because the inverse recovers the
+entire active vector, no phase information is discarded inside this
+interface. A many-state reaction would still need disjoint branch labels,
+a rule for which branch is enabled, and the matter/resource state needed
+to recover that choice. Rejecting nonmembers must be part of that law;
+rounding Ny/5 is not an inverse. Neither map is installed here as a global
+many-to-one update.
+
+All operations access only this fixed cell's registers; no coupling between
+cells, macrostep locality bound for a composed machine, useful transport or
+coercivity of a replicated incidence has been proved. This finite access
+statement supplies no new physical
+spatial dimension or speed. A future coupling must list its full substep
+access, retained records, charge transfers, nonnegative funding and inverse.
+
+| ingredient | inherited or proved conditional | remaining choice |
+| --- | --- | --- |
+| native U versus extended state | existing Canon separates the laws | this field is a declared architecture, not derived from U |
+| incidence | exact DC=0 and stable G for the displayed graph | multigraph, edge/face orientation and support are selected |
+| energy | inherited H and proved positivity/similitude | physical energy interpretation and matter metric are not selected |
+| field order | electric-first step, exact period and reversal | other schedules are outside scope |
+| cyclotomic marking | explicit K and inverse; J is the given unit | seed, orientation and Galois marking are stated choices |
+| L5 | exact image, inverse and energy difference | reaction branches and resource bookkeeping are additional architecture |
+| preparation/reader | exact raw coordinates and charge admission | actual preparation, detector, permanent record and reset remain open |
+
+At h=1 the release is four units. The inherited R18->A20 channel consumes
+two, so simply replacing the triangle conversion leaves two units
+unaccounted for. A later complete law must retain that remainder explicitly.
+No part of this candidate discharges QDD-INSTRUMENT-APPARATUS,
+QDD-TERMINAL-EVENT-SEMANTICS or PHOTON-MASSLESS-PHASE, or any other live
+H/O obligation. A corrected public successor audit must precede treating
+this stopped computation package as ready for promotion or coupling work.
