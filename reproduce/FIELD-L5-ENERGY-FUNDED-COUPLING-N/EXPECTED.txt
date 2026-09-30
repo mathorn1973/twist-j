@@ -1,0 +1,5 @@
+IMPLEMENTATION primary
+PRIMARY PASS: local L5 coupling; exact account, inverse and pointwise Gauss defect
+IMPLEMENTATION challenger
+CHALLENGER PASS: independent coupling audit; image, funding and branch controls
+COUPLING PASS: NON-CANONICAL L1; one selected finite-cell law; period 10
