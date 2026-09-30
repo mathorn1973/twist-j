@@ -24,15 +24,15 @@ class ArchitectureMapReportTests(unittest.TestCase):
         cls.report = architecture.audit(ROOT)
 
     def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 474)
+        self.assertEqual(self.report.claims, 484)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 332},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 342},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 61,
+                "none": 71,
                 "one-architecture": 9,
                 "recorded-audit": 31,
                 "two-architecture": 373,
@@ -45,7 +45,28 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(
             len(self.report.transitive_architecture_dependents), 339
         )
-        self.assertEqual(len(self.report.dependency_terminals), 63)
+        self.assertEqual(len(self.report.dependency_terminals), 67)
+        # v95 adds ten inline theorems (architecture_requirement=none).
+        # Their declared premise edges add four terminals and no path to
+        # DEF-ARCHITECTURE; this is a graph fact, not physical independence.
+        terminals_v95 = {
+            "INTEGER-F-JG-INVARIANTS",
+            "INTEGER-ENERGY-FUNDED-INVOLUTION",
+            "FIELD-SHEAR-ENERGY-BOUNDARY",
+            "INTEGER-SEPARATED-FACTOR-CERTIFICATE",
+        }
+        nonterminals_v95 = {
+            "U-NATIVE-SOURCE-RECEIVER-RECORD",
+            "U-NATIVE-RECORD-CONTINUATION-BOUNDARY",
+            "FIELD-GAUSS-CONTACT-MEMORY",
+            "FIELD-EISENSTEIN-RESONANCE",
+            "INTEGER-FINITE-PREACTIVATION-QUOTIENT",
+            "FIELD-CHARGED-SEPARATION-BOUND",
+        }
+        for item in terminals_v95 | nonterminals_v95:
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertNotIn(item, self.report.transitive_architecture_dependents)
+            self.assertEqual(item in self.report.dependency_terminals, item in terminals_v95)
         # v94 adds three theorem rows with existing theorem premises: two
         # public-probe evidence rows and one inline composition. All three
         # reach the declared architecture transitively, with no new root.

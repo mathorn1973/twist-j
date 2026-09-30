@@ -980,3 +980,13 @@ U-NORMALIZED-SCALAR-READBACK	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	the reacha
 U-NORMALIZED-SCALAR-READBACK	U-COUNTER-REACHABLE-AMPLITUDE-CLASS	REQUIRES	the normalized chosen codebook instantiates the classified pure-J equivariant reader
 U-NORMALIZED-SCALAR-READBACK	J-SCALAR-CODE-CAPACITY-3125	REQUIRES	the complete strip contains enough elements for the explicitly chosen 3125-label injection
 U-NORMALIZED-SCALAR-READBACK	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the mathematical codebook inverse does not derive codebook selection, preparation, source capture or physical measurement
+U-NATIVE-SOURCE-RECEIVER-RECORD	DEF-AUTONOMOUS-STATE	REQUIRES	Uses the registered autonomous native state, common origin and Thue-Morse selector law, with all generator formulas repeated explicitly.
+U-NATIVE-RECORD-CONTINUATION-BOUNDARY	U-NATIVE-SOURCE-RECEIVER-RECORD	REQUIRES	Uses exactly its five occupied preparations, actual prefix, common selected tail and unchanged native law; the positive record is retained rather than replaced by the continuation restriction.
+FIELD-GAUSS-CONTACT-MEMORY	INTEGER-F-JG-INVARIANTS	REQUIRES	Supplies the primitive conserved chi label for the stated F specialization of carrier transport.
+FIELD-EISENSTEIN-RESONANCE	INTEGER-F-JG-INVARIANTS	REQUIRES	Supplies and classifies the selected (A,B,C)=(6,2,-1) carrier form used to compute 18,20,14.
+FIELD-EISENSTEIN-RESONANCE	INTEGER-ENERGY-FUNDED-INVOLUTION	REQUIRES	Supplies the exact reversible six-unit resource release for the declared second reaction.
+FIELD-EISENSTEIN-RESONANCE	FIELD-SHEAR-ENERGY-BOUNDARY	REQUIRES	Supplies the one-triangle pure-cycle field step and its positive conserved energy.
+INTEGER-FINITE-PREACTIVATION-QUOTIENT	INTEGER-F-JG-INVARIANTS	REQUIRES	Supplies F^4=I, hence the common phase modulo four with unchanged carrier identities.
+INTEGER-FINITE-PREACTIVATION-QUOTIENT	FIELD-EISENSTEIN-RESONANCE	REQUIRES	Supplies the complete-shell q=3 conversion for the explicitly conditional field-phase omission.
+FIELD-CHARGED-SEPARATION-BOUND	FIELD-GAUSS-CONTACT-MEMORY	REQUIRES	Supplies the exact active-flux encoding, Gauss constraint, incidence convention and boundary-flux distinction.
+FIELD-CHARGED-SEPARATION-BOUND	FIELD-SHEAR-ENERGY-BOUNDARY	REQUIRES	Supplies strict positivity of the one-triangle block and its nonnegative contribution after separating bridge-edge squares.
