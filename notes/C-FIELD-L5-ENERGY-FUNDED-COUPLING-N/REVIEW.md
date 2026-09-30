@@ -44,8 +44,10 @@ the pin. It made no edits and performed no further scientific execution.
 The unchanged runner's first local execution passed both independently authored
 implementations with exact output identity, exit zero and empty stderr.
 The universal claims rely on the full proof and exact certificates, not merely
-the finite fixtures. Public two-architecture replay is still PENDING and must
-be recorded from actual job logs before final acceptance.
+the finite fixtures. Public two-architecture replay now also passed: actual
+logs for run 36793719823 contain the same reproduction receipt in x86_64 and
+aarch64 jobs, CPython 3.12.14. Both and the aggregate check succeeded. See
+RUN.md for exact head, job URLs and hashes.
 
 The result's period-ten boundary, full spectator/resource accounting,
 pointwise charge preservation, literal state equality and chosen architecture
@@ -70,3 +72,11 @@ The unchanged local policy, Canon, ledger and gate-contract checks passed.
 The repository unit suite passed 172 tests with one platform skip on Windows
 Python 3.12; its deliberate failing-checker fixtures are successful unit tests,
 not failures of this candidate's scientific execution.
+
+A separate post-run documentation review checked all result/run/proposal
+claims against the frozen scope and exact runner metadata. It found no
+blocking issue and confirmed the complete 13-file inventory, unchanged seven
+scientific/input files, no whitespace errors and exactly one unstarted next
+task. The review occurred while the public gate was pending; only its actual
+completed receipt was added afterward. The final diff stays within these
+two candidate directories and the manifest binds all twelve payload files.

@@ -2,8 +2,9 @@
 
 PUBLIC / NON-CANONICAL incubation. Action layer L1. Authority: none.
 Owner: A. M. Thorn / codex-field-l5-energy-funded-coupling-20261001.
-Reservation: issue #1305. Status: exact proof and first local audit PASS;
-public two-architecture gate PENDING. No assertion was repaired after pinning.
+Reservation: issue #1305; [draft PR #1306](https://github.com/mathorn1973/twist-j/pull/1306).
+Status: reviewed NON-CANONICAL PASS, including the public two-architecture
+gate. No assertion was repaired after pinning. No Canon status is assigned.
 
 ## Constructed law
 
@@ -50,7 +51,12 @@ whole-shell enumeration or an empirical substitute for the universal proof.
 The deliberate alternatives expose energy loss from discarding the surplus,
 energy creation by clipping a deficit, omitted spectator energy, lost static
 charge and lost information after clearing retained coordinates or branches.
-No frozen scientific falsifier fired in the local execution.
+No frozen scientific falsifier fired in the local or public executions.
+Both public architecture logs in run 36793719823 explicitly report this
+reproduction with identical wrapper and expected-output hashes; CPython
+3.12.14 x86_64 and aarch64 jobs and the aggregate check all passed. RUN.md
+contains their URLs and exact receipt. The seven pinned scientific/input
+files are unchanged from the joint source commit.
 
 ## What is inherited and what is chosen
 

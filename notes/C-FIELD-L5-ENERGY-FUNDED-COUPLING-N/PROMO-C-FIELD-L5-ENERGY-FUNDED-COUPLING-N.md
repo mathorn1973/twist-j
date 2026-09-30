@@ -1,8 +1,9 @@
 # Promotion proposal: one exact local L5-funded law
 
 PUBLIC / NON-CANONICAL. L1 only. This file is a proposal, not a promotion.
-Current evidence: self-contained exact proof, independent static challenge
-and first local exact runner PASS. Public two-architecture gate is PENDING.
+Current evidence: self-contained exact proof, independent static challenge,
+local exact runner PASS and actual public x86_64/aarch64 reproduction PASS
+in run 36793719823. The reviewed candidate is in draft PR #1306.
 
 ## Proposed retained statement
 
@@ -28,7 +29,8 @@ presented as fresh results of this coupling task.
   observed evidence, and SHA256SUMS binds the package.
 - Actual matching wrapper and expected-output hashes from both public
   architecture jobs, plus required policy, unit, Canon, ledger, gate checks
-  and security review. This condition is not yet recorded as fulfilled.
+  and security review. This condition is fulfilled for this candidate;
+  RUN.md and REVIEW.md preserve the actual receipt and review scope.
 - Separate review of the predecessor dependency and the proposed Canon wording.
 
 The fold must retain exact admission, static/spectator/resource accounting,

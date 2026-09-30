@@ -58,10 +58,30 @@ wrapper/expected hashes. Neither source changed after this execution.
 
 ## Public computation gate
 
-PENDING: both public PR architecture jobs must execute this reproduction.
-Local x86_64 agreement does not satisfy that gate. The result is not yet
-reported as public two-architecture acceptance. Append actual job URLs,
-head, Python version and the matching REPRODUCE PASS readbacks here.
+PASS: [PR #1306](https://github.com/mathorn1973/twist-j/pull/1306), public
+[run 36793719823](https://github.com/mathorn1973/twist-j/actions/runs/36793719823),
+head `c5c46b17ecab6e2292fd639e33cdd698f1fa3982`. This head adds only
+execution/result/review/custody records after the unchanged source pin.
+
+| job | Python | conclusion |
+| --- | --- | --- |
+| [x86_64 / 110152237100](https://github.com/mathorn1973/twist-j/actions/runs/36793719823/job/110152237100) | CPython 3.12.14 | success |
+| [aarch64 / 110152236752](https://github.com/mathorn1973/twist-j/actions/runs/36793719823/job/110152236752) | CPython 3.12.14 | success |
+| [aggregate check / 110152343770](https://github.com/mathorn1973/twist-j/actions/runs/36793719823/job/110152343770) | n/a | success |
+
+Both architecture logs were actually read after completion. Each contained
+exactly this same scientific reproduction receipt:
+
+```text
+REPRODUCE PASS FIELD-L5-ENERGY-FUNDED-COUPLING-N 6c8a5f31db6820ab9aa2c63dcbef40c21b711f2668b9a78484a44b504a946e91 45e85949c1282724ea4f99893abcc65a29284994e97c1f7f97eea6d44cd8e709
+```
+
+Thus each required architecture executed both pinned implementations under
+the unchanged runner, with exit 0, empty stderr and exactly the same 285
+stdout bytes. This is the public two-architecture computation gate, not an
+inference from a notes-only green check. The publication job was correctly
+skipped on this PR; no release was requested or performed. Later reporting
+edits leave all seven pinned scientific/input files unchanged.
 
 This package uses the ACTIVE repository's ordinary PR reproduction workflow;
 it does not create GENESIS staging records or a formal probes/P-* lane.
