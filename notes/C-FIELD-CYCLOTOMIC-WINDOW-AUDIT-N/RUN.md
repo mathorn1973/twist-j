@@ -1,7 +1,7 @@
 # Successor execution and custody
 
 PUBLIC / NON-CANONICAL, L1. Local scientific outcome: PASS.
-Public two-architecture scientific gate: pending PR execution.
+Public two-architecture scientific gate: PASS, run 36784255529.
 
 ## Immutable sequence
 
@@ -46,7 +46,7 @@ runner stderr SHA-256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7
 The current unmodified runner selected the committed reproduction path,
 set LC_ALL=C, LANG=C, TZ=UTC, PYTHONHASHSEED=0 and
 PYTHONDONTWRITEBYTECODE=1, and enforced its combined 120-second limit.
-It observed bridge exit0, empty scientific stderr and exactly311 stdout
+It observed bridge exit 0, empty scientific stderr and exactly 311 stdout
 bytes equal to the single committed EXPECTED.txt. The bridge reached both
 implementations' success lines and its own final line. RUNNER.txt stores
 the exact checker stdout. The checker owns comparison and process rules;
@@ -76,14 +76,34 @@ run. The package SHA256SUMS binds final public records as well as code.
 
 ## Repository validation and public gate
 
-Unchanged local repository checks passed with Python3.12:
+Unchanged local repository checks passed with Python 3.12:
 policy; 172 unit tests (one platform-specific skip); Canon v95 /484 claims;
 ledger /543 items /991 dependencies /484 evidence /1031 history /25 gates;
 explicit gate contracts /25 gates. Unit-test fixture messages containing
-FAIL are deliberate negative fixtures; the suite exit was0 and overall OK.
+FAIL are deliberate negative fixtures; the suite exit was 0 and overall OK.
 
-The public gate must be read back from BOTH existing PR architecture jobs,
-Python3.12 on x86_64 ubuntu-latest and aarch64 ubuntu-24.04-arm. Each must
-actually report REPRODUCE PASS for FIELD-CYCLOTOMIC-WINDOW-AUDIT-N with
-the above wrapper and stdout hashes. The local run alone does not supply
-that gate; notes-only green CI would also be insufficient.
+The public gate was read back from BOTH architecture jobs of
+[PR #1304 run 36784255529](https://github.com/mathorn1973/twist-j/actions/runs/36784255529),
+event pull_request, source head b546b7cbf99263e731d842583eb9afdd8fe9b281.
+Both jobs set up CPython 3.12.14 and actually executed the unchanged
+minimal-reproduction runner with these exact scientific source guards.
+
+| job | runner architecture | completion UTC | result |
+| --- | --- | --- | --- |
+| [110121731336](https://github.com/mathorn1973/twist-j/actions/runs/36784255529/job/110121731336) | x86_64, ubuntu-latest | 2026-09-30T22:13:25Z | PASS |
+| [110121731434](https://github.com/mathorn1973/twist-j/actions/runs/36784255529/job/110121731434) | aarch64, ubuntu-24.04-arm | 2026-09-30T22:13:23Z | PASS |
+| aggregate check 110121871835 | requires both jobs | 2026-09-30T22:13:33Z | PASS |
+
+Both architecture logs contain this identical line:
+
+```text
+REPRODUCE PASS FIELD-CYCLOTOMIC-WINDOW-AUDIT-N 509263a3d180182d5be2861a6e9b048504af1592995f5a142884dcbd9f316bea 1f85ba3a5f31ee600a68de0dac5eed4205b4ed848d4cc4e5416ba319a6e57280
+```
+
+This establishes the same guarded implementations, exit zero, empty stderr
+and the same 311-byte scientific stdout on two different architectures.
+It supplies the public computation gate for this audit. The local run and
+static reviews remain separately identified evidence, not substitutes for
+the two jobs. Publication was correctly skipped on this ordinary PR event;
+no release action was attempted. Subsequent record-only commits do not
+alter the pinned scientific files and remain subject to normal PR checks.

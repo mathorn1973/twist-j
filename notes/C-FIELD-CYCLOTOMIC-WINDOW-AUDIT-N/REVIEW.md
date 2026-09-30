@@ -33,10 +33,23 @@ and hashes the three pinned notes files and invokes each implementation
 with runpy; runner rules remain solely in tools/check_reproduce.py.
 
 The first unchanged scientific runner passed on its first execution. It
-observed the exact311-byte prospective stdout target, exit0 and no stderr.
+observed the exact 311-byte prospective stdout target, exit 0 and no stderr.
 There was no post-execution source or expected-output change. Both old
 primary errors remain in the public predecessor and are explicitly tested
 in the new code. This success neither hides nor rewrites the failed run.
+
+After the pin and successful run, the challenger author also reviewed the
+proof and implementation coverage with the exposure boundary explicitly
+ended. It found no blocker in the universal window argument, integral
+critical/unstable states, exact extension domain/image or scope limits.
+This subsequent exposed review is distinct from its earlier independent
+implementation; it made no source changes or additional executions.
+
+Final records review clarified two compressed phrases in RESULT before
+delivery: the active and static summands are individually saturated, while
+their index-five sum is not; the image test has two quotient coordinates
+and rejects any nonzero pair, among 24 nonzero quotient classes. These
+record clarifications change no frozen assertion, proof, source or outcome.
 
 Named changes are confined to one new candidate notes directory and one
 minimal reproduction. They are small plain-text own-source Apache-2.0
@@ -46,6 +59,13 @@ history, Canon, release, shared checker/workflow or live owner changes.
 The independent-choice account and future coupling boundary are explicit.
 
 Repository policy, 172 unit tests (one platform-specific skip), Canon,
-ledger and explicit gate contracts passed locally. The scientific public
-two-architecture gate remains pending until actual reproduction lines are
-read back from both PR jobs; generic green checks are insufficient.
+ledger and explicit gate contracts passed locally. Public run 36784255529
+passed both architecture jobs and aggregate check. Their logs were read
+individually: both actually report this reproduction with wrapper SHA
+509263a3d180182d5be2861a6e9b048504af1592995f5a142884dcbd9f316bea
+and stdout SHA
+1f85ba3a5f31ee600a68de0dac5eed4205b4ed848d4cc4e5416ba319a6e57280.
+Thus this is a scientific two-architecture gate, not merely generic green
+repository CI. Source code, preregistration and prospective EXPECTED remain
+byte-identical to their pre-execution pins. A separate fold remains required
+for any public Canon promotion.

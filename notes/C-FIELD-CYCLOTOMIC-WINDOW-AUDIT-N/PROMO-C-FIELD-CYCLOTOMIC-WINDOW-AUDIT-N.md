@@ -1,8 +1,9 @@
 # Promotion proposal: exact finite field window and Phi5 lattice
 
 PUBLIC / NON-CANONICAL proposal only. Action layer L1. Authority: none.
-Disposition: proof candidate and local successor audit PASS; promotion
-readiness remains held until public two-architecture scientific readback.
+Disposition: reviewed proof candidate and successor audit PASS, with public
+two-architecture scientific readback in PR #1304 run 36784255529. The
+proposal is ready for a separately authorized promotion review at its scope.
 No Canon patch is applied and no merge, tag or release is authorized here.
 
 A future separately reviewed fold may consider the following exact scopes:
@@ -14,7 +15,7 @@ A future separately reviewed fold may consider the following exact scopes:
 2. For the explicitly selected digon/triangle multigraph only, the saturated
    active lattice is integrally Z[zeta5] with the displayed P,F,A,B,K and
    inverse. J is an integer unit, distinct from the energy-preserving step.
-3. On that active lattice, L has energy multiplier5 and index25, quotient
+3. On that active lattice, L has energy multiplier 5 and index 25, quotient
    (Z/5Z)^2, two exact admission congruences and image-restricted inverse.
    The whole-shell bijection is false. Include the precise index-five
    gluing and obstruction/domain of the specified charged extension.
