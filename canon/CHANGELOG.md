@@ -1,5 +1,45 @@
 # Canon changelog (public series)
 
+## Public Canon v95
+
+Accept ten self-contained L1 theorems. The native one-shot construction
+transfers a five-valued source into an initially common complementary
+receiver, clears the source at the first actual step, and retains a fixed
+receiver-only reading from tick three at every later tick. An explicit
+sixth preparation distinguishes absence from stored zero. Its continuation
+theorem exactly classifies all fixed raw targets and fixed affine reads of
+this family. The existing synchronized no-write result remains unchanged:
+the new transfer uses an initial unsynchronized transition. Reusable writing
+and physical preparation are separate obligations.
+
+The declared-integer-automaton block separately proves the complete linear
+and quadratic invariant classification for its chosen F=JG, the reversible
+energy-funded involution, charge continuity with contact-flux memory, the
+field-shear energy and its exact positivity criterion, Eisenstein shell
+resonance, all-future separated-factor certification, the conditional finite
+preactivation quotient, and the charged bridge-separation energy bound. The
+two-triangle zero mode identifies a concrete limit of direct field replication.
+The 18 -> 20 -> 14 reaction is an explicitly selected energetic application;
+its channel is not forced by the quadratic form or by native U.
+
+These are written proofs, independently reviewed, with exact local audits
+as controls. No archived waiting-time maximum, prepared product orbit,
+million-preparation scan or missing 666-helper classification is promoted
+to a new canonical computational result. Full state and within-step substeps
+are required in a product certificate; persistence of charged port patterns
+is distinct from independent asymptotic charged objects and perturbation
+stability. A separate noncanonical construction plan prioritizes finite
+classification, a positive multicell field, interacting structures and
+actual local capture/recording under a frozen law.
+
+No existing claim changes status, scope, evidence or decision condition.
+All 25 H/O owners remain open. In particular QDD-INSTRUMENT-APPARATUS,
+QDD-TERMINAL-EVENT-SEMANTICS and PHOTON-MASSLESS-PHASE retain their complete
+obligations. There is no derivation of the extended automaton from native U,
+physical energy selection, Maxwell limit, decay law, SI unit or L2-L6 lift.
+Registry grows from 474 to 484 with ten T rows: 0 T-LOCK, 342 T,
+59 D, 39 C, 2 H, 23 O and 19 F.
+
 ## Public Canon v94
 
 Accept three L1 theorems and separate decoder inputs from derived records.
@@ -267,7 +307,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 474 claims; 0 T-LOCK, 332 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
+Registry snapshot: 484 claims; 0 T-LOCK, 342 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 

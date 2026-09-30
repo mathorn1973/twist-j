@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred twenty checks cover the current
+and emits deterministic text. Its one hundred twenty-six checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -629,3 +629,29 @@ adds the five authored boundary lines. This is deterministic release
 bookkeeping permitted by the per-release count contract above. It does not
 execute, amend or replace a scientific probe, nor conceal the recorded failure
 of the earlier release candidate's stale bookkeeping reproduction.
+
+
+The v95 maintenance pins all thirteen complete current Canon inputs and
+reconstructs exact public v94 at
+`af8dc5956e26917b265fd0070f500c841c326512` before the inherited v94-to-v93
+chain. Its checked inverse edits restore complete prior byte counts and
+SHA-256 values. Every historical predicate and constant is preserved; the
+first 120 check lines remain byte-identical. Only the v94 input adapter reads
+the reconstructed prior bytes instead of the current release.
+
+Six separately authored current guards pin ten complete inline T proofs,
+their scopes, evidence identities, declarations and explicit dependencies.
+They separate the two results for prepared unchanged native U from eight
+conditional theorems for a chosen integer automaton, including positivity,
+asymptotic-product and finite-decision boundaries. Exact proof is the
+evidence; this structural reproduction neither upgrades a note's finite
+enumeration nor claims a fresh scientific or two-architecture computation.
+All prior 474 Registry rows, all 25 live H/O owners, gates, programs and
+CORE selections remain exact. Totals are 484 claims,
+T342/D59/C39/H2/O23/F19. Native preparation, reusable writing, physical
+apparatus, occurrence, photon masslessness and the derivation of the added
+integer law remain outside the claims.
+
+The expected transcript copies the 120 prior check lines and adds six
+authored boundary lines before execution. Its 126 checks are deterministic
+release bookkeeping, not a scientific probe or a replacement for proof.
