@@ -37,6 +37,846 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v95 release-accounting contract and reversible public v94 reconstruction.
+V95_PRIOR_COMMIT = 'af8dc5956e26917b265fd0070f500c841c326512'
+V95_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'a2abce1a4538785ac6a7c7874c2366a3531d460027188510394930c6d222559a',
+                  'current_bytes': 480992,
+                  'prior_sha256': '85c20f131b89a5c9839fa4d65c5e72ae3a986d78a957fa1d596750309a15211a',
+                  'prior_bytes': 470120,
+                  'restore': ((475, 485, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': '468495cefa342c1ef899749d7fc4c49bdc69f41d67fef234ee8cca37610205f4',
+                   'current_bytes': 61883,
+                   'prior_sha256': 'd26405bfefef7097377920ccb846090a49748f4b0c160cde6f1ef6c3d925e83d',
+                   'prior_bytes': 60638,
+                   'restore': ((534, 544, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': 'c1b0cee2b9e320ed05ba4004da3a2265cbd2bbafe45dd18f59fb29790d477214',
+                      'current_bytes': 162715,
+                      'prior_sha256': '61e500d64e067a9bb8f7376784f63941c3573c2e0a86af5c514ec151a7af31fb',
+                      'prior_bytes': 160931,
+                      'restore': ((982, 992, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': '1258ea3dd14a5e2b512b69b08ac647626d4fac169a1ba0b6cd770832bb735600',
+                  'current_bytes': 98759,
+                  'prior_sha256': '10e2912f01180544068972deb912e48d0d01cb4053fcd37928b878b0e33952f7',
+                  'prior_bytes': 96949,
+                  'restore': ((475, 485, ''),)},
+ 'HISTORY.tsv': {'current_sha256': 'be63423fd0da968f7a5f670222fc1ea0290aa0c61976b1ab7ff6fe4080c0d6a5',
+                 'current_bytes': 461212,
+                 'prior_sha256': '5560e6cbc09815c5080e8383a17f5957465dc43a4df5022da290476abb6fe321',
+                 'prior_bytes': 456177,
+                 'restore': ((1022, 1032, ''),)},
+ 'GATES.tsv': {'current_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'current_bytes': 12907,
+               'prior_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'prior_bytes': 12907,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'current_bytes': 1436,
+                           'prior_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'prior_bytes': 1436,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': 'b4ebf2ffc7393b703d65ce62cf3e0ee382e7309a563d99ec866ee3fa82f9ba7f',
+              'current_bytes': 848893,
+              'prior_sha256': '8084bead12b52a6ae2a15599d4170d28ec10c70242714cfd23ecbd0b58b59137',
+              'prior_bytes': 819362,
+              'restore': ((0, 1, '# TWIST-J Public Canon v94\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v94. Normative authority and activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v94 also declares the discrete architecture used to read\n'),
+                          (25,
+                           26,
+                           'seed of the two algebraic projections. Public Canon v94 does not claim\n'),
+                          (130, 131, 'deriving the architecture from J; Public Canon v94 contains no such\n'),
+                          (6960, 7595, ''))},
+ 'CORE.md': {'current_sha256': 'ad070cd86797f61809540e388a9d1c87e33782f461afe1f63640e2a79c621465',
+             'current_bytes': 22032,
+             'prior_sha256': '72f8326c3cbe1bfcd9baba59ce4084a53763290ae8ac1001d6b9e4e867bae310',
+             'prior_bytes': 20716,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v94. Normative authority and activation\n'),
+                         (18, 19, 'Public Canon v94 also declares a discrete architecture. It does not\n'),
+                         (149, 170, ''))},
+ 'FRONTIER.md': {'current_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'current_bytes': 26162,
+                 'prior_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'prior_bytes': 26162,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': '6208a78a69a4a7bc9a8d3e094a61a77aec40069c7ecec0629a18ba7a2f14d0b5',
+                  'current_bytes': 193373,
+                  'prior_sha256': '39f554b8b780f266bcdd3cd05c639f0c28d4d4be11bce592493eb725db2e6d15',
+                  'prior_bytes': 190929,
+                  'restore': ((1, 41, ''),
+                              (309,
+                               310,
+                               'Registry snapshot: 474 claims; 0 T-LOCK, 332 T, 59 D, 39 C, 2 H, 23 O, 19 F; '
+                               '25 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '811812819e781fcb477dd258d29a50d714ab35dddab66bb93a70214c273be2d0',
+                       'current_bytes': 243,
+                       'prior_sha256': '1d9d523b6d0ac9725d037fb1a86c8e734f6e10c414a6ae3ceedde7c3a47fdcf6',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t474\n'),
+                                   (3, 4, 'status_T\t332\n'),
+                                   (11, 12, 'evidence_none\t61\n'))}}
+V95_IDS = ('U-NATIVE-SOURCE-RECEIVER-RECORD',
+ 'U-NATIVE-RECORD-CONTINUATION-BOUNDARY',
+ 'INTEGER-F-JG-INVARIANTS',
+ 'INTEGER-ENERGY-FUNDED-INVOLUTION',
+ 'FIELD-GAUSS-CONTACT-MEMORY',
+ 'FIELD-SHEAR-ENERGY-BOUNDARY',
+ 'FIELD-EISENSTEIN-RESONANCE',
+ 'INTEGER-SEPARATED-FACTOR-CERTIFICATE',
+ 'INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+ 'FIELD-CHARGED-SEPARATION-BOUND')
+V95_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'U-NATIVE-SOURCE-RECEIVER-RECORD',
+                   'status': 'T',
+                   'scope': 'at L1 for unchanged origin-zero native U on the five preparations '
+                            'x_lambda=(lambda,0,-lambda,0,0,0) over F5 with fixed source (p1,p1p), memory '
+                            '(p4,p4p) and reference (q,r): the complementary receiver is initially common, '
+                            'the actual a,c,e prefix transfers the source difference at tick one, the full '
+                            'source thereafter is payload-independent and both references are '
+                            'payload-independent throughout the occupied family; one fixed total '
+                            'receiver-only reader without counter, source or history returns BLANK through '
+                            'tick two and PRESENT(lambda) at every tick from three, including zero; the '
+                            'distinct sixth source codeword (0,0,1,0,0,0) with the same receiver stays BLANK '
+                            'forever; the declared ready carrier has exactly 100 states with twenty per '
+                            'payload and embeds in an explicit invariant graph with induced '
+                            'receiver-plus-counter dynamics, without claiming complete actual-orbit '
+                            'visitation; the bare memory alone admits no fixed all-time payload reader for '
+                            'this family, and the displayed BLANK/PRESENT output is not an autonomous factor '
+                            'through writing; input preparation is admitted, no global native bijectivity, '
+                            'minimal transfer latency, physical locality, reusable writing, QDD occurrence '
+                            'or cross-layer realization is asserted',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'an exact failure of the displayed actual prefix, common receiver or '
+                                'source/reference independence, a declared occupied or absent preparation '
+                                'violating its all-time readout, a failure of the ready-carrier '
+                                'parametrization, invariant graph or induced-law identity, or an admitted '
+                                'fixed bare-memory reader resolving the displayed incompatible labels; other '
+                                'preparations, physical realization, renewal and new couplings are outside '
+                                'scope'},
+                  {'claim_id': 'U-NATIVE-RECORD-CONTINUATION-BOUNDARY',
+                   'status': 'T',
+                   'scope': 'at L1 for the same five occupied source-only origin-zero preparations and '
+                            'unchanged U continuation: for every n>=1 all payload differences are '
+                            'epsilon_n*(lambda-mu)*(0,1,0,-1,0,0), with one common nonzero sign; a fixed '
+                            'raw-coordinate target is injective in the payload at every n>=1 exactly when it '
+                            'intersects {p4,p4p}, and is payload-independent at every such time otherwise; '
+                            'hence equality of the complete target state across messages at one common m>=1 '
+                            'precludes later fresh acquisition, including post-completion m>=3, and a '
+                            'disjoint target has identical entire post-write histories; the same '
+                            'one-time-to-all-time independence implication holds for fixed affine '
+                            'observations, while the explicit invertible nonlinear coordinate y1=p1+(q-1)p4 '
+                            'violates the unrestricted nonlinear extension; there is no return to the '
+                            'original z=0 input line; this is a family-specific continuation classification, '
+                            'not a prohibition of other preparations, nonlinear subsystems, new coupling, '
+                            'physical transfer or reusable architectures',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'an exact failure of the common-sign difference identity, a freshly common '
+                                'fixed raw target or fixed affine observation later separating two occupied '
+                                'payloads at a common time under the unchanged protocol, or failure of the '
+                                'displayed nonlinear coordinate counterexample or invariant-tail no-return; '
+                                'changing preparation, observation support, coupling or the common-time '
+                                'readiness contract changes the comparison class'},
+                  {'claim_id': 'INTEGER-F-JG-INVARIANTS',
+                   'status': 'T',
+                   'scope': 'At L1 for the displayed integer product F=JG on Z^4: the displayed unimodular '
+                            'phase map conjugates F to a four-cycle; the integer linear invariant module is '
+                            'generated by chi=d-a, and every real symmetric homogeneous quadratic invariant '
+                            'is circ(A,B,C,B), with the displayed eigenvalue decomposition and exact '
+                            'positive definite/semidefinite conditions; orbit-symmetrized Q chooses (6,2,0), '
+                            'and the declared ordered two-register transposition changes additive energy by '
+                            '-2C. This classifies a selected architecture and does not uniquely select '
+                            'physical charge or energy.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'Fires on failure of the displayed conjugacy or integer inverse, an integer '
+                                'linear invariant outside Z chi, a symmetric quadratic invariant outside the '
+                                'stated three-parameter family, failure of its eigenvalue or definiteness '
+                                'classification, an incorrect Q metric, or a reaction energy difference '
+                                'other than -2C.'},
+                  {'claim_id': 'INTEGER-ENERGY-FUNDED-INVOLUTION',
+                   'status': 'T',
+                   'scope': 'At L1 for any involution T:S->S, chosen H0:S->R with integer differences '
+                            'H0(Ts)-H0(s), and local n in the nonnegative integers: the accepted n-Delta>=0 '
+                            'transition and rejected identity branch define an involution preserving H0+n; '
+                            'the lift is local whenever T and Delta are local, and an ordered finite gate '
+                            'composition is inverted in reverse order. Energy choice, reaction and resource '
+                            'are hypotheses, not a physical selection.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'Fires on an admitted input leaving the integer nonnegative state space, '
+                                'failure of the lifted map to square to identity or preserve H0+n, nonlocal '
+                                'dependence under the stated locality premise, or failure of reverse-order '
+                                'inversion.'},
+                  {'claim_id': 'FIELD-GAUSS-CONTACT-MEMORY',
+                   'status': 'T',
+                   'scope': 'At L1 for oriented graph transfers with node-local charge-preserving updates '
+                            'and signed actual current j: rho-prime-rho=-Dj. For a tree path r with Dr=Dh, a '
+                            'contact bit sigma and retained integer registers b,z, active field '
+                            'ET=b-sigma*z*r, Eh=sigma*z has divergence Db; contact switching contributes the '
+                            'explicit cycle flux, and b-prime=b-jT-jh*r, z-prime=z-jh preserve the full '
+                            'Gauss defect when jh=0 on an inactive new contact. Inversion is conditional on '
+                            'recovered current and reversible matter/contact operations; finite-support '
+                            'Gauss flux has zero total charge. This is a declared encoding and boundary '
+                            'convention, not Maxwell dynamics or a uniqueness theorem.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'Fires on a nodewise continuity or divergence identity failure, failure of '
+                                'the displayed field update or defect conservation under its current '
+                                'condition, failure to invert the register update with recovered data, or a '
+                                'finite-support Gauss field with nonzero summed node charge.'},
+                  {'claim_id': 'FIELD-SHEAR-ENERGY-BOUNDARY',
+                   'status': 'T',
+                   'scope': 'At L1 for any finite real matrix C, the electric-first shear E-prime=E+CM, '
+                            'M-prime=M-C-transpose E-prime is invertible and preserves '
+                            'Hf=norm(E)^2+norm(M)^2+E-transpose CM; integer C preserves the lattice and DC=0 '
+                            'preserves divergence. The completed-square identity proves positive '
+                            'definiteness iff norm(C)<2 and semidefiniteness iff norm(C)<=2. The displayed '
+                            'two-triangle incidence has Gram eigenvalues 4,2 and an explicit nonzero integer '
+                            'zero-energy state of zero divergence. This boundary concerns this update and '
+                            'metric, not every multicell field model.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'Fires on failure of the shear inverse, energy or divergence invariant, the '
+                                'completed-square or singular-value criterion, or if the displayed '
+                                'two-triangle state is nonintegral, zero, divergent or has nonzero energy.'},
+                  {'claim_id': 'FIELD-EISENSTEIN-RESONANCE',
+                   'status': 'T',
+                   'scope': 'At L1 for the pure-cycle one-triangle field q(z,m)=3z^2+m^2+3zm and its '
+                            'displayed T: T^3=I, L=I-T satisfies L^2=-3T and q(Lv)=3q(v), identifies with '
+                            'multiplication by 1-omega in the norm N(a-b*omega), and bijects the entire '
+                            'six-element integer shells q=1 and q=3 with the stated integer inverse. For the '
+                            'explicitly chosen carrier metric and ordered three-register channels, the '
+                            'energies 18,20,14 give a reversible field-funded 18+3<->20+1 conversion and a '
+                            'six-unit resource release; an active unit-cost contact makes the endpoint cost '
+                            'at least 22. No phase selector, generic above-threshold rule, waiting law, '
+                            'neutron identity or prime-five barrier follows.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'Fires on any failed displayed field identity or norm identification, an '
+                                'incorrect complete shell count or bijection, a wrong carrier energy or '
+                                'vector-sum balance, failure of the coupled involution, or an admitted '
+                                'endpoint below total energy 22 under the specified nonnegative '
+                                'contributions.'},
+                  {'claim_id': 'INTEGER-SEPARATED-FACTOR-CERTIFICATE',
+                   'status': 'T',
+                   'scope': 'At L1 for a deterministic finite composition of finite-radius local substeps '
+                            'with background quiescent under each individual substep and translation '
+                            'covariance in the required homogeneous regions: exact complete periodic and '
+                            'outward-translating factors, together with full-substep separation required to '
+                            'persist under every common-period repetition of their translations, imply an '
+                            'all-future factorization. Finite support envelopes with sufficient locality '
+                            'gaps and ordered nondecreasing outward drifts are a sufficient certificate. All '
+                            'stored state must be included; the theorem certifies a prepared trajectory and '
+                            'neither classifies all persistent states nor gives perturbative stability or a '
+                            'physical particle identification.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'Fires on a state satisfying the full locality, completeness, '
+                                'isolated-orbit, translation and separation hypotheses whose union fails to '
+                                'evolve as the certified factors at any future substep.'},
+                  {'claim_id': 'INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+                   'status': 'T',
+                   'scope': 'At L1 in a declared pre-event sector with k distinct occupied ports among P, '
+                            'synchronous F updates, pure deterministic carrier routing, no vector '
+                            'mixing/creation/deletion and no omitted variable affecting routing or the event '
+                            'predicate: common phase modulo four and positions modulo equal-vector label '
+                            'permutations form an exact decision state of cardinality at most '
+                            'Q=4(P)_k/product(m_j!). First activation or exit, if it occurs, occurs by Q '
+                            'steps; recurrence gives permanent nonoccurrence within that sector. The '
+                            'triangle q=3 phase is omissible only when routing is independent and every '
+                            'shell state permits the same activation. No completed helper census, typical '
+                            'waiting law or bound outside the hypotheses is claimed.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'Fires on failure of the phase-position quotient under the stated '
+                                'hypotheses, more than the stated number of decision states, a first '
+                                'terminal event after Q nonterminal steps, a recurrent decision state later '
+                                'reaching its first terminal event, or a failure of field-phase omission '
+                                'with all its explicit premises.'},
+                  {'claim_id': 'FIELD-CHARGED-SEPARATION-BOUND',
+                   'status': 'T',
+                   'scope': 'At L1 for the declared tree-plus-one-triangle graph, finite-support Gauss '
+                            'field, zero asymptotic flux and the displayed active/inactive positive field '
+                            'energy: zero field energy forces zero node charge, so exactly two otherwise '
+                            'isolated nonzero opposite charged carriers occupy one node. For only net '
+                            'charges +q,-q and L connecting bridge edges outside the possible triangle, '
+                            'Hf>=q^2*L, and total nonnegative energy with field weight kappa is at least '
+                            'kappa*q^2*L. This is a geometry, metric and boundary dependent obstruction to '
+                            'unbounded isolated charge separation at fixed energy, not a general claim about '
+                            'charged particles.',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'Fires on an admitted zero-energy field with nonzero node charge, an '
+                                'isolated opposite carrier pair on different nodes at zero field energy, an '
+                                'admitted bridge flux with magnitude other than abs(q), or violation of '
+                                'Hf>=q^2*L or the corresponding total energy bound.'}],
+ 'NORMATIVE.tsv': [{'item_id': 'U-NATIVE-SOURCE-RECEIVER-RECORD',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-NATIVE-SOURCE-RECEIVER-RECORD',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-NATIVE-SOURCE-RECEIVER-RECORD'},
+                   {'item_id': 'U-NATIVE-RECORD-CONTINUATION-BOUNDARY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-NATIVE-RECORD-CONTINUATION-BOUNDARY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-NATIVE-RECORD-CONTINUATION-BOUNDARY'},
+                   {'item_id': 'INTEGER-F-JG-INVARIANTS',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'INTEGER-F-JG-INVARIANTS',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::INTEGER-F-JG-INVARIANTS'},
+                   {'item_id': 'INTEGER-ENERGY-FUNDED-INVOLUTION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'INTEGER-ENERGY-FUNDED-INVOLUTION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::INTEGER-ENERGY-FUNDED-INVOLUTION'},
+                   {'item_id': 'FIELD-GAUSS-CONTACT-MEMORY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-GAUSS-CONTACT-MEMORY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-GAUSS-CONTACT-MEMORY'},
+                   {'item_id': 'FIELD-SHEAR-ENERGY-BOUNDARY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-SHEAR-ENERGY-BOUNDARY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-SHEAR-ENERGY-BOUNDARY'},
+                   {'item_id': 'FIELD-EISENSTEIN-RESONANCE',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-EISENSTEIN-RESONANCE',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-EISENSTEIN-RESONANCE'},
+                   {'item_id': 'INTEGER-SEPARATED-FACTOR-CERTIFICATE',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'INTEGER-SEPARATED-FACTOR-CERTIFICATE',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::INTEGER-SEPARATED-FACTOR-CERTIFICATE'},
+                   {'item_id': 'INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::INTEGER-FINITE-PREACTIVATION-QUOTIENT'},
+                   {'item_id': 'FIELD-CHARGED-SEPARATION-BOUND',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-CHARGED-SEPARATION-BOUND',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-CHARGED-SEPARATION-BOUND'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'U-NATIVE-SOURCE-RECEIVER-RECORD',
+                   'evidence_id': 'EV-U-NATIVE-SOURCE-RECEIVER-RECORD',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'd1992a991d1e02e53f4c00400cd3707ada9d63742af9221ce36ed92f5fc5ccdc',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-NATIVE-RECORD-CONTINUATION-BOUNDARY',
+                   'evidence_id': 'EV-U-NATIVE-RECORD-CONTINUATION-BOUNDARY',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'ba424646309e12ab66c4cac54c5b20ed9ad421cac41b7845cf0c4def3d063f6e',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'INTEGER-F-JG-INVARIANTS',
+                   'evidence_id': 'EV-INTEGER-F-JG-INVARIANTS',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '3a17f1492dd1038937b2cedf29fa7e86bf755433ac24a1887768702358cb880a',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'INTEGER-ENERGY-FUNDED-INVOLUTION',
+                   'evidence_id': 'EV-INTEGER-ENERGY-FUNDED-INVOLUTION',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'cd8e847e64e0635fe143ecf343a59fea7146ec89a17110daed12daab9ce2a972',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-GAUSS-CONTACT-MEMORY',
+                   'evidence_id': 'EV-FIELD-GAUSS-CONTACT-MEMORY',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'a575ca0c38355f81de07a82841bd7695f6006b24f304a489fd734bf78584ab57',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-SHEAR-ENERGY-BOUNDARY',
+                   'evidence_id': 'EV-FIELD-SHEAR-ENERGY-BOUNDARY',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'df20ff6bb855e280a0537e8a45b6c0ee5b852b3c3267ded4dcfc545f000774e7',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-EISENSTEIN-RESONANCE',
+                   'evidence_id': 'EV-FIELD-EISENSTEIN-RESONANCE',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '00f9c3494f7a312d945316c99cfd55449d173cc75b3a044174d14054082da27f',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'INTEGER-SEPARATED-FACTOR-CERTIFICATE',
+                   'evidence_id': 'EV-INTEGER-SEPARATED-FACTOR-CERTIFICATE',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'f04763a02df2c79da74154a790831d4163fe74f5ac8e06b89abb4203c96087d5',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+                   'evidence_id': 'EV-INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '2d19fce12dfa9203cb0569481f695f8942b08a34a145fc50a2b547183fab957d',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-CHARGED-SEPARATION-BOUND',
+                   'evidence_id': 'EV-FIELD-CHARGED-SEPARATION-BOUND',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'd30c4bbf48841ad010ef765e6b0a400f2aaa96402b5dcb96cb66e38112d991af',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON95-DECLARE-U-NATIVE-SOURCE-RECEIVER-RECORD',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-30',
+                  'release': 'canon-v95',
+                  'claim_id': 'U-NATIVE-SOURCE-RECEIVER-RECORD',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'd1992a991d1e02e53f4c00400cd3707ada9d63742af9221ce36ed92f5fc5ccdc',
+                  'evidence_id': 'EV-U-NATIVE-SOURCE-RECEIVER-RECORD',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'd1992a991d1e02e53f4c00400cd3707ada9d63742af9221ce36ed92f5fc5ccdc',
+                  'rationale': 'The complete inline algebraic proof uses the unchanged registered native '
+                               'update, an explicit prefix, a branch-invariant receiver polynomial, a '
+                               'bijective carrier parametrization and exact collision controls; no new '
+                               'scientific enumeration is used.'},
+                 {'event_id': 'CANON95-DECLARE-U-NATIVE-RECORD-CONTINUATION-BOUNDARY',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-30',
+                  'release': 'canon-v95',
+                  'claim_id': 'U-NATIVE-RECORD-CONTINUATION-BOUNDARY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'ba424646309e12ab66c4cac54c5b20ed9ad421cac41b7845cf0c4def3d063f6e',
+                  'evidence_id': 'EV-U-NATIVE-RECORD-CONTINUATION-BOUNDARY',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'ba424646309e12ab66c4cac54c5b20ed9ad421cac41b7845cf0c4def3d063f6e',
+                  'rationale': 'The inline induction tracks a single exact difference direction under every '
+                               'actually selected affine branch and proves the exhaustive raw-projection '
+                               'dichotomy and affine corollary, with an explicit nonlinear scope '
+                               'counterexample.'},
+                 {'event_id': 'CANON95-DECLARE-INTEGER-F-JG-INVARIANTS',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-30',
+                  'release': 'canon-v95',
+                  'claim_id': 'INTEGER-F-JG-INVARIANTS',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '3a17f1492dd1038937b2cedf29fa7e86bf755433ac24a1887768702358cb880a',
+                  'evidence_id': 'EV-INTEGER-F-JG-INVARIANTS',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '3a17f1492dd1038937b2cedf29fa7e86bf755433ac24a1887768702358cb880a',
+                  'rationale': 'Self-contained L1 proof for the explicitly declared architecture or '
+                               'conditional class; the result is not computation-only and does not derive '
+                               'that architecture from native U or close a physical parent obligation.'},
+                 {'event_id': 'CANON95-DECLARE-INTEGER-ENERGY-FUNDED-INVOLUTION',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-30',
+                  'release': 'canon-v95',
+                  'claim_id': 'INTEGER-ENERGY-FUNDED-INVOLUTION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'cd8e847e64e0635fe143ecf343a59fea7146ec89a17110daed12daab9ce2a972',
+                  'evidence_id': 'EV-INTEGER-ENERGY-FUNDED-INVOLUTION',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'cd8e847e64e0635fe143ecf343a59fea7146ec89a17110daed12daab9ce2a972',
+                  'rationale': 'Self-contained L1 proof for the explicitly declared architecture or '
+                               'conditional class; the result is not computation-only and does not derive '
+                               'that architecture from native U or close a physical parent obligation.'},
+                 {'event_id': 'CANON95-DECLARE-FIELD-GAUSS-CONTACT-MEMORY',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-30',
+                  'release': 'canon-v95',
+                  'claim_id': 'FIELD-GAUSS-CONTACT-MEMORY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'a575ca0c38355f81de07a82841bd7695f6006b24f304a489fd734bf78584ab57',
+                  'evidence_id': 'EV-FIELD-GAUSS-CONTACT-MEMORY',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'a575ca0c38355f81de07a82841bd7695f6006b24f304a489fd734bf78584ab57',
+                  'rationale': 'Self-contained L1 proof for the explicitly declared architecture or '
+                               'conditional class; the result is not computation-only and does not derive '
+                               'that architecture from native U or close a physical parent obligation.'},
+                 {'event_id': 'CANON95-DECLARE-FIELD-SHEAR-ENERGY-BOUNDARY',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-30',
+                  'release': 'canon-v95',
+                  'claim_id': 'FIELD-SHEAR-ENERGY-BOUNDARY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'df20ff6bb855e280a0537e8a45b6c0ee5b852b3c3267ded4dcfc545f000774e7',
+                  'evidence_id': 'EV-FIELD-SHEAR-ENERGY-BOUNDARY',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'df20ff6bb855e280a0537e8a45b6c0ee5b852b3c3267ded4dcfc545f000774e7',
+                  'rationale': 'Self-contained L1 proof for the explicitly declared architecture or '
+                               'conditional class; the result is not computation-only and does not derive '
+                               'that architecture from native U or close a physical parent obligation.'},
+                 {'event_id': 'CANON95-DECLARE-FIELD-EISENSTEIN-RESONANCE',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-30',
+                  'release': 'canon-v95',
+                  'claim_id': 'FIELD-EISENSTEIN-RESONANCE',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '00f9c3494f7a312d945316c99cfd55449d173cc75b3a044174d14054082da27f',
+                  'evidence_id': 'EV-FIELD-EISENSTEIN-RESONANCE',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '00f9c3494f7a312d945316c99cfd55449d173cc75b3a044174d14054082da27f',
+                  'rationale': 'Self-contained L1 proof for the explicitly declared architecture or '
+                               'conditional class; the result is not computation-only and does not derive '
+                               'that architecture from native U or close a physical parent obligation.'},
+                 {'event_id': 'CANON95-DECLARE-INTEGER-SEPARATED-FACTOR-CERTIFICATE',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-30',
+                  'release': 'canon-v95',
+                  'claim_id': 'INTEGER-SEPARATED-FACTOR-CERTIFICATE',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'f04763a02df2c79da74154a790831d4163fe74f5ac8e06b89abb4203c96087d5',
+                  'evidence_id': 'EV-INTEGER-SEPARATED-FACTOR-CERTIFICATE',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'f04763a02df2c79da74154a790831d4163fe74f5ac8e06b89abb4203c96087d5',
+                  'rationale': 'Self-contained L1 proof for the explicitly declared architecture or '
+                               'conditional class; the result is not computation-only and does not derive '
+                               'that architecture from native U or close a physical parent obligation.'},
+                 {'event_id': 'CANON95-DECLARE-INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-30',
+                  'release': 'canon-v95',
+                  'claim_id': 'INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '2d19fce12dfa9203cb0569481f695f8942b08a34a145fc50a2b547183fab957d',
+                  'evidence_id': 'EV-INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '2d19fce12dfa9203cb0569481f695f8942b08a34a145fc50a2b547183fab957d',
+                  'rationale': 'Self-contained L1 proof for the explicitly declared architecture or '
+                               'conditional class; the result is not computation-only and does not derive '
+                               'that architecture from native U or close a physical parent obligation.'},
+                 {'event_id': 'CANON95-DECLARE-FIELD-CHARGED-SEPARATION-BOUND',
+                  'event_sequence': '1',
+                  'event_date': '2026-09-30',
+                  'release': 'canon-v95',
+                  'claim_id': 'FIELD-CHARGED-SEPARATION-BOUND',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'd30c4bbf48841ad010ef765e6b0a400f2aaa96402b5dcb96cb66e38112d991af',
+                  'evidence_id': 'EV-FIELD-CHARGED-SEPARATION-BOUND',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'd30c4bbf48841ad010ef765e6b0a400f2aaa96402b5dcb96cb66e38112d991af',
+                  'rationale': 'Self-contained L1 proof for the explicitly declared architecture or '
+                               'conditional class; the result is not computation-only and does not derive '
+                               'that architecture from native U or close a physical parent obligation.'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'U-NATIVE-SOURCE-RECEIVER-RECORD',
+                       'depends_on': 'DEF-AUTONOMOUS-STATE',
+                       'relation': 'REQUIRES',
+                       'basis': 'Uses the registered autonomous native state, common origin and Thue-Morse '
+                                'selector law, with all generator formulas repeated explicitly.'},
+                      {'item_id': 'U-NATIVE-RECORD-CONTINUATION-BOUNDARY',
+                       'depends_on': 'U-NATIVE-SOURCE-RECEIVER-RECORD',
+                       'relation': 'REQUIRES',
+                       'basis': 'Uses exactly its five occupied preparations, actual prefix, common selected '
+                                'tail and unchanged native law; the positive record is retained rather than '
+                                'replaced by the continuation restriction.'},
+                      {'item_id': 'FIELD-GAUSS-CONTACT-MEMORY',
+                       'depends_on': 'INTEGER-F-JG-INVARIANTS',
+                       'relation': 'REQUIRES',
+                       'basis': 'Supplies the primitive conserved chi label for the stated F specialization '
+                                'of carrier transport.'},
+                      {'item_id': 'FIELD-EISENSTEIN-RESONANCE',
+                       'depends_on': 'INTEGER-F-JG-INVARIANTS',
+                       'relation': 'REQUIRES',
+                       'basis': 'Supplies and classifies the selected (A,B,C)=(6,2,-1) carrier form used to '
+                                'compute 18,20,14.'},
+                      {'item_id': 'FIELD-EISENSTEIN-RESONANCE',
+                       'depends_on': 'INTEGER-ENERGY-FUNDED-INVOLUTION',
+                       'relation': 'REQUIRES',
+                       'basis': 'Supplies the exact reversible six-unit resource release for the declared '
+                                'second reaction.'},
+                      {'item_id': 'FIELD-EISENSTEIN-RESONANCE',
+                       'depends_on': 'FIELD-SHEAR-ENERGY-BOUNDARY',
+                       'relation': 'REQUIRES',
+                       'basis': 'Supplies the one-triangle pure-cycle field step and its positive conserved '
+                                'energy.'},
+                      {'item_id': 'INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+                       'depends_on': 'INTEGER-F-JG-INVARIANTS',
+                       'relation': 'REQUIRES',
+                       'basis': 'Supplies F^4=I, hence the common phase modulo four with unchanged carrier '
+                                'identities.'},
+                      {'item_id': 'INTEGER-FINITE-PREACTIVATION-QUOTIENT',
+                       'depends_on': 'FIELD-EISENSTEIN-RESONANCE',
+                       'relation': 'REQUIRES',
+                       'basis': 'Supplies the complete-shell q=3 conversion for the explicitly conditional '
+                                'field-phase omission.'},
+                      {'item_id': 'FIELD-CHARGED-SEPARATION-BOUND',
+                       'depends_on': 'FIELD-GAUSS-CONTACT-MEMORY',
+                       'relation': 'REQUIRES',
+                       'basis': 'Supplies the exact active-flux encoding, Gauss constraint, incidence '
+                                'convention and boundary-flux distinction.'},
+                      {'item_id': 'FIELD-CHARGED-SEPARATION-BOUND',
+                       'depends_on': 'FIELD-SHEAR-ENERGY-BOUNDARY',
+                       'relation': 'REQUIRES',
+                       'basis': 'Supplies strict positivity of the one-triangle block and its nonnegative '
+                                'contribution after separating bridge-edge squares.'}]}
+V95_PROOF_CONTRACTS = {'U-NATIVE-SOURCE-RECEIVER-RECORD': {'bytes': 5288,
+                                     'sha256': 'c0432ab8deb357d10c4c2d377ddd6b79eb1c5587222e3931ca8a597aa13eedc2'},
+ 'U-NATIVE-RECORD-CONTINUATION-BOUNDARY': {'bytes': 2626,
+                                           'sha256': '0b3d9b6d8640909f5e9e46501605d60834e6404563a023301f6e7094cf57316f'},
+ 'INTEGER-F-JG-INVARIANTS': {'bytes': 2430,
+                             'sha256': '88849b58488edd8fb337b781363c6ba8747c547ebfb335e00ea19f260757b30f'},
+ 'INTEGER-ENERGY-FUNDED-INVOLUTION': {'bytes': 1575,
+                                      'sha256': '911a53f087edb1cf9db11d721d81b9359a4045f2737f63515b82fbbd07d6a0a6'},
+ 'FIELD-GAUSS-CONTACT-MEMORY': {'bytes': 2258,
+                                'sha256': 'f41798d84040349fa422bdc39b92a882f93501e538f7154c6c8ba414a019c715'},
+ 'FIELD-SHEAR-ENERGY-BOUNDARY': {'bytes': 2094,
+                                 'sha256': 'a34e2b8d773156e5b9707e266f703d05c111f0f1ec782d6d02c4a80f71caee5f'},
+ 'FIELD-EISENSTEIN-RESONANCE': {'bytes': 2543,
+                                'sha256': '8467f82bc2a8125d562ee6fda4d08a57b2acca0287ac766d8c5bf2e7a3cde86b'},
+ 'INTEGER-SEPARATED-FACTOR-CERTIFICATE': {'bytes': 3273,
+                                          'sha256': 'af7df06bba52d1ce6aa706e08bb55fa510b3a1b85ffd0d8bcdf46fab14cc7864'},
+ 'INTEGER-FINITE-PREACTIVATION-QUOTIENT': {'bytes': 2844,
+                                           'sha256': '1fc89d15f675768fffd8e7fb4558dd50f88fd717c3678dc7383f6ae22786e67a'},
+ 'FIELD-CHARGED-SEPARATION-BOUND': {'bytes': 2661,
+                                    'sha256': '49a6b5296ea13d0555636b6215c9559fca465f6a91054127d5e26ef1868e277b'}}
+V95_NATIVE_TOKENS = {'U-NATIVE-SOURCE-RECEIVER-RECORD': ['Only S depends on lambda; the entire R is initially identical.',
+                                     'The source is exactly zero at n=1.',
+                                     'The reader receives no source, counter, history, saved input or '
+                                     'selected invocation time.',
+                                     'PRESENT(lambda) for every n>=3.',
+                                     'Occupied zero instead reaches PRESENT(0).',
+                                     'This is a carrier count, not an actual-orbit visitation theorem.',
+                                     'This preparation uses a transient a exchange before synchronization '
+                                     'and does not contradict it.'],
+ 'U-NATIVE-RECORD-CONTINUATION-BOUNDARY': ['x_lambda(n)-x_mu(n)=epsilon_n*(lambda-mu)*e_M.',
+                                           'These alternatives exhaust all fixed raw targets, including the '
+                                           'empty target.',
+                                           'The theorem does not extend to arbitrary nonlinear subsystem '
+                                           'definitions.',
+                                           'same five complete preparations under unchanged U',
+                                           'It leaves the proved one-shot record intact.',
+                                           'Reusable writing, independently variable old memory, additional '
+                                           'independent messages and a growing archive remain separate '
+                                           'tasks.']}
+V95_ENERGY_TOKENS = {'INTEGER-F-JG-INVARIANTS': ['Every real homogeneous quadratic invariant has exactly the form',
+                             'invariance condition does not privilege this metric',
+                             'These facts classify invariants of this F and this reaction; they neither '
+                             'select physical energy nor identify chi with measured electric charge.'],
+ 'INTEGER-ENERGY-FUNDED-INVOLUTION': ['such that every difference',
+                                      'is an integer.',
+                                      'A rejected input is fixed and remains rejected on reapplication.',
+                                      'The integrality hypothesis is essential for an integer resource.',
+                                      'not a derivation or unique selection of its T, its energy or its '
+                                      'resource.'],
+ 'FIELD-GAUSS-CONTACT-MEMORY': ["with j_h = 0 when sigma' = 0",
+                                'preserves the entire pointwise defect DE-rho',
+                                'recover the same current on reversal',
+                                'The independent coordinate z is retained when its active edge disappears',
+                                'not a uniqueness theorem for possible encodings.'],
+ 'FIELD-EISENSTEIN-RESONANCE': ['Each shell has exactly six elements',
+                                'proves the complete shell counts without extrapolating a search',
+                                'since 18+3=20+1',
+                                'omitting it and choosing these ordered reaction channels is a law-design '
+                                'assumption',
+                                'barrier associated with the prime five.']}
+V95_BOUNDARY_TOKENS = {'FIELD-SHEAR-ENERGY-BOUNDARY': ['if and only if the largest singular value of C is strictly below 2',
+                                 'M=(2,2), E=(-2,-1,-1,-1,-1) has H_f=0 and DE=0.',
+                                 'loses positive definiteness even within the divergence-free sector',
+                                 'does not exclude a different multicell energy or update law'],
+ 'INTEGER-SEPARATED-FACTOR-CERTIFICATE': ['quiescent under every individual substep',
+                                          'The certified translations must preserve these separations under '
+                                          'every common-period repetition.',
+                                          'their outward displacements satisfy d_i <= d_j.',
+                                          'It proves the prepared trajectory, not stability under '
+                                          'perturbations.',
+                                          'the certificate covers its ordered substeps or a correctly '
+                                          'bounded full-step dependence range.'],
+ 'INTEGER-FINITE-PREACTIVATION-QUOTIENT': ['There is no mixing, creation or deletion of carrier vectors in '
+                                           'this pre-event sector.',
+                                           'All other variables either remain fixed or have no effect on '
+                                           'routing and on the event predicate.',
+                                           'its first occurrence is no later than Q steps',
+                                           'a repeat of the reduced state is not, by itself, a repeat of the '
+                                           'complete field state.',
+                                           'No full census of the broader neutral-helper classes is asserted '
+                                           'here.'],
+ 'FIELD-CHARGED-SEPARATION-BOUND': ['zero asymptotic flux, finite field support and Gauss constraint',
+                                    'Finite field support and zero boundary flux leave only the bridge flux',
+                                    'they must consequently occupy the same node',
+                                    'does not exclude separated charged objects in a different field theory',
+                                    'nor does persistence of two charged port patterns establish two '
+                                    'independent asymptotic particles.']}
+V95_CHECKS = (('V95-PRIOR-BYTES',
+  'thirteen complete v95 inputs reconstruct exact public v94 before all 120 unchanged historical guards'),
+ ('V95-TEN-PROOFS',
+  'ten exact theorem rows bind complete inline proofs, declared dependencies and lifecycle records without '
+  'promoting computation'),
+ ('V95-NATIVE-RECORD',
+  'the unchanged native law admits prepared source transfer and permanent receiver readback; the raw and '
+  'affine continuation restriction remains family-specific'),
+ ('V95-CHOSEN-ENERGY',
+  'invariants, funded involutions, Gauss/contact transport and triangular resonance belong to the explicitly '
+  'chosen integer model'),
+ ('V95-BOUNDARIES',
+  'field positivity, separated-factor certificates, finite first-activation decisions and charged-distance '
+  'bounds retain their exact hypotheses'),
+ ('V95-OPEN-BOUNDARY',
+  'all 474 prior rows and 25 H/O owners remain exact; 484 claims preserve gates, programs and CORE selection '
+  'with no physical promotion'))
+
+
+def v95_previous_bytes(path):
+    """Validate current bytes before reconstructing the exact released v94 input."""
+    patch = V95_INPUT_PATCH.get(path.name)
+    if patch is None:
+        return None
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v95_proof_block(text, claim_id):
+    import re
+    match = re.search(r"(?m)^(#{3,6}) " + re.escape(claim_id) + r" \[T\]\n", text)
+    if match is None:
+        return b""
+    depth = len(match.group(1))
+    tail = text[match.end():]
+    next_heading = re.search(r"(?m)^#{1," + str(depth) + r"} ", tail)
+    end = match.end() + next_heading.start() if next_heading else len(text)
+    return text[match.start():end].encode("utf-8")
+
+
+def v95_current_checks():
+    """Audit exact new proofs and boundaries independently of historical guards."""
+    names = tuple(name for name in V95_INPUT_PATCH if name.endswith(".tsv"))
+    previous = {name: v87_table_bytes(v95_previous_bytes(ROOT / "canon" / name))
+                for name in names}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in names}
+    prior_index = {row["claim_id"]: row for row in previous["REGISTRY.tsv"]}
+    index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    canon_text = CANON.read_text(encoding="utf-8")
+    blocks = {claim: v95_proof_block(canon_text, claim) for claim in V95_IDS}
+    block_text = {claim: " ".join(block.decode("utf-8").split()) for claim, block in blocks.items()}
+    blocks_exact = all(len(blocks[claim]) == contract["bytes"]
+                       and hashlib.sha256(blocks[claim]).hexdigest() == contract["sha256"]
+                       for claim, contract in V95_PROOF_CONTRACTS.items())
+    exact_additions = all(current[name] == previous[name] + rows
+                          for name, rows in V95_ADDITIONS.items())
+    exact_theorems = all(
+        index.get(claim, {}).get("status") == "T"
+        and normative.get(claim, {}).get("item_type") == "THEOREM"
+        and normative.get(claim, {}).get("layer") == "L1"
+        and normative.get(claim, {}).get("gate_ids") == ""
+        and evidence.get(claim, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(claim, {}).get("location") == "inline"
+        and evidence.get(claim, {}).get("architecture_requirement") == "none"
+        and evidence.get(claim, {}).get("hash_mode") == "registry-scope-sha256-v1"
+        and evidence.get(claim, {}).get("sha256")
+            == hashlib.sha256(index.get(claim, {}).get("scope", "").encode("utf-8")).hexdigest()
+        for claim in V95_IDS)
+    native_contract = all(
+        all(token in block_text[claim] for token in tokens)
+        for claim, tokens in V95_NATIVE_TOKENS.items())
+    energy_contract = all(
+        all(token in block_text[claim] for token in tokens)
+        for claim, tokens in V95_ENERGY_TOKENS.items())
+    normalized_canon = " ".join(canon_text.split())
+    energy_contract = energy_contract and all(token in normalized_canon for token in (
+        "is not derived from the original native U",
+        "No neutron or photon identification, lifetime, SI unit, Maxwell limit, measurement apparatus or L2--L6 lift is supplied.",
+        "They are not premises of these eight proofs and are not promoted by this fold.",
+    ))
+    boundary_contract = all(
+        all(token in block_text[claim] for token in tokens)
+        for claim, tokens in V95_BOUNDARY_TOKENS.items())
+    live = {claim: row for claim, row in index.items() if row["status"] in {"H", "O"}}
+    prior_live = {claim: row for claim, row in prior_index.items() if row["status"] in {"H", "O"}}
+    counts = {status: sum(row["status"] == status for row in index.values())
+              for status in {row["status"] for row in index.values()}}
+    conditions = (
+        len(V95_INPUT_PATCH) == 13 and set(V95_INPUT_PATCH) == set(V94_INPUT_PATCH)
+        and V95_PRIOR_COMMIT == "af8dc5956e26917b265fd0070f500c841c326512"
+        and all(v95_previous_bytes(ROOT / "canon" / name) is not None for name in V95_INPUT_PATCH),
+        set(index) == set(prior_index) | set(V95_IDS) and len(V95_IDS) == 10
+        and exact_additions and exact_theorems and blocks_exact,
+        blocks_exact and native_contract,
+        blocks_exact and energy_contract,
+        blocks_exact and boundary_contract,
+        len(index) == 484 and len(prior_index) == 474
+        and counts == {"T": 342, "D": 59, "C": 39, "H": 2, "O": 23, "F": 19}
+        and all(index.get(claim) == row for claim, row in prior_index.items())
+        and live == prior_live and len(live) == 25
+        and all(current[name] == previous[name] for name in (
+            "GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv"))
+        and (ROOT / "canon" / "FRONTIER.md").read_bytes()
+            == v95_previous_bytes(ROOT / "canon" / "FRONTIER.md")
+        and all(row["owner_item_id"] not in V95_IDS for row in current["GATES.tsv"])
+        and all(row["claim_id"] not in V95_IDS for row in current["CORE_SELECTION.tsv"])
+        and all(row["claim_id"] not in V95_IDS for row in current["FRONTIER_PROGRAMS.tsv"]),
+    )
+    return [(tag, description, ok) for (tag, description), ok in zip(V95_CHECKS, conditions)]
+
+
 # Exact v94 release-accounting contract and reversible public v93 reconstruction.
 V94_PRIOR_COMMIT = 'e4b426cf631abcecd1516f2110564dd37912d246'
 V94_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '85c20f131b89a5c9839fa4d65c5e72ae3a986d78a957fa1d596750309a15211a',
@@ -377,7 +1217,9 @@ def v94_previous_bytes(path):
     patch = V94_INPUT_PATCH.get(path.name)
     if patch is None:
         return None
-    current = path.read_bytes()
+    current = v95_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -401,7 +1243,7 @@ def v94_current_checks():
         for name in names
     }
     current = {
-        name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+        name: v87_table_bytes(v95_previous_bytes(ROOT / "canon" / name))
         for name in names
     }
     prior_index = {row["claim_id"]: row for row in previous["REGISTRY.tsv"]}
@@ -421,7 +1263,7 @@ def v94_current_checks():
         claim: row for claim, row in index.items()
         if row["status"] in {"H", "O"}
     }
-    canon_text = CANON.read_text(encoding="utf-8")
+    canon_text = (v95_previous_bytes(CANON) or b"").decode("utf-8")
     blocks = {}
     for name, contract in V94_BLOCKS.items():
         start = canon_text.find(contract["begin"])
@@ -550,7 +1392,7 @@ def v94_current_checks():
             and live == prior_live and len(live) == 25
             and all(current[name] == previous[name] for name in (
                 "GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv"))
-            and (ROOT / "canon" / "FRONTIER.md").read_bytes()
+            and v95_previous_bytes(ROOT / "canon" / "FRONTIER.md")
                 == v94_previous_bytes(ROOT / "canon" / "FRONTIER.md")
             and all(row["owner_item_id"] not in ids for row in current["GATES.tsv"])
             and all(row["claim_id"] not in ids for row in current["CORE_SELECTION.tsv"])
@@ -14126,9 +14968,10 @@ def run():
     checks.extend(v92_current_checks())
     checks.extend(v93_current_checks())
     checks.extend(v94_current_checks())
+    checks.extend(v95_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v94")
+    print("historical guards: exact reconstructed v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v95")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

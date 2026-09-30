@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v94
+historical guards: exact reconstructed v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v95
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -122,5 +122,11 @@ PASS 117 V94-THREE-THEOREMS three L1 T rows have exact scopes, eleven dependenci
 PASS 118 V94-NORMALIZED-READBACK the pinned inline inverse fixes normalized known G, rejects k<3 and codewords outside its image, and recovers current state without lost heads or physical time
 PASS 119 V94-INPUT-BOUNDARY exact observations and chosen codes remain premises; balanced original QDD coefficients lift modulo five including zero, while global residue depth has the no-separate-n boundary
 PASS 120 V94-OPEN-BOUNDARY all 471 prior rows and 25 H/O owners are unchanged; 474 claims preserve gates, programs and CORE selection with no physical promotion or new debt
+PASS 121 V95-PRIOR-BYTES thirteen complete v95 inputs reconstruct exact public v94 before all 120 unchanged historical guards
+PASS 122 V95-TEN-PROOFS ten exact theorem rows bind complete inline proofs, declared dependencies and lifecycle records without promoting computation
+PASS 123 V95-NATIVE-RECORD the unchanged native law admits prepared source transfer and permanent receiver readback; the raw and affine continuation restriction remains family-specific
+PASS 124 V95-CHOSEN-ENERGY invariants, funded involutions, Gauss/contact transport and triangular resonance belong to the explicitly chosen integer model
+PASS 125 V95-BOUNDARIES field positivity, separated-factor certificates, finite first-activation decisions and charged-distance bounds retain their exact hypotheses
+PASS 126 V95-OPEN-BOUNDARY all 474 prior rows and 25 H/O owners remain exact; 484 claims preserve gates, programs and CORE selection with no physical promotion
 
-RESULT 120/120 ALL PASS
+RESULT 126/126 ALL PASS
