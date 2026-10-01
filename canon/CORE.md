@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v94. Normative authority and activation
+**Release identity:** Public Canon v95. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v94 also declares a discrete architecture. It does not
+Public Canon v95 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -146,6 +146,27 @@ The direct QDD write then determines its five algebraic fields; neither this
 representation nor manifest identifiers introduce additional independent
 physical inputs. Lost original heads and the existing physical owners keep
 their stated boundaries.
+
+A separate origin-zero source-only preparation gives an actual native
+one-shot transfer into an initially common receiver. The first selected
+step clears the source; one fixed receiver-only reader retains the five
+possible symbols at every tick from three, distinguishing stored zero
+from an explicit absence preparation. The exact continuation theorem is
+family-specific: all later payload differences remain in the same two
+memory coordinates, so a fresh fixed raw or affine target gains none.
+This transient write is compatible with the synchronized no-write theorem.
+Physical preparation, reusable writing and full QDD apparatus semantics
+remain separate obligations.
+
+Declared integer automata have a separate set of exact construction
+theorems: invariant forms for the chosen F=JG, reversible energy-funded
+gates, charge continuity with contact-flux memory, field-energy positivity,
+triangular shell resonance and finite decision/certificate principles.
+A two-triangle zero mode prevents direct replication of the one-cell
+positive energy. Zero field enforces local neutrality, and bridge flux
+bounds charge separation at fixed energy in the declared geometry.
+These results concern their stated architectures; their derivation from
+native U, physical energy selection and multi-cell realization remain open.
 
 Three decisions have exact dispositions. The complete measurable
 product-source Route A is empty, so ENTROPY-LAYER-BRIDGE closes at F with

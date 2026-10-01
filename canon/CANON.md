@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v94
+# TWIST-J Public Canon v95
 
-**Release identity.** Public Canon v94. Normative authority and activation
+**Release identity.** Public Canon v95. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v94 also declares the discrete architecture used to read
+only. Public Canon v95 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -23,7 +23,7 @@ calibration anchor remains the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v94 does not claim
+seed of the two algebraic projections. Public Canon v95 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -128,7 +128,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v94 contains no such
+deriving the architecture from J; Public Canon v95 contains no such
 theorem.
 
 ---
@@ -6958,6 +6958,641 @@ QDD-INSTRUMENT-APPARATUS, QDD-TERMINAL-EVENT-SEMANTICS and
 QDD-INSTRUMENT-CLASS-COMPLETENESS remain open at their full registered
 physical scopes. No target-independent complete apparatus family,
 native clock-to-SI law or experimental success is supplied here.
+
+### Native one-shot source transfer and the continuation boundary
+
+These two L1 theorems concern one declared family of preparations under the
+unchanged native law. They prove a transfer across fixed coordinate blocks,
+source clearing and permanent receiver-only readback, together with the
+exact limit of further transfer in this family. They supply no physical
+preparation, spatial metric, apparatus, occurrence law or additional coupling.
+
+**Native conventions.** All coordinates are in F5. Put
+
+```text
+x=(p1,p4,p1p,p4p,q,r),     z(x)=p1+p4+p1p+p4p+q+r,
+theta_n=s2(n) mod 2,      F_t(x)=g_(z(x)+2t mod 5)(x),
+U(n,x)=(n+1,F_(theta_n)(x)),   (g0,g1,g2,g3,g4)=(a,b,c,d,e),
+
+a(x)=(p4,p1,p4p,p1p,q,r),
+b(x)=(-p1p,-p4p,-p1,-p4,-q,-r),
+c(x)=(2-p1p,1-p4p+r,2-p1,1-p4-r,1-q,-r),
+d(x)=(2-p1,1-p4,3-p1p,4-p4p,1-q,1-r),
+e(x)=(2-p1,1-p4,3-p1p,4-p4p,2-q,1-r).
+```
+
+Here s2 is binary digit sum, and the counter is the existing autonomous
+counter of DEF-AUTONOMOUS-STATE. The fixed source is S=(p1,p1p), memory
+M=(p4,p4p), reference C=(q,r), and complete complementary receiver R=(M,C).
+Preparations occur at common counter zero. Input preparation is admitted;
+its production by a preceding native trajectory is not asserted.
+
+#### U-NATIVE-SOURCE-RECEIVER-RECORD [T]
+
+For every lambda in F5 prepare
+
+```text
+x_lambda(0)=(lambda,0,-lambda,0,0,0).
+```
+
+Only S depends on lambda; the entire R is initially identical. The actual
+driver prefix is 011. Direct substitution gives
+
+| n | x_lambda(n) | z | next actual generator |
+| --- | --- | --- | --- |
+| 0 | (lambda,0,-lambda,0,0,0) | 0 | a |
+| 1 | (0,lambda,0,-lambda,0,0) | 0 | c |
+| 2 | (2,1+lambda,2,1-lambda,1,0) | 2 | e |
+| 3 | (0,-lambda,1,3+lambda,1,1) | 1 | b |
+
+These are actual selector choices of U, common to all messages. The first
+step transfers the source-supported difference through a's two exchanges.
+The source is exactly zero at n=1. For z=1, bits 0,1 select b,d; for z=4
+they select e,b. The selected b negates z, while d on z=1 and e on z=4
+preserve it. Thus X14={z in {1,4}} is closed under both bits. On this tail,
+all messages have the same trace and selected branch. Each selected source
+and reference formula depends only on its own preceding block and that
+branch. Induction proves that S is independent of lambda for every n>=1
+and C for every n>=0. Later source states need not be zero.
+
+For R=(u,v,q,r) define one total finite reader by
+
+```text
+B=u+v,       D=u-v-1,       zhat=3B+q+r,
+ready(R)=1 iff B in {2,3} and zhat in {1,4},
+read(R)=BLANK                  if ready(R)=0,
+        PRESENT(3-B*zhat*D)    if ready(R)=1.
+```
+
+BLANK and PRESENT(0) are distinct outputs. The reader receives no source,
+counter, history, saved input or selected invocation time. At n=0,1,2,3,
+respectively, (B,zhat) is (0,0),(0,0),(2,2),(3,1). At n=3,
+D=1-2lambda, so 3-B*zhat*D=lambda. Let A=p1+p1p. At this checkpoint
+A=2B; all selected b,d,e negate A and B, so this relation persists and
+z=A+B+q+r=zhat. The remaining exact transformation table is
+
+| selected branch | B' | D' | z' |
+| --- | --- | --- | --- |
+| b | -B | D | -z |
+| d on z=1, or e on z=4 | -B | -D | z |
+
+Consequently B remains in {2,3}, z in {1,4}, and B*z*D is invariant.
+This proves
+
+```text
+read(R(x_lambda(n)))=BLANK           for 0<=n<3,
+                    PRESENT(lambda) for every n>=3.
+```
+
+The tail proof holds for every future binary word after the actual first
+three steps, in particular the native word; this quantification adds no
+control port. Payload recovery is already possible from u at n=1 and u-1
+at n=2. Three is the latency of this declared persistent completion mark,
+not a minimum transfer time.
+
+For absence prepare the distinct sixth source codeword
+x_empty(0)=(0,0,1,0,0,0), with the same receiver and counter. It starts
+in X14 with B=0. Every selected branch negates B, so its reader remains
+BLANK forever. Occupied zero instead reaches PRESENT(0). No presence
+register is added, but absence is an explicit different source preparation.
+Payload-independent reference histories are asserted over the five occupied
+messages; they need not agree with the absence history.
+
+**Complete ready carrier.** The set Q={R:ready(R)=1} has exactly 100 states.
+Choose B in {2,3}, zhat in {1,4}, r,D in F5 and set
+
+```text
+q=zhat-3B-r,     u=3(B+D+1),     v=3(B-D-1).
+```
+
+This parametrization is bijective. For every B,zhat,r, multiplication by
+B*zhat is invertible, giving exactly twenty states for each of the five
+payloads. This is a carrier count, not an actual-orbit visitation theorem.
+The following invariant graph embeds Q in the original checkpoint:
+
+```text
+p1=1+B+2B*zhat,       p1p=-1+B-2B*zhat.
+```
+
+It contains every x_lambda(3). Here A=2B and
+C_s=p1-p1p-2=4B*zhat. Under b, C_s is fixed while B,zhat both negate;
+under selected d/e, C_s and B negate while zhat is fixed. Hence the graph
+is closed. Its literal receiver restrictions are
+
+```text
+b_R(u,v,q,r)=(-v,-u,-q,-r),
+d_R(u,v,q,r)=(1-u,4-v,1-q,1-r),
+e_R(u,v,q,r)=(1-u,4-v,2-q,1-r).
+```
+
+The selector uses reconstructed zhat and the unchanged native bit. Thus R
+with the existing counter has an induced autonomous update on this graph;
+the payload readout itself is stationary without the counter. Global
+bijectivity of U or of the selected two-sheet map is not asserted.
+
+The reference matters to this fixed interface: actual bits 0,1,0,0 at
+n=3,4,5,6 select b,b,b,e, giving
+M(x_lambda(3))=(-lambda,3+lambda) and
+M(x_lambda(7))=(lambda-1,4-lambda). Message zero at n=3 and message one at
+n=7 therefore both have M=(0,3). No fixed bare-memory reader recovers all
+messages at all admitted times. This is not a minimum-resource theorem for
+other encodings.
+
+The displayed output is not an autonomous factor of the whole writing
+protocol. All five outputs at n=2 are BLANK, with five different successors
+at n=3. No single-valued output update, even a common time-dependent one,
+can realize these successors. The pending complete receiver states already
+differ. On the ready tail the output update is identity. The whole-protocol autonomous-output hypothesis of output-factor theorems
+is therefore not satisfied by this reader.
+Nor is R a closed native factor through writing: its initial openness to S
+permits transfer, whereas identical initial states of a closed deterministic
+factor would remain identical. Finally, U-NATIVE-INVARIANT-AND-NOWRITE
+concerns writing inside already synchronized classes. This preparation uses
+a transient a exchange before synchronization and does not contradict it.
+
+#### U-NATIVE-RECORD-CONTINUATION-BOUNDARY [T]
+
+Continue the same five complete preparations under unchanged U. At every
+n>=1 there is a common sign epsilon_n in {1,-1} such that
+
+```text
+e_M=(0,1,0,-1,0,0),
+x_lambda(n)-x_mu(n)=epsilon_n*(lambda-mu)*e_M.
+```
+
+The first a gives epsilon_1=1; c fixes e_M and e negates it, giving
+epsilon_2=1 and epsilon_3=-1. Subsequently the trace and selected branch
+are common. The linear difference action of b fixes e_M; d and e negate
+it. Induction proves the identity for every later time.
+
+A target T is one fixed subset of the six original raw coordinates.
+Fresh readiness means equality of its complete state for all messages at
+one common time m>=1, not merely a BLANK reader value. If T intersects
+{p4,p4p}, its projection is injective in lambda at every n>=1 because the
+included difference is nonzero for distinct messages. If disjoint, its
+projection is independent of lambda at every n>=1. These alternatives
+exhaust all fixed raw targets, including the empty target. Thus no freshly
+ready target at m>=3 later acquires this message, even if the old record
+may remain. For a disjoint target its entire post-write history is also
+identical, so fixed history readers with common initialization and clock
+inputs cannot distinguish the messages.
+
+For any fixed affine observation H(x)=Lx+c the difference is
+epsilon_n*(lambda-mu)*L(e_M). Independence at one m>=1 forces L(e_M)=0
+and therefore independence at every n>=1. The theorem does not extend to
+arbitrary nonlinear subsystem definitions. For example, the time-independent
+invertible coordinate change y1=p1+(q-1)*p4, keeping all other coordinates,
+has y1(x_lambda(3))=0. The next actual b step gives
+x_lambda(4)=(4,2-lambda,0,lambda,4,4), hence y1=2lambda. This observation
+combines the uninformed p1 with already informed p4 and the common q;
+it does not establish a fresh receiver supported on the original p1 port.
+
+The actual tail remains in X14 and cannot return to the original z=0
+input line. Repeating a at n=3 would change the selector, which then fires
+b. No reset, overwritten state, new input, moving address, message-dependent
+sampling time or added interaction is part of this continuation theorem.
+It classifies neither other initial codebooks nor nonlinear subsystems,
+physical locality or larger coupled architectures. It leaves the proved
+one-shot record intact. Reusable writing, independently variable old memory,
+additional independent messages and a growing archive remain separate tasks.
+Neither theorem supplies QDD event realization, sampling, thermodynamics
+or an L1-to-L6 physical identification.
+
+### Declared integer automata: energy, flux memory and finite certificates
+
+The following eight L1 theorems concern explicitly declared integer
+architectures and general local constructions. Their hypotheses define the
+objects being studied. In particular, the choice of the product F = JG,
+its routing graph, reaction channels, field registers and energy function
+is not derived from the original native U. Mathematical consequences of
+these choices are proved below; adopting them as a physical law is a
+separate question. No neutron or photon identification, lifetime, SI unit,
+Maxwell limit, measurement apparatus or L2--L6 lift is supplied. None of
+these statements changes the status of a parent physical obligation.
+
+#### INTEGER-F-JG-INVARIANTS [T]
+
+On integer coefficient vectors v = (a,b,c,d), declare the matrices
+
+$
+J=\begin{pmatrix}1&0&-1&1\\0&1&-1&0\\1&0&0&0\\0&1&-1&1\end{pmatrix},
+\qquad
+G=\begin{pmatrix}1&0&-1&0\\0&0&-1&1\\0&1&-1&0\\0&0&-1&0\end{pmatrix},
+\qquad F=JG.
+$
+
+The unimodular coordinates and their integer inverse are
+
+$
+x=(b,d-b,-c,c-a),\qquad
+v=(-x_2-x_3,x_0,-x_2,x_0+x_1).
+$
+
+Direct multiplication conjugates F to
+P(x_0,x_1,x_2,x_3) = (x_1,x_2,x_3,x_0). Hence every integer linear
+invariant is an integer multiple of the primitive invariant
+\(\chi(v)=d-a=\sum_i x_i\). Every real homogeneous quadratic invariant
+has exactly the form \(I_K=x^TKx\), where
+
+$
+K=\begin{pmatrix}A&B&C&B\\B&A&B&C\\C&B&A&B\\B&C&B&A\end{pmatrix}.
+$
+
+For q = x_0+x_1+x_2+x_3, w = x_0-x_1+x_2-x_3,
+u = x_0-x_2 and t = x_1-x_3, its complete decomposition is
+
+$
+I_K=\frac{A+2B+C}{4}q^2+
+\frac{A-2B+C}{4}w^2+\frac{A-C}{2}(u^2+t^2).
+$
+
+It is positive definite precisely when A+2B+C, A-2B+C and A-C
+are strictly positive; replacing these by nonnegative inequalities gives
+positive semidefiniteness.
+
+Proof. A linear functional fixed by the four-cycle has all four
+coefficients equal. Unimodularity transfers this full integer
+classification back to v. For symmetric K, the equation
+P^T K P = K says that entries depend only on cyclic index difference;
+symmetry identifies differences one and three. This gives the displayed
+three-parameter family. Its orthogonal subspaces are the constant line,
+the alternating line and the two-dimensional remaining plane, with the
+three displayed eigenvalues. Decomposing x along them proves the identity
+and both definiteness assertions for all real x.
+
+The orbit symmetrization
+\(Q(v)=\sum_{k=0}^3\|F^k v\|^2\) chooses (A,B,C) = (6,2,0).
+It is a legitimate positive invariant, but the invariance condition does
+not privilege this metric. In particular the ordered two-register
+transposition
+\((e_i,-e_{i+2})\leftrightarrow(e_i-e_{i+2},0)\), with phase basis
+vectors e_i and indices modulo four, changes additive I_K by -2C in the
+forward direction. The input costs 2A and the output 2(A-C). Requiring
+that isolated reaction to preserve this additive form, with no other
+energy-bearing state, forces C = 0. Choosing C nonzero requires an
+explicit compensating transfer. These facts classify invariants of this
+F and this reaction; they neither select physical energy nor identify
+chi with measured electric charge.
+
+#### INTEGER-ENERGY-FUNDED-INVOLUTION [T]
+
+Let S be a set, T:S->S an involution and H_0:S->R a chosen function such
+that every difference
+\(\Delta(s)=H_0(Ts)-H_0(s)\) is an integer. With a stored local resource
+n in the nonnegative integers, define
+
+$
+\widehat T(s,n)=
+\begin{cases}
+(Ts,n-\Delta(s)),&n-\Delta(s)\geq0,\\
+(s,n),&n-\Delta(s)<0.
+\end{cases}
+$
+
+This is an involution of S times the nonnegative integers and preserves
+H_0(s)+n exactly. If T and Delta depend on a fixed local neighborhood,
+then so does this lift. A finite ordered composition of such gates has
+the inverse obtained by reversing their order. The gates need not commute.
+
+Proof. Integrality makes every accepted target a state of the same set.
+Since T^2 is the identity, Delta(Ts) = -Delta(s). From an accepted target,
+the reverse resource is (n-Delta(s))+Delta(s) = n >= 0, so the reverse
+branch is accepted and restores both entries. A rejected input is fixed
+and remains rejected on reapplication. This proves involutivity in both
+branches. Adding H_0(Ts) to n-Delta(s) proves energy preservation; the
+rejected branch is immediate. The remaining assertions follow directly
+from dependence on the local input and inversion of a composition.
+
+The integrality hypothesis is essential for an integer resource. H_0
+need not be nonnegative for this theorem; if a globally nonnegative
+energy is desired, that is an additional declared property of the chosen
+H_0. This construction is an exact way of funding a chosen reaction,
+not a derivation or unique selection of its T, its energy or its resource.
+
+#### FIELD-GAUSS-CONTACT-MEMORY [T]
+
+Use an oriented graph incidence D with +1 at an edge's tail and -1 at
+its head. At each node let rho be the sum of transported carrier charges.
+Any node-local operation preserving that sum, followed by actual edge
+transfers, satisfies
+\(\rho'-\rho=-Dj\), where j is signed transported charge. The charge
+chi from INTEGER-F-JG-INVARIANTS supplies one such conserved carrier
+label when the within-step operation is F.
+
+For a tree with a possible additional contact edge h, fix the oriented
+tree path r with Dr = Dh, and store a contact bit sigma, a tree vector b
+and an integer z even when sigma = 0. In the fixed ambient edge space
+of the tree plus h, define
+
+$
+E_T=b-\sigma zr,\qquad E_h=\sigma z.
+$
+
+Then DE = Db. Changing sigma to sigma' at fixed b,z changes the active
+field by the divergence-free vector
+\(k=(\sigma'-\sigma)z(h-r)\). If the subsequent current has tree part
+j_T and contact component j_h, with j_h = 0 when sigma' = 0, the update
+
+$
+b'=b-j_T-j_h r,\qquad z'=z-j_h
+$
+
+gives E' = E+k-j and preserves the entire pointwise defect DE-rho.
+In particular a prepared Gauss constraint DE = rho persists.
+
+Proof. The path identity cancels both z terms in DE. Substitution in the
+new active field gives E'=E+k-j; the condition on j_h is exactly what
+makes this true also when the new contact is absent. Applying D and the
+continuity identity proves defect preservation. For known sigma' and j
+the register update reverses by adding j_T+j_h r to b' and j_h to z'.
+If the matter transport and contact operation have exact inverses and
+recover the same current on reversal, these identities give the inverse
+of the combined field update as well.
+
+The independent coordinate z is retained when its active edge disappears;
+replacing all such states by their active flux alone would identify
+distinct stored z values. The theorem supplies one reversible encoding,
+not a uniqueness theorem for possible encodings. With finitely supported
+flux, summing DE = rho gives total charge zero. Nonzero total charge on
+an infinite graph therefore requires an explicitly specified boundary
+flux or another boundary convention. Finite stored corrections to an
+infinite background are not a proof of finite absolute field energy.
+
+#### FIELD-SHEAR-ENERGY-BOUNDARY [T]
+
+For any finite real m-by-n matrix C, consider the electric-first shear
+step on E in R^m and M in R^n,
+
+$
+E'=E+CM,\qquad M'=M-C^T E'.
+$
+
+It is invertible and preserves
+\(H_f(E,M)=\|E\|^2+\|M\|^2+E^TCM\).
+Its inverse is M = M'+C^T E', followed by E = E'-CM. If C is integer,
+both directions preserve the integer lattice. If DC = 0, the step also
+preserves DE. Moreover
+
+$
+4H_f=\|2E+CM\|^2+M^T(4I-C^TC)M.
+$
+
+Consequently H_f is positive definite on the full real state space if
+and only if the largest singular value of C is strictly below 2. It is
+positive semidefinite if and only if that singular value is at most 2.
+These are conditions on the declared finite incidence and update order.
+
+Proof. Set a = E'. Expressing E as a-CM gives
+\(H_f(E,M)=\|a\|^2+\|M\|^2-a^TCM\). Substituting M'=M-C^Ta in
+H_f(a,M') gives the same expression. The inverse and divergence assertion
+follow from the two shear equations. Completing the square gives the
+displayed identity. For every M one can choose E=-CM/2, so positivity
+of the remaining matrix is necessary as well as sufficient. Its
+eigenvalues are 4 minus the squared singular values of C; the E-only
+subspace has positive norm. This proves both equivalences.
+
+For one oriented triangle, C is a single cycle column c with c^Tc=3.
+Then \(4H_f=\|2E+cM\|^2+M^2\), a strictly positive form. For two
+triangles sharing an edge, take the ordered oriented edges
+0->1, 1->2, 2->0, 1->3, 3->0 and the two cycle columns
+
+$
+C=\begin{pmatrix}1&1\\1&0\\1&0\\0&1\\0&1\end{pmatrix},\qquad
+C^TC=\begin{pmatrix}3&1\\1&3\end{pmatrix}.
+$
+
+Both columns have zero divergence. The Gram eigenvalues are 4 and 2,
+and the nonzero integer state
+M=(2,2), E=(-2,-1,-1,-1,-1) has H_f=0 and DE=0. Every integer multiple
+is another such state. Thus direct replication of this one-triangle
+energy onto adjacent triangles loses positive definiteness even within
+the divergence-free sector. The result does not exclude a different
+multicell energy or update law; it identifies an exact boundary of this
+particular simultaneous shear construction.
+
+#### FIELD-EISENSTEIN-RESONANCE [T]
+
+In the one-triangle pure-cycle sector E=cz, the preceding energy and
+step reduce to
+
+$
+q(z,m)=3z^2+m^2+3zm,\qquad
+T(z,m)=(z+m,-3z-2m).
+$
+
+Here m is the magnetic scalar. Put L=I-T. Then
+
+$
+T^3=I,\qquad L(z,m)=(-m,3z+3m),\qquad
+L^2=-3T,\qquad LT=TL,\qquad q(Lv)=3q(v).
+$
+
+L restricts to a bijection from all integer states of q=1 to all integer
+states of q=3. Each shell has exactly six elements, and every element of
+the second shell admits the integer inverse
+\(L^{-1}(z,m)=(z+m/3,-z)\). No choice of a preferred field phase is
+required for this shell conversion.
+
+Proof. Set a=z, b=z+m, and let omega satisfy omega^2+omega+1=0 with
+complex conjugate omega^2. Then
+\(q=a^2+ab+b^2=N(a-b\omega)\). The step sends (a,b) to (b,-a-b),
+so it multiplies a-b omega by omega; L multiplies by 1-omega.
+Now N(1-omega)=3 and (1-omega)^2=-3 omega, proving all the identities.
+For q=3, reduction modulo three gives m^2=0 modulo three, hence 3
+divides m. The displayed inverse is therefore integral and has norm
+one. Conversely L sends every norm-one state to norm three and is
+injective. Finally 4q=(2a+b)^2+3b^2 shows that the norm-one pairs
+(a,b) are exactly (1,0), (-1,0), (0,1), (0,-1), (1,-1), (-1,1).
+This proves the complete shell counts without extrapolating a search.
+
+There is a concrete conditional energetic application. Choose the
+carrier form (A,B,C)=(6,2,-1) from INTEGER-F-JG-INVARIANTS. For cyclic
+indices define w_i=e_i-e_(i+1)+e_(i+2) and R_i=w_i-e_(i+1). On three
+ordered carrier registers declare the transpositions
+
+$
+(R_i,0,0)\longleftrightarrow
+(e_i,-e_{i+1},e_{i+2}-e_{i+1})\longleftrightarrow
+(w_i,-e_{i+1},0).
+$
+
+Both preserve the full vector sum; their carrier energies are 18, 20
+and 14, respectively. Couple the first forward transposition to L^{-1}
+on the complete q=3 shell and its reverse to L on q=1, fixing all
+other joint states. This is an involution preserving carrier plus field
+energy, since 18+3=20+1. The second transposition can release six units
+to a nonnegative local resource by INTEGER-ENERGY-FUNDED-INVOLUTION.
+With an active contact of cost one and all remaining contributions
+nonnegative, this particular field-funded endpoint has total energy
+at least 22. The direct carrier transition 18->14 remains algebraically
+possible: omitting it and choosing these ordered reaction channels is a
+law-design assumption. This shell resonance proves neither a universal
+above-threshold activation rule nor a waiting time, tunnelling law or
+barrier associated with the prime five.
+
+#### INTEGER-SEPARATED-FACTOR-CERTIFICATE [T]
+
+Let a deterministic evolution on a locally finite graph be a finite
+ordered composition of finite-radius local substeps with a background
+that is quiescent under every individual substep. Assume exact translation
+covariance in the homogeneous regions used below, outside a fixed
+exceptional region. A state admits
+an all-future factor certificate if it has the following exact data.
+There is one bounded complete factor with a closed finite orbit, and
+finitely many complete outgoing factors whose isolated evolutions return
+after finite periods to positive outward translations of themselves.
+A purely translating outgoing register is an allowed factor. Every
+stored variable, including contact, flux memory, magnetic state, resource
+and within-step phase, belongs to a factor or to the common background.
+
+Take a common multiple p of their periods. For every within-step substep
+of the p-step isolated evolutions, require separation sufficient that
+no local update reads nonbackground state from two different factors.
+Require the same for any fixed exceptional region and each moving
+factor. The certified translations must preserve these separations
+under every common-period repetition. One sufficient finite certificate
+on homogeneous rays consists of disjoint full-substep support envelopes with gaps greater than twice
+the maximum local radius, all moving envelopes outside the exceptional
+region, and nondecreasing outward translation per p steps in their
+spatial order on each shared ray. Explicitly, on the same ray measure
+depth from its root: if factor i is closer to the root than factor j,
+their outward displacements satisfy d_i <= d_j.
+
+Under these hypotheses, the full evolution is the union of the isolated
+factor evolutions for every nonnegative time. Any property verified in
+every phase of the complete factors therefore persists for all future
+times, including at within-step stages if those were included in its check.
+
+Proof. During the first common period, no local dependence neighborhood
+contains two nonbackground factors. Quiescence and locality therefore
+make each substep on their union agree with the union of the isolated
+substeps. This proves the assertion through p. At that time each factor
+has returned to its same phase with its certified translation. By the
+assumed preservation of separation, factors cannot begin to interact at
+a later repetition; under the stated finite ray criterion,
+the ordered outward translations cannot decrease any separating gap.
+Moving factors remain in the homogeneous region, where translation covariance
+reproduces the same finite histories. The hypotheses thus hold for the
+next common period. Induction proves the conclusion for every period
+and every intervening substep.
+
+This is a sufficient certificate, not a necessary classification of
+persistent states. It proves the prepared trajectory, not stability
+under perturbations. A finite movie, a repeated matter projection, or
+an orbit obtained by silently deleting outgoing flux or resources does
+not satisfy its hypotheses. The completed step's range cannot be
+inferred from a single elementary gate: the certificate covers its
+ordered substeps or a correctly bounded full-step dependence range.
+
+#### INTEGER-FINITE-PREACTIVATION-QUOTIENT [T]
+
+Fix a finite region containing P distinct carrier ports and k <= P
+nonzero carriers at distinct ports. Before a designated first event,
+assume that each carrier is transformed once per step by the same F
+from INTEGER-F-JG-INVARIANTS; routing only permutes their ports and is
+a deterministic function of current carrier values and positions.
+There is no mixing, creation or deletion of carrier vectors in this
+pre-event sector. All other variables either remain fixed or have
+no effect on routing and on the event predicate. The predicate includes
+first activation and region exit; any competing reaction must either
+be excluded by the sector hypotheses or treated as an additional exit
+from this reduction.
+
+Let m_j be the multiplicities of identical initial carrier vectors.
+Then phase modulo four together with port positions, unordered within
+each identical-vector class, is an exact decision state. Its cardinality
+is at most
+
+$
+Q=4\,\frac{(P)_k}{\prod_j m_j!},\qquad
+(P)_k=P(P-1)\cdots(P-k+1).
+$
+
+If activation or exit occurs, its first occurrence is no later than Q
+steps from an initial nonterminal state. Otherwise a repeated decision
+state certifies absence of both events forever within this sector.
+For a three-arm region of radius R with three ports per node,
+P=3(1+3R). This is a uniform conditional bound, not an estimate of typical
+waiting times or a completed classification of preparations.
+
+Proof. At time t, the vector originally v_i is F^t v_i, determined by
+t modulo four because F^4=I. Equal initial vectors remain equal; hence
+label permutations within their classes contain no decision information.
+There are at most the displayed number of phase-position configurations.
+The hypotheses make the successor and event predicate single-valued
+functions of that configuration. Among Q+1 consecutive nonterminal
+configurations two coincide. Determinism then closes a cycle with no
+first future terminal event. Equivalently a trajectory reaching a first
+terminal event uses at most Q distinct preceding configurations.
+
+The triangular q=3 field can be omitted from this decision state only
+when its phase does not affect routing and the activation uses the
+complete shell conversion of FIELD-EISENSTEIN-RESONANCE. In that case
+all six shell states permit the same carrier activation. Its period
+three need not be an additional waiting condition; a repeat of the
+reduced state is not, by itself, a repeat of the complete field state.
+At fixed P and k, increasing integer carrier amplitudes cannot evade
+this cardinality bound while these same reduction hypotheses remain
+valid. Enlarging the region, adding carriers, introducing another
+reaction or adding a dynamically relevant memory changes the problem.
+No full census of the broader neutral-helper classes is asserted here.
+
+#### FIELD-CHARGED-SEPARATION-BOUND [T]
+
+Consider the tree-plus-one-triangle architecture of
+FIELD-GAUSS-CONTACT-MEMORY with zero asymptotic flux, finite field
+support and Gauss constraint DE=rho. When the contact is active choose
+
+$
+H_f=\|E\|^2+M^2+M c^TE,\qquad c=h-r,\qquad c^Tc=3;
+$
+
+when inactive choose \(H_f=\sum_{e\in T}b_e^2+z^2+M^2\).
+The active triangle has the positive certificate from
+FIELD-SHEAR-ENERGY-BOUNDARY. Hence H_f=0 forces all active field
+coordinates to vanish in either contact state and forces rho=0 at
+every node. If the only nonzero charged carriers are one +q and one
+-q, with q nonzero, they must consequently occupy the same node,
+although they may occupy distinct ports and remain distinct vectors.
+
+More generally suppose the only nonzero net node charges are +q and
+-q. Let L be the number of bridge edges on their connecting route
+outside the possible triangle. Then
+
+$
+H_f\geq q^2L.
+$
+
+If total energy is the sum of nonnegative other terms and kappa H_f,
+where kappa>0, then total energy is at least kappa q^2 L. For the
+unit-charge, unit-weight convention this is H >= L. Thus an isolated
+pair cannot acquire unbounded bridge separation at fixed total energy
+in this architecture.
+
+Proof. The active triangle's completed-square identity is strictly
+positive in its electric coordinates and M. All other edges contribute
+independent squares. The inactive expression is itself a sum of
+squares. This proves the zero-energy assertion, and Gauss then proves
+pointwise neutrality and co-location of an otherwise isolated pair.
+For any bridge separating the two charges, sum DE=rho on the component
+on one side of that cut. Finite field support and zero boundary flux
+leave only the bridge flux, which is +q or -q. Each of the L bridges
+therefore contributes q^2. The triangle's remaining contribution is
+nonnegative, proving the bound. For an infinite component the same
+sum may be performed in a finite exhaustion beyond all nonzero field
+and charge support.
+
+This statement concerns the specified geometry, integer flux norm and
+boundary condition. It does not exclude separated charged objects in a
+different field theory, nor does persistence of two charged port patterns
+establish two independent asymptotic particles.
+
+The numerical prepared trajectories, record waiting times and product
+orbit tables of the research package remain noncanonical engineering
+evidence. They are not premises of these eight proofs and are not
+promoted by this fold. In particular the fold supplies no exhaustive
+666-helper preparation census, decay distribution, perturbation theorem
+or physical interpretation of the transported resource.
 
 ## 3. The kernel and the census
 
