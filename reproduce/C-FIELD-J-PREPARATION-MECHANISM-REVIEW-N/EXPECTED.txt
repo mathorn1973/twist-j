@@ -1,0 +1,7 @@
+PASS local: edges=17 full_basis=436 pointer_units=3020
+PASS contraction: dimensions=5 exact_psd_certificates=25
+PASS densities: states=37 boundaries=148 collisions=627
+PASS retained: correlated_or_product_inputs=2 distinct_baths_each=6
+PASS phase_exactness: sign_patterns=104 dark_lines=52 fixed_edges=284
+PASS handoff: branches=2664 schedules=9 rational_budgets=18
+SCOPE L=613; m=K+1; B=L sum n_i; approximate pointer preparation; occurrence NOT DERIVED
