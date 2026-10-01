@@ -1,0 +1,8 @@
+AUDIT PASS: receiver bounded record; NON-CANONICAL candidate-T L1
+H=1 seeds: 20; connected lengths: 19; full boundaries: 7420
+single-cut cases: 151; cut boundaries: 2956; identity-K controls: 19
+occupied contact cases: 2079; generic background cases: 918
+first arrival=N-1; first reaction=first read=N; read=1 at N,N+1,N+2; first reset=N+3
+energy=41; coordinates=32N-1; five layers; stored three-state phase mechanism
+full-state oracle, two adapters, layer invariants and both inverse identities pass
+All-N and all-time cut conclusions rest on the proof; no permanent or robust memory claim.
