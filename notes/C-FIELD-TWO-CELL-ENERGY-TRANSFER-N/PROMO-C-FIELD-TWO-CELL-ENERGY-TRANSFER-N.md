@@ -2,7 +2,8 @@
 
 PUBLIC / NON-CANONICAL. L1 only. This is a proposal, not a promotion.
 Current evidence: self-contained exact proof, independent implementation and
-static challenge, and first local runner PASS. Public architecture gate PENDING.
+static challenge, local runner PASS and actual public x86_64/aarch64 replay
+PASS in run 36833055038. The reviewed candidate is in draft PR #1308.
 
 ## Proposed retained statement
 
@@ -14,9 +15,11 @@ Every substep preserves joint energy, spectators, each reacting vector sum,
 each actual node charge and both full Gauss defects. All contact contents
 remain recoverable, including occupied channel and receiver resources.
 
-For the declared neutral and charged preparations, two units created in the
-source leave it, enter the target and pay its zero-active-field R18 -> A20
-transition. The same complete preparation under the specified disabled-contact
+For the declared neutral and charged preparations, two stored surplus units
+released by the source reaction leave it, enter the target and pay its R18 -> A20
+transition at zero active field. The source reaction releases four field units,
+uses two for its own activation and stores the two that are transferred. The
+same complete preparation under the specified disabled-contact
 control does not produce that target reaction. The complete accounts are
 23+18=21+20=41 and 110+56=108+58=166. Both preparations have exact period 5;
 more generally every orbit is periodic on its finite fixed-energy shell.
@@ -35,7 +38,8 @@ period 5/10, one-way transfer, network propagation or a permanent record.
   actual execution and the achieved independence; SHA256SUMS binds the package.
 - Both actual public architecture logs must reproduce the same wrapper and
   expected bytes, and required repository checks/security review must pass.
-  The public computation condition is not yet recorded as fulfilled.
+  This condition is fulfilled for this candidate; RUN.md preserves the actual
+  head, job URLs and matching scientific receipts.
 - A future fold must separately resolve the unmerged candidate dependency
   on PR #1306/#1304 and distinguish it from Canon v95's inherited generic
   funding, matter-energy and Gauss results. No predecessor is promoted here.

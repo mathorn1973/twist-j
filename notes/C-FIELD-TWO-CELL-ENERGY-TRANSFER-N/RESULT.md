@@ -2,8 +2,9 @@
 
 PUBLIC / NON-CANONICAL, L1. Authority: none. Reservation issue #1307.
 Owner: A. M. Thorn / codex-field-two-cell-energy-transfer-20261001.
-Status: exact proof and first local independent audit PASS; public
-two-architecture computation gate PENDING. No Canon status is assigned.
+Status: reviewed NON-CANONICAL PASS, including actual public two-architecture
+replay in [draft PR #1308](https://github.com/mathorn1973/twist-j/pull/1308).
+No Canon status is assigned.
 
 ## Constructed transfer and the matched control
 
@@ -13,8 +14,8 @@ Gs; Xs; Xt; Gt; Fs; Ft. Each contact exchanges whole resource coordinates;
 old channel or receiver contents remain stored. The reverse order, with the
 two free field inverses, recovers every coordinate exactly.
 
-For the neutral preparation, the source reaction produces two resource
-units. They leave the source, are stored in the channel, enter the receiver
+For the neutral preparation, the source reaction deposits two surplus
+resource units. They leave the source, are stored in the channel, enter the receiver
 and pay its zero-active-field R18 -> A20 transition. The full energy account is
 
 ```text
@@ -61,9 +62,12 @@ An offimage source with the same field energy 5 as the successful source
 does not fund that reaction. Its G is fixed while its free field still moves:
 gate rejection does not imply rest under the complete U.
 
-No frozen scientific falsifier fired in the local run. The two sources,
+No frozen scientific falsifier fired in the local or public runs. The two sources,
 proof and success bytes remain unchanged from the joint pin. RUN.md gives
-the exact execution/custody receipt; public two-architecture replay is pending.
+the exact execution/custody receipt. Both actual architecture logs of run
+36833055038 report matching wrapper/output hashes, CPython 3.12.14 x86_64
+and aarch64; both jobs and the aggregate check passed. Required repository
+checks and the 172-test local unit suite also passed, with one platform skip.
 
 ## Recurrence and construction choices
 

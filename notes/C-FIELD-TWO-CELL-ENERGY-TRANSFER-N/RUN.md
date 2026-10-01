@@ -60,9 +60,29 @@ changed after pinning or after this execution.
 
 ## Public computation gate
 
-PENDING: actual public PR x86_64 and aarch64 replay must be observed and
-its matching hashes read from both job logs. Local agreement is not this
-public computation gate. Append exact head, run/job URLs and receipts here.
+PASS: [PR #1308](https://github.com/mathorn1973/twist-j/pull/1308),
+[run 36833055038](https://github.com/mathorn1973/twist-j/actions/runs/36833055038),
+head `66ed5056f21852f8fe17ecf268cc3f6c31827993`. This head adds only the
+run/result/review/custody records after the unchanged joint source pin.
+
+| job | Python | conclusion |
+| --- | --- | --- |
+| [x86_64 / 110273867352](https://github.com/mathorn1973/twist-j/actions/runs/36833055038/job/110273867352) | CPython 3.12.14 | success |
+| [aarch64 / 110273867154](https://github.com/mathorn1973/twist-j/actions/runs/36833055038/job/110273867154) | CPython 3.12.14 | success |
+| [aggregate check / 110274044092](https://github.com/mathorn1973/twist-j/actions/runs/36833055038/job/110274044092) | n/a | success |
+
+Both actual architecture logs were read after completion. Each contained
+exactly the same scientific receipt:
+
+```text
+REPRODUCE PASS FIELD-TWO-CELL-ENERGY-TRANSFER-N d30a30d1c68e5aff399ea97e691f0016a25a5ea0e99117621be7337a4ada7a43 7aa6e086bf3fd7c43ffea5ac4eae27940a1ceee644231ac4ee7d2fcec922c4e1
+```
+
+Thus both required architectures executed BOTH pinned implementations with
+exit 0, empty stderr and the same 288 scientific stdout bytes. This is actual
+scientific replay, not an inference from green documentation checks. The
+publication job was correctly skipped; no release was requested or performed.
+The subsequent reporting update leaves all seven pinned inputs unchanged.
 
 This uses the ordinary ACTIVE repository reproduction workflow, not a
 GENESIS staging lane or a fabricated formal probes/P-* run record.

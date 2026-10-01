@@ -45,8 +45,10 @@ and performed no further scientific run.
 
 The proof establishes all-carrier properties; finite execution covers the
 frozen samples and exact certificates. RUN.md contains actual local evidence.
-Public x86_64/aarch64 replay remains PENDING until both actual scientific
-receipts have been read; a generic green documentation check is insufficient.
+Public x86_64/aarch64 replay passed in run 36833055038. Both actual scientific
+job logs were read: matching wrapper/output hashes, CPython 3.12.14, successful
+architecture jobs and aggregate check. RUN.md records the exact head and
+job URLs; this is not a generic green documentation check.
 
 ## Public payload and security boundary
 
@@ -67,6 +69,15 @@ and unchanged seven pinned files. Ordinary required repository checks remain
 separate from the scientific proof and two-architecture gate.
 
 The unchanged local policy, Canon, ledger and gate-contract checks passed.
-The repository unit suite passed all172 tests with one platform skip on
-Windows Python3.12. Its deliberately failing checker fixtures are successful
+The repository unit suite passed all 172 tests with one platform skip on
+Windows Python 3.12. Its deliberately failing checker fixtures are successful
 unit tests, not failures of this candidate's scientific execution.
+
+A separate post-run documentation and custody review confirmed the exact
+13-file text inventory, matching local receipt/hashes, unchanged seven pinned
+files, clean diff, all requested boundaries and exactly one unstarted successor.
+It requested one reporting clarification: the two stored surplus units are
+released from field energy by the source reaction, not newly created energy.
+That wording was clarified in this proposal/result; no pinned claim, proof,
+program or expected output changed. The review did not read challenger code
+or execute science. Public gate evidence is recorded separately in RUN.md.
