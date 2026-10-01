@@ -1,0 +1,7 @@
+LOCAL AUDIT PASS: NON-CANONICAL candidate-T L1; no public computation gate
+H=1 seeds: 20; connected lengths: 19; full boundaries: 6280
+single-cut cases: 151; cut boundaries: 2805; occupied contact cases: 2079
+first boundary arrival=N-1; first target reaction=N; energy=41; coordinates=32N-1
+two generic full-state adapters agree; layer invariants and both inverse identities pass
+connected full-state SHA-256: 8f12d371b479257b992c78ea97d8c70a816d521aca05e0d31b14966f7a03ad36
+All-N and all-time cut conclusions rest on the proof, not these finite checks.
