@@ -1,0 +1,31 @@
+reference	quantity	manufacturer	ordering_code	function	source	status
+C_BANK	1	Vishay	MAL210118223E3	22000uF63V storage capacitor	https://www.vishay.com/docs/28371/101102phrst.pdf	SELECTED_NOT_QUALIFIED
+K_PLUS K_MINUS	2	Pickering	104-1-A-5/1D	NO sense poles; contacts1/7; coil+3/-5	https://www.pickeringrelay.com/pdfs/104-high-voltage-sil-reed-relays.pdf	DRAWING_CHECKED
+R1-R9	9	Vishay	VR25000001005JA100	10Mohm5% divider	https://www.vishay.com/docs/28907/vr25vr37vr68.pdf	CALIBRATION_REQUIRED
+R10	1	Vishay	VR25000001004JA100	1Mohm5% divider	https://www.vishay.com/docs/28907/vr25vr37vr68.pdf	CALIBRATION_REQUIRED
+U1	1	TI	LMP7721MA/NOPB	Special-pinout SOIC8 guarded follower	https://www.ti.com/lit/ds/symlink/lmp7721.pdf	LAYOUT_QUALIFICATION_REQUIRED
+U2	1	TI	ULN2003AN	PDIP16 two low-side coil drivers	https://www.ti.com/lit/ds/symlink/uln2003a.pdf	PROTOTYPE
+U3	1	TI	CD74HCT221E	PDIP16 nonretriggerable maximum-window timer	https://www.ti.com/lit/ds/symlink/cd74hc221.pdf	RC_MEASUREMENT_REQUIRED
+U4	1	TI	CD74HCT08E	PDIP14 request/window and arm/lid AND gates	https://www.ti.com/lit/ds/symlink/cd74hct08.pdf	PROTOTYPE
+S_ARM S_LID	2	Omron	SS-01GL2	Gold-alloy microload switches; C/NO used	https://www.fa.omron.co.jp/product/item/SS-01GL2/	NOT_SAFETY_RATED_INTERLOCK
+R11 R12	2	Vishay	MRS25000C1000FCT00	100ohm1% output isolation and supply limiter	https://www.vishay.com/docs/28724/mrs16m25.pdf	FAMILY_ORDERING_RULE
+R13-R16	4	Vishay	MRS25000C1002FCT00	10kohm1% pulldowns	https://www.vishay.com/docs/28724/mrs16m25.pdf	FAMILY_ORDERING_RULE
+R17 R18	2	Vishay	MRS25000C1001FCT00	1kohm1% arm/lid pulldowns	https://www.vishay.com/docs/28724/mrs16m25.pdf	FAMILY_ORDERING_RULE
+R19	1	Vishay	MRS25000C3903FCT00	390kohm1% timing	https://www.vishay.com/docs/28724/mrs16m25.pdf	RC_MEASUREMENT_REQUIRED
+C1-C4 CT1-CT10	14	KEMET	C315C104K5R5TA	100nF10%50V X7R; four bypass and ten parallel timing	https://search.kemet.com/component-documentation/download/specsheet/C315C104K5R5TA	TIMING_DC_BIAS_QUALIFICATION_REQUIRED
+J_BANK_PLUS	1	Pomona	72930-2	Red shrouded panel jack	https://www.pomonaelectronics.com/files/datasheets/panel-mount-iec61010-4mm-0-16-in-jack-for-sheathed-plugs.pdf	ASSEMBLY_NOT_QUALIFIED
+J_BANK_MINUS	1	Pomona	72930-0	Black shrouded panel jack	https://www.pomonaelectronics.com/files/datasheets/panel-mount-iec61010-4mm-0-16-in-jack-for-sheathed-plugs.pdf	ASSEMBLY_NOT_QUALIFIED
+P_SENSE_PLUS P_CHARGE_PLUS P_DISCHARGE_PLUS	3	Pomona	4933-2	Red sheathed plug per mutually exclusive head	https://www.pomonaelectronics.com/sites/default/files/d4933_100.pdf	MATING_CHECK_REQUIRED
+P_SENSE_MINUS P_CHARGE_MINUS P_DISCHARGE_MINUS	3	Pomona	4933-0	Black sheathed plug per mutually exclusive head	https://www.pomonaelectronics.com/sites/default/files/d4933_100.pdf	MATING_CHECK_REQUIRED
+RD1-RD10 RC1-RC10	20	Vishay	MRS25000C1001FCT00	Separate10kohm series charge and discharge chains	https://www.vishay.com/docs/28724/mrs16m25.pdf	REMOVABLE_SERVICE_HEADS
+PS1	1	Keysight	E36312A	Separate coil and sense channels	https://www.keysight.com/us/en/assets/7018-05629/data-sheets/5992-2124.pdf	BUILD_SETTINGS_PROSPECTIVE
+PS_CHARGE	1	Keysight	E36105B	60V-rated charger; restricted below50V; removed for hold	https://www.keysight.com/us/en/assets/7018-05830/data-sheets/5992-2437.pdf	BUILD_SETTINGS_PROSPECTIVE
+DMM1 DMM_SERVICE	2	Keysight	34465A	Sense channel and independent service-voltage check	https://www.keysight.com/us/en/assets/9018-03876/service-manuals/9018-03876.pdf	CALIBRATION_REQUIRED
+TEMP1	1	Advanced Energy	Luxtron m924 OEM enclosed configuration	Optical temperature reader	https://www.advancedenergy.com/getmedia/8aecd484-a0b2-445b-8126-ae709e5b945d/en-fot-m924oem-data-sheet.pdf	VENDOR_CONFIGURATION_REQUIRED
+T_PROBE	1	Advanced Energy	STF dielectric2m; calibration20/23/26C	Surface optical probe	https://www.advancedenergy.com/en-us/products/sense-and-measurement/thermal-sensing/fiber-optic-sensors/luxtron-m900/	NO_INVENTED_CONFIGURED_SKU
+CASE CLAMP HEADS WIRING	1set	CUSTOM	C96-A1-D1	Dimensioned prototype and point-to-point wiring	BUILD.md;NETLIST.tsv;candidate-layout.svg	ENGINEERING_REVIEW_PENDING
+U5	1	Vishay	VO617A-4	DIP4 optical request-domain isolation	https://www.vishay.com/docs/83430/vo617a.pdf	ASSEMBLED_TIMING_REQUIRED
+U6 U7	2	TI	SN74LVC1G17DBVR	SOT23-5 Schmitt source and coil-domain receiver	https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf	POWER_DOMAINS_SEPARATE
+R20	1	Vishay	MRS25000C1200FCT00	120ohm1% opto LED limit	https://www.vishay.com/docs/28724/mrs16m25.pdf	FAMILY_ORDERING_RULE
+R21 R22	2	Vishay	MRS25000C1002FCT00	10kohm1% output and DAQ request pulldowns	https://www.vishay.com/docs/28724/mrs16m25.pdf	FAMILY_ORDERING_RULE
+C5 C6	2	KEMET	C315C104K5R5TA	100nF local buffer bypass in separate domains	https://search.kemet.com/component-documentation/download/specsheet/C315C104K5R5TA	PROTOTYPE

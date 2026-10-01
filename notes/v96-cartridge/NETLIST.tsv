@@ -1,0 +1,47 @@
+assembly	net	terminals	instruction
+cartridge	CAP_PLUS	C_BANK.+;J_BANK_PLUS.M4	18AWG PTFE red <=120mm; no other branch
+cartridge	CAP_MINUS	C_BANK.-;J_BANK_MINUS.M4	18AWG PTFE black <=120mm; no housing connection
+sense	PROBE_PLUS	P_SENSE_PLUS.contact;K_PLUS.1	Keyed head; <=100mm lead before relay
+sense	PROBE_MINUS	P_SENSE_MINUS.contact;K_MINUS.1	No ground connection before relay
+sense	DIV_TOP	K_PLUS.7;R1.1	PTFE supported divider start
+sense	DIV1	R1.2;R2.1	No test lead during hold
+sense	DIV2	R2.2;R3.1	No test lead during hold
+sense	DIV3	R3.2;R4.1	No test lead during hold
+sense	DIV4	R4.2;R5.1	No test lead during hold
+sense	DIV5	R5.2;R6.1	No test lead during hold
+sense	DIV6	R6.2;R7.1	No test lead during hold
+sense	DIV7	R7.2;R8.1	No test lead during hold
+sense	DIV8	R8.2;R9.1	No test lead during hold
+sense	SENSE	R9.2;R10.1;U1.1	Short guarded input; no added clamp diode
+sense	RETURN	K_MINUS.7;R10.2;U1.3;C1.2;PS1.CH3-;DMM1.LO	Floating sense domain; NEVER join C_GND or earth deliberately
+sense	FOLLOWER	U1.4;U1.8;U1.2;U1.7;R11.1;GUARD	Feedback and driven guard before output resistor
+sense	DMM_HI	R11.2;DMM1.HI	100ohm series output; <=1m paired cable
+sense	SENSE_SUPPLY_RAW	PS1.CH3+;R12.1	5.0V;10mA limit;OVP5.2V; metered boundary
+sense	SENSE_5V	R12.2;U1.6;C1.1	100ohm supply limiter;100nF local bypass
+sense	NC_U1	U1.5	Individually isolated
+control	COIL_5V2	PS1.CH2+;U5.4;U7.5;C6.1;K_PLUS.3;K_MINUS.3;U2.9;U3.16;U4.14;S_ARM.C;S_LID.C;C2.1;C3.1;C4.1;R19.1	5.20V;50mA limit;OVP5.4V
+control	C_GND	PS1.CH2-;U2.8;U2.3;U2.4;U2.5;U2.6;U2.7;U3.1;U3.8;U3.9;U3.10;U3.11;U4.7;U4.9;U4.10;U4.12;U4.13;C2.2;C3.2;C4.2;R13.2;R14.2;R15.2;R16.2;R17.2;R18.2;R21.2;U7.3;C6.2	Control return only; unused logic inputs low
+control	COIL_PLUS_LOW	K_PLUS.5;U2.16	Relay diode polarity mandatory
+control	COIL_MINUS_LOW	K_MINUS.5;U2.15	Relay diode polarity mandatory
+control	ARM	S_ARM.NO;R17.1;U4.4	1kohm pulldown; NC insulated
+control	LID	S_LID.NO;R18.1;U4.5	1kohm pulldown; NC insulated
+control	ENABLE	U4.6;U3.3;R16.1	10kohm pulldown; active-low reset driven by fast AND output
+control	REQUEST	U7.4;U3.2;U4.2;R21.1	Coil-domain Schmitt output;10kohm pulldown; LOW before arming
+control	WINDOW_Q	U3.13;U4.1	Positive Q13; NOT inverted Q4
+control	DRIVE	U4.3;U2.1;U2.2;R13.1;R14.1	Both driver inputs; each10kohm pulldown
+control	TIMING_RC	U3.15;R19.2;CT1.1;CT2.1;CT3.1;CT4.1;CT5.1;CT6.1;CT7.1;CT8.1;CT9.1;CT10.1	390kohm from rail
+control	TIMING_C	U3.14;CT1.2;CT2.2;CT3.2;CT4.2;CT5.2;CT6.2;CT7.2;CT8.2;CT9.2;CT10.2	Ten parallel100nF BETWEEN14and15; neither side grounded
+control	NC_CONTROL	U2.10;U2.11;U2.12;U2.13;U2.14;U3.4;U3.5;U3.6;U3.7;U3.12;U4.8;U4.11;S_ARM.NC;S_LID.NC	EACH terminal isolated; this row is NOT a shared net
+service	DISCHARGE_CHAIN	P_DISCHARGE_PLUS->RD1->RD2->RD3->RD4->RD5->RD6->RD7->RD8->RD9->RD10->P_DISCHARGE_MINUS	Explicit series chain; each resistor pin2 joins next pin1; plus joinsRD1.1;RD10.2 joinsminus
+service	CHARGE_POSITIVE	PS_CHARGE.+->RC1->RC2->RC3->RC4->RC5->RC6->RC7->RC8->RC9->RC10->P_CHARGE_PLUS	Explicit series chain; each resistor pin2 joins next pin1; source joinsRC1.1;RC10.2 joinsplug
+service	CHARGE_NEGATIVE	PS_CHARGE.-;P_CHARGE_MINUS.contact	Entire head removed before hold
+service	SERVICE_HI	DMM_SERVICE.HI;SERVICE_HEAD.CAP_SIDE_PLUS	Covered insulated test lug; service heads only
+service	SERVICE_LO	DMM_SERVICE.LO;SERVICE_HEAD.CAP_SIDE_MINUS	Service leads removed with head before hold
+temperature	DIELECTRIC_LINK	T_PROBE.optical;TEMP1.channel1	All-dielectric cable; no copper temperature lead to cartridge
+control	OPTO_RAW	U5.3;U7.2;R15.1	Opto emitter;10kohm pulldown; Schmitt receiver input
+request_isolator	DAQ_3V3	DAQ.LOGIC_3V3;U6.5;C5.1	3.3V +/-5% only; separate DAQ domain; source>=40mA
+request_isolator	DAQ_GND	DAQ.REQUEST_RETURN;U6.3;C5.2;U5.2;R22.2	No connection to C_GND, RETURN or coil rail
+request_isolator	DAQ_REQUEST	DAQ.WINDOW_REQUEST;U6.2;R22.1	0/3.3V input;10kohm pulldown
+request_isolator	LED_DRIVE	U6.4;R20.1	Schmitt output sources LED via120ohm
+request_isolator	LED_ANODE	R20.2;U5.1	Vishay VO617A-4 pin1anode,pin2cathode
+request_isolator	NC_BUFFERS	U6.1;U7.1	Each terminal individually isolated
