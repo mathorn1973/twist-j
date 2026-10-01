@@ -37,6 +37,462 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+
+# Exact v96 release-accounting contract and reversible public v95 reconstruction.
+V96_PRIOR_COMMIT = 'b8ba1a07ad776cdd8d878fe0a407e07312c0e263'
+V96_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'eb6f36b79628d916d24a89480f854db725deb73227dd84f13e8ecf76e7bdeb01',
+                  'current_bytes': 485037,
+                  'prior_sha256': 'a2abce1a4538785ac6a7c7874c2366a3531d460027188510394930c6d222559a',
+                  'prior_bytes': 480992,
+                  'restore': ((485, 488, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': '91a8ee4bd2c4ec843a3323b121f9683978ce70ca7955582e0ec3db2c18f89eb3',
+                   'current_bytes': 62290,
+                   'prior_sha256': '468495cefa342c1ef899749d7fc4c49bdc69f41d67fef234ee8cca37610205f4',
+                   'prior_bytes': 61883,
+                   'restore': ((544, 548, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': '443f1df8397689dc550649a3288ed9dd189c8460276877dba3c66f0ebf0ecdaa',
+                      'current_bytes': 163333,
+                      'prior_sha256': 'c1b0cee2b9e320ed05ba4004da3a2265cbd2bbafe45dd18f59fb29790d477214',
+                      'prior_bytes': 162715,
+                      'restore': ((992, 997, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': '8e094e56f833f10d07f902a518201a6c63c915cd2d66362fe6a2976f705caff8',
+                  'current_bytes': 99265,
+                  'prior_sha256': '1258ea3dd14a5e2b512b69b08ac647626d4fac169a1ba0b6cd770832bb735600',
+                  'prior_bytes': 98759,
+                  'restore': ((485, 488, ''),)},
+ 'HISTORY.tsv': {'current_sha256': '70eb9b1571191d772b97b513a319d961fd3175651c329b0dbff78cb821c788c7',
+                 'current_bytes': 462745,
+                 'prior_sha256': 'be63423fd0da968f7a5f670222fc1ea0290aa0c61976b1ab7ff6fe4080c0d6a5',
+                 'prior_bytes': 461212,
+                 'restore': ((1032, 1035, ''),)},
+ 'GATES.tsv': {'current_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'current_bytes': 12907,
+               'prior_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'prior_bytes': 12907,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'current_bytes': 1436,
+                           'prior_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'prior_bytes': 1436,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': 'eb2a7bc1c7e38e130544b9fef4c0f05443df01484bdb55a52fc10b427fcee0a2',
+              'current_bytes': 873495,
+              'prior_sha256': 'b4ebf2ffc7393b703d65ce62cf3e0ee382e7309a563d99ec866ee3fa82f9ba7f',
+              'prior_bytes': 848893,
+              'restore': ((0, 1, '# TWIST-J Public Canon v95\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v95. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v95 also declares the discrete architecture used to '
+                           'read\n'),
+                          (25,
+                           26,
+                           'seed of the two algebraic projections. Public Canon v95 does not '
+                           'claim\n'),
+                          (130,
+                           131,
+                           'deriving the architecture from J; Public Canon v95 contains no such\n'),
+                          (7595, 8116, ''))},
+ 'CORE.md': {'current_sha256': '8e0ea144519ca823483ae185daeb3da35a590c9591f40f491e43271c8df8febd',
+             'current_bytes': 22719,
+             'prior_sha256': 'ad070cd86797f61809540e388a9d1c87e33782f461afe1f63640e2a79c621465',
+             'prior_bytes': 22032,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v95. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v95 also declares a discrete architecture. It does not\n'),
+                         (167,
+                          179,
+                          'These results concern their stated architectures; their derivation '
+                          'from\n'
+                          'native U, physical energy selection and multi-cell realization remain '
+                          'open.\n'))},
+ 'FRONTIER.md': {'current_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'current_bytes': 26162,
+                 'prior_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'prior_bytes': 26162,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': '7b6af10a8a5f1843f07aa0d20ac37ddf2e98a6250b995950f3275735be0f3ced',
+                  'current_bytes': 194476,
+                  'prior_sha256': '6208a78a69a4a7bc9a8d3e094a61a77aec40069c7ecec0629a18ba7a2f14d0b5',
+                  'prior_bytes': 193373,
+                  'restore': ((1, 20, ''),
+                              (328,
+                               329,
+                               'Registry snapshot: 484 claims; 0 T-LOCK, 342 T, 59 D, 39 C, 2 H, '
+                               '23 O, 19 F; 25 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '6603ae5f59c5245ea7230e851b6be834ec6860c0553809080dd75d8d08b7877c',
+                       'current_bytes': 243,
+                       'prior_sha256': '811812819e781fcb477dd258d29a50d714ab35dddab66bb93a70214c273be2d0',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t484\n'),
+                                   (3, 4, 'status_T\t342\n'),
+                                   (11, 12, 'evidence_none\t71\n'))}}
+V96_IDS = ('FIELD-CONSERVATIVE-CHAIN-LAW', 'FIELD-CHAIN-FIRST-WORK', 'FIELD-LOCAL-WORK-RECORD')
+V96_DEFINITION = 'DEF-FIELD-WORK-RECORD-CHAIN'
+V96_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'FIELD-CONSERVATIVE-CHAIN-LAW',
+                   'status': 'T',
+                   'scope': 'at L1 for every finite N>=2 on the displayed complete '
+                            '32N-1-coordinate integer carrier, with the selected matter quadratic, '
+                            'four-edge/two-face field, literal ordered R/AM endpoints, exact '
+                            'integral split and L-image admission, funded total G, whole-content '
+                            'neutral swaps and fixed G;A;B;F chronology: every primitive and full '
+                            'step is bijective with the displayed inverse, preserves the full '
+                            'nonnegative energy, spectators, reacting-vector sums and every actual '
+                            'node charge, divergence and Gauss-defect entry, including non-Gauss '
+                            'inputs and occupied channels; omitting both contacts of any one fixed '
+                            'cut retains its channel and the same conclusions; both step '
+                            'directions have dependence radius at most two stored-block edges and '
+                            'depth four; each finite-energy orbit is periodic from its initial '
+                            'state; all matrices, graph, metric and resource weights are chosen '
+                            'definitions, with no native-U/J selection, physical transport or '
+                            'measured energy law',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on a legal complete integer state violating the displayed '
+                                'primitive or full-step inverse, energy or actual '
+                                'charge/divergence/defect preservation, nonnegative resource or '
+                                'occupied-content account, fixed-cut conclusions, radius-two '
+                                'dependence bound or finite-shell recurrence; changing the '
+                                'selected architecture or failure of a physical implementation is '
+                                'outside this L1 theorem'},
+                  {'claim_id': 'FIELD-CHAIN-FIRST-WORK',
+                   'status': 'T',
+                   'scope': 'at L1 under FIELD-CONSERVATIVE-CHAIN-LAW, for every finite N>=2 and '
+                            'integer H(w)=1, the displayed zero-spectator preparation with source '
+                            '(R,0,PLw,0), ZM intermediates, ready receiver (R,0,0,0) and zero '
+                            'channels has total energy 41; two resource units first arrive at '
+                            'receiver boundary N-1, first fund its R-to-AM reaction in step N, and '
+                            'its entire original 31-coordinate tuple returns to readiness at '
+                            'boundary N+1 while the two units occupy the last channel; the '
+                            'specified equal-energy offimage source y_minus=(0,0,1,-2) and each '
+                            'individual fixed cut keep the receiver exactly ready for every '
+                            'nonnegative time; this is a quantified theorem for that preparation '
+                            'and chronology, not optimal latency, a physical source-origin '
+                            'certificate, or an arbitrary excited-state no-event assertion',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on a displayed legal unit-seed preparation with a different '
+                                'first arrival or reaction time, failure of the complete receiver '
+                                'return at N+1, an incorrect full-state energy/resource account '
+                                'through that boundary, or a receiver change under the specified '
+                                'offimage or any individual fixed-cut control; a different '
+                                'preparation or physical apparatus is outside this L1 theorem'},
+                  {'claim_id': 'FIELD-LOCAL-WORK-RECORD',
+                   'status': 'T',
+                   'scope': 'at L1 extend the displayed chain by one neutral receiver p in C5 with '
+                            'chosen constant energy 1, actual accepted R-to-AM predicate e(c), '
+                            'writer Ghat(c,p)=(Gc,p+e(c)) and fixed local reader O(p)=BLANK iff '
+                            'p=0: the complete 32N-coordinate law is bijective with '
+                            "recovered-input inverse (Gc',p'-e(Gc')), every forward and inverse "
+                            'layer projects to the original law, and all original accounts and '
+                            'finite-shell recurrence persist; from p=0 a first accepted receiver '
+                            'event at step j guarantees HIT at boundaries j through j+7, eight '
+                            'boundaries spanning seven elapsed macrosteps; in the positive '
+                            'unit-seed chain j=N and total energy is 42, the old receiver returns '
+                            'at N+1 while HIT persists, and both specified negative families '
+                            'remain BLANK forever; Ghat is not an involution, no first reset at '
+                            'j+8, arbitrary initial pointer guarantee, permanent or '
+                            'perturbation-robust memory, source provenance in p, physical reader, '
+                            'occurrence law or Born law is asserted',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on a legal writer or full-step inverse/projection mismatch, '
+                                'failure of an original conserved account or finite-shell '
+                                'recurrence after extension, a ready forward state that is BLANK '
+                                'on one of the eight guaranteed post-event boundaries, or a write '
+                                'in a specified offimage/fixed-cut control; arbitrary initial '
+                                'pointer values, inverse undoing and physical realization are '
+                                'outside the retention guarantee'}],
+ 'NORMATIVE.tsv': [{'item_id': 'DEF-FIELD-WORK-RECORD-CHAIN',
+                    'item_type': 'DEFINITION',
+                    'claim_id': '',
+                    'status': '',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::DEF-FIELD-WORK-RECORD-CHAIN'},
+                   {'item_id': 'FIELD-CONSERVATIVE-CHAIN-LAW',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-CONSERVATIVE-CHAIN-LAW',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-CONSERVATIVE-CHAIN-LAW'},
+                   {'item_id': 'FIELD-CHAIN-FIRST-WORK',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-CHAIN-FIRST-WORK',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-CHAIN-FIRST-WORK'},
+                   {'item_id': 'FIELD-LOCAL-WORK-RECORD',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-LOCAL-WORK-RECORD',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-LOCAL-WORK-RECORD'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'FIELD-CONSERVATIVE-CHAIN-LAW',
+                       'depends_on': 'DEF-FIELD-WORK-RECORD-CHAIN',
+                       'relation': 'REQUIRES',
+                       'basis': 'Displayed architecture definitions.'},
+                      {'item_id': 'FIELD-CHAIN-FIRST-WORK',
+                       'depends_on': 'FIELD-CONSERVATIVE-CHAIN-LAW',
+                       'relation': 'REQUIRES',
+                       'basis': 'The complete inline proof of FIELD-CONSERVATIVE-CHAIN-LAW; all '
+                                'use remains at L1.'},
+                      {'item_id': 'FIELD-LOCAL-WORK-RECORD',
+                       'depends_on': 'DEF-FIELD-WORK-RECORD-CHAIN',
+                       'relation': 'REQUIRES',
+                       'basis': 'Displayed architecture definitions.'},
+                      {'item_id': 'FIELD-LOCAL-WORK-RECORD',
+                       'depends_on': 'FIELD-CONSERVATIVE-CHAIN-LAW',
+                       'relation': 'REQUIRES',
+                       'basis': 'The complete inline proof of FIELD-CONSERVATIVE-CHAIN-LAW; all '
+                                'use remains at L1.'},
+                      {'item_id': 'FIELD-LOCAL-WORK-RECORD',
+                       'depends_on': 'FIELD-CHAIN-FIRST-WORK',
+                       'relation': 'REQUIRES',
+                       'basis': 'The complete inline proof of FIELD-CHAIN-FIRST-WORK; all use '
+                                'remains at L1.'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'FIELD-CONSERVATIVE-CHAIN-LAW',
+                   'evidence_id': 'EV-FIELD-CONSERVATIVE-CHAIN-LAW',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '99c4cadf8c3b8bbbaa284ab192220142f8d185ab357028f0b76ae2174011a328',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-CHAIN-FIRST-WORK',
+                   'evidence_id': 'EV-FIELD-CHAIN-FIRST-WORK',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'c42d6de15aeabc6dcc584ce57b951be13d2de037166a4c8e7c043e6f9ac86900',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-LOCAL-WORK-RECORD',
+                   'evidence_id': 'EV-FIELD-LOCAL-WORK-RECORD',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'd590589caedb11233212411fc9ebd05e408027e40ba2541229103298fad2b28b',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON96-DECLARE-FIELD-CONSERVATIVE-CHAIN-LAW',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-01',
+                  'release': 'canon-v96',
+                  'claim_id': 'FIELD-CONSERVATIVE-CHAIN-LAW',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '99c4cadf8c3b8bbbaa284ab192220142f8d185ab357028f0b76ae2174011a328',
+                  'evidence_id': 'EV-FIELD-CONSERVATIVE-CHAIN-LAW',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '99c4cadf8c3b8bbbaa284ab192220142f8d185ab357028f0b76ae2174011a328',
+                  'rationale': 'Complete inline algebraic proof on the explicitly selected integer '
+                               'architecture; universal quantifiers follow from identities and '
+                               'induction, not finite audit counts. No physical realization, '
+                               'reserve theorem or parent-owner closure is supplied.'},
+                 {'event_id': 'CANON96-DECLARE-FIELD-CHAIN-FIRST-WORK',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-01',
+                  'release': 'canon-v96',
+                  'claim_id': 'FIELD-CHAIN-FIRST-WORK',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'c42d6de15aeabc6dcc584ce57b951be13d2de037166a4c8e7c043e6f9ac86900',
+                  'evidence_id': 'EV-FIELD-CHAIN-FIRST-WORK',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'c42d6de15aeabc6dcc584ce57b951be13d2de037166a4c8e7c043e6f9ac86900',
+                  'rationale': 'Complete inline algebraic proof on the explicitly selected integer '
+                               'architecture; universal quantifiers follow from identities and '
+                               'induction, not finite audit counts. No physical realization, '
+                               'reserve theorem or parent-owner closure is supplied.'},
+                 {'event_id': 'CANON96-DECLARE-FIELD-LOCAL-WORK-RECORD',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-01',
+                  'release': 'canon-v96',
+                  'claim_id': 'FIELD-LOCAL-WORK-RECORD',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'd590589caedb11233212411fc9ebd05e408027e40ba2541229103298fad2b28b',
+                  'evidence_id': 'EV-FIELD-LOCAL-WORK-RECORD',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'd590589caedb11233212411fc9ebd05e408027e40ba2541229103298fad2b28b',
+                  'rationale': 'Complete inline algebraic proof on the explicitly selected integer '
+                               'architecture; universal quantifiers follow from identities and '
+                               'induction, not finite audit counts. No physical realization, '
+                               'reserve theorem or parent-owner closure is supplied.'}]}
+V96_PROOF_CONTRACT = {'begin': '### Conservative finite chain and reversible local work record\n',
+ 'end': '## 3. The kernel and the census\n',
+ 'bytes': 24602,
+ 'sha256': '29f1a0e443f43b660bf696f85fff177516163972b16ef6823f575f64208773cb',
+ 'shared_begin': '#### Shared proof 1. Complete carrier, actual charge, and energy\n',
+ 'shared_bytes': 20827,
+ 'shared_sha256': 'bcd298cff40457e68711a0fd59aa09c37e4262b3e36c3a098b9f45050829c77b'}
+V96_TOKENS = {'law': ('There are 31N+N-1=32N-1 original coordinates: 30N unrestricted integers and 2N-1 '
+         'nonnegative integers.',
+         'Reject and retain the entire input if matter is neither literal R nor AM.',
+         'This proves G^2=I on the full local carrier.',
+         'Each complete step, in either direction, has dependence radius at most two graph edges.',
+         'Every actual orbit is therefore periodic from its initial state with no transient, under '
+         'either the full law or a fixed cut law.',
+         'This field identity is not a period assertion for the coupled chain.'),
+ 'work': ('For every integer w with H(w)=1 prepare',
+          'H_N=41 and Hhat_N=42 for every N.',
+          'Its first arrival is N-1 and first reaction/write is N.',
+          "Thus the original receiver's entire 31-coordinate tuple has returned to readiness at "
+          'N+1.',
+          'Therefore the receiver and p=0 remain exactly ready for all k>=0.',
+          'Induction over primitives, not a finite time search, proves it stays fixed forever.',
+          'This also covers N=2, with only q0 present.'),
+ 'record': ("Ghat_t^-1(c',p')=(Gc',p'-e(Gc') mod5).",
+            'This holds for every p and for accepted and rejected inputs, without an external '
+            'forward log.',
+            'Ghat_t is not an involution.',
+            'pi That_N^k=T_N^k pi for every integer k.',
+            'Thus HIT holds at all boundaries j,...,j+7: eight boundaries spanning seven elapsed '
+            'macrosteps.',
+            'no fifth event or actual reset at j+8 is asserted.',
+            'A preloaded p=4 could become BLANK at the next accepted event,',
+            "The pointer's constant unit does not finance receiver work."),
+ 'boundary': ('They are not derived from native U or J.',
+              'No physical loss bound, SI energy calibration, complete apparatus family, native-U '
+              'compatibility, sampling/Born law, occurrence law, or terminal physical event is '
+              'proved.',
+              'No QDD or MINIMAL-READ parent is closed.')}
+V96_CHECKS = (('V96-PRIOR-BYTES',
+  'thirteen complete v96 inputs reconstruct exact public v95 before all 126 unchanged historical '
+  'guards'),
+ ('V96-THREE-PROOFS',
+  'three conditional L1 theorem rows bind exact scopes, the complete shared inline proof, one '
+  'selected definition, five dependencies and declarations'),
+ ('V96-COMPLETE-LAW',
+  'the selected integer chain retains full-state guards, inverses, positive accounts, occupied '
+  'resources, fixed-cut locality and finite-shell recurrence'),
+ ('V96-FIRST-WORK',
+  'every admitted unit-seed finite chain has exact N-1 arrival, N work and N+1 old-receiver '
+  'return; offimage and individual-cut controls hold for all time'),
+ ('V96-LOCAL-RECORD',
+  'the C5 accepted-event writer has a recovered-input inverse and complete layer projection; ready '
+  'forward retention covers eight boundaries without permanent memory'),
+ ('V96-OPEN-BOUNDARY',
+  'all 484 prior rows and 25 H/O owners remain exact; 487 claims preserve gates, programs and CORE '
+  'selection without native-U or physical promotion'))
+
+
+
+def v96_previous_bytes(path):
+    """Validate complete v96 bytes, then reconstruct the exact public v95 input."""
+    patch = V96_INPUT_PATCH.get(path.name)
+    if patch is None:
+        return None
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v96_current_checks():
+    """Current release accounting; historical guards keep their exact old inputs."""
+    names = tuple(name for name in V96_INPUT_PATCH if name.endswith(".tsv"))
+    previous = {name: v87_table_bytes(v96_previous_bytes(ROOT / "canon" / name))
+                for name in names}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in names}
+    prior_index = {row["claim_id"]: row for row in previous["REGISTRY.tsv"]}
+    index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    canon_text = CANON.read_text(encoding="utf-8")
+    contract = V96_PROOF_CONTRACT
+    first = canon_text.find(contract["begin"])
+    last = canon_text.find(contract["end"], first) if first >= 0 else -1
+    block = canon_text[first:last].encode("utf-8") if 0 <= first < last else b""
+    shared_at = block.find(contract["shared_begin"].encode("utf-8"))
+    shared = block[shared_at:] if shared_at >= 0 else b""
+    proof_exact = (
+        canon_text.count(contract["begin"]) == canon_text.count(contract["end"]) == 1
+        and block.count(contract["shared_begin"].encode("utf-8")) == 1
+        and len(block) == contract["bytes"]
+        and hashlib.sha256(block).hexdigest() == contract["sha256"]
+        and len(shared) == contract["shared_bytes"]
+        and hashlib.sha256(shared).hexdigest() == contract["shared_sha256"]
+        and all(block.count(f"#### Shared proof {number}. ".encode("ascii")) == 1
+                for number in range(1, 10)))
+    normalized = " ".join(block.decode("utf-8").split())
+    token_contract = {name: all(token in normalized for token in values)
+                      for name, values in V96_TOKENS.items()}
+    exact_additions = all(current[name] == previous[name] + rows
+                          for name, rows in V96_ADDITIONS.items())
+    exact_theorems = all(
+        index.get(claim, {}).get("status") == "T"
+        and normative.get(claim, {}).get("item_type") == "THEOREM"
+        and normative.get(claim, {}).get("layer") == "L1"
+        and normative.get(claim, {}).get("gate_ids") == ""
+        and evidence.get(claim, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(claim, {}).get("location") == "inline"
+        and evidence.get(claim, {}).get("architecture_requirement") == "none"
+        and evidence.get(claim, {}).get("hash_mode") == "registry-scope-sha256-v1"
+        and evidence.get(claim, {}).get("sha256")
+            == hashlib.sha256(index.get(claim, {}).get("scope", "").encode("utf-8")).hexdigest()
+        for claim in V96_IDS)
+    exact_definition = (V96_DEFINITION not in index
+        and normative.get(V96_DEFINITION, {}).get("item_type") == "DEFINITION"
+        and normative.get(V96_DEFINITION, {}).get("status") == ""
+        and normative.get(V96_DEFINITION, {}).get("layer") == "L1"
+        and normative.get(V96_DEFINITION, {}).get("gate_ids") == "")
+    live = {claim: row for claim, row in index.items() if row["status"] in {"H", "O"}}
+    prior_live = {claim: row for claim, row in prior_index.items() if row["status"] in {"H", "O"}}
+    counts = {status: sum(row["status"] == status for row in index.values())
+              for status in {row["status"] for row in index.values()}}
+    conditions = (
+        len(V96_INPUT_PATCH) == 13 and set(V96_INPUT_PATCH) == set(V95_INPUT_PATCH)
+        and V96_PRIOR_COMMIT == "b8ba1a07ad776cdd8d878fe0a407e07312c0e263"
+        and all(v96_previous_bytes(ROOT / "canon" / name) is not None for name in V96_INPUT_PATCH),
+        set(index) == set(prior_index) | set(V96_IDS) and len(V96_IDS) == 3
+        and exact_additions and exact_theorems and exact_definition and proof_exact,
+        proof_exact and token_contract["law"],
+        proof_exact and token_contract["work"],
+        proof_exact and token_contract["record"],
+        len(index) == 487 and len(prior_index) == 484
+        and counts == {"T": 345, "D": 59, "C": 39, "H": 2, "O": 23, "F": 19}
+        and all(index.get(claim) == row for claim, row in prior_index.items())
+        and live == prior_live and len(live) == 25
+        and all(current[name] == previous[name] for name in (
+            "GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv"))
+        and (ROOT / "canon" / "FRONTIER.md").read_bytes()
+            == v96_previous_bytes(ROOT / "canon" / "FRONTIER.md")
+        and all(row["owner_item_id"] not in V96_IDS for row in current["GATES.tsv"])
+        and all(row["claim_id"] not in V96_IDS for row in current["CORE_SELECTION.tsv"])
+        and all(row["claim_id"] not in V96_IDS for row in current["FRONTIER_PROGRAMS.tsv"])
+        and proof_exact and token_contract["boundary"],
+    )
+    return [(tag, description, ok) for (tag, description), ok in zip(V96_CHECKS, conditions)]
+
+
 # Exact v95 release-accounting contract and reversible public v94 reconstruction.
 V95_PRIOR_COMMIT = 'af8dc5956e26917b265fd0070f500c841c326512'
 V95_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'a2abce1a4538785ac6a7c7874c2366a3531d460027188510394930c6d222559a',
@@ -775,7 +1231,9 @@ def v95_previous_bytes(path):
     patch = V95_INPUT_PATCH.get(path.name)
     if patch is None:
         return None
-    current = path.read_bytes()
+    current = v96_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -808,13 +1266,13 @@ def v95_current_checks():
     names = tuple(name for name in V95_INPUT_PATCH if name.endswith(".tsv"))
     previous = {name: v87_table_bytes(v95_previous_bytes(ROOT / "canon" / name))
                 for name in names}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v96_previous_bytes(ROOT / "canon" / name))
                for name in names}
     prior_index = {row["claim_id"]: row for row in previous["REGISTRY.tsv"]}
     index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
     normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
     evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
-    canon_text = CANON.read_text(encoding="utf-8")
+    canon_text = (v96_previous_bytes(CANON) or b"").decode("utf-8")
     blocks = {claim: v95_proof_block(canon_text, claim) for claim in V95_IDS}
     block_text = {claim: " ".join(block.decode("utf-8").split()) for claim, block in blocks.items()}
     blocks_exact = all(len(blocks[claim]) == contract["bytes"]
@@ -868,7 +1326,7 @@ def v95_current_checks():
         and live == prior_live and len(live) == 25
         and all(current[name] == previous[name] for name in (
             "GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv"))
-        and (ROOT / "canon" / "FRONTIER.md").read_bytes()
+        and v96_previous_bytes(ROOT / "canon" / "FRONTIER.md")
             == v95_previous_bytes(ROOT / "canon" / "FRONTIER.md")
         and all(row["owner_item_id"] not in V95_IDS for row in current["GATES.tsv"])
         and all(row["claim_id"] not in V95_IDS for row in current["CORE_SELECTION.tsv"])
@@ -14969,9 +15427,10 @@ def run():
     checks.extend(v93_current_checks())
     checks.extend(v94_current_checks())
     checks.extend(v95_current_checks())
+    checks.extend(v96_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v95")
+    print("historical guards: exact reconstructed v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v96")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v95
+historical guards: exact reconstructed v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v96
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -128,5 +128,11 @@ PASS 123 V95-NATIVE-RECORD the unchanged native law admits prepared source trans
 PASS 124 V95-CHOSEN-ENERGY invariants, funded involutions, Gauss/contact transport and triangular resonance belong to the explicitly chosen integer model
 PASS 125 V95-BOUNDARIES field positivity, separated-factor certificates, finite first-activation decisions and charged-distance bounds retain their exact hypotheses
 PASS 126 V95-OPEN-BOUNDARY all 474 prior rows and 25 H/O owners remain exact; 484 claims preserve gates, programs and CORE selection with no physical promotion
+PASS 127 V96-PRIOR-BYTES thirteen complete v96 inputs reconstruct exact public v95 before all 126 unchanged historical guards
+PASS 128 V96-THREE-PROOFS three conditional L1 theorem rows bind exact scopes, the complete shared inline proof, one selected definition, five dependencies and declarations
+PASS 129 V96-COMPLETE-LAW the selected integer chain retains full-state guards, inverses, positive accounts, occupied resources, fixed-cut locality and finite-shell recurrence
+PASS 130 V96-FIRST-WORK every admitted unit-seed finite chain has exact N-1 arrival, N work and N+1 old-receiver return; offimage and individual-cut controls hold for all time
+PASS 131 V96-LOCAL-RECORD the C5 accepted-event writer has a recovered-input inverse and complete layer projection; ready forward retention covers eight boundaries without permanent memory
+PASS 132 V96-OPEN-BOUNDARY all 484 prior rows and 25 H/O owners remain exact; 487 claims preserve gates, programs and CORE selection without native-U or physical promotion
 
-RESULT 126/126 ALL PASS
+RESULT 132/132 ALL PASS
