@@ -1,0 +1,8 @@
+AUDIT PASS: complete work-record unit; NON-CANONICAL candidate-T L1
+H=1 seeds: 20; lengths: 5; positive full boundaries: 1440
+single cuts: 27; cut boundaries: 518; offimage boundaries: 72
+local full cases: 1960; generic full states/cuts: 2160; local period: 10
+first arrival=N-1; first work=first HIT=N; old target reset=N+1
+HIT guaranteed at N..N+7: eight boundaries, seven elapsed steps; no exact reset claim
+energy=42; coordinates=32N; exact old projection; four layers; both full inverses pass
+Known proof audited by new code; original ZIP unverified; physical realization remains open.
