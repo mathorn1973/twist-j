@@ -18,7 +18,8 @@ only the completed accepted reaction advances a local five-position wheel.
 - [DESIGN.md](DESIGN.md): domain, encoding, actual energy path, fixed layers,
   reverse operation, component choices and all auxiliary resources.
 - [TEST_PLAN.md](TEST_PLAN.md): numerical requirements, qualification before
-  confirmation, four controls, holdout preparations and rejection rules.
+  confirmation, cartridge-then-isolated-source hardware stages, four controls,
+  holdout preparations, blind target assessment and rejection rules.
 - [REVIEW.md](REVIEW.md): scope and engineering review disposition.
 
 The numerical requirements are selected design targets, with derivations and

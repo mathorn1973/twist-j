@@ -9,9 +9,14 @@ This document does not start a physical gate or claim laboratory readiness.
 The mathematical target remains #1316 at
 312d0a90b24d5f9e743096f0ee2a477cda719a10, with the exact encoding and complete
 auxiliary account in DESIGN.md. First publish circuit/BOM and fixture
-drawings, controller HDL/firmware and readout implementation, serial identities,
-calibration maps/certificates, uncertainty/covariance budgets, actual sampling
-settings, raw-data schema and reduction code. These implementation files do
+drawings, controller HDL/firmware and readout implementation, component inventory,
+calibration method, uncertainty/covariance budgets, actual sampling settings,
+raw-data schema and reduction code. The run-assignment key, acquisition order,
+serial-to-role mapping and identifying calibration files follow the sealed
+commitment and later disclosure procedure in section 5a; publish their
+commitments before confirmation, not their revealing contents. Their complete
+bytes must already be fixed and retained for the subsequent full audit.
+These implementation files do
 not exist in this package. Their absence is a construction/confirmation STOP,
 not a reason to substitute a software trajectory for a device observation.
 
@@ -114,7 +119,7 @@ nominal 1 J receiving reaction is actually powered by the path.
 | Work expanded uncertainty | U_W <=0.010 J for a 1 J pulse; <=1% of larger pulse |
 | Negative control target work | integral abs(VI)dt plus uncertainty <=0.020 J over the whole 100 s, and <=0.010 J per G slot |
 | Cartridge swap disturbance | abs(Delta E_cartridge)+U_delta <=0.005 J per swap |
-| Idle loss, including measurement load | <=0.020 J per bank over 100 s at each qualified level |
+| Idle loss, including measurement load | <=0.020 J per bank over each of 100 s and 200 s at each qualified level |
 | Wheel energy degeneracy | largest static position-energy difference plus uncertainty <=0.005 J |
 | Wheel readout | detent angle within5 degrees, correct code, no invalid samples in settled window |
 | Timebase and layer timestamps | expanded uncertainty <=1 ms; fixed10 s macrostep |
@@ -165,11 +170,50 @@ and [expanded uncertainty](https://www.nist.gov/pml/nist-technical-note-1297/nis
 
 ## 4. Qualification before the four-configuration campaign
 
-Qualification is a genuine go/no-go stage, not a ceremonial checklist:
+Start with two ordered hardware gates, before assembling the complete chain.
+These are engineering qualification stages, not newly registered scientific
+gates or performed measurements:
+
+**Stage A: one complete cartridge with disconnected sensing.** Qualify one
+actual capacitor housing, dock, switches, probes and the intended measurement
+duty cycle. Establish its energy map, uncertainty, absorption and relaxation,
+then require total idle loss plus its propagated uncertainty <=20 mJ at both
+100 s and 200 s, with the actual read windows. Include leakage through the
+disconnected switch, probe loading, input capacitance, switching transients
+and any possible measurement-supply injection. A measurement-free capacitor
+test does not qualify the assembled sensing path. No charging is permitted
+during the hold; do not let injection mask a loss.
+
+For 200 s, 20 mJ/200 s=0.100 mW average total loss. Near 48.5 V this corresponds
+to an equivalent mean current of about 2.1 microampere, including measurement.
+These are requirement conversions, not component predictions. The actual
+acceptance quantity remains integrated energy with uncertainty; changing
+voltage or pulsed probe loading cannot be replaced by a constant-current
+assumption. The stricter 200 s test is required now, not postponed until the
+inverse campaign. Passing one cartridge permits this design to proceed; it
+does not qualify the remaining population or every dock.
+
+**Stage B: one isolated source cell under cut0.** Only after Stage A passes,
+assemble its B_0,Z_0,r_0 banks and complete local converter/control/sensing
+path. Each of these three banks must individually meet the same Stage A
+criteria; the first successful specimen does not qualify the other two.
+Use the source-cell restriction of the already declared cut0 law:
+both contacts of q0 disabled, fixed G;A;B;F clock, and the admitted prepared
+source. Run the entire 100 s repeated-reaction sequence without external
+charging, then the required 200 s forward/inverse qualification sequences.
+Keep the designated logical holdout out of end-to-end tuning. Meter all
+source bank and auxiliary changes, verify the local coordinates, deadlines
+and reserve certificates at every layer, and retain any failed attempt.
+Loss allocation, donor-fed control startup and cumulative depletion must
+pass together. A single successful transfer does not qualify this stage.
+Failure stops this implementation before construction of the full chain;
+it does not change the mathematical law or relax its physical test thresholds.
+
+After these stages, complete qualification of all banks, cells and fixtures:
 
 1. Characterize every capacitor at all n=0..41 levels, at 20,23,26 degrees C,
    approached from charging and discharging, under the fixed settling/read
-   sequence. Determine U, ESR, absorption,100 s idle loss and calibration drift.
+   sequence. Determine U, ESR, absorption,100 s and 200 s idle loss and calibration drift.
    Operate confirmation only at 23+/-1 degrees C. Every cartridge/dock pairing
    and its probe loading must qualify. Invalid single-valued energy mapping
    or too much idle loss rejects the encoding.
@@ -232,8 +276,9 @@ seed search is proposed. Offimage repeats its single fixed vector 100 times.
 Reserve w=(0,0,0,1) as a logical-orientation holdout never used to tune
 end-to-end operation; its energy-level calibration may be shared and that
 limitation is explicit. Freeze all full inputs and a balanced shuffled run
-order before confirmation. Blind the outcome evaluator, not the controller's
-legitimate local state input. Include every initiated run and every failure;
+order before confirmation, with revealing assignments sealed under section 5a.
+Blind the outcome evaluator, not the controller's legitimate local state
+input. Include every initiated run and every failure;
 no optional stopping or replacement of an unsuccessful trial.
 
 The count100 is an engineering repeatability target, not a claim of certain
@@ -252,12 +297,103 @@ independently of the controller. Do not reconstruct alleged measurements by
 running the model. The expected full coordinate table is a prediction generated
 from the frozen model before data, not an observation.
 
-At boundary 4 require the original31 receiver coordinates to match their
+At boundary 4 require the original 31 receiver coordinates to match their
 initial values exactly and its physical bank energies to meet the same Dec
 intervals. This is a decoded return within physical tolerances, not an exact
 return of every electron, temperature or energy loss. Pointer HIT must hold
 on eight boundaries3..10, spanning 70 s for this selected clock. No first
 BLANK-at 11 prediction or eternal-record claim is added.
+
+## 5a. Blind target assessment before full-data disclosure
+
+The two target predicates below apply to the 400 FORWARD confirmation trials
+of section 5. The separate inverse blocks of section 6 retain their own frozen
+expected tables; do not apply forward arrival/HIT timing to inverse-first
+runs. Keep any identifying inverse records sealed until all 400 forward
+target assessments are locked, then audit them against those separate tables.
+This procedure makes no claim of blind forward-predicate validation for the
+inverse blocks.
+
+The complete record exposes the configuration through source coordinates,
+cut locks and cartridge routes. Random filenames alone do not blind it.
+Separate custody/acquisition from target assessment, with no access to
+configuration-revealing records or operator discussion by the target evaluator
+until ALL target assessments are locked. This procedure hides assignment;
+it cannot prevent a guess based on a legitimate target outcome.
+
+Before confirmation, freeze the projection program, common packet schema,
+SI conversion and uncertainty rules, local predicates and assessor output
+schema. A custodian retains the run-assignment key, shuffled acquisition
+order, raw serial-to-role/calibration mappings and other identifying inputs
+in an immutable bundle. Publish its SHA-256 commitment with an independently
+witnessed timestamp before confirmation. Bind an independently generated
+secret 256-bit random nonce and unambiguous byte lengths into that commitment;
+a plain hash of a small public set of possible assignments can be guessed.
+After acquisition and before assessment, similarly seal and timestamp the
+complete raw corpus and trial roster, including failures and missing records.
+Retain original bytes; derived packets never replace raw evidence.
+
+Give the evaluator one uniformly structured packet per opaque random ID,
+in an independently shuffled presentation order. Its allowlist is:
+
+- the original 31 target coordinates and p, raw target optical codes/angles;
+- target B_2,Z_2,r_2 bank energies, signed local V/I series, net work and
+  uncertainties, already converted by the frozen calibration procedure;
+- fixed relative step/layer times, target temperatures, necessary local
+  validity flags and honest missing-data markers.
+
+Exclude source/middle/channel states, cut locks, routes, source seed,
+configuration label, original cartridge serials, absolute timestamps,
+acquisition order, operator notes and filenames/log links that expose them.
+Use fixed target-role names, not persistent cartridge aliases whose changes
+reveal a swap. Strip identifying calibration references and coefficients;
+the custodian applies the frozen SI conversion and later discloses its full
+inputs for verification. Packet schema, metadata and error vocabulary must
+not encode configuration. Keep real target values, length/gaps and defects;
+do not fabricate samples or suppress a failed trial to make packets look alike.
+Source/route fingerprints may still be inferable from genuine target behaviour;
+do not promise statistical indistinguishability of the outcomes.
+
+For EVERY FORWARD-TRIAL ID, the evaluator seals the measured target trace, timing/quality
+findings, and TWO separate outcomes, each SATISFIED / FAILED / INDETERMINATE:
+
+1. Positive-target predicate: declared arrival/work/write/reset order,
+   all required target coordinate/readout bounds, HIT on boundaries3..10,
+   and net first receiving work within the frozen 0.950..1.050 J bounds with
+   uncertainty over the whole receiving operation, including back-transfers.
+2. Null-target predicate: the prepared target stays unchanged in decoded
+   coordinates, p remains 0 through boundary 10, and the frozen per-G and
+   whole-horizon absolute target-work limits hold.
+
+Do not choose which predicate is expected from a guessed configuration.
+Neither target outcome alone certifies source attribution, initial source
+energy equality or the complete 96-coordinate balance. Those require data
+deliberately unavailable at this stage.
+
+Seal one complete assessor output covering the entire trial roster, with a
+hash and independently witnessed timestamp, BEFORE the custodian releases
+any assignment key or full record. Freeze all assessments together, not
+trial-by-trial with early unblinding that could inform later decisions.
+Then disclose the nonce, keys, committed bundles and full calibration/raw
+records. Verify the commitments and recompute the target projection; any
+mismatch is a custody failure, not permission to replace a packet silently.
+
+Only now assign the already locked positive/null outcomes to the actual
+configuration and perform a separate complete-state and energy-origin audit,
+including E_other,upper over the full source-to-target interval. A target
+predicate may pass while this full audit fails. The final campaign decision
+requires the applicable locked predicate for each forward trial, the separate
+inverse-block criteria, and all existing full audit criteria. Never rewrite
+a target verdict, threshold or exclusion after
+disclosure; any later correction is a separately visible amendment retaining
+the original. Accidental early access to revealing records is a declared
+blinding breach and cannot count as a valid blind confirmation. Guessing from
+the allowed target trace alone is not such a breach.
+
+This is a prospective custody protocol. No sealed data, assessments or
+laboratory result are claimed here, and no existing public formal-gate
+requirement is waived by it. Its complete implementation and custody route
+must be reviewed in the separately owned physical gate before confirmation.
 
 ## 6. Inverse and decision rules
 

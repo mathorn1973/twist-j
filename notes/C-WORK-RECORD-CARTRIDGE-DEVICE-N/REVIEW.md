@@ -26,6 +26,7 @@ known work-to-record theorem occurred.
 | Exchanged capacitor identity and calibration can become hidden state | Track identity-to-dock permutation as auxiliary state; define a calibrated physical equivalence class. |
 | Source and offimage only match in software | Require measured initial source-energy equality with uncertainty, common target preparation and both physical cuts. |
 | Layer readouts, inverse timing and holdout use can be chosen afterward | Fixed operation/settling/read windows, separate inverse expected tables, and excluded end-to-end holdout tuning. |
+| A full record reveals source preparation and cut configuration to the target evaluator | Fixed target-only packets, separate custody, sealed assignments/calibration mappings and a complete locked target verdict before any full-data disclosure; source attribution is assessed afterward. |
 
 The local mathematical bounds, eleven-account decomposition, unchanged
 Ghat;A;B;F law, C5 inverse and whole S42 logical encoding are internally
@@ -40,6 +41,13 @@ converter peak efficiency is not a short-pulse guarantee. Repeated isolated
 source reactions under cut0, auxiliary startup/discharge, servo convergence,
 mechanical timing, energy-map hysteresis, pointer degeneracy and metrology
 loading all require actual qualification. None has passed in this work.
+The first two hardware stages are explicitly one cartridge with its actual
+switched sensing path (20 mJ also over 200 s), followed by one isolated cut0
+source cell under repeated conversions without external recharging. The
+0.100 mW and approximately 2.1 microampere equivalents of the first requirement
+are design limits, not estimates of actual leakage. A user review identified
+the need to lock target assessment before exposing the revealing full records;
+section 5a specifies that separation without changing acceptance thresholds.
 
 Detailed circuit/layout and fixture drawings, exact peripheral ordering codes,
 controller implementation, calibration certificates, acquisition/reduction
