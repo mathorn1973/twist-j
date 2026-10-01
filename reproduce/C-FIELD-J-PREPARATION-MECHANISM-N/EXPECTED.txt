@@ -1,0 +1,8 @@
+PASS local_dilation inverse_basis=396 fresh_bath_matrix_units=2236
+PASS contraction dimensions=10 even_L=3..12 exact_PSD_certificates
+PASS reduced_preparation state_boundaries=120 edge_collisions=392
+PASS retained_environment correlated_cases=2 pointers=2 fresh_baths=6
+PASS phases_and_exact_boundary sign_patterns=184 dyadic_1_over_613=NO
+PASS approximate_handoff budgets=9 source_unit_outcome_cases=960
+RESOURCE L=613 m=K+1 fresh_baths=L*sum(n_i); equal_n=m*L*n
+SCOPE approximate pointer preparation; occurrence NOT DERIVED
