@@ -1,0 +1,51 @@
+{
+  "schema": "twistj-reserve-budget/1",
+  "provenance": "HYPOTHETICAL_ENGINEERING_INPUT_NOT_MEASURED",
+  "qualification": "UNQUALIFIED",
+  "law_pin": "312d0a90b24d5f9e743096f0ee2a477cda719a10",
+  "design_pin": "4756a3df650b91fb1d30806b0fb2aaac00e50cc2",
+  "budgets_J": {
+    "prepare": "1/1000",
+    "idle_per_second": "1/1000000",
+    "read_dissipation": "1/1000000",
+    "read_injection": "0",
+    "swap_dissipation": "1/100000",
+    "swap_injection": "0",
+    "conversion_dissipation": "1/10000",
+    "auxiliary_startup": "1/100000",
+    "current_tail": "1/100000",
+    "switching_dissipation": "1/100000",
+    "equalization_residual": "1/10000",
+    "transient_sag": "1/1000",
+    "transient_overshoot": "1/1000",
+    "target_bank_heat": "1/10000",
+    "other_unresolved_upper": "0",
+    "energy_uncertainty": "1/200",
+    "idle_difference_uncertainty": "1/1000",
+    "source_equality_uncertainty": "1/1000",
+    "work_uncertainty": "1/100",
+    "swap_uncertainty": "1/1000",
+    "control_resolution": "1/1000",
+    "negative_abs_work_per_G": "1/100000",
+    "negative_abs_work_outside_G_per_macrostep": "0"
+  },
+  "conditional_energy_map": {
+    "increment_at_4_7V_upper_J": "-3201/125000",
+    "increment_at_50V_lower_J": "1089/50",
+    "baseline_J": ["11/50", "33/100"],
+    "scope": "Hypothetical monotone calibrated energy envelopes for every serial, temperature and frozen history; NOT an asserted capacitor calibration."
+  },
+  "conditional_operation_contract": {
+    "G_transfers_max": 32,
+    "G_duration_upper_s": "17/10",
+    "swap_duration_upper_s": "11/5",
+    "F_duration_upper_s": "1/10",
+    "timestamp_uncertainty_s": "1/1000",
+    "auxiliary_READY_J": "0",
+    "no_commanded_baseline_withdrawal": true,
+    "transient_energy_inside_endpoint_hull_plus_bounds": true,
+    "donor_startup_metered_and_fully_reset": true,
+    "no_external_replenishment": true,
+    "no_hidden_auxiliary_path": true
+  }
+}

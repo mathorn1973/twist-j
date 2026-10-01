@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680">
+  <title>Stage A cartridge D1 enclosure candidate, not released for fabrication</title>
+  <rect width="1000" height="680" fill="#f7f9fc"/>
+  <g font-family="Arial,sans-serif" fill="#182d45">
+    <text x="40" y="42" font-size="25" font-weight="bold">Stage A cartridge — D1 enclosure candidate</text>
+    <text x="40" y="73" font-size="17" fill="#a93425">NON-CANONICAL · A1 INCOMPLETE · all dimensions mm · review before fabrication</text>
+    <rect x="75" y="130" width="250" height="375" fill="white" stroke="#182d45" stroke-width="3"/>
+    <rect x="138" y="230" width="125" height="200" rx="7" fill="#d6e4f0" stroke="#182d45" stroke-width="2"/>
+    <text x="166" y="318" font-size="18">50 × 80</text>
+    <text x="157" y="345" font-size="17">C_BANK</text>
+    <rect x="130" y="365" width="142" height="18" fill="none" stroke="#527a5c" stroke-width="3"/>
+    <text x="86" y="457" font-size="14">Captive insulated clamp</text>
+    <path d="M138 218 H263 M138 169 H263 M145 169 V218" fill="none" stroke="#a93425" stroke-dasharray="4 3"/>
+    <text x="155" y="198" font-size="13">20 vent zone</text>
+    <text x="140" y="540" font-size="18">100 internal</text>
+    <text x="52" y="360" font-size="18" transform="rotate(-90 52 360)">150 internal</text>
+    <text x="114" y="575" font-size="17">Front section</text>
+    <rect x="415" y="165" width="250" height="250" fill="white" stroke="#182d45" stroke-width="3"/>
+    <circle cx="540" cy="290" r="62.5" fill="#d6e4f0" stroke="#182d45" stroke-width="2"/>
+    <rect x="475" y="192" width="35" height="26" fill="#f2ded9" stroke="#a93425"/>
+    <rect x="570" y="192" width="35" height="26" fill="#dce6f6" stroke="#244c80"/>
+    <text x="488" y="210" font-size="16">+</text><text x="583" y="210" font-size="16">−</text>
+    <text x="455" y="449" font-size="18">100 internal depth</text>
+    <text x="487" y="481" font-size="17">Top view</text>
+    <rect x="715" y="180" width="235" height="220" rx="4" fill="#eef2e4" stroke="#527a5c" stroke-width="2"/>
+    <text x="735" y="210" font-size="18">External sensing fixture</text>
+    <text x="735" y="246" font-size="16">K_PLUS and K_MINUS</text>
+    <text x="735" y="277" font-size="16">91:1 divider → buffer</text>
+    <text x="735" y="308" font-size="16">Metered sense supply</text>
+    <text x="735" y="339" font-size="16">Pole feedback: lab gap</text>
+    <text x="735" y="370" font-size="16">Open both poles for idle</text>
+    <text x="403" y="545" font-size="16">D1: detailed cut sizes, keyed heads and netlist in BUILD.md.</text>
+    <text x="403" y="570" font-size="16">Review actual pole feedback, protection, venting and fit.</text>
+    <text x="40" y="633" font-size="17">Chosen envelope dimensions are design inputs, not a validated manufacturer installation or CAD release.</text>
+  </g>
+</svg>
