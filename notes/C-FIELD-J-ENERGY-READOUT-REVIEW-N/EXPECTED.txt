@@ -1,0 +1,8 @@
+universal quadratic coefficients and chart matrices: PASS
+complete coefficient box: 1225 states: 291 shells: 1 20 30 60 60 120 max_norm: 31
+inverse typed keys: 143125 malformed: 74 PASS
+fixed B0 and LOW: ell=0 jell=5/16 equal_energy_trace_data: PASS
+local whole-input rejection fixtures: 7 funded endpoint pairs: 4 PASS
+raw chain N=2..7 steps=160 unit_seeds=20 compared_boundaries: 76920
+chain coverage: receiver:AM_to_R; receiver:R_to_AM; receiver:pointer_wrap; receiver:unfunded_R; source:AM_to_R; source:R_to_AM; source:unfunded_AM
+INDEPENDENT FINITE AUDIT PASS; universal conclusions rest on DERIVATION.md
