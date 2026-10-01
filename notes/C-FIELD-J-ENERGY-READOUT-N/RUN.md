@@ -5,6 +5,7 @@ or a two-architecture scientific reproduction.
 
 - Reservation: [#1323](https://github.com/mathorn1973/twist-j/issues/1323).
 - Frozen input: `49dfad177c6ab698b5751de3e56629508982b05f`.
+- Preregistration SHA-256: `d22b014e416d288f06cfac31849e73c61786932adb9307df59bde69b2e8bf351`.
 - Basis: `44423153eee6259c7277eec5f5adbed9679f9146` (Public Canon v96).
 - Verifier SHA-256: `2e0a96b7680e1f22afc895a18a8506344bfe841f3fb1a853cb76241449f875ba`.
 - Verifier bytes: 18489.
