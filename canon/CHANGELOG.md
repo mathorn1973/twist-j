@@ -1,5 +1,22 @@
 # Canon changelog (public series)
 
+## Public Canon v96
+
+Accept three conditional L1 theorems for one explicitly selected conservative
+integer chain: its complete bijective law and actual invariant accounts,
+first funded receiver work at every finite chain length with the specified
+all-time controls, and a reversible local C5 record with eight guaranteed
+readable boundaries spanning seven elapsed steps. The complete matrices,
+guards, inverse and proofs are inline. This does not change the earlier
+integer/triangle laws or claim to derive the chosen architecture from native
+U or J. Finite-energy recurrence remains explicit.
+
+No physical realization, reserve/loss theorem, calibrated energy, permanent
+memory, QDD parent closure or MINIMAL-READ-DERIVATION closure is supplied.
+Existing statuses, scopes, open owners and reproduction files are unchanged;
+the three new claims have inline proof evidence and require no new scientific
+run or imported historical verifier collection.
+
 ## Public Canon v95
 
 Accept ten self-contained L1 theorems. The native one-shot construction
@@ -307,7 +324,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 484 claims; 0 T-LOCK, 342 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
+Registry snapshot: 487 claims; 0 T-LOCK, 345 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 24.
 <!-- END GENERATED CURRENT COUNTS -->
 

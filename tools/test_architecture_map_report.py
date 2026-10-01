@@ -23,16 +23,18 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.report = architecture.audit(ROOT)
 
-    def test_anchored_counts_match_the_public_summary(self) -> None:
-        self.assertEqual(self.report.claims, 484)
+    def test_current_counts_match_the_public_summary(self) -> None:
+        # audit(ROOT) reads this checkout, not the historical v10 map note.
+        # v96 adds three inline T claims and one unregistered definition.
+        self.assertEqual(self.report.claims, 487)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 342},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 345},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 71,
+                "none": 74,
                 "one-architecture": 9,
                 "recorded-audit": 31,
                 "two-architecture": 373,
@@ -45,7 +47,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertEqual(
             len(self.report.transitive_architecture_dependents), 339
         )
-        self.assertEqual(len(self.report.dependency_terminals), 67)
+        self.assertEqual(len(self.report.dependency_terminals), 68)
         # v95 adds ten inline theorems (architecture_requirement=none).
         # Their declared premise edges add four terminals and no path to
         # DEF-ARCHITECTURE; this is a graph fact, not physical independence.
@@ -67,6 +69,36 @@ class ArchitectureMapReportTests(unittest.TestCase):
             self.assertNotIn(item, self.report.direct_architecture_requires)
             self.assertNotIn(item, self.report.transitive_architecture_dependents)
             self.assertEqual(item in self.report.dependency_terminals, item in terminals_v95)
+        # v96 supplies one selected architecture definition and three
+        # theorems. Their exact premise graph does not derive this choice
+        # from DEF-ARCHITECTURE (the unchanged native-U architecture).
+        normative = architecture.read_tsv(
+            ROOT / "canon" / "NORMATIVE.tsv", architecture.NORMATIVE_FIELDS
+        )
+        dependencies = architecture.read_tsv(
+            ROOT / "canon" / "DEPENDENCIES.tsv", architecture.DEPENDENCY_FIELDS
+        )
+        requires = architecture.dependency_graph(
+            (row["item_id"] for row in normative), dependencies, "REQUIRES"
+        )
+        definition = "DEF-FIELD-WORK-RECORD-CHAIN"
+        law = "FIELD-CONSERVATIVE-CHAIN-LAW"
+        work = "FIELD-CHAIN-FIRST-WORK"
+        record = "FIELD-LOCAL-WORK-RECORD"
+        self.assertEqual(requires[definition], set())
+        self.assertEqual(requires[law], {definition})
+        self.assertEqual(requires[work], {law})
+        self.assertEqual(requires[record], {definition, law, work})
+        self.assertIn(definition, self.report.dependency_terminals)
+        for item in (definition, law, work, record):
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertNotIn(item, self.report.transitive_architecture_dependents)
+        for claim in (law, work, record):
+            self.assertTrue(architecture.reaches(requires, claim, definition))
+            self.assertFalse(
+                architecture.reaches(requires, claim, architecture.ARCHITECTURE_ITEM)
+            )
+            self.assertNotIn(claim, self.report.dependency_terminals)
         # v94 adds three theorem rows with existing theorem premises: two
         # public-probe evidence rows and one inline composition. All three
         # reach the declared architecture transitively, with no new root.
