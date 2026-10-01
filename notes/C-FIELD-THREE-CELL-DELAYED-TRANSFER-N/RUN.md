@@ -62,6 +62,28 @@ not a fabricated formal probe or GENESIS staging record.
 
 ## Public computation gate
 
-Pending actual public x86_64 and aarch64 job readbacks. Local success alone
-is not represented as a two-architecture gate. The draft PR will carry the
-same seven scientific files and only added reporting/custody records.
+PASS: [PR #1310](https://github.com/mathorn1973/twist-j/pull/1310),
+[run 36836750687](https://github.com/mathorn1973/twist-j/actions/runs/36836750687),
+head `70a6e3efb41c216f12c0e9b23922af10f4b5ae4b`. This head adds only execution/result/review/custody
+records after the unchanged joint scientific pin.
+
+| job | Python | conclusion |
+| --- | --- | --- |
+| [architecture-x86_64 / 110285888277](https://github.com/mathorn1973/twist-j/actions/runs/36836750687/job/110285888277) | CPython 3.12.14 | success |
+| [architecture-aarch64 / 110285888500](https://github.com/mathorn1973/twist-j/actions/runs/36836750687/job/110285888500) | CPython 3.12.14 | success |
+| [check / 110286143771](https://github.com/mathorn1973/twist-j/actions/runs/36836750687/job/110286143771) | n/a | success |
+
+Both actual architecture job logs were read after completion. Each contains
+exactly the same scientific receipt:
+
+```text
+REPRODUCE PASS FIELD-THREE-CELL-DELAYED-TRANSFER-N c1bcd8ade32c78d829a42b75f97e22842cebe5595a44bb52991d558ee1beefea 9d22bd31bbafd95b057e2ea230707db3947e6675d6bbaba25e854a141c20bf23
+```
+
+The hash-guarded bridge therefore executed BOTH frozen implementations in
+each architecture job, with exit 0, empty stderr and the same 291 scientific
+output bytes. This is an actual reproduction readback, not inference from
+a generic green documentation check. Publication was correctly skipped; no
+release was requested. This reporting update changes none of the seven
+scientific inputs. Its final descendant is checked again by the public
+workflow before delivery.

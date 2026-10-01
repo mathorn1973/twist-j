@@ -75,3 +75,19 @@ probes, predecessors, other owners, shared checkers, workflows and release
 records are unchanged. No merge, tag or release was requested or performed.
 The delayed work witness, preparation costs, controls and finite recurrence
 boundary must be retained together in any later promotion.
+
+## Final documentation and custody review
+
+A separate read-only reviewer verified the exact 13-file inventory, all
+12 manifest entries, local run metadata/receipt, and unchanged seven source
+files against the joint pin. It found no private path, scope overclaim or
+unsupported promotion, and confirmed exactly one unstarted successor.
+It only hashed challenger bytes and did not semantically read that program;
+its code-review firewall remained intact. No science rerun was performed.
+
+The actual public computation gate then passed in run 36836750687 at
+70a6e3efb41c216f12c0e9b23922af10f4b5ae4b. Both completed architecture logs
+were read and each showed the same exact REPRODUCE PASS receipt for this
+candidate, CPython 3.12.14, and successful architecture/aggregate jobs.
+RUN.md records the exact URLs and hashes. Only reporting and its manifest
+are updated afterward; the scientific sources remain pinned and unchanged.

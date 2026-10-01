@@ -79,9 +79,12 @@ chronology. Neither changed the frozen preregistration. No scientific input
 was edited after execution. RUN.md separates local and public gate evidence;
 REVIEW.md records the exact implementation independence achieved.
 
-Public gate: pending actual x86_64/aarch64 scientific readback. All unchanged
-local policy, Canon, ledger and gate-contract checks passed; the repository
-unit suite passed 172 tests with one Windows platform skip.
+Public gate PASS: both actual x86_64/aarch64 scientific logs in
+[run 36836750687](https://github.com/mathorn1973/twist-j/actions/runs/36836750687)
+contain the same bridge/output hash receipt, with CPython 3.12.14 and successful
+architecture and aggregate jobs. RUN.md binds the exact head and jobs. All
+unchanged local policy, Canon, ledger and gate-contract checks passed; the
+repository unit suite passed 172 tests with one Windows platform skip.
 
 The local L5 pairing, neutral energy weight, directed path, ordered endpoints,
 four-layer schedule, preparation and reader remain declared architecture.
