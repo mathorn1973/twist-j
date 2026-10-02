@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-10-02T17:35:33.621640+00:00",
+  "finished_utc": "2026-10-02T17:35:35.345040+00:00",
+  "platform": "Windows 11",
+  "architecture": "AMD64",
+  "python": "3.12.10",
+  "exit_code": 0,
+  "stdout_bytes": 1335,
+  "stdout_sha256": "187016c69990aaa276e7f3a49281c6deff9efe20b6b012659471f5275e5a9ff1",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "byte_identical_to_first": true
+}

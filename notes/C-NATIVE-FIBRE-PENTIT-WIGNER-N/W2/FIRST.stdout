@@ -1,0 +1,14 @@
+NON-CANONICAL W2 CODEX-W2-INDEPENDENT-20261002 L1
+PASS S1_NATIVE states=15625 generators=5 fibre_group=50
+PASS S2_SELECTED images=6250,9375 ticks=0..127 synchronized_ticks=3..127
+PASS S3_FORMS multiplier_triples=64 nonzero_forms=256 rank=2 dimensions=3,3,1,1 common_radical=3
+PASS S1_S4_S8_OPERATORS weyl_conventions=20 conjugations=500 reflection_cases=625 explicit_line_vectors=30 sandwich_pairs=900
+PASS S4_S6_CENSUS preparations=624 values=39 minimum=(1+sqrt5)/10 multiplicity=32 maximum=29/220+8sqrt5/55 multiplicity=16
+PASS CONVENTIONS root_relabel_cases=1872 embedding_relabelings=120 census_entries=74880 named_dependence=((0, 1, 1, 2), (0, 1, 3, 2))
+AUDIT_TABLE_SHA256 a2f76d45a0d42ae42906238833f90231ab55546ec4a9a3290bf2d6ed60c11491 bytes=9544
+PASS S5_RATIONAL_ODD dimensions=3,5,7,9,15 vectors=2175 noninteger_vectors=1990 zero_sum_nonzero_row=PASS squared_bound=PASS
+PASS S7_READERS effects=3 dual_inversions=75 LOW_negative=12 LOW_grid_probabilities=2 HIGH_below_zero=1 HIGH_above_one=8
+PASS S8_ENSEMBLE two_round_scenarios=1080 microstates_each=125 three_round_controls=900 U1_return=1/5 U0_return=1
+PASS S8_RESOURCE continuation_histograms=251 rejected=250 minimum=5 scope=universal_point_only_continuation_ready
+PASS COMPLETE independent_checks=10 falsifiers=0
+STOP_APPLICABILITY / H_NOT_TESTED unchanged

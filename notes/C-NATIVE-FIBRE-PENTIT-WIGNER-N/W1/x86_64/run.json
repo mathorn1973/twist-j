@@ -1,0 +1,99 @@
+{
+  "basis": "738e0421bd15aaea5bb6ef2a56f1cab752d44de5",
+  "census_sha256": "1df13ba2218acaa9cf48dab2480e6472b107691aac868618dc7f91d511718a5c",
+  "environment": {
+    "LANG": "C",
+    "LC_ALL": "C",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC",
+    "architecture": "x86_64",
+    "platform": "Ubuntu 22.04.5 LTS",
+    "python_implementation": "CPython",
+    "python_version": "3.10.12"
+  },
+  "evidence": "SUPPLEMENTARY_SAME_ARCHITECTURE",
+  "native_execution": "OPERATOR_ATTESTED",
+  "package_manifest_sha256": "ebb4b80fb63b4c6ff67dfb67d1399c11bafe056799c6514f0bf9f79cda1447c8",
+  "programs": [
+    {
+      "exit_code": 0,
+      "inputs_unchanged": true,
+      "label": "base",
+      "source_sha256": "ddf883612cd6fff00b227d8fca76668fc876ef1873f819da724ee0e66426dd63",
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 4476,
+      "stdout_sha256": "3b2bdc432e1bfebcd453b83a6766a2863b6a1d54243180cbc20e0b1ce4ea39ad",
+      "timed_out": false
+    },
+    {
+      "exit_code": 0,
+      "inputs_unchanged": true,
+      "label": "addendum1",
+      "source_sha256": "cd609366fb656ca79fd91e7a7090ea35f0974e85bfe5f3616866df27dfe4b346",
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 2436,
+      "stdout_sha256": "fc5432d288f340038d64edb5ceab9aeec71c3b400cc378c8556878089b549bed",
+      "timed_out": false
+    },
+    {
+      "exit_code": 0,
+      "inputs_unchanged": true,
+      "label": "base_breaker",
+      "source_sha256": "c48073764b881238f9dc980ddc1b6467dc2b60637f5ddcc22881a7e9f711ddf6",
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 2660,
+      "stdout_sha256": "f1044cc3c1371342ca3bfc5b921460332fa7c07a17999874e556dc1891cf6f0f",
+      "timed_out": false
+    },
+    {
+      "exit_code": 0,
+      "inputs_unchanged": true,
+      "label": "addendum1_breaker",
+      "source_sha256": "6bac007185d0c4424f761b337a8f30a43209d93b250033c69207a4e6935bc816",
+      "status": "PASS",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_bytes": 1403,
+      "stdout_sha256": "6e3aa7f8eac8d2df31f6c60f4e2b5cfa78c11a4092501b4a5defa1a12a733bd6",
+      "timed_out": false
+    }
+  ],
+  "static_audit_imports": {
+    "addendum1": [
+      "fractions",
+      "functools",
+      "itertools",
+      "sys"
+    ],
+    "addendum1_breaker": [
+      "fractions",
+      "itertools",
+      "sys"
+    ],
+    "base": [
+      "fractions",
+      "functools",
+      "hashlib",
+      "importlib.util",
+      "itertools",
+      "sys"
+    ],
+    "base_breaker": [
+      "fractions",
+      "hashlib",
+      "itertools",
+      "sys"
+    ],
+    "reproduce/census/verify.py": [
+      "sys"
+    ]
+  },
+  "status": "PASS"
+}

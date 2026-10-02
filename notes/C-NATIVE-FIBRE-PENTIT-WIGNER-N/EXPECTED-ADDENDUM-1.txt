@@ -1,0 +1,23 @@
+PASS 0.1 30 lines; Tr(Pi_L Pi_M) = |L cap M|/5 recomputed from dense projectors for all 900 pairs
+PART B7  reader boundary
+PASS B7.1 dual inversion: the response xi_E(u) = Tr(E A_u) is recovered from the 30 line sums, for LOW, acceptance and HIGH
+     LOW response values: (-1/4) + (0)*sqrt5 x4; (1/8) + (-1/8)*sqrt5 x8; (1/8) + (1/8)*sqrt5 x8; (3/4) + (0)*sqrt5 x4; (1) + (0)*sqrt5 x1
+PASS B7.2 LOW response is 1 x1, 3/4 x4, -1/4 x4, (1+sqrt5)/8 x8, (1-sqrt5)/8 x8: twelve values below 0, so LOW is no point reader
+PASS B7.3 control: the Fourier vector f is the line state of one line of direction (1,0), and |<l,f>|^2 = 1/4 by direct product and by line sum
+     LOW probability on the 30 line states: (0) + (0)*sqrt5 x1; (1/20) + (0)*sqrt5 x4; (3/10) + (-1/10)*sqrt5 x2; (7/40) + (-1/40)*sqrt5 x8; (7/40) + (1/40)*sqrt5 x8; (1/4) + (0)*sqrt5 x4; (3/10) + (1/10)*sqrt5 x2; (4/5) + (0)*sqrt5 x1
+     line states with LOW probability a multiple of 1/5: 2, values 4/5,0
+PASS B7.4 LOW probability is 4/5 and 1/20 x4 on the basis states, 0 and 1/4 x4 on the Fourier states; exactly 2 of 30 values are multiples of 1/5
+PASS B7.5 the acceptance effect I - |+><+| is a deterministic point reader: response 1 off the line r=0 and 0 on it
+     HIGH response values: (-1) + (0)*sqrt5 x1; (1/4) + (0)*sqrt5 x8; (7/8) + (-1/8)*sqrt5 x8; (7/8) + (1/8)*sqrt5 x8
+PASS B7.6 HIGH response has values outside [0,1], so HIGH is no point reader either
+PART B8  state change
+PASS B8.1 Pi_M Pi_L Pi_M = (|L cap M|/5) Pi_M for all 900 pairs: the post-reading state is the line state of the outcome
+     two-round scenarios (line, direction, direction): 1080
+PASS B8.2 update U1: counting 125 microstates (u,t1,t2) returns the two-round law Tr(Pi_L Pi_M1) Tr(Pi_M1 Pi_M2) in all 1080 scenarios
+PASS B8.3 update U1: given any two-round history the final point is uniform on the last outcome line
+PASS B8.4 necessity: a line transversal to the reading meets each outcome line in exactly one point, while the post-reading law needs all five points
+     three-round scenarios with two different directions: 900
+PASS B8.5 control: the non-disturbing update U0 returns the first outcome with count 1 where the quantum law gives 1/5, in all 900 scenarios; U1 gives 1/5
+PART C  applicability
+     no computation: STOP_APPLICABILITY / H_NOT_TESTED unchanged; U1 consumes one fresh uniformly counted pentit per reading, a supplied resource
+SUMMARY 12 of 12 checks PASS
