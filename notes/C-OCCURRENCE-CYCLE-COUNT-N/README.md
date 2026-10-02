@@ -13,7 +13,10 @@ full forward-clock native U nor #1334's complex operator model supplies the
 required finite actual event-counting contract. This is not F of the
 hypothesis and does not rule out other actual-state models.
 
-The checker has not run. Publish the unchanged preregistration, manifest
-and code, record/read back their public pin, then execute the documented
-command once and retain its real output. No RUN or EXPECTED is fabricated
-before execution. No further apparatus is introduced to avoid this stop.
+The checker was published and read back at
+`f3b59cc08efce600957676fbce6d17b31ab9aa11`, then ran once with exit zero,
+empty stderr and a 342-byte custody report. [RUN.md](RUN.md) records the
+execution; [EXPECTED.txt](EXPECTED.txt) retains its actual output and
+[RESULT.md](RESULT.md) gives the final disposition. No cycle counting or
+trace-weight comparison ran. No further apparatus was introduced to avoid
+this stop; the occurrence hypothesis remains untested.
