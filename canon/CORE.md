@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v95. Normative authority and activation
+**Release identity:** Public Canon v96. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v95 also declares a discrete architecture. It does not
+Public Canon v96 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -165,8 +165,18 @@ triangular shell resonance and finite decision/certificate principles.
 A two-triangle zero mode prevents direct replication of the one-cell
 positive energy. Zero field enforces local neutrality, and bridge flux
 bounds charge separation at fixed energy in the declared geometry.
-These results concern their stated architectures; their derivation from
-native U, physical energy selection and multi-cell realization remain open.
+These results concern their stated architectures. A separately selected
+positive field cell supplies a complete conservative integer chain for
+every finite N>=2: FIELD-CONSERVATIVE-CHAIN-LAW gives its inverse and actual
+invariant accounts; FIELD-CHAIN-FIRST-WORK gives first arrival N-1, funded
+work N and return of the original receiver N+1 for the declared preparation;
+FIELD-LOCAL-WORK-RECORD adds a reversible local C5 event pointer, initially
+blank and readable at eight boundaries spanning seven elapsed steps from
+its first write. The returned original receiver is not a reset of the
+complete apparatus, and finite-energy recurrence forces eventual return to
+the initial state. Derivation from native U or J, physical energy selection
+and physical realization remain
+open; this mathematical construction supplies no experiment.
 
 Three decisions have exact dispositions. The complete measurable
 product-source Route A is empty, so ENTROPY-LAYER-BRIDGE closes at F with

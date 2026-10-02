@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred twenty-six checks cover the current
+and emits deterministic text. Its one hundred thirty-two checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 120/120 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 132/132 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -655,3 +655,34 @@ integer law remain outside the claims.
 The expected transcript copies the 120 prior check lines and adds six
 authored boundary lines before execution. Its 126 checks are deterministic
 release bookkeeping, not a scientific probe or a replacement for proof.
+
+
+The v96 maintenance pins the same thirteen complete current Canon inputs and
+reconstructs exact public v95 at
+`b8ba1a07ad776cdd8d878fe0a407e07312c0e263` before the unchanged v95-to-v94
+and earlier guards. Both current and reconstructed bytes must match their
+full byte counts and SHA-256 values. All historical constants and predicates
+are preserved; the only historical code adaptations route four v95 reads
+through the new exact reconstruction. The first 126 PASS lines are copied
+byte for byte, including their earlier release scopes and descriptions.
+
+Six separately authored v96 guards pin the three conditional L1 theorem
+rows, their exact scopes, one selected architecture definition, all five
+new dependency edges and three declarations. The proof contract hashes both
+the entire new Canon block and its complete nine-section shared proof; it
+does not mistake the short claim statements for their proofs. Structural
+clauses retain the total guarded law, all-N first work and controls, and the
+recovered-input pointer inverse with eight-boundary forward retention. Native
+U selection, physical energy, permanent memory and physical apparatus
+semantics remain excluded. All 484 prior Registry rows, all 25 live H/O
+owners, gates, programs and CORE selections remain exact. Totals are 487
+claims, T345/D59/C39/H2/O23/F19.
+
+The expected 132-check transcript is authored before execution from the
+unchanged 126 prior PASS lines and six specified new boundary lines. The
+banner and final total state the current boundary. This is maintenance of
+one existing mandatory release-accounting reproduction, not three new
+mathematical reproductions, a scientific experiment or an evidence-class
+promotion. Other scientific verifiers and expected outputs are unchanged.
+Execution and cross-architecture gate results belong to the subsequently
+pinned content candidate; constructing this transcript is not a run receipt.

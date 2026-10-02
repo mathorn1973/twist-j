@@ -990,3 +990,8 @@ INTEGER-FINITE-PREACTIVATION-QUOTIENT	INTEGER-F-JG-INVARIANTS	REQUIRES	Supplies 
 INTEGER-FINITE-PREACTIVATION-QUOTIENT	FIELD-EISENSTEIN-RESONANCE	REQUIRES	Supplies the complete-shell q=3 conversion for the explicitly conditional field-phase omission.
 FIELD-CHARGED-SEPARATION-BOUND	FIELD-GAUSS-CONTACT-MEMORY	REQUIRES	Supplies the exact active-flux encoding, Gauss constraint, incidence convention and boundary-flux distinction.
 FIELD-CHARGED-SEPARATION-BOUND	FIELD-SHEAR-ENERGY-BOUNDARY	REQUIRES	Supplies strict positivity of the one-triangle block and its nonnegative contribution after separating bridge-edge squares.
+FIELD-CONSERVATIVE-CHAIN-LAW	DEF-FIELD-WORK-RECORD-CHAIN	REQUIRES	Displayed architecture definitions.
+FIELD-CHAIN-FIRST-WORK	FIELD-CONSERVATIVE-CHAIN-LAW	REQUIRES	The complete inline proof of FIELD-CONSERVATIVE-CHAIN-LAW; all use remains at L1.
+FIELD-LOCAL-WORK-RECORD	DEF-FIELD-WORK-RECORD-CHAIN	REQUIRES	Displayed architecture definitions.
+FIELD-LOCAL-WORK-RECORD	FIELD-CONSERVATIVE-CHAIN-LAW	REQUIRES	The complete inline proof of FIELD-CONSERVATIVE-CHAIN-LAW; all use remains at L1.
+FIELD-LOCAL-WORK-RECORD	FIELD-CHAIN-FIRST-WORK	REQUIRES	The complete inline proof of FIELD-CHAIN-FIRST-WORK; all use remains at L1.
