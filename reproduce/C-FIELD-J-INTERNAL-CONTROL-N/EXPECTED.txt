@@ -1,0 +1,7 @@
+PASS compiler: descriptors=180 fresh_addresses=158154 rounds=180
+PASS microstep: inverse_cases=50880 energy_terms=102480
+PASS routing: full_commands=6400 correlated_vectors=40
+PASS measurement: programs=14 full_source_units=224 ideal_histories=21 branch_units=336
+PASS retained_loader: programs=4 negative_inputs=12 full_source_units=64
+PASS timing: tours=12928 microticks=1634992 active_stations=104757 proved_identity_stations=1530235
+SCOPE conditional local fetched-program control; epsilon_control=0 by proof; occurrence NOT DERIVED
