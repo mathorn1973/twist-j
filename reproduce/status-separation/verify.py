@@ -38,6 +38,613 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+
+# Exact v97 release accounting and reversible public v96 reconstruction.
+V97_PRIOR_COMMIT = '44423153eee6259c7277eec5f5adbed9679f9146'
+V97_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'd9f4dd61f1c57eb502be95870bd6104a149c451c81355f78d2a6fcd10946b3de',
+                  'current_bytes': 491203,
+                  'prior_sha256': 'eb6f36b79628d916d24a89480f854db725deb73227dd84f13e8ecf76e7bdeb01',
+                  'prior_bytes': 485037,
+                  'restore': ((488, 493, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': '49ce83fa1c585556e1af785f955528079aa129a08c951e100860e060e18d4d19',
+                   'current_bytes': 63024,
+                   'prior_sha256': '91a8ee4bd2c4ec843a3323b121f9683978ce70ca7955582e0ec3db2c18f89eb3',
+                   'prior_bytes': 62290,
+                   'restore': ((548, 554, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': '635cdb5f852d7c41ea929052e0ec1cf7c3b077620052f57852b128863a1bfd05',
+                      'current_bytes': 164840,
+                      'prior_sha256': '443f1df8397689dc550649a3288ed9dd189c8460276877dba3c66f0ebf0ecdaa',
+                      'prior_bytes': 163333,
+                      'restore': ((997, 1005, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': 'a56bfa6e5ccc8a4481f765baa6825b8e77b6418b09ec1db750314b2a8917a131',
+                  'current_bytes': 100185,
+                  'prior_sha256': '8e094e56f833f10d07f902a518201a6c63c915cd2d66362fe6a2976f705caff8',
+                  'prior_bytes': 99265,
+                  'restore': ((488, 493, ''),)},
+ 'HISTORY.tsv': {'current_sha256': 'c44ea31e7a851bb47cc3b9429e4f189ed893181a076cc9294dcc9adcc0cf0dc8',
+                 'current_bytes': 465270,
+                 'prior_sha256': '70eb9b1571191d772b97b513a319d961fd3175651c329b0dbff78cb821c788c7',
+                 'prior_bytes': 462745,
+                 'restore': ((1035, 1040, ''),)},
+ 'GATES.tsv': {'current_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'current_bytes': 12907,
+               'prior_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'prior_bytes': 12907,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'current_bytes': 1436,
+                           'prior_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'prior_bytes': 1436,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': '257f83a386aad7d309f7017bd719b6212e3cffea60e4986caa5169d6543f108d',
+              'current_bytes': 897762,
+              'prior_sha256': 'eb2a7bc1c7e38e130544b9fef4c0f05443df01484bdb55a52fc10b427fcee0a2',
+              'prior_bytes': 873495,
+              'restore': ((0, 1, '# TWIST-J Public Canon v96\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v96. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v96 also declares the discrete architecture used '
+                           'to read\n'),
+                          (25,
+                           26,
+                           'seed of the two algebraic projections. Public Canon v96 does not '
+                           'claim\n'),
+                          (130,
+                           131,
+                           'deriving the architecture from J; Public Canon v96 contains no '
+                           'such\n'),
+                          (8116, 8522, ''))},
+ 'CORE.md': {'current_sha256': '2cef2b279d6d1e88652bf87bed56b910bc89e381aebc91beedc42d5186555bb9',
+             'current_bytes': 23703,
+             'prior_sha256': '8e0ea144519ca823483ae185daeb3da35a590c9591f40f491e43271c8df8febd',
+             'prior_bytes': 22719,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v96. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v96 also declares a discrete architecture. It does '
+                          'not\n'),
+                         (180, 194, ''))},
+ 'FRONTIER.md': {'current_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'current_bytes': 26162,
+                 'prior_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'prior_bytes': 26162,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': 'c8abb949b6e64de498923d2a51ea37db55918344cd0a118fe8cacda9c70d5640',
+                  'current_bytes': 195983,
+                  'prior_sha256': '7b6af10a8a5f1843f07aa0d20ac37ddf2e98a6250b995950f3275735be0f3ced',
+                  'prior_bytes': 194476,
+                  'restore': ((1, 27, ''),)},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '2a02b5f0098fd601b85bba127a84432655ad26346c2fccb500a75dfa48209f72',
+                       'current_bytes': 243,
+                       'prior_sha256': '6603ae5f59c5245ea7230e851b6be834ec6860c0553809080dd75d8d08b7877c',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t487\n'),
+                                   (3, 4, 'status_T\t345\n'),
+                                   (10, 12, 'reproductions\t24\nevidence_none\t74\n'))}}
+V97_IDS = ('FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+ 'FIELD-PACKET-FUNDED-RECORD',
+ 'FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+ 'FIELD-COHERENT-POINTER-PREPARATION',
+ 'FIELD-FETCHED-PROGRAM-CONTROL')
+V97_DEFINITION = 'DEF-FIELD-PACKET-INSTRUMENT'
+V97_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                   'status': 'T',
+                   'scope': 'at L1 for each finite N>=2 on the declared 12N-4-coordinate '
+                            'packet/latch/Z1226 carrier, support b=1 and H(y)<=5, positive '
+                            'packet energy b+H(y)+r, exact mixed-radix content code, funded '
+                            'complete receiver G and whole-packet G;A;B chronology: the '
+                            'all-state forward/inverse laws, including each fixed cut and '
+                            'occupied/inactive packets, preserve full energy, the (b,y) multiset '
+                            'and sum r+2l; code and reader are inverse on supported contents; '
+                            'both directions have depth three and dependence radius at most two '
+                            'stored-block edges; each finite-energy shell is a finite '
+                            'permutation; all architecture, weights and preparation meanings are '
+                            'selected and no field-chain charge/Gauss, native-U/J or physical '
+                            'interpretation is inherited',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on an admitted complete input violating either inverse '
+                                'composition, nonnegative reserve, stated conserved account, '
+                                'supported code inversion, fixed-cut account, locality bound or '
+                                'finite-shell permutation conclusion; a different law, physical '
+                                'apparatus or sampling rule is outside scope'},
+                  {'claim_id': 'FIELD-PACKET-FUNDED-RECORD',
+                   'status': 'T',
+                   'scope': 'at L1 under FIELD-PACKET-CONSERVATIVE-TRANSPORT, for every '
+                            'supported source packet (1,y,2) at C0 with every other packet empty '
+                            'and l=p=0: literal arrival is boundary N-1, first funded WRITE is '
+                            'step N, writes are N+2mT and releases N+(2m+1)T with T=2N-1; '
+                            'p=w(n)c(y) mod1226 gives exact first record through boundary '
+                            'N+2T-1; packet/latch renewal at 2T retains p=c, and the least '
+                            'complete return is 2T*1226/gcd(1226,c); absence, inactive source, '
+                            'underfunding, unsupported source and each fixed cut of this clean '
+                            'family prevent WRITE; arbitrary initial p, dirty receivers, '
+                            'permanent memory, latest-event truth and source provenance are '
+                            'excluded',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on a stated clean source or specified negative control '
+                                'violating literal arrival, first WRITE, all-time write/release '
+                                'schedule, first retention, operative renewal, least complete '
+                                'period or no-WRITE conclusion; changing readiness or requesting '
+                                'an occurrence law is outside this theorem'},
+                  {'claim_id': 'FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                   'status': 'T',
+                   'scope': 'at L1 on the chosen complex ell2 extension of the complete packet '
+                            'permutation, with supplied four equal-H=1 source labels and '
+                            'G-isometric QDD chart, exact shell context controls, coherent even '
+                            'pointer E, ready packet/latch geometry and K fresh archive cells: '
+                            'each U;2T B-steps;U*;append round has the complete source/reference '
+                            'post-state instrument U*P_LOW U and U*P_HIGH U, and at most K '
+                            'supplied nonadaptive rounds retain all ordered history terms, '
+                            'unused cells and prefix-consistent formal traces without source '
+                            'replacement; diagonal-even and blank pointers lose distinct-label '
+                            'reduced coherence; even support alone suffices for constant '
+                            'repeated-context parity at D=I, not correct HIGH or changed-context '
+                            'post-states; complex extension, controls, preparation and formal '
+                            'parity reading are explicit premises, not actual outcome selection',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on a complete admitted source/reference operator or '
+                                'history violating the stated joint round map, HIGH '
+                                'off-diagonal, append inverse, ordered-history formula, '
+                                'normalization or prefix identity, or on a nonconstant '
+                                'repeated-context parity branch in the exact even-supported D=I '
+                                'subclass; actual-outcome, physical or arbitrary dirty-readiness '
+                                'conclusions are outside scope'},
+                  {'claim_id': 'FIELD-COHERENT-POINTER-PREPARATION',
+                   'status': 'T',
+                   'scope': 'at L1 for the displayed zero-phase edge reflections on the even '
+                            'L-cycle, L>=3, m=K+1 pointers with arbitrary admitted correlations '
+                            'and B=L*sum n_i distinct independent pure bath-zero inputs retained '
+                            'in the output: each full sweep contracts infidelity to E by '
+                            'r_L=1-4/L^3; the joint bank state is within '
+                            'epsilon=min(1,sqrt(delta)+delta/2) of E^(tensor m) times the actual '
+                            'output remainder, delta=min(1,sum_i r_L^(n_i)(1-F_i0)); every '
+                            'positive tolerance has a finite budget; one common finite CPTP '
+                            'continuation with baths untouched preserves this once-only joint '
+                            'and formal-history TV bound, with the stated positive/zero-branch '
+                            'limits; supplied pure baths, phase-sensitive exact couplings, '
+                            'source readiness and flat bare energies are not derived, and exact '
+                            'finite E or actual selection is not asserted',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on an admitted L, even-supported correlated input, '
+                                'fresh-zero collision/sweep or common untouched-bath '
+                                'continuation violating the complete reflection inverse, '
+                                'infidelity rate, bath count, actual-remainder joint bound or '
+                                'formal-history error; odd inputs, dirty baths, extra '
+                                'interventions, physical pulse costs and actual-event measures '
+                                'are outside the positive guarantee'},
+                  {'claim_id': 'FIELD-FETCHED-PROGRAM-CONTROL',
+                   'status': 'T',
+                   'scope': 'at L1 on the displayed complete separable tensor carrier with '
+                            'exactly one head, finite capacity-dependent port graph, stored '
+                            'program, fixed finite shell-unitary catalogue, retained '
+                            'baths/metadata and eight bus roles: the station-plus-shift law is '
+                            'unitary on all states and preserves the full selected bare ledger, '
+                            'with graph degree at most four and radius at most two; on '
+                            'consistent classical initialized control, arbitrary data and '
+                            'correlated dirty buses, fetched addressed commands equal the full '
+                            'external primitive maps, hence epsilon_control=0; for h<=K '
+                            'nonadaptive D=I rounds and B fresh collisions, H=B+h(2T^2+5), '
+                            'S=2H+W, g=4N+4K+B+1 and d=2S+2g+4 give preparation Bd, read '
+                            'interval [Hd,(H+W)d) and complete unmeasured return Sd; freshness, '
+                            'metadata and passive baths follow only on the initialized forward '
+                            'domain, and epsilon_prep is charged once; exact gates, phases, '
+                            'source/bath inputs, graph, catalogue and abstract ticks remain '
+                            'supplied, with no native implementation, absorbing halt, '
+                            'independent renewal or selected actual outcome',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on a legal complete state violating station/full inverse, '
+                                'ledger or stated locality, or an admitted initialized '
+                                'descriptor violating fetched full-operator equality, inverse '
+                                'old-cursor recovery, fresh address use, metadata provenance, '
+                                'timing/read window, unmeasured return or once-only preparation '
+                                'comparison; arbitrary raw tapes need not satisfy the positive '
+                                'protocol, and occurrence error remains undefined'}],
+ 'NORMATIVE.tsv': [{'item_id': 'DEF-FIELD-PACKET-INSTRUMENT',
+                    'item_type': 'DEFINITION',
+                    'claim_id': '',
+                    'status': '',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::DEF-FIELD-PACKET-INSTRUMENT'},
+                   {'item_id': 'FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-PACKET-CONSERVATIVE-TRANSPORT'},
+                   {'item_id': 'FIELD-PACKET-FUNDED-RECORD',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-PACKET-FUNDED-RECORD',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-PACKET-FUNDED-RECORD'},
+                   {'item_id': 'FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-CONDITIONAL-POINTER-INSTRUMENT'},
+                   {'item_id': 'FIELD-COHERENT-POINTER-PREPARATION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-COHERENT-POINTER-PREPARATION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-COHERENT-POINTER-PREPARATION'},
+                   {'item_id': 'FIELD-FETCHED-PROGRAM-CONTROL',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-FETCHED-PROGRAM-CONTROL',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-FETCHED-PROGRAM-CONTROL'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                       'depends_on': 'DEF-FIELD-PACKET-INSTRUMENT',
+                       'relation': 'REQUIRES',
+                       'basis': 'The displayed complete selected L1 definitions and inline '
+                                'proof; no inference of native or physical realization.'},
+                      {'item_id': 'FIELD-PACKET-FUNDED-RECORD',
+                       'depends_on': 'FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                       'relation': 'REQUIRES',
+                       'basis': 'The displayed complete selected L1 definitions and inline '
+                                'proof; no inference of native or physical realization.'},
+                      {'item_id': 'FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                       'depends_on': 'FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                       'relation': 'REQUIRES',
+                       'basis': 'The displayed complete selected L1 definitions and inline '
+                                'proof; no inference of native or physical realization.'},
+                      {'item_id': 'FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                       'depends_on': 'FIELD-PACKET-FUNDED-RECORD',
+                       'relation': 'REQUIRES',
+                       'basis': 'The displayed complete selected L1 definitions and inline '
+                                'proof; no inference of native or physical realization.'},
+                      {'item_id': 'FIELD-COHERENT-POINTER-PREPARATION',
+                       'depends_on': 'DEF-FIELD-PACKET-INSTRUMENT',
+                       'relation': 'REQUIRES',
+                       'basis': 'The displayed complete selected L1 definitions and inline '
+                                'proof; no inference of native or physical realization.'},
+                      {'item_id': 'FIELD-COHERENT-POINTER-PREPARATION',
+                       'depends_on': 'FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                       'relation': 'REQUIRES',
+                       'basis': 'The displayed complete selected L1 definitions and inline '
+                                'proof; no inference of native or physical realization.'},
+                      {'item_id': 'FIELD-FETCHED-PROGRAM-CONTROL',
+                       'depends_on': 'FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                       'relation': 'REQUIRES',
+                       'basis': 'The displayed complete selected L1 definitions and inline '
+                                'proof; no inference of native or physical realization.'},
+                      {'item_id': 'FIELD-FETCHED-PROGRAM-CONTROL',
+                       'depends_on': 'FIELD-COHERENT-POINTER-PREPARATION',
+                       'relation': 'REQUIRES',
+                       'basis': 'The displayed complete selected L1 definitions and inline '
+                                'proof; no inference of native or physical realization.'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                   'evidence_id': 'EV-FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '7926fbb52603da76ffc95e0507c86c87c1f1593da821ead57ddeb58e7b176e85',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-PACKET-FUNDED-RECORD',
+                   'evidence_id': 'EV-FIELD-PACKET-FUNDED-RECORD',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '25954f55843d8867a233c76ec594daedaeff66d66d1ec73c4eda5cafffc022af',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                   'evidence_id': 'EV-FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '39d56892965654e0cffb4000e19a517d668a05df1bbdc3808060b72e99feec86',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-COHERENT-POINTER-PREPARATION',
+                   'evidence_id': 'EV-FIELD-COHERENT-POINTER-PREPARATION',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'f460e7914b8ccef44b381e06a0766138464855df4fc81c54e1c2f0b5b1303014',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-FETCHED-PROGRAM-CONTROL',
+                   'evidence_id': 'EV-FIELD-FETCHED-PROGRAM-CONTROL',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '3f9ec15190bed5210e04cf2e741f7bca3796b301bad520fc5b179a5663bcc826',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON97-DECLARE-FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-02',
+                  'release': 'canon-v97',
+                  'claim_id': 'FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '7926fbb52603da76ffc95e0507c86c87c1f1593da821ead57ddeb58e7b176e85',
+                  'evidence_id': 'EV-FIELD-PACKET-CONSERVATIVE-TRANSPORT',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '7926fbb52603da76ffc95e0507c86c87c1f1593da821ead57ddeb58e7b176e85',
+                  'rationale': 'Declare the complete inline conditional L1 proof at its '
+                               'independently reviewed mathematical scope; finite audits are '
+                               'supplementary and no native realization, actual occurrence or '
+                               'physical-owner closure is inferred.'},
+                 {'event_id': 'CANON97-DECLARE-FIELD-PACKET-FUNDED-RECORD',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-02',
+                  'release': 'canon-v97',
+                  'claim_id': 'FIELD-PACKET-FUNDED-RECORD',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '25954f55843d8867a233c76ec594daedaeff66d66d1ec73c4eda5cafffc022af',
+                  'evidence_id': 'EV-FIELD-PACKET-FUNDED-RECORD',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '25954f55843d8867a233c76ec594daedaeff66d66d1ec73c4eda5cafffc022af',
+                  'rationale': 'Declare the complete inline conditional L1 proof at its '
+                               'independently reviewed mathematical scope; finite audits are '
+                               'supplementary and no native realization, actual occurrence or '
+                               'physical-owner closure is inferred.'},
+                 {'event_id': 'CANON97-DECLARE-FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-02',
+                  'release': 'canon-v97',
+                  'claim_id': 'FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '39d56892965654e0cffb4000e19a517d668a05df1bbdc3808060b72e99feec86',
+                  'evidence_id': 'EV-FIELD-CONDITIONAL-POINTER-INSTRUMENT',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '39d56892965654e0cffb4000e19a517d668a05df1bbdc3808060b72e99feec86',
+                  'rationale': 'Declare the complete inline conditional L1 proof at its '
+                               'independently reviewed mathematical scope; finite audits are '
+                               'supplementary and no native realization, actual occurrence or '
+                               'physical-owner closure is inferred.'},
+                 {'event_id': 'CANON97-DECLARE-FIELD-COHERENT-POINTER-PREPARATION',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-02',
+                  'release': 'canon-v97',
+                  'claim_id': 'FIELD-COHERENT-POINTER-PREPARATION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'f460e7914b8ccef44b381e06a0766138464855df4fc81c54e1c2f0b5b1303014',
+                  'evidence_id': 'EV-FIELD-COHERENT-POINTER-PREPARATION',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'f460e7914b8ccef44b381e06a0766138464855df4fc81c54e1c2f0b5b1303014',
+                  'rationale': 'Declare the complete inline conditional L1 proof at its '
+                               'independently reviewed mathematical scope; finite audits are '
+                               'supplementary and no native realization, actual occurrence or '
+                               'physical-owner closure is inferred.'},
+                 {'event_id': 'CANON97-DECLARE-FIELD-FETCHED-PROGRAM-CONTROL',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-02',
+                  'release': 'canon-v97',
+                  'claim_id': 'FIELD-FETCHED-PROGRAM-CONTROL',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '3f9ec15190bed5210e04cf2e741f7bca3796b301bad520fc5b179a5663bcc826',
+                  'evidence_id': 'EV-FIELD-FETCHED-PROGRAM-CONTROL',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '3f9ec15190bed5210e04cf2e741f7bca3796b301bad520fc5b179a5663bcc826',
+                  'rationale': 'Declare the complete inline conditional L1 proof at its '
+                               'independently reviewed mathematical scope; finite audits are '
+                               'supplementary and no native realization, actual occurrence or '
+                               'physical-owner closure is inferred.'}]}
+V97_PRIOR_REPRODUCTIONS = ('PHOTON-Z5-EXACT-HEATBATH-KERNEL',
+ 'alpha-exact-lemma',
+ 'alpha-value',
+ 'born-faces',
+ 'born-quartet',
+ 'census',
+ 'color-ladder',
+ 'cosmology-register',
+ 'coupling-metrology',
+ 'dirac-ladder',
+ 'force-born-dictionary',
+ 'foundations-places',
+ 'gravity-chain',
+ 'hyperplane-codec',
+ 'kernel-connectivity',
+ 'kernel',
+ 'mass-ladder',
+ 'maxwell',
+ 'observer-boost',
+ 'pentit-p5-closure',
+ 'photon-electron',
+ 'qdd-route-a',
+ 'status-separation',
+ 'weinberg')
+V97_NEW_REPRODUCTIONS = ('C-FIELD-J-CONTENT-TRANSPORT-N',
+ 'C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-REVIEW-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N')
+V97_REPLAY_BLOBS = {'reproduce/C-FIELD-J-CONTENT-TRANSPORT-N/verify.py': (17681,
+                                                       'cc67d1fa3e2203cfc47498e10488ce02fdde5761b817509c2523fad5896ac883'),
+ 'reproduce/C-FIELD-J-CONTENT-TRANSPORT-N/EXPECTED.txt': (632,
+                                                          '386d9b9a1c801cc38b22aa04305ddf10dbe66a1cf38243e4f28e8686e0ed875f'),
+ 'reproduce/C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N/verify.py': (17332,
+                                                              'd2aa61efa74bb26b323d9a940ac9269a8c7d1a561419869cf157abd14716467a'),
+ 'reproduce/C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N/EXPECTED.txt': (382,
+                                                                 '08bb207503943772e5c6e62b8f35fff1050d52decf654a280d30bc77feaeb000'),
+ 'reproduce/C-FIELD-J-INTERNAL-CONTROL-N/verify.py': (34888,
+                                                      'bdc67875fd1f044fae13e263a993b42eecc90d9f5a83c539875159b504f76ef6'),
+ 'reproduce/C-FIELD-J-INTERNAL-CONTROL-N/EXPECTED.txt': (537,
+                                                         '5814abd8c3bad3e3cff923f3bc7a1bf597a254c3d4d336c7013deddee4a1a63b'),
+ 'reproduce/C-FIELD-J-INTERNAL-CONTROL-REVIEW-N/verify.py': (30678,
+                                                             '9645e3d2bd021df1a5a6d29af096b1a316c3150ab0f56a30b31c06813a963676'),
+ 'reproduce/C-FIELD-J-INTERNAL-CONTROL-REVIEW-N/EXPECTED.txt': (392,
+                                                                '77edd7406a395dadf6e170de5802beb14c0a7ca7f7b8ef99897c3d428e7da816'),
+ 'reproduce/C-FIELD-J-LOCAL-INSTRUMENT-N/verify.py': (38296,
+                                                      '76f92f9b8fe0501f58d25bb16f3d066e3a0e5a39e01e80a1939657c88bd6bbcc'),
+ 'reproduce/C-FIELD-J-LOCAL-INSTRUMENT-N/EXPECTED.txt': (590,
+                                                         '5ba56f3fa9036a0d5cc1fe13dba06250362850c3fbe38c6779c78fe106b694b1'),
+ 'reproduce/C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N/verify.py': (28097,
+                                                             'da26e40b9bbfd2534d0bc3e530d88fa505d9143d0d0c9542bb0e4493aeea69fd'),
+ 'reproduce/C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N/EXPECTED.txt': (816,
+                                                                '49bc7306bedebd523a7cfa7f886e4ab854c631cb7e7a31045f7bd4f4339b13b7'),
+ 'reproduce/C-FIELD-J-PREPARATION-MECHANISM-N/verify.py': (26455,
+                                                           '9036378f0d5babae9d3c33f754bab5b28a03f449b309e32cda859df7fbe549fd'),
+ 'reproduce/C-FIELD-J-PREPARATION-MECHANISM-N/EXPECTED.txt': (526,
+                                                              '02a11e0babc33f06cdb1d5d13d2c8df54e1bbd5c1514cc78f1881ba47ef301d3'),
+ 'reproduce/C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N/verify.py': (21335,
+                                                                  '660ec02ce86b0b84346c7aded071b8c37e3a650f56ec6f9021128f07cc485702'),
+ 'reproduce/C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N/EXPECTED.txt': (455,
+                                                                     'c08168efaf82b2ffa50d8717f6963acc431935871d593a26323eb88b810671a0')}
+V97_OCCURRENCE_BLOBS = {'notes/C-OCCURRENCE-CYCLE-COUNT-N/PREREG.md': (10519,
+                                                '524fca08604268cbada9210c0ae8e399532db8a9d48d1aa443f4b24cb548c15b'),
+ 'notes/C-OCCURRENCE-CYCLE-COUNT-N/SOURCES.json': (1878,
+                                                   '30aa7f1f8b27fc0cee45e27df394df31749ef6d39d07730857eb9ea84cbf2c1c'),
+ 'notes/C-OCCURRENCE-CYCLE-COUNT-N/verify_contract.py': (3833,
+                                                         '3dea68eed9204d768a2f9f2506e205a902e3f005e0db1bd9b4a2e744d052d296'),
+ 'notes/C-OCCURRENCE-CYCLE-COUNT-N/EXPECTED.txt': (342,
+                                                   '4d11c1b7e7147597daac9c669ef8fc937849a03040c8ac16571c6382af552c26')}
+V97_PROOF_CONTRACT = {'begin': '### Selected packet instrument, finite preparation, and fetched control\n',
+ 'end': '## 3. The kernel and the census\n',
+ 'bytes': 24267,
+ 'sha256': '96e344312a02f696551436f026895d3bfd5d879ffecbfecfd0e9e7d0052cb436'}
+
+
+def v97_previous_bytes(path):
+    """Validate full current inputs, then recover the exact public v96 bytes."""
+    patch = V97_INPUT_PATCH.get(path.name)
+    if patch is None:
+        return None
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v97_previous_reproduction_count():
+    """Recover the prior inventory only after checking the exact current set."""
+    current = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    expected = set(V97_PRIOR_REPRODUCTIONS) | set(V97_NEW_REPRODUCTIONS)
+    return len(current - set(V97_NEW_REPRODUCTIONS)) if current == expected else -1
+
+
+def v97_current_checks():
+    names = tuple(name for name in V97_INPUT_PATCH if name.endswith(".tsv"))
+    prior = {name: v87_table_bytes(v97_previous_bytes(ROOT / "canon" / name))
+             for name in names}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in names}
+    old_index = {row["claim_id"]: row for row in prior["REGISTRY.tsv"]}
+    index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    text = CANON.read_text(encoding="utf-8")
+    contract = V97_PROOF_CONTRACT
+    first = text.find(contract["begin"])
+    last = text.find(contract["end"], first) if first >= 0 else -1
+    proof = text[first:last].encode("utf-8") if 0 <= first < last else b""
+    proof_exact = (text.count(contract["begin"]) == 1
+        and len(proof) == contract["bytes"]
+        and hashlib.sha256(proof).hexdigest() == contract["sha256"])
+    normalized = " ".join(proof.decode("utf-8").split())
+    counts = {status: sum(row["status"] == status for row in index.values())
+              for status in {row["status"] for row in index.values()}}
+    exact_additions = all(current[name] == prior[name] + rows
+                          for name, rows in V97_ADDITIONS.items())
+    exact_theorems = all(
+        index.get(claim, {}).get("status") == "T"
+        and normative.get(claim, {}).get("item_type") == "THEOREM"
+        and normative.get(claim, {}).get("layer") == "L1"
+        and normative.get(claim, {}).get("gate_ids") == ""
+        and evidence.get(claim, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(claim, {}).get("location") == "inline"
+        and evidence.get(claim, {}).get("architecture_requirement") == "none"
+        and evidence.get(claim, {}).get("hash_mode") == "registry-scope-sha256-v1"
+        and evidence.get(claim, {}).get("sha256")
+            == hashlib.sha256(index.get(claim, {}).get("scope", "").encode("utf-8")).hexdigest()
+        and ("#### " + claim + " [T]") in text
+        for claim in V97_IDS)
+    exact_definition = (V97_DEFINITION not in index
+        and normative.get(V97_DEFINITION, {}).get("item_type") == "DEFINITION"
+        and normative.get(V97_DEFINITION, {}).get("status") == ""
+        and normative.get(V97_DEFINITION, {}).get("layer") == "L1"
+        and normative.get(V97_DEFINITION, {}).get("gate_ids") == "")
+    old_live = {claim: row for claim, row in old_index.items() if row["status"] in {"H", "O"}}
+    live = {claim: row for claim, row in index.items() if row["status"] in {"H", "O"}}
+    current_dirs = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    replay_exact = all((ROOT / path).is_file()
+        and len((ROOT / path).read_bytes()) == size
+        and hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == digest
+        for path, (size, digest) in V97_REPLAY_BLOBS.items())
+    occurrence_exact = all((ROOT / path).is_file()
+        and len((ROOT / path).read_bytes()) == size
+        and hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == digest
+        for path, (size, digest) in V97_OCCURRENCE_BLOBS.items())
+    return [
+        ("V97-PRIOR-BYTES",
+         "thirteen complete v97 inputs reconstruct exact public v96 before all 132 unchanged historical guards",
+         len(V97_INPUT_PATCH) == 13 and set(V97_INPUT_PATCH) == set(V96_INPUT_PATCH)
+         and V97_PRIOR_COMMIT == "44423153eee6259c7277eec5f5adbed9679f9146"
+         and all(v97_previous_bytes(ROOT / "canon" / name) is not None for name in V97_INPUT_PATCH)),
+        ("V97-FIVE-PROOFS",
+         "five conditional L1 theorem rows bind exact scopes, complete inline proofs, one selected definition and exact premise/declaration additions",
+         len(V97_IDS) == 5 and set(index) == set(old_index) | set(V97_IDS)
+         and exact_additions and exact_theorems and exact_definition and proof_exact
+         and counts == {"T": 350, "D": 59, "C": 39, "H": 2, "O": 23, "F": 19}
+         and len(index) == 492 and len(old_index) == 487),
+        ("V97-OCCURRENCE-BOUNDARY",
+         "all 487 prior rows and 25 H/O owners remain exact; supplied complex instruments and zero control error derive no actual occurrence law or native-U realization",
+         all(index.get(claim) == row for claim, row in old_index.items())
+         and old_live == live and len(live) == 25
+         and all(current[name] == prior[name] for name in (
+             "GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv"))
+         and FRONTIER.read_bytes() == v97_previous_bytes(FRONTIER)
+         and all(row["owner_item_id"] not in V97_IDS for row in current["GATES.tsv"])
+         and all(row["claim_id"] not in V97_IDS for row in current["CORE_SELECTION.tsv"])
+         and all(row["claim_id"] not in V97_IDS for row in current["FRONTIER_PROGRAMS.tsv"])
+         and "C-OCCURRENCE-CYCLE-COUNT-N" not in index and occurrence_exact
+         and proof_exact and all(token in normalized for token in (
+             "not a derivation from native U or J", "epsilon_control=0",
+             "epsilon_occurrence is undefined", "stops for applicability",
+             "neither proves nor falsifies a count-based occurrence law"))),
+        ("V97-REPLAY-INVENTORY",
+         "eight exact author/reviewer replay sources extend the 24-directory historical inventory to 32; custody adds no scientific premise",
+         v97_previous_reproduction_count() == 24 and len(current_dirs) == 32
+         and len(V97_NEW_REPRODUCTIONS) == 8 and len(V97_REPLAY_BLOBS) == 16
+         and replay_exact),
+    ]
+
 # Exact v96 release-accounting contract and reversible public v95 reconstruction.
 V96_PRIOR_COMMIT = 'b8ba1a07ad776cdd8d878fe0a407e07312c0e263'
 V96_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'eb6f36b79628d916d24a89480f854db725deb73227dd84f13e8ecf76e7bdeb01',
@@ -399,7 +1006,9 @@ def v96_previous_bytes(path):
     patch = V96_INPUT_PATCH.get(path.name)
     if patch is None:
         return None
-    current = path.read_bytes()
+    current = v97_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -420,13 +1029,13 @@ def v96_current_checks():
     names = tuple(name for name in V96_INPUT_PATCH if name.endswith(".tsv"))
     previous = {name: v87_table_bytes(v96_previous_bytes(ROOT / "canon" / name))
                 for name in names}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v97_previous_bytes(ROOT / "canon" / name))
                for name in names}
     prior_index = {row["claim_id"]: row for row in previous["REGISTRY.tsv"]}
     index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
     normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
     evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
-    canon_text = CANON.read_text(encoding="utf-8")
+    canon_text = (v97_previous_bytes(CANON) or b"").decode("utf-8")
     contract = V96_PROOF_CONTRACT
     first = canon_text.find(contract["begin"])
     last = canon_text.find(contract["end"], first) if first >= 0 else -1
@@ -483,7 +1092,7 @@ def v96_current_checks():
         and live == prior_live and len(live) == 25
         and all(current[name] == previous[name] for name in (
             "GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv"))
-        and (ROOT / "canon" / "FRONTIER.md").read_bytes()
+        and v97_previous_bytes(ROOT / "canon" / "FRONTIER.md")
             == v96_previous_bytes(ROOT / "canon" / "FRONTIER.md")
         and all(row["owner_item_id"] not in V96_IDS for row in current["GATES.tsv"])
         and all(row["claim_id"] not in V96_IDS for row in current["CORE_SELECTION.tsv"])
@@ -8412,7 +9021,7 @@ def run():
         and len(programs) == 28
         and len({row["program_id"] for row in programs.values()}) == 8
         and len(core_selection_rows) == 30
-        and sum(path.is_dir() for path in REPRODUCE.iterdir()) == 24,
+        and v97_previous_reproduction_count() == 24,
     ))
 
     checks.append((
@@ -15428,9 +16037,10 @@ def run():
     checks.extend(v94_current_checks())
     checks.extend(v95_current_checks())
     checks.extend(v96_current_checks())
+    checks.extend(v97_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v96")
+    print("historical guards: exact reconstructed v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v97")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v96. Normative authority and activation
+**Release identity:** Public Canon v97. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v96 also declares a discrete architecture. It does not
+Public Canon v97 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -177,6 +177,20 @@ complete apparatus, and finite-energy recurrence forces eventual return to
 the initial state. Derivation from native U or J, physical energy selection
 and physical realization remain
 open; this mathematical construction supplies no experiment.
+
+A separately selected packet law now has complete conservative transport and
+funded finite records. Its chosen complex extension gives an entire coherent
+LOW/HIGH instrument with source/reference continuation and finite archive
+semantics. Fresh pure bath bits and exact phase-sensitive collisions prepare
+the even pointer bank to any positive tolerance, with one joint error bound
+against the actual remaining output state. A fetched-program port controller
+executes that finite preparation and a supplied nonadaptive context word with
+exact complete-operator equality, including dirty correlated buses. These
+five L1 theorems retain the supplied source coding, catalogue, graph, phases,
+pure baths and abstract tick. They do not select one actual result, derive
+an occurrence measure, implement native U, or close a physical apparatus
+owner. In particular a supported WRITE, occupied archive and actual
+LOW/HIGH event are distinct; the last remains unprovided by this construction.
 
 Three decisions have exact dispositions. The complete measurable
 product-source Route A is empty, so ENTROPY-LAYER-BRIDGE closes at F with

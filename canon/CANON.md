@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v96
+# TWIST-J Public Canon v97
 
-**Release identity.** Public Canon v96. Normative authority and activation
+**Release identity.** Public Canon v97. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v96 also declares the discrete architecture used to read
+only. Public Canon v97 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -23,7 +23,7 @@ calibration anchor remains the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v96 does not claim
+seed of the two algebraic projections. Public Canon v97 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -128,7 +128,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v96 contains no such
+deriving the architecture from J; Public Canon v97 contains no such
 theorem.
 
 ---
@@ -8114,6 +8114,412 @@ derived from native J; Hhat_N=H_N+1 is not a measured preparation cost.
 No physical loss bound, SI energy calibration, complete apparatus family,
 native-U compatibility, sampling/Born law, occurrence law, or terminal
 physical event is proved. No QDD or MINIMAL-READ parent is closed.
+
+### Selected packet instrument, finite preparation, and fetched control
+
+#### DEF-FIELD-PACKET-INSTRUMENT
+
+This is a separately selected L1 construction. Its classical packet law,
+complex extension, coherent controls, pure bath supply and initialization
+are definitions, not a derivation from native U or J. The preceding field
+chain remains a different law: its charge/Gauss invariants, coordinate
+count, energy 41/42 and C5 retention do not transfer to this carrier.
+The five theorems below concern the complete definitions and proofs here.
+An amplitude vector, one integer configuration and a measure on integer
+configurations are not identified with each other.
+
+Fix N>=2, t=N-1, T=2N-1, M=1226=2L with L=613. There are N cell slots C_i
+and N-1 channel slots Q_j. Each contains a packet (b,y,r), with b in {0,1},
+y in Z^4 and r a nonnegative integer. Inactive packets retain their y,r.
+Only C_t also has latch l in {0,1} and pointer p in Z/MZ. Complete equality
+includes all ordered slot contents, l and p; there are 12N-4 stored integer
+coordinates with the stated restrictions. Define
+
+```text
+H(y)=2y0^2-2y0*y1+3y1^2+y2^2+y3^2+2y0*y2-y0*y3-y1*y2+3y1*y3,
+E_B=sum_slots(b+H(y)+r)+2l+1,
+C a=(a1,a2-a3,a0-a1-a3,a1-2a2+a3),
+C^-1 y=(2y0-2y1+y2-y3,y0,y0-y1-y3,y0-2y1-y3),
+c(y)=1+(((a0+3)*5+(a1+2))*5+(a2+2))*7+(a3+3), a=C^-1 y.
+```
+
+A packet is supported iff b=1 and H(y)<=5. Present zero is supported and
+differs from the empty packet (0,0,0). The code is used only on supported
+packets. At the receiver define G on every input: unsupported inputs are
+fixed; on supported inputs its action on (r,l,p) is
+
+```text
+l=0,r>=2: (r-2,1,p+c(y) mod M);       l=0,r<2: unchanged;
+l=1:      (r+2,0,p).
+```
+
+An accepted WRITE means the actual first branch; RELEASE means the last.
+A_j swaps the entire packets of C_j,Q_j; B_j swaps Q_j,C_(j+1). The full
+step is F_B=B A G, with all A_j and all B_j in their disjoint matchings.
+A fixed cut j omits both its contacts forever and retains the old Q_j.
+The local record reader returns BLANK for p=0, and otherwise decodes p-1
+in radices 7,5,5,7, subtracts (3,2,2,3), and returns VALUE(y) iff H(Ca)<=5;
+otherwise INVALID. It has no clock, source label or provenance input.
+
+#### FIELD-PACKET-CONSERVATIVE-TRANSPORT [T]
+
+On this entire carrier F_B and every fixed-cut law are bijections preserving
+E_B, the multiset of (b,y), and sum_slots r+2l. Their forward and inverse
+depth is three and dependence radius is at most two edges of the path
+C0--Q0--C1--...--Ct. Finite-energy shells are finite permutations. The code
+and reader are injective inverses on all supported contents, including zero.
+These are selected dimensionless accounts and mathematical block locality.
+
+**Proof.** Direct expansion gives
+`2H(Ca)=a2^2+(a2-a0)^2+(a0-a3)^2+(a3-a1)^2+a1^2`.
+These are squared differences on a five-cycle with one vertex fixed at zero;
+vanishing forces a=0, proving positive definiteness. For a vertex at cycle
+distance d=1 or 2 from zero, its value v is a sum along each of the two
+paths. Cauchy-Schwarz gives `2H>=v^2(1/d+1/(5-d))`. At H<=5 this yields
+|a1|,|a2|<=2 and |a0|,|a3|<=3. Mixed-radix coding therefore gives distinct
+integers 1 through 1225 on its containing box, with the displayed inverse.
+No shell cardinality is needed in this argument.
+
+G's inverse on supported output (r,l,p) is: for l=1, return (r+2,0,p-c);
+for l=0,r>=2, return (r-2,1,p); and for l=0,r<2, retain the input.
+Unsupported outputs are fixed. These disjoint output cases cover the carrier,
+so both inverse compositions hold. Each accepted branch preserves r+2l and
+b,y; no negative reserve is created. Whole-packet swaps preserve all old
+contents and the sums. Reversing the contacts then applying G^-1 gives
+F_B^-1; omitting a fixed pair of contacts preserves this proof. G is local
+to the receiver and each matching has radius one. Positive definiteness
+bounds y at fixed energy, while nonnegative reserves and finite b,l,p bound
+the remaining coordinates. Thus every shell is finite and the conserving
+bijection is a permutation, with a common multiple of its cycle lengths
+on that fixed shell. No mixing or selected invariant measure follows.
+
+#### FIELD-PACKET-FUNDED-RECORD [T]
+
+Prepare one supported (1,y,2) at C0, all other packets empty, and l=p=0.
+The literal packet first reaches Ct at boundary N-1 and first writes in
+step N. With c=c(y), its writes are W_m=N+2mT and releases R_m=N+(2m+1)T.
+The first record is readable as exactly y at boundaries N through N+2T-1.
+At boundary 2T the entire packet/latch configuration is ready again with
+p=c. The least complete return is `2T M/gcd(M,c)`. Absence, an inactive
+source, reserve 0 or 1, unsupported source, or any fixed cut of this clean
+trial yields no WRITE. None of these statements asserts provenance or
+latest-event truth for dirty inputs, permanent memory or independent trials.
+
+**Proof.** The contacts send the packet round the cycle
+`C0,...,Ct,Q_(N-2),...,Q0` of length T. G precedes contacts, so its first
+receiver opportunity is step N. Subsequent visits are T steps apart and
+alternate funded WRITE with RELEASE. Induction gives packet position,
+reserve and latch at every boundary and
+`p(n)=w(n)c mod M`, where w(n)=0 for n<N and otherwise
+`w(n)=1+floor((n-N)/(2T))`. This gives the stated first retention interval.
+The unique presence mark forces any full return time to be a multiple
+of T, and latch/reserve restoration forces an even multiple. At 2kT the
+only remaining change is p=kc, proving the least return. In each negative
+case the required supported funded branch is never reached; with a cut,
+the prepared downstream component is fixed by each surviving primitive.
+For arbitrary initial p0 the same clean calculation instead gives p0+w(n)c;
+in particular p0=-c hides the first write. G is not an involution: forward
+RELEASE retains p whereas the inverse WRITE subtracts c.
+
+#### FIELD-CONDITIONAL-POINTER-INSTRUMENT [T]
+
+Extend the complete classical basis permutation to ell^2 of its countable
+carrier by `|s> -> |F_B(s)>`. Add K archive cells (pointer p_i,flag z_i),
+each in C^M tensor C^2 with constant energy 2, and an arbitrary finite
+reference. Define normalized coherent pointer vectors
+`E=L^(-1/2)sum_j|2j>`, `O=L^(-1/2)sum_j|2j+1>` and translations S_c.
+The four orthogonal source packet labels f0,f1,f2,f3 have coefficient tuples
+`(-1,-1,-1,-1),(1,0,0,0),(0,1,0,0),(0,0,1,0)` in the C chart. Direct
+substitution gives H=1 and codes 395,788,648,620. Put P_L=|f0><f0| and
+P_H=I-P_L on their span S4. The reader names odd parity LOW, even HIGH.
+
+Supply a unitary U on S4 in the b=1 packet sector, extended identically at
+every reserve r and by identity on b=0 and all other packet labels.
+Supply clean packet/latch geometry with
+reserve 2 and independent E on the active and K fresh archive pointers,
+with flags zero. A round is U on the source, 2T actual B steps, U^*, then
+append into a fresh selected cell. Append is the all-state involution
+`(p,p_i,z_i)->(p_i,p,1-z_i)`. The complete round is the isometry
+`v -> (U^*P_LU)v |LOW_i>+(U^*P_HU)v |HIGH_i>` with restored operative
+geometry and active E; archive states are respectively (O,1),(E,1), and
+unused cells remain (E,0). All source/reference coherences, including
+within HIGH, obey this full post-state identity. The source is not replaced.
+
+For each supplied bounded nonadaptive sequence of at most K rounds, ordered
+products K_w of these branch projectors give the full retained joint terms
+`K_w rho K_v^* tensor |record(w)><record(v)|`, with identity on references
+and with every unused cell included. Declared parity dephasing retains the
+diagonal history terms. Their trace weights normalize and are prefix
+consistent. They are formal weights, not a realized-outcome law.
+
+**Proof.** A countable basis bijection extends isometrically to a unitary,
+whose inverse is the extended inverse; its conserving permutation strongly
+commutes with the diagonal energy. The clean B theorem gives the controlled
+shift `|y;0>|p> -> |y;n>S_(w(n)c(y))|p>`. Applying it to ket and bra
+separately gives the complete joint map, including arbitrary correlations.
+For an independent pointer density sigma, the reduced branch coefficient is
+`gamma_o(a,b)=Tr[Pi_o S_c(a) sigma S_c(b)^*]`. Equality of every such
+coefficient is necessary by testing matrix units, and sufficient by linearity.
+It is not equality of all retained apparatus maps for arbitrary sigma.
+
+Translations send E to E or O according to code parity. At 2T there is
+exactly one translation and the operative geometry has returned. Consequently
+all ket/bra pairs in a parity bin share the identical pointer vector, giving
+P_o rho P_o without destroying intra-bin coherence. Conjugation by U gives
+the claimed restored projector, not the terminal state of a bare active U.
+Append exchanges actual quantum registers and their correlations, is its
+own inverse and preserves the chosen constant energies. Induction yields
+all history terms. At each round `sum_o (U^*P_oU)^*(U^*P_oU)=I`, proving
+normalization and prefix consistency, including zero unnormalized branches.
+Density operators span the operator space by polarization, and finite-rank
+approximation extends the identities to trace class on the countable carrier.
+
+This instrument also supplies an explicit algebraic QDD comparison. On the
+G-metric source, `G=I-11^*/5`, use the G-orthonormal frame
+`u0=sqrt(5)(1,1,1,1)/2`, `q1=(1,-1,0,0)/sqrt(2)`,
+`q2=(1,1,-2,0)/sqrt(6)`, `q3=(1,1,1,-3)/sqrt(12)`.
+The isometry V sending this frame to f0,f1,f2,f3 intertwines P0=11^*/4
+with P_L. For
+`R=[[0,0,0,-1],[1,0,0,-1],[0,1,0,-1],[0,0,1,-1]]`, direct multiplication
+gives R^5=I and R^* G R=G. Put `Pk=R^k P0 R^-k` and choose
+`U_k=V R^-k V^-1` on S4. Conjugating the
+identity just proved yields the entire encoded Pk/Qk instrument, including
+post-states. The chosen code and controls are supplied; a literal single
+packet |Ca> is not silently a coherent vector Va.
+
+A basis-blank or diagonal-even pointer instead has gamma_o(a,b)=0 for
+distinct codes, since translated ket/bra positions cannot coincide. Thus
+it destroys HIGH off-diagonals on reduction. Conversely, for any even-
+supported pointer, controlled translations send each source parity bin
+to the corresponding pointer parity. For D=I, exact repeated same-context
+operations and fresh even-supported pointers, every nonconstant parity
+history is therefore zero even without perfect E coherence: the source
+bin is preserved after each parity restriction. This narrower support
+claim does not promise correct HIGH post-states or changed-context behavior.
+Dirty archive reuse, unappend, inverse rounds and archive controls are
+outside the fresh/passive-retention promise. A flag can be flipped without
+a WRITE; archive occupancy and an actual selected result remain different.
+
+#### FIELD-COHERENT-POINTER-PREPARATION [T]
+
+For general integer L>=3 define even modes e_j=|2j>, cyclic j modulo L,
+`d_j=(e_j-e_(j+1))/sqrt(2)`, `s_j=(e_j+e_(j+1))/sqrt(2)`,
+`P_j=|d_j><d_j|`, `Q_j=I-P_j`, `J_j=|s_j><d_j|`,
+`nu_j=(d_j|0>-s_j|1>)/sqrt(2)` and `U_j=I-2|nu_j><nu_j|`.
+Each invocation uses a distinct independent pure bath bit zero and retains
+it afterward. U_j is identity on odd pointers. These phase-sensitive
+couplings, exact pulses, flat bath energy one and pure inputs are supplied.
+For m=K+1 even-supported pointers with arbitrary joint correlations and
+remainder Z, apply n_i ordered sweeps of all L edges to pointer i, using
+`B=L sum_i n_i` bits. Put P_E=|E><E| and F_(i,0)=Tr(P_E rho_i).
+With all spent baths in Z', the exact output obeys
+
+```text
+r_L=1-4/L^3,
+delta=min(1,sum_i r_L^(n_i)(1-F_(i,0))),
+epsilon=min(1,sqrt(delta)+delta/2),
+D(Omega_out,P_E^(tensor m) tensor Omega_(Z',out)) <= epsilon,
+D(A,B)=||A-B||_1/2.
+```
+
+Every positive error target admits finite sweep counts. One common complete
+finite continuation, acting as the identity on every retained preparation
+bath, has the same joint and formal-history TV error bound,
+charged once for the bank. No exact E readiness, actual selection, discarded
+environment, refreshed source or origin of bath purity is asserted.
+
+**Proof.** The normalized nu_j makes U_j a total self-adjoint involution.
+With input bath zero its isometry is `v -> Q_j v|0>+J_j v|1>`; therefore
+its pointer reduction is `Phi_j(rho)=Q_j rho Q_j+J_j rho J_j^*`.
+Composition retains the full sum over bath ket/bra words, including cross
+terms, and reversing the actual reflections restores the whole input.
+The total bare ledger adds B constant units and is conserved.
+
+On the even sector let P=P_E. Direct substitution gives
+`Phi_j^*(P)-P=(2/L)P_j`. Set B_0=I, B_(j+1)=Q_j B_j and A=B_L.
+The positive no-jump contribution to each partial sweep and telescoping
+loss give `Phi^*(P)-P >= (2/L)(I-A^*A)`. To bound the loss, put
+`a_j=<d_j,B_j v>`, `b_j=<d_j,v>`. Recursion gives b_0=a_0,
+`b_j=a_j-a_(j-1)/2` for 1<=j<=L-2, and
+`b_(L-1)=a_(L-1)-a_(L-2)/2-a_0/2`. The coefficient matrix has absolute
+row and column sums at most two, hence `sum|b_j|^2<=4sum|a_j|^2` by
+weighted Cauchy-Schwarz. Also `sum|a_j|^2=||v||^2-||Av||^2`.
+Thus `sum P_j<=4(I-A^*A)`. Fourier vectors on the L-cycle diagonalize
+sum P_j with eigenvalues `1-cos(2pi k/L)`. Its nonzero gap is
+`2sin^2(pi/L)>=8/L^2`, using concavity `sin x>=2x/pi` on [0,pi/2].
+It follows that `Phi^*(P)-P >= (4/L^3)(I-P)` and
+`1-F_n<=r_L^n(1-F_0)`. This also makes P the unique stationary density
+within the even sector; it asserts no such result for odd or dirty-bath inputs.
+
+Other-pointer operations leave each marginal unchanged. The commuting
+projector inequality `I-product P_i<=sum(I-P_i)` therefore bounds total
+bank infidelity t by delta. Let R=product P_i and retain all baths.
+Rank one on the bank gives `R Omega_out R=P^(tensor m) tensor tau`.
+The actual remainder marginal is `eta=tau+xi`, with xi positive of trace t;
+orthogonal bank cross terms vanish under this partial trace. Purify Omega.
+Writing its purified vector as orthogonal projected and rejected parts of
+squared norms 1-t and t gives trace norm `sqrt(t(4-3t))<=2sqrt(t)` between
+the original pure density and its unnormalized projection. Partial trace
+and triangle inequality then give `D(Omega,P^(tensor m) tensor eta)
+<=sqrt(t)+t/2`. The actual eta is not replaced with a fresh environment.
+Taking sufficiently large finite n_i makes delta arbitrarily small.
+
+Trace-distance contraction under the same CPTP all-branch continuation
+proves the once-only bound and its formal TV/prefix consequences. For
+positive branch weights p,q, the unnormalized operator difference and
+|p-q| bound imply the sufficient normalized distance
+`min(1,2epsilon/min(p,q))`; if ideal q=0 the actual formal weight is at
+most epsilon, and no normalized ideal branch is defined. None of these
+comparisons produces a realized outcome. Concentration of a pointer
+marginal with supplied pure baths is compatible with reversible transport
+of the complete state: information remains in the retained remainder.
+
+#### FIELD-FETCHED-PROGRAM-CONTROL [T]
+
+Fix a finite unitary catalogue U_0,...,U_(c-1), c>=1, on S4, extended as above,
+h<=K nonadaptive contexts, D=I, sweep counts n_i and W>=1. The following
+one-head port construction internally executes the specified loader and
+rounds with exact complete joint operator equality to their external
+primitive composition. Its initialized control error is zero for arbitrary
+data and correlated dirty buses. It includes finite addressing, context/
+invocation metadata, the read window and a reversible unmeasured return.
+The whole law is unitary on its separable complete carrier; initialization
+is required for the positive program interpretation, not for invertibility.
+
+**Complete definition.** Packet addresses are ordered
+`C0,...,Ct,Q_(N-2),...,Q0`; pointer 0 is active and 1..K are archive.
+Use w(d)=max(1,ceil(log2 d)). A stored instruction is a bit word
+`(opcode:4,inverse:1,i:w(K+1),j:w(L),x:w(T),y:w(T),k:w(c))`.
+Opcodes 0..8 respectively denote NOP,COLLIDE,CTX_PLUS,CTX_MINUS,RECEIVER,
+PACKET_SWAP,OPEN,CLOSE,APPEND. Required arguments outside i<=K,j<L for
+COLLIDE, x,y<T with x!=y for PACKET_SWAP, or k<c for OPEN/CLOSE decode
+to identity, as do opcodes 9..15; their bits remain stored. Unused fields
+are ignored. There are S immutable instruction words and a finite immutable
+descriptor recording capacities, catalogue identity and compiled word;
+consistency is an initialization promise, not a runtime purity test.
+
+The head stores pc in Z_S, fetch word q of instruction width, cursors
+a,e in Z_(K+1), b in Z_(B+1), failure counters f_A,f_B in Z_(S+1),
+invocation word I of width w(K+1), context word C of width w(c), and run bit.
+Its eight bus roles are two packet buses X,Y, two pointers P0,P1, latch l0,
+flag z0, bath beta and metadata word mu0. There are K stationary metadata
+words mu_a=(invocation,context,appended bit), B stationary baths and every
+original data register. All packet factors are countable; the remaining
+factors are finite at the selected capacities. Exactly one head is part
+of the carrier definition, with position on a cycle of d stations.
+
+The station order is: fetch words 0..S-1; PRE; GET ports for both packet
+lanes over all T addresses, both pointer lanes over all K+1 addresses,
+latch, K flags, K metadata, B baths; EXEC; the same GET ports in reverse
+order as PUT; POST; unfetch words S-1..0; advance pc modulo S.
+There are `g=4N+4K+B+1` GET ports and `d=2S+2g+4` stations. A fetch or
+unfetch port t XORs its retained word into q iff pc=t. Every GET/PUT port
+is a controlled SWAP selected by q,a,b, with these operand choices:
+
+| Command | Selected memory operands | Forward EXEC V |
+|---|---|---|
+| NOP | none | identity |
+| COLLIDE(i,j) | P0:pointer i; beta:bath b if b<B | U_j on P0,beta if b<B, else identity |
+| CTX_PLUS / CTX_MINUS | X:source C0 | U_C / U_C^* if C<c, else identity |
+| RECEIVER | X:Ct, l0:latch, P0:pointer 0 | complete G |
+| PACKET_SWAP(x,y) | X:packet x, Y:packet y | SWAP X,Y |
+| OPEN(k) / CLOSE(k) | none | I XOR=binary(e), C XOR=binary(k), run XOR=1 |
+| APPEND | P0:pointer 0; if a<K, P1:pointer a+1, z0:flag a, mu0:metadata a | if a<K, SWAP P0,P1; flip z0; mu0 XOR=(I,C,1); else identity |
+
+Define head bijection A for COLLIDE by incrementing f_B by [b=B] modulo
+S+1 then b modulo B+1; for APPEND similarly increment f_A by [a=K] then
+a modulo K+1; for CLOSE increment e modulo K+1; otherwise identity.
+PRE applies A^-1 only for inverse words, recovering old cursors before
+GET; POST applies A only for forward words. EXEC uses V or V^*. Every
+instruction remains stored. Invalid words give identity at PRE/EXEC/POST.
+For position s with the station gate J_s the fixed one-tick law is
+`F=sum_s |s+1><s| tensor J_s`, with inverse
+`F^-1=sum_s |s><s+1| tensor J_s^*`.
+
+**Proof of total law and interpretation.** Each conditional XOR/SWAP is an
+orthogonal block sum of involutions controlled on unchanged fields. Every
+EXEC is unitary. The cursor inverse first decrements then subtracts the
+indicator of the recovered cursor, including zero capacity. Thus every
+station is unitary; orthogonality of head positions proves F^*F=FF^*=I.
+The graph connects each station to its actual memory vertex, not a copied
+memory. Memory degree is at most four, station degree at most three; a
+local gate plus head movement has conservative radius two in either
+direction. The graph and word sizes depend on capacity, so this is no
+uniform finite-alphabet QCA or spatial embedding into the packet chain.
+
+Initialize classical consistent tape, head position, pc,q,a,b,e,f_A,f_B,
+I,C,run to zero; metadata is zero for the provenance statement. The buses
+may be arbitrary and correlated with data/reference. Each tour fetches
+exactly its pc word and unfetches the same word before pc advances. Let R
+be the actual product of GET swaps. Selectors do not change during routing
+or EXEC; OPEN/CLOSE change head-only fields and select no external operands.
+Hence PUT=R^-1. For distinct valid operands,
+`R^-1 V_bus R=V_memory tensor I_buses` on complete operators. In particular
+it holds on off-diagonal matrix units and arbitrary entangled buses, not
+only on blank buses. Forward and inverse commands are respectively
+`M+=A R^-1 V R` and `M-=R^-1 V^* R A^-1=(M+)^-1`, where inverse routing
+uses the recovered old controls. Exhausted commands cancel any extracted
+pointer swap and have identity data action plus the defined reversible
+counter update. Induction over words proves complete operator equality;
+linearity and trace-class continuity extend it beyond basis inputs and
+include arbitrary finite references. This is epsilon_control=0.
+
+The compiler emits B=L sum_i n_i collisions in pointer/sweep/edge order,
+then h rounds `OPEN(k),CTX_PLUS,2T copies of [RECEIVER,A swaps,B swaps],
+CTX_MINUS,APPEND,CLOSE(k)`. Each B step costs T commands, so one round
+costs `2T^2+5`, useful length `H=B+h(2T^2+5)`. Append W NOPs then reverse
+the H words and toggle their inverse bits: S=2H+W. Induction gives each
+bath cursor exactly its fresh rank, and archive cursor/epoch t at round t.
+OPEN stores t,k; APPEND deposits `(t,k,1)` in the zero metadata cell and
+advances a; CLOSE clears active fields and advances e. No control depends
+on source, bath or parity values. Full capacity h=K is successful completion;
+an additional request is a separate reversible failed-capacity operation.
+
+Preparation ends at Bd and supported reading lasts for ticks
+`Hd <= n < (H+W)d`.
+Every spent bath is untouched at every microtick of the C/read interval;
+each earlier archive cell is untouched in subsequent forward rounds.
+Partial station products provide explicit intermediate identifications,
+when data can reside on buses. At Sd the inverse tail restores the whole
+unmeasured state and initialized controller, not an externally measured
+state whose other apparatus was discarded. There is no absorbing halt,
+source renewal or new independent trial derived from this return.
+
+The bare energy includes the B/C data ledger and equal-spectrum packet/latch
+buses. Every other added finite register has constant energy one: each bath,
+metadata word, program word, descriptor, head-position factor, each of the
+ten head control fields and each of the five flat finite bus factors
+(P0,P1,z0,beta,mu0). The latch bus instead has energy 2l0; each packet bus
+has the packet spectrum b+H(y)+r. Beyond the C ledger its constant is
+`B+K+S+17`, plus the two packet bus energies and latch energy 2l0.
+Swaps exchange equal spectra, G transfers two reserve units into latch
+energy, contexts remain in H=1 and other gates affect flat factors. Thus
+all stations preserve the complete ledger. It is not physical drive work.
+
+Finally apply the preparation theorem with all buses, controls and baths
+retained in its actual remainder. The same complete continued map acts on
+the actual and comparison states and is identity on spent baths throughout
+the interval, so its once-only epsilon_prep bound persists. The repeated-
+context support clause above also persists; changed contexts still require
+the full instrument. Program, catalogue, graph, source readiness, pure
+baths, phases, exact gates and abstract ticks remain supplied. Neither
+native U/J realization nor an actual LOW/HIGH selector is proved.
+The error epsilon_occurrence is undefined until an independent actual
+history law and common record interface are supplied. A potential triangle
+bound `TV(P_actual,P_C)<=min(1,epsilon_occurrence+epsilon_prep)` is therefore
+conditional, not an already achieved total prediction. All physical and
+terminal-event apparatus owners retain their existing obligations.
+
+The hypothesis that occurrence is an event count must separately specify
+its complete actual carrier, admitted phase-sensitive preparations, total
+update and chronological completed-history map. The complex construction
+above supplies no such actual branch selector. A cyclic formal program or
+finite Hilbert dimension alone supplies no census of realized histories.
+Without that interface a proposed cycle count stops for applicability;
+it neither proves nor falsifies a count-based occurrence law. The unchanged
+native U additionally retains its growing counter, so its complete states
+have no positive-time cycles. Neither observation closes
+QDD-INSTRUMENT-APPARATUS or QDD-TERMINAL-EVENT-SEMANTICS.
 
 ## 3. The kernel and the census
 
