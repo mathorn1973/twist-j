@@ -1,7 +1,7 @@
 # Reproduction of the existing B/C author and review programs
 
-NON-CANONICAL. Prepared 2 October 2026. **New two-architecture execution is
-pending publication approval; no new successful run is claimed here.**
+NON-CANONICAL. Completed 2 October 2026. **All four unchanged scientific
+programs passed on x86_64 and aarch64 against their original exact outputs.**
 
 The original #1328 and #1330 RUN records each report x86_64 scientific
 execution. Their ordinary notes-only CI jobs were green on two platforms
@@ -23,10 +23,25 @@ and byte comparisons have passed; scientific code was not executed during
 materialization. Author and independent stdout are distinct and are each
 compared against their own EXPECTED.
 
-After publication, the existing PR workflow must produce actual
-REPRODUCE PASS lines for all four directories on x86_64 and aarch64,
-with exit zero, empty stderr and exact stdout. The evidence receipt will
-name the workflow run, both jobs, tested PR merge SHA, head/base pins,
-source hashes and output hashes. A green aggregate without those lines
-will not be credited as completion. No theorem changes status merely
-because the same audit passes on a second architecture.
+## Actual two-architecture receipt
+
+Public PR [#1337](https://github.com/mathorn1973/twist-j/pull/1337), workflow
+[37019597956](https://github.com/mathorn1973/twist-j/actions/runs/37019597956),
+completed successfully on 2 October 2026. Both job logs contain all four
+`REPRODUCE PASS` lines with exactly the code and stdout hashes above.
+
+- Head: `8ad9a1dca98900feb696bc9dfe4efa8e8c054118`.
+- Base: `62db6065988ed1fbbd15a46fa3c2902339e6e700`.
+- Actual checkout (PR merge): `31b688203fcb0c581d9dc2cd094ce6b220e95048`.
+- [x86_64 job 110878952421](https://github.com/mathorn1973/twist-j/actions/runs/37019597956/job/110878952421).
+- [aarch64 job 110878952501](https://github.com/mathorn1973/twist-j/actions/runs/37019597956/job/110878952501).
+- CPython 3.12.14 on both standard GitHub-hosted Ubuntu architectures.
+- Stock runner: `python tools/check_reproduce.py --base BASE_SHA`.
+- Exit zero, empty stderr and byte-identical stdout are required by that
+  runner for every PASS. Author and independent outputs each matched their
+  own immutable original EXPECTED. The aggregate `check` also succeeded.
+
+The source and expected-output bytes were unchanged for this run. This
+closes the missing architecture audit for the B and C programs. It does not
+transfer a theorem between machines, derive an occurrence law or itself
+promote the scope/status of any claim.
