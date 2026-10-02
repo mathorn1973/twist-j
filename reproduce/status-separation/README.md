@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred thirty-two checks cover the current
+and emits deterministic text. Its one hundred thirty-six checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 132/132 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 136/136 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -686,3 +686,20 @@ mathematical reproductions, a scientific experiment or an evidence-class
 promotion. Other scientific verifiers and expected outputs are unchanged.
 Execution and cross-architecture gate results belong to the subsequently
 pinned content candidate; constructing this transcript is not a run receipt.
+
+
+The v97 conformance extension validates thirteen complete current inputs and
+reconstructs their exact public v96 bytes before all 132 historical guards.
+It pins five new conditional L1 packet-transport, funded-record, complete
+pointer-instrument, coherent-preparation and fetched-control theorems and
+their one selected definition. Exact scopes, complete inline proof bytes,
+premise edges and declaration rows are bound without native-U/J derivation,
+physical realization or an actual occurrence law. All 487 earlier Registry
+rows and all 25 H/O owners stay exact; gates, programs and CORE selection
+are unchanged. The occurrence-as-count proposal stays untested at the
+applicability boundary and is not installed as a tested hypothesis.
+
+Eight unchanged author/reviewer replay sources extend the minimal-reproduction
+inventory from 24 to 32. The witness checks their exact code/output hashes
+and reconstructs the old inventory before its historical count assertion.
+This is release conformance and custody, not new scientific execution.

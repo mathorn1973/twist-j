@@ -1,0 +1,26 @@
+claim_id	old_status	new_status	scope_sha256	disposition
+TRIVIAL-RAPIDITY-EVALUATION-BRIDGE	O	O	66468ab92d1369261a9913c496fd8fbea9fd5251852e6185bae8ed17a626a616	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+QDD-TERMINAL-EVENT-SEMANTICS	O	O	aa11aa00883b70a3ba6d2170e5554f4b757e8368a47f4b8f3fb33c5db1778b2c	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+QDD-INSTRUMENT-CLASS-COMPLETENESS	O	O	99b14df0bda674d2723f4f2d567a74e2e0ece546a73da9a24bd99d3b07786408	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+METRO-ADMISSIBILITY	O	O	48091af4453a15143ebb671f858b2c692b5598c2a11188dc87537071bca45e6d	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+METRO-EDGE-SCALE	O	O	c396080b9c0328728c2bdea1303035f541716a7b33f242468bdf469518f63c59	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+QUANT-SUBSTRATE	O	O	f4635e0c7cccf3015db2992909ec128807144665c26e9a98c4021602cd9fd6df	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+COLOR-MEASURE-SELECTION	O	O	e58355596b07850bd704d11db7f8cb7ffd034bbe0820bbe5938f09efae1fc002	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+QNM-LEAVER-MU	O	O	a3397550758e2dff9f1568c91f6bf57dd391e1364db9e858124d98811255724b	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+DRESS-CROSSCOUNT	O	O	ce671d700f3ee83da0fddec89ba80150b284bcd7adf21797a4b3c8e957b556dd	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+NS-TILT	H	H	1e9ee6e44b0a26c7281d6da06c823208a9f76e94c63c216b59310e253eec5b78	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+DE-CONFORMAL-WEIGHT	O	O	aff6ec2279896216990d29a2de18a352d45776860fababd7e7b59e46a1b06a7b	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+ALPHA-S-RUNNING	O	O	ffaee924dc7668e3a3207bb2070529142c959108f5c072af912d3c036f671e65	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+SCHEME-DICTIONARY	O	O	864f98ed458208b8dd614be372159e9bb5d3d84c539ac70489c0261391bafff1	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+GENERATIONS-L3	O	O	6c4fd902f395d86a996f27c64f55c26e40eff44b344b364d2829be09f87b6ade	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+NEUTRON-DELTA-EM	O	O	d99032dd36f64457dfe7befc2107289ade2bd5e179eebbfabb56daae80d0528a	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+PROTON-RESIDUAL-IS-QCD	O	O	89e26760068016a6fa610cf71c1df4264d7507fdbad96a7e84ec0cf42432be67	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+SQRT-PHI-TIME-GRAVITY	O	O	680a304b1a78eca6f6641ec10d59f26d3717aadcc2997189b797d512a1db08e6	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+LAMBDA-COCYCLE-ANGLES	H	H	2b3831ca1a206ca15053ae14bf85e4db560e1de7af78824801ec005ffc044ad7	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+METRO-REDUCTION-CALCULUS	O	O	0eacf0c0fb0750f6d5106bac4e08470a9f89305d8c88fb18f3fcaee6bce87fb5	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+METRO-ADMISSIBILITY-DIM	O	O	4607286c31d4fcc8142d1ee01f835f155737363a91a693516f41357deb2c9d31	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+MINIMAL-READ-DERIVATION	O	O	24b293bc9f046a1b7a1e22cf8b99fb78d8e4315d8bd8ab11b9b07e57e64f62fb	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+QDD-INSTRUMENT-APPARATUS	O	O	8f7698cdb6cd054267e0e70bd6670581a2be7c47c578684839fd703d002c9b14	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+TRACEKERNEL-CURVATURE-FORCING	O	O	54dd05e6987827fac28ffcdd4d95de51e37d151d2709e5ebcbaa81970e04bab4	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+PHOTON-CONE-CONVERGENCE	O	O	5c97f9bed2b084b792ed3f83e75507dd0bf9880d8191c7ff0e53712cdd9db245	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
+PHOTON-MASSLESS-PHASE	O	O	0a65f92a89de6cfc15080d3dfca601f7cf371b8de5b8c783dd0f23e83ef52add	UNCHANGED: this conditional L1 fold supplies no decision at this owner or new cross-layer gate.
