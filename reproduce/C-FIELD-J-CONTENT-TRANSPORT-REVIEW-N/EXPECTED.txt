@@ -1,0 +1,15 @@
+independent packet transport audit: PASS
+box=1225
+clean_steps=73332
+control_steps=3276
+cut_steps=40740
+dirty_states=840
+initial_record_steps=2268
+local_cases=49224
+locality_interventions=8904
+modular_additions=356766
+period_steps=11046
+record_values=1226
+supported=291
+underfunded_steps=13968
+scope=finite audits plus separately frozen all-state/all-N derivation; L1 classical only

@@ -1,0 +1,10 @@
+C-FIELD-J-LOCAL-INSTRUMENT-N exact audit PASS
+arithmetic box=1225 supported=291 shells=1,20,30,60,60,120
+B clean_steps=27936 cut_steps=560 negative_steps=768
+pointer translations=356766 phase_coordinates=9808 coefficients=677448
+pointer_units partitions=882720 retained_phase=64 phase_branches=128
+source instrument_matrix_units=320 reference=PASS
+archive basis_cases=3006152 dirty_capacity=PASS
+history branches=1111 matrix_units=17776 coherent_cross_units=1024
+family paired_span_cases=3 full_retention=PASS
+scope=L1 selected conditional maps; occurrence and physical closure NOT DERIVED

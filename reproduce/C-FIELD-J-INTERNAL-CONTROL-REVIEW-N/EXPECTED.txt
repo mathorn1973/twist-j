@@ -1,0 +1,11 @@
+C-FIELD-J-INTERNAL-CONTROL independent exact review audit
+compiler_descriptors 56
+station_inverse_cases 41184
+complete_command_cases 234
+complete_program_cases 60
+retained_repeated_context_nonconstant_weight 0
+off_domain_retained_nonconstant_weight 13/9
+ideal_history_matrix_units 336
+finite_loader_columns 8
+typed_boundary_cases 96
+PASS exact conditional control; occurrence law NOT_DERIVED
