@@ -1,0 +1,17 @@
+PASS 1.1 all five generators are affine on all 15625 states
+PASS 1.2 fibre map depends on the fibre only; a is identity, b,c,d,e are point reflections
+     reflection centres on the fibre: {'b': (0, 0), 'c': (3, 0), 'd': (3, 3), 'e': (1, 3)}
+PASS 1.3 centres equal the four exceptional readies (0,0),(3,0),(3,3),(1,3)
+     dims of invariant alternating forms by multiplier (a,b,c): {(1, 1, 1): 3, (1, 1, 4): 0, (1, 4, 1): 0, (1, 4, 4): 1, (4, 1, 1): 3, (4, 1, 4): 0, (4, 4, 1): 0, (4, 4, 4): 1}
+PASS 2.1 no invariant alternating form on F_5^6 has rank above 2 (multipliers +1 or -1)
+PASS 2.2 invariant forms span exactly Lambda^2 of (kappa,q,r); common radical is the 3-dim sum-zero piston
+PASS 3.1 every phase-point operator is an involution with entries in mu_5
+PASS 3.2 conjugation by A(a) sends A(x) to A(2a-x) for all 625 pairs
+PASS 3.3 the 25 phase-point operators sum to 5 times the identity
+PASS 3.4 basis state |0> is the uniform count 1/5 on the line q=0
+     Wigner values of the LOW direction (x + y*sqrt5), multiset: [('-1/20', '0'), ('1/40', '-1/40'), ('1/40', '1/40'), ('1/5', '0'), ('3/20', '0')]
+PASS 3.5 the LOW direction has negative Wigner entries; total negativity is exactly sqrt5/5
+PASS 4.1 all 624 QDD preparations have strictly positive Wigner negativity (none is a stabilizer state)
+     least negativity over the 624 preparations (x + y*sqrt5): 1/10 1/10
+PASS 4.2 the signed phase-space overlap reproduces s^2/(4(5Q-s^2)) for all 624 preparations
+SUMMARY 12 of 12 checks PASS

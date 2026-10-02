@@ -1,0 +1,32 @@
+PART A
+PASS A1 fibre action from the retyped Canon formulas: identity for a, reflections with centres (0,0),(3,0),(3,3),(1,3)
+PASS A2 closure as permutations of the 25 points has order 50: 25 translations and 25 reflections
+PASS A3a dense A_u: involution, Hermitian, trace 1
+PASS A3b dense Tr(A_s A_u) = 5 delta for all 625 pairs
+PASS A3c dense A_s A_u A_s = A_(2s-u) for all 625 pairs
+PASS A3d sum_u A_u = 5 I, sum_v D_v = 5 Par, and 5 A_u = sum_v z^(r q' - q r') D_v for all u
+PASS A3e conjugation by A at the four native centres reproduces the four native fibre maps on all 25 indices
+PASS A4 pullback kernels: nonzero only for (1,1,1),(4,1,1),(1,4,4),(4,4,4) with dims 3,3,1,1; all 256 nonzero forms have every 4x4 Pfaffian and the 6x6 Pfaffian zero
+     selected one-step map, images and preimage histogram for bit 0 and 1: [(6250, [(2, 3125), (3, 3125)]), (9375, [(1, 6250), (3, 3125)])]
+PASS A5a collision 000000 / 212110 at n=0, and images 6250 and 9375
+PASS A5b sync to 3125 states with 5 preimages each; one common generator by the clock-pair rule and bijectivity on ticks 3..1500
+PART B
+PASS B1a 30 lines as solution sets; each line operator is Hermitian, trace 1 and of rank one by vanishing 2x2 minors
+PASS B1b Tr(Pi_L Pi_M) = |L cap M|/5 for all 900 pairs
+PASS B4 Weyl-route LOW Wigner multiset and negativity sqrt5/5
+     negativity table sha256 by the Weyl route c423a1edf376c9cdbd0653b4e89a284ed16e9bfea69586c3cb1c5e208351c905
+PASS B2 inversion from dense line probabilities equals the Weyl-route W for LOW and all 624
+PASS B3 all 624 negativities are positive and at least sqrt5/20
+PASS B5 overlap with LOW equals s^2/(4(5Q-s^2)) for all 624
+PASS B6 table hash equals the verifier's; 39 distinct values; minimum (1+sqrt5)/10 at 32 preparations including 1400; maximum 29/220 + (8/55) sqrt5 at 16
+SEARCH
+     S1 vectors tested: 17150, violations: 0
+PASS S1 no integer sum-zero vector with entries in [-6,6] violates the row-zero statement or the bound sqrt5/20
+     S2 vectors tested: 1450; lowest negativity (1/10) + (1/10)*sqrt5 at (-3, 0, 0, 0, 3)
+     S2 vectors below (1+sqrt5)/10: 0
+PASS S2 every sum-zero vector in the box [-3,3] has positive negativity at least sqrt5/20 (B3); values below the census minimum are reported, not forbidden
+     S3 vectors tested by dimension: [(3, 60), (7, 392), (9, 3138)]
+PASS S3 row-zero statement and bound 1/(2 sqrt(d(d-1))) hold on the tested boxes for d = 3, 7, 9
+     S4 support of the Fourier vector's Wigner function: [(0, 1), (1, 1), (2, 1), (3, 1), (4, 1)]
+PASS S4 the complex sum-zero vector (1,z,z^2,z^3,z^4) has Wigner function 1/5 on one line and 0 elsewhere
+SUMMARY 21 of 21 checks PASS
