@@ -995,3 +995,11 @@ FIELD-CHAIN-FIRST-WORK	FIELD-CONSERVATIVE-CHAIN-LAW	REQUIRES	The complete inline
 FIELD-LOCAL-WORK-RECORD	DEF-FIELD-WORK-RECORD-CHAIN	REQUIRES	Displayed architecture definitions.
 FIELD-LOCAL-WORK-RECORD	FIELD-CONSERVATIVE-CHAIN-LAW	REQUIRES	The complete inline proof of FIELD-CONSERVATIVE-CHAIN-LAW; all use remains at L1.
 FIELD-LOCAL-WORK-RECORD	FIELD-CHAIN-FIRST-WORK	REQUIRES	The complete inline proof of FIELD-CHAIN-FIRST-WORK; all use remains at L1.
+FIELD-PACKET-CONSERVATIVE-TRANSPORT	DEF-FIELD-PACKET-INSTRUMENT	REQUIRES	The displayed complete selected L1 definitions and inline proof; no inference of native or physical realization.
+FIELD-PACKET-FUNDED-RECORD	FIELD-PACKET-CONSERVATIVE-TRANSPORT	REQUIRES	The displayed complete selected L1 definitions and inline proof; no inference of native or physical realization.
+FIELD-CONDITIONAL-POINTER-INSTRUMENT	FIELD-PACKET-CONSERVATIVE-TRANSPORT	REQUIRES	The displayed complete selected L1 definitions and inline proof; no inference of native or physical realization.
+FIELD-CONDITIONAL-POINTER-INSTRUMENT	FIELD-PACKET-FUNDED-RECORD	REQUIRES	The displayed complete selected L1 definitions and inline proof; no inference of native or physical realization.
+FIELD-COHERENT-POINTER-PREPARATION	DEF-FIELD-PACKET-INSTRUMENT	REQUIRES	The displayed complete selected L1 definitions and inline proof; no inference of native or physical realization.
+FIELD-COHERENT-POINTER-PREPARATION	FIELD-CONDITIONAL-POINTER-INSTRUMENT	REQUIRES	The displayed complete selected L1 definitions and inline proof; no inference of native or physical realization.
+FIELD-FETCHED-PROGRAM-CONTROL	FIELD-CONDITIONAL-POINTER-INSTRUMENT	REQUIRES	The displayed complete selected L1 definitions and inline proof; no inference of native or physical realization.
+FIELD-FETCHED-PROGRAM-CONTROL	FIELD-COHERENT-POINTER-PREPARATION	REQUIRES	The displayed complete selected L1 definitions and inline proof; no inference of native or physical realization.
