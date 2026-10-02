@@ -1,0 +1,11 @@
+NON-CANONICAL independent C local-instrument audit
+arithmetic: 1225 box labels; 291 supported; shell and code identities PASS
+actual B: local=28128 dirty=432 clean_steps=111744 raw_control_steps=2448 PASS
+pointer: coefficients=677448 translations=356766 operator_partition_cases=882720 PASS
+rational orthogonal chart: five complete context instruments PASS
+phase/reference: retained phase_units=64; entangled HIGH distinction PASS
+archive: append_cases=3006152; dirty validity, inverse, capacity PASS
+histories: branches=1111 source_units=17776 coherent_unit_pairs=2048 PASS
+adaptive and bounded stopping: complete leaves and prefix effects PASS
+whole-family finite alphabet: E/E E/O E/plus span_dimensions=(56, 112, 116) PASS
+scope: conditional L1 maps only; physical occurrence and class completeness NOT PROVIDED
