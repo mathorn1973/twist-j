@@ -2,7 +2,7 @@
 
 **Status: PASS; candidate-T analytical result with a successful exact local audit. NON-CANONICAL until a separate fold.** Action layer L1. The first formal execution of `P-J-LAMBDA6-DECODER-INTERFACE-2` completed from public pin `79c8cd3cdb7df40eedd59e12bf70832c8cbc4b2d`. Both the author and independently frozen review programs returned PASS. No scientific falsifier fired.
 
-The independently reviewed proof establishes the complete arithmetic interface on every nonzero scalar in `O=Z[zeta5]` with algebraic norm at most 941. The local run is one x86_64 execution; required clean x86_64/aarch64 CI byte identity is a separate gate and was pending when this result was written. No two-architecture result or Canon promotion is inferred here.
+The independently reviewed proof establishes the complete arithmetic interface on every nonzero scalar in `O=Z[zeta5]` with algebraic norm at most 941. The local x86_64 run and the required clean x86_64/aarch64 CI byte-identity gate have both passed; exact jobs and scientific hashes are recorded in [CI-VERIFICATION.md](CI-VERIFICATION.md). Code independence, proof review and architecture reproduction remain distinct. No Canon promotion is inferred.
 
 ## Established scope
 

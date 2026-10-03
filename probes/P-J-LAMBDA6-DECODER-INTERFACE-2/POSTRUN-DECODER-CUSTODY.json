@@ -1,0 +1,85 @@
+{
+  "all_original_local_members_unchanged": true,
+  "before_inputs_checked": 17,
+  "checked_utc": "2026-10-03T23:34:20.063030+00:00",
+  "files": {
+    "BEFORE.json": {
+      "bytes": 3331,
+      "sha256": "94e49db295fdaae94e5162e0b1c69ac39c4afa69eb02d7a8475b29b75f8c1438"
+    },
+    "RUN.json": {
+      "bytes": 769,
+      "sha256": "12ace720cf3e5bd5aad27d49646a9d7b47d2852e4558f7d0d3ee0f5d8bc72503"
+    },
+    "evidence/independent/SUMMARY.json": {
+      "bytes": 449,
+      "sha256": "85979139514f95513a593dc861a757138487d5eeaad26fd6d4c8d9e51fcf038c"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout.txt": {
+      "bytes": 1249,
+      "sha256": "1104009a53640c1fc226418db83d1c4c254ee7e12d69e649599e04ae06f273df"
+    }
+  },
+  "independent": {
+    "api_sha256": "6b9545e392fb452c49a056244b4823ffacbdb804acd505513bff07a9d94a08ee",
+    "checks": 1362903,
+    "coverage": {
+      "data_permutations": 78125,
+      "image_classifications": 140625,
+      "large_translates": 32,
+      "malformed_cases": 77,
+      "valid_translates": 22050
+    },
+    "method": "polynomial ring and inverse-ideal-matrix oracle",
+    "scope": "frozen lambda-six interface; one execution environment",
+    "status": "PASS"
+  },
+  "kind": "post-run custody and retained-count consistency; no science execution",
+  "manifest_entries_checked": 16,
+  "old_archive_bytes": 326174,
+  "old_archive_members": 63,
+  "old_archive_sha256": "fc8039593484abda4fd573b0aa3e900158bf1e2d4529c87c66daf68a3487b208",
+  "old_manifest_entries_checked": 62,
+  "pin_commit": "79c8cd3cdb7df40eedd59e12bf70832c8cbc4b2d",
+  "primary": {
+    "arithmetic": "integers and Fraction; independent polynomial/lattice oracle",
+    "boundary_representatives": 110,
+    "data_operator_cases": 46875,
+    "disjoint_depth5_pairs": 30,
+    "early_invalid_trace_cases": 1629,
+    "large_signed_exponents": [
+      -257,
+      257
+    ],
+    "malformed_cases": 69,
+    "nonrepresentable_normalized_trace_pairs": 260,
+    "normalized_accepted": 3150,
+    "normalized_readings_checked": 6328125,
+    "normalized_rejected": 6324975,
+    "normalized_trace_pairs": 405,
+    "probe": "P-J-LAMBDA6-DECODER-INTERFACE-2",
+    "residue_characteristic": 25,
+    "residue_classes": 15625,
+    "signed_exponents": [
+      -31,
+      -7,
+      -1,
+      0,
+      1,
+      7,
+      31
+    ],
+    "signed_strip_cases": 22050,
+    "status": "PASS",
+    "strip": 3150,
+    "strip_sha256": "6a08d7de33b4cadb615f942b37202540dd6dea0f59f2412ffb822389c7c1cdab",
+    "translated_nonimage_cases": 810
+  },
+  "public_source_entries_checked": 16,
+  "sealed_mod25_tree_unchanged": true,
+  "status": "PASS"
+}
