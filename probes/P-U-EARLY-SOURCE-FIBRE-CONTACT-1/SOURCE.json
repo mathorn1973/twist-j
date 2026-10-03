@@ -1,0 +1,51 @@
+{
+  "public_commit": "5e872c22a18043c8126945a982efad55472cea82",
+  "canon": "Public Canon v97",
+  "independent_script": "independent_native.py",
+  "files": {
+    "STATUS.md": {
+      "bytes": 2386,
+      "sha256": "f3a555e6479012a575e623f812c8a3d892f13ecef1231599b066d31332b3bee3"
+    },
+    "POLICY.md": {
+      "bytes": 16964,
+      "sha256": "7771a4a4dc8ab98d6525c202326873c7c3ff782475dd66c7dc75fa325566ee9c"
+    },
+    "AGENTS.md": {
+      "bytes": 21813,
+      "sha256": "7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1"
+    },
+    "canon/CORE.md": {
+      "bytes": 23703,
+      "sha256": "2cef2b279d6d1e88652bf87bed56b910bc89e381aebc91beedc42d5186555bb9"
+    },
+    "canon/FRONTIER.md": {
+      "bytes": 26162,
+      "sha256": "23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9"
+    },
+    "canon/REGISTRY.tsv": {
+      "bytes": 491203,
+      "sha256": "d9f4dd61f1c57eb502be95870bd6104a149c451c81355f78d2a6fcd10946b3de"
+    },
+    "canon/CANON.md": {
+      "bytes": 897762,
+      "sha256": "257f83a386aad7d309f7017bd719b6212e3cffea60e4986caa5169d6543f108d"
+    },
+    "reproduce/census/verify.py": {
+      "bytes": 8127,
+      "sha256": "1df13ba2218acaa9cf48dab2480e6472b107691aac868618dc7f91d511718a5c"
+    },
+    "probes/P-U-PREPARATION-EVENT-RECORD-1/RESULT.md": {
+      "bytes": 9780,
+      "sha256": "106884607b4e88a4ff5fb56e9ea55858d57e9f1a8afa766b52ac83443cb64ca0"
+    },
+    "probes/P-KERNEL-Z6-SYNCHRONIZATION-1/RESULT.md": {
+      "bytes": 4701,
+      "sha256": "2203f3bec15c135e6d2ac233074644abf53478ac21bc98dbeb3584d6f8c61f05"
+    },
+    "notes/C-NATIVE-FIBRE-PENTIT-WIGNER-N/PREREG.md": {
+      "bytes": 20816,
+      "sha256": "cbda8c9f0fbc7da3b5baeed685d9e8592ecffaa6b70617633a271056ca94757c"
+    }
+  }
+}
