@@ -1,0 +1,67 @@
+{
+  "pin_commit": "9754d85622844d40212288d2204fc240e6cd8e31",
+  "started_utc": "2026-10-03T23:24:38.773316+00:00",
+  "command": "python3 probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/verify.py",
+  "platform": "Windows 11",
+  "architecture": "x86_64",
+  "python": "3.12.10",
+  "inputs": {
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/.gitattributes": {
+      "sha256": "ee067aa1f8e562df8992cea7336adeb3d4a92988547284e0956ca073ae1fd94a",
+      "bytes": 48
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/COLLISIONS.md": {
+      "sha256": "6d6f911bc24a0f04ff2381efd7a9b611a81cb9930824e0e145cb8ae9ee16cd56",
+      "bytes": 7180
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/independent_native.py": {
+      "sha256": "f12bbe502c218ca549c7f72fed69d996c7f562c6db9c71e4efd4c0c4225a2fc1",
+      "bytes": 9058
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/INPUTS.sha256": {
+      "sha256": "ff17153e65f0ef8a61e2f423623d92adc58095320eab87b8266d6e24e81f1ea4",
+      "bytes": 1039
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/INTEGRATION.md": {
+      "sha256": "008a313c41bc94a073731a3a1cc2acf23c30cf0354be49f1dae576b06eadfaa3",
+      "bytes": 2906
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/PREREG.md": {
+      "sha256": "4a8600901c5bacacb354a63a21474c228d70a4a5389c29918429ebe0bdb2579c",
+      "bytes": 14667
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/primary.py": {
+      "sha256": "7e3b422d0ebb5a510cfc469b9962d24cbc9ebd14da53d1949a50ca39e26887e1",
+      "bytes": 16033
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/PROOF.md": {
+      "sha256": "915a7ec56e461eec0a5a9e8268fc863fd3096dbfa47cf22c40b760ecbe79f60b",
+      "bytes": 7998
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/README.md": {
+      "sha256": "66658dccabdf7a9364837cf1f1d505261223373c90b843a2fc5378926f940134",
+      "bytes": 3889
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-FREEZE.json": {
+      "sha256": "c662fad63b3073095e2bd757b27a3a156b4b2cbfcfe70d3cc9447d7acc9fb9e6",
+      "bytes": 1581
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-PREREG.md": {
+      "sha256": "53b1a99a94090889b5833fd9fba61ed91365b540cae52357811bad82e819a60e",
+      "bytes": 7625
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-STATIC.md": {
+      "sha256": "531caa59485a2906f6b1c814503351806159bb365132b8ef22a12e5da254aca5",
+      "bytes": 11764
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/SOURCE.json": {
+      "sha256": "23f6e936110afc5b0446eb6035286a1c28801b4ecae44534bc5e5506bd68b59b",
+      "bytes": 1757
+    },
+    "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/verify.py": {
+      "sha256": "58a9ce2a846572842927f2fb18307a30bd7fe216b16233af3c35f53e319191c4",
+      "bytes": 3891
+    }
+  },
+  "public_pin_readback": "Coordinator confirmed remote commit and exact branch before invocation"
+}
