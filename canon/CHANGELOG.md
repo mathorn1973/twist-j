@@ -1,5 +1,31 @@
 # Canon changelog (public series)
 
+## Public Canon v97
+
+Accept five narrowly conditional L1 theorems with self-contained inline
+proofs: complete conservative packet transport; funded source-content
+record timing and finite renewal; the full coherent source/reference
+instrument and finite archive histories; a local fresh-bath pointer-bank
+preparation with explicit joint error; and internally fetched addressed
+control with exact joint-operator equality. The field chain of v96 remains
+a distinct architecture. No theorem transfers between those machines
+without its explicit carrier/operation/record identification.
+
+Every previously registered status and scope is unchanged. All 25 H/O
+owners remain open. The new preparation/control mechanisms retain source
+coding, exact coherent gates, phases, pure fresh baths, the graph/catalogue
+and abstract ticks as premises. Formal trace histories do not select a
+realized result. The supported repeated-context parity invariant requires
+even support rather than perfect coherence; it does not establish correct
+HIGH or changed-context continuation. The count hypothesis has no new
+canonical H row: its incomplete actual interface gives a separate
+applicability stop, not a proved or falsified occurrence law.
+
+Registry grows from 487 to 492: 0 T-LOCK, 350 T, 59 D, 39 C, 2 H, 23 O
+and 19 F. The new theorem evidence is inline proof; frozen author and
+independent audit replays remain supplementary. Existing proofs, old
+scientific programs and all physical decision conditions remain unchanged.
+
 ## Public Canon v96
 
 Accept three conditional L1 theorems for one explicitly selected conservative
@@ -326,8 +352,8 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 487 claims; 0 T-LOCK, 345 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
-Reproduction witnesses: 24.
+Registry snapshot: 492 claims; 0 T-LOCK, 350 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
+Reproduction witnesses: 32.
 <!-- END GENERATED CURRENT COUNTS -->
 
 ## Public Canon v83

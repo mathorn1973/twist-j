@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v96
+historical guards: exact reconstructed v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v97
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -134,5 +134,9 @@ PASS 129 V96-COMPLETE-LAW the selected integer chain retains full-state guards, 
 PASS 130 V96-FIRST-WORK every admitted unit-seed finite chain has exact N-1 arrival, N work and N+1 old-receiver return; offimage and individual-cut controls hold for all time
 PASS 131 V96-LOCAL-RECORD the C5 accepted-event writer has a recovered-input inverse and complete layer projection; ready forward retention covers eight boundaries without permanent memory
 PASS 132 V96-OPEN-BOUNDARY all 484 prior rows and 25 H/O owners remain exact; 487 claims preserve gates, programs and CORE selection without native-U or physical promotion
+PASS 133 V97-PRIOR-BYTES thirteen complete v97 inputs reconstruct exact public v96 before all 132 unchanged historical guards
+PASS 134 V97-FIVE-PROOFS five conditional L1 theorem rows bind exact scopes, complete inline proofs, one selected definition and exact premise/declaration additions
+PASS 135 V97-OCCURRENCE-BOUNDARY all 487 prior rows and 25 H/O owners remain exact; supplied complex instruments and zero control error derive no actual occurrence law or native-U realization
+PASS 136 V97-REPLAY-INVENTORY eight exact author/reviewer replay sources extend the 24-directory historical inventory to 32; custody adds no scientific premise
 
-RESULT 132/132 ALL PASS
+RESULT 136/136 ALL PASS

@@ -1,0 +1,9 @@
+C-OCCURRENCE-CYCLE-COUNT-N
+artifact_custody=PASS sources=4/4 manifest=PINNED
+semantic_paper_review=NOT_AUTOMATED
+gate0=STOP reason=ACTUAL_FINITE_EVENT_CONTRACT_NOT_SUPPLIED
+hypothesis=H_NOT_TESTED
+occurrence_runs=0 cycles_counted=0 histories_counted=0
+cycle_trace_comparisons=0
+epsilon_occurrence=UNDEFINED
+new_machine=NONE canon_change=NONE

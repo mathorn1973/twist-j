@@ -1,0 +1,246 @@
+{
+  "checked_at_utc": "2026-10-02T14:06:41.313742+00:00",
+  "scope": "read-only authority and collision audit; no scientific reproduction",
+  "main": "44423153eee6259c7277eec5f5adbed9679f9146",
+  "tag": "canon-v96",
+  "tag_object": "ac054c7d3280ded8d1d092c59ce8f138e5380ee0",
+  "tag_target": "44423153eee6259c7277eec5f5adbed9679f9146",
+  "normative_files": [
+    {
+      "path": "canon/CANON.md",
+      "bytes": 873495,
+      "sha256": "eb2a7bc1c7e38e130544b9fef4c0f05443df01484bdb55a52fc10b427fcee0a2"
+    },
+    {
+      "path": "canon/CORE.md",
+      "bytes": 22719,
+      "sha256": "8e0ea144519ca823483ae185daeb3da35a590c9591f40f491e43271c8df8febd"
+    },
+    {
+      "path": "canon/FRONTIER.md",
+      "bytes": 26162,
+      "sha256": "23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9"
+    },
+    {
+      "path": "canon/REGISTRY.tsv",
+      "bytes": 485037,
+      "sha256": "eb6f36b79628d916d24a89480f854db725deb73227dd84f13e8ecf76e7bdeb01"
+    },
+    {
+      "path": "canon/CHANGELOG.md",
+      "bytes": 194476,
+      "sha256": "7b6af10a8a5f1843f07aa0d20ac37ddf2e98a6250b995950f3275735be0f3ced"
+    }
+  ],
+  "live_H_O_count": 25,
+  "live_H_O_ids": [
+    "TRIVIAL-RAPIDITY-EVALUATION-BRIDGE",
+    "QDD-TERMINAL-EVENT-SEMANTICS",
+    "QDD-INSTRUMENT-CLASS-COMPLETENESS",
+    "METRO-ADMISSIBILITY",
+    "METRO-EDGE-SCALE",
+    "QUANT-SUBSTRATE",
+    "COLOR-MEASURE-SELECTION",
+    "QNM-LEAVER-MU",
+    "DRESS-CROSSCOUNT",
+    "NS-TILT",
+    "DE-CONFORMAL-WEIGHT",
+    "ALPHA-S-RUNNING",
+    "SCHEME-DICTIONARY",
+    "GENERATIONS-L3",
+    "NEUTRON-DELTA-EM",
+    "PROTON-RESIDUAL-IS-QCD",
+    "SQRT-PHI-TIME-GRAVITY",
+    "LAMBDA-COCYCLE-ANGLES",
+    "METRO-REDUCTION-CALCULUS",
+    "METRO-ADMISSIBILITY-DIM",
+    "MINIMAL-READ-DERIVATION",
+    "QDD-INSTRUMENT-APPARATUS",
+    "TRACEKERNEL-CURVATURE-FORCING",
+    "PHOTON-CONE-CONVERGENCE",
+    "PHOTON-MASSLESS-PHASE"
+  ],
+  "prs": [
+    {
+      "number": 1318,
+      "state": "open",
+      "head": "4756a3df650b91fb1d30806b0fb2aaac00e50cc2",
+      "branch": "codex/work-record-cartridge-device-n",
+      "base": "codex/field-work-record-unit-n",
+      "on_main": false,
+      "url": "https://github.com/mathorn1973/twist-j/pull/1318"
+    },
+    {
+      "number": 1319,
+      "state": "open",
+      "head": "fa0f248b87f6bbde31dd8f2b282d020c053e3cf8",
+      "branch": "codex/v96-integration",
+      "base": "codex/work-record-cartridge-device-n",
+      "on_main": false,
+      "url": "https://github.com/mathorn1973/twist-j/pull/1319"
+    },
+    {
+      "number": 1321,
+      "state": "closed",
+      "head": "8ac8e0b8f65c49d79b76843bb5b9a43bd55fc044",
+      "branch": "codex/v96-mathematical-fold",
+      "base": "main",
+      "on_main": false,
+      "url": "https://github.com/mathorn1973/twist-j/pull/1321"
+    },
+    {
+      "number": 1322,
+      "state": "closed",
+      "head": "a7a7c6fa21c314be6898ee97d3794c07c87ed54d",
+      "branch": "codex/v96-mathematical-fold-accounted",
+      "base": "main",
+      "on_main": true,
+      "url": "https://github.com/mathorn1973/twist-j/pull/1322"
+    },
+    {
+      "number": 1325,
+      "state": "open",
+      "head": "3f53cff429c67fbdfa95941b3024279d9fd59638",
+      "branch": "codex/v96-source-program",
+      "base": "main",
+      "on_main": false,
+      "url": "https://github.com/mathorn1973/twist-j/pull/1325"
+    },
+    {
+      "number": 1326,
+      "state": "open",
+      "head": "f8c5a2aae2e4cfe8fce8c2dc45072429c0ca6cc1",
+      "branch": "codex/v96-photon-rooted-tail",
+      "base": "main",
+      "on_main": false,
+      "url": "https://github.com/mathorn1973/twist-j/pull/1326"
+    },
+    {
+      "number": 1328,
+      "state": "open",
+      "head": "05e2f457e9f7d69f6f6649e9ec4094f4ebb08eaa",
+      "branch": "codex/v96-content-transport",
+      "base": "codex/v96-source-program",
+      "on_main": false,
+      "url": "https://github.com/mathorn1973/twist-j/pull/1328"
+    },
+    {
+      "number": 1330,
+      "state": "open",
+      "head": "024936502544c2ec45acc8890a052c7b3aca26be",
+      "branch": "codex/v96-local-instrument",
+      "base": "codex/v96-content-transport",
+      "on_main": false,
+      "url": "https://github.com/mathorn1973/twist-j/pull/1330"
+    },
+    {
+      "number": 1332,
+      "state": "open",
+      "head": "1f88665ce8646cdf134cb4366958db0ca2d302d7",
+      "branch": "codex/v96-preparation-mechanism",
+      "base": "codex/v96-local-instrument",
+      "on_main": false,
+      "url": "https://github.com/mathorn1973/twist-j/pull/1332"
+    },
+    {
+      "number": 1334,
+      "state": "open",
+      "head": "62db6065988ed1fbbd15a46fa3c2902339e6e700",
+      "branch": "codex/v96-internal-control",
+      "base": "codex/v96-preparation-mechanism",
+      "on_main": false,
+      "url": "https://github.com/mathorn1973/twist-j/pull/1334"
+    }
+  ],
+  "issues_in_range": [
+    {
+      "number": 1320,
+      "title": "Lock: Public Canon v96 mathematical work-transport-work-record fold",
+      "url": "https://github.com/mathorn1973/twist-j/issues/1320"
+    },
+    {
+      "number": 1323,
+      "title": "C-FIELD-J-ENERGY-READOUT-N: active-field/J interface and receiver blindness",
+      "url": "https://github.com/mathorn1973/twist-j/issues/1323"
+    },
+    {
+      "number": 1324,
+      "title": "C-PHOTON-ROOTED-CURRENT-TAIL-N: full-measure root bound and certificate limitation",
+      "url": "https://github.com/mathorn1973/twist-j/issues/1324"
+    },
+    {
+      "number": 1327,
+      "title": "C-FIELD-J-CONTENT-TRANSPORT-N: complete classical state and funded local record",
+      "url": "https://github.com/mathorn1973/twist-j/issues/1327"
+    },
+    {
+      "number": 1329,
+      "title": "C-FIELD-J-LOCAL-INSTRUMENT-N: exact instrument of the funded packet/pointer carrier",
+      "url": "https://github.com/mathorn1973/twist-j/issues/1329"
+    },
+    {
+      "number": 1331,
+      "title": "C-FIELD-J-PREPARATION-MECHANISM-N: local collision preparation of the coherent pointer supply",
+      "url": "https://github.com/mathorn1973/twist-j/issues/1331"
+    },
+    {
+      "number": 1333,
+      "title": "C-FIELD-J-INTERNAL-CONTROL-N: accounted local execution of preparation and finite measurement programs",
+      "url": "https://github.com/mathorn1973/twist-j/issues/1333"
+    }
+  ],
+  "required_checks": [
+    {
+      "name": "check",
+      "conclusion": "skipped",
+      "url": "https://github.com/mathorn1973/twist-j/actions/runs/36909019716/job/110526734415"
+    },
+    {
+      "name": "architecture-${{ matrix.architecture }}",
+      "conclusion": "skipped",
+      "url": "https://github.com/mathorn1973/twist-j/actions/runs/36909019716/job/110526734034"
+    },
+    {
+      "name": "publication",
+      "conclusion": "success",
+      "url": "https://github.com/mathorn1973/twist-j/actions/runs/36909019716/job/110526731195"
+    },
+    {
+      "name": "check",
+      "conclusion": "success",
+      "url": "https://github.com/mathorn1973/twist-j/actions/runs/36904938908/job/110526425736"
+    },
+    {
+      "name": "check",
+      "conclusion": "skipped",
+      "url": "https://github.com/mathorn1973/twist-j/actions/runs/36905015331/job/110513255363"
+    },
+    {
+      "name": "architecture-${{ matrix.architecture }}",
+      "conclusion": "skipped",
+      "url": "https://github.com/mathorn1973/twist-j/actions/runs/36905015331/job/110513253491"
+    },
+    {
+      "name": "publication",
+      "conclusion": "success",
+      "url": "https://github.com/mathorn1973/twist-j/actions/runs/36905015331/job/110513251494"
+    },
+    {
+      "name": "publication",
+      "conclusion": "skipped",
+      "url": "https://github.com/mathorn1973/twist-j/actions/runs/36904938908/job/110512992413"
+    },
+    {
+      "name": "architecture-x86_64",
+      "conclusion": "success",
+      "url": "https://github.com/mathorn1973/twist-j/actions/runs/36904938908/job/110512990356"
+    },
+    {
+      "name": "architecture-aarch64",
+      "conclusion": "success",
+      "url": "https://github.com/mathorn1973/twist-j/actions/runs/36904938908/job/110512989914"
+    }
+  ],
+  "matching_remote_branches": [],
+  "matching_issues": []
+}

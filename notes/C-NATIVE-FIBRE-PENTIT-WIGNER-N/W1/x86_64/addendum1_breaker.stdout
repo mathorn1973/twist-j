@@ -1,0 +1,14 @@
+PASS V1 the 5 basis vectors and 25 quadratic-phase vectors have Wigner function 1/5 on 30 distinct five-point sets
+PASS V2 each support is an affine line: all 30 (direction, level) labels are present once
+PASS V3 |<v_L|v_M>|^2 = |L cap M|/5 for all 900 pairs of line vectors
+PASS B7a LOW probabilities on the 30 line vectors by inner products equal the verifier's multiset; f gives 1/4 and lies in direction (1,0)
+PASS B7b exactly two line vectors have LOW probability a multiple of 1/5 (4/5 and 0)
+PASS B7c Weyl-route LOW response: 1 x1, 3/4 x4, -1/4 x4, (1+sqrt5)/8 x8, (1-sqrt5)/8 x8, twelve negative
+PASS B7d dual inversion from the inner-product probabilities returns the Weyl-route response at all 25 points
+PASS B7e acceptance response 1 - 5 W_plus(u) is the indicator of the complement of the line r=0
+PASS B8a U1 reproduces the two-round vector law in all 1080 scenarios; U0 does not
+PASS B8b three rounds d1,d2,d1 with d1 != d2: U1 returns the first outcome with weight 1/5, equal to the vector law, in all 900 scenarios
+     S1 native fibre maps tested as a fixed update: 50, reproducing the two-round law: 0
+     S2 outcome-indexed shifts along the reading direction tested: 3125, reproducing the two-round law: 0
+PASS S no deterministic update of the point alone, among the 50 native fibre maps and the 3125 outcome-indexed shifts, reproduces the two-round law
+SUMMARY 11 of 11 checks PASS

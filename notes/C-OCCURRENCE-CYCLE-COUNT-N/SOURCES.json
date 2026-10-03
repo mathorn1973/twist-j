@@ -1,0 +1,48 @@
+{
+  "schema": "C-OCCURRENCE-CYCLE-COUNT-N/gate0/v1",
+  "repository": "https://github.com/mathorn1973/twist-j",
+  "hypothesis": "occurrence_is_count",
+  "source_semantics": "manually_audited_paper_contract_not_machine_inferred",
+  "sources": [
+    {
+      "id": "canon",
+      "commit": "44423153eee6259c7277eec5f5adbed9679f9146",
+      "path": "canon/CANON.md",
+      "bytes": 873495,
+      "sha256": "eb2a7bc1c7e38e130544b9fef4c0f05443df01484bdb55a52fc10b427fcee0a2"
+    },
+    {
+      "id": "cycle_result",
+      "commit": "44423153eee6259c7277eec5f5adbed9679f9146",
+      "path": "probes/P-RECORD-OCCURRENCE-SYMMETRY-1/RESULT.md",
+      "bytes": 5214,
+      "sha256": "ff724733215ea32639fdec4c750af278dd65dd2b9b80f1529418d66f9265e3b0"
+    },
+    {
+      "id": "device_interface",
+      "commit": "62db6065988ed1fbbd15a46fa3c2902339e6e700",
+      "path": "notes/C-FIELD-J-INTERNAL-CONTROL-N/OCCURRENCE_INTERFACE.md",
+      "bytes": 11565,
+      "sha256": "64277d3cd9389584e8a32ec0d7d80589c9f83d46a2b466c2464a7ee83777ae91"
+    },
+    {
+      "id": "device_result",
+      "commit": "62db6065988ed1fbbd15a46fa3c2902339e6e700",
+      "path": "notes/C-FIELD-J-INTERNAL-CONTROL-N/RESULT.md",
+      "bytes": 17047,
+      "sha256": "296727c40ed4aa74df5869f62a5041090fc5cb015ea0006a5cb1f66df3f5cc2e"
+    }
+  ],
+  "gate0": {
+    "native_full_state": "N0_times_F5_power6",
+    "native_counter_update": "n_to_n_plus_1",
+    "native_full_state_finite_cycles": false,
+    "native_history_preserving_finite_factor_supplied": false,
+    "device_state_type": "category2_complex_vector_or_density",
+    "device_actual_state_transition_and_event_map_supplied": false,
+    "device_independent_preparation_classes_supplied": false,
+    "device_recurrent_fresh_trial_protocol_supplied": false,
+    "complete_finite_preparation_descriptor_supplied": false,
+    "cycle_counting_enabled": false
+  }
+}

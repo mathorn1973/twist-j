@@ -1,0 +1,4 @@
+box 1225; image 291; shells 1 20 30 60 60 120; maximum norm 31
+independent keys 71250; wrapped calls 1140000; fixed fixtures 1837; metadata 1
+candidate keys 71250; wrapped calls 1140000; fixed fixtures 1837; metadata 1
+hook calls 0; PASS
