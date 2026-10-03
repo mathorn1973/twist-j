@@ -8,10 +8,10 @@ found zero receiver survivors at all three times and all five source sums.
 The complete negative theorem is **candidate-T**, supported by the
 [symbolic proof](PROOF.md) and the separately derived sign-profile proof in
 [the independent review](REVIEW-STATIC.md). The finite execution counts and
-artifacts are **candidate-C from one x86_64 architecture** at this record.
-Required clean x86_64/aarch64 CI and byte identity remain pending. Independent
-implementations on one architecture do not by themselves supply the
-two-architecture gate. No Canon status is changed.
+artifacts have also passed the required clean x86_64/aarch64 byte-identity
+gate; exact jobs and hashes are recorded in [CI-VERIFICATION.md](CI-VERIFICATION.md).
+Code independence and architecture reproduction are separate evidence.
+The result remains non-canonical; no Canon status is changed.
 
 ## Exact decided class
 
@@ -137,6 +137,6 @@ representation #1342 and synchronized fixed-reader permanent-write result
 
 No physical carrier, energy account, native inverse, reuse, renewal,
 apparatus, occurrence measure or #1349 complete-state/counter preservation
-and timing contract is supplied. The remaining execution gate is clean
-required x86_64/aarch64 reproduction of the same frozen bundle and stdout;
-a later reviewed Canon fold is separate from either publication or CI.
+and timing contract is supplied. The required x86_64/aarch64 reproduction gate has passed for the same
+frozen bundle and stdout. A later reviewed Canon fold is separate from
+either publication or CI.
