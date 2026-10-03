@@ -1,0 +1,17 @@
+{
+  "pin_commit": "79c8cd3cdb7df40eedd59e12bf70832c8cbc4b2d",
+  "started_utc": "2026-10-03T23:26:18.162951+00:00",
+  "command": "python3 probes/P-J-LAMBDA6-DECODER-INTERFACE-2/verify.py",
+  "platform": "Windows 11",
+  "architecture": "x86_64",
+  "python": "3.12.10",
+  "public_pin_readback": "Coordinator confirmed remote commit and exact branch before invocation",
+  "completed_utc": "2026-10-03T23:26:34.136001+00:00",
+  "verifier_sha256": "9e3b4af0fcfb680500fc04f7343ffe8f7f82bb24e893258523d2b2d6bd5f7625",
+  "exit_code": 0,
+  "stdout_sha256": "1104009a53640c1fc226418db83d1c4c254ee7e12d69e649599e04ae06f273df",
+  "stdout_bytes": 1249,
+  "stdout_lines": 1,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}
