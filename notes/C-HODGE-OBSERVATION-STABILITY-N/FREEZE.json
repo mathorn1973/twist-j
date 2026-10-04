@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-04T18:06:53.690052+00:00",
+  "basis": "2973a432303e046aacb2cee3cea97254ea3ab8eb",
+  "status": "local pre-execution reference freeze, not a public Git pin",
+  "files": {
+    "PREREG.md": "f804056eb09003517f847c3a7286f95a35f2cb9587a71ab694a029ccf52ce078",
+    "verify.py": "f8f6ee0bc94a4f3aed9a8aca26d1bbf9554bbddd76abf4cdfa9a3fe401aeeb02"
+  }
+}
