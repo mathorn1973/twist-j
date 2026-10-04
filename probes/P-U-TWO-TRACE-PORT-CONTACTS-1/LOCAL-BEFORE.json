@@ -1,0 +1,95 @@
+{
+  "pin_commit": "5d122f0cab1fb20b368302cee4b4989d13ff16d2",
+  "started_utc": "2026-10-04T00:41:01.820418+00:00",
+  "command": "python3 probes/P-U-TWO-TRACE-PORT-CONTACTS-1/verify.py",
+  "platform": "Windows 11",
+  "architecture": "x86_64",
+  "python": "3.12.10",
+  "inputs": {
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/.gitattributes": {
+      "sha256": "ee067aa1f8e562df8992cea7336adeb3d4a92988547284e0956ca073ae1fd94a",
+      "bytes": 48
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/AUTHOR-FREEZE.json": {
+      "sha256": "f243c44cd8cc61158bb1e713ac70efdf6b5de1e57538b3ba913a832095eea08b",
+      "bytes": 1352
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/COLLISIONS.md": {
+      "sha256": "25ac1a6291080b98e33d1fa0ae434701d503221d60b794bbca636422ad9343ff",
+      "bytes": 6532
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/CONTRACT.md": {
+      "sha256": "9b9b294ff4a797212fdefedc1780bedd14161f4be5f41142a4d43939b1013891",
+      "bytes": 14128
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/INDEPENDENT-ALGEBRA.md": {
+      "sha256": "e5f3103965e312a142d4d60db31d8bde648ba39643823a6266f9416a56d1cb59",
+      "bytes": 5310
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/independent.py": {
+      "sha256": "64e6228fc8692e3dc1e474a5b5d2cc5a1f87485d4909a0e5e10bf7228525136e",
+      "bytes": 10048
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/INPUTS.sha256": {
+      "sha256": "3d4bf5d1eda32320d629d033c6d7db7f838e2bb1e0bc23dc941dfc42bf51400a",
+      "bytes": 1623
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/INTEGRATION.md": {
+      "sha256": "87a64825c664ec6d40cb7efe26a03d352018dd04d2337c9227cd4209828bf806",
+      "bytes": 4153
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/PREFLIGHT.md": {
+      "sha256": "fccfcb00043c2207de265475fbc3e98f46178292fcf0c4be101db641710560eb",
+      "bytes": 1280
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/PREREG.md": {
+      "sha256": "9f7443115839725c33454414827dba609d86f45c58b8bddc75741f93861c4bdd",
+      "bytes": 7563
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/primary.py": {
+      "sha256": "d1c5049075e4094e24be47cd4e5b2c6ee997763352c801f96634b9c823075172",
+      "bytes": 16309
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/PROOF-REVIEW.md": {
+      "sha256": "6de99644011091a45bd880d79fc50cc891044a5fa18321283a26a20a87894a22",
+      "bytes": 7525
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/PROOF.md": {
+      "sha256": "c0c9a1379870d3788383394aa7d0a3304189f3d8d37b7e41ca0b873224851a0c",
+      "bytes": 13267
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/README.md": {
+      "sha256": "16cbe4961e968931f7d2b3f9ac19791d71f129e299332663bb04307e9d6228cf",
+      "bytes": 2312
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/REVIEW-CONTRACT-V1.md": {
+      "sha256": "d15e7ba40cbfe803c7298d0377916982bb0b6bc53e7b6891a72cc27a30356767",
+      "bytes": 12025
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/REVIEW-FREEZE.json": {
+      "sha256": "9b6fb82ec4c5de61b002810238f4c0e85c28ad7d5db16252b208f3aeea6683a9",
+      "bytes": 968
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/REVIEW-PREREG.md": {
+      "sha256": "e075d4963a15b34194a6a1b7f8acad378f082f33c13d0251afa5a4efbc965b4f",
+      "bytes": 3510
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/REVIEW-STATIC-PROOF.md": {
+      "sha256": "3185dfb4ae2f4a1535083857e4daf1048b5f00ae79b0cd35f9362ba284e4f303",
+      "bytes": 6445
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/REVIEW-STATIC.md": {
+      "sha256": "ea6f3b8d75829de11da59b4fe8c18a7406a62c870051cf3c909611197f964e8d",
+      "bytes": 8005
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/SOURCES.json": {
+      "sha256": "700ff2f9a4e2d0431cc1f228986154d710bd0fed7312b28010bfcc1a39e72b4b",
+      "bytes": 4730
+    },
+    "probes/P-U-TWO-TRACE-PORT-CONTACTS-1/verify.py": {
+      "sha256": "5e57a4d9e9c1129fd68c453baf9679d25104b45664742608ccc8ba94b1c9d5fe",
+      "bytes": 3100
+    }
+  },
+  "public_pin_readback": "Coordinator confirmed remote commit and exact branch before invocation"
+}
