@@ -1,0 +1,92 @@
+{
+  "public_commit": "5e872c22a18043c8126945a982efad55472cea82",
+  "canon": "Public Canon v97",
+  "exposed_prior_bundle": {
+    "public_path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/ramified-decoder-20261003-review.zip",
+    "sha256": "fc8039593484abda4fd573b0aa3e900158bf1e2d4529c87c66daf68a3487b208",
+    "status": "Original records preserved separately; candidate-T analytical minima and candidate-C intermediate finite counts are disclosed inputs, not blind predictions.",
+    "publication": "Separate coordinator Git publication precedes this formal probe pin; this entry does not assert a commit identifier."
+  },
+  "files": {
+    "STATUS.md": {
+      "bytes": 2386,
+      "sha256": "f3a555e6479012a575e623f812c8a3d892f13ecef1231599b066d31332b3bee3",
+      "git_blob": "16a3195161aeaea87290e910089d317b6318f8ef"
+    },
+    "POLICY.md": {
+      "bytes": 16964,
+      "sha256": "7771a4a4dc8ab98d6525c202326873c7c3ff782475dd66c7dc75fa325566ee9c",
+      "git_blob": "01eec35421fd00bd7a8d3ed606dd8261dceda0af"
+    },
+    "AGENTS.md": {
+      "bytes": 21813,
+      "sha256": "7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1",
+      "git_blob": "a449c8036ccbc40240060c885bb936630d4fc680"
+    },
+    "canon/CORE.md": {
+      "bytes": 23703,
+      "sha256": "2cef2b279d6d1e88652bf87bed56b910bc89e381aebc91beedc42d5186555bb9",
+      "git_blob": "1ef7b118fcabac13237c28245d119b291224f87f"
+    },
+    "canon/FRONTIER.md": {
+      "bytes": 26162,
+      "sha256": "23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9",
+      "git_blob": "7ce21381b6c4ef98a205d26ec3d68ba64ecfc8ae"
+    },
+    "canon/CANON.md": {
+      "bytes": 897762,
+      "sha256": "257f83a386aad7d309f7017bd719b6212e3cffea60e4986caa5169d6543f108d",
+      "git_blob": "432640bce89514fd6a15f63f840d4f2cab9d7a86"
+    },
+    "canon/REGISTRY.tsv": {
+      "bytes": 491203,
+      "sha256": "d9f4dd61f1c57eb502be95870bd6104a149c451c81355f78d2a6fcd10946b3de",
+      "git_blob": "e97c003e1f46e7b73a067f04f729d8b6076a69ff"
+    },
+    "canon/EVIDENCE.tsv": {
+      "bytes": 100185,
+      "sha256": "a56bfa6e5ccc8a4481f765baa6825b8e77b6418b09ec1db750314b2a8917a131",
+      "git_blob": "2ff9eb1e56b44cb6f987d1257e75867c50079cbf"
+    },
+    "probes/P-J-TWO-TRACE-RESIDUE-DECODER-1/PROOF.md": {
+      "bytes": 11139,
+      "sha256": "491f568d1c03c20578af7858cccae40a97f0ff5b83af272e2ec49295a96a3fc0",
+      "git_blob": "d43e5675dd7d403641e2a5cdcea0499937c66a50"
+    },
+    "probes/P-J-TWO-TRACE-RESIDUE-DECODER-1/PREREG.md": {
+      "bytes": 9346,
+      "sha256": "2639f6d00d855ce36e73c1f74738275816b45d010577d81db6336434cf31e569",
+      "git_blob": "ce445357ae8a4efb33f56149e65ceabb7afb4d50"
+    },
+    "probes/P-J-TWO-TRACE-RESIDUE-DECODER-1/verify.py": {
+      "bytes": 4025,
+      "sha256": "88de9568e8cb8e65ded78ffd6863c46674e88a5b2c9e85489d9c19a0cd5aa469",
+      "git_blob": "f29a1171dff6bd5e952a790640f0db33e2a3ea9b"
+    },
+    "probes/P-J-TWO-TRACE-RESIDUE-DECODER-1/decoder.py": {
+      "bytes": 4155,
+      "sha256": "45b0b37ec2ef1cd99e92260b7666653dbcbb1ffc99142766b2c267bab97a0ebc",
+      "git_blob": "45547ab91b0051513e680620783e47516d8581f3"
+    },
+    "probes/P-J-TWO-TRACE-RESIDUE-DECODER-1/primary.py": {
+      "bytes": 5599,
+      "sha256": "dc97abd593cc78b7116006d012b31096109b000114a34a9e7ab92bce01fa7cdd",
+      "git_blob": "56660ae1565fdb7a6901b46abe710dcfe1dc2033"
+    },
+    "probes/P-J-TWO-TRACE-RESIDUE-DECODER-1/break.py": {
+      "bytes": 13396,
+      "sha256": "57a3c7e03d683bbc5fae074ef5611fd21bce1a5a3922e69eaa8b32b1831ef112",
+      "git_blob": "e023ef10856a89775f5d4debe3ac93309dd9f917"
+    },
+    "probes/P-J-TWO-TRACE-RESIDUE-DECODER-1/RESULT.md": {
+      "bytes": 6354,
+      "sha256": "98970cebd9e4e46da351e2847fc35c7deac54d491c3db12c573262718b170bac",
+      "git_blob": "d7113f993b13ea38f2d364a0d3d593d1e3b02f0e"
+    },
+    "probes/P-J-TWO-TRACE-RESIDUE-DECODER-1/EXPECTED.txt": {
+      "bytes": 1616,
+      "sha256": "d17ff82883dca610813187679221cb315b7636c79f9013062de691b5988d744d",
+      "git_blob": "d85ddf21a67002ba430c7e09f3dc4ee48ad857b7"
+    }
+  }
+}
