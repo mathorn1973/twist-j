@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred thirty-six checks cover the current
+and emits deterministic text. Its one hundred forty-one checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 136/136 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 141/141 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -703,3 +703,40 @@ Eight unchanged author/reviewer replay sources extend the minimal-reproduction
 inventory from 24 to 32. The witness checks their exact code/output hashes
 and reconstructs the old inventory before its historical count assertion.
 This is release conformance and custody, not new scientific execution.
+
+
+The v98 conformance extension pins the same thirteen complete current Canon
+inputs and reconstructs exact public v97 at
+`738e0421bd15aaea5bb6ef2a56f1cab752d44de5` before the unchanged historical
+v97-to-v96 and earlier guards. Both current and reconstructed bytes must
+match their full byte counts and SHA-256 values. The historical constants
+and predicates are preserved; four v97 input reads are routed through the
+new exact reconstruction. The first 136 PASS lines are retained byte for
+byte, including their original release-scoped descriptions.
+
+Five new structural guards bind six conditional inline L1 theorem rows,
+one readout-domain definition, their exact scope/evidence/declaration and
+dependency additions, and the complete newly reviewed Canon proof block.
+The separate observation and measurement guards check the presence of
+frozen scope clauses in that exact proof text. They do not execute the
+seventy-five-checkpoint graph, replay its fifty native transitions, test a
+mixture experiment, derive a physical decoder or perform calibration.
+Their mathematical support is the independently reviewed inline proof.
+
+All 492 previous Registry rows and all 25 H/O owners remain exact. Gates,
+Frontier programs, CORE selection and the complete 32-directory minimal
+reproduction inventory are unchanged. The current totals are 498 claims,
+T356/D59/C39/H2/O23/F19. Six-score processing remains distinct from using
+raw detector labels or six ensemble means; finite compatibility and
+conditional code transport do not establish a calibrated detector, a
+physically selected Hodge reading, occupied-memory continuation or a
+global invariant physical state domain.
+
+The expected 141-check transcript is authored before execution from the
+unchanged 136 previous PASS lines and five specified metadata-check
+descriptions. Its construction is not a run receipt. This is maintenance
+of the existing release-accounting reproduction, not a new mathematical
+verifier, new scientific run or evidence-class promotion. Execution and
+cross-architecture gate results belong to the subsequently pinned complete
+content candidate. Other scientific verifier sources and expected outputs
+are unchanged.
