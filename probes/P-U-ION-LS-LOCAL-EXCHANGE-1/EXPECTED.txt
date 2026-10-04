@@ -1,0 +1,10 @@
+P-U-ION-LS-LOCAL-EXCHANGE-1
+STATUS NON-CANONICAL EXACT IDEAL LOCAL CONSTRUCTION
+PROFILE fixed non-scalar; one shared intensity; no independent level shifts
+TWIRL 20 affine permutations; 25 symbolic quadratic identities
+CARRIERS compiled positive-time 0-j star pulses only
+CONTACTS {"1":{"carrier_angle_pi":"1766","carrier_pulses":1771,"coherent_inputs":5,"ls_loops":240,"omitted_ls_success":1},"4":{"carrier_angle_pi":"1766","carrier_pulses":1771,"coherent_inputs":5,"ls_loops":240,"omitted_ls_success":1}}
+MOTION operator closure analytic; inherited input cutoff n<=10; no reset
+PHYSICAL ERROR / FULL HISTORY / FINITE CONTROLLER DILATION NOT CERTIFIED
+INDEPENDENT_SHA256 0e058e684cc312f77d34a9bb68ec27b9b0112dcf4a79e5899f04d98eff98280f
+LOCAL CONSTRUCTION AUDIT PASS
