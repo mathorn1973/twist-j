@@ -1,0 +1,88 @@
+{
+  "bound_input_files_checked": 14,
+  "bound_public_source_files_checked": 11,
+  "checked_utc": "2026-10-03T23:27:57.867410+00:00",
+  "checkpoints_compared": 62500,
+  "coordinate_values_compared": 375000,
+  "counters_compared": 62500,
+  "fibre_table_rows_compared": 125,
+  "files": {
+    "BEFORE.json": {
+      "bytes": 2822,
+      "sha256": "b48c29a6dc426a640fac3a30770c21417eb8e73976d09debb5e219463701a7ec"
+    },
+    "RUN.json": {
+      "bytes": 770,
+      "sha256": "5a1b8ad2db0ea7c3905151333aa2a317a0741815f79daf9fb32bf6255446012d"
+    },
+    "evidence/FALSIFIERS-T1.csv": {
+      "bytes": 4554977,
+      "sha256": "c2c94222f4ca6debf0a3b27eeadc798f3777636b10de453f75104a422261750c"
+    },
+    "evidence/FALSIFIERS-T2.csv": {
+      "bytes": 4555030,
+      "sha256": "6a4bcdbe5de90570881605970fd1f3c80eee94790056e51d452a226c624e52e4"
+    },
+    "evidence/FALSIFIERS-T3.csv": {
+      "bytes": 4554075,
+      "sha256": "9527107f33172eaa4f8b88e44e8540c96e6a88d019e50b70b8c7c10ec6053405"
+    },
+    "evidence/FIBRE-TABLE.csv": {
+      "bytes": 3081,
+      "sha256": "1a8971d74424b8e3a6f75ffdd895de8f94832919259e2dd47cad8d9a2a0949bd"
+    },
+    "evidence/NATIVE-STEPS.csv": {
+      "bytes": 1051563,
+      "sha256": "a821aedf52252349ab1fa3544c68d00bd0eccac9b3a7376655a94a4c99329af1"
+    },
+    "evidence/RECEIVER-SURVIVORS.csv": {
+      "bytes": 27,
+      "sha256": "4aff7e615606d895172df212f146e85985104da0b0e2b0a74e8d0158363abd71"
+    },
+    "evidence/SUMMARY.json": {
+      "bytes": 1983,
+      "sha256": "9cdddc460b4711efc7ddfac480fdc86d59d3db38a6e7f8c4df7454c5b99ba5ab"
+    },
+    "evidence/independent/FIBRE-ACTIONS.json": {
+      "bytes": 230,
+      "sha256": "aadaf511a9fcfcbf9e60382f87522a0209332887113163d234b6047bfe0fca67"
+    },
+    "evidence/independent/FULL-HISTORIES.json": {
+      "bytes": 2156253,
+      "sha256": "9253716927d6c0d88f09e8e76d0330bb559fe6f980acc34fd0de7991a4274831"
+    },
+    "evidence/independent/MANIFEST.json": {
+      "bytes": 356,
+      "sha256": "658258aec6e66a30ca143d084a9b279ac97ad061a6a501e59faa43e256bfb7c9"
+    },
+    "evidence/independent/RECEIVER-WITNESSES.jsonl": {
+      "bytes": 7424900,
+      "sha256": "a97b1d7754d41478ca6b75df08882e957343cb2c140f538e802edf2e5b0269f4"
+    },
+    "evidence/independent/SUMMARY.json": {
+      "bytes": 682,
+      "sha256": "65c9c384a6ad5933366d8f24a601da666c8451c98070a4aa9e60ac3b75d10b41"
+    },
+    "stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout.txt": {
+      "bytes": 2377,
+      "sha256": "613ac47b49187ee1e7b89f7587ca393d8b82c71815d7d55a20605fbf7756925e"
+    }
+  },
+  "full_histories_compared": 15625,
+  "kind": "post-run retained-artifact equivalence; no native execution",
+  "mismatch_histograms_match": true,
+  "pin_commit": "9754d85622844d40212288d2204fc240e6cd8e31",
+  "receiver_survivors": 0,
+  "rejected_configuration_witnesses_compared": 225000,
+  "selected_indices_compared": 46875,
+  "status": "PASS",
+  "witnesses_by_time": {
+    "1": 75000,
+    "2": 75000,
+    "3": 75000
+  }
+}

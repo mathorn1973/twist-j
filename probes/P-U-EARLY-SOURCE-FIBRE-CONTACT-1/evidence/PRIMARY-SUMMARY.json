@@ -1,0 +1,78 @@
+{
+  "decision": "NO_SUM_IN_FROZEN_CLASS",
+  "evidence": {
+    "FALSIFIERS-T1.csv": {
+      "bytes": 4554977,
+      "sha256": "c2c94222f4ca6debf0a3b27eeadc798f3777636b10de453f75104a422261750c"
+    },
+    "FALSIFIERS-T2.csv": {
+      "bytes": 4555030,
+      "sha256": "6a4bcdbe5de90570881605970fd1f3c80eee94790056e51d452a226c624e52e4"
+    },
+    "FALSIFIERS-T3.csv": {
+      "bytes": 4554075,
+      "sha256": "9527107f33172eaa4f8b88e44e8540c96e6a88d019e50b70b8c7c10ec6053405"
+    },
+    "FIBRE-TABLE.csv": {
+      "bytes": 3081,
+      "sha256": "1a8971d74424b8e3a6f75ffdd895de8f94832919259e2dd47cad8d9a2a0949bd"
+    },
+    "NATIVE-STEPS.csv": {
+      "bytes": 1051563,
+      "sha256": "a821aedf52252349ab1fa3544c68d00bd0eccac9b3a7376655a94a4c99329af1"
+    },
+    "RECEIVER-SURVIVORS.csv": {
+      "bytes": 27,
+      "sha256": "4aff7e615606d895172df212f146e85985104da0b0e2b0a74e8d0158363abd71"
+    }
+  },
+  "first_witness_stream_sha256": "786651ceb014457afbad949f7b2184e029a747c5225541c9e93ed6ce9c5fab81",
+  "full_native_seeds": 15625,
+  "full_native_steps": 46875,
+  "full_parameter_tuples_including_time": 438750000000,
+  "generator_projection_checks": 78125,
+  "input_time_checks": 5625000,
+  "integrity": {
+    "bound_bundle_files": 13,
+    "bound_public_source_files": 11,
+    "input_manifest_sha256": "ff17153e65f0ef8a61e2f423623d92adc58095320eab87b8266d6e24e81f1ea4",
+    "source_manifest_sha256": "23f6e936110afc5b0446eb6035286a1c28801b4ecae44534bc5e5506bd68b59b"
+  },
+  "projected_fibre_table_rows": 125,
+  "receiver_configurations": 75000,
+  "receiver_rejections_by_time": [
+    75000,
+    75000,
+    75000
+  ],
+  "receiver_survivors_by_s_and_time": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "receiver_survivors_by_time": [
+    0,
+    0,
+    0
+  ],
+  "receiver_time_configurations": 225000,
+  "schema": "native-early-contact-primary-v1"
+}
