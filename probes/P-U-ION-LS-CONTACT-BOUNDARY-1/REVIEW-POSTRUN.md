@@ -20,7 +20,7 @@ known; no blind discovery is claimed.
 
 The reviewer read the accepted model, proof, preregistration, source
 manifest, README, pre-execution review, both scientific programs, input
-manifest and actual EXPECTED.txt. The earlier logical source interface had
+manifest, actual EXPECTED.txt, RUN.md and RESULT.md. The earlier logical source interface had
 also been read during preparation. No scientific program was imported or
 executed in this review, and no predecessor dynamics were rerun. The only
 new file written by this reviewer is this review.
@@ -51,8 +51,12 @@ sha256: 166826f72f5e61bc70dee1b447d55fa46b0c4a34a290d43bfb9c3f38cddd2754
 
 It agrees with the execution record. Exit status, empty stderr and execution
 timing are read from the coordinator's record, not inferred from the stdout
-file alone. The later RUN.md/RESULT.md packaging and architecture checks
-remain separate coordinator responsibilities.
+file alone. RUN.md transcribes the same pin, accepted-file identities,
+readback-before-execution chronology and process output identity. RESULT.md
+keeps audit success distinct from the negative feasibility conclusion and
+from the missing physical certificate. No unsupported scope promotion was
+found in those two records. Architecture checks and their readback remain
+separate coordinator responsibilities; no CI success is asserted here.
 
 ## What the executed finite audit establishes
 
