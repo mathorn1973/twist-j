@@ -40,7 +40,12 @@ candidate-C status and run provenance. The proof retains candidate-T status
 pending public review. The prior mod-25 probe explicitly excluded partial-depth
 minimality; this note supplements it without changing that sealed probe.
 
-The separate new `P-J-LAMBDA6-DECODER-INTERFACE-1` supplies a public pre-run
+The separate `P-J-LAMBDA6-DECODER-INTERFACE-2` supplies a public pre-run
 contract for the total inverse, image recognition and J-induced forward and
 backward steps. The known depth results are explicitly disclosed inputs.
 Neither work establishes a native U contact or a physical apparatus.
+
+The unused ID1 public pin was closed as ABANDONED in PR #1350 after a
+review-metadata line-ending mismatch, before scientific execution. ID2
+preserves the same scientific scope with corrected exact-byte custody.
+The original archive and its original files are unaffected.

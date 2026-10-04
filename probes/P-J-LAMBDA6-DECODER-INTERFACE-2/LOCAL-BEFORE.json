@@ -1,0 +1,79 @@
+{
+  "pin_commit": "79c8cd3cdb7df40eedd59e12bf70832c8cbc4b2d",
+  "started_utc": "2026-10-03T23:26:18.162951+00:00",
+  "command": "python3 probes/P-J-LAMBDA6-DECODER-INTERFACE-2/verify.py",
+  "platform": "Windows 11",
+  "architecture": "x86_64",
+  "python": "3.12.10",
+  "inputs": {
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/.gitattributes": {
+      "sha256": "ee067aa1f8e562df8992cea7336adeb3d4a92988547284e0956ca073ae1fd94a",
+      "bytes": 48
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/COLLISIONS.md": {
+      "sha256": "6d6f911bc24a0f04ff2381efd7a9b611a81cb9930824e0e145cb8ae9ee16cd56",
+      "bytes": 7180
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/decoder.py": {
+      "sha256": "6b9545e392fb452c49a056244b4823ffacbdb804acd505513bff07a9d94a08ee",
+      "bytes": 6588
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/independent_decoder.py": {
+      "sha256": "10768304c469e6f6631c85b0307474d2dcc3fced84f09825aee999cb9b1b25ad",
+      "bytes": 14051
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/INPUTS.sha256": {
+      "sha256": "0411a673d1d514490a3745938c3a59d24f4809f5909663be08e062b48645e6b6",
+      "bytes": 1282
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/INTEGRATION.md": {
+      "sha256": "e110aff8a7bed663fb0078594e72ddcbc1a58da5b53e310e6cdcdffe2d6f1c9c",
+      "bytes": 2794
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/INTERFACE.md": {
+      "sha256": "eca1677cb211efd7d8229f202ce893a76596a3d04e721a551269d65325e6de38",
+      "bytes": 6309
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/PREREG.md": {
+      "sha256": "baa8a2e21aac9e41424acb7f2feef28e16d569f58b0303c55e53cc201e164550",
+      "bytes": 11442
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/primary.py": {
+      "sha256": "eb4e6c718cc3806c288828d7adb2084bf2ba19ffd778c902577dcd6c1e7a16a9",
+      "bytes": 14376
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/PROOF.md": {
+      "sha256": "58eabed3cec5cdeccffcb83ad03b68f0e5470e851fa3a87add2bbec11160bdbf",
+      "bytes": 14424
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/README.md": {
+      "sha256": "2b31a4bb6964fe2950a1586772ae799550810d6ce4c98cef83cdcc041f1e8ed5",
+      "bytes": 3295
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/REVIEW-FREEZE.json": {
+      "sha256": "c662fad63b3073095e2bd757b27a3a156b4b2cbfcfe70d3cc9447d7acc9fb9e6",
+      "bytes": 1581
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/REVIEW-PREREG.md": {
+      "sha256": "53b1a99a94090889b5833fd9fba61ed91365b540cae52357811bad82e819a60e",
+      "bytes": 7625
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/REVIEW-STATIC.md": {
+      "sha256": "531caa59485a2906f6b1c814503351806159bb365132b8ef22a12e5da254aca5",
+      "bytes": 11764
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/SOURCE.json": {
+      "sha256": "43f663698156f510733d848a109fb75bdc62ff999cb84c31a814fdb360fb681a",
+      "bytes": 4069
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/SUCCESSOR-REVIEW.md": {
+      "sha256": "0fc8e415d4b8f6a9481172f1943ab3934ea229feb0cb6364423a1cea79decc85",
+      "bytes": 4453
+    },
+    "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/verify.py": {
+      "sha256": "9e3b4af0fcfb680500fc04f7343ffe8f7f82bb24e893258523d2b2d6bd5f7625",
+      "bytes": 3892
+    }
+  },
+  "public_pin_readback": "Coordinator confirmed remote commit and exact branch before invocation"
+}
