@@ -1,0 +1,950 @@
+{
+  "completed_utc": "2026-10-04T00:18:42.795999+00:00",
+  "base": "5e872c22a18043c8126945a982efad55472cea82",
+  "prs": [
+    {
+      "pr": 1350,
+      "head": "32c8ffe2fa4d08f2b74b6af5d1f42fe68382c0b8",
+      "pin": "561679f65aa4b0a534cd94129fe243ac8fc9936b",
+      "changes": [
+        "A\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/CAPACITY-REVIEW.md",
+        "A\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/ORIGINAL-SHA256SUMS",
+        "A\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/README.md",
+        "A\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/STRUCTURAL-PROOF.md",
+        "A\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/ramified-decoder-20261003-review.zip",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/COLLISIONS.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/INPUTS.sha256",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/INTEGRATION.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/INTERFACE.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/PREREG.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/PROOF.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/README.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/RESULT.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/REVIEW-FREEZE.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/REVIEW-PREREG.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/REVIEW-STATIC.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/SOURCE.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/decoder.py",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/independent_decoder.py",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/primary.py",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/verify.py"
+      ],
+      "post_pin_changes": [
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-1/RESULT.md"
+      ],
+      "manifest_entries": [
+        {
+          "path": "COLLISIONS.md",
+          "bytes": 7180,
+          "sha256": "6d6f911bc24a0f04ff2381efd7a9b611a81cb9930824e0e145cb8ae9ee16cd56",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "decoder.py",
+          "bytes": 6588,
+          "sha256": "6b9545e392fb452c49a056244b4823ffacbdb804acd505513bff07a9d94a08ee",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "independent_decoder.py",
+          "bytes": 14051,
+          "sha256": "10768304c469e6f6631c85b0307474d2dcc3fced84f09825aee999cb9b1b25ad",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "INTEGRATION.md",
+          "bytes": 2495,
+          "sha256": "79b17610914c1c7e60d2ebfb6c4604a7d642b7c21b910dcdcf595609fd713e7e",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "INTERFACE.md",
+          "bytes": 6309,
+          "sha256": "498f9e9567067a6b3a39177e2581a3755255400982b3e9080b54e3b6df39eb48",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "PREREG.md",
+          "bytes": 10582,
+          "sha256": "349c58d2e719a6a4a1430aab575a9343e2a968c202d97b4ac9236c3f00e68c2d",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "primary.py",
+          "bytes": 14376,
+          "sha256": "007ec2b4fef187926cb24b0ace72515ee65055da23f377e4c3c35d0802a4c9e9",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "PROOF.md",
+          "bytes": 14424,
+          "sha256": "6b68542f63e6a13892c00963faad1df8c126b2fc706205f848cca387445e7215",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "README.md",
+          "bytes": 3295,
+          "sha256": "9a994ecbfcb51fa3cb3aabc7c2fe5260e2c67ff0ff4b614af0d026eed1bb650e",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "REVIEW-FREEZE.json",
+          "bytes": 1546,
+          "sha256": "5ba9763ff7ac5f402e194c8ae14974f71f9c39a2ceedebefe97cb794fd01da98",
+          "manifest_ok": false,
+          "pin_unchanged": true
+        },
+        {
+          "path": "REVIEW-PREREG.md",
+          "bytes": 7625,
+          "sha256": "53b1a99a94090889b5833fd9fba61ed91365b540cae52357811bad82e819a60e",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "REVIEW-STATIC.md",
+          "bytes": 10152,
+          "sha256": "6918da0dce2b5e35b8928e7e2159f06ce75c87856ea0f368d7083aa56c96f562",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "SOURCE.json",
+          "bytes": 4069,
+          "sha256": "43f663698156f510733d848a109fb75bdc62ff999cb84c31a814fdb360fb681a",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "verify.py",
+          "bytes": 3892,
+          "sha256": "9e3b4af0fcfb680500fc04f7343ffe8f7f82bb24e893258523d2b2d6bd5f7625",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        }
+      ],
+      "files": [
+        {
+          "path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/CAPACITY-REVIEW.md",
+          "bytes": 6552,
+          "blob": "5fef549c97492c5f587f2947e652b767438efe3c"
+        },
+        {
+          "path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/ORIGINAL-SHA256SUMS",
+          "bytes": 5566,
+          "blob": "5c1f20381d3d778546d39e35e325f0bb67c9809e"
+        },
+        {
+          "path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/README.md",
+          "bytes": 2465,
+          "blob": "81af8a39c0c4382ba30405136aa370e53a21de94"
+        },
+        {
+          "path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/STRUCTURAL-PROOF.md",
+          "bytes": 10479,
+          "blob": "20ae0081d5f7bd06849588f3ce86579a4671c3fd"
+        },
+        {
+          "path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/ramified-decoder-20261003-review.zip",
+          "bytes": 326174,
+          "blob": "86605657c94e1cb3dfbdf3234b5111e70d1c1095"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/COLLISIONS.md",
+          "bytes": 7180,
+          "blob": "063a93dee37bc9c3019acee7720f5323379edf08"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/INPUTS.sha256",
+          "bytes": 1115,
+          "blob": "3c2395e0b7208fb06b9e2eab170bad39ab95ef1e"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/INTEGRATION.md",
+          "bytes": 2495,
+          "blob": "44ba8f0e002dec63acfec0d184f17c679c7c1a3e"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/INTERFACE.md",
+          "bytes": 6309,
+          "blob": "bc953bf1e84eb6bafd2ce057dd6cd7583bb3163e"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/PREREG.md",
+          "bytes": 10582,
+          "blob": "aa4c5a194c98045b62e15bc7832012cdfe4c28d1"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/PROOF.md",
+          "bytes": 14424,
+          "blob": "10811937b18974a191c4c9e603178748ec2530af"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/README.md",
+          "bytes": 3295,
+          "blob": "83a2528e999a72377b9bf4d8c15da042c81b1d8e"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/RESULT.md",
+          "bytes": 1295,
+          "blob": "bca4bc0dc61890455f2943a3a76cffb86a79c216"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/REVIEW-FREEZE.json",
+          "bytes": 1546,
+          "blob": "0ed95f8424ba1a64c9717d5af064ad017bee28a4"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/REVIEW-PREREG.md",
+          "bytes": 7625,
+          "blob": "ef26f4995bb462f19b98e8ea7e6ec8fd382c3951"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/REVIEW-STATIC.md",
+          "bytes": 10152,
+          "blob": "a6849e708a698e5b4c861fe468405c90f393bb1e"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/SOURCE.json",
+          "bytes": 4069,
+          "blob": "8eb878b97b10f3f60b084279a8eedb5e86000abc"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/decoder.py",
+          "bytes": 6588,
+          "blob": "74a17bb180a5159686b206dbe21047efee6e855b"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/independent_decoder.py",
+          "bytes": 14051,
+          "blob": "e9bf854c7b3ed580867cb67a1438d806bbb74e43"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/primary.py",
+          "bytes": 14376,
+          "blob": "13817e4e84c4315f2e54ba1e2a16879ddf64b7ec"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-1/verify.py",
+          "bytes": 3892,
+          "blob": "7e6bc82ec9893a5a8df4e7cc83ad90c124c0d303"
+        }
+      ]
+    },
+    {
+      "pr": 1351,
+      "head": "e051d3ec28b69efe66d874d9191e6efaffd51905",
+      "pin": "9754d85622844d40212288d2204fc240e6cd8e31",
+      "changes": [
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/.gitattributes",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/CI-VERIFICATION.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/COLLISIONS.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/EXPECTED.txt",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/INPUTS.sha256",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/INTEGRATION.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-BEFORE.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-RUN.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-STDERR.txt",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-STDOUT.txt",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/POSTRUN-NATIVE-COMPARISON.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/POSTRUN-NATIVE.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/PREREG.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/PROOF.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/README.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/RESULT.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-FREEZE.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-PREREG.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-STATIC.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/RUN.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/SOURCE.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FALSIFIERS-T1.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FALSIFIERS-T2.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FALSIFIERS-T3.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FIBRE-TABLE.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/INDEPENDENT-FIBRE-ACTIONS.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/INDEPENDENT-FULL-HISTORIES.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/INDEPENDENT-SUMMARY.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/NATIVE-STEPS.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/PRIMARY-SUMMARY.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/RECEIVER-SURVIVORS.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/SHA256SUMS",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/independent_native.py",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/primary.py",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/verify.py"
+      ],
+      "post_pin_changes": [
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/CI-VERIFICATION.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/EXPECTED.txt",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-BEFORE.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-RUN.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-STDERR.txt",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-STDOUT.txt",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/POSTRUN-NATIVE-COMPARISON.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/POSTRUN-NATIVE.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/RESULT.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/RUN.md",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FALSIFIERS-T1.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FALSIFIERS-T2.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FALSIFIERS-T3.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FIBRE-TABLE.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/INDEPENDENT-FIBRE-ACTIONS.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/INDEPENDENT-FULL-HISTORIES.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/INDEPENDENT-SUMMARY.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/NATIVE-STEPS.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/PRIMARY-SUMMARY.json",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/RECEIVER-SURVIVORS.csv",
+        "A\tprobes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/SHA256SUMS"
+      ],
+      "manifest_entries": [
+        {
+          "path": ".gitattributes",
+          "bytes": 48,
+          "sha256": "ee067aa1f8e562df8992cea7336adeb3d4a92988547284e0956ca073ae1fd94a",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "COLLISIONS.md",
+          "bytes": 7180,
+          "sha256": "6d6f911bc24a0f04ff2381efd7a9b611a81cb9930824e0e145cb8ae9ee16cd56",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "independent_native.py",
+          "bytes": 9058,
+          "sha256": "f12bbe502c218ca549c7f72fed69d996c7f562c6db9c71e4efd4c0c4225a2fc1",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "INTEGRATION.md",
+          "bytes": 2906,
+          "sha256": "008a313c41bc94a073731a3a1cc2acf23c30cf0354be49f1dae576b06eadfaa3",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "PREREG.md",
+          "bytes": 14667,
+          "sha256": "4a8600901c5bacacb354a63a21474c228d70a4a5389c29918429ebe0bdb2579c",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "primary.py",
+          "bytes": 16033,
+          "sha256": "7e3b422d0ebb5a510cfc469b9962d24cbc9ebd14da53d1949a50ca39e26887e1",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "PROOF.md",
+          "bytes": 7998,
+          "sha256": "915a7ec56e461eec0a5a9e8268fc863fd3096dbfa47cf22c40b760ecbe79f60b",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "README.md",
+          "bytes": 3889,
+          "sha256": "66658dccabdf7a9364837cf1f1d505261223373c90b843a2fc5378926f940134",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "REVIEW-FREEZE.json",
+          "bytes": 1581,
+          "sha256": "c662fad63b3073095e2bd757b27a3a156b4b2cbfcfe70d3cc9447d7acc9fb9e6",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "REVIEW-PREREG.md",
+          "bytes": 7625,
+          "sha256": "53b1a99a94090889b5833fd9fba61ed91365b540cae52357811bad82e819a60e",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "REVIEW-STATIC.md",
+          "bytes": 11764,
+          "sha256": "531caa59485a2906f6b1c814503351806159bb365132b8ef22a12e5da254aca5",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "SOURCE.json",
+          "bytes": 1757,
+          "sha256": "23f6e936110afc5b0446eb6035286a1c28801b4ecae44534bc5e5506bd68b59b",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "verify.py",
+          "bytes": 3891,
+          "sha256": "58a9ce2a846572842927f2fb18307a30bd7fe216b16233af3c35f53e319191c4",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        }
+      ],
+      "files": [
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/.gitattributes",
+          "bytes": 48,
+          "blob": "7e7bc417a57052ea5cb292031566a1434f747497"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/CI-VERIFICATION.md",
+          "bytes": 1461,
+          "blob": "ffa206846dbdf50e0bd54f2bf10545fa5d76beaa"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/COLLISIONS.md",
+          "bytes": 7180,
+          "blob": "063a93dee37bc9c3019acee7720f5323379edf08"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/EXPECTED.txt",
+          "bytes": 2377,
+          "blob": "e2a429d6905afac207accff9a90f6f4db7edf03f"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/INPUTS.sha256",
+          "bytes": 1039,
+          "blob": "7fabfd984a1abb0ead32b29eb101ce405719ca13"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/INTEGRATION.md",
+          "bytes": 2906,
+          "blob": "1413e68abaf5668fbbf5a4bd40a737c796736265"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-BEFORE.json",
+          "bytes": 2822,
+          "blob": "c5c972fe2fcee97ff89f66ca0d16ee7b1575a41b"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-RUN.json",
+          "bytes": 770,
+          "blob": "b186ec151d395f1b4e4896793aa50687876eb0ee"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-STDERR.txt",
+          "bytes": 0,
+          "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/LOCAL-STDOUT.txt",
+          "bytes": 2377,
+          "blob": "e2a429d6905afac207accff9a90f6f4db7edf03f"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/POSTRUN-NATIVE-COMPARISON.json",
+          "bytes": 3155,
+          "blob": "9e0ac4c597a29a5fd341d063e4be76a9aa7370aa"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/POSTRUN-NATIVE.md",
+          "bytes": 5012,
+          "blob": "d03b84179cecf7f53c2c9f5c9dae4a03db264073"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/PREREG.md",
+          "bytes": 14667,
+          "blob": "05d8f46bc9b94d904395b4a4eddbbabe0be4188f"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/PROOF.md",
+          "bytes": 7998,
+          "blob": "f716a68359553f28643f919075e0e2c392d25c9d"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/README.md",
+          "bytes": 3889,
+          "blob": "f2b09c69712c9a41e1036cef208515b4386abe9b"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/RESULT.md",
+          "bytes": 7937,
+          "blob": "f794c232c57a5e4a5a816d412d564067f3da1815"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-FREEZE.json",
+          "bytes": 1581,
+          "blob": "5907c68af1d2c8620590b26abc7515325d626e9d"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-PREREG.md",
+          "bytes": 7625,
+          "blob": "ef26f4995bb462f19b98e8ea7e6ec8fd382c3951"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-STATIC.md",
+          "bytes": 11764,
+          "blob": "f2d9d4913c32e54e24aadf535c45cd3bda8b818a"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/RUN.md",
+          "bytes": 1343,
+          "blob": "3c731fe6c5dea5b21b0ac713b110f952bebbb904"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/SOURCE.json",
+          "bytes": 1757,
+          "blob": "4c0b95899cb47602363a5cc165c3b54c6307f83c"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FALSIFIERS-T1.csv",
+          "bytes": 4554977,
+          "blob": "6ceec67bc600761d2c6688c63bc86dcc40da1ad7"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FALSIFIERS-T2.csv",
+          "bytes": 4555030,
+          "blob": "769d1d67364254e29f34671b28617d425127f754"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FALSIFIERS-T3.csv",
+          "bytes": 4554075,
+          "blob": "201dd1f8c00b8d5ecf1bb4be3266748f9fcb6294"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/FIBRE-TABLE.csv",
+          "bytes": 3081,
+          "blob": "7b5c4f83dad2a849ebb23f53967e291e1b4b8c53"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/INDEPENDENT-FIBRE-ACTIONS.json",
+          "bytes": 230,
+          "blob": "c90772c56557d35b7e828a7235e877afd353a4da"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/INDEPENDENT-FULL-HISTORIES.json",
+          "bytes": 2156253,
+          "blob": "0f8b1004ac0fc0b53e638b612485c43e270e559a"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/INDEPENDENT-SUMMARY.json",
+          "bytes": 682,
+          "blob": "1df89d3a2f9836d0182005435ecfcb884bf8eaa7"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/NATIVE-STEPS.csv",
+          "bytes": 1051563,
+          "blob": "4938c122b912c49798973ae5cdb8304f3e89c503"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/PRIMARY-SUMMARY.json",
+          "bytes": 1983,
+          "blob": "450c391e5869ea9f416d1bc78b41cae0ecbb74eb"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/RECEIVER-SURVIVORS.csv",
+          "bytes": 27,
+          "blob": "7979135ba2d3741484b765ca7edab320fbb21c46"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/evidence/SHA256SUMS",
+          "bytes": 879,
+          "blob": "5bd3f1d42c49f1a9e0d8496687dc83ef5993f836"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/independent_native.py",
+          "bytes": 9058,
+          "blob": "807d307e808bb1b79b1b1b83fc6a669aa8417a06"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/primary.py",
+          "bytes": 16033,
+          "blob": "c4533616e3842a2499ca74c1854872e98860d3e1"
+        },
+        {
+          "path": "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/verify.py",
+          "bytes": 3891,
+          "blob": "4259966e3a2425e91f15a8d6c82289d928725b47"
+        }
+      ]
+    },
+    {
+      "pr": 1352,
+      "head": "2cd6b6e9a8379e2524b0a61fb8cb9528b8ba11a2",
+      "pin": "79c8cd3cdb7df40eedd59e12bf70832c8cbc4b2d",
+      "changes": [
+        "A\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/CAPACITY-REVIEW.md",
+        "A\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/ORIGINAL-SHA256SUMS",
+        "A\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/README.md",
+        "A\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/STRUCTURAL-PROOF.md",
+        "A\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/ramified-decoder-20261003-review.zip",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/.gitattributes",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/CI-VERIFICATION.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/COLLISIONS.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/EXPECTED.txt",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/INDEPENDENT-SUMMARY.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/INPUTS.sha256",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/INTEGRATION.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/INTERFACE.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-BEFORE.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-RUN.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-STDERR.txt",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-STDOUT.txt",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/POSTRUN-DECODER-CUSTODY.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/POSTRUN-DECODER.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/PREREG.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/PROOF.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/README.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/RESULT.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/REVIEW-FREEZE.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/REVIEW-PREREG.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/REVIEW-STATIC.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/RUN.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/SOURCE.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/SUCCESSOR-REVIEW.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/decoder.py",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/independent_decoder.py",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/primary.py",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/verify.py"
+      ],
+      "post_pin_changes": [
+        "M\tnotes/C-J-RAMIFIED-DECODER-DEPTH-N/README.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/CI-VERIFICATION.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/EXPECTED.txt",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/INDEPENDENT-SUMMARY.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-BEFORE.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-RUN.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-STDERR.txt",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-STDOUT.txt",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/POSTRUN-DECODER-CUSTODY.json",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/POSTRUN-DECODER.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/RESULT.md",
+        "A\tprobes/P-J-LAMBDA6-DECODER-INTERFACE-2/RUN.md"
+      ],
+      "manifest_entries": [
+        {
+          "path": ".gitattributes",
+          "bytes": 48,
+          "sha256": "ee067aa1f8e562df8992cea7336adeb3d4a92988547284e0956ca073ae1fd94a",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "COLLISIONS.md",
+          "bytes": 7180,
+          "sha256": "6d6f911bc24a0f04ff2381efd7a9b611a81cb9930824e0e145cb8ae9ee16cd56",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "decoder.py",
+          "bytes": 6588,
+          "sha256": "6b9545e392fb452c49a056244b4823ffacbdb804acd505513bff07a9d94a08ee",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "independent_decoder.py",
+          "bytes": 14051,
+          "sha256": "10768304c469e6f6631c85b0307474d2dcc3fced84f09825aee999cb9b1b25ad",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "INTEGRATION.md",
+          "bytes": 2794,
+          "sha256": "e110aff8a7bed663fb0078594e72ddcbc1a58da5b53e310e6cdcdffe2d6f1c9c",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "INTERFACE.md",
+          "bytes": 6309,
+          "sha256": "eca1677cb211efd7d8229f202ce893a76596a3d04e721a551269d65325e6de38",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "PREREG.md",
+          "bytes": 11442,
+          "sha256": "baa8a2e21aac9e41424acb7f2feef28e16d569f58b0303c55e53cc201e164550",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "primary.py",
+          "bytes": 14376,
+          "sha256": "eb4e6c718cc3806c288828d7adb2084bf2ba19ffd778c902577dcd6c1e7a16a9",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "PROOF.md",
+          "bytes": 14424,
+          "sha256": "58eabed3cec5cdeccffcb83ad03b68f0e5470e851fa3a87add2bbec11160bdbf",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "README.md",
+          "bytes": 3295,
+          "sha256": "2b31a4bb6964fe2950a1586772ae799550810d6ce4c98cef83cdcc041f1e8ed5",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "REVIEW-FREEZE.json",
+          "bytes": 1581,
+          "sha256": "c662fad63b3073095e2bd757b27a3a156b4b2cbfcfe70d3cc9447d7acc9fb9e6",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "REVIEW-PREREG.md",
+          "bytes": 7625,
+          "sha256": "53b1a99a94090889b5833fd9fba61ed91365b540cae52357811bad82e819a60e",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "REVIEW-STATIC.md",
+          "bytes": 11764,
+          "sha256": "531caa59485a2906f6b1c814503351806159bb365132b8ef22a12e5da254aca5",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "SOURCE.json",
+          "bytes": 4069,
+          "sha256": "43f663698156f510733d848a109fb75bdc62ff999cb84c31a814fdb360fb681a",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "SUCCESSOR-REVIEW.md",
+          "bytes": 4453,
+          "sha256": "0fc8e415d4b8f6a9481172f1943ab3934ea229feb0cb6364423a1cea79decc85",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        },
+        {
+          "path": "verify.py",
+          "bytes": 3892,
+          "sha256": "9e3b4af0fcfb680500fc04f7343ffe8f7f82bb24e893258523d2b2d6bd5f7625",
+          "manifest_ok": true,
+          "pin_unchanged": true
+        }
+      ],
+      "files": [
+        {
+          "path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/CAPACITY-REVIEW.md",
+          "bytes": 6552,
+          "blob": "5fef549c97492c5f587f2947e652b767438efe3c"
+        },
+        {
+          "path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/ORIGINAL-SHA256SUMS",
+          "bytes": 5566,
+          "blob": "5c1f20381d3d778546d39e35e325f0bb67c9809e"
+        },
+        {
+          "path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/README.md",
+          "bytes": 2734,
+          "blob": "c1a96bc5b868c4ae93f55b2cfdee7c25a6d23690"
+        },
+        {
+          "path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/STRUCTURAL-PROOF.md",
+          "bytes": 10479,
+          "blob": "20ae0081d5f7bd06849588f3ce86579a4671c3fd"
+        },
+        {
+          "path": "notes/C-J-RAMIFIED-DECODER-DEPTH-N/ramified-decoder-20261003-review.zip",
+          "bytes": 326174,
+          "blob": "86605657c94e1cb3dfbdf3234b5111e70d1c1095"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/.gitattributes",
+          "bytes": 48,
+          "blob": "7e7bc417a57052ea5cb292031566a1434f747497"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/CI-VERIFICATION.md",
+          "bytes": 1497,
+          "blob": "541790623a423b0703b2154585758e6a4f1fa642"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/COLLISIONS.md",
+          "bytes": 7180,
+          "blob": "063a93dee37bc9c3019acee7720f5323379edf08"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/EXPECTED.txt",
+          "bytes": 1249,
+          "blob": "70cc592790697828f060fc6c9d398a4c8dc7c473"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/INDEPENDENT-SUMMARY.json",
+          "bytes": 449,
+          "blob": "60cdc07f35a1b0e21884a5a55c55947ce254df33"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/INPUTS.sha256",
+          "bytes": 1282,
+          "blob": "23f7fabdbf04296344ae7bb14910ccc887014b37"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/INTEGRATION.md",
+          "bytes": 2794,
+          "blob": "de27ee0d06e9123e0f99db774c12c012a6bd0296"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/INTERFACE.md",
+          "bytes": 6309,
+          "blob": "b87d4a2758ad678217bce889ddd0fec173e8fa87"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-BEFORE.json",
+          "bytes": 3331,
+          "blob": "146048c159505a740df3fb3401db7ebcf9bbef9b"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-RUN.json",
+          "bytes": 769,
+          "blob": "8b570e0e17d43ef1842ffb12e6c29a8cc4a22127"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-STDERR.txt",
+          "bytes": 0,
+          "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/LOCAL-STDOUT.txt",
+          "bytes": 1249,
+          "blob": "70cc592790697828f060fc6c9d398a4c8dc7c473"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/POSTRUN-DECODER-CUSTODY.json",
+          "bytes": 2797,
+          "blob": "7d93b64f0ed9b382bf22d922f19a7af91066509d"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/POSTRUN-DECODER.md",
+          "bytes": 5576,
+          "blob": "82a348d471ce3d9534c25a80d0c7d4cc146f6bce"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/PREREG.md",
+          "bytes": 11442,
+          "blob": "99e1ae1773d0d5782056c340f1a812c33e14f62a"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/PROOF.md",
+          "bytes": 14424,
+          "blob": "f3f1d2f638cfd8c1c3d2648a7ac9e06e7e73d87c"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/README.md",
+          "bytes": 3295,
+          "blob": "6c99847c0016f1599da1ffd36a127adbfe47681f"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/RESULT.md",
+          "bytes": 7627,
+          "blob": "e618f231f2be546e776565014132ce6effef82f2"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/REVIEW-FREEZE.json",
+          "bytes": 1581,
+          "blob": "5907c68af1d2c8620590b26abc7515325d626e9d"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/REVIEW-PREREG.md",
+          "bytes": 7625,
+          "blob": "ef26f4995bb462f19b98e8ea7e6ec8fd382c3951"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/REVIEW-STATIC.md",
+          "bytes": 11764,
+          "blob": "f2d9d4913c32e54e24aadf535c45cd3bda8b818a"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/RUN.md",
+          "bytes": 1397,
+          "blob": "37e881da59258f57adff030efcba61e73c76e943"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/SOURCE.json",
+          "bytes": 4069,
+          "blob": "8eb878b97b10f3f60b084279a8eedb5e86000abc"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/SUCCESSOR-REVIEW.md",
+          "bytes": 4453,
+          "blob": "d590d305d8132f4f495ead26a5a9cdbef1246605"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/decoder.py",
+          "bytes": 6588,
+          "blob": "74a17bb180a5159686b206dbe21047efee6e855b"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/independent_decoder.py",
+          "bytes": 14051,
+          "blob": "e9bf854c7b3ed580867cb67a1438d806bbb74e43"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/primary.py",
+          "bytes": 14376,
+          "blob": "b1a600e1a25772178a6be57f02a93709b80dd832"
+        },
+        {
+          "path": "probes/P-J-LAMBDA6-DECODER-INTERFACE-2/verify.py",
+          "bytes": 3892,
+          "blob": "7e6bc82ec9893a5a8df4e7cc83ad90c124c0d303"
+        }
+      ]
+    }
+  ],
+  "archive": {
+    "bytes": 326174,
+    "sha256": "fc8039593484abda4fd573b0aa3e900158bf1e2d4529c87c66daf68a3487b208",
+    "members": 63,
+    "safe_paths": true
+  },
+  "authority": {
+    "STATUS.md": {
+      "bytes": 2386,
+      "sha256": "f3a555e6479012a575e623f812c8a3d892f13ecef1231599b066d31332b3bee3"
+    },
+    "POLICY.md": {
+      "bytes": 16964,
+      "sha256": "7771a4a4dc8ab98d6525c202326873c7c3ff782475dd66c7dc75fa325566ee9c"
+    },
+    "AGENTS.md": {
+      "bytes": 21813,
+      "sha256": "7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1"
+    },
+    "canon/CORE.md": {
+      "bytes": 23703,
+      "sha256": "2cef2b279d6d1e88652bf87bed56b910bc89e381aebc91beedc42d5186555bb9"
+    },
+    "canon/FRONTIER.md": {
+      "bytes": 26162,
+      "sha256": "23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9"
+    },
+    "canon/CANON.md": {
+      "bytes": 897762,
+      "sha256": "257f83a386aad7d309f7017bd719b6212e3cffea60e4986caa5169d6543f108d"
+    },
+    "canon/REGISTRY.tsv": {
+      "bytes": 491203,
+      "sha256": "d9f4dd61f1c57eb502be95870bd6104a149c451c81355f78d2a6fcd10946b3de"
+    }
+  }
+}
