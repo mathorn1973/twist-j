@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v97. Normative authority and activation
+**Release identity:** Public Canon v98. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v97 also declares a discrete architecture. It does not
+Public Canon v98 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -191,6 +191,21 @@ pure baths and abstract tick. They do not select one actual result, derive
 an occurrence measure, implement native U, or close a physical apparatus
 owner. In particular a supported WRITE, occupied archive and actual
 LOW/HIGH event are distinct; the last remains unprovided by this construction.
+
+A retained archive is now separated from predictive Hodge memory by six
+conditional L1 theorems. Faithful native continuation and a direct present
+reading force the axial memory to factor through the original data and
+counter. For a
+specified passive-archive family, the connected light-shift responses admit
+no nonzero affine Hodge reading at the stated nondegenerate profiles; an
+exact finite response graph decides arbitrary nonlinear readings and gives
+both compatible and obstructed profiles. Nonlinear scores of joint outcomes
+remain mixture-linear, but at those nondegenerate profiles nonzero compatible
+scores cannot be recovered from only six means over the full declared mixture
+family. Code-subspace
+transport retains its separate unitary premise. These results select no
+calibrated profile, detector, postmeasurement continuation, four physical
+coordinates or physical time; the existing apparatus obligations remain open.
 
 Three decisions have exact dispositions. The complete measurable
 product-source Route A is empty, so ENTROPY-LAYER-BRIDGE closes at F with

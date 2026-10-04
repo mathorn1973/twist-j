@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v97
+historical guards: exact reconstructed v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v98
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -138,5 +138,10 @@ PASS 133 V97-PRIOR-BYTES thirteen complete v97 inputs reconstruct exact public v
 PASS 134 V97-FIVE-PROOFS five conditional L1 theorem rows bind exact scopes, complete inline proofs, one selected definition and exact premise/declaration additions
 PASS 135 V97-OCCURRENCE-BOUNDARY all 487 prior rows and 25 H/O owners remain exact; supplied complex instruments and zero control error derive no actual occurrence law or native-U realization
 PASS 136 V97-REPLAY-INVENTORY eight exact author/reviewer replay sources extend the 24-directory historical inventory to 32; custody adds no scientific premise
+PASS 137 V98-PRIOR-BYTES thirteen complete v98 inputs reconstruct exact public v97 before all 136 unchanged historical guards
+PASS 138 V98-SIX-PROOFS six conditional L1 theorem declarations bind exact scopes, the complete inline proof block, one definition and all new ledger rows
+PASS 139 V98-OBSERVATION-DOMAIN pinned proof text retains the six-score record, fixed native horizon, affine scope and finite nonlinear response-fibre boundary
+PASS 140 V98-MEASUREMENT-SCOPE pinned proof text distinguishes joint-shot scores from six means and retains full-simplex and conditional code-transport assumptions
+PASS 141 V98-OPEN-BOUNDARY all 492 prior rows and 25 H/O owners remain exact; gates, programs, CORE selection and 32 reproduction directories are unchanged
 
-RESULT 136/136 ALL PASS
+RESULT 141/141 ALL PASS

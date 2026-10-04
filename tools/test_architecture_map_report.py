@@ -25,16 +25,16 @@ class ArchitectureMapReportTests(unittest.TestCase):
 
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v97 adds five inline T claims and one selected packet definition.
-        self.assertEqual(self.report.claims, 492)
+        # v98 adds six conditional inline T claims and one readout-domain definition.
+        self.assertEqual(self.report.claims, 498)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 350},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 356},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 79,
+                "none": 85,
                 "one-architecture": 9,
                 "recorded-audit": 31,
                 "two-architecture": 373,
@@ -45,7 +45,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 200)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 339
+            len(self.report.transitive_architecture_dependents), 344
         )
         self.assertEqual(len(self.report.dependency_terminals), 69)
         # v95 adds ten inline theorems (architecture_requirement=none).
@@ -81,6 +81,53 @@ class ArchitectureMapReportTests(unittest.TestCase):
         requires = architecture.dependency_graph(
             (row["item_id"] for row in normative), dependencies, "REQUIRES"
         )
+        # v98 adds seven declared items and fifteen exact premise edges.
+        # Five Hodge comparisons reach DEF-ARCHITECTURE through their
+        # existing Hodge premises; the readout definition and LS response
+        # do not. This records the graph, not physical independence.
+        v98_edges = {
+            "DEF-U-ION-HODGE-READOUT-DOMAIN": {
+                "DEF-AUTONOMOUS-STATE",
+            },
+            "U-HODGE-FAITHFUL-DIRECT-MEMORY": {
+                "DEF-U-ION-HODGE-READOUT-DOMAIN",
+                "J-HODGE-SEMILINEAR-MEMORY",
+            },
+            "ION-LS-CONNECTED-RESPONSE": {
+                "DEF-U-ION-HODGE-READOUT-DOMAIN",
+            },
+            "U-ION-HODGE-AFFINE-OBSTRUCTION": {
+                "DEF-U-ION-HODGE-READOUT-DOMAIN",
+                "ION-LS-CONNECTED-RESPONSE",
+                "J-HODGE-HERM2-LOXODROME",
+            },
+            "U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION": {
+                "DEF-U-ION-HODGE-READOUT-DOMAIN",
+                "ION-LS-CONNECTED-RESPONSE",
+                "J-HODGE-HERM2-LOXODROME",
+            },
+            "U-ION-HODGE-MEAN-SUFFICIENCY": {
+                "DEF-U-ION-HODGE-READOUT-DOMAIN",
+                "U-ION-HODGE-AFFINE-OBSTRUCTION",
+            },
+            "U-ION-HODGE-SCORED-CODE-TRANSPORT": {
+                "DEF-U-ION-HODGE-READOUT-DOMAIN",
+                "ION-LS-CONNECTED-RESPONSE",
+                "J-HODGE-SEMILINEAR-MEMORY",
+            },
+        }
+        v98_without_architecture_path = {
+            "DEF-U-ION-HODGE-READOUT-DOMAIN",
+            "ION-LS-CONNECTED-RESPONSE",
+        }
+        for item, expected in v98_edges.items():
+            self.assertEqual(requires[item], expected)
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertNotIn(item, self.report.dependency_terminals)
+            self.assertEqual(
+                item in self.report.transitive_architecture_dependents,
+                item not in v98_without_architecture_path,
+            )
         definition = "DEF-FIELD-WORK-RECORD-CHAIN"
         law = "FIELD-CONSERVATIVE-CHAIN-LAW"
         work = "FIELD-CHAIN-FIRST-WORK"
