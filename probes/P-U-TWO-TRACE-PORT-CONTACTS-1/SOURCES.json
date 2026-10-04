@@ -1,0 +1,61 @@
+{
+  "probe": "P-U-TWO-TRACE-PORT-CONTACTS-1",
+  "owner": "A. M. Thorn",
+  "reservation": "https://github.com/mathorn1973/twist-j/issues/1353",
+  "source_status": "Public Canon v97 normative formulas; explicitly attributed noncanonical prior programmes. No prior scientific program is imported.",
+  "baseline_commit": "5e872c22a18043c8126945a982efad55472cea82",
+  "runtime_source_policy": "All native coordinate formulas and the counter selector are explicit in primary.py. Source provenance is static; no remote service, full Canon file, local archive or future Git HEAD is a scientific runtime input.",
+  "normative_sources": [
+    {
+      "path": "canon/CANON.md",
+      "git_blob": "432640bce89514fd6a15f63f840d4f2cab9d7a86",
+      "bytes": 897762,
+      "sha256": "257f83a386aad7d309f7017bd719b6212e3cffea60e4986caa5169d6543f108d",
+      "url": "https://github.com/mathorn1973/twist-j/blob/5e872c22a18043c8126945a982efad55472cea82/canon/CANON.md",
+      "sections": ["Native selector/counter definition, lines 443-468", "Full generators a,b,c,d,e, lines 577-584"],
+      "usage": "Exact six-coordinate native generators, theta_n=popcount(n) mod2, selected index z+2theta mod5, monotone counter. Git-byte hash is provenance, not a whole-file runtime dependency."
+    }
+  ],
+  "inherited_write": [
+    {
+      "url": "https://github.com/mathorn1973/twist-j/issues/987#issuecomment-5652485189",
+      "comment_body_utf8_bytes": 7777,
+      "comment_body_utf8_sha256": "b1256550e560037688d4a5549919ac32faae825684fdaac9da5729e7afb0d4c1",
+      "original_source_audit_py_bytes": 7159,
+      "original_source_audit_py_sha256": "9ae734494bda9de4b40f4c096964aa2c65a604516249a5e45979eaed4c3a2886",
+      "usage": "Original carry-write audit freeze. No execution or import of that old program in the present verifier."
+    },
+    {
+      "url": "https://github.com/mathorn1973/twist-j/issues/987#issuecomment-5652509288",
+      "comment_body_utf8_bytes": 13086,
+      "comment_body_utf8_sha256": "9973d1c342f0538c23d0e82e16a4e692774a47dce2f53d08e8997490aef0ff9d",
+      "status": "Noncanonical analytical candidate-T and original finite-audit candidate-C; not promoted by reuse.",
+      "usage": "Native q-source carry write, A/B quotient, fixed W=A^2 pointer, prefix 011, protected X14 continuation, input mergers, conditional loading/fresh-bank limits. PROOF.md restates the relevant elementary identities."
+    }
+  ],
+  "adjacent_ownership": [
+    {"issue": 993, "url": "https://github.com/mathorn1973/twist-j/issues/993", "scope": "Native-factor/freshness boundary; running synchronized cells do not become fresh by relabelling or reveal."},
+    {"issue": 994, "url": "https://github.com/mathorn1973/twist-j/issues/994", "scope": "Native two-piston-slot exchange and transport limits; distinct from the newly admitted external scalar/trace exchange."},
+    {"issue": 996, "url": "https://github.com/mathorn1973/twist-j/issues/996", "scope": "Added q/exchange coupling, arming, repeated firing and durable-record limits. No broad novelty for exchange or renewal is claimed here."},
+    {"issue": 998, "url": "https://github.com/mathorn1973/twist-j/issues/998", "scope": "Transported-port versus native-actuation distinction."},
+    {"issue": 1003, "url": "https://github.com/mathorn1973/twist-j/issues/1003", "scope": "Full native endpoint partitions across common piston/r readiness families; no new classification claimed."}
+  ],
+  "conditional_sum_comparator": [
+    {
+      "path": "notes/C-OMEGA24-PAIR-CONTACT-N/README.md",
+      "git_blob": "5b2ff81ecb9cc730db85c4913ef73cb0f66f4c39",
+      "bytes": 9087,
+      "sha256": "18294367e1ce6cb0578863b15f34ecef3c89d56886e269eb0d54eb99c065024a",
+      "status": "Public conditional result at the baseline pin, associated with #1349."
+    },
+    {
+      "path": "notes/C-OMEGA24-PAIR-CONTACT-N/NATIVE-CONTRACT.md",
+      "git_blob": "272d2716f8e039ac54b489a337005f7b9c224207",
+      "bytes": 6024,
+      "sha256": "ba8f7a5986c2f760c298223b20d8f2c8cf490e03b6901a685425e4498d23c6c0",
+      "usage": "Comparison only: source-preserving SUM, full counter/source holding, native carrier/coupling/preparation and inverse-pulse obligations are not discharged here."
+    }
+  ],
+  "new_scope": "One particular two-use trace-exchange certificate with 14 pentits, one counter, two consumed sources and two paid evolving receiver cells. No general renewal, native synthesis, energy or physical availability claim.",
+  "review_disclosure": "The independent reviewer froze a separate implementation before reading primary.py. Shared canonical artifact schemas were agreed without sharing scientific implementation. The coordinator records the exact independent freeze and public pin separately."
+}
