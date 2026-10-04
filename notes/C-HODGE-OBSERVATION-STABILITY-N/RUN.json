@@ -1,0 +1,9 @@
+{
+  "exit_code": 0,
+  "architecture": "x86_64",
+  "python": "3.13.5",
+  "stdout_sha256": "3ec728c1f1f99dab96c3e733a2d2737b9334dd74c2c7a8e2c43ea070a1c392f1",
+  "stdout_bytes": 574,
+  "stderr_bytes": 0,
+  "run_type": "local exact audit; no second architecture or independent agent"
+}
