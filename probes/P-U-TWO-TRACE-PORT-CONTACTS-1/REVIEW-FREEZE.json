@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "frozen_utc": "2026-10-04T00:27:10.486412+00:00",
+  "stage": "Before primary-code exposure and before scientific execution",
+  "science_executions": 0,
+  "primary_code_read": false,
+  "new_construction_proof_read": false,
+  "original_1346_verifier_read": false,
+  "method": "Explicit homogeneous native matrices and trace-coordinate swap; contract and past mathematical targets disclosed",
+  "public_filename_mapping": {
+    "review/independent_contact.py": "independent_contact.py"
+  },
+  "files": {
+    "review/independent_contact.py": {
+      "bytes": 10048,
+      "sha256": "64e6228fc8692e3dc1e474a5b5d2cc5a1f87485d4909a0e5e10bf7228525136e"
+    },
+    "review/CONTACT-PREREG.md": {
+      "bytes": 3510,
+      "sha256": "e075d4963a15b34194a6a1b7f8acad378f082f33c13d0251afa5a4efbc965b4f"
+    },
+    "construction/CONTRACT.md": {
+      "bytes": 12025,
+      "sha256": "d15e7ba40cbfe803c7298d0377916982bb0b6bc53e7b6891a72cc27a30356767"
+    }
+  }
+}

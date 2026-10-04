@@ -1,0 +1,15 @@
+{
+  "probe": "P-U-TWO-TRACE-PORT-CONTACTS-1",
+  "frozen_utc": "2026-10-04 00:35:10 UTC",
+  "status": "Author bytes frozen for independent static review and public pre-run packaging; no scientific execution.",
+  "preparation_checks": "AST parsing only for primary.py, JSON parsing only for SOURCES.json, exact byte hashes. No scientific import, call to run(), hidden trial or predicted stdout/hash.",
+  "independence_disclosure": "The coordinator reports the independent verifier was frozen before primary.py exposure. The author has not read independent code. Shared schemas cover history, contacts, selectors and the fixed negative-control histories.",
+  "files": {
+    "CONTRACT.md": {"bytes": 14128, "sha256": "9b9b294ff4a797212fdefedc1780bedd14161f4be5f41142a4d43939b1013891"},
+    "PREREG.md": {"bytes": 7563, "sha256": "9f7443115839725c33454414827dba609d86f45c58b8bddc75741f93861c4bdd"},
+    "primary.py": {"bytes": 16309, "sha256": "d1c5049075e4094e24be47cd4e5b2c6ee997763352c801f96634b9c823075172"},
+    "PROOF.md": {"bytes": 13267, "sha256": "c0c9a1379870d3788383394aa7d0a3304189f3d8d37b7e41ca0b873224851a0c"},
+    "README.md": {"bytes": 2312, "sha256": "16cbe4961e968931f7d2b3f9ac19791d71f129e299332663bb04307e9d6228cf"},
+    "SOURCES.json": {"bytes": 4730, "sha256": "700ff2f9a4e2d0431cc1f228986154d710bd0fed7312b28010bfcc1a39e72b4b"}
+  }
+}
