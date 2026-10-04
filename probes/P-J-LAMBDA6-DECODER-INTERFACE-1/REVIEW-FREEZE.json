@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "frozen_utc": "2026-10-03T23:12:13.519319+00:00",
+  "status": "NOT EXECUTED; new primary sources unread before both freezes",
+  "static_checks": "ast.parse only, no import or scientific evaluation",
+  "revision_reason": "Coordinator requested explicit UTF-8/LF stdout after v1 freeze; only stdout serialization and native sys import changed. Pre-execution and pre-primary-exposure. Exact v1 files and freeze preserved in pre-lf-freeze/.",
+  "previous_freeze_sha256": "a264d527b8680dd2d1486318b09a4c48e34153fc5942b9fef0f30a641c4d166d",
+  "files": [
+    {
+      "path": "PREREG.md",
+      "bytes": 7625,
+      "sha256": "53b1a99a94090889b5833fd9fba61ed91365b540cae52357811bad82e819a60e"
+    },
+    {
+      "path": "decoder_check.py",
+      "bytes": 14051,
+      "sha256": "10768304c469e6f6631c85b0307474d2dcc3fced84f09825aee999cb9b1b25ad"
+    },
+    {
+      "path": "native_check.py",
+      "bytes": 9058,
+      "sha256": "f12bbe502c218ca549c7f72fed69d996c7f562c6db9c71e4efd4c0c4225a2fc1"
+    },
+    {
+      "path": "COLLISIONS.md",
+      "bytes": 7180,
+      "sha256": "6d6f911bc24a0f04ff2381efd7a9b611a81cb9930824e0e145cb8ae9ee16cd56"
+    }
+  ],
+  "public_mapping": {
+    "decoder_check.py": "P-J-LAMBDA6-DECODER-INTERFACE-1/independent_decoder.py",
+    "native_check.py": "P-U-EARLY-SOURCE-FIBRE-CONTACT-1/independent_native.py"
+  },
+  "execution": "no arguments, UTF-8/LF stdout bytes only by default; TWISTJ_EVIDENCE_DIR/independent or explicit --output-dir for optional evidence; decoder defaults to sibling decoder.py"
+}
