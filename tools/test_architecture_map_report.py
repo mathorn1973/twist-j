@@ -25,16 +25,16 @@ class ArchitectureMapReportTests(unittest.TestCase):
 
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v98 adds six conditional inline T claims and one readout-domain definition.
-        self.assertEqual(self.report.claims, 498)
+        # v99 adds eight inline T claims, one L1 obligation and one definition.
+        self.assertEqual(self.report.claims, 507)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 23, "T": 356},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 364},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 85,
+                "none": 94,
                 "one-architecture": 9,
                 "recorded-audit": 31,
                 "two-architecture": 373,
@@ -45,9 +45,9 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 200)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 344
+            len(self.report.transitive_architecture_dependents), 353
         )
-        self.assertEqual(len(self.report.dependency_terminals), 69)
+        self.assertEqual(len(self.report.dependency_terminals), 70)
         # v95 adds ten inline theorems (architecture_requirement=none).
         # Their declared premise edges add four terminals and no path to
         # DEF-ARCHITECTURE; this is a graph fact, not physical independence.
@@ -81,6 +81,18 @@ class ArchitectureMapReportTests(unittest.TestCase):
         requires = architecture.dependency_graph(
             (row["item_id"] for row in normative), dependencies, "REQUIRES"
         )
+        # The generic finite-set lift is a new terminal. The other nine new
+        # items reach the architecture through already registered premises;
+        # this graph fact neither selects C nor supplies a native contact.
+        self.assertEqual(requires["FINITE-READOUT-INITIALIZED-MEMORY"], set())
+        self.assertIn("FINITE-READOUT-INITIALIZED-MEMORY", self.report.dependency_terminals)
+        self.assertEqual(requires["DEF-QUADRATIC-MEMORY-L5"], {
+            "TRACEKERNEL-F5-HODGE-BRACKET", "J-HODGE-PREDICTIVE-CLOSURE",
+            "A4-RAMIFIED-HODGE-TRACEKERNEL",
+        })
+        self.assertEqual(requires["QUADRATIC-MEMORY-NATIVE-CONTACT"], {
+            "DEF-QUADRATIC-MEMORY-L5",
+        })
         # v98 adds seven declared items and fifteen exact premise edges.
         # Five Hodge comparisons reach DEF-ARCHITECTURE through their
         # existing Hodge premises; the readout definition and LS response

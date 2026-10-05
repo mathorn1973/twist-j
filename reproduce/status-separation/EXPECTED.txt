@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v98
+historical guards: exact reconstructed v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v99
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -143,5 +143,12 @@ PASS 138 V98-SIX-PROOFS six conditional L1 theorem declarations bind exact scope
 PASS 139 V98-OBSERVATION-DOMAIN pinned proof text retains the six-score record, fixed native horizon, affine scope and finite nonlinear response-fibre boundary
 PASS 140 V98-MEASUREMENT-SCOPE pinned proof text distinguishes joint-shot scores from six means and retains full-simplex and conditional code-transport assumptions
 PASS 141 V98-OPEN-BOUNDARY all 492 prior rows and 25 H/O owners remain exact; gates, programs, CORE selection and 32 reproduction directories are unchanged
+PASS 142 V99-PRIOR-BYTES thirteen complete v99 inputs reconstruct exact public v98 before all 141 unchanged historical guards
+PASS 143 V99-EIGHT-PROOFS eight L1 theorem declarations and one open native-contact owner bind exact scopes, complete inline proofs, one definition and all ledger additions
+PASS 144 V99-DEPENDENCIES exact new dependency topology retains the marked quadratic reader, native-step premises and registered arithmetic norm inputs
+PASS 145 V99-NATIVE-FRONTIER all 498 prior claims and 25 live owners remain exact; one L1 native-contact obligation and its OPEN_DECISION gate are added without physical closure
+PASS 146 V99-READER-SELECTION fixed-reader fibre and initialized-memory capacity results remain distinct from an independently selected native preparation and contact
+PASS 147 V99-NORM-BOUNDARY integral and field scalar-norm images, ramified exclusions and exact pure-J trace recognition remain L1 arithmetic without a physical dimension or measurement lift
+PASS 148 V99-REPRO-INVENTORY three exact supplemental proof audits extend the 32-directory v98 inventory to 35 without retroactive preregistration or alteration of historical guards
 
-RESULT 141/141 ALL PASS
+RESULT 148/148 ALL PASS

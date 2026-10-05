@@ -1,5 +1,35 @@
 # Canon changelog (public series)
 
+## Public Canon v99
+
+Accept eight L1 theorems with self-contained independently reviewed proofs:
+the complete 21-parameter quadratic polynomial covariant family; exact
+finite-horizon and unlimited initialized-memory lifts; the full-domain
+quadratic obstruction; the fixed-L5 capacity classification; affine and
+literal-selector native obstructions; the complete scalar Hermitian norm
+image; its ramified obstruction; and the exact pure-J two-trace image.
+The matrices, marked basis, full prepared domain, fibre formulas, orbit
+types and sharp reachable-state counts are explicit. Rank three requires
+six memory states for both discriminants; ranks four through six require
+two in the class of arbitrary permutations. The displayed target remains
+declared data, not a derived native or characteristic-zero Hodge law.
+
+Add QUADRATIC-MEMORY-NATIVE-CONTACT as one L1 open obligation, with an
+OPEN_DECISION gate and STOP until the independently admitted reading and
+actual binary-register interface are supplied. Closure needs every actual
+occupied-memory transition. The abstract construction, fixed affine-word
+no-go and literal-selector triple collisions do not settle all nonlinear
+native contacts. All 498 prior claims, scopes and 25 H/O owners remain
+unchanged; no prior physical gate is closed or weakened.
+
+Registry grows to 507 claims: 0 T-LOCK, 364 T, 59 D, 39 C, 2 H, 24 O and
+19 F, with 26 live H/O. Three minimal exact proof audits extend the replay
+inventory from 32 to 35. Their exploratory origin is not retrospectively
+preregistered or treated as a formal probe. The theorem status rests on
+the written proofs. Release accounting reconstructs the exact v98 inputs
+and retains every historical guard; scientific thresholds stay unchanged.
+
+
 ## Public Canon v98
 
 Accept six conditional L1 theorems with self-contained inline proofs:
@@ -378,8 +408,8 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 498 claims; 0 T-LOCK, 356 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
-Reproduction witnesses: 32.
+Registry snapshot: 507 claims; 0 T-LOCK, 364 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 35.
 <!-- END GENERATED CURRENT COUNTS -->
 
 ## Public Canon v83

@@ -1,0 +1,207 @@
+{
+  "status": "Supplementary exact proof audit; native implementation remains open",
+  "source": "reproduce/kernel-connectivity/verify.py",
+  "source_sha256": "87ba627e27bebf5f9101da7691a5bd44f7f058ba007a1a28bb99d19720a93a63",
+  "checks_passed": 49,
+  "checks": [
+    "marked Gram transport LB=BM",
+    "scalar coefficient transport",
+    "marked exterior target quotient qA=Aq q",
+    "marked quotient transport SAq=AwS",
+    "residual metric inverse",
+    "exact bracket-transported exterior target L5",
+    "small quadratic ranks",
+    "quadratic ranks r=1 delta=1",
+    "quadratic ranks r=1 delta=2",
+    "quadratic ranks r=2 delta=1",
+    "quadratic ranks r=2 delta=2",
+    "quadratic ranks r=3 delta=1",
+    "quadratic ranks r=3 delta=2",
+    "quadratic ranks r=4 delta=1",
+    "quadratic ranks r=4 delta=2",
+    "quadratic ranks r=5 delta=1",
+    "quadratic ranks r=5 delta=2",
+    "quadratic ranks r=6 delta=1",
+    "quadratic ranks r=6 delta=2",
+    "full native generator affine a",
+    "full native generator affine b",
+    "full native generator affine c",
+    "full native generator affine d",
+    "full native generator affine e",
+    "selector phase bit=0 z=0",
+    "selector phase bit=0 z=1",
+    "selector phase bit=0 z=2",
+    "selector phase bit=0 z=3",
+    "selector phase bit=0 z=4",
+    "selector phase table bit=0",
+    "selector maximum fiber three bit=0",
+    "selector full image histogram bit=0",
+    "explicit triple collision bit=0",
+    "selector phase bit=1 z=0",
+    "selector phase bit=1 z=1",
+    "selector phase bit=1 z=2",
+    "selector phase bit=1 z=3",
+    "selector phase bit=1 z=4",
+    "selector phase table bit=1",
+    "selector maximum fiber three bit=1",
+    "selector full image histogram bit=1",
+    "explicit triple collision bit=1",
+    "conditional linear-frame example rank four",
+    "conditional linear-frame invariance a",
+    "conditional linear-frame invariance b",
+    "conditional linear-frame invariance c",
+    "conditional linear-frame invariance d",
+    "conditional linear-frame invariance e",
+    "example is not full affine invariant"
+  ],
+  "selector_tables": [
+    {
+      "bit": 0,
+      "phase": [
+        0,
+        4,
+        0,
+        4,
+        4
+      ],
+      "image_size": 6250,
+      "fiber_histogram": {
+        "2": 3125,
+        "3": 3125
+      },
+      "collision_output": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "collision_inputs": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          3,
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          3,
+          4,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "bit": 1,
+      "phase": [
+        2,
+        1,
+        1,
+        3,
+        1
+      ],
+      "image_size": 9375,
+      "fiber_histogram": {
+        "1": 6250,
+        "3": 3125
+      },
+      "collision_output": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "collision_inputs": [
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          3,
+          4,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          3,
+          4,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "conditional_rank_four_example": [
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ]
+}

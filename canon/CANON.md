@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v98
+# TWIST-J Public Canon v99
 
-**Release identity.** Public Canon v98. Normative authority and activation
+**Release identity.** Public Canon v99. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -10,7 +10,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v98 also declares the discrete architecture used to read
+only. Public Canon v99 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -23,7 +23,7 @@ calibration anchor remains the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v98 does not claim
+seed of the two algebraic projections. Public Canon v99 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -128,7 +128,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v98 contains no such
+deriving the architecture from J; Public Canon v99 contains no such
 theorem.
 
 ---
@@ -8976,6 +8976,538 @@ remain physical obligations. Existing physical-HOLD owners and their scope
 are unchanged; none of these statements identifies physical time or derives
 the adopted apparatus and measurement laws from native U or J.
 
+### DEF-QUADRATIC-MEMORY-L5
+
+Action layer: L1. The following fixed mathematical reading and target are declared; their physical or native selection is not asserted.
+
+All field arithmetic in this definition is modulo 5. Set
+$$
+X=\mathbb F_5^6\times\mathbb F_5^6,
+\qquad |X|=5^{12}=244140625.
+$$
+Let $C=C^T$ be a symmetric $6\times6$ matrix, and define
+$$
+a=x^TCx,\quad b=x^TCy,\quad c=y^TCy,
+\qquad G_C(x,y)=(a,b,c)^T.
+$$
+We identify a Gram point with the symmetric matrix
+$\begin{psmallmatrix}a&b\\b&c\end{psmallmatrix}$.
+The marked target readout is
+$$
+D_C=BG_C=a e-b h-c f,
+$$
+where
+$$
+h=(1,0,1)^T,\quad e=(1,4,3)^T,\quad f=(3,4,1)^T,
+\quad B=\begin{pmatrix}1&4&2\\4&0&1\\3&4&4\end{pmatrix}.
+$$
+The declared fixed target step and its Gram-coordinate form are
+$$
+L_5=\begin{pmatrix}3&3&2\\3&4&2\\3&2&0\end{pmatrix},
+\qquad
+M=\begin{pmatrix}0&3&0\\4&4&4\\0&3&3\end{pmatrix}.
+$$
+Direct multiplication gives
+$$
+\det B=1,\qquad BM=L_5B=
+\begin{pmatrix}1&0&2\\0&0&3\\1&2&3\end{pmatrix}.
+$$
+Thus the equations with $D_C,L_5$ are exactly equivalent to those with $G_C,M$. This coordinate equivalence does not alter an existence or impossibility result.
+
+The marked bracket carrier and the chosen target construction are specified separately. The following calculation derives this exact residual exterior action from the registered arithmetic inputs; it supplies no transport from the native pair of cells to the integral Hodge carrier and no native or physical Hodge step.
+
+The target matrix has an explicit construction from the marked integral
+exterior-J inputs of J-HODGE-PREDICTIVE-CLOSURE and the quotient/bracket
+transport of A4-RAMIFIED-HODGE-TRACEKERNEL. Use the ordered A4 root basis
+`a_i=e_i-e_0`, `i=1,...,4`, and the registered five-cycle matrix
+
+```text
+C5 = [[-1,-1,-1,-1],
+      [ 1, 0, 0, 0],
+      [ 0, 1, 0, 0],
+      [ 0, 0, 1, 0]],
+A = I+C5^2.
+```
+
+Reduce modulo five. The root Gram is `H4=I+11^T`, its radical is
+`<ell>` for `ell=(1,1,1,1)^T`, and `A ell=2 ell`. Thus A induces an
+operator on `U=F5^4/<ell>`. In quotient coordinates
+`q(v)=(v1-v4,v2-v4,v3-v4)^T`, direct calculation gives
+
+```text
+A mod 5 = [[1,0,0,1],
+           [4,0,4,4],
+           [1,0,1,0],
+           [0,1,0,1]],
+Aq = [[1,4,0],
+      [4,4,4],
+      [1,4,1]],           q A = Aq q.
+```
+
+The registered map `H4 mod 5` from U to the public W5 has, in quotient
+basis `[e1],[e2],[e3]` and the public difference basis of W5, matrix S.
+Here `W5={w in F5^4:sum(w)=0}` and the difference basis is
+`(1,-1,0,0),(0,1,-1,0),(0,0,1,-1)`. Thus the columns of S are obtained
+by expressing the first three columns of H4 in that basis. Its transported
+operator Aw and residual metric are
+
+```text
+S  = [[2,1,1],       Aw=S Aq S^-1 = [[1,1,3],
+      [3,3,2],                       [0,3,2],
+      [4,4,4]],                      [1,3,2]],    det Aw=3,
+
+g5 = [[2,4,0],       g5^-1 = [[2,3,4],
+      [4,2,4],                [3,1,3],
+      [0,4,2]],               [4,3,2]].
+```
+
+The public metric-volume bracket `beta(u,v)=g5^-1(u cross v)` identifies
+`Lambda^2 W5` with W5. For every invertible 3-by-3 matrix R, the elementary
+cross-product identity gives
+
+```text
+beta(Ru,Rv) = det(R) g5^-1 R^-T g5 beta(u,v).
+```
+
+Consequently the exterior-square operator induced by Aq on `Lambda^2 U`,
+transported by S and beta, is exactly
+
+```text
+L5 = det(Aw) g5^-1 Aw^-T g5
+   = [[3,3,2],
+      [3,4,2],
+      [3,2,0]].
+```
+
+The minus sign in the registered descended Kbar bracket does not change
+this operator: multiplying the identifying isomorphism by a nonzero scalar
+cancels in conjugation. Equivalently, this is the quotient action of
+`Lambda^2(A mod 5)` on
+`Lambda^2(F5^4)/(ell wedge F5^4)`, which is `Lambda^2 U`. It is not a
+dimension-six-to-dimension-three isomorphism. The action on the different
+invariant subspace `ell wedge F5^4`, identified with U and then W5, is
+instead
+
+```text
+2 Aw = [[2,2,1],
+        [0,1,4],
+        [2,1,4]].
+```
+
+This construction fixes the precise marked algebraic target used below.
+It supplies no map from a pair of native six-coordinate cells to the
+integral exterior carrier, no selection of C, no native realization, and
+no physical or characteristic-zero time identification.
+
+### QUADRATIC-COUPLED-POLYNOMIAL-CLASS [T]
+
+Action layer: L1. The complete equivariant polynomial reader class of total degree at most two for the declared two-slot action has dimension 21 and consists exactly of the symmetric-C family.
+
+This is an independent algebraic classification with a declared action. Let $E=\mathbb F_5^2$, $V=\mathbb F_5^6$, and $G=SL_2(\mathbb F_5)$. Give $V$ the trivial action and write the source as the two-row matrix $X=\begin{pmatrix}x^T\\y^T\end{pmatrix}$, acted on by $X\mapsto gX$. Give $W=\mathfrak{sl}_2(\mathbb F_5)$ the adjoint action, and set $J=\begin{psmallmatrix}0&1\\-1&0\end{psmallmatrix}$. Then every symmetric $C$ gives
+$$
+F_C(X)=XCX^TJ=\begin{pmatrix}-b&a\\-c&b\end{pmatrix},
+\qquad F_C(gX)=gF_C(X)g^{-1},
+$$
+because $g^TJ=Jg^{-1}$. Under the marked bracket identification this is exactly $D_C=a e-b h-c f$. Setting $y=0$ recovers $x^TCx$, and polarization recovers $C$, so the assignment is injective.
+
+It exhausts all homogeneous polynomial equivariant maps of total degree two. In characteristic five, the flip projectors with coefficients $1/2$ give the direct decomposition
+$$
+\operatorname{Sym}^2(E\otimes V)
+\simeq(\operatorname{Sym}^2 E\otimes\operatorname{Sym}^2 V)
+\oplus(\Lambda^2E\otimes\Lambda^2 V).
+$$
+Here $\Lambda^2E$ is trivial, and $\operatorname{Sym}^2E\simeq W$ via the linearization of $v\mapsto vv^TJ$. For completeness, on the basis $(e_1^2,e_1e_2,e_2^2)$, the linear coefficient operators of the upper and lower transvections are
+$$
+A=\begin{pmatrix}0&1&0\\0&0&2\\0&0&0\end{pmatrix},\quad
+B_0=\begin{pmatrix}0&0&0\\2&0&0\\0&1&0\end{pmatrix},\quad
+[A,B_0]=\operatorname{diag}(2,0,-2).
+$$
+These coefficient operators belong to the algebra spanned by the group action: for example $A=(U(1)-U(-1))/2$ in this representation. Their commutator has three distinct eigenvalues in $\mathbb F_5$, so its polynomial spectral projectors isolate the three coordinate lines. The operators $A,B_0$ connect all three lines. Consequently every nonzero invariant subspace is the whole space; an endomorphism commuting with the action must first be diagonal and then scalar. Also $\ker A\cap\ker B_0=0$. Thus $W^G=0$ and $\operatorname{End}_G(W)=\mathbb F_5$, without any averaging over the group.
+
+It follows that
+$$
+\operatorname{Hom}_G(\operatorname{Sym}^2(E\otimes V),W)
+\simeq\operatorname{Sym}^2(V^*),\qquad\dim=21.
+$$
+The explicit injective 21-dimensional family $F_C$ is therefore the complete class. Polynomial evaluation is injective when the degree in each variable is below five; induction on the variables proves this from the bound on roots of a nonzero univariate polynomial. This includes total degree at most two. Equivariance of a degree-at-most-two polynomial therefore separates by homogeneous degree. Its constant part is zero because $W^G=0$, and its linear part is zero because central $-I$ acts by minus one on the source and by plus one on the target. The same 21-dimensional family thus classifies degree-at-most-two polynomial readers.
+
+This statement does not classify arbitrary equivariant functions or all readers satisfying only scaling homogeneity. For example, with source columns $v_i$ and invariant wedge $w_{12}=\det(v_1,v_2)$, the reader
+$$
+(1-w_{12}^4)v_3v_3^TJ
+$$
+is equivariant and satisfies $F(tX)=t^2F(X)$ for every field scalar, while its reduced polynomial has degree ten.
+
+The declared target adjoint action preserves the target bracket and its invariant metric for every $C$. These target facts, without an additional specified source-target equality, impose no further coefficient equations and select no member of this family. Requiring a source bracket homomorphism, a source norm identity, a local-frame invariance law, or a compatibility diagram with another carrier would be additional input. In particular, the capacity results below are conditional on an independently admitted fixed $C$, not a selection rule for it.
+
+### FINITE-READOUT-INITIALIZED-MEMORY [T]
+
+Action layer: L1. The following criteria are necessary and sufficient in the unrestricted class of finite permutations. They do not assert a native contact realization.
+
+#### Full-domain and restricted-domain fiber criteria
+
+Let $X,Y$ be finite sets, $D:X\to Y$, and $L:Y\to Y$ a permutation. Write
+$$
+n(z)=|D^{-1}(z)|.
+$$
+There exists a permutation $T:X\to X$ with $DT=LD$ if and only if
+$$
+n(z)=n(Lz)\quad(z\in Y).
+$$
+Indeed, $T$ must map each fiber bijectively to the indicated next fiber. Conversely, choose these fiberwise bijections and take their disjoint union.
+
+For declared subsets $\Omega_0,\Omega_1\subseteq X$, a bijection between them satisfying the readout equation exists if and only if
+$$
+|\Omega_0\cap D^{-1}(z)|=|\Omega_1\cap D^{-1}(Lz)|.
+$$
+For a single invariant subset, the largest possible size in the unrestricted class of bijections is
+$$
+|\Omega|_{\max}=\sum_{\mathcal O}|\mathcal O|\min_{z\in\mathcal O}n(z),
+$$
+where $\mathcal O$ ranges over the $L$-orbits. Necessity follows because retained counts must be equal on each orbit; equality is attained by retaining its minimum count in every fiber and matching them cyclically. This is a counting optimum, not an independently justified preparation mechanism.
+
+#### Exact finite-horizon criterion
+
+Let $A$ have $m\ge1$ states, let $a_0\in A$, and put
+$$
+S=X\times A,\quad B_0=X\times\{a_0\},\quad d(x,a)=D(x).
+$$
+For an integer $H\ge0$, there is a single permutation $T$ of $S$ such that
+$$
+d(T^k(x,a_0))=L^kD(x)\quad(x\in X,\ 0\le k\le H)
+$$
+if and only if
+$$
+\boxed{n(z)\le m n(L^kz)\quad(z\in Y,\ 0\le k\le H).}
+$$
+
+**Necessity.** The $k$-th iterate injects the $n(z)$ initialized states above $z$ into the full fiber above $L^kz$, which has $m n(L^kz)$ states.
+
+**Sufficiency, including overlap consistency.** Enumerate the full fiber $S_y=d^{-1}(y)$ as $s_{y,1},\ldots,s_{y,m n(y)}$, with its initialized states first. The inequalities allow the sets
+$$
+B_k\cap S_y=\{s_{y,j}:1\le j\le n(L^{-k}y)\}\quad(0\le k\le H).
+$$
+On $U=\bigcup_{k=0}^{H-1}B_k$, prescribe
+$$
+T(s_{y,j})=s_{Ly,j}.
+$$
+If an input occurs in several $B_k$, every occurrence gives the same prescription. The output exists because
+$$
+j\le\max_{0\le k<H}n(L^{-k}y)
+ =\max_{1\le k\le H}n(L^{-k}(Ly))\le m n(Ly).
+$$
+The prescription is injective because $L$ is bijective and ranks are preserved. It maps each $B_k$ exactly onto $B_{k+1}$ for $k<H$. Extend it by any bijection $S\setminus U\to S\setminus T(U)$; the two complements have equal size. This gives one global permutation with the required iterates. For $H=0$, the partial prescription is empty.
+
+This proof is an existence theorem for a suitably constructed permutation. A specified native contact must still be checked pointwise.
+
+#### Unlimited operation, exact capacity, and recurrence
+
+The same initialized equation can hold for every $k\ge0$ if and only if
+$$
+\boxed{\max_{z\in\mathcal O}n(z)\le m\min_{z\in\mathcal O}n(z)
+\quad\text{for every }L\text{-orbit }\mathcal O.}
+$$
+An occupied orbit containing a zero fiber makes every finite memory impossible. Otherwise
+$$
+m_{\min}=\max\left(\{1\}\cup
+\left\{\left\lceil\frac{\max_{z\in\mathcal O}n(z)}{\min_{z\in\mathcal O}n(z)}\right\rceil:
+\mathcal O\text{ occupied}\right\}\right).
+$$
+The included 1 also covers an empty domain. For a nonempty domain it is redundant.
+
+**Necessity.** The reachable union
+$\Omega=\bigcup_{k\ge0}T^k B_0$ is finite and $T$-invariant: $T(\Omega)\subseteq\Omega$ and injectivity gives equality. Every state in it is reached from an initialized state, so $dT=Ld$ holds on $\Omega$. Its counts are therefore constant on each $L$-orbit. They are at least the initialized counts and at most the full product counts.
+
+**Sufficiency and recurrence.** For each occupied orbit choose
+$q_{\mathcal O}=\max_{z\in\mathcal O}n(z)$ states in every full fiber, including all initialized states. Label the selected states by $j=1,\ldots,q_{\mathcal O}$, cycle equal labels according to $L$, and fix every unselected state. If $d_L=\operatorname{ord}(L)$, this construction satisfies $T^{d_L}=I$ globally. In particular, every initial full state, including its initialized memory value, returns after $d_L$ steps. This does not require an external reset.
+
+The smallest possible actual reachable union has size
+$$
+\boxed{|\Omega|_{\min}=\sum_{\mathcal O}|\mathcal O|\max_{z\in\mathcal O}n(z)}
+$$
+whenever the capacity inequalities hold. The lower bound follows from orbitwise constant counts. In the construction, a fiber attaining the maximum has every selected label initialized; cycling it reaches all selected states. Thus the bound is attained as the actual reachable union, simultaneously with minimal memory and periodic return.
+
+For a finite horizon the capacities stabilize to the unlimited criterion by $H\ge\max_{\mathcal O}|\mathcal O|-1$. This conclusion concerns existence; it does not say an arbitrary finite-horizon implementation already works indefinitely.
+
+### QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION [T]
+
+Action layer: L1. For the fixed marked target, no nonzero symmetric C admits the readout equation on the full data domain under any permutation; ignored finite memory does not alter this full-product obstruction.
+
+Let $C\ne0$, $r=\operatorname{rank}C$, and $\lambda=(1,1,2)$ in marked $W_5$ coordinates. Then
+$$
+\lambda B=(1,2,1),\quad \lambda L_5B=(3,4,1).
+$$
+The scalar readouts have matrices on $\mathbb F_5^{12}$
+$$
+Q_1=\begin{pmatrix}1&1\\1&1\end{pmatrix}\otimes C,
+\qquad
+Q_2=\begin{pmatrix}3&2\\2&1\end{pmatrix}\otimes C.
+$$
+Their ranks are $r$ and $2r$: the first small matrix has rank one and the second has determinant $4\ne0$.
+
+For a symmetric $n\times n$ matrix $Q$, let
+$S(Q)=\sum_z\zeta_5^{z^TQz}$, where $\zeta_5=e^{2\pi i/5}$. With the bijective substitution $u=z-w,v=z+w$,
+$$
+|S(Q)|^2=\sum_{u,v}\zeta_5^{u^TQv}
+=5^n|\ker Q|=5^{2n-\operatorname{rank}Q}.
+$$
+If any permutation $T$ of all $X$ satisfied $D_CT=L_5D_C$, it would preserve scalar value multiplicities, hence $S(Q_1)=S(Q_2)$. This would give
+$5^{24-r}=5^{24-2r}$, forcing $r=0$, a contradiction.
+
+No linearity assumption on $T$, surjectivity of $D_C$, nondegeneracy of $C$, or physical probability distribution is used. If the readout ignores a memory of $m$ states and the equation is imposed on all $X\times A$, both scalar sums are multiplied by $m$; the same obstruction remains. Initialized-only operation in FINITE-READOUT-INITIALIZED-MEMORY imposes a different domain contract. For $C=0$, the readout is zero and the obstruction does not apply.
+
+### QUADRATIC-L5-INITIALIZED-CAPACITY [T]
+
+Action layer: L1. For the fixed target and a complete initialized data domain, the exact minimum ignored memory is infinite at ranks one and two, six states at rank three, and two states at ranks four through six, for both determinant square classes. The feasible minima admit a permutation whose tenth power is the identity.
+
+#### Exact Gram-fiber counts
+
+Every symmetric $C$ of rank $r>0$ is congruent over $\mathbb F_5$ to
+$$
+\operatorname{diag}(1^{r-1},\delta,0^{6-r}),\qquad \delta\in\{1,2\}.
+$$
+To see the normal form explicitly, diagonalize the symmetric form and rescale each nonzero diagonal entry to 1 or 2 according to its square class. Pairs of entries 2 can be removed because $P^T\operatorname{diag}(2,2)P=I_2$ for $P=\begin{psmallmatrix}2&2\\2&3\end{psmallmatrix}$. At most one entry 2 remains, and its presence is exactly the nondegenerate determinant character.
+
+The simultaneous change of variables in $x,y$ is bijective and preserves all Gram counts. Let $\varepsilon=\eta(\delta)$, where $\eta$ is the quadratic character with $\eta(0)=0$. Every count below for the nondegenerate $r$-space is multiplied by the common radical factor $25^{6-r}$ on $X$.
+
+Let $N_s(t;\varepsilon)$ count vectors of norm $t$ in a nondegenerate $s$-space of determinant character $\varepsilon$. For $s>0$,
+$$
+\begin{array}{ll}
+s\text{ even}:&N_s(0)=5^{s-1}+4\varepsilon5^{s/2-1},\quad
+N_s(t\ne0)=5^{s-1}-\varepsilon5^{s/2-1},\\
+s\text{ odd}:&N_s(t)=5^{s-1}+\varepsilon\eta(t)5^{(s-1)/2}.
+\end{array}
+$$
+For dimension zero, $N_0(t)=1$ for $t=0$, otherwise zero. To derive the displayed formulas, use additive-character orthogonality to select the norm equation and diagonalize the form. For nonzero $u$, the one-dimensional sum is
+$\sum_x\zeta_5^{u x^2}=\eta(u)\sqrt5$, as follows directly from the five terms. Multiplying these sums and summing the remaining character over nonzero $u$ gives the two parity cases above.
+
+For a rank-1 Gram point congruent to $\operatorname{diag}(a,0)$, the first vector has nonzero norm $a$; its orthogonal complement has dimension $r-1$ and determinant character $\varepsilon\eta(a)$. Thus its reduced count is
+$$
+R_{1,\sigma}=N_r(a;\varepsilon)N_{r-1}(0;\varepsilon\eta(a)),\quad \sigma=\eta(a).
+$$
+Every nondegenerate binary form represents 1: diagonalizing it, the sets of possible values of each of its two nonzero square terms have three elements each, and their appropriately translated subsets of the five-element field intersect. Hence every rank-2 Gram point is congruent to $\operatorname{diag}(1,d)$, with $\eta(d)=\tau$, and for $r\ge2$
+$$
+R_{2,\tau}=N_r(1;\varepsilon)N_{r-1}(d;\varepsilon).
+$$
+Rank-2 points have count zero when $r=1$.
+
+For the zero Gram point, the first vector zero contributes $N_r(0)$. For each nonzero isotropic first vector, the quotient $x^\perp/\langle x\rangle$ is nondegenerate of dimension $r-2$, with the same determinant character because $-1$ is square in $\mathbb F_5$. Each vector in the quotient has five lifts. Therefore, when nonzero isotropic vectors exist,
+$$
+Z=N_r(0;\varepsilon)+(N_r(0;\varepsilon)-1)5N_{r-2}(0;\varepsilon).
+$$
+If $N_r(0)=1$, simply $Z=1$, avoiding any negative-dimensional expression.
+
+These arguments are unchanged by a simultaneous invertible linear mixing of the two vectors, so they classify all 125 Gram points. There is one zero point, 12 points of each rank-1 type, 60 rank-2 points of square determinant and 40 of nonsquare determinant. For rank 1, write $G=t vv^T$, count 24 nonzero $v$, and divide by the two representations differing by sign for each fixed square class. For rank 2, the total is 100; the square/nonsquare counts are 60/40, obtainable directly by fixing $a,b$ and counting $c$ according to $ac-b^2$.
+
+| r | delta | Z | R1+ | R1- | R2+ | R2- |
+|---:|---:|---:|---:|---:|---:|---:|
+| 1 | 1 | 1 | 2 | 0 | 0 | 0 |
+| 1 | 2 | 1 | 0 | 2 | 0 | 0 |
+| 2 | 1 | 49 | 4 | 4 | 8 | 0 |
+| 2 | 2 | 1 | 6 | 6 | 0 | 12 |
+| 3 | 1 | 145 | 270 | 20 | 120 | 120 |
+| 3 | 2 | 145 | 20 | 270 | 120 | 120 |
+| 4 | 1 | 6625 | 3000 | 3000 | 3600 | 2400 |
+| 4 | 2 | 625 | 3250 | 3250 | 2600 | 3900 |
+| 5 | 1 | 78625 | 94250 | 63000 | 78000 | 78000 |
+| 5 | 2 | 78625 | 63000 | 94250 | 78000 | 78000 |
+| 6 | 1 | 2340625 | 1937500 | 1937500 | 2015000 | 1860000 |
+| 6 | 2 | 1590625 | 1968750 | 1968750 | 1890000 | 2047500 |
+
+Each row sums to $5^{2r}$ with weights $1,12,12,60,40$. The support sizes are 13 for $r=1$, 85/65 for $r=2,\delta=1/2$, and 125 for all $r\ge3$.
+
+#### All orbits of the fixed target step
+
+Put $\tau=a+b-c$ and $\Delta=ac-b^2$. Direct calculation gives
+$$
+\tau(MG)=-\tau(G),\quad
+\Delta(MG)=\Delta(G)-\tau(G)^2,\quad M^5=-I.
+$$
+Also $M+I$ is nilpotent of index three. Therefore the nonzero orbits have length 2 or 10, and the length-2 states are exactly $\ker(M+I)\setminus\{0\}$.
+
+On $\tau=0$, write $c=a+b$, so $\Delta=(a+3b)^2$. The rank-1 line is $\langle(2,1,3)\rangle$, and $M$ acts by minus one there. It gives one length-2 orbit of each rank-1 type. The other 20 points of this plane have rank 2 and square determinant; they form two length-10 orbits.
+
+Off this plane, $\tau^2\ne0$, so $\Delta(M^kG)=\Delta(G)-k\tau(G)^2$ runs through all field elements in five steps. Each length-10 orbit has two rank-1 points and four rank-2 points of each determinant type. Its two rank-1 points differ by minus one because $M^5=-I$; minus one is square, so their rank-1 types agree. There are five such orbits of each rank-1 type.
+
+The following lexicographically least representatives enumerate every orbit:
+
+| Type | Length | Representatives |
+|---|---:|---|
+| zero | 1 | (0,0,0) |
+| rank 1+ only | 2 | (1,3,4) |
+| rank 1- only | 2 | (2,1,3) |
+| rank 2+ only | 10 | (0,1,1), (0,2,2) |
+| mixed, rank 1+ | 10 | (0,0,1), (0,1,0), (0,2,1), (1,1,1), (1,3,0) |
+| mixed, rank 1- | 10 | (0,0,2), (0,1,3), (0,1,4), (1,1,0), (1,1,4) |
+
+#### Exact initialized-memory classification
+
+For $r=1$, a supported rank-1 point $(a,0,0)$, with $\eta(a)=\varepsilon$, maps to $(0,4a,0)$, a rank-2 point outside the support. For $r=2,\delta=1$, the supported point $(0,1,0)$ maps to $(3,4,3)$, of nonsquare determinant and zero fiber. For $r=2,\delta=2$, $(1,0,0)$ maps to $(0,4,0)$, of square determinant and zero fiber. Thus no finite ignored memory permits even one initialized step in these classes.
+
+For $r=3$, each mixed orbit has either counts $270,120,120$, or $20,120,120$. The maximum orbitwise ratio is 6, and the pure orbits have constant counts. Hence $m_{\min}=6$ for both discriminant classes. This is already forced in one step:
+$$
+M(0,4,1)=(2,0,0)\quad(\delta=1),\qquad
+M(0,2,3)=(1,0,0)\quad(\delta=2),
+$$
+with count ratio $120/20=6$.
+
+For $r=4,5,6$, every nonzero fiber is positive and the ratio of the largest to the smallest nonzero count is strictly less than 2. Since $M$ fixes zero, two memory states suffice on every orbit. One state is impossible by QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION. Therefore $m_{\min}=2$ for every symmetric $C$ in these ranks. The factor $25^{6-r}$ cancels from every capacity ratio.
+
+In all feasible cases the construction of FINITE-READOUT-INITIALIZED-MEMORY permits $T^{10}=I$ on the entire product, with the readout equation required only along the initialized reachable domain. These are exact capacities in the class of arbitrary permutations, not native gate counts or native realizations.
+
+#### Minimum actual reachable domain
+
+Using the orbit types above, the reduced reachable minimum is
+$$
+Z+2R_{1,+}+2R_{1,-}+20R_{2,+}
++50\max(R_{1,+},R_{2,+},R_{2,-})
++50\max(R_{1,-},R_{2,+},R_{2,-}).
+$$
+After multiplying by $25^{6-r}$, this gives:
+
+| r | delta | Minimum memory states | Minimum reachable states |
+|---:|---:|---:|---:|
+| 3 | 1 or 2 | 6 | 353515625 |
+| 4 | 1 | 2 | 281640625 |
+| 4 | 2 | 2 | 284765625 |
+| 5 | 1 or 2 | 2 | 264140625 |
+| 6 | 1 | 2 | 251890625 |
+| 6 | 2 | 2 | 252015625 |
+
+These are sizes of the reachable union containing all initialized states, not sizes of the whole product $X\times A$.
+
+#### Scope boundary
+
+The theorem begins with a declared, fixed $C$, marked readout, complete initial domain, and specified target matrix. It neither selects $C$ nor justifies a preparation rule. A two-state memory is sufficient mathematically for every independently admitted $C$ of rank at least four, but the proof uses unrestricted fiberwise permutations. A native investigation must independently specify its allowed contact, gates, controller, preparation, and actual reachable states, then verify the fixed readout equation for that implementation. Passing these capacity checks alone is not such a verification.
+
+### QUADRATIC-L5-NATIVE-OBSTRUCTIONS [T]
+
+Use the exact carrier, fixed matrices and readout of
+DEF-QUADRATIC-MEMORY-L5. For every nonzero symmetric C, no affine data
+map f:X->X satisfies D_C f=L5 D_C on all X. This includes singular affine
+maps. Consequently a contact whose data projection on the full common-ready
+layer is affine fails for any ignored memory cardinality, even without
+reversibility. Arbitrarily input-dependent selection between two fixed
+affine data maps also fails. These statements do not cover programs with
+more than two distinct data branches.
+
+**Proof.** In Gram coordinates lambda=(1,2,1) and lambda M=(3,4,1).
+For r=rank C>0 the corresponding quadratic matrices are
+
+```
+Q1 = [[1,1],[1,1]] tensor C,    rank Q1 = r,
+Q2 = [[3,2],[2,1]] tensor C,    rank Q2 = 2r.
+```
+
+If f(z)=Az+t, the homogeneous quadratic part of the left scalar readout
+has matrix A^T Q1 A of rank at most r. The right scalar readout has matrix
+Q2 of rank 2r. Equality as functions on F5^12 implies equality of these
+matrices: a polynomial with degree below five in each variable vanishing
+everywhere is zero, by induction using the univariate root bound, and two
+is invertible. Translation contributes only lower degree terms.
+
+For either fixed affine choice f_i the scalar residual
+p_i(z)=lambda G_C(f_i(z))-lambda M G_C(z) is therefore a nonzero
+polynomial of total degree at most two. The elementary polynomial zero
+bound gives at most 2*5^11 zeros. This bound follows by induction on the
+number of variables, separating a highest nonzero coefficient in the last
+variable and bounding its exceptional inputs. The union of two zero sets
+covers at most 4*5^11<5^12 inputs. At least one input fails both choices.
+
+KERNEL-WEDGE-AFFINITY supplies five affine bijections a,...,e on V=F5^6;
+KERNEL-WEDGE-COUPLING supplies P(x,y)=(x,y+x) and Q(x,y)=(x+y,y).
+Every fixed word in these maps, their inverses and their slotwise actions
+is affine. The obstruction therefore excludes this entire word class,
+irrespective of word length or state connectivity. A finite register
+whose evolution is independent of the data, initialized to one common
+value and selecting fixed words, still gives one affine data map at each
+fixed step. Data-dependent multibranch control is additional structure.
+
+The actual nonlinear native selector has a separate exact collision
+boundary. Index a,...,e by 0,...,4 and let z6(x) be the coordinate sum.
+For a fixed drive bit t define
+
+```
+F_t(x) = g_(z6(x)+2t mod 5)(x).
+```
+
+The five registered generators send the phase z to z,-z,2-z,2-z,3-z,
+respectively. Each maps an input phase hyperplane bijectively onto the
+indicated output hyperplane. Selecting the generator gives, in input
+phase order 0,1,2,3,4,
+
+```
+t=0: (0,4,0,4,4),
+t=1: (2,1,1,3,1).
+```
+
+Thus every output of phase four for F_0, and of phase one for F_1,
+has exactly three preimages; no output has more. Explicitly,
+
+```
+F0(0,0,1,0,0,0) = F0(3,1,3,4,1,1)
+                = F0(3,1,3,4,2,1) = (4,0,0,0,0,0),
+F1(0,0,4,0,0,0) = F1(1,1,3,4,1,1)
+                = F1(1,1,3,4,2,1) = (1,0,0,0,0,0).
+```
+
+A reversible extension retaining this literal data update from every
+common-ready input therefore requires at least three output register
+values. Three suffice for one abstract step: label each output's at most
+three preimages distinctly and extend the resulting injection on the
+ready layer to a permutation of V times a three-element register. This
+does not establish repeated use. Applying F_t to one member of a pair
+and fixing the other has the same bound; applying fixed-bit selectors
+to both has maximum fibre nine. Affine bijective pre/post composition
+preserves these fibre cardinalities, and an independent counter advance
+does not distinguish colliding inputs at the same initial counter.
+
+These selector statements preserve its literal data projection on its
+complete input domain. They do not exclude other nonlinear reversible
+contacts or independently prepared subsets. They do not identify the
+external drive bit with a writable memory register.
+
+### QUADRATIC-MEMORY-NATIVE-CONTACT [O]
+
+At L1, find or exclude a native realization of the fixed target in
+DEF-QUADRATIC-MEMORY-L5 for an independently admitted symmetric C of
+rank at least four, with two states of ignored auxiliary memory. The
+complete contract must specify:
+
+1. The admitted reading family, its selection or occurrence rule and
+   equality, independently of successful matching to L5; marked B stays
+   fixed. Minimal abstract memory does not select C among ranks 4,5,6.
+2. The complete carrier X times {0,1}, common ready value, actual gate
+   alphabet and all data-dependent control and register-writing operations.
+   A clock or program must be encoded within this declared carrier to meet
+   the binary contract; extra states change the resource contract and cannot
+   be counted as free storage.
+3. One permitted autonomous global permutation T, its inverse, and fixed
+   readout Dhat(x,a)=D_C(x). Target-derived fibre matchings are not by
+   themselves native primitives.
+4. The actual reachable Omega from every (x,0), with
+   Dhat T=L5 Dhat throughout Omega, including occupied-memory continuation.
+   Fresh preparation between steps is not part of this contract.
+
+The gate is OPEN_DECISION from L1 to L1. Positive closure requires one
+independently admitted C and one permitted T satisfying every item, with
+an exact complete-domain certificate. Negative closure requires a proof
+covering the complete independently frozen admissible native class.
+An absent interface, failed search, affine-subclass obstruction, selector
+collision or failure of one C leaves this owner at STOP. No existing
+physical apparatus or cross-layer obligation closes here.
+
+The data projection f(x)=pi_X T(x,0) of any successful binary contact must
+be non-affine, have fibres of size at most two, and fail to be injective.
+The last condition follows because an injection X->X is a permutation,
+excluded by QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION. Hence some two distinct
+initial data states must meet at one data output with different register
+values. This specifies a required reversible write, not just two labels.
+The abstract capacity theorem supplies T^10=I as one possible construction;
+it does not require every native realization to have period ten. A
+ten-periodic readout can coexist with a longer full-state cycle. No Thue-Morse
+memory identification, physical fourth coordinate or characteristic-zero
+Hodge realization is supplied.
+
 ## 3. The kernel and the census
 
 F_5^6, 15625 checkpoint states; the Klein-100 typology; 313
@@ -12663,6 +13195,204 @@ apparatus, preparation, event, occurrence, memory/reset mechanism or
 L1-to-L6 lift is adopted.
 
 
+
+### SCALAR-HERMITIAN-NORM-IMAGE [T]
+
+At L1 put `K=Q(j)`, `j=zeta_5`, `F=Q(sqrt5)`, `O_K=Z[j]`,
+`O_F=Z[phi]`, and `H(alpha)=alpha bar(alpha)=N_(K/F)(alpha)`.
+This is the relative norm, not the absolute norm to Q. The exact image is
+
+```text
+h in H(O_K)
+  iff h=0, or h is totally positive and
+       v_q(h) is even at every prime q of F inert in K/F.
+```
+
+The same statement holds for `H(K)` on `F`, allowing negative valuations
+at finite primes. In particular `H(K) intersect O_F=H(O_K)`.
+
+For `p!=5`, Frobenius acts by `j -> j^p`, while complex conjugation is
+the element `-1` of `(Z/5Z)^*`. Thus the relative inert primes are precisely
+those above rational primes `p=2,3,4 mod5`: for `p=2,3` there is one
+degree-two prime in F, and for `p=4` there are two degree-one primes.
+Primes above `p=1 mod5` split in K/F. The prime `q=(sqrt5)` ramifies,
+with relative ramification index two and residue degree one, and has no
+valuation parity restriction.
+
+Necessity follows because both real embeddings of a nonzero H(alpha)
+are positive, and at an inert prime `v_q(H(alpha))=2v_P(alpha)`.
+For sufficiency construct an ideal A of O_K with `A bar(A)=(h)O_K`.
+At a split prime of valuation m choose exponents `(m,0)` on its conjugate
+pair; at an inert prime choose `m/2`; at the ramified prime choose m.
+For integral h these exponents are nonnegative. The registered
+CYCLOTOMIC-CLASS-NUMBER-ONE makes `A=(beta)`, with beta integral in
+that case. The ratio `epsilon=H(beta)/h` is an O_F unit: its extension
+to O_K has trivial principal ideal, so every valuation in F vanishes.
+It is totally positive. The registered fundamental unit phi, whose
+other real value is `-phi^-1`, gives exactly
+
+```text
+O_F^(times,+)=<phi^2>,        epsilon=phi^(2k)=H(phi^k).
+```
+
+Consequently `alpha=beta/phi^k` has `H(alpha)=h`; division preserves
+integrality because phi is a unit. The same construction with fractional
+ideals proves the field statement. This proves sufficiency without an
+additional unproved local-global norm premise.
+
+For a positive rational integer m the criterion reduces to even exponent
+at every prime `p=2,3,4 mod5`; primes `p=1 mod5` and 5 are unrestricted.
+The dependencies retain their registered arithmetic scopes:
+CYCLOTOMIC-CLASS-NUMBER-ONE, REGULATOR-TWO-LOG-PHI,
+QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS, and J-UNIT-STRIP-NORMAL-FORM.
+No physical metric,
+length unit, dimension, occurrence law, or time interpretation is supplied.
+
+### RAMIFIED-HERMITIAN-NORM-OBSTRUCTION [T]
+
+The homomorphism `rho_K:O_K -> F_5`, `j -> 1`, is well defined since
+`Phi_5(1)=5` and has kernel `P=(1-j)`. Its restriction to O_F sends
+`phi=-j^2-j^3` to 3 and has kernel `q=(sqrt5)`. Conjugation is the
+identity on the residue field. Therefore
+
+```text
+rho_F(H(alpha))=rho_K(alpha)^2 in {0,1,4}.
+```
+
+A zero residue means membership in `(sqrt5)`, not necessarily in `5O_F`:
+`H(1-j)=3-phi` is an explicit distinction. Since `phi^2=-1 mod q`,
+for every integer n,
+
+```text
+L_(2n)=phi^(2n)+phi^(-2n)=2(-1)^n mod q in {2,3}.
+```
+
+Neither value is a square, so `L_(2n)` is not H(alpha) for any alpha
+in O_K or even K. For the latter assertion the target is a q-unit;
+the relative residue degree one gives `v_q(H(alpha))=v_P(alpha)`,
+forcing alpha to be a P-unit. Reduction in the local ring gives the
+same contradiction. Denominators do not remove it.
+
+The vector `(phi^n,phi^(-n))` in `O_K^2` nevertheless has standard
+Hermitian squared norm `L_(2n)`. Already `(1,1)` has squared norm 2,
+which is not in H(K). Hence no function `K^2 -> K`, linear or otherwise,
+preserves that Hermitian norm on every vector. This distinguishes a
+scalar norm from a vector norm, not a physical spatial dimension.
+
+For three integral carriers let `r_i=rho_F(H(alpha_i))`. If all three
+pairwise sums of their norms are scalar norms, the residue tuple is a
+permutation of
+
+```text
+(0,0,0), (0,0,1), (0,0,4), or (0,1,4).
+```
+
+Indeed `1+1` and `4+4` are nonsquares, whereas `1+4=0`; these four
+patterns exhaust `{0,1,4}^3` under the pairwise condition. At most two
+carriers can be P-units, and their norm residues must differ if there
+are two. In particular three lengths `phi^a,phi^b,phi^c`, with integer
+exponents, have at least one pair whose squared sum is not a scalar
+norm: two exponents have the same parity. These are necessary local
+conditions, not a global construction of three admissible pairwise sums.
+
+For `Q_n=L_(2n)+1`, even n are excluded by residue 3; odd n merely
+pass this local filter. Exact examples are
+
+```text
+Q_1=4=H(2),
+Q_3=19 not in H(K),
+Q_5=124=H(-6+6j+2j^2+6j^3),
+Q_7=844=H(-18+12j+12j^2-8j^3),
+Q_9=5779 not in H(K).
+```
+
+The positive cases follow by direct multiplication. The negative cases
+follow from SCALAR-HERMITIAN-NORM-IMAGE: 19 and 5779 are primes equal
+to 4 modulo 5, each appearing to exponent one. Since 76^2<5779<77^2, trial division by every prime through 76 proves
+primality. For primes 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,
+the respective remainders are 1,1,4,4,4,7,16,3,6,8,13,7,39,17,45,2,56,45,17,28,12,
+all nonzero.
+An independent integral proof for 19 is
+
+```text
+Phi_5(X)=(X^2+5X+1)(X^2+15X+1) mod19.
+```
+
+Both factors are irreducible, with nonsquare discriminants 2 and 12,
+and reciprocal, so conjugation preserves each factor field. If
+`H(alpha)=19`, reduction forces alpha to vanish in both fields, hence
+`alpha in 19O_K` and `H(alpha) in 19^2 O_F`, a contradiction.
+
+There is no claim that all odd n are admissible. These exclusions do
+not prohibit the displayed vector carriers or real cuboids and do not
+solve the classical perfect-cuboid problem, identify Hodge memory, or
+provide physical measurement, contact, dimension, or occurrence laws.
+
+### J-TWO-TRACE-SCALAR-NORM-IMAGE [T]
+
+Retain the exact pure-J reading of J-TWO-TRACE-RESIDUE-INVERSE:
+`s=S(alpha)=Tr_(K/Q)(H(alpha))/2`, `t=S(J alpha)`, and `J=1+j^2`.
+For `H(alpha)=u+v phi` its registered identities are
+
+```text
+s=2u+v,                     t=3u-v,
+u=(s+t)/5,                 v=(3s-2t)/5,
+N=u^2+uv-v^2=(3st-s^2-t^2)/5.
+```
+
+The complete image of these two traces alone consists of `(0,0)` and
+exactly those integer pairs satisfying
+
+```text
+s+t=0 mod5,    s>0,    N>0,
+g=gcd(|u|,|v|),
+p=2,3 mod5:   v_p(N)=0 mod4,
+p=4 mod5:     v_p(N) and v_p(g) are both even.
+```
+
+The first congruence makes u and v integral. Their two real values have
+sum s and product N, so `s>0,N>0` is exactly total positivity. For
+`p=2,3 mod5`, `(p)` is prime in O_F, its valuation on h is `v_p(g)`,
+and `v_p(N)=2v_p(g)`. For `p=4 mod5`, let a,b be the two prime
+valuations; then `v_p(N)=a+b` and `v_p(g)=min(a,b)`. Both a,b are
+even precisely when their sum and minimum are even. The equivalence
+now follows from SCALAR-HERMITIAN-NORM-IMAGE. The gcd condition is
+essential: `h=19` has `N=19^2` but `g=19` and is not a scalar norm.
+
+The ramified residue lemma also gives the faster necessary condition
+
+```text
+2s-t=u+3v=rho_K(alpha)^2 mod5,
+(s,t) mod5 in {(0,0),(2,3),(3,2)}.
+```
+
+These three residue pairs are all realized by `alpha=0,1,2`, respectively,
+but residue membership alone is not global realizability. Given coefficients
+`r_0,...,r_3` of alpha modulo 5, the consistency test is
+`2s-t=(sum r_i)^2 mod5`. Modulo-25 data are sufficient but not required
+for this checksum. The complete trace-plus-residue inverse already checks
+the reconstructed scalar; the new criterion does not repair its distinct
+modulo-five collision or select a scalar from a trace pair.
+
+For every integer n, `S(J^n)=L_(2n)` while `L_(2n) not in H(K)`.
+Thus an allowed integer trace need not be a scalar squared modulus.
+Only the declared pure-J step is used, not an affine driven update or
+an independently asserted physical measurement.
+
+The supplemental reproduction at `reproduce/scalar-hermitian-norm`
+checks these identities and witnesses. Its finite norm-19 check is complete:
+for the coefficient vector x,
+
+```text
+2S(alpha)=x^T Gx,    G=5I-11^T,    G^-1=(I+11^T)/5,
+x_i^2 <= (4/5)S(alpha).
+```
+
+The inequality is Cauchy-Schwarz in G. `H(alpha)=19` forces `S=38`,
+hence `x_i^2<=152/5<36`; the box `[-5,5]^4` contains every candidate.
+The general norm and trace-image proofs are independent of that finite
+audit. This adds arithmetic image recognition, not apparatus, native
+continuation, physical time, dimension, noise tolerance, or occurrence law.
 
 ## 5. The force is the curvature
 

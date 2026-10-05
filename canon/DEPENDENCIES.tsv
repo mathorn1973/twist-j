@@ -1018,3 +1018,27 @@ U-ION-HODGE-MEAN-SUFFICIENCY	U-ION-HODGE-AFFINE-OBSTRUCTION	REQUIRES	The full-si
 U-ION-HODGE-SCORED-CODE-TRANSPORT	DEF-U-ION-HODGE-READOUT-DOMAIN	REQUIRES	The complete orthogonal checkpoint bases and their two allowed transitions identify the code restriction; measurement and coherent continuation remain separately stated conditional premises.
 U-ION-HODGE-SCORED-CODE-TRANSPORT	ION-LS-CONNECTED-RESPONSE	REQUIRES	The response spectrum and its exact coarse projectors give the declared diagonal score observables.
 U-ION-HODGE-SCORED-CODE-TRANSPORT	J-HODGE-SEMILINEAR-MEMORY	REQUIRES	The fixed-direction four-coordinate target is retained with its original linear-class qualification; the operator statement is restricted to the declared code.
+DEF-QUADRATIC-MEMORY-L5	TRACEKERNEL-F5-HODGE-BRACKET	REQUIRES	use exactly the registered marked h,e,f basis; the displayed L5 remains separately declared target data
+DEF-QUADRATIC-MEMORY-L5	J-HODGE-PREDICTIVE-CLOSURE	REQUIRES	the marked integral five-cycle and exterior action define the algebraic target before any native readout is selected
+DEF-QUADRATIC-MEMORY-L5	A4-RAMIFIED-HODGE-TRACEKERNEL	REQUIRES	the explicit ramified quotient, metric-volume bracket and marked transport derive the exact L5 target
+QUADRATIC-COUPLED-POLYNOMIAL-CLASS	DEF-QUADRATIC-MEMORY-L5	REQUIRES	the fixed source, marked Gram transport and target matrix are explicit premises
+QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION	DEF-QUADRATIC-MEMORY-L5	REQUIRES	the fixed source, marked Gram transport and target matrix are explicit premises
+QUADRATIC-L5-INITIALIZED-CAPACITY	DEF-QUADRATIC-MEMORY-L5	REQUIRES	the fixed source, marked Gram transport and target matrix are explicit premises
+QUADRATIC-L5-NATIVE-OBSTRUCTIONS	DEF-QUADRATIC-MEMORY-L5	REQUIRES	the fixed source, marked Gram transport and target matrix are explicit premises
+QUADRATIC-MEMORY-NATIVE-CONTACT	DEF-QUADRATIC-MEMORY-L5	REQUIRES	the fixed source, marked Gram transport and target matrix are explicit premises
+QUADRATIC-L5-INITIALIZED-CAPACITY	FINITE-READOUT-INITIALIZED-MEMORY	REQUIRES	sharp initialized orbit-capacity and reachable-domain theorem
+QUADRATIC-L5-INITIALIZED-CAPACITY	QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION	REQUIRES	one memory state is excluded for every nonzero symmetric form
+QUADRATIC-L5-NATIVE-OBSTRUCTIONS	QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION	REQUIRES	the same exact scalar quadratic rank certificate delimits affine data outputs
+QUADRATIC-L5-NATIVE-OBSTRUCTIONS	KERNEL-WEDGE-AFFINITY	REQUIRES	registered affine native generators and pair couplings, without arbitrary-permutation controllability
+QUADRATIC-L5-NATIVE-OBSTRUCTIONS	KERNEL-WEDGE-COUPLING	REQUIRES	registered affine native generators and pair couplings, without arbitrary-permutation controllability
+QUADRATIC-MEMORY-NATIVE-CONTACT	QUADRATIC-COUPLED-POLYNOMIAL-CLASS	BOUNDED_BY	abstract reader/capacity and subclass obstructions leave native admission and full occupied continuation open
+QUADRATIC-MEMORY-NATIVE-CONTACT	QUADRATIC-L5-INITIALIZED-CAPACITY	BOUNDED_BY	abstract reader/capacity and subclass obstructions leave native admission and full occupied continuation open
+QUADRATIC-MEMORY-NATIVE-CONTACT	QUADRATIC-L5-NATIVE-OBSTRUCTIONS	BOUNDED_BY	abstract reader/capacity and subclass obstructions leave native admission and full occupied continuation open
+SCALAR-HERMITIAN-NORM-IMAGE	CYCLOTOMIC-CLASS-NUMBER-ONE	REQUIRES	registered arithmetic field, ideal and unit premises; no physical lift
+SCALAR-HERMITIAN-NORM-IMAGE	REGULATOR-TWO-LOG-PHI	REQUIRES	registered arithmetic field, ideal and unit premises; no physical lift
+SCALAR-HERMITIAN-NORM-IMAGE	J-UNIT-STRIP-NORMAL-FORM	REQUIRES	registered arithmetic field, ideal and unit premises; no physical lift
+SCALAR-HERMITIAN-NORM-IMAGE	QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS	REQUIRES	registered arithmetic field, ideal and unit premises; no physical lift
+RAMIFIED-HERMITIAN-NORM-OBSTRUCTION	SCALAR-HERMITIAN-NORM-IMAGE	REQUIRES	global prime-parity criterion distinguishes the displayed Q examples
+J-TWO-TRACE-SCALAR-NORM-IMAGE	SCALAR-HERMITIAN-NORM-IMAGE	REQUIRES	pure-J trace identities and scalar norm image with the ramified checksum
+J-TWO-TRACE-SCALAR-NORM-IMAGE	RAMIFIED-HERMITIAN-NORM-OBSTRUCTION	REQUIRES	pure-J trace identities and scalar norm image with the ramified checksum
+J-TWO-TRACE-SCALAR-NORM-IMAGE	J-TWO-TRACE-RESIDUE-INVERSE	REQUIRES	pure-J trace identities and scalar norm image with the ramified checksum
