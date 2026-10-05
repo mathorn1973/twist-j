@@ -39,6 +39,709 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v98 release accounting and reversible public v97 reconstruction.
+# This is structural release bookkeeping, not an execution of the new science.
+V98_PRIOR_COMMIT = '738e0421bd15aaea5bb6ef2a56f1cab752d44de5'
+V98_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '489cae930dc8dc6b8f5a33f07d3cc6c0f4cf92c2378a96afcfca30681521deae',
+                  'current_bytes': 499705,
+                  'prior_sha256': 'd9f4dd61f1c57eb502be95870bd6104a149c451c81355f78d2a6fcd10946b3de',
+                  'prior_bytes': 491203,
+                  'restore': ((493, 499, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': 'b886637a77d4466da60d94966d034405e726ff39e93c337de79e973f6bc88b82',
+                   'current_bytes': 63878,
+                   'prior_sha256': '49ce83fa1c585556e1af785f955528079aa129a08c951e100860e060e18d4d19',
+                   'prior_bytes': 63024,
+                   'restore': ((554, 561, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': '91b12c92e350fa0e72bc107057d60c673a66a3b1c80c213c365a4250ef9b99dc',
+                      'current_bytes': 167981,
+                      'prior_sha256': '635cdb5f852d7c41ea929052e0ec1cf7c3b077620052f57852b128863a1bfd05',
+                      'prior_bytes': 164840,
+                      'restore': ((1005, 1020, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': '693d83eadbdf4e70b34b7db81cfa8b1e8c1d27147472eea30e64e52665055f9f',
+                  'current_bytes': 101279,
+                  'prior_sha256': 'a56bfa6e5ccc8a4481f765baa6825b8e77b6418b09ec1db750314b2a8917a131',
+                  'prior_bytes': 100185,
+                  'restore': ((493, 499, ''),)},
+ 'HISTORY.tsv': {'current_sha256': '373b2b0cb168e0fda5ec78ebc61374f378a714e3fe608e588898eb037b440f77',
+                 'current_bytes': 468927,
+                 'prior_sha256': 'c44ea31e7a851bb47cc3b9429e4f189ed893181a076cc9294dcc9adcc0cf0dc8',
+                 'prior_bytes': 465270,
+                 'restore': ((1040, 1046, ''),)},
+ 'GATES.tsv': {'current_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'current_bytes': 12907,
+               'prior_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'prior_bytes': 12907,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'current_bytes': 1436,
+                           'prior_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'prior_bytes': 1436,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': '63ef571006447030f52bd038b93ac033bd6c9918862fc6e0db541c28d0e69880',
+              'current_bytes': 919024,
+              'prior_sha256': '257f83a386aad7d309f7017bd719b6212e3cffea60e4986caa5169d6543f108d',
+              'prior_bytes': 897762,
+              'restore': ((0, 1, '# TWIST-J Public Canon v97\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v97. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v97 also declares the discrete architecture used to '
+                           'read\n'),
+                          (25,
+                           26,
+                           'seed of the two algebraic projections. Public Canon v97 does not '
+                           'claim\n'),
+                          (130,
+                           131,
+                           'deriving the architecture from J; Public Canon v97 contains no such\n'),
+                          (8522, 8977, ''))},
+ 'CORE.md': {'current_sha256': 'f75bdf30105f2fa548baba37c694d3f81d5ffb1a77d4b8491037b662341cd8d8',
+             'current_bytes': 24639,
+             'prior_sha256': '2cef2b279d6d1e88652bf87bed56b910bc89e381aebc91beedc42d5186555bb9',
+             'prior_bytes': 23703,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v97. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v97 also declares a discrete architecture. It does not\n'),
+                         (194, 209, ''))},
+ 'FRONTIER.md': {'current_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'current_bytes': 26162,
+                 'prior_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'prior_bytes': 26162,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': '44a5dfd8de90eb025a2247e946e7de5212595cceaab8bcfd7e4d4a3d26caf46f',
+                  'current_bytes': 197476,
+                  'prior_sha256': 'f6f09ee2aa768291e9280a5d2e73fab9a6de6ef5c199ad11140d7783df0c44d6',
+                  'prior_bytes': 195983,
+                  'restore': ((1, 27, ''),
+                              (380,
+                               381,
+                               'Registry snapshot: 492 claims; 0 T-LOCK, 350 T, 59 D, 39 C, 2 H, '
+                               '23 O, 19 F; 25 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': 'a774a4556f69e78d89849a8487cbe200ffda8d8ce7c201b89d7998be3838530b',
+                       'current_bytes': 243,
+                       'prior_sha256': '2a02b5f0098fd601b85bba127a84432655ad26346c2fccb500a75dfa48209f72',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t492\n'),
+                                   (3, 4, 'status_T\t350\n'),
+                                   (11, 12, 'evidence_none\t79\n'))}}
+V98_IDS = ('U-HODGE-FAITHFUL-DIRECT-MEMORY',
+ 'ION-LS-CONNECTED-RESPONSE',
+ 'U-ION-HODGE-AFFINE-OBSTRUCTION',
+ 'U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+ 'U-ION-HODGE-MEAN-SUFFICIENCY',
+ 'U-ION-HODGE-SCORED-CODE-TRANSPORT')
+V98_DEFINITION = "DEF-U-ION-HODGE-READOUT-DOMAIN"
+V98_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'U-HODGE-FAITHFUL-DIRECT-MEMORY',
+                   'status': 'T',
+                   'scope': 'at L1 on the declared domain Omega of extended configurations, with '
+                            'pi retaining original data and counter, faithful continuation pi F=U '
+                            'pi and direct axial reading y=r pi on Omega union F(Omega): the first '
+                            'Hodge equation y(Fx)=3y(x)-m(x) holds exactly iff m=(3r-rU)pi on '
+                            'Omega, so equal original data and counter cannot carry different '
+                            'predictive m values under these premises; imposing also m(Fx)=y(x) '
+                            'gives r(U^2d)-3r(Ud)+r(d)=0 only for d in pi({x in Omega:Fx in '
+                            'Omega}); no linearity or reversibility is needed, and the occupied '
+                            'M1=3/4 collision supplies a conditional obstruction only if a further '
+                            'faithful continuation and distinct Hodge memory readings are '
+                            'independently specified; the first ion step, retained-history '
+                            'encoding, physical continuation and physical time are not identified '
+                            'or invalidated',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on a declared configuration satisfying faithful '
+                                'continuation and the direct reading for which the first equation '
+                                'holds without the forced memory factorization or the '
+                                'factorization fails to give that equation, or on a point in the '
+                                'stated two-step domain satisfying both axial equations but '
+                                'violating the displayed recurrence; missing physical continuation '
+                                'or an unassigned numerical memory reading is not a '
+                                'counterexample'},
+                  {'claim_id': 'ION-LS-CONNECTED-RESPONSE',
+                   'status': 'T',
+                   'scope': 'at L1 conditional on the fixed nonscalar real profile D_i=diag(d), '
+                            'complex geometric factors, response indices k=1,...,6, physical ion '
+                            'indices i_k=k+1, nonzero g_k=Re(c_14 conjugate(c_(i_k))) and admitted '
+                            'global closed-loop phase Theta=kappa lambda^2(sum_i c_i D_i)(sum_i '
+                            'conjugate(c_i) D_i)+sum_i L_i with stationary diagonal local '
+                            'residuals: the mixed four-setting contrast at fixed spectator labels '
+                            'is C_k(m,x)=2 kappa lambda^2 g_k(d_m-d_0)(d_x-d_0), canceling all '
+                            'local and spectator terms; with B=sum_(i<j)(d_i-d_j)^2>0 the six '
+                            'dimensionless commuting response operators are Z_k=(D_M1-d_0 '
+                            'I)(D_R1,k-d_0 I)/B, and the admitted lambda_k gives C_k=pi sign(g_k) '
+                            'Z_k/50 with absolute connected phase at most pi/50; this is an exact '
+                            'response identity, not free edge isolation, a supplied detector, '
+                            'independently calibrated profile, privileged four-coordinate decoder '
+                            'or physical realization',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires if the admitted diagonal phase expansion has a '
+                                'noncancelling local or spectator contribution to the stated mixed '
+                                'contrast, yields another cross coefficient or normalized phase, '
+                                'or violates the phase bound for a nonscalar profile under the '
+                                'displayed intensity; implementation of a measurement or of a '
+                                'pair-selected interaction is outside scope'},
+                  {'claim_id': 'U-ION-HODGE-AFFINE-OBSTRUCTION',
+                   'status': 'T',
+                   'scope': 'at L1 on the seventy-five checkpoints and fifty edges of '
+                            'DEF-U-ION-HODGE-READOUT-DOMAIN, for a_j=d_j-d_0, a_0=0, a_1 '
+                            'a_2(a_1-a_2) nonzero and the fixed-direction Hodge map L_H: every '
+                            'fixed affine reading R(X)=c+sum_(k=1)^6 v_k a_s a_(R1,k), with '
+                            'arbitrary real four-vector coefficients allowed to depend on the '
+                            'fixed calibrated profile but not on preparation or boundary, that '
+                            'obeys R(X_(n+1))=L_H R(X_n) has zero values on every checkpoint; '
+                            'common normalization and known nonzero edge factors are absorbed into '
+                            'the coefficients; the conclusion is not coefficientwise or a global '
+                            'observable identity and does not cover every nonscalar profile, '
+                            'nonlinear processing, other frames or extra records; neither '
+                            'calibrated nondegeneracy nor a physical native continuation or Hodge '
+                            'decoder is supplied',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on an admitted nondegenerate fixed profile and fixed affine '
+                                'coefficients satisfying every displayed edge equation with a '
+                                'nonzero checkpoint reading, or on a failure of the stated proof '
+                                'premises from the explicit checkpoint table and Hodge map; a '
+                                'degenerate profile, nonlinear decoder or changed observation '
+                                'class is outside the obstruction'},
+                  {'claim_id': 'U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                   'status': 'T',
+                   'scope': 'at L1 for any fixed real nonscalar profile and arbitrary fixed '
+                            'functions only of the six connected responses on the declared '
+                            'seventy-five checkpoints, merge exactly equal response vectors and '
+                            'retain every distinct directed native edge, including loops and '
+                            'branching: if q connected components admit integer heights with '
+                            'h_v=h_u+1 on each directed edge, the space of compatible finite '
+                            'four-vector assignments r_v=L_H r_u has dimension 4q and all other '
+                            'components vanish; the zero component vanishes and nonzero axial '
+                            'readings exist exactly when q>0, because there are at most nine '
+                            'distinct edges and L_H^ell-I is invertible for 0<abs(ell)<=9; '
+                            'generically in unrestricted centered-profile R^4 there are thirteen '
+                            'response classes and four free two-edge paths, giving dimension 16, '
+                            'witnessed by a=(0,1,2,3,5), B=74, whereas a=(0,1,-1,-1,1), B=20 '
+                            'forces zero despite the earlier affine nondegeneracy; this is finite '
+                            'response-information compatibility, with unrestricted function '
+                            'extensions off the checkpoints, not apparatus genericity, a selected '
+                            'decoder, an all-time invariant observable space or a new ion '
+                            'implementation',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires on a fixed admitted profile whose exact quotient graph has '
+                                'compatible assignment dimension different from 4q, a nonzero '
+                                'assignment on a height-inconsistent component, a zero-response '
+                                'component with a nonzero assignment, an additional exact response '
+                                'coincidence in the positive rational witness, or a nonzero '
+                                'compatible assignment in the negative witness; uncertain '
+                                'numerical equality and longer horizons are outside the exact '
+                                'criterion'},
+                  {'claim_id': 'U-ION-HODGE-MEAN-SUFFICIENCY',
+                   'status': 'T',
+                   'scope': 'at L1 for distinct checkpoint response columns Z=[z_i], fixed real '
+                            'four-score columns H=[f(z_i)] and T=[1^T;Z], the existence of a fixed '
+                            'function g with Hp=g(Zp) for every probability mixture in the full '
+                            'simplex, including cross-boundary mixtures, is equivalent to ker(T) '
+                            'subset ker(H) and to H=c 1^T+A Z; no regularity assumption is needed, '
+                            'the affine values on aff{z_i} are unique and extension coefficients '
+                            'are unique exactly when rank(T)=7; combined with the stated '
+                            'nondegenerate affine obstruction, Hodge-compatible scores satisfying '
+                            'this additional mean-sufficiency contract vanish at all checkpoints, '
+                            'so any compatible nonzero checkpoint scores distinguish some '
+                            'equal-mean mixtures; ordinary quantum mixture-linearity of per-shot '
+                            'scores does not imply this contract, boundary-restricted mixtures '
+                            'need not share one affine extension, and no global affine function, '
+                            'measurement law derived from native U, physically available '
+                            'cross-boundary preparation or selected score is supplied',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires if the three full-simplex conditions differ for finite real '
+                                'response and score matrices, the extension uniqueness criterion '
+                                'fails, or nonzero Hodge-compatible checkpoint scores satisfy '
+                                "full-simplex mean sufficiency under the affine theorem's profile "
+                                'condition; ordinary shot-score linearity and mixtures confined to '
+                                'separate boundaries do not by themselves meet the hypothesis'},
+                  {'claim_id': 'U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                   'status': 'T',
+                   'scope': 'at L1 under the adopted joint level POVM and Born probability rule, '
+                            'every fixed finite real four-vector score f on the full admitted '
+                            'response spectrum defines bounded commuting diagonal operators '
+                            'O_j=sum_z f_j(z) Q_z and a mixture-linear shot expectation; if a '
+                            'separately established unitary V_n maps every complete code basis '
+                            'checkpoint to its specified successor up to phase and the score '
+                            'values obey the Hodge edges, then (V_n^dagger O_j V_n-sum_k (L_H)_jk '
+                            'O_k)Pi_n=0, hence all density operators supported on that code obey '
+                            'the same expectation step; neither this restricted identity nor score '
+                            'diagonality certifies the unitary continuation or coherence '
+                            'experimentally; a measured continuation instead requires a specified '
+                            'completely positive instrument with effects Q_z and its actual joint '
+                            'conditional output, occupied archive, retained record and resources, '
+                            'so fresh-copy endpoint comparisons do not establish a successive '
+                            'measured apparatus or a global hyperbolic operator identity; no Born '
+                            'derivation, detector implementation, independent profile, privileged '
+                            'score or physical time identification is supplied',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fires if the defined finite score observables fail boundedness, '
+                                'commutativity or mixture-linearity under the adopted POVM rule, '
+                                'or an admitted unitary basis map and diagonal scores satisfy '
+                                'every edge equation but violate the restricted-action identity or '
+                                'its code-supported expectation consequence; an unprovided '
+                                'instrument, disturbance law or physical continuation is not '
+                                'assumed by the theorem'}],
+ 'NORMATIVE.tsv': [{'item_id': 'DEF-U-ION-HODGE-READOUT-DOMAIN',
+                    'item_type': 'DEFINITION',
+                    'claim_id': '',
+                    'status': '',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::DEF-U-ION-HODGE-READOUT-DOMAIN'},
+                   {'item_id': 'U-HODGE-FAITHFUL-DIRECT-MEMORY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-HODGE-FAITHFUL-DIRECT-MEMORY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-HODGE-FAITHFUL-DIRECT-MEMORY'},
+                   {'item_id': 'ION-LS-CONNECTED-RESPONSE',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'ION-LS-CONNECTED-RESPONSE',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::ION-LS-CONNECTED-RESPONSE'},
+                   {'item_id': 'U-ION-HODGE-AFFINE-OBSTRUCTION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-ION-HODGE-AFFINE-OBSTRUCTION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-ION-HODGE-AFFINE-OBSTRUCTION'},
+                   {'item_id': 'U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION'},
+                   {'item_id': 'U-ION-HODGE-MEAN-SUFFICIENCY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-ION-HODGE-MEAN-SUFFICIENCY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-ION-HODGE-MEAN-SUFFICIENCY'},
+                   {'item_id': 'U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-ION-HODGE-SCORED-CODE-TRANSPORT'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'DEF-U-ION-HODGE-READOUT-DOMAIN',
+                       'depends_on': 'DEF-AUTONOMOUS-STATE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The original autonomous selector, counter and branch definitions '
+                                'specify the finite passive-archive comparison domain; no later '
+                                'physical ion realization is inferred.'},
+                      {'item_id': 'U-HODGE-FAITHFUL-DIRECT-MEMORY',
+                       'depends_on': 'DEF-U-ION-HODGE-READOUT-DOMAIN',
+                       'relation': 'REQUIRES',
+                       'basis': 'The complete checkpoint family supplies the occupied-memory '
+                                'collision application; the general factorization proposition '
+                                'states its projection and continuation premises explicitly.'},
+                      {'item_id': 'U-HODGE-FAITHFUL-DIRECT-MEMORY',
+                       'depends_on': 'J-HODGE-SEMILINEAR-MEMORY',
+                       'relation': 'REQUIRES',
+                       'basis': 'The fixed-direction axial recurrence and the qualified '
+                                'predictive-memory role supply the comparison equations.'},
+                      {'item_id': 'ION-LS-CONNECTED-RESPONSE',
+                       'depends_on': 'DEF-U-ION-HODGE-READOUT-DOMAIN',
+                       'relation': 'REQUIRES',
+                       'basis': 'The shared seventeen-ion register dictionary identifies M1 and '
+                                'its six R1 partners; the response theorem separately adopts its '
+                                'conditional diagonal-loop model.'},
+                      {'item_id': 'U-ION-HODGE-AFFINE-OBSTRUCTION',
+                       'depends_on': 'DEF-U-ION-HODGE-READOUT-DOMAIN',
+                       'relation': 'REQUIRES',
+                       'basis': 'The exact seventy-five checkpoints, passive archive and fifty '
+                                'edges fix the finite theorem domain.'},
+                      {'item_id': 'U-ION-HODGE-AFFINE-OBSTRUCTION',
+                       'depends_on': 'ION-LS-CONNECTED-RESPONSE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The six centered product responses fix the affine decoder class '
+                                'and common normalization.'},
+                      {'item_id': 'U-ION-HODGE-AFFINE-OBSTRUCTION',
+                       'depends_on': 'J-HODGE-HERM2-LOXODROME',
+                       'relation': 'REQUIRES',
+                       'basis': 'The fixed-direction four-dimensional target has invertible L_H '
+                                'and I-L_H; no physical Hermitian identification is imported.'},
+                      {'item_id': 'U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                       'depends_on': 'DEF-U-ION-HODGE-READOUT-DOMAIN',
+                       'relation': 'REQUIRES',
+                       'basis': 'The finite horizon supplies the thirteen symbolic response rows '
+                                'and at most nine distinct transition edges.'},
+                      {'item_id': 'U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                       'depends_on': 'ION-LS-CONNECTED-RESPONSE',
+                       'relation': 'REQUIRES',
+                       'basis': 'Exact equality is taken only in the six fixed normalized '
+                                'connected responses, without extra decoder inputs.'},
+                      {'item_id': 'U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                       'depends_on': 'J-HODGE-HERM2-LOXODROME',
+                       'relation': 'REQUIRES',
+                       'basis': 'The order-ten periodic and non-root-of-unity axial eigenvalues '
+                                'make every nonzero signed cycle length at most nine obstruct a '
+                                'nonzero assignment.'},
+                      {'item_id': 'U-ION-HODGE-MEAN-SUFFICIENCY',
+                       'depends_on': 'DEF-U-ION-HODGE-READOUT-DOMAIN',
+                       'relation': 'REQUIRES',
+                       'basis': 'The checkpoint family and boundary labels identify the finite '
+                                'observations; the mean theorem separately declares its enlarged '
+                                'full-simplex mixture domain and score semantics.'},
+                      {'item_id': 'U-ION-HODGE-MEAN-SUFFICIENCY',
+                       'depends_on': 'U-ION-HODGE-AFFINE-OBSTRUCTION',
+                       'relation': 'REQUIRES',
+                       'basis': 'The full-simplex factorization converts mean-sufficient '
+                                'checkpoint scores into the fixed affine class, yielding the '
+                                'zero-reading corollary only under its profile condition.'},
+                      {'item_id': 'U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                       'depends_on': 'DEF-U-ION-HODGE-READOUT-DOMAIN',
+                       'relation': 'REQUIRES',
+                       'basis': 'The complete orthogonal checkpoint bases and their two allowed '
+                                'transitions identify the code restriction; measurement and '
+                                'coherent continuation remain separately stated conditional '
+                                'premises.'},
+                      {'item_id': 'U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                       'depends_on': 'ION-LS-CONNECTED-RESPONSE',
+                       'relation': 'REQUIRES',
+                       'basis': 'The response spectrum and its exact coarse projectors give the '
+                                'declared diagonal score observables.'},
+                      {'item_id': 'U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                       'depends_on': 'J-HODGE-SEMILINEAR-MEMORY',
+                       'relation': 'REQUIRES',
+                       'basis': 'The fixed-direction four-coordinate target is retained with its '
+                                'original linear-class qualification; the operator statement is '
+                                'restricted to the declared code.'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'U-HODGE-FAITHFUL-DIRECT-MEMORY',
+                   'evidence_id': 'EV-U-HODGE-FAITHFUL-DIRECT-MEMORY',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'c0fa9a6ac86fe332dbde6ef71535cdd85aafc5ad2275203fabaf99731cd98fea',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'ION-LS-CONNECTED-RESPONSE',
+                   'evidence_id': 'EV-ION-LS-CONNECTED-RESPONSE',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '3d471a51f215c84ffe4380484b4ebe9d095bab82e1fe0e25c3a5bf3d287a0785',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-ION-HODGE-AFFINE-OBSTRUCTION',
+                   'evidence_id': 'EV-U-ION-HODGE-AFFINE-OBSTRUCTION',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '9b6c678323480162750d0f05c3b904bbcdf45f17eaa55556cfbc2759eb8b1838',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                   'evidence_id': 'EV-U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'a53b84fd832c372da1018cc994a0290901091f791cd8b3471d0275cdd5aa37cb',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-ION-HODGE-MEAN-SUFFICIENCY',
+                   'evidence_id': 'EV-U-ION-HODGE-MEAN-SUFFICIENCY',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '3f3b1dce25b183a77d9821d23aeb3d48a0f05444f198918f36b4c58ec99934e3',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                   'evidence_id': 'EV-U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'ad71608f1d9572a27790a3ec441f613815703dd06f14d5832b697cd222bf791d',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON98-DECLARE-U-HODGE-FAITHFUL-DIRECT-MEMORY',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v98',
+                  'claim_id': 'U-HODGE-FAITHFUL-DIRECT-MEMORY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'c0fa9a6ac86fe332dbde6ef71535cdd85aafc5ad2275203fabaf99731cd98fea',
+                  'evidence_id': 'EV-U-HODGE-FAITHFUL-DIRECT-MEMORY',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'c0fa9a6ac86fe332dbde6ef71535cdd85aafc5ad2275203fabaf99731cd98fea',
+                  'rationale': 'Declare the independently reviewed self-contained conditional L1 '
+                               'analytical proof; all 492 prior claims and all 25 live H/O '
+                               'obligations retain their exact scopes and statuses. No scientific '
+                               'execution, calibrated profile, selected Hodge decoder, '
+                               'occupied-memory physical continuation or instrument realization is '
+                               'inferred.'},
+                 {'event_id': 'CANON98-DECLARE-ION-LS-CONNECTED-RESPONSE',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v98',
+                  'claim_id': 'ION-LS-CONNECTED-RESPONSE',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '3d471a51f215c84ffe4380484b4ebe9d095bab82e1fe0e25c3a5bf3d287a0785',
+                  'evidence_id': 'EV-ION-LS-CONNECTED-RESPONSE',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '3d471a51f215c84ffe4380484b4ebe9d095bab82e1fe0e25c3a5bf3d287a0785',
+                  'rationale': 'Declare the independently reviewed self-contained conditional L1 '
+                               'analytical proof; all 492 prior claims and all 25 live H/O '
+                               'obligations retain their exact scopes and statuses. No scientific '
+                               'execution, calibrated profile, selected Hodge decoder, '
+                               'occupied-memory physical continuation or instrument realization is '
+                               'inferred.'},
+                 {'event_id': 'CANON98-DECLARE-U-ION-HODGE-AFFINE-OBSTRUCTION',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v98',
+                  'claim_id': 'U-ION-HODGE-AFFINE-OBSTRUCTION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '9b6c678323480162750d0f05c3b904bbcdf45f17eaa55556cfbc2759eb8b1838',
+                  'evidence_id': 'EV-U-ION-HODGE-AFFINE-OBSTRUCTION',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '9b6c678323480162750d0f05c3b904bbcdf45f17eaa55556cfbc2759eb8b1838',
+                  'rationale': 'Declare the independently reviewed self-contained conditional L1 '
+                               'analytical proof; all 492 prior claims and all 25 live H/O '
+                               'obligations retain their exact scopes and statuses. No scientific '
+                               'execution, calibrated profile, selected Hodge decoder, '
+                               'occupied-memory physical continuation or instrument realization is '
+                               'inferred.'},
+                 {'event_id': 'CANON98-DECLARE-U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v98',
+                  'claim_id': 'U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'a53b84fd832c372da1018cc994a0290901091f791cd8b3471d0275cdd5aa37cb',
+                  'evidence_id': 'EV-U-ION-HODGE-RESPONSE-FIBRE-CLASSIFICATION',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'a53b84fd832c372da1018cc994a0290901091f791cd8b3471d0275cdd5aa37cb',
+                  'rationale': 'Declare the independently reviewed self-contained conditional L1 '
+                               'analytical proof; all 492 prior claims and all 25 live H/O '
+                               'obligations retain their exact scopes and statuses. No scientific '
+                               'execution, calibrated profile, selected Hodge decoder, '
+                               'occupied-memory physical continuation or instrument realization is '
+                               'inferred.'},
+                 {'event_id': 'CANON98-DECLARE-U-ION-HODGE-MEAN-SUFFICIENCY',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v98',
+                  'claim_id': 'U-ION-HODGE-MEAN-SUFFICIENCY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '3f3b1dce25b183a77d9821d23aeb3d48a0f05444f198918f36b4c58ec99934e3',
+                  'evidence_id': 'EV-U-ION-HODGE-MEAN-SUFFICIENCY',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '3f3b1dce25b183a77d9821d23aeb3d48a0f05444f198918f36b4c58ec99934e3',
+                  'rationale': 'Declare the independently reviewed self-contained conditional L1 '
+                               'analytical proof; all 492 prior claims and all 25 live H/O '
+                               'obligations retain their exact scopes and statuses. No scientific '
+                               'execution, calibrated profile, selected Hodge decoder, '
+                               'occupied-memory physical continuation or instrument realization is '
+                               'inferred.'},
+                 {'event_id': 'CANON98-DECLARE-U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v98',
+                  'claim_id': 'U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'ad71608f1d9572a27790a3ec441f613815703dd06f14d5832b697cd222bf791d',
+                  'evidence_id': 'EV-U-ION-HODGE-SCORED-CODE-TRANSPORT',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'ad71608f1d9572a27790a3ec441f613815703dd06f14d5832b697cd222bf791d',
+                  'rationale': 'Declare the independently reviewed self-contained conditional L1 '
+                               'analytical proof; all 492 prior claims and all 25 live H/O '
+                               'obligations retain their exact scopes and statuses. No scientific '
+                               'execution, calibrated profile, selected Hodge decoder, '
+                               'occupied-memory physical continuation or instrument realization is '
+                               'inferred.'}]}
+V98_REPRODUCTIONS = ('C-FIELD-J-CONTENT-TRANSPORT-N',
+ 'C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-REVIEW-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N',
+ 'PHOTON-Z5-EXACT-HEATBATH-KERNEL',
+ 'alpha-exact-lemma',
+ 'alpha-value',
+ 'born-faces',
+ 'born-quartet',
+ 'census',
+ 'color-ladder',
+ 'cosmology-register',
+ 'coupling-metrology',
+ 'dirac-ladder',
+ 'force-born-dictionary',
+ 'foundations-places',
+ 'gravity-chain',
+ 'hyperplane-codec',
+ 'kernel',
+ 'kernel-connectivity',
+ 'mass-ladder',
+ 'maxwell',
+ 'observer-boost',
+ 'pentit-p5-closure',
+ 'photon-electron',
+ 'qdd-route-a',
+ 'status-separation',
+ 'weinberg')
+V98_PROOF_CONTRACT = {'begin': '### DEF-U-ION-HODGE-READOUT-DOMAIN\n',
+ 'end': '## 3. The kernel and the census\n',
+ 'bytes': 21262,
+ 'sha256': 'eef561240cba6ba612d975ce86c3eb050d939a67807301b8ceed872ee6e42784'}
+V98_SCOPE_TERMS = {'observation': ['The source native law in section 2 is retained.',
+                 'There is no closing n=3->1 edge or intervening contact.',
+                 'It receives no level labels, t, counter, history or extra detector record.',
+                 'It does not force every coefficient or the global observable to vanish, and it '
+                 'does not cover nonlinear processing.',
+                 'The quotient is not assumed to have a single-valued update.',
+                 'This interpolation demonstrates only finite compatibility.',
+                 'Exact equality cannot be replaced by a noise tolerance without a new error '
+                 'contract.'],
+ 'measurement': ['The Born rule here is an external measurement premise, not a consequence of '
+                 'native U or J.',
+                 'On the full probability simplex of these points, including cross-boundary '
+                 'mixtures',
+                 'Ordinary quantum mixture-linearity alone does not impose mean sufficiency.',
+                 'The unitary hypothesis is not supplied by merely writing the partial native '
+                 'table.',
+                 'The code theorem describes unmeasured coherent evolution unless insertion of an '
+                 'instrument is separately justified.'],
+ 'physical': ['No numerical profile, jointly calibrated geometry, implemented instrument, selected '
+              'four-coordinate decoder, continuation pulse word or accumulated error bound is '
+              'established.',
+              'Existing physical-HOLD owners and their scope are unchanged',
+              'not a physical occurrence law or a statement about the admissible optical parameter '
+              'family.']}
+
+
+def v98_previous_bytes(path):
+    """Pin the complete current input before restoring exact public v97 bytes."""
+    patch = V98_INPUT_PATCH.get(path.name)
+    if patch is None:
+        return None
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v98_current_checks():
+    """Audit current declarations; inherited predicates see verified v97 bytes."""
+    names = tuple(name for name in V98_INPUT_PATCH if name.endswith(".tsv"))
+    prior = {name: v87_table_bytes(v98_previous_bytes(ROOT / "canon" / name))
+             for name in names}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in names}
+    old_index = {row["claim_id"]: row for row in prior["REGISTRY.tsv"]}
+    index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    text = CANON.read_text(encoding="utf-8")
+    contract = V98_PROOF_CONTRACT
+    first = text.find(contract["begin"])
+    last = text.find(contract["end"], first) if first >= 0 else -1
+    proof = text[first:last].encode("utf-8") if 0 <= first < last else b""
+    proof_exact = (text.count(contract["begin"]) == 1
+        and len(proof) == contract["bytes"]
+        and hashlib.sha256(proof).hexdigest() == contract["sha256"])
+    normalized = " ".join(proof.decode("utf-8").split())
+    counts = {status: sum(row["status"] == status for row in index.values())
+              for status in {row["status"] for row in index.values()}}
+    exact_additions = all(current[name] == prior[name] + rows
+                          for name, rows in V98_ADDITIONS.items())
+    exact_theorems = all(
+        index.get(claim, {}).get("status") == "T"
+        and normative.get(claim, {}).get("item_type") == "THEOREM"
+        and normative.get(claim, {}).get("layer") == "L1"
+        and normative.get(claim, {}).get("gate_ids") == ""
+        and evidence.get(claim, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(claim, {}).get("location") == "inline"
+        and evidence.get(claim, {}).get("architecture_requirement") == "none"
+        and evidence.get(claim, {}).get("hash_mode") == "registry-scope-sha256-v1"
+        and evidence.get(claim, {}).get("sha256")
+            == hashlib.sha256(index.get(claim, {}).get("scope", "").encode("utf-8")).hexdigest()
+        and ("### " + claim + " [T]") in text
+        for claim in V98_IDS)
+    exact_definition = (V98_DEFINITION not in index
+        and normative.get(V98_DEFINITION, {}).get("item_type") == "DEFINITION"
+        and normative.get(V98_DEFINITION, {}).get("status") == ""
+        and normative.get(V98_DEFINITION, {}).get("layer") == "L1"
+        and normative.get(V98_DEFINITION, {}).get("gate_ids") == "")
+    old_live = {claim: row for claim, row in old_index.items() if row["status"] in {"H", "O"}}
+    live = {claim: row for claim, row in index.items() if row["status"] in {"H", "O"}}
+    current_dirs = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    return [
+        ("V98-PRIOR-BYTES",
+         "thirteen complete v98 inputs reconstruct exact public v97 before all 136 unchanged historical guards",
+         len(V98_INPUT_PATCH) == 13 and set(V98_INPUT_PATCH) == set(V97_INPUT_PATCH)
+         and V98_PRIOR_COMMIT == "738e0421bd15aaea5bb6ef2a56f1cab752d44de5"
+         and all(v98_previous_bytes(ROOT / "canon" / name) is not None for name in V98_INPUT_PATCH)),
+        ("V98-SIX-PROOFS",
+         "six conditional L1 theorem declarations bind exact scopes, the complete inline proof block, one definition and all new ledger rows",
+         len(V98_IDS) == 6 and set(index) == set(old_index) | set(V98_IDS)
+         and exact_additions and exact_theorems and exact_definition and proof_exact
+         and counts == {"T": 356, "D": 59, "C": 39, "H": 2, "O": 23, "F": 19}
+         and len(index) == 498 and len(old_index) == 492),
+        ("V98-OBSERVATION-DOMAIN",
+         "pinned proof text retains the six-score record, fixed native horizon, affine scope and finite nonlinear response-fibre boundary",
+         proof_exact and all(token in normalized for token in V98_SCOPE_TERMS["observation"])),
+        ("V98-MEASUREMENT-SCOPE",
+         "pinned proof text distinguishes joint-shot scores from six means and retains full-simplex and conditional code-transport assumptions",
+         proof_exact and all(token in normalized for token in V98_SCOPE_TERMS["measurement"])),
+        ("V98-OPEN-BOUNDARY",
+         "all 492 prior rows and 25 H/O owners remain exact; gates, programs, CORE selection and 32 reproduction directories are unchanged",
+         all(index.get(claim) == row for claim, row in old_index.items())
+         and old_live == live and len(live) == 25
+         and all(current[name] == prior[name] for name in (
+             "GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv"))
+         and FRONTIER.read_bytes() == v98_previous_bytes(FRONTIER)
+         and all(row["owner_item_id"] not in V98_IDS for row in current["GATES.tsv"])
+         and all(row["claim_id"] not in V98_IDS for row in current["CORE_SELECTION.tsv"])
+         and all(row["claim_id"] not in V98_IDS for row in current["FRONTIER_PROGRAMS.tsv"])
+         and len(V98_REPRODUCTIONS) == 32 and current_dirs == set(V98_REPRODUCTIONS)
+         and proof_exact and all(token in normalized for token in V98_SCOPE_TERMS["physical"])),
+    ]
+
+
 # Exact v97 release accounting and reversible public v96 reconstruction.
 V97_PRIOR_COMMIT = '44423153eee6259c7277eec5f5adbed9679f9146'
 V97_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'd9f4dd61f1c57eb502be95870bd6104a149c451c81355f78d2a6fcd10946b3de',
@@ -541,7 +1244,9 @@ def v97_previous_bytes(path):
     patch = V97_INPUT_PATCH.get(path.name)
     if patch is None:
         return None
-    current = path.read_bytes()
+    current = v98_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -568,13 +1273,13 @@ def v97_current_checks():
     names = tuple(name for name in V97_INPUT_PATCH if name.endswith(".tsv"))
     prior = {name: v87_table_bytes(v97_previous_bytes(ROOT / "canon" / name))
              for name in names}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v98_previous_bytes(ROOT / "canon" / name))
                for name in names}
     old_index = {row["claim_id"]: row for row in prior["REGISTRY.tsv"]}
     index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
     normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
     evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
-    text = CANON.read_text(encoding="utf-8")
+    text = (v98_previous_bytes(CANON) or b"").decode("utf-8")
     contract = V97_PROOF_CONTRACT
     first = text.find(contract["begin"])
     last = text.find(contract["end"], first) if first >= 0 else -1
@@ -634,7 +1339,7 @@ def v97_current_checks():
          and old_live == live and len(live) == 25
          and all(current[name] == prior[name] for name in (
              "GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv"))
-         and FRONTIER.read_bytes() == v97_previous_bytes(FRONTIER)
+         and v98_previous_bytes(FRONTIER) == v97_previous_bytes(FRONTIER)
          and all(row["owner_item_id"] not in V97_IDS for row in current["GATES.tsv"])
          and all(row["claim_id"] not in V97_IDS for row in current["CORE_SELECTION.tsv"])
          and all(row["claim_id"] not in V97_IDS for row in current["FRONTIER_PROGRAMS.tsv"])
@@ -16043,9 +16748,10 @@ def run():
     checks.extend(v95_current_checks())
     checks.extend(v96_current_checks())
     checks.extend(v97_current_checks())
+    checks.extend(v98_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v97")
+    print("historical guards: exact reconstructed v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v98")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

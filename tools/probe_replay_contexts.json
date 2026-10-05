@@ -30,6 +30,138 @@
           "bytes": 21696
         }
       }
+    },
+    "P-U-EARLY-SOURCE-FIBRE-CONTACT-1": {
+      "pin_commit": "9754d85622844d40212288d2204fc240e6cd8e31",
+      "verifier": {
+        "git_blob": "4259966e3a2425e91f15a8d6c82289d928725b47",
+        "sha256": "58a9ce2a846572842927f2fb18307a30bd7fe216b16233af3c35f53e319191c4",
+        "bytes": 3891
+      },
+      "prereg": {
+        "git_blob": "05d8f46bc9b94d904395b4a4eddbbabe0be4188f",
+        "sha256": "4a8600901c5bacacb354a63a21474c228d70a4a5389c29918429ebe0bdb2579c",
+        "bytes": 14667
+      },
+      "context_files": {
+        "STATUS.md": {
+          "git_blob": "16a3195161aeaea87290e910089d317b6318f8ef",
+          "sha256": "f3a555e6479012a575e623f812c8a3d892f13ecef1231599b066d31332b3bee3",
+          "bytes": 2386
+        },
+        "POLICY.md": {
+          "git_blob": "01eec35421fd00bd7a8d3ed606dd8261dceda0af",
+          "sha256": "7771a4a4dc8ab98d6525c202326873c7c3ff782475dd66c7dc75fa325566ee9c",
+          "bytes": 16964
+        },
+        "AGENTS.md": {
+          "git_blob": "a449c8036ccbc40240060c885bb936630d4fc680",
+          "sha256": "7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1",
+          "bytes": 21813
+        },
+        "canon/CORE.md": {
+          "git_blob": "1ef7b118fcabac13237c28245d119b291224f87f",
+          "sha256": "2cef2b279d6d1e88652bf87bed56b910bc89e381aebc91beedc42d5186555bb9",
+          "bytes": 23703
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "7ce21381b6c4ef98a205d26ec3d68ba64ecfc8ae",
+          "sha256": "23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9",
+          "bytes": 26162
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e97c003e1f46e7b73a067f04f729d8b6076a69ff",
+          "sha256": "d9f4dd61f1c57eb502be95870bd6104a149c451c81355f78d2a6fcd10946b3de",
+          "bytes": 491203
+        },
+        "canon/CANON.md": {
+          "git_blob": "432640bce89514fd6a15f63f840d4f2cab9d7a86",
+          "sha256": "257f83a386aad7d309f7017bd719b6212e3cffea60e4986caa5169d6543f108d",
+          "bytes": 897762
+        },
+        "reproduce/census/verify.py": {
+          "git_blob": "f96615344421ea80b8dcfc31f8d905e9fd30fa8c",
+          "sha256": "1df13ba2218acaa9cf48dab2480e6472b107691aac868618dc7f91d511718a5c",
+          "bytes": 8127
+        },
+        "probes/P-U-PREPARATION-EVENT-RECORD-1/RESULT.md": {
+          "git_blob": "ed1b61e6895cf48d77fd44cf0d2c54dbb0ba77ac",
+          "sha256": "106884607b4e88a4ff5fb56e9ea55858d57e9f1a8afa766b52ac83443cb64ca0",
+          "bytes": 9780
+        },
+        "probes/P-KERNEL-Z6-SYNCHRONIZATION-1/RESULT.md": {
+          "git_blob": "fabb133f18fe6eff172b0bd87aa5030144f394ef",
+          "sha256": "2203f3bec15c135e6d2ac233074644abf53478ac21bc98dbeb3584d6f8c61f05",
+          "bytes": 4701
+        },
+        "notes/C-NATIVE-FIBRE-PENTIT-WIGNER-N/PREREG.md": {
+          "git_blob": "ca30fba590bd18c70925d029519c2214e2411361",
+          "sha256": "cbda8c9f0fbc7da3b5baeed685d9e8592ecffaa6b70617633a271056ca94757c",
+          "bytes": 20816
+        }
+      },
+      "bundle_files": {
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/.gitattributes": {
+          "git_blob": "7e7bc417a57052ea5cb292031566a1434f747497",
+          "sha256": "ee067aa1f8e562df8992cea7336adeb3d4a92988547284e0956ca073ae1fd94a",
+          "bytes": 48
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/COLLISIONS.md": {
+          "git_blob": "063a93dee37bc9c3019acee7720f5323379edf08",
+          "sha256": "6d6f911bc24a0f04ff2381efd7a9b611a81cb9930824e0e145cb8ae9ee16cd56",
+          "bytes": 7180
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/independent_native.py": {
+          "git_blob": "807d307e808bb1b79b1b1b83fc6a669aa8417a06",
+          "sha256": "f12bbe502c218ca549c7f72fed69d996c7f562c6db9c71e4efd4c0c4225a2fc1",
+          "bytes": 9058
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/INTEGRATION.md": {
+          "git_blob": "1413e68abaf5668fbbf5a4bd40a737c796736265",
+          "sha256": "008a313c41bc94a073731a3a1cc2acf23c30cf0354be49f1dae576b06eadfaa3",
+          "bytes": 2906
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/primary.py": {
+          "git_blob": "c4533616e3842a2499ca74c1854872e98860d3e1",
+          "sha256": "7e3b422d0ebb5a510cfc469b9962d24cbc9ebd14da53d1949a50ca39e26887e1",
+          "bytes": 16033
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/PROOF.md": {
+          "git_blob": "f716a68359553f28643f919075e0e2c392d25c9d",
+          "sha256": "915a7ec56e461eec0a5a9e8268fc863fd3096dbfa47cf22c40b760ecbe79f60b",
+          "bytes": 7998
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/README.md": {
+          "git_blob": "f2b09c69712c9a41e1036cef208515b4386abe9b",
+          "sha256": "66658dccabdf7a9364837cf1f1d505261223373c90b843a2fc5378926f940134",
+          "bytes": 3889
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-FREEZE.json": {
+          "git_blob": "5907c68af1d2c8620590b26abc7515325d626e9d",
+          "sha256": "c662fad63b3073095e2bd757b27a3a156b4b2cbfcfe70d3cc9447d7acc9fb9e6",
+          "bytes": 1581
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-PREREG.md": {
+          "git_blob": "ef26f4995bb462f19b98e8ea7e6ec8fd382c3951",
+          "sha256": "53b1a99a94090889b5833fd9fba61ed91365b540cae52357811bad82e819a60e",
+          "bytes": 7625
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/REVIEW-STATIC.md": {
+          "git_blob": "f2d9d4913c32e54e24aadf535c45cd3bda8b818a",
+          "sha256": "531caa59485a2906f6b1c814503351806159bb365132b8ef22a12e5da254aca5",
+          "bytes": 11764
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/SOURCE.json": {
+          "git_blob": "4c0b95899cb47602363a5cc165c3b54c6307f83c",
+          "sha256": "23f6e936110afc5b0446eb6035286a1c28801b4ecae44534bc5e5506bd68b59b",
+          "bytes": 1757
+        },
+        "probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/INPUTS.sha256": {
+          "git_blob": "7fabfd984a1abb0ead32b29eb101ce405719ca13",
+          "sha256": "ff17153e65f0ef8a61e2f423623d92adc58095320eab87b8266d6e24e81f1ea4",
+          "bytes": 1039
+        }
+      }
     }
   }
 }
