@@ -41,26 +41,37 @@ they change no frozen source, proof, target or scientific stdout.
 
 ## GitHub x86_64
 
-platform: Ubuntu 24.04 (GitHub-hosted)
-architecture: x86_64
-python: 3.12.14
-verifier_sha256: c93b6c6c2643af149d4464244cc639163cbada04da8904985d3b26d1c52d6c5f
-stdout_sha256: c9f71fc2b8211ec670df610ef2d108e16861b1a3fb0b743d7e8bf122551519d0
-status: PASS
+| Recorded field | Value |
+|---|---|
+| Platform | Ubuntu 24.04 (GitHub-hosted) |
+| Architecture | x86_64 |
+| Python | 3.12.14 |
+| Verifier SHA-256 | c93b6c6c2643af149d4464244cc639163cbada04da8904985d3b26d1c52d6c5f |
+| Stdout SHA-256 | c9f71fc2b8211ec670df610ef2d108e16861b1a3fb0b743d7e8bf122551519d0 |
+| Status | PASS |
 
 [Job 111700543774](https://github.com/mathorn1973/twist-j/actions/runs/37290826956/job/111700543774).
 
 ## GitHub aarch64
 
-platform: Ubuntu 24.04 (GitHub-hosted)
-architecture: aarch64
-python: 3.12.14
-verifier_sha256: c93b6c6c2643af149d4464244cc639163cbada04da8904985d3b26d1c52d6c5f
-stdout_sha256: c9f71fc2b8211ec670df610ef2d108e16861b1a3fb0b743d7e8bf122551519d0
-status: PASS
+github_platform: Ubuntu 24.04 (GitHub-hosted)
+github_architecture: aarch64
+github_python: 3.12.14
+github_verifier_sha256: c93b6c6c2643af149d4464244cc639163cbada04da8904985d3b26d1c52d6c5f
+github_stdout_sha256: c9f71fc2b8211ec670df610ef2d108e16861b1a3fb0b743d7e8bf122551519d0
+github_exit_code: 0
+github_stderr_bytes: 0
+github_status: PASS
 
 [Job 111700544135](https://github.com/mathorn1973/twist-j/actions/runs/37290826956/job/111700544135).
 
 The two-architecture computation gate is satisfied for the pinned code and
 the one committed EXPECTED.txt. Public acceptance and a Canon fold remain
 separate from these receipts.
+
+The later receipts-only head `e22496a3739629c6fbd9f7f78e38069b92256111`
+was rejected by the run-record parser for repeating unstructured fields.
+This record uses the supported named GitHub leg for aarch64 and a separate
+table for the same-architecture x86_64 receipt. The correction changes no
+pinned code, proof, target or scientific output; the failed metadata check
+remains in public commit and workflow history.
