@@ -29,6 +29,38 @@ transcript was used as the new expected output. The companion's SHA-256 is
 checked by the main verifier before import.
 
 Local result: 27/27 PASS. All 21 structured census records agree between
-the two implementations. This is one local x86_64 lane. The existing
-public PR workflow supplies the separately required x86_64/aarch64 replay;
-its completion and exact head must be checked before claiming that gate.
+the two implementations. This is one local x86_64 lane.
+
+The existing public PR workflow completed both architecture jobs and its
+aggregate check at head `afb5062fdbb5751dc1ad67ce321e56cec113ea8f`:
+[run 37290826956](https://github.com/mathorn1973/twist-j/actions/runs/37290826956).
+Both job logs report VERIFY PASS with the exact verifier and transcript
+hashes below. Both also pass 183 repository-tool tests and the policy,
+Canon, ledger and gate-contract checks. These are neutral replay receipts;
+they change no frozen source, proof, target or scientific stdout.
+
+## GitHub x86_64
+
+platform: Ubuntu 24.04 (GitHub-hosted)
+architecture: x86_64
+python: 3.12.14
+verifier_sha256: c93b6c6c2643af149d4464244cc639163cbada04da8904985d3b26d1c52d6c5f
+stdout_sha256: c9f71fc2b8211ec670df610ef2d108e16861b1a3fb0b743d7e8bf122551519d0
+status: PASS
+
+[Job 111700543774](https://github.com/mathorn1973/twist-j/actions/runs/37290826956/job/111700543774).
+
+## GitHub aarch64
+
+platform: Ubuntu 24.04 (GitHub-hosted)
+architecture: aarch64
+python: 3.12.14
+verifier_sha256: c93b6c6c2643af149d4464244cc639163cbada04da8904985d3b26d1c52d6c5f
+stdout_sha256: c9f71fc2b8211ec670df610ef2d108e16861b1a3fb0b743d7e8bf122551519d0
+status: PASS
+
+[Job 111700544135](https://github.com/mathorn1973/twist-j/actions/runs/37290826956/job/111700544135).
+
+The two-architecture computation gate is satisfied for the pinned code and
+the one committed EXPECTED.txt. Public acceptance and a Canon fold remain
+separate from these receipts.

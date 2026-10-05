@@ -31,6 +31,7 @@ The ion-profile calibration lane and its missing physical inputs are
 separate. Canon, registry, evidence/dependency ledgers, frontier and physical
 HOLD remain unchanged.
 
-Completed local execution: [RESULT.md](RESULT.md), [RUN.md](RUN.md),
-[exact stdout](EXPECTED.txt). The public architecture gate is a separate
-required check, not an inference from the local PASS count.
+Completed local and public x86_64/aarch64 execution:
+[RESULT.md](RESULT.md), [RUN.md](RUN.md), [exact stdout](EXPECTED.txt).
+The public computation gate passes with byte-identical output. Candidate
+proof review and any Canon status decision remain separate.

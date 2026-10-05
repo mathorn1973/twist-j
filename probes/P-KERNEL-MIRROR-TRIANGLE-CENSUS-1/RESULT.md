@@ -1,6 +1,6 @@
 # RESULT: P-KERNEL-MIRROR-TRIANGLE-CENSUS-1
 
-Status: PASS / local exact verification; PUBLIC-source, NON-CANONICAL, L1.
+Status: PASS / exact verification and two-architecture replay; PUBLIC-source, NON-CANONICAL, L1.
 
 The first formal public-pin execution completed with **27/27 PASS**, exit
 zero and empty stderr. It matches every disclosed pair/triple target and
@@ -31,10 +31,16 @@ This is public verification of known results, not a new blind discovery.
   is checked by the affine implementation; the second implementation
   independently checks group orders and surface records.
 
-The local computational table is candidate-C pending the required clean
-public architecture replay. Byte-identical results on x86_64 and aarch64
-satisfy the computation gate; missing evidence is not a detected mismatch.
-The analytic arguments remain candidate-T for public review. Neither route
+The initial one-architecture table had candidate-C evidence. Clean public
+x86_64 and aarch64 jobs subsequently reproduced the same 4342-byte stdout
+and passed the aggregate check in
+[run 37290826956](https://github.com/mathorn1973/twist-j/actions/runs/37290826956),
+at head `afb5062fdbb5751dc1ad67ce321e56cec113ea8f`. The computation gate is
+now satisfied; exact source and output identities are in RUN.md. Each
+architecture also passed all 183 repository-tool tests.
+
+The analytic arguments remain candidate-T for public review. The verified
+table receives no registry status in this probe. Neither evidence route
 creates a registered T here or substitutes for a later explicit Canon fold.
 
 ## Boundary retained
