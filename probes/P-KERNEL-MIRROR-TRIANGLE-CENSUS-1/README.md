@@ -30,3 +30,7 @@ the registered CSUM comparison changes the allowed operations.
 The ion-profile calibration lane and its missing physical inputs are
 separate. Canon, registry, evidence/dependency ledgers, frontier and physical
 HOLD remain unchanged.
+
+Completed local execution: [RESULT.md](RESULT.md), [RUN.md](RUN.md),
+[exact stdout](EXPECTED.txt). The public architecture gate is a separate
+required check, not an inference from the local PASS count.
