@@ -1,8 +1,9 @@
 """Replay explicitly registered context-bound probes against their frozen inputs.
 
 The reviewed manifest is data, not a command or an override supplied by RUN.md.
-Only the listed Markdown inputs are admitted. The current verifier, prereg,
-run record and expected stdout remain subject to the ordinary replay checks.
+Only each probe's exact reviewed paths are admitted. The current verifier,
+prereg and local bundle must remain identical to the pin; run records and
+expected stdout remain subject to the ordinary replay checks.
 Historical input bytes are obtained from one immutable ancestor commit, never
 from a replacement copy of current Canon. This is reproduction of historical
 evidence, not certification of a new Canon by the old authority check.
@@ -24,10 +25,34 @@ MANIFEST = "tools/probe_replay_contexts.json"
 REPLAY_CONTROL_PATHS = frozenset({
     MANIFEST, "tools/probe_replay_context.py", "tools/check_verifier.py",
 })
-CONTEXT_PATHS = frozenset({
-    "canon/CANON.md", "STATUS.md",
-    "notes/canon/C-FRW-INHOM-TYPED-ADM-PREDEFINITION-N.md",
-})
+# These are code-reviewed, probe-specific allowlists, not path patterns or
+# declarations supplied by a run record. External source files may evolve in
+# the current tree. Local frozen bundle files must still equal their pin.
+ADMITTED_CONTEXT_PATHS = {
+    "P-FRW-INHOM-K1-BACKREACTION-3": frozenset({
+        "canon/CANON.md", "STATUS.md",
+        "notes/canon/C-FRW-INHOM-TYPED-ADM-PREDEFINITION-N.md",
+    }),
+    "P-U-EARLY-SOURCE-FIBRE-CONTACT-1": frozenset({
+        "STATUS.md", "POLICY.md", "AGENTS.md", "canon/CORE.md",
+        "canon/FRONTIER.md", "canon/REGISTRY.tsv", "canon/CANON.md",
+        "reproduce/census/verify.py",
+        "probes/P-U-PREPARATION-EVENT-RECORD-1/RESULT.md",
+        "probes/P-KERNEL-Z6-SYNCHRONIZATION-1/RESULT.md",
+        "notes/C-NATIVE-FIBRE-PENTIT-WIGNER-N/PREREG.md",
+    }),
+}
+ADMITTED_BUNDLE_PATHS = {
+    "P-FRW-INHOM-K1-BACKREACTION-3": frozenset(),
+    "P-U-EARLY-SOURCE-FIBRE-CONTACT-1": frozenset(
+        f"probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/{name}" for name in (
+            ".gitattributes", "COLLISIONS.md", "independent_native.py",
+            "INTEGRATION.md", "primary.py", "PROOF.md", "README.md",
+            "REVIEW-FREEZE.json", "REVIEW-PREREG.md", "REVIEW-STATIC.md",
+            "SOURCE.json", "INPUTS.sha256",
+        )
+    ),
+}
 MAX_BYTES = 5 * 1024 * 1024
 
 
@@ -78,15 +103,27 @@ def registrations(root: Path) -> dict:
     for name, entry in data["probes"].items():
         require(re.fullmatch(r"P-[A-Z0-9]+(?:-[A-Z0-9]+)*", name) is not None,
                 "replay manifest has an invalid probe name")
-        exact_keys(entry, {"pin_commit", "verifier", "prereg", "context_files"}, name)
+        require(name in ADMITTED_CONTEXT_PATHS and name in ADMITTED_BUNDLE_PATHS,
+                f"{name} has no reviewed replay path allowance")
+        bundle_paths = ADMITTED_BUNDLE_PATHS[name]
+        keys = {"pin_commit", "verifier", "prereg", "context_files"}
+        if bundle_paths:
+            keys.add("bundle_files")
+        exact_keys(entry, keys, name)
         require(digest(entry["pin_commit"], 40), f"{name} has invalid pin")
         validate_blob(entry["verifier"], f"{name} verifier")
         validate_blob(entry["prereg"], f"{name} prereg")
         files = entry["context_files"]
-        require(isinstance(files, dict) and set(files) == CONTEXT_PATHS,
+        require(isinstance(files, dict) and set(files) == ADMITTED_CONTEXT_PATHS[name],
                 f"{name} must list exactly the permitted context paths")
         for path, spec in files.items():
             validate_blob(spec, f"{name} {path}")
+        if bundle_paths:
+            bundle = entry["bundle_files"]
+            require(isinstance(bundle, dict) and set(bundle) == bundle_paths,
+                    f"{name} must list exactly the permitted bundle paths")
+            for path, spec in bundle.items():
+                validate_blob(spec, f"{name} {path}")
     return data["probes"]
 
 
@@ -147,11 +184,19 @@ def execution_root(root: Path, name: str, pin: str, verifier_bytes: bytes) -> It
     require(current_regular(root, prereg_path) == frozen_prereg,
             f"{name} current prereg differs from registered pin")
     payload = {verifier_path: frozen_verifier}
+    if "bundle_files" in entry:
+        payload[prereg_path] = frozen_prereg
+        for path, spec in entry["bundle_files"].items():
+            frozen = pinned_blob(root, pin, path, spec)
+            require(current_regular(root, path) == frozen,
+                    f"{name} current bundle differs from registered pin: {path}")
+            payload[path] = frozen
     for path, spec in entry["context_files"].items():
         payload[path] = pinned_blob(root, pin, path, spec)
 
     # Only regular files are materialized. There are no shell commands or
-    # executable path fields; ambient directories and modules are not copied.
+    # executable command fields; ambient directories and modules are not
+    # copied. The census source is a hash-only input in the registered probe.
     with tempfile.TemporaryDirectory(prefix="twistj-probe-replay-") as directory:
         isolated = Path(directory)
         for relative, data in payload.items():

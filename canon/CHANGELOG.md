@@ -1,5 +1,31 @@
 # Canon changelog (public series)
 
+## Public Canon v98
+
+Accept six conditional L1 theorems with self-contained inline proofs:
+faithful direct-memory factorization, the connected light-shift response
+identity, a fixed-profile affine obstruction, finite response-fibre
+classification, full-simplex mean sufficiency, and scored-observable transport
+on a declared coherent code domain. The complete checkpoint domain, Hodge
+matrix, response table and both contrasting profile examples are explicit.
+Generic compatibility concerns unrestricted algebraic profiles and finite
+assignments; it selects no physical profile or decoder.
+
+The measurement contract distinguishes nonlinear scores of joint outcomes
+from functions of six averages. It adopts the quantum measurement law and
+requires the actual instrument, retained record and postmeasurement state
+for a measured continuation. Streaming arithmetic supplies no statistical
+law. The physical apparatus, occupied-memory ion continuation, calibrated
+profile, meaning of four outputs and physical-time identification remain
+unprovided at this scope. All prior statuses, scopes and all 25 H/O decision
+conditions remain unchanged; no cross-layer gate is added or closed.
+
+Registry grows from 492 to 498: 0 T-LOCK, 356 T, 59 D, 39 C, 2 H, 23 O and
+19 F. The new evidence is analytical proof, not a new scientific execution.
+The release-accounting audit reconstructs the exact v97 inputs and retains
+all its checks. Existing scientific verifiers and their thresholds remain
+unchanged.
+
 ## Public Canon v97
 
 Accept five narrowly conditional L1 theorems with self-contained inline
@@ -352,7 +378,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 492 claims; 0 T-LOCK, 350 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
+Registry snapshot: 498 claims; 0 T-LOCK, 356 T, 59 D, 39 C, 2 H, 23 O, 19 F; 25 live H/O.
 Reproduction witnesses: 32.
 <!-- END GENERATED CURRENT COUNTS -->
 
