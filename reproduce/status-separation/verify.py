@@ -43,6 +43,500 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v100 release accounting and reversible public v99 reconstruction.
+# This is structural release bookkeeping, not an execution of the science.
+V100_PRIOR_COMMIT = '83274b2cdcc5478e9fef1db734ecd564d1146fa8'
+
+V100_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '8f79dab86e4d77b4505c2d1011f2f8702d4ede937250cd5953718e671e7b910b',
+                  'current_bytes': 514100,
+                  'prior_sha256': '7780f2af9d28ced87370af46d51480893eecee2ebe7f9afbf8f57e2b3254ca1d',
+                  'prior_bytes': 508857,
+                  'restore': ((508, 511, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': '360b3c6b32cef3ea2ca7eb21c8220dda6bbd80827835fcc88fd3a628bef6c7f1',
+                   'current_bytes': 65552,
+                   'prior_sha256': 'fa6188bcbd52d749ec2956002f59c34cc287c238187f8725261dd1bec594b75c',
+                   'prior_bytes': 65160,
+                   'restore': ((571, 575, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': '8eb3440a741e89076a018c3888fa31e558f4f9187c7af0a2775870628d703469',
+                      'current_bytes': 173022,
+                      'prior_sha256': 'eb5cd4c006f4d7bf60c2e7723a7383ba54f47147bfd7bd04f8d727816932e112',
+                      'prior_bytes': 171678,
+                      'restore': ((1044, 1051, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': '387bccc2de08b233aa17ce37dc391b19863bdc7b455c88accd0ad7bef6b2aa63',
+                  'current_bytes': 103575,
+                  'prior_sha256': 'd333c4726389816ad8d13b3bc35a6265567a27ad8bf2a84e2f7bee575b4e94aa',
+                  'prior_bytes': 102939,
+                  'restore': ((508, 511, ''),)},
+ 'HISTORY.tsv': {'current_sha256': '6b18b727aa2a12d602ebf6db26185c70524f632636edb25f2d36bea6b20c178a',
+                 'current_bytes': 475019,
+                 'prior_sha256': '0f71f0f47076279a6568a7e0cd579543aca74eed547f32d51586e016210dedae',
+                 'prior_bytes': 473248,
+                 'restore': ((1055, 1058, ''),)},
+ 'GATES.tsv': {'current_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'current_bytes': 13324,
+               'prior_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'prior_bytes': 13324,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'current_bytes': 1502,
+                           'prior_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'prior_bytes': 1502,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': '5e4de2da8d57ff2f7e4b873e6236b0695677e20d173d894ee70562c1389648c4',
+              'current_bytes': 980212,
+              'prior_sha256': '246100c6a154c27c359e55acb399f18df384fa31db190d6d4fd5557d051ee927',
+              'prior_bytes': 957135,
+              'restore': ((0, 1, '# TWIST-J Public Canon v99\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v99. Normative authority and '
+                           'activation\n'),
+                          (5, 15, ''),
+                          (22,
+                           23,
+                           'only. Public Canon v99 also declares the discrete architecture used to '
+                           'read\n'),
+                          (35,
+                           36,
+                           'seed of the two algebraic projections. Public Canon v99 does not '
+                           'claim\n'),
+                          (140,
+                           141,
+                           'deriving the architecture from J; Public Canon v99 contains no such\n'),
+                          (9477, 9953, ''))},
+ 'CORE.md': {'current_sha256': 'b36f0933095603aa07dd7d08e76271464ea49de02a2297f9a41daf10754d9697',
+             'current_bytes': 26482,
+             'prior_sha256': '0d37ec89cefdd5c664835a908208acb9ff6dd4828a1389bbf213734445d4bf3a',
+             'prior_bytes': 25675,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v99. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v99 also declares a discrete architecture. It does not\n'),
+                         (33, 47, ''))},
+ 'FRONTIER.md': {'current_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'current_bytes': 27382,
+                 'prior_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'prior_bytes': 27382,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': 'd1bba0d273966e347e11b02983f4ea9e8a38bfc5bbb9d5d01d95970ea278fe1d',
+                  'current_bytes': 201240,
+                  'prior_sha256': '074c6d72476affc081ec74283d53ebc76f3e0ebfe75d1421f4bed4a49d03291b',
+                  'prior_bytes': 199228,
+                  'restore': ((1, 35, ''),
+                              (444,
+                               445,
+                               'Registry snapshot: 507 claims; 0 T-LOCK, 364 T, 59 D, 39 C, 2 H, '
+                               '24 O, 19 F; 26 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '10c7c19b24068c97d77922be4993f25e01ea9999e5ed2bc7f977470f27fa7e88',
+                       'current_bytes': 243,
+                       'prior_sha256': 'a9c37d765ce7a5de572444e69320c1fa20bd3e01f330b40339e70168a7721c2a',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t507\n'),
+                                   (3, 4, 'status_T\t364\n'),
+                                   (14, 15, 'evidence_two-architecture\t373\n'))}}
+
+V100_IDS = ('CONTACT-RECORD', 'ALGEBRAIC-RESIDUAL-REALIZATION', 'RESIDUAL-STEP-RECORD')
+
+V100_DEFINITION = 'DEF-RESIDUAL-CONTACT-ARCHITECTURE'
+
+V100_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'CONTACT-RECORD',
+                   'status': 'T',
+                   'scope': 'at L1 on X=F5^12 times {0,1}, under the declared W_b, fixed '
+                            'involutory reader table P_q, Ucal_i:r_i->P_(q_i)(r_i), one initial '
+                            'reference preparation and fixed terminal read: for delta=1-h^4 the '
+                            'literal contact K_i=[W_b(b_x b_y)W_b,e_i d_i] restores the full '
+                            'factor and sends q_i to q_i+3delta; for epsilon_i in {0,1}, '
+                            'R_i=Ucal_i K_i^epsilon_i Ucal_i has the complete occupied-reference '
+                            "map q_i'=q_i+3epsilon_i delta, r_i'=P_(q_i+3epsilon_i "
+                            'delta)P_(q_i)(r_i) and its displayed two-sided inverse; from '
+                            'r_x=r_y=0 with arbitrary pistons, unknown q and either eta, R_y R_x '
+                            'records (epsilon_x delta,epsilon_y delta) with no intervening '
+                            'preparation, and every forward or reverse literal prefix of the '
+                            'second reader preserves r_x^2 on all X; exactly three standalone '
+                            'reference states are necessary and sufficient in the stated one-query '
+                            'reversible discrimination class for I versus q_i->q_i+3, while '
+                            'embedded r_i retain all five states and may visit 3 or 4 during the '
+                            'literal word; repeated complete readers can erase records, a '
+                            'completed zero experiment equals the unused full state, and a '
+                            'universal reset retaining every other coordinate is impossible; no '
+                            'completion flag, persistent archive, detector, physical admission, '
+                            'energy cost, event law or cross-layer lift is supplied',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-CONTACT-RECORD-1/RESULT.md',
+                   'falsifier': 'a full-carrier input violating the contact or reader map or '
+                                'either inverse, a declared ready input with a wrong record, a '
+                                'listed second-reader prefix changing r_x^2, a two-state reference '
+                                'achieving perfect discrimination in the fixed one-query class, or '
+                                'a failure of the stated three-state construction or exact '
+                                'negative boundaries; physical realization is outside this '
+                                'conditional L1 theorem'},
+                  {'claim_id': 'ALGEBRAIC-RESIDUAL-REALIZATION',
+                   'status': 'T',
+                   'scope': 'at L1 on X=F5^12 times {0,1}, for the fixed C=K direct-sum 0_2, '
+                            'B_read,L5,M and the explicitly declared original generators, CSUM '
+                            'maps and W_a,W_b: rho forgetting exactly q_x,q_y is the minimal '
+                            'deterministic factor preserving (G,eta) under every word, its '
+                            'generated group is Alt(F5^10 times {0,1}), and the fixed finite '
+                            'grammar CW-ALG-1 compiles the specified even algebraic atlas '
+                            'permutation Pi_alg into one native word T_alg with rho T_alg=Pi_alg '
+                            'rho on all X, restoring both arbitrary r and having full map '
+                            '(f,q)->(Pi_alg f,H_T(f)q) for the concrete syntax-defined H_T(f) in '
+                            'GL2(F5); ReverseInvert of that same word is its full inverse; the '
+                            'exact T_alg reachable closure from all eta=0 states is '
+                            'Omega_alg={G=0,eta=0} union {G nonzero,j+m(kappa(G))eta<m_*(G)} with '
+                            'arbitrary r,q and size 281640625, on which G T_alg=M G and D_C '
+                            'T_alg=L5 D_C; from r_x=r_y=eta=0 the T_alg closure is its r=0 slice '
+                            'of size 11265625; Pi_alg is distinct from the former lexicographic '
+                            'Pi, its factor cycles do not imply full period 10, H_T is not assumed '
+                            'to be the identity, and neither the huge native expansion nor its '
+                            'execution, practical cost, new primitive, extra memory, reset or '
+                            'physical gate admission is asserted',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-ALG-CONTACT-REALIZATION-1/RESULT.md',
+                   'falsifier': 'a failure of the explicit atlas or inverse, finite grammar '
+                                'termination or orientation, primitivity or connected-conjugate '
+                                'compiler argument, Pi_alg parity, full-factor equality or '
+                                'restoration of r, the syntax-defined q lift, exact T_alg '
+                                'reachable-domain characterization or readout equation at the '
+                                'declared scope; a different macro precedence or lexicographic Pi '
+                                'changes the claim'},
+                  {'claim_id': 'RESIDUAL-STEP-RECORD',
+                   'status': 'T',
+                   'scope': 'at L1 on the same full X=F5^12 times {0,1}, under exactly the '
+                            'accepted contact and CW-ALG-1 architecture, V=A_y T_alg A_x with '
+                            'A_i=Ucal_i K_i Ucal_i is one finite fully invertible word; from '
+                            'S0={r_x=r_y=eta=0}, arbitrary pistons and unknown q, it gives D_C '
+                            'V=L5 D_C and final records r_x=delta(g), r_y=delta(Mg), with no '
+                            'primitive, state coordinate or preparation inserted between the '
+                            'steps; the full occupied-input formula uses H_T at the actual '
+                            'post-A_x factor, and the inverse restores A_y, that factor and its q '
+                            "fibre, then A_x; its exact one-pass image S1 has arbitrary q', "
+                            "r_x'=delta(M^-1g'), r_y'=delta(g'), and inverse piston-bit branch "
+                            "eta=0, equivalently eta'=0 when g'=0 or "
+                            "j'+m(kappa(g'))eta'<m(kappa(M^-1g')) when g' is nonzero, with "
+                            '|S0|=|S1|=9765625; T_alg restores the first raw record at its '
+                            'endpoint and every subsequent literal prefix of A_y preserves its '
+                            'square, without claiming such protection inside T_alg; Omega_alg is '
+                            'invariant in both directions under V and supports D_C V^n=L5^n D_C, '
+                            'but is not the exact repeated V reachability set from S0, and the '
+                            'pair of records has only the proved one-shot meaning; no repeated '
+                            'fresh archive, completion flag, detector, physical reading or gate '
+                            'admission, energy cost or cross-layer lift is supplied',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'probes/P-RESIDUAL-RECORD-COMPOSITION-1/RESULT.md',
+                   'falsifier': 'a full state violating the composed map or either full inverse, a '
+                                'prepared state with the wrong target step or either record, '
+                                'either direction of the stated S0-to-S1 equivalence failing, a '
+                                'failure of Omega_alg invariance or continued target dynamics, '
+                                'failure to restore r_x at the T_alg boundary, or a subsequent A_y '
+                                'prefix changing r_x^2; q identity, a fresh record on repeated V, '
+                                'and physical realization are outside the claim'}],
+ 'NORMATIVE.tsv': [{'item_id': 'DEF-RESIDUAL-CONTACT-ARCHITECTURE',
+                    'item_type': 'DEFINITION',
+                    'claim_id': '',
+                    'status': '',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::DEF-RESIDUAL-CONTACT-ARCHITECTURE'},
+                   {'item_id': 'CONTACT-RECORD',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'CONTACT-RECORD',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::CONTACT-RECORD'},
+                   {'item_id': 'ALGEBRAIC-RESIDUAL-REALIZATION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'ALGEBRAIC-RESIDUAL-REALIZATION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::ALGEBRAIC-RESIDUAL-REALIZATION'},
+                   {'item_id': 'RESIDUAL-STEP-RECORD',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'RESIDUAL-STEP-RECORD',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::RESIDUAL-STEP-RECORD'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'DEF-RESIDUAL-CONTACT-ARCHITECTURE',
+                       'depends_on': 'DEF-KERNEL-GENERATORS',
+                       'relation': 'REQUIRES',
+                       'basis': 'the unchanged complete cell maps supplying terminal leaves; '
+                                'W_a,W_b and Ucal are separately declared conditional couplings'},
+                      {'item_id': 'DEF-RESIDUAL-CONTACT-ARCHITECTURE',
+                       'depends_on': 'DEF-PISTON-2X2-RESHAPE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the fixed four-piston ordering, determinant polarization and '
+                                'source row-column symmetries'},
+                      {'item_id': 'DEF-RESIDUAL-CONTACT-ARCHITECTURE',
+                       'depends_on': 'DEF-QUADRATIC-MEMORY-L5',
+                       'relation': 'REQUIRES',
+                       'basis': 'the already marked B_read,L5 and Gram target M, retained without '
+                                'reselecting the reading after target matching'},
+                      {'item_id': 'CONTACT-RECORD',
+                       'depends_on': 'DEF-RESIDUAL-CONTACT-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the full carrier, original cell maps, declared W_b and calibrated '
+                                'Ucal interface; the standalone contact retains both initial eta '
+                                'values and does not require W_a or eta=0'},
+                      {'item_id': 'ALGEBRAIC-RESIDUAL-REALIZATION',
+                       'depends_on': 'DEF-RESIDUAL-CONTACT-ARCHITECTURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the frozen determinant Gram, target and full alphabet for '
+                                'CW-ALG-1, with W_a,W_b declared and without reader couplings '
+                                'inside T_alg'},
+                      {'item_id': 'RESIDUAL-STEP-RECORD',
+                       'depends_on': 'CONTACT-RECORD',
+                       'relation': 'REQUIRES',
+                       'basis': 'the full occupied-reference contact and reader maps, inverse, '
+                                'ready identity and all-input literal-prefix protection of r_x '
+                                'squared'},
+                      {'item_id': 'RESIDUAL-STEP-RECORD',
+                       'depends_on': 'ALGEBRAIC-RESIDUAL-REALIZATION',
+                       'relation': 'REQUIRES',
+                       'basis': 'the precise Pi_alg atlas, actual CW-ALG-1 lift, global '
+                                'restoration of arbitrary r, full inverse and invariant Omega_alg '
+                                'used by the intervening step'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'CONTACT-RECORD',
+                   'evidence_id': 'EV-CONTACT-RECORD',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-CONTACT-RECORD-1/RESULT.md',
+                   'sha256': 'c41e93aa1e47db419eecf1d8cc7ad5fb551207ed7136bf22e88a3fefd0881406',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'ALGEBRAIC-RESIDUAL-REALIZATION',
+                   'evidence_id': 'EV-ALGEBRAIC-RESIDUAL-REALIZATION',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-ALG-CONTACT-REALIZATION-1/RESULT.md',
+                   'sha256': 'd85442d6f91ed16cae9ac3a742fe7f2c7b0b2aa37eb34e75d1f52160c089b0ba',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'},
+                  {'claim_id': 'RESIDUAL-STEP-RECORD',
+                   'evidence_id': 'EV-RESIDUAL-STEP-RECORD',
+                   'evidence_kind': 'PUBLIC_PROBE',
+                   'location': 'probes/P-RESIDUAL-RECORD-COMPOSITION-1/RESULT.md',
+                   'sha256': '4de13c5d5a32b7736bb2dbcdd8b5069c1e18c0c7a7c7506b9b450205061863b1',
+                   'hash_mode': 'bundle-manifest-sha256-v1',
+                   'architecture_requirement': 'two-architecture'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON100-DECLARE-CONTACT-RECORD',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-06',
+                  'release': 'canon-v100-candidate',
+                  'claim_id': 'CONTACT-RECORD',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '09c7701670ecb996ab904edc41fdaedd2f02c7e7282e06ce2129e4a859021386',
+                  'evidence_id': 'EV-CONTACT-RECORD',
+                  'evidence_location': 'probes/P-CONTACT-RECORD-1/RESULT.md',
+                  'evidence_sha256': 'c41e93aa1e47db419eecf1d8cc7ad5fb551207ed7136bf22e88a3fefd0881406',
+                  'rationale': 'Declare the separately accepted complete conditional L1 '
+                               'contact-and-record theorem on its written proof and bounded public '
+                               'audit; preserve both initial bits, the one-query reference minimum '
+                               'and all negative boundaries, without changing its frozen probe or '
+                               "any prior owner's scope or status."},
+                 {'event_id': 'CANON100-DECLARE-ALGEBRAIC-RESIDUAL-REALIZATION',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-06',
+                  'release': 'canon-v100-candidate',
+                  'claim_id': 'ALGEBRAIC-RESIDUAL-REALIZATION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '9a5956f83aad7df8b4f9df02cf92d0b79fc8543e8ecaa7b47b8cf0359efde160',
+                  'evidence_id': 'EV-ALGEBRAIC-RESIDUAL-REALIZATION',
+                  'evidence_location': 'probes/P-ALG-CONTACT-REALIZATION-1/RESULT.md',
+                  'evidence_sha256': 'd85442d6f91ed16cae9ac3a742fe7f2c7b0b2aa37eb34e75d1f52160c089b0ba',
+                  'rationale': 'Declare the independently reviewed algebraic atlas and finite '
+                               'CW-ALG-1 realization in its exact conditional L1 alphabet; the '
+                               'bounded audit is not execution of T_alg, numerical determination '
+                               'of H_T or admission of a physical native gate, and no prior owner '
+                               'closes.'},
+                 {'event_id': 'CANON100-DECLARE-RESIDUAL-STEP-RECORD',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-06',
+                  'release': 'canon-v100-candidate',
+                  'claim_id': 'RESIDUAL-STEP-RECORD',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '20c0fbec40e6100e90084506eb642544b748901e70f074008f9745b8bff492e4',
+                  'evidence_id': 'EV-RESIDUAL-STEP-RECORD',
+                  'evidence_location': 'probes/P-RESIDUAL-RECORD-COMPOSITION-1/RESULT.md',
+                  'evidence_sha256': '4de13c5d5a32b7736bb2dbcdd8b5069c1e18c0c7a7c7506b9b450205061863b1',
+                  'rationale': 'Declare the accepted full-carrier composition V after its two '
+                               'separately accepted dependencies, with one initial preparation, '
+                               'exact target and records, complete inverse, one-pass image and '
+                               'delimited continuation and record protection; preserve all '
+                               'existing owner statuses and physical boundaries.'}]}
+
+V100_PROOF_CONTRACT = {'begin': '### DEF-RESIDUAL-CONTACT-ARCHITECTURE\n',
+ 'end': '### QUADRATIC-MEMORY-NATIVE-CONTACT [O]\n',
+ 'bytes': 22547,
+ 'sha256': '559ffc49892cd850109c289b880d34a0fbcf3d85c36194af49b047fe4029b65d'}
+
+V100_PROBE_BUNDLES = {'P-CONTACT-RECORD-1': {'files': 11,
+                        'sha256': 'c41e93aa1e47db419eecf1d8cc7ad5fb551207ed7136bf22e88a3fefd0881406'},
+ 'P-ALG-CONTACT-REALIZATION-1': {'files': 15,
+                                 'sha256': 'd85442d6f91ed16cae9ac3a742fe7f2c7b0b2aa37eb34e75d1f52160c089b0ba'},
+ 'P-RESIDUAL-RECORD-COMPOSITION-1': {'files': 18,
+                                     'sha256': '4de13c5d5a32b7736bb2dbcdd8b5069c1e18c0c7a7c7506b9b450205061863b1'}}
+
+V100_REPRODUCTIONS = ('C-FIELD-J-CONTENT-TRANSPORT-N',
+ 'C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-REVIEW-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N',
+ 'PHOTON-Z5-EXACT-HEATBATH-KERNEL',
+ 'alpha-exact-lemma',
+ 'alpha-value',
+ 'born-faces',
+ 'born-quartet',
+ 'census',
+ 'color-ladder',
+ 'cosmology-register',
+ 'coupling-metrology',
+ 'dirac-ladder',
+ 'force-born-dictionary',
+ 'foundations-places',
+ 'gravity-chain',
+ 'hyperplane-codec',
+ 'kernel',
+ 'kernel-connectivity',
+ 'mass-ladder',
+ 'maxwell',
+ 'native-quadratic-obstructions',
+ 'observer-boost',
+ 'pentit-p5-closure',
+ 'photon-electron',
+ 'qdd-route-a',
+ 'quadratic-memory-l5',
+ 'scalar-hermitian-norm',
+ 'status-separation',
+ 'weinberg')
+
+V100_CHECKS = (('V100-PRIOR-BYTES',
+  'thirteen complete v100 inputs reconstruct exact public v99 before all 148 unchanged historical '
+  'guards'),
+ ('V100-THREE-PROOFS',
+  'three conditional L1 theorem rows and one declared architecture bind exact scopes, accepted '
+  'probe evidence and dependency additions'),
+ ('V100-OWNER-BOUNDARY',
+  'all 507 prior claims and all 26 live owners, gates and scheduler dispositions remain unchanged; '
+  'native contact stays O'),
+ ('V100-JOINT-SCOPE',
+  'the exact joint proof separates one preparation, its one-shot image, invariant readout '
+  'continuation and word-boundary record restoration'),
+ ('V100-EVIDENCE-CUSTODY',
+  'all three accepted probe bundles remain exact and the 35-reproduction inventory is unchanged; '
+  'no expanded word is executed by this structural audit'))
+
+def v100_previous_bytes(path):
+    """Validate the complete current input before reconstructing exact v99."""
+    patch = V100_INPUT_PATCH.get(path.name)
+    if patch is None:
+        return None
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v100_previous_reproduction_dirs():
+    """There is no new reproduction in this release."""
+    current = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    return current if current == set(V100_REPRODUCTIONS) else set()
+
+
+def v100_current_checks():
+    names = tuple(name for name in V100_INPUT_PATCH if name.endswith(".tsv"))
+    prior = {name: v87_table_bytes(v100_previous_bytes(ROOT / "canon" / name))
+             for name in names}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in names}
+    old_index = {row["claim_id"]: row for row in prior["REGISTRY.tsv"]}
+    index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    exact_additions = all(current[name] == prior[name] + added
+                          for name, added in V100_ADDITIONS.items())
+    counts = {status: sum(row["status"] == status for row in index.values())
+              for status in {row["status"] for row in index.values()}}
+    exact_theorems = all(
+        index.get(claim, {}).get("status") == "T"
+        and normative.get(claim, {}).get("item_type") == "THEOREM"
+        and normative.get(claim, {}).get("layer") == "L1"
+        and normative.get(claim, {}).get("gate_ids") == ""
+        and evidence.get(claim, {}).get("evidence_kind") == "PUBLIC_PROBE"
+        and evidence.get(claim, {}).get("hash_mode") == "bundle-manifest-sha256-v1"
+        and evidence.get(claim, {}).get("architecture_requirement") == "two-architecture"
+        for claim in V100_IDS)
+    old_live = {claim: row for claim, row in old_index.items() if row["status"] in {"H", "O"}}
+    live = {claim: row for claim, row in index.items() if row["status"] in {"H", "O"}}
+    canon = CANON.read_text(encoding="utf-8")
+    proof = V100_PROOF_CONTRACT
+    first = canon.find(proof["begin"])
+    last = canon.find(proof["end"], first + len(proof["begin"])) if first >= 0 else -1
+    block = canon[first:last].encode("utf-8") if 0 <= first < last else b""
+    exact_proof = (canon.count(proof["begin"]) == 1
+        and len(block) == proof["bytes"] and hashlib.sha256(block).hexdigest() == proof["sha256"]
+        and all("### " + claim + " [T]" in canon for claim in V100_IDS))
+    exact_bundles = True
+    for name, contract in V100_PROBE_BUNDLES.items():
+        folder = ROOT / "probes" / name
+        files = sorted((path for path in folder.rglob("*") if path.is_file()
+                        and "__pycache__" not in path.parts and path.suffix != ".pyc"
+                        and "RUNS" not in path.relative_to(folder).parts),
+                       key=lambda path: path.relative_to(ROOT).as_posix())
+        manifest = "".join(hashlib.sha256(path.read_bytes()).hexdigest() + "  "
+                           + path.relative_to(ROOT).as_posix() + "\n" for path in files)
+        exact_bundles = (exact_bundles and len(files) == contract["files"]
+            and hashlib.sha256(manifest.encode("utf-8")).hexdigest() == contract["sha256"])
+    results = (
+        len(V100_INPUT_PATCH) == 13 and set(V100_INPUT_PATCH) == set(V99_INPUT_PATCH)
+        and all(v100_previous_bytes(ROOT / "canon" / name) is not None for name in V100_INPUT_PATCH),
+        len(V100_IDS) == 3 and set(index) == set(old_index) | set(V100_IDS)
+        and len(index) == 510 and exact_additions and exact_theorems
+        and counts == {"T": 367, "D": 59, "C": 39, "H": 2, "O": 24, "F": 19}
+        and V100_DEFINITION not in index and V100_DEFINITION not in evidence
+        and normative.get(V100_DEFINITION, {}).get("item_type") == "DEFINITION"
+        and normative.get(V100_DEFINITION, {}).get("status") == ""
+        and normative.get(V100_DEFINITION, {}).get("layer") == "L1",
+        len(old_index) == 507 and all(index.get(claim) == row for claim, row in old_index.items())
+        and old_live == live and len(live) == 26
+        and index.get("QUADRATIC-MEMORY-NATIVE-CONTACT", {}).get("status") == "O"
+        and all(current[name] == prior[name] for name in
+                ("GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv"))
+        and (ROOT / "canon/FRONTIER.md").read_bytes() == v100_previous_bytes(ROOT / "canon/FRONTIER.md"),
+        exact_proof and exact_additions,
+        len(V100_PROBE_BUNDLES) == 3 and exact_bundles and len(V100_REPRODUCTIONS) == 35
+        and v100_previous_reproduction_dirs() == set(V100_REPRODUCTIONS),
+    )
+    return [(tag, description, ok) for (tag, description), ok in zip(V100_CHECKS, results)]
+
+
 # Exact v99 release accounting and reversible public v98 reconstruction.
 # Structural release bookkeeping only; no new scientific execution.
 V99_PRIOR_COMMIT = 'b9f7af5f1b58c76956e280e33bd345c90bd88d1f'
@@ -881,7 +1375,9 @@ def v99_previous_bytes(path):
     patch = V99_INPUT_PATCH.get(path.name)
     if patch is None:
         return None
-    current = path.read_bytes()
+    current = v100_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -899,7 +1395,7 @@ def v99_previous_bytes(path):
 
 def v99_previous_reproduction_dirs():
     """Expose the v98 inventory only after checking the exact v99 inventory."""
-    current = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    current = v100_previous_reproduction_dirs()
     expected = set(V98_REPRODUCTIONS) | set(V99_NEW_REPRODUCTIONS)
     return current - set(V99_NEW_REPRODUCTIONS) if current == expected else set()
 
@@ -908,13 +1404,13 @@ def v99_current_checks():
     names = tuple(name for name in V99_INPUT_PATCH if name.endswith(".tsv"))
     prior = {name: v87_table_bytes(v99_previous_bytes(ROOT / "canon" / name))
              for name in names}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v100_previous_bytes(ROOT / "canon" / name))
                for name in names}
     old_index = {row["claim_id"]: row for row in prior["REGISTRY.tsv"]}
     index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
     normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
     evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
-    text = CANON.read_text(encoding="utf-8")
+    text = (v100_previous_bytes(CANON) or b"").decode("utf-8")
     proof_bytes = {}
     proof_exact = True
     for claim, contract in V99_PROOF_CONTRACTS.items():
@@ -971,7 +1467,7 @@ def v99_current_checks():
         and all(row["item_id"] in dependency_sets for row in additions)
         and all(row["depends_on"] in normative for row in additions)
         and current["DEPENDENCIES.tsv"] == prior["DEPENDENCIES.tsv"] + additions)
-    current_dirs = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    current_dirs = v100_previous_reproduction_dirs()
     replay_exact = all((ROOT / path).is_file()
         and len((ROOT / path).read_bytes()) == size
         and hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == digest
@@ -17715,9 +18211,10 @@ def run():
     checks.extend(v97_current_checks())
     checks.extend(v98_current_checks())
     checks.extend(v99_current_checks())
+    checks.extend(v100_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v99")
+    print("historical guards: exact reconstructed v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v100")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

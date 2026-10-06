@@ -1,8 +1,18 @@
-# TWIST-J Public Canon v99
+# TWIST-J Public Canon v100
 
-**Release identity.** Public Canon v99. Normative authority and activation
+**Release identity.** Public Canon v100. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
+
+**Residual step with in-machine records.** RESIDUAL-STEP-RECORD [T]
+joins the exact residual readout step and its two one-shot records on one
+complete carrier, under the declared extended architecture and a single
+initial preparation. Its contact and finite-word realization remain
+separate conditional L1 theorems.
+
+**The realization is established by a finite word construction in the
+declared extended alphabet. The complete expansion has not been executed,
+and no physical realization of these primitives is asserted.**
 
 **What TWIST-J is.** TWIST-J tests one risky hypothesis: physical
 reality is a closed, exact, deterministic integer system; continuum,
@@ -10,7 +20,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v99 also declares the discrete architecture used to read
+only. Public Canon v100 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -23,7 +33,7 @@ calibration anchor remains the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v99 does not claim
+seed of the two algebraic projections. Public Canon v100 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -128,7 +138,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v99 contains no such
+deriving the architecture from J; Public Canon v100 contains no such
 theorem.
 
 ---
@@ -9465,6 +9475,482 @@ These selector statements preserve its literal data projection on its
 complete input domain. They do not exclude other nonlinear reversible
 contacts or independently prepared subsets. They do not identify the
 external drive bit with a writable memory register.
+
+### DEF-RESIDUAL-CONTACT-ARCHITECTURE
+
+Action layer: L1. Fix the piston reshape of DEF-PISTON-2X2-RESHAPE and
+specialize DEF-QUADRATIC-MEMORY-L5 to
+$$
+C=K\oplus0_2,\qquad
+K=\begin{pmatrix}0&0&0&3\\0&0&2&0\\0&2&0&0\\3&0&0&0\end{pmatrix}.
+$$
+Thus C has rank four. This reading and the following extended architecture
+are declared inputs; their independent native or physical selection is not
+asserted. The complete carrier, factor and joint initial preparation are
+$$
+\mathcal X=\mathbb F_5^{12}\times\{0,1\},\quad
+z=(p_x,q_x,r_x;p_y,q_y,r_y;\eta),\quad
+\mathcal F=\mathbb F_5^{10}\times\{0,1\},
+$$
+$$
+f=(p_x,p_y,r_x,r_y,\eta),\quad q=(q_x,q_y)^T,\quad
+\rho(z)=f,\qquad S_0=\{r_x=r_y=\eta=0\}.
+$$
+The complete carrier has 488281250 states. Each p_i lists the four native
+piston coordinates in their existing order
+`(p1,p4,p1p,p4p)`. Write them as row-major matrices X_p,Y_p. All field
+arithmetic is in F5; slot indices and word lengths are ordinary integers.
+Products act right to left, and `[U,V]=UVU^-1V^-1`. Set
+$$
+g=G(p)=(\alpha,\beta,\gamma)^T
+=\left(\det X_p,\frac{\det(X_p+Y_p)-\det X_p-\det Y_p}{2},
+\det Y_p\right)^T,
+\quad h=\beta,\quad\delta(g)=1-\beta^4.
+$$
+Use exactly the fixed B,L5,M of DEF-QUADRATIC-MEMORY-L5, writing
+`B_read=B` to distinguish it from a paired kernel operation. In particular
+`D_C=B_read G` and `B_read M=L5 B_read`.
+
+The word alphabet contains the original slotwise maps a,b,c,d,e, the
+complete-cell shears `P(x,y)=(x,y+x)`, `Q_cs(x,y)=(x+y,y)` and their
+inverses, and the following two declared reversible controls. Put
+`I_a=a_x a_y`, `I_b=b_x b_y`, with their full q,r actions, and let
+`sigma(1)=sigma(2)=0`, `sigma(3)=sigma(4)=1`. For i=a,b define
+$$
+W_i(s,\eta)=
+\begin{cases}
+(s,\eta),&h(s)=0,\\
+(I_i^{\sigma(h(s))\oplus\eta}s,\sigma(h(s))),&h(s)\ne0.
+\end{cases}
+$$
+The mixed reading is evaluated on the input of each leaf. The source
+row/column identities give `h(I_i s)=-h(s)`, so each W_i is an involution
+on both bit layers. These controls are supplied interfaces, not words
+derived from the original five generators.
+
+For i=x,y, let `tau_i=e_i d_i`, `E_b=W_b I_b W_b`, and
+`K_i=[E_b,tau_i]`. Supply the fixed involutive reading coupling
+`Ucal_i:r_i -> P_(q_i)(r_i)`, fixing every other coordinate, with
+
+| q | P_q(0), P_q(1), P_q(2), P_q(3), P_q(4) |
+|---|---|
+| 0 | 0, 2, 1, 3, 4 |
+| 1 | 0, 1, 2, 3, 4 |
+| 2 | 2, 1, 0, 3, 4 |
+| 3 | 1, 0, 2, 3, 4 |
+| 4 | 1, 0, 2, 3, 4 |
+
+Here Ucal_i is not the autonomous update U. It explicitly permits q to
+affect the factor through r; the compiler alphabet alone does not provide
+that interface. Define `A_i=Ucal_i K_i Ucal_i`. The composition below
+uses the controls W_a,W_b, couplings Ucal_i, one initial preparation S0
+and fixed endpoint readings as its complete additional premises. No further gate, cell, register,
+clock, program state, reset or intermediate preparation is supplied.
+
+### CONTACT-RECORD [T]
+
+On the complete carrier, with arbitrary q,r and either input bit,
+$$
+K_i(f,q)=(f,q+3\delta(Gf)e_i),\qquad
+K_i^{-1}(f,q)=(f,q-3\delta(Gf)e_i).
+$$
+For a chosen experiment `O_i=I` or `K_i`, write its label as
+`epsilon_i=0` or `1`; this label is not an input read by Ucal_i. The complete
+map `R_i=Ucal_i O_i Ucal_i`, with `s_i=3 epsilon_i delta(Gf)`, is
+$$
+q_i'=q_i+s_i,\qquad r_i'=P_{q_i+s_i}P_{q_i}(r_i),
+$$
+with all other coordinates restored. Its inverse is
+$$
+q_i=q_i'-s_i,\qquad r_i=P_{q_i'-s_i}P_{q_i'}(r_i').
+$$
+On r_i=0 it writes `r_i'=epsilon_i delta` for every unknown q_i.
+Consequently `R_y R_x`, from r_x=r_y=0 and either eta, writes the pair
+`(epsilon_x delta,epsilon_y delta)` without intermediate preparation.
+The two experiments have the same Gram here; no residual step is part of
+this separate contact statement.
+
+**Proof.** The native word `e_i d_i` fixes the factor and translates q_i
+by 1. On h=0, E_b applies I_b and preserves the bit; on h!=0 it fixes the
+data and flips the bit. Its commutator with tau_i therefore translates
+q_i by -2=3 exactly on h=0. In execution order the actual twelve leaves
+of K_i are
+
+```text
+e_i,d_i,W_b,b_x,b_y,W_b,d_i,e_i,W_b,b_y,b_x,W_b.
+```
+
+Reversing this list is its inverse. Each P_q is an involution and
+`P_(q+3d) P_q(0)=d` for d=0,1. This proves the full reader map, its
+inverse and both ready writes, without assuming clean intermediate r.
+Every leaf of the second reader either fixes r_x or negates it. Thus
+r_x² is invariant at every prefix of that reader, and of its inverse,
+on every complete input. The raw r_x need not be prefix-invariant.
+
+The minimum separate classical reference has three states in the precise
+one-call discrimination class: arbitrary q in Q=F5²; one common reference
+value in A; the same reversible encoder and decoder on Q times A for I
+and a known translation q_i->q_i+3; a fixed active factor as spectator;
+output read only from A; no other borrowed memory or access to the
+experiment label. If A has m states, the encoded set S has 25 elements
+and must satisfy
+`S intersection T(S)=empty`. The translation has 5m disjoint five-cycles,
+each permitting at most two members of S, so `25<=10m` and m>=3. The
+displayed table attains three. This separate comparison reference A is
+not added to the composed carrier. In the embedded realization the
+actual r still has all five native values, including during the contact word.
+
+These records are single-use guarantees. The active full reader has
+fifth power I and can erase a record on its second use; for example
+`(q_i,r_i)=(0,0)->(3,1)->(1,0)`. A completed zero experiment is identical
+to an unused one without a separately supplied completion datum. Inverse
+execution restores q as well as the reference; it does not retain an
+archive. A reset of an unknown 0/1 record while fixing all other available
+data is not reversible. A coupling applied only before the contact
+cannot distinguish the experiments because the contact returns r;
+applied only after it, it sees the same set of possible q inputs in both
+experiments. The general range of r_x² is {0,1,4}; the binary meaning
+requires a completed ready write. Its protection applies at the listed
+leaf boundaries, not inside an unspecified physical realization of W_b
+or under all native operations: d_x,e_x and Ucal_x can change r_x².
+The fixed square reading is not an added dynamical gate or register.
+The exact standalone contract and its bounded
+audit are `probes/P-CONTACT-RECORD-1`; the statement does not acquire the
+residual theorem's eta=0 restriction.
+
+### ALGEBRAIC-RESIDUAL-REALIZATION [T]
+
+There is one specified finite word T_alg in the declared compiler
+alphabet whose full map is
+$$
+T_{\rm alg}(f,q)=(\Pi_{\rm alg}f,H_fq),\qquad
+H_f\in GL_2(\mathbb F_5),\qquad
+\Pi_{\rm alg}(p,r,\eta)=(R(p,\eta),r).
+$$
+Here R is independent of r. The following atlas defines Pi_alg; it is
+the algebraic permutation, not a substitution of the earlier
+lexicographic fibre matching under the same name.
+
+For g=0 fix the entire factor on both bit layers. For g!=0 choose the
+least t in {0,1,2} for which
+$$
+a=\alpha+2t\beta+t^2\gamma\ne0,\quad b=\beta+t\gamma,
+\quad D_a=\operatorname{diag}(1,a),\quad
+L=(X_p+tY_p)D_a^{-1},\quad Z=L^{-1}Y_p.
+$$
+Then L is in SL2(F5), and
+$$
+\xi=aZ_{11}-b,\quad\lambda=aZ_{12},\quad\mu=Z_{21},
+\quad \xi^2+\lambda\mu=\kappa(g)=\beta^2-\alpha\gamma.
+$$
+If lambda!=0, set j=lambda-1 in {0,1,2,3}, n=xi. If lambda=0, set
+n=mu and use j=4 for the root xi=0 or xi in {1,2}, j=5 for xi in {3,4}.
+The permitted slots are `0<=j<m(kappa)`, where
+$$
+m(0)=5,\qquad m(1)=m(4)=6,\qquad m(2)=m(3)=4.
+$$
+The inverse uses, for j<4, `lambda=j+1`, `xi=n`,
+`mu=(kappa-n²)/lambda`; for j>=4 it uses lambda=0, mu=n and the indicated
+root. It then reconstructs
+$$
+Z=\begin{pmatrix}(\xi+b)/a&\lambda/a\\\mu&b-\xi\end{pmatrix},
+\qquad Y_p=LZ,\qquad X_p=LD_a-tY_p.
+$$
+These are coordinates of the existing pistons, not added storage.
+
+Set
+$$
+m_*(g)=\begin{cases}5,&g=s(2,1,3),\ s\ne0,\\6,&\text{otherwise},\end{cases}
+\qquad \ell=j+m(\kappa(g))\eta.
+$$
+For ell>=m_*(g), Pi_alg fixes the factor. For ell<m_*(g), it preserves
+L,n,r_x,r_y,ell, sets
+$$
+g'=Mg,\quad m'=m(\kappa(g')),\quad
+\eta'=\mathbf1_{\ell\ge m'},\quad j'=\ell-m'\eta',
+$$
+and reconstructs the pistons from the inverse atlas. The inverse uses
+the same rule with
+$$
+M^{-1}(a,b,c)=(4b-2c,2a,2c-2a).
+$$
+A nonzero quadratic polynomial cannot vanish at all three choices of t.
+Direct substitution verifies the atlas and its inverse. The active slot
+ell is preserved and `m_*<=6<2m'` for every nonzero target fibre, so the
+reconstructed j′,eta′ are valid. Since m_* is constant on each M-orbit,
+the inverse returns the same active set; its complement is fixed. Thus
+Pi_alg is a permutation of the complete factor.
+
+For the compiler alphabet, rho is the coarsest deterministic factor
+retaining `(G,eta)` after every finite word. Equal rho values remain
+indistinguishable because no compiler leaf reads q into the factor.
+Different bits are distinguished by the empty word. Different pistons
+are distinguished by translated quadratic readings: the nondegenerate
+K makes the polarization difference nonzero for some available
+translation. If only r differs, a c leaf exposes a nonzero piston
+difference, which a following translation distinguishes. This minimality
+does not include the additional q-reading couplings Ucal_i.
+
+**Finite word realization.** Fix the compiler `CW-ALG-1` and define
+$$
+T_{\rm alg}=\operatorname{Expand}
+\bigl(\mathrm{CW\!\text{-}\!ALG\!\text{-}\!1}(\Pi_{\rm alg})\bigr).
+$$
+Its precise terminal formulas A1–A18 and cycle formulas B1–B7 are the
+fixed word definitions in
+[`probes/P-ALG-CONTACT-REALIZATION-1/SPEC.md`](../probes/P-ALG-CONTACT-REALIZATION-1/SPEC.md),
+SHA-256 `bcf48fbece05e445a1e6d958b749dfc0ff4d0b6f05f702d699f08fb142bfa656`.
+The following conventions are part of this compiler, including where two
+formulas have the same factor action:
+
+1. Homogenize by `tau_(q_i)=e_i d_i`,
+   `bar a_i=a_i`, `bar b_i=b_i`,
+   `bar c_i=tau_(q_i)^-1 c_i`, `bar d_i=tau_(q_i)^-1 d_i`,
+   `bar e_i=tau_(q_i)^-2 e_i`. Raw native letters inside these formulas
+   are terminal; homogenization is not reapplied to them.
+2. Use the original ordered sixteen-symbol macro alphabet
+   `(bar a_x,bar b_x,bar c_x,bar d_x,bar e_x,
+   bar a_y,bar b_y,bar c_y,bar d_y,bar e_y,
+   P,P^-1,Q_cs,Q_cs^-1,W_a,W_b)`, including syntactic duplicates.
+   Keep the original A4 `Z_r=[K_0,tau_(e_r)]²` and the original A18
+   using W_a. Neither a shorter factor-equivalent indicator nor a
+   different control is substituted.
+3. Constants E_i(1) always use A1–A2. The base piston monomials with
+   target r_x or r_y always use A6–A7, ahead of A11. In the workspace
+   `(xi_1,xi_2,xi_3)=(r_x,v_x,r_y)`, where
+   `v_x=p_(x,1)+p_(x,2)-p_(x,3)-p_(x,4)`, E_2(xi_1) is N21 of A8
+   and E_2(xi_3) is N23 of A9, also ahead of A11. Only the remaining
+   workspace monomials use A11; external monomials with target 2 use A12.
+4. R_ij is the first qualifying word of length at most 23 in length–lex
+   order over `(J12,J12^-1,J23,J23^-1)`; its matrix determines the signs.
+   Polynomial products use the stated left prefix and last factor, with
+   exactly the prescribed target and helper coordinates. No other
+   multiplication tree is chosen.
+5. A field scalar used as repetition has representative 0,...,4. Explicit
+   negative exponents remain syntactic inverses, including the signs in
+   A11. Once a word power is specified, it is not reduced modulo five
+   from its factor action. Expand preserves product order and literal
+   repetitions; inverses reverse the word and invert each leaf.
+6. Factor states are ordered lexicographically as
+   `(p_x1,p_x2,p_x3,p_x4,r_x,p_y1,p_y2,p_y3,p_y4,r_y,eta)`, digits 0,...,4
+   and bit last. Edges, attachments, cycle rotations, parity corrections
+   and transposition pairs use exactly the first/least choices of B1–B7.
+
+The finite constructive proof has three parts. The original words supply
+all ten factor translations. With `E_i=W_i I_i W_i`, the indicator
+`[E_a E_b,tau_(e_r)]²` adds `1-h^4` to r. Polarized fourth differences,
+lower finite differences and commutator multiplication construct the
+polynomial-controlled additions in A1–A16 without clean workspace.
+The support calculation in A17–A18 gives exactly the single three-cycle
+$$
+C_*=(\zeta_0,\zeta_1,\zeta_2),\quad
+p_x=(3,0,3,0),\quad p_y=(4,1,1,4),\quad\eta=0,
+$$
+with respective `(r_x,r_y)=(2,0),(0,1),(3,0)`, fixing every other factor
+state. The one-point intersection of the two conjugated supports fixes
+its orientation and separates the two bit layers.
+
+The factor group is primitive. Translation-invariant blocks either stay
+in separate bit layers or pair two cosets. In the first case the period
+space of the W output bit is exactly `<r_x,r_y>` and the c maps force
+each block to be a singleton. In the second, P,Q_cs remove the relative
+coset shift; invariance under I_a,I_b and the c maps forces the entire
+factor as the block. For `N=|F|=2·5^10`, the supports of all
+`w C_* w^-1`, `|w|<=N`, in the fixed length–lex order therefore form
+a connected hypergraph: stabilization of its component partition would
+give a nontrivial block system, and every nonstable stage decreases the
+component count. B3–B6 extend the known star cycles `(zeta_0,zeta_1,x)`
+along the first crossing edge. At most N-3 attachment stages supply all
+stars. B7 decomposes the specified even target into fixed ordered cycle
+and paired-transposition identities. Every step and recursion is finite;
+the lists determine a fixed word before its application to input data.
+
+All generators are even on the factor. The native generators have two
+identical bit layers; each W_i has 3900000 transpositions. Conversely the
+construction supplies every even factor permutation. Pi_alg is even:
+each of its reduced cycles repeats for the 15000 choices of `(L,n,r_x,r_y)`.
+Thus the construction applies to this exact Pi_alg. It asserts
+`Gamma=Alt(F)` on the factor, not on the complete carrier. The reduced
+1280-state atlas is not a factor of the whole alphabet and is not used
+in place of N. The compiler's lists and indices introduce no run-time
+register. This is the finite translation to allowed words; Pi_alg itself
+is not admitted as an extra gate.
+
+**Complete q action and inverse.** For a native leaf w, write
+`w(f,q)=(F_w f,H_w(f)q+t_w(f))`. The native q actions are: a fixes q_i;
+b negates it; c,d send it to 1-q_i; e sends it to 2-q_i; P and Q_cs are
+the corresponding two-coordinate shears; W_a fixes both q and W_b
+negates both on its selected branch. On a product UV,
+$$
+H_{UV}(f)=H_U(F_Vf)H_V(f),\qquad
+t_{UV}(f)=H_U(F_Vf)t_V(f)+t_U(F_Vf).
+$$
+Homogenized macros and P,Q_cs,W_a,W_b have t=0. Their exact recursive
+composition therefore gives the stated homogeneous endpoint matrix H_f,
+with no assumption that H_f=I or that q was initially zero. From f′,q′
+the inverse first restores `f=Pi_alg^-1(f′)`, then `q=H_f^-1 q′`.
+It is precisely `ReverseInvert(T_alg)`; an independent compilation of
+Pi_alg^-1 need not be the same full inverse. The period 10 of the factor
+does not assert `T_alg^10=I` on the complete carrier. Neither the expanded word nor
+the numerical function H_f is required to be enumerated by the bounded
+audit.
+
+The more general full-fibre transfer lemma needs only bijections between
+the prescribed rho fibres: if a fixed permutation T induces F on the
+factor and maps each complete q fibre bijectively to the next, then for
+the initialized factor layer `F_0=F5^10 times {0}`,
+$$
+\bigcup_{n\ge0}T^n(\rho^{-1}(\mathcal F_0))
+=\rho^{-1}\!\left(\bigcup_{n\ge0}F^n(\mathcal F_0)\right).
+$$
+This statement does not require linear q maps. For the actual T_alg,
+the map on each fibre is the particular homogeneous H_f determined by
+CW-ALG-1. The general lemma neither chooses that matrix nor substitutes
+an arbitrary lift for the specified native word.
+
+### RESIDUAL-STEP-RECORD [T]
+
+On the declared complete carrier define the one fixed composition
+$$
+\mathcal V=\mathcal A_yT_{\rm alg}\mathcal A_x.
+$$
+With the single preparation S0, for every pair of pistons and every
+unknown q, the exact residual step and its two in-machine records are
+$$
+\boxed{(D_C,r_x,r_y)(\mathcal Vz)
+=\bigl(L_5D_C(z),\delta(g),\delta(Mg)\bigr),
+\qquad z\in S_0,\quad g=G(z).}
+$$
+Equivalently `G(Vz)=MG(z)`; explicitly
+`delta(Mg)=1-(alpha+beta+gamma)^4`. The complete word uses no
+preparation between its three parts.
+
+Its full map, including arbitrary occupied r and either initial bit, is
+$$
+\begin{aligned}
+d_0&=\delta(Gp),&u&=q+3d_0e_x,&
+\widehat r_x&=P_{u_x}P_{q_x}(r_x),\\
+f_x&=(p,\widehat r_x,r_y,\eta),&f_2&=\Pi_{\rm alg}f_x,&v&=H_{f_x}u,\\
+d_1&=\delta(Gf_2),&q'&=v+3d_1e_y,&
+r_y'&=P_{v_y+3d_1}P_{v_y}(r_y).
+\end{aligned}
+$$
+The output pistons and bit are those of f2, and `r_x′=rhat_x`.
+The matrix is keyed by the actual factor after A_x, which can depend
+on the original q when r_x is occupied. The full map has the inverse
+$$
+\mathcal V^{-1}=\mathcal A_x^{-1}T_{\rm alg}^{-1}\mathcal A_y^{-1},
+\qquad\mathcal A_i^{-1}=\mathcal U_iK_i^{-1}\mathcal U_i.
+$$
+First undo A_y using its unchanged pistons, then restore f_x by
+Pi_alg^-1 before evaluating H_(f_x)^-1, and finally undo A_x. This
+returns every original coordinate, not just the readings or ready zeros.
+
+**Proof of the joint step.** The first ready reader writes r_x=delta(g)
+and leaves r_y=eta=0. The actual resulting state is in the initialized
+domain of T_alg. Its global factor action changes g to Mg and restores
+both r, including the occupied first record. The final reader has
+r_y=0 and accepts every actual output v_y of the compiled word, hence
+writes delta(Mg). The fixed identity `B_read M=L5 B_read` proves the
+boxed equality. The full maps above follow by substitution of these
+same operations on arbitrary inputs, and reversing them proves the
+two-sided inverse. No intermediate state is replaced by a clean one.
+
+**Exact domains.** The T_alg domain supplied by
+ALGEBRAIC-RESIDUAL-REALIZATION is the reachable closure from the entire
+eta=0 layer, with arbitrary r,q:
+$$
+\Omega_{\rm alg}=\{g=0,\eta=0\}\ \cup\
+\{g\ne0,\ell<m_*(g)\},\qquad
+|\Omega_{\rm alg}|=281640625.
+$$
+All omitted coordinates are unrestricted. This is an exact reachability
+statement: each active slot visits a fibre of maximal width and then
+has bit 0; inactive slots and the zero-Gram bit 1 layer cannot be reached.
+Every q fibre is carried bijectively and is complete initially. The
+closure of T_alg alone from S0 is
+`Omega_alg intersection {r_x=r_y=0}`, of size 11265625.
+
+For completeness, in the basis `e=(2,1,3)`, `v=(2,0,2)`, `w=(2,0,3)`
+the operator N=M+I satisfies `Ne=0,Nv=e,Nw=v`. For `g=Ae+Bv+Cw`,
+`kappa(g)=B²+3AC-C²` and `kappa(M^k g)=kappa(g)+k C²`. Also
+`M^5=-I`, `M^10=I` and `ker(M²-I)=span(e)`. Thus the four nonzero points
+on the e-line have maximal width 5 and period 2; the other 120 have
+maximal width 6 and period 10. There are `4·5+120·6=740` active reduced
+states. The zero-Gram
+piston fibre has `145+144·45=6625` elements, and each nonzero atlas slot
+has `120·5=600` piston realizations. Hence there are
+`6625+740·600=450625` reachable piston/bit states. The two domain sizes
+above follow by multiplying respectively by 625 free r,q values or 25
+free q values.
+
+Both readers preserve pistons and eta at their endpoints, so
+`V(Omega_alg)=Omega_alg` and on this domain, for every n>=0,
+$$
+G(\mathcal V^nz)=M^nG(z),\qquad
+D_C(\mathcal V^nz)=L_5^nD_C(z).
+$$
+This continuation needs no reset of an occupied eta. It does not supply
+fresh ready records at every step. The actual repeated V-reach from S0
+is `union_(n>=0) V^n(S0)`, not the whole Omega_alg: completed macrosteps
+preserve `r_x,r_y in {0,1,2}`, whereas Omega_alg also permits 3,4. Native
+intermediate states still use the complete carrier. Fixing the complement of the
+factor Pi_alg does not imply that V fixes that complement.
+
+The exact single-pass image `S1=V(S0)` has arbitrary q′ and
+$$
+r_x'=\delta(M^{-1}g'),\qquad r_y'=\delta(g'),\qquad g'=G(p').
+$$
+For g′=0, it has eta′=0 and both records 1. For g′!=0, its remaining
+necessary and sufficient condition is
+$$
+\ell'=j'+m(\kappa(g'))\eta'
+<m(\kappa(M^{-1}g')).
+$$
+Indeed this is exactly `eta(R^-1(p′,eta′))=0`. On active slots it is
+the inverse-atlas formula. On inactive slots ell′>=m_* while the previous
+width is at most m_*, and the fixed input bit is 1, so both sides fail.
+The inverse reader sends r′ back to 0 exactly when r′ equals its ready
+output d. The slot and record conditions are therefore equivalent to
+`V^-1(z′) in S0`, including both directions. On S0 the post-A_x factor
+`f_x=(p,delta(g),0,0)` is independent of q, and
+`q′=H_(f_x)(q+3 delta(g)e_x)+3 delta(Mg)e_y` is a bijection on F5².
+Thus no additional q condition is imposed and `|S1|=|S0|=9765625`.
+After A_x the exact interface is `r_x=delta(g),r_y=eta=0` with all q;
+after T_alg A_x it is the displayed S1 piston/bit condition and first
+record, with r_y=0 and all q.
+
+**Restoration and persistence of the first record.** Globally T_alg
+returns r_x to its input value. Thus for z in S0,
+$$
+r_x(T_{\rm alg}\mathcal A_xz)
+=r_x^2(T_{\rm alg}\mathcal A_xz)=\delta(g).
+$$
+This is endpoint restoration, not invariance inside T_alg. The contact
+prefix lemma holds on every complete input, including the actual
+occupied bit and changed pistons after T_alg. Consequently every prefix
+Y_k of the following A_y, including the empty one, satisfies
+$$
+r_x^2(Y_kT_{\rm alg}\mathcal A_xz)=\delta(g).
+$$
+The word may use occupied native coordinates between its endpoints and return them;
+it does not require a new clean workspace. The boxed pair is guaranteed
+once from S0. Repeating V may overwrite occupied records, and a zero
+record does not certify completion. No archive, reusable reset or
+completion register follows.
+
+The separate accepted evidence is `probes/P-CONTACT-RECORD-1`,
+`probes/P-ALG-CONTACT-REALIZATION-1` and
+`probes/P-RESIDUAL-RECORD-COMPOSITION-1`. Their bounded checks support
+their stated finite and symbolic identities; the universal native-word
+existence and joint theorem rest on the accepted constructive proofs.
+No execution of the enormous T_alg expansion or numerical evaluation of
+its complete H_f is claimed. These conditional L1 results do not select
+the supplied reading or interfaces independently, derive them from
+autonomous U or J, or close QUADRATIC-MEMORY-NATIVE-CONTACT. That owner
+retains its complete independently admitted native contract. No physical
+apparatus, detector, persistent archive, occurrence law, physical Hodge
+step or higher-layer closure is supplied.
 
 ### QUADRATIC-MEMORY-NATIVE-CONTACT [O]
 

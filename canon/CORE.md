@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v99. Normative authority and activation
+**Release identity:** Public Canon v100. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v99 also declares a discrete architecture. It does not
+Public Canon v100 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -31,6 +31,20 @@ can return the complete state after ten steps. QUADRATIC-L5-INITIALIZED-CAPACITY
 words and the literal selector fail the stated binary contract;
 QUADRATIC-MEMORY-NATIVE-CONTACT [O] requires independently admitted reading,
 actual register-writing gates and complete occupied-memory continuation.
+
+Three separately proved conditional L1 results now compose one residual
+step with its in-machine record. CONTACT-RECORD supplies the complete
+reader contract; ALGEBRAIC-RESIDUAL-REALIZATION supplies the distinct
+algebraic Pi_alg through the fixed finite CW-ALG-1 word; and
+RESIDUAL-STEP-RECORD gives V=A_y T_alg A_x on the same full carrier.
+One preparation r_x=r_y=eta=0 permits arbitrary pistons and unknown q,
+the exact L5 readout step, and records delta(g),delta(Mg). The complete
+inverse, exact one-pass image, occupied-bit continuation and restoration
+of the first record are proved. The declared W gates, reader couplings,
+preparation and reading remain premises. This supplies neither their
+physical admission nor a fresh archive on repetition, and
+QUADRATIC-MEMORY-NATIVE-CONTACT remains open.
+
 SCALAR-HERMITIAN-NORM-IMAGE [T] separately characterizes the full arithmetic
 scalar norm image; RAMIFIED-HERMITIAN-NORM-OBSTRUCTION [T] excludes reciprocal
 Lucas squared lengths even over Q(zeta5), and J-TWO-TRACE-SCALAR-NORM-IMAGE [T]

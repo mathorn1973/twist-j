@@ -25,11 +25,11 @@ class ArchitectureMapReportTests(unittest.TestCase):
 
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v99 adds eight inline T claims, one L1 obligation and one definition.
-        self.assertEqual(self.report.claims, 507)
+        # v100 adds three conditional T claims on accepted public probes.
+        self.assertEqual(self.report.claims, 510)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 364},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 367},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -37,7 +37,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 94,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 373,
+                "two-architecture": 376,
             },
         )
         self.assertFalse(self.report.count_mismatches)
@@ -45,7 +45,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 200)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 353
+            len(self.report.transitive_architecture_dependents), 357
         )
         self.assertEqual(len(self.report.dependency_terminals), 70)
         # v95 adds ten inline theorems (architecture_requirement=none).
@@ -81,6 +81,25 @@ class ArchitectureMapReportTests(unittest.TestCase):
         requires = architecture.dependency_graph(
             (row["item_id"] for row in normative), dependencies, "REQUIRES"
         )
+        # The v100 conditional architecture and its three theorems reach
+        # existing native definitions. These exact graph edges do not
+        # independently admit the added interfaces or close the open owner.
+        v100_edges = {
+            "DEF-RESIDUAL-CONTACT-ARCHITECTURE": {
+                "DEF-KERNEL-GENERATORS", "DEF-PISTON-2X2-RESHAPE",
+                "DEF-QUADRATIC-MEMORY-L5",
+            },
+            "CONTACT-RECORD": {"DEF-RESIDUAL-CONTACT-ARCHITECTURE"},
+            "ALGEBRAIC-RESIDUAL-REALIZATION": {"DEF-RESIDUAL-CONTACT-ARCHITECTURE"},
+            "RESIDUAL-STEP-RECORD": {
+                "CONTACT-RECORD", "ALGEBRAIC-RESIDUAL-REALIZATION",
+            },
+        }
+        for item, expected in v100_edges.items():
+            self.assertEqual(requires[item], expected)
+            self.assertIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertNotIn(item, self.report.dependency_terminals)
         # The generic finite-set lift is a new terminal. The other nine new
         # items reach the architecture through already registered premises;
         # this graph fact neither selects C nor supplies a native contact.
