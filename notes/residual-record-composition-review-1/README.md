@@ -60,3 +60,23 @@ Původní reporty zůstaly beze změny. Tato práce neprovedla obrovské slovo
 ani nový vědecký běh. Zůstává odděleno ověření referenční mapy a důkaz
 konečného překladu. Canon, workflow, QUADRATIC-MEMORY-NATIVE-CONTACT
 a ostatní veřejní vlastníci nejsou touto předlohou měněni.
+
+## Konkrétní ověřovač doplněný do této předlohy
+
+Výše uvedený historický stav chybějícího kódu nahrazuje nynější
+[verify.py](verify.py). [CHECK-MAP.md](CHECK-MAP.md) uvádí přesné tabulky,
+symbolické složení úplných map a důkazní kroky, které nesou obecné závěry.
+[VERIFIER-PINS.json](VERIFIER-PINS.json) váže místní kopie obou závislostí
+na konkrétní veřejné zdroje; tato vazba není přijatým formálním pinem.
+
+Jde o pokračování existujícího PR #1390. PROOF.md a původní PREREG-DRAFT.md
+se nemění a žádná čtvrtá definiční předloha nevzniká. Přiložená kontaktní
+kopie je bajtově totožná s předlohou #1388; její samostatný přezkum tím není
+nahrazen ani uzavřen. Obecná symbolická mapa používá celý faktorový klíč
+H_f a nikdy jej nenahrazuje identitou; konkrétní zvednutí nadále určuje
+přesná gramatika CW-ALG-1.
+
+Kód prošel pouze statickým přezkumem a syntaktickými kontrolami bez importu
+či spuštění vědeckých funkcí. Před formálním pinem zbývá přijmout přesný kód,
+jeho rozsah a samostatné závislosti. Teprve potom následují předepsané běhy,
+jejich vlastní veřejné přezkumy a případné společné začlenění v100.

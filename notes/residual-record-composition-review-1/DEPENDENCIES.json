@@ -29,6 +29,9 @@
       "issue": 1386,
       "review_pr": 1389,
       "notes_commit": "13081b0dec64ab99386a8cd06759b152e3e05636",
+      "verifier_review_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "verifier_source_path": "notes/alg-contact-realization-review-1/verify.py",
+      "verifier_sha256": "115f6cae93934792a31178bd5b2ea630336ac7e43cf2abbeca8e2db0823222b0",
       "proof_path": "notes/alg-contact-realization-review-1/SPEC.md",
       "proof_sha256": "bcf48fbece05e445a1e6d958b749dfc0ff4d0b6f05f702d699f08fb142bfa656",
       "formal_pin_accepted": false
@@ -39,5 +42,6 @@
   "new_registers": [],
   "intermediate_preparations": [],
   "entire_compiled_word_executed": false,
+  "verifier_source_bindings": "VERIFIER-PINS.json; review sources only, not accepted formal pins",
   "joint_public_fold_ready": false
 }
