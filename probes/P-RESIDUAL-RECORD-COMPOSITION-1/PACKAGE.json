@@ -1,0 +1,102 @@
+{
+  "files": [
+    {
+      "bytes": 10749,
+      "path": "PROOF.md",
+      "review_source_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a",
+      "review_source_path": "notes/residual-record-composition-review-1/PROOF.md",
+      "sha256": "7736730cc186669859f0d714e2790fea8a461129c7fbaf922a024eb90149273a"
+    },
+    {
+      "bytes": 3389,
+      "path": "PREREG-DRAFT.md",
+      "review_source_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a",
+      "review_source_path": "notes/residual-record-composition-review-1/PREREG-DRAFT.md",
+      "sha256": "021a18883fa4c1dc0918f723aa7debc5d1c410ad42bb4c3a4f9893f8aa374515"
+    },
+    {
+      "bytes": 5555,
+      "path": "README.md",
+      "review_source_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a",
+      "review_source_path": "notes/residual-record-composition-review-1/README.md",
+      "sha256": "5a57a1c8d5746f52f48736b6f1aadba4e64cbafc091872d1c046c84b7920356b"
+    },
+    {
+      "bytes": 2142,
+      "path": "DEPENDENCIES.json",
+      "review_source_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a",
+      "review_source_path": "notes/residual-record-composition-review-1/DEPENDENCIES.json",
+      "sha256": "1cce7f893e52504995fa49bf732ec312ebea007e7bf3120f8cd4870883ed00df"
+    },
+    {
+      "bytes": 22825,
+      "path": "verify.py",
+      "review_source_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a",
+      "review_source_path": "notes/residual-record-composition-review-1/verify.py",
+      "sha256": "bf693e33d5652141bf2367c6892e9c54d76a2f3a383aee19849747d1f17bae9f"
+    },
+    {
+      "bytes": 52887,
+      "path": "algebra_dependency.py",
+      "review_source_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a",
+      "review_source_path": "notes/residual-record-composition-review-1/algebra_dependency.py",
+      "sha256": "115f6cae93934792a31178bd5b2ea630336ac7e43cf2abbeca8e2db0823222b0"
+    },
+    {
+      "bytes": 17430,
+      "path": "contact_dependency.py",
+      "review_source_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a",
+      "review_source_path": "notes/residual-record-composition-review-1/contact_dependency.py",
+      "sha256": "99ea8680db65567fb73e78f074841532802e6398dfbd34077b37914024341134"
+    },
+    {
+      "bytes": 1555,
+      "path": "VERIFIER-PINS.json",
+      "review_source_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a",
+      "review_source_path": "notes/residual-record-composition-review-1/VERIFIER-PINS.json",
+      "sha256": "97e01da313579d388958b2f60751d5e717f45182b66155afffcb3cbba8a628ba"
+    },
+    {
+      "bytes": 11306,
+      "path": "CHECK-MAP.md",
+      "review_source_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a",
+      "review_source_path": "notes/residual-record-composition-review-1/CHECK-MAP.md",
+      "sha256": "e2165d2158f08f8a48bfea63f30113ffb09672c4b6612fa0dec78e801bc49f55"
+    },
+    {
+      "bytes": 7859,
+      "path": "STATIC-REVIEW.md",
+      "review_source_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a",
+      "review_source_path": "notes/residual-record-composition-review-1/STATIC-REVIEW.md",
+      "sha256": "4e2ce0bba0f027c4cccd9108c74fd72b38d690548ae2a9568393876a2828bdd3"
+    },
+    {
+      "bytes": 3095,
+      "path": "ACCEPTANCE.md",
+      "role": "formal adoption or separate proof-review record",
+      "sha256": "eb9a89ac1d856adf1a75f44861ca3c6116532a026142fb9cda9ffc14453c9488"
+    },
+    {
+      "bytes": 4268,
+      "path": "PREREG.md",
+      "role": "formal adoption or separate proof-review record",
+      "sha256": "42ee37c2b33151219b827b133bc1a7542ad5f52c678ead4b608c32c3d46f8d3d"
+    },
+    {
+      "bytes": 14810,
+      "path": "PROOF-REVIEW.md",
+      "role": "formal adoption or separate proof-review record",
+      "sha256": "c1f435f0bf7690ce3cb84e8d3f89a8da150065abd5e1546886f7f3352e473876"
+    },
+    {
+      "bytes": 7594,
+      "path": "PUBLIC-DEPENDENCIES.json",
+      "role": "formal adoption or separate proof-review record",
+      "sha256": "4e1bd30830e54456ec2c64ac32fdcee838951ac091deaa8821c584b38470b051"
+    }
+  ],
+  "probe": "P-RESIDUAL-RECORD-COMPOSITION-1",
+  "schema": "v100-formal-package/v1",
+  "scope": "Exact immutable review bytes plus separately identified formal adoption records. No verifier, candidate function, or scientific gate was executed by this packaging program.",
+  "source_review_commit": "e4eaf10360dd758278a8e9c25cec2edcb7f5312a"
+}

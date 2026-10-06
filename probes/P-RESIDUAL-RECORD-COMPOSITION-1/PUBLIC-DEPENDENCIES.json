@@ -1,0 +1,174 @@
+{
+  "schema": "v100-join-public-dependencies/v1",
+  "dependencies": [
+    {
+      "name": "contact",
+      "probe": "P-CONTACT-RECORD-1",
+      "formal_pin": "3fe0d2d39e42965d8aab58b27212211f3445e729",
+      "accepted_pr_head": "f221d3550a064c5a5d80aa73048ab94a74c47bd3",
+      "accepted_merge": "e567807200cffed80c744d3f9686377349ab83ef",
+      "formal_pr": "https://github.com/mathorn1973/twist-j/pull/1391",
+      "written_proof_acceptance": "https://github.com/mathorn1973/twist-j/pull/1388#issuecomment-6016537739",
+      "completed_audit_acceptance": "https://github.com/mathorn1973/twist-j/pull/1391#issuecomment-6016677662",
+      "two_architecture_workflow": "https://github.com/mathorn1973/twist-j/actions/runs/37466245042",
+      "architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "verifier_sha256": "99ea8680db65567fb73e78f074841532802e6398dfbd34077b37914024341134",
+      "stdout_sha256": "a003c89fa6776a4679e0c81e3ffeed0b65cc96186480b6b7d7ddb104cae234d4",
+      "stdout_bytes": 815,
+      "dependency_filename": "contact_dependency.py",
+      "runtime_source_path": "probes/P-CONTACT-RECORD-1/verify.py",
+      "pinned_files": [
+        {
+          "path": "PROOF.md",
+          "bytes": 13626,
+          "sha256": "805137842d66894b36cc5cef17b45bf1c67b81570bf9eb8a4c77c9394d40abf5",
+          "git_blob": "fc8d8c91b55a59e3bcee0def26b282ab3e7a6c8b"
+        },
+        {
+          "path": "PREREG.md",
+          "bytes": 7910,
+          "sha256": "24a24ee5b055fec4b6a1cd6ebb5b4a3ffcec2e0e078b5f5937111e8a253ba4cd",
+          "git_blob": "9524e97e751f895d881f6fa8557fe02715736261"
+        },
+        {
+          "path": "README.md",
+          "bytes": 3443,
+          "sha256": "c9006df8528dae2655bb8a7378b504d2855283f5d8a5a37eed8f81de4b7174f0",
+          "git_blob": "dde70acfe5bade1aee6dde4bced9a0c6258ae4ef"
+        },
+        {
+          "path": "SOURCES.json",
+          "bytes": 4795,
+          "sha256": "9943a1d831cc3ccbea1dc520071f8ff1b3a1d88bd4edf27e2cc47ea344fc6929",
+          "git_blob": "e66f830f09f4e32e85b85a82d88d91f75cac8636"
+        },
+        {
+          "path": "verify.py",
+          "bytes": 17430,
+          "sha256": "99ea8680db65567fb73e78f074841532802e6398dfbd34077b37914024341134",
+          "git_blob": "c7127dbc6201a08e4c61a8cfecc8d1acc2c6a9c8"
+        },
+        {
+          "path": "ACCEPTANCE.md",
+          "bytes": 2710,
+          "sha256": "390286e58c69245123ff26e501e33cf198d1873025bba42f587f412238c3c7f8",
+          "git_blob": "a30f4907a62e1683502a2574f67c4164de72aa54"
+        },
+        {
+          "path": "PROOF-REVIEW.md",
+          "bytes": 13220,
+          "sha256": "0bf0d40e7351da7a3657a8c0960ca5715ed487be52d378718eb7c5b785b30812",
+          "git_blob": "251f5c190dc3d68d96b9f0dfddba9a05f535d6ce"
+        },
+        {
+          "path": "PACKAGE.json",
+          "bytes": 2278,
+          "sha256": "b74afa05ffd792c8a77b3af9db8dc81bc868d16ac135785d0aed0dc606409f46",
+          "git_blob": "1a7997dd17b7925dee258b4c51a3c7f2f5e04a7c"
+        }
+      ],
+      "status": "ACCEPTED_CONDITIONAL_L1_PROOF_AND_COMPLETED_BOUNDED_TWO_ARCHITECTURE_AUDIT",
+      "canonical_status_changed": false
+    },
+    {
+      "name": "algebra",
+      "probe": "P-ALG-CONTACT-REALIZATION-1",
+      "formal_pin": "195befdae1abeb6cf3249d7baf2088cdd9921998",
+      "accepted_pr_head": "26191a2f4b7154a1ff6a91f40c424ed0f09b6b6a",
+      "accepted_merge": "5de761f774521aa515891093ebc9d6e00891360f",
+      "formal_pr": "https://github.com/mathorn1973/twist-j/pull/1392",
+      "written_proof_acceptance": "https://github.com/mathorn1973/twist-j/pull/1389#issuecomment-6016614665",
+      "completed_audit_acceptance": "https://github.com/mathorn1973/twist-j/pull/1392#issuecomment-6016831726",
+      "two_architecture_workflow": "https://github.com/mathorn1973/twist-j/actions/runs/37467265392",
+      "architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "verifier_sha256": "115f6cae93934792a31178bd5b2ea630336ac7e43cf2abbeca8e2db0823222b0",
+      "stdout_sha256": "2ff8efcdaef8a54d3a8814a4109d94b991c38c05eae96c3ab358876e64b480ba",
+      "stdout_bytes": 4454,
+      "dependency_filename": "algebra_dependency.py",
+      "runtime_source_path": "probes/P-ALG-CONTACT-REALIZATION-1/verify.py",
+      "pinned_files": [
+        {
+          "path": "ACCEPTANCE.md",
+          "bytes": 2583,
+          "sha256": "aa6fc40c08f721696217b77394e7259d96a4f8c42ba8dbfab6c2db6190b420e8",
+          "git_blob": "c6378cb085668b285c333e62d940a8ff46a5f1c0"
+        },
+        {
+          "path": "CHECK-MAP.md",
+          "bytes": 15164,
+          "sha256": "acfa89f08cacd453d51c0fa0b3093735af93d72925a78800a244604b016650a2",
+          "git_blob": "888f38a0a0c5e7e86e7b2e082e74e85e79ad564f"
+        },
+        {
+          "path": "PACKAGE.json",
+          "bytes": 3472,
+          "sha256": "b80584e6c7c40b59d0add2cde3e6cc31afe19a030d4d38530f6cc9bf573ff82d",
+          "git_blob": "66dd53de44653034043ec2f49240e7886b9a8176"
+        },
+        {
+          "path": "PREREG-DRAFT.md",
+          "bytes": 9809,
+          "sha256": "fe924d5074700aeaabf427e3071844a65a407de37ed8e4335f115932a4eb587c",
+          "git_blob": "79fc169b6eb3f90b7b542e606500dea0805841f8"
+        },
+        {
+          "path": "PREREG.md",
+          "bytes": 3967,
+          "sha256": "fed4f0bdd59e5a2854cdb1f0549260c20d180868d82f68913b6fac7985d0fd76",
+          "git_blob": "708069715be48e0d16ba3644baaf95d91d5b07a1"
+        },
+        {
+          "path": "PROOF-REVIEW.md",
+          "bytes": 19517,
+          "sha256": "3e107db16981e844bba21c1950d2322c695a633a471f0fc141252d01a612d560",
+          "git_blob": "2131b344b14a35571a187dc7833eb89e309db9ef"
+        },
+        {
+          "path": "README.md",
+          "bytes": 3053,
+          "sha256": "901670f95cce8f0643ab15f1ebd575d9603adad0a1e345d8aa8bca4a65480551",
+          "git_blob": "1a0f2ced32f27dc634bfb305c2db23d8828986d1"
+        },
+        {
+          "path": "SOURCE_PROVENANCE.json",
+          "bytes": 1138,
+          "sha256": "cad544df526a9fe52afd4fbc72ccdc09ee20cced054262619dcc46d9295ba442",
+          "git_blob": "298fb0ccbefc80a0ab85d41dbeb0feded1a18619"
+        },
+        {
+          "path": "SPEC.md",
+          "bytes": 46719,
+          "sha256": "bcf48fbece05e445a1e6d958b749dfc0ff4d0b6f05f702d699f08fb142bfa656",
+          "git_blob": "30e0a466045e0e251d35a2baa4d192b5d5b9c01b"
+        },
+        {
+          "path": "STATIC-REVIEW.md",
+          "bytes": 2817,
+          "sha256": "ed99f903f56b76aeceddfe4f6eb2eb9c0e39d46993cfea5cd8b10dc9e372c4fa",
+          "git_blob": "548fe41e012dd4f48a8b3de1bfd1844534331395"
+        },
+        {
+          "path": "compiler_identity_checks.py",
+          "bytes": 9777,
+          "sha256": "54bb787eb9a222a5a7fe764863002b4490826c099ac3e599992a7d28ccbe04b7",
+          "git_blob": "bdd20d7c8b8344fdfb3bbdeb59ee9f954da3af9f"
+        },
+        {
+          "path": "verify.py",
+          "bytes": 52887,
+          "sha256": "115f6cae93934792a31178bd5b2ea630336ac7e43cf2abbeca8e2db0823222b0",
+          "git_blob": "2a853e0e92831393359e3412d48dbb52fda882d6"
+        }
+      ],
+      "status": "ACCEPTED_CONDITIONAL_L1_PROOF_AND_COMPLETED_BOUNDED_TWO_ARCHITECTURE_AUDIT",
+      "canonical_status_changed": false
+    }
+  ],
+  "boundary": "This record binds accepted formal public dependencies before the composition pin. It supplements the unchanged historical VERIFIER-PINS.json notes bindings, without rewriting them. Proof acceptance, bounded computation, declared architecture, and Canon status are distinct. No expanded T_alg or numeric H_T was executed."
+}
