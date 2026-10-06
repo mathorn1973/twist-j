@@ -1,0 +1,82 @@
+{
+  "files": [
+    {
+      "bytes": 46719,
+      "path": "SPEC.md",
+      "review_source_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "review_source_path": "notes/alg-contact-realization-review-1/SPEC.md",
+      "sha256": "bcf48fbece05e445a1e6d958b749dfc0ff4d0b6f05f702d699f08fb142bfa656"
+    },
+    {
+      "bytes": 9809,
+      "path": "PREREG-DRAFT.md",
+      "review_source_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "review_source_path": "notes/alg-contact-realization-review-1/PREREG-DRAFT.md",
+      "sha256": "fe924d5074700aeaabf427e3071844a65a407de37ed8e4335f115932a4eb587c"
+    },
+    {
+      "bytes": 1138,
+      "path": "SOURCE_PROVENANCE.json",
+      "review_source_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "review_source_path": "notes/alg-contact-realization-review-1/SOURCE_PROVENANCE.json",
+      "sha256": "cad544df526a9fe52afd4fbc72ccdc09ee20cced054262619dcc46d9295ba442"
+    },
+    {
+      "bytes": 3053,
+      "path": "README.md",
+      "review_source_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "review_source_path": "notes/alg-contact-realization-review-1/README.md",
+      "sha256": "901670f95cce8f0643ab15f1ebd575d9603adad0a1e345d8aa8bca4a65480551"
+    },
+    {
+      "bytes": 52887,
+      "path": "verify.py",
+      "review_source_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "review_source_path": "notes/alg-contact-realization-review-1/verify.py",
+      "sha256": "115f6cae93934792a31178bd5b2ea630336ac7e43cf2abbeca8e2db0823222b0"
+    },
+    {
+      "bytes": 9777,
+      "path": "compiler_identity_checks.py",
+      "review_source_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "review_source_path": "notes/alg-contact-realization-review-1/compiler_identity_checks.py",
+      "sha256": "54bb787eb9a222a5a7fe764863002b4490826c099ac3e599992a7d28ccbe04b7"
+    },
+    {
+      "bytes": 15164,
+      "path": "CHECK-MAP.md",
+      "review_source_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "review_source_path": "notes/alg-contact-realization-review-1/CHECK-MAP.md",
+      "sha256": "acfa89f08cacd453d51c0fa0b3093735af93d72925a78800a244604b016650a2"
+    },
+    {
+      "bytes": 2817,
+      "path": "STATIC-REVIEW.md",
+      "review_source_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "review_source_path": "notes/alg-contact-realization-review-1/STATIC-REVIEW.md",
+      "sha256": "ed99f903f56b76aeceddfe4f6eb2eb9c0e39d46993cfea5cd8b10dc9e372c4fa"
+    },
+    {
+      "bytes": 2583,
+      "path": "ACCEPTANCE.md",
+      "role": "formal adoption or separate proof-review record",
+      "sha256": "aa6fc40c08f721696217b77394e7259d96a4f8c42ba8dbfab6c2db6190b420e8"
+    },
+    {
+      "bytes": 3967,
+      "path": "PREREG.md",
+      "role": "formal adoption or separate proof-review record",
+      "sha256": "fed4f0bdd59e5a2854cdb1f0549260c20d180868d82f68913b6fac7985d0fd76"
+    },
+    {
+      "bytes": 19517,
+      "path": "PROOF-REVIEW.md",
+      "role": "formal adoption or separate proof-review record",
+      "sha256": "3e107db16981e844bba21c1950d2322c695a633a471f0fc141252d01a612d560"
+    }
+  ],
+  "probe": "P-ALG-CONTACT-REALIZATION-1",
+  "schema": "v100-formal-package/v1",
+  "scope": "Exact immutable review bytes plus separately identified formal adoption records. No verifier, candidate function, or scientific gate was executed by this packaging program.",
+  "source_review_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3"
+}

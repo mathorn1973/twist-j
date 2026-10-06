@@ -13,6 +13,10 @@ import io
 import sys
 from pathlib import Path
 
+# Deterministic UTF-8/LF stdout on every supported platform.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", newline="\n")
+
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "canon" / "REGISTRY.tsv"
@@ -37,6 +41,965 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+
+
+# Exact v99 release accounting and reversible public v98 reconstruction.
+# Structural release bookkeeping only; no new scientific execution.
+V99_PRIOR_COMMIT = 'b9f7af5f1b58c76956e280e33bd345c90bd88d1f'
+
+V99_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '7780f2af9d28ced87370af46d51480893eecee2ebe7f9afbf8f57e2b3254ca1d',
+                  'current_bytes': 508857,
+                  'prior_sha256': '489cae930dc8dc6b8f5a33f07d3cc6c0f4cf92c2378a96afcfca30681521deae',
+                  'prior_bytes': 499705,
+                  'restore': ((499, 508, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': 'fa6188bcbd52d749ec2956002f59c34cc287c238187f8725261dd1bec594b75c',
+                   'current_bytes': 65160,
+                   'prior_sha256': 'b886637a77d4466da60d94966d034405e726ff39e93c337de79e973f6bc88b82',
+                   'prior_bytes': 63878,
+                   'restore': ((561, 571, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': 'eb5cd4c006f4d7bf60c2e7723a7383ba54f47147bfd7bd04f8d727816932e112',
+                      'current_bytes': 171678,
+                      'prior_sha256': '91b12c92e350fa0e72bc107057d60c673a66a3b1c80c213c365a4250ef9b99dc',
+                      'prior_bytes': 167981,
+                      'restore': ((1020, 1044, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': 'd333c4726389816ad8d13b3bc35a6265567a27ad8bf2a84e2f7bee575b4e94aa',
+                  'current_bytes': 102939,
+                  'prior_sha256': '693d83eadbdf4e70b34b7db81cfa8b1e8c1d27147472eea30e64e52665055f9f',
+                  'prior_bytes': 101279,
+                  'restore': ((499, 508, ''),)},
+ 'HISTORY.tsv': {'current_sha256': '0f71f0f47076279a6568a7e0cd579543aca74eed547f32d51586e016210dedae',
+                 'current_bytes': 473248,
+                 'prior_sha256': '373b2b0cb168e0fda5ec78ebc61374f378a714e3fe608e588898eb037b440f77',
+                 'prior_bytes': 468927,
+                 'restore': ((1046, 1055, ''),)},
+ 'GATES.tsv': {'current_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'current_bytes': 13324,
+               'prior_sha256': '85f7db365ff38988dbf2a994f4d8d0ba380ac00d368bcc50e4313daee9aff744',
+               'prior_bytes': 12907,
+               'restore': ((26, 27, ''),)},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'current_bytes': 1502,
+                           'prior_sha256': 'fc2b01a2872aba10af309cd7ef93b5e887a77f3b0f1c14a86fdec9af63ac25aa',
+                           'prior_bytes': 1436,
+                           'restore': ((21, 22, ''),)},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': '246100c6a154c27c359e55acb399f18df384fa31db190d6d4fd5557d051ee927',
+              'current_bytes': 957135,
+              'prior_sha256': '63ef571006447030f52bd038b93ac033bd6c9918862fc6e0db541c28d0e69880',
+              'prior_bytes': 919024,
+              'restore': ((0, 1, '# TWIST-J Public Canon v98\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v98. Normative authority and '
+                           'activation\n'),
+                          (12,
+                           13,
+                           'only. Public Canon v98 also declares the discrete architecture used to '
+                           'read\n'),
+                          (25,
+                           26,
+                           'seed of the two algebraic projections. Public Canon v98 does not '
+                           'claim\n'),
+                          (130,
+                           131,
+                           'deriving the architecture from J; Public Canon v98 contains no such\n'),
+                          (8978, 9510, ''),
+                          (13197, 13395, ''))},
+ 'CORE.md': {'current_sha256': '0d37ec89cefdd5c664835a908208acb9ff6dd4828a1389bbf213734445d4bf3a',
+             'current_bytes': 25675,
+             'prior_sha256': 'f75bdf30105f2fa548baba37c694d3f81d5ffb1a77d4b8491037b662341cd8d8',
+             'prior_bytes': 24639,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v98. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v98 also declares a discrete architecture. It does not\n'),
+                         (23, 38, ''))},
+ 'FRONTIER.md': {'current_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'current_bytes': 27382,
+                 'prior_sha256': '23395149df6b11bd2c260d9604e8cfea15f55b0b92c21b4ad65fca722aacc5c9',
+                 'prior_bytes': 26162,
+                 'restore': ((41, 44, ''), (108, 109, 'Live total: 25.\n'))},
+ 'CHANGELOG.md': {'current_sha256': '074c6d72476affc081ec74283d53ebc76f3e0ebfe75d1421f4bed4a49d03291b',
+                  'current_bytes': 199228,
+                  'prior_sha256': '44a5dfd8de90eb025a2247e946e7de5212595cceaab8bcfd7e4d4a3d26caf46f',
+                  'prior_bytes': 197476,
+                  'restore': ((1, 31, ''),
+                              (410,
+                               412,
+                               'Registry snapshot: 498 claims; 0 T-LOCK, 356 T, 59 D, 39 C, 2 H, '
+                               '23 O, 19 F; 25 live H/O.\n'
+                               'Reproduction witnesses: 32.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': 'a9c37d765ce7a5de572444e69320c1fa20bd3e01f330b40339e70168a7721c2a',
+                       'current_bytes': 243,
+                       'prior_sha256': 'a774a4556f69e78d89849a8487cbe200ffda8d8ce7c201b89d7998be3838530b',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t498\n'),
+                                   (3, 4, 'status_T\t356\n'),
+                                   (7, 8, 'status_O\t23\n'),
+                                   (9,
+                                    12,
+                                    'live_H_O\t25\nreproductions\t32\nevidence_none\t85\n'))}}
+
+V99_IDS = ('QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+ 'FINITE-READOUT-INITIALIZED-MEMORY',
+ 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+ 'QUADRATIC-L5-INITIALIZED-CAPACITY',
+ 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+ 'SCALAR-HERMITIAN-NORM-IMAGE',
+ 'RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+ 'J-TWO-TRACE-SCALAR-NORM-IMAGE')
+
+V99_OWNER = 'QUADRATIC-MEMORY-NATIVE-CONTACT'
+
+V99_DEFINITION = 'DEF-QUADRATIC-MEMORY-L5'
+
+V99_GATE = 'GATE-L1-QUADRATIC-MEMORY-NATIVE'
+
+V99_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+                   'status': 'T',
+                   'scope': 'at L1 for E=F5^2, V=F5^6 with trivial SL2(F5) action and the adjoint '
+                            'target sl2(F5), all equivariant polynomial readers of total degree at '
+                            'most two are exactly F_C(X)=X C X^T J for symmetric C, a '
+                            '21-dimensional space, transported to D_C=a e-b h-c f through the '
+                            'marked bracket basis; this does not classify all equivariant '
+                            'functions or mere scaling-homogeneous readers, and target '
+                            'bracket/metric preservation alone does not select C or supply a '
+                            'source-target compatibility law',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'an equivariant polynomial of total degree at most two outside the '
+                                'symmetric-C family, failure of injectivity or the 21-dimensional '
+                                'classification, or failure of the displayed scaling-homogeneous '
+                                'nonquadratic counterexample; a stronger source-target or '
+                                'preparation law changes the premises'},
+                  {'claim_id': 'FINITE-READOUT-INITIALIZED-MEMORY',
+                   'status': 'T',
+                   'scope': 'at L1 for finite X,Y, D:X->Y, permutation L and n(z)=|D^-1(z)|, a '
+                            'full-domain permutation lift exists iff n(z)=n(Lz); the maximum '
+                            'invariant subset has size sum_O |O|min_O n; for m-state ignored '
+                            'memory initialized once at a common value, one global permutation '
+                            'realizes every iterate through horizon H iff n(z)<=m n(L^k z) for '
+                            'every z and 0<=k<=H; unlimited operation exists iff max_O n<=m min_O '
+                            'n, with infinite required capacity on an occupied orbit containing '
+                            'zero, and otherwise exact m_min=max({1} union {ceil(max_O n/min_O '
+                            'n):O occupied}); minimum actual reachable size is sum_O |O|max_O n '
+                            'and can be attained with global T^ord(L)=I, including full-state '
+                            'return, without accumulating a history; these are unrestricted '
+                            'permutation existence results and supply no native contact or '
+                            'independent preparation',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'a finite instance satisfying the stated inequalities without the '
+                                'constructed global lift, a lift violating the necessary counts, '
+                                'or a failure of overlap consistency, recurrence or the attained '
+                                'actual reachable bound; a prescribed gate alphabet is an '
+                                'additional constraint'},
+                  {'claim_id': 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                   'status': 'T',
+                   'scope': 'at L1 for the explicitly fixed matrices and marked quadratic readout '
+                            'in DEF-QUADRATIC-MEMORY-L5, no permutation T on all F5^12 satisfies '
+                            'D_C T=L5 D_C for any nonzero symmetric C of ranks 1 through 6; the '
+                            'same holds on the full product with any finite ignored memory; the '
+                            'scalar forms selected by lambda=(1,1,2) have ranks r and 2r and '
+                            'incompatible exact additive-character sum magnitudes, so no '
+                            'linearity, nondegeneracy, surjectivity or physical distribution '
+                            'premise is used; a once-initialized reachable subset is a different '
+                            'contract',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'a full-domain permutation with the stated intertwining equation '
+                                'for a nonzero symmetric C, or a failure of the explicit '
+                                'transport, scalar ranks or character orthogonality identity; '
+                                'changing the target, marked readout or domain changes the claim'},
+                  {'claim_id': 'QUADRATIC-L5-INITIALIZED-CAPACITY',
+                   'status': 'T',
+                   'scope': 'at L1 for the exact L5 and B of DEF-QUADRATIC-MEMORY-L5, all 125 Gram '
+                            'fibres are determined by rank and determinant character with radical '
+                            'multiplier 25^(6-r); the fixed Gram action has one 1-cycle, two '
+                            '2-cycles and twelve 10-cycles, and never joins both nonzero rank-one '
+                            'types on one orbit; the exact minimum ignored memory from the full '
+                            'common-ready F5^12 layer is 1 for C=0, no finite value for ranks 1 '
+                            'and 2, 6 for rank 3 of either discriminant and 2 for ranks 4,5,6 of '
+                            'either discriminant, already for one step and also for unlimited '
+                            'operation; the displayed minimum actual reachable counts are attained '
+                            'and T^10=I can be chosen; the conclusion concerns all permutations '
+                            'and neither selects C nor asserts a native or characteristic-zero '
+                            'Hodge realization',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'a failure of a displayed Gram count, orbit classification, '
+                                'support obstruction, sharp capacity or minimum reachable count '
+                                'for the fixed matrix and full prepared layer; arbitrary '
+                                'Jordan-conjugate replacements in untransported coordinates are '
+                                'outside scope'},
+                  {'claim_id': 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                   'status': 'T',
+                   'scope': 'at L1 for nonzero symmetric C and the fixed quadratic target, no '
+                            'affine data map on the complete initialized F5^12 layer, even '
+                            'singular or irreversible and with arbitrary ignored memory, satisfies '
+                            'the readout equation; arbitrary selection between two fixed affine '
+                            'maps also fails by the quadratic zero bound, excluding fixed words in '
+                            'the registered affine generators and CSUM couplings and '
+                            'source-independent finite control; separately the literal native '
+                            'fixed-bit selector F_t(x)=g_(sum(x)+2t)(x) has maximum fibre three, '
+                            'requiring exactly three ignored labels for one abstract reversible '
+                            'initialized step and excluding two, with no repeated-use claim; these '
+                            'are bounded-class obstructions, not a no-go for all nonlinear native '
+                            'contacts',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'an affine full-layer solution, a two-fixed-affine-branch '
+                                'solution, a failure of the selector phase/fibre calculation or a '
+                                'binary injective lift of its literal full-domain data update; '
+                                'many adaptive branch histories, changed preparation or other '
+                                'nonlinear gates require a new class'},
+                  {'claim_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                   'status': 'O',
+                   'scope': 'at L1 decide whether an independently admitted fixed symmetric C of '
+                            'rank at least four and the marked B,L5 target admit one autonomous '
+                            'native global permutation on F5^12 times a two-state ignored '
+                            'register, initialized once on the entire common-ready layer, with the '
+                            'exact readout equation on its complete actual reachable set including '
+                            'occupied-memory continuation; freeze the reading-selection rule, full '
+                            'state carrier, native gate alphabet and all data-dependent register '
+                            'controls independently of successful target matching; extra '
+                            'clock/program states count as resources; affine and literal-selector '
+                            'obstructions do not decide the unrestricted native owner, and neither '
+                            'a target-designed fibre matching nor a Thue-Morse bit or physical '
+                            'fourth-coordinate interpretation supplies the missing interface',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'positive closure requires an independently admitted C and '
+                                'permitted permutation with exact inverse and all-reachable-state '
+                                'certificate; negative closure requires a proof over the complete '
+                                'independently frozen admissible native class; missing interface, '
+                                'failed search, subclass no-go or failure of one C is STOP, not '
+                                'negative closure'},
+                  {'claim_id': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                   'status': 'T',
+                   'scope': 'at L1 in K=Q(zeta5), F=Q(sqrt5), O_K=Z[zeta5], O_F=Z[phi], the image '
+                            'of the scalar relative norm H(alpha)=alpha conjugate(alpha) is zero '
+                            'plus the totally positive elements with even valuation at every '
+                            'F-prime inert in K/F, exactly the primes above rational p congruent '
+                            'to 2,3,4 modulo 5; the same criterion holds in the field with '
+                            'negative valuations allowed and H(K) intersect O_F=H(O_K); the '
+                            'ramified prime has no valuation parity restriction, and ideal '
+                            'principality plus correction by a totally positive unit proves '
+                            'sufficiency; this is arithmetic image recognition, not a physical '
+                            'metric or decoder-selection law',
+                   'canon_section': '4. The two places',
+                   'evidence': 'inline',
+                   'falsifier': 'an element violating necessity or meeting total positivity and '
+                                'all inert-prime parity conditions without the constructed '
+                                'relative-norm representative, or a failure of the ideal/unit '
+                                'argument under the registered field and class-number premises'},
+                  {'claim_id': 'RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+                   'status': 'T',
+                   'scope': 'at L1 reduction j->1 at P=(1-j) sends every scalar H(alpha) to a '
+                            'square in F5 and forces L_(2n)=phi^(2n)+phi^(-2n) outside H(K) for '
+                            'every integer n, although the displayed two-component vector has that '
+                            'Hermitian norm; no map K^2->K preserves all standard Hermitian vector '
+                            'norms; three scalar-norm carriers pass all pairwise residue filters '
+                            'exactly at permutations of (0,0,0),(0,0,1),(0,0,4),(0,1,4), a '
+                            'necessary local condition only; Q_n=L_(2n)+1 is excluded for even n, '
+                            'odd n is undecided by this filter, and Q1,Q5,Q7 are norms whereas '
+                            'Q3,Q9 are not by the displayed exact witnesses and prime '
+                            'obstructions; no cuboid, dimension, time or physical contact '
+                            'conclusion is asserted',
+                   'canon_section': '4. The two places',
+                   'evidence': 'inline',
+                   'falsifier': 'a scalar norm with nonsquare ramified-unit residue, a '
+                                'relative-norm representative of L_(2n), an incorrect '
+                                'residue-pattern classification or displayed Q '
+                                'witness/nonexistence; passing the local filter is not claimed '
+                                'sufficient globally'},
+                  {'claim_id': 'J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                   'status': 'T',
+                   'scope': 'at L1 for the declared pure-J two-trace reading s=S(alpha),t=S(J '
+                            'alpha), H(alpha)=u+v phi gives u=(s+t)/5, v=(3s-2t)/5 and absolute '
+                            'norm N=(3st-s^2-t^2)/5; the exact trace-pair image is (0,0) plus '
+                            'integral s,t with s+t=0 mod5,s>0,N>0 and, for g=gcd(|u|,|v|), '
+                            'v_p(N)=0 mod4 when p=2,3 mod5 and both v_p(N),v_p(g) even when p=4 '
+                            'mod5; its quick necessary residue image is exactly '
+                            '{(0,0),(2,3),(3,2)} and 2s-t equals the coefficient-sum square modulo '
+                            '5, requiring no modulo-25 data; this recognizes existence of some '
+                            'scalar, not its unique recovery or equality with the full '
+                            'trace-plus-residue decoder domain, and the Gram inequality bounds the '
+                            'supplementary finite audit',
+                   'canon_section': '4. The two places',
+                   'evidence': 'inline',
+                   'falsifier': 'a trace pair violating necessity or meeting the complete stated '
+                                'positivity, integrality and valuation conditions without a scalar '
+                                'representative, an incorrect trace/absolute-norm identity, or a '
+                                'failure of the exact residue image or Gram bound; the gcd '
+                                'condition is part of the criterion'}],
+ 'NORMATIVE.tsv': [{'item_id': 'DEF-QUADRATIC-MEMORY-L5',
+                    'item_type': 'DEFINITION',
+                    'claim_id': '',
+                    'status': '',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::DEF-QUADRATIC-MEMORY-L5'},
+                   {'item_id': 'QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::QUADRATIC-COUPLED-POLYNOMIAL-CLASS'},
+                   {'item_id': 'FINITE-READOUT-INITIALIZED-MEMORY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FINITE-READOUT-INITIALIZED-MEMORY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FINITE-READOUT-INITIALIZED-MEMORY'},
+                   {'item_id': 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION'},
+                   {'item_id': 'QUADRATIC-L5-INITIALIZED-CAPACITY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'QUADRATIC-L5-INITIALIZED-CAPACITY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::QUADRATIC-L5-INITIALIZED-CAPACITY'},
+                   {'item_id': 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::QUADRATIC-L5-NATIVE-OBSTRUCTIONS'},
+                   {'item_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                    'item_type': 'OBLIGATION',
+                    'claim_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                    'status': 'O',
+                    'layer': 'L1',
+                    'gate_ids': 'GATE-L1-QUADRATIC-MEMORY-NATIVE',
+                    'statement_source': 'canon/CANON.md::QUADRATIC-MEMORY-NATIVE-CONTACT'},
+                   {'item_id': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::SCALAR-HERMITIAN-NORM-IMAGE'},
+                   {'item_id': 'RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::RAMIFIED-HERMITIAN-NORM-OBSTRUCTION'},
+                   {'item_id': 'J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::J-TWO-TRACE-SCALAR-NORM-IMAGE'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'DEF-QUADRATIC-MEMORY-L5',
+                       'depends_on': 'TRACEKERNEL-F5-HODGE-BRACKET',
+                       'relation': 'REQUIRES',
+                       'basis': 'use exactly the registered marked h,e,f basis; the displayed L5 '
+                                'remains separately declared target data'},
+                      {'item_id': 'DEF-QUADRATIC-MEMORY-L5',
+                       'depends_on': 'J-HODGE-PREDICTIVE-CLOSURE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the marked integral five-cycle and exterior action define the '
+                                'algebraic target before any native readout is selected'},
+                      {'item_id': 'DEF-QUADRATIC-MEMORY-L5',
+                       'depends_on': 'A4-RAMIFIED-HODGE-TRACEKERNEL',
+                       'relation': 'REQUIRES',
+                       'basis': 'the explicit ramified quotient, metric-volume bracket and marked '
+                                'transport derive the exact L5 target'},
+                      {'item_id': 'QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+                       'depends_on': 'DEF-QUADRATIC-MEMORY-L5',
+                       'relation': 'REQUIRES',
+                       'basis': 'the fixed source, marked Gram transport and target matrix are '
+                                'explicit premises'},
+                      {'item_id': 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                       'depends_on': 'DEF-QUADRATIC-MEMORY-L5',
+                       'relation': 'REQUIRES',
+                       'basis': 'the fixed source, marked Gram transport and target matrix are '
+                                'explicit premises'},
+                      {'item_id': 'QUADRATIC-L5-INITIALIZED-CAPACITY',
+                       'depends_on': 'DEF-QUADRATIC-MEMORY-L5',
+                       'relation': 'REQUIRES',
+                       'basis': 'the fixed source, marked Gram transport and target matrix are '
+                                'explicit premises'},
+                      {'item_id': 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                       'depends_on': 'DEF-QUADRATIC-MEMORY-L5',
+                       'relation': 'REQUIRES',
+                       'basis': 'the fixed source, marked Gram transport and target matrix are '
+                                'explicit premises'},
+                      {'item_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                       'depends_on': 'DEF-QUADRATIC-MEMORY-L5',
+                       'relation': 'REQUIRES',
+                       'basis': 'the fixed source, marked Gram transport and target matrix are '
+                                'explicit premises'},
+                      {'item_id': 'QUADRATIC-L5-INITIALIZED-CAPACITY',
+                       'depends_on': 'FINITE-READOUT-INITIALIZED-MEMORY',
+                       'relation': 'REQUIRES',
+                       'basis': 'sharp initialized orbit-capacity and reachable-domain theorem'},
+                      {'item_id': 'QUADRATIC-L5-INITIALIZED-CAPACITY',
+                       'depends_on': 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                       'relation': 'REQUIRES',
+                       'basis': 'one memory state is excluded for every nonzero symmetric form'},
+                      {'item_id': 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                       'depends_on': 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                       'relation': 'REQUIRES',
+                       'basis': 'the same exact scalar quadratic rank certificate delimits affine '
+                                'data outputs'},
+                      {'item_id': 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                       'depends_on': 'KERNEL-WEDGE-AFFINITY',
+                       'relation': 'REQUIRES',
+                       'basis': 'registered affine native generators and pair couplings, without '
+                                'arbitrary-permutation controllability'},
+                      {'item_id': 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                       'depends_on': 'KERNEL-WEDGE-COUPLING',
+                       'relation': 'REQUIRES',
+                       'basis': 'registered affine native generators and pair couplings, without '
+                                'arbitrary-permutation controllability'},
+                      {'item_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                       'depends_on': 'QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'abstract reader/capacity and subclass obstructions leave native '
+                                'admission and full occupied continuation open'},
+                      {'item_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                       'depends_on': 'QUADRATIC-L5-INITIALIZED-CAPACITY',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'abstract reader/capacity and subclass obstructions leave native '
+                                'admission and full occupied continuation open'},
+                      {'item_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                       'depends_on': 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'abstract reader/capacity and subclass obstructions leave native '
+                                'admission and full occupied continuation open'},
+                      {'item_id': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                       'depends_on': 'CYCLOTOMIC-CLASS-NUMBER-ONE',
+                       'relation': 'REQUIRES',
+                       'basis': 'registered arithmetic field, ideal and unit premises; no physical '
+                                'lift'},
+                      {'item_id': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                       'depends_on': 'REGULATOR-TWO-LOG-PHI',
+                       'relation': 'REQUIRES',
+                       'basis': 'registered arithmetic field, ideal and unit premises; no physical '
+                                'lift'},
+                      {'item_id': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                       'depends_on': 'J-UNIT-STRIP-NORMAL-FORM',
+                       'relation': 'REQUIRES',
+                       'basis': 'registered arithmetic field, ideal and unit premises; no physical '
+                                'lift'},
+                      {'item_id': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                       'depends_on': 'QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS',
+                       'relation': 'REQUIRES',
+                       'basis': 'registered arithmetic field, ideal and unit premises; no physical '
+                                'lift'},
+                      {'item_id': 'RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+                       'depends_on': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                       'relation': 'REQUIRES',
+                       'basis': 'global prime-parity criterion distinguishes the displayed Q '
+                                'examples'},
+                      {'item_id': 'J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                       'depends_on': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                       'relation': 'REQUIRES',
+                       'basis': 'pure-J trace identities and scalar norm image with the ramified '
+                                'checksum'},
+                      {'item_id': 'J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                       'depends_on': 'RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+                       'relation': 'REQUIRES',
+                       'basis': 'pure-J trace identities and scalar norm image with the ramified '
+                                'checksum'},
+                      {'item_id': 'J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                       'depends_on': 'J-TWO-TRACE-RESIDUE-INVERSE',
+                       'relation': 'REQUIRES',
+                       'basis': 'pure-J trace identities and scalar norm image with the ramified '
+                                'checksum'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+                   'evidence_id': 'EV-QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '19a30f20af95fa9545a5e429757bc99f05445be7bbf8dc0771fd79145a3a29e7',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FINITE-READOUT-INITIALIZED-MEMORY',
+                   'evidence_id': 'EV-FINITE-READOUT-INITIALIZED-MEMORY',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '716b5d124aadeee53599d5774869fad3bdcce705ea1b8044d4f430c803d10fcf',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                   'evidence_id': 'EV-QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'ce3ad5ab060f01913e81847a25d87e6f2dadb72a25e7538e895ca342dbd19447',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'QUADRATIC-L5-INITIALIZED-CAPACITY',
+                   'evidence_id': 'EV-QUADRATIC-L5-INITIALIZED-CAPACITY',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '76b9bbe86352d70bb21c2d8d9e9100882250d9bc741e499a46ae7410159c811a',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                   'evidence_id': 'EV-QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '795c58fef41677137dc46c537785cd011417638db96d5a237d0dc607dbecf00f',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                   'evidence_id': 'EV-QUADRATIC-MEMORY-NATIVE-CONTACT',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '46ac1c86c23ad0fbaa0cb8b57442e693ff1dde476ae662b8eead80eca995914f',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                   'evidence_id': 'EV-SCALAR-HERMITIAN-NORM-IMAGE',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '86e985e707bdb807ca5eaf713f7d53b6008f3692f8b3bfecff6228730105289b',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+                   'evidence_id': 'EV-RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '41c470467482ddb883a05743f154165322d4f360de12a5da362e58dea5df44a6',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                   'evidence_id': 'EV-J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '646eb4ce535428d175f7f583aa6af17161853349fe79602a58ed58cbc5043d49',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON99-DECLARE-QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v99-candidate',
+                  'claim_id': 'QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '19a30f20af95fa9545a5e429757bc99f05445be7bbf8dc0771fd79145a3a29e7',
+                  'evidence_id': 'EV-QUADRATIC-COUPLED-POLYNOMIAL-CLASS',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '19a30f20af95fa9545a5e429757bc99f05445be7bbf8dc0771fd79145a3a29e7',
+                  'rationale': 'Declare the self-contained independently reviewed L1 proof; '
+                               'supplemental exact audits do not retrospectively preregister '
+                               'exploration or supply native or physical realization.'},
+                 {'event_id': 'CANON99-DECLARE-FINITE-READOUT-INITIALIZED-MEMORY',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v99-candidate',
+                  'claim_id': 'FINITE-READOUT-INITIALIZED-MEMORY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '716b5d124aadeee53599d5774869fad3bdcce705ea1b8044d4f430c803d10fcf',
+                  'evidence_id': 'EV-FINITE-READOUT-INITIALIZED-MEMORY',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '716b5d124aadeee53599d5774869fad3bdcce705ea1b8044d4f430c803d10fcf',
+                  'rationale': 'Declare the self-contained independently reviewed L1 proof; '
+                               'supplemental exact audits do not retrospectively preregister '
+                               'exploration or supply native or physical realization.'},
+                 {'event_id': 'CANON99-DECLARE-QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v99-candidate',
+                  'claim_id': 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'ce3ad5ab060f01913e81847a25d87e6f2dadb72a25e7538e895ca342dbd19447',
+                  'evidence_id': 'EV-QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'ce3ad5ab060f01913e81847a25d87e6f2dadb72a25e7538e895ca342dbd19447',
+                  'rationale': 'Declare the self-contained independently reviewed L1 proof; '
+                               'supplemental exact audits do not retrospectively preregister '
+                               'exploration or supply native or physical realization.'},
+                 {'event_id': 'CANON99-DECLARE-QUADRATIC-L5-INITIALIZED-CAPACITY',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v99-candidate',
+                  'claim_id': 'QUADRATIC-L5-INITIALIZED-CAPACITY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '76b9bbe86352d70bb21c2d8d9e9100882250d9bc741e499a46ae7410159c811a',
+                  'evidence_id': 'EV-QUADRATIC-L5-INITIALIZED-CAPACITY',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '76b9bbe86352d70bb21c2d8d9e9100882250d9bc741e499a46ae7410159c811a',
+                  'rationale': 'Declare the self-contained independently reviewed L1 proof; '
+                               'supplemental exact audits do not retrospectively preregister '
+                               'exploration or supply native or physical realization.'},
+                 {'event_id': 'CANON99-DECLARE-QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v99-candidate',
+                  'claim_id': 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '795c58fef41677137dc46c537785cd011417638db96d5a237d0dc607dbecf00f',
+                  'evidence_id': 'EV-QUADRATIC-L5-NATIVE-OBSTRUCTIONS',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '795c58fef41677137dc46c537785cd011417638db96d5a237d0dc607dbecf00f',
+                  'rationale': 'Declare the self-contained independently reviewed L1 proof; '
+                               'supplemental exact audits do not retrospectively preregister '
+                               'exploration or supply native or physical realization.'},
+                 {'event_id': 'CANON99-DECLARE-QUADRATIC-MEMORY-NATIVE-CONTACT',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v99-candidate',
+                  'claim_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'O',
+                  'scope_sha256': '46ac1c86c23ad0fbaa0cb8b57442e693ff1dde476ae662b8eead80eca995914f',
+                  'evidence_id': 'EV-QUADRATIC-MEMORY-NATIVE-CONTACT',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '46ac1c86c23ad0fbaa0cb8b57442e693ff1dde476ae662b8eead80eca995914f',
+                  'rationale': 'Declare a new same-layer native-contact obligation with '
+                               'independently fixed admission and complete occupied-memory '
+                               'continuation; abstract capacity and bounded-class no-go results do '
+                               'not close it or any prior owner.'},
+                 {'event_id': 'CANON99-DECLARE-SCALAR-HERMITIAN-NORM-IMAGE',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v99-candidate',
+                  'claim_id': 'SCALAR-HERMITIAN-NORM-IMAGE',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '86e985e707bdb807ca5eaf713f7d53b6008f3692f8b3bfecff6228730105289b',
+                  'evidence_id': 'EV-SCALAR-HERMITIAN-NORM-IMAGE',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '86e985e707bdb807ca5eaf713f7d53b6008f3692f8b3bfecff6228730105289b',
+                  'rationale': 'Declare the self-contained independently reviewed L1 proof; '
+                               'supplemental exact audits do not retrospectively preregister '
+                               'exploration or supply native or physical realization.'},
+                 {'event_id': 'CANON99-DECLARE-RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v99-candidate',
+                  'claim_id': 'RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '41c470467482ddb883a05743f154165322d4f360de12a5da362e58dea5df44a6',
+                  'evidence_id': 'EV-RAMIFIED-HERMITIAN-NORM-OBSTRUCTION',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '41c470467482ddb883a05743f154165322d4f360de12a5da362e58dea5df44a6',
+                  'rationale': 'Declare the self-contained independently reviewed L1 proof; '
+                               'supplemental exact audits do not retrospectively preregister '
+                               'exploration or supply native or physical realization.'},
+                 {'event_id': 'CANON99-DECLARE-J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-05',
+                  'release': 'canon-v99-candidate',
+                  'claim_id': 'J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '646eb4ce535428d175f7f583aa6af17161853349fe79602a58ed58cbc5043d49',
+                  'evidence_id': 'EV-J-TWO-TRACE-SCALAR-NORM-IMAGE',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '646eb4ce535428d175f7f583aa6af17161853349fe79602a58ed58cbc5043d49',
+                  'rationale': 'Declare the self-contained independently reviewed L1 proof; '
+                               'supplemental exact audits do not retrospectively preregister '
+                               'exploration or supply native or physical realization.'}],
+ 'GATES.tsv': [{'gate_id': 'GATE-L1-QUADRATIC-MEMORY-NATIVE',
+                'owner_item_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                'from_layer': 'L1',
+                'to_layer': 'L1',
+                'gate_kind': 'OPEN_DECISION',
+                'decision_condition': 'positive closure requires an independently admitted C and '
+                                      'permitted permutation with exact inverse and '
+                                      'all-reachable-state certificate; negative closure requires '
+                                      'a proof over the complete independently frozen admissible '
+                                      'native class; missing interface, failed search, subclass '
+                                      'no-go or failure of one C is STOP, not negative closure'}],
+ 'FRONTIER_PROGRAMS.tsv': [{'claim_id': 'QUADRATIC-MEMORY-NATIVE-CONTACT',
+                            'program_id': 'DECODER_CORE',
+                            'queue_role': 'FOLLOWUP',
+                            'work_state': 'STOP',
+                            'work_mode': 'FORMAL'}],
+ 'CORE_SELECTION.tsv': []}
+
+V99_PROOF_CONTRACTS = {'QUADRATIC-COUPLED-POLYNOMIAL-CLASS': {'begin': '### QUADRATIC-COUPLED-POLYNOMIAL-CLASS [T]\n',
+                                        'end': '### FINITE-READOUT-INITIALIZED-MEMORY [T]\n',
+                                        'bytes': 3928,
+                                        'sha256': '3215dcc221f0da812809fcb24f8480477f7c46941dbc4cb26e7bcb04618d8044'},
+ 'FINITE-READOUT-INITIALIZED-MEMORY': {'begin': '### FINITE-READOUT-INITIALIZED-MEMORY [T]\n',
+                                       'end': '### QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION [T]\n',
+                                       'bytes': 4992,
+                                       'sha256': 'b62907a3b687cfb942c26c02ba20cb65baf8799c485d86b7bfd43b5df29efc15'},
+ 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION': {'begin': '### QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION [T]\n',
+                                          'end': '### QUADRATIC-L5-INITIALIZED-CAPACITY [T]\n',
+                                          'bytes': 1575,
+                                          'sha256': '037ead1bff48da742c6f68448276b7a6dcae4634a2f54dc5039f08d0ad02a20d'},
+ 'QUADRATIC-L5-INITIALIZED-CAPACITY': {'begin': '### QUADRATIC-L5-INITIALIZED-CAPACITY [T]\n',
+                                       'end': '### QUADRATIC-L5-NATIVE-OBSTRUCTIONS [T]\n',
+                                       'bytes': 8627,
+                                       'sha256': 'c0f0a356aa2fefbdb20a25cb4be3786463f76ddd91d662d3a918cfedad67126d'},
+ 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS': {'begin': '### QUADRATIC-L5-NATIVE-OBSTRUCTIONS [T]\n',
+                                      'end': '### QUADRATIC-MEMORY-NATIVE-CONTACT [O]\n',
+                                      'bytes': 4042,
+                                      'sha256': 'bd5166f1b17ffe4fad04d82b07e2ad79badd55e41ba59c6042864c10c2c9f14d'},
+ 'SCALAR-HERMITIAN-NORM-IMAGE': {'begin': '### SCALAR-HERMITIAN-NORM-IMAGE [T]\n',
+                                 'end': '### RAMIFIED-HERMITIAN-NORM-OBSTRUCTION [T]\n',
+                                 'bytes': 2442,
+                                 'sha256': '6b6b14f0a960701b74dfbb2d9d5b270e3291476552ff401fe671e7d82286b6e8'},
+ 'RAMIFIED-HERMITIAN-NORM-OBSTRUCTION': {'begin': '### RAMIFIED-HERMITIAN-NORM-OBSTRUCTION [T]\n',
+                                         'end': '### J-TWO-TRACE-SCALAR-NORM-IMAGE [T]\n',
+                                         'bytes': 3245,
+                                         'sha256': '75ec2aa981774fb75804ff02060c8701d14f2d519634f6637f6b71e73ee3d9ed'},
+ 'J-TWO-TRACE-SCALAR-NORM-IMAGE': {'begin': '### J-TWO-TRACE-SCALAR-NORM-IMAGE [T]\n',
+                                   'end': '## 5. The force is the curvature\n',
+                                   'bytes': 2634,
+                                   'sha256': 'e42408e37360e6391eb61c44b39e0ea39b19de431b8eeb628b982867e02b7f5e'},
+ 'QUADRATIC-MEMORY-NATIVE-CONTACT': {'begin': '### QUADRATIC-MEMORY-NATIVE-CONTACT [O]\n',
+                                     'end': '## 3. The kernel and the census\n',
+                                     'bytes': 2446,
+                                     'sha256': '07b4a254f0e368c2959a560f57f9d65af4b43a68594db9f71cddf9c07f74bbd2'},
+ 'DEF-QUADRATIC-MEMORY-L5': {'begin': '### DEF-QUADRATIC-MEMORY-L5\n',
+                             'end': '### QUADRATIC-COUPLED-POLYNOMIAL-CLASS [T]\n',
+                             'bytes': 4180,
+                             'sha256': 'd164028ea1d01189138a275e8383fb5c56059794dc5b698093ec0e2169f1cdd0'}}
+
+V99_DEPENDENCY_SETS = {'QUADRATIC-COUPLED-POLYNOMIAL-CLASS': [('DEF-QUADRATIC-MEMORY-L5', 'REQUIRES')],
+ 'FINITE-READOUT-INITIALIZED-MEMORY': [],
+ 'QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION': [('DEF-QUADRATIC-MEMORY-L5', 'REQUIRES')],
+ 'QUADRATIC-L5-INITIALIZED-CAPACITY': [('DEF-QUADRATIC-MEMORY-L5', 'REQUIRES'),
+                                       ('FINITE-READOUT-INITIALIZED-MEMORY', 'REQUIRES'),
+                                       ('QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION', 'REQUIRES')],
+ 'QUADRATIC-L5-NATIVE-OBSTRUCTIONS': [('DEF-QUADRATIC-MEMORY-L5', 'REQUIRES'),
+                                      ('KERNEL-WEDGE-AFFINITY', 'REQUIRES'),
+                                      ('KERNEL-WEDGE-COUPLING', 'REQUIRES'),
+                                      ('QUADRATIC-L5-FULL-DOMAIN-OBSTRUCTION', 'REQUIRES')],
+ 'SCALAR-HERMITIAN-NORM-IMAGE': [('CYCLOTOMIC-CLASS-NUMBER-ONE', 'REQUIRES'),
+                                 ('J-UNIT-STRIP-NORMAL-FORM', 'REQUIRES'),
+                                 ('QUARTIC-CYCLOTOMIC-TOTAL-RAMIFICATION-CENSUS', 'REQUIRES'),
+                                 ('REGULATOR-TWO-LOG-PHI', 'REQUIRES')],
+ 'RAMIFIED-HERMITIAN-NORM-OBSTRUCTION': [('SCALAR-HERMITIAN-NORM-IMAGE', 'REQUIRES')],
+ 'J-TWO-TRACE-SCALAR-NORM-IMAGE': [('J-TWO-TRACE-RESIDUE-INVERSE', 'REQUIRES'),
+                                   ('RAMIFIED-HERMITIAN-NORM-OBSTRUCTION', 'REQUIRES'),
+                                   ('SCALAR-HERMITIAN-NORM-IMAGE', 'REQUIRES')],
+ 'QUADRATIC-MEMORY-NATIVE-CONTACT': [('DEF-QUADRATIC-MEMORY-L5', 'REQUIRES'),
+                                     ('QUADRATIC-COUPLED-POLYNOMIAL-CLASS', 'BOUNDED_BY'),
+                                     ('QUADRATIC-L5-INITIALIZED-CAPACITY', 'BOUNDED_BY'),
+                                     ('QUADRATIC-L5-NATIVE-OBSTRUCTIONS', 'BOUNDED_BY')],
+ 'DEF-QUADRATIC-MEMORY-L5': [('A4-RAMIFIED-HODGE-TRACEKERNEL', 'REQUIRES'),
+                             ('J-HODGE-PREDICTIVE-CLOSURE', 'REQUIRES'),
+                             ('TRACEKERNEL-F5-HODGE-BRACKET', 'REQUIRES')]}
+
+V99_NEW_REPRODUCTIONS = ('quadratic-memory-l5', 'native-quadratic-obstructions', 'scalar-hermitian-norm')
+
+V99_REPRODUCTION_BLOBS = {'reproduce/quadratic-memory-l5/verify.py': (11275,
+                                             '432e693eb8484774c0424704b59bf41d3c30043dbc2ac316d449563af8608577'),
+ 'reproduce/quadratic-memory-l5/EXPECTED.txt': (2992,
+                                                '6dbe2ec6dd0800e82a7f0d35c1abcb9e77a157e0574c3c16eac2ee28c6f94818'),
+ 'reproduce/quadratic-memory-l5/README.md': (2436,
+                                             'ea691290f983fe03ca15ceee78dfa027bdc6b1d7007f0aa28a8fe6aea7638177'),
+ 'reproduce/native-quadratic-obstructions/verify.py': (5273,
+                                                       'd4ee22d9e9616960a653743886e3756b803f5967ac74569758de8c458456a07f'),
+ 'reproduce/native-quadratic-obstructions/EXPECTED.txt': (3847,
+                                                          '1e06108c82d3402fd6bd972a58dc30dead1c23fafb79b0af31fec659ec587de1'),
+ 'reproduce/native-quadratic-obstructions/README.md': (1229,
+                                                       '5468f70cc1964809f4604484066c4aaf5e30166a0d0b6adb7cf124b82173238e'),
+ 'reproduce/scalar-hermitian-norm/verify.py': (6001,
+                                               'a061d8752b1a5b0ded4ac2781065ea6ec4738bff155570cfabb7da3dcb89abc5'),
+ 'reproduce/scalar-hermitian-norm/EXPECTED.txt': (600,
+                                                  '76325998abea0d89d7ca0584075722000e2357ec462c48be1802ef91e9b19fd8'),
+ 'reproduce/scalar-hermitian-norm/README.md': (1832,
+                                               '34056a39698b18db37d9ecb1753c6b9c5daa62929c4f49a3c7099d2b932e5b7a')}
+
+V99_SCOPE_TERMS = {'frontier': ['The gate is OPEN_DECISION from L1 to L1.',
+              'Fresh preparation between steps is not part of this contract.',
+              'Negative closure requires a proof covering the complete independently frozen '
+              'admissible native class.',
+              'A clock or program must be encoded within this declared carrier to meet the binary '
+              'contract; extra states change the resource contract and cannot be counted as free '
+              'storage.',
+              'No existing physical apparatus or cross-layer obligation closes here.'],
+ 'reader': ['These target facts, without an additional specified source-target equality, impose no '
+            'further coefficient equations and select no member of this family.',
+            'This is a counting optimum, not an independently justified preparation mechanism.',
+            'This proof is an existence theorem for a suitably constructed permutation. A '
+            'specified native contact must still be checked pointwise.',
+            'These statements do not cover programs with more than two distinct data branches.',
+            'They do not identify the external drive bit with a writable memory register.'],
+ 'norm': ['This proves sufficiency without an additional unproved local-global norm premise.',
+          'Denominators do not remove it.',
+          'The gcd condition is essential:',
+          'The general norm and trace-image proofs are independent of that finite audit.',
+          'not a physical spatial dimension.']}
+
+V99_CHECKS = (('V99-PRIOR-BYTES',
+  'thirteen complete v99 inputs reconstruct exact public v98 before all 141 unchanged historical '
+  'guards'),
+ ('V99-EIGHT-PROOFS',
+  'eight L1 theorem declarations and one open native-contact owner bind exact scopes, complete '
+  'inline proofs, one definition and all ledger additions'),
+ ('V99-DEPENDENCIES',
+  'exact new dependency topology retains the marked quadratic reader, native-step premises and '
+  'registered arithmetic norm inputs'),
+ ('V99-NATIVE-FRONTIER',
+  'all 498 prior claims and 25 live owners remain exact; one L1 native-contact obligation and its '
+  'OPEN_DECISION gate are added without physical closure'),
+ ('V99-READER-SELECTION',
+  'fixed-reader fibre and initialized-memory capacity results remain distinct from an '
+  'independently selected native preparation and contact'),
+ ('V99-NORM-BOUNDARY',
+  'integral and field scalar-norm images, ramified exclusions and exact pure-J trace recognition '
+  'remain L1 arithmetic without a physical dimension or measurement lift'),
+ ('V99-REPRO-INVENTORY',
+  'three exact supplemental proof audits extend the 32-directory v98 inventory to 35 without '
+  'retroactive preregistration or alteration of historical guards'))
+
+def v99_previous_bytes(path):
+    """Validate all current bytes before reconstructing the public v98 input."""
+    patch = V99_INPUT_PATCH.get(path.name)
+    if patch is None:
+        return None
+    current = path.read_bytes()
+    if (len(current) != patch["current_bytes"]
+            or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
+        return None
+    lines = current.decode("utf-8").splitlines(keepends=True)
+    for first, last, original in reversed(patch["restore"]):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = "".join(lines).encode("utf-8")
+    if (len(previous) != patch["prior_bytes"]
+            or hashlib.sha256(previous).hexdigest() != patch["prior_sha256"]):
+        return None
+    return previous
+
+
+def v99_previous_reproduction_dirs():
+    """Expose the v98 inventory only after checking the exact v99 inventory."""
+    current = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    expected = set(V98_REPRODUCTIONS) | set(V99_NEW_REPRODUCTIONS)
+    return current - set(V99_NEW_REPRODUCTIONS) if current == expected else set()
+
+
+def v99_current_checks():
+    names = tuple(name for name in V99_INPUT_PATCH if name.endswith(".tsv"))
+    prior = {name: v87_table_bytes(v99_previous_bytes(ROOT / "canon" / name))
+             for name in names}
+    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+               for name in names}
+    old_index = {row["claim_id"]: row for row in prior["REGISTRY.tsv"]}
+    index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
+    normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
+    evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
+    text = CANON.read_text(encoding="utf-8")
+    proof_bytes = {}
+    proof_exact = True
+    for claim, contract in V99_PROOF_CONTRACTS.items():
+        first = text.find(contract["begin"])
+        last = text.find(contract["end"], first + len(contract["begin"])) if first >= 0 else -1
+        block = text[first:last].encode("utf-8") if 0 <= first < last else b""
+        proof_bytes[claim] = block
+        proof_exact = (proof_exact and text.count(contract["begin"]) == 1
+            and len(block) == contract["bytes"]
+            and hashlib.sha256(block).hexdigest() == contract["sha256"])
+    normalized = " ".join(b" ".join(proof_bytes.values()).decode("utf-8").split())
+    counts = {status: sum(row["status"] == status for row in index.values())
+              for status in {row["status"] for row in index.values()}}
+    exact_additions = all(current[name] == (
+                              sorted(prior[name] + rows, key=lambda row: row["claim_id"])
+                              if name == "FRONTIER_PROGRAMS.tsv" else prior[name] + rows)
+                          for name, rows in V99_ADDITIONS.items())
+    exact_theorems = all(
+        index.get(claim, {}).get("status") == "T"
+        and normative.get(claim, {}).get("item_type") == "THEOREM"
+        and normative.get(claim, {}).get("layer") == "L1"
+        and normative.get(claim, {}).get("gate_ids") == ""
+        and evidence.get(claim, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(claim, {}).get("location") == "inline"
+        and evidence.get(claim, {}).get("architecture_requirement") == "none"
+        and evidence.get(claim, {}).get("hash_mode") == "registry-scope-sha256-v1"
+        and evidence.get(claim, {}).get("sha256")
+            == hashlib.sha256(index.get(claim, {}).get("scope", "").encode("utf-8")).hexdigest()
+        and ("### " + claim + " [T]") in text
+        for claim in V99_IDS)
+    exact_definition = (V99_DEFINITION not in index
+        and normative.get(V99_DEFINITION, {}).get("item_type") == "DEFINITION"
+        and normative.get(V99_DEFINITION, {}).get("status") == ""
+        and normative.get(V99_DEFINITION, {}).get("layer") == "L1")
+    old_live = {claim: row for claim, row in old_index.items() if row["status"] in {"H", "O"}}
+    live = {claim: row for claim, row in index.items() if row["status"] in {"H", "O"}}
+    gate = [row for row in current["GATES.tsv"] if row["gate_id"] == V99_GATE]
+    exact_owner = (index.get(V99_OWNER, {}).get("status") == "O"
+        and normative.get(V99_OWNER, {}).get("item_type") == "OBLIGATION"
+        and normative.get(V99_OWNER, {}).get("layer") == "L1"
+        and normative.get(V99_OWNER, {}).get("gate_ids") == V99_GATE
+        and len(gate) == 1 and gate[0]["owner_item_id"] == V99_OWNER
+        and gate[0]["from_layer"] == gate[0]["to_layer"] == "L1"
+        and gate[0]["gate_kind"] == "OPEN_DECISION"
+        and evidence.get(V99_OWNER, {}).get("evidence_kind") == "INLINE_CANON"
+        and evidence.get(V99_OWNER, {}).get("sha256")
+            == hashlib.sha256(index.get(V99_OWNER, {}).get("scope", "").encode("utf-8")).hexdigest())
+    dependency_sets = {claim: sorted((row["depends_on"], row["relation"])
+                                   for row in current["DEPENDENCIES.tsv"]
+                                   if row["item_id"] == claim)
+                       for claim in (*V99_IDS, V99_OWNER, V99_DEFINITION)}
+    additions = V99_ADDITIONS["DEPENDENCIES.tsv"]
+    exact_dependencies = (dependency_sets == V99_DEPENDENCY_SETS
+        and all(row["item_id"] in dependency_sets for row in additions)
+        and all(row["depends_on"] in normative for row in additions)
+        and current["DEPENDENCIES.tsv"] == prior["DEPENDENCIES.tsv"] + additions)
+    current_dirs = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    replay_exact = all((ROOT / path).is_file()
+        and len((ROOT / path).read_bytes()) == size
+        and hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == digest
+        for path, (size, digest) in V99_REPRODUCTION_BLOBS.items())
+    results = (
+        len(V99_INPUT_PATCH) == 13 and set(V99_INPUT_PATCH) == set(V98_INPUT_PATCH)
+        and V99_PRIOR_COMMIT == "b9f7af5f1b58c76956e280e33bd345c90bd88d1f"
+        and all(v99_previous_bytes(ROOT / "canon" / name) is not None for name in V99_INPUT_PATCH),
+        len(V99_IDS) == 8 and set(index) == set(old_index) | set(V99_IDS) | {V99_OWNER}
+        and exact_additions and exact_theorems and exact_definition and exact_owner and proof_exact
+        and counts == {"T": 364, "D": 59, "C": 39, "H": 2, "O": 24, "F": 19}
+        and len(index) == 507 and len(old_index) == 498,
+        exact_dependencies and exact_additions and proof_exact,
+        all(index.get(claim) == row for claim, row in old_index.items())
+        and len(old_live) == 25 and len(live) == 26
+        and live == {**old_live, V99_OWNER: index.get(V99_OWNER)}
+        and exact_owner and exact_additions
+        and current["CORE_SELECTION.tsv"] == prior["CORE_SELECTION.tsv"]
+        and all(row["owner_item_id"] not in V99_IDS for row in current["GATES.tsv"])
+        and all(row["claim_id"] not in V99_IDS for row in current["FRONTIER_PROGRAMS.tsv"])
+        and all(token in normalized for token in V99_SCOPE_TERMS["frontier"]),
+        proof_exact and all(token in normalized for token in V99_SCOPE_TERMS["reader"]),
+        proof_exact and all(token in normalized for token in V99_SCOPE_TERMS["norm"]),
+        len(V99_NEW_REPRODUCTIONS) == 3 and len(current_dirs) == 35
+        and v99_previous_reproduction_dirs() == set(V98_REPRODUCTIONS)
+        and len(V99_REPRODUCTION_BLOBS) == 9 and replay_exact,
+    )
+    return [(tag, description, ok) for (tag, description), ok in zip(V99_CHECKS, results)]
 
 
 # Exact v98 release accounting and reversible public v97 reconstruction.
@@ -648,7 +1611,9 @@ def v98_previous_bytes(path):
     patch = V98_INPUT_PATCH.get(path.name)
     if patch is None:
         return None
-    current = path.read_bytes()
+    current = v99_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -669,13 +1634,13 @@ def v98_current_checks():
     names = tuple(name for name in V98_INPUT_PATCH if name.endswith(".tsv"))
     prior = {name: v87_table_bytes(v98_previous_bytes(ROOT / "canon" / name))
              for name in names}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v99_previous_bytes(ROOT / "canon" / name))
                for name in names}
     old_index = {row["claim_id"]: row for row in prior["REGISTRY.tsv"]}
     index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
     normative = {row["item_id"]: row for row in current["NORMATIVE.tsv"]}
     evidence = {row["claim_id"]: row for row in current["EVIDENCE.tsv"]}
-    text = CANON.read_text(encoding="utf-8")
+    text = (v99_previous_bytes(CANON) or b"").decode("utf-8")
     contract = V98_PROOF_CONTRACT
     first = text.find(contract["begin"])
     last = text.find(contract["end"], first) if first >= 0 else -1
@@ -708,7 +1673,7 @@ def v98_current_checks():
         and normative.get(V98_DEFINITION, {}).get("gate_ids") == "")
     old_live = {claim: row for claim, row in old_index.items() if row["status"] in {"H", "O"}}
     live = {claim: row for claim, row in index.items() if row["status"] in {"H", "O"}}
-    current_dirs = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    current_dirs = v99_previous_reproduction_dirs()
     return [
         ("V98-PRIOR-BYTES",
          "thirteen complete v98 inputs reconstruct exact public v97 before all 136 unchanged historical guards",
@@ -733,7 +1698,7 @@ def v98_current_checks():
          and old_live == live and len(live) == 25
          and all(current[name] == prior[name] for name in (
              "GATES.tsv", "CORE_SELECTION.tsv", "FRONTIER_PROGRAMS.tsv"))
-         and FRONTIER.read_bytes() == v98_previous_bytes(FRONTIER)
+         and v99_previous_bytes(FRONTIER) == v98_previous_bytes(FRONTIER)
          and all(row["owner_item_id"] not in V98_IDS for row in current["GATES.tsv"])
          and all(row["claim_id"] not in V98_IDS for row in current["CORE_SELECTION.tsv"])
          and all(row["claim_id"] not in V98_IDS for row in current["FRONTIER_PROGRAMS.tsv"])
@@ -1264,7 +2229,7 @@ def v97_previous_bytes(path):
 
 def v97_previous_reproduction_count():
     """Recover the prior inventory only after checking the exact current set."""
-    current = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    current = v99_previous_reproduction_dirs()
     expected = set(V97_PRIOR_REPRODUCTIONS) | set(V97_NEW_REPRODUCTIONS)
     return len(current - set(V97_NEW_REPRODUCTIONS)) if current == expected else -1
 
@@ -1312,7 +2277,7 @@ def v97_current_checks():
         and normative.get(V97_DEFINITION, {}).get("gate_ids") == "")
     old_live = {claim: row for claim, row in old_index.items() if row["status"] in {"H", "O"}}
     live = {claim: row for claim, row in index.items() if row["status"] in {"H", "O"}}
-    current_dirs = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    current_dirs = v99_previous_reproduction_dirs()
     replay_exact = all((ROOT / path).is_file()
         and len((ROOT / path).read_bytes()) == size
         and hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == digest
@@ -16749,9 +17714,10 @@ def run():
     checks.extend(v96_current_checks())
     checks.extend(v97_current_checks())
     checks.extend(v98_current_checks())
+    checks.extend(v99_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v98")
+    print("historical guards: exact reconstructed v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v99")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "bytes": 13626,
+      "path": "PROOF.md",
+      "review_source_commit": "8128286127f1a48b01ebda1a5c1e7a0d88d46095",
+      "review_source_path": "notes/contact-record-review-1/candidate/PROOF.md",
+      "sha256": "805137842d66894b36cc5cef17b45bf1c67b81570bf9eb8a4c77c9394d40abf5"
+    },
+    {
+      "bytes": 7910,
+      "path": "PREREG.md",
+      "review_source_commit": "8128286127f1a48b01ebda1a5c1e7a0d88d46095",
+      "review_source_path": "notes/contact-record-review-1/candidate/PREREG.md",
+      "sha256": "24a24ee5b055fec4b6a1cd6ebb5b4a3ffcec2e0e078b5f5937111e8a253ba4cd"
+    },
+    {
+      "bytes": 3443,
+      "path": "README.md",
+      "review_source_commit": "8128286127f1a48b01ebda1a5c1e7a0d88d46095",
+      "review_source_path": "notes/contact-record-review-1/candidate/README.md",
+      "sha256": "c9006df8528dae2655bb8a7378b504d2855283f5d8a5a37eed8f81de4b7174f0"
+    },
+    {
+      "bytes": 4795,
+      "path": "SOURCES.json",
+      "review_source_commit": "8128286127f1a48b01ebda1a5c1e7a0d88d46095",
+      "review_source_path": "notes/contact-record-review-1/candidate/SOURCES.json",
+      "sha256": "9943a1d831cc3ccbea1dc520071f8ff1b3a1d88bd4edf27e2cc47ea344fc6929"
+    },
+    {
+      "bytes": 17430,
+      "path": "verify.py",
+      "review_source_commit": "8128286127f1a48b01ebda1a5c1e7a0d88d46095",
+      "review_source_path": "notes/contact-record-review-1/candidate/verify.py",
+      "sha256": "99ea8680db65567fb73e78f074841532802e6398dfbd34077b37914024341134"
+    },
+    {
+      "bytes": 2710,
+      "path": "ACCEPTANCE.md",
+      "role": "formal adoption or separate proof-review record",
+      "sha256": "390286e58c69245123ff26e501e33cf198d1873025bba42f587f412238c3c7f8"
+    },
+    {
+      "bytes": 13220,
+      "path": "PROOF-REVIEW.md",
+      "role": "formal adoption or separate proof-review record",
+      "sha256": "0bf0d40e7351da7a3657a8c0960ca5715ed487be52d378718eb7c5b785b30812"
+    }
+  ],
+  "probe": "P-CONTACT-RECORD-1",
+  "schema": "v100-formal-package/v1",
+  "scope": "Exact immutable review bytes plus separately identified formal adoption records. No verifier, candidate function, or scientific gate was executed by this packaging program.",
+  "source_review_commit": "8128286127f1a48b01ebda1a5c1e7a0d88d46095"
+}

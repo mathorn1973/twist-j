@@ -1,0 +1,50 @@
+Supplemental exact audit: quadratic polynomial class and fixed L5 memory
+Evidence: inline exact proofs; exploratory calculations, no formal probe
+L5_W=((3, 3, 2), (3, 4, 2), (3, 2, 0))
+B_W_FROM_GRAM=((1, 4, 2), (4, 0, 1), (3, 4, 4))
+M_GRAM=((0, 3, 0), (4, 4, 4), (0, 3, 3))
+PASS: 234 quadratic coefficients, equation rank 213, explicit covariant dimension 21
+PASS: marked conjugacy, scalar certificate, tau/Delta laws, M^5=-I
+Orbit histogram order: Z R1+ R1- R2+ R2-
+orbit=(0, 0, 0) length=1 types=(1, 0, 0, 0, 0)
+orbit=(0, 0, 1) length=10 types=(0, 2, 0, 4, 4)
+orbit=(0, 0, 2) length=10 types=(0, 0, 2, 4, 4)
+orbit=(0, 1, 0) length=10 types=(0, 2, 0, 4, 4)
+orbit=(0, 1, 1) length=10 types=(0, 0, 0, 10, 0)
+orbit=(0, 1, 3) length=10 types=(0, 0, 2, 4, 4)
+orbit=(0, 1, 4) length=10 types=(0, 0, 2, 4, 4)
+orbit=(0, 2, 1) length=10 types=(0, 2, 0, 4, 4)
+orbit=(0, 2, 2) length=10 types=(0, 0, 0, 10, 0)
+orbit=(1, 1, 0) length=10 types=(0, 0, 2, 4, 4)
+orbit=(1, 1, 1) length=10 types=(0, 2, 0, 4, 4)
+orbit=(1, 1, 4) length=10 types=(0, 0, 2, 4, 4)
+orbit=(1, 3, 0) length=10 types=(0, 2, 0, 4, 4)
+orbit=(1, 3, 4) length=2 types=(0, 2, 0, 0, 0)
+orbit=(2, 1, 3) length=2 types=(0, 0, 2, 0, 0)
+r=1 delta=1 reduced=(1, 2, 0, 0, 0) factor=9765625 support=13
+  memory_one_step=infinite memory_forever=infinite reachable_min=None
+r=1 delta=2 reduced=(1, 0, 2, 0, 0) factor=9765625 support=13
+  memory_one_step=infinite memory_forever=infinite reachable_min=None
+r=2 delta=1 reduced=(49, 4, 4, 8, 0) factor=390625 support=85
+  memory_one_step=infinite memory_forever=infinite reachable_min=None
+r=2 delta=2 reduced=(1, 6, 6, 0, 12) factor=390625 support=65
+  memory_one_step=infinite memory_forever=infinite reachable_min=None
+r=3 delta=1 reduced=(145, 270, 20, 120, 120) factor=15625 support=125
+  memory_one_step=6 memory_forever=6 reachable_min=353515625
+r=3 delta=2 reduced=(145, 20, 270, 120, 120) factor=15625 support=125
+  memory_one_step=6 memory_forever=6 reachable_min=353515625
+r=4 delta=1 reduced=(6625, 3000, 3000, 3600, 2400) factor=625 support=125
+  memory_one_step=2 memory_forever=2 reachable_min=281640625
+r=4 delta=2 reduced=(625, 3250, 3250, 2600, 3900) factor=625 support=125
+  memory_one_step=2 memory_forever=2 reachable_min=284765625
+r=5 delta=1 reduced=(78625, 94250, 63000, 78000, 78000) factor=25 support=125
+  memory_one_step=2 memory_forever=2 reachable_min=264140625
+r=5 delta=2 reduced=(78625, 63000, 94250, 78000, 78000) factor=25 support=125
+  memory_one_step=2 memory_forever=2 reachable_min=264140625
+r=6 delta=1 reduced=(2340625, 1937500, 1937500, 2015000, 1860000) factor=1 support=125
+  memory_one_step=2 memory_forever=2 reachable_min=251890625
+r=6 delta=2 reduced=(1590625, 1968750, 1968750, 1890000, 2047500) factor=1 support=125
+  memory_one_step=2 memory_forever=2 reachable_min=252015625
+PASS: all 1500 Gram fibers match independent convolution and formulas
+PASS: all 12 rank/discriminant classes and exact capacities verified
+PASS: all exact checks completed.

@@ -1,0 +1,6 @@
+PASS contact-record L1: exact contracts and composition
+PASS complete maps, inverses, prepared pair, occupied first register
+PASS m_x=r_x^2 after every second-reader leaf; raw r_x may change
+PASS one-call standalone minimum=3; embedded=5, working=3, outcomes=2
+PASS boundaries: whole-reader reuse, blank/zero, restricted protection
+{"C5_subsets":32,"affine_cell_identity_rows":35,"affine_commutation_basis_rows":13,"bilinear_basis_pairs":16,"blank_zero_rows":25,"complete_P_entries":25,"complete_two_reader_rows":5000,"embedded_reader_rows":100,"literal_composition_cases":25000,"literal_piston_witnesses":5,"literal_prepared_cases":1000,"literal_second_prefixes":225000,"negative_square_rows":100,"reduced_W_E_rows":20,"square_sign_rows":10,"symbolic_K_rows":40,"trit_reader_rows":60,"whole_reader_order_rows":50}

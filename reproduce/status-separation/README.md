@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred forty-one checks cover the current
+and emits deterministic text. Its one hundred forty-eight checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 141/141 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 148/148 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -740,3 +740,39 @@ verifier, new scientific run or evidence-class promotion. Execution and
 cross-architecture gate results belong to the subsequently pinned complete
 content candidate. Other scientific verifier sources and expected outputs
 are unchanged.
+
+## Public Canon v99 boundary
+
+Seven additional checks extend the release-accounting chain to v99 while
+retaining all 141 prior predicates and their PASS descriptions. The thirteen
+complete current inputs are byte- and SHA-256-bound and reconstruct exactly
+the public v98 inputs at b9f7af5f1b58c76956e280e33bd345c90bd88d1f. Older
+guards consume that verified view before continuing the unchanged historical
+reconstruction chain. The inventory view first checks all 35 current
+directories, then removes exactly the three named v99 additions for the
+historical 32-directory view.
+
+The v99 guards bind eight new theorem rows and one new open native-contact
+owner, their exact ledger additions and dependencies, the complete inline
+proof blocks, one definition, and the L1-to-L1 OPEN_DECISION gate. They require
+all 498 older claims and their 25 live H/O owners to remain exact. The only
+new live owner is QUADRATIC-MEMORY-NATIVE-CONTACT; no existing physical-HOLD
+owner or CORE selection is promoted. The current partition is
+T364/D59/C39/H2/O24/F19: 507 claims and 26 live H/O rows.
+
+The reader guards distinguish fibre/capacity existence from an independently
+selected native preparation and actual repeated contact. The norm guards
+keep the scalar integral/field image and pure-J trace recognition at exact
+L1 arithmetic scope, without deriving physical dimension or measurement.
+The three supplemental directories quadratic-memory-l5,
+native-quadratic-obstructions and scalar-hermitian-norm have exact verifier,
+expected-output and README pins. They are disclosed proof audits, not
+retrospectively preregistered scientific probes.
+
+The 148-check expected transcript is authored from the 141 unchanged prior
+PASS lines and the seven specified new guard descriptions before execution.
+It is not a run receipt or evidence-class promotion. Replay and release
+approval concern the subsequently pinned complete candidate.
+The verifier explicitly emits UTF-8 with LF newlines so its raw stdout,
+including on Windows, is byte-identical to EXPECTED.txt without newline
+normalization.

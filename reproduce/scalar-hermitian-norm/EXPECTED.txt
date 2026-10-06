@@ -1,0 +1,9 @@
+PASS ring: J*phi=j; H(J)=2-phi; H(1-j)=3-phi
+PASS witnesses: scalar norms 4,124,844
+PASS prime obstructions: reciprocal irreducible factors at19; 5779 prime=4 mod5
+PASS complete norm19 box: 14641 integer vectors; 0 witnesses
+PASS exact two-trace, norm, Gram, residue and J-transition identities: 14641 vectors
+PASS exact trace-image theorem vs complete trace<=40 census: 155 pairs
+PASS sequence examples: Q1 yes,Q3 no,Q5 yes,Q7 yes,Q9 no; residues n=0..12
+PASS three-carrier residue classification: four unordered patterns
+EXPLORATORY AUDIT PASS; analytical proofs and physical scope remain separate

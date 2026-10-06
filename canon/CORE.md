@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v98. Normative authority and activation
+**Release identity:** Public Canon v99. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,11 +16,26 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v98 also declares a discrete architecture. It does not
+Public Canon v99 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
 anchor is the electron mass.
+
+The fixed F5 quadratic target now has a complete initialized-memory
+classification: no finite ignored register works at ranks one or two,
+six states are necessary and sufficient at rank three, and two suffice
+abstractly at ranks four through six. One constructed global permutation
+can return the complete state after ten steps. QUADRATIC-L5-INITIALIZED-CAPACITY
+[T] does not select the reader or compile a native contact. Fixed affine
+words and the literal selector fail the stated binary contract;
+QUADRATIC-MEMORY-NATIVE-CONTACT [O] requires independently admitted reading,
+actual register-writing gates and complete occupied-memory continuation.
+SCALAR-HERMITIAN-NORM-IMAGE [T] separately characterizes the full arithmetic
+scalar norm image; RAMIFIED-HERMITIAN-NORM-OBSTRUCTION [T] excludes reciprocal
+Lucas squared lengths even over Q(zeta5), and J-TWO-TRACE-SCALAR-NORM-IMAGE [T]
+recognizes exactly which pure-J trace pairs come from a scalar. These remain
+L1 statements and provide no new physical reading or native Hodge step.
 
 The complete autonomous state and update are
 
