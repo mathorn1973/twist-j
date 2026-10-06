@@ -488,8 +488,9 @@ p_x=(1,0,0,0),p_y=(0,0,0,2),q_x=1 gives q_x'=4 under W_opp.
 Thus equal groups also do not identify prefixes or full q actions.
 
 There is a direct failure of substitution in the compiler's conjugating
-words. Use the unchanged piston translations to move C_* to a cycle
-C_0 supported at zero pistons, on bit layer 0. Then
+words at the level of factor permutations. Use the unchanged piston
+translations to move C_* to a cycle C_0 supported at zero pistons, on
+bit layer 0. The following equalities and supports are on F:
 
     W_b C_0 W_b = C_0,
 
