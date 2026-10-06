@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred forty-eight checks cover the current
+and emits deterministic text. Its one hundred fifty-three checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 148/148 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 153/153 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -776,3 +776,15 @@ approval concern the subsequently pinned complete candidate.
 The verifier explicitly emits UTF-8 with LF newlines so its raw stdout,
 including on Windows, is byte-identical to EXPECTED.txt without newline
 normalization.
+
+The five v100 checks reconstruct all thirteen exact v99 inputs before the
+148 unchanged historical guards. They pin only the release accounting for
+CONTACT-RECORD, ALGEBRAIC-RESIDUAL-REALIZATION and RESIDUAL-STEP-RECORD at
+conditional T/L1, and their one declared architecture definition. Every one
+of the 507 prior Registry rows and all 26 live H/O owners retain their exact
+scope and disposition, including QUADRATIC-MEMORY-NATIVE-CONTACT at O.
+The accepted three public probe bundles remain byte-identical; the minimal
+reproduction inventory remains 35. These are structural checks of the joint
+proof and evidence custody, not another probe, a replay of the expanded
+native word, or a new physical claim. The three existing verifiers retain
+their separately stated finite, symbolic and written-proof limits.

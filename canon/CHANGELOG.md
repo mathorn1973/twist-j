@@ -1,5 +1,39 @@
 # Canon changelog (public series)
 
+## Public Canon v100
+
+Accept three conditional L1 theorems with separately reviewed written
+proofs and completed bounded public audits. CONTACT-RECORD retains
+the original complete contact and reader contract, both initial bits,
+the exact standalone-reference minimum and all negative boundaries.
+ALGEBRAIC-RESIDUAL-REALIZATION realizes the specified algebraic Pi_alg
+through the finite fixed CW-ALG-1 construction, with a complete syntax-defined
+q lift and inverse. Pi_alg is explicitly distinct from the earlier
+lexicographic witness; the enormous native word was not expanded or run.
+
+RESIDUAL-STEP-RECORD composes A_y T_alg A_x on the same complete
+carrier with one preparation r_x=r_y=eta=0, arbitrary pistons and unknown q.
+It proves the exact residual step, the two one-shot in-machine records,
+the complete inverse and exact one-pass image. Omega_alg supports occupied
+continuation but is not asserted to be the exact repeated V reachability
+set. The first raw record returns at the T_alg boundary; its square is
+protected through every subsequent A_y prefix, without a claim of protection
+inside T_alg or fresh recording on repetition.
+
+All 507 prior claims and all 26 H/O owners retain their statuses, scopes
+and decision conditions. In particular QUADRATIC-MEMORY-NATIVE-CONTACT
+remains O. The W gates, reader couplings, preparation and fixed reading are
+declared premises; no physical detector, completion flag, archive, energy
+cost, occurrence law or cross-layer gate is supplied. The three existing
+probe packages remain frozen and distinct. This release is their common
+Canonical fold, not a new probe or a reinterpretation of a bounded audit.
+
+Registry grows to 510 claims: 0 T-LOCK, 367 T, 59 D, 39 C, 2 H, 24 O and
+19 F, with 26 live H/O. The reproduction-directory inventory remains 35;
+the three new evidence rows point to the already accepted public probe
+bundles. The theorem status rests on the written proofs; their bounded
+two-architecture audits do not execute the full compiled word.
+
 ## Public Canon v99
 
 Accept eight L1 theorems with self-contained independently reviewed proofs:
@@ -408,7 +442,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 507 claims; 0 T-LOCK, 364 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Registry snapshot: 510 claims; 0 T-LOCK, 367 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 35.
 <!-- END GENERATED CURRENT COUNTS -->
 

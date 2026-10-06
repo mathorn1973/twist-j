@@ -1042,3 +1042,10 @@ RAMIFIED-HERMITIAN-NORM-OBSTRUCTION	SCALAR-HERMITIAN-NORM-IMAGE	REQUIRES	global 
 J-TWO-TRACE-SCALAR-NORM-IMAGE	SCALAR-HERMITIAN-NORM-IMAGE	REQUIRES	pure-J trace identities and scalar norm image with the ramified checksum
 J-TWO-TRACE-SCALAR-NORM-IMAGE	RAMIFIED-HERMITIAN-NORM-OBSTRUCTION	REQUIRES	pure-J trace identities and scalar norm image with the ramified checksum
 J-TWO-TRACE-SCALAR-NORM-IMAGE	J-TWO-TRACE-RESIDUE-INVERSE	REQUIRES	pure-J trace identities and scalar norm image with the ramified checksum
+DEF-RESIDUAL-CONTACT-ARCHITECTURE	DEF-KERNEL-GENERATORS	REQUIRES	the unchanged complete cell maps supplying terminal leaves; W_a,W_b and Ucal are separately declared conditional couplings
+DEF-RESIDUAL-CONTACT-ARCHITECTURE	DEF-PISTON-2X2-RESHAPE	REQUIRES	the fixed four-piston ordering, determinant polarization and source row-column symmetries
+DEF-RESIDUAL-CONTACT-ARCHITECTURE	DEF-QUADRATIC-MEMORY-L5	REQUIRES	the already marked B_read,L5 and Gram target M, retained without reselecting the reading after target matching
+CONTACT-RECORD	DEF-RESIDUAL-CONTACT-ARCHITECTURE	REQUIRES	the full carrier, original cell maps, declared W_b and calibrated Ucal interface; the standalone contact retains both initial eta values and does not require W_a or eta=0
+ALGEBRAIC-RESIDUAL-REALIZATION	DEF-RESIDUAL-CONTACT-ARCHITECTURE	REQUIRES	the frozen determinant Gram, target and full alphabet for CW-ALG-1, with W_a,W_b declared and without reader couplings inside T_alg
+RESIDUAL-STEP-RECORD	CONTACT-RECORD	REQUIRES	the full occupied-reference contact and reader maps, inverse, ready identity and all-input literal-prefix protection of r_x squared
+RESIDUAL-STEP-RECORD	ALGEBRAIC-RESIDUAL-REALIZATION	REQUIRES	the precise Pi_alg atlas, actual CW-ALG-1 lift, global restoration of arbitrary r, full inverse and invariant Omega_alg used by the intervening step
