@@ -301,8 +301,9 @@ sufficient within this declared class. These are separate prepared
 experiments, not a claim of reusable memory, a reset or a realized
 physical detector.
 
-The remaining source-table choice is therefore two binary response
+The remaining contact-law choice is therefore two binary response
 values, after the stated h,I and table-dependence premises are fixed.
+Full interface tables and occupied endpoint choices remain as counted above.
 The v100 response is the profile 00. Selecting it requires a further
 reason for inactivity on both nonzero sign pairs. This note supplies
 no target-independent physical reason for that restriction.
@@ -321,6 +322,6 @@ no target-independent physical reason for that restriction.
 - Reversible occupied-reference maps are covered. Fresh archives,
   completion flags, reset, autonomous scheduling, event selection,
   physical time, energy, scale and cross-layer lifts are not supplied.
-- Written proof and finite audit are separate evidence. The new runs are
-  local one-architecture audits, and ordinary notes CI cannot promote
-  them to a public scientific two-architecture gate.
+- Written proof and finite audit are separate evidence. Any local runs
+  provide only one-architecture audit evidence; ordinary notes CI cannot
+  promote them to a public scientific two-architecture gate.
