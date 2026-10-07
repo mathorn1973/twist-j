@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v99
+historical guards: exact reconstructed v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v100
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -150,5 +150,10 @@ PASS 145 V99-NATIVE-FRONTIER all 498 prior claims and 25 live owners remain exac
 PASS 146 V99-READER-SELECTION fixed-reader fibre and initialized-memory capacity results remain distinct from an independently selected native preparation and contact
 PASS 147 V99-NORM-BOUNDARY integral and field scalar-norm images, ramified exclusions and exact pure-J trace recognition remain L1 arithmetic without a physical dimension or measurement lift
 PASS 148 V99-REPRO-INVENTORY three exact supplemental proof audits extend the 32-directory v98 inventory to 35 without retroactive preregistration or alteration of historical guards
+PASS 149 V100-PRIOR-BYTES thirteen complete v100 inputs reconstruct exact public v99 before all 148 unchanged historical guards
+PASS 150 V100-THREE-PROOFS three conditional L1 theorem rows and one declared architecture bind exact scopes, accepted probe evidence and dependency additions
+PASS 151 V100-OWNER-BOUNDARY all 507 prior claims and all 26 live owners, gates and scheduler dispositions remain unchanged; native contact stays O
+PASS 152 V100-JOINT-SCOPE the exact joint proof separates one preparation, its one-shot image, invariant readout continuation and word-boundary record restoration
+PASS 153 V100-EVIDENCE-CUSTODY all three accepted probe bundles remain exact and the 35-reproduction inventory is unchanged; no expanded word is executed by this structural audit
 
-RESULT 148/148 ALL PASS
+RESULT 153/153 ALL PASS
