@@ -1,0 +1,33 @@
+{
+  "architecture": "x86_64",
+  "command": "LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 python3 -I break_check.py",
+  "elapsed_seconds": 13.230204,
+  "exit_code": 0,
+  "finished_utc": "2026-10-08T22:23:31.486680+00:00",
+  "freeze_custody": {
+    "bytes": 1360,
+    "sha256": "5b35c48854030895c0669ccf949eec814fc5ebc98fa4fcb5d51ad5dc64c6dc68"
+  },
+  "platform": "Ubuntu 24.04.3 LTS",
+  "program": "break_check.py",
+  "program_custody": {
+    "bytes": 34311,
+    "sha256": "c02319e5a43a70daca464b73fa909a599ba7e0ff1c4f504b07c58163eb2498b6"
+  },
+  "public_gate": false,
+  "python": "3.12.14",
+  "repeat_run": false,
+  "started_utc": "2026-10-08T22:23:18.256280+00:00",
+  "status": "PASS",
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr_file": "break_check.first.stderr",
+  "stdout": {
+    "bytes": 6539,
+    "sha256": "28f359edbdf06352feb692137b029c4711fafdcb46a39e8e2a9d737e4db54d4e"
+  },
+  "stdout_file": "break_check.first.stdout",
+  "timeout_seconds": 300
+}

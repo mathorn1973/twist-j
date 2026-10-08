@@ -1,0 +1,33 @@
+{
+  "architecture": "x86_64",
+  "command": "LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 python3 -I verify.py",
+  "elapsed_seconds": 15.065681,
+  "exit_code": 0,
+  "finished_utc": "2026-10-08T22:23:33.317735+00:00",
+  "freeze_custody": {
+    "bytes": 1360,
+    "sha256": "5b35c48854030895c0669ccf949eec814fc5ebc98fa4fcb5d51ad5dc64c6dc68"
+  },
+  "platform": "Ubuntu 24.04.3 LTS",
+  "program": "verify.py",
+  "program_custody": {
+    "bytes": 30302,
+    "sha256": "309162881f0f66e124919b867f54b2f47b78c8d51ac35d652a29dcbea09a6340"
+  },
+  "public_gate": false,
+  "python": "3.12.14",
+  "repeat_run": false,
+  "started_utc": "2026-10-08T22:23:18.251856+00:00",
+  "status": "PASS",
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr_file": "verify.first.stderr",
+  "stdout": {
+    "bytes": 13371,
+    "sha256": "7b285b713da76c2c73b34d4e4c2f6b3cced91117dbf41c200a4dcc61582b497a"
+  },
+  "stdout_file": "verify.first.stdout",
+  "timeout_seconds": 300
+}
