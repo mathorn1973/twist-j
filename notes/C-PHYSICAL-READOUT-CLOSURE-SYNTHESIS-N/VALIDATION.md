@@ -12,20 +12,26 @@ The declared Canon content and activation ancestry, CANON.md SHA-256 and
 byte count were verified against the tuple in SOURCES.md. The pinned base
 had successful repository architecture and aggregate checks.
 
-The publication adds exactly seven Markdown files in
+The initial publication at `7ea9b35e725368f616d2f1cd82cdb251b26f2187`
+added exactly seven Markdown files in
 `notes/C-PHYSICAL-READOUT-CLOSURE-SYNTHESIS-N/`:
 README, GEOMETRY, READOUT, CONTACT, SOURCES, REVIEW and VALIDATION.
-It changes no normative Canon, registry, source law, tooling, workflow,
+The source-selection continuation adds SOURCE_SELECTION.md and updates
+README, REVIEW and this validation record: the package now has eight
+Markdown files. It changes no normative Canon, registry, source law, tooling, workflow,
 existing scientific verifier, expected output or reproduction record.
 Reservation: [issue #1423](https://github.com/mathorn1973/twist-j/issues/1423).
 
-REVIEW.md identifies the exact five reviewed proof/source files by SHA-256.
+REVIEW.md identifies the exact six reviewed proof/source files by SHA-256.
 Its separate assistant context is disclosed. This is exposed static review
 within one assisted work session, not independent external peer review.
 
 ## Local repository checks
 
-Environment: Windows 11, x86_64, Python 3.12.10, UTF-8 mode.
+Initial validation environment: Windows 11, x86_64, Python 3.12.10, UTF-8
+mode. The recorded unittest run belongs to the initial publication; the
+analytical continuation changes no tooling and does not claim a repeat
+local unittest run. Current-head repository gates are recorded on the PR.
 
 | Check | Result |
 |---|---|
@@ -50,6 +56,14 @@ are not failures of that final unittest run.
 
 No local fixture directories or raw logs are part of this package.
 
+For the source-selection continuation, policy, Canon, ledger and explicit
+gate-contract validators were run again and passed. The exact transition
+criterion, both predecessor states of the same-output example, and the
+bounded source audit received static review; REVIEW.md records its scope
+and file hashes. This adds analytical evidence only. The earlier local
+unit-test record is retained with its original scope rather than described
+as a new execution.
+
 ## Publication checks
 
 The final publication diff is checked with `git diff --check`, the
@@ -67,7 +81,7 @@ does not predeclare a future CI outcome. GitHub's `architecture-x86_64`,
 `architecture-aarch64` and aggregate `check` are repository gates; passing
 them does not rerun a scientific program for this package.
 
-The manual content/security review covers the seven intended text files:
+The manual content/security review covers the eight intended text files:
 status and source boundaries are explicit; there are no credentials,
 private filesystem paths, private logs, executable payloads, bulk source
 imports or large files. Commit identity follows the repository's author

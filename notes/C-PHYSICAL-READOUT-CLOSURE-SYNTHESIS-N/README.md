@@ -42,6 +42,8 @@ fyzikální ekvivalence odlišných výstupů doložené nezávisle na cílovém
 | Výběr parametru c | Přímé dokončení obsahuje lichou cenu a připouští jen c=1; alternativní zachová celou rodinu | CONTACT |
 | Přesný původ v nativním U | Na dosažitelné doméně má zachované bodové čtení nejvýše 3125 hodnot; přesný onto most k neomezeným energiím této architektury selhává | READOUT R7 |
 | Paměť a fáze | Monomiální operace a konfigurační čtení nezpřístupní rozdíl dodaných fází se stejnou diagonálou | READOUT R8 |
+| Výběr energie z daných přechodů | Přesné afinní kritérium ponechá celou rodinu, jeden parametr, nebo žádný; prázdnost doloží nejvýše dva přechody | [SOURCE_SELECTION §1](SOURCE_SELECTION.md#1-a-complete-test-for-an-independently-specified-transition-family) |
+| Čtení při neznámém kontaktu | Tentýž konečný stav buněk může mít poslední přírůstek energie přijímače 76 nebo 1; dostupný dvouhodnotový kontext tyto případy rozliší | SOURCE_SELECTION §3–4 |
 
 Rozsah každého řádku je určen jeho důkazem. Výběr kvadratické energie,
 Gaussova nábojového slovníku, pláště a nových kontaktů zůstává předpokladem.
@@ -135,10 +137,20 @@ přesné možné kontakty a odečty. Jejich fyzikální identifikace musí být
 společným doloženým výsledkem, ne dodatečnou volbou podle požadované
 kulovosti, energie nebo odezvy.
 
+[Navazující zdrojový test](SOURCE_SELECTION.md) přesně klasifikuje podmínku
+ΔH₁+(c−1)ΔΠ=0 pro celou předem určenou rodinu přechodů. Přezkoumané
+staré buněčné operace dávají vždy ΔH₁=ΔΠ=0 a zachovávají každý uzlový
+náboj, také při konečném adaptivním skládání. Informativní nezávislý
+zdrojový přesun na tomto nosiči tím doložený není. Stejný doplněk dává
+konkrétní dvě historie s celkovou energií 425, totožným konečným stavem
+a přírůstky energie přijímače 76 a 1. K určení odečtu je proto pro tuto
+rodinu nutné uchovat příslušnou informaci o zvoleném kontaktním kontextu.
+
 ## Přezkum a zveřejnění
 
 Úplné argumenty jsou v [GEOMETRY.md](GEOMETRY.md),
-[READOUT.md](READOUT.md) a [CONTACT.md](CONTACT.md).
+[READOUT.md](READOUT.md), [CONTACT.md](CONTACT.md)
+a [SOURCE_SELECTION.md](SOURCE_SELECTION.md).
 [REVIEW.md](REVIEW.md) zaznamenává oddělený asistentský přezkum uložených
 důkazů; nejde o externí odborné recenzní řízení. Technické kontroly a
 hranice evidence uvádí [VALIDATION.md](VALIDATION.md).

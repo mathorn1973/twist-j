@@ -11,8 +11,11 @@ arguments; other assistant contexts authored the synthesis and proofs.
 
 The reviewer read README.md, READOUT.md, CONTACT.md, GEOMETRY.md and
 SOURCES.md in full, checked their mathematical arguments statically, and
-communicated two requested clarifications to the author before this final
-readback. The author made those changes; the reviewer then checked them.
+communicated two requested clarifications to the author. The author made
+those changes; the reviewer then checked them. For this continuation the
+reviewer also read SOURCE_SELECTION.md in full, reviewed the README
+amendments, checked its named canonical source claims and confirmed the
+unchanged hashes of the other four proof/source files.
 No scientific program or audit source was executed or imported by this
 reviewer. Byte counts and SHA-256 values were obtained with ordinary file
 metadata and hashing tools. This review earns no candidate-C and makes no
@@ -21,17 +24,20 @@ reported separately in VALIDATION.md.
 
 ## Exact reviewed files
 
-These hashes identify the reviewed working-tree bytes. They are not a
-substitute for the eventual public commit pin. REVIEW.md is excluded from
+These hashes identify the six currently reviewed working-tree files. They
+are not a substitute for this continuation's public commit pin. The earlier
+five-file review and its hash table remain in the first published commit
+`7ea9b35e725368f616d2f1cd82cdb251b26f2187`. REVIEW.md is excluded from
 its own hash table.
 
 | File | Bytes | SHA-256 |
 |---|---:|---|
-| README.md | 9213 | `9fcc1477890f2775681cf4b26475a29c68c7c6e78d392fb1ee5aeec5db312f88` |
+| README.md | 10416 | `fdc229fef34f8eafb25c5d204d706996e6d78fd4bd4e01f3c9da3473fc2fe326` |
 | READOUT.md | 14609 | `c84ca5c906534f93026237030ea47410ebd30589889843ab7de115948974180c` |
 | CONTACT.md | 17130 | `05d8074503315d36a4f1c9187de3e0ae7accea41e38dc9d80d276a595e6b23ae` |
 | GEOMETRY.md | 16399 | `bc207cd909f06f0a7556381148ce1c21b78173f25b82da006f8001cdea650c6e` |
 | SOURCES.md | 7042 | `074f10a4ba1757c9771ba0404693a1e0241186f5a53d9ec05dc6a83c911d6440` |
+| SOURCE_SELECTION.md | 13695 | `19fdc8f17a32bd64504830a8778590762c428435f5ecd4f9924664288e3e8218` |
 
 ## Findings and their disposition
 
@@ -47,9 +53,18 @@ its own hash table.
    zero on the full orthogonal complement. This removes ambiguity about
    the complete observable while retaining the conditional finite-space
    interpretation.
+3. **Source-selection continuation: reviewed without a material finding.**
+   The parameter test fixes its transition and preparation domains
+   independently of c, includes the allowed parameter domain in its
+   finite negative certificates, and retains helper and interaction
+   accounts. The same-output histories include explicit permitted AM
+   predecessors and the actual zero event write. The named-source and
+   finite adaptive-alphabet conclusions keep their stated restricted
+   scope. No physical context preparation is inferred from the abstract
+   controlled bijection.
 
 No unresolved material mathematical or logical defect was identified in
-the five file versions listed above.
+the six file versions listed above.
 
 ## Mathematical checks and limits
 
@@ -114,6 +129,35 @@ Minkowski lattice and the shrinking single complex projection are
 correctly distinguished. None of these constructions derives a native U
 surface or a physical metric.
 
+SOURCE_SELECTION S1 correctly classifies the independently specified
+one-parameter equations into the whole allowed domain, one admitted root
+or an empty set. A forbidden root uses the parameter-domain condition;
+incompatible roots or a nonzero constant equation give the remaining
+certificates of at most two transitions. This is not a finite positive
+verification method for an unspecified infinite relation. Reference-member
+changes leave the inferred root and determinants unchanged.
+
+S2 correctly tests total helper and interaction accounts and distinguishes
+net cycle or macrostep balance from conservation at every internal step.
+S3 is the observable fibre condition on the joint output/context domain.
+S4's explicit initial receivers have active energies 3 and 18, resources
+10 and 70, accepted AM guards zero and event writes zero. Their source
+energies 76 and 1 give the same total 425 and the same complete final old
+carrier, but receiver changes 76 and 1. This obstructs a common decoder
+only when the context distinction is omitted. The supplied two-valued
+unchanged register makes the controlled law bijective and restores the
+known-context mathematical decoder; its preparation and apparatus cost
+remain additional premises.
+
+The S5 comparison agrees with the named canonical funding, Gauss-memory
+and finite-record statements. It does not assert that those different
+carriers have no possible future bridge. Finite adaptive compositions of
+the listed invariant-preserving cell primitives retain those invariants
+branch by branch, including finite stopping, provided additional control
+updates also preserve them on the complete carrier. The source/provenance
+obligation in S6 is distinct from satisfaction of the conservation
+equations or advance publication of a constructed rule.
+
 SOURCES and README preserve the distinction between inherited Canon T
 claims, noncanonical comparison lanes and new candidate-T arguments. The
 Gauss comparison uses its own finite-field carrier. The larger unpublished
@@ -125,6 +169,10 @@ occurrence obligations remain tied to the proposed physical context.
 
 The reviewed versions are suitable for publication as an exposed,
 NON-CANONICAL conditional candidate-T synthesis at their stated scope.
+The source-selection continuation has the same disposition for its exact
+consistency criterion and restricted cross-context readout obstruction.
+It does not provide the missing independently admitted source transition
+or a physical context selector.
 This disposition does not promote a Canon claim, supply computation
 evidence, select the adopted energy or apparatus, or close the physical
 identification with U or J. A substantive later change to the reviewed
