@@ -1,0 +1,208 @@
+{
+  "basis_columns": 1928,
+  "cases": [
+    {
+      "edges": 48,
+      "initial_doubled_energy": [
+        1667,
+        -580
+      ],
+      "material_sites": 0,
+      "torus": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "edges": 48,
+      "initial_doubled_energy": [
+        1672,
+        -578
+      ],
+      "material_sites": 1,
+      "torus": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "edges": 48,
+      "initial_doubled_energy": [
+        1923,
+        -597
+      ],
+      "material_sites": 48,
+      "torus": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "edges": 72,
+      "initial_doubled_energy": [
+        2463,
+        -878
+      ],
+      "material_sites": 0,
+      "torus": [
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "edges": 72,
+      "initial_doubled_energy": [
+        2468,
+        -876
+      ],
+      "material_sites": 1,
+      "torus": [
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "edges": 72,
+      "initial_doubled_energy": [
+        2860,
+        -916
+      ],
+      "material_sites": 72,
+      "torus": [
+        3,
+        2,
+        2
+      ]
+    }
+  ],
+  "closed_steps": 128,
+  "first_source_doubled_energy": [
+    1,
+    0
+  ],
+  "missing_feedback_doubled_energy_error": [
+    -3,
+    2
+  ],
+  "mode_polynomials_ascending": {
+    "0": [
+      [
+        1,
+        0
+      ],
+      [
+        3,
+        -4
+      ],
+      [
+        -8,
+        8
+      ],
+      [
+        3,
+        -4
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "2": [
+      [
+        1,
+        0
+      ],
+      [
+        7,
+        -6
+      ],
+      [
+        -6,
+        6
+      ],
+      [
+        7,
+        -6
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "4": [
+      [
+        1,
+        0
+      ],
+      [
+        11,
+        -8
+      ],
+      [
+        -4,
+        4
+      ],
+      [
+        11,
+        -8
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "6": [
+      [
+        1,
+        0
+      ],
+      [
+        15,
+        -10
+      ],
+      [
+        -2,
+        2
+      ],
+      [
+        15,
+        -10
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "8": [
+      [
+        1,
+        0
+      ],
+      [
+        19,
+        -12
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        19,
+        -12
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "no_particle_or_quantum_identification": true,
+  "off_source_field_at_step_two": true,
+  "status": "PASS; NON-CANONICAL conditional bound-charge comparison",
+  "unit_scalings_per_torus": 13
+}
