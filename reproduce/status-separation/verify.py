@@ -43,6 +43,513 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v101 release accounting and reversible public v100 reconstruction.
+# Structural custody checks only; the scientific audit is not executed here.
+V101_PRIOR_COMMIT = 'c164b79ce134152ac7cd600421791df74113f29f'
+
+# BEGIN V101 FROZEN INPUT CONTRACTS
+V101_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': 'd49a8ac07af087973e98523242ab0ce5554a52b2bc2dcc2aa1eeafe3685b2a81',
+                  'current_bytes': 518295,
+                  'prior_sha256': '8f79dab86e4d77b4505c2d1011f2f8702d4ede937250cd5953718e671e7b910b',
+                  'prior_bytes': 514100,
+                  'restore': ((511, 515, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': '6154f1d3cae90a73520057a75bd92deec25f265673fa05f220302d742781cc4f',
+                   'current_bytes': 66062,
+                   'prior_sha256': '360b3c6b32cef3ea2ca7eb21c8220dda6bbd80827835fcc88fd3a628bef6c7f1',
+                   'prior_bytes': 65552,
+                   'restore': ((575, 579, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': 'aa6d5330b051d2b82580cf9d40763c8a8673f1d5c63a89368e48e2abe596cae5',
+                      'current_bytes': 175000,
+                      'prior_sha256': '8eb3440a741e89076a018c3888fa31e558f4f9187c7af0a2775870628d703469',
+                      'prior_bytes': 173022,
+                      'restore': ((1051, 1064, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': '13876ee579b3da979b50c5bef6e301da0d9c779bcda341066ea356ee1b3cdd6a',
+                  'current_bytes': 104307,
+                  'prior_sha256': '387bccc2de08b233aa17ce37dc391b19863bdc7b455c88accd0ad7bef6b2aa63',
+                  'prior_bytes': 103575,
+                  'restore': ((511, 515, ''),)},
+ 'HISTORY.tsv': {'current_sha256': 'd950591cee51ddc6980a1b49c9e17cc45677e6e0bc70b6b012c5c55c4f04f609',
+                 'current_bytes': 477433,
+                 'prior_sha256': '6b18b727aa2a12d602ebf6db26185c70524f632636edb25f2d36bea6b20c178a',
+                 'prior_bytes': 475019,
+                 'restore': ((1058, 1062, ''),)},
+ 'GATES.tsv': {'current_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'current_bytes': 13324,
+               'prior_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'prior_bytes': 13324,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'current_bytes': 1502,
+                           'prior_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'prior_bytes': 1502,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': 'b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7',
+              'current_bytes': 992352,
+              'prior_sha256': '5e4de2da8d57ff2f7e4b873e6236b0695677e20d173d894ee70562c1389648c4',
+              'prior_bytes': 980212,
+              'restore': ((0, 1, '# TWIST-J Public Canon v100\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v100. Normative authority and '
+                           'activation\n'),
+                          (22,
+                           23,
+                           'only. Public Canon v100 also declares the discrete architecture used to '
+                           'read\n'),
+                          (35,
+                           36,
+                           'seed of the two algebraic projections. Public Canon v100 does not claim\n'),
+                          (140,
+                           141,
+                           'deriving the architecture from J; Public Canon v100 contains no such\n'),
+                          (5266, 5495, ''),
+                          (10604, 10650, ''))},
+ 'CORE.md': {'current_sha256': 'f939e40c7288cdc2d6afdf32cc1a1ff932492b37ad7c1bb3af12e06031522a55',
+             'current_bytes': 27375,
+             'prior_sha256': 'b36f0933095603aa07dd7d08e76271464ea49de02a2297f9a41daf10754d9697',
+             'prior_bytes': 26482,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v100. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v100 also declares a discrete architecture. It does not\n'),
+                         (52, 65, ''))},
+ 'FRONTIER.md': {'current_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'current_bytes': 27382,
+                 'prior_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'prior_bytes': 27382,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': '1c3758bf57baf2bf9910821d3bc0d97e913ecd4b63433b5403f5b7af76f4286c',
+                  'current_bytes': 203538,
+                  'prior_sha256': 'd1bba0d273966e347e11b02983f4ea9e8a38bfc5bbb9d5d01d95970ea278fe1d',
+                  'prior_bytes': 201240,
+                  'restore': ((1, 40, ''),
+                              (483,
+                               485,
+                               'Registry snapshot: 510 claims; 0 T-LOCK, 367 T, 59 D, 39 C, 2 H, 24 O, '
+                               '19 F; 26 live H/O.\n'
+                               'Reproduction witnesses: 35.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '54a881f109a1c53419c6b20daa09a679c2e94a69fbf59dca99db64f3c5e8f53a',
+                       'current_bytes': 243,
+                       'prior_sha256': '10c7c19b24068c97d77922be4993f25e01ea9999e5ed2bc7f977470f27fa7e88',
+                       'prior_bytes': 243,
+                       'restore': ((1, 2, 'claims\t510\n'),
+                                   (3, 4, 'status_T\t367\n'),
+                                   (10, 12, 'reproductions\t35\nevidence_none\t94\n'))}}
+
+V101_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'U-NATIVE-RAW-RESIDUE-READOUT',
+                   'status': 'T',
+                   'scope': 'on unchanged origin-zero U at L1 with every P in F5^4 and common receiver '
+                            'C0=(0,1), the fixed reader of current (n,q,r) returns PRESENT(sum(P) mod5) '
+                            'for every n>=3, with no source coordinates or saved history and no '
+                            'precomputed sum in the preparation; C1 distinguishes all five residues and '
+                            'C2 merges residues zero and one; the explicit inverse to C3 uses '
+                            'sigma=(-1)^(n-3), z=4+2 theta_(n-1), and N=S(floor((n-1)/2))-1; at most '
+                            'twenty time-context values suffice for evaluation after tick three, '
+                            'without a minimum-context or autonomous-update claim, and readiness before '
+                            'tick three remains separate; counter-dressed 2^n payload equals rho(J^n '
+                            'x_P) only for n>=3 and does not select a physical J law',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fails on an admitted source/time violating the receiver table, exact '
+                                'inverse, residue readout, compact-context sufficiency or '
+                                'defined-domain identity; finite audits do not prove infinite-time '
+                                'correctness, and source erasure, native reader implementation, '
+                                'physical measurement and repeated writing are outside scope'},
+                  {'claim_id': 'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                   'status': 'T',
+                   'scope': 'on unchanged origin-zero U at L1 for every fixed common C0=(q0,r0), every '
+                            'fixed map d:F5^2->Y that eventually returns F(sum(P) mod5) along every '
+                            'source P in F5^4 has constant F, even allowing a separate finite waiting '
+                            'time for each source; with s=q3+r3 the exact recurrent receiver support is '
+                            'L_s union L_(s+3) union L_(-s) union L_(2-s), and the five initial source '
+                            'classes have connected support overlaps for every common ready; this '
+                            'excludes every nonlinear current-receiver-only persistent residue decoder '
+                            'on the full family, but proves neither the necessity of the full counter '
+                            'nor impossibility with history, added context, another input domain or a '
+                            'larger observed port',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fails if the exact recurrent support or its actual arbitrarily late '
+                                'returns fail, if a common-ready support overlap graph is disconnected, '
+                                'or if one nonconstant F admits the stated eventual reader; '
+                                'arbitrary-control reachability alone is insufficient evidence'},
+                  {'claim_id': 'U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                   'status': 'T',
+                   'scope': 'at L1 with the full four-piston source, common origin and '
+                            'source-independent common receiver, the whole receiver history and any '
+                            'common clock-assisted processing depend on P only through its residue sum; '
+                            'each sum fibre has 125 sources, so reserving one source as absence leaves '
+                            '124 indistinguishable sources, and five present residue labels plus '
+                            'absence cannot be distinguished by this port; at ready (0,1) the exact '
+                            'observable classes are the five sum fibres and reserving an absence class '
+                            'leaves at most four present residue values; all members of an observable '
+                            'class must receive one semantic label or be excluded, and any added '
+                            'presence distinction must reach the allowed reader; this is an information '
+                            'boundary, not a persistent absence implementation or reset mechanism',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'fails if equal-sum preparations yield different permitted receiver '
+                                'histories or common-clock outputs, if a sum fibre has other than 125 '
+                                'members, or if six distinct semantic labels factor through the '
+                                'at-most-five history classes; extra source-dependent initial memory, '
+                                'changed readiness or enlarged observation changes the contract'},
+                  {'claim_id': 'U-J-POWER-CHECKPOINT-NOGO',
+                   'status': 'T',
+                   'scope': 'at L1 for J=1+j^2, Phi5(j)=0 and every m>=1, any fixed checkpoint-only map '
+                            'X into Z[j]/5^m Z[j] satisfying X(psi_(n+1))=J X(psi_n) for every n>=0 '
+                            'along an admitted origin-zero native trajectory is zero on that whole '
+                            'trajectory; the universal psi4=psi6 collision, exact certificate '
+                            '(J^2-1)(-2+j+2j^2+6j^3)=11 and J inverse -j-j^2 prove the claim, including '
+                            'modulus25 and any admitted origin-zero input family; the scalar recurrence '
+                            'h_(n+1)=2h_n in F5 is likewise zero; no delayed-only recurrence, '
+                            'counter-dependent reader, physical J identification or cross-layer '
+                            'conclusion is asserted',
+                   'canon_section': '3. The kernel and the census',
+                   'evidence': 'inline',
+                   'falsifier': 'fails on an exact error in the universal collision, cyclotomic '
+                                'certificate, inverse or unit argument, or a nonzero admitted '
+                                'checkpoint map satisfying the every-step recurrence from n=0; a '
+                                'recurrence imposed only after the early collision is outside this '
+                                'claim'}],
+ 'NORMATIVE.tsv': [{'item_id': 'U-NATIVE-RAW-RESIDUE-READOUT',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-NATIVE-RAW-RESIDUE-READOUT',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-NATIVE-RAW-RESIDUE-READOUT'},
+                   {'item_id': 'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO'},
+                   {'item_id': 'U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY'},
+                   {'item_id': 'U-J-POWER-CHECKPOINT-NOGO',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-J-POWER-CHECKPOINT-NOGO',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-J-POWER-CHECKPOINT-NOGO'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'U-NATIVE-RAW-RESIDUE-READOUT',
+                       'depends_on': 'DEF-AUTONOMOUS-STATE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the unchanged native origin-zero law and actual counter'},
+                      {'item_id': 'U-NATIVE-RAW-RESIDUE-READOUT',
+                       'depends_on': 'U-NATIVE-APPARATUS-HISTORY-FACTOR',
+                       'relation': 'REQUIRES',
+                       'basis': 'closed quotient, common-ready receiver tables and their exact source '
+                                'classes'},
+                      {'item_id': 'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                       'depends_on': 'DEF-AUTONOMOUS-STATE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the fixed origin-zero Thue-Morse trajectory rather than arbitrary '
+                                'control paths'},
+                      {'item_id': 'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                       'depends_on': 'U-NATIVE-APPARATUS-HISTORY-FACTOR',
+                       'relation': 'REQUIRES',
+                       'basis': 'the five common-ready tick-three classes and their sums'},
+                      {'item_id': 'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                       'depends_on': 'U-NATIVE-INVARIANT-AND-NOWRITE',
+                       'relation': 'REQUIRES',
+                       'basis': 'every point of the actual synchronized sign fibre recurs arbitrarily '
+                                'late'},
+                      {'item_id': 'U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                       'depends_on': 'U-NATIVE-APPARATUS-HISTORY-FACTOR',
+                       'relation': 'REQUIRES',
+                       'basis': 'complete receiver-history equivalence and the 125-element sum fibres'},
+                      {'item_id': 'U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                       'depends_on': 'U-NATIVE-RAW-RESIDUE-READOUT',
+                       'relation': 'REQUIRES',
+                       'basis': 'five distinguishable classes at common ready (0,1)'},
+                      {'item_id': 'U-J-POWER-CHECKPOINT-NOGO',
+                       'depends_on': 'DEF-AUTONOMOUS-STATE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the declared checkpoint projection and recurrence domain beginning at '
+                                'native origin zero'},
+                      {'item_id': 'U-J-POWER-CHECKPOINT-NOGO',
+                       'depends_on': 'CARRY-J-CHECKPOINT',
+                       'relation': 'REQUIRES',
+                       'basis': 'the universal early checkpoint collision psi4=psi6, separate from its '
+                                'original phase-factor target'},
+                      {'item_id': 'U-J-POWER-CHECKPOINT-NOGO',
+                       'depends_on': 'J-UNIT',
+                       'relation': 'REQUIRES',
+                       'basis': 'J=1+j^2 is invertible over the cyclotomic integers and every stated '
+                                'quotient'},
+                      {'item_id': 'U-NATIVE-RAW-RESIDUE-READOUT',
+                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'mathematical native-port recovery or its obstruction supplies no '
+                                'complete physical apparatus, readout realization or renewal'},
+                      {'item_id': 'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'mathematical native-port recovery or its obstruction supplies no '
+                                'complete physical apparatus, readout realization or renewal'},
+                      {'item_id': 'U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'mathematical native-port recovery or its obstruction supplies no '
+                                'complete physical apparatus, readout realization or renewal'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'U-NATIVE-RAW-RESIDUE-READOUT',
+                   'evidence_id': 'EV-U-NATIVE-RAW-RESIDUE-READOUT',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'c25ce894307e16d0140ba80122c778b1597b21491edfe40a702badef38b84feb',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                   'evidence_id': 'EV-U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'e02ace63a96a0a5d98ddd9e3baa27791d1fb2d1b8e16c5362402dcb3e3edfaed',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                   'evidence_id': 'EV-U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '23fe2f7937743070c1090db907494507077c06b550bfbcd8c05dd1777cc151e0',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-J-POWER-CHECKPOINT-NOGO',
+                   'evidence_id': 'EV-U-J-POWER-CHECKPOINT-NOGO',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '7f4463435418cbfd717fe55ebee496b7711e052343ae56b07001b2f283e9fb4c',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON101-DECLARE-U-NATIVE-RAW-RESIDUE-READOUT',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-09',
+                  'release': 'canon-v101-candidate',
+                  'claim_id': 'U-NATIVE-RAW-RESIDUE-READOUT',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'c25ce894307e16d0140ba80122c778b1597b21491edfe40a702badef38b84feb',
+                  'evidence_id': 'EV-U-NATIVE-RAW-RESIDUE-READOUT',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'c25ce894307e16d0140ba80122c778b1597b21491edfe40a702badef38b84feb',
+                  'rationale': 'Declare the self-contained reviewed L1 proof with exposed supplementary '
+                               'exact audit; all 510 prior claims and all 26 H/O owners retain their '
+                               'exact scopes and statuses. No native reader implementation, autonomous '
+                               'finite clock, physical apparatus, presence channel, reset or '
+                               'cross-layer lift is inferred.'},
+                 {'event_id': 'CANON101-DECLARE-U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-09',
+                  'release': 'canon-v101-candidate',
+                  'claim_id': 'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'e02ace63a96a0a5d98ddd9e3baa27791d1fb2d1b8e16c5362402dcb3e3edfaed',
+                  'evidence_id': 'EV-U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'e02ace63a96a0a5d98ddd9e3baa27791d1fb2d1b8e16c5362402dcb3e3edfaed',
+                  'rationale': 'Declare the self-contained reviewed L1 proof with exposed supplementary '
+                               'exact audit; all 510 prior claims and all 26 H/O owners retain their '
+                               'exact scopes and statuses. No native reader implementation, autonomous '
+                               'finite clock, physical apparatus, presence channel, reset or '
+                               'cross-layer lift is inferred.'},
+                 {'event_id': 'CANON101-DECLARE-U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-09',
+                  'release': 'canon-v101-candidate',
+                  'claim_id': 'U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '23fe2f7937743070c1090db907494507077c06b550bfbcd8c05dd1777cc151e0',
+                  'evidence_id': 'EV-U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '23fe2f7937743070c1090db907494507077c06b550bfbcd8c05dd1777cc151e0',
+                  'rationale': 'Declare the self-contained reviewed L1 proof with exposed supplementary '
+                               'exact audit; all 510 prior claims and all 26 H/O owners retain their '
+                               'exact scopes and statuses. No native reader implementation, autonomous '
+                               'finite clock, physical apparatus, presence channel, reset or '
+                               'cross-layer lift is inferred.'},
+                 {'event_id': 'CANON101-DECLARE-U-J-POWER-CHECKPOINT-NOGO',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-09',
+                  'release': 'canon-v101-candidate',
+                  'claim_id': 'U-J-POWER-CHECKPOINT-NOGO',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '7f4463435418cbfd717fe55ebee496b7711e052343ae56b07001b2f283e9fb4c',
+                  'evidence_id': 'EV-U-J-POWER-CHECKPOINT-NOGO',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '7f4463435418cbfd717fe55ebee496b7711e052343ae56b07001b2f283e9fb4c',
+                  'rationale': 'Declare the self-contained reviewed L1 proof with exposed supplementary '
+                               'exact audit; all 510 prior claims and all 26 H/O owners retain their '
+                               'exact scopes and statuses. No native reader implementation, autonomous '
+                               'finite clock, physical apparatus, presence channel, reset or '
+                               'cross-layer lift is inferred.'}]}
+
+V101_PROOF_CONTRACTS = {'U-NATIVE-RAW-RESIDUE-READOUT': {'begin': '### U-NATIVE-RAW-RESIDUE-READOUT [T]',
+                                  'end': '### U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO [T]',
+                                  'bytes': 5026,
+                                  'sha256': 'ca54dab15a33fc0e17b448c4a99988e4e5c170ec77d4633171554b9df0ac1d06'},
+ 'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO': {'begin': '### U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO [T]',
+                                         'end': '### U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY [T]',
+                                         'bytes': 3000,
+                                         'sha256': '05a7ef16cf20601dae938493e757478d5ad632094000b5a2810327202de92bad'},
+ 'U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY': {'begin': '### U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY [T]',
+                                            'end': '### QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION [T]',
+                                            'bytes': 2030,
+                                            'sha256': 'c45f72969134497cb8ce9c1f67900a821c1eba16c93867992b58bc574ebce5ff'},
+ 'U-J-POWER-CHECKPOINT-NOGO': {'begin': '### U-J-POWER-CHECKPOINT-NOGO [T]',
+                               'end': '### RAMIFIED-TM-SYMPLECTIC-ORIENTATION [T]',
+                               'bytes': 2084,
+                               'sha256': 'c211fc1c534df47c86bd1ccccd37c216f0a034583500f69e8d77eb5ea575a64a'}}
+
+V101_AUDIT_FILES = {'verify.py': {'bytes': 10977,
+               'sha256': 'f555b53e5647e17da978568ebc2d495a4c286ba2445bd35487aa067218523c6e'},
+ 'README.md': {'bytes': 6306,
+               'sha256': '94034cb76452290f71888955185e6696702a3f07fc637a3a58234fe8173d2198'},
+ 'EXPECTED.txt': {'bytes': 714,
+                  'sha256': '9e2865bc0ef5392c2cb80ee3519b7e2702cf43f14c6c87e6426c5c52b32678b2'}}
+
+# END V101 FROZEN INPUT CONTRACTS
+
+V101_IDS = (
+    'U-NATIVE-RAW-RESIDUE-READOUT',
+    'U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO',
+    'U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY',
+    'U-J-POWER-CHECKPOINT-NOGO',
+)
+V101_REPRODUCTION = 'u_raw_residue_port'
+V101_CHECKS = (
+    ('V101-PRIOR-BYTES',
+     'thirteen complete v101 inputs reconstruct exact public v100 before all 153 unchanged historical guards'),
+    ('V101-FOUR-PROOFS',
+     'four inline L1 theorem rows bind exact scopes, written-proof evidence and dependency additions'),
+    ('V101-OWNER-BOUNDARY',
+     'all 510 prior claims and all 26 live owners, gates and scheduler dispositions remain unchanged'),
+    ('V101-READOUT-BOUNDARY',
+     'the exact proof separates counter-assisted raw-input recovery, receiver-only obstruction, absence and checkpoint multiplier boundaries from native implementation'),
+    ('V101-AUDIT-CUSTODY',
+     'one exact supplemental proof audit extends the 35-directory inventory to 36 without retroactive preregistration or alteration of historical guards'),
+)
+
+
+def v101_previous_bytes(path):
+    """Validate the complete current input before reconstructing exact v100."""
+    patch = V101_INPUT_PATCH.get(path.name)
+    if patch is None:
+        return None
+    current = path.read_bytes()
+    if (len(current) != patch['current_bytes']
+            or hashlib.sha256(current).hexdigest() != patch['current_sha256']):
+        return None
+    lines = current.decode('utf-8').splitlines(keepends=True)
+    for first, last, original in reversed(patch['restore']):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = ''.join(lines).encode('utf-8')
+    if (len(previous) != patch['prior_bytes']
+            or hashlib.sha256(previous).hexdigest() != patch['prior_sha256']):
+        return None
+    return previous
+
+
+def v101_previous_reproduction_dirs():
+    """Expose the exact v100 inventory only after validating the v101 set."""
+    current = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    expected = set(V100_REPRODUCTIONS) | {V101_REPRODUCTION}
+    return current - {V101_REPRODUCTION} if current == expected else set()
+
+
+def v101_current_checks():
+    names = tuple(name for name in V101_INPUT_PATCH if name.endswith('.tsv'))
+    prior = {name: v87_table_bytes(v101_previous_bytes(ROOT / 'canon' / name))
+             for name in names}
+    current = {name: v87_table_bytes((ROOT / 'canon' / name).read_bytes())
+               for name in names}
+    old_index = {row['claim_id']: row for row in prior['REGISTRY.tsv']}
+    index = {row['claim_id']: row for row in current['REGISTRY.tsv']}
+    normative = {row['item_id']: row for row in current['NORMATIVE.tsv']}
+    evidence = {row['claim_id']: row for row in current['EVIDENCE.tsv']}
+    exact_additions = all(current[name] == prior[name] + added
+                          for name, added in V101_ADDITIONS.items())
+    counts = {status: sum(row['status'] == status for row in index.values())
+              for status in {row['status'] for row in index.values()}}
+    exact_theorems = all(
+        index.get(claim, {}).get('status') == 'T'
+        and index.get(claim, {}).get('evidence') == 'inline'
+        and normative.get(claim, {}).get('item_type') == 'THEOREM'
+        and normative.get(claim, {}).get('layer') == 'L1'
+        and normative.get(claim, {}).get('gate_ids') == ''
+        and evidence.get(claim, {}).get('evidence_kind') == 'INLINE_CANON'
+        and evidence.get(claim, {}).get('location') == 'inline'
+        and evidence.get(claim, {}).get('hash_mode') == 'registry-scope-sha256-v1'
+        and evidence.get(claim, {}).get('architecture_requirement') == 'none'
+        and evidence.get(claim, {}).get('sha256')
+            == hashlib.sha256(index.get(claim, {}).get('scope', '').encode('utf-8')).hexdigest()
+        for claim in V101_IDS)
+    old_live = {claim: row for claim, row in old_index.items() if row['status'] in {'H', 'O'}}
+    live = {claim: row for claim, row in index.items() if row['status'] in {'H', 'O'}}
+    canon = CANON.read_text(encoding='utf-8')
+    exact_proofs = set(V101_PROOF_CONTRACTS) == set(V101_IDS)
+    for claim, contract in V101_PROOF_CONTRACTS.items():
+        first = canon.find(contract['begin'])
+        last = canon.find(contract['end'], first + len(contract['begin'])) if first >= 0 else -1
+        block = canon[first:last].encode('utf-8') if 0 <= first < last else b''
+        exact_proofs = (exact_proofs and canon.count(contract['begin']) == 1
+            and len(block) == contract['bytes']
+            and hashlib.sha256(block).hexdigest() == contract['sha256']
+            and contract['begin'] == '### ' + claim + ' [T]')
+    directory = REPRODUCE / V101_REPRODUCTION
+    actual_files = {path.relative_to(directory).as_posix() for path in directory.rglob('*')
+                    if path.is_file() and '__pycache__' not in path.parts and path.suffix != '.pyc'}
+    exact_audit = actual_files == set(V101_AUDIT_FILES) == {'verify.py', 'README.md', 'EXPECTED.txt'}
+    for relative, contract in V101_AUDIT_FILES.items():
+        path = directory / relative
+        data = path.read_bytes() if path.is_file() else b''
+        exact_audit = (exact_audit and len(data) == contract['bytes']
+            and hashlib.sha256(data).hexdigest() == contract['sha256'])
+    results = (
+        len(V101_INPUT_PATCH) == 13 and set(V101_INPUT_PATCH) == set(V100_INPUT_PATCH)
+        and all(v101_previous_bytes(ROOT / 'canon' / name) is not None for name in V101_INPUT_PATCH),
+        len(V101_IDS) == 4 and set(index) == set(old_index) | set(V101_IDS)
+        and len(index) == 514 and exact_additions and exact_theorems
+        and set(V101_ADDITIONS) == {'REGISTRY.tsv', 'NORMATIVE.tsv', 'DEPENDENCIES.tsv', 'EVIDENCE.tsv', 'HISTORY.tsv'}
+        and all(len(V101_ADDITIONS[name]) == (13 if name == 'DEPENDENCIES.tsv' else 4)
+                for name in V101_ADDITIONS)
+        and counts == {'T': 371, 'D': 59, 'C': 39, 'H': 2, 'O': 24, 'F': 19},
+        len(old_index) == 510 and all(index.get(claim) == row for claim, row in old_index.items())
+        and old_live == live and len(live) == 26
+        and all(current[name] == prior[name] for name in
+                ('GATES.tsv', 'FRONTIER_PROGRAMS.tsv', 'CORE_SELECTION.tsv'))
+        and (ROOT / 'canon/FRONTIER.md').read_bytes() == v101_previous_bytes(ROOT / 'canon/FRONTIER.md'),
+        exact_proofs and exact_additions,
+        exact_audit and len(V100_REPRODUCTIONS) == 35
+        and len({path.name for path in REPRODUCE.iterdir() if path.is_dir()}) == 36
+        and v101_previous_reproduction_dirs() == set(V100_REPRODUCTIONS),
+    )
+    return [(tag, description, ok) for (tag, description), ok in zip(V101_CHECKS, results)]
+
+
 # Exact v100 release accounting and reversible public v99 reconstruction.
 # This is structural release bookkeeping, not an execution of the science.
 V100_PRIOR_COMMIT = '83274b2cdcc5478e9fef1db734ecd564d1146fa8'
@@ -448,7 +955,9 @@ def v100_previous_bytes(path):
     patch = V100_INPUT_PATCH.get(path.name)
     if patch is None:
         return None
-    current = path.read_bytes()
+    current = v101_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch["current_bytes"]
             or hashlib.sha256(current).hexdigest() != patch["current_sha256"]):
         return None
@@ -466,7 +975,7 @@ def v100_previous_bytes(path):
 
 def v100_previous_reproduction_dirs():
     """There is no new reproduction in this release."""
-    current = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    current = v101_previous_reproduction_dirs()
     return current if current == set(V100_REPRODUCTIONS) else set()
 
 
@@ -474,7 +983,7 @@ def v100_current_checks():
     names = tuple(name for name in V100_INPUT_PATCH if name.endswith(".tsv"))
     prior = {name: v87_table_bytes(v100_previous_bytes(ROOT / "canon" / name))
              for name in names}
-    current = {name: v87_table_bytes((ROOT / "canon" / name).read_bytes())
+    current = {name: v87_table_bytes(v101_previous_bytes(ROOT / "canon" / name))
                for name in names}
     old_index = {row["claim_id"]: row for row in prior["REGISTRY.tsv"]}
     index = {row["claim_id"]: row for row in current["REGISTRY.tsv"]}
@@ -495,7 +1004,7 @@ def v100_current_checks():
         for claim in V100_IDS)
     old_live = {claim: row for claim, row in old_index.items() if row["status"] in {"H", "O"}}
     live = {claim: row for claim, row in index.items() if row["status"] in {"H", "O"}}
-    canon = CANON.read_text(encoding="utf-8")
+    canon = (v101_previous_bytes(CANON) or b"").decode("utf-8")
     proof = V100_PROOF_CONTRACT
     first = canon.find(proof["begin"])
     last = canon.find(proof["end"], first + len(proof["begin"])) if first >= 0 else -1
@@ -529,7 +1038,7 @@ def v100_current_checks():
         and index.get("QUADRATIC-MEMORY-NATIVE-CONTACT", {}).get("status") == "O"
         and all(current[name] == prior[name] for name in
                 ("GATES.tsv", "FRONTIER_PROGRAMS.tsv", "CORE_SELECTION.tsv"))
-        and (ROOT / "canon/FRONTIER.md").read_bytes() == v100_previous_bytes(ROOT / "canon/FRONTIER.md"),
+        and v101_previous_bytes(ROOT / "canon/FRONTIER.md") == v100_previous_bytes(ROOT / "canon/FRONTIER.md"),
         exact_proof and exact_additions,
         len(V100_PROBE_BUNDLES) == 3 and exact_bundles and len(V100_REPRODUCTIONS) == 35
         and v100_previous_reproduction_dirs() == set(V100_REPRODUCTIONS),
@@ -18212,9 +18721,10 @@ def run():
     checks.extend(v98_current_checks())
     checks.extend(v99_current_checks())
     checks.extend(v100_current_checks())
+    checks.extend(v101_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v100")
+    print("historical guards: exact reconstructed v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v101")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

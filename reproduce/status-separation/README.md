@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred fifty-three checks cover the current
+and emits deterministic text. Its one hundred fifty-eight checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -788,3 +788,24 @@ reproduction inventory remains 35. These are structural checks of the joint
 proof and evidence custody, not another probe, a replay of the expanded
 native word, or a new physical claim. The three existing verifiers retain
 their separately stated finite, symbolic and written-proof limits.
+
+The five v101 checks reconstruct all thirteen exact v100 inputs before the
+153 unchanged historical guards. They bind four new inline L1 theorem rows,
+their complete written proofs, exact premise edges and scope hashes. All 510
+older claims and all 26 live H/O owners retain their exact statuses, scopes,
+gates and scheduler dispositions. Counter-assisted recovery of a raw piston
+sum, the eventual receiver-only obstruction, the absence-preparation boundary
+and the cyclotomic checkpoint obstruction remain distinct from a native
+implementation, a repeated archive or any physical reading.
+
+The u_raw_residue_port directory is a supplemental proof audit with exact
+verifier, expected-output and README pins; it extends the reproduction
+inventory from 35 to 36. The written proofs supply theorem status. Earlier
+exploratory outputs are disclosed and are not retrospectively preregistered
+or promoted to a formal public probe. This structural release audit does not
+execute that scientific verifier.
+
+The 158-check expected transcript is authored from the 153 unchanged prior
+PASS lines and the five specified new guard descriptions before execution.
+It is not a run receipt. Replay and release approval concern the complete
+subsequently pinned candidate.

@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v100. Normative authority and activation
+**Release identity:** Public Canon v101. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v100 also declares a discrete architecture. It does not
+Public Canon v101 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -50,6 +50,19 @@ scalar norm image; RAMIFIED-HERMITIAN-NORM-OBSTRUCTION [T] excludes reciprocal
 Lucas squared lengths even over Q(zeta5), and J-TWO-TRACE-SCALAR-NORM-IMAGE [T]
 recognizes exactly which pure-J trace pairs come from a scalar. These remain
 L1 statements and provide no new physical reading or native Hodge step.
+
+The unchanged native U also transfers the residue sum of arbitrary four-piston
+inputs to a common receiver prepared at (q,r)=(0,1), without putting a
+precomputed answer into the preparation. U-NATIVE-RAW-RESIDUE-READOUT [T]
+gives exact recovery from the current receiver and native counter at every
+n>=3. At most twenty time-context values suffice for that evaluation;
+readiness detection and native context updating are separate obligations.
+U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO [T] proves that, for every common ready,
+no fixed current-receiver-only reading eventually retains a nonconstant
+function of the original sum on the full input family. The history factor
+also forces a distinct absence label to consume an entire observable class;
+at ready (0,1), this leaves at most four present residue values. These are
+L1 readout and information boundaries, not a physical instrument or reset.
 
 The complete autonomous state and update are
 
