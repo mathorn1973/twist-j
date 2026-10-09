@@ -1049,3 +1049,16 @@ CONTACT-RECORD	DEF-RESIDUAL-CONTACT-ARCHITECTURE	REQUIRES	the full carrier, orig
 ALGEBRAIC-RESIDUAL-REALIZATION	DEF-RESIDUAL-CONTACT-ARCHITECTURE	REQUIRES	the frozen determinant Gram, target and full alphabet for CW-ALG-1, with W_a,W_b declared and without reader couplings inside T_alg
 RESIDUAL-STEP-RECORD	CONTACT-RECORD	REQUIRES	the full occupied-reference contact and reader maps, inverse, ready identity and all-input literal-prefix protection of r_x squared
 RESIDUAL-STEP-RECORD	ALGEBRAIC-RESIDUAL-REALIZATION	REQUIRES	the precise Pi_alg atlas, actual CW-ALG-1 lift, global restoration of arbitrary r, full inverse and invariant Omega_alg used by the intervening step
+U-NATIVE-RAW-RESIDUE-READOUT	DEF-AUTONOMOUS-STATE	REQUIRES	the unchanged native origin-zero law and actual counter
+U-NATIVE-RAW-RESIDUE-READOUT	U-NATIVE-APPARATUS-HISTORY-FACTOR	REQUIRES	closed quotient, common-ready receiver tables and their exact source classes
+U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO	DEF-AUTONOMOUS-STATE	REQUIRES	the fixed origin-zero Thue-Morse trajectory rather than arbitrary control paths
+U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO	U-NATIVE-APPARATUS-HISTORY-FACTOR	REQUIRES	the five common-ready tick-three classes and their sums
+U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO	U-NATIVE-INVARIANT-AND-NOWRITE	REQUIRES	every point of the actual synchronized sign fibre recurs arbitrarily late
+U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY	U-NATIVE-APPARATUS-HISTORY-FACTOR	REQUIRES	complete receiver-history equivalence and the 125-element sum fibres
+U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY	U-NATIVE-RAW-RESIDUE-READOUT	REQUIRES	five distinguishable classes at common ready (0,1)
+U-J-POWER-CHECKPOINT-NOGO	DEF-AUTONOMOUS-STATE	REQUIRES	the declared checkpoint projection and recurrence domain beginning at native origin zero
+U-J-POWER-CHECKPOINT-NOGO	CARRY-J-CHECKPOINT	REQUIRES	the universal early checkpoint collision psi4=psi6, separate from its original phase-factor target
+U-J-POWER-CHECKPOINT-NOGO	J-UNIT	REQUIRES	J=1+j^2 is invertible over the cyclotomic integers and every stated quotient
+U-NATIVE-RAW-RESIDUE-READOUT	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	mathematical native-port recovery or its obstruction supplies no complete physical apparatus, readout realization or renewal
+U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	mathematical native-port recovery or its obstruction supplies no complete physical apparatus, readout realization or renewal
+U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	mathematical native-port recovery or its obstruction supplies no complete physical apparatus, readout realization or renewal

@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v100
+# TWIST-J Public Canon v101
 
-**Release identity.** Public Canon v100. Normative authority and activation
+**Release identity.** Public Canon v101. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -20,7 +20,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v100 also declares the discrete architecture used to read
+only. Public Canon v101 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -33,7 +33,7 @@ calibration anchor remains the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v100 does not claim
+seed of the two algebraic projections. Public Canon v101 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -138,7 +138,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v100 contains no such
+deriving the architecture from J; Public Canon v101 contains no such
 theorem.
 
 ---
@@ -5264,6 +5264,235 @@ three, all good-ready inverses there, every exceptional conflicting pair,
 and all selected-ready sources at every `n=0,...,64`, including zero.
 The written proof supplies the universal n and archive statements.
 
+### U-NATIVE-RAW-RESIDUE-READOUT [T]
+
+Use the unchanged native U, common origin zero and the prescribed driver
+`theta_n=popcount(n) mod 2`. The source is every four-piston input
+`P=(p1,p4,p1p,p4p) in F5^4`; the receiver is only `C=(q,r)`. Prepare
+`(0;P,0,1)` for every P and put `kappa(P)=p1+p4+p1p+p4p` in F5.
+This preparation supplies the four original coordinates and a common
+receiver; it does not compute kappa before applying U. The reader receives
+only the actual counter and current receiver `(n,q_n,r_n)`.
+
+There is one fixed reader R with
+
+```text
+R(n,q_n,r_n)=PRESENT(kappa(P))  for every P and every n>=3.
+```
+
+**Proof.** The native closed quotient is `(z,q,r)`, where z is the sum
+of all six current checkpoint coordinates (the current piston sum plus
+q+r). The selector chooses `g_(z+2 theta_n mod 5)` from
+`(a,b,c,d,e)`, and its generator maps are
+
+| Generator | New `(z,q,r)` |
+| --- | --- |
+| a | `(z,q,r)` |
+| b | `(-z,-q,-r)` |
+| c | `(2-z,1-q,-r)` |
+| d | `(2-z,1-q,1-r)` |
+| e | `(3-z,2-q,1-r)` |
+
+Thus the complete receiver history depends on the original source only
+through kappa, as in U-NATIVE-APPARATUS-HISTORY-FACTOR. Applying the first
+three driver bits `011` to the common receiver `(0,1)` gives
+
+| kappa | First generator | C1 | C2 | C3 |
+| --- | --- | --- | --- | --- |
+| 0 | b | `(0,4)` | `(0,1)` | `(1,0)` |
+| 1 | c | `(1,4)` | `(0,1)` | `(2,0)` |
+| 2 | d | `(1,0)` | `(4,0)` | `(2,1)` |
+| 3 | e | `(2,0)` | `(3,0)` | `(3,1)` |
+| 4 | a | `(0,1)` | `(1,4)` | `(1,2)` |
+
+Every row represents all 125 sources with that sum. C1 already distinguishes
+all five sums, whereas C2 identifies sums zero and one. At tick three every
+row has z3=1 and the five receiver values are distinct. Subsequent common
+generators act bijectively on the receiver, so they remain distinct at each
+fixed later time. The following formula makes that time-dependent inverse
+one fixed function of its stated inputs.
+
+For nonnegative integers M define the finite integer sum
+
+```text
+S(M)=M-floor(M/2)+floor(M/4)-floor(M/8)+... .
+```
+
+For n>=3 put
+
+```text
+sigma_n=(-1)^(n-3),
+z_n=4+2 theta_(n-1) mod 5,
+N_n=S(floor((n-1)/2))-1,
+qhat=1+sigma_n*(q_n-z_n)+N_n mod 5,
+rhat=sigma_n*r_n-N_n mod 5.
+```
+
+Then `(qhat,rhat)=(q3,r3)` for every admitted source and every n>=3.
+Here is a direct all-time verification. At n=3, `sigma=1,z=1,N=0`,
+so the formula is the identity. For M>=1, the difference
+`S(M)-S(M-1)` is the alternating sum of ones indexed by the powers of two
+dividing M. It is one when `nu_2(M)` is even and zero when it is odd.
+Together with `theta_(2m)=theta_m`, `theta_(2m+1)=1-theta_m` and
+`theta_M=theta_(M-1)+1-nu_2(M) mod 2`, this gives
+
+```text
+delta_n=N_(n+1)-N_n=[theta_n=theta_(n-1)],
+delta_n=1 implies n is even.
+```
+
+For unequal consecutive bits the synchronized quotient step is b,
+`(z,q,r)->(-z,-q,-r)`. For equal bits it is d or e,
+`(z,q,r)->(z,2z-1-q,1-r)`. These formulas also prove the displayed z_n
+recursion from z3=1. When delta is zero, negating sigma and the quotient
+preserves both inverse expressions. When delta is one, sigma changes from
+-1 to 1, N increases by one, and substitution of the d/e formula again
+preserves both expressions. Induction proves the asserted inverse.
+
+Define the five-point table
+
+```text
+d3(1,0)=0, d3(2,0)=1, d3(2,1)=2, d3(3,1)=3, d3(1,2)=4.
+```
+
+Set `R(n,q,r)=BLANK` for n<3; for n>=3 return `PRESENT(d3(qhat,rhat))`
+when the restored pair is in the table, and BLANK otherwise. This defines
+the fixed reader on all `N_0 x F5^2` and proves the claim on its declared
+preparations. BLANK before tick three is a readiness convention, not an
+assertion that no source was present. In particular PRESENT(0) is a distinct
+output.
+
+For decoding at n>=3 the counter can be summarized by
+`T_n^read=(sigma_n,z_n,N_n mod 5)`, with at most `2*2*5=20` possible
+values. This is a sufficient summary, with no minimality claim. It does not
+itself define an autonomous clock: `T_4^read=T_6^read=(-1,4,0)`, but
+`T_5^read=(1,1,0)` and `T_7^read=(1,4,1)`. No deterministic successor
+function of this summary alone generates its actual sequence. The summary
+is defined here only from tick three onward; recognizing the initial
+readiness period must be supplied separately if n is replaced by it.
+
+For `x_P=p1+p4*j+p1p*j^2+p4p*j^3` in `Z[j]/5Z[j]`, evaluation at
+j=1 defines `rho(x_P)=kappa(P)` because Phi5(1)=5. Since `J=1+j^2`,
+rho(J)=2. Thus the defined payload satisfies
+
+```text
+2^n*payload(R(n,C_n(P)))=rho(J^n*x_P),  n>=3.
+```
+
+The restriction n>=3 is essential here because payload is undefined on
+BLANK. This time dressing of a recovered value selects no physical J law.
+
+The native counter already belongs to the full state, so the reader adds
+no native state register. The theorem establishes mathematical readback;
+it does not supply an in-machine implementation, material write, source
+clearing, reset, repeated input protocol or physical measurement. It makes
+no claim that the full unbounded counter is the least extra information
+needed beyond the current receiver.
+
+### U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO [T]
+
+Keep common origin zero, the prescribed native driver, all 625 sources
+P and the receiver `C=(q,r)`, but allow any common ready
+`C0=(q0,r0)` independent of P. Let `d:F5^2->Y` be one fixed function
+and `F:F5->Y` any proposed original-sum value. If for every P there is
+a finite N_P such that
+
+```text
+d(C_n(P))=F(kappa(P))  for every n>=N_P,
+```
+
+then F is constant. Thus even source-dependent finite waiting times and
+arbitrary nonlinear receiver tables cannot give a nonconstant permanent
+value of the original sum from the current receiver alone.
+
+**Proof.** Write `s=q3+r3` and
+`L_t={(q,r) in F5^2:q+r=t}`. The exact recurrent receiver support of
+each origin-zero trajectory after synchronization is
+
+```text
+C_s=L_s union L_(s+3) union L_(-s) union L_(2-s).
+```
+
+To justify recurrence, not merely controlled reachability, use the actual
+native-orbit support proved in
+`probes/P-U-NATIVE-MEMORY-EVENT-1/MEMORY-PROOF.md`, section 3, with its
+all-prefix clock proof. In the synchronized chart `(z,v,r)`, every point
+with `z in {1,4}`, `v in {v3,-v3}` and `r in F5` recurs with positive
+limiting frequency. The first two components of v are the two piston
+sums, so their total at tick three is `1-s`. Projection to the receiver
+therefore gives exactly the sums `+/-1 +/-(1-s)`. For each such sum, r
+takes every field value. This proves the displayed support and arbitrarily
+late returns to every point in it, including when `v3=0`.
+
+There are just three support types:
+
+| s | Recurrent values of q+r | Number of receiver states |
+| --- | --- | --- |
+| 0 or 2 | `{0,2,3}` | 15 |
+| 1 | `{1,4}` | 10 |
+| 3 or 4 | `{1,2,3,4}` | 20 |
+
+The third type intersects each of the other two. Put `w=q0+r0`.
+The first-three-tick quotient table, for initial z=0,1,2,3,4 respectively,
+gives receiver sums
+
+```text
+w+2, 2-w, 3-w, 4-w, -w.
+```
+
+The last four are distinct, so at least one is 3 or 4. Its recurrent
+support intersects that of every other original-sum class. If d is
+eventually equal to one value on a trajectory, arbitrarily late recurrence
+forces that value at every point of its support. An intersection therefore
+forces equality of the two assigned F values. The displayed common
+intersecting support forces equality across all five source sums, proving
+the theorem.
+
+For the ready `(0,1)`, the finite collision `C7(kappa=0)=C3(kappa=3)=(3,1)`
+already obstructs a fixed reader at those times; recurrence is what excludes
+every later waiting threshold. The theorem proves that extra information
+beyond the current receiver is necessary for nonconstant permanent readout.
+The preceding counter-dependent construction supplies sufficient information.
+It does not prove the necessity of the whole counter, and it does not exclude
+stored histories, extra observed coordinates, changed preparations, feedback
+or additional memory. The earlier five-message construction using receiver
+`(p4,p4p,q,r)` and a different preparation family retains its stated scope.
+
+### U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY [T]
+
+At fixed common origin zero and ready C0, the family of present raw inputs
+already contains every state `(0;P,C0)` with `P in F5^4`. No extra
+preparation with those same counter and receiver values can represent an
+absence distinguishable from all present inputs: it coincides with one
+of their complete initial states. Deterministic evolution then gives the
+same complete trajectory. This obstruction holds even with access to the
+full state or its whole history.
+
+There is a stronger receiver-interface bound after restricting the source
+family. By U-NATIVE-APPARATUS-HISTORY-FACTOR, equal kappa gives identical
+entire receiver histories at every common ready. There are at most five
+such histories, and only four at ready `(3,0)`. Common counter or driver
+inputs and any deterministic processor initialized independently of P do
+not separate identical histories. Consequently five distinguishable
+PRESENT payloads and a sixth ABSENT label cannot all be encoded by pistons
+alone with this same ready and origin, even using the entire receiver
+history.
+
+Removing just one piston input and designating it as absence is insufficient:
+the other 124 inputs with its kappa retain the same receiver history. A
+piston-only reserved absence must exclude every present input with the same
+observable history. In particular it must exclude its whole kappa fibre,
+leaving at most four present sum values; the exceptional ready can require
+further exclusions. Keeping all five present sums requires a preparation
+distinction outside this fixed source/ready/origin contract. Distinctness
+of a proposed larger preparation is necessary and must still be shown
+observable at its declared interface.
+
+The BLANK readiness value in U-NATIVE-RAW-RESIDUE-READOUT, a present zero
+payload, and physical absence are therefore three different notions. This
+bound does not identify an uncomputed reading with absence and does not
+claim an absence detector, invocation mechanism or physical write protocol.
+
 ### QDD-INCIDENCE-FIRST-HIT-CLASSIFICATION [T]
 
 Action layer: L1 exact finite words, combinatorial counts and conditional
@@ -10373,6 +10602,52 @@ on `C` (CARRY-J-CHECKPOINT [T] at L1,
 probes/P-CARRY-J-CHECKPOINT-1). The theorem decides no restricted carrier,
 selector offset, physical carry, phase, time, or gravity reading, decoder
 completeness, parity on all of `Z_2`, or lift to L2-L6.
+
+### U-J-POWER-CHECKPOINT-NOGO [T]
+
+Let `O=Z[j]`, `1+j+j^2+j^3+j^4=0`, `J=1+j^2`, and let m>=1.
+On any declared family of origin-zero native trajectories, suppose one
+fixed checkpoint-only function `X:F5^6->O/(5^m O)` satisfies
+
+```text
+X(psi_(n+1))=J*X(psi_n)  for every admitted head and every n>=0.
+```
+
+Then X is zero on every checkpoint of those trajectories. In particular,
+increasing the rational residue depth from five to 25 or any `5^m` cannot
+produce a nonzero such reading of the unchanged finite checkpoint.
+
+**Proof.** Native synchronization gives z3=1 for every origin-zero head.
+The driver values at steps 3,4,5 are `0,1,0`, selecting b at all three
+steps and alternating the phase `1,4,1,4`. Since b is an involution,
+`psi4=psi6` on each trajectory. Single-valuedness and the proposed
+recurrence give `(J^2-1)X(psi4)=0`. The exact integral certificate is
+
+```text
+(J^2-1)*(-2+j+2j^2+6j^3)=11.
+```
+
+Indeed `J^2-1=2j^2+j^4`; multiplying and using j^5=1 gives
+`13+2(j+j^2+j^3+j^4)=11`. Since 11 is invertible modulo `5^m`,
+the collision forces `X(psi4)=0`. Also `J^(-1)=-j-j^2` is integral,
+so the all-step recurrence propagates zero backwards to the head and
+forwards to every later checkpoint. This proves the claim for every m,
+without a finite-depth extrapolation.
+
+For a scalar `h:F5^6->F5` with the all-step law
+`h(psi_(n+1))=2h(psi_n)`, the same collision gives
+`3h(psi4)=0`, hence the same zero conclusion. This scalar law is a
+constant chronological multiplier; it is not the distinct inherited
+digit-count lift `Theta_n=2^popcount(n) mod 5`.
+
+The obstruction concerns checkpoint-only functions and the stated
+every-step law starting at n=0. The early collision alone does not prove a
+ban on recurrences imposed only after an arbitrary waiting period. It does
+not apply to a reader also receiving the native
+counter. For example the recovered raw-sum payload multiplied by `2^n`
+satisfies that scalar law from n>=3. Such an assigned time dependence
+does not identify U with multiplication by J or supply a physical law,
+apparatus realization or lift beyond L1.
 
 ### RAMIFIED-TM-SYMPLECTIC-ORIENTATION [T]
 

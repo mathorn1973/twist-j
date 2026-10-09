@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v100
+historical guards: exact reconstructed v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v101
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -155,5 +155,10 @@ PASS 150 V100-THREE-PROOFS three conditional L1 theorem rows and one declared ar
 PASS 151 V100-OWNER-BOUNDARY all 507 prior claims and all 26 live owners, gates and scheduler dispositions remain unchanged; native contact stays O
 PASS 152 V100-JOINT-SCOPE the exact joint proof separates one preparation, its one-shot image, invariant readout continuation and word-boundary record restoration
 PASS 153 V100-EVIDENCE-CUSTODY all three accepted probe bundles remain exact and the 35-reproduction inventory is unchanged; no expanded word is executed by this structural audit
+PASS 154 V101-PRIOR-BYTES thirteen complete v101 inputs reconstruct exact public v100 before all 153 unchanged historical guards
+PASS 155 V101-FOUR-PROOFS four inline L1 theorem rows bind exact scopes, written-proof evidence and dependency additions
+PASS 156 V101-OWNER-BOUNDARY all 510 prior claims and all 26 live owners, gates and scheduler dispositions remain unchanged
+PASS 157 V101-READOUT-BOUNDARY the exact proof separates counter-assisted raw-input recovery, receiver-only obstruction, absence and checkpoint multiplier boundaries from native implementation
+PASS 158 V101-AUDIT-CUSTODY one exact supplemental proof audit extends the 35-directory inventory to 36 without retroactive preregistration or alteration of historical guards
 
-RESULT 153/153 ALL PASS
+RESULT 158/158 ALL PASS
