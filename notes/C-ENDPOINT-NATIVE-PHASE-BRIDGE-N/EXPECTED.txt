@@ -1,0 +1,130 @@
+{
+  "full_photon_phase": "NOT PROVED",
+  "integer_to_hamiltonian_bridge": "NOT DERIVED",
+  "native": {
+    "E3_fiber_size": 5,
+    "E3_image_points": 3125,
+    "complete_heads": 15625,
+    "continuation_ticks": 32,
+    "controls": [
+      {
+        "bit": 0,
+        "fiber_histogram": {
+          "2": 3125,
+          "3": 3125
+        },
+        "image_points": 6250
+      },
+      {
+        "bit": 1,
+        "fiber_histogram": {
+          "1": 6250,
+          "3": 3125
+        },
+        "image_points": 9375
+      }
+    ],
+    "general_reader_class": "V^n G(ell_n), target V and G arbitrary",
+    "image_sizes": [
+      6250,
+      6250,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125,
+      3125
+    ],
+    "involution_cases": 78125,
+    "literal_merger": {
+      "head_a": [
+        4,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "head_b": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        0
+      ],
+      "output": [
+        1,
+        4,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "native_hamiltonian_selection": "NOT DERIVED",
+    "opposite_phase_encoding_on_merging_heads": "EXCLUDED by injective target theorem",
+    "retained_label_checks": 468750,
+    "retained_label_phase_pairs": 15625
+  },
+  "phase": {
+    "amplitude_encoding": "Z[zeta5]^2; supplied coherent norm/work rule",
+    "dephased_work": "0",
+    "integer_rotation_order": 5,
+    "native_preparation": "NOT DERIVED",
+    "real_hamiltonian_diagonal_tests": 11,
+    "square_of_work_mean": "(phi+2)/16",
+    "trace_gram_eigenvalues": [
+      1,
+      5,
+      5,
+      5
+    ],
+    "work_mean_minus_zeta20_coefficients": [
+      "0",
+      "-1/2",
+      "0",
+      "1/4",
+      "0",
+      "-1/4",
+      "0",
+      "1/4"
+    ],
+    "work_mean_plus_zeta20_coefficients": [
+      "0",
+      "1/2",
+      "0",
+      "-1/4",
+      "0",
+      "1/4",
+      "0",
+      "-1/4"
+    ]
+  },
+  "status": "NON-CANONICAL candidate-C finite audit only",
+  "verdict": "PASS frozen exact arithmetic and scoped native controls"
+}
