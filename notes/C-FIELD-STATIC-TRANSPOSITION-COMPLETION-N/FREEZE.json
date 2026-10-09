@@ -1,0 +1,46 @@
+{
+  "budget_seconds_per_program": 300,
+  "candidate": "C-FIELD-STATIC-TRANSPOSITION-COMPLETION-N",
+  "files": [
+    {
+      "bytes": 13958,
+      "file": "PREREG.md",
+      "sha256": "58b8e76488c0eda439407b8e52ee667dfb33ba7ffab6c88dada2a7f30c6470d1"
+    },
+    {
+      "bytes": 3979,
+      "file": "ADDENDUM-READOUT.md",
+      "sha256": "d9ada337b321f16659ead0ee0dcc76ae25efdc229f18ad4d24ef23e4cdc23320"
+    },
+    {
+      "bytes": 19809,
+      "file": "PROOF.md",
+      "sha256": "b6f389ed5b476fee7dc07aed939e599968b25e166fe3e350a854539cd86f6e34"
+    },
+    {
+      "bytes": 12690,
+      "file": "REVIEW.md",
+      "sha256": "f2ff2455a00f84ea3307220bbe2e3e6acb5228275c29e2a7ec8b592e36fbdf21"
+    },
+    {
+      "bytes": 30302,
+      "file": "verify.py",
+      "sha256": "309162881f0f66e124919b867f54b2f47b78c8d51ac35d652a29dcbea09a6340"
+    },
+    {
+      "bytes": 34311,
+      "file": "break_check.py",
+      "sha256": "c02319e5a43a70daca464b73fa909a599ba7e0ff1c4f504b07c58163eb2498b6"
+    },
+    {
+      "bytes": 3806,
+      "file": "run_once.py",
+      "sha256": "756faa724875907e894fde5dc15d2e4f47e44afd5248d2c5181e242b6f112f0e"
+    }
+  ],
+  "first_specification_frozen_utc": "2026-10-08T22:11:34Z",
+  "frozen_utc": "2026-10-08T22:23:09.200354+00:00",
+  "public_commit": null,
+  "public_gate": false,
+  "status": "NON-CANONICAL local pre-execution pin"
+}

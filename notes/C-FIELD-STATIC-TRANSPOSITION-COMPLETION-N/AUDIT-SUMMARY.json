@@ -1,0 +1,163 @@
+{
+  "independent": {
+    "contact_branches": {
+      "01": {
+        "actual_charge_change": 57446,
+        "actual_nonidentity": 64300,
+        "admission_mismatch": 0,
+        "committed_accepted": 26099,
+        "committed_fixed": 7026,
+        "committed_odd_stock_change": 0,
+        "committed_rejected": 45227,
+        "funded_raw_proposals": 71326,
+        "integral_raw_proposals": 73472,
+        "integrality_rejection": 912,
+        "mismatch_accepted_to_rejected": 0,
+        "mismatch_rejected_to_accepted": 0,
+        "stock_rejection": 2146
+      },
+      "02": {
+        "actual_charge_change": 12083,
+        "actual_nonidentity": 14089,
+        "admission_mismatch": 1019,
+        "committed_accepted": 6595,
+        "committed_fixed": 2102,
+        "committed_odd_stock_change": 8339,
+        "committed_rejected": 9596,
+        "funded_raw_proposals": 17210,
+        "integral_raw_proposals": 22198,
+        "integrality_rejection": 52186,
+        "mismatch_accepted_to_rejected": 525,
+        "mismatch_rejected_to_accepted": 494,
+        "stock_rejection": 4988
+      },
+      "12": {
+        "actual_charge_change": 12280,
+        "actual_nonidentity": 12280,
+        "admission_mismatch": 825,
+        "committed_accepted": 6627,
+        "committed_fixed": 5017,
+        "committed_odd_stock_change": 7129,
+        "committed_rejected": 10670,
+        "funded_raw_proposals": 18122,
+        "integral_raw_proposals": 22654,
+        "integrality_rejection": 51730,
+        "mismatch_accepted_to_rejected": 525,
+        "mismatch_rejected_to_accepted": 300,
+        "stock_rejection": 4532
+      }
+    },
+    "contact_cases": 223152,
+    "domains": {
+      "R_image_cosets_with_funding_boundaries": 29808,
+      "T7_frozen_initial_receiver": 2,
+      "T7_frozen_precontact_receiver": 2,
+      "breaker_raw_rotation": 729,
+      "frozen_AM_nontrivial_F": 1,
+      "frozen_common_input": 2,
+      "frozen_mismatch_witnesses": 12,
+      "frozen_positive_witness": 4,
+      "integral_branches_with_funding_boundaries": 40907,
+      "literal_endpoint_and_occupied_neutral_register": 1,
+      "primary_raw_crosscheck": 2916
+    },
+    "exact_assertions": 5123996,
+    "input_cases": 74384,
+    "maximality": {
+      "G_commuting_maps": 40,
+      "competing_maps": 160,
+      "orbit_cases": 19,
+      "orbit_cell_visits": 64
+    },
+    "reaction_branches": {
+      "AM_accepted": 8507,
+      "AM_stock_rejection": 14906,
+      "R_accepted": 17667,
+      "R_image_rejection": 29978,
+      "R_stock_rejection": 63,
+      "nonintegral_split": 1440,
+      "other_matter": 1823
+    }
+  },
+  "new_fired_claims": [],
+  "primary": {
+    "admission_mismatches": {
+      "0_to_1": 184,
+      "1_to_0": 442
+    },
+    "contact_branches": {
+      "01": {
+        "actual_identity": 3980,
+        "actual_nonidentity": 10533,
+        "commit_accepted": 7732,
+        "commit_rejected": 4345,
+        "committed": 12077,
+        "input_accepted": 7794,
+        "input_rejected": 6719,
+        "integrality_rejection": 720,
+        "raw_even_price": 13793,
+        "raw_funded": 12077,
+        "raw_integral": 13793,
+        "recorder_values_checked": 72565,
+        "stock_rejection": 1716
+      },
+      "02": {
+        "actual_identity": 9687,
+        "actual_nonidentity": 4826,
+        "admission_rejection": 223,
+        "commit_accepted": 3983,
+        "commit_rejected": 2387,
+        "committed": 6370,
+        "input_accepted": 7794,
+        "input_rejected": 6719,
+        "integrality_rejection": 5344,
+        "raw_even_price": 5375,
+        "raw_funded": 6593,
+        "raw_integral": 9169,
+        "raw_odd_price": 3794,
+        "recorder_values_checked": 72565,
+        "stock_rejection": 2576
+      },
+      "12": {
+        "actual_identity": 11015,
+        "actual_nonidentity": 3498,
+        "admission_rejection": 403,
+        "commit_accepted": 4003,
+        "commit_rejected": 2899,
+        "committed": 6902,
+        "input_accepted": 7794,
+        "input_rejected": 6719,
+        "integrality_rejection": 4984,
+        "raw_even_price": 3773,
+        "raw_funded": 7305,
+        "raw_integral": 9529,
+        "raw_odd_price": 5756,
+        "recorder_values_checked": 72565,
+        "stock_rejection": 2224
+      }
+    },
+    "contact_cases": 43539,
+    "domains": {
+      "fixed_witnesses": 25,
+      "primary_integral": 11560,
+      "primary_raw": 2916,
+      "readout_addendum": 12
+    },
+    "exact_assertions": 1204172,
+    "input_cases": 14513,
+    "reaction_branches": {
+      "AM_accepted": 2506,
+      "AM_stock_rejection": 3956,
+      "R_accepted": 5288,
+      "R_image_rejection": 132,
+      "R_stock_rejection": 21,
+      "nonintegral_split": 1152,
+      "nonreactive_m": 1458
+    }
+  },
+  "public_gate": false,
+  "python": "3.12.14",
+  "runtime_architectures": [
+    "x86_64"
+  ]
+}

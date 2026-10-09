@@ -1,0 +1,548 @@
+C-FIELD-STATIC-TRANSPOSITION-COMPLETION-N primary exact audit
+NON-CANONICAL candidate-C finite audit; Fraction implementation; L1
+Frozen source; no random sampling; finite success is not an infinite-carrier proof.
+primary_raw_domain: completed
+primary_integral_domain: completed
+{
+  "admission_mismatch_directions": {
+    "0_to_1": 184,
+    "1_to_0": 442
+  },
+  "contacts": {
+    "01": {
+      "actual_identity": 3980,
+      "actual_nonidentity": 10533,
+      "commit_accepted": 7732,
+      "commit_rejected": 4345,
+      "committed": 12077,
+      "input_accepted": 7794,
+      "input_rejected": 6719,
+      "integrality_rejection": 720,
+      "raw_even_price": 13793,
+      "raw_funded": 12077,
+      "raw_integral": 13793,
+      "recorder_values_checked": 72565,
+      "stock_rejection": 1716
+    },
+    "02": {
+      "actual_identity": 9687,
+      "actual_nonidentity": 4826,
+      "admission_rejection": 223,
+      "commit_accepted": 3983,
+      "commit_rejected": 2387,
+      "committed": 6370,
+      "input_accepted": 7794,
+      "input_rejected": 6719,
+      "integrality_rejection": 5344,
+      "raw_even_price": 5375,
+      "raw_funded": 6593,
+      "raw_integral": 9169,
+      "raw_odd_price": 3794,
+      "recorder_values_checked": 72565,
+      "stock_rejection": 2576
+    },
+    "12": {
+      "actual_identity": 11015,
+      "actual_nonidentity": 3498,
+      "admission_rejection": 403,
+      "commit_accepted": 4003,
+      "commit_rejected": 2899,
+      "committed": 6902,
+      "input_accepted": 7794,
+      "input_rejected": 6719,
+      "integrality_rejection": 4984,
+      "raw_even_price": 3773,
+      "raw_funded": 7305,
+      "raw_integral": 9529,
+      "raw_odd_price": 5756,
+      "recorder_values_checked": 72565,
+      "stock_rejection": 2224
+    }
+  },
+  "exact_assertions": 1204172,
+  "input_properties": {
+    "integral_split": 12209,
+    "neutral_m": 13784,
+    "nonintegral_split": 2304,
+    "nonneutral_m": 729,
+    "nonzero_defect": 2871,
+    "zero_defect": 11642
+  },
+  "input_rows": {
+    "fixed_witnesses": 25,
+    "primary_integral": 11560,
+    "primary_raw": 2916,
+    "readout_addendum": 12
+  },
+  "reaction_branches": {
+    "AM_accepted": 2506,
+    "AM_stock_rejection": 3956,
+    "R_accepted": 5288,
+    "R_image_rejection": 132,
+    "R_stock_rejection": 21,
+    "nonintegral_split": 1152,
+    "nonreactive_m": 1458
+  },
+  "status": "PASS",
+  "witnesses": [
+    {
+      "E_after": [
+        1,
+        1,
+        -2,
+        3
+      ],
+      "G_stock_after": 0,
+      "G_stock_before": 5,
+      "H1": 335,
+      "contact": "02",
+      "delta_parity": -1,
+      "name": "positive_five",
+      "price": 5,
+      "stock_after": 2,
+      "stock_before": 7
+    },
+    {
+      "G_partner_stock": 3,
+      "complete_contact_identity": true,
+      "contact": "02",
+      "naive_commutator_equal": false,
+      "name": "admission_mismatch",
+      "raw_stock": 0,
+      "stock": 5
+    },
+    {
+      "G_partner_stock": 4,
+      "complete_contact_identity": true,
+      "contact": "02",
+      "naive_commutator_equal": false,
+      "name": "admission_mismatch",
+      "raw_stock": 1,
+      "stock": 6
+    },
+    {
+      "F_changes_state": true,
+      "SF_equals_FS": true,
+      "contact": "02",
+      "name": "nontrivial_field_step",
+      "price": 5
+    },
+    {
+      "B_after_S_eta": 2,
+      "S_after_B_eta": 7,
+      "both_cell_stocks": 0,
+      "commutator_equal": false,
+      "contact": "02",
+      "name": "stock_swap_B"
+    },
+    {
+      "E_after": [
+        1,
+        1,
+        3,
+        -2
+      ],
+      "G_stock_after": 0,
+      "G_stock_before": 5,
+      "H1": 335,
+      "contact": "12",
+      "delta_parity": -1,
+      "name": "positive_five",
+      "price": 5,
+      "stock_after": 2,
+      "stock_before": 7
+    },
+    {
+      "G_partner_stock": 3,
+      "complete_contact_identity": true,
+      "contact": "12",
+      "naive_commutator_equal": false,
+      "name": "admission_mismatch",
+      "raw_stock": 0,
+      "stock": 5
+    },
+    {
+      "G_partner_stock": 4,
+      "complete_contact_identity": true,
+      "contact": "12",
+      "naive_commutator_equal": false,
+      "name": "admission_mismatch",
+      "raw_stock": 1,
+      "stock": 6
+    },
+    {
+      "F_changes_state": true,
+      "SF_equals_FS": true,
+      "contact": "12",
+      "name": "nontrivial_field_step",
+      "price": 5
+    },
+    {
+      "B_after_S_eta": 2,
+      "S_after_B_eta": 7,
+      "both_cell_stocks": 0,
+      "commutator_equal": false,
+      "contact": "12",
+      "name": "stock_swap_B"
+    },
+    {
+      "H1": 424,
+      "S12_E_after": [
+        3,
+        3,
+        -1,
+        -1
+      ],
+      "S12_stock_after": 86,
+      "delta_parity": -1,
+      "name": "common_PR_input",
+      "prices_01_02_12": [
+        0,
+        0,
+        -5
+      ]
+    },
+    {
+      "attaining_midpoint_estimate": "167/2",
+      "gains": [
+        81,
+        86
+      ],
+      "histories": [
+        {
+          "contact": "01",
+          "contextual_inverse_equals_initial": true,
+          "final_contact_price": 0,
+          "full_final_equals_Y": true,
+          "last_receiver_gain": 81,
+          "stages": [
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 0,
+              "p": 0,
+              "receiver_E": [
+                -2,
+                0,
+                2,
+                -3
+              ],
+              "receiver_H1": 343,
+              "receiver_M": [
+                0,
+                0
+              ],
+              "receiver_b_charges": [
+                0,
+                5,
+                -5
+              ],
+              "receiver_m": "AM",
+              "receiver_stock": 6,
+              "source_stock": 81,
+              "stage": "initial"
+            },
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 0,
+              "p": 0,
+              "receiver_E": [
+                -5,
+                0,
+                5,
+                0
+              ],
+              "receiver_H1": 343,
+              "receiver_M": [
+                0,
+                -5
+              ],
+              "receiver_b_charges": [
+                0,
+                5,
+                -5
+              ],
+              "receiver_m": "R",
+              "receiver_stock": 0,
+              "source_stock": 81,
+              "stage": "after_G"
+            },
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 81,
+              "p": 0,
+              "receiver_E": [
+                -5,
+                0,
+                5,
+                0
+              ],
+              "receiver_H1": 343,
+              "receiver_M": [
+                0,
+                -5
+              ],
+              "receiver_b_charges": [
+                0,
+                5,
+                -5
+              ],
+              "receiver_m": "R",
+              "receiver_stock": 0,
+              "source_stock": 0,
+              "stage": "after_A"
+            },
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 0,
+              "p": 0,
+              "receiver_E": [
+                -5,
+                0,
+                5,
+                0
+              ],
+              "receiver_H1": 424,
+              "receiver_M": [
+                0,
+                -5
+              ],
+              "receiver_b_charges": [
+                0,
+                5,
+                -5
+              ],
+              "receiver_m": "R",
+              "receiver_stock": 81,
+              "source_stock": 0,
+              "stage": "after_B"
+            },
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 0,
+              "p": 0,
+              "receiver_E": [
+                0,
+                0,
+                0,
+                -5
+              ],
+              "receiver_H1": 424,
+              "receiver_M": [
+                0,
+                0
+              ],
+              "receiver_b_charges": [
+                0,
+                5,
+                -5
+              ],
+              "receiver_m": "R",
+              "receiver_stock": 81,
+              "source_stock": 0,
+              "stage": "after_F"
+            },
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 0,
+              "p": 0,
+              "receiver_E": [
+                2,
+                2,
+                1,
+                -4
+              ],
+              "receiver_H1": 424,
+              "receiver_M": [
+                0,
+                0
+              ],
+              "receiver_b_charges": [
+                5,
+                0,
+                -5
+              ],
+              "receiver_m": "R",
+              "receiver_stock": 81,
+              "source_stock": 0,
+              "stage": "after_contact"
+            }
+          ]
+        },
+        {
+          "contact": "12",
+          "contextual_inverse_equals_initial": true,
+          "final_contact_price": 5,
+          "full_final_equals_Y": true,
+          "last_receiver_gain": 86,
+          "stages": [
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 0,
+              "p": 0,
+              "receiver_E": [
+                1,
+                3,
+                1,
+                1
+              ],
+              "receiver_H1": 338,
+              "receiver_M": [
+                0,
+                0
+              ],
+              "receiver_b_charges": [
+                5,
+                -5,
+                0
+              ],
+              "receiver_m": "AM",
+              "receiver_stock": 6,
+              "source_stock": 86,
+              "stage": "initial"
+            },
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 0,
+              "p": 0,
+              "receiver_E": [
+                -2,
+                3,
+                4,
+                4
+              ],
+              "receiver_H1": 338,
+              "receiver_M": [
+                0,
+                -5
+              ],
+              "receiver_b_charges": [
+                5,
+                -5,
+                0
+              ],
+              "receiver_m": "R",
+              "receiver_stock": 0,
+              "source_stock": 86,
+              "stage": "after_G"
+            },
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 86,
+              "p": 0,
+              "receiver_E": [
+                -2,
+                3,
+                4,
+                4
+              ],
+              "receiver_H1": 338,
+              "receiver_M": [
+                0,
+                -5
+              ],
+              "receiver_b_charges": [
+                5,
+                -5,
+                0
+              ],
+              "receiver_m": "R",
+              "receiver_stock": 0,
+              "source_stock": 0,
+              "stage": "after_A"
+            },
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 0,
+              "p": 0,
+              "receiver_E": [
+                -2,
+                3,
+                4,
+                4
+              ],
+              "receiver_H1": 424,
+              "receiver_M": [
+                0,
+                -5
+              ],
+              "receiver_b_charges": [
+                5,
+                -5,
+                0
+              ],
+              "receiver_m": "R",
+              "receiver_stock": 86,
+              "source_stock": 0,
+              "stage": "after_B"
+            },
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 0,
+              "p": 0,
+              "receiver_E": [
+                3,
+                3,
+                -1,
+                -1
+              ],
+              "receiver_H1": 424,
+              "receiver_M": [
+                0,
+                0
+              ],
+              "receiver_b_charges": [
+                5,
+                -5,
+                0
+              ],
+              "receiver_m": "R",
+              "receiver_stock": 86,
+              "source_stock": 0,
+              "stage": "after_F"
+            },
+            {
+              "cell_link_energy": 424,
+              "energy_plus_pointer": 425,
+              "eta": 0,
+              "p": 0,
+              "receiver_E": [
+                2,
+                2,
+                1,
+                -4
+              ],
+              "receiver_H1": 424,
+              "receiver_M": [
+                0,
+                0
+              ],
+              "receiver_b_charges": [
+                5,
+                0,
+                -5
+              ],
+              "receiver_m": "R",
+              "receiver_stock": 81,
+              "source_stock": 0,
+              "stage": "after_contact"
+            }
+          ]
+        }
+      ],
+      "name": "same_final_state_distinct_last_gains",
+      "worst_case_absolute_error_lower_bound": "5/2"
+    }
+  ]
+}
+PASS: all frozen finite comparisons completed; no formal gate or physical derivation.

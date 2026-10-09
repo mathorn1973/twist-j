@@ -1,0 +1,52 @@
+{
+  "architecture": "x86_64",
+  "first_execution": false,
+  "original_file_count": 21,
+  "original_files_unchanged": true,
+  "platform": "Ubuntu 22.04.5 LTS",
+  "public_gate": false,
+  "python": "3.10.12",
+  "records": [
+    {
+      "elapsed_seconds": 8.481585,
+      "exit_code": 0,
+      "program": "verify.py",
+      "source": {
+        "bytes": 30302,
+        "sha256": "309162881f0f66e124919b867f54b2f47b78c8d51ac35d652a29dcbea09a6340"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr_equals_original": true,
+      "stdout": {
+        "bytes": 13371,
+        "sha256": "7b285b713da76c2c73b34d4e4c2f6b3cced91117dbf41c200a4dcc61582b497a"
+      },
+      "stdout_equals_original": true,
+      "timeout": false
+    },
+    {
+      "elapsed_seconds": 7.078808,
+      "exit_code": 0,
+      "program": "break_check.py",
+      "source": {
+        "bytes": 34311,
+        "sha256": "c02319e5a43a70daca464b73fa909a599ba7e0ff1c4f504b07c58163eb2498b6"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr_equals_original": true,
+      "stdout": {
+        "bytes": 6539,
+        "sha256": "28f359edbdf06352feb692137b029c4711fafdcb46a39e8e2a9d737e4db54d4e"
+      },
+      "stdout_equals_original": true,
+      "timeout": false
+    }
+  ],
+  "status": "PASS"
+}
