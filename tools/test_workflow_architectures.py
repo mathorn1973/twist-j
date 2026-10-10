@@ -27,10 +27,10 @@ class WorkflowArchitectureTests(unittest.TestCase):
         architecture_block = self.text[architecture_at:check_at]
         check_block = self.text[check_at:publication_at]
         publication_block = self.text[publication_at:]
-        self.assertIn("timeout-minutes: 35", architecture_block)
+        self.assertIn("timeout-minutes: 45", architecture_block)
         self.assertIn("timeout-minutes: 5", check_block)
         self.assertIn("timeout-minutes: 40", publication_block)
-        self.assertEqual(self.text.count("timeout-minutes: 35"), 1)
+        self.assertEqual(self.text.count("timeout-minutes: 45"), 1)
         self.assertEqual(self.text.count("timeout-minutes: 40"), 1)
         self.assertEqual(self.text.count("timeout-minutes: 5"), 1)
 
