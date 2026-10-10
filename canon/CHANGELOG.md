@@ -1,5 +1,44 @@
 # Canon changelog (public series)
 
+## Public Canon v101
+
+Accept four L1 theorems with self-contained reviewed proofs. The unchanged
+native U transfers the sum of arbitrary four-piston inputs modulo five
+through a common receiver prepared at (0,1), without a source-side
+precomputed answer. The explicit current-receiver and counter reader is
+correct at every n>=3. A context with at most twenty values suffices for
+its evaluation; neither minimality nor a native update mechanism follows,
+and the initial readiness distinction remains separate.
+
+For every common receiver preparation, the actual recurrent native support
+forces any eventually constant current-receiver-only function of the
+original sum to be constant across the full input family. This is the need
+for additional distinguishing information, not proof that the whole integer
+counter is necessary. The complete-history factor also precludes five
+present residue values plus an absence label in the same port: one must
+reserve a whole observable class, not one piston input. At ready (0,1), at
+most four present values remain after doing so. No persistent absence or
+new write mechanism is supplied.
+
+The universal checkpoint collision and an exact cyclotomic unit certificate
+exclude nonzero checkpoint-only readings evolving by J modulo 5^m, for every
+m>=1, when the recurrence is required at every step from origin zero. This
+is a new consequence of the inherited collision, not a restatement of its
+older Thue-Morse phase-factor claim, and not a delayed-only recurrence ban.
+
+All 510 prior claims and all 26 H/O owners retain their exact scopes,
+statuses and decision conditions. No physical reader, autonomous compact
+clock, preparation law, source erasure, measurement, reset, occupied-record
+continuation or L2-L6 bridge is added. Registry grows to 514 claims:
+0 T-LOCK, 371 T, 59 D, 39 C, 2 H, 24 O and 19 F, with 26 live H/O.
+
+One minimal exact proof audit extends the reproduction inventory from 35
+to 36. Its formulas and earlier exploratory checks were already exposed;
+this is neither a new formal probe nor retrospective preregistration. The
+infinite-time and all-modulus statements rest on the written proofs. The
+release-accounting extension reconstructs the exact v100 inputs and
+retains every historical guard without changing scientific thresholds.
+
 ## Public Canon v100
 
 Accept three conditional L1 theorems with separately reviewed written
@@ -442,8 +481,8 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 510 claims; 0 T-LOCK, 367 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
-Reproduction witnesses: 35.
+Registry snapshot: 514 claims; 0 T-LOCK, 371 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 36.
 <!-- END GENERATED CURRENT COUNTS -->
 
 ## Public Canon v83

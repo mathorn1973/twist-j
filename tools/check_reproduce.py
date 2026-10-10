@@ -54,6 +54,9 @@ def changed_reproductions(base: str | None) -> list[Path]:
     if touches_canon(changed):
         print("REPRODUCE FULL SWEEP canon change")
         return sorted(path for path in REPRODUCE.iterdir() if path.is_dir())
+    if ".github/workflows/policy.yml" in changed:
+        print("REPRODUCE FULL SWEEP workflow change")
+        return sorted(path for path in REPRODUCE.iterdir() if path.is_dir())
     names = set()
     for raw in changed:
         parts = Path(raw).parts

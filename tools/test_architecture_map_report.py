@@ -25,16 +25,16 @@ class ArchitectureMapReportTests(unittest.TestCase):
 
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v100 adds three conditional T claims on accepted public probes.
-        self.assertEqual(self.report.claims, 510)
+        # v101 adds four inline L1 theorems with supplemental proof audits.
+        self.assertEqual(self.report.claims, 514)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 367},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 371},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 94,
+                "none": 98,
                 "one-architecture": 9,
                 "recorded-audit": 31,
                 "two-architecture": 376,
@@ -45,7 +45,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 200)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 357
+            len(self.report.transitive_architecture_dependents), 361
         )
         self.assertEqual(len(self.report.dependency_terminals), 70)
         # v95 adds ten inline theorems (architecture_requirement=none).
@@ -81,6 +81,29 @@ class ArchitectureMapReportTests(unittest.TestCase):
         requires = architecture.dependency_graph(
             (row["item_id"] for row in normative), dependencies, "REQUIRES"
         )
+        # The v101 raw-input readers and checkpoint obstruction depend on
+        # the unchanged native architecture; none admits a physical reader.
+        v101_edges = {
+            "U-NATIVE-RAW-RESIDUE-READOUT": {
+                "DEF-AUTONOMOUS-STATE", "U-NATIVE-APPARATUS-HISTORY-FACTOR",
+            },
+            "U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO": {
+                "DEF-AUTONOMOUS-STATE", "U-NATIVE-APPARATUS-HISTORY-FACTOR",
+                "U-NATIVE-INVARIANT-AND-NOWRITE",
+            },
+            "U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY": {
+                "U-NATIVE-APPARATUS-HISTORY-FACTOR",
+                "U-NATIVE-RAW-RESIDUE-READOUT",
+            },
+            "U-J-POWER-CHECKPOINT-NOGO": {
+                "DEF-AUTONOMOUS-STATE", "CARRY-J-CHECKPOINT", "J-UNIT",
+            },
+        }
+        for item, expected in v101_edges.items():
+            self.assertEqual(requires[item], expected)
+            self.assertIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertNotIn(item, self.report.dependency_terminals)
         # The v100 conditional architecture and its three theorems reach
         # existing native definitions. These exact graph edges do not
         # independently admit the added interfaces or close the open owner.

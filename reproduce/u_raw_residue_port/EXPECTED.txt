@@ -1,0 +1,8 @@
+u_raw_residue_port: supplementary exact L1 proof audit
+raw ready (0,1): 625 sources, ticks 0..256, 160625 quotient agreements, 158750 restorations
+all 25 readies: first-three formulas and source fibres; 21 good tails, 4 exceptional tails
+receiver supports: 25 starts, ticks 3..1024, 25550 states; overlap graphs connected for all 25 readies
+absence: 5 fibres of 125 sources; excluding one leaves 124 indistinguishable present sources
+reader: 20 sufficient contexts, explicit non-autonomy witness, BLANK and PRESENT(0) distinguished
+cyclotomic identities exact over Z[j]; psi4=psi6 for all 15625 origin-zero seeds
+PASS; bounded audits do not prove infinite recurrence, context minimality or physical implementation
