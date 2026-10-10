@@ -118,6 +118,9 @@ def changed_probes(base: str | None) -> list[Path]:
     if touches_canon(changed):
         print("VERIFY FULL SWEEP canon change")
         return sorted(path for path in PROBES.iterdir() if path.is_dir())
+    if ".github/workflows/policy.yml" in changed:
+        print("VERIFY FULL SWEEP workflow change")
+        return sorted(path for path in PROBES.iterdir() if path.is_dir())
     if _context.REPLAY_CONTROL_PATHS.intersection(changed):
         try:
             names.update(_context.registrations(ROOT))

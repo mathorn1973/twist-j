@@ -138,7 +138,7 @@ for invariant in (
     "architecture: x86_64\n            runner: ubuntu-latest",
     "architecture: aarch64\n            runner: ubuntu-24.04-arm",
     "runs-on: ${{ matrix.runner }}",
-    "runs-on: ${{ matrix.runner }}\n    timeout-minutes: 35",
+    "runs-on: ${{ matrix.runner }}\n    timeout-minutes: 45",
     "  check:\n    if: always() && github.ref_type != 'tag' && github.event_name != 'release'\n    needs: architecture\n    runs-on: ubuntu-latest",
     "needs: architecture\n    runs-on: ubuntu-latest\n    timeout-minutes: 5",
     "if: needs.architecture.result != 'success'",
