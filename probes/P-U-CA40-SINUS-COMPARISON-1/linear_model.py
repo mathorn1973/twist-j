@@ -219,5 +219,3 @@ def advance(model, old, case, segment, duration):
     out["unary"] -= 2*u*duration*sinc*sum(responses[j]*math.sin(
          model["k"]*model["position"][j+3]-model["mu"]*(start+duration/2)) for j in range(2))
     return out
-
-
