@@ -58,7 +58,12 @@ separate earned Canon fold. QUADRATIC-MEMORY-NATIVE-CONTACT [O] and
 QDD-INSTRUMENT-APPARATUS [O] retain their existing scopes and statuses.
 Canon, registry, frontier, gates, workflows and releases are unchanged.
 
-The local formal result is PASS. Independent GitHub x86_64/aarch64 replay
-and the aggregate required check are pending when this initial result is
-recorded; their actual evidence will be added without changing either frozen
-source file.
+The local formal result is PASS. Independent GitHub x86_64 and aarch64
+replays also passed on result commit
+`2b1ae9ac3749525de6f61fa5edc8523f4148e979` in
+[required workflow 38483453294](https://github.com/mathorn1973/twist-j/actions/runs/38483453294).
+Both job logs confirm the same pinned verifier and exact stdout hashes, and
+the aggregate check passed. RUN.md records their actual job links, Python
+version and the distinct aarch64 leg. The two-architecture computation gate
+is satisfied for this finite audit; no public claim status is assigned.
+The verifier, preregistration and expected stdout remain unchanged.

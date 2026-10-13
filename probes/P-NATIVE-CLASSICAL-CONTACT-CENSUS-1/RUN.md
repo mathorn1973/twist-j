@@ -44,5 +44,42 @@ Results were written outside the execution checkout after successful completion.
 
 The earlier Windows preparation replays and guard-removal development check
 were disclosed before this pin. They remain prior knowledge, not this formal
-run, blind prediction or independent architecture evidence. GitHub architecture
-replay is recorded separately when its required jobs finish.
+run, blind prediction or independent architecture evidence.
+
+## Independent architecture replay
+
+[Required workflow 38483453294](https://github.com/mathorn1973/twist-j/actions/runs/38483453294)
+passed on result commit `2b1ae9ac3749525de6f61fa5edc8523f4148e979`.
+That commit adds only the three result records to the immutable source pin.
+Both architecture job logs were read back and contain the exact verifier hash
+`e629d525616b07b112d19cfe98553ea0bc93a9ce5c57f7241af4238231c32acb`
+and stdout hash
+`4e1cb9c563d5fe96bf1058b8c81e66fb955e1414bcc77e55a6c84af12aeb50b5`
+in VERIFY PASS. Their recorded execution architectures match their names.
+Both jobs used CPython 3.12.15 and passed all 188 repository unit tests,
+policy, Canon, ledger and gate-contract checks. The aggregate check passed.
+
+| Architecture | Required job | Exact changed-probe replay |
+|---|---|---|
+| x86_64 | [115591307532](https://github.com/mathorn1973/twist-j/actions/runs/38483453294/job/115591307532) | PASS |
+| aarch64 | [115591307792](https://github.com/mathorn1973/twist-j/actions/runs/38483453294/job/115591307792) | PASS |
+
+The named GitHub leg below records the aarch64 job, distinct from the initial
+local x86_64 architecture. VERIFY PASS entails exit 0, empty stderr and exact
+byte agreement with the one committed EXPECTED.txt under check_verifier.py.
+
+```text
+github_platform: GitHub-hosted Ubuntu 24.04 (ubuntu-24.04-arm)
+github_architecture: aarch64
+github_python: 3.12.15
+github_verifier_sha256: e629d525616b07b112d19cfe98553ea0bc93a9ce5c57f7241af4238231c32acb
+github_stdout_sha256: 4e1cb9c563d5fe96bf1058b8c81e66fb955e1414bcc77e55a6c84af12aeb50b5
+github_exit_code: 0
+github_stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+github_stderr_bytes: 0
+github_status: PASS
+```
+
+This evidence satisfies the two-architecture computation gate at the frozen
+finite scope. It does not promote a public claim or admit a physical contact.
+Only result records change after the source pin.
