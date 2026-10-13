@@ -9,7 +9,15 @@ reserved separately as [#1488](https://github.com/mathorn1973/twist-j/issues/148
 They implement the target in the predecessor
 [B design](../C-CLASSICAL-SIGNED-PORT-CONTRACT-N/RESTORATION_CERTIFIER.md).
 The formal preregistration, source pin and first outcome govern execution.
-No successful restoration is claimed by this implementation note.
+
+The [first accepted result](../../probes/P-DP5-ENDPOINT-RESTORATION-1/RESULT.md)
+completed all 720 overlaps and six pairs within the fixed budget. All six
+new retained-coherence rectangles are covered by the old boxes; comparison
+of the six new linear-reference boxes remains `NOT_DECIDED`, with no
+conflict. All six precision goals pass. This is a conditional numerical
+restoration, not an independent validation of the inherited parameter
+preparation or propagation. The accepted source README is retained as its
+unchanged preregistration-time snapshot.
 
 [CUSTODY.md](CUSTODY.md) records the newly closed serialized-input content
 and actual final-campaign receipt association. The implementation uses

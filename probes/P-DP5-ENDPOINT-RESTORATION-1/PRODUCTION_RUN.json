@@ -1,0 +1,38 @@
+{
+  "production": {
+    "architecture": "x86_64",
+    "attempts": 1,
+    "candidate": "e801d1dc546127db2f065c212b7830938f734045",
+    "ended_utc": "2026-10-13T15:56:59.398838+00:00",
+    "exit_code": 0,
+    "inputs_written_by_this_program": false,
+    "platform": "Linux",
+    "propagation_performed": false,
+    "python": "3.13.5",
+    "result_bytes": 899553,
+    "result_sha256": "59f2d0d9386842c5914eab566f33059c67541b0c1c7031f8cf79326feb56fa70",
+    "started_utc": "2026-10-13T15:47:53.597141+00:00",
+    "wall_seconds": 545.7959707044065
+  },
+  "supervisor": {
+    "ended_utc": "2026-10-13T15:56:59.465926+00:00",
+    "exit_code": 0,
+    "started_utc": "2026-10-13T15:47:53.490806+00:00",
+    "stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 899553,
+      "sha256": "59f2d0d9386842c5914eab566f33059c67541b0c1c7031f8cf79326feb56fa70"
+    },
+    "wall_seconds": 545.975156256929
+  },
+  "dispatch": {
+    "ended_utc": "2026-10-13T15:56:59.475212+00:00",
+    "production_attempts": 1,
+    "production_exit_code": 0,
+    "source_clean_after": true,
+    "status": "FIRST_OUTCOME_PRESERVED"
+  }
+}
