@@ -17,6 +17,7 @@ ended_utc: 2026-10-12T12:16:22.060726+00:00
 wall_seconds: 0.31548903696238995
 exit_code: 0
 stdout_bytes: 1873
+stdout_lines: 1
 stdout_sha256: eab9939898c8231eea0705ef76b541e63318f0a4ce04910529ffd49ad4ca9251
 stderr_bytes: 0
 stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
