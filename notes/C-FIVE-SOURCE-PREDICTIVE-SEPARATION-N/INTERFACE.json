@@ -7,8 +7,9 @@
   "authority_base": "8b91a935c426036e00ecb300019fd94734addeec",
   "preregistration_commit": "274a88757863f55a838068e92241af1ee23f2de4",
   "initial_result_commit": "58d7d6d962d847a19473dc8b233e2f844b2d378d",
-  "revision_round": "R1 after A4 review (https://github.com/mathorn1973/twist-j/pull/1503#pullrequestreview-5524640334)",
-  "proof_status": "AUTHORED_PROOF; SELF_REVIEWED; A4_REVIEWED_R1_AMENDED",
+  "r1_result_commit": "963ac3d0cc2386eddf7b636ebb817fc098697155",
+  "revision_round": "R2 narrow completion after A4 R1 review (https://github.com/mathorn1973/twist-j/pull/1503#pullrequestreview-5525320737)",
+  "proof_status": "AUTHORED_PROOF; SELF_REVIEWED; A4_REVIEWED_R1_R2_AMENDED",
   "scientific_code_status": "NONE / NOT_RUN",
   "physical_status": "NOT_READY",
   "interface": {
@@ -76,7 +77,7 @@
     },
     "6_admitted_primitives": {
       "native_step_U_and_involutions": "Inherited from Public Canon v101 (8b91a935c426036e00ecb300019fd94734addeec)",
-      "classical_wave_stencil_source_and_tape_F": "Inherited conditional premise from #1484/#1485 (4302c31f07823b2a843e3702ca14620c1917b853) on ordered ports R = ((0,0,0),(1,1,0),(1,0,1),(0,1,1)) in D_3^4 with y_4 = (1,-1,0)",
+      "classical_wave_stencil_source_and_tape_F": "Inherited conditional premise from #1484/#1485 (4302c31f07823b2a843e3702ca14620c1917b853) on ordered ports R = ((0,0,0),(1,1,0),(1,0,1),(0,1,1)) in D_3^4 with y_4 = (2,0,0)",
       "balanced_lift_eta_and_contact_C_star": "Inherited conditional premise from #1486/#1489 (7b3fa47c0223bd99fce977de6ea58d484e257033)",
       "bounded_store_involution_H_B": "Inherited read-only premise from #1495/#1496 (b7636a334b09fcc68422bcd6cc6e15334d416c59) with (v,w,b,sigma) and guard 0 <= b - Delta_sigma <= B",
       "native_compilation_and_physical_transducer": "UNSUPPLIED"
@@ -113,7 +114,7 @@
         "y_2 = (1,0,1)",
         "y_3 = (0,1,1)"
       ],
-      "zero_mean_reference_site": "y_4 = (1,-1,0)",
+      "zero_mean_reference_site": "y_4 = (2,0,0)",
       "coupler_gain": "g_j = 2",
       "chronological_readout": "Y_2 = (b_0, b_1) = ((B_tape)_1, (B_tape)_0) in (Q^4)^2"
     },

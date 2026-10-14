@@ -4,7 +4,7 @@
 Original work Apache-2.0, A. M. Thorn, 2026-10-14.
 Reservation: [#1500](https://github.com/mathorn1973/twist-j/issues/1500), dispatched under [#1497](https://github.com/mathorn1973/twist-j/issues/1497).
 Contract and preregistration pin: `274a88757863f55a838068e92241af1ee23f2de4` ([README.md](README.md), [CONTRACT.md](CONTRACT.md), [PREREG.md](PREREG.md), [SOURCES.json](SOURCES.json)).
-Revision context: R1 analytical amendment of `58d7d6d962d847a19473dc8b233e2f844b2d378d` addressing [A4 review findings](https://github.com/mathorn1973/twist-j/pull/1503#pullrequestreview-5524640334) per [REVISION_ASSIGNMENT_A3](https://github.com/mathorn1973/twist-j/issues/1500#issuecomment-6178752881) (outcome-exposed after [administrative intake](https://github.com/mathorn1973/twist-j/issues/1497#issuecomment-6178339036) and [A4 review summary](https://github.com/mathorn1973/twist-j/issues/1497#issuecomment-6178492183)).
+Revision context: R1/R2 analytical amendment of `58d7d6d962d847a19473dc8b233e2f844b2d378d` and `963ac3d0cc2386eddf7b636ebb817fc098697155` addressing [A4 R0 review](https://github.com/mathorn1973/twist-j/pull/1503#pullrequestreview-5524640334) and [A4 R1 review](https://github.com/mathorn1973/twist-j/pull/1503#pullrequestreview-5525320737) per [R1 assignment](https://github.com/mathorn1973/twist-j/issues/1500#issuecomment-6178752881) and [R2 narrow completion](https://github.com/mathorn1973/twist-j/issues/1500#issuecomment-6179502346).
 
 All derivations in this document are exact symbolic L1 proofs over $\mathbb{F}_5$ and $\mathbb{Q}$. No scientific verifier, numerical solver, or laboratory measurement was executed (`AUTHORED_PROOF`, `SELF_REVIEWED`, `NOT_INDEPENDENTLY_REVIEWED`).
 
@@ -147,7 +147,7 @@ which solves directly for (A9)–(A10). $\square$
 Throughout Sections 2–4, the five marked sites $Y = \{y_0, y_1, y_2, y_3, y_4\} \subset D_3 = \{x \in \mathbb{Z}^3 : x_1 + x_2 + x_3 \equiv 0 \pmod 2\}$ and the ordered four-port readout tuple $R = (y_0, y_1, y_2, y_3)$ are frozen to the exact inherited coordinates of `notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md` (`4302c31f07823b2a843e3702ca14620c1917b853`):
 
 $$
-y_0 = (0,0,0), \quad y_1 = (1,1,0), \quad y_2 = (1,0,1), \quad y_3 = (0,1,1), \quad y_4 = (1,-1,0) \in D_3. \tag{B0}
+y_0 = (0,0,0), \quad y_1 = (1,1,0), \quad y_2 = (1,0,1), \quad y_3 = (0,1,1), \quad y_4 = (2,0,0) \in D_3. \tag{B0}
 $$
 
 All response matrices $M, Q, K, J, R_0, R_1$ and integer port tables $12960\,b_0, 1399680\,b_1$ in this package are expressed with respect to this exact ordered tuple $R = ((0,0,0), (1,1,0), (1,0,1), (0,1,1))$.
@@ -372,7 +372,7 @@ Then:
    $$
 
 **Proof.**
-Since $J_{01}$ fixes $e_0, e_1$ and negates $e_2, e_3$, $J_{01} z = z$ for all $z \in \Pi_2$, giving $R_t J_{01} z = R_t z$ and $z^T J_{01}^T G_{\mathrm{source}} J_{01} z = z^T G_{\mathrm{source}} z$. For any $s \notin \Pi_2$, $s_{23} = \frac{1}{2}(s - J_{01} s) \ne 0$; injectivity of $R_0 = -\frac{1}{4}M$ on $\mathbb{Q}^4$ (`notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/PROOF.md`, where $\det(-\frac{1}{4}M) = +\frac{1}{4^4}\det M > 0$) implies $R_0(J_{01}s - s) = -2R_0 s_{23} \ne 0$. For $s = e_0 + e_2$, $J_{01}(e_0 + e_2) = e_0 - e_2$; adding and subtracting columns $0$ and $2$ of $12960\,R_0 = -2(1620\,M)$ and $1399680\,R_1 = 2(699840\,R_1)$ yields (C17), while $(e_0 \pm e_2)^T (I_4 - \frac{1}{5}\mathbf{1}\mathbf{1}^T)(e_0 \pm e_2)/2$ equals $(2 - \frac{4}{5})/2 = \frac{3}{5}$ for $+$ and $(2 - 0)/2 = 1$ for $-$. $\square$
+Since $J_{01}$ fixes $e_0, e_1$ and negates $e_2, e_3$, $J_{01} z = z$ for all $z \in \Pi_2$, giving $R_t J_{01} z = R_t z$ and $z^T J_{01}^T G_{\mathrm{source}} J_{01} z = z^T G_{\mathrm{source}} z$. For any $s \notin \Pi_2$, $s_{23} = \frac{1}{2}(s - J_{01} s) \ne 0$; injectivity of $R_0 = -\frac{1}{4}M$ on $\mathbb{Q}^4$ (`notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/OBSERVABILITY_CALIBRATION.md`, `1b69563af4018b08d7dc75781b12e9553a8c19c3`, line 101 / equation (O4), where $\det(-\frac{1}{4}M) = +\frac{1}{4^4}\det M = 1770^3 \cdot 365 / (4 \cdot 1620)^4 > 0$) implies $R_0(J_{01}s - s) = -2R_0 s_{23} \ne 0$. For $s = e_0 + e_2$, $J_{01}(e_0 + e_2) = e_0 - e_2$; adding and subtracting columns $0$ and $2$ of $12960\,R_0 = -2(1620\,M)$ and $1399680\,R_1 = 2(699840\,R_1)$ yields (C17), while $(e_0 \pm e_2)^T (I_4 - \frac{1}{5}\mathbf{1}\mathbf{1}^T)(e_0 \pm e_2)/2$ equals $(2 - \frac{4}{5})/2 = \frac{3}{5}$ for $+$ and $(2 - 0)/2 = 1$ for $-$. $\square$
 
 ---
 

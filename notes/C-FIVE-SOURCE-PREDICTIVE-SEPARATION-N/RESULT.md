@@ -1,6 +1,6 @@
 # Result and exported interface: `C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N`
 
-**NON-CANONICAL / L1 analytical result (R1 revision after A4 review) / 2026-10-14.**
+**NON-CANONICAL / L1 analytical result (R1/R2 revision after A4 review) / 2026-10-14.**
 Original work Apache-2.0, A. M. Thorn.
 Reservation: [#1500](https://github.com/mathorn1973/twist-j/issues/1500), dispatched under [#1497](https://github.com/mathorn1973/twist-j/issues/1497).
 
@@ -12,11 +12,12 @@ allowed_path:               notes/C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N/
 authority_base:             8b91a935c426036e00ecb300019fd94734addeec (Public Canon v101 ACTIVE)
 preregistration_commit:     274a88757863f55a838068e92241af1ee23f2de4
 initial_result_commit:      58d7d6d962d847a19473dc8b233e2f844b2d378d
-revision_round:             R1 after A4 review (https://github.com/mathorn1973/twist-j/pull/1503#pullrequestreview-5524640334)
-revision_assignment:        https://github.com/mathorn1973/twist-j/issues/1500#issuecomment-6178752881
-exposure_status:            Outcome-exposed R1 revision round after administrative intake (#1497#issuecomment-6178339036)
-                            and completed A4 review (#1497#issuecomment-6178492183)
-proof_status:               AUTHORED_PROOF; SELF_REVIEWED; A4_REVIEWED_R1_AMENDED (awaiting A4 re-review of amended head)
+r1_result_commit:           963ac3d0cc2386eddf7b636ebb817fc098697155
+revision_round:             R2 narrow completion after A4 R1 review (https://github.com/mathorn1973/twist-j/pull/1503#pullrequestreview-5525320737)
+revision_assignment:        https://github.com/mathorn1973/twist-j/issues/1500#issuecomment-6179502346 (completing https://github.com/mathorn1973/twist-j/issues/1500#issuecomment-6178752881)
+exposure_status:            Outcome-exposed R1/R2 revision after administrative intake (#1497#issuecomment-6178339036)
+                            and A4 reviews (#1497#issuecomment-6178492183, #1497#issuecomment-6179511092)
+proof_status:               AUTHORED_PROOF; SELF_REVIEWED; A4_REVIEWED_R1_R2_AMENDED (awaiting A4 re-review of R2 head)
 scientific_code_status:     NONE / NOT_RUN (analytical proof-only round)
 physical_status:            NOT_READY (no laboratory instance or Stage S certificates supplied)
 overall_verdict:            DELIVERED_CANDIDATE (conditional candidate-T and candidate-D at L1 scope;
@@ -37,7 +38,7 @@ overall_verdict:            DELIVERED_CANDIDATE (conditional candidate-T and can
    - Adjoining an external source set $U_{\mathrm{ext}} \subset \mathbb{Q}^4$ spans $\mathbb{Q}^4$ together with $Z_5$ if and only if $\pi_{23}(U_{\mathrm{ext}})$ spans $\mathbb{Q}^2$, so $\min |U_{\mathrm{ext}}| = 2$ quotient-independent directions ($u^{(2)}_2 u^{(3)}_3 - u^{(2)}_3 u^{(3)}_2 \ne 0$) are necessary and sufficient.
    - Restricting the $42$-parameter linear/quadratic model class $\mathcal{A}_{\mathrm{lin}} = \{(A_0, A_1, G_0)\}$ to $\Pi_2$ identifies the $19$-dimensional subspace $(A_0^{(01)}, A_1^{(01)}, G_{00})$ via (A9)–(A10) and annihilates the $23$-dimensional kernel $\mathcal{K}_{\mathrm{lin}}(\Pi_2)$ ($8$ entries in $A_0^{(23)}$, $8$ in $A_1^{(23)}$, $7$ in $(G_{01}, G_{11})$).
 2. **Ideal classical clone indistinguishability and conditional witnesses against restricted comparators (`Theorem B1`, `Theorem B2`):**
-   - On the inherited ordered port tuple $R = (y_0, y_1, y_2, y_3) = ((0,0,0), (1,1,0), (1,0,1), (0,1,1)) \in D_3^4$ (with fifth site $y_4 = (1,-1,0) \in D_3$), any ordinary rational classical wave/port comparator $D_{\mathrm{cl}}$ implementing the same $(S, F, \eta, X_{\mathrm{blank}}, \Pi_{\mathrm{port}})$ produces byte-identical signed port outputs $(b_0, b_1)$, wave/tape energies $(E_0, E_1, E_2)$, and work ledger $w$ to $D_{\mathrm{NC}}$ on all $625$ native inputs $p \in \mathbb{F}_5^4$ and on any extended source set $\mathcal{Z} \subseteq \mathbb{Q}^4$ (including full $\mathbb{Q}^4$ span). Matched timing, memory, and funding are required before claiming mechanism discrimination.
+   - On the inherited ordered port tuple $R = (y_0, y_1, y_2, y_3) = ((0,0,0), (1,1,0), (1,0,1), (0,1,1)) \in D_3^4$ (with fifth site $y_4 = (2,0,0) \in D_3$), any ordinary rational classical wave/port comparator $D_{\mathrm{cl}}$ implementing the same $(S, F, \eta, X_{\mathrm{blank}}, \Pi_{\mathrm{port}})$ produces byte-identical signed port outputs $(b_0, b_1)$, wave/tape energies $(E_0, E_1, E_2)$, and work ledger $w$ to $D_{\mathrm{NC}}$ on all $625$ native inputs $p \in \mathbb{F}_5^4$ and on any extended source set $\mathcal{Z} \subseteq \mathbb{Q}^4$ (including full $\mathbb{Q}^4$ span). Matched timing, memory, and funding are required before claiming mechanism discrimination.
    - Against explicitly restricted comparator classes (without claiming a necessary-and-sufficient classification of all mechanisms or excluding classical devices with matched timing, memory, or store guards), three conditional witnesses are established:
      - **Witness M1 (vs. $h$-only comparator):** Reading the retained native checkpoint $x_3(p)$ across the $125$-element fibres $\mathcal{F}_h$ breaks $h$-factorization and separates $D_{\mathrm{NC}}$ from an $h$-only comparator (witness $p^{(0,a)}=(0,0,0,0)$ vs $p^{(0,b)}=(1,4,0,0)$ in (B3)); a classical comparator retaining full $p \in \mathbb{F}_5^4$ is not excluded.
      - **Witness M2 (vs. static lookup comparator):** Shifting single-contact timing from $n=1$ to $n=2$ (reading current $C_2(p)$) merges $h=0,1 \mapsto e_1$ ($12960\,b_0 = (698,-2832,708,696) \ne 0$ at $h=0$) and prepares $z_{n=2}^{(2)} = (-\frac{1}{2},\frac{1}{2},0,0)$, $z_{n=2}^{(3)} = (-1,\frac{1}{2},0,0)$ with energies $\frac{1}{4}, \frac{3}{5}$, separating $D_{\mathrm{NC}}$ from a static $n=1$ lookup comparator. At fixed $n=2$, M2 still factors through $h(p)$, does not exclude a classical comparator implementing the same time-dependent table, does not prepare $-e_0$ or $-e_1$, and is distinct from Agent 2's (`#1499`) second contact at $n=3$ reading retained $d = C_{1,B}$ captured at $n=1$.
@@ -55,23 +56,23 @@ overall_verdict:            DELIVERED_CANDIDATE (conditional candidate-T and can
 - **Physical status `NOT_READY`:** No physical apparatus, calibration reference, sensor certificate, timing bridge, or measurement trace is supplied. All twelve Stage S qualification fields and `I_FREEZE` remain unissued debts.
 - **Untouched public owners:** `QUADRATIC-MEMORY-NATIVE-CONTACT` `[O]` and `QDD-INSTRUMENT-APPARATUS` `[O]` are untouched. No public claim is registered or promoted by this note.
 
-### 1.3 Package file index and R1 scientific erratum (`A3-R1` through `A3-R6`)
+### 1.3 Package file index and R1/R2 scientific erratum (`A3-R1` through `A3-R6`)
 
-To preserve `PREREG.md` line 77 (which freezes `README.md`, `CONTRACT.md`, `PREREG.md`, and `SOURCES.json` at `274a88757863f55a838068e92241af1ee23f2de4`), `README.md` has been restored byte-for-byte from `274a88757863f55a838068e92241af1ee23f2de4` in this R1 amendment, and the complete package index is housed here in `RESULT.md`:
+To preserve `PREREG.md` line 77 (which freezes `README.md`, `CONTRACT.md`, `PREREG.md`, and `SOURCES.json` at `274a88757863f55a838068e92241af1ee23f2de4`), `README.md` has been restored byte-for-byte from `274a88757863f55a838068e92241af1ee23f2de4` in the R1 amendment, and the complete package index is housed here in `RESULT.md`:
 
 - **Frozen preregistration files (byte-identical to `274a88757863f55a838068e92241af1ee23f2de4`):**
   - [README.md](README.md): Frozen research question, four ordered obligations, and scope/non-duplication boundary (`4943` bytes, blob `bff2283a6feda94a966c29fc08134ddf5971c184`). *Erratum note on frozen `README.md` line 17:* Line 17 of the pinned `README.md` contains the notation typo $\mathcal{A}_{\mathrm{aff}} \subset \mathcal{A}_{\mathrm{full}} \subset \mathcal{A}_{\mathrm{nl}}$. As frozen in [CONTRACT.md](CONTRACT.md) Section 2.1 and [PREREG.md](PREREG.md) Section 2 (Obligation B.1), the operative model hierarchy throughout the package is $\mathcal{A}_{\mathrm{lin}} \subset \mathcal{A}_{\mathrm{aff}} \subset \mathcal{A}_{\mathrm{nl}}$; `README.md` is restored without editing the pin.
   - [CONTRACT.md](CONTRACT.md): Self-contained mathematical definitions, carrier domains, literal equality, source families $Z_5, Z_I, Z_V$, and model hierarchy $\mathcal{A}_{\mathrm{lin}} \subset \mathcal{A}_{\mathrm{aff}} \subset \mathcal{A}_{\mathrm{nl}}$ (`13617` bytes, blob `e47f25e9edc9be150479f570ea1cc9206f8a5ce2`).
   - [PREREG.md](PREREG.md): Six frozen preregistration fields, action layer L1, and decision rules (`9339` bytes, blob `968acef67d3cb25a07ba2959ef958f4421cf8fac`).
   - [SOURCES.json](SOURCES.json): Pinned provenance manifest of all 26 read-only input files, commits, blobs, SHA-256 hashes, byte counts, and extracted mathematical constants (`16845` bytes, blob `791a34c4b95a5fc4125fa191b876824e0ee1e353`).
-- **Unfrozen post-pin analytical deliverables (amended in R1):**
+- **Unfrozen post-pin analytical deliverables (amended in R1 and R2):**
   - [PROOF.md](PROOF.md): Complete algebraic proofs and exact witnesses for Obligations A, B, C, and D.
-  - [RESULT.md](RESULT.md): Summary of proved/conditional/missing statements, R1 erratum, and 14-item exported interface.
+  - [RESULT.md](RESULT.md): Summary of proved/conditional/missing statements, R1/R2 erratum, and 14-item exported interface.
   - [INTERFACE.json](INTERFACE.json): Machine-readable JSON serialization of the 14-item exported interface.
   - [PROMO-C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N.md](PROMO-C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N.md): Candidate statement mapping to proof sections, quantified domains, witnesses, and prospective owners, with an explicit recommendation of **NO promotion** in this round.
 
-**Concise summary of R1 scientific corrections ([REVISION_ASSIGNMENT_A3](https://github.com/mathorn1973/twist-j/issues/1500#issuecomment-6178752881)):**
-- **`A3-R1` (Port coordinates):** Restored the inherited ordered port tuple $R = ((0,0,0), (1,1,0), (1,0,1), (0,1,1)) \in D_3^4$ (with fifth site $y_4 = (1,-1,0) \in D_3$) in `INTERFACE.json`, `RESULT.md` field 10, `PROOF.md` (B0), and `PROMO-C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N.md`, replacing the erroneous odd-sum axis points $(\pm 1,0,0),(0,\pm 1,0) \notin D_3$.
+**Concise summary of R1/R2 scientific corrections ([R1 assignment](https://github.com/mathorn1973/twist-j/issues/1500#issuecomment-6178752881), [R2 narrow completion](https://github.com/mathorn1973/twist-j/issues/1500#issuecomment-6179502346)):**
+- **`A3-R1` (Port and fifth-source coordinates, completed in R2):** Restored the inherited ordered port tuple $R = ((0,0,0), (1,1,0), (1,0,1), (0,1,1)) \in D_3^4$ and the exact fifth zero-mean reference site $y_4 = (2,0,0) \in D_3$ from `notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md` (`4302c31f07823b2a843e3702ca14620c1917b853`, line 28) in `INTERFACE.json` fields 6 and 10, `RESULT.md`, `PROOF.md` (B0), and `PROMO-C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N.md`. *R2 coordinate and source-reference erratum:* Commit `963ac3d0cc2386eddf7b636ebb817fc098697155` (R1) restored the four output ports $R$ but erroneously wrote $y_4 = (1,-1,0)$ instead of the pinned $y_4 = (2,0,0)$. With $s = \sum_{i=0}^3 z_i$, replacing $p=(2,0,0)$ by $q=(1,-1,0)$ alters the first signed cut by $b_0^{\mathrm{wrong}}(z) - b_0^{\mathrm{pin}}(z) = \frac{s}{1296}(1,-1,0,0)$ (giving $(-1416,349,354,348)/12960$ at $z = e_0/2$ instead of the inherited $(-1421,354,354,348)/12960$). Restoring $y_4 = (2,0,0)$ aligns all text exports with the preserved original $S, F, D$, response matrices, and numerical tables. In addition, R2 corrects the historical citation for the rank-one inverse and determinant of $M$ in `PROOF.md` line 375 from the nonexistent `notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/PROOF.md` to `notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/OBSERVABILITY_CALIBRATION.md` (`1b69563af4018b08d7dc75781b12e9553a8c19c3`, line 101 / equation (O4)).
 - **`A3-R2` (Narrowed Theorem B2):** Replaced the "necessary and sufficient" heading/claim in `PROOF.md` Section 2.2, `RESULT.md`, `INTERFACE.json`, and `PROMO` by three conditional witnesses against explicitly restricted comparators (M1 vs. $h$-only; M2 vs. static lookup; M3 vs. differently funded comparator), recording that M2 and M3 still factor through $h(p)$ at a fixed intervention context and do not exclude classical comparators with matched timing, memory, or store guards.
 - **`A3-R3` (Complete historical $H_B$ law in M3):** Restored the full `#1495`/`#1496` state $(v, w, b, \sigma)$ with fixed capacity $B$, variable stock $b \in [0,B]$, signed work $w$, direction $\sigma \in \{\pm 1\}$, and two-sided guard $0 \le b - \Delta_\sigma \le B$ in `PROOF.md` (B7)–(B10), `RESULT.md`, `INTERFACE.json`, and `PROMO`; withdrew the unproved second-trial wave-reset claim (marking multi-trial reset `UNSUPPLIED`); and proved that distinguishing accepted $h=0$ from refused $h \in \{3,4\}$ at cold $b=B=\frac{1}{5}, \sigma=+1$ requires reading the post-contact state $(b, \sigma)$ rather than zero port/energy output alone.
 - **`A3-R4` (Distinction between M2 and A2's second contact):** Corrected `RESULT.md` field 13, `INTERFACE.json`, and `PROOF.md` so M2 at $n=2$ (reading current $C_2$, giving $e_1$ at $h=0$) is kept strictly separate from Agent 2's (`#1499`) second contact at $n=3$ (reading retained delayed $d = C_{1,B}$ captured at $n=1$, giving $0$ at $h_B=0$).
@@ -122,7 +123,7 @@ In accordance with the assignment contract, each of the shared interface fields 
 6. admitted primitives and origin of each permission:
    - Unchanged native U and involutions g_0..g_4: inherited from Public Canon v101.
    - Classical stencil B, Dirichlet L_D, 5-site source S, 4-port g_j=2 coupler on ordered ports
-     R = ((0,0,0),(1,1,0),(1,0,1),(0,1,1)) in D_3^4 (with y_4 = (1,-1,0)), and two-tape F:
+     R = ((0,0,0),(1,1,0),(1,0,1),(0,1,1)) in D_3^4 (with y_4 = (2,0,0)), and two-tape F:
      inherited conditional premise from #1484/#1485 (4302c31f07823b2a843e3702ca14620c1917b853).
    - Balanced lift eta(q,r) = (ell(q)/2, (ell(r)+1)/2, 0, 0) and one-shot mixed contact C_* at n=1:
      inherited conditional premise from #1486/#1489 (7b3fa47c0223bd99fce977de6ea58d484e257033).
@@ -154,7 +155,7 @@ In accordance with the assignment contract, each of the shared interface fields 
 
 10. signed output ports and record order:
     Four marked ports R = (y_0, y_1, y_2, y_3) = ((0,0,0), (1,1,0), (1,0,1), (0,1,1)) in D_3^4
-    (with fifth zero-mean reference site y_4 = (1,-1,0) in D_3) and g_j = 2;
+    (with fifth zero-mean reference site y_4 = (2,0,0) in D_3) and g_j = 2;
     chronological record Y_2 = (b_0, b_1) in (Q^4)^2 extracted from final outgoing tape B_tape = (b_1, b_0)
     as ((B_tape)_1, (B_tape)_0), with b_1 acquired from continuing wave transition F (never synthesized from b_0).
 
