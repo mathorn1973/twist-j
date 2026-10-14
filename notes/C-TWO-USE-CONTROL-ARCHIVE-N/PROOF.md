@@ -4,8 +4,11 @@
 Original work Apache-2.0, A. M. Thorn, 2026-10-14. A2 #1499.
 Contract pin: d3c147ae853dfede1e956d978b66e7f9d0e489d7.
 All four initial files were fetched from GitHub and byte-compared before
-this proof. AUTHORED_PROOF; SELF_REVIEWED; NOT_INDEPENDENTLY_REVIEWED.
-No scientific program was run. Historical source results are exposed.
+this proof. AUTHORED_PROOF; SELF_REVIEWED; A4_REVISION_PENDING_REVIEW.
+This outcome-exposed correction addresses the A4 review of the original
+result abc7e65812ca0e32b77a07592f1f94900d432c89; see RESULT for the erratum
+and review links. No scientific program was run. Historical source results
+and the linked review/interface findings are exposed.
 
 ## 1. Claims, definitions and inherited boundary
 
@@ -196,11 +199,22 @@ Substitution in (7)-(8) gives
     w4=a4+(T^2-J0)g+2T P c1+2P c0,                    (9)
 
     b0=R0 z_A, b1=R1 z_A,
-    b2=D2(z_A)+R0 z_B-c1,
-    b3=D3(z_A)+R1 z_B-(Jp/2)c1-c0.                   (10)
+    b2=D2(z_A)+R0 z_B,
+    b3=D3(z_A)+R1 z_B-(Jp/2)c1.                      (10)
 
-The last identity uses P^T T P=Jp/2. These formulas give ALL dependencies
-on both sources and the old archives, on fixed D. They hold for all
+In detail, the explicit incoming archive terms in (8) cancel as follows:
+
+    b2=c1+P^T(w1-a3-Tg-2P c1)/2
+      =D2(z_A)+R0 z_B+(I-P^T P)c1
+      =D2(z_A)+R0 z_B,
+    b3=c0+P^T(w2+g-a4-(T^2-J0)g-2T P c1-2P c0)/2
+      =D3(z_A)+R1 z_B-P^T T P c1+(I-P^T P)c0
+      =D3(z_A)+R1 z_B-(Jp/2)c1.
+
+Here P^T P=I and P^T T P=P^T K H P=Jp/2. Thus c0 drops out of
+all four outputs, while c1 remains in b3 through the continuing wave.
+The complete wave in (9) still depends on both archives. These formulas give
+all dependencies on both sources and the old archives, on fixed D. They hold for all
 25 signal pairs and all rational c0,c1, including the fully blank first
 subfamily. They are algebraic identities, not a finite trajectory census.
 
@@ -231,16 +245,25 @@ UNWRITTEN versus PRESENT(0) belongs to this typed reader on the retained
 temporal state; no sixth signal value is appended to F5. Old nonzero
 amplitudes alone do not certify a new occurrence.
 
-For fixed c0,c1 the record also distinguishes all 25 signal pairs.
+Across the entire frozen common-ready family, including arbitrary UNKNOWN
+rational c0,c1, the record distinguishes all 25 signal pairs.
 The old R0=-M/4 is invertible, with
 
     M=(1770I-v 1^T)/1620, v=(349,354,354,348)^T,
     1^T v=1405, M^-1=(54/59)(I+v 1^T/365).
 
-Recover z_A from b0, then z_B from R0 z_B=b2-D2(z_A)+c1.
-The five z values are distinct. This assumes the fixed old archive is
-known; no such conclusion is asserted across different unknown c1.
-Section 7 recovers full inputs from native endpoints, not from five labels.
+The source-label decoder is
+
+    z_A=R0^-1 b0,
+    z_B=R0^-1(b2-D2(z_A)).
+
+Indeed b0=R0 z_A fixes z_A uniquely, then (10) fixes z_B uniquely.
+Neither c0 nor c1 occurs in these equations or is supplied to the decoder.
+The five z values are distinct, so equal records even from different old
+archives force the same ordered signal pair. This is archive-independent
+source recovery, not archive independence of the whole record: b3 still
+depends on c1. It also does not recover all four residues of either native
+input. Section 7 recovers those full inputs using the retained native heads.
 
 ## 6. Reachable WARM witness and exact cold comparison
 
@@ -270,7 +293,7 @@ label is d=C1_B=(1,4). The declared contact reads the latter, giving
 Its work is 1/10. The next actual two cuts give
 
     w3=Tg+2P e0, w4=(T^2-J0)g+2T P e0,
-    b2=R0(e0/2)-e0, b3=R1(e0/2)-(Jp/2)e0.             (12)
+    b2=R0(e0/2), b3=R1(e0/2)-(Jp/2)e0.                (12)
 
 Together with the finite stencil definition of T these are exact rational
 formulas for EVERY wave coordinate. The final complete state is
@@ -284,13 +307,13 @@ The inherited cold signed vectors for e0/2 are
 
 The actual second signed record is exactly
 
-    b2=(-14381,354,354,348)/12960,
+    b2=(-1421,354,354,348)/12960,
     b3=(-585398,-60789,-60789,-61839)/1399680.            (13)
 
 The cold comparator starts wave and all four tape slots blank, loads
 the same g, and applies F twice. Its outputs are cold0,cold1. Therefore
 
-    b2-cold0=(-1,0,0,0),
+    b2-cold0=(0,0,0,0),
     b3-cold1=(-5/9,-1/108,-1/108,-1/108).               (14)
 
 This follows since Jp has diagonal 10/9 and off-diagonal 1/54.
@@ -300,10 +323,12 @@ these scientific values; they are manual exact consequences of (12).
 
 At contact B the only causal difference from the cold comparator is
 the inherited incoming e0: both waves before insertion are zero.
-Thus (14) is a nonzero rational effect of an occupied amplitude, not a
-clock bit or occupancy flag. This witness was reached by the first trial.
-It rejects universal clean renewal over the frozen family. It neither
-claims a fully blank first-use witness nor excludes other renewal mechanisms.
+The direct incoming contribution cancels in the first B output; its
+continued wave produces the nonzero second difference in (14). This is a
+rational amplitude effect, not a clock bit or occupancy flag. This witness
+was reached by the first trial. The second B cut alone rejects universal
+clean renewal over the frozen family. It neither claims a fully blank
+first-use witness nor excludes other renewal mechanisms.
 Equations (9)-(10) separately cover a fully blank first apparatus without
 silently identifying its continuation with a cold second trial.
 
@@ -365,8 +390,21 @@ and at every stage
 The mixed term in (16) is the occupied-wave correction; cold work
 ||g||^2/2 cannot simply be reused. Its sign is not assumed positive.
 Old B does not enter the wave before contact B, so it affects (9)-(10)
-but not this contact work. In the witness E_full_final=21/10,W=1/10
-and (17)=2. Retained tape energy is counted once, not again as exported heat.
+but not this contact work. For the witness the initial tape energy is 2;
+contact A has zero work and the first two F calls preserve that energy.
+At contact B the wave is zero and
+
+    Delta_B=[(2/5)^2+4(1/10)^2]/2=1/10.
+
+The last two F calls preserve the resulting energy, so for the corrected
+complete endpoint in (12)-(13),
+
+    E_D(w3,w4)+2(||b3||^2+||b2||^2)=E_full_final=21/10,
+    W_final=1/10, E_full_final-W_final=2.
+
+The b2 in this identity is cold0, not cold0-e0; the historical incorrectly
+printed tape entry did not describe that endpoint. Retained tape energy
+is counted once, not again as exported heat.
 
 The complete stock, present from the beginning, is: two six-residue native
 heads, their one retained integer n, two rational D-vectors, four rational
@@ -395,11 +433,35 @@ not a repeatable clean device or indefinite frozen dynamics.
 CONTRACT Section 7 is the exported signature: retained F5^2 label and eta,
 exact translated wave, unchanged tape coordinates, full resource and
 success/refusal/direction state, exact inverse domain and the actual
-occupied-state Delta. A future funded contact must meet it at BOTH calls,
-with sufficient ready energy for both and the true mixed term (16).
-Rejected contacts must be retained and cannot be counted as successful
-source uses. An involution's reverse direction cannot be reused as a
-second forward contact merely by changing its source label.
+occupied-state Delta. The literal events are contact A reading C1_A at n=1
+and contact B reading retained d=C1_B at actual n=3. The current C3_B
+receiver and a prospective current-C2 intervention at n=2 are different
+inputs. For p_B=e0, eta(d)=e0/2 whereas eta(C3_B)=e0+e1/2; for h_B=0,
+eta(C1_B)=0 whereas eta(C2_B)=e1. Our d is an F5^2 delayed-label register,
+distinct from the rational ancilla called d in the A1 interface review.
+
+The linked common A4 review supplies an exact obstruction to direct H_B
+substitution even if a delayed-label adapter is granted: start with the
+fully blank apparatus, p_A=0,p_B=e0, b=B=2/5 and sigma=+1. The accepted
+zero-source first call leaves the wave and store unchanged but flips sigma
+to -1. The two F calls leave the blank wave/tapes zero. The second call
+has cost 1/10 for either sign and is accepted (b becomes 3/10), but inserts
+-S(e0/2) where this table requires +S(e0/2). Its signed response differs
+because R0(e0/2) is nonzero. Thus leaving the same direction register to
+the two H_B calls does not realize two positive contacts. This blank
+composition example is separate from the occupied-archive WARM witness.
+
+A future funded contact needs a separately specified reversible label
+adapter and direction rule, with their complete/initialized domains. Its
+actual trajectory must satisfy BOTH store bounds
+
+    0 <= b_init-E_A <= B,
+    0 <= b_init-E_A-Delta_B <= B,
+
+using the true mixed term (16), not just cold source energies. Success,
+refusal and direction must be retained and exposed separately. PRESENT(0)
+certifies an acquired cut, not funded acceptance; rejected contacts cannot
+be counted as successful source uses. No such composition is constructed here.
 
 Those are requirements on a future component, not a proof of an H_B
 two-use budget or native admission. The reference model has no rejected
