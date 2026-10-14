@@ -23,15 +23,4 @@ This package addresses four ordered obligations frozen in [CONTRACT.md](CONTRACT
 - **Action layer:** L1 (algebraic state/identifiability and conditional prospective measurement contract). No L2–L6 bridge, occurrence measure, physical event selection, or SI scale is claimed.
 - **Untouched predecessors and siblings:** Read-only inputs are Public Canon v101 (`8b91a935c426036e00ecb300019fd94734addeec`), the merged finite audit `P-NATIVE-CLASSICAL-CONTACT-CENSUS-1` (`498f658f2de0ecfcd71694cd2bc026f280f2fa3b`), the classical signed-port package `C-CLASSICAL-SIGNED-PORT-CONTRACT-N` (`1b69563af4018b08d7dc75781b12e9553a8c19c3`, contract pin `4302c31f07823b2a843e3702ca14620c1917b853`), and the conditional contact package `C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N` (`ea924e214ec3c29009fd4590f294954d3e5ad43f`, contract pin `7b3fa47c0223bd99fce977de6ea58d484e257033`), with `C-NATIVE-CLASSICAL-FUNDED-CONTACT-N` (`b7636a334b09fcc68422bcd6cc6e15334d416c59`) inspected solely for non-duplication. Sibling lanes A1 (`#1498`) and A2 (`#1499`) are not read or consumed.
 - **Untouched public owners:** `QUADRATIC-MEMORY-NATIVE-CONTACT` `[O]` and `QDD-INSTRUMENT-APPARATUS` `[O]` remain open and unchanged.
-
-## 3. Package file index and conservative verdict (`DELIVERED_CANDIDATE` at L1 scope)
-
-- **Preregistration pin (immutable ancestor `274a88757863f55a838068e92241af1ee23f2de4`):**
-  - [CONTRACT.md](CONTRACT.md): Self-contained mathematical definitions, carrier domains, literal equality, source families $Z_5, Z_I, Z_V$, and model hierarchy $\mathcal{A}_{\mathrm{aff}} \subset \mathcal{A}_{\mathrm{full}} \subset \mathcal{A}_{\mathrm{nl}}$ (with linear/quadratic specialisation $\mathcal{A}_{\mathrm{lin}}$).
-  - [PREREG.md](PREREG.md): Six frozen preregistration fields, action layer L1, non-collapsed falsifier/witness semantics, and conservative decision matrix.
-  - [SOURCES.json](SOURCES.json): Pinned provenance manifest of all read-only input commits, files, SHA-256 hashes, byte counts, and extracted mathematical constants.
-- **Post-pin analytical deliverables:**
-  - [PROOF.md](PROOF.md): Complete step-by-step algebraic proofs and exact counterexample witnesses for Obligations A, B, C, and D (`Theorem A1`, `Proposition A2`, `Theorem A3`, `Theorem A4`, `Theorem B1`, `Theorem B2`, `Theorem C1`–`Theorem C5`, and `Protocol D1`–`D2`).
-  - [RESULT.md](RESULT.md): Conservative verdict (`DELIVERED_CANDIDATE` at L1 scope; `NOT_READY` physically; `INDISTINGUISHABLE_ON_PORT` against $D_{\mathrm{cl}}$ on $\Pi_{\mathrm{port}}$ alone) and the 14-item exported interface for sibling and synthesis composition.
-  - [INTERFACE.json](INTERFACE.json): Machine-readable serialization of the 14-item exported interface.
-  - [PROMO-C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N.md](PROMO-C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N.md): Candidate statement mapping to proof sections, quantified domains, failure witnesses, and prospective public owners, with an explicit recommendation of **NO promotion** in this round.
+- **Initial pin status:** At the preregistration commit (`PINNED_A3`), only the frozen question, contract, preregistration, and source manifest are present. Proofs, exact witnesses, conservative verdicts, and promotion mappings are delivered in descendant commits after public readback of the pin.

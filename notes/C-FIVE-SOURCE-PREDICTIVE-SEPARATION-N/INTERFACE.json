@@ -6,18 +6,22 @@
   "allowed_path": "notes/C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N/",
   "authority_base": "8b91a935c426036e00ecb300019fd94734addeec",
   "preregistration_commit": "274a88757863f55a838068e92241af1ee23f2de4",
-  "proof_status": "AUTHORED_PROOF; SELF_REVIEWED; NOT_INDEPENDENTLY_REVIEWED",
+  "initial_result_commit": "58d7d6d962d847a19473dc8b233e2f844b2d378d",
+  "revision_round": "R1 after A4 review (https://github.com/mathorn1973/twist-j/pull/1503#pullrequestreview-5524640334)",
+  "proof_status": "AUTHORED_PROOF; SELF_REVIEWED; A4_REVIEWED_R1_AMENDED",
   "scientific_code_status": "NONE / NOT_RUN",
   "physical_status": "NOT_READY",
   "interface": {
     "1_carrier": {
-      "device_carrier": "Omega x X x Q x C_ctrl, where Omega = N_0 x F_5^6, X = (Q^D x Q^D) x (Q^4)^2 x (Q^4)^2 x (Z/2Z) with |D| = 869, w in Q, stage in {0,1,2,3,4}",
+      "device_carrier": "Omega x X x Q x C_ctrl, where Omega = N_0 x F_5^6, X = (Q^D x Q^D) x (Q^4)^2 x (Q^4)^2 x (Z/2Z) with |D| = 869, signed work ledger w in Q, stage in {0,1,2,3,4}",
+      "bounded_store_H_B_carrier_extension": "Fixed capacity B in Q_(>=0), variable stock b in [0,B] cap Q, signed work ledger w in Q, direction sigma in {-1,+1}",
+      "model_hierarchy": "A_lin subset A_aff subset A_nl",
       "model_parameter_carrier_A_lin": "Q^(4x4) x Q^(4x4) x Q^(4x4)_sym (dim_Q = 42)",
       "identifiable_subspace_on_Pi_2": "I_lin(Pi_2) = Q^(4x2) x Q^(4x2) x Q^(2x2)_sym (dim_Q = 19)",
       "unidentifiable_kernel_on_Pi_2": "K_lin(Pi_2) (dim_Q = 23: 8 entries in A_0^(23), 8 in A_1^(23), 7 in (G_01, G_11))"
     },
     "2_literal_equality": {
-      "state_and_observable_equality": "Exact coordinate equality in F_5^4, N_0 x F_5^6, Q^4, and Q with tolerance 0; pointwise equality O_m1(z) = O_m2(z) without sign quotient, normalization, or projectivization"
+      "state_and_observable_equality": "Exact coordinate equality in F_5^4, N_0 x F_5^6, Q^4, Q (for E_0,E_1,E_2,w,b,B), and {-1,+1} (for sigma) with tolerance 0; pointwise equality O_m1(z) = O_m2(z) without sign quotient, normalization, or projectivization"
     },
     "3_native_projection": {
       "index": "h(p) = (p_0 + p_1 + p_2 + p_3) mod 5 on p in F_5^4 (5 fibres F_h of cardinality 125 each)",
@@ -34,9 +38,12 @@
         "2": [4, 0],
         "3": [3, 0],
         "4": [1, 4]
-      }
+      },
+      "fixed_context_h_factorization": "Both C_1(p) at n=1 and C_2(p) at fixed n=2 factor through h(p)"
     },
     "4_source_family": {
+      "balanced_lift": "ell(0,1,2,3,4) = (0, 1, 2, -2, -1)",
+      "receiver_to_source_map": "eta(q,r) = (ell(q)/2, (ell(r)+1)/2, 0, 0)",
       "Z_5": [
         [0, 0, 0, 0],
         ["1/2", 0, 0, 0],
@@ -50,6 +57,13 @@
       "Z_5_cap_Z_V": [],
       "Pi_2_cap_Z_I_count": "5 of 9 ({0, +-e_0, +-e_1})",
       "Pi_2_cap_Z_V_count": "4 of 24 ({+-e_0 +- e_1})",
+      "n2_distinct_sources": [
+        [0, 1, 0, 0],
+        ["-1/2", "1/2", 0, 0],
+        [-1, "1/2", 0, 0],
+        ["1/2", 0, 0, 0]
+      ],
+      "negative_axes_minus_e0_minus_e1_from_n1_or_n2": "UNSUPPLIED (neither n=1 nor n=2 prepares -e_0 or -e_1; linear combinations are not admitted source preparations)",
       "out_of_plane_directions_from_eta": "UNSUPPLIED"
     },
     "5_common_readiness": {
@@ -57,12 +71,14 @@
       "classical_ready_state": "X_blank = ((0, 0), (0, 0), (0, 0), 0)",
       "work_ledger": 0,
       "controller_stage": 0,
+      "cold_H_B_store_and_direction": "b = B = 1/5, sigma = +1",
       "post_run_renewal": "UNSUPPLIED"
     },
     "6_admitted_primitives": {
       "native_step_U_and_involutions": "Inherited from Public Canon v101 (8b91a935c426036e00ecb300019fd94734addeec)",
-      "classical_wave_stencil_source_and_tape_F": "Inherited conditional premise from #1484/#1485 (4302c31f07823b2a843e3702ca14620c1917b853)",
+      "classical_wave_stencil_source_and_tape_F": "Inherited conditional premise from #1484/#1485 (4302c31f07823b2a843e3702ca14620c1917b853) on ordered ports R = ((0,0,0),(1,1,0),(1,0,1),(0,1,1)) in D_3^4 with y_4 = (1,-1,0)",
       "balanced_lift_eta_and_contact_C_star": "Inherited conditional premise from #1486/#1489 (7b3fa47c0223bd99fce977de6ea58d484e257033)",
+      "bounded_store_involution_H_B": "Inherited read-only premise from #1495/#1496 (b7636a334b09fcc68422bcd6cc6e15334d416c59) with (v,w,b,sigma) and guard 0 <= b - Delta_sigma <= B",
       "native_compilation_and_physical_transducer": "UNSUPPLIED"
     },
     "7_forward_map": {
@@ -76,7 +92,7 @@
       }
     },
     "8_inverse_and_domain": {
-      "first_cut_classical_inverse": "z = -4 M^-1 b_0 on Q^4",
+      "first_cut_classical_inverse": "z = -4 M^-1 b_0 on Q^4, with det(R_0) = det(-M/4) = +det(M)/4^4 = +(1770^3 * 365)/(4^4 * 1620^4) > 0",
       "prepared_image_whole_run_inverse": "625-element image at n=3, stage=4 with piston-sum guard (#1486/#1489, #1491/#1492)",
       "Pi_2_calibration_inverse": "3-point calibration I_3 = {z^(1), z^(2), z^(4)} -> I_lin(Pi_2) (dim 19) via (A9)-(A10)",
       "full_Q4_calibration_inverse": "Z_5 union U_quad,7 -> A_lin (dim 42) via (C23)-(C24)",
@@ -90,7 +106,14 @@
       "autonomous_stop_and_SI_clock_bridge": "UNSUPPLIED"
     },
     "10_signed_output_ports_and_record_order": {
-      "ports": ["y_0 = (-1,0,0)", "y_1 = (1,0,0)", "y_2 = (0,-1,0)", "y_3 = (0,1,0)"],
+      "lattice": "D_3 = {x in Z^3 : x_1 + x_2 + x_3 = 0 mod 2}",
+      "ports": [
+        "y_0 = (0,0,0)",
+        "y_1 = (1,1,0)",
+        "y_2 = (1,0,1)",
+        "y_3 = (0,1,1)"
+      ],
+      "zero_mean_reference_site": "y_4 = (1,-1,0)",
       "coupler_gain": "g_j = 2",
       "chronological_readout": "Y_2 = (b_0, b_1) = ((B_tape)_1, (B_tape)_0) in (Q^4)^2"
     },
@@ -103,7 +126,15 @@
         "h=3": "2/5",
         "h=4": "2/5"
       },
-      "positive_bounded_physical_store_and_multi_trial_renewal": "UNSUPPLIED (exported to #1495/#1496, Agent 1 #1498, and Agent 2 #1499)"
+      "historical_H_B_law": {
+        "state": "(v, w, b, sigma) with fixed capacity B in Q_(>=0), variable stock b in [0,B] cap Q, signed work w in Q, direction sigma in {-1,+1}, impulse a = S(eta(q,r))",
+        "increment": "Delta_sigma = E_D(u, v + sigma*a) - E_D(u, v)",
+        "guard": "accept iff 0 <= b - Delta_sigma <= B (both lower overdraft bound and upper capacity bound are active on occupied waves)",
+        "accepted_transition": "(v, w, b, sigma) -> (v + sigma*a, w + Delta_sigma, b - Delta_sigma, -sigma)",
+        "refused_transition": "identity (v, w, b, sigma) -> (v, w, b, sigma)",
+        "cold_witness_b_B_1_5_sigma_plus1": "At X_blank, w=0, b=B=1/5, sigma=+1, accepts h in {0,1,2} and refuses h in {3,4}; accepted h=0 gives (b,sigma)=(1/5,-1) while refused h in {3,4} gives (b,sigma)=(1/5,+1), both with zero Pi_port, so observable must include (b,sigma) to certify acceptance"
+      },
+      "native_H_B_compilation_physical_store_and_multi_trial_wave_reset": "UNSUPPLIED"
     },
     "12_physical_interpretation_and_layer_bridges": {
       "action_layer": "L1",
@@ -112,17 +143,19 @@
       "L1_to_L4_L5_L6_bridges": "UNPASSED / OPEN"
     },
     "13_assumptions_from_other_components": {
-      "from_Agent_1_1498": "Explicit native/admissible gate specification or bounded store B in Q_(>=0) with forward/no-op threshold rule; tested non-circularly by Intervention M3 at B = 1/5 (Theorem B2(3))",
-      "from_Agent_2_1499": "Explicit multi-use schedule, pointer/tape archive continuation, and second-contact timing n_2; tested non-circularly by Intervention M2 at n = 2 (Theorem B2(2)) and warm-tape continuation F^4",
+      "historical_H_B_and_Agent_1_1498": "Agent 1 (#1498) leaves native compilation of H_B UNSUPPLIED/STOP on the frozen primitive grammar. In the conditional H_B specification (#1495/#1496), Witness M3 (Theorem B2(3)) at cold X_blank, w=0, b=B=1/5, sigma=+1 separates b=B=1/5 from differently funded comparators on h in {3,4} when post-contact (b,sigma) is observed alongside Pi_port; at fixed (b,B,sigma) it still factors through h(p) and does not exclude a classical comparator with the same (b,B,sigma) guard",
+      "Agent_2_1499_vs_Witness_M2": "Witness M2 (Theorem B2(2), single contact shifted to n=2 reading current C_2, giving z_(n=2)^(0) = e_1 at h=0) is a separate prospective intervention against a static lookup comparator (still factoring through h(p) at fixed n=2 and not excluding a time-dependent classical table) and is NOT equivalent to Agent 2's (#1499) second contact, which occurs at n=3 and reads retained delayed label d = C_(1,B) captured at n=1 (giving eta(d) = 0 at h_B = 0). Any future joint test with Agent 2 must use A2's actual delayed source z_B = eta(C_(1,B)) at n=3 and continuing wave/tape state (b_2 = D_2(z_A) + R_0 z_B, b_3 = D_3(z_A) + R_1 z_B - (J_p/2)c_1), and requires a separately specified direction/funding adapter before combining with H_B",
       "from_out_of_plane_source_adapter": "Min 2 quotient-independent directions u^(2), u^(3) with u^(2)_2 u^(3)_3 != u^(2)_3 u^(3)_2 for linear response (Theorem A3) and 7 preparations U_quad,7 for full symmetric quadratic energy (Theorem C5)"
     },
     "14_conservative_verdict_and_witnesses": {
       "verdict": "DELIVERED_CANDIDATE",
       "mechanism_attribution_on_Pi_port_alone": "INDISTINGUISHABLE_ON_PORT",
+      "comparator_witness_scope": "M1, M2, M3 are conditional witnesses against explicitly restricted comparators only (h-only, static lookup, differently funded); M2 and M3 still factor through h(p) at a fixed intervention context",
       "finite_rejection_witnesses": [
-        "Axis-only Z_5 energy witness (m_*, m_off) in (C2)-(C3): agrees on {z^(0),z^(1),z^(4)} and Pi_2 cap Z_I, diverges on E_0(z^(2)) (3/20 vs 1/4) and E_0(z^(3)) (2/5 vs 3/5)",
+        "Axis-only Z_5 energy witness (m_*, m_off) in (C2)-(C3) with G_0^(off) = G_source + (2/5)(e_0 e_1^T + e_1 e_0^T): agrees on {z^(0),z^(1),z^(4)} and Pi_2 cap Z_I, diverges on E_0(z^(2)) (3/20 vs 1/4) and E_0(z^(3)) (2/5 vs 3/5)",
         "Affine-quadratic energy null witness Phi_Z5 in (C12)-(C13): vanishes on all 5 points of Z_5, nonzero on +e_0 (+1/2), -e_0 (+3/2), -e_1 (-4), and e_0 +- e_1 (-3/2)",
         "Out-of-plane isometric witness (m_*, m_sharp) in (C15)-(C17): agrees on all of Pi_2 (incl. Z_5), diverges on all 4 points of Z_I \\ Pi_2 and all 20 points of Z_V \\ Pi_2",
+        "General nonlinear witness (m_*, m_nl^(I,s)) in (C18a)-(C18b) via L_(I,s)(z) = prod_(a in I) ||z-a||^2/||s-a||^2 for every proper subset I subsetneq Z_5 and s in Z_5 \\ I, cubic witness Psi_(z^(3)) in (C18c), and complete model pair (m_*, m_cross) in (C18d) for Z_I -> Z_V",
         "Full-Z_I energy witness (m_*, m_energy-flip) in (C21): agrees on Z_5 union Z_I for (b_0,b_1,E_0), diverges on E_0(sigma e_i + rho e_k) by +-2/5 on 16 mixed points of Z_V"
       ]
     }

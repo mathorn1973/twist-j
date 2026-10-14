@@ -3,9 +3,10 @@
 **NON-CANONICAL / conditional candidate-T and candidate-D / L1 analytical proof.**
 Original work Apache-2.0, A. M. Thorn, 2026-10-14.
 Reservation: [#1500](https://github.com/mathorn1973/twist-j/issues/1500), dispatched under [#1497](https://github.com/mathorn1973/twist-j/issues/1497).
-Contract and preregistration pin: `274a88757863f55a838068e92241af1ee23f2de4` ([CONTRACT.md](CONTRACT.md), [PREREG.md](PREREG.md), [SOURCES.json](SOURCES.json)).
+Contract and preregistration pin: `274a88757863f55a838068e92241af1ee23f2de4` ([README.md](README.md), [CONTRACT.md](CONTRACT.md), [PREREG.md](PREREG.md), [SOURCES.json](SOURCES.json)).
+Revision context: R1 analytical amendment of `58d7d6d962d847a19473dc8b233e2f844b2d378d` addressing [A4 review findings](https://github.com/mathorn1973/twist-j/pull/1503#pullrequestreview-5524640334) per [REVISION_ASSIGNMENT_A3](https://github.com/mathorn1973/twist-j/issues/1500#issuecomment-6178752881) (outcome-exposed after [administrative intake](https://github.com/mathorn1973/twist-j/issues/1497#issuecomment-6178339036) and [A4 review summary](https://github.com/mathorn1973/twist-j/issues/1497#issuecomment-6178492183)).
 
-All derivations in this document are exact symbolic L1 proofs over $\mathbb{F}_5$ and $\mathbb{Q}$, written after public push and exact-byte readback of `274a88757863f55a838068e92241af1ee23f2de4`. No scientific verifier, numerical solver, or laboratory measurement was executed (`AUTHORED_PROOF`, `SELF_REVIEWED`, `NOT_INDEPENDENTLY_REVIEWED`).
+All derivations in this document are exact symbolic L1 proofs over $\mathbb{F}_5$ and $\mathbb{Q}$. No scientific verifier, numerical solver, or laboratory measurement was executed (`AUTHORED_PROOF`, `SELF_REVIEWED`, `NOT_INDEPENDENTLY_REVIEWED`).
 
 ---
 
@@ -143,8 +144,16 @@ which solves directly for (A9)–(A10). $\square$
 
 ### 2.1 Exact-clone indistinguishability theorem
 
+Throughout Sections 2–4, the five marked sites $Y = \{y_0, y_1, y_2, y_3, y_4\} \subset D_3 = \{x \in \mathbb{Z}^3 : x_1 + x_2 + x_3 \equiv 0 \pmod 2\}$ and the ordered four-port readout tuple $R = (y_0, y_1, y_2, y_3)$ are frozen to the exact inherited coordinates of `notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md` (`4302c31f07823b2a843e3702ca14620c1917b853`):
+
+$$
+y_0 = (0,0,0), \quad y_1 = (1,1,0), \quad y_2 = (1,0,1), \quad y_3 = (0,1,1), \quad y_4 = (1,-1,0) \in D_3. \tag{B0}
+$$
+
+All response matrices $M, Q, K, J, R_0, R_1$ and integer port tables $12960\,b_0, 1399680\,b_1$ in this package are expressed with respect to this exact ordered tuple $R = ((0,0,0), (1,1,0), (1,0,1), (0,1,1))$.
+
 **Theorem B1 (Ideal classical clone indistinguishability bound).**
-Let $D_{\mathrm{NC}}$ be the conditional native-contact composite machine and $D_{\mathrm{cl}}$ the ordinary rational classical wave/port comparator defined in `CONTRACT.md` Section 2.2.
+Let $D_{\mathrm{NC}}$ be the conditional native-contact composite machine and $D_{\mathrm{cl}}$ the ordinary rational classical wave/port comparator defined in `CONTRACT.md` Section 2.2 on the ordered port tuple (B0).
 
 1. **On the native preparation domain $\mathcal{P}_{\mathrm{nat}} = \mathbb{F}_5^4$:** For every $p \in \mathbb{F}_5^4$, the classical port and energy record $\Pi_{\mathrm{port}}$ of $D_{\mathrm{NC}}$ equals that of $D_{\mathrm{cl}}$ identically:
    $$
@@ -155,7 +164,7 @@ Let $D_{\mathrm{NC}}$ be the conditional native-contact composite machine and $D
    $$
    \forall z \in \mathcal{Z} : \quad \Pi_{\mathrm{port}}^{D_{\mathrm{NC}}^{\mathrm{ext}}}(z) = \Pi_{\mathrm{port}}^{D_{\mathrm{cl}}^{\mathrm{ext}}}(z). \tag{B2}
    $$
-   In particular, **no number of additional source directions in $\mathbb{Q}^4$ separates $D_{\mathrm{NC}}$ from $D_{\mathrm{cl}}$ under $\Pi_{\mathrm{port}}$**.
+   In particular, **no number of additional source directions in $\mathbb{Q}^4$ separates $D_{\mathrm{NC}}$ from $D_{\mathrm{cl}}$ under $\Pi_{\mathrm{port}}$**. Matched timing, retained-memory scope, and funding resources are required before any mechanism discrimination claim can be formulated.
 
 **Proof.**
 In $D_{\mathrm{NC}}$, for any $p \in \mathbb{F}_5^4$, stage 1 advances $(0, x_0(p)) \mapsto (1, x_1(p))$ while leaving $X_{\mathrm{blank}}$ and $w=0$ untouched; stage 2 applies $C_*$, which reads only $C_1(p) = C_1(h(p))$ and writes $X_0(z^{(h(p))}) = ((0, S z^{(h(p))}), (0,0), (0,0), 0)$ and $w = E_D(0, S z^{(h(p))})$; stages 3 and 4 apply $U \times F$ twice on the decoupled product $\Omega \times X$ with $w$ constant. Because $\Pi_{\mathrm{port}}$ depends only on $(X_2, w)$, the post-disconnection native steps $x_1 \mapsto x_2 \mapsto x_3$ drop out of $\Pi_{\mathrm{port}}$:
@@ -166,14 +175,14 @@ Likewise, for any $z \in \mathcal{Z}$ where both $D_{\mathrm{NC}}^{\mathrm{ext}}
 
 ---
 
-### 2.2 Necessary and sufficient mechanism-separating interventions
+### 2.2 Conditional mechanism-separation witnesses against restricted comparators
 
-Theorem B1 shows that mechanism attribution ($D_{\mathrm{NC}}$ versus an $h$-only classical clone $D_{\mathrm{cl}}$) is impossible if the observer accesses only $\Pi_{\mathrm{port}}$ at fixed contact time $n=1$ and infinite work capacity. The following theorem classifies three concrete interventions that genuinely break the factorization through $h \mapsto z^{(h)}$.
+Theorem B1 shows that mechanism attribution ($D_{\mathrm{NC}}$ versus a classical comparator $D_{\mathrm{cl}}$ with matched source preparation, readiness, transition $F$, and observable $\Pi_{\mathrm{port}}$) is impossible on $\Pi_{\mathrm{port}}$ alone. Rather than a necessary-and-sufficient classification of all possible mechanisms, the following theorem establishes three conditional separation witnesses against **explicitly restricted comparator classes**, while recording what each intervention does and does not exclude.
 
-**Theorem B2 (Exact mechanism-separation witnesses across $D_{\mathrm{NC}}$ and $D_{\mathrm{cl}}$).**
+**Theorem B2 (Conditional witnesses against restricted comparator classes).**
 
-1. **Intervention M1 (Intra-fibre native-endpoint retention and piston-sum guard on $\mathcal{F}_h$):**
-   For each $h \in \mathbb{F}_5$, the fibre $\mathcal{F}_h = \{p \in \mathbb{F}_5^4 : \sum_{i=0}^3 p_i \equiv h \pmod 5\}$ has $|\mathcal{F}_h| = 125$. In $D_{\mathrm{NC}}$, the retained native endpoint $x_3(p) = g_{j_2(h)} g_{j_1(h)} g_{j_0(h)}(p, 0, 1)$ takes $125$ distinct values on $\mathcal{F}_h$ (invertible via $x_0 = g_{j_0(h)} g_{j_1(h)} g_{j_2(h)} x_3$), whereas an $h$-only classical clone $D_{\mathrm{cl}}$ has constant internal state across $\mathcal{F}_h$. Explicitly, for the two $h=0$ preparations $p^{(0,a)} = (0,0,0,0)$ and $p^{(0,b)} = (1,4,0,0) \in \mathcal{F}_0$:
+1. **Witness M1 (Within-fibre native retention $x_3(p)$ on $\mathcal{F}_h$ versus an $h$-only comparator):**
+   For each $h \in \mathbb{F}_5$, the fibre $\mathcal{F}_h = \{p \in \mathbb{F}_5^4 : \sum_{i=0}^3 p_i \equiv h \pmod 5\}$ has $|\mathcal{F}_h| = 125$. In $D_{\mathrm{NC}}$, the retained native endpoint $x_3(p) = g_{j_2(h)} g_{j_1(h)} g_{j_0(h)}(p, 0, 1)$ takes $125$ distinct values on $\mathcal{F}_h$ (invertible via $x_0 = g_{j_0(h)} g_{j_1(h)} g_{j_2(h)} x_3$), whereas an explicitly $h$-only classical comparator $D_{\mathrm{cl}}^{(h\text{-only})}$ whose state depends only on $h(p)$ is constant across $\mathcal{F}_h$. Explicitly, for the two $h=0$ preparations $p^{(0,a)} = (0,0,0,0)$ and $p^{(0,b)} = (1,4,0,0) \in \mathcal{F}_0$:
    $$
    \Pi_{\mathrm{port}}^{D_{\mathrm{NC}}}(p^{(0,a)}) = \Pi_{\mathrm{port}}^{D_{\mathrm{NC}}}(p^{(0,b)}) = \bigl((0,0), (0,0,0), 0\bigr),
    $$
@@ -181,8 +190,9 @@ Theorem B1 shows that mechanism attribution ($D_{\mathrm{NC}}$ versus an $h$-onl
    $$
    x_3(p^{(0,a)}) = (2, 1, 3, 4, 1, 0) \ne (1, 2, 3, 4, 1, 0) = x_3(p^{(0,b)}). \tag{B3}
    $$
-2. **Intervention M2 (Contact-boundary shift from $n=1$ to $n=2$):**
-   Suppose the contact operation $C_*$ is triggered after two native ticks ($n=2$) instead of one ($n=1$), while a static classical lookup clone $D_{\mathrm{cl}}^{\mathrm{static}}$ has no internal $U$-evolution and outputs its stored source $z^{(h)}$ whenever triggered. In $D_{\mathrm{NC}}$, the second-tick receivers $C_2(h)$ for $h=0,1,2,3,4$ are $(0,1), (0,1), (4,0), (3,0), (1,4)$, which under $\eta(q,r) = (\ell(q)/2, (\ell(r)+1)/2, 0, 0)$ induce the source vectors
+   *Scope and non-exclusion:* M1 breaks $h$-factorization by reading the retained native register $x_3(p)$, separating $D_{\mathrm{NC}}$ from any $h$-only comparator $D_{\mathrm{cl}}^{(h\text{-only})}$. It does **not** exclude a classical comparator that retains the full preparation $p \in \mathbb{F}_5^4$ and computes the bijection $x_3(p)$.
+2. **Witness M2 (Time-shifted single contact at $n=2$ reading current $C_2(p)$ versus a static lookup comparator):**
+   Suppose the single contact operation $C_*$ is triggered after two native ticks ($n=2$, reading the current receiver $C_2(p)$) instead of one ($n=1$), and compared against a static lookup comparator $D_{\mathrm{cl}}^{\mathrm{static}}$ whose front-end outputs the fixed $n=1$ source table $z^{(h(p))}$ regardless of the trigger tick. In $D_{\mathrm{NC}}$, the second-tick receivers $C_2(h)$ for $h=0,1,2,3,4$ are $(0,1), (0,1), (4,0), (3,0), (1,4)$, which under $\eta(q,r) = (\ell(q)/2, (\ell(r)+1)/2, 0, 0)$ induce the four distinct source vectors
    $$
    z_{n=2}^{(0)} = z_{n=2}^{(1)} = (0, 1, 0, 0) = e_1, \quad
    z_{n=2}^{(2)} = \left(-\tfrac{1}{2}, \tfrac{1}{2}, 0, 0\right), \quad
@@ -198,13 +208,39 @@ Theorem B1 shows that mechanism attribution ($D_{\mathrm{NC}}$ versus an $h$-onl
    E_{0,D_{\mathrm{NC}}}^{(n=2)}(h=2) = \tfrac{1}{4} \ne \tfrac{3}{20}, \qquad
    E_{0,D_{\mathrm{NC}}}^{(n=2)}(h=3) = \tfrac{3}{5} \ne \tfrac{2}{5}. \tag{B6}
    $$
-3. **Intervention M3 (Finite-store energy threshold $B \in \mathbb{Q}_{\ge 0}$):**
-   If the unbounded signed work register $w$ is replaced by a nonnegative energy store $B \in \mathbb{Q}_{\ge 0}$ that executes the translation $v \mapsto v + S\eta(q,r)$ only when $B \ge \Delta E_D = E_D(u, v + S\eta(q,r)) - E_D(u,v)$ and otherwise leaves $(u,v)$ unchanged (as in the `#1495`/`#1496` bounded-store involution $H_B$), then preparing an initial store $B = 1/5$ admits $h \in \{0, 1, 2\}$ ($E_0 \in \{0, \frac{1}{10}, \frac{3}{20}\} \le \frac{1}{5}$) while blocking $h \in \{3, 4\}$ ($E_0 = \frac{2}{5} > \frac{1}{5}$, yielding $b_0 = b_1 = 0$), and even with $B = 2/5$ a second un-renewed trial on $h \in \{3,4\}$ (after resetting the wave to zero without replenishing $B = 0$) produces $b_0 = b_1 = 0$, separating a finite-store transducer from an externally powered classical port.
+   *Scope, $h$-factorization, and non-equivalence to A2:* At the fixed intervention time $n=2$, the receiver $C_2(p) = C_2(h(p))$ and source $z_{n=2}^{(h(p))}$ **still factor through $h(p)$** and do **not** distinguish inputs within any fibre $\mathcal{F}_h$. M2 separates $D_{\mathrm{NC}}$ from a static lookup comparator $D_{\mathrm{cl}}^{\mathrm{static}}$, but does **not** exclude a classical comparator implementing the same time-indexed lookup table $(n, h) \mapsto z_{n}^{(h)}$. Moreover, M2 (reading current $C_2$ at $n=2$) is a different intervention from Agent 2's (`#1499`) second contact at $n=3$, which reads the retained delayed label $d = C_{1,B}$ captured at $n=1$ (for $h_B = 0$, M2 injects $\eta(C_2(0)) = e_1$ whereas A2's delayed second contact injects $\eta(C_1(0)) = 0$).
+3. **Witness M3 (Cold one-shot bounded funding under the historical $H_B$ law versus a differently funded comparator):**
+   Recall from `notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/CONTRACT.md` (`b7636a334b09fcc68422bcd6cc6e15334d416c59`, `#1495`/`#1496`) that the bounded-store contact involution $H_B$ acts on the composite state $((n,x), ((u,v), A, B_{\mathrm{tape}}, k), w, b, \sigma)$ with fixed capacity $B \in \mathbb{Q}_{\ge 0}$, variable energy stock $b \in [0, B] \cap \mathbb{Q}$, signed work ledger $w \in \mathbb{Q}$, sign/direction bit $\sigma \in \{-1, +1\}$, and source impulse $a = S(\eta(q,r))$ by computing the signed energy increment
+   $$
+   \Delta_\sigma = E_D(u, v + \sigma a) - E_D(u, v) = \tfrac{1}{2}\|a\|^2 + \sigma\, a^T\bigl(v - \tfrac{1}{2}H_D u\bigr) \tag{B7}
+   $$
+   and applying the two-sided capacity guard
+   $$
+   \text{accept} \iff 0 \le b - \Delta_\sigma \le B, \tag{B8}
+   $$
+   with state transition
+   $$
+   (v, w, b, \sigma) \mapsto
+   \begin{cases}
+   (v + \sigma a,\, w + \Delta_\sigma,\, b - \Delta_\sigma,\, -\sigma), & \text{if } 0 \le b - \Delta_\sigma \le B\text{ (accepted)}, \\
+   (v, w, b, \sigma), & \text{if } b - \Delta_\sigma < 0\text{ or } b - \Delta_\sigma > B\text{ (refused)}.
+   \end{cases} \tag{B9}
+   $$
+   Both bounds in (B8) are essential on the full state space: the lower bound $0 \le b - \Delta_\sigma$ forbids overdraft when $\Delta_\sigma > b$, while the upper bound $b - \Delta_\sigma \le B$ forbids over-capacity recharge when an occupied wave $(u,v) \ne (0,0)$ yields negative work $\Delta_\sigma < b - B \le 0$.
+   At a **cold one-shot trial** with blank wave/tapes $X_{\mathrm{blank}} = ((0,0),(0,0),(0,0),0)$, $w = 0$, initial stock $b = B = \frac{1}{5}$, and direction $\sigma = +1$, we have $\Delta_{+1}(h) = E_D(0, +S z^{(h)}) = E_0(z^{(h)}) \in \bigl(0, \frac{1}{10}, \frac{3}{20}, \frac{2}{5}, \frac{2}{5}\bigr)$ for $h = 0, 1, 2, 3, 4$. Since $0 \le \frac{1}{5} - \Delta_{+1}(h) \le \frac{1}{5}$ holds if and only if $\Delta_{+1}(h) \le \frac{1}{5}$, the guard (B8) accepts exactly $h \in \{0, 1, 2\}$ and refuses $h \in \{3, 4\}$:
+   $$
+   \begin{aligned}
+   h \in \{0, 1, 2\} \ (\text{accepted}) &: \quad (v, w, b, \sigma) \mapsto \bigl(+S z^{(h)},\, E_0(z^{(h)}),\, \tfrac{1}{5} - E_0(z^{(h)}),\, -1\bigr), \\
+   h \in \{3, 4\} \ (\text{refused}) &: \quad (v, w, b, \sigma) \mapsto \bigl(0,\, 0,\, \tfrac{1}{5},\, +1\bigr), \quad b_0 = b_1 = 0,\; E_0 = E_1 = E_2 = 0.
+   \end{aligned} \tag{B10}
+   $$
+   *Acceptance versus zero-output projection:* Acceptance cannot be inferred from a zero port/energy/work record $\Pi_{\mathrm{port}} = ((0,0), (0,0,0), 0)$ alone: at cold $b = B = \frac{1}{5}, \sigma = +1$, both the **accepted** zero-source preparation $h = 0$ ($z^{(0)} = 0, \Delta_{+1} = 0$) and the **refused** preparation $h = 3$ ($z^{(3)} = (1,\frac{1}{2},0,0), \Delta_{+1} = \frac{2}{5} > \frac{1}{5}$) project to $\Pi_{\mathrm{port}} = ((0,0), (0,0,0), 0)$. They are separated by the retained contact state $(b, \sigma)$, which is $(\frac{1}{5}, -1)$ for accepted $h = 0$ and $(\frac{1}{5}, +1)$ for refused $h \in \{3, 4\}$ (while accepted $h \in \{1, 2\}$ already produce nonzero $(b_0, b_1)$ and $w = E_0(z^{(h)}) > 0$). Any observable used to certify acceptance in M3 must therefore explicitly include the post-contact direction $\sigma$ (or an explicit acceptance bit / store tuple $(b, \sigma)$) alongside $\Pi_{\mathrm{port}}$.
+   *Scope, $h$-factorization, and unrenewed multi-trial status:* At fixed cold store/direction preparation $(b, B, \sigma) = (\frac{1}{5}, \frac{1}{5}, +1)$, M3 still factors through $h(p)$ and does not distinguish preparations within a fibre $\mathcal{F}_h$. M3 separates a device with $(b, B, \sigma) = (\frac{1}{5}, \frac{1}{5}, +1)$ from an unbounded or $b = B \ge \frac{2}{5}$ comparator on $h \in \{3, 4\}$, but does **not** exclude a classical comparator equipped with the same $(b, B, \sigma)$ state and guard (B8)–(B9). Multi-trial operation after "resetting the wave" is `UNSUPPLIED` because the unchanged contract specifies no admitted reset operation on $(u, v, A, B_{\mathrm{tape}}, k, w, b, \sigma)$.
 
 **Proof.**
-For (1), `contact/PROOF.md` Section 1 establishes that for $h=0$, $x_3(p) = (2-p_0, 1-p_1, 3-p_2, 4-p_3, 1, 0) \pmod 5$; substituting $p^{(0,a)} = (0,0,0,0)$ and $p^{(0,b)} = (1,4,0,0)$ yields $(2,1,3,4,1,0)$ and $(1,2,3,4,1,0)$.
-For (2), applying $\eta(q,r) = (\ell(q)/2, (\ell(r)+1)/2, 0, 0)$ with $\ell(0,1,2,3,4) = (0,1,2,-2,-1)$ to $C_2(0) = C_2(1) = (0,1)$ gives $(0/2, (1+1)/2, 0, 0) = (0,1,0,0) = z^{(4)}$, whose first-cut response is the $h=4$ row of the integer table $12960\,b_0 = (698, -2832, 708, 696)$; applying $\eta$ to $C_2(2) = (4,0)$ gives $(\ell(4)/2, (\ell(0)+1)/2, 0, 0) = (-1/2, 1/2, 0, 0)$ with energy $\frac{1}{2}(\frac{1}{4} + \frac{1}{4} - 0) = \frac{1}{4}$; applying $\eta$ to $C_2(3) = (3,0)$ gives $(\ell(3)/2, (\ell(0)+1)/2, 0, 0) = (-1, 1/2, 0, 0)$ with energy $\frac{1}{2}(1 + \frac{1}{4} - \frac{1}{5}(-\frac{1}{2})^2) = \frac{1}{2}(\frac{5}{4} - \frac{1}{20}) = \frac{3}{5}$; and applying $\eta$ to $C_2(4) = (1,4)$ gives $(1/2, 0, 0, 0) = z^{(1)}$.
-For (3), the five cold preparation energies on $Z_5$ are $E_0(z^{(h)}) = (0, \frac{1}{10}, \frac{3}{20}, \frac{2}{5}, \frac{2}{5})$ for $h=0,1,2,3,4$; comparing with $B = \frac{1}{5} = \frac{4}{20}$ separates $\{0, \frac{2}{20}, \frac{3}{20}\} \le \frac{4}{20} < \frac{8}{20}$. $\square$
+For (1), `notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/PROOF.md` Section 1 establishes that for $h=0$, $x_3(p) = (2-p_0, 1-p_1, 3-p_2, 4-p_3, 1, 0) \pmod 5$; substituting $p^{(0,a)} = (0,0,0,0)$ and $p^{(0,b)} = (1,4,0,0)$ yields $(2,1,3,4,1,0)$ and $(1,2,3,4,1,0)$.
+For (2), applying $\eta(q,r) = (\ell(q)/2, (\ell(r)+1)/2, 0, 0)$ with $\ell(0,1,2,3,4) = (0,1,2,-2,-1)$ to $C_2(0) = C_2(1) = (0,1)$ gives $(0/2, (1+1)/2, 0, 0) = (0,1,0,0) = e_1 = z^{(4)}$, whose first-cut response is the $h=4$ row of the integer table $12960\,b_0 = (698, -2832, 708, 696)$; applying $\eta$ to $C_2(2) = (4,0)$ gives $(\ell(4)/2, (\ell(0)+1)/2, 0, 0) = (-1/2, 1/2, 0, 0)$ with energy $\frac{1}{2}(\frac{1}{4} + \frac{1}{4} - 0) = \frac{1}{4}$; applying $\eta$ to $C_2(3) = (3,0)$ gives $(\ell(3)/2, (\ell(0)+1)/2, 0, 0) = (-1, 1/2, 0, 0)$ with energy $\frac{1}{2}(1 + \frac{1}{4} - \frac{1}{5}(-\frac{1}{2})^2) = \frac{1}{2}(\frac{5}{4} - \frac{1}{20}) = \frac{3}{5}$; and applying $\eta$ to $C_2(4) = (1,4)$ gives $(1/2, 0, 0, 0) = z^{(1)}$.
+For (3), the exact $H_B$ transition (B7)–(B9) is inherited from `notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/CONTRACT.md` Section 1.2 (`b7636a334b09fcc68422bcd6cc6e15334d416c59`). At $u = v = 0$ and $\sigma = +1$, $\Delta_{+1}(h) = E_D(0, S z^{(h)}) = E_0(z^{(h)}) = (0, \frac{1}{10}, \frac{3}{20}, \frac{2}{5}, \frac{2}{5})$ for $h=0,1,2,3,4$. With $b = B = \frac{1}{5} = \frac{4}{20}$, $b - \Delta_{+1}(h) = (\frac{4}{20}, \frac{2}{20}, \frac{1}{20}, -\frac{4}{20}, -\frac{4}{20})$ lies in $[0, \frac{1}{5}]$ if and only if $h \in \{0, 1, 2\}$, yielding (B10). At $h=0$, $S z^{(0)} = 0$ and $\Delta_{+1}(0) = 0$, so acceptance leaves $v=0, w=0, b=\frac{1}{5}$ and flips $\sigma = +1 \mapsto -1$, whereas at $h \in \{3,4\}$, refusal leaves $v=0, w=0, b=\frac{1}{5}, \sigma=+1$. $\square$
 
 ---
 
@@ -318,7 +354,11 @@ $$
 Then:
 
 1. **Identical calibration on $\Pi_2$ and $Z_5$:** For every $z \in \Pi_2$ (hence on all $5$ points of $Z_5$, all $5$ points of $Z_I \cap \Pi_2$, and all $4$ points of $Z_V \cap \Pi_2$), $J_{01} z = z$, so $\mathcal{O}_{m_\sharp}(z) = \mathcal{O}_{m_*}(z)$ byte for byte.
-2. **Simultaneous divergence on every out-of-plane source $s \in \mathbb{Q}^4 \setminus \Pi_2$:** For every $s = s_{01} + s_{23}$ with $s_{01} \in \Pi_2$ and $s_{23} = (0, 0, s_2, s_3) \ne 0$, $J_{01} s - s = -2 s_{23} \ne 0$. Because $\det R_0 = -\frac{1}{4^4}\det M = -\frac{1770^3 \cdot 365}{4^4 \cdot 1620^4} \ne 0$, we have
+2. **Simultaneous divergence on every out-of-plane source $s \in \mathbb{Q}^4 \setminus \Pi_2$:** For every $s = s_{01} + s_{23}$ with $s_{01} \in \Pi_2$ and $s_{23} = (0, 0, s_2, s_3) \ne 0$, $J_{01} s - s = -2 s_{23} \ne 0$. Because $M$ is $4 \times 4$ and $R_0 = -\frac{1}{4}M$,
+   $$
+   \det R_0 = \det\left(-\tfrac{1}{4}M\right) = (-1)^4 \frac{1}{4^4}\det M = +\frac{1}{4^4}\det M = +\frac{1770^3 \cdot 365}{4^4 \cdot 1620^4} > 0 \ne 0,
+   $$
+   so $R_0$ is injective on $\mathbb{Q}^4$ and
    $$
    b_{0,m_\sharp}(s) - b_{0,m_*}(s) = -2 R_0 s_{23} \ne 0 \qquad (\forall s \in \mathbb{Q}^4 \setminus \Pi_2). \tag{C16}
    $$
@@ -332,24 +372,61 @@ Then:
    $$
 
 **Proof.**
-Since $J_{01}$ fixes $e_0, e_1$ and negates $e_2, e_3$, $J_{01} z = z$ for all $z \in \Pi_2$, giving $R_t J_{01} z = R_t z$ and $z^T J_{01}^T G_{\mathrm{source}} J_{01} z = z^T G_{\mathrm{source}} z$. For any $s \notin \Pi_2$, $s_{23} = \frac{1}{2}(s - J_{01} s) \ne 0$; injectivity of $R_0 = -\frac{1}{4}M$ on $\mathbb{Q}^4$ (`classical/OBSERVABILITY_CALIBRATION.md` equation (O4)) implies $R_0(J_{01}s - s) = -2R_0 s_{23} \ne 0$. For $s = e_0 + e_2$, $J_{01}(e_0 + e_2) = e_0 - e_2$; adding and subtracting columns $0$ and $2$ of $12960\,R_0 = -2(1620\,M)$ and $1399680\,R_1 = 2(699840\,R_1)$ from `classical/OBSERVABILITY_CALIBRATION.md` equations (O3) and (O6) yields (C17), while $(e_0 \pm e_2)^T (I_4 - \frac{1}{5}\mathbf{1}\mathbf{1}^T)(e_0 \pm e_2)/2$ equals $(2 - \frac{4}{5})/2 = \frac{3}{5}$ for $+$ and $(2 - 0)/2 = 1$ for $-$. $\square$
+Since $J_{01}$ fixes $e_0, e_1$ and negates $e_2, e_3$, $J_{01} z = z$ for all $z \in \Pi_2$, giving $R_t J_{01} z = R_t z$ and $z^T J_{01}^T G_{\mathrm{source}} J_{01} z = z^T G_{\mathrm{source}} z$. For any $s \notin \Pi_2$, $s_{23} = \frac{1}{2}(s - J_{01} s) \ne 0$; injectivity of $R_0 = -\frac{1}{4}M$ on $\mathbb{Q}^4$ (`notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/PROOF.md`, where $\det(-\frac{1}{4}M) = +\frac{1}{4^4}\det M > 0$) implies $R_0(J_{01}s - s) = -2R_0 s_{23} \ne 0$. For $s = e_0 + e_2$, $J_{01}(e_0 + e_2) = e_0 - e_2$; adding and subtracting columns $0$ and $2$ of $12960\,R_0 = -2(1620\,M)$ and $1399680\,R_1 = 2(699840\,R_1)$ yields (C17), while $(e_0 \pm e_2)^T (I_4 - \frac{1}{5}\mathbf{1}\mathbf{1}^T)(e_0 \pm e_2)/2$ equals $(2 - \frac{4}{5})/2 = \frac{3}{5}$ for $+$ and $(2 - 0)/2 = 1$ for $-$. $\square$
 
 ---
 
 ### 3.3 Regime C3: Nonlinear source-dependent class $\mathcal{A}_{\mathrm{nl}}$
 
-**Theorem C4 (Nonlinear underdetermination on $Z_5$ and on $Z_I \to Z_V$).**
-In the unrestricted deterministic source-dependent class $\mathcal{A}_{\mathrm{nl}}$:
+**Theorem C4 (Nonlinear underdetermination on every proper subset $I \subsetneq Z_5$ and on $Z_I \to Z_V$).**
+In the unrestricted deterministic source-dependent class $\mathcal{A}_{\mathrm{nl}}$ (`CONTRACT.md` Section 2.1):
 
-1. **Within $Z_5$:** Even after calibrating four of the five points of $Z_5$, namely $I_4 = \{z^{(0)}, z^{(1)}, z^{(2)}, z^{(4)}\}$, prediction on the fifth point $z^{(3)} = (1, \frac{1}{2}, 0, 0)$ is undetermined. Explicitly, the cubic polynomial
+1. **General construction for every proper subset $I \subsetneq Z_5$ (all $31$ proper subsets of $Z_5$) and every held-out point $s \in Z_5 \setminus I$:**
+   For any finite calibration subset $I \subset \mathbb{Q}^4$ and any held-out point $s \in \mathbb{Q}^4 \setminus I$ (in particular, for every proper subset $I \subsetneq Z_5$ and every $s \in Z_5 \setminus I$), define the rational polynomial Lagrange-distance indicator on $\mathbb{Q}^4$:
    $$
-   \Psi_{z^{(3)}}(z) = 2 z_0 (2z_0 - 1) z_1 \tag{C18}
+   L_{I,s}(z) := \prod_{a \in I} \frac{\|z - a\|^2}{\|s - a\|^2} \qquad (z \in \mathbb{Q}^4), \tag{C18a}
    $$
-   satisfies $\Psi_{z^{(3)}}(z^{(0)}) = \Psi_{z^{(3)}}(z^{(1)}) = \Psi_{z^{(3)}}(z^{(2)}) = \Psi_{z^{(3)}}(z^{(4)}) = 0$ and $\Psi_{z^{(3)}}(z^{(3)}) = 1$. Thus the model $m_{\mathrm{nl}} \in \mathcal{A}_{\mathrm{nl}}$ with $b_{t,m_{\mathrm{nl}}}(z) = R_t z + \Psi_{z^{(3)}}(z)\, e_0$ and $E_{0,m_{\mathrm{nl}}}(z) = E_{0,m_*}(z) + \Psi_{z^{(3)}}(z)^2$ satisfies $I_4(m_{\mathrm{nl}}) = I_4(m_*)$ while $b_{0,m_{\mathrm{nl}}}(z^{(3)}) = b_{0,m_*}(z^{(3)}) + e_0 \ne b_{0,m_*}(z^{(3)})$.
-2. **On the classical 9-to-24 protocol ($Z_I \to Z_V$):** Every point $z \in Z_I = \{0, \pm e_0, \pm e_1, \pm e_2, \pm e_3\}$ has at most one nonzero coordinate, so $z_i z_j = 0$ on all $9$ points of $Z_I$ for every $0 \le i < j < 4$. Thus the degree-$2$ polynomial model $m_{\mathrm{cross}} \in \mathcal{A}_{\mathrm{nl}}$ with $b_{t,m_{\mathrm{cross}}}(z) = R_t z + z_0 z_1 e_0$ satisfies $I_{Z_I}(m_{\mathrm{cross}}) = I_{Z_I}(m_*)$ on all $9$ identification sources while diverging on $z^{(2)}, z^{(3)} \in Z_5$ and on all $4$ sources $\sigma e_0 + \rho e_1 \in Z_V \cap \Pi_2$ by $\sigma\rho e_0 \ne 0$.
+   with the standard convention that the empty product for $I = \emptyset$ is $L_{\emptyset,s}(z) \equiv 1$, where $\|w\|^2 = \sum_{i=0}^3 w_i^2$.
+   - *Well-definedness and indicator property:* Because $s \notin I$ and the $5$ points of $Z_5$ are pairwise distinct in $\mathbb{Q}^4$, $s - a \ne 0$ for every $a \in I$. Since the Euclidean quadratic form $\|w\|^2 = \sum_{i=0}^3 w_i^2$ on $\mathbb{Q}^4$ is anisotropic ($\|w\|^2 = 0 \iff w = 0$), every denominator factor satisfies $\|s - a\|^2 \in \mathbb{Q}_{>0}$, so $\prod_{a \in I} \|s - a\|^2 > 0$ is strictly positive and $L_{I,s}(z) \in \mathbb{Q}[z_0, z_1, z_2, z_3]$ is a well-defined polynomial of degree $2|I|$ over $\mathbb{Q}$. For every $a_0 \in I$, the factor $\|z - a_0\|^2 / \|s - a_0\|^2$ vanishes at $z = a_0$, whence $L_{I,s}(a_0) = 0$ on all of $I$; at $z = s$, every factor equals $\|s - a\|^2 / \|s - a\|^2 = 1$ (and for $I = \emptyset$ the empty product is $1$), whence $L_{I,s}(s) = 1$.
+   - *Complete admitted model pair $(m_*, m_{\mathrm{nl}}^{(I,s)}) \in \mathcal{A}_{\mathrm{nl}}$:* Define the complete model $m_{\mathrm{nl}}^{(I,s)} \in \mathcal{A}_{\mathrm{nl}}$ by
+     $$
+     \begin{aligned}
+     b_{0,m_{\mathrm{nl}}^{(I,s)}}(z) &= R_0 z + L_{I,s}(z)\, e_0, \qquad
+     b_{1,m_{\mathrm{nl}}^{(I,s)}}(z) = R_1 z + L_{I,s}(z)\, e_1, \\
+     E_{0,m_{\mathrm{nl}}^{(I,s)}}(z) &= E_{0,m_*}(z) + L_{I,s}(z)^2, \qquad
+     w_{m_{\mathrm{nl}}^{(I,s)}}(z) = E_{0,m_{\mathrm{nl}}^{(I,s)}}(z), \\
+     E_{1,m_{\mathrm{nl}}^{(I,s)}}(z) &= E_{0,m_{\mathrm{nl}}^{(I,s)}}(z) - 2\bigl\|b_{0,m_{\mathrm{nl}}^{(I,s)}}(z)\bigr\|^2, \\
+     E_{2,m_{\mathrm{nl}}^{(I,s)}}(z) &= E_{1,m_{\mathrm{nl}}^{(I,s)}}(z) - 2\bigl\|b_{1,m_{\mathrm{nl}}^{(I,s)}}(z)\bigr\|^2.
+     \end{aligned} \tag{C18b}
+     $$
+     Then $b_{0,m_{\mathrm{nl}}^{(I,s)}}, b_{1,m_{\mathrm{nl}}^{(I,s)}} : \mathbb{Q}^4 \to \mathbb{Q}^4$ and $E_{0,m_{\mathrm{nl}}^{(I,s)}} : \mathbb{Q}^4 \to \mathbb{Q}$ are total rational polynomial functions and $w, E_1, E_2$ satisfy the exact two-cut ledger conservation relations of `CONTRACT.md` lines 106–111, so $m_{\mathrm{nl}}^{(I,s)} \in \mathcal{A}_{\mathrm{nl}}$. On every $a \in I$, $L_{I,s}(a) = 0$ yields $\mathcal{O}_{m_{\mathrm{nl}}^{(I,s)}}(a) = \mathcal{O}_{m_*}(a)$ and $w_{m_{\mathrm{nl}}^{(I,s)}}(a) = w_{m_*}(a)$ byte for byte, so $I(m_{\mathrm{nl}}^{(I,s)}) = I(m_*)$. At $z = s \in Z_5 \setminus I$, $L_{I,s}(s) = 1$ yields
+     $$
+     b_{0,m_{\mathrm{nl}}^{(I,s)}}(s) = R_0 s + e_0 \ne R_0 s = b_{0,m_*}(s), \qquad
+     b_{1,m_{\mathrm{nl}}^{(I,s)}}(s) = R_1 s + e_1 \ne R_1 s = b_{1,m_*}(s), \qquad
+     E_{0,m_{\mathrm{nl}}^{(I,s)}}(s) = E_{0,m_*}(s) + 1 \ne E_{0,m_*}(s),
+     $$
+     proving $\mathrm{Det}(\mathcal{A}_{\mathrm{nl}}, I, \{s\}) = \text{FALSE}$ for every proper subset $I \subsetneq Z_5$ and every $s \in Z_5 \setminus I$.
+   - *Low-degree cubic witness for $I_4 = \{z^{(0)}, z^{(1)}, z^{(2)}, z^{(4)}\} \to z^{(3)}$:* In the special case $I_4 = \{z^{(0)}, z^{(1)}, z^{(2)}, z^{(4)}\}$ and $s = z^{(3)} = (1, \frac{1}{2}, 0, 0)$, the degree-$3$ polynomial
+     $$
+     \Psi_{z^{(3)}}(z) = 2 z_0 (2z_0 - 1) z_1 \tag{C18c}
+     $$
+     already satisfies $\Psi_{z^{(3)}}|_{I_4} = 0$ and $\Psi_{z^{(3)}}(z^{(3)}) = 1$ (and also vanishes on all $9$ points of $Z_I$), so substituting $\Psi_{z^{(3)}}(z)$ in place of $L_{I_4,z^{(3)}}(z)$ in (C18b) gives a degree-$3$/$6$ complete model pair $(m_*, m_{\mathrm{nl}})$ separating $z^{(3)}$ from $I_4 \cup Z_I$.
+2. **Complete model pair $(m_*, m_{\mathrm{cross}}) \in \mathcal{A}_{\mathrm{nl}}$ on the classical 9-to-24 protocol ($Z_I \to Z_V$):**
+   Every identification point $z \in Z_I = \{0, \pm e_0, \pm e_1, \pm e_2, \pm e_3\}$ has at most one nonzero coordinate, so $z_i z_j = 0$ on all $9$ points of $Z_I$ for every $0 \le i < j < 4$. Define the complete degree-$2$ polynomial model $m_{\mathrm{cross}} \in \mathcal{A}_{\mathrm{nl}}$ by specifying all observable and ledger components:
+   $$
+   \begin{aligned}
+   b_{0,m_{\mathrm{cross}}}(z) &= R_0 z + z_0 z_1 e_0, \qquad
+   b_{1,m_{\mathrm{cross}}}(z) = R_1 z, \\
+   E_{0,m_{\mathrm{cross}}}(z) &= E_{0,m_*}(z) = \tfrac{1}{2}z^T G_{\mathrm{source}} z, \qquad
+   w_{m_{\mathrm{cross}}}(z) = E_{0,m_{\mathrm{cross}}}(z), \\
+   E_{1,m_{\mathrm{cross}}}(z) &= E_{0,m_*}(z) - 2\bigl\|R_0 z + z_0 z_1 e_0\bigr\|^2, \\
+   E_{2,m_{\mathrm{cross}}}(z) &= E_{1,m_{\mathrm{cross}}}(z) - 2\|R_1 z\|^2.
+   \end{aligned} \tag{C18d}
+   $$
+   Then $b_{0,m_{\mathrm{cross}}}, b_{1,m_{\mathrm{cross}}}, E_{0,m_{\mathrm{cross}}}$ are total polynomial maps on $\mathbb{Q}^4$ and $w, E_1, E_2$ satisfy `CONTRACT.md` lines 106–111, so $m_{\mathrm{cross}} \in \mathcal{A}_{\mathrm{nl}}$ is a complete admitted model. On every $z \in Z_I$ (and on $\{z^{(0)}, z^{(1)}, z^{(4)}\} \subset Z_5$), $z_0 z_1 = 0$, so $b_{0,m_{\mathrm{cross}}}(z) = R_0 z$, $b_{1,m_{\mathrm{cross}}}(z) = R_1 z$, $E_{0,m_{\mathrm{cross}}}(z) = E_{0,m_*}(z)$, and consequently $E_{1,m_{\mathrm{cross}}}(z) = E_{1,m_*}(z)$, $E_{2,m_{\mathrm{cross}}}(z) = E_{2,m_*}(z)$, and $w_{m_{\mathrm{cross}}}(z) = w_{m_*}(z)$; thus $I_{Z_I}(m_{\mathrm{cross}}) = I_{Z_I}(m_*)$ on all $9$ identification sources. On the superposition points $z^{(2)} = (\frac{1}{2}, \frac{1}{2}, 0, 0)$ and $z^{(3)} = (1, \frac{1}{2}, 0, 0)$ in $Z_5$, $b_{0,m_{\mathrm{cross}}}(z) - b_{0,m_*}(z)$ equals $\frac{1}{4}e_0 \ne 0$ and $\frac{1}{2}e_0 \ne 0$ respectively, and on all $4$ in-plane validation sources $s = \sigma e_0 + \rho e_1 \in Z_V \cap \Pi_2$ ($\sigma, \rho \in \{\pm 1\}$) it equals $\sigma\rho e_0 = \pm e_0 \ne 0$ (and replacing $z_0 z_1 e_0$ in (C18d) by $\bigl(\sum_{0 \le i < j < 4} z_i z_j\bigr)e_0$ preserves $I_{Z_I}(m) = I_{Z_I}(m_*)$ while diverging by $\sigma\rho e_0 = \pm e_0 \ne 0$ on all $24$ validation sources of $Z_V$).
 
 **Proof.**
-Direct substitution of $z^{(0)}=(0,0,0,0)$ ($z_0=0$), $z^{(1)}=(\frac{1}{2},0,0,0)$ ($z_1=0$), $z^{(2)}=(\frac{1}{2},\frac{1}{2},0,0)$ ($2z_0-1=0$), $z^{(4)}=(0,1,0,0)$ ($z_0=0$), and $z^{(3)}=(1,\frac{1}{2},0,0)$ ($2 \cdot 1 \cdot 1 \cdot \frac{1}{2} = 1$) proves (1); vanishing of $z_i z_j$ on the coordinate axes $Z_I$ and nonvanishing $\sigma\rho = \pm 1$ on $Z_V$ proves (2). $\square$
+In Part (1), for any $a \in I$ and $s \notin I$, $s - a \ne 0 \implies \|s - a\|^2 = \sum_{i=0}^3 (s_i - a_i)^2 > 0$ over $\mathbb{Q}$, so $L_{I,s}(z)$ in (C18a) has nonzero rational denominator $\prod_{a \in I}\|s-a\|^2 > 0$, vanishes when $z = a_0 \in I$ because the $a_0$-factor has numerator $\|a_0 - a_0\|^2 = 0$, and equals $1$ at $z = s$ because each factor is $\|s-a\|^2/\|s-a\|^2 = 1$ (or the empty product $1$ when $I = \emptyset$). Substituting $L_{I,s}(a) = 0$ and $L_{I,s}(s) = 1$ into (C18b) verifies identical calibration on $I$ and nonzero divergence at $s$. Direct substitution of $z^{(0)}=(0,0,0,0)$ ($z_0=0$), $z^{(1)}=(\frac{1}{2},0,0,0)$ ($z_1=0$), $z^{(2)}=(\frac{1}{2},\frac{1}{2},0,0)$ ($2z_0-1=0$), $z^{(4)}=(0,1,0,0)$ ($z_0=0$), and $z^{(3)}=(1,\frac{1}{2},0,0)$ ($2 \cdot 1 \cdot 1 \cdot \frac{1}{2} = 1$) verifies (C18c). In Part (2), every $z \in Z_I$ has support of size $\le 1$, so $z_i z_j = 0$ for all $0 \le i < j < 4$, whereas every $s = \sigma e_i + \rho e_j \in Z_V$ has $s_i s_j = \sigma\rho = \pm 1 \ne 0$ and $s_k = 0$ for $k \notin \{i,j\}$, verifying (C18d). $\square$
 
 ---
 
@@ -404,11 +481,11 @@ For Part (2), every $z \in Z_5 \cup Z_I$ lies either in $\Pi_2 = \mathbb{Q}e_0 \
 | $\mathcal{A}_{\mathrm{aff}}$ | $\{z^{(0)}, z^{(1)}, z^{(4)}\}$ | All of $\Pi_2$ | Signed $(b_0, b_1)$ | **DETERMINED** | Theorem C2(1), (C10) |
 | $\mathcal{A}_{\mathrm{aff}}$ | All $5$ points of $Z_5$ | $\Pi_2 \setminus Z_5$ (incl. $\Pi_2 \cap Z_I$, $\Pi_2 \cap Z_V$) | Unconstrained affine-quadratic $E_0$ | **UNDERDETERMINED** | Theorem C2(2), null polynomial $\Phi_{Z_5}$ in (C12)–(C13) |
 | $\mathcal{A}_{\mathrm{lin}}$ | All $5$ points of $Z_5$ (or all of $\Pi_2$) | Any $s \in \mathbb{Q}^4 \setminus \Pi_2$ (all $4$ of $Z_I \setminus \Pi_2$, all $20$ of $Z_V \setminus \Pi_2$) | Signed $(b_0,b_1)$ and full $\mathcal{O}_m$ | **UNDERDETERMINED** | Theorem C3, witness $(m_*, m_\sharp)$ in (C15)–(C17) |
-| $\mathcal{A}_{\mathrm{nl}}$ | $I_4 = \{z^{(0)},z^{(1)},z^{(2)},z^{(4)}\}$ or $Z_I$ | Held-out $z^{(3)}$ or $Z_V$ | Signed $(b_0,b_1)$ and $E_0$ | **UNDERDETERMINED** | Theorem C4, cubic $\Psi_{z^{(3)}}$ in (C18) and $z_0 z_1$ |
+| $\mathcal{A}_{\mathrm{nl}}$ | Any proper subset $I \subsetneq Z_5$ (or $Z_I$) | Any held-out $s \in Z_5 \setminus I$ (or $Z_V$) | Full $\mathcal{O}_m$ ($(b_0,b_1,E_0,E_1,E_2)$) | **UNDERDETERMINED** | Theorem C4, general $(m_*, m_{\mathrm{nl}}^{(I,s)})$ via $L_{I,s}$ in (C18a)–(C18b), cubic $\Psi_{z^{(3)}}$ in (C18c), and $(m_*, m_{\mathrm{cross}})$ in (C18d) |
 | $\mathcal{A}_{\mathrm{lin}}$ | $Z_5 \cup U_{\mathrm{ext}}$ with $\operatorname{span}\pi_{23}(U_{\mathrm{ext}})=\mathbb{Q}^2$ ($\min |U_{\mathrm{ext}}|=2$) | All of $\mathbb{Q}^4$ (incl. all $24$ of $Z_V$) | Signed $(b_0, b_1)$ | **DETERMINED** | Theorem C5(1), (C19) |
 | $\mathcal{A}_{\mathrm{lin}}$ | $Z_5 \cup Z_I$ (includes $U_{\mathrm{lin},2} = \{e_2,e_3\}$) | $16$ mixed points $\sigma e_i + \rho e_k \in Z_V$ | Full $\mathcal{O}_m$ (arbitrary $G_0 \in \mathbb{Q}^{4\times 4}_{\mathrm{sym}}$) | **UNDERDETERMINED** | Theorem C5(2), witness $(m_*, m_{\mathrm{energy\text{-}flip}})$ in (C21) |
 | $\mathcal{A}_{\mathrm{lin}}$ | $Z_5 \cup U_{\mathrm{quad},7}$ ($\min |U_{\mathrm{ext}}|=7$) | All of $\mathbb{Q}^4$ (incl. all $24$ of $Z_V$) | Full $\mathcal{O}_m$ ($(b_0,b_1,E_0,E_1,E_2)$) | **DETERMINED** | Theorem C5(2), (C22)–(C24) |
-| $\mathcal{M}_{\mathrm{dyn}}$ | Any $I_{\mathrm{set}} \subseteq \mathbb{Q}^4$ (incl. all $\mathbb{Q}^4$) | Mechanism $D_{\mathrm{NC}}$ vs classical clone $D_{\mathrm{cl}}$ | Classical port/energy $\Pi_{\mathrm{port}}$ | **INDISTINGUISHABLE** | Theorem B1, (B1)–(B2) |
+| $\mathcal{M}_{\mathrm{dyn}}$ | Any $I_{\mathrm{set}} \subseteq \mathbb{Q}^4$ (incl. all $\mathbb{Q}^4$) | Mechanism $D_{\mathrm{NC}}$ vs matched classical clone $D_{\mathrm{cl}}$ | Classical port/energy $\Pi_{\mathrm{port}}$ | **INDISTINGUISHABLE** | Theorem B1, (B1)–(B2) |
 
 ---
 
@@ -419,7 +496,7 @@ For Part (2), every $z \in Z_5 \cup Z_I$ lies either in $\Pi_2 = \mathbb{Q}e_0 \
 Without assuming unconstructed out-of-plane sources, the existing native-contact family $Z_5$ supports an exact, non-circular within-plane S/I/V test on $\Pi_2$ under $\mathcal{A}_{\mathrm{lin}}$:
 
 1. **Stage S (Independent pre-calibration qualification, all currently unissued $\implies$ `NOT_READY`):**
-   Before opening any Stage $I_5$ or Stage $V_5$ record, the instance packet must supply independent certificates for the twelve qualification fields of `classical/OBSERVABILITY_CALIBRATION.md` Section 6 (`INSTANCE`, `SOURCE`, `READY`, `SENSORS`, `UNITS`, `CLOCK_BINS`, `CONTACT`, `STATE_ENERGY`, `BOUNDARY`, `RENEWAL`, `UNCERTAINTY`, `CUSTODY`) with positive bounded conversion scales $(A_{0,\mathrm{length}}, \tau_{\mathrm{step}}, E_*)$ and derived $V_0 = A_{0,\mathrm{length}}/\tau_{\mathrm{step}}$, $F_0 = E_*/A_{0,\mathrm{length}}$, $Z_0 = E_*\tau_{\mathrm{step}}/A_{0,\mathrm{length}}^2$, $Z_j = 2Z_0$.
+   Before opening any Stage $I_5$ or Stage $V_5$ record, the instance packet must supply independent certificates for the twelve qualification fields of `classical/OBSERVABILITY_CALIBRATION.md` Section 6 (`INSTANCE`, `SOURCE`, `READY`, `SENSORS`, `UNITS`, `CLOCK_BINS`, `CONTACT`, `STATE_ENERGY`, `BOUNDARY`, `RENEWAL`, `UNCERTAINTY`, `CUSTODY`) with positive bounded conversion scales $(A_{0,\mathrm{length}}, \tau_{\mathrm{step}}, E_*)$ and derived $V_0 = A_{0,\mathrm{length}}/\tau_{\mathrm{step}}$, $F_0 = E_*/A_{0,\mathrm{length}}$, $Z_0 = E_*\tau_{\mathrm{step}}/A_{0,\mathrm{length}}^2$, $Z_j = 2Z_0$, on the exact ordered port tuple $R = ((0,0,0), (1,1,0), (1,0,1), (0,1,1)) \in D_3^4$.
 2. **Stage $I_5$ (4 native residue-class preparations $h \in \{0, 1, 2, 4\}$):**
    Acquire one complete two-cut record for canonical representatives $p^{(0)}=(0,0,0,0)$, $p^{(1)}=(1,0,0,0)$, $p^{(2)}=(2,0,0,0)$, $p^{(4)}=(4,0,0,0) \in \mathbb{F}_5^4$ prepared at $(0; (p^{(h)}, 0, 1))$ with cold classical state $X_{\mathrm{blank}}$.
    - **Continuing-wave acquisition:** Both $b_{\mathrm{cal},0}(z^{(h)})$ and $b_{\mathrm{cal},1}(z^{(h)})$ must be extracted from the physical outgoing channels during cut $t=0$ and cut $t=1$ of the continuing state; $b_1$ is never computed from $b_0$ via $-4R_1 M^{-1}b_0$.
@@ -453,10 +530,10 @@ Without assuming unconstructed out-of-plane sources, the existing native-contact
    - `FAIL` if at least one sound required interval is disjoint from $[-1/10000, +1/10000]$.
    - `UNRESOLVED` otherwise.
 
-### 4.2 Protocol D2: Conditional full-span and mechanism-separation extensions
+### 4.2 Protocol D2: Conditional full-span and restricted-comparator separation extensions
 
-1. **Full 9/24 $Z_I/Z_V$ span extension:** Requires an independently qualified source adapter or extended contact supplying at least $2$ quotient-independent vectors $u^{(2)}, u^{(3)}$ satisfying (A6) (for signed responses) and $7$ vectors spanning $\mathcal{K}_{\mathrm{quad}}(\Pi_2)^*$ such as $U_{\mathrm{quad},7}$ in (C22) (for unconstrained symmetric quadratic energy). Negative-amplitude vectors such as $-e_0, -e_1$ are not operationally admitted by $Z_5$ at $n=1$ merely because they lie in $\Pi_2$; they require either an explicit sign-inverting preparation certificate or the $n=2$ contact shift of Theorem B2(2) (which produces $(-\frac{1}{2}, \frac{1}{2}, 0, 0)$ and $(-1, \frac{1}{2}, 0, 0)$).
-2. **Mechanism-attribution extension ($D_{\mathrm{NC}}$ vs $D_{\mathrm{cl}}$):** Even after passing `PASS_Z5_SCOPE` or the full 9/24 $Z_I/Z_V$ test on $\Pi_{\mathrm{port}}$, mechanism attribution remains `INDISTINGUISHABLE_ON_PORT` by Theorem B1 unless supplemented by at least one of the three separating interventions of Theorem B2:
-   - **Test M1:** Read out the retained native checkpoint $x_3(p)$ on distinct inputs $p \ne p'$ within the same fibre $\mathcal{F}_h$ (e.g. $p^{(0,a)}=(0,0,0,0)$ vs $p^{(0,b)}=(1,4,0,0)$ in (B3)) and verify the guarded prepared-image inverse.
-   - **Test M2:** Shift the contact trigger from $n=1$ to $n=2$ and test the predicted merger $z_{n=2}^{(0)} = z_{n=2}^{(1)} = e_1$ (B5) and negative-$e_0$ energies (B6).
-   - **Test M3:** Operate under a finite un-renewed energy reservoir $B$ (from `#1495`/`#1496` or Agent 1's $H_B$ interface) or multi-use continuation (from Agent 2's interface) and test the predicted threshold saturation at $h \in \{3,4\}$.
+1. **Full 9/24 $Z_I/Z_V$ span extension:** Requires an independently qualified source adapter or extended contact supplying at least $2$ quotient-independent vectors $u^{(2)}, u^{(3)}$ satisfying (A6) (for signed responses) and $7$ vectors spanning $\mathcal{K}_{\mathrm{quad}}(\Pi_2)^*$ such as $U_{\mathrm{quad},7}$ in (C22) (for unconstrained symmetric quadratic energy). Negative-axis vectors $-e_0 = (-1,0,0,0)$ and $-e_1 = (0,-1,0,0)$ are **not** operationally prepared by $Z_5$ at $n=1$ or by the $n=2$ contact shift (B4): the $n=2$ receiver table $C_2(h)$ prepares only the four distinct vectors $\{e_1,\, (-\frac{1}{2}, \frac{1}{2}, 0, 0),\, (-1, \frac{1}{2}, 0, 0),\, (\frac{1}{2}, 0, 0, 0)\}$, none of which is $-e_0$ or $-e_1$. Because a linear span or linear combination is an algebraic relation on predictions rather than an admitted source-preparation operation, preparing $-e_0$ or $-e_1$ requires an independent sign-inverting or external source-preparation certificate (`UNSUPPLIED`).
+2. **Conditional comparator-separation extensions (Witnesses M1–M3 of Theorem B2):** Even after passing `PASS_Z5_SCOPE` or the full 9/24 $Z_I/Z_V$ test on $\Pi_{\mathrm{port}}$, mechanism attribution against a matched classical clone $D_{\mathrm{cl}}$ remains `INDISTINGUISHABLE_ON_PORT` by Theorem B1. Each prospective intervention below tests $D_{\mathrm{NC}}$ only against its explicitly restricted comparator class:
+   - **Test M1 (vs. $h$-only comparator):** Read out the retained native checkpoint $x_3(p)$ on distinct inputs $p \ne p'$ within the same fibre $\mathcal{F}_h$ (e.g. $p^{(0,a)}=(0,0,0,0)$ vs $p^{(0,b)}=(1,4,0,0)$ in (B3)) and verify the guarded prepared-image inverse (does not exclude a classical comparator retaining full $p$).
+   - **Test M2 (vs. static lookup comparator at single-contact timing $n=2$):** Shift the single contact trigger from $n=1$ to $n=2$ (reading current $C_2(p)$) and test the predicted merger $z_{n=2}^{(0)} = z_{n=2}^{(1)} = e_1$ (B5) and energies (B6) (still factors through $h(p)$ at fixed $n=2$, does not exclude a time-indexed classical table, and is strictly distinct from Agent 2's `#1499` second contact at $n=3$ reading retained $d = C_{1,B}$ captured at $n=1$).
+   - **Test M3 (vs. differently funded comparator under historical $H_B$):** Operate a single cold trial from $X_{\mathrm{blank}}, w=0, b=B=\frac{1}{5}, \sigma=+1$ under the full $H_B$ law (B7)–(B9) (`#1495`/`#1496`) and record both $\Pi_{\mathrm{port}}$ and the post-contact store/direction state $(b, \sigma)$ so that accepted $h=0$ ($(b,\sigma)=(\frac{1}{5},-1)$), accepted $h \in \{1,2\}$ ($(b,\sigma)=(\frac{1}{5}-E_0(z^{(h)}),-1)$, $(b_0,b_1) \ne 0$), and refused $h \in \{3,4\}$ ($(b,\sigma)=(\frac{1}{5},+1)$, $(b_0,b_1)=0$) are distinguished without inferring acceptance from a zero port/energy record alone (still factors through $h(p)$ at fixed $(b,B,\sigma)$, does not exclude a classical comparator with the same $(b,B,\sigma)$ guard, and leaves multi-trial wave-reset renewal `UNSUPPLIED`).
