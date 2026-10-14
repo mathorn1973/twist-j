@@ -38,13 +38,19 @@ Conservative verdict: **`CLASS_NO_GO_WITH_SCOPE`** — no complete
 contact-stage compilation of `H_B` exists in the frozen wave-blind,
 store-blind, or finite-control grammars, already at `B=2/5` — and
 **`NATIVE_ADMISSION_UNSUPPLIED/STOP`** overall. In detail
-(`PROOF.md`, `RESULT.md`): exact occupied-wave read and exact store
-comparison are separately necessary permission kinds; frozen
-`Gamma+` compilation is left unresolved (its payments are
-unconditional); one added guarded-payment kind suffices at
-initialized-ancilla scope in the extended comparison grammar
-`Gamma++`. No needed kind has a Canon warrant in the audited text,
-so `H_native(B)` and native admission remain open, and physical
-status remains `NOT_READY`. The pin commit froze `CONTRACT.md`,
+(`PROOF.md`, `RESULT.md`, as amended in revision R1 and
+synchronized here in R2): both scoped no-go results survive — exact
+occupied-wave read and exact store comparison are separately
+necessary permission kinds. No globally typed compilation is
+established anywhere: register additions into the bounded store
+are not permutations of the whole carrier (a typing defect already
+inside frozen `Gamma+`), frozen Q3 remains unresolved, and the
+five-stage calculation is only an initialized algebraic recipe
+from `(d,beta)=(0,0)`, not a globally typed compilation
+(`PROOF.md` §5). Guarded payment is at most a proposed ingredient
+for a future separately typed extension; its necessity and any
+minimality are unproved. No necessary kind has a Canon warrant in
+the audited text, so `H_native(B)` and native admission remain
+open (`UNSUPPLIED/STOP`), and physical status remains `NOT_READY`. The pin commit froze `CONTRACT.md`,
 `PREREG.md` and `SOURCES.json` before the derivation; this result is
 a descendant of that pin. No scientific verifier was run.
