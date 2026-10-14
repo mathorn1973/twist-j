@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "candidate_id": "C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N",
+  "issue_number": 1504,
+  "parent_coordination_issue": 1497,
+  "branch": "incubation/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N",
+  "authority_base": {
+    "state": "ACTIVE",
+    "canon": "Public Canon v101",
+    "tag": "canon-v101",
+    "main_commit": "8b91a935c426036e00ecb300019fd94734addeec",
+    "content_commit": "421a4ec1daf07c04d19022c1ee219607e83c09a8",
+    "canon_sha256": "b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7",
+    "canon_bytes": 992352
+  },
+  "preregistration_commit": "d4b67e44d14a2f224a0ed77eb8dd08b217711cfb",
+  "action_layer": "L1",
+  "scientific_code_status": "NONE / NOT_RUN",
+  "physical_status": "NOT_READY",
+  "promotion_recommendation": "DO NOT PROMOTE",
+  "composite_carrier": {
+    "symbol": "Z_B",
+    "definition": "N_0 x F_5^6 x F_5^6 x X x Q x ([0,B] cap Q) x {+1,-1}^2 x F_5^2 x (Z/8Z)",
+    "classical_wave_tape_carrier": "X = (Q^D x Q^D) x (Q^4)^2 x (Q^4)^2 x (Z/2Z) with |D| = 869",
+    "equality_rule": "literal coordinate equality with zero tolerance (no sign quotient, normalization, or projectivization)"
+  },
+  "apparatus_subcarrier": {
+    "symbol": "A_B",
+    "definition": "X x Q x ([0,B] cap Q) x {+1,-1}^2 x F_5^2"
+  },
+  "admitted_conditional_primitives": {
+    "L_buf": {
+      "carrier": "F_5^6 x F_5^2",
+      "forward": "L_buf(x_B, d) = (x_B, (d + rec(x_B)) mod 5)",
+      "inverse": "L_buf^{-1}(x_B, d') = (x_B, (d' - rec(x_B)) mod 5)",
+      "status": "conditional L1 primitive (not compiled from U or J)"
+    },
+    "H_B_A": {
+      "label_read": "r_A = rec(x_A) in F_5^2",
+      "direction_slot": "sigma_A in {+1,-1}",
+      "guard": "0 <= b - Delta_A <= B",
+      "accepted_branch": "(v, W, b, (sigma_A, sigma_B)) -> (v + sigma_A a_A, W + Delta_A, b - Delta_A, (-sigma_A, sigma_B))",
+      "refused_branch": "identity",
+      "involutivity": "H_{B,A}^2 = id globally across all accepted, refused, and occupied states",
+      "status": "conditional L1 primitive (not compiled from U or J)"
+    },
+    "H_B_B": {
+      "label_read": "d in F_5^2",
+      "direction_slot": "sigma_B in {+1,-1}",
+      "guard": "0 <= b - Delta_B <= B",
+      "accepted_branch": "(v, W, b, (sigma_A, sigma_B)) -> (v + sigma_B a_B, W + Delta_B, b - Delta_B, (sigma_A, -sigma_B))",
+      "refused_branch": "identity",
+      "involutivity": "H_{B,B}^2 = id globally across all accepted, refused, and occupied states",
+      "status": "conditional L1 primitive (not compiled from U or J)"
+    }
+  },
+  "eight_phase_schedule": {
+    "phases": {
+      "0": "V on (n, x_A, x_B); apparatus held",
+      "1": "L_buf on (x_B, d) and H_{B,A} on (x_A, X, W, b, sigma_A)",
+      "2": "V on (n, x_A, x_B) and F on X",
+      "3": "V on (n, x_A, x_B) and F on X",
+      "4": "H_{B,B} on (d, X, W, b, sigma_B)",
+      "5": "V on (n, x_A, x_B) and F on X",
+      "6": "V on (n, x_A, x_B) and F on X",
+      "7": "hold all state coordinates; advance c: 7 -> 0"
+    },
+    "boundary": "c = 7, n = 5",
+    "global_permutation": "G_B(a, c) = (T_c(a), (c+1) mod 8) is a two-sided bijection on A_B x (Z/8Z)"
+  },
+  "common_ready_family": {
+    "symbol": "R_{(c_0, c_1, b_init, B)}",
+    "initial_state": "n=0, x_A=(p_A,0,1), x_B=(p_B,0,1), u=v=0, A=(0,0), B_out=(c_0,c_1), k=0, W=0, b=b_init, (sigma_A,sigma_B)=(+1,+1), d=(0,0), c=0",
+    "native_input_pair_count": 390625,
+    "ordered_source_pair_count": 25,
+    "pairs_per_fibre": 15625,
+    "blank_ready_subfamily": "c_0 = c_1 = 0"
+  },
+  "occupied_wave_second_contact_work": {
+    "formula": "Delta_B(z_A, z_B) = E_0(z_B) + g^T (w_2 - (1/2) H w_1) = E_0(z_B) - s_B (mu^T z_A) / 10497600",
+    "fifth_site_projection": "w_2 - (1/2) H w_1 = J_0 ((1/2) H K H f - f) and J_0 g = -(s_B / 5) delta_{y_4}",
+    "mu_vector": [145483, 173653, 173653, 142153],
+    "denominator": 10497600,
+    "cross_term_bounds_on_Z5xZ5": {
+      "min": "-154873/4665600",
+      "max": "0"
+    },
+    "Delta_B_bounds_on_Z5xZ5": {
+      "min": "0",
+      "max": "2/5"
+    },
+    "W_final_bounds_on_Z5xZ5": {
+      "min": "0",
+      "max": "8224427/10497600",
+      "maximizer_pair": [4, 4]
+    }
+  },
+  "input_independent_two_use_store_bounds": {
+    "sharp_threshold_B_star": "8224427/10497600",
+    "universal_acceptance_condition": "8224427/10497600 <= b_init <= B",
+    "canonical_cold_two_use_capacity": "4/5",
+    "minimum_reserve_at_4_over_5": "173653/10497600",
+    "branch_counts_on_Z5xZ5": {
+      "B=4/5": {
+        "ACC_ACC": 25,
+        "ACC_REF": 0,
+        "REF_ACC": 0,
+        "REF_REF": 0
+      },
+      "B=8224427/10497600": {
+        "ACC_ACC": 25,
+        "ACC_REF": 0,
+        "REF_ACC": 0,
+        "REF_REF": 0
+      },
+      "B=2/5": {
+        "ACC_ACC": 13,
+        "ACC_REF": 12,
+        "REF_ACC": 0,
+        "REF_REF": 0
+      },
+      "B=1/5": {
+        "ACC_ACC": 6,
+        "ACC_REF": 9,
+        "REF_ACC": 6,
+        "REF_REF": 4
+      }
+    }
+  },
+  "unified_four_cut_equations_and_source_decoder": {
+    "final_tape_layout_at_c7": {
+      "A_final": ["b_0", "b_1"],
+      "B_out_final": ["b_3", "b_2"]
+    },
+    "equations": {
+      "b_0": "alpha_A R_0 z_A",
+      "b_1": "alpha_A R_1 z_A",
+      "b_2": "alpha_A D_2(z_A) + alpha_B R_0 z_B",
+      "b_3": "alpha_A D_3(z_A) + alpha_B R_1 z_B - (1/2) J_p c_1"
+    },
+    "archive_independent_source_decoder_on_ACC_ACC": {
+      "z_A": "R_0^{-1} b_0 = -4 M^{-1} b_0",
+      "z_B": "R_0^{-1} (b_2 - D_2(z_A)) = -4 M^{-1} (b_2 - D_2(-4 M^{-1} b_0))"
+    }
+  },
+  "native_prepared_image_left_inverse": {
+    "decoder": "(0, x_A(0), x_B(0)) = V^{-5}(5, x_A(5), x_B(5))",
+    "domain_size": 390625,
+    "exact_recovery_across_all_four_branches": true
+  },
+  "joint_energy_work_store_invariants": {
+    "E_full_minus_W": "2(||c_0||^2 + ||c_1||^2)",
+    "E_full_plus_b": "2(||c_0||^2 + ||c_1||^2) + b_init",
+    "W_plus_b": "b_init",
+    "tape_energy_counting": "single count 2(||A_0||^2 + ||A_1||^2 + ||B_0||^2 + ||B_1||^2) inside E_full(X)"
+  },
+  "conditioned_two_use_calibration_to_prediction": {
+    "model_class": "A_lin^(2) = {(A_0, A_1, D_2, D_3, G_0, Omega)}",
+    "full_parameter_dimension": 90,
+    "Pi_2_restricted_parameter_dimension": 39,
+    "Pi_2_rank_one_Omega_restricted_dimension": 37,
+    "out_of_plane_kernel_dimension": 51,
+    "calibration_run_count_general_Pi2": 7,
+    "out_of_sample_predicted_pairs_general_Pi2": 18,
+    "calibration_run_count_rank_one_Omega": 5,
+    "out_of_sample_predicted_pairs_rank_one_Omega": 20,
+    "nonlinear_countermodel_polynomial": "q_3(z_0, z_1) = z_0 z_1 (2 z_0 - 1)"
+  },
+  "comparator_boundary_and_separation_witnesses": {
+    "matched_classical_comparator": "byte-for-byte identical across all 390625 native input pairs",
+    "restricted_comparators_separated": [
+      "M_single (single-use comparator, separated on (0,1) at B=4/5)",
+      "M_cold (cold-restart / cold-work comparator, separated on (4,4) at B*=8224427/10497600 and B=4/5)",
+      "M_2-slot (two-slot overwriting tape comparator, separated on (1,0) at B=4/5)",
+      "M_1sigma (single-direction-bit comparator, separated on (0,1) at B=4/5)",
+      "M_no-sigma (unretained-direction comparator, separated on {(0,0),(0,3),(3,0),(3,3)} at B=1/5)"
+    ]
+  }
+}
