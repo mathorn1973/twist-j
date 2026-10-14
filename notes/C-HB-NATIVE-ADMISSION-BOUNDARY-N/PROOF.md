@@ -271,4 +271,3 @@ conservative verdict: CLASS_NO_GO_WITH_SCOPE for Gamma_wb, Gamma_sb
   (hence Gamma_fc) at COMPLETE scope; native admission of H_B
   UNSUPPLIED/STOP; QUADRATIC-MEMORY-NATIVE-CONTACT remains O
 ```
-
