@@ -154,30 +154,76 @@ quantity separating the `S_t` family as `Delta_sigma` does), and
 acceptance bounds. Finite native data, however large the finite
 controller, cannot substitute for either kind.
 
-## 5. Q3: the payment must also be guarded (new construction and gap)
+## 5. Q3 unresolved: an initialized algebraic recipe, not a typed compilation
 
 Necessity of reading (`K_wave`, `K_cmp`) does not by itself pay.
 Inside frozen `Gamma+` the only payment generator, `K_reg`, adds the
-ancilla `d` to a register **unconditionally**. The natural word
-"transfer `Delta` to `d`, compare, then pay `d` into `(w,b)`" therefore
-fails on rejected states: on `S_2` it would add `Delta=2` to `w` and
-move `b` to `2/5-2=-8/5`, outside the carrier `Q cap [0,B]`, where
-`H_B` is the identity. Whether some other `Gamma+` word simulates a
-guarded payment through its comparison/receiver channels is **not
-decided here**; no insufficiency theorem for `Gamma+` is claimed.
+ancilla `d` to a register **unconditionally**. The natural recipe
+"transfer `Delta` to `d`, compare, then pay `d` into `(w,b)`" fails
+even as algebra on rejected states: on `S_2` it would add `Delta=2`
+to `w` and move `b` to `2/5-2=-8/5`, outside the carrier
+`Q cap [0,B]`, where `H_B` is the identity. The failure of this one
+unconditional-payment recipe is not a no-go theorem for `Gamma+`.
 
-What is shown is that exactly one further declared kind closes the
-construction. Let `Gamma++` be `Gamma+` plus the single kind
+### 5.1 Correction: the bounded-store typing defect
 
-- (K_guard) **guarded register addition:** if `beta=1` then
-  `R -> R +/- d` for one declared rational register `R`, else the
-  identity; all else fixed. Origin:
-  `EXPLICITLY-SUPPLIED-COMPARISON`, outside the frozen `Gamma+`.
+`CONTRACT.md` §4 requires every generator to be **a permutation of
+the whole extended carrier**. The store is bounded,
+`b in Q cap [0,B]`, while the ancilla `d` ranges over all of `Q`.
+Any register-addition instance landing in `b` is therefore not even
+a self-map of the declared carrier: for `K_reg` with `R=b`, and
+likewise for the `K_guard` instance `b -> b-d` at `beta=1` proposed
+in an earlier version of this section, the admitted state
 
-**Theorem 3 (initialized sufficiency in `Gamma++`).** With ancillas
-`d=0`, `beta=0` initially, the following word equals `H_B` on the
-`K_B` components for every `B>=0`, both `sigma`, and all occupied
-states, and restores `(d,beta)=(0,0)`:
+```text
+B = 2/5, b = 0, d = 1, beta = 1   maps to   b' = -1 notin [0, 2/5].
+```
+
+Hence neither instance is a globally admitted primitive under the
+frozen contract. This includes an **unresolved typing defect inside
+the frozen `Gamma+` definition itself** (its `K_reg` instance on
+`b`); `CONTRACT.md` is frozen and is not silently edited here, so
+the defect is recorded, not repaired. A separately frozen successor
+must type every addition landing in the bounded store. Theorems 1
+and 2 are unaffected: their fibre lemmas quantify over the wider
+generator forms, and restricting to globally typed permutations only
+shrinks those classes, so the no-go conclusions only strengthen.
+
+Merely refusing an out-of-range subtraction (identity instead) does
+not repair invertibility: with `B=1`, `d=1/2`, `beta=1`, guarded
+subtraction with refusal sends `b=1/2` to `b'=0` (applied) and also
+`b=0` to `b'=0` (refused), with all other components fixed — two
+complete inputs, one output. A different carrier or a genuinely
+reversible payment primitive belongs to a separately frozen
+successor and is outside this revision.
+
+INITIALIZED scope does not waive any of this. INITIALIZED restricts
+the required *final equality* to an initialized subcarrier with
+ancillas restored; the requirement that each primitive itself be a
+global permutation of the whole extended carrier is a separate,
+independently frozen clause. Correctness of `beta` along the
+initialized execution shows safety on that execution path only. The
+earlier presentation of the calculation below as a compiled word in
+globally admitted primitives ("Theorem 3") is therefore
+**withdrawn as a compilation claim**.
+
+### 5.2 Retained statement: initialized algebraic recipe only
+
+Let the label `Gamma++` denote the *proposed* ingredient set
+`Gamma+` plus guarded register addition
+
+- (K_guard) if `beta=1` then `R -> R +/- d`, else the identity,
+  origin `EXPLICITLY-SUPPLIED-COMPARISON`, outside frozen `Gamma+`,
+
+without any claim that its `b`-instances are globally typed (they
+are not, by §5.1). What survives is the following narrower
+algebraic fact about executions started at `(d,beta)=(0,0)`:
+
+**Recipe (initialized algebra, not a compilation).** Starting from
+ancillas `d=0`, `beta=0`, the following five steps produce exactly
+the `H_B` output on the `K_B` components for every `B>=0`, both
+`sigma`, and all occupied states, and restore `(d,beta)=(0,0)`
+along that execution:
 
 1. `K_wave (+1)`: `d := Delta_sigma(u,v;q,r) =: D`.
 2. `K_cmp (b,d)`: `beta := 1[0 <= b-D <= B]`.
@@ -187,9 +233,11 @@ states, and restores `(d,beta)=(0,0)`:
    is carried as a declared control component, updated by a
    `Fin`-function and exported by projection, as `CONTRACT.md`
    §4(c) permits), together with `K_guard` payments `w -> w+d`,
-   `b -> b-d` applied iff `beta=1`. If `beta=1` then
-   `b-d in [0,B]` by step 2, so the carrier is preserved; if
-   `beta=0` nothing in this step moves.
+   `b -> b-d` applied iff `beta=1`. Along this initialized
+   execution `beta=1` implies `b-d in [0,B]` by step 2, so the
+   executed values stay in range (execution-path safety only, not
+   global typing of the step, §5.1); if `beta=0` nothing in this
+   step moves.
 4. `K_wave (eps)` with `eps=+1` if `beta=1`, else `-1` (selected by
    `Fin`): after step 3 the current difference is `-D` on the
    accepted branch (inherited #1496 reverse identity) and `D` on
@@ -199,18 +247,32 @@ states, and restores `(d,beta)=(0,0)`:
    lies in `[0,B]`, so `beta` returns to `0`; on the rejected branch
    the flag recomputes to `0` and `beta` stays `0`.
 
-The accepted branch performs exactly
+Along an execution started at `(d,beta)=(0,0)` the accepted branch
+performs exactly
 `(v,w,b,sigma) -> (v+sigma*a, w+D, b-D, -sigma)` with `D=Delta_sigma`,
 the rejected branch is the identity, and `n,x,u`, both tapes and `k`
-never move; that is the definition of `H_B`. ∎
+never move; that output is the definition of `H_B`, with ancillas
+restored as shown. This checks the five-stage *algebra*; by §5.1 it
+does **not** establish a word in globally defined admitted
+primitives, at INITIALIZED or COMPLETE scope.
 
-Theorem 3 is an **INITIALIZED** result in an explicitly extended
-comparison grammar. It is not a COMPLETE equality for occupied
-ancillas, it does not decide Q3 inside frozen `Gamma+`, and none of
-its kinds is thereby admitted natively. Its precise content is: the
-missing permission, beyond exact wave read and exact store
-comparison, is one guarded exact payment kind; with it, a five-step
-initialized compilation exists.
+Guarded payment is accordingly only a **proposed sufficient
+ingredient for a future separately frozen, completely typed
+reversible extension**. Its necessity is not proved, no minimality
+of any extension is proved, and no `Gamma+` no-go is proved.
+
+### 5.3 Exact outstanding Q3 obligations
+
+Q3 as frozen (compile or obstruct in `Gamma+`) remains
+**unresolved**, for two separate reasons: (i) the frozen `Gamma+`
+typing defect for additions into the bounded store `b` (§5.1) must
+first be repaired in a separately frozen successor whose every
+generator is a permutation of its whole declared carrier; (ii) in
+such a completely typed class one must then either compile `H_B`
+at a declared COMPLETE or INITIALIZED scope or prove a class
+no-go, and any necessity/minimality statement about a guard kind
+requires its own proof. Native admission of `H_B` is therefore not
+completed in any form by this note.
 
 ## 6. Q4: warrant audit
 
@@ -227,10 +289,11 @@ data, compares exact rational store quantities into native control,
 adds rational registers under native control, or writes rational
 amplitudes from native data. The supplied noncanonical contracts
 supply `eta`, `C_*` and `H_B` as explicit comparison maps, not as
-Canon admissions; each says so in its own text. Therefore every kind
-that Theorems 1-3 show necessary or sufficient —
-`P-WAVE`, `P-CMP`, `P-REG`, `K_guard` — remains **UNSUPPLIED** by
-Canon, and the native-admission verdict is
+Canon admissions; each says so in its own text. Therefore both kinds
+that Theorems 1-2 show necessary (`P-WAVE`, `P-CMP`), register
+arithmetic (`P-REG`), and the proposed guarded ingredient of §5
+remain **UNSUPPLIED** by Canon, no typed compilation is established
+(§5.1), and the native-admission verdict is
 `NATIVE_ADMISSION_UNSUPPLIED/STOP`. This is an absence of warrant in
 the audited public text, not a theorem that no future native law
 could contain such a kind, and it does not decide the owner row.
@@ -240,18 +303,25 @@ could contain such a kind, and it does not decide the owner row.
 ```text
 carrier: K_B of CONTRACT §1, literal complete-state equality;
   extensions Ctrl (finite), d in Q, beta in {0,1} only where declared
-native projection: (n,x) fixed by H_B and by every word considered
+native projection: (n,x) is fixed by H_B and by the initialized
+  recipe of §5.2; an arbitrary word in the declared comparison
+  grammars can contain x -> g_i(x) and need not fix x.
+  Contact-stage words keep n fixed
 source family: a(q,r)=S eta(q,r), inherited; five prepared receivers
   are a subfamily, never the compilation domain
 admitted primitives, by origin: table in CONTRACT §3
 forward map: H_B as target; no replacement proposed
 inverse: H_B itself (inherited involution) on the complete K_B
 compilation results:
-  Gamma_wb / Gamma_sb / Gamma_fc: no COMPLETE word exists (Thm 1, 2)
-  Gamma+: compilation NOT SHOWN and NOT excluded (open simulation
-    question for guarded payment)
-  Gamma++ = Gamma+ + K_guard: explicit INITIALIZED word exists
-    (Thm 3), ancillas (d,beta) initialized and restored to (0,0)
+  Gamma_wb / Gamma_sb / Gamma_fc: no COMPLETE word exists (Thm 1, 2);
+    these no-gos concern the specified grammars, not every possible
+    native contact
+  Gamma+ (frozen): Q3 UNRESOLVED; compilation neither shown nor
+    excluded; unresolved typing defect for K_reg additions into
+    bounded b (§5.1)
+  Gamma++ label (proposed ingredients incl. K_guard): initialized
+    algebraic recipe from (d,beta)=(0,0) only (§5.2), ancillas
+    restored along that execution; NOT a globally typed compilation
 clock/program/stage: contact stage only; no U tick (n fixed), no F
   step inside the word; autonomous clock/reset UNSUPPLIED
 energy: store b in Q cap [0,B] and ledger w are inherited target
@@ -259,11 +329,12 @@ energy: store b in Q cap [0,B] and ledger w are inherited target
 signed outputs/records: none produced here; two-cut outputs remain
   the inherited #1489 consequences on the funded forward branch
 physical interpretation: NONE (L1 only); no layer bridge passed
-required from any future component: an independently warranted
-  admission of exact wave read, exact store comparison and guarded
-  exact payment, at COMPLETE occupied-ancilla scope, or a proof
-  that Gamma+ (or another independently admitted class) simulates
-  the guard; plus the inherited schedule/clock obligations
+required from any future component: first a separately frozen,
+  completely typed reversible grammar (every generator a permutation
+  of its whole carrier); then in such a class either a compilation
+  at declared scope or a no-go, with any guard necessity/minimality
+  proved separately; plus an independently warranted admission of
+  the exact-read kinds and the inherited schedule/clock obligations
 finite rejection witnesses: S_2 (shortage), S_{-2} (overflow)
   against every wave-blind word; S_0 with b=0 against every
   store-blind word, at (q,r)=(0,1), B=2/5, as computed in §§3-4
