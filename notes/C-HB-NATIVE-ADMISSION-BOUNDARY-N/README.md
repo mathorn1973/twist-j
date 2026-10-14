@@ -32,10 +32,19 @@ re-derived or claimed here. The new work is a permission/class analysis
 of `H_B` itself: `H_B` has order two, so the infinite-order obstruction
 against `C` does not settle its admission.
 
-## Status of this pin
+## Result
 
-This commit freezes `CONTRACT.md`, `PREREG.md` and `SOURCES.json` before
-any new derivation. `PROOF.md`, `RESULT.md` and `PROMO-*.md` follow in
-descendant commits. Conservative verdict: **PENDING_PINNED_PROOF**.
-Native admission and physical status remain open; no scientific verifier
-is authorized or run in this notes-only round.
+Conservative verdict: **`CLASS_NO_GO_WITH_SCOPE`** — no complete
+contact-stage compilation of `H_B` exists in the frozen wave-blind,
+store-blind, or finite-control grammars, already at `B=2/5` — and
+**`NATIVE_ADMISSION_UNSUPPLIED/STOP`** overall. In detail
+(`PROOF.md`, `RESULT.md`): exact occupied-wave read and exact store
+comparison are separately necessary permission kinds; frozen
+`Gamma+` compilation is left unresolved (its payments are
+unconditional); one added guarded-payment kind suffices at
+initialized-ancilla scope in the extended comparison grammar
+`Gamma++`. No needed kind has a Canon warrant in the audited text,
+so `H_native(B)` and native admission remain open, and physical
+status remains `NOT_READY`. The pin commit froze `CONTRACT.md`,
+`PREREG.md` and `SOURCES.json` before the derivation; this result is
+a descendant of that pin. No scientific verifier was run.
