@@ -1,12 +1,13 @@
 # Exact primary-domain reconciliation
 
-Status: CONFIRMED at the completed local exact-run scope.
+Status: CONFIRMED, exact finite result reproduced on x86_64 and aarch64.
 
 **NON-CANONICAL / L1 / finite integer result.** A. M. Thorn, 2026-10-15.
 Public probe #1513; parent #1506. No Canon promotion or physical admission.
 Preregistration: `a96646c22267d59179a5a96a161c5f6f95ba6255`. Scientific verifier is unchanged.
-Required public two-architecture replay: PENDING at this first result commit;
-actual later receipts, not this prospective statement, decide completion.
+Required public two-architecture replay: COMPLETED at result commit
+`82ad219401d87c3900011d1e8801ffef4221e05b`. REPLAY.md records the actual jobs and
+byte-identical scientific stdout. This descendant changes records only.
 
 ## Executed result
 
@@ -53,5 +54,5 @@ Exit 0, empty stderr, 5799 stdout bytes, SHA-256
 `7850a1ef320738aed5966cad4d9f1f4663b3ae3cabfd328895ce1ebb29d8c8a8`. All six initial files remain byte-identical.
 Two differently structured methods have one author and exposed target 705.
 They are not an independent-agent blind confirmation. The mandatory
-x86_64/aarch64 replay is to be recorded separately before releasing the
-computationally reconciled geometry to successors. No merge is requested.
+x86_64/aarch64 replay is recorded in REPLAY.md; the G1 corrected input
+was released explicitly to new successors #1515 and #1516. No merge is requested.
