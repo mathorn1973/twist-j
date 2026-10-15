@@ -10,13 +10,15 @@ branch:                     incubation/C-FUNDED-TWO-USE-EXECUTABLE-2-N
 pin_commit_sha:             06d63ae94f609cc54989e410e3c778ce147d22c5
 pin_receipt_url:            https://github.com/mathorn1973/twist-j/issues/1515#issuecomment-6191145416
 authority_base:             8b91a935c426036e00ecb300019fd94734addeec
+g1_reconciliation_probe:    P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1 (probes/P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1/DOMAIN.tsv)
 g1_reconciliation_pin:      a96646c22267d59179a5a96a161c5f6f95ba6255
 g1_reconciliation_result:   82ad219401d87c3900011d1e8801ffef4221e05b
 predecessor_pin:            81a70caa8dbcc61b64276e7d3df5ba84e860d4f1
 predecessor_result:         d6c48e463e1c7d78e8da828711cdda726f57e00b
-platform:                   macOS-27.0.1-arm64-arm-64bit
-architecture:               arm64
-python_version:             3.13.13 (Clang 21.0.0)
+scoped_successor_probe:     P-TWO-USE-TYPED-READOUT-CLOSURE-1 (#1522 / PR #1523, commit d334fd1e7ac3dad65fe290297a78ba97beb74a0a)
+platform:                   Darwin
+architecture:               aarch64
+python_version:             3.13.13
 deterministic_env:          LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1
 pinned_files_diff_lines:    0
 default_audit_exit_code:    1 (PASS on T01-T10, STOP at T11 line 858)
@@ -31,6 +33,8 @@ compare_exit_code:          0
 compare_stdout_bytes:       182
 compare_stdout_sha256:      77348e12d9948ebafc15c15ea9904b53ece6a30990ea59a59633a1bef8c21c8d
 ```
+
+> **Correction Notice (`2026-10-15`, per `#1515` review disposition):** The raw stderr traceback block in commit `dac92207c11abb061c10fa4ab729e3789d9cbf85` contained a local user-directory path and local binary path; per `POLICY.md` and `#1515` review disposition, those local paths are replaced below by neutral public run fields, repository-relative call-stack locations, and exact byte/SHA-256 digests (`1171` bytes, SHA-256 `d24433dcb3d568464e6703c50d7eac4703b6abb77ec3c30c24d076309cce3f92`). All 9 pinned files at `06d63ae94f609cc54989e410e3c778ce147d22c5` and `EXPECTED.txt` remain untouched (`0` diff lines).
 
 ---
 
@@ -58,9 +62,9 @@ Before the first scientific execution, commit `06d63ae94f609cc54989e410e3c778ce1
 
 Command:
 ```text
-env -i PATH=/opt/homebrew/bin:/usr/bin:/bin LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3.13 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py
+env -i PATH=/usr/bin:/bin LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py
 ```
-*(Note: An initial invocation using `/usr/bin/python3` resolved to system Xcode Python `3.9.6`, which passed `T01` (`192` stdout bytes, SHA-256 `05192c3e1bbb48bf6c1b42218a6114db26aea9de26074ec9c0b708665f239af4`) and raised `AttributeError: 'int' object has no attribute 'bit_count'` at `T02` because `int.bit_count()` was introduced in Python 3.10. Re-running on the same unmodified commit `06d63ae94f609cc54989e410e3c778ce147d22c5` with Python `3.13.13` executed `T01` through `T11` as recorded below.)*
+*(Note: An initial invocation using a Python `3.9.6` interpreter passed `T01` (`192` stdout bytes, SHA-256 `05192c3e1bbb48bf6c1b42218a6114db26aea9de26074ec9c0b708665f239af4`) and raised `AttributeError: 'int' object has no attribute 'bit_count'` at `T02` because `int.bit_count()` was introduced in Python 3.10. Running on the same unmodified commit `06d63ae94f609cc54989e410e3c778ce147d22c5` with Python `3.13.13` executed `T01` through `T11` as recorded below.)*
 
 Exact stdout saved to `notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/EXPECTED.txt` (`1073` bytes, SHA-256 `e3e7063bfdb292d6a8ed6a86c82286c51caf150950eb344d99d6a8565c2eff6a`):
 ```text
@@ -77,30 +81,18 @@ T09 PASS: order witness W(1,4)=10352117/20995200, W(4,1)=10323947/20995200, W(1,
 T10 PASS: universal 4-cut operator certificate and c1=e0 WARM witnesses verified
 ```
 
-Exact stderr (`1171` bytes, SHA-256 `d24433dcb3d568464e6703c50d7eac4703b6abb77ec3c30c24d076309cce3f92`, exit code `1`):
+Neutral stderr summary (`1171` bytes, SHA-256 `d24433dcb3d568464e6703c50d7eac4703b6abb77ec3c30c24d076309cce3f92`, exit code `1`):
 ```text
-Traceback (most recent call last):
-  File "/Users/maruk/Documents/antigravity/splendid-tesla/notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py", line 1765, in <module>
-    raise SystemExit(main(sys.argv))
-                     ~~~~^^^^^^^^^^
-  File "/Users/maruk/Documents/antigravity/splendid-tesla/notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py", line 1749, in main
-    run_full_audit()
-    ~~~~~~~~~~~~~~^^
-  File "/Users/maruk/Documents/antigravity/splendid-tesla/notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py", line 1734, in run_full_audit
-    msg = fn()
-  File "/Users/maruk/Documents/antigravity/splendid-tesla/notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py", line 858, in run_t11_direct_chronological_and_source_readers
-    require_true(raised, f"T11.reject_forbidden[{type(forbidden).__name__}]")
-    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/maruk/Documents/antigravity/splendid-tesla/notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py", line 144, in require_true
-    raise AssertionError(f"{label}: expected={expected!r}, actual={actual!r}")
-AssertionError: T11.reject_forbidden[tuple]: expected=True, actual=False
+file:           notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py
+call_stack:     <module> (line 1765) -> main (line 1749) -> run_full_audit (line 1734) -> run_t11_direct_chronological_and_source_readers (line 858) -> require_true (line 144)
+exception:      AssertionError: T11.reject_forbidden[tuple]: expected=True, actual=False
 ```
 
 ### 2.2 Working CLI command for the 7-step `(1,4)`/`(4,1)` comparison, dirty-archive `c1=e0` case, and lower/upper stock refusal (`verify.py --witnesses`)
 
 Command:
 ```text
-env -i PATH=/opt/homebrew/bin:/usr/bin:/bin LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3.13 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --witnesses
+env -i PATH=/usr/bin:/bin LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --witnesses
 ```
 - **Exit code:** `0`
 - **Stderr bytes:** `0`
@@ -115,7 +107,7 @@ env -i PATH=/opt/homebrew/bin:/usr/bin:/bin LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEE
 
 Command:
 ```text
-env -i PATH=/opt/homebrew/bin:/usr/bin:/bin LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 /opt/homebrew/bin/python3.13 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --compare
+env -i PATH=/usr/bin:/bin LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --compare
 ```
 - **Exit code:** `0`
 - **Stderr bytes:** `0`

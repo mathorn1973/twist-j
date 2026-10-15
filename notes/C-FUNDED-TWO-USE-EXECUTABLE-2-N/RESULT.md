@@ -13,14 +13,17 @@ fired_gate:                 T11_direct_chronological_and_source_readers (line 85
 unexecuted_in_default_run:  T11 (parts 2-3), T12, T13, T14, T15, T16, T17, T18 (X01-X10)
 witnesses_cli_status:       PASS (exit 0, 20740 bytes, sha256 b7996fa6cfc525890892efb6cef02c9acb9098c167ecc8888deffe132e72b896)
 compare_cli_status:         PASS (exit 0, TWOUSE-COMPARE-v2 records=1200 sha256=670f270e88386e2f1f507e24ec0ae71daf1ff6638ea44783b793479291af3dbc)
+scoped_successor_probe:     P-TWO-USE-TYPED-READOUT-CLOSURE-1 (#1522 / PR #1523, commit d334fd1e7ac3dad65fe290297a78ba97beb74a0a)
 promotion_recommendation:   DO NOT PROMOTE
 ```
+
+> **Correction Notice (`2026-10-15`, per `#1515` review disposition):** The companion promotion summary `PROMO-C-FUNDED-TWO-USE-EXECUTABLE-2-N.md` and `INTERFACE.json` have been updated to withdraw unsupported template partition/matrix/symplectic summary claims not defined or tested by `verify.py` and to record the exact G1 probe identifier `P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1` (`probes/P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1/DOMAIN.tsv`); `RUN.md` has been sanitized to remove a local user-directory traceback path. All 9 pinned files at `06d63ae94f609cc54989e410e3c778ce147d22c5` and `EXPECTED.txt` remain untouched (`0` diff lines).
 
 ---
 
 ## 1. Executive summary and post-pin disposition
 
-Following the G1 geometry reconciliation (`#1513` / `#1514`, `82ad219401d87c3900011d1e8801ffef4221e05b`), Lane I2 (`C-FUNDED-TWO-USE-EXECUTABLE-2-N`) was frozen at commit `06d63ae94f609cc54989e410e3c778ce147d22c5` ([`PINNED_I2`](https://github.com/mathorn1973/twist-j/issues/1515#issuecomment-6191145416)) prior to any scientific execution or import.
+Following the G1 geometry reconciliation (`P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1`, `probes/P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1/DOMAIN.tsv`, `#1513` / `#1514`, pin `a96646c22267d59179a5a96a161c5f6f95ba6255`, result `82ad219401d87c3900011d1e8801ffef4221e05b`), Lane I2 (`C-FUNDED-TWO-USE-EXECUTABLE-2-N`) was frozen at commit `06d63ae94f609cc54989e410e3c778ce147d22c5` ([`PINNED_I2`](https://github.com/mathorn1973/twist-j/issues/1515#issuecomment-6191145416)) prior to any scientific execution or import.
 
 On the first post-pin execution under Python `3.13.13` (`LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1`):
 
@@ -45,9 +48,9 @@ On the first post-pin execution under Python `3.13.13` (`LC_ALL=C LANG=C TZ=UTC 
    - However, the fifth argument `(1, 0, 0, 0)` (intended in `T11` as an unbranded 4-tuple piston input $p_A \in \mathbb{F}_5^4$) is a 4-tuple of Python `int`s. Because `require_q_tuple(b0, 4, "b0")` in `apparatus.py` calls `require_fraction(val)`, which accepts `isinstance(val, int)` and converts `int` to `Fraction(val, 1)`, `direct_source_reader((1, 0, 0, 0), st7.X.B1)` treated `(1, 0, 0, 0)` as the valid rational port 4-vector $b_0 = e_0 = (1, 0, 0, 0)^T \in \mathbb{Q}^4$ rather than raising `TypeError`.
    - Per `#1515` ("After pin, preserve each fired check and stop its declared dependent scope; no tuning or silent repair. Expose actual status, not intended PASS"), the pinned files `apparatus.py` and `verify.py` are preserved byte-identical to `06d63ae94f609cc54989e410e3c778ce147d22c5` (`0` diff lines).
 3. **Unexecuted obligations in default `verify.py` mode (`T11` parts 2–3 and `T12`–`T18`):**
-   - Because `run_full_audit()` halted at `T11` line 858, parts 2–3 of `T11` and tests `T12` through `T18` (`X01`–`X10`) were not reached in the default `verify.py` CLI invocation.
+   - Because `run_full_audit()` halted at `T11` line 858, parts 2–3 of `T11` and tests `T12` through `T18` (`X01`–`X10`) were not reached in the default `verify.py` CLI invocation on this pin. The scoped corrective successor `P-TWO-USE-TYPED-READOUT-CLOSURE-1` (`#1522` / PR `#1523`, commit `d334fd1e7ac3dad65fe290297a78ba97beb74a0a`) separates a typed `DirectPortReadout` interface and executes `T11`–`T18` under a fresh pin.
 4. **Complete execution of `--witnesses` and `--compare` CLI modes on the unmodified pin `06d63ae94f609cc54989e410e3c778ce147d22c5`:**
-   - Both `/opt/homebrew/bin/python3.13 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --witnesses` and `/opt/homebrew/bin/python3.13 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --compare` do not call `run_t11_direct_chronological_and_source_readers` and completed with exit code `0` and empty stderr on the unmodified pinned code ( note that `format_boundary_line` in `--witnesses` calls `direct_chronological_cut_reader` at every boundary $c = 0..7$ across all 6 witness trajectories).
+   - Both `python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --witnesses` and `python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --compare` do not call `run_t11_direct_chronological_and_source_readers` and completed with exit code `0` and empty stderr on the unmodified pinned code (note that `format_boundary_line` in `--witnesses` calls `direct_chronological_cut_reader` at every boundary $c = 0..7$ across all 6 witness trajectories).
 
 ---
 
