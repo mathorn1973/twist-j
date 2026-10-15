@@ -41,3 +41,9 @@ Only comment marker names, URLs/times and 40-character commit metadata were
 read through a filter, never scientific code, output or comparison digest.
 Both independent successor pins and first records plus V2 dual-architecture
 scientific replay are prerequisites for opening and comparing peer evidence.
+
+## Architecture prerequisite completed
+
+Both actual V2 scientific replay jobs and aggregate check passed in run
+38727305980, as evidenced in REPLAY.md. The I2 pin/first-record prerequisite
+remains pending at this receipt; no cross-lane equality is asserted.
