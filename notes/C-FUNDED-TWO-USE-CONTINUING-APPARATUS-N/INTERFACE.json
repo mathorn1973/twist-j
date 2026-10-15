@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "candidate_id": "C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N",
+  "revision": "R1",
   "issue_number": 1504,
   "parent_coordination_issue": 1497,
   "branch": "incubation/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N",
@@ -14,10 +15,18 @@
     "canon_bytes": 992352
   },
   "preregistration_commit": "d4b67e44d14a2f224a0ed77eb8dd08b217711cfb",
+  "superseded_result_commit": "a1517dd03fd8330a2e46a712b5e813d27bdb04df",
   "action_layer": "L1",
   "scientific_code_status": "NONE / NOT_RUN",
   "physical_status": "NOT_READY",
   "promotion_recommendation": "DO NOT PROMOTE",
+  "r1_erratum_summary": {
+    "R1-A": "Restored exact F^{-1} from A2: u = K(H v - J_0 w_next + 4 P b_out), A_0 = b_out + (1/2) P^T (w_next - u)",
+    "R1-B": "Withdrew false global bijectivity of V; restored A2 prepared-image native recovery via C_3(h) at n=5 (x_5 = g_1 g_1 x_3 = x_3), inverse words g_{j_0} g_{j_1} g_{j_2} x_5, and piston-sum selector-consistency check",
+    "R1-C": "Restored inherited J_p = P^T H P = (59 I_4 + 1 1^T)/54, D_3(z_A) = (1/2) P^T (T^2 - T^4 + T^2 J_0 + T J_0 T) S z_A, and exact 1399680 R_1 z^{(h)} table from #1489/#1492/A2",
+    "R1-D": "Restored exact R_0^{-1} = -4 M^{-1} = -(216/59)(I_4 + v 1^T / 365) from A2",
+    "R1-E": "Unified 7-step completion boundary Z(7) = G_B^7(Z(0)) at c=7, n=5 (8th step rotates c: 7 -> 0 with T_7 = id), scoped single-sigma witness to direct un-reset substitution, and distinguished Pi_class = (X,W,b) from Pi_{class+d} = (X,W,b,d) in the B=1/5 zero-cut comparison"
+  },
   "composite_carrier": {
     "symbol": "Z_B",
     "definition": "N_0 x F_5^6 x F_5^6 x X x Q x ([0,B] cap Q) x {+1,-1}^2 x F_5^2 x (Z/8Z)",
@@ -34,6 +43,11 @@
       "forward": "L_buf(x_B, d) = (x_B, (d + rec(x_B)) mod 5)",
       "inverse": "L_buf^{-1}(x_B, d') = (x_B, (d' - rec(x_B)) mod 5)",
       "status": "conditional L1 primitive (not compiled from U or J)"
+    },
+    "F": {
+      "carrier": "X",
+      "forward": "w_next = K(H v - J_0 u + 4 P A_0), b_out = A_0 - (1/2) P^T (w_next - u), F((u,v),(A_0,A_1),(B_0,B_1),k) = ((v,w_next),(A_1,B_1),(b_out,B_0),(k+1) mod 2)",
+      "inverse": "u = K(H v - J_0 w_next + 4 P b_out), A_0 = b_out + (1/2) P^T (w_next - u), F^{-1}((v,w_next),(alpha_0,alpha_1),(b_out,B_0),k') = ((u,v),(A_0,alpha_0),(B_0,alpha_1),(k'-1) mod 2)"
     },
     "H_B_A": {
       "label_read": "r_A = rec(x_A) in F_5^2",
@@ -58,15 +72,15 @@
     "phases": {
       "0": "V on (n, x_A, x_B); apparatus held",
       "1": "L_buf on (x_B, d) and H_{B,A} on (x_A, X, W, b, sigma_A)",
-      "2": "V on (n, x_A, x_B) and F on X",
-      "3": "V on (n, x_A, x_B) and F on X",
+      "2": "V on (n, x_A, x_B) and F on X (cut 0)",
+      "3": "V on (n, x_A, x_B) and F on X (cut 1)",
       "4": "H_{B,B} on (d, X, W, b, sigma_B)",
-      "5": "V on (n, x_A, x_B) and F on X",
-      "6": "V on (n, x_A, x_B) and F on X",
+      "5": "V on (n, x_A, x_B) and F on X (cut 2)",
+      "6": "V on (n, x_A, x_B) and F on X (cut 3)",
       "7": "hold all state coordinates; advance c: 7 -> 0"
     },
-    "boundary": "c = 7, n = 5",
-    "global_permutation": "G_B(a, c) = (T_c(a), (c+1) mod 8) is a two-sided bijection on A_B x (Z/8Z)"
+    "completion_boundary": "Z(7) = G_B^7(Z(0)) at c = 7, n = 5 (after 7 updates; 8th update G_B^8 rotates c: 7 -> 0 with T_7 = id)",
+    "global_apparatus_permutation": "G_B(a, c) = (T_c(a), (c+1) mod 8) is a two-sided bijection on A_B x (Z/8Z); M_{7,B}^{(r_A, r_B)} = T_6 o ... o T_0 is a two-sided bijection on A_B"
   },
   "common_ready_family": {
     "symbol": "R_{(c_0, c_1, b_init, B)}",
@@ -138,15 +152,47 @@
       "b_2": "alpha_A D_2(z_A) + alpha_B R_0 z_B",
       "b_3": "alpha_A D_3(z_A) + alpha_B R_1 z_B - (1/2) J_p c_1"
     },
+    "operators": {
+      "R_0": "-(1/2) P^T T S = -(1/4) M",
+      "R_1": "(1/2) P^T (I - T^2 + J_0) S = (1/2) (G_source - P^T T^2 S)",
+      "J_p": "P^T H P = (59 I_4 + 1 1^T) / 54",
+      "D_2": "(1/2) P^T (w_1 - a_3) = (1/2) P^T (T - T^3 + T J_0) S",
+      "D_3": "(1/2) P^T (w_2 - a_4) = (1/2) P^T (T^2 - T^4 + T^2 J_0 + T J_0 T) S"
+    },
+    "single_source_port_cuts_on_Z5": {
+      "12960_R_0_z": {
+        "0": [0, 0, 0, 0],
+        "1": [-1421, 354, 354, 348],
+        "2": [-1072, -1062, 708, 696],
+        "3": [-2493, -708, 1062, 1044],
+        "4": [698, -2832, 708, 696]
+      },
+      "1399680_R_1_z": {
+        "0": [0, 0, 0, 0],
+        "1": [192202, -47829, -47829, -48879],
+        "2": [143434, 145312, -95658, -97758],
+        "3": [335636, 97483, -143487, -146637],
+        "4": [-97536, 386282, -95658, -97758]
+      }
+    },
     "archive_independent_source_decoder_on_ACC_ACC": {
-      "z_A": "R_0^{-1} b_0 = -4 M^{-1} b_0",
-      "z_B": "R_0^{-1} (b_2 - D_2(z_A)) = -4 M^{-1} (b_2 - D_2(-4 M^{-1} b_0))"
+      "R_0_inverse": "-4 M^{-1} = -(216/59) (I_4 + v 1^T / 365) with v = (349, 354, 354, 348)^T",
+      "z_A": "R_0^{-1} b_0",
+      "z_B": "R_0^{-1} (b_2 - D_2(z_A))"
     }
   },
   "native_prepared_image_left_inverse": {
-    "decoder": "(0, x_A(0), x_B(0)) = V^{-5}(5, x_A(5), x_B(5))",
+    "endpoint_identity_at_n5_c7": "x_{5,i} = g_1 g_1 x_{3,i} = x_{3,i} with rec(x_{5,i}) = C_3(h_i) in {(1,0),(2,0),(2,1),(3,1),(1,2)}",
+    "decoder": "Decode h_i from rec(x_{5,i}) = C_3(h_i); reconstruct x_{0,i} = g_{j_0(h_i)} g_{j_1(h_i)} g_{j_2(h_i)} x_{5,i} and x_{1,i} = g_{j_0(h_i)} x_{0,i}",
+    "recognizer_tests": [
+      "n = 5, c = 7, and rec(x_i) in {(1,0),(2,0),(2,1),(3,1),(1,2)} for i in {A,B}",
+      "rec(x_{0,i}) = (0,1) AND piston sum sum_{m=0}^3 x_{0,i,m} mod 5 = h_i for i in {A,B}",
+      "d = rec(x_{1,B}) = C_1(h_B)",
+      "(M_{7,B}^{(r_A, r_B)})^{-1}(X, W, b, (sigma_A, sigma_B), d) = (((0,0),(0,0),(c_0,c_1),0), 0, b_init, (+1,+1), (0,0))"
+    ],
     "domain_size": 390625,
-    "exact_recovery_across_all_four_branches": true
+    "exact_recovery_across_all_four_branches": true,
+    "global_V_invertibility": false
   },
   "joint_energy_work_store_invariants": {
     "E_full_minus_W": "2(||c_0||^2 + ||c_1||^2)",
@@ -167,13 +213,13 @@
     "nonlinear_countermodel_polynomial": "q_3(z_0, z_1) = z_0 z_1 (2 z_0 - 1)"
   },
   "comparator_boundary_and_separation_witnesses": {
-    "matched_classical_comparator": "byte-for-byte identical across all 390625 native input pairs",
+    "matched_classical_comparator": "byte-for-byte identical at c=7, n=5 across all 390625 native input pairs",
     "restricted_comparators_separated": [
       "M_single (single-use comparator, separated on (0,1) at B=4/5)",
       "M_cold (cold-restart / cold-work comparator, separated on (4,4) at B*=8224427/10497600 and B=4/5)",
       "M_2-slot (two-slot overwriting tape comparator, separated on (1,0) at B=4/5)",
-      "M_1sigma (single-direction-bit comparator, separated on (0,1) at B=4/5)",
-      "M_no-sigma (unretained-direction comparator, separated on {(0,0),(0,3),(3,0),(3,3)} at B=1/5)"
+      "M_1sigma (direct un-reset single-direction-bit comparator, separated on (0,1) at B=4/5)",
+      "M_no-sigma^class and M_no-sigma^{class+d} (unretained-direction readout comparators, separated on {(0,0),(0,3),(3,0),(3,3)} at B=1/5)"
     ]
   }
 }

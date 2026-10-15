@@ -5,7 +5,31 @@ Original work Apache-2.0, A. M. Thorn.
 Reservation: [#1504](https://github.com/mathorn1973/twist-j/issues/1504), following [#1497#issuecomment-6179898943](https://github.com/mathorn1973/twist-j/issues/1497#issuecomment-6179898943).
 Preregistration pin commit: `d4b67e44d14a2f224a0ed77eb8dd08b217711cfb`.
 
-All notation, state carriers, conditional L1 primitives ($L_{\mathrm{buf}}, H_{B,A}, H_{B,B}$), and the 8-phase autonomous schedule $\mathcal{G}_B$ are fixed by `CONTRACT.md` (`dcaa61031604eafff9826e1eefb4809efbe492c0`) and `PREREG.md` (`deff2b951da2c6799fe757d07fbf09229cd68f2a`). All matrix and stencil entries are inherited without modification from the pinned sources in `SOURCES.json` (`23ca316806b8159a08277b83c43c2aa078eb6eb1`).
+All notation, state carriers, conditional L1 primitives ($L_{\mathrm{buf}}, H_{B,A}, H_{B,B}$), and the 8-phase autonomous schedule $\mathcal{G}_B$ are fixed by `CONTRACT.md` (`dcaa61031604eafff9826e1eefb4809efbe492c0`) and `PREREG.md` (`deff2b951da2c6799fe757d07fbf09229cd68f2a`). All inherited classical and native definitions are taken directly from the pinned sources in `SOURCES.json` (`23ca316806b8159a08277b83c43c2aa078eb6eb1`), specifically `#1485` (`4302c31f07823b2a843e3702ca14620c1917b853`, `1b69563af4018b08d7dc75781b12e9553a8c19c3`), `#1489` (`ea924e214ec3c29009fd4590f294954d3e5ad43f`), `#1492` (`8b91a935c426036e00ecb300019fd94734addeec`), `#1496` (`b7636a334b09fcc68422bcd6cc6e15334d416c59`), A1 (`7b4d55502be44b2f2aed4005c909d7dcb50dbc55`), A2 (`c34baa826cb846260b96373ae6d8f10c3a189a5a`), and A3 (`f341b04f737827d9033e60f452fab77231f7b04a`).
+
+---
+
+## R1 scientific erratum (descendant correction of `a1517dd03fd8330a2e46a712b5e813d27bdb04df`)
+
+This outcome-exposed R1 revision corrects the five analytical defects identified in the review of the initial deliverable commit `a1517dd03fd8330a2e46a712b5e813d27bdb04df` on Draft PR [#1505](https://github.com/mathorn1973/twist-j/pull/1505). The four frozen preregistration pin files (`README.md`, `CONTRACT.md`, `PREREG.md`, `SOURCES.json` from `d4b67e44d14a2f224a0ed77eb8dd08b217711cfb`) remain byte-for-byte unchanged (`0` diff lines).
+
+- **`R1-A` (Exact inverse of $F$, Section 1 `Theorem 1` Part 2):** The misstated expression $u = H v - w_{\mathrm{next}} + 2 P b_{\mathrm{out}}$ in `a1517dd03fd8330a2e46a712b5e813d27bdb04df` (which fails on $u = v = 0, A_0 = e_0 \implies w_{\mathrm{next}} = 2 P e_0, b_{\mathrm{out}} = 0$, returning $-2 P e_0 \ne 0$) is withdrawn and replaced by the exact inherited inverse from A2 (`c34baa826cb846260b96373ae6d8f10c3a189a5a:notes/C-TWO-USE-CONTROL-ARCHIVE-N/PROOF.md` Section 2, eqs. (2)–(3)):
+  $$
+  u = K\bigl(H v - J_0 w_{\mathrm{next}} + 4 P b_{\mathrm{out}}\bigr), \qquad A_0 = b_{\mathrm{out}} + \frac{1}{2}P^T(w_{\mathrm{next}} - u).
+  $$
+- **`R1-B` (Withdrawal of false global bijectivity of $V$ and restoration of A2's prepared-image recovery, Section 1 `Theorem 2` Part 2 & Section 3 `Theorem 5` Part 5):** The false assertions in `a1517dd03fd8330a2e46a712b5e813d27bdb04df` that $g_0, \dots, g_4$ preserve $\operatorname{sum}(x) \bmod 5$ and that $V$ is globally invertible on $\mathbb{N}_0 \times \mathbb{F}_5^6 \times \mathbb{F}_5^6$ are withdrawn. As shown in A2 (`PROOF.md` Section 3), the complete-sum actions of $(g_0, g_1, g_2, g_3, g_4)$ are $(z, -z, 2-z, 2-z, 3-z) \pmod 5$, and at $n=0$ ($\theta_0 = 0$) the distinct states $x = (0,0,0,0,0,1)$ ($\operatorname{sum}=1, j=1$) and $\widetilde{x} = (2,1,3,4,2,2)$ ($\operatorname{sum}\equiv 4, j=4$) collide at $g_1(x) = g_4(\widetilde{x}) = (0,0,0,0,0,4)$. Section 3 `Theorem 5` Part 5 restores A2's exact prepared-image recovery (`PROOF.md` Sections 3 and 7): on any prepared head $x_0 = (p, 0, 1)$, ticks 4 and 5 apply $g_1$ twice so $x_5 = g_1 g_1 x_3 = x_3$, the five distinct $C_3(h)$ receivers at $n=5$ decode $h_A, h_B \in \{0,1,2,3,4\}$ directly from $(x_{5,A}, x_{5,B})$, the inverse words $x_{0,i} = g_{j_0(h_i)} g_{j_1(h_i)} g_{j_2(h_i)} x_{5,i}$ reconstruct the full inputs, and the image recognizer enforces both the $(0,1)$ receiver check and the piston-sum selector-consistency check $\sum_{m=0}^3 (\hat{p}_i)_m \bmod 5 = h_i$.
+- **`R1-C` (Restoration of inherited matrices $J_p, D_3$ and the $R_1 z^{(h)}$ table, Section 3 `Theorem 5` Part 2):** The altered definition $J_p = P^T T P - I_4$, the omitted term $\frac{1}{2}P^T T J_0 T S z_A$ in $D_3(z_A)$, and the miscomputed $R_1 z^{(h)}$ table in `a1517dd03fd8330a2e46a712b5e813d27bdb04df` are withdrawn. Section 3 restores A2's exact recurrence and matrices (`PROOF.md` Section 5, eqs. (7)–(10)) and `#1489`/`#1492`'s exact $1399680 \, R_1 z^{(h)}$ table:
+  $$
+  J_p = P^T H P = \frac{1}{54}\bigl(59 I_4 + \mathbf{1}\mathbf{1}^T\bigr), \qquad
+  D_3(z_A) = \frac{1}{2}P^T(w_2 - a_4) = \frac{1}{2}P^T\bigl(T^2 - T^4 + T^2 J_0 + T J_0 T\bigr)S z_A,
+  $$
+  matching $b_3 = -\frac{1}{2}J_p e_0 = (-\frac{5}{9}, -\frac{1}{108}, -\frac{1}{108}, -\frac{1}{108})^T$ at $z_A = z_B = 0, c_0 = 0, c_1 = e_0$.
+- **`R1-D` (Restoration of exact source-decoder inverse $R_0^{-1}$, Section 3 `Theorem 5` Part 3):** The erroneous formula $-\frac{36}{59}(5 I_4 + \frac{1}{699}v\mathbf{1}^T)$ (which gives $\frac{5}{6}t \ne t$ on $t = e_0 - e_1$) is withdrawn and replaced by the exact inherited formula from A2 (`PROOF.md` Section 5):
+  $$
+  M^{-1} = \frac{54}{59}\left(I_4 + \frac{v\mathbf{1}^T}{365}\right), \qquad
+  R_0^{-1} = -4 M^{-1} = -\frac{216}{59}\left(I_4 + \frac{v\mathbf{1}^T}{365}\right), \qquad v = (349, 354, 354, 348)^T.
+  $$
+- **`R1-E` (Unification of the 7-step completion boundary $c = 7, n = 5$ and exact scope of direction-bit / comparator statements, Section 1 `Theorem 2`, Section 3 `Theorem 5`, Section 4 `Theorem 8`):** From $c = 0, n = 0$, **seven** phase updates $\mathcal{G}_B^7(Z(0))$ reach the completion boundary $c = 7, n = 5$ (executing rows $c = 0, 1, 2, 3, 4, 5, 6$), whereas the eighth update $\mathcal{G}_B^8(Z(0))$ executes row $c = 7$ (holding all data coordinates and rotating $c: 7 \mapsto 0$). All endpoint definitions, boundary tables, and the ready-image recognizer now uniformly use $Z(7) = \mathcal{G}_B^7(Z(0))$ at $c = 7, n = 5$. Furthermore, the single-$\sigma$ witness is scoped strictly to direct un-reset substitution of one shared bit $\sigma$ (not a general minimality proof over arbitrary controllers), and the zero-cut comparison at $b_{\mathrm{init}} = B = \frac{1}{5}$ explicitly distinguishes the classical port/work/store projection $\Pi_{\mathrm{class}} = (X, W, b)$ (where all four pairs $(0,0), (0,3), (3,0), (3,3)$ collide) from the delayed-buffer-inclusive projection $\Pi_{\mathrm{class}+d} = (X, W, b, d)$ (where $d = C_1(h_B)$ separates $h_B = 0$ from $h_B = 3$, while $(0,0)$ collides with $(3,0)$, $(0,3)$ collides with $(3,3)$, and $\sigma_{B,\mathrm{final}}$ is still required to distinguish acceptance from refusal).
 
 ---
 
@@ -21,20 +45,37 @@ with state tuple $Z = (n, x_A, x_B, X, W, b, (\sigma_A, \sigma_B), d, c)$ and cl
 $$
 \mathcal{A}_B = \mathcal{X} \times \mathbb{Q} \times ([0, B] \cap \mathbb{Q}) \times \{\pm 1\}^2 \times \mathbb{F}_5^2.
 $$
+Recall from `#1485` and A2 (`PROOF.md` Section 1, eq. (1)) the basic operator identities following from $P^T P = I_4$:
+$$
+K = (I + P P^T)^{-1} = I - \frac{1}{2}P P^T, \qquad
+J_0 = I - P P^T, \qquad
+P^T K = \frac{1}{2}P^T, \qquad
+K P = \frac{1}{2}P, \qquad
+K J_0 = J_0, \qquad
+P^T J_0 = 0, \qquad
+J_0 P = 0.
+$$
 
-### Theorem 1 (Global bijectivity and involutivity of $L_{\mathrm{buf}}$, $H_{B,A}$, $H_{B,B}$, and $F$)
+### Theorem 1 (Global bijectivity and involutivity of $L_{\mathrm{buf}}$, $F$, $H_{B,A}$, and $H_{B,B}$)
 
 1. **Delayed-label buffer capture $L_{\mathrm{buf}}$:** On $\mathbb{F}_5^6 \times \mathbb{F}_5^2$ (and extended by identity on all other coordinates of $\mathcal{Z}_B$ or $\mathcal{A}_B$), the map $L_{\mathrm{buf}}(x_B, d) = (x_B, (d + \operatorname{rec}(x_B)) \bmod 5)$ is a global bijection with exact two-sided inverse
    $$
    L_{\mathrm{buf}}^{-1}(x_B, d') = \bigl(x_B,\, (d' - \operatorname{rec}(x_B)) \bmod 5\bigr).
    $$
-2. **Reversible two-tape wave update $F$:** On $\mathcal{X}$, the map $F((u,v),(A_0,A_1),(B_0,B_1),k) = ((v, w_{\mathrm{next}}), (A_1, B_1), (b_{\mathrm{out}}, B_0), k+1 \bmod 2)$ with $w_{\mathrm{next}} = K(H v - J_0 u + 4 P A_0)$ and $b_{\mathrm{out}} = A_0 - \frac{1}{2}P^T(w_{\mathrm{next}} - u)$ is a global bijection with exact two-sided inverse
+2. **Reversible two-tape wave update $F$ (inherited from A2 `PROOF.md` Section 2, eqs. (2)–(3)):** On $\mathcal{X}$, the map
    $$
-   F^{-1}\bigl((v, w_{\mathrm{next}}),\, (A_1, B_1),\, (b_{\mathrm{out}}, B_0),\, k'\bigr) = \bigl((u, v),\, (A_0, A_1),\, (B_0, B_1),\, k' - 1 \bmod 2\bigr),
+   w_{\mathrm{next}} = K(H v - J_0 u + 4 P A_0), \qquad b_{\mathrm{out}} = A_0 - \frac{1}{2}P^T(w_{\mathrm{next}} - u),
    $$
-   where
    $$
-   u = H v - w_{\mathrm{next}} + 2 P b_{\mathrm{out}}, \qquad A_0 = b_{\mathrm{out}} + \frac{1}{2}P^T(w_{\mathrm{next}} - u).
+   F\bigl((u,v),(A_0,A_1),(B_0,B_1),k\bigr) = \bigl((v, w_{\mathrm{next}}),\, (A_1, B_1),\, (b_{\mathrm{out}}, B_0),\, (k+1) \bmod 2\bigr)
+   $$
+   is a global bijection on $\mathcal{X}$ with exact two-sided inverse
+   $$
+   F^{-1}\bigl((v, w_{\mathrm{next}}),\, (\alpha_0, \alpha_1),\, (\beta_0, \beta_1),\, k'\bigr) = \bigl((u, v),\, (A_0, \alpha_0),\, (\beta_1, \alpha_1),\, (k' - 1) \bmod 2\bigr),
+   $$
+   where, with $b_{\mathrm{out}} = \beta_0$,
+   $$
+   \boxed{u = K\bigl(H v - J_0 w_{\mathrm{next}} + 4 P b_{\mathrm{out}}\bigr), \qquad A_0 = b_{\mathrm{out}} + \frac{1}{2}P^T(w_{\mathrm{next}} - u).}
    $$
 3. **Bounded-store contact involutions $H_{B,A}$ and $H_{B,B}$:** For every $B \in \mathbb{Q}_{\ge 0}$, both $H_{B,A}$ and $H_{B,B}$ map $\mathcal{Z}_B$ into $\mathcal{Z}_B$ (and $\mathcal{A}_B$ into $\mathcal{A}_B$) and satisfy
    $$
@@ -44,36 +85,40 @@ $$
 
 #### Proof of Theorem 1
 
-- **Part 1 ($L_{\mathrm{buf}}$):** Since $L_{\mathrm{buf}}$ fixes $x_B$, $\operatorname{rec}(x_B) \in \mathbb{F}_5^2$ is identical in the forward and backward steps. Addition and subtraction of $\operatorname{rec}(x_B)$ in the abelian group $(\mathbb{F}_5^2, +)$ are mutual two-sided inverses.
-- **Part 2 ($F$):** Inherited from `#1485` (`notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md` Theorem 1): since $K^{-1} = I + P P^T$ and $J_0 = I - P P^T$, expanding $(I + P P^T)w_{\mathrm{next}} = H v - (I - P P^T)u + 4 P A_0$ and substituting $2 P b_{\mathrm{out}} = 2 P A_0 - P P^T(w_{\mathrm{next}} - u)$ yields $H v - w_{\mathrm{next}} + 2 P b_{\mathrm{out}} = u$, and then $b_{\mathrm{out}} + \frac{1}{2}P^T(w_{\mathrm{next}} - u) = A_0$. Conversely, starting from any target tuple $((v, w_{\mathrm{next}}), (A_1, B_1), (b_{\mathrm{out}}, B_0), k') \in \mathcal{X}$ and defining $(u, A_0)$ by the inverse formulas gives $K(H v - J_0 u + 4 P A_0) = K((I + P P^T)w_{\mathrm{next}}) = w_{\mathrm{next}}$ and $A_0 - \frac{1}{2}P^T(w_{\mathrm{next}} - u) = b_{\mathrm{out}}$, proving $F \circ F^{-1} = F^{-1} \circ F = \mathrm{id}_{\mathcal{X}}$.
-- **Part 3 ($H_{B,A}$ and $H_{B,B}$):** Let $i \in \{A, B\}$, where $H_{B,A}$ reads $r_A = \operatorname{rec}(x_A)$ with direction bit $\sigma_A$ and $H_{B,B}$ reads $d \in \mathbb{F}_5^2$ with direction bit $\sigma_B$. Set $a_i = S\eta(r_A)$ for $i=A$ and $a_i = S\eta(d)$ for $i=B$. Note that $H_{B,i}$ leaves $x_A, x_B, d$, and $u$ untouched, so $a_i$ is invariant under $H_{B,i}$. For any state $Z \in \mathcal{Z}_B$, $b \in [0, B] \cap \mathbb{Q}$ and
+- **Part 1 ($L_{\mathrm{buf}}$):** Since $L_{\mathrm{buf}}$ fixes $x_B$, $\operatorname{rec}(x_B) \in \mathbb{F}_5^2$ is identical in the forward and backward steps. Addition and subtraction of $\operatorname{rec}(x_B)$ in $(\mathbb{F}_5^2, +)$ are mutual two-sided inverses.
+- **Part 2 ($F$, A2 `PROOF.md` Section 2):** Since $K^{-1} = I + P P^T$ and $J_0 = I - P P^T$, the forward wave update is equivalent to
+  $$
+  (I + P P^T)w_{\mathrm{next}} = H v - (I - P P^T)u + 4 P A_0.
+  $$
+  The forward port equation $b_{\mathrm{out}} = A_0 - \frac{1}{2}P^T(w_{\mathrm{next}} - u)$ is equivalent to $A_0 = b_{\mathrm{out}} + \frac{1}{2}P^T(w_{\mathrm{next}} - u)$, which left-multiplied by $4 P$ gives $4 P A_0 = 4 P b_{\mathrm{out}} + 2 P P^T(w_{\mathrm{next}} - u)$. Substituting this into the wave equation yields
+  $$
+  (I + P P^T)w_{\mathrm{next}} = H v - (I - P P^T)u + 4 P b_{\mathrm{out}} + 2 P P^T w_{\mathrm{next}} - 2 P P^T u,
+  $$
+  and moving the $u$ terms to the left and the $w_{\mathrm{next}}$ terms to the right gives the symmetric relation
+  $$
+  (I + P P^T)u = H v - (I - P P^T)w_{\mathrm{next}} + 4 P b_{\mathrm{out}} \Longleftrightarrow u = K\bigl(H v - J_0 w_{\mathrm{next}} + 4 P b_{\mathrm{out}}\bigr).
+  $$
+  Because every step in this rearrangement is reversible on arbitrary $(u, v, A_0) \in \mathbb{Q}^D \times \mathbb{Q}^D \times \mathbb{Q}^4$ and $(v, w_{\mathrm{next}}, b_{\mathrm{out}}) \in \mathbb{Q}^D \times \mathbb{Q}^D \times \mathbb{Q}^4$, $F \circ F^{-1} = F^{-1} \circ F = \mathrm{id}_{\mathcal{X}}$.
+  *Explicit check on $u = v = 0, A_0 = e_0$:* The forward step gives $w_{\mathrm{next}} = 4 K P e_0 = 2 P e_0$ and $b_{\mathrm{out}} = e_0 - \frac{1}{2}P^T(2 P e_0) = 0$. The inverse formula then uses $J_0 w_{\mathrm{next}} = 2 J_0 P e_0 = 0$ to return $u = K(0 - 0 + 0) = 0$ and $A_0 = 0 + \frac{1}{2}P^T(2 P e_0 - 0) = e_0$.
+- **Part 3 ($H_{B,A}$ and $H_{B,B}$):** Let $i \in \{A, B\}$, where $H_{B,A}$ reads $r_A = \operatorname{rec}(x_A)$ with direction bit $\sigma_A$ and $H_{B,B}$ reads $d \in \mathbb{F}_5^2$ with direction bit $\sigma_B$. Set $a_i = S\eta(r_A)$ for $i=A$ and $a_i = S\eta(d)$ for $i=B$. Because $H_{B,i}$ leaves $x_A, x_B, d$, and $u$ untouched, $a_i$ is invariant under $H_{B,i}$. For any state $Z \in \mathcal{Z}_B$, $b \in [0, B] \cap \mathbb{Q}$ and
   $$
   \Delta_i(u, v, \sigma_i) = E_D(u, v + \sigma_i a_i) - E_D(u, v) = \frac{1}{2}\|a_i\|^2 + \sigma_i a_i^T\left(v - \frac{1}{2}H u\right).
   $$
-  - **Case 1 (Accepted branch: $0 \le b - \Delta_i(u, v, \sigma_i) \le B$):** The image state $Z' = H_{B,i}(Z)$ has $u' = u$, $v' = v + \sigma_i a_i$, $W' = W + \Delta_i(u, v, \sigma_i)$, $b' = b - \Delta_i(u, v, \sigma_i) \in [0, B] \cap \mathbb{Q}$, and $\sigma_i' = -\sigma_i$. Therefore $Z' \in \mathcal{Z}_B$. At the image state $Z'$, the energy increment is
+  - **Case 1 (Accepted branch: $0 \le b - \Delta_i(u, v, \sigma_i) \le B$):** The image state $Z' = H_{B,i}(Z)$ has $u' = u$, $v' = v + \sigma_i a_i$, $W' = W + \Delta_i(u, v, \sigma_i)$, $b' = b - \Delta_i(u, v, \sigma_i) \in [0, B] \cap \mathbb{Q}$, and $\sigma_i' = -\sigma_i$, so $Z' \in \mathcal{Z}_B$. At $Z'$, the energy increment is
     $$
     \Delta_i(u', v', \sigma_i') = E_D(u, v + \sigma_i a_i - \sigma_i a_i) - E_D(u, v + \sigma_i a_i) = E_D(u, v) - E_D(u, v + \sigma_i a_i) = -\Delta_i(u, v, \sigma_i).
     $$
     Hence the post-step store candidate at $Z'$ is
     $$
-    b' - \Delta_i(u', v', \sigma_i') = \bigl(b - \Delta_i(u, v, \sigma_i)\bigr) - \bigl(-\Delta_i(u, v, \sigma_i)\bigr) = b.
+    b' - \Delta_i(u', v', \sigma_i') = \bigl(b - \Delta_i(u, v, \sigma_i)\bigr) - \bigl(-\Delta_i(u, v, \sigma_i)\bigr) = b \in [0, B] \cap \mathbb{Q}.
     $$
-    Because $Z \in \mathcal{Z}_B$ guarantees $0 \le b \le B$, the two-sided guard $0 \le b' - \Delta_i(u', v', \sigma_i') \le B$ holds automatically at $Z'$. Applying $H_{B,i}$ to $Z'$ therefore takes the accepted branch and yields
-    $$
-    \begin{aligned}
-    v'' &= v' + \sigma_i' a_i = (v + \sigma_i a_i) - \sigma_i a_i = v, \\
-    W'' &= W' + \Delta_i(u', v', \sigma_i') = (W + \Delta_i) - \Delta_i = W, \\
-    b'' &= b' - \Delta_i(u', v', \sigma_i') = (b - \Delta_i) + \Delta_i = b, \\
-    \sigma_i'' &= -\sigma_i' = \sigma_i,
-    \end{aligned}
-    $$
-    while all other coordinates remain unchanged. Thus $H_{B,i}(H_{B,i}(Z)) = Z$.
-  - **Case 2 (Refused branch: $b - \Delta_i(u, v, \sigma_i) < 0$ or $b - \Delta_i(u, v, \sigma_i) > B$):** Here $H_{B,i}(Z) = Z \in \mathcal{Z}_B$, so applying $H_{B,i}$ a second time evaluates the identical guard condition at $Z$ and again acts as the identity: $H_{B,i}(H_{B,i}(Z)) = Z$.
+    Thus the two-sided guard $0 \le b' - \Delta_i(u', v', \sigma_i') \le B$ holds automatically at $Z'$, and applying $H_{B,i}$ to $Z'$ takes the accepted branch to return $(v' + \sigma_i' a_i, W' + \Delta_i', b' - \Delta_i', -\sigma_i') = (v, W, b, \sigma_i)$, i.e. $H_{B,i}(H_{B,i}(Z)) = Z$.
+  - **Case 2 (Refused branch: $b - \Delta_i(u, v, \sigma_i) < 0$ or $b - \Delta_i(u, v, \sigma_i) > B$):** Here $H_{B,i}(Z) = Z \in \mathcal{Z}_B$, so applying $H_{B,i}$ again sees the identical guard violation at $Z$ and acts as the identity: $H_{B,i}(H_{B,i}(Z)) = Z$.
   - **Commutativity at $c=1$:** $L_{\mathrm{buf}}$ reads $x_B$ and writes only $d$, whereas $H_{B,A}$ reads $(x_A, u, v, b, \sigma_A)$ and writes only $(v, W, b, \sigma_A)$. Because their read/write supports are disjoint, $H_{B,A} \circ L_{\mathrm{buf}} = L_{\mathrm{buf}} \circ H_{B,A}$. $\blacksquare$
 
 ---
 
-### Theorem 2 (Global apparatus permutation $G_B$ and necessity of two retained direction bits)
+### Theorem 2 (Global apparatus permutation $G_B$, non-invertibility of global $V$, and direct single-$\sigma$ substitution obstruction)
 
 1. **Two-sided apparatus permutation $G_B$:** For any fixed static label pair $(r_A, r_B) \in (\mathbb{F}_5^2)^2$ and any $B \in \mathbb{Q}_{\ge 0}$, each phase row map $T_c : \mathcal{A}_B \to \mathcal{A}_B$ ($c \in \mathbb{Z}/8\mathbb{Z}$) in `CONTRACT.md` Section 2.3 is a bijection with explicit inverse
    $$
@@ -84,21 +129,44 @@ $$
    $$
    Consequently, the clocked apparatus transition $G_B : \mathcal{A}_B \times (\mathbb{Z}/8\mathbb{Z}) \to \mathcal{A}_B \times (\mathbb{Z}/8\mathbb{Z})$ defined by $G_B(a, c) = (T_c(a), (c+1)\bmod 8)$ is a global two-sided permutation with exact inverse
    $$
-   G_B^{-1}(a', c') = \Bigl(T_{(c'-1)\bmod 8}^{-1}(a'),\, (c'-1)\bmod 8\Bigr),
+   G_B^{-1}(a', c') = \Bigl(T_{(c'-1)\bmod 8}^{-1}(a'),\, (c'-1)\bmod 8\Bigr).
    $$
-   and the full 8-phase period map $M_{8,B}^{(r_A, r_B)} = T_7 \circ T_6 \circ T_5 \circ T_4 \circ T_3 \circ T_2 \circ T_1 \circ T_0 : \mathcal{A}_B \to \mathcal{A}_B$ is a global bijection with inverse $(M_{8,B}^{(r_A, r_B)})^{-1} = T_0^{-1} \circ T_1^{-1} \circ T_2^{-1} \circ T_3^{-1} \circ T_4^{-1} \circ T_5^{-1} \circ T_6^{-1} \circ T_7^{-1}$.
-2. **Coupled composite bijectivity on $\mathcal{Z}_B$:** Because the shared-counter native step $V(n, x_A, x_B) = (n+1, g_{j(n, x_A)}(x_A), g_{j(n, x_B)}(x_B))$ is a bijection from $\{n\} \times \mathbb{F}_5^6 \times \mathbb{F}_5^6$ onto $\{n+1\} \times \mathbb{F}_5^6 \times \mathbb{F}_5^6$ with exact inverse $V^{-1}(n', x_A', x_B') = (n'-1, g_{j(n'-1, x_A')}(x_A'), g_{j(n'-1, x_B')}(x_B'))$ for every $n' \ge 1$, the full coupled 8-phase transition $\mathcal{G}_B$ is a bijection between the $c=0, n=n_0$ slice and the $c=7, n=n_0+5$ slice of $\mathcal{Z}_B$.
-3. **Explicit single-direction $\sigma$ failure witness:** Suppose the two direction bits $(\sigma_A, \sigma_B) \in \{\pm 1\}^2$ were replaced by a single shared direction bit $\sigma \in \{\pm 1\}$ initialized to $\sigma = +1$ at $c = 0$, with no mid-cycle direction reset primitive. Consider the input pair $p_A = (0,0,0,0) \in \mathcal{F}_0$ ($z_A = z^{(0)} = 0$, $a_A = 0$) and $p_B = (1,0,0,0) \in \mathcal{F}_1$ ($z_B = z^{(1)} = (\frac{1}{2},0,0,0)^T$, $a_B = S z^{(1)}$) on $\mathcal{R}_{\mathrm{blank}}(\frac{4}{5}, \frac{4}{5})$:
-   - At $c = 1$ (Contact A): $\Delta_A = 0$, so the guard $0 \le \frac{4}{5} - 0 \le \frac{4}{5}$ passes and the accepted contact flips the single shared bit $\sigma: +1 \mapsto -1$ while leaving $(u, v) = (0, 0)$.
-   - At $c = 2, 3$: $(u, v)$ remains $(0, 0)$ and $(b_0, b_1) = (0, 0)$.
-   - At $c = 4$ (Contact B): the second contact reads $\sigma = -1$ and injects $\sigma a_B = -S z^{(1)}$ instead of $+S z^{(1)}$, producing $v = -S z^{(1)}$ and third cut $b_2 = -R_0 z^{(1)} \ne +R_0 z^{(1)}$.
-   Thus a single un-reset direction bit $\sigma$ cannot execute two positive source uses on one continuing apparatus; retaining two separate direction bits $(\sigma_A, \sigma_B) \in \{\pm 1\}^2$ resolves this while keeping every phase globally involutive.
+   In particular, the 7-step apparatus map from $c=0$ to the completion boundary $c=7$,
+   $$
+   M_{7,B}^{(r_A, r_B)} := T_6 \circ T_5 \circ T_4 \circ T_3 \circ T_2 \circ T_1 \circ T_0 : \mathcal{A}_B \to \mathcal{A}_B,
+   $$
+   is a global bijection on $\mathcal{A}_B$ with exact two-sided inverse $(M_{7,B}^{(r_A, r_B)})^{-1} = T_0^{-1} \circ T_1^{-1} \circ T_2^{-1} \circ T_3^{-1} \circ T_4^{-1} \circ T_5^{-1} \circ T_6^{-1}$ (and since $T_7 = \mathrm{id}_{\mathcal{A}_B}$, the 8-step rollover map $M_{8,B}^{(r_A, r_B)} = T_7 \circ M_{7,B}^{(r_A, r_B)}$ equals $M_{7,B}^{(r_A, r_B)}$ on $\mathcal{A}_B$).
+2. **Non-invertibility of the selector-defined native tick $V$ on the full checkpoint carrier:**
+   On $x = (a, b, c_0, d_0, q, r) \in \mathbb{F}_5^6$, the five canonical involutions $g_0, g_1, g_2, g_3, g_4$ are
+   $$
+   \begin{aligned}
+   g_0(x) &= (b, a, d_0, c_0, q, r), &
+   g_1(x) &= (-c_0, -d_0, -a, -b, -q, -r), \\
+   g_2(x) &= (2-c_0, 1+r-d_0, 2-a, 1-r-b, 1-q, -r), &
+   g_3(x) &= (2-a, 1-b, 3-c_0, 4-d_0, 1-q, 1-r), \\
+   g_4(x) &= (2-a, 1-b, 3-c_0, 4-d_0, 2-q, 1-r),
+   \end{aligned}
+   $$
+   whose actions on the complete coordinate sum $z = \sum_{m=0}^5 x_m \bmod 5$ are $(z, -z, 2-z, 2-z, 3-z) \pmod 5$ (A2 `PROOF.md` Section 3). Although each individual $g_k$ is an involution on $\mathbb{F}_5^6$, the state-selected native tick $V(n, x_A, x_B) = (n+1, g_{j(n, x_A)}(x_A), g_{j(n, x_B)}(x_B))$ is **neither surjective nor globally injective** on $\mathbb{N}_0 \times \mathbb{F}_5^6 \times \mathbb{F}_5^6$:
+   - *Non-surjectivity:* No state with $n = 0$ lies in the image of $V$.
+   - *Explicit non-injectivity collision at $n = 0$ ($\theta_0 = 0$):* For $x = (0, 0, 0, 0, 0, 1)$ ($\operatorname{sum}(x) = 1 \implies j(0, x) = 1$) and $\widetilde{x} = (2, 1, 3, 4, 2, 2)$ ($\operatorname{sum}(\widetilde{x}) = 14 \equiv 4 \implies j(0, \widetilde{x}) = 4$),
+     $$
+     g_1(x) = (0, 0, 0, 0, 0, 4) = g_4(\widetilde{x}),
+     $$
+     so $V(0, x, x) = V(0, \widetilde{x}, \widetilde{x}) = (1, (0,0,0,0,0,4), (0,0,0,0,0,4))$.
+   Accordingly, no global inverse of $V$ or $\mathcal{G}_B$ on $\mathcal{Z}_B$ is claimed; native inversion holds specifically as a **left inverse and exact ready-image recognizer on the common-ready family $\mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$** (proved in Section 3 `Theorem 5` Part 5, following A2 `PROOF.md` Section 7).
+3. **Obstruction to direct un-reset substitution of a single shared direction bit $\sigma \in \{\pm 1\}$:**
+   If the two contact calls at $c = 1$ and $c = 4$ directly share a single direction bit $\sigma \in \{\pm 1\}$ initialized to $\sigma = +1$ at $c = 0$ without an intermediate reset operation (A2 `PROOF.md` Section 9), then on $p_A = (0,0,0,0) \in \mathcal{F}_0$ ($z_A = 0, a_A = 0$) and $p_B = (1,0,0,0) \in \mathcal{F}_1$ ($z_B = (\frac{1}{2},0,0,0)^T, a_B = S z^{(1)}$) with blank wave/tapes and $b_{\mathrm{init}} = B \ge \frac{1}{10}$ (e.g. $B = \frac{2}{5}$ or $\frac{4}{5}$):
+   - At $c = 1$ (Contact A): $\Delta_A = 0 \in [0, B]$ passes the guard, so the accepted zero-source call leaves $(u, v) = (0, 0)$ and $b = b_{\mathrm{init}}$ unchanged but flips $\sigma: +1 \mapsto -1$.
+   - At $c = 2, 3$: $(u, v)$ and $(b_0, b_1)$ remain $(0, 0)$.
+   - At $c = 4$ (Contact B): the second contact reads $\sigma = -1$ with cost $\Delta_B = \frac{1}{10}$ and injects $-S z^{(1)}$ instead of $+S z^{(1)}$, producing $b_2 = -R_0 z^{(1)} \ne +R_0 z^{(1)}$.
+   *(Scope note: This witness refutes direct substitution of one shared un-reset $\sigma$ bit into the two $H_B$ calls; it does not assert general minimality of two bits over controllers that introduce an additional mid-cycle sign-reset primitive or alternative multi-state control encodings.)*
 
 #### Proof of Theorem 2
 
-- **Part 1:** By Theorem 1, each $T_c$ is a composition of commuting bijections on $\mathcal{A}_B$, so $T_c \circ T_c^{-1} = T_c^{-1} \circ T_c = \mathrm{id}_{\mathcal{A}_B}$. Then $G_B(G_B^{-1}(a', c')) = G_B(T_{(c'-1)\bmod 8}^{-1}(a'), (c'-1)\bmod 8) = (T_{(c'-1)\bmod 8}(T_{(c'-1)\bmod 8}^{-1}(a')), c') = (a', c')$ and similarly $G_B^{-1}(G_B(a, c)) = (a, c)$.
-- **Part 2:** By `#1492` Proposition 2.1 (`probes/P-NATIVE-CLASSICAL-CONTACT-CENSUS/PROOF.md`), each canonical involution $g_k$ ($k \in \{0,1,2,3,4\}$) preserves the coordinate sum $\sum_{m=0}^5 x_m \bmod 5$. Hence $j(n, g_{j(n,x)}(x)) = j(n, x)$, and $g_{j(n,x)}^2 = \mathrm{id}$ implies $V^{-1} \circ V = \mathrm{id}$ on $\mathbb{N}_0 \times \mathbb{F}_5^6 \times \mathbb{F}_5^6$.
-- **Part 3:** Direct substitution of $a_A = 0, \sigma = +1$ into $H_{B}$ at $c=1$ yields $\Delta_A = 0 \in [0, \frac{4}{5}]$, which takes the accepted branch and maps $\sigma \mapsto -1$; then at $c=4$, $(u, v) = (0, 0)$ and $\sigma = -1$ give $v \mapsto -a_B$ and $b_2 = -\frac{1}{2}P^T T(-a_B) = -R_0 z^{(1)} \ne +R_0 z^{(1)}$ since $R_0$ is invertible and $z^{(1)} \ne 0$. $\blacksquare$
+- **Part 1:** By Theorem 1, each $T_c$ is a bijection on $\mathcal{A}_B$ with inverse $T_c^{-1}$, so $G_B \circ G_B^{-1} = G_B^{-1} \circ G_B = \mathrm{id}_{\mathcal{A}_B \times (\mathbb{Z}/8\mathbb{Z})}$ and $M_{7,B}^{(r_A, r_B)}$ has two-sided inverse $T_0^{-1} \circ \cdots \circ T_6^{-1}$.
+- **Part 2:** Direct coordinate evaluation of $g_0, \dots, g_4$ gives their sum actions $(z, -z, 2-z, 2-z, 3-z) \pmod 5$ and verifies $g_1(0,0,0,0,0,1) = (0,0,0,0,0,-1) = (0,0,0,0,0,4)$ and $g_4(2,1,3,4,2,2) = (2-2, 1-1, 3-3, 4-4, 2-2, 1-2) = (0,0,0,0,0,4)$.
+- **Part 3:** Direct substitution of $a_A = 0, \sigma = +1$ at $c=1$ gives $\Delta_A = 0$ (accepted, $\sigma \mapsto -1$), and at $c=4$ with $(u, v) = (0, 0)$ and $\sigma = -1$ gives $v \mapsto -S z^{(1)}$ and $b_2 = -\frac{1}{2}P^T T(-S z^{(1)}) = -R_0 z^{(1)} \ne +R_0 z^{(1)}$. $\blacksquare$
 
 ---
 
@@ -106,17 +174,17 @@ $$
 
 ### Theorem 3 (Closed-form occupied-wave energy increment $\Delta_B(z_A, z_B)$ and exact 25-pair rational census)
 
-Let $Z(0) \in \mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ be any common-ready state with input pair $(p_A, p_B) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4$, residue sums $h_A = h(p_A)$ and $h_B = h(p_B)$, first-tick receivers $C_{1,A} = \operatorname{rec}(x_A(1)) = C_1(h_A)$ and $C_{1,B} = \operatorname{rec}(x_B(1)) = C_1(h_B)$, source vectors $z_A = \eta(C_{1,A}) = z^{(h_A)} \in Z_5$ and $z_B = \eta(C_{1,B}) = z^{(h_B)} \in Z_5$, and zero-mean five-site fields $f = S z_A$ and $g = S z_B$.
+Let $Z(0) \in \mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ be any common-ready state with input pair $(p_A, p_B) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4$, residue sums $h_A = h(p_A)$ and $h_B = h(p_B)$, first-tick receivers $C_{1,A} = \operatorname{rec}(x_{1,A}) = C_1(h_A)$ and $C_{1,B} = \operatorname{rec}(x_{1,B}) = C_1(h_B)$, source vectors $z_A = \eta(C_{1,A}) = z^{(h_A)} \in Z_5$ and $z_B = \eta(C_{1,B}) = z^{(h_B)} \in Z_5$, and zero-mean five-site fields $f = S z_A$ and $g = S z_B$.
 
 1. **Pre-contact-B wave state and archive independence at $c = 4$:**
-   - At $c = 1$, $\Delta_A = E_D(0, f) - E_D(0, 0) = \frac{1}{2}\|f\|^2 = \frac{1}{2}z_A^T G_{\mathrm{source}} z_A = E_0(z_A) =: E_A(z_A)$, which is independent of $(c_0, c_1)$.
-   - If Contact A is accepted ($\alpha_A = 1$, i.e. $0 \le b_{\mathrm{init}} - E_A(z_A) \le B$), the wave after $c = 1$ is $(u_1, v_1) = (0, f)$ with tapes $A = (0, 0), B_{\mathrm{out}} = (c_0, c_1)$.
-   - At $c = 2$ ($F$ step 1, reading $A_0 = 0$), $w_1 = K(H f - J_0(0) + 0) = T f$ and $A$ becomes $(0, c_1)$, $B_{\mathrm{out}}$ becomes $(b_0, c_0)$.
-   - At $c = 3$ ($F$ step 2, reading $A_0 = 0$), since $K J_0 = (I - \frac{1}{2}P P^T)(I - P P^T) = I - P P^T = J_0$,
+   - At row $c = 1$, $\Delta_A = E_D(0, f) - E_D(0, 0) = \frac{1}{2}\|f\|^2 = \frac{1}{2}z_A^T G_{\mathrm{source}} z_A = E_0(z_A) =: E_A(z_A)$, which is independent of $(c_0, c_1)$.
+   - If Contact A is accepted ($\alpha_A = 1$, i.e. $0 \le b_{\mathrm{init}} - E_A(z_A) \le B$), the wave at boundary $c = 2$ is $(u, v) = (0, f)$ with tapes $A = (0, 0), B_{\mathrm{out}} = (c_0, c_1)$.
+   - Row $c = 2$ ($F$ cut 0, reading $A_0 = 0$) produces $w_1 = K(H f - J_0(0) + 0) = T f$ and shifts the tapes to $A = (0, c_1), B_{\mathrm{out}} = (b_0, c_0)$ at boundary $c = 3$.
+   - Row $c = 3$ ($F$ cut 1, reading $A_0 = 0$) produces
      $$
-     w_2 = K(H w_1 - J_0 f + 0) = (T^2 - J_0)f,
+     w_2 = K(H w_1 - J_0 f + 0) = T w_1 - J_0 f = (T^2 - J_0)f
      $$
-     and $A$ becomes $(c_1, c_0)$, $B_{\mathrm{out}}$ becomes $(b_1, b_0)$. Because both $c = 2$ and $c = 3$ read $A_0 = 0$, the wave $(w_1, w_2) = (T f, (T^2 - J_0)f)$ arriving at Contact B ($c = 4$) is **strictly independent** of the old archive $(c_0, c_1)$.
+     (since $K J_0 = J_0$) and shifts the tapes to $A = (c_1, c_0), B_{\mathrm{out}} = (b_1, b_0)$ at boundary $c = 4$. Because both rows $c = 2$ and $c = 3$ read $A_0 = 0$, the wave $(w_1, w_2) = (T f, (T^2 - J_0)f)$ arriving at Contact B (row $c = 4$) is **strictly independent** of the old archive $(c_0, c_1)$.
 2. **Exact rank-one fifth-site factorization of $\Delta_B(z_A, z_B)$:**
    For any $z_A, z_B \in \mathbb{Q}^4$ with $f = S z_A$, $g = S z_B$, $s_B = \mathbf{1}^T z_B = \sum_{i=0}^3 (z_B)_i$, and $(w_1, w_2) = (T f, (T^2 - J_0)f)$ at $\sigma_B = +1$, the second-contact wave energy increment is
    $$
@@ -173,7 +241,7 @@ Let $Z(0) \in \mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ be any common-read
 
 #### Proof of Theorem 3
 
-1. **Wave state before Contact B:** Part 1 follows directly by substituting $u_1 = 0, v_1 = f, A_0 = 0$ into $F$ at $c=2$ and $c=3$ and using $K J_0 = J_0$.
+1. **Wave state before Contact B:** Part 1 follows directly by substituting $u_1 = 0, v_1 = f, A_0 = 0$ into $F$ at rows $c=2$ and $c=3$ and using $K J_0 = J_0$.
 2. **Projection onto the fifth site $y_4$:** Since $w_1 = T f = K H f$ and $w_2 = K H w_1 - J_0 f$, where $K = I - \frac{1}{2}P P^T$ and $J_0 = I - P P^T$, we have $K - \frac{1}{2}I = \frac{1}{2}(I - P P^T) = \frac{1}{2}J_0$, and therefore
    $$
    w_2 - \frac{1}{2}H w_1 = \left(K - \frac{1}{2}I\right)H w_1 - J_0 f = \frac{1}{2}J_0 H K H f - J_0 f = J_0\left(\frac{1}{2}H K H f - f\right).
@@ -237,7 +305,7 @@ Let $Z(0) \in \mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ be any common-read
    $$
    0 \le W_{\mathrm{final}}(z_A, z_B) = E_A(z_A) + \Delta_B(z_A, z_B) \le W_{\mathrm{final}}(z^{(4)}, z^{(4)}) = \frac{8224427}{10497600} < \frac{4}{5} = \frac{8398080}{10497600}.
    $$
-2. **Input-independent two-use funding condition:** On $\mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$, an input-independent rational store initialization $(b_{\mathrm{init}}, B)$ accepts **both** Contact A ($c=1$) and Contact B ($c=4$) (`(ACC, ACC)`, $(\sigma_A, \sigma_B)_{\mathrm{final}} = (-1, -1)$) across all $25$ source pairs in $Z_5 \times Z_5$ and all $625^2 = 390{,}625$ native input pairs $(p_A, p_B) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4$ if and only if
+2. **Input-independent two-use funding condition:** On $\mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$, an input-independent rational store initialization $(b_{\mathrm{init}}, B)$ accepts **both** Contact A (row $c=1$) and Contact B (row $c=4$) (`(ACC, ACC)`, $(\sigma_A, \sigma_B)_{\mathrm{final}} = (-1, -1)$) across all $25$ source pairs in $Z_5 \times Z_5$ and all $625^2 = 390{,}625$ native input pairs $(p_A, p_B) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4$ if and only if
    $$
    B_* := \frac{8224427}{10497600} \le b_{\mathrm{init}} \le B.
    $$
@@ -254,14 +322,14 @@ Let $Z(0) \in \mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ be any common-read
        $$
        \bigl\{(1,3), (1,4), (2,3), (2,4), (3,1), (3,2), (3,3), (3,4), (4,1), (4,2), (4,3), (4,4)\bigr\}.
        $$
-       *Explicit witness:* On $(h_A, h_B) = (3, 3)$ (e.g. $p_A = p_B = (3,0,0,0)$) at $b_{\mathrm{init}} = B = \frac{2}{5}$, Contact A is accepted with $E_A = \frac{2}{5}$, $b_1 = 0$, $\sigma_A = -1$; at Contact B ($c=4$), $\Delta_B(z^{(3)}, z^{(3)}) = \frac{1711367}{4665600} > 0$ violates the lower guard $b_1 - \Delta_B = -\frac{1711367}{4665600} < 0$, so Contact B is refused (`(ACC, REF)`), leaving $(\sigma_A, \sigma_B)_{\mathrm{final}} = (-1, +1)$, $W_{\mathrm{final}} = \frac{2}{5}$, and $b_{\mathrm{final}} = 0$.
+       *Explicit witness:* On $(h_A, h_B) = (3, 3)$ (e.g. $p_A = p_B = (3,0,0,0)$) at $b_{\mathrm{init}} = B = \frac{2}{5}$, Contact A is accepted with $E_A = \frac{2}{5}$, remaining store $b = 0$, and $\sigma_A = -1$; at Contact B (row $c=4$), $\Delta_B(z^{(3)}, z^{(3)}) = \frac{1711367}{4665600} > 0$ violates the lower guard $b - \Delta_B = -\frac{1711367}{4665600} < 0$, so Contact B is refused (`(ACC, REF)`), leaving $(\sigma_A, \sigma_B)_{\mathrm{final}} = (-1, +1)$, $W_{\mathrm{final}} = \frac{2}{5}$, and $b_{\mathrm{final}} = 0$.
    - **At intermediate capacity $b_{\mathrm{init}} = B = \frac{1}{5}$:** All four acceptance/refusal regimes are simultaneously inhabited across the $25$ pairs:
      - **`(ACC, ACC)` ($6$ pairs / $93{,}750$ native pairs):** $\{(0,0), (0,1), (0,2), (1,0), (1,1), (2,0)\}$, where $E_A \le \frac{1}{5}$ and $E_A + \Delta_B \le \frac{1}{5}$ (including $(1,1)$ with $W_{\mathrm{final}} = \frac{8252597}{41990400} < \frac{8398080}{41990400} = \frac{1}{5}$).
      - **`(ACC, REF)` ($9$ pairs / $140{,}625$ native pairs):** $\{(0,3), (0,4), (1,2), (1,3), (1,4), (2,1), (2,2), (2,3), (2,4)\}$, where $E_A \le \frac{1}{5}$ but $E_A + \Delta_B > \frac{1}{5}$.
-     - **`(REF, ACC)` ($6$ pairs / $93{,}750$ native pairs):** $\{(3,0), (3,1), (3,2), (4,0), (4,1), (4,2)\}$, where Contact A is refused ($E_A = \frac{2}{5} > \frac{1}{5}$, so $u=v=0, b_1 = \frac{1}{5}, \sigma_A = +1$) and Contact B sees the cold wave $(0,0)$ with $\Delta_B = E_0(z_B) \in \{0, \frac{1}{10}, \frac{3}{20}\} \le \frac{1}{5}$ and is accepted ($\sigma_B = -1$).
+     - **`(REF, ACC)` ($6$ pairs / $93{,}750$ native pairs):** $\{(3,0), (3,1), (3,2), (4,0), (4,1), (4,2)\}$, where Contact A is refused ($E_A = \frac{2}{5} > \frac{1}{5}$, so $u=v=0, b = \frac{1}{5}, \sigma_A = +1$) and Contact B sees the cold wave $(0,0)$ with $\Delta_B = E_0(z_B) \in \{0, \frac{1}{10}, \frac{3}{20}\} \le \frac{1}{5}$ and is accepted ($\sigma_B = -1$).
      - **`(REF, REF)` ($4$ pairs / $62{,}500$ native pairs):** $\{(3,3), (3,4), (4,3), (4,4)\}$, where Contact A is refused ($E_A = \frac{2}{5} > \frac{1}{5}$) and Contact B is also refused ($\Delta_B = E_0(z_B) = \frac{2}{5} > \frac{1}{5}$), leaving $(\sigma_A, \sigma_B)_{\mathrm{final}} = (+1, +1)$.
 4. **Occupied-wave (`WARM`) archive/tape witness outside $\mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$:**
-   While $(c_0, c_1) \in B_{\mathrm{out}}$ at $c=0$ enters the wave only at $c=5, 6$ (after Contact B at $c=4$), if the active input tape $A_0$ is non-zero before Contact B (or if a subsequent un-rezeroed cycle $c \in \{8, \dots, 15\}$ is entered after $c_1 = e_0$ was injected at $c=5$), the ambient wave modifies $\Delta_B$. Specifically, if $A_{\mathrm{init}} = (0, e_0)$ at $c=0$ with $p_A = (0,0,0,0)$ ($z_A = 0$) and $p_B = (1,0,0,0)$ ($z_B = (\frac{1}{2},0,0,0)^T$), then $c=2$ shifts $A_1 = e_0$ into $A_0$, and $c=3$ injects $4 P e_0$ into $w_2 = 4 K P e_0 = 2 P e_0$ with $w_1 = 0$. At $c=4$, Contact B sees $(u, v) = (0, 2 P e_0)$ and experiences
+   While $(c_0, c_1) \in B_{\mathrm{out}}$ at $c=0$ enters the wave only at rows $c=5, 6$ (after Contact B at row $c=4$), if the active input tape $A_0$ is non-zero before Contact B (or if a subsequent un-rezeroed cycle is entered after $c_1 = e_0$ was injected at row $c=5$), the ambient wave modifies $\Delta_B$. Specifically, if $A_{\mathrm{init}} = (0, e_0)$ at $c=0$ with $p_A = (0,0,0,0)$ ($z_A = 0$) and $p_B = (1,0,0,0)$ ($z_B = (\frac{1}{2},0,0,0)^T$), then row $c=2$ shifts $A_1 = e_0$ into $A_0$, and row $c=3$ injects $4 P e_0$ into $w_2 = 4 K P e_0 = 2 P e_0$ with $w_1 = 0$. At row $c=4$, Contact B sees $(u, v) = (0, 2 P e_0)$ and experiences
    $$
    \Delta_B^{\mathrm{warm}} = E_0(z^{(1)}) + (S z^{(1)})^T(2 P e_0) = \frac{1}{10} + 2(z^{(1)})^T G_{\mathrm{source}} e_0 = \frac{1}{10} + 2\left(\frac{1}{2}\right)\left(\frac{4}{5}\right) = \frac{9}{10} > \frac{4}{5},
    $$
@@ -279,99 +347,147 @@ All inequalities and branch memberships in Parts 1–3 follow directly from the 
 
 ## Section 3. Four-cut record retention, acceptance/refusal discrimination, and native prepared-image inverse (`Obligation 5`)
 
-### Theorem 5 (Unified four-cut formulas, archive-independent source decoding, accepted-zero vs. refusal discrimination, and exact native left inverse)
+### Theorem 5 (Unified four-cut formulas, archive-independent source decoding, accepted-zero vs. refusal discrimination, and exact native prepared-image left inverse)
 
 Let $Z(0) \in \mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ be any common-ready state with input pair $(p_A, p_B) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4$, source pair $z_A = z^{(h(p_A))}, z_B = z^{(h(p_B))} \in Z_5$, fields $f = S z_A, g = S z_B$, and acceptance indicators $\alpha_A = \frac{1 - \sigma_{A,\mathrm{final}}}{2} \in \{0, 1\}$, $\alpha_B = \frac{1 - \sigma_{B,\mathrm{final}}}{2} \in \{0, 1\}$.
 
-1. **Phase-by-phase retention table across all 8 phases ($c = 0, \dots, 7$):**
-   Writing $u_1 = 0, v_1 = \alpha_A f$, $w_1 = \alpha_A T f$, $w_2 = \alpha_A(T^2 - J_0)f$, $w_2^+ = w_2 + \alpha_B g$, $w_3 = K(H w_2^+ - J_0 w_1 + 4 P c_1)$, and $w_4 = K(H w_3 - J_0 w_2^+ + 4 P c_0)$, the state at the end of each phase $c \in \{0, \dots, 7\}$ is:
+1. **Boundary-by-boundary state table from $c = 0$ to the completion boundary $c = 7, n = 5$ (7 updates $\mathcal{G}_B^7$):**
+   For each $m \in \{0, 1, \dots, 7\}$, let $Z(m) = \mathcal{G}_B^m(Z(0))$ be the state at clock boundary $c = m$ (after executing rows $0, 1, \dots, m-1$). Following A2 `PROOF.md` Sections 4–5 (eqs. (7)–(9)), define the lingering first-contact wave slices
+   $$
+   w_1 = T f, \qquad w_2 = T w_1 - J_0 f, \qquad a_3 = T w_2 - J_0 w_1, \qquad a_4 = T a_3 - J_0 w_2,
+   $$
+   and the branch-actual wave slices
+   $$
+   \begin{aligned}
+   w_1^{(\alpha)} &= \alpha_A w_1, &
+   w_2^{(\alpha)} &= \alpha_A w_2, &
+   w_2^+ &= \alpha_A w_2 + \alpha_B g, \\
+   w_3 &= \alpha_A a_3 + \alpha_B T g + 2 P c_1, &
+   w_4 &= \alpha_A a_4 + \alpha_B(T^2 - J_0)g + 2 T P c_1 + 2 P c_0.
+   \end{aligned}
+   $$
+   Then the complete boundary state $Z(c)$ at each clock value $c \in \{0, 1, \dots, 7\}$ is:
 
-   | End of phase $c$ | $n$ | Wave $(u, v)$ | Input tape $A = (A_0, A_1)$ | Output tape $B_{\mathrm{out}} = (B_0, B_1)$ | $k$ | $(W, b)$ | $(\sigma_A, \sigma_B)$ | $d$ |
-   | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-   | `0` | $1$ | $(0, 0)$ | $(0, 0)$ | $(c_0, c_1)$ | $0$ | $(0, b_{\mathrm{init}})$ | $(+1, +1)$ | $(0, 0)$ |
-   | `1` | $1$ | $(0, \alpha_A f)$ | $(0, 0)$ | $(c_0, c_1)$ | $0$ | $(\alpha_A E_A, b_{\mathrm{init}} - \alpha_A E_A)$ | $(1-2\alpha_A, +1)$ | $C_{1,B}$ |
-   | `2` | $2$ | $(\alpha_A f, w_1)$ | $(0, c_1)$ | $(b_0, c_0)$ | $1$ | $(\alpha_A E_A, b_{\mathrm{init}} - \alpha_A E_A)$ | $(1-2\alpha_A, +1)$ | $C_{1,B}$ |
-   | `3` | $3$ | $(w_1, w_2)$ | $(c_1, c_0)$ | $(b_1, b_0)$ | $0$ | $(\alpha_A E_A, b_{\mathrm{init}} - \alpha_A E_A)$ | $(1-2\alpha_A, +1)$ | $C_{1,B}$ |
-   | `4` | $3$ | $(w_1, w_2^+)$ | $(c_1, c_0)$ | $(b_1, b_0)$ | $0$ | $(W_{\mathrm{final}}, b_{\mathrm{final}})$ | $(1-2\alpha_A, 1-2\alpha_B)$ | $C_{1,B}$ |
-   | `5` | $4$ | $(w_2^+, w_3)$ | $(c_0, b_0)$ | $(b_2, b_1)$ | $1$ | $(W_{\mathrm{final}}, b_{\mathrm{final}})$ | $(1-2\alpha_A, 1-2\alpha_B)$ | $C_{1,B}$ |
-   | `6` | $5$ | $(w_3, w_4)$ | $(b_0, b_1)$ | $(b_3, b_2)$ | $0$ | $(W_{\mathrm{final}}, b_{\mathrm{final}})$ | $(1-2\alpha_A, 1-2\alpha_B)$ | $C_{1,B}$ |
-   | `7` | $5$ | $(w_3, w_4)$ | $(b_0, b_1)$ | $(b_3, b_2)$ | $0$ | $(W_{\mathrm{final}}, b_{\mathrm{final}})$ | $(1-2\alpha_A, 1-2\alpha_B)$ | $C_{1,B}$ |
+   | Boundary clock $c$ | Updates $\mathcal{G}_B^c$ | $n$ | Native pair | Wave $(u, v)$ | Input tape $A$ | Output tape $B_{\mathrm{out}}$ | $k$ | $(W, b)$ | $(\sigma_A, \sigma_B)$ | $d$ | Completed cuts |
+   | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+   | `0` | $0$ | $0$ | $(x_{0,A}, x_{0,B})$ | $(0, 0)$ | $(0, 0)$ | $(c_0, c_1)$ | $0$ | $(0, b_{\mathrm{init}})$ | $(+1, +1)$ | $(0, 0)$ | none |
+   | `1` | $1$ | $1$ | $(x_{1,A}, x_{1,B})$ | $(0, 0)$ | $(0, 0)$ | $(c_0, c_1)$ | $0$ | $(0, b_{\mathrm{init}})$ | $(+1, +1)$ | $(0, 0)$ | none |
+   | `2` | $2$ | $1$ | $(x_{1,A}, x_{1,B})$ | $(0, \alpha_A f)$ | $(0, 0)$ | $(c_0, c_1)$ | $0$ | $(\alpha_A E_A, b_{\mathrm{init}} - \alpha_A E_A)$ | $(1-2\alpha_A, +1)$ | $C_{1,B}$ | none |
+   | `3` | $3$ | $2$ | $(x_{2,A}, x_{2,B})$ | $(\alpha_A f, w_1^{(\alpha)})$ | $(0, c_1)$ | $(b_0, c_0)$ | $1$ | $(\alpha_A E_A, b_{\mathrm{init}} - \alpha_A E_A)$ | $(1-2\alpha_A, +1)$ | $C_{1,B}$ | `0` |
+   | `4` | $4$ | $3$ | $(x_{3,A}, x_{3,B})$ | $(w_1^{(\alpha)}, w_2^{(\alpha)})$ | $(c_1, c_0)$ | $(b_1, b_0)$ | $0$ | $(\alpha_A E_A, b_{\mathrm{init}} - \alpha_A E_A)$ | $(1-2\alpha_A, +1)$ | $C_{1,B}$ | `0, 1` |
+   | `5` | $5$ | $3$ | $(x_{3,A}, x_{3,B})$ | $(w_1^{(\alpha)}, w_2^+)$ | $(c_1, c_0)$ | $(b_1, b_0)$ | $0$ | $(W_{\mathrm{final}}, b_{\mathrm{final}})$ | $(1-2\alpha_A, 1-2\alpha_B)$ | $C_{1,B}$ | `0, 1` |
+   | `6` | $6$ | $4$ | $(x_{4,A}, x_{4,B})$ | $(w_2^+, w_3)$ | $(c_0, b_0)$ | $(b_2, b_1)$ | $1$ | $(W_{\mathrm{final}}, b_{\mathrm{final}})$ | $(1-2\alpha_A, 1-2\alpha_B)$ | $C_{1,B}$ | `0, 1, 2` |
+   | `7` | $7$ | $5$ | $(x_{5,A}, x_{5,B})$ | $(w_3, w_4)$ | $(b_0, b_1)$ | $(b_3, b_2)$ | $0$ | $(W_{\mathrm{final}}, b_{\mathrm{final}})$ | $(1-2\alpha_A, 1-2\alpha_B)$ | $C_{1,B}$ | `0, 1, 2, 3` |
 
-   At the period boundary $c = 7, n = 5$, all four chronological signed port cuts $(b_0, b_1, b_2, b_3)$ are simultaneously retained in the four tape slots $(A_0, A_1, B_1, B_0) = (b_0, b_1, b_2, b_3)$, and $(b_0, b_1)$ are readable at every boundary from $c = 3$ through $c = 7$.
-2. **Unified four-cut branch output equations:** Across all four acceptance/refusal branches $(\alpha_A, \alpha_B) \in \{0, 1\}^2$,
+   *(The 8th update $Z(8) = \mathcal{G}_B^8(Z(0))$ applies row $c = 7$, which holds all data coordinates $(n, x_A, x_B, X, W, b, (\sigma_A, \sigma_B), d)$ unchanged and rotates $c: 7 \mapsto 0$.)*
+   At the completion boundary $c = 7, n = 5$ ($Z_{\mathrm{final}} = Z(7) = \mathcal{G}_B^7(Z(0))$), all four chronological signed port cuts $(b_0, b_1, b_2, b_3)$ are simultaneously retained in the four tape slots $(A_0, A_1, B_1, B_0) = (b_0, b_1, b_2, b_3)$, and the first-use pair $(b_0, b_1)$ remains literally readable throughout the second use: as $(B_1, B_0)$ at $c = 4, 5$, as $(A_1, B_1)$ at $c = 6$, and as $(A_0, A_1)$ at $c = 7$.
+2. **Unified four-cut branch output equations (A2 `PROOF.md` Section 5, eq. (10)):** Across all four acceptance/refusal branches $(\alpha_A, \alpha_B) \in \{0, 1\}^2$,
    $$
    b_0 = \alpha_A R_0 z_A, \qquad
    b_1 = \alpha_A R_1 z_A, \qquad
    b_2 = \alpha_A D_2(z_A) + \alpha_B R_0 z_B, \qquad
    b_3 = \alpha_A D_3(z_A) + \alpha_B R_1 z_B - \frac{1}{2}J_p c_1,
    $$
-   where
+   where the cold response operators, cross-use operators, and port stencil matrix are inherited without change from `#1485`, `#1489`, `#1492`, and A2 (`PROOF.md` Section 5):
    $$
    \begin{aligned}
-   R_0 &= -\frac{1}{2}P^T T S = -\frac{1}{4}M = -\frac{1}{6480}(1770 I_4 - v\mathbf{1}^T), & v &= (349, 354, 354, 348)^T, \\
-   R_1 &= \frac{1}{2}G_{\mathrm{source}} - \frac{1}{2}P^T T^2 S, & J_p &= P^T T P - I_4 = \frac{1}{2}P^T H P - I_4, \\
-   D_2(z_A) &= \frac{1}{2}P^T(T - T^3 + T J_0)S z_A, & D_3(z_A) &= \frac{1}{2}P^T\bigl((T^2 - J_0) - T^4 + T^2 J_0 + J_0 T^2 - J_0\bigr)S z_A.
+   R_0 z &= -\frac{1}{2}P^T T S z = -\frac{1}{4}M z = -\frac{1}{6480}(1770 I_4 - v\mathbf{1}^T)z, & v &= (349, 354, 354, 348)^T, \\
+   R_1 z &= \frac{1}{2}P^T\bigl(S z - (T^2 - J_0)S z\bigr) = \frac{1}{2}\bigl(G_{\mathrm{source}} - P^T T^2 S\bigr)z, \\
+   J_p &= P^T H P = \frac{1}{54}\bigl(59 I_4 + \mathbf{1}\mathbf{1}^T\bigr), & P^T T P &= P^T K H P = \frac{1}{2}P^T H P = \frac{1}{2}J_p, \\
+   D_2(z_A) &= \frac{1}{2}P^T(w_1 - a_3) = \frac{1}{2}P^T\bigl(T - T^3 + T J_0\bigr)S z_A, \\
+   D_3(z_A) &= \frac{1}{2}P^T(w_2 - a_4) = \frac{1}{2}P^T\bigl(T^2 - T^4 + T^2 J_0 + T J_0 T\bigr)S z_A.
    \end{aligned}
    $$
-   Specifically, the five single-source port-cut vectors $R_0 z^{(h)}$ and $R_1 z^{(h)}$ on $Z_5$ (from `#1492` Theorem 2.2) are:
+   The five single-source port-cut vectors $R_0 z^{(h)}$ and $R_1 z^{(h)}$ on $Z_5$ (inherited directly from `#1489` `ea924e214ec3c29009fd4590f294954d3e5ad43f:notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/PROOF.md` Section 4 and `#1492` `8b91a935c426036e00ecb300019fd94734addeec:probes/P-NATIVE-CLASSICAL-CONTACT-CENSUS-1/RESULT.md`) are:
 
-   | $h$ | $R_0 z^{(h)} \in \mathbb{Q}^4$ | $R_1 z^{(h)} \in \mathbb{Q}^4$ |
+   | $h$ | $12960 \, R_0 z^{(h)}$ | $1399680 \, R_1 z^{(h)}$ |
    | :---: | :---: | :---: |
    | `0` | $(0, 0, 0, 0)^T$ | $(0, 0, 0, 0)^T$ |
-   | `1` | $\frac{1}{12960}(-1421, 354, 354, 348)^T$ | $\frac{1}{20995200}(62683, -1042902, -1042902, -1039542)^T$ |
-   | `2` | $\frac{1}{12960}(-1072, -1062, 708, 696)^T$ | $\frac{1}{20995200}(-980219, -960509, -2087829, -2082444)^T$ |
-   | `3` | $\frac{1}{12960}(-2493, -708, 1062, 1044)^T$ | $\frac{1}{20995200}(-917536, -2003411, -3130731, -3121986)^T$ |
-   | `4` | $\frac{1}{6480}(349, -1416, 354, 348)^T$ | $\frac{1}{10497600}(-521451, 41195, -522463, -521451)^T$ |
+   | `1` | $(-1421, 354, 354, 348)^T$ | $(192202, -47829, -47829, -48879)^T$ |
+   | `2` | $(-1072, -1062, 708, 696)^T$ | $(143434, 145312, -95658, -97758)^T$ |
+   | `3` | $(-2493, -708, 1062, 1044)^T$ | $(335636, 97483, -143487, -146637)^T$ |
+   | `4` | $(698, -2832, 708, 696)^T$ | $(-97536, 386282, -95658, -97758)^T$ |
 
-3. **Archive-independent recovery of $(z_A, z_B)$ on `(ACC, ACC)`:**
-   Since $\det(M) = \frac{131793881}{170061120} \ne 0$ (`#1485` Theorem 4), $R_0 = -\frac{1}{4}M$ is invertible over $\mathbb{Q}^4$ with exact closed-form inverse
+   *Explicit archive-propagation check (`WARM` witness from A2 `PROOF.md` Section 6):*
+   - For $z_A = z_B = 0$, $c_0 = 0$, $c_1 = e_0$, the formula gives $b_0 = b_1 = b_2 = 0$ and
+     $$
+     b_3 = -\frac{1}{2}J_p e_0 = -\frac{1}{2}P^T H P e_0 = \begin{pmatrix} -5/9 \\ -1/108 \\ -1/108 \\ -1/108 \end{pmatrix}.
+     $$
+   - For $p_A = (0,0,0,0)$ ($z_A = 0$), $p_B = (1,0,0,0)$ ($z_B = z^{(1)} = \frac{1}{2}e_0$), $c_0 = 0, c_1 = e_0$, and $b_{\mathrm{init}} = B \ge \frac{1}{10}$ (`(ACC, ACC)`), $E_A = 0, \Delta_B = \frac{1}{10}$, $b_0 = b_1 = 0$, $b_2 = R_0(e_0/2) = \frac{1}{12960}(-1421, 354, 354, 348)^T$, and
+     $$
+     b_3 = R_1\left(\frac{e_0}{2}\right) - \frac{1}{2}J_p e_0 = \frac{1}{1399680}\begin{pmatrix} 192202 - 777600 \\ -47829 - 12960 \\ -47829 - 12960 \\ -48879 - 12960 \end{pmatrix} = \frac{1}{1399680}\begin{pmatrix} -585398 \\ -60789 \\ -60789 \\ -61839 \end{pmatrix},
+     $$
+     matching A2 equation (13) and $E_{\mathrm{full}}(X(7)) - W(7) = \frac{21}{10} - \frac{1}{10} = 2 = 2\|e_0\|^2$.
+3. **Archive-independent recovery of $(z_A, z_B)$ on `(ACC, ACC)` (A2 `PROOF.md` Section 5):**
+   Since $M = \frac{1}{1620}(1770 I_4 - v\mathbf{1}^T)$ with $v = (349, 354, 354, 348)^T$ and $\mathbf{1}^T v = 1405$, $1770 - 1405 = 365$, and $\frac{1620}{1770} = \frac{54}{59}$, the Sherman–Morrison formula gives
    $$
-   R_0^{-1} = -4 M^{-1} = -\frac{36}{59}\left(5 I_4 + \frac{1}{699}v\mathbf{1}^T\right), \qquad v = (349, 354, 354, 348)^T.
+   M^{-1} = \frac{54}{59}\left(I_4 + \frac{v\mathbf{1}^T}{365}\right), \qquad
+   \boxed{R_0^{-1} = -4 M^{-1} = -\frac{216}{59}\left(I_4 + \frac{v\mathbf{1}^T}{365}\right).}
    $$
+   *(Check on $t = e_0 - e_1$: since $\mathbf{1}^T t = 0$, $R_0 t = -\frac{1770}{6480}t = -\frac{59}{216}t$ and $R_0^{-1}(R_0 t) = (-\frac{216}{59})(-\frac{59}{216})t = t$.)*
    Whenever $(\sigma_A, \sigma_B)_{\mathrm{final}} = (-1, -1)$ ($\alpha_A = \alpha_B = 1$), both source vectors $(z_A, z_B) \in \mathbb{Q}^4 \times \mathbb{Q}^4$ are uniquely recovered from $(b_0, b_2) = (A_{0,\mathrm{final}}, B_{1,\mathrm{final}})$ independently of the old archive $(c_0, c_1)$ via
    $$
    z_A = R_0^{-1} b_0 = -4 M^{-1} b_0, \qquad
    z_B = R_0^{-1}\bigl(b_2 - D_2(z_A)\bigr) = -4 M^{-1}\bigl(b_2 - D_2(-4 M^{-1} b_0)\bigr).
    $$
    On $Z_5 \times Z_5$, this uniquely determines $(h_A, h_B) \in (\mathbb{Z}/5\mathbb{Z})^2$ and $(C_{1,A}, C_{1,B})$ (agreeing with $d_{\mathrm{final}} = C_{1,B}$).
-4. **Accepted-zero vs. refusal discrimination via $(\sigma_A, \sigma_B)_{\mathrm{final}}$:**
-   On $\mathcal{R}_{(c_0, 0, \frac{1}{5}, \frac{1}{5})}$, the four source pairs $(h_A, h_B) \in \{(0,0), (0,3), (3,0), (3,3)\}$ (for example $p^{(0)} = (0,0,0,0)$ and $p^{(3)} = (3,0,0,0)$) all produce identical classical wave/tape states $(u_{\mathrm{final}}, v_{\mathrm{final}}) = (w_3, w_4)$ and identical four-cut records $(b_0, b_1, b_2, b_3) = (0, 0, 0, 0)$ together with identical work/store $(W_{\mathrm{final}}, b_{\mathrm{final}}) = (0, \frac{1}{5})$. They are discriminated on the apparatus carrier by, and only by, $(\sigma_A, \sigma_B)_{\mathrm{final}}$ (together with $d_{\mathrm{final}} = C_1(h_B)$ for the second slot):
-   - $(0, 0) \in \text{(ACC, ACC)} \implies (\sigma_A, \sigma_B)_{\mathrm{final}} = (-1, -1)$ (both contacts accepted with zero source $z^{(0)} = 0$);
-   - $(0, 3) \in \text{(ACC, REF)} \implies (\sigma_A, \sigma_B)_{\mathrm{final}} = (-1, +1)$ (Contact A accepted zero; Contact B refused $z^{(3)}$);
-   - $(3, 0) \in \text{(REF, ACC)} \implies (\sigma_A, \sigma_B)_{\mathrm{final}} = (+1, -1)$ (Contact A refused $z^{(3)}$; Contact B accepted zero);
-   - $(3, 3) \in \text{(REF, REF)} \implies (\sigma_A, \sigma_B)_{\mathrm{final}} = (+1, +1)$ (both contacts refused $z^{(3)}$).
-5. **Exact left inverse $\mathcal{D}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ and image recognizer on $\mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$:**
-   For every $(c_0, c_1) \in (\mathbb{Q}^4)^2$ and every $0 \le b_{\mathrm{init}} \le B$, let $\Phi_{(c_0, c_1, b_{\mathrm{init}}, B)} : \mathbb{F}_5^4 \times \mathbb{F}_5^4 \to \mathcal{Z}_B$ map $(p_A, p_B)$ to the boundary state $Z_{\mathrm{final}} = \mathcal{G}_B^8(Z(0))$ at $c = 7, n = 5$. Define the left inverse $\mathcal{D} : \operatorname{Im}(\Phi_{(c_0, c_1, b_{\mathrm{init}}, B)}) \to \mathbb{F}_5^4 \times \mathbb{F}_5^4$ by applying five inverse native steps $V^{-5}$ to $(5, x_A(5), x_B(5))$:
+4. **Accepted-zero vs. refusal discrimination via $(\sigma_A, \sigma_B)_{\mathrm{final}}$ on explicit readout projections:**
+   On $\mathcal{R}_{(c_0, 0, \frac{1}{5}, \frac{1}{5})}$, consider the four source pairs $(h_A, h_B) \in \{(0,0), (0,3), (3,0), (3,3)\}$ (for example $p^{(0)} = (0,0,0,0)$ and $p^{(3)} = (3,0,0,0)$). For every one of these four pairs, $\alpha_A z_A = 0$ and $\alpha_B z_B = 0$, so at $c = 7, n = 5$ they produce the identical classical state $X_{\mathrm{final}} = ((0, 2 P c_0), (0, 0), (0, 0), 0)$ (with $(b_0, b_1, b_2, b_3) = (0, 0, 0, 0)$) and the identical work/store pair $(W_{\mathrm{final}}, b_{\mathrm{final}}) = (0, \frac{1}{5})$:
+   - **On the classical wave/tape/work/store projection $\Pi_{\mathrm{class}}(Z(7)) = (X_{\mathrm{final}}, W_{\mathrm{final}}, b_{\mathrm{final}})$ (omitting both $d$ and $(\sigma_A, \sigma_B)$):** all four pairs $(0,0), (0,3), (3,0), (3,3)$ collapse onto the single point $(X_{\mathrm{final}}, 0, \frac{1}{5})$.
+   - **On the classical + delayed-buffer projection $\Pi_{\mathrm{class}+d}(Z(7)) = (X_{\mathrm{final}}, W_{\mathrm{final}}, b_{\mathrm{final}}, d_{\mathrm{final}})$ (reading $d_{\mathrm{final}} = C_1(h_B)$ but omitting $(\sigma_A, \sigma_B)$):** since $C_1(0) = (0,4)$ and $C_1(3) = (2,0)$, $d_{\mathrm{final}}$ separates $h_B = 0$ from $h_B = 3$, **but still collapses $(0,0) \in \text{(ACC, ACC)}$ with $(3,0) \in \text{(REF, ACC)}$** (both having $d_{\mathrm{final}} = (0,4)$) **and still collapses $(0,3) \in \text{(ACC, REF)}$ with $(3,3) \in \text{(REF, REF)}$** (both having $d_{\mathrm{final}} = (2,0)$); moreover, $d_{\mathrm{final}} = (2,0)$ records only the captured label $C_{1,B}$ at $c=1$, not whether Contact B at $c=4$ accepted or refused that label.
+   - **With the retained direction register $(\sigma_A, \sigma_B)_{\mathrm{final}} \in \{\pm 1\}^2$:** all four branches are uniquely separated:
+     $$
+     (0,0) \mapsto (-1, -1), \qquad (0,3) \mapsto (-1, +1), \qquad (3,0) \mapsto (+1, -1), \qquad (3,3) \mapsto (+1, +1).
+     $$
+5. **Exact prepared-image left inverse $\mathcal{D}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ and image recognizer on $\mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ (following A2 `PROOF.md` Sections 3 & 7):**
+   For any prepared input $x_0 = (p, 0, 1)$ with piston sum $h = \sum_{m=0}^3 p_m \bmod 5 \in \{0, 1, 2, 3, 4\}$, the canonical first-three-tick selector words and receivers (A2 `PROOF.md` Section 3) are:
+
+   | $h$ | $(j_0(h), j_1(h), j_2(h))$ | $C_1(h) = \operatorname{rec}(x_1)$ | $C_2(h) = \operatorname{rec}(x_2)$ | $C_3(h) = \operatorname{rec}(x_3)$ |
+   | :---: | :---: | :---: | :---: | :---: |
+   | `0` | $(1, 1, 3)$ | $(0, 4)$ | $(0, 1)$ | $(1, 0)$ |
+   | `1` | $(2, 2, 4)$ | $(1, 4)$ | $(0, 1)$ | $(2, 0)$ |
+   | `2` | $(3, 1, 3)$ | $(1, 0)$ | $(4, 0)$ | $(2, 1)$ |
+   | `3` | $(4, 1, 3)$ | $(2, 0)$ | $(3, 0)$ | $(3, 1)$ |
+   | `4` | $(0, 2, 4)$ | $(0, 1)$ | $(1, 4)$ | $(1, 2)$ |
+
+   Every row has $\operatorname{sum}(x_3) \equiv 1 \pmod 5$. Since $\theta_3 = \operatorname{popcount}(3) \bmod 2 = 0$ and $\theta_4 = \operatorname{popcount}(4) \bmod 2 = 1$, tick 4 uses $j_3 = 1$ ($\operatorname{sum}(x_4) \equiv -1 \equiv 4 \pmod 5$) and tick 5 uses $j_4 = (4 + 2) \bmod 5 = 1$, so for both heads $i \in \{A, B\}$:
    $$
-   (0, \hat{x}_A(0), \hat{x}_B(0)) := V^{-5}(5, x_A(5), x_B(5)), \qquad
-   \mathcal{D}(Z_{\mathrm{final}}) := \bigl((\hat{x}_A(0)_0, \dots, \hat{x}_A(0)_3),\, (\hat{x}_B(0)_0, \dots, \hat{x}_B(0)_3)\bigr).
+   x_{4,i} = g_1 x_{3,i}, \qquad x_{5,i} = g_1 g_1 x_{3,i} = x_{3,i}.
    $$
-   Then $\mathcal{D}(\Phi_{(c_0, c_1, b_{\mathrm{init}}, B)}(p_A, p_B)) = (p_A, p_B)$ for all $625^2 = 390{,}625$ native input pairs $(p_A, p_B) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4$ across all four acceptance/refusal branches. Moreover, an arbitrary state $Z = (n, x_A, x_B, X, W, b, (\sigma_A, \sigma_B), d, c) \in \mathcal{Z}_B$ lies in $\operatorname{Im}(\Phi_{(c_0, c_1, b_{\mathrm{init}}, B)})$ if and only if:
-   1. $n = 5$ and $c = 7$;
-   2. $(0, \hat{x}_A(0), \hat{x}_B(0)) := V^{-5}(5, x_A, x_B)$ has last two coordinates $(\hat{x}_A(0)_4, \hat{x}_A(0)_5) = (0, 1)$ and $(\hat{x}_B(0)_4, \hat{x}_B(0)_5) = (0, 1)$;
-   3. Setting $(1, \hat{x}_A(1), \hat{x}_B(1)) := V(0, \hat{x}_A(0), \hat{x}_B(0))$, $z_A := \eta(\operatorname{rec}(\hat{x}_A(1)))$, and $z_B := \eta(\operatorname{rec}(\hat{x}_B(1)))$, the delayed buffer satisfies $d = \operatorname{rec}(\hat{x}_B(1))$;
-   4. Defining $\alpha_A^{\mathrm{req}} := \mathbf{1}_{[0, B]}(b_{\mathrm{init}} - E_0(z_A))$ and $\Delta_B^{\mathrm{req}} := E_0(z_B) - \alpha_A^{\mathrm{req}}\frac{s_B(\mu^T z_A)}{10497600}$ and $\alpha_B^{\mathrm{req}} := \mathbf{1}_{[0, B]}(b_{\mathrm{init}} - \alpha_A^{\mathrm{req}} E_0(z_A) - \Delta_B^{\mathrm{req}})$, the retained direction bits satisfy $(\sigma_A, \sigma_B) = (1 - 2\alpha_A^{\mathrm{req}}, 1 - 2\alpha_B^{\mathrm{req}})$;
-   5. $W = \alpha_A^{\mathrm{req}} E_0(z_A) + \alpha_B^{\mathrm{req}} \Delta_B^{\mathrm{req}}$ and $b = b_{\mathrm{init}} - W$;
-   6. $X$ equals the exact 4-step classical state $((w_3, w_4), (b_0, b_1), (b_3, b_2), 0)$ from Part 1 for $(\alpha_A^{\mathrm{req}}, \alpha_B^{\mathrm{req}}, z_A, z_B, c_0, c_1)$.
+   Let $\Phi_{(c_0, c_1, b_{\mathrm{init}}, B)} : \mathbb{F}_5^4 \times \mathbb{F}_5^4 \to \mathcal{Z}_B$ map $(p_A, p_B)$ to the 7-step completion endpoint $Z(7) = \mathcal{G}_B^7(Z(0))$ at $c = 7, n = 5$. Because the five $C_3(h)$ receivers $\{(1,0), (2,0), (2,1), (3,1), (1,2)\}$ are pairwise distinct, $\operatorname{rec}(x_{5,i}) = \operatorname{rec}(x_{3,i}) = C_3(h_i)$ uniquely identifies $h_i \in \{0, 1, 2, 3, 4\}$ for each head $i \in \{A, B\}$ without using the classical record. Reconstructing
+   $$
+   \hat{x}_{0,i} = g_{j_0(h_i)}\, g_{j_1(h_i)}\, g_{j_2(h_i)}\, x_{5,i}, \qquad
+   \hat{x}_{1,i} = g_{j_0(h_i)}\, \hat{x}_{0,i} \qquad (i \in \{A, B\}),
+   $$
+   where $g_{j_2(h_i)}$ is applied first, defines the left inverse
+   $$
+   \mathcal{D}\bigl(Z(7)\bigr) := \bigl((\hat{x}_{0,A,0}, \dots, \hat{x}_{0,A,3}),\, (\hat{x}_{0,B,0}, \dots, \hat{x}_{0,B,3})\bigr) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4,
+   $$
+   which satisfies $\mathcal{D}(\Phi_{(c_0, c_1, b_{\mathrm{init}}, B)}(p_A, p_B)) = (p_A, p_B)$ for all $625^2 = 390{,}625$ native input pairs across all four acceptance/refusal branches.
+   Moreover, an arbitrary candidate endpoint $Z = (n, x_A, x_B, X, W, b, (\sigma_A, \sigma_B), d, c) \in \mathcal{Z}_B$ belongs to $\operatorname{Im}(\Phi_{(c_0, c_1, b_{\mathrm{init}}, B)})$ if and only if it passes the following four exact tests:
+   1. **Clock and $C_3$ receiver test:** $n = 5, c = 7$, and for each $i \in \{A, B\}$, $\operatorname{rec}(x_i)$ belongs to $\{(1,0), (2,0), (2,1), (3,1), (1,2)\}$, uniquely decoding $h_A, h_B \in \{0,1,2,3,4\}$.
+   2. **Inverse-word and selector-consistency test:** Reconstruct $\hat{x}_{0,i} = g_{j_0(h_i)} g_{j_1(h_i)} g_{j_2(h_i)} x_i$ for $i \in \{A, B\}$. Require $\operatorname{rec}(\hat{x}_{0,i}) = (0, 1)$ **AND** piston sum $\sum_{m=0}^3 \hat{x}_{0,i,m} \bmod 5 = h_i$ for both $i \in \{A, B\}$.
+   3. **Delayed-buffer test:** Reconstruct $\hat{x}_{1,i} = g_{j_0(h_i)} \hat{x}_{0,i}$ and require $d = \operatorname{rec}(\hat{x}_{1,B}) = C_1(h_B)$.
+   4. **Apparatus inverse test:** Apply the two-sided apparatus inverse $(M_{7,B}^{(r_A, r_B)})^{-1} = T_0^{-1} \circ T_1^{-1} \circ T_2^{-1} \circ T_3^{-1} \circ T_4^{-1} \circ T_5^{-1} \circ T_6^{-1}$ with $r_A = \operatorname{rec}(\hat{x}_{1,A})$ and $r_B = \operatorname{rec}(\hat{x}_{1,B})$ to $(X, W, b, (\sigma_A, \sigma_B), d)$ (i.e. apply $F^{-1}$ twice, then $H_{B,B}$ with $d$, then $F^{-1}$ twice, then $H_{B,A}$ with $r_A$ and $L_{\mathrm{buf}}^{-1}$ with $r_B$), and require the recovered initial apparatus tuple to equal
+      $$
+      X_0 = \bigl((0, 0),\, (0, 0),\, (c_0, c_1),\, 0\bigr), \quad W_0 = 0, \quad b_0^{\mathrm{store}} = b_{\mathrm{init}}, \quad (\sigma_{A,0}, \sigma_{B,0}) = (+1, +1), \quad d_0 = (0, 0).
+      $$
+      *(Equivalently, across the union over all $(c_0, c_1) \in (\mathbb{Q}^4)^2$, require the recovered wave and $A$-tape slots to be zero, $k_0 = 0, W_0 = 0, b_0^{\mathrm{store}} = b_{\mathrm{init}}, (\sigma_{A,0}, \sigma_{B,0}) = (+1, +1), d_0 = (0, 0)$, and read off the recovered old archive $B_{\mathrm{out},0} = (c_0, c_1)$.)*
 
 #### Proof of Theorem 5
 
-- **Parts 1–2:** Tracking the four steps of $F$ at $c = 2, 3, 5, 6$:
-  - At $c=2$: $w_1 = \alpha_A T f$ and $b_0 = 0 - \frac{1}{2}P^T(w_1 - 0) = -\frac{1}{2}\alpha_A P^T T S z_A = \alpha_A R_0 z_A$.
-  - At $c=3$: $w_2 = \alpha_A(T^2 - J_0)f$ and $b_1 = 0 - \frac{1}{2}P^T(w_2 - \alpha_A f) = \alpha_A(\frac{1}{2}P^T S - \frac{1}{2}P^T T^2 S)z_A = \alpha_A R_1 z_A$ since $P^T J_0 = 0$.
-  - At $c=4$: $H_{B,B}$ maps $w_2 \mapsto w_2^+ = w_2 + \alpha_B g$.
-  - At $c=5$ ($A_0 = c_1$): $w_3 = K(H w_2^+ - J_0 w_1 + 4 P c_1) = \alpha_A(T^3 - T J_0 - J_0 T)f + \alpha_B T g + 2 P c_1$ since $K P = \frac{1}{2}P$. Then
-    $$
-    b_2 = c_1 - \frac{1}{2}P^T(w_3 - w_1) = c_1 - \frac{1}{2}\alpha_A P^T(T^3 - T J_0 - T)f - \frac{1}{2}\alpha_B P^T T g - P^T P c_1 = \alpha_A D_2(z_A) + \alpha_B R_0 z_B,
-    $$
-    because $P^T J_0 = 0$ and $c_1 - P^T P c_1 = 0$.
-  - At $c=6$ ($A_0 = c_0$): $w_4 = K(H w_3 - J_0 w_2^+ + 4 P c_0) = \alpha_A(T^4 - T^2 J_0 - T J_0 T - J_0(T^2 - J_0))f + \alpha_B(T^2 - J_0)g + 2 T P c_1 + 2 P c_0$. Since $P^T J_0 = 0$ and $c_0 - \frac{1}{2}P^T(2 P c_0) = 0$,
-    $$
-    b_3 = c_0 - \frac{1}{2}P^T(w_4 - w_2^+) = \alpha_A D_3(z_A) + \alpha_B R_1 z_B - \frac{1}{2}(P^T T P - I_4)c_1 = \alpha_A D_3(z_A) + \alpha_B R_1 z_B - \frac{1}{2}J_p c_1.
-    $$
-- **Part 3:** When $\alpha_A = \alpha_B = 1$, $b_0 = R_0 z_A$ and $b_2 = D_2(z_A) + R_0 z_B$. Multiplying by $R_0^{-1} = -4 M^{-1}$ yields $z_A = R_0^{-1} b_0$ and $z_B = R_0^{-1}(b_2 - D_2(z_A))$.
-- **Part 4:** At $b_{\mathrm{init}} = B = \frac{1}{5}$ and $c_1 = 0$, for any $(h_A, h_B) \in \{(0,0), (0,3), (3,0), (3,3)\}$, either $h_i = 0$ ($\alpha_i = 1, z^{(0)} = 0$) or $h_i = 3$ ($\alpha_i = 0, z^{(3)} \ne 0$). In every case $\alpha_A z_A = 0$ and $\alpha_B z_B = 0$, so $(b_0, b_1, b_2, b_3) = (0, 0, 0, 0)$ and $(W_{\mathrm{final}}, b_{\mathrm{final}}) = (0, \frac{1}{5})$, while $(\sigma_A, \sigma_B)_{\mathrm{final}} = (1 - 2\alpha_A, 1 - 2\alpha_B)$ takes the four distinct values $(-1,-1), (-1,+1), (+1,-1), (+1,+1)$.
-- **Part 5:** By Theorem 2 Part 2, $V^5$ is a bijection from $\{0\} \times \mathbb{F}_5^6 \times \mathbb{F}_5^6$ to $\{5\} \times \mathbb{F}_5^6 \times \mathbb{F}_5^6$ with inverse $V^{-5}$, and none of the apparatus steps at $c=1, \dots, 7$ modify $(n, x_A, x_B)$. Hence $V^{-5}(5, x_A(5), x_B(5)) = (0, (p_A, 0, 1), (p_B, 0, 1))$ recovers $(p_A, p_B)$ uniquely for all $390{,}625$ pairs, and conditions (1)–(6) are necessary and sufficient for membership in $\operatorname{Im}(\Phi_{(c_0, c_1, b_{\mathrm{init}}, B)})$. $\blacksquare$
+- **Parts 1–2:** By A2 `PROOF.md` Sections 4–5 (eqs. (7)–(10)), applying $F$ at rows $c = 2, 3$ with $\alpha_A f$ gives $w_1^{(\alpha)} = \alpha_A T f$, $b_0 = -\frac{1}{2}P^T w_1^{(\alpha)} = \alpha_A R_0 z_A$, $w_2^{(\alpha)} = \alpha_A(T w_1 - J_0 f)$, and $b_1 = \frac{1}{2}P^T(\alpha_A f - w_2^{(\alpha)}) = \alpha_A R_1 z_A$. At row $c = 4$, $H_{B,B}$ maps $w_2^{(\alpha)} \mapsto w_2^+ = \alpha_A w_2 + \alpha_B g$. At row $c = 5$ ($A_0 = c_1$), $w_3 = T w_2^+ - J_0 w_1^{(\alpha)} + 2 P c_1 = \alpha_A a_3 + \alpha_B T g + 2 P c_1$ and
+  $$
+  b_2 = c_1 + \frac{1}{2}P^T(w_1^{(\alpha)} - w_3) = \alpha_A D_2(z_A) + \alpha_B R_0 z_B + (I_4 - P^T P)c_1 = \alpha_A D_2(z_A) + \alpha_B R_0 z_B.
+  $$
+  At row $c = 6$ ($A_0 = c_0$), $w_4 = T w_3 - J_0 w_2^+ + 2 P c_0 = \alpha_A a_4 + \alpha_B(T^2 - J_0)g + 2 T P c_1 + 2 P c_0$ and
+  $$
+  b_3 = c_0 + \frac{1}{2}P^T(w_2^+ - w_4) = \alpha_A D_3(z_A) + \alpha_B R_1 z_B - P^T T P c_1 + (I_4 - P^T P)c_0 = \alpha_A D_3(z_A) + \alpha_B R_1 z_B - \frac{1}{2}J_p c_1,
+  $$
+  since $P^T P = I_4$ and $P^T T P = P^T K H P = \frac{1}{2}P^T H P = \frac{1}{2}J_p$. Expanding $a_3 = (T^3 - T J_0 - J_0 T)f$ and $a_4 = (T^4 - T^2 J_0 - T J_0 T - J_0 T^2 + J_0)f$ and using $P^T J_0 = 0$ gives the stated operator expansions of $D_2(z_A)$ and $D_3(z_A)$.
+- **Part 3:** $(1770 I_4 - v\mathbf{1}^T)(I_4 + \frac{v\mathbf{1}^T}{365}) = 1770 I_4 + (\frac{1770}{365} - 1 - \frac{1405}{365})v\mathbf{1}^T = 1770 I_4$, so $M^{-1} = \frac{1620}{1770}(I_4 + \frac{v\mathbf{1}^T}{365}) = \frac{54}{59}(I_4 + \frac{v\mathbf{1}^T}{365})$ and $R_0^{-1} = -4 M^{-1} = -\frac{216}{59}(I_4 + \frac{v\mathbf{1}^T}{365})$.
+- **Part 4:** Immediate from $\alpha_A z_A = 0, \alpha_B z_B = 0$ on all four pairs at $b_{\mathrm{init}} = B = \frac{1}{5}$, together with $d_{\mathrm{final}} = C_1(h_B) \in \{(0,4), (2,0)\}$ and $(\sigma_A, \sigma_B)_{\mathrm{final}} = (1 - 2\alpha_A, 1 - 2\alpha_B)$.
+- **Part 5:** Necessity of tests (1)–(4) follows from the forward tables and Theorem 2 Part 1. Conversely, if $Z$ passes tests (1)–(4), then $\hat{x}_{0,i} = (\hat{p}_i, 0, 1)$ has piston sum $h_i$, which forces the forward native trajectory from $(0, \hat{x}_{0,A}, \hat{x}_{0,B})$ to select $(j_0(h_i), j_1(h_i), j_2(h_i), 1, 1)$ and reach $(5, x_A, x_B)$ with $\operatorname{rec}(\hat{x}_{1,i}) = r_i$, while test (4) and the two-sided bijectivity of $M_{7,B}^{(r_A, r_B)}$ on $\mathcal{A}_B$ force $(X, W, b, (\sigma_A, \sigma_B), d) = M_{7,B}^{(r_A, r_B)}(X_0, 0, b_{\mathrm{init}}, (+1,+1), (0,0))$, so $Z = \Phi_{(c_0, c_1, b_{\mathrm{init}}, B)}(\hat{p}_A, \hat{p}_B)$. $\blacksquare$
 
 ---
 
@@ -385,7 +501,7 @@ E_{\mathrm{full}}(X') - W' = E_{\mathrm{full}}(X) - W, \qquad
 E_{\mathrm{full}}(X') + b' = E_{\mathrm{full}}(X) + b, \qquad
 W' + b' = W + b.
 $$
-In particular, on any common-ready trajectory starting from $Z(0) \in \mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$, at every phase boundary $c \in \{0, \dots, 7\}$:
+In particular, on any common-ready trajectory starting from $Z(0) \in \mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$, at every boundary $c \in \{0, \dots, 7\}$:
 $$
 E_{\mathrm{full}}(X) - W = 2\bigl(\|c_0\|^2 + \|c_1\|^2\bigr), \qquad
 E_{\mathrm{full}}(X) + b = 2\bigl(\|c_0\|^2 + \|c_1\|^2\bigr) + b_{\mathrm{init}}, \qquad
@@ -398,9 +514,9 @@ $$
 
 #### Proof of Theorem 6
 
-- **Phases $c \in \{0, 7\}$ and $L_{\mathrm{buf}}$ at $c=1$:** $(X, W, b)$ are held fixed, so all three quantities are trivially unchanged.
-- **Phases $c \in \{2, 3, 5, 6\}$ ($F$ on $X$, $(W, b)$ held fixed):** By `#1485` (`notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md` Theorem 2), the wave energy satisfies $E_D(v, w_{\mathrm{next}}) - E_D(u, v) = 2\|A_0\|^2 - 2\|b_{\mathrm{out}}\|^2$, while the four-slot tape energy changes by $2(\|A_1\|^2 + \|B_1\|^2 + \|b_{\mathrm{out}}\|^2 + \|B_0\|^2) - 2(\|A_0\|^2 + \|A_1\|^2 + \|B_0\|^2 + \|B_1\|^2) = 2\|b_{\mathrm{out}}\|^2 - 2\|A_0\|^2$. Summing gives $E_{\mathrm{full}}(F(X)) = E_{\mathrm{full}}(X)$, while $W' = W$ and $b' = b$.
-- **Phases $c = 1$ ($H_{B,A}$) and $c = 4$ ($H_{B,B}$):** On the refused branch, $(X, W, b)$ are unchanged. On the accepted branch, $u$ and the four tape slots $(A_0, A_1, B_0, B_1)$ are unchanged while $v' = v + \sigma_i a_i$, $W' = W + \Delta_i$, and $b' = b - \Delta_i$, where $\Delta_i = E_D(u, v + \sigma_i a_i) - E_D(u, v) = E_{\mathrm{full}}(X') - E_{\mathrm{full}}(X)$. Thus $E_{\mathrm{full}}(X') - W' = E_{\mathrm{full}}(X) - W$, $W' + b' = W + b$, and $E_{\mathrm{full}}(X') + b' = E_{\mathrm{full}}(X) + b$. Evaluating at $Z(0) \in \mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ gives $E_{\mathrm{full}}(X(0)) = 2(\|c_0\|^2 + \|c_1\|^2)$, $W(0) = 0$, and $b(0) = b_{\mathrm{init}}$. $\blacksquare$
+- **Rows $c \in \{0, 7\}$ and $L_{\mathrm{buf}}$ at row $c=1$:** $(X, W, b)$ are held fixed, so all three quantities are unchanged.
+- **Rows $c \in \{2, 3, 5, 6\}$ ($F$ on $X$, $(W, b)$ held fixed):** By `#1485` (`CONTRACT.md` Theorem 2) and A2 (`PROOF.md` Section 2), the wave energy satisfies $E_D(v, w_{\mathrm{next}}) - E_D(u, v) = 2\|A_0\|^2 - 2\|b_{\mathrm{out}}\|^2$, while the four-slot tape energy changes by $2(\|A_1\|^2 + \|B_1\|^2 + \|b_{\mathrm{out}}\|^2 + \|B_0\|^2) - 2(\|A_0\|^2 + \|A_1\|^2 + \|B_0\|^2 + \|B_1\|^2) = 2\|b_{\mathrm{out}}\|^2 - 2\|A_0\|^2$. Summing gives $E_{\mathrm{full}}(F(X)) = E_{\mathrm{full}}(X)$, while $W' = W$ and $b' = b$.
+- **Rows $c = 1$ ($H_{B,A}$) and $c = 4$ ($H_{B,B}$):** On the refused branch, $(X, W, b)$ are unchanged. On the accepted branch, $u$ and the four tape slots $(A_0, A_1, B_0, B_1)$ are unchanged while $v' = v + \sigma_i a_i$, $W' = W + \Delta_i$, and $b' = b - \Delta_i$, where $\Delta_i = E_D(u, v + \sigma_i a_i) - E_D(u, v) = E_{\mathrm{full}}(X') - E_{\mathrm{full}}(X)$. Thus $E_{\mathrm{full}}(X') - W' = E_{\mathrm{full}}(X) - W$, $W' + b' = W + b$, and $E_{\mathrm{full}}(X') + b' = E_{\mathrm{full}}(X) + b$. Evaluating at $Z(0) \in \mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ gives $E_{\mathrm{full}}(X(0)) = 2(\|c_0\|^2 + \|c_1\|^2)$, $W(0) = 0$, and $b(0) = b_{\mathrm{init}}$. $\blacksquare$
 
 ---
 
@@ -410,7 +526,7 @@ Let $\mathcal{A}_{\mathrm{lin}}^{(2)}$ be the conditioned two-use Blank-Ready li
 $$
 \theta = (A_0, A_1, D_2, D_3, G_0, \Omega) \in (\mathbb{Q}^{4 \times 4})^4 \times \mathbb{Q}^{4 \times 4}_{\mathrm{sym}} \times \mathbb{Q}^{4 \times 4} \qquad (\dim_{\mathbb{Q}} \mathcal{A}_{\mathrm{lin}}^{(2)} = 4 \times 16 + 10 + 16 = 90),
 $$
-with observable map $\mathcal{O}_{\theta}(z_A, z_B) = (b_0, b_1, b_2, b_3, E_A, \Delta_B, W_{\mathrm{final}}, b_{\mathrm{final}})$ given by
+with observable map $\mathcal{O}_{\theta}(z_A, z_B) = (b_0, b_1, b_2, b_3, E_A, \Delta_B, W_{\mathrm{final}}, b_{\mathrm{final}})$ at $c = 7, n = 5$ given by
 $$
 \begin{aligned}
 b_0(z_A, z_B) &= A_0 z_A, & b_1(z_A, z_B) &= A_1 z_A, \\
@@ -468,19 +584,19 @@ $$
 ### Theorem 8 (Matched classical comparator indistinguishability and five restricted-comparator separation witnesses)
 
 1. **Byte-for-byte indistinguishability against the full matched classical comparator $\mathcal{M}_{\mathrm{matched}}^{(2)}$:**
-   Let $\mathcal{M}_{\mathrm{matched}}^{(2)}$ be the classical 25-state lookup comparator that maps $(p_A, p_B) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4$ to $(r_A, r_B) = (C_1(h(p_A)), C_1(h(p_B))) \in (\mathbb{F}_5^2)^2$ and executes the static-source apparatus period map $M_{8,B}^{(r_A, r_B)}$ on $\mathcal{A}_B$. Then for every $(c_0, c_1) \in (\mathbb{Q}^4)^2$, every $0 \le b_{\mathrm{init}} \le B$, and all $625^2 = 390{,}625$ native input pairs $(p_A, p_B) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4$, the final apparatus state $(X_{\mathrm{final}}, W_{\mathrm{final}}, b_{\mathrm{final}}, (\sigma_A, \sigma_B)_{\mathrm{final}}, d_{\mathrm{final}}) \in \mathcal{A}_B$ of $\mathcal{G}_B^8$ on $\mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ is byte-for-byte identical to the output of $\mathcal{M}_{\mathrm{matched}}^{(2)}$.
+   Let $\mathcal{M}_{\mathrm{matched}}^{(2)}$ be the classical 25-state lookup comparator that maps $(p_A, p_B) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4$ to $(r_A, r_B) = (C_1(h(p_A)), C_1(h(p_B))) \in (\mathbb{F}_5^2)^2$ and executes the 7-step static-source apparatus map $M_{7,B}^{(r_A, r_B)} = T_6 \circ T_5 \circ T_4 \circ T_3 \circ T_2 \circ T_1 \circ T_0$ on $\mathcal{A}_B$. Then for every $(c_0, c_1) \in (\mathbb{Q}^4)^2$, every $0 \le b_{\mathrm{init}} \le B$, and all $625^2 = 390{,}625$ native input pairs $(p_A, p_B) \in \mathbb{F}_5^4 \times \mathbb{F}_5^4$, the completion apparatus state $(X_{\mathrm{final}}, W_{\mathrm{final}}, b_{\mathrm{final}}, (\sigma_A, \sigma_B)_{\mathrm{final}}, d_{\mathrm{final}}) \in \mathcal{A}_B$ of $\mathcal{G}_B^7$ at $c = 7, n = 5$ on $\mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$ is byte-for-byte identical to the output of $\mathcal{M}_{\mathrm{matched}}^{(2)}$.
 2. **Five explicit separation witnesses against restricted comparator families:**
-   Each of the following restricted comparator classes is separated from the funded continuing two-use apparatus $\mathcal{G}_B$ by an explicit rational witness on $\mathcal{R}_{\mathrm{blank}}(b_{\mathrm{init}}, B)$:
+   Each of the following restricted comparator classes is separated from the funded continuing two-use apparatus $\mathcal{G}_B^7$ at $c = 7, n = 5$ by an explicit rational witness on $\mathcal{R}_{\mathrm{blank}}(b_{\mathrm{init}}, B)$:
 
-   | Restricted comparator class | Missing apparatus mechanism | Explicit witness input $(p_A, p_B)$ and store $(b_{\mathrm{init}}, B)$ | Continuing apparatus $\mathcal{G}_B$ output | Restricted comparator output |
+   | Restricted comparator class | Missing apparatus mechanism | Explicit witness input $(p_A, p_B)$ and store $(b_{\mathrm{init}}, B)$ | Continuing apparatus $\mathcal{G}_B^7$ output at $c=7, n=5$ | Restricted comparator output |
    | :--- | :--- | :--- | :--- | :--- |
    | **1. Single-use comparator** $\mathcal{M}_{\mathrm{single}}$ | Omits second contact $H_{B,B}$ at $c=4$ ($\alpha_B \equiv 0$) | $p_A = (0,0,0,0), p_B = (1,0,0,0)$ ($(h_A, h_B) = (0, 1)$), $b_{\mathrm{init}} = B = \frac{4}{5}$ | $b_2 = R_0 z^{(1)} \ne 0$, $W_{\mathrm{final}} = \frac{1}{10}$, $\sigma_{B,\mathrm{final}} = -1$ | $b_2 = 0$, $W_{\mathrm{final}} = 0$, $\sigma_{B,\mathrm{final}} = +1$ |
-   | **2. Cold-restart two-use comparator** $\mathcal{M}_{\mathrm{cold}}$ | Re-zeroes wave $(u,v) \mapsto (0,0)$ before $c=4$ or uses cold increment $E_0(z_B)$ instead of $\Delta_B(z_A, z_B)$ | $p_A = (4,0,0,0), p_B = (4,0,0,0)$ ($(h_A, h_B) = (4, 4)$), $b_{\mathrm{init}} = B = B_* = \frac{8224427}{10497600}$ (or $\frac{4}{5}$) | At $B_*$: **accepts** Contact B ($\sigma_{B,\mathrm{final}} = -1$, $\Delta_B = \frac{4025387}{10497600}$, $b_{\mathrm{final}} = 0$, $b_2 = D_2(z^{(4)}) + R_0 z^{(4)}$) | At $B_*$: **refuses** Contact B ($b_1 - E_0(z^{(4)}) = -\frac{173653}{10497600} < 0$, $\sigma_{B,\mathrm{final}} = +1$, $b_2^{\mathrm{cold}} \ne b_2$) |
-   | **3. Two-slot overwriting tape comparator** $\mathcal{M}_{2\text{-slot}}$ | Carries only 2 tape slots, so $(b_2, b_3)$ overwrite $(b_0, b_1)$ at $c=5, 6$ | $p_A = (1,0,0,0), p_B = (0,0,0,0)$ ($(h_A, h_B) = (1, 0)$), $b_{\mathrm{init}} = B = \frac{4}{5}$ | Retains $A_{\mathrm{final}} = (b_0, b_1) = (R_0 z^{(1)}, R_1 z^{(1)}) \ne (0,0)$ alongside $B_{\mathrm{out,final}} = (b_3, b_2)$ | Loses $(b_0, b_1)$ at $c=7$, retaining only $(b_2, b_3) = (D_2(z^{(1)}), D_3(z^{(1)}))$ |
-   | **4. Single-direction-bit comparator** $\mathcal{M}_{1\sigma}$ | Collapses $(\sigma_A, \sigma_B)$ into one bit $\sigma \in \{\pm 1\}$ without reset | $p_A = (0,0,0,0), p_B = (1,0,0,0)$ ($(h_A, h_B) = (0, 1)$), $b_{\mathrm{init}} = B = \frac{4}{5}$ | Injects $+S z^{(1)}$ at $c=4$, giving $b_2 = +R_0 z^{(1)}$ | Flips $\sigma: +1 \mapsto -1$ at $c=1$ ($\Delta_A = 0$) and injects $-S z^{(1)}$ at $c=4$, giving $b_2 = -R_0 z^{(1)} \ne +R_0 z^{(1)}$ |
-   | **5. Unretained-direction comparator** $\mathcal{M}_{\text{no-}\sigma}$ | Omits $(\sigma_A, \sigma_B)_{\mathrm{final}}$ from the boundary readout | Four pairs $(p^{(h_A)}, p^{(h_B)})$ with $(h_A, h_B) \in \{(0,0), (0,3), (3,0), (3,3)\}$ at $b_{\mathrm{init}} = B = \frac{1}{5}$ | Distinguishes all 4 branches via $(\sigma_A, \sigma_B)_{\mathrm{final}} \in \{(-1,-1), (-1,+1), (+1,-1), (+1,+1)\}$ | Collapses all 4 branches onto $(b_0, b_1, b_2, b_3) = (0,0,0,0)$ and $(W_{\mathrm{final}}, b_{\mathrm{final}}) = (0, \frac{1}{5})$ |
+   | **2. Cold-restart two-use comparator** $\mathcal{M}_{\mathrm{cold}}$ | Re-zeroes wave $(u,v) \mapsto (0,0)$ before $c=4$ or uses cold increment $E_0(z_B)$ instead of $\Delta_B(z_A, z_B)$ | $p_A = (4,0,0,0), p_B = (4,0,0,0)$ ($(h_A, h_B) = (4, 4)$), $b_{\mathrm{init}} = B = B_* = \frac{8224427}{10497600}$ (or $\frac{4}{5}$) | At $B_*$: **accepts** Contact B ($\sigma_{B,\mathrm{final}} = -1$, $\Delta_B = \frac{4025387}{10497600}$, $b_{\mathrm{final}} = 0$, $b_2 = D_2(z^{(4)}) + R_0 z^{(4)}$) | At $B_*$: **refuses** Contact B ($b - E_0(z^{(4)}) = -\frac{173653}{10497600} < 0$, $\sigma_{B,\mathrm{final}} = +1$, $b_2^{\mathrm{cold}} \ne b_2$) |
+   | **3. Two-slot overwriting tape comparator** $\mathcal{M}_{2\text{-slot}}$ | Carries only 2 tape slots, so $(b_2, b_3)$ overwrite $(b_0, b_1)$ at rows $c=5, 6$ | $p_A = (1,0,0,0), p_B = (0,0,0,0)$ ($(h_A, h_B) = (1, 0)$), $b_{\mathrm{init}} = B = \frac{4}{5}$ | Retains $A_{\mathrm{final}} = (b_0, b_1) = (R_0 z^{(1)}, R_1 z^{(1)}) \ne (0,0)$ alongside $B_{\mathrm{out,final}} = (b_3, b_2)$ | Loses $(b_0, b_1)$ at $c=7$, retaining only $(b_2, b_3) = (D_2(z^{(1)}), D_3(z^{(1)}))$ |
+   | **4. Direct single-$\sigma$ comparator** $\mathcal{M}_{1\sigma}$ | Shares one un-reset direction bit $\sigma \in \{\pm 1\}$ between $c=1$ and $c=4$ | $p_A = (0,0,0,0), p_B = (1,0,0,0)$ ($(h_A, h_B) = (0, 1)$), $b_{\mathrm{init}} = B = \frac{4}{5}$ | Injects $+S z^{(1)}$ at $c=4$, giving $b_2 = +R_0 z^{(1)}$ | Flips $\sigma: +1 \mapsto -1$ at $c=1$ ($\Delta_A = 0$) and injects $-S z^{(1)}$ at $c=4$, giving $b_2 = -R_0 z^{(1)} \ne +R_0 z^{(1)}$ |
+   | **5. Unretained-direction readout comparators** $\mathcal{M}_{\text{no-}\sigma}^{\mathrm{class}}$ and $\mathcal{M}_{\text{no-}\sigma}^{\mathrm{class}+d}$ | Omits $(\sigma_A, \sigma_B)_{\mathrm{final}}$ from the boundary readout $\Pi_{\mathrm{class}} = (X, W, b)$ or $\Pi_{\mathrm{class}+d} = (X, W, b, d)$ | Four pairs $(p^{(h_A)}, p^{(h_B)})$ with $(h_A, h_B) \in \{(0,0), (0,3), (3,0), (3,3)\}$ at $b_{\mathrm{init}} = B = \frac{1}{5}$ | Separates all 4 branches via $(\sigma_A, \sigma_B)_{\mathrm{final}} \in \{(-1,-1), (-1,+1), (+1,-1), (+1,+1)\}$ | $\Pi_{\mathrm{class}}$ collapses all 4 pairs onto $((0,0),(0,0),(0,0),0,0,\frac{1}{5})$; $\Pi_{\mathrm{class}+d}$ still collapses $(0,0)$ with $(3,0)$ ($d=(0,4)$) and $(0,3)$ with $(3,3)$ ($d=(2,0)$) |
 
 #### Proof of Theorem 8
 
-- **Part 1:** On any state in $\mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$, phase $c = 0$ advances $n: 0 \mapsto 1$ and sets $(\operatorname{rec}(x_A(1)), \operatorname{rec}(x_B(1))) = (C_1(h(p_A)), C_1(h(p_B))) = (r_A, r_B)$. At phase $c = 1$, $L_{\mathrm{buf}}$ captures $d = r_B$ and $H_{B,A}$ reads $r_A$; at phase $c = 4$, $H_{B,B}$ reads the retained buffer $d = r_B$ rather than $\operatorname{rec}(x_B(3))$. Thus the apparatus trajectory on $\mathcal{A}_B$ across $c = 0, \dots, 7$ equals $T_7 \circ \cdots \circ T_0 = M_{8,B}^{(r_A, r_B)}$, which is identical to $\mathcal{M}_{\mathrm{matched}}^{(2)}$.
-- **Part 2:** Witnesses 1, 2, 3, 4, and 5 follow directly from Theorem 5 Part 2 ($R_0 z^{(1)} \ne 0$), Theorem 3 Part 3 and Theorem 4 Part 2 ($\Delta_B(z^{(4)}, z^{(4)}) = \frac{4025387}{10497600} < \frac{4199040}{10497600} = E_0(z^{(4)})$), Theorem 5 Part 1 ($A_{\mathrm{final}} = (b_0, b_1)$), Theorem 2 Part 3 (single-$\sigma$ sign flip on $(0,1)$), and Theorem 5 Part 4 (four-branch collision at $B = \frac{1}{5}$). $\blacksquare$
+- **Part 1:** On any state in $\mathcal{R}_{(c_0, c_1, b_{\mathrm{init}}, B)}$, row $c = 0$ advances $n: 0 \mapsto 1$ and sets $(\operatorname{rec}(x_{1,A}), \operatorname{rec}(x_{1,B})) = (C_1(h(p_A)), C_1(h(p_B))) = (r_A, r_B)$. At row $c = 1$, $L_{\mathrm{buf}}$ captures $d = r_B$ and $H_{B,A}$ reads $r_A$; at row $c = 4$, $H_{B,B}$ reads the retained buffer $d = r_B$ rather than $\operatorname{rec}(x_{3,B})$. Thus the apparatus trajectory on $\mathcal{A}_B$ across the 7 rows $c = 0, \dots, 6$ equals $T_6 \circ \cdots \circ T_0 = M_{7,B}^{(r_A, r_B)}$, which is identical to $\mathcal{M}_{\mathrm{matched}}^{(2)}$.
+- **Part 2:** Witnesses 1, 2, 3, 4, and 5 follow directly from Theorem 5 Part 2 ($R_0 z^{(1)} \ne 0$), Theorem 3 Part 3 and Theorem 4 Part 2 ($\Delta_B(z^{(4)}, z^{(4)}) = \frac{4025387}{10497600} < \frac{4199040}{10497600} = E_0(z^{(4)})$), Theorem 5 Part 1 ($A_{\mathrm{final}} = (b_0, b_1)$), Theorem 2 Part 3 (single-$\sigma$ sign flip on $(0,1)$), and Theorem 5 Part 4 (collisions on $\Pi_{\mathrm{class}}$ and $\Pi_{\mathrm{class}+d}$ at $B = \frac{1}{5}$). $\blacksquare$
