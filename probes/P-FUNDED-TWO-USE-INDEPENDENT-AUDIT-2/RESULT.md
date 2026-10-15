@@ -42,8 +42,8 @@ was skipped or left NOT_RUN. EXPECTED.txt and RUN.md preserve the full evidence.
 ## Pending evidence and restrictions
 
 The mandatory scientific x86_64/aarch64 replay and aggregate check have not
-been claimed from this local result. The separately frozen v2 comparison
-mode remains pending; counterpart inspection requires both new pins AND
+been claimed from this local result. The separately frozen own v2 comparison
+mode completed after the first record, as recorded in COMPARISON.md; counterpart inspection requires both new pins AND
 first-run receipts, and digest comparison additionally requires V2 dual
 architecture replay. The prior source-exposed R review retains its old scope.
 No self-review is independent acceptance.
