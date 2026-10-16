@@ -1,0 +1,101 @@
+{
+  "candidate": "C-V103-SOURCE-INTERFACE-N",
+  "program_issue": 1548,
+  "lane": "D",
+  "child_issue": 1551,
+  "public_session": "Antigravity-20261016-v103-source-interface",
+  "author": "A. M. Thorn",
+  "license": "Apache-2.0",
+  "status": "NON-CANONICAL",
+  "action_layer": "L1",
+  "scientific_code": "NONE / NOT_RUN",
+  "authority_basis": {
+    "tag": "canon-v102",
+    "main_commit": "a632c6a162dc87e60104d7a478e7650a6d5c4a1b",
+    "content_commit": "b04e22dd3ed8e4240cff347364f24670d4183a4d",
+    "canon_sha256": "c0657380438c965f9556b5b298a34a5e799c48a68ce66e9fe51786ce2413d7d1",
+    "canon_bytes": 1024033
+  },
+  "specification_pin": {
+    "commit": "9cb2b7d89eb1fc955fb67e886e46a379cb1aba43",
+    "files": {
+      "notes/C-V103-SOURCE-INTERFACE-N/README.md": {
+        "bytes": 1698,
+        "git_blob": "b9c3c2ad886ffb74c3b838bb7c2fe7769fb7bbce",
+        "sha256": "14606cb2dba7b44cf69a4241f436fe07e7250770f74de9de09e52639c6ea0274"
+      },
+      "notes/C-V103-SOURCE-INTERFACE-N/CONTRACT.md": {
+        "bytes": 14279,
+        "git_blob": "c5a6f6eafc0093a0b1eb0f19460573ce8b60848c",
+        "sha256": "243ad5bea43ab9dc8183650aea4a6b7bc528a26ad82421ffa75c0536d6adff0e"
+      },
+      "notes/C-V103-SOURCE-INTERFACE-N/PREREG.md": {
+        "bytes": 4910,
+        "git_blob": "cd8f0c41e3e9850bc8a4faec1a3577688397da44",
+        "sha256": "c12841086c7da7b34bd1d4ac1d4542818f5c9b2b15916f1e0da3dcb5e501bcd3"
+      },
+      "notes/C-V103-SOURCE-INTERFACE-N/SOURCES.tsv": {
+        "bytes": 3197,
+        "git_blob": "e0696e8432a05ac53ff67a23b715c488aa7c402a",
+        "sha256": "ab70dbc3a999589adda7d3826ff584be6fcf73ced78f2c0c55b1ed4664050109"
+      },
+      "notes/C-V103-SOURCE-INTERFACE-N/INPUTS.sha256": {
+        "bytes": 1324,
+        "git_blob": "1a8f917a5b97318a11f615e1fb74a9a8fabc4271",
+        "sha256": "cdc53e295c7b354d33dfb42217c31dca1b04e340c013d9012d3ce95ee43248d1"
+      }
+    }
+  },
+  "gate_overlap_summary": {
+    "E_original_550": {
+      "support_points": 550,
+      "zero_gate_points": 0,
+      "synchronized_tail_points": 500,
+      "synchronized_tail_zero_gate_points": 0,
+      "obstruction": "s_h = B + 2A in {2, 3} != 0 for all n >= 0",
+      "retained_message_in_h": "2*lambda + mu mod 5 (5 classes)",
+      "qr_port_classes": 1
+    },
+    "E_alt_150": {
+      "support_points": 150,
+      "zero_gate_points": 1,
+      "zero_gate_witness": {
+        "n": 1,
+        "lambda": 2,
+        "mu": 0,
+        "checkpoint": [2, 1, 2, 1, 1, 3],
+        "z": 0
+      },
+      "synchronized_tail_points": 100,
+      "synchronized_tail_zero_gate_points": 0,
+      "tail_obstruction": "d_h = D + 2C = 2C in {1, 4} != 0 for all n >= 3",
+      "qr_port_classes": 25
+    },
+    "x_lambda_one_shot": {
+      "occupied_payloads": 5,
+      "ready_carrier_points": 100,
+      "ready_carrier_zero_gate_points": 20,
+      "admitted_payloads_in_zero_gate": [0],
+      "h_formula_on_ready_carrier": "(-2*B*z*lambda, 2*B*z*lambda) mod 5",
+      "absence_codeword_zero_gate_points": 0,
+      "absence_h_orbit": [[0, 2], [0, 3], [2, 0], [3, 0]],
+      "qr_port_classes_across_occupied": 1
+    }
+  },
+  "w_energy_difference": {
+    "formula": "H(W y) - H(y) = y0^2 - y1^2 + y0*y2 - y1*y3",
+    "counterexample_e0": {
+      "e0": [1, 0, 0, 0],
+      "W_e0": [0, 1, 0, 0],
+      "H_e0": 2,
+      "H_W_e0": 3
+    },
+    "counterexample_ustar": {
+      "ustar": [0, -1, -1, 2],
+      "W_ustar": [-1, 0, 2, -1],
+      "H_ustar": 1,
+      "H_W_ustar": 2
+    }
+  },
+  "smallest_unresolved_obligation": "Decide whether the 250-point three-step preimage (T1 o T1 o T0)^(-1)(G0 intersect X14) contains an origin-zero family with a common initial receiver projection that populates at least two distinct protected sign fibres {V(x3), -V(x3)} in G0 intersect X14 (where B=3A and D=3C mod 5)."
+}
