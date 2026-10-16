@@ -28,3 +28,17 @@ blind-target experiment. No scientific run or exploratory calculation
 occurred before the complete public pin. Later milestones will be appended
 with exact commits, times and hashes; the frozen proof/prereg/code remain
 unchanged.
+
+## Independent pin and first run
+
+- Complete independent pin: 105d22bfc457f5e3f29dfa7b3ca75694b21670fd.
+  Fresh fetch/readback and clean local tree confirmed at 2026-10-16T22:04:21Z.
+- Metadata receipt before execution: issue #1567 comment 6225581829 and
+  shared #1548 comment 6225582056.
+- First run began 2026-10-16T22:05:13.747119+00:00 and ended
+  2026-10-16T22:05:13.939442+00:00 on Linux aarch64, Python 3.11.2.
+  Exit 0, empty stderr, stdout 523 bytes / 7 lines, SHA-256
+  8d9826f1ffd8437c283123571941af32194fe411d2f56ddfc19e20322d3b8542.
+- At the commit first adding EXPECTED.txt and RUN.md, the author's result
+  package is still unopened. Public push/readback of this record precedes
+  the next exposure phase.
