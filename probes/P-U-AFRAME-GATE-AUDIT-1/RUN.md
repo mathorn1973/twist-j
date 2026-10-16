@@ -43,6 +43,18 @@ written; the author proof, implementation and results remained unopened.
 
 ## Subsequent reproduction
 
-Repository replay and GitHub architecture results are to be recorded
-after this first-run record is committed. A replay will not replace or
-reinterpret this first result.
+After the first-run record was committed and publicly read back as
+`dac3cd215314b2d426ecfebe76890e082df9691c`, the unchanged repository command
+`python3 tools/check_verifier.py --base a632c6a162dc87e60104d7a478e7650a6d5c4a1b`
+returned:
+
+```text
+VERIFY PASS P-U-AFRAME-GATE-AUDIT-1 f9cb88e38afdd4b8279adb1d55bbbcfa90076dd9254713de971c60a663ac4890 5fae6e8c596460e3b1d2a71a6460c0d3d7ddaf4ad10fc9e33e3db576158e1477
+```
+
+This was a same-architecture reproduction on Linux x86_64 / Python
+3.12.14, not another independent implementation. The original first
+transcript and all five frozen initial files remain byte-identical.
+Head-specific GitHub architecture receipts are recorded in the PR
+conversation after its required workflow completes. They do not replace
+or reinterpret this first result.
