@@ -13,8 +13,12 @@ own directory. The normative basis is Public Canon v102 at
 read back before opening the author's proof or results. `PREREG.md`
 fixes questions, falsifiers and exposure conditions; `SOURCES.tsv`
 binds admitted Git sources. `EXPOSURE.md` records the chronology.
-A subsequent `REVIEW.md` will compare the independently frozen derivation
-with the unchanged author result. There is no scientific program or
+`REVIEW.md` compares that independently frozen derivation with author result
+`e3d35709a86b42c21c1bf57e2be2b3a3cf707598` and records **CHANGES REQUIRED**:
+the scoped gate-overlap and source-blindness results survive, while exact
+prefix, operator, cardinality, typing and summary claims require correction.
+`COMPARISON-SOURCES.tsv` binds the four author files opened after the pin.
+There is no scientific program or
 numerical campaign, and no claim of an additional independent implementation.
 
 No Canon promotion, merge, physical interface, native contact compilation,

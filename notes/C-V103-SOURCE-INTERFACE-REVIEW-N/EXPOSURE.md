@@ -37,3 +37,19 @@ PUBLIC / NON-CANONICAL. A. M. Thorn. Apache-2.0.
 
 No historical run or independent implementation is reconstructed by this
 chronology. File hashes establish byte identity, not physical provenance.
+
+## Public pin and later comparison
+
+- The independent pin is `2c9718dbb9661eebdfaf150affb5a3e25eda20fa`.
+  Successful push, fresh fetch, full remote SHA and byte readback of all
+  five files were confirmed by 2026-10-16 21:33:36 UTC. Receipt:
+  https://github.com/mathorn1973/twist-j/issues/1560#issuecomment-6225129123.
+- Only after that receipt, before 2026-10-16 21:34:25 UTC, the four
+  author-result files at `e3d35709a86b42c21c1bf57e2be2b3a3cf707598`
+  were acquired for comparison. COMPARISON-SOURCES.tsv records their
+  exact hashes and sizes. Author issue #1551's result receipt was read
+  afterward. No author scientific program was executed.
+- REVIEW.md is the additive comparison. Its three-step preimage argument
+  and other author-specific counterexamples are post-exposure review
+  work, not retroactive additions to the independent proof. PROOF.md,
+  PREREG.md and SOURCES.tsv remain byte-identical to the public pin.
