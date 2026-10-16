@@ -1,0 +1,202 @@
+{
+  "scope": "NON-CANONICAL L1 proof-only note; no new formal probe or public computation gate",
+  "review_date": "2026-10-13",
+  "authority_observed": {
+    "repository": "mathorn1973/twist-j",
+    "main": "5f54015ed8361e3a64cb10894397020ddfadd104",
+    "canon": "Public Canon v101",
+    "status": "ACTIVE",
+    "content_commit": "421a4ec1daf07c04d19022c1ee219607e83c09a8",
+    "tag": "canon-v101",
+    "tag_target": "08ec6f93b5f70ad662bb447cd6cc41ccc62fa5f3",
+    "canon_sha256": "b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7",
+    "canon_bytes": 992352,
+    "both_declared_commits_are_ancestors_of_main": true,
+    "required_architecture_and_aggregate_checks": "success",
+    "workflow_url": "https://github.com/mathorn1973/twist-j/actions/runs/38221479424"
+  },
+  "mathematical_predecessor": {
+    "probe": "P-BETA-PENTAD-NATIVE-EXTENSION-1",
+    "commit": "59711070f75b56b2441b951dd9cd77bb1dfc5da2",
+    "source_pin": "69b6c211dcf5414dc555cab3409baffcb802a00b",
+    "issue_url": "https://github.com/mathorn1973/twist-j/issues/1481",
+    "draft_url": "https://github.com/mathorn1973/twist-j/pull/1482",
+    "sources": [
+      {
+        "path": "probes/P-BETA-PENTAD-NATIVE-EXTENSION-1/NATIVE_PROOF.md",
+        "git_blob": "6e31c34b8a87328202ae9a4954b2c59e5f1f6b93",
+        "url": "https://github.com/mathorn1973/twist-j/blob/59711070f75b56b2441b951dd9cd77bb1dfc5da2/probes/P-BETA-PENTAD-NATIVE-EXTENSION-1/NATIVE_PROOF.md#L196",
+        "use": "Exact prescribed first-entrance lift, base, active action and affine charts"
+      },
+      {
+        "path": "probes/P-BETA-PENTAD-NATIVE-EXTENSION-1/GEOMETRY_PROOF.md",
+        "git_blob": "7eee8456b1bf38cddbd24dd8b10770b8c1662f86",
+        "url": "https://github.com/mathorn1973/twist-j/blob/59711070f75b56b2441b951dd9cd77bb1dfc5da2/probes/P-BETA-PENTAD-NATIVE-EXTENSION-1/GEOMETRY_PROOF.md#L397",
+        "use": "Exact prescribed T, its B-isometry and determinant"
+      }
+    ],
+    "sealed_probe_file_count": 16,
+    "relationship": "The old at-most-24 bound is valid. This separate proof identifies its exact time quotient. Original sealed evidence does not certify the new minimum."
+  },
+  "supplied_package": {
+    "filename": "TWISTJ_MINIMUM_KONTEXTU_5_2026-10-13.zip",
+    "bytes": 34098,
+    "sha256": "6ffc178ee6ff507ef2c5aba8abfe7f90d5d88c193161b359ac09c94bb24fafe4",
+    "file_count": 13,
+    "all_12_supplied_checksum_entries_verified_before_and_after": true,
+    "archive_imported_into_public_note": false,
+    "files": [
+      {
+        "path_in_archive": "context_structural.md",
+        "bytes": 8666,
+        "sha256": "efb881c0cd2af793cc1b8e746eb77b9f52558ec2e36925888c95bfca37ab477e"
+      },
+      {
+        "path_in_archive": "context_structural_check.log",
+        "bytes": 2876,
+        "sha256": "15bd16818c0061d151d7dbba1853069c2cc9ffbc85dfbde7e14ab83ad251ae1c"
+      },
+      {
+        "path_in_archive": "context_structural_check.py",
+        "bytes": 2946,
+        "sha256": "a8ea8ed8f9d616b687a67b307c30dd77b914cf40486aa4cd840d355852a5bd03"
+      },
+      {
+        "path_in_archive": "minctx_independent_audit.py",
+        "bytes": 10397,
+        "sha256": "b80b62b90ac9ef9f30bd81a016ca64d0f60f929038880190a9079c2cbf9d0c81"
+      },
+      {
+        "path_in_archive": "minctx_independent_output.json",
+        "bytes": 20809,
+        "sha256": "2479b8284dcdd7930e40ec9c9c64b2d1f8d858658a8f7d94c9d9a727bc27f5a7"
+      },
+      {
+        "path_in_archive": "minctx_independent_proof.md",
+        "bytes": 10840,
+        "sha256": "db16dd35bec68b5ead8c23e1ee41b685617b3e725bb2242100ca56aa54aaa8df"
+      },
+      {
+        "path_in_archive": "minimum_context_literal_audit.py",
+        "bytes": 7148,
+        "sha256": "866d30c13f0d18581bc6c74f5f0af42872abcd3153d75fe5aaf647ed4579b8e5"
+      },
+      {
+        "path_in_archive": "minimum_context_literal_output.json",
+        "bytes": 6075,
+        "sha256": "18d0bc61b05c2426bc4555e9fea8383c74458f817a3bdfd2bbedea803defdfc5"
+      },
+      {
+        "path_in_archive": "minimum_context_scope_review.md",
+        "bytes": 8868,
+        "sha256": "1251a254b9b941e3a7252400aae375d399473abb719c6555a050e387558452d4"
+      },
+      {
+        "path_in_archive": "MINIMUM_KONTEXTU_DUKAZ_CS.md",
+        "bytes": 14412,
+        "sha256": "3f329ae8ac0885465271b17c7a163dcb80bfa8ef3269fb526ab81696e0658a0a"
+      },
+      {
+        "path_in_archive": "README.md",
+        "bytes": 2808,
+        "sha256": "a3b764af91cd0848bda2108c10b50bbafd90c5560e734bf05252bc9968484071"
+      },
+      {
+        "path_in_archive": "SHA256SUMS",
+        "bytes": 1111,
+        "sha256": "6962d865745e4d0cf7782f1bc307e3f19cd53dedb4f4db987e8f89c961920c7d"
+      },
+      {
+        "path_in_archive": "SOURCES.json",
+        "bytes": 1861,
+        "sha256": "22d5447966030cd747fa1d0db0d86c12e8b325429d57a783a0ace678b967d664"
+      }
+    ],
+    "missing_older_source_files": "Older files listed in the supplied SOURCES.json are not included and their hashes are not certified. Equality of mathematical definitions was checked against the two public sources above."
+  },
+  "supporting_local_reproduction": {
+    "classification": "Result-exposed, non-formal local reproduction only",
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "python": "3.12.10",
+    "python_flags": [
+      "-I",
+      "-B",
+      "-X",
+      "utf8"
+    ],
+    "assertions_enabled": true,
+    "supplied_source_bytes_unchanged": true,
+    "runs": [
+      {
+        "script": "minimum_context_literal_audit.py",
+        "exit_code": 0,
+        "stdout_bytes": 6528,
+        "stderr_bytes": 0,
+        "stdout_sha256": "a724b583f53530af7fdeac1e6fc66fa8e8555f98f045684f76cc0221199ffa09",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "supplied_output": "minimum_context_literal_output.json",
+        "raw_bytes_equal": false,
+        "lf_normalized_bytes_equal": true,
+        "json_values_equal": true,
+        "matched": true
+      },
+      {
+        "script": "minctx_independent_audit.py",
+        "exit_code": 0,
+        "stdout_bytes": 22475,
+        "stderr_bytes": 0,
+        "stdout_sha256": "f1594874086de707586964d63c6c840f37361701370455d28b7c7b82c2a18e32",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "supplied_output": "minctx_independent_output.json",
+        "raw_bytes_equal": false,
+        "lf_normalized_bytes_equal": true,
+        "json_values_equal": true,
+        "matched": true
+      },
+      {
+        "script": "context_structural_check.py",
+        "exit_code": 0,
+        "stdout_bytes": 2912,
+        "stderr_bytes": 0,
+        "stdout_sha256": "357dd65519aeec4d05a6c6f5ee11f8482a74ca446131337b8f912837e7056a17",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "supplied_output": "context_structural_check.log",
+        "raw_bytes_equal": false,
+        "lf_normalized_bytes_equal": true,
+        "json_values_equal": null,
+        "matched": true
+      }
+    ],
+    "scope_notes": [
+      "78125 is five native generators times all 5^6 checkpoint inputs.",
+      "60000 is 24 factors times 125 bases times four affine-frame points times five specified matrices; not all GL(3,F5) matrices.",
+      "600 is 24 factors times five sheets times five r values, comparing full affine charts.",
+      "The finite-prefix structural search is not the proof of complete language; PROOF.md supplies the substitution argument.",
+      "Raw output hashes differ from supplied hashes due to CRLF/LF. JSON data and LF-normalized outputs match.",
+      "No new verifier or raw execution logs are published by this note. Universal claims rest on the written algebraic proof."
+    ]
+  },
+  "collision_review": {
+    "scope": "Targeted open-issue searches and all 232 remote head names, plus direct predecessor and nearby draft inspection; not an exhaustive search of every branch content.",
+    "finding": "No separate exact-five reservation found. Issue 1481 already identifies this theoretical successor.",
+    "distinct_contract_pull_requests": [
+      1476,
+      1477,
+      1479
+    ],
+    "distinct_registry_item": "U-NATIVE-RAW-RESIDUE-READOUT"
+  },
+  "public_note_files": [
+    {
+      "path": "README.md",
+      "bytes": 5381,
+      "sha256": "e4d6e8883b7aedcba0d025591ecd3907795cf778f336a1830f43e7562f31d3d5"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 19634,
+      "sha256": "9f062dd46e5345a248142ef6c7b7f811320aa079dbd361416052f4fbe9be7f5b"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "schema": "twist-j.incubation-interface.v1",
+  "candidate_id": "C-FUNDED-TWO-USE-EXECUTABLE-N",
+  "status": "NON-CANONICAL",
+  "layer": "L1",
+  "lane": "I",
+  "issue_url": "https://github.com/mathorn1973/twist-j/issues/1507",
+  "parent_program_url": "https://github.com/mathorn1973/twist-j/issues/1506",
+  "branch": "incubation/C-FUNDED-TWO-USE-EXECUTABLE-N",
+  "base_main_commit": "8b91a935c426036e00ecb300019fd94734addeec",
+  "preregistration_commit": "81a70caa8dbcc61b64276e7d3df5ba84e860d4f1",
+  "pinned_receipt_url": "https://github.com/mathorn1973/twist-j/issues/1507#issuecomment-6189582448",
+  "scientific_status": "PARTIAL / STOP",
+  "failure_gate": "T01_geometry_stencil_and_operators",
+  "failure_exception": "RuntimeError: Expected |D| = 869, got 705",
+  "failure_location": "notes/C-FUNDED-TWO-USE-EXECUTABLE-N/apparatus.py:153 (get_geometry)",
+  "carrier_discrepancy": {
+    "defined_domain_formula": "D = Y + B_zero + B_zero",
+    "marked_sites_Y_count": 5,
+    "stencil_B_st_count": 60,
+    "stencil_B_zero_count": 61,
+    "one_hop_Y_plus_B_zero_count": 142,
+    "two_hop_B_zero_plus_B_zero_count": 489,
+    "computed_D_cardinality": 705,
+    "exposed_target_D_cardinality": 869
+  },
+  "test_summary": {
+    "positive_tests_total": 18,
+    "positive_tests_passed": 0,
+    "positive_tests_failed": 1,
+    "positive_tests_not_run": 17,
+    "adversarial_tests_total": 10,
+    "adversarial_tests_not_run": 10,
+    "witness_trajectories_status": "NOT_RUN",
+    "comparison_digest_mode": "NOT_RUN"
+  },
+  "first_run_receipt": {
+    "command": "python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-N/verify.py",
+    "exit_code": 1,
+    "stdout_file": "notes/C-FUNDED-TWO-USE-EXECUTABLE-N/EXPECTED.txt",
+    "stdout_bytes": 42,
+    "stdout_lines": 1,
+    "stdout_sha256": "2eb562661a6fabef4092f478342ba99e1e205d99e21c4219d4968b8935a052ff",
+    "pinned_files_diff_lines": 0
+  },
+  "pinned_files": {
+    "README.md": {
+      "bytes": 5367,
+      "git_blob": "465be4090a1847ea217a7905d6fc38b909d94c6f",
+      "sha256": "6f6b16256dc5dae23145430fb7b3848769e403fa8db411d5f269371522d5b50d"
+    },
+    "CONTRACT.md": {
+      "bytes": 14616,
+      "git_blob": "f60b251a65337cd264731f247a4c317c2413d18f",
+      "sha256": "7c85250f5c6b88c9685879742387a4c13601df6e7ea5d67cf821f89e58cac12a"
+    },
+    "PREREG.md": {
+      "bytes": 18130,
+      "git_blob": "648bc89dcdebb1c86535373f11850664de470b67",
+      "sha256": "71a49ad70d772b23869f070eeaa9326d56043cf577d28f662cc1ad773a5367a5"
+    },
+    "SOURCES.json": {
+      "bytes": 23681,
+      "git_blob": "38ca75a22a4e144aae006ff8505f27d105590c08",
+      "sha256": "d4642da73f7165eaf5817c9cb9db2a33b168a829581b729a44bae1fa568c5a2d"
+    },
+    "PROOF.md": {
+      "bytes": 11919,
+      "git_blob": "3529d16ab4659f14211a64beee6e6bd315f20d66",
+      "sha256": "fa218d6e85c989bdabadbcf075dbebf09371efb4df7f40a1f19037fe1bcaeb2d"
+    },
+    "apparatus.py": {
+      "bytes": 51473,
+      "git_blob": "be5a8031f74dc2a91ea3b311b8703c9c9fe578a3",
+      "sha256": "a3bba3433c81c2e1b445008596d898915031dc67ca73f18195be6f5196422833"
+    },
+    "verify.py": {
+      "bytes": 58399,
+      "git_blob": "e11ccf2f40ded11fa2ef71390930a572dfb9590e",
+      "sha256": "15dd15ea81ded0f7bda498b9797ee263d2204efe38f763f5b3e7e924cdf76126"
+    }
+  },
+  "exported_python_api": {
+    "module": "notes/C-FUNDED-TWO-USE-EXECUTABLE-N/apparatus.py",
+    "state_types": [
+      "WaveTapeState",
+      "ApparatusSubstate",
+      "CompositeState",
+      "ChronologicalCutEntry",
+      "DirectPortReadout"
+    ],
+    "transitions_and_readers": [
+      "native_tick",
+      "native_tick_single",
+      "buffer_capture",
+      "buffer_capture_inverse",
+      "F_step",
+      "F_inverse",
+      "funded_contact_A",
+      "funded_contact_B",
+      "apparatus_step",
+      "apparatus_step_inverse",
+      "coupled_step",
+      "prepare_ready_state",
+      "run_seven_steps",
+      "run_eight_steps",
+      "direct_chronological_cut_reader",
+      "extract_direct_port_readout",
+      "direct_source_reader",
+      "recognize_ready_image",
+      "recover_prepared_inputs",
+      "compute_comparison_digest"
+    ]
+  },
+  "ci_limitations": {
+    "check_verifier": "NOT APPLICABLE on notes/-only PR (VERIFIER CHECK SKIPPED: no probe verifier changes)",
+    "check_reproduce": "NOT APPLICABLE on notes/-only PR (REPRODUCE PASS: no reproduction directories changed)"
+  },
+  "physical_status": "NOT_READY",
+  "promotion_recommendation": "DO NOT PROMOTE"
+}

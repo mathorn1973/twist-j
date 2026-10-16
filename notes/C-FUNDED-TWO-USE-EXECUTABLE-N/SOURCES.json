@@ -1,0 +1,442 @@
+{
+  "schema": "twist-j.incubation-sources.v1",
+  "candidate_id": "C-FUNDED-TWO-USE-EXECUTABLE-N",
+  "issue_url": "https://github.com/mathorn1973/twist-j/issues/1507",
+  "parent_program_url": "https://github.com/mathorn1973/twist-j/issues/1506",
+  "dispatch_release_url": "https://github.com/mathorn1973/twist-j/issues/1506#issuecomment-6188571217",
+  "branch": "incubation/C-FUNDED-TWO-USE-EXECUTABLE-N",
+  "allowed_path": "notes/C-FUNDED-TWO-USE-EXECUTABLE-N/",
+  "authority": {
+    "state": "ACTIVE",
+    "canon": "Public Canon v101",
+    "repository": "mathorn1973/twist-j",
+    "main_commit": "8b91a935c426036e00ecb300019fd94734addeec",
+    "tag": "canon-v101",
+    "content_commit": "421a4ec1daf07c04d19022c1ee219607e83c09a8",
+    "canon_sha256": "b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7",
+    "canon_bytes": 992352
+  },
+  "dispatch_issue_hashes": {
+    "program_1506": {
+      "bytes": 8517,
+      "sha256": "d31d6cc3c880acaff494d5b1567d849626e6c4efa408291bedde1efaf4dd79bb"
+    },
+    "lane_I_1507": {
+      "bytes": 3747,
+      "sha256": "cfe5b648027c7012ff6b45477259146d31bf463b6310a0a0d582bcae385c9d2b"
+    }
+  },
+  "immutable_input_heads": {
+    "R1_funded_two_use_continuing_apparatus": "c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f",
+    "A1_native_admission_boundary": "7b4d55502be44b2f2aed4005c909d7dcb50dbc55",
+    "A2_two_use_control_archive": "c34baa826cb846260b96373ae6d8f10c3a189a5a",
+    "A3_five_source_predictive_separation": "f341b04f737827d9033e60f452fab77231f7b04a",
+    "classical_signed_port_contract": "1b69563af4018b08d7dc75781b12e9553a8c19c3",
+    "native_classical_two_cut_contact": "ea924e214ec3c29009fd4590f294954d3e5ad43f",
+    "native_classical_contact_census": "8b91a935c426036e00ecb300019fd94734addeec",
+    "native_classical_funded_contact": "b7636a334b09fcc68422bcd6cc6e15334d416c59"
+  },
+  "dispatch_clarifications": {
+    "clarification_i_q3_shift": "For q_3(z_0, z_1) = z_0 z_1 (2 z_0 - 1), q_3(z^(3)) = 1/2, so the nonlinear perturbation b_2(z_A, z_B) + q_3(z_A) u changes b_2 at h_A = 3 by u/2 (not u), and Delta_B(z_A, z_B) + lambda q_3(z_B) changes Delta_B at h_B = 3 by lambda/2.",
+    "clarification_ii_sigma_B_scope": "On the common-ready family R_{(c_0, c_1, b_init, B)}, second contact acceptance alpha_B in {0, 1} is already readable from (d, b_0, b_2) without sigma_B because d = C_1(h_B) determines z_B = eta(d): when z_B = 0, Delta_B = 0 in [0, B] is always accepted (alpha_B = 1), and when z_B != 0, R_0 z_B != 0 so b_2 - D_2(R_0^{-1} b_0) = alpha_B R_0 z_B determines alpha_B in {0, 1}. By contrast, sigma_A is required to distinguish accepted zero at Contact A (h_A = 0) from refused h_A in {3, 4} at B = 1/5 on (d, b_0, b_2) or Pi_{class+d}, and sigma_B is separately required for the global reversible involution H_{B,B}^2 = id on Z_B and A_B (preventing the single-shared-sigma sign flip on (0, 1)) and for acceptance readout on the buffer-omitted classical projection Pi_class = (X, W, b)."
+  },
+  "frozen_constants": {
+    "marked_sites_Y": [
+      "(0,0,0)",
+      "(1,1,0)",
+      "(1,0,1)",
+      "(0,1,1)",
+      "(2,0,0)"
+    ],
+    "ordered_ports_R": [
+      "(0,0,0)",
+      "(1,1,0)",
+      "(1,0,1)",
+      "(0,1,1)"
+    ],
+    "fifth_zero_mean_site_y4": "(2,0,0)",
+    "domain_D_cardinality": 869,
+    "stencil_shell_weights_over_324": {
+      "2": 6,
+      "4": 1,
+      "8": 15,
+      "10": 1,
+      "16": 1
+    },
+    "balanced_lift_ell": [
+      0,
+      1,
+      2,
+      -2,
+      -1
+    ],
+    "Z_5_encodings": [
+      "(0,0,0,0)",
+      "(1/2,0,0,0)",
+      "(1/2,1/2,0,0)",
+      "(1,1/2,0,0)",
+      "(0,1,0,0)"
+    ],
+    "cold_energies_E0_on_Z5": [
+      "0",
+      "1/10",
+      "3/20",
+      "2/5",
+      "2/5"
+    ],
+    "cross_work_vector_mu": [
+      145483,
+      173653,
+      173653,
+      142153
+    ],
+    "cross_work_denominator": 10497600,
+    "sharp_blank_ready_two_use_max_work": "8224427/10497600",
+    "canonical_two_use_cold_capacity_B": "4/5",
+    "order_witness_difference_W14_minus_W41": "313/233280",
+    "comparison_capacities_in_order": [
+      "0",
+      "1/10",
+      "1/5",
+      "2/5",
+      "8224427/10497600",
+      "4/5"
+    ],
+    "comparison_record_count": 1200
+  },
+  "sources": [
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "STATUS.md",
+      "git_blob": "196017e00399b6608f4abae2e63c6237e344703c",
+      "bytes": 2393,
+      "sha256": "7aeae60b5bdbdaa902f350b7441cb530032b40a2bacb0c0fb26964967e2b14fe",
+      "role": "Public Canon v101 authority declaration",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/STATUS.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "POLICY.md",
+      "git_blob": "10b49a9551eb2f2a3e32d65b0d5b7206febe9de9",
+      "bytes": 17333,
+      "sha256": "da5d2cf5a021f4d069c471725e02b6d2c201e3acadd5ecfd4213a361184b7a5d",
+      "role": "Repository policy and L1/non-canonical rules",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/POLICY.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "canon/CANON.md",
+      "git_blob": "ddc5ae5b72d73d23c51eb32805947c3088193f65",
+      "bytes": 992352,
+      "sha256": "b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7",
+      "role": "Normative Public Canon v101",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/canon/CANON.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "canon/CORE.md",
+      "git_blob": "71bc3d8e36b6ba4e260ecbb6d641a084955de70d",
+      "bytes": 27375,
+      "sha256": "f939e40c7288cdc2d6afdf32cc1a1ff932492b37ad7c1bb3af12e06031522a55",
+      "role": "Public Canon v101 core summary",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/canon/CORE.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "canon/FRONTIER.md",
+      "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+      "bytes": 27382,
+      "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+      "role": "Public Canon v101 open frontier claims",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/canon/FRONTIER.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "canon/REGISTRY.tsv",
+      "git_blob": "e00ddaf4fae7a294e465a973ed9a5bcbea070e7e",
+      "bytes": 518295,
+      "sha256": "d49a8ac07af087973e98523242ab0ce5554a52b2bc2dcc2aa1eeafe3685b2a81",
+      "role": "Public Canon v101 claim registry",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/canon/REGISTRY.tsv"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "canon/SHA256SUMS",
+      "git_blob": "c340df94d051765757a5222aad1cf556b2cf6e75",
+      "bytes": 415,
+      "sha256": "381e60d4eb9128722317fc916561ca8e797f1a18c2ff8356714e19f727898ae9",
+      "role": "Public Canon v101 normative SHA-256 manifest",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/canon/SHA256SUMS"
+    },
+    {
+      "commit": "c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f",
+      "path": "notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/CONTRACT.md",
+      "git_blob": "dcaa61031604eafff9826e1eefb4809efbe492c0",
+      "bytes": 15905,
+      "sha256": "dc4e42c5f74ff5b0f6749b6a74f21379b49458d5bbe01e9bfdf7454195cbcc58",
+      "role": "Combined conditional device #1504 R1 contract",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f/notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/CONTRACT.md"
+    },
+    {
+      "commit": "c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f",
+      "path": "notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/PROOF.md",
+      "git_blob": "bfec13cafb7396553508b3892365fe73dc63ec06",
+      "bytes": 71121,
+      "sha256": "da6645d562e83ffe4827df209a7c63efbc3c36c216f7d4bfaf177df0c9c4ff5c",
+      "role": "Combined conditional device #1504 R1 proof and erratum",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f/notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/PROOF.md"
+    },
+    {
+      "commit": "c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f",
+      "path": "notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/PREREG.md",
+      "git_blob": "deff2b951da2c6799fe757d07fbf09229cd68f2a",
+      "bytes": 6669,
+      "sha256": "dec960271ffd9cb5095c8c86b4672bfa396bb9b056ca3dfff9a11b18d97c1b45",
+      "role": "Combined conditional device #1504 R1 preregistration",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f/notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/PREREG.md"
+    },
+    {
+      "commit": "c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f",
+      "path": "notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/README.md",
+      "git_blob": "835a416378d87888c26f9deaa90f66feabe726d2",
+      "bytes": 7342,
+      "sha256": "b2023b3934a1e82540f8515dc4c4f0a42806758d074998c4ca904747edbf53d1",
+      "role": "Combined conditional device #1504 R1 overview",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f/notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/README.md"
+    },
+    {
+      "commit": "c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f",
+      "path": "notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/SOURCES.json",
+      "git_blob": "23ca316806b8159a08277b83c43c2aa078eb6eb1",
+      "bytes": 17358,
+      "sha256": "fa6e6f0cec7fc0bb7640c8871d24767218c386c39a3910fbd2d3a589eeb4f266",
+      "role": "Combined conditional device #1504 R1 29-source manifest",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f/notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/SOURCES.json"
+    },
+    {
+      "commit": "c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f",
+      "path": "notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/RESULT.md",
+      "git_blob": "b7a3cb78bf4463ed786c54a3c7291419d91ec997",
+      "bytes": 21861,
+      "sha256": "254d07b99836c3d313e8c07eeb6fa56855d9b07534944cc2dccf1747c96ae065",
+      "role": "Combined conditional device #1504 R1 result",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f/notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/RESULT.md"
+    },
+    {
+      "commit": "c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f",
+      "path": "notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/INTERFACE.json",
+      "git_blob": "fd4b6855f54e6ff379a47585c3417db979607b45",
+      "bytes": 10470,
+      "sha256": "b86ca24496e9e060b4632c629a654d499292d0b88b84b98c4cebbba02396e072",
+      "role": "Combined conditional device #1504 R1 exported interface",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f/notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/INTERFACE.json"
+    },
+    {
+      "commit": "c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f",
+      "path": "notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/PROMO-C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N.md",
+      "git_blob": "7a8651cd49085083dd1694b3f1cfc229300862a9",
+      "bytes": 7255,
+      "sha256": "27c1e2dea223b779a5c7108351026b12ae4f369f380745fa94d0185498355647",
+      "role": "Combined conditional device #1504 R1 non-promotion memo",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c67b9af4f25f9ebb5904e3d654fd9fb3856c8c6f/notes/C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N/PROMO-C-FUNDED-TWO-USE-CONTINUING-APPARATUS-N.md"
+    },
+    {
+      "commit": "4302c31f07823b2a843e3702ca14620c1917b853",
+      "path": "notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md",
+      "git_blob": "fa5e7ce18869118a2bd3f7a92cc8b3b97478d88c",
+      "bytes": 12408,
+      "sha256": "0a9c248e03385c1a7b5212821f8d6c83b2c76cd4dea626d4e3b984ef6eeb217e",
+      "role": "Frozen classical signed-port contract (#1484/#1485)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/4302c31f07823b2a843e3702ca14620c1917b853/notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md"
+    },
+    {
+      "commit": "1b69563af4018b08d7dc75781b12e9553a8c19c3",
+      "path": "notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/OBSERVABILITY_CALIBRATION.md",
+      "git_blob": "e7b076bf4b188824f0e115b9adbe8c0540b49279",
+      "bytes": 31503,
+      "sha256": "cf67b3ee9e0be93db0310bf92862b1ed7c2ce9d10e83aa1b37e24119b8bef4f5",
+      "role": "Classical signed-port observability, M/K/R0/R1 and H^2 stencil table (#1485)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/1b69563af4018b08d7dc75781b12e9553a8c19c3/notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/OBSERVABILITY_CALIBRATION.md"
+    },
+    {
+      "commit": "1b69563af4018b08d7dc75781b12e9553a8c19c3",
+      "path": "notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/REVERSIBLE_MEMORY.md",
+      "git_blob": "45452f2f53f94adfc6be722d685da89dd08b9689",
+      "bytes": 16005,
+      "sha256": "ae64f66bfc7577fe1863f2a0a29a09f4491fd91328bd6a7f2c801f43805addc9",
+      "role": "Reversible two-tape wave update F and E_full conservation (#1485)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/1b69563af4018b08d7dc75781b12e9553a8c19c3/notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/REVERSIBLE_MEMORY.md"
+    },
+    {
+      "commit": "1b69563af4018b08d7dc75781b12e9553a8c19c3",
+      "path": "notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/RESULTS.md",
+      "git_blob": "cbc347089a61f6e4f55321169b76a2b0a3322719",
+      "bytes": 5431,
+      "sha256": "3c707207d333cf8d6f1abfbc309a412738c0554f98848c425fed6fcef29c8ee7",
+      "role": "Classical signed-port results summary (#1485)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/1b69563af4018b08d7dc75781b12e9553a8c19c3/notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/RESULTS.md"
+    },
+    {
+      "commit": "7b3fa47c0223bd99fce977de6ea58d484e257033",
+      "path": "notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/CONTRACT.md",
+      "git_blob": "9e333057c5f8bf52c086a64b656a11688cdffe1c",
+      "bytes": 6583,
+      "sha256": "5be2274dd7e2b12dc2a17bcc0b802776b86ef430fd4f81d0b00981db6ea46f0c",
+      "role": "Frozen conditional native-classical contact contract (#1486/#1489)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/7b3fa47c0223bd99fce977de6ea58d484e257033/notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/CONTRACT.md"
+    },
+    {
+      "commit": "ea924e214ec3c29009fd4590f294954d3e5ad43f",
+      "path": "notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/PROOF.md",
+      "git_blob": "4b2b05854e998aa6d75c88d044a782b2af13ccbc",
+      "bytes": 11507,
+      "sha256": "bc2db035cf56d174f6be90b4c57ae55e3f564aebcfa1535b11de278771ef091b",
+      "role": "Conditional native-classical two-cut contact proof (#1489)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/ea924e214ec3c29009fd4590f294954d3e5ad43f/notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/PROOF.md"
+    },
+    {
+      "commit": "ea924e214ec3c29009fd4590f294954d3e5ad43f",
+      "path": "notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/README.md",
+      "git_blob": "47a0e899ec0dadbcce59d8b63850c03c7539fd44",
+      "bytes": 1716,
+      "sha256": "158e8bed3f705fa38dbaa681fe4e918f1bb5fa9faa187e0b97a79787c94f3b61",
+      "role": "Conditional native-classical two-cut contact overview (#1489)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/ea924e214ec3c29009fd4590f294954d3e5ad43f/notes/C-NATIVE-CLASSICAL-TWO-CUT-CONTACT-N/README.md"
+    },
+    {
+      "commit": "498f658f2de0ecfcd71694cd2bc026f280f2fa3b",
+      "path": "probes/P-NATIVE-CLASSICAL-CONTACT-CENSUS-1/PREREG.md",
+      "git_blob": "b80c4c55ccf73079c5cf9a3659532a814272a250",
+      "bytes": 10757,
+      "sha256": "40295a7a6897dc88a9e92b33601b242a7aaae1315bcc2e21fc56dc74549d1e8d",
+      "role": "Merged 625-input native-classical contact census preregistration (#1491/#1492)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/498f658f2de0ecfcd71694cd2bc026f280f2fa3b/probes/P-NATIVE-CLASSICAL-CONTACT-CENSUS-1/PREREG.md"
+    },
+    {
+      "commit": "8b91a935c426036e00ecb300019fd94734addeec",
+      "path": "probes/P-NATIVE-CLASSICAL-CONTACT-CENSUS-1/RESULT.md",
+      "git_blob": "108c67f638312b4fb5e2e8736990a9eb15f96a39",
+      "bytes": 3763,
+      "sha256": "ed26096b603a8c91d488e53ce23bbdf4f9bdd14a9878a1b1e6c9ee367821563e",
+      "role": "Merged 625-input native-classical contact census result (#1491/#1492)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8b91a935c426036e00ecb300019fd94734addeec/probes/P-NATIVE-CLASSICAL-CONTACT-CENSUS-1/RESULT.md"
+    },
+    {
+      "commit": "b7636a334b09fcc68422bcd6cc6e15334d416c59",
+      "path": "notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/CONTRACT.md",
+      "git_blob": "a8e5962551ecf89b73998983a961e851882ba812",
+      "bytes": 6899,
+      "sha256": "bedf7f6f55aafcb8bd82156a62bd6216a7dfc336c081be8ea9b0ab6a31162540",
+      "role": "Frozen bounded-store contact involution H_B contract (#1495/#1496)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/b7636a334b09fcc68422bcd6cc6e15334d416c59/notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/CONTRACT.md"
+    },
+    {
+      "commit": "b7636a334b09fcc68422bcd6cc6e15334d416c59",
+      "path": "notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/PROOF.md",
+      "git_blob": "ca1a03fdead5d055ddb9b926c5a845bbbe946066",
+      "bytes": 12460,
+      "sha256": "d064be2717ed6906777bbc730f019cb578e635be2d48d800ff3baaad334ce00f",
+      "role": "Bounded-store contact involution H_B proof (#1495/#1496)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/b7636a334b09fcc68422bcd6cc6e15334d416c59/notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/PROOF.md"
+    },
+    {
+      "commit": "b7636a334b09fcc68422bcd6cc6e15334d416c59",
+      "path": "notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/RESULT.md",
+      "git_blob": "eaca7cd7ff12cc80a90d69d7651cf1e53f15eb5f",
+      "bytes": 5572,
+      "sha256": "b9120a6b8c1e4ee6b335cadd313bd41da896bf14756e87a73019a0bbb3199b11",
+      "role": "Bounded-store contact involution H_B result (#1495/#1496)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/b7636a334b09fcc68422bcd6cc6e15334d416c59/notes/C-NATIVE-CLASSICAL-FUNDED-CONTACT-N/RESULT.md"
+    },
+    {
+      "commit": "7b4d55502be44b2f2aed4005c909d7dcb50dbc55",
+      "path": "notes/C-HB-NATIVE-ADMISSION-BOUNDARY-N/CONTRACT.md",
+      "git_blob": "45644713d7409ae5375036d4e2c8d62b07e8eb98",
+      "bytes": 10255,
+      "sha256": "435f94d2999f7c9794806e01bc8250b81e5ade206d1288aa8610f228387f1d97",
+      "role": "Accepted A1 native admission boundary contract (#1498/#1502)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/7b4d55502be44b2f2aed4005c909d7dcb50dbc55/notes/C-HB-NATIVE-ADMISSION-BOUNDARY-N/CONTRACT.md"
+    },
+    {
+      "commit": "7b4d55502be44b2f2aed4005c909d7dcb50dbc55",
+      "path": "notes/C-HB-NATIVE-ADMISSION-BOUNDARY-N/PROOF.md",
+      "git_blob": "c559e18c12521b0b864239a00e390987f5fb64a8",
+      "bytes": 17927,
+      "sha256": "2d78f874f90ae7f9625ed05b287b54d82ecbc9607b8659f4f084ef492a4d7c8e",
+      "role": "Accepted A1 native admission boundary proof (#1498/#1502)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/7b4d55502be44b2f2aed4005c909d7dcb50dbc55/notes/C-HB-NATIVE-ADMISSION-BOUNDARY-N/PROOF.md"
+    },
+    {
+      "commit": "7b4d55502be44b2f2aed4005c909d7dcb50dbc55",
+      "path": "notes/C-HB-NATIVE-ADMISSION-BOUNDARY-N/RESULT.md",
+      "git_blob": "7c185265648fd0f6faf672f17cf04f83bf51c15b",
+      "bytes": 6709,
+      "sha256": "edaa40080758130eab795a385146d7af2ab6e8667a91eb74a0132f636ac55bea",
+      "role": "Accepted A1 native admission boundary result (#1498/#1502)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/7b4d55502be44b2f2aed4005c909d7dcb50dbc55/notes/C-HB-NATIVE-ADMISSION-BOUNDARY-N/RESULT.md"
+    },
+    {
+      "commit": "c34baa826cb846260b96373ae6d8f10c3a189a5a",
+      "path": "notes/C-TWO-USE-CONTROL-ARCHIVE-N/CONTRACT.md",
+      "git_blob": "da6be0dc4daa8ff2f190d58c462d80f20a129d0f",
+      "bytes": 11901,
+      "sha256": "55b9e98feb651cfec47f38c8b9257d90433c20efd6e75d79625503e7ddbdcbae",
+      "role": "Accepted A2 two-use control and archive contract (#1499/#1501)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c34baa826cb846260b96373ae6d8f10c3a189a5a/notes/C-TWO-USE-CONTROL-ARCHIVE-N/CONTRACT.md"
+    },
+    {
+      "commit": "c34baa826cb846260b96373ae6d8f10c3a189a5a",
+      "path": "notes/C-TWO-USE-CONTROL-ARCHIVE-N/PROOF.md",
+      "git_blob": "f2704a6145c8bfa5aaf5f963d975feaf030e07ac",
+      "bytes": 21297,
+      "sha256": "6cd212881e19b914621d6911db72a480eaccd1336fb99e66b620d736b34cf884",
+      "role": "Accepted A2 two-use control and archive proof (#1499/#1501)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c34baa826cb846260b96373ae6d8f10c3a189a5a/notes/C-TWO-USE-CONTROL-ARCHIVE-N/PROOF.md"
+    },
+    {
+      "commit": "c34baa826cb846260b96373ae6d8f10c3a189a5a",
+      "path": "notes/C-TWO-USE-CONTROL-ARCHIVE-N/RESULT.md",
+      "git_blob": "c8ee22802013fce89464618c9e14b244f7197dc0",
+      "bytes": 11851,
+      "sha256": "c548e06d79a82c18ffcc53550ab6d076c27279ef9fc47ea18f4b076130107685",
+      "role": "Accepted A2 two-use control and archive result (#1499/#1501)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c34baa826cb846260b96373ae6d8f10c3a189a5a/notes/C-TWO-USE-CONTROL-ARCHIVE-N/RESULT.md"
+    },
+    {
+      "commit": "f341b04f737827d9033e60f452fab77231f7b04a",
+      "path": "notes/C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N/CONTRACT.md",
+      "git_blob": "e47f25e9edc9be150479f570ea1cc9206f8a5ce2",
+      "bytes": 13617,
+      "sha256": "b169abd2d0acb94df780c9c6e104c5695cb03cbcc309cbd582441a3daf9199b0",
+      "role": "Accepted A3 five-source predictive separation contract (#1500/#1503)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/f341b04f737827d9033e60f452fab77231f7b04a/notes/C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N/CONTRACT.md"
+    },
+    {
+      "commit": "f341b04f737827d9033e60f452fab77231f7b04a",
+      "path": "notes/C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N/PROOF.md",
+      "git_blob": "6fc5bc2169854b2e16779ccb06c1562240e5aab5",
+      "bytes": 62282,
+      "sha256": "0ac9c9f98e17cd2c1e99148d98f56fcc90c46aba8c54e5af42ff71977e7ff1df",
+      "role": "Accepted A3 five-source predictive separation proof (#1500/#1503)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/f341b04f737827d9033e60f452fab77231f7b04a/notes/C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N/PROOF.md"
+    },
+    {
+      "commit": "f341b04f737827d9033e60f452fab77231f7b04a",
+      "path": "notes/C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N/RESULT.md",
+      "git_blob": "6b41237e0f795ee22397bcf0f8320e5704f6191d",
+      "bytes": 28611,
+      "sha256": "3b7ef16c9eb7401a014ebb38d2a3e075840618357e315fcf2994ce51fe3ba779",
+      "role": "Accepted A3 five-source predictive separation result (#1500/#1503)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/f341b04f737827d9033e60f452fab77231f7b04a/notes/C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N/RESULT.md"
+    },
+    {
+      "commit": "f341b04f737827d9033e60f452fab77231f7b04a",
+      "path": "notes/C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N/INTERFACE.json",
+      "git_blob": "02c2c409e487936f84f67a52b4e4ddd280c6b324",
+      "bytes": 11086,
+      "sha256": "f373b943275bfa473971ba0155f8784fe21da622fe16f17eccc9a4016b429d92",
+      "role": "Accepted A3 five-source predictive separation interface (#1500/#1503)",
+      "url": "https://github.com/mathorn1973/twist-j/blob/f341b04f737827d9033e60f452fab77231f7b04a/notes/C-FIVE-SOURCE-PREDICTIVE-SEPARATION-N/INTERFACE.json"
+    }
+  ]
+}
