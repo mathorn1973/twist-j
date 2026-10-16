@@ -1,0 +1,1 @@
+NATIVE_CLASSICAL_CONTACT_CENSUS_PASS preparations=625 checkpoints=15625 encodings=5 occupied=51 rejected=5
