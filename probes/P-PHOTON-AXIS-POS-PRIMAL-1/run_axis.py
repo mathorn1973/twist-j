@@ -442,7 +442,7 @@ def run_pipeline(cfg: core.Config, binary: Path, state_root: Path, attempt: int,
 
     lines, terminal = core.analyze(out_dir, cfg)
     (out_dir / "ANALYSIS.txt").write_bytes(("\n".join(lines) + "\n").encode("ascii"))
-    say(f"ANALYSIS_WRITTEN terminal_hidden_until_verify")
+    say("ANALYSIS_WRITTEN")
     if formal:
         repo_root = HERE.parent.parent
         env = {"LC_ALL": "C", "LANG": "C", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONHASHSEED": "0",
@@ -455,7 +455,11 @@ def run_pipeline(cfg: core.Config, binary: Path, state_root: Path, attempt: int,
             (out_dir / "EXPECTED.failed.txt").write_bytes(formal_run.stdout)
             raise SupervisorError("formal verifier failed")
         (out_dir / "EXPECTED.txt").write_bytes(formal_run.stdout)
-    say(f"DRIVER_RESULT COMPLETE terminal={terminal}")
+    if formal:
+        say(f"DRIVER_RESULT COMPLETE terminal={terminal}")
+    else:
+        # Development runs stay blind: only the integrity class is shown.
+        say("DRIVER_RESULT COMPLETE integrity=" + ("FAIL" if terminal == "STOP_INTEGRITY" else "PASS"))
 
 
 def main(argv: Sequence[str]) -> int:

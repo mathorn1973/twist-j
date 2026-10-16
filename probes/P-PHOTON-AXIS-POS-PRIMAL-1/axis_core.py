@@ -153,14 +153,15 @@ FORMAL = Config(
     min_blocks=16,
 )
 
-# Plumbing tests only: small sizes, short schedules, relaxed gates and a seed
-# family that cannot collide with FORMAL.  verify.py never uses it.
+# Plumbing tests only: sizes outside the production set (L <= 6), short
+# schedules, relaxed gates and a seed family that cannot collide with FORMAL.
+# Its estimator output is not opened before the pin.  verify.py never uses it.
 DEVELOPMENT = Config(
     name="DEVELOPMENT",
     seed_prefix=f"DEVELOPMENT|{PROBE_ID}",
-    sizes=(4, 6, 8, 10, 12),
-    fit_sizes=(6, 8, 10, 12),
-    spacing=((4, 1), (6, 1), (8, 1), (10, 2), (12, 2)),
+    sizes=(3, 4, 5, 6),
+    fit_sizes=(3, 4, 5, 6),
+    spacing=((3, 1), (4, 1), (5, 2), (6, 2)),
     endpoints=(32, 64),
     window=32,
     samples=64,
@@ -432,14 +433,14 @@ class MeasureRecord:
     line_moves: tuple[int, ...]
 
 
-def text_lines(data: bytes, label: str) -> list[str]:
+def text_lines(data: bytes, label: str, allow_tab: bool = False) -> list[str]:
     if not data.endswith(b"\n") or b"\r" in data:
         raise IntegrityError(f"{label} is not LF with final LF")
     try:
         text = data.decode("ascii")
     except UnicodeDecodeError as error:
         raise IntegrityError(f"{label} is not ASCII") from error
-    if any(b != 10 and not 32 <= b <= 126 for b in data):
+    if any(b != 10 and not (allow_tab and b == 9) and not 32 <= b <= 126 for b in data):
         raise IntegrityError(f"{label} contains nonprinting bytes")
     return text.split("\n")[:-1]
 
@@ -841,7 +842,7 @@ CHAINS_HEADER = ("chain", "L", "start", "replica", "seed", "spacing", "thermal_e
 
 
 def read_custody(probe: Path, cfg: Config) -> dict[str, dict[str, str]]:
-    lines = text_lines((probe / "CHAINS.tsv").read_bytes(), "CHAINS.tsv")
+    lines = text_lines((probe / "CHAINS.tsv").read_bytes(), "CHAINS.tsv", allow_tab=True)
     if tuple(lines[0].split("\t")) != CHAINS_HEADER:
         raise IntegrityError("CHAINS.tsv header")
     rows = {}
