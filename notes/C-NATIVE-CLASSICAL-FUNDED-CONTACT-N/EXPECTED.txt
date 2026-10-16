@@ -1,0 +1,1 @@
+{"accepted":3018,"blank_budget_all":"8/5","blank_budget_prepared":"2/5","contact_cases":7200,"full_interface":25,"native_admission":"OPEN","native_cycle_start_values":5,"negative_controls":5,"physical_status":"NOT_READY","prepared_interface":5,"rejected_full_store":662,"rejected_underfunded":3520,"scope":"NON-CANONICAL_L1_NEW_CONTACT_ONLY","status":"PASS","translation_rank":2}
