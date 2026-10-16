@@ -290,13 +290,15 @@ ANALYSIS.txt   EXPECTED.txt   RUN.md   RESULT.md
 
 ## Field 4: systematics and frozen analysis
 
-### 4.1 Thermal rule (#757 section 5, unchanged)
+### 4.1 Thermal rule (#757 section 5, line-move condition removed by D1)
 
 At each candidate endpoint the four chains of one `L` are judged together on
 their last 512 macrocycles. A census, cap, prefix-depth, decision-count,
-fingerprint-continuity or sample-format failure is `STOP_INTEGRITY`. The
-earliest endpoint is accepted only if every chain has moved a noncontractible
-line in every direction and, for every sentinel:
+fingerprint-continuity or sample-format failure is `STOP_INTEGRITY`; the exact
+census includes all `4 L^3` line decisions of every macrocycle. The cumulative
+count of nonzero line moves per direction is reported without authority
+(section 9.1, D1). The earliest endpoint is accepted only if, for every
+sentinel:
 
 ```text
 unique state fraction per chain                 >= 0.99
@@ -314,13 +316,12 @@ No endpoint accepted by 8192 is `STOP_MIXING`. No restart with new seeds.
 The analysis replays the rule from the committed thermal records and requires
 it to reproduce every recorded command; a disagreement is `STOP_INTEGRITY`.
 
-### 4.2 Post-measurement gates (#757 section 6, unchanged thresholds)
+### 4.2 Post-measurement gates (#757 section 6; z threshold set by D2)
 
 On the 1024 measurement samples of every chain and every sentinel (spaced
 `m_L` macrocycles apart, section 9):
 
 ```text
-nonzero line move in every direction            per chain, cumulative count
 strictly positive finite variance               per chain
 unique state fraction per chain                 >= 0.99
 Geyer IMS ESS per chain                         >= 128
@@ -328,10 +329,12 @@ rank-normalized split Rhat                      <= 1.03
 folded rank-normalized split Rhat               <= 1.03
 pooled bulk ESS                                 >= 800
 pooled tail ESS                                 >= 400
-hot/cold mean separation                        <= z 3
-first-half/second-half drift in every chain     <= z 3
+hot/cold mean separation                        <= z 4
+first-half/second-half drift in every chain     <= z 4
 fewer than 16 complete blocks (section 4.3) for a sentinel: STOP_MIXING
 ```
+
+Line-move counts are reported without authority, as in 4.1.
 
 Samples are never extended, thinned differently or discarded.
 
@@ -387,15 +390,14 @@ Production is single-host; integrity rests on determinism, the independent
 reader and the replayed analysis. Floating quantities enter only the
 statistics, as in #757.
 
-The inherited post-measurement gates test 64 half-drifts and 16 hot/cold
-separations per `L` at `z <= 3`. For ideal stationary chains the normal-theory
-chance that at least one fires at a given `L` is `1 - (1 - 0.0027)^64`, about
-16%; a synthetic check (200 groups each of independent and of correlated
-AR(1) sentinels, no TWIST data, engineering readout) gave 14% and 17.5%. Over
-five sizes a `STOP_MIXING` without any real mixing defect therefore has a
-probability of roughly one half. The gates are kept as reserved; a
-`STOP_MIXING` must be read with this rate in mind and is not by itself
-evidence of slow mixing.
+The post-measurement gates test 64 half-drifts and 16 hot/cold separations
+per `L`. At the reserved `z <= 3`, the normal-theory chance that at least one
+fires at a given `L` for ideal stationary chains is `1 - (1 - 0.0027)^64`,
+about 16%; a synthetic check (200 groups each of independent and of
+correlated AR(1) sentinels, no TWIST data, engineering readout) gave 14% and
+17.5%, so roughly one half over five sizes. At the frozen `z <= 4` (D2) the
+normal-theory rate is about 0.5% per size, POSTZ4_PLACEHOLDER. A `STOP_MIXING`
+is still not by itself evidence of slow mixing.
 
 The thermal windows are taken every macrocycle, so `ESS >= 64` on 512 values
 needs every sentinel to have `tau_int <= 4` macrocycles at every size. The
@@ -450,7 +452,7 @@ maximum status          C, finite-size evidence at the declared scope
 
 `PREREG.md` cannot hold its own digest and `AXIS_PIN.md` is written after
 it; both are fixed by `SHA256SUMS` and the public pin readback. The table
-below is for D1 and D2 as reserved; it is regenerated if either changes.
+below is for D1 and D2 as decided in section 9.1.
 
 ```text
 d05c9681fa96df49bbccfac34e35a06d43261821c1fb0a5d4e69e0faccaf99e3  2938  README.md
@@ -522,11 +524,11 @@ x86_64 and aarch64 with byte-identical stdout required.
    directly, because this implementation session's publication path appends a
    footer to comment bodies.
 
-### 9.1 Open before the pin: owner decisions D1 and D2
+### 9.1 Owner decisions D1 and D2, taken before the pin
 
-This file cannot be pinned while either item is open. Both concern mixing
-gates only, both rest on pre-data audits without TWIST AXIS values, and the
-choice is recorded here and on #1116 before the pin.
+Both concern mixing gates only, both rest on pre-data audits without any TWIST
+AXIS value, and both were decided by the owner on 2026-10-16 before the pin;
+the decisions are recorded here and on #1116.
 
 **D1, the line-move gate.** The inherited thermal and post-measurement rules
 require a nonzero noncontractible-line move in every direction of every chain
@@ -545,17 +547,19 @@ thermal compute. This is the "purely computational impossibility" for which
 #1116 allows a pre-pin departure from the inherited engineering values. The
 line kernel stays in every macrocycle unchanged; the local heat bath alone is
 ergodic (PR #760), so the line move is an accelerator, not a condition of
-correctness. Options: keep the gate as reserved; or drop the nonzero-move
-condition at every `L` and report the counts without authority, keeping the
-exact census of `4 L^3` line decisions per macrocycle as an integrity check.
-Frozen now: `line_move_gate = ON` (as reserved).
+correctness. Options were to keep the gate as reserved, or to drop the
+nonzero-move condition at every `L`. **Decided: dropped at every `L`** in the
+thermal rule and the post-measurement gates. The counts are reported without
+authority and the exact census of `4 L^3` line decisions per macrocycle stays
+an integrity check (`line_move_gate = OFF`).
 
 **D2, multiplicity of the post-measurement z gates.** Section 4.6 shows that
 at `z <= 3` a perfectly stationary set of chains returns `STOP_MIXING` with a
-probability of roughly one half over five sizes. Options: keep `z <= 3` as
-reserved; or use the thermal value `z <= 4` for the post-measurement drift and
-hot/cold separations as well (about `0.5%` per size for ideal chains, normal
-theory). Frozen now: `z <= 3` (as reserved).
+probability of roughly one half over five sizes. Options were to keep
+`z <= 3`, or to use the #757 thermal value `z <= 4` for the post-measurement
+drift and hot/cold separations as well. **Decided: `z <= 4`.** Every other
+post-measurement threshold is the #757 section 6 value. This departure from
+#757 section 6 was chosen from the synthetic false-alarm rate only.
 
 ## 10. Prior knowledge and pre-pin development, disclosed
 

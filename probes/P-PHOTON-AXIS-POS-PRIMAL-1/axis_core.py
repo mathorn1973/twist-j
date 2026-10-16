@@ -149,10 +149,12 @@ FORMAL = Config(
     window=512,
     samples=1024,
     thermal=Gates(0.99, 64.0, 1.05, 400.0, 200.0, 4.0),
-    post=Gates(0.99, 128.0, 1.03, 800.0, 400.0, 3.0),
+    # Owner decision D2 before the pin: post-measurement z <= 4 (#757 had 3).
+    post=Gates(0.99, 128.0, 1.03, 800.0, 400.0, 4.0),
     b_min=16,
     min_blocks=16,
-    line_move_gate=True,
+    # Owner decision D1 before the pin: line-move counts are reported, not gated.
+    line_move_gate=False,
 )
 
 # Plumbing tests only: sizes outside the production set (L <= 6), short
@@ -171,7 +173,7 @@ DEVELOPMENT = Config(
     post=Gates(0.5, 4.0, 1.5, 20.0, 10.0, 6.0),
     b_min=2,
     min_blocks=4,
-    line_move_gate=True,
+    line_move_gate=False,
 )
 
 CONFIGS = {"FORMAL": FORMAL, "DEVELOPMENT": DEVELOPMENT}
