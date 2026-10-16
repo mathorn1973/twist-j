@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v101
+# TWIST-J Public Canon v102
 
-**Release identity.** Public Canon v101. Normative authority and activation
+**Release identity.** Public Canon v102. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -20,7 +20,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v101 also declares the discrete architecture used to read
+only. Public Canon v102 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -33,7 +33,7 @@ calibration anchor remains the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v101 does not claim
+seed of the two algebraic projections. Public Canon v102 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -138,7 +138,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v101 contains no such
+deriving the architecture from J; Public Canon v102 contains no such
 theorem.
 
 ---
@@ -10222,6 +10222,793 @@ it does not require every native realization to have period ten. A
 ten-periodic readout can coexist with a longer full-state cycle. No Thue-Morse
 memory identification, physical fourth coordinate or characteristic-zero
 Hodge realization is supplied.
+
+### U-RAW-RESIDUE-CONTEXT-BOUNDARY [T]
+
+Action layer: L1.
+
+On the unchanged native U at L1, take every raw input P in F5^4,
+the common receiver C_0=(0,1), origin zero, and k=sum(P) mod 5.
+All arithmetic involving receiver coordinates is in F5. Write
+
+```text
+theta(m)=popcount(m) mod 2,
+S(m)=m-floor(m/2)+floor(m/4)-...,
+(a_k,b_k)=((0,0),(1,0),(1,1),(2,1),(0,2)) for k=0,...,4.
+```
+
+The native raw-residue formula, restated here to fix the interface, is
+
+```text
+sigma_n=(-1)^(n-3), z_n=4+2theta(n-1),
+N_n=S(floor((n-1)/2))-1,
+q_n=z_n+sigma_n(a_k-N_n), r_n=sigma_n(b_k+N_n), n>=3.
+```
+
+Let A be any finite nonempty context set, h:A->A any map, and a_0 a
+common source-independent initialization. Its only update is
+a_(n+1)=h(a_n): no counter, driver, receiver, source or other input
+enters h. If a fixed reader d:A x F5^2->Y returns F(k) at every
+sufficiently late n for each P, then F is constant. Conversely a
+constant F needs only one context value. This allows arbitrary finite
+transients, arbitrary nonlinear readers, and source-dependent waiting
+thresholds.
+
+There is nevertheless a supplied-bit reader with 23 context states.
+Let I0,I1,I2 be startup states and let the other twenty states be
+(sigma,z,nu) in {+1,-1} x {1,4} x F5. For either supplied bit b, put
+
+```text
+h_b(I0)=I1, h_b(I1)=I2, h_b(I2)=(1,1,0),
+t(4)=0, t(1)=1,
+h_b(sigma,z,nu)=(-sigma,4+2b,nu+[b=t(z)]).
+```
+
+Initialize at I0 once and supply b_n=theta(n) at transition n->n+1.
+The reader returns BLANK at startup. At a ready state it forms
+
+```text
+qhat=1+sigma(q-z)+nu, rhat=sigma*r-nu
+```
+
+and decodes (1,0),(2,0),(2,1),(3,1),(1,2), respectively, as
+PRESENT(0),...,PRESENT(4), returning BLANK otherwise. Its output is
+BLANK for n=0,1,2 and PRESENT(k) for every n>=3 and every raw P.
+
+**Proof.** The alternating-floor sum has binary weights
+w_j=(2^(j+1)+(-1)^j)/3, whose residues modulo 5 are (1,1,3,0),
+periodically. Indeed, insert the binary expansion into each floor and
+interchange the finite sums; also w_(j+4)-w_j=5*2^(j+1).
+Consequently disjoint binary supports add theta in F2 and S in F5,
+and shifts by multiples of four preserve both.
+
+Every arithmetic progression contains arbitrarily late m with any
+prescribed (theta(m),S(m) mod 5). To prove this, write its period
+p=2^a r with r odd. Choose L>=4 divisible by 4 with 2^L=1 mod r;
+for r=1 take L=4. Define the integers by their binary supports:
+
+```text
+E=sum_(j=0)^11 2^(jL)+sum_(j=0)^(10r-7) 2^(jL+1),
+O=sum_(j=0)^(r-1) 2^(jL).
+```
+
+All displayed exponents are distinct within each integer. Thus
+E=O=0 mod r, theta(E)=0, S(E)=1 mod 5, theta(O)=1 and
+S(O)=r mod 5: the counts are 10r+6 and r, while modulo r the
+first integer is 12+2(10r-6)=20r. Given m0 and targets t,s, take
+epsilon=t-theta(m0) mod 2 and choose j in {1,...,5} congruent to
+s-S(m0)-epsilon*r mod 5. Choose a multiple H of L exceeding every
+bit position of E and O. Then
+
+```text
+Q=epsilon*O+sum_(i=1)^j 2^(iH)E
+```
+
+is positive, divisible by r, with theta(Q)=epsilon and
+S(Q)=s-S(m0) mod 5. Its summands have disjoint supports. For a
+sufficiently large multiple K of L, K>=a and beyond the support
+of m0, m=m0+2^K Q exceeds any given bound, is m0 mod p, and
+has the prescribed theta and S. This proves the progression assertion.
+
+The orbit of a finite autonomous context is eventually periodic with
+some period p. There are finitely many P, so take a common late
+threshold and an odd n0=2m0+1 beyond it. The progression assertion
+with m=m0 mod p gives arbitrarily late odd n=2m+1 with the same
+context, since n-n0=2(m-m0) is a multiple of p. At these times
+sigma_n=1 and z_n=4+2theta(m). For each k the receiver therefore
+visits every point of
+
+```text
+R_k=L_(1+c_k) union L_(4+c_k),
+c_k=a_k+b_k, L_u={(q,r):q+r=u}.
+```
+
+The five sum sets are {1,4},{2,0},{3,1},{4,2},{3,1}. Their
+overlap graph is connected: R0 meets R2 and R3, R3 meets R1,
+and R2=R4. The fixed reader at the common context forces F equal
+on every connected pair, hence constant. A constant reader proves
+the converse.
+
+For the supplied-bit construction, the ready state at n=3 is
+(1,1,0)=(sigma_3,z_3,N_3). The exact identity
+
+```text
+N_(n+1)-N_n=[theta(n)=theta(n-1)] mod 5
+```
+
+follows directly: for odd n both sides vanish; at n=2m the change
+S(m)-S(m-1) is the alternating sum of nu_2(m)+1 ones, equal to
+1 for even nu_2(m) and 0 for odd nu_2(m). The identity
+theta(m)-theta(m-1)=1-nu_2(m) mod 2 gives the same condition
+for equality of the two consecutive driver bits. The update therefore
+maintains (sigma_n,z_n,N_n) by induction. Substitution into the
+reader restores C_3=(1+a_k,b_k), proving its five-label output.
+
+Twenty-three is an existence upper bound, not a minimum. The bit
+port, synchronization and initialization are supplied premises;
+reversibility, native implementation and physical acquisition of the
+bit are not conclusions. BLANK denotes readiness, not source absence.
+The autonomous obstruction does not cover source-dependent memory,
+larger observations, driven context or unbounded context.
+
+### CONTEXT-COMPLETE-PRODUCT-LIFT-OBSTRUCTION [T]
+
+Action layer: L1.
+
+Fix b in {0,1}. On the twenty-state carrier
+C={+1,-1} x {1,4} x F5, define
+
+```text
+t(4)=0, t(1)=1,
+h_b(sigma,z,nu)=(-sigma,4+2b,nu+[b=t(z)]).
+```
+
+For every nonempty set M, no bijection L:C x M->C x M satisfies
+pi L=h_b pi on every state, where pi(c,m)=c. The same conclusion
+holds after adjoining I0,I1,I2 and extending h_b by
+I0->I1->I2->(1,1,0). M need not be finite.
+
+**Proof.** Any surjective factor of a surjective map is surjective.
+Given c', choose an output above c'; surjectivity supplies a
+preimage d, and then c'=pi L(d)=h_b(pi d). But the ready h_b
+has only ten images, since its output z is fixed and each sign and
+nu occurs. The enlarged h_b has no preimage of I0. Both contradict
+the necessary surjectivity. This is an obstruction to the prescribed
+complete-product law, including all occupied helper states. Changing
+off-preparation behavior, using a different invariant carrier, or
+changing the context map changes its scope. It is not an obstruction
+to every reversible observer.
+
+### FIELD-RETAINED-CONTACT-ARCHIVE [T]
+
+Action layer: L1.
+
+Use the complete two-cell integer work-record carrier of
+FIELD-CONSERVATIVE-CHAIN-LAW and FIELD-LOCAL-WORK-RECORD. A cell is
+c=(m,b,E,M,r), with m,b triples of Z^4 vectors, E in Z^4,
+M in Z^2 and r in N0. Its energy is
+
+```text
+h(c)=sum_i Q(m_i)+sum_i Q(b_i)+Hraw(E,M)+r,
+Hraw(E,M)=||E||^2+||M||^2+E^T C M.
+```
+
+The full state X=(c_S,c_R,eta,p) has eta in N0, p in Z/5Z,
+and Htot=h(c_S)+h(c_R)+eta+1. Here Q,C,G,F and the complete
+G-acceptance bit a_G are exactly those of the canonical four-edge,
+two-face work-record chain. The step is T=F B A Ghat: first the
+recorded local reactions, then swap source stock with eta, then swap
+eta with receiver stock, then the local F maps. Its intermediate
+stocks (s,t,u) become (u,s,t). Ghat and F preserve each cell energy.
+
+Define three additional receiver contacts S01,S02,S12. They leave
+the source, m,M,eta,p fixed. Put chi(x)=sum_j x_j. For each row
+use the listed numerator d and vector v:
+
+| Contact | d | v | ||v||^2 |
+|---|---|---|---:|
+| S01 | chi(b0)-chi(b1) | (-2,-2,-1,-1) | 10 |
+| S02 | chi(b2)-chi(b0) | (1,1,3,-2) | 15 |
+| S12 | chi(b2)-chi(b1) | (-1,-1,2,-3) | 15 |
+
+If 5 does not divide d, the entire state is fixed. Otherwise put
+n=d/5, swap the indicated two b vectors and propose
+
+```text
+E'=E+n v, kappa=n^2||v||^2+2n E.v, r'=r-kappa.
+```
+
+Accept this proposal exactly when r'>=0 and the complete reaction
+acceptance bits of the proposed and original cells agree; otherwise
+fix the entire state. These contacts are energy-preserving involutions
+on the complete carrier. Indeed, v is in ker C^T, so the field-energy
+change is kappa and the stock compensates it; swapping two b vectors
+does not change their Q sum. Reversing the swap changes n to -n,
+restores E, and has price -kappa. Both endpoint stocks are legal
+and equality of the two acceptance bits is symmetric. Every accepted
+edge therefore reverses, and every refused state remains fixed.
+
+Index these contacts by k=0,1,2 and set F_k=S_k T. Define at
+any final old state Y its effective price and one-step receiver gain:
+
+```text
+lambda_k(Y)=r_R(Y)-r_R(S_k Y),
+g_k(Y)=h(c_R(Y))-h(c_R(F_k^-1Y)).
+```
+
+Then on the entire occupied carrier
+
+```text
+g_k(Y)=r_R(Y)-eta(Y)-lambda_k(Y).
+```
+
+The exact least supplementary alphabet at this Y for reading the
+last gain has size q1(Y)=#{lambda_0(Y),lambda_1(Y),lambda_2(Y)}.
+A common three-value alphabet suffices and is necessary. For a known
+horizon n the distinct ordered gain archives satisfy
+
+```text
+A_0(Y)={()},
+A_n(Y)=union_k {(a,g_k(Y)):a in A_(n-1)(F_k^-1Y)}.
+```
+
+Their exact local reading minimum is |A_n(Y)|. There exist a fixed
+Y* and a positive L such that |A_(mL)(Y*)|>=3^m for every m>=1,
+even with the initial state fixed to Y*. Thus no fixed finite
+supplementary alphabet reads every horizon in this class.
+
+**Proof.** For Z=T X, the stock rotation gives
+h(c_R(Z))=h(c_R(X))-t+s, r_R(Z)=s and eta(Z)=t.
+Apply this identity to Z=S_k Y. Since S_k preserves receiver
+energy and eta and is involutive, it gives the stated gain formula.
+Refused contacts have effective price zero regardless of the raw
+unfunded proposal. Different gains require different codes at fixed
+Y; coding the rank of each distinct gain attains the lower bound.
+The last letter k has unique predecessor F_k^-1Y, proving the
+archive recursion. The same code argument, using lexicographic rank
+of distinct tuples, proves its exact minimum. A known fixed word
+already specifies the inverse history and needs no additional code.
+
+For sharpness set the source cell to zero, eta=p=0, and take the
+receiver
+
+```text
+v=(1,0,0,0), m=(0,0,0), b=(5v,10v,-15v),
+E=(-1,-1,7,-8), M=(0,0), r=0.
+```
+
+Call the full state Y*. Zero matter is neither reactive triple, so
+G is the identity before and after all three contacts; their guarded
+proposals all accept. The three n values are -1,-4,-5. Their field
+vectors become (1,1,8,-7), (-5,-5,-5,0), (4,4,-3,7), and their
+prices are 0,-40,-25. The resulting stocks are 0,40,25.
+Here Q(v)=6, the b energy is 2100, the initial Hraw is 115,
+and every contact preserves receiver energy 2215. Since eta=0,
+the gain formula gives g_0(Y*)=0, g_1(Y*)=40, g_2(Y*)=25.
+The complete energy is 2216. This proves necessity of three codes.
+
+Every complete fixed-energy shell is finite. For M=(u,w) and
+z=(a,b,c,d), the canonical forms obey the exact identities
+
+```text
+4Hraw(E,M)=||2E+CM||^2+u^2+(u+w)^2,
+4Q(z)=9(a+b+c+d)^2+(a-b+c-d)^2
+      +14((a-c)^2+(b-d)^2).
+```
+
+Each vanishes only at the zero vector, hence is positive definite;
+bounded energy bounds all integer coordinates and all nonnegative
+stocks, and p has five possibilities. Each F_k permutes the finite
+shell Htot=2216. Choose a common positive multiple L of their
+permutation orders. Each constant word k^L is a loop at Y* whose
+last gain is g_k(Y*). Concatenating m independently chosen loops
+gives 3^m distinct gain archives with identical initial state, final
+state and horizon mL, distinguished at the last step of the first
+differing block. No numerical bound on L is asserted.
+
+An exact extension with unbounded memory capacity is
+
+```text
+Bctx(X,a,b)=(F_(b mod3)X,3a+(b mod3),floor(b/3)), a,b in N0,
+Bctx^-1(Y,a',b')=(F_(a' mod3)^-1Y,floor(a'/3),3b'+(a' mod3)).
+```
+
+Euclidean division proves both inverse identities on every occupied
+register state. After n steps,
+
+```text
+a_n=3^n a_0+sum_(j=1)^n k_j 3^(n-j), b_n=floor(b_0/3^n).
+```
+
+Thus a_n mod3^n retains the entire chosen word even for occupied
+a_0. Inverting the word recovers the archive. Any finite word is
+preloaded by b_0=sum_j k_j 3^(j-1)+3^n t, t in N0; any fixed
+finite b_0 eventually supplies only zeros. The old Htot remains
+conserved. No energetic or physical realization of these unbounded
+registers, or native admission of the added contacts, follows.
+
+### SIGNED-PORT-OCCUPIED-REVERSIBILITY [T]
+
+Action layer: L1.
+
+Work at L1 over Q on the finite declared lattice domain below.
+Let D3={x in Z^3:sum_i x_i is even}. Let B contain every D3 vector
+of squared norm 2,4,8,10 or 16, with respective positive weights
+6,1,15,1,1 divided by 324. Their multiplicities 12,6,12,24,6 give
+sum_(d in B) rho_d=8/9. Put Bstar=B union{0}, and set
+
+```text
+y0=(0,0,0), y1=(1,1,0), y2=(1,0,1),
+y3=(0,1,1), y4=(2,0,0), Y={y0,...,y4},
+R=(y0,y1,y2,y3), D=Y+Bstar+Bstar.
+```
+
+Let L act on Q^D by zero extension outside D:
+(Lf)(x)=(8/9)f(x)-sum_(d in B) rho_d f(x+d).
+Thus the full diagonal is retained at boundary sites. Let
+P:Q^4->Q^D insert coordinates at the ordered ports R and put
+
+```text
+C=2PP^T, Dg=I+C/2, J=I-C/2, H=2I-L,
+E(u,v)=(||v-u||^2+u^T L v)/2.
+```
+
+For arbitrary occupied wave coordinates u,v and input a in Q^4,
+define the coupler and its inverse by
+
+```text
+w=Dg^-1(Hv-Ju+4Pa), p=P^T(w-u)/2, b=a-p,
+Couple((u,v),a)=((v,w),b),
+u=Dg^-1(Hv-Jw+4Pb), a=b+P^T(w-u)/2.
+```
+
+This is a bijection and
+E(v,w)-E(u,v)=2||a||^2-2||b||^2. On two ordered input and
+output tape slots A=(A0,A1), Btap=(B0,B1), each slot in Q^4,
+and pointer k in Z/2Z, the complete map
+
+```text
+((u,v),(A0,A1),(B0,B1),k)
+  ->((v,w),(A1,B1),(b,B0),k+1), a=A0
+```
+
+is a bijection conserving the positive quadratic form
+
+```text
+Efull=E(u,v)+2(||A0||^2+||A1||^2+||B0||^2+||B1||^2).
+```
+
+To invert output ((v,w),(alpha0,alpha1),(beta0,beta1),k'), use
+the inverse coupler with b=beta0, then return
+((u,v),(a,alpha0),(beta1,alpha1),k'-1).
+
+**Proof.** Dg is diagonal with entries 1 or 2. Substitute
+a=b+P^T(w-u)/2 into the forward equation; since C=2PP^T,
+collecting terms yields Dg u=Hv-Jw+4Pb. Reversing this algebra
+proves the other inverse identity. Symmetry of L gives
+
+```text
+E(v,w)-E(u,v)=(w-u)^T(w+u-Hv)/2.
+```
+
+The coupler equation gives w+u-Hv=2P(a+b), and
+P^T(w-u)=2(a-b), proving the exchange identity. The tape map
+adds b and removes a while merely permuting the three old other
+slots, so it conserves Efull and the displayed inverse restores
+every occupied slot.
+
+For the zero extension f of a vector on D,
+f^T L f=(1/2)sum_(x in D3,d in B) rho_d(f(x)-f(x+d))^2.
+This is nonnegative and vanishes only for f=0: the positive edge
+(1,1,0) forces equality along an infinite line, incompatible with
+nonzero finite support. The squared-difference bound also gives
+f^T L f<=16||f||^2/9. With m=(u+v)/2,d=(v-u)/2,
+
+```text
+E(u,v)=(m^T L m+d^T(4I-L)d)/2,
+```
+
+so E is positive definite. The extra pointer is a finite label;
+this asserts positivity in wave and tape amplitudes.
+
+For the prepared two-cut statement define s=sum_i z_i and S:Q^4->Q^D
+by Sz(y_i)=z_i-s/5 for i=0,...,3, Sz(y4)=-s/5, and zero
+elsewhere. Start from (u,v)=(0,Sz), A=(0,0), Btap=(c0,c1),
+with arbitrary occupied old output slots c0,c1 and k=0. The first
+two steps are cold independently of c0,c1, with
+
+```text
+w0=Dg^-1 H Sz, w1=Dg^-1(Hw0-J Sz),
+final wave=(w0,w1), A=(c1,c0), Btap=(b1,b0), k=0.
+```
+
+The chronological outgoing record is (b0,b1). The first new wave
+has support in Y+Bstar, and the second in D, so zero extension of
+these first two finite-domain steps agrees with the infinite-lattice
+coupler. The prepared source energy is
+(||z||^2-s^2/5)/2, obtained by expanding ||Sz||^2/2.
+Old output slots and their energies remain present. Equality with
+infinite-lattice evolution is asserted only for this prepared two-cut
+scope. Continued finite-domain motion is reversible but supplies no
+cold renewal, discarded record or growing material archive. The
+finite slot count is not a finite alphabet or finite precision bound.
+
+### FUNDED-CONTACT-INVOLUTION [T]
+
+Action layer: L1.
+
+Retain the rational signed-port carrier, S,H,Efull of the preceding
+claim. Let retained source coordinates q,r in F5 determine
+
+```text
+ell(0),...,ell(4)=(0,1,2,-2,-1),
+eta(q,r)=(ell(q)/2,(ell(r)+1)/2,0,0), a=S eta(q,r).
+```
+
+Adjoin a rational store e in [0,B], B>=0, a signed rational
+ledger w, and direction sigma in {+1,-1}. Assign the same energy
+to both directions. Keep q,r,u and every other coordinate fixed
+while proposing v->v+sigma*a. Its exact energy difference is
+
+```text
+Delta_sigma=sigma*<v-Hu/2,a>+||a||^2/2.
+```
+
+Define H_B on every occupied state by
+
+```text
+if 0<=e-Delta_sigma<=B:
+  (v,e,w,sigma)->(v+sigma*a,e-Delta_sigma,w+Delta_sigma,-sigma);
+otherwise:
+  fix the whole state.
+```
+
+Then H_B is an involution and preserves Efull+e, Efull-w and
+e+w. For blank loading with u=v=0, direction+1 and a full store,
+the sharp common budget is 2/5 on the five first native receiver
+values {(0,4),(1,4),(1,0),(2,0),(0,1)}, and 8/5 on all 25
+receiver values. No finite B funds all occupied wave states. In
+the class that retains no changed control/direction record and uses
+identity on refusal, the one-direction funded translation need not
+be injective; two retained directions suffice by the construction.
+
+**Proof.** Expanding the quadratic energy gives Delta_sigma.
+Following an accepted step, the proposal with the reversed direction
+has energy change -Delta_sigma and proposes the old store e,
+which lies in [0,B]. It therefore accepts and restores v,e,w
+and sigma. A refused state is unchanged and remains refused. The
+three conservation identities follow immediately from the updates.
+This proof applies to every occupied wave, store, ledger and tape
+state and uses only that a's source coordinates are retained.
+
+For a blank load, write z0=ell(q)/2,z1=(ell(r)+1)/2. Expansion
+of the zero-sum five-site encoding gives
+
+```text
+||a||^2/2=(4z0^2+4z1^2-2z0*z1)/10.
+```
+
+On the five listed first receivers these costs are respectively
+0,1/10,3/20,2/5,2/5. On all 25 values,
+z0 is in {-1,-1/2,0,1/2,1} and z1 is in
+{-1/2,0,1/2,1,3/2}. Separate convexity bounds the maximum
+by the four rectangle corners; their costs are 2/5,8/5,3/5,1,
+and the corner attaining 8/5 is (q,r)=(3,2). The listed maxima
+are necessary because they are attained, and sufficient because a
+full store of that size funds every blank load in the respective set.
+
+For any nonzero a, occupied states u=0,v=t*a give
+Delta_+=(2t+1)||a||^2/2, unbounded for rational t. Thus the
+blank budgets are not universal occupied-state budgets. To see the
+one-direction collision, take (q,r)=(0,1), a=S(0,1,0,0),
+B=2/5. The blank (u,v,e,w)=(0,0,B,0) maps to
+Z=(0,a,0,B). Z's next forward cost is 6/5, so it refuses and
+also maps to Z. A retained ledger alone does not distinguish these
+two preimages. One direction therefore fails for this fixed rule,
+whereas the two-direction involution works. This is not a minimum
+over all possible controllers or refusal conventions.
+
+The contact and its source encoding are supplied L1 operations.
+These conclusions do not derive a native compilation, physical work
+reservoir, physical direction energy, duration, or apparatus
+completeness. Bounded energy does not bound rational precision.
+
+### Native two-message reading contracts
+
+All coordinates lie in F5. A checkpoint is x=(a,b,c,d,q,r), its trace is
+z=a+b+c+d+q+r, and the native update at time n is
+
+    x_(n+1)=T_(theta_n)(x_n),
+    T_t(x)=g_(z+2t)(x),  theta_n=popcount(n) mod 2.
+
+The five generators are
+
+    g0=(b,a,d,c,q,r),
+    g1=(-c,-d,-a,-b,-q,-r),
+    g2=(2-c,1-d+r,2-a,1-b-r,1-q,-r),
+    g3=(2-a,1-b,3-c,4-d,1-q,1-r),
+    g4=(2-a,1-b,3-c,4-d,2-q,1-r).
+
+Each g_j is an affine involution. The selected map T_t need not be
+injective: its trace action is
+
+| Input z | 0 | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|---|
+| T0 trace | 0 | 4 | 0 | 4 | 4 |
+| T1 trace | 2 | 1 | 1 | 3 | 1 |
+
+Introduce the affine coordinates
+
+    A=a+c, B=b+d, C=a-c-2, D=b-d-1.
+
+The chart (z,A,B,C,D,q) has inverse
+
+    a=3(A+C+2), c=3(A-C-2),
+    b=3(B+D+1), d=3(B-D-1), r=z-A-B-q.
+
+A reading consists of one fixed observation R and one fixed total decoder
+G. Its six semantic labels are BLANK and PRESENT(k), k in F5, with BLANK
+distinct from PRESENT(0). Neither R nor G is supplied with n, history or
+the preparation labels. Two independent labels lambda,mu are chosen in the
+initial preparation. The prescribed semantic sequence from origin zero is
+
+    BLANK, PRESENT(lambda), BLANK, PRESENT(mu), PRESENT(mu), ... .
+
+Three conditions must be distinguished: a common raw initial receiver value
+across preparations; an exact raw reset within each preparation; and a
+common decoded BLANK. The last condition does not imply the first. The
+checkpoint equality x2=x0 also does not reset the autonomous state (n,x).
+
+On X14={z in {1,4}}, the selected generators are g1,g3,g4 and act by
+
+    g1:          (z,A,B,C,D) -> (-z,-A,-B,C,D),
+    selected g3/g4:         -> ( z,-A,-B,-C,-D).
+
+In particular X14 is closed under either driver bit. The registered
+recurrent-support theorem states that an actual synchronized trajectory
+visits every point of its protected sign fibre arbitrarily late. Here the
+protected vector is V=(A,B,zC,zD), and the sign fibre is the full inverse
+image of {V,-V} in X14. Consequently any fixed checkpoint function that is
+eventually constant on such a trajectory has that value on its complete
+sign fibre. This recurrence is a theorem about the actual Thue-Morse word,
+not an inference from connectivity under freely selected controls.
+
+### U-ORIGIN-AFFINE-COMMON-RESET-BOUND [T]
+
+Let E be any preparation family, R(x)=Lx+h any affine observation with any
+finite number of F5 coordinates, and G any fixed total decoder. If every
+origin-zero preparation has the same R(x2)=r_star, then there are at most
+two raw values R(x3). Hence the five-valued second-message requirement at
+n=3 is impossible. If additionally G(r_star)=BLANK and each preparation
+has an eventually constant nonblank output at any finite onset, there is
+at most one eventual nonblank label across the family.
+
+Proof. The first bits are 0,1,1. The trace table gives z2 in {1,2}.
+The next map is g3=-x+t3 on z2=1 and g4=-x+t4 on z2=2, where
+
+    t3=(2,1,3,4,1,1), t4=(2,1,3,4,2,1).
+
+Thus R(x3) belongs to
+
+    {-r_star+2h+L t3, -r_star+2h+L t4}.
+
+No restriction on preparation coding or decoder linearity was used. For
+eventual retention, z2=1 puts x2 in the same recurrent sign fibre as x3,
+since V(x3)=-V(x2). A nonblank eventual label would then equal the blank
+value at x2, a contradiction. Every remaining preparation has z2=2 and
+therefore the same raw R(x3)=-r_star+2h+L t4. Recurrence at x3 makes its
+decoded value the unique possible eventual label. This proves both bounds.
+
+This is a common-raw-reset theorem. It does not exclude different raw blank
+values, nonlinear observations, finite retention, added context or changed
+dynamics.
+
+### U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT [T]
+
+For the origin-zero family
+
+    E(lambda,mu)=(3(lambda+3),3(mu+1),3(-lambda-1),3(-mu-1),0,1),
+
+there is a fixed global bijective chart F5^6 -> F5^2 x F5^4 whose first
+two coordinates have one common initial/reset value and give the required
+semantic history. Two F5 observation coordinates are minimal. The raw
+(q,r) port is message-independent at every common time; this chart is not
+an autonomous native receiver factor.
+
+Proof. Define tau=zA^3+1-A^4. On z in {1,4}, tau is 1 if A=0 and z/A
+otherwise, so it is nonzero. Define Phi by its trace sheets:
+
+    z=0:   (z,C,A,B,D,q),
+    z=2:   (z,q,A,B,C,D),
+    z=1,4: (z,tau D,A,B,C,q),
+    z=3:   (z,D,A,B,C,q).
+
+Its inverse reads A,B from the third and fourth entries; the other entries
+give C,D,q directly except on z=1,4, where D=T/tau. The affine inverse
+above completes the recovery. Thus both compositions are identity on all
+15625 points, including A=0. With R=(z,T), use BLANK on z=2,3 and PRESENT(T)
+on z=0,1,4.
+
+Initially (z,A,B,C,D,q)=(2,1,0,lambda,mu,0), so Phi(E)=(2,0,1,0,lambda,mu).
+The actual first three selected maps are g2,g2,g4, giving
+
+| n | z | A | B | C | D | q |
+|---|---|---|---|---|---|---|
+| 0 | 2 | 1 | 0 | lambda | mu | 0 |
+| 1 | 0 | 3 | 2 | lambda | mu+2 | 1 |
+| 2 | 2 | 1 | 0 | lambda | mu | 0 |
+| 3 | 1 | 4 | 0 | -lambda | -mu | 2 |
+
+In particular x2=x0 and R0=R2=(2,0), R1=(0,lambda), R3=(1,mu).
+For n>=3, A remains in {1,4}; the tail actions preserve both zC/A and
+zD/A. Their values are lambda,mu. Hence T=zD/A=mu throughout the tail.
+This is closure and induction, without an assumption of global injectivity.
+
+The quotient (z,q,r) evolves by the selected restriction of
+
+    (z,q,r), (-z,-q,-r), (2-z,1-q,-r),
+    (2-z,1-q,1-r), (3-z,2-q,1-r).
+
+Every preparation starts at (2,0,1); thus this quotient and the selected
+word are common across the 25 pairs forever. At each fixed time a common
+word of bijective generators preserves 25 distinct prepared full states.
+This is a statement about the prepared family, not about invertibility of
+the state-selected map on the whole space. Since E(0,0) and E(1,0) have
+the same R0 and different R1, R alone has no closed next-state law.
+The six-label cardinality bound proves that fewer than two coordinates
+cannot suffice.
+
+For completeness, this particular global T has reduced polynomial degree
+exactly nine. With e_j(z)=1-(z-j)^4,
+
+    T=e0 C+e2 q+(e1+e4)(zA^3+1-A^4)D+e3 D.
+
+The unique reduced representative has coordinate exponents at most four.
+Since e1+e4=3z^4+3z^2, its coefficient of z^4 A^4 D is 2 and cannot
+cancel; all terms have total degree at most nine. Uniqueness follows from
+the degree-four univariate root bound by induction on the coordinates.
+An invertible affine change preserves minimum total degree by composition
+in both directions. This degree concerns this full-space function, not
+minimum observation degree on the prepared support.
+
+The exact prepared tail for each pair has 20 points:
+
+    z,A in {1,4}, q in F5,
+    B=0, C=lambda*A/z, D=mu*A/z.
+
+Its protected vector is A(1,0,lambda,mu), so the registered recurrence
+lemma gives the whole 20-point fibre as actual tail support. Across the
+25 pairs the tail has 500 points. The 25 blank and 25 first-message
+points have traces 2 and 0 and are disjoint from it. The required set S
+therefore has exactly 550 points. A fixed selected T_t maps each 20-point
+tail two-to-one onto its ten points with trace 4+2t; the restriction from
+either known input trace sheet is a bijection. Forward closure, not
+surjectivity onto the full tail, is the property used for retention.
+
+### U-FIXED-FAMILY-READOUT-COMPLEXITY [T]
+
+On the family E above, with the six prescribed labels and an arbitrary
+fixed total decoder, the least affine observation dimension is three.
+For observations with exactly two polynomial coordinates, the least
+possible maximum total degree is two. These minima concern the fixed
+550-point family and require only common semantic blank, not common raw
+blank values for the competing observations.
+
+Proof of the affine lower bound. The preparation has directions
+
+    v_lambda=(3,0,2,0,0,0), v_mu=(0,3,0,2,0,0).
+
+The linear part of g2 fixes both, and that of g4 is -I. For an affine
+observation F with linear part M put alpha=Mv_lambda, beta=Mv_mu. At the
+blank, first and first-tail checkpoints its values have the forms
+
+    u0+alpha*lambda+beta*mu,
+    u1+alpha*lambda+beta*mu,
+    u3-alpha*lambda-beta*mu.
+
+If alpha,beta are independent in F5^2, the blank image fills all F5^2 and
+the decoder would be blank everywhere. Otherwise their span has dimension
+at most one. The first-message requirement then forces beta=0 and
+alpha!=0: any nonzero beta would allow changing lambda while compensating
+with mu at the same observed first-message point. But beta=0 makes the
+third displayed value independent of mu, a contradiction. The same
+argument covers one coordinate. Thus dimension at least three is necessary.
+
+An explicit three-coordinate witness is
+
+    f1=2b+d, f2=3a+q, f3=2a+3b+r.
+
+Set h=2f1+f2+f3=B+z-A. On blank points h=1; at the first-message points
+h=4 and lambda=1-f2. On the tail B=0, A,z in {1,4}, so h=z-A belongs to
+{0,2,3}, while D=2f1-1. If h=0 then Az=1; if h=2 or 3 then Az=-1.
+Consequently the following total decoder gives the required labels:
+
+    h=1: BLANK;
+    h=4: PRESENT(1-f2);
+    h=0: PRESENT(2f1-1);
+    h=2 or 3: PRESENT(1-2f1).
+
+This proves the upper bound without a numerical search.
+
+For the degree-two witness use
+
+    P=A+2z, Q=(1+2B)D+3BC,
+    delta(P,Q)=BLANK if P=0, otherwise PRESENT(-P^2 Q).
+
+At n=0,2 the pair is (0,mu), giving BLANK. At n=1 it is (3,lambda),
+and -3^2=1. On the tail B=0, so Q=D; since A^2=z^2=1,
+
+    P^2=A^2+4Az+4z^2=-Az != 0,
+    -P^2 Q=AzD=zD/A=mu.
+
+P is linear and Q has degree at most two. The affine lower bound excludes
+maximum degree at most one, proving the sharp minimum two.
+
+A decoder exists on any finite required set if and only if no observed
+code is shared by different semantic labels. The displayed proof establishes
+that condition without requiring one raw code per label. In particular the
+raw blank pairs (0,mu) vary across preparations and retain the second
+message. The two-coordinate witness is not asserted to extend to a global
+bijective chart. Earlier exclusions within prescribed exact-message codes
+are different restrictions and are not contradicted by this construction.
+
+### U-ALTERNATIVE-AFFINE-SEMANTIC-READOUT [T]
+
+Allow an alternative joint preparation and require only common decoded
+blank. There is an origin-zero affine rank-two preparation and an affine
+rank-two observation with the prescribed history. The least observation
+degree is one and the least number of F5 observation coordinates is two
+in this enlarged class.
+
+Proof. Put r0=3(1+mu-lambda), and set
+
+    E_alt=(3mu,3,3mu,2,2-mu-r0,r0),
+    X=A+D, H=C+z,
+    delta(X,H)=BLANK if H=0, otherwise PRESENT(H^2 X).
+
+The preparation directions (0,0,0,0,3,2) and (3,0,3,0,1,3) are independent.
+The observation's linear rows (1,1,1,4,0,0) and (2,1,0,1,1,1) have rank
+two, and its offsets are (4,3). Initially A=mu,B=D=0,C=3,z=2. The actual
+prefix g2,g2,g4 gives raw readings
+
+    (mu,0), (-lambda,3), (mu,0), (-mu,3).
+
+They decode to BLANK, PRESENT(lambda), BLANK, PRESENT(mu), and x2=x0.
+At n=3, B=D=0,C=2,z=1,A=-mu. Both selected tail actions preserve
+
+    B=D=0, C in {2,3}, z in {1,4}, 2ACz=mu.
+
+Since C^2=4 and z^2=1, H^2=(C+z)^2=2Cz!=0. With X=A on this tail,
+H^2 X=mu forever. No division by A occurs, so mu=0 gives PRESENT(0)
+throughout the tail rather than BLANK.
+
+For each mu, the tail is parameterized by C in {2,3}, z in {1,4}, r in F5,
+with A=2Cz*mu, b=3,d=2, a=3(A+C+2), c=3(A-C-2), q=z-A-r. These are
+20 distinct points per mu, hence 100 in all. Actual times 3,4,7,8 give
+(C,z)=(2,1),(2,4),(3,4),(3,1). At each such time, varying lambda for a
+fixed mu ranges over every r because the common-time map of r has slope
+1 or -1. Those times therefore cover the complete tail. Together with
+25 blank and 25 first-message points on distinct trace sheets, the exact
+required support has 150 points.
+
+A constant observation cannot give the required labels, so degree zero
+is impossible; the affine witness attains degree one. One F5 coordinate
+has only five codes and cannot produce six labels, while this witness
+attains two. Its raw ready/reset value is (mu,0), not a common value across
+preparations. Thus it neither violates the common-raw-reset theorem nor
+changes the fixed 550-point family's affine and quadratic minima.
+
+### Physical and information scope of the four reading claims
+
+These are L1 mathematical results on stipulated native initial states and
+declared access classes. Both messages are present initially. A global
+coordinate reading, an affine observation followed by a nonlinear decoder,
+and a physically implemented local detector are different objects. None
+of these theorems derives new independent loading, source depletion,
+disjoint-subsystem transfer, native implementation of the observation,
+energy funding, physical occurrence, indefinite renewal or an L2-L6 lift.
+The exact checkpoint resets do not reset the counter or constitute repeated
+operation of a physically closed apparatus.
 
 ## 3. The kernel and the census
 

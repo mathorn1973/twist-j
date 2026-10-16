@@ -41,6 +41,27 @@ ADMITTED_CONTEXT_PATHS = {
         "probes/P-KERNEL-Z6-SYNCHRONIZATION-1/RESULT.md",
         "notes/C-NATIVE-FIBRE-PENTIT-WIGNER-N/PREREG.md",
     }),
+    "P-TWO-USE-READOUT-FAILURE-REGRESSION-2": frozenset({
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/apparatus.py",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/verify.py",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/DOMAIN.tsv",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/CONTRACT.md",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/PROOF.md",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/PREREG.md",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/CODE_SHA256SUMS",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/EXPECTED.txt",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/RUN.md",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/RESULT.md",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/SOURCES.tsv",
+        "probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/SOURCE_PROOF.md",
+        "STATUS.md",
+        "POLICY.md",
+        "AGENTS.md",
+        "canon/CORE.md",
+        "canon/FRONTIER.md",
+        "canon/SHA256SUMS",
+        "LICENSE",
+    }),
 }
 ADMITTED_BUNDLE_PATHS = {
     "P-FRW-INHOM-K1-BACKREACTION-3": frozenset(),
@@ -52,6 +73,11 @@ ADMITTED_BUNDLE_PATHS = {
             "SOURCE.json", "INPUTS.sha256",
         )
     ),
+    "P-TWO-USE-READOUT-FAILURE-REGRESSION-2": frozenset({
+        "probes/P-TWO-USE-READOUT-FAILURE-REGRESSION-2/CODE_SHA256SUMS",
+        "probes/P-TWO-USE-READOUT-FAILURE-REGRESSION-2/PROOF.md",
+        "probes/P-TWO-USE-READOUT-FAILURE-REGRESSION-2/SOURCES.tsv",
+    }),
 }
 MAX_BYTES = 5 * 1024 * 1024
 

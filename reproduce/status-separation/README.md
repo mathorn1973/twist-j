@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 153/153 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 164/164 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -809,3 +809,32 @@ The 158-check expected transcript is authored from the 153 unchanged prior
 PASS lines and the five specified new guard descriptions before execution.
 It is not a run receipt. Replay and release approval concern the complete
 subsequently pinned candidate.
+
+
+## Public Canon v102 boundary
+
+Six additional structural guards extend the existing release-accounting chain
+to v102. All thirteen complete current Canon inputs are bound by their exact
+byte counts and SHA-256 values and reconstruct the exact public v101 inputs at
+`b79143fb00839b870686f6cea34e174959060df1`. The v101 layer reads only that
+validated Canon view, then continues its unchanged v100 reconstruction. All
+158 historical predicates and PASS descriptions remain; only their four
+v101 Canon input reads are routed through the new reconstruction. No non-Canon
+path is admitted by v102_previous_bytes.
+
+The six guards bind nine new inline L1 theorem rows: five context results and
+four reader results. They pin complete proof blocks, exact scopes, evidence,
+declarations and dependency additions. Scope-exclusion phrases in those exact
+proofs keep unproved implementation or physical interpretation outside the
+earned scope.
+All 514 prior Registry rows, all 26 H/O owners, gates, Frontier programs, CORE
+selection and the complete 36-directory reproduction inventory are unchanged.
+The current partition is T380/D59/C39/H2/O24/F19: 523 claims and 26 live H/O.
+
+The 164-check expected transcript is authored before execution from the 158
+unchanged prior PASS lines and six specified structural-check descriptions.
+It is not captured verifier stdout, a run receipt, a new experiment or an
+evidence-class promotion. This audit executes no scientific probe. Execution
+and cross-architecture acceptance concern the subsequently pinned complete
+content candidate; other scientific verifier sources and expected outputs
+are not changed by this extension.

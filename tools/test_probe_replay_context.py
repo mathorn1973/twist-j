@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from contextlib import redirect_stdout
+import csv
 import hashlib
 from io import StringIO
 import json
@@ -392,10 +393,43 @@ class ReviewedRegistrationTests(unittest.TestCase):
             if path != prefix + "INPUTS.sha256":
                 self.assertEqual(spec["sha256"], listed[path.removeprefix(prefix)])
 
-    def test_control_changes_select_both_registered_probes(self) -> None:
+    def test_readout_regression_registration_covers_exact_frozen_inputs(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        name = "P-TWO-USE-READOUT-FAILURE-REGRESSION-2"
+        prefix = f"probes/{name}/"
+        entry = context.registrations(root)[name]
+        with (root / prefix / "SOURCES.tsv").open(encoding="utf-8", newline="") as handle:
+            sources = list(csv.DictReader(handle, delimiter="\t"))
+        self.assertEqual(len(sources), 19)
+        self.assertEqual(set(entry["context_files"]), {row["path"] for row in sources})
+        self.assertEqual({row["commit"] for row in sources},
+                         {"b79143fb00839b870686f6cea34e174959060df1"})
+        for row in sources:
+            spec = entry["context_files"][row["path"]]
+            self.assertEqual((spec["sha256"], spec["bytes"]),
+                             (row["sha256"], int(row["bytes"])))
+            context.pinned_blob(root, entry["pin_commit"], row["path"], spec)
+        listed = dict(line.split("  ", 1)[::-1] for line in
+                      (root / prefix / "CODE_SHA256SUMS").read_text().splitlines())
+        local = {**entry["bundle_files"], prefix + "verify.py": entry["verifier"],
+                 prefix + "PREREG.md": entry["prereg"]}
+        self.assertEqual(len(local), 5)
+        self.assertEqual(set(local), {prefix + path for path in listed}
+                         | {prefix + "CODE_SHA256SUMS"})
+        for path, spec in local.items():
+            context.verify_bytes((root / path).read_bytes(), spec, path)
+            context.pinned_blob(root, entry["pin_commit"], path, spec)
+            if path != prefix + "CODE_SHA256SUMS":
+                self.assertEqual(spec["sha256"], listed[path.removeprefix(prefix)])
+
+    def test_control_changes_select_all_three_registered_probes(self) -> None:
         root = Path(__file__).resolve().parents[1]
         expected = [root / "probes" / name for name in sorted(context.registrations(root))]
-        self.assertEqual(len(expected), 2)
+        self.assertEqual({path.name for path in expected}, {
+            "P-FRW-INHOM-K1-BACKREACTION-3",
+            "P-U-EARLY-SOURCE-FIBRE-CONTACT-1",
+            "P-TWO-USE-READOUT-FAILURE-REGRESSION-2",
+        })
         for path in context.REPLAY_CONTROL_PATHS:
             with self.subTest(path=path):
                 result = subprocess.CompletedProcess([], 0, path + "\n", "")
