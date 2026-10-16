@@ -1,0 +1,71 @@
+{
+  "schema": "twist-j.fixed-domain.v1",
+  "scope": "NON-CANONICAL / L1 / primary #1485 finite D",
+  "definition": "D=Y+B0+B0",
+  "lattice": "integer triples of even coordinate sum",
+  "marked_sites": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      2,
+      0,
+      0
+    ]
+  ],
+  "port_order": "first four marked sites",
+  "squared_length_shells": [
+    2,
+    4,
+    8,
+    10,
+    16
+  ],
+  "weights_over_324": [
+    6,
+    1,
+    15,
+    1,
+    1
+  ],
+  "full_diagonal": [
+    8,
+    9
+  ],
+  "ordering": "lexicographic x,y,z",
+  "domain_sites": 705,
+  "domain_file": "DOMAIN.tsv",
+  "domain_bytes": 5029,
+  "domain_sha256": "2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0",
+  "table_header": "x\ty\tz\n",
+  "encoding": "ASCII, TAB columns, LF records including final LF",
+  "preregistration_commit": "a96646c22267d59179a5a96a161c5f6f95ba6255",
+  "scientific_stdout_file": "EXPECTED.txt",
+  "scientific_stdout_sha256": "7850a1ef320738aed5966cad4d9f1f4663b3ae3cabfd328895ce1ebb29d8c8a8",
+  "formerly_asserted_869": "FALSIFIED at this primary definition",
+  "wave_tape_amplitude_dimension": 1426,
+  "not_certified": [
+    "two-use dynamics",
+    "work matrices",
+    "native compilation",
+    "four-cut infinite-lattice equality",
+    "physical readiness"
+  ]
+}
