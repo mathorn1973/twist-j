@@ -1,0 +1,8 @@
+F1 PASS preparations=25 actual_checkpoints=225 updates=200 prefix=2,2,4
+F2 PASS tail_states=100 control_edges=200 actual_cover_times=3,4,7,8
+F3 PASS blank=25 first=25 tail=100 exact_domain=150 zero_messages=INCLUDED
+F4 PASS cross_label_pairs=9375 conflicts=0 output_codes=25 fibres=20x5,5x10
+F5 PASS reader_affine_rank=2 preparation_affine_rank=2 native_states=15625
+F6 PASS independent_rows=150 matrix_dynamics=AGREE
+ROWS_SHA256 47cea3f3a2775ada1a221f558cccfc4d38cbbae14a28d645e59e66fc8ffc6cb2
+RESULT PASS alternate_preparation_affine=YES degree_minimum=1 coordinate_minimum=2

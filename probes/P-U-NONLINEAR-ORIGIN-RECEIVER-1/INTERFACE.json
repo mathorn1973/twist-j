@@ -1,0 +1,61 @@
+{
+  "id": "P-U-NONLINEAR-ORIGIN-RECEIVER-1",
+  "scope": "PUBLIC / NON-CANONICAL / L1",
+  "mathematical_class": "fixed polynomial bijective re-coordinations of F5^6 with a two-F5-coordinate receiver and four-coordinate complement",
+  "dynamics": "unchanged original U on N0 x F5^6",
+  "preparation": {
+    "origin": 0,
+    "labels": "all 25 ordered F5^2 pairs",
+    "ready_receiver": [
+      2,
+      0
+    ],
+    "complement": "(1,0,lambda,mu)",
+    "later_loading": false
+  },
+  "readout": {
+    "map": "R=(z,T) as PROOF.md section2",
+    "current_checkpoint_only": true,
+    "counter_input": false,
+    "history_input": false,
+    "semantic_alphabet": [
+      "BLANK",
+      "PRESENT(0)",
+      "PRESENT(1)",
+      "PRESENT(2)",
+      "PRESENT(3)",
+      "PRESENT(4)"
+    ],
+    "trace": [
+      "BLANK",
+      "PRESENT(lambda)",
+      "BLANK",
+      "PRESENT(mu) forever"
+    ]
+  },
+  "proofs": {
+    "global_chart_inverse": true,
+    "checkpoint_return_at_2": true,
+    "autonomous_counter_return": false,
+    "nonzero_A_tail_invariants": [
+      "z*C/A",
+      "z*D/A"
+    ],
+    "retention": "closed invariant plus induction",
+    "minimum_receiver_F5_coordinates": 2
+  },
+  "access_boundary": {
+    "raw_qr_message_independent": true,
+    "mixed_source_coordinates_read": true,
+    "reader_autonomous_factor": false,
+    "source_depletion": false,
+    "physical_admission": "NOT_PROVIDED",
+    "uniqueness": "NOT_CLAIMED"
+  },
+  "evidence": {
+    "scientific_pin": "91d7fe88a6b964df07e275ec55da96f738b08583",
+    "first_run_sha256": "39053d15006fab354bcbfb1219cb249755bb10dbcf168e1d5ccb12623f25d2a9",
+    "independent_review": "PENDING",
+    "public_two_architecture_replay": "PENDING_AT_FIRST_RESULT"
+  }
+}
