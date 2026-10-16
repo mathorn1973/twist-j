@@ -42,3 +42,20 @@ unchanged.
 - At the commit first adding EXPECTED.txt and RUN.md, the author's result
   package is still unopened. Public push/readback of this record precedes
   the next exposure phase.
+
+## Post-barrier author comparison
+
+First author exposure began 2026-10-16T22:06:12Z: the public PR body and
+full package at ed635a114bc52c4abbc16ea660bd4d89f2d2efde were opened only
+after the public first-run record 8a6902c0dbbe81ea0a66d7d2af043371cac3b5f7.
+The frozen author pin was 423c6f7488b35399ff40fcc30be01df526aba795.
+All six pinned author files remained unchanged. Later inspection included
+the verifier, PROOF, LINEAGE, README, RUN, EXPECTED, RESULT, actual CI logs,
+and author-lineage-only source passages. No author program was imported or
+run as the independent checker. The independently frozen RC PREREG,
+PROOF, SOURCES and verifier were not modified after pinning.
+
+The post-exposure static helper review is part of this RC session. It found
+agreement with the independently frozen derivation and clarified the author's
+nonnegative-time Jordan display using its existing inverse; COMPARISON.md
+records the reasoning without changing the author pin.
