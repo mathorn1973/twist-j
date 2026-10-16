@@ -1,0 +1,159 @@
+{
+  "candidate_id": "C-FUNDED-TWO-USE-EXECUTABLE-2-N",
+  "title": "[LANE I2] Corrective funded two-use executable apparatus note on reconciled G1 geometry",
+  "status": "NON-CANONICAL",
+  "layer": "L1",
+  "parent_program": "#1506",
+  "lane_issue": "#1515",
+  "supersedes": {
+    "candidate_id": "C-FUNDED-TWO-USE-EXECUTABLE-N",
+    "issue": "#1507",
+    "draft_pr": "#1512",
+    "pin_commit": "81a70caa8dbcc61b64276e7d3df5ba84e860d4f1",
+    "result_commit": "d6c48e463e1c7d78e8da828711cdda726f57e00b"
+  },
+  "reconciles_geometry": {
+    "probe_id": "P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1",
+    "domain_path": "probes/P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1/DOMAIN.tsv",
+    "issue": "#1513",
+    "pr": "#1514",
+    "pin_commit": "a96646c22267d59179a5a96a161c5f6f95ba6255",
+    "result_commit": "82ad219401d87c3900011d1e8801ffef4221e05b",
+    "domain_sha256": "2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0",
+    "domain_bytes": 5029
+  },
+  "scoped_corrective_successor": {
+    "probe_id": "P-TWO-USE-TYPED-READOUT-CLOSURE-1",
+    "issue": "#1522",
+    "draft_pr": "#1523",
+    "result_commit": "d334fd1e7ac3dad65fe290297a78ba97beb74a0a"
+  },
+  "correction_notice": "Per #1515 review disposition (2026-10-15), unsupported unpinned summary entries (PORT_A/PORT_B/JUNCTION/TAPE partition counts and C_A/C_B/C_T capacities not defined or tested by verify.py) and the misquoted G1 path are withdrawn and replaced with the actual T01/T08 geometry and stock capacities verified on pin 06d63ae94f609cc54989e410e3c778ce147d22c5. All 9 pinned files and EXPECTED.txt remain untouched (0 diff lines).",
+  "owner_session": "Antigravity-20261015-lane-I2-executable",
+  "lineage_from": "Antigravity-20261015-lane-I-executable",
+  "branch": "incubation/C-FUNDED-TWO-USE-EXECUTABLE-2-N",
+  "base_main_commit": "8b91a935c426036e00ecb300019fd94734addeec",
+  "pin_commit": "06d63ae94f609cc54989e410e3c778ce147d22c5",
+  "pinned_receipt_comment": "https://github.com/mathorn1973/twist-j/issues/1515#issuecomment-6191145416",
+  "pinned_files": {
+    "DOMAIN.tsv": {
+      "bytes": 5029,
+      "git_blob_sha1": "b139d0e7bab0ddd547da9f8624c62808a445ef01",
+      "sha256": "2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0"
+    },
+    "README.md": {
+      "bytes": 9353,
+      "git_blob_sha1": "3c9242d1d0adf249d37c0f509456de79850b81ac",
+      "sha256": "8695306ac7357b30c5851059f73bfe5a7412b3fbc46e3fad1966f7ccf0ed31b4"
+    },
+    "CONTRACT.md": {
+      "bytes": 17073,
+      "git_blob_sha1": "92ebca6cd133bef52b1fa34a05a09b2341e48caf",
+      "sha256": "c285b6afaaf770c01c5b133b3db64cfd00816b453b747c3fb314e12e3a881952"
+    },
+    "PREREG.md": {
+      "bytes": 20437,
+      "git_blob_sha1": "a03a86542472a89ca22a1e16b5738a40ec5a6d86",
+      "sha256": "d3afb6786ba4a4884421a61a3fa0b7edf8b95ac13dea3712a3709ecc4bc98381"
+    },
+    "SOURCES.json": {
+      "bytes": 34845,
+      "git_blob_sha1": "60f9899835092f90548b7d15b650d878188a52ef",
+      "sha256": "48d0537f1f8f6e0c96754c6225faa9a95524890248d39742f4aa944502a68202"
+    },
+    "PROOF.md": {
+      "bytes": 14564,
+      "git_blob_sha1": "6e7a720e3f6f72dd621b97f6f0335014db63c4ae",
+      "sha256": "57855afb3d5fe90cab0e93e1de97d7e4ec9f15b0224837d37d9c83ceed1f063d"
+    },
+    "MIGRATION.md": {
+      "bytes": 106269,
+      "git_blob_sha1": "5ecf27b98a71470dcfca95d2692e6aa587478e01",
+      "sha256": "7a7c9760428cfce8b8a80d9135c664f8c1f5d8c3f8a56d447354b813965832c3"
+    },
+    "apparatus.py": {
+      "bytes": 58364,
+      "git_blob_sha1": "b99d515f5d5ece65647ae920558cdfeb59a49c96",
+      "sha256": "85c18b1b130d6e7d8cf954ffc8e6ad5960f27e5b371ac381e967979bb518dc6d"
+    },
+    "verify.py": {
+      "bytes": 70920,
+      "git_blob_sha1": "484737d20943c5014fe3fa1f2b7aa6978e8e7e64",
+      "sha256": "d093df3dba5d2f82b8a4493ff3a1f3828e3bd9b9b512a3c34e7aa240671c45f8"
+    }
+  },
+  "geometry": {
+    "y_sites": 5,
+    "b_stencil_sites": 60,
+    "b_zero_sites": 61,
+    "y_plus_b_zero_sites": 142,
+    "b_zero_plus_b_zero_sites": 489,
+    "domain_sites": 705,
+    "basis_dimension": 1426,
+    "polarized_bilinear_entries": 2033476,
+    "tested_stock_capacities": [
+      "0",
+      "1/10",
+      "1/5",
+      "2/5",
+      "8224427/10497600",
+      "4/5"
+    ],
+    "sharp_threshold_B_star": "8224427/10497600"
+  },
+  "execution": {
+    "platform": "Darwin",
+    "architecture": "aarch64",
+    "python_version": "3.13.13",
+    "default_mode": {
+      "command": "python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py",
+      "exit_code": 1,
+      "stdout_file": "notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/EXPECTED.txt",
+      "stdout_bytes": 1073,
+      "stdout_sha256": "e3e7063bfdb292d6a8ed6a86c82286c51caf150950eb344d99d6a8565c2eff6a",
+      "stderr_bytes": 1171,
+      "stderr_sha256": "d24433dcb3d568464e6703c50d7eac4703b6abb77ec3c30c24d076309cce3f92",
+      "verdict": "PARTIAL / STOP at T11"
+    },
+    "witnesses_mode": {
+      "command": "python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --witnesses",
+      "exit_code": 0,
+      "stdout_bytes": 20740,
+      "stdout_sha256": "b7996fa6cfc525890892efb6cef02c9acb9098c167ecc8888deffe132e72b896",
+      "stderr_bytes": 0,
+      "witness_summary": "WITNESS_SUMMARY order_W14=10352117/20995200 order_W41=10323947/20995200 order_diff=313/233280 dirty_c1_e0_B0=(-292699/699840,-20263/466560,-20263/466560,-6871/155520) ready_low_ref_sig=(-1,+1) warm_low_ref_sig=(-1,+1) warm_high_ref_sig=(-1,+1)"
+    },
+    "compare_mode": {
+      "command": "python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --compare",
+      "exit_code": 0,
+      "stdout_bytes": 182,
+      "stdout_sha256": "77348e12d9948ebafc15c15ea9904b53ece6a30990ea59a59633a1bef8c21c8d",
+      "stderr_bytes": 0,
+      "protocol": "TWOUSE-COMPARE-v2",
+      "domain_sha256": "2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0",
+      "records": 1200,
+      "digest_sha256": "670f270e88386e2f1f507e24ec0ae71daf1ff6638ea44783b793479291af3dbc"
+    }
+  },
+  "gates": {
+    "T01": "PASS",
+    "T02": "PASS",
+    "T03": "PASS",
+    "T04": "PASS",
+    "T05": "PASS",
+    "T06": "PASS",
+    "T07": "PASS",
+    "T08": "PASS",
+    "T09": "PASS",
+    "T10": "PASS",
+    "T11": "FAIL / STOP (AssertionError: T11.reject_forbidden[tuple]: expected=True, actual=False)",
+    "T12": "UNEXECUTED_IN_DEFAULT_MODE",
+    "T13": "UNEXECUTED_IN_DEFAULT_MODE",
+    "T14": "UNEXECUTED_IN_DEFAULT_MODE",
+    "T15": "UNEXECUTED_IN_DEFAULT_MODE",
+    "T16": "UNEXECUTED_IN_DEFAULT_MODE",
+    "T17": "UNEXECUTED_IN_DEFAULT_MODE",
+    "T18": "UNEXECUTED_IN_DEFAULT_MODE"
+  },
+  "promotion_status": "DO NOT PROMOTE"
+}
