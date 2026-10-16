@@ -52,8 +52,8 @@
       "zero_gate_points": 0,
       "synchronized_tail_points": 500,
       "synchronized_tail_zero_gate_points": 0,
-      "obstruction": "s_h = B + 2A in {2, 3} != 0 for all n >= 0",
-      "retained_message_in_h": "2*lambda + mu mod 5 (5 classes)",
+      "obstruction": "s_h = h_1 + h_2 = B + 2A in {2, 3} != 0 for all n >= 0 (literal h_1 = B + 2A in CONTRACT.md line 107 is refuted at E(0,0) where h_1 = 1 != 2 = B + 2A)",
+      "retained_message_in_h_at_fixed_time_or_A_z": "2*lambda + mu mod 5 (5 classes at fixed common n or fixed (A,z); not stationary across z in {1,4})",
       "qr_port_classes": 1
     },
     "E_alt_150": {
@@ -66,9 +66,15 @@
         "checkpoint": [2, 1, 2, 1, 1, 3],
         "z": 0
       },
+      "prefix_affine_tuples_z_A_B_C_D_q_r": {
+        "n0_and_n2": ["2", "mu", "0", "3", "0", "4+3*lambda+mu", "3+2*lambda+3*mu"],
+        "n1": ["0", "4-mu", "2", "3", "1+4*lambda+mu", "2+2*lambda+4*mu", "2+3*lambda+2*mu"],
+        "n3": ["1", "4*mu", "0", "2", "0", "3+2*lambda+4*mu", "3+3*lambda+2*mu"]
+      },
       "synchronized_tail_points": 100,
       "synchronized_tail_zero_gate_points": 0,
       "tail_obstruction": "d_h = D + 2C = 2C in {1, 4} != 0 for all n >= 3",
+      "retained_message_in_h_at_fixed_time_or_C_z": "mu mod 5 (5 classes at fixed common n >= 3 or fixed (C,z); not stationary across z in {1,4})",
       "qr_port_classes": 25
     },
     "x_lambda_one_shot": {
@@ -76,7 +82,9 @@
       "ready_carrier_points": 100,
       "ready_carrier_zero_gate_points": 20,
       "admitted_payloads_in_zero_gate": [0],
-      "h_formula_on_ready_carrier": "(-2*B*z*lambda, 2*B*z*lambda) mod 5",
+      "h_formula_at_n0": "(2*lambda, 3*lambda) mod 5",
+      "h_formula_for_n_ge_1": "(+/-lambda, -/+lambda) mod 5",
+      "h_formula_on_ready_carrier": "(-2*B*z*lambda, 2*B*z*lambda) mod 5 (5 classes at fixed common n >= 3 or fixed (B,z); not stationary across (B,z))",
       "absence_codeword_zero_gate_points": 0,
       "absence_h_orbit": [[0, 2], [0, 3], [2, 0], [3, 0]],
       "qr_port_classes_across_occupied": 1
@@ -84,6 +92,7 @@
   },
   "w_energy_difference": {
     "formula": "H(W y) - H(y) = y0^2 - y1^2 + y0*y2 - y1*y3",
+    "W_Af_W": [[1, 0, 1, 0], [0, 1, 0, 1], [-3, 1, -2, 1], [1, -2, 1, -1]],
     "counterexample_e0": {
       "e0": [1, 0, 0, 0],
       "W_e0": [0, 1, 0, 0],
@@ -97,5 +106,18 @@
       "H_W_ustar": 2
     }
   },
-  "smallest_unresolved_obligation": "Decide whether the 250-point three-step preimage (T1 o T1 o T0)^(-1)(G0 intersect X14) contains an origin-zero family with a common initial receiver projection that populates at least two distinct protected sign fibres {V(x3), -V(x3)} in G0 intersect X14 (where B=3A and D=3C mod 5)."
+  "three_step_preimage_summary": {
+    "target_G0_intersect_X14_points": 250,
+    "reachable_target_at_n3_G0_intersect_X1_points": 125,
+    "unreachable_target_at_n3_G0_intersect_X4_points": 125,
+    "three_step_preimage_P_gate_points": 625,
+    "preimage_points_per_initial_trace_sheet": 125
+  },
+  "smallest_unresolved_obligation": "Specify in a separate scope a permitted message-sensitive source-access, receiver-preparation, funding, timing, and readout contract; on the native shell-gate side, classify the fibres of the 625-point three-step preimage P_gate = (T1 o T1 o T0)^(-1)(G0 intersect X14) = (T1 o T1 o T0)^(-1)(G0 intersect X1) over a single explicitly fixed initial receiver projection (fixing R_reg(x(0)) = (b0,d0,q0,r0) or (z0,q0,r0) separately) and determine how many distinct protected sign fibres {V(x3), -V(x3)} in the 125-point reachable sheet G0 intersect X1 are attainable at n=3.",
+  "errata_r1_r7": {
+    "initial_result_commit": "e3d35709a86b42c21c1bf57e2be2b3a3cf707598",
+    "review_commit": "2a43c0312af7189b84c099c9482b908ac8e9323b",
+    "errata_file": "notes/C-V103-SOURCE-INTERFACE-N/ERRATA.md",
+    "repaired_items": ["R1", "R2", "R3", "R4", "R5", "R6", "R7"]
+  }
 }
