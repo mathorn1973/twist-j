@@ -1,0 +1,341 @@
+--- notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/apparatus.py
++++ probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/apparatus.py
+@@ -1,7 +1,7 @@
+ #!/usr/bin/env python3
+-"""Self-contained exact funded two-use continuing apparatus (Lane I2, #1515).
+-
+-NON-CANONICAL / L1 executable incubation machine on reconciled 705-site D.
++"""Source-derived two-use apparatus with typed record-only readout (#1522).
++
++NON-CANONICAL / L1. Dynamics reused from I2; see MIGRATION.md.
+ Original work Apache-2.0, A. M. Thorn, 2026-10-15.
+ """
+ 
+@@ -432,8 +432,8 @@
+     """Restricted port/context readout with no native-head or wave/archive fields."""
+     b0: Tuple[Fraction, ...]
+     b2: Tuple[Fraction, ...]
+-    sigma_A: Optional[int] = -1
+-    sigma_B: Optional[int] = -1
++    sigma_A: Optional[int] = None
++    sigma_B: Optional[int] = None
+     d: Optional[Tuple[int, int]] = None
+ 
+     def __post_init__(self) -> None:
+@@ -1340,22 +1340,19 @@
+     )
+ 
+ 
+-def direct_source_reader(
+-    b0: Union[Sequence[Union[Fraction, int]], DirectPortReadout],
+-    b2: Optional[Sequence[Union[Fraction, int]]] = None,
++def decode_port_vectors(
++    b0: Sequence[Union[Fraction, int]],
++    b2: Sequence[Union[Fraction, int]],
+     *,
+-    sigma_A: Optional[int] = -1,
+-    sigma_B: Optional[int] = -1,
++    sigma_A: Optional[int] = None,
++    sigma_B: Optional[int] = None,
+     d: Optional[Sequence[int]] = None,
+ ) -> Dict[str, object]:
+-    """Decode (z_A, z_B) from (b0, b2) and declared acceptance/context information.
+-
+-    API access restriction: rejects CompositeState, ApparatusSubstate, WaveTapeState,
+-    and 6-element native checkpoints. Never accesses x_A, x_B, p_A, p_B, or c0, c1.
+-    Supports both:
+-      (1) standard (sigma_A, sigma_B) acceptance readout; and
+-      (2) Clarification (ii) ready-family second-acceptance readout from (d, b0, b2)
+-          when sigma_B is None and d is provided.
++    """General exact vector algebra; does not authenticate record provenance.
++
++    This numerical helper accepts rational four-vectors, including integer
++    coordinates. The separate direct_source_reader requires a typed record.
++    Omitted acceptance is unknown. No native/source object is inspected.
+     """
+     if isinstance(b0, (CompositeState, ApparatusSubstate, WaveTapeState)):
+         raise TypeError(
+@@ -1366,22 +1363,11 @@
+             f"direct_source_reader forbids {type(b2).__name__} access"
+         )
+ 
+-    if isinstance(b0, DirectPortReadout):
+-        if b2 is not None:
+-            raise ValueError("When passing DirectPortReadout as first argument, omit b2")
+-        b0_vec = b0.b0
+-        b2_vec = b0.b2
+-        sig_a = b0.sigma_A
+-        sig_b = b0.sigma_B
+-        d_val = b0.d
+-    else:
+-        if b2 is None:
+-            raise ValueError("b2 must be provided when b0 is a 4-vector")
+-        b0_vec = require_q_tuple(b0, 4, "b0")
+-        b2_vec = require_q_tuple(b2, 4, "b2")
+-        sig_a = None if sigma_A is None else require_sign(sigma_A, "sigma_A")
+-        sig_b = None if sigma_B is None else require_sign(sigma_B, "sigma_B")
+-        d_val = None if d is None else require_f5_tuple(d, 2, "d")
++    b0_vec = require_q_tuple(b0, 4, "b0")
++    b2_vec = require_q_tuple(b2, 4, "b2")
++    sig_a = None if sigma_A is None else require_sign(sigma_A, "sigma_A")
++    sig_b = None if sigma_B is None else require_sign(sigma_B, "sigma_B")
++    d_val = None if d is None else require_f5_tuple(d, 2, "d")
+ 
+     ops = get_derived_operators()
+     alpha_a_z_a = mat_vec_4(ops.R0_inv, b0_vec)
+@@ -1446,6 +1432,23 @@
+         "alpha_A_z_A": alpha_a_z_a,
+         "alpha_B_z_B": alpha_b_z_b,
+     }
++
++
++def direct_source_reader(readout: DirectPortReadout) -> Dict[str, object]:
++    """Read only explicit port/context data, never a full state or raw source.
++
++    A software type prevents accidental argument confusion. It does not prove
++    physical acquisition or resist deliberate forgery by the caller.
++    """
++    if type(readout) is not DirectPortReadout:
++        raise TypeError(
++            "readout type mismatch (expected=DirectPortReadout, "
++            f"actual={type(readout).__name__})"
++        )
++    return decode_port_vectors(
++        readout.b0, readout.b2, sigma_A=readout.sigma_A,
++        sigma_B=readout.sigma_B, d=readout.d,
++    )
+ 
+ 
+ # ---------------------------------------------------------------------------
+
+--- notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py
++++ probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/verify.py
+@@ -1,17 +1,17 @@
+ #!/usr/bin/env python3
+-"""Executable audit, witness generator, and comparison runner for Lane I2 (#1515).
+-
+-NON-CANONICAL / L1 executable incubation audit on reconciled 705-site D.
++"""Source-derived typed-readout closure audit (#1522), reusing I2 tests.
++
++NON-CANONICAL / L1 public finite audit. See MIGRATION.md for source exposure.
+ Original work Apache-2.0, A. M. Thorn, 2026-10-15.
+ 
+ CLI modes:
+-  python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py
+-      Run full scientific audit (T01-T18 and X01-X10) and print deterministic
++  python3 probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/verify.py
++      Run full scientific audit (T01-T19 and X01-X10) and print deterministic
+       scientific stdout including witness boundary states.
+-  python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --compare
++  python3 probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/verify.py --compare
+       Run separate 1200-record comparison mode and print:
+       TWOUSE-COMPARE-v2 domain_sha256=2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0 records=1200 sha256=<64 lowercase hex>
+-  python3 notes/C-FUNDED-TWO-USE-EXECUTABLE-2-N/verify.py --witnesses
++  python3 probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/verify.py --witnesses
+       Print witness boundary trajectories and summary for the 7-step (1,4)/(4,1)
+       order comparison, dirty-archive c1=e0 case, and lower/upper stock refusals.
+ """
+@@ -21,6 +21,8 @@
+ from fractions import Fraction
+ import hashlib
+ import inspect
++import ast
++from dataclasses import fields, replace
+ from pathlib import Path
+ import sys
+ from typing import Dict, List, Sequence, Tuple
+@@ -31,11 +33,20 @@
+ if str(THIS_DIR) not in sys.path:
+     sys.path.insert(0, str(THIS_DIR))
+ 
++# Verify every frozen scientific dependency before any scientific import.
++DIRECTORY = Path(__file__).resolve().parent
++for entry in (DIRECTORY / "CODE_SHA256SUMS").read_text(encoding="ascii").splitlines():
++    expected_hash, filename = entry.split("  ", 1)
++    actual_hash = hashlib.sha256((DIRECTORY / filename).read_bytes()).hexdigest()
++    if actual_hash != expected_hash:
++        raise SystemExit(f"custody {filename}: actual={actual_hash} expected={expected_hash}")
++CURRENT_STAGE = "not_started"
++
+ import apparatus as app  # noqa: E402
+ 
+ 
+ # ---------------------------------------------------------------------------
+-# Frozen target constants from SOURCES.json / CONTRACT.md for regression audit
++# Exposed I2 target constants, bound by SOURCES.tsv and CONTRACT.md
+ # ---------------------------------------------------------------------------
+ 
+ EXPECTED_CANONICAL_SELECTORS: Dict[int, Tuple[int, int, int, int, int]] = {
+@@ -840,7 +851,7 @@
+     sig = inspect.signature(app.direct_source_reader)
+     require_eq(
+         list(sig.parameters.keys()),
+-        ["b0", "b2", "sigma_A", "sigma_B", "d"],
++        ["readout"],
+         "T11.signature",
+     )
+ 
+@@ -852,7 +863,7 @@
+     for forbidden in (st7, st7.to_apparatus_substate(), st7.X, st7.x_A, (1, 0, 0, 0)):
+         raised = False
+         try:
+-            app.direct_source_reader(forbidden, st7.X.B1)  # type: ignore[arg-type]
++            app.direct_source_reader(forbidden)  # type: ignore[arg-type]
+         except (TypeError, ValueError):
+             raised = True
+         require_true(raised, f"T11.reject_forbidden[{type(forbidden).__name__}]")
+@@ -1233,6 +1244,19 @@
+             require_eq(pred_b3, obs[(ha, hb)]["b3"], f"T16.pred_b3[({ha},{hb})]")
+             require_eq(pred_ea, obs[(ha, hb)]["E_A"], f"T16.pred_ea[({ha},{hb})]")
+             require_eq(pred_db, obs[(ha, hb)]["Delta_B"], f"T16.pred_db[({ha},{hb})]")
++
++    # Separate five-run rank-one-class reconstruction. The only measurements
++    # used are (1,0),(4,0),(2,0),(1,1),(4,1); equal Omega rows are a PREMISE.
++    # The seven-run audit above independently checks that premise here.
++    require_eq((om10, om11), (om00, om01), "T16.rank_one_class")
++    for ha in range(5):
++        for hb in range(5):
++            za0, za1, _, _ = EXPECTED_Z5_VECTORS[ha]
++            zb0, zb1, _, _ = EXPECTED_Z5_VECTORS[hb]
++            eb5 = (g00 * zb0**2 + 2*g01*zb0*zb1 + g11*zb1**2) / 2
++            cross5 = (zb0 + zb1) * (om00 * za0 + om01 * za1)
++            require_eq(eb5 + cross5, obs[(ha, hb)]["Delta_B"],
++                       f"T16.five_run_prediction[({ha},{hb})]")
+ 
+     # Clarification (i): verify q3(z0, z1) = z0 * z1 * (2*z0 - 1) has q3(z^(3)) = 1/2,
+     # so b2 + q3(z_A) u shifts b2 at h_A = 3 by u/2 (not u)
+@@ -1616,6 +1640,91 @@
+     return "T18 PASS: all 10 adversarial invalid-endpoint and malformed-carrier tests (X01-X10) rejected"
+ 
+ 
++
++def run_t19_typed_record_factorization() -> str:
++    zero = app.zero_q4()
++    require_eq([f.name for f in fields(app.DirectPortReadout)],
++               ["b0", "b2", "sigma_A", "sigma_B", "d"], "T19.record_fields")
++    no_context = app.direct_source_reader(app.DirectPortReadout(zero, zero))
++    require_eq((no_context["alpha_A"], no_context["alpha_B"],
++                no_context["z_A"], no_context["z_B"]),
++               (None, None, None, None), "T19.no_default_acceptance")
++    for sign, alpha, result in ((-1, 1, zero), (1, 0, None)):
++        r = app.DirectPortReadout(zero, zero, sign, sign)
++        d = app.direct_source_reader(r)
++        require_eq((d["alpha_A"], d["alpha_B"], d["z_A"], d["z_B"]),
++                   (alpha, alpha, result, result), "T19.zero_vs_refusal")
++    # The same numeric contents are legitimate Q^4 data when explicitly labelled.
++    integers = (1, 0, 0, 0)
++    explicit = app.DirectPortReadout(integers, zero)
++    require_eq(app.direct_source_reader(explicit),
++               app.decode_port_vectors(integers, zero), "T19.integer_vector_legitimate")
++    rejected = 0
++    malformed = [integers, zero, [1,0,0,0], {"b0": zero, "b2": zero}, None, True, 1]
++    for obj in malformed:
++        try:
++            app.direct_source_reader(obj)
++        except TypeError:
++            rejected += 1
++        else:
++            raise AssertionError("T19.raw_argument_accepted")
++    require_eq(rejected, len(malformed), "T19.raw_rejections")
++    invalid_records = [
++        lambda: app.DirectPortReadout((True,0,0,0),zero),
++        lambda: app.DirectPortReadout((0.5,0,0,0),zero),
++        lambda: app.DirectPortReadout(zero,zero,True,-1),
++        lambda: app.DirectPortReadout(zero,zero,0,-1),
++        lambda: app.DirectPortReadout(zero,zero,d=(5,0)),
++        lambda: app.DirectPortReadout((0,0,0),zero),
++    ]
++    for idx, create in enumerate(invalid_records):
++        try:
++            create()
++        except (TypeError,ValueError):
++            pass
++        else:
++            raise AssertionError(f"T19.malformed_record[{idx}]")
++    archives = [
++        (zero,zero), (zero,app.basis_q4(0)),
++        ((Fraction(1,3),Fraction(-2,7),Fraction(0),Fraction(5,11)),
++         (Fraction(-1),Fraction(2,3),Fraction(3,5),Fraction(-7,13))),
++    ]
++    checked = 0
++    for c0,c1 in archives:
++        for cap in app.COMPARISON_CAPACITIES:
++            for ha in range(5):
++                for hb in range(5):
++                    s = app.run_seven_steps(app.prepare_ready_state(
++                        (ha,0,0,0),(hb,0,0,0),cap,b_init=cap,c0=c0,c1=c1))
++                    record = app.extract_direct_port_readout(s,include_d=True)
++                    decoded = app.direct_source_reader(record)
++                    aa,ab = (1-s.sigma_A)//2,(1-s.sigma_B)//2
++                    require_eq((decoded["alpha_A"],decoded["alpha_B"]),(aa,ab),
++                               "T19.actual_acceptance")
++                    require_eq(decoded["z_A"],EXPECTED_Z5_VECTORS[ha] if aa else None,
++                               "T19.source_A")
++                    require_eq(decoded["z_B"],EXPECTED_Z5_VECTORS[hb] if ab else None,
++                               "T19.source_B")
++                    no_b = replace(record,sigma_B=None)
++                    require_eq(app.direct_source_reader(no_b),decoded,"T19.omitted_B_sign")
++                    # Deliberately change every native-head field without touching
++                    # the readable record. The extractor must not inspect them.
++                    altered = replace(s,x_A=(0,0,0,0,0,0),x_B=(4,4,4,4,4,4))
++                    require_eq(app.extract_direct_port_readout(altered,include_d=True),
++                               record,"T19.no_native_head_dependence")
++                    checked += 1
++    require_eq(checked,3*6*5*5,"T19.coverage")
++    # Static, executable acquisition contract: actual extraction only copies
++    # the two tape cuts, current clock and declared signs/buffer.
++    source = inspect.getsource(app.extract_direct_port_readout)
++    tree = ast.parse(source)
++    allowed = {"c","n","X","A0","B1","sigma_A","sigma_B","d","__name__"}
++    attrs = {n.attr for n in ast.walk(tree) if isinstance(n,ast.Attribute)}
++    require_true(attrs <= allowed,"T19.extractor_attribute_allowlist",
++                 expected=sorted(allowed),actual=sorted(attrs))
++    return (f"T19 PASS: typed record-only access cases={checked}, raw_rejections={rejected}, "
++            "omitted_acceptance=UNKNOWN, integer_Q4=ALLOWED, provenance_authentication=NOT_CLAIMED")
++
+ # ---------------------------------------------------------------------------
+ # Witness trajectory builders for human-readable boundary state report
+ # ---------------------------------------------------------------------------
+@@ -1728,9 +1837,12 @@
+         run_t16_calibration_prediction_and_clarification_i,
+         run_t17_comparator_indistinguishability_and_separations,
+         run_t18_invalid_endpoint_and_type_rejection_suite,
++        run_t19_typed_record_factorization,
+     ]
+-    print("C-FUNDED-TWO-USE-EXECUTABLE-2-N AUDIT START")
++    print("P-TWO-USE-TYPED-READOUT-CLOSURE-1 AUDIT START")
++    global CURRENT_STAGE
+     for fn in tests:
++        CURRENT_STAGE = fn.__name__
+         msg = fn()
+         print(msg)
+ 
+@@ -1738,15 +1850,25 @@
+     witnesses = build_witness_trajectories()
+     print_witness_report(witnesses)
+     print("WITNESS_BOUNDARY_STATES_END")
++    CURRENT_STAGE = "full_state_comparison"
++    domain_sha, count, digest = app.compute_comparison_digest()
++    require_eq(count, 1200, "COMPARISON.count")
++    require_eq(digest, "670f270e88386e2f1f507e24ec0ae71daf1ff6638ea44783b793479291af3dbc",
++               "COMPARISON.unchanged_I2_V2_state_stream")
++    print(f"TWOUSE-COMPARE-v2 domain_sha256={domain_sha} records={count} sha256={digest}")
+     print(
+-        "C-FUNDED-TWO-USE-EXECUTABLE-2-N AUDIT PASS: tests=18/18 invalid_endpoints=10/10 "
++        "P-TWO-USE-TYPED-READOUT-CLOSURE-1 AUDIT PASS: tests=19/19 invalid_endpoints=10/10 "
+         "domain_sites=705 basis_dim=1426 order_diff=313/233280 max_work=8224427/10497600 status=ALL_PASS"
+     )
+ 
+ 
+ def main(argv: Sequence[str]) -> int:
+     if len(argv) == 1:
+-        run_full_audit()
++        try:
++            run_full_audit()
++        except AssertionError as exc:
++            print(f"FALSIFIER stage={CURRENT_STAGE} {exc}")
++            print("TYPED_CLOSURE_FAIL remaining_dependent_checks=NOT_RUN comparison=NOT_RUN")
+         return 0
+     if len(argv) == 2 and argv[1] == "--compare":
+         domain_sha, count, digest = app.compute_comparison_digest()
+
