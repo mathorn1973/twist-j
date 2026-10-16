@@ -1,0 +1,85 @@
+{
+  "repository": "https://github.com/mathorn1973/twist-j",
+  "license": "Apache-2.0",
+  "basis_commit": "a632c6a162dc87e60104d7a478e7650a6d5c4a1b",
+  "content_commit": "b04e22dd3ed8e4240cff347364f24670d4183a4d",
+  "public_reviewer": "Codex-v103-RC-62183bc2",
+  "claim_issue": 1567,
+  "dispatch": {
+    "issue": 1548,
+    "bytes": 13858,
+    "sha256": "c209686fede612501394f969d5052518d35c95be0523c9e22619cbd19984fd87"
+  },
+  "author_specification": {
+    "commit": "423c6f7488b35399ff40fcc30be01df526aba795",
+    "files": [
+      {
+        "path": "probes/P-FIELD-CELL-SHEAR-CENSUS-1/PREREG.md",
+        "bytes": 8595,
+        "sha256": "b78143ea5a93915e5f6f6886c0076fea93fe22569d5af00c762477d8319fdf51"
+      },
+      {
+        "path": "probes/P-FIELD-CELL-SHEAR-CENSUS-1/SOURCES.json",
+        "bytes": 4484,
+        "sha256": "cbe7ca144d9e8822d92d375c5684a5826a8f9fedd25c91e817533c3b1d13e7cf"
+      }
+    ]
+  },
+  "allowed_canonical_files": [
+    {
+      "path": "canon/CANON.md",
+      "sha256": "c0657380438c965f9556b5b298a34a5e799c48a68ce66e9fe51786ce2413d7d1",
+      "bytes": 1024033,
+      "role": "allowed canonical scientific input"
+    },
+    {
+      "path": "canon/CORE.md",
+      "sha256": "6e8ec0b03907d973ee22d749965b687c03cf28c26817f26bcfc8f0d3d015bbed",
+      "bytes": 29518,
+      "role": "allowed canonical scientific input"
+    },
+    {
+      "path": "canon/FRONTIER.md",
+      "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+      "bytes": 27382,
+      "role": "allowed canonical scientific input"
+    },
+    {
+      "path": "canon/REGISTRY.tsv",
+      "sha256": "757fd6a5fbaab9066e114e780b9813862c859da82663e9672cf62a77f8dae4b4",
+      "bytes": 525398,
+      "role": "allowed canonical scientific input"
+    },
+    {
+      "path": "canon/CHANGELOG.md",
+      "sha256": "d8db1686e4d8b986b78fa34b0de7bd34058be26673adf9dc0b9ffe537feb16ef",
+      "bytes": 205609,
+      "role": "allowed canonical scientific input"
+    }
+  ],
+  "pre_run_forbidden": [
+    "author PROOF.md",
+    "author LINEAGE.md",
+    "author verify.py",
+    "author EXPECTED.txt",
+    "author RUN.md",
+    "author RESULT.md",
+    "author README.md",
+    "author PR body and diff and scientific CI logs",
+    "author_lineage_only_files",
+    "previous chats or scientific memories"
+  ],
+  "runtime_policy": "verify.py is self-contained standard-library code. It reads no external data, source manifest, mutable Canon or author file. Explicit matrices are frozen in its own source. This manifest binds provenance audited before the pin, not a runtime hash gate.",
+  "operational_inputs": [
+    "STATUS.md",
+    "POLICY.md",
+    "AGENTS.md",
+    "canon/SHA256SUMS",
+    "canon/EVIDENCE.tsv",
+    "canon/DEPENDENCIES.tsv",
+    "canon/GATES.tsv",
+    "tools/check_verifier.py",
+    ".github/workflows/policy.yml"
+  ],
+  "independence": "Distinct reviewer session; same-session proof/static helpers are part of this one audit. Known targets and allowed PREREG are exposed. No author verifier import or scientific execution before public pin."
+}
