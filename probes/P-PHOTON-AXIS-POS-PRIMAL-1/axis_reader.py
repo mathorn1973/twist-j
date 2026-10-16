@@ -168,20 +168,40 @@ def main(argv: list[str]) -> int:
     with Pool(args.workers) as pool:
         for name, L, start, replica in cfg.chains():
             row = rows[name]
+            transcript = args.attempt_root / "transcripts" / f"{name}.txt"
+            thermal_record = (args.out / "records" / f"{name}.thermal.txt").read_bytes()
             if row["thermal_endpoint"] == "0" or row["measure_record_sha256"] == "-":
-                out_lines.append(f"READER_CHAIN chain={name} states=0 status=NOT_MEASURED")
+                same = transcript.read_bytes() == thermal_record
+                failures += 0 if same else 1
+                out_lines.append(f"READER_CHAIN chain={name} states=0 status=NOT_MEASURED "
+                                 f"thermal_record_is_transcript={'YES' if same else 'NO'}")
                 continue
             mismatches = 0
             notes: list[str] = []
             try:
-                transcript = args.attempt_root / "transcripts" / f"{name}.txt"
                 data = transcript.read_bytes()
-                if hashlib.sha256(data).hexdigest() != row["transcript_sha256"]:
+                if hashlib.sha256(data).hexdigest() != row["transcript_sha256"] or str(len(data)) != row[
+                        "transcript_bytes"]:
                     raise ValueError("transcript hash differs from CHAINS.tsv")
+                cut = data.index(b"\nMEASURE_BEGIN ")
+                if data[:data.index(b"\n", cut + 1) + 1] != thermal_record:
+                    raise ValueError("thermal record is not the transcript prefix through MEASURE_BEGIN")
                 measure_path = args.out / "records" / f"{name}.measure.txt"
-                measure_sha = hashlib.sha256(measure_path.read_bytes()).hexdigest()
+                measure_bytes = measure_path.read_bytes()
+                measure_sha = hashlib.sha256(measure_bytes).hexdigest()
                 if measure_sha != row["measure_record_sha256"]:
                     raise ValueError("measure record hash differs from CHAINS.tsv")
+                measure_lines = measure_bytes.decode("ascii").split("\n")[:-1]
+                transcript_lines = data[data.index(b"\n", cut + 1) + 1:].decode("ascii").split("\n")[:-1]
+                header = split_fields(measure_lines[0])
+                if (header.get("transcript_sha256"), header.get("transcript_bytes")) != (
+                        row["transcript_sha256"], row["transcript_bytes"]):
+                    raise ValueError("measure record header does not bind the transcript")
+                if [x for x in measure_lines if x.startswith("SAMPLE ")] != [
+                        x for x in transcript_lines if x.startswith("SAMPLE ")]:
+                    raise ValueError("measure record SAMPLE lines differ from the transcript")
+                if measure_lines[-3:] != transcript_lines[-3:]:
+                    raise ValueError("measure record diagnostics or footer differ from the transcript")
                 accepted, trows, tS = parse_transcript(transcript, L, cfg.samples)
                 Q, rtot = parse_measure(measure_path, L, cfg.samples)
                 m = cfg.spacing_for(L)

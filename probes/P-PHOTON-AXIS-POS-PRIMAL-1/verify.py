@@ -41,9 +41,21 @@ import axis_core as core  # noqa: E402
 P = core.P
 
 PINNED_FILES = (
-    "PREREG.md", "AXIS_PIN.md", "README.md", "axis_engine.cpp", "axis_core.py",
-    "axis_reader.py", "run_axis.py", "verify.py", "FIXTURE_EXPECTED.txt",
+    "PREREG.md", "AXIS_PIN.md", "README.md", "axis_engine.cpp", "photon_z5_part2_axis.inc",
+    "axis_core.py", "axis_reader.py", "run_axis.py", "verify.py", "FIXTURE_EXPECTED.txt",
 )
+CAPACITY_OLD = b"std::array<LineFace, 6 * 16> entries{};"
+CAPACITY_NEW = b"std::array<LineFace, 6 * 32> entries{};"
+ENGINE_INCLUDES = (
+    '#define main pilot2_engine_main\n'
+    '#include "../P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/photon_z5_part1.inc"\n'
+    '#include "photon_z5_part2_axis.inc"\n'
+    '#include "../P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/photon_z5_part3.inc"\n'
+    '#include "../P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/photon_z5_part4.inc"\n'
+    '#undef main\n'
+)
+PI_DIGITS = 314159265358979323846264338327950288419716939937510
+PI_SCALE = 10**50
 PILOT_DEPENDENCIES = (
     ("photon_z5.cpp", "68232b2f44bca6fd71514547e2f5aa0ad8aa85b9d298dde5d9a4109ac2151e14"),
     ("photon_z5_part1.inc", "263b631d6322526296cef5b32104f9bbc34184a8506f30fc15962687fcd6727a"),
@@ -105,8 +117,12 @@ def custody(out: list[str]) -> None:
 
 def engine_tables(out: list[str]) -> None:
     text = (HERE / "axis_engine.cpp").read_text(encoding="ascii")
-    require('#define main pilot2_engine_main\n#include "../P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/'
-            'photon_z5.cpp"\n#undef main\n' in text, "engine does not include pilot-2 byte for byte")
+    require(text.count("#include \"") == len(ENGINE_INCLUDES.splitlines()) - 2 and ENGINE_INCLUDES in text,
+            "engine does not include the pilot-2 parts as frozen")
+    pilot_part2 = (core.PILOT_DIR / "photon_z5_part2.inc").read_bytes()
+    require(pilot_part2.count(CAPACITY_OLD) == 1, "pilot-2 line-face capacity not found once")
+    require((HERE / "photon_z5_part2_axis.inc").read_bytes() == pilot_part2.replace(CAPACITY_OLD, CAPACITY_NEW, 1),
+            "photon_z5_part2_axis.inc differs from pilot-2 by more than the line-face capacity")
     orient = re.findall(r'\{"(\d\d)", (\d), ([+-]1)\}', text)
     require(len(orient) == 6, "engine orientation table")
     for (name, pair, sign), expected in zip(orient, core.ORIENT):
@@ -121,6 +137,8 @@ def engine_tables(out: list[str]) -> None:
     for r in range(4):
         require(sum(row[r] for row in core.CONTAINS) == 3, "three orientations contain each axis")
     out.append("ENGINE_TABLES PASS orientations=01,02,03,23,31,12 F31=-F13 score_basis=1,phi")
+    out.append("ENGINE_SOURCE PASS pilot2_parts=1,3,4_byte_identical part2=one_substitution "
+               "line_face_capacity=6*16->6*32")
 
 
 # ---------------------------------------------------------------------------
@@ -288,13 +306,33 @@ def fixtures(out: list[str]) -> None:
 # ---------------------------------------------------------------------------
 
 
+def exact_cos(turn: Fraction) -> tuple[Fraction, Fraction]:
+    """Rational centre and radius bracketing cos(2 pi turn), from rational pi bounds."""
+    theta = 2 * turn * Fraction(PI_DIGITS, PI_SCALE)
+    theta_error = 2 * abs(turn) * Fraction(1, PI_SCALE)
+    total = Fraction(0)
+    term = Fraction(1)
+    square = theta * theta
+    for n in range(60):
+        total += term
+        term = -term * square / ((2 * n + 1) * (2 * n + 2))
+    return total, abs(term) + theta_error
+
+
+def sqrt5_bounds() -> tuple[Fraction, Fraction]:
+    scale = 10**40
+    root = math.isqrt(5 * scale * scale)
+    return Fraction(root, scale), Fraction(root + 1, scale)
+
+
 def readout(out: list[str]) -> None:
-    for L in core.FORMAL.sizes + FIXTURE_SIZES:
-        for k in range(L // 2 + 1):
-            value = core.cos_turn(Fraction(k, L))
-            require(abs(value - math.cos(2.0 * math.pi * k / L)) <= 1.0e-15, f"cosine L={L} k={k}")
+    ulp = Fraction(1, 2**52)
+    turns = sorted({Fraction(k, L) for L in core.FORMAL.sizes + FIXTURE_SIZES for k in range(L // 2 + 1)})
+    for turn in turns:
+        centre, radius = exact_cos(turn)
+        require(abs(Fraction(core.cos_turn(turn)) - centre) <= ulp + radius, f"cosine turn={turn}")
     out.append("COSINE_TABLE PASS sizes=" + ",".join(str(L) for L in core.FORMAL.sizes + FIXTURE_SIZES)
-               + " tolerance=1e-15 source=sqrt_closed_forms")
+               + f" turns={len(turns)} bound=2^-52 reference=exact_rational_series")
     previous = math.inf
     for nu in range(1, 4097):
         value = core.t995(nu)
@@ -305,6 +343,7 @@ def readout(out: list[str]) -> None:
         require(abs(Fraction(core.t995(nu)) - expected) <= Fraction(1, 10**5), f"t quantile nu={nu}")
     out.append(f"T995 PASS t(63)={core.fmt(core.t995(63))} t(255)={core.fmt(core.t995(255))} "
                f"z={core.fmt(core.Z995)}")
+    s_lo, s_hi = sqrt5_bounds()
     for counts in ((1, 2, 3, 4, 5), (7, 0, 0, 0, 9), (0, 5, 6, 0, 0)):
         L = 2
         scale = Fraction(1, 6 * L**4)
@@ -312,11 +351,12 @@ def readout(out: list[str]) -> None:
         # exact (1 + mean X^2)/2 with X^2 = 5 -+ 2 sqrt5, kept as p + q sqrt5
         p = (1 + scale * 5 * (n14 + n23)) / 2
         q = scale * 2 * (n23 - n14) / 2
-        exact = float(p) + float(q) * math.sqrt(5.0)
+        low, high = sorted((p + q * s_lo, p + q * s_hi))
         total = sum(counts)
         padded = [counts[0] + 6 * L**4 - total] + list(counts[1:])
-        require(abs(core.a_value(padded, L) - exact) <= 1.0e-15, "a_L readout")
-    out.append("A_READOUT PASS a=(1+E X^2)/2 X^2=kappa^2 G^2")
+        value = Fraction(core.a_value(padded, L))
+        require(low - 4 * ulp <= value <= high + 4 * ulp, "a_L readout")
+    out.append("A_READOUT PASS a=(1+E X^2)/2 X^2=kappa^2 G^2 bound=2^-50")
 
 
 # ---------------------------------------------------------------------------
@@ -382,6 +422,8 @@ def replay(out: list[str]) -> None:
         require(not (HERE / "records").exists(), "records without CHAINS.tsv")
         out.append("REPLAY ABSENT mode=PRE_EXECUTION")
         return
+    build = (HERE / "BUILD.txt").read_bytes()
+    out.append(f"BUILD sha256={sha256(build)} lines={len(build.splitlines())}")
     lines, terminal = core.analyze(HERE, core.FORMAL)
     produced = ("\n".join(lines) + "\n").encode("ascii")
     require(produced == (HERE / "ANALYSIS.txt").read_bytes(), "ANALYSIS.txt differs from the replay")

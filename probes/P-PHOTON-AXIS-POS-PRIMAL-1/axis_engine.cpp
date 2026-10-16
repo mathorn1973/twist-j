@@ -1,16 +1,23 @@
 // P-PHOTON-AXIS-POS-PRIMAL-1 production engine.
 //
-// The accepted pilot-2 exact primal sampler is compiled byte for byte from its
-// own public probe directory. Only its main() symbol is renamed, so every pilot
-// mode keeps its exact behaviour and the macrocycle, random namespaces, exact
-// Z[phi] heat baths, line moves, flat sheets and charge conjugation are the
-// accepted ones. This file adds:
+// The accepted pilot-2 exact primal sampler is compiled from its own public
+// probe directory. Parts 1, 3 and 4 are included byte for byte. Part 2 is
+// included from photon_z5_part2_axis.inc, which differs from the pilot file in
+// exactly one storage capacity: the per-line face buffer holds 6 * 32 entries
+// instead of 6 * 16, because a noncontractible line at L = 24 or 32 touches
+// 6 L faces (#757 section 2 allows wrapping the sampler for larger L; no
+// categorical decision, random-bit rule, orbit mass or move changes). verify.py
+// checks that the difference is exactly this one substitution. Only main() is
+// renamed, so every pilot mode keeps its exact behaviour. This file adds:
 //   --axis          one production chain with stdin endpoint control,
 //   --axis-fixture  a deterministic synthetic link field for reduction checks.
 // The AXIS output is the exact integer slice sums S_{I,r}(t) in Z[phi].
 
 #define main pilot2_engine_main
-#include "../P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/photon_z5.cpp"
+#include "../P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/photon_z5_part1.inc"
+#include "photon_z5_part2_axis.inc"
+#include "../P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/photon_z5_part3.inc"
+#include "../P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/photon_z5_part4.inc"
 #undef main
 
 #include <cstdio>

@@ -55,16 +55,19 @@ PINNED_FILES = (
     "AXIS_PIN.md",
     "README.md",
     "axis_engine.cpp",
+    "photon_z5_part2_axis.inc",
     "axis_core.py",
     "axis_reader.py",
     "run_axis.py",
     "verify.py",
     "FIXTURE_EXPECTED.txt",
 )
-DECISION_ARTIFACTS = (
-    "records", "CHAINS.tsv", "READER.txt", "STATE_MANIFEST.tsv", "ANALYSIS.txt",
-    "EXPECTED.txt", "RUN.md", "RESULT.md",
+OUTPUT_ARTIFACTS = (
+    "records", "BUILD.txt", "CHAINS.tsv", "READER.txt", "STATE_MANIFEST.tsv", "ANALYSIS.txt",
 )
+DECISION_ARTIFACTS = OUTPUT_ARTIFACTS + ("EXPECTED.txt", "RUN.md", "RESULT.md")
+VERIFY_ENV = {"LC_ALL": "C", "LANG": "C", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONHASHSEED": "0",
+              "TZ": "UTC"}
 BRANCH = "refs/heads/probe/P-PHOTON-AXIS-POS-PRIMAL-1"
 BOOST_DEB_SHA256 = "1f11fc6fb2ffe9378a0f0ebc8f2fd9223fb958b4a40bb9381c67a8857d947ca3"
 COMPILE_FLAGS = ("-std=c++20", "-O3", "-DNDEBUG", "-Wall", "-Wextra", "-Wpedantic")
@@ -132,7 +135,7 @@ def check_git(pin: str) -> None:
         raise SupervisorError("public branch head is not the pin commit")
 
 
-def build_engine(boost_deb: Path, workdir: Path) -> Path:
+def build_engine(boost_deb: Path, workdir: Path, facts: list[str]) -> Path:
     if sha256_bytes(boost_deb.read_bytes()) != BOOST_DEB_SHA256:
         raise SupervisorError("Boost package hash mismatch")
     root = workdir / "boost"
@@ -147,6 +150,12 @@ def build_engine(boost_deb: Path, workdir: Path) -> Path:
     if built.returncode != 0 or built.stdout or built.stderr:
         sys.stderr.buffer.write(built.stderr)
         raise SupervisorError("engine compile failed or produced output")
+    version = subprocess.run(("g++", "--version"), stdout=subprocess.PIPE, check=False).stdout
+    facts.append("compiler " + version.decode("ascii", "replace").splitlines()[0])
+    facts.append("flags " + " ".join(COMPILE_FLAGS))
+    facts.append("boost_deb_sha256 " + BOOST_DEB_SHA256)
+    facts.append("engine_binary_sha256 " + sha256_bytes(binary.read_bytes()))
+    facts.append("python " + sys.version.split()[0])
     return binary
 
 
@@ -157,7 +166,7 @@ def run_capture(args: Sequence[str]) -> bytes:
     return done.stdout
 
 
-def check_fixtures(binary: Path) -> None:
+def check_fixtures(binary: Path, facts: list[str]) -> None:
     pilot = core.PILOT_DIR
     if run_capture((str(binary), "--self-test")) != (pilot / "SELFTEST_EXPECTED.txt").read_bytes():
         raise SupervisorError("pilot-2 self-test differs")
@@ -168,6 +177,20 @@ def check_fixtures(binary: Path) -> None:
     axis = b"".join(run_capture((str(binary), "--axis-fixture", str(L))) for L in FIXTURE_SIZES)
     if axis != (HERE / "FIXTURE_EXPECTED.txt").read_bytes():
         raise SupervisorError("AXIS fixture differs from FIXTURE_EXPECTED.txt")
+    facts.append("fixtures pilot2_selftest=PASS pilot2_modeled_stop=PASS pilot2_reference=PASS "
+                 "axis_fixture_3_4_6=PASS")
+
+
+def run_verify() -> bytes:
+    repo_root = HERE.parent.parent
+    env = dict(VERIFY_ENV, PATH=os.environ.get("PATH", "/usr/bin:/bin"))
+    done = subprocess.run(("python3", (HERE / "verify.py").relative_to(repo_root).as_posix()),
+                          cwd=repo_root, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                          check=False)
+    if done.returncode != 0 or done.stderr or not done.stdout.endswith(b"VERIFY PASS\n"):
+        sys.stderr.buffer.write(done.stderr)
+        raise SupervisorError("verify.py did not pass", done.stdout)
+    return done.stdout
 
 
 # ---------------------------------------------------------------------------
@@ -217,7 +240,7 @@ class Group:
                                                     rows[-1]["state_hash"])
             accepted = core.thermal_decision(self.L, endpoint, windows, moves, self.cfg, out)
             decision = "MEASURE" if accepted else "CONTINUE"
-        except (ValueError, KeyError, IndexError) as error:
+        except Exception as error:  # any failure of the rule is an abort, never a guess
             out.append(f"THERMAL_INTEGRITY L={self.L} endpoint={endpoint} {error}")
             decision = "ABORT"
         with open(self.log_path, "a", encoding="ascii") as handle:
@@ -246,6 +269,7 @@ class Chain:
         self.stderr = b""
         self.returncode: int | None = None
         self.accepted = 0
+        self.pump_error = ""
 
     def start_process(self) -> None:
         self.proc = subprocess.Popen(self.args, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
@@ -262,32 +286,42 @@ class Chain:
         window: deque[str] = deque(maxlen=self.cfg.window)
         measuring = False
         finished_thermal = False
-        with open(self.transcript, "wb") as out:
-            for raw in self.proc.stdout:
-                out.write(raw)
-                if measuring:
-                    continue
-                line = raw.decode("ascii", "replace").rstrip("\n")
-                if line.startswith("SAMPLE "):
-                    window.append(line)
-                elif line.startswith("ENDPOINT "):
-                    out.flush()
-                    endpoint = int(core.parse_fields(line, "ENDPOINT").get("completed", "0"))
-                    command = self.group.report(self.key, endpoint, list(window), line)
-                    window.clear()
-                    if command == "ABORT":
-                        self.proc.stdin.close()
+        try:
+            with open(self.transcript, "wb") as out:
+                for raw in self.proc.stdout:
+                    out.write(raw)
+                    if measuring:
                         continue
-                    out.write(f"RUNNER_COMMAND endpoint={endpoint} command={command}\n".encode("ascii"))
-                    out.flush()
-                    if command == "MEASURE":
-                        self.accepted = endpoint
-                    self.proc.stdin.write((command + "\n").encode("ascii"))
-                    self.proc.stdin.flush()
-                elif line.startswith("MEASURE_BEGIN"):
-                    measuring = True
-                elif line.startswith("THERMAL_EXHAUSTED"):
-                    finished_thermal = True
+                    line = raw.decode("ascii", "replace").rstrip("\n")
+                    if line.startswith("SAMPLE "):
+                        window.append(line)
+                    elif line.startswith("ENDPOINT "):
+                        out.flush()
+                        endpoint = int(core.parse_fields(line, "ENDPOINT").get("completed", "0"))
+                        command = self.group.report(self.key, endpoint, list(window), line)
+                        window.clear()
+                        if command == "ABORT":
+                            self.proc.stdin.close()
+                            continue
+                        out.write(f"RUNNER_COMMAND endpoint={endpoint} command={command}\n".encode("ascii"))
+                        out.flush()
+                        if command == "MEASURE":
+                            self.accepted = endpoint
+                        self.proc.stdin.write((command + "\n").encode("ascii"))
+                        self.proc.stdin.flush()
+                    elif line.startswith("MEASURE_BEGIN"):
+                        measuring = True
+                    elif line.startswith("THERMAL_EXHAUSTED"):
+                        finished_thermal = True
+        except BaseException as error:  # noqa: BLE001  never leave the group waiting
+            self.pump_error = f"{error.__class__.__name__}: {error}"
+            self.group.abort()
+            self.proc.kill()
+            for stream in (self.proc.stdout, self.proc.stdin):
+                try:
+                    stream.close()
+                except OSError:
+                    pass
         self.returncode = self.proc.wait()
         self.err_thread.join()
         if not measuring and not finished_thermal:
@@ -394,10 +428,10 @@ def check_previous_attempts(state_root: Path, attempt: int, cfg: core.Config) ->
 
 
 def run_pipeline(cfg: core.Config, binary: Path, state_root: Path, attempt: int, out_dir: Path,
-                 formal: bool) -> None:
+                 facts: list[str]) -> str:
+    """Run every chain, compact, read and analyse into ``out_dir``; return the terminal."""
     attempt_root = state_root / f"attempt-{attempt}"
-    attempt_root.mkdir(parents=True)
-    (attempt_root / "transcripts").mkdir()
+    (attempt_root / "transcripts").mkdir(parents=True)
     groups = {L: Group(L, cfg, attempt_root / f"thermal_L{L}.txt") for L in cfg.sizes}
     chains = [Chain(binary, cfg, name, L, start, replica, attempt_root, groups[L])
               for name, L, start, replica in cfg.chains()]
@@ -406,7 +440,10 @@ def run_pipeline(cfg: core.Config, binary: Path, state_root: Path, attempt: int,
     say(f"CHAINS_STARTED count={len(chains)}")
     for chain in chains:
         chain.join()
-        say(f"CHAIN_DONE {chain.name} exit={chain.returncode} stderr_bytes={len(chain.stderr)}")
+        say(f"CHAIN_DONE {chain.name} exit={chain.returncode} stderr_bytes={len(chain.stderr)}"
+            + (f" supervisor_error={chain.pump_error!r}" if chain.pump_error else ""))
+        if chain.pump_error:
+            facts.append(f"supervisor_error {chain.name} {chain.pump_error}")
 
     records = out_dir / "records"
     records.mkdir()
@@ -428,8 +465,11 @@ def run_pipeline(cfg: core.Config, binary: Path, state_root: Path, attempt: int,
         if chain.stderr:
             (attempt_root / f"{chain.name}.stderr.txt").write_bytes(chain.stderr)
     (out_dir / "CHAINS.tsv").write_bytes(("\n".join(rows) + "\n").encode("ascii"))
+    facts.append(f"attempt {attempt}")
     for note in check_previous_attempts(state_root, attempt, cfg):
         say(note)
+        facts.append(note)
+    (out_dir / "BUILD.txt").write_bytes(("\n".join(facts) + "\n").encode("ascii"))
 
     reader = subprocess.run(
         (sys.executable, str(HERE / "axis_reader.py"), "--config", cfg.name, "--out", str(out_dir),
@@ -443,23 +483,29 @@ def run_pipeline(cfg: core.Config, binary: Path, state_root: Path, attempt: int,
     lines, terminal = core.analyze(out_dir, cfg)
     (out_dir / "ANALYSIS.txt").write_bytes(("\n".join(lines) + "\n").encode("ascii"))
     say("ANALYSIS_WRITTEN")
-    if formal:
-        repo_root = HERE.parent.parent
-        env = {"LC_ALL": "C", "LANG": "C", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONHASHSEED": "0",
-               "TZ": "UTC", "PATH": os.environ.get("PATH", "/usr/bin:/bin")}
-        formal_run = subprocess.run(
-            ("python3", (HERE / "verify.py").relative_to(repo_root).as_posix()),
-            cwd=repo_root, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
-        if formal_run.returncode != 0 or formal_run.stderr:
-            sys.stderr.buffer.write(formal_run.stderr)
-            (out_dir / "EXPECTED.failed.txt").write_bytes(formal_run.stdout)
-            raise SupervisorError("formal verifier failed")
-        (out_dir / "EXPECTED.txt").write_bytes(formal_run.stdout)
-    if formal:
-        say(f"DRIVER_RESULT COMPLETE terminal={terminal}")
-    else:
-        # Development runs stay blind: only the integrity class is shown.
-        say("DRIVER_RESULT COMPLETE integrity=" + ("FAIL" if terminal == "STOP_INTEGRITY" else "PASS"))
+    return terminal
+
+
+def publish_and_verify(staging: Path) -> bytes:
+    """Copy the staged outputs into the probe, run verify.py once, keep them only on PASS."""
+    copied = []
+    try:
+        for name in OUTPUT_ARTIFACTS:
+            source, target = staging / name, HERE / name
+            if source.is_dir():
+                shutil.copytree(source, target)
+            else:
+                shutil.copy2(source, target)
+            copied.append(target)
+        stdout = run_verify()
+    except SupervisorError as error:
+        if len(error.args) > 1:
+            (staging / "EXPECTED.failed.txt").write_bytes(error.args[1])
+        for target in copied:
+            shutil.rmtree(target) if target.is_dir() else target.unlink()
+        raise
+    (HERE / "EXPECTED.txt").write_bytes(stdout)
+    return stdout
 
 
 def main(argv: Sequence[str]) -> int:
@@ -489,11 +535,17 @@ def main(argv: Sequence[str]) -> int:
             state_root.mkdir(parents=True, exist_ok=True)
             if shutil.disk_usage(state_root).free < MIN_FREE_BYTES:
                 raise SupervisorError("insufficient free space for link states")
+            facts = [f"pin {args.pin}"]
+            facts.append("preflight_verify_stdout_sha256 " + sha256_bytes(run_verify()))
             with tempfile.TemporaryDirectory(prefix="axis-pos-build-") as tmp:
-                binary = build_engine(args.boost_deb, Path(tmp))
-                check_fixtures(binary)
+                binary = build_engine(args.boost_deb, Path(tmp), facts)
+                check_fixtures(binary, facts)
                 say("PREFLIGHT PASS pin=" + args.pin)
-                run_pipeline(core.FORMAL, binary, state_root, args.attempt, HERE, True)
+                staging = state_root / f"attempt-{args.attempt}" / "probe_out"
+                staging.mkdir(parents=True)
+                terminal = run_pipeline(core.FORMAL, binary, state_root, args.attempt, staging, facts)
+            publish_and_verify(staging)
+            say(f"DRIVER_RESULT COMPLETE terminal={terminal}")
         else:
             out = args.out.resolve()
             if out.exists():
@@ -501,14 +553,17 @@ def main(argv: Sequence[str]) -> int:
             if HERE.parent.parent in out.parents:
                 raise SupervisorError("dev output must lie outside the repository")
             out.mkdir(parents=True)
+            facts = ["development"]
             with tempfile.TemporaryDirectory(prefix="axis-pos-dev-") as tmp:
-                binary = build_engine(args.boost_deb, Path(tmp))
-                check_fixtures(binary)
+                binary = build_engine(args.boost_deb, Path(tmp), facts)
+                check_fixtures(binary, facts)
                 say("DEV_PREFLIGHT PASS")
-                run_pipeline(core.DEVELOPMENT, binary, out / "states", 1, out, False)
+                terminal = run_pipeline(core.DEVELOPMENT, binary, out / "states", 1, out, facts)
+            # Development runs stay blind: only the integrity class is shown.
+            say("DRIVER_RESULT COMPLETE integrity=" + ("FAIL" if terminal == "STOP_INTEGRITY" else "PASS"))
         return 0
     except (OSError, SupervisorError, subprocess.SubprocessError, UnicodeError, ValueError) as error:
-        print(f"DRIVER_ERROR {error}", file=sys.stderr)
+        print(f"DRIVER_ERROR {error.args[0] if error.args else error}", file=sys.stderr)
         return 2
 
 
