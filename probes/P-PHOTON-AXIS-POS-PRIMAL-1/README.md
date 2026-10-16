@@ -7,21 +7,24 @@ each file does and which commands exist.
 ## Files
 
 ```text
-PREREG.md             six fields, seeds, schedule, gates, terminals, disclosures
-AXIS_PIN.md           pin declaration; its first commit is the immutable pin
-SHA256SUMS            ordered nine-file inventory of the pin
-axis_engine.cpp       pilot-2 engine included byte for byte, plus --axis and --axis-fixture
-axis_core.py          exact S -> R -> Q reduction, record parsing, #757 gates,
-                      block jackknife, M1/M2 fits, terminal precedence
-axis_reader.py        independent numpy reader of the saved #748 link states
-run_axis.py           one-shot supervisor (formal) and blind plumbing runs (dev)
-verify.py             formal verifier, Python standard library only
-FIXTURE_EXPECTED.txt  engine --axis-fixture 3, 4 and 6
+PREREG.md                 six fields, seeds, schedule, gates, terminals, disclosures
+AXIS_PIN.md               pin declaration; its first commit is the immutable pin
+SHA256SUMS                ordered ten-file inventory of the pin
+axis_engine.cpp           pilot-2 parts 1, 3, 4 included byte for byte, plus --axis
+                          and --axis-fixture
+photon_z5_part2_axis.inc  pilot-2 part 2 with the line-face capacity 6*16 -> 6*32
+axis_core.py              exact S -> R -> Q reduction, record parsing, #757 gates,
+                          block jackknife, M1/M2 fits, terminal precedence
+axis_reader.py            independent numpy reader of the saved #748 link states
+run_axis.py               one-shot supervisor (formal) and blind plumbing runs (dev)
+verify.py                 formal verifier, Python standard library only
+FIXTURE_EXPECTED.txt      engine --axis-fixture 3, 4 and 6
 ```
 
-After execution the probe gains `records/` (one thermal and one measurement
-record per chain), `CHAINS.tsv`, `READER.txt`, `STATE_MANIFEST.tsv`,
-`ANALYSIS.txt`, `EXPECTED.txt`, `RUN.md` and `RESULT.md`. Link states and
+After execution the probe gains `records/` (one thermal record per chain, one
+measurement record per measured chain), `BUILD.txt`, `CHAINS.tsv`,
+`READER.txt`, `STATE_MANIFEST.tsv`, `ANALYSIS.txt`, `EXPECTED.txt`, `RUN.md`
+and `RESULT.md`. Link states and
 full transcripts stay on the formal host under the state root; their SHA-256
 values are in `STATE_MANIFEST.tsv` and `CHAINS.tsv`.
 
@@ -34,7 +37,8 @@ LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 TZ=UTC \
     python3 probes/P-PHOTON-AXIS-POS-PRIMAL-1/verify.py
 ```
 
-Before execution it checks custody, the engine tables, the exact score
+Before execution it checks custody, the engine source (pilot-2 parts and the
+single capacity substitution), the engine tables, the exact score
 identities, the fixtures with the exact Fourier identity in
 `Q(phi)[x]/Phi_2L(x)`, the deterministic readout, bitwise identity of the
 statistics with pilot-2, the seeds and the terminal grammar. After execution

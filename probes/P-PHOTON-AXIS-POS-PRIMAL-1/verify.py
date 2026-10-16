@@ -410,6 +410,12 @@ def seeds_and_grammar(out: list[str]) -> None:
     out.append(f"SCHEDULE sizes={','.join(str(L) for L in cfg.sizes)} fit_sizes="
                f"{','.join(str(L) for L in cfg.fit_sizes)} endpoints={','.join(str(e) for e in cfg.endpoints)} "
                f"window={cfg.window} samples={cfg.samples} b_min={cfg.b_min} min_blocks={cfg.min_blocks}")
+    for label, gates in (("THERMAL_GATES", cfg.thermal), ("POST_GATES", cfg.post)):
+        out.append(f"{label} unique>={core.fmt(gates.unique_min)} ess>={core.fmt(gates.ess_min)} "
+                   f"rhat<={core.fmt(gates.rhat_max)} bulk>={core.fmt(gates.bulk_min)} "
+                   f"tail>={core.fmt(gates.tail_min)} z<={core.fmt(gates.z_max)} "
+                   f"line_move_gate={'ON' if cfg.line_move_gate else 'OFF'}")
+    out.append("SPACING " + " ".join(f"L{L}={m}" for L, m in cfg.spacing))
 
 
 # ---------------------------------------------------------------------------

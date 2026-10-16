@@ -117,6 +117,7 @@ class Config:
     post: Gates
     b_min: int
     min_blocks: int
+    line_move_gate: bool
 
     def spacing_for(self, L: int) -> int:
         return dict(self.spacing)[L]
@@ -151,6 +152,7 @@ FORMAL = Config(
     post=Gates(0.99, 128.0, 1.03, 800.0, 400.0, 3.0),
     b_min=16,
     min_blocks=16,
+    line_move_gate=True,
 )
 
 # Plumbing tests only: sizes outside the production set (L <= 6), short
@@ -169,6 +171,7 @@ DEVELOPMENT = Config(
     post=Gates(0.5, 4.0, 1.5, 20.0, 10.0, 6.0),
     b_min=2,
     min_blocks=4,
+    line_move_gate=True,
 )
 
 CONFIGS = {"FORMAL": FORMAL, "DEVELOPMENT": DEVELOPMENT}
@@ -670,7 +673,7 @@ def mixing_gate(label: str, L: int, windows: dict[tuple[str, int], list[dict[str
         if unique < gates.unique_min:
             failures.append(f"{label}_low_unique_{tag}")
         for mu in range(4):
-            if moves[mu] == 0:
+            if cfg.line_move_gate and moves[mu] == 0:
                 failures.append(f"{label}_no_line_move_{tag}_mu{mu}")
         for metric in MIXING_METRICS:
             data = [float(row[metric]) for row in rows]

@@ -25,15 +25,16 @@ runs at sizes outside the production set are development checks, not data.
 ```text
 STATE:                 ACTIVE
 CANON:                 Public Canon v101
-PUBLIC MAIN AT CLAIM:  89d3c850a673b5941ffd9831058c6ee9c345710b
+BRANCH BASE ON MAIN:   89d3c850a673b5941ffd9831058c6ee9c345710b
 TAG:                   canon-v101
 CONTENT_COMMIT:        421a4ec1daf07c04d19022c1ee219607e83c09a8
 CANON_SHA256:          b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7
 CANON_BYTES:           992352
 ```
 
-`canon/SHA256SUMS` verified 5 of 5 at that commit; the tag and the content
-commit are ancestors of it.
+`canon/SHA256SUMS` verified 5 of 5 at the branch base; the tag and the
+content commit are ancestors of it. The implementation claim on #1116 was made
+at `main` `b79143fb00839b870686f6cea34e174959060df1`, also Public Canon v101.
 
 The probe measures one finite-size quantity and may return at most
 prospectively measured finite-size C-grade evidence about AXIS-POS. It cannot
@@ -106,7 +107,10 @@ D_r = kappa^2/(3 L^4) sum_{k=0}^{L/2} m_k cos(2 pi k/L) Q_r(k),
 m_k = 1 for k = 0 or 2k = L, m_k = 2 otherwise.
 ```
 
-All coefficients are below `8 L^7` in absolute value. The floating readout is
+Every `R` coordinate is below `8 L^7` in absolute value, every `Q` coordinate
+below `48 L^7` and every per-chain total below `1024 * 8 L^7`; at `L = 32` all
+stay below `2^53`, so their conversion to floating point is exact. The floating
+readout is
 fixed: `cos(2 pi k/L)` from closed forms using only `sqrt` (correctly rounded
 on every IEEE host), `math.fsum` over `k` separately for the `1` and `phi`
 coordinates, `phi = (1 + sqrt5)/2`. `verify.py` proves the reduction exactly
@@ -124,23 +128,32 @@ P_{I,r} = E |G~_I(q_r)|^2     from the exact per-chain totals of R_{I,r}(k).
 
 ## Field 2: code
 
-The accepted implementation is the ordered nine-file inventory of
+The accepted implementation is the ordered ten-file inventory of
 `SHA256SUMS`:
 
 ```text
-PREREG.md             this document
-AXIS_PIN.md           the pin declaration
-README.md             commands and file roles
-axis_engine.cpp       engine; includes the pilot-2 photon_z5.cpp byte for byte
-axis_core.py          exact reduction, records, gates, jackknife, fits, terminal
-axis_reader.py        independent numpy reader of the saved link states
-run_axis.py           one-shot supervisor
-verify.py             formal verifier (standard library)
-FIXTURE_EXPECTED.txt  engine output of --axis-fixture 3, 4 and 6
+PREREG.md                 this document
+AXIS_PIN.md               the pin declaration
+README.md                 commands and file roles
+axis_engine.cpp           engine; includes pilot-2 parts 1, 3, 4 byte for byte
+photon_z5_part2_axis.inc  pilot-2 part 2 with one capacity substitution
+axis_core.py              exact reduction, records, gates, jackknife, fits, terminal
+axis_reader.py            independent numpy reader of the saved link states
+run_axis.py               one-shot supervisor
+verify.py                 formal verifier (standard library)
+FIXTURE_EXPECTED.txt      engine output of --axis-fixture 3, 4 and 6
 ```
 
-`axis_engine.cpp` defines `main` as `pilot2_engine_main`, includes
-`../P-PHOTON-Z5-EXACT-HEATBATH-MIXING-PILOT-2/photon_z5.cpp`, and adds only
+`axis_engine.cpp` defines `main` as `pilot2_engine_main`, includes pilot-2
+`photon_z5_part1.inc`, `photon_z5_part3.inc` and `photon_z5_part4.inc` from
+their probe directory, and `photon_z5_part2_axis.inc` in place of part 2. That
+file is pilot-2 part 2 with exactly one substitution,
+`std::array<LineFace, 6 * 16> entries{};` to
+`std::array<LineFace, 6 * 32> entries{};`: a noncontractible line touches
+`6 L` faces and pilot-2 never ran above `L = 16`. It is a storage capacity
+only; no categorical decision, random-bit rule, orbit mass or move changes
+(#757 section 2 allows wrapping the sampler for larger `L`). `verify.py`
+requires the difference to be exactly this substitution. The engine adds only
 the `--axis` and `--axis-fixture` modes. Every pilot-2 mode stays reachable and
 must reproduce `SELFTEST_EXPECTED.txt`, the modeled-stop fixture and
 `REFERENCE_EXPECTED.txt` before production. The macrocycle, the Philox4x32-10
@@ -172,6 +185,8 @@ with empty compiler output required.
 
 Formal host, neutral fields: Debian GNU/Linux 13, x86_64, 2 sockets, 40 cores,
 80 logical CPUs, CPython 3.13.5, g++ 14.2.0, numpy 2.5.0 for the reader only.
+The compiler line, the engine binary SHA-256 and the preflight verifier digest
+are written to `BUILD.txt`.
 
 The pilot-2 statistics (Geyer initial monotone sequence, split and rank
 normalization, ties, quantiles, pooled ESS, conservative hot/cold standard
@@ -185,7 +200,11 @@ For every saved state it checks the format, rebuilds all oriented fluxes with
 numpy, recomputes the five flux counts, both `TWISTJ_FNVLIKE64_V1`
 fingerprints and all 24 slice-sum series, and requires exact equality with
 the engine transcript; it then recomputes `R` and `Q` from its own `S` and
-requires exact equality with the committed records.
+requires exact equality with the committed records. It also requires each
+thermal record to be the exact transcript prefix through `MEASURE_BEGIN` (the
+whole transcript for an exhausted chain), the measurement record's SAMPLE
+lines, diagnostics and footer to equal the transcript's, and the record header
+to bind the transcript hash and byte count of `CHAINS.tsv`.
 
 ### Seeds
 
@@ -251,7 +270,8 @@ The full transcript of a chain is the engine stdout with the supervisor's
 SHA-256 custody in `STATE_MANIFEST.tsv` and `CHAINS.tsv`. Committed records:
 
 ```text
-records/<chain>.thermal.txt   exact byte prefix of the transcript through MEASURE_BEGIN
+records/<chain>.thermal.txt   exact byte prefix of the transcript through MEASURE_BEGIN,
+                              or the whole transcript of a chain that never measured
 records/<chain>.measure.txt   header binding the transcript hash, then per sample the
                               SAMPLE line and four AXIS_Q lines, then 24 AXIS_RTOT lines,
                               AXIS_DIAGNOSTICS and the status footer
@@ -263,8 +283,9 @@ about 2 MB (engineering estimate from a synthetic full-size record).
 Allowed additions after the pin are exactly:
 
 ```text
-records/ (40 files)   CHAINS.tsv   READER.txt   STATE_MANIFEST.tsv
-ANALYSIS.txt          EXPECTED.txt RUN.md       RESULT.md
+records/ (one thermal record per chain, one measurement record per measured chain)
+BUILD.txt   CHAINS.tsv   READER.txt   STATE_MANIFEST.tsv
+ANALYSIS.txt   EXPECTED.txt   RUN.md   RESULT.md
 ```
 
 ## Field 4: systematics and frozen analysis
@@ -295,9 +316,12 @@ it to reproduce every recorded command; a disagreement is `STOP_INTEGRITY`.
 
 ### 4.2 Post-measurement gates (#757 section 6, unchanged thresholds)
 
-On the 1024 measurement samples of every chain and every sentinel:
+On the 1024 measurement samples of every chain and every sentinel (spaced
+`m_L` macrocycles apart, section 9):
 
 ```text
+nonzero line move in every direction            per chain, cumulative count
+strictly positive finite variance               per chain
 unique state fraction per chain                 >= 0.99
 Geyer IMS ESS per chain                         >= 128
 rank-normalized split Rhat                      <= 1.03
@@ -355,9 +379,10 @@ the fits are still printed, marked `FIT_AUTHORITY NONE`.
 
 The estimator sits at the lowest momentum, the slowest mode of a local heat
 bath. Finite size: the asymptotic families are prospective, not validated. A
-positive finite `Delta_L` does not imply a positive limit; #1133 already proves
-`Delta_L > 0` at every finite even `L` with a floor that degenerates as `L`
-grows, so the probe tests the extrapolated limit, not the finite sign.
+positive finite `Delta_L` does not imply a positive limit; #1133 (candidate-T,
+NON-CANONICAL, awaiting independent review) derives `Delta_L > 0` at every
+finite even `L` with a floor that degenerates as `L` grows, so the probe tests
+the extrapolated limit, not the finite sign.
 Production is single-host; integrity rests on determinism, the independent
 reader and the replayed analysis. Floating quantities enter only the
 statistics, as in #757.
@@ -372,6 +397,11 @@ probability of roughly one half. The gates are kept as reserved; a
 `STOP_MIXING` must be read with this rate in mind and is not by itself
 evidence of slow mixing.
 
+The thermal windows are taken every macrocycle, so `ESS >= 64` on 512 values
+needs every sentinel to have `tau_int <= 4` macrocycles at every size. The
+Gaussian control of section 9 covers only the estimator's contrast, not the
+sentinels; at `L = 24, 32` this requirement is untested before the run.
+
 ## Field 5: failure thresholds and terminal grammar
 
 Exactly one terminal, in this precedence:
@@ -385,16 +415,20 @@ Exactly one terminal, in this precedence:
 ```
 
 ```text
-STOP_INTEGRITY        any source, pin, dependency, compile, fixture, state,
-                      transcript, record, reader, hash, orientation, Fourier
-                      convention, exact closure, replayed thermal command,
-                      process exit or stderr, or custody check fails.
+STOP_INTEGRITY        after the chains start: any state, transcript, record,
+                      reader, hash, orientation, Fourier convention, exact
+                      closure, census, replayed thermal command, process exit
+                      or stderr, or custody check fails.
 STOP_MIXING           integrity passes but a thermal or post-measurement gate
                       fails at any L, including L = 8.
 AXIS_POS_EVIDENCE     lower 99% bound of Delta_inf > 0 in BOTH M1 and M2.
 AXIS_NONPOS_EVIDENCE  upper 99% bound of Delta_inf <= 0 in BOTH M1 and M2.
 AXIS_UNRESOLVED       integrity and mixing pass and neither sign is earned.
 ```
+
+A pin, dependency, compile, fixture or preflight-verifier failure stops the
+supervisor before any chain starts. It produces no terminal and no run
+artifact; the pin is then closed under the repository's abandoned-pin rule.
 
 Falsifier of AXIS-POS at this scope: `AXIS_NONPOS_EVIDENCE`. It is evidence
 against AXIS-POS at the declared extrapolation scope, not a falsification of
@@ -435,8 +469,14 @@ python3 run_axis.py formal --pin <pin commit> --boost-deb <path> \
 with `LC_ALL=C LANG=C TZ=UTC PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0`. It
 refuses to start if a decision artifact exists, a pinned byte differs, HEAD is
 not the pin, the probe directory is dirty or the public branch head is not the
-pin. It runs the reader, the analysis and `verify.py` once and writes
-`EXPECTED.txt`.
+pin, and it runs `verify.py` once in pre-execution mode before building. All
+outputs are staged under the attempt root. After the reader and the analysis,
+the supervisor copies the staged outputs into the probe directory and runs
+`verify.py` once; it keeps them and writes `EXPECTED.txt` only if that passes.
+If it fails, the copies are removed, the staged outputs and
+`EXPECTED.failed.txt` stay on the host, and the failure is recorded in
+`RESULT.md` with their hashes; a run that produced `ANALYSIS.txt` is never
+relabelled as never having run.
 
 An interrupted attempt is not resumed. Attempt `n+1` reruns all twenty chains
 from macrocycle zero with the same pin and seeds; the sampler is a pure
@@ -461,7 +501,9 @@ x86_64 and aarch64 with byte-identical stdout required.
    This raises the cost, reduces nothing, and was chosen from no AXIS value.
    The reservation's successor-identifier clause addresses a count that cannot
    be run; the count is unchanged and runnable, so the identifier is kept by
-   owner decision.
+   owner decision. The decision is posted on #1116 before the pin. The
+   inherited post-measurement thresholds therefore apply to samples spaced
+   `m_L` macrocycles apart.
 2. **Intercept interval.** #757 fixes weighted least squares with jackknife
    errors and a 99% interval but not the quantile. This probe uses the
    Student-t of section 4.3 with `nu_fit = min_L (N_L - 1)`, the #757 section 7
@@ -471,6 +513,41 @@ x86_64 and aarch64 with byte-identical stdout required.
 4. **Receipt.** The public pin receipt on #1116 is posted by the owner
    directly, because this implementation session's publication path appends a
    footer to comment bodies.
+
+### 9.1 Open before the pin: owner decisions D1 and D2
+
+This file cannot be pinned while either item is open. Both concern mixing
+gates only, both rest on pre-data audits without TWIST AXIS values, and the
+choice is recorded here and on #1116 before the pin.
+
+**D1, the line-move gate.** The inherited thermal and post-measurement rules
+require a nonzero noncontractible-line move in every direction of every chain
+(pilot-2 convention, #757 section 5). A line move shifts `6 L` plaquettes at
+once and its acceptance falls exponentially with `L`. Measured rates per line
+decision (engineering readout; public pilot-2 logs at `L = 6, 8`, development
+seeds at `L = 12, 16, 24, 32`): about `3.5e-3`, `6.6e-4`, `2e-5` and `2e-6` at
+`L = 6, 8, 12, 16`, a decay of roughly a factor `e^0.8` per unit `L`; no move at
+all in 64 macrocycles at `L = 24` or in 32 macrocycles at `L = 32` (cold and
+hot each). Extrapolated, a
+chain at `L = 24` expects well under one move per direction in the full
+8192-macrocycle budget and a chain at `L = 32` about `10^-3`. With the gate
+as reserved, the thermal rule cannot accept at `L = 24, 32` and the run ends
+`STOP_MIXING` by construction after about 28 h (`L = 24`) and 89 h (`L = 32`) of
+thermal compute. This is the "purely computational impossibility" for which
+#1116 allows a pre-pin departure from the inherited engineering values. The
+line kernel stays in every macrocycle unchanged; the local heat bath alone is
+ergodic (PR #760), so the line move is an accelerator, not a condition of
+correctness. Options: keep the gate as reserved; or drop the nonzero-move
+condition at every `L` and report the counts without authority, keeping the
+exact census of `4 L^3` line decisions per macrocycle as an integrity check.
+Frozen now: `line_move_gate = ON` (as reserved).
+
+**D2, multiplicity of the post-measurement z gates.** Section 4.6 shows that
+at `z <= 3` a perfectly stationary set of chains returns `STOP_MIXING` with a
+probability of roughly one half over five sizes. Options: keep `z <= 3` as
+reserved; or use the thermal value `z <= 4` for the post-measurement drift and
+hot/cold separations as well (about `0.5%` per size for ideal chains, normal
+theory). Frozen now: `z <= 3` (as reserved).
 
 ## 10. Prior knowledge and pre-pin development, disclosed
 
@@ -491,4 +568,16 @@ x86_64 and aarch64 with byte-identical stdout required.
   (`L = 3, 4, 5, 6`, development seed family, 64 samples). Only integrity
   status lines were inspected; no estimator value was opened.
 - Synthetic, non-physical full-size records (pseudo-random numbers, no engine)
-  for timing and tamper tests of the analysis and the verifier.
+  for timing and tamper tests of the analysis and the verifier, and synthetic
+  AR(1) sentinel sets for the gate false-alarm rates of sections 4.6 and 9.1.
+- An independent pre-pin review found that the pilot-2 line-face buffer holds
+  `6 * 16` entries, so `L = 24, 32` would have overflowed at lattice
+  construction; fixed by `photon_z5_part2_axis.inc` before any formal run.
+- Engine smoke tests above `L = 16` under development seeds: thermal-only runs
+  at `L = 24, 32` (no AXIS output), AddressSanitizer and UndefinedBehavior
+  builds at `L = 24, 32` with empty stderr, and one state at `L = 32` sampled
+  three macrocycles after a cold start, far from equilibrium, whose flux
+  counts, fingerprints and slice sums the independent reader matched exactly
+  without the slice sums being printed.
+- Line-move rate runs of section 9.1 at `L = 12, 16, 24, 32` under development
+  seeds, thermal-only with window 1: only ENDPOINT census lines were kept.
