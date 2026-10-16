@@ -1,0 +1,8 @@
+DOMAIN blank=25 first=25 tail=500 total=550
+LABEL_IMAGES blank=5 present=4,4,4,4,4 all_codes=25
+FIBRES size5=5 size25=15 size30=5
+SEPARATION cross_label_pairs=123375 conflicts=0
+INDEPENDENT native_scan=15625 matching_rows=550
+ROWS_SHA256 0c26e475526062ae838336ae07f4c49236a051215cdc02eef18ba27bbcca635c
+DECODER p0=BLANK p1=-t p2=t p3=t p4=-t
+RESULT PASS quadratic_exists=YES minimum_degree=2 affine_lower_bound=INHERITED
