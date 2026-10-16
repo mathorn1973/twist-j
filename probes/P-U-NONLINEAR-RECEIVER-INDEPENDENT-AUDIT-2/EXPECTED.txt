@@ -1,0 +1,11 @@
+PROBE P-U-NONLINEAR-RECEIVER-INDEPENDENT-AUDIT-2
+STAGE custody PASS files=6 sources=12
+STAGE generators_and_quotient PASS gen=78125 inv=78125 aff=78125 quot=78125 sel=31250
+STAGE nonlinear_chart_claim1 PASS aff_rt=31250 phi_rt=31250 poly=15625 fibres=25x625 a0_z14=1250
+STAGE prefix_claim2 PASS pairs=25 selectors=(2,2,4) traces=(2,0,2,1) x2_eq_x0=25
+STAGE synchronized_invariants_claim3 PASS states=5000 edges=10000 fibres=25x200
+STAGE prepared_tail_and_regression_claim4 PASS tail_sets=25x20 union=500 edges=1000 checkpoints=25625 updates=25600
+STAGE access_boundary_and_quotient_claim5 PASS init_zqr=(2,0,1) reachable_zqr=22 msg_indep_steps=1025 source_blocks=25
+STAGE nonaffinity_and_minimality_claims6_7 PASS nonaff=((2,0)->(1,0)/(1,1)) z2_split=9375+6250 sem_vals=6 min_k=2 nonaut=((2,0)->(0,0)/(0,1)) malformed=6
+SUMMARY states=15625 pairs=25 s5000=5000 tail=500 traj_checkpoints=25625 traj_updates=25600 zqr_reachable=22 min_f5_coords=2
+VERDICT PASS P-U-NONLINEAR-RECEIVER-INDEPENDENT-AUDIT-2
