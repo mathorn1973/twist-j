@@ -1,0 +1,968 @@
+--- probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-1/native.py
++++ probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-2/native.py
+@@ -34,6 +34,14 @@
+ C1 = ((0, 4), (1, 4), (1, 0), (2, 0), (0, 1))
+ C2 = ((0, 1), (0, 1), (4, 0), (3, 0), (1, 4))
+ C3 = ((1, 0), (2, 0), (2, 1), (3, 1), (1, 2))
++
++
++def _require_equal(actual, expected, label, context=None):
++    """Fail fast with deterministic evidence for the first fired check."""
++    if actual != expected:
++        raise AssertionError(
++            f"{label} context={context!r} actual={actual!r} expected={expected!r}"
++        )
+ 
+ 
+ def _residues(values, length):
+@@ -139,9 +147,9 @@
+         sums = (z, -z, 2-z, 2-z, 3-z)
+         for j in range(P):
+             y = generator(j, x)
+-            assert generator(j, y) == x, ("generator involution", j, x)
++            _require_equal(generator(j, y), x, "generator-involution", ("j", j, "x", x))
+             counts["generator_involutions"] += 1
+-            assert sum(y) % P == sums[j] % P, ("generator sum", j, x)
++            _require_equal(sum(y) % P, sums[j] % P, "generator-sum", ("j", j, "x", x))
+             counts["generator_sum_actions"] += 1
+         # Every nonnegative counter enters only through its exact parity.
+         # n=0 and n=1 realize both values; this is not a finite-time claim
+@@ -149,8 +157,9 @@
+         for n in (0, 1):
+             y, j = tick(n, x)
+             expected_j = (z + 2*n) % P
+-            assert j == expected_j, ("selector index", n, x)
+-            assert sum(y) % P == sums[expected_j] % P, ("selector sum", n, x)
++            _require_equal(j, expected_j, "selector-index", ("n", n, "x", x))
++            _require_equal(sum(y) % P, sums[expected_j] % P,
++                           "selector-sum", ("n", n, "x", x))
+             counts["selector_sum_actions"] += 1
+ 
+     target_signals = (
+@@ -163,7 +172,8 @@
+     image = {}
+     classes = [0] * P
+     actual_signals = set()
+-    assert tuple(n.bit_count() % 2 for n in range(5)) == (0, 1, 1, 0, 1)
++    _require_equal(tuple(n.bit_count() % 2 for n in range(5)), (0, 1, 1, 0, 1),
++                   "prepared-counter-parities", "n=0..4")
+     for p in product(range(P), repeat=4):
+         h = sum(p) % P
+         classes[h] += 1
+@@ -174,29 +184,30 @@
+             states.append(y)
+             selectors.append(j)
+             counts["native_ticks"] += 1
+-        assert tuple(selectors[:3]) == WORDS[h], ("source word", p, selectors)
+-        assert tuple(s[-2:] for s in states[1:4]) == (C1[h], C2[h], C3[h]), (
+-            "source receivers", p, states)
+-        assert sum(states[3]) % P == 1, ("third sum", p)
+-        assert sum(states[4]) % P == 4, ("fourth sum", p)
+-        assert selectors[3:] == [1, 1], ("continuing selectors", p)
+-        assert states[5] == states[3], ("five-tick endpoint", p)
++        _require_equal(tuple(selectors[:3]), WORDS[h], "source-word", ("p", p, "h", h))
++        _require_equal(tuple(s[-2:] for s in states[1:4]), (C1[h], C2[h], C3[h]),
++                       "source-receivers", ("p", p, "h", h))
++        _require_equal(sum(states[3]) % P, 1, "third-sum", ("p", p, "x3", states[3]))
++        _require_equal(sum(states[4]) % P, 4, "fourth-sum", ("p", p, "x4", states[4]))
++        _require_equal(selectors[3:], [1, 1], "continuing-selectors", ("p", p))
++        _require_equal(states[5], states[3], "five-tick-endpoint", ("p", p))
+         signal = eta(states[1][-2:])
+-        assert signal == target_signals[h], ("declared signed signal", p, signal)
++        _require_equal(signal, target_signals[h], "declared-signed-signal", ("p", p, "h", h))
+         actual_signals.add(signal)
+-        assert decode_head(states[5]) == p, ("prepared inverse", p)
++        _require_equal(decode_head(states[5]), p, "prepared-inverse", ("x5", states[5]))
+         counts["prepared_inverse_recoveries"] += 1
+-        assert states[5] not in image, ("prepared image collision", p)
++        _require_equal(states[5] in image, False, "prepared-image-collision",
++                       ("p", p, "x5", states[5], "previous-p", image.get(states[5])))
+         image[states[5]] = p
+         counts["native_preparations"] += 1
+ 
+-    assert classes == [125] * P, ("sum class populations", classes)
+-    assert len(actual_signals) == P, ("distinct signed signals", actual_signals)
+-    assert len(image) == P**4, ("prepared image size", len(image))
++    _require_equal(classes, [P**3] * P, "sum-class-populations", "h=0..4")
++    _require_equal(len(actual_signals), P, "distinct-signed-signals", tuple(sorted(actual_signals)))
++    _require_equal(len(image), P**4, "prepared-image-size", "all four-piston preparations")
+     for x in product(range(P), repeat=6):
+         decoded = decode_head(x)
+         expected = image.get(x)
+-        assert decoded == expected, ("exact image classification", x, decoded, expected)
++        _require_equal(decoded, expected, "exact-image-classification", ("endpoint", x))
+         counts["candidate_endpoints"] += 1
+         if decoded is None:
+             counts["rejected_endpoints"] += 1
+@@ -205,15 +216,20 @@
+         else:
+             counts["accepted_endpoints"] += 1
+ 
+-    assert counts["generator_involutions"] == 5 * 5**6
+-    assert counts["generator_sum_actions"] == 5 * 5**6
+-    assert counts["selector_sum_actions"] == 2 * 5**6
+-    assert counts["native_preparations"] == counts["prepared_inverse_recoveries"] == 5**4
+-    assert counts["native_ticks"] == 5 * 5**4
+-    assert counts["candidate_endpoints"] == 5**6
+-    assert counts["accepted_endpoints"] == 5**4
+-    assert counts["rejected_endpoints"] == 5**6 - 5**4
+-    assert counts["receiver_plausible_false_endpoints"] == 5**5 - 5**4
++    expected_counts = {
++        "generator_involutions": P * P**6,
++        "generator_sum_actions": P * P**6,
++        "selector_sum_actions": 2 * P**6,
++        "native_preparations": P**4,
++        "prepared_inverse_recoveries": P**4,
++        "native_ticks": 5 * P**4,
++        "candidate_endpoints": P**6,
++        "accepted_endpoints": P**4,
++        "rejected_endpoints": P**6 - P**4,
++        "receiver_plausible_false_endpoints": P**5 - P**4,
++    }
++    for field, expected in expected_counts.items():
++        _require_equal(counts[field], expected, "native-coverage", field)
+     counts["sum_classes"] = len(classes)
+     counts["preparations_per_sum_class"] = classes[0]
+     counts["paired_preparations_by_factorization"] = len(image)**2
+--- probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-1/wave.py
++++ probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-2/wave.py
+@@ -17,8 +17,10 @@
+ from dataclasses import dataclass
+ from fractions import Fraction
+ from functools import lru_cache
+-from itertools import product
++from hashlib import sha256
++from itertools import product, zip_longest
+ from math import lcm
++from pathlib import Path
+ from typing import Iterable, Mapping
+ 
+ Q = Fraction
+@@ -28,6 +30,10 @@
+ ZERO_PORT: Port = (Q(0), Q(0), Q(0), Q(0))
+ Y: tuple[Point, ...] = ((0, 0, 0), (1, 1, 0), (1, 0, 1), (0, 1, 1), (2, 0, 0))
+ SHELL_WEIGHTS = {2: 6, 4: 1, 8: 15, 10: 1, 16: 1}
++DOMAIN_SHA256 = "2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0"
++DOMAIN_BYTES = 5029
++EXPECTED_DOMAIN_SITES = 705
++EXPECTED_AMPLITUDE_DIMENSION = 1426
+ 
+ 
+ def _point_sum(a: Point, b: Point) -> Point:
+@@ -46,6 +52,7 @@
+ }))
+ INDEX: dict[Point, int] = {site: i for i, site in enumerate(D)}
+ PORT_IDS: tuple[int, ...] = tuple(INDEX[y] for y in Y[:4])
++AMPLITUDE_DIMENSION = 2 * len(D) + 4 * len(PORT_IDS)
+ _PORT_SET = frozenset(PORT_IDS)
+ _Y_IDS: tuple[int, ...] = tuple(INDEX[y] for y in Y)
+ 
+@@ -257,32 +264,81 @@
+     return norm2(a) / 2 + sigma * dot(a, sub(v, scale(H(u), Q(1, 2))))
+ 
+ 
+-def audit_geometry() -> dict[str, int]:
+-    """Exact geometry and every finite matrix coefficient; call post-pin."""
+-    if len(D) != 869 or tuple(sorted(D)) != D:
+-        raise AssertionError("wrong finite causal domain or ordering")
+-    if len(STENCIL) != 60 or sum(weight for _, weight in STENCIL) != 288:
+-        raise AssertionError("wrong full stencil")
+-    if any(sum(site) % 2 for site in D):
+-        raise AssertionError("D contains a point outside D3")
++def _require_equal(actual, expected, label: str, context=None) -> None:
++    if actual != expected:
++        raise AssertionError(
++            f"{label} context={context!r} actual={actual!r} expected={expected!r}"
++        )
++
++
++def audit_geometry() -> dict[str, int | str]:
++    """Bind the independently built D to G1's exact local list; post-pin only.
++
++    D above is constructed exclusively from Y and the stencil.  The frozen
++    file is an independently supplied equality target, never an input to the
++    construction of D or its matrix coefficients.
++    """
++    raw = Path(__file__).with_name("DOMAIN.tsv").read_bytes()
++    _require_equal(len(raw), DOMAIN_BYTES, "domain-file-bytes", "DOMAIN.tsv")
++    _require_equal(sha256(raw).hexdigest(), DOMAIN_SHA256,
++                   "domain-file-sha256", "DOMAIN.tsv")
++    lines = raw.decode("ascii").splitlines()
++    _require_equal(lines[0], "x\ty\tz", "domain-file-header", 0)
++    frozen = tuple(tuple(int(token) for token in line.split("\t")) for line in lines[1:])
++    _require_equal(len(frozen), EXPECTED_DOMAIN_SITES, "domain-file-points", "DOMAIN.tsv")
++    for row, site in enumerate(frozen):
++        _require_equal(len(site), 3, "domain-file-coordinate-count", row)
++    _require_equal(len(D), EXPECTED_DOMAIN_SITES, "constructed-domain-sites", "D=Y+B0+B0")
++    for row, (actual, expected) in enumerate(zip_longest(D, frozen, fillvalue=None)):
++        _require_equal(actual, expected, "ordered-domain-point", row)
++    generated = ("x\ty\tz\n" + "".join(f"{x}\t{y}\t{z}\n" for x, y, z in D)).encode("ascii")
++    _require_equal(len(generated), DOMAIN_BYTES, "constructed-domain-bytes", "D canonical TSV")
++    _require_equal(sha256(generated).hexdigest(), DOMAIN_SHA256,
++                   "constructed-domain-sha256", "D canonical TSV")
++    _require_equal(generated, raw, "constructed-domain-file-equality", "D canonical TSV")
++    _require_equal(AMPLITUDE_DIMENSION, EXPECTED_AMPLITUDE_DIMENSION,
++                   "wave-tape-amplitude-dimension", "2*len(D)+4*len(PORT_IDS)")
++    _require_equal(len(STENCIL), 60, "stencil-sites", "five squared-length shells")
++    _require_equal(sum(weight for _, weight in STENCIL), 288, "stencil-weight-sum", "denominator324")
++    for row, site in enumerate(D):
++        _require_equal(sum(site) % 2, 0, "D3-parity", (row, site))
+     checked = 0
+     for i, neighbors in enumerate(_NEIGHBORS):
+         for j, weight in neighbors:
+-            if (i, weight) not in _NEIGHBORS[j]:
+-                raise AssertionError("finite H/L coefficient matrix is asymmetric")
++            reverse = next((value for col, value in _NEIGHBORS[j] if col == i), None)
++            _require_equal(reverse, weight, "H-L-offdiagonal-symmetry", (i, D[i], j, D[j]))
+             checked += 1
++    expected_checked = sum(len(neighbors) for neighbors in _NEIGHBORS)
++    _require_equal(checked, expected_checked, "offdiagonal-coverage", "all directed D neighbors")
+     return {"domain_sites": len(D), "stencil_sites": len(STENCIL),
++            "domain_bytes": len(raw), "domain_sha256": sha256(raw).hexdigest(),
++            "wave_tape_amplitude_dimension": AMPLITUDE_DIMENSION,
+             "symmetric_directed_offdiagonal_coefficients": checked,
+             "retained_full_diagonal_coefficients": len(D)}
+ 
+ 
+-def _amplitude_basis() -> Iterable[X]:
++def _amplitude_basis() -> Iterable[tuple[tuple, X]]:
+     for i in range(len(D)):
+-        yield X({i: Q(1)}, {})
+-        yield X({}, {i: Q(1)})
++        yield ("u", i, D[i]), X({i: Q(1)}, {})
++        yield ("v", i, D[i]), X({}, {i: Q(1)})
+     for name in ("A0", "A1", "B0", "B1"):
+-        for j in range(4):
+-            yield X({}, {}, **{name: port(int(i == j) for i in range(4))})
++        for j in range(len(PORT_IDS)):
++            yield (name, j), X({}, {}, **{name: port(int(i == j) for i in range(len(PORT_IDS)))})
++
++
++def _require_x_equal(actual: X, expected: X, label: str, column) -> None:
++    """Report the first exact differing coordinate, not a huge sparse dump."""
++    if actual == expected:
++        return
++    for field in ("u", "v"):
++        av, ev = getattr(actual, field), getattr(expected, field)
++        for i in sorted(av.keys() | ev.keys()):
++            _require_equal(av.get(i, Q(0)), ev.get(i, Q(0)), label,
++                           ("basis", column, "field", field, "index", i, "site", D[i]))
++    for field in ("A0", "A1", "B0", "B1"):
++        for i, (av, ev) in enumerate(zip(getattr(actual, field), getattr(expected, field))):
++            _require_equal(av, ev, label, ("basis", column, "field", field, "port", i))
++    _require_equal(actual.k, expected.k, label, ("basis", column, "field", "k"))
+ 
+ 
+ def audit_inverse_basis() -> dict[str, int]:
+@@ -295,22 +351,23 @@
+     claim that merely comparing energy on unit vectors covers cross terms.
+     """
+     count = 0
+-    for state in _amplitude_basis():
++    for column, state in _amplitude_basis():
+         forward = F(state)
+-        if F_inv(forward) != state or F(F_inv(state)) != state:
+-            raise AssertionError("F inverse composition failed on an amplitude column")
++        _require_x_equal(F_inv(forward), state, "F_inv-after-F", column)
++        _require_x_equal(F(F_inv(state)), state, "F-after-F_inv", column)
+         residual = linear_combination(
+             (1, forward.v), (1, state.u), (-1, H(state.v)),
+             (-2, P(port_add(state.A0, forward.B0))),
+         )
+         if residual:
+-            raise AssertionError("coupling energy identity failed on an amplitude column")
++            i = min(residual)
++            _require_equal(residual[i], Q(0), "coupling-energy-linear-identity",
++                           ("basis", column, "output-index", i, "site", D[i]))
+         count += 1
+     for k in (0, 1):
+         state = X({}, {}, k=k)
+-        if F_inv(F(state)) != state or F(F_inv(state)) != state:
+-            raise AssertionError("F inverse pointer composition failed")
+-    if count != 2 * len(D) + 16:
+-        raise AssertionError("incomplete amplitude basis")
++        _require_x_equal(F_inv(F(state)), state, "pointer-F_inv-after-F", ("zero", "k", k))
++        _require_x_equal(F(F_inv(state)), state, "pointer-F-after-F_inv", ("zero", "k", k))
++    _require_equal(count, AMPLITUDE_DIMENSION, "amplitude-basis-coverage", "all wave+tape columns")
+     return {"amplitude_columns": count, "inverse_compositions": 2 * count,
+             "coupling_identity_columns": count, "zero_pointer_compositions": 4}
+--- probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-1/verify.py
++++ probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-2/verify.py
+@@ -7,7 +7,7 @@
+ from __future__ import annotations
+ 
+ from collections import Counter
+-from dataclasses import dataclass, replace
++from dataclasses import dataclass, replace, fields, is_dataclass
+ from fractions import Fraction as Q
+ from hashlib import sha256
+ from itertools import product
+@@ -15,18 +15,64 @@
+ import json
+ import sys
+ 
++# Custody precedes scientific imports, including geometry construction.
++DIRECTORY = Path(__file__).resolve().parent
++for entry in (DIRECTORY / "CODE_SHA256SUMS").read_text(encoding="ascii").splitlines():
++    expected_hash, filename = entry.split("  ", 1)
++    observed_hash = sha256((DIRECTORY / filename).read_bytes()).hexdigest()
++    if observed_hash != expected_hash:
++        raise SystemExit(f"frozen dependency {filename}: actual={observed_hash} expected={expected_hash}")
++
+ import native as N
+ import wave as W
+ 
+ ZERO = (Q(0),) * 4
+ UNIT = tuple(tuple(Q(i == j) for i in range(4)) for j in range(4))
+ CAPACITIES = (Q(0), Q(1, 10), Q(1, 5), Q(2, 5), Q(8224427, 10497600), Q(4, 5))
+-FAILURES = []
+-
+-
+-def check(ok, name):
+-    if not ok:
+-        FAILURES.append(name)
++STAGES = ("geometry", "native", "inverse", "maps", "archive", "contact",
++          "ready", "calibration", "collision", "occupied", "malformed", "transition")
++CURRENT_STAGE = "geometry"
++CONTEXT = {}
++
++
++def stage(name):
++    global CURRENT_STAGE
++    CURRENT_STAGE = name
++    CONTEXT.clear()
++
++
++def first_difference(actual, expected, path="value"):
++    """Return the first exact differing coordinate, never a huge state dump."""
++    if is_dataclass(actual) and type(actual) is type(expected):
++        for field in fields(actual):
++            a, e = getattr(actual, field.name), getattr(expected, field.name)
++            if a != e:
++                return first_difference(a, e, path + "." + field.name)
++    if isinstance(actual, (tuple, list)) and isinstance(expected, (tuple, list)):
++        if len(actual) != len(expected):
++            return path + ".length", len(actual), len(expected)
++        for i, (a, e) in enumerate(zip(actual, expected)):
++            if a != e:
++                return first_difference(a, e, f"{path}[{i}]")
++    if isinstance(actual, dict) and isinstance(expected, dict):
++        for key in sorted(set(actual) | set(expected)):
++            a, e = actual.get(key, "MISSING"), expected.get(key, "MISSING")
++            if a != e:
++                return first_difference(a, e, f"{path}[{key!r}]")
++    return path, actual, expected
++
++
++def check(actual, expected, name):
++    if actual != expected:
++        path, a, e = first_difference(actual, expected)
++        context = json.dumps(CONTEXT, sort_keys=True, separators=(",", ":"), default=str)
++        raise AssertionError(f"{name} context={context} coordinate={path} actual={a!r} expected={e!r}")
++
++
++def check_range(actual, lower, upper, name):
++    if not lower <= actual <= upper:
++        context = json.dumps(CONTEXT, sort_keys=True, separators=(",", ":"), default=str)
++        raise AssertionError(f"{name} context={context} actual={actual!r} expected=[{lower!r},{upper!r}]")
+ 
+ 
+ def pplus(a, b):
+@@ -159,26 +205,29 @@
+     v = (349, 354, 354, 348)
+     mu_target = (145483, 173653, 173653, 142153)
+     for j, e in enumerate(UNIT):
+-        check(gram[j] == tuple(Q(int(i == j)) - Q(1, 5) for i in range(4)), f"source-gram-{j}")
+-        check(r0[j] == tuple(-Q(1770 * int(i == j) - v[i], 6480) for i in range(4)), f"R0-{j}")
+-        check(source_inverse(r0[j]) == e, f"R0-inverse-{j}")
+-        check(omega[j] == (Q(-mu_target[j], 10497600),) * 4, f"work-matrix-{j}")
++        CONTEXT.update(column=j)
++        check(gram[j], tuple(Q(int(i == j)) - Q(1, 5) for i in range(4)), f"source-gram-{j}")
++        check(r0[j], tuple(-Q(1770 * int(i == j) - v[i], 6480) for i in range(4)), f"R0-{j}")
++        check(source_inverse(r0[j]), e, f"R0-inverse-{j}")
++        check(omega[j], (Q(-mu_target[j], 10497600),) * 4, f"work-matrix-{j}")
+         f = W.S(e)
+         tf = W.K(W.H(f)); t2f = W.K(W.H(tf))
+         t3f = W.K(W.H(t2f)); t4f = W.K(W.H(t3f))
+         tjf = W.K(W.H(W.J0(f)))
+         t2jf = W.K(W.H(tjf))
+         tjtf = W.K(W.H(W.J0(tf)))
+-        check(r1[j] == pscale(W.PT(W.sub(f, t2f)), Q(1, 2)), f"R1-operator-{j}")
+-        check(d2[j] == pscale(W.PT(W.add(W.sub(tf, t3f), tjf)), Q(1, 2)), f"D2-operator-{j}")
+-        check(d3[j] == pscale(W.PT(W.add(W.sub(t2f, t4f), t2jf, tjtf)), Q(1, 2)), f"D3-operator-{j}")
+-        check(W.PT(W.H(W.P(e))) == tuple(Q(59 * int(i == j) + 1, 54) for i in range(4)), f"Jp-{j}")
++        check(r1[j], pscale(W.PT(W.sub(f, t2f)), Q(1, 2)), f"R1-operator-{j}")
++        check(d2[j], pscale(W.PT(W.add(W.sub(tf, t3f), tjf)), Q(1, 2)), f"D2-operator-{j}")
++        check(d3[j], pscale(W.PT(W.add(W.sub(t2f, t4f), t2jf, tjtf)), Q(1, 2)), f"D3-operator-{j}")
++        check(W.PT(W.H(W.P(e))), tuple(Q(59 * int(i == j) + 1, 54) for i in range(4)), f"Jp-{j}")
+     return maps
+ 
+ 
+ def audit_archive_coefficients(maps):
+     r0, r1, d2, d3 = maps[:4]
++    count = 0
+     for block, j in product(range(4), range(4)):
++        CONTEXT.update(block=block, column=j)
+         vectors = [ZERO] * 4
+         vectors[block] = UNIT[j]
+         za, zb, c0, c1 = vectors
+@@ -187,49 +236,61 @@
+                    pplus(matvec(d2, za), matvec(r0, zb)),
+                    pplus(pplus(matvec(d3, za), matvec(r1, zb)),
+                          pscale(W.PT(W.H(W.P(c1))), -Q(1, 2))))
+-        check(cuts == targets, f"four-cut-coefficients-{block}-{j}")
+-        check((x.A0, x.A1, x.B1, x.B0) == cuts, f"four-cut-slots-{block}-{j}")
+-    return 16
++        check(cuts, targets, f"four-cut-coefficients-{block}-{j}")
++        check((x.A0, x.A1, x.B1, x.B0), cuts, f"four-cut-slots-{block}-{j}")
++        count += 1
++    check(count, 4 * len(UNIT), "archive-coefficient-count")
++    return count
+ 
+ 
+ def audit_contact():
+     coefficients = 0
++    constants = 0
+     cases = Counter()
+     # A complete finite label/sign family; u,v coefficients are complete over D.
+     for receiver, sign in product(product(range(5), repeat=2), (-1, 1)):
++        CONTEXT.clear(); CONTEXT.update(receiver=receiver, sign=sign)
+         z = N.eta(receiver); a = W.S(z)
+         la = W.L(a); ha = W.H(a)
+         cold = W.wave_energy({}, W.scale(a, sign))
+-        check(cold == W.norm2(a) / 2, f"contact-constant-{receiver}-{sign}")
++        check(cold, W.norm2(a) / 2, f"contact-constant-{receiver}-{sign}")
++        constants += 1
+         for i in range(len(W.D)):
+             # Direct E_D expansion uses L; contact implementation uses H.
+-            check(sign * (la.get(i, Q(0)) / 2 - a.get(i, Q(0))) == -sign * ha.get(i, Q(0)) / 2,
+-                  f"contact-u-coefficient-{receiver}-{sign}-{i}")
+-            check(sign * a.get(i, 0) == sign * W.dot(a, {i: Q(1)}),
+-                  f"contact-v-coefficient-{receiver}-{sign}-{i}")
++            check(sign * (la.get(i, Q(0)) / 2 - a.get(i, Q(0))), -sign * ha.get(i, Q(0)) / 2, f"contact-u-coefficient-{receiver}-{sign}-{i}")
++            check(sign * a.get(i, 0), sign * W.dot(a, {i: Q(1)}), f"contact-v-coefficient-{receiver}-{sign}-{i}")
+             coefficients += 2
+         for warm, cap, fraction in product((-2, 0, 2), (Q(0), Q(4, 5), Q(2)), (Q(0), Q(1, 2), Q(1))):
+             x = replace(W.zero_X(UNIT[2], UNIT[3]), u=W.scale(W.P(UNIT[1]), Q(1, 3)),
+                         v=W.add(W.scale(a, warm), W.scale(W.P(UNIT[0]), Q(1, 7))),
+                         A0=UNIT[0], A1=UNIT[1], k=1)
+             for slot in (0, 1):
++                CONTEXT.update(warm=warm, capacity=cap, fraction=fraction, slot=slot)
+                 signs = [1, -1]; signs[slot] = sign
+                 s = State(7, (0,) * 6, (0,) * 6, x, Q(7, 11), cap * fraction,
+                           tuple(signs), tuple(receiver), 4)
+                 delta_direct = W.wave_energy(x.u, W.add(x.v, W.scale(a, sign))) - W.wave_energy(x.u, x.v)
+-                check(delta_direct == W.contact_delta(x.u, x.v, sign, z), "contact-direct-difference")
++                check(delta_direct, W.contact_delta(x.u, x.v, sign, z), "contact-direct-difference")
+                 t = contact(s, cap, slot, receiver)
+-                kind = "accepted" if t.signs[slot] != s.signs[slot] else (
+-                    "lower-refusal" if s.battery - delta_direct < 0 else "upper-refusal")
++                proposed_direct = s.battery - delta_direct
++                kind = ("lower-refusal" if proposed_direct < 0 else
++                        "upper-refusal" if proposed_direct > cap else "accepted")
++                expected_signs = list(s.signs)
++                expected_signs[slot] = -sign
++                expected = (replace(s, X=replace(x, v=W.add(x.v, W.scale(a, sign))),
++                                    work=s.work + delta_direct, battery=proposed_direct,
++                                    signs=tuple(expected_signs)) if kind == "accepted" else s)
++                check(t, expected, "contact-direct-guard-and-full-state")
+                 cases[(slot, sign, kind)] += 1
+-                check(contact(t, cap, slot, receiver) == s, "funded-involution")
+-                check(W.energy(t.X) + t.battery == W.energy(s.X) + s.battery, "funded-joint-energy")
+-                check(W.energy(t.X) - t.work == W.energy(s.X) - s.work, "funded-work-ledger")
+-                check(t.work + t.battery == s.work + s.battery, "funded-store-ledger")
++                check(contact(t, cap, slot, receiver), s, "funded-involution")
++                check(W.energy(t.X) + t.battery, W.energy(s.X) + s.battery, "funded-joint-energy")
++                check(W.energy(t.X) - t.work, W.energy(s.X) - s.work, "funded-work-ledger")
++                check(t.work + t.battery, s.work + s.battery, "funded-store-ledger")
+                 if kind != "accepted":
+-                    check(t == s, "refusal-literal-identity")
++                    check(t, s, "refusal-literal-identity")
+     for slot, sign, kind in product((0, 1), (-1, 1), ("accepted", "lower-refusal", "upper-refusal")):
+-        check(cases[(slot, sign, kind)] > 0, f"guard-coverage-{slot}-{sign}-{kind}")
++        check_range(cases[(slot, sign, kind)], 1, 2700, f"guard-coverage-{slot}-{sign}-{kind}")
++    check(constants, 5 * 5 * 2, "contact-constant-count")
+     return coefficients, sum(cases.values())
+ 
+ 
+@@ -274,7 +335,7 @@
+               pplus(matvec(d2, pscale(za, aa)), matvec(r0, pscale(zb, ab))),
+               pplus(pplus(matvec(d3, pscale(za, aa)), matvec(r1, pscale(zb, ab))),
+                     pscale(W.PT(W.H(W.P(c1))), -Q(1, 2))))
+-    check(cut == target, "ready-four-cut-equations")
++    check(cut, target, "ready-four-cut-equations")
+     expected_n = (0, 1, 1, 2, 3, 3, 4, 5)
+     expected_k = (0, 0, 0, 1, 0, 0, 1, 0)
+     expected_tapes = ((ZERO, ZERO, c0, c1), (ZERO, ZERO, c0, c1),
+@@ -285,27 +346,27 @@
+     comparator = start
+     completed = (0, 0, 0, 1, 2, 2, 3, 4)
+     for c, s in enumerate(states):
+-        check((s.clock, s.n, s.X.k) == (c, expected_n[c], expected_k[c]), "clock-boundary")
+-        check((s.X.A0, s.X.A1, s.X.B0, s.X.B1) == expected_tapes[c], "archive-position")
+-        check(W.energy(s.X) - s.work == initial_energy, "energy-counted-once")
+-        check(W.energy(s.X) + s.battery == initial_energy + capacity, "joint-energy")
+-        check(s.work + s.battery == capacity, "work-plus-store")
++        CONTEXT.update(boundary=c)
++        check((s.clock, s.n, s.X.k), (c, expected_n[c], expected_k[c]), "clock-boundary")
++        check((s.X.A0, s.X.A1, s.X.B0, s.X.B1), expected_tapes[c], "archive-position")
++        check(W.energy(s.X) - s.work, initial_energy, "energy-counted-once")
++        check(W.energy(s.X) + s.battery, initial_energy + capacity, "joint-energy")
++        check(s.work + s.battery, capacity, "work-plus-store")
+         for cut_index in range(4):
+-            check(read_cut(s, cut_index) == (cut[cut_index] if cut_index < completed[c] else None),
+-                  "present-zero-versus-unwritten")
+-        check(apparatus(comparator) == apparatus(s), "matched-classical-apparatus")
++            check(read_cut(s, cut_index), cut[cut_index] if cut_index < completed[c] else None, "present-zero-versus-unwritten")
++        check(apparatus(comparator), apparatus(s), "matched-classical-apparatus")
+         if c < 7:
+             comparator = matched_apparatus_step(comparator, capacity, states[1].x_A[4:], states[1].x_B[4:])
+-    check(advance(final, capacity) == replace(final, clock=0), "eighth-rollover")
++    check(advance(final, capacity), replace(final, clock=0), "eighth-rollover")
+     # No use of native inputs or precomputed h in this port reader.
+     effective_a = source_inverse(cut[0])
+     residual = pplus(cut[2], pscale(matvec(d2, effective_a), -1))
+     inferred_b = 1 if N.eta(final.delayed) == ZERO else int(residual != ZERO)
+-    check(inferred_b == ab, "sigma-B-ready-readout-redundancy")
++    check(inferred_b, ab, "sigma-B-ready-readout-redundancy")
+     if aa == ab == 1:
+-        check((effective_a, source_inverse(residual)) == (za, zb), "unknown-archive-source-recovery")
++        check((effective_a, source_inverse(residual)), (za, zb), "unknown-archive-source-recovery")
+     if inverse:
+-        check(recognize(final, capacity, c0, c1) == (start.x_A[:4], start.x_B[:4]), "prepared-image-inverse")
++        check(recognize(final, capacity, c0, c1), (start.x_A[:4], start.x_B[:4]), "prepared-image-inverse")
+ 
+ 
+ def audit_malformed(final, capacity):
+@@ -321,8 +382,9 @@
+             variants.append(replace(final, X=replace(final.X, **{field: W.add(getattr(final.X, field), {i: Q(1, 3)})})))
+     for field in ("A0", "A1", "B0", "B1"):
+         variants.append(replace(final, X=replace(final.X, **{field: pplus(getattr(final.X, field), UNIT[0])})))
+-    for v in variants:
+-        check(recognize(v, capacity) is None, "malformed-endpoint-rejection")
++    for index, v in enumerate(variants):
++        CONTEXT.update(mutation=index)
++        check(recognize(v, capacity), None, "malformed-endpoint-rejection")
+     return len(variants)
+ 
+ 
+@@ -344,18 +406,19 @@
+     o10 = 2 * (second_cost(1, 4) - first_cost(4))
+     o01 = 2 * (second_cost(4, 1) - first_cost(1))
+     o11 = second_cost(4, 4) - first_cost(4)
+-    check((g00, g01, g11) == (maps[4][0][0], maps[4][1][0], maps[4][1][1]), "calibration-metric")
+-    check((o00, o10, o01, o11) == (maps[5][0][0], maps[5][0][1], maps[5][1][0], maps[5][1][1]), "calibration-work")
++    check((g00, g01, g11), (maps[4][0][0], maps[4][1][0], maps[4][1][1]), "calibration-metric")
++    check((o00, o10, o01, o11), (maps[5][0][0], maps[5][0][1], maps[5][1][0], maps[5][1][1]), "calibration-work")
+     for h in range(5):
++        CONTEXT.update(source=h)
+         x, _ = N.tick(0, N.prepare((h, 0, 0, 0)))
+         z = N.eta(x[4:])
+         for index, (col0, col1) in enumerate(calibrated):
+-            check(pplus(pscale(col0, z[0]), pscale(col1, z[1])) == matvec(maps[index], z), "calibration-response")
++            check(pplus(pscale(col0, z[0]), pscale(col1, z[1])), matvec(maps[index], z), "calibration-response")
+         q3 = z[0] * z[1] * (2 * z[0] - 1)
+         van = z[0] * (2 * z[0] - 1) * (2 * z[1] - 1)
+-        check(q3 == (Q(1, 2) if h == 3 else Q(0)) and van == 0, "nonlinear-boundary")
++        check((q3, van), ((Q(1, 2) if h == 3 else Q(0)), Q(0)), "nonlinear-boundary")
+     # Two omitted-column modifications vanish on Pi2 but not on e2/e3.
+-    check(all(N.eta(N.C1[h])[2:] == (0, 0) for h in range(5)), "out-of-plane-blindness")
++    check(tuple(N.eta(N.C1[h])[2:] for h in range(5)), ((Q(0), Q(0)),) * 5, "out-of-plane-blindness")
+     print("CALIBRATION seven_runs=7 retained_parameters=39 omitted_parameters=51 nonlinear_heldout_shift=1/2")
+ 
+ 
+@@ -380,30 +443,42 @@
+ 
+ 
+ def comparison():
+-    digest = sha256(); count = 0
++    W.audit_geometry()  # Silent validation also protects the comparison carrier.
++    digest = sha256(("TWOUSE-COMPARE-v2\nDOMAIN_SHA256 " + W.DOMAIN_SHA256 + "\n").encode("ascii"))
++    count = 0
+     for line in comparison_lines():
+         digest.update(line); count += 1
+-    print(f"TWOUSE-COMPARE-v1 records={count} sha256={digest.hexdigest()}")
++    check(count, 6 * 5 * 5 * 8, "comparison-record-count")
++    print(f"TWOUSE-COMPARE-v2 domain_sha256={W.DOMAIN_SHA256} records={count} sha256={digest.hexdigest()}")
+ 
+ 
+ def main():
+-    check(len(W.D) == 869, "Dirichlet-size")
+-    print("SCOPE NON-CANONICAL L1 finite-D=869 independent-code target-exposed")
++    stage("geometry")
++    print(f"SCOPE NON-CANONICAL L1 finite-D={len(W.D)} independent-code target-exposed")
+     print("GEOMETRY " + json.dumps(W.audit_geometry(), sort_keys=True, separators=(",", ":")))
++    stage("native")
+     print("NATIVE " + json.dumps(N.audit_native(), sort_keys=True, separators=(",", ":")))
++    stage("inverse")
+     print("F_INVERSE " + json.dumps(W.audit_inverse_basis(), sort_keys=True, separators=(",", ":")))
++    stage("maps")
+     maps = derive_maps()
+     for name, columns in zip(("G_source", "Omega"), maps[4:]):
+         print(name + " " + json.dumps([[str(columns[j][i]) for j in range(4)] for i in range(4)], separators=(",", ":")))
+     for name, columns in zip(("R0", "R1", "D2", "D3"), maps[:4]):
+         print(name + " " + json.dumps([[str(columns[j][i]) for j in range(4)] for i in range(4)], separators=(",", ":")))
++    stage("archive")
+     print(f"FOUR_CUT_COEFFICIENTS basis={audit_archive_coefficients(maps)}")
++    stage("contact")
+     coefficients, cases = audit_contact()
++    check(coefficients, 25 * 2 * 2 * len(W.D), "contact-coefficient-count")
++    check(cases, 25 * 2 * 3 * 3 * 3 * 2, "contact-witness-count")
+     print(f"CONTACT complete_wave_coefficients={coefficients} finite_witnesses={cases}")
++    stage("ready")
+     trajectories = {}; full_work = {}
+     for capacity in CAPACITIES:
+         branches = Counter()
+         for ha, hb in product(range(5), repeat=2):
++            CONTEXT.update(capacity=capacity, hA=ha, hB=hb)
+             states = trajectory(ha, hb, capacity)
+             audit_trajectory(states, capacity, maps)
+             final = states[-1]
+@@ -414,58 +489,64 @@
+                 ea = W.energy(states[2].X) - W.energy(states[1].X)
+                 db = W.energy(states[5].X) - W.energy(states[4].X)
+                 full_work[ha, hb] = final.work
+-                check(final.work == ea + db, "direct-work-table")
+-                check(0 <= ea <= Q(2, 5) and 0 <= db <= Q(2, 5), "source-work-bounds")
++                check(final.work, ea + db, "direct-work-table")
++                check_range(ea, Q(0), Q(2, 5), "first-source-work-bounds")
++                check_range(db, Q(0), Q(2, 5), "second-source-work-bounds")
+                 print(f"WORK hA={ha} hB={hb} EA={ea} DeltaB={db} W={final.work}")
+         values = [branches[(1, 1)], branches[(1, 0)], branches[(0, 1)], branches[(0, 0)]]
+         targets = {Q(2, 5): [13, 12, 0, 0], Q(1, 5): [6, 9, 6, 4],
+                    Q(8224427, 10497600): [25, 0, 0, 0], Q(4, 5): [25, 0, 0, 0]}
+         if capacity in targets:
+-            check(values == targets[capacity], f"capacity-counts-{capacity}")
++            check(values, targets[capacity], f"capacity-counts-{capacity}")
+         print(f"BRANCH B={capacity} AA,AR,RA,RR=" + ",".join(map(str, values)))
+-    check(max(full_work.values()) == Q(8224427, 10497600), "sharp-capacity")
++    check(max(full_work.values()), Q(8224427, 10497600), "sharp-capacity")
+     order = full_work[1, 4] - full_work[4, 1]
+-    check(order == Q(313, 233280), "direct-order-witness")
++    check(order, Q(313, 233280), "direct-order-witness")
+     print(f"ORDER W(1,4)-W(4,1)={order}")
++    check(len(trajectories), len(CAPACITIES) * 5 * 5, "blank-trajectory-count")
++    stage("calibration")
+     audit_calibration(trajectories, maps)
++    stage("collision")
+     collapsed = [trajectories[(Q(1, 5), a, b)][-1] for a, b in product((0, 3), repeat=2)]
+-    check(len({(s.work, s.battery) for s in collapsed}) == 1
+-          and all(s.X == collapsed[0].X for s in collapsed), "accepted-zero-refusal-classical-collision")
+-    check([s.signs for s in collapsed] == [(-1, -1), (-1, 1), (1, -1), (1, 1)], "four-distinct-acceptance-labels")
+-    check(collapsed[0].delayed == collapsed[2].delayed
+-          and collapsed[1].delayed == collapsed[3].delayed, "sigma-A-projection-necessity")
++    for index, s in enumerate(collapsed):
++        CONTEXT.update(collapsed_pair=index)
++        check((s.X, s.work, s.battery), (collapsed[0].X, collapsed[0].work, collapsed[0].battery),
++              "accepted-zero-refusal-classical-collision")
++    check([s.signs for s in collapsed], [(-1, -1), (-1, 1), (1, -1), (1, 1)], "four-distinct-acceptance-labels")
++    check((collapsed[0].delayed, collapsed[1].delayed),
++          (collapsed[2].delayed, collapsed[3].delayed), "sigma-A-projection-necessity")
++    stage("occupied")
+     c0 = (Q(1, 3), -Q(2, 7), Q(0), Q(5, 11))
+     c1 = (-Q(1), Q(2, 3), Q(3, 5), -Q(7, 13))
+     for ha, hb in product(range(5), repeat=2):
++        CONTEXT.update(capacity=Q(4, 5), hA=ha, hB=hb)
+         audit_trajectory(trajectory(ha, hb, Q(4, 5), c0, c1), Q(4, 5), maps, c0, c1)
++    stage("malformed")
+     bad_count = audit_malformed(trajectories[(Q(4, 5), 1, 4)][-1], Q(4, 5))
++    check(bad_count, 22, "malformed-witness-count")
+     print(f"READY blank_trajectories=150 occupied_archive_trajectories=25 malformed_endpoints={bad_count}")
++    stage("transition")
+     # Actual transition role of the retained direction, distinct from reading.
+     s = trajectories[(Q(4, 5), 0, 1)][4]
+     positive = contact(s, Q(4, 5), 1, s.delayed)
+     negative = contact(replace(s, signs=(s.signs[0], -1)), Q(4, 5), 1, s.delayed)
+-    check(positive.X.v != negative.X.v and positive.work == negative.work, "sigma-B-transition-role")
++    check(positive.work, negative.work, "sigma-B-transition-work")
++    if positive.X.v == negative.X.v:
++        raise AssertionError(f"sigma-B-transition-wave actual={positive.X.v!r} expected=distinct-from-{negative.X.v!r}")
+     # Explicitly disposed source erratum, arithmetic target only.
+     za = N.eta((2, 0))
+     q3 = za[0] * za[1] * (2 * za[0] - 1)
+-    check(q3 == Q(1, 2), "q3-dispatch-erratum")
++    check(q3, Q(1, 2), "q3-dispatch-erratum")
+     print("BOUNDARIES sigma_B-ready-readout=redundant sigma_B-transition=retained q3=1/2 global-native-inverse=NOT_CLAIMED")
+     print("COVERAGE individual_preparations=625 paired_inputs=390625_by_factorization independent_wave_experiments=NOT_CLAIMED")
+-    for failure in FAILURES:
+-        print("FALSIFIER " + failure)
+-    print(f"TWOUSE_INDEPENDENT_AUDIT_{'FAIL' if FAILURES else 'PASS'} falsifiers={len(FAILURES)}")
++    print("TWOUSE_INDEPENDENT_AUDIT_PASS falsifiers=0")
+ 
+ 
+ if __name__ == "__main__":
+-    # Dependencies are local, frozen, and byte-bound, including this verifier.
+-    directory = Path(__file__).resolve().parent
+-    for line in (directory / "CODE_SHA256SUMS").read_text(encoding="ascii").splitlines():
+-        expected, name = line.split("  ", 1)
+-        if sha256((directory / name).read_bytes()).hexdigest() != expected:
+-            raise SystemExit("frozen dependency hash mismatch: " + name)
+     if sys.argv[1:] == ["--compare"]:
+         comparison()
+     elif sys.argv[1:] == ["--comparison-records"]:
++        W.audit_geometry()
+         for data in comparison_lines():
+             sys.stdout.buffer.write(data)
+     elif not sys.argv[1:]:
+@@ -474,7 +555,9 @@
+         except AssertionError as error:
+             # A completed exact false-target decision is preserved, not hidden
+             # as a programming failure or silently repaired after the pin.
+-            print("FALSIFIER exact-assertion " + str(error))
+-            print("TWOUSE_INDEPENDENT_AUDIT_FAIL falsifiers=at_least_1 remaining_checks=NOT_RUN")
++            print("FALSIFIER stage=" + CURRENT_STAGE + " " + str(error))
++            remaining = STAGES[STAGES.index(CURRENT_STAGE):]
++            print("NOT_RUN remainder_of_fired_stage_and_later=" + ",".join(remaining) + ",comparison")
++            print("TWOUSE_INDEPENDENT_AUDIT_FAIL falsifiers=1 remaining_checks=NOT_RUN")
+     else:
+         raise SystemExit("usage: verify.py [--compare|--comparison-records]")
+--- probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-1/PREREG.md
++++ probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-2/PREREG.md
+@@ -1,13 +1,13 @@
+-# P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-1
++# P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-2
+ 
+ **PUBLIC / NON-CANONICAL / L1 / independent implementation, exposed targets.**
+ 
+ Original work Apache-2.0, A. M. Thorn, 2026-10-15.
+-Owner session: `Codex-20261015-V-01a13eee-aa34-7640-84c9-04a251d41695`.
+-Reservation: [#1508](https://github.com/mathorn1973/twist-j/issues/1508).
++Owner session: `Codex-20261015-V2-01a13eee-aa34-7640-84c9-04a251d41695`.
++Reservation: [#1516](https://github.com/mathorn1973/twist-j/issues/1516).
+ Program: [#1506](https://github.com/mathorn1973/twist-j/issues/1506).
+-Claim: [public receipt](https://github.com/mathorn1973/twist-j/issues/1508#issuecomment-6189161924).
+-Branch: `probe/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-1`.
++Claim: [public receipt](https://github.com/mathorn1973/twist-j/issues/1516#issuecomment-6190684058).
++Branch: `probe/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-2`.
+ Only this probe directory may change. No merge or Canon promotion is released.
+ 
+ ## Authority, custody and exposure
+@@ -19,8 +19,9 @@
+ All five normative hashes matched. CANON.md has 992352 bytes and SHA-256
+ `b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7`.
+ Required main architecture and aggregate checks passed in run `38484696367`.
+-A live scan found 243 remote heads and no conflicting reservation; exact
+-issue/PR search found only the parent and this assignment.
++A live scan found 246 remote heads and no conflicting reservation; exact
++reservation search found only this assignment. The branch starts from main,
++not either predecessor or the geometry branch.
+ 
+ DISPATCH_RELEASED binds parent body (8517 UTF-8 bytes,
+ `d31d6cc3c880acaff494d5b1567d849626e6c4efa408291bedde1efaf4dd79bb`)
+@@ -38,7 +39,10 @@
+ nor its scoped implementation/review helpers opened lane I implementation,
+ scientific stdout, RESULT, comparison digest or private handoff, or the old
+ #1492 verifier. Helpers share this owner's exposure boundary; they are not
+-additional independent implementations. Only static text review, AST parsing,
++additional independent implementations. Shared G1 geometry and disclosed predecessor failure metadata are also exposed.
++The prior post-record source-exposed R review remains at its original scope.
++No counterpart I2 implementation, output or digest has been opened.
++Only static text review, AST parsing,
+ source hashes and administrative authority checks precede the public pin.
+ No scientific imports, dry runs or exploratory sweeps are permitted.
+ 
+@@ -48,7 +52,24 @@
+ `q3(z_A)u` changes that output by `u/2`; `sigma_B` is redundant for reading
+ second acceptance from `(d,b0,b2)` on the ready family, while it remains
+ part of the complete reversible transition. Historical sources stay fixed.
++G1 additionally disposes the false 869-site paraphrase, preserving the primary
++D=Y+B_zero+B_zero definition and every operator. The named successor uses
++705 exact ordered sites and 1426 amplitude coordinates. G1 certifies geometry
++only; all later source targets remain exposed hypotheses for this audit.
+ Another source inconsistency requires STOP and an explicit disposition.
++
++The additive release receipt is parent #1506 comment 6190487767. It binds
++#1516 (10001 UTF-8 bytes, SHA-256
++`1265314606637f23b5664307f1086245f6d8dfea9d924940fe7735fb13f73264`).
++Mandatory G1 inputs CORRECTION.md, DOMAIN.tsv, GEOMETRY.json and EXPECTED.txt
++were read through Git at `82ad219401d87c3900011d1e8801ffef4221e05b`
++and byte/hash verified; their full custody is in SOURCES.tsv. Only DOMAIN.tsv
++is copied as runtime input. No old run output is copied as V2 evidence.
++The predecessor #1508/#1511 scientific pin
++`1949d6c5c9712fc2c3aa10f0ac296afb9ea5e928` and negative report head
++`846902867881e535666d88fadfffb6d47323dbb3` remain immutable, PARTIAL / STOP,
++NOT ABANDONED. MIGRATION.md and REUSE.diff map and fully show reuse of only
++this author's own source. This is a new descendant session and new pin.
+ 
+ ## 1. Equation
+ 
+@@ -79,9 +100,10 @@
+ `verify.py` is the frozen breaker and orchestration. Its only scientific
+ runtime modules are `native.py` and `wave.py`; Python 3.12 standard library
+ only, integer/Fraction arithmetic throughout. `CODE_SHA256SUMS` binds these
+-files and this preregistration, `PROOF.md`, and `SOURCES.tsv`. The pin commit
++files, this preregistration, `PROOF.md`, `SOURCES.tsv`, `DOMAIN.tsv`,
++`MIGRATION.md`, and `REUSE.diff`. The pin commit
+ binds the hash manifest itself. The verifier checks the manifest before its
+-audit modes. No dependency reads other branches, network data, or prior
++scientific imports (which themselves construct geometry). No dependency reads other branches, network data, or prior
+ verifiers at runtime. Response/work/source matrices are derived from basis
+ dynamics, then compared with exposed source targets; targets do not generate
+ the observed states or table.
+@@ -89,18 +111,23 @@
+ Canonical ordinary command from the repository root:
+ 
+ ```text
+-python3 probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-1/verify.py
++python3 probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-2/verify.py
+ ```
+ 
+ Separately frozen modes of that same code are `--compare`, which prints
+-only the specified TWOUSE-COMPARE-v1 digest, and `--comparison-records`,
++only the specified TWOUSE-COMPARE-v2 digest, and `--comparison-records`,
+ which streams the exact records for subsequent mismatch localization.
+ The latter is allowed only for localization after both pins and first runs;
+ its large transient stream is not committed.
+ 
+ ## 3. Carrier, data and complete finite inventory
+ 
+-Fixed lexicographic `D=Y+B_zero+B_zero`, expected size 869; shell squared
++Fixed lexicographic `D=Y+B_zero+B_zero`, expected size 705. Runtime independently
++constructs D and requires equality with all ordered coordinates in DOMAIN.tsv,
++not just its cardinality. The canonical ASCII TSV is 5029 bytes, SHA-256
++`2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0`;
++its frozen bytes and reconstructed serialization must both match. This silent
++check also precedes either comparison mode. The shell squared
+ lengths `2,4,8,10,16`, weights `6,1,15,1,1` over 324. Full diagonal 8/9 is
+ retained at the boundary. No four-cut infinite-lattice lift is claimed.
+ Wave entries and all 16 tape entries are rational; store lies in `[0,B]`;
+@@ -114,7 +141,7 @@
+    on all states, all 625 preparations through five actual ticks, their
+    words and receiver targets, recovered full pistons, and all 15625
+    possible endpoints classified against the computed prepared image.
+-3. F: both inverse compositions on all `2*869+16=1754` amplitude basis
++3. F: both inverse compositions on all `2*len(D)+16=1426` amplitude basis
+    columns and both zero/pointer states. The coupling identity is checked
+    on every column; `PROOF.md` supplies the arbitrary quadratic cross-term
+    energy argument. Unit-energy samples alone are not the universal proof.
+@@ -125,11 +152,15 @@
+    cuts. Linearity and the written proof give arbitrary rational archives
+    and branch-scaled sources. Every final slot must hold its actual cut.
+ 6. Contacts: all 25 receiver labels, both signs, constant and every u/v
+-   coefficient (86900 affine coefficients). Finite occupied witnesses use
++   coefficient (25*2*2*len(D)=70500 affine coefficients, plus 50 constants). Finite occupied witnesses use
+    `warm in {-2,0,2}`, `B in {0,4/5,2}`, `b/B in {0,1/2,1}`, both contact
+    slots, `u=Pe1/3`, `v=warm*S eta(r)+Pe0/7`, tapes `(e0,e1,e2,e3)`, k=1,
+    W=7/11: 2700 witnesses. Check independent direct Delta, involution,
+-   three invariants, accepted and both refusal directions. Universal guard
++   three invariants, accepted and both refusal directions. Derive the guard
++from the independent direct Delta and compare the entire expected state;
++a refused implementation cannot label an actually admissible state refused.
++All coefficient, constant and finite-witness totals are explicitly checked.
++Universal guard
+    claims use the proof, not the finite witness count.
+ 7. Blank ready: every ordered h pair at capacities, in order,
+    `0,1/10,1/5,2/5,8224427/10497600,4/5`, with b_init=B and representatives
+@@ -176,8 +207,18 @@
+ Every rational including zero is `[numerator,positive_denominator]` reduced;
+ wave vectors are dense lexicographic D vectors; remaining fields are
+ integers. Compact ASCII JSON with `ensure_ascii=True`, separators `,`/`:`,
+-and one LF per record is hashed incrementally with SHA-256. Comparison mode
+-prints `TWOUSE-COMPARE-v1 records=1200 sha256=<hex>` plus one LF.
++and one LF per record is hashed incrementally with SHA-256, after initializing
++with exactly the following ASCII bytes (both displayed lines end with LF):
++
++```text
++TWOUSE-COMPARE-v2
++DOMAIN_SHA256 2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0
++```
++
++Comparison mode prints exactly
++`TWOUSE-COMPARE-v2 domain_sha256=2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0 records=1200 sha256=<hex>`
++plus one LF. Count is explicitly checked as 6*5*5*8. The predecessor v1
++comparison remains NOT_RUN; its output is never reinterpreted as v2.
+ 
+ ## 4. Systematics
+ 
+@@ -196,8 +237,13 @@
+ 
+ Threshold is exact equality, tolerance zero, with every stated carrier and
+ coverage count required. Scientific discrepancies print explicit FALSIFIER
+-records and a scientific FAIL result. A caught scientific AssertionError
+-prints the witness and marks remaining checks NOT_RUN. Such a completed
++records with actual/expected values and first differing coordinate/context,
++and a scientific FAIL result. Fail-fast order is geometry, native, inverse,
++maps, archive, contact, ready, calibration, collision, occupied, malformed,
++transition. A scientific AssertionError stops the remainder of its stage and
++ALL later stages (including comparison), explicitly NOT_RUN; no dependent
++calculation proceeds using a fired target. Earlier emitted stage records are
++retained; the failed stage is partial. No multiple-failure count is inferred. Such a completed
+ false-target report exits zero for deterministic replay, with RESULT explicitly
+ FALSIFIED or PARTIAL; green replay does not mean scientific PASS. Unexpected
+ runtime errors, a timeout or custody failure are execution failures, never
+@@ -206,24 +252,29 @@
+ identifier is permitted. No thresholds or scope may change after pin.
+ 
+ Before FIRST execution: commit all named files, push, retrieve their public
+-Git blobs and compare bytes, record pin and hashes in #1508 as PINNED.
++Git blobs and compare bytes, record pin and hashes in #1516 as PINNED.
+ Execute the pinned checkout cleanly on Linux with Python 3.12, from its
+ repository root, using `LC_ALL=C LANG=C PYTHONDONTWRITEBYTECODE=1
+ PYTHONHASHSEED=0 TZ=UTC` and the existing 600-second limit. Preserve exact
+ stdout as EXPECTED.txt, empty stderr requirement and neutral metadata in
+ RUN.md; add actual scientific disposition in RESULT.md. Commit the first
+-run record before opening I's code/results/digest. Run the separately frozen
+-comparison mode and record exact stdout/custody. On mismatch after both
+-owners' pins/first records, localize the first differing exact coordinate.
++run record publicly. If all ordinary stages pass, the separately frozen own
++comparison mode may run and its exact stdout/custody is recorded. Neither
++owner nor any helper may open counterpart code, outputs or digest until BOTH
++I2 and V2 pins AND first-run receipts exist. Cross-lane digest comparison
++additionally waits for V2's two actual scientific architecture replays. On
++mismatch localize the first exact coordinate from the frozen streams. If the
++ordinary run fails, comparison remains NOT_RUN and dependent device acceptance
++stops; the preserved negative report still receives the formal architecture
++replays.
+ 
+ Use `tools/check_verifier.py --base 8b91a935c426036e00ecb300019fd94734addeec`
+ and all repository policy/Canon/ledger/gate checks unchanged. Open one DRAFT
+ PR limited to this probe and obtain both mandated architecture jobs plus
+ aggregate check. Same-code architecture replay is not a second independent
+-implementation. Do not merge. Review lane R's eventual proof only after this
+-computational blind-code stage, as explicitly source-exposed review; a public
+-comment does not alter this frozen computational scope. Report actual I/R
+-availability and exposure chronology honestly; missing peer evidence is pending.
++implementation. Do not merge. The prior source-exposed R review is retained without claiming a new
++independent proof review. Report actual I2 availability and exposure chronology
++honestly; missing peer evidence is pending.
+ 
+ ## 6. Action layer
+ 
+--- probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-1/PROOF.md
++++ probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-2/PROOF.md
+@@ -14,7 +14,12 @@
+ ## 1. Definitions and elementary identities
+ 
+ Work over the rationals on the fixed finite principal Dirichlet domain
+-`D = Y + B_zero + B_zero`. The five ordered source sites are
++`D = Y + B_zero + B_zero`. G1 at
++`82ad219401d87c3900011d1e8801ffef4221e05b` reconciles this primary set to
++705 ordered sites; DOMAIN.tsv SHA-256 is
++`2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0`.
++The amplitude dimension is 2*705+16=1426. This certificate does not establish
++any response or work target below. The five ordered source sites are
+ `Y = ((0,0,0),(1,1,0),(1,0,1),(0,1,1),(2,0,0))`; the first four are
+ ports. The stencil comprises the D3 vectors with squared length
+ `2,4,8,10,16`, with weights `6,1,15,1,1` divided by `324`.
+@@ -393,7 +398,10 @@
+ The two parent-disclosed residual source defects are disposed explicitly:
+ the nonlinear vector displacement is `u/2`, and the retained delayed
+ buffer plus classical record makes `sigma_B` redundant for ready-family
+-acceptance readout. These dispositions do not edit the frozen sources.
++acceptance readout. G1 further withdraws only the later false 869-site paraphrase for this new
++successor; the primary set and all dynamics remain unchanged. The independent
++705-site reconstruction and exact ordered certificate are checked before
++other science. These dispositions do not edit the frozen sources.
+ 
+ The independent finite verifier must establish its numerical stencil,
+ funding, branch, archive, calibration and comparator targets within its
+--- probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-1/SOURCES.tsv
++++ probes/P-FUNDED-TWO-USE-INDEPENDENT-AUDIT-2/SOURCES.tsv
+@@ -19,3 +19,7 @@
+ 8b91a935c426036e00ecb300019fd94734addeec	canon/CORE.md	f939e40c7288cdc2d6afdf32cc1a1ff932492b37ad7c1bb3af12e06031522a55	27375
+ 8b91a935c426036e00ecb300019fd94734addeec	canon/FRONTIER.md	8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0	27382
+ 8b91a935c426036e00ecb300019fd94734addeec	canon/SHA256SUMS	381e60d4eb9128722317fc916561ca8e797f1a18c2ff8356714e19f727898ae9	415
++82ad219401d87c3900011d1e8801ffef4221e05b	probes/P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1/CORRECTION.md	84b76140333e5edeae5c6aa8895cd85bafdece05a6d80770b1635fdac6294aab	3782
++82ad219401d87c3900011d1e8801ffef4221e05b	probes/P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1/DOMAIN.tsv	2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0	5029
++82ad219401d87c3900011d1e8801ffef4221e05b	probes/P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1/GEOMETRY.json	dbc2c6cd66eec71bf5345cda0cc6aafd8dc854507ff470b09f25843269103a77	1405
++82ad219401d87c3900011d1e8801ffef4221e05b	probes/P-D3-TWO-CUT-GEOMETRY-RECONCILIATION-1/EXPECTED.txt	7850a1ef320738aed5966cad4d9f1f4663b3ae3cabfd328895ce1ebb29d8c8a8	5799
