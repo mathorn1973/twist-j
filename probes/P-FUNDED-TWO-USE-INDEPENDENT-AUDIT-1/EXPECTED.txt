@@ -1,0 +1,3 @@
+SCOPE NON-CANONICAL L1 finite-D=869 independent-code target-exposed
+FALSIFIER exact-assertion wrong finite causal domain or ordering
+TWOUSE_INDEPENDENT_AUDIT_FAIL falsifiers=at_least_1 remaining_checks=NOT_RUN
