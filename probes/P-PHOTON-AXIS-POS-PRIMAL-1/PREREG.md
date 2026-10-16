@@ -449,10 +449,18 @@ maximum status          C, finite-size evidence at the declared scope
 ## 7. Immutable source table
 
 `PREREG.md` cannot hold its own digest and `AXIS_PIN.md` is written after
-it; both are fixed by `SHA256SUMS` and the public pin readback.
+it; both are fixed by `SHA256SUMS` and the public pin readback. The table
+below is for D1 and D2 as reserved; it is regenerated if either changes.
 
 ```text
-SOURCE_TABLE_PLACEHOLDER
+d05c9681fa96df49bbccfac34e35a06d43261821c1fb0a5d4e69e0faccaf99e3  2938  README.md
+44b9cd5ca6dc608b301d2e6f8a31baaf7237691070dd2a23496fb4cb9aa64f02  12989  axis_engine.cpp
+90f52886d2a43a635f380ba41a18a34b18fb39718641c7a37dced1ef5675d60f  18505  photon_z5_part2_axis.inc
+2d140218f6eb940f695949542b8a1903a3fe6be4263e15b12cfa0b780e115b74  45433  axis_core.py
+d440d87854998c871e95ae7f91f689f86a634581fdc0002affc2fc6aead8eee8  12693  axis_reader.py
+f1afd246687e79d3fc854b49e505c0f7f03b270bcc7a165bdd2ea04a484fd992  26474  run_axis.py
+9c8bbea155ccd10fcd6473241196461dcb543f127fe46c39f51b73c9e8b4edaa  20739  verify.py
+2713e4c20d7584e5790c748bb85d6b2a0d656f0002fbb5a61bf74e1791bd8d68  10973  FIXTURE_EXPECTED.txt
 ```
 
 ## 8. Execution and custody lock
