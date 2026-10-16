@@ -1,0 +1,7 @@
+INPUTS {"external_source_check":"pre-pin_git_object_readback","local_files":6}
+NATIVE {"T0_fibres":{"2":3125,"3":3125},"T0_image":6250,"T1_fibres":{"1":6250,"3":3125},"T1_image":9375,"chart_inverse_checks":62500,"generator_frame_checks":78125,"quotient_edges":31250,"states":15625}
+TAIL_IMAGES {"collision":[3,3,1,2,0,0],"edges":1000,"fixed_bit_multiplicity":2,"fixed_bit_tail_image":10,"inverse_compositions":2000,"pairs":25,"sheet_bijections":100,"tail_states":500}
+RETENTION {"all_time_basis":"invariant_induction","invariant_edges":10000,"invariant_states":5000,"prepared_pairs":25,"regression_checkpoints":825,"regression_last_n":32}
+POLYNOMIAL {"evaluation_points":15625,"reduced_degree":9,"scope":"this_global_reader_not_minimum_over_readers","variables":"z,A,B,C,D,q","z4_A4_D_coefficient":2}
+HISTORICAL_FIXTURE {"closure_size":22,"fixture_size":20,"historical_capture":"NOT_RECOVERED","old_closure_target_12":false,"old_fixture_target_10":false,"old_program_executed":false}
+P-U-NONLINEAR-AUDIT-ERRATA-1 PASS scope=corrected_mathematics historical_custody=HOLD
