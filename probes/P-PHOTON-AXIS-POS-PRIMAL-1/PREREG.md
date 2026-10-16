@@ -396,8 +396,9 @@ fires at a given `L` for ideal stationary chains is `1 - (1 - 0.0027)^64`,
 about 16%; a synthetic check (200 groups each of independent and of
 correlated AR(1) sentinels, no TWIST data, engineering readout) gave 14% and
 17.5%, so roughly one half over five sizes. At the frozen `z <= 4` (D2) the
-normal-theory rate is about 0.5% per size, POSTZ4_PLACEHOLDER. A `STOP_MIXING`
-is still not by itself evidence of slow mixing.
+normal-theory rate is about 0.5% per size; the same synthetic check gave 6
+of 400 groups (1.5% per size, all half-drifts), so about 7% over five sizes.
+A `STOP_MIXING` is still not by itself evidence of slow mixing.
 
 The thermal windows are taken every macrocycle, so `ESS >= 64` on 512 values
 needs every sentinel to have `tau_int <= 4` macrocycles at every size. The
@@ -458,7 +459,7 @@ below is for D1 and D2 as decided in section 9.1.
 d05c9681fa96df49bbccfac34e35a06d43261821c1fb0a5d4e69e0faccaf99e3  2938  README.md
 44b9cd5ca6dc608b301d2e6f8a31baaf7237691070dd2a23496fb4cb9aa64f02  12989  axis_engine.cpp
 90f52886d2a43a635f380ba41a18a34b18fb39718641c7a37dced1ef5675d60f  18505  photon_z5_part2_axis.inc
-2d140218f6eb940f695949542b8a1903a3fe6be4263e15b12cfa0b780e115b74  45433  axis_core.py
+e33923870ddd4ee4cb670daeee766b97325cfcb3060fbe5a8c7fbbdf6daa7022  45595  axis_core.py
 d440d87854998c871e95ae7f91f689f86a634581fdc0002affc2fc6aead8eee8  12693  axis_reader.py
 f1afd246687e79d3fc854b49e505c0f7f03b270bcc7a165bdd2ea04a484fd992  26474  run_axis.py
 9c8bbea155ccd10fcd6473241196461dcb543f127fe46c39f51b73c9e8b4edaa  20739  verify.py
