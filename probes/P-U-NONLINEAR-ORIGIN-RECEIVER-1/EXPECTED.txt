@@ -1,0 +1,9 @@
+SCOPE NON-CANONICAL L1 result-exposed unchanged-U fixed-nonlinear-chart
+GENERATORS {"involution":78125,"matrix":78125,"raw_quotient":78125,"selected_quotient":31250,"trace":78125}
+CHART {"base_inverse_compositions":31250,"chart_inverse_compositions":31250,"each_fibre":625,"polynomial_equalities":15625,"receiver_fibres":25,"states":15625,"zero_A_states":1250}
+PREFIX {"full_checkpoint_restorations":25,"prefix_updates":75,"preparations":25,"selectors":[2,2,4],"trace":[2,0,2,1]}
+INVARIANTS {"controlled_edges":10000,"invariant_coordinates":2,"states":5000}
+TAIL {"controlled_edges":1000,"message_pairs":25,"retention":"induction_not_finite_extrapolation","states":500,"states_per_pair":20}
+TRAJECTORY {"checkpoints":25625,"last_counter":1024,"raw_qr":"common_all_messages","role":"regression_only","updates":25600}
+BOUNDARIES {"autonomous_receiver_factor":false,"autonomous_state_reset":false,"malformed_rejections":6,"minimum_F5_receiver_coordinates":2,"nonaffine_witness":true,"physical_admission":"NOT_PROVIDED","source_depletion":false}
+P-U-NONLINEAR-ORIGIN-RECEIVER-1 PASS stages=7 falsifiers=0

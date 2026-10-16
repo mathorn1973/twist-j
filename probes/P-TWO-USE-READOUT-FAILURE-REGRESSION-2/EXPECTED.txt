@@ -1,0 +1,22 @@
+P-TWO-USE-READOUT-FAILURE-REGRESSION-2 AUDIT START
+R01 PASS: local_custody=4/4 upstream_custody=19/19 historical_verify_ast=(witness_lineno=1850_under_T19,comparison_diagnostic=unconditional_NOT_RUN) upstream_files_modified=0
+SEMANTIC_REJECT id=S1_REFUSED_A_NONZERO_B0 b0=(1,0,0,0) b2=(0,0,0,0) sigma_A=1 sigma_B=None d=None error=ValueError:'Inconsistent refused sigma_A=+1 with non-zero b0'
+SEMANTIC_REJECT id=S2_ZERO_B_SOURCE_NONZERO_RESIDUAL b0=(0,0,0,0) b2=(1,0,0,0) sigma_A=None sigma_B=None d=(0, 4) error=ValueError:'Inconsistent d=(0,4) with non-zero b2 - D2(alpha_A z_A)'
+SEMANTIC_REJECT id=S3_RESIDUAL_INCOMPATIBLE_WITH_D b0=(0,0,0,0) b2=(1,0,0,0) sigma_A=None sigma_B=None d=(1, 4) error=ValueError:'Residual b2 - D2(alpha_A z_A) does not match d on ready family'
+SEMANTIC_REJECT id=S4_SIGMA_B_CONTRADICTS_ZERO_COST_D b0=(0,0,0,0) b2=(0,0,0,0) sigma_A=None sigma_B=1 d=(0, 4) error=ValueError:'Mismatch between sigma_B and (d, b0, b2) acceptance readout'
+SEMANTIC_REJECT id=S5_REFUSED_B_NONZERO_RESIDUAL b0=(0,0,0,0) b2=(1,0,0,0) sigma_A=None sigma_B=1 d=None error=ValueError:'Inconsistent refused Contact B with non-zero residual b2'
+POSITIVE_CONTROL id=P1_ACCEPTED_ZERO alpha_A=1 alpha_B=1 z_A=(0,0,0,0) z_B=(0,0,0,0)
+POSITIVE_CONTROL id=P2_REFUSED_INPUT alpha_A=0 alpha_B=0 z_A=None z_B=None
+POSITIVE_CONTROL id=P3_UNKNOWN_ACCEPTANCE_ZERO alpha_A=None alpha_B=None z_A=None z_B=None
+POSITIVE_CONTROL id=P4_PARTIAL_CONTRACT_NONZERO_B2_NO_CONTEXT alpha_B=None z_B=None alpha_B_z_B=(1/2,0,0,0) partial_contract_not_indistinguishability=TRUE
+POSITIVE_CONTROL id=P5_VALID_EXPLICIT_INTEGER_Q4_RECORD alpha_A=1 z_A=(-154224/21535,-1296/365,-1296/365,-75168/21535) raw_tuple_rejected=TypeError provenance_authenticated=FALSE
+R02 PASS: semantic_rejections=5/5 positive_controls=5/5 partial_contract_boundary=VERIFIED provenance_authentication=NOT_CLAIMED
+HARNESS_SCENARIO id=H1_AUDIT_MID_STAGE_T11_FAIL phase_state=AUDIT first_failed_stage=run_t11_direct_chronological_and_source_readers audit=FAIL witnesses=NOT_RUN comparison=NOT_RUN remaining=NOT_RUN completion_marker=False strict_exit=1
+HARNESS_SCENARIO id=H2_AUDIT_FINAL_STAGE_T19_FAIL phase_state=AUDIT first_failed_stage=run_t19_typed_record_factorization audit=FAIL witnesses=NOT_RUN comparison=NOT_RUN remaining=NOT_RUN completion_marker=False strict_exit=1
+HARNESS_SCENARIO id=H3_WITNESS_BUILDING_FAIL phase_state=WITNESS_BUILDING first_failed_stage=witness_boundary_trajectories audit=PASS witnesses=FAIL comparison=NOT_RUN remaining=NOT_RUN completion_marker=False strict_exit=1
+HARNESS_SCENARIO id=H4_COMPARISON_COUNT_MISMATCH phase_state=COMPARISON_FAILED first_failed_stage=full_state_comparison audit=PASS witnesses=PASS comparison=FAIL remaining=NONE completion_marker=False strict_exit=1
+HARNESS_SCENARIO id=H5_COMPARISON_DIGEST_MISMATCH phase_state=COMPARISON_FAILED first_failed_stage=full_state_comparison audit=PASS witnesses=PASS comparison=FAIL remaining=NONE completion_marker=False strict_exit=1
+HARNESS_SCENARIO id=H6_COMPLETED_POSITIVE_CONTROL phase_state=COMPLETED first_failed_stage=None audit=PASS witnesses=PASS comparison=PASS remaining=NONE completion_marker=True strict_exit=0
+R03 PASS: harness_scenarios=6/6 witness_separated_from_T19=TRUE post_start_comparison_mismatch=FAIL not_started_comparison=NOT_RUN failed_emits_completion_marker=FALSE
+R04 PASS: adapter_imports=0 adapter_attr_stores=0 adapter_dynamical_or_head_refs=0 upstream_readout_native_or_transition_refs=0
+P-TWO-USE-READOUT-FAILURE-REGRESSION-2 AUDIT PASS: gates=4/4 semantic_rejections=5/5 positive_controls=5/5 harness_scenarios=6/6 upstream_modified=0 status=ALL_PASS

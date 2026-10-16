@@ -1,0 +1,1 @@
+PASS C-U-NONLINEAR-TWO-MESSAGE-READOUT-N states=15625 pairs=25 required=550 sector_per_pair=20 affine_dim=3 cubic_degree=3 minimal_access=5

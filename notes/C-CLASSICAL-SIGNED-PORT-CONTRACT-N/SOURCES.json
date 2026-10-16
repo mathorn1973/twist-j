@@ -1,0 +1,147 @@
+{
+  "scope": "NON-CANONICAL notes-only mathematical contract; no execution or physical qualification claim",
+  "license": "Apache-2.0",
+  "date": "2026-10-13",
+  "authority": {
+    "canon": "Public Canon v101",
+    "main": "5f54015ed8361e3a64cb10894397020ddfadd104",
+    "content": "421a4ec1daf07c04d19022c1ee219607e83c09a8",
+    "tag": "canon-v101",
+    "tag_target": "08ec6f93b5f70ad662bb447cd6cc41ccc62fa5f3",
+    "heads": 232,
+    "matchingHeads": [],
+    "canonSHA256": "b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7",
+    "bytes": 992352,
+    "tagAncestor": 0,
+    "contentAncestor": 0
+  },
+  "sources": [
+    {
+      "title": "Canonical decoder core",
+      "commit": "5f54015ed8361e3a64cb10894397020ddfadd104",
+      "path": "canon/CORE.md",
+      "classification": "normative core",
+      "sha256": "f939e40c7288cdc2d6afdf32cc1a1ff932492b37ad7c1bb3af12e06031522a55",
+      "bytes": 27375,
+      "git_blob": "71bc3d8e36b6ba4e260ecbb6d641a084955de70d",
+      "url": "https://github.com/mathorn1973/twist-j/blob/5f54015ed8361e3a64cb10894397020ddfadd104/canon/CORE.md"
+    },
+    {
+      "title": "Current open decoder owners",
+      "commit": "5f54015ed8361e3a64cb10894397020ddfadd104",
+      "path": "canon/FRONTIER.md",
+      "classification": "normative frontier",
+      "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+      "bytes": 27382,
+      "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+      "url": "https://github.com/mathorn1973/twist-j/blob/5f54015ed8361e3a64cb10894397020ddfadd104/canon/FRONTIER.md"
+    },
+    {
+      "title": "Inherited rational coupling",
+      "commit": "5f54015ed8361e3a64cb10894397020ddfadd104",
+      "path": "probes/P-DECODER-RESERVOIR-COUPLING-1/CONTRACT.md",
+      "classification": "frozen mathematical source; its historical source-design wording is not a new result",
+      "sha256": "935ccb861096328ae523145b55135541029dba4d000c14f2aa51acddd5ca36c8",
+      "bytes": 16579,
+      "git_blob": "a61559f11664c50930f6e83ef34bcbaa45ba5755",
+      "url": "https://github.com/mathorn1973/twist-j/blob/5f54015ed8361e3a64cb10894397020ddfadd104/probes/P-DECODER-RESERVOIR-COUPLING-1/CONTRACT.md"
+    },
+    {
+      "title": "Existing signed source observability",
+      "commit": "5f54015ed8361e3a64cb10894397020ddfadd104",
+      "path": "notes/C-DECODER-PORT-OBSERVABILITY-N/PROOF.md",
+      "classification": "NON-CANONICAL candidate; result-exposed local supporting computations are not a public gate",
+      "sha256": "f788a51fcdf6d60f5cffae09420300d0a2cb4900c788cfc84f20281ba21d72d8",
+      "bytes": 7213,
+      "git_blob": "cb756b25fc46902b57ac40f90b35c001cc7df19b",
+      "url": "https://github.com/mathorn1973/twist-j/blob/5f54015ed8361e3a64cb10894397020ddfadd104/notes/C-DECODER-PORT-OBSERVABILITY-N/PROOF.md"
+    },
+    {
+      "title": "Calibration dictionary",
+      "commit": "5f54015ed8361e3a64cb10894397020ddfadd104",
+      "path": "notes/DECODER-PORT-OBSERVABLE-CALIBRATION-1.md",
+      "classification": "NON-CANONICAL physical proposal; no physical instance or data",
+      "sha256": "d568f20fa3c2064651898b05bf90243274b3986efa9215869e4828cfc61f66a3",
+      "bytes": 19116,
+      "git_blob": "ea12f0f1e849b9d2a4c42aa28b77a8b0bc326809",
+      "url": "https://github.com/mathorn1973/twist-j/blob/5f54015ed8361e3a64cb10894397020ddfadd104/notes/DECODER-PORT-OBSERVABLE-CALIBRATION-1.md"
+    },
+    {
+      "title": "Finite passive carrier construction",
+      "commit": "5f54015ed8361e3a64cb10894397020ddfadd104",
+      "path": "notes/DECODER-PASSIVE-REALIZATION-BRIDGE-1.md",
+      "classification": "NON-CANONICAL constructive design",
+      "sha256": "f47da6b714d10c28b6bb61be368569de206bed5b0e75664cd80f8ccd5785f607",
+      "bytes": 19774,
+      "git_blob": "ec3396176bc9896924c6c319e61565f9bca6891a",
+      "url": "https://github.com/mathorn1973/twist-j/blob/5f54015ed8361e3a64cb10894397020ddfadd104/notes/DECODER-PASSIVE-REALIZATION-BRIDGE-1.md"
+    },
+    {
+      "title": "Native prescribed evaluator minimum",
+      "commit": "376f52d28c7e7a699a0d66a177592289ab5c6bf8",
+      "path": "notes/C-BETA-PENTAD-MINIMUM-CONTEXT-N/PROOF.md",
+      "classification": "NON-CANONICAL independent sidecar type; five classes do not physically implement the primary wave",
+      "url": "https://github.com/mathorn1973/twist-j/blob/376f52d28c7e7a699a0d66a177592289ab5c6bf8/notes/C-BETA-PENTAD-MINIMUM-CONTEXT-N/PROOF.md"
+    },
+    {
+      "title": "Driven raw reader T1",
+      "commit": "c5c4555a1641cdf39f235642e0e9230274d75d5f",
+      "path": "notes/C-U-RAW-RESIDUE-CONTEXT-UPDATE-N/PROOF.md",
+      "classification": "NON-CANONICAL current-bit reader on a different input/readout domain",
+      "url": "https://github.com/mathorn1973/twist-j/blob/c5c4555a1641cdf39f235642e0e9230274d75d5f/notes/C-U-RAW-RESIDUE-CONTEXT-UPDATE-N/PROOF.md"
+    },
+    {
+      "title": "Occupied contact archive T2",
+      "commit": "fd96e5eb3318620f75056efeec3c2439ace08e84",
+      "path": "notes/C-FIELD-RETAINED-CONTACT-CONTEXT-N/PROOF.md",
+      "classification": "NON-CANONICAL separate field/integer archive; no common source bridge supplied",
+      "url": "https://github.com/mathorn1973/twist-j/blob/fd96e5eb3318620f75056efeec3c2439ace08e84/notes/C-FIELD-RETAINED-CONTACT-CONTEXT-N/PROOF.md"
+    },
+    {
+      "title": "Complete-product boundary T3",
+      "commit": "145266fd4bc0961f9294a5f3eb6e95613b36d43d",
+      "path": "notes/C-U-FIELD-CONTEXT-COMPATIBILITY-N/PROOF.md",
+      "classification": "NON-CANONICAL declared projection obstruction",
+      "url": "https://github.com/mathorn1973/twist-j/blob/145266fd4bc0961f9294a5f3eb6e95613b36d43d/notes/C-U-FIELD-CONTEXT-COMPATIBILITY-N/PROOF.md"
+    },
+    {
+      "title": "Legacy closed DP5 records",
+      "commit": "6f378a1ba9b39fa1c29188b61a2e6507a92eb9d5",
+      "path": "probes/P-U-CA40-DP5-FULL-CLOSURE-1/NUMERICAL.md",
+      "classification": "NON-CANONICAL result-exposed conditional seven-mode data; not a classical-port result",
+      "url": "https://github.com/mathorn1973/twist-j/blob/6f378a1ba9b39fa1c29188b61a2e6507a92eb9d5/probes/P-U-CA40-DP5-FULL-CLOSURE-1/NUMERICAL.md"
+    },
+    {
+      "title": "Saved-output audit and successor analysis",
+      "commit": "8a357a65089bd977673e67899190d4c201c79279",
+      "path": "notes/C-U-CA40-FULL-PULSE-INDEPENDENT-AUDIT-N/PROGRAM_CONSEQUENCES.md",
+      "classification": "NON-CANONICAL frozen successor analysis; no new execution",
+      "url": "https://github.com/mathorn1973/twist-j/blob/8a357a65089bd977673e67899190d4c201c79279/notes/C-U-CA40-FULL-PULSE-INDEPENDENT-AUDIT-N/PROGRAM_CONSEQUENCES.md"
+    }
+  ],
+  "exposure": {
+    "inherited_algebra_and_designs": "Already public and result-exposed; no blind novelty claim",
+    "old_observability_outputs": "Not read or executed as accepted gate evidence in this dispatch",
+    "DP5_saved_outputs": "Already result-exposed; preserved unchanged; future certifier requires its own complete public pre-execution contract",
+    "physical_validation": "No instance, sensor/reference certificates or validation outputs supplied/opened"
+  },
+  "limits": {
+    "science_executed": false,
+    "ion_experiment": false,
+    "long_simulation": false,
+    "canon_promotion": false,
+    "physical_source_admitted": false,
+    "native_to_wave_encoding_provided": false,
+    "SI_scales_provided": false
+  },
+  "contract_files": {
+    "CONTRACT_md": {
+      "sha256": "0a9c248e03385c1a7b5212821f8d6c83b2c76cd4dea626d4e3b984ef6eeb217e",
+      "bytes": 12408
+    },
+    "README_md": {
+      "sha256": "31c013395f97c3e30a9643a80edb5407959342c81983e69f3368fd2d17d534c2",
+      "bytes": 1825
+    }
+  }
+}

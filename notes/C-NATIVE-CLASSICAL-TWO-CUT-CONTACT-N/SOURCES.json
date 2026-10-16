@@ -1,0 +1,67 @@
+{
+  "status": "NON-CANONICAL / conditional L1 proof; native contact admission OPEN; physical NOT_READY",
+  "license": "Apache-2.0",
+  "reservation": "https://github.com/mathorn1973/twist-j/issues/1486",
+  "contract_pin": "7b3fa47c0223bd99fce977de6ea58d484e257033",
+  "source_exposure": "Inherited native tables and classical responses already public. Proof-only manual derivation, no scientific execution.",
+  "sources": [
+    {
+      "commit": "5f54015ed8361e3a64cb10894397020ddfadd104",
+      "path": "canon/CANON.md",
+      "scope": "Canonical native definitions and raw-residue theorem only",
+      "bytes": 992352,
+      "sha256": "b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7",
+      "url": "https://github.com/mathorn1973/twist-j/blob/5f54015ed8361e3a64cb10894397020ddfadd104/canon/CANON.md"
+    },
+    {
+      "commit": "5f54015ed8361e3a64cb10894397020ddfadd104",
+      "path": "canon/CORE.md",
+      "scope": "Canonical scope and native/physical distinction",
+      "bytes": 27375,
+      "sha256": "f939e40c7288cdc2d6afdf32cc1a1ff932492b37ad7c1bb3af12e06031522a55",
+      "url": "https://github.com/mathorn1973/twist-j/blob/5f54015ed8361e3a64cb10894397020ddfadd104/canon/CORE.md"
+    },
+    {
+      "commit": "1b69563af4018b08d7dc75781b12e9553a8c19c3",
+      "path": "notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md",
+      "scope": "Immutable classical carrier and qualification contract",
+      "bytes": 12408,
+      "sha256": "0a9c248e03385c1a7b5212821f8d6c83b2c76cd4dea626d4e3b984ef6eeb217e",
+      "url": "https://github.com/mathorn1973/twist-j/blob/1b69563af4018b08d7dc75781b12e9553a8c19c3/notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/CONTRACT.md"
+    },
+    {
+      "commit": "1b69563af4018b08d7dc75781b12e9553a8c19c3",
+      "path": "notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/OBSERVABILITY_CALIBRATION.md",
+      "scope": "Conditional rational signed responses O",
+      "bytes": 31503,
+      "sha256": "cf67b3ee9e0be93db0310bf92862b1ed7c2ce9d10e83aa1b37e24119b8bef4f5",
+      "url": "https://github.com/mathorn1973/twist-j/blob/1b69563af4018b08d7dc75781b12e9553a8c19c3/notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/OBSERVABILITY_CALIBRATION.md"
+    },
+    {
+      "commit": "1b69563af4018b08d7dc75781b12e9553a8c19c3",
+      "path": "notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/REVERSIBLE_MEMORY.md",
+      "scope": "Conditional complete occupied classical update R",
+      "bytes": 16005,
+      "sha256": "ae64f66bfc7577fe1863f2a0a29a09f4491fd91328bd6a7f2c801f43805addc9",
+      "url": "https://github.com/mathorn1973/twist-j/blob/1b69563af4018b08d7dc75781b12e9553a8c19c3/notes/C-CLASSICAL-SIGNED-PORT-CONTRACT-N/REVERSIBLE_MEMORY.md"
+    }
+  ],
+  "startup": {
+    "public_main": "5f54015ed8361e3a64cb10894397020ddfadd104",
+    "canon": "Public Canon v101",
+    "content": "421a4ec1daf07c04d19022c1ee219607e83c09a8",
+    "canon_bytes": 992352,
+    "canon_sha256": "b83a99feccac173bd3c9c5851c5874ca27cbd135f71d136d793b45f86c8a87f7",
+    "authority_checks": "Fresh origin/main; declared tag/content ancestry; exact Canon size/hash; public main both architectures and aggregate successful",
+    "collision_check": "Actual remote heads, recent open issues, exact-name search; no same-identifier collision before #1486"
+  },
+  "limits": {
+    "actual_U_ticks": "three on common-ready family",
+    "classical_source_distinctions": 5,
+    "native_preparations": 625,
+    "mixed_contact": "new explicitly conditional controlled translation, not compiled from native U",
+    "global_U_inverse_claimed": false,
+    "physical_source_qualified": false,
+    "scientific_code_executed": false
+  }
+}

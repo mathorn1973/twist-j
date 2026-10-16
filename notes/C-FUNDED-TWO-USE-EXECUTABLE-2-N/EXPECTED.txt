@@ -1,0 +1,11 @@
+C-FUNDED-TWO-USE-EXECUTABLE-2-N AUDIT START
+T01 PASS: |B_st|=60, |B_zero|=61, |Y+B_zero|=142, |B_zero+B_zero|=489, |D|=705, dim=1426, DOMAIN.tsv sha256 verified, P^T P=I_4, J_p and M verified
+T02 PASS: 5 generators involutive on 15625 states; V collision at n=0 verified
+T03 PASS: all 625 single-head preparations (125/class) audited and inverted
+T04 PASS: 390625 paired inputs factor into 25 fibres of 15625; full recovery verified
+T05 PASS: coefficient-complete F/F^-1 and E_full (1426x1426=2033476 bilinear entries) verified on all 1426 basis vectors
+T06 PASS: universal H_{B,A}^2=id, H_{B,B}^2=id, L_buf^-1, and supplied-label substate S_B^{(r_A,r_B)}^-1 verified across all 25 labels and 8 phases
+T07 PASS: 4x4 bilinear cross-work matrix equals -1*mu^T/10497600 with mu=(145483,173653,173653,142153)
+T08 PASS: all 25 source pairs and all 6 capacities match work table and branch counts
+T09 PASS: order witness W(1,4)=10352117/20995200, W(4,1)=10323947/20995200, W(1,4)-W(4,1)=313/233280
+T10 PASS: universal 4-cut operator certificate and c1=e0 WARM witnesses verified
