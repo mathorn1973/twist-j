@@ -89,9 +89,13 @@ source_RUN_vs_EXPECTED_and_verifier: MATCH for A, RA, B, RB, C, RC
 source_required_CI: PASS at all eight admitted result heads
 ```
 
-Source custody and actual CI details are in `ACCEPTANCE.md`. Same-session
-textual critiques checked the unit fibers, kernel proof, boundary-4 step,
-family domains and interface premises. They belong to Z's synthesis work.
+Source custody and actual CI details are in `ACCEPTANCE.md`. The synthesis
+owner directly checked the source custody, actual CI, family domains and
+interface premises. Completed same-session helper critiques cover A/B/C,
+including the unit fibers, kernel proof and boundary-4 step. Supplementary
+helper attempts at custody and interface review did not complete and are
+not counted as completed checks or acceptance. All completed checks belong
+to Z's synthesis work; none is an additional independent review.
 
 Before committing this result, the notes-only tree is checked with the
 repository policy, Canon, ledger and gate-contract validators, exact path

@@ -219,7 +219,10 @@ interface obligation is not an adopted frontier or gate row.
 Required review of Z must verify its dependency isolation, the corrected
 scalar witness, the all-`n>=3` quantifier and boundary-4 calculation, the
 D piecewise domains, the common complete-receiver premise and the exact
-notes-only diff. Same-session text critique has checked these formulations;
-it is part of synthesis authorship. Another controller still has to accept
+notes-only diff. The synthesis owner checked custody, actual CI and D's
+interface premises directly. Completed same-session helper critiques cover
+A/B/C and the boundary-4 argument. Supplementary helper attempts at
+custody and interface review did not complete and are not counted as
+completed checks or acceptance. Another controller still has to accept
 this package. No merge, Canon change, new scientific program, tag or
 release is performed by Z.
