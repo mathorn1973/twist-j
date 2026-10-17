@@ -70,7 +70,7 @@ release comments were present. This is not their review and no positive
 intake is presumed. Their later success alone cannot fill the joint-machine
 certificate. Their current administrative status is checked again at handoff.
 
-After the pin, #1591 supplied draft PR #1594 at
+After the pin, this session read #1591's supplemental receipt for draft PR #1594 at
 `6a6f2967120866b9f06956169012c0e8213ab268` in comment
 https://github.com/mathorn1973/twist-j/issues/1589#issuecomment-6240982376.
 Its receipt explicitly classifies its cell exchange, integer source lift,
