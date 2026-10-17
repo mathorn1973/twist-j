@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred fifty-eight checks cover the current
+and emits deterministic text. Its one hundred seventy checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 164/164 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 170/170 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -838,3 +838,16 @@ evidence-class promotion. This audit executes no scientific probe. Execution
 and cross-architecture acceptance concern the subsequently pinned complete
 content candidate; other scientific verifier sources and expected outputs
 are not changed by this extension.
+
+The v103 audit adds six structural checks after all 164 historical guards.
+Thirteen complete current Canon inputs are SHA-256- and byte-count-pinned,
+then reversed to exact public v102 before the older checks execute. The seven
+new inline L1 theorems retain their complete proof blocks, exact scope hashes,
+22 appended premise and boundary edges, and declaration records. All 523
+prior claims, the 26 live H/O owners, gates, Frontier programs and CORE selection
+remain unchanged. The new total is 530 claims with T387/D59/C39/H2/O24/F19;
+the reproduction inventory remains 36. The residue predicate, unit-shell
+classification and obstruction, selected preparation, source-preserving contact
+and five-cell comparison retain their own hypotheses and do not select a
+physical source, reader, apparatus renewal, frequency, or cross-layer lift.
+This is release accounting, not a new scientific computation campaign.

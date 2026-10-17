@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v102. Normative authority and activation
+**Release identity:** Public Canon v103. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,11 +16,29 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v102 also declares a discrete architecture. It does not
+Public Canon v103 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
 anchor is the electron mass.
+
+The native zero predicate now has an exact comparison with the declared
+integer field shell: the piston swap carries it to the shell residue
+condition. Exactly twenty of the twenty-five admitted residues have an
+energy-one preimage. The native zero orbit's boundary-three residue has a
+unique minimum-energy integer representative of energy five; its boundary-four
+residue has no unit preimage. This excludes a unit-seed assignment at every
+n>=3 for that fixed origin and comparison; higher-energy lifts remain open.
+
+The fixed preparation families obey different gate conditions. The original
+two-message family never passes, the alternative passes once transiently,
+and occupied one-shot zero passes even before its semantic reader is ready.
+The unchanged rational contact source is blind across messages with identical
+q,r histories and a common complete receiver/protocol. A source-access map,
+complete preparation, funding and physical receiver still need their own
+contracts. The five declared cell shears have matrix orders 4,3,6,5 and
+infinite; this bounded comparison does not select a physical cell or order.
+All existing physical apparatus owners and layer gates retain their scopes.
 
 The fixed F5 quadratic target now has a complete initialized-memory
 classification: no finite ignored register works at ranks one or two,

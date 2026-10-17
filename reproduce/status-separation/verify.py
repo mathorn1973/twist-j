@@ -43,6 +43,803 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v103 release accounting and reversible public v102 reconstruction.
+# Structural custody only: this code executes no scientific probe.
+V103_PRIOR_COMMIT = 'a632c6a162dc87e60104d7a478e7650a6d5c4a1b'
+
+V103_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d',
+                  'current_bytes': 532811,
+                  'prior_sha256': '757fd6a5fbaab9066e114e780b9813862c859da82663e9672cf62a77f8dae4b4',
+                  'prior_bytes': 525398,
+                  'restore': ((524, 531, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': 'ffd2eeb1448c493a47323191f567bcea0f4ab5dca7694b3a23c24925a7cf80ef',
+                   'current_bytes': 68129,
+                   'prior_sha256': '4eb515aaf31d9ceb9117dbadcab8304d654119fe32c0598217a04473f6ac208c',
+                   'prior_bytes': 67265,
+                   'restore': ((588, 595, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': '3557fd859c1879d7f2ada8da0a027a006fead94f335f2530ea177338aa53d742',
+                      'current_bytes': 182185,
+                      'prior_sha256': '330479ea58295b95e5820a3764415de0c4212b436dd7b5b1362a83b6c5b496f1',
+                      'prior_bytes': 179089,
+                      'restore': ((1084, 1106, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': 'd5b19778bbf1b52ef35ec4e4306f38846af628f3b3cdeca83f0e8fa95846d169',
+                  'current_bytes': 107253,
+                  'prior_sha256': 'b483926d689c18845b4fcf5c14ea3d1d4ec02cfa2281f2293d3c457d63b9c418',
+                  'prior_bytes': 105991,
+                  'restore': ((524, 531, ''),)},
+ 'HISTORY.tsv': {'current_sha256': '3e310772a7744b64b6ddb8910acf4d111c64118b91afa97fc8522f6873467420',
+                 'current_bytes': 486363,
+                 'prior_sha256': 'eeb80ff32cc48ba46bc0de7c6661587e67b753edfb6b5af42c583f2274fc8094',
+                 'prior_bytes': 482587,
+                 'restore': ((1071, 1078, ''),)},
+ 'GATES.tsv': {'current_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'current_bytes': 13324,
+               'prior_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'prior_bytes': 13324,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'current_bytes': 1502,
+                           'prior_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'prior_bytes': 1502,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'current_bytes': 628,
+                        'prior_sha256': 'eee121dd437d06fc2b0fda5377ea6c2e6e01b220e5f1bfb9aa09727885d03d4e',
+                        'prior_bytes': 628,
+                        'restore': ()},
+ 'CANON.md': {'current_sha256': 'd87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b',
+              'current_bytes': 1052518,
+              'prior_sha256': 'c0657380438c965f9556b5b298a34a5e799c48a68ce66e9fe51786ce2413d7d1',
+              'prior_bytes': 1024033,
+              'restore': ((0, 1, '# TWIST-J Public Canon v102\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v102. Normative authority and '
+                           'activation\n'),
+                          (22,
+                           23,
+                           'only. Public Canon v102 also declares the discrete architecture used '
+                           'to read\n'),
+                          (35,
+                           36,
+                           'seed of the two algebraic projections. Public Canon v102 does not '
+                           'claim\n'),
+                          (140,
+                           141,
+                           'deriving the architecture from J; Public Canon v102 contains no '
+                           'such\n'),
+                          (11011, 11636, ''))},
+ 'CORE.md': {'current_sha256': '9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728',
+             'current_bytes': 30714,
+             'prior_sha256': '6e8ec0b03907d973ee22d749965b687c03cf28c26817f26bcfc8f0d3d015bbed',
+             'prior_bytes': 29518,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v102. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v102 also declares a discrete architecture. It does not\n'),
+                         (23, 41, ''))},
+ 'FRONTIER.md': {'current_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'current_bytes': 27382,
+                 'prior_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'prior_bytes': 27382,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': '79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078',
+                  'current_bytes': 207770,
+                  'prior_sha256': 'd8db1686e4d8b986b78fa34b0de7bd34058be26673adf9dc0b9ffe537feb16ef',
+                  'prior_bytes': 205609,
+                  'restore': ((1, 36, ''),
+                              (553,
+                               554,
+                               'Registry snapshot: 523 claims; 0 T-LOCK, 380 T, 59 D, 39 C, 2 H, '
+                               '24 O, 19 F; 26 live H/O.\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': 'bad8bcd2162ee09b482e295b84034a6a1de5a6f1d65edd1682547646bac74abd',
+                       'current_bytes': 244,
+                       'prior_sha256': '5ba44407215802bf05f2d4e28973fa0521fde05dc57ed86e1854b4689e4cf5e1',
+                       'prior_bytes': 244,
+                       'restore': ((1, 2, 'claims\t523\n'),
+                                   (3, 4, 'status_T\t380\n'),
+                                   (11, 12, 'evidence_none\t107\n'))}}
+
+V103_ADDITIONS = {'REGISTRY.tsv': [{'claim_id': 'U-FIELD-RESIDUE-GATE',
+                   'status': 'T',
+                   'scope': 'at L1 for the literal native checkpoint x=(a,b,c,d,q,r), '
+                            'h=(b+2a,d+2c), piston swap W and canonical integer field L,H: h=0 iff '
+                            'W pi_P(x) lies in G_L={(3s,s,3t,t)} iff every integer representative '
+                            'lies in LZ^4; K={(a,3a,c,3c)} and G_L are distinct 25-point marked '
+                            'subspaces, and the checkpoint gate has 625 points; the displayed '
+                            'generator formulas give no autonomous h-only law for g0, while gate '
+                            'and complement persist on X14 for every future driver word; each '
+                            'fixed selected step maps the 250 gated X14 points two to one onto its '
+                            '125-point target sheet; the origin-zero orbit is gated at every '
+                            'boundary and has r3=1; H(Wy)-H(y)=a^2-b^2+ac-bd, so W is not an '
+                            'isometry with the field marking held fixed; this identifies a '
+                            'predicate, not a chosen lift, ready state, source or physical decoder',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'an admitted checkpoint violating the gate/image equivalence or '
+                                'generator formulas, a gated or ungated X14 point changing class '
+                                'under an admitted bit, a fixed-bit gated image differing from the '
+                                'stated two-to-one sheet, an origin-zero boundary outside the '
+                                'gate, or failure of the displayed metric difference; source '
+                                'production and physical realization are outside this L1 '
+                                'comparison'},
+                  {'claim_id': 'FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                   'status': 'T',
+                   'scope': 'at L1 for the displayed canonical integer matrices A_f,L and positive '
+                            'integer form H, the map pi_L(u)=Lu mod5 bijects the complete '
+                            'twenty-element H(u)=1 shell with G_L minus its A_f-fixed subgroup '
+                            '{(3s,s,0,0)}; the exact integer kernel is LZ^4, and all five fixed '
+                            'residues have no unit preimage although every residue in G_L has '
+                            'integer shell representatives; the full square-fiber count, '
+                            'kernel-energy argument and fixed-subgroup exclusion are exact proofs, '
+                            'with no uniform higher-shell minimum, physical unit preparation or '
+                            'source selection asserted',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'an integer H=1 vector outside the twenty square fibers, two '
+                                'distinct unit seeds with equal L-image residue, a unit image in '
+                                'the stated fixed subgroup, a nonfixed G_L residue with no unit '
+                                'preimage, or failure of the exact kernel identity; higher-shell '
+                                'minima and physical preparation are outside scope'},
+                  {'claim_id': 'FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+                   'status': 'T',
+                   'scope': 'at L1 for the unchanged origin-zero native orbit and the fixed W,L,H '
+                            'comparison, the entire infinite coset {y in LZ^4:y mod5=W '
+                            'pi_P(x3)=(0,0,3,1)} has minimum H(y)=5 attained uniquely at '
+                            'y=(0,0,-2,1), with integer preimage (0,-1,-1,2) of energy one; this '
+                            'is mathematical compatibility at one named boundary, not native '
+                            'production, physical selection, energy funding or a complete prepared '
+                            'source',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'an admitted integer image of residue (0,0,3,1) with energy below '
+                                'five, a distinct such image with energy five, or failure of the '
+                                'displayed preimage and energy identities; physical source '
+                                'selection and a different boundary or marking are outside this '
+                                'theorem'},
+                  {'claim_id': 'U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+                   'status': 'T',
+                   'scope': 'at L1 on the unchanged origin-zero native orbit with '
+                            'theta_n=popcount(n) mod2 and the fixed comparison Lu_n mod5=W '
+                            'pi_P(x_n), there is no sequence of energy-one integer seeds '
+                            'satisfying the comparison at every n>=3, even with unrestricted '
+                            'pointwise choices: x4=(4,2,0,0,4,4) has residue (2,4,0,0) in the '
+                            'subgroup with no unit preimage; equivalently no all-n>=3 sequence of '
+                            'L-image representatives has energy five throughout; higher-energy '
+                            'lifts, different comparison maps and eventual unit lifts after a '
+                            'later cutoff remain unclassified, and no boundary-four minimum is '
+                            'asserted',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'an energy-one integer seed with L-image residue (2,4,0,0), or '
+                                'failure of the displayed boundary-four native calculation under '
+                                'the frozen origin and counter convention; a later cutoff, '
+                                'different map or higher-energy lift changes the claim'},
+                  {'claim_id': 'U-PREPARED-FAMILY-SHELL-GATES',
+                   'status': 'T',
+                   'scope': 'at L1 for the unchanged displayed native preparation families and '
+                            'h=(b+2a,d+2c): the complete original two-message support has 550 '
+                            'checkpoints and none is gated; the alternative support has 150 and '
+                            'exactly one gated point (2,1,2,1,1,3), at boundary one for '
+                            '(lambda,mu)=(2,0), which leaves next step; occupied one-shot '
+                            'x_lambda(0)=(lambda,0,-lambda,0,0,0) is gated at every actual time '
+                            'iff lambda=0, with coefficients 2 at boundary zero, 1 at boundaries '
+                            'one and two, and -2Bz only on the ready tail; precisely twenty of the '
+                            'hundred ready-graph points have zero payload, without a '
+                            'full-visitation claim; the distinct absence preparation never passes; '
+                            'occupied zero is already gated while its reader is BLANK, so this '
+                            'gate is neither readiness nor a message decoder',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'an original support point with h=0, an alternative gated support '
+                                'point other than the stated transient, an actual occupied point '
+                                'whose gate status differs from lambda=0, a different zero-payload '
+                                'count in the exact ready graph, or an absent preparation point '
+                                'with h=0; changing the preparation or semantic reading changes '
+                                'the comparison'},
+                  {'claim_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                   'status': 'T',
+                   'scope': 'at L1 for the unchanged rational source '
+                            'a_contact(q,r)=S(ell(q)/2,(ell(r)+1)/2,0,0), common complete initial '
+                            'receiver and common source-independent deterministic protocol, equal '
+                            'native (z,q,r) histories imply identical full receiver histories, '
+                            'including wave and tape updates, resource guards, refusals, store, '
+                            'ledger, pointer and protocol state; this applies across all original '
+                            'two-message preparations and among the five occupied one-shot '
+                            'payloads, including common adaptation using only receiver history; '
+                            'the alternative preparation already puts both labels injectively in '
+                            'its initial q,r, and the absence prefix differs before later quotient '
+                            'coincidence, so neither is covered by the asserted whole-history '
+                            'equality; an extra message-dependent input changes the premise, and '
+                            'no universal no-transmission or physical apparatus conclusion follows',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'two admitted original messages or occupied one-shot payloads with '
+                                'the same complete ready receiver and common allowed protocol '
+                                'whose receiver histories differ, or failure of the displayed '
+                                'quotient restrictions and source injectivity; a message-dependent '
+                                'protocol input, alternative initial control pair or absent-prefix '
+                                'comparison is outside the equal-history premise'},
+                  {'claim_id': 'FIELD-FIVE-CELL-SHEAR-COMPARISON',
+                   'status': 'T',
+                   'scope': 'at L1 for exactly the five displayed unweighted incidence cells with '
+                            'Grams (2), (3), [[2,1],[1,2]], [[2,1],[1,3]], [[3,1],[1,3]] and the '
+                            'electric-first shear A_G=[[I,I],[-G,I-G]]: their exact active and raw '
+                            'matrix orders are 4,3,6,5,infinite; the first four conserved forms '
+                            'H_G are positive definite and the last is positive semidefinite with '
+                            'nullity one, with the explicit nonzero Jordan chain proving infinite '
+                            'order; whole-edge and whole-face reversals give integral conjugacies, '
+                            'the mixed-cell face reversal gives the canonical A_f, and raw '
+                            'active/static splitting is rational rather than a direct integral '
+                            'splitting; this finite five-cell comparison supplies no universal '
+                            'cell minimality, individual-state period, physical cell selection or '
+                            'unique order-five selection',
+                   'canon_section': '2. Time, space, and the decoder',
+                   'evidence': 'inline',
+                   'falsifier': 'a displayed incidence/Gram mismatch, failure of the shear '
+                                'inverse, characteristic polynomial or exact order, failure of the '
+                                'stated energy definiteness or Jordan identities, or an allowed '
+                                'whole-edge/face reorientation changing order or the transformed '
+                                'energy; other cells and physical selection are outside this '
+                                'comparison'}],
+ 'NORMATIVE.tsv': [{'item_id': 'U-FIELD-RESIDUE-GATE',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-FIELD-RESIDUE-GATE',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-FIELD-RESIDUE-GATE'},
+                   {'item_id': 'FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-UNIT-RESIDUE-CLASSIFICATION'},
+                   {'item_id': 'FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-NATIVE-BOUNDARY-THREE-MINIMUM'},
+                   {'item_id': 'U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-NATIVE-UNIT-LIFT-OBSTRUCTION'},
+                   {'item_id': 'U-PREPARED-FAMILY-SHELL-GATES',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-PREPARED-FAMILY-SHELL-GATES',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-PREPARED-FAMILY-SHELL-GATES'},
+                   {'item_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::U-CONTACT-SOURCE-NONINTERFERENCE'},
+                   {'item_id': 'FIELD-FIVE-CELL-SHEAR-COMPARISON',
+                    'item_type': 'THEOREM',
+                    'claim_id': 'FIELD-FIVE-CELL-SHEAR-COMPARISON',
+                    'status': 'T',
+                    'layer': 'L1',
+                    'gate_ids': '',
+                    'statement_source': 'canon/CANON.md::FIELD-FIVE-CELL-SHEAR-COMPARISON'}],
+ 'DEPENDENCIES.tsv': [{'item_id': 'U-FIELD-RESIDUE-GATE',
+                       'depends_on': 'DEF-AUTONOMOUS-STATE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the literal native selector, counter and origin-zero orbit'},
+                      {'item_id': 'U-FIELD-RESIDUE-GATE',
+                       'depends_on': 'FIELD-CONSERVATIVE-CHAIN-LAW',
+                       'relation': 'REQUIRES',
+                       'basis': 'the literal field marking, positive form and exact integer image '
+                                'criterion'},
+                      {'item_id': 'U-FIELD-RESIDUE-GATE',
+                       'depends_on': 'U-NATIVE-INVARIANT-AND-NOWRITE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the protected-sign invariant on synchronized X14 checkpoints'},
+                      {'item_id': 'U-FIELD-RESIDUE-GATE',
+                       'depends_on': 'U-NATIVE-CHART-AND-QDD-READBACK',
+                       'relation': 'REQUIRES',
+                       'basis': 'three-step synchronization and its sheet bijections'},
+                      {'item_id': 'FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                       'depends_on': 'FIELD-CONSERVATIVE-CHAIN-LAW',
+                       'relation': 'REQUIRES',
+                       'basis': 'the exact A_f,L,H identities and positive integer shell used by '
+                                'the unit-residue proof'},
+                      {'item_id': 'FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+                       'depends_on': 'U-FIELD-RESIDUE-GATE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the zero native boundary-three checkpoint and its marked shell '
+                                'residue'},
+                      {'item_id': 'FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+                       'depends_on': 'FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                       'relation': 'REQUIRES',
+                       'basis': 'global unit-residue injectivity identifies the unique equality '
+                                'case'},
+                      {'item_id': 'U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+                       'depends_on': 'U-FIELD-RESIDUE-GATE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the unchanged native generators and zero-orbit counter '
+                                'convention'},
+                      {'item_id': 'U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+                       'depends_on': 'FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                       'relation': 'REQUIRES',
+                       'basis': 'the five fixed shell residues have no energy-one preimages'},
+                      {'item_id': 'U-PREPARED-FAMILY-SHELL-GATES',
+                       'depends_on': 'U-FIELD-RESIDUE-GATE',
+                       'relation': 'REQUIRES',
+                       'basis': 'the marked native zero predicate and its integer-shell '
+                                'interpretation'},
+                      {'item_id': 'U-PREPARED-FAMILY-SHELL-GATES',
+                       'depends_on': 'U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT',
+                       'relation': 'REQUIRES',
+                       'basis': 'the original preparation, exact 550-point support, prefix and '
+                                'complete tail'},
+                      {'item_id': 'U-PREPARED-FAMILY-SHELL-GATES',
+                       'depends_on': 'U-ALTERNATIVE-AFFINE-SEMANTIC-READOUT',
+                       'relation': 'REQUIRES',
+                       'basis': 'the alternative preparation, exact 150-point support, prefix and '
+                                'complete tail'},
+                      {'item_id': 'U-PREPARED-FAMILY-SHELL-GATES',
+                       'depends_on': 'U-NATIVE-SOURCE-RECEIVER-RECORD',
+                       'relation': 'REQUIRES',
+                       'basis': 'the five occupied one-shot preparations, distinct absence and '
+                                'exact ready graph'},
+                      {'item_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                       'depends_on': 'U-NATIVE-APPARATUS-HISTORY-FACTOR',
+                       'relation': 'REQUIRES',
+                       'basis': 'the closed native quotient and identical controls for common sum '
+                                'and readiness'},
+                      {'item_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                       'depends_on': 'U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT',
+                       'relation': 'REQUIRES',
+                       'basis': 'the original two-message family and common q,r port histories'},
+                      {'item_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                       'depends_on': 'U-ALTERNATIVE-AFFINE-SEMANTIC-READOUT',
+                       'relation': 'REQUIRES',
+                       'basis': 'the alternative family with message-sensitive initial q,r '
+                                'controls'},
+                      {'item_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                       'depends_on': 'U-NATIVE-SOURCE-RECEIVER-RECORD',
+                       'relation': 'REQUIRES',
+                       'basis': 'common controls among occupied payloads and the distinct absence '
+                                'prefix'},
+                      {'item_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                       'depends_on': 'SIGNED-PORT-OCCUPIED-REVERSIBILITY',
+                       'relation': 'REQUIRES',
+                       'basis': 'complete deterministic wave, tape and pointer updates on the '
+                                'rational carrier'},
+                      {'item_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                       'depends_on': 'FUNDED-CONTACT-INVOLUTION',
+                       'relation': 'REQUIRES',
+                       'basis': 'the retained source encoding and complete resource-guarded '
+                                'contact'},
+                      {'item_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                       'depends_on': 'QDD-INSTRUMENT-APPARATUS',
+                       'relation': 'BOUNDED_BY',
+                       'basis': 'no complete physical apparatus or admitted positive '
+                                'message-source interface is supplied'},
+                      {'item_id': 'FIELD-FIVE-CELL-SHEAR-COMPARISON',
+                       'depends_on': 'FIELD-SHEAR-ENERGY-BOUNDARY',
+                       'relation': 'REQUIRES',
+                       'basis': 'the electric-first shear, conserved raw energy and positivity '
+                                'boundary'},
+                      {'item_id': 'FIELD-FIVE-CELL-SHEAR-COMPARISON',
+                       'depends_on': 'DEF-FIELD-WORK-RECORD-CHAIN',
+                       'relation': 'REQUIRES',
+                       'basis': 'the fixed mixed-cell marking used for the comparison with '
+                                'canonical A_f'}],
+ 'EVIDENCE.tsv': [{'claim_id': 'U-FIELD-RESIDUE-GATE',
+                   'evidence_id': 'EV-U-FIELD-RESIDUE-GATE',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '4c7b1533a0a6e61d45487136025b26b18deee1138eb5eae864f637e1ff3a0626',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                   'evidence_id': 'EV-FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '2f744fb3b28e0a2a2528b0349a3dbd7dd6ecafe9c77bf638bee31de0d7235e34',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+                   'evidence_id': 'EV-FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'dbfc0eda30b94baa2bdd39fcef96a0803df8e9f0f4655b525415f13272af7c2b',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+                   'evidence_id': 'EV-U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '3b5d5004cbd3ce6dedeb77901f0087c6b22aae27092edad15e1f115dc1503582',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-PREPARED-FAMILY-SHELL-GATES',
+                   'evidence_id': 'EV-U-PREPARED-FAMILY-SHELL-GATES',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'b5bc258e9cea221dc4f9987bda196e2cfeb675ba7eac61958e40ff57f0ac40ff',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                   'evidence_id': 'EV-U-CONTACT-SOURCE-NONINTERFERENCE',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': 'd0a467e7f141688c4961091fdcfe7919e3c03e10cbe93b5511b5542e987fc26d',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'},
+                  {'claim_id': 'FIELD-FIVE-CELL-SHEAR-COMPARISON',
+                   'evidence_id': 'EV-FIELD-FIVE-CELL-SHEAR-COMPARISON',
+                   'evidence_kind': 'INLINE_CANON',
+                   'location': 'inline',
+                   'sha256': '9041743aac8f73fd5d822197cf5029641f18915fc27507601c2032d5eaa147ab',
+                   'hash_mode': 'registry-scope-sha256-v1',
+                   'architecture_requirement': 'none'}],
+ 'HISTORY.tsv': [{'event_id': 'CANON103-DECLARE-U-FIELD-RESIDUE-GATE',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-17',
+                  'release': 'canon-v103-candidate',
+                  'claim_id': 'U-FIELD-RESIDUE-GATE',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '4c7b1533a0a6e61d45487136025b26b18deee1138eb5eae864f637e1ff3a0626',
+                  'evidence_id': 'EV-U-FIELD-RESIDUE-GATE',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '4c7b1533a0a6e61d45487136025b26b18deee1138eb5eae864f637e1ff3a0626',
+                  'rationale': 'Declare the stated conditional L1 theorem on its self-contained '
+                               'exact Canon proof; prior claims and physical apparatus owners '
+                               'retain their scopes and statuses, and no source production, '
+                               'physical selection or cross-layer realization is earned.'},
+                 {'event_id': 'CANON103-DECLARE-FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-17',
+                  'release': 'canon-v103-candidate',
+                  'claim_id': 'FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '2f744fb3b28e0a2a2528b0349a3dbd7dd6ecafe9c77bf638bee31de0d7235e34',
+                  'evidence_id': 'EV-FIELD-UNIT-RESIDUE-CLASSIFICATION',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '2f744fb3b28e0a2a2528b0349a3dbd7dd6ecafe9c77bf638bee31de0d7235e34',
+                  'rationale': 'Declare the stated conditional L1 theorem on its self-contained '
+                               'exact Canon proof; prior claims and physical apparatus owners '
+                               'retain their scopes and statuses, and no source production, '
+                               'physical selection or cross-layer realization is earned.'},
+                 {'event_id': 'CANON103-DECLARE-FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-17',
+                  'release': 'canon-v103-candidate',
+                  'claim_id': 'FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'dbfc0eda30b94baa2bdd39fcef96a0803df8e9f0f4655b525415f13272af7c2b',
+                  'evidence_id': 'EV-FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'dbfc0eda30b94baa2bdd39fcef96a0803df8e9f0f4655b525415f13272af7c2b',
+                  'rationale': 'Declare the stated conditional L1 theorem on its self-contained '
+                               'exact Canon proof; prior claims and physical apparatus owners '
+                               'retain their scopes and statuses, and no source production, '
+                               'physical selection or cross-layer realization is earned.'},
+                 {'event_id': 'CANON103-DECLARE-U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-17',
+                  'release': 'canon-v103-candidate',
+                  'claim_id': 'U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '3b5d5004cbd3ce6dedeb77901f0087c6b22aae27092edad15e1f115dc1503582',
+                  'evidence_id': 'EV-U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '3b5d5004cbd3ce6dedeb77901f0087c6b22aae27092edad15e1f115dc1503582',
+                  'rationale': 'Declare the stated conditional L1 theorem on its self-contained '
+                               'exact Canon proof; prior claims and physical apparatus owners '
+                               'retain their scopes and statuses, and no source production, '
+                               'physical selection or cross-layer realization is earned.'},
+                 {'event_id': 'CANON103-DECLARE-U-PREPARED-FAMILY-SHELL-GATES',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-17',
+                  'release': 'canon-v103-candidate',
+                  'claim_id': 'U-PREPARED-FAMILY-SHELL-GATES',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'b5bc258e9cea221dc4f9987bda196e2cfeb675ba7eac61958e40ff57f0ac40ff',
+                  'evidence_id': 'EV-U-PREPARED-FAMILY-SHELL-GATES',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'b5bc258e9cea221dc4f9987bda196e2cfeb675ba7eac61958e40ff57f0ac40ff',
+                  'rationale': 'Declare the stated conditional L1 theorem on its self-contained '
+                               'exact Canon proof; prior claims and physical apparatus owners '
+                               'retain their scopes and statuses, and no source production, '
+                               'physical selection or cross-layer realization is earned.'},
+                 {'event_id': 'CANON103-DECLARE-U-CONTACT-SOURCE-NONINTERFERENCE',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-17',
+                  'release': 'canon-v103-candidate',
+                  'claim_id': 'U-CONTACT-SOURCE-NONINTERFERENCE',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': 'd0a467e7f141688c4961091fdcfe7919e3c03e10cbe93b5511b5542e987fc26d',
+                  'evidence_id': 'EV-U-CONTACT-SOURCE-NONINTERFERENCE',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': 'd0a467e7f141688c4961091fdcfe7919e3c03e10cbe93b5511b5542e987fc26d',
+                  'rationale': 'Declare the stated conditional L1 theorem on its self-contained '
+                               'exact Canon proof; prior claims and physical apparatus owners '
+                               'retain their scopes and statuses, and no source production, '
+                               'physical selection or cross-layer realization is earned.'},
+                 {'event_id': 'CANON103-DECLARE-FIELD-FIVE-CELL-SHEAR-COMPARISON',
+                  'event_sequence': '1',
+                  'event_date': '2026-10-17',
+                  'release': 'canon-v103-candidate',
+                  'claim_id': 'FIELD-FIVE-CELL-SHEAR-COMPARISON',
+                  'event_type': 'DECLARE',
+                  'previous_status': '-',
+                  'new_status': 'T',
+                  'scope_sha256': '9041743aac8f73fd5d822197cf5029641f18915fc27507601c2032d5eaa147ab',
+                  'evidence_id': 'EV-FIELD-FIVE-CELL-SHEAR-COMPARISON',
+                  'evidence_location': 'inline',
+                  'evidence_sha256': '9041743aac8f73fd5d822197cf5029641f18915fc27507601c2032d5eaa147ab',
+                  'rationale': 'Declare the stated conditional L1 theorem on its self-contained '
+                               'exact Canon proof; prior claims and physical apparatus owners '
+                               'retain their scopes and statuses, and no source production, '
+                               'physical selection or cross-layer realization is earned.'}]}
+
+V103_IDS = ('U-FIELD-RESIDUE-GATE',
+ 'FIELD-UNIT-RESIDUE-CLASSIFICATION',
+ 'FIELD-NATIVE-BOUNDARY-THREE-MINIMUM',
+ 'U-NATIVE-UNIT-LIFT-OBSTRUCTION',
+ 'U-PREPARED-FAMILY-SHELL-GATES',
+ 'U-CONTACT-SOURCE-NONINTERFERENCE',
+ 'FIELD-FIVE-CELL-SHEAR-COMPARISON')
+
+V103_DEFINITION_IDS = ()
+
+V103_PROOF_CONTRACTS = {'U-FIELD-RESIDUE-GATE': {'begin': '### U-FIELD-RESIDUE-GATE [T]\n',
+                          'end': '### FIELD-UNIT-RESIDUE-CLASSIFICATION [T]\n',
+                          'bytes': 5722,
+                          'sha256': '31a4ae19a9b9ae1b7d7aebfd460ceaf982bc5c3fd973d47db2c504664acb8fce'},
+ 'FIELD-UNIT-RESIDUE-CLASSIFICATION': {'begin': '### FIELD-UNIT-RESIDUE-CLASSIFICATION [T]\n',
+                                       'end': '### FIELD-NATIVE-BOUNDARY-THREE-MINIMUM [T]\n',
+                                       'bytes': 3204,
+                                       'sha256': '3bda8fb1d3f3f1050f319d75dd1fde932ae2dd870d22f10e9b25be4a1a9e4e63'},
+ 'FIELD-NATIVE-BOUNDARY-THREE-MINIMUM': {'begin': '### FIELD-NATIVE-BOUNDARY-THREE-MINIMUM [T]\n',
+                                         'end': '### U-NATIVE-UNIT-LIFT-OBSTRUCTION [T]\n',
+                                         'bytes': 1279,
+                                         'sha256': 'bc7c4b542e57e543c4d6e2640dc36289d715d1028842ab86fca9517f39f5b13d'},
+ 'U-NATIVE-UNIT-LIFT-OBSTRUCTION': {'begin': '### U-NATIVE-UNIT-LIFT-OBSTRUCTION [T]\n',
+                                    'end': '### U-PREPARED-FAMILY-SHELL-GATES [T]\n',
+                                    'bytes': 1605,
+                                    'sha256': '29c9c99cd23d0e155623a80a15b0d0ea997a3a9bac4413b9c360449f1267c094'},
+ 'U-PREPARED-FAMILY-SHELL-GATES': {'begin': '### U-PREPARED-FAMILY-SHELL-GATES [T]\n',
+                                   'end': '### U-CONTACT-SOURCE-NONINTERFERENCE [T]\n',
+                                   'bytes': 5010,
+                                   'sha256': '74e0d00a50f000ad960ae556d1e135dc2ef19bdd3ecde9f281cd605dbe6e20d8'},
+ 'U-CONTACT-SOURCE-NONINTERFERENCE': {'begin': '### U-CONTACT-SOURCE-NONINTERFERENCE [T]\n',
+                                      'end': '### FIELD-FIVE-CELL-SHEAR-COMPARISON [T]\n',
+                                      'bytes': 4737,
+                                      'sha256': '072a881a3c27e3cdee889b21e4bdf479e52f33b34930c91c11f648cca045f674'},
+ 'FIELD-FIVE-CELL-SHEAR-COMPARISON': {'begin': '### FIELD-FIVE-CELL-SHEAR-COMPARISON [T]\n',
+                                      'end': '## 3. The kernel and the census\n',
+                                      'bytes': 6928,
+                                      'sha256': 'ac8519d590ed4c1469dc6c3dd205eb8699a91111599029d63cd7a70f4465dee7'}}
+
+V103_BOUNDARY_FRAGMENTS = {'U-FIELD-RESIDUE-GATE': ['This is an exact predicate comparison; it chooses neither a lift nor a '
+                          'decoder.',
+                          'Applying `W` as a state operation while retaining the old form and'],
+ 'FIELD-UNIT-RESIDUE-CLASSIFICATION': ['A missing unit preimage', 'No optional claim about'],
+ 'FIELD-NATIVE-BOUNDARY-THREE-MINIMUM': ['not that U creates it or that a physical process selects '
+                                         'it.'],
+ 'U-NATIVE-UNIT-LIFT-OBSTRUCTION': ['It does not exclude higher-energy lifts,',
+                                    'It states no exact minimum at boundary 4.'],
+ 'U-PREPARED-FAMILY-SHELL-GATES': ['This is a graph count, not an assertion that one actual orbit',
+                                   'Gate membership is',
+                                   'No whole-history blindness'],
+ 'U-CONTACT-SOURCE-NONINTERFERENCE': ['A message-dependent waiting rule, source',
+                                      'It is not a universal',
+                                      'No full integer-chain-to-rational-carrier map is supplied.'],
+ 'FIELD-FIVE-CELL-SHEAR-COMPARISON': ['direct integral splitting of the raw lattice.',
+                                      'Matrix order is',
+                                      'physical cell choice or prime-five selection.',
+                                      'create no additional registered obligation or gate']}
+
+V103_REPRODUCTIONS = ('C-FIELD-J-CONTENT-TRANSPORT-N',
+ 'C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-REVIEW-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N',
+ 'PHOTON-Z5-EXACT-HEATBATH-KERNEL',
+ 'alpha-exact-lemma',
+ 'alpha-value',
+ 'born-faces',
+ 'born-quartet',
+ 'census',
+ 'color-ladder',
+ 'cosmology-register',
+ 'coupling-metrology',
+ 'dirac-ladder',
+ 'force-born-dictionary',
+ 'foundations-places',
+ 'gravity-chain',
+ 'hyperplane-codec',
+ 'kernel-connectivity',
+ 'kernel',
+ 'mass-ladder',
+ 'maxwell',
+ 'native-quadratic-obstructions',
+ 'observer-boost',
+ 'pentit-p5-closure',
+ 'photon-electron',
+ 'qdd-route-a',
+ 'quadratic-memory-l5',
+ 'scalar-hermitian-norm',
+ 'status-separation',
+ 'u_raw_residue_port',
+ 'weinberg')
+
+V103_CHECKS = (('V103-PRIOR-BYTES',
+  'thirteen complete v103 inputs reconstruct exact public v102 before all 164 unchanged historical '
+  'guards'),
+ ('V103-SEVEN-PROOFS',
+  'seven inline L1 theorem rows bind exact scopes, complete written proofs, evidence and '
+  'declaration additions'),
+ ('V103-DEPENDENCIES',
+  'exact new premise and boundary edges preserve all prior dependencies and attach only the seven '
+  'theorem rows'),
+ ('V103-OWNER-BOUNDARY',
+  'all 523 prior claims and all 26 live owners, gates and scheduler dispositions remain unchanged'),
+ ('V103-PHYSICAL-BOUNDARY',
+  'the residue, unit-lift, prepared-family, contact and five-cell theorems retain their exact '
+  'hypotheses and exclusions without a physical or cross-layer promotion'),
+ ('V103-REPRO-INVENTORY',
+  'all 36 reproduction directories remain unchanged; this structural audit executes no scientific '
+  'probe'))
+
+def v103_previous_bytes(path):
+    """Validate complete current Canon input before reconstructing exact v102."""
+    if path.parent != ROOT / 'canon':
+        return None
+    patch = V103_INPUT_PATCH.get(path.name)
+    if patch is None:
+        return None
+    current = path.read_bytes()
+    if (len(current) != patch['current_bytes']
+            or hashlib.sha256(current).hexdigest() != patch['current_sha256']):
+        return None
+    lines = current.decode('utf-8').splitlines(keepends=True)
+    for first, last, original in reversed(patch['restore']):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = ''.join(lines).encode('utf-8')
+    if (len(previous) != patch['prior_bytes']
+            or hashlib.sha256(previous).hexdigest() != patch['prior_sha256']):
+        return None
+    return previous
+
+
+def v103_current_checks():
+    names = tuple(name for name in V103_INPUT_PATCH if name.endswith('.tsv'))
+    prior = {name: v87_table_bytes(v103_previous_bytes(ROOT / 'canon' / name))
+             for name in names}
+    current = {name: v87_table_bytes((ROOT / 'canon' / name).read_bytes())
+               for name in names}
+    old_index = {row['claim_id']: row for row in prior['REGISTRY.tsv']}
+    index = {row['claim_id']: row for row in current['REGISTRY.tsv']}
+    normative = {row['item_id']: row for row in current['NORMATIVE.tsv']}
+    evidence = {row['claim_id']: row for row in current['EVIDENCE.tsv']}
+    counts = {status: sum(row['status'] == status for row in index.values())
+              for status in {row['status'] for row in index.values()}}
+    metrics = {row['metric']: row['value'] for row in current['STATUS_COUNTS.tsv']}
+    exact_additions = all(current[name] == prior[name] + added
+                          for name, added in V103_ADDITIONS.items())
+    exact_theorems = all(
+        index.get(claim, {}).get('status') == 'T'
+        and index.get(claim, {}).get('evidence') == 'inline'
+        and normative.get(claim, {}).get('item_type') == 'THEOREM'
+        and normative.get(claim, {}).get('claim_id') == claim
+        and normative.get(claim, {}).get('status') == 'T'
+        and normative.get(claim, {}).get('layer') == 'L1'
+        and normative.get(claim, {}).get('gate_ids') == ''
+        and normative.get(claim, {}).get('statement_source') == 'canon/CANON.md::' + claim
+        and evidence.get(claim, {}).get('evidence_kind') == 'INLINE_CANON'
+        and evidence.get(claim, {}).get('location') == 'inline'
+        and evidence.get(claim, {}).get('hash_mode') == 'registry-scope-sha256-v1'
+        and evidence.get(claim, {}).get('architecture_requirement') == 'none'
+        and evidence.get(claim, {}).get('sha256')
+            == hashlib.sha256(index.get(claim, {}).get('scope', '').encode('utf-8')).hexdigest()
+        for claim in V103_IDS)
+    exact_declarations = all(
+        row['claim_id'] in V103_IDS and row['event_type'] == 'DECLARE'
+        and row['previous_status'] == '-' and row['new_status'] == 'T'
+        and row['release'] == 'canon-v103-candidate'
+        and row['scope_sha256'] == evidence.get(row['claim_id'], {}).get('sha256')
+        and row['evidence_sha256'] == row['scope_sha256']
+        and row['evidence_location'] == 'inline'
+        for row in V103_ADDITIONS['HISTORY.tsv'])
+    canon = CANON.read_bytes().decode('utf-8')
+    blocks = {}
+    exact_proofs = set(V103_PROOF_CONTRACTS) == set(V103_IDS)
+    for claim, contract in V103_PROOF_CONTRACTS.items():
+        first = canon.find(contract['begin'])
+        last = canon.find(contract['end'], first + len(contract['begin'])) if first >= 0 else -1
+        block = canon[first:last].encode('utf-8') if 0 <= first < last else b''
+        blocks[claim] = block.decode('utf-8')
+        exact_proofs = (exact_proofs and canon.count(contract['begin']) == 1
+            and canon.count(contract['end']) == 1
+            and len(block) == contract['bytes']
+            and hashlib.sha256(block).hexdigest() == contract['sha256']
+            and '### ' + claim + ' [T]' in blocks[claim])
+    new_dependencies = V103_ADDITIONS['DEPENDENCIES.tsv']
+    allowed_owners = set(V103_IDS) | set(V103_DEFINITION_IDS)
+    exact_dependencies = (current['DEPENDENCIES.tsv']
+        == prior['DEPENDENCIES.tsv'] + new_dependencies
+        and all(row['item_id'] in allowed_owners and row['depends_on'] in normative
+                and row['relation'] in {'REQUIRES', 'BOUNDED_BY'} for row in new_dependencies)
+        and all(any(row['item_id'] == claim for row in new_dependencies) for claim in V103_IDS))
+    old_live = {claim: row for claim, row in old_index.items() if row['status'] in {'H', 'O'}}
+    live = {claim: row for claim, row in index.items() if row['status'] in {'H', 'O'}}
+    unchanged_owners = (len(old_index) == 523
+        and all(index.get(claim) == row for claim, row in old_index.items())
+        and old_live == live and len(live) == 26
+        and all(current[name] == prior[name] for name in
+                ('GATES.tsv', 'FRONTIER_PROGRAMS.tsv', 'CORE_SELECTION.tsv'))
+        and (ROOT / 'canon/FRONTIER.md').read_bytes() == v103_previous_bytes(ROOT / 'canon/FRONTIER.md'))
+    exact_definitions = all(
+        normative.get(item, {}).get('item_type') == 'DEFINITION'
+        and normative.get(item, {}).get('layer') == 'L1'
+        and normative.get(item, {}).get('claim_id') == ''
+        and normative.get(item, {}).get('status') == ''
+        and normative.get(item, {}).get('gate_ids') == ''
+        for item in V103_DEFINITION_IDS)
+    scope_boundary = (unchanged_owners and exact_theorems and exact_definitions and exact_proofs
+        and all(all(fragment in blocks[claim] for fragment in fragments)
+                for claim, fragments in V103_BOUNDARY_FRAGMENTS.items())
+        and set(V103_BOUNDARY_FRAGMENTS) == set(V103_IDS))
+    results = (
+        len(V103_INPUT_PATCH) == 13 and set(V103_INPUT_PATCH) == set(V102_INPUT_PATCH)
+        and all(v103_previous_bytes(ROOT / 'canon' / name) is not None for name in V103_INPUT_PATCH),
+        len(V103_IDS) == 7 and len(index) == 530
+        and set(index) == set(old_index) | set(V103_IDS)
+        and exact_additions and exact_theorems and exact_declarations and exact_proofs
+        and set(V103_ADDITIONS) == {'REGISTRY.tsv', 'NORMATIVE.tsv', 'DEPENDENCIES.tsv', 'EVIDENCE.tsv', 'HISTORY.tsv'}
+        and len(V103_ADDITIONS['REGISTRY.tsv']) == len(V103_ADDITIONS['EVIDENCE.tsv']) == len(V103_ADDITIONS['HISTORY.tsv']) == 7
+        and len(V103_ADDITIONS['NORMATIVE.tsv']) == 7 + len(V103_DEFINITION_IDS)
+        and counts == {'T': 387, 'D': 59, 'C': 39, 'H': 2, 'O': 24, 'F': 19}
+        and all(metrics.get(key) == value for key, value in {
+            'claims': '530', 'status_T-LOCK': '0', 'status_T': '387', 'status_D': '59',
+            'status_C': '39', 'status_H': '2', 'status_O': '24', 'status_F': '19',
+            'live_H_O': '26', 'reproductions': '36',
+        }.items()),
+        exact_dependencies,
+        unchanged_owners,
+        scope_boundary,
+        len(V103_REPRODUCTIONS) == 36
+        and {path.name for path in REPRODUCE.iterdir() if path.is_dir()} == set(V103_REPRODUCTIONS)
+        and set(V103_REPRODUCTIONS) == set(V102_REPRODUCTIONS),
+    )
+    return [(tag, description, ok) for (tag, description), ok in zip(V103_CHECKS, results)]
+
+
 # Exact v102 release accounting and reversible public v101 reconstruction.
 # Structural custody only: this code executes no scientific probe.
 V102_PRIOR_COMMIT = 'b79143fb00839b870686f6cea34e174959060df1'
@@ -893,7 +1690,9 @@ def v102_previous_bytes(path):
     patch = V102_INPUT_PATCH.get(path.name)
     if patch is None:
         return None
-    current = path.read_bytes()
+    current = v103_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch['current_bytes']
             or hashlib.sha256(current).hexdigest() != patch['current_sha256']):
         return None
@@ -913,7 +1712,7 @@ def v102_current_checks():
     names = tuple(name for name in V102_INPUT_PATCH if name.endswith('.tsv'))
     prior = {name: v87_table_bytes(v102_previous_bytes(ROOT / 'canon' / name))
              for name in names}
-    current = {name: v87_table_bytes((ROOT / 'canon' / name).read_bytes())
+    current = {name: v87_table_bytes(v103_previous_bytes(ROOT / 'canon' / name))
                for name in names}
     old_index = {row['claim_id']: row for row in prior['REGISTRY.tsv']}
     index = {row['claim_id']: row for row in current['REGISTRY.tsv']}
@@ -948,7 +1747,7 @@ def v102_current_checks():
         and row['evidence_sha256'] == row['scope_sha256']
         and row['evidence_location'] == 'inline'
         for row in V102_ADDITIONS['HISTORY.tsv'])
-    canon = CANON.read_bytes().decode('utf-8')
+    canon = (v103_previous_bytes(CANON) or b'').decode('utf-8')
     blocks = {}
     exact_proofs = set(V102_PROOF_CONTRACTS) == set(V102_IDS)
     for claim, contract in V102_PROOF_CONTRACTS.items():
@@ -975,7 +1774,7 @@ def v102_current_checks():
         and old_live == live and len(live) == 26
         and all(current[name] == prior[name] for name in
                 ('GATES.tsv', 'FRONTIER_PROGRAMS.tsv', 'CORE_SELECTION.tsv'))
-        and (ROOT / 'canon/FRONTIER.md').read_bytes() == v102_previous_bytes(ROOT / 'canon/FRONTIER.md'))
+        and v103_previous_bytes(ROOT / 'canon/FRONTIER.md') == v102_previous_bytes(ROOT / 'canon/FRONTIER.md'))
     exact_definitions = all(
         normative.get(item, {}).get('item_type') == 'DEFINITION'
         and normative.get(item, {}).get('layer') == 'L1'
@@ -19697,9 +20496,10 @@ def run():
     checks.extend(v100_current_checks())
     checks.extend(v101_current_checks())
     checks.extend(v102_current_checks())
+    checks.extend(v103_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v102")
+    print("historical guards: exact reconstructed v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v103")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0
