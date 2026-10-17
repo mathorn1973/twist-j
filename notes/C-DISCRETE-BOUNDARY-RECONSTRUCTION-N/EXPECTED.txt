@@ -1,0 +1,19 @@
+C-DISCRETE-BOUNDARY-RECONSTRUCTION-N exact audit
+STATUS NON-CANONICAL L1
+CUBE N=2 vertices=8 face=7 rank=1 hidden=0 basis=7 update=PASS
+CUBE N=3 vertices=27 face=19 rank=8 hidden=0 basis=19 update=PASS
+CUBE N=4 vertices=64 face=37 rank=27 hidden=0 basis=37 update=PASS
+CUBE N=5 vertices=125 face=61 rank=64 hidden=0 basis=61 update=PASS
+CUBE N=6 vertices=216 face=91 rank=125 hidden=0 basis=91 update=PASS
+GAUSS N=2 vertices=8 edges=12 observed=12 interior=0 interior_edges=0 rank=0 hidden=0
+GAUSS N=3 vertices=27 edges=54 observed=54 interior=1 interior_edges=0 rank=0 hidden=0
+GAUSS N=4 vertices=64 edges=144 observed=132 interior=8 interior_edges=12 rank=7 hidden=5
+GAUSS N=5 vertices=125 edges=300 observed=246 interior=27 interior_edges=54 rank=26 hidden=28
+GAUSS N=6 vertices=216 edges=540 observed=396 interior=64 interior_edges=144 rank=63 hidden=81
+GAUSS N=7 vertices=343 edges=882 observed=582 interior=125 interior_edges=300 rank=124 hidden=176
+TORUS vertices=8 edges=24 rank=7 hidden=17
+TORUS_REGION vertices=4 internal_edges=8 cut_edges=8 rank=3 hidden=5 full_cut_hidden=10
+WITNESS BOX_N4 support=4 divergence=ZERO boundary=ZERO period=4
+WITNESS TORUS_REGION support=4 divergence=ZERO boundary=ZERO period=4
+NATIVE_BRIDGE NOT_PROVIDED
+AUDIT PASS
