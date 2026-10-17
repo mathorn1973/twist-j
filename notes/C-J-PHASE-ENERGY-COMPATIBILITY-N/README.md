@@ -40,6 +40,9 @@ měřitelného rozdílu. Jeho odstranění limitou není povinným cílem.
 - [GUDERMANN-ADDITIVITY.md](GUDERMANN-ADDITIVITY.md): přesný zlatý
   násobitel poměru, komplementární Gudermannův úhel a podmínky, za nichž
   aditivita vybírá lineární fázi; oddělení prostorového dosahu a času.
+- [CONTACT-KINEMATICS.md](CONTACT-KINEMATICS.md): přesný operátor posuvu,
+  hranice kanonického čtení sin(k) a konkrétní místní kontakt, který
+  propojí rezonanční módy s rozdílnou volnou sinusovou energií.
 - [FOLLOWUP_REVIEW.md](FOLLOWUP_REVIEW.md): oddělené posouzení doplňku,
   přesné otisky a rozsah kontroly.
 

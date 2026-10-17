@@ -5,8 +5,8 @@ SPDX-License-Identifier: Apache-2.0.
 Date: 2026-10-18 Europe/Prague.
 
 The initial record below describes the exact snapshot published in
-4f7bec494826a42e5c2195e41b99284f32cc6aaf. A subsequent exposed supplement
-and its distinct review scope are recorded at the end of this file.
+4f7bec494826a42e5c2195e41b99284f32cc6aaf. Subsequent exposed supplements
+and their distinct review scopes are recorded at the end of this file.
 
 ## Scope and exposure
 
@@ -97,6 +97,8 @@ contact admission and entropy-cost interpretations are not promoted.
 
 ## Subsequent Gudermann/additivity supplement
 
+Published snapshot: 01e7099ffb64dc3400c6e6c4f91795e3426ab912.
+
 After the first continuation was published, the owner supplied the exact
 golden multiplier and a proposed selection by extensivity versus locality.
 GUDERMANN-ADDITIVITY.md preserves the multiplier and supplies the necessary
@@ -127,3 +129,32 @@ continuation's ordinary repository CI passed on x86_64 and aarch64 in run
 39076414023. The final supplement's own commit/tree readback and CI outcome
 are reported in #1603 after publication, without treating CI as scientific
 reproduction. This update remains NON-CANONICAL, with the same scope ceiling.
+
+## Subsequent displacement/contact supplement
+
+The owner's next exposed proposal suggested group drift and resonant
+interaction as discriminators between phase and sine energy. The new
+CONTACT-KINEMATICS.md proves the actual one-step displacement and a
+specific onsite-contact counterexample, with all Hilbert-space/contact
+premises stated. It does not claim native admission or a universal failure
+of local sine-energy interactions.
+
+| File | SHA-256 of subsequent content |
+|---|---|
+| CONTACT-KINEMATICS.md | b21d7b57a51af61e0c57a717a0e3c401ba527255e1e30c71490ec6f201a8eb5b |
+| README.md | 8aca7ea6337de061c6ab2f5d6d15760ded288e3cd82e4c3f483d833debcc7d33 |
+
+The operator/phase-space reviewer accepted sections1–2 at the exact final
+hash. The compatibility reviewer accepted sections3–4 at the same hash,
+including the contact amplitude 1/(2L), the energy gap, the projector-kick
+identity and the exact transition probability. The root author checked
+the derivations and the README change, which only adds a navigation link.
+The prior analytical files, original audit and original run records remain
+unchanged. The same exposed assistant contexts were reused, with no new
+scientific execution or claim of external peer review.
+
+Ordinary repository CI for the Gudermann snapshot passed on x86_64 and
+aarch64 in run39076916212. Local policy and staged whitespace checks pass
+for this notes-only continuation. Its public commit/tree readback and CI
+outcome are recorded in #1603 after publication. Physical interpretation
+remains H/open; mathematical results retain the analytical candidate-T ceiling.
