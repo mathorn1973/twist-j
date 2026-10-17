@@ -96,3 +96,18 @@ Public source readback is still required before the first scientific
 runtime. No RUN.md, exact stdout, architecture agreement, policy-CI
 scientific reproduction, public pin, Canon promotion or native/physical
 admission is implied by this review.
+
+## Follow-up: wording issue resolved before execution
+
+The reviewer inspected the PROOF.md diff from the original target above
+to e2135244e0995135ad399567120f9e279beec24b. It replaces only the energy-zero
+sentence with the explicit distinction requested in this review:
+E_phase=A omega sets E_massless(0)=0 and excludes an additive offset,
+whereas massless speed alone fixes A/B. The correction is accepted and
+resolves the nonblocking wording issue. No scientific hypothesis,
+threshold, derivation or executable changed. The corrected PROOF.md
+SHA-256 is
+2c2c0c8b8232e48ee366b3183609cc12eda36458cea907519c45897930b7813c.
+The original proof and its review remain preserved in Git. The corrected
+proof retains the same scoped positive analytical verdict; scientific
+execution remains outstanding.
