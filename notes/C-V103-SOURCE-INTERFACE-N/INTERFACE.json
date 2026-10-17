@@ -1,0 +1,123 @@
+{
+  "candidate": "C-V103-SOURCE-INTERFACE-N",
+  "program_issue": 1548,
+  "lane": "D",
+  "child_issue": 1551,
+  "public_session": "Antigravity-20261016-v103-source-interface",
+  "author": "A. M. Thorn",
+  "license": "Apache-2.0",
+  "status": "NON-CANONICAL",
+  "action_layer": "L1",
+  "scientific_code": "NONE / NOT_RUN",
+  "authority_basis": {
+    "tag": "canon-v102",
+    "main_commit": "a632c6a162dc87e60104d7a478e7650a6d5c4a1b",
+    "content_commit": "b04e22dd3ed8e4240cff347364f24670d4183a4d",
+    "canon_sha256": "c0657380438c965f9556b5b298a34a5e799c48a68ce66e9fe51786ce2413d7d1",
+    "canon_bytes": 1024033
+  },
+  "specification_pin": {
+    "commit": "9cb2b7d89eb1fc955fb67e886e46a379cb1aba43",
+    "files": {
+      "notes/C-V103-SOURCE-INTERFACE-N/README.md": {
+        "bytes": 1698,
+        "git_blob": "b9c3c2ad886ffb74c3b838bb7c2fe7769fb7bbce",
+        "sha256": "14606cb2dba7b44cf69a4241f436fe07e7250770f74de9de09e52639c6ea0274"
+      },
+      "notes/C-V103-SOURCE-INTERFACE-N/CONTRACT.md": {
+        "bytes": 14279,
+        "git_blob": "c5a6f6eafc0093a0b1eb0f19460573ce8b60848c",
+        "sha256": "243ad5bea43ab9dc8183650aea4a6b7bc528a26ad82421ffa75c0536d6adff0e"
+      },
+      "notes/C-V103-SOURCE-INTERFACE-N/PREREG.md": {
+        "bytes": 4910,
+        "git_blob": "cd8f0c41e3e9850bc8a4faec1a3577688397da44",
+        "sha256": "c12841086c7da7b34bd1d4ac1d4542818f5c9b2b15916f1e0da3dcb5e501bcd3"
+      },
+      "notes/C-V103-SOURCE-INTERFACE-N/SOURCES.tsv": {
+        "bytes": 3197,
+        "git_blob": "e0696e8432a05ac53ff67a23b715c488aa7c402a",
+        "sha256": "ab70dbc3a999589adda7d3826ff584be6fcf73ced78f2c0c55b1ed4664050109"
+      },
+      "notes/C-V103-SOURCE-INTERFACE-N/INPUTS.sha256": {
+        "bytes": 1324,
+        "git_blob": "1a8f917a5b97318a11f615e1fb74a9a8fabc4271",
+        "sha256": "cdc53e295c7b354d33dfb42217c31dca1b04e340c013d9012d3ce95ee43248d1"
+      }
+    }
+  },
+  "gate_overlap_summary": {
+    "E_original_550": {
+      "support_points": 550,
+      "zero_gate_points": 0,
+      "synchronized_tail_points": 500,
+      "synchronized_tail_zero_gate_points": 0,
+      "obstruction": "s_h = h_1 + h_2 = B + 2A in {2, 3} != 0 for all n >= 0 (literal h_1 = B + 2A in CONTRACT.md line 107 is refuted at E(0,0) where h_1 = 1 != 2 = B + 2A)",
+      "retained_message_in_h_at_fixed_time_or_A_z": "2*lambda + mu mod 5 (5 classes at fixed common n or fixed (A,z); not stationary across z in {1,4})",
+      "qr_port_classes": 1
+    },
+    "E_alt_150": {
+      "support_points": 150,
+      "zero_gate_points": 1,
+      "zero_gate_witness": {
+        "n": 1,
+        "lambda": 2,
+        "mu": 0,
+        "checkpoint": [2, 1, 2, 1, 1, 3],
+        "z": 0
+      },
+      "prefix_affine_tuples_z_A_B_C_D_q_r": {
+        "n0_and_n2": ["2", "mu", "0", "3", "0", "4+3*lambda+mu", "3+2*lambda+3*mu"],
+        "n1": ["0", "4-mu", "2", "3", "1+4*lambda+mu", "2+2*lambda+4*mu", "2+3*lambda+2*mu"],
+        "n3": ["1", "4*mu", "0", "2", "0", "3+2*lambda+4*mu", "3+3*lambda+2*mu"]
+      },
+      "synchronized_tail_points": 100,
+      "synchronized_tail_zero_gate_points": 0,
+      "tail_obstruction": "d_h = D + 2C = 2C in {1, 4} != 0 for all n >= 3",
+      "retained_message_in_h_at_fixed_time_or_C_z": "mu mod 5 (5 classes at fixed common n >= 3 or fixed (C,z); not stationary across z in {1,4})",
+      "qr_port_classes": 25
+    },
+    "x_lambda_one_shot": {
+      "occupied_payloads": 5,
+      "ready_carrier_points": 100,
+      "ready_carrier_zero_gate_points": 20,
+      "admitted_payloads_in_zero_gate": [0],
+      "h_formula_at_n0": "(2*lambda, 3*lambda) mod 5",
+      "h_formula_for_n_ge_1": "(+/-lambda, -/+lambda) mod 5",
+      "h_formula_on_ready_carrier": "(-2*B*z*lambda, 2*B*z*lambda) mod 5 (5 classes at fixed common n >= 3 or fixed (B,z); not stationary across (B,z))",
+      "absence_codeword_zero_gate_points": 0,
+      "absence_h_orbit": [[0, 2], [0, 3], [2, 0], [3, 0]],
+      "qr_port_classes_across_occupied": 1
+    }
+  },
+  "w_energy_difference": {
+    "formula": "H(W y) - H(y) = y0^2 - y1^2 + y0*y2 - y1*y3",
+    "W_Af_W": [[1, 0, 1, 0], [0, 1, 0, 1], [-3, 1, -2, 1], [1, -2, 1, -1]],
+    "counterexample_e0": {
+      "e0": [1, 0, 0, 0],
+      "W_e0": [0, 1, 0, 0],
+      "H_e0": 2,
+      "H_W_e0": 3
+    },
+    "counterexample_ustar": {
+      "ustar": [0, -1, -1, 2],
+      "W_ustar": [-1, 0, 2, -1],
+      "H_ustar": 1,
+      "H_W_ustar": 2
+    }
+  },
+  "three_step_preimage_summary": {
+    "target_G0_intersect_X14_points": 250,
+    "reachable_target_at_n3_G0_intersect_X1_points": 125,
+    "unreachable_target_at_n3_G0_intersect_X4_points": 125,
+    "three_step_preimage_P_gate_points": 625,
+    "preimage_points_per_initial_trace_sheet": 125
+  },
+  "smallest_unresolved_obligation": "Specify in a separate scope a permitted message-sensitive source-access, receiver-preparation, funding, timing, and readout contract; on the native shell-gate side, classify the fibres of the 625-point three-step preimage P_gate = (T1 o T1 o T0)^(-1)(G0 intersect X14) = (T1 o T1 o T0)^(-1)(G0 intersect X1) over a single explicitly fixed initial receiver projection (fixing R_reg(x(0)) = (b0,d0,q0,r0) or (z0,q0,r0) separately) and determine how many distinct protected sign fibres {V(x3), -V(x3)} in the 125-point reachable sheet G0 intersect X1 are attainable at n=3.",
+  "errata_r1_r7": {
+    "initial_result_commit": "e3d35709a86b42c21c1bf57e2be2b3a3cf707598",
+    "review_commit": "2a43c0312af7189b84c099c9482b908ac8e9323b",
+    "errata_file": "notes/C-V103-SOURCE-INTERFACE-N/ERRATA.md",
+    "repaired_items": ["R1", "R2", "R3", "R4", "R5", "R6", "R7"]
+  }
+}

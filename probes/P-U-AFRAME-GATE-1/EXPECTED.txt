@@ -1,0 +1,12 @@
+F1 PASS checkpoints=15625 involutions=78125 sheet_t0=0,4,0,4,4 sheet_t1=2,1,1,3,1 fixed=625,25,25,1,1 synchronized_after_011=15625
+F2 PASS af_order=5 l_factor=EXACT l_square=5Af^3 vinv_l=5I energy_scale=5 det_l=25 det_vh=1 residue_image=25 preimages=25 vinv_criterion=625 integral_lifts=25
+F3 PASS pistons=625 w_is_a_piston=YES ker_h=25 w_ker_onto_C=25 h_e0=2 h_we0=3 gate=625 per_sheet=125,125,125,125,125 g14=250
+F4 PASS checkpoints=15625 b=-Jh c=-Jh+(r,-r) d=-h e=-h a=2h+2(p1,p1p) a_pairs=625 a_h_only=NO a_keeps_gate=25 c_keeps_gate=125 bde_gate_and_complement=PRESERVED
+F5 PASS branches=10 pairs=31250 table=MATCH
+F6 PASS pairs=12500 law=KLEIN g14_image=125x2 complement=6000 fixed_t0=1,3,4,2,1,3 fixed_t1=1,3,4,2,3,3 moved=249,249
+F7 PASS v_law=12500 g14=V^-1(S) v_preimages=10 r_fibres=13 sizes=1x10,12x20
+F8 PASS zero_start=a,c,e traces=0,0,2,1 r3=1 words=ace,bbd,cce,dbd,ebd gated_at_3=125x5 x0_overlap=5,120,120 prefix_gated=1,125,25,125,125 permanent=401
+F9 PASS regression_only zero_orbit=4097 initial=15625 horizon=40
+G14_SHA256 373778349c9cb18ff376e726b23d381d0c62a26c7c5d6c9f2d8c31e2e395b097
+PERMANENT_SHA256 1640c7f998e9fb47a45e2b08182e34ee847b0c7073e91d0864fb3307a165b312
+RESULT PASS h_laws=EXACT a_law=NOT_H_ONLY gate_image=C all_time_gate=INDUCTION inherited_V_corollary=YES
