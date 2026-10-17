@@ -21,3 +21,15 @@ Public Canon v103 is the source. The integer-chain question is distinct
 from the rational H_B contact and from the native Weyl-carrier program.
 Existing physical apparatus owners, selected laws and sealed probes are
 untouched. No new primitive is admitted by this note.
+
+## Delivered result
+
+PROOF.md proves a candidate-T all-energy obstruction for the fixed native
+boundary-three to boundary-four comparison in the complete inherited
+integer-chain alphabet, and a candidate-T all-time equal-energy source
+noninterference theorem for the frozen preparation/protocol class.
+RESULT.md states the exact negative scope and exclusions. RUN.md records
+one pinned aarch64 finite self-audit: 5760 continuing steps with complete
+inverse/energy/charge accounts, all PASS. Independent review has not been
+performed. The outside-alphabet signed exchange is a counter-control,
+not a proposed new primitive or a funded physical implementation.
