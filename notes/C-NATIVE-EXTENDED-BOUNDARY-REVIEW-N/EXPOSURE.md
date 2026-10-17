@@ -1,0 +1,60 @@
+# Exposure and custody chronology
+
+PUBLIC / NON-CANONICAL. A. M. Thorn. Apache-2.0.
+
+This review is result-exposed by its assignment; this file records what
+was actually read, and when, so that no part of the work is later
+misdescribed as blind.
+
+1. Intake, 2026-10-17 evening Europe/Prague, on the author's direct
+   in-session instruction to take this assignment ahead of its
+   administrative 2026-10-18 date. Before claiming, the reviewer read:
+   the body of #1599 (4798 UTF-8 bytes, SHA-256
+   `fad38a6a00f058d0034a78292f975ef8049e07bf1a711c5715d967e8d30d3031`,
+   verified live); `STATUS.md`, `POLICY.md`, `AGENTS.md`,
+   `canon/CORE.md` and `canon/FRONTIER.md` at Public Canon v103
+   `dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d`, with all five normative
+   SHA-256 values recomputed from Git objects and matching
+   `canon/SHA256SUMS` and `STATUS.md` (`CANON.md` 1052518 bytes);
+   the peeled tag `canon-v103` and content commit
+   `01fb76f6b3b14a6a5ec05d0017ea922390ab6f66` confirmed as ancestors of
+   `main`; required checks on that commit include a successful
+   aggregate `check` with both architecture jobs successful.
+2. Collision and independence intake read public metadata only: issue
+   #1599 had zero comments and no assignee; no remote branch
+   `notes/C-NATIVE-EXTENDED-BOUNDARY-REVIEW-N` existed; PR #1592 is
+   authored by `ChatGPT-u-field-chain-20261017` and PR #1596 (N, claim
+   #1589) by `ChatGPT-N-common-carrier-20261017-e16ad983`, so this
+   reviewer session is an author of neither target. The bodies of PRs
+   #1592 and #1596, including their stated verdict summaries and
+   witness lists, and the claim/pin/submission metadata comments on
+   #1589 were read at this stage. That is the full extent of
+   result-summary exposure before the claim.
+3. The public claim was posted on #1599 before any edit in this
+   repository, with session, branch, sole path, source pins and this
+   exposure statement. Exact target path spellings were verified from
+   Git directory listings at the pinned heads
+   `fbf3c402d5c56f3fb3e95cda8a853a40c3608819` (#1592) and
+   `a6d2b0d30b9d6703fffb15b187c58fa6ad71e229` (#1596); comparison heads
+   `6a6f2967120866b9f06956169012c0e8213ab268` (#1594) and
+   `b77ce7adabcb71c5ba5dbf46f315352143b05122` (#1595) were confirmed as
+   commits with the probe paths recorded in `SOURCES.tsv`.
+4. `SOURCES.tsv` was generated mechanically from Git objects (blob,
+   byte count, SHA-256) for all 44 admitted files. Computing hashes
+   reads bytes programmatically; it is not a reading of the targets'
+   contracts, proofs, verifiers or results, none of which had been
+   opened at that point. One already-merged precedent review directory
+   on `main` (`C-V103-SOURCE-INTERFACE-REVIEW-N`) was read for
+   repository file-shape conventions only; it is unrelated science and
+   its stricter method-blind discipline is not claimed here.
+5. This pin commit (`README.md`, `PREREG.md`, `SOURCES.tsv` and this
+   file) freezes the claim list, domains and failure criteria. Its
+   full SHA must be pushed, read back from the remote and recorded on
+   #1599 before the targets' source files are opened for the audit.
+   The first opening of each source file, any same-session helper use,
+   and any additive manifest change will be appended below in later
+   commits; the entries above are not rewritten.
+
+No author code has been executed or imported at any point above, and
+no scientific computation of any kind has run. File hashes establish
+byte identity, not physical provenance.
