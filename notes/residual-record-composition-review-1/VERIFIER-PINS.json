@@ -1,0 +1,31 @@
+{
+  "schema": "V100-JOIN-1/dependencies/v1",
+  "status": "REVIEW_SOURCE_BINDINGS_ONLY_NOT_ACCEPTED_FORMAL_PINS",
+  "dependencies": [
+    {
+      "name": "algebra",
+      "filename": "algebra_dependency.py",
+      "sha256": "115f6cae93934792a31178bd5b2ea630336ac7e43cf2abbeca8e2db0823222b0",
+      "source_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "source_path": "notes/alg-contact-realization-review-1/verify.py",
+      "source_review_pr": 1389,
+      "formal_acceptance_recorded": false
+    },
+    {
+      "name": "contact",
+      "filename": "contact_dependency.py",
+      "sha256": "99ea8680db65567fb73e78f074841532802e6398dfbd34077b37914024341134",
+      "source_commit": "8128286127f1a48b01ebda1a5c1e7a0d88d46095",
+      "source_path": "notes/contact-record-review-1/candidate/verify.py",
+      "source_review_pr": 1388,
+      "formal_acceptance_recorded": false
+    }
+  ],
+  "algebra_helper_not_loaded": {
+    "source_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+    "source_path": "notes/alg-contact-realization-review-1/compiler_identity_checks.py",
+    "sha256": "54bb787eb9a222a5a7fe764863002b4490826c099ac3e599992a7d28ccbe04b7",
+    "reason": "The composition imports only the algebra atlas API; the helper is imported only by algebra main, which is not called."
+  },
+  "acceptance_boundary": "These immutable notes sources identify the exact review code. Their future accepted probe pins and independent review dispositions must be recorded before formal composition pinning. Byte identity alone is not acceptance."
+}
