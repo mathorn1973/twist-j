@@ -6,45 +6,116 @@ Branch: notes/C-J-PHASE-CHAIN-INDEPENDENT-REVIEW-N
 Path: notes/C-J-PHASE-CHAIN-INDEPENDENT-REVIEW-N/
 Assignment issue: https://github.com/mathorn1973/twist-j/issues/1598
 Parent coordination issue: https://github.com/mathorn1973/twist-j/issues/1548
-Reviewer session: Antigravity-phase-chain-review-20261018 (A. M. Thorn <thorn@twistj.com>, Apache-2.0)
+Original reviewer session: Antigravity-phase-chain-review-20261018 (A. M. Thorn <thorn@twistj.com>, Apache-2.0)
 Public authority base: Public Canon v103, main commit dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d
 Phase-1 pin commit: 80d6814a6b7c871b2b46d8e52f764c78c26810b4
+Original result commit: ab2d10a563d46799e6e595e23777bc156b284e85
+Reporting correction: Codex-phase-chain-report-correction-20261018
 Visibility / status / layer: PUBLIC / NON-CANONICAL / L1
 ```
 
-## 1. Executive verdict and PR recommendations
+## 1. Corrected disposition
 
-- **Main target — [PR #1581](https://github.com/mathorn1973/twist-j/pull/1581) (`probes/P-J-PHASE-THREE-REFERENCE-1/`, head `694e5839f50dc9ef19f28792c8c6b9d64307389d`, original pin `6731b13455e221e097b33b6cf54d2356d00bef95`):** **PASS (recommend merge as non-canonical L1 probe; no Canon fold or status promotion in this PR).** Every mathematical identity, combinatorics census, 182-operation shared-reference prefix restoration law, $B=5$ two-input energy bound ($\le 23/5$, observed maximum $11978371/5248800$), record-only decoding with $d=\text{None}$ across all $25$ ordered root pairs, $W$-deleted collapse control, and outside-family zero-piston alias ($P=(0,0,0,0) \mapsto M=2 \leftrightarrow k=4$) is independently proved and computationally reproduced by our standalone method-blind verifier `break.py` without importing any target or canonical probe module.
-- **Predecessor 1 — [PR #1577](https://github.com/mathorn1973/twist-j/pull/1577) (`probes/P-J-PHASE-PORT-SEPARATION-1/`, head `9c6a2471b72252d13eb45d4e58c77620ed8dfb92`, original pin `9af150e18d2c3749dbe44ff7a5c990b345cc1802`):** **PASS (recommend merge as non-canonical L1 negative-port probe; no Canon fold).** The quotient $Q(a,b,c,d,q,r) = (a+b+c+d+q+r,q,r) \bmod 5$ makes all five fifth-root pistons $P_0,\dots,P_4$ with common $(q,r)=(0,1)$ share $Q(x)=(2,0,1)$ and produces identical complete receiver histories $Y_t$ at every boundary of the unchanged `P-TWO-USE-TYPED-READOUT-CLOSURE-1` interface, while the control $p_B=(2,0,0,0)$ separates at boundary $2$ (capture $d$) and boundary $5$ (wave/tape $X$). Scope is strictly restricted to the unchanged port interface.
-- **Predecessor 2 — [PR #1579](https://github.com/mathorn1973/twist-j/pull/1579) (`probes/P-J-PHASE-DECLARED-CONTACT-1/`, head `03390dca1c0a69ab8989f0daada0810c9956791a`, original pin `f48e0ce8ca86d707a5b2db458affb065419445df`):** **PASS (recommend merge as non-canonical L1 conditional-contact probe; no Canon fold).** The literal 14-leaf `CONTACT-RECORD` word $A_y$ on single reference $I_2=(1,0,0,1)$ separates $P_+=(0,1,0,0)$ ($\delta=1$) from $P_-=(4,4,4,4)$ ($\delta=0$) at leaf $4$ (`W`), satisfies the global occupied-reference update and $(r_y')^2 \bmod 5$ continuation invariance across all $2{,}500$ cases and $75{,}000$ continuation boundaries, and transmits all $4$ ordered pairs in $\{P_+,P_-\}^2$ through the unchanged funded apparatus at $B=2$ (maximum work $8252597/10497600 \le 8/5$) into distinct record pairs $(b_0,b_2)$ while collapsing to $(+,+)$ when all four `W` leaves are omitted.
+**PARTIAL / CHANGES_REQUIRED for completion of the frozen review contract.**
+The unchanged executable completed with `PASS`, but it does not satisfy every
+obligation stated in the frozen preregistration. [ERRATA.md](ERRATA.md) records
+the conflicting response-matrix identity and exact control vectors, omitted
+inverse/response checks, and defects in the written proof. This correction
+withdraws the original blanket completion and unconditional merge
+recommendations. It preserves the successful finite output and the supported
+source findings below; it does not falsify the three source probes.
 
----
+| Source target | Exact result / original pin | Retained evidence and disposition |
+|---|---|---|
+| [#1581](https://github.com/mathorn1973/twist-j/pull/1581), `P-J-PHASE-THREE-REFERENCE-1` | `694e5839f50dc9ef19f28792c8c6b9d64307389d` / `6731b13455e221e097b33b6cf54d2356d00bef95` | Reference census, binary-output code, prefix restoration and finite record/energy checks remain supported at their stated domains. The review's response-identity, inverse-coverage and written-proof gaps prevent an unqualified completion or merge recommendation from this package. |
+| [#1577](https://github.com/mathorn1973/twist-j/pull/1577), `P-J-PHASE-PORT-SEPARATION-1` | `9c6a2471b72252d13eb45d4e58c77620ed8dfb92` / `9af150e18d2c3749dbe44ff7a5c990b345cc1802` | Unchanged-port quotient blindness and the separating control remain supported. The correct control output differs from the review's frozen numerical target, which its executable did not enforce. Source acceptance is not supplied by that incomplete contract. |
+| [#1579](https://github.com/mathorn1973/twist-j/pull/1579), `P-J-PHASE-DECLARED-CONTACT-1` | `03390dca1c0a69ab8989f0daada0810c9956791a` / `f48e0ce8ca86d707a5b2db458affb065419445df` | The declared-contact formula, occupied-reference cases, four relays and bounded classical work remain supported. The review's shared Attack 4 omissions and proof errata still apply; no blanket merge recommendation is made. |
 
-## 2. Information-barrier and two-phase review audit
+The source/native/physical boundaries remain unchanged. The earlier positive
+recommendations and output remain retrievable at the original result commit
+above. The six preserved files are `PREREG.md`, `PROOF.md`, `break.py`,
+`SOURCES.tsv`, `EXPECTED.txt`, and `RUN.md`; none is rewritten by this correction.
+The completed run is not `ABANDONED`. A changed scientific contract or executable
+would require a separately named successor and a new prospective pin. This
+reporting correction is submitted to another controller for review, not accepted
+by its own author.
 
-1. **Method-blind Phase 1 (before execution and before opening target proofs, verifiers, or results):**
-   - Only the public Canon (`canon/CANON.md`, `canon/CORE.md`, `canon/FRONTIER.md`, `canon/REGISTRY.tsv`, `canon/SHA256SUMS`), the primary apparatus contracts (`probes/P-CONTACT-RECORD-1/PREREG.md`, `probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/{PREREG.md,CONTRACT.md,SOURCE_PROOF.md,PROOF.md,DOMAIN.tsv}`), the public issues (`#1548`, `#1576`, `#1578`, `#1580`, `#1598`), and the three target `PREREG.md` specifications (`#1581`, `#1577`, `#1579`) were read.
-   - From those specifications and primary equations alone, we authored `SOURCES.tsv`, `PREREG.md`, `PROOF.md`, and standalone standard-library `break.py` (`1412` lines, zero imports from `probes/`), committed and pushed the Phase-1 pin `80d6814a6b7c871b2b46d8e52f764c78c26810b4` to `origin/notes/C-J-PHASE-CHAIN-INDEPENDENT-REVIEW-N`, and verified remote readback before running `break.py`.
-2. **First frozen execution of `break.py`:**
-   - Executed from the clean repository root at `80d6814a6b7c871b2b46d8e52f764c78c26810b4` under `LC_ALL=C LANG=C TZ=UTC PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1` with Python `3.13.13` (`Darwin 27.0.0`, `aarch64`).
-   - Completed in `8.103` seconds with `exit_code: 0`, `stderr_bytes: 0`, and `stdout_bytes: 909` (`EXPECTED.txt` SHA-256 `244903d606fc5767966791bfd9004bed0282d9a04a34a39374a25e18140f34fb`).
-   - All method-blind assertions passed on the first run of the unmodified pinned `break.py`, independently producing `max_work_1579 = 8252597/10497600` and `max_work_1581 = 11978371/5248800`.
-3. **Phase-2 source inspection and isolated replay of target verifiers:**
-   - After capturing `EXPECTED.txt` and `RUN.md`, we inspected `PROOF.md`, `verify.py`, `RESULT.md`, `EXPECTED.txt`, `RUN.md`, `README.md`, and `SOURCES.tsv` across `#1581`, `#1577`, and `#1579`, verified pin-to-head immutability, checked GitHub Actions check runs on all three PR heads, and replayed all three target `verify.py` scripts in an isolated temporary directory against their committed `EXPECTED.txt` files (`exit=0`, `stderr_len=0`, byte-for-byte match on all three).
+## 2. Exposure and execution record
 
----
+The original reviewer attests to method-blind target review in Phase 1; result
+blindness was never claimed. The frozen `PREREG.md` section 1 discloses:
 
-## 3. Target PR custody, pin immutability, and CI status
+- issues `#1598` and `#1602`, the Public Canon v103 bundle and repository rules;
+- canonical `P-CONTACT-RECORD-1/PREREG.md` **and `verify.py`**;
+- canonical `P-TWO-USE-TYPED-READOUT-CLOSURE-1/PREREG.md`, **`apparatus.py`**
+  and `DOMAIN.tsv`;
+- the three target `PREREG.md` files at the original pins listed above.
 
-### 3.1 Pin-to-head immutability and GitHub check-run table
+The frozen manifest records the exact public file inputs. The standalone
+breaker imports no target or canonical probe module, but this is not a claim
+that the reviewer had never read canonical dependency code. The original
+post-run report also listed `CONTRACT.md`, `SOURCE_PROOF.md`, `PROOF.md` from
+the canonical apparatus and issues `#1548`, `#1576`, `#1578`, `#1580` as
+pre-pin inputs. Their actual reading phase is not reconciled by the frozen
+record; this correction does not assign a retrospective timestamp or an
+exclusive replacement inventory. No prohibited early target-method exposure
+is established by this discrepancy.
 
-In all three target PRs, `git diff --name-status <pin_commit> <head_commit>` shows that only post-run artifacts (`EXPECTED.txt`, `RESULT.md`, `RUN.md`, and `README.md` update in `#1577`) were added after the pin; `PREREG.md`, `PROOF.md`, `SOURCES.tsv`, and `verify.py` are byte-for-byte identical between `<pin_commit>` and `<head_commit>`.
+The original reviewer states that `SOURCES.tsv`, `PREREG.md`, `PROOF.md` and
+`break.py` were pushed and read back at
+`80d6814a6b7c871b2b46d8e52f764c78c26810b4` before execution and before opening
+the targets' proof/code/result/output/run files. Git verifies the parentage and
+unchanged bytes. It does not independently establish the local run/read order;
+the published record has no independently timestamped first-run/readback
+receipt. That ordering remains an author attestation, not a newly authenticated
+claim of this correction.
 
-| PR | Probe directory | Pin commit | Head commit | `architecture-x86_64` | `architecture-aarch64` | `check` | Isolated local replay |
+`RUN.md` records the first **completed** frozen run under Python `3.13.13`,
+Darwin `27.0.0`, `aarch64`, with the declared deterministic environment:
+`8.103` seconds, exit `0`, stderr `0` bytes, stdout `909` bytes, SHA-256
+`244903d606fc5767966791bfd9004bed0282d9a04a34a39374a25e18140f34fb`.
+It also discloses an earlier Python `3.9.6` wrapper attempt failing on
+`int.bit_count`, without changing the pinned program. The completed executable
+assertions passed; the contradictory or unimplemented prose obligations in
+ERRATA did not thereby pass.
+
+The original Phase-2 account reports subsequent target inspection and exact
+local replays of their three verifiers. Those run claims are retained as the
+original reviewer's report. The reporting-correction session has already read
+the review and source results and is fully exposed; it claims no blind phase
+and performs no new scientific execution. Its earlier delivery audit replayed
+the unchanged breaker on the same architecture with byte-identical output;
+that remains reproduction, not another independent implementation.
+
+## 3. Target custody and checks
+
+### 3.1 Pin-to-head changes and source check-run table
+
+- **#1577:** `PREREG.md`, `SOURCES.tsv`, and `verify.py` are unchanged.
+  `EXPECTED.txt`, **`PROOF.md`**, `RESULT.md`, and `RUN.md` were added after
+  the original pin. `PROOF.md` did not exist at that pin; `README.md` did not
+  change. This corrects the previous immutability statement and is not a
+  verifier-pin violation.
+- **#1579 and #1581:** `PREREG.md`, `PROOF.md`, `SOURCES.tsv`, and `verify.py`
+  are unchanged; only `EXPECTED.txt`, `RESULT.md`, and `RUN.md` were added
+  between their respective pins and results.
+
+The following source checks and replay sizes are the Phase-2 record for the
+exact source heads, distinct from CI for this notes package.
+
+| PR | Probe directory | Pin commit | Head commit | `architecture-x86_64` | `architecture-aarch64` | `check` | Reported isolated local replay |
 |---|---|---|---|---|---|---|---|
 | `#1577` | `probes/P-J-PHASE-PORT-SEPARATION-1` | `9af150e18d2c3749dbe44ff7a5c990b345cc1802` | `9c6a2471b72252d13eb45d4e58c77620ed8dfb92` | `success` | `success` | `success` | `1982 B` exact match |
 | `#1579` | `probes/P-J-PHASE-DECLARED-CONTACT-1` | `f48e0ce8ca86d707a5b2db458affb065419445df` | `03390dca1c0a69ab8989f0daada0810c9956791a` | `success` | `success` | `success` | `4371 B` exact match |
 | `#1581` | `probes/P-J-PHASE-THREE-REFERENCE-1` | `6731b13455e221e097b33b6cf54d2356d00bef95` | `694e5839f50dc9ef19f28792c8c6b9d64307389d` | `success` | `success` | `success` | `5927 B` exact match |
+
+For the original #1607 result, actual [CI run 39074830031](https://github.com/mathorn1973/twist-j/actions/runs/39074830031)
+passed repository checks on both architectures. Its CI test-merge commit
+`a78c8319a1cb2fccd847bb0be15ec55fef2f9f31` has the same tree as
+`ab2d10a563d46799e6e595e23777bc156b284e85`. Both architecture logs explicitly
+say `VERIFY NOT APPLICABLE` and `REPRODUCE NOT APPLICABLE`: they do **not**
+execute this notes `break.py`. This is not two-architecture scientific evidence
+for the review breaker. Later correction CI must be assessed at its own head.
 
 ### 3.2 Complete file custody across `#1577`, `#1579`, and `#1581`
 
@@ -77,7 +148,12 @@ In all three target PRs, `git diff --name-status <pin_commit> <head_commit>` sho
 
 ---
 
-## 4. Detailed evaluation of the six required review questions
+## 4. Retained source findings, subject to the errata
+
+The following source findings retain their explicit domains. They do not
+override the incomplete review-contract disposition. References to the frozen
+review proof must be read with [ERRATA.md](ERRATA.md); source-derived
+explanations inspected after the run are not retroactive independent proofs.
 
 ### Question 1 — Unchanged-port boundary (`#1577`)
 
@@ -140,10 +216,10 @@ Relative to the unchanged two-use port baseline (`P-TWO-USE-TYPED-READOUT-CLOSUR
 
 | Resource / Parameter | Baseline (`#1577`) | Single-reference contact (`#1579`) | Three-reference chain (`#1581`) | Admission status |
 |---|---|---|---|---|
-| Native cells on carrier | $2$ source heads ($x_A,x_B \in \mathbb F_5^6$) | $4$ cells ($2$ sources $+ 2$ copies of reference $I_2$, or shared reference + two heads) | $7$ cells ($2$ sources $S_A,S_B$, $3$ shared references $R_A,R_B,R_C$, $2$ collectors $H_A,H_B$) | Declared L1 extension; **not** derived from autonomous $U$ |
+| Native cells on carrier | $2$ source heads ($x_A,x_B \in \mathbb F_5^6$) | $4$ cells ($2$ sources $+ 2$ reference $I_2$ cells that themselves become the apparatus heads) | $7$ cells ($2$ sources $S_A,S_B$, $3$ shared references $R_A,R_B,R_C$, $2$ collectors $H_A,H_B$) | Declared L1 extension; **not** derived from autonomous $U$ |
 | Piston-sensitive gate `W` ($W_b$) | None ($0$ leaves) | $4$ `W` leaves per $A_y$ ($8$ across two copies) | $48$ `W` leaves across $6$ compute/uncompute blocks (`168` contact leaves total) | Outside quotient envelope $\mathcal E_Q$; native/physical admission **OPEN** |
 | Reading involution $\mathcal U_i$ | None ($0$ leaves) | $2$ $\mathcal U_y$ leaves per $A_y$ ($4$ across two copies) | $24$ $\mathcal U_y$ leaves across $6$ blocks | In $\mathcal E_Q$, but native/physical compilation **OPEN** |
-| External sign-history bit $\eta \in \{0,1\}$ | None | $1$ bit per contact ($2$ bits across two independent copies, or $1$ restored bit) | $1$ shared bit $\eta \in \{0,1\}$ across all $182$ prefix leaves, restored at all $300$ block boundaries | Declared auxiliary bit; physical carrier **OPEN** |
+| External sign-history bit $\eta \in \{0,1\}$ | None | $2$ bits, one per declared contact copy, each restored by its contact word | $1$ shared bit $\eta \in \{0,1\}$ across all $182$ prefix leaves, restored at all $300$ block boundaries | Declared auxiliary bit; physical carrier **OPEN** |
 | Reference pistons | None | $I_2=(1,0,0,1)$ at $(q_y,r_y)=(0,0)$ | $Y_A=(0,2,2,0)$, $Y_B=(4,2,2,0)$, $Y_C=(1,1,0,1)$ at $(0,0)$, restored after every block | Selection principle & preparation cost **OPEN** |
 | Collector heads & whole-cell `CSUM` | None | None (written reference cells become apparatus heads directly) | $2$ collectors initialized to $Z_0=(4,0,4,2,0,0)$ + $14$ weighted `CSUM` leaves ($1+2+4=7$ per source) | Prefix energy & autonomous scheduling **UNSUPPLIED / OPEN** |
 | Classical work capacity $B$ | $B = 4/5$ (max work $8252597/41990400 \approx 0.1965$) | $B = 2$ (a priori bound $8/5$, max work $8252597/10497600 \approx 0.7861$) | $B = 5$ (a priori bound $23/5$, max work $11978371/5248800 \approx 2.2821$) | Covers only the two classical wave/tape kicks; prefix energy **UNSUPPLIED** |
@@ -163,18 +239,36 @@ Relative to the unchanged two-use port baseline (`P-TWO-USE-TYPED-READOUT-CLOSUR
 
 ---
 
-## 5. Claim-by-claim disposition table
+## 5. Evidence retained and obligations not met
 
-| Source PR | Claim / Component | Method-blind `break.py` check | Disposition | Scope & boundary note |
+| Source PR | Claim / Component | Supplied `break.py` check | Disposition | Scope & boundary note |
 |---|---|---|---|---|
-| `#1577` | Five fifth-root balanced lifts in $B_0$, norms $A=B=1$, distinct $C(j^k)=j^{-k}$, common $Q=(2,0,1)$ | `check_cyclotomic_and_quotient_envelope()` (`5` roots + `4` basis rows) | **VERIFIED (`candidate-T / C`)** | Exact in $\mathbb Z[\zeta_5]$ and $\mathbb F_5^6$ |
-| `#1577` | $31{,}250$ native step quotient checks & all-time receiver blindness on $\{P_+,P_-\}^2$ at $B=4/5$ + rollover + $p_B=(2,0,0,0)$ control | `check_cyclotomic_and_quotient_envelope()` (`31,250` steps) & `check_all_relays()` (`4` pairs $\times 9$ boundaries + control) | **VERIFIED (`candidate-T / C`)** | Strictly scoped to unchanged `P-TWO-USE-TYPED-READOUT-CLOSURE-1` port |
-| `#1579` | Quotient-compatible envelope $\mathcal E_Q$ (`35` affine basis rows, `125` $\mathcal U_i$ triples, `13`/`26` `CSUM` basis rows) & leaf `4:W` first split | `check_cyclotomic_and_quotient_envelope()` & `check_contact_inventories()` (`first_unequal_leaf = "4:W"`) | **VERIFIED (`candidate-T / C`)** | Proves piston-sensitive gate outside $\mathcal E_Q$ is required |
-| `#1579` | $2{,}500$ complete $A_y$ cases, $500$ ready cases, inverse restoration, $75{,}000$ continuation $(r_y')^2\bmod 5$ boundaries | `check_contact_inventories()` (`cases_1579 = 2500`, `ready_1579 = 500`, `cont_boundaries_1579 = 75000`) | **VERIFIED (`candidate-T / C`)** | Holds on arbitrary occupied $(q_x,r_x,q_y,r_y,\eta)$ |
-| `#1579` | $4$ two-copy relays at $B=2$, max work $8252597/10497600 \le 8/5$, $d=\text{None}$ decoding, $W$-deleted $(+,+)$ collapse | `check_all_relays()` (`max_work_1579 = "8252597/10497600"`, `4` distinct records, $W$-deleted control) | **VERIFIED (`candidate-T / C`)** | Conditional on declared $A_y$, $I_2$, $\eta$, and $B=2$ |
-| `#1581` | Bijection $\Phi: \mathbb F_5^4 \to \mathcal H \subset \mathbb F_5^5$, mask counts $(204,52,12,4,0,1)$, $27$ classes, $200$ sep $j/j^4$, $64=4\times 16$ sep both, $205$ constant | `check_reference_census_and_code()` (`3,125` evaluations, all counts exact) | **VERIFIED (`candidate-T / C`)** | Exact finite-field combinatorics |
-| `#1581` | Binary-output lower bound $m=3$ ($2^2 < 5 \le 2^3$), $\det(Y_A)=\det(Y_B)=\det(Y_C)=1$, $M=(3,4,0,1,2)$, $k=(M+2)\bmod 5$ | `check_reference_census_and_code()` (`codes_m = [3,4,0,1,2]`) | **VERIFIED (`candidate-T / C`)** | Minimum is for binary outputs in bit-factor class, not physical cells |
-| `#1581` | $18{,}750$ occupied contact/CSUM/uncompute cases ($3{,}750$ ready) & $50$ two-source 182-leaf prefixes ($300$ block boundaries) | `check_contact_inventories()` (`18,750` / `3,750`) & `check_all_50_prefixes()` (`50` prefixes, `300` boundaries) | **VERIFIED (`candidate-T / C`)** | Full restoration of sources, $3$ shared refs, and $1$ shared bit $\eta$ |
-| `#1581` | Invertibility $\det R_0 = \frac{14992667}{13060694016} > 0$, cold energies $(3/20,2/5,17/20,2/5,23/20)$, $25$ relays at $B=5$ ($200$ boundaries), max work $11978371/5248800 \le 23/5$, $d=\text{None}$ recovery | `IndependentWaveApparatus` & `check_all_relays()` (`200` boundaries, `25` distinct records, `5` first records, `max_work_1581 = "11978371/5248800"`) | **VERIFIED (`candidate-T / C`)** | Independently implemented from primary 705-site stencil equations |
-| `#1581` | $25$ $W$-deleted controls collapsing to $M=2$ ($(j^4,j^4)$) & outside-family zero-piston alias $P=(0,0,0,0) \mapsto M=2$ | `check_all_50_prefixes()` & `check_all_relays()` (`w_deleted_controls = 25`, zero-piston alias verified) | **VERIFIED (`candidate-T / C`)** | Explicitly documents that $k=0$ is present identity and $(0,0,0,0)$ aliases $k=4$ |
+| `#1577` | Five fifth-root balanced lifts in $B_0$, norms $A=B=1$, distinct $C(j^k)=j^{-k}$, common $Q=(2,0,1)$ | `check_cyclotomic_and_quotient_envelope()` (`5` roots + `4` basis rows) | **RETAINED at the stated scope** | Exact in $\mathbb Z[\zeta_5]$ and $\mathbb F_5^6$ |
+| `#1577` | $31{,}250$ native step quotient checks & all-time receiver blindness on $\{P_+,P_-\}^2$ at $B=4/5$ + rollover + $p_B=(2,0,0,0)$ control | `check_cyclotomic_and_quotient_envelope()` (`31,250` steps) & `check_all_relays()` (`4` pairs $\times 9$ boundaries + control) | **RETAINED at the stated scope** | Strictly scoped to unchanged port; the separate frozen exact control-vector target is incorrect (ERRATA E2) |
+| `#1579` | Quotient-compatible envelope $\mathcal E_Q$ (`35` affine basis rows, `125` $\mathcal U_i$ triples, `13`/`26` `CSUM` basis rows) & leaf `4:W` first split | `check_cyclotomic_and_quotient_envelope()` & `check_contact_inventories()` (`first_unequal_leaf = "4:W"`) | **RETAINED at the stated scope** | Proves piston-sensitive gate outside $\mathcal E_Q$ is required |
+| `#1579` | $2{,}500$ complete $A_y$ cases, $500$ ready cases, inverse restoration, $75{,}000$ continuation $(r_y')^2\bmod 5$ boundaries | `check_contact_inventories()` (`cases_1579 = 2500`, `ready_1579 = 500`, `cont_boundaries_1579 = 75000`) | **RETAINED at the stated scope** | Holds on arbitrary occupied $(q_x,r_x,q_y,r_y,\eta)$ |
+| `#1579` | $4$ two-copy relays at $B=2$, max work $8252597/10497600 \le 8/5$, $d=\text{None}$ decoding, $W$-deleted $(+,+)$ collapse | `check_all_relays()` (`max_work_1579 = "8252597/10497600"`, `4` distinct records, $W$-deleted control) | **RETAINED at the stated scope** | Conditional on declared $A_y$, $I_2$, $\eta$, and $B=2$ |
+| `#1581` | Bijection $\Phi: \mathbb F_5^4 \to \mathcal H \subset \mathbb F_5^5$, mask counts $(204,52,12,4,0,1)$, $27$ classes, $200$ sep $j/j^4$, $64=4\times 16$ sep both, $205$ constant | `check_reference_census_and_code()` (`3,125` evaluations, all counts exact) | **RETAINED at the stated scope** | Exact finite-field combinatorics |
+| `#1581` | Binary-output lower bound $m=3$ ($2^2 < 5 \le 2^3$), $\det(Y_A)=\det(Y_B)=\det(Y_C)=1$, $M=(3,4,0,1,2)$, $k=(M+2)\bmod 5$ | `check_reference_census_and_code()` (`codes_m = [3,4,0,1,2]`) | **RETAINED at the stated scope** | Minimum is for binary outputs in bit-factor class, not physical cells |
+| `#1581` | $18{,}750$ occupied contact/CSUM/uncompute cases ($3{,}750$ ready) & $50$ two-source 182-leaf prefixes ($300$ block boundaries) | `check_contact_inventories()` (`18,750` / `3,750`) & `check_all_50_prefixes()` (`50` prefixes, `300` boundaries) | **RETAINED at the stated scope** | Full restoration of sources, $3$ shared refs, and $1$ shared bit $\eta$ |
+| `#1581` | Exact finite $R_0$ inversion, cold energies $(3/20,2/5,17/20,2/5,23/20)$, $25$ relays at $B=5$ ($200$ boundaries), max work $11978371/5248800 \le 23/5$, $d=\text{None}$ recovery | `IndependentWaveApparatus` & `check_all_relays()` (`200` boundaries, `25` distinct records, `5` first records, `max_work_1581 = "11978371/5248800"`) | **RETAINED at the stated scope** | Finite code checks retained; full determinant belongs to the inspected source proof, and frozen response/inverse/proof gaps remain (ERRATA E1, E3, E4) |
+| `#1581` | $25$ $W$-deleted controls collapsing to $M=2$ ($(j^4,j^4)$) & outside-family zero-piston alias $P=(0,0,0,0) \mapsto M=2$ | `check_all_50_prefixes()` & `check_all_relays()` (`w_deleted_controls = 25`, zero-piston alias verified) | **RETAINED at the stated scope** | Explicitly documents that $k=0$ is present identity and $(0,0,0,0)$ aliases $k=4$ |
 | `#1577`, `#1579`, `#1581` | Native/physical admission of $W_b$, $\mathcal U_i$, `CSUM`, reference/bit preparation, prefix energy, autonomous control, late arrival, renewal | Audited across all three `PREREG.md`, `PROOF.md`, `RESULT.md`, `README.md` | **OPEN (`O`)** | Properly left open under `O-J-PHASE-ACQUISITION`, `#1398/#1399`, `#1498/#1502` |
+
+
+The retained rows are evidence descriptions, not newly assigned public statuses
+or a blanket assertion that every frozen obligation passed. The governing
+review-contract dispositions are:
+
+| Frozen obligation | Disposition | Reason |
+|---|---|---|
+| `PREREG.md` Attack 4: $R_0=I_4-\frac12P^THS$ | **NOT MET — contradictory target** | The proof/code use $R_0=-\frac14P^THS$; see ERRATA E1. |
+| Attack 1: exact old-port control vectors | **NOT MET — incorrect target omitted by code** | Code checks relative equality/inequality instead; see E2. |
+| Attack 4: independent $F^{-1}$ and stated $D_2$ relation | **NOT IMPLEMENTED / NOT CHECKED** | Forward response construction and $R_0^{-1}$ do not supply these obligations; see E3. |
+| Frozen proof: full $4\times4$ nonsingularity from a $2\times2$ minor, and involutivity of $F$ | **WRITTEN JUSTIFICATION NOT ACCEPTED** | Exact finite inversion is retained; the minor implication and involution wording are invalid; see E4. |
+
+No new scientific computation is supplied to repair these obligations. Any such
+extension requires a distinct prospective successor; this completed package
+remains a partial review with its original output preserved. A separate
+controller may review the honesty and completeness of this reporting correction
+without treating it as completion of the original scientific contract.
