@@ -156,3 +156,141 @@ every local contact fails or that phase is the unique physical energy.
 The model does not assume an identical-fermion sector or a closed
 positive-band sector under contact. Native admissibility, the complete
 source/receiver account and a force-response interpretation remain open.
+
+## 5. Band-diagonal displacement and the cosine factor
+
+The owner's further identity is exact after specifying the band-diagonal
+projection. Put N(k)=H(k)/E(k), so N^2=I, Pi_s=(I+sN)/2 and
+U Pi_s=exp(-is omega)Pi_s. Thus Omega=omega N is the principal phase
+generator. For D(A)=sum_s Pi_s A Pi_s, differentiating the eigenvalue
+equation and N^2=I gives
+
+    D(V_step)=omega' N,
+    D(-i[x,H])=D(H')=E' N=cos(k) D(V_step),
+    D(-i[x,Omega])=omega' N.
+
+These are band-diagonal identities, not equality of the full operators.
+In particular H'(pi/2)=mX is nonzero and purely interband, although its
+band-diagonal part vanishes. The band expectations have opposite signs
+for pi/2<|k|<pi; at k=+/-pi the group velocity itself is zero.
+For m=2,k=pi/2 the two actual band velocities are +/-1/sqrt5, whereas
+both band expectations of H' vanish.
+
+This projection also has a precise time-average meaning. For m>0,
+|1-exp(2i omega)|=2E/r>=2m/r. Hence for bounded fiberwise A,
+
+    D_N(A)=(1/N) sum_(t=0)^(N-1) U^(-t) A U^t,
+    ||D_N(A)-D(A)|| <= r/(mN) ||A-D(A)||.
+
+The bound follows by summing the two interband geometric series. For
+A=V_step, D_N(A)=(U^(-N)xU^N-x)/N. Thus it is the actual mean displacement
+per step. Instantaneous interband oscillations remain; no decoherence or
+finite-period disappearance is inferred. The uniform bound does not
+extend to the degenerate massless case by setting m=0.
+
+There is a conditional uniqueness statement. Let G(k) be a smooth
+self-adjoint reader commuting with U, so G=sum_s g_s(k)Pi_s. Matching
+D(-i[x,G]) to D(V_step) for every k on a connected domain gives
+g_s'=s omega', hence precisely
+
+    G=Omega+C_+ Pi_+ + C_- Pi_-.
+
+Band constants are not selected by velocity. Requiring exp(-iG)=U further
+restricts them to 2pi integers; the principal spectral branch then sets
+them to zero. Conservation, differentiability, the all-k requirement and
+the original position are premises of this result. It is not an unrestricted
+physical selection theorem or equality of full instantaneous commutators.
+
+## 6. Joint conservation: local rank and positive-band rigidity
+
+Allow masses m_A,m_B>0 and r_i=sqrt(1+m_i^2). For locally lifted signed
+phases theta_i=s_i omega_i define S=theta_A+theta_B and
+T=r_A sin(theta_A)+r_B sin(theta_B). In phase coordinates,
+
+    det d(S,T)/d(theta_A,theta_B)
+      =r_B cos(theta_B)-r_A cos(theta_A)=cos(k_B)-cos(k_A).
+
+Therefore a nonzero first-order phase-exchange vector exists exactly
+when the cosines agree. In momentum coordinates, with v_i=theta_i',
+
+    det d(S,T)/d(k_A,k_B)=v_A v_B [cos(k_B)-cos(k_A)].
+
+The equal-cosine criterion as a regular k-coordinate statement needs
+v_A v_B!=0. Turning points also make that Jacobian singular. Moreover,
+singularity is only a first-order condition: it does not prove a curve
+of jointly conserved states or a nonzero transition amplitude. At fixed
+S, the second derivative of T with respect to theta_A is -T. A stationary
+point with T>0 is therefore a strict maximum, not a freely moving channel.
+
+For EQUAL masses and TWO POSITIVE bands let a=atan(m). Then
+omega_A,omega_B lie in [a,pi-a], so S lies in
+[2a,2pi-2a], strictly inside (0,2pi). Modular conservation of S fixes its
+real lift uniquely on this sector. With delta=(omega_A-omega_B)/2,
+
+    T=2r sin(S/2) cos(delta),       |delta|<=pi/2-a<pi/2.
+
+Since sin(S/2)>0 and cos(delta) is strictly decreasing in |delta| on this
+interval, fixed S,T determine |delta| and thus the unordered frequency
+pair {omega_A,omega_B}. This is an exact two-positive-band rigidity result.
+It does not eliminate dynamics: labeled subsystem energies may exchange,
+and momentum signs and scattering phases remain possible. The individual
+momentum freedom at fixed frequency is k -> -k modulo 2pi. In contrast,
+k -> pi-k changes omega -> pi-omega and is not an unrestricted symmetry
+of both conserved totals.
+
+## 7. The complete signed-phase exception
+
+For fixed S modulo 2pi, eliminate theta_B=S-theta_A modulo 2pi:
+
+    T=(r_A-r_B cos S) sin(theta_A)+r_B sin S cos(theta_A),
+    R^2=r_A^2+r_B^2-2r_A r_B cos S.
+
+If R>0, the circle equation has zero, one or two solutions according as
+|T|>R, |T|=R or |T|<R. Keep only the solutions lying in each declared
+signed band, including its momentum domain. This classification is a
+kinematic constraint, not a construction of a coupling realizing it.
+
+R=0 occurs exactly for equal masses and S=0 modulo 2pi. Then the equation
+requires T=0 and permits the whole admissible opposite-band family
+(theta,-theta). Thus the preceding positive-band theorem cannot be
+extended to the complete two-spin carrier as a general freezing theorem.
+On a finite ring, quantized momenta leave discrete alternatives rather
+than a continuous family. There is still no general uniqueness of the
+frequency pair on that full carrier.
+
+## 8. A fixed weak interaction need not conserve the old free phase
+
+The time-independent recurrence U_g=exp(-igV)U0 exists for every bounded
+self-adjoint V. The extra requirement [V,U0]=0 is not a consequence of
+using the same step at each tick. Requiring both [V,U0]=0 and [V,H0]=0
+defines a narrower class than autonomous energy-preserving interactions.
+
+A finite exact example, with a common r>0, is
+
+    Omega_A=diag(pi/6,pi/2),   Omega_B=diag(pi/2,5pi/6),
+    U_i=exp(-i Omega_i),       H_i=r sin(Omega_i),
+    V=|00><11|+|11><00|.
+
+In the ordered product basis,
+
+    H0=diag(3r/2,r,2r,3r/2),
+    U0=diag(exp(-2pi i/3),-1,-1,exp(-4pi i/3)).
+
+Thus [V,H0]=0 but [V,U0]!=0. Every U_g preserves H0, while an arbitrarily
+small nonzero generic g mixes |00> and |11>, exchanging subsystem energies
+by r/2 and changing their free phase sum. The free unitary entries are
+algebraic. Choosing m=1/sqrt3 and r=2/sqrt3 realizes these phase levels
+at Dirac momenta 0,pi/2,pi. This mode-selective coupling is not thereby a
+spatially local or native contact. It refutes the claimed general
+impossibility of an autonomous weak perturbation, not a separately posed
+local-contact obstruction.
+
+Finite-time transition and asymptotic scattering are distinct. If the
+relevant wave operators exist and intertwine interacting and free steps,
+the scattering operator can commute with U0 although V does not. This
+standard distinction and modulo-2pi quasienergy conservation are stated
+in Bisio, Mosco and Perinotti, *Scattering and perturbation theory for
+discrete-time dynamics*, equations (3)–(5) and (12),
+[arXiv:1912.09768v2](https://arxiv.org/abs/1912.09768v2), published as
+Phys. Rev. Lett. 126, 250503 (2021). No asymptotic scattering theorem is
+asserted for the finite ring merely from its one-step contact amplitude.

@@ -132,6 +132,8 @@ reproduction. This update remains NON-CANONICAL, with the same scope ceiling.
 
 ## Subsequent displacement/contact supplement
 
+Published snapshot: b692919dab9def28212aad51e575c9900037ece4.
+
 The owner's next exposed proposal suggested group drift and resonant
 interaction as discriminators between phase and sine energy. The new
 CONTACT-KINEMATICS.md proves the actual one-step displacement and a
@@ -158,3 +160,36 @@ aarch64 in run39076916212. Local policy and staged whitespace checks pass
 for this notes-only continuation. Its public commit/tree readback and CI
 outcome are recorded in #1603 after publication. Physical interpretation
 remains H/open; mathematical results retain the analytical candidate-T ceiling.
+
+## Band-velocity and joint-invariant continuation
+
+The owner's next exposed proposal was checked at its stated mathematical
+scope. CONTACT-KINEMATICS.md sections5–8 add the exact band-diagonal
+velocity identities and time-average bound, conditional phase-reader
+uniqueness, local-rank qualifications, the positive-band rigidity theorem,
+its full signed-phase exception, and an autonomous weak-coupling
+counterexample. The existing sections1–4 retain their exact bytes.
+
+| File | SHA-256 of this continuation |
+|---|---|
+| CONTACT-KINEMATICS.md | c5a644fb573be26c556421fcf6c18dedea8b60065ec08a238eb2e96f0446c44d |
+| README.md | 83578ba0cf8c954020dea8242d5566eaddb640a56bd7b00d2e3d8871be871da2 |
+
+The operator/phase-space reviewer accepted section5, the compatibility
+reviewer accepted sections6–8, and the native/clock reviewer accepted the
+README's final next-contact block, all at the exact stated hashes. These
+are reused exposed assistant contexts, not additional external reviewers
+or blind validation. The root author independently checked the identities
+and read the cited scattering paper and the existing native contract.
+
+Public main and Canon v103 remain at dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d;
+258 remote heads were checked. The native contract in #1596 remains at
+a6d2b0d30b9d6703fffb15b187c58fa6ad71e229, STOP_UNTYPED. The README defines
+the next comparison obligations without assuming its missing common
+carrier or taking over the existing native-admission owners.
+
+No scientific program was run. Local policy, Canon and whitespace checks
+passed; the original eleven files remain untouched. The previous public
+head b692919dab9def28212aad51e575c9900037ece4 had successful ordinary
+two-architecture CI in run39077198061. This continuation's exact public
+readback and infrastructure CI are recorded in #1603 after publication.

@@ -42,7 +42,8 @@ měřitelného rozdílu. Jeho odstranění limitou není povinným cílem.
   aditivita vybírá lineární fázi; oddělení prostorového dosahu a času.
 - [CONTACT-KINEMATICS.md](CONTACT-KINEMATICS.md): přesný operátor posuvu,
   hranice kanonického čtení sin(k) a konkrétní místní kontakt, který
-  propojí rezonanční módy s rozdílnou volnou sinusovou energií.
+  propojí rezonanční módy s rozdílnou volnou sinusovou energií; pásmové
+  průměrování, podmíněný výběr fáze a klasifikace společných zachování.
 - [FOLLOWUP_REVIEW.md](FOLLOWUP_REVIEW.md): oddělené posouzení doplňku,
   přesné otisky a rozsah kontroly.
 
@@ -84,3 +85,29 @@ nedokazuje návrat po L_n ticích. Větev se slabým krokem zůstává podmíně
 porovnáním, dokud nebude doložen její prostorový a časový převod z jednoho
 úplného stroje. Vlastníci nativní přípustnosti #1586/#1589 a jejich kontrol
 se nemění; denní souhrn má vlastní úlohu #1602.
+
+Další směr je **kontakt respektující nativní krok**, s konkrétním zadáním
+pro energetické čtení. [#1596](https://github.com/mathorn1973/twist-j/pull/1596)
+na hlavě `a6d2b0d30b9d6703fffb15b187c58fa6ad71e229` již předává pod
+#1589 výsledek STOP_UNTYPED: společný nosič, načtení, účet a úplná inverze
+nejsou dodány. To není věta o nemožnosti a tento vlastník se nepřebírá.
+Zdejší Hilbertův Diracův nosič a kontakt přidávají další výslovný typ.
+
+Pro další porovnání potřebujeme od přijatého kontaktního modelu těchto
+pět položek, určených před výběrem požadované energie:
+
+1. Úplný stav a skutečný povolený krok, včetně nativního selektoru,
+   obsazené paměti, odmítnutí a inverze; označení NATIVE nebo DECLARED-EXTENDED.
+2. Jednu společnou přípravu přijímače, reference, banky a řadiče,
+   nezávislou na zamýšleném výsledku.
+3. Pojmenované čtení do porovnávacího nosiče, jeho obor a zachovanou
+   informaci, stejný časový index a doloženou shodu skutečných kroků.
+4. Úplný účet změn zdroje, přijímače, banky, reference a řadiče na
+   téže historii; pouhá komutace s volným U0 ho nenahrazuje.
+5. Rozhodnutí, zda povolený kontakt připouští zdejší kanál s celkovou
+   fází pi a hodnotami 2m versus 2sqrt(1+m^2), a kdo případný rozdíl hradí.
+
+Tyto položky zpřesňují rozlišovací otázku #1603; nejsou novou konstrukcí
+nativního kontaktu ani převzetím #1398/#1498/#1589. Návratové hodiny
+zůstávají vedlejší otázkou: čtení kroku již existuje a návrat konečného
+checkpointu není návratem úplného stavu s rostoucím vnitřním čítačem.
