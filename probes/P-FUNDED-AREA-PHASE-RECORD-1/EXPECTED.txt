@@ -1,0 +1,13 @@
+G1 PASS raw_energy_le_12 states=57680 gate_checks=230720 rejected=89152
+G2 PASS words=87381 integer_closed=5341 basis_actions=436905 history_sha256=ce7cb8054241a077ef1e32ba4837a1173bca8a90d877eff02133d164fea82c42
+G3 WITNESS eta=-1 record=-1 phase_exponent=4 states=[(0, 0, 1, -1, 4, 1, -1, 0), (1, 0, 1, -1, 3, 1, -1, 1), (1, -1, 0, -2, 0, 1, -1, 2), (0, -1, 0, -2, 1, 1, -1, 3), (0, 0, 0, -2, 2, 1, -1, 0)]
+G3 WITNESS eta=1 record=1 phase_exponent=1 states=[(0, 0, 1, -1, 4, 1, 1, 0), (1, 0, 1, -1, 3, 1, 1, 1), (1, 1, 2, 0, 0, 1, 1, 2), (0, 1, 2, 0, 1, 1, 1, 3), (0, 0, 2, 0, 2, 1, 1, 0)]
+G3 PASS entire coarse-energy/work histories agree; labelled reference costs do not
+G4 PASS budget_cases=972 B_min(K)=2*K^2+2
+G4 WITNESS laps=5 area=5 Eplus=36 Eminus=16 bank=2 phase=identity paid_work=50
+G5 PASS equal zero references give identical squared records and opposite phases
+G5 WITNESS underfunded_B=3 endpoint=(1, 0, 1, -1, 2, -1, 1, 0) actual_word_not_nominal
+G6 PASS autonomous_B=4 eta=-1 exact_period=124 full_ready_return
+G6 PASS autonomous_B=4 eta=1 exact_period=124 full_ready_return
+BOUNDARY selected integer comparison; algebraic path character only; no native U, SI or physical action
+AUDIT PASS
