@@ -1,5 +1,75 @@
 # Canon changelog (public series)
 
+## Public Canon v103
+
+Adopt seven conditional L1 theorems with complete exact proofs. The native
+zero predicate matches the fixed integer field-shell residue condition after
+the declared piston swap. The complete unit shell maps bijectively to twenty
+of the twenty-five shell residues; the five fixed residues have no unit
+preimage. The native zero orbit's boundary-three residue coset has a unique
+minimum-energy integer representative, while its boundary-four residue has no
+unit preimage, excluding an all-n>=3 unit assignment under that fixed comparison.
+
+The original and alternative two-message families and the occupied/absent
+one-shot families receive their exact gate classifications. Prefix and ready
+tail remain distinct, and gate membership is not readiness. A complete
+receiver induction proves source noninterference only for the stated common
+q,r histories and source-independent protocol. Absence-prefix differences
+and the alternative family's preloaded controls remain explicit exceptions.
+The five-cell shear comparison includes full finite-order, positivity and
+infinite-order Jordan certificates, with whole-edge/face orientation rules.
+
+All 523 prior claims, the 26 live H/O owners, existing gates and frontier
+program dispositions retain their exact scopes and statuses. Registry grows
+to 530 claims: 0 T-LOCK, 387 T, 59 D, 39 C, 2 H, 24 O and 19 F.
+The unit count and protected-sign permanence retain their existing scope;
+no higher-shell minimum, native source production, physical energy funding,
+complete source-to-receiver interface, unique physical cell choice or L2-L6
+lift is added. The message-sensitive source-access requirements remain
+descriptive under the existing physical apparatus owners.
+
+The admitted source and review records remain visible with their stated
+limits. Incorrect source equations and unsupported optional extensions are
+excluded from the public claims; the exact Canon arguments use the fixed
+matrices, complete unit fibers and corrected piecewise preparation formulas.
+The minimal reproduction inventory remains 36. Release accounting preserves
+the exact prior inputs and all earlier structural guards.
+
+## Public Canon v102
+
+Consolidate nine conditional L1 theorems with self-contained reviewed
+proofs. The raw-residue context boundary distinguishes finite autonomous
+observers from an explicit supplied-bit update. A separate product-lift
+obstruction and retained-contact archive theorem make the reversibility
+and memory premises explicit. Complete rational signed-port dynamics and
+the funded retained-direction contact preserve all occupied coordinates
+and their declared energy accounts.
+
+The four native reader theorems distinguish common raw reset, a nonlinear
+global chart, the fixed 550-point family's sharp affine-dimension and
+quadratic-degree bounds, and an alternative 150-point preparation with an
+affine observation and nonlinear decoder. The latter two use semantic
+blank values whose raw coordinates already contain the second message.
+All messages are jointly prepared initially. The displayed global nonlinear
+function has reduced degree nine; this is a different question from the
+minimum observation degree on the required prepared support.
+
+All 514 prior claims, all 26 H/O owners, gates and frontier program
+dispositions retain their exact scopes and statuses. There is no new
+physical admission, later independent loading, source erasure, native
+detector implementation, cold renewal or L2-L6 lift. Registry grows to
+523 claims: 0 T-LOCK, 380 T, 59 D, 39 C, 2 H, 24 O and 19 F, with 26 live H/O.
+
+The source integration retains completed numerical accounts and failed or
+abandoned attempts at their actual evidentiary scopes. The historical
+nonlinear audit capture remains a documented hold outside these direct
+proofs. Numerical precision, discrepancy and conditional restoration are
+not equated with physical success. No new production campaign is run.
+The minimal reproduction inventory remains 36. The structural release
+audit reconstructs exact v101 inputs before all prior historical guards;
+one expressly frozen runtime context is registered for unchanged historical
+probe replay. No scientific input, threshold or first output is rewritten.
+
 ## Public Canon v101
 
 Accept four L1 theorems with self-contained reviewed proofs. The unchanged
@@ -481,7 +551,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 514 claims; 0 T-LOCK, 371 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Registry snapshot: 530 claims; 0 T-LOCK, 387 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 36.
 <!-- END GENERATED CURRENT COUNTS -->
 

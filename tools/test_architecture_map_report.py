@@ -25,16 +25,16 @@ class ArchitectureMapReportTests(unittest.TestCase):
 
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v101 adds four inline L1 theorems with supplemental proof audits.
-        self.assertEqual(self.report.claims, 514)
+        # v103 adds seven conditional inline L1 bridge theorems.
+        self.assertEqual(self.report.claims, 530)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 371},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 387},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 98,
+                "none": 114,
                 "one-architecture": 9,
                 "recorded-audit": 31,
                 "two-architecture": 376,
@@ -45,7 +45,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
         self.assertEqual(len(self.report.direct_architecture_requires), 200)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 361
+            len(self.report.transitive_architecture_dependents), 371
         )
         self.assertEqual(len(self.report.dependency_terminals), 70)
         # v95 adds ten inline theorems (architecture_requirement=none).

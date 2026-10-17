@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v101. Normative authority and activation
+**Release identity:** Public Canon v103. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,11 +16,29 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v101 also declares a discrete architecture. It does not
+Public Canon v103 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
 anchor is the electron mass.
+
+The native zero predicate now has an exact comparison with the declared
+integer field shell: the piston swap carries it to the shell residue
+condition. Exactly twenty of the twenty-five admitted residues have an
+energy-one preimage. The native zero orbit's boundary-three residue has a
+unique minimum-energy integer representative of energy five; its boundary-four
+residue has no unit preimage. This excludes a unit-seed assignment at every
+n>=3 for that fixed origin and comparison; higher-energy lifts remain open.
+
+The fixed preparation families obey different gate conditions. The original
+two-message family never passes, the alternative passes once transiently,
+and occupied one-shot zero passes even before its semantic reader is ready.
+The unchanged rational contact source is blind across messages with identical
+q,r histories and a common complete receiver/protocol. A source-access map,
+complete preparation, funding and physical receiver still need their own
+contracts. The five declared cell shears have matrix orders 4,3,6,5 and
+infinite; this bounded comparison does not select a physical cell or order.
+All existing physical apparatus owners and layer gates retain their scopes.
 
 The fixed F5 quadratic target now has a complete initialized-memory
 classification: no finite ignored register works at ranks one or two,
@@ -284,8 +302,42 @@ physical latent variable or causal mechanism. ENC4 common blocking has an
 exact admission criterion and an initialized MSD augmentation; the broader
 metrology calculus remains open. A self-contained conditional-variance proof
 in the chosen finite photon measure gives b>=25rho and chi>=rho. These common
-local floors do not give a positive b-25chi margin. The 25 live H/O owners
+local floors do not give a positive b-25chi margin. The 26 live H/O owners
 remain open, including apparatus realization and the physical photon bridge.
+
+## Reader and contact boundaries
+
+U-RAW-RESIDUE-CONTEXT-BOUNDARY [T] excludes every finite autonomous,
+source-independent context for a nonconstant permanent raw-residue reading.
+A supplied current Thue-Morse bit permits an explicit 23-state observer;
+neither its physical acquisition nor autonomous implementation follows.
+CONTEXT-COMPLETE-PRODUCT-LIFT-OBSTRUCTION [T] excludes a bijective complete-
+product lift of that particular nonsurjective update, not all reversible
+observers. FIELD-RETAINED-CONTACT-ARCHIVE [T] gives a sharp three-value
+last-gain code for the declared contacts, unbounded archive capacity across
+horizons, and an exact extension using two unbounded integer registers.
+
+The native two-message results separate three contracts. A common raw
+reset obstructs affine readings of any dimension. A global nonlinear chart
+has a common raw blank and permanent second-message readback. On its fixed
+550-point prepared family, affine observation dimension three and two-
+coordinate polynomial degree two are sharp when only semantic blank is
+required. A different 150-point joint preparation permits affine dimension
+two with a nonlinear decoder; its raw blank already contains the second
+message. Both messages are initially present in every construction. These
+are the precise scopes of U-ORIGIN-AFFINE-COMMON-RESET-BOUND,
+U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT, U-FIXED-FAMILY-READOUT-COMPLEXITY
+and U-ALTERNATIVE-AFFINE-SEMANTIC-READOUT [T]. They supply no later independent
+loading, source depletion, local physical detector or indefinite renewal.
+
+SIGNED-PORT-OCCUPIED-REVERSIBILITY [T] gives complete rational wave/tape
+inverses and a positive conserved energy for the declared signed port.
+Finite/infinite agreement is limited to its prepared first two cold cuts.
+FUNDED-CONTACT-INVOLUTION [T] supplies a retained-direction contact with a
+bounded rational store, sharp blank budgets 2/5 and 8/5 on the stated
+receiver sets, and an explicit occupied-state funding boundary. Bounded
+energy does not bound precision or establish a physical reservoir. All
+26 live H/O owners and their decision conditions remain unchanged.
 
 ## Two field characterisations involving five
 

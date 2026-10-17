@@ -1062,3 +1062,45 @@ U-J-POWER-CHECKPOINT-NOGO	J-UNIT	REQUIRES	J=1+j^2 is invertible over the cycloto
 U-NATIVE-RAW-RESIDUE-READOUT	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	mathematical native-port recovery or its obstruction supplies no complete physical apparatus, readout realization or renewal
 U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	mathematical native-port recovery or its obstruction supplies no complete physical apparatus, readout realization or renewal
 U-NATIVE-RAW-RESIDUE-PRESENCE-BOUNDARY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	mathematical native-port recovery or its obstruction supplies no complete physical apparatus, readout realization or renewal
+U-RAW-RESIDUE-CONTEXT-BOUNDARY	U-NATIVE-RAW-RESIDUE-READOUT	REQUIRES	the explicitly named mathematical premise and carrier used in the inline proof; no physical realization is inferred
+U-RAW-RESIDUE-CONTEXT-BOUNDARY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact mathematical construction or obstruction supplies no complete physical apparatus, detector, independent loading, native admission or renewal
+CONTEXT-COMPLETE-PRODUCT-LIFT-OBSTRUCTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact mathematical construction or obstruction supplies no complete physical apparatus, detector, independent loading, native admission or renewal
+FIELD-RETAINED-CONTACT-ARCHIVE	FIELD-CONSERVATIVE-CHAIN-LAW	REQUIRES	the explicitly named mathematical premise and carrier used in the inline proof; no physical realization is inferred
+FIELD-RETAINED-CONTACT-ARCHIVE	FIELD-LOCAL-WORK-RECORD	REQUIRES	the explicitly named mathematical premise and carrier used in the inline proof; no physical realization is inferred
+FIELD-RETAINED-CONTACT-ARCHIVE	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact mathematical construction or obstruction supplies no complete physical apparatus, detector, independent loading, native admission or renewal
+SIGNED-PORT-OCCUPIED-REVERSIBILITY	DECODER-RETARDED-LOCAL-ENERGY-TRANSPORT	REQUIRES	the explicitly named mathematical premise and carrier used in the inline proof; no physical realization is inferred
+SIGNED-PORT-OCCUPIED-REVERSIBILITY	DECODER-RESERVOIR-RECORD-ACCOUNTING	REQUIRES	the explicitly named mathematical premise and carrier used in the inline proof; no physical realization is inferred
+SIGNED-PORT-OCCUPIED-REVERSIBILITY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact mathematical construction or obstruction supplies no complete physical apparatus, detector, independent loading, native admission or renewal
+FUNDED-CONTACT-INVOLUTION	U-NATIVE-RAW-RESIDUE-READOUT	REQUIRES	the explicitly named mathematical premise and carrier used in the inline proof; no physical realization is inferred
+FUNDED-CONTACT-INVOLUTION	SIGNED-PORT-OCCUPIED-REVERSIBILITY	REQUIRES	the explicitly named mathematical premise and carrier used in the inline proof; no physical realization is inferred
+FUNDED-CONTACT-INVOLUTION	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact mathematical construction or obstruction supplies no complete physical apparatus, detector, independent loading, native admission or renewal
+U-ORIGIN-AFFINE-COMMON-RESET-BOUND	U-NATIVE-INVARIANT-AND-NOWRITE	REQUIRES	the explicitly named mathematical premise and carrier used in the inline proof; no physical realization is inferred
+U-ORIGIN-AFFINE-COMMON-RESET-BOUND	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact mathematical construction or obstruction supplies no complete physical apparatus, detector, independent loading, native admission or renewal
+U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT	U-NATIVE-INVARIANT-AND-NOWRITE	REQUIRES	the explicitly named mathematical premise and carrier used in the inline proof; no physical realization is inferred
+U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact mathematical construction or obstruction supplies no complete physical apparatus, detector, independent loading, native admission or renewal
+U-FIXED-FAMILY-READOUT-COMPLEXITY	U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT	REQUIRES	the explicitly named mathematical premise and carrier used in the inline proof; no physical realization is inferred
+U-FIXED-FAMILY-READOUT-COMPLEXITY	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact mathematical construction or obstruction supplies no complete physical apparatus, detector, independent loading, native admission or renewal
+U-ALTERNATIVE-AFFINE-SEMANTIC-READOUT	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	the exact mathematical construction or obstruction supplies no complete physical apparatus, detector, independent loading, native admission or renewal
+U-ALTERNATIVE-AFFINE-SEMANTIC-READOUT	DEF-AUTONOMOUS-STATE	REQUIRES	the unchanged native checkpoint, generators, selector and counter used by the stated alternative preparation and fixed observation
+U-FIELD-RESIDUE-GATE	DEF-AUTONOMOUS-STATE	REQUIRES	the literal native selector, counter and origin-zero orbit
+U-FIELD-RESIDUE-GATE	FIELD-CONSERVATIVE-CHAIN-LAW	REQUIRES	the literal field marking, positive form and exact integer image criterion
+U-FIELD-RESIDUE-GATE	U-NATIVE-INVARIANT-AND-NOWRITE	REQUIRES	the protected-sign invariant on synchronized X14 checkpoints
+U-FIELD-RESIDUE-GATE	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	three-step synchronization and its sheet bijections
+FIELD-UNIT-RESIDUE-CLASSIFICATION	FIELD-CONSERVATIVE-CHAIN-LAW	REQUIRES	the exact A_f,L,H identities and positive integer shell used by the unit-residue proof
+FIELD-NATIVE-BOUNDARY-THREE-MINIMUM	U-FIELD-RESIDUE-GATE	REQUIRES	the zero native boundary-three checkpoint and its marked shell residue
+FIELD-NATIVE-BOUNDARY-THREE-MINIMUM	FIELD-UNIT-RESIDUE-CLASSIFICATION	REQUIRES	global unit-residue injectivity identifies the unique equality case
+U-NATIVE-UNIT-LIFT-OBSTRUCTION	U-FIELD-RESIDUE-GATE	REQUIRES	the unchanged native generators and zero-orbit counter convention
+U-NATIVE-UNIT-LIFT-OBSTRUCTION	FIELD-UNIT-RESIDUE-CLASSIFICATION	REQUIRES	the five fixed shell residues have no energy-one preimages
+U-PREPARED-FAMILY-SHELL-GATES	U-FIELD-RESIDUE-GATE	REQUIRES	the marked native zero predicate and its integer-shell interpretation
+U-PREPARED-FAMILY-SHELL-GATES	U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT	REQUIRES	the original preparation, exact 550-point support, prefix and complete tail
+U-PREPARED-FAMILY-SHELL-GATES	U-ALTERNATIVE-AFFINE-SEMANTIC-READOUT	REQUIRES	the alternative preparation, exact 150-point support, prefix and complete tail
+U-PREPARED-FAMILY-SHELL-GATES	U-NATIVE-SOURCE-RECEIVER-RECORD	REQUIRES	the five occupied one-shot preparations, distinct absence and exact ready graph
+U-CONTACT-SOURCE-NONINTERFERENCE	U-NATIVE-APPARATUS-HISTORY-FACTOR	REQUIRES	the closed native quotient and identical controls for common sum and readiness
+U-CONTACT-SOURCE-NONINTERFERENCE	U-ORIGIN-NONLINEAR-TWO-MESSAGE-READOUT	REQUIRES	the original two-message family and common q,r port histories
+U-CONTACT-SOURCE-NONINTERFERENCE	U-ALTERNATIVE-AFFINE-SEMANTIC-READOUT	REQUIRES	the alternative family with message-sensitive initial q,r controls
+U-CONTACT-SOURCE-NONINTERFERENCE	U-NATIVE-SOURCE-RECEIVER-RECORD	REQUIRES	common controls among occupied payloads and the distinct absence prefix
+U-CONTACT-SOURCE-NONINTERFERENCE	SIGNED-PORT-OCCUPIED-REVERSIBILITY	REQUIRES	complete deterministic wave, tape and pointer updates on the rational carrier
+U-CONTACT-SOURCE-NONINTERFERENCE	FUNDED-CONTACT-INVOLUTION	REQUIRES	the retained source encoding and complete resource-guarded contact
+U-CONTACT-SOURCE-NONINTERFERENCE	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	no complete physical apparatus or admitted positive message-source interface is supplied
+FIELD-FIVE-CELL-SHEAR-COMPARISON	FIELD-SHEAR-ENERGY-BOUNDARY	REQUIRES	the electric-first shear, conserved raw energy and positivity boundary
+FIELD-FIVE-CELL-SHEAR-COMPARISON	DEF-FIELD-WORK-RECORD-CHAIN	REQUIRES	the fixed mixed-cell marking used for the comparison with canonical A_f
