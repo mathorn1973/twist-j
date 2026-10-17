@@ -194,3 +194,41 @@ metadata comments on #1599 and a final pointer to #1548. No Canon,
 registry, gate, workflow or rule change; no source amendment; no
 merge, tag or release. The deliverable is a draft PR with an immutable
 result SHA and a final receipt on #1599.
+
+## 7. Post-release takeover and additive pin adoption (2026-10-18)
+
+1. Following the public release of `#1599` by
+   `muse-native-extended-boundary-20261017-01a14bd4`
+   ([#1599#issuecomment-6242620888](https://github.com/mathorn1973/twist-j/issues/1599#issuecomment-6242620888)),
+   the distinct reviewer session
+   `antigravity-native-extended-boundary-review-20261018` posted its own
+   public claim in
+   [#1599#issuecomment-6242850621](https://github.com/mathorn1973/twist-j/issues/1599#issuecomment-6242850621)
+   after repeating the live Public Canon v103 authority, hash, check-run,
+   and branch-collision bootstrap from scratch.
+2. Sections 1–6 above from commit `855091a16a0b390afa96814bc69ccc06162e3f34`
+   are preserved verbatim and adopted as the frozen review contract of
+   `antigravity-native-extended-boundary-review-20261018`, with two
+   explicit additive precisions before any source file of `#1592`,
+   `#1596`, `#1594`, or `#1595` is opened:
+   - `SOURCES.tsv` is expanded additively from the original 44 rows
+     (which remain byte-identical in rows 1–44) to 95 rows by appending
+     `canon/CHANGELOG.md`, `canon/GATES.tsv`, `canon/DEPENDENCIES.tsv`,
+     `canon/EVIDENCE.tsv`, and `reproduce/status-separation/verify.py` at
+     `dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d`, together with all tree
+     entries at the ancestor/preregistration commits of Target A
+     (`dfbe4ef237e9fbf07f5e1886a5af9721a7b869a9`,
+     `c86aea343158cd6d938364f42f078a09e52e8e29`), Target B
+     (`9f75d5bd65e3c542792a3282f672e8a4ecdf1d98`,
+     `e9f8eaf44fd38a4218fe142cd31f8271175cd890`), and comparison probes
+     `#1594` (`7449b22d4ea3d23a0954d2b22f57215525f63abb`) and `#1595`
+     (`a914ce8e02055fb7640f821cd9bd87fadf835694`,
+     `1ef3c52e3108b482e4a6da0e3bf87e34f05a336e`). This allows complete
+     pin-to-result custody verification across every commit of each
+     target and comparison branch without unmanifested file reads.
+   - The review remains purely analytical (`NONE / NOT_RUN` for
+     scientific gate execution; no `RUN.md` or `EXPECTED.txt` is
+     manufactured). Independent symbolic/algebraic verification of every
+     claim A1–A3, B1–B8, C1, and M1 will be documented directly and
+     self-containedly in `REVIEW.md`.
+

@@ -58,3 +58,42 @@ misdescribed as blind.
 No author code has been executed or imported at any point above, and
 no scientific computation of any kind has run. File hashes establish
 byte identity, not physical provenance.
+
+6. Release of prior session (2026-10-17 22:53:39Z): the session
+   `muse-native-extended-boundary-20261017-01a14bd4` withdrew its public
+   claim in
+   [#1599#issuecomment-6242620888](https://github.com/mathorn1973/twist-j/issues/1599#issuecomment-6242620888)
+   and stopped work at pin `855091a16a0b390afa96814bc69ccc06162e3f34`
+   without opening either target's source contracts, proofs, verifiers,
+   or result files and without running any author code.
+7. Post-release takeover intake (2026-10-18 Europe/Prague): a distinct
+   session `antigravity-native-extended-boundary-review-20261018`
+   performed a fresh live bootstrap on Public Canon v103
+   (`dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d`, content commit
+   `01fb76f6b3b14a6a5ec05d0017ea922390ab6f66`, all five normative
+   hashes in `canon/SHA256SUMS`, green required checks, `POLICY PASS`,
+   and `CANON PASS v103 claims=530`), verified the `#1599` issue body
+   (`4798` UTF-8 bytes, SHA-256
+   `fad38a6a00f058d0034a78292f975ef8049e07bf1a711c5715d967e8d30d3031`)
+   and its three public comments, read `STATUS.md`, `POLICY.md`,
+   `AGENTS.md`, `canon/CORE.md`, `canon/FRONTIER.md`, relevant rows of
+   `canon/REGISTRY.tsv` and `canon/GATES.tsv`, and repository checker
+   scripts (`tools/check_policy.py`, `tools/policy_file_rules.py`,
+   `tools/check_verifier.py`), and posted its own public claim in
+   [#1599#issuecomment-6242850621](https://github.com/mathorn1973/twist-j/issues/1599#issuecomment-6242850621)
+   before making any repository edit.
+8. Additive takeover contract pin: after posting
+   `#issuecomment-6242850621`, this session read the four files of the
+   preserved pin `855091a16a0b390afa96814bc69ccc06162e3f34`
+   (`README.md`, `PREREG.md`, `SOURCES.tsv`, `EXPOSURE.md`),
+   mechanically verified all 44 rows of `SOURCES.tsv` against Git objects,
+   and appended 51 additional manifest rows covering the v103
+   changelog/gate/dependency/evidence/reproduction files and the ancestor
+   pin/intermediate commits of `#1592`, `#1596`, `#1594`, and `#1595`
+   (`95` total rows). Still no target or comparison file in
+   `notes/C-U-FIELD-CHAIN-WORD-OBSTRUCTION-N/`,
+   `notes/C-J-AREA-COMMON-CARRIER-JUNCTION-N/`,
+   `probes/P-B-LIFT-FUNDED-SHELL-TRANSFER-1/`, or
+   `probes/P-B-LIFT-FUNDED-SHELL-TRANSFER-AUDIT-1/` has been opened by
+   this session before pushing and reading back this additive pin commit.
+

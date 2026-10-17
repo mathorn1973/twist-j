@@ -43,3 +43,22 @@ pin and no author code is run as review evidence.
 
 Status at this pin: CONTRACT FROZEN / REVIEW PENDING. No verdict on
 either target is asserted yet.
+
+## Post-release takeover and additive contract pin (2026-10-18)
+
+The prior claimant `muse-native-extended-boundary-20261017-01a14bd4`
+withdrew its public claim in
+[#1599#issuecomment-6242620888](https://github.com/mathorn1973/twist-j/issues/1599#issuecomment-6242620888)
+after freezing commit `855091a16a0b390afa96814bc69ccc06162e3f34` without
+opening target source files or drafting a verdict.
+
+Active public reviewer session:
+`antigravity-native-extended-boundary-review-20261018`
+([#1599#issuecomment-6242850621](https://github.com/mathorn1973/twist-j/issues/1599#issuecomment-6242850621)).
+This additive pin commit preserves `855091a16a0b390afa96814bc69ccc06162e3f34`
+in full, independently verifies all 44 original `SOURCES.tsv` rows, adds
+the ancestor/preregistration commit blobs of `#1592`, `#1596`, `#1594`,
+and `#1595` plus the v103 gate/dependency/evidence/reproduction files
+(`95` total rows in `SOURCES.tsv`), and freezes this session's contract
+and exposure record before opening any target or comparison source file.
+
