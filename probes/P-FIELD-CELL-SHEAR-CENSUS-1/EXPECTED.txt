@@ -1,0 +1,8 @@
+FROZEN_SOURCE_MANIFEST canonical_refs=5 PASS
+CASE digon raw_dim=3 active_dim=2 static_dim=1 char_ascending=[1,0,1] det=1 order=4 energy=positive_definite orientation_checks=8 PASS
+CASE triangle raw_dim=4 active_dim=2 static_dim=2 char_ascending=[1,1,1] det=1 order=3 energy=positive_definite orientation_checks=16 PASS
+CASE digon-digon raw_dim=5 active_dim=4 static_dim=1 char_ascending=[1,0,1,0,1] det=1 order=6 energy=positive_definite orientation_checks=32 PASS
+CASE digon-triangle raw_dim=6 active_dim=4 static_dim=2 char_ascending=[1,1,1,1,1] det=1 order=5 energy=positive_definite orientation_checks=64 PASS
+CASE triangle-triangle raw_dim=7 active_dim=4 static_dim=3 char_ascending=[1,2,2,2,1] det=1 order=infinite energy=semidefinite_nullity_1 orientation_checks=128 PASS
+CANONICAL A_f_and_B_f_exact_marking PASS
+FIELD_CELL_SHEAR_CENSUS_PASS cases=5 orientations=248
