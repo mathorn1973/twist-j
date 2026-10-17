@@ -96,4 +96,30 @@ byte identity, not physical provenance.
    `probes/P-B-LIFT-FUNDED-SHELL-TRANSFER-1/`, or
    `probes/P-B-LIFT-FUNDED-SHELL-TRANSFER-AUDIT-1/` has been opened by
    this session before pushing and reading back this additive pin commit.
-
+9. Post-pin source inspection and analytical audit (2026-10-18 Europe/Prague):
+   after pushing additive contract pin `7cd625b4779ad28c691ee29ba00eda94f1c7529b`,
+   reading it back from `origin/notes/C-NATIVE-EXTENDED-BOUNDARY-REVIEW-N`,
+   and posting the public `PINNED` receipt in
+   [#1599#issuecomment-6242899697](https://github.com/mathorn1973/twist-j/issues/1599#issuecomment-6242899697),
+   this session opened and read the pinned Git blobs listed in `SOURCES.tsv`:
+   all 11 files of `#1592` at `fbf3c402d5c56f3fb3e95cda8a853a40c3608819`
+   and its ancestor commits `dfbe4ef237e9fbf07f5e1886a5af9721a7b869a9` and
+   `c86aea343158cd6d938364f42f078a09e52e8e29`; all 8 files of `#1596` at
+   `a6d2b0d30b9d6703fffb15b187c58fa6ad71e229` and its ancestor commits
+   `9f75d5bd65e3c542792a3282f672e8a4ecdf1d98` and
+   `e9f8eaf44fd38a4218fe142cd31f8271175cd890`; all 8 files of `#1594` at
+   `6a6f2967120866b9f06956169012c0e8213ab268` and pin
+   `7449b22d4ea3d23a0954d2b22f57215525f63abb`; all 8 files of `#1595` at
+   `b77ce7adabcb71c5ba5dbf46f315352143b05122` and pins
+   `a914ce8e02055fb7640f821cd9bd87fadf835694` and
+   `1ef3c52e3108b482e4a6da0e3bf87e34f05a336e`; and the relevant sections
+   of `canon/CANON.md` (`DEF-FIELD-WORK-RECORD-CHAIN`, `Shared proof 1–9`,
+   `U-FIELD-RESIDUE-GATE`, `FIELD-UNIT-RESIDUE-CLASSIFICATION`,
+   `FIELD-NATIVE-BOUNDARY-THREE-MINIMUM`, `U-NATIVE-UNIT-LIFT-OBSTRUCTION`,
+   `U-PREPARED-FAMILY-SHELL-GATES`, `U-CONTACT-SOURCE-NONINTERFERENCE`).
+   It also queried the read-only GitHub Actions check-run metadata for PRs
+   `#1592`, `#1594`, `#1595`, and `#1596` and checked the algebraic matrix
+   identities from first principles using in-memory standard-library
+   arithmetic without importing or executing any author `verify.py`.
+   `PREREG.md` and `SOURCES.tsv` remain byte-identical to pin
+   `7cd625b4779ad28c691ee29ba00eda94f1c7529b`.
