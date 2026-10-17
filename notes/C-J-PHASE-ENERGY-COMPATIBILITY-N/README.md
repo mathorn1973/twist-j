@@ -44,6 +44,9 @@ měřitelného rozdílu. Jeho odstranění limitou není povinným cílem.
   hranice kanonického čtení sin(k) a konkrétní místní kontakt, který
   propojí rezonanční módy s rozdílnou volnou sinusovou energií; pásmové
   průměrování, podmíněný výběr fáze a klasifikace společných zachování.
+- [APPARATUS-BRIDGE.md](APPARATUS-BRIDGE.md): přímé porovnání s existujícím
+  přístrojem; překážka pevného lineárního převodu klidových módů, přesný
+  racionální Diracův krok s dělením pěti a meze společného účtu banky.
 - [FOLLOWUP_REVIEW.md](FOLLOWUP_REVIEW.md): oddělené posouzení doplňku,
   přesné otisky a rozsah kontroly.
 
@@ -111,3 +114,29 @@ Tyto položky zpřesňují rozlišovací otázku #1603; nejsou novou konstrukcí
 nativního kontaktu ani převzetím #1398/#1498/#1589. Návratové hodiny
 zůstávají vedlejší otázkou: čtení kroku již existuje a návrat konečného
 checkpointu není návratem úplného stavu s rostoucím vnitřním čítačem.
+
+## Přímé porovnání s hotovým kódem
+
+Následné analytické porovnání již prošlo pod definice `F_step`,
+`F_inverse` a `funded_contact_*` v
+`probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/apparatus.py` na výše uvedeném
+veřejném main. Volná matice a její inverze leží nad Z[1/6]. Klidové
+Diracovy fáze pro m=2 a m=1/2 nesplňují nutnou spektrální podmínku.
+Neexistuje proto pevný lineární převod zachovávající tyto módy, ani při
+kladném celočíselném seskupování obou hodin. Zachování relativních fází
+vylučuje i opravu společným skalárním násobitelem. Přesný rozsah včetně
+pevných afinních kontaktních itinerářů je v APPARATUS-BRIDGE.md.
+
+Kladná kontrolní konstrukce současně ukazuje, že racionální nosič stačí:
+pro U=A/sqrt5 dává psi=x+sqrt5 y krok (x,y)->(A y,A x/5), s kladným
+zachovávaným účtem ||x||^2+5||y||^2. Je to jiný výslovně zadaný krok,
+ne odvození z dosavadního F či nativního U. Změna samotného typu banky
+při nezměněném F proto věrný volný lineární převod neopraví.
+
+Samotný párový kanál (0,pi)->(pi/2,pi/2) má na obou stranách fázi -1,
+takže jej tato překážka **nevylučuje**. Jeho slabší společné kódování,
+převod polohy a kontaktu i úplný účet zůstávají konkrétním otevřeným
+úkolem. Dva požadované přírůstky 2phi^-3 a 2phi^-1 nelze vyrovnat jedinou
+racionální bankou se společným lineárním měřítkem, pokud nic jiného
+nekompenzuje změnu. Dvojice tvoří celočíselnou bázi účtu 2Z[phi]; to je
+aritmetická možnost, nikoli povolení nového nativního přechodu.

@@ -193,3 +193,52 @@ passed; the original eleven files remain untouched. The previous public
 head b692919dab9def28212aad51e575c9900037ece4 had successful ordinary
 two-architecture CI in run39077198061. This continuation's exact public
 readback and infrastructure CI are recorded in #1603 after publication.
+
+## Existing-apparatus bridge comparison
+
+The owner authorized the next concrete comparison after the source-code
+inventory. Its exposed analytical scope was declared in
+[#1603 comment6243110595](https://github.com/mathorn1973/twist-j/issues/1603#issuecomment-6243110595).
+APPARATUS-BRIDGE.md is a new supplement; the original frozen question,
+scientific proof, verifier and run records are not changed or resumed.
+
+| File | SHA-256 of this continuation |
+|---|---|
+| APPARATUS-BRIDGE.md | 4fe6da6fc149cd0f2f5f549dfb6ad0b472c7c0c5b575ce374cadd5ef22cb14a4 |
+| README.md | c4665d8cb08809a72f37f49941fda069f1375593be8a6bef145297221a7d6e9d |
+
+Three reused assistant contexts reviewed the following exact scopes and
+confirmed acceptance at these final hashes:
+
+- The source/native reviewer checked sections1–2,4, the source/protocol
+  scope of section7, and the README navigation and final comparison block.
+  It independently verified the source bytes and the exact F/F_inverse
+  formulas, including the positive off-diagonal H_w coefficients.
+- The compatibility reviewer checked sections3–4 and7: the integral-unit
+  obstruction, integer blocking, common-scalar relative-phase test and
+  fixed affine itinerary. It explicitly checked that the isolated pair
+  eigenvalue -1 remains outside the exclusion.
+- The operator/algebra reviewer checked sections5–6: the rational block
+  construction and inverse, positive invariant, denomination basis,
+  shared-calibration boundary and k-dependent basis/position change.
+
+Review corrected the counter paragraph to distinguish native_tick from
+individual coupled_step rows. The author additionally restricted the
+dense-bank interval observation to nondegenerate intervals. Both final
+changes were read back and accepted. The root author checked the proofs
+and directly read the cited Stacks integrality lemmas.
+
+These are exposed analytic reviews within the same assistant system,
+not blind studies, external peer review or executed scientific tests.
+The source apparatus, its code and its earlier evidence remain unchanged.
+The result excludes only the stated linear/free and fixed-itinerary
+classes; neither the full guarded native apparatus nor the isolated
+two-particle channel is declared impossible. The explicit rational
+control construction supplies no native contact or physical energy law.
+
+Only the one new note, README and this review record are changed in the
+continuation. The other analytical supplements and all eleven original
+files remain unchanged. No new scientific program was imported or run.
+Source/Canon pins and native-admission owners are retained. Local
+infrastructure validation and the exact public commit/tree/CI receipt
+are recorded separately after they finish; no future success is claimed.
