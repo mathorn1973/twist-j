@@ -1,0 +1,10 @@
+P-U-ION-NATIVE-FIRST-STEP-1
+STATUS NON-CANONICAL CONDITIONAL IDEAL FIRST NATIVE STEP
+MODEL 17 Ca40 ions; global fixed-profile LS; individual star carriers
+PAIR ISOLATION 500 finite affine loops; all spectators scalar
+TARGET 25 coherent inputs; full data, retained M1/M2 and finite counter
+COUNTS {"actual_inputs":25,"carrier_angle_pi":"19094830","carrier_pulses":19094943,"crot_columns":500,"echo_rows":500,"echoes":312,"extra_frame_pulses":380,"ls_loops":156000,"omitted_ls_success":5,"switching_boundaries":19250944}
+MEMORY s=3,4 data merge; physical memory remains orthogonal
+DEVICE ERROR / PRACTICAL FIDELITY / FULL HISTORY NOT CERTIFIED
+INDEPENDENT_SHA256 84d31a7aa605314ca20c303e6abe2223cea472a3b06464910efdf3d86cc0f723
+FIRST NATIVE STEP AUDIT PASS

@@ -1,0 +1,40 @@
+{
+  "purpose": "Immutable support inputs for the prospective first-native-step construction audit",
+  "files": [
+    {
+      "path": "MODEL.md",
+      "bytes": 17338,
+      "sha256": "6ca8e813ba80d938bc85e7345ca8d3e80b536b20d6c7ed0c03445e43ed0455b8"
+    },
+    {
+      "path": "PROOF.md",
+      "bytes": 17569,
+      "sha256": "d5671246aaaddeaa2db17b8bdebd35a97b30238263ae7f8d634f10174711662c"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 8223,
+      "sha256": "d3edd78f6a961face8919d0e7ee04540d1470b7c8a2e437422c2b0d4182b8384"
+    },
+    {
+      "path": "PREREG.md",
+      "bytes": 11878,
+      "sha256": "76831b1f8f6c73ed166038e817af240ffda5435f77c39c597f0e030f0eec952a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2776,
+      "sha256": "0968337b0bfc197d1c4f6d722f1aa34fe50a9bff6aa0a5f3e856aba2e03845c1"
+    },
+    {
+      "path": "REVIEW-PREREG.md",
+      "bytes": 4312,
+      "sha256": "14c3d35d9bbeef7b8524c8909504f8dbef30ac53b0fb0a2c58040ac015c481a2"
+    },
+    {
+      "path": "verify_independent.py",
+      "bytes": 21003,
+      "sha256": "3a610a9fd1e3d8c6f113473840fa2d34bbb706eb740822d9bcc576271c76f21d"
+    }
+  ]
+}
