@@ -1,0 +1,36 @@
+PROBE=P-FIELD-CHAIN-UNIT-SEED-AUDIT-2
+PREMISE_IDENTITIES=PASS
+DET_BF=5 ADJ_BF_DIAG=(4, 6, 10, 20)
+K1_ADJUGATE_BOX=(1, 1, 2, 2) K1_SCANNED=225
+K5_ADJUGATE_BOX=(2, 3, 4, 6) K5_SCANNED=4095
+SHELL_COUNTS_0_TO_5=(1, 20, 30, 60, 60, 120) TOTAL_LE_5=291
+UNIT_COUNT=20 DISTINCT_UNIT_RESIDUES=20 MAX_UNIT_MULT=1
+MISSING_GATE_RESIDUE_COUNT=5 EQUALS_AF_FIXED_SUBGROUP=True
+MISSING_GATE_RESIDUES=(0,0,0,0),(1,2,0,0),(2,4,0,0),(3,1,0,0),(4,3,0,0)
+NONZERO_MISSING_K2_MULTS=(1,2,0,0):5,(2,4,0,0):0,(3,1,0,0):0,(4,3,0,0):5
+UNITS_AND_LU_MOD5_BEGIN
+  U01 u=(-1,0,1,-1) Lu=(0,0,-1,-2) Lu_mod5=(0,0,4,3) H(u)=1 H(Lu)=5
+  U02 u=(-1,0,1,0) Lu=(-2,1,1,-3) Lu_mod5=(3,1,1,2) H(u)=1 H(Lu)=5
+  U03 u=(-1,1,1,-2) Lu=(-1,3,2,-6) Lu_mod5=(4,3,2,4) H(u)=1 H(Lu)=5
+  U04 u=(-1,1,2,-2) Lu=(-2,1,3,-4) Lu_mod5=(3,1,3,1) H(u)=1 H(Lu)=5
+  U05 u=(0,-1,-1,1) Lu=(2,-1,-4,2) Lu_mod5=(2,4,1,2) H(u)=1 H(Lu)=5
+  U06 u=(0,-1,-1,2) Lu=(0,0,-2,1) Lu_mod5=(0,0,3,1) H(u)=1 H(Lu)=5
+  U07 u=(0,-1,0,1) Lu=(1,-3,-3,4) Lu_mod5=(1,2,2,4) H(u)=1 H(Lu)=5
+  U08 u=(0,-1,0,2) Lu=(-1,-2,-1,3) Lu_mod5=(4,3,4,3) H(u)=1 H(Lu)=5
+  U09 u=(0,0,-1,0) Lu=(1,2,-1,-2) Lu_mod5=(1,2,4,3) H(u)=1 H(Lu)=5
+  U10 u=(0,0,0,-1) Lu=(2,-1,-2,1) Lu_mod5=(2,4,3,1) H(u)=1 H(Lu)=5
+  U11 u=(0,0,0,1) Lu=(-2,1,2,-1) Lu_mod5=(3,1,2,4) H(u)=1 H(Lu)=5
+  U12 u=(0,0,1,0) Lu=(-1,-2,1,2) Lu_mod5=(4,3,1,2) H(u)=1 H(Lu)=5
+  U13 u=(0,1,0,-2) Lu=(1,2,1,-3) Lu_mod5=(1,2,1,2) H(u)=1 H(Lu)=5
+  U14 u=(0,1,0,-1) Lu=(-1,3,3,-4) Lu_mod5=(4,3,3,1) H(u)=1 H(Lu)=5
+  U15 u=(0,1,1,-2) Lu=(0,0,2,-1) Lu_mod5=(0,0,2,4) H(u)=1 H(Lu)=5
+  U16 u=(0,1,1,-1) Lu=(-2,1,4,-2) Lu_mod5=(3,1,4,3) H(u)=1 H(Lu)=5
+  U17 u=(1,-1,-2,2) Lu=(2,-1,-3,4) Lu_mod5=(2,4,2,4) H(u)=1 H(Lu)=5
+  U18 u=(1,-1,-1,2) Lu=(1,-3,-2,6) Lu_mod5=(1,2,3,1) H(u)=1 H(Lu)=5
+  U19 u=(1,0,-1,0) Lu=(2,-1,-1,3) Lu_mod5=(2,4,4,3) H(u)=1 H(Lu)=5
+  U20 u=(1,0,-1,1) Lu=(0,0,1,2) Lu_mod5=(0,0,1,2) H(u)=1 H(Lu)=5
+UNITS_AND_LU_MOD5_END
+YBAR3=(0,0,3,1) LEAST_SHELL_K=1 COSET_MIN_H=5 MINIMIZER_COUNT=1
+  MINIMIZER x=(0,-1,-1,2) y=Lx=(0,0,-2,1) H(x)=1 H(y)=5 MATCHES_USTAR=True
+YBAR3_SHELL_COUNTS_K1_TO_K5=k1:1,k2:1,k3:2,k4:3,k5:5
+AUDIT_VERIFIER_STATUS=PASS
