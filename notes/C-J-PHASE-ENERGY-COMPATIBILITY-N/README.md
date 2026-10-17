@@ -37,6 +37,9 @@ měřitelného rozdílu. Jeho odstranění limitou není povinným cílem.
 - [ENERGY.md](ENERGY.md): hlavní pokračování, přesný operátor, hranice
   výběru energie, opravené lemma o transcendenci a hypotéza konečné
   neekvivalence včetně odlišení od tvrzené spotřeby za každý tik.
+- [GUDERMANN-ADDITIVITY.md](GUDERMANN-ADDITIVITY.md): přesný zlatý
+  násobitel poměru, komplementární Gudermannův úhel a podmínky, za nichž
+  aditivita vybírá lineární fázi; oddělení prostorového dosahu a času.
 - [FOLLOWUP_REVIEW.md](FOLLOWUP_REVIEW.md): oddělené posouzení doplňku,
   přesné otisky a rozsah kontroly.
 

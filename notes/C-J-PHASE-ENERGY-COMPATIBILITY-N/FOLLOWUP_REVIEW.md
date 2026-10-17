@@ -4,6 +4,10 @@ PUBLIC / NON-CANONICAL / L1. Author: A. M. Thorn.
 SPDX-License-Identifier: Apache-2.0.
 Date: 2026-10-18 Europe/Prague.
 
+The initial record below describes the exact snapshot published in
+4f7bec494826a42e5c2195e41b99284f32cc6aaf. A subsequent exposed supplement
+and its distinct review scope are recorded at the end of this file.
+
 ## Scope and exposure
 
 This record covers only the four new files listed below. It does not
@@ -90,3 +94,36 @@ references, with no copied external code, private material or raw log dump.
 Disposition: no blocking mathematical defect found at the stated scope.
 Analytical candidate-T ceiling only; the physical mismatch, energy reading,
 contact admission and entropy-cost interpretations are not promoted.
+
+## Subsequent Gudermann/additivity supplement
+
+After the first continuation was published, the owner supplied the exact
+golden multiplier and a proposed selection by extensivity versus locality.
+GUDERMANN-ADDITIVITY.md preserves the multiplier and supplies the necessary
+phase-lift, composition and locality conditions. This was exposed analytic
+work, with no new scientific execution and no change to the original audit.
+
+| File | SHA-256 of subsequent content |
+|---|---|
+| GUDERMANN-ADDITIVITY.md | d8a24fec37abf5d385f63b4597ba5acdb66f50eea9220289deff6ba48dce07d7 |
+| README.md | 0f679eaf8dac6bdac3c74202be8dc36f2a085ff771101d9f3662f7f3b82a0a7c |
+
+The rapidity reviewer accepted section1 of the new note at its exact final
+hash. The compatibility reviewer accepted sections2–5 at that same hash,
+after specifying that every chosen phase sum must lie in (-pi,pi) for
+the principal-logarithm identity. The author checked both corrections and
+the README change, which only adds the new note's navigation link. The
+other three analytical file hashes in the first table are unchanged.
+
+The new note distinguishes rest-phase doubling from rapidity doubling,
+field division from integral-ring identities, and a scalar function of the
+composite unitary from a sum retaining subsystem information. Its explicit
+alias example and finite-range argument are analytical proofs, not outputs
+of a new run. The same reviewer contexts were reused; this does not add
+new external reviewers or blind validation.
+
+Local policy and staged whitespace checks passed. The previous public
+continuation's ordinary repository CI passed on x86_64 and aarch64 in run
+39076414023. The final supplement's own commit/tree readback and CI outcome
+are reported in #1603 after publication, without treating CI as scientific
+reproduction. This update remains NON-CANONICAL, with the same scope ceiling.
