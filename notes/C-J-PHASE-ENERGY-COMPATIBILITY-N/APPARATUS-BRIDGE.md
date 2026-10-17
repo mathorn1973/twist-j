@@ -174,7 +174,8 @@ exclude encoding this isolated degenerate two-state sector. Such an
 encoding alone would not reconstruct the two individual Dirac walks,
 their position observables, the spin-dependent contact amplitude or their
 complete energy account. The question of this weaker collective encoding
-remains open rather than being silently absorbed into the no-go.
+is not silently absorbed into the no-go. Sections9–11 below now construct
+its free algebraic carrier in F and test the separate contact obligation.
 
 The original native counter also prevents a universal finite-cycle
 argument: native_tick sends n to n+1, so f(n,x)=lambda^n is an eigen-reading
@@ -275,8 +276,9 @@ The present result has three distinct parts:
    which source-dynamics restriction the negative result uses.
 3. **Still missing:** a common source-independent preparation, allowed
    native transition, position/contact translation and complete bank,
-   reference and controller account for the two-particle witness. Even
-   its isolated degenerate-sector encoding is not supplied here.
+   reference and controller account for the two-particle witness. Its
+   isolated FREE algebraic sector is now supplied in section9; the required
+   contact/position/energy encoding remains missing.
 
 The next input for #1596 is therefore a named candidate beyond the excluded
 linear/free class, or the separately scoped weaker collective encoding.
@@ -294,3 +296,167 @@ and #1585 at `bb04eb3c582e2ec06f90b1a5768ecdfb1ac2044e`,
 Their owners and scopes are not taken over or promoted. The finite
 m/atan(m) physical hypothesis is neither established nor falsified by
 this comparison. No Canon, source apparatus or contact primitive changes.
+
+## 8. Pair-phase cancellation and the corrected rest polynomials
+
+This exposed continuation answers the owner's next proposal, with scope
+recorded in [comment6243337863](https://github.com/mathorn1973/twist-j/issues/1603#issuecomment-6243337863).
+The primitive integer minimal polynomials have the following signs:
+
+    m=2:    5X^4+6X^2+5,
+    m=1/2:  5X^4-6X^2+5.
+
+Indeed lambda^2+lambda^-2 equals -6/5 or +6/5, respectively. Each
+lambda generates Q(i,sqrt5): its square recovers i and then lambda
+recovers sqrt5. Thus its degree is four, proving irreducibility. The
+monic minimal polynomials have nonintegral coefficients +/-6/5. Merely
+exhibiting some nonmonic polynomial would not prove nonintegrality.
+These numbers are not algebraic integers and cannot be roots of unity.
+Section3 proves the stronger obstruction appropriate to R=Z[1/6].
+
+For either mass, the positive-band pair states a=(0,pi), b=(pi/2,pi/2)
+have normalized free eigenvalue -1. The middle single-particle eigenvalue
+-i is a Gaussian integer, not a rational number. It can of course be an
+eigenvalue of a rational matrix. With the literal D_m=r U_m, their raw
+pair eigenvalue is -r^2: -5 for m=2, but -5/4 for m=1/2. Rescaling the
+half-mass coin to A_half=2D_half gives -5 for its raw pair instead.
+
+Raw multiplication by -5 is NOT an alternative realization inside F:
+the inverse eigenvalue -1/5 is not R-integral, so -5 cannot occur in
+GL_d(R). The same argument excludes -5/4. Raw norm growth changes
+amplitudes, not the dimension of a state space. The normalized value
+-1 does pass this arithmetic test; its actual occurrence is proved next.
+
+On a Hilbert sector with U0=-I, nonzero vectors have period two while
+rays and density operators are stationary. A common sign alone supplies
+no observable period-two clock. For two positive bands, the outgoing
+(pi/2,pi/2) velocities are BOTH +1/r, not opposite: these modes co-propagate.
+
+## 9. The existing F has an explicit four-dimensional -1 eigenspace
+
+Set B=2I+H_w. The stencil shells with squared lengths 2,4,8,10,16 have
+respectively 12,6,12,24,6 displacement vectors. Their weights are
+6,1,15,1,1, so the full off-diagonal row sum is
+
+    (12*6+6+12*15+24+6)/324=8/9.
+
+Restricting to the finite domain only removes neighbors. Symmetry and
+the diagonal 10/9 therefore give H_w >= (2/9)I and B >= (20/9)I.
+In particular B is invertible over Q. No dense inverse or scientific
+executable is needed for this argument.
+
+For every q in Q^4 define, in the order z=(u,v,A0,A1,B0,B1),
+
+    u=B^-1 Pq,
+    Z(q)=(u,-u,q/4,-q/4,-q/4,q/4).
+
+Substitution in section2 gives F Z(q)=-Z(q). Conversely Fz=-z forces
+v=-u, A1=-A0, B1=A0, B0=-A0 and
+
+    B u=4P A0.
+
+Thus q=4A0 gives every eigenvector, and
+
+    E_minus=ker(F+I)={Z(q):q in Q^4},    dim_Q E_minus=4.
+
+The coordinate is read back directly as q=4A0.
+
+This improves the previous arithmetic allowance to an actual free
+construction in the UNCHANGED apparatus. Two independent rational vectors
+Z(e1),Z(e2), after complex scalar extension, intertwine an abstract C^2
+operator -I with F. Alternatively all four real rational coordinates
+encode two Gaussian-rational amplitudes by
+(Re c1,Im c1,Re c2,Im c2). The literal rational carrier does not thereby
+become all of C^2 or acquire a Born rule, position or Dirac energy reading.
+The source pointer is separate: F_step sends (Z(q),k) to (Z(-q),k+1 mod2).
+This free wave/tape/pointer substate returns after two steps; the complete
+native source, counter, bank and controller are not included in that claim.
+
+The source's quadratic account on this space is explicitly
+
+    E_full(Z(q))=(1/2) q^t [I_4+P^t B^-1 P] q.
+
+To check it, E_wave(u,-u)=(1/2)u^t B u and twice the sum of the four
+tape squared norms is ||q||^2/2. This positive rational form is the
+existing apparatus account, not an identification with the two-particle
+sine-energy observable.
+
+## 10. One funded impulse cannot act internally on that free sector
+
+An accepted source contact changes the wave/tape coordinates by
+
+    d_sigma(a)=(0,sigma a,0,0,0,0),       a=S eta(r).
+
+Every vector in E_minus satisfies v=-u. Hence d_sigma(a) belongs to
+E_minus only when a=0. A nonzero accepted contact takes EVERY point of
+E_minus outside E_minus, and likewise takes every point of any fixed
+affine coset z0+E_minus outside that same coset. A rejected contact has
+no wave effect. An accepted zero impulse may still flip a control sign;
+it supplies no nontrivial wave transition within E_minus.
+
+Since F^j(E_minus)=E_minus for every integer j, arbitrary free steps
+before and after ONE nonzero impulse cannot restore membership either.
+This does not exclude return after multiple impulses, a changed encoding,
+additional retained modes or a different declared contact.
+
+The actual cost on Z(q) is especially simple:
+
+    v-(1/2)H_w u=-(1/2)Pq,
+    Delta_sigma=(1/2)||a||^2-(sigma/2)a^t Pq,
+    b'=b-Delta_sigma,       W'=W+Delta_sigma,
+
+when the original bank guard accepts. The norm uses the WHOLE field a,
+including its fifth-site component. This exact rational debit is not
+automatically either irrational Dirac denomination from section6.
+
+For a fixed word with N free steps and accepted impulses d_j, let r_j
+count free steps after impulse j. The wave endpoint from Z(q) is
+
+    z_out=(-1)^N Z(q)+sum_j F^(r_j) d_j.
+
+Return to E_minus requires the sum to lie in E_minus, in addition to
+every actual source-label and bank-acceptance condition along the word.
+This gives an exact test for a declared word. It supplies no finite bound
+on all words, preparations or complete native-counter histories.
+
+## 11. The onsite Hilbert contact also leaves the full free -1 sector
+
+Use the unchanged comparison of CONTACT-KINEMATICS.md section4: two
+distinguishable particles, m>0, 4 dividing L, V the onsite projector and
+U_g=exp(-igV)U0. Let the band signs be explicit:
+
+    a=|0,+;pi,+>,
+    b=|pi/2,+;pi/2,+>,
+    c=|pi/2,+;pi/2,->.
+
+Then U0 a=-a, U0 b=-b, but U0 c=+c. All three have total momentum pi.
+At 0 and pi the positive-band spinors are |-x> and |+x>. BOTH band
+spinors at pi/2 have zero Bloch X component, hence their overlaps with
+either of these rest/edge spinors have magnitude 1/sqrt2. Consequently
+
+    |<b|V|a>|=|<c|V|a>|=1/(2L),
+    |<c|U_g|a>|^2=sin^2(g/2)/L^2.
+
+For every g outside 2pi Z, even the COMPLETE U0 eigenvalue -1 sector is
+therefore not invariant under this contact. The resonant channel a->b
+still exists. The different a->c channel has phase difference pi: its
+first-order N-step sum is sum_(t=0)^(N-1)(-1)^t, with no linear-in-N
+growth. A nonzero exact one-step amplitude is not a long-time resonant
+scattering claim.
+
+For the smaller K=span{a,b}, the diagonal V matrix elements are 1/L and
+the off-diagonal magnitude is 1/(2L). Since V^2=V,
+
+    ||(I-P_K)V a||^2=1/L-5/(4L^2),
+    ||(I-P_K)U_g a||^2=(4L-5)sin^2(g/2)/L^2.
+
+The compression P_K V P_K has eigenvalues 1/(2L),3/(2L), not0 or1.
+Exponentiating that compression defines a DIFFERENT contact, not the
+restriction of the existing projector kick to an invariant subspace.
+
+Thus the free collective bridge is now constructed, but two distinct
+contact tests fail the proposed closed-sector shortcut: the actual funded
+impulse exits its free F eigenspace, and the declared onsite kick exits
+even the whole Hilbert U0=-1 sector. Neither result is a universal no-go
+for native contacts. A finite candidate test must first declare the full
+retained carrier, word, encoding, observables and bank/controller account.

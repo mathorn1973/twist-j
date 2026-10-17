@@ -242,3 +242,45 @@ files remain unchanged. No new scientific program was imported or run.
 Source/Canon pins and native-admission owners are retained. Local
 infrastructure validation and the exact public commit/tree/CI receipt
 are recorded separately after they finish; no future success is claimed.
+
+## Collective -1 sector: actual free construction and contact leakage
+
+The next exposed scope was recorded in
+[#1603 comment6243337863](https://github.com/mathorn1973/twist-j/issues/1603#issuecomment-6243337863).
+APPARATUS-BRIDGE.md sections8–11 correct the proposed rest-polynomial
+signs and raw normalization, construct the entire rational ker(F+I),
+derive its existing quadratic account and funded impulse cost, and prove
+two distinct failures of closure under contact. Earlier statements in
+sections4 and7 now point to the positive free construction. README is
+updated to distinguish that construction from the remaining contact debt.
+
+| File | SHA-256 of this continuation |
+|---|---|
+| APPARATUS-BRIDGE.md | 2044009c004abc6f84f6c4c8e200f9224d01d3321d05fca9d7d7a81ae940f85b |
+| README.md | 0cbf7018e3118a8749b47ed51005ea073ad38e0e871c8dc1719565e05e5fe8de |
+
+Three reused exposed assistant contexts checked separate scopes:
+
+- The algebra reviewer accepted section8, the revised sections4/7 and
+  the final compression/conclusion paragraphs of section11 at the stated
+  APPARATUS hash, including the raw inverse-integrality obstruction.
+- The source reviewer accepted sections9–10 at that exact hash: stencil
+  bound, full eigenspace, scalar/pointer scope, energy and cost, single
+  impulse exclusion and the fixed-word endpoint formula.
+- The contact reviewer accepted section11 and the last paragraph of
+  section8 at that exact hash: full-sector leakage, two-state leakage,
+  compression spectrum, finite-time/resonance distinction, velocities
+  and the absence of a clock observable from a common Hilbert phase.
+
+Source review requested an explicit g outside 2pi Z qualification in the
+README contact paragraph; it was added together with the named initial
+state. The source reviewer confirmed the final README hash above and
+accepted that correction. The root author checked all derivations and
+final scope wording.
+These are analytical assistant reviews, not blind validation, external
+peer review or a new scientific execution. No dense eigensolver/inverse
+was evaluated. The original eleven audit files, source apparatus, other
+analytical supplements, Canon and native-admission owners are unchanged.
+The change touches only APPARATUS-BRIDGE.md, README and this review record.
+Local infrastructure checks and exact publication/CI receipts are recorded
+in #1603 after completion. No physical/native admission is inferred.

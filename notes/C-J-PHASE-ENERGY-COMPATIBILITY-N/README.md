@@ -46,7 +46,9 @@ měřitelného rozdílu. Jeho odstranění limitou není povinným cílem.
   průměrování, podmíněný výběr fáze a klasifikace společných zachování.
 - [APPARATUS-BRIDGE.md](APPARATUS-BRIDGE.md): přímé porovnání s existujícím
   přístrojem; překážka pevného lineárního převodu klidových módů, přesný
-  racionální Diracův krok s dělením pěti a meze společného účtu banky.
+  racionální Diracův krok s dělením pěti a meze společného účtu banky;
+  konstrukce volného párového podprostoru s vlastním číslem -1 přímo
+  v dosavadním F a důkazy jeho opuštění při uvedených kontaktech.
 - [FOLLOWUP_REVIEW.md](FOLLOWUP_REVIEW.md): oddělené posouzení doplňku,
   přesné otisky a rozsah kontroly.
 
@@ -133,10 +135,25 @@ zachovávaným účtem ||x||^2+5||y||^2. Je to jiný výslovně zadaný krok,
 ne odvození z dosavadního F či nativního U. Změna samotného typu banky
 při nezměněném F proto věrný volný lineární převod neopraví.
 
-Samotný párový kanál (0,pi)->(pi/2,pi/2) má na obou stranách fázi -1,
-takže jej tato překážka **nevylučuje**. Jeho slabší společné kódování,
-převod polohy a kontaktu i úplný účet zůstávají konkrétním otevřeným
-úkolem. Dva požadované přírůstky 2phi^-3 a 2phi^-1 nelze vyrovnat jedinou
+Samotný párový kanál (0,pi)->(pi/2,pi/2) má na obou stranách vlastní
+číslo -1, takže jej tato překážka **nevylučuje**. Následný důkaz jde dál:
+v dosavadním F skutečně existuje čtyřrozměrný racionální podprostor
+ker(F+I), popsaný vzorcem Z(q) v oddílu 9 APPARATUS-BRIDGE.md, se čtením
+q=4A0. Je to přesné volné kódování; polohu, částicové energetické čtení
+ani kontakt tím ještě neztotožňujeme.
+
+Jediný nenulový přijatý kontakt funded_contact_* tento podprostor opustí
+a samotné další volné kroky jej nevrátí. Jeho skutečná cena na Z(q) je
+Delta=||a||^2/2-sigma*a^t*Pq/2. Návrat po více kontaktech zůstává otevřený.
+Také dosavadní bodový Hilbertův kontakt při g mimo 2pi Z opouští celý
+volný sektor -1: ze vstupu (0,+;pi,+) do módu (pi/2,+;pi/2,-) s vlastním
+číslem +1 přechází za jediný krok
+s pravděpodobností sin^2(g/2)/L^2. Shoda volných fází proto nedává
+uzavřený dvoustavový kontaktní stroj. Tato pravděpodobnost není tvrzením
+o dlouhodobém rezonančním rozptylu. Převod polohy a kontaktu i úplný účet
+zůstávají konkrétním otevřeným úkolem.
+
+Dva požadované přírůstky 2phi^-3 a 2phi^-1 nelze vyrovnat jedinou
 racionální bankou se společným lineárním měřítkem, pokud nic jiného
 nekompenzuje změnu. Dvojice tvoří celočíselnou bázi účtu 2Z[phi]; to je
 aritmetická možnost, nikoli povolení nového nativního přechodu.
