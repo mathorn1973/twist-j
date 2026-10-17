@@ -1,0 +1,14 @@
+PROBE P-U-AFRAME-GATE-AUDIT-1
+SCOPE PUBLIC NON-CANONICAL L1 exact_finite_audit
+F1 PASS states=15625 generator_cases=78125 selector_cases=31250
+F2 PASS matrix_identities=9 determinants=2 residues=625 image=25 preimages=25
+F3 PASS pistons=625 kernel_h=25 G=625 sheet_gates=125,125,125,125,125 G14=250
+F4 PASS generator_cases=78125 piston_pair_values=625 a_survivors=25 c_survivors=125
+F5 PASS selector_cases=31250 rows=10 cases_per_row=3125
+F6 PASS synchronized_cases=12500 images_per_bit=125 preimages=2 fixed_per_bit=1 moved_gate=249
+F7 PASS invariant_cases=12500 V_values=625 V_preimages=10 gated_R_fibres=13 sizes=10,12*20
+F8 PASS initial_states=15625 future_gate=625 X0_overlap=5 permanent=401 by_sheet=1,125,25,125,125
+DIGEST G14 rows=250 sha256=373778349c9cb18ff376e726b23d381d0c62a26c7c5d6c9f2d8c31e2e395b097
+DIGEST PERMANENT_INITIAL rows=401 sha256=1640c7f998e9fb47a45e2b08182e34ee847b0c7073e91d0864fb3307a165b312
+F9 PASS finite_regression_only zero_checkpoints=4097 all_initial_checkpoints=640625 synchronized_checks=593750
+RESULT PASS
