@@ -224,6 +224,20 @@ Consider instead the signed block exchange
 B_star(a,b,c,d)=(-c,-d,-a,-b).
 ```
 
+This control also has an exact native interpretation at the residue level.
+For a native piston p=(a,b,c,d), the native letter g1 sends p to
+(-c,-d,-a,-b), while W swaps within both pairs. Direct substitution gives
+
+```text
+B_star W pi_P(x) = W pi_P(g1 x) mod 5.
+```
+
+Both sides are (-d,-c,-b,-a). Since the actual native boundary-three
+step selects g1, B_star is the integer signed-permutation lift of the
+required residue action in this fixed comparison, not a target-fitted
+permutation. This gives no lift of the full native controls, no native
+energy, and no permission to add B_star to the integer chain.
+
 It gives
 
 ```text

@@ -26,8 +26,11 @@ zero at boundary four.
 This is not a claim that higher-energy target representatives do not
 exist. The explicit target representative (2,-1,0,0) has H=15. The
 signed block exchange mapping the minimal boundary-three representative
-to it is outside the admitted alphabet and is not supplied as a physical
-or energy-funded contact. No minimum at boundary four is claimed.
+to it is exactly the integer signed-permutation lift of the required
+native g1 piston action after W, but it is outside the inherited chain
+alphabet and is not supplied as a physical or energy-funded contact.
+This residue identity does not lift the full native controls or select
+a native energy. No minimum at boundary four is claimed.
 
 ### Q2: full equal-energy source-message noninterference
 
