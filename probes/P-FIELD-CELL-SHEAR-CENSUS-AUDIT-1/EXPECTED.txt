@@ -1,0 +1,7 @@
+digon char=1,0,1 det=1 order=4 energy=PD orientations=8 PASS
+triangle char=1,1,1 det=1 order=3 energy=PD orientations=16 PASS
+digon-digon char=1,0,1,0,1 det=1 order=6 energy=PD orientations=32 PASS
+digon-triangle char=1,1,1,1,1 det=1 order=5 energy=PD orientations=64 PASS
+triangle-triangle char=1,2,2,2,1 det=1 order=infinite energy=PSD-nullity-1 orientations=128 PASS
+NEGATIVE_CONTROLS isolated-boundary-flip=REJECTED reversed-shear-energy=REJECTED order-two-at-parabolic-boundary=REJECTED
+RC_FIELD_CELL_SHEAR_AUDIT_PASS
