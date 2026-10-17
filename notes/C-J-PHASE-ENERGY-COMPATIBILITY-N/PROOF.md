@@ -126,7 +126,9 @@ The principal-band scope is sufficient for (5). Even adding 2 pi n to
 omega0 does not repair the m=2 equality: atan(2) is between zero and pi/2
 and below 2, while for n>=1 the shifted value exceeds 2, and for n<=-1 it
 is negative. A separately fitted energy zero for each m is outside the
-common literal reading; a universal zero is fixed by the massless branch.
+common literal reading. The declared convention E_phase=A omega sets
+E_massless(0)=0 and excludes a universal additive offset; the massless
+speed by itself fixes only A/B, not the energy zero.
 
 ### B3. A positive exact shell and drift relation
 
