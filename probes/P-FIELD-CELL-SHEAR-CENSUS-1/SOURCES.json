@@ -1,0 +1,170 @@
+{
+  "basis_commit": "a632c6a162dc87e60104d7a478e7650a6d5c4a1b",
+  "content_commit": "b04e22dd3ed8e4240cff347364f24670d4183a4d",
+  "repository": "https://github.com/mathorn1973/twist-j",
+  "license": "Apache-2.0",
+  "dispatch": {
+    "issue": 1548,
+    "bytes": 13858,
+    "sha256": "c209686fede612501394f969d5052518d35c95be0523c9e22619cbd19984fd87"
+  },
+  "files": [
+    {
+      "path": "canon/CANON.md",
+      "sha256": "c0657380438c965f9556b5b298a34a5e799c48a68ce66e9fe51786ce2413d7d1",
+      "bytes": 1024033,
+      "role": "allowed canonical scientific input"
+    },
+    {
+      "path": "canon/CORE.md",
+      "sha256": "6e8ec0b03907d973ee22d749965b687c03cf28c26817f26bcfc8f0d3d015bbed",
+      "bytes": 29518,
+      "role": "allowed canonical scientific input"
+    },
+    {
+      "path": "canon/FRONTIER.md",
+      "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+      "bytes": 27382,
+      "role": "allowed canonical scientific input"
+    },
+    {
+      "path": "canon/REGISTRY.tsv",
+      "sha256": "757fd6a5fbaab9066e114e780b9813862c859da82663e9672cf62a77f8dae4b4",
+      "bytes": 525398,
+      "role": "allowed canonical scientific input"
+    },
+    {
+      "path": "canon/CHANGELOG.md",
+      "sha256": "d8db1686e4d8b986b78fa34b0de7bd34058be26673adf9dc0b9ffe537feb16ef",
+      "bytes": 205609,
+      "role": "allowed canonical scientific input"
+    }
+  ],
+  "reviewer_pre_pin_allowed": [
+    "PREREG.md",
+    "SOURCES.json",
+    "released issue1548",
+    "canon/CANON.md",
+    "canon/CORE.md",
+    "canon/FRONTIER.md",
+    "canon/REGISTRY.tsv",
+    "canon/CHANGELOG.md"
+  ],
+  "reviewer_pre_pin_forbidden": [
+    "author PROOF.md",
+    "author LINEAGE.md",
+    "author verify.py",
+    "author EXPECTED.txt",
+    "author RUN.md",
+    "author RESULT.md",
+    "diffs exposing those author files"
+  ],
+  "runtime_dependencies": "Python standard library only; no imported historical verifier",
+  "canonical_field": {
+    "source_path": "canon/CANON.md",
+    "source_heading": "Shared proof 1. Complete carrier, actual charge, and energy; Shared proof 2. Exact raw split, image, and field inverse",
+    "C": [
+      [
+        1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "A_f": [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        -2,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -3,
+        1,
+        -2
+      ]
+    ],
+    "B_f": [
+      [
+        4,
+        -2,
+        2,
+        -1
+      ],
+      [
+        -2,
+        6,
+        -1,
+        3
+      ],
+      [
+        2,
+        -1,
+        2,
+        0
+      ],
+      [
+        -1,
+        3,
+        0,
+        2
+      ]
+    ]
+  },
+  "runtime_source_policy": "File hashes bind the immutable historical v102 sources for audit, not mutable future Canon bytes. The verifier reads only this frozen manifest and its minimal canonical_field matrix excerpt, so later Canon folds do not change the scientific input.",
+  "author_lineage_only_files": [
+    {
+      "path": "notes/canon/v96-fold/AUDIT_NOVELTY.md",
+      "sha256": "18e29fcef31d3bd6af0c6eca2f2bcd0bbe1472329c8228262c5dfa0b8b64ae0b",
+      "bytes": 13062,
+      "role": "author lineage audit only; not an additional RC pre-pin scientific input"
+    },
+    {
+      "path": "notes/canon/v96-fold/AUDIT_FRONTIER.md",
+      "sha256": "57e18852ee9df919e030bbbb8e996bfab2ebe40ac2e64b7040d493d416d388b3",
+      "bytes": 8387,
+      "role": "author lineage audit only; not an additional RC pre-pin scientific input"
+    },
+    {
+      "path": "notes/canon/v96-fold/NOVELTY_MAP.tsv",
+      "sha256": "485ecc5dade497d3ff431e98c8c2859ab42fa04b98b5594ace058312d9738038",
+      "bytes": 6435,
+      "role": "author lineage audit only; not an additional RC pre-pin scientific input"
+    },
+    {
+      "path": "notes/C-FIELD-J-ENERGY-READOUT-N/PROOF.md",
+      "sha256": "c7c8e196776fedb3fa5f7f8851a62591f8ae3c024bc2a7d85721772eb7a1542f",
+      "bytes": 17085,
+      "role": "author lineage audit only; not an additional RC pre-pin scientific input"
+    },
+    {
+      "path": "notes/C-FIELD-J-ENERGY-READOUT-REVIEW-N/DERIVATION.md",
+      "sha256": "6b4f080e94a5c68dddc4fd20282f8388b82a86b71938d4c08a40bec4c57963e6",
+      "bytes": 10777,
+      "role": "author lineage audit only; not an additional RC pre-pin scientific input"
+    }
+  ]
+}
