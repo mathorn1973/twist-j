@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v102
+# TWIST-J Public Canon v103
 
-**Release identity.** Public Canon v102. Normative authority and activation
+**Release identity.** Public Canon v103. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -20,7 +20,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v102 also declares the discrete architecture used to read
+only. Public Canon v103 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -33,7 +33,7 @@ calibration anchor remains the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v102 does not claim
+seed of the two algebraic projections. Public Canon v103 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -138,7 +138,7 @@ calibration anchor      m_e only
 This is a definition boundary, not an omitted reduction theorem. Every
 downstream statement is conditional on the declared architecture.
 Restoring a stronger compression slogan requires a public theorem
-deriving the architecture from J; Public Canon v102 contains no such
+deriving the architecture from J; Public Canon v103 contains no such
 theorem.
 
 ---
@@ -11009,6 +11009,631 @@ disjoint-subsystem transfer, native implementation of the observation,
 energy funding, physical occurrence, indefinite renewal or an L2-L6 lift.
 The exact checkpoint resets do not reset the counter or constitute repeated
 operation of a physically closed apparatus.
+
+### U-FIELD-RESIDUE-GATE [T]
+
+at L1 for the literal native checkpoint x=(a,b,c,d,q,r), h=(b+2a,d+2c), piston swap W and canonical integer field L,H: h=0 iff W pi_P(x) lies in G_L={(3s,s,3t,t)} iff every integer representative lies in LZ^4; K={(a,3a,c,3c)} and G_L are distinct 25-point marked subspaces, and the checkpoint gate has 625 points; the displayed generator formulas give no autonomous h-only law for g0, while gate and complement persist on X14 for every future driver word; each fixed selected step maps the 250 gated X14 points two to one onto its 125-point target sheet; the origin-zero orbit is gated at every boundary and has r3=1; H(Wy)-H(y)=a^2-b^2+ac-bd, so W is not an isometry with the field marking held fixed; this identifies a predicate, not a chosen lift, ready state, source or physical decoder.
+
+#### Carriers and exact comparison
+
+All native arithmetic is in `F5`. A checkpoint is
+`x=(a,b,c,d,q,r)`, its piston projection is `pi_P(x)=(a,b,c,d)`, and
+`z=a+b+c+d+q+r`. The trace is a function, not an additional register.
+At counter origin zero,
+
+```text
+g0(x) = (b,a,d,c,q,r)
+g1(x) = (-c,-d,-a,-b,-q,-r)
+g2(x) = (2-c,1-d+r,2-a,1-b-r,1-q,-r)
+g3(x) = (2-a,1-b,3-c,4-d,1-q,1-r)
+g4(x) = (2-a,1-b,3-c,4-d,2-q,1-r)
+T_t(x) = g_(z(x)+2t mod 5)(x)
+x_(n+1) = T_(theta_n)(x_n), theta_n = popcount(n) mod 2.
+```
+
+The comparison map and gate are
+
+```text
+W(a,b,c,d)=(b,a,d,c),       h(x)=(b+2a,d+2c),
+K={(a,3a,c,3c):a,c in F5}, G0=pi_P^(-1)(K),
+G_L={(3s,s,3t,t):s,t in F5}.
+```
+
+Thus `K` and `G_L` each have 25 elements, `G0` has 625 checkpoints,
+and `W(K)=G_L`. `K` and `G_L` are different marked subspaces. They
+must not both be denoted by the same unqualified kernel.
+
+Over the integers the fixed cell marking is `y=(a,b,c,d)` in `Z^4`:
+
+```text
+A_f = [[ 1, 0, 1, 0],     B_f = [[ 4,-2, 2,-1],
+       [ 0, 1, 0, 1],            [-2, 6,-1, 3],
+       [-2, 1,-1, 1],            [ 2,-1, 2, 0],
+       [ 1,-3, 1,-2]]            [-1, 3, 0, 2]]
+
+L = [[ 1,-3,-1,-2],       V_inv = [[ 1, 2, 1, 2],
+     [-3, 4,-2, 1],                [ 2,-1, 2,-1],
+     [ 0, 5, 1, 2],                [ 0,-5, 1,-3],
+     [ 5,-5, 2,-1]]                [-5, 5,-3, 4]]
+
+H(y)=y^t B_f y/2
+    =2a^2-2ab+3b^2+c^2+d^2+2ac-ad-bc+3bd.
+```
+
+These are the literal cell coordinates of
+DEF-FIELD-WORK-RECORD-CHAIN. The identities proved in its Shared proof 2
+are
+
+```text
+A_f^5=I, sum_(j=0)^4 A_f^j=0, H(A_f y)=H(y),
+L=(I-A_f)(I-A_f^2), det L=25, L^2=5A_f^3,
+V_inv=A_f^2 L, V_inv L=L V_inv=5I,
+L^t B_f L=5B_f, H(Lu)=5H(u).
+```
+
+`H` is a positive definite integer-valued form on `Z^4`. Its use here
+is mathematical; a physical preparation or actuation does not follow
+from a value of this form. The inherited image criterion is
+
+```text
+y in L Z^4  iff  y0+2y1 = y2+2y3 = 0 (mod 5).
+```
+
+Consequently, for every checkpoint `x`,
+
+```text
+h(x)=0
+  iff W pi_P(x) in G_L
+  iff every integer representative of W pi_P(x) belongs to L Z^4.
+```
+
+The final universal quantifier is justified because membership in `LZ^4`
+depends only on the residue. A residue outside `G_L` has no representative
+in `LZ^4`; for a residue in `G_L`, every integer representative belongs
+to `LZ^4`. Their integer energies can differ.
+This is an exact predicate comparison; it chooses neither a lift nor a decoder.
+
+#### Restricted gate permanence and the zero orbit
+
+Let `J2(h1,h2)=(h2,h1)`. Direct substitution in the native generators gives
+
+```text
+h(g0 x)=2h(x)+2(a,c),
+h(g1 x)=-J2 h(x),
+h(g2 x)=-J2 h(x)+(r,-r),
+h(g3 x)=h(g4 x)=-h(x).
+```
+
+There is no autonomous `h`-only law for `g0`: for each piston pair the
+map `(a,b)->(2a+b,a+2b)` has determinant 3 in `F5`. Thus
+`p -> (h(p),h(g0 p))` is bijective on `F5^4`.
+
+Write `X_s={x:z(x)=s}` and `X14=X_1 union X_4`. Selection on `X14`
+uses only `g1,g3,g4`, so it preserves both zero and nonzero `h`, for
+either driver bit and any future bit word. This is also a consequence
+of U-NATIVE-INVARIANT-AND-NOWRITE.
+It does not state global bijectivity or pointwise fixation. In fact,
+
+```text
+T_t(G0 intersect X14)=G0 intersect X_(4+2t mod 5).
+```
+
+The domain has 250 points and the image 125; each target has two
+preimages there. Each branch is an involution from its 125-point gated input sheet onto
+the indicated target sheet: `g1` exchanges traces 1 and 4, `g3` fixes
+trace 1, and `g4` fixes trace 4. For bit zero the branches are `g1,g4`;
+for bit one they are `g3,g1`. The two source sheets are disjoint, which
+proves the exact two-to-one count. Preserved gate membership along
+trajectories does not make a fixed selected step a permutation of all
+250 gated points.
+
+For the actual zero start the first bits are `0,1,1`, and direct calculation gives
+
+```text
+x0=x1=(0,0,0,0,0,0),
+x2=(2,1,2,1,1,0),
+x3=(0,0,1,3,1,1).
+```
+
+All four checkpoints have `h=0`, and `x3 in X_1`. The induction above
+therefore proves gate membership for every `n>=0`. In particular `r3=1`;
+no all-time `r=0` condition is involved. The three-step synchronization in
+U-NATIVE-CHART-AND-QDD-READBACK sends each initial sheet bijectively onto
+`X_1`, so
+exactly 625 initial checkpoints are gated from boundary 3 onward. Only
+125 gated targets in `X_1` are reached at that boundary, not all 250
+points in `G0 intersect X14`. These counts do not define readiness.
+
+#### The marked metric
+
+The non-isometric role of `W` is explicit. Over `Z^4`, direct expansion
+gives
+
+```text
+H(Wy)-H(y)=a^2-b^2+ac-bd.
+```
+
+For `e0`, energies are 2 and 3. A simultaneous passive coordinate change
+also transforms `B_f` to `W^t B_f W` and operators to `W^-1 A_f W`
+and `W^-1 L W`. That preserves the underlying equations in new markings.
+Applying `W` as a state operation while retaining the old form and
+operator is a different action and does not inherit that equivalence.
+
+### FIELD-UNIT-RESIDUE-CLASSIFICATION [T]
+
+at L1 for the displayed canonical integer matrices A_f,L and positive integer form H, the map pi_L(u)=Lu mod5 bijects the complete twenty-element H(u)=1 shell with G_L minus its A_f-fixed subgroup {(3s,s,0,0)}; the exact integer kernel is LZ^4, and all five fixed residues have no unit preimage although every residue in G_L has integer shell representatives; the full square-fiber count, kernel-energy argument and fixed-subgroup exclusion are exact proofs, with no uniform higher-shell minimum, physical unit preparation or source selection asserted.
+
+Here a **unit seed** means exactly `u in Z^4` with `H(u)=1`. It does
+not mean the full multiplicative unit group of an algebraic number ring.
+Let `U1={u:H(u)=1}` and `pi_L(u)=Lu mod 5`.
+
+#### Complete analytic count of the unit shell
+
+Completing squares gives
+
+```text
+4H = Q(a,b) + (2c+2a-b)^2 + (2d-a+3b)^2,
+Q(a,b)=3a^2+2ab+2b^2,
+2Q=5a^2+(a+2b)^2,       3Q=5b^2+(3a+b)^2.
+```
+
+At `H=1`, `Q<=4`, so `|a|,|b|<=1`. The complete two-square fibers,
+with the parities imposed by their displayed linear forms, give:
+
+| Pairs `(a,b)` | `Q` | Number of `(c,d)` per `(a,b)` | Total |
+|---|---:|---:|---:|
+| `(0,0)` | 0 | 4 | 4 |
+| `(0,1),(0,-1)` | 2 | 4 | 8 |
+| `(1,0),(-1,0)` | 3 | 2 | 4 |
+| `(1,-1),(-1,1)` | 3 | 2 | 4 |
+| `(1,1),(-1,-1)` | 7 | 0 | 0 |
+
+Writing `s1=2c+2a-b`, `s2=2d-a+3b`, each permitted square pair gives
+exactly one integer pair `c=(s1-2a+b)/2`, `d=(s2+a-3b)/2`.
+For example the first fiber is `c^2+d^2=1`; the next has two odd
+squares summing to 2; each `Q=3` fiber has one even and one odd square
+summing to 1. This exhausts the nine possible `(a,b)` pairs and proves
+`|U1|=20` without an empirical box assumption. This is the complete integer shell, with no empirical box assumption.
+
+#### Kernel, injectivity and the five missing residues
+
+The displayed `L mod 5` has rank two and image `G_L`. Its integer-domain
+kernel has the stronger exact description
+
+```text
+ker(pi_L)=L Z^4.
+```
+
+Indeed, if `Lu=5v`, then `u=V_inv v=A_f^2 L v=L A_f^2 v`.
+Conversely `L(Lv)=5A_f^3 v` has zero residue. Every nonzero kernel
+vector therefore has energy a positive multiple of five.
+
+If two unit seeds have the same image residue, their difference is in
+this kernel. Cauchy-Schwarz for the positive form gives
+
+```text
+0 <= H(u-v) <= (sqrt(H(u))+sqrt(H(v)))^2 = 4.
+```
+
+A multiple of five in this interval is zero, so `u=v`. Thus `pi_L`
+is injective on the entire unit shell.
+
+On `G_L`, `A_f` acts in the `(s,t)` coordinates by
+`(s,t)->(s+t,t)`. Its fixed subgroup is
+
+```text
+G_L^(A_f)={(3s,s,0,0):s in F5}
+          ={(0,0,0,0),(1,2,0,0),(2,4,0,0),
+            (3,1,0,0),(4,3,0,0)}.
+```
+
+No unit can map to this subgroup. Such a unit would have
+`pi_L(A_f u-u)=0`; the same energy bound gives `A_f u=u`.
+Then `0=sum_(j=0)^4 A_f^j u=5u`, hence `u=0`, a contradiction.
+There are exactly 20 other residues, so injectivity and the complete
+unit count prove the bijection
+
+```text
+pi_L: U1 -> G_L minus G_L^(A_f).
+```
+
+This is the exact `20+5` classification. A missing unit preimage
+does not mean a missing integer shell lift. No optional claim about
+the higher-shell minima of these five residues is used.
+
+### FIELD-NATIVE-BOUNDARY-THREE-MINIMUM [T]
+
+at L1 for the unchanged origin-zero native orbit and the fixed W,L,H comparison, the entire infinite coset {y in LZ^4:y mod5=W pi_P(x3)=(0,0,3,1)} has minimum H(y)=5 attained uniquely at y=(0,0,-2,1), with integer preimage (0,-1,-1,2) of energy one; this is mathematical compatibility at one named boundary, not native production, physical selection, energy funding or a complete prepared source.
+
+For the zero orbit,
+
+```text
+rho3=W pi_P(x3)=(0,0,3,1),
+u*=(0,-1,-1,2),        y*=Lu*=(0,0,-2,1).
+```
+
+Correct substitution in the literal form gives
+`H(u*)=3+1+4-1-6=1`, so `H(y*)=5`. Here the negative cross terms are `-bc=-1` and `3bd=-6`.
+
+Let `y in L Z^4` have residue `rho3`. It has a unique integer preimage
+`u=V_inv y/5`. Since the residue is nonzero, `u!=0`, whence the positive
+integer form has `H(u)>=1` and `H(y)=5H(u)>=5`. Equality requires a
+unit seed of residue `rho3`; the preceding injectivity forces `u=u*`.
+Therefore
+
+```text
+min {H(y): y in L Z^4, y mod 5=(0,0,3,1)} = 5,
+argmin = {(0,0,-2,1)}.
+```
+
+This conclusion is over the whole infinite coset. It establishes an
+available integer field representative of minimum energy at one named native
+boundary, not that U creates it or that a physical process selects it.
+
+### U-NATIVE-UNIT-LIFT-OBSTRUCTION [T]
+
+at L1 on the unchanged origin-zero native orbit with theta_n=popcount(n) mod2 and the fixed comparison Lu_n mod5=W pi_P(x_n), there is no sequence of energy-one integer seeds satisfying the comparison at every n>=3, even with unrestricted pointwise choices: x4=(4,2,0,0,4,4) has residue (2,4,0,0) in the subgroup with no unit preimage; equivalently no all-n>=3 sequence of L-image representatives has energy five throughout; higher-energy lifts, different comparison maps and eventual unit lifts after a later cutoff remain unclassified, and no boundary-four minimum is asserted.
+
+At boundary 3, `theta3=popcount(3) mod 2=0` and `z3=1`, so the step
+from 3 to 4 uses `g1`. Therefore
+
+```text
+x4=g1(x3)=(4,2,0,0,4,4),
+h(x4)=(0,0),
+rho4=W pi_P(x4)=(2,4,0,0) in G_L^(A_f).
+```
+
+The exact classification proves:
+
+```text
+There is no sequence (u_n)_(n>=3) in Z^4 with
+H(u_n)=1 and Lu_n mod 5=W pi_P(x_n) for every n>=3
+on the fixed origin-zero native orbit.
+```
+
+The required `u4` does not exist. This excludes even a freely chosen
+sequence; no causality, locality, selection algorithm or evolution law for
+the seeds needs to be assumed. Equivalently no sequence of `L`-image
+representatives all having energy 5 satisfies that same all-`n>=3` contract.
+
+The assertion uses only the exact unit-residue classification and the
+displayed native step. It does not exclude higher-energy lifts,
+different comparison maps, or an eventual unit lift after a later cutoff.
+It states no exact minimum at boundary 4. The all-time gate theorem and
+the boundary-3 minimum remain true.
+
+### U-PREPARED-FAMILY-SHELL-GATES [T]
+
+at L1 for the unchanged displayed native preparation families and h=(b+2a,d+2c): the complete original two-message support has 550 checkpoints and none is gated; the alternative support has 150 and exactly one gated point (2,1,2,1,1,3), at boundary one for (lambda,mu)=(2,0), which leaves next step; occupied one-shot x_lambda(0)=(lambda,0,-lambda,0,0,0) is gated at every actual time iff lambda=0, with coefficients 2 at boundary zero, 1 at boundaries one and two, and -2Bz only on the ready tail; precisely twenty of the hundred ready-graph points have zero payload, without a full-visitation claim; the distinct absence preparation never passes; occupied zero is already gated while its reader is BLANK, so this gate is neither readiness nor a message decoder.
+
+Use the affine chart
+
+```text
+A=a+c, B=b+d, C=a-c-2, D=b-d-1.
+h1=A+3B+C+3D,       h2=A+3B-C-3D,
+h1+h2=2A+B,        h1-h2=2C+D.
+```
+
+Thus `h=0` is equivalent to both `B=3A` and `D=3C`. Both conditions are required; `2A+B` is the sum `h1+h2`, not `h1` alone.
+
+#### Original two-message preparation
+
+For every `(lambda,mu) in F5^2`, define the original initial state by
+`(A,B,C,D,q,r)=(1,0,lambda,mu,0,1)` and put `k=lambda+3mu`.
+All share `z0=2` and the prefix `g2,g2,g4`. The gate values are
+
+| Boundary | `h` | Sum |
+|---|---|---|
+| 0 and 2 | `(1+k,1-k)` | 2 |
+| 1 | `(k,3-k)` | 3 |
+| 3 | `(-1-k,-1+k)` | 3 |
+
+On the complete tail, with `s=A in {1,-1}`, the inherited parameters are
+`z,s in {1,-1}`, `q in F5`, `B=0`, `C=sz lambda`, `D=sz mu`,
+`r=z-s-q`. They give
+
+```text
+h=s(1+zk,1-zk),      h1+h2=2s != 0.
+```
+
+The complete support is the union of 25 disjoint 20-point tails and
+two 25-point prefix sheets, totaling 550. There are **zero gate points
+among all 550**, and no actual-time exception. The parameter proof uses
+the inherited full-support theorem, rather than extending a finite sample.
+Changing the integer representative of a failing residue cannot help.
+
+At each fixed common time the full piston distinguishes all 25 message
+pairs, while `h` distinguishes only the five values of `k`. This is
+compatible with the original family having semantic readback while never
+entering this shell gate. A fixed-time piston distinction is not a
+stationary piston-only decoder claim.
+
+#### Alternative preparation
+
+Put `t=3(1+mu-lambda)` and define the alternative initial state by
+`(A,B,C,D,q,r)=(mu,0,3,0,2-mu-t,t)`. Its gate values at boundaries
+`0,1,2,3` are respectively
+
+```text
+(mu+3,mu-3),
+(-mu+3+t,-mu-3-t),
+(mu+3,mu-3),
+(-mu+2,-mu-2).
+```
+
+Only boundary 1 can pass: the sum forces `mu=0`, then `t=2` and
+`lambda=2`. Its checkpoint is `(2,1,2,1,1,3)`. The complete tail has
+`C in {2,3}`, `z in {1,4}`, `B=D=0`, `A=2Cz mu`; hence
+`h=C(2z mu+1,2z mu-1)` is never zero. The inherited full support has
+150 points: 100 tail points and two 25-point prefix sheets. Its only
+gate point is this transient boundary-1 state, which leaves the gate
+at the next step.
+
+The initial controls are
+`q0=3lambda+mu+4`, `r0=2lambda+3mu+3`. Their linear determinant is
+2 in `F5`. The common selected word acts invertibly on these controls,
+so `(q_n,r_n)` distinguishes all 25 pairs at each fixed common time.
+Both labels were already prepared in the source port. This is not proof
+of native loading into a previously common receiver or of accepted contact.
+
+#### One-shot occupied states and absence
+
+For occupied payload `lambda`, let
+`x_lambda(0)=(lambda,0,-lambda,0,0,0)`. The prefix and ready-tail formulas are
+
+```text
+n=0:   h=(2lambda,-2lambda),
+n=1,2: h=(lambda,-lambda),
+n>=3:  h=(-2Bz lambda,2Bz lambda),
+       B in {2,3}, z in {1,4}, -2Bz in {1,-1}.
+```
+
+All displayed coefficients are nonzero. Thus at every actual time the
+gate passes exactly for occupied `lambda=0`. The last formula belongs
+only to the ready tail, not to the prefix. For completeness, the tail
+graph is parametrized by `B,z` as above and `D,r in F5`, with
+
+```text
+a=1+B+2Bz, c=-1+B-2Bz,
+b=3(B+D+1), d=3(B-D-1), q=z-3B-r,
+lambda=3-BzD.
+```
+
+On this 100-state graph the gate selects the 20 states with zero
+payload. This is a graph count, not an assertion that one actual orbit
+visits all 100 states.
+
+The distinct absence preparation is `x_empty(0)=(0,0,1,0,0,0)`.
+Its invariant parametrization gives `h=s(1-z,1+z)` with `s in {1,-1}`,
+so its sum never vanishes and absence never passes the gate. The registered
+reader remains BLANK on absence; on occupied inputs it is BLANK through
+boundary 2 and PRESENT(lambda) from boundary 3. In particular occupied
+zero passes the gate while the reader is still BLANK. Gate membership is
+therefore not readiness, and PRESENT(0) is not absence.
+
+The five occupied `(q,r)` histories are identical. Absence has a different
+prefix: at boundary 2 its controls are `(0,0)` instead of occupied
+`(1,0)`. At boundary 3 the quotients agree and later controls agree, but
+this does not erase an earlier receiver record. No whole-history blindness
+theorem between occupied zero and absence is inferred.
+
+### U-CONTACT-SOURCE-NONINTERFERENCE [T]
+
+at L1 for the unchanged rational source a_contact(q,r)=S(ell(q)/2,(ell(r)+1)/2,0,0), common complete initial receiver and common source-independent deterministic protocol, equal native (z,q,r) histories imply identical full receiver histories, including wave and tape updates, resource guards, refusals, store, ledger, pointer and protocol state; this applies across all original two-message preparations and among the five occupied one-shot payloads, including common adaptation using only receiver history; the alternative preparation already puts both labels injectively in its initial q,r, and the absence prefix differs before later quotient coincidence, so neither is covered by the asserted whole-history equality; an extra message-dependent input changes the premise, and no universal no-transmission or physical apparatus conclusion follows.
+
+The native quotient `Q(x)=(z,q,r)` has generator restrictions
+
+```text
+(z,q,r), (-z,-q,-r), (2-z,1-q,-r),
+(2-z,1-q,1-r), (3-z,2-q,1-r).
+```
+
+Selection uses only `z` and the common driver bit. All original
+two-message preparations begin at `Q=(2,0,1)`. Induction proves that
+their entire quotient and `(q,r)` histories coincide at every common
+time. This does not assume global invertibility of the selected map.
+
+Let the balanced section be `ell(0)=0`, `ell(1)=1`, `ell(2)=2`,
+`ell(3)=-2`, `ell(4)=-1`. The supplied rational source is
+
+```text
+eta(q,r)=(ell(q)/2,(ell(r)+1)/2,0,0),
+a_contact(q,r)=S eta(q,r).
+```
+
+The canonical `S:Q^4 -> Q^D` on the 705-site carrier is injective:
+`(Sv)(y_i)-(Sv)(y_4)=v_i` for `i=0,...,3`. Consequently equal source
+vectors are equivalent to equal control pairs, not merely equal energy.
+The original family's source histories are identical.
+
+Take a common initial **complete receiver** `Y`: both wave vectors, all
+four tape slots, pointer, store, work ledger, direction, schedule state
+and fixed budget. Assume the same protocol chooses the same native times
+and operations for every message preparation. At a deterministic wave/tape
+step, equal `Y` gives equal new `Y`. At a contact invocation, equal `Y`
+and equal source give equal energy change, equal acceptance or refusal,
+equal resource/ledger updates and equal new `Y`. Induction proves equality
+of the entire receiver histories and of every fixed receiver readout.
+
+The argument also covers a common adaptive controller using only the
+identical receiver history. A message-dependent waiting rule, source
+retuning or external controller input changes the premises. No such
+additional input or native compilation is provided by this theorem.
+
+The same argument applies among the five occupied one-shot payloads,
+whose initial quotient is common. Their native receiver can nevertheless
+read the payload because it also accesses memory pistons `b,d`. The
+alternative two-message family fails the common-source premise because
+its initial `(q,r)` already encodes both labels. Pair-sensitive input is
+necessary here, but does not prove funded receiver separation: contacts
+can be refused and a readout can discard information.
+
+This is a scoped deterministic noninterference theorem for a specified
+port, preparation family and complete protocol. It is not a universal
+no-transmission theorem.
+
+#### The integer and rational constructions remain separately typed
+
+| Map or object | Exact type and equality | What is still missing |
+|---|---|---|
+| Native evolution | `(n,x)` in `N0 x F5^6`; literal counter and checkpoint | Repeated checkpoint does not reset the counter. |
+| Piston comparison | `x -> W pi_P(x)` in `F5^4` | It forgets controls and does not provide actuation. |
+| Balanced section | `ell^4:F5^4 -> Z^4` | It is a chosen representative, not an additive field embedding or an energy-selection law. |
+| Shell admission | `y in LZ^4`; unique `V_inv y/5` in `Z^4` | It leaves the rest of a physical source unspecified. |
+| Raw field split | `Z^4 x Z^2 -> Z^6`, the separate index-five split lattice | It is not the index-25 shell criterion. |
+| Integer source and chain | A complete 31-coordinate source cell; chain `X_N` has `32N-1` coordinates, or `32N` with pointer | Matter, spectators, static field, resources, channels and timing are not encoded by one four-vector. |
+| Rational contact source | Separate fork `x -> (q,r) -> eta -> S eta` | No full integer-chain-to-rational-carrier map is supplied. |
+| Funded receiver | Full wave/tape/store/ledger/pointer state with retained controls | Equal source and equal full state, not projected equality alone, determine the guard. |
+| Semantic reading | A frozen family, context, raw projection and decoder | Different BLANK/PRESENT contracts cannot be identified by checkpoint coincidence. |
+
+### FIELD-FIVE-CELL-SHEAR-COMPARISON [T]
+
+at L1 for exactly the five displayed unweighted incidence cells with Grams (2), (3), [[2,1],[1,2]], [[2,1],[1,3]], [[3,1],[1,3]] and the electric-first shear A_G=[[I,I],[-G,I-G]]: their exact active and raw matrix orders are 4,3,6,5,infinite; the first four conserved forms H_G are positive definite and the last is positive semidefinite with nullity one, with the explicit nonzero Jordan chain proving infinite order; whole-edge and whole-face reversals give integral conjugacies, the mixed-cell face reversal gives the canonical A_f, and raw active/static splitting is rational rather than a direct integral splitting; this finite five-cell comparison supplies no universal cell minimality, individual-state period, physical cell selection or unique order-five selection.
+
+The graph boundary convention is +1 at the tail and -1 at the head.
+Every listed edge is distinct, including parallel edges. Digons are
+attached two-dimensional CW cells with two parallel boundary edges.
+With rows ordered by edges, the five incidence representatives are
+
+```text
+G2:  edges ((0,1),(0,1)); face e0-e1;
+     C=[[1],[-1]],                         G=[[2]].
+G3:  edges ((0,1),(1,2),(2,0)); face e0+e1+e2;
+     C=[[1],[1],[1]],                      G=[[3]].
+G22: edges ((0,1),(0,1),(0,1)); faces e0-e1,e0-e2;
+     C=[[1,1],[-1,0],[0,-1]],             G=[[2,1],[1,2]].
+G23: edges ((0,1),(0,1),(0,2),(2,1)); faces e0-e1,e0-e2-e3;
+     C=[[1,1],[-1,0],[0,-1],[0,-1]],       G=[[2,1],[1,3]].
+G33: edges ((0,1),(1,2),(2,0),(1,3),(3,0));
+     faces e0+e1+e2,e0+e3+e4;
+     C=[[1,1],[1,0],[1,0],[0,1],[0,1]],   G=[[3,1],[1,3]].
+```
+
+Each face boundary telescopes around its closed path, so `DC=0` for
+its actual vertex-edge boundary D. The squared column lengths and
+single common edge give `G=C^t C` as displayed. The Gram determinants
+are 2,3,3,5,8, so every C has independent columns. For m edges and k
+faces the raw integer carrier and active integer subcarrier are
+
+```text
+(E,M) in Z^m x Z^k,
+T_C(E,M)=(E+CM,M-C^t(E+CM)),
+E=Cz, (z,M) in Z^(2k),
+A_G=[[I,I],[-G,I-G]],
+A_G^-1=[[I-G,-I],[G,I]].
+```
+
+The inverse follows by solving `M=M'+Gz'`, `z=z'-M`. It is integral.
+Substitution gives `T_C diag(C,I)=diag(C,I) A_G`. Every raw electric
+vector has the unique rational decomposition
+
+```text
+z=G^-1 C^t E,    E_perp=E-Cz,    C^t E_perp=0.
+```
+
+The perpendicular component is fixed, while `(z,M)` evolves by A_G.
+Thus the raw matrix is rationally similar to A_G plus an identity
+block, and has exactly the same matrix order. This does not assert a
+direct integral splitting of the raw lattice.
+
+The inherited shear energy restricted to the active carrier is
+
+```text
+H_G(z,M)=z^t Gz+M^t M+z^t GM
+       =||M+Gz/2||^2+z^t(G-G^2/4)z.
+```
+
+For a direct conservation check, put `t=z+M`. Substituting
+`(z',M')=(t,M-Gt)` gives
+`H_G(z',M')=t^t Gt+M^t M-M^t Gt=H_G(z,M)`.
+As G is real symmetric, diagonalizing G changes A_G into a direct sum
+of two-by-two blocks `[[1,1],[-g,1-g]]`. Each has characteristic
+polynomial `X^2+(g-2)X+1`. Therefore
+
+```text
+chi_(A_G)(X)=det(X^2 I+(G-2I)X+I).
+```
+
+The following table and its order certificates are exact:
+
+| Gram | Gram eigenvalues | Characteristic polynomial of A_G | Matrix order |
+|---|---|---|---:|
+| `(2)` | 2 | `X^2+1` | 4 |
+| `(3)` | 3 | `X^2+X+1` | 3 |
+| `[[2,1],[1,2]]` | 1,3 | `X^4+X^2+1` | 6 |
+| `[[2,1],[1,3]]` | `(5-sqrt(5))/2,(5+sqrt(5))/2` | `X^4+X^3+X^2+X+1` | 5 |
+| `[[3,1],[1,3]]` | 2,4 | `(X^2+1)(X+1)^2` | infinite |
+
+For g=2, Cayley-Hamilton gives the block square `-I`, hence exact
+order four. For g=3 the block satisfies `A^2+A+I=0`, is not I, and
+has exact order three. The g=1 block has `A^2-A+I=0`, so `A^3=-I`;
+its eigenvalues are primitive sixth roots, giving exact order six.
+The two-digon sum of the g=1 and g=3 blocks consequently has order
+six. For the mixed cell the displayed characteristic polynomial is
+`Phi_5`; Cayley-Hamilton gives `A_G^5=I`, and its nonzero upper-right
+identity block excludes `A_G=I`, so the order is exactly five.
+
+For the last cell put
+
+```text
+v=(1,1,-2,-2),       w=(0,0,1,1).
+(A_G+I)v=0,         (A_G+I)w=v!=0.
+```
+
+The restriction to their span is `-I+N` with `N^2=0`, `Nw=v`.
+The binomial identity, also valid for inverse powers of this invertible
+restriction, gives `A_G^n w=(-1)^n(w-nv)` for every integer n.
+No positive n gives the identity, proving infinite order without a
+finite-return search.
+
+All Gram eigenvalues in the first four rows lie strictly between zero
+and four. The displayed square completion therefore proves positive
+definiteness. In the last row the eigenvalues are 2 and 4, so the
+residual form is positive semidefinite with one-dimensional kernel;
+the full energy has nullity one, represented by v. Matrix order is
+not the period of every individual state or of an arbitrary coupled
+chain. Positivity alone does not select order five: the other three
+finite-order rows are also positive definite.
+
+For diagonal sign matrices R on edges and S on faces, whole-edge and
+whole-face reversals have
+
+```text
+D_new=DR, C_new=RCS, G_new=SGS,
+T_(C_new)=diag(R,S) T_C diag(R,S),
+A_(G_new)=diag(S,S) A_G diag(S,S).
+```
+
+These integral conjugacies preserve order and the correspondingly
+transformed energy. An edge reversal changes a complete incidence row
+and the matching boundary column; a face reversal changes a complete
+incidence column. A lone coefficient flip is not an admitted
+reorientation. In the mixed cell, `S=diag(1,-1)` gives
+`G_new=[[2,-1],[-1,3]]`, and its A_G is exactly the literal A_f above.
+The claims concern only these five unweighted cells and their allowed
+reorientations. They supply no universal cell minimality, unique
+physical cell choice or prime-five selection.
+
+#### Remaining source-access and physical scope
+
+For the unchanged original two-message family, two questions are already
+closed at their precise scope: none of its residues passes the chosen
+shell gate, and the unchanged `(q,r)` source gives identical complete
+receiver histories under a common receiver/protocol. Selecting another
+representative of the same residue or another receiver decoder cannot
+repair those obstructions.
+
+A positive interface proposal must first state a permitted
+**message-sensitive source-access map** on a complete declared preparation
+family. It must freeze the complete receiver, common initial conditions,
+readout context and equality, funding, timing, allowed controller inputs,
+and a falsifier for the intended message distinction. It must say which
+current family or access restriction changes. If it includes an integer
+chain, it additionally needs a shell-admitted complete preparation and a
+typed relation to the full rational carrier. These requirements remain descriptive boundaries under the existing
+physical apparatus owners, including QDD-INSTRUMENT-APPARATUS. They
+create no additional registered obligation or gate and close no physical
+interface.
 
 ## 3. The kernel and the census
 
