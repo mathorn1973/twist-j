@@ -1,0 +1,114 @@
+== A. field algebra (inherited identities, rechecked)
+PASS  H literal polynomial == y^t B_f y/2 on grid
+PASS  A_f^5 = I
+PASS  sum_j A_f^j = 0
+PASS  A_f^t B_f A_f = B_f (H invariant)
+PASS  L = (I-A_f)(I-A_f^2)
+PASS  det L = 25
+PASS  L^2 = 5 A_f^3
+PASS  V_inv = A_f^2 L
+PASS  V_inv L = L V_inv = 5I
+PASS  L^t B_f L = 5 B_f
+PASS  B_f positive definite (Sylvester, exact)
+PASS  H(Lu) = 5 H(u) on grid
+PASS  |G_L| = |K| = 25
+PASS  image of L mod 5 == criterion set == G_L
+PASS  W(K) = G_L
+PASS  K != G_L as sets  [|K cap G_L|=1]
+PASS  ker(L mod 5) == G_L (so ker pi_L = L Z^4)
+PASS  A_f acts on G_L by (s,t)->(s+t,t)
+PASS  A_f-fixed subgroup of G_L = {(3s,s,0,0)}  [[(0, 0, 0, 0), (1, 2, 0, 0), (2, 4, 0, 0), (3, 1, 0, 0), (4, 3, 0, 0)]]
+== B. unit shell H=1
+PASS  4H = Q + (2c+2a-b)^2 + (2d-a+3b)^2 identically
+PASS  2Q = 5a^2 + (a+2b)^2 ; 3Q = 5b^2 + (3a+b)^2
+PASS  4H = (2a-2b+c-d)^2+(2a+c)^2+2(2b+d)^2+c^2+(c+d)^2 identically
+PASS  |U1| = 20 (box +-6, both derived boxes inside)  [20]
+PASS  all units satisfy |a|,|b|<=1,|c|<=2,|d|<=3 and |a|,|b|,|c|<=2,|d|<=4
+PASS  fibers 4+8+4+4, none at +-(1,1)  [[((-1, 0), 2), ((-1, 1), 2), ((0, -1), 4), ((0, 0), 4), ((0, 1), 4), ((1, -1), 2), ((1, 0), 2)]]
+PASS  no nonzero u in box with H(u) <= 0
+== C. residue classification 20 + 5
+PASS  pi_L injective on U1
+PASS  image(pi_L) subset G_L
+PASS  image(pi_L) == G_L minus fixed subgroup
+PASS  no unit hits any of the five fixed residues (brute)
+PASS  u-v (distinct units) never in L Z^4
+PASS  A_f u - u never in L Z^4 for a unit
+== D. native dynamics
+PASS  each g_j is an involution on F5^6
+PASS  h(g0 x) = 2h(x) + 2(a,c)
+PASS  h(g1 x) = -J2 h(x)
+PASS  h(g2 x) = -J2 h(x) + (r,-r)
+PASS  h(g3 x) = h(g4 x) = -h(x)
+PASS  no h-only law for g0 (some h value has >1 successor)
+PASS  p -> (h(p), h(g0 p)) bijective on F5^4
+PASS  |G0| = 625 and G0 = pi_P^-1(K)
+PASS  h(x)=0 iff W pi_P(x) in G_L (gate-to-shell bridge)
+PASS  |X14| = 6250
+PASS  selection on X14 uses only g1,g3,g4
+PASS  |G0 cap X14| = 250
+PASS  T_0(G0 cap X14) = G0 cap X_4, |image|=125, each 2 preimages
+PASS  T_0 fixes exactly one point of G0 cap X14  [[(1, 3, 4, 2, 1, 3)]]
+PASS  T_0 preserves zero and nonzero h on X14
+PASS  T_1(G0 cap X14) = G0 cap X_1, |image|=125, each 2 preimages
+PASS  T_1 fixes exactly one point of G0 cap X14  [[(1, 3, 4, 2, 3, 3)]]
+PASS  T_1 preserves zero and nonzero h on X14
+PASS  x0=x1=0, x2=(2,1,2,1,1,0), x3=(0,0,1,3,1,1)  [[(0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0), (2, 1, 2, 1, 1, 0), (0, 0, 1, 3, 1, 1), (4, 2, 0, 0, 4, 4)]]
+PASS  x4 = (4,2,0,0,4,4) via g1 (theta3=0, z3=1)
+PASS  h(x_n) = 0 for all n <= 2^16 on zero orbit (finite witness)
+PASS  x_n in X14 for all 3 <= n <= 2^16
+PASS  rho3 = (0,0,3,1) in G_L minus fixed
+PASS  rho4 = (2,4,0,0) in fixed subgroup (no unit preimage)
+PASS  boundary 4 is the first n>=3 with residue in fixed subgroup  [first few: [4, 6, 10, 16, 18, 24, 28, 30], count<=2^16: 16384]
+PASS  each initial sheet X_s maps onto X_1 bijectively (3 steps, bits 0,1,1)
+PASS  625 initial checkpoints gated at boundary 3; 125 distinct gated targets
+== E. coset minimum at boundary 3
+PASS  min H over coset box = 5, unique argmin (0,0,-2,1)  [[(5, (0, 0, -2, 1)), (10, (0, 0, 3, 1)), (15, (0, -5, -2, 6))]]
+PASS  L u* = (0,0,-2,1), H(u*)=1, H(y*)=5
+PASS  V_inv y* / 5 = u* (unique integer preimage)
+PASS  u* is the unique unit with residue rho3
+PASS  RB9: displayed expansion equals 4, correct H(u*)=3+1+4-1-6=1
+PASS  RB3: (L^t L/5)[0,0] = 7 != B_f[0,0]=4
+PASS  RB8: (I+A_f)(0,0,1,0)=(1,0,0,1) with H=2, not 3
+PASS  RB1: H(e0)=2 (literal first basis vector)
+== F. W is not an isometry
+PASS  H(Wy)-H(y) = a^2-b^2+ac-bd identically
+PASS  H(e0)=2, H(W e0)=3
+== G. message families (section 4)
+PASS  chart inverse consistent
+PASS  h1+h2 = 2A+B and h1-h2 = 2C+D identically
+PASS  h1 = B+2A is FALSE in general (refuted literal clause)
+PASS  original: prefix gate values (1+k,1-k),(k,3-k),(1+k,1-k),(-1-k,-1+k)
+PASS  original: x2 = x0 (g2 involution), z0 = 2
+PASS  original: no gate point on any of 25 orbits up to n=2^13
+PASS  original: each orbit support 22 = 2 prefix + 20 tail (n<=2^13)
+PASS  original: 25 tails pairwise disjoint, total support 550
+PASS  original: tail parameters s,z in {1,-1}, B=0, C=sz lam, D=sz mu, r=z-s-q, h=s(1+zk,1-zk)
+PASS  original: all 25 quotient (z,q,r) histories identical (n<=2^13)
+PASS  original: full piston distinguishes all 25 pairs at each fixed n<64; h distinguishes exactly 5 values
+PASS  alternative: q0=3lam+mu+4, r0=2lam+3mu+3
+PASS  alternative: prefix gate values as stated
+PASS  alternative: exactly one gate point, (lam,mu)=(2,0) at n=1, checkpoint (2,1,2,1,1,3)  [[(2, 0, 1, (2, 1, 2, 1, 1, 3))]]
+PASS  alternative: support = prefix 2 + tail, x2=x0
+PASS  alternative: total support 150 = 100 tail + 50 prefix (n<=2^13)  [tail=100 supp=150]
+PASS  alternative: tail C in {2,3}, z in {1,4}, B=D=0, A=2Cz mu, h=C(2z mu+1, 2z mu-1)
+PASS  alternative: initial (q0,r0) distinguishes all 25 pairs (det 2)
+PASS  one-shot ready graph has 100 states
+PASS  one-shot graph: exactly 20 states with h=0, all with lam=3-BzD=0
+PASS  one-shot: prefix h = (2lam,-2lam),(lam,-lam),(lam,-lam); tail h=(-2Bz lam, 2Bz lam)
+PASS  one-shot: gate iff lam=0 at every n<=2^13
+PASS  one-shot: all tail states lie in the 100-state graph; payload 3-BzD reads lam
+PASS  one-shot: five occupied quotient histories identical
+PASS  absence: never passes gate, h1+h2 != 0 at every n<=2^13
+PASS  absence vs occupied: controls differ at n=2 ((0,0) vs (1,0)), agree for n>=3 (n<=2^13)  [abs q2=(1, 0, 0) occ q2=(2, 1, 0)]
+PASS  quotient restrictions (z,q,r),(-z,-q,-r),(2-z,1-q,-r),(2-z,1-q,1-r),(3-z,2-q,1-r)
+PASS  original family all start at Q=(2,0,1)
+== H. optional five-cell census (section 7)
+PASS  cell G=[[2]]: charpoly [1, 0, 1], order 4, positive definite  [got [1, 0, 1] order=4 pd=True]
+PASS  cell G=[[3]]: charpoly [1, 1, 1], order 3, positive definite  [got [1, 1, 1] order=3 pd=True]
+PASS  cell G=[[2, 1], [1, 2]]: charpoly [1, 0, 1, 0, 1], order 6, positive definite  [got [1, 0, 1, 0, 1] order=6 pd=True]
+PASS  cell G=[[2, 1], [1, 3]]: charpoly [1, 1, 1, 1, 1], order 5, positive definite  [got [1, 1, 1, 1, 1] order=5 pd=True]
+PASS  cell G=[[3, 1], [1, 3]]: charpoly (X^2+1)(X+1)^2, infinite order (cap 60), psd nullity 1  [got [1, 2, 2, 2, 1] order=None rank=3]
+PASS  Jordan chain (A+I)v=0, (A+I)w=v, A^n w = (-1)^n (w - n v) for n<12
+PASS  mixed cell face reversal G=[[2,-1],[-1,3]] gives A_G = A_f
+
+FAILS: none
