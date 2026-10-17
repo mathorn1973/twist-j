@@ -1,0 +1,63 @@
+SQRT-PHI-TIME-GRAVITY selector-free bridge audit, NON-CANONICAL
+domain n = 0..10000, branches eps = +, -; F_25 pairs a+b t, t = tau
+
+first rows (pre-update reading at checkpoint n)
+    n     s2     Y+     Y-    Th+    Th-     q+     q-   s2%2    thU
+    0      0      1      1      1      1      0      0      0      0
+    1      1     2t     3t      2      2      1      1      1      1
+    2      1     2t     3t      2      2      1      1      1      1
+    3      2      3      3      4      4      0      0      0      0
+    4      1     2t     3t      2      2      1      1      1      1
+    5      2      3      3      4      4      0      0      0      0
+    6      2      3      3      4      4      0      0      0      0
+    7      3     1t     4t      3      3      1      1      1      1
+    8      1     2t     3t      2      2      1      1      1      1
+    9      2      3      3      4      4      0      0      0      0
+   10      2      3      3      4      4      0      0      0      0
+   11      3     1t     4t      3      3      1      1      1      1
+   12      2      3      3      4      4      0      0      0      0
+   13      3     1t     4t      3      3      1      1      1      1
+   14      3     1t     4t      3      3      1      1      1      1
+   15      4      4      4      1      1      0      0      0      0
+   16      1     2t     3t      2      2      1      1      1      1
+   17      2      3      3      4      4      0      0      0      0
+   18      2      3      3      4      4      0      0      0      0
+   19      3     1t     4t      3      3      1      1      1      1
+
+failure counters: closed=0 theta_norm2=0 theta_def=0 Y2=0 Y4=0 branch_rel=0 inv_Theta=0 inv_theta=0 bridge_vs_s2=0 bridge_vs_U=0 bridge_vs_rec=0 sigma=0
+successor multiplier branch-dependent cases n=1..499: 333
+Y^+ != Y^- cases n<=10000: 5001
+E(n) not a function of Y_n, witness n pair: (0, 255)
+post-update bit != sigma bit cases n<=10000: 6668
+post-update native U first divergence at step: 0
+g^2 = 5120 + 2048 sqrt5
+
+PASS 01 FIELD   eta=tau^3=(0,2), eta^2=phi=3, order 8, N(eta)=2, -eta is the other root
+PASS 02 CLOSED  Y_n^eps (recursion) = r_eps^s_2(n), both branches
+PASS 03 NORM    x^6 = a^2 - 2b^2 on every Y_n^+
+PASS 04 THETA   Theta_n := N(Y_n) = J_lambda^s_2(n) = 2^s_2(n)
+PASS 05 LAWS    Y_n^2 = Theta_n^-1 and Y_n^4 = (-1)^theta_n, both branches
+PASS 06 BRANCH  Y_n^- = (-1)^theta_n Y_n^+
+PASS 07 INVAR   Theta_n^+ = Theta_n^- and q(Theta_n^+) = q(Theta_n^-)
+PASS 08 CLOCK   q(N(Y_n)) = s_2(n) mod 2
+PASS 09 CLOCK   q(N(Y_n)) = carry-law theta along the U orbit
+PASS 10 CLOCK   q(N(Y_n)) = odometer recursion theta
+PASS 11 SIGMA   z + 2 q(N(Y_n)) = z + 2 theta_n mod 5 for all z in F_5
+PASS 12 UNIV    on C8 every N-fibre is exactly {y,-y}; N(C8) = F_5^*; so every branch-invariant function of Y factors uniquely through Theta
+PASS 13 QHOM    q : F_5^* -> C2 is a surjective homomorphism
+PASS 14 IMAGE   s_2(n) mod 8 takes all 8 values, so the source image is all of C8
+PASS 15 TICK    Hom(C8,C5) = Hom(C4,C5) = Hom(C2,C5) = {0}; (1/5)/(1/8) = 8/5 not integer
+PASS 16 TICK    t -> 2t mod 5 is a set map {0,1} -> {0,2}, not a homomorphism C2 -> C5
+PASS 17 TICK    per U step the counter advances by 1 and the tick fraction by 1/5 independently of eps; 5 * 1/5 = 1
+PASS 18 CONV    post-update reading theta_{n+1} differs from the sigma bit at some n (pre-update is the only reading equal to sigma's bit)
+PASS 19 NATIVE  origin-zero native U driven by the bridge bit, either branch, equals the canonical orbit for 10^4 steps
+PASS 20 NATIVE  post-update driving diverges from the canonical orbit (control)
+PASS 21 GRAV    g^2 = 1024 phi^4 (3 - phi) = 5120 + 2048 sqrt5, positive (so g > 0 is the positive root)
+PASS 22 READING phi (3 - phi) = sqrt5 and g^2 = 2^10 phi^3 sqrt5 (a reading, not a derivation)
+PASS 23 GRAV    |1 - zeta_5|^2 = (1 - j)(1 - j^4) = 3 - phi exactly in Z[zeta_5]
+PASS 24 GRAV    gravity readout is the constant g^2 on the sampled domain (constancy holds by construction: the leg has no n or eps input)
+PASS 25 BREAK   bare successor multiplier is branch dependent (n = 1..499)
+PASS 26 BREAK   Y itself is branch dependent exactly when theta_n = 1
+PASS 27 BREAK   E(n) is not a function of Y_n (witness pair found)
+
+summary: 27/27 PASS
