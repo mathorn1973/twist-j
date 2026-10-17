@@ -80,9 +80,20 @@ ani datová sada nejsou převzaty.
 ## Stav ověření a zveřejnění
 
 Analytický důkaz a oddělená oponentura jsou rozlišeny v REVIEW.md.
-Připravený konečný audit audit.py nebyl spuštěn: předběhový veřejný commit
-se správnou autorskou identitou dosud nebylo možné publikovat. Není zde
-žádný výpočetní PASS, EXPECTED.txt ani dvouarchitekturní vědecká reprodukce.
-Podrobnosti a skutečné kontroly správy repozitáře uvádí CHECKS.md.
+Po výslovném schválení adresy konektoru byl zveřejněn a zpětně ověřen
+úplný předběhový commit 5389b000a6e5178ba99f45a611ebeb07e31051f8.
+Jediný předepsaný běh audit.py prošel: všech 9 072 úplných stavů s E<=6,
+252 úplných oběhů, obě složení inverze, zachování energie a přesný vztah
+a=Delta u=Delta v. Na celém konečném souboru i na dvojici připravených
+oběhů připouští rovnice pouze (kappa,beta)=(0,0). Připravené oběhy mají
+periody 4 a 124, ve shodě s dřívějším ručním výpočtem oponenta.
+
+Výpočetní rozsah má nejvýše status candidate-C; obecné analytické závěry
+mají nadále status candidate-T. Běh na x86_64 skončil kódem 0, bez stderr,
+s výsledkem AUDIT PASS. Část B je nadále analytickým důkazem, nikoli
+výsledkem tohoto programu. Přesný výstup, časy a otisky jsou v RUN.md.
+Nejde o nezávislou ani dvouarchitekturní vědeckou reprodukci. Běžné kontroly
+návrhu změn program v notes/ nespouštějí. CHECKS.md rozlišuje původní
+překážku zveřejnění, její vyřešení a skutečně provedené kontroly.
 Všechny závěry zůstávají NON-CANONICAL; žádný fyzikální nebo nativní krok
 není přijat tímto textem.

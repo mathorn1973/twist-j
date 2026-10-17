@@ -8,10 +8,13 @@ No promotion, merge or release is requested by this dossier.
 For a later mathematical admission: review the exact proof and its source
 pins, distinguish the independent analytical review from finite execution,
 and preserve the scope of the full-state F5 obstruction and the explicit
-normalized Fourier comparison. Complete the preregistered finite audit only
-after the correctly attributed source commit has been publicly read back.
-Use the applicable formal gates for any claimed computational evidence;
-ordinary notes CI does not run this audit.
+normalized Fourier comparison. The single preregistered finite audit was
+completed after readback of public source pin
+5389b000a6e5178ba99f45a611ebeb07e31051f8, using the connector email explicitly
+approved by the owner. RUN.md records its exact candidate-C result.
+Use the applicable formal gates for any later computational admission;
+ordinary notes CI does not run this audit and the local run is not an
+independent or two-architecture scientific reproduction.
 
 For a physical closure: supply an admitted common carrier and clock, a phase
 reader linked to an energy generator, a justified spatial momentum reader,
