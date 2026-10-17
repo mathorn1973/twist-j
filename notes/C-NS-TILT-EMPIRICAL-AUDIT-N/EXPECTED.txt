@@ -1,0 +1,114 @@
+{
+  "candidate_id": "C-NS-TILT-EMPIRICAL-AUDIT-N",
+  "formal_falsification": "NOT EVALUATED",
+  "hypothesis_status_unchanged": "H",
+  "inputs_sha256": "509c24f5cc4a23bd940cff20e2f833973e8fbcbc6cb14248ecb8c8967cbb0efe",
+  "interpretation": "Gaussian summary diagnostic, not a rejection gate",
+  "p_value": null,
+  "pooled_result": null,
+  "prediction_interval_kind": "numerical enclosure, not theory uncertainty",
+  "prediction_n_star": {
+    "computed_outward_decimal": [
+      "0.963513237181671",
+      "0.963513237181938"
+    ],
+    "lower": "264071998379/274071998379",
+    "upper": "264071998381/274071998381"
+  },
+  "rows": [
+    {
+      "halfwidth_rounding_halfunit": "1/20000",
+      "id": "PLANCK18",
+      "mean_rounding_halfunit": "1/20000",
+      "measured_68_percent_halfwidth": "0.0042",
+      "measured_mean": "0.9649",
+      "nominal_signed_summary_distance": {
+        "computed_outward_decimal": [
+          "0.330181623348",
+          "0.330181623412"
+        ],
+        "lower": "3800728568269/11511023932002",
+        "upper": "3800728568971/11511023931918"
+      },
+      "rounding_envelope_signed_summary_distance": {
+        "computed_outward_decimal": [
+          "0.314532427779",
+          "0.346207908032"
+        ],
+        "lower": "7327385138157/23296119862385",
+        "upper": "7875529136321/22747975865457"
+      }
+    },
+    {
+      "halfwidth_rounding_halfunit": "1/20000",
+      "id": "P_ACT_DR6",
+      "mean_rounding_halfunit": "1/20000",
+      "measured_68_percent_halfwidth": "0.0038",
+      "measured_mean": "0.9709",
+      "nominal_signed_summary_distance": {
+        "computed_outward_decimal": [
+          "1.943884952121",
+          "1.943884952192"
+        ],
+        "lower": "20245048471129/10414735938478",
+        "upper": "20245048471711/10414735938402"
+      },
+      "rounding_envelope_signed_summary_distance": {
+        "computed_outward_decimal": [
+          "1.905652680016",
+          "1.983136751555"
+        ],
+        "lower": "40216024943877/21103543875337",
+        "upper": "40764168941801/20555399878425"
+      }
+    },
+    {
+      "halfwidth_rounding_halfunit": "1/20000",
+      "id": "SPA_BK",
+      "mean_rounding_halfunit": "1/20000",
+      "measured_68_percent_halfwidth": "0.0032",
+      "measured_mean": "0.9682",
+      "nominal_signed_summary_distance": {
+        "computed_outward_decimal": [
+          "1.464613380644",
+          "1.464613380728"
+        ],
+        "lower": "6422552257421/4385151974096",
+        "upper": "6422552257739/4385151974064"
+      },
+      "rounding_envelope_signed_summary_distance": {
+        "computed_outward_decimal": [
+          "1.426696251711",
+          "1.503734228041"
+        ],
+        "lower": "25416137031303/17814679894765",
+        "upper": "25964281029335/17266535897877"
+      }
+    },
+    {
+      "halfwidth_rounding_halfunit": "1/20000",
+      "id": "SPA_BK_DESI_DR2",
+      "mean_rounding_halfunit": "1/20000",
+      "measured_68_percent_halfwidth": "0.0029",
+      "measured_mean": "0.9728",
+      "nominal_signed_summary_distance": {
+        "computed_outward_decimal": [
+          "3.202332006228",
+          "3.202332006321"
+        ],
+        "lower": "25452416440368/7948087953049",
+        "upper": "25452416440912/7948087952991"
+      },
+      "rounding_envelope_signed_summary_distance": {
+        "computed_outward_decimal": [
+          "3.131106040021",
+          "3.276057129239"
+        ],
+        "lower": "50630760882355/16170247904479",
+        "upper": "51178904880203/15622103907603"
+      }
+    }
+  ],
+  "same_program_arithmetic_controls": "PASS",
+  "status": "NON-CANONICAL; candidate-C arithmetic only"
+}
