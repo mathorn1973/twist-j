@@ -25,6 +25,7 @@ měřitelného rozdílu. Jeho odstranění limitou není povinným cílem.
 | Energie ze stejného kroku | Samoadjungovaný operátor H=r(U*-U)/(2i), H^2-P^2=m^2 I, přesná středová časová diference a zachování očekávání | Znaménko odpovídá fázi exp(-i omega t); H má obě znaménka spektra, zachování samo nevybírá fyzikální energii ani kontakt |
 | Konečný algebraický krok | Za přesných předpokladů nelze současně ztotožnit doslovnou nenulovou fázi a hmotnost z křivosti při společné kalibraci | Algebraické musí být koeficienty celého kroku; nejde o zákaz všech konečných modelů |
 | Konečná neekvivalence | Přesný kladný rozdíl A[m-atan(m)] zůstává předmětem fyzikální hypotézy | Vratný volný krok nedokazuje tření, spotřebu energie ani výrobu entropie |
+| Více kontaktů v dosavadním rozvrhu | Přesný čtyřsložkový invariant vylučuje změnu q při libovolném konečném návratu do ker(F+I), kromě běžného volného znaménka | Jiný rozvrh a širší ponechaný nosič tím nejsou vyloučeny |
 
 ## Kde jsou důkazy
 
@@ -48,7 +49,8 @@ měřitelného rozdílu. Jeho odstranění limitou není povinným cílem.
   přístrojem; překážka pevného lineárního převodu klidových módů, přesný
   racionální Diracův krok s dělením pěti a meze společného účtu banky;
   konstrukce volného párového podprostoru s vlastním číslem -1 přímo
-  v dosavadním F a důkazy jeho opuštění při uvedených kontaktech.
+  v dosavadním F, důkazy jeho opuštění při uvedených kontaktech a zákaz
+  netriviálního návratu přes libovolně mnoho skutečně rozvržených kontaktů.
 - [FOLLOWUP_REVIEW.md](FOLLOWUP_REVIEW.md): oddělené posouzení doplňku,
   přesné otisky a rozsah kontroly.
 
@@ -144,7 +146,30 @@ ani kontakt tím ještě neztotožňujeme.
 
 Jediný nenulový přijatý kontakt funded_contact_* tento podprostor opustí
 a samotné další volné kroky jej nevrátí. Jeho skutečná cena na Z(q) je
-Delta=||a||^2/2-sigma*a^t*Pq/2. Návrat po více kontaktech zůstává otevřený.
+Delta=||a||^2/2-sigma*a^t*Pq/2.
+
+**Netriviální návrat po více kontaktech je nyní pro skutečný rozvrh
+vyloučen.** Dvě čtení R0=P^t*u+2(A0+B1) a R1=P^t*v+2(A1+B0)
+si volný krok vymění; kontakt zachová R0. Řadič c proto vybírá přesný
+invariant: R1 ve fázích 3 a 6, jinak R0. Na Z(q) je to až na znaménko
+Mq, kde M=I+P^t*(2I+H_w)^(-1)*P je kladná a invertibilní. Libovolná
+konečná historie s oběma konci v ker(F+I) tak má q_out=(-1)^N_F*q_in.
+Při stejném řezu řadiče se q nemění vůbec, a to bez omezení počtu kontaktů,
+volby původních štítků nebo banky. Při takovém návratu se obnoví i b a W;
+mezilehlé výběry a splátky nejsou vyloučeny. Celý nativní stav se tím
+nevrací: jeho čítač za každý úplný cyklus vzroste o pět.
+
+Jeden úplný cyklus se do tohoto podprostoru vrátí právě tehdy, když jsou
+oba skutečné vlnové impulsy nulové. Existence delších nenulových výletů
+vracejících se do stejného bodu není rozhodnuta, ale jiný výsledný bod
+v tomto pevném podprostoru už další opakování rozvrhu nepřinese.
+
+Rozšířená racionální řídicí úloha s oběma paritami tiku má naproti tomu
+dva dosažitelné směry uvnitř podprostoru. Tato přesná algebraická existence
+nepředstavuje program sestavený z původních štítků a povolených kroků.
+Další konstrukce musí ponechat i další vybuzené módy, nebo výslovně změnit
+operaci či rozvrh chránící uvedený invariant. Oddíly 12–14 obsahují důkaz.
+
 Také dosavadní bodový Hilbertův kontakt při g mimo 2pi Z opouští celý
 volný sektor -1: ze vstupu (0,+;pi,+) do módu (pi/2,+;pi/2,-) s vlastním
 číslem +1 přechází za jediný krok

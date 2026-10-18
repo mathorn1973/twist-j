@@ -284,3 +284,57 @@ analytical supplements, Canon and native-admission owners are unchanged.
 The change touches only APPARATUS-BRIDGE.md, README and this review record.
 Local infrastructure checks and exact publication/CI receipts are recorded
 in #1603 after completion. No physical/native admission is inferred.
+
+## Multiple contacts: invariant of the actual schedule
+
+The owner authorized continuation after f6acc4f20be02cecff803a7fc8d4f07fe433a481.
+Its exposed analytical scope was declared in
+[#1603 comment6247442868](https://github.com/mathorn1973/twist-j/issues/1603#issuecomment-6247442868).
+APPARATUS-BRIDGE.md sections12–14 and the corresponding README now settle
+nontrivial return within the fixed collective sector for every finite
+history of the literal eight-phase schedule. This is not a claim that
+all native contacts or all larger retained carriers are impossible.
+
+| File | SHA-256 of this continuation |
+|---|---|
+| APPARATUS-BRIDGE.md | 273383a89916b62e0d2a69c1012fc3c3a1463fdfe4a5a5106713ea84db703eff |
+| README.md | c41bee1cf674db45809dfd42dc7ecefb6ae39f2f5c68bb150f5d4cc7f55ef7b6 |
+
+Three reused exposed assistant contexts reviewed the final content:
+
+- The source reviewer checked sections12–13 and their README statements
+  against the literal F_step, coupled_step, occupied buffer and funded
+  contact branches. It accepted the row-wise invariant, endpoint sign,
+  one-cycle condition, bank/work telescoping and native counter increment.
+- The algebra reviewer checked sections12–13, the consistency of section14
+  and the matching README scope: all-finite return, the stronger one-cycle
+  result and the distinction between returning amplitudes and full state.
+- The compatibility reviewer checked sections13–14 and the README scope:
+  the polynomial spectral projector without assuming global energy
+  positivity, the two-dimensional enlarged rational reachable intersection,
+  zero fixed-parity intersection and necessary signed-source sum.
+
+Source review corrected one chronological phrase: buffer capture precedes
+contact A and remains recorded when its proposal is refused. All three
+reviewers accepted the exact final hashes above. The root author checked
+the derivations, source rows and final scope, and inspected the changed
+text for public safety. These are exposed analytical assistant reviews,
+not blind validation, external peer review or scientific execution.
+
+The enlarged control comparison permits arbitrary rational combinations
+and both timing parities. No finite native label program, admissible bank
+history or physical energy bridge is claimed from that linear span.
+Long excursions returning to the same point remain unclassified.
+
+Public main and Canon v103 remain dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d;
+all five normative hashes and 258 remote heads were checked. Source
+apparatus bytes remain f0edfd80157c8993322a5338e88120c552908d3830fe5f9ea7536257213c6173
+(58388 bytes). The #1596/#1589 STOP_UNTYPED handoff and its owners are
+unchanged. No scientific program, matrix inverse or eigensolver was run.
+
+This continuation changes only APPARATUS-BRIDGE.md, README and this review
+record. All eleven original audit files are byte-identical to
+14ce73995f376b295be6c18f296ac7d8ed2c2441; other supplements, source code
+and Canon are unchanged. Local infrastructure results and exact public
+head/tree/CI receipts are recorded in #1603 after completion, without
+representing ordinary CI as a new scientific reproduction.

@@ -418,6 +418,8 @@ Return to E_minus requires the sum to lie in E_minus, in addition to
 every actual source-label and bank-acceptance condition along the word.
 This gives an exact test for a declared word. It supplies no finite bound
 on all words, preparations or complete native-counter histories.
+Sections12–14 below now settle NONTRIVIAL return for the actual schedule
+without imposing a word-length bound.
 
 ## 11. The onsite Hilbert contact also leaves the full free -1 sector
 
@@ -460,3 +462,184 @@ impulse exits its free F eigenspace, and the declared onsite kick exits
 even the whole Hilbert U0=-1 sector. Neither result is a universal no-go
 for native contacts. A finite candidate test must first declare the full
 retained carrier, word, encoding, observables and bank/controller account.
+
+## 12. A four-component invariant of the complete actual schedule
+
+The owner authorized continuation of the multi-contact question. Its
+exposed analytical scope is recorded in
+[comment6247442868](https://github.com/mathorn1973/twist-j/issues/1603#issuecomment-6247442868).
+The source pin and hash in section1 remain unchanged. This is a proof
+from the literal update, not a new scientific execution or formal probe.
+
+Define two rational four-component readings on ALL wave/tape states:
+
+    R0(z)=P^t u+2(A0+B1),
+    R1(z)=P^t v+2(A1+B0).
+
+The free step exchanges them exactly:
+
+    R0(Fz)=R1(z),             R1(Fz)=R0(z).
+
+The first identity follows immediately from u'=v, A0'=A1, B1'=B0.
+For the second, use v'=w, A1'=B1 and the source's port equation
+B0'=A0-P^t(w-u)/2:
+
+    R1(Fz)=P^t w+2[B1+A0-P^t(w-u)/2]=R0(z).
+
+Every accepted contact changes only v among these coordinates, hence
+fixes R0 and changes R1 by P^t h, where h=sigma S eta(r) is the ACTUAL
+signed impulse. Set h=0 for a refused contact. Native source updates,
+buffer capture and control-sign changes hold the amplitude tuple fixed.
+
+The literal eight-phase schedule uses the following rows (c is the
+controller value BEFORE the row):
+
+| c | Amplitude operation | Invariant reading before the row |
+|---|---|---|
+| 0 | Identity; native source tick | R0 |
+| 1 | Capture B label, then funded contact A | R0 |
+| 2 | F; native source tick | R0 |
+| 3 | F; native source tick | R1 |
+| 4 | Funded contact B using the stored label | R0 |
+| 5 | F; native source tick | R0 |
+| 6 | F; native source tick | R1 |
+| 7 | Identity; controller rollover | R0 |
+
+Thus, with e(c)=1 for c in {3,6} and e(c)=0 otherwise,
+
+    I(z,c)=R_e(c)(z)
+
+is invariant under EVERY `coupled_step` row, including the controller
+advance. At a free row both the selected index and the two readings
+exchange; at a contact both endpoints select R0. The other rows change
+neither. This proof covers arbitrary occupied valid states, actual native
+labels, buffer history, retained signs, accepted/refused guards and bank
+capacity. In particular it does not substitute freely chosen labels for
+the actual source: buffer capture precedes contact A and remains recorded
+even when its proposal is refused; each sign flips only on acceptance.
+The same identity holds for the
+supplied-label `apparatus_step` with its literal schedule.
+
+## 13. All finite scheduled returns carry no new sector state or net debit
+
+Put M=I_4+P^t(2I+H_w)^-1P. Section9 gives M>0 over Q and
+
+    R0(Z(q))=Mq,             R1(Z(q))=-Mq.
+
+Suppose ANY finite scheduled history starts at Z(q_i), controller c_i,
+and ends at Z(q_f), controller c_f. Conservation of I gives
+
+    (-1)^e(c_f) Mq_f=(-1)^e(c_i) Mq_i,
+    q_f=(-1)^(e(c_i)+e(c_f)) q_i=(-1)^N_F q_i,
+
+where N_F is the number of free F rows in that history. The second
+equality uses the fact that e changes exactly at free rows. This is
+precisely the ordinary free sign. At matching controller phases,
+including any number of complete cycles, q_f=q_i. No cutoff on the
+number of contacts, source counter or rational bank states is needed.
+At a matching controller phase the same injectivity argument also
+excludes movement within ANY fixed affine coset z0+E_minus.
+
+This closes nontrivial scheduled transfer inside this fixed collective
+sector, even when the history leaves the sector between endpoints.
+It does NOT classify or prove existence of excursions returning to the
+same point. It also does not turn a common Hilbert sign into an observable
+change, or exclude a larger retained carrier or a different contact rule.
+
+For ONE complete c=0 to c=0 cycle there is a stronger statement. Write
+d(h)=(0,h,0,0,0,0) and absorb acceptance/sign into h_A,h_B. The exact
+amplitude endpoint is
+
+    z_f=F^4 z_i+F^4 d(h_A)+F^2 d(h_B).
+
+Starting in E_minus, return requires F^2 d(h_A)+d(h_B) in E_minus.
+Its A0 and A1 slots are zero, so its sector coordinate q=4A0 is zero
+and the entire vector must vanish. Its u slot is K H_w h_A. Both
+K and H_w are invertible (section9 gives H_w >= (2/9)I), so
+
+    return in one complete cycle iff h_A=h_B=0.
+
+This concerns actual wave impulses: a rejected nonzero proposal counts
+as zero; an accepted zero impulse can still change a control sign.
+A zero work increment is not in general a zero impulse.
+
+The return also fixes the net existing bank/work account. For each actual
+accepted h, evaluated on the THEN-current wave,
+
+    delta=h^t(v-H_w u/2)+(1/2)||h||^2,
+    b'=b-delta,             W'=W+delta.
+
+Free F preserves E_full, as shown directly by the port/tape identity in
+the source's `SOURCE_PROOF.md` section2; all non-contact rows leave b,W
+unchanged. Hence the sum of actual deltas is the endpoint difference
+of E_full. Since E_full(Z(q))=q^t Mq/2 is even in q, every scheduled
+return to E_minus satisfies
+
+    sum delta=0,            b_f=b_i,             W_f=W_i.
+
+Transient withdrawals and repayments are allowed by this statement.
+There is no nonzero NET debit to identify with a Dirac pair denomination
+on such a return. After r complete cycles the pointer k returns but the
+original native counter increases by5r; source heads, signs and buffer
+may change. No complete-state recurrence or memory renewal follows.
+
+## 14. Why allowing both timing parities changes the linear comparison
+
+The following is an explicitly ENLARGED rational control class, not a
+native realization: allow arbitrary rational linear combinations of the
+source directions and place them at either parity of the free step.
+It separates the schedule obstruction from a universal impossibility.
+
+Let U_src=span_Q{e1,e2}, the span of the actual eta labels, and define
+
+    L_minus=(R0-R1)/2,       L_plus=(R0+R1)/2,
+    Pi_minus=Z M^-1 L_minus.
+
+Here Z denotes the linear map q->Z(q). Direct identities give
+L_minus F=-L_minus, L_plus F=L_plus, L_minus Z=M and
+Pi_minus^2=Pi_minus with range E_minus. This projector is a polynomial
+in F over Q. Indeed L_minus(F+I)=0 and L_minus is injective on
+ker(F+I), so ker(F+I) intersects im(F+I) only in zero. Their dimensions
+sum to1426, excluding a Jordan chain at -1. The minimal polynomial is
+(t+1)r(t) with r(-1)!=0, and Pi_minus=r(F)/r(-1).
+
+Consider the rational span of freely timed impulses,
+
+    W_all=span_Q{F^j d(S eta): j>=0, eta in U_src}.
+
+It is F-invariant, so its polynomial projection is still inside it.
+Using Pi_minus F^j=(-1)^j Pi_minus and
+L_minus d(a)=-(1/2)P^t a gives exactly
+
+    W_all intersect E_minus = Z(M^-1 P^t S U_src),
+    dim_Q(W_all intersect E_minus)=2.
+
+The harmless factor -1/2 does not change a rational span. The dimension
+is two because P^t S=I_4-11^t/5 is invertible (eigenvalues1,1,1,1/5).
+This is an exact finite-polynomial existence statement in the enlarged
+linear class. It does not compile its coefficients into the finite label
+alphabet, sign updates, actual schedule, bank guards or a native program.
+
+In contrast, with only one common parity of impulse ages,
+
+    W_even=span_Q{F^(2j)d(S eta): j>=0, eta in U_src}
+
+is annihilated by R0. Since R0 is injective on E_minus,
+W_even intersects E_minus only in zero. Its odd translate has the same
+zero intersection. This is the linear counterpart of the actual
+row-wise invariant, not an assumption of a finite state space.
+
+A further necessary condition holds for ANY timed return to E_minus:
+L_plus vanishes at both endpoints and is preserved by F. Therefore
+
+    sum_(accepted j) sigma_j eta(r_j)=0,
+
+using the invertibility of P^t S. It is not sufficient: all other wave
+and tape components must cancel as well. Changing timing alone has not
+been proved to supply an actual admitted contact sequence.
+
+The remaining construction must therefore retain more than E_minus, or
+change a specified operation/schedule that protects I, and supply the
+same source-independent position/energy/account bridge. Repeating the
+unchanged eight-phase schedule, enlarging its bank or accumulating more
+contacts cannot produce a different endpoint within this fixed sector.
