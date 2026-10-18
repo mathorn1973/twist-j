@@ -9,10 +9,21 @@ Public Canon v103 was ACTIVE when this work was claimed and remained the
 public base at delivery preparation. Both main and peeled canon-v103 were
 `dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d`. The v103 content ancestor was
 `01fb76f6b3b14a6a5ec05d0017ea922390ab6f66`, with tree
+`b61e7a10d098307e392840955618e7ed232f6c28`. The main/peeled-tag commit
+`dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d` has tree
 `52048d642e988830fe280928e6297c5a565a7324`.
 The status, policy, live coordination, all 260 then-public heads, current
 main CI run 39022927713 and exact/semantic claim collisions were checked
 before the new claim. The named neighbouring owners were retained.
+
+Metadata correction: the original delivery at
+`f7c55c419fc0660da2f0b2004333b01aea26032e` attributed the main commit's
+tree to the content ancestor. A fresh public Git-object read and local Git
+read established the two distinct trees above. This descendant corrects
+only that attribution in CHECKS.md. The analytical pin, source manifest,
+proof, README and review bytes remain identical to the original delivery;
+the scientific scope and canonical file hashes are unchanged. The public
+correction receipt records the descendant and its exact-head checks.
 
 The six literal source files in [SOURCES.tsv](SOURCES.tsv) were read at
 their immutable Git objects and checked for byte count and SHA-256.
