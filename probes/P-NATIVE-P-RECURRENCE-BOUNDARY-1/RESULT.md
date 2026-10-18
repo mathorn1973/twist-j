@@ -34,6 +34,10 @@ physical layer is changed by this probe. Completed remote architecture
 checks must be read at the actual result head; the first local run alone
 is not represented as two-architecture evidence.
 
+The subsequently completed public two-architecture replay, exact tested
+tree and actual job-log hashes are recorded in CHECKS.md. Both public
+architectures passed the unchanged author-plus-breaker audit.
+
 ## Why the literal obstruction is universal within its class
 
 The complete reference F_P is a permutation. Repeated simulation thus
