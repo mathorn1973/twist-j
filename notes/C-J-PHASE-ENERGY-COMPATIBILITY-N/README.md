@@ -20,6 +20,7 @@ měřitelného rozdílu. Jeho odstranění limitou není povinným cílem.
 | Původní Diracovo porovnání | Přesná slupka a skupinový posun; pro doslovné fáze poměr hmotností m/atan(m)>1 | Parametr m není již změřená hmotnost |
 | Diracova a alternátorová procházka | Přesná konjugace s Q=diag(1,-i), posunem vlnového čísla a časové fáze | Převést se musí i čtečky; původní P navíc obrací prostor |
 | Galoisův a Lucasův řetězec | U_(phi^-n)(0)^2=U_(csch(n log phi))(0); pro liché n je druhý parametr 2/L_n | Přesná shoda v klidu; celé prostorové procházky nejsou totožné |
+| Parita a kolmost žebříku | Kladná slupka vyžaduje opravu znaménka druhého kanálu; Galoisův krok má přesnou čtvrtotáčkovou reprezentaci a gamma(J)=(-j^3)J^-1 | Stopová kolmost energie a hybnosti není kolmostí klidové hmotnosti a hybnosti ani sama důkazem fyzikálního zákona |
 | Hodiny z algebraického stavu | Kanonická celočíselná souřadnice k(J alpha)=k(alpha)+1, čitelná přesnými porovnáními | Fáze exp(i theta k) dovoluje každé zvolené theta |
 | Torální návrh hodin | Existující kanonický Fourierův důkaz vylučuje netriviální stálý fázový přírůstek pro skalární Haarovu čtečku | Jiný nosič, míra, přidané hodiny či obecný kokyklus nejsou vyloučeny |
 | Energie ze stejného kroku | Samoadjungovaný operátor H=r(U*-U)/(2i), H^2-P^2=m^2 I, přesná středová časová diference a zachování očekávání | Znaménko odpovídá fázi exp(-i omega t); H má obě znaménka spektra, zachování samo nevybírá fyzikální energii ani kontakt |
@@ -32,7 +33,8 @@ měřitelného rozdílu. Jeho odstranění limitou není povinným cílem.
 - [RESULT.md](RESULT.md), [PROOF.md](PROOF.md), [RUN.md](RUN.md): původní
   zmrazené závěry a skutečný první běh.
 - [PROPOSALS.md](PROPOSALS.md): opravené návrhy, Lucasův řetězec a přesné
-  půlení klidového kroku.
+  půlení klidového kroku; rozlišení parity, Galoisovy konjugace, normy
+  a stopové kolmosti včetně přesného účinku na fázi J.
 - [CLOCKS.md](CLOCKS.md): existující kladné čtení hodin, torální hranice,
   zákaz prostého blokování a místní převod nelineární slupky.
 - [ENERGY.md](ENERGY.md): hlavní pokračování, přesný operátor, hranice

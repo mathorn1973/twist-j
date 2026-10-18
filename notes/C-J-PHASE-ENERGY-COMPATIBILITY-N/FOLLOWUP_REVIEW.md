@@ -338,3 +338,45 @@ record. All eleven original audit files are byte-identical to
 and Canon are unchanged. Local infrastructure results and exact public
 head/tree/CI receipts are recorded in #1603 after completion, without
 representing ordinary CI as a new scientific reproduction.
+
+## Ladder parity, trace forms and the order-four Galois action
+
+The owner's further proposal was audited under the exposed scope in
+[#1603 comment6247604540](https://github.com/mathorn1973/twist-j/issues/1603#issuecomment-6247604540).
+PROPOSALS.md section5 corrects the signed light-cone product, separates
+the rational eigenspace split from the integral lattice, and distinguishes
+trace orthogonality from the norm shell and fixed rest mass. It then gives
+the explicit Galois quarter-turn representation and the exact action
+gamma(J)=(-j^3)J^-1. The known Canon ladder/boost identities are credited.
+
+| File | SHA-256 of this continuation |
+|---|---|
+| PROPOSALS.md | f129fc9fb9e2fccbb0f3d5a8f56723933801c895df1fbdcbad9dad6e07a84cc9 |
+| README.md | f2f1fc72616d6b9593d0d89922f773fd8c0d408fcba74b7196d672da11e76462 |
+
+Two reused exposed assistant contexts accepted these exact final hashes:
+
+- The algebra reviewer checked sections5.1–5.2 and the README addition:
+  signed versus positive rails, G/X/B identities, index-two lattice,
+  the two trace/norm forms, boost reversal and mass/energy distinction.
+- The Galois reviewer checked section5.3, its compatibility with5.1–5.2
+  and the README addition: the factor -j^3, phase table, trace-form
+  quarter-turn, absence of scalar i, and rational/integral/physical scope.
+
+The root author separately checked the formulas, current Canon passages
+and Milne's primary Galois reference. An initial working suggestion
+gamma(J)=-j J^-1 was rejected during derivation by both the root and
+Galois reviewer; the published formula has the correct factor -j^3.
+No scientific program or numerical test was run. The reviews are not
+blind validation or external peer review.
+
+Public main/tag and Canon v103 remain at
+dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d. All five normative hashes and
+258 remote heads were checked. Supplied internal snapshots were read
+only as historical context; they do not replace public authority.
+The independent #1610 review keeps its earlier fixed target f6acc4f2,
+APPARATUS-BRIDGE.md sections8–11. This update does not change that file,
+the original eleven audit files, source code, Canon or existing owners.
+Only PROPOSALS.md, README and this review record change. Exact publication
+and ordinary CI receipts follow in #1603; no physical selection of clocks,
+energy or contact is claimed from the Galois action.

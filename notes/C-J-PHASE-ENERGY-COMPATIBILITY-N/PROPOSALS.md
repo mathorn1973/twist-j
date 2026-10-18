@@ -165,6 +165,173 @@ Reversing the correction, equivalently beta=-mu^2/9 in this notation,
 gives 1-4mu^4/45+O(mu^6). A scalar trace ansatz is not yet a constructed
 local unitary step or an independently selected coefficient.
 
+## 5. Ladder parity, trace orthogonality and the full cyclotomic action
+
+This exposed continuation follows the owner's proposed identification of
+time/space parity with mass/momentum orthogonality; scope was declared in
+[comment6247604540](https://github.com/mathorn1973/twist-j/issues/1603#issuecomment-6247604540).
+The underlying light-cone and parity identities are already public Canon
+LADDER-LIGHTCONE, BOOST-READING-SPLIT and LADDER-ALTERNATOR-BASIS.
+They are not newly derived physical identifications. Here n is the
+integer boost index; identifying it with an apparatus clock needs the
+existing dictionary and a matching dynamics.
+
+### 5.1 Signed conjugate channels versus the positive light cone
+
+Let F_real=Q(sqrt5), sigma(sqrt5)=-sqrt5, psi=sigma(phi)=-phi^-1.
+For alpha_n=2phi^n, the proposed conjugate pair has
+
+    alpha_n sigma(alpha_n)=4(-1)^n,
+    (alpha_n+sigma(alpha_n))/2=L_n,
+    (alpha_n-sigma(alpha_n))/2=sqrt5 F_n.
+
+Thus its raw shell is L_n^2-5F_n^2=4(-1)^n. It is not constantly +4.
+Already n=1 gives the raw pair (1,sqrt5), with shell -4.
+The positive light-cone pair is instead
+
+    u_n=2phi^n,       v_n=(-1)^n sigma(alpha_n)=2phi^-n,
+    E_n=(u_n+v_n)/2,  Pi_n=(u_n-v_n)/2,
+    E_n^2-Pi_n^2=u_n v_n=4.
+
+Pi denotes the momentum component in energy units (pc in the proposed
+reading). These are dimensionless comparison coordinates. Explicitly,
+
+| n | E_n | Pi_n |
+|---|---|---|
+| even | L_n | sqrt5 F_n |
+| odd | sqrt5 F_n | L_n |
+
+The odd exchange therefore repairs the signed conjugate pair; one cannot
+retain its original E^- and also claim E^+ E^-=4 on odd rungs.
+
+There is a useful exact operator expression. On the raw column
+w_n=(L_n,sqrt5 F_n)^t, multiplication by phi on the conjugate pair gives
+
+    w_(n+1)=G w_n,       G=(1/2)[[1,sqrt5],[sqrt5,1]].
+
+With X=[[0,1],[1,0]] and eta=diag(1,-1), direct multiplication yields
+
+    G^t eta G=-eta,      B=XG=GX=(1/2)[[sqrt5,1],[1,sqrt5]],
+    B^t eta B=eta,       (E_n,Pi_n)^t=X^n w_n=B^n(2,0)^t.
+
+B has cosh(log phi)=sqrt5/2 and sinh(log phi)=1/2. The parity correction
+turns the raw sign-changing step into the already known boost.
+
+### 5.2 What is orthogonal, and which form gives the shell
+
+Over Q the eigenspace split is F_real=Q plus sqrt5 Q. For
+T(x,y)=Tr_(F_real/Q)(xy), the two summands are orthogonal and
+
+    T(a+b sqrt5,c+d sqrt5)=2ac+10bd.
+
+The integral statement is narrower:
+
+    Z[phi]={(A+B sqrt5)/2: A,B in Z, A=B mod2},
+    Z[phi]^sigma=Z,       Z[phi]^(-sigma)=sqrt5 Z.
+
+Their direct sum Z[sqrt5] has index2 in Z[phi]; phi itself is missing
+from that sum. The half-sum projectors need not preserve the full
+integral lattice. For the doubled alpha_n they give the integral
+components L_n and sqrt5 F_n exactly.
+
+Two different forms must be kept distinct. If x=a+b sqrt5, then
+
+    Tr(x^2)/2=a^2+5b^2,       N(x)=x sigma(x)=a^2-5b^2.
+
+The first follows by trace cancellation of the mixed term. The second
+is the norm identity supplying the signed shell. For alpha_n specifically,
+
+    Tr(alpha_n^2)/2=L_n^2+5F_n^2=2L_(2n),
+    N(alpha_n)=4(-1)^n.
+
+Consequently trace orthogonality does not by itself prove the constant
+mass shell. The shell follows from the norm plus the stated parity
+correction. Its scale2 was placed in the starting pair; this arithmetic
+does not independently select the Dirac coin or a measured mass.
+
+For the corrected pair, Tr(E_n Pi_n)=0 at every rung, but this is
+ENERGY/MOMENTUM trace orthogonality, not universal orthogonality of
+the fixed rest mass2 and momentum. At n=1, Pi_1=1 and Tr(2 Pi_1)=4.
+E_n varies with the boost while the declared rest scale stays2.
+
+There are also two different reversals. Extending the ladder to all
+integer n gives E_(-n)=E_n and Pi_(-n)=-Pi_n, whereas
+
+    sigma(E_n)=(-1)^n E_n,    sigma(Pi_n)=(-1)^(n+1) Pi_n.
+
+Thus Galois conjugation equals boost reversal only on the even rungs;
+on odd rungs it has an additional common minus sign. The usual
+orthogonality of even/odd functions needs a reflection-invariant inner
+product and a suitable domain; the growing ladder sequences are not
+in l2(Z). Reversal of rapidity is not automatically physical time reversal.
+
+The operator shell in ENERGY.md has a separate direct proof: its Pauli
+components anticommute, so H_m^2=(m^2+sin^2 k)I. Replacing that operator
+identity with the scalar trace argument would lose its actual mechanism.
+
+### 5.3 An order-four action without the scalar i in Z[j]
+
+Now let K=Q(j), j=zeta_5, O_K=Z[j], phi=-j^2-j^3, J=j/phi.
+Use gamma(j)=j^2 (not the globally occupied symbol tau). Then
+
+    gamma^2=complex conjugation,  gamma^4=I,
+    gamma(phi)=-phi^-1,           gamma(sqrt5)=-sqrt5.
+
+Although Gal(K/Q) is cyclic of order4, i is NOT an element of K.
+Indeed its unique quadratic subfield is the real Q(sqrt5), whereas
+Q(i) is imaginary. The standard cyclotomic/Galois facts are also stated
+in J. S. Milne, [Fields and Galois Theory](https://www.jmilne.org/math/Books/FT0.pdf),
+Theorem3.17 and exercises3-2,A-21. A group of four automorphisms is
+therefore not the scalar set {1,-1,i,-i} inside O_K.
+
+Nevertheless there IS an exact quarter-turn representation. Put
+
+    b1=j-j^-1,       b2=j^2-j^-2,
+    gamma(b1)=b2,    gamma(b2)=-b1.
+
+They span the two-dimensional rational subspace K_minus={x:bar(x)=-x}.
+Its stable integral sublattice Zb1+Zb2 carries the matrix
+
+    gamma|K_minus=[[0,-1],[1,0]],       gamma^2|K_minus=-I.
+
+For the positive rational trace form T_K(x,y)=Tr_(K/Q)(x bar(y)),
+b1^2=-phi-2, b2^2=phi-3 and b1 b2=-sqrt5 give
+
+    T_K(b_i,b_j)=10 delta_ij.
+
+Thus the same gamma acts by +1 on Q, by -1 on sqrt5 Q, and by a
+quarter-turn on K_minus. This is a rational representation decomposition,
+not an integral direct-sum decomposition of all O_K. Nor is it a literal
+rotation of the principal complex image: both b1 and b2 are purely
+imaginary there. The trace form includes all embeddings.
+
+The action on the actual algebraic generator has a different exact phase:
+
+    gamma(J)=-j^2 phi=(-j^3) J^-1=(1-J)^-1 J^-1,
+    gamma(J^n)=(-j^3)^n J^-n.
+
+The factor -j^3 is a primitive tenth root, not i. In the principal
+embedding its angle is pi/5. The four images of J have the following
+moduli and principal arguments:
+
+| r | gamma^r(J) | modulus | argument |
+|---|---|---|---|
+| 0 | j/phi | phi^-1 | 2pi/5 |
+| 1 | -j^2 phi | phi | -pi/5 |
+| 2 | j^-1/phi | phi^-1 | -2pi/5 |
+| 3 | -j^3 phi | phi | pi/5 |
+
+Writing M_a for multiplication by a, the complete operator relation is
+
+    gamma M_J gamma^-1=M_(-j^3) M_J^-1.
+
+On the real subfield the parallel relation is
+sigma M_phi sigma^-1=-M_phi^-1. These formulas precisely connect scale
+reversal, parity and the cyclotomic phase factor. Iterating gamma is
+not iterating M_J or the native U, and the quarter-turn representation
+does not supply a pi/2 phase increment per physical tick. In particular
+it does not override the scheduled contact invariant in APPARATUS-BRIDGE.
+
 ## Scope
 
 All additions above are exact algebra or explicitly stated analytic limits.
