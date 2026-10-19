@@ -180,9 +180,15 @@ frozen files:
    The printed telescoping identity is algebraically false; the six-periodic
    formula `chi_n = a*(1,2,2,1,0,0)_n + beta(w)*(0,1,2,2,1,0)_n` follows by
    adding the autonomous source component `chi_n^auto = a*(1,2,2,1,0,0)_n`
-   (`chi_1^auto = a`, `chi_2^auto = 2a`) to the `beta`-driven impulse response
-   `q_n = beta(w)*(0,1,2,2,1,0)_n` satisfying the second-order initial-value
-   recurrence `q_{t+1} - q_t + q_{t-1} = beta(w) * delta_{t,1}` with `q_0 = q_1 = 0`.
+   (`chi_1^auto = a`, `chi_2^auto = 2a`) to the accumulated `beta`-driven
+   response `eta_n = beta(w)*(0,1,2,2,1,0)_n` (`eta_0 = eta_1 = 0`,
+   `eta_2 = beta(w)`, `eta_3 = 2*beta(w)`, `eta_4 = 2*beta(w)`,
+   `eta_5 = beta(w)`, `eta_6 = 0`), which satisfies the constant-forcing
+   recurrence `eta_{n+1} - eta_n + eta_{n-1} = beta(w)` (`n >= 1`) because the
+   one-time impulse at `k=1 -> 2` permanently increments the source register `s`
+   by `beta(w)`. Its first-difference register `r_n = eta_n - eta_{n-1}`
+   (`r_0 = r_1 = 0`) satisfies the impulse equation
+   `r_{n+1} - r_n + r_{n-1} = beta(w) * delta_{n,1}` (`n >= 1`).
 4. **Detector norm and `P_2` norm arithmetic (`PROOF.md` section 4.1):**
    `N(D_0) = 4` (not `6`), `N(A^-1 D_0) = 14` (not `16`), and the Euclidean
    squared norms of `P_2` for word `0010` (free / minus / plus) are `344982`,

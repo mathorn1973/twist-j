@@ -65,8 +65,11 @@ the frozen `PROOF.md` / `PREREG.md` text:
      uniform response bound `1645/209304 < 1/125` for `|chi_n| <= 6`.
    - The telescoping display in `PROOF.md` lines 321-326 is replaced by adding
      the autonomous source sequence `chi_n^auto = a*(1,2,2,1,0,0)_n` separately
-     to the `beta`-driven impulse response `q_n` satisfying
-     `q_{t+1} - q_t + q_{t-1} = beta(w) delta_{t,1}` with `q_0 = q_1 = 0`.
+     to the accumulated `beta`-driven response `eta_n = beta(w)*(0,1,2,2,1,0)_n`
+     (`eta_0 = eta_1 = 0`), which satisfies the constant-forcing recurrence
+     `eta_{n+1} - eta_n + eta_{n-1} = beta(w)` (`n >= 1`), whereas its first
+     difference `r_n = eta_n - eta_{n-1}` (`r_0 = r_1 = 0`) satisfies the
+     impulse equation `r_{n+1} - r_n + r_{n-1} = beta(w) delta_{n,1}`.
    - In `PROOF.md` section 4.1, `N(D_0) = 4` (not `6`), `N(A^-1 D_0) = 14` (not
      `16`), and the squared norms of `P_2` (free / minus / plus) are `344982`,
      `343694`, `346286`.
