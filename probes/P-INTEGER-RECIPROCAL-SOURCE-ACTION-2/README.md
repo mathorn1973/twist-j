@@ -17,13 +17,13 @@ This probe extends `P-INTEGER-PRIMITIVE-SOURCE-METRIC-1` (Draft PR #1641) with:
    (`Theorems B1, B3-B5`):** Adds the phase-6 parity-difference feedback
    `Phi(P,Q) = (P_0 mod 2 - P_1 mod 2) - (Q_0 mod 2 - Q_1 mod 2)` into the
    source register `s' = s + Phi(P,Q)`, preserving the 38-coordinate core
-   injection, the 40-coordinate funded involution `F^-1 = Rev F Rev` with
-   conserved `E + b`, the exact primitive denominator `d_n = 2 * 324^(n-1)`, and
-   the all-counter Lorentzian signature bound `-299/500 < h_n(r) < 499/500`
+   injection, the 40-coordinate reversible funded bijection `F^-1 = Rev F Rev`
+   with conserved `E + b`, the exact primitive denominator `d_n = 2 * 324^(n-1)`,
+   and the all-counter Lorentzian signature bound `-299/500 < h_n(r) < 499/500`
    (`||h_n - h_n^free||_inf < 1645/209304 < 1/125`) across all ten canonical
    words and `a in {-1,0,+1}`. On ready trajectories, `Phi(P,Q)` acts as a
-   one-time initial impulse `beta(w)` at the first field gate (`k=1 -> 2`),
-   followed by the six-periodic source oscillator
+   one-time initial impulse `beta(w) = Phi(P_1, P_0)` at the first field gate
+   (`k=1 -> 2`), followed by the six-periodic source oscillator
    `chi_n = a*(1,2,2,1,0,0)_n + beta(w)*(0,1,2,2,1,0)_n`. The variational audit
    verifies 600 vanishing reduced TT metric variations and 120 source variations
    equal to `tau_n = <ell, h_n>/324^n` with single-integer coordinate optimality
@@ -36,8 +36,8 @@ This probe extends `P-INTEGER-PRIMITIVE-SOURCE-METRIC-1` (Draft PR #1641) with:
   explicit post-pin errata and scope corrections).
 - `SOURCE.md` identifies the actual Public Canon v103 bytes, non-canonical
   companions, consumed predecessor pin, and declared modeling choices.
-- `verify.py` uses the polynomial quotient ring `Z[j]` and `2x2` Hermitian
-  matrices.
+- `verify.py` uses the polynomial quotient ring `Z[j] = Z[x]/(1+x+x^2+x^3+x^4)`
+  and `2x2` Hermitian matrices.
 - `breaker.py` independently uses direct 8-coordinate integer formulas and
   explicit `C/L` matrices.
 - `FROZEN.sha256` commits the five prospective source files.
@@ -63,8 +63,8 @@ repository PR workflow performs this replay on both `x86_64` and `aarch64`.
 
 On ready histories, `Phi(P,Q)` is a one-time initial impulse rather than
 sustained feedback at every counter, and the continuous source derivative of
-`A_rec` equals `tau_n = <ell, h_n>/324^n != 0` on-shell (satisfying
-single-integer coordinate optimality rather than continuous source
+`A_rec` equals `tau_n = <ell, h_n>/324^n` on-shell, which is generally nonzero
+(satisfying single-integer coordinate optimality rather than continuous source
 stationarity). Explicit errata in the frozen `PROOF.md` text (including the
 withdrawal of section 3.2) are documented in `RESULT.md` and `REVIEW.md`.
 Sustained every-step feedback and continuous joint stationarity (`dA/dh = 0` and

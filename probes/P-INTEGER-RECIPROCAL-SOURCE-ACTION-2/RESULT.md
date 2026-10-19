@@ -51,11 +51,17 @@ recovers `(P_prev, Q_prev)` via the exact congruence divisor `a(k-1)` and then
 subtracts `Phi(P_prev, Q_prev)` from `s`.
 
 On every ready history, because `P_n == P_1 (mod 2)` for all `n >= 1`, the
-feedback `Phi(P,Q)` equals `beta(w) = (P_1,0 mod 2) - (P_1,1 mod 2)` at the
-first field gate (`k=1 -> 2`) and vanishes at every later gate (`k >= 2`).
-Thus on ready histories the field-to-source coupling is a **one-time initial
-field-dependent impulse** into the source register `s`, followed by the
-six-periodic source readout
+feedback `Phi(P,Q)` equals
+
+    beta(w) = Phi(P_1, P_0)
+            = [(P_{1,0} mod 2) - (P_{1,1} mod 2)]
+              - [(P_{0,0} mod 2) - (P_{0,1} mod 2)]
+
+at the first field gate (`k=1 -> 2`; for example, at word `0010`,
+`P_1 = (1,1,0,0,0)` and `P_0 = (0,1,1,0,0)` give `beta(0010) = 0 - (-1) = +1`)
+and vanishes at every later gate (`k >= 2`). Thus on ready histories the
+field-to-source coupling is a **one-time initial field-dependent impulse** into
+the source register `s`, followed by the six-periodic source readout
 
     chi_n(a;w) = a * (1,2,2,1,0,0)_n + beta(w) * (0,1,2,2,1,0)_n,
 
@@ -104,8 +110,8 @@ frozen files:
 
 - **Full-carrier reversible integer map (`B1`):** The 38-coordinate core step
   with `s' = s + Phi(P,Q)` is injective with exact partial inverse `Core^-1`,
-  and the 40-coordinate funded map satisfies `F^-1 = Rev F Rev` conserving
-  `E + b`.
+  and the 40-coordinate reversible funded bijection satisfies `F^-1 = Rev F Rev`
+  conserving `E + b`.
 - **Finite coupling classification (`B2`):**
   1. Among the **eight fixed canonical coordinate projections** of
      `Herm_2(Z[j])`, `c_1 = coeff_j((H-R)_01)` is the unique coordinate that
@@ -172,14 +178,16 @@ frozen files:
    `1645/209304 < 1/125` remain intact.
 3. **Oscillator summation (`PROOF.md` lines 321-326):**
    The printed telescoping identity is algebraically false; the six-periodic
-   formula `chi_n = a*(1,2,2,1,0,0)_n + beta(w)*(0,1,2,2,1,0)_n` follows
-   directly from the second-order initial-value recurrence
-   `q_{t+1} - q_t + q_{t-1} = beta * delta_{t,1}` with `q_0 = q_1 = 0`.
+   formula `chi_n = a*(1,2,2,1,0,0)_n + beta(w)*(0,1,2,2,1,0)_n` follows by
+   adding the autonomous source component `chi_n^auto = a*(1,2,2,1,0,0)_n`
+   (`chi_1^auto = a`, `chi_2^auto = 2a`) to the `beta`-driven impulse response
+   `q_n = beta(w)*(0,1,2,2,1,0)_n` satisfying the second-order initial-value
+   recurrence `q_{t+1} - q_t + q_{t-1} = beta(w) * delta_{t,1}` with `q_0 = q_1 = 0`.
 4. **Detector norm and `P_2` norm arithmetic (`PROOF.md` section 4.1):**
-   `N(D_0) = 4`, not `6`, and the Euclidean squared norms of `P_2` for word
-   `0010` (free / minus / plus) are `344982`, `343694`, and `346286` (rather
-   than two offsetting `+2` typos in `PROOF.md`). The executable energy prefixes
-   and sharp banks `344409, 347059` are exact.
+   `N(D_0) = 4` (not `6`), `N(A^-1 D_0) = 14` (not `16`), and the Euclidean
+   squared norms of `P_2` for word `0010` (free / minus / plus) are `344982`,
+   `343694`, and `346286` (rather than two offsetting `+2` typos in `PROOF.md`).
+   The executable energy prefixes and sharp banks `344409, 347059` are exact.
 5. **Vector parity wording (`PREREG.md` B2.3):**
    Because `sum_r ell_r = 0`, odd forcing changes the vector residue
    `P_n (mod 2)` rather than the parity of the scalar coordinate sum.
