@@ -109,14 +109,16 @@ three exact mathematical threads meet:
    assumption, at least $\gg \delta X / \log X$ oriented split prime ideals
    (and hence prime polarization orbits) in $[X/2, X]$ inside every projected
    rapidity sector of width $\delta \ge (2\pi)^{-1} X^{-0.235}$ on
-   $\mathbb R/(L\mathbb Z)$ (equivalently on the symmetric pair of sheets
-   $J \cup (J+L) \subset \mathbb R/(2L\mathbb Z)$).
+   $\mathbb R/(L\mathbb Z)$ (and on $\mathbb R/(2L\mathbb Z)$ for the union of
+   the two opposite sheets $J \cup (J+L)$; single-sheet arcs on
+   $\mathbb R/(2L\mathbb Z)$ remain `[OPEN]`).
    Separately, when GRH is permitted as an explicit premise for $L_F(s,\Xi_m)$,
    Borel-Caratheodory and Mellin inversion prove a self-contained smooth
-   summatory estimate with explicit dependence $(1+|m|)^{12 C_0/\delta} X^{1/2+\delta}$
-   on the analytic conductor $Q_m(t) = 5(1 + |t + \mu_m|)(1 + |t - \mu_m|)$,
-   sharpened to $(1+|m|)^\varepsilon X^{1/2+\delta}$ when the conditional
-   Littlewood bound is imported.
+   summatory estimate with explicit polynomial dependence
+   $(1+|m|)^{B_\delta} X^{1/2+\delta}$ ($B_\delta = 12/\delta$) on the analytic
+   conductor $Q_m(t) = 5(1 + |t + \mu_m|)(1 + |t - \mu_m|)$; improving the
+   exponent $B_\delta$ to $\varepsilon > 0$ and uniform summation over growing
+   mode ranges remain `[OPEN]`.
 
 ---
 
@@ -172,7 +174,7 @@ named at the exact family where they are invoked:
 | **Ordinary $\mathrm{RH}$ for $\zeta(s)$** | Zero-freeness of $\zeta(s)$ in $\Re s > 1/2$; controls the principal scalar channel $\mathcal D_0(s) = 1/\zeta(s)$ ($m_0 = \mu$). | Does not imply $\mathrm{GRH}$ for $L(s,\chi_5)$ or for any nonzero mode $L_F(s,\Xi_m)$, and does not discharge `TRIVIAL-RAPIDITY-EVALUATION-BRIDGE [O]` (which requires a non-circular derivation without a zeta-zero premise). |
 | **$\mathrm{GRH}$ for $\zeta_F(s) = \zeta(s)L(s,\chi_5)$** | Combines ordinary $\mathrm{RH}$ for $\zeta(s)$ and $\mathrm{GRH}$ for $L(s,\chi_5)$; ensures the numerator $L(s,\chi_5)$ of $\mathcal D^{(m)}(s)$ has no zeros in $\Re s > 1/2$, making holomorphy of $\mathcal D^{(m)}(s)$ on $\Re s > 1/2$ equivalent to $\mathrm{GRH}$ for $L_F(s,\Xi_m)$. | Does not imply zero-freeness of $L_F(s,\Xi_m)$ for $m \ne 0$. |
 | **$\mathrm{GRH}$ for a fixed mode $L_F(s,\Xi_m)$ ($m \ne 0$)** | Ensures $\mathcal D^{(m)}(s) = L(s,\chi_5)/L_F(s,\Xi_m)$ is holomorphic on $\Re s > 1/2$ and gives the fixed-mode smooth summatory bound $\sum_{n\ge 1} m^{(m)}(n) w(n/X) = O_{m,w,\delta}(X^{1/2+\delta})$. | Does not control uniformity as $|m| \to \infty$ or sharp-cutoff sums without explicit conductor tracking. |
-| **$\mathrm{GRH}$ for $\{L_F(s,\Xi_m)\}_{m\ne 0}$ with conductor control** | Retains the analytic conductor $Q_m(t) = 5(1 + |t + \mu_m|)(1 + |t - \mu_m|)$ ($\mu_m = \pi m/(2L)$), yielding the proved Borel-Caratheodory smooth bound $(1 + |m|)^{12 C_0/\delta} X^{1/2+\delta}$ (and the imported Littlewood refinement $(1 + |m|)^\varepsilon X^{1/2+\delta}$) across growing mode ranges $|m| \le H(X)$. | Sharp-cutoff summation still requires separate Perron truncation and vertical mean-value control. |
+| **$\mathrm{GRH}$ for $\{L_F(s,\Xi_m)\}_{m\ne 0}$ with conductor control** | Retains the analytic conductor $Q_m(t) = 5(1 + |t + \mu_m|)(1 + |t - \mu_m|)$ ($\mu_m = \pi m/(2L)$), yielding the proved Borel-Caratheodory smooth bound $(1 + |m|)^{B_\delta} X^{1/2+\delta}$ with $B_\delta = 12/\delta$. | Subpolynomial conductor exponent $\varepsilon > 0$, uniform summation over growing mode ranges $|m| \le H(X)$, and sharp-cutoff summation remain `[OPEN]`. |
 
 ---
 
@@ -243,7 +245,8 @@ $\zeta_F'(0) = \zeta(0)L'(0,\chi_5) = -\tfrac{1}{2}\log\phi$. $\square$
   quotient $\mathcal D^{(m)}(s) = L(s,\chi_5)/L_F(s,\Xi_m)$, the meromorphic
   pole-order identity, the conditional GRH smooth summatory bound with explicit
   analytic conductor $Q_m(t)$, and the unconditional Baier-Roy narrow-sector
-  prime bound on $\mathbb R/(L\mathbb Z)$ and $\mathbb R/(2L\mathbb Z)$.
+  prime bound on $\mathbb R/(L\mathbb Z)$ (and on $\mathbb R/(2L\mathbb Z)$ only
+  for the union of the two opposite sheets; single-sheet arcs remain open).
 - [`SHA256SUMS`](SHA256SUMS): SHA-256 digests of the package documents.
 
 ### External Primary References

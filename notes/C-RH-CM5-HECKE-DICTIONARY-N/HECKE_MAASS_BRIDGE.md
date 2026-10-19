@@ -393,23 +393,62 @@ Q_m(t) := 5\bigl(1 + |t + \mu_m|\bigr)\bigl(1 + |t - \mu_m|\bigr),
 \tag{A15}
 $$
 
-By the functional equation and Phragmen-Lindelof convexity on $-1/2 \le \sigma \le 5/2$,
-there is an absolute constant $C_0 > 0$ such that
+We first prove an explicit vertical polynomial bound valid on the entire
+half-plane $\sigma \ge -1/2$ (including $\sigma \ge 2$):
+
+- **Right half-plane $\sigma \ge 3/2$ (Euler product / Dirichlet series region):**
+  for all $\sigma \ge 3/2$ and $y \in \mathbb R$, the Dirichlet series and Euler
+  product of $L_F(\sigma + iy, \Xi_m)$ converge absolutely with
+  $$
+  \bigl|L_F(\sigma + iy, \Xi_m)\bigr| \le \zeta_F(\sigma) \le \zeta_F(3/2)
+  \le \zeta_F(3/2)\,Q_m(y) \qquad (\sigma \ge 3/2).
+  $$
+- **Vertical line $\sigma = -1/2$ via the exact gamma shift $\Gamma_{\mathbb R}(w+2) = \frac{w}{2\pi}\Gamma_{\mathbb R}(w)$:**
+  for $s = -\tfrac{1}{2} + iy$, one has $1 - s = \tfrac{3}{2} - iy$, so
+  $\Re(1 - s) = \tfrac{3}{2} = \Re s + 2$. Because $|\Gamma_{\mathbb R}(\sigma - iu)| = |\Gamma_{\mathbb R}(\sigma + iu)|$
+  and $(2\epsilon_m - 1)^2 = 1$ for both $\epsilon_m \in \{0,1\}$, the identity
+  $\Gamma_{\mathbb R}(w+2) = \frac{w}{2\pi}\Gamma_{\mathbb R}(w)$ gives for
+  $u = y \mp \mu_m$:
+  $$
+  \left|\frac{\Gamma_{\mathbb R}(1 - s + \epsilon_m \mp i\mu_m)}{\Gamma_{\mathbb R}(s + \epsilon_m \mp i\mu_m)}\right|_{\Re s = -1/2}
+  = \left|\frac{-\tfrac{1}{2} + \epsilon_m + iu}{2\pi}\right|
+  = \frac{\sqrt{1 + 4u^2}}{4\pi}
+  \le \frac{1 + |u|}{2\pi}.
+  $$
+  Combining the two archimedean places with $\bigl|5^{(1-s)/2}/5^{s/2}\bigr| = 5$
+  and $|L_F(\tfrac{3}{2} - iy, \Xi_m)| \le \zeta_F(3/2)$, the functional
+  equation (A9a) yields on $\Re s = -1/2$:
+  $$
+  \bigl|L_F(-\tfrac{1}{2} + iy, \Xi_m)\bigr|
+  \le \frac{5\,\zeta_F(3/2)}{4\pi^2}\bigl(1 + |y - \mu_m|\bigr)\bigl(1 + |y + \mu_m|\bigr)
+  = \frac{\zeta_F(3/2)}{4\pi^2}\,Q_m(y)
+  \le \zeta_F(3/2)\,Q_m(y).
+  $$
+- **Phragmen-Lindelof on the strip $-1/2 \le \sigma \le 3/2$:** for $m \ne 0$,
+  $L_F(z,\Xi_m)$ is entire of finite order, so applying the Phragmen-Lindelof
+  maximum principle on $-1/2 \le \sigma \le 3/2$ between the boundary bounds at
+  $\sigma = -1/2$ and $\sigma = 3/2$ establishes on the entire half-plane
+  $\sigma \ge -1/2$ the explicit bound with $C_0 = 1$:
 
 $$
-|L_F(\sigma + it, \Xi_m)| \ll Q_m(t)^{C_0} \qquad (-1/2 \le \sigma \le 5/2).
+\boxed{
+\bigl|L_F(\sigma + iy, \Xi_m)\bigr|
+\le \zeta_F(3/2)\,Q_m(y)^{C_0} \qquad (\sigma \ge -1/2,\ C_0 := 1).}
 \tag{A16}
 $$
 
 Fix $0 < \delta < 1/2$. Under $\mathrm{GRH}$ for $L_F(s,\Xi_m)$, $L_F(z,\Xi_m)$
 has no zeros in $\Re z > 1/2$, so $\log L_F(z,\Xi_m)$ is analytic on the disk
-$|z - (2 + it)| \le R := \tfrac{3}{2} - \tfrac{\delta}{2}$, with its branch fixed
-at the center $2 + it$ by the absolutely convergent Euler sum
-$|\log L_F(2 + it, \Xi_m)| \le \log\zeta_F(2) = O(1)$. On this disk, (A16)
-gives $\Re\log L_F(z,\Xi_m) \le C_0 \log Q_m(t) + O(1)$. Applying the
-Borel-Caratheodory theorem on the concentric disk of smaller radius
-$r := \tfrac{3}{2} - \delta$ (where $\frac{2r}{R-r} = \frac{6-4\delta}{\delta} \le \frac{6}{\delta}$)
-yields
+$|z - (2 + it)| \le R := \tfrac{3}{2} - \tfrac{\delta}{2}$ (which spans real
+parts $\Re z \in [\tfrac{1}{2} + \tfrac{\delta}{2},\, \tfrac{7}{2} - \tfrac{\delta}{2}] \subset [-1/2, \infty)$),
+with its branch fixed at the center $2 + it$ by the absolutely convergent Euler
+sum $|\log L_F(2 + it, \Xi_m)| \le \log\zeta_F(2) = O(1)$. On this disk,
+$|\Im z - t| \le R < 3/2$ implies $1 + |\Im z \pm \mu_m| \le \tfrac{5}{2}(1 + |t \pm \mu_m|)$
+and $Q_m(\Im z) \le \tfrac{25}{4}Q_m(t)$, so (A16) gives
+$\Re\log L_F(z,\Xi_m) \le C_0 \log Q_m(t) + \log(\tfrac{25}{4}\zeta_F(3/2))$.
+Applying the Borel-Caratheodory theorem on the concentric disk of smaller
+radius $r := \tfrac{3}{2} - \delta$ (where $\frac{2r}{R-r} = \frac{6-4\delta}{\delta} \le \frac{6}{\delta}$)
+yields both upper and lower control of $\Re\log L_F$:
 
 $$
 \bigl|\log L_F(\sigma + it, \Xi_m)\bigr|
@@ -417,18 +456,20 @@ $$
 \qquad (\tfrac{1}{2} + \delta \le \sigma \le 2),
 $$
 
-and therefore the self-contained polynomial reciprocal bound
+and therefore the self-contained polynomial reciprocal bound with explicit
+exponent $B_\delta := 12 C_0 / \delta = 12 / \delta$:
 
 $$
 \boxed{
 \bigl|L_F(\sigma + it, \Xi_m)^{-1}\bigr|
 \ll_\delta Q_m(t)^{6 C_0 / \delta}
-\ll_\delta \bigl(1 + |t| + |\mu_m|\bigr)^{12 C_0 / \delta}
+\ll_\delta \bigl(1 + |t| + |\mu_m|\bigr)^{B_\delta},
+\qquad B_\delta := \frac{12 C_0}{\delta} = \frac{12}{\delta}
 \qquad (\tfrac{1}{2} + \delta \le \sigma \le 2).}
 \tag{A17}
 $$
 
-### 5.2 Mellin Contour Shift and Mode-Growing Regime
+### 5.2 Mellin Contour Shift and Mode Dependence
 
 Combining the proved Borel-Caratheodory bound (A17) with the standard convexity
 bound $|L(\sigma + it, \chi_5)| \ll (1 + |t|)^{1/2}$ on $\tfrac{1}{2} + \delta \le \sigma \le 2$
@@ -436,12 +477,12 @@ gives
 
 $$
 \bigl|\mathcal D^{(m)}(\sigma + it)\bigr|
-\ll_\delta (1 + |t|)^{1/2 + 12 C_0 / \delta} (1 + |m|)^{12 C_0 / \delta}
-\qquad (\tfrac{1}{2} + \delta \le \sigma \le 2).
+\ll_\delta (1 + |t|)^{1/2 + B_\delta} (1 + |m|)^{B_\delta}
+\qquad (\tfrac{1}{2} + \delta \le \sigma \le 2,\ B_\delta = 12/\delta).
 \tag{A18}
 $$
 
-Integration by parts $K = \lceil 12 C_0 / \delta \rceil + 3$ times shows
+Integration by parts $K = \lceil B_\delta \rceil + 3$ times shows
 $|\widehat w(\sigma + it)| \ll_{w,\delta} (1 + |t|)^{-K}$ uniformly on
 $1/2 \le \sigma \le 2$. Shifting the Mellin inversion contour
 
@@ -451,42 +492,36 @@ $$
 $$
 
 to the line $\Re s = \tfrac{1}{2} + \delta$ encounters no poles and proves the
-self-contained conditional smooth summatory estimate:
+conditional smooth summatory estimate with explicit polynomial conductor
+exponent $B_\delta = 12/\delta$:
 
 $$
 \boxed{
 \sum_{n\ge 1} m^{(m)}(n) w(n/X)
-= O_{w,\delta}\Bigl((1 + |m|)^{12 C_0 / \delta} X^{1/2 + \delta}\Bigr)
+= O_{w,\delta}\Bigl((1 + |m|)^{B_\delta} X^{1/2 + \delta}\Bigr),
+\qquad B_\delta = \frac{12 C_0}{\delta} = \frac{12}{\delta}
 \qquad (X \ge 1, \ m \ne 0).}
 \tag{A19}
 $$
 
-**Imported conditional Littlewood-Lindelof refinement:** if one additionally
-imports the standard conditional Littlewood bound (`[IMPORTED CONDITIONAL INPUT]`:
-$\Re\log L_F(z,\Xi_m) \ll (\log Q_m(t))^{2-2\Re z}/\log\log Q_m(t)$ under
-$\mathrm{GRH}$, Iwaniec-Kowalski, Theorem 5.17 / Corollary 5.20), the exponent
-$12 C_0 / \delta$ in (A17)-(A19) is replaced for any fixed $\delta > 0$ and any
-$\varepsilon > 0$ by $\varepsilon$:
-
-$$
-\bigl|L_F(\sigma + it, \Xi_m)^{-1}\bigr|
-\ll_{\delta,\varepsilon} Q_m(t)^\varepsilon
-\ll_{\delta,\varepsilon} (1 + |t| + |m|)^\varepsilon,
-\qquad
-\sum_{n\ge 1} m^{(m)}(n) w(n/X)
-= O_{w,\delta,\varepsilon}\Bigl((1 + |m|)^\varepsilon X^{1/2 + \delta}\Bigr).
-\tag{A19a}
-$$
-
-In particular, when summing a smooth linear combination $\sum_{1 \le |m| \le H(X)} c_m \sum_{n\ge 1} m^{(m)}(n) w(n/X)$
-under $\mathrm{GRH}$ for all modes $1 \le |m| \le H(X)$, the individual mode
-bounds contribute $(1 + H(X))^{12 C_0 / \delta} X^{1/2+\delta} \sum_{|m|\le H(X)} |c_m|$
-by the proved bound (A19) (or $(1 + H(X))^\varepsilon X^{1/2+\delta} \sum_{|m|\le H(X)} |c_m|$
-under the imported refinement (A19a)). Passing from smooth weights $w(n/X)$ to
-a sharp cutoff $\mathbf 1_{n\le X}$ replaces rapid Mellin decay by the Perron
-kernel $X^s/s$, which requires a separate truncation height $T$ and vertical
-mean-value control of $\mathcal D^{(m)}(\tfrac{1}{2} + \delta + it)$ over
-$|t| \le T$.
+**Scope boundary (`[OPEN]` for $\varepsilon$-exponent and growing-mode / sharp-cutoff sums):**
+1. *From $B_\delta = 12/\delta$ to $\varepsilon > 0$ (`[OPEN / NOT CLAIMED]`):*
+   Replacing the proved exponent $B_\delta = 12/\delta$ in (A17)-(A19) by an
+   arbitrary $\varepsilon > 0$ is **not** claimed here. Doing so requires first
+   establishing a conditional Littlewood upper bound
+   $\Re\log L_F(z,\Xi_m) \ll_\delta (\log Q_m(\Im z))^{2-2\Re z}/\log\log Q_m(\Im z)$
+   uniformly in the spectral parameter $\mu_m$ on $\Re z \ge \tfrac{1}{2} + \tfrac{\delta}{2}$,
+   and second applying Borel-Caratheodory on a disk inside $\Re z \ge \tfrac{1}{2} + \tfrac{\delta}{2}$
+   to turn that upper bound on $\Re\log L_F$ into a lower bound on $\Re\log L_F$
+   (since an upper bound on $\Re\log L_F$ alone bounds $|L_F|$ above, not
+   $|L_F^{-1}|$).
+2. *Growing mode ranges $|m| \le H(X)$ and sharp cutoffs (`[OPEN]`):*
+   Under (A19), summing a linear combination over $1 \le |m| \le H(X)$ carries
+   the polynomial factor $(1 + H(X))^{B_\delta} \sum_{|m|\le H(X)} |c_m|$.
+   Uniform subpolynomial control in $H(X)$ and passage from smooth weights
+   $w(n/X)$ to the sharp cutoff $\mathbf 1_{n\le X}$ (which replaces rapid
+   Mellin decay by the Perron kernel $X^s/s$ and requires vertical mean-value
+   control over $|t| \le T$) remain **`[OPEN]`**.
 
 ---
 
@@ -553,21 +588,23 @@ $$
 
 Thus:
 
-- **Proved unconditional consequence of Baier-Roy on $\mathbb R/(L\mathbb Z)$:**
+- **Proved unconditional consequence of Baier-Roy on $\mathbb R/(L\mathbb Z)$
+  (and on $\mathbb R/(2L\mathbb Z)$ for the two-sheet union $J \cup (J+L)$):**
   the **sum of counts** on the two opposite sheets $J$ and $J + L$ of
   $\mathbb R/(2L\mathbb Z)$ depends only on the even modes $\Psi_h = \Xi_{2h}$
   and is unconditionally bounded below by $\gg \delta X / \log X$ for
   $\delta \ge (2\pi)^{-1} X^{-0.235}$ directly by (A21).
-- **Single-sheet scope boundary on $\mathbb R/(2L\mathbb Z)$:** Baier and Roy
-  formulate their theorem on the ideal-class torus $\mathbb R/(L\mathbb Z)$
-  using the even modes $\Psi_h = \Xi_{2h}$. Isolating a **single sheet**
-  $J \subset \mathbb R/(2L\mathbb Z)$ requires controlling the odd-mode sum
-  $\sum_{k} c_{2k+1}(J) \sum_{X/2 \le N\mathfrak p \le X} \Xi_{2k+1}(\mathfrak p)$
-  for $|2k+1| \ll \delta^{-1} X^\varepsilon$. Sections 1-2 prove that the odd
-  modes $\Xi_{2k+1}$ have the same trivial finite conductor $\mathfrak f = \mathcal O_F$,
-  level $5$, and root number $W(\Xi_m) = +1$ as the even modes $\Psi_h$
-  (differing only by the archimedean parity shift $\epsilon_m = 1$ in (A9));
-  actually executing the Harman sieve and zero-density steps of Baier-Roy for
-  the odd modes $\Xi_{2k+1}$ is a separate analytic task and is not claimed as
-  already completed in `arXiv:2307.03513v2`.
+- **Single-sheet arcs on $\mathbb R/(2L\mathbb Z)$ (`[OPEN]`):**
+  Equations (6)-(7) and Theorem 3 of Baier-Roy work exclusively on the
+  ideal-class circle $\mathbb R/(L\mathbb Z)$ with the even characters
+  $\Psi_h = \Xi_{2h}$ (which have empty infinite modulus). Isolating a **single
+  sheet** $J \subset \mathbb R/(2L\mathbb Z)$ requires controlling the odd-mode
+  sum $\sum_{k} c_{2k+1}(J) \sum_{X/2 \le N\mathfrak p \le X} \Xi_{2k+1}(\mathfrak p)$,
+  where $\Xi_{2k+1}$ carries the archimedean sign modulus $\infty_1\infty_2$
+  ($\epsilon_{2k+1} = 1$ in (A9)). Having the same finite conductor
+  $\mathfrak f = \mathcal O_F$ does not by itself transfer Baier-Roy's theorem
+  without verifying the zero-free region, zero-density estimate, and Harman
+  sieve inputs for the odd subfamily $\Xi_{2k+1}$; single-sheet prime bounds on
+  $\mathbb R/(2L\mathbb Z)$ therefore remain **`[OPEN]`** in this note.
+
 
