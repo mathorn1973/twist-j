@@ -32,41 +32,56 @@
   (SHA-256
   `3accd1e0633cb07e10410bb6df112d4712b789c6bd50dc62226ae7674667d334`).
 
-## 3. Consistency Check Between Post-Run Documentation and Frozen Files
+## 3. Post-Review Scope Narrowing and Frozen-Text Wording Errata
 
-All equations, signs, bounds, and certificate lines in `RESULT.md`,
-`REVIEW.md`, and `README.md` have been checked line by line against
-`PREREG.md`, `PROOF.md`, `verify.py`, `breaker.py`, and `EXPECTED.txt`:
-- Joint action $A_{\mathrm{pos}}$ has positive source kinetic term
-  $+\frac{1}{2}\sum_{n\ge 0}(\chi_{n+1}-\chi_n)^2$, positive source
-  potential $-\sum_{n\ge 1}(\frac{1}{2}\chi_n^2 - a\chi_n)$, and coupling
-  $+\frac{1}{2}\sum_{n\ge 1}\frac{\chi_n}{m^n}\langle \ell, V_{\mathrm{metric},11,n}-V_{\mathrm{metric},22,n}\rangle$.
-- Coupled equations:
-  $(\Delta_c^2 + L)h_n = \frac{\chi_n}{m^n}\ell$ and
-  $(\Delta_c^2 + 1)\chi_n = a + \frac{\langle \ell, h_n\rangle}{m^n}$.
-- Physical bond Hamiltonian $\mathcal{H}_{\mathrm{phys},n} = \mathcal{H}_{h,n} + \mathcal{H}_{\chi,n} > 0$
-  and one-step Noether work law (`HAMILTONIAN_CHECKS=720`,
-  `ZERO_SOURCE_WORK1=1/839808`).
-- Canonical symplectic Wronskian $\Omega_n^+ = \Omega_{h,n} + \Omega_{\chi,n} = \Omega_1^+$
-  (`SYMPLECTIC_CHECKS=540`, `SYMPLECTIC_EXCHANGE3=-1/136048896,1/136048896,1/4`).
-- Uniform bounds:
-  $|\chi_n - \chi_n^{\mathrm{auto}}| < 2/323$,
-  $|\chi_n| < 648/323 < 3$,
-  $\|h_n - h_n^{\mathrm{free}}\|_\infty < 1630/209304 < 1/125$,
-  $-299/500 < h_n(r) < 499/500$.
+In response to the public review on PR #1648
+(`https://github.com/mathorn1973/twist-j/pull/1648#issuecomment-6270208985`),
+the post-run files (`RESULT.md`, `REVIEW.md`, `README.md`) and PR
+description have been updated as follows while preserving all 6 frozen
+files and `EXPECTED.txt` intact:
+
+1. **Homogeneous ($a=0$) vs affine ($a\ne 0$) symplectic Wronskian scope:**
+   `PREREG.md` §4.3 and `PROOF.md` §4.3 correctly restrict the uncentered
+   two-solution Wronskian $\Omega_n^+$ (`SYMPLECTIC_CHECKS=540`) to the
+   homogeneous context $a = 0$. On uncentered affine solutions with
+   $a \ne 0$, $\Omega_{n+1}^+ - \Omega_n^+ = a(\chi_n^{(1)} - \chi_n^{(2)})$
+   (e.g. at `(0010, 0011)` and $a=+1$, $\Omega_1^+ = \Omega_2^+ = 1/4$ but
+   $\Omega_3^+ = 163/648$). For general fixed $a$, symplectic conservation
+   holds for tangent variations or differences from a common particular
+   solution.
+2. **Uncoupled quadratic bond form $\mathcal{H}_{\mathrm{phys},n}$ and
+   interaction energy account:**
+   $\mathcal{H}_{\mathrm{phys},n} = \mathcal{H}_{h,n} + \mathcal{H}_{\chi,n} > 0$
+   is the quadratic bond energy of the two uncoupled operators around the
+   uncoupled equilibrium $(\frac{1}{5}\mathbf{1}, a)$, satisfying the exact
+   work balance $\mathcal{H}_{\mathrm{phys},n+1} - \mathcal{H}_{\mathrm{phys},n} = W_n$
+   (`HAMILTONIAN_CHECKS=720`, `ZERO_SOURCE_WORK1=1/839808`). In the witness
+   `0011`, $a=0$, $\mathcal{H}_{h,1} = \mathcal{H}_{h,2} = 53/432$ and
+   $\mathcal{H}_{\chi,2} = 1/839808$: the gain comes from the interaction
+   term $W_n = g_n(B_{n+1} - B_n)$ with $g_n = 324^{-n}$ and
+   $B_n = \frac{1}{2}(\chi_n\langle\ell,h_{n-1}\rangle + \chi_{n-1}\langle\ell,h_n\rangle)$,
+   so $J_n = \mathcal{H}_{\mathrm{phys},n} - g_{n-1}B_n$ satisfies
+   $J_{n+1} - J_n = (g_{n-1} - g_n)B_n$.
+3. **Terminology and count errata:**
+   - $\Omega_n^+$ is the canonical alternating symplectic form associated
+     with the positive-definite kinetic metric $I_6 \succ 0$.
+   - `OFFSHELL_VARIATIONS=36` evaluates 36 gradient components on 6
+     off-shell triples with at least one nonzero component per triple (18
+     zero and 18 nonzero components).
+   - The funded map $F$ is a reversible bijection ($F^{-1} = \mathrm{Rev}\,F\,\mathrm{Rev}$),
+     where $\mathrm{Rev}$ is the involution.
+   - Exact centered finite differences equal analytical partial derivatives
+     because $A_{\mathrm{pos}}$ is quadratic.
 
 ## 4. Remaining Limitations
 
 1. **Step-dependent coupling scale vs autonomous total Hamiltonian:**
-   Because the interaction term $\frac{\chi_n}{m^n}\langle \ell, h_n\rangle$
-   depends explicitly on $n$ via $m^{-n}$, the positive quadratic
-   Hamiltonian $\mathcal{H}_{\mathrm{phys},n}$ obeys the exact discrete
-   Noether work balance $\mathcal{H}_{\mathrm{phys},n+1} - \mathcal{H}_{\mathrm{phys},n} = W_n$
-   rather than autonomous conservation with an $n$-independent potential,
-   and the integer funding account $E(x) + b$ remains a separate
-   arithmetic representation budget.
+   Because $g_n = m^{-n}$ varies with $n$, $J_{n+1} - J_n = (g_{n-1} - g_n)B_n$
+   is not identically zero. Autonomous constant-coupling evolution with an
+   interaction-inclusive conserved total energy and discrete Legendre map
+   is established in the successor probe
+   `P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1` (Draft PR #1650, issue #1649).
 2. **Linear 3+1 TT and 1D ring idealization:**
    The probe treats the linearized TT sector on the 5-site ring with a
-   scalar source; full nonlinear discrete gravitational dynamics,
-   constraint propagation with dynamical matter, and 3D spatial geometry
+   scalar source; nonlinear gravitational terms and constraint propagation
    remain open.
