@@ -4,7 +4,7 @@
 STATUS:                  NON-CANONICAL / SYNTHESIS AND CLASSICAL DICTIONARY
 AUTHORITY:               Public Canon v103 remains unchanged
 PUBLIC BASE:             dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d (tag canon-v103)
-PUBLIC CONTENT COMMIT:   01fb76f6b3b14a6a5ec05d0017ea922390ab6f66
+PUBLIC CONTENT COMMIT:   8e1f6538a09c8ef012a0a9971d501119f13d52ee
 PUBLIC CANON SHA-256:    d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b
 PUBLIC CANON BYTES:      1052518
 DATE:                    2026-10-20
@@ -31,10 +31,11 @@ $$
 
 three exact mathematical threads meet:
 
-1. **Unconditional geometry of polarizations on the selected $\mathrm{CM}_5$
-   Jacobian** ([`CM5_POLARIZATIONS.md`](CM5_POLARIZATIONS.md)): on the fixed
-   abelian surface $B = \operatorname{Jac}(y^2 = x^5 - 1)$ with canonical
-   principal polarization $\lambda_0$, origin-preserving automorphisms are
+1. **Unconditional geometry, integer census, and sector asymptotics of
+   polarizations on the selected $\mathrm{CM}_5$ Jacobian**
+   ([`CM5_POLARIZATIONS.md`](CM5_POLARIZATIONS.md)): on the fixed abelian
+   surface $B = \operatorname{Jac}(y^2 = x^5 - 1)$ with canonical principal
+   polarization $\lambda_0$, origin-preserving automorphisms are
    $\operatorname{Aut}(B,0) = \mathcal O_K^\times$, the Neron-Severi group is
    $\operatorname{NS}(B) \simeq \mathcal O_F = \mathbb Z[\phi]$, the ample cone
    is the totally positive cone $\eta \gg 0$, and $D_\eta^2 = 2 N_{F/\mathbb Q}(\eta)$.
@@ -42,23 +43,39 @@ three exact mathematical threads meet:
    there is an exact bijection for every $n \ge 1$ between
    $\operatorname{Aut}(B,0)$-orbits of polarizations with $D^2/2 = n$ and
    integral ideals $\mathfrak a \subset \mathcal O_F$ of norm $n$.
-   In particular, for every rational prime $p$, the number of type-$(1,p)$
-   polarization orbits is $2$ if $p \equiv 1,4 \pmod 5$, $1$ if $p = 5$
-   (represented by $\eta_5 = 2 + \phi$), and $0$ if $p \equiv 2,3 \pmod 5$.
+   For every rational prime $p$, the number of type-$(1,p)$ polarization orbits
+   is $2$ if $p \equiv 1,4 \pmod 5$, $1$ if $p = 5$ (represented by
+   $\eta_5 = 2 + \phi$), and $0$ if $p \equiv 2,3 \pmod 5$.
+   Every polarization orbit has a unique representative $\eta = x + y\phi$
+   modulo $\phi^{2\mathbb Z}$ in the integer cone $x \ge 1,\ 0 \le y < x$, with
+   rapidity $t(\eta) = \tfrac{1}{2}\log(\sigma_1\eta/\sigma_2\eta) \in [0,2L)$,
+   norm sandwich $x^2 \le q(x,y) = x^2 + xy - y^2 \le \tfrac{5}{4}x^2$, and
+   elementary divisors $(d_1,d_2) = (\gcd(x,y), q(x,y)/\gcd(x,y))$. For $M$
+   equal sectors on $\theta(\eta) = t(\eta)/(2L) \in [0,1)$, the sector index
+   $k \in \{0,\dots,M-1\}$ is decided purely in $\mathbb Z[\phi]$ via
+   $\phi^{4k}(\eta')^M \le \eta^M < \phi^{4(k+1)}(\eta')^M$
+   ($\eta' = \sigma_2\eta = (x+y) - y\phi > 0$). Across all norms $q \le X$ and
+   any arc $I \subset \mathbb R/\mathbb Z$ of Haar measure $|I|$, the all-class
+   and primitive type-$(1,n)$ counts satisfy uniformly in $I$:
+   $$
+   A(X,I) = \frac{2L}{\sqrt 5}\,|I|\,X + O(\sqrt X + 1), \qquad
+   A_{\mathrm{prim}}(X,I) = \frac{2L}{\sqrt 5\,\zeta(2)}\,|I|\,X + O\bigl(\sqrt X\log(2X)\bigr).
+   $$
 2. **Polarization rapidity, the full Hecke character family $\Xi_m$, Maass
-   cusp forms, and the integral Mobius quotient**
+   cusp forms, root numbers, and the integral Mobius quotient**
    ([`HECKE_MAASS_BRIDGE.md`](HECKE_MAASS_BRIDGE.md)):
    pullback by $\operatorname{Aut}(B,0)$ shifts the hyperbolic rapidity
    $t(\eta) = \tfrac{1}{2}\log(\sigma_1\eta/\sigma_2\eta)$ by $2nL$, making
    $\mathbb R/(2L\mathbb Z)$ the natural polarization-orbit circle and a
    degree-two cover of the ideal-rapidity circle $\mathbb R/(L\mathbb Z)$.
    Its Fourier modes define the complete family of unitary Hecke characters of
-   finite conductor $\mathcal O_F$:
+   finite conductor $\mathcal O_F$ that are trivial on the positive diagonal of
+   $F_\infty^\times$:
    $$
    \Xi_m((\alpha))
-   = \operatorname{sgn}(N_{F/\mathbb Q}\alpha)^m
+   = \operatorname{sgn}(N_{F/\mathbb Q}\alpha)^{\epsilon_m}
      \left|\frac{\sigma_1\alpha}{\sigma_2\alpha}\right|^{i\pi m/(2L)},
-   \qquad m \in \mathbb Z,
+   \qquad \epsilon_m = m \bmod 2 \in \{0,1\}, \quad m \in \mathbb Z,
    $$
    whose even subfamily $\Psi_h = \Xi_{2h}$ is the registered ideal-rapidity
    character lift. The unweighted, mode-$m$ weighted, and primitive type-$(1,n)$
@@ -70,26 +87,36 @@ three exact mathematical threads meet:
    $$
    Under quadratic automorphic induction (Molin-Page, Proposition 39 and
    Example 40), each $\Xi_m$ with $m \ne 0$ corresponds to a Maass cusp form on
-   $\Gamma_0(5)$ of nebentypus $\chi_5$, parity $\epsilon = m \bmod 2 \in \{0,1\}$,
+   $\Gamma_0(5)$ of nebentypus $\chi_5$, parity $\epsilon_m = m \bmod 2 \in \{0,1\}$,
    and Laplace eigenvalue $\lambda_m^{\mathrm{Maass}} = \tfrac{1}{4} + (\pi m/(2L))^2$.
-   Evaluating the registered integral Mobius lift $\boldsymbol\mu$ at mode $h$
+   Every mode $m \in \mathbb Z$ (both even and odd) satisfies the functional
+   equation $\Lambda(s,\Xi_m) = \Lambda(1-s,\Xi_{-m}) = \Lambda(1-s,\Xi_m)$ with
+   global root number $W(\Xi_m) = +1$, because the archimedean epsilon factor
+   $(-i)^{\epsilon_m}(-i)^{\epsilon_m} = (-1)^m$ cancels the local epsilon factor
+   $\Xi_m(\mathfrak p_5) = (-1)^m$ at the different $\mathfrak d_F = (\sqrt 5) = \mathfrak p_5$.
+   Convolving the ideal-Mobius character coefficients $b^{(m)}(n)$ with $\chi_5$
    yields the exact Dirichlet series quotient
    $$
-   \mathcal D_h(s) = \sum_{n\ge 1} m_h(n) n^{-s}
-   = \frac{L(s,\chi_5)}{L_F(s,\Psi_h)} \qquad (\Re s > 1),
+   \mathcal D^{(m)}(s) = \sum_{n\ge 1} m^{(m)}(n) n^{-s}
+   = \frac{L(s,\chi_5)}{L_F(s,\Xi_m)} \qquad (\Re s > 1),
    $$
-   with $\mathcal D_0(s) = 1/\zeta(s)$.
+   with $\mathcal D_{2h}(s) = \mathcal D_h(s) = L(s,\chi_5)/L_F(s,\Psi_h)$ and
+   $\mathcal D_0(s) = 1/\zeta(s)$.
 3. **Unconditional narrow rapidity sectors and conditional GRH bounds with
    explicit analytic conductor** ([`HECKE_MAASS_BRIDGE.md`](HECKE_MAASS_BRIDGE.md)):
    specializing the theorem of Baier and Roy (`arXiv:2307.03513v2`, Theorems 1
    and 3, eq. (6)) to $F = \mathbb Q(\sqrt 5)$ gives, without any RH or GRH
    assumption, at least $\gg \delta X / \log X$ oriented split prime ideals
-   (and hence prime polarization orbits) in $[X/2, X]$ inside every rapidity
-   sector of width $\delta \ge (2\pi)^{-1} X^{-0.235}$ on $\mathbb R/(L\mathbb Z)$.
+   (and hence prime polarization orbits) in $[X/2, X]$ inside every projected
+   rapidity sector of width $\delta \ge (2\pi)^{-1} X^{-0.235}$ on
+   $\mathbb R/(L\mathbb Z)$ (equivalently on the symmetric pair of sheets
+   $J \cup (J+L) \subset \mathbb R/(2L\mathbb Z)$).
    Separately, when GRH is permitted as an explicit premise for $L_F(s,\Xi_m)$,
-   Borel-Caratheodory and Mellin inversion yield the smooth summatory estimate
-   with explicit dependence on the analytic conductor
-   $Q_m(t) \asymp 5(1 + |t + \mu_m|)(1 + |t - \mu_m|)$.
+   Borel-Caratheodory and Mellin inversion prove a self-contained smooth
+   summatory estimate with explicit dependence $(1+|m|)^{12 C_0/\delta} X^{1/2+\delta}$
+   on the analytic conductor $Q_m(t) = 5(1 + |t + \mu_m|)(1 + |t - \mu_m|)$,
+   sharpened to $(1+|m|)^\varepsilon X^{1/2+\delta}$ when the conditional
+   Littlewood bound is imported.
 
 ---
 
@@ -140,12 +167,12 @@ named at the exact family where they are invoked:
 
 | Premise or external theorem | Exact scope in the $\mathbb Q(\sqrt 5)$ / $\mathrm{CM}_5$ dictionary | What it does NOT cover |
 |---|---|---|
-| **Unconditional** | All $\mathrm{CM}_5$ polarization bijections, norm and intersection identities, the $\mathbb R/(2L\mathbb Z) \to \mathbb R/(L\mathbb Z)$ cover, Euler products for $L_F(s,\Xi_m)$, $L_F(s,\Xi_m)/\zeta(2s)$, and $\mathcal D^{(m)}(s)$ on $\Re s > 1$, the Maass cusp-form correspondence (Molin-Page), the regulator identity $L'(0,\chi_5) = \log\phi$, and the Baier-Roy narrow-sector prime lower bound on $\mathbb R/(L\mathbb Z)$. | Zero-free regions beyond classical de la Vallee Poussin / Vinogradov-Korobov bounds or square-root summatory cancellation. |
+| **Unconditional** | All $\mathrm{CM}_5$ polarization bijections, the integer cone $x \ge 1,\ 0 \le y < x$, the logarithm-free sector decision in $\mathbb Z[\phi]$, uniform all-class and primitive sector asymptotics $A(X,I)$ and $A_{\mathrm{prim}}(X,I)$, the $\mathbb R/(2L\mathbb Z) \to \mathbb R/(L\mathbb Z)$ cover, Euler products for $L_F(s,\Xi_m)$, $L_F(s,\Xi_m)/\zeta(2s)$, and $\mathcal D^{(m)}(s)$ on $\Re s > 1$, the Maass cusp-form correspondence (Molin-Page), the global root number $W(\Xi_m) = +1$, the regulator identity $L'(0,\chi_5) = \log\phi$, and the Baier-Roy narrow-sector prime lower bound on $\mathbb R/(L\mathbb Z)$. | Prime-norm sector equidistribution on a single sheet of $\mathbb R/(2L\mathbb Z)$ without odd-mode sieve control, zero-free regions beyond classical de la Vallee Poussin / Vinogradov-Korobov bounds, or square-root summatory cancellation. |
 | **External Quasi-RH preprints** (OpenAI, Sept 30 and Oct 5, 2026, `openai/math` commit `1581d4cbdd69a0faf34b2089614fe2a814316a6a`) | Declares zero-freeness in $\Re s > 7/8$ (Sept 30; formalized in Lean 4.34.1 for `DirichletSevenEighths`) and $\Re s > 11/12$ (Oct 5, via Poisson summation, sextic-to-cubic Gauss-Jacobi identities, Kubota metaplectic theta series, and quadratic large sieve) for all Dirichlet $L$-functions and finite-order Hecke $L$-functions over $\mathbb Q(\sqrt{-3})$. By Dedekind factorization this covers $\zeta(s)$, $L(s,\chi_5)$, $\zeta_F(s)$, and $\zeta_K(s)$ in $\Re s > 7/8$. | Does not establish $\Re s > 1/2$ (full RH/GRH), and does not cover the infinite-order Hecke family $L_F(s,\Xi_m)$ ($m \ne 0$) over the real quadratic field $F = \mathbb Q(\sqrt 5)$. |
 | **Ordinary $\mathrm{RH}$ for $\zeta(s)$** | Zero-freeness of $\zeta(s)$ in $\Re s > 1/2$; controls the principal scalar channel $\mathcal D_0(s) = 1/\zeta(s)$ ($m_0 = \mu$). | Does not imply $\mathrm{GRH}$ for $L(s,\chi_5)$ or for any nonzero mode $L_F(s,\Xi_m)$, and does not discharge `TRIVIAL-RAPIDITY-EVALUATION-BRIDGE [O]` (which requires a non-circular derivation without a zeta-zero premise). |
-| **$\mathrm{GRH}$ for $\zeta_F(s) = \zeta(s)L(s,\chi_5)$** | Combines ordinary $\mathrm{RH}$ for $\zeta(s)$ and $\mathrm{GRH}$ for $L(s,\chi_5)$; ensures the numerator $L(s,\chi_5)$ of $\mathcal D^{(m)}(s)$ has no zeros in $\Re s > 1/2$, preventing numerator-denominator zero cancellation off the critical line. | Does not imply zero-freeness of $L_F(s,\Xi_m)$ for $m \ne 0$. |
-| **$\mathrm{GRH}$ for a fixed mode $L_F(s,\Xi_m)$ ($m \ne 0$)** | Ensures $\mathcal D^{(m)}(s) = L(s,\chi_5)/L_F(s,\Xi_m)$ is holomorphic on $\Re s > 1/2$ and gives the fixed-mode smooth summatory bound $\sum_{n\ge 1} m^{(m)}(n) w(n/X) = O_{m,w,\varepsilon}(X^{1/2+\varepsilon})$. | Does not control uniformity as $|m| \to \infty$ or sharp-cutoff sums without explicit conductor tracking. |
-| **$\mathrm{GRH}$ for $\{L_F(s,\Xi_m)\}_{m\ne 0}$ with conductor control** | Retains the analytic conductor $Q_m(t) \asymp 5(1 + |t + \mu_m|)(1 + |t - \mu_m|)$ ($\mu_m = \pi m/(2L)$), yielding explicit $(1 + |m|)^\varepsilon X^{1/2+\varepsilon}$ smooth bounds across growing mode ranges $|m| \le H(X)$. | Sharp-cutoff summation still requires separate Perron truncation and vertical mean-value control. |
+| **$\mathrm{GRH}$ for $\zeta_F(s) = \zeta(s)L(s,\chi_5)$** | Combines ordinary $\mathrm{RH}$ for $\zeta(s)$ and $\mathrm{GRH}$ for $L(s,\chi_5)$; ensures the numerator $L(s,\chi_5)$ of $\mathcal D^{(m)}(s)$ has no zeros in $\Re s > 1/2$, making holomorphy of $\mathcal D^{(m)}(s)$ on $\Re s > 1/2$ equivalent to $\mathrm{GRH}$ for $L_F(s,\Xi_m)$. | Does not imply zero-freeness of $L_F(s,\Xi_m)$ for $m \ne 0$. |
+| **$\mathrm{GRH}$ for a fixed mode $L_F(s,\Xi_m)$ ($m \ne 0$)** | Ensures $\mathcal D^{(m)}(s) = L(s,\chi_5)/L_F(s,\Xi_m)$ is holomorphic on $\Re s > 1/2$ and gives the fixed-mode smooth summatory bound $\sum_{n\ge 1} m^{(m)}(n) w(n/X) = O_{m,w,\delta}(X^{1/2+\delta})$. | Does not control uniformity as $|m| \to \infty$ or sharp-cutoff sums without explicit conductor tracking. |
+| **$\mathrm{GRH}$ for $\{L_F(s,\Xi_m)\}_{m\ne 0}$ with conductor control** | Retains the analytic conductor $Q_m(t) = 5(1 + |t + \mu_m|)(1 + |t - \mu_m|)$ ($\mu_m = \pi m/(2L)$), yielding the proved Borel-Caratheodory smooth bound $(1 + |m|)^{12 C_0/\delta} X^{1/2+\delta}$ (and the imported Littlewood refinement $(1 + |m|)^\varepsilon X^{1/2+\delta}$) across growing mode ranges $|m| \le H(X)$. | Sharp-cutoff summation still requires separate Perron truncation and vertical mean-value control. |
 
 ---
 
@@ -153,8 +180,9 @@ named at the exact family where they are invoked:
 
 The fundamental rapidity period $L = \log\phi$ of $F = \mathbb Q(\sqrt 5)$
 simultaneously governs the unit lattice shift, the polarization-orbit period
-$2L$, the archimedean Hecke spacing $\mu_m = \pi m/(2L)$, and the special value
-of the quadratic Dirichlet $L$-function at $s = 0$:
+$2L$, the archimedean Hecke spacing $\mu_m = \pi m/(2L)$, the sector density
+constant $2L/\sqrt 5$, and the special value of the quadratic Dirichlet
+$L$-function at $s = 0$:
 
 $$
 \boxed{L'(0,\chi_5) = \log\phi = -2\zeta_F'(0).}
@@ -203,16 +231,19 @@ $\zeta_F'(0) = \zeta(0)L'(0,\chi_5) = -\tfrac{1}{2}\log\phi$. $\square$
   polarization-ideal bijection on $B = \operatorname{Jac}(y^2=x^5-1)$, the
   all-prime type-$(1,p)$ count, the $\mathbb R/(2L\mathbb Z)$ rapidity circle,
   the $(a,b)$ and $(x,y)$ Gram and $J$-pullback matrices, the weighted
-  generating series $L_F(s,\Xi_m)$, and the primitive series
-  $L_F(s,\Xi_m)/\zeta(2s)$.
+  generating series $L_F(s,\Xi_m)$, the primitive series $L_F(s,\Xi_m)/\zeta(2s)$,
+  the unique integer-cone representative $x \ge 1,\ 0 \le y < x$, the exact
+  logarithm-free sector decision in $\mathbb Z[\phi]$, and the uniform sector
+  asymptotics $A(X,I)$ and $A_{\mathrm{prim}}(X,I)$.
 - [`HECKE_MAASS_BRIDGE.md`](HECKE_MAASS_BRIDGE.md): complete proof of the
-  real-quadratic Hecke character normalization for all $m \in \mathbb Z$ (both
-  even $\Psi_h = \Xi_{2h}$ and odd $\Xi_{2h+1}$), the Molin-Page Maass cusp-form
-  dictionary on $\Gamma_0(5)$, the exact integral-lift quotient
-  $\mathcal D^{(m)}(s) = L(s,\chi_5)/L_F(s,\Xi_m)$, the meromorphic pole-order
-  identity, the conditional GRH smooth summatory bound with explicit analytic
-  conductor $Q_m(t)$, and the unconditional Baier-Roy narrow-sector prime bound
-  on $\mathbb R/(L\mathbb Z)$ and $\mathbb R/(2L\mathbb Z)$.
+  real-quadratic Hecke character normalization and completeness for all
+  $m \in \mathbb Z$ (both even $\Psi_h = \Xi_{2h}$ and odd $\Xi_{2h+1}$), the
+  Molin-Page Maass cusp-form dictionary on $\Gamma_0(5)$, the global root
+  number $W(\Xi_m) = +1$ via Tate local epsilon factors, the exact integral-lift
+  quotient $\mathcal D^{(m)}(s) = L(s,\chi_5)/L_F(s,\Xi_m)$, the meromorphic
+  pole-order identity, the conditional GRH smooth summatory bound with explicit
+  analytic conductor $Q_m(t)$, and the unconditional Baier-Roy narrow-sector
+  prime bound on $\mathbb R/(L\mathbb Z)$ and $\mathbb R/(2L\mathbb Z)$.
 - [`SHA256SUMS`](SHA256SUMS): SHA-256 digests of the package documents.
 
 ### External Primary References
@@ -227,15 +258,21 @@ $\zeta_F'(0) = \zeta(0)L'(0,\chi_5) = -\tfrac{1}{2}\log\phi$. $\square$
    `arXiv:2210.02716`, Sections 2.3-2.4 and Section 5.3.2, Proposition 39 and
    Example 40:
    <https://antsmath.org/ANTSXV/papers/ANTS-XV_molin-page.pdf>
-4. S. Baier and S. Roy, *A note on the distribution of prime ideals in real
+4. B. Poonen, *Tate's thesis*, MIT 18.786 lecture notes, Sections 4.3, 4.7, 5.4,
+   Theorems 4.18 and 5.22:
+   <https://math.mit.edu/~poonen/786/tate.pdf>
+5. S. Baier and S. Roy, *A note on the distribution of prime ideals in real
    quadratic fields*, `arXiv:2307.03513v2`, Theorems 1 and 3, equation (6):
    <https://arxiv.org/abs/2307.03513>
-5. A. V. Sutherland, MIT 18.785 *Number Theory I*, Lecture 20 (Dedekind zeta
+6. H. Davenport, *On a principle of Lipschitz*, J. London Math. Soc. 26 (1951),
+   179-183.
+7. A. V. Sutherland, MIT 18.785 *Number Theory I*, Lecture 20 (Dedekind zeta
    function factorization):
    <https://math.mit.edu/classes/18.785/2019fa/LectureNotes20.pdf>
-6. NIST Digital Library of Mathematical Functions, eqs. 25.11.18 and 5.5.3:
+8. NIST Digital Library of Mathematical Functions, eqs. 25.11.18 and 5.5.3:
    <https://dlmf.nist.gov/25.11>, <https://dlmf.nist.gov/5.5>
-7. OpenAI, *The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane $\Re s > 7/8$*
+9. OpenAI, *The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane $\Re s > 7/8$*
    (Sept 30, 2026) and *The Quasi-Riemann Hypothesis* (Oct 5, 2026), repository
    `openai/math` at `1581d4cbdd69a0faf34b2089614fe2a814316a6a`:
    <https://github.com/openai/math/tree/1581d4cbdd69a0faf34b2089614fe2a814316a6a>
+

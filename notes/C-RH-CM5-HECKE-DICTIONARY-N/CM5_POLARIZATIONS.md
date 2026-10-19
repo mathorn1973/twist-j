@@ -95,6 +95,25 @@ We prove:
    = \frac{L_F(s,\Xi_m)}{\zeta(2s)}.}
    \tag{P3}
    $$
+4. **Exact integer census, logarithm-free sector decision, and uniform sector
+   asymptotics (Section 8):** every polarization class $[D] \in \mathcal P(B)$
+   has a unique representative $\eta = x + y\phi \in \mathcal O_F$ modulo
+   $\phi^{2\mathbb Z}$ in the integer cone $x \ge 1,\ 0 \le y < x$, for which
+   $t(\eta) \in [0, 2L)$ and $x^2 \le q(\eta) = x^2 + xy - y^2 \le \tfrac{5}{4}x^2$.
+   For $M \ge 1$ equal sectors on $\theta(\eta) = t(\eta)/(2L) \in [0,1)$, the
+   sector $k \in \{0,\dots,M-1\}$ is decided strictly in $\mathbb Z[\phi]$ via
+   $\phi^{4k}(\eta')^M \le \eta^M < \phi^{4(k+1)}(\eta')^M$ where
+   $\eta' = \sigma_2(\eta) = (x+y) - y\phi > 0$. For every arc $I \subset \mathbb R/\mathbb Z$
+   of Haar measure $|I| \in [0,1]$ (including arcs crossing $0 \bmod 1$), the
+   all-class and primitive type-$(1,n)$ sector counts up to reduced norm $X \ge 1$
+   satisfy
+   $$
+   \boxed{
+   A(X,I) = \frac{2L}{\sqrt 5}\,|I|\,X + O(\sqrt X + 1), \qquad
+   A_{\mathrm{prim}}(X,I) = \frac{2L}{\sqrt 5\,\zeta(2)}\,|I|\,X + O\bigl(\sqrt X\log(2X)\bigr),}
+   \tag{P3a}
+   $$
+   with absolute implied constants independent of $I$ and $X$.
 
 ---
 
@@ -306,7 +325,7 @@ $$
 \tag{P14}
 $$
 
-By contrast, the ideal rapidity $\eta(\alpha) = \tfrac{1}{2}\log|\sigma_1(\alpha)/\sigma_2(\alpha)|$
+By contrast, the ideal rapidity $t(\alpha) = \tfrac{1}{2}\log|\sigma_1(\alpha)/\sigma_2(\alpha)|$
 admits generators of either norm sign, including multiplication by $\phi$
 (which has $N_{F/\mathbb Q}(\phi) = -1$ and shifts rapidity by $L$), and lives
 on $\mathbb R/(L\mathbb Z)$. The two circles are linked by the degree-two
@@ -329,7 +348,7 @@ t(\eta_5) = L \in \mathbb R/(2L\mathbb Z), \qquad
 \pi(t(\eta_5)) = 0 \in \mathbb R/(L\mathbb Z).
 $$
 
-### 6.1 Exact $(a,b)$ and $(x,y)$ Coordinates and the $J$-Pullback
+### 6.1 Exact $(a,b)$ and $(x,y)$ Coordinates, the Inverse-Different Seam, and the $J$-Pullback
 
 In the public alternating pencil $\Omega_{(a,b)} = a\Omega_1 + b\Omega_2$ with
 Pfaffian $a^2 - ab - b^2$, the Neron-Severi parameter is
@@ -344,6 +363,24 @@ so that
 $$
 N_{F/\mathbb Q}(\eta) = a^2 - ab - b^2 = x^2 + xy - y^2.
 $$
+
+**Comparison with the integral-homology calibration (`CM-ALTERNATING-PENCIL [T]`):**
+On the rank-four lattice $\mathcal O_K = \mathbb Z[\zeta]$, the trace pairing
+$(u,v) \mapsto \operatorname{Tr}_{K/\mathbb Q}(\xi u\bar v)$ with pure imaginary
+$\xi \in \mathcal O_K$ is integral on $\mathcal O_K \times \mathcal O_K$, while
+the unimodular canonical principal polarization $E_0$ of $B = \operatorname{Jac}(C)$
+on $H_1(B,\mathbb Z) \simeq \mathcal O_K$ uses the inverse different
+$\mathfrak d_{K/\mathbb Q}^{-1} = (\zeta - \zeta^{-1})^{-3}\mathcal O_K$
+($N_{K/\mathbb Q}(\mathfrak d_{K/\mathbb Q}) = 5^3$). In
+[`HODGE-TATE-CM5-INTEGRAL-HOMOLOGY-CALIBRATION-2026-09-11.md`](../HODGE-TATE-CM5-INTEGRAL-HOMOLOGY-CALIBRATION-2026-09-11.md),
+evaluating the unscaled trace form $\Omega_{(a,b)} = a\Omega_1 + b\Omega_2$ on
+the index-$5$ primary sublattice $\mathcal O_K^2 \subset H_1(B,\mathbb Z)$ gives
+Pfaffians $5(a^2 - ab - b^2)$ and elementary-divisor types $(1,2)$ and $(1,3)$
+at $(a,b) = (1,0)$ and $(0,-1)$; dividing by the inverse-different factor on the
+full homology lattice $H_1(B,\mathbb Z) \simeq \mathcal O_K$ produces the
+unimodular base form $E_0$ of $D_1 = [\lambda_0]$ (Pfaffian $1$, type $(1,1)$)
+and the general polarization form $E_\eta(u,v) = E_0(\eta u, v)$ of Pfaffian
+$N_{F/\mathbb Q}(\eta) = a^2 - ab - b^2 = x^2 + xy - y^2$.
 
 The intersection Gram matrices of $D_\eta^2 = 2 N_{F/\mathbb Q}(\eta)$ in the
 two integral bases are
@@ -423,7 +460,8 @@ matrix of multiplication by $\eta$. Because $E_0$ is unimodular, an integer
 $c \ge 1$ divides $E_\eta$ in $M_4(\mathbb Z)$ if and only if $c$ divides
 $M_\eta$, which by (P5)-(P6) holds if and only if $\eta/c \in \mathcal O_F$.
 Since the first elementary divisor $d_1(D_\eta)$ of $E_\eta$ (with $d_1 \mid d_2$)
-is the greatest common divisor of its entries (Conrad, Section 3.2),
+is the greatest common divisor of its entries (Conrad, Section 3.2) and
+$\operatorname{Pf}(E_\eta) = d_1(D_\eta)d_2(D_\eta) = q(D_\eta) = N_{F/\mathbb Q}(\eta)$,
 
 $$
 \boxed{d_1(D_\eta) = c(\eta) = \gcd(x,y), \qquad
@@ -436,7 +474,7 @@ primitive ($c(\eta) = 1$) with $N_{F/\mathbb Q}(\eta) = n$. Every ample class
 decomposes uniquely as $D_\eta = c D_{\eta_0}$ with $c = c(\eta) \ge 1$ and
 $\eta_0 = \eta/c$ primitive and totally positive; under this decomposition
 $q(D_\eta) = c^2 q(D_{\eta_0})$ and $\omega_m([D_\eta]) = \omega_m([D_{\eta_0}])$
-( equivalently $\Xi_m((c)) = 1$). Factoring out $\sum_{c\ge 1} (c^2)^{-s} = \zeta(2s)$
+(equivalently $\Xi_m((c)) = 1$). Factoring out $\sum_{c\ge 1} (c^2)^{-s} = \zeta(2s)$
 on $\Re s > 1$ proves the second identity in (P3):
 
 $$
@@ -470,7 +508,354 @@ $$
 
 In particular, at an inert prime $p$, the unique polarization orbit of reduced
 self-intersection $p^2$ is $[p D_1]$ of type $(p,p)$; there is no polarization
-of type $(1,p^2)$. Note finally that $Z_{B,m}^{\mathrm{pol}}(s)$ and
-$Z_{B,m}^{\mathrm{prim}}(s)$ are generating functions of polarization classes
-on $B$ with respect to ideal multiplication (composition of commuting
-Rosati-symmetric endomorphisms), not the Hasse-Weil $L$-function of $B$.
+of type $(1,p^2)$.
+
+---
+
+## 8. Exact Integer Census, Logarithm-Free Sector Decision, and Uniform Sector Asymptotics
+
+This section establishes the explicit integer coordinate census of all
+polarization classes $[D_\eta] \in \mathcal P(B)$ up to any norm bound $X \ge 1$,
+an exact logarithm-free algorithm for sector classification on
+$\mathbb R/(2L\mathbb Z)$, and uniform asymptotics for all-class and primitive
+type-$(1,n)$ polarizations in arbitrary arcs $I \subset \mathbb R/\mathbb Z$.
+
+### 8.1 Unique Fundamental-Cone Representative and Excluded Boundary $y = x$
+
+Write every element of $\mathcal O_F = \mathbb Z[\phi]$ uniquely as
+$\eta = x + y\phi$ with $x,y \in \mathbb Z$, and denote its Galois conjugate by
+$\eta' = \sigma_2(\eta) = x - y\phi^{-1} = (x+y) - y\phi$.
+
+**Theorem 8.1 (Unique reduced representative in the integer cone).**
+*Every $\operatorname{Aut}(B,0)$-orbit in $\mathcal O_F^+ / \phi^{2\mathbb Z}$
+contains a unique representative $\eta = x + y\phi$ in the integer cone*
+
+$$
+\boxed{
+\mathcal C := \bigl\{\eta = x + y\phi \in \mathbb Z[\phi] : x \in \mathbb Z,\ y \in \mathbb Z,\ x > 0,\ 0 \le y < x\bigr\},}
+\tag{P24}
+$$
+
+*and for $\eta = x + y\phi \in \mathbb Z[\phi]$ one has the exact equivalence*
+
+$$
+\bigl(\eta \gg 0 \text{ and } t(\eta) \in [0,2L)\bigr)
+\quad \Longleftrightarrow \quad
+\bigl(x > 0 \text{ and } 0 \le y < x\bigr).
+\tag{P25}
+$$
+
+*Proof.* Multiplication by $\phi^{2k}$ ($k \in \mathbb Z$) preserves total
+positivity and shifts $t(\eta) = \tfrac{1}{2}\log(\sigma_1\eta/\sigma_2\eta)$
+by $t(\phi^{2k}\eta) = t(\eta) + 2kL$. Hence every orbit in
+$\mathcal O_F^+/\phi^{2\mathbb Z}$ has a unique representative $\eta \gg 0$
+with $t(\eta) \in [0,2L)$, namely for $k = -\lfloor t(\eta_0)/(2L)\rfloor$.
+Since $\eta' = \sigma_2(\eta) > 0$ for $\eta \gg 0$ and $\log$ is strictly
+increasing on $(0,\infty)$,
+
+$$
+0 \le t(\eta) < 2L
+\iff 1 \le \frac{\sigma_1(\eta)}{\sigma_2(\eta)} < e^{4L} = \phi^4
+\iff \eta' \le \eta < \phi^4 \eta'.
+$$
+
+In $\mathbb Z[\phi]$, $\phi - (-\phi^{-1}) = \sqrt 5$, while
+$\phi^4 = 3\phi + 2$ and $\phi^4(-\phi^{-1}) = -\phi^3 = -(2\phi + 1)$ give
+$\phi^4 - 1 = 3\phi + 1 = \phi^3 + \phi$ and
+$\phi^4(-\phi^{-1}) - \phi = -3\phi - 1 = -(\phi^3 + \phi)$. Therefore we
+obtain the two exact algebraic factorizations
+
+$$
+\boxed{
+\eta - \eta' = (\phi + \phi^{-1})y = \sqrt 5\,y, \qquad
+\phi^4\eta' - \eta = (\phi^3 + \phi)(x - y) = \phi^2\sqrt 5\,(x - y).}
+\tag{P26}
+$$
+
+If $\eta \gg 0$ and $0 \le t(\eta) < 2L$, then $\eta - \eta' \ge 0$ forces
+$y \ge 0$, $\phi^4\eta' - \eta > 0$ forces $x - y > 0$, and thus
+$x > y \ge 0$, so $x \ge 1$. Conversely, if $x > 0$ and $0 \le y < x$, then
+$\sigma_1(\eta) = x + y\phi \ge x > 0$, $\sigma_2(\eta) = (x - y) + y(1 - \phi^{-1}) \ge 1 > 0$,
+and (P26) gives $\eta - \eta' \ge 0$ and $\phi^4\eta' - \eta > 0$, so
+$\eta \gg 0$ and $t(\eta) \in [0,2L)$.
+
+**Why the upper boundary $y = x$ is excluded:** at $y = x > 0$, the identity
+$1 + \phi = \phi^2$ yields
+
+$$
+\eta\big|_{y=x} = x(1 + \phi) = x\phi^2 = \phi^2(x + 0\cdot\phi),
+\qquad t(x\phi^2) = 2L \equiv 0 \pmod{2L}.
+\tag{P27}
+$$
+
+Thus $(x,x)$ lies in the same $\operatorname{Aut}(B,0)$-orbit as the lower
+boundary point $(x,0)$ (pullback by $(J^{-1})^*$) and sits at the upper endpoint
+$2L$ of $[0,2L)$. Including $y = x$ would list every scalar class $[x D_1]$
+twice. $\square$
+
+### 8.2 Norm Form Bounds and Finite Exhaustive Box up to Norm $X$
+
+**Theorem 8.2 (Norm sandwich and finite census box).**
+*For every $\eta = x + y\phi \in \mathcal C$ ($x \ge 1,\ 0 \le y < x$), the
+reduced polarization norm $q(\eta) = N_{F/\mathbb Q}(\eta)$ satisfies*
+
+$$
+\boxed{
+q(x,y) = x^2 + xy - y^2 = \frac{5}{4}x^2 - \left(y - \frac{x}{2}\right)^2,
+\qquad x^2 \le q(x,y) \le \frac{5}{4}x^2.}
+\tag{P28}
+$$
+
+*Consequently, for any real $X \ge 1$, the set of all polarization orbits with
+$q(D) \le X$ is enumerated without omission or duplication by the finite box*
+
+$$
+\boxed{
+\mathcal C(X)
+= \bigl\{(x,y) \in \mathbb Z^2 : 1 \le x \le \lfloor\sqrt X\rfloor,\ 0 \le y < x,\ x^2 + xy - y^2 \le X\bigr\}.}
+\tag{P29}
+$$
+
+*Proof.* Since $\phi^2 = \phi + 1$, we have $\operatorname{Tr}_{F/\mathbb Q}(\phi) = 1$
+and $N_{F/\mathbb Q}(\phi) = -1$, so $q(x,y) = (x+y\phi)(x+y\sigma_2\phi) = x^2 + xy - y^2$.
+For $0 \le y < x$, $y(x - y) \ge 0$ gives $q(x,y) = x^2 + y(x - y) \ge x^2$
+(with equality if and only if $y = 0$), and completing the square gives
+$q(x,y) = \tfrac{5}{4}x^2 - (y - x/2)^2 \le \tfrac{5}{4}x^2$ (attained when
+$2\mid x$ and $y = x/2$, where $q(2m,m) = 5m^2$). If $(x,y) \in \mathcal C$
+has $q(x,y) \le X$, then $x^2 \le q(x,y) \le X$ forces $1 \le x \le \lfloor\sqrt X\rfloor$.
+By Theorem 8.1 and the bijection (P1), $\mathcal C(X)$ lists every polarization
+class of reduced norm $\le X$ once and only once. $\square$
+
+### 8.3 Exact Logarithm-Free Sector Decision and Galois Mirror Involution
+
+Normalize the polarization circle $\mathbb R/(2L\mathbb Z)$ to unit Haar
+measure via $\theta(\eta) := t(\eta)/(2L) \in [0,1)$ for $\eta \in \mathcal C$.
+For an integer $M \ge 1$, partition $[0,1)$ into $M$ equal half-open sectors
+$S_k = [k/M, (k+1)/M)$ ($k = 0,1,\dots,M-1$).
+
+**Theorem 8.3 (Exact sector decision in $\mathbb Z[\phi]$).**
+*For $\eta = x + y\phi \in \mathcal C$, let $\eta' = \sigma_2(\eta) = (x+y) - y\phi > 0$.
+For each $k \in \{0,1,\dots,M-1\}$,*
+
+$$
+\boxed{
+\theta(\eta) \in \left[\frac{k}{M}, \frac{k+1}{M}\right)
+\quad \Longleftrightarrow \quad
+\phi^{4k}(\eta')^M \le \eta^M < \phi^{4(k+1)}(\eta')^M.}
+\tag{P30}
+$$
+
+*Every comparison in (P30) is decided purely in $\mathbb Z^2$ with zero
+floating-point or logarithm evaluation: writing any difference in $\mathbb Z[\phi]$
+as $\delta = A + B\phi$ ($A,B \in \mathbb Z$), one has $2\sigma_1(\delta) = (2A+B) + B\sqrt 5$,
+so*
+
+$$
+\boxed{
+A + B\phi \ge 0 \iff
+\begin{cases}
+  2A + B \ge 0, & \text{if } B \ge 0 \text{ and } (2A+B)^2 \ge 5B^2, \\
+  B > 0, & \text{if } (2A+B)^2 < 5B^2, \\
+  \text{false}, & \text{otherwise.}
+\end{cases}}
+\tag{P31}
+$$
+
+*Moreover, for every $n \ge 0$, $\phi^n = F_{n-1} + F_n\phi$ ($F_0 = 0, F_1 = 1$),
+and multiplication in $\mathbb Z[\phi]$ obeys $(a_1 + b_1\phi)(a_2 + b_2\phi) = (a_1 a_2 + b_1 b_2) + (a_1 b_2 + b_1 a_2 + b_1 b_2)\phi$.*
+
+*Proof.* Since $\eta > 0$ and $\eta' > 0$, $\theta(\eta) = \frac{1}{4L}\log(\eta/\eta')$.
+Multiplying $k/M \le \theta(\eta) < (k+1)/M$ by $4ML > 0$, exponentiating with
+$e^{4L} = \phi^4$, and multiplying by $(\eta')^M > 0$ gives (P30). Because
+$5$ is not a rational square, $(2A+B)^2 = 5B^2$ holds only at $A = B = 0$, so
+comparing $(2A+B)^2$ against $5B^2$ in $\mathbb Z$ determines the exact sign of
+$(2A+B) + B\sqrt 5$. $\square$
+
+**Proposition 8.4 (Exact Galois mirror involution on the interior of $\mathcal C$).**
+*For $\eta = x + y\phi \in \mathcal C$ with $0 < y < x$, its Galois conjugate
+$\sigma_2(\eta) = (x+y) - y\phi \gg 0$ has reduced representative*
+
+$$
+\boxed{
+\widetilde\eta := \phi^2\sigma_2(\eta) = x + (x - y)\phi \in \mathcal C,
+\qquad q(x, x-y) = q(x,y), \qquad
+\gcd(x, x-y) = \gcd(x,y), \qquad
+\theta(\widetilde\eta) = 1 - \theta(\eta).}
+\tag{P32}
+$$
+
+*Its fixed locus in $0 < y < x$ is the ray $x = 2y$ ($y \ge 1$), where
+$\eta = y(2+\phi) = y\phi\sqrt 5$, $q(2y,y) = 5y^2$, and $\theta(2y,y) = 1/2$
+($t = L$). Consequently, for any even sector count $M \ge 4$, the involution
+$(x,y) \leftrightarrow (x,x-y)$ pairs $S_k$ bijectively with $S_{M-1-k}$ for
+$1 \le k \le M/2 - 2$, while accounting for the ray $y = 0$ ($\theta = 0 \in S_0$)
+and the ramified ray $x = 2y$ ($\theta = 1/2 \in S_{M/2}$) gives for every $X \ge 1$
+the exact finite-X identities:*
+
+$$
+\boxed{
+\begin{aligned}
+A(X, S_k) &= A(X, S_{M-1-k}), &
+A_{\mathrm{prim}}(X, S_k) &= A_{\mathrm{prim}}(X, S_{M-1-k})
+\quad (1 \le k \le M/2 - 2), \\
+A(X, S_0) - A(X, S_{M-1}) &= \lfloor\sqrt X\rfloor, &
+A_{\mathrm{prim}}(X, S_0) - A_{\mathrm{prim}}(X, S_{M-1}) &= 1, \\
+A(X, S_{M/2}) - A(X, S_{M/2-1}) &= \lfloor\sqrt{X/5}\rfloor, &
+A_{\mathrm{prim}}(X, S_{M/2}) - A_{\mathrm{prim}}(X, S_{M/2-1}) &= \mathbf 1_{X \ge 5}.
+\end{aligned}}
+\tag{P33}
+$$
+
+### 8.4 Uniform Sector Asymptotics for All Classes and Primitive Classes
+
+Let $I \subset \mathbb R/\mathbb Z$ be any arc (connected interval on the circle,
+open, half-open, or closed, including wrap-around arcs crossing $0 \bmod 1$) of
+normalized Haar measure $|I| \in [0,1]$, corresponding to an arc of length
+$2L\,|I|$ on $\mathbb R/(2L\mathbb Z)$. Define
+
+$$
+A(X,I) := \#\bigl\{(x,y) \in \mathcal C(X) : \theta(x,y) \in I \pmod 1\bigr\},
+\qquad
+A_{\mathrm{prim}}(X,I) := \#\bigl\{(x,y) \in \mathcal C(X) : \gcd(x,y) = 1,\ \theta(x,y) \in I \pmod 1\bigr\}.
+$$
+
+**Theorem 8.5 (Uniform sector asymptotics across all norms and primitive norms).**
+*For every real $X \ge 1$ and every arc $I \subset \mathbb R/\mathbb Z$ of Haar
+measure $|I| \in [0,1]$,*
+
+$$
+\boxed{
+A(X,I) = \frac{2L}{\sqrt 5}\,|I|\,X + O(\sqrt X + 1),
+\qquad
+A_{\mathrm{prim}}(X,I)
+= \frac{2L}{\sqrt 5\,\zeta(2)}\,|I|\,X + O\bigl(\sqrt X\log(2X)\bigr),}
+\tag{P34}
+$$
+
+*where $\zeta(2) = \pi^2/6$, $\frac{2L}{\sqrt 5} = \frac{2\log\phi}{\sqrt 5} \approx 0.43040894$,
+$\frac{2L}{\sqrt 5\,\zeta(2)} = \frac{12\log\phi}{\pi^2\sqrt 5} \approx 0.26165734$,
+and the implied $O$-constants are absolute (independent of both $X$ and $I$).*
+
+*Proof.*
+1. **Wrap-around reduction to subintervals of $[0,1)$:** If $I \subset \mathbb R/\mathbb Z$
+   does not cross $0 \bmod 1$, it lifts to a single subinterval $I_1 \subset [0,1)$
+   with $|I_1| = |I|$. If $I$ crosses $0 \bmod 1$, it splits into two disjoint
+   subintervals $I_1 = [\alpha, 1)$ and $I_2 = [0, \beta)$ of $[0,1)$ with
+   $|I_1| + |I_2| = |I|$. By additivity of $A(X,\cdot)$, $A_{\mathrm{prim}}(X,\cdot)$,
+   and $|\cdot|$ (at the cost of doubling the absolute implied error constant),
+   it suffices to prove (P34) for a single interval $I \subset [0,1)$ with
+   endpoints $0 \le \alpha \le \beta \le 1$ and $|I| = \beta - \alpha$.
+2. **Volume and Jacobian in $(x,y)$-coordinates:** Embed $\mathcal O_F$ into
+   $\mathbb R^2$ by $(u,v) = (\sigma_1\eta, \sigma_2\eta) = (x + y\phi, x - y\phi^{-1})$.
+   The transformation determinant is
+   $$
+   \det\frac{\partial(u,v)}{\partial(x,y)}
+   = \det\begin{pmatrix} 1 & \phi \\ 1 & -\phi^{-1} \end{pmatrix}
+   = -(\phi + \phi^{-1}) = -\sqrt 5,
+   $$
+   so $\mathbb Z^2$ in $(x,y)$-coordinates has covolume $1$ while the image
+   lattice $\Lambda = (\sigma_1,\sigma_2)(\mathcal O_F)$ has covolume $\sqrt 5$.
+   In hyperbolic polar coordinates $u = \sqrt q\,e^{2L\theta},\ v = \sqrt q\,e^{-2L\theta}$
+   ($0 < q \le X,\ \alpha \le \theta \le \beta$), the Jacobian with respect to
+   $(q,\theta)$ is
+   $$
+   \det\frac{\partial(u,v)}{\partial(q,\theta)}
+   = \det\begin{pmatrix}
+       \frac{1}{2\sqrt q} e^{2L\theta} & 2L\sqrt q\,e^{2L\theta} \\
+       \frac{1}{2\sqrt q} e^{-2L\theta} & -2L\sqrt q\,e^{-2L\theta}
+     \end{pmatrix}
+   = -2L.
+   $$
+   Therefore the Euclidean area of $\Omega(X,I) := \{(x,y) \in \mathbb R^2 : x > 0,\ 0 \le y < x,\ q(x,y) \le X,\ \theta(x,y) \in I\}$
+   in the $(x,y)$-plane is
+   $$
+   \operatorname{Area}_{x,y}(\Omega(X,I))
+   = \frac{1}{\sqrt 5}\operatorname{Area}_{u,v}(\Omega(X,I))
+   = \frac{1}{\sqrt 5}\int_{\alpha}^{\beta}\int_0^X 2L\,dq\,d\theta
+   = \frac{2L}{\sqrt 5}\,|I|\,X.
+   \tag{P35}
+   $$
+3. **Uniform Davenport boundary estimate:** Because $\Omega(X,I) = \sqrt X\,\Omega(1,I)$
+   is homothetic to $\Omega(1,I) \subset [0,1] \times [0,1]$, along the upper
+   hyperbolic arc $q(x,y) = 1$ parametrized by $\theta \in [0,1]$ one has
+   $$
+   x(\theta) = \frac{e^{2L\theta}\phi^{-1} + e^{-2L\theta}\phi}{\sqrt 5}
+   = \frac{2}{\sqrt 5}\cosh(2L\theta - L), \qquad
+   y(\theta) = \frac{e^{2L\theta} - e^{-2L\theta}}{\sqrt 5}
+   = \frac{2}{\sqrt 5}\sinh(2L\theta).
+   $$
+   Each coordinate is monotone on $[0, 1/2]$ and on $[1/2, 1]$, so splitting $I$
+   at $1/2$ expresses $\Omega(X,I)$ as the union of at most two regions whose
+   boundaries consist of two straight segments through the origin and one
+   monotone hyperbolic arc inside $[0,\sqrt X]^2$. Every horizontal or vertical
+   line meets each piece in at most one interval, and the projections on both
+   axes have length $\le \sqrt X$. By Davenport's lattice-point theorem (1951),
+   $$
+   \bigl|A(X,I) - \operatorname{Area}_{x,y}(\Omega(X,I))\bigr|
+   \le 4\sqrt X + 2 = O(\sqrt X + 1)
+   \tag{P36}
+   $$
+   uniformly in $I \subset [0,1)$ (with the same $O(\sqrt X + 1)$ bound whether
+    the endpoints $\alpha,\beta$ are open or closed, since any ray $x\sin\psi = y\cos\psi$
+   in $[0,\sqrt X]^2$ contains at most $\lfloor\sqrt X\rfloor$ integer points).
+4. **Complete Mobius inversion and tail bound for $A_{\mathrm{prim}}(X,I)$:**
+   For every integer $c \ge 1$, scaling $(x,y) = c(x_0,y_0)$ satisfies
+   $q(cx_0,cy_0) = c^2 q(x_0,y_0)$ and $\theta(cx_0,cy_0) = \theta(x_0,y_0)$.
+   Since $q(x,y) \ge x^2 \ge c^2$ whenever $c \mid \gcd(x,y)$, only
+   $1 \le c \le C := \lfloor\sqrt X\rfloor$ can contribute, and Mobius inversion
+   $\mathbf 1_{\gcd(x,y)=1} = \sum_{c\mid\gcd(x,y)}\mu(c)$ is a finite exact identity:
+   $$
+   A_{\mathrm{prim}}(X,I) = \sum_{c=1}^{\lfloor\sqrt X\rfloor} \mu(c)\,A(X/c^2, I).
+   \tag{P37}
+   $$
+   Substituting $A(X/c^2,I) = \frac{2L}{\sqrt 5}|I|\frac{X}{c^2} + R(X/c^2,I)$
+   with $|R(Y,I)| \le K_0(\sqrt Y + 1)$ for $Y \ge 1$ gives
+   $$
+   A_{\mathrm{prim}}(X,I)
+   = \frac{2L}{\sqrt 5}\,|I|\,X \sum_{c=1}^{\lfloor\sqrt X\rfloor} \frac{\mu(c)}{c^2}
+     + \sum_{c=1}^{\lfloor\sqrt X\rfloor} \mu(c)\,R(X/c^2, I).
+   $$
+   The infinite Mobius tail is bounded uniformly in $I$ by
+   $$
+   \left|\sum_{c > \lfloor\sqrt X\rfloor} \frac{\mu(c)}{c^2}\right|
+   \le \sum_{c = \lfloor\sqrt X\rfloor + 1}^{\infty} \frac{1}{c(c-1)}
+   = \frac{1}{\lfloor\sqrt X\rfloor} \le \frac{2}{\sqrt X},
+   \qquad
+   \frac{2L}{\sqrt 5}\,|I|\,X \left|\sum_{c > \lfloor\sqrt X\rfloor} \frac{\mu(c)}{c^2}\right|
+   \le \frac{4L}{\sqrt 5}\sqrt X,
+   \tag{P38}
+   $$
+   and the summed error term is bounded uniformly in $I$ by
+   $$
+   \sum_{c=1}^{\lfloor\sqrt X\rfloor} \bigl|R(X/c^2, I)\bigr|
+   \le K_0 \sum_{c=1}^{\lfloor\sqrt X\rfloor} \left(\frac{\sqrt X}{c} + 1\right)
+   \le K_0\Bigl(\sqrt X\bigl(1 + \log\sqrt X\bigr) + \sqrt X\Bigr)
+   \ll \sqrt X\log(2X).
+   \tag{P39}
+   $$
+   Since $\sum_{c=1}^\infty \mu(c)c^{-2} = 1/\zeta(2) = 6/\pi^2$, combining
+   (P37)-(P39) proves (P34). $\square$
+
+### 8.5 Explicit Scope Boundaries and Non-Claims
+
+1. **All-norm and primitive-norm geometry vs. prime-norm sector counts:**
+   Theorems 8.1-8.5 are unconditional geometry-of-numbers statements for all
+   integral polarization classes ($A(X,I)$) and primitive type-$(1,n)$ classes
+   ($A_{\mathrm{prim}}(X,I)$). They do **not** by themselves establish a prime
+   number theorem in sectors; prime-norm sector estimates require the Hecke
+   $L$-functions $L_F(s,\Xi_m)$ and the analytic machinery of
+   [`HECKE_MAASS_BRIDGE.md`](HECKE_MAASS_BRIDGE.md).
+2. **Full Neron-Severi cone vs. endomorphism-pullback reachability $f^*\lambda_0$:**
+   Every totally positive $\eta \in \mathcal O_F^+$ defines an ample polarization
+   isogeny $\lambda_\eta = \lambda_0\eta : B \to B^\vee$ of reduced norm
+   $q(\eta) = N_{F/\mathbb Q}(\eta)$. Whether $\lambda_\eta$ is further
+   realizable as an endomorphism pullback $f^*\lambda_0 = f^\vee\lambda_0 f = \lambda_0(f\bar f)$
+   for some $f \in \mathcal O_K$ is equivalent to $\eta \in N_{K/F}(\mathcal O_K)$,
+   a distinct relative-norm condition not claimed in Theorem 8.2 or Theorem 8.5.
+3. **No operator or Markov transition claim:** The polarization census and
+   sector asymptotics do not define transition probabilities between sectors or
+   derive the native operator $U$. Also, $Z_{B,m}^{\mathrm{pol}}(s)$ and
+   $Z_{B,m}^{\mathrm{prim}}(s)$ are generating functions of polarization classes
+   on $B$ with respect to ideal multiplication, not the Hasse-Weil $L$-function
+   of $B$.
+

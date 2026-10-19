@@ -29,101 +29,115 @@ with real embeddings $\sigma_1(\phi) = \phi$ and $\sigma_2(\phi) = -\phi^{-1}$.
 For $\alpha \in F^\times$ and $m \in \mathbb Z$, set
 
 $$
-\eta(\alpha) = \frac{1}{2}\log\left|\frac{\sigma_1(\alpha)}{\sigma_2(\alpha)}\right|,
+t(\alpha) = \frac{1}{2}\log\left|\frac{\sigma_1(\alpha)}{\sigma_2(\alpha)}\right|,
 \qquad
 \mu_m = \frac{\pi m}{2L},
 \qquad
-\epsilon = m \bmod 2 \in \{0,1\}.
+\epsilon_m = m \bmod 2 \in \{0,1\}.
 \tag{A1}
 $$
 
-As established geometrically on the polarization circle $\mathbb R/(2L\mathbb Z)$
-in [`CM5_POLARIZATIONS.md`](CM5_POLARIZATIONS.md), define on principal fractional
-ideals $(\alpha)$:
+(Earlier ideal-rapidity notes write $\eta(\alpha)$ for $t(\alpha)$; here we write $t(\alpha)$ so that $\eta = x + y\phi \in \mathcal O_F$ is reserved unambiguously for Neron-Severi classes.) As established geometrically on the polarization circle $\mathbb R/(2L\mathbb Z)$ in [`CM5_POLARIZATIONS.md`](CM5_POLARIZATIONS.md), define on principal fractional ideals $(\alpha)$:
 
 $$
 \boxed{
 \Xi_m((\alpha))
-= \operatorname{sgn}(N_{F/\mathbb Q}\alpha)^m
-  \exp\left(\frac{\pi i m \eta(\alpha)}{L}\right)
-= \operatorname{sgn}(N_{F/\mathbb Q}\alpha)^\epsilon
+= \operatorname{sgn}(N_{F/\mathbb Q}\alpha)^{\epsilon_m}
+  \exp\left(\frac{\pi i m t(\alpha)}{L}\right)
+= \operatorname{sgn}(N_{F/\mathbb Q}\alpha)^{\epsilon_m}
   \left|\frac{\sigma_1(\alpha)}{\sigma_2(\alpha)}\right|^{i\mu_m}.}
 \tag{A2}
 $$
 
-When $m = 2h$ is even ($\epsilon = 0$), $\mu_{2h} = \tau_h := \pi h / L$, the
+When $m = 2h$ is even ($\epsilon_{2h} = 0$), $\mu_{2h} = \tau_h := \pi h / L$, the
 norm-sign factor is $+1$, and $\Xi_{2h}$ coincides with the registered
 ideal-rapidity character lift
 
 $$
 \Psi_h((\alpha)) = \Xi_{2h}((\alpha))
-= \exp\left(\frac{2\pi i h \eta(\alpha)}{L}\right)
+= \exp\left(\frac{2\pi i h t(\alpha)}{L}\right)
 = \left|\frac{\sigma_1(\alpha)}{\sigma_2(\alpha)}\right|^{i\tau_h}.
 \tag{A3}
 $$
 
-### 1.1 Unit Invariance, Idelic Normalization, and Infinite Order
+### 1.1 Unit Invariance, Idelic Normalization, Completeness, and Infinite Order
 
 1. **Unit invariance for all $m \in \mathbb Z$:** every unit of $\mathcal O_F$
    has the form $u = \pm \phi^k$ ($k \in \mathbb Z$), with
-   $N_{F/\mathbb Q}(u) = (-1)^k$ and $\eta(u) = kL$. Thus
+   $N_{F/\mathbb Q}(u) = (-1)^k$ and $t(u) = kL$. Thus
    $$
-   \operatorname{sgn}(N_{F/\mathbb Q}(u\alpha))^m
-   = (-1)^{mk}\operatorname{sgn}(N_{F/\mathbb Q}\alpha)^m,
+   \operatorname{sgn}(N_{F/\mathbb Q}(u\alpha))^{\epsilon_m}
+   = (-1)^{mk}\operatorname{sgn}(N_{F/\mathbb Q}\alpha)^{\epsilon_m},
    \qquad
-   e^{\pi i m \eta(u\alpha)/L} = e^{\pi i m k} e^{\pi i m \eta(\alpha)/L}
-   = (-1)^{mk} e^{\pi i m \eta(\alpha)/L}.
+   e^{\pi i m t(u\alpha)/L} = e^{\pi i m k} e^{\pi i m t(\alpha)/L}
+   = (-1)^{mk} e^{\pi i m t(\alpha)/L}.
    $$
    The two $(-1)^{mk}$ factors cancel for both even and odd $m$, so $\Xi_m$ is
    a well-defined unitary character on the group of fractional ideals of $F$.
-2. **Global idelic Hecke character and conductor:** at each finite prime ideal
-   $\mathfrak p$ of $\mathcal O_F$, define the unramified local character
-   $\widetilde\Xi_{m,\mathfrak p}(x) = \Xi_m(\mathfrak p)^{v_{\mathfrak p}(x)}$,
+2. **Global idelic Hecke character, conductor, and family completeness:** at each
+   finite prime ideal $\mathfrak p$ of $\mathcal O_F$, define the unramified local
+   character $\widetilde\Xi_{m,\mathfrak p}(x) = \Xi_m(\mathfrak p)^{v_{\mathfrak p}(x)}$,
    which is trivial on $\mathcal O_{F,\mathfrak p}^\times$. At the two real
-   places $(x_1,x_2) \in \mathbb R^\times \times \mathbb R^\times$, define
+   places $(x_1,x_2) \in \mathbb R^\times \times \mathbb R^\times$, set
+   $\widetilde\Xi_{m,1}(x_1) = \operatorname{sgn}(x_1)^{\epsilon_m}|x_1|^{-i\mu_m}$
+   and $\widetilde\Xi_{m,2}(x_2) = \operatorname{sgn}(x_2)^{\epsilon_m}|x_2|^{+i\mu_m}$,
+   so that
    $$
    \boxed{
    \widetilde\Xi_{m,\infty}(x_1,x_2)
-   = \operatorname{sgn}(x_1)^\epsilon \operatorname{sgn}(x_2)^\epsilon
+   = \operatorname{sgn}(x_1)^{\epsilon_m} \operatorname{sgn}(x_2)^{\epsilon_m}
      \left|\frac{x_1}{x_2}\right|^{-i\mu_m}
-   = \operatorname{sgn}(x_1 x_2)^\epsilon \left|\frac{x_1}{x_2}\right|^{-i\mu_m}.}
+   = \operatorname{sgn}(x_1 x_2)^{\epsilon_m} \left|\frac{x_1}{x_2}\right|^{-i\mu_m}.}
    \tag{A4}
    $$
    For a principal idele $\alpha \in F^\times$,
    $\prod_{\mathfrak p}\widetilde\Xi_{m,\mathfrak p}(\alpha) = \Xi_m((\alpha)) = \widetilde\Xi_{m,\infty}(\sigma_1\alpha,\sigma_2\alpha)^{-1}$,
    so $\widetilde\Xi_m$ is trivial on $F^\times$ and defines a continuous
    unitary Hecke character of $\mathbb A_F^\times / F^\times$. Every finite
-   local component is unramified, so the **finite conductor is $\mathfrak f = \mathcal O_F$**
-   ($N\mathfrak f = 1$, $|\Delta_F| N\mathfrak f = 5$) for both even and odd
-   $m$. For even $m$, the infinite modulus is trivial; for odd $m$, both real
-   sign exponents equal $\epsilon = 1$, so the infinite part of the ray-class
-   modulus is $\infty_1\infty_2$.
-3. **Infinite order and non-Galois invariance for $m \ne 0$:** let $\mathfrak p$
-   be a prime ideal above a split rational prime $p$. By the registered theorem
-   `SPLIT-PRIME-RAPIDITY-INDEPENDENCE [T]`, $[\eta(\mathfrak p)] \in \mathbb R/L\mathbb Z$
-   is non-torsion. Since $\Xi_m(\mathfrak p)^2 = \Psi_m(\mathfrak p) = \exp(2\pi i m \eta(\mathfrak p)/L)$,
-   $\Xi_m(\mathfrak p)$ has infinite multiplicative order whenever $m \ne 0$.
-   Under the nontrivial Galois automorphism $\iota \in \operatorname{Gal}(F/\mathbb Q)$,
+   local component is unramified, so the **finite conductor is $\mathfrak f_m = \mathcal O_F$**
+   ($N\mathfrak f_m = 1$, arithmetic conductor $N_m = |\Delta_F| N\mathfrak f_m = 5$)
+   for both even and odd $m$. The two real sign exponents are the pair
+   $(\epsilon_m, \epsilon_m)$: for even $m$ the infinite modulus is empty, and
+   for odd $m$ it is $\infty_1\infty_2$.
+   Conversely, $\{\Xi_m\}_{m \in \mathbb Z}$ is the **complete** family of
+   unitary Hecke characters of $F$ that are unramified at all finite places and
+   trivial on the diagonal positive archimedean subgroup $\{(r,r) : r > 0\} \subset F_\infty^\times$:
+   any such character has archimedean component $\operatorname{sgn}(x_1)^a\operatorname{sgn}(x_2)^b |x_1/x_2|^{i\mu}$;
+   triviality on $-1 \in \mathcal O_F^\times$ forces $a \equiv b \equiv \epsilon \pmod 2$
+   ($\epsilon \in \{0,1\}$), triviality on $\phi \in \mathcal O_F^\times$ forces
+   $(-1)^\epsilon e^{2i\mu L} = 1 \implies \mu = -\pi m/(2L)$ with $m \equiv \epsilon \pmod 2$,
+   and $h_F = 1$ uniquely determines all finite prime values.
+3. **Infinite order and non-Galois invariance for $m \ne 0$:** directly on ideles
+   with archimedean component $(e^r, 1)$ ($r \in \mathbb R$) and all finite
+   components $1$, $\widetilde\Xi_m$ evaluates to $e^{-i\mu_m r}$; for $m \ne 0$
+   this has infinite image and differs from its Galois conjugate $e^{+i\mu_m r}$.
+   Equivalently on prime ideals, by `SPLIT-PRIME-RAPIDITY-INDEPENDENCE [T]`,
+   $[t(\mathfrak p)] \in \mathbb R/L\mathbb Z$ is non-torsion at split primes, so
+   $\Xi_m(\mathfrak p)^2 = \Psi_m(\mathfrak p) = \exp(2\pi i m t(\mathfrak p)/L)$
+   has infinite multiplicative order whenever $m \ne 0$. Under the nontrivial
+   Galois automorphism $\iota \in \operatorname{Gal}(F/\mathbb Q)$,
    $N_{F/\mathbb Q}(\iota\alpha) = N_{F/\mathbb Q}(\alpha)$ and
-   $\eta(\iota\alpha) = -\eta(\alpha)$, so
+   $t(\iota\alpha) = -t(\alpha)$, so
    $$
    \Xi_m(\iota\mathfrak a) = \Xi_{-m}(\mathfrak a) = \overline{\Xi_m(\mathfrak a)},
    \qquad
    L_F(s,\Xi_m) = L_F(s,\Xi_{-m}).
    \tag{A5}
    $$
-   In particular, $\Xi_m \circ \iota \ne \Xi_m$ for all $m \ne 0$.
+   In particular, $\Xi_m \circ \iota \ne \Xi_m$ for all $m \ne 0$, while the
+   characters $\Xi_m$ and $\Xi_{-m}$ are distinct for $m \ne 0$ even though their
+   $L$-functions coincide.
 
 ---
 
-## 2. Classical Maass Cusp-Form Identification (Molin-Page)
+## 2. Classical Maass Cusp-Form Identification, Functional Equation, and Root Number
 
 In P. Molin and A. Page, *Computing groups of Hecke characters* (ANTS XV, 2022,
 `arXiv:2210.02716`, Sections 2.3-2.4 and Section 5.3.2, Proposition 39 and
 Example 40 for $F = \mathbb Q(\sqrt 5)$), the unramified Hecke character
 $\chi_m^{\mathrm{MP}}$ ($m \in \mathbb Z$) is normalized by the archimedean
-component $\operatorname{sgn}(x_1 x_2)^\epsilon |x_1/x_2|^{i r_m}$ with
-$r_m = \pi m/(2\log\phi) = \mu_m$ and $\epsilon \equiv m \pmod 2$. Because the
+component $\operatorname{sgn}(x_1 x_2)^{\epsilon_m} |x_1/x_2|^{i r_m}$ with
+$r_m = \pi m/(2\log\phi) = \mu_m$ and $\epsilon_m = m \bmod 2$. Because the
 value on a principal ideal is the inverse of the archimedean component at a
 generator, the exact dictionary between (A2)-(A4) and Molin-Page is
 
@@ -135,13 +149,13 @@ L_F(s,\Xi_m) = L(s,\chi_{-m}^{\mathrm{MP}}) = L(s,\chi_m^{\mathrm{MP}}).}
 \tag{A6}
 $$
 
-By Proposition 39 and Example 40 of Molin-Page, for every integer $m \ne 0$,
-quadratic automorphic induction from $F = \mathbb Q(\sqrt 5)$ to $\mathbb Q$
-maps $\Xi_m$ to a Maass cusp form $f_m$ on $\Gamma_0(5)$ with:
+By Proposition 39 and Example 40 of Molin-Page, for every nonzero integer
+$m \ne 0$, quadratic automorphic induction from $F = \mathbb Q(\sqrt 5)$ to
+$\mathbb Q$ maps $\Xi_m$ to a Maass cusp form $f_m$ on $\Gamma_0(5)$ with:
 
-- **Level and nebentypus:** level $N = |\Delta_F| N\mathfrak f = 5$ and
-  quadratic character $\chi_5(\cdot) = \left(\frac{\cdot}{5}\right)$;
-- **Parity:** $\epsilon = m \bmod 2 \in \{0,1\}$ under the reflection
+- **Level and nebentypus:** level $N_m = |\Delta_F| N\mathfrak f_m = 5$ and
+  central/nebentypus character $\chi_5(\cdot) = \left(\frac{\cdot}{5}\right)$;
+- **Parity:** $\epsilon_m = m \bmod 2 \in \{0,1\}$ under the reflection
   $x + iy \mapsto -x + iy$ (even Maass cusp forms for $m = 2h \ne 0$; odd
   Maass cusp forms for $m = 2h + 1$);
 - **Hyperbolic Laplace eigenvalue:**
@@ -150,34 +164,96 @@ maps $\Xi_m$ to a Maass cusp form $f_m$ on $\Gamma_0(5)$ with:
   \lambda_m^{\mathrm{Maass}} = \frac{1}{4} + \mu_m^2
   = \frac{1}{4} + \left(\frac{\pi m}{2\log\phi}\right)^2,
   \qquad
-  \lambda_{2h}^{\mathrm{Maass}} = \frac{1}{4} + \left(\frac{\pi h}{\log\phi}\right)^2;}
+  \lambda_{2h}^{\mathrm{Maass}} = \frac{1}{4} + \left(\frac{\pi h}{\log\phi}\right)^2
+  \qquad (m, h \ne 0);}
   \tag{A7}
   $$
-- **Fourier-Whittaker expansion:** with $A_m(n) = \sum_{N\mathfrak a = n} \Xi_m(\mathfrak a) \in \mathbb R$,
+- **Fourier-Whittaker expansion ($m \ne 0$):** with $A_m(n) = \sum_{N\mathfrak a = n} \Xi_m(\mathfrak a) = A_{-m}(n) \in \mathbb R$
+  and $A_m(1) = 1$,
   $$
   f_m(x+iy) = \sqrt y \sum_{n\ge 1} A_m(n) K_{i\mu_m}(2\pi n y)
   \begin{cases}
-    \cos(2\pi n x), & m \text{ even } (\epsilon = 0), \\
-    \sin(2\pi n x), & m \text{ odd } (\epsilon = 1);
+    \cos(2\pi n x), & \epsilon_m = 0, \\
+    \sin(2\pi n x), & \epsilon_m = 1
   \end{cases}
+  \qquad (m \ne 0).
   \tag{A8}
   $$
-- **Completed $L$-function:** writing $\Gamma_{\mathbb R}(s) = \pi^{-s/2}\Gamma(s/2)$,
-  both real places have sign exponent $\epsilon \in \{0,1\}$ and spectral shifts
-  $\pm i\mu_m$, so Section 2.4 of Molin-Page gives
+  (In the exponential Fourier convention $f_m^{\mathrm{exp}}(x+iy) = \sqrt y \sum_{n\ne 0} \rho_m(n) K_{i\mu_m}(2\pi|n|y) e^{2\pi i n x}$
+  normalized by $\rho_m(1) = 1$, one has $f_m^{\mathrm{exp}} = 2 f_m$ for
+  $\epsilon_m = 0$ and $f_m^{\mathrm{exp}} = 2i f_m$ for $\epsilon_m = 1$, with
+  $\rho_m(n) = A_m(n)$ and $\rho_m(-n) = (-1)^{\epsilon_m} A_m(n)$ for $n > 0$.)
+- **Completed $L$-function and functional equation with global root number $+1$:**
+  writing $\Gamma_{\mathbb R}(s) = \pi^{-s/2}\Gamma(s/2)$, both real places have
+  sign exponent $\epsilon_m \in \{0,1\}$ and spectral shifts $\mp i\mu_m$, so
   $$
   \boxed{
   \Lambda(s,\Xi_m)
-  = 5^{s/2} \Gamma_{\mathbb R}(s + \epsilon + i\mu_m)
-            \Gamma_{\mathbb R}(s + \epsilon - i\mu_m) L_F(s,\Xi_m).}
+  = 5^{s/2} \Gamma_{\mathbb R}(s + \epsilon_m - i\mu_m)
+            \Gamma_{\mathbb R}(s + \epsilon_m + i\mu_m) L_F(s,\Xi_m),}
   \tag{A9}
   $$
+  and for **every** integer $m \in \mathbb Z$ (both even and odd), $\Lambda(s,\Xi_m)$
+  satisfies the exact functional equation with global root number $W(\Xi_m) = +1$:
+  $$
+  \boxed{
+  \Lambda(s,\Xi_m) = \Lambda(1-s,\Xi_{-m}) = \Lambda(1-s,\Xi_m),
+  \qquad W(\Xi_m) = +1 \quad (m \in \mathbb Z).}
+  \tag{A9a}
+  $$
 
-For $m = 0$, $L_F(s,\Xi_0) = \zeta_F(s) = \zeta(s)L(s,\chi_5)$ has a simple
-pole at $s = 1$ and belongs to the noncuspidal Eisenstein spectrum. Note also
-that $\lambda_m^{\mathrm{Maass}}$ is the eigenvalue of the hyperbolic Laplacian
-$-y^2(\partial_x^2 + \partial_y^2)$ associated with the periodic lattice of
-units, not a Riemann zeta zero ordinate.
+**Explicit proof of $W(\Xi_m) = +1$ (Tate local epsilon factors).** Following
+B. Poonen, *Tate's thesis* (MIT 18.786 lecture notes, Sections 4.3, 4.7, 5.4,
+Theorems 4.18 and 5.22), fix the standard additive character of $\mathbb A_{\mathbb Q}/\mathbb Q$
+with $\psi_{\mathbb Q,\infty}(x) = e^{-2\pi i x}$ and $\psi_{\mathbb Q,p}(x) = e^{2\pi i \{x\}_p}$,
+and set $\psi_F = \psi_{\mathbb Q} \circ \operatorname{Tr}_{F/\mathbb Q}$.
+1. *Archimedean places $\infty_1, \infty_2$:* Using the Gaussian test function
+   $f_{\epsilon_m}(x) = x^{\epsilon_m} e^{-\pi x^2}$ on $\mathbb R$, whose Fourier
+   transform under $e^{-2\pi i x y}$ is $\widehat f_{\epsilon_m}(y) = (-i)^{\epsilon_m} f_{\epsilon_m}(y)$,
+   Tate's local functional equation (Poonen, Lemma 4.20) gives
+   $\varepsilon_{\infty_1}(s,\widetilde\Xi_{m,1},\psi_{F,1}) = (-i)^{\epsilon_m}$
+   and $\varepsilon_{\infty_2}(s,\widetilde\Xi_{m,2},\psi_{F,2}) = (-i)^{\epsilon_m}$.
+   Their archimedean product is
+   $$\varepsilon_\infty(s,\Xi_m) = (-i)^{\epsilon_m}(-i)^{\epsilon_m} = (-1)^{\epsilon_m} = (-1)^m.$$
+2. *Finite places and the different $\mathfrak d_F = (\sqrt 5) = \mathfrak p_5$:*
+   For each finite place $v$ of $F$, the inverse different has valuation
+   $-d_v = -v(\mathfrak d_F)$, and the self-dual Haar measure gives
+   $\operatorname{vol}(\mathcal O_{F,v}) = (N\mathfrak p_v)^{-d_v/2}$. Since
+   $\widetilde\Xi_{m,v}$ is unramified at every finite place, its local epsilon
+   factor is $\varepsilon_v(s,\widetilde\Xi_{m,v},\psi_{F,v}) = \Xi_m(\mathfrak p_v)^{d_v} (N\mathfrak p_v)^{d_v(1/2-s)}$.
+   Because $\mathfrak d_F = (2\phi - 1) = (\sqrt 5) = \mathfrak p_5$ has
+   $N\mathfrak d_F = 5$, every finite place $v \ne \mathfrak p_5$ has $d_v = 0$
+   and $\varepsilon_v = 1$, while at $v = \mathfrak p_5$ ($d_{\mathfrak p_5} = 1$,
+   $N_{F/\mathbb Q}(\sqrt 5) = -5$, $|\sigma_1(\sqrt 5)/\sigma_2(\sqrt 5)| = 1$):
+   $$\Xi_m(\mathfrak p_5) = \operatorname{sgn}(-5)^{\epsilon_m}\cdot 1^{i\mu_m} = (-1)^m, \qquad \varepsilon_{\mathfrak p_5}(s,\widetilde\Xi_{m,\mathfrak p_5},\psi_{F,\mathfrak p_5}) = (-1)^m 5^{1/2-s}.$$
+3. *Global sign cancellation:* Multiplying over all places gives the global
+   epsilon factor $\varepsilon_F(s,\Xi_m) = (-1)^m \cdot (-1)^m 5^{1/2-s} = 5^{1/2-s}$,
+   and evaluating at $s = 1/2$ yields $W(\Xi_m) = \varepsilon_F(1/2,\Xi_m) = +1$
+   for every $m \in \mathbb Z$. Odd Maass parity ($\epsilon_m = 1$) does not
+   produce a negative global root number because the product $-1$ of the two real
+   local epsilon factors cancels the sign $\Xi_m(\mathfrak p_5) = -1$ at the
+   different. $\square$
+
+**Principal mode $m = 0$ and trivial zeros:**
+- The mode $m = 0$ is explicitly excluded from the cusp-form assertion (A7)-(A8):
+  $\Xi_0 = 1$ is Galois-invariant, its automorphic induction is the noncuspidal
+  isobaric sum $1 \boxplus \chi_5$, and
+  $$
+  L_F(s,\Xi_0) = \zeta_F(s) = \zeta(s)L(s,\chi_5), \qquad
+  \Lambda(s,\Xi_0) = \bigl[\Gamma_{\mathbb R}(s)\zeta(s)\bigr]\bigl[5^{s/2}\Gamma_{\mathbb R}(s)L(s,\chi_5)\bigr],
+  \tag{A9b}
+  $$
+  which is meromorphic with simple poles at $s = 0$ and $s = 1$.
+- For $m \ne 0$, both $L_F(s,\Xi_m)$ and $\Lambda(s,\Xi_m)$ are entire. Using
+  $3 + 4\cos\theta + \cos(2\theta) = 2(1+\cos\theta)^2 \ge 0$ on the Euler
+  logarithm gives $\zeta_F(\sigma)^3 |L_F(\sigma+it,\Xi_m)|^4 |L_F(\sigma+2it,\Xi_{2m})| \ge 1$
+  for $\sigma > 1$; since $2m \ne 0$ makes $L_F(s,\Xi_{2m})$ entire, $L_F(1+it,\Xi_m) \ne 0$
+  for all $t \in \mathbb R$. By (A9)-(A9a), the trivial zeros of $L_F(s,\Xi_m)$
+  on $\Re s \le 0$ are simple and lie at $s = -\epsilon_m - 2k \pm i\mu_m$
+  ($k = 0,1,2,\dots$). Any central zero at $s = 1/2$ has even order since
+  $W(\Xi_m) = +1$. Note finally that $\lambda_m^{\mathrm{Maass}}$ is the
+  hyperbolic Laplacian eigenvalue associated with the unit lattice of $F$, not a
+  Riemann zeta zero ordinate.
 
 ---
 
@@ -208,6 +284,13 @@ For $T = p^{-s}$, the complete Euler-factor table for all $m \in \mathbb Z$ is:
 | Split, $\chi_5(p) = +1$ | $(1 - z_{p,m}T)(1 - z_{p,m}^{-1}T)$ | $(1 - T)^{-1}$ | $(1 - z_{p,m}T)(1 - z_{p,m}^{-1}T)/(1 - T)$ |
 | Inert, $\chi_5(p) = -1$ | $1 - T^2$ (since $\mathfrak p = (p)$, $N\mathfrak p = p^2$, $\Xi_m((p)) = 1$) | $(1 + T)^{-1}$ | $(1 - T^2)/(1 + T) = 1 - T$ |
 | Ramified, $p = 5$ | $1 - (-1)^m T$ (since $\mathfrak p_5 = (\sqrt 5) = (2+\phi)$, $\Xi_m(\mathfrak p_5) = (-1)^m$) | $1$ | $1 - (-1)^m T$ |
+
+At the ramified prime $\mathfrak p_5 = (\sqrt 5) = (2+\phi)$, both generators
+yield the same value $\Xi_m(\mathfrak p_5) = (-1)^m$: at $\alpha = \sqrt 5$ one
+has $N_{F/\mathbb Q}(\sqrt 5) = -5$ and $t(\sqrt 5) = 0$, giving
+$(-1)^{\epsilon_m}\cdot 1 = (-1)^m$, while at the totally positive generator
+$\eta_5 = 2 + \phi = \phi\sqrt 5 \gg 0$ one has $N_{F/\mathbb Q}(2+\phi) = +5$
+and $t(2+\phi) = L$, giving $(+1)^{\epsilon_m} e^{\pi i m L/L} = (-1)^m$.
 
 Expanding the split local factor $(1 - (z_{p,m}+z_{p,m}^{-1})T + T^2)(1 + T + T^2 + \cdots)$
 shows that at every split prime $p$,
@@ -274,12 +357,21 @@ Accordingly:
    hypothesis.
 2. **Converse requires non-cancellation:** holomorphy of $\mathcal D^{(m)}(s)$
    on $\Re s > 1/2$ implies $\operatorname{ord}_\rho L_F(s,\Xi_m) \le \operatorname{ord}_\rho L(s,\chi_5)$
-   there. To deduce that $L_F(s,\Xi_m)$ is zero-free on $\Re s > 1/2$, one needs
-   that $L(s,\chi_5)$ has no zeros there (for example, by assuming $\mathrm{GRH}$
-   for $L(s,\chi_5)$). Even under both $\mathrm{GRH}$ premises, asserting that
-   every critical-line zero of $L_F(s,\Xi_m)$ is an uncancelled pole of
-   $\mathcal D^{(m)}(s)$ requires linear independence / non-coincidence of the
-   critical-line zeros of $L(s,\chi_5)$ and $L_F(s,\Xi_m)$.
+   there. Assuming $\mathrm{GRH}$ for the fixed numerator $L(s,\chi_5)$ gives
+   $\operatorname{ord}_\rho L(s,\chi_5) = 0$ on $\Re s > 1/2$, yielding the
+   exact conditional biconditional:
+   $$
+   \boxed{
+   \text{Assuming }\mathrm{GRH}\text{ for }L(s,\chi_5):\quad
+   \mathcal D^{(m)}(s)\text{ is holomorphic on }\Re s > \tfrac{1}{2}
+   \ \Longleftrightarrow\ 
+   \mathrm{GRH}\text{ holds for }L_F(s,\Xi_m) \quad (m \ne 0).}
+   \tag{A14a}
+   $$
+   Even under both $\mathrm{GRH}$ premises, asserting on the critical line
+   $\Re s = 1/2$ that every critical-line zero of $L_F(s,\Xi_m)$ is an
+   uncancelled pole of $\mathcal D^{(m)}(s)$ requires linear independence /
+   non-coincidence of the critical-line zeros of $L(s,\chi_5)$ and $L_F(s,\Xi_m)$.
 
 ---
 
@@ -325,7 +417,7 @@ $$
 \qquad (\tfrac{1}{2} + \delta \le \sigma \le 2),
 $$
 
-and therefore the explicit reciprocal polynomial bound
+and therefore the self-contained polynomial reciprocal bound
 
 $$
 \boxed{
@@ -336,51 +428,65 @@ $$
 \tag{A17}
 $$
 
-*(Remark on the conditional Littlewood / Lindelof refinement: using the standard
-conditional bound $\Re\log L_F(z,\Xi_m) \ll (\log Q_m(t))^{2-2\Re z}/\log\log Q_m(t)$
-under $\mathrm{GRH}$ improves the exponent $12 C_0 / \delta$ in (A17) to any
-$\varepsilon > 0$, giving $|L_F(\sigma+it,\Xi_m)^{-1}| \ll_{\delta,\varepsilon} Q_m(t)^\varepsilon \ll_{\delta,\varepsilon} (1 + |t| + |m|)^\varepsilon$
-for $\sigma \ge \tfrac{1}{2} + \delta$.)*
-
 ### 5.2 Mellin Contour Shift and Mode-Growing Regime
 
-Combining (A17) (or its $\varepsilon$-refinement) with the standard convexity
+Combining the proved Borel-Caratheodory bound (A17) with the standard convexity
 bound $|L(\sigma + it, \chi_5)| \ll (1 + |t|)^{1/2}$ on $\tfrac{1}{2} + \delta \le \sigma \le 2$
 gives
 
 $$
 \bigl|\mathcal D^{(m)}(\sigma + it)\bigr|
-\ll_{\delta,\varepsilon} (1 + |t|)^{1/2 + \varepsilon} (1 + |m|)^\varepsilon
+\ll_\delta (1 + |t|)^{1/2 + 12 C_0 / \delta} (1 + |m|)^{12 C_0 / \delta}
 \qquad (\tfrac{1}{2} + \delta \le \sigma \le 2).
 \tag{A18}
 $$
 
-Integration by parts $K$ times shows $|\widehat w(\sigma + it)| \ll_{w,K} (1 + |t|)^{-K}$
-uniformly on $1/2 \le \sigma \le 2$. Shifting the Mellin inversion contour
+Integration by parts $K = \lceil 12 C_0 / \delta \rceil + 3$ times shows
+$|\widehat w(\sigma + it)| \ll_{w,\delta} (1 + |t|)^{-K}$ uniformly on
+$1/2 \le \sigma \le 2$. Shifting the Mellin inversion contour
 
 $$
 \sum_{n\ge 1} m^{(m)}(n) w(n/X)
 = \frac{1}{2\pi i}\int_{(2)} \mathcal D^{(m)}(s)\widehat w(s) X^s\,ds
 $$
 
-to the line $\Re s = \tfrac{1}{2} + \delta$ encounters no poles and yields both
-the fixed-mode estimate and its explicit mode dependence:
+to the line $\Re s = \tfrac{1}{2} + \delta$ encounters no poles and proves the
+self-contained conditional smooth summatory estimate:
 
 $$
 \boxed{
 \sum_{n\ge 1} m^{(m)}(n) w(n/X)
-= O_{w,\delta,\varepsilon}\Bigl((1 + |m|)^\varepsilon X^{1/2 + \delta}\Bigr)
+= O_{w,\delta}\Bigl((1 + |m|)^{12 C_0 / \delta} X^{1/2 + \delta}\Bigr)
 \qquad (X \ge 1, \ m \ne 0).}
 \tag{A19}
 $$
 
+**Imported conditional Littlewood-Lindelof refinement:** if one additionally
+imports the standard conditional Littlewood bound (`[IMPORTED CONDITIONAL INPUT]`:
+$\Re\log L_F(z,\Xi_m) \ll (\log Q_m(t))^{2-2\Re z}/\log\log Q_m(t)$ under
+$\mathrm{GRH}$, Iwaniec-Kowalski, Theorem 5.17 / Corollary 5.20), the exponent
+$12 C_0 / \delta$ in (A17)-(A19) is replaced for any fixed $\delta > 0$ and any
+$\varepsilon > 0$ by $\varepsilon$:
+
+$$
+\bigl|L_F(\sigma + it, \Xi_m)^{-1}\bigr|
+\ll_{\delta,\varepsilon} Q_m(t)^\varepsilon
+\ll_{\delta,\varepsilon} (1 + |t| + |m|)^\varepsilon,
+\qquad
+\sum_{n\ge 1} m^{(m)}(n) w(n/X)
+= O_{w,\delta,\varepsilon}\Bigl((1 + |m|)^\varepsilon X^{1/2 + \delta}\Bigr).
+\tag{A19a}
+$$
+
 In particular, when summing a smooth linear combination $\sum_{1 \le |m| \le H(X)} c_m \sum_{n\ge 1} m^{(m)}(n) w(n/X)$
 under $\mathrm{GRH}$ for all modes $1 \le |m| \le H(X)$, the individual mode
-bounds contribute $(1 + H(X))^\varepsilon X^{1/2+\delta} \sum_{|m|\le H(X)} |c_m|$.
-Passing from smooth weights $w(n/X)$ to a sharp cutoff $\mathbf 1_{n\le X}$
-replaces rapid Mellin decay by the Perron kernel $X^s/s$, which requires a
-separate truncation height $T$ and vertical mean-value control of
-$\mathcal D^{(m)}(\tfrac{1}{2} + \delta + it)$ over $|t| \le T$.
+bounds contribute $(1 + H(X))^{12 C_0 / \delta} X^{1/2+\delta} \sum_{|m|\le H(X)} |c_m|$
+by the proved bound (A19) (or $(1 + H(X))^\varepsilon X^{1/2+\delta} \sum_{|m|\le H(X)} |c_m|$
+under the imported refinement (A19a)). Passing from smooth weights $w(n/X)$ to
+a sharp cutoff $\mathbf 1_{n\le X}$ replaces rapid Mellin decay by the Perron
+kernel $X^s/s$, which requires a separate truncation height $T$ and vertical
+mean-value control of $\mathcal D^{(m)}(\tfrac{1}{2} + \delta + it)$ over
+$|t| \le T$.
 
 ---
 
@@ -401,7 +507,7 @@ the fundamental unit $\phi$ by
 $$
 \theta(\mathfrak a)
 = \frac{\pi}{\log\phi}\log\left|\frac{\sigma_1(\alpha)}{\sigma_2(\alpha)}\right|
-= \frac{2\pi \eta(\alpha)}{L} \pmod{2\pi}.
+= \frac{2\pi t(\alpha)}{L} \pmod{2\pi}.
 \tag{A20}
 $$
 
@@ -413,7 +519,7 @@ sufficiently large $X$:
 
 $$
 \#\bigl\{\mathfrak p \subset \mathcal O_F \text{ prime} :
-  X/2 \le N\mathfrak p \le X,\ \eta(\mathfrak p)/L \in I \pmod 1\bigr\}
+  X/2 \le N\mathfrak p \le X,\ t(\mathfrak p)/L \in I \pmod 1\bigr\}
 \gg \frac{\delta X}{\log X}.
 \tag{A21}
 $$
@@ -447,16 +553,21 @@ $$
 
 Thus:
 
-- the **sum of counts** on the two opposite sheets $J$ and $J + L$ of
+- **Proved unconditional consequence of Baier-Roy on $\mathbb R/(L\mathbb Z)$:**
+  the **sum of counts** on the two opposite sheets $J$ and $J + L$ of
   $\mathbb R/(2L\mathbb Z)$ depends only on the even modes $\Psi_h = \Xi_{2h}$
   and is unconditionally bounded below by $\gg \delta X / \log X$ for
-  $\delta \ge (2\pi)^{-1} X^{-0.235}$ directly by (A21);
-- isolating a **single sheet** $J \subset \mathbb R/(2L\mathbb Z)$ requires
-  controlling the odd-mode sum $\sum_{k} c_{2k+1}(J) \sum_{X/2 \le N\mathfrak p \le X} \Xi_{2k+1}(\mathfrak p)$
-  for $|2k+1| \ll \delta^{-1} X^\varepsilon$. Because the odd modes $\Xi_{2k+1}$
-  analyzed in Sections 1-2 have the same trivial finite conductor $\mathfrak f = \mathcal O_F$
-  and level $5$ as the even modes $\Psi_h$ (differing only by the archimedean
-  parity shift $\epsilon = 1$ in (A9)), the same zero-free region and
-  zero-density estimates over $F = \mathbb Q(\sqrt 5)$ apply to the full
-  narrow-class Hecke family $\{\Xi_m\}_{m \in \mathbb Z}$ when extending
-  sector theorems from $\mathbb R/(L\mathbb Z)$ to $\mathbb R/(2L\mathbb Z)$.
+  $\delta \ge (2\pi)^{-1} X^{-0.235}$ directly by (A21).
+- **Single-sheet scope boundary on $\mathbb R/(2L\mathbb Z)$:** Baier and Roy
+  formulate their theorem on the ideal-class torus $\mathbb R/(L\mathbb Z)$
+  using the even modes $\Psi_h = \Xi_{2h}$. Isolating a **single sheet**
+  $J \subset \mathbb R/(2L\mathbb Z)$ requires controlling the odd-mode sum
+  $\sum_{k} c_{2k+1}(J) \sum_{X/2 \le N\mathfrak p \le X} \Xi_{2k+1}(\mathfrak p)$
+  for $|2k+1| \ll \delta^{-1} X^\varepsilon$. Sections 1-2 prove that the odd
+  modes $\Xi_{2k+1}$ have the same trivial finite conductor $\mathfrak f = \mathcal O_F$,
+  level $5$, and root number $W(\Xi_m) = +1$ as the even modes $\Psi_h$
+  (differing only by the archimedean parity shift $\epsilon_m = 1$ in (A9));
+  actually executing the Harman sieve and zero-density steps of Baier-Roy for
+  the odd modes $\Xi_{2k+1}$ is a separate analytic task and is not claimed as
+  already completed in `arXiv:2307.03513v2`.
+
