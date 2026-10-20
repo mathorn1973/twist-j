@@ -29,6 +29,20 @@ REPLAY_CONTROL_PATHS = frozenset({
 # declarations supplied by a run record. External source files may evolve in
 # the current tree. Local frozen bundle files must still equal their pin.
 ADMITTED_CONTEXT_PATHS = {
+    'P-INTEGER-PRIMITIVE-SOURCE-METRIC-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
+    'P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
     'P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1': frozenset({
         'canon/CANON.md',
         'canon/CORE.md',
@@ -113,6 +127,12 @@ ADMITTED_CONTEXT_PATHS = {
     }),
 }
 ADMITTED_BUNDLE_PATHS = {
+    'P-INTEGER-PRIMITIVE-SOURCE-METRIC-1': frozenset({
+        'probes/P-INTEGER-PRIMITIVE-SOURCE-METRIC-1/breaker.py',
+    }),
+    'P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1': frozenset({
+        'probes/P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1/breaker.py',
+    }),
     'P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1': frozenset({
         'probes/P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1/breaker.py',
     }),
