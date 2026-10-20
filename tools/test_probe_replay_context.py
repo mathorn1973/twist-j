@@ -422,13 +422,20 @@ class ReviewedRegistrationTests(unittest.TestCase):
             if path != prefix + "CODE_SHA256SUMS":
                 self.assertEqual(spec["sha256"], listed[path.removeprefix(prefix)])
 
-    def test_control_changes_select_all_three_registered_probes(self) -> None:
+    def test_control_changes_select_all_registered_probes(self) -> None:
         root = Path(__file__).resolve().parents[1]
         expected = [root / "probes" / name for name in sorted(context.registrations(root))]
         self.assertEqual({path.name for path in expected}, {
             "P-FRW-INHOM-K1-BACKREACTION-3",
             "P-U-EARLY-SOURCE-FIBRE-CONTACT-1",
             "P-TWO-USE-READOUT-FAILURE-REGRESSION-2",
+            "P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1",
+            "P-INTEGER-LOCAL-AUXILIARY-NOETHER-1",
+            "P-INTEGER-SCALAR-LAPSE-RIGIDITY-1",
+            "P-INTEGER-FIXED-DURATION-BOUNDARY-1",
+            "P-RELATIONAL-MASS-METRIC-RESPONSE-1",
+            "P-RELATIONAL-MASS-JOINT-ACTION-1",
+            "P-RELATIONAL-MASS-STABLE-BINDING-1",
         })
         for path in context.REPLAY_CONTROL_PATHS:
             with self.subTest(path=path):

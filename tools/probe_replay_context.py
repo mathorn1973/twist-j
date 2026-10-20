@@ -29,6 +29,55 @@ REPLAY_CONTROL_PATHS = frozenset({
 # declarations supplied by a run record. External source files may evolve in
 # the current tree. Local frozen bundle files must still equal their pin.
 ADMITTED_CONTEXT_PATHS = {
+    'P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
+    'P-INTEGER-LOCAL-AUXILIARY-NOETHER-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
+    'P-INTEGER-SCALAR-LAPSE-RIGIDITY-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
+    'P-INTEGER-FIXED-DURATION-BOUNDARY-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
+    'P-RELATIONAL-MASS-METRIC-RESPONSE-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
+    'P-RELATIONAL-MASS-JOINT-ACTION-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
+    'P-RELATIONAL-MASS-STABLE-BINDING-1': frozenset({
+        'canon/CANON.md',
+        'canon/CORE.md',
+        'canon/FRONTIER.md',
+        'canon/REGISTRY.tsv',
+        'canon/CHANGELOG.md',
+    }),
     "P-FRW-INHOM-K1-BACKREACTION-3": frozenset({
         "canon/CANON.md", "STATUS.md",
         "notes/canon/C-FRW-INHOM-TYPED-ADM-PREDEFINITION-N.md",
@@ -64,6 +113,27 @@ ADMITTED_CONTEXT_PATHS = {
     }),
 }
 ADMITTED_BUNDLE_PATHS = {
+    'P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1': frozenset({
+        'probes/P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1/breaker.py',
+    }),
+    'P-INTEGER-LOCAL-AUXILIARY-NOETHER-1': frozenset({
+        'probes/P-INTEGER-LOCAL-AUXILIARY-NOETHER-1/breaker.py',
+    }),
+    'P-INTEGER-SCALAR-LAPSE-RIGIDITY-1': frozenset({
+        'probes/P-INTEGER-SCALAR-LAPSE-RIGIDITY-1/breaker.py',
+    }),
+    'P-INTEGER-FIXED-DURATION-BOUNDARY-1': frozenset({
+        'probes/P-INTEGER-FIXED-DURATION-BOUNDARY-1/breaker.py',
+    }),
+    'P-RELATIONAL-MASS-METRIC-RESPONSE-1': frozenset({
+        'probes/P-RELATIONAL-MASS-METRIC-RESPONSE-1/breaker.py',
+    }),
+    'P-RELATIONAL-MASS-JOINT-ACTION-1': frozenset({
+        'probes/P-RELATIONAL-MASS-JOINT-ACTION-1/breaker.py',
+    }),
+    'P-RELATIONAL-MASS-STABLE-BINDING-1': frozenset({
+        'probes/P-RELATIONAL-MASS-STABLE-BINDING-1/breaker.py',
+    }),
     "P-FRW-INHOM-K1-BACKREACTION-3": frozenset(),
     "P-U-EARLY-SOURCE-FIBRE-CONTACT-1": frozenset(
         f"probes/P-U-EARLY-SOURCE-FIBRE-CONTACT-1/{name}" for name in (
