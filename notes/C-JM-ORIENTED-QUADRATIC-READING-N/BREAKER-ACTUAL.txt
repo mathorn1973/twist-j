@@ -1,0 +1,7 @@
+RESULT-EXPOSED STDLIB CHECK
+CRT inclusion, direct cyclotomic conjugation and trace Gram = PASS
+positive nonzero ternary vectors checked = 6560
+quadratic action exact orders by scalar-kernel test = 20/820
+norm-equal seam/anti-seam witness and 1681 residue tests = PASS
+nilpotent multiplication/outer-square contrast = PASS
+ALL STDLIB CHECKS PASS; no blind-agent or architecture promotion
