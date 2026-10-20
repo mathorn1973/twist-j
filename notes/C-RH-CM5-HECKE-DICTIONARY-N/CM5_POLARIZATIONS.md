@@ -365,22 +365,34 @@ N_{F/\mathbb Q}(\eta) = a^2 - ab - b^2 = x^2 + xy - y^2.
 $$
 
 **Comparison with the integral-homology calibration (`CM-ALTERNATING-PENCIL [T]`):**
-On the rank-four lattice $\mathcal O_K = \mathbb Z[\zeta]$, the trace pairing
-$(u,v) \mapsto \operatorname{Tr}_{K/\mathbb Q}(\xi u\bar v)$ with pure imaginary
-$\xi \in \mathcal O_K$ is integral on $\mathcal O_K \times \mathcal O_K$, while
-the unimodular canonical principal polarization $E_0$ of $B = \operatorname{Jac}(C)$
-on $H_1(B,\mathbb Z) \simeq \mathcal O_K$ uses the inverse different
-$\mathfrak d_{K/\mathbb Q}^{-1} = (\zeta - \zeta^{-1})^{-3}\mathcal O_K$
-($N_{K/\mathbb Q}(\mathfrak d_{K/\mathbb Q}) = 5^3$). In
-[`HODGE-TATE-CM5-INTEGRAL-HOMOLOGY-CALIBRATION-2026-09-11.md`](../HODGE-TATE-CM5-INTEGRAL-HOMOLOGY-CALIBRATION-2026-09-11.md),
-evaluating the unscaled trace form $\Omega_{(a,b)} = a\Omega_1 + b\Omega_2$ on
-the index-$5$ primary sublattice $\mathcal O_K^2 \subset H_1(B,\mathbb Z)$ gives
-Pfaffians $5(a^2 - ab - b^2)$ and elementary-divisor types $(1,2)$ and $(1,3)$
-at $(a,b) = (1,0)$ and $(0,-1)$; dividing by the inverse-different factor on the
-full homology lattice $H_1(B,\mathbb Z) \simeq \mathcal O_K$ produces the
-unimodular base form $E_0$ of $D_1 = [\lambda_0]$ (Pfaffian $1$, type $(1,1)$)
-and the general polarization form $E_\eta(u,v) = E_0(\eta u, v)$ of Pfaffian
-$N_{F/\mathbb Q}(\eta) = a^2 - ab - b^2 = x^2 + xy - y^2$.
+On the rank-four lattice $\mathcal O_K = \mathbb Z[\zeta]$, with
+$\lambda_1 = \zeta - \zeta^{-1},\ \lambda_2 = \zeta^2 - \zeta^{-2}$, and the
+anti-real rank-one $\mathbb Z[\phi]$-lattice
+$L = \{\lambda \in \mathcal O_K : \bar\lambda = -\lambda\} = \lambda_1\mathbb Z[\phi]$,
+the divided trace pairing $\Omega_\lambda(u,v) = \frac{1}{5}\operatorname{Tr}_{K/\mathbb Q}(\lambda u\bar v)$
+is already integral and alternating on $\mathcal O_K \times \mathcal O_K$, has
+Pfaffian $\operatorname{Pf}(\Omega_{(a,b)}) = a^2 - ab - b^2 = N_{F/\mathbb Q}((a-b)+b\phi)$
+for $\lambda = a\lambda_1 + b\lambda_2$, and is unimodular precisely on the Pell
+unit orbit $(\lambda) = (\lambda_1)$ (`CM-ALTERNATING-PENCIL [T]`, where dividing
+by $5$ cancels the inverse-different denominator of $\mathfrak d_{K/\mathbb Q}$).
+In [`HODGE-TATE-CM5-INTEGRAL-HOMOLOGY-CALIBRATION-2026-09-11.md`](../HODGE-TATE-CM5-INTEGRAL-HOMOLOGY-CALIBRATION-2026-09-11.md),
+the double-pentagon edge basis $(c_0,c_1,c_2,c_3)$ of $H_1(B,\mathbb Z) \simeq \mathcal O_K$
+realizes the order-five automorphism $T_*$ as the companion matrix $M$ of
+multiplication by $\zeta$ and the topological intersection pairing as
+$W_c = \Omega_1 - \Omega_2 = \Omega_{(1,-1)} = J^*\Omega_1$ ($\operatorname{Pf}(W_c) = -1$).
+Passing to the unimodular integral basis $d_k = J^{-1}c_k$ via
+$P = -(M + M^2) = J^{-1} \in \operatorname{GL}_4(\mathbb Z)$ ($\det P = 1$,
+$P^{-1}MP = M$) removes the $J$-pullback and transforms the intersection pairing
+into $P^\mathsf{T} W_c P = \Omega_1 = E_0$ (the unimodular principal polarization
+$D_1 = [\lambda_0]$ of type $(1,1)$), while the general polarization form is
+$E_\eta(u,v) = \Omega_1(\eta u,v) = \Omega_{(a,b)}(u,v)$ of Pfaffian
+$N_{F/\mathbb Q}(\eta) = a^2 - ab - b^2 = x^2 + xy - y^2$. (By contrast, the
+index-$5$ primary-lattice seam of `CM-ALTERNATING-PRIMARY-LATTICE-SEAM [T]` and
+`CM-REAL-DIFFERENT-PRIMARY-SEAM [T]` lives inside the rank-six exterior square
+$E_{\mathbb Z} = \operatorname{Alt}^2(\mathbb Z^4)$, where the direct sum
+$H_{\mathbb Z} \oplus C_{\mathbb Z}$ of the rank-two CM pencil $H_{\mathbb Z}$
+and the rank-four circular sector $C_{\mathbb Z}$ has index $5$ with quotient
+$Q_{\mathrm{seam}} \simeq \mathfrak d_F^{-1}H_{\mathbb Z}/H_{\mathbb Z} \simeq \mathbb Z/5\mathbb Z$.)
 
 The intersection Gram matrices of $D_\eta^2 = 2 N_{F/\mathbb Q}(\eta)$ in the
 two integral bases are
@@ -654,9 +666,8 @@ $$
 \boxed{
 A + B\phi \ge 0 \iff
 \begin{cases}
-  2A + B \ge 0, & \text{if } B \ge 0 \text{ and } (2A+B)^2 \ge 5B^2, \\
-  B > 0, & \text{if } (2A+B)^2 < 5B^2, \\
-  \text{false}, & \text{otherwise.}
+  2A + B \ge 0, & \text{if } (2A+B)^2 \ge 5B^2, \\
+  B > 0, & \text{if } (2A+B)^2 < 5B^2.
 \end{cases}}
 \tag{P31}
 $$

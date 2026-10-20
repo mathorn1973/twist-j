@@ -4,7 +4,7 @@
 STATUS:                  NON-CANONICAL / SYNTHESIS AND CLASSICAL DICTIONARY
 AUTHORITY:               Public Canon v103 remains unchanged
 PUBLIC BASE:             dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d (tag canon-v103)
-PUBLIC CONTENT COMMIT:   8e1f6538a09c8ef012a0a9971d501119f13d52ee
+PUBLIC CONTENT COMMIT:   01fb76f6b3b14a6a5ec05d0017ea922390ab6f66
 PUBLIC CANON SHA-256:    d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b
 PUBLIC CANON BYTES:      1052518
 DATE:                    2026-10-20
@@ -261,9 +261,9 @@ $\zeta_F'(0) = \zeta(0)L'(0,\chi_5) = -\tfrac{1}{2}\log\phi$. $\square$
    `arXiv:2210.02716`, Sections 2.3-2.4 and Section 5.3.2, Proposition 39 and
    Example 40:
    <https://antsmath.org/ANTSXV/papers/ANTS-XV_molin-page.pdf>
-4. B. Poonen, *Tate's thesis*, MIT 18.786 lecture notes, Sections 4.3, 4.7, 5.4,
-   Theorems 4.18 and 5.22:
-   <https://math.mit.edu/~poonen/786/tate.pdf>
+4. B. Poonen, *Number Theory II* (Tate's thesis), MIT 18.786 lecture notes,
+   Sections 4.3, 4.7, 5.11, Theorems 4.18 and 5.22:
+   <https://math.mit.edu/~poonen/786/notes.pdf>
 5. S. Baier and S. Roy, *A note on the distribution of prime ideals in real
    quadratic fields*, `arXiv:2307.03513v2`, Theorems 1 and 3, equation (6):
    <https://arxiv.org/abs/2307.03513>

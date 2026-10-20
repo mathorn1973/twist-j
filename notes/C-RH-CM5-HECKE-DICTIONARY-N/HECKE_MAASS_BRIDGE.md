@@ -203,8 +203,8 @@ $\mathbb Q$ maps $\Xi_m$ to a Maass cusp form $f_m$ on $\Gamma_0(5)$ with:
   $$
 
 **Explicit proof of $W(\Xi_m) = +1$ (Tate local epsilon factors).** Following
-B. Poonen, *Tate's thesis* (MIT 18.786 lecture notes, Sections 4.3, 4.7, 5.4,
-Theorems 4.18 and 5.22), fix the standard additive character of $\mathbb A_{\mathbb Q}/\mathbb Q$
+B. Poonen, *Number Theory II* (MIT 18.786 lecture notes, `https://math.mit.edu/~poonen/786/notes.pdf`,
+Sections 4.3, 4.7, 5.11, Theorems 4.18 and 5.22), fix the standard additive character of $\mathbb A_{\mathbb Q}/\mathbb Q$
 with $\psi_{\mathbb Q,\infty}(x) = e^{-2\pi i x}$ and $\psi_{\mathbb Q,p}(x) = e^{2\pi i \{x\}_p}$,
 and set $\psi_F = \psi_{\mathbb Q} \circ \operatorname{Tr}_{F/\mathbb Q}$.
 1. *Archimedean places $\infty_1, \infty_2$:* Using the Gaussian test function
@@ -406,12 +406,15 @@ half-plane $\sigma \ge -1/2$ (including $\sigma \ge 2$):
 - **Vertical line $\sigma = -1/2$ via the exact gamma shift $\Gamma_{\mathbb R}(w+2) = \frac{w}{2\pi}\Gamma_{\mathbb R}(w)$:**
   for $s = -\tfrac{1}{2} + iy$, one has $1 - s = \tfrac{3}{2} - iy$, so
   $\Re(1 - s) = \tfrac{3}{2} = \Re s + 2$. Because $|\Gamma_{\mathbb R}(\sigma - iu)| = |\Gamma_{\mathbb R}(\sigma + iu)|$
-  and $(2\epsilon_m - 1)^2 = 1$ for both $\epsilon_m \in \{0,1\}$, the identity
-  $\Gamma_{\mathbb R}(w+2) = \frac{w}{2\pi}\Gamma_{\mathbb R}(w)$ gives for
-  $u = y \mp \mu_m$:
+  and $(2\epsilon_m - 1)^2 = 1$ for both $\epsilon_m \in \{0,1\}$, cross-pairing
+  $\Gamma_{\mathbb R}(1 - s + \epsilon_m \mp i\mu_m) = \Gamma_{\mathbb R}(\tfrac{3}{2} + \epsilon_m - i(y \pm \mu_m))$
+  in the numerator with
+  $\overline{\Gamma_{\mathbb R}(s + \epsilon_m \pm i\mu_m)} = \Gamma_{\mathbb R}(-\tfrac{1}{2} + \epsilon_m - i(y \pm \mu_m))$
+  in the denominator and applying $\Gamma_{\mathbb R}(w+2) = \frac{w}{2\pi}\Gamma_{\mathbb R}(w)$
+  at $w = -\tfrac{1}{2} + \epsilon_m - i(y \pm \mu_m)$ gives for $u = y \pm \mu_m$:
   $$
-  \left|\frac{\Gamma_{\mathbb R}(1 - s + \epsilon_m \mp i\mu_m)}{\Gamma_{\mathbb R}(s + \epsilon_m \mp i\mu_m)}\right|_{\Re s = -1/2}
-  = \left|\frac{-\tfrac{1}{2} + \epsilon_m + iu}{2\pi}\right|
+  \left|\frac{\Gamma_{\mathbb R}(1 - s + \epsilon_m \mp i\mu_m)}{\Gamma_{\mathbb R}(s + \epsilon_m \pm i\mu_m)}\right|_{\Re s = -1/2}
+  = \left|\frac{-\tfrac{1}{2} + \epsilon_m - iu}{2\pi}\right|
   = \frac{\sqrt{1 + 4u^2}}{4\pi}
   \le \frac{1 + |u|}{2\pi}.
   $$
@@ -425,15 +428,20 @@ half-plane $\sigma \ge -1/2$ (including $\sigma \ge 2$):
   \le \zeta_F(3/2)\,Q_m(y).
   $$
 - **Phragmen-Lindelof on the strip $-1/2 \le \sigma \le 3/2$:** for $m \ne 0$,
-  $L_F(z,\Xi_m)$ is entire of finite order, so applying the Phragmen-Lindelof
-  maximum principle on $-1/2 \le \sigma \le 3/2$ between the boundary bounds at
-  $\sigma = -1/2$ and $\sigma = 3/2$ establishes on the entire half-plane
-  $\sigma \ge -1/2$ the explicit bound with $C_0 = 1$:
+  $L_F(z,\Xi_m)$ is entire of finite order. The barrier
+  $g_m(z) := (z + 2 + i\mu_m)(z + 2 - i\mu_m)$ is analytic and zero-free on
+  $\sigma \ge -1/2$, and on the strip $-1/2 \le \sigma \le 3/2$ ($3/2 \le \sigma + 2 \le 7/2$)
+  satisfies $\tfrac{1}{10}Q_m(y) \le |g_m(\sigma + iy)| \le \tfrac{49}{20}Q_m(y)$.
+  Hence $|L_F(z,\Xi_m)/g_m(z)| \le 10\,\zeta_F(3/2)$ on both vertical boundary
+  lines $\sigma = -1/2$ and $\sigma = 3/2$, so the Phragmen-Lindelof maximum
+  principle on $-1/2 \le \sigma \le 3/2$ (together with $|L_F| \le \zeta_F(3/2) \le A_0 Q_m(y)$
+  on $\sigma \ge 3/2$) establishes on the entire half-plane $\sigma \ge -1/2$ the
+  explicit bound with exponent $C_0 = 1$ and absolute constant $A_0 := \tfrac{49}{2}\zeta_F(3/2)$:
 
 $$
 \boxed{
 \bigl|L_F(\sigma + iy, \Xi_m)\bigr|
-\le \zeta_F(3/2)\,Q_m(y)^{C_0} \qquad (\sigma \ge -1/2,\ C_0 := 1).}
+\le A_0\,Q_m(y)^{C_0} \qquad \bigl(\sigma \ge -1/2,\ C_0 := 1,\ A_0 := \tfrac{49}{2}\zeta_F(3/2)\bigr).}
 \tag{A16}
 $$
 
@@ -445,7 +453,7 @@ with its branch fixed at the center $2 + it$ by the absolutely convergent Euler
 sum $|\log L_F(2 + it, \Xi_m)| \le \log\zeta_F(2) = O(1)$. On this disk,
 $|\Im z - t| \le R < 3/2$ implies $1 + |\Im z \pm \mu_m| \le \tfrac{5}{2}(1 + |t \pm \mu_m|)$
 and $Q_m(\Im z) \le \tfrac{25}{4}Q_m(t)$, so (A16) gives
-$\Re\log L_F(z,\Xi_m) \le C_0 \log Q_m(t) + \log(\tfrac{25}{4}\zeta_F(3/2))$.
+$\Re\log L_F(z,\Xi_m) \le C_0 \log Q_m(t) + \log(\tfrac{25}{4}A_0)$.
 Applying the Borel-Caratheodory theorem on the concentric disk of smaller
 radius $r := \tfrac{3}{2} - \delta$ (where $\frac{2r}{R-r} = \frac{6-4\delta}{\delta} \le \frac{6}{\delta}$)
 yields both upper and lower control of $\Re\log L_F$:
