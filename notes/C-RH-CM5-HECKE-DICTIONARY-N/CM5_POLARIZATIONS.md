@@ -379,7 +379,9 @@ In [`HODGE-TATE-CM5-INTEGRAL-HOMOLOGY-CALIBRATION-2026-09-11.md`](../HODGE-TATE-
 the double-pentagon edge basis $(c_0,c_1,c_2,c_3)$ of $H_1(B,\mathbb Z) \simeq \mathcal O_K$
 realizes the order-five automorphism $T_*$ as the companion matrix $M$ of
 multiplication by $\zeta$ and the topological intersection pairing as
-$W_c = \Omega_1 - \Omega_2 = \Omega_{(1,-1)} = J^*\Omega_1$ ($\operatorname{Pf}(W_c) = -1$).
+$W_c = \Omega_1 - \Omega_2 = \Omega_{(1,-1)} = J^*\Omega_1$ ($\operatorname{Pf}(W_c) = +1$).
+Indeed, $1^2-1(-1)-(-1)^2=1$; the negative sign printed in the cited
+calibration is a typographical error.
 Passing to the unimodular integral basis $d_k = J^{-1}c_k$ via
 $P = -(M + M^2) = J^{-1} \in \operatorname{GL}_4(\mathbb Z)$ ($\det P = 1$,
 $P^{-1}MP = M$) removes the $J$-pullback and transforms the intersection pairing
