@@ -1,0 +1,11 @@
+{
+  "status": "PASS_FIRST_ATTEMPTS",
+  "finished_at_utc": "2026-10-20T21:20:08.621128+00:00",
+  "byte_identical": true,
+  "certificate_bytes": 656,
+  "certificate_sha256": "7bbf0e0e6546a79961f52fbc9de448b349c6d66fb79ef12b9a64c64f72579c48",
+  "architectures": [
+    "x86_64"
+  ],
+  "scope": "exact symbolic identities only; continuum claims have separate analytical proofs and reviews"
+}
