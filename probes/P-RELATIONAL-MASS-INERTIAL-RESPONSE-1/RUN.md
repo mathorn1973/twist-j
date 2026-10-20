@@ -2,7 +2,8 @@
 
 pin_commit: 95d108a75a87f9ad2f11f382aed4104c85e0a05e
 verifier_sha256: 3555c391158961663cd0dcef565596ec15bb47ff9f9d02ffb29c5a91b6be9d96
-command: python3 -I probes/P-RELATIONAL-MASS-INERTIAL-RESPONSE-1/verify.py
+command: python3 probes/P-RELATIONAL-MASS-INERTIAL-RESPONSE-1/verify.py
+first_execution_command: python3 -I probes/P-RELATIONAL-MASS-INERTIAL-RESPONSE-1/verify.py
 platform: Linux, glibc 2.36
 architecture: aarch64
 python: 3.11.2
@@ -16,6 +17,12 @@ started_utc: 2026-10-20T18:07:46.504419+00:00
 finished_utc: 2026-10-20T18:07:47.281493+00:00
 elapsed_seconds: 0.777
 timeout_seconds: 60
+
+The required `command` field names the repository's canonical replay
+command. The actual first execution used the explicitly retained
+`first_execution_command` with Python isolated mode, as frozen in PREREG.md.
+Both execute the same standalone standard-library verifier. No first-run
+fact is replaced by the canonical-command spelling.
 
 The public pin and remote branch matched before execution. Every one of
 the six prospective files was fetched by exact commit through the public
@@ -44,3 +51,14 @@ tree; the tree remained clean after the execution. EXPECTED.txt was then
 copied byte for byte from captured stdout. Six frozen files stay unchanged.
 No edited retry occurred. Public PR architecture replays remain a separate
 required gate and do not overwrite this historical record.
+
+## Run-record format correction
+
+Public workflow 39472330584 stopped before scientific execution because
+tools/check_verifier.py requires the `command` field to equal exactly
+`python3 probes/P-RELATIONAL-MASS-INERTIAL-RESPONSE-1/verify.py`.
+The first record put its actual isolated-mode command in that field.
+The correction separates the required replay command from the retained
+actual first command. No frozen file, expected output, claim, threshold or
+first-run measurement changes. A replay of the unchanged verifier through
+the repository checker verifies byte identity under its canonical command.
