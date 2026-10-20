@@ -1,0 +1,16 @@
+[
+  {
+    "source_path": "mass_native/PROMO-C-RELATIONAL-MASS-NATIVE-BOUNDARY-1/prior_contact/PROOF_CONTACT.md",
+    "package_path": "inputs/PROOF_CONTACT.md",
+    "bytes": 22944,
+    "sha256": "9ef39bf85952478bcd06e5024c7046d976fc07a5d40099290520f24c7e28b19c",
+    "unchanged_copy": true
+  },
+  {
+    "source_path": "mass_construction/LOCAL-C-RELATIONAL-MASS-INTEGER-CONSTRUCTION-1/PROOF_RESPONSE.md",
+    "package_path": "inputs/PROOF_RESPONSE.md",
+    "bytes": 16052,
+    "sha256": "db9ae697c3f98d144b93d232b04fe2668f074f58b926eb6a9a3d4bd719a4b110",
+    "unchanged_copy": true
+  }
+]
