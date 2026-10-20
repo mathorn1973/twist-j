@@ -1,0 +1,156 @@
+{
+  "created_at_utc": "2026-10-20T21:23:35.906034+00:00",
+  "task": "LOCAL-C-W-SPECTRUM-APPARATUS-1",
+  "status": "LOCAL_NON_CANONICAL",
+  "audit": "PASS_FIRST_ATTEMPTS",
+  "current_moving_reference_proof": "PROOF_MOVING_REFERENCE_v2.md",
+  "previous_proof_preserved": "PROOF_MOVING_REFERENCE.md",
+  "scope": "Analytical full-spectrum construction, exact symbolic audit; finite capacity but continuous infinite-dimensional battery. No uniform apparatus locality, internal stopping clock, native admission, cross-architecture or public CI claim.",
+  "files": [
+    {
+      "path": "AUDIT_RESULT.json",
+      "bytes": 387,
+      "sha256": "b709ee97fda4ddfac7e884afb963a42d7e038f6d47afa6676623002635d1770c"
+    },
+    {
+      "path": "CERTIFICATE_SCHEMA.md",
+      "bytes": 1222,
+      "sha256": "955388f6147c34c93e20e9284d95e350e983b914a19c75b3a0e2aa0403ae054a"
+    },
+    {
+      "path": "COORDINATE_CLARIFICATION.md",
+      "bytes": 412,
+      "sha256": "cd49e579e285cbd88d665b9392975f79b9f86db9ace3df4b892f4590139337ed"
+    },
+    {
+      "path": "PREREG.md",
+      "bytes": 3995,
+      "sha256": "438e024a8c467ade09095f85e3737663b0c5c2a1fda668f50faa79b0f52c4d7a"
+    },
+    {
+      "path": "PROOF_MOVING_REFERENCE.md",
+      "bytes": 7284,
+      "sha256": "3e1445254897f3002130e24c69c0a5d6dff6c7eba3d3dae6ef91a3f01ed825db"
+    },
+    {
+      "path": "PROOF_MOVING_REFERENCE_v2.md",
+      "bytes": 7424,
+      "sha256": "dd2c6d28cf50698c12954ab022e6cee53ca860b30e1d1df5f464a096fe9b0882"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2614,
+      "sha256": "22f04a9f2276bd59514e386cb046c3d264c2d441ce749643736d6d00501823b3"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 15515,
+      "sha256": "1ca1324c655c2f77858fb9601541519857d47ee259810fcaaf75f71fabab17eb"
+    },
+    {
+      "path": "SOURCE_FREEZE.json",
+      "bytes": 1459,
+      "sha256": "a7b362ac45559dfe469ee30fec904d29beeb75f8a7ff1d429652b5c22662abd7"
+    },
+    {
+      "path": "agents/sources_review/AUTHORITY_AND_LITERATURE.md",
+      "bytes": 4394,
+      "sha256": "8ee59f81a80eb5a8bc42ffeaabd0b03d13a4ff3480f64f6dcd00e263ef2f0ea6"
+    },
+    {
+      "path": "agents/sources_review/INDEPENDENT_SPECTRUM_REVIEW.md",
+      "bytes": 7783,
+      "sha256": "1e688bf630203102fe9e943a19bbec4eac9ead8af066699776dbcb682525acbe"
+    },
+    {
+      "path": "agents/sources_review/REVIEW_FINAL_PROOFS.md",
+      "bytes": 3511,
+      "sha256": "e17568c1a0f93469466bc9d9f34980f82136a382f84f2d2140f648092168b75e"
+    },
+    {
+      "path": "agents/sources_review/verify_independent.py",
+      "bytes": 8162,
+      "sha256": "c4284c08f5698cfa3660a6d63659353e495e872b7479e8611aa0c25c1a452e1b"
+    },
+    {
+      "path": "agents/spectral_lift/SPECTRAL_APPARATUS.md",
+      "bytes": 14991,
+      "sha256": "5e72c0fc75db6d219339600b0768e10ba5a03166e20e5bf68fb1cf53d4098b3f"
+    },
+    {
+      "path": "agents/spectrum_locality/PROOF_GLOBAL_SPECTRUM_AND_LOCALITY.md",
+      "bytes": 12692,
+      "sha256": "279206d441d5b993b5b1b74f4a8c6f71c455cdb813d873ca7cef7ac47ac2ba1d"
+    },
+    {
+      "path": "agents/spectrum_locality/REVIEW_MOVING_REFERENCE.md",
+      "bytes": 3399,
+      "sha256": "ec4b2936a5cc8d1d53e02405b0e73bd6386d25f3511c1d3f10da4e702053eb2e"
+    },
+    {
+      "path": "inputs/PROOF_CONTACT.md",
+      "bytes": 22944,
+      "sha256": "9ef39bf85952478bcd06e5024c7046d976fc07a5d40099290520f24c7e28b19c"
+    },
+    {
+      "path": "inputs/PROOF_RESPONSE.md",
+      "bytes": 16052,
+      "sha256": "db9ae697c3f98d144b93d232b04fe2668f074f58b926eb6a9a3d4bd719a4b110"
+    },
+    {
+      "path": "inputs/SOURCE_PINS.json",
+      "bytes": 586,
+      "sha256": "81a8d8e875b7867f30638d7fb95b8565b5e54ed1e9ec154c47f6eebfe198fcd8"
+    },
+    {
+      "path": "run_one.py",
+      "bytes": 2069,
+      "sha256": "72fce700816623d3863cad30367eb6ba39f2184f64c3d274a44e0f3922778304"
+    },
+    {
+      "path": "runs/independent/attempt.json",
+      "bytes": 976,
+      "sha256": "478637a8530c680df450b98561004a8d2a916879c2edc6de8fad30b1c7bfadb6"
+    },
+    {
+      "path": "runs/independent/certificate.json",
+      "bytes": 656,
+      "sha256": "7bbf0e0e6546a79961f52fbc9de448b349c6d66fb79ef12b9a64c64f72579c48"
+    },
+    {
+      "path": "runs/independent/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/independent/stdout.txt",
+      "bytes": 66,
+      "sha256": "994edf667d50574a149249231c83c858395ebd21438dd9ce063cb76d9697d0eb"
+    },
+    {
+      "path": "runs/primary/attempt.json",
+      "bytes": 900,
+      "sha256": "65159036742d5def2259842d1fd4cff46890ee6b50c5fc59539a9bdeb3cee105"
+    },
+    {
+      "path": "runs/primary/certificate.json",
+      "bytes": 656,
+      "sha256": "7bbf0e0e6546a79961f52fbc9de448b349c6d66fb79ef12b9a64c64f72579c48"
+    },
+    {
+      "path": "runs/primary/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/primary/stdout.txt",
+      "bytes": 62,
+      "sha256": "74249d34b38ee77c22e8d71e185a9dcb5d15aa494511fdcbf0c35857c3ae1b8e"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 4828,
+      "sha256": "39488417e8dac06e05c6fc971a1d34b72c9ebbafd800d41a2e5e617c7b3a46d4"
+    }
+  ]
+}
