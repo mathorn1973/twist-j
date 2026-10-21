@@ -1,0 +1,11 @@
+{
+  "platform": "Linux 6.18.55",
+  "architecture": "x86_64",
+  "python": "3.13.5",
+  "exit_code": 0,
+  "verifier_sha256": "6521e846dd1517de81cd895092ba4b5f826cdfb2cc11bad94b4b46e536c03ade",
+  "stdout_sha256": "f257aaefb68461f91617fd0870bb98697ec602c4cf962d5ba816ba5f6af71492",
+  "stdout_bytes": 524,
+  "stderr_bytes": 0,
+  "evidence": "one architecture, result-exposed local audit; no independent-agent claim"
+}

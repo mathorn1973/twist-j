@@ -1,0 +1,42 @@
+f = x**4 - 3*x**3 + 4*x**2 - 2*x + 1
+g = x**4 - 4*x**3 + 8*x**2 - 4*x + 1
+h = x**8 - 7*x**7 + 24*x**6 - 46*x**5 + 54*x**4 - 39*x**3 + 20*x**2 - 6*x + 1
+C = [[1, 0, 0, 0, -1, -3, -5, -5], [0, 1, 0, 0, 2, 5, 7, 5], [0, 0, 1, 0, -4, -10, -15, -13], [0, 0, 0, 1, 3, 5, 5, 0], [1, 0, 0, 0, -1, -4, -8, -4], [0, 1, 0, 0, 4, 15, 28, 8], [0, 0, 1, 0, -8, -28, -49, -4], [0, 0, 0, 1, 4, 8, 4, -33]]
+det C = 41
+SNF C = [1, 1, 1, 1, 1, 1, 1, 41]
+resultant = 41
+disc f,g,h = 125 2304 484128000
+trace determinant D = 7 1
+period 1 fixedJ 1 fixedM 2 fixedProduct 2 leastPeriodPoints 2 orbits 2
+period 2 fixedJ 11 fixedM 36 fixedProduct 396 leastPeriodPoints 394 orbits 197
+period 3 fixedJ 31 fixedM 242 fixedProduct 7502 leastPeriodPoints 7500 orbits 2500
+period 4 fixedJ 55 fixedM 1296 fixedProduct 71280 leastPeriodPoints 70884 orbits 17721
+mod41 gcd = Poly(x - 19, x, modulus=41)
+mod41 roots f,g,common = [11, 17, 19, 38] [6, 7, 13, 19] 19
+order common = 40
+Bezout 41 coefficients = 14*x**3 - 36*x**2 + 43*x + 64 -14*x**3 + 22*x**2 - 7*x - 23 41
+J power basis = [[1, 1, 0, -2], [0, 0, -1, -2], [0, 1, 1, 0], [0, 0, -1, -3]] det -1
+M power basis = [[1, 1, 0, -5], [0, 1, 2, 0], [0, 1, 3, 5], [0, 0, 2, 7]] det -3
+M index = 3 SNF [1, 1, 1, 3]
+maximal product index = 123
+m from M = [1/3, -11/3, 7/3, -2/3]
+conjugation on A = [[1, 1, 0, -1], [0, -2, -1, 1], [0, 2, 1, -2], [0, -1, -1, 0]]
+conjugation on B = [[1, 2/3, 0, -2/3], [0, -4/3, 0, 7/3], [0, 2/3, -1, -14/3], [0, -1/3, 0, 4/3]]
+barJ power coords = [1, -2, 2, -1]
+barM power coords = [2/3, -4/3, 2/3, -1/3]
+conjugate generator residues = 17 7
+j residue = 10
+m residue = 27
+conjugation roots check = 17 7
+mod41 fixed dimensions 1 glued 0 split 0
+mod41 fixed dimensions 20 glued 0 split 0
+mod41 fixed dimensions 40 glued 7 split 8
+mod41 fixed dimensions 41 glued 0 split 0
+mod41 fixed dimensions 1640 glued 8 split 8
+rank C mod41 = 7
+fixed group SNF 1 split [2] glued [2]
+fixed group SNF 2 split [2, 198] glued [2, 198]
+fixed group SNF 3 split [11, 682] glued [11, 682]
+fixed group SNF 4 split [2, 6, 6, 990] glued [2, 6, 6, 990]
+fixed group SNF 20 split [123310, 369930, 1849650, 5548950] glued [123310, 369930, 1849650, 5548950]
+resultant controls M orientation = 26921

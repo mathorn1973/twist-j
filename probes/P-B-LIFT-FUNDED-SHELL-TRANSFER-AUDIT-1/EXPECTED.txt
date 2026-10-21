@@ -1,0 +1,10 @@
+PASS G1 exact matrices, quadratic cost, conjugate and positivity
+PASS G1 residue image625, gate25, full projection checks15625
+PASS G2 inverse-Gram bounds=(2, 3, 4, 5) preimages=171
+PASS G2 complete rho4 minimum15; minimizers=((-3, -1, 0, 0), (-3, -1, 5, 0), (-3, 4, 5, -10), (-3, 4, 5, -5), (2, -6, -5, 10), (2, -1, -5, 0), (2, -1, -5, 5), (2, -1, 0, 0), (2, -1, 0, 5), (2, 4, 0, -5))
+PASS G3 complete bounded pair states=34122 funded=9622 refused=24500
+PASS G3 occupied and refusal fiber states6250
+PASS G4 native two-source transfer: field15/35 bank20/0 total35
+PASS G5 banks0..40, threshold30, nominated period8, free-phase control
+PASS negative controls: omitted F, occupied overwrite, wrong bank sign
+AUDIT PASS G1-G5; independent specification-only implementation
