@@ -1,0 +1,46 @@
+{
+  "frozen_at_utc": "2026-10-20T21:19:11.421764+00:00",
+  "scientific_execution_before_freeze": false,
+  "files": [
+    {
+      "path": "PREREG.md",
+      "bytes": 3995,
+      "sha256": "438e024a8c467ade09095f85e3737663b0c5c2a1fda668f50faa79b0f52c4d7a"
+    },
+    {
+      "path": "CERTIFICATE_SCHEMA.md",
+      "bytes": 1222,
+      "sha256": "955388f6147c34c93e20e9284d95e350e983b914a19c75b3a0e2aa0403ae054a"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 4828,
+      "sha256": "39488417e8dac06e05c6fc971a1d34b72c9ebbafd800d41a2e5e617c7b3a46d4"
+    },
+    {
+      "path": "agents/sources_review/verify_independent.py",
+      "bytes": 8162,
+      "sha256": "c4284c08f5698cfa3660a6d63659353e495e872b7479e8611aa0c25c1a452e1b"
+    },
+    {
+      "path": "agents/spectrum_locality/PROOF_GLOBAL_SPECTRUM_AND_LOCALITY.md",
+      "bytes": 12692,
+      "sha256": "279206d441d5b993b5b1b74f4a8c6f71c455cdb813d873ca7cef7ac47ac2ba1d"
+    },
+    {
+      "path": "agents/spectral_lift/SPECTRAL_APPARATUS.md",
+      "bytes": 14991,
+      "sha256": "5e72c0fc75db6d219339600b0768e10ba5a03166e20e5bf68fb1cf53d4098b3f"
+    },
+    {
+      "path": "PROOF_MOVING_REFERENCE.md",
+      "bytes": 7284,
+      "sha256": "3e1445254897f3002130e24c69c0a5d6dff6c7eba3d3dae6ef91a3f01ed825db"
+    },
+    {
+      "path": "agents/sources_review/REVIEW_FINAL_PROOFS.md",
+      "bytes": 3511,
+      "sha256": "e17568c1a0f93469466bc9d9f34980f82136a382f84f2d2140f648092168b75e"
+    }
+  ]
+}
