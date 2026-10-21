@@ -8,6 +8,7 @@ import hashlib
 from io import StringIO
 import json
 from pathlib import Path
+import re
 import subprocess
 import tempfile
 import unittest
@@ -422,13 +423,110 @@ class ReviewedRegistrationTests(unittest.TestCase):
             if path != prefix + "CODE_SHA256SUMS":
                 self.assertEqual(spec["sha256"], listed[path.removeprefix(prefix)])
 
-    def test_control_changes_select_all_three_registered_probes(self) -> None:
+    def test_v103_registrations_match_frozen_source_and_bundle_custody(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        names = {
+            "P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1",
+            "P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3",
+            "P-INTEGER-PRIMITIVE-SOURCE-METRIC-1",
+            "P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1",
+            "P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1",
+            "P-INTEGER-LOCAL-AUXILIARY-NOETHER-1",
+            "P-INTEGER-SCALAR-LAPSE-RIGIDITY-1",
+            "P-INTEGER-FIXED-DURATION-BOUNDARY-1",
+            "P-RELATIONAL-MASS-METRIC-RESPONSE-1",
+            "P-RELATIONAL-MASS-JOINT-ACTION-1",
+            "P-RELATIONAL-MASS-STABLE-BINDING-1",
+        }
+        registrations = context.registrations(root)
+        source_row = re.compile(
+            r"^\|\s*`?(canon/[^`| ]+)`?\s*\|\s*`?(\d+)`?\s*\|"
+            r"\s*`?([0-9a-f]{64})`?\s*\|\s*$", re.MULTILINE
+        )
+        for name in sorted(names):
+            with self.subTest(probe=name):
+                prefix = f"probes/{name}/"
+                entry = registrations[name]
+                pin = check_verifier.read_run(root / prefix / "RUN.md").fields["pin_commit"]
+                self.assertEqual(entry["pin_commit"], pin)
+                context.git_bytes(root, "merge-base", "--is-ancestor", pin, "HEAD")
+                frozen = (root / prefix / "FROZEN.sha256").read_bytes()
+                self.assertEqual(frozen, context.git_bytes(
+                    root, "show", f"{pin}:{prefix}FROZEN.sha256"))
+                self.assertEqual(len(frozen.decode().splitlines()), 5)
+                listed = dict(line.split("  ", 1)[::-1] for line in
+                              frozen.decode().splitlines())
+                self.assertEqual(set(listed), {
+                    "PREREG.md", "PROOF.md", "SOURCE.md", "verify.py", "breaker.py",
+                })
+                # Bind the source table itself to the independent frozen bundle,
+                # rather than deriving both sides from the new replay registry.
+                for filename, digest in listed.items():
+                    relative = prefix + filename
+                    current = (root / relative).read_bytes()
+                    self.assertEqual(hashlib.sha256(current).hexdigest(), digest)
+                    self.assertEqual(current, context.git_bytes(root, "show", f"{pin}:{relative}"))
+                # This later probe declares the same authority table in its
+                # frozen preregistration, rather than in SOURCE.md.
+                source_filename = (
+                    "PREREG.md" if name == "P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3"
+                    else "SOURCE.md"
+                )
+                source = (root / prefix / source_filename).read_text()
+                source_rows = source_row.findall(source)
+                self.assertEqual(len(source_rows), 5)
+                declared = {path: (int(count), digest) for path, count, digest in source_rows}
+                self.assertEqual(set(declared), set(entry["context_files"]))
+                for path, spec in entry["context_files"].items():
+                    self.assertEqual((spec["bytes"], spec["sha256"]), declared[path])
+                    context.pinned_blob(root, pin, path, spec)
+                local = {prefix + "verify.py": entry["verifier"],
+                         prefix + "PREREG.md": entry["prereg"], **entry["bundle_files"]}
+                self.assertEqual(set(local), {prefix + p for p in
+                                             ("verify.py", "PREREG.md", "breaker.py")})
+                for path, spec in local.items():
+                    self.assertEqual(spec["sha256"], listed[path.removeprefix(prefix)])
+                    context.verify_bytes((root / path).read_bytes(), spec, path)
+                    context.pinned_blob(root, pin, path, spec)
+
+    def test_every_registration_materializes_only_its_pinned_custody_files(self) -> None:
+        root = Path(__file__).resolve().parents[1]
+        for name, entry in context.registrations(root).items():
+            with self.subTest(probe=name):
+                prefix = f"probes/{name}/"
+                pin = check_verifier.read_run(root / prefix / "RUN.md").fields["pin_commit"]
+                verifier = (root / prefix / "verify.py").read_bytes()
+                paths = {prefix + "verify.py", *entry["context_files"]}
+                if "bundle_files" in entry:
+                    paths.update(entry["bundle_files"])
+                    paths.add(prefix + "PREREG.md")
+                expected = {path: context.git_bytes(root, "show", f"{pin}:{path}")
+                            for path in paths}
+                with redirect_stdout(StringIO()):
+                    with context.execution_root(root, name, pin, verifier) as isolated:
+                        actual = {p.relative_to(isolated).as_posix(): p.read_bytes()
+                                  for p in isolated.rglob("*") if p.is_file()}
+                        self.assertEqual(actual, expected)
+                self.assertFalse(isolated.exists())
+
+    def test_control_changes_select_all_registered_probes(self) -> None:
         root = Path(__file__).resolve().parents[1]
         expected = [root / "probes" / name for name in sorted(context.registrations(root))]
         self.assertEqual({path.name for path in expected}, {
+            "P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1",
             "P-FRW-INHOM-K1-BACKREACTION-3",
+            "P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3",
+            "P-INTEGER-PRIMITIVE-SOURCE-METRIC-1",
+            "P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1",
             "P-U-EARLY-SOURCE-FIBRE-CONTACT-1",
             "P-TWO-USE-READOUT-FAILURE-REGRESSION-2",
+            "P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1",
+            "P-INTEGER-LOCAL-AUXILIARY-NOETHER-1",
+            "P-INTEGER-SCALAR-LAPSE-RIGIDITY-1",
+            "P-INTEGER-FIXED-DURATION-BOUNDARY-1",
+            "P-RELATIONAL-MASS-METRIC-RESPONSE-1",
+            "P-RELATIONAL-MASS-JOINT-ACTION-1",
+            "P-RELATIONAL-MASS-STABLE-BINDING-1",
         })
         for path in context.REPLAY_CONTROL_PATHS:
             with self.subTest(path=path):
@@ -436,7 +534,11 @@ class ReviewedRegistrationTests(unittest.TestCase):
                 with patch.object(check_verifier, "ROOT", root), \
                      patch.object(check_verifier, "PROBES", root / "probes"), \
                      patch.object(check_verifier.subprocess, "run", return_value=result):
-                    self.assertEqual(check_verifier.changed_probes("0" * 40), expected)
+                    self.assertEqual(
+                        check_verifier.changed_probes("0" * 40),
+                        sorted(p for p in (root / "probes").iterdir() if p.is_dir())
+                        if path == "tools/check_verifier.py" else expected,
+                    )
 
 
 if __name__ == "__main__":

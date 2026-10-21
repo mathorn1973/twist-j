@@ -1,0 +1,6 @@
+RING {"covariance_pairs":64,"fifth_power_pairs":64,"module_basis":8,"one_step_preservation":false,"residue_basis_pairs":16,"residue_erases_phase":true,"two_sided_module_inverse_basis":8}
+CARRIER {"area_pairs":625,"labels":25,"matrices":"dense 5 by 5 over cyclic cyclotomic quotient","ordered_product_cocycle_pairs":625,"weyl_commutator_pairs":625,"weyl_conjugations":25,"weyl_two_sided_inverses":25}
+CHARACTERS {"addition_pairs":125,"all_additive_candidates":5,"area_checks":2500,"faithful_parameters":[1,2,3,4],"physical_character_selected":false}
+COST {"D_cost_class":"diag(h0,h1,h1,h1,h1), h0,h1 rational","D_invariant":25,"X_invariant":5,"Z_invariant":3125,"box_vectors":3125,"energy_unit_forced":false,"positive_gap_examples":[1,2],"rational_constraint_ranks":[3,4,0,4],"shared_invariant":5}
+SCOPE {"action_layer":"L1","native_T_equals_U":"UNSUPPLIED","physical_action_or_SI_hbar":"NOT_DERIVED","physical_character_selection":"UNSUPPLIED","unbounded_claims_need_separate_proof":true}
+AUDIT PASS independent exact R1 identities and stated negative controls
