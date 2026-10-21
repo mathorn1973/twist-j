@@ -534,7 +534,11 @@ class ReviewedRegistrationTests(unittest.TestCase):
                 with patch.object(check_verifier, "ROOT", root), \
                      patch.object(check_verifier, "PROBES", root / "probes"), \
                      patch.object(check_verifier.subprocess, "run", return_value=result):
-                    self.assertEqual(check_verifier.changed_probes("0" * 40), expected)
+                    self.assertEqual(
+                        check_verifier.changed_probes("0" * 40),
+                        sorted(p for p in (root / "probes").iterdir() if p.is_dir())
+                        if path == "tools/check_verifier.py" else expected,
+                    )
 
 
 if __name__ == "__main__":
