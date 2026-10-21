@@ -1,0 +1,19 @@
+{
+  "kind": "publication reproduction only; not independent confirmation or a formal architecture gate",
+  "platform": "Linux",
+  "architecture": "x86_64",
+  "python": "3.13.5",
+  "runs": [
+    {
+      "command": "python verify.py",
+      "verifier_sha256": "6521e846dd1517de81cd895092ba4b5f826cdfb2cc11bad94b4b46e536c03ade",
+      "exit_code": 0,
+      "stdout_bytes": 524,
+      "stdout_sha256": "f257aaefb68461f91617fd0870bb98697ec602c4cf962d5ba816ba5f6af71492",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "comparison_file": "ACTUAL.txt",
+      "byte_identity": true
+    }
+  ]
+}
