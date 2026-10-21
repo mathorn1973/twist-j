@@ -289,6 +289,523 @@
           "bytes": 2859
         }
       }
+    },
+    "P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1": {
+      "pin_commit": "6c257b169054625aa608974c1c6a264fb56e5d02",
+      "verifier": {
+        "git_blob": "291df546bc42e622814ca3d2d6be24acc75134e1",
+        "sha256": "912ddf907dc2f88d7322cca3581beba3e90686165061e8c360546c7959add03a",
+        "bytes": 17301
+      },
+      "prereg": {
+        "git_blob": "4b3b27c0396b29f7873a896f67ed3b6cbe90df70",
+        "sha256": "d92e6772af6166c8b8fcb8bf549ee2b19d5538c4bc3dca49448adf7110e75634",
+        "bytes": 14936
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-LOCAL-NOETHER-OBSTRUCTION-1/breaker.py": {
+          "git_blob": "b9cbd5bd5ecf340cac296fc0537dc317bf8edde9",
+          "sha256": "3cc5d8d9c6668b4cf335b46fc3238c85155485dc35f83c2f79cea309c4a405fe",
+          "bytes": 21144
+        }
+      }
+    },
+    "P-INTEGER-LOCAL-AUXILIARY-NOETHER-1": {
+      "pin_commit": "45648ac0d495a55a6c76e90dfd0fe56e042bf224",
+      "verifier": {
+        "git_blob": "78403001aa33152d14d90c0353ae6a6f7de56726",
+        "sha256": "4e0851457983a344f3ab8d6544b6837abb8df2b06fc89cbd5fad8e4d86f5cd03",
+        "bytes": 24398
+      },
+      "prereg": {
+        "git_blob": "06fb3048586eb994cfa28ee9c559f140603c7e62",
+        "sha256": "1a0db6e14a3c9fa1516d8950213605d481fdc4c97f192f6ffb8e1b0320189533",
+        "bytes": 14836
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-LOCAL-AUXILIARY-NOETHER-1/breaker.py": {
+          "git_blob": "f8ea93b77deca681c6ff3ac453bf79e2d42916e6",
+          "sha256": "a01328ab545e4ad0c8e5750496e2654b511ef169349e90729969346c29948613",
+          "bytes": 26859
+        }
+      }
+    },
+    "P-INTEGER-SCALAR-LAPSE-RIGIDITY-1": {
+      "pin_commit": "e330ac7cbc715c0cd809483aac0f2277fb657118",
+      "verifier": {
+        "git_blob": "06b1152b23e76dc4f4440656e2d3f8d484415feb",
+        "sha256": "e7998014b8511614fac3dc419979feeefb73260b2ba16a3282517b81528e1cce",
+        "bytes": 25241
+      },
+      "prereg": {
+        "git_blob": "6e161d120b67e3e919ef01ffa991740bd00ca715",
+        "sha256": "64c5c5bb82f093ae7af116149bcd29391ea15d75ed05aa50d80cae56ec09a61b",
+        "bytes": 19704
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-SCALAR-LAPSE-RIGIDITY-1/breaker.py": {
+          "git_blob": "a2b82282f5d3e4674e4aa3cbcd8f43453ed90d12",
+          "sha256": "00581c4ba48cdd0442e336ef4759ffe42f29a3bfd14b248a040522e3d5c807d6",
+          "bytes": 31726
+        }
+      }
+    },
+    "P-INTEGER-FIXED-DURATION-BOUNDARY-1": {
+      "pin_commit": "02ec973ecb77655e83d69b990ba22bef05df3424",
+      "verifier": {
+        "git_blob": "f4613ac9efeb0c62f0065e1f1cd6215701959b30",
+        "sha256": "f0ea3b20a7dbb5b883440e660cc4ea324344a8f6cb3e35a6db6e16f7f90f1a0f",
+        "bytes": 27220
+      },
+      "prereg": {
+        "git_blob": "3b93d81df2c6e374a56861e45e91ac9d434b2df9",
+        "sha256": "e88641412ed86ba61b32872779258694f09d74bffefbf64dc109519ed3f69385",
+        "bytes": 15427
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-FIXED-DURATION-BOUNDARY-1/breaker.py": {
+          "git_blob": "6157999f79c63970db52eb74836a84002370ddfa",
+          "sha256": "1055e47ae153da6db879b866923f900d0105b86f895cc8a7273a73b314626348",
+          "bytes": 29313
+        }
+      }
+    },
+    "P-RELATIONAL-MASS-METRIC-RESPONSE-1": {
+      "pin_commit": "b5c8466118e546f8d93ea2071cb42ef018b6b2b6",
+      "verifier": {
+        "git_blob": "7bc64703577c5002b7a262763d6c49df277a372f",
+        "sha256": "a7b4c639d8eaad088a1c146a841dc345dc5c911cc28f7cdd7084e3da21f26eba",
+        "bytes": 24968
+      },
+      "prereg": {
+        "git_blob": "3e43f62186b5d1e102f0c0806190265424fb941a",
+        "sha256": "70168d5d8461995799d700f36038776fe60d0acf1e7d91bf9f900ff64fd14c4e",
+        "bytes": 13034
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-RELATIONAL-MASS-METRIC-RESPONSE-1/breaker.py": {
+          "git_blob": "e458cef9ab272e7979356c19ab96bacd6ea91947",
+          "sha256": "2e560d0ffc2c2e40044fe007bc4bbebd1dbd9852483c2b2f55d4e6bd71d0c663",
+          "bytes": 23443
+        }
+      }
+    },
+    "P-RELATIONAL-MASS-JOINT-ACTION-1": {
+      "pin_commit": "f19fa98dc1634ce1e17b9dec402c51920d2bea8d",
+      "verifier": {
+        "git_blob": "e464aff3ca2cbbaf6887d4fc69ec4f1778c26da5",
+        "sha256": "64fa4fd8198d778185d5c5e4cd7429accfc2f2d002bf284746ffbc7df922e104",
+        "bytes": 29132
+      },
+      "prereg": {
+        "git_blob": "ef2e5bcc4f6de6e399087945394cf5162b67529c",
+        "sha256": "210c3797dbd32a359a0cb7a2abe7388c514499728f7c74ff2a67a524c8850334",
+        "bytes": 15785
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-RELATIONAL-MASS-JOINT-ACTION-1/breaker.py": {
+          "git_blob": "b775d52dfb06247b93467eb97be4f5c5bc2d669b",
+          "sha256": "88adb0ddf7d4028673c4834b59c7f154dd5e4131d1596f989178f09a8c83e4d4",
+          "bytes": 33090
+        }
+      }
+    },
+    "P-RELATIONAL-MASS-STABLE-BINDING-1": {
+      "pin_commit": "79d2247fd8e6937347e367b922de1c6e24a54cb4",
+      "verifier": {
+        "git_blob": "f53f1210b8a078fce1a5a0eea3935c7dc3307c59",
+        "sha256": "dca77be0c45671fcd2c78f6873bc8970984a93839475170a230d0873df0b7fae",
+        "bytes": 25072
+      },
+      "prereg": {
+        "git_blob": "4d717ed796dc3b4240b49d45bd9c8726a50204c6",
+        "sha256": "6751cbe1248f1265df267317e1e050862497b2537fab9d77b886156cc5b7087d",
+        "bytes": 15552
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-RELATIONAL-MASS-STABLE-BINDING-1/breaker.py": {
+          "git_blob": "b24e9f2c48e54cf3ad53918605fb4ea6a4fdb950",
+          "sha256": "bfea3156ebb10d965a03b23be33d9425e955df34903c3edaf46abe4ac7bd153a",
+          "bytes": 31145
+        }
+      }
+    },
+    "P-INTEGER-PRIMITIVE-SOURCE-METRIC-1": {
+      "pin_commit": "7ffee4939346221e2d43ed386f33bdfa47cd509f",
+      "verifier": {
+        "git_blob": "6ac79f7158a4f7709e77a55cfc027eeb18b004ec",
+        "sha256": "a77e599eda0f5a5ba938ab884ea577c58185bb85b210acbee59eb6a441c47413",
+        "bytes": 24245
+      },
+      "prereg": {
+        "git_blob": "c3313ce5dbe2b95a90db58d2ef19f028b3858f3b",
+        "sha256": "445eedb7d6c66c141d52ae45afcc2b43255b0d29dc465191059dfd73edffbe15",
+        "bytes": 18628
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-PRIMITIVE-SOURCE-METRIC-1/breaker.py": {
+          "git_blob": "ab74bcf7984ef509ac8124392798f24382c613aa",
+          "sha256": "7f556dcf88d2d1b7632fbe425e4e84f2b66a3c3f955fe05692a5eadc746852cd",
+          "bytes": 32616
+        }
+      }
+    },
+    "P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1": {
+      "pin_commit": "edfedd7e75c515d6d318032f526f381f66317da3",
+      "verifier": {
+        "git_blob": "fd5618b8114cba58c4cb0da6a05c2af3e5d137a2",
+        "sha256": "e06f99beda7e7b9cc4c86df49e4ae18d497ff5faed5d9548eb2550e74338c016",
+        "bytes": 30643
+      },
+      "prereg": {
+        "git_blob": "399682824c6298bbc074294018722abc2ff1be63",
+        "sha256": "ad0393b79582111668fde21cbcbe0cc0724aea1b89f1fa9facc3849b3cb09331",
+        "bytes": 27045
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1/breaker.py": {
+          "git_blob": "6f18d11dd96e9bcf16e0fccc3b25d68f12942412",
+          "sha256": "92ce0a55605f6715b475492560259ad905bbcf515905ded28e977bce581af092",
+          "bytes": 41504
+        }
+      }
+    },
+    "P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3": {
+      "pin_commit": "04e21ecf4a866cd861d875706050006e0d0fbd59",
+      "verifier": {
+        "git_blob": "8f77f21c6be70e4411f5fdc245861170717c0c7a",
+        "sha256": "95541c29f9c92cd281576a7d95bdaecb6be692def8a1f6c8df2866569f7cb28c",
+        "bytes": 35429
+      },
+      "prereg": {
+        "git_blob": "0f9ae09879e244faa9504ec7015f09f8d965ffcc",
+        "sha256": "1c4fb09e13e670a05d68d35348f330a54816d8e6aafbd7eff91e1a5405ca5361",
+        "bytes": 13591
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3/breaker.py": {
+          "git_blob": "4eeac8a2e001a1509b7de4a63c26e3c545b75786",
+          "sha256": "14f6a8a3e22fb818866dff7e03ee5b8f626b5a8bbba869e1bc606f86c9c76aac",
+          "bytes": 29029
+        }
+      }
+    },
+    "P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1": {
+      "pin_commit": "5e072359a029233d1c2b266c0c4bed2269752535",
+      "verifier": {
+        "git_blob": "b1c2dfed7c4d0ebdce272bd839fd0b2263683885",
+        "sha256": "391990de4a64cffb4e9386acc8400270913a279356cdca87f6b48621df4b80b7",
+        "bytes": 50890
+      },
+      "prereg": {
+        "git_blob": "999931b6a46b05adf676ed7caa5efeb6711d9095",
+        "sha256": "33cfa283ac5a9319aaf4cd00a6503c82b35f36243711522b8d74605b1b286c10",
+        "bytes": 26190
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1/breaker.py": {
+          "git_blob": "7fd786c7bb7912b6f95c699467b4fc22876e3542",
+          "sha256": "4d5aae167226b92dfefb68e67f2386fd3372e34f80f97331a95be886c5f1cb61",
+          "bytes": 62601
+        }
+      }
     }
   }
 }
