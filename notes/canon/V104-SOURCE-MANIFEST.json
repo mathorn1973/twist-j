@@ -1,0 +1,1231 @@
+{
+  "schema": "public-canon-v104-source-reconciliation-v1",
+  "status": "NON-CANONICAL",
+  "review_mode": "source-exposed analytical release integration; no blind review claim",
+  "source_base_commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+  "canon_sha256": "c8d0cfadb44cf882af9f8ac303ba558b232663451d634d99467ce6d2c4a6814d",
+  "canon_bytes": 1262204,
+  "new_claim_count": 46,
+  "new_claims": [
+    {
+      "claim_id": "INTEGER-JOINT-ACTION-ENERGY",
+      "status": "T",
+      "canon_section": "13. Gravity and cosmology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "5923662cf2cb77f80355d5b4233b00bf25cc1d1d",
+          "bytes": 32813,
+          "sha256": "7ecbdb61f1718b9ec0bf363088a212deadb8b8d10e4a16ea372cb0a1e605dd06"
+        }
+      ],
+      "source_pull_requests": [
+        1650
+      ]
+    },
+    {
+      "claim_id": "INTEGER-JOINT-FUNDED-REALIZATION",
+      "status": "T",
+      "canon_section": "13. Gravity and cosmology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "5923662cf2cb77f80355d5b4233b00bf25cc1d1d",
+          "bytes": 32813,
+          "sha256": "7ecbdb61f1718b9ec0bf363088a212deadb8b8d10e4a16ea372cb0a1e605dd06"
+        }
+      ],
+      "source_pull_requests": [
+        1650
+      ]
+    },
+    {
+      "claim_id": "SCALAR-LAPSE-EXACT-WARD-FAMILY",
+      "status": "T",
+      "canon_section": "13. Gravity and cosmology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-SCALAR-LAPSE-RIGIDITY-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0a9dd951360f9d02fe033af620c4a35cd2f8840d",
+          "bytes": 26309,
+          "sha256": "d167a0a53d5bf4e3772df51ba27286ed2e03f582c25aeea1c93af53daa5a893d"
+        }
+      ],
+      "source_pull_requests": [
+        1666
+      ]
+    },
+    {
+      "claim_id": "SCALAR-LAPSE-CUBIC-COMMUTATOR-BOUNDARY",
+      "status": "T",
+      "canon_section": "13. Gravity and cosmology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-SCALAR-LAPSE-RIGIDITY-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0a9dd951360f9d02fe033af620c4a35cd2f8840d",
+          "bytes": 26309,
+          "sha256": "d167a0a53d5bf4e3772df51ba27286ed2e03f582c25aeea1c93af53daa5a893d"
+        }
+      ],
+      "source_pull_requests": [
+        1666
+      ]
+    },
+    {
+      "claim_id": "SCALAR-FIXED-DURATION-CLASSIFICATION",
+      "status": "T",
+      "canon_section": "13. Gravity and cosmology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-FIXED-DURATION-BOUNDARY-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "561ef2882d6c81cb1d9baf92ea3d44859ec64f36",
+          "bytes": 19477,
+          "sha256": "abdb99dc40a79381889172626bbb0c4c6b2e169f276845c47fa102df3e3ee4f3"
+        }
+      ],
+      "source_pull_requests": [
+        1678
+      ]
+    },
+    {
+      "claim_id": "RELATIONAL-ELLIPTIC-BOUND-PAIR",
+      "status": "T",
+      "canon_section": "10. Relativity as counting",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-RELATIONAL-MASS-STABLE-BINDING-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0c23c017b598b3b2de1357e8d2302c008c1ecd86",
+          "bytes": 19111,
+          "sha256": "1e0b7bbaf15b9125ca07dbcce953fd78cb49c412440bc25766bc4e73451acbd4"
+        }
+      ],
+      "source_pull_requests": [
+        1689
+      ]
+    },
+    {
+      "claim_id": "RELATIONAL-STABLE-REST-ORBIT",
+      "status": "T",
+      "canon_section": "10. Relativity as counting",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-RELATIONAL-MASS-STABLE-BINDING-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0c23c017b598b3b2de1357e8d2302c008c1ecd86",
+          "bytes": 19111,
+          "sha256": "1e0b7bbaf15b9125ca07dbcce953fd78cb49c412440bc25766bc4e73451acbd4"
+        }
+      ],
+      "source_pull_requests": [
+        1689
+      ]
+    },
+    {
+      "claim_id": "RELATIONAL-OLD-CENTER-TRANSPORT-BOUNDARY",
+      "status": "T",
+      "canon_section": "10. Relativity as counting",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-RELATIONAL-MASS-BOOST-COMPLETION-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "bd5af7ca37f71b0d749479b77d7bcbb13d30a521",
+          "bytes": 19604,
+          "sha256": "fd49aca357cb49a9d462a399cca8fe059508bda6c37509a3945d63b0592bca71"
+        }
+      ],
+      "source_pull_requests": [
+        1693
+      ]
+    },
+    {
+      "claim_id": "RELATIONAL-DECLARED-BOOST-INERTIA",
+      "status": "T",
+      "canon_section": "10. Relativity as counting",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-RELATIONAL-MASS-BOOST-COMPLETION-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "bd5af7ca37f71b0d749479b77d7bcbb13d30a521",
+          "bytes": 19604,
+          "sha256": "fd49aca357cb49a9d462a399cca8fe059508bda6c37509a3945d63b0592bca71"
+        }
+      ],
+      "source_pull_requests": [
+        1693
+      ]
+    },
+    {
+      "claim_id": "RELATIONAL-CLOSED-RECOIL-RATIO",
+      "status": "T",
+      "canon_section": "10. Relativity as counting",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-RELATIONAL-MASS-CLOSED-RECOIL-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0d8e80d0e505d89d18c700c1fc8c8233cf7b6d7c",
+          "bytes": 19104,
+          "sha256": "e3150ea77a795f2296b7036465926c4b182624f317692d14949c6367c965f276"
+        }
+      ],
+      "source_pull_requests": [
+        1695
+      ]
+    },
+    {
+      "claim_id": "INTEGER-HERMITIAN-OCCUPIED-SOURCE",
+      "status": "T",
+      "canon_section": "13. Gravity and cosmology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-SOURCE-HOLONOMY-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "47a490d4b4cbbe05a7b2c73aa7dcdfccb6ae22b7",
+          "bytes": 21468,
+          "sha256": "64edde47710199d76eff127276515551cbc6b7d06c69514199e4b8d03303a197"
+        }
+      ],
+      "source_pull_requests": [
+        1633
+      ]
+    },
+    {
+      "claim_id": "INTEGER-PRIMITIVE-SOURCED-METRIC",
+      "status": "T",
+      "canon_section": "13. Gravity and cosmology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-PRIMITIVE-SOURCE-METRIC-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "b081433557e51dfd67701ad4257c1c217afaa223",
+          "bytes": 29931,
+          "sha256": "44285281a42061073c2da33880d3175f8f1ed1ee44e5f6dbcf501f44a2a1ec4e"
+        }
+      ],
+      "source_pull_requests": [
+        1641
+      ]
+    },
+    {
+      "claim_id": "CONTACT-W-SPECTRAL-READING",
+      "status": "T",
+      "canon_section": "15. Couplings, instruments, and metrology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-W-SPECTRUM-ENERGY-APPARATUS-N/agents/spectrum_locality/PROOF_GLOBAL_SPECTRUM_AND_LOCALITY.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "603f183dd83e72ceb18fb260ec0bb9df8e8efc0c",
+          "bytes": 12692,
+          "sha256": "279206d441d5b993b5b1b74f4a8c6f71c455cdb813d873ca7cef7ac47ac2ba1d"
+        }
+      ]
+    },
+    {
+      "claim_id": "SELECTED-SPECTRAL-ENERGY-SOURCE",
+      "status": "T",
+      "canon_section": "15. Couplings, instruments, and metrology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-W-SPECTRUM-ENERGY-APPARATUS-N/agents/spectral_lift/SPECTRAL_APPARATUS.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "9788deadadb146b63192e1a47b754e0c3bacab11",
+          "bytes": 14991,
+          "sha256": "5e72c0fc75db6d219339600b0768e10ba5a03166e20e5bf68fb1cf53d4098b3f"
+        },
+        {
+          "path": "notes/C-W-SPECTRUM-ENERGY-APPARATUS-N/PROOF_MOVING_REFERENCE_v2.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "9583a4836490c053666b7a051e29ca05a1f1c386",
+          "bytes": 7424,
+          "sha256": "dd2c6d28cf50698c12954ab022e6cee53ca860b30e1d1df5f464a096fe9b0882"
+        }
+      ]
+    },
+    {
+      "claim_id": "CONTACT-W-BOUND-PAIR-RESPONSE",
+      "status": "T",
+      "canon_section": "15. Couplings, instruments, and metrology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-W-SPECTRUM-ENERGY-APPARATUS-N/inputs/PROOF_CONTACT.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "f1a8279d69ca121e51e8475d8a9f2f9fb85fb149",
+          "bytes": 22944,
+          "sha256": "9ef39bf85952478bcd06e5024c7046d976fc07a5d40099290520f24c7e28b19c"
+        },
+        {
+          "path": "notes/C-W-SPECTRUM-ENERGY-APPARATUS-N/inputs/PROOF_RESPONSE.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "7927a58111b8b952b648f5cfe9d00b14b1272426",
+          "bytes": 16052,
+          "sha256": "db9ae697c3f98d144b93d232b04fe2668f074f58b926eb6a9a3d4bd719a4b110"
+        },
+        {
+          "path": "notes/C-W-SPECTRUM-ENERGY-APPARATUS-N/PROOF_MOVING_REFERENCE_v2.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "9583a4836490c053666b7a051e29ca05a1f1c386",
+          "bytes": 7424,
+          "sha256": "dd2c6d28cf50698c12954ab022e6cee53ca860b30e1d1df5f464a096fe9b0882"
+        }
+      ]
+    },
+    {
+      "claim_id": "DECLARED-CONTACT-MERIDIAN-ALGEBRA",
+      "status": "T",
+      "canon_section": "12. The color door",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-TREFOIL-KLEIN-CONTACT-N/source-B/contact/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "c73b0fa14429959d514f3306ce3fb7a440f732e9",
+          "bytes": 12697,
+          "sha256": "fe33a9e87ed500feb7ece6d6ef6cb49ef950fb98d2633116e730b582059ab3cf"
+        },
+        {
+          "path": "notes/C-TREFOIL-KLEIN-CONTACT-N/source-B/geometry/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "b28b0a55d4e832aa75f074b98109a2e713f201d7",
+          "bytes": 14400,
+          "sha256": "a52eadca5c21565224b77493b496554ed7d79387daa02b76b952cc163f67e4de"
+        }
+      ]
+    },
+    {
+      "claim_id": "CM5-POLARIZATION-DICTIONARY",
+      "status": "T",
+      "canon_section": "4. The two places",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-RH-CM5-HECKE-DICTIONARY-N/CM5_POLARIZATIONS.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "abf1d903480c1351804b12121b6a6296dff230f0",
+          "bytes": 38987,
+          "sha256": "a967038711624409a9620964cfcdf20fbd49c60c8837fe75842d099cfbe93208"
+        }
+      ]
+    },
+    {
+      "claim_id": "CM5-HECKE-NORMALIZATION",
+      "status": "T",
+      "canon_section": "4. The two places",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-RH-CM5-HECKE-DICTIONARY-N/HECKE_MAASS_BRIDGE.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "15f0786eb9bb23230f86b6a1d148400f87743e54",
+          "bytes": 30385,
+          "sha256": "c56a097133be16db3cc29bf4da5927c294f3dabecc29d477cadc1d3185778618"
+        },
+        {
+          "path": "notes/C-RH-CM5-HECKE-DICTIONARY-N/CM5_POLARIZATIONS.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "abf1d903480c1351804b12121b6a6296dff230f0",
+          "bytes": 38987,
+          "sha256": "a967038711624409a9620964cfcdf20fbd49c60c8837fe75842d099cfbe93208"
+        }
+      ]
+    },
+    {
+      "claim_id": "CM5-INTEGRAL-PULLBACK-REACHABILITY",
+      "status": "T",
+      "canon_section": "4. The two places",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-V104-CM-ANALYTIC-ADMISSION-N/MODULE_A.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "06569417310ac7599e689866d7f4860ad6030dfe",
+          "bytes": 22636,
+          "sha256": "a0ef2c2e2e4fb215f97a46d5800c7a6c4eb4a25742cab7dd0849bb8e171ed500"
+        },
+        {
+          "path": "notes/C-RH-CM5-HECKE-DICTIONARY-N/CM5_POLARIZATIONS.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "abf1d903480c1351804b12121b6a6296dff230f0",
+          "bytes": 38987,
+          "sha256": "a967038711624409a9620964cfcdf20fbd49c60c8837fe75842d099cfbe93208"
+        }
+      ]
+    },
+    {
+      "claim_id": "CM5-REACHABLE-PRIMITIVE-DENSITY",
+      "status": "T",
+      "canon_section": "4. The two places",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-V104-CM-ANALYTIC-ADMISSION-N/MODULE_B.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "da11cd857e6f8e4a7e0076543797942a1d20e57e",
+          "bytes": 20162,
+          "sha256": "643ef4a54719a9d5e8057f0cbf6912642c2e9d475a467b0195e12dfb93901f88"
+        },
+        {
+          "path": "notes/C-RH-CM5-HECKE-DICTIONARY-N/CM5_POLARIZATIONS.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "abf1d903480c1351804b12121b6a6296dff230f0",
+          "bytes": 38987,
+          "sha256": "a967038711624409a9620964cfcdf20fbd49c60c8837fe75842d099cfbe93208"
+        }
+      ]
+    },
+    {
+      "claim_id": "CM5-PRIME-NORM-FULL-CIRCLE",
+      "status": "T",
+      "canon_section": "4. The two places",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-V104-CM-ANALYTIC-ADMISSION-N/PRIME_SECTORS_2L.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "cef39f04aca9aa8a35cb8cf6790e733c56db31f4",
+          "bytes": 17732,
+          "sha256": "50c37bcc0cbbfc1920e5e6e2761c478c8714f1f4342f9100d76091ca73ff537c"
+        },
+        {
+          "path": "notes/C-RH-CM5-HECKE-DICTIONARY-N/CM5_POLARIZATIONS.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "abf1d903480c1351804b12121b6a6296dff230f0",
+          "bytes": 38987,
+          "sha256": "a967038711624409a9620964cfcdf20fbd49c60c8837fe75842d099cfbe93208"
+        },
+        {
+          "path": "notes/C-RH-CM5-HECKE-DICTIONARY-N/HECKE_MAASS_BRIDGE.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "15f0786eb9bb23230f86b6a1d148400f87743e54",
+          "bytes": 30385,
+          "sha256": "c56a097133be16db3cc29bf4da5927c294f3dabecc29d477cadc1d3185778618"
+        }
+      ]
+    },
+    {
+      "claim_id": "JM-RESULTANT-TRACE-SEAM",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-JM-RESULTANT-SEAM-41-N/REPORT.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "8aeec5d461e44d1bfad2c956f8fb4a534f0011f6",
+          "bytes": 13082,
+          "sha256": "62d171f182b936ede147711f0ab4a4e35d8317458828dfa0d3e421e6986e384b"
+        },
+        {
+          "path": "probes/P-INTEGER-RETAINED-PAIR-SOURCE-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "2c86c67984e206bfd677a82e8bea132a61fea068",
+          "bytes": 17027,
+          "sha256": "30a0c8e2aac3181026d9f55fc40ba1c430c6584fc6b64d543f49079831e71ac2"
+        }
+      ]
+    },
+    {
+      "claim_id": "JM-POSITIVE-REFERENCED-READING",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-JM-ORIENTED-QUADRATIC-READING-N/REPORT.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "62667846180ee2a6a1dc39b90fe4604559eb7841",
+          "bytes": 18424,
+          "sha256": "9b08f7b0d8004c32d792bed6988f92b203acfeba9f2ebffd3d1b4159bed96f0a"
+        }
+      ]
+    },
+    {
+      "claim_id": "JM-BOUNDED-READOUT-PRECISION",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-JM-SEAM-READOUT-COST-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0c2aaf76fd31c2a07399e2ed527c9d25fd86dde9",
+          "bytes": 11040,
+          "sha256": "55732c10e45f3172d01c0f6536695ad45654bd626a433dc095fa2432e97ffe11"
+        }
+      ]
+    },
+    {
+      "claim_id": "JM-PREPARATION-MEMORY-SEPARATION",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-JM-PREPARATION-MEMORY-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0d5ac19e2f9d973c4cc93fbbb788fcfb6cde1502",
+          "bytes": 18972,
+          "sha256": "094a3a90f01a220134825d6e5f7e717e844a3b82dd67f4ef7650f5dbb04f6c19"
+        }
+      ]
+    },
+    {
+      "claim_id": "JM-HELD-SEAM-DETECTOR",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-JM-PREPARATION-MEMORY-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0d5ac19e2f9d973c4cc93fbbb788fcfb6cde1502",
+          "bytes": 18972,
+          "sha256": "094a3a90f01a220134825d6e5f7e717e844a3b82dd67f4ef7650f5dbb04f6c19"
+        }
+      ]
+    },
+    {
+      "claim_id": "JM-RETAINED-RATIONAL-PAIR-SOURCE",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-JM-RETAINED-PAIR-SOURCE-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "d84d93de8bb11bda55bdf0da5c6d5d050eac3f1d",
+          "bytes": 18279,
+          "sha256": "85dfbb99d2e13c2513875a205f86b88ae396c5970fa1c2694a885d8a6378631b"
+        }
+      ]
+    },
+    {
+      "claim_id": "JM-INTEGER-PAIR-INVOLUTION",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-RETAINED-PAIR-SOURCE-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "2c86c67984e206bfd677a82e8bea132a61fea068",
+          "bytes": 17027,
+          "sha256": "30a0c8e2aac3181026d9f55fc40ba1c430c6584fc6b64d543f49079831e71ac2"
+        }
+      ]
+    },
+    {
+      "claim_id": "JM-FUNDED-INTEGER-PAIR-SOURCE",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-RETAINED-PAIR-SOURCE-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "2c86c67984e206bfd677a82e8bea132a61fea068",
+          "bytes": 17027,
+          "sha256": "30a0c8e2aac3181026d9f55fc40ba1c430c6584fc6b64d543f49079831e71ac2"
+        }
+      ]
+    },
+    {
+      "claim_id": "AUTONOMOUS-SOURCE-WORK-RECORD-CHAIN",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-FIELD-SOURCE-WORK-RECORD-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "55a86ce01a005398612cacae3a44dfb319898e7e",
+          "bytes": 15268,
+          "sha256": "a73179bd637cc7f62c7664ded7e8a58bd7d05835cf1ba224d483dc5cdeb24034"
+        }
+      ],
+      "source_pull_requests": [
+        1612
+      ]
+    },
+    {
+      "claim_id": "EVEN-CONTACT-3ADIC-PURE-PAIR-OBSTRUCTION",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "probes/P-EVEN-CONTACT-3ADIC-TEST-1/RESULT.md",
+      "source_files": [
+        {
+          "path": "probes/P-EVEN-CONTACT-3ADIC-TEST-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "487a5d941a44ce2f5d8d4e56fc33dbac012758d4",
+          "bytes": 11256,
+          "sha256": "7ab8edf5e3eb225ed984cfdf74116b7a4821d78dea1ca307587045de0c8f1184"
+        },
+        {
+          "path": "probes/P-EVEN-CONTACT-3ADIC-TEST-1/RESULT.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "a9b49625e2661eb2a700d494826377595641e76f",
+          "bytes": 7800,
+          "sha256": "b0979c820e7e473741d9e3083fef67d6eb037eae510e9bf4868bf200f729ce4b"
+        }
+      ],
+      "source_pull_requests": [
+        1613
+      ]
+    },
+    {
+      "claim_id": "TWO-CONTACT-INTERACTION-ACCOUNT",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-REFERENCE-CONTACT-ADDITIVE-ENERGY-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0d288d270df01b20e5d2eca64e9f482f056b0617",
+          "bytes": 16436,
+          "sha256": "defd39eb9106512342c835963954414e844551d02bbab99927002a336c6cb70e"
+        }
+      ],
+      "source_pull_requests": [
+        1623
+      ]
+    },
+    {
+      "claim_id": "COMMON-CONTENT-ADDITIVE-ACCOUNT-BOUNDARY",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-REFERENCE-CONTACT-ADDITIVE-ENERGY-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0d288d270df01b20e5d2eca64e9f482f056b0617",
+          "bytes": 16436,
+          "sha256": "defd39eb9106512342c835963954414e844551d02bbab99927002a336c6cb70e"
+        }
+      ],
+      "source_pull_requests": [
+        1623
+      ]
+    },
+    {
+      "claim_id": "RATIONAL-STAR-PRICE-CAPACITY",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-REFERENCE-CONTACT-ADDITIVE-ENERGY-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0d288d270df01b20e5d2eca64e9f482f056b0617",
+          "bytes": 16436,
+          "sha256": "defd39eb9106512342c835963954414e844551d02bbab99927002a336c6cb70e"
+        }
+      ],
+      "source_pull_requests": [
+        1623
+      ]
+    },
+    {
+      "claim_id": "COMPLETE-AFFINE-ENDPOINT-WORD",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-ROLE-CONTACT-GRAPH-ENERGY-SELECTION-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "a85e83c08ce75bb3abb449f496c067b29a020392",
+          "bytes": 32972,
+          "sha256": "756f9d875a23c3085a1a05b0918a350865c5a6ed075ddca3720c336e431a04bf"
+        }
+      ],
+      "source_pull_requests": [
+        1625
+      ]
+    },
+    {
+      "claim_id": "ROLE-CONTACT-GRAPH",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-ROLE-CONTACT-GRAPH-ENERGY-SELECTION-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "a85e83c08ce75bb3abb449f496c067b29a020392",
+          "bytes": 32972,
+          "sha256": "756f9d875a23c3085a1a05b0918a350865c5a6ed075ddca3720c336e431a04bf"
+        }
+      ],
+      "source_pull_requests": [
+        1625
+      ]
+    },
+    {
+      "claim_id": "ROLE-CONTACT-PRICE-CLASSIFICATION",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-ROLE-CONTACT-GRAPH-ENERGY-SELECTION-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "a85e83c08ce75bb3abb449f496c067b29a020392",
+          "bytes": 32972,
+          "sha256": "756f9d875a23c3085a1a05b0918a350865c5a6ed075ddca3720c336e431a04bf"
+        }
+      ],
+      "source_pull_requests": [
+        1625
+      ]
+    },
+    {
+      "claim_id": "SOURCE-WORK-SHARP-SIX-DIGIT-REPRESENTATION",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-SOURCE-RAMIFIED-CONTACT-CLOSURE-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "93df23c881c0de21d85065e4bc9fbf3994942846",
+          "bytes": 28492,
+          "sha256": "14abf3d58def56ef0522ea64de6081329e15af75f7e3923efbd78eba77e5f012"
+        },
+        {
+          "path": "probes/P-FIELD-SOURCE-WORK-RECORD-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "55a86ce01a005398612cacae3a44dfb319898e7e",
+          "bytes": 15268,
+          "sha256": "a73179bd637cc7f62c7664ded7e8a58bd7d05835cf1ba224d483dc5cdeb24034"
+        }
+      ],
+      "source_pull_requests": [
+        1615,
+        1612
+      ]
+    },
+    {
+      "claim_id": "RAMIFIED-AREA-WEYL-COVARIANCE",
+      "status": "T",
+      "canon_section": "5. The force is the curvature",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-J-RAMIFIED-AREA-WEYL-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "81bc7af71dfadc6ef900063bef728d6365470ce4",
+          "bytes": 7349,
+          "sha256": "250bd14199089c43a7d13610eab440689ade7e9910f939f743023724cdd0d201"
+        },
+        {
+          "path": "notes/C-J-AREA-WEYL-INDEPENDENT-REVIEW-N/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "8651fbbc25b43f636c589efaa51fc60fc07f61b2",
+          "bytes": 15647,
+          "sha256": "03b61b0164362e24d66f3c479ba21bda4948308c02a1e8fc139ce40d9dc53209"
+        }
+      ],
+      "source_pull_requests": [
+        1583,
+        1604
+      ]
+    },
+    {
+      "claim_id": "SIGNED-B-FUNDED-MINIMUM",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-B-LIFT-FUNDED-SHELL-TRANSFER-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "8a20a7a851babe88d04f6645c1628d83a747eb5c",
+          "bytes": 12804,
+          "sha256": "9e29b2eb6818ecfc4da803bdcde4ad1dc9e9e3ea0670cda4517e0c0e5247fb08"
+        },
+        {
+          "path": "probes/P-B-LIFT-FUNDED-SHELL-TRANSFER-AUDIT-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0fb704b704553c26cfdff8bb4448cf54d733e5f8",
+          "bytes": 9406,
+          "sha256": "e9031f714ae07e247a62d98e56acae74262be076037ad895160acefded2593c5"
+        }
+      ],
+      "source_pull_requests": [
+        1594,
+        1595
+      ]
+    },
+    {
+      "claim_id": "SCALAR-LAPSE-QUARTIC-STENCIL-CLOSURE",
+      "status": "T",
+      "canon_section": "13. Gravity and cosmology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "65177ca0ebc6cbb3a4728f09d2f47144cad8dce0",
+          "bytes": 17577,
+          "sha256": "61e72bfe493784e6c88a447dbb2298017b1f1f20f2dc4c327ed222bebe79c7a8"
+        },
+        {
+          "path": "probes/P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3/PREREG.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0f9ae09879e244faa9504ec7015f09f8d965ffcc",
+          "bytes": 13591,
+          "sha256": "1c4fb09e13e670a05d68d35348f330a54816d8e6aafbd7eff91e1a5405ca5361"
+        }
+      ]
+    },
+    {
+      "claim_id": "SCALAR-LAPSE-FORCED-AFFINE-SHELL",
+      "status": "T",
+      "canon_section": "13. Gravity and cosmology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "65177ca0ebc6cbb3a4728f09d2f47144cad8dce0",
+          "bytes": 17577,
+          "sha256": "61e72bfe493784e6c88a447dbb2298017b1f1f20f2dc4c327ed222bebe79c7a8"
+        },
+        {
+          "path": "probes/P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3/PREREG.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0f9ae09879e244faa9504ec7015f09f8d965ffcc",
+          "bytes": 13591,
+          "sha256": "1c4fb09e13e670a05d68d35348f330a54816d8e6aafbd7eff91e1a5405ca5361"
+        }
+      ]
+    },
+    {
+      "claim_id": "PRIME-FIVE-FOURIER-SUPPORT-SAMPLING",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "notes/C-PRIME-FOURIER-SUPPORT-UNCERTAINTY-N/README.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "72b162cd03e8957f9c564f9433aa804866f0ba3c",
+          "bytes": 6500,
+          "sha256": "46dae5e86b15178dca61b9d0b012469c76582c481e9d1700438aca2cf2a9d207"
+        }
+      ],
+      "source_pull_requests": [
+        1683
+      ],
+      "classical_input": {
+        "author": "Terence Tao",
+        "title": "An uncertainty principle for cyclic groups of prime order",
+        "citation": "Math. Res. Lett. 12 (2005), 121–127",
+        "doi": "10.4310/MRL.2005.v12.n1.a11",
+        "url": "https://arxiv.org/pdf/math/0308286",
+        "import": "Chebotarev prime Fourier minor theorem, Lemma1.3; sign conjugation and scalar normalization preserve invertibility"
+      }
+    },
+    {
+      "claim_id": "FIVE-PHASE-THREE-REFERENCE-RETAINED-RECORD",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-J-PHASE-THREE-REFERENCE-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "9b41b1b1808279dfd156051fbbdb0da87d6b36e4",
+          "bytes": 21125,
+          "sha256": "388670e91371acd707d887aeff3919dfeddaaadb762767a19fba5945786e7e43"
+        },
+        {
+          "path": "probes/P-J-PHASE-THREE-REFERENCE-1/RESULT.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "a1491d93c23a0bb7540bc88c0c860d376712b469",
+          "bytes": 9849,
+          "sha256": "f131c49bd87ca416b7d4fe901b70eac3cffbc01264ab58eab4af5b9457076fd6"
+        }
+      ],
+      "source_pull_requests": [
+        1581
+      ]
+    },
+    {
+      "claim_id": "COMMON-HISTORY-FUNDED-AREA-RECEIVER",
+      "status": "T",
+      "canon_section": "2. Time, space, and the decoder",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-COMMON-HISTORY-FUNDED-RECEIVER-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "83d5ca8b2e896b054836fc2b7d87a80eac163d36",
+          "bytes": 23052,
+          "sha256": "1bac918dd55f752e1abf37b18c531cbe3519f9d57ff89e20e338df6bcaafb8d7"
+        },
+        {
+          "path": "probes/P-COMMON-HISTORY-FUNDED-RECEIVER-1/WEYL.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "0df206a4a2837dfc15ddb4008126eebce049f87b",
+          "bytes": 12969,
+          "sha256": "d7199063979c48b635467ec66f803a28660d01ea15c1bec8f96410ced5996772"
+        }
+      ]
+    },
+    {
+      "claim_id": "FIVE-SITE-LOCAL-CONTINUITY-CONSTRAINT",
+      "status": "T",
+      "canon_section": "13. Gravity and cosmology",
+      "evidence_location": "inline",
+      "source_files": [
+        {
+          "path": "probes/P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1/PROOF.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "4a2a19465d8c747afc110d82987150e44b029cee",
+          "bytes": 21803,
+          "sha256": "e80fa3fcdd9035b507a3055d836f1a55d4dd1a90157d642b94eb65a615817aa9"
+        },
+        {
+          "path": "probes/P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1/REVIEW.md",
+          "commit": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+          "git_blob": "372756a70c0214f06b971210e5f2249b891da8e1",
+          "bytes": 4742,
+          "sha256": "c05b21ca146383056c006ffe963948d29d7fa402d21922cc753274a2363afd50"
+        }
+      ],
+      "source_pull_requests": [
+        1652
+      ]
+    }
+  ],
+  "unchanged_source_admissions": [
+    {
+      "pr": 1633,
+      "original_pin": "1ffe24aab9f4bbe070dfbb23b914244c9b68aa02",
+      "updated_head": "bc9f4bf92e41285d764ce4faf1a73bcef8bd2de4",
+      "merge_commit": "727a5ad96d8322fb0ac1ec387425a898abecb39c",
+      "paths": [
+        "probes/P-INTEGER-SOURCE-HOLONOMY-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39514185739
+    },
+    {
+      "pr": 1641,
+      "original_pin": "af88c702baf6c31bf4bb51c9768a07bc261c3dc6",
+      "updated_head": "1f70b3ca21b5d72ba5ce71ef7cd7e6b5e4371130",
+      "merge_commit": "6246d6792d762978a458f7b578fc2995ea130414",
+      "paths": [
+        "probes/P-INTEGER-PRIMITIVE-SOURCE-METRIC-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39515279405
+    },
+    {
+      "pr": 1650,
+      "original_pin": "a17fe5f2198f1693277b45bcf7c55458e8c2c381",
+      "updated_head": "a51f9d93255509bc1eae50ee42850856deb885b0",
+      "merge_commit": "6494e78521d08e4ee20b68ef5c0402aa1cf7df29",
+      "paths": [
+        "probes/P-INTEGER-AUTONOMOUS-JOINT-ENERGY-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39515528696
+    },
+    {
+      "pr": 1691,
+      "original_pin": "9bfe702418dc8550ec05d76fdfd958c1c4e92ebc",
+      "updated_head": "51601dfebf04b06cb38a033d29384eb887654660",
+      "merge_commit": "afd41a0b46fe504870abb21e13a985053a17fab1",
+      "paths": [
+        "probes/P-RELATIONAL-MASS-INERTIAL-RESPONSE-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39515749680
+    },
+    {
+      "pr": 1693,
+      "original_pin": "7eb7d5175a73c3839de96e1915ee81393a071477",
+      "updated_head": "93d89e2a5ed61aa7e6df0289ad6d6454733322c7",
+      "merge_commit": "c5cdcdc80bc879336794b8b96117cac02e42683a",
+      "paths": [
+        "probes/P-RELATIONAL-MASS-BOOST-COMPLETION-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39515954763
+    },
+    {
+      "pr": 1695,
+      "original_pin": "6e615629275c7e21a8f4a87c32dec1a4ee213d70",
+      "updated_head": "81e6b857a6a2bd769d89a778e6b89f61bcbf5f2d",
+      "merge_commit": "58a8ec75cecc2881063fadb8072b7d08a1affb43",
+      "paths": [
+        "probes/P-RELATIONAL-MASS-CLOSED-RECOIL-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39516166430
+    },
+    {
+      "pr": 1697,
+      "original_pin": "17d87de75d19937592fc9fd9863b2f8b7c2b16d2",
+      "updated_head": "2a0183afb79ec7b7842c51f7da6d0e365cb0566c",
+      "merge_commit": "6adeffcf955653a85b77029eac2c3893d120f3de",
+      "paths": [
+        "notes/C-JM-DECODER-CHAIN-PUBLICATION-N",
+        "notes/C-JM-ORIENTED-QUADRATIC-READING-N",
+        "notes/C-JM-SEAM-READOUT-COST-N",
+        "notes/C-PROJECTIVE-BORN-READING-N"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39516536538
+    },
+    {
+      "pr": 1679,
+      "original_pin": "87485fc66140a436bd6a337dd2ff452093ab607f",
+      "updated_head": "ab59f9e473f8e88579fcf40d2e4202e6e0a7975e",
+      "merge_commit": "754587dc70f01f936a189ce14727d9f0097f9778",
+      "paths": [
+        "notes/C-JM-PREPARATION-MEMORY-N"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39516689772
+    },
+    {
+      "pr": 1681,
+      "original_pin": "08836040d7117c9315c0b24be33eb8829f068898",
+      "updated_head": "348132012dd506317d33c084461226a11686cf5d",
+      "merge_commit": "202f70c87c8d790dbf3f329a0b54bb18bc7c5337",
+      "paths": [
+        "notes/C-JM-RETAINED-PAIR-SOURCE-N"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39516817740
+    },
+    {
+      "pr": 1699,
+      "original_pin": "123c015de42510f1277545f5e8066fdfeda4d375",
+      "updated_head": "2d218c6bde2335daed76e8ad3469074186b282e3",
+      "merge_commit": "47128bdbf7650673b6f1bfc0c9ce8babb0c3b454",
+      "paths": [
+        "probes/P-INTEGER-RETAINED-PAIR-SOURCE-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39517225003
+    },
+    {
+      "pr": 1702,
+      "original_pin": "8aac3bad32cb4a8b30c6fbce2f87f892553b8692",
+      "updated_head": "650923d4f7d62da90d72ce3aea60974c35ded769",
+      "merge_commit": "5073a05b72d551ed3e82f4bdb23d1a4f30a4f545",
+      "paths": [
+        "notes/C-V104-CM-ANALYTIC-ADMISSION-N"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39517398867
+    },
+    {
+      "pr": 1601,
+      "original_pin": "acb67c91154b2b8b4681dee47570ab5988ceb4c5",
+      "updated_head": "b5929cefec24e0ab870600770633ac5486bd6d8e",
+      "merge_commit": "62032424f19fe466ba2385aed6dcec7e1b51fb75",
+      "paths": [
+        "notes/C-TREFOIL-KLEIN-CONTACT-N"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39517608008
+    },
+    {
+      "pr": 1612,
+      "original_pin": "2c305c0ed36d5f99b47bd9316256d2b10bb05f3a",
+      "updated_head": "9c9f14055d8f21ed9d8ed5a193f0b8e08b64205d",
+      "merge_commit": "efd5d9af82a02b30c6678103b73dfc780551efb2",
+      "paths": [
+        "probes/P-FIELD-SOURCE-WORK-RECORD-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39517748161
+    },
+    {
+      "pr": 1623,
+      "original_pin": "26d931444ae47393e9f7c1948cb40e540bd1e66f",
+      "updated_head": "5c79b56edb91a49928110d3ecacdad343b431d85",
+      "merge_commit": "8908160824ddff34999a4509a480cabb643a280b",
+      "paths": [
+        "notes/C-REFERENCE-CONTACT-ADDITIVE-ENERGY-N"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39517905437
+    },
+    {
+      "pr": 1583,
+      "original_pin": "e40b637b81f1a6fca99a543e970c83a4e0d45ebc",
+      "updated_head": "cffe0f907b798e6eaa42f34f9854ad05e8df0c57",
+      "merge_commit": "372e01b3bc065efc16a84a70b1732ba9373aa381",
+      "paths": [
+        "probes/P-J-RAMIFIED-AREA-WEYL-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39518106974
+    },
+    {
+      "pr": 1604,
+      "original_pin": "fb1e7db276f18e2f241533ba77b8f71502b1141f",
+      "updated_head": "7fc66f2b6906ee1f438826f8de15a7763c3ec2d8",
+      "merge_commit": "e69d62e9e1b6a1055c31b09dda8479993b880370",
+      "paths": [
+        "notes/C-J-AREA-WEYL-INDEPENDENT-REVIEW-N"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39518305018
+    },
+    {
+      "pr": 1594,
+      "original_pin": "6a6f2967120866b9f06956169012c0e8213ab268",
+      "updated_head": "50da7911f79dffa527c9002ac35b36d8e3fd2aff",
+      "merge_commit": "746833ebba215895b0de8dbef1a173cd154a3626",
+      "paths": [
+        "probes/P-B-LIFT-FUNDED-SHELL-TRANSFER-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39518490657
+    },
+    {
+      "pr": 1595,
+      "original_pin": "b77ce7adabcb71c5ba5dbf46f315352143b05122",
+      "updated_head": "dcfe389b9ba901757174098b717329730d4d7d27",
+      "merge_commit": "52c81ba908fc2026dcd8d40e6faceb2e0878f000",
+      "paths": [
+        "probes/P-B-LIFT-FUNDED-SHELL-TRANSFER-AUDIT-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39518614074
+    },
+    {
+      "pr": 1615,
+      "original_pin": "2a116dd7c968cbbbeeda42d52cc4625e34761116",
+      "updated_head": "66cd7d5b4402f849e94b3d8b3e5c0dfe01381580",
+      "merge_commit": "b74d4d937f04225f1872e4d6667a56dd90275d18",
+      "paths": [
+        "notes/C-SOURCE-RAMIFIED-CONTACT-CLOSURE-N"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39518780425
+    },
+    {
+      "pr": 1613,
+      "original_pin": "3edeb861945cfeb0203d7699cc8085df2ff7a705",
+      "updated_head": "1b6775dff03bc744b12de22f99b6b485463345f4",
+      "merge_commit": "ddc32651b939fafa64385a6853d58c5b49e551bb",
+      "paths": [
+        "probes/P-EVEN-CONTACT-3ADIC-TEST-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39518972022
+    },
+    {
+      "pr": 1674,
+      "original_pin": "645afa9a14b78ffc0bc5b15159482a91183827a9",
+      "updated_head": "61cf0f89887a68cbb00a7591b385c323e0efd12c",
+      "merge_commit": "2d8d9595311645aee49bdf6872dff9bc1661d607",
+      "paths": [
+        "probes/P-INTEGER-MAURER-CARTAN-LAPSE-CLOSURE-3"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39519175001
+    },
+    {
+      "pr": 1625,
+      "original_pin": "71087d36c96c5c4a0d7dba54221a3d2171b6483e",
+      "updated_head": "00a7819eacc88407089283bb0cd3491f6826644f",
+      "merge_commit": "2c6719baf38a905de8a708cca69d5cac12839a19",
+      "paths": [
+        "notes/C-ROLE-CONTACT-GRAPH-ENERGY-SELECTION-N"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39519340116
+    },
+    {
+      "pr": 1683,
+      "original_pin": "468dc02501493187fa48365b1c41a92cea8adb9c",
+      "updated_head": "4c4e9aa09fe93db51bcbf611a23b1e01118da9b7",
+      "merge_commit": "fb59d82ede18ba91e5f522cb19ddffbc81a1f517",
+      "paths": [
+        "notes/C-PRIME-FOURIER-SUPPORT-UNCERTAINTY-N"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39519495571
+    },
+    {
+      "pr": 1581,
+      "original_pin": "694e5839f50dc9ef19f28792c8c6b9d64307389d",
+      "updated_head": "c912b1977a6f52001b83f6efbdc3a06fb6ece20f",
+      "merge_commit": "d2a33c62a937f64b6349c782c7876c2479fee5e2",
+      "paths": [
+        "probes/P-J-PHASE-THREE-REFERENCE-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39519658174
+    },
+    {
+      "pr": 1627,
+      "original_pin": "29c73cd91870486eb78d533b27aa7b2d9324eb72",
+      "updated_head": "5c703a1ee9c9b08b32e3fce892d6113173c63d13",
+      "merge_commit": "2e453b5c1001266e508ab958eee3c32d835f4dbc",
+      "paths": [
+        "probes/P-COMMON-HISTORY-FUNDED-RECEIVER-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39519899596
+    },
+    {
+      "pr": 1652,
+      "original_pin": "98ec11dfd25f4a7b9b890fb03b484b0c0e24313e",
+      "updated_head": "db69cd067970887ba5081b1f1245e8f568b4e50f",
+      "merge_commit": "415ea627a420d45e6c9e9278940cfd61e82685ca",
+      "paths": [
+        "probes/P-INTEGER-NONLINEAR-CONSTRAINT-PROPAGATION-1"
+      ],
+      "source_tree_unchanged": true,
+      "ci_run": 39520092574
+    }
+  ],
+  "separate_admissions": [
+    {
+      "pr": 1701,
+      "head": "5057f5e2f82005d90d65162cabf6c27dfc8e9f36",
+      "merge": "655e022d0ef95ee94681464d3325d2aa589df1d6",
+      "purpose": "minimal public spectral archive custody",
+      "ci_run": 39510831242
+    },
+    {
+      "pr": 1703,
+      "head": "2e5fa9f1c1aeb311c24009f918ae7447a7337422",
+      "merge": "a9556d42de23dd4271f3d2033fde82bd8a23b0fe",
+      "ci_run": 39520583296,
+      "kind": "infrastructure",
+      "purpose": "exact historical replay contexts; unchanged execution mechanism,14 registrations,88 context files,54 local bindings and191 tests"
+    }
+  ]
+}
