@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v103. Normative authority and activation
+**Release identity:** Public Canon v104. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,11 +16,30 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v103 also declares a discrete architecture. It does not
+Public Canon v104 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
 anchor is the electron mass.
+
+Specified sources and readings are proved by constructing them and verifying
+their stated properties. Their existence does not depend on global decoder
+uniqueness, necessity from J alone or derivation from the original U.
+INTEGER-HERMITIAN-OCCUPIED-SOURCE and INTEGER-PRIMITIVE-SOURCED-METRIC
+give complete reversible integer sources, occupied records and a primitive
+metric reader. RELATIONAL-DECLARED-BOOST-INERTIA and
+RELATIONAL-CLOSED-RECOIL-RATIO give bound objects, moving dynamics and an
+exact finite-clock inertia ratio in their declared common model.
+CONTACT-W-SPECTRAL-READING and SELECTED-SPECTRAL-ENERGY-SOURCE give a
+fixed bounded energy reading, a source with finite energy capacity and
+exact additive conservation, with explicit approximation bounds.
+CM5-POLARIZATION-DICTIONARY and its reachability and Hecke consequences
+supply a separate exact mathematical reading of the specified CM model.
+JM-POSITIVE-REFERENCED-READING and JM-FUNDED-INTEGER-PAIR-SOURCE
+give the selected coherent reading and a funded integer pair source.
+CONTACT-W-BOUND-PAIR-RESPONSE supplies finite prepared packets with a
+proved limiting inertial response under the conserving spectral source.
+The full definitions and proofs distinguish these carriers and operations.
 
 The native zero predicate now has an exact comparison with the declared
 integer field shell: the piston swap carries it to the shell residue
@@ -392,6 +411,17 @@ The stable orientation claims are generated from the registry:
 - COLOR-MCKAY-E8 [T]: tensoring by the spin row gives affine E8 with dimension marks; the moments are Catalan through degree 10 and first differ at degree 12 by 133 = 132 + 1; the verb weights are {4 phi^-2, 4 phi^2}
 - COLOR-LADDER-DICTIONARY [D]: the exact D5 to 2I to affine E8 representation and invariant ladder read as the nonabelian color door, with color su(3) on the traceless endomorphisms of the three dimensional trace kernel; no unique color assignment, QCD running, confinement, or complete measure lift is claimed
 - COLOR-KINEMATICAL-GL2 [D]: the special-linear kinematical image read as GL_2(F_5) of order 480 on the antisymmetric plane, embedded by g -> (det g)^-1 direct-sum g along 3 = 1 + 2
+- INTEGER-HERMITIAN-OCCUPIED-SOURCE [T]: Conditional L1 theorem of the explicitly specified model. The explicitly specified six-phase Hermitian source and occupied record map is a total reversible funded bijection with conserved proper account and finite shells; equal-account source signs with common bank772 produce fixed reader outputs−1,+1, sharp banks716/772 and recoverable old detector data.
+- INTEGER-PRIMITIVE-SOURCED-METRIC [T]: Conditional L1 theorem of the explicitly specified model. The explicit seven-phase integer extension and congruence inverse have a total funded completion; its primitive current-state reader exactly realizes the declared source-forced recurrence with all-counter denominator2*324^(n−1), ready-history Lorentz signature and same-counter source contrastell/162.
+- RELATIONAL-DECLARED-BOOST-INERTIA [T]: Conditional L1 theorem of the explicitly specified model. On the elliptic sector delta>0, the explicit declared H=sqrt(h squared+c squared P transpose gamma P) completion has the displayed full planar Poincare generators and stable moving family; the h10 object has energy/force inertia10/c squared under that common law.
+- RELATIONAL-CLOSED-RECOIL-RATIO [T]: Conditional L1 theorem of the explicitly specified model. The declared closed two-species apparatus with h10 and h45, shared boost law and finite spectator clocks admits the exact energy77 momentum-zero recoil at p24 with energies26 and51, and clock-adjusted inertial ratio9/2.
+- CONTACT-W-SPECTRAL-READING [T]: For the explicitly supplied contact-after-streaming walk W=exp[-i(2pi/5)P0]SG on ell2(Z_R x Z_r) tensor C4, G=((I+2iX) tensor (I+2iX))/5: the whole spectrum has two proved gaps of width at least acos(7/25)-2pi/5>0; the fixed cut alpha=3pi/10 defines a bounded self-adjoint H=i Log_alpha(W), exp(-iH)=W, with an explicit exponential spatial bound and ||[H,R]||<=csc^2[(acos(7/25)-2pi/5)/4]. Existence and correctness of this nominated reading; no uniqueness, finite-range, native derivation, particle identification or empirical reading claim.
+- SELECTED-SPECTRAL-ENERGY-SOURCE [T]: For every specified bounded 0<=H_S<=h on a separable Hilbert space and specified unitary V, the continuous battery L2([0,L+2h]) with fixed sine preparation admits a unitary U conserving H_S+H_B exactly, with joint vector error <=pi||V*H_SV-H_S||/L, half-diamond error <=min(1,pi^2 h osc(V*H_SV-H_S)/(2L^2)) and work error <=pi^2 h^2 osc(V*H_SV-H_S)/(4L^2). The selected contact-walk energy and two moving copies with V_eta=exp[i eta(R-Y)] satisfy these bounds, preserve common translations, and have the displayed q-schedule errors. A bounded autonomous generator realizes one combined period. Finite energy capacity with infinite Hilbert dimension; no exact universal target channel, uniform full-apparatus locality, finite integer realization, native derivation, species identification or self-stopping clock claim.
+- CM5-POLARIZATION-DICTIONARY [T]: Specified complex Jacobian B=Jac(y^2=x^5-1) with its canonical principal polarization and chosen fifth-root action: full integral endomorphism ring, Rosati conjugation, NS identification with O_F, ample cone and norm/intersection/degree formula, full origin-preserving automorphism orbits in bijection with integral F-ideals, content/type and unique fundamental cone. Existence and correctness for this model, with no uniqueness/native selection requirement.
+- CM5-INTEGRAL-PULLBACK-REACHABILITY [T]: Specified CM5 positive integral classes modulo positive units, integral endomorphism pullbacks with no content division; exact inert-valuation criterion, parity invariants, prime-norm table and no finite universal seed set. Fixed-model interpretation only.
+- JM-POSITIVE-REFERENCED-READING [T]: L1 positive outer record and mass-projector reconstruction up to sign; homogeneous scale obstruction; injective affine-reference reading on the specified S and G
+- JM-FUNDED-INTEGER-PAIR-SOURCE [T]: L1 Cartesian integer cell source with declared positive integer resource functional, finite fixed-budget levels, funded reversible dynamics and port-independent sharp K-round bank
+- CONTACT-W-BOUND-PAIR-RESPONSE [T]: For the explicitly specified contact-after-streaming W with mu=2 and g=2pi/5, the relative compact state at center momentum zero continues to a simple exponentially localized branch exp[-i Omega(P)] with Omega even and Omega''(0)=sqrt(16phi+7)/20. Finite unprojected binomial packets, with q=5^j, N=q^4, eta=2atan(1/q) and averaging time T=q, have actual mean displacement divided by the actual principal-momentum impulse tending to this curvature. Two moving copies with the specified continuous energy source of capacity q+8pi retain opposite responses and relative limit twice the curvature, while conserving the selected additive energy and total circular momentum. The first post-kick tick has zero bare-kick velocity; the claim is the stated averaged limit. No global closed contact-dispersion polynomial, positive-energy massless-particle interpretation, physical species, native carrier bridge, finite-dimensional source or intrinsic stopping clock is asserted.
 
 <!-- END GENERATED CORE CLAIMS -->
 Time is a counter. Space is read through commutators. The modulus and

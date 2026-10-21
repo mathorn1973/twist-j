@@ -1,5 +1,39 @@
 # Canon changelog (public series)
 
+## Public Canon v104
+
+Adopt 46 exact theorems for specified sources,
+readings and models. These cover the projective seam, positive referenced
+reading, preparation memory and funded coherent integer pair source;
+reversible occupied records and primitive
+integer metric reading; reciprocal action, funding, scalar lapse and its
+explicit fourth-degree closure, forced affine energy shell and exact
+five-site local continuity/constraint identity;
+bound relational objects, declared moving dynamics and closed recoil;
+a fixed spectral energy reading, an exactly energy-conserving source and
+a finite-packet bound-pair response; autonomous source-to-work-to-record
+transport and its sharp six-digit bounded representation; exact account
+classification, full endpoint/contact graph and sharp price laws, area/Weyl
+covariance and a sharp funded shell minimum; all-five-phase retained records
+and exact five-point Fourier support/sampling;
+the CM polarization and Hecke constructions; and the declared one-cell and two-cell contact algebra.
+
+The existential scope includes the declared carrier and operations as
+premises. Global decoder uniqueness, necessity from J alone and derivation
+from the original U are not conditions of these theorems. The models retain
+their individual types, preparations, energy accounts and observation laws.
+The full arguments, including explicit classical analytic dependencies,
+are in CANON.md. One theorem combines its proved all-word implication with
+a pinned finite-rank certificate and two-architecture public-probe evidence.
+The other new theorems have complete inline proofs; their computations are
+supporting audits.
+
+All 530 prior claims and all 26 live H/O owners retain their exact
+scopes and statuses. The registry contains 576 claims;
+the minimal reproduction inventory remains 36. Source errors excluded by
+the release review are preserved as historical artifacts. Frozen verifiers
+retain their original inputs through exact reviewed context registrations.
+
 ## Public Canon v103
 
 Adopt seven conditional L1 theorems with complete exact proofs. The native
@@ -551,7 +585,7 @@ physical occurrence, nonlinear source/FRW completion, detector or SI scale
 is promoted. Every other registered claim is unchanged.
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 530 claims; 0 T-LOCK, 387 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Registry snapshot: 576 claims; 0 T-LOCK, 433 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 36.
 <!-- END GENERATED CURRENT COUNTS -->
 

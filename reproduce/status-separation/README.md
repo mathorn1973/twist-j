@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred seventy checks cover the current
+and emits deterministic text. Its one hundred seventy-seven checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 170/170 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 177/177 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -851,3 +851,39 @@ classification and obstruction, selected preparation, source-preserving contact
 and five-cell comparison retain their own hypotheses and do not select a
 physical source, reader, apparatus renewal, frequency, or cross-layer lift.
 This is release accounting, not a new scientific computation campaign.
+
+
+## Public Canon v104 boundary
+
+Seven additional structural guards extend the exact accounting chain to
+v104. Thirteen complete current Canon inputs are pinned by byte count and
+SHA-256, then reversed to exact public v103 bytes at
+`a9556d42de23dd4271f3d2033fde82bd8a23b0fe`. The four outermost v103 reads
+consume that validated view; the older V69 CORE-selection byte read also
+uses exact v103. Every historical constant, predicate and all
+170 prior PASS descriptions remain unchanged. The misleading v86 loader
+error from the preserved first v104 candidate was caused by the missing
+v104-to-v103 adapter, not a change to the older mathematical claims.
+
+The added guards pin the 46 new L1 theorems, complete Canon claim blocks,
+all exact ledger additions, 52 dependency edges and declaration records.
+They preserve the evidence distinction between 45 inline proofs and the
+one accepted two-architecture public-probe rank premise. The latter's
+complete source bundle is checked without executing its scientific code.
+The source reconciliation manifest binds 65 source-proof file entries for
+46 claims to exact bytes, SHA-256 and Git blob identities. It is provenance
+and structural custody, not independent scientific proof or preregistration.
+
+All 530 prior claims and all 26 live H/O owners retain their exact rows.
+Gates, Frontier programs, Frontier text and the complete 36-directory
+reproduction inventory are unchanged. The 30 prior CORE selections remain
+an exact prefix extended by 11 pinned new theorem selections. Current totals are
+576 claims, T433/D59/C39/H2/O24/F19. Existence and correctness concern the
+explicitly supplied models and readings; this bookkeeping audit creates no
+physical realization, selection, uniqueness or new science.
+
+The 177-check EXPECTED transcript is authored from the unchanged 170 prior
+PASS lines and seven specified new descriptions before execution. It is not
+a captured run receipt. This is maintenance of the existing release audit;
+replay acceptance belongs to the distinct subsequently frozen successor
+candidate. No earlier frozen candidate is rewritten.

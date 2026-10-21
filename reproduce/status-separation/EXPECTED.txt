@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v103
+historical guards: exact reconstructed v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v104
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -172,5 +172,12 @@ PASS 167 V103-DEPENDENCIES exact new premise and boundary edges preserve all pri
 PASS 168 V103-OWNER-BOUNDARY all 523 prior claims and all 26 live owners, gates and scheduler dispositions remain unchanged
 PASS 169 V103-PHYSICAL-BOUNDARY the residue, unit-lift, prepared-family, contact and five-cell theorems retain their exact hypotheses and exclusions without a physical or cross-layer promotion
 PASS 170 V103-REPRO-INVENTORY all 36 reproduction directories remain unchanged; this structural audit executes no scientific probe
+PASS 171 V104-PRIOR-BYTES thirteen complete v104 inputs reconstruct exact public v103 before all 170 unchanged historical guards
+PASS 172 V104-FORTY-SIX-THEOREMS 46 new L1 theorem rows bind exact ledger additions and declaration records; all 576 claims have the declared status partition
+PASS 173 V104-DEPENDENCIES 52 exact new premise and boundary edges retain all prior dependencies and belong only to the 46 added theorems
+PASS 174 V104-OWNER-BOUNDARY all 530 prior claims and 26 live owners, gates and Frontier programs remain exact; 30 prior CORE selections gain eleven pinned theorem selections
+PASS 175 V104-PROOF-EVIDENCE complete pinned Canon claim blocks retain 45 inline proofs and one two-architecture public-probe rank premise with its exact bundle
+PASS 176 V104-SOURCE-CUSTODY 46 source mappings bind 65 exact source proof files without treating source exposure or declared-model existence as physical realization
+PASS 177 V104-REPRO-INVENTORY all 36 reproduction directories remain unchanged; this structural audit executes no scientific probe
 
-RESULT 170/170 ALL PASS
+RESULT 177/177 ALL PASS
