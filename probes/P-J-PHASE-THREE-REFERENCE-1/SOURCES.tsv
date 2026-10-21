@@ -1,0 +1,8 @@
+public_commit	path	bytes	sha256	role	license
+dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d	probes/P-CONTACT-RECORD-1/verify.py	17430	99ea8680db65567fb73e78f074841532802e6398dfbd34077b37914024341134	unchanged literal contact runtime	Apache-2.0
+dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d	probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/apparatus.py	58388	f0edfd80157c8993322a5338e88120c552908d3830fe5f9ea7536257213c6173	unchanged funded apparatus and typed reader runtime	Apache-2.0
+dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d	probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/DOMAIN.tsv	5029	2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0	unchanged exact finite geometry runtime data	Apache-2.0
+dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d	probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/SOURCE_PROOF.md	17175	f8708d1fe04e3ebfc9a0b8dd091de258fd4ebfa36c58d90fe20dcd9ed02331e4	inherited complete apparatus and energy proof	Apache-2.0
+dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d	probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/PROOF.md	4429	79939f4f04d726760f1afb0599c6bec178f663c2ff0835351b45c30ecab29b6c	inherited typed record-only reader proof	Apache-2.0
+dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d	canon/CANON.md	1052518	d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b	public v103 mathematical authority; not runtime input	Apache-2.0
+dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d	canon/REGISTRY.tsv	532811	5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d	public v103 status authority; not runtime input	Apache-2.0
