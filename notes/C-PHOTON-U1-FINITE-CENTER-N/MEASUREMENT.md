@@ -195,12 +195,19 @@ both H_stack and H_uniform. The two readers need not agree pointwise.
 These controls catch missing winding sectors: a boundary-only dual
 representation would instead retain only n=0 and return zero h.
 
-Additional exact checks include the field polynomial and inverses,
-positive weights, odd score values, all local staple masses against
-direct plaquette replacement, categorical boundary handling with scripted
-bit streams, incidence orientations, cache updates and intentional state
-corruption. These are deterministic implementation tests. A finite test
-does not replace the written all-volume source theorem.
+Audit A checks the field polynomial and inverses, positive weights, score
+identities, all local mass polynomials, incidence orientations and cache
+updates, within its frozen PREREG scope. A later separately pinned
+qualification should additionally compare the sampler's actual staple
+mapping against direct link replacement, exercise categorical boundaries
+with scripted bit streams, and deliberately corrupt cached state. Those
+additional tests were not executed in audit A. The mapping and categorical
+logic received static review; that is separate evidence. A finite test does
+not replace the written all-volume source theorem.
+
+This coverage paragraph was clarified after source pin and audit A;
+the frozen version remains available at the source commit. No mathematical
+formula, pinned scientific program or audit-A output was changed.
 
 The bounded four-dimensional seeded exercise, if included in the pinned
 PREREG.md, is limited to the declared sizes, seeds, starts and sweep
