@@ -1,0 +1,48 @@
+{
+  "candidate": "C-PHOTON-U1-FINITE-CENTER-N",
+  "contract_pin": "b7be3d00495330e4ac00441b865f9009e54a6299",
+  "files": [
+    {
+      "bytes": 10129,
+      "path": "PREREG.md",
+      "sha256": "87e2f1f6265e2524b84ff3c298d166ac51f9fcdc6374b5961971392684d6d97e"
+    },
+    {
+      "bytes": 15923,
+      "path": "z7_exact.py",
+      "sha256": "f5a61136e6f9862ac689c05e013ab3047ab15cf07e9d29fecffcec39f8581c89"
+    },
+    {
+      "bytes": 14870,
+      "path": "verify.py",
+      "sha256": "9a85bd93b7ae230aae07ad08b5bb69a6b5339282f7537c0641e4527e146d8110"
+    },
+    {
+      "bytes": 18652,
+      "path": "break.py",
+      "sha256": "bac3152937fa3cf2096da3f52aff18f965fd5410194007ac52292525fe7a4061"
+    },
+    {
+      "bytes": 2636,
+      "path": "exercise.py",
+      "sha256": "bd9cdb3a0fc7b387ee2f596db6c1b449d1e33a0d0bccdb8e442877ba72ce35e0"
+    },
+    {
+      "bytes": 15634,
+      "path": "PROOF.md",
+      "sha256": "93b6fcb57a2d72170b88497e2cd802f9984b38cad8ba9de7b47513197c4fd7f3"
+    },
+    {
+      "bytes": 10675,
+      "path": "MEASUREMENT.md",
+      "sha256": "eb5a7abe591f3e1cce9407780b8c30991e156bd02cacae8377c44b465e41eabd"
+    },
+    {
+      "bytes": 5929,
+      "path": "BREAKER_REVIEW.md",
+      "sha256": "01c710a82edd8cb403d1ee26b4ebe0adf7f871fe3db21d2c6e51306d69188b15"
+    }
+  ],
+  "independent_breaker": "authored without reading primary module, verifier or outputs",
+  "scientific_execution": "NOT_RUN_AT_FREEZE"
+}
