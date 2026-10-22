@@ -1,13 +1,13 @@
-# Analytical result and unexecuted audit boundary
+# Analytical result and first exact audits
 
 **NON-CANONICAL. L1. No public status promotion.**
 
-Route: **ANALYTICAL-READY / SCIENTIFIC-AUDIT-NOT-RUN**.
-No positive computational result, exact transcript or two-architecture
-scientific gate is claimed. The author has resolved the publication
-attribution exception recorded in [RUN.md](RUN.md). The complete package
-still requires public pinning and readback before execution. The prepared
-code and prospective thresholds remain frozen.
+Route: **ANALYTICAL-CANDIDATES / FIRST-EXACT-AUDITS-PASS**.
+Both accepted programs passed their first executions from immutable public
+pin `4fc3b693b2ae55274153dc6219f8ccd61c042ce1`. The complete package was
+read back before execution. Both exits were zero and both stderr streams
+were empty. The contract, proofs, code and thresholds were not changed.
+This is one Linux x86_64 lane, not a two-architecture scientific gate.
 
 ## Proof-derived candidate-T statements
 
@@ -40,8 +40,41 @@ code and prospective thresholds remain frozen.
    identify it with the pulse lattice or the saturated E_J lattice.
 
 The written derivations and same-session static review support these
-candidate-T labels. No new public T is assigned. Finite candidate-C audits
-remain unearned until the accepted programs have actually run.
+candidate-T labels. No new public T is assigned. The finite candidate-C
+audits below support their stated fixtures, not an empirical extension of
+the universal scope.
+
+## First-run candidate-C evidence
+
+Both independently implemented audits passed the frozen fixture set:
+
+| Audit family | Exact coverage | Result |
+| --- | --- | --- |
+| Full spatial source | 8 phases, 16 boundary basis inputs, equations/current/dispersion | PASS |
+| Scalar word/current action | All 85 words, full congruence characteristic polynomial | PASS |
+| Retained receiver labels | All 676 ordered pairs, involution and retained input data | PASS |
+| Star-compatible residue | All 25 CRT elements; 625 coordinates in both slices; 9 trace pairings | PASS |
+| Hodge carrier and arithmetic | Marked A4 reconstruction, rank 4, full factors, fixed Gram, determinant/norm obstructions | PASS |
+| Explicit CM representation | Entire four-coordinate action and scaled form; original normalization rejected | PASS |
+| Inert-prime and false alternatives | All 4 F4 elements and all 5 rejecting negative controls | PASS |
+
+The code-blind breaker additionally checked all 625 CRT products. Its
+independent field representation and characteristic-polynomial calculation
+agree on the declared mathematics; its differently formatted stdout is not
+expected to equal the main program's stdout. Each original transcript is
+retained unchanged and has its own exact hash in RUN.md.
+
+No unexpected mathematical falsifier, code defect or custody failure fired.
+The intended negative controls rejected their false alternatives. The
+full-label universal no-go and the corrected CM dual-number/saturated-lattice
+comparison rely on the analytical arguments; finite fixture counts are not
+substitutes for those proofs. No public frontier falsifier is fired by the
+restricted source-class obstruction.
+
+The breaker was written without reading the main implementation. This is
+same-session code-blind corroboration, not external independent confirmation.
+There has been exactly one execution of each scientific program. Repository
+CI does not replay these notes and cannot supply the missing architecture.
 
 ## Consequence for the next physical calculation
 

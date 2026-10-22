@@ -8,15 +8,14 @@ This is the analytical successor to draft
 [#1713](https://github.com/mathorn1973/twist-j/pull/1713), at the exact inputs
 listed in [SOURCES.md](SOURCES.md).
 
-**Current execution state: both exact programs are prepared and statically
-reviewed, but unexecuted.** No accepted public execution pin or mathematical
-program pass is claimed. See [RUN.md](RUN.md) for the resolved publication
-attribution and the unchanged prospective execution rule. The analytical
-arguments below are proof-derived candidate-T statements; they have not
-acquired public Canon status. No candidate-C run result has been earned.
-The author has now authorized the connector attribution recorded in RUN.md
-for this draft; the complete accepted package must still be published and
-read back before the first scientific execution.
+**Both frozen exact programs passed their first executions.** The complete
+11-file package was published and read back byte for byte at accepted pin
+`4fc3b693b2ae55274153dc6219f8ccd61c042ce1` before execution. Both programs
+exited zero with empty stderr on Linux x86_64 / Python 3.12.14. The original
+outputs and neutral records are retained in [RUN.md](RUN.md),
+[EXPECTED.txt](EXPECTED.txt), and [BREAKER_EXPECTED.txt](BREAKER_EXPECTED.txt).
+The proof-derived statements remain candidate-T, the finite audits
+candidate-C, all NON-CANONICAL and L1. No public Canon status is promoted.
 
 ## 1. The physical question becomes more restrictive
 
@@ -192,8 +191,19 @@ desired L_J would not be a source explanation.
 The exact acceptance fixtures and failure rule are in [PREREG.md](PREREG.md).
 `verify.py` and `break.py` use only standard-library exact arithmetic. They
 were written separately; the breaker did not read the first implementation.
-Both passed static inspection, but neither has been executed. Their hashes
-and the concrete pending pin are recorded in [RUN.md](RUN.md).
+Their contract, proofs and code hashes were frozen before either ran. Both
+first runs passed without a code edit, rerun or threshold change. This is
+same-session code-blind corroboration on one architecture, not external
+independent confirmation.
+
+The audits cover eight stationary phases and 16 boundary inputs, all 85
+frozen words, 676 retained label pairs, all 25 CRT elements, 625 full residue
+coordinates in both specified slices, nine trace pairings, the marked A4
+reconstruction, the complete CM action and scaled form, all four inert-prime
+residue elements, and five rejecting negative controls. The breaker also
+checks all 625 CRT products. Universal source-class statements are established
+by the written proofs; the corrected CM dual-number/saturated-lattice
+comparison remains analytical rather than an executed audit claim.
 
 Repository policy, Canon, ledger and gate checks passed, together with all
 210 unit tests. The notes-only changed-path checks correctly report not
@@ -202,5 +212,5 @@ programs and do not satisfy a two-architecture scientific gate.
 
 These are candidate L1 mathematical statements. No physical spacetime,
 contact-angle selection, original-U realization, public status promotion or
-Canon edit follows. The complete analytical result and unresolved execution
-state are summarized in [RESULT.md](RESULT.md).
+Canon edit follows. [RESULT.md](RESULT.md) states the analytical conclusions,
+finite evidence and remaining source problem together.
