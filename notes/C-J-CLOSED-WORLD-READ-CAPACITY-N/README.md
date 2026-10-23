@@ -17,9 +17,14 @@ not physical sampling or apparatus claims.
 
 [PREREG.md](PREREG.md) freezes the finite audit and its failure rules.
 [SOURCES.md](SOURCES.md) records authority, source status and prior exposure.
-The exact verifier and separately written breaker are published before
-their first executions; subsequent RUN and RESULT records retain the
-original outputs and distinguish analytical proofs from finite audits.
+The exact verifier and separately written breaker were published and read
+back before their first executions. Both passed and agree on all 276 finite
+decisions, 12 infinite-quotient rows, six sufficient onsets and four strides.
+[RESULT.md](RESULT.md) gives the full census and status table.
+[RUN.md](RUN.md) retains immutable input hashes and first-run custody;
+EXPECTED.txt and BREAK_EXPECTED.txt are the original scientific stdout.
+The phase-uniform sufficient onset for binary reading at modulus exponent
+one is n_*=31, a conservative bound. J at n=5 has no binary reader.
 
 Important boundaries: uniform selection from all quotient states is a
 different contract; phase affects finite counts; singular torsion quotients
