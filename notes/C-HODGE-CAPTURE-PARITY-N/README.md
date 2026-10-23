@@ -2,8 +2,8 @@
 
 **C-HODGE-CAPTURE-PARITY-N — NON-CANONICAL, L1.**
 
-Analytical candidate-T; finite audits are prospective candidate-C until their
-first execution record is added. Owner: A. M. Thorn. Reservation:
+Analytical candidate-T; both original exact audits PASS as supporting
+candidate-C evidence. Owner: A. M. Thorn. Reservation:
 [#1718](https://github.com/mathorn1973/twist-j/issues/1718).
 
 The actual capture-and-receiver law supplies two different coherent parity
@@ -111,8 +111,13 @@ The proofs establish the universal statements. The finite programs audit
 225 rational boundary-data fixtures, both parity actions, exact polynomial
 and Fourier identities, label bookkeeping and conditional arithmetic facts.
 They do not evaluate the actual boundary resolvents or prove a continuum
-theorem by a grid. Their original first outputs are added only after the
-accepted package is publicly pinned and read back.
+theorem by a grid. Both ran once, after accepted pin
+`0160523580e65dafc9d28b5f4d2abd2a694d7d8a` was published and all eleven
+files were read back byte for byte. Both exited zero with empty stderr. The
+original outputs are [EXPECTED.txt](EXPECTED.txt) and
+[BREAKER_EXPECTED.txt](BREAKER_EXPECTED.txt). The breaker also checked all
+225 cross-parity complex polynomials and rejected twelve negative controls.
+The analytical proofs, contract and programs are unchanged after that pin.
 
 Canon, public scientific statuses and both source branches are unchanged.
 This note proposes no merge or promotion. Notes-only repository CI is not
