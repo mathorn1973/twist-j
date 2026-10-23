@@ -1,6 +1,6 @@
 # P-DIGON-TRIANGLE-J-MODE-1 result
 
-Status: FORMAL PROBE RESULT; LOCAL x86_64 LEG PASS; GITHUB TWO-ARCHITECTURE CHECK PENDING AT PULL-REQUEST TIME; PUBLIC CLAIM UNREGISTERED
+Status: FORMAL PROBE RESULT; TWO-ARCHITECTURE COMPUTATION GATE PASS; PUBLIC CLAIM UNREGISTERED
 
 ## Recorded decision
 
@@ -51,11 +51,28 @@ stdout SHA-256:       cdfb2fc3207476ce3cc1010ea4692fd4f4a2a98714e743ce2b2ae2ccb6
 stdout bytes:         1960
 stdout lines:         27
 
-GitHub x86_64 check:  pending (policy workflow on the pull request)
-GitHub aarch64 check: pending (policy workflow on the pull request)
-computation gate:     open until both GitHub architectures reproduce EXPECTED.txt byte for byte;
-                      a same-architecture-only reproduction leaves a computation-only claim at most C
+formal evidence head: 535429e6f5510d4363953d9f6cb7aa1c38069032
+pull request:         1733
+workflow run:         39994845185 (policy), conclusion success
+
+x86_64 job:           120555577015, GitHub-hosted ubuntu-latest, architecture-x86_64,
+                      step "Reproduce changed public probes" success
+aarch64 job:          120555577562, GitHub-hosted ubuntu-24.04-arm, architecture-aarch64,
+                      step "Reproduce changed public probes" success
+GitHub Python:        CPython 3.12 per the workflow's setup-python pin; the exact
+                      patch level was not read back from the job logs here
+check job:            120556120373, TWO-ARCHITECTURE CHECK PASS
+
+byte identity:        PASS on both GitHub architectures; tools/check_verifier.py fails
+                      the job unless the replay reproduces EXPECTED.txt byte for byte
+                      and the pinned verifier hash matches
+computation gate:     PASS (x86_64 local, x86_64 GitHub, aarch64 GitHub)
 ```
+
+The GitHub policy workflow succeeded on the formal-evidence head and enforced
+verifier integrity against the pin commit, exit zero, empty stderr, and
+byte-identical `EXPECTED.txt` on two architectures. `RUN.md` remains the
+neutral local x86_64 record. This close-gate update changes only `RESULT.md`.
 
 ## Scope, credit and status
 
