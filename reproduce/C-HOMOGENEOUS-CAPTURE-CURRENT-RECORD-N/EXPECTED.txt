@@ -1,1 +1,8 @@
-PENDING_PROSPECTIVE_PIN_EXECUTION
+PASS GROUP 1 BRANCH_GAP: 24 checks; gap>=13/165; L<=165/13
+PASS GROUP 2 PACKET_CERTIFICATE: 44 checks; B_hom>=903570708e-33>8e-25; P_joint>=287615489e-36>2e-28
+PASS GROUP 3 NATIVE_COMPLETION: 28 checks; 2704 contact states; 1352 receiver-edge states
+PASS GROUP 4 CURRENT_INTERFACE: 14 checks; cut l=99; j_coh=1642/625
+PASS GROUP 5 OPEN_CHANNEL_AND_CARRIER: 16 checks; nu_1=4/5; dark_diff=4*sqrt(2)/5
+PASS GROUP 6 FINITE_STRIP: 18 checks (16 Laurent identity groups + 2 negative controls)
+SCOPE: connected asymptotic capture, full current, and coherent record; p(Q_full)>=p(Q_win)>2/10^28; finite-time preparation and occurrence NOT DERIVED
+VERIFY PASS C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N total_checks=144
