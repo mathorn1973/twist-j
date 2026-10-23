@@ -11,6 +11,7 @@ from __future__ import annotations
 from fractions import Fraction as F
 import itertools
 from math import isqrt
+import sys
 
 
 # ============================================================================
@@ -1394,6 +1395,9 @@ def audit_finite_strip() -> int:
 
 
 def main() -> None:
+    if sys.flags.optimize:
+        raise RuntimeError("Exact audit requires assertions enabled")
+    sys.stdout.reconfigure(newline="\n")
     total = 0
     total += audit_branch_gap()
     total += audit_packet_certificate()
