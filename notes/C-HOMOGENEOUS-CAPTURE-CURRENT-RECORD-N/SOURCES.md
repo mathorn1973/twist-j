@@ -13,11 +13,11 @@ The active public authority is `mathorn1973/twist-j` `main` at commit `e6240e268
 | Authority File | Bytes | Git Blob SHA-1 | SHA-256 |
 |---|---:|---|---|
 | `canon/CANON.md` | 1262204 | `f24448eceeda3f56db504313dbda4c3f59ae89f6` | `c8d0cfadb44cf882af9f8ac303ba558b232663451d634d99467ce6d2c4a6814d` |
-| `STATUS.md` | 485 | `75227ff5535f7c7ae33c5fd265f1a79641e6015d` | `c91f48e2948a947908f23cb0c4b168be8d5817b6ef04664245a730c028379590` |
+| `STATUS.md` | 2391 | `75227ff5535f7c7ae33c5fd265f1a79641e6015d` | `3704b1e222e3f4eee9c72624cbdad7ea8ea4b14b99194781e3d59e7c8fff6f5b` |
 | `POLICY.md` | 17333 | `10b49a9551eb2f2a3e32d65b0d5b7206febe9de9` | `da5d2cf5a021f4d069c471725e02b6d2c201e3acadd5ecfd4213a361184b7a5d` |
 | `AGENTS.md` | 21813 | `a449c8036ccbc40240060c885bb936630d4fc680` | `7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1` |
-| `canon/CORE.md` | 16492 | `924b6eb65a92a0cb47f89caee1a956540909c047` | `4c64b65e0b8b07b09d4475a811c0c56ef6e61031b9075498d8242e8a1368410c` |
-| `canon/FRONTIER.md` | 21955 | `acc208da19cf123cd50f538ee1f967530daadbc4` | `51d2360c13e308816c562c02043866c542b33015009b9b70116410b95f50e6cf` |
+| `canon/CORE.md` | 37109 | `924b6eb65a92a0cb47f89caee1a956540909c047` | `bce891d62b48aa95e2e124856e82bb16799ad930b422a8264542c84bfcb7fbf9` |
+| `canon/FRONTIER.md` | 27382 | `acc208da19cf123cd50f538ee1f967530daadbc4` | `8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0` |
 
 Two canonical `[T]` entries in `canon/CANON.md` are used directly:
 1. `CONTACT-W-BOUND-PAIR-RESPONSE [T]`: defines the free two-body coin/streaming walk, the contact operator $W(P)$, and its $3\times 3$ contact resolvent blocks $G_0, K$ at $P=0$.

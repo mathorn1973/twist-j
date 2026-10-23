@@ -1199,8 +1199,9 @@ def audit_open_channel_and_carrier() -> int:
 
     chi0_p = w1
     d0_p = step_W_dag(d_prime)
-    ok(proj_alpha(chi0_p, 0) == Cyc() and proj_alpha(d0_p, 0) == Cyc(),
-       "both chi0 and d0 have zero contact overlap (identical zero pulse history)")
+    ok(proj_alpha(chi0_p, 0) == Cyc() and proj_alpha(d0_p, 0) == Cyc()
+       and proj_alpha(d_prime, 0) == Cyc() and proj_alpha(chi_prime, 0) != Cyc(),
+       "chi0 and d0 have zero initial contact projection and identical nonzero pulse histories")
     q_chi0_before = inner(chi0_p, apply_NT_n(chi0_p, 0)) * Cyc.const(F(1, 2), 0)
     q_d0_before = inner(d0_p, apply_NT_n(d0_p, 0)) * Cyc.const(F(1, 4), 0)
     q_chi_after = inner(chi_prime, apply_NT_n(chi_prime, 0)) * Cyc.const(F(1, 2), 0)
