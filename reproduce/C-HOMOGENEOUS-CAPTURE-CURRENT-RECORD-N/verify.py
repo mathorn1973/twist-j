@@ -675,6 +675,7 @@ def audit_native_completion() -> int:
     ok(len(set(token)) == 26, "26 distinct token codes")
     ok(len(set(memory)) == 26, "26 distinct memory codes")
     ok(token[1] == (1, 1) + (0,) * 10, "original token label one retained")
+    ok(pulse[1] == (1, 1, 0, 0, 0), "original pulse label one retained")
     ok(memory[1] == (-1,) + (0,) * 12, "original receiver label one retained")
     ok(all(qcharge(v) == 4 for v in token + pulse), "all carrier charges equal four")
     ok(all(qcharge(v) == 2 for v in memory), "all memory charges equal two")
@@ -849,10 +850,10 @@ U_PHASE = Cyc.u(1)
 U_INV = Cyc.u(-1)
 
 M_NAT = [
-    [Cyc.const(F(1, 5), 0), Cyc.const(F(2, 5), 0), Cyc.const(F(2, 5), 0), Cyc.const(F(4, 5), 0)],
-    [Cyc.const(F(-2, 5), 0), Cyc.const(F(1, 5), 0), Cyc.const(F(-4, 5), 0), Cyc.const(F(2, 5), 0)],
-    [Cyc.const(F(-2, 5), 0), Cyc.const(F(-4, 5), 0), Cyc.const(F(1, 5), 0), Cyc.const(F(2, 5), 0)],
-    [Cyc.const(F(4, 5), 0), Cyc.const(F(-2, 5), 0), Cyc.const(F(-2, 5), 0), Cyc.const(F(1, 5), 0)],
+    [Cyc.const(F(1, 5), 0), Cyc.const(F(-2, 5), 0), Cyc.const(F(-2, 5), 0), Cyc.const(F(4, 5), 0)],
+    [Cyc.const(F(2, 5), 0), Cyc.const(F(1, 5), 0), Cyc.const(F(-4, 5), 0), Cyc.const(F(-2, 5), 0)],
+    [Cyc.const(F(2, 5), 0), Cyc.const(F(-4, 5), 0), Cyc.const(F(1, 5), 0), Cyc.const(F(-2, 5), 0)],
+    [Cyc.const(F(4, 5), 0), Cyc.const(F(2, 5), 0), Cyc.const(F(2, 5), 0), Cyc.const(F(1, 5), 0)],
 ]
 M_SRC = [
     [Cyc.const(F(1, 5), 0), Cyc.const(0, F(2, 5)), Cyc.const(0, F(2, 5)), Cyc.const(F(-4, 5), 0)],
@@ -939,9 +940,40 @@ def audit_current_interface() -> int:
         assert cond, msg
         checks += 1
 
-    ok(all(D2_DIAG[r].conj() * M_NAT[r][c] * D2_DIAG[c] == M_SRC[r][c]
-           for r in range(4) for c in range(4)),
-       "D2^* M_nat D2 == M_src")
+    def apply_I0_walk(v: dict) -> dict:
+        out = {}
+        for (R, r, d), amp in v.items():
+            gam_inv = U_INV if r == 0 else ONE
+            vec_add(out, (R, r, d), gam_inv * D2_DIAG[d - 1].conj() * amp)
+        return out
+
+    def step_F_nat(v: dict) -> dict:
+        out = {}
+        for (R, r, d_in), amp in v.items():
+            gam = U_PHASE if r == 0 else ONE
+            for d_out in range(1, 5):
+                m_val = M_NAT[d_out - 1][d_in - 1]
+                dR, dr = SHIFTS[d_out - 1]
+                vec_add(out, (R + dR, r + dr, d_out), m_val * gam * amp)
+        return out
+
+    Q_ON_SITE = [[F(1, 1), F(-2, 1)], [F(2, 1), F(1, 1)]]
+    ok(all(M_NAT[2 * i1 + i2][2 * j1 + j2] == Cyc.const(F(Q_ON_SITE[i1][j1] * Q_ON_SITE[i2][j2], 5), 0)
+           for i1 in range(2) for i2 in range(2) for j1 in range(2) for j2 in range(2))
+       and all(D2_DIAG[r].conj() * M_SRC[r][c] * D2_DIAG[c] == M_NAT[r][c]
+               for r in range(4) for c in range(4))
+       and all(M_NAT[r][c] * D2_DIAG[c].conj() == D2_DIAG[r].conj() * M_SRC[r][c]
+               for r in range(4) for c in range(4)),
+       "M_nat == D2^* M_src D2 == Q tensor Q and M_nat D2^* == D2^* M_src")
+    ok(all(step_F_nat(apply_I0_walk({(0, r, d): ONE})) == apply_I0_walk(step_W({(0, r, d): ONE}))
+           for r in (-2, -1, 0, 1, 2) for d in range(1, 5))
+       and (D2_DIAG[1].conj() * II == ONE and D2_DIAG[2].conj() * (-II) == -ONE
+            and D2_DIAG[0].conj() * ONE == ONE and D2_DIAG[3].conj() * (-ONE) == ONE),
+       "exact step intertwining (S M_nat Gamma)(Gamma^-1 D2^*) == (Gamma^-1 D2^*)(Gamma S M_src) and contact-port gauge images")
+    ok(M_NAT[0][1] == Cyc.const(F(-2, 5), 0)
+       and M_NAT[1][0] * D2_DIAG[0].conj() == D2_DIAG[1].conj() * M_SRC[1][0]
+       and (-M_NAT[0][1]) * D2_DIAG[1].conj() != D2_DIAG[0].conj() * M_SRC[0][1],
+       "negative control: reversed coin D2 M_src D2^* has +2/5 at (0,1) and fails M D2^* == D2^* M_src")
     ok(all(sum(M_NAT[k][r].conj() * M_NAT[k][c] for k in range(4)) == (ONE if r == c else Cyc())
            for r in range(4) for c in range(4)),
        "M_nat orthogonal")
@@ -1201,7 +1233,7 @@ def audit_open_channel_and_carrier() -> int:
     d0_p = step_W_dag(d_prime)
     ok(proj_alpha(chi0_p, 0) == Cyc() and proj_alpha(d0_p, 0) == Cyc()
        and proj_alpha(d_prime, 0) == Cyc() and proj_alpha(chi_prime, 0) != Cyc(),
-       "chi0 and d0 have zero initial contact projection and identical nonzero pulse histories")
+       "chi0 and d0 have zero initial contact projection; dark d0 yields identical nonzero pulse histories for psi_pm")
     q_chi0_before = inner(chi0_p, apply_NT_n(chi0_p, 0)) * Cyc.const(F(1, 2), 0)
     q_d0_before = inner(d0_p, apply_NT_n(d0_p, 0)) * Cyc.const(F(1, 4), 0)
     q_chi_after = inner(chi_prime, apply_NT_n(chi_prime, 0)) * Cyc.const(F(1, 2), 0)
