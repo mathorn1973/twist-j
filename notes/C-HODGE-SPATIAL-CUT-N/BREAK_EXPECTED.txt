@@ -1,0 +1,10 @@
+PASS 1/9 charge weights 2,2,4,2 and standing sectors
+PASS 2/9 coherent edge current and old-memory counterexamples
+PASS 3/9 all 676 label pairs and swap multiplicities 351,325
+PASS 4/9 additive object-plus-pulse current and common parity
+PASS 5/9 common-state constraint for four marked copies
+PASS 6/9 all 625 native object-SWAP inputs and charge-8 witness
+PASS 7/9 physical edge transfer, indefinite form and golden polar factors
+PASS 8/9 free period at zeta=i has trace 1/2 and determinant 1
+PASS 9/9 exact macrostep pullback and omitted-layer/sign counterexamples
+PASS 9 independent exact falsifier groups
