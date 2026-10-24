@@ -1,0 +1,30 @@
+{
+  "status": "DRAFT; source provenance, not a scientific freeze",
+  "lane": "P-ALG-CONTACT-REALIZATION-1",
+  "compiler_version": "CW-ALG-1",
+  "date": "2026-10-06",
+  "public_source_commit": "68080edc12faf029de48181f0a384f66e42dbc04",
+  "sources": [
+    {
+      "path": ".codex-evidence/TWIST-J_v99_row_column_contact_2026-10-05.md",
+      "bytes": 40899,
+      "sha256": "31d29a820abd691991c683f6a7b0348b1c678c1ac189f861d6d9efd06e8a139e"
+    },
+    {
+      "path": ".codex-evidence/rowcol-structured-20261006/ALGORITHMIC_NORMAL_FORM.md",
+      "bytes": 5887,
+      "sha256": "c02c958346c5f7d4c814526bc6aca658b3f6da67d3f86a74a8219ab8860a95be"
+    },
+    {
+      "path": ".codex-evidence/rowcol-structured-20261006/algebraic_pi.c",
+      "bytes": 14032,
+      "sha256": "39225e9b14aef26a7032df67472b1cb29f091648475463c2fb982c7a5119e20e"
+    },
+    {
+      "path": ".codex-evidence/bulk-block-exchange-20261006/Q_AND_BREAKER.md",
+      "bytes": 10052,
+      "sha256": "e63d95f0feee7201a54ff1fc57a3ea25beda51dbf0d53ae7c43966d4d5151042"
+    }
+  ],
+  "execution": "No verifier or scientific probe was executed while authoring these notes."
+}
