@@ -1,0 +1,62 @@
+{
+  "dropped_Gauss_admits_longitudinal_ramp": true,
+  "edge_second_moment": [
+    [
+      4,
+      0,
+      0
+    ],
+    [
+      0,
+      4,
+      0
+    ],
+    [
+      0,
+      0,
+      4
+    ]
+  ],
+  "eigenvalue_multiplicities": {
+    "0": 10,
+    "2": 8,
+    "4": 12,
+    "6": 8,
+    "8": 10
+  },
+  "exact_Bloch_phase_triples": 64,
+  "final_comparison_energies": [
+    "3/2",
+    "798907/131072"
+  ],
+  "free_and_forced_steps": [
+    16,
+    16
+  ],
+  "negative_triangle_omission_rank": 24,
+  "ranks_G_C": [
+    7,
+    38
+  ],
+  "rational_step_preserves_raw_integer_fields": false,
+  "status": "PASS; NON-CANONICAL finite audit, not a physical photon",
+  "unit_integer_step_eigenvalue": 8,
+  "unit_step_scalar_sequence": [
+    0,
+    1,
+    -6,
+    35,
+    -204,
+    1189,
+    -6930,
+    40391,
+    -235416,
+    1372105
+  ],
+  "vertices_edges_faces": [
+    8,
+    48,
+    64
+  ],
+  "wrong_orientation_breaks_CG": true
+}
