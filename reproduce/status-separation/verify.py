@@ -12,6 +12,7 @@ import hashlib
 import io
 import json
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 # Deterministic UTF-8/LF stdout on every supported platform.
@@ -43,6 +44,394 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+
+
+
+# Exact v105 release accounting and reversible public v104 reconstruction.
+# Structural custody only: no scientific verifier is executed or imported.
+V105_PRIOR_COMMIT = 'e6240e2689bb22aab5f02bad90b75d3692bb96d9'
+
+V105_ACCEPTED_SOURCE_COMMIT = '44a2d76e9888d42a5eec5082752e4439b9f0f354'
+
+V105_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '460db26185e18ef684ebd9db2e2dd4163a18830a5b362489dc41eeb2526e82af',
+                  'current_bytes': 560217,
+                  'prior_sha256': 'abfa07b8b01820969cad68ae3a630b9420edc1f2be3203ab6ca6b646746035f5',
+                  'prior_bytes': 559376,
+                  'restore': ((577, 578, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': 'e51c8475e3d6c23659ea7950f7c8230de862a9a27ed93ae4415e87be723c0523',
+                   'current_bytes': 74087,
+                   'prior_sha256': '125c4efc967b1e3485cc23308fe16047f934859190f65ee0ff7894ff39cbf383',
+                   'prior_bytes': 73952,
+                   'restore': ((641, 642, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': '934098c7200d523742ef8a11a17675154fb57b6a237e36fe5676f7905c650641',
+                      'current_bytes': 190485,
+                      'prior_sha256': 'cb78fdb98873fdbeb0e7fcaa3a2c29ca2a20579a5d45ff4a259091a13ab17022',
+                      'prior_bytes': 189820,
+                      'restore': ((1158, 1161, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': 'e7223862470764513b1f84da75c875137d7ac4adc0f17ecdae35649707aad184',
+                  'current_bytes': 115937,
+                  'prior_sha256': '02b31c2360d90bc6c88379bbfcaf0e0515703785b0eb4b2cce598e063a0dbe8f',
+                  'prior_bytes': 115694,
+                  'restore': ((577, 578, ''),)},
+ 'HISTORY.tsv': {'current_sha256': '32d2a6153a70586e365e6407246dbd684b9b36261feb9aef4ef9f6530729684b',
+                 'current_bytes': 514301,
+                 'prior_sha256': '0a07b4fe6f3bf2f86f3a04be7f77e8de8faac943356285f9f7d6b206763eab2e',
+                 'prior_bytes': 513660,
+                 'restore': ((1124, 1125, ''),)},
+ 'GATES.tsv': {'current_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'current_bytes': 13324,
+               'prior_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'prior_bytes': 13324,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'current_bytes': 1502,
+                           'prior_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'prior_bytes': 1502,
+                           'restore': ()},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'f46e16de790ca7658eb44133b9fefe0dba311b44d24dcee6e3f01184c801d355',
+                        'current_bytes': 1044,
+                        'prior_sha256': '29754cb5e761424cfc2da3cae48739a4930f650b8842096edc22bd12e81286c8',
+                        'prior_bytes': 1006,
+                        'restore': ((42, 43, ''),)},
+ 'CANON.md': {'current_sha256': '73894f331dac3226fe30c86f1ccd893bc2761b0220557e0bfb374d049aa2fa31',
+              'current_bytes': 1295029,
+              'prior_sha256': 'c8d0cfadb44cf882af9f8ac303ba558b232663451d634d99467ce6d2c4a6814d',
+              'prior_bytes': 1262204,
+              'restore': ((0, 1, '# TWIST-J Public Canon v104\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v104. Normative authority and '
+                           'activation\n'),
+                          (31,
+                           32,
+                           'only. Public Canon v104 also declares the discrete architecture used '
+                           'to read\n'),
+                          (44,
+                           45,
+                           'seed of the two algebraic projections. Public Canon v104 does not '
+                           'claim\n'),
+                          (27410, 28202, ''))},
+ 'CORE.md': {'current_sha256': '5318823839f7f42c61cc5245166493b3cd9b641b849e288a12ec300ee60d1e9e',
+             'current_bytes': 38193,
+             'prior_sha256': 'bce891d62b48aa95e2e124856e82bb16799ad930b422a8264542c84bfcb7fbf9',
+             'prior_bytes': 37109,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v104. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v104 also declares a discrete architecture. It does not\n'),
+                         (42, 51, ''),
+                         (433, 434, ''))},
+ 'FRONTIER.md': {'current_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'current_bytes': 27382,
+                 'prior_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'prior_bytes': 27382,
+                 'restore': ()},
+ 'CHANGELOG.md': {'current_sha256': '171fb023be7507fc07e5f503d96006d56196874a328cbf5b24aa8ec940349ff7',
+                  'current_bytes': 211143,
+                  'prior_sha256': '23e6eec483b1745fd28e5ba237d47e7859dfd7ed65d842a0ec8a11f6e027580f',
+                  'prior_bytes': 209766,
+                  'restore': ((1, 30, ''),
+                              (615,
+                               616,
+                               '<!-- BEGIN GENERATED CURRENT COUNTS -->\n'
+                               'Registry snapshot: 576 claims; 0 T-LOCK, 433 T, 59 D, 39 C, 2 H, '
+                               '24 O, 19 F; 26 live H/O.\n'
+                               'Reproduction witnesses: 36.\n'
+                               '<!-- END GENERATED CURRENT COUNTS -->\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '7dd73ffdcdf98568843fe55d1fdfe74de21eb740231f650d599074b9fc4f4b35',
+                       'current_bytes': 244,
+                       'prior_sha256': 'b04da5eeff19c95e557ccc7424dad83fe1c5b636fd94f9a53ca554b19b2f03bf',
+                       'prior_bytes': 244,
+                       'restore': ((1, 2, 'claims\t576\n'),
+                                   (3, 4, 'status_T\t433\n'),
+                                   (10, 11, 'reproductions\t36\n'),
+                                   (14, 15, 'evidence_two-architecture\t377\n'))}}
+
+V105_ADDITIONS = {'REGISTRY.tsv': {'rows': 1,
+                  'sha256': '61ec38c6da9adee8fab7cfa53e8155f5d6d7777c1992a2a1615d306c6dae5084'},
+ 'NORMATIVE.tsv': {'rows': 1,
+                   'sha256': '47414353a37893ffae0ed32981de48f43fd6d10816b97c22abc2fd33878045fe'},
+ 'DEPENDENCIES.tsv': {'rows': 3,
+                      'sha256': 'e6e0fbf435b1d0fd22f1cf4c9f9913d5e7c000537cf1c7127466af533a233732'},
+ 'EVIDENCE.tsv': {'rows': 1,
+                  'sha256': 'b1da73e9097c059bf89d1e8f5c2e047510e09d76d7df8ae5e54243c6697b8fdf'},
+ 'HISTORY.tsv': {'rows': 1,
+                 'sha256': 'bc338acfd6c3b69aea45a85e24658914f0e5a49d9a7a55257f9091eebb067961'},
+ 'CORE_SELECTION.tsv': {'rows': 1,
+                        'sha256': 'a5e6dfeddb5c4a74c3a47f6fb130014d90025f1989ae3d8fa4fb87697461ee3c'}}
+
+V105_CLAIM = 'HOMOGENEOUS-CAPTURE-CURRENT-RECORD'
+
+V105_PROOF_CONTRACT = {'begin': '### HOMOGENEOUS-CAPTURE-CURRENT-RECORD [T]\n',
+ 'end': '## 16. p = 5 and the wall\n',
+ 'claim_marker': '### HOMOGENEOUS-CAPTURE-CURRENT-RECORD [T]\n',
+ 'bytes': 32825,
+ 'sha256': '3ca91d436e687161d8c16751af419217f5c2074a5d2b48c34cb06581bf18bec8'}
+
+V105_REPRODUCTION = 'C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N'
+
+V105_REPRODUCTION_FILES = {'EXPECTED.txt': {'bytes': 708,
+                  'sha256': '46a5221d8fea9d0c8855c5d18d2823381053c7f1e64d538452bb3afa48d09441'},
+ 'README.md': {'bytes': 6646,
+               'sha256': '07291e9f06da294c85f6c69617e186c5f095882580865581eead22de07acd9c1'},
+ 'RUN.md': {'bytes': 9574,
+            'sha256': '5911750f27ff9f93b03ee25a5ad03c646e62a3eaaa22220298b9dfe38858f1d1'},
+ 'verify.py': {'bytes': 58164,
+               'sha256': 'd1f82078039f09e69010048d31a4f49cbfdbc6cfa9ac126d30beb8e2df2691b6'}}
+
+V105_BUNDLE_SHA256 = '23c51d03ab2b4cc932390b73ee248c4e817c2a81dd8f0af39cb09ec0fb3d454d'
+
+V105_REPRODUCTIONS = ('C-FIELD-J-CONTENT-TRANSPORT-N',
+ 'C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-REVIEW-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N',
+ 'C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N',
+ 'PHOTON-Z5-EXACT-HEATBATH-KERNEL',
+ 'alpha-exact-lemma',
+ 'alpha-value',
+ 'born-faces',
+ 'born-quartet',
+ 'census',
+ 'color-ladder',
+ 'cosmology-register',
+ 'coupling-metrology',
+ 'dirac-ladder',
+ 'force-born-dictionary',
+ 'foundations-places',
+ 'gravity-chain',
+ 'hyperplane-codec',
+ 'kernel',
+ 'kernel-connectivity',
+ 'mass-ladder',
+ 'maxwell',
+ 'native-quadratic-obstructions',
+ 'observer-boost',
+ 'pentit-p5-closure',
+ 'photon-electron',
+ 'qdd-route-a',
+ 'quadratic-memory-l5',
+ 'scalar-hermitian-norm',
+ 'status-separation',
+ 'u_raw_residue_port',
+ 'weinberg')
+
+V105_BOUNDARY_CLAUSES = ('A pre-existing \\(d_1\\) by itself is not a binding herald.',
+ 'The occupation intertwiner below is not an intertwiner from the original six-pentit checkpoint '
+ 'map \\(U\\)',
+ 'The model is also distinct from the funded receiver in COMMON-HISTORY-FUNDED-AREA-RECEIVER.',
+ 'The order is \\(U=U_0C\\), with the right factor first.',
+ 'one macrostep is two synchronized microticks.',
+ 'This is an isometry on the entire old-memory/reference state.',
+ 'Its old information moves coherently into the pulse label',
+ 'The event accepts all old-memory output labels.',
+ 'local current of spectral energy from the local charge current (H7).',
+ 'not supply a finite-resource preparation',
+ 'a finite-time effect with controlled false positives',
+ 'a quantitative finite-interval or future-uniform retention bound.',
+ 'The mathematical spectral weight is not a physical occurrence postulate;',
+ 'QDD-INSTRUMENT-APPARATUS.',
+ 'p(Q_{\\rm full})\\ge p(Q_{\\rm win})>2/10^{28}.')
+
+V105_CHECKS = (('V105-PRIOR-BYTES',
+  'thirteen complete v105 inputs and the validated 37-directory inventory reconstruct exact public '
+  'v104 before all 177 unchanged historical guards'),
+ ('V105-CONNECTED-THEOREM',
+  'one connected L1 asymptotic theorem binds exact scope and declaration additions; all 577 claims '
+  'retain the declared status partition'),
+ ('V105-DEPENDENCIES',
+  'two exact mathematical premises and one apparatus boundary retain every prior dependency '
+  'without making the open physical owner a theorem premise'),
+ ('V105-OWNER-BOUNDARY',
+  'all 576 prior claims and 26 live owners, gates and Frontier programs remain exact; 41 prior '
+  'CORE selections gain one pinned theorem selection'),
+ ('V105-PROOF-EVIDENCE',
+  'the complete connected Canon proof and unchanged accepted four-file reproduction bundle retain '
+  'the exact quantitative certificate and evidence identity'),
+ ('V105-PHYSICAL-BOUNDARY',
+  'the occupation law, joint event and reference-preserving record remain distinct from checkpoint '
+  'derivation, finite operations, spectral-energy current and physical occurrence'),
+ ('V105-REPRO-INVENTORY',
+  'exactly one pinned reproduction extends the inventory from 36 to 37; its validated historical '
+  'view retains all previous inventory predicates without scientific execution'))
+
+
+@lru_cache(maxsize=1)
+def v105_current_snapshot():
+    """Admit a fixed input snapshot only after all current contracts validate.
+
+    A missing or changed Canon input, unexpected reproduction directory, or
+    changed accepted reproduction source rejects the entire historical view.
+    RUNS receipts and interpreter caches are not scientific source bytes.
+    """
+    data = {}
+    try:
+        for name, contract in V105_INPUT_PATCH.items():
+            content = (ROOT / 'canon' / name).read_bytes()
+            if (len(content) != contract['current_bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                return None
+            data[name] = content
+        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        if len(inventory) != 37 or inventory != frozenset(V105_REPRODUCTIONS):
+            return None
+        if inventory != frozenset(V103_REPRODUCTIONS) | {V105_REPRODUCTION}:
+            return None
+        folder = REPRODUCE / V105_REPRODUCTION
+        files = sorted((path for path in folder.rglob('*') if path.is_file()
+                        and '__pycache__' not in path.parts and path.suffix != '.pyc'
+                        and 'RUNS' not in path.relative_to(folder).parts),
+                       key=lambda path: path.relative_to(folder).as_posix())
+        if {path.relative_to(folder).as_posix() for path in files} != set(V105_REPRODUCTION_FILES):
+            return None
+        manifest = []
+        for path in files:
+            contract = V105_REPRODUCTION_FILES[path.relative_to(folder).as_posix()]
+            content = path.read_bytes()
+            sha256 = hashlib.sha256(content).hexdigest()
+            if len(content) != contract['bytes'] or sha256 != contract['sha256']:
+                return None
+            manifest.append(sha256 + '  ' + path.relative_to(ROOT).as_posix() + '\n')
+        bundle_sha256 = hashlib.sha256(''.join(manifest).encode('utf-8')).hexdigest()
+        if bundle_sha256 != V105_BUNDLE_SHA256:
+            return None
+    except OSError:
+        return None
+    return {'canon': data, 'reproductions': inventory, 'bundle_sha256': bundle_sha256}
+
+
+@lru_cache(maxsize=13)
+def v105_previous_bytes(path):
+    """Reconstruct exact v104 only from the completely validated v105 view."""
+    if path.parent != ROOT / 'canon' or path.name not in V105_INPUT_PATCH:
+        return None
+    snapshot = v105_current_snapshot()
+    if snapshot is None:
+        return None
+    patch = V105_INPUT_PATCH[path.name]
+    lines = snapshot['canon'][path.name].decode('utf-8').splitlines(keepends=True)
+    for first, last, original in reversed(patch['restore']):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = ''.join(lines).encode('utf-8')
+    if (len(previous) != patch['prior_bytes']
+            or hashlib.sha256(previous).hexdigest() != patch['prior_sha256']):
+        return None
+    return previous
+
+
+def v105_previous_reproduction_dirs():
+    """Remove only the one admitted addition from the validated actual set."""
+    snapshot = v105_current_snapshot()
+    return (set(snapshot['reproductions']) - {V105_REPRODUCTION}
+            if snapshot is not None else set())
+
+
+def v105_current_checks():
+    """Audit v105 separately; all historical predicates retain their scope."""
+    snapshot = v105_current_snapshot()
+    if snapshot is None:
+        return [(tag, description, False) for tag, description in V105_CHECKS]
+    names = tuple(name for name in V105_INPUT_PATCH if name.endswith('.tsv'))
+    prior = {name: v87_table_bytes(v105_previous_bytes(ROOT / 'canon' / name))
+             for name in names}
+    current = {name: v87_table_bytes(snapshot['canon'][name]) for name in names}
+    old_index = {row['claim_id']: row for row in prior['REGISTRY.tsv']}
+    index = {row['claim_id']: row for row in current['REGISTRY.tsv']}
+    normative = {row['item_id']: row for row in current['NORMATIVE.tsv']}
+    evidence = {row['claim_id']: row for row in current['EVIDENCE.tsv']}
+    additions = {name: current[name][len(prior[name]):] for name in V105_ADDITIONS}
+    exact_additions = all(current[name][:len(prior[name])] == prior[name]
+        and len(additions[name]) == contract['rows']
+        and v104_rows_sha256(additions[name]) == contract['sha256']
+        for name, contract in V105_ADDITIONS.items())
+    claim = V105_CLAIM
+    row, norm, ev = index.get(claim, {}), normative.get(claim, {}), evidence.get(claim, {})
+    exact_theorem = (row.get('status') == 'T'
+        and norm.get('item_type') == 'THEOREM' and norm.get('claim_id') == claim
+        and norm.get('status') == 'T' and norm.get('layer') == 'L1'
+        and norm.get('gate_ids') == ''
+        and norm.get('statement_source') == 'canon/CANON.md::' + claim)
+    declarations = additions['HISTORY.tsv']
+    exact_declaration = len(declarations) == 1 and all(
+        item['claim_id'] == claim and item['event_type'] == 'DECLARE'
+        and item['previous_status'] == '-' and item['new_status'] == 'T'
+        and item['release'] == 'canon-v105-candidate'
+        and item['scope_sha256'] == hashlib.sha256(row.get('scope', '').encode()).hexdigest()
+        and item['evidence_sha256'] == ev.get('sha256')
+        and item['evidence_location'] == ev.get('location')
+        for item in declarations)
+    dependencies = additions['DEPENDENCIES.tsv']
+    exact_dependencies = (len(dependencies) == 3
+        and current['DEPENDENCIES.tsv'] == prior['DEPENDENCIES.tsv'] + dependencies
+        and {(item['depends_on'], item['relation']) for item in dependencies} == {
+            ('CONTACT-W-SPECTRAL-READING', 'REQUIRES'),
+            ('CONTACT-W-BOUND-PAIR-RESPONSE', 'REQUIRES'),
+            ('QDD-INSTRUMENT-APPARATUS', 'BOUNDED_BY')}
+        and all(item['item_id'] == claim and item['depends_on'] in normative
+                for item in dependencies)
+        and index.get('QDD-INSTRUMENT-APPARATUS', {}).get('status') == 'O')
+    old_live = {key: item for key, item in old_index.items() if item['status'] in {'H', 'O'}}
+    live = {key: item for key, item in index.items() if item['status'] in {'H', 'O'}}
+    unchanged_owners = (len(old_index) == 576
+        and all(index.get(key) == item for key, item in old_index.items())
+        and old_live == live and len(live) == 26
+        and all(current[name] == prior[name] for name in ('GATES.tsv', 'FRONTIER_PROGRAMS.tsv'))
+        and snapshot['canon']['FRONTIER.md'] == v105_previous_bytes(FRONTIER)
+        and len(prior['CORE_SELECTION.tsv']) == 41
+        and additions['CORE_SELECTION.tsv'] == [{'rank': '42', 'claim_id': claim}]
+        and current['CORE_SELECTION.tsv'] == prior['CORE_SELECTION.tsv'] + additions['CORE_SELECTION.tsv'])
+    canon = snapshot['canon']['CANON.md'].decode('utf-8')
+    contract = V105_PROOF_CONTRACT
+    first = canon.find(contract['begin'])
+    last = canon.find(contract['end'], first + len(contract['begin'])) if first >= 0 else -1
+    block = canon[first:last].encode('utf-8') if 0 <= first < last else b''
+    exact_proof = (canon.count(contract['begin']) == 1
+        and block.decode('utf-8').count(contract['claim_marker']) == 1
+        and len(block) == contract['bytes']
+        and hashlib.sha256(block).hexdigest() == contract['sha256'])
+    location = 'reproduce/' + V105_REPRODUCTION
+    exact_evidence = (row.get('evidence') == location
+        and ev.get('evidence_kind') == 'REPRODUCTION' and ev.get('location') == location
+        and ev.get('hash_mode') == 'bundle-manifest-sha256-v1'
+        and ev.get('architecture_requirement') == 'two-architecture'
+        and ev.get('sha256') == snapshot['bundle_sha256'] == V105_BUNDLE_SHA256)
+    normalized = ' '.join(block.decode('utf-8').split())
+    exact_boundaries = all(clause in normalized for clause in V105_BOUNDARY_CLAUSES)
+    counts = {status: sum(item['status'] == status for item in index.values())
+              for status in {item['status'] for item in index.values()}}
+    metrics = {item['metric']: item['value'] for item in current['STATUS_COUNTS.tsv']}
+    results = (
+        len(V105_INPUT_PATCH) == 13 and set(V105_INPUT_PATCH) == set(V104_INPUT_PATCH)
+        and all(v105_previous_bytes(ROOT / 'canon' / name) is not None for name in V105_INPUT_PATCH)
+        and all(contract['prior_bytes'] == V104_INPUT_PATCH[name]['current_bytes']
+                and contract['prior_sha256'] == V104_INPUT_PATCH[name]['current_sha256']
+                for name, contract in V105_INPUT_PATCH.items()),
+        len(index) == 577 and set(index) == set(old_index) | {claim}
+        and exact_additions and exact_theorem and exact_declaration
+        and counts == {'T': 434, 'D': 59, 'C': 39, 'H': 2, 'O': 24, 'F': 19}
+        and metrics == {'claims': '577', 'status_T-LOCK': '0', 'status_T': '434',
+            'status_D': '59', 'status_C': '39', 'status_H': '2', 'status_O': '24',
+            'status_F': '19', 'live_H_O': '26', 'reproductions': '37',
+            'evidence_none': '159', 'evidence_one-architecture': '9',
+            'evidence_recorded-audit': '31', 'evidence_two-architecture': '378'},
+        exact_additions and exact_dependencies,
+        unchanged_owners,
+        exact_proof and exact_evidence,
+        exact_proof and exact_boundaries and exact_dependencies and unchanged_owners,
+        len(snapshot['reproductions']) == 37
+        and snapshot['reproductions'] == set(V103_REPRODUCTIONS) | {V105_REPRODUCTION}
+        and v105_previous_reproduction_dirs() == set(V103_REPRODUCTIONS)
+        and len(V105_REPRODUCTION_FILES) == 4 and exact_evidence,
+    )
+    return [(tag, description, ok) for (tag, description), ok in zip(V105_CHECKS, results)]
 
 
 # Exact v104 release accounting and reversible public v103 reconstruction.
@@ -525,7 +914,9 @@ def v104_previous_bytes(path):
     patch = V104_INPUT_PATCH.get(path.name)
     if patch is None:
         return None
-    current = path.read_bytes()
+    current = v105_previous_bytes(path)
+    if current is None:
+        return None
     if (len(current) != patch['current_bytes']
             or hashlib.sha256(current).hexdigest() != patch['current_sha256']):
         return None
@@ -550,7 +941,7 @@ def v104_current_checks():
     names = tuple(name for name in V104_INPUT_PATCH if name.endswith('.tsv'))
     prior = {name: v87_table_bytes(v104_previous_bytes(ROOT / 'canon' / name))
              for name in names}
-    current = {name: v87_table_bytes((ROOT / 'canon' / name).read_bytes())
+    current = {name: v87_table_bytes(v105_previous_bytes(ROOT / 'canon' / name))
                for name in names}
     old_index = {row['claim_id']: row for row in prior['REGISTRY.tsv']}
     index = {row['claim_id']: row for row in current['REGISTRY.tsv']}
@@ -599,8 +990,8 @@ def v104_current_checks():
         and all(row['claim_id'] in V104_IDS and row['rank'] == str(31 + number)
                 for number, row in enumerate(additions['CORE_SELECTION.tsv']))
         and v104_rows_sha256(additions['CORE_SELECTION.tsv']) == V104_ADDITIONS['CORE_SELECTION.tsv']['sha256']
-        and FRONTIER.read_bytes() == v104_previous_bytes(FRONTIER))
-    canon = CANON.read_bytes().decode('utf-8')
+        and v105_previous_bytes(FRONTIER) == v104_previous_bytes(FRONTIER))
+    canon = (v105_previous_bytes(CANON) or b'').decode('utf-8')
     exact_proofs = set(V104_PROOF_CONTRACTS) == set(V104_IDS)
     for claim, contract in V104_PROOF_CONTRACTS.items():
         first = canon.find(contract['begin'])
@@ -679,7 +1070,7 @@ def v104_current_checks():
         exact_proofs and exact_evidence and exact_bundle,
         exact_source,
         len(V103_REPRODUCTIONS) == 36
-        and {path.name for path in REPRODUCE.iterdir() if path.is_dir()} == set(V103_REPRODUCTIONS),
+        and v105_previous_reproduction_dirs() == set(V103_REPRODUCTIONS),
     )
     return [(tag, description, ok) for (tag, description), ok in zip(V104_CHECKS, results)]
 
@@ -1477,7 +1868,7 @@ def v103_current_checks():
         unchanged_owners,
         scope_boundary,
         len(V103_REPRODUCTIONS) == 36
-        and {path.name for path in REPRODUCE.iterdir() if path.is_dir()} == set(V103_REPRODUCTIONS)
+        and v105_previous_reproduction_dirs() == set(V103_REPRODUCTIONS)
         and set(V103_REPRODUCTIONS) == set(V102_REPRODUCTIONS),
     )
     return [(tag, description, ok) for (tag, description), ok in zip(V103_CHECKS, results)]
@@ -2451,7 +2842,7 @@ def v102_current_checks():
         unchanged_owners,
         scope_boundary,
         len(V102_REPRODUCTIONS) == 36
-        and {path.name for path in REPRODUCE.iterdir() if path.is_dir()} == set(V102_REPRODUCTIONS)
+        and v105_previous_reproduction_dirs() == set(V102_REPRODUCTIONS)
         and set(V102_REPRODUCTIONS) == set(V100_REPRODUCTIONS) | {V101_REPRODUCTION},
     )
     return [(tag, description, ok) for (tag, description), ok in zip(V102_CHECKS, results)]
@@ -2891,7 +3282,7 @@ def v101_previous_bytes(path):
 
 def v101_previous_reproduction_dirs():
     """Expose the exact v100 inventory only after validating the v101 set."""
-    current = {path.name for path in REPRODUCE.iterdir() if path.is_dir()}
+    current = v105_previous_reproduction_dirs()
     expected = set(V100_REPRODUCTIONS) | {V101_REPRODUCTION}
     return current - {V101_REPRODUCTION} if current == expected else set()
 
@@ -2960,7 +3351,7 @@ def v101_current_checks():
         and v102_previous_bytes(ROOT / 'canon/FRONTIER.md') == v101_previous_bytes(ROOT / 'canon/FRONTIER.md'),
         exact_proofs and exact_additions,
         exact_audit and len(V100_REPRODUCTIONS) == 35
-        and len({path.name for path in REPRODUCE.iterdir() if path.is_dir()}) == 36
+        and len(v105_previous_reproduction_dirs()) == 36
         and v101_previous_reproduction_dirs() == set(V100_REPRODUCTIONS),
     )
     return [(tag, description, ok) for (tag, description), ok in zip(V101_CHECKS, results)]
@@ -21141,9 +21532,10 @@ def run():
     checks.extend(v102_current_checks())
     checks.extend(v103_current_checks())
     checks.extend(v104_current_checks())
+    checks.extend(v105_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v104")
+    print("historical guards: exact reconstructed v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v105")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0

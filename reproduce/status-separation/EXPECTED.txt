@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v104
+historical guards: exact reconstructed v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v105
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -179,5 +179,12 @@ PASS 174 V104-OWNER-BOUNDARY all 530 prior claims and 26 live owners, gates and 
 PASS 175 V104-PROOF-EVIDENCE complete pinned Canon claim blocks retain 45 inline proofs and one two-architecture public-probe rank premise with its exact bundle
 PASS 176 V104-SOURCE-CUSTODY 46 source mappings bind 65 exact source proof files without treating source exposure or declared-model existence as physical realization
 PASS 177 V104-REPRO-INVENTORY all 36 reproduction directories remain unchanged; this structural audit executes no scientific probe
+PASS 178 V105-PRIOR-BYTES thirteen complete v105 inputs and the validated 37-directory inventory reconstruct exact public v104 before all 177 unchanged historical guards
+PASS 179 V105-CONNECTED-THEOREM one connected L1 asymptotic theorem binds exact scope and declaration additions; all 577 claims retain the declared status partition
+PASS 180 V105-DEPENDENCIES two exact mathematical premises and one apparatus boundary retain every prior dependency without making the open physical owner a theorem premise
+PASS 181 V105-OWNER-BOUNDARY all 576 prior claims and 26 live owners, gates and Frontier programs remain exact; 41 prior CORE selections gain one pinned theorem selection
+PASS 182 V105-PROOF-EVIDENCE the complete connected Canon proof and unchanged accepted four-file reproduction bundle retain the exact quantitative certificate and evidence identity
+PASS 183 V105-PHYSICAL-BOUNDARY the occupation law, joint event and reference-preserving record remain distinct from checkpoint derivation, finite operations, spectral-energy current and physical occurrence
+PASS 184 V105-REPRO-INVENTORY exactly one pinned reproduction extends the inventory from 36 to 37; its validated historical view retains all previous inventory predicates without scientific execution
 
-RESULT 177/177 ALL PASS
+RESULT 184/184 ALL PASS

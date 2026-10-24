@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred seventy-seven checks cover the current
+and emits deterministic text. Its one hundred eighty-four checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 177/177 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 184/184 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -887,3 +887,50 @@ PASS lines and seven specified new descriptions before execution. It is not
 a captured run receipt. This is maintenance of the existing release audit;
 replay acceptance belongs to the distinct subsequently frozen successor
 candidate. No earlier frozen candidate is rewritten.
+
+
+## Public Canon v105 boundary
+
+Seven structural guards extend the release audit to v105 while preserving all
+177 earlier predicates, constants and PASS descriptions. The adapter first
+validates the byte count and SHA-256 of all thirteen complete current Canon
+inputs, the exact 37-directory reproduction inventory, and all four accepted
+source files of C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N. A mismatch rejects
+the historical view; it never falls back to raw current bytes or a fabricated
+old directory set. Exact inverse edits then reconstruct public v104 at
+`e6240e2689bb22aab5f02bad90b75d3692bb96d9`; those thirteen prior inputs are
+also byte-identical at accepted source commit
+`44a2d76e9888d42a5eec5082752e4439b9f0f354`. Every reconstructed file must
+match its complete v104 byte count and SHA-256 before entering the unchanged
+v104-to-v103 reconstruction chain.
+
+Only four historical Canon reads are routed through the new adapter: the
+v104 inverse-patch input and its current table, Frontier and Canon-proof
+reads. Five inventory reads in the v104, v103, v102 and v101 layers use the
+validated actual set with exactly the one new directory removed. The v101
+layer still checks its 36-directory contract before removing its own named
+addition for the older chain. No earlier count predicate is broadened.
+
+The new guards bind one connected L1 asymptotic theorem, its complete inline
+proof, exact scope and declaration, two mathematical premise edges and the
+separate apparatus boundary. The accepted four-file reproduction bundle is
+byte-pinned without executing or importing its scientific verifier. All 576
+prior claims, all 26 live H/O owners, gates, Frontier programs and Frontier
+text stay exact. The 41 prior CORE selections gain only this theorem at
+rank 42. Current totals are 577 claims, T434/D59/C39/H2/O24/F19 and 37
+reproductions.
+
+The declared occupation-space law is distinct from derivation from the
+original checkpoint U. The positive joint asymptotic event preserves
+arbitrary old memory and reference correlations; a pre-existing receiver
+label is not a binding herald. Charge current does not become a local
+spectral-energy current. Finite preparation, a selective finite detector,
+quantitative retention and physical occurrence remain outside the theorem,
+with QDD-INSTRUMENT-APPARATUS retaining its open scope.
+
+The 184-check EXPECTED transcript is authored before execution from all 177
+unchanged earlier PASS lines and seven specified new descriptions. It is not
+a run receipt, a fresh scientific campaign or an evidence-class promotion.
+This maintenance changes only the existing structural release audit. Actual
+execution and cross-architecture acceptance belong to the subsequently
+frozen complete successor candidate; no earlier frozen tree is rewritten.
