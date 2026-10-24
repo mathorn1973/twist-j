@@ -20,17 +20,23 @@ Corrected after review (R1–R3); changes itemized in `CORRECTIONS.md`.
 | Charge and energy | active native charge $10$ unchanged; success family spectrally inside $I_E$; no extra resources |
 | Admitted writers | only the receiver edge on $(z-1,z)$; leftward crossings un-write exactly; contacts at $s\ge z$ do not change the record |
 
-## 2. Exact identity (any one-carrier state)
+## 2. Exact identity (declared input class)
 
-For a calibrated state $\chi\otimes e_1\otimes\Phi$ and every $n$:
+For a calibrated input $\chi\otimes e_1\otimes\Phi$ (arbitrary spatial/coin
+$\chi$, carrier label index $1$, memory/reference factor initially independent
+of $\chi$; corrected input class, R1) and every $n$:
 
 $$
 \Pr(\text{wrong memory at }n) = (1-\langle d_1,\sigma_{\mathcal D}d_1\rangle)\,
 \|\mathbf 1_{c<z}U^n\chi\|^2 ,
 $$
 
-uniformly in the memory/reference input, with the per-step change equal to
-$-\tfrac14$ of the carrier current through the cut $\ell = z-1$.
+uniformly in the memory/reference input. With
+$q = \langle d_1,\sigma_{\mathcal D}d_1\rangle$, the carrier-left weight
+changes per step by $-\tfrac14\langle J^{\rm car}_{z-1}\rangle$ and the
+wrong-memory probability by $-\tfrac{1-q}4\langle J^{\rm car}_{z-1}\rangle$
+(corrected, R1: the factor $1-q$ was missing). For memory correlated with
+position the general formula of `PROOF.md` Remark 1.3 applies instead.
 
 ## 3. Retention input type
 

@@ -164,3 +164,45 @@ not established.
   neither nonzero endpoint values nor non-derivability.
 - Theorem 6 and its one-sided translates ($R_c\le0$, $x_c\ge0$) are unchanged:
   they fix the useful positioning relative to the receiver.
+
+---
+
+## R1. The wrong-memory change is the carrier-current change weighted by $1-q$
+
+**Finding.** Theorem 1 proves $p_n = (1-q)\Lambda_n^2$, with
+$q = \|\phi_1\|^2$, and the carrier-left balance
+$\Lambda_{n+1}^2-\Lambda_n^2 = -\frac14\langle J^{\rm car}\rangle$. Hence
+$p_{n+1}-p_n = -\frac{1-q}4\langle J^{\rm car}\rangle$. `INTERFACE.md` §2,
+`RESULT.md` §2(1), `README.md` item 1, `PROOF.md` Theorem 2 item 2 and the pull
+request description dropped the factor $1-q$ and called the unweighted current
+the change of the wrong-memory probability. That is false for $q>0$. For
+example, with old memory exactly $d_1$ and a pulse crossing the receiver bond,
+$p_n\equiv0$ while the current is nonzero. The original verifier (group 2,
+lines 455–458, assertion label "record increment") compared the carrier-left
+weight, not the wrong-memory weight, so it never tested the erroneous exported
+claim. Several summaries also stated the identity "for every one-carrier
+state". It holds for calibrated inputs $\chi\otimes e_1\otimes\Phi$ with an
+initially independent memory/reference factor.
+
+**Corrections (`PROOF.md`, `INTERFACE.md`, `README.md`; `RESULT.md` in the
+run-record commit).**
+
+- Equation (2) is kept and renamed the carrier-left balance. A new item 6 adds
+  the weighted wrong-memory balance (2') and states that the two coincide only
+  for $q = 0$.
+- The input class is stated explicitly before Theorem 1. A new Remark 1.3
+  gives the exact formula for label-1 inputs whose memory is correlated with
+  position, $\sum_{k\ne1}\sum_a\|\mathbf 1_<U^n\chi^{(k,a)}\|^2$, of which the
+  product formula is a special case.
+- Theorem 2 item 2, `INTERFACE.md` §2 and `README.md` item 1 now distinguish
+  the two balances. The audit note of Theorem 1 records what the original
+  group 2 actually compared.
+- New correction audit
+  `reproduce/C-HOMOGENEOUS-RECORD-RETENTION-BALANCE-N/` under
+  `CORRECTION_PROTOCOL.md`. It checks (2) and (2') separately on the
+  respective weights for $q = 0$, $q = 1$ and an entangled $q = 5/9$, with the
+  mixed state of the original audit and with a free crossing pulse. It checks
+  that the unweighted form holds only for $q = 0$, checks Remark 1.3 and the
+  failure of the product formula on a correlated input, and checks the R2
+  commutator counterexample. The original verifier and its stdout are
+  imported and hash-checked, not modified.

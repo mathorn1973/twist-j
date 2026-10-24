@@ -3,7 +3,8 @@
 **PUBLIC, NON-CANONICAL. L1 analytical package: how long the receiver of the
 v105 homogeneous capture-current-record law holds a written record.**
 
-License: Apache-2.0.
+License: Apache-2.0. Corrected after review (R1–R4); see
+[CORRECTIONS.md](CORRECTIONS.md).
 Authority basis: `mathorn1973/twist-j` main
 `892a0b11089d34e241e1eb76d2c03247022d18e6` (Public Canon v105, tag
 `canon-v105`).
@@ -21,12 +22,15 @@ a durable memory.
 ## Answers
 
 1. **The record is exactly where the carrier is** (Theorem 1). For every
-   one-carrier state and every time, the memory is $d_1$ exactly on the
-   component whose carrier is right of the receiver, and holds its old value on
-   the rest. The wrong-memory probability equals
-   $(1-\|\phi_1\|^2)\,\|\mathbf 1_{c<z}U^n\chi\|^2$, uniformly over coded
-   memory and reference inputs; its per-step change is a quarter of the carrier
-   current through the receiver cut. The receiver adds no decay of its own.
+   calibrated input $\chi\otimes e_1\otimes\Phi$ (spatial/coin $\chi$, label
+   index $1$, memory/reference initially independent) and every time, the
+   memory is $d_1$ exactly on the component whose carrier is right of the
+   receiver, and holds its old value on the rest. The wrong-memory probability
+   equals $(1-q)\,\|\mathbf 1_{c<z}U^n\chi\|^2$ with $q = \|\phi_1\|^2$,
+   uniformly over coded memory and reference inputs. Per step the carrier-left
+   weight changes by $-\frac14$ of the carrier current through the receiver cut,
+   and the wrong-memory probability by $(1-q)$ times that (corrected, R1). The
+   receiver adds no decay of its own.
 2. **Leftward crossings un-write exactly** (Theorem 2); contacts beyond the
    receiver do not.
 3. **No uniform modulus over the success sector** (Theorem 3): translated
@@ -54,12 +58,15 @@ a durable memory.
 
 | File | Role |
 |---|---|
-| [PROTOCOL.md](PROTOCOL.md) | preregistration frozen before formal execution |
+| [PROTOCOL.md](PROTOCOL.md) | protocol pinned before the first audit execution (unchanged; read under the R4 disposition: design-exposed, not a registered probe) |
 | [PROOF.md](PROOF.md) | theorems and proofs |
 | [INTERFACE.md](INTERFACE.md) | typed success-state and retention contract |
 | [RESULT.md](RESULT.md) | outcome of the pinned run (added after execution) |
 | [SOURCES.tsv](SOURCES.tsv) | public inputs with commit, blob and SHA-256 |
-| [`../../reproduce/C-HOMOGENEOUS-RECORD-RETENTION-N/`](../../reproduce/C-HOMOGENEOUS-RECORD-RETENTION-N/) | exact standard-library verifier and run record |
+| [CORRECTIONS.md](CORRECTIONS.md) | review items R1–R4: findings, protocol disposition and itemized forward corrections |
+| [CORRECTION_PROTOCOL.md](CORRECTION_PROTOCOL.md) | contract of the R1–R2 correction audit, pinned before its execution |
+| [`../../reproduce/C-HOMOGENEOUS-RECORD-RETENTION-N/`](../../reproduce/C-HOMOGENEOUS-RECORD-RETENTION-N/) | exact standard-library verifier and run record (unchanged since the first run) |
+| [`../../reproduce/C-HOMOGENEOUS-RECORD-RETENTION-BALANCE-N/`](../../reproduce/C-HOMOGENEOUS-RECORD-RETENTION-BALANCE-N/) | R1–R2 correction audit |
 
 ## Scope
 

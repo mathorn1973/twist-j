@@ -57,6 +57,13 @@ count macrosteps between synchronized phase-zero slices.
 
 ## 1. Exact record-location identity
 
+**Input class (stated explicitly, R1).** Theorem 1 concerns calibrated inputs
+$\chi\otimes e_1\otimes\Phi$: an arbitrary spatial/coin vector $\chi$, the
+fixed carrier label index $1$, and a memory/reference factor $\Phi$ that is
+initially independent of $\chi$. This is not every joint label–memory–spatial
+state of the one-carrier space; see Remark 1.3 for label-1 inputs whose memory
+is correlated with position.
+
 **Theorem 1.** For every $\chi \in \mathcal H_{\rm sp}$, every $\Phi$ and
 every $n \in \mathbb Z$,
 
@@ -87,13 +94,24 @@ $\Lambda_n(\chi) := \|\mathbf 1_<\chi_n\|$:
    $\mathbf 1_\ge\chi_n$ or $\mathbf 1_<\chi_n$ and does not depend on $k$.
    Correlations of the reference with position therefore occur only through
    this left/right split, which is kept exactly; nothing is traced out.
-5. One-step balance: with $J^{\rm car}_\ell := C^* D_c^*\, j_{E,\ell}\, D_c C$
+5. Carrier-left balance: with $J^{\rm car}_\ell := C^* D_c^*\, j_{E,\ell}\, D_c C$
    the carrier (pulse-bond) part of the v105 cut current at $\ell = z-1$,
    $$
    \Lambda_{n+1}(\chi)^2 - \Lambda_n(\chi)^2
    = -\tfrac14\,\langle\Psi_n, J^{\rm car}_{z-1}\Psi_n\rangle
    \qquad(\|\Phi\| = 1). \tag{2}
    $$
+6. Wrong-memory balance (added, R1): with $q := \|\phi_1\|^2 =
+   \langle d_1,\sigma_{\mathcal D}d_1\rangle$ and $p_n := \|(I-R_1)\Psi_n\|^2
+   = (1-q)\Lambda_n(\chi)^2$,
+   $$
+   p_{n+1}-p_n = -\frac{1-q}{4}\,\langle\Psi_n, J^{\rm car}_{z-1}\Psi_n\rangle .
+   \tag{2'}
+   $$
+   The change of the wrong-memory probability is therefore the carrier-current
+   term weighted by $1-q$, not the unweighted carrier current. For $q = 1$
+   (old memory already $d_1$) one has $p_n\equiv0$ while the carrier current
+   can be nonzero; only for $q = 0$ do (2) and (2') coincide.
 
 *Proof.* $\mathcal T$ is a unitary involution, so
 $U_{\rm rec}^n = \mathcal T(U^n\otimes I)\mathcal T^*$ and
@@ -123,7 +141,8 @@ change of $4\|v_2(\ell+1)\|^2$ under
 $\left(\begin{smallmatrix}c&-s\mathsf S\\ s\mathsf S&c\end{smallmatrix}\right)$
 is the quadratic form of
 $j_{E,\ell} = 4\left(\begin{smallmatrix}s^2&sc\,\mathsf S\\ sc\,\mathsf S&-s^2\end{smallmatrix}\right)$
-evaluated after $D_cC$ (as in the proof of v105 Theorem 4.1). $\square$
+evaluated after $D_cC$ (as in the proof of v105 Theorem 4.1). Item 6 follows
+from item 1 and (2). $\square$
 
 *Audit.* [Group 1] the label algebra on all 26 labels and items 1, 3, 4 on an
 entangled two-site example. [Group 2] the complete local physical law (contact,
@@ -131,9 +150,14 @@ both coins, receiver edge with $\mathsf J$ at $(z-1,z)$, streaming, $\Gamma$)
 evolved exactly in $\mathbb Z[i][\zeta_5]$ agrees with
 $\mathcal T(U^n\otimes I)\mathcal T^*$ at every step on a state with tokens and
 pulses on both sides of the receiver, writing and un-writing contacts and an
-entangled reference; item 1 and the balance (2) hold exactly at every step;
-unitarity holds; two negative controls (free edge, edge shifted by one bond)
-fail as they must.
+entangled reference; item 1 and the carrier-left balance (2) hold exactly at
+every step; unitarity holds; two negative controls (free edge, edge shifted by
+one bond) fail as they must. (Correction, R1: that group compares the
+carrier-left weight, although its assertion label reads "record increment".)
+The correction audit `reproduce/C-HOMOGENEOUS-RECORD-RETENTION-BALANCE-N/`
+checks (2) and (2') separately on the wrong-memory weight itself for
+$q = 0$, $q = 1$ and an entangled intermediate $q$, and checks that the
+unweighted form fails whenever $q>0$ and the current is nonzero.
 
 **Remark 1.1.** Theorem 1 replaces the v105 triangle bound
 $\Pr(\text{wrong}\mid\Psi_+)\le\min\{\eta_n^2,(\delta_n+\widetilde\eta_n)^2\}$
@@ -163,6 +187,14 @@ Only $p(Q_{\rm full}) > 2/10^{28}$ is certified (v105). Nothing is
 conditioned away: on the full input the transferred record exists only on the
 carrier-right fraction.
 
+**Remark 1.3 (correlated label-1 inputs, R1).** For a calibrated input
+$\Theta = \sum_{k,a}\chi^{(k,a)}\otimes e_1\otimes d_k\otimes r_a$ with
+orthonormal reference vectors $r_a$, linearity of (1) and orthogonality give
+$\|(I-R_1)U_{\rm rec}^n\mathcal T\Theta\|^2 = \sum_{k\ne1}\sum_a
+\|\mathbf 1_<U^n\chi^{(k,a)}\|^2$. The product formula of item 1 is the special
+case $\chi^{(k,a)} = \chi\,\langle r_a,\phi_k\rangle$; for correlated inputs it
+generally fails (the correction audit contains an exact instance).
+
 ---
 
 ## 2. Writers, eraser and admitted overwrites
@@ -176,8 +208,10 @@ carrier-right fraction.
    crossing it to the left un-writes exactly: by (1) the memory content on
    $\operatorname{Ran}\mathbf 1_<$ is the original memory, with no third value.
    A record held at time $n$ is lost at a later time exactly to the extent
-   that carrier weight has returned to $c<z$, and (2) states that this loss is
-   one quarter of the carrier flux through the receiver cut.
+   that carrier weight has returned to $c<z$. By (2) the carrier-left weight
+   changes by $-\frac14$ of the carrier current through the receiver cut, and
+   by (2') the wrong-memory probability changes by $(1-q)$ times that
+   (corrected, R1).
 3. A contact at $s\ge z$ converts pulse and token at the same site and leaves
    the record unchanged ($[\mathcal T, C\otimes I] = 0$, both sides on
    $\operatorname{Ran}\mathbf 1_\ge$).
