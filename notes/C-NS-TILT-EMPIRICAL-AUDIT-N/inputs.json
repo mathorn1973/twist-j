@@ -1,0 +1,84 @@
+{
+  "candidate_id": "C-NS-TILT-EMPIRICAL-AUDIT-N",
+  "as_of": "2026-10-06",
+  "layer": "NOT_APPLICABLE",
+  "prediction": {
+    "claim_id": "NS-TILT",
+    "status": "H",
+    "formula": "n_star = 1 - 5 alpha",
+    "coefficient": 5,
+    "inverse_alpha_lower": "137.0359991895",
+    "inverse_alpha_upper": "137.0359991905",
+    "source_commit": "7d7f588c42422c2cf37b04d76ebc13ca55eb96dc",
+    "source_path": "reproduce/alpha-value/EXPECTED.txt",
+    "source_blob": "f8a4ece073ff2ad0396078e362447cea0e7c1fb2",
+    "source_scope": "ALPHA-FORM D; ALPHA-VALUE-DIGITS C. Both endpoints round to inverse alpha 137.035999190 at nine decimal places. This conservative enclosure is not a physical error bar."
+  },
+  "summary_rule": "The quoted symmetric 68 percent halfwidth is used as a Gaussian diagnostic denominator, not assumed to be an exact Gaussian posterior standard deviation. Means and halfwidths are separately given half-last-digit nearest-rounding envelopes. No pooling, tail probability, likelihood refit or NS-TILT status change.",
+  "measurements": [
+    {
+      "id": "PLANCK18",
+      "mean": "0.9649",
+      "sigma": "0.0042",
+      "pivot_Mpc_inverse": "0.05",
+      "datasets": "Planck PR3 TT,TE,EE + lowE + lensing, baseline Plik",
+      "model": "base flat six-parameter LambdaCDM; power-law primordial scalar spectrum; tensors and scalar running not varied",
+      "uncertainty": "reported 68 percent interval",
+      "source": "Planck Collaboration, Planck 2018 results. VI. Cosmological parameters",
+      "version": "arXiv:1807.06209v4, revised 2021-08-09",
+      "url": "https://arxiv.org/abs/1807.06209v4",
+      "locator": "Section 3.4 equation (21), printed page 18; pivot Section 3.3, printed page 17",
+      "role": "historical contextual row, not an independent sample from the later combinations"
+    },
+    {
+      "id": "P_ACT_DR6",
+      "mean": "0.9709",
+      "sigma": "0.0038",
+      "pivot_Mpc_inverse": "0.05",
+      "datasets": "ACT DR6 plus Planck PR3 TT ell<1000 and TE/EE ell<600, with Planck Sroll2 low-E; P-ACT, no added lensing reconstruction or BAO",
+      "model": "base flat six-parameter LambdaCDM; power-law primordial scalar spectrum; published foreground and calibration treatment",
+      "uncertainty": "reported symmetric marginalized uncertainty, used as 68 percent halfwidth diagnostic",
+      "source": "T. Louis et al., The Atacama Cosmology Telescope: DR6 Power Spectra, Likelihoods and LambdaCDM Parameters",
+      "version": "arXiv:2503.14452v2, revised 2025-06-24",
+      "url": "https://arxiv.org/html/2503.14452v2",
+      "locator": "Section 8.3 text containing n_s=0.9709 +/- 0.0038; Sections 6.3 and 7.1-7.2; Appendix G.1 Table 10 for pivot",
+      "role": "contextual DR6 combination, not ACT alone and not P-ACT-LB or P-ACT-LB2"
+    },
+    {
+      "id": "SPA_BK",
+      "mean": "0.9682",
+      "sigma": "0.0032",
+      "pivot_Mpc_inverse": "0.05",
+      "datasets": "SPA primary CMB plus lensing: SPT-3G D1, ACT DR6, Planck PR3/PR4; BK18 B-modes; Planck-based tau_reio prior",
+      "model": "LambdaCDM+r, with single-field slow-roll tensor consistency condition; Planck TT ell<1000, TE/EE ell<600; no large-scale E likelihood, tau_reio Gaussian prior mean 0.051, standard deviation 0.006",
+      "uncertainty": "reported mean and 68 percent confidence interval, not the parenthesized best-fit value",
+      "source": "L. Balkenhol et al., Inflation at the End of 2025: Constraints on r and n_s Using the Latest CMB and BAO Data",
+      "version": "arXiv:2512.10613v2, revised 2026-06-29; OJA 9 (2026), DOI 10.33232/001c.164435",
+      "url": "https://arxiv.org/abs/2512.10613v2",
+      "locator": "Section 2, printed page 2 for model/pivot/uncertainty; equation (1), printed page 2 for n_s",
+      "role": "primary CMB comparison; shares its CMB information with the next row"
+    },
+    {
+      "id": "SPA_BK_DESI_DR2",
+      "mean": "0.9728",
+      "sigma": "0.0029",
+      "pivot_Mpc_inverse": "0.05",
+      "datasets": "Same SPA+BK CMB combination and prior, plus DESI DR2 BAO",
+      "model": "Same LambdaCDM+r and tensor consistency convention as SPA_BK",
+      "uncertainty": "reported mean and 68 percent confidence interval",
+      "source": "L. Balkenhol et al., Inflation at the End of 2025: Constraints on r and n_s Using the Latest CMB and BAO Data",
+      "version": "arXiv:2512.10613v2, revised 2026-06-29; OJA 9 (2026), DOI 10.33232/001c.164435",
+      "url": "https://arxiv.org/abs/2512.10613v2",
+      "locator": "Section 2 for model/pivot; equation (2) and following discussion, printed page 4",
+      "role": "primary CMB+BAO comparison, not an independent repetition of SPA_BK"
+    }
+  ],
+  "external_status": {
+    "name": "CMB-S4",
+    "url": "https://cmb-s4.org/",
+    "accessed": "2026-10-06",
+    "event_date": "2025-07-09",
+    "verified_fact": "The official project page reports that DOE and NSF ended support and the project is proceeding with an orderly shutdown. The separately organized Science Collaboration continues. This is not a scientific falsification."
+  },
+  "source_custody": "Original factual transcriptions with exact version, section and equation locators. No third-party paper, figure, chain or raw dataset is redistributed. ArXiv abstract/parsed PDF text and ACT HTML text were checked; web PDF screenshot requests failed internally. Numerical inputs come from text equations, not unread charts or table cells. The input-file hash pins the transcription, not a raw experimental dataset."
+}
