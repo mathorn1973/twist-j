@@ -6,6 +6,10 @@ License: Apache-2.0.
 Prospective pin: `24cc067983142017d3fd9a111acf80d6ab29db54`.
 Run record: `reproduce/C-HOMOGENEOUS-RECORD-RETENTION-N/RUN.md`.
 
+Corrected after review (R1–R4). Section 1, the first verdict, is unchanged.
+Corrections in §§2–4 are marked, itemized in `CORRECTIONS.md`, and the
+correction audit is reported in §6.
+
 ## 1. Outcome
 
 The pinned verifier ran once with exit code 0, empty standard error and 187
@@ -44,12 +48,17 @@ dominates.
 
 1. **Record location** (Theorem 1). The memory is exactly $d_1$ on the
    carrier-right component and holds its old value on the rest, so the
-   wrong-memory probability equals $(1-\|\phi_1\|^2)\|\mathbf 1_{c<z}U^n\chi\|^2$
-   for every one-carrier state and every time, uniformly over coded memory and
-   reference inputs; each step changes it by $-\frac14$ of the carrier current
-   through the receiver cut. Audited on the complete local law for four steps
-   with writing and un-writing contacts, tokens and pulses on both sides and an
-   entangled reference, with unitarity and two failing negative controls.
+   wrong-memory probability equals $(1-q)\|\mathbf 1_{c<z}U^n\chi\|^2$,
+   $q = \|\phi_1\|^2$, for every calibrated input $\chi\otimes e_1\otimes\Phi$
+   (label index 1, memory/reference initially independent) and every time,
+   uniformly over coded memory and reference inputs. Per step the
+   carrier-left weight changes by $-\frac14$ of the carrier current through the
+   receiver cut, and the wrong-memory probability by $(1-q)$ times that
+   (corrected, R1: the factor $1-q$ and the input class were missing). Audited
+   on the complete local law for four steps with writing and un-writing
+   contacts, tokens and pulses on both sides and an entangled reference, with
+   unitarity and two failing negative controls. The weighted balance and the
+   input class are audited separately in §6.
 2. **Eraser and writers** (Theorem 2). Only the receiver edge touches the
    memory; leftward carrier crossings un-write exactly; contacts beyond the
    receiver leave the record unchanged.
@@ -62,7 +71,8 @@ dominates.
    $n = 3$.
 5. **Eternal parked records** (Proposition 5). A dark token right of the
    receiver holds $d_1$ exactly for all times, with no write event and outside
-   the success sector.
+   the success sector. This is an existence example, not a classification
+   (corrected wording, R2).
 
 ## 3. Negative and unachieved results (preserved)
 
@@ -71,9 +81,11 @@ dominates.
 - Uniform retention over the success sector: **impossible**.
 - Retention of the actual normalized v105 selected component
   $Q_{\rm ch,full}\mathcal S\Psi_{\rm loc}/\sqrt{p(Q_{\rm full})}$: **not
-  achieved**. Its time delay and position moments are not certified and its
-  sharp spectral edges block the integration by parts; the minimal missing
-  premise is in `PROOF.md` §7.
+  achieved**. No free-tail bound relative to the fixed receiver and the stated
+  time origin, and no summable interaction bound, is certified for it. Endpoint
+  vanishing and regularity at the sharp masks are also not certified. This is
+  not a proof that the bound cannot be derived. The minimal missing premise is
+  in `PROOF.md` §7 (corrected, R3).
 - Before $T$ no bound is asserted: the certified modulus exceeds the tolerance
   for $T\le2\cdot10^5$ and the record may still be in transit. This is a
   property of the conservative bound, not a measured excursion.
@@ -83,8 +95,11 @@ dominates.
 
 ## 4. Status and scope
 
-Status: NON-CANONICAL analytical result with an exact single-architecture run;
-the two-architecture byte gate is supplied by the pull-request workflow. No
+Status (corrected, R4): a **design-exposed NON-CANONICAL analytical
+construction with exact reproduction**. It is not a registered formal public
+probe and not a blind confirmation; see the disposition in `CORRECTIONS.md`
+R4. The evidence is the exact local run and the same-program byte-identical
+replay on x86_64 and aarch64 in CI run 40117289016 (Python 3.12.15). No
 Canon, registry, frontier or status file changes. L1 only; no preparation,
 detector, occurrence, many-carrier or spectral-energy-flow claim; no lock,
 archive or reset added to the law. A candidate later fold could at most record
@@ -103,3 +118,30 @@ Theorem 6 as a bound for the declared family, after independent review.
 4. Resources: unchanged law and charge, no lock; one-sided rational bounds,
    imported $M_0$, $N_{\min}$ and $W(P) = e^{iPQ}W(0)$.
 5. Old-information accounting: Theorem 1 items 3–4 and Corollary 6.1.
+
+## 6. Correction audit after review (added)
+
+The R1–R2 correction audit
+`reproduce/C-HOMOGENEOUS-RECORD-RETENTION-BALANCE-N/verify.py` (SHA-256
+`b6730c48e9fc3bb7a4c3f08094263a80de5ff209aaef83db68749d112df36fd7`) was pinned
+with its contract `CORRECTION_PROTOCOL.md` at
+`3c32bcbb412a46938ff455a2998c785667390e59`, pushed and read back, and then ran
+once from a clean checkout. It exited 0 with empty standard error and passed
+112 checks. Its stdout has SHA-256
+`e11c1c3738605723ab6d620bca10acbc117f1e5687205aaec73eaa67d5488c66` (696 bytes).
+Run record: `reproduce/C-HOMOGENEOUS-RECORD-RETENTION-BALANCE-N/RUN.md`.
+
+- The original verifier and its stdout are byte-identical to the first run.
+- For $q = 0$, $q = 1$ and an entangled $q = 5/9$, each with the mixed state
+  and with a free crossing pulse, at every one of four steps:
+  $p_n = (1-q)\Lambda_n^2$, the carrier-left balance (2) and the weighted
+  wrong-memory balance (2') hold exactly, and $p_n\equiv0$ for $q = 1$. The
+  unweighted form holds at every nonzero-current step for $q = 0$ and fails at
+  every such step for $q = 1$ and $q = 5/9$. This confirms the R1 finding.
+- A correlated label-1 input obeys Remark 1.3 exactly at all five times, and the
+  product formula fails at all five.
+- The free pulse step does not commute with $\mathbf 1_{x<z}$, as stated in
+  the R2 correction.
+
+The Theorem 6 bound, its parameters, its tolerance and the first verdict were
+not re-evaluated and are unchanged.

@@ -1,1 +1,6 @@
-PENDING EXECUTION AFTER THE CORRECTION PIN
+PASS GROUP 0 CUSTODY: 4 checks; original verify.py and EXPECTED.txt match the 24cc067 pin
+PASS GROUP 1 WRONG_MEMORY_BALANCE: 100 checks; steps=4; nonzero-current steps q=0/mixed:4 q=0/free crossing:4 q=1/mixed:4 q=1/free crossing:4 q=5/9/mixed:4 q=5/9/free crossing:4; unweighted form holds only for q=0
+PASS GROUP 2 INPUT_CLASS: 6 checks; correlated label-1 input follows Remark 1.3; product formula fails at 5 of 5 times
+PASS GROUP 3 COMMUTATOR_CONTROL: 2 checks; [V, 1_(x<z)] != 0 witnessed at z-1 -> z
+SCOPE: R1-R2 correction audit of exact identities only; Theorem 6 bound, original verifier and original stdout unchanged
+AUDIT PASS C-HOMOGENEOUS-RECORD-RETENTION-BALANCE-N total_checks=112

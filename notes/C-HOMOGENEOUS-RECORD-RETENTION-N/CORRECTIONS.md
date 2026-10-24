@@ -206,3 +206,19 @@ run-record commit).**
   failure of the product formula on a correlated input, and checks the R2
   commutator counterexample. The original verifier and its stdout are
   imported and hash-checked, not modified.
+
+---
+
+## 5. Correction audit run and `RESULT.md`
+
+- The correction audit ran once from a clean checkout of pin `3c32bcb`. It
+  exited 0 with empty standard error and passed 112 checks; stdout SHA-256 is
+  `e11c1c3738605723ab6d620bca10acbc117f1e5687205aaec73eaa67d5488c66`. See
+  `reproduce/C-HOMOGENEOUS-RECORD-RETENTION-BALANCE-N/RUN.md`. No failure
+  condition fired.
+- `RESULT.md` keeps §1, the first verdict, unchanged. In §2 item 1 it adds the
+  input class and the weighted balance (R1), and in §2 item 5 the existence
+  wording (R2). §3 restates the missing premise relative to the fixed receiver
+  without the jump claim (R3). §4 adopts the R4 classification. A new §6
+  reports the correction audit.
+- The pull request description is reconciled with R1–R4.
