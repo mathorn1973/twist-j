@@ -89,3 +89,48 @@ creates no exemption.
    floating-point evaluation and this run, would have to be declared in that
    preregistration. Canon promotion would require a separate sealed fold. This
    correction requests neither.
+
+---
+
+## R2. False commutator, contradictory location sentence, label typing
+
+**Findings.** (a) `PROOF.md` Theorem 4, proof of item 3, said that
+$U_0 = W\otimes\widetilde V$ commutes with $I\otimes\mathbf 1_{x<z}$. That is
+false: the pulse hops across the cut. For example, a bank-1 pulse at $x = z-1$
+acquires a bank-2 component at $x = z$ after one free step. (b) Theorem 1
+item 4 ended with "The object, the helpers and nothing else carry it". That
+sentence contradicted the preceding placement of the old information in the
+carrier label or the memory. (c) `INTERFACE.md` §4 attached a second label
+$e_k$ to $U^n\Omega_+\varphi$ although $\varphi$ already contains $p_1$, and
+`PROOF.md` Corollary 1.2 and Corollary 6.1 had the same double-label typing.
+(d) The dark-token example could be read as a classification of eternal
+records. (e) The witness wording "held exactly for three steps" did not state
+the elapsed times.
+
+**Corrections (`PROOF.md`, `INTERFACE.md`, `README.md`).**
+
+- Theorem 4 item 3 now uses only the commutation of $U_0$ with the velocity
+  spectral projection $I\otimes\Pi_{v>0}$, together with the commutation of the
+  partial inner products $\langle e_i|\otimes I$ with $I\otimes\Pi_{v>0}$ and
+  $I\otimes\mathbf 1_{x<z}$. It says explicitly that $U_0$ does not commute
+  with $I\otimes\mathbf 1_{x<z}$. The conclusion $\delta_n>0$ is unchanged.
+- Theorem 1 item 4 is replaced by the exact conditional location read off
+  equation (1). On $\mathbf 1_\ge\chi_n$ the old state is
+  $\sum_ke_k\otimes\phi_k$, in the carrier label. On $\mathbf 1_<\chi_n$ it is
+  $\sum_kd_k\otimes\phi_k$, in the memory. The spatial factor is independent of
+  $k$, and reference–position correlation arises only through the kept
+  left/right split.
+- A label-stripping convention is added to `PROOF.md` §0:
+  $\varphi = \varphi_{\rm sp}\otimes p_1$, $\Psi_{\rm loc} =
+  \psi_{\rm loc}\otimes t_1$, and $U^n\Omega_+\varphi = \eta_n\otimes e_1$ with
+  $\eta_n\in\mathcal H_{\rm sp}$. Corollary 1.2 now uses $\psi_{\rm loc}$, and
+  Corollary 6.1 and `INTERFACE.md` §4 write the ideal record as
+  $\sum_k\eta_n\otimes e_k\otimes d_1\otimes\phi_k$.
+- Proposition 5 is stated as an existence example, not a classification. The
+  permanence of a captured record remains open.
+- The finite witness is described as zero wrong-memory weight at $n = 0,1,2$
+  and nonzero weight at $n = 3$.
+
+The R1/R2 correction audit
+(`reproduce/C-HOMOGENEOUS-RECORD-RETENTION-BALANCE-N/`) also checks the
+counterexample to the removed commutator exactly.

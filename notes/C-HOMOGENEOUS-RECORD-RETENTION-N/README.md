@@ -33,11 +33,13 @@ a durable memory.
    success states can delay the write arbitrarily.
 4. **No exact permanent retention for the free surrogate** (Theorem 4): a
    nonzero right-moving pulse is never entirely beyond the receiver, at any
-   time. An exact witness shows a record held exactly for three steps and then
-   partly lost.
-5. **Eternal records exist only outside the success sector** (Proposition 5):
+   time. An exact witness has zero wrong-memory weight at $n = 0,1,2$ and a
+   nonzero weight at $n = 3$ (corrected wording, R2).
+5. **An eternal record exists outside the success sector** (Proposition 5):
    a parked dark token right of the receiver holds $d_1$ for all past and future
-   times, with no write event and no capture herald.
+   times, with no write event and no capture herald. This is an existence
+   example, not a classification; permanence of a captured record stays open
+   (corrected wording, R2).
 6. **Future-uniform bound for a declared ideal success family** (Theorem 6):
    for smooth product states of a bound pair and a right-moving pulse inside the
    v105 event $Q_{\rm full}$, the wrong-memory amplitude is at most

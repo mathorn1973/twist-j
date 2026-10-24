@@ -5,6 +5,8 @@ composition with a later preparation or joint-detector result.**
 
 License: Apache-2.0.
 
+Corrected after review (R1–R3); changes itemized in `CORRECTIONS.md`.
+
 ## 1. Fields
 
 | Field | Value |
@@ -54,9 +56,13 @@ $$
 \|U_{\rm rec}^m\Psi-\Psi^{\rm ideal}_{n_0+m}\|\le\sqrt2\,\varepsilon(T),
 $$
 
-where $\Psi^{\rm ideal}_n = \sum_kU^n\Omega_+\varphi\otimes e_k\otimes d_1
-\otimes\phi_k$ and $\varepsilon(T)$ is the exact certified modulus of
-`RESULT.md` (frozen check at $T = 10^6$, tolerance $1/100$).
+where $\varphi = \varphi_{\rm sp}\otimes p_1$ carries its label, $\eta_n\in
+\mathcal H_{\rm sp}$ is defined by $U^n\Omega_+\varphi = \eta_n\otimes e_1$
+(i.e. $\eta_n = U^n\Omega_+\varphi_{\rm sp}$), the ideal record is
+$\Psi^{\rm ideal}_n = \sum_k\eta_n\otimes e_k\otimes d_1\otimes\phi_k$
+(corrected, R2: the label is attached once), and $\varepsilon(T)$ is the exact
+certified modulus of `RESULT.md` (frozen check at $T = 10^6$, tolerance
+$1/100$).
 
 ## 5. Composition rule for a detector or preparation result
 

@@ -13,6 +13,9 @@ audits of the finite and rational statements below are in
 `reproduce/C-HOMOGENEOUS-RECORD-RETENTION-N/verify.py`; the group in which a
 statement is audited is named in brackets.
 
+Corrected after review in separate, itemized commits (R1–R3); the changes and
+the reviewed version's SHA-256 are listed in `CORRECTIONS.md`.
+
 ---
 
 ## 0. Setting and notation
@@ -37,6 +40,15 @@ count macrosteps between synchronized phase-zero slices.
   written $\chi \otimes e_1$, where $e_k$ denotes $t_k$ on tokens and $p_k$ on
   pulses, and $U^n(\chi \otimes e_1) = \chi_n \otimes e_1$ with
   $\chi_n := U^n\chi$.
+- **Label-stripping convention (R2).** Several vectors below are defined with
+  their carrier label already attached: $\varphi = \varphi_{\rm sp}\otimes
+  p_1$ in §6, and the v105 $\Psi_{\rm loc} = \psi_{\rm loc}\otimes t_1$.
+  Spatial projections ($\mathbf 1_<$, $\mathbf 1_\ge$), the norms
+  $\Lambda_n$, $\delta_n$ and the operators $U$, $U_0$, $\Omega_\pm$ are
+  applied to the spatial/coin factor; norms do not change. Whenever a label
+  $e_k$ is attached again, it is attached to the spatial factor only, e.g.
+  $U^n\Omega_+\varphi = \eta_n\otimes e_1$ with $\eta_n :=
+  U^n\Omega_+\varphi_{\rm sp}\in\mathcal H_{\rm sp}$.
 - A memory/reference input is $\Phi = \sum_{k=0}^{25} d_k \otimes \phi_k \in
   \mathcal D \otimes \mathcal H_{\rm ref}$, $\|\Phi\| = 1$; mixed inputs are
   treated by purification into the reference.
@@ -66,11 +78,15 @@ $\Lambda_n(\chi) := \|\mathbf 1_<\chi_n\|$:
 3. Full-record deviation:
    $\|\Psi_n - \sum_k \chi_n\otimes e_k\otimes d_1\otimes\phi_k\|^2
    = 2(1-\|\phi_1\|^2)\Lambda_n(\chi)^2$.
-4. Old-information location: on $\operatorname{Ran}\mathbf 1_\ge$ the complete
-   old memory/reference state $\sum_k e_k\otimes\phi_k$ is carried by the
-   carrier label; on $\operatorname{Ran}\mathbf 1_<$ it is still in the
-   memory. The object, the helpers and nothing else carry it, and nothing is
-   traced out.
+4. Old-information location (corrected, R2): by (1), on the component
+   $\mathbf 1_\ge\chi_n$ the old memory/reference state appears as
+   $\sum_ke_k\otimes\phi_k$, i.e. in the carrier label, with the memory in
+   $d_1$; on the component $\mathbf 1_<\chi_n$ it appears as
+   $\sum_kd_k\otimes\phi_k$, i.e. still in the memory, with the carrier label
+   $e_1$. The spatial/coin vector multiplying these label states is
+   $\mathbf 1_\ge\chi_n$ or $\mathbf 1_<\chi_n$ and does not depend on $k$.
+   Correlations of the reference with position therefore occur only through
+   this left/right split, which is kept exactly; nothing is traced out.
 5. One-step balance: with $J^{\rm car}_\ell := C^* D_c^*\, j_{E,\ell}\, D_c C$
    the carrier (pulse-bond) part of the v105 cut current at $\ell = z-1$,
    $$
@@ -129,15 +145,16 @@ $\delta_n = \|\mathbf 1_{x<z}U_0^n\psi_{{\rm out},+}\|$ and
 $\widetilde\eta_n = \|(U^n\Omega_+ - U_0^n)\psi_{{\rm out},+}\|$.
 
 **Corollary 1.2 (unpostselected v105 input).** For the v105 preparation
-$\Psi_{\rm phys} = \Omega_{{\rm rec},-}(\Psi_{\rm loc}\otimes\Phi)$ (token at
-$y = 0 < z$, label $t_1$), $\mathcal T_-^*$ acts as the identity on the input,
-so $\Psi_{\rm phys} = \mathcal T(\Omega_-\Psi_{\rm loc}\otimes e_1\otimes\Phi)$
+$\Psi_{\rm phys} = \Omega_{{\rm rec},-}(\Psi_{\rm loc}\otimes\Phi)$ with
+$\Psi_{\rm loc} = \psi_{\rm loc}\otimes t_1$ (token at $y = 0 < z$),
+$\mathcal T_-^*$ acts as the identity on the input, so
+$\Psi_{\rm phys} = \mathcal T(\Omega_-\psi_{\rm loc}\otimes e_1\otimes\Phi)$
 and, by Theorem 1,
 
 $$
 \Pr(\text{wrong memory at }n)
  = (1-\|\phi_1\|^2)\bigl(1 - p_R(n)\bigr),\qquad
- p_R(n) := \|\mathbf 1_\ge U^n\Omega_-\Psi_{\rm loc}\|^2 .
+ p_R(n) := \|\mathbf 1_\ge U^n\Omega_-\psi_{\rm loc}\|^2 .
 $$
 
 $p_R(n)$ counts every carrier right of the receiver, including right-moving
@@ -272,11 +289,15 @@ $\|\mathbf 1_{x\ge z}V^m\pi_-\|\to0$ for every $\pi_-\in\operatorname{Ran}
 \Pi_{v<0}$, and likewise $\|\mathbf 1_{x<z}V^m\pi_+\|\to0$ for every
 right-moving $\pi_+$. With $\pi = \pi_-+\pi_+$ this gives the limit. $\square$
 
-*Proof of 3.* On the pulse arrangement $U_0 = W\otimes\widetilde V$ commutes
-with $I\otimes\Pi_{v>0}$ and $I\otimes\mathbf 1_{x<z}$. If
-$\mathbf 1_{x<z}U_0^n\psi = 0$, expand $U_0^n\psi = \sum_i e_i\otimes\pi_i$ in
-an orthonormal object basis; every $\pi_i$ is right-moving and supported in
-$x\ge z$, hence zero by item 1, so $\psi = 0$. $\square$
+*Proof of 3 (corrected, R2).* On the pulse arrangement $U_0 =
+W\otimes\widetilde V$ commutes with the velocity spectral projection
+$I\otimes\Pi_{v>0}$, so $U_0^n\psi$ is right-moving. ($U_0$ does not commute
+with $I\otimes\mathbf 1_{x<z}$: the pulse hops across the cut; this is not
+used.) If $\mathbf 1_{x<z}U_0^n\psi = 0$, expand $U_0^n\psi = \sum_i
+e_i\otimes\pi_i$ in an orthonormal object basis. The partial inner products
+$\langle e_i|\otimes I$ commute with $I\otimes\Pi_{v>0}$ and
+$I\otimes\mathbf 1_{x<z}$, so every $\pi_i$ is right-moving and supported in
+$x\ge z$, hence zero by item 1; so $\psi = 0$. $\square$
 
 ---
 
@@ -297,10 +318,11 @@ contact overlap for $m = 0,\dots,8$, and the exact physical evolution with
 memory $d_1$ for $m = 0,\dots,5$.]
 
 Exact permanent, indeed eternal, retention therefore occurs on the declared law
-without any lock, but only on a configuration whose record is held at all past
-and future times: there is no write event, no capture, no bound-pair or
+without any lock. The example is a configuration whose record is held at all
+past and future times: there is no write event, no capture, no bound-pair or
 outgoing-pulse herald, and the state lies outside $\operatorname{Ran}Q_{\rm
-full}$. "$R_1$ holds for all future times" neither requires a lock nor
+full}$. Proposition 5 is an existence statement; it does not classify eternal
+records (corrected wording, R2). "$R_1$ holds for all future times" neither requires a lock nor
 certifies that a capture happened. Whether the invariant subspace
 $\bigcap_{m\ge0}U^{-m}\operatorname{Ran}\mathbf 1_\ge$ meets
 $\Omega_+\operatorname{Ran}Q_{\rm ch,full}$ (exact permanent retention of a
@@ -318,7 +340,7 @@ Let $b(t) = (1-t^2)^N\mathbf 1_{|t|\le1}$, $\chi_0 = \delta_{r=0}A$
 bank. The declared family $\mathcal F$ consists of the product outgoing states
 
 $$
-\varphi = \chi\otimes\pi\otimes p_1,\qquad
+\varphi = \chi\otimes\pi\otimes p_1 =: \varphi_{\rm sp}\otimes p_1,\qquad
 \hat\chi(P) = A_g\theta_g\,b(P/p_1)\,\Pi_b(P)\chi_0,\qquad
 \hat\pi(k) = A_h\theta_h\,b\bigl((k-k_0)/w\bigr)P_+(k)e_2,
 $$
@@ -496,10 +518,13 @@ $\|(I-R_1)\Psi_{\rm phys}(n)\| = \sqrt{1-\|\phi_1\|^2}\Lambda_n\le
 \bar\delta(n)+\bar\eta(n)\le\varepsilon(T)$ for $n\ge T$, since both bounds
 decrease in $n$. $\square$
 
-**Corollary 6.1.** Wrong-memory probability $\le\varepsilon(T)^2$; full-record
-deviation $\le\sqrt2\,\varepsilon(T)$, so the old memory/reference state is
-carried by the outgoing carrier label within $\sqrt2\,\varepsilon(T)$ for all
-$n\ge T$, uniformly over $\Phi$.
+**Corollary 6.1.** Wrong-memory probability $\le\varepsilon(T)^2$. With
+$\eta_n := U^n\Omega_+\varphi_{\rm sp}$ (label-stripping convention, R2), the
+full-record deviation obeys
+$\|\Psi_{\rm phys}(n)-\sum_k\eta_n\otimes e_k\otimes d_1\otimes\phi_k\|
+\le\sqrt2\,\varepsilon(T)$, so the old memory/reference state is carried by
+the carrier label within $\sqrt2\,\varepsilon(T)$ for all $n\ge T$,
+uniformly over $\Phi$.
 
 **Corollary 6.2 (translates).** For the object moved by $R_c\le0$ and the
 pulse by $x_c\ge0$, $a_s\mapsto a_{s-R_c}$ and $\pi_m(x)\mapsto\pi_m(x-x_c)$;
