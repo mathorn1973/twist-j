@@ -1,0 +1,3 @@
+Trace-pairing Gram in the public W5 difference basis: [[1, 2, 0], [2, 1, 2], [0, 2, 1]]
+tr(Psi(x)Psi(y)) = 3 g5(x,y): all 9 basis pairs PASS
+This equals candidate h_plus under the fixed normalization; no physical map follows.
