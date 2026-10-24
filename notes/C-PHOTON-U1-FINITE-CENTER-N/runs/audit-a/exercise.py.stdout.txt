@@ -1,0 +1,775 @@
+{
+  "candidate": "C-PHOTON-U1-FINITE-CENTER-N",
+  "phase_decision_weight": 0,
+  "runs": [
+    {
+      "L": 2,
+      "initial_links_sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b",
+      "seed": 230701,
+      "start": "cold",
+      "sweeps": [
+        {
+          "counters": {
+            "edge_changes": 30,
+            "edge_updates": 64,
+            "random_bits": 2048,
+            "sweeps": 1
+          },
+          "flux_sha256": "2506af5cd830c1e2396a3cfab03768dc1f1d86142d64025f88c22f2fab17f32e",
+          "links_sha256": "5d27bc598da833ec05d9fd9637e344c5a0511ee9624a2481240808c84dc4b782",
+          "principal_plane_diagnostics": {
+            "0,1": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,3": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2,3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stack_01": [
+            [
+              1,
+              1
+            ],
+            [
+              -4,
+              1
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "sweep": 1,
+          "uniform_all_orientations": [
+            [
+              15,
+              64
+            ],
+            [
+              -7,
+              24
+            ],
+            [
+              11,
+              24
+            ]
+          ]
+        },
+        {
+          "counters": {
+            "edge_changes": 59,
+            "edge_updates": 128,
+            "random_bits": 4096,
+            "sweeps": 2
+          },
+          "flux_sha256": "f9433b93dc767a066bfca00305047ed2c9009e9b9f3e0580fe6fd162284c18e8",
+          "links_sha256": "fa6d10d4db9b5ab2393d1c84f197d5eb5da41e0280299f193dbc8a1ac9767ded",
+          "principal_plane_diagnostics": {
+            "0,1": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,3": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2,3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stack_01": [
+            [
+              3,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              -2,
+              1
+            ]
+          ],
+          "sweep": 2,
+          "uniform_all_orientations": [
+            [
+              -17,
+              64
+            ],
+            [
+              13,
+              48
+            ],
+            [
+              3,
+              8
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "L": 2,
+      "initial_links_sha256": "2bf0d5415777c1258ab90d4acb0e639b2c07c9d39517b7c748df56267a5f7921",
+      "seed": 230702,
+      "start": "hot",
+      "sweeps": [
+        {
+          "counters": {
+            "edge_changes": 42,
+            "edge_updates": 64,
+            "random_bits": 2048,
+            "sweeps": 1
+          },
+          "flux_sha256": "5654812dbe087ec8f1b5668e0fd89e6e97eb046c8f7ae46da393a39fc846ea3f",
+          "links_sha256": "427137076dbc4a19dc02e5422aa98857d5ef218f78c04005194f0b4dff5b6e70",
+          "principal_plane_diagnostics": {
+            "0,1": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,2": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "0,3": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2,3": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stack_01": [
+            [
+              3,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              -2,
+              1
+            ]
+          ],
+          "sweep": 1,
+          "uniform_all_orientations": [
+            [
+              -1,
+              6
+            ],
+            [
+              -5,
+              12
+            ],
+            [
+              13,
+              16
+            ]
+          ]
+        },
+        {
+          "counters": {
+            "edge_changes": 70,
+            "edge_updates": 128,
+            "random_bits": 4096,
+            "sweeps": 2
+          },
+          "flux_sha256": "de3d8eb7492040f174a51b5f5544ae32b156661e0b52422027cffbdc6f771168",
+          "links_sha256": "cdb7a52bced28bdc60fee644c8ab6123fafbc5b288e290c79dbbc0421fa6c033",
+          "principal_plane_diagnostics": {
+            "0,1": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,2": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,3": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              -1,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "2,3": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "stack_01": [
+            [
+              3,
+              2
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "sweep": 2,
+          "uniform_all_orientations": [
+            [
+              -1139,
+              192
+            ],
+            [
+              77,
+              48
+            ],
+            [
+              31,
+              12
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "L": 3,
+      "initial_links_sha256": "7119f314d3837dac54bf984118de657f6f1e6dfd2a2b2a20510454f762dddf11",
+      "seed": 230703,
+      "start": "cold",
+      "sweeps": [
+        {
+          "counters": {
+            "edge_changes": 125,
+            "edge_updates": 324,
+            "random_bits": 10368,
+            "sweeps": 1
+          },
+          "flux_sha256": "112158e7f977b874bf746df3147ad84273b20be79d0cee7e2d728fb968798aa0",
+          "links_sha256": "3bd032786bb07ae804c16d710934a306a2ef163eb11a8e5ab0b2353b0ee70c41",
+          "principal_plane_diagnostics": {
+            "0,1": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,2": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,3": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2,3": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ]
+          },
+          "stack_01": [
+            [
+              83,
+              2
+            ],
+            [
+              36,
+              1
+            ],
+            [
+              -64,
+              1
+            ]
+          ],
+          "sweep": 1,
+          "uniform_all_orientations": [
+            [
+              -593,
+              324
+            ],
+            [
+              304,
+              243
+            ],
+            [
+              41,
+              81
+            ]
+          ]
+        },
+        {
+          "counters": {
+            "edge_changes": 283,
+            "edge_updates": 648,
+            "random_bits": 20736,
+            "sweeps": 2
+          },
+          "flux_sha256": "2ef1284ebcecf5bfe6a63def4eeb69cf7dd6db9c9a89d3230c75738f82e09b8c",
+          "links_sha256": "35a7e46cb933f33ecc11686506fae96de587b278341f253f4bfe7993f45e2ef3",
+          "principal_plane_diagnostics": {
+            "0,1": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,2": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,3": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "2,3": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stack_01": [
+            [
+              88,
+              1
+            ],
+            [
+              110,
+              1
+            ],
+            [
+              -152,
+              1
+            ]
+          ],
+          "sweep": 2,
+          "uniform_all_orientations": [
+            [
+              -1847,
+              972
+            ],
+            [
+              302,
+              243
+            ],
+            [
+              158,
+              243
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "L": 3,
+      "initial_links_sha256": "1ff4e60fcc96594bcfa3f9b58bfc61fb5fee30b434b2b43650e123e3fc849cc1",
+      "seed": 230704,
+      "start": "hot",
+      "sweeps": [
+        {
+          "counters": {
+            "edge_changes": 205,
+            "edge_updates": 324,
+            "random_bits": 10368,
+            "sweeps": 1
+          },
+          "flux_sha256": "8153fb67e231cddbec26d4f61ffb4f30fc48434330de549ac954d3b82f60e584",
+          "links_sha256": "73e752fc8bdc81fd5d1df43a8079a06be3c9abed42a12816a349e46a1c0e5b70",
+          "principal_plane_diagnostics": {
+            "0,1": [
+              0,
+              0,
+              -1,
+              1,
+              -1,
+              0,
+              -1,
+              0,
+              1
+            ],
+            "0,2": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "0,3": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "1,2": [
+              0,
+              -1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0,
+              1
+            ],
+            "2,3": [
+              0,
+              -1,
+              1,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stack_01": [
+            [
+              47,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              -10,
+              1
+            ]
+          ],
+          "sweep": 1,
+          "uniform_all_orientations": [
+            [
+              113,
+              486
+            ],
+            [
+              31,
+              81
+            ],
+            [
+              -13,
+              81
+            ]
+          ]
+        },
+        {
+          "counters": {
+            "edge_changes": 385,
+            "edge_updates": 648,
+            "random_bits": 20736,
+            "sweeps": 2
+          },
+          "flux_sha256": "1fbaf4e542e7e133f4542cb339e05b054c55dd1bf1614c3213280fd4aef0e19f",
+          "links_sha256": "f3098b57b7663bbec348c88cce1f6ae262fce7c6093f0ca8d96d501a81ee072d",
+          "principal_plane_diagnostics": {
+            "0,1": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "0,2": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "0,3": [
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              -1,
+              -1,
+              0,
+              0
+            ],
+            "2,3": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "stack_01": [
+            [
+              49,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              -12,
+              1
+            ]
+          ],
+          "sweep": 2,
+          "uniform_all_orientations": [
+            [
+              -5,
+              108
+            ],
+            [
+              373,
+              243
+            ],
+            [
+              -341,
+              243
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "PASS_OPERATIONS_ONLY"
+}

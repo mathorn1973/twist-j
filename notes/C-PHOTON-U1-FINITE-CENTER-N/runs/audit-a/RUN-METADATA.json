@@ -1,0 +1,81 @@
+{
+  "environment": {
+    "LC_ALL": "C",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONHASHSEED": "0",
+    "TZ": "UTC"
+  },
+  "machine": "x86_64",
+  "python": "3.12.14",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "verify.py"
+      ],
+      "elapsed_seconds": 2.325,
+      "exit_code": 0,
+      "program": "verify.py",
+      "started_utc": "2026-10-22T23:13:03Z",
+      "status": "PASS",
+      "stderr": {
+        "bytes": 0,
+        "path": "verify.py.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 6465,
+        "path": "verify.py.stdout.txt",
+        "sha256": "37ad0dac91f3778775b9d86f13e8e0a6011f2a94524903a3adfe6b4505525303"
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "break.py"
+      ],
+      "elapsed_seconds": 0.516,
+      "exit_code": 0,
+      "program": "break.py",
+      "started_utc": "2026-10-22T23:13:05Z",
+      "status": "PASS",
+      "stderr": {
+        "bytes": 0,
+        "path": "break.py.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 952,
+        "path": "break.py.stdout.txt",
+        "sha256": "a40f3af4434b4e35557dae7b92ebc3e3782c5a150879dc573617efda8ff9bfff"
+      }
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "exercise.py"
+      ],
+      "elapsed_seconds": 2.472,
+      "exit_code": 0,
+      "program": "exercise.py",
+      "started_utc": "2026-10-22T23:13:05Z",
+      "status": "PASS",
+      "stderr": {
+        "bytes": 0,
+        "path": "exercise.py.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 15228,
+        "path": "exercise.py.stdout.txt",
+        "sha256": "fba1c6f0a94fd97d0366522b3855072e48095a80b48cb0050bb8664bb43aaaac"
+      }
+    }
+  ],
+  "source_pin": "9a74d03fb8f2c8086eff0f326446352f0f628082",
+  "system": "Linux",
+  "timeout_seconds_per_program": 180
+}
