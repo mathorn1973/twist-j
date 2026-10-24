@@ -1,1 +1,13 @@
-PENDING FORMAL EXECUTION AFTER THE PROSPECTIVE PIN
+PASS GROUP 1 LABEL_ALGEBRA: 5 checks; 26 labels; 676 swap pairs
+PASS GROUP 2 PHYSICAL_CONJUGACY: 21 checks; steps=4; physical keys=18140; nonzero bond-flux steps=4
+PASS GROUP 3 RECROSSING_AND_NO_PARKING: 14 checks; w0=(3-sqrt5)/2 simple; left weight 0,0,0,1024/15625
+PASS GROUP 4 SYMMETRY_AND_DARK_RECORD: 127 checks; Omega even; dark token record held exactly for m=0..5
+PASS GROUP 5 SUCCESS_SECTOR: 11 checks; v_min>=8.33210e-1; v_max<=8.33435e-1; v_b<=2.916e-2; energy spread<=8.481e-4; q_P<=8.732e-1
+PASS GROUP 6 RETENTION_CERTIFICATE: 9 checks; N=5; L^N terms=19; C_cook<=1.454e+17; kappa_c>=4.020e-1
+MODULUS T=200000: sup_(n>=T) ||(I-R1)psi_n|| <= 2.090e-1
+MODULUS T=500000: sup_(n>=T) ||(I-R1)psi_n|| <= 8.457e-3
+MODULUS T=1000000: sup_(n>=T) ||(I-R1)psi_n|| <= 7.475e-4
+MODULUS T=10000000: sup_(n>=T) ||(I-R1)psi_n|| <= 2.364e-7
+RETENTION TARGET T=1000000 eps=1/100: delta<=5.418e-10 eta<=7.475e-4 eps_cert<=7.475e-4 ACHIEVED
+SCOPE: declared ideal product success family in Ran Q_full only; actual v105 normalized selected component NOT SHOWN in family; exact permanent retention NOT CLAIMED
+VERIFY PASS C-HOMOGENEOUS-RECORD-RETENTION-N total_checks=187
