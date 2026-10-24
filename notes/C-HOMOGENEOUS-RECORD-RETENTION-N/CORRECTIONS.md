@@ -134,3 +134,33 @@ the elapsed times.
 The R1/R2 correction audit
 (`reproduce/C-HOMOGENEOUS-RECORD-RETENTION-BALANCE-N/`) also checks the
 counterexample to the removed commutator exactly.
+
+---
+
+## R3. The missing premise must locate the pulse relative to the receiver
+
+**Finding.** `PROOF.md` §7 named a relative-separation moment
+$\|(1+|X_{\rm pulse}-X_{\rm obj}|)^s\hat\varphi\|$, together with summable
+contact decay, as the minimal missing premise for the actual v105 component.
+Both quantities are invariant under joint object–carrier translations. By
+Theorem 3, joint left translations make the carrier-left norm arbitrarily close
+to one at any fixed time, with the receiver fixed at $z = 100$. So these
+translation-invariant data cannot give a receiver-arrival or retention time.
+Section 7 also asserted jump discontinuities at the sharp mask edges, which are
+not established.
+
+**Corrections (`PROOF.md` §7, `INTERFACE.md` §6, `README.md` item 7; and
+`RESULT.md` §3 in the R1 record commit).**
+
+- The minimal missing premise is now the free-tail input itself: a certified
+  bound on $\|\mathbf 1_{x<z}U_0^n\hat\varphi\|$ for $n\ge T$ relative to the
+  fixed receiver and the stated time origin, plus the summable interaction
+  bound. An absolute localization estimate with velocity data and a
+  propagation estimate is named as one possible source. The relative moment
+  is stated not to suffice on its own, and the reviewed text is marked as
+  wrong.
+- The edge statement now says only that endpoint vanishing and regularity are
+  not certified and that boundary terms would have to be treated. It claims
+  neither nonzero endpoint values nor non-derivability.
+- Theorem 6 and its one-sided translates ($R_c\le0$, $x_c\ge0$) are unchanged:
+  they fix the useful positioning relative to the receiver.

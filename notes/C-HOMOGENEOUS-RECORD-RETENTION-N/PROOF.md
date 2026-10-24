@@ -541,23 +541,37 @@ asserts only the stated upper bound.
 ## 7. The actual v105 selected component
 
 For $\hat\varphi := Q_{\rm ch,full}\mathcal S\Psi_{\rm loc}/\sqrt{p(Q_{\rm
-full})}$, Theorem 1 gives the exact wrong-memory amplitude
-$\sqrt{1-\|\phi_1\|^2}\,\Lambda_n(\Omega_+\hat\varphi)$. The proof of
-Theorem 6 applies verbatim to any $\varphi\in\operatorname{Ran}Q_{\rm
-ch,full}$ for which (i) a free-tail bound on $\mathbf 1_{x<z}U_0^n\varphi$ and
-(ii) a summable bound on $\|(I-C)U_0^m\varphi\|$ are certified. The v105
-certificates do not supply either for $\hat\varphi$: they bound $p(Q_{\rm
-full})$ from below through Carathéodory functions, with control of
-$|4+F_1F_2|$ only on a subset of large measure, and give no pointwise bound
-on energy derivatives of $\mathcal S(K,E)$, hence no Wigner time delay and no
-position moment of $\hat\varphi$; moreover $\hat\varphi$ has jump
-discontinuities at the sharp edges of $I_E$ and $|P|\le1/100$, where the
-integration by parts of Lemma 6.6 is unavailable. **Minimal missing premise:** a
-certified bound on a position moment
-$\|(1+|X_{\rm pulse}-X_{\rm obj}|)^s\hat\varphi\|$ for some $s>0$ together with
-a summable contact-decay bound, or a smoothed preparation whose outgoing
-component lies in a family of the type of $\mathcal F$. The receiver itself
-imposes no time limit: by Theorem 1 every retention error is carrier transport.
+full})} = \hat\varphi_{\rm sp}\otimes p_1$, Theorem 1 gives the exact
+wrong-memory amplitude $\sqrt{1-\|\phi_1\|^2}\,\Lambda_n(\Omega_+\hat\varphi_{\rm
+sp})$. The proof of Theorem 6 applies verbatim to any
+$\varphi\in\operatorname{Ran}Q_{\rm ch,full}$ for which two inputs are
+certified: (i) a free-tail bound on $\|\mathbf 1_{x<z}U_0^n\varphi\|$
+**relative to the fixed receiver $z = 100$ and the stated time origin**, and
+(ii) a summable bound on $\|(I-C)U_0^m\varphi\|$. The v105 certificates supply
+neither for $\hat\varphi$. They bound $p(Q_{\rm full})$ from below through
+Carathéodory functions, with control of $|4+F_1F_2|$ only on a subset of large
+measure. They give no pointwise bound on energy derivatives of
+$\mathcal S(K,E)$, and hence no Wigner time delay and no position localization
+of $\hat\varphi$. In addition, the vanishing and regularity of the outgoing
+amplitude at the edges of the sharp masks ($I_E$, $|P|\le1/100$) are not
+certified, so any use of Lemma 6.6 there would have to treat boundary terms.
+No claim is made that $\hat\varphi$ has nonzero endpoint values or jumps, or
+that a retention bound for $\hat\varphi$ cannot be derived (corrected, R3).
+
+**Minimal missing premise (corrected, R3).** The missing premise is input (i)
+itself, a certified free-tail bound for $n\ge T$ relative to the fixed
+receiver and the stated time origin, together with input (ii). Input (i)
+could come, for example, from an absolute localization estimate of the pulse
+with respect to the receiver at the time origin together with certified
+velocity data and the corresponding propagation estimate. A
+relative-separation moment such as $\|(1+|X_{\rm pulse}-X_{\rm
+obj}|)^s\hat\varphi\|$ cannot provide (i) on its own, even together with (ii).
+Both quantities are invariant under joint object–carrier translations, while
+by Theorem 3 joint left translations bring the carrier-left norm arbitrarily
+close to one at any fixed time. The reviewed version of this section named that
+relative moment as the minimal missing premise, and that was wrong. The
+receiver itself imposes no time limit: by Theorem 1 every retention error is
+carrier transport.
 
 ---
 

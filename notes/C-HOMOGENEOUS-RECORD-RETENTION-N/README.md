@@ -46,8 +46,9 @@ a durable memory.
    $\varepsilon(T)$ for all $n\ge T$, with an explicit computable modulus. The
    frozen check is $T = 10^6$ macrosteps against $1/100$; see `RESULT.md`.
 7. **Not achieved:** the same bound for the actual normalized v105 selected
-   component. Its time delay and position moments are not certified; the minimal
-   missing premise is stated in `PROOF.md` §7.
+   component. No free-tail bound relative to the fixed receiver and the stated
+   time origin is certified for it; the minimal missing premise is stated in
+   `PROOF.md` §7 (corrected, R3).
 
 ## Files
 

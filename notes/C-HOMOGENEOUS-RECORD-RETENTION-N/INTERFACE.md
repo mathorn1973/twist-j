@@ -88,6 +88,9 @@ crossed gives the same memory value.
 
 - No inclusion of the normalized v105 selected component
   $Q_{\rm ch,full}\mathcal S\Psi_{\rm loc}/\sqrt{p(Q_{\rm full})}$ in
-  $\mathsf S_{\rm ret}$; the minimal missing premise is stated in `PROOF.md` §7.
+  $\mathsf S_{\rm ret}$. The minimal missing premise (`PROOF.md` §7,
+  corrected, R3) is a certified free-tail bound relative to the fixed receiver
+  $z = 100$ and the stated time origin, plus a summable interaction (contact)
+  bound; a relative object–pulse separation moment alone does not supply it.
 - No exact permanent retention of a captured record.
 - No statement before $T$; the record may still be in transit.
