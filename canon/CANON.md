@@ -1,6 +1,6 @@
-# TWIST-J Public Canon v104
+# TWIST-J Public Canon v105
 
-**Release identity.** Public Canon v104. Normative authority and activation
+**Release identity.** Public Canon v105. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md). An identical
 tree on any other ref is a release candidate, not a second authority.
 
@@ -29,7 +29,7 @@ geometry, probability, and fields are readings of it. TWIST-J posits
 J = 1 + zeta_5^2 as a primitive axiom. No theorem within TWIST-J is
 presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and p = 5-specific content are distinguished for attribution
-only. Public Canon v104 also declares the discrete architecture used to read
+only. Public Canon v105 also declares the discrete architecture used to read
 that axiom. Those architectural definitions
 are inventoried below and are not claimed to be uniquely derived from
 J. The native architecture introduces no fitted dimensionless parameter.
@@ -42,7 +42,7 @@ calibration anchor remains the electron mass m_e.
 algebraic generator is J = 1 + zeta_5^2. The public model has no
 external boundary and no external clock: after the architecture below
 is declared, one state determines its successor by one map U. J is the
-seed of the two algebraic projections. Public Canon v104 does not claim
+seed of the two algebraic projections. Public Canon v105 does not claim
 that the checkpoint space, the five kernel generators, the selector,
 or the decoder interface are uniquely forced by J or M_J.
 
@@ -27407,6 +27407,798 @@ is one intervention followed by T free ticks. This theorem
 does not supply an intrinsic switch, a finite-dimensional source,
 a native-update derivation or an identification with a physical
 particle species.
+
+### HOMOGENEOUS-CAPTURE-CURRENT-RECORD [T]
+
+**Scope and connected statement.** The following specified one-pair,
+one-carrier, one-receiver model has a single local law, a normalized
+incoming scattering preparation, a complete physical-cut charge current,
+and a joint outgoing event of relative binding and coherent record write.
+For that preparation its joint asymptotic weight obeys
+
+$$
+p(Q_{\rm full})\ge p(Q_{\rm win})>2/10^{28}.
+$$
+
+The input carrier is a standing token; the selected output is a bound
+object pair and a right-moving pulse. The receiver can initially hold any
+state, including entanglement with a reference. Its old information moves
+coherently into the pulse label while the receiver acquires the label
+\(d_1\). The event accepts all old-memory output labels. A pre-existing
+\(d_1\) by itself is not a binding herald.
+
+This is an existence theorem for the declared occupation-space model and
+its Hilbert-space evolution. Its occupation coordinates, coherent
+amplitudes, contact law, synchronized schedule and spectral preparation
+are explicit construction data. The occupation intertwiner below is not
+an intertwiner from the original six-pentit checkpoint map \(U\), and
+does not derive these preparation or amplitude operations from that map.
+The model is also distinct from the funded receiver in
+COMMON-HISTORY-FUNDED-AREA-RECEIVER. Finite preparation, a selective
+finite-time joint detector, quantitative record retention and empirical
+occurrence are not consequences of the asymptotic weight.
+
+**Carrier, labels and ordered local law.** Use physical coordinates
+\(x_A=R+r\), \(x_B=R-r\), with \(R,r\in\mathbb Z\), so the object
+constituents have common parity. In the ordered coin basis
+\((++, +-, -+, --)\), let
+
+$$
+A=(e_1-e_4)/\sqrt2,\quad B=(e_2-e_3)/\sqrt2,\quad
+M_2=((I+2iX)/\sqrt5)\otimes((I+2iX)/\sqrt5),
+$$
+$$
+S(P,q)=\operatorname{diag}(e^{iP},e^{iq},e^{-iq},e^{-iP}),\quad
+\Gamma=I+(e^{-ig}-1)P_0,\quad g=2\pi/5,\quad W=\Gamma S M_2.
+$$
+
+Here \(P_0\) projects onto \(r=0\). Streaming changes \((R,r)\) by
+\((-1,0),(0,-1),(0,1),(1,0)\), respectively. Thus the physical
+constituent velocities are \((-1,-1),(-1,1),(1,-1),(1,1)\).
+The definitions and complete relative dispersion of this same \(W\)
+are those of CONTACT-W-SPECTRAL-READING and
+CONTACT-W-BOUND-PAIR-RESPONSE above.
+
+The carrier is either a token at \(y\), with label \(t_j\), or a pulse
+at \(x\), with two coin banks and label \(p_j\), where \(0\le j<26\).
+The receiver stands at \(z=100\) and has memory
+\(\mathcal D=\operatorname{span}\{d_0,\ldots,d_{25}\}\). The active
+space is
+
+$$
+\mathcal H_T=\ell^2(\mathbb Z_R\times\mathbb Z_r\times\mathbb Z_y)
+ \otimes\mathbb C^4\otimes\mathbb C^{26},\qquad
+\mathcal H_P=\ell^2(\mathbb Z_R\times\mathbb Z_r\times\mathbb Z_x)
+ \otimes\mathbb C^4\otimes\mathbb C^2\otimes\mathbb C^{26},
+$$
+$$
+\mathcal H_{\rm rec}=(\mathcal H_T\oplus\mathcal H_P)
+ \otimes|z=100\rangle\otimes\mathcal D\otimes\mathcal H_{\rm aux,ref}.
+$$
+
+For explicit occupation codes each site has coordinates
+\((h_1,\ldots,h_{38})\) and charge \(H_N=2\sum h_\alpha^2\).
+The four object code kets on the object subbank have vectors
+\((-1,0,0,-1),(0,-1,-1,0),(1,0,1,0),(0,1,0,1)\); each has charge
+four, with charge two at each constituent position. Enumerate signed
+two-occupied vectors in five coordinates by increasing pairs of indices
+and, for each pair, signs \((1,1),(1,-1),(-1,1),(-1,-1)\).
+If this list is \(v_0,v_1,\ldots\), set
+\(p_0=v_{25}\), \(p_j=v_{j-1}\) for \(1\le j\le25\).
+Embed a pulse code in \((h_7,\ldots,h_{11})\) or
+\((h_{12},\ldots,h_{16})\), with \(h_5=h_6=0\).
+For tokens enumerate vectors in \((h_5,\ldots,h_{16})\) with one
+occupied coordinate \(h_5\) and the other successively at
+\(h_6,\ldots,h_{16}\), in the same sign order, and apply the same
+label rotation. Thus \(t_1=e_5+e_6\), \(p_1=(1,1,0,0,0)\), and
+every token or pulse code has charge four. Tokens are disjoint from
+both pulse banks and contain at most one occupied coordinate in either
+bank, so the pulse coin and vacuum pulse edge leave them fixed.
+Set \(d_j=(-1)^j e_{1+\lfloor j/2\rfloor}\) on
+\((h_{25},\ldots,h_{37})\); every memory code has charge two.
+The coordinates \(h_{17},\ldots,h_{24},h_{38}\) are identity
+spectators. Their occupied charge is included once, separately from the
+active total \(4+4+2=10\).
+
+Write \(c=1/\sqrt5\), \(s=2/\sqrt5\). The pulse on-site and
+edge factors, in the Fourier convention \(|x\rangle\mapsto e^{-ikx}\),
+are
+
+$$
+Q=\begin{pmatrix}c&-s\\s&c\end{pmatrix},\qquad
+E(k)=\begin{pmatrix}c&-se^{ik}\\se^{-ik}&c\end{pmatrix},\qquad
+V(k)=E(k)Q.
+$$
+
+Thus \(\det V=1\), \(\cos\varepsilon(k)=(1-4\cos k)/5\), and
+\(0\le\varepsilon(k)\le a_p=2\arctan2<3\pi/4\).
+Let \(P_\pm(k)\) be its spectral projectors with eigenvalues
+\(e^{\mp i\varepsilon(k)}\). On \(-\pi<k<0\), the plus band has
+
+$$
+v(k)=\varepsilon'(k)=-4\sin k/(5\sin\varepsilon(k))>0,
+\qquad |u_{+,1}(k)|^2=(1-v(k))/2.
+$$
+
+Put \(\beta=4\pi/5\) and
+\(U_0=(e^{-i\beta}W\otimes I_{\rm tok})\oplus
+(W\otimes e^{-i\beta}V)\), with identity on labels.
+At each site \(s_0\in\mathbb Z\) and each label \(j\), define the
+orthonormal contact vectors
+
+$$
+\alpha_{s_0,j}=|R=s_0,r=0,iB;\ y=s_0,t_j\rangle,\qquad
+\gamma_{s_0,j}=|R=s_0,r=0,A;\ x=s_0,e_1,p_j\rangle.
+$$
+
+The contact \(C\) is the identity off their span and acts on every
+pair by \(\left(\begin{smallmatrix}3/5&-4/5\\4/5&3/5\end{smallmatrix}\right)\).
+The order is \(U=U_0C\), with the right factor first. All statements
+compare the same phase-zero slices of the declared autonomous schedule:
+one macrostep is two synchronized microticks. No asynchronous or
+arbitrary-occupation extension is inferred.
+
+Let \(\mathsf J\) exchange a carrier label with a memory label, and
+define the self-adjoint unitary half-line calibration
+
+$$
+\mathcal T=\mathcal T_1\oplus\mathcal T_2,\quad
+\mathcal T_1=1_{y<z}I+1_{y\ge z}\mathsf J_{T,\rm mem},\quad
+\mathcal T_2=1_{x<z}I+1_{x\ge z}\mathsf J_{p,\rm mem},\quad
+U_{\rm rec}=\mathcal T(U\otimes I)\mathcal T^*.
+$$
+
+At a contact \(y=x=R=s_0\), both arrangements lie on the same side
+of \(z\), and the identical contact matrix acts on all labels. Hence
+\(\lbrack \mathcal T,C\otimes I\rbrack =0\) at every site. Tokens do not hop, and
+on-site pulse coins preserve position. Conjugation changes only the
+pulse edge \((z-1,z)\), to
+
+$$
+D_{\rm rec}=\frac1{\sqrt5}
+ \begin{pmatrix}I&-2\mathsf J\\2\mathsf J&I\end{pmatrix},\qquad
+D_{\rm rec}^*D_{\rm rec}=I.
+$$
+
+On the complement of the coded memory space use the unchanged free
+edge. The law is local and conserves charge; the integer numerator of
+\(D_{\rm rec}\) has Gram matrix \(5I\), not \(I\).
+
+**Infinite-lattice channel scattering and its normalization.** Joint
+translation of object center and carrier gives conserved momentum
+\(K=P+k\pmod{2\pi}\). Fourier transforming the carrier position and
+using \(u=R-y\) or \(u=R-x\) gives measure \(dK/(2\pi)\).
+On each \(K\) fiber the token free operator is \(e^{-i\beta}W\),
+independent of \(K\); at object momentum \(P\), the pulse free
+operator is \(e^{-i\beta}W(P)\otimes V(K-P)\).
+Per label the contact differs from the identity on the two ports
+\(a_1=\delta_{u=r=0}iB\) and
+\(a_2=\delta_{u=r=0}A\otimes e_1\) only. Thus
+\(U(K)-U_0(K)\) is rank two per label, rank at most 52 altogether.
+The unitary trace-class scattering theorem gives complete fiber wave
+operators
+
+$$
+\Omega_\pm(K)=\operatorname{s-lim}_{n\to\pm\infty}
+ U(K)^{-n}U_0(K)^nP_{\rm ac}(U_0(K)).
+$$
+
+Their initial and final spaces are the fiber absolutely continuous
+spaces of \(U_0(K)\) and \(U(K)\). Define their direct integrals as
+\(\mathscr H_{{\rm ch},0}\), \(\mathscr H_{\rm ch}\), with
+projections \(P_{{\rm ch},0}\), \(P_{\rm ch}\). Measurability follows
+from the measurable finite-time operators, and their norms are at most
+one, so dominated convergence gives the direct-integral limits
+\(\Omega_\pm\), their intertwining, and the unitary scattering
+operator \(\mathcal S=\Omega_+^*\Omega_-\) on the channel space.
+These channel spaces are not identified with global absolutely
+continuous spaces of the decomposable operators.
+
+For the port injection \(J_p:\mathbb C^2\to\mathscr H(K)\), set
+
+$$
+K_C=\frac15\begin{pmatrix}-2&-4\\4&-2\end{pmatrix},\quad
+m=J_p^*(\zeta-U_0)^{-1}U_0J_p=\operatorname{diag}(m_1,m_2),
+\quad F_j=1+2m_j,\quad |\zeta|>1.
+$$
+
+Each \(F_j=\langle a_j,(\zeta+U_{0,j})(\zeta-U_{0,j})^{-1}a_j\rangle\)
+has positive real part and \(F_j(\infty)=1\); \(F_1\) is independent
+of \(K\). Resolvent factorization gives
+
+$$
+R-R_0=R_0U_0J_pT J_p^*R_0,\qquad
+T=K_C(I-mK_C)^{-1},\qquad
+\det(I-mK_C)=(4+F_1F_2)/5,
+$$
+$$
+T_{21}=-T_{12}=4/(4+F_1F_2).
+$$
+
+For boundary densities with respect to \(dE\),
+\(\operatorname{Re}F_j(E)=2\pi\rho_j(E)\) almost everywhere.
+The unitary stationary scattering formula therefore gives the
+transition kernel from the selected incoming contact direction to the
+bound-pair, right-moving pulse direction,
+
+$$
+\mathcal P(K,E)=
+ \frac{64\pi^2\rho_{1,\rm in}(E)\rho_{2,b,+}(K,E)}
+ {|4+F_1(E)F_2(K,E)|^2}.                                      \tag{H1}
+$$
+
+The normalization is explicit: the boundary matrix element is
+\(2\pi\sqrt{\rho_{2,b,+}}\,T_{21}\sqrt{\rho_{1,\rm in}}\), up to
+the convention-dependent unit phase. In the stationary formula with
+resolvent \((U_0-\zeta)^{-1}\), its compressed resolvent is \(-m\);
+\((I-K_Cm)^{-1}K_C=K_C(I-mK_C)^{-1}\). Reversing the incoming/outgoing
+wave-operator convention replaces the scattering operator by its
+adjoint and preserves the corresponding transition probability. This
+is the convention conversion for the unitary stationary scattering
+theorem of R. Tiedra de Aldecoa, *Stationary scattering theory for
+unitary operators with an application to quantum walks*,
+J. Funct. Anal. 279 (2020), 108704, Example 3.8 and Theorem 4.3
+([arXiv:1912.04960v2](https://arxiv.org/abs/1912.04960v2)). In
+particular neither a missing \(2\pi\) nor a restricted replacement
+for the full functions \(F_j\) is allowed in (H1).
+
+**A quantitative isolated branch.** Let \(z_g=e^{-ig}\) and
+\(\chi_0=\delta_0A\). The preceding
+CONTACT-W-BOUND-PAIR-RESPONSE supplies the full infinite-operator
+contact resolvent and the simple eigenvalue \(z_g\) of \(W(0)\).
+The following estimates make its neighborhood explicit. On the
+complement of the entire free \(A\) channel, write
+\(R_0=(z_g-F_b)^{-1}\), \(G_0=j^*R_0j\),
+\(K_0=I-(z_g-1)G_0\), where \(j\) inserts the remaining three
+coin directions at \(r=0\). The free spectral distance obeys
+\(\delta_f=(4\cos(\pi/5)-2\sin(\pi/5))/\sqrt5>68/75>9/10\),
+so \(\|R_0\|<10/9\). Unitarity gives
+
+$$
+R_0^*=z_gI-z_g^2R_0,\qquad K_0^*=z_gK_0,
+\qquad \widetilde K=e^{-ig/2}K_0=\widetilde K^*.
+$$
+
+Put \(c_0=(1+\sqrt5)/4\) and
+\(s_0'=\sqrt{(2\sqrt5-1)/5}\). Substituting the preceding
+three-channel resolvent formulas gives
+
+$$
+\widetilde K_{BB}=5c_0(1-s_0'),\quad
+(\widetilde K_{ST})_{11}=4/(5s_0'c_0),\quad
+\det\widetilde K_{ST}=4(1-s_0')/s_0',\quad
+\operatorname{tr}\widetilde K_{ST}=-3c_0+(1+3c_0^2)/(s_0'c_0).
+$$
+
+The rational brackets \(4/5<c_0<1\) and
+\(83/100<s_0'<5/6\) imply the first diagonal entries exceed
+\(1/2\), the determinant exceeds \(4/5\), and the trace is below
+\(829/415<2\). Indeed
+\(1/(sc)+3c(1/s-1)\) decreases on these two intervals, so its
+upper bound is its value at \((c,s)=(4/5,83/100)\).
+Consequently
+\(\det(\widetilde K_{ST}-I/2)>17/332>0\), and Sylvester's
+criterion gives \(\|K_0^{-1}\|<2\). Woodbury's identity then yields
+
+$$
+\|(z_g-W_b)^{-1}\|
+ <10/9+(6/5)(10/9)^2\,2=110/27,
+\quad\delta_0=27/110.
+$$
+
+The other \(A\)-channel eigenvalue is 1 at distance greater than one.
+Since \(W(P)=e^{iP\operatorname{diag}(1,0,0,-1)}W(0)\),
+\(\|W(P)-W(0)\|\le|P|\), \(\|W'(P)\|\le1\).
+The circle \(|w-z_g|=1/8\) has distance at least \(53/440\)
+from \(\sigma(W(0))\); its Neumann product on \(|P|\le1/12\)
+is \(110/159<1\). Its Riesz projection \(\Pi_b(P)\) therefore
+stays rank one. Normal spectral variation gives
+
+$$
+\operatorname{gap}(\Pi_b(P))\ge\delta_0-2|P|\ge13/165,
+\quad \|\Pi_b'(P)\|\le L=165/13,
+\quad |\Omega''(P)|\le2L,
+$$
+
+where \(W(P)\Pi_b(P)=e^{-i\Omega(P)}\Pi_b(P)\),
+\(\Omega(0)=g\), and \(\Omega'(0)=0\) by reflection symmetry.
+The derivative bound follows by differentiating the simple eigenvector
+in parallel gauge and applying the reduced resolvent. The second
+derivative bound follows by differentiating its expectation of the
+norm-one momentum generator. Thus
+\(|\Omega(P)-g|\le LP^2\), \(|\Omega'(P)|\le2L|P|\).
+All these are infinite-lattice estimates, not finite-box eigenvalues.
+
+**Exact incoming preparation and certified densities.** Fix
+
+$$
+p_{\rm in}=h=\delta_K=1/1000,\quad p_b=1/100,\quad
+I_E=\lbrack 8\pi/5-h,8\pi/5+h\rbrack ,\quad\ell_E=1/500,
+$$
+$$
+k_0=-\arccos((9-5\sqrt5)/16),\qquad
+I_K=\lbrack k_0-\delta_K,k_0+\delta_K\rbrack .
+$$
+
+For \(|P|\le p_{\rm in}\), \(\omega=E-\beta\), define
+
+$$
+D=\cos\omega-\cos P,\quad d=4\sin\omega/D,\quad
+x=\cos\omega-d\sin\omega,
+\quad X_0=\frac{\sin\omega+d(\cos\omega+x)}{\sqrt{1-x^2}},
+\quad\tau=\tan(\pi/5).
+$$
+
+Eliminating the stationary coin channels of \(S_PM_2\) gives the
+scalar moving-channel denominator \(\cos q-x\). On this rectangle
+\(D<0\), \(-1<x<1\), \(\partial_\omega x<0\), and \(X_0>0\).
+The outgoing root in the unit disk selects the boundary value
+\(F_{0,B}=X_0+id\). The contact phase gives the Möbius transform
+\(F_B=(F_{0,B}+i\tau)/(1+i\tau F_{0,B})\). Hence the actual
+contact density of \(W(P)\), with respect to \(d\omega\), is
+
+$$
+\rho_{B,W}(P,\omega)=
+ \frac{(1+\tau^2)X_0}
+ {2\pi\lbrack (1-\tau d)^2+\tau^2X_0^2\rbrack }>77/1000.                \tag{H2}
+$$
+
+The expression is finite and smooth on the rectangle, so this part
+of the spectral measure is absolutely continuous. The exact rational
+interval certificate specified below verifies all root, denominator,
+derivative and strict-margin conditions in this calculation, including
+\(\partial_\omega x=-\sin\omega\lbrack 1+8\cos\omega/D+
+4\sin^2\omega/D^2\rbrack <0\). Its incoming integral is
+
+$$
+\rho_{1,\rm in}(E)=\int_{-p_{\rm in}}^{p_{\rm in}}
+ \rho_{B,W}(P,E-\beta)\frac{dP}{2\pi}\ge a_{\rm in}>24/10^6.
+$$
+
+Let \(P_{\rm in}=1_{|P|\le p_{\rm in}}P_{\rm ac}(W(P))\)
+be the direct-integral relative-ac projector and
+\(a_0=\delta_{u=r=0}iB\). For \(H_1=H_W+\beta\), define
+
+$$
+\psi_{\rm in}=1_{I_E}(H_1)
+ \lbrack \ell_E\rho_{1,\rm in}(H_1)\rbrack ^{-1/2}P_{\rm in}a_0.
+$$
+
+Here \(H_W=i\operatorname{Log}_{3\pi/10}W\), with the cut already
+justified by CONTACT-W-SPECTRAL-READING. Functional calculus gives
+\(\|\psi_{\rm in}\|^2=\int_{I_E}dE/\ell_E=1\).
+Its relative-ac restriction is orthogonal to \(\Pi_b(P)\), so its
+free incoming bound weight is exactly zero. Place the token sharply at
+\(y=0\), with label \(t_1\). In the spectral representation,
+
+$$
+\Psi_{\rm loc}(K,E)=\ell_E^{-1/2}1_{I_E}(E)
+ \xi_{\rm in}(E)\otimes|t_1\rangle,\quad
+\xi_{\rm in}(E)=Z_{1,\rm in}(E)a_0/\sqrt{\rho_{1,\rm in}(E)}.
+$$
+
+Its fiber direction has unit norm. The input includes all
+\(K\in\lbrack -\pi,\pi)\), with measure \(dK/(2\pi)\); the small
+\(I_K\) is an output subevent, not a restriction of this preparation.
+For an arbitrary normalized memory/helper/reference state \(\sigma\),
+including mixed states and arbitrary memory-reference correlations,
+the free incoming state is
+\(\rho_{\rm in}=|\Psi_{\rm loc},z=100\rangle
+\langle\Psi_{\rm loc},z=100|\otimes\sigma\).
+The object/carrier marginal is this fixed pure state; correlations
+with a different object preparation are not included. The interacting
+preparation is \(\rho_{\rm phys}=\Omega_{{\rm rec},-}\rho_{\rm in}
+\Omega_{{\rm rec},-}^*\).
+
+For \((K,E)\in I_K\times I_E\), the outgoing energy equation is
+
+$$
+f_{K,E}(P)=\Omega(P)+\beta+\varepsilon(K-P)-E=0,
+\qquad |P|\le p_b.
+$$
+
+At \((K,E,P)=(k_0,8\pi/5,0)\) it vanishes, since
+\(\varepsilon(k_0)=g\). On \(|k-k_0|\le11/1000\), the same
+certificate supplies \(0<v_{\min}\le v(k)\le v_{\max}<1\) and
+
+$$
+v_{\min}-2Lp_b>0,\qquad
+v_{\min}(p_b-\delta_K)-Lp_b^2-h>0.
+$$
+
+The first makes \(f_{K,E}\) strictly decreasing; the second gives
+positive and negative values at \(-p_b\) and \(p_b\). There is a
+unique interior root \(P_*(K,E)\). The branch overlap is at least
+\(1-Lp_b\), the pulse bank weight is at least \((1-v_{\max})/2\),
+and the coarea Jacobian is at most \(v_{\max}+2Lp_b\). Therefore
+
+$$
+\rho_{2,b,+}(K,E)=
+ \frac{\langle b_0,\Pi_b(P_*)b_0\rangle
+ |u_{+,1}(K-P_*)|^2}{2\pi|\partial_Pf_{K,E}(P_*)|}
+ \ge b_{\rm hom}:=
+ \frac{(1-Lp_b)(1-v_{\max})/2}{2\pi(v_{\max}+2Lp_b)}>1/100,
+\quad b_0=\delta_0A.                                      \tag{H3}
+$$
+
+**Full-function denominator bound and positive joint weight.** For
+any \(0<\alpha<1\), positive real part gives
+\(\operatorname{Re}(F_j^\alpha)\ge
+|F_j|^\alpha\cos(\pi\alpha/2)\). The analytic branch equals one
+at infinity, so the mean-value property and Fatou's lemma imply
+
+$$
+\int_{-\pi}^{\pi}|F_j(K,E)|^\alpha dE
+ \le C_\alpha=2\pi\sec(\pi\alpha/2).
+$$
+
+Cauchy-Schwarz gives
+\(\int_{I_E}|F_1F_2|^{\alpha/2}dE\le C_\alpha\).
+Choose \(\alpha=9/10\) and
+
+$$
+M=\left\lbrack \frac{2\pi\sec(9\pi/20)}{(40/49)\ell_E}\right\rbrack ^{20/9}.
+$$
+
+Markov's inequality bounds the set \(|F_1F_2|>M\) by
+\((40/49)\ell_E\). Its complement thus has measure at least
+\((9/49)\ell_E\), and there \(|4+F_1F_2|\le4+M\).
+No channel is removed from \(F_1\) or \(F_2\), and no pointwise
+bound outside this good set is asserted. Integrating (H1), using
+(H2)--(H3), proves
+
+$$
+\int_{I_E}\mathcal P(K,E)\frac{dE}{\ell_E}
+ \ge B_{\rm hom}=64\pi^2a_{\rm in}b_{\rm hom}
+ \frac{9/49}{(4+M)^2}>8/10^{25}\quad(K\in I_K).             \tag{H4}
+$$
+
+Define, on the free outgoing pulse space and zero on tokens,
+
+$$
+Q_{\rm full}=1_{|P|\le1/100}
+ 1_{I_E}(\Omega(P)+\beta+\varepsilon(k))
+ \Pi_b(P)\otimes P_+(k)1_{\varepsilon'(k)>0}
+ \otimes I_{\rm pulse\ labels}\otimes|d_1\rangle\langle d_1|
+ \otimes I_{\rm aux,ref},\qquad
+Q_{\rm win}=1_{I_K}(K)Q_{\rm full}.                        \tag{H5}
+$$
+
+Let \(Q_{{\rm ch},\rm full}\) have the same object, momentum and
+pulse-band factors but select \(|p_1\rangle\langle p_1|\), before
+the receiver exchange; define its windowed version similarly. The
+receiver identities proved below give
+\(\mathcal T_+^*Q_{\rm full}\mathcal T_+
+=Q_{{\rm ch},\rm full}\otimes I_{\rm mem,aux,ref}\), and the same
+identity for the windowed event. Hence there is no memory-state
+penalty, and the physical lifts are
+
+$$
+P_{\rm out}^{\rm win/full}=\Omega_{{\rm rec},+}
+ Q_{\rm win/full}\Omega_{{\rm rec},+}^*,\qquad
+p(Q)=\operatorname{Tr}(\rho_{\rm phys}P_{\rm out})
+=\operatorname{Tr}(\rho_{\rm in}\mathcal S_{\rm rec}^*Q\mathcal S_{\rm rec}).
+$$
+
+Since \(\int_{I_K}dK/(2\pi)=\delta_K/\pi\), (H4) yields the
+announced bound
+\(p(Q_{\rm full})\ge p(Q_{\rm win})\ge
+(\delta_K/\pi)B_{\rm hom}>2/10^{28}\).
+Capture, current and record use this same outgoing projector and its
+same wave-operator lift; the windowed event is exactly the momentum
+restriction of the full event. The extra bound-branch factor in (H5)
+cannot be replaced by a pulse or by the memory value alone.
+
+**Exact certificate and its soundness.** The minimal reproduction is
+[C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N](../reproduce/C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N/README.md).
+It verifies exact matrix/Laurent identities and the strict enclosures
+used above, on complete declared rectangles. Its branch, packet,
+occupation, current, open-channel and finite-strip groups have
+24, 44, 28, 14, 16 and 18 checks, respectively. This finite audit does
+not replace the infinite-operator scattering argument.
+
+The scalar interval endpoints are exact rational numbers. Rounding
+to denominator \(10^{36}\) uses floor at the lower end and ceiling
+at the upper end, and asserts containment. Field operations use the
+four endpoint products and reject zero-containing denominators.
+Square-root endpoints \(l,u\ge0\) are certified by
+\(l^2\le a\le b\le u^2\). Alternating arctangent sums bracket
+\(\arctan(1/q)\) for \(q\ge2\); Machin's identity
+\(\pi/4=4\arctan(1/5)-\arctan(1/239)\) then encloses \(\pi\).
+Taylor sine/cosine sums carry their factorial remainder bounds. For
+an interval of radius \(r\le2\), angle addition with
+\(1-r^2/2\le\cos\delta\le1\), \(|\sin\delta|\le r\)
+encloses every point, not samples. Arccosine candidates in
+\(\lbrack 0,\pi\rbrack \) are checked by the reversed cosine inequalities.
+The \(20/9\) power is certified by positive endpoints satisfying
+\(l^9\le a^{20}\le b^{20}\le u^9\). Complex square roots use
+the positive real and imaginary components of the principal root
+in the upper half-plane. These properties inductively prove enclosure
+of the closed formulas and their derivatives. The reproduction
+checks all strict positivity margins, the outgoing root's straddling,
+the denominator threshold, and the rational bounds in (H2)--(H4),
+including wrong-root and sign controls. Its exact stdout is compared
+with its committed EXPECTED.txt on both required architectures.
+
+**Receiver asymptotics and preservation of old information.** Put
+\(U'_0=U_0\otimes I_{\rm mem,aux,ref}\). On tokens,
+\((U'_0)^{-n}\mathcal T(U'_0)^n=\mathcal T_1\). The token fiber
+operator and its channel projector are independent of total \(K\),
+so \(\mathcal T_1\) preserves that channel space although its
+half-line condition can mix \(K\) fibers. This channel projector
+is not the narrower relative-ac preparation projector.
+On pulses, define the two-band projectors
+\(\Pi_{v\gtrless0}(k)=\sum_{\sigma=\pm}P_\sigma(k)
+1_{\sigma\varepsilon'(k)\gtrless0}\). Fourier propagation of a
+packet on a band with velocity bounded away from zero carries it
+to the appropriate half-line. Smooth packets away from the finitely
+many zero-velocity points are dense, and the half-line projectors are
+bounded; the strong limits therefore extend to the whole pulse
+channel. Thus
+
+$$
+\mathcal T_+=\Pi_{v<0}\otimes I+\Pi_{v>0}\otimes\mathsf J,
+\qquad
+\mathcal T_-=\Pi_{v>0}\otimes I+\Pi_{v<0}\otimes\mathsf J
+$$
+
+on pulses, and both equal \(\mathcal T_1\) on tokens. They preserve
+the channel space and commute with \(U'_0\). Factoring the defining
+wave-operator limits proves
+
+$$
+\Omega_{{\rm rec},\pm}=\mathcal T(\Omega_\pm\otimes I)
+ \mathcal T_\pm^*,\qquad
+\mathcal S_{\rm rec}=\mathcal T_+(\mathcal S\otimes I)\mathcal T_-^*.
+$$
+
+The input has \(y=0<z\), so \(\mathcal T_-\) is the identity
+there. On a selected outgoing right-moving pulse, \(\mathcal T_+\)
+exchanges the labels exactly:
+
+$$
+|p_1\rangle\sum_j|d_j\rangle|\phi_j\rangle
+ \longmapsto\sum_j|p_j\rangle|d_1\rangle|\phi_j\rangle,
+\qquad\sum_j\|\phi_j\|^2=1.                              \tag{H6}
+$$
+
+This is an isometry on the entire old-memory/reference state. It
+proves the pullback of (H5), including mixed states by purification.
+For a normalized selected outgoing branch \(\Psi_+\), write
+\(\delta_n\to0\) for the free pulse's left-of-receiver tail,
+\(\widetilde\eta_n\to0\) for the norm difference between
+\(U_{\rm rec}^n\Omega_{{\rm rec},+}\Psi_+\) and
+\(\mathcal T(U'_0)^n\mathcal T_+^*\Psi_+\), and
+\(\eta_n\to0\) for its difference from \((U'_0)^n\Psi_+\).
+The calibrated surrogate has wrong-memory probability
+\(\delta_n^2(1-\|\phi_1\|^2)\le\delta_n^2\), whereas the latter
+free reference has none. The triangle inequality gives the physical
+bound
+
+$$
+\Pr(\text{wrong memory at }n\mid\Psi_+)
+ \le\min\{\eta_n^2,(\delta_n+\widetilde\eta_n)^2\}\longrightarrow0.
+$$
+
+No uniform finite waiting time or retention modulus follows from
+these strong limits.
+
+**Occupation intertwiner and complete physical-cut current.** Let
+\(\mathsf{Emb}\) map the declared basis to its occupation kets,
+\(D_2=\operatorname{diag}(1,i,i,-1)\), and
+\(M_{\rm nat}=Q\otimes Q=D_2^*M_2D_2\). The native occupation
+object gate order is \(F_{\rm nat}=S_{\rm nat}M_{\rm nat}\Gamma_{\rm nat}\),
+whereas the source order is \(W=\Gamma SM_2\). They are related by
+
+$$
+\mathcal I_0=\mathsf{Emb}\,\Gamma^{-1}D_2^*,\qquad
+(SM_{\rm nat}\Gamma)(\Gamma^{-1}D_2^*)
+ =(\Gamma^{-1}D_2^*)(\Gamma SM_2).
+$$
+
+Indeed \(M_{\rm nat}D_2^*=D_2^*M_2\), and the diagonal gauge
+commutes with streaming. At contact it sends \(iB\) to
+\((e_2-e_3)/\sqrt2\) and \(A\) to \((e_1+e_4)/\sqrt2\),
+with their common contact phase. Tensoring with the specified token,
+pulse and memory codes extends this to
+\(U_{\rm nat}\mathcal I=\mathcal I U_{\rm rec}\).
+Tensor further with the identity on arbitrary admitted occupied
+helpers and references. This retains their correlations, not just a
+chosen empty helper state.
+
+For \(\Theta_\ell(q)=1_{q>\ell}\), the full native right-half
+charge pulls back to
+
+$$
+\mathcal I_{\rm ext}^*H_{N,R,\ell}^{\rm full}\mathcal I_{\rm ext}
+ =N_{R,\ell}\otimes I_{\rm aux}+I\otimes Q_{R,\rm aux},\qquad
+N_{R,\ell}=2\Theta_\ell(x_A)+2\Theta_\ell(x_B)
+ +4\Theta_\ell(\text{carrier})+2\Theta_\ell(z).
+$$
+
+The diagonal gauge commutes with position. Helpers are stationary,
+so their charge cancels from the time difference. On the active
+sector \(N_L+N_R=10I\). Write the complete source step as
+\(U_{\rm rec}=e^{-i\beta}\Gamma S_{\rm obj}D_{\rm edge,rec}D_cC\),
+where \(D_c\) comprises the on-site object coin and the pulse coin
+on the pulse arrangement. Then at the beginning of the same
+synchronized macrostep,
+
+$$
+J_\ell=U_{\rm rec}^*N_{R,\ell}U_{\rm rec}-N_{R,\ell}
+ =N_{L,\ell}-U_{\rm rec}^*N_{L,\ell}U_{\rm rec}
+ =C^*D_c^*(j_{S,\ell}+j_{E,\ell})D_cC,                   \tag{H7}
+$$
+$$
+j_{S,\ell}=2\sum_{d=1}^4
+ \lbrack \Delta_\ell(x_A,v_{A,d})+\Delta_\ell(x_B,v_{B,d})\rbrack
+ |d\rangle\langle d|,
+\quad \Delta_\ell(q,1)=1_{q=\ell},\quad
+\Delta_\ell(q,-1)=-1_{q=\ell+1},
+$$
+$$
+j_{E,\ell}=\frac45
+ \begin{pmatrix}4I&2\mathsf S_\ell\\2\mathsf S_\ell&-4I\end{pmatrix},
+\quad \mathsf S_\ell=\begin{cases}\mathsf J,&\ell=z-1,\\I,&\ell\ne z-1.
+ \end{cases}
+$$
+
+The last matrix acts on pulse bank 1 at \(\ell\) and bank 2 at
+\(\ell+1\), and vanishes elsewhere. It includes the coherent
+cross term; it is not a difference of pulse populations alone.
+Its square is \((64/5)P_{\rm bond}\), so
+\(\|J_\ell\|\le4+8/\sqrt5\).
+To prove (H7), contact and on-site coins preserve charge at each
+physical site, and \(\Gamma\) is diagonal. Only object streaming
+and pulse edges transport charge, on commuting tensor factors.
+The receiver label swap leaves its charge two fixed while the pulse
+transports charge four. In particular \(\ell=99\) is the actual
+receiver cut, not a relative-coordinate cut. Left outflow and right
+inflow are the same operator, with both object constituents included.
+
+**Typed spectral energy and spatial limits.** Independently of
+\(H_N\), put \(H_E=\beta+i\operatorname{Log}_\pi V\) and
+
+$$
+H_0=(H_W+\beta)\otimes I_{\rm tok}
+ \ \oplus\ (H_W\otimes I+I\otimes H_E),\quad
+\sigma(H_0)\subset\lbrack \pi/2-a_p,5\pi/2+a_p\rbrack .
+$$
+
+The interval \(J_{\rm safe}=(5\pi/4,7\pi/4)\) contains \(I_E\)
+and no point in it has a \(2\pi\) translate in this enclosing
+spectrum, since \(a_p<3\pi/4\). On
+\(1_{J_{\rm safe}}(H_0)P_{{\rm ch},0}\), modular phase therefore
+determines this additive reference energy. Borel functional calculus
+and the wave/scattering intertwining prove its conservation on that
+window, also after receiver calibration. This does not produce a
+local current of spectral energy from the local charge current (H7).
+
+The one-carrier restriction is substantive. Let \(b_p=\pi-a_p\)
+and \(\alpha=3\pi/10\). Exterior plane-wave Weyl sequences of the
+relative walk give \(\lbrack -b_p,b_p\rbrack \cup\lbrack a_p,\pi+b_p\rbrack \subset\sigma(H_W)\).
+Two independent pulses add \(\lbrack 2\beta-2a_p,2\beta+2a_p\rbrack \), giving
+the inner spectral interval
+
+$$
+J_*=\lbrack 2\beta-2a_p-b_p,\ 2\beta+2a_p+\pi+b_p\rbrack ,
+\quad |J_*|=3\pi+2a_p>4\pi.
+$$
+
+The full two-pulse spectrum lies in
+\(\lbrack 2\beta-2a_p-\alpha,2\beta+2a_p+2\pi-\alpha\rbrack \).
+The two strips outside \(J_*\) have widths \(\alpha-b_p\) and
+\(a_p-\alpha\), both below \(2\pi\). A point in either strip
+has its inward \(2\pi\) translate in \(J_*\); a point in
+\(J_*\) has at least one such translate there as well. Thus this
+two-pulse spectrum has aliases at every energy. Neither arbitrary
+occupation nor many-carrier energy conservation at the stated
+unaliased scope follows from the one-carrier theorem.
+
+Relative binding also does not mean exact confinement in a finite
+strip. Here is the finite-strip argument. Write \(w=e^{iP}\),
+\(N=5\), \(\mu=2\), and use eigenvalue \(\lambda\in\mathbb T\).
+Eliminating the stationary channels away from \(r=0\) has denominator
+
+$$
+D=N\lambda^2-\lambda(w+w^{-1})+1-\mu^2,\quad
+p=(\lambda-w)(\lambda-w^{-1}),\quad
+q=\mu^2(1-\lambda^2),\quad p-q=D.
+$$
+
+The reduced moving matrix is
+\(D^{-1}\left(\begin{smallmatrix}p&q\\q&p\end{smallmatrix}\right)\).
+On the unit circle
+\(D/\lambda=2(\cos\theta-\cos P)+2i\mu^2\sin\theta\),
+so \(D=0\) only at \((\lambda,P)=(1,0),(-1,\pi)\).
+For all other \(P\), if \(p\ne0\), peeling the outermost occupied
+positive or negative site forces both moving channels, and then the
+stationary channels, to zero. A vector supported only at zero would
+force \(w=w^{-1}\), also excluded. If \(p=0\), then
+\(\lambda=w\) or \(w^{-1}\), \(q/D=-1\), and the exterior
+bond equations force support into \(\{-1,0,1\}\). The remaining
+center equation is \(z_gM_2\chi(0)=T_{\lambda,w}\chi(0)\), with
+
+$$
+T_{\lambda,w}=\begin{pmatrix}
+\lambda w^{-1}&0&0&0\\0&0&-\lambda^2&0\\
+0&-\lambda^2&0&0\\0&0&0&\lambda w
+\end{pmatrix}.
+$$
+
+For \(u=w^2\) or \(w^{-2}\), respectively, its determinant is
+
+$$
+\det(z_gM_2-T_\pm(u))
+ =\frac{(z_g-u)^2}{N}\lbrack z_g(Nz_g-1)-(N-z_g)u\rbrack .
+$$
+
+This identity and the elimination identities are checked over
+\(\mathbb Z\lbrack i\rbrack \) by the exact Laurent-polynomial certificate.
+Compact eigenvectors can therefore occur only for
+
+$$
+P\in\mathcal E=\{0,\pi\}\cup
+\{P:e^{2iP}\in\{z_g,u_*,\overline z_g,\overline u_*\}\},
+\quad u_*=z_g(Nz_g-1)/(N-z_g),\quad |\mathcal E|\le10.
+$$
+
+Outside this null set, a nonzero invariant subspace of a finite
+relative strip would be finite dimensional and contain such an
+eigenvector. Direct integration consequently gives
+\(\bigcap_{n\in\mathbb Z}W^{-n}\operatorname{Ran}1_{|r|\le B}
+=\{0\}\) for every finite \(B\). In particular, suppose a bounded
+operator \(C_{\rm loc}\) commutes with \(W\otimes V\) and
+\(\operatorname{Ran}(C_{\rm loc}-I)\subset
+\operatorname{Ran}1_{|r|\le B}\otimes\mathcal H_{\rm pulse}\).
+Commutation places this range in the same strip after every forward
+and backward iterate, hence in the zero intersection above tensored
+with \(\mathcal H_{\rm pulse}\). Therefore \(C_{\rm loc}=I\).
+
+Contact nevertheless decays for each fixed scattering state.
+On every \(K\) fiber, free ac evolution tends weakly to zero;
+the finite-rank contact converts that to norm decay. Dominated
+convergence and the wave-operator approximation give
+\(\|(C-I)U^n\phi\|\to0\) for every fixed
+\(\phi\in\mathscr H_{\rm ch}\). This is not uniform over the
+whole incoming spectral packet family. If \(D_{\rm in}f\) denotes
+the packet with energy amplitude \(f\in L^2(I_E)\), then
+\(U^n\Omega_-D_{\rm in}f=\Omega_-D_{\rm in}(e^{-inE}f)\), so
+
+$$
+\sup_{\|f\|=1}\|(C-I)U^n\Omega_-D_{\rm in}f\|
+ =\|(C-I)\Omega_-D_{\rm in}\|>0
+$$
+
+for every \(n\). If the final norm were zero, the whole family
+would evolve freely and have zero capture, contrary to (H4).
+
+**Remaining interpretation boundary.** The theorem supplies one
+connected asymptotic mechanism, with a strictly positive certified
+joint weight and the current and record on the same carrier. It does
+not supply a finite-resource preparation of the sharply selected
+incoming scattering state, a finite-time effect with controlled false
+positives for (H5), or a quantitative finite-interval or future-uniform
+retention bound. Those operations must use compatible preparations,
+physical times and joint effects before a stronger finite result can
+be asserted. The mathematical spectral weight is not a physical
+occurrence postulate; the physical apparatus obligation remains with
+QDD-INSTRUMENT-APPARATUS.
+
+The infinite carrier is retained. Full coherent input/output history,
+rather than pulse output alone, is the available causal reconstruction
+data: equal pulse histories can hide different physical-cut currents.
+No exact finite-dimensional time-independent linear realization on
+all histories is supplied by this theorem. The full-domain
+linear-memory exclusions do not exclude restricted preparations,
+finite horizons, approximation or other representations. Their
+separate reconstruction and no-go scope is recorded in the
+[public history/interface analysis, Section 6](../notes/C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N/PROOF_CURRENT_RECORD_INTERFACE.md);
+it is not an extra assumption of the quantitative packet bound.
+The [public analytical package](../notes/C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N/README.md)
+and the unchanged minimal reproduction expose the full source
+formulas and checks for audit. The argument above states the analytical
+core and its mathematical premises explicitly.
 
 ## 16. p = 5 and the wall
 

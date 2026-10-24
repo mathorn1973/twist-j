@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v104. Normative authority and activation
+**Release identity:** Public Canon v105. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v104 also declares a discrete architecture. It does not
+Public Canon v105 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -40,6 +40,15 @@ give the selected coherent reading and a funded integer pair source.
 CONTACT-W-BOUND-PAIR-RESPONSE supplies finite prepared packets with a
 proved limiting inertial response under the conserving spectral source.
 The full definitions and proofs distinguish these carriers and operations.
+
+HOMOGENEOUS-CAPTURE-CURRENT-RECORD joins capture, complete physical-cut
+charge current and coherent receiver recording in one specified homogeneous
+model. For its fixed incoming packet the joint asymptotic probability is
+greater than 2/10^28, with old memory transferred to the outgoing carrier.
+Native occupancy charge and the safe-window spectral energy remain distinct.
+Finite physical preparation, selective detection, quantitative retention and
+empirical occurrence remain open; the conditional one-shot coin construction
+is not a premise or repeated-gate implementation of this theorem.
 
 The native zero predicate now has an exact comparison with the declared
 integer field shell: the piston swap carries it to the shell residue
@@ -422,6 +431,7 @@ The stable orientation claims are generated from the registry:
 - JM-POSITIVE-REFERENCED-READING [T]: L1 positive outer record and mass-projector reconstruction up to sign; homogeneous scale obstruction; injective affine-reference reading on the specified S and G
 - JM-FUNDED-INTEGER-PAIR-SOURCE [T]: L1 Cartesian integer cell source with declared positive integer resource functional, finite fixed-budget levels, funded reversible dynamics and port-independent sharp K-round bank
 - CONTACT-W-BOUND-PAIR-RESPONSE [T]: For the explicitly specified contact-after-streaming W with mu=2 and g=2pi/5, the relative compact state at center momentum zero continues to a simple exponentially localized branch exp[-i Omega(P)] with Omega even and Omega''(0)=sqrt(16phi+7)/20. Finite unprojected binomial packets, with q=5^j, N=q^4, eta=2atan(1/q) and averaging time T=q, have actual mean displacement divided by the actual principal-momentum impulse tending to this curvature. Two moving copies with the specified continuous energy source of capacity q+8pi retain opposite responses and relative limit twice the curvature, while conserving the selected additive energy and total circular momentum. The first post-kick tick has zero bare-kick velocity; the claim is the stated averaged limit. No global closed contact-dispersion polynomial, positive-energy massless-particle interpretation, physical species, native carrier bridge, finite-dimensional source or intrinsic stopping clock is asserted.
+- HOMOGENEOUS-CAPTURE-CURRENT-RECORD [T]: L1 specified homogeneous one-pair one-carrier one-receiver occupancy model: a normalized relative-ac incoming packet has zero free bound weight and joint asymptotic capture-and-record probability p_full>=p_window>2/10^28; the same law intertwines the complete native physical-cut charge current and coherently transfers arbitrary encoded old-memory/reference correlations, with unaliased spectral energy only on the stated one-carrier safe window.
 
 <!-- END GENERATED CORE CLAIMS -->
 Time is a counter. Space is read through commutators. The modulus and

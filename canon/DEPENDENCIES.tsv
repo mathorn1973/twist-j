@@ -1156,3 +1156,6 @@ SCALAR-LAPSE-FORCED-AFFINE-SHELL	SCALAR-LAPSE-QUARTIC-STENCIL-CLOSURE	REQUIRES	T
 FIVE-PHASE-THREE-REFERENCE-RETAINED-RECORD	CONTACT-RECORD	REQUIRES	The explicit definitions and proved result cited in the complete Canon proof.
 COMMON-HISTORY-FUNDED-AREA-RECEIVER	DEF-ARCHITECTURE	REQUIRES	The explicit definitions and proved result cited in the complete Canon proof.
 FIVE-SITE-LOCAL-CONTINUITY-CONSTRAINT	INTEGER-JOINT-ACTION-ENERGY	REQUIRES	The explicit definitions and proved result cited in the complete Canon proof.
+HOMOGENEOUS-CAPTURE-CURRENT-RECORD	CONTACT-W-SPECTRAL-READING	REQUIRES	The fixed branch of the object spectral logarithm in the one-carrier reference generator.
+HOMOGENEOUS-CAPTURE-CURRENT-RECORD	CONTACT-W-BOUND-PAIR-RESPONSE	REQUIRES	The infinite relative-walk bound branch; the new theorem supplies its quantitative continuation and uses a different incoming packet and homogeneous source.
+HOMOGENEOUS-CAPTURE-CURRENT-RECORD	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	Physical preparation, selective finite detector, quantitative retention and occurrence are not implied by the supplied L1 asymptotic model; this open owner is not a premise of the mathematical theorem.
