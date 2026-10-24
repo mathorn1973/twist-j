@@ -1,0 +1,14 @@
+epsilon=1/4; N=0; L_N in [442144934508,442144934509]/1000000000000
+epsilon=1/4; N=4; L_N in [574428336006,574428336007]/1000000000000
+epsilon=1/4; N=8; L_N in [593159495461,593159495462]/1000000000000
+epsilon=1/4; N=16; L_N in [602913453309,602913453310]/1000000000000
+epsilon=1/4; N=32; L_N in [608193475644,608193475645]/1000000000000
+epsilon=1/16; N=0; L_N in [649629624472,649629624473]/1000000000000
+epsilon=1/16; N=4; L_N in [846886792419,846886792420]/1000000000000
+epsilon=1/16; N=8; L_N in [865126082363,865126082364]/1000000000000
+epsilon=1/16; N=16; L_N in [872724018346,872724018347]/1000000000000
+epsilon=1/16; N=32; L_N in [875502085954,875502085955]/1000000000000
+PASS: 5566 exact/rigorous-enclosure checks; 24 groups
+An all-N growing upper bound is proved; no uniform finite bound for the full norm.
+All finite moment enclosures have rigorously bounded real-zeta tails. Degree tail remains open.
+No independent analytic review or second architecture; external Mertens input not reverified.
