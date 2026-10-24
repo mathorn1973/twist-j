@@ -1,0 +1,15 @@
+PASS source_ring basis=8 residue_places=2,3
+PASS coin_grams squared_gains=25,625
+PASS residue_preparation pairs=25 places=2
+PASS local_raw_reduction fields=8 macrosteps=4 branches=2
+PASS native_antecedents exhaustive_heads=15625
+PASS native_chart labels=3125 times=20
+PASS native_local_factor fields=8 microscopic_ticks=15 branches=2
+PASS residual_fronts times=1..125 frobenius_profiles=1,5,25,125
+PASS laurent_frobenius m=0..8 factor_and_nonimage
+PASS formal_inverse prefix_v=1..32 product_through_v=31
+PASS characteristic_zero coefficient_b5_u3_v0=25600
+PASS bilateral_kernel pointwise_box=-4..4 nonzero_values=81
+PASS normalization fixed_initial_norm_steps=0..12 raw_residue_separation
+PASS localized_amplitude_inverse rational_example
+PASS P-SOURCE-PHASE-NATIVE-1 exact_finite_audit
