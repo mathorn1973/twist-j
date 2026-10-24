@@ -25,11 +25,11 @@ class ArchitectureMapReportTests(unittest.TestCase):
 
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v104 adds46 L1 theorems:45 inline and one two-architecture rank certificate.
-        self.assertEqual(self.report.claims, 576)
+        # v105 adds one connected L1 theorem with two-architecture evidence.
+        self.assertEqual(self.report.claims, 577)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 433},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 434},
         )
         self.assertEqual(
             self.report.evidence_counts,
@@ -37,7 +37,7 @@ class ArchitectureMapReportTests(unittest.TestCase):
                 "none": 159,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 377,
+                "two-architecture": 378,
             },
         )
         self.assertFalse(self.report.count_mismatches)
