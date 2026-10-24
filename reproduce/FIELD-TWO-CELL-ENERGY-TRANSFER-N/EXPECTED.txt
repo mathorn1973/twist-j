@@ -1,0 +1,5 @@
+IMPLEMENTATION primary
+PRIMARY PASS: two-cell transfer; exact work, inverse and pointwise Gauss defect
+IMPLEMENTATION challenger
+CHALLENGER PASS: independent transfer audit; occupied channel and disabled control
+TRANSFER PASS: NON-CANONICAL L1; source pays receiver; witnesses recur in 5
