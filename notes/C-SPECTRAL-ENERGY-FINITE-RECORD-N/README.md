@@ -6,11 +6,13 @@ Public reservation: [#1767](https://github.com/mathorn1973/twist-j/issues/1767).
 
 The unchanged capture contact cannot conserve the original object's
 spectral energy plus any energy assigned only to the carrier. This note
-proves that exact obstruction, constructs a compensated interface with a
-continuous battery, and gives a reversible archive writer with a finite
-retention duration chosen before evolution. The two positive constructions
-have different resource contracts; neither silently upgrades the finite
-thermal apparatus to an implementation of the original spectral energy.
+proves that exact obstruction, constructs compensated interfaces with
+continuous and finite batteries, and gives a reversible archive writer
+with a finite retention duration chosen before evolution. A finite
+abstract model now realizes the fixed source/output contract with an
+explicit, time-uniform tolerance for the original energy. Exact spectral
+conservation, rounded conservation and the predecessor's onsite account
+remain separate contracts.
 
 ## Results and their scopes
 
@@ -21,6 +23,8 @@ thermal apparatus to an implementation of the original spectral energy.
 | Spectral compensation | On the actual object/carrier, a complete total-energy-fiber unitary conserves `Q+B`, with joint reference-uniform error at most `pi*Delta/(L_b-2*Delta)`. | The battery has finite energy capacity but infinite Hilbert dimension, supplied coherence and global couplings. |
 | Finite archive after #1766 | A full-space controlled memory/archive exchange, pointer and 65-state clock retain the accepted record throughout any prescribed interval `[T_h,2*T_h]`; incomplete-history weight is below `2^-120`. | Added ready clock/pointer, identical archive spectrum, and potentially global interactions. The energy is #1766's onsite account. |
 | Combined enlarged model | The complete original source/filter word, its spectral compensation and archive writer share one positive static Hamiltonian. With battery error `2^-100`, accepted weight exceeds `1/20000` and archive/reference error is below `20000*2^-100`. | This uses the original infinite spatial carrier and the continuous battery; it does not inherit #1766's thermal preparation or locality. |
+| Finite battery | A finite coherent energy ladder implements any specified unitary with joint reference-uniform error at most `2m sin(pi/(2L))`. It exactly conserves rounded energy and keeps the original energy drift at most `d` for all times. | Original-energy conservation is approximate. Spectral bins and couplings may be global; the coherent packet is supplied. |
+| Finite source-family model | A spectrally defined finite subspace contains the fixed input and complete ideal endpoint for every finite-register/reference input. Its finite unitary extension, battery and archive retain the accepted bounds above at arbitrary prescribed energy tolerance `d>0`. | This is an abstract finite encoding, not a compact spatial realization or an exact intertwiner of all original dynamics. Local coupling and preparation of its spectral states remain open. |
 | Finite-carrier obstruction | The compact source's vectors `a,W a,W^2 a,...` are linearly independent. No finite invariant carrier exactly intertwines its full spectral dynamics. | A finite word on a bounded reachable support, or a quantified approximate energy interface, is not excluded. |
 
 The record is readable from a fixed archive and pointer, without including
@@ -29,7 +33,7 @@ to the original memory rather than being erased. Arbitrary admitted
 logical/reference correlations are retained. All failures and old thermal
 defects remain in the complete laws.
 
-Both history constructions have their completion peak at `3*T_h/2` and
+The history constructions have their completion peak at `3*T_h/2` and
 undo the new record at `3*T_h`. Increasing the chosen window at fixed
 clock size also changes interaction strength and latency. There is no
 permanent halt, free reset or claim of longer storage at fixed coupling.
@@ -45,6 +49,13 @@ permanent halt, free reset or claim of longer storage at fixed coupling.
 - [INTERFACE.md](INTERFACE.md): a separate enlarged model combining
   original object/carrier spectral energy and finite-time recording,
   with its full source, capacity, normalization and free-phase account.
+- [FINITE_BATTERY.md](FINITE_BATTERY.md): complete finite ladder, channel
+  error, all-time energy tolerance, exact-conservation counterexample
+  and explicit limits on thermal or bounded-source preparation of coherence.
+- [FINITE_MODEL.md](FINITE_MODEL.md): finite source-family spectral span,
+  dimension bound, original-energy comparison, complete archive law and
+  its prescribed record window. Its original band test is a finite effect,
+  not automatically a finite spectral projector.
 - [VALIDATION.md](VALIDATION.md): immutable inputs, proof hashes,
   same-session scrutiny, actual repository checks and review obligations.
 
@@ -73,8 +84,10 @@ cross-reading do not constitute independent mathematical acceptance.
 No Canon, registry, predecessor, workflow or threshold is changed.
 
 The simultaneous finite-dimensional, spatially local, thermally prepared
-realization of the original spectral energy with this record is still
-open. Material detector coupling, postmeasurement continuation, SI
+realization with exact original spectral-energy conservation is still
+open. The new finite model supplies dimension and quantitative energy
+accuracy for a fixed source family; it does not supply locality or thermal
+readiness. Material detector coupling, postmeasurement continuation, SI
 calibration, preparation of the added resources, reset and individual
 event occurrence also remain separate obligations. Existence of the
 declared extensions does not require uniqueness or derivation from J.
