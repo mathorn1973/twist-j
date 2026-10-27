@@ -51,6 +51,18 @@ separate reading and occurrence premises.
 ## 2. A genuine native word is not an actual-U schedule
 
 The public native generators act on `x=(p1,p4,p1p,p4p,q,r)` in F5^6.
+Their complete affine definitions, with every component taken modulo five,
+are
+
+```text
+c=(2,1,3,4,1,1),       v=(0,0,0,0,1,0),
+d(x)=c-x,             e(x)=c+v-x.
+```
+
+They are the definitions in the immutable [native verifier source][defs],
+which is read here as source and is not re-executed. Direct substitution
+gives `(e o d)(x)=x+v`, hence `(e o d)^2(x)=x+2v` for every checkpoint.
+
 Canon section 2 gives `[d,e]=T_(0,0,0,0,3,0)`, with composition right to
 left. Consequently the reverse commutator gives the desired translation:
 
@@ -205,6 +217,7 @@ once its coherent interfaces are supplied. Its realization by unchanged U
 remains open under the complete contract above.
 
 [native-law]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L462
+[defs]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/probes/P-FIRED-COMMUTATOR-NOGO-1/verify.py#L28
 [commutators]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L501
 [port-boundary]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L6780
 [point-nogo]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L3225

@@ -263,6 +263,133 @@ This does not extend to unknown coherent superpositions of P_- and P_+;
 their different likelihood factors remain part of the instrument. On P_0
 the zero outcome is already deterministic and K_0=I.
 
+## 9. Reduced Hermitian determinant and record entanglement
+
+This section develops the author's determinant supplement to the first
+revision. It fixes the two individual Fourier modes, rather than treating
+each rank-two golden sector as a single complex coordinate. Let k!=l,
+let r_k=zeta^(2k), r_l=zeta^(2l), and take
+
+    psi=alpha f_k+beta f_l,    s=|alpha|^2+|beta|^2>0.
+
+Both K_j preserve this two-dimensional plane. In its ordered orthonormal
+basis put a=K_0 psi, b=K_1 psi and H(v)=v v^*. The reduced output is
+
+    Q=H(a)+H(b),     Tr Q=s.
+
+It is the carrier marginal of the coherent joint vector
+|0> a+|1> b, obtained by tracing the port. It is also the carrier marginal
+after dephasing that port record. The coherent joint state itself is pure;
+selecting either nonzero outcome gives a pure conditional carrier state.
+Thus these are three different states, not a pure global state acquiring
+a nonzero determinant merely because its record is retained.
+
+The two column vectors obey
+
+    det[a,b]=alpha beta (r_k-r_l)/2,
+    det Q=|alpha beta|^2 gamma_(k,l),
+    gamma_(k,l)=|r_k-r_l|^2/4.                              (JI-23)
+
+The first identity follows by subtracting
+(1+r_k)(1-r_l) and (1+r_l)(1-r_k) and dividing by four.
+The second is det([a,b][a,b]^*)=|det[a,b]|^2. Explicitly,
+
+    gamma_(k,l)=(5+sqrt5)/8  if k-l=+/-1 mod5,
+    gamma_(k,l)=(5-sqrt5)/8  if k-l=+/-2 mod5.              (JI-24)
+
+Indeed gamma=sin^2(2*pi*(k-l)/5); the two values follow from the exact
+cosines of 2*pi/5 and 4*pi/5. In particular the author's value
+(5+sqrt5)/8 is exact on span{f_1,f_2}, and on its conjugate span{f_4,f_3}.
+The other cross-sector choices span{f_1,f_3} and span{f_4,f_2} instead
+give (5-sqrt5)/8. Merely naming the two golden sectors does not fix it.
+
+In Hermitian coordinates Q=t I+x sigma_x+y sigma_y+z sigma_z,
+t=s/2 and det Q=t^2-x^2-y^2-z^2. Equations (JI-23)-(JI-24) imply
+
+    0 <= det Q/(Tr Q/2)^2
+       =4|alpha beta|^2 gamma_(k,l)/s^2
+       <=gamma_(k,l)<1.                                   (JI-25)
+
+The first inequality is strict exactly when alpha beta!=0. The output
+then lies in the interior of the positive Hermitian cone; a one-mode
+input stays on its boundary. The upper bound alone does not prove strict
+interiority. It additionally excludes the central matrix (s/2)I on this
+particular two-mode plane. Equality at the upper bound holds exactly when
+|alpha|=|beta|. Trace preservation does not identify that trace with a
+physical energy or supply a rest frame.
+
+For the normalized pure joint state on port C^2 tensor this mode plane,
+define its pure-state concurrence by C_ent=2|det[a,b]|/s. Thus
+
+    C_ent^2=4 det Q/s^2,
+    max C_ent=sqrt(gamma_(k,l))<1.                         (JI-26)
+
+This relation concerns the coherent premeasurement joint state. If the
+record is fully dephased, the joint state becomes the separable sum
+sum_j |j><j| tensor H(K_j psi)/s. Its carrier marginal Q/s is unchanged,
+but its entanglement is not the premeasurement concurrence. Therefore
+the reduced determinant alone does not certify entanglement of an
+arbitrary state that has the same classical record.
+
+### 9a. The full four-mode carrier has a different bound
+
+For any normalized psi in H, set c=<psi,R psi>. The general reduced
+carrier state has the form
+
+    Q=(|psi><psi|+|R psi><R psi|)/2.
+
+It has rank at most two. Its possibly nonzero eigenvalues, including a
+zero in the rank-one case, are (1+|c|)/2 and (1-|c|)/2. One way to see
+this is to form the two-column matrix [psi,R psi]/sqrt(2); its Gram
+matrix is (1/2)[[1,c],[conjugate(c),1]]. Hence the product of these two
+eigenvalues equals the determinant of the normalized port marginal:
+
+    det rho_port=(1-|c|^2)/4.                              (JI-27)
+
+When the carrier is B of dimension four, its ordinary 4-by-4 determinant
+is always zero. It must not be substituted for this two-eigenvalue
+product, nor identified with a fixed two-dimensional Hermitian reading.
+The rank-independent notation is e_2(Q)=((Tr Q)^2-Tr(Q^2))/2; here it
+equals det rho_port, including zero at rank one. It is not the product
+of only the nonzero eigenvalues when the rank drops.
+
+For the pure input of this section the visibility from (JI-21) therefore
+obeys the exact relation 4 det rho_port+visibility^2=1. This is general
+two-path algebra, not a special selection law of J. For a mixed input rho,
+the record determinant remains (1-|Tr(rho R)|^2)/4 but no longer certifies
+record-carrier entanglement by itself. For example rho=I_B/4 gives
+det rho_port=15/64, while the joint output is the separable mixture
+(1/4) sum_(k=1)^4 |chi_k><chi_k| tensor Pi_k, where
+|chi_k>=((1+r_k)|0>+(1-r_k)|1>)/2. A purification changes the relevant
+bipartition to record versus carrier plus reference.
+
+There is a simple exact balanced input achieving maximal record
+entanglement:
+
+    psi=(|0>-|1>)/sqrt(2),
+    R psi=(|2>-|3>)/sqrt(2),
+    <psi,R psi>=0.                                        (JI-28)
+
+Both vectors lie in B and are orthonormal. The two output vectors
+a=(psi+R psi)/2 and b=(psi-R psi)/2 are orthogonal, each with squared
+norm 1/2. Therefore rho_port=I_2/2, and the carrier marginal on B has
+spectrum (1/2,1/2,0,0). This refutes a carrier-wide claim that this contact
+never maximally entangles its record. The fixed two-mode bound (JI-26)
+remains correct and is not a bound on every state of B.
+
+Furthermore the pair f_1,f_4 lies entirely inside P_- and can already
+entangle the record: for nonzero alpha,beta, (JI-23) gives a positive
+determinant with gamma=(5-sqrt5)/8. Thus record entanglement detects
+different phases of R, not only occupation of both golden-modulus
+sectors. The statement 'both sectors iff timelike' is valid only after
+fixing one individual eigenmode from each sector and that two-dimensional
+Hermitian reading.
+
+This gives a precise conditional reduced-state determinant theorem. A
+physical identification with rest mass remains a proposed interpretation,
+not a newly registered H claim or a derived mass law. It supplies no
+native source, occurrence rule, dynamics, conservation law or SI units.
+
 The proven output is the complete declared two-path instrument, its field
 representation, history law and boundaries. No native coupling, physical
 event selection, phase control, free record reset, or identification with

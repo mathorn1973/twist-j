@@ -52,6 +52,31 @@ this package. The universal claims rest on the displayed algebraic proofs.
 Repository CI does not independently accept these proofs. A later proof
 review must assess every hypothesis and output at this exact scope.
 
+## Determinant follow-up
+
+After the first public revision 6b6faab0974b4d57734273d4c80413c9197652ca,
+the author supplied a determinant and entanglement observation with a
+reported exact one-architecture calculation. That report is motivation;
+no source code, stdout or scientific run record from it is imported here.
+PROOF.md section 9 supplies a self-contained analytical derivation.
+
+The coefficient (5+sqrt5)/8 is retained for the explicitly fixed Fourier
+mode pair (1,2). The other cross-sector orientation gives (5-sqrt5)/8.
+The text distinguishes coherent joint output, dephased retained records,
+reduced carrier state, and postselected pure branches. On the full
+four-mode carrier a simple exact balanced input maximally entangles the
+port; its carrier determinant is zero and its rank-safe e_2 is 1/4.
+The strict two-mode cone interior requires both amplitudes to be nonzero.
+The fixed-mode bound is not promoted to a carrier-wide bound or mass law.
+
+The full affine definitions of d and e have also been added to NATIVE.md
+from the pinned existing verifier source; that verifier was not run.
+All new identities are established by the displayed formulas, with
+same-session exposed analytical review and no new scientific execution.
+Review of the exact follow-up diff returned PASS with no algebraic or
+scope blocker; the final separable-mixture wording was made explicit.
+This is an internal readback, not independent public acceptance.
+
 ## Repository checks
 
 The final PR records the exact published head, tree and public CI run.
@@ -65,7 +90,7 @@ Completed local results: POLICY PASS; CANON PASS v105 with 577 claims;
 LEDGER PASS with 641 items, 1160 dependencies, 577 evidence entries,
 1124 history entries, 26 gates and 7 programs; GATE CONTRACT PASS with
 26 gates. Documentary checks pass for five UTF-8/LF Markdown files,
-four local file links and four distinct immutable Git file targets.
+four local file links and five distinct immutable Git file targets.
 All five normative checksums and staged whitespace checks pass.
 
 Only the five Markdown files in this note directory are added. No source,

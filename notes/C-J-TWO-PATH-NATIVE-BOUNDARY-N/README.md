@@ -29,6 +29,8 @@ with p0=1; it cannot be silently omitted.
 - [PROOF.md](PROOF.md) gives the complete contact, all finite histories,
   reference-uniform equations, the golden likelihood update, no-click
   bound, nonselected channel and the limits of deterministic feedback.
+  Section 9 gives the mode-dependent reduced Hermitian determinant and
+  record entanglement, including a maximally entangled full-carrier input.
 - [INTEGER.md](INTEGER.md) retains every output on an explicit integer
   congruence lattice and counts one finite record bank. It also gives a
   supplied positive static generator for one complete stroke, with its
@@ -67,10 +69,16 @@ det(H(v)+H(w))=|v_1*w_2-v_2*w_1|^2.
 ```
 
 The second expression can be positive for independent spinors; the first
-remains rank at most one. Multiplying one spinor by 1+zeta5^2 does not
-create two independent Hermitian records. A physical mass reading and its
-dynamics would require separate hypotheses. The cited phrase about mass
-needing two is not treated as a proved general physical theorem here.
+remains rank at most one. The complete instrument can provide independent
+output vectors K0 psi and K1 psi. On the fixed mode plane span{f1,f2},
+their reduced Hermitian sum has determinant
+|alpha beta|^2 (5+sqrt5)/8. This is the author's follow-up observation,
+proved with its mode and reduction hypotheses in PROOF.md section 9.
+Other mode pairs can give (5-sqrt5)/8; the full four-mode carrier can
+maximally entangle the port. The coherent joint state, a dephased retained
+record and the reduced carrier state must be distinguished. A physical
+mass reading and its dynamics still require separate hypotheses. The
+phrase about mass needing two is not a proved general physical theorem.
 
 In current Canon, J-PROJECTIONS and J-MODULUS-CHORD are exact algebraic T
 claims. Modulus as gravity/scale and argument as electromagnetism/phase
