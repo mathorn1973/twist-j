@@ -233,6 +233,18 @@ It awaits independent mathematical acceptance and contributes no T claim
 here. Its $H_M$ is not identified with this $H_S+H_B$. PRs #1799,
 #1800 and #1801 remain outside this proposed fold.
 
+Concurrent follow-up [#1804 at 181b8b0d][finite-source] proposes a finite
+coherent source and full-space conserving lift for this same 16-dimensional
+contact sector. For M>=1 its supplied product sine preparation has
+(M+4)^2 source levels and joint-vector error at most
+4 sin(pi/(2(M+1))) <= 2pi/(M+1), uniformly over inputs and passive references.
+A positive static controller implements the lift at one nominated time;
+the additive conserved account remains distinct from the complete time
+generator. Its strict coincidence-support boundary and coherent-donor
+requirements are separately scoped. Public acceptance, physical source
+preparation, spatial realization and repeated operation are not supplied
+by this synthesis. This follow-up adds no proposed registry row.
+
 No spatially local battery compilation, native-U derivation, phase/sine
 energy selection, particle identity, physical mass, SI calibration,
 occurrence law or physical preparation follows from these proposals.
@@ -242,3 +254,4 @@ occurrence law or physical preparation follows from these proposals.
 [promo]: https://github.com/mathorn1973/twist-j/blob/6f8e8e93a3b459695262c50c2ccbd120cdeb7e99/notes/C-DIRAC-CONTACT-WORK-ACCOUNT-N/PROMO.md
 [comparison]: https://github.com/mathorn1973/twist-j/blob/da39ea38df90bbf594e90a00f0532964e4e1f041/notes/C-J-PHASE-ENERGY-COMPATIBILITY-N/CONTACT-KINEMATICS.md
 [rotor]: https://github.com/mathorn1973/twist-j/blob/e4d165c5c5471ea5746013f7f8f5c394512f9884/notes/C-DIRAC-FINITE-ROTOR-CLOCK-N/README.md
+[finite-source]: https://github.com/mathorn1973/twist-j/blob/181b8b0dd98e0a697311fb83ab61493c94fd9e20/notes/C-DIRAC-FINITE-COHERENT-SOURCE-N/README.md

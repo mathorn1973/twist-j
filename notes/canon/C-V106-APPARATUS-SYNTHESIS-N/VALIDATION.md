@@ -16,7 +16,7 @@ All five normative SHA-256 checks pass. Required architecture, aggregate
 and publication results of that authority were read back successfully.
 
 The explicit remote-head and open-issue scans found no competing v106
-synthesis before reservation. The 23-row source table binds the selected
+synthesis before reservation. The 24-row source table binds the selected
 and adjacent sources to immutable Git commits. Live public review records,
 not stale pending text in source files, supply the recorded dispositions.
 The five core source groups retain scoped conditional acceptance. Four
@@ -28,6 +28,11 @@ The earlier reviewed FINITE_BATTERY.md bytes at d138517 are unchanged at
 the selected 811daddc source head, checked by an exact Git path comparison.
 The original source PRs, reviews, verifiers and scientific results have
 not been edited. No sealed source is re-run by this synthesis.
+
+Concurrent PR #1804 was read back at 181b8b0dd98e0a697311fb83ab61493c94fd9e20
+after the first synthesis commit. Its public review list was empty at
+this intake. It is recorded only as a pending contact-source follow-up;
+the eight candidate claims and their accepted core sources are unchanged.
 
 ## Authorship and scope review
 
@@ -64,6 +69,12 @@ wording correction makes clear that R1 has a finite-dimensional battery,
 not necessarily a finite-dimensional system. No external acceptance of
 this rewritten insertion is claimed.
 
+The same-session reviewer also checked the subsequent five-file #1804
+intake against its pinned README and returned a limited PASS with no
+blocking finding. This checked the pending status, stated source bound and
+carrier/locality/repetition boundaries, not the new source's full proofs
+or its independent mathematical acceptance.
+
 ## Verification scope
 
 Only repository-integrity and documentary checks are performed here:
@@ -82,7 +93,7 @@ Completed local checks before publication:
 - `check_gate_contract.py`: PASS, 26 gates.
 - All five normative SHA-256 checks: PASS.
 - Documentary check: eight unique noncolliding six-column candidate rows,
-  23 source pins, 13 local file links and 23 pinned Git file targets: PASS.
+  24 source pins, 13 local file links and 24 pinned Git file targets: PASS.
 - UTF-8/LF, final newline, trailing whitespace and staged diff checks: PASS.
 
 These checks do not execute the source scientific verifiers. The PR will

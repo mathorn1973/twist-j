@@ -141,6 +141,17 @@ original Q remains the separate requirement in Section 2. The single-walk
 rotor model #1795 and the two-walk sharp-store model #1793 are not already
 such a factorization on a common carrier.
 
+The concurrent #1804 candidate, pinned in SOURCE-ACCEPTANCE.tsv, now gives
+a finite coherent conserving lift on the same contact sector as #1793,
+with an explicit approximation bound and a positive static controller for
+one nominated time. It remains pending public acceptance. Its spectral
+couplings and coherent preparation are supplied; no local repeated
+realization on the original-port carrier follows. Its strict
+coincidence-support obstruction is a concrete constraint on that narrow
+interaction class, not an exclusion of every finite-range construction.
+Thus it advances the contact-source interface without filling the local
+G_j or shared-carrier requirements above.
+
 ## 5. Decisive failure witnesses
 
 The proposed common-law claim fails at its frozen scope if any admitted

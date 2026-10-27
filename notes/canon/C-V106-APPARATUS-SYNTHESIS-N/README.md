@@ -78,6 +78,13 @@ to the proposed T rows. The source-energy approximations #1781/#1783 and
 the full-step/finite-prefix proposals #1772/#1774 retain their own pending
 dispositions.
 
+The concurrent #1804 follow-up supplies a candidate finite coherent source
+for the same contact sector as #1793, with exact conservation of its
+additive account and controlled implementation error. It also isolates a
+strict coincidence-support obstruction. Its source preparation and spectral
+couplings remain supplied, and independent public acceptance is pending.
+It enters the source table as a follow-up only, not a ninth proposed T row.
+
 ## What this synthesis does not imply
 
 No occurrence law, physical collapse, native Born sampler, complete QDD
