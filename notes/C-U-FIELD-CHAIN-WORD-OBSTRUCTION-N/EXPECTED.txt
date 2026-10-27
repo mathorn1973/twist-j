@@ -1,0 +1,6 @@
+PASS exact field algebra and energy certificates
+PASS native boundary and all 25 residue orbits
+PASS legal phase control and outside-alphabet boundary control
+PASS complete occupied chains: 20 seeds, 12 contexts, 5760 steps
+PASS equal-energy source histories and full inverse/account checks
+PASS different-energy receiver control: 2 versus 14
