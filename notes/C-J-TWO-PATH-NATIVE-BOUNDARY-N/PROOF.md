@@ -844,8 +844,9 @@ The length-four signed counts are 341 for r+2 and 682 for r-2 by
 external run still needs its own verifier and execution evidence.
 
 The actually occupied sheet is a different convention. For n>=1 every
-origin-zero X14 trajectory has z_n=4+2 theta_(n-1). A four-tick return of its pistons
-is nonzero exactly for the five-letter factors, starting at n-1,
+origin-zero X14 trajectory has z_n=4+2 theta_(n-1). A four-tick window
+returns all pistons on that entire occupied sheet and is a nonzero pure
+fibre translation exactly for the five-letter factors starting at n-1,
 
     00110, 01100, 10011, 11001.
 
@@ -855,9 +856,12 @@ Each factor has density 1/12. The total return-window density is 1/3,
 with r+2 at odd n and r-2 at even n, each of density 1/6. The qualifying starts
 occupying X_1 and those occupying X_4 each contribute density 1/6 among
 all counters; conditioned on either occupied sheet, the density is 1/3.
-There are no identity four-tick returns under this occupied-sheet
-convention. These arithmetic window densities do not supply fresh ready
-states, nonoverlapping uses, resets, stored outputs or a contact rate.
+There are no identity four-tick whole-sheet returns under this
+occupied-sheet convention. This does not classify every pointwise piston
+return of a special trajectory: some individual piston configurations
+also return while the trace sheet changes. These arithmetic window
+densities do not supply fresh ready states, nonoverlapping uses, resets,
+stored outputs or a contact rate.
 
 For the separately declared contact, the r shifts +2 and -2 give the
 same effects (2I+/-[C_r^2+C_r^(-2)])/4. Their phase amplitudes can differ;

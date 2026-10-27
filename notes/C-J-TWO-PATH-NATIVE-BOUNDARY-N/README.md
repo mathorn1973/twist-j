@@ -115,10 +115,12 @@ supplied anew at each start, four ticks is the minimum nonzero whole-sheet
 fibre translation, and its nonzero-window density is 1/4. Densities at
 lengths six and eight are 11/24 and 1/2. Exact dyadic formulas reproduce
 the reported 4096-start counts 1023, 1876 and 2049 analytically. On the
-actually occupied sheet of an uninterrupted X14 trajectory, the four-tick
-nonzero-window density is instead 1/3. PROOF.md section 14 separates these
-source conventions and the overlapping movement windows from prepared
-contacts, resets and physical outcome probabilities.
+actually occupied sheet of an uninterrupted X14 trajectory, the density
+of nonzero four-tick returns valid on that entire sheet is instead 1/3.
+This does not count every pointwise piston return of a special trajectory.
+PROOF.md section 14 separates these source conventions and the overlapping
+movement windows from prepared contacts, resets and physical outcome
+probabilities.
 
 ## Three interpretation corrections
 

@@ -446,10 +446,13 @@ z hodinové rekurence, bez dalšího výčtu:
 
 Jinou otázkou je jedna nepřerušená skutečná dráha. Na ní vstupní
 list znovu nevolíme: od prvního kroku platí
-zₙ=4+2θₙ₋₁ modulo pět. Nenulové čtyřtikové návraty pak mají
-limitní četnost 1/3. Oba směry posunu mají stejnou limitní četnost 1/6.
-Předchozí čtvrtina a tato třetina si neodporují; počítají
-začátky s odlišně určeným vstupním listem.
+zₙ=4+2θₙ₋₁ modulo pět. Okna, která vracejí písty na celém právě
+obsazeném listu a dávají nenulový posun, mají limitní četnost 1/3.
+Oba směry posunu mají stejnou limitní četnost 1/6. Nejde o soupis
+všech bodových návratů pístů na každé jednotlivé dráze. Zvláštní
+pístové konfigurace se mohou vracet i při změně listu.
+Předchozí čtvrtina a tato třetina počítají začátky s odlišně
+určeným vstupním listem, vždy s požadavkem návratu na celém listu.
 
 Obě orientace čtyřtikového posunu dávají v dodaném dvoucestném
 kontaktu stejné váhy výstupů. Fázové amplitudy se lišit mohou.
