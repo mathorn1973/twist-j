@@ -1,0 +1,141 @@
+{
+  "status": "NON-CANONICAL supporting local evidence; not a public gate",
+  "date": "2026-10-06",
+  "runtime_dependency": false,
+  "sources": [
+    {
+      "source": "q-holonomy-20261006",
+      "manifest_entries_checked": 15,
+      "frozen_inputs_checked": 6,
+      "pins": [
+        {
+          "file": "PREREG.md",
+          "bytes": 4243,
+          "sha256": "77f1d5b57cc2fc6b81c84c6f3d625c8594c5c9e0e913181bbfbd7c48602c18ec"
+        },
+        {
+          "file": "FREEZE.json",
+          "bytes": 1107,
+          "sha256": "e8f79dbc4dbfbaafca27d6e019526c0797c6356248ae42df9753c0cb9eefbd3e"
+        },
+        {
+          "file": "ARTIFACT_SHA256SUMS.json",
+          "bytes": 2152,
+          "sha256": "73fe20a8ea7237258c69222d864c9634f1fcb26961e8510274d97baae4f463ed"
+        },
+        {
+          "file": "RUN.json",
+          "bytes": 1354,
+          "sha256": "f2df021ec2a80b4219b129d8a7baa42341f3fdf3ac971ca679387afd1f913f7f"
+        },
+        {
+          "file": "REPORT.md",
+          "bytes": 15323,
+          "sha256": "079fdb2418b5e5d1a3968762f536ef4fd41a79c0b78893206841f813cfeb2666"
+        }
+      ]
+    },
+    {
+      "source": "q-readout-20261006",
+      "manifest_entries_checked": 9,
+      "frozen_inputs_checked": 7,
+      "pins": [
+        {
+          "file": "PREREG.md",
+          "bytes": 6404,
+          "sha256": "9c68ef48139eb9e7b579e81acdb7f1a8640b2316b03bd444a2f5fecd9ac8be5a"
+        },
+        {
+          "file": "FREEZE.json",
+          "bytes": 1273,
+          "sha256": "716de487ef8f443837f5cfbe3bd3a9ba7abb866d21b02340fce928013a504618"
+        },
+        {
+          "file": "ARTIFACT_SHA256SUMS.json",
+          "bytes": 1262,
+          "sha256": "c208388694b40bb65ca9290546c81bfce824d94681b4746e699360dfa8a49c90"
+        },
+        {
+          "file": "RUN.json",
+          "bytes": 745,
+          "sha256": "ee9026db21a505383175fb9ac334c34567a19553cbd4eda37bf18f27622349bb"
+        },
+        {
+          "file": "REPORT.md",
+          "bytes": 17496,
+          "sha256": "b3e7b3bf491ae6d7e82d65f6d77e40b35c9efcd00deb1576448a9312a9d75305"
+        }
+      ]
+    },
+    {
+      "source": "two-contact-records-20261006",
+      "manifest_entries_checked": 15,
+      "frozen_inputs_checked": 7,
+      "pins": [
+        {
+          "file": "PREREG.md",
+          "bytes": 4640,
+          "sha256": "1b1fbd4727598ace95bafbd3cb6901608387f9cac08b6edc41e642e36d2a4d3e"
+        },
+        {
+          "file": "FREEZE.json",
+          "bytes": 1258,
+          "sha256": "d4f306a7d4f9a4e256f6ae1b8315757aef1d068c6471ec0c8221d156555a2b48"
+        },
+        {
+          "file": "ARTIFACT_SHA256SUMS.json",
+          "bytes": 2422,
+          "sha256": "10f8caf4aac4371b9d27e6dae3b47bcdd703c1891aa86294b81f4d49ce3a79e7"
+        },
+        {
+          "file": "RUN.json",
+          "bytes": 1390,
+          "sha256": "e3825dc443c40e20968d62bc05e5b75e21ee8a6a4af84ba00aab960f60db57d3"
+        },
+        {
+          "file": "REPORT.md",
+          "bytes": 10896,
+          "sha256": "46b4ba85d2e93f381db83497d6a14ee8ca108862c176fbbd97375f45c4f94688"
+        }
+      ]
+    },
+    {
+      "source": "square-readout-20261006",
+      "manifest_entries_checked": 14,
+      "frozen_inputs_checked": 10,
+      "pins": [
+        {
+          "file": "PREREG.md",
+          "bytes": 4803,
+          "sha256": "f684d1b5f502fd7658a842eb084673c5aaaf601916e917015be5c08f1502998e"
+        },
+        {
+          "file": "FREEZE.json",
+          "bytes": 1860,
+          "sha256": "f60fdfd1383b85a33ab1863cc30519a5b28f38ca6db903e1d165aa36a1410eb7"
+        },
+        {
+          "file": "ARTIFACT_SHA256SUMS.json",
+          "bytes": 2300,
+          "sha256": "4987902448a18901f0c93650eec409aacb1a0251bff127769979269c9565e038"
+        },
+        {
+          "file": "RUN.json",
+          "bytes": 1798,
+          "sha256": "3cbdbc90e46e420286cdf9af17213e3612121ad794d35906cb487fa797321489"
+        },
+        {
+          "file": "ADDENDUM.md",
+          "bytes": 8987,
+          "sha256": "c5f04275d99fc6fa1c1b621bcc2c23c1e9a56ebd449cc9aa38f46739d4af0d27"
+        }
+      ]
+    }
+  ],
+  "scope_notes": {
+    "q-holonomy-20261006": "781250 piston/bit inputs with symbolic affine fibres; 7031250 word/inverse/sign checks, broader scope than the selected K contract.",
+    "q-readout-20261006": "Finite reader/ancilla proof and audit conditional on the K endpoint contract, not another literal K enumeration.",
+    "two-contact-records-20261006": "3125000 literal compositions and inverses; fibre tables represent1953125000 full cases, not that many separate scalar runs;40000 supplementary scalar cases.",
+    "square-readout-20261006": "28125000 prefix boundaries and703125000 local table square checks;40000 supplementary scalar cases; same local Windows AMD64 architecture."
+  }
+}
