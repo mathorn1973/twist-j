@@ -1,0 +1,15 @@
+P-BOUND-PAIR-CAPTURE-MOMENTUM-1
+layer=L1; arithmetic=exact rational intervals; absolute_rate=not_evaluated
+delta=1/1000; energy_halfwidth=1/1000; reference_probability=P_win(0)
+p=0/1 ratio=[1/1,1/1]
+p=1/10 ratio=[249529/250000,199627/200000]
+p=1/5 ratio=[198489/200000,198501/200000]
+p=3/10 ratio=[982903/1000000,196607/200000]
+p=2/5 ratio=[484677/500000,969587/1000000]
+p=1/2 ratio=[951593/1000000,475981/500000]
+p=3/5 ratio=[929341/1000000,232471/250000]
+p=7/10 ratio=[451113/500000,180597/200000]
+p=4/5 ratio=[108719/125000,870779/1000000]
+p=9/10 ratio=[831259/1000000,832617/1000000]
+p=999/1000 ratio=[157267/200000,788103/1000000]
+PASS checks=86; centers=11; crosschecks=Schur_form_and_evenness
