@@ -13,7 +13,10 @@ All matrix entries are rational. At the fixed coupling `g = 1/4`, the
 continued bright resolvent has one simple resonance in `|z - 10| < 1/2` and
 its width obeys the exact bounds `3/32 < Gamma < 7/32`. The bright state has
 no bound component, and its probability of occupying the paired-output
-sector tends to one. The decay is not exactly exponential.
+sector tends to one. Both outgoing coordinates leave every fixed bounded
+endpoint interval in probability; the proof constructs a normalized
+asymptotic free pair state with an `O(1/t)` norm remainder. The decay is
+not exactly exponential.
 
 The equations and proposed targets were published in
 [issue #1798](https://github.com/mathorn1973/twist-j/issues/1798). This is a

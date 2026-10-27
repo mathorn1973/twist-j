@@ -97,6 +97,25 @@ account, the positive-band-minimum obstruction, and the stated exclusions.
    The conclusion correctly concerns a true nonnegative band minimum,
    rather than a signed or offset Dirac crossing.
 
+9. **Actual joint spatial escape.** The subsequent analytical addition in
+   Section 7 was separately read and checked before finalization. The
+   endpoint densities are compact `W^(1,4/3)` functions; Young's inequality
+   places their convolution and its first two weak derivatives in `L2`.
+   Thus `rho` is compact `H^2`. Boundedness of the normalized Hilbert
+   transform on `H^2`, local reciprocal composition away from the nonzero
+   denominator, and a cutoff give compact `H^2` regularity of `w_b`.
+   Its zero traces and integrable second derivative justify twice
+   integrating by parts, yielding `a_b(t)=O(t^(-2))` and time
+   integrability. Duhamel's formula consequently constructs a normalized
+   asymptotic free paired state with norm remainder `O(1/t)`.
+   Half-line absolute continuity gives local escape for each fixed
+   finite-coordinate projection. Factorization of the free pair group
+   and approximation by finite sums of simple tensors extend this to
+   each bounded-coordinate strip. The norm remainder transfers the result
+   to the coupled evolution. Hence the joint probability of `x>R,y>R`
+   tends to one for every fixed finite `R`. No statistical independence,
+   individual trajectory, or uniform ballistic-speed conclusion is used.
+
 ## Limits retained in the accepted statement
 
 - The gapless outgoing channel is quadratic near zero; no Weyl, helicity,

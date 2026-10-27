@@ -507,11 +507,143 @@ total energy sum absolutely convergent on normalized states by
 Cauchy-Schwarz. Local energy densities need not individually be positive;
 the total operator satisfies (3).
 
-## 7. The boundary of the result
+## 7. Both outgoing coordinates escape every bounded endpoint interval
 
-Equations (17), (25), and (28)-(34) establish a genuine local two-output
-mechanism, stable states, complete bright emission, a resolvent resonance,
-and exact conservation accounts in one fixed positive Hamiltonian. They
+The paired-sector probability in (17) can be strengthened to actual
+spatial escape. The following argument also constructs the asymptotic
+free paired state; it uses no numerical estimate or scattering-theorem
+assumption.
+
+Extend `sigma` and `sigma2` by zero to the real line. Their endpoint
+behavior is a square root, and their weak first derivatives behave as
+the inverse square root. Consequently both belong to
+`W^(1,4/3)(R)`: raising the derivative singularity to the power `4/3`
+gives the integrable power `x^(-2/3)`. There is no endpoint delta term
+because the densities themselves vanish at the endpoints.
+
+Young's convolution inequality, with
+`1/(4/3) + 1/(4/3) = 1 + 1/2`, gives
+
+```text
+rho'' = sigma' * sigma2'       in L2(R),
+rho'  = sigma' * sigma2        in L2(R),
+rho   = sigma  * sigma2        in L2(R),                 (35)
+```
+
+up to the harmless translation by `3`. Thus `rho` is compactly supported
+and belongs to `H^2(R)`. The one-dimensional Sobolev embedding gives
+continuous first derivatives, so both `rho` and `rho'` vanish at the
+outer endpoints of their support.
+
+Write
+
+```text
+h(E) = Re m(E+i0) = PV integral rho(t)/(E-t) dt.
+```
+
+This is `pi` times the Hilbert transform with its usual `1/pi`
+normalization. The normalized Hilbert transform has a Fourier multiplier
+of absolute value one away from zero and commutes with weak derivatives.
+Therefore `h in H^2(R)`.
+On a bounded interval containing `[3,15]`, the real denominator
+
+```text
+B(E) = (E-10-3g^2 h(E))^2 + (3g^2 pi rho(E))^2
+```
+
+belongs to `H^2` and is bounded below by a positive constant, by Section 4
+and continuity. Products and smooth reciprocal composition preserve
+`H^2` on that interval: this follows directly by differentiating twice,
+using that functions and first derivatives in one-dimensional `H^2`
+are bounded, while their second derivatives are square integrable.
+Multiplying `1/B` by a smooth cutoff equal to one on `[3,15]` consequently
+shows that the zero-extended density
+
+```text
+w_b(E) = 3g^2 rho(E)/B(E)
+```
+
+is compactly supported in `H^2(R)`. In particular `w_b'' in L1(R)` by
+Cauchy-Schwarz on its compact support, and `w_b,w_b'` have zero endpoint
+traces. Twice integrating its Fourier integral by parts yields
+
+```text
+|a_b(t)| <= ||w_b''||_1 / t^2       for t != 0,
+|a_b(t)| <= 1,
+a_b in L1([0,infinity)).                                (36)
+```
+
+This polynomial bound is an asymptotic regularity consequence; it is
+neither an exponential approximation nor a fitted lifetime.
+
+For initial bright state, `c(t)=a_b(t)b`. Duhamel's formula applied to
+(27) is exactly
+
+```text
+psi(t) = -i beta exp(-itA)
+         integral_0^t exp(iAs) delta a_b(s) ds.
+```
+
+By (36), the Hilbert-space-valued integral
+
+```text
+chi = -i beta integral_0^infinity exp(iAs) delta a_b(s) ds
+```
+
+converges in norm, and
+
+```text
+||psi(t)-exp(-itA)chi||
+ <= beta integral_t^infinity |a_b(s)| ds = O(1/t).        (37)
+```
+
+Equation (17), norm preservation under `exp(-itA)`, and (37) imply
+`||chi||=1`.
+
+Let `P_R` project onto half-line sites `0,...,R`. For every half-line
+vector `f`, absolute continuity of `L` and the Riemann-Lebesgue lemma
+give
+
+```text
+||P_R exp(-itL) f|| -> 0.                                (38)
+```
+
+To see this without a uniform-in-state assumption, each matrix element
+`<n,exp(-itL)f>` is the Fourier transform of an integrable cross-spectral
+density, integrable by Cauchy-Schwarz. There are only `R+1` terms in the
+projected norm. The same argument applies to `2L`.
+
+The free pair group factorizes as
+`exp(-itA)=exp(-3it) exp(-itL) tensor exp(-2itL)`.
+Applying (38) first to finite sums of simple tensors and then using their
+norm density gives, for the particular normalized `chi` above,
+
+```text
+||(P_R tensor I) exp(-itA)chi|| -> 0,
+||(I tensor P_R) exp(-itA)chi|| -> 0.                     (39)
+```
+
+The approximation is uniform in time because all evolution and projection
+operators have norm at most one. Equation (37) transfers (39) to the
+actual coupled evolution. The probability of the union of the two strips
+is bounded by the sum of their probabilities. Hence, for every fixed
+finite `R`,
+
+```text
+Prob(pair with x>R and y>R at time t | initial b) -> 1.   (40)
+```
+
+Thus both excitations eventually leave every fixed bounded endpoint
+region in probability, while the specified residual core remains pinned.
+This claim concerns joint escape, not statistical independence of the
+two outgoing energy or position distributions.
+
+## 8. The boundary of the result
+
+Equations (17), (25), (28)-(34), and (40) establish a genuine local
+two-output mechanism, stable states, complete bright emission and joint
+escape, a resolvent resonance, and exact conservation accounts in one
+fixed positive Hamiltonian. They
 do not establish particle names, spin, statistics, a physical mass ratio,
 recoil, a native origin for the coupling, or physical occurrence.
 

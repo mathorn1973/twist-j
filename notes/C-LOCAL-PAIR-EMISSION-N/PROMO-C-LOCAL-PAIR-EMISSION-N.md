@@ -9,6 +9,9 @@ retaining a declared residual core. Its exact local resolvent continuation
 has a simple resonance with a strictly positive rigorously bounded width.
 The bright state has purely absolutely continuous spectral measure, so no
 undisclosed bound component prevents complete asymptotic emission.
+The two outgoing coordinates also jointly escape every fixed bounded
+endpoint interval in probability. A Fourier regularity argument gives
+an asymptotic free pair vector with norm remainder `O(1/t)`.
 
 At fixed `g = 1/4`, `3/32 < Gamma < 7/32`; these are model energy units,
 with `hbar = 1`. They are not seconds or a measured neutron width.
