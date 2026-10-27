@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v105. Normative authority and activation
+**Release identity:** Public Canon v106. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v105 also declares a discrete architecture. It does not
+Public Canon v106 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -333,6 +333,42 @@ in the chosen finite photon measure gives b>=25rho and chi>=rho. These common
 local floors do not give a positive b-25chi margin. The 26 live H/O owners
 remain open, including apparatus realization and the physical photon bridge.
 
+## Native movement and specified finite apparatuses
+
+U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS [T] classifies actual native return
+windows. A separately supplied X1 sheet gives nonzero densities 1/4,
+11/24 and 1/2 at lengths four, six and eight, with exact dyadic counts.
+On the whole actually occupied sheet the four-tick density is 1/3.
+Whole-sheet quantification excludes extra returns of special individual
+states. Overlapping movement windows are not independent prepared contacts.
+
+The seven coherent-W theorems give exact Clifford identities, spatial
+propagation, localized amplitude closure, a specified native residue factor
+and normalized spectral-energy conservation. They distinguish raw O,
+amplitudes O[1/5] and F5 residues. The factor uses an additional three-tick
+intercell coupling. Scalar finite-support injectivity is not injectivity
+of the entire four-channel reduction or a faithful residue realization
+of the Hilbert-space energy.
+
+ACTIVE-ISOSPECTRAL-RECORD [T] constructs two active sources with the same
+complete spectral distribution and different three-step receiver reading.
+THERMAL-ORIGINAL-PORT-APPARATUS and COMPACT-ACTIVE-RECORD-APPARATUS [T]
+give distinct supplied finite implementations with explicit read windows,
+resources, errors and later returns. Their locality and energy operators
+are not identified. FINITE-COHERENT-BATTERY-DRIFT [T] bounds a complete word
+with one finite coherent source and gives an energy-rounding error that
+does not accumulate with time.
+
+OCCUPIED-RECORD-EXPORT-REUSE and LOCAL-THERMAL-TWO-ATTEMPT [T] retain old
+memory, failed branches, output correlations and all spent stock. The latter
+is conditional on its own complete thermal core and uniform channel
+premises. DIRAC-CONTACT-COMPLETE-ACCOUNT and DIRAC-CONTACT-SOURCE-COHERENCE
+[T] give the full signed energy law, an exact conserving completion and
+sharp limits of stationary sources in their specified two-walk model.
+None of these statements equates its conserved account with every other
+time generator or supplies a physical outcome-selection law.
+All 26 live H/O owners and their decision conditions remain unchanged.
+
 ## Reader and contact boundaries
 
 U-RAW-RESIDUE-CONTEXT-BOUNDARY [T] excludes every finite autonomous,
@@ -432,6 +468,10 @@ The stable orientation claims are generated from the registry:
 - JM-FUNDED-INTEGER-PAIR-SOURCE [T]: L1 Cartesian integer cell source with declared positive integer resource functional, finite fixed-budget levels, funded reversible dynamics and port-independent sharp K-round bank
 - CONTACT-W-BOUND-PAIR-RESPONSE [T]: For the explicitly specified contact-after-streaming W with mu=2 and g=2pi/5, the relative compact state at center momentum zero continues to a simple exponentially localized branch exp[-i Omega(P)] with Omega even and Omega''(0)=sqrt(16phi+7)/20. Finite unprojected binomial packets, with q=5^j, N=q^4, eta=2atan(1/q) and averaging time T=q, have actual mean displacement divided by the actual principal-momentum impulse tending to this curvature. Two moving copies with the specified continuous energy source of capacity q+8pi retain opposite responses and relative limit twice the curvature, while conserving the selected additive energy and total circular momentum. The first post-kick tick has zero bare-kick velocity; the claim is the stated averaged limit. No global closed contact-dispersion polynomial, positive-energy massless-particle interpretation, physical species, native carrier bridge, finite-dimensional source or intrinsic stopping clock is asserted.
 - HOMOGENEOUS-CAPTURE-CURRENT-RECORD [T]: L1 specified homogeneous one-pair one-carrier one-receiver occupancy model: a normalized relative-ac incoming packet has zero free bound weight and joint asymptotic capture-and-record probability p_full>=p_window>2/10^28; the same law intertwines the complete native physical-cut charge current and coherently transfers arbitrary encoded old-memory/reference correlations, with unaliased spectral energy only on the stated one-carrier safe window.
+- U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS [T]: At L1 for unchanged native U on the complete F5 trace sheets and the origin-zero Thue-Morse clock: on X1 separately supplied at every start, a whole-sheet pure fibre translation returning all pistons occurs exactly at even length with final clock bit one; the shortest nonzero length is four, with words 0011 and 1001 and r shifts +2 and -2. Lengths 2,4,6,8 have exact nonzero densities 0,1/4,11/24,1/2 and the stated all-start dyadic counts, including 0,1023,1876,2049 at N=4096. On the whole actually occupied sheet of an uninterrupted X1-union-X4 trajectory the four-tick return density is instead 1/3, directions 1/6 each, with no identities in that class. Six standard basis inputs certify affine whole-sheet translations. These overlapping-counter densities do not count every special pointwise return or supply prepared-contact rates, physical occurrence or renewal.
+- COHERENT-W-LOCALIZED-RING-CLOSURE [T]: At L1 for the chosen O=Z[zeta_20] and full finite-support port module, W=A/5 is a local Hermitian-form-preserving automorphism of direct_sum O[1/5]^4 with inverse A^dagger/5; O[1/5] is minimal among coefficient rings containing O for that full module. Raw A is injective but not onto direct_sum O^4. Raw residues retain their scale and no unital O[1/5] to F_5 map exists. Unit Hilbert normalization uses one fixed preparation scalar and may leave the localized coefficient module.
+- ACTIVE-ISOSPECTRAL-RECORD [T]: L1 on the fixed v105 homogeneous U_rec and its pinned active source: psi_plus/minus=(I+/-(U_rec^2-U_rec^-2))chi/sqrt(Z) have identical initial populations and complete spectral measures for all 26 old-memory labels and passive references; on the 25-label unwritten-memory family their exact three-step write contrast is greater than 1/50; supplied complete preparation and coherent setting gates preserve their controlled phases; no incoming-unbound capture, occurrence or native compilation
+- FINITE-COHERENT-BATTERY-DRIFT [T]: L1 for any supplied bounded 0<=Q<=Delta I, d>0, m=ceil(Delta/d), integer N>=2m and the stated sine-ready finite battery: complete total-charge sectors define a full-space unitary representation Gamma(U) conserving floor(Q/d)*d+B exactly; joint reference-uniform whole-word error is at most 2m sin(pi/(2L)), L=N-2m+2; every rounded-energy-conserving unitary changes original Q+B by an operator between -d I and d I; supplied coherence and spectral gates, not exact original-energy conservation or locality
 
 <!-- END GENERATED CORE CLAIMS -->
 Time is a counter. Space is read through commutators. The modulus and

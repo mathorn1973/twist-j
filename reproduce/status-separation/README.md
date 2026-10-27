@@ -12,7 +12,7 @@ The audit reads `canon/REGISTRY.tsv`, `canon/NORMATIVE.tsv`,
 `canon/CORE_SELECTION.tsv`, `canon/FRONTIER.md`, `canon/CANON.md`, the frozen
 v70 successor-manifest package, and the minimal-reproduction directory
 inventory, uses the Python standard library,
-and emits deterministic text. Its one hundred eighty-four checks cover the current
+and emits deterministic text. Its 192 checks cover the current
 registry partition,
 the axiom and plenum, the two arithmetic places, the carry lifts, the
 checkpoint no-go, the exact KERNEL-Z6-SYNCHRONIZATION all-n theorem, the
@@ -139,7 +139,7 @@ Run from the repository root:
 python3 reproduce/status-separation/verify.py
 ```
 
-Expected: byte-identical output to `EXPECTED.txt`, `RESULT 184/184 ALL PASS`,
+Expected: byte-identical output to `EXPECTED.txt`, `RESULT 192/192 ALL PASS`,
 exit 0, and empty stderr.
 
 The v75 check pins eight new theorem rows at their exact scopes and frozen
@@ -934,3 +934,12 @@ a run receipt, a fresh scientific campaign or an evidence-class promotion.
 This maintenance changes only the existing structural release audit. Actual
 execution and cross-architecture acceptance belong to the subsequently
 frozen complete successor candidate; no earlier frozen tree is rewritten.
+
+
+## Public Canon v106 boundary
+
+Eight structural guards extend the existing release-accounting chain to v106. All thirteen complete current Canon inputs are pinned by byte count and SHA-256. Only explicit inverse line edits reconstruct exact public v105 at `892a0b11089d34e241e1eb76d2c03247022d18e6`; every reconstructed file must match its complete prior hash. The original v105 input reader and inventory reader consume that validated view. All 184 prior predicates, constants and PASS descriptions remain unchanged.
+
+The new guards bind 16 inline L1 theorem rows, 1 explicit definition, 29 exact reviewed source files, complete proof blocks, scope hashes, declarations and dependency additions. All 577 earlier claims and all 26 live H/O owners retain their exact rows. Gates, Frontier programs, Frontier text and the 37-directory reproduction inventory are unchanged. The individual supplied models retain their own premises and do not acquire native preparation, physical occurrence or a complete physical apparatus through consolidation.
+
+The 192-check EXPECTED transcript was authored from all 184 unchanged earlier PASS lines and eight specified new guard descriptions before execution. It is not captured output or a run receipt. This structural audit executes no scientific verifier. Replay and cross-architecture acceptance belong to the subsequently frozen complete release candidate.
