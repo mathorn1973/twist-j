@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v105
+historical guards: exact reconstructed v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v106
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -186,5 +186,13 @@ PASS 181 V105-OWNER-BOUNDARY all 576 prior claims and 26 live owners, gates and 
 PASS 182 V105-PROOF-EVIDENCE the complete connected Canon proof and unchanged accepted four-file reproduction bundle retain the exact quantitative certificate and evidence identity
 PASS 183 V105-PHYSICAL-BOUNDARY the occupation law, joint event and reference-preserving record remain distinct from checkpoint derivation, finite operations, spectral-energy current and physical occurrence
 PASS 184 V105-REPRO-INVENTORY exactly one pinned reproduction extends the inventory from 36 to 37; its validated historical view retains all previous inventory predicates without scientific execution
+PASS 185 V106-PRIOR-BYTES thirteen exact v106 inputs reconstruct public v105 before all 184 unchanged historical guards
+PASS 186 V106-THEOREM-LEDGERS 16 inline L1 theorems and 1 explicit definition have exact append-only ledgers, declarations and status counts
+PASS 187 V106-DEPENDENCIES the exact appended premise and boundary edges preserve every earlier dependency and do not make an open physical owner a theorem premise
+PASS 188 V106-OWNER-BOUNDARY all 577 prior claims and 26 live owners retain exact scopes; gates, Frontier programs and Frontier text are unchanged
+PASS 189 V106-PROOF-SCOPE complete byte-pinned proofs retain the declared source, energy, clock, preparation, occurrence and native-scope boundaries
+PASS 190 V106-INLINE-EVIDENCE each new theorem has exact scope-hashed inline evidence and declaration; no analytical proof is relabelled as a two-architecture computation
+PASS 191 V106-SOURCE-CUSTODY 29 reviewed source files retain exact bytes, SHA-256 and Git blob identities with complete claim coverage
+PASS 192 V106-REPRO-INVENTORY the validated actual 37-directory reproduction inventory is unchanged; this structural audit executes no scientific verifier
 
-RESULT 184/184 ALL PASS
+RESULT 192/192 ALL PASS

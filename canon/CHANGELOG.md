@@ -1,11 +1,42 @@
 # Canon changelog (public series)
 
-## Public Canon v105
+## Public Canon v106
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 577 claims; 0 T-LOCK, 434 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Registry snapshot: 593 claims; 0 T-LOCK, 450 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 37.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Adopt sixteen exact analytical L1 theorems. Seven describe the specified
+coherent integer walk, its localized coefficient carrier, spatial propagation,
+native residue factor and normalized spectral-energy pullback. Eight give
+phase-sensitive equal-spectrum sources, distinct finite apparatuses,
+coherent energy compensation, occupied-record export and counted reuse,
+and the complete signed energy and source-coherence account of a fixed
+two-walk contact. One classifies unchanged native whole-sheet return
+windows, including exact dyadic counts and the distinct densities 1/4
+for a separately supplied X1 sheet and 1/3 for the actually occupied sheet.
+
+The apparatus results retain every supplied gate, preparation, complete
+channel and uniform success premise. The local two-attempt implication
+does not independently establish its conditional predecessor contracts.
+The different carriers, spectral energies, resource accounts and time
+generators are not silently identified. Native window counts are not
+independent contact counts or physical outcome probabilities. The raw,
+localized-amplitude and characteristic-five carriers remain distinct.
+
+All 577 prior claims, all 26 live H/O owners and their decision conditions
+retain their scopes and statuses. The registry has 593 claims, including
+450 T. All sixteen additions have analytical inline evidence. Their exact
+accepted source bundles are retained, and the historical status audit
+preserves all previous predicates. The minimal reproduction inventory
+remains 37. Unaccepted extensions and the conditional original-energy
+local-error-floor nomination remain outside this release.
+
+## Public Canon v105
+
+Registry snapshot: 577 claims; 0 T-LOCK, 434 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 37.
 
 Connect capture, complete physical-cut charge current and coherent receiver
 recording in one specified homogeneous L1 model. The single new theorem fixes
