@@ -451,8 +451,113 @@ physical identification with rest mass remains a proposed interpretation,
 not a newly registered H claim or a derived mass law. It supplies no
 native source, occurrence rule, dynamics, conservation law or SI units.
 
+## 10. The local meaning of agreement and one ramified factor
+
+Put j=zeta, O=Z[j], lambda=1-j, and work in the localization O_(lambda).
+Its denominators outside the prime ideal (lambda), including 2, are units.
+The residue field is O/(lambda)=F_5: setting j=1 in Phi_5(j)=0 gives 5=0.
+Under the field identification in section 1, the two branch multipliers are
+
+    a=J/2=1-lambda+lambda^2/2,
+    b=(1-j^2)/2=lambda(1-lambda/2)=lambda(1+j)/2,
+    a+b=1,     a=1 mod lambda.                            (JI-29)
+
+Thus a and (1+j)/2 are local units. Normalize the prime-ideal valuation
+by v_lambda(lambda)=1. Then v_lambda(a)=0 and v_lambda(b)=1: the second
+branch contributes one ramified factor times a unit, not literally just
+lambda. The first branch is the identity on the residue field, not on
+the full local carrier. In fact a-1=-b has valuation exactly one.
+
+The rational prime and the residue field must also be distinguished:
+
+    5=lambda^4 j^2(1+j)^2,       (5)=(lambda)^4,
+    O/(5) = F_5[t]/(t^4),       t=lambda mod 5.            (JI-30)
+
+The first equality follows by expanding with 1+j+j^2+j^3+j^4=0.
+Its remaining factor is a unit: j is a unit and N(1+j)=Phi_5(-1)=1.
+For the quotient identity substitute j=1-t into Phi_5; the polynomial
+is t^4-5t^3+10t^2-10t+5, which reduces to t^4 modulo five.
+Here a=1-t+3t^2 and b=t-3t^2. Consequently a is not the identity
+modulo five, while b is a nonzero nilpotent of order four. This is a
+quotient statement; it does not make the exact multiplier b nilpotent.
+
+For a fixed nonzero algebraic input x in K_field and a finite history,
+
+    L_h x=a^(n_0)b^(n_1)x
+         =lambda^(n_1) a^(n_0)((1+j)/2)^(n_1)x,
+    v_lambda(L_h x)=v_lambda(x)+n_1.                      (JI-31)
+
+This is the unnormalized arithmetic branch. The initial valuation is
+part of the formula; in particular Theta(B_Z)=lambda O by (JI-03).
+It is not a valuation assigned to every normalized complex quantum
+state. On the complex balanced carrier both K_0 and K_1 are invertible,
+because all their effect eigenvalues in (JI-09)-(JI-10) are positive.
+Every finite history therefore sends a nonzero complex input to a
+nonzero vector. For algebraic inputs admitting reduction, vanishing
+modulo five is not an exact zero of the complex branch.
+
+## 11. Agreement, signed phase pairing and two quadratures
+
+For a normalized state rho put c=Tr(rho R)=x+i y. For a pure input,
+c=<psi,R psi>. Its real part is the real inner-product overlap; its
+imaginary part is a signed phase pairing. With the additionally supplied
+arm phase of section 7, the complete probability formula is
+
+    2P_0(chi)-1=x cos(chi)-y sin(chi),
+    x=2P_0(0)-1,
+    y=1-2P_0(pi/2).                                      (JI-32)
+
+Thus a quarter-turn is a clean orthogonal quadrature. It is not a
+scalar already in K_field: Gal(Q(zeta_5)/Q) is cyclic of order four,
+so it has exactly one subgroup of index two. Its unique quadratic
+subfield is the real fixed field of conjugation, Q(sqrt5). If i belonged
+to K_field, Q(i) would be a different quadratic subfield, a contradiction.
+This excludes scalar multiplication by i inside that number field;
+it does not exclude a real matrix implementing a quarter-turn on a
+separately specified plane, or the i already used in the ambient C-space.
+
+A quarter-turn is not necessary to reconstruct y. Any supplied chi with
+sin(chi)!=0, including chi=2pi/5, gives
+
+    y=[(2P_0(0)-1)cos(chi)-(2P_0(chi)-1)]/sin(chi).        (JI-33)
+
+For the latter phase exp(i chi)=j in the nominated embedding. Membership
+of that scalar in the field does not implement its controlled arm phase
+on the full carrier. Both readings presuppose the indicated preparations
+and controls; no native phase controller is derived by these identities.
+
+The geometric terminology also has a precise limit. On the realification
+of the Hilbert space define g(v,w)=Re<v,w> and omega(v,w)=Im<v,w>, with
+the first argument conjugate-linear. Then omega(v,w)=g(i v,w). This is
+the signed symplectic pairing, not in general the whole Euclidean area.
+Indeed the squared real wedge area and the complex Gram determinant obey
+
+    A_real^2=||v||^2||w||^2-g(v,w)^2,
+    det Gram_C(v,w)=A_real^2-omega(v,w)^2.                (JI-34)
+
+These follow by expanding |<v,w>|^2=g(v,w)^2+omega(v,w)^2. For example
+v=e_1,w=e_2 have unit real area and zero omega, whereas v=e_1,w=i e_1
+have unit real area, omega=1 and zero complex Gram determinant.
+
+Finally discarding the port does not consume a universal visibility
+budget. For the channel Ecal from (JI-18), cyclicity of the trace gives
+
+    Tr(Ecal(rho) R)
+      = [Tr(rho R)+Tr(R rho R^* R)]/2
+      = Tr(rho R).                                       (JI-35)
+
+Consequently x, y and the fringe visibility |c| measured with R are unchanged
+under every iterate of Ecal. This is compatible with (JI-19)-(JI-20):
+the channel removes off-diagonal R-mode coherences, whereas Tr(rho R)
+depends only on diagonal mode weights. The pure-state relation between
+record entanglement and visibility in section 9 is a relation for that
+joint preparation, not a universal loss law for repeated contacts.
+
 The proven output is the complete declared two-path instrument, its field
-representation, history law and boundaries. No native coupling, physical
-event selection, phase control, free record reset, or identification with
-photons, neutrinos or another particle is derived here. The scientific
-status remains conditional analytical candidate-T pending independent review.
+representation, history law and boundaries. NATIVE.md also gives an
+actual-U controlled-shift witness conditional on a specified coherent
+orbit code. It does not derive that code's preparation or its coherent
+output reading. No physical event selection, general phase controller,
+free record reset, or identification with photons, neutrinos or another
+particle is supplied. The scientific status remains conditional analytical
+candidate-T pending independent review.

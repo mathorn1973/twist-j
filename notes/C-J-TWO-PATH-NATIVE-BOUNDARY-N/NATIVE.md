@@ -148,6 +148,250 @@ It must still meet the complete contract in section 5. The common
 reflection pattern by itself neither selects the two centers under U
 nor supplies the coherent ready state and output recombination.
 
+### 2b. A literal q register cannot close after any positive native block
+
+There is a stronger obstruction when the proposed carrier is the literal
+q coordinate and all other checkpoint coordinates must be restored. The
+sheet maps in [U-GALOIS-FIBER-CODE][coherent-code], with entries ordered
+by the input trace z=0,1,2,3,4, are
+
+    tau_0=(0,4,0,4,4),       tau_1=(2,1,1,3,1).
+
+They follow by summing the native generator coordinates with the actual
+selector. Consequently the image of one step has trace in
+
+    S_0={0,4} when theta_n=0,
+    S_1={1,2,3} when theta_n=1.
+
+Fix any common initial counter n and any length N>=1. The image of its
+last step, and therefore of the complete block U^N, has trace in
+S_(theta_(n+N-1)). This statement permits every actual earlier letter,
+including a, b and c, and does not depend on the initial preparations.
+
+Now fix the five other output checkpoint coordinates. Let q run through
+F5. The five requested output addresses then have all five trace values,
+because z=q+constant. They cannot all lie in either S_0 or S_1. Therefore
+no such positive native block realizes a permutation of the full literal
+q register while returning all other coordinates to their fixed ready
+values. This excludes q->q and q->q+2 separately, and hence excludes the
+proposed controlled pair. The fixed ready values may differ between the
+two paths; the contradiction already applies to either complete path.
+It also holds if the common final ready values differ from the initial
+ones, provided they are independent of the logical q mark.
+
+This is an output-address obstruction, not a prohibition on a decoded
+five-cycle. A code that compensates q in another coordinate, a changed
+output encoding, an external intervention or a distributed coherent code
+requires a different argument. Adding more native ticks alone cannot
+repair this literal register and reset contract.
+
+### 2c. A fixed-address controlled shift on one common fired sheet
+
+A second obstruction permits nonliteral q encodings. Fix ten distinct
+checkpoint addresses x_(p,j), with p=0,1 and j in F5, all on one sheet
+X_s={x:z(x)=s} with the same s in {1,4}. They share one counter n and
+the same block length N>=1. Use these same checkpoint addresses for input
+and output encoding; the counter itself advances from n to n+N and is
+not required to return.
+
+On these sheets the actual transitions are
+
+| Input trace | theta=0: letter, next trace | theta=1: letter, next trace |
+| --- | --- | --- |
+| 1 | b, 4 | d, 1 |
+| 4 | e, 4 | b, 1 |
+
+Thus {1,4} is invariant, and all points on one starting sheet follow the
+same selected word in b,d,e. In fact their next trace is 4+2 theta_n.
+Let P exchange the first and third piston coordinates and the second and
+fourth, while leaving q and r fixed. The full six-coordinate linear parts
+are L_b=-P and L_d=L_e=-I. They commute and square to I. The compiled
+checkpoint map of any such common word is therefore affine,
+
+    F(x)=Lx+a,       L in {I,-I,P,-P},       L^2=I.
+
+This is also the linear-part property in
+[FIRED-COMMUTATOR-NOGO][commutators]. Suppose the block implements the
+fixed-address controlled shift
+
+    F(x_(0,j))=x_(0,j),
+    F(x_(1,j))=x_(1,j+2)                  for every j in F5.
+
+Choose any fixed address x_0 from the first path. Then a=(I-L)x_0 and
+F(x_0+y)=x_0+Ly, so F^2=I on the entire affine checkpoint space. The
+second path instead requires F^2(x_(1,j))=x_(1,j+4), different from
+x_(1,j). This contradiction excludes the specified controlled shift for
+every block length, including words with arbitrarily many intervening
+b commands. A single fixed address and one five-cycle already suffice.
+
+Here F^2 is the algebraic square of the compiled affine map. The argument
+does not assume that a second actual time block repeats the first block's
+driver word. It uses only the stipulated action of F on the invariant
+set of encoded addresses.
+
+The common starting sheet and unchanged checkpoint encoding are essential
+scope conditions. Distinct-sheet source transients, changing output
+encodings, different clock phases, unreturned controller coordinates and
+distributed coherent codes are outside this statement. In particular
+[U-GALOIS-FIBER-CODE][coherent-code] uses specified coherent correlations
+and a different output representation; neither this obstruction nor the
+literal-register obstruction contradicts its declared code transport.
+They supply no native coherent preparation or output recombination.
+
+### 2d. A positive origin-zero witness with one fixed coherent orbit code
+
+The unchanged native selector does admit a partial positive realization
+once a distributed coherent encoding is supplied. The following code is
+the same at input and output; no inverse evolution is put into an output
+decoder. The statement concerns one actual eight-tick prefix, including
+its advancing counter, and does not claim a complete prepared instrument.
+
+Write the four piston slots as \(p_1,p_2,p_3,p_4\), so a checkpoint is
+\(x=(p_1,p_2,p_3,p_4,q,r)\), with all arithmetic in \(\mathbb F_5\),
+and \(X_1=\{x:\sum_i p_i+q+r=1\}\).
+Starting at counter zero, the actual Thue-Morse bits are
+\(0,1,1,0,1,0,0,1\). Every checkpoint in \(X_1\) therefore follows
+the same selected history:
+
+| Counter \(n\) | \(\theta_n\) | Trace before | Selected letter | Trace after |
+| ---: | ---: | ---: | --- | ---: |
+| 0 | 0 | 1 | b | 4 |
+| 1 | 1 | 4 | b | 1 |
+| 2 | 1 | 1 | d | 1 |
+| 3 | 0 | 1 | b | 4 |
+| 4 | 1 | 4 | b | 1 |
+| 5 | 0 | 1 | b | 4 |
+| 6 | 0 | 4 | e | 4 |
+| 7 | 1 | 4 | b | 1 |
+
+This table follows directly from the sheet transitions in section 2c and
+the binary digit sums of the eight displayed counter values. It is an
+analytical evaluation of a specified prefix, not a scientific enumeration.
+Since \(b^2=I\), the chronological word \(b,b,d,b,b,b,e,b\) has full
+checkpoint action
+
+\[
+F=b\circ e\circ b\circ d.
+\tag{N-01}
+\]
+
+Let \(P(p_1,p_2,p_3,p_4,q,r)=(p_3,p_4,p_1,p_2,q,r)\), so the
+generator \(b(x)=-Px\).
+Using the offset \(c_0=(2,1,3,4,1,1)\) from section 2 and
+\(v_q=(0,0,0,0,1,0)\), \(v_r=(0,0,0,0,0,1)\), direct composition gives
+
+\[
+F(x)=x-c_0-P(c_0+v_q)=x+2v_q-2v_r.
+\tag{N-02}
+\]
+
+Indeed the four piston entries of \(c_0+Pc_0\) vanish modulo five;
+the last two entries of \(c_0+P(c_0+v_q)\) are \(3,2\).
+Thus the actual prefix restores all four pistons and sends
+\((q,r)\) to \((q+2,r-2)\), preserving the trace. Its checkpoint map
+has order five and no fixed checkpoint address.
+
+Use the counting Hilbert representation of the declared checkpoints.
+Let \(k\in\mathbb F_5\) label the logical five-state source, and let the
+logical path space have basis \(|0\rangle,|1\rangle\). Define one encoder
+\(E:\mathbb C^2\otimes\mathbb C^5\longrightarrow\ell^2(X_1)\) by
+
+\[
+\begin{aligned}
+E|0,k\rangle
+ &=\frac1{\sqrt5}\sum_{t\in\mathbb F_5}
+       |k,0,0,0,t,1-k-t\rangle,\\
+E|1,k\rangle
+ &=|0,1,0,0,k,-k\rangle.
+\end{aligned}
+\tag{N-03}
+\]
+
+Every displayed address has trace one. Different \(k\) on path zero
+have disjoint piston supports; its five summands have distinct \(q\).
+The five path-one addresses are distinct, and their second piston is
+one whereas every path-zero address has second piston zero. Consequently
+all ten encoded vectors are orthonormal and \(E^*E=I_{10}\).
+The whole code uses 30 distinct checkpoint addresses.
+
+Put \(R|k\rangle=|k+2\rangle\) and \(D=\operatorname{diag}(I_5,R)\);
+this \(D\) is the controlled shift called \(C\) in section 1.
+Translation (N-02) permutes each uniform sum in the first line of
+(N-03) by \(t\mapsto t+2\), leaving that encoded vector unchanged.
+It sends the second line at \(k\) exactly to the second line at \(k+2\).
+Thus the fixed checkpoint code intertwines the compiled native map and
+the controlled shift on the entire ten-dimensional logical space.
+
+The full counter must still be shown. Define
+\(E_n=|n\rangle_{\rm counter}\otimes E\), and let \(N_8\) be the
+deterministic linear extension of the actual \(U^8\), restricted to
+the admitted initial sheet at counter zero. Then
+
+\[
+\boxed{N_8E_0=E_8D.}
+\tag{N-04}
+\]
+
+Each prefix has a common selected word on \(X_1\). Each native letter in
+that word is an affine bijection of the complete checkpoint space, so
+its restriction and every composed prefix are injective on \(X_1\).
+Their counting linear extensions are therefore isometries on this whole
+initial sheet, not just on the ten code vectors. Norms, inner products
+and all code coherences are preserved at every prefix; tensoring with
+an arbitrary passive reference preserves the same statement. This does
+not make the selected native map globally injective on other sheets.
+
+There is also an exact encoded witness for the full rational two-port
+matrix \(V\) in PROOF.md, equation (JI-06). To distinguish that operator
+from the faithful source subspace \(V=1^\perp\) used in section 1 here,
+denote it by \(\mathcal V\) in this paragraph. With
+
+\[
+H_2=\frac1{\sqrt2}\begin{pmatrix}1&1\\1&-1\end{pmatrix},
+\quad B=H_2\otimes I_5,\quad
+\mathcal V=BDB
+=\frac12\begin{pmatrix}I+R&I-R\\I-R&I+R\end{pmatrix},
+\]
+
+set \(E_B=EB\) and \(E_{B,n}=|n\rangle_{\rm counter}\otimes E_B\).
+Since \(B^2=I\), equation (N-04) gives
+
+\[
+\boxed{N_8E_{B,0}=E_{B,8}\mathcal V.}
+\tag{N-05}
+\]
+
+Both occurrences of \(E_B\) are the same fixed checkpoint encoder.
+For a logical ready input \(|0\rangle\otimes\psi\), the encoded output
+is exactly \(E_{B,8}(|0\rangle K_0\psi+|1\rangle K_1\psi)\), with the
+two \(K_i\) of section 1. This is a full-code amplitude identity; it
+does not discard the second branch.
+
+**What has been supplied.** The uniform orbit modes in (N-03), their
+relative phases, the counting Hilbert representation and their initial
+preparation are declared resources. Native deterministic evolution does
+not prepare those sums from single addresses. Passing to \(E_B\) also
+puts the ready-path coherence and output recombination into the fixed
+encoder/readout convention. The native prefix transports that code; it
+does not by itself prepare or physically read it. The formula is not a
+target-times-inverse-evolution decoder: \(F\) was derived from the
+actual selector, and both endpoints use the explicitly displayed same
+orbit code. Its supplied nature remains part of the claim.
+
+There is no contradiction with section 2b: the source \(q\) mark is
+compensated by \(r\), which changes by \(-2\) and is not a common reset
+register. There is no contradiction with section 2c: the identity path
+uses fixed coherent uniform modes, not fixed checkpoint addresses.
+The translation \(F\) has no fixed address, while its counting
+representation has these fixed vectors.
+
+Finally, (N-04)-(N-05) concern counters 0 and 8. The checkpoint identity
+\(F^5=I\) does not reset that counter or prove that every later eight-tick
+native interval repeats \(F\); the future Thue-Morse words remain part
+of the unchanged law. No repeated-use budget, retained physical record,
+occupied-memory behavior, energy/work account or occurrence rule is
+provided by this partial witness. These remain obligations of section 5.
+
 ## 3. Exact point-preparation obstruction
 
 Freeze the literal point encoding: a logical ready basis state is one

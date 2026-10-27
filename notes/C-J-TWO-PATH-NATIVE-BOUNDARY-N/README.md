@@ -31,22 +31,29 @@ with p0=1; it cannot be silently omitted.
   bound, nonselected channel and the limits of deterministic feedback.
   Section 9 gives the mode-dependent reduced Hermitian determinant and
   record entanglement, including a maximally entangled full-carrier input.
+  Sections 10 and 11 distinguish reduction modulo lambda from modulo five,
+  and signed phase pairing from Euclidean area and visibility loss.
 - [INTEGER.md](INTEGER.md) retains every output on an explicit integer
   congruence lattice and counts one finite record bank. It also gives a
   supplied positive static generator for one complete stroke, with its
   incidence, preparation and recurrence limits.
 - [NATIVE.md](NATIVE.md) identifies the q+2 native alphabet word, proves a
-  selector obstruction to the literal dddd/dede four-tick control and a
-  restricted point-source/classical-readout obstruction for this unsharp
-  effect, and fixes the missing source/control/record/occurrence contract.
+  selector obstruction to the literal dddd/dede four-tick control and
+  stronger fixed-address boundaries. It gives an actual origin-zero
+  eight-tick controlled-shift witness on a supplied coherent orbit code,
+  with the remaining source/readout/record/occurrence contract explicit.
 - [VALIDATION.md](VALIDATION.md) records proof review, source boundaries and
   repository checks without calling them a scientific experiment.
+- [FYZIKA-PRO-DVA.md](FYZIKA-PRO-DVA.md) is the Czech explanatory reading,
+  using "spolu" and "proti sobe" for the two outputs and distinguishing
+  arithmetic bookkeeping from the declared probability reading.
 
 The comparison answers a narrower question than a complete native physical
 derivation. The translation by two exists in the native alphabet. Its
 literal four-reflection schedule is excluded by the actual selector U;
-alternative native control, coherent source and recombination remain open.
-On the declared Born model the
+an eight-tick alternative acts exactly on the stated coherent code. Its
+coherent source preparation and output recombination are still supplied,
+not derived native operations. On the declared Born model the
 all-no-click history has probability tending to zero in the cyclotomic
 sector. Calling that one history the observed world is not supplied by the
 complete instrument.
@@ -85,6 +92,14 @@ dephasing the retained record leaves the reduced determinant unchanged
 and makes the joint state separable. A physical mass reading and its
 dynamics still require separate hypotheses. The
 phrase about mass needing two is not a proved general physical theorem.
+
+"Inside" and "outside" in the Czech reading are names for mathematical
+accounts, not a theorem about physical observers. The finite cycle C is
+not identified with the unbounded native counter. The real and imaginary
+parts of Tr(rho R) can be recovered with two supplied phase settings;
+a quarter-turn is convenient but not necessary. The R-fringe visibility
+itself is preserved by the nonselected channel. These distinctions prevent
+the interpretation from adding an unproved time or visibility-loss law.
 
 In current Canon, J-PROJECTIONS and J-MODULUS-CHORD are exact algebraic T
 claims. Modulus as gravity/scale and argument as electromagnetism/phase

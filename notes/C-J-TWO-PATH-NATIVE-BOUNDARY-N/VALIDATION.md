@@ -109,6 +109,48 @@ PASS with no algebraic or scope blocker. The spectral test is also written
 as an operator polynomial, with an explicit distinction from mixed-state
 click probabilities. These checks are not independent public acceptance.
 
+## Inside/outside terminology and a positive native code witness
+
+The author's Czech follow-up motivates the terms "spolu" and "proti
+sobe" for the two complete outputs. FYZIKA-PRO-DVA.md preserves that
+reading while distinguishing the finite phase mark from the unbounded
+native counter, phase of j^2 from argument of J, branch from sector,
+finite histories from an infinite all-zero event, and discarding a record
+in a marginal from physically erasing it. It does not register new H or D
+claims in the public ledger.
+
+PROOF.md sections 10 and 11 supply the exact local-arithmetic and readout
+details. The first branch is the identity modulo lambda=1-j, not modulo
+the full ideal (5)=(lambda)^4. The second adds one lambda factor times a
+unit to an unnormalized algebraic input. Two supplied phase settings,
+including 0 and 2pi/5, suffice to recover both components of Tr(rho R);
+scalar i is not necessary for that reconstruction. Its imaginary part is
+a signed symplectic pairing, not generally the Euclidean wedge area.
+The nonselected channel preserves Tr(rho R), so the pure-state
+complementarity identity is not a universal visibility-loss account.
+
+NATIVE.md sections 2b and 2c prove two additional restricted obstructions:
+literal q with fixed other output coordinates, and a fixed-address
+controlled shift on one common fired sheet. Section 2d supplies a positive
+construction outside those restrictions. Actual origin-zero U uses the
+word b,b,d,b,b,b,e,b on X_1 and induces the translation q->q+2,r->r-2.
+A fixed ten-dimensional coherent code supported on thirty checkpoint
+addresses turns this common translation into I versus C^2, preserving
+the norm at every prefix. The complete counter advances from 0 to 8.
+Conjugating the logical path coordinate by a supplied Hadamard gives
+the same-code representation of V, with preparation and coherent output
+reading still supplied rather than implemented by this native block.
+
+The translation, code orthogonality, whole-code identities and all-prefix
+argument have separate exposed same-session analytical readbacks. The
+local arithmetic and phase-reading supplement received a further
+same-session readback. The final positive-witness text and Czech reading
+returned PASS after clarifying the advancing counter, branch-state counts
+and the pure-input scope of the four-dimensional determinant. None is a
+blind or independent public review.
+No new scientific executable, enumeration or one-architecture experiment
+was used to obtain these results; the proofs are self-contained.
+
 ## Repository checks
 
 The final PR records the exact published head, tree and public CI run.
@@ -121,11 +163,12 @@ rules; this note adds no executable subject to scientific replay.
 Completed local results: POLICY PASS; CANON PASS v105 with 577 claims;
 LEDGER PASS with 641 items, 1160 dependencies, 577 evidence entries,
 1124 history entries, 26 gates and 7 programs; GATE CONTRACT PASS with
-26 gates. Documentary checks pass for five UTF-8/LF Markdown files,
-four local file links and five distinct immutable Git file targets.
+26 gates. Documentary checks for the revised package cover six UTF-8/LF
+Markdown files, eight local file links and five distinct immutable Git
+file targets.
 All five normative checksums and staged whitespace checks pass.
 
-Only the five Markdown files in this note directory are added. No source,
+Only the six Markdown files in this note directory are added. No source,
 Canon, registry, frontier, gate, threshold, workflow or release is changed.
 The separate v106 synthesis still has its original eight nominations.
 The draft is not a request to merge, activate a version or close a native
