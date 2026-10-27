@@ -682,6 +682,205 @@ evidence. A supplied coherent conditional read or further control may
 break the fixed-state condition and prepare a different state. Its two
 outcomes, preparation, record and occurrence rule remain separate duties.
 
+## 3c. Two native parents and the evolution of class profiles
+
+There is an exact native sum at a merger, with a restricted domain.
+Fix a counter n and its bit t=theta_n, and let T_t denote the checkpoint
+part of that actual step restricted to X14=X_1 union X_4. The selected
+generators and their complete parent sets within X14 are
+
+| Bit t | T_t on X_1 | T_t on X_4 | Reached sheet Y_t | Parents of y in Y_t |
+| --- | --- | --- | --- | --- |
+| 0 | b | e | X_4 | b(y) in X_1, e(y) in X_4 |
+| 1 | d | b | X_1 | d(y) in X_1, b(y) in X_4 |
+
+Each listed generator is an involution and restricts to a bijection
+between the indicated sheets. Thus every reached y has exactly two
+parents in X14, one in each sheet. Points in the other target sheet have
+no parent in X14 at that fixed bit. By the
+[native invariant theorem][native-invariant], both parents have the same
+mathscr R class as y.
+
+The domain restriction matters. On the full F5^6, these reached points
+have a third parent: d(y) in X_3 when t=0, or e(y) in X_2 when t=1.
+These extra antecedents are excluded from T_t here. The complete step
+also advances the counter from n to n+1; this is not a time-independent
+permutation of all checkpoints or of the complete autonomous state.
+
+Let M_t be the free counting pushforward of T_t. Its exact amplitude
+rule, with zero output outside Y_t, is
+
+    (M_0 psi)(y)=psi(b(y))+psi(e(y)),    y in X_4,
+    (M_1 psi)(y)=psi(d(y))+psi(b(y)),    y in X_1.
+
+Two possible parents do not imply two occupied amplitudes. A single
+occupied input point still has one image. The displayed sum is an
+amplitude identity; it does not itself declare a norm-preserving quantum
+operation, a complete instrument or an occurrence probability. Classical
+nonnegative weights can instead be pushed forward by the same sum as
+classical weights. Their interpretation must not be exchanged silently
+with complex amplitudes and the squared counting norm.
+
+For the proposed family, allow independent complex coefficients on the
+two sheets within each class:
+
+    psi(x)=a_1(mathscr R(x)) on X_1,
+    psi(x)=a_4(mathscr R(x)) on X_4.
+
+Since both parents preserve the class, the output coefficient is
+a_1(mathscr R)+a_4(mathscr R) on Y_t and zero on the other sheet.
+In the ordered trace coordinates (X_1,X_4), this is precisely
+
+    B_0=[[0,0],[1,1]],       B_1=[[1,1],[0,0]],
+    B_s B_t=B_s                    for s,t in {0,1}.
+
+Consequently, for any actual bit word t_0,...,t_(N-1) with N>=1,
+
+    (a_1^(N),a_4^(N))^T
+       =B_(t_(N-1)) (a_1^(0),a_4^(0))^T.
+
+The final occupied sheet is set by the last bit; the coefficient there
+is the initial sum a_1^(0)+a_4^(0). No factor 2^N occurs. In particular a
+profile A(mathscr R) present on both initial sheets becomes
+2 A(mathscr R) on Y_(t_0), then keeps that coefficient on the successive
+occupied sheets. An initially opposite pair of class amplitudes cancels.
+
+This does create an intraclass distinction between the two trace sheets:
+the output is supported on one half of each occupied class. It would be
+incorrect to say that no intraclass structure ever appears. The proved
+closure is narrower: within each occupied sheet the amplitudes remain
+constant on each class. No additional q-dependent or other within-half
+profile is generated from this family by the merger.
+
+The absence of fresh mergers after the first step is more general than
+the profile ansatz. After that step all occupied points lie in one sheet.
+Every following step restricts to a bijection from that sheet to the next,
+so no two occupied addresses merge during the subsequent block. For any
+positive block length, each point of the final reached sheet has exactly
+two initial parents in X14, one in each initial sheet, rather than a growing
+number. A second freshly populated parent sheet would be an additional
+source preparation, not a consequence of this forward evolution.
+
+For an output time with occupied sheet X_1, section 3b therefore applies
+with A replaced by a_1^(0)+a_4^(0). The first five code classes may carry
+arbitrary coefficients, while the five path-one addresses still share
+one class coefficient. The merger alone does not supply the missing
+correlated nonconstant ready state in that fixed code. If the occupied
+sheet is X_4, its overlap with the same X_1-supported code is zero.
+Other initial amplitude families or changed coherent interfaces are
+outside this conclusion.
+
+These statements follow analytically from the displayed native rules.
+A separately reported author enumeration has not been imported or
+independently audited and is not evidence used for this derivation.
+
+## 3d. Fixed sheet identifications and the relative five-cycle
+
+A merger can be compared without defining its input identification from a
+desired J operator. Use the existing checkpoint chart
+`x <-> (z,v,r)` from [MEMORY-PROOF section 1](https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/probes/P-U-NATIVE-MEMORY-EVENT-1/MEMORY-PROOF.md#L12).
+Here v=V_nat(x) is the signed four-coordinate label of section 3b.
+The chart is a bijection X14 -> {1,4} x F5^4 x F5, derived from the
+native coordinates before this two-path proposal. In that chart the
+actual one-step restrictions F_(z,t) of section 3c are
+
+    F_(1,0)(1,v,r)=(4,-v,-r),
+    F_(4,0)(4,v,r)=(4,-v,1-r),
+    F_(1,1)(1,v,r)=(1,-v,1-r),
+    F_(4,1)(4,v,r)=(1,-v,-r).
+
+Fix a bijection I:X_1 -> X_4 as an input-identification convention.
+The two outputs have a common target sheet, so define on X_1
+
+    R_t=F_(1,t)^(-1) F_(4,t) I.
+
+These inverses compare coordinates; they are not extra executed native
+steps. Define the chart identification and the r-translation by
+
+    I_chart(1,v,r)=(4,v,r),   C_r(1,v,r)=(1,v,r+1).
+
+I_chart preserves the existing signed v and r labels; its definition
+does not refer to J. Every fixed I has a unique factorization
+I=I_chart K with a bijection K:X_1 -> X_1. Direct substitution gives
+
+    R_0=C_r^(-1) K,       R_1=C_r K,
+    R_1 R_0^(-1)=C_r^2,
+    R_0^(-1) R_1=K^(-1) C_r^2 K.                         (N-12)
+
+No commutation of K with C_r is assumed. The control-relative quotient
+is independent of I in the fixed chart. The individual operators R_t,
+and therefore the individual sum operators I_op+R_t, depend on I.
+Here I_op denotes the identity operator, not the sheet identification.
+
+The complete constant-offset subfamily is
+
+    I_s(1,v,r)=(4,v,r+s),   s in F5,
+    R_0=C_r^(s-1),         R_1=C_r^(s+1).
+
+| Offset s | R_0 | R_1 | A specified identification |
+| --- | --- | --- | --- |
+| 0 | C_r^4 | C_r | I_chart |
+| 1 | I_op | C_r^2 | e composed with b on X_1 |
+| 2 | C_r | C_r^3 | chart offset two |
+| 3 | C_r^2 | C_r^4 | chart offset three |
+| 4 | C_r^3 | I_op | b composed with d on X_1 |
+
+For example b takes (1,v,r) to (4,-v,-r), after which e gives
+(4,v,r+1); d followed by b gives (4,v,r-1). Thus these two short
+word identifications have independently specified native formulas.
+The table classifies all five constant offsets, not all sheet bijections
+or all class-preserving identifications. No row is physically selected.
+In particular the s=1,t=1 example requires a two-sheet source at that
+clock phase. It is not replenished by an earlier merger. At origin zero,
+where t=0, the same table gives C_r^2 for the separately declared s=3
+matching; this does not make that matching a selected native preparation.
+
+There are 625 values of v. For every nonzero exponent a, C_r^a consists
+of 625 disjoint five-cycles and its counting spectrum contains every
+fifth root with multiplicity 625. On each fixed-v, zero-sum r sector,
+the usual Fourier/cyclotomic identification makes I_op+C_r^a act by
+the four conjugates of 1+j^a. For s=1 and t=1 the relative operator is
+exactly C_r^2, so this sum represents J=1+j^2 there. The constant r
+mode instead has sum eigenvalue two; it has not been removed by U.
+
+The other initially named exploratory identifications give useful
+controls. For I=b, one has R_0=b e b and R_1=d, both involutions.
+For the central sign I(x)=-x, write v=(A,B,C,D) and epsilon=2t-1.
+Direct use of the chart gives
+
+    R_t(v,r)=((-A,-B,C-1,D+2),-r+epsilon),
+    R_t^2(v,r)=((A,B,C-2,D+4),r).
+
+These R_t have order ten, not five on the whole sheet. Thus an arbitrary
+simple identification does not force the same individual relative step.
+The initial exploratory set was the central sign, b, e composed with b,
+and b composed with d. I_chart was subsequently added from the already
+published chart; this is disclosed analytical exploration, not blind
+confirmation or an independently selected physical reading.
+
+Finally retain the norm boundary from section 3c. In coordinates given
+by I, the raw native merger is the row [F_(1,t),F_(4,t) I]. For unit f,
+the declared matched input is (f direct-sum I f)/sqrt(2), with coordinate
+pair (f,f)/sqrt(2). Its image is
+
+    F_(1,t)(I_op+R_t)f/sqrt(2),
+    squared output norm=1+Re <f,R_t f>.
+
+This norm is generally not one. For a C_r^2 relative step it is two on
+the constant r mode. The actual merger supplies no complementary record.
+Adding the two rows [I_op,R_t]/sqrt(2) and [I_op,-R_t]/sqrt(2) would
+give a complete unitary recombination, with branches (I_op+/-R_t)/2 on
+a balanced ready path. That completion, normalization and output readout
+are additional supplied interfaces, not consequences of the raw merger.
+
+Equation (N-12) compares the two control values at a common input chart.
+It is not a claimed consecutive native program, a superposition of clock
+values, or a repeated physical stroke. Each actual step uses its actual
+theta_n and advances the counter. The result supplies a robust relative
+five-cycle; it neither selects I nor prepares the matched coherent source,
+balances its amplitudes, provides both retained outcomes or chooses an
+occurrence. No scientific enumeration or executable run is used here.
+
 ## 4. Complete classical-endpoint obstruction for this unsharp effect
 
 Take five distinct point preparations at one common clock phase and any

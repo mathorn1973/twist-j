@@ -300,10 +300,87 @@ velikostí. Například profil (2,1,1,1,1) má stejnou fázi všude a
 přesto nenulové zlaté složky. Pro čistě bezkonstantní vstup se
 ovšem příspěvky musí vyrušit.
 
-Další povinnost je tedy konkrétní: připravit stejný profil fₖ
+Pro tento orbitový kód je další povinnost konkrétní: připravit stejný profil fₖ
 na pěti třídách orbitové cesty a na pěti polohách uvnitř jediné
 třídy bodové cesty, s relativním koeficientem G. Přístroj pak
 musí oba výstupy přečíst a uchovat jejich záznam.
+
+Samotné slévání listů nabízí jiné spojení cest. Při pevném bitu
+hodin má každý dosažený bod právě dva rodiče z X₁₄, jednoho
+z každého listu. Pro bit nula se oba listy slévají do X₄,
+pro bit jedna do X₁. Oba rodiče mají stejnou nativní třídu jako
+výsledek. Na celém prostoru šesti registrů jsou však pro tyto
+cíle rodiče tři. Tvrzení o dvou platí právě na X₁₄.
+
+Lineární rozšíření sčítá jejich amplitudy. Když na obou listech
+začneme s amplitudami závislými jen na třídě, dostaneme jejich
+součet na jediném výstupním listu. Rozdíl mezi obsazeným a prázdným
+listem tím vznikne. Uvnitř obsazené části třídy však nevznikne
+žádný nový profil polohy. Po prvním kroku už další tiky přesouvají
+jediný obsazený list bijektivně. Nesčítají pokaždé nové dvě cesty.
+
+Ztotožnění poloh obou listů lze určit předem. Kanonická mapa
+souřadnic zapisuje bod jako (z,v,r), kde v=V(x) a z je list.
+Ponechme v i r a změňme pouze z z jedné na čtyři. Toto ztotožnění
+nepoužívá J ani požadovanou výstupní váhu. Označme C posun r o jednu
+a dovolme ještě předem pevně zvolený posun s při párování listů:
+
+\[
+I_s:(1,v,r)\longmapsto(4,v,r+s).
+\]
+
+Po společném zpětném přeznačení výstupu první cesty mají druhé
+cesty relativní pohyby
+
+\[
+R_0=C^{s-1},\qquad R_1=C^{s+1}.
+\]
+
+Index zde označuje bit hodin. Základní ztotožnění s=0 dává posuny
+o −1 a +1. Ztotožnění s=1 je přímo pevné slovo e po b mezi listy.
+Při bitu jedna dává R₁=C². Tím máme konkrétní nativní součet,
+který na koherentním párovaném vstupu obsahuje I+C².
+
+Je tu i vztah, který volbu párování překračuje. Pro libovolné
+jedno pevné bijektivní ztotožnění listů platí
+
+\[
+R_1R_0^{-1}=C^2.
+\]
+
+Posun o dva je tedy nezávislý na tomto párování jako relativní
+porovnání obou bitů hodin. Jednotlivý kontakt I+R₀ nebo I+R₁
+na párování závisí dál. Porovnání dvou pravidel také není samo
+novým vykonaným krokem U. Zpětné přeznačení slouží výpočtu,
+není odvozeným fyzickým chodem pozpátku.
+
+Zbývá účet obou výstupů. Označme F₁ a F₄ bijektivní přesuny
+jednotlivých listů do společného cíle. Nativní lineární slévání
+je N=[F₁,F₄] a má normu √2. Souhlasný pár zesílí a opačný pár
+zničí. Jedno úplné normově zachovávající spojení lze doplnit jako
+
+\[
+L_+=\frac{[F_1,F_4]}{\sqrt2},\qquad
+L_-=\frac{[F_1,-F_4]}{\sqrt2}.
+\]
+
+Pro vyvážený párovaný vstup pak vyjdou větve (I±R)/2 až na
+společný přesun výstupu. Samotné N je √2·L₊. Není hotovým
+kvantovým přístrojem. Doplněný druhý výstup se vejde do prostoru
+stejné velikosti jako oba vstupní listy, ale změní zákon pohybu.
+Původní U jej neposkytuje.
+
+Rozdíl rodičů už z jejich jediného společného potomka obnovit
+nelze. To je přesná ztráta informace na sloučené dvojici. NOWRITE
+říká něco dalšího: pevné čtení synchronizovaného bodu nemůže pod
+nezměněným U přejít z prázdného na nový trvalý zápis. Opírá se
+o návraty v celé třídě. Nalezený přechodný nosič rozdílu, jiný
+způsob čtení nebo přidaná paměť tuto větu samy nevyvracejí.
+
+Nová cesta tedy má přesné párování i nativní relativní posun.
+Potřebuje ještě připravenou koherenci mezi listy a zákon, který
+uchová výstup proti sobě. Uchování jeho amplitudy navíc ještě
+není trvalým čitelným záznamem.
 
 Stav výsledku: přijatá algebra v Canonu zůstává přijatou algebrou.
 Zdejší úplný přístroj a nové důsledky jsou podmíněný analytický

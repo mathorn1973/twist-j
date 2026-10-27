@@ -35,6 +35,8 @@ with p0=1; it cannot be silently omitted.
   and signed phase pairing from Euclidean area and visibility loss.
   Section 12 gives the exact Gauss-balanced source and states which fixed
   readout convention makes its conjugation exchange the branch formulas.
+  Section 13 distinguishes the native sheet-merger sum from a complete
+  sum/difference instrument and from permanent checkpoint memory.
 - [INTEGER.md](INTEGER.md) retains every output on an explicit integer
   congruence lattice and counts one finite record bank. It also gives a
   supplied positive static generator for one complete stroke, with its
@@ -49,6 +51,9 @@ with p0=1; it cannot be silently omitted.
   Arbitrary native class amplitudes can vary along the orbit path, but the
   five point-path addresses all belong to one class, preventing a matched
   nonconstant ready input in this fixed code without further preparation.
+  The sheet merger also admits a separate matched-sheet construction:
+  fixed canonical chart identifications give relative five-cycle shifts,
+  including C^2, with the missing output and normalization kept explicit.
 - [VALIDATION.md](VALIDATION.md) records proof review, source boundaries and
   repository checks without calling them a scientific experiment.
 - [FYZIKA-PRO-DVA.md](FYZIKA-PRO-DVA.md) is the Czech explanatory reading,
@@ -81,6 +86,16 @@ source formula, not its preparation by U. The 313 native class labels
 and 625 invariant modes of the eight-tick translation have different
 scopes. Neither class-dependent amplitudes alone nor stationarity of the
 complete ready vector provides a matched nonconstant source in this code.
+
+On X14, each reached output has two parents, one per input sheet. Only
+the first step merges occupied sheets; subsequent known-sheet steps are
+bijections. Native counting pushforward has norm sqrt2, so its sum alone
+is not a complete quantum instrument. A supplied sum/difference completion
+and a fixed matched-sheet source give the usual (I+/-R)/2 branches.
+Canonical chart matchings I_s:(1,v,r)->(4,v,r+s) yield R_0=C^(s-1) and
+R_1=C^(s+1). The short fixed matching I_1=e o b therefore gives C^2 at
+clock bit one. For any one fixed sheet bijection, R_1 R_0^(-1)=C^2;
+this is a comparison identity, not an additional executed native step.
 
 ## Three interpretation corrections
 

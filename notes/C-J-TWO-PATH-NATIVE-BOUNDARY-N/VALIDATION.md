@@ -219,6 +219,45 @@ restricting coefficient automorphisms to K_field and distinguishing
 path balance from nonconstant logical data. These readbacks are not
 independent public acceptance or executable verification.
 
+## Sheet merger, completion and fixed source matching
+
+NATIVE.md sections 3c and 3d derive the two-parent statement on X14,
+its exact reached-sheet scope and the closure of class-dependent sheet
+amplitudes. The counting sum occurs once; no new pair of occupied sheets
+is supplied by later native evolution. The author reported a separate
+exhaustive calculation, but its code, output and pins were not supplied
+here. It is not imported as independent execution evidence. Existing
+canonical invariant charts and known-sheet bijectivity are the sources
+of the displayed analytical proof; the arithmetic merger is not claimed
+as a previously unknown mechanism.
+
+PROOF.md section 13 gives the exact norm, kernel and supplied unitary
+sum/difference completion. It separates a selected branch from the
+discarded-output channel, the field representation of M_J, and the
+permanent fixed-checkpoint scope of NOWRITE.
+
+The first exposed analytical comparison set used central sign, b,
+e o b and b o d as fixed sheet matchings before deriving their relative
+maps. The existing canonical (z,v,r) chart was then added explicitly,
+not retroactively counted as part of that first set. The displayed I_s
+family classifies all five r offsets in that chart and includes both
+short composite matchings. No prospective computational test, independent
+selection of one physical matching or exhaustive classification of all
+possible coherent encodings is asserted.
+
+The identity R_1 R_0^(-1)=C^2 holds for any single fixed sheet bijection,
+with the output convention stated in NATIVE.md. It does not execute an
+inverse native law or select the contact I+R_t. All new claims in this
+follow-up are analytical and conditional. No scientific executable or
+enumeration was run.
+
+Separate exposed same-session analytical readbacks checked the merger
+completion, the canonical chart formulas, every constant-offset case,
+the arbitrary-matching quotient and the Czech explanation. No mathematical
+blocker remained; wording was narrowed to avoid implying a unique completion
+or an already prepared physical source. These are not independent public
+acceptance or a new computational reproduction.
+
 ## Repository checks
 
 The final PR records the exact published head, tree and public CI run.
@@ -232,7 +271,7 @@ Completed local results: POLICY PASS; CANON PASS v105 with 577 claims;
 LEDGER PASS with 641 items, 1160 dependencies, 577 evidence entries,
 1124 history entries, 26 gates and 7 programs; GATE CONTRACT PASS with
 26 gates. Documentary checks for the revised package cover six UTF-8/LF
-Markdown files, eight local file links and five distinct immutable Git
+Markdown files, eight local file links and six distinct immutable Git
 file targets.
 All five normative checksums and staged whitespace checks pass.
 

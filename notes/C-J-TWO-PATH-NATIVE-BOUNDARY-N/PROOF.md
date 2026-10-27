@@ -653,6 +653,99 @@ orbit coherence, coefficients, relative phase and preparation remain
 supplied resources. The native fixed-code transport in NATIVE.md does
 not derive that source or its physical readout.
 
+## 13. A complete two-sheet merger and what its difference port adds
+
+At a fixed clock phase suppose the two disjoint sheets X_1,X_4 map
+bijectively onto the same set Y. Let H_s=ell^2(X_s), H_Y=ell^2(Y), and
+write F_s:H_s->H_Y for the unitary counting extensions of those bijections.
+The deterministic counting pushforward of the merged map is
+
+    N=[F_1,F_4]:H_1 direct-sum H_4 -> H_Y,
+    NN^*=2I,      ||N||=sqrt2,
+    ker N={(F_1^*y,-F_4^*y): y in H_Y}.                   (JI-42)
+
+These identities follow from F_s F_s^*=F_s^*F_s=I. In particular the
+normalized antisymmetric parent pair is annihilated, whereas the symmetric
+pair has its squared norm doubled. Thus N is neither an isometry nor a
+quantum Kraus branch on this entire counting space. Dividing it by sqrt2
+makes a contraction; it does not restore the missing antisymmetric space.
+
+A complete norm-preserving extension retains both outputs:
+
+    K_+=[F_1,F_4]/sqrt2,      K_-=[F_1,-F_4]/sqrt2,
+    W=[[F_1,F_4],[F_1,-F_4]]/sqrt2 : H_1+H_4 -> H_Y+H_Y,
+    W^*W=WW^*=I,             K_+^*K_++K_-^*K_-=I.         (JI-43)
+
+Direct multiplication proves the identities. Equivalently W is a
+Hadamard on the output label after diag(F_1,F_4). Its inverse recovers
+the two input components from outputs y_+,y_- as
+F_1^*(y_++y_-)/sqrt2 and F_4^*(y_+-y_-)/sqrt2.
+The output dimension equals the input dimension; for the synchronized
+sheets both are 6250. An unused native coordinate might be proposed as
+the label, but assigning that role would still require a new proved law.
+W has full rank while N has half that rank. It is a supplied completion
+of N/sqrt2, not the unchanged native counting pushforward N.
+
+There is no operation on the merged current state alone that recovers
+the lost difference on all inputs. On vectors, K_- does not factor
+through N because it is nonzero on ker N. On literal checkpoints, two
+parents with the same full checkpoint and counter after merger have the
+same deterministic future. Distinguishing them requires information that
+was retained outside that merged state before the collision.
+
+The full output W rho W^* is coherent and trace preserving. Selecting
+one output gives the unnormalized operation K_+ rho K_+^* or
+K_- rho K_-^*. If the output label is discarded, a block input rho gives
+
+    Phi(rho)=K_+rho K_+^*+K_-rho K_-^*
+            =F_1 rho_11 F_1^*+F_4 rho_44 F_4^*.           (JI-44)
+
+The cross-sheet coherences cancel in this reduced channel. The which-sheet
+Kraus pair [F_1,0],[0,F_4] gives exactly the same channel; K_+,K_- are
+its Hadamard-rotated pair. Thus the discarded merger channel does not
+specify a coherent sum/difference measurement or choose its readout basis.
+
+To obtain the two-path J branches one must also specify the input matching.
+Let I_14:H_1->H_4 be a supplied unitary identification and put
+
+    E_I f=(f,I_14 f)/sqrt2,      R_I=F_1^(-1)F_4 I_14,
+    K_+ E_I=F_1(I+R_I)/2,       K_- E_I=F_1(I-R_I)/2,
+    N E_I=F_1(I+R_I)/sqrt2.                            (JI-45)
+
+These follow by substitution, and E_I is an isometry. Only when the
+independently specified matching realizes the required R_I=C^2 on the
+declared source carrier do they reproduce K_0,K_1 of section 2, up to
+the common output unitary F_1. The merger alone does not select that
+matching: changing I_14 can change R_I to any unitary on H_1.
+
+The arithmetic statement M_J=2K_0 likewise needs its representation.
+On the rational balanced carrier, (JI-02) says exactly
+
+    Theta ((I+C^2)|_(B_Q))=multiplication_by_J Theta,
+    Theta (2K_0|_(B_Q))=multiplication_by_J Theta.          (JI-46)
+
+An integer matrix M_J in a field basis represents the right-hand operator;
+it is not literally the rectangular merger N or a five-by-five matrix.
+A nonorthonormal integer basis must carry its Gram matrix G_metric:
+the physical adjoint is M_J^sharp=G_metric^(-1)M_J^*G_metric, and the
+zero-output effect is M_J^sharp M_J/4 in those coordinates. The trace
+form (JI-04) supplies the relevant metric. A Euclidean transpose in an
+arbitrary integer basis does not by itself compute this effect.
+
+Retaining the minus port retains amplitude information in the completed
+law. Its sign label is not the original sheet label: two literal parents
+of one output y become (|y>,|y>)/sqrt2 and (|y>,-|y>)/sqrt2. Measuring
+only the port gives probabilities 1/2,1/2 for both. No permanent
+classical record follows from the port's existence. A durable record needs a
+specified coupling, reader and subsequent dynamics. The separate Canon
+NOWRITE result, invoked in NATIVE.md section 3b, concerns unchanged U
+on synchronized checkpoints and fixed checkpoint readers: eventual
+constancy forces constancy on the recurrent invariant fiber, excluding
+a distinct BLANK-to-permanent-WRITTEN transition in that class. It allows
+finite retention and does not exclude added memory or changed dynamics.
+That recurrence theorem is not equivalent to two-to-oneness, nor does
+this supplied unitary completion evade it within its original scope.
+
 The proven output is the complete declared two-path instrument, its field
 representation, history law and boundaries. NATIVE.md also gives an
 actual-U controlled-shift witness conditional on a specified coherent
