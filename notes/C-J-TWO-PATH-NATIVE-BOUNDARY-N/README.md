@@ -33,6 +33,8 @@ with p0=1; it cannot be silently omitted.
   record entanglement, including a maximally entangled full-carrier input.
   Sections 10 and 11 distinguish reduction modulo lambda from modulo five,
   and signed phase pairing from Euclidean area and visibility loss.
+  Section 12 gives the exact Gauss-balanced source and states which fixed
+  readout convention makes its conjugation exchange the branch formulas.
 - [INTEGER.md](INTEGER.md) retains every output on an explicit integer
   congruence lattice and counts one finite record bank. It also gives a
   supplied positive static generator for one complete stroke, with its
@@ -44,6 +46,9 @@ with p0=1; it cannot be silently omitted.
   with the remaining source/readout/record/occurrence contract explicit.
   It also computes the exact code projection of a coherent uniform-sheet
   source: only the constant logical mode is present in that projection.
+  Arbitrary native class amplitudes can vary along the orbit path, but the
+  five point-path addresses all belong to one class, preventing a matched
+  nonconstant ready input in this fixed code without further preparation.
 - [VALIDATION.md](VALIDATION.md) records proof review, source boundaries and
   repository checks without calling them a scientific experiment.
 - [FYZIKA-PRO-DVA.md](FYZIKA-PRO-DVA.md) is the Czech explanatory reading,
@@ -68,6 +73,14 @@ ready input. The elementary support bound excludes creation of a coherent
 orbit sum from a single native point, but does not exclude dynamical
 preparation using a supplied coherent environment. Uniform plenum remains
 a source hypothesis with a separate selection and readout obligation.
+
+The factor G=j-j^2-j^3+j^4 exactly balances five unit orbit amplitudes
+against one point amplitude: the raw source map has Gram 10I and its
+normalized state is the declared ready code. This supplies an explicit
+source formula, not its preparation by U. The 313 native class labels
+and 625 invariant modes of the eight-tick translation have different
+scopes. Neither class-dependent amplitudes alone nor stationarity of the
+complete ready vector provides a matched nonconstant source in this code.
 
 ## Three interpretation corrections
 

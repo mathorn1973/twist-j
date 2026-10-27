@@ -553,6 +553,106 @@ depends only on diagonal mode weights. The pure-state relation between
 record entanglement and visibility in section 9 is a relation for that
 joint preparation, not a universal loss law for repeated contacts.
 
+## 12. A Gauss-balanced source and its phase convention
+
+Put j=zeta and define the quadratic Gauss sum and character by
+
+    G=j-j^2-j^3+j^4,      G^2=5,
+    chi_5(1)=chi_5(4)=1,  chi_5(2)=chi_5(3)=-1,
+    sigma_a(j)=j^a,       sigma_a(G)=chi_5(a)G.            (JI-36)
+
+Indeed x=j+j^(-1) satisfies x^2+x=1 and G=2x+1, proving G^2=5.
+In the nominated embedding G is positive, hence G=sqrt5. Multiplication
+of the four nonzero exponents by a proves the character formula.
+G belongs to the ring of algebraic integers O=Z[j], but not to Z.
+Using it as an amplitude is not the same as an ordinary integer point
+coefficient or a proof of its native preparation.
+
+Use the checkpoint addresses of NATIVE.md section 2d, with entries in F5:
+
+    u_tilde,k=sum_(t in F5)|k,0,0,0,t,1-k-t>,
+    v_k=|0,1,0,0,k,-k>,
+    S_raw f=sum_k f(k)u_tilde,k,   P_raw f=sum_k f(k)v_k.
+
+Here f(k) denotes the coordinates of a source vector f in C^5. The five
+orbit sums have disjoint supports of size five; the five additional point
+states have mutually disjoint supports, also disjoint from all orbit sums.
+Consequently the exact Gram identities and the balanced source map are
+
+    S_raw^*S_raw=5I,   P_raw^*P_raw=I,   S_raw^*P_raw=0,
+    W_G=S_raw+G P_raw,          W_G^*W_G=10I.              (JI-37)
+
+Define the counting isometry E by E(|0> tensor f)=S_raw f/sqrt5 and
+E(|1> tensor f)=P_raw f, using the positive orbit norm sqrt5. With
+E_B=E(H_2 tensor I), as in the fixed native code, one obtains
+
+    ||W_G f||^2=10||f||^2,
+    W_G f/sqrt10=E_B(|0> tensor f).                       (JI-38)
+
+Thus for unit f this supplies exactly the desired ready-code vector.
+It is an equality of preparations, not a preparation procedure.
+
+For example f=e_0-e_1 has norm squared two and zero coordinate sum.
+Its logical data lie in B and are nonconstant. For the native checkpoint
+translation F from NATIVE.md section 2d the normalized source obeys
+
+    Psi=(u_tilde,0-u_tilde,1+G(v_0-v_1))/sqrt20,
+    F Psi=(u_tilde,0-u_tilde,1+G(v_2-v_3))/sqrt20.         (JI-38a)
+
+This is an explicit active candidate source, not a derived preparation.
+
+Equal raw coefficients instead give (S_raw+P_raw)f/sqrt6. Under E its
+path factor is (sqrt5|0>+|1>)/sqrt6. After the controlled shift
+D=diag(I,R) and balanced recombination, its two branches are
+
+    A_0=(sqrt5 I+R)/sqrt12,
+    A_1=(sqrt5 I-R)/sqrt12,
+    A_0^*A_0+A_1^*A_1=I.                                 (JI-39)
+
+The completeness identity follows by cancelling the two cross terms.
+This is a complete instrument, but not the branches (I+/-R)/2.
+
+For source coordinates in K_field write f^(a)(k)=sigma_a(f(k)). The raw
+addresses are fixed integer basis vectors, so coefficient conjugation gives
+
+    sigma_a(W_G f)=S_raw f^(a)+chi_5(a)G P_raw f^(a).       (JI-40)
+
+In a fixed positive counting normalization the two path coefficients
+are therefore 1 and chi_5(a), divided by sqrt2; the input f^(a) must
+also be normalized if it is not unit. For rational f, sigma_2 changes
+the relative point-arm sign, not the sign of the whole vector: its orbit
+part is unchanged and nonzero. For general f in K_field^5 the source itself
+is also conjugated. Calling the entire prepared family Galois-odd is
+therefore not the statement in (JI-40).
+
+In the fixed position basis R is an integer permutation and is unchanged
+by entrywise coefficient conjugation. With that same law and recombiner,
+the branches are (I+/-chi_5(a)R)/2, so chi_5(a)=-1 exchanges the ports.
+Transporting the field representation is a different convention:
+sigma_a M_(j^2) sigma_a^(-1)=M_(j^(2a)), represented by R^a. The transported
+family is then (I+/-chi_5(a)R^a)/2; its reference shift must be stated.
+
+If the encoder's sqrt5 is instead written algebraically as G and also
+conjugated, its orbit column changes sign for chi_5(a)=-1. For these a,
+extending the automorphism to fix sqrt2 gives sigma_a(E_B)=-E_B X, where X exchanges
+the two logical ports. Conjugating both the source and encoder/readout
+preserves its logical ready label. No unavoidable physical sector or port
+selection follows: the conclusion depends on which source, encoder and
+readout are held fixed.
+
+Finally modulus balance alone does not determine relative phase. For
+every m in Z, G j^m is also an algebraic integer with modulus sqrt5 and
+
+    W_(G j^m)^*W_(G j^m)=10I,
+    output branches=(I+/-j^m R)/2.                       (JI-41)
+
+Thus the balance condition permits different phase-sensitive instruments.
+Even the scalar -(sigma_a(G)/sqrt5)^2=-1 forgets the character sign.
+The Gauss choice gives an exact constructive source formula, while its
+orbit coherence, coefficients, relative phase and preparation remain
+supplied resources. The native fixed-code transport in NATIVE.md does
+not derive that source or its physical readout.
+
 The proven output is the complete declared two-path instrument, its field
 representation, history law and boundaries. NATIVE.md also gives an
 actual-U controlled-shift witness conditional on a specified coherent

@@ -240,10 +240,70 @@ jeho paměť dosud nedodalo.
 V úplném bodovém měření by některý bod byl výsledkem vždy. Malá
 je váha předem určené adresy, ne součet vah všech bodových výsledků.
 
-Otevřená otázka proto zní přesněji: jaké počáteční korelace a jaké
-přípustné čtení připraví vstup s potřebnými amplitudami a fázemi a uchovají jeho
-záznam? Plenum může být zdrojem. Pouhá jeho rovnoměrnost tuto
-povinnost neuzavírá.
+Rovnováhu cest už umíme napsat přesně. Nechť ũₖ je nenormalizovaný
+součet pěti adres první cesty a vₖ jednotlivá adresa druhé. Mají
+čtverce norem pět a jedna. Stejné bodové amplitudy proto dají poměr
+cest √5 : 1. Po vyváženém spojení vyjdou větve (√5 I ± R)/√12.
+
+Gaussova suma tento poměr vyrovná:
+
+\[
+G=j-j^2-j^3+j^4=\sqrt5,\qquad
+W_G f=\sum_k f_k(\widetilde u_k+Gv_k),\qquad
+\|W_Gf\|^2=10\sum_k|f_k|^2.
+\]
+
+V hlavním vložení je G kladná odmocnina z pěti. Každá adresa orbity
+nese fₖ a její bodový protějšek Gfₖ. Po normalizaci je to přesně
+připravený vstup našeho vyváženého kontaktu. G je celé číslo
+cyklotomického okruhu Z[j]. Pokud v něm leží také fₖ, leží v něm
+všechny surové amplitudy. Nejde obecně o obyčejné celočíselné
+amplitudy v bodové bázi. Vyvážení určuje velikost; relativní fázi
+je stále třeba určit.
+
+Při změně vložení G získá znaménko kvadratického charakteru.
+Pro vložení s charakterem −1 se obrátí relativní znaménko bodové
+cesty, ne znaménko celého
+vstupu. Při pevné čtecí bázi to prohodí vzorce výstupů. Pokud
+přeneseme zároveň čtecí bázi, je porovnání jiné. Samotná algebra
+nepřepíná fyzický detektor ani nevybírá jednotlivý výsledek.
+
+Také stacionarita potřebuje určit své čtení. Nativní třídy R mají
+313 nezávislých štítků. Orbit našeho samotného osmikrokového posunu
+na listu X₁ je 625. Nejde o stejné členění. První cesta může nést
+libovolné fₖ a zůstat pod osmikrokovým posunem beze změny. Celý
+vyvážený vstup W_G f však zůstane stejný jen pro Rf=f, tedy pro
+konstantní f. Zde R v rovnici označuje posun C², nikoli třídu.
+Pouhé promítnutí stacionárního zdroje do tohoto kódu to nezmění:
+projekce s osmikrokovým posunem komutuje.
+
+U plena s jednou amplitudou na každou nativní třídu je překážka
+ještě konkrétnější. Pět orbit první cesty patří do pěti různých
+tříd. Všech pět bodů druhé cesty ale leží v jediné další třídě.
+Třídní amplitudy proto mohou dát první cestě libovolné fₖ, druhé
+však pouze konstantní profil. Faktor G vyrovná velikosti, ale
+nedodá bodové cestě chybějící rozlišení pěti poloh.
+
+Jednoduchý aktivní vstup přesto známe:
+
+\[
+\Psi=\frac{\widetilde u_0-\widetilde u_1+G(v_0-v_1)}{\sqrt{20}}.
+\]
+
+Je vyvážený a jeho logický zdroj je celý bez konstantního módu.
+Vyžaduje však opačná znaménka u v₀ a v₁ uvnitř téže nativní třídy.
+Plenum s amplitudou závislou pouze na třídě jej proto neposkytne.
+Jako předpis zdroje je přesný. Jeho fyzická příprava zůstává otevřená.
+
+Ani věta „stejná fáze znamená ticho“ neplatí bez podmínky stejných
+velikostí. Například profil (2,1,1,1,1) má stejnou fázi všude a
+přesto nenulové zlaté složky. Pro čistě bezkonstantní vstup se
+ovšem příspěvky musí vyrušit.
+
+Další povinnost je tedy konkrétní: připravit stejný profil fₖ
+na pěti třídách orbitové cesty a na pěti polohách uvnitř jediné
+třídy bodové cesty, s relativním koeficientem G. Přístroj pak
+musí oba výstupy přečíst a uchovat jejich záznam.
 
 Stav výsledku: přijatá algebra v Canonu zůstává přijatou algebrou.
 Zdejší úplný přístroj a nové důsledky jsou podmíněný analytický

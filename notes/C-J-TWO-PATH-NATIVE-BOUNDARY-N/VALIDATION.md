@@ -182,6 +182,43 @@ executable or enumeration was run
 for this follow-up. The reported external computation and our analytical
 review remain separately attributed.
 
+## Gauss balance and native class amplitudes
+
+The author's next proposal distinguishes uniform plenum from arbitrary
+amplitudes on the 313 native invariant classes, and introduces the
+quadratic Gauss sum to balance the orbit and point paths. PROOF.md
+section 12 derives the raw Gram 10I, the unbalanced comparison instrument,
+the Galois relative sign and its fixed-readout scope. The Gauss identity
+is prior cyclotomic algebra; its role in this particular ready code is
+the present conditional construction. The raw amplitudes lie in Z[j]
+when the data do, not generally in Z in the literal counting basis.
+
+NATIVE.md section 3b separates the 313 invariant native checkpoint classes
+from the 625 fixed orbit modes of the compiled translation. The first
+path's five orbits lie in five distinct native classes; the second path's
+five addresses lie in one further class. Consequently one amplitude per
+native class can give arbitrary orbit-path data but cannot match a
+nonconstant point-path profile. The complete Gauss-balanced ready state
+is fixed by the eight-tick checkpoint map only for constant logical data.
+The code projector commutes with that unitary checkpoint map, so simple
+projection of any fixed sheet source cannot supply a nonconstant ready
+state either.
+The explicit difference input in the Czech text supplies a concrete
+active source formula while exhibiting the required within-class signs.
+
+These results are analytical conditional statements for the existing
+code and declared source class. They do not rule out preparation with
+additional coherent operations, select a physical plenum state, or assert
+independent acceptance of the author's unprovided F5 calculation. No new
+scientific executable or enumeration was run for this follow-up.
+
+Exposed same-session analytical readbacks checked the Gauss identities,
+fixed and transported Galois conventions, native class labels, projection
+formula and stationary-source obstruction. No blocker remained after
+restricting coefficient automorphisms to K_field and distinguishing
+path balance from nonconstant logical data. These readbacks are not
+independent public acceptance or executable verification.
+
 ## Repository checks
 
 The final PR records the exact published head, tree and public CI run.

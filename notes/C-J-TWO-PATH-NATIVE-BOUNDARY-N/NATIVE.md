@@ -559,6 +559,129 @@ does not supply the declared orbit coherence or a pure ready source.
 These are analytical conditional statements about the fixed code and
 proposed initial states, not a new native preparation theorem.
 
+## 3b. Invariant class profiles and the complete ready state
+
+The uniform-sheet example does not exhaust invariant sources.
+[U-NATIVE-INVARIANT-AND-NOWRITE][native-invariant] classifies fixed
+checkpoint readers on X14=X_1 union X_4 by 313 native classes. Distinguish
+their label \(\mathscr R\) from the logical shift \(R|k\rangle=|k+2\rangle\).
+In the piston notation of section 2d the native invariant is
+
+\[
+\begin{aligned}
+V_{\rm nat}(x)&=(p_1+p_3,p_2+p_4,
+ \chi(z)(p_1-p_3-2),\chi(z)(p_2-p_4-1)),\\
+\chi(1)&=1,\quad\chi(4)=-1,\qquad
+\mathscr R(x)=\{V_{\rm nat}(x),-V_{\rm nat}(x)\}.
+\end{aligned}
+\]
+
+The Canon proves that every selected step on X14 negates V_nat and
+preserves its unordered class, and that every invariant fixed checkpoint
+reader factors through this class. This is a classification of readers;
+it does not automatically prepare a coherent amplitude for each class.
+
+On X_1, the affine map from the four pistons to V_nat is invertible:
+its two sum/difference pairs are inverted using 2^(-1) in F5. A nonzero
+unordered pair {V,-V} therefore gives two piston quadruples, each with
+five allowed q values; the zero pair gives one quadruple. Every class
+meets X_1, in ten points for each of the 312 nonzero classes and five
+points for the zero class. Consequently the specified complex amplitude
+profiles A(mathscr R(x)) on X_1 form a 313-dimensional linear space.
+These are proposed point amplitudes, not probabilities or an automatic
+physical coherent-state admission.
+
+There are three distinct notions here. The checkpoint counting extension
+N_F of the particular eight-tick map F has 625 independent fixed orbit modes
+u_p. The class-profile family is a 313-dimensional subspace of that fixed
+space. The complete U includes a forward counter and has no nonzero fixed
+vector in its declared counting representation: its output has zero
+component at counter zero, and a fixed-vector equation then forces every
+successive counter component to vanish. Invariant class labels can still
+be transported between successive sheets. Neither that transport nor the
+eight-tick fixed-vector statement makes a complete counter-bearing state
+time independent.
+
+In particular E(|0> tensor f) is F-fixed for every logical vector f,
+including nonconstant Fourier modes. Thus stationarity alone does not
+force f_0. The special conclusion in section 3a used the equal point
+coefficients of Omega, not invariance alone.
+
+Now test the class-profile proposal against both paths of the actual
+code. For the path-zero orbit at piston (k,0,0,0), and the path-one
+points at piston (0,1,0,0), respectively,
+
+\[
+V_k=(k,0,k-2,-1),\qquad V_*=(0,1,-2,0).
+\]
+
+The five classes mathscr R_k={V_k,-V_k} are distinct: equality with
+the negative sign is excluded by the fourth coordinate, and equality
+with the positive sign forces the same k. The class mathscr R_* is
+different from all five by its second coordinate. All five path-one
+points share this single class, independently of their q mark.
+
+Let \(\Psi_A=\sum_{x\in X_1}A(\mathscr R(x))|x\rangle\), with
+normalization imposed separately if desired. Write A_k=A(mathscr R_k)
+and A_*=A(mathscr R_*). Taking the overlaps with (N-03) gives exactly
+
+\[
+E^*\Psi_A
+ =\sqrt5\sum_k A_k|0,k\rangle
+   +A_*\sum_k|1,k\rangle.
+\tag{N-11}
+\]
+
+The first path can therefore contain arbitrary k-dependent amplitudes,
+but the second contains only f_0. A nonzero projected state proportional
+to (alpha|0>+beta|1>) tensor f, with beta nonzero, forces f to be constant.
+For the complete ready family E_B(|0> tensor f)=E(|+> tensor f), it also
+requires the matching amplitudes
+
+    sqrt(5) A_k=A_* for every k.
+
+Constant A_k alone is not sufficient without this relative factor.
+In particular no nonzero faithful source f perpendicular to f_0 can be
+obtained as that complete ready state merely by projecting a class-profile
+source into this fixed code and normalizing. This does not deny that five
+chosen classes can store arbitrary coefficients on the identity path.
+
+There is a related statement independent of the class-profile assumption.
+For nonzero f and alpha beta nonzero, (N-04) gives
+
+    N_F E((alpha|0>+beta|1>) tensor f)
+      =E(alpha|0> tensor f+beta|1> tensor Rf).
+
+Equality to the initial checkpoint vector, even up to an overall phase,
+requires Rf=f: the first path fixes that phase to one. This applies to the
+raw Gauss-balanced family W_G f in PROOF.md section 12. In its declared
+principal embedding, W_G f/sqrt(10)=E_B(|0> tensor f) for unit f.
+The complete ready family is F-fixed only for f proportional to f_0;
+the identity-path family by itself has no such restriction.
+
+This also controls simple code projection of any F-fixed sheet source,
+not just a class-profile source. On X_1, N_F is unitary and maps the
+finite-dimensional code onto itself by the unitary D=diag(I,R).
+The code is therefore reducing, so its orthogonal projector P_E commutes
+with N_F. If N_F Psi=Psi, then N_F P_E Psi=P_E Psi. Consequently a
+nonzero projected ready state still requires constant f. Supplying a
+different coherent preparation or conditional read can change this
+conclusion's hypotheses, but plain projection cannot.
+
+Finally, equal phase is weaker than equal coefficients. The unnormalized
+profile f=(2,1,1,1,1) has the same phase at every entry but nonzero Fourier
+coefficients 1/sqrt(5) in all four nonconstant modes. The contact's dark
+condition K_1 f=0 is exactly Rf=f, hence equal complex coefficients here.
+A nonzero profile with all entries on one common nonnegative phase ray
+cannot, however, be entirely faithful: its sum cannot vanish. A purely
+faithful profile requires cancellation of its complex coefficients.
+
+These are conditional analytical statements for the displayed amplitudes,
+code and operator; a separately reported computation is not used as
+evidence. A supplied coherent conditional read or further control may
+break the fixed-state condition and prepare a different state. Its two
+outcomes, preparation, record and occurrence rule remain separate duties.
+
 ## 4. Complete classical-endpoint obstruction for this unsharp effect
 
 Take five distinct point preparations at one common clock phase and any
@@ -659,5 +782,6 @@ remains open under the complete contract above.
 [port-boundary]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L6780
 [point-nogo]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L3225
 [coherent-code]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L3108
+[native-invariant]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L1107
 [source]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L18727
 [born]: https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L18784
