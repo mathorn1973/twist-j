@@ -100,6 +100,54 @@ Sources: [native law, Canon line 462][native-law],
 The last claim explicitly distinguishes a constant commanded word from
 source-dependent control and actual native commandability.
 
+### 2a. The literal four-reflection control fails the selector
+
+As freely commanded words, d,d,d,d is the identity and d,e,d,e is W.
+They differ only in the second and fourth commands, so one retained path
+bit could select between d and e at those two times in a supplied
+controller. In the affine notation above the reflection centers are
+c/2 and (c+v)/2 in F5^6; c and c+v are their affine offsets.
+
+The unchanged actual U cannot carry out these literal four-tick paths.
+Write t=theta_n and z=z(x). Since sum(c)=2 and sum(v)=1 modulo five,
+d sends z to 2-z and e sends z to 3-z. If the selector has chosen d,
+then z=3-2t; if it has chosen e, then z=4-2t. In both cases,
+
+    z(U(n,x))=4+2t mod5,
+    sigma(U(n,x))=4+2(t+theta_(n+1)) mod5.
+
+Thus the next command after either selected reflection is exactly:
+
+| Current clock bit t | Next clock bit | Next selected command |
+| --- | --- | --- |
+| 0 | 0 | e |
+| 0 | 1 | b |
+| 1 | 0 | b |
+| 1 | 1 | d |
+
+In particular two native paths at the same counter, both firing d in
+the first tick, have the same next selected command regardless of their
+other checkpoint coordinates. They cannot split into d versus e at the
+second tick. Adding a coherent superposition of such points does not
+alter this pointwise restriction on the selected commands.
+
+There are also separate obstructions to the proposed individual words.
+The substring d,e,d would require the middle clock bit to be both zero
+and one, so it is impossible even with an arbitrary binary driver. More
+generally any three consecutive commands all in {d,e} require three
+identical clock bits. The actual Thue-Morse driver has no such triple:
+every three consecutive indices contain an even-odd pair (2m,2m+1),
+and theta_(2m+1)=1-theta_(2m). Hence neither d,d,d,d nor d,e,d,e is a
+literal four-tick trajectory of U, from any starting checkpoint or time.
+
+This is an analytical obstruction to this proposed direct schedule, not
+a prohibition on every native realization of the two-path instrument.
+A successor would need intervening commands, a different independently
+specified encoding and decoding, or an explicitly enlarged controller.
+It must still meet the complete contract in section 5. The common
+reflection pattern by itself neither selects the two centers under U
+nor supplies the coherent ready state and output recombination.
+
 ## 3. Exact point-preparation obstruction
 
 Freeze the literal point encoding: a logical ready basis state is one

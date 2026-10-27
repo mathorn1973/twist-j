@@ -303,6 +303,64 @@ cosines of 2*pi/5 and 4*pi/5. In particular the author's value
 The other cross-sector choices span{f_1,f_3} and span{f_4,f_2} instead
 give (5-sqrt5)/8. Merely naming the two golden sectors does not fix it.
 
+The orientation-free pair is one Galois orbit in Q(sqrt5). With
+gamma_+=(5+sqrt5)/8 and gamma_-=(5-sqrt5)/8,
+
+    gamma_++gamma_-=5/4,       gamma_+ gamma_-=5/16,
+    16 gamma_+^2-20 gamma_++5=0,
+    16 gamma_-^2-20 gamma_-+5=0.                           (JI-24a)
+
+The involution sqrt5->-sqrt5 exchanges the roots. Their symmetric
+invariants are rational; the unordered pair itself still consists of
+irrational algebraic numbers. Fixing the physical mode pair assigns one
+root to its determinant coefficient. No unspecified choice of orientation
+is allowed to select the desired coefficient after observing a result.
+The pair still determines {phi^2,phi^(-2)} as its two directed ratios.
+Global complex conjugation reverses the cycle but fixes both real roots;
+choosing one mode from each conjugate pair is not by itself a derived
+spatial handedness.
+
+The product has a precise click-branch meaning on the four-dimensional
+balanced carrier, with the determinant taken over C (equivalently the
+rational determinant before complexification):
+
+    det_B K_1=product_(k=1)^4 (1-zeta^(2k))/2
+             =N_(K_field/Q)(1-zeta^2)/16
+             =Phi_5(1)/16=5/16=gamma_+ gamma_-.            (JI-24b)
+
+Here multiplication by two permutes the four nonzero residues modulo five
+and Phi_5(t)=t^4+t^3+t^2+t+1. This norm formula uses the primitive cycle
+element zeta, not J=1+zeta^2. The click effect E_1=K_1^*K_1 has eigenvalues
+gamma_+,gamma_-, each twice on B. Consequently
+
+    det_B E_1=25/256,
+    det_H K_1=0,
+    det_(one mode from each P sector) E_1=5/16.            (JI-24c)
+
+The full H determinant vanishes because the constant mode is dark. On
+the indicated two-mode plane the branch determinant generally has a phase
+and has modulus sqrt5/4, rather than 5/16. The coefficient gamma_(k,l)
+in the reduced-state determinant and the effect eigenvalues are different
+objects even though they share this pair of algebraic values.
+
+Once the carrier, instrument and mode/readout identification are fixed,
+the polynomial in (JI-24a), with both distinct roots present, is an
+orientation-free necessary spectral test. For E_1 on B each root must
+also have multiplicity two. Failure falsifies that declared model; success
+alone does not establish its branch phases, eigenvectors, native control,
+or physical mass interpretation.
+
+The operator form makes the scope of this test explicit:
+
+    16 E_1^2-20 E_1+5I=I+R+R^2+R^3+R^4=5P_0.            (JI-24d)
+
+Indeed, with S=R+R^(-1), its left side is S^2+S-I. It vanishes on B
+but not on the constant mode. The polynomial tests effect eigenvalues,
+not every measured click probability. For a normalized state on B with
+sector weights w_-,w_+, the probability q=w_- gamma_++w_+ gamma_- instead
+satisfies 16q^2-20q+5=-5w_-w_+, which is nonzero when both weights are
+positive. A convex mixture is not a failed spectral prediction.
+
 In Hermitian coordinates Q=t I+x sigma_x+y sigma_y+z sigma_z,
 t=s/2 and det Q=t^2-x^2-y^2-z^2. Equations (JI-23)-(JI-24) imply
 
@@ -381,9 +439,12 @@ Furthermore the pair f_1,f_4 lies entirely inside P_- and can already
 entangle the record: for nonzero alpha,beta, (JI-23) gives a positive
 determinant with gamma=(5-sqrt5)/8. Thus record entanglement detects
 different phases of R, not only occupation of both golden-modulus
-sectors. The statement 'both sectors iff timelike' is valid only after
-fixing one individual eigenmode from each sector and that two-dimensional
-Hermitian reading.
+sectors. For a fixed two-mode Hermitian reading, the reduced output is
+strictly inside the cone when both modes with different shift phases are
+occupied. The identification of its determinant with pure-state record
+entanglement applies only while the joint state remains pure. Dephasing
+the retained record preserves the marginal determinant and removes that
+entanglement, as shown above.
 
 This gives a precise conditional reduced-state determinant theorem. A
 physical identification with rest mass remains a proposed interpretation,

@@ -77,6 +77,38 @@ Review of the exact follow-up diff returned PASS with no algebraic or
 scope blocker; the final separable-mixture wording was made explicit.
 This is an internal readback, not independent public acceptance.
 
+## Galois-orbit and literal-selector follow-up
+
+The next author correction replaces an unspecified single determinant
+coefficient by the Galois pair (5+/-sqrt5)/8 and its polynomial
+16t^2-20t+5. PROOF.md derives the sum and product, types the product as
+det_B K1=5/16, and distinguishes the click effect determinant 25/256,
+the full-carrier dark mode and the two-mode restriction. Rational
+symmetric invariants do not make the unordered pair rational or establish
+a physical orientation. The polynomial is a necessary test within the
+declared instrument, not a sufficient native or mass discriminator.
+
+The proposed dddd/dede controlled paths are correct as freely commanded
+words. A new self-contained proof in NATIVE.md section 2a shows that they
+cannot be literal four-tick histories of unchanged U. After either
+selected reflection the next letter depends only on the two clock bits:
+00 gives e, 11 gives d, and a bit change gives b. This also prevents two
+paths at a shared counter from splitting into d and e immediately after
+a shared d command. No run of three reflection letters is possible under
+the Thue-Morse driver. These are pointwise selector restrictions, not a
+no-go for every longer or differently encoded implementation.
+
+Separate same-session agents checked the norm/determinant typing and the
+selector derivation against the pinned sources. Their exposed analytical
+checks agreed; no scientific executable or enumeration was run. The
+author's reported calculation remains a reported input rather than an
+imported execution record. Native preparation, coherent reading and the
+complete contract remain open.
+A further same-session read-only audit of the combined diff returned
+PASS with no algebraic or scope blocker. The spectral test is also written
+as an operator polynomial, with an explicit distinction from mixed-state
+click probabilities. These checks are not independent public acceptance.
+
 ## Repository checks
 
 The final PR records the exact published head, tree and public CI run.

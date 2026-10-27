@@ -36,6 +36,7 @@ with p0=1; it cannot be silently omitted.
   supplied positive static generator for one complete stroke, with its
   incidence, preparation and recurrence limits.
 - [NATIVE.md](NATIVE.md) identifies the q+2 native alphabet word, proves a
+  selector obstruction to the literal dddd/dede four-tick control and a
   restricted point-source/classical-readout obstruction for this unsharp
   effect, and fixes the missing source/control/record/occurrence contract.
 - [VALIDATION.md](VALIDATION.md) records proof review, source boundaries and
@@ -43,8 +44,9 @@ with p0=1; it cannot be silently omitted.
 
 The comparison answers a narrower question than a complete native physical
 derivation. The translation by two exists in the native alphabet. Its
-path-dependent scheduling, coherent source and recombination do not yet
-follow from the actual selector-driven U. On the declared Born model the
+literal four-reflection schedule is excluded by the actual selector U;
+alternative native control, coherent source and recombination remain open.
+On the declared Born model the
 all-no-click history has probability tending to zero in the cyclotomic
 sector. Calling that one history the observed world is not supplied by the
 complete instrument.
@@ -70,14 +72,18 @@ det(H(v)+H(w))=|v_1*w_2-v_2*w_1|^2.
 
 The second expression can be positive for independent spinors; the first
 remains rank at most one. The complete instrument can provide independent
-output vectors K0 psi and K1 psi. On the fixed mode plane span{f1,f2},
-their reduced Hermitian sum has determinant
-|alpha beta|^2 (5+sqrt5)/8. This is the author's follow-up observation,
-proved with its mode and reduction hypotheses in PROOF.md section 9.
-Other mode pairs can give (5-sqrt5)/8; the full four-mode carrier can
-maximally entangle the port. The coherent joint state, a dephased retained
-record and the reduced carrier state must be distinguished. A physical
-mass reading and its dynamics still require separate hypotheses. The
+output vectors K0 psi and K1 psi. On a fixed two-mode plane, their reduced
+Hermitian sum lies strictly inside the cone when both modes with different
+shift phases are occupied. Its determinant coefficient is one of the
+Galois pair (5+/-sqrt5)/8, the roots of 16t^2-20t+5; specifying the mode
+pair fixes which root applies. Their product 5/16 is det_B K1 on the full
+four-dimensional balanced carrier, whereas det_B(K1^dagger K1)=25/256.
+These follow-up identities are proved in PROOF.md section 9. The full
+four-mode carrier can maximally entangle the port. The determinant measures
+the stated record entanglement only while the joint state remains pure;
+dephasing the retained record leaves the reduced determinant unchanged
+and makes the joint state separable. A physical mass reading and its
+dynamics still require separate hypotheses. The
 phrase about mass needing two is not a proved general physical theorem.
 
 In current Canon, J-PROJECTIONS and J-MODULUS-CHORD are exact algebraic T
