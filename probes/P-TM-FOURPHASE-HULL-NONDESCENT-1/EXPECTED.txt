@@ -1,0 +1,7 @@
+PASS D1 tau/pi/rotation identities and u_n=s_2(n) mod 4 | letters=65536
+PASS D2 exact L2=(Z/4Z)^2 and exact 28-word L3 certificate | pairs=16 triples=28
+PASS D3 A2 fixes pi and flips Phi; q descends; each block fiber has two reads
+PASS D4 exact index composition proves iota^2=id and iota S iota=S^-1; pi and Phi intertwine
+PASS D5 one-block reversal classes: affine 4/8, rho-covering parity maps 2/16, permutations 4/24 | affine=[(-1, 0), (-1, 1), (-1, 2), (-1, 3)] parity=[(0, 3, 2, 1), (2, 1, 0, 3)]
+PASS D6 bounded scan agrees with the written all-length proof at lengths 1..24 | K_TM4 counts=4,16,28,44,56,72,88,100,112,128,144,160,176,188,200,212,224,240,256,272,288,304,320,336
+RESULT 6/6 ALL PASS
