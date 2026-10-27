@@ -1159,3 +1159,28 @@ FIVE-SITE-LOCAL-CONTINUITY-CONSTRAINT	INTEGER-JOINT-ACTION-ENERGY	REQUIRES	The e
 HOMOGENEOUS-CAPTURE-CURRENT-RECORD	CONTACT-W-SPECTRAL-READING	REQUIRES	The fixed branch of the object spectral logarithm in the one-carrier reference generator.
 HOMOGENEOUS-CAPTURE-CURRENT-RECORD	CONTACT-W-BOUND-PAIR-RESPONSE	REQUIRES	The infinite relative-walk bound branch; the new theorem supplies its quantitative continuation and uses a different incoming packet and homogeneous source.
 HOMOGENEOUS-CAPTURE-CURRENT-RECORD	QDD-INSTRUMENT-APPARATUS	BOUNDED_BY	Physical preparation, selective finite detector, quantitative retention and occurrence are not implied by the supplied L1 asymptotic model; this open owner is not a premise of the mathematical theorem.
+GOLDEN-CLIFFORD-COIN-IDENTITY	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-SPATIAL-CLIFFORD-PROPAGATION	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-LOCALIZED-RING-CLOSURE	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-LOCAL-NATIVE-NETWORK	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-NATIVE-FROBENIUS-PROPAGATION	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+INTEGER-W-SPECTRAL-ENERGY-PULLBACK	DEF-COHERENT-INTEGER-W	REQUIRES	The carrier, fixed embedding, coin, target contact, routing and clocks are the explicit construction data.
+COHERENT-W-SPATIAL-CLIFFORD-PROPAGATION	GOLDEN-CLIFFORD-COIN-IDENTITY	REQUIRES	The exact normalized coin and ordered matrix identities are used.
+COHERENT-W-LOCALIZED-RING-CLOSURE	GOLDEN-CLIFFORD-COIN-IDENTITY	REQUIRES	The numerator has Hermitian Gram matrix 5I.
+COHERENT-W-LOCAL-NATIVE-NETWORK	U-NATIVE-CHART-AND-QDD-READBACK	REQUIRES	The unchanged native U has the displayed synchronized chart and chart transport; explicit initial antecedents are included in the new proof.
+COHERENT-W-NATIVE-FROBENIUS-PROPAGATION	COHERENT-W-LOCAL-NATIVE-NETWORK	REQUIRES	The exact residual rule B=4Adj, preparation and microscopic clock are the inputs.
+COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR	GOLDEN-CLIFFORD-COIN-IDENTITY	REQUIRES	The full stationary scattering phase is c=(1+2i)/sqrt(5).
+COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR	COHERENT-W-LOCALIZED-RING-CLOSURE	REQUIRES	The localized module and two-sided contact-walk identities are fixed.
+COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR	COHERENT-W-LOCAL-NATIVE-NETWORK	REQUIRES	The same clock-tagged target network and native-chart preparation are used with rho_3.
+INTEGER-W-SPECTRAL-ENERGY-PULLBACK	COHERENT-W-LOCALIZED-RING-CLOSURE	REQUIRES	The raw-to-unitary identity A=5W and nonzero invariant domain are fixed.
+INTEGER-W-SPECTRAL-ENERGY-PULLBACK	COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR	REQUIRES	The retained-phase extension uses A_LC=25c^2W.
+INTEGER-W-SPECTRAL-ENERGY-PULLBACK	CONTACT-W-SPECTRAL-READING	REQUIRES	The specified bounded self-adjoint logarithm H and 0<=H+alpha I<=2pi I are the exact public spectral premise.
+ACTIVE-ISOSPECTRAL-RECORD	HOMOGENEOUS-CAPTURE-CURRENT-RECORD	REQUIRES	the fixed homogeneous U_rec, original receiver calibration and complete all-label memory carrier; the active finite source is supplied separately and does not inherit the incoming-packet probability
+THERMAL-ORIGINAL-PORT-APPARATUS	ACTIVE-ISOSPECTRAL-RECORD	REQUIRES	the exact prepared source isometry, coherent setting phases and three-step fresh-write contrast; the full gate lifts, thermal inventory and physical layout are additional explicit premises
+COMPACT-ACTIVE-RECORD-APPARATUS	ACTIVE-ISOSPECTRAL-RECORD	REQUIRES	the exact source and three-step fresh-write contrast on K_mem; finite-prefix period-15 agreement and the twelve-register construction are separately supplied
+LOCAL-THERMAL-TWO-ATTEMPT	OCCUPIED-RECORD-EXPORT-REUSE	REQUIRES	the N=2 complete joint export/replacement channel identity on arbitrary correlated valid inputs, including occupied outputs and consumed full cartridges
+DIRAC-CONTACT-SOURCE-COHERENCE	DIRAC-CONTACT-COMPLETE-ACCOUNT	REQUIRES	the explicit L=4, mu=2 target, complete five-energy weights and variance 29s-16s^2 used in the covariance, fidelity and finite-moment arguments
+U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS	DEF-ARCHITECTURE	REQUIRES	The unchanged autonomous native selector and origin-zero Thue-Morse counter are the declared architecture; the two admitted trace sheets and whole-sheet translation predicate are defined explicitly.
+U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS	DEF-KERNEL-GENERATORS	REQUIRES	The exact b,d,e maps are the unchanged kernel generators. Their actual selected word and translation are proved directly, without using the finite census as a theorem premise.
+U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS	TT-NATIVE-FOUR-WORD-LAW	REQUIRES	The canonical legal clock language and all-prefix factor frequencies are used at their L1 arithmetic scope; the needed recurrences and dyadic boundary corrections are also given explicitly.

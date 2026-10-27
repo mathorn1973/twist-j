@@ -23,18 +23,115 @@ class ArchitectureMapReportTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.report = architecture.audit(ROOT)
 
+    def test_v106_exact_declared_dependency_extension(self) -> None:
+        # These are declared mathematical premises. A path in this graph
+        # does not supply preparation, a physical reading or an apparatus.
+        normative = architecture.read_tsv(
+            ROOT / "canon/NORMATIVE.tsv", architecture.NORMATIVE_FIELDS
+        )
+        dependencies = architecture.read_tsv(
+            ROOT / "canon/DEPENDENCIES.tsv", architecture.DEPENDENCY_FIELDS
+        )
+        requires = architecture.dependency_graph(
+            (row["item_id"] for row in normative), dependencies, "REQUIRES"
+        )
+        expected = {
+            "ACTIVE-ISOSPECTRAL-RECORD": {
+                "HOMOGENEOUS-CAPTURE-CURRENT-RECORD",
+            },
+            "COHERENT-W-LOCAL-NATIVE-NETWORK": {
+                "DEF-COHERENT-INTEGER-W",
+                "U-NATIVE-CHART-AND-QDD-READBACK",
+            },
+            "COHERENT-W-LOCALIZED-RING-CLOSURE": {
+                "DEF-COHERENT-INTEGER-W",
+                "GOLDEN-CLIFFORD-COIN-IDENTITY",
+            },
+            "COHERENT-W-NATIVE-FROBENIUS-PROPAGATION": {
+                "COHERENT-W-LOCAL-NATIVE-NETWORK",
+                "DEF-COHERENT-INTEGER-W",
+            },
+            "COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR": {
+                "COHERENT-W-LOCAL-NATIVE-NETWORK",
+                "COHERENT-W-LOCALIZED-RING-CLOSURE",
+                "DEF-COHERENT-INTEGER-W",
+                "GOLDEN-CLIFFORD-COIN-IDENTITY",
+            },
+            "COHERENT-W-SPATIAL-CLIFFORD-PROPAGATION": {
+                "DEF-COHERENT-INTEGER-W",
+                "GOLDEN-CLIFFORD-COIN-IDENTITY",
+            },
+            "COMPACT-ACTIVE-RECORD-APPARATUS": {
+                "ACTIVE-ISOSPECTRAL-RECORD",
+            },
+            "DEF-COHERENT-INTEGER-W": set(),
+            "DIRAC-CONTACT-COMPLETE-ACCOUNT": set(),
+            "DIRAC-CONTACT-SOURCE-COHERENCE": {
+                "DIRAC-CONTACT-COMPLETE-ACCOUNT",
+            },
+            "FINITE-COHERENT-BATTERY-DRIFT": set(),
+            "GOLDEN-CLIFFORD-COIN-IDENTITY": {
+                "DEF-COHERENT-INTEGER-W",
+            },
+            "INTEGER-W-SPECTRAL-ENERGY-PULLBACK": {
+                "COHERENT-W-LOCALIZED-RING-CLOSURE",
+                "COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR",
+                "CONTACT-W-SPECTRAL-READING",
+                "DEF-COHERENT-INTEGER-W",
+            },
+            "LOCAL-THERMAL-TWO-ATTEMPT": {
+                "OCCUPIED-RECORD-EXPORT-REUSE",
+            },
+            "OCCUPIED-RECORD-EXPORT-REUSE": set(),
+            "THERMAL-ORIGINAL-PORT-APPARATUS": {
+                "ACTIVE-ISOSPECTRAL-RECORD",
+            },
+            "U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS": {
+                "DEF-ARCHITECTURE",
+                "DEF-KERNEL-GENERATORS",
+                "TT-NATIVE-FOUR-WORD-LAW",
+            },
+        }
+        for item, parents in expected.items():
+            self.assertEqual(requires[item], parents)
+        self.assertEqual(
+            set(expected) & set(self.report.direct_architecture_requires),
+            {
+                "U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS",
+            },
+        )
+        self.assertEqual(
+            set(expected) & set(self.report.transitive_architecture_dependents),
+            {
+                "COHERENT-W-LOCAL-NATIVE-NETWORK",
+                "COHERENT-W-NATIVE-FROBENIUS-PROPAGATION",
+                "COHERENT-W-PHASE-RETAINED-LOCAL-FACTOR",
+                "INTEGER-W-SPECTRAL-ENERGY-PULLBACK",
+                "U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS",
+            },
+        )
+        self.assertEqual(
+            set(expected) & set(self.report.dependency_terminals),
+            {
+                "DEF-COHERENT-INTEGER-W",
+                "DIRAC-CONTACT-COMPLETE-ACCOUNT",
+                "FINITE-COHERENT-BATTERY-DRIFT",
+                "OCCUPIED-RECORD-EXPORT-REUSE",
+            },
+        )
+
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v105 adds one connected L1 theorem with two-architecture evidence.
-        self.assertEqual(self.report.claims, 577)
+        # v106 adds 16 inline L1 theorem rows; previous evidence classes are unchanged.
+        self.assertEqual(self.report.claims, 593)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 434},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 450},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 159,
+                "none": 175,
                 "one-architecture": 9,
                 "recorded-audit": 31,
                 "two-architecture": 378,
@@ -43,11 +140,11 @@ class ArchitectureMapReportTests(unittest.TestCase):
         self.assertFalse(self.report.count_mismatches)
 
     def test_architecture_is_a_hub_not_the_only_non_algebraic_root(self) -> None:
-        self.assertEqual(len(self.report.direct_architecture_requires), 201)
+        self.assertEqual(len(self.report.direct_architecture_requires), 202)
         self.assertEqual(
-            len(self.report.transitive_architecture_dependents), 380
+            len(self.report.transitive_architecture_dependents), 385
         )
-        self.assertEqual(len(self.report.dependency_terminals), 80)
+        self.assertEqual(len(self.report.dependency_terminals), 84)
         # v95 adds ten inline theorems (architecture_requirement=none).
         # Their declared premise edges add four terminals and no path to
         # DEF-ARCHITECTURE; this is a graph fact, not physical independence.
