@@ -258,6 +258,39 @@ blocker remained; wording was narrowed to avoid implying a unique completion
 or an already prepared physical source. These are not independent public
 acceptance or a new computational reproduction.
 
+## Return word, actual four-tick block and clock coherence
+
+The author reported nine exact checks in another session, including twenty
+sampled bijective sheet matchings. No verifier, seed, stdout or hashes were
+supplied here; the report is recorded without importing independent
+execution evidence. Sampling matchings is not the universal proof. That
+proof cancels the same fixed identification and yields d b e b directly.
+
+The resulting translation (0,0,0,0,3,2) is already displayed in Canon's
+CENSUS-HOSTING row. Its membership in the fired derived subgroup follows
+from the canonical commutators and is also proved directly here. This
+note does not register the known translation as a new discovery or promote
+the status of the complete hosting census.
+
+The actual clock values theta_5,...,theta_8=0,0,1,1 and their selectors
+give the separate four-tick witness on X_1. Reorienting the original
+code's point labels from q to r gives the same controlled C^2 and
+two-port identities with a definite counter at every prefix. This is a
+conditional code transport, not preparation or a recurrent reset cycle.
+NATIVE.md also separates coherent paths at one clock value from coherent
+alternatives with different retained counter labels. Clock coherence is
+neither required for the former construction nor alone sufficient to
+produce cross terms after the clock is discarded in the latter.
+
+These extensions are analytical; no scientific executable or enumeration
+was run. The reported external checks and the same-session proof review
+remain distinct from independent public acceptance.
+Separate exposed analytical readbacks checked the full affine word,
+commutator identities, actual timing, r-oriented code, origin-zero source
+transport and clock partial-trace formulas. No mathematical blocker
+remained after clarifying digit-sum parity and the nonalternating clock
+sequence. These readbacks do not promote the public claim status.
+
 ## Repository checks
 
 The final PR records the exact published head, tree and public CI run.

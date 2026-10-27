@@ -350,9 +350,39 @@ R_1R_0^{-1}=C^2.
 
 Posun o dva je tedy nezávislý na tomto párování jako relativní
 porovnání obou bitů hodin. Jednotlivý kontakt I+R₀ nebo I+R₁
-na párování závisí dál. Porovnání dvou pravidel také není samo
-novým vykonaným krokem U. Zpětné přeznačení slouží výpočtu,
-není odvozeným fyzickým chodem pozpátku.
+na párování závisí dál. Zrušení párování lze zapsat přímo:
+
+\[
+R_1R_0^{-1}=d\circ b\circ e\circ b
+=T_{(0,0,0,0,3,2)}.
+\]
+
+Na celém prostoru šesti registrů se písty vrátí a dvojice (q,r)
+se posune o (−2,+2). Tento posun už obsahuje návratová algebra
+Canonu pod CENSUS-HOSTING. Součin dvou bodových odrazů d a beb
+patří do známé komutátorové podgrupy. Nynější rovnost jej spojuje
+s porovnáním obou řídicích hodnot. Čtení posunu jako prostoru
+zůstává fyzikálním slovníkem.
+
+Samotné porovnání ještě nerozhoduje, zda U slovo vykoná. Zde
+však konkrétní rozvrh existuje. Bity hodin v tikách 5, 6, 7, 8
+jsou 0, 0, 1, 1. Každý vstup na X₁ proto projde písmeny
+b, e, b, d a platí
+
+\[
+U^4(5,x)=(9,T_{(0,0,0,0,3,2)}x),\qquad x\in X_1.
+\]
+
+Posun má tedy vlastní čtyřtikové provedení. Čítač se nevrací
+a opakování stejného kroku v každém dalším okně z toho neplyne.
+
+Koherence cest přitom nevyžaduje superpozici hodnot hodin.
+V předchozím orbitovém kódu stačí bodovou cestu označit hodnotou
+r místo q. Orbitový součet se při tomto posunu nezmění a bod
+se posune o dva. Obě cesty mají současně tentýž čítač 5, pak 6,
+7, 8 a nakonec 9. Při dodané koherentní přípravě a čtení tak
+tentýž kód nese celý dvouvýstupový kontakt. Nativní pohyb však
+ani zde přípravu a čtení nevyrábí.
 
 Zbývá účet obou výstupů. Označme F₁ a F₄ bijektivní přesuny
 jednotlivých listů do společného cíle. Nativní lineární slévání
@@ -381,6 +411,15 @@ Nová cesta tedy má přesné párování i nativní relativní posun.
 Potřebuje ještě připravenou koherenci mezi listy a zákon, který
 uchová výstup proti sobě. Uchování jeho amplitudy navíc ještě
 není trvalým čitelným záznamem.
+
+Pokud místo listů zvolíme jako dvě cesty dva různé časy,
+přidáme jinou povinnost. Časové značky zůstávají pod stejným
+počtem tiků různé. Když čítač vynecháme z čtení, křížové členy
+mezi nimi zmizí. Samotná počáteční superpozice časů proto ještě
+nezajistí jejich interferenci; potřebuje společné koherentní
+čtení nebo jiné připravené spojení cest. Deterministický
+Thue–Morse z určité hodnoty čítače takovou superpozici nevytvoří.
+To však není překážkou dvou cest se stejným čítačem.
 
 Stav výsledku: přijatá algebra v Canonu zůstává přijatou algebrou.
 Zdejší úplný přístroj a nové důsledky jsou podmíněný analytický

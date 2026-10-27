@@ -95,7 +95,18 @@ and a fixed matched-sheet source give the usual (I+/-R)/2 branches.
 Canonical chart matchings I_s:(1,v,r)->(4,v,r+s) yield R_0=C^(s-1) and
 R_1=C^(s+1). The short fixed matching I_1=e o b therefore gives C^2 at
 clock bit one. For any one fixed sheet bijection, R_1 R_0^(-1)=C^2;
-this is a comparison identity, not an additional executed native step.
+this comparison identity alone does not specify an executed native step.
+
+The same quotient is the known CENSUS-HOSTING translation
+d b e b=T_(0,0,0,0,3,2). A separate selector proof now gives its actual
+four-tick realization from counter 5 to 9 on X_1, using clock bits 0011.
+With r-oriented point columns the orbit code realizes the controlled C^2
+and full two-port matrix on that block, still conditional on the same
+coherent preparation and reading. Both paths have a common definite
+counter throughout; coherence between distinct clock values is not a
+necessary resource for this conditional instrument. If distinct times
+are used as paths instead, orthogonal clock labels must also be coherently
+read or recombined before their cross terms can affect the output.
 
 ## Three interpretation corrections
 

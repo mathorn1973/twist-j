@@ -874,12 +874,155 @@ a balanced ready path. That completion, normalization and output readout
 are additional supplied interfaces, not consequences of the raw merger.
 
 Equation (N-12) compares the two control values at a common input chart.
-It is not a claimed consecutive native program, a superposition of clock
-values, or a repeated physical stroke. Each actual step uses its actual
-theta_n and advances the counter. The result supplies a robust relative
-five-cycle; it neither selects I nor prepares the matched coherent source,
-balances its amplitudes, provides both retained outcomes or chooses an
+That comparison alone does not establish an executed program; section 3e
+supplies a specific actual four-tick witness. It does not supply a
+superposition of clock values or a repeated physical stroke. Each actual
+step uses its actual theta_n and advances the counter. The relative
+five-cycle does not select I, prepare the matched coherent source,
+balance its amplitudes, provide both retained outcomes or choose an
 occurrence. No scientific enumeration or executable run is used here.
+
+## 3e. The return translation and an actual four-tick witness
+
+The translation itself has prior public attribution:
+[CENSUS-HOSTING](https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L13767)
+already states that the return group <d,b e b> has order ten and that
+d composed with b e b translates by T_0=(0,0,0,0,3,2).
+[FIRED-COMMUTATOR-NOGO][commutators] places all 25 fibre translations in
+the derived subgroup of <b,d,e>. The following direct affine proof,
+specific actual timing and declared code do not claim discovery of T_0
+or promote the entire census statement to a different public status.
+
+The relative quotient also cancels the sheet identification directly:
+R_0=b e I and R_1=d b I give
+
+    R_1 R_0^(-1)=d b I I^(-1) e b=d b e b.
+
+Here name this checkpoint word D, distinct from the earlier logical
+controlled shift. Put H=b e b, c_0=(2,1,3,4,1,1), and
+v_q=(0,0,0,0,1,0). With the piston-pair exchange P from section 2d,
+
+    H(x)=h-x,       h=-P(c_0+v_q)=(2,1,3,4,3,4),
+    d(x)=c_0-x,
+    D(x)=d H(x)=x+c_0-h=x+(0,0,0,0,3,2).                 (N-13)
+
+These identities hold on all F5^6. Thus d and H are central reflections
+with centres c_0/2 and h/2, and D is their nonzero order-five translation.
+Under the Canon convention [g,h]=g h g^(-1) h^(-1),
+
+    [d,H]=D^2,       D=[d,H]^3=[d,b][d,e]^2.
+
+The first equality uses the involutions d,H, and D^6=D proves the cube
+formula. For the last equality the registered commutators give fibre
+vectors (2,2) for [d,b] and (1,0) for [d,e]^2, summing to (3,2).
+
+The chronological word b,e,b,d is also an actual selected continuation.
+The binary digit-sum parities at counters 5,6,7,8 are 0,0,1,1. Starting at X_1,
+
+| Counter | theta | Trace before | Actual letter | Trace after |
+| ---: | ---: | ---: | --- | ---: |
+| 5 | 0 | 1 | b | 4 |
+| 6 | 0 | 4 | e | 4 |
+| 7 | 1 | 4 | b | 1 |
+| 8 | 1 | 1 | d | 1 |
+
+Consequently U^4(5,x)=(9,Dx) for every x in X_1. In the canonical chart
+D fixes v and sends r to r+2, exactly C_r^2. The four letters are
+bijective on each common intermediate sheet. This assertion uses one
+definite counter trajectory, not a superposition of the two clock bits.
+
+For a code with the logical mark oriented as r, use the same orbit
+columns as (N-03) and reverse the point-path mark:
+
+    E_r|0,k>=(1/sqrt5) sum_t |k,0,0,0,t,1-k-t>,
+    E_r|1,k>=|0,1,0,0,-k,k>,          k,t in F5.
+
+This changes the stated logical basis orientation; its 30 native support
+addresses are the same as in (N-03). The ten columns are orthonormal.
+D permutes each orbit sum by t -> t+3 and sends the point column k to
+k+2. Define C_5|k>=|k+1>, D_r=diag(I,C_5^2), and
+E_(r,n)=|n>_counter tensor E_r. The counting extension N_(5,4) of this
+actual U^4 restriction satisfies the complete-code identity
+
+    N_(5,4) E_(r,5)=E_(r,9) D_r.                          (N-14)
+
+Every prefix is an isometry on the whole initial X_1 sheet, including
+all coherences and arbitrary passive references; global isometry on all
+native sheets is not asserted. With B=H_2 tensor I_5 and E_(r,B)=E_r B,
+put E_(r,B,n)=|n>_counter tensor E_(r,B). The argument of (N-05) gives
+
+    N_(5,4) E_(r,B,5)=E_(r,B,9) V,
+    V=B D_r B=(1/2)((I+C_5^2,I-C_5^2),(I-C_5^2,I+C_5^2)).
+
+The orbit coherence, ready preparation and coherent encoder/readout
+remain supplied. This transports both logical outputs; it does not
+physically prepare, distinguish or retain their records by itself.
+
+The code need not be inserted at time five: the actual first five
+letters on an origin-zero X_1 source are b,b,d,b,b, whose checkpoint
+map is d. Supplying |0>_counter tensor d E_r xi therefore gives
+|5>_counter tensor E_r xi and then |9>_counter tensor E_r D_r xi.
+This is a stated initial coherent preparation with a different initial
+checkpoint encoder, not generation of that coherence from a point.
+
+The witness establishes the counters 5 through 9, or the explicitly
+specified origin-zero prefix. The identity D^5=I neither resets the
+native counter nor guarantees that repeated four-tick windows enact D.
+No renewable source, energy/work account, record persistence or outcome
+selection follows. The proof is analytical; no executable run is used.
+
+## 3f. Coherent paths need not be distinct clock values
+
+The logical path and the derived bit theta_n are different objects.
+Fix a definite counter n. At theta_n=1 the matching I_1=e o b gives
+R=C_r^2; at origin zero the separately declared I_3 does so. The input
+
+    |n> tensor E_I f=|n> tensor (f direct-sum I f)/sqrt2
+
+has sheet coherence but no clock superposition. With the supplied
+completion from PROOF.md section 13 its output is
+
+    |n+1> tensor ( |+> tensor F_(1,theta_n)(I_op+C_r^2)f/2
+                   +|-> tensor F_(1,theta_n)(I_op-C_r^2)f/2 ).
+
+Both outputs have the same counter factor, so tracing out that counter
+does not remove their mutual coherence. The actual four-tick code in
+section 3e supplies another definite-clock example, with coherence in
+orbit/point paths on a single sheet. Thus superposition of clock values
+is not necessary for the conditional two-path instrument. Source
+coherence, the declared representation and the coherent reading remain
+supplied resources in both constructions.
+
+If distinct times are instead chosen as paths, let n_0!=n_1 and let
+A,B be declared isometric checkpoint branches on a unit source psi.
+For their coherent joint state and its reduced checkpoint state,
+
+    Psi=(|n_0> tensor A psi+|n_1> tensor B psi)/sqrt2,
+    Tr_clock |Psi><Psi|
+       =(A|psi><psi|A^*+B|psi><psi|B^*)/2.                (N-15)
+
+The cross term vanishes because the counter states are orthogonal.
+Every common number N of native ticks sends n_i to n_i+N, preserving
+their difference and orthogonality; equal derived theta bits do not
+identify the full counter states. A coherent clock superposition alone
+therefore does not yield interference in the reduced checkpoint state.
+
+Joint coherence can still be read with an additional coherent clock
+measurement. At the displayed checkpoint, selection of the clock states
+(|n_0>+/-|n_1>)/sqrt2 yields (A+/-B)psi/2. Both outcomes belong in the
+complete instrument, and ignoring the outcome cancels the cross terms
+again. A clock-only unitary preserves orthogonality; an unconditional
+trace-preserving clock reset also leaves the reduced checkpoint state
+unchanged. Conditional readout, a specified joint recombination or a
+different admitted history encoding must be supplied, and any other
+retained path labels must be accounted for as well.
+
+Finally theta_n is a deterministic function of n, not an independent
+native qubit. The law maps a definite counter to a definite successor;
+its sequence of zeros and ones does not prepare a clock superposition.
+This does not prohibit transport of already declared coherence on an
+admitted isometric carrier. None of these formulas derives a source,
+native coherent readout, physical occurrence or permanent record.
 
 ## 4. Complete classical-endpoint obstruction for this unsharp effect
 
