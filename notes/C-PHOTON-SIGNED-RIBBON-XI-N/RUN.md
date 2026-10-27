@@ -1,0 +1,38 @@
+# RUN
+
+**PUBLIC, NON-CANONICAL. candidate-C finite audit only.**
+Owner: #1184
+Author: A. M. Thorn
+Date: 26 September 2026
+
+Frozen pin: `86924ca642d3637c6b67b684dcca85a13d2bd498`.
+
+Readback:
+- PREREG.md blob `57b2ba042e462793a016ac29c28816bf8c96cc8a`,
+  SHA-256 `ff522f4c3b6df939204e7fc0f597b9e2411f755fbb7dc8be9dcdafa6571101bf`.
+- verify.py blob `7656cdf32bd5caee007d40c16ea651944351991b`,
+  SHA-256 `cc3f9c88260f9938a4fb8b56ec9390cbf77e43d5b8e052b4b79d8b768a214f26`.
+
+Environment: Linux x86_64, Python 3.13.5.
+
+Result:
+
+```text
+exit_code: 0
+stdout_bytes: 468
+stderr_bytes: 0
+stdout_sha256: 9f69d3e27c005d8f0adb5bbb98941478685dae633f51dbc50e6c01666640a42c
+stderr_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+```
+
+Exact stdout:
+
+```text
+CONSTANTS PASS a=15625/177147 r=41/25 q_rib=4707953125/31381059609
+SERIES PASS coefficients_k0_to_19=(k+2)^4
+RIBBON_EXAMPLES PASS count=13 D=2..8 straight_and_one_turn
+SC_COMPLEMENT PASS first_D=2 r^D>tau^(2D+2)
+BOUND PASS C_rib=24970997955647887886612946733927769359355575308574483756351470947265625/276988643911292046998947484879030296528216494351585610967309370017876928
+BOUND_DIGITS num=71 den=72
+AUDIT PASS; high_contact_ribbon_uniform=YES; full_Xi=OPEN; P1=OPEN
+```
