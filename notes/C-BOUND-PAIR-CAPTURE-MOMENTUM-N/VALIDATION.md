@@ -58,6 +58,14 @@ probability intervals conditional on the analytical envelope theorem;
 it does not evaluate an absolute rate or prove the infinite-dimensional
 source theorem afresh.
 
+The prospective pin `8ceec7a35f68aa6d78c1f8dee698956a74bf4ef3` was
+publicly pushed and all eight files read back byte for byte before the
+first execution. That run passed 86 checks at all 11 centers, with exit
+0 and empty stderr. The exact 700-byte stdout and complete neutral
+custody are now in the probe's result files. No pinned verifier,
+preregistration, source formula or threshold changed. Required PR
+replay on both architectures is separate from this local result.
+
 ## Scope retained
 
 The original `W_g` survives only in the declared invariant port sector.

@@ -13,4 +13,7 @@ Read `PREREG.md` before interpreting an interval as a statement about the
 whole probability. The denominator of the full scattering problem remains
 inherited and unevaluated; an absolute probability curve is not claimed.
 
-Execution and result files are added only after the prospective public pin.
+The first prospectively pinned run passed all 86 checks at 11 fixed centers.
+See [RESULT.md](RESULT.md) for the full interval table and its meaning,
+[RUN.md](RUN.md) for public-pin custody, and [EXPECTED.txt](EXPECTED.txt)
+for the exact captured stdout. Required PR replay checks both architectures.

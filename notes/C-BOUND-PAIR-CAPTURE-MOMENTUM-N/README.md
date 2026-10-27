@@ -26,6 +26,12 @@ stejné. Pravděpodobnost společného záchytu a záznamu je sudá a při
 rostoucím `|p|` přísně klesá. Úzké přesné meze jejího poměru k hodnotě
 v `p=0` lze určit bez nahrazení úplného rozptylového jmenovatele.
 
+První předem veřejně připnutý výpočet prošel všech 86 kontrol. Pro
+`p=0.5` leží poměr v `[0.951593,0.951962]`; pro `p=0.999` v
+`[0.786335,0.788103]`. Úplná tabulka jedenácti intervalů a přesný
+význam měřené veličiny jsou v
+[RESULT.md](../../probes/P-BOUND-PAIR-CAPTURE-MOMENTUM-1/RESULT.md).
+
 ## Přesný význam děje
 
 Vstupem je **nevázaná dvojice a stojící nosič**. Výstupem v úspěšné
@@ -39,7 +45,7 @@ mezi stojícím a pohyblivým nosičem používá samostatné koeficienty
 `3/5,4/5`. Tyto dva kontakty se nezaměňují. Zachovaný počet obsazení
 a spektrální energie zůstávají odlišné účty převzatého modelu.
 
-Vodorovná osa je střed hybnosti **příchozí dvojice**. Není to celková
+Vodorovná osa je střed hybnostního okna **příchozí dvojice**. Není to celková
 hybnost dvojice a dalšího nosiče ani hybnost fyzikálně určeného fotonu.
 Při posunu okna se zachovává stejné energetické rozdělení. Původní
 příprava je přesně bod `p=0`.
