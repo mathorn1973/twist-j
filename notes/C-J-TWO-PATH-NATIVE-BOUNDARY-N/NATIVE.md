@@ -1024,6 +1024,119 @@ This does not prohibit transport of already declared coherence on an
 admitted isometric carrier. None of these formulas derives a source,
 native coherent readout, physical occurrence or permanent record.
 
+## 3g. Shortest whole-sheet returns and their clock windows
+
+The scope of a window matters: first impose the same input sheet X_1
+at each chosen start n, independently of the sheet occupied by an
+uninterrupted trajectory at that time. Write h=0 for X_1 and h=1 for
+X_4. The chart law for one bit t is
+
+    h_next=1-t,       v_next=-v,       r_next=-r+c,
+    c=h xor t.
+
+For a word t_0,...,t_(L-1) starting on X_1, this becomes
+
+    c_0=t_0,     c_i=1_[t_(i-1)=t_i] for i>=1,
+    v_L=(-1)^L v_0,
+    r_L=(-1)^L r_0+sum_(i=0)^(L-1) (-1)^(L-1-i)c_i,
+    h_L=1-t_(L-1).                                      (N-16)
+
+For every point of the whole initial X_1 sheet, the window is a pure
+fibre translation with all four pistons returned if and only if
+
+    L is even and t_(L-1)=1.
+
+For odd L the coefficient of the freely varying r is -1, excluding
+a translation. For even L the signed v returns; equality of all piston
+coordinates also requires the initial trace sheet, since changing h
+reverses the two centred piston differences. Conversely even L and the
+same sheet recover the pistons by the chart inverse. The trace then
+fixes the compensating q shift. Thus for such returning even windows
+the displacement is
+
+    (Delta q,Delta r)=(-delta,delta),
+    delta=-c_0+c_1-c_2+...+c_(L-1) in F5.                (N-17)
+
+At length two, 01 gives b,b and 11 gives d,d; both are the identity.
+The latter must not be omitted when X_1 is imposed at arbitrary starts.
+The other two bit pairs do not return the whole sheet's pistons.
+
+The [canonical four-word law](https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L25342)
+gives exactly ten native four-bit factors. Five end in one:
+
+| Clock word | Chronological native letters from X_1 | Delta r |
+| --- | --- | ---: |
+| 0011 | b,e,b,d | +2 |
+| 0101 | b,b,b,b | 0 |
+| 1001 | d,b,e,b | -2 |
+| 1011 | d,b,b,d | 0 |
+| 1101 | d,d,b,b | 0 |
+
+The remaining factors 0010,0100,0110,1010,1100 end in zero and fail
+the whole-sheet piston-return condition. Substitution in (N-17)
+proves every table entry. Therefore four is the least positive length
+of a nonidentity pure fibre translation on the whole imposed X_1 sheet.
+This is not a minimum over arbitrary encoded contacts, selected points,
+different initial carriers or supplied encoders and readers.
+
+Longer even windows also reduce to short parent words. Let N_10(a)
+count adjacent descents 10 within a finite binary word a. Put L=2m.
+For an even start n=2j, let a=theta_j...theta_(j+m-1), of length m.
+For an odd start n=2j+1, let a=theta_j...theta_(j+m), of length m+1.
+Using theta_(2j)=theta_j and theta_(2j+1)=1-theta_j gives
+
+    even start: return iff last(a)=0; delta=-2 N_10(a),
+    odd start:  return iff last(a)=1; delta=+2 N_10(a).   (N-18)
+
+For the even case, all c_(2i+1) vanish and
+delta=-a_0-sum_(i>=1)1_[a_(i-1)!=a_i]. When last(a)=0,
+the number of rises is N_10(a)-a_0, giving the first formula.
+For the odd case all c_(2i) with i>=1 vanish and
+delta=-(1-a_0)+sum_(i>=1)1_[a_(i-1)!=a_i]. With last(a)=1,
+the number of rises is N_10(a)+1-a_0, giving the second formula.
+All displacements are reduced modulo five after these integer sums.
+
+For L=6, the permitted three-bit parents ending in zero are 010,100,110;
+each has one descent. Among four-bit parents ending in one, only 0011
+has no descent. Thus the only length-six identity returns are odd starts
+whose four-bit parent word is 0011. For L=8, each permitted four-bit
+parent ending in zero has one or two descents. A five-bit parent ending
+in one cannot have zero descents: a nondecreasing word of length five
+would contain 000 or 111, both absent from the native clock. It has at
+most two descents. Hence every length-eight return is nonidentity.
+PROOF.md section 14 derives exact finite counts and limiting frequencies
+from these rules, without importing a sampled window census.
+
+Now distinguish the sheet actually occupied after synchronization.
+For an origin-zero trajectory starting in X14, every n>=1 has
+
+    z_n=4+2 theta_(n-1) modulo five.
+
+For such an occupied sheet a four-tick whole-sheet piston return occurs
+if and only if theta_(n+3)=theta_(n-1). The permitted five-bit factors
+theta_(n-1)...theta_(n+3) satisfying that equality are exactly
+
+| Five-bit word | Delta r | Parity of the window start n |
+| --- | ---: | --- |
+| 00110, 11001 | -2 | even |
+| 01100, 10011 | +2 | odd |
+
+This follows by splitting a five-bit factor into its even and odd
+substitution origins; it also follows from the parent triples 010 and
+101. In particular none of these actual occupied-sheet returns is the
+identity. The same argument at length two leaves only b,b, since the
+surrounding triples are 010 or 101 and 000,111 are absent.
+
+The imposed-X_1 nonidentity four-window frequency is 1/4. The frequency
+on the actually occupied sheet, counting all start times after the
+finite transient, is instead 1/3; the X_1 and X_4 contributions are
+each 1/6. These all-prefix limits are proved in PROOF.md section 14.
+The two frequencies describe different source admissions. Neither is
+a Born weight or the rate of prepared and read physical contacts.
+The windows overlap and cannot be counted as independent uses, fresh
+coherent preparations, reset cycles or persistent records. The proof
+concerns available native movement under the declared start conditions.
+
 ## 4. Complete classical-endpoint obstruction for this unsharp effect
 
 Take five distinct point preparations at one common clock phase and any

@@ -746,6 +746,123 @@ finite retention and does not exclude added memory or changed dynamics.
 That recurrence theorem is not equivalent to two-to-oneness, nor does
 this supplied unitary completion evade it within its original scope.
 
+## 14. Exact window frequencies and dyadic counts
+
+Count starting counters 0<=n<N, allowing a window to continue beyond N.
+First use the supplied-sheet convention of NATIVE.md section 3g: at each
+start the source is X_1, whether or not the preceding actual trajectory
+occupies that sheet. A qualifying window returns all pistons and is a
+pure fibre translation on the whole sheet; a nonzero translation is not
+itself a prepared or read two-path contact.
+
+The bit recursion theta_(2m)=theta_m, theta_(2m+1)=1-theta_m supplies
+exact limiting factor frequencies. These are already proved in
+[TT-NATIVE-FOUR-WORD-LAW](https://github.com/mathorn1973/twist-j/blob/892a0b11089d34e241e1eb76d2c03247022d18e6/canon/CANON.md#L25342),
+not merely postulated as the optional K1 weights. For completeness,
+the first M bits have one-letter imbalance at most one. An even child
+pair is 01 or 10 according to its parent bit; odd child pairs arise as
+
+    00 -> 10,   01 -> 11,   10 -> 00,   11 -> 01.
+
+If p_N is the normalized pair-count vector in order 00,01,10,11 and P
+is this permutation matrix, parity splitting gives
+
+    p_(2M)=(0,1/4,1/4,0)+(1/2)P p_M+O(1/M).
+
+An odd terminal start adds O(1/N). The affine map contracts by 1/2;
+iterating the error over dyadic scales proves convergence, with error
+O(log N/N), to (1,2,2,1)/6. The even/odd triples from a parent pair ab
+are a,(1-a),b and (1-a),b,(1-b), giving frequency 1/6 to each of
+001,010,011,100,101,110. Four-letter windows have the parity forms
+
+    even: a,(1-a),b,(1-b),
+    odd:  (1-a),b,(1-b),c.
+
+Their ten-word language has frequency 1/6 for 0110 and 1001 and 1/12
+for each other word. These limits count overlapping native windows;
+they are not independent outcome probabilities.
+
+The classification in NATIVE.md section 3g now gives the following exact
+limits for a separately supplied X_1 source at every start:
+
+| Length | Nonzero translation density | Identity density |
+| ---: | ---: | ---: |
+| 2 | 0 | 1/2 |
+| 4 | 1/4 | 1/4 |
+| 6 | 11/24 | 1/24 |
+| 8 | 1/2 | 0 |
+
+For length four the nonzero words are 0011 and 1001, with r shifts +2
+and -2 and densities 1/12 and 1/6. For length six all qualifying even
+starts are nonzero; the only odd-start exception has parent word 0011,
+of density (1/2)(1/12)=1/24 among all starts. For length eight every
+qualifying window is nonzero. The qualification condition at each even
+length is that its last bit is one, of limiting density 1/2. The
+inherited factor estimates also give O(log N/N) errors for these limits.
+
+The finite dyadic counts can be proved without a census. Let
+p_h count 00 pairs at starts below 2^h, including the endpoint pair.
+For h>=1 the first 2^h bits are balanced, theta_0=0 and theta_(2^h)=1.
+Consequently the 11 count is p_h+1. The odd-child pair rule gives
+
+    p_1=0,   p_h=2^(h-2)-p_(h-1)-1 for h>=2,
+    p_h=(2^h-3-(-1)^h)/6.                               (JI-47)
+
+The last formula follows by induction. If C_w(M) counts starts below M
+of word w, parity splitting gives
+C_1001(2M)=C_10(M) and C_0011(2M)=C_101(M), while
+C_101(2K)=C_00(K)+C_11(K). Substitution of (JI-47), with the directly
+checked first dyadic case, yields for N=2^k, k>=2 and epsilon=(-1)^k
+
+    C_0011(N)=(N/4-epsilon)/3,
+    C_1001(N)=(N-3-epsilon)/6.                           (JI-48)
+
+For the unified table below take k>=3. The total qualifying count at
+length L is sum_(0<=n<N) theta_(n+L-1). Since
+theta_(N+j)=1-theta_j for 0<=j<N, the finite boundary correction gives
+N/2+1 for L=2,8 and N/2-1 for L=4,6. The length-six identity count is
+C_0011(N/2)=N/24+epsilon/3. Thus the exact counts are
+
+| Length | Nonzero translations | Identities |
+| ---: | --- | --- |
+| 2 | 0 | N/2+1 |
+| 4 | N/4-(1+epsilon)/2 | N/4+(epsilon-1)/2 |
+| 6 | 11N/24-1-epsilon/3 | N/24+epsilon/3 |
+| 8 | N/2+1 | 0 |
+
+At N=4096 these formulas, not a new execution, give
+
+| Length | Nonzero translations | Identities |
+| ---: | ---: | ---: |
+| 2 | 0 | 2049 |
+| 4 | 1023 | 1024 |
+| 6 | 1876 | 171 |
+| 8 | 2049 | 0 |
+
+The length-four signed counts are 341 for r+2 and 682 for r-2 by
+(JI-48). These reproduce the stated finite counts analytically; an
+external run still needs its own verifier and execution evidence.
+
+The actually occupied sheet is a different convention. For n>=1 every
+origin-zero X14 trajectory has z_n=4+2 theta_(n-1). A four-tick return of its pistons
+is nonzero exactly for the five-letter factors, starting at n-1,
+
+    00110, 01100, 10011, 11001.
+
+For even n-1 these are 01100 or 10011 and arise from parent triples
+010 or 101; for odd n-1 they are 11001 or 00110 from the same triples.
+Each factor has density 1/12. The total return-window density is 1/3,
+with r+2 at odd n and r-2 at even n, each of density 1/6. The qualifying starts
+occupying X_1 and those occupying X_4 each contribute density 1/6 among
+all counters; conditioned on either occupied sheet, the density is 1/3.
+There are no identity four-tick returns under this occupied-sheet
+convention. These arithmetic window densities do not supply fresh ready
+states, nonoverlapping uses, resets, stored outputs or a contact rate.
+
+For the separately declared contact, the r shifts +2 and -2 give the
+same effects (2I+/-[C_r^2+C_r^(-2)])/4. Their phase amplitudes can differ;
+this equality does not turn window densities into outcome probabilities.
+
 The proven output is the complete declared two-path instrument, its field
 representation, history law and boundaries. NATIVE.md also gives an
 actual-U controlled-shift witness conditional on a specified coherent

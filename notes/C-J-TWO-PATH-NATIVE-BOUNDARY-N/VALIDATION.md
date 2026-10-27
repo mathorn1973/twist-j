@@ -291,6 +291,48 @@ transport and clock partial-trace formulas. No mathematical blocker
 remained after clarifying digit-sum parity and the nonalternating clock
 sequence. These readbacks do not promote the public claim status.
 
+## Window census and an affine probe certificate
+
+The author reported a census of starts 0<=n<4096 and lengths one through
+eight, using forty probe points for the longer windows. No complete probe
+list, verifier, random seed where applicable, stdout or hashes were supplied
+here. Those counts remain an author report, not accepted execution evidence.
+The analytical short-word and all-prefix arguments in this note do not
+depend on that report, and no new scientific enumeration was run.
+
+NATIVE.md section 3g classifies the whole-sheet returns and their minimum
+length. PROOF.md section 14 derives all-prefix limiting frequencies and
+exact dyadic counts for lengths two, four, six and eight. It recovers the
+reported 1023, 1876 and 2049 nonzero counts by identities, not execution.
+The canonical TT-NATIVE-FOUR-WORD-LAW supplies the prior factor-frequency
+theorem. The density 1/4 for imposed X_1 starts and density 1/3 for the
+actually occupied sheet have explicitly different source admissions.
+Neither is promoted to a prepared-contact or Born outcome rate.
+
+For fixed n and length L, every point of X_1 follows the same selected
+word, because the next trace depends only on the current trace and clock
+bit. The window restriction F is therefore affine on X_1, even though the
+global selected U is not one affine map. The six standard unit vectors
+e_1,...,e_6 form an affine basis of X_1={x:sum_i x_i=1}. Hence
+
+    F(x)=sum_i x_i F(e_i),
+    F(e_i)-e_i=v for all i  ==>  F(x)=x+v on all X_1.
+
+To certify a pure trace-preserving fibre translation, also require that
+the first four entries of v vanish and its last two sum to zero in F5.
+Forty unspecified points are not a certificate by their number alone:
+their affine span or a sufficient exact discrimination of the restricted
+linear family must be established. This criterion does not silently lift
+a known-sheet affine check to the full state-selected map.
+
+Exposed same-session analytical readbacks checked the return criterion,
+parent-word descent formulas, all-prefix limits, dyadic recurrences,
+finite table, orientation counts, occupied-sheet convention and affine
+certificate. The Czech explanation and README agree with those scopes.
+No blocker remained after clarifying the returning-window condition,
+origin-zero trajectory and asymptotic meaning of the direction counts.
+These reviews are not independent public acceptance.
+
 ## Repository checks
 
 The final PR records the exact published head, tree and public CI run.

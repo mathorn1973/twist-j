@@ -421,6 +421,43 @@ nezajistí jejich interferenci; potřebuje společné koherentní
 Thue–Morse z určité hodnoty čítače takovou superpozici nevytvoří.
 To však není překážkou dvou cest se stejným čítačem.
 
+Čtyřtikový posun není ojedinělý. Pro každý začátek lze předem
+zadat vstup na listu X₁ a ptát se, zda se vrátí všechny písty
+a zůstane jen posun dvojice (q,r). Na celém tomto listu jej
+lichý počet tiků nedá nikdy. Dva tiky mohou dát pouze identitu:
+buď b po b, nebo d po d. Čtyři tiky jsou nejkratší nenulovou
+možností v této přesně vymezené třídě pohybů.
+
+Nenulový čtyřtikový posun nastane právě pro hodinová slova
+0011 a 1001. První posune r o +2, druhé o −2. Jejich známé
+limitní četnosti v Thueově–Morseově posloupnosti jsou 1/12
+a 1/6. Celková četnost začátků je tedy přesně 1/4.
+
+Stejný rozbor dává i konečné počty. Počítáme všech 4096 začátků,
+okno smí končit za touto hranicí. Čísla v tabulce jsou odvozena
+z hodinové rekurence, bez dalšího výčtu:
+
+| Délka | Nenulové posuny | Identity | Limitní četnost nenulových posunů |
+| ---: | ---: | ---: | ---: |
+| 2 | 0 | 2049 | 0 |
+| 4 | 1023 | 1024 | 1/4 |
+| 6 | 1876 | 171 | 11/24 |
+| 8 | 2049 | 0 | 1/2 |
+
+Jinou otázkou je jedna nepřerušená skutečná dráha. Na ní vstupní
+list znovu nevolíme: od prvního kroku platí
+zₙ=4+2θₙ₋₁ modulo pět. Nenulové čtyřtikové návraty pak mají
+limitní četnost 1/3. Oba směry posunu mají stejnou limitní četnost 1/6.
+Předchozí čtvrtina a tato třetina si neodporují; počítají
+začátky s odlišně určeným vstupním listem.
+
+Obě orientace čtyřtikového posunu dávají v dodaném dvoucestném
+kontaktu stejné váhy výstupů. Fázové amplitudy se lišit mohou.
+Četnosti oken ale nejsou pravděpodobnostmi výsledků měření.
+Okna se překrývají: například začátky 5 a 6 sdílejí tři tiky.
+Pohyb je dostupný opakovaně; přípravu, čtení a uchování výsledků
+musí stále dodat konkrétní přístroj.
+
 Stav výsledku: přijatá algebra v Canonu zůstává přijatou algebrou.
 Zdejší úplný přístroj a nové důsledky jsou podmíněný analytický
 kandidát mimo Canon. Důkazy prošly kontrolou v téže pracovní relaci;

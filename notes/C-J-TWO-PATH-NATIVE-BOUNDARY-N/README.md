@@ -37,6 +37,8 @@ with p0=1; it cannot be silently omitted.
   readout convention makes its conjugation exchange the branch formulas.
   Section 13 distinguishes the native sheet-merger sum from a complete
   sum/difference instrument and from permanent checkpoint memory.
+  Section 14 proves short-window frequencies and exact dyadic counts,
+  distinguishing supplied-sheet and actually occupied-sheet starts.
 - [INTEGER.md](INTEGER.md) retains every output on an explicit integer
   congruence lattice and counts one finite record bank. It also gives a
   supplied positive static generator for one complete stroke, with its
@@ -107,6 +109,16 @@ counter throughout; coherence between distinct clock values is not a
 necessary resource for this conditional instrument. If distinct times
 are used as paths instead, orthogonal clock labels must also be coherently
 read or recombined before their cross terms can affect the output.
+
+The native clock also admits exact all-start window theorems. With X_1
+supplied anew at each start, four ticks is the minimum nonzero whole-sheet
+fibre translation, and its nonzero-window density is 1/4. Densities at
+lengths six and eight are 11/24 and 1/2. Exact dyadic formulas reproduce
+the reported 4096-start counts 1023, 1876 and 2049 analytically. On the
+actually occupied sheet of an uninterrupted X14 trajectory, the four-tick
+nonzero-window density is instead 1/3. PROOF.md section 14 separates these
+source conventions and the overlapping movement windows from prepared
+contacts, resets and physical outcome probabilities.
 
 ## Three interpretation corrections
 
