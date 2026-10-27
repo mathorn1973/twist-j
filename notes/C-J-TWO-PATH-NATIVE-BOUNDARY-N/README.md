@@ -42,6 +42,8 @@ with p0=1; it cannot be silently omitted.
   stronger fixed-address boundaries. It gives an actual origin-zero
   eight-tick controlled-shift witness on a supplied coherent orbit code,
   with the remaining source/readout/record/occurrence contract explicit.
+  It also computes the exact code projection of a coherent uniform-sheet
+  source: only the constant logical mode is present in that projection.
 - [VALIDATION.md](VALIDATION.md) records proof review, source boundaries and
   repository checks without calling them a scientific experiment.
 - [FYZIKA-PRO-DVA.md](FYZIKA-PRO-DVA.md) is the Czech explanatory reading,
@@ -57,6 +59,15 @@ not derived native operations. On the declared Born model the
 all-no-click history has probability tending to zero in the cyclotomic
 sector. Calling that one history the observed world is not supplied by the
 complete instrument.
+
+A uniform coherent sheet source and a uniform classical mixture have the
+same point probabilities but are different inputs. In the fixed orbit
+code E, the coherent uniform source has code weight 6/625 and only the
+constant logical source mode; it does not supply the balanced golden
+ready input. The elementary support bound excludes creation of a coherent
+orbit sum from a single native point, but does not exclude dynamical
+preparation using a supplied coherent environment. Uniform plenum remains
+a source hypothesis with a separate selection and readout obligation.
 
 ## Three interpretation corrections
 

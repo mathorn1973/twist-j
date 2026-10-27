@@ -151,6 +151,37 @@ blind or independent public review.
 No new scientific executable, enumeration or one-architecture experiment
 was used to obtain these results; the proofs are self-contained.
 
+## Reported external check and uniform-source follow-up
+
+After revision 3283e9e80cd38406e65e04fa2d21edcc78842236, the author
+reported an exact seven-of-seven PASS from another session on one
+architecture, using independently written code with the canonical
+generators. The report includes all 3125 source addresses, the eight-tick
+word and translation, the thirty-address code and the reflection-run
+obstruction. No verifier, complete seven-check list, stdout, environment
+record or hashes were supplied in this conversation or attached to this
+PR at intake. This is recorded as an author-reported external calculation,
+not independently audited execution evidence or a completed acceptance.
+
+The proposed uniform-plenum interpretation is addressed by self-contained
+algebra in NATIVE.md section 3a. It distinguishes the pure uniform sheet
+vector from the uniform mixture, counts the 625 five-point translation
+orbits, and computes the exact projection into the fixed orbit code.
+The coherent uniform vector projects only to the constant logical source
+mode, with squared projection norm 6/625. Conditional point selection,
+an unselected point read and a coherent record copy are different maps.
+The support argument is also corrected to allow the actual global native
+map's collisions; no global permutation or arbitrary-state isometry is
+asserted. None of these statements physically selects a plenum state,
+supplies its readout, or derives occurrence from a coherent record.
+
+Exposed same-session analytical readbacks checked the projection and
+support arguments; the exact final native text and Czech supplement
+returned PASS with no algebraic or scope blocker. No new scientific
+executable or enumeration was run
+for this follow-up. The reported external computation and our analytical
+review remain separately attributed.
+
 ## Repository checks
 
 The final PR records the exact published head, tree and public CI run.

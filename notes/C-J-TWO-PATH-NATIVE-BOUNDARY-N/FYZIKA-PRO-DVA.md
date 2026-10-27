@@ -199,6 +199,52 @@ Původní U je tímto důkazem nepřipravilo a nepřečetlo oba výstupy.
 Jeden úplný přístroj tedy ještě nemáme. Jeho řízený krok už má
 konkrétní nativní svědek.
 
+Odkud se vezme připravený součet? Z jednoho bodu ho původní bodová
+dynamika nevyrobí. Každý obsazený bod má jediný následující bod,
+takže počet obsazených adres nemůže růst. Na celém nosiči U není
+permutací: různé body se mohou slít. Ani to však z jednoho bodu
+neudělá koherentní součet.
+
+V uzavřeném modelu s tímto jediným pravidlem musí potřebná koherence
+už někde být v počátečním globálním stavu. Z toho neplyne, že každá
+příprava musí být mimo dynamiku. Připravené prostředí může svou
+koherenci předat sledovanému nosiči. Věta také sama nevybírá plenum
+ani neurčuje jeho stav.
+
+Zkusme tedy konkrétní možnost: čistý rovnoměrný součet všech 3125
+bodů listu X₁. Osmikrokový posun jej rozkládá na 625 pětičlenných
+orbit. Na každé je rovnoměrný součet, který se opravdu nehne.
+Stejné bodové váhy ale má i rovnoměrná směs bez této koherence.
+Slovo „rovnoměrný“ musí říci, kterou z těchto dvou věcí míníme.
+
+Pro náš pevný kód E vychází přesně
+
+\[
+E^\dagger|\Omega\rangle
+=\frac{\sqrt5|0\rangle+|1\rangle}{25}\otimes f_0,
+\qquad f_0=\frac1{\sqrt5}\sum_k|k\rangle.
+\]
+
+Průmět má čtverec normy 6/625. V obou cestách však nese jen
+konstantní mód f₀. Do zlatých sektorů v tomto kódu nezasahuje.
+Rozklad plena na orbitové součty tedy ještě neposkytuje možnost
+libovolný z nich připravit, ani nedává požadovaný vstup kontaktu.
+Rovnoměrné plenum je pro tento vstup příliš souměrné.
+
+Bod může vzniknout podmíněným čtením. V deklarovaném bodovém měření
+by měl každý výsledek váhu 1/3125 a po jeho výběru by stavem byl
+příslušný bod. Bez výběru výsledku dostaneme směs. Při koherentním
+zápisu dostaneme provázaný nosič a paměť. Ani jeden zápis sám
+nevybírá jedinou skutečnou událost. Původní U nám toto měření a
+jeho paměť dosud nedodalo.
+V úplném bodovém měření by některý bod byl výsledkem vždy. Malá
+je váha předem určené adresy, ne součet vah všech bodových výsledků.
+
+Otevřená otázka proto zní přesněji: jaké počáteční korelace a jaké
+přípustné čtení připraví vstup s potřebnými amplitudami a fázemi a uchovají jeho
+záznam? Plenum může být zdrojem. Pouhá jeho rovnoměrnost tuto
+povinnost neuzavírá.
+
 Stav výsledku: přijatá algebra v Canonu zůstává přijatou algebrou.
 Zdejší úplný přístroj a nové důsledky jsou podmíněný analytický
 kandidát mimo Canon. Důkazy prošly kontrolou v téže pracovní relaci;

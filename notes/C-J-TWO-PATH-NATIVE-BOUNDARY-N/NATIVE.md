@@ -399,6 +399,26 @@ native basis point, and deterministic native evolution is represented by
 `N_f|x>=|f(x)>`. Enlarged deterministic history labels are allowed, but no
 coherent preparation is silently introduced in the encoder or decoder.
 
+The actual global U is not a permutation. At counter zero, the points
+x=(0,0,0,0,1,0) and x'=(2,1,3,4,3,1) have traces one and four.
+The selector chooses b and e respectively; both images are
+(0,0,0,0,4,0), at counter one. The forward counter also has no predecessor
+at zero. The known-sheet bijections used above must not be promoted to a
+global bijection or an arbitrary-state unitary law.
+
+The support bound does not require injectivity. For a finite-support
+vector and any deterministic map f,
+
+    (N_f psi)_y=sum_(x:f(x)=y) psi_x,
+    supp(N_f psi) subseteq f(supp psi),
+    |supp(N_f psi)| <= |supp psi|.
+
+Every positive diagonal input likewise remains diagonal under
+N_f rho N_f^*. With collisions this last operation is not generally
+trace preserving on arbitrary coherent inputs; it is not silently
+declared a global quantum channel. On the admitted isometric codes the
+norm statements have their separate proofs.
+
 Then a single ready point remains one point after every finite protocol.
 It cannot become the sum of two distinct encoded path points. This remains
 true if f has collisions: one occupied input basis point still has one
@@ -413,6 +433,131 @@ Nor does an odd cycle alone exclude a two-valued reading: the native
 alphabet has involutions, and the complete U has an unbounded counter.
 The two classes in `QUBIT-FROM-F5 [T]` are a sign quotient, not an admitted
 preparation of a coherent `|+>` state.
+
+In a closed model allowing only these maps on its literal global point
+basis, future off-diagonal coherence must therefore come from initial
+global coherence. This does not select a particular initial plenum and
+does not prohibit dynamical preparation of a subsystem using a coherent
+environment already included in that global state. A swap of a prepared
+coherent auxiliary into a subsystem is a simple permutation example.
+Likewise logical mixing in a supplied distributed code is not excluded;
+the no-go concerns its preparation from a single literal global point.
+
+## 3a. A uniform sheet, its code projection and a point record
+
+Suppose the initial checkpoint state is the coherent uniform vector on
+the trace-one sheet. This is an additional initial-state hypothesis.
+There are \(5^5=3125\) points in \(X_1\). The translation \(F\) in
+(N-02) has 625 disjoint orbits of length five, indexed by the four piston
+coordinates \(p\in\mathbb F_5^4\). Define their normalized uniform modes
+and the uniform sheet vector by
+
+\[
+u_p=\frac1{\sqrt5}\sum_{q\in\mathbb F_5}
+ |p_1,p_2,p_3,p_4,q,1-\sum_i p_i-q\rangle,
+\qquad
+\Omega=\frac1{\sqrt{3125}}\sum_{x\in X_1}|x\rangle
+       =\frac1{25}\sum_p u_p.
+\tag{N-06}
+\]
+
+These 625 modes are orthonormal. Translation by two permutes the five
+terms of each \(u_p\), so its counting extension fixes every \(u_p\)
+and \(\Omega\). The actual prefix therefore sends
+\(|0\rangle_{\rm counter}\otimes\Omega\) to
+\(|8\rangle_{\rm counter}\otimes\Omega\); it does not localize it.
+
+Let \(f_0=5^{-1/2}\sum_k|k\rangle\) be the logical constant source
+mode, and let \(P_E=EE^*\) project onto the ten-dimensional code (N-03).
+The overlap of \(\Omega\) with each path-zero orbit mode is \(1/25\);
+with each path-one point it is \(1/(25\sqrt5)\). Hence exactly
+
+\[
+E^*\Omega=\frac{\sqrt5|0\rangle+|1\rangle}{25}\otimes f_0,
+\qquad
+\|P_E\Omega\|^2=\frac6{625}.
+\tag{N-07}
+\]
+
+If this code projection is selected and normalized, its decoded state
+and its state in the Hadamard encoder \(E_B\) are respectively
+
+\[
+\chi=\frac{\sqrt5|0\rangle+|1\rangle}{\sqrt6}\otimes f_0,
+\qquad
+E_B^*\frac{P_E\Omega}{\|P_E\Omega\|}
+=\frac{(\sqrt5+1)|0\rangle+(\sqrt5-1)|1\rangle}{\sqrt{12}}
+ \otimes f_0.
+\tag{N-08}
+\]
+
+Both have only the constant source mode: their projection into
+\(\mathbb C^2\otimes f_0^\perp\) is zero. In particular every ready
+code vector \(E_B(|0\rangle\otimes\psi)\) with \(\psi\perp f_0\)
+is orthogonal to \(\Omega\). Since \(Rf_0=f_0\), the contact has
+\(K_0f_0=f_0\), \(K_1f_0=0\). The displayed path populations belong
+to the projected initial state; they are not clicks generated from a
+fresh path-zero input.
+
+This conclusion uses the actual uniform coefficients, not invariance
+alone. Indeed \(\operatorname{Fix}(D)=(|0\rangle\otimes\mathbb C^5)
+\oplus\operatorname{span}\{|1\rangle\otimes f_0\}\). Arbitrary data
+on the identity path can be invariant. The uniform sheet gives equal
+overlaps with its five selected orbit modes and therefore gives \(f_0\).
+
+A uniform point distribution does not specify this coherent state.
+For comparison put \(\rho_{\rm mix}=I_{X_1}/3125\). Both states give
+probability \(1/3125\) at every point, but their code projections differ:
+
+| Initial state | Code probability \(\operatorname{Tr}(P_E\rho)\) | Normalized decoded code state |
+| --- | ---: | --- |
+| \(|\Omega\rangle\langle\Omega|\) | \(6/625\) | \(|\chi\rangle\langle\chi|\) |
+| \(\rho_{\rm mix}\) | \(2/625\) | \(I_{10}/10\) |
+
+The second row follows from \(E^*\rho_{\rm mix}E=I_{10}/3125\).
+Also distinguish the code projector from the diagonal projector onto
+the set \(S\) of its 30 used addresses. The latter has probability
+\(30/3125=6/625\) on both inputs. For \(\Omega\) its output equals
+\(P_E\Omega\), because \(S\) consists of six complete \(F\)-orbits.
+For the mixed input the normalized output is instead \(I_S/30\), of
+rank 30; it is not a state supported wholly in the rank-ten code.
+
+A specified point can arise as a conditional result of an additionally
+declared point measurement. With \(P_x=|x\rangle\langle x|\), its
+selected and nonselected operations on the uniform pure input are
+
+\[
+\Pr(x)=\frac1{3125},\qquad
+\rho_{\mid x}=|x\rangle\langle x|,\qquad
+\sum_x P_x|\Omega\rangle\langle\Omega|P_x
+ =\frac{I_{X_1}}{3125}.
+\tag{N-09}
+\]
+
+The last state is a mixture, not one selected point. A coherent record
+coupling with orthonormal record states gives yet another complete state:
+
+\[
+|x\rangle|{\rm ready}\rangle\longmapsto|x\rangle|x\rangle_{\rm rec},
+\qquad
+\Omega|{\rm ready}\rangle\longmapsto
+ \frac1{\sqrt{3125}}\sum_x|x\rangle|x\rangle_{\rm rec}.
+\tag{N-10}
+\]
+
+This joint state remains pure and is entangled. Tracing the record gives
+the mixture in (N-09); conditioning on one record gives its corresponding
+point under the declared instrument rule. Neither the record coupling,
+its preparation and reading, nor an occurrence rule follows from \(F\)
+or from the orbit decomposition. Likewise a selected code projection
+must retain its complementary failure branch in a complete instrument.
+
+Thus a coherent uniform-plenum hypothesis supplies pre-existing orbit
+coherence, but does not by itself prepare the complete ready code with
+a balanced logical source. A classical uniform distribution likewise
+does not supply the declared orbit coherence or a pure ready source.
+These are analytical conditional statements about the fixed code and
+proposed initial states, not a new native preparation theorem.
 
 ## 4. Complete classical-endpoint obstruction for this unsharp effect
 
