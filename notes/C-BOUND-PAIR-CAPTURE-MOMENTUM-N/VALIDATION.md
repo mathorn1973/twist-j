@@ -66,6 +66,25 @@ custody are now in the probe's result files. No pinned verifier,
 preregistration, source formula or threshold changed. Required PR
 replay on both architectures is separate from this local result.
 
+## Post-run additions and replay
+
+`ABSOLUTE_BOUND.md` is an explicitly post-run analytical deduction using
+the same frozen input/event. Separate same-session review checked the
+denominator identity, the domination of selected channel measures by
+full port measures, and all momentum/energy normalization factors.
+It adds a wide absolute upper bound without evaluating an absolute rate.
+It was not part of the prospective finite audit, and does not alter its
+accepted code, preregistration, proofs or output. No new scientific
+executable was run for it.
+
+Required workflow `40580478120` passed both architecture jobs and the
+aggregate check at result commit
+`1dd68997a198e09b778b222cff482080ed12a14f`. Both logs were fetched;
+their exact verifier and stdout hashes match the first local run.
+The full evidence is in `RUN.md`. The PR also carries the required
+workflow for its latest documentation head. No such replay is treated
+as independent analytical proof acceptance.
+
 ## Scope retained
 
 The original `W_g` survives only in the declared invariant port sector.

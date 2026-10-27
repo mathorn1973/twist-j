@@ -61,3 +61,22 @@ The required PR workflow must replay this same verifier and exact output
 on clean x86_64 and aarch64 runners. CI evidence is linked from the PR;
 a passing computation does not independently admit the analytical theorem
 or promote a Canon claim.
+
+## Required architecture replay observed
+
+The public workflow at result commit
+`1dd68997a198e09b778b222cff482080ed12a14f` completed successfully:
+[run 40580478120](https://github.com/mathorn1973/twist-j/actions/runs/40580478120).
+
+| Job | Architecture | Disposition |
+|---|---|---|
+| 122458200433 | aarch64 | `VERIFY PASS`, exact verifier and stdout digests above |
+| 122458200929 | x86_64 | `VERIFY PASS`, exact verifier and stdout digests above |
+| 122458675108 | aggregate `check` | success |
+
+Both architecture logs were fetched and their printed verifier/stdout
+SHA-256 values checked against this first-run record. The workflow also
+passed the repository policy, tests, Canon, ledger and gate checks. This
+satisfies the two-architecture computation gate for the unchanged
+verifier. Any later documentation head is additionally subject to its
+own required PR check; the PR links that latest workflow.

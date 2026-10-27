@@ -60,6 +60,9 @@ příprava je přesně bod `p=0`.
   celý záchytný funkcionál, monotonicita a konečné obaly poměru
   pravděpodobností.
 - [SOURCES.md](SOURCES.md): přesné veřejné zdroje a jejich otisky.
+- [ABSOLUTE_BOUND.md](ABSOLUTE_BOUND.md): analytický dodatek odvozený
+  po prvním běhu, s horní mezí absolutní pravděpodobnosti a přesným
+  vymezením zbývajícího výpočtu.
 - [VALIDATION.md](VALIDATION.md): rozsah oddělených kontrol v této relaci.
 - [P-BOUND-PAIR-CAPTURE-MOMENTUM-1](../../probes/P-BOUND-PAIR-CAPTURE-MOMENTUM-1/):
   předem zmrazený výpočet jedenácti racionálních intervalů.
@@ -70,6 +73,11 @@ Absolutní průběh pravděpodobnosti nebyl vyčíslen. Pro všechny zvolené
 vstupy je dokázaná kladná dolní mez `1/10^28`; ta není odhadem skutečné
 velikosti. Číselný výsledek tohoto balíku jsou meze **relativního**
 průběhu `P_win(p)/P_win(0)`.
+
+Pozdější čistě analytický dodatek navíc dává pro tentýž vybraný
+společný výstup horní mez `8/(5*pi*10^6)`. Ani tento široký absolutní
+interval neurčuje skutečnou velikost. Jeho malá horní mez souvisí
+také s úzkým výstupním oknem; nevztahuje se na libovolný záchyt.
 
 Výsledek zůstává asymptotický a předpokládá výslovně zadanou spektrální
 přípravu. Úspěch zahrnuje projektor na vázaný stav; samotný zápis v

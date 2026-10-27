@@ -1,6 +1,6 @@
 # Result: fixed-input relative capture probability
 
-Status: `C` / exact bounded audit passed locally; NON-CANONICAL.
+Status: `C` / exact bounded audit reproduced on both architectures; NON-CANONICAL.
 Outcome: `RELATIVE-CAPTURE-PROFILE-ENCLOSED`.
 Action layer: L1 only.
 Author: A. M. Thorn. SPDX-License-Identifier: Apache-2.0.
@@ -76,7 +76,9 @@ and chronological readback/run timestamps.
 
 No frozen falsifier fired. No input, tolerance, branch, event, verifier or
 preregistration was changed after the public pin. Required x86_64/aarch64
-PR replay remains the computational acceptance gate. Same-session static
+PR replay passed at result commit `1dd68997a198e09b778b222cff482080ed12a14f`,
+including byte-identical stdout and the aggregate check; see `RUN.md`.
+Any later documentation head must also pass its required PR check. Same-session static
 reviews are disclosed separately and are not independent external proof
 acceptance. The proposed infinite-dimensional results remain conditional
 analytical candidates.
@@ -88,6 +90,14 @@ reference bound and the analytical profile imply `P_win(p)>1/10^28`
 throughout the frozen domain. This is a conservative guaranteed lower
 bound, not an estimate of the actual rate. The values near `0.79` in the
 table are ratios to `P_win(0)`, not absolute capture probabilities.
+
+A separate [post-run analytical addendum](../../notes/C-BOUND-PAIR-CAPTURE-MOMENTUM-N/ABSOLUTE_BOUND.md)
+also bounds this same selected joint probability above by
+`8/(5*pi*10^6)`. It is explicitly outside the prospective finite audit,
+uses unchanged inputs and has no new executable. The absolute interval
+remains very wide; its small upper bound concerns the specified source
+and narrow outgoing window, not arbitrary capture. No pinned verifier,
+proof or preregistration was changed to obtain it.
 
 The process retains the standing token, emitted pulse and record. Its
 success projector includes the outgoing bound branch; a bare memory
