@@ -1,0 +1,12 @@
+C-FINITE-HAMILTONIAN-READOUT-N exact audit
+NON-CANONICAL L1 conditional candidate-T; independent acceptance pending
+checks 12628
+integer_clock_Gram_spectrum_and_exact_mirror PASS
+finite_battery_all_sector_energy_and_full_sector_intertwiner PASS
+accepted_reduced_channel_all_toy_input_matrix_units PASS
+negative_controls_reverse_edge_and_physical_energy_coherence PASS
+clock_states 3276821; sharp_battery_levels 4259866
+read_and_postread_bad_clock_weight < 1/1000000000000000000000000000000
+inherited_acceptance > 1/20000 and outside_band < 1/1000000 CONDITIONAL_ON_1746
+spatial_locality native_realization energy_identification occurrence reset OPEN
+PASS
