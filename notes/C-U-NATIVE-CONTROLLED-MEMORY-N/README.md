@@ -24,7 +24,15 @@ raw-coordinate response identities.
 - [verify.py](verify.py) and [break_check.py](break_check.py): separately
   written exact standard-library audits from the same authoring session.
 
-Execution records and conclusions are added after the immutable pre-execution
-pin. No result in this note is public acceptance or a change of Canon status.
+- [RESULT.md](RESULT.md): exact outcome, predecessor credit and continuation
+  boundary.
+- [RUN.md](RUN.md): public pre-execution pin, source custody and first exact
+  x86_64/arm64 runs. Both programs passed with per-program byte-identical stdout.
+- [EXPECTED.txt](EXPECTED.txt) and [BREAK_EXPECTED.txt](BREAK_EXPECTED.txt):
+  the two first scientific outputs.
+
+Reservation: [#1830](https://github.com/mathorn1973/twist-j/issues/1830).
+Pre-execution pin: `e54ce523eb2dbc0dae56b3d3773a375fc09a0191`.
+No result in this note is public acceptance or a change of Canon status.
 Preparation, physical readout, repeat/reset, Born occurrence, energy,
 spacetime, and the interpretation of global n remain open.
