@@ -352,7 +352,7 @@ draft. Attach the successful tag-job `activation-manifest.json` and the tagged
 Never substitute a manifest generated from a local checkout.
 
 The sole workflow has read-only permissions, immutable action pins, no
-persisted checkout credential, a 45-minute architecture limit, a 40-minute
+persisted checkout credential, a 45-minute architecture limit, a 60-minute
 publication limit, and a 5-minute aggregate limit. Its pull-request gate uses
 one x86_64 and one
 aarch64 standard GitHub-hosted runner. Its tag trigger covers `canon-v*`, but
@@ -361,9 +361,38 @@ the positive whole-number tag declared by the current `STATUS.md`; a broader,
 decimal, or foreign tag therefore triggers a failing readback, never
 publication.
 
+The existing workflow also permits one input-free manual recovery for the
+already published `canon-v106`. Its controller is the reviewed workflow
+revision, while its checkout is fixed to activation commit
+`a193e389fb1ddb0bdc89165b015c95a17eb1e425`. It checks that exact HEAD,
+the annotated tag object `8f2d16a216524a04be3e1210821ab1e27535ed77`,
+and the peeled tag target before executing the original tagged tools.
+The controller revision and scientific checkout must both be identified in
+the run record; completion is accepted only for the reviewed controller.
+
+For visibility, this manual path executes the unchanged complete
+`check_verifier.py` and `check_reproduce.py` as separate mandatory
+unbuffered steps, without a changed-path base and with bytecode writing
+disabled. It then executes the unchanged static post-activation readback
+and both published-asset validators. All steps must pass. The final static
+activation command accurately reports `full=False`; complete replay is
+established by the two preceding successful whole-inventory steps. Normal
+tag and release events retain their existing `--full` activation command.
+The recovery does not upload or replace a release asset, tag, or manifest,
+and it does not relabel an earlier cancelled attempt as successful.
+The original failed runs remain part of the incident record.
+
+The manual event runs only the publication job. Pull-request and ordinary
+main events still require both architecture jobs and their aggregate.
+The workflow-change pull request and subsequent main push still replay
+the complete inventory on both architectures. The longer publication
+budget addresses whole-job cancellations; all per-verifier limits,
+exact-byte predicates, preregistrations and scientific inputs stay fixed.
+
 These are whole-job execution budgets for the complete replay inventory.
 They do not change any verifier's time limit, exact-output requirement,
 preregistered threshold, or requirement that both architecture jobs succeed.
 
 `pull_request_target` is forbidden. Any new workflow or runner topology requires
 an explicit policy change.
+
