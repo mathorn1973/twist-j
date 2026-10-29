@@ -1,0 +1,10 @@
+PASS 1 scalar trace/minimum regression: 625 states; 10 minimum roots
+PASS 2 classified monomial family regression: 200 maps; 16200 cases; 2 sum maps
+PASS 3 exact admission: 256 parity pairs; 16 admitted; 6400 composition cases
+PASS 4 complete coefficient box: 6561 pairs; 625 accepted; 5936 refused
+PASS 5 fixed-source continuing orbit: 100 cuts; exact return and repeated sensitivity
+PASS 6 finite-reduction witnesses: all 30 integer moduli 2..31
+PASS 7 three slots: 1331 states; two-edge transfer (12,5,15); order control (12,20,0)
+PASS 8 occupied continuations: 6 fixed preparations, 600 full steps
+PASS 9 negative controls: additivity, illegal division, bare-J cost and edge-order change
+RESULT 9/9 PASS; supplementary finite audit; no independent or canonical acceptance
