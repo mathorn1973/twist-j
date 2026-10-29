@@ -46,10 +46,22 @@ with two new nonexisting output paths; it refuses to overwrite either file.
 `check_independent.py` writes only its deterministic JSON to stdout.
 The new public verifier handles these temporary outputs itself.
 
+## Public source-name crosswalk
+
+The inherited `THEOREMS.md` uses the earlier bundle name
+`SOURCE_MANIFEST.json`. The public manifest for the four preserved inputs is
+[`SOURCES.json`](SOURCES.json). This crosswalk does not change the frozen
+mathematical inputs or their hashes.
+
 ## Scope
 
 The primitive source is Public Canon v106, especially
 `C20-TEICHMULLER-SPLIT` and `QDD-AFFINE-CONTROL-REALIZATION`.
+The local double transposition and cubic phase use the broader connected
+local SU(5) option in Section 4 of the pinned
+[`CONTROL-MODEL.md`](../../probes/P-QDD-AFFINE-ENERGY-CONTROL-1/CONTROL-MODEL.md).
+They require that explicitly admitted local unitary control, in addition to
+the addressed pair interaction.
 The larger bank of addressed five-level cells, clean initial work,
 preparation, clock/program implementation, routing, energy account and
 protection from gate errors remain separate admitted resources.
