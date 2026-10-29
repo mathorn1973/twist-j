@@ -1,0 +1,2438 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\setmonofont[Scale=0.85]{DejaVu Sans Mono}
+\usepackage{babel}
+\babelprovide[main,import]{czech}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\renewcommand{\proofname}{Důkaz}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{mathrsfs}
+\usepackage{fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,pdftitle={TWIST-J: vázané větve a skutečné rozptylové prahy},pdfauthor={Analytická pracovní poznámka}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{3em}
+\setlist{nosep,leftmargin=1.6em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily TWIST-J / vázané větve a rozptylové prahy}
+\fancyhead[R]{\small\sffamily NON-CANONICAL / L1}
+\fancyfoot[C]{\small\thepage}
+\setlength{\headheight}{15pt}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Rea}{\operatorname{Re}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ccal}{\mathcal C}
+\newcommand{\Tcal}{\mathcal T}
+\newcommand{\eps}{\varepsilon}
+\newtheorem{theorem}{Tvrzení}[section]
+\newtheorem{lemma}[theorem]{Pomocné tvrzení}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Poznámka}
+\numberwithin{equation}{section}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+\thispagestyle{empty}
+{\Large\sffamily\bfseries Skutečné rozptylové prahy TWIST-J\par}
+\vspace{3mm}
+{\large Vázané větve na celém hybnostním kruhu\par}
+\vspace{4mm}
+Analytické pokračování, 29. října 2026\par
+\textbf{Samostatný návrh důkazu. NON-CANONICAL / L1.}
+
+\section*{Rozsah této poznámky}
+
+Tato práce navazuje na výslovnou konečnou časovou mez pro původní normalizovaný vstup z PR \#1815 a pro úplný rozptylový operátor z PR \#1817. Zkoumá skutečné fyzikální překážky, které hrubý obecný diskriminant pouze obklopoval. Cílem je připravit podstatně silnější časový odhad.
+
+Podařilo se analyticky určit všechny objektové póly viditelné v sudém kontaktu \(A\), tedy všechny bodové větve potřebné v úplném \(F_2\). V obecném vlákně jsou právě dva nebo tři. Každá větev je určena jedinou monotónní fázovou rovnicí. Prahové konce a nulové kontaktní váhy v kompaktních bodech jsou započteny zvlášť.
+
+Hlavní kladná větev nemůže v původním energetickém okně vytvořit stacionární spojení s pulzem. Obě nízké větve mají doložený obor fáze
+\[
+\frac12<\omega_\ell<\frac23
+\]
+a velikost rychlosti menší než \(1/2\). Také ony jsou v daném okně nestacionární. Pro poslední zbývající větev jsou doloženy právě dvě stacionární
+konfigurace, se společnou křivostí větší než \(1/4\). Obě mají
+kladné kontaktní váhy a leží přísně uvnitř objektové mezery.
+Jejich kruhová vzdálenost od již klasifikovaných běžných
+kontinuálních stacionárních křivek je větší než \(1/300\).
+
+V místech setkání objektového pólu a kontinuální hrany je doložen společný místní holomorfní příspěvek. Pól a kontinuum se zachovávají v jedné správně pokračované diferenciální formě a na jednom vnějším obvodu. Neodstraňuje se žádný fyzikální člen.
+
+\textbf{Tato poznámka sama nevyhlašuje nový menší konečný čas.} K němu ještě potřebujeme společné číselné velikosti příslušných okolí, úplné místní odhady zbývajících prahů a následný Fourierův účet. Dosavadní čas v samostatném interně přezkoumaném návrhu
+\[
+N_-=10^{16},\qquad N_+=2^{81\,000\,000\,000\,000}
+\]
+a jeho úplná časová chyba menší než \(2{,}310002\cdot10^{-7}\) se tím nemění.
+
+\vfill
+\small
+Původní ostrý vstup, pevný počátek času, absolutní normalizace, celý vybraný jev, všech 26 štítků a korelace s pamětí a referencí jsou zachovány. Výsledek prošel vnitřním analytickým přezkumem v této relaci. Není externím přijetím, součástí původního auditu 130 podmínek ani provedeným fyzickým pokusem. Práce zůstává oddělena od rezervace \#1816. Veřejný zápis ani nový vědecký výpočet nebyly provedeny.
+\newpage
+\normalsize
+
+\section{Původní operátor a přesný význam stacionárního bodu}
+
+Přejímáme původní úplné kontaktní vzorce z [S1,S2], původní paket a chybový účet z [S3]. Jeho celková hybnost \(K\) má míru \(\mathrm dK/(2\pi)\) na celém kruhu. Vybrané malé výstupní okno \(I_K\) tuto zdrojovou míru neomezuje.
+
+Používáme \(g=2\pi/5\), \(\beta=4\pi/5\) a
+\[
+e=E-\beta\in I_e=
+\left[\frac{4\pi}{5}-\frac1{1000},\frac{4\pi}{5}+\frac1{1000}\right],
+\qquad k=K-P.
+\]
+Pulz má fáze \(\sigma\varepsilon(k)\), \(\sigma=\pm1\), kde
+\[
+\cos\varepsilon(k)=\frac{1-4\cos k}{5},\qquad
+0\le\varepsilon\le a_p=\arccos(-3/5),
+\]
+\[
+\varepsilon'(k)=-\frac{2\sin(k/2)}{\sqrt{3-2\cos k}},\qquad
+\varepsilon''(k)=-\frac{\cos(k/2)}{(3-2\cos k)^{3/2}}.
+\]
+Pro objektovou vázanou fázi \(\omega_j(P)\) je stacionární spojení určeno současně rovnicemi
+\[
+e=\omega_j(P)+\sigma\varepsilon(K-P),\qquad
+\omega_j'(P)=\sigma\varepsilon'(K-P).
+\]
+Rozhodující křivost při pevném \(K\) je
+\[
+\partial_P^2[\omega_j(P)+\sigma\varepsilon(K-P)]
+=\omega_j''(P)+\sigma\varepsilon''(K-P).
+\]
+Jednoduchost objektového vlastního stavu sama tuto společnou křivost neomezuje. Právě obě rovnice a toto rozlišení se v následujícím důkazu zachovávají.
+
+
+
+\subsection{Zachovaný vstup, jev a úplný přenos}
+
+Pro přehled uvádíme i pevnou normalizaci, kterou nové místní
+rozbory nemění. V původním značení [S1--S3] je
+\[
+h=10^{-3},\quad E_*=8\pi/5,\quad I=[E_*-h,E_*+h],
+\]
+\[
+\psi_{\rm obj}
+=[2h\rho_{\rm in}(H_1)]^{-1/2}\,
+\mathbf1_I(H_1)\mathbf1_{[-h,h]}(P)a_0,\qquad
+a_0=\delta_{R=0,r=0}\,iB,\qquad
+\|\psi_{\rm obj}\|=1.
+\]
+Token je přesně v \(y=0\). Původní celková hybnost je tedy
+rovnoměrná na celém kruhu. Energetická míra normalizovaného
+vstupu je přesně \(\mathbf1_I(E)\,\mathrm dE/(2h)\).
+Původní vybraný výstupní projektor zůstává
+\[
+\begin{aligned}
+Q={}&\mathbf1_{I_K}(K)\mathbf1_{|P|\le1/100}
+\mathbf1_I\bigl(\Omega_b(P)+\beta+\varepsilon(k)\bigr)\Pi_b(P)\\
+&\otimes P_+(k)\mathbf1_{\varepsilon'(k)>0}
+\otimes I_{\rm label}\otimes|d_1\rangle\langle d_1|
+\otimes I_{\rm ref}.
+\end{aligned}
+\]
+V něm \(I_{\rm label}\) zahrnuje všech 26 štítků. Paměť se
+smí vázat s libovolnou referencí. Ani \(Q\), ani zdroj se v této
+poznámce nepodmiňuje na nově vybranou oblast hybnosti.
+
+Úplné kontaktní funkce a přenosový sloupec jsou
+\[
+F_1(E)=\int_{-\pi}^{\pi}
+f_B(P,E-\beta)\,\frac{\mathrm dP}{2\pi},
+\]
+\[
+F_2(K,E)=\sum_{\sigma=\pm1}\int_{-\pi}^{\pi}
+h_\sigma(K-P)\,
+f_A\bigl(P,E-\beta-\sigma\varepsilon(K-P)\bigr)
+\frac{\mathrm dP}{2\pi},
+\qquad h_\sigma(k)=\frac{1-\sigma\varepsilon'(k)}2,
+\]
+\[
+T(K,E)=\frac{1}{4+F_1F_2}
+\begin{pmatrix}-2F_2&-4\\4&-2F_1\end{pmatrix},
+\qquad
+V(K,E)=T(K,E)e_1=\frac{(-2F_2,4)^T}{4+F_1F_2}.
+\]
+Všechny funkce se vyhodnocují z původní vnější strany
+\(E\mapsto E+i0\). V \(F_2\) se ponechává celé kontinuum,
+každý kontaktně viditelný objektový pól i obě pulzní větve.
+Právě regularita celého \(V\), se správně započtenými ostrými
+konci \(I\), určuje následný časový odhad.
+
+Označení \(\omega_c(v)\) v soupisu a \(\omega_A(p)\) v části
+o křivosti popisují stejnou hlavní kladnou větev:
+\(\omega_A(p)=\omega_c(\cos p)\).
+Symbol \(\beta(v)\) níže je koncová fáze objektové mezery;
+konstantní \(\beta=4\pi/5\) nadále označuje původní fázový posun.
+Rovnice označené PT jsou převzaté z oddílu 14 předchozího
+časového návrhu [S4]. Nová tvrzení zde mají značky
+BC, M, L, BS, CS a PE.
+
+\section{Úplný soupis objektových pólů viditelných v kontaktu A}
+Zde se klasifikují všechny sudé kontaktně viditelné póly, tedy všechny bodové větve potřebné v \(F_2\). U kompaktních bodů to není tvrzení o celém bodovém spektru objektu. Lichý kontakt \(B\) je zkontrolován odděleně na konci oddílu.
+
+\hypertarget{dvux11b-skuteux10dnuxe9-mezery-a-fyzikuxe1lnuxed-kontaktnuxed-rovnice}{%
+\subsection{Dvě skutečné mezery a fyzikální kontaktní
+rovnice}\label{dvux11b-skuteux10dnuxe9-mezery-a-fyzikuxe1lnuxed-kontaktnuxed-rovnice}}
+
+Položme
+
+\[
+g=\frac{2\pi}{5},\qquad v=\cos P,\qquad
+b=\arccos\frac35=2\arctan\frac12,\qquad a=\pi-b.
+\tag{BC1}
+\]
+
+Pro \(-1<v<1\) definujme
+
+\[
+\alpha(v)=\arccos\frac{v+4}{5},\qquad
+\beta(v)=\arccos\frac{v-4}{5}.
+\tag{BC2}
+\]
+
+Přísné fyzikální mezery \(|t|<4\), \(t=v-5\cos\omega\), jsou
+
+\[
+I_+(v)=(\alpha(v),\beta(v)),\qquad
+I_-(v)=(2\pi-\beta(v),2\pi-\alpha(v)).
+\tag{BC3}
+\]
+
+Platí \(0<\alpha<b<g<a<\beta<\pi\). V těchto mezerách
+
+\[
+\eta(v,\omega)=\operatorname{sgn}(\sin\omega)
+\arccos\frac{v-5\cos\omega}{4},\qquad q=e^{-i\eta},
+\tag{BC4}
+\]
+
+\[
+\partial_\omega\eta
+=-\frac{5|\sin\omega|}{\sqrt{16-t^2}}<0.
+\tag{BC5}
+\]
+
+Úplný sudý jmenovatel, zde označený \(D_o\), je
+
+\[
+D_o=xC+qB,
+\quad \lambda=e^{-i\omega},\quad x=e^{-i(\omega-g)},
+\quad C=x^2-\frac25vx-\frac35,
+\quad B=\frac35x^2+\frac25vx-1.
+\tag{BC6}
+\]
+
+Pro \(-1<v<1\) nemůže na jednotkovém kruhu současně nastat \(B=C=0\).
+Proto je fyzikální pólem právě řešení
+
+\[
+q=q_{\rm pole}
+=e^{-i\delta}\frac{\cos\delta-v-4i\sin\delta}
+                         {\cos\delta-v+4i\sin\delta},
+\qquad \delta=\omega-g.
+\tag{BC7}
+\]
+
+V původním důkazu je pro \(\sin P\ne0\) dokázáno, že každý fyzikální
+sudý vlastní stav v mezeře je jednoduchý a A-viditelný. Nuly \(D_o\) na
+této vrstvě se tedy uvnitř obou mezer nekrátí s čitatelem a jsou právě
+hledanými póly.
+
+\hypertarget{monotuxf3nnuxed-fuxe1ze-nahrazuje-nefyzikuxe1lnuxed-algebraickuxe9-koux159eny}{%
+\subsection{Monotónní fáze nahrazuje nefyzikální algebraické
+kořeny}\label{monotuxf3nnuxed-fuxe1ze-nahrazuje-nefyzikuxe1lnuxed-algebraickuxe9-koux159eny}}
+
+Pro pevné \(-1<v<1\) zvolme spojitý rozvinutý argument
+
+\[
+\theta_v(\delta)
+=\arg(\cos\delta-v+4i\sin\delta),\qquad \theta_v(0)=0.
+\tag{BC8}
+\]
+
+Elipsa ve výrazu uvnitř argumentu nemá nulu a jednou obíhá počátek.
+Tudíž \(\theta_v(\delta+2\pi)=\theta_v(\delta)+2\pi\),
+\(\theta_v(-\delta)=-\theta_v(\delta)\) a \(\theta_v(\pi)=\pi\). Přímé
+derivování dává
+
+\[
+\partial_\delta\theta_v
+=\frac{4(1-v\cos\delta)}
+       {(\cos\delta-v)^2+16\sin^2\delta}>0,
+\qquad
+\partial_v\theta_v
+=\frac{4\sin\delta}
+       {(\cos\delta-v)^2+16\sin^2\delta}.
+\tag{BC9}
+\]
+
+Definujme
+
+\[
+\varphi_v(\delta)=\delta+2\theta_v(\delta),\qquad
+F(v,\omega)=\varphi_v(\omega-g)-\eta(v,\omega).
+\tag{BC10}
+\]
+
+Pak (BC7) je ekvivalentní přesně
+
+\[
+\boxed{F(v,\omega)=2\pi m,\qquad m\in\mathbb Z,}
+\tag{BC11}
+\]
+
+a na každé z obou přísných mezer
+
+\[
+\boxed{
+F_\omega
+=1+\frac{8(1-v\cos\delta)}
+          {(\cos\delta-v)^2+16\sin^2\delta}
+ +\frac{5|\sin\omega|}{\sqrt{16-t^2}}>1.
+}
+\tag{BC12}
+\]
+
+Každé povolené celé \(m\) tedy dává nejvýše jeden kořen. Rovnice (BC11),
+s níže určeným \(m\) a intervalem, je přesnou jednoznačnou parametrizací
+kořene. Nevyžaduje hledání všech šesti algebraických kandidátů ani
+dodatečnou numerickou volbu vrstvy.
+
+\hypertarget{hraniux10dnuxed-fuxe1ze-a-uxfaplnuxfd-poux10det-koux159enux16f-v-kladnuxe9-mezeux159e}{%
+\subsection{Hraniční fáze a úplný počet kořenů v kladné
+mezeře}\label{hraniux10dnuxed-fuxe1ze-a-uxfaplnuxfd-poux10det-koux159enux16f-v-kladnuxe9-mezeux159e}}
+
+Označme jednostranné hodnoty
+
+\[
+F_L(v)=\varphi_v(\alpha(v)-g)-\pi,\qquad
+F_R(v)=\varphi_v(\beta(v)-g).
+\tag{BC13}
+\]
+
+Z \(-\pi<\alpha-g<0<\beta-g<\pi\) a z rozsahu argumentu plyne
+
+\[
+-4\pi<F_L<-\pi,\qquad 0<F_R<3\pi.
+\tag{BC14}
+\]
+
+Ve skutečnosti platí \(F_R<2\pi\). Kdyby nastalo \(F_R=2\pi\), musel by
+jmenovatel nulovat na horní hraně, kde \(q=1\). Tam
+
+\[
+D_o=(x-1)\left[x^2+\left(\frac85-\frac25v\right)x+1\right].
+\tag{BC15}
+\]
+
+První faktor by vyžadoval \(\beta=g\), což je vyloučeno. Druhý by dal
+\(\cos(\beta-g)=\cos\beta\), tedy \(\beta=g/2\) nebo \(\beta=\pi+g/2\),
+obojí mimo \((a,\pi)\). Hodnota \(2\pi\) tedy není nikdy dosažena.
+Správná strana se určí bez numeriky v limitě \(v\to1\). Pro \(0<d<\pi\)
+
+\[
+\varphi_1(d)=\pi+d+2\arctan\left(\frac14\tan\frac d2\right).
+\]
+
+Zde \(d=a-g<\pi/2\), neboť \(a<3\pi/4\), takže
+\(\varphi_1(d)<\pi+2d<2\pi\). Spojitost dává tvrzení pro všechna
+\(-1<v<1\).
+
+Jedinou možnou změnou počtu kořenů na dolní hraně je \(F_L=-2\pi\). Pro
+\(q=-1\)
+
+\[
+D_o=(x+1)\left[x^2-\left(\frac85+\frac25v\right)x+1\right].
+\tag{BC16}
+\]
+
+První faktor je mimo rozsah \(\alpha-g\). Druhý dává
+\(\cos(\alpha-g)=\cos\alpha\), tedy přesně
+
+\[
+\alpha=\frac g2,\qquad
+v=v_a:=5\cos\frac g2-4=\frac{5\sqrt5-11}{4},
+\qquad 0<v_a<1.
+\tag{BC17}
+\]
+
+Znaménko se opět určí v koncích. Pro \(v\to1\) je \(\alpha\to0\); bod
+\(\cos g-1-4i\sin g\) má argument menší než \(-\pi/2\), a proto
+\(F_L<-2\pi\). Pro \(v\to-1\) položme \(d=g-b\). Platí \(0<d<b\),
+protože \(b<g<2b\). Dále
+
+\[
+\varphi_{-1}(-d)
+=-d-2\arctan\left(4\tan\frac d2\right)>-\pi.
+\]
+
+Poslední nerovnost je ekvivalentní \(\tan(d/2)<1/2=\tan(b/2)\). Proto
+\(F_L>-2\pi\) u levého konce. Jelikož jiné nuly \(F_L+2\pi\) nejsou,
+
+\[
+\begin{cases}
+F_L>-2\pi,& -1<v<v_a,\\
+F_L=-2\pi,& v=v_a,\\
+F_L<-2\pi,& v_a<v<1.
+\end{cases}
+\tag{BC18}
+\]
+
+Z (BC12)--(BC18) plyne úplný výsledek:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Hlavní kladná větev} \(\omega_c(v)\) existuje pro všechna
+  \(-1<v<1\) a je jediným řešením \(F=0\).
+\item
+  \textbf{Dodatečná nízká větev} \(\omega_\ell(v)\) existuje právě pro
+  \(v_a<v<1\) a je jediným řešením \(F=-2\pi\).
+\item
+  Žádná jiná celá hodnota v (BC11) neleží mezi koncovými fázemi.
+\end{itemize}
+
+\hypertarget{globuxe1lnuxed-fuxe1zovuxe9-meze-a-zuxe1vislost-na-v}{%
+\subsection{Globální fázové meze a závislost na
+v}\label{globuxe1lnuxed-fuxe1zovuxe9-meze-a-zuxe1vislost-na-v}}
+
+Protože \(g\in I_+(v)\), je \(F(v,g)=-\eta(v,g)\in(-\pi,0)\). Z
+monotónnosti tedy
+
+\[
+\alpha(v)<\omega_\ell(v)<g<\omega_c(v)<\beta(v).
+\tag{BC19}
+\]
+
+Pro hlavní větev lze dát uniformně mnohem menší obor:
+
+\[
+\boxed{g<\omega_c(v)<g+b<a.}
+\tag{BC20}
+\]
+
+Pro důkaz horní meze použijme \(\varphi_{-1}(b)=b+2\arctan2=b+a=\pi\). Z
+(BC9) je pro \(-1<v<1\) hodnota \(\varphi_v(b)>\pi\). V bodě
+\(\omega=g+b\) proto \(F>0\), zatímco \(F(v,g)<0\). Tento bod leží
+uvnitř každé kladné mezery: nerovnost \(g+b<a\) je ekvivalentní
+\(b<3\pi/10\), což plyne z
+
+\[
+\cos\frac{3\pi}{10}=\sin\frac\pi5<\frac35,
+\qquad
+\sin^2\frac\pi5=\frac{5-\sqrt5}{8}<\frac9{25}.
+\]
+
+Na hlavní větvi je \(\delta>0\). Přímá derivace v kladné mezeře dává
+
+\[
+F_v=
+\frac{8\sin\delta}
+     {(\cos\delta-v)^2+16\sin^2\delta}
++\frac1{\sqrt{16-t^2}},
+\qquad
+\frac{\mathrm d\omega_c}{\mathrm dv}=-\frac{F_v}{F_\omega}<0.
+\tag{BC21}
+\]
+
+Hlavní větev je tedy přísně klesající ve \(v\), čili přísně rostoucí v
+\(P\in(0,\pi)\).
+
+Dodatečná větev má uniformní meze
+
+\[
+\boxed{\frac g4<\omega_\ell(v)<g\qquad(v_a<v<1).}
+\tag{BC22}
+\]
+
+Stačí vyloučit \(0<\omega\le g/4=\pi/10\). Pokud takový bod leží v
+mezeře, pak
+
+\[
+v>5\cos\omega-4>\frac34,
+\qquad
+\cos(\omega-g)\le\cos\frac{3\pi}{10}<\frac35.
+\]
+
+Použita byla přesná nerovnost \(\cos(\pi/10)>19/20\), kterou ověří
+\(\cos^2(\pi/10)=(5+\sqrt5)/8>361/400\). Reálná i imaginární část
+elipsového bodu jsou záporné, takže \(\theta_v(\omega-g)<-\pi/2\) a
+
+\[
+\varphi_v(\omega-g)<-\pi-\frac{3\pi}{10}.
+\]
+
+Současně
+
+\[
+\cos\eta=\frac{v-5\cos\omega}{4}
+< -\frac{15}{16}
+< -\cos\frac{3\pi}{10},
+\qquad \eta>\frac{7\pi}{10}.
+\]
+
+Tedy \(F<-2\pi\), takže zde řešení dodatečné větve není.
+
+\hypertarget{dux16fleux17eituxe1-nelinearita-nuxedzkuxe9-vux11btve}{%
+\subsection{Důležitá nelinearita nízké
+větve}\label{dux16fleux17eituxe1-nelinearita-nuxedzkuxe9-vux11btve}}
+
+Nízká větev není monotónní ve \(v\). Toto tvrzení lze prokázat bez
+vykreslení nebo numeriky. Položme \(c_*=\cos(g/2)\). Při \(\omega=g/2\)
+se reálný kandidátní polynom \[
+\Phi(v,\omega)
+=(4c-v+5\cos\omega)(c-v)^2
+-16s^2(6c-v-5\cos\omega),\qquad
+c=\cos(\omega-g),\quad s=\sin(\omega-g),
+\] který plyne z reálné části (BC7), přesně faktorizuje:
+
+\[
+\Phi(v,g/2)
+=(c_*-v)\big[(v-5c_*)^2-16\big].
+\tag{BC23}
+\]
+
+V intervalu \((v_a,1)\) je jeho jediným kořenem \(v=c_*\); tento kořen
+je skutečně fyzikální: \(q=-e^{ig/2}\), \(\eta=\pi-g/2\), \(F=-2\pi\). V
+tomto bodě
+
+\[
+F_v(c_*,g/2)=-\frac1{4\sin(g/2)}<0.
+\tag{BC24}
+\]
+
+Protože nejsou jiné vnitřní průsečíky a \(F_\omega>0\), spojitost a
+(BC24) dávají
+
+\[
+\begin{cases}
+\omega_\ell(v)<g/2,& v_a<v<c_*,\\
+\omega_\ell(v)=g/2,& v=c_*,\\
+\omega_\ell(v)>g/2,& c_*<v<1.
+\end{cases}
+\tag{BC25}
+\]
+
+V limitě \(v\downarrow v_a\) přitom \(\omega_\ell\to g/2\). Má tedy
+uvnitř \((v_a,c_*)\) alespoň jedno minimum. Tento krok sám ještě
+nedokazuje jedinost minima. Ta plyne z kladné druhé derivace v každém
+kritickém bodě, doložené níže v (L5). Pro celý soupis tedy nelze
+předpokládat monotónnost nízké větve.
+
+\hypertarget{zuxe1pornuxe1-mezera-celkovuxfd-poux10det-a-prahovuxe9-limity}{%
+\subsection{Záporná mezera, celkový počet a prahové
+limity}\label{zuxe1pornuxe1-mezera-celkovuxfd-poux10det-a-prahovuxe9-limity}}
+
+Původní vzorce mají přesnou symetrii
+
+\[
+f_A(-v,-\lambda)=f_A(v,\lambda).
+\tag{BC26}
+\]
+
+Skutečně \((v,\lambda,q,x)\mapsto(-v,-\lambda,-q,-x)\) ponechá \(N\)
+beze změny a změní \(D_o\) na \(-D_o\). Fyzikální vrstva se zachovává.
+Ekvivalentně
+
+\[
+\varphi_{-v}(\delta+\pi)=\varphi_v(\delta)+3\pi,
+\qquad
+\eta(-v,\omega+\pi)=\eta(v,\omega)-\pi,
+\]
+
+takže \(F(-v,\omega+\pi)=F(v,\omega)+4\pi\).
+
+Všechny záporné póly jsou proto přesně
+
+\[
+\omega_c^-(v)=\pi+\omega_c(-v),\qquad -1<v<1,
+\tag{BC27}
+\]
+
+\[
+\omega_\ell^-(v)=\pi+\omega_\ell(-v),\qquad -1<v<-v_a.
+\tag{BC28}
+\]
+
+Jejich celočíselné fáze jsou \(F=4\pi\), respektive \(F=2\pi\). Mají
+stejné posunuté uniformní meze jako (BC20),(BC22). Dodatečná kladná a
+dodatečná záporná větev nemohou být přítomny při témže \(v\).
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6500}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Parametr
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Přísné fyzikální A-póly
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Počet
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(-1<v<-v_a\) & \(\omega_c(v),\ \pi+\omega_c(-v),\ \pi+\omega_\ell(-v)\)
+& 3 \\
+\(-v_a\le v\le v_a\) & \(\omega_c(v),\ \pi+\omega_c(-v)\) & 2 \\
+\(v_a<v<1\) & \(\omega_\ell(v),\ \omega_c(v),\ \pi+\omega_c(-v)\) & 3 \\
+\end{longtable}
+
+Při \(v=v_a\) má dodatečná větev limit \(\omega=g/2\), \(q=-1\),
+\(t=-4\); při \(v=-v_a\) je symetrickým limitem \(\omega=\pi+g/2\),
+\(q=1\), \(t=4\). Tyto limity nejsou dalšími atomy A-spektrální míry. Na
+obou bodech je \(\partial_\omega(t^2-16)\ne0\), \(B\ne0\), a
+
+\[
+D_o=xC+\frac t4B-\frac B4R
+=-\frac{B_*}{4}R+O(R^2),\qquad R^2=t^2-16.
+\tag{BC29}
+\]
+
+Proto \(f_A=O(R^{-1})=O((\lambda-\lambda_*)^{-1/2})\). Atom by vyžadoval
+nenulový limit \((\lambda-\lambda_*)f_A\); tento limit je nula. V
+tabulce se tedy na hranici správně počítají pouze dva přísné póly.
+
+V původní proměnné \(P\in[-\pi,\pi]\), \(p_a=\arccos v_a\), je dodatečná
+kladná větev na \(|P|<p_a\) a dodatečná záporná na \(|P|>\pi-p_a\), s
+kompaktními body vyňatými podle dalšího oddílu. To je klasifikace na
+celém kruhu; nepoužívá malé vybrané výstupní okno \(I_K\).
+
+\hypertarget{pux159esnuxe9-kompaktnuxed-konce-a-nulovuxe9-kontaktnuxed-vuxe1hy}{%
+\subsection{Přesné kompaktní konce a nulové kontaktní
+váhy}\label{pux159esnuxe9-kompaktnuxed-konce-a-nulovuxe9-kontaktnuxed-vuxe1hy}}
+
+Při \(v=1\) a \(v=-1\) platí původní přesná zkrácení
+
+\[
+f_A(1,\lambda)=\frac{\lambda+\gamma}{\lambda-\gamma},
+\qquad
+f_A(-1,\lambda)=\frac{\lambda-\gamma}{\lambda+\gamma},
+\qquad \gamma=e^{-ig}.
+\tag{BC30}
+\]
+
+A-kontakt tedy v prvním případě vidí pouze atom fáze \(g\) s vahou 1, ve
+druhém pouze atom fáze \(\pi+g\) s vahou 1. Není správné dosadit
+\(v=\pm1\) do nekráceného \(D_o\) a všechny jeho nuly prohlásit za
+A-póly.
+
+Hlavní větev má limity
+
+\[
+\lim_{v\uparrow1}\omega_c(v)=g,
+\qquad
+\lim_{v\downarrow-1}\omega_c(v)=\omega_H\in(g,g+b).
+\tag{BC31}
+\]
+
+První limit plyne z (BC21): kdyby byl větší než \(g\), limitní
+\(\varphi_1(\delta)>\pi\) by nemohl být roven \(\eta<\pi\). Druhý je
+jednoznačným řešením
+
+\[
+(\omega_H-g)
++2\arctan\left(4\tan\frac{\omega_H-g}{2}\right)
+=\arccos\frac{-1-5\cos\omega_H}{4},
+\qquad g<\omega_H<g+b.
+\tag{BC32}
+\]
+
+Dodatečná větev má limity
+
+\[
+\lim_{v\downarrow v_a}\omega_\ell(v)=g/2,
+\qquad
+\lim_{v\uparrow1}\omega_\ell(v)=\omega_L\in(g/2,g),
+\tag{BC33}
+\]
+
+kde \(\omega_L\) je jediné řešení
+
+\[
+(g-\omega_L)
++2\arctan\left(\frac14\tan\frac{g-\omega_L}{2}\right)
++\arccos\frac{1-5\cos\omega_L}{4}=\pi.
+\tag{BC34}
+\]
+
+Levá strana (BC34) je přísně klesající v \(\omega\in(0,g)\), na levém
+konci větší než \(\pi\) a na pravém menší než \(\pi\). Dolní mez
+\(\omega_L>g/2\) plyne také z (BC25) a z nenulové hodnoty limitního
+\(F+2\pi\) při \((v,\omega)=(1,g/2)\). Tyto limitní fáze jsou navzájem
+oddělené od jediného viditelného atomu.
+
+Při \(v\uparrow1\) tudíž hlavní kladná větev přechází do jediného
+viditelného atomu \(g\), zatímco póly limitních fází \(\omega_L\) a
+\(\pi+\omega_H\) ztrácejí A-váhu. Při \(v\downarrow-1\) platí symetrický
+výrok. Nulové váhy plynou i přímo ze slabé spojitosti A-spektrální míry:
+objektový operátor je spojitý v \(P\), limitní kontaktní funkce je
+(BC30) a zmíněné limitní fáze jsou od jejího atomu oddělené.
+
+Tento výrok se týká kontaktních vah. Neříká, že všechny A-neviditelné
+limitní stavy z celého objektového Hilbertova prostoru zmizí.
+
+\hypertarget{vazba-na-stacionuxe1rnuxed-uxfalohu}{%
+\subsection{Vazba na stacionární
+úlohu}\label{vazba-na-stacionuxe1rnuxed-uxfalohu}}
+
+Do plného \(F_2\) patří všechny právě klasifikované větve spolu s celým
+kontinuem a oběma pulzními znaménky. Stacionární spojení splňuje přesně
+
+\[
+e=\omega_j(v)+\sigma\varepsilon(k),\qquad
+\sin P\,\frac{F_v}{F_\omega}
+=\sigma\varepsilon'(k),\qquad v=\cos P,\quad K=P+k.
+\tag{BC35}
+\]
+
+Jde o původní neumocněnou rovnost rychlostí. Následující oddíly určují,
+které členy úplného soupisu ji mohou splnit, a přímo odhadují společnou
+druhou derivaci.
+
+\hypertarget{oddux11blenuxe1-kontrola-globuxe1lnuxed-lichuxe9-b-puxf3ly}{%
+\subsection{Oddělená kontrola: globální liché
+B-póly}\label{oddux11blenuxe1-kontrola-globuxe1lnuxed-lichuxe9-b-puxf3ly}}
+
+Úplný lichý kontaktní vzorec je
+
+\[
+f_B(v,\omega)=
+\frac{R-4i\sin(\omega-g)}{v-5\cos\omega+4\cos(\omega-g)}.
+\tag{BC36}
+\]
+
+Na přísné mezeře je jeho skutečný pól právě tehdy, když
+
+\[
+v=5\cos\omega-4\cos(\omega-g),
+\qquad \sin\omega\,\sin(\omega-g)<0.
+\tag{BC37}
+\]
+
+Opačné znaménko by v čitateli dalo zkrácení. Pro každé \(-1\le v\le1\)
+má (BC37) právě jeden kladný kořen \(\omega_B(v)\in(0,g)\) a druhý
+\(\pi+\omega_B(-v)\in(\pi,\pi+g)\). V kladném intervalu je pravá strana
+(BC37) přísně klesající: její derivace je
+\(-5\sin\omega+4\sin(\omega-g)<0\), na \(0\) je větší než 1 a na \(g\)
+menší než \(-1\).
+
+Dokonce lze psát
+
+\[
+R_B=\sqrt{41-40\cos g},\qquad
+\vartheta=\arctan\frac{4\sin g}{5-4\cos g},
+\qquad
+\boxed{\omega_B(v)=\arccos\frac v{R_B}-\vartheta.}
+\tag{BC38}
+\]
+
+Tyto póly nevstupují do A-resolventu \(F_2\). V původním \(F_1\) okně
+\(e=4\pi/5\pm1/1000\) také žádný není, protože toto okno leží mezi \(g\)
+a \(\pi\), zatímco obě liché rodiny leží mimo tento interval. Jejich
+uvedení kontroluje oddělení obou úplných kontaktních sektorů; nemění
+původní pravděpodobnostní jev.
+
+\section{Hlavní kladná vázaná větev nemá stacionární spojení s pulzem}
+
+\textbf{NON-CANONICAL / L1. Analytické odvození.}
+
+Použijeme hlavní kladný fyzikální pól z úplného fázového soupisu.
+Pro \(-1<v<1\), \(v=\cos P\), je větev \(\omega_c(v)\)
+jediným řešením \(F=0\). V hybnostní proměnné ji označujeme také
+\(\omega_A(P)=\omega_c(\cos P)\). Položme
+\[
+\omega=\omega_A(P),\qquad
+\delta=\omega-g,\qquad c=\cos\delta,\qquad s=\sin\delta,
+\]
+\[
+A=c-v,\qquad L=A^2+16s^2,\qquad
+S=\sqrt{16-t^2},\qquad t=v-5\cos\omega.
+\]
+
+Z fázové rovnosti \(\delta+2\theta=\eta\in(0,\pi)\) plyne
+\(\delta>0\), \(\theta>0\) a
+\(\theta=(\eta-\delta)/2<\pi/2\). Tedy \(A>0\) a
+\[
+\frac{4s}{c-v}=\tan\theta<\cot(\delta/2)=\frac{1+c}{s}.
+\]
+Proto
+\[
+\boxed{c>\frac{v+4}{5}>v,\qquad
+0<\delta<\alpha(v)\le b=\arccos(3/5).}
+\tag{M1}
+\]
+Zejména \(g<\omega<g+b<e\) v původním energetickém okně pro
+\(e\). Větev se může spojit pouze s pulzem \(\sigma=+1\).
+
+Pro \(P\in(0,\pi)\) definujme
+\[
+w_1=\frac{8(1-vc)}L,\qquad w_2=\frac{5\sin\omega}S,
+\qquad r_1=\frac{\sin P\,s}{1-vc},\qquad
+r_2=\frac{\sin P}{5\sin\omega}.
+\]
+Implicitní derivace fázové rovnice dává přesně
+\[
+\omega_A'(P)=\frac{w_1r_1+w_2r_2}{1+w_1+w_2}.
+\tag{M2}
+\]
+Pro pevné \(v\) má výraz
+\((1-v^2)(1-c^2)/(1-vc)^2\) derivaci podle \(c\) se znaménkem
+\(v-c\). Z~(M1) proto
+\[
+r_1^2<\frac{(1+v)(v+9)}{(v+5)^2}
+=1-\frac{16}{(v+5)^2}<\frac59.
+\]
+Také \(\omega\in(g,g+b)\subset(\pi/4,3\pi/4)\), protože
+\(b<\pi/3\) a \(g+b<11\pi/15<3\pi/4\). Tedy
+\(r_2<\sqrt2/5<3/10\). Ze skutečných kladných vah v~(M2)
+vychází
+\[
+\boxed{|\omega_A'(P)|<\frac{\sqrt5}{3}<\frac34.}
+\tag{M3}
+\]
+
+Při energetickém spojení má pulz
+\(\varepsilon=e-\omega<g+1/1000\). Kosinus je Lipschitzův
+s konstantou jedna a \(\cos g=(\sqrt5-1)/4>307/1000\), tedy
+\(\cos\varepsilon>3/10\). Skutečná pulzní rychlost proto
+splňuje
+\[
+|\varepsilon'(k)|^2
+=\frac{3+5\cos\varepsilon}{5[1+\cos\varepsilon]}
+>\frac9{13}>\frac{16}{25}.
+\tag{M4}
+\]
+Rovnost rychlostí není možná. Symetrie v~\(P\) dává totéž na
+celém kruhu. Kompaktní viditelný bod \(P=0\) má nulovou
+objektovou rychlost a toto vyloučení neporušuje; na opačném
+kompaktním konci kontaktní váha zaniká.
+
+\section{Nízké vázané větve: přesný obor a vyloučení stacionarity}
+
+\textbf{NON-CANONICAL / L1. Samostatné analytické odvození,
+29. října 2026.}
+
+Tento oddíl navazuje na úplný fázový soupis \(A\)-viditelných
+sudých objektových pólů. Původní rozptylový jev ani jeho
+normalizace se nemění. Odvození neobsahuje numerický nebo
+strojový vědecký běh.
+
+\subsection{Vstup z fázového soupisu}
+
+Pišme \(g=2\pi/5\), \(v=\cos P\), \(c_g=\cos g\) a
+\(v_a=5\cos(g/2)-4>0\). V kladné mezeře
+\[
+\alpha(v)=\arccos((v+4)/5)<\omega<\arccos((v-4)/5)
+\]
+je vedle hlavního pólu ještě právě jedna nízká větev
+\(\omega_\ell(v)\), a to přesně pro \(v_a<v<1\). Platí
+\(\alpha(v)<\omega_\ell(v)<g\). Její limit při
+\(v\downarrow v_a\) je \(g/2\). Příslušná záporná větev je
+\(\pi+\omega_\ell(-v)\). Při derivování podle hybnosti \(P\)
+se níže vždy rozumí složená funkce \(\omega_\ell(\cos P)\).
+
+Na nízké větvi označme
+\[
+a=g-\omega\in(0,g),\qquad c=\cos a,\qquad s=\sin a>0,
+\qquad A=c-v,\qquad L=A^2+16s^2,
+\]
+\[
+t=v-5\cos\omega,\qquad S=\sqrt{16-t^2}>0,
+\qquad \eta=\arccos(t/4),\qquad \chi=(\eta+a)/2.
+\]
+Se spojitým argumentem
+\(\Theta=\operatorname{Arg}(c-v+4is)\in(0,\pi)\) je
+fyzikální rovnice
+\[
+F(v,\omega)=-a-2\Theta-\eta=-2\pi,
+\qquad H=A\sin\chi+4s\cos\chi=0.
+\tag{L1}
+\]
+Přitom \(H=-\sqrt L\sin(F/2)\), \(-4\pi<F<0\) a
+\[
+F_\omega=1+\frac{8(1-vc)}L+\frac{5\sin\omega}S>0,
+\qquad F_v=-\frac{8s}L+\frac1S.
+\tag{L2}
+\]
+Proto \(H<0\) znamená \(F<-2\pi\) a \(H>0\) znamená
+\(F>-2\pi\). Fyzikální nízký kořen leží napravo, respektive
+nalevo od takového testu.
+
+\subsection{Každý vnitřní kritický bod je přísné minimum}
+
+Při \(F_v=0\) je \(L=8sS\). Přímá derivace při pevném
+\(\omega\) dává
+\[
+F_{vv}=-\frac{16sA}{L^2}+\frac{t}{S^3}
+=\frac{t-AS/(4s)}{S^3}.
+\tag{L3}
+\]
+Z \(\omega<g\), \(v\le1\) a \(5\cos g>1\) plyne
+\(t<0\). Je-li \(A\ge0\), je čitatel záporný. Je-li
+\(A<0\), použijeme \(-A\le1-c\) a \(S\le4\):
+\[
+\frac{AS}{4s}\ge-\frac{1-c}{s}=-\tan(a/2).
+\]
+Konkávnost kosinu a konvexita tangenty na příslušných intervalech
+dávají
+\[
+\cos(g-a)\ge c_g+(1-c_g)a/g,
+\qquad \tan(a/2)\le(a/g)\tan(g/2).
+\]
+Proto
+\[
+5\cos\omega-1-\tan(a/2)
+\ge5c_g-1+\frac ag[5(1-c_g)-\tan(g/2)]>0.
+\tag{L4}
+\]
+Stačí \(c_g>1/5\), \(c_g<1/3\) a \(\tan(g/2)<1\).
+Tedy také v tomto případě \(t-AS/(4s)<0\). Z implicitní
+derivace při \(\omega_\ell'(v)=0\) plyne
+\[
+\omega_\ell''(v)=-F_{vv}/F_\omega>0.
+\tag{L5}
+\]
+Každý vnitřní kritický bod je přísné minimum. Nemůže jich být
+více než jeden, protože mezi dvěma přísnými minimy by existovalo
+vnitřní maximum. Horní mez celé větve proto stačí kontrolovat
+na jejích koncích.
+
+\subsection{Horní mez nízké fáze}
+
+Na prahovém konci je, v označení spojitého limitu,
+\(\omega_\ell(v_a)=g/2=\pi/5<2/3\). Na druhém konci
+\(v=1\) testujme \(\omega=2/3\). Tento bod je uvnitř
+kladné mezery. Položme
+\[
+r=\tan((g-2/3)/2),\qquad
+y=\tan(\eta/2)
+=\sqrt{\frac{3+5\cos(2/3)}{5-5\cos(2/3)}}.
+\]
+Z \(\pi<22/7\) je \((g-2/3)/2<31/105\). Současně
+\[
+\arctan(61/200)>\frac{61}{200}
+-\frac13\left(\frac{61}{200}\right)^3
+=\frac{7093019}{24000000}>\frac{31}{105}.
+\]
+Tedy \(r<61/200\). Dále
+\[
+\cos(2/3)\le1-\frac{(2/3)^2}{2}+\frac{(2/3)^4}{24}
+=\frac{191}{243}<\frac{2361}{3001},
+\]
+což je právě podmínka \(y<51/20\). Při \(v=1\) má \(H\)
+přesně znaménko \(4-r^2-5ry\); všechny vytažené faktory jsou
+kladné. Nyní
+\[
+r^2+5ry<\frac{3721}{40000}+\frac{15555}{4000}
+=\frac{159271}{40000}<4.
+\tag{L6}
+\]
+Proto \(H(1,2/3)>0\). Kořen \(F=-2\pi\) má tedy při
+\(v\to1\) limit menší než \(2/3\). Tento argument zároveň
+brání jeho úniku ke kompaktnímu pólu \(\omega=g\). Kdyby
+někde uvnitř větev dosáhla \(2/3\), měla by mezi dvěma nižšími
+konci vnitřní maximum, což odporuje~(L5). Platí
+\(\omega_\ell<2/3\) všude.
+
+\subsection{Dolní mez nízké fáze}
+
+Testujme \(\omega=1/2\). Potřebné meze jsou
+\[
+a=g-1/2>3/4,\qquad c<3/4,\qquad s>2/3,
+\qquad u=\cos(1/2)>7/8.
+\tag{L7}
+\]
+Použita byla \(\pi>25/8\). Tuto slabou racionální mez lze
+doložit například Machinovou identitou:
+\[
+\pi=16\arctan(1/5)-4\arctan(1/239)
+>\frac{1184}{375}-\frac4{239}
+=\frac{281476}{89625}>\frac{25}{8}.
+\]
+Zbylé nerovnosti plynou z prvních střídavých členů sinu a kosinu.
+
+Je-li \(\alpha(v)\ge1/2\), je závěr okamžitý. Jinak test
+leží v mezeře a \(v>5u-4>3/8\).
+
+Pro \(v\le3/5\) máme
+\(\cos\eta<(3/5-35/8)/4=-151/160\). Protože
+\(\cos(3/8)<15/16<151/160\), je \(\eta>\pi-3/8\).
+Tedy \(\chi>\pi/2+3/16\) a
+\(-\cos\chi>\sin(3/16)>9/50\). Odtud
+\[
+H<\frac38-\frac83\frac9{50}<0.
+\]
+Pro \(v\ge3/5\) máme \(A<3/20\) a
+\(\cos\eta<(1-35/8)/4=-27/32\). Protože
+\(\cos(3/5)<27/32\), je \(\eta>\pi-3/5\). Tedy
+\(\chi>\pi/2+3/40\) a
+\(-\cos\chi>\sin(3/40)>7/100\). Odtud
+\[
+H<\frac3{20}-\frac83\frac7{100}<0.
+\]
+V obou případech \(\chi<\pi\), takže použité znaménko kosinu
+a horní mez prvního členu jsou správné. Podle~(L1),(L2) leží
+nízký kořen nad testem. Celkově
+\[
+\boxed{\frac12<\omega_\ell(v)<\frac23\qquad(v_a<v<1).}
+\tag{L8}
+\]
+
+\subsection{Rychlost celé nízké větve je menší než jedna polovina}
+
+Pro \(P\in(0,\pi)\) pišme
+\[
+w_1=\frac{8(1-vc)}L,\qquad w_2=\frac{5\sin\omega}S,
+\qquad r_1=\frac{\sin P\,s}{1-vc},\qquad
+r_2=\frac{\sin P}{5\sin\omega}.
+\]
+Přesně
+\[
+\frac{\mathrm d}{\mathrm dP}\omega_\ell(\cos P)
+=\frac{-w_1r_1+w_2r_2}{1+w_1+w_2}.
+\tag{L9}
+\]
+Máme \(0\le r_1\le1\), protože
+\((1-vc)^2-(1-v^2)s^2=(v-c)^2\). Z~(L8) je
+\(a>g-2/3>7/12\) a tedy \(s>11/20\). Také
+\(v>v_a>0\) a \(c>0\). Přesná identita
+\[
+(1-vc)(c^2+16s^2)-L
+=v[c(-14+15c^2)-v]\le0
+\]
+dává, protože již doložené \(s>11/20\) znamená
+\(c^2<279/400<14/15\),
+\[
+w_1\le\frac8{1+15s^2}<\frac{640}{443},\qquad
+w_2>\frac54\sin(1/2)>\frac{115}{192},\qquad
+r_2<\frac{48}{115}<\frac12.
+\tag{L10}
+\]
+Zde \(640/443<1+115/192\). Kladná část~(L9) je menší než
+\(r_2<1/2\). Záporná část má modul menší než
+\(w_1/(1+w_1+w_2)<1/2\). Po symetrii v~\(P\) platí
+\[
+\boxed{\left|\frac{\mathrm d}{\mathrm dP}
+\omega_\ell(\cos P)\right|<\frac12.}
+\tag{L11}
+\]
+
+\subsection{Obě nízké větve jsou v původním okně nestacionární}
+
+Původní \(e\) leží v intervalu
+\([4\pi/5-1/1000,4\pi/5+1/1000]\). Pro kladnou nízkou
+větev je možná jen \(\sigma=+1\) a pulzní fáze je
+\(\varepsilon=e-\omega_\ell\). Pak
+\[
+\pi-\varepsilon>\pi/5-1/1000+1/2>109/100.
+\]
+Přesná kosinová mez
+\[
+\cos(109/100)\le
+\frac{1115438161}{2400000000}<\frac7{15}
+\]
+dává \(\cos\varepsilon>-7/15\). Ze skutečné pulzní rychlosti
+\[
+|\varepsilon'(k)|^2
+=\frac{3+5\cos\varepsilon}{5[1+\cos\varepsilon]}
+\]
+proto plyne \(|\varepsilon'|>1/2\). Rovnost rychlostí
+s~(L11) není možná.
+
+Pro \(\pi\)-posunutou nízkou větev je možná jen
+\(\sigma=-1\). Její pulzní fáze splňuje
+\[
+0<\varepsilon=\pi+\omega_\ell-e
+<\pi/5+2/3+1/1000<\pi/2.
+\]
+Tedy \(|\varepsilon'|^2>3/5>1/4\), zatímco objektová
+rychlost má po symetrii stále modul menší než \(1/2\). Ani
+tato větev nemá žádný stacionární bod v původním energetickém
+okně.
+
+Prahové konce se posuzují společným pólovým a kontinuálním
+příspěvkem; kompaktní konce s nulovou \(A\)-váhou nejsou
+započítávány jako nové viditelné póly.
+
+\section{Zbývající fyzikální stacionární větve vázaných pólů}
+\label{sec:bound-stationary}
+
+\textbf{NON-CANONICAL / L1. Analytický pracovní důkaz, 29. října 2026.}
+Nebyl použit numerický průzkum kořenů, vyhodnocení CAS, vědecký běh ani
+veřejná změna repozitáře. Všechny následující odhady jsou symbolické
+identity a racionální nerovnosti. Zachovává se celý původní kruh \(K\),
+původní energetické okno, normalizace zdroje i pravděpodobnostní jev.
+
+Tento oddíl řeší hlavní vázanou větev posunutou o \(\pi\), se záporným
+pulzním znaménkem. Doprovodný fázový soupis a rychlostní vyloučení ji
+určují jako jedinou zbývající možnou stacionární vázanou rodinu:
+hlavní větev v horní energetické půlperiodě a obě nízké větve již byly
+vyloučeny rychlostními mezemi. Zde dokážeme existenci právě dvou
+fyzikálních stacionárních křivek a jednotnou nenulovou společnou druhou
+derivaci.
+
+Východiskem jsou fyzikální jmenovatel (BC6), fázová rovnice
+(BC11) a původní úplné kontaktní vzorce [S1,S2]. Společná regularita
+pólu a hrany v jiných integračních bodech je samostatná úloha; tento
+oddíl netvrdí globální analytičnost \(F_2\).
+
+\subsection{Fyzikální půlperiodová symetrie a příslušná větev}
+
+Položme
+\[
+g=2\pi/5,\qquad C=\cos g,\qquad S_g=\sin g,
+\qquad a_p=\arccos(-3/5),
+\]
+\[
+e\in I_e=[4\pi/5-10^{-3},4\pi/5+10^{-3}].
+\]
+Úplný sudý kontaktní výraz je invariantní při záměně
+\[
+(v,\omega,x,q)\longmapsto(-v,\omega+\pi,-x,-q).
+\tag{BS1}
+\]
+Jeho čitatel \(N\) se totiž nezmění, jmenovatel \(D_o\) změní znaménko
+a podíl \(2xN/D_o\) zůstane stejný. Správně se přenáší také fyzikální
+mezerový kořen: \(t\) i předepsaná hraniční hodnota \(R\) změní
+znaménko, a proto je změní i \(q\). Kontaktní spektrální váha \(A\)
+se při (BS1) zachovává.
+
+Hlavní vázanou fázi v horní půlperiodě pišme jako
+\[
+\omega_A(p)=g+\delta(\cos p),\qquad 0\le p\le\pi,
+\qquad \delta>0\quad\text{pro }p\ne0.
+\]
+V \(p=0\) je její fází původní kompaktní vlastní hodnota \(g\).
+Partner posunutý o \(\pi\) má pro \(P=\pi-p\) fázi
+\(\pi+\omega_A(p)\). Stacionární rezonance v původním okně \(e\)
+může použít pouze záporné pulzní znaménko:
+\[
+e=\pi+g+\delta-\varepsilon(k),\qquad
+\varepsilon(k)=d(e)+\delta,
+\qquad d(e)=\pi+g-e.
+\tag{BS2}
+\]
+Přitom
+\[
+3\pi/5-10^{-3}\le d(e)\le3\pi/5+10^{-3},
+\qquad 0<d(e)<a_p.
+\tag{BS3}
+\]
+Poslední nerovnost plyne již z \(a_p>2\pi/3\). Jediný přípustný
+kladný interval parametru je tedy
+\(0\le\delta\le\delta_{\max}(e):=a_p-d(e)\).
+
+\subsection{Výslovná jednoparametrická reprezentace na fyzikální vrstvě}
+
+Označme
+\[
+c=\cos\delta,\qquad s=\sin\delta,
+\qquad \mathfrak a=5(1-C),\qquad \mathfrak b=3+5C,
+\]
+\[
+\mathfrak h=5S_g,
+\qquad \mathfrak a+\mathfrak b=8.
+\]
+Použijme parametr kontaktního úhlu
+\[
+z=\frac{c-v}{4s}>0,\qquad
+\theta=\arctan(1/z),\qquad \eta=\delta+2\theta.
+\tag{BS4}
+\]
+Reálná kontaktní rovnice \(H=0\) je pak splněna identicky, protože
+\(c-v=4sz=4s\cot\theta\). Zbývající volný mezerový vztah
+\(v-5\cos(g+\delta)=4\cos\eta\) je přesně
+\[
+\boxed{\mathscr G(z,\delta)=cU(z)-sV(z)=0,
+\qquad v=c-4sz,}
+\tag{BS5}
+\]
+kde
+\[
+U(z)=\mathfrak b z^2-\mathfrak a,\qquad
+V(z)=\mathfrak h(1+z^2)+4z-4z^3.
+\tag{BS6}
+\]
+Například rozdíl obou stran volného mezerového vztahu, vynásobený
+\(1+z^2\), je právě \(-\mathscr G\). Jde o původní jmenovatel
+a fyzikální kořen, nikoli o výběr z umocněné rovnice.
+
+Pro \(0<\delta\le1/3\) má rovnice právě jeden kladný kořen \(z\).
+Funkce
+\[
+\frac{\mathscr G}{z^2}
+=4sz+(\mathfrak b c-\mathfrak h s)
+-\frac{4s}{z}-\frac{\mathfrak a c+\mathfrak h s}{z^2}
+\]
+je totiž striktně rostoucí od minus nekonečna do plus nekonečna.
+Její kladný kořen je jednoduchý a hladce závisí na \(\delta\).
+Položme
+\[
+z_0=\sqrt{\mathfrak a/\mathfrak b}.
+\]
+Elementární přesné meze
+\[
+\frac{309}{1000}<C<\frac{31}{100},\qquad
+\frac{19}{20}<S_g<\frac{119}{125}
+\tag{BS7}
+\]
+dávají \(6/7<z_0<1\). K ověření (BS7) stačí umocnit racionální
+meze \(559/250<\sqrt5<56/25\) a použít \(S_g^2=1-C^2\).
+V \(z=z_0\) je \(U=0\), \(V>0\), tedy \(\mathscr G<0\)
+a kladný kořen splňuje \(z>z_0\).
+
+Platí také jednotná horní mez \(z<5/4\). Přímo
+\[
+16\mathscr G(5/4,\delta)
+=c(205C-5)+s(45-41\mathfrak h).
+\]
+Protože \(c\ge17/18\), \(s\le1/3\), dostáváme z (BS7)
+\[
+16\mathscr G(5/4,\delta)
+>\frac{17}{18}\frac{11669}{200}
+-\frac13\frac{3754}{25}
+=\frac{18181}{3600}>0.
+\tag{BS8}
+\]
+V celém tomto parametrickém intervalu proto
+\[
+\boxed{6/7<z<5/4,\qquad -13/18<v<1.}
+\tag{BS9}
+\]
+Dolní mez \(v\) plyne z
+\(v=c-4sz>17/18-5/3=-13/18\). Navíc
+\(\tan(\delta/2)\le12/71<6/7<z\), takže (BS4) dává
+\(0<\eta<\pi\). Rovnice (BS5) tedy leží na fyzikální kladné
+mezerové vrstvě, při \(-1<v<1\), a jde o jednoduchý viditelný pól.
+Při \(\delta=0\) má spojitý konec \(v=1\), \(z=z_0\), s fází
+\(g\). Celý interval \([0,1/3]\) je tedy na původní hlavní větvi
+skutečně dostupný.
+
+Z \(\tan\delta=U/V\) lze též získat úplně výslovnou algebraickou
+parametrizaci:
+\[
+c=\frac{V}{\sqrt{U^2+V^2}},\qquad
+s=\frac{U}{\sqrt{U^2+V^2}},\qquad
+v=\frac{V-4zU}{\sqrt{U^2+V^2}}.
+\tag{BS10}
+\]
+Na tomto úseku jsou \(U,V>0\). Kladná odmocnina a fyzikální
+úhlový interval v (BS4) jednoznačně určují větev.
+
+\subsection{Energetická podmínka vynutí parametr menší než třetina}
+
+Nechť \(\Delta=a_p-3\pi/5\), takže \(0<\Delta<\pi/2\).
+Přesné odečtení úhlů dává
+\[
+\tan\Delta=\frac{3S_g-4C}{3C+4S_g}.
+\]
+Z (BS7) je \(C/S_g>309/952\). Zobrazený racionální výraz s tímto
+poměrem klesá, a tedy
+\[
+\tan\Delta<\frac{324}{947}<\frac{343}{1000}.
+\]
+Pro \(x=997/3000=1/3-10^{-3}\) platí
+\(\tan x\ge x+x^3/3>343/1000\). První nerovnost plyne integrací
+\((\tan x)'=1+\tan^2x\ge1+x^2\); druhá je racionální porovnání,
+pro které již stačí \(x>33/100\). Proto
+\[
+\boxed{0<\delta_{\max}(e)\le\Delta+10^{-3}<1/3.}
+\tag{BS11}
+\]
+Tím je každý možný stacionární bod této větve lokalizován ještě před
+použitím derivací.
+
+\subsection{První rychlostní mez vynutí parametr větší než čtvrtina}
+
+Pišme
+\[
+S=\sqrt{16-(v-5\cos\omega)^2}=4\sin\eta>0,
+\qquad L=(c-v)^2+16s^2,
+\qquad \omega=g+\delta.
+\]
+Derivace přesné fázové rovnice
+\(\delta+2\operatorname{Arg}(c-v+4is)-\eta=0\) dávají
+\[
+\omega_v=-\frac{N}{D_*},\qquad N=L+8sS,
+\qquad D_*=5\sin\omega\,L+S[L+8(1-vc)].
+\tag{BS12}
+\]
+Veličiny \(N,D_*\) jsou kladné. Zvláště \(v(\delta)\) striktně
+klesá. Pro \(0<\delta\le1/3\) je
+\(\sin\omega\ge S_g>19/20\): použili jsme
+\(g\le\omega\le g+1/3<\pi-g\). Současně
+\[
+1-vc=s(s+4cz)>3s,
+\]
+protože \(c>7/8\), \(z>6/7\). Proto
+\[
+D_*-3N=(5\sin\omega-3)L+S[L+8(1-vc-3s)]>0.
+\]
+Odtud
+\[
+0<\omega_A'(p)=\sqrt{1-v^2}(-\omega_v)<1/3.
+\tag{BS13}
+\]
+Ve stacionární rezonanci se tato rychlost rovná velikosti pulzní
+rychlosti. Pro \(\varepsilon=d(e)+\delta\) tedy přesný pulzní vztah
+dává
+\[
+|\varepsilon'|^2=
+\frac{3+5\cos\varepsilon}{5(1+\cos\varepsilon)}<1/9,
+\qquad \cos\varepsilon<-11/20.
+\]
+Na druhé straně
+\[
+\cos(3\pi/5+251/1000)
+>-\frac{31}{100}-\frac{119}{125}\frac{251}{1000}
+=-\frac{68619}{125000}>-\frac{11}{20}.
+\]
+Použili jsme \(\cos x\le1\), \(\sin x\le x\) v přesném součtovém
+vzorci. Všechny úhly leží v \((0,\pi)\), kde kosinus klesá.
+Protože \(d(e)\le3\pi/5+10^{-3}\), musí každý stacionární bod
+splňovat
+\[
+\boxed{1/4<\delta<\delta_{\max}(e)<1/3.}
+\tag{BS14}
+\]
+
+\subsection{Užší parametrický obor a meze inverzních derivací}
+
+Ve stacionárním bodě je \(z>1\). Jinak (BS5), (BS6) a
+\(z_0<z\le1\) dávají
+\[
+\tan\delta=U/V
+\le(\mathfrak b-\mathfrak a)/\mathfrak h
+<\frac{11/10}{19/4}=\frac{22}{95}<1/4,
+\]
+což odporuje (BS14). Spolu s (BS8) jsme dokázali
+\[
+\boxed{1/4<\delta<1/3,\qquad 1<z<5/4.}
+\tag{BS15}
+\]
+Následující odhady platí na celém tomto parametrickém oboru,
+nejen na kořeni stacionární rovnice.
+
+Platí zde
+\[
+s+4cz>s+4c>4+\delta-2\delta^2-\delta^3/6>4.
+\]
+Nahradíme-li v porovnání za (BS12) číslo 3 číslem 4, dostaneme
+\[
+\boxed{0<-\omega_v<1/4,\qquad v'(\delta)<-4.}
+\tag{BS16}
+\]
+Nyní omezíme druhou inverzní derivaci bez předpokladu konvexity
+objektové větve. Derivace \(V\) jsou
+\[
+V'=2\mathfrak h z+4-12z^2,
+\qquad V''=2\mathfrak h-24z<-14.
+\]
+Pro \(1<z<5/4\) odtud plyne
+\[
+-7/2<V'<38/25,\qquad V<10.
+\tag{BS17}
+\]
+Pro druhé tvrzení použijeme Taylorovu nerovnost s \(V''<-14\):
+\(V\le2\mathfrak h+(2\mathfrak h-8)(z-1)-7(z-1)^2\).
+Její horní mez je menší než
+\(238/25+(38/25)^2/28<10\). Dolní mez \(V'\) plyne již
+z dosazení \(z=5/4\) do této klesající funkce při
+\(\mathfrak h>19/4\).
+
+Na kořeni (BS5) je
+\[
+\mathscr G_z=cU'-sV'
+>\frac{17}{18}\frac{909}{100}-\frac13\frac{38}{25}>8,
+\]
+\[
+z'=\frac{V}{c\mathscr G_z}<\frac{45}{34}<4/3.
+\tag{BS18}
+\]
+Derivace je kladná. S \(\mathfrak b<23/5\) navíc
+\[
+|sU'+cV'|<15/2,
+\qquad
+0<\mathscr G_{zz}=2\mathfrak b c+s(24z-2\mathfrak h)<17.
+\]
+Kladnost posledního výrazu plyne také přímo z \(2\mathfrak h<24z\).
+Protože \(\mathscr G_{\delta\delta}=-\mathscr G=0\) na jeho nule,
+implicitní derivování dává přesnou formuli
+\[
+z''=\frac{2(sU'+cV')z'-\mathscr G_{zz}(z')^2}{\mathscr G_z}.
+\]
+Předchozí konstanty tedy dokazují
+\[
+\boxed{|z''|<\frac{2(15/2)(4/3)+17(4/3)^2}{8}
+=113/18<7.}
+\tag{BS19}
+\]
+Dvě derivace \(v=c-4sz\) nyní dávají
+\[
+v''=-c+4sz-8cz'-4sz''>-1-8(4/3)-4(1/3)7=-21.
+\]
+Spolu s \(v'<-4\) je inverzní derivace zdola omezena:
+\[
+\omega_{vv}=-\frac{v''}{(v')^3}>-21/64.
+\]
+Je-li \(v''<0\), dělí se jeho dolní mez kladným
+\(|v'|^3>64\); je-li \(v''\ge0\), je tvrzení okamžité.
+Objektová křivost, která nemusí být kladná, tudíž splňuje
+\[
+\boxed{\omega_A''(p)
+=-v\omega_v+(1-v^2)\omega_{vv}>-37/64.}
+\tag{BS20}
+\]
+
+\subsection{Jednotná nedegenerovanost každé stacionární rezonance}
+
+Ve stacionárním bodě označme
+\(w=\omega_A'(p)=|\varepsilon'(k)|\). Z (BS16) je \(w<1/4\).
+Přesnou druhou pulzní derivaci lze vyjádřit jen jeho rychlostí:
+\[
+-\varepsilon''(k)
+=\frac{1-w^2}{2}\sqrt{4-5w^2}
+>\frac{15\sqrt{59}}{128}>7/8.
+\tag{BS21}
+\]
+Druhá derivace při pevném původním \(K\) je tedy
+\[
+\boxed{\begin{aligned}
+\partial_P^2[\omega_{\rm lower}(P)-\varepsilon(K-P)]
+&=\omega_A''(p)-\varepsilon''(k)\\
+&>19/64>1/4.
+\end{aligned}}
+\tag{BS22}
+\]
+Jde o jednotně nedegenerované minimum. Tento závěr neplyne jen
+z jednoduchosti objektového pólu: obě druhé derivace byly
+výslovně omezeny.
+
+\subsection{Existence a jednoznačnost včetně neumocněných znamének}
+
+Pro pevné \(e\) vezměme \(p(\delta)=\arccos v(\delta)\) na
+\([0,\delta_{\max}(e)]\). Funkce striktně roste, začíná v nule
+a podle (BS9) končí před \(\pi\). Nechť \(W(\varepsilon)\)
+označuje kladnou velikost pulzní rychlosti pro
+\(0<\varepsilon<a_p\), se spojitou hodnotou \(W(a_p)=0\).
+Definujme rozdíl
+\[
+\mathcal F_e(p)=\omega_A'(p)
+-W(\pi+\omega_A(p)-e).
+\tag{BS23}
+\]
+V \(p=0\) je záporný: objektová rychlost mizí, ale
+\(0<d(e)<a_p\). Na druhém konci pulzní rychlost mizí a objektová
+rychlost je přísně kladná, takže rozdíl je kladný. Existuje alespoň
+jedna vnitřní nula.
+
+Uvnitř intervalu je
+\(W'(\varepsilon)=\varepsilon''(k)/W(\varepsilon)\).
+V každé nule (BS23) se obě kladné rychlosti rovnají, a proto
+\[
+\mathcal F_e'(p)=\omega_A''(p)-\varepsilon''(k)>1/4.
+\]
+Každá nula je tedy přísným vzestupným průchodem. Dvě různé nuly
+by mezi sebou vynutily sestupný průchod nebo nulu s nekladnou
+derivací. Existuje proto právě jedna nula \(p_*(e)\), s jediným
+\(\delta_*(e)\) v (BS14). Věta o implicitní funkci navíc dává
+hladkou závislost kořene na \(e\).
+
+Kořen lze definovat také bez výběru znamének hybností jako jediné
+řešení
+\[
+\frac{1-v(\delta)^2}{v'(\delta)^2}
+=\frac{3+5\cos(d(e)+\delta)}{5[1+\cos(d(e)+\delta)]},
+\qquad 1/4<\delta<\delta_{\max}(e),
+\tag{BS24}
+\]
+kde \(v(\delta)\) je jednoznačná fyzikální parametrizace (BS5).
+Rovnost kladných velikostí rychlostí je zde automatická; které
+hybnostní dvojice skutečně nastávají, však nadále určují původní
+neumocněná znaménka.
+
+Položme
+\[
+\kappa_*(e)=\arccos
+\frac{1-5\cos(d(e)+\delta_*(e))}{4}>0.
+\]
+Pro kladného reprezentanta původního \(P\) je \(P=\pi-p_*\)
+a objektová derivace je záporná. Záporné pulzní znaménko proto
+vyžaduje \(k=-\kappa_*\). Druhý reprezentant vznikne reflexí.
+Skutečná stacionární řešení jsou tedy právě
+\[
+\boxed{(P,k,K)=(\pi-p_*,-\kappa_*,\pi-p_*-\kappa_*),}
+\]
+\[
+\boxed{\begin{gathered}
+(P,k,K)=(-\pi+p_*,\kappa_*,-\pi+p_*+\kappa_*),\\
+\sigma=-1.
+\end{gathered}}
+\tag{BS25}
+\]
+Z umocněné rovnice nevzniká žádná další znaménková kopie. Ani jeden
+kompaktní hybnostní konec není stacionární rezonancí: při
+\(\delta=0\) zůstává nenulová pulzní rychlost odlišná od nulové
+objektové rychlosti; druhý konec leží mimo přípustný interval
+\(\delta\).
+
+\subsection{Hrubá geometrická poloha a přísně kladné váhy}
+
+V kořeni dávají \(\sin\delta>95/384\), \(z>1\) a \(c<1\)
+meze
+\[
+-13/18<v<1/96.
+\tag{BS26}
+\]
+Proto \(\pi/3<p_*<5\pi/6\). Rychlostní mez \(w<1/4\) znamená
+\(\cos\kappa_*>29/30\), a tedy \(\kappa_*<1/3\), jak plyne
+z elementární horní Taylorovy meze pro \(\cos(1/3)\). Odtud
+\[
+\boxed{K_\pm(e)=\pm K_*(e),\qquad
+1/6<K_*(e)=\pi-p_*-\kappa_*<2\pi/3.}
+\tag{BS27}
+\]
+Obě křivky jsou tedy různé a jednotně oddělené od \(K=0\).
+Oddělení od běžných kontinuálních stacionárních křivek je
+doloženo samostatně v následujícím oddílu.
+
+Pro samotné tyto póly dostáváme také přímý odstup od hran mezery.
+Z \(1<z<5/4\) leží \(\theta=\arctan(1/z)\) mezi \(\pi/6\)
+a \(\pi/4\). Rovnice (BS15) proto dává
+\[
+\pi/3<\eta<2\pi/3,
+\qquad \boxed{|t|=4|\cos\eta|<2.}
+\tag{BS28}
+\]
+Žádný stacionární vázaný pól tedy sám neleží ve styku pólu
+s hranou. Tato vlastnost se při fyzikální půlperiodové symetrii
+zachovává.
+
+Stejné derivace navíc dávají
+\(|v'|<1/3+5+16/9=64/9\). Protože z (BS26) plyne
+\(\sin p>2/3\), je
+\[
+\boxed{3/32<w<1/4.}
+\tag{BS29}
+\]
+Obálková derivace na kladné křivce \(K\) je \(\mathrm de/\mathrm dK=-w\).
+Tedy
+\[
+\boxed{4<|K_\pm'(e)|<32/3.}
+\tag{BS30}
+\]
+
+Také kontaktní reziduum je oddělené od nuly. Použijme původní
+reálný čitatel a jmenovatel v horním hlavním pólu:
+\[
+H=(c-v)\sin\theta-4s\cos\theta,
+\qquad G_c=4(c+v)\cos\theta+s\sin\theta.
+\]
+Je \(c+v>2/9\), \(\cos\theta>2/3\), takže \(G_c>16/27\).
+Při pevném \(v\) dává (BS28)
+\(\lvert\theta_\omega\rvert=(1+5\sin\omega/S)/2<4/3\).
+Protože \(c-v=4sz<5/3\), přímé derivování \(H\) dává
+\[
+|H_\omega|<1/3+(5/3)(4/3)+4+(4/3)(4/3)=25/3.
+\]
+Všechny členy této derivace zde mají záporné znaménko, tedy
+\(H_\omega<0\). Původní reziduová formule a (BS1) dokazují
+na obou skutečných dolních stacionárních pólech
+\[
+\boxed{r_b=-\frac{G_c}{2H_\omega}>8/225>1/32,
+\qquad h_\sigma=(1-\sigma\varepsilon')/2>3/8.}
+\tag{BS31}
+\]
+Jde o skutečné viditelné stacionární póly, nikoli o algebraické
+kandidáty s nulovou vahou. Jejich lokální foldové příspěvky proto
+musí zůstat v úplném \(F_2\).
+
+\subsection{Přesný rozsah klasifikace}
+
+Spolu s doprovodným fázovým soupisem a rychlostním vyloučením
+ostatních větví ponechává tento důkaz v původním energetickém okně
+právě dvě fyzikální stacionární vázané rodiny (BS25). Jejich
+společná křivost je jednotně větší než \(1/4\), samotné póly mají
+v proměnné \(t\) odstup větší než dva od obou objektových hran
+a kontaktní i pulzní váhy jsou přísně kladné s mezemi (BS31).
+
+Tím je uzavřen dosud chybějící počet stacionárních vázaných větví
+a jejich nedegenerovanost. Tento výsledek sám nepřiřazuje celému
+přenosovému sloupci globální Fourierovu konstantu. Zbývající
+kontinuální příspěvky, setkání pólu s hranou a výměny pulzních
+bank se stále musí spojit podle vnějšího předpisu. Původní ostré
+energetické konce nadále vyžadují zaplacenou normovou aproximaci
+nebo samostatný oscilační odhad. Žádná dřívější konstanta
+konečného času se tímto oddílem nemění.
+
+\section{Číselné oddělení vázaných a kontinuálních stacionárních křivek}
+Na celém původním energetickém okně dokážeme kruhový rozestup
+větší než \(1/300\). Z předchozího návrhu [S4, rovnice PT7--PT17]
+přejímáme úplnou klasifikaci dvou běžných kontinuálních hran.
+Jejich fáze je jediným řešením
+\[
+e=\omega+\arccos\frac{\cos\omega-3}{4},\qquad 0<\omega<b,\qquad v_c(e)=5\cos\omega(e)-4.
+\]
+Příslušná společná druhá derivace je menší než \(-2\sqrt3/5\),
+a úplný objektový jmenovatel má modul větší než \(12/25\).
+Následující důkaz rozestupu používá pouze jejich uvedené polohy,
+přesný střed a již doloženou variaci.
+
+\hypertarget{pux159esnuxe9-pux159iux159azenuxed-obou-kladnuxfdch-reprezentantux16f}{%
+\subsection{Přesné přiřazení obou kladných
+reprezentantů}\label{pux159esnuxe9-pux159iux159azenuxed-obou-kladnuxfdch-reprezentantux16f}}
+
+Podle předchozího oddílu, (BS25), je u vázaného pólu \(p=\arccos v\),
+ale \textbf{původní} kladná objektová hybnost je
+\(P=\pi-p=\arccos(-v)\). Neumocněná stacionární rovnice při
+\(\sigma=-1\) určuje \(k=-\kappa_b\), a tedy
+
+\[
+K_b=P-\kappa_b=\arccos(-v)-\kappa_b.
+\tag{CS1}
+\]
+
+Platí doložené meze \(v>-13/18\) a \(w=|\varepsilon'(\kappa_b)|<1/4\),
+kde \(0<\kappa_b<\pi\). Druhá křivka je přesně \(-K_b\).
+
+Podle předchozího časového návrhu {[}S4, oddíl 14{]},
+(PT8),(PT9),(PT12), má kladná kontinuální křivka
+
+\[
+K_c=p_c-\kappa_c>0,\qquad
+p_c=\arccos v_c(e),\qquad
+\cos\kappa_c=\frac{15-v_c(e)}{16}.
+\tag{CS2}
+\]
+
+Zde je \(\sigma=+1\), ale neumocněná rovnice rovněž určuje
+\(k=-\kappa_c\). Její druhá křivka je \(-K_c\). Veličiny \(v\) a \(v_c\)
+tedy nejsou kosiny téže původní hybnosti; znaménko v (CS1) je
+podstatné.
+
+\hypertarget{dolnuxed-mez-vuxe1zanuxe9-kux159ivky}{%
+\subsection{Dolní mez vázané
+křivky}\label{dolnuxed-mez-vuxe1zanuxe9-kux159ivky}}
+
+Střídavý Taylorův odhad pro kosinus dává přesně
+
+\[
+\cos\frac34
+\ge1-\frac12\left(\frac34\right)^2
++\frac1{24}\left(\frac34\right)^4
+-\frac1{720}\left(\frac34\right)^6
+=\frac{239759}{327680}>\frac{13}{18}.
+\tag{CS3}
+\]
+
+Protože \(-v<13/18\), monotónnost arkuskosinu implikuje
+\(P=\arccos(-v)>3/4\).
+
+Přesná pulzní rychlost splňuje
+
+\[
+w^2=\frac{4\sin^2(\kappa_b/2)}
+{1+4\sin^2(\kappa_b/2)}<\frac1{16}.
+\]
+
+Odtud
+
+\[
+\sin\frac{\kappa_b}{2}<\frac1{2\sqrt{15}}
+<\frac5{38}
+<\frac{1346}{10125}
+=\frac2{15}-\frac16\left(\frac2{15}\right)^3
+<\sin\frac2{15}.
+\tag{CS4}
+\]
+
+První racionální porovnání se ověří umocněním \(1444<1500\); druhé je
+\(50625<51148\). Sinus je na \([0,\pi/2]\) přísně rostoucí. Proto
+\(\kappa_b<4/15\), a tak
+
+\[
+\boxed{K_b>\frac34-\frac4{15}=\frac{29}{60}.}
+\tag{CS5}
+\]
+
+Rovněž \(K_b<P<\pi\), což později ošetří kruhový šev.
+
+\hypertarget{hornuxed-mez-kontinuuxe1lnuxed-kux159ivky-pouze-z-doloux17eenuxe9ho-pt-vuxfdsledku}{%
+\subsection{Horní mez kontinuální křivky pouze z doloženého PT
+výsledku}\label{hornuxed-mez-kontinuuxe1lnuxed-kux159ivky-pouze-z-doloux17eenuxe9ho-pt-vuxfdsledku}}
+
+Použijme původní přesný střed a doloženou variaci z (PT14) a odstavce
+následujícího po (PT17):
+
+\[
+v_c(e_0)=\frac{110\varphi-159}{31},\qquad
+|v_c(e)-v_c(e_0)|<\frac1{200},\qquad
+e_0=4\pi/5,\quad \varphi=\frac{1+\sqrt5}{2}.
+\tag{CS6}
+\]
+
+Protože \((559/250)^2=312481/62500<5\), platí
+\(\varphi>809/500=1618/1000\). Tudíž na celém původním okně
+
+\[
+v_c(e)>
+\frac{110(809/500)-159}{31}-\frac1{200}
+=\frac{753}{1240}>\frac35.
+\tag{CS7}
+\]
+
+K převodu této jediné meze na hybnosti stačí další dvě přesné Taylorovy
+nerovnosti:
+
+\[
+\begin{aligned}
+\cos\frac{93}{100}
+&\le1-\frac12\left(\frac{93}{100}\right)^2
++\frac1{24}\left(\frac{93}{100}\right)^4\\
+&=\frac{1436925201}{2400000000}<\frac35,
+\end{aligned}
+\tag{CS8}
+\]
+
+\[
+\begin{aligned}
+\cos\frac9{20}
+&\ge1-\frac12\left(\frac9{20}\right)^2
++\frac1{24}\left(\frac9{20}\right)^4
+-\frac1{720}\left(\frac9{20}\right)^6\\
+&=\frac{4610288951}{5120000000}>\frac9{10}.
+\end{aligned}
+\tag{CS9}
+\]
+
+Z (CS7),(CS8) plyne \(p_c<\arccos(3/5)<93/100\). Z (CS2),(CS7),(CS9)
+plyne \(\cos\kappa_c<9/10<\cos(9/20)\), tedy \(\kappa_c>9/20\). Spolu s
+již doloženou kladností \(K_c\) dostáváme
+
+\[
+\boxed{0<K_c<\frac{93}{100}-\frac9{20}=\frac{12}{25}.}
+\tag{CS10}
+\]
+
+Nepoužili jsme nové přibližné řešení kontinuální rovnice ani nový odhad
+jejích derivací.
+
+\hypertarget{rozestup-na-celuxe9m-kruhu-a-dux16fsledek-pro-uxfaplnou-periodu}{%
+\subsection{Rozestup na celém kruhu a důsledek pro úplnou
+periodu}\label{rozestup-na-celuxe9m-kruhu-a-dux16fsledek-pro-uxfaplnou-periodu}}
+
+Pro stejné znaménko křivek dávají (CS5),(CS10)
+
+\[
+\boxed{K_b-K_c>\frac{29}{60}-\frac{12}{25}=\frac1{300}.}
+\tag{CS11}
+\]
+
+Oba kladní reprezentanti leží v \((0,\pi)\), takže jejich rozdíl je již
+kruhovou vzdáleností. U opačných znamének je kruhová vzdálenost
+\(\min(K_b+K_c,\,2\pi-K_b-K_c)\). První člen je větší než \(29/60\);
+druhý je díky \(K_b<\pi\) a (CS10) větší než \(\pi-12/25>1/300\).
+Zrcadlové dvojice proto nevytvářejí žádnou shodu přes šev kruhu.
+
+Pro všechna \(e\in I_e\) a všechna znaménka \(s,t\in\{-1,1\}\) tedy
+platí
+
+\[
+\boxed{
+\operatorname{dist}_{\mathbb R/(2\pi\mathbb Z)}
+\bigl(sK_b(e),tK_c(e)\bigr)>\frac1{300}.
+}
+\tag{CS12}
+\]
+
+Tím je vyloučena současnost těchto dvou tříd fyzikálních stacionárních
+singularit úplného \(F_2\) při stejném \((K,E)\). Jde o vzájemné
+oddělení již klasifikovaných vázaných a běžných kontinuálních křivek;
+samotné lemma nepřiděluje číselné poloměry všem komplexním obvodům ani
+novou globální Fourierovu konstantu. Původní vstup, vybraný jev a
+normalizace zůstávají zachovány.
+
+\section{Společný pólový a kontinuální příspěvek druhého kontaktu}
+
+\textbf{NON-CANONICAL / L1. Analytický pracovní výsledek.}
+
+Tento oddíl pojednává o všech osmi fyzikálních křivkách setkání pólu
+s hranou, určených v~(PT23)--(PT27). Používá původní úplný sudý
+resolvent, včetně celého kontinua a všech kontaktně viditelných pólů.
+
+\subsection{Výsledek a jeho přesný rozsah}
+
+V každém z osmi přípustných setkání pólu s hranou je
+\textbf{společný místní pólový a kontinuální příspěvek k vnějšímu
+\(F_2\) holomorfní v~\((K,E)\)}. Singularita integrandu se při
+setkání stává odstranitelnou v diferenciálu na rozvinuté ploše.
+Blízký pól a bod větvení mají stejný vnější posun, takže je lze
+obejít jediným společným fyzikálním obvodem. Žádné pólové reziduum
+se samostatně nevynechává ani nepřičítá.
+
+Tvrzení odstraňuje tuto konkrétní třídu zdánlivých singularit.
+Samo však neříká, že celé \(F_2\) je holomorfní v každém bodě
+těchto křivek: při stejném \((K,E)\) může v jiném \(P\) ležet
+další stacionární vázaný pól nebo jiný kritický bod. Přesněji je
+\(F_2\) součtem zde dokázaného holomorfního místního příspěvku
+a zbývající periody. Nemá-li zbývající perioda současné fyzikální
+sevření obvodu, je tam holomorfní i celé \(F_2\). Místní
+transverzalita nenahrazuje globální kontrolu ostatních stacionárních
+vázaných pólů.
+
+Níže uvedená místní věta je úplná. Závěrečná podsekce přesně
+vymezuje další kvantitativní údaj potřebný pro užitečný číselný
+globální odhad regularity: doloženou společnou velikost okolí
+místních souřadnic a obvodů, následovanou kontrolou ostatních
+fyzikálních kritických bodů. Nevyžaduje se nedokázaná hladkost
+samostatně odděleného pólového nebo kontinuálního členu.
+
+\subsection{Původní vzorce a označení}
+
+Pišme \(e=E-\beta\), \(k=K-P\) a zvolme pulzní znaménko
+\(\sigma\). V okolí setkání jsou pulzní vlastní hodnoty různé,
+takže zvolená pulzní fáze i váha jsou holomorfní:
+\[
+\omega=e-\sigma\varepsilon(K-P),\qquad
+h_\sigma=\frac{1-\sigma\varepsilon'(K-P)}2.
+\]
+Položme
+\[
+v=\cos P,\qquad x=e^{-i(\omega-g)},\qquad t=v-5\cos\omega,
+\]
+\[
+C=x^2-\frac25vx-\frac35,
+\qquad B=\frac35x^2+\frac25vx-1,
+\]
+\[
+D_o=xC+qB,\qquad
+N=x^2+\frac35(v+q)x+vq,\qquad
+f_A=\frac{2xN}{D_o}-1.
+\tag{PE1}
+\]
+Objektový kořen splňuje \(q+q^{-1}=t/2\). Místní diferenciál
+druhého kontaktu je přesně
+\[
+\Omega=\frac1{2\pi}h_\sigma f_A\,\mathrm dP.
+\tag{PE2}
+\]
+
+Znaménko \(s=+1\) nebo \(-1\) označuje objektovou hranu
+\(t=4s\); je odlišné od pulzního znaménka \(\sigma\). Zaveďme
+\[
+c_0=\cos(g/2),\qquad s_0=\sin(g/2),\qquad
+\xi=e^{ig/2},\qquad v_a=5c_0-4.
+\]
+Dvě objektová setkání jsou
+\[
+(s,v_0,\omega_0)=(-1,v_a,g/2),
+\qquad (+1,-v_a,\pi+g/2).
+\tag{PE3}
+\]
+Pro každé znaménko \(P\) a \(k\) platí energetická rovnice
+\(e_0=\omega_0+\sigma\varepsilon(k_0)\) a
+\(K_0=P_0+k_0\), přičemž \(\sigma=+1\) pro první skupinu
+a \(\sigma=-1\) pro druhou. Jde přesně o osm křivek již určených
+v~(PT25).
+
+\subsection{Jednotně nenulové derivace ve všech osmi setkáních}
+
+Označme \(v_{\rm edge}=\omega_{\rm edge}'(P_0)\) a
+\(v_{\rm pulse}=\sigma\varepsilon'(k_0)\). Dokázané fyzikální
+meze jsou
+\[
+|v_{\rm edge}|<\frac38,\qquad
+|v_{\rm edge}-v_{\rm pulse}|>\frac9{40},\qquad
+|v_a|<\frac18,\qquad s_0>\frac12.
+\tag{PE4}
+\]
+Přesný pulzní vzorec rovněž dává
+\(|\varepsilon'|\le2/\sqrt5<9/10\). Při pevných \(K,e\)
+je úplná derivace podle \(P\)
+\[
+t_P=-\sin P+5\sin\omega\,\sigma\varepsilon'(k)
+=5\sin\omega\,(v_{\rm pulse}-v_{\rm edge}).
+\]
+Proto na všech osmi křivkách setkání jednotně platí
+\[
+\boxed{\frac9{16}<|t_P|<6.}
+\tag{PE5}
+\]
+Ostrá horní mez plyne již z~\(1+5(9/10)<6\). To je potřebná
+prostorová transverzalita pro místní souřadnici na rozvinuté ploše.
+Nejde o tvrzení, že objektový pól v mezeře má mimo toto místní
+setkání nenulovou energetickou derivaci.
+
+V bodech (PE3) platí
+\[
+x_0=-s\xi,\qquad q_0=s.
+\]
+Přímé dosazení do původních polynomů dává
+\[
+\boxed{
+B_0=\frac85\xi(\xi-1),\qquad
+N_0=(5c_0-3)(\xi-1).
+}
+\tag{PE6}
+\]
+Zvláště
+\[
+|B_0|=\frac{16}{5}\sin(g/4)
+=\frac45(\sqrt5-1)>\frac45,
+\qquad N_0\ne0.
+\tag{PE7}
+\]
+Tyto přesné identity vylučují pól vyššího řádu v uniformizační
+souřadnici a ukazují, že objektový práh je skutečnou viditelnou
+rezonancí. Nenahrazují celé \(f_A\) samotným pólem.
+
+\subsection{Přesná místní uniformizace a pohybující se pól}
+
+Zvolme jedno setkání a nechme \(\zeta=(K,e)\) měnit v malém
+komplexním okolí \(\zeta_0=(K_0,e_0)\). Použijme
+uniformizační souřadnici \(\theta\), definovanou vztahy
+\[
+q=s e^{-i\theta},\qquad t=4s\cos\theta.
+\tag{PE8}
+\]
+Rovnice
+\[
+t(P,K,e)-4s\cos\theta=0
+\]
+má podle (PE5) jediné holomorfní řešení
+\(P=p(\theta,\zeta)\). Toto řešení je sudé v~\(\theta\)
+a reálné pro reálné \(\theta,\zeta\). Definujme bod větvení
+\(P_e(\zeta)=p(0,\zeta)\). Derivováním dostaneme přesně
+\[
+p_\theta=-\frac{4s\sin\theta}
+{t_P(p(\theta,\zeta),\zeta)}
+=\theta L(\theta,\zeta),\qquad
+L(0,\zeta_0)=-\frac{4s}{t_P(P_0,\zeta_0)}\ne0.
+\tag{PE9}
+\]
+
+Vyjádřeme \(D_o\) v těchto souřadnicích, včetně původních
+\(x,v\) z~(PE1). V bodě setkání je \(p_\theta=0\), a tedy
+\[
+\partial_\theta D_o(0,\zeta_0)=-isB_0\ne0.
+\tag{PE10}
+\]
+Holomorfní věta o implicitní funkci a dělení jednoduchou nulou
+proto dávají
+\[
+\boxed{
+D_o(\theta,\zeta)=d(\theta,\zeta)
+[\theta-a(\zeta)],\qquad
+d\ne0,\qquad a(\zeta_0)=0.
+}
+\tag{PE11}
+\]
+V tomto dostatečně malém souřadnicovém okolí na rozvinuté ploše
+je právě jedna nula \(D_o\). Její místní průmět do proměnné
+\(P\) je \(P_b(\zeta)=p(a(\zeta),\zeta)\). Sudost
+\(p\) dává silnější identitu
+\[
+\boxed{
+P_b(\zeta)-P_e(\zeta)
+=a(\zeta)^2J(a(\zeta)^2,\zeta),\qquad
+J(0,\zeta_0)=-\frac{2s}{t_P(P_0,\zeta_0)}\ne0.
+}
+\tag{PE12}
+\]
+Pól a bod větvení se tedy spojují kvadraticky v příčné pólové
+souřadnici. Zacházení s nimi jako se dvěma nezávislými kořeny
+s opačnými posuny by tuto strukturu přehlédlo.
+
+\paragraph{Reálnost a fyzikální strana vznikajícího pólu.}
+
+Pro reálné \(\theta,\zeta\) položme
+\(\eta=\eta_0+\theta\), kde \(\eta_0=\pi\) pro
+\(s=-1\) a \(\eta_0=0\) pro \(s=+1\). Původní vzorec
+\[
+\begin{aligned}
+D_o={}&\frac{4i}{5}e^{-i(\eta+3(\omega-g))/2}\,
+\bigg[
+(\cos(\omega-g)-v)
+\sin\frac{\eta-(\omega-g)}2\\
+&\hspace{43mm}
+-4\sin(\omega-g)\cos\frac{\eta-(\omega-g)}2
+\bigg]
+\end{aligned}
+\]
+je nenulový analytický fázový činitel krát reálná analytická
+funkce. Její jednoduchá nula v~\(\theta\) zaručuje, že
+\(a(\zeta)\), a tedy i \(P_b(\zeta)\), jsou reálné pro
+reálné \(\zeta\). Nejde o předpoklad, že libovolné komplexní
+póly zůstávají reálné.
+
+V přísné místní mezeře má fyzikální kořen určený vnějším
+jednostranným pokračováním znaménko
+\(\operatorname{sgn}(s\sin\theta)=\operatorname{sgn}(\sin\omega)\).
+V obou setkáních je
+\(\operatorname{sgn}(\sin\omega_0)=-s\). Fyzikální pól
+v mezeře proto odpovídá přesně podmínce
+\[
+\boxed{a(\zeta)<0.}
+\tag{PE13}
+\]
+Pokračování s~\(a>0\) leží na druhém objektovém listu.
+Při \(a=0\) je objektová singularita odmocninového typu
+a nemá atom.
+
+\subsection{Společný normální tvar úplného diferenciálu}
+
+Vyjádřeme úplný diferenciál (PE2) v souřadnici \(\theta\).
+Definujme
+\[
+A(\theta,\zeta)
+=\frac{h_\sigma\,2xN\,L}{2\pi d}.
+\]
+Všechny činitele jsou v souřadnicovém okolí holomorfní.
+Podle (PE9)--(PE11) platí
+\[
+\Omega=
+\left[
+A(\theta,\zeta)\frac{\theta}{\theta-a(\zeta)}
+-\frac{h_\sigma\theta L}{2\pi}
+\right]\mathrm d\theta.
+\]
+Analytická dělená diference
+\[
+\frac{A(\theta,\zeta)-A(a(\zeta),\zeta)}
+{\theta-a(\zeta)}
+\]
+ukazuje, že lze tento diferenciál přesně napsat ve tvaru
+\[
+\boxed{
+\Omega=H(\theta,\zeta)\,\mathrm d\theta
++\frac{a(\zeta)R(\zeta)}{\theta-a(\zeta)}\,\mathrm d\theta,
+}
+\tag{PE14}
+\]
+kde \(H\) je holomorfní a
+\(R(\zeta)=A(a(\zeta),\zeta)\) je holomorfní. Při setkání
+reziduum zaniká a diferenciál je holomorfní i přes
+\(\theta=0\). Jde o odstranitelnost \textbf{diferenciálu na
+rozvinuté ploše}, nikoli o tvrzení, že samotné \(f_A\) je
+omezené v~\(P\).
+
+Vedoucí koeficient je explicitní. Z~(PE6) vychází
+\[
+\boxed{
+R(\zeta_0)=
+\frac{i h_\sigma(P_0,K_0)\,5s(5c_0-3)}
+{2\pi t_P(P_0,K_0,e_0)}.
+}
+\tag{PE15}
+\]
+Nerovnosti \(h_\sigma>1/20\), \(5c_0-3>1\), (PE5)
+a \(3<\pi<10/3\) dávají
+\[
+\boxed{\frac1{160}<|R(\zeta_0)|<3.}
+\tag{PE16}
+\]
+Reziduum tedy v příčné pólové souřadnici zaniká přesně prvního
+řádu, nikoli pouze blíže neurčeného řádu.
+
+\subsection{Nenulová příčná souřadnice a nepřítomnost fyzikálního sevření obvodu}
+
+Na samotné hraně se (PE1) rozkládá přesně jako
+\[
+(D_o)_{\rm edge}
+=2x(x-s)[\cos(\omega-g)-\cos\omega].
+\]
+Derivování tohoto výrazu v~(PE3) s použitím (PE10) dává
+\[
+\left.
+\frac{\partial a}{\partial\omega_{\rm edge}}
+\right|_{\zeta_0}
+=\frac52(1+c_0).
+\tag{PE17}
+\]
+Položme \(\Delta v=v_{\rm edge}-v_{\rm pulse}\).
+Derivování hranové rovnice dává
+\[
+\partial_eP_e=\frac1{\Delta v},\qquad
+\partial_e\omega_{\rm edge}=\frac{v_{\rm edge}}{\Delta v}.
+\tag{PE18}
+\]
+Původní mez \(|v_a|<1/8\) implikuje \(|\sin P_0|>7/8\),
+a tedy \(|v_{\rm edge}|>7/40\). Společně s~(PE4) tyto
+vzorce dokazují
+\[
+\boxed{
+\frac8{11}<|\partial_eP_e(\zeta_0)|<\frac{40}{9},
+\qquad
+\frac12<|\partial_ea(\zeta_0)|<\frac{25}{3}.
+}
+\tag{PE19}
+\]
+U druhé dolní meze lze konkrétně použít
+\((9/2)(7/55)=63/110>1/2\). Zvláště je \(a\) platnou
+místní souřadnicí příčnou ke každé rezonanční křivce.
+
+Rovnice (PE12) nyní dává rozhodující identitu
+\[
+\boxed{
+\partial_eP_b(\zeta_0)=\partial_eP_e(\zeta_0)\ne0.
+}
+\tag{PE20}
+\]
+Obě funkce jsou holomorfní a pro reálné parametry reálné.
+Po zmenšení reálného parametrického okolí mají jejich derivace
+podle \(e\) stejné znaménko a absolutní hodnotu větší než
+\(1/2\). Při původním vnějším předpisu
+\(e\mapsto e+i\epsilon\), \(\epsilon>0\), proto oba
+průměty singularit leží pro dostatečně malé \(\epsilon\)
+ve stejné polorovině proměnné \(P\):
+\[
+\operatorname{sgn}\operatorname{Im}P_b(K,e+i\epsilon)
+=\operatorname{sgn}\operatorname{Im}P_e(K,e+i\epsilon)
+=\operatorname{sgn}(\Delta v).
+\tag{PE21}
+\]
+Znaménkové tvrzení plyne přímo integrací reálné části holomorfní
+derivace podle \(e\) podél krátké svislé úsečky. Nepředpokládá,
+že lze na jedné straně setkání pólový člen zahodit.
+
+\subsection{Pevný fyzikální obvod a holomorfní místní perioda}
+
+Zvolme dostatečně malý pevný reálný interval
+\([P_0-r,P_0+r]\). Jeho konce míjejí bod větvení i pól.
+Místní souřadnicové okolí neobsahuje jiný objektový bod větvení
+ani jinou nulu \(D_o\); pulzní větve jsou v něm různé.
+Zmenšeme parametrické okolí tak, aby \(P_e,P_b\) zůstaly
+uvnitř disku \(|P-P_0|<r/4\).
+
+Nahraďme interval pevným půlkruhovým obloukem poloměru \(r\)
+v polorovině opačné ke společnému znaménku (PE21). Pro všechna
+blízká reálná \(K,e\) a malé kladné vnější \(\epsilon\)
+neprotne deformace reálného intervalu na tento oblouk ani jeden
+průmět singularity. Podél deformace pokračujme původním objektovým
+listem. Jde o jedinou homotopii úplného integrandu; neprovádí se
+samostatná volba znaménka odmocniny ani samostatné odečtení
+rezidua vázaného pólu.
+
+Tentýž pevný oblouk, zvednutý na původní list, míjí všechny místní
+singularity i pro komplexní parametry v dostatečně malém
+polydisku. Jeho integrand je holomorfní a na kompaktní cestě
+jednotně omezený. Perioda je proto holomorfní v~\(K\) i~\(e\).
+Jednostranný limit \(\epsilon\downarrow0\) ji ztotožňuje
+s původním vnějším místním příspěvkem, včetně fyzikálního
+pólového příspěvku při \(a<0\).
+
+Normální tvar (PE14) činí tuto analytičnost explicitní.
+Nechť \(\theta_-(\zeta),\theta_+(\zeta)\) jsou zvednuté
+hodnoty konců a \(F\) je holomorfní primitivní funkce k~\(H\)
+v proměnné \(\theta\). Oba konce zůstávají oddělené od nuly.
+S větvemi logaritmu a celým číslem oběhu \(n\), které jsou
+určeny původní vnější homotopií, je místní perioda
+\[
+\begin{aligned}
+I_{\rm loc}(\zeta)={}&
+F(\theta_+(\zeta),\zeta)-F(\theta_-(\zeta),\zeta)\\
+&+a(\zeta)R(\zeta)
+\big[\log(\theta_+(\zeta)-a(\zeta))
+-\log(\theta_-(\zeta)-a(\zeta))+2\pi i n\big].
+\end{aligned}
+\tag{PE22}
+\]
+Argumenty logaritmů jsou v základním bodě nenulové a zůstávají
+takové i v okolí. Každý člen (PE22) je holomorfní přes
+\(a=0\). Nevzniká singularita typu \(a\log a\). Koeficient
+možné opravy počtem oběhů je přesně zanikající reziduum \(aR\);
+celé číslo je určeno fyzikálním jednostranným pokračováním,
+nevolí se za účelem zlepšení regularity nebo pravděpodobnostní
+meze. Tím je dokázána společná místní věta uvedená na začátku
+oddílu.
+
+\subsection{Vztah k úplnému druhému kontaktu a soupisu pólů}
+
+Rozdělme přesnou vnější periodu na tento místní příspěvek
+a zbývající intervaly \(P\) a pulzní větev. Pokud při stejných
+parametrech nastane několik z osmi setkání, lze každý místní
+příspěvek ošetřit ve vlastních souřadnicích. Různé pulzní větve
+zůstávají oddělenými analytickými sčítanci, protože tyto hodnoty
+\(k\) nejsou pulzní degenerací. Výsledkem zůstává původní úplný
+druhý kontakt.
+
+Jedinou další podmínkou pro holomorfnost celého \(F_2\) ve
+zvolených parametrech je existence pravidelného fyzikálního
+obvodu pro zbývající periodu. Jde o podmínku týkající se jiných
+možných stacionárních bodů, nikoli o zbylou neurčitost společného
+místního normálního tvaru pólu a hrany. Stacionární póly společné vázané a pulzní disperze jsou nyní
+úplně klasifikovány v (BS25). Pro globální odhad je nutné
+spojit jejich místní příspěvky s ostatními částmi původní periody.
+
+Pro samotný objektový pól tatáž souřadnice ověřuje místní stranu
+vzniku větve z nezávislého soupisu pólů. Podél objektové hrany je
+\(\mathrm d\omega_{\rm edge}/\mathrm dv=-1/(5\sin\omega_0)\),
+a proto (PE17) dává
+\[
+\left.\frac{\mathrm da}{\mathrm dv}\right|_0
+=-\frac{1+c_0}{2\sin\omega_0}.
+\tag{PE23}
+\]
+Společně s~\(a<0\) pro fyzikální kořen to znamená, že první
+nízká větev vzniká na \(v>v_a\), zatímco její opačná kopie
+na \(v<-v_a\). Samo toto místní tvrzení nedokazuje globální
+počet objektových vázaných větví.
+
+\subsection{Co zbývá k explicitním místním konstantám}
+
+Všechny podmínky použité místní větou jsou ve skutečných
+setkáních ověřeny, s jednotnými nenulovými dolními mezemi
+(PE5), (PE7), (PE19). Analytičnost a kompaktnost osmi křivek
+nad uzavřeným energetickým oknem proto dávají společné kladné
+souřadnicové a parametrické poloměry.
+\textbf{Číselné hodnoty těchto společných poloměrů zde nejsou
+doloženy.}
+
+Pro číselné meze derivací by postačoval konkrétní poloměr
+oblouku \(r\) v~\(P\) a komplexní parametrický poloměr
+\(\rho\), pro které explicitní místní souřadnice na všech
+osmi rodinách splňují
+\[
+\frac16\le|J|\le8,\qquad |d|\ge\frac25,\qquad
+|P_e-P_0|\le\frac r4,\qquad
+|a|\le\frac12\sqrt{\frac{3r}{32}},
+\tag{PE24}
+\]
+a zvednutý oblouk zůstává v souřadnicovém okolí. Dále postačují
+elementární meze \(|h_\sigma|\le2\), \(|x|\le2\),
+\(|N|\le13\). Jde o konečné nerovnosti pro původní explicitní
+analytické funkce, nikoli o nový předpoklad spektrální hladkosti.
+Jejich ostré verze platí v nějakém okolí podle dokázaných mezí
+v základním bodě.
+
+Na tomto oblouku je \(|P-P_e|\ge3r/4\). Rovnice (PE12),
+použitá jako místní sudý projekční vzorec
+\(P-P_e=\theta^2J(\theta^2,\zeta)\), implikuje
+\[
+|\theta|\ge\sqrt{\frac{3r}{32}},\qquad
+|\theta-a|\ge\frac12\sqrt{\frac{3r}{32}},\qquad
+|D_o|\ge\frac15\sqrt{\frac{3r}{32}}.
+\]
+Délka oblouku je \(\pi r\). Úplná místní perioda proto má
+explicitní podmíněnou mez
+\[
+|I_{\rm loc}|
+\le r\left[260\sqrt{\frac{32}{3r}}+1\right]
+<1041\sqrt r\qquad(0<r\le1).
+\tag{PE25}
+\]
+Cauchyův vzorec následně dává například
+\[
+|\partial_E^j I_{\rm loc}|
+\le j!\,1041\sqrt r\,\rho^{-j}
+\tag{PE26}
+\]
+ve středu příslušného parametrického disku. Pro vyhodnocení
+uvnitř disku se za \(\rho\) vezme skutečná dostupná vzdálenost
+od jeho hranice. Pro tento místní člen tedy zbývá vyčíslit společnou velikost
+okolí splňujícího (PE24).
+Globální zlepšení časového odhadu navíc vyžaduje kontrolu
+ostatních fyzikálních kritických bodů popsanou výše.
+
+Již dokončený důkaz konečného času na tomto místním zpřesnění
+nezávisí. Výsledek zachovává původní zdroj, pevný počátek času,
+vybraný jev, normalizaci, štítky i paměť a referenci. Nedokládá
+nově realizovaný konečný laboratorní experiment ani vnější
+nezávislé přijetí tohoto dodatečného analytického lemmatu.
+
+
+\section{Přesný stav důkazu a další číselný krok}
+
+\subsection{Co tento dodatek uzavírá}
+
+Fázová rovnice určuje všechny fyzikální kontaktně viditelné
+objektové póly na celém kruhu. U hlavní kladné a obou nízkých
+větví je v původním okně vyloučena shoda rychlostí s pulzem.
+Zbývající hlavní větev posunutá o \(\pi\) dává přesně dvě
+konfigurace (BS25). Pro obě platí
+\[
+\partial_P^2[\omega_{\rm lower}(P)-\varepsilon(K-P)]
+>\frac{19}{64}>\frac14,\qquad
+|t|<2,\qquad r_b>\frac1{32},\qquad h_\sigma>\frac38.
+\]
+Jejich původní objektová hybnost má \(|P|>\pi/6>1/100\).
+Póly proto leží mimo malé vybrané výstupní okno, avšak zůstávají
+součástí úplného \(F_2\) a úplné časové chyby. Rozestup od obou
+běžných kontinuálních stacionárních křivek je větší než \(1/300\).
+
+Ve všech osmi setkáních objektového pólu s kontinuální hranou
+je společný místní příspěvek holomorfní. Přesná normalizovaná
+diferenciální forma zachovává oba členy. Výsledek se nepřevádí
+na nepodložené tvrzení o samostatném pólovém členu.
+
+\subsection{Co je ještě třeba vyčíslit pro kratší čas}
+
+Dosavadní obecný diskriminační důkaz z [S4] poskytuje konečný
+čas bez následujících zpřesnění. Pro výrazně silnější odhad
+založený na skutečných fyzikálních prahech zbývají tři konkrétní
+úlohy:
+\begin{enumerate}
+\item Vybrat společná konkrétní \(r,\rho>0\) pro osm místních
+okolí v (PE24), včetně oddělení ostatních kořenů a původního
+pulzního listu. Nenulové dolní meze potřebných derivací jsou
+již doloženy; samotné číselné poloměry zde stanoveny nejsou.
+\item U obou vázaných stacionárních bodů odvodit kvantitativní
+místní kvadratické souřadnice z (BS22), včetně horních mezí
+dalších derivací a původních reziduí. Stejně spojit již
+klasifikované běžné kontinuální prahy, objektové kuželové
+konce a výměnu pulzních větví do úplného vnějšího \(F_2\).
+Rozestup (CS12) vylučuje souběh vázaného a běžného
+kontinuálního stacionárního bodu.
+\item Přenést společné místní odhady na celý sloupec
+\(V=(-2F_2,4)^T/(4+F_1F_2)\), započítat ostré energetické
+konce v původní normě a vyčíslit součet časového chvostu.
+Odhad samotného objektového pólu nebo samotné reálné hustoty
+k tomuto kroku nestačí.
+\end{enumerate}
+
+Jde o konkrétní kvantitativní úlohy pro již dané funkce.
+Tento dodatek neprokazuje, že je třeba nový fyzikální nebo
+spektrální předpoklad. Současně žádnou chybějící konstantu
+nenahrazuje pouhou existencí konvergence.
+
+\subsection{Ostré energetické konce mají přesně placenou normovou chybu}
+
+Pro další postup lze použít pomocný hladký skalár
+\(0\le q_\eta(E)\le1\), který je roven jedné na
+\([E_*-h+\eta,E_*+h-\eta]\), je podepřen uvnitř původního
+\(I\) a plynule klesá k nule v obou krajních proužcích.
+Vektor se nepřenormovává. Přesná rovnoměrná energetická míra
+původního zdroje dává
+\[
+\nu^2=\|(1-q_\eta(H_0))\psi\|^2
+=\frac1{2h}\int_I|1-q_\eta(E)|^2\,\mathrm dE
+\le\frac{\eta}{h}.
+\]
+Při návratu od pomocného vektoru k původnímu vstupu přidá
+porovnání dvou izometrických vývojů nejvýše
+\[
+2\nu\le2\sqrt{\eta/h}.
+\]
+Například volba \(\eta=10^{-18}\), při \(h=10^{-3}\),
+má vrácenou normovou chybu
+\[
+2\nu\le2\sqrt{10}\,10^{-8}<6.4\cdot10^{-8}.
+\]
+Tato volba sama neurčuje čas, protože derivace přechodu
+rostou s \(\eta^{-1}\). Ukazuje však přesně, jak se ostré
+hranice zachovají v konečném účtu. Projektor \(Q\), všechny
+štítky i korelace s pamětí a referencí zůstávají původní.
+
+\subsection{Dosavadní konečný čas a pravděpodobnost}
+
+Tento dodatek nemění časy samostatného návrhu [S4]:
+\[
+N_-=10^{16},\qquad N_+=2^{81\,000\,000\,000\,000}.
+\]
+Jde o počty původních diskrétních makrokroků. V [S4] je při
+těchto časech, za převzatých operátorových a rozptylových
+předpokladů, odvozena úplná časová chyba včetně přijímače
+\[
+\varepsilon_-(N_-)+\varepsilon_+(N_+)
+<2.310002\cdot10^{-7}<10^{-6}.
+\]
+Pro původní \(\varepsilon_S=\varepsilon_D=10^{-6}\)
+zůstává celkový amplitudový účet
+\[
+\left|\sqrt{p_{\rm finite}}-\sqrt{P_0}\right|
+\le\varepsilon_S+\varepsilon_D+
+\varepsilon_-(N_-)+\varepsilon_+(N_+)
+<2.24\cdot10^{-6}.
+\]
+Původní absolutní dolní mez
+\(L=293166031669590845829/2^{96}>(60\cdot10^{-6})^2\)
+tedy nadále dává konzervativní
+\[
+p_{\rm finite}>(57.76\cdot10^{-6})^2
+=3.3362176\cdot10^{-9}.
+\]
+Nevznikl nový menší čas ani nový výpočet absolutní
+pravděpodobnosti. Jde o matematický konečný protokol
+v původním modelu s původními dodanými operacemi přípravy
+a čtení. Neříká se, že byl uskutečněn laboratorní pokus.
+Převod makrokroků na sekundy není v modelu doložen.
+
+\section{Veřejná návaznost, kontrola a neměnné zdroje}
+
+Před tímto pokračováním proběhla kontrola pouze čtením
+29.~10.~2026 v~10:19:10--10:19:36 CET
+(Europe/Rome, UTC+1). PR~\#1817 zůstal otevřeným
+nesloučeným návrhem na
+\nolinkurl{66ef8220df3ad5764ca941b84223a9f46cf5411f}.
+Rezervace \#1816 zůstala otevřená a beze změny.
+Nové veřejné pokračování konečného rozptylového času
+nebylo nalezeno. Bylo přečteno všech 322 aktuálních hlav;
+ověřena je shoda relevantních pinů. Netvrdí se nově
+provedené porovnání všech hlav se starým soupisem.
+
+Hlava hlavní větve byla
+\nolinkurl{a193e389fb1ddb0bdc89165b015c95a17eb1e425}.
+Soubor STATUS nadále označoval Public Canon v106 jako
+ACTIVE, s obsahovým commitem
+\nolinkurl{9242db4f040d67d9417eacd06612230b74248cff}.
+Oddělený provozní záznam \#1808 uváděl, že také druhé
+úplné přehrání po vydání bylo zastaveno po 40 minutách.
+Není to matematický vyvracející výsledek, ale tato úplná
+kontrola po vydání není dokončená. Úspěšné původní
+tagové přehrání a kontroly vydaných souborů tím nejsou
+zaměňovány s dokončením pozdějšího celého běhu.
+
+Nové algebraické důkazy byly v této pracovní relaci
+přezkoumány z několika směrů. Zvláštní kontrola ověřila
+parametrizaci fyzikální vrstvy, všechny ostré nerovnosti
+v (BS1)--(BS31), počet a znaménka kořenů i kruhový
+rozestup (CS12). Jde o vnitřní analytický přezkum.
+Výsledek není externím přijetím a nepatří do dřívějšího
+auditu 23 skupin a 130 podmínek.
+
+Práce je samostatná, \textbf{NON-CANONICAL / L1}.
+Rezervace \#1816 ani veřejný Canon nebyly měněny.
+Nebyl proveden veřejný zápis, nový numerický průzkum,
+CAS vyhodnocení ani vědecký běh.
+
+\section*{Odkazy na zdroje}
+
+\begin{description}[leftmargin=9mm,style=nextline]
+\item[S1] Původní absolutní zachycení, neměnný
+commit \nolinkurl{32306016908c0097650277aa416fc0152b2f81a4},
+část I, zejména oddíly 1, 4--8 a 11:
+\url{https://github.com/mathorn1973/twist-j/blob/32306016908c0097650277aa416fc0152b2f81a4/notes/C-BOUND-PAIR-ABSOLUTE-CAPTURE-N/PROOF.md}
+\item[S2] Úplný algebraický audit, neměnný
+commit \nolinkurl{66ef8220df3ad5764ca941b84223a9f46cf5411f}:
+\url{https://github.com/mathorn1973/twist-j/blob/66ef8220df3ad5764ca941b84223a9f46cf5411f/notes/C-BOUND-PAIR-RESOLVENT-AUDIT-N/PROOF.md}
+\item[S3] Původní konečná příprava, čtení a časová mezera:
+\url{https://github.com/mathorn1973/twist-j/blob/66ef8220df3ad5764ca941b84223a9f46cf5411f/notes/C-BOUND-PAIR-RESOLVENT-AUDIT-N/FINITE_PROTOCOL.md}
+\item[S4] Samostatný předchozí analytický návrh této relace,
+\textit{Konečný čas rozptylu původního paketu TWIST-J},
+29.~10.~2026, 33 stran, zejména oddíly 12--14:
+\url{twist_j_konecny_cas.tex}
+\item[S5] Veřejné návrhy a oddělená rezervace:
+\url{https://github.com/mathorn1973/twist-j/pull/1817},
+\url{https://github.com/mathorn1973/twist-j/pull/1815},
+\url{https://github.com/mathorn1973/twist-j/issues/1816}.
+\item[S6] Provozní stav vydání a hlavní větev:
+\url{https://github.com/mathorn1973/twist-j/issues/1808};
+\url{https://github.com/mathorn1973/twist-j/blob/a193e389fb1ddb0bdc89165b015c95a17eb1e425/STATUS.md}.
+\end{description}
+
+
+\end{document}

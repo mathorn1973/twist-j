@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-29",
+  "status": "NON-CANONICAL / L1 / analytical proposal",
+  "reservation": "https://github.com/mathorn1973/twist-j/issues/1822",
+  "source_description": "Four completed author-supplied analytical manuscripts, received after completion; no prospective scientific-execution claim.",
+  "publication_rule": "Only private document URLs are replaced by same-directory TeX filenames; mathematical text and dated statements are otherwise unchanged.",
+  "files": [
+    {
+      "file": "twist_j_ciselne_prahy.tex",
+      "source_bytes": 74724,
+      "source_sha256": "51641bee0dfc265cff224981a28a4fae8778c62a0e7549792f14e1e73f21f503",
+      "published_bytes": 74579,
+      "published_sha256": "249a9ff590ea4d7f1255e9b79bf762c7aa0a7dd4914e160a3977776ddbc4be26",
+      "publication_edits": [
+        {
+          "target": "twist_j_konecny_cas.tex",
+          "count": 1
+        },
+        {
+          "target": "twist_j_vazane_vetve.tex",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "file": "twist_j_konecny_cas.tex",
+      "source_bytes": 98549,
+      "source_sha256": "cbca6d9addf2782e0ffd08eb15edb97c776bef15e734128ce7c3878ec8f9f45f",
+      "published_bytes": 98549,
+      "published_sha256": "cbca6d9addf2782e0ffd08eb15edb97c776bef15e734128ce7c3878ec8f9f45f",
+      "publication_edits": []
+    },
+    {
+      "file": "twist_j_oboustranna_mez.tex",
+      "source_bytes": 96605,
+      "source_sha256": "13022c670ea8e4702eb668a3b178de543a662861b2a04acee221bbe6f9e7319b",
+      "published_bytes": 96386,
+      "published_sha256": "294215e48f3b47bd197d813ef3e4a3e9bc0673fa43cf2e2684df8faeafe6b2d7",
+      "publication_edits": [
+        {
+          "target": "twist_j_konecny_cas.tex",
+          "count": 1
+        },
+        {
+          "target": "twist_j_vazane_vetve.tex",
+          "count": 1
+        },
+        {
+          "target": "twist_j_ciselne_prahy.tex",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "file": "twist_j_vazane_vetve.tex",
+      "source_bytes": 81455,
+      "source_sha256": "c13b9f2d619833efdf5f91685ced9ec3b271b741c807bffd64d8946effd08c32",
+      "published_bytes": 81382,
+      "published_sha256": "42b808c909182f336894cef76f45ff1445fab13e6d4095fe4b897c0f06403511",
+      "publication_edits": [
+        {
+          "target": "twist_j_konecny_cas.tex",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}
