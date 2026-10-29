@@ -1,0 +1,426 @@
+{
+  "brute_words": 9360,
+  "cases": [
+    {
+      "brute_words": 780,
+      "case": "counts:zeta",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 1,
+      "initial_m": [
+        6,
+        1
+      ],
+      "known_closure": null,
+      "limit": [
+        64,
+        1
+      ],
+      "maximum_support": 1032,
+      "mean_at_N100": [
+        1136868340124225808883859525219105504,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 5160,
+      "off_diagonal_mixed_checks": 20,
+      "s": 1,
+      "tail_checks": 100
+    },
+    {
+      "brute_words": 780,
+      "case": "counts:phi",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 2,
+      "initial_m": [
+        5,
+        1
+      ],
+      "known_closure": null,
+      "limit": [
+        64,
+        1
+      ],
+      "maximum_support": 1430,
+      "mean_at_N100": [
+        1136868366964194327485003271853522396,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 7150,
+      "off_diagonal_mixed_checks": 20,
+      "s": 3,
+      "tail_checks": 99
+    },
+    {
+      "brute_words": 780,
+      "case": "counts:J",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 1,
+      "initial_m": [
+        5,
+        1
+      ],
+      "known_closure": {
+        "edges": 8245,
+        "maximum_Q": 274,
+        "maximum_first_reach": 28,
+        "states": 1649
+      },
+      "limit": [
+        36,
+        1
+      ],
+      "maximum_support": 1649,
+      "mean_at_N100": [
+        639488435344114500305035238967394298,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 8245,
+      "off_diagonal_mixed_checks": 20,
+      "s": 2,
+      "tail_checks": 100
+    },
+    {
+      "brute_words": 780,
+      "case": "counts:J_inverse",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 1,
+      "initial_m": [
+        5,
+        1
+      ],
+      "known_closure": {
+        "edges": 8245,
+        "maximum_Q": 706,
+        "maximum_first_reach": 28,
+        "states": 1649
+      },
+      "limit": [
+        64,
+        1
+      ],
+      "maximum_support": 1649,
+      "mean_at_N100": [
+        1136868306948191744022709324489083446,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 8245,
+      "off_diagonal_mixed_checks": 20,
+      "s": 3,
+      "tail_checks": 100
+    },
+    {
+      "brute_words": 780,
+      "case": "counts:phi_inverse",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 2,
+      "initial_m": [
+        5,
+        1
+      ],
+      "known_closure": null,
+      "limit": [
+        76,
+        1
+      ],
+      "maximum_support": 1430,
+      "mean_at_N100": [
+        1350031194028287804157257930651074612,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 7150,
+      "off_diagonal_mixed_checks": 20,
+      "s": 2,
+      "tail_checks": 99
+    },
+    {
+      "brute_words": 780,
+      "case": "balanced:zeta",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 1,
+      "initial_m": [
+        2,
+        1
+      ],
+      "known_closure": null,
+      "limit": [
+        24,
+        1
+      ],
+      "maximum_support": 1031,
+      "mean_at_N100": [
+        426325641456056402031905788230878296,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 5155,
+      "off_diagonal_mixed_checks": 20,
+      "s": 1,
+      "tail_checks": 100
+    },
+    {
+      "brute_words": 780,
+      "case": "balanced:phi",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 2,
+      "initial_m": [
+        0,
+        1
+      ],
+      "known_closure": null,
+      "limit": [
+        40,
+        1
+      ],
+      "maximum_support": 1425,
+      "mean_at_N100": [
+        710542735760094183788979439993791892,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 7125,
+      "off_diagonal_mixed_checks": 20,
+      "s": -2,
+      "tail_checks": 99
+    },
+    {
+      "brute_words": 780,
+      "case": "balanced:J",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 1,
+      "initial_m": [
+        0,
+        1
+      ],
+      "known_closure": null,
+      "limit": [
+        20,
+        1
+      ],
+      "maximum_support": 1649,
+      "mean_at_N100": [
+        355271367880047800344186078520726096,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 8245,
+      "off_diagonal_mixed_checks": 20,
+      "s": 2,
+      "tail_checks": 100
+    },
+    {
+      "brute_words": 780,
+      "case": "balanced:J_inverse",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 1,
+      "initial_m": [
+        0,
+        1
+      ],
+      "known_closure": null,
+      "limit": [
+        40,
+        1
+      ],
+      "maximum_support": 1649,
+      "mean_at_N100": [
+        710542735760094183788979439993791892,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 8245,
+      "off_diagonal_mixed_checks": 20,
+      "s": -2,
+      "tail_checks": 100
+    },
+    {
+      "brute_words": 780,
+      "case": "balanced:phi_inverse",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 2,
+      "initial_m": [
+        0,
+        1
+      ],
+      "known_closure": null,
+      "limit": [
+        20,
+        1
+      ],
+      "maximum_support": 1425,
+      "mean_at_N100": [
+        355271367880047800344186078520726096,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 7125,
+      "off_diagonal_mixed_checks": 20,
+      "s": 2,
+      "tail_checks": 99
+    },
+    {
+      "brute_words": 780,
+      "case": "balanced:minus_phi",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 2,
+      "initial_m": [
+        0,
+        1
+      ],
+      "known_closure": null,
+      "limit": [
+        40,
+        1
+      ],
+      "maximum_support": 1425,
+      "mean_at_N100": [
+        710542735760094183788979439993791892,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 7125,
+      "off_diagonal_mixed_checks": 20,
+      "s": 2,
+      "tail_checks": 99
+    },
+    {
+      "brute_words": 780,
+      "case": "balanced:minus_phi_inverse",
+      "cross_covariance_checks": 10,
+      "finite_moment_checks": 100,
+      "h": 2,
+      "initial_m": [
+        0,
+        1
+      ],
+      "known_closure": null,
+      "limit": [
+        20,
+        1
+      ],
+      "maximum_support": 1425,
+      "mean_at_N100": [
+        355271367880047800344186078520726096,
+        17763568394002504646778106689453125
+      ],
+      "mirror_edges": 7125,
+      "off_diagonal_mixed_checks": 20,
+      "s": -2,
+      "tail_checks": 99
+    }
+  ],
+  "facts_sha256": "ed4afd9ee4a7fb3cb9768e20360e25062a7d863625b6a7e19d009e65aee94686",
+  "family": {
+    "admitted": 68,
+    "balanced_minimizers": [
+      [
+        -1,
+        0,
+        -1
+      ],
+      [
+        -1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        2,
+        -1
+      ],
+      [
+        -1,
+        3,
+        -1
+      ],
+      [
+        -1,
+        4,
+        -1
+      ],
+      [
+        1,
+        0,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        2,
+        -1
+      ],
+      [
+        1,
+        3,
+        -1
+      ],
+      [
+        1,
+        4,
+        -1
+      ]
+    ],
+    "counting_minimizers": [
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        4,
+        -1
+      ]
+    ],
+    "depth_one": 56,
+    "depth_two": 12,
+    "examined": 70,
+    "rows_sha256": "45503072dce6ec02d737ae86cf2201a1518ad6f2d5a7c02fe7acecdda30e5670"
+  },
+  "finite_moment_checks": 1200,
+  "maximum_N": 100,
+  "negative_controls": {
+    "balanced_rational_actual_Q": 0,
+    "balanced_rational_unadmitted_functional": 24,
+    "phi_power_five_depth": 4,
+    "rejected_prediction_cases": [
+      [
+        "one",
+        "counts"
+      ],
+      [
+        "one",
+        "balanced"
+      ],
+      [
+        "minus_one",
+        "counts"
+      ],
+      [
+        "minus_one",
+        "balanced"
+      ],
+      [
+        "phi_power_five",
+        "counts"
+      ],
+      [
+        "phi_power_five",
+        "balanced"
+      ]
+    ],
+    "zero_carry_scope": "all word lengths by zero-state closure",
+    "zero_carry_transition_checks": 10
+  },
+  "schema": "twistj-carry-moment-audit-v1",
+  "scientific_status": "NON-CANONICAL",
+  "status": "PASS",
+  "tail_checks": 1194
+}
