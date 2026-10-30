@@ -1,0 +1,9 @@
+G1 PASS positive_inputs=72 ordered_pairs=5184 exact_relative_and_guard_identities=all
+G2 PASS sampled_states_both_laws=331776 inverse_both_orders=yes exact_residuals=yes
+LAW 0 injective_sample=165888 reflections=0 transmissions=57858
+LAW 1 injective_sample=165888 reflections=8900 transmissions=48958
+G3 PASS naive_crossing_noninjective_witness=retained corrected_outputs=distinct
+G4 PASS fixed_modulus_negative_controls=64 variable_modulus_guard=exact
+G5 PASS 209_oriented_factorizations=exact roots_wplus_wminus_denominators=19,11
+G6 PASS complete_z_3_2_fibre=4 inelastic_1_4_to_1_5=yes beta_stream_residual=3/2 physical_speed_ratio=-8/15
+STATUS NON-CANONICAL candidate-C audit; analytical proofs candidate-T; single x86_64 lane
