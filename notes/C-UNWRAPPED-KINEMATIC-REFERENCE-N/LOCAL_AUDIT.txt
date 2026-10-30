@@ -1,0 +1,8 @@
+PASS frame_rungs=17 dirac_diagonalization=17 shell_and_reading=17
+PASS exact_metric_transfers=289
+PASS momentum_pullback_pairs=289 comoving_clock_pairs=289
+PASS original_wrong_mass_map_norm_factor=8/5
+PASS integral_conjugacy_Q_det=1 block5_sign=verified block10=verified
+PASS smaller_positive_blocks_1_through_9=not_similar_by_charpoly
+SCOPE finite exact audit only; all-parameter claims require PROOF.md
+PUBLIC_PROMOTION none; INDEPENDENT_REVIEW none
