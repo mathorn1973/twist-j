@@ -1,0 +1,7 @@
+G1 PASS raw_walk_circle_fixtures=129 trace_det_unitarity_shell=exact
+G2 PASS rungs=-64..64 admitted=-1,0,1 full_chart_counterexample_n=2 p_squared=5
+G3 PASS positive_norm4_box=8 common_O_plus_state=2 signed_odd_rungs=excluded
+G4 PASS sqrt17_not_in_Qsqrt5 bound_curvature_radicand_norm=-95 phase_fold_distinct_traces=2,-2
+DECISION FULL_DIRECT_CHART=REJECTED O_PLUS_MASS2_BRIDGE=REST_ONLY
+DOWNSTREAM same_chart_W_selection_and_spectrum=NOT_REACHED
+STATUS NON-CANONICAL exact audit; analytical proof separate; no independent review
