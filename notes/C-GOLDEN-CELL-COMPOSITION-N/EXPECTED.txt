@@ -1,0 +1,10 @@
+G1 PASS positive_inputs=272 shifted_cases=4624 upper_seams=20 exact_unique_reduction
+NORMAL_FORM_LEDGER_SHA256 78b5403b6aff161f26fcf702e87132f9bd28fa3b72a81a6fcff6a800b32f1ac4
+G2 PASS ordered_pairs=73984 reduced_closed_pairs=13225 common_frame_no_carry=24618 norm_and_frame_transport
+G3 PASS associativity_triples=8000 no_output_truncation
+G4 PASS distinct_reduced_inputs=136 scale_controls=1088 faithful_norm_reconstruction_and_weighted_composition
+G5 PASS quotient_counterexample_norms=4,5 unit_difference_unimodular=1 relative_frame_family=65
+G6 PASS all_fold_torus_obstruction=5/19_vs_5/11 all_prime_total_norm=59
+ALL_PRIME_TOTAL_SINE_SQUARES (100+/-20sqrt21)/209 != 24/29
+DECISION rapidity_cell_addition=CLOSED quotient_addition=NOT_DEFINED nominated_total_W_factor=REJECTED
+STATUS NON-CANONICAL finite exact audit; proofs separate; no independent review or dynamics bridge
