@@ -7,13 +7,15 @@ on:
   pull_request:
   release:
     types: [published]
+  workflow_dispatch:
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   architecture:
-    if: github.ref_type != 'tag' && github.event_name != 'release'
+    if: github.ref_type != 'tag' && github.event_name != 'release' && github.event_name != 'workflow_dispatch'
     name: architecture-${{ matrix.architecture }}
     strategy:
       fail-fast: false
@@ -24,7 +26,7 @@ jobs:
           - architecture: aarch64
             runner: ubuntu-24.04-arm
     runs-on: ${{ matrix.runner }}
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
@@ -48,7 +50,7 @@ jobs:
         run: python tools/check_reproduce.py --base "$BASE_SHA"
 
   check:
-    if: always() && github.ref_type != 'tag' && github.event_name != 'release'
+    if: always() && github.ref_type != 'tag' && github.event_name != 'release' && github.event_name != 'workflow_dispatch'
     needs: architecture
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -61,35 +63,363 @@ jobs:
       - run: echo "TWO-ARCHITECTURE CHECK PASS"
 
   publication:
-    if: github.ref_type == 'tag' || github.event_name == 'release'
+    if: github.ref_type == 'tag' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && '03f010760d85c62795b74b3fa8fde79c2c36be7f' || github.sha }}
           fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.12"
+      - name: Pin manual recovery to immutable v107
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          test "$GITHUB_REPOSITORY" = "mathorn1973/twist-j"
+          test "$GITHUB_SHA" = "$GITHUB_WORKFLOW_SHA"
+          case "$GITHUB_REF" in refs/heads/?*) ;; *) echo "recovery controller requires a branch ref" >&2; exit 1 ;; esac
+          test "$(git rev-parse HEAD)" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"
+          test "$(git cat-file -t refs/tags/canon-v107)" = "tag"
+          test "$(git rev-parse refs/tags/canon-v107)" = "81c57853b7b5126fa2d8ec465b8ad903e2402c04"
+          test "$(git rev-parse 'refs/tags/canon-v107^{commit}')" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"
+          test "$(git status --porcelain)" = ""
+          echo "RECOVERY CONTROLLER $GITHUB_SHA"
+          echo "RECOVERY RUN $GITHUB_RUN_ID ATTEMPT $GITHUB_RUN_ATTEMPT"
+          echo "RECOVERY SCIENTIFIC CHECKOUT 03f010760d85c62795b74b3fa8fde79c2c36be7f"
       - run: python tools/check_policy.py
       - run: python -m unittest discover -s tools -p 'test_*.py'
       - run: python tools/check_canon.py
       - run: python tools/check_ledger.py
       - run: python tools/check_gate_contract.py
+      - name: Reproduce every frozen public probe for v107 recovery
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -u tools/check_verifier.py
+      - name: Reproduce every frozen minimal reproduction for v107 recovery
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -u tools/check_reproduce.py
       - name: Run activation readback on immutable publication events
+        if: github.event_name != 'workflow_dispatch'
         env:
           PUBLICATION_TAG: ${{ github.event.release.tag_name || github.ref_name }}
         run: |
           python tools/check_activation.py --full --post-activation \
             --expected-tag "$PUBLICATION_TAG" \
             --manifest-out activation-manifest.json
+      - name: Read back immutable v107 after complete recovery replay
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          test "$(git status --porcelain)" = ""
+          python -u tools/check_activation.py --post-activation \
+            --expected-tag canon-v107 \
+            --manifest-out "$RUNNER_TEMP/v107-recovery/activation-manifest.json"
+      - name: Validate v107 recovery assets and bind provenance
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          python - <<'PY'
+          # BEGIN PINNED V107 RECOVERY RECEIPT
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import re
+          import subprocess
+          import sys
+          from urllib.error import HTTPError
+          from urllib.request import Request, urlopen
+
+          REPOSITORY = 'mathorn1973/twist-j'
+          TAG = 'canon-v107'
+          ACTIVATION = '03f010760d85c62795b74b3fa8fde79c2c36be7f'
+          TAG_OBJECT = '81c57853b7b5126fa2d8ec465b8ad903e2402c04'
+          CONTENT = 'f5615ed4dcdfc672dc2e468399284a1dc03ce805'
+
+          def classify_release(payload):
+              if not isinstance(payload, dict):
+                  raise ValueError('release response is not an object')
+              if payload.get('tag_name') != TAG:
+                  raise ValueError('release tag mismatch')
+              if type(payload.get('id')) is not int or payload['id'] <= 0:
+                  raise ValueError('release identity is invalid')
+              if type(payload.get('draft')) is not bool:
+                  raise ValueError('release draft state is invalid')
+              if payload['draft']:
+                  return 'draft', payload['id']
+              if not isinstance(payload.get('published_at'), str) or not payload['published_at']:
+                  raise ValueError('published release has no publication timestamp')
+              return 'published', payload['id']
+
+          def read_release(opener=urlopen):
+              request = Request(
+                  'https://api.github.com/repos/mathorn1973/twist-j/releases/tags/canon-v107',
+                  headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                           'Accept': 'application/vnd.github+json',
+                           'X-GitHub-Api-Version': '2022-11-28'})
+              try:
+                  with opener(request, timeout=30) as response:
+                      payload = json.load(response)
+              except HTTPError as error:
+                  if error.code == 404:
+                      return 'absent', None, False
+                  raise
+              state, release_id = classify_release(payload)
+              assets = payload.get('assets', [])
+              if not isinstance(assets, list) or any(not isinstance(asset, dict) or not isinstance(asset.get('name'), str) for asset in assets):
+                  raise ValueError('invalid release asset inventory')
+              names = [asset['name'] for asset in assets]
+              if len(names) != len(set(names)):
+                  raise ValueError('duplicate release asset names')
+              has_receipt = 'recovery-provenance.json' in names
+              if state == 'published' and not has_receipt:
+                  raise ValueError('published recovery requires its archived provenance receipt')
+              return state, release_id, has_receipt
+
+          def provenance(environment, manifest_bytes, checksum_bytes, release_state, release_id):
+              if environment['GITHUB_REPOSITORY'] != REPOSITORY:
+                  raise ValueError('recovery repository mismatch')
+              if environment['GITHUB_EVENT_NAME'] != 'workflow_dispatch':
+                  raise ValueError('recovery event mismatch')
+              if not environment['GITHUB_REF'].startswith('refs/heads/') or not environment['GITHUB_REF'][len('refs/heads/'):]:
+                  raise ValueError('manual recovery controller must use a branch ref')
+              controller = environment['GITHUB_SHA']
+              workflow = environment['GITHUB_WORKFLOW_SHA']
+              if not re.fullmatch('[0-9a-f]{40}', controller) or controller != workflow:
+                  raise ValueError('controller and workflow revision must match exactly')
+              if environment['GITHUB_WORKFLOW_REF'] != (
+                      REPOSITORY + '/.github/workflows/policy.yml@' + environment['GITHUB_REF']):
+                  raise ValueError('workflow source reference mismatch')
+              for field in ('GITHUB_RUN_ID', 'GITHUB_RUN_ATTEMPT'):
+                  if not re.fullmatch('[1-9][0-9]*', environment[field]):
+                      raise ValueError('invalid run identity')
+              if release_state not in ('absent', 'draft', 'published'):
+                  raise ValueError('invalid release observation')
+              if (release_state == 'absent') != (release_id is None):
+                  raise ValueError('release state and identity disagree')
+              return {
+                  'schema': 'twistj-pinned-publication-recovery-v1',
+                  'repository': REPOSITORY,
+                  'controller_commit': controller,
+                  'workflow_commit': workflow,
+                  'workflow_ref': environment['GITHUB_WORKFLOW_REF'],
+                  'event': environment['GITHUB_EVENT_NAME'],
+                  'run_id': int(environment['GITHUB_RUN_ID']),
+                  'run_attempt': int(environment['GITHUB_RUN_ATTEMPT']),
+                  'run_url': 'https://github.com/' + REPOSITORY + '/actions/runs/' + environment['GITHUB_RUN_ID'],
+                  'tag': TAG, 'tag_object': TAG_OBJECT,
+                  'activation_commit': ACTIVATION, 'content_commit': CONTENT,
+                  'release_state_at_readback': release_state,
+                  'release_id_at_readback': release_id,
+                  'replay': 'mandatory complete tagged probes and reproductions, then static activation',
+                  'files': {
+                      'activation-manifest.json': {'bytes': len(manifest_bytes), 'sha256': hashlib.sha256(manifest_bytes).hexdigest()},
+                      'SHA256SUMS': {'bytes': len(checksum_bytes), 'sha256': hashlib.sha256(checksum_bytes).hexdigest()},
+                  },
+              }
+
+          def read_recovery_run(run_id, attempt, opener=urlopen):
+              request = Request(
+                  'https://api.github.com/repos/mathorn1973/twist-j/actions/runs/'
+                  + str(run_id) + '/attempts/' + str(attempt),
+                  headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                           'Accept': 'application/vnd.github+json',
+                           'X-GitHub-Api-Version': '2022-11-28'})
+              with opener(request, timeout=30) as response:
+                  return json.load(response)
+
+          REQUIRED_RECOVERY_STEPS = (
+              'Set up job',
+              'Run actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5',
+              'Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065',
+              'Pin manual recovery to immutable v107',
+              'Run python tools/check_policy.py',
+              "Run python -m unittest discover -s tools -p 'test_*.py'",
+              'Run python tools/check_canon.py',
+              'Run python tools/check_ledger.py',
+              'Run python tools/check_gate_contract.py',
+              'Reproduce every frozen public probe for v107 recovery',
+              'Reproduce every frozen minimal reproduction for v107 recovery',
+              'Read back immutable v107 after complete recovery replay',
+              'Validate v107 recovery assets and bind provenance',
+              'Preserve tag readback manifest',
+              'Complete pinned v107 recovery',
+          )
+
+          def read_recovery_jobs(run_id, attempt, opener=urlopen):
+              request = Request(
+                  'https://api.github.com/repos/mathorn1973/twist-j/actions/runs/'
+                  + str(run_id) + '/attempts/' + str(attempt) + '/jobs?per_page=100',
+                  headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                           'Accept': 'application/vnd.github+json',
+                           'X-GitHub-Api-Version': '2022-11-28'})
+              with opener(request, timeout=30) as response:
+                  payload = json.load(response)
+              jobs = payload.get('jobs')
+              if not isinstance(jobs, list) or len(jobs) != payload.get('total_count'):
+                  raise ValueError('incomplete original recovery job inventory')
+              return jobs
+
+          def read_recovery_artifacts(run_id, opener=urlopen):
+              artifacts = []
+              page = 1
+              while True:
+                  request = Request(
+                      'https://api.github.com/repos/mathorn1973/twist-j/actions/runs/'
+                      + str(run_id) + '/artifacts?per_page=100&page=' + str(page),
+                      headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                               'Accept': 'application/vnd.github+json',
+                               'X-GitHub-Api-Version': '2022-11-28'})
+                  with opener(request, timeout=30) as response:
+                      payload = json.load(response)
+                  batch = payload.get('artifacts')
+                  total = payload.get('total_count')
+                  if not isinstance(batch, list) or type(total) is not int or total < 0:
+                      raise ValueError('invalid recovery artifact inventory')
+                  artifacts.extend(batch)
+                  if len(artifacts) == total:
+                      return artifacts
+                  if not batch or len(artifacts) > total or page >= 100:
+                      raise ValueError('incomplete or changing recovery artifact inventory')
+                  page += 1
+
+          def validate_published_provenance(receipt, manifest_bytes, checksum_bytes,
+                                            controller, run_reader=read_recovery_run,
+                                            jobs_reader=read_recovery_jobs):
+              expected = {
+                  'schema': 'twistj-pinned-publication-recovery-v1',
+                  'repository': REPOSITORY, 'event': 'workflow_dispatch',
+                  'controller_commit': controller, 'workflow_commit': controller,
+                  'tag': TAG, 'tag_object': TAG_OBJECT,
+                  'activation_commit': ACTIVATION, 'content_commit': CONTENT,
+                  'files': {
+                      'activation-manifest.json': {'bytes': len(manifest_bytes), 'sha256': hashlib.sha256(manifest_bytes).hexdigest()},
+                      'SHA256SUMS': {'bytes': len(checksum_bytes), 'sha256': hashlib.sha256(checksum_bytes).hexdigest()},
+                  },
+              }
+              if not isinstance(receipt, dict) or any(receipt.get(key) != value for key, value in expected.items()):
+                  raise ValueError('published recovery provenance identity or digest mismatch')
+              for field in ('run_id', 'run_attempt'):
+                  if type(receipt.get(field)) is not int or receipt[field] <= 0:
+                      raise ValueError('invalid published recovery run identity')
+              run = run_reader(receipt['run_id'], receipt['run_attempt'])
+              required_run = {'id': receipt['run_id'], 'run_attempt': receipt['run_attempt'],
+                              'head_sha': controller, 'event': 'workflow_dispatch',
+                              'status': 'completed', 'conclusion': 'success'}
+              if not isinstance(run, dict) or any(run.get(key) != value for key, value in required_run.items()):
+                  raise ValueError('published recovery run is not the successful approved attempt')
+              if run.get('repository', {}).get('full_name') != REPOSITORY:
+                  raise ValueError('published recovery run repository mismatch')
+              if not isinstance(run.get('path'), str) or run['path'].split('@', 1)[0] != '.github/workflows/policy.yml':
+                  raise ValueError('published recovery workflow path mismatch')
+              if not isinstance(run.get('head_branch'), str) or receipt.get('workflow_ref') != (
+                      REPOSITORY + '/.github/workflows/policy.yml@refs/heads/' + run['head_branch']):
+                  raise ValueError('published recovery workflow ref mismatch')
+              jobs = jobs_reader(receipt['run_id'], receipt['run_attempt'])
+              publication = [job for job in jobs if job.get('name') == 'publication']
+              if len(publication) != 1:
+                  raise ValueError('original recovery must have exactly one publication job')
+              job = publication[0]
+              if job.get('run_id') != receipt['run_id'] or job.get('status') != 'completed' or job.get('conclusion') != 'success':
+                  raise ValueError('original recovery publication job did not succeed')
+              steps = job.get('steps')
+              if not isinstance(steps, list):
+                  raise ValueError('original recovery publication steps unavailable')
+              for name in REQUIRED_RECOVERY_STEPS:
+                  matches = [step for step in steps if step.get('name') == name]
+                  if len(matches) != 1 or matches[0].get('status') != 'completed' or matches[0].get('conclusion') != 'success':
+                      raise ValueError('mandatory original recovery step did not succeed: ' + name)
+              permitted_skips = {'Run activation readback on immutable publication events',
+                                 'Verify published release assets'}
+              for step in steps:
+                  if step.get('status') != 'completed' or (step.get('conclusion') != 'success' and not (
+                          step.get('conclusion') == 'skipped' and step.get('name') in permitted_skips)):
+                      raise ValueError('unaccepted original recovery step disposition')
+
+          def require_three_files(directory):
+              expected = {'activation-manifest.json', 'SHA256SUMS', 'recovery-provenance.json'}
+              entries = list(directory.rglob('*'))
+              if {path.relative_to(directory).as_posix() for path in entries} != expected:
+                  raise ValueError('recovery assets must contain exactly three root files')
+              if any(not path.is_file() or path.is_symlink() for path in entries):
+                  raise ValueError('recovery assets must be ordinary files')
+
+          def verify_original_artifact(directory, published, receipt, runner=subprocess.run,
+                                       artifact_reader=read_recovery_artifacts):
+              name = 'canon-v107-recovery-' + str(receipt['run_id']) + '-' + str(receipt['run_attempt'])
+              matching = [artifact for artifact in artifact_reader(receipt['run_id']) if artifact.get('name') == name]
+              if len(matching) != 1 or matching[0].get('expired') is not False:
+                  raise ValueError('original recovery artifact missing, expired or ambiguous')
+              original = matching[0].get('workflow_run', {})
+              if original.get('id') != receipt['run_id'] or original.get('head_sha') != receipt['controller_commit']:
+                  raise ValueError('original artifact does not belong to the approved controller run')
+              directory.mkdir()
+              runner(['gh', 'run', 'download', str(receipt['run_id']), '--repo', REPOSITORY,
+                      '--name', name, '--dir', str(directory)], check=True)
+              require_three_files(directory)
+              for filename in ('activation-manifest.json', 'SHA256SUMS', 'recovery-provenance.json'):
+                  if (directory / filename).read_bytes() != (published / filename).read_bytes():
+                      raise ValueError('published asset differs from original recovery artifact: ' + filename)
+
+          def verify_published_assets(directory, checksum_bytes, runner=subprocess.run,
+                                      include_receipt=True, run_reader=read_recovery_run,
+                                      jobs_reader=read_recovery_jobs,
+                                      artifact_reader=read_recovery_artifacts,
+                                      environment=os.environ):
+              if not include_receipt:
+                  raise ValueError('published manual recovery requires the third provenance asset')
+              directory.mkdir()
+              runner(['gh', 'release', 'download', TAG, '--repo', REPOSITORY,
+                      '--pattern', 'activation-manifest.json', '--pattern', 'SHA256SUMS',
+                      '--pattern', 'recovery-provenance.json', '--dir', str(directory)], check=True)
+              require_three_files(directory)
+              runner([sys.executable, 'tools/check_release_manifest.py',
+                      str(directory / 'activation-manifest.json'), '--expected-tag', TAG], check=True)
+              if (directory / 'SHA256SUMS').read_bytes() != checksum_bytes:
+                  raise ValueError('published checksum asset differs from immutable tag')
+              receipt = json.loads((directory / 'recovery-provenance.json').read_text(encoding='utf-8'))
+              validate_published_provenance(receipt, (directory / 'activation-manifest.json').read_bytes(),
+                                            checksum_bytes, environment['GITHUB_SHA'], run_reader, jobs_reader)
+              verify_original_artifact(directory.parent / 'v107-original-recovery-artifact',
+                                       directory, receipt, runner, artifact_reader)
+
+          def main():
+              output = Path(os.environ['RUNNER_TEMP']) / 'v107-recovery'
+              manifest_path = output / 'activation-manifest.json'
+              subprocess.run([sys.executable, 'tools/check_release_manifest.py',
+                              str(manifest_path), '--expected-tag', TAG], check=True)
+              checksum_bytes = Path('canon/SHA256SUMS').read_bytes()
+              state, release_id, includes_receipt = read_release()
+              if state == 'published':
+                  verify_published_assets(Path(os.environ['RUNNER_TEMP']) / 'v107-published-assets',
+                                          checksum_bytes, include_receipt=includes_receipt)
+              receipt = provenance(os.environ, manifest_path.read_bytes(), checksum_bytes, state, release_id)
+              (output / 'SHA256SUMS').write_bytes(checksum_bytes)
+              (output / 'recovery-provenance.json').write_text(
+                  json.dumps(receipt, sort_keys=True, indent=2) + '\n', encoding='utf-8')
+              print('PINNED V107 RECOVERY READBACK ' + state)
+              print('RECOVERY CONTROLLER ' + receipt['controller_commit'])
+              print('RECOVERY RUN ' + str(receipt['run_id']) + ' ATTEMPT ' + str(receipt['run_attempt']))
+
+          if __name__ == '__main__':
+              main()
+          # END PINNED V107 RECOVERY RECEIPT
+          PY
       - name: Preserve tag readback manifest
-        if: github.ref_type == 'tag'
+        if: (github.ref_type == 'tag' && github.event_name != 'workflow_dispatch') || github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: ${{ github.ref_name }}-activation-manifest
-          path: activation-manifest.json
+          name: ${{ github.event_name == 'workflow_dispatch' && format('canon-v107-recovery-{0}-{1}', github.run_id, github.run_attempt) || format('{0}-activation-manifest', github.ref_name) }}
+          path: ${{ github.event_name == 'workflow_dispatch' && format('{0}/v107-recovery/', runner.temp) || 'activation-manifest.json' }}
           if-no-files-found: error
       - name: Verify published release assets
         if: github.event_name == 'release'
@@ -106,3 +436,6 @@ jobs:
             /tmp/twistj-release/activation-manifest.json \
             --expected-tag "$RELEASE_TAG"
           cmp canon/SHA256SUMS /tmp/twistj-release/SHA256SUMS
+      - name: Complete pinned v107 recovery
+        if: github.event_name == 'workflow_dispatch'
+        run: echo "PINNED V107 RECOVERY PASS - complete replay, activation, applicable assets and provenance artifact"

@@ -131,6 +131,18 @@ if workflow_files != {"policy.yml"}:
     fail("policy.yml must be the only workflow")
 workflow = (workflows / "policy.yml").read_text(encoding="utf-8")
 for invariant in (
+    '  workflow_dispatch:\n\npermissions:',
+    'permissions:\n  contents: read\n  actions: read',
+    "ref: ${{ github.event_name == 'workflow_dispatch' && '03f010760d85c62795b74b3fa8fde79c2c36be7f' || github.sha }}",
+    '      - name: Pin manual recovery to immutable v107\n        if: github.event_name == \'workflow_dispatch\'\n        run: |\n          test "$GITHUB_REPOSITORY" = "mathorn1973/twist-j"\n          test "$GITHUB_SHA" = "$GITHUB_WORKFLOW_SHA"\n          case "$GITHUB_REF" in refs/heads/?*) ;; *) echo "recovery controller requires a branch ref" >&2; exit 1 ;; esac\n          test "$(git rev-parse HEAD)" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"\n          test "$(git cat-file -t refs/tags/canon-v107)" = "tag"\n          test "$(git rev-parse refs/tags/canon-v107)" = "81c57853b7b5126fa2d8ec465b8ad903e2402c04"\n          test "$(git rev-parse \'refs/tags/canon-v107^{commit}\')" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"\n          test "$(git status --porcelain)" = ""\n          echo "RECOVERY CONTROLLER $GITHUB_SHA"\n          echo "RECOVERY RUN $GITHUB_RUN_ID ATTEMPT $GITHUB_RUN_ATTEMPT"\n          echo "RECOVERY SCIENTIFIC CHECKOUT 03f010760d85c62795b74b3fa8fde79c2c36be7f"',
+    '      - name: Reproduce every frozen public probe for v107 recovery\n        if: github.event_name == \'workflow_dispatch\'\n        env:\n          PYTHONDONTWRITEBYTECODE: "1"\n        run: python -u tools/check_verifier.py\n      - name: Reproduce every frozen minimal reproduction for v107 recovery\n        if: github.event_name == \'workflow_dispatch\'\n        env:\n          PYTHONDONTWRITEBYTECODE: "1"\n        run: python -u tools/check_reproduce.py',
+    "      - name: Run activation readback on immutable publication events\n        if: github.event_name != 'workflow_dispatch'",
+    'python -u tools/check_activation.py --post-activation \\\n            --expected-tag canon-v107 \\\n            --manifest-out "$RUNNER_TEMP/v107-recovery/activation-manifest.json"',
+    "      - name: Validate v107 recovery assets and bind provenance\n        if: github.event_name == 'workflow_dispatch'",
+    "if: (github.ref_type == 'tag' && github.event_name != 'workflow_dispatch') || github.event_name == 'workflow_dispatch'",
+    "format('canon-v107-recovery-{0}-{1}', github.run_id, github.run_attempt)",
+    "format('{0}/v107-recovery/', runner.temp)",
+    'PINNED V107 RECOVERY PASS - complete replay, activation, applicable assets and provenance artifact',
     "permissions:\n  contents: read",
     "jobs:\n  architecture:",
     "name: architecture-${{ matrix.architecture }}",
@@ -138,12 +150,12 @@ for invariant in (
     "architecture: x86_64\n            runner: ubuntu-latest",
     "architecture: aarch64\n            runner: ubuntu-24.04-arm",
     "runs-on: ${{ matrix.runner }}",
-    "runs-on: ${{ matrix.runner }}\n    timeout-minutes: 45",
-    "  check:\n    if: always() && github.ref_type != 'tag' && github.event_name != 'release'\n    needs: architecture\n    runs-on: ubuntu-latest",
+    "runs-on: ${{ matrix.runner }}\n    timeout-minutes: 60",
+    "  check:\n    if: always() && github.ref_type != 'tag' && github.event_name != 'release' && github.event_name != 'workflow_dispatch'\n    needs: architecture\n    runs-on: ubuntu-latest",
     "needs: architecture\n    runs-on: ubuntu-latest\n    timeout-minutes: 5",
     "if: needs.architecture.result != 'success'",
-    "  publication:\n    if: github.ref_type == 'tag' || github.event_name == 'release'\n    runs-on: ubuntu-latest",
-    "if: github.ref_type == 'tag' || github.event_name == 'release'\n    runs-on: ubuntu-latest\n    timeout-minutes: 40",
+    "  publication:\n    if: github.ref_type == 'tag' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'\n    runs-on: ubuntu-latest",
+    "if: github.ref_type == 'tag' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'\n    runs-on: ubuntu-latest\n    timeout-minutes: 60",
     "actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5",
     "persist-credentials: false",
     "actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
@@ -169,5 +181,26 @@ if publication_at < 0 or upload_at < publication_at:
     fail("activation artifact upload must live only in the publication job")
 if "pull_request_target:" in workflow:
     fail("pull_request_target is forbidden")
+
+# Bind the operational receipt implementation reviewed with this controller.
+import hashlib
+receipt_start = workflow.index('          # BEGIN PINNED V107 RECOVERY RECEIPT\n')
+receipt_end_marker = '          # END PINNED V107 RECOVERY RECEIPT\n'
+receipt_end = workflow.index(receipt_end_marker, receipt_start) + len(receipt_end_marker)
+receipt_source = ''.join(line[10:] if line.startswith('          ') else line for line in workflow[receipt_start:receipt_end].splitlines(keepends=True))
+if hashlib.sha256(receipt_source.encode('utf-8')).hexdigest() != 'f1660a1158aa7da17efed781b03161ff125da12360ae5a7fc3fa4288966fe53a':
+    fail('v107 recovery receipt differs from its reviewed contract')
+for forbidden in ('continue-on-error:', 'workflow_call:', '  inputs:', 'contents: write', 'actions: write'):
+    if forbidden in workflow:
+        fail('forbidden workflow recovery capability: ' + forbidden)
+publication = workflow[publication_at:]
+if '--base' in publication:
+    fail('publication must not use changed-path replay')
+if publication.index('python -u tools/check_verifier.py') > publication.index('python -u tools/check_reproduce.py'):
+    fail('recovery probe replay must precede minimal reproductions')
+if publication.index('python -u tools/check_reproduce.py') > publication.index('python -u tools/check_activation.py'):
+    fail('complete recovery replay must precede activation')
+if publication.index('name: Validate v107 recovery assets and bind provenance') > publication.index('name: Preserve tag readback manifest'):
+    fail('recovery artifact upload must follow validation')
 
 print("POLICY PASS")
