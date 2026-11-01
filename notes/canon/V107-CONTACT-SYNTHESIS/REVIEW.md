@@ -19,27 +19,27 @@ assessment in another session.
 
 ## Findings reconciled in this proposal
 
-1. PR1847 PROPOSAL section2.1 attributes the eta-bank transition to its
+1. PR #1847 PROPOSAL section 2.1 attributes the eta-bank transition to its
    15-power-contact script. That script actually uses a different signed bank
-   and endpoint. PR1849 supplies the displayed eta transition with14 power
+   and endpoint. PR #1849 supplies the displayed eta transition with 14 power
    contacts and verifies it. PREPARATION_AND_RENEWAL uses that exact later
    fixture and attribution. No frozen predecessor was rewritten.
-2. PR1847's book-specific two-input illustration invokes U_B without defining
+2. PR #1847's book-specific two-input illustration invokes U_B without defining
    the matrix there. The proposed fold retains the fully defined general
    residue-distance theorem and omits that unnecessary example.
 3. The side-thread summary's exact shortest words and aggregate inventories
    lack accessible source/fixture bytes in this session. They are excluded
    from proposed earned claims. They are unnecessary for the independent
    public minimum reconstruction.
-4. PR1845's source record contains two implementations on x86_64. Its
+4. PR #1845's source record contains two implementations on x86_64. Its
    repository CI does not execute notes programs. Any aarch64 replay in
    VALIDATION.md is additional byte-comparison evidence, not retrospective
    alteration of that original record.
-5. A finite14-step return restores the newly written outputs too. It does
+5. A finite 14-step return restores the newly written outputs too. It does
    not provide clean auxiliary reset while retaining an exported output.
 6. Preparation and archive use different carrier/preparation contracts.
    No same-carrier varied-input apparatus follows by juxtaposing their proofs.
-7. The integrated original PR1847 text has three Markdown trailing-space
+7. The integrated original PR #1847 text has three Markdown trailing-space
    lines. They remain byte-identical to its original pin. The newly authored
    synthesis is checked separately for whitespace errors.
 
@@ -51,8 +51,8 @@ with its source revision and proposed status:
 | ID | Requested review |
 | --- | --- |
 | CONTACT | Complete integral admission/refusal, inverse, fifth-order identity, all-state accounts and per-slot residues |
-| MINIMUM | Finite coefficient bound; source/target multiset completeness; parity; exact26-slot quotient; all generator edges; exhausted-component certificates; UNKNOWN handling; both labelled witnesses |
-| RENEWAL | Retained-output and all-resources-returned hypotheses; histogram mismatch;4N/12N lower bounds; signed attainment; absence of a positive27N lower-bound claim |
+| MINIMUM | Finite coefficient bound; source/target multiset completeness; parity; exact 26-slot quotient; all generator edges; exhausted-component certificates; UNKNOWN handling; both labelled witnesses |
+| RENEWAL | Retained-output and all-resources-returned hypotheses; histogram mismatch; 4N/12N lower bounds; signed attainment; absence of a positive 27N lower-bound claim |
 | FIXED-WORD | Input-independent marked word and permutations; state-dependent admission allowed; complete residue-distance invariant and common-bank obstruction |
 | GRAM (optional) | Actual integral Gram image, full-norm branch test, nonintegral norm-one fibres, all-state forward/backward update and stated negative controls |
 | ARCHIVE (optional) | All seven slots, fourteen clocks, prepared and dirty domains, old memory, reading window and complete inverse; no retained-export reset |

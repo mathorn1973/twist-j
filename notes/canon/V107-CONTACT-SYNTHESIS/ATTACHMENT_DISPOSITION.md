@@ -9,15 +9,15 @@ authorization. Its T labels do not assign public Canon statuses.
 
 | Summary item | Disposition in this proposal |
 | --- | --- |
-| Positive minimum27 and signed minimum12 | Retained at the narrower exact26-slot/four-helper scope, using the complete prospective public probe1849 and its own pins |
-| Counts715/5500/31075 and zero unresolved cheaper cases | Supported by1849's no-Galois-quotient census; distinguish them from historical quotient counts |
+| Positive minimum 27 and signed minimum 12 | Retained at the narrower exact 26-slot/four-helper scope, using the complete prospective public probe #1849 and its own pins |
+| Counts 715/5500/31075 and zero unresolved cheaper cases | Supported by #1849's no-Galois-quotient census; distinguish them from historical quotient counts |
 | Conservation versus consumed preparation capability | Retained as an exact residue-resource statement, not dissipation or measured energy |
 | Clean reset with retained output | Retained with complete carrier and other-resource restoration hypotheses |
-| Capacity4N and12N; positive range12N to27N | Retained with all changing resources counted; no positive batch additivity theorem |
-| Signed130-pair and positive294-pair shortest-length distributions | Excluded pending actual frozen code, word fixtures, stdout and review |
-| 522 of528 energy27 classes solved, six search-limited cases | Excluded from earned claims; a capped search never proves nonreachability |
-| Eleven-power globally shortest signed word and specific optimal words | Excluded;1849 establishes existence/minimum auxiliary account, not word-length optimality |
-| Complete480 matrix census, reading cost4,18-slot neutrality,24-slot bridge and spatial constructions | Outside this narrow release proposal; no new certification inferred from the summary |
+| Capacity 4N and 12N; positive range 12N to 27N | Retained with all changing resources counted; no positive batch additivity theorem |
+| Signed 130-pair and positive 294-pair shortest-length distributions | Excluded pending actual frozen code, word fixtures, stdout and review |
+| 522 of 528 energy 27 classes solved, six search-limited cases | Excluded from earned claims; a capped search never proves nonreachability |
+| Eleven-power globally shortest signed word and specific optimal words | Excluded; #1849 establishes existence/minimum auxiliary account, not word-length optimality |
+| Complete 480-matrix census, reading cost 4, 18-slot neutrality, 24-slot bridge and spatial constructions | Outside this narrow release proposal; no new certification inferred from the summary |
 | Program/controller supplied externally | Preserved as an explicit model premise and open native/physical implementation boundary |
 | One preparation/response/record/renewal apparatus for varied inputs | Remains open; separate functioning pieces do not prove their common composition |
 | Claim that no second architecture ran | Historical description of that summary's own evidence only;1849 has a distinct later public two-architecture computation and this rehearsal is separately recorded |

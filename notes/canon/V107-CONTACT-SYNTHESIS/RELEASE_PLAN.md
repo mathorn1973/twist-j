@@ -14,17 +14,17 @@ working reviews, not that independent acceptance.
 | --- | --- |
 | Public main and v106 activation | `a193e389fb1ddb0bdc89165b015c95a17eb1e425` |
 | v106 content | `9242db4f040d67d9417eacd06612230b74248cff` |
-| PR1833 contact | `d9d93f68c5cd15b7ab9cea4ba1ef3996352613d0` |
-| PR1845 Gram/archive | `80623637571ee0e1ef4785406f0b0a2e52f8ec75` |
-| PR1847 price/renewal | `12062dc44287bd3f97b4fdc0ca4a931a56a16bcd` |
-| PR1849 complete minimum | `c9af56ae7f9ede45da9ff709f8663aaa1ae95105` |
-| PR1849 prospective execution pin | `ed90ffd1826190b1fe04af0cf172d2886be21067` |
+| PR #1833 contact | `d9d93f68c5cd15b7ab9cea4ba1ef3996352613d0` |
+| PR #1845 Gram/archive | `80623637571ee0e1ef4785406f0b0a2e52f8ec75` |
+| PR #1847 price/renewal | `12062dc44287bd3f97b4fdc0ca4a931a56a16bcd` |
+| PR #1849 complete minimum | `c9af56ae7f9ede45da9ff709f8663aaa1ae95105` |
+| PR #1849 prospective execution pin | `ed90ffd1826190b1fe04af0cf172d2886be21067` |
 
 These sources are available at
-[PR1833](https://github.com/mathorn1973/twist-j/pull/1833),
-[PR1845](https://github.com/mathorn1973/twist-j/pull/1845),
-[PR1847](https://github.com/mathorn1973/twist-j/pull/1847) and
-[PR1849](https://github.com/mathorn1973/twist-j/pull/1849).
+[PR #1833](https://github.com/mathorn1973/twist-j/pull/1833),
+[PR #1845](https://github.com/mathorn1973/twist-j/pull/1845),
+[PR #1847](https://github.com/mathorn1973/twist-j/pull/1847) and
+[PR #1849](https://github.com/mathorn1973/twist-j/pull/1849).
 At the audit, all four were open drafts with zero submitted GitHub reviews.
 A later reviewer must refresh their heads, comments and checks before accepting
 any input. Changed bytes require a new assessment, not silent substitution.
@@ -83,7 +83,7 @@ Proposed statuses remain conditional until acceptance:
 
 ## Existing computation and v106 publication evidence
 
-PR1849's actual scientific
+PR #1849's actual scientific
 [two-architecture run 41285912012](https://github.com/mathorn1973/twist-j/actions/runs/41285912012)
 passed on its stated head. Its verifier SHA-256 is
 `461b29dc6d3282a00fcccfd0cc194b198f856b688f78841658c93e49ecccac8f`;
@@ -92,9 +92,9 @@ stdout SHA-256 is
 (1,755 bytes). Its local recorded runtime was about 6 seconds. Refresh the
 actual job/log evidence rather than treating this paragraph as a new run.
 
-PR1833 records matching arm64 and x86_64 scientific notes replays. PR1845 records
+PR #1833 records matching arm64 and x86_64 scientific notes replays. PR #1845 records
 two implementations on x86_64 only. Ordinary notes CI does not execute their
-scientific programs. PR1847's small script covers two words, not the historical
+scientific programs. PR #1847's small script covers two words, not the historical
 complete census.
 
 v106 main run 40556926452 and tag run 40557096572 succeeded. Release run
@@ -107,7 +107,7 @@ checkout. Publication job 123455520147 confirms 211 tests, 280 completed probes,
 published-asset verification. The complete recovery took 45 minutes 47 seconds.
 Controller CI 40876145049 also succeeded on both architectures.
 
-Recovery [PR1828](https://github.com/mathorn1973/twist-j/pull/1828) remains a
+Recovery [PR #1828](https://github.com/mathorn1973/twist-j/pull/1828) remains a
 separate draft. Its 60-minute publication controller is not current main.
 Do not merge it or change workflows as part of this review rehearsal. Current
 main retains the 45-minute architecture and 40-minute publication budgets.
@@ -131,7 +131,7 @@ has an `--all` option: omitting `--base` selects its entire inventory.
 set -euo pipefail
 export PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0
 export LC_ALL=C LANG=C TZ=UTC
-unset TWISTJ_EVIDENCE_DIR
+unset TWISTJ_EVIDENCE_DIR PYTHONIOENCODING PYTHONUNBUFFERED
 test -z "$(git status --porcelain)"
 git rev-parse HEAD HEAD^{tree}
 python3 --version
@@ -157,6 +157,8 @@ actual counts from the logs. ABANDONED dispositions are not successful runs.
 The repository's unmodified probe runner enforces 600 seconds per probe and its
 source-bound concurrency schedule; the reproduction runner enforces 120 seconds
 per reproduction. Do not skip a slow verifier or broaden these budgets.
+
+The historical Ward qualification probe rejects extra Python ambient variables, including PYTHONIOENCODING. The initial rehearsal failure and successful clean-environment supplemental replay are preserved in VALIDATION.md. Keep the full runner environment separate from any notes helper that sets additional encoding variables.
 
 The full runners do not select `notes/` programs. Run the following separate
 byte comparisons from the same clean integration root, preserving the exact
@@ -209,9 +211,9 @@ PY
 test -z "$(git status --porcelain)"
 ```
 
-PR1847 has no committed EXPECTED file; its comparison above uses the exact
+PR #1847 has no committed EXPECTED file; its comparison above uses the exact
 three-line content already declared in its README. Report that distinction.
-Do not confuse its 15-power signed witness with PR1849's different 14-power
+Do not confuse its 15-power signed witness with PR #1849's different 14-power
 witness. No claim that either is globally shortest is made.
 
 A source-integration checkout retaining v106 STATUS is not a release-form
