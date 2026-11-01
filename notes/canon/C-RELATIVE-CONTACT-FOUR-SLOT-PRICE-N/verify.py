@@ -188,7 +188,7 @@ def verify_case(name, word, source, target, sink, funded_energy):
         assert histogram(current) == initial_hist
     expected = Counter(target + sink + [Z] * (26 - len(target) - len(sink)))
     assert current == expected, (name, "wrong final full multiset")
-    assert histogram(Counter(source)) != histogram(Counter(sink))
+    assert histogram(Counter(source)) != histogram(Counter(sink + [Z] * (4 - len(sink))))
     print(f"PASS {name}: {n} power contacts, auxiliary account {funded_energy}")
     return n
 
