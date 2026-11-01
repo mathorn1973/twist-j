@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v106
+historical guards: exact reconstructed v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v107
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -194,5 +194,13 @@ PASS 189 V106-PROOF-SCOPE complete byte-pinned proofs retain the declared source
 PASS 190 V106-INLINE-EVIDENCE each new theorem has exact scope-hashed inline evidence and declaration; no analytical proof is relabelled as a two-architecture computation
 PASS 191 V106-SOURCE-CUSTODY 29 reviewed source files retain exact bytes, SHA-256 and Git blob identities with complete claim coverage
 PASS 192 V106-REPRO-INVENTORY the validated actual 37-directory reproduction inventory is unchanged; this structural audit executes no scientific verifier
+PASS 193 V107-PRIOR-BYTES thirteen exact v107 inputs reconstruct public v106 before all 192 unchanged historical guards
+PASS 194 V107-CLAIM-LEDGERS four scoped L1 theorems and one open common-apparatus owner have exact append-only ledgers and declarations
+PASS 195 V107-DEPENDENCIES exact new premise and boundary edges preserve every earlier dependency without making an open owner a theorem premise
+PASS 196 V107-OWNER-BOUNDARY all 593 prior claims and 26 live owners retain exact scopes; one counted open owner adds no physical closure or gate
+PASS 197 V107-PROOF-SCOPE complete byte-pinned proofs retain exactly four auxiliary slots, initial trace accounts, retained-output and fixed-word limits
+PASS 198 V107-EVIDENCE the complete minimum probe retains its two-architecture evidence while three proof-carried theorems and the open owner use inline scope hashes
+PASS 199 V107-SOURCE-CUSTODY all 43 accepted source files and the unchanged minimum probe retain exact bytes, hashes and Git blob identities
+PASS 200 V107-REPRO-INVENTORY one exact three-file contact audit extends the validated reproduction inventory from 37 to 38 without executing a scientific verifier
 
-RESULT 192/192 ALL PASS
+RESULT 200/200 ALL PASS

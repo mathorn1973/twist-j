@@ -943,3 +943,44 @@ Eight structural guards extend the existing release-accounting chain to v106. Al
 The new guards bind 16 inline L1 theorem rows, 1 explicit definition, 29 exact reviewed source files, complete proof blocks, scope hashes, declarations and dependency additions. All 577 earlier claims and all 26 live H/O owners retain their exact rows. Gates, Frontier programs, Frontier text and the 37-directory reproduction inventory are unchanged. The individual supplied models retain their own premises and do not acquire native preparation, physical occurrence or a complete physical apparatus through consolidation.
 
 The 192-check EXPECTED transcript was authored from all 184 unchanged earlier PASS lines and eight specified new guard descriptions before execution. It is not captured output or a run receipt. This structural audit executes no scientific verifier. Replay and cross-architecture acceptance belong to the subsequently frozen complete release candidate.
+
+
+## Public Canon v107 boundary
+
+Eight structural guards extend the audit to the independently reviewed narrow
+contact/preparation fold. The complete thirteen current Canon inputs are bound
+by byte count and SHA-256; explicit inverse line edits reconstruct exact public
+v106 at a193e389fb1ddb0bdc89165b015c95a17eb1e425. Every reconstructed file must
+match its complete prior hash. Only the v106 current-input and reproduction-
+inventory readers consume this validated view. All 192 earlier predicates,
+constants and PASS descriptions remain unchanged. No old-byte fallback exists.
+
+The new guards bind four conditional L1 theorems and one open common-apparatus
+owner, their exact append-only ledgers, proofs, evidence, dependencies and
+resource boundaries. All 593 earlier claims and all 26 earlier live H/O owners
+retain their exact scopes. The new L1 owner is explicitly STOP and introduces
+no physical closure or layer gate. The new totals are 598 claims:
+T454/D59/C39/H2/O25/F19, with 27 live H/O owners.
+
+All 43 accepted source files from
+95454af39bfaa932963939d613c584415b56a653 retain exact byte counts, SHA-256 and Git
+blob identities. The complete seven-file minimum probe retains its bundle hash
+and two-architecture evidence. The contact, retained-bank and fixed-word
+theorems are proof-carried inline statements; the common-apparatus owner also
+uses an inline scope identity. Their evidence is not relabelled as finite
+computation. The independent review's declared scope, known-input preparation
+with exactly four auxiliary slots, conserved initial trace accounts, retained-
+output limits and unproved same-carrier composition remain explicit.
+
+The unchanged accepted contact verifier and expected transcript are installed
+in the new three-file relative-contact reproduction. Its exact bundle extends
+the actual reproduction inventory from 37 to 38. The outer adapter removes
+only that named directory when exposing the v106 inventory. This structural
+audit imports and executes no scientific verifier; ordinary repository CI
+separately replays the contact audit on both architectures.
+
+The 200-check EXPECTED transcript is authored before execution from the 192
+unchanged PASS lines and eight specified new descriptions. It is not captured
+output or a run receipt. Formal replay starts only after the complete content
+candidate has been frozen and publicly pushed. No earlier frozen tree is
+rewritten.

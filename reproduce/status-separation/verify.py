@@ -47,6 +47,720 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+# Exact v107 release accounting and reversible public v106 reconstruction.
+# Structural custody only: no scientific verifier is executed or imported.
+# No source is fetched and no prior bytes are accepted as a runtime fallback.
+V107_PRIOR_COMMIT = 'a193e389fb1ddb0bdc89165b015c95a17eb1e425'
+
+V107_ACCEPTED_SOURCE_COMMIT = '95454af39bfaa932963939d613c584415b56a653'
+
+V107_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '28c8eaebf11f1ea471584330bce7de0707b7882db581f1b753cae08ff9d9f231',
+                  'current_bytes': 577687,
+                  'prior_sha256': '705423faa1c7b8676d90362d6c5c5cb56f0b58ab21db65155c0054239a965e68',
+                  'prior_bytes': 572480,
+                  'restore': ((594, 599, ''),)},
+ 'NORMATIVE.tsv': {'current_sha256': '25caed120da1d6259e440ebf1d28cf17aba5a406a7b5947ef34f6439af563a55',
+                   'current_bytes': 76935,
+                   'prior_sha256': 'c338c9aa68ac6991b589e8c54803e8534144911a1a05b1faddbd2fe39c2acc14',
+                   'prior_bytes': 76215,
+                   'restore': ((659, 664, ''),)},
+ 'DEPENDENCIES.tsv': {'current_sha256': 'e0c9c6b3457cc029671877474def13b481d8c9b97a267183a81da5912275776a',
+                      'current_bytes': 196961,
+                      'prior_sha256': 'f2998ddc9e83abdd4605e0b3afcfd72b05da6850f44807111baea2257db06627',
+                      'prior_bytes': 195209,
+                      'restore': ((1186, 1195, ''),)},
+ 'EVIDENCE.tsv': {'current_sha256': 'ef32cb8b722f9a348c3aeb999b74c80ac941bdf964f6c57fbfe16c9fe2ef24ac',
+                  'current_bytes': 119901,
+                  'prior_sha256': 'b4328a9997dc5f6310ae6c363f541f5e4c66cd171362642c4d94eebe88c58687',
+                  'prior_bytes': 118871,
+                  'restore': ((594, 599, ''),)},
+ 'HISTORY.tsv': {'current_sha256': 'e3aeca82da37524b950a9312a523a622f685236de09d620e85ac474a615b42b8',
+                 'current_bytes': 526694,
+                 'prior_sha256': 'e2a8ae185e8feb676770e23bd8901ce88a9e4a3f1a357fb3f85d7cb8a56e6c2d',
+                 'prior_bytes': 523934,
+                 'restore': ((1141, 1146, ''),)},
+ 'GATES.tsv': {'current_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'current_bytes': 13324,
+               'prior_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'prior_bytes': 13324,
+               'restore': ()},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'bddb1d3a77f2b34a44ed3a646a6be66da76ad2119672a53fc4c6cc4a41f5b4a9',
+                           'current_bytes': 1575,
+                           'prior_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'prior_bytes': 1502,
+                           'restore': ((23, 24, ''),)},
+ 'CORE_SELECTION.tsv': {'current_sha256': 'c100a982d0bce49b9d1cff1188d644690d5d34c29ffde3103dca19f98721455a',
+                        'current_bytes': 1263,
+                        'prior_sha256': '07a5b984e79256b52acb3241b773bb5e3af63c0ef3cd0418204531beb37fb5cd',
+                        'prior_bytes': 1182,
+                        'restore': ((47, 49, ''),)},
+ 'CANON.md': {'current_sha256': '40d78dc4f5108acd8dbee642471a2b8c0eed5403cedaaa62ce8d890ee4d182dc',
+              'current_bytes': 1388109,
+              'prior_sha256': '52302c640033dd15d4a7a075cad16fa48b1473b7396d1f7413536a9ec45422e7',
+              'prior_bytes': 1370107,
+              'restore': ((0, 1, '# TWIST-J Public Canon v106\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v106. Normative authority and '
+                           'activation\n'),
+                          (14, 21, ''),
+                          (38,
+                           39,
+                           'only. Public Canon v106 also declares the discrete architecture used '
+                           'to read\n'),
+                          (51,
+                           52,
+                           'seed of the two algebraic projections. Public Canon v106 does not '
+                           'claim\n'),
+                          (13507, 13897, ''))},
+ 'CORE.md': {'current_sha256': '22c22b2c2845f6b42c8a32adeb16e14d727b31238df879c3b81b5622df2e247c',
+             'current_bytes': 44927,
+             'prior_sha256': 'a16583a85e3bece4117df6cfed13c1717fe79ffe56935f10ca9f371243371834',
+             'prior_bytes': 42836,
+             'restore': ((2,
+                          3,
+                          '**Release identity:** Public Canon v106. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v106 also declares a discrete architecture. It does not\n'),
+                         (51, 66, ''),
+                         (489, 491, ''))},
+ 'FRONTIER.md': {'current_sha256': '0ecfb01cdd2c7778ac47bd37adb6d8bc07d0aa00347bd0355bd9985a038f8311',
+                 'current_bytes': 28842,
+                 'prior_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'prior_bytes': 27382,
+                 'restore': ((44, 47, ''), (111, 112, 'Live total: 26.\n'))},
+ 'CHANGELOG.md': {'current_sha256': 'f733b45470a2ca5bacd1d2e75ec2534f2f962053c34bafaeab5350272e4fd2f5',
+                  'current_bytes': 214496,
+                  'prior_sha256': 'afa67468600fcb3d7a5c95f32848f17de8305d905b30081f65b498c5df048552',
+                  'prior_bytes': 212925,
+                  'restore': ((1, 30, ''),
+                              (33, 33, '<!-- BEGIN GENERATED CURRENT COUNTS -->\n'),
+                              (35, 35, '<!-- END GENERATED CURRENT COUNTS -->\n'))},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '5a354a6b3141995aec753b637fbaafa6d910be6f41118ab3a648a0b0aea2ab5a',
+                       'current_bytes': 244,
+                       'prior_sha256': '97d572ffac76e77af9972a121aac1461d36a1465a5d667c6e05c79c0187f6faa',
+                       'prior_bytes': 244,
+                       'restore': ((1, 2, 'claims\t593\n'),
+                                   (3, 4, 'status_T\t450\n'),
+                                   (7, 8, 'status_O\t24\n'),
+                                   (9, 12, 'live_H_O\t26\nreproductions\t37\nevidence_none\t175\n'),
+                                   (14, 15, 'evidence_two-architecture\t378\n'))}}
+
+V107_ADDITIONS = {'REGISTRY.tsv': {'rows': 5,
+                  'sha256': 'd1c8cdb6b335d94d86cb6cc20414b58c9d390b528eaa3dd5c904a523b00120b8'},
+ 'NORMATIVE.tsv': {'rows': 5,
+                   'sha256': 'f9cfc037a6d59433e2e585eb8114eb87ce4aa0978d8bf81902e9aa643af13fe5'},
+ 'DEPENDENCIES.tsv': {'rows': 9,
+                      'sha256': '7d158f8f4eafd308b985f88af72811050f0fdd1f0b518da5c11a95c4237a0d95'},
+ 'EVIDENCE.tsv': {'rows': 5,
+                  'sha256': '56c0f437f80b8a27d00d4e8dcb914c51ed1925492b98a86911a40db8310bd15f'},
+ 'HISTORY.tsv': {'rows': 5,
+                 'sha256': 'd517a7384e958b790048083310303f60cfd2174ba613f968320ad9f3a053502a'},
+ 'CORE_SELECTION.tsv': {'rows': 2,
+                        'sha256': '25a8c53c5613bb1a194b56604f9be3f49e42baa8d01e56e2625e78e7cef642d0'}}
+
+V107_CLAIM_STATUS = {'RELATIVE-CONTACT-INTEGRAL-LAW': 'T',
+ 'RELATIVE-CONTACT-FOUR-SLOT-MINIMUM': 'T',
+ 'RELATIVE-CONTACT-RETAINED-BANK-CAPACITY': 'T',
+ 'RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY': 'T',
+ 'RELATIVE-CONTACT-COMMON-APPARATUS-OPEN': 'O'}
+
+V107_DEPENDENCY_EDGES = (('RELATIVE-CONTACT-INTEGRAL-LAW', 'J-UNIT', 'REQUIRES'),
+ ('RELATIVE-CONTACT-FOUR-SLOT-MINIMUM', 'RELATIVE-CONTACT-INTEGRAL-LAW', 'REQUIRES'),
+ ('RELATIVE-CONTACT-RETAINED-BANK-CAPACITY', 'RELATIVE-CONTACT-INTEGRAL-LAW', 'REQUIRES'),
+ ('RELATIVE-CONTACT-RETAINED-BANK-CAPACITY', 'RELATIVE-CONTACT-FOUR-SLOT-MINIMUM', 'REQUIRES'),
+ ('RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY', 'RELATIVE-CONTACT-INTEGRAL-LAW', 'REQUIRES'),
+ ('RELATIVE-CONTACT-COMMON-APPARATUS-OPEN', 'RELATIVE-CONTACT-INTEGRAL-LAW', 'REQUIRES'),
+ ('RELATIVE-CONTACT-COMMON-APPARATUS-OPEN', 'RELATIVE-CONTACT-FOUR-SLOT-MINIMUM', 'BOUNDED_BY'),
+ ('RELATIVE-CONTACT-COMMON-APPARATUS-OPEN',
+  'RELATIVE-CONTACT-RETAINED-BANK-CAPACITY',
+  'BOUNDED_BY'),
+ ('RELATIVE-CONTACT-COMMON-APPARATUS-OPEN',
+  'RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY',
+  'BOUNDED_BY'))
+
+V107_PROGRAM_ADDITIONS = [{'claim_id': 'RELATIVE-CONTACT-COMMON-APPARATUS-OPEN',
+  'program_id': 'DECODER_CORE',
+  'queue_role': 'FOLLOWUP',
+  'work_state': 'STOP',
+  'work_mode': 'FORMAL'}]
+
+V107_PROOF_CONTRACTS = {'RELATIVE-CONTACT-INTEGRAL-LAW': {'begin': '### Integral relative contact on the declared '
+                                            'Cartesian carrier\n',
+                                   'claim_marker': '**RELATIVE-CONTACT-INTEGRAL-LAW [T].**',
+                                   'characters': 4138,
+                                   'bytes': 4138,
+                                   'sha256': 'd9985108d5ef30707d1fd63e853b9aa8b944239c9ec497cc0d4606be37bf7d3f',
+                                   'required_clauses': ('Identity refusal is an additional choice; '
+                                                        'it is not derived from the requirement of '
+                                                        'reversibility.',
+                                                        'Conservation of the account permits loss '
+                                                        'of a particular preparation capability; '
+                                                        'no energy dissipation follows.',
+                                                        'The proof is analytical.')},
+ 'RELATIVE-CONTACT-FOUR-SLOT-MINIMUM': {'begin': '### Four-slot known-input minima\n',
+                                        'claim_marker': '**RELATIVE-CONTACT-FOUR-SLOT-MINIMUM '
+                                                        '[T].**',
+                                        'characters': 5858,
+                                        'bytes': 5858,
+                                        'sha256': '3417e8d67d57b711114ab5f15faa6ef1c1ca11e5f7a19538aa51a8a12efa0bdd',
+                                        'required_clauses': ('The complete carrier has exactly 26 '
+                                                             'slots: 22 data slots and four '
+                                                             'auxiliary slots.',
+                                                             'Every intermediate state includes '
+                                                             'all 26 slots.',
+                                                             'not a shortest-word theorem or a '
+                                                             'common encoder for unknown inputs.',
+                                                             'No Galois representatives or missing '
+                                                             'historical bank list are required.')},
+ 'RELATIVE-CONTACT-RETAINED-BANK-CAPACITY': {'begin': '### Retained outputs require changing '
+                                                      'auxiliary resources\n',
+                                             'claim_marker': '**RELATIVE-CONTACT-RETAINED-BANK-CAPACITY '
+                                                             '[T].**',
+                                             'characters': 2276,
+                                             'bytes': 2276,
+                                             'sha256': 'cfbfee3c133ee8ccff453c0d435d2c3c0f3e139a4a64b3738f61b3a76299c074',
+                                             'required_clauses': ('L_aux >= 4N, E_aux(initial) >= '
+                                                                  '12N.',
+                                                                  'No claim that 27N is the '
+                                                                  'positive many-output minimum is '
+                                                                  'made.',
+                                                                  'no uncounted external state '
+                                                                  'exchanges residues.',
+                                                                  'No energetic dissipation '
+                                                                  'follows.')},
+ 'RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY': {'begin': '### One fixed program preserves input '
+                                                           'residue distance\n',
+                                                  'claim_marker': '**RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY '
+                                                                  '[T].**',
+                                                  'characters': 2009,
+                                                  'bytes': 2009,
+                                                  'sha256': '54a5d972b6b083bc60684f661df9317451548c6462902483e856463a65502c9b',
+                                                  'required_clauses': ('one fixed finite word',
+                                                                       'Its contact admission may '
+                                                                       'depend on the current '
+                                                                       'input',
+                                                                       'The conclusion is a '
+                                                                       'necessary condition, not a '
+                                                                       'classification of all '
+                                                                       'possible encoders.',
+                                                                       'state-dependent '
+                                                                       'permutation controller has '
+                                                                       'a different contract')},
+ 'RELATIVE-CONTACT-COMMON-APPARATUS-OPEN': {'begin': '### A common varied-input apparatus remains '
+                                                     'open\n',
+                                            'claim_marker': '**RELATIVE-CONTACT-COMMON-APPARATUS-OPEN '
+                                                            '[O].**',
+                                            'characters': 2819,
+                                            'bytes': 2819,
+                                            'sha256': '8a4ca651cb7776703a575afeddf3be9d8269dcd9bfd20ab90824652107ecaeed',
+                                            'required_clauses': ('STOP until one compatible '
+                                                                 'carrier',
+                                                                 'This owner adds a specific L1 '
+                                                                 'composition question.',
+                                                                 'does not replace or close '
+                                                                 'QDD-INSTRUMENT-APPARATUS [O]',
+                                                                 'Gram and finite-window archive '
+                                                                 'proposals remain outside these '
+                                                                 'four theorems.')}}
+
+V107_EVIDENCE_CONTRACTS = {'RELATIVE-CONTACT-INTEGRAL-LAW': {'claim_id': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+                                   'evidence_id': 'EV-RELATIVE-CONTACT-INTEGRAL-LAW',
+                                   'evidence_kind': 'INLINE_CANON',
+                                   'location': 'inline',
+                                   'sha256': 'ff263fe4ac91b2efbfc9f94069194c85b44cfa148cf37f13d475afa294f361a9',
+                                   'hash_mode': 'registry-scope-sha256-v1',
+                                   'architecture_requirement': 'none'},
+ 'RELATIVE-CONTACT-FOUR-SLOT-MINIMUM': {'claim_id': 'RELATIVE-CONTACT-FOUR-SLOT-MINIMUM',
+                                        'evidence_id': 'EV-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM',
+                                        'evidence_kind': 'PUBLIC_PROBE',
+                                        'location': 'probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/RESULT.md',
+                                        'sha256': 'dbb248559f5a43c14756c53adad2da52338ea618f31913aa094e1a7d30188b65',
+                                        'hash_mode': 'bundle-manifest-sha256-v1',
+                                        'architecture_requirement': 'two-architecture'},
+ 'RELATIVE-CONTACT-RETAINED-BANK-CAPACITY': {'claim_id': 'RELATIVE-CONTACT-RETAINED-BANK-CAPACITY',
+                                             'evidence_id': 'EV-RELATIVE-CONTACT-RETAINED-BANK-CAPACITY',
+                                             'evidence_kind': 'INLINE_CANON',
+                                             'location': 'inline',
+                                             'sha256': '1e4ece6790790bb898bc25793530c5e5208851765498e0cf63eb7e1171fb0009',
+                                             'hash_mode': 'registry-scope-sha256-v1',
+                                             'architecture_requirement': 'none'},
+ 'RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY': {'claim_id': 'RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY',
+                                                  'evidence_id': 'EV-RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY',
+                                                  'evidence_kind': 'INLINE_CANON',
+                                                  'location': 'inline',
+                                                  'sha256': '77f4bc0ebe0e1e58785239db79a93adfc8294a9625e4ed23ba679ce4b82aaaa9',
+                                                  'hash_mode': 'registry-scope-sha256-v1',
+                                                  'architecture_requirement': 'none'},
+ 'RELATIVE-CONTACT-COMMON-APPARATUS-OPEN': {'claim_id': 'RELATIVE-CONTACT-COMMON-APPARATUS-OPEN',
+                                            'evidence_id': 'EV-RELATIVE-CONTACT-COMMON-APPARATUS-OPEN',
+                                            'evidence_kind': 'INLINE_CANON',
+                                            'location': 'inline',
+                                            'sha256': '3027d19a0f0b478884f0a6f10303163041a09dbb20f145c46900ec01fb7c9b25',
+                                            'hash_mode': 'registry-scope-sha256-v1',
+                                            'architecture_requirement': 'none'}}
+
+V107_SOURCE_FILES = {'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/BREAK_EXPECTED.txt': {'bytes': 1628,
+                                                                'sha256': '66a8d32d76aff04e579daecd9f4d7fa30dc65a7ba5df0ceb7d731144afdc8032',
+                                                                'git_blob': '766a673673bc9865ead8dfa91b8fc2a84a02f2a2'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/EXPECTED.txt': {'bytes': 681,
+                                                          'sha256': '79db6a2aa751b0362b5609e2293d33279510f59f7cbe5a51f5ac9ce0a09f1c12',
+                                                          'git_blob': 'fe0a790994f9c076e51de3ff11504848df6bacb6'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/PREPARATION.md': {'bytes': 4586,
+                                                            'sha256': '75c5c587471bae9d6b7a88fb0df7ba6187660db55cbefa10f312c384c01bd03e',
+                                                            'git_blob': 'e12bc2d84c85a1f06d75ce5b51a0e04ca92922c9'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/PREREG.md': {'bytes': 12016,
+                                                       'sha256': '067115f7b1df57cf8475eceb3bbca7d4eb2b97ec940b6a2fe4798c5b520074a2',
+                                                       'git_blob': '710a1d6c694531d4dea5d47742ae99b90d777df9'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/PROMO-C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N.md': {'bytes': 2440,
+                                                                                        'sha256': 'b38cd391a163de6ebb2e51b21d48084d22e9663c5094312d8deff918d8590e2d',
+                                                                                        'git_blob': 'd835e9f8a722ad64091eb2d7e4381f7b81ce496c'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/PROOF.md': {'bytes': 28214,
+                                                      'sha256': 'd9ec7a7f7a8e22a3acbedd7e015a64506025ce9e2ff22e3b34ff7a31c03dc320',
+                                                      'git_blob': '14e426ae0bfefc25ae045a052192b91ce02c4181'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/README.md': {'bytes': 4996,
+                                                       'sha256': '5f9c582cee15244db6409296994ac4e7ce0a10b4270956f8ab8d2ffe1caf8c60',
+                                                       'git_blob': '138673c2d69e3b6938dc2c040c9b8d44294cf0a0'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/REFERENCES.md': {'bytes': 5934,
+                                                           'sha256': '35867f754e32e7321e87d515d99ced65649baee77e83f005307b8da7e1453af8',
+                                                           'git_blob': '4cac353eb12122e00acaeda4755fe97edd2a5666'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/RESULT.md': {'bytes': 6394,
+                                                       'sha256': '3cb5930965d6f70e004fdbca12a8a7721ec80b8728c3a9f2dc93eec818e643b4',
+                                                       'git_blob': 'fde55dc86ace4acd8f3875ca9caf40832d9ca40b'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/RUN.md': {'bytes': 4725,
+                                                    'sha256': '6855252f29a28e5e4df96ea7dd49a611d6b4d98a4da6f098bb9b61e8854a76fb',
+                                                    'git_blob': 'e0e76b3691c539ea49baa3d49c411d6115b7e8be'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/SHA256SUMS': {'bytes': 961,
+                                                        'sha256': '36d3c2a92828628c1fe861784b6c78fadad369d3c6d7fc6010dfd3d3589851d3',
+                                                        'git_blob': 'e3de4225074142d6b07f6713e5cd2aeaf57a716d'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/break.py': {'bytes': 37545,
+                                                      'sha256': 'a4f86eef9e3440c368f82a560bcad2bf762ac953c55d0fbf045a4b56cb987b42',
+                                                      'git_blob': 'd7aaaf5fcd8ff5445fb5a6e5e58812e24ceed6af'},
+ 'notes/C-INTEGRAL-GRAM-CONTACT-ARCHIVE-N/verify.py': {'bytes': 23514,
+                                                       'sha256': '71f0cd9f73cf6a1ae0cded830e575e043d8f70b9b065be806f7617929dd8e3e3',
+                                                       'git_blob': 'eaad94118e3e280d4a232a3dafa6846081a1292e'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/CHECKS.md': {'bytes': 1334,
+                                                     'sha256': 'fb82ceb7a200f4406e331c24480931b306f9ae7241e25e3a4276c23a662b60ea',
+                                                     'git_blob': '465aba0eeb3a91568fd5355602afb9fab04dc4ae'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/EXPECTED.txt': {'bytes': 776,
+                                                        'sha256': '89e49565965d9d417cebefd6eb7b36bea864788e8356bbad8901043f1ad66890',
+                                                        'git_blob': 'a39e3d586a1be1d782e7836335671bd69d15de7b'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/PREREG.md': {'bytes': 7961,
+                                                     'sha256': 'c26a0a31cd5d298654b17bfda1646662b041c5a4746040ed23de3ac9de0f7973',
+                                                     'git_blob': 'f06e5c42017527259fe65c4049f7ac5d20213445'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/PROMO-C-J-INTEGRAL-RELATIVE-CONTACT-N.md': {'bytes': 2350,
+                                                                                    'sha256': '82279e509407a6c4f43617f9baf975122bcf84263d732a3b158fdb100cc82ec2',
+                                                                                    'git_blob': '765731da9f56f79177dffb946b41c833b1367724'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/PROOF.md': {'bytes': 13214,
+                                                    'sha256': 'd48d4ce13c77f75cdf76dd8e7466b67f2bee1039fe395f34aac166b56ee0947b',
+                                                    'git_blob': 'aa408c9d5a7657d61e4c997d0386d4cc471ec794'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/README.md': {'bytes': 2728,
+                                                     'sha256': '0b1a19d40b1af455ef25782802ac11fd921509f5d06cbbc9320cc4dbffa36501',
+                                                     'git_blob': 'fa6b2b23e5c4b9f0018c41efb8f45f9e1ea7a87e'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/REPLAY-x86_64.md': {'bytes': 1771,
+                                                            'sha256': '0082e582fc72d2feb50c30d1cf072437b6f7efe996297c33205c2149afbaeed0',
+                                                            'git_blob': '5f2c755cdc70096363fb83d88d249f851c79756a'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/RESULT.md': {'bytes': 3907,
+                                                     'sha256': '171b4e0a76a962868030057d81b183acb457c19c2dcfefc7e0f748e856ddadac',
+                                                     'git_blob': '54373035d26608a12fbde60706cb854b3f645f4b'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/RUN.md': {'bytes': 1281,
+                                                  'sha256': '5d73fef6981ae902b52d1a93bcc8fa6d014866ce63f203d11bc6cf7dfaa82cb5',
+                                                  'git_blob': '2d248eba0c723508a90d93b095319cee5acac4d4'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/SOURCES.tsv': {'bytes': 1422,
+                                                       'sha256': 'b12b9a2fb6ec162d67a21d00b48c4900f88af91b0f30f3c10da04eb46566ef6e',
+                                                       'git_blob': '00e23b0b62dc3f40a97f6f28adf7bf833685a977'},
+ 'notes/C-J-INTEGRAL-RELATIVE-CONTACT-N/verify.py': {'bytes': 8702,
+                                                     'sha256': '0089529bd6f4a9488cbc74197a55912453fc48a1967859bce87c3986cea4951e',
+                                                     'git_blob': '2f93f671c5cf079f42df44dcb384c79bce1aa435'},
+ 'notes/canon/C-RELATIVE-CONTACT-FOUR-SLOT-PRICE-N/PREREG.md': {'bytes': 2934,
+                                                                'sha256': 'd4b0674e8b79ae53c14e4314817f2b9e2baf51dc7167016a353e9279ec775623',
+                                                                'git_blob': '76bbf2821635250d1336b7d0b21ef52c70d1afc1'},
+ 'notes/canon/C-RELATIVE-CONTACT-FOUR-SLOT-PRICE-N/PROPOSAL.md': {'bytes': 11926,
+                                                                  'sha256': 'b45156841c9c538f5262f88241a08d0935b513d85a790c16709d33177c5835cd',
+                                                                  'git_blob': '6954df9288b44ed0397bca32954902f3bac6e7b5'},
+ 'notes/canon/C-RELATIVE-CONTACT-FOUR-SLOT-PRICE-N/README.md': {'bytes': 4660,
+                                                                'sha256': '03c00862bc9226a6e83f32cfa720c83dd719d6e40d79b589884b8e7c34688890',
+                                                                'git_blob': 'f00128f91c247fa639411ae804ecff450ce8f3d7'},
+ 'notes/canon/C-RELATIVE-CONTACT-FOUR-SLOT-PRICE-N/verify.py': {'bytes': 5096,
+                                                                'sha256': '21eb41e3e8709f534224635acc2dbc58e8fb032d8b9fdaf0177b014b7122746b',
+                                                                'git_blob': '60985d55c07ec9d9f68b245571c101689e00bed2'},
+ 'notes/canon/V107-CONTACT-SYNTHESIS/ATTACHMENT_DISPOSITION.md': {'bytes': 2862,
+                                                                  'sha256': '031df21cd75e862ecc92f5f117f5df2ab44675ce7ba3e57db8d3b7ee681f8447',
+                                                                  'git_blob': '8aba2d6195df292cbe9ead90c200c0134b3e1051'},
+ 'notes/canon/V107-CONTACT-SYNTHESIS/CONTACT_AND_GRAM.md': {'bytes': 15258,
+                                                            'sha256': '7ab5500fb837006541c7c4049c3efa82c8b1ea29e9d900087d2506a29c2b5a69',
+                                                            'git_blob': '4ea4240b760ff176814de82317dd816793171189'},
+ 'notes/canon/V107-CONTACT-SYNTHESIS/PREPARATION_AND_RENEWAL.md': {'bytes': 17534,
+                                                                   'sha256': '8ef74ba6ac6425eda27ab2a4a7fe1b9a5b8a8857dfc2bfcbc47ff7e8ee7e9db6',
+                                                                   'git_blob': '3464ca77f27ebba19c774551f397298a7994db7d'},
+ 'notes/canon/V107-CONTACT-SYNTHESIS/README.md': {'bytes': 4088,
+                                                  'sha256': '9d9d5459158e44a8ac965c50caeee59cb8884f5d61550e0a9f69403d232b404c',
+                                                  'git_blob': '2528b5d77a9d106fcbad16e5f0a53154f9dbc90f'},
+ 'notes/canon/V107-CONTACT-SYNTHESIS/RELEASE_PLAN.md': {'bytes': 17000,
+                                                        'sha256': '2bba1abf2c25ce02db0f6e12aabab100d03f943d9594d386a89441ce0f7689fd',
+                                                        'git_blob': '025d6a142e71748ac3817c57a70c0c16653c2927'},
+ 'notes/canon/V107-CONTACT-SYNTHESIS/REVIEW.md': {'bytes': 4656,
+                                                  'sha256': '4d2c523e9def69db0923fb6c4eea616eb97ab1809ed965de38533396249a4e74',
+                                                  'git_blob': '072998a7e17fea5427d04d35c1bb67d343621065'},
+ 'notes/canon/V107-CONTACT-SYNTHESIS/SOURCES.tsv': {'bytes': 7438,
+                                                    'sha256': '8b14bfc465e4a3539a70fabaaaa0b4631cc13d235ad9bf047d8b6f26981778b2',
+                                                    'git_blob': '974d1f8bcb3e57b02d1f933e37748883e89059ee'},
+ 'notes/canon/V107-CONTACT-SYNTHESIS/VALIDATION.md': {'bytes': 7840,
+                                                      'sha256': 'e794ea4df38eeac95d77a861d387aa56316bc497b56959023bef6449cb1f6e5f',
+                                                      'git_blob': '6896de604ee5d81805ebf67df4bcdc6c4eb3d2cb'},
+ 'probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/EXPECTED.txt': {'bytes': 1755,
+                                                                'sha256': '95ee2135ecb491ab7f0702d603ea94013d00beb28e70668a3c418c0f21478178',
+                                                                'git_blob': 'c4159d21e46e62058aebf8fea0c53597108de749'},
+ 'probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/PREREG.md': {'bytes': 5531,
+                                                             'sha256': '5baf144b63300113fdc83d0142ea5ae9f8792a97806e3af576f1cfc859b253e8',
+                                                             'git_blob': '607dc8e51c73f003194841e017992fb8ad7d5d9c'},
+ 'probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/PROOF.md': {'bytes': 7054,
+                                                            'sha256': '5952f685ced119c57b7e4ed57cf6acee4ddb46272e3efd4e42c0aaf06a3c5fff',
+                                                            'git_blob': '9500b536b14e7586416abd1314f02d300f80703d'},
+ 'probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/README.md': {'bytes': 3803,
+                                                             'sha256': 'd85b81faa00a5b1835f1919c23480675aeaf3f78d824c546078bba9acb4e90e2',
+                                                             'git_blob': 'cac97c4f14756407a1543caf601e97b97762d8a6'},
+ 'probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/RESULT.md': {'bytes': 2822,
+                                                             'sha256': 'c2624b1b8def2a5963dbf8ef8db360fc35e5aaf834ac0d54ce9c7454cb2319c4',
+                                                             'git_blob': '56daa035c54b40d1b8a98b9291e68568a56826d2'},
+ 'probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/RUN.md': {'bytes': 1825,
+                                                          'sha256': '7f117198c5393bb783bca25889883f5c57f0ae453e9a3df9c580f9e7486c78c0',
+                                                          'git_blob': 'b76d8fb42d734f06ab84757e352c5dc15c1e7eb5'},
+ 'probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/verify.py': {'bytes': 9251,
+                                                             'sha256': '461b29dc6d3282a00fcccfd0cc194b198f856b688f78841658c93e49ecccac8f',
+                                                             'git_blob': 'b0858a9906cf34efe810b1a160b185e18f391ae4'}}
+
+V107_REPRODUCTION_FILES = {'reproduce/relative-contact/verify.py': {'bytes': 8702,
+                                          'sha256': '0089529bd6f4a9488cbc74197a55912453fc48a1967859bce87c3986cea4951e',
+                                          'git_blob': '2f93f671c5cf079f42df44dcb384c79bce1aa435'},
+ 'reproduce/relative-contact/EXPECTED.txt': {'bytes': 776,
+                                             'sha256': '89e49565965d9d417cebefd6eb7b36bea864788e8356bbad8901043f1ad66890',
+                                             'git_blob': 'a39e3d586a1be1d782e7836335671bd69d15de7b'},
+ 'reproduce/relative-contact/README.md': {'bytes': 2958,
+                                          'sha256': '7f2278588e682536767daa7ad8647a8ef005950f61751fd52d59bf0d2c3878d3',
+                                          'git_blob': '56b10c75c6161e1c7a82775dc7904f1c949a8b20'}}
+
+V107_REPRODUCTIONS = ('C-FIELD-J-CONTENT-TRANSPORT-N',
+ 'C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-REVIEW-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N',
+ 'C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N',
+ 'PHOTON-Z5-EXACT-HEATBATH-KERNEL',
+ 'alpha-exact-lemma',
+ 'alpha-value',
+ 'born-faces',
+ 'born-quartet',
+ 'census',
+ 'color-ladder',
+ 'cosmology-register',
+ 'coupling-metrology',
+ 'dirac-ladder',
+ 'force-born-dictionary',
+ 'foundations-places',
+ 'gravity-chain',
+ 'hyperplane-codec',
+ 'kernel',
+ 'kernel-connectivity',
+ 'mass-ladder',
+ 'maxwell',
+ 'native-quadratic-obstructions',
+ 'observer-boost',
+ 'pentit-p5-closure',
+ 'photon-electron',
+ 'qdd-route-a',
+ 'quadratic-memory-l5',
+ 'relative-contact',
+ 'scalar-hermitian-norm',
+ 'status-separation',
+ 'u_raw_residue_port',
+ 'weinberg')
+
+V107_NEW_REPRODUCTIONS = ('relative-contact',)
+
+V107_STATUS_PARTITION = {'T': 454, 'C': 39, 'F': 19, 'O': 25, 'D': 59, 'H': 2}
+
+V107_METRICS = {'claims': '598',
+ 'status_T-LOCK': '0',
+ 'status_T': '454',
+ 'status_D': '59',
+ 'status_C': '39',
+ 'status_H': '2',
+ 'status_O': '25',
+ 'status_F': '19',
+ 'live_H_O': '27',
+ 'reproductions': '38',
+ 'evidence_none': '179',
+ 'evidence_one-architecture': '9',
+ 'evidence_recorded-audit': '31',
+ 'evidence_two-architecture': '379'}
+
+V107_CHECKS = (('V107-PRIOR-BYTES',
+  'thirteen exact v107 inputs reconstruct public v106 before all 192 unchanged historical guards'),
+ ('V107-CLAIM-LEDGERS',
+  'four scoped L1 theorems and one open common-apparatus owner have exact append-only ledgers and '
+  'declarations'),
+ ('V107-DEPENDENCIES',
+  'exact new premise and boundary edges preserve every earlier dependency without making an open '
+  'owner a theorem premise'),
+ ('V107-OWNER-BOUNDARY',
+  'all 593 prior claims and 26 live owners retain exact scopes; one counted open owner adds no '
+  'physical closure or gate'),
+ ('V107-PROOF-SCOPE',
+  'complete byte-pinned proofs retain exactly four auxiliary slots, initial trace accounts, '
+  'retained-output and fixed-word limits'),
+ ('V107-EVIDENCE',
+  'the complete minimum probe retains its two-architecture evidence while three proof-carried '
+  'theorems and the open owner use inline scope hashes'),
+ ('V107-SOURCE-CUSTODY',
+  'all 43 accepted source files and the unchanged minimum probe retain exact bytes, hashes and Git '
+  'blob identities'),
+ ('V107-REPRO-INVENTORY',
+  'one exact three-file contact audit extends the validated reproduction inventory from 37 to 38 '
+  'without executing a scientific verifier'))
+
+
+@lru_cache(maxsize=1)
+def v107_current_snapshot():
+    """Validate all current inputs before exposing any historical bytes."""
+    data = {}
+    try:
+        for name, contract in V107_INPUT_PATCH.items():
+            path = ROOT / 'canon' / name
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            if (len(content) != contract['current_bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                return None
+            data[name] = content
+        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        if inventory != frozenset(V107_REPRODUCTIONS):
+            return None
+        if inventory - frozenset(V107_NEW_REPRODUCTIONS) != frozenset(V106_REPRODUCTIONS):
+            return None
+        for relative, contract in V107_SOURCE_FILES.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            blob = hashlib.sha1(b'blob ' + str(len(content)).encode('ascii')
+                               + b'\0' + content).hexdigest()
+            if (len(content) != contract['bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['sha256']
+                    or blob != contract['git_blob']):
+                return None
+        for relative, contract in V107_REPRODUCTION_FILES.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            blob = hashlib.sha1(b'blob ' + str(len(content)).encode('ascii')
+                               + b'\0' + content).hexdigest()
+            if (len(content) != contract['bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['sha256']
+                    or blob != contract['git_blob']):
+                return None
+        actual_reproduction_files = {
+            path.relative_to(ROOT).as_posix()
+            for path in (REPRODUCE / 'relative-contact').rglob('*')
+            if path.is_file()
+        }
+        if actual_reproduction_files != set(V107_REPRODUCTION_FILES):
+            return None
+    except OSError:
+        return None
+    return {'canon': data, 'reproductions': inventory}
+
+
+@lru_cache(maxsize=13)
+def v107_previous_bytes(path):
+    """Reconstruct exact public v106 only from the validated v107 view."""
+    if path.parent != ROOT / 'canon' or path.name not in V107_INPUT_PATCH:
+        return None
+    snapshot = v107_current_snapshot()
+    if snapshot is None:
+        return None
+    contract = V107_INPUT_PATCH[path.name]
+    lines = snapshot['canon'][path.name].decode('utf-8').splitlines(keepends=True)
+    for first, last, original in reversed(contract['restore']):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = ''.join(lines).encode('utf-8')
+    if (len(previous) != contract['prior_bytes']
+            or hashlib.sha256(previous).hexdigest() != contract['prior_sha256']):
+        return None
+    return previous
+
+
+def v107_previous_reproduction_dirs():
+    """Remove only the declared new audit from the validated actual set."""
+    snapshot = v107_current_snapshot()
+    return (set(snapshot['reproductions']) - set(V107_NEW_REPRODUCTIONS)
+            if snapshot is not None else set())
+
+
+def v107_current_checks():
+    snapshot = v107_current_snapshot()
+    if snapshot is None:
+        return [(tag, description, False) for tag, description in V107_CHECKS]
+    prior_bytes = {name: v107_previous_bytes(ROOT / 'canon' / name)
+                   for name in V107_INPUT_PATCH}
+    if any(value is None for value in prior_bytes.values()):
+        return [(tag, description, False) for tag, description in V107_CHECKS]
+    names = tuple(name for name in V107_INPUT_PATCH if name.endswith('.tsv'))
+    prior = {name: v87_table_bytes(prior_bytes[name]) for name in names}
+    current = {name: v87_table_bytes(snapshot['canon'][name]) for name in names}
+    old_index = {row['claim_id']: row for row in prior['REGISTRY.tsv']}
+    index = {row['claim_id']: row for row in current['REGISTRY.tsv']}
+    normative = {row['item_id']: row for row in current['NORMATIVE.tsv']}
+    evidence = {row['claim_id']: row for row in current['EVIDENCE.tsv']}
+    additions = {name: current[name][len(prior[name]):] for name in V107_ADDITIONS}
+    exact_additions = all(
+        current[name][:len(prior[name])] == prior[name]
+        and len(additions[name]) == contract['rows']
+        and v104_rows_sha256(additions[name]) == contract['sha256']
+        for name, contract in V107_ADDITIONS.items())
+    claims = set(V107_CLAIM_STATUS)
+    theorem_ids = {claim for claim, status in V107_CLAIM_STATUS.items() if status == 'T'}
+    open_ids = {claim for claim, status in V107_CLAIM_STATUS.items() if status == 'O'}
+    exact_claims = (
+        len(theorem_ids) == 4 and len(open_ids) == 1
+        and all(
+            index.get(claim, {}).get('status') == status
+            and normative.get(claim, {}).get('item_type')
+                == ('THEOREM' if status == 'T' else 'OBLIGATION')
+            and normative.get(claim, {}).get('claim_id') == claim
+            and normative.get(claim, {}).get('status') == status
+            and normative.get(claim, {}).get('layer') == 'L1'
+            and normative.get(claim, {}).get('gate_ids') == ''
+            and normative.get(claim, {}).get('statement_source') == 'canon/CANON.md::' + claim
+            for claim, status in V107_CLAIM_STATUS.items()))
+    declared = additions['HISTORY.tsv']
+    exact_declarations = (
+        len(declared) == len(claims)
+        and {row['claim_id'] for row in declared} == claims
+        and all(row['event_sequence'] == '1'
+                and row['event_type'] == 'DECLARE'
+                and row['previous_status'] == '-'
+                and row['new_status'] == V107_CLAIM_STATUS[row['claim_id']]
+                and row['release'] == 'canon-v107'
+                and row['scope_sha256'] == hashlib.sha256(
+                    index[row['claim_id']]['scope'].encode('utf-8')).hexdigest()
+                and row['evidence_id'] == evidence[row['claim_id']]['evidence_id']
+                and row['evidence_sha256'] == evidence[row['claim_id']]['sha256']
+                and row['evidence_location'] == evidence[row['claim_id']]['location']
+                for row in declared))
+    counts = {status: sum(row['status'] == status for row in index.values())
+              for status in {row['status'] for row in index.values()}}
+    metrics = {row['metric']: row['value'] for row in current['STATUS_COUNTS.tsv']}
+    dependencies = additions['DEPENDENCIES.tsv']
+    exact_dependencies = (
+        exact_additions
+        and all(row['item_id'] in claims and row['depends_on'] in normative
+                for row in dependencies)
+        and {(row['item_id'], row['depends_on'], row['relation']) for row in dependencies}
+            == set(V107_DEPENDENCY_EDGES)
+        and all(row['relation'] == 'BOUNDED_BY'
+                for row in dependencies
+                if row['item_id'] in theorem_ids
+                and row['depends_on'] in index
+                and index[row['depends_on']]['status'] in {'H', 'O'}))
+    old_live = {claim: row for claim, row in old_index.items() if row['status'] in {'H', 'O'}}
+    live = {claim: row for claim, row in index.items() if row['status'] in {'H', 'O'}}
+    exact_owner_boundary = (
+        len(old_index) == 593 and len(old_live) == 26 and len(live) == 27
+        and set(live) == set(old_live) | open_ids
+        and all(index.get(claim) == row for claim, row in old_index.items())
+        and current['GATES.tsv'] == prior['GATES.tsv']
+        and [row for row in current['FRONTIER_PROGRAMS.tsv']
+             if row['claim_id'] not in open_ids] == prior['FRONTIER_PROGRAMS.tsv']
+        and [row for row in current['FRONTIER_PROGRAMS.tsv']
+             if row['claim_id'] in open_ids] == V107_PROGRAM_ADDITIONS
+        and all(row['claim_id'] in open_ids and row['work_state'] == 'STOP'
+                and row['work_mode'] == 'FORMAL'
+                for row in V107_PROGRAM_ADDITIONS)
+        and current['CORE_SELECTION.tsv'] == prior['CORE_SELECTION.tsv']
+            + additions['CORE_SELECTION.tsv'])
+    canon = snapshot['canon']['CANON.md'].decode('utf-8')
+    exact_proofs = True
+    for claim, contract in V107_PROOF_CONTRACTS.items():
+        first = canon.find(contract['begin'])
+        if first < 0 or canon.count(contract['begin']) != 1:
+            exact_proofs = False
+            continue
+        block = canon[first:first + contract['characters']].encode('utf-8')
+        normalized = ' '.join(block.decode('utf-8').split())
+        exact_proofs = exact_proofs and (
+            len(block) == contract['bytes']
+            and hashlib.sha256(block).hexdigest() == contract['sha256']
+            and block.decode('utf-8').count(contract['claim_marker']) == 1
+            and all(clause in normalized for clause in contract['required_clauses']))
+    exact_proofs = exact_proofs and set(V107_PROOF_CONTRACTS) == claims
+    minimum = 'RELATIVE-CONTACT-FOUR-SLOT-MINIMUM'
+    exact_evidence = (
+        set(V107_EVIDENCE_CONTRACTS) == claims
+        and all(evidence.get(claim) == contract
+                and index[claim]['evidence'] == contract['location']
+                for claim, contract in V107_EVIDENCE_CONTRACTS.items())
+        and evidence[minimum]['evidence_kind'] == 'PUBLIC_PROBE'
+        and evidence[minimum]['location']
+            == 'probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/RESULT.md'
+        and evidence[minimum]['architecture_requirement'] == 'two-architecture'
+        and all(evidence[claim]['evidence_kind'] == 'INLINE_CANON'
+                and evidence[claim]['location'] == 'inline'
+                and evidence[claim]['hash_mode'] == 'registry-scope-sha256-v1'
+                and evidence[claim]['architecture_requirement'] == 'none'
+                and evidence[claim]['sha256'] == hashlib.sha256(
+                    index[claim]['scope'].encode('utf-8')).hexdigest()
+                for claim in claims - {minimum}))
+    probe_prefix = 'probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/'
+    probe_files = {
+        path.relative_to(ROOT).as_posix()
+        for path in (ROOT / probe_prefix).rglob('*')
+        if path.is_file() and '__pycache__' not in path.parts and path.suffix != '.pyc'
+    }
+    expected_probe_files = {path for path in V107_SOURCE_FILES if path.startswith(probe_prefix)}
+    probe_manifest = ''.join(
+        V107_SOURCE_FILES[path]['sha256'] + '  ' + path + '\n'
+        for path in sorted(expected_probe_files))
+    exact_source_custody = (
+        len(V107_SOURCE_FILES) == 43
+        and len(V107_ACCEPTED_SOURCE_COMMIT) == 40
+        and len(expected_probe_files) == 7
+        and probe_files == expected_probe_files
+        and hashlib.sha256(probe_manifest.encode('utf-8')).hexdigest()
+            == evidence[minimum]['sha256'])
+    results = (
+        len(V107_INPUT_PATCH) == 13 and set(V107_INPUT_PATCH) == set(V106_INPUT_PATCH)
+        and all(contract['prior_bytes'] == V106_INPUT_PATCH[name]['current_bytes']
+                and contract['prior_sha256'] == V106_INPUT_PATCH[name]['current_sha256']
+                for name, contract in V107_INPUT_PATCH.items()),
+        exact_additions and exact_claims and exact_declarations
+        and len(index) == 598 and set(index) == set(old_index) | claims
+        and counts == V107_STATUS_PARTITION and metrics == V107_METRICS,
+        exact_dependencies,
+        exact_additions and exact_owner_boundary,
+        exact_proofs and exact_dependencies and exact_owner_boundary,
+        exact_evidence and exact_declarations,
+        exact_source_custody,
+        snapshot['reproductions'] == frozenset(V107_REPRODUCTIONS)
+        and v107_previous_reproduction_dirs() == set(V106_REPRODUCTIONS)
+        and V107_NEW_REPRODUCTIONS == ('relative-contact',)
+        and set(V107_NEW_REPRODUCTIONS).isdisjoint(V106_REPRODUCTIONS)
+        and set(V107_REPRODUCTION_FILES) == {
+            'reproduce/relative-contact/' + name
+            for name in ('verify.py', 'EXPECTED.txt', 'README.md')},
+    )
+    return [(tag, description, ok) for (tag, description), ok in zip(V107_CHECKS, results)]
+
+
 # Exact v106 release accounting and reversible public v105 reconstruction.
 # Structural custody only. No scientific verifier is executed or imported.
 # The current and prior inputs are pinned; only the explicit inverse edits
@@ -523,12 +1237,14 @@ def v106_current_snapshot():
     data = {}
     try:
         for name, contract in V106_INPUT_PATCH.items():
-            content = (ROOT / 'canon' / name).read_bytes()
+            content = v107_previous_bytes(ROOT / 'canon' / name)
+            if content is None:
+                return None
             if (len(content) != contract['current_bytes']
                     or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
                 return None
             data[name] = content
-        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        inventory = frozenset(v107_previous_reproduction_dirs())
         if inventory != frozenset(V106_REPRODUCTIONS):
             return None
         if inventory - frozenset(V106_NEW_REPRODUCTIONS) != frozenset(V105_REPRODUCTIONS):
@@ -22198,9 +22914,10 @@ def run():
     checks.extend(v104_current_checks())
     checks.extend(v105_current_checks())
     checks.extend(v106_current_checks())
+    checks.extend(v107_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v106")
+    print("historical guards: exact reconstructed v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v107")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0
