@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v106. Normative authority and activation
+**Release identity:** Public Canon v107. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v106 also declares a discrete architecture. It does not
+Public Canon v107 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -49,6 +49,21 @@ Native occupancy charge and the safe-window spectral energy remain distinct.
 Finite physical preparation, selective detection, quantitative retention and
 empirical occurrence remain open; the conditional one-shot coin construction
 is not a premise or repeated-gate implementation of this theorem.
+
+RELATIVE-CONTACT-INTEGRAL-LAW [T] supplies a separate total conservative
+contact on marked integral slots. With exactly four auxiliary slots on
+O^26, initial data (6,0^21) and the declared contact/permutation alphabet,
+RELATIVE-CONTACT-FOUR-SLOT-MINIMUM [T] gives sharp initial auxiliary trace
+accounts 12 for (-3,3,3,3,0^18) and 27 for (3,3,3,3,0^18).
+The account is conserved while the ready bank changes. For N disjoint
+copies of that known-input load, with every changing auxiliary resource
+counted and no uncounted residue exchange, retaining N specified outputs
+needs at least 4N auxiliary slots and initial trace account 12N. Signed
+copies attain both, while positive copies give only the upper bound 27N.
+One fixed word preserves input residue distance. A common varied-input
+preparation, response, record and funded renewal contract remains open
+under RELATIVE-CONTACT-COMMON-APPARATUS-OPEN [O]. These are conditional
+L1 statements, without a native-U or measured-energy identification.
 
 The native zero predicate now has an exact comparison with the declared
 integer field shell: the piston swap carries it to the shell residue
@@ -472,6 +487,8 @@ The stable orientation claims are generated from the registry:
 - COHERENT-W-LOCALIZED-RING-CLOSURE [T]: At L1 for the chosen O=Z[zeta_20] and full finite-support port module, W=A/5 is a local Hermitian-form-preserving automorphism of direct_sum O[1/5]^4 with inverse A^dagger/5; O[1/5] is minimal among coefficient rings containing O for that full module. Raw A is injective but not onto direct_sum O^4. Raw residues retain their scale and no unital O[1/5] to F_5 map exists. Unit Hilbert normalization uses one fixed preparation scalar and may leave the localized coefficient module.
 - ACTIVE-ISOSPECTRAL-RECORD [T]: L1 on the fixed v105 homogeneous U_rec and its pinned active source: psi_plus/minus=(I+/-(U_rec^2-U_rec^-2))chi/sqrt(Z) have identical initial populations and complete spectral measures for all 26 old-memory labels and passive references; on the 25-label unwritten-memory family their exact three-step write contrast is greater than 1/50; supplied complete preparation and coherent setting gates preserve their controlled phases; no incoming-unbound capture, occurrence or native compilation
 - FINITE-COHERENT-BATTERY-DRIFT [T]: L1 for any supplied bounded 0<=Q<=Delta I, d>0, m=ceil(Delta/d), integer N>=2m and the stated sine-ready finite battery: complete total-charge sectors define a full-space unitary representation Gamma(U) conserving floor(Q/d)*d+B exactly; joint reference-uniform whole-word error is at most 2m sin(pi/(2L)), L=N-2m+2; every rounded-energy-conserving unitary changes original Q+B by an operator between -d I and d I; supplied coherence and spectral gates, not exact original-energy conservation or locality
+- RELATIVE-CONTACT-FOUR-SLOT-MINIMUM [T]: at L1 on O^26 with O=Z[j], rho=j^2, the declared total relative contact, arbitrary whole-slot permutations, initial data (6,0^21), exactly four arbitrary auxiliary slots and complete endpoint equality, the least initial auxiliary positive trace account is 27 for (3,3,3,3,0^18) and 12 for (-3,3,3,3,0^18); complete endpoint accounts and inverse witnesses attain both; no shortest length, common unknown-input encoder, native realization or physical energy interpretation is asserted
+- RELATIVE-CONTACT-RETAINED-BANK-CAPACITY [T]: at L1 in the same declared contact/permutation alphabet, the stated used banks cannot return to their initial states while prepared output data stay fixed and every other resource returns exactly; for N disjoint known-input loads and N retained signed or positive outputs, all changing auxiliary resources satisfy L_aux>=4N and E_aux(initial)>=12N; signed disjoint copies attain both, while positive copies give only the upper bound 27N; initial loads and sites are supplied and no clean or autonomous renewal is asserted
 
 <!-- END GENERATED CORE CLAIMS -->
 Time is a counter. Space is read through commutators. The modulus and

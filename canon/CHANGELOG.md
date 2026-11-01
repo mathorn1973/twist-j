@@ -1,11 +1,38 @@
 # Canon changelog (public series)
 
-## Public Canon v106
+## Public Canon v107
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
+Registry snapshot: 598 claims; 0 T-LOCK, 454 T, 59 D, 39 C, 2 H, 25 O, 19 F; 27 live H/O.
+Reproduction witnesses: 38.
+<!-- END GENERATED CURRENT COUNTS -->
+
+Adopt four reviewed conditional L1 theorems about the supplied integral
+relative contact: its total conservative law, sharp known-input preparation
+minima with exactly four auxiliary slots, retained-output bank and capacity
+bounds, and the fixed-program residue-distance restriction. The signed
+minimum is 12 and the positive minimum is 27 on the complete 26-slot carrier.
+Both are initial trace accounts; conservation does not preserve a ready bank.
+
+The minimum theorem uses a proved finite domain and complete two-architecture
+public-probe exclusion of every cheaper positive endpoint pair. Both exact
+witnesses include the complete final auxiliary and inverse. The contact has
+an inline universal proof and the supplementary relative-contact reproduction.
+No historical shortest-word inventory or larger-bank positive minimum is
+adopted. The Gram and finite-window archive proposals remain non-canonical.
+
+Add the explicit L1 common varied-input apparatus obligation with compatible
+carrier, preparation, response, record and funded renewal requirements.
+It cannot be closed by placing separate constructions side by side or by
+requiring a target already excluded by the accepted residue invariants.
+All 593 prior claims, their statuses and scopes, and all 26 prior live H/O
+owners and decision conditions remain unchanged. No native implementation,
+physical energy identification, occurrence law or layer transfer is added.
+
+## Public Canon v106
+
 Registry snapshot: 593 claims; 0 T-LOCK, 450 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 37.
-<!-- END GENERATED CURRENT COUNTS -->
 
 Adopt sixteen exact analytical L1 theorems. Seven describe the specified
 coherent integer walk, its localized coefficient carrier, spatial propagation,
