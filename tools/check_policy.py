@@ -131,6 +131,18 @@ if workflow_files != {"policy.yml"}:
     fail("policy.yml must be the only workflow")
 workflow = (workflows / "policy.yml").read_text(encoding="utf-8")
 for invariant in (
+    "  workflow_dispatch:\n\npermissions:",
+    "if: github.ref_type != 'tag' && github.event_name != 'release' && github.event_name != 'workflow_dispatch'",
+    "ref: ${{ github.event_name == 'workflow_dispatch' && 'a193e389fb1ddb0bdc89165b015c95a17eb1e425' || github.sha }}",
+    "      - name: Pin manual recovery to immutable v106\n        if: github.event_name == 'workflow_dispatch'\n        run: |\n          test \"$(git rev-parse HEAD)\" = \"a193e389fb1ddb0bdc89165b015c95a17eb1e425\"\n          test \"$(git rev-parse refs/tags/canon-v106)\" = \"8f2d16a216524a04be3e1210821ab1e27535ed77\"\n          test \"$(git rev-parse 'refs/tags/canon-v106^{commit}')\" = \"a193e389fb1ddb0bdc89165b015c95a17eb1e425\"\n          echo \"RECOVERY CONTROLLER $GITHUB_SHA\"\n          echo \"RECOVERY SCIENTIFIC CHECKOUT a193e389fb1ddb0bdc89165b015c95a17eb1e425\"\n          echo \"RECOVERY TAG canon-v106 8f2d16a216524a04be3e1210821ab1e27535ed77\"",
+    "      - name: Reproduce every frozen public probe for v106 recovery\n        if: github.event_name == 'workflow_dispatch'\n        env:\n          PYTHONDONTWRITEBYTECODE: \"1\"\n        run: python -u tools/check_verifier.py\n      - name: Reproduce every frozen minimal reproduction for v106 recovery\n        if: github.event_name == 'workflow_dispatch'\n        env:\n          PYTHONDONTWRITEBYTECODE: \"1\"\n        run: python -u tools/check_reproduce.py",
+    "      - name: Validate v106 activation after complete recovery replay\n        if: github.event_name == 'workflow_dispatch'\n        env:\n          PYTHONDONTWRITEBYTECODE: \"1\"\n        run: python -u tools/check_activation.py --post-activation --expected-tag canon-v106",
+    "      - name: Run activation readback on immutable publication events\n        if: github.event_name != 'workflow_dispatch'",
+    "      - name: Preserve tag readback manifest\n        if: github.ref_type == 'tag' && github.event_name != 'workflow_dispatch'",
+    "      - name: Verify published release assets\n        if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'",
+    "RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && 'canon-v106' || github.event.release.tag_name }}",
+    "python tools/check_release_manifest.py",
+    "cmp canon/SHA256SUMS /tmp/twistj-release/SHA256SUMS",
     "permissions:\n  contents: read",
     "jobs:\n  architecture:",
     "name: architecture-${{ matrix.architecture }}",
@@ -139,11 +151,11 @@ for invariant in (
     "architecture: aarch64\n            runner: ubuntu-24.04-arm",
     "runs-on: ${{ matrix.runner }}",
     "runs-on: ${{ matrix.runner }}\n    timeout-minutes: 45",
-    "  check:\n    if: always() && github.ref_type != 'tag' && github.event_name != 'release'\n    needs: architecture\n    runs-on: ubuntu-latest",
+    "  check:\n    if: always() && github.ref_type != 'tag' && github.event_name != 'release' && github.event_name != 'workflow_dispatch'\n    needs: architecture\n    runs-on: ubuntu-latest",
     "needs: architecture\n    runs-on: ubuntu-latest\n    timeout-minutes: 5",
     "if: needs.architecture.result != 'success'",
-    "  publication:\n    if: github.ref_type == 'tag' || github.event_name == 'release'\n    runs-on: ubuntu-latest",
-    "if: github.ref_type == 'tag' || github.event_name == 'release'\n    runs-on: ubuntu-latest\n    timeout-minutes: 40",
+    "  publication:\n    if: github.ref_type == 'tag' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'\n    runs-on: ubuntu-latest",
+    "if: github.ref_type == 'tag' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'\n    runs-on: ubuntu-latest\n    timeout-minutes: 60",
     "actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5",
     "persist-credentials: false",
     "actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
@@ -167,6 +179,13 @@ publication_at = workflow.find("\n  publication:")
 upload_at = workflow.find("actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a")
 if publication_at < 0 or upload_at < publication_at:
     fail("activation artifact upload must live only in the publication job")
+publication = workflow[publication_at:]
+if "--base" in publication or "BASE_SHA" in publication:
+    fail("publication recovery must replay the complete frozen inventory")
+if "continue-on-error:" in workflow:
+    fail("workflow checks must fail closed")
+if "inputs:" in workflow:
+    fail("the fixed v106 recovery must not accept arbitrary input")
 if "pull_request_target:" in workflow:
     fail("pull_request_target is forbidden")
 

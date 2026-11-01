@@ -7,13 +7,14 @@ on:
   pull_request:
   release:
     types: [published]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
   architecture:
-    if: github.ref_type != 'tag' && github.event_name != 'release'
+    if: github.ref_type != 'tag' && github.event_name != 'release' && github.event_name != 'workflow_dispatch'
     name: architecture-${{ matrix.architecture }}
     strategy:
       fail-fast: false
@@ -48,7 +49,7 @@ jobs:
         run: python tools/check_reproduce.py --base "$BASE_SHA"
 
   check:
-    if: always() && github.ref_type != 'tag' && github.event_name != 'release'
+    if: always() && github.ref_type != 'tag' && github.event_name != 'release' && github.event_name != 'workflow_dispatch'
     needs: architecture
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -61,41 +62,67 @@ jobs:
       - run: echo "TWO-ARCHITECTURE CHECK PASS"
 
   publication:
-    if: github.ref_type == 'tag' || github.event_name == 'release'
+    if: github.ref_type == 'tag' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && 'a193e389fb1ddb0bdc89165b015c95a17eb1e425' || github.sha }}
           fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.12"
+      - name: Pin manual recovery to immutable v106
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          test "$(git rev-parse HEAD)" = "a193e389fb1ddb0bdc89165b015c95a17eb1e425"
+          test "$(git rev-parse refs/tags/canon-v106)" = "8f2d16a216524a04be3e1210821ab1e27535ed77"
+          test "$(git rev-parse 'refs/tags/canon-v106^{commit}')" = "a193e389fb1ddb0bdc89165b015c95a17eb1e425"
+          echo "RECOVERY CONTROLLER $GITHUB_SHA"
+          echo "RECOVERY SCIENTIFIC CHECKOUT a193e389fb1ddb0bdc89165b015c95a17eb1e425"
+          echo "RECOVERY TAG canon-v106 8f2d16a216524a04be3e1210821ab1e27535ed77"
       - run: python tools/check_policy.py
       - run: python -m unittest discover -s tools -p 'test_*.py'
       - run: python tools/check_canon.py
       - run: python tools/check_ledger.py
       - run: python tools/check_gate_contract.py
+      - name: Reproduce every frozen public probe for v106 recovery
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -u tools/check_verifier.py
+      - name: Reproduce every frozen minimal reproduction for v106 recovery
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -u tools/check_reproduce.py
       - name: Run activation readback on immutable publication events
+        if: github.event_name != 'workflow_dispatch'
         env:
           PUBLICATION_TAG: ${{ github.event.release.tag_name || github.ref_name }}
         run: |
           python tools/check_activation.py --full --post-activation \
             --expected-tag "$PUBLICATION_TAG" \
             --manifest-out activation-manifest.json
+      - name: Validate v106 activation after complete recovery replay
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -u tools/check_activation.py --post-activation --expected-tag canon-v106
       - name: Preserve tag readback manifest
-        if: github.ref_type == 'tag'
+        if: github.ref_type == 'tag' && github.event_name != 'workflow_dispatch'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: ${{ github.ref_name }}-activation-manifest
           path: activation-manifest.json
           if-no-files-found: error
       - name: Verify published release assets
-        if: github.event_name == 'release'
+        if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && 'canon-v106' || github.event.release.tag_name }}
         run: |
           mkdir -p /tmp/twistj-release
           gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY"
@@ -106,3 +133,6 @@ jobs:
             /tmp/twistj-release/activation-manifest.json \
             --expected-tag "$RELEASE_TAG"
           cmp canon/SHA256SUMS /tmp/twistj-release/SHA256SUMS
+      - name: Complete pinned v106 recovery
+        if: github.event_name == 'workflow_dispatch'
+        run: echo "PINNED V106 RECOVERY PASS - complete probes, reproductions, activation and published assets"
