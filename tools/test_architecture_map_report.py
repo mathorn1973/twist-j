@@ -120,21 +120,108 @@ class ArchitectureMapReportTests(unittest.TestCase):
             },
         )
 
+    def test_v107_contact_scope_and_open_apparatus_owner(self) -> None:
+        normative_rows = architecture.read_tsv(
+            ROOT / "canon/NORMATIVE.tsv", architecture.NORMATIVE_FIELDS
+        )
+        dependency_rows = architecture.read_tsv(
+            ROOT / "canon/DEPENDENCIES.tsv", architecture.DEPENDENCY_FIELDS
+        )
+        registry = {
+            row["claim_id"]: row
+            for row in architecture.read_tsv(
+                ROOT / "canon/REGISTRY.tsv", architecture.REGISTRY_FIELDS
+            )
+        }
+        evidence = {
+            row["claim_id"]: row
+            for row in architecture.read_tsv(
+                ROOT / "canon/EVIDENCE.tsv", architecture.EVIDENCE_FIELDS
+            )
+        }
+        normative = {row["item_id"]: row for row in normative_rows}
+        requires = architecture.dependency_graph(
+            normative, dependency_rows, "REQUIRES"
+        )
+        bounded_by = architecture.dependency_graph(
+            normative, dependency_rows, "BOUNDED_BY"
+        )
+        contact = "RELATIVE-CONTACT-INTEGRAL-LAW"
+        minimum = "RELATIVE-CONTACT-FOUR-SLOT-MINIMUM"
+        renewal = "RELATIVE-CONTACT-RETAINED-BANK-CAPACITY"
+        fixed_word = "RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY"
+        owner = "RELATIVE-CONTACT-COMMON-APPARATUS-OPEN"
+        expected = {
+            contact: {"J-UNIT"},
+            minimum: {contact},
+            renewal: {contact, minimum},
+            fixed_word: {contact},
+            owner: {contact},
+        }
+        # These supplied contact premises do not derive a native-U operation.
+        # The optional Gram/archive notes have no new public claim rows.
+        self.assertEqual(
+            {item for item in normative if item.startswith("RELATIVE-CONTACT-")},
+            set(expected),
+        )
+        for item, parents in expected.items():
+            self.assertEqual(requires[item], parents)
+            self.assertEqual(normative[item]["layer"], "L1")
+            self.assertNotIn(item, self.report.direct_architecture_requires)
+            self.assertNotIn(item, self.report.transitive_architecture_dependents)
+            self.assertNotIn(item, self.report.dependency_terminals)
+            self.assertEqual(
+                registry[item]["status"], "O" if item == owner else "T"
+            )
+            self.assertEqual(
+                normative[item]["status"], registry[item]["status"]
+            )
+        self.assertEqual(bounded_by[owner], {minimum, renewal, fixed_word})
+        self.assertEqual(normative[owner]["item_type"], "OBLIGATION")
+        self.assertEqual(normative[owner]["gate_ids"], "")
+        # The new common-carrier contract stays open and does not close the
+        # existing physical apparatus or native memory-contact owners.
+        for unchanged_owner in (
+            "QDD-INSTRUMENT-APPARATUS",
+            "QUADRATIC-MEMORY-NATIVE-CONTACT",
+        ):
+            self.assertEqual(registry[unchanged_owner]["status"], "O")
+        expected_evidence = {
+            contact: ("INLINE_CANON", "none"),
+            minimum: ("PUBLIC_PROBE", "two-architecture"),
+            renewal: ("INLINE_CANON", "none"),
+            fixed_word: ("INLINE_CANON", "none"),
+            owner: ("INLINE_CANON", "none"),
+        }
+        for item, (kind, architecture_requirement) in expected_evidence.items():
+            self.assertEqual(evidence[item]["evidence_kind"], kind)
+            self.assertEqual(
+                evidence[item]["architecture_requirement"], architecture_requirement
+            )
+            # REGISTRY evidence is one path or exactly inline, never a
+            # semicolon-separated list of paths.
+            self.assertEqual(
+                registry[item]["evidence"],
+                "probes/P-RELATIVE-CONTACT-FOUR-SLOT-MINIMUM-1/RESULT.md"
+                if item == minimum else "inline",
+            )
+
+
     def test_current_counts_match_the_public_summary(self) -> None:
         # audit(ROOT) reads this checkout, not the historical v10 map note.
-        # v106 adds 16 inline L1 theorem rows; previous evidence classes are unchanged.
-        self.assertEqual(self.report.claims, 593)
+        # v107 adds four L1 theorems and one open L1 apparatus contract.
+        self.assertEqual(self.report.claims, 598)
         self.assertEqual(
             self.report.status_counts,
-            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 24, "T": 450},
+            {"C": 39, "D": 59, "F": 19, "H": 2, "O": 25, "T": 454},
         )
         self.assertEqual(
             self.report.evidence_counts,
             {
-                "none": 175,
+                "none": 179,
                 "one-architecture": 9,
                 "recorded-audit": 31,
-                "two-architecture": 378,
+                "two-architecture": 379,
             },
         )
         self.assertFalse(self.report.count_mismatches)
