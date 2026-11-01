@@ -362,72 +362,57 @@ decimal, or foreign tag therefore triggers a failing readback, never
 publication.
 
 
-One input-free manual recovery route in this same workflow may read back the
-existing immutable `canon-v107` before or after release publication. It is an
-operational exception only for activation commit
-`03f010760d85c62795b74b3fa8fde79c2c36be7f`, content commit
-`f5615ed4dcdfc672dc2e468399284a1dc03ce805`, and annotated tag object
-`81c57853b7b5126fa2d8ec465b8ad903e2402c04`. Its exact controller revision must
-be reviewed and must pass the complete inventory on both architectures before
-dispatch. The token has only `contents: read` and `actions: read`; the latter
-permits readback of the exact archived recovery run attempt, not dispatch or
-workflow mutation. The workflow asserts that controller and workflow revisions agree,
-accepts only a branch controller ref (`refs/heads/`), then checks out and
-asserts the immutable activation and annotated tag. It
-executes the original tagged tools, with no overlay or changed scientific file.
+The same workflow permits one input-free manual postpublication readback for
+the existing immutable `canon-v107` release, not a new publication path. The
+controller must be reviewed at its exact public SHA, pass both complete
+architecture checks and the aggregate, and be dispatched from a stable branch
+ref at that SHA. It asserts matching controller/workflow revisions and accepts
+only `refs/heads/` controller refs. The scientific checkout is fixed to
+activation `03f010760d85c62795b74b3fa8fde79c2c36be7f`; the annotated tag object
+must remain `81c57853b7b5126fa2d8ec465b8ad903e2402c04`. Its content is
+`f5615ed4dcdfc672dc2e468399284a1dc03ce805`. The token has only `contents: read`
+and `actions: read`; the latter reads original run/job/artifact metadata.
 
-Architecture and publication jobs in this revised controller have 60-minute
-whole-job budgets; the aggregate remains at 5. This separately addresses
-observed whole-job cancellations at the original 45/40-minute limits, including
-a complete scientific replay interrupted during final job cleanup. It does
-not alter the budgets or conclusions of earlier immutable attempts. For
-visible progress it executes the complete tagged `check_verifier.py` and
-`check_reproduce.py` in separate mandatory steps, without `--base` and without
-changed time limits, expected outputs or ignored failures. The unchanged static
-post-activation checker then creates the manifest in the GitHub runner's
-temporary directory. Its `full=False` report is accurate: the two preceding
-successful whole-inventory steps establish full replay. All ordinary tag and
-release events retain their original `--full` activation command.
+The manual lane runs the unchanged tagged policy, unit, Canon, ledger and gate
+checks, then the complete tagged `check_verifier.py` and `check_reproduce.py`
+in separate mandatory unbuffered steps without `--base`. It then runs the
+unchanged static post-activation checker, without `--manifest-out`. Its honest
+`full=False` output is complemented by the preceding successful whole-inventory
+steps. No scientific limit, expected byte, preregistration, threshold, or failure
+condition changes. No controller file is overlaid on the scientific checkout.
+Ordinary tag/release events retain their existing `--full` activation command.
 
-For this tag only, a successful complete run of that reviewed GitHub controller
-is an admissible source of the first release manifest when the original tag job
-has exhausted its whole-job budget. This is the sole exception to the
-successful-tag-job origin requirement above. It does not admit locally generated
-manifests. The recovery artifact contains the unchanged tagged manifest schema,
-the exact tagged `SHA256SUMS`, and `recovery-provenance.json` binding repository,
-controller and workflow SHA, workflow ref, run ID and attempt, original tag
-object, activation/content commits, observed release state and both file hashes.
-The receipt is provenance, not a self-certified successful run.
+This lane accepts only published immutable release `430574383`, published at
+`2026-11-01T12:38:30Z`, with exactly its two original assets. Their fixed sizes
+and SHA-256 values are enforced. It verifies original successful tag run
+`41301206166`, attempt `2`, publication job `124841413548` and all mandatory
+tag steps, and original unexpired artifact `13084185131`. The downloaded ZIP
+must be 246070 bytes with SHA-256
+`9d1392f72ca4bab4edf014408e12b3b19f7da14e047cd46ed0e2de5482b46536`
+and contain exactly one `activation-manifest.json`. That manifest must be
+956369 bytes with SHA-256
+`9ab61f8638f87d0f5b3d7ca13ebca2e2584b7af33be4747205abe816eee4ef33`.
+The published manifest must equal those original artifact bytes. The published
+`SHA256SUMS` must be 415 bytes with SHA-256
+`21e8c6fe8eac20e5645625c3531960ada37914b7f87674becabc4edb05cb240b`
+and equal the tagged checksum file. The unchanged tagged release-manifest
+validator must pass. Missing/expired artifacts or any API/readback error fail.
 
-Acceptance requires external GitHub readback of the exact reviewed controller,
-successful whole job and attempt, every mandatory replay/readback step, and the
-artifact from that same attempt. Download and validate the manifest with the
-original tagged `check_release_manifest.py`, compare the checksum asset byte
-for byte, and check the receipt's identities and file hashes. Preserve the
-original timeout attempts. Never replace, move or recreate the tag.
+Manual recovery neither generates nor uploads a manifest or provenance file,
+creates/replaces an asset, edits/publishes a release, nor moves/recreates a tag.
+It has no prepublication fallback and no first-manifest exception. The ordinary
+successful-tag-job asset-origin rule remains unchanged. The original release
+keeps exactly its two assets. Acceptance requires external GitHub readback of
+the approved controller SHA and exact successful recovery run/attempt, including
+all mandatory steps. A printed marker or an earlier review is insufficient.
+Preserve all earlier cancellations as cancellations.
 
-The controller queries the fixed release endpoint. Only HTTP 404 means absent;
-all other API errors fail. If the release is already published, the job must
-also download and validate its existing original assets before uploading the
-recovery receipt. It never creates, edits or publishes a release or replaces a
-release asset. For an absent or draft release, the accepted recovery manifest
-may be attached to the draft, whose downloads must still pass the ordinary
-validators before publication. Recheck release state when accepting the run:
-if publication occurred after the controller observed absent/draft, require a
-successful published-assets readback before declaring postpublication checks
-complete. An existing successful tag manifest keeps precedence and is never
-replaced merely because recovery also produced a manifest.
-
-When this exception supplies the first release manifest, the exact downloaded
-`recovery-provenance.json` is a mandatory third immutable release asset beside
-`activation-manifest.json` and `SHA256SUMS`. Validate its approved controller,
-run ID/attempt and both asset digests before publishing; retain those bytes
-permanently even if the Actions artifact expires. A normal successful tag job
-still requires only the original two assets. If a published release carries
-the recovery receipt, the manual route also downloads it, verifies the fixed
-scientific pins and asset digests, requires its controller to equal this
-reviewed controller, and verifies that exact original run attempt is completed
-and successful in GitHub metadata. It never replaces the archived receipt.
+The revised 60-minute architecture/publication budgets address observed whole-job
+cancellations at the former 45/40-minute limits, including completed scientific
+replay interrupted during final cleanup. They do not retroactively change the
+workflow or conclusions of earlier immutable attempts. Sixty minutes is an
+execution allowance, not a mathematical runtime guarantee. All individual
+verifier limits and complete-inventory requirements remain unchanged.
 
 These are whole-job execution budgets for the complete replay inventory.
 They do not change any verifier's time limit, exact-output requirement,
@@ -435,17 +420,3 @@ preregistered threshold, or requirement that both architecture jobs succeed.
 
 `pull_request_target` is forbidden. Any new workflow or runner topology requires
 an explicit policy change.
-
-
-The published manual lane fails closed unless the release has all three recovery
-assets. It never treats a missing receipt as an ordinary two-asset release.
-Normal two-asset publication remains on the ordinary workflow route. In addition
-to exact controller, event, workflow path/ref and run-attempt identities, manual
-readback requires the original publication job and every mandatory recovery step
-to be completed successfully. It downloads the uniquely named artifact from
-that exact original run/attempt, requires precisely the three expected root
-files, and compares every published asset byte-for-byte with that artifact.
-A missing, expired or ambiguous artifact fails this readback. Durable release
-provenance preserves the audit link and hashes but does not replace this initial
-artifact verification. Ordinary release-event PASS alone does not validate the
-third recovery asset or complete this recovery-origin publication obligation.

@@ -134,15 +134,12 @@ for invariant in (
     '  workflow_dispatch:\n\npermissions:',
     'permissions:\n  contents: read\n  actions: read',
     "ref: ${{ github.event_name == 'workflow_dispatch' && '03f010760d85c62795b74b3fa8fde79c2c36be7f' || github.sha }}",
-    '      - name: Pin manual recovery to immutable v107\n        if: github.event_name == \'workflow_dispatch\'\n        run: |\n          test "$GITHUB_REPOSITORY" = "mathorn1973/twist-j"\n          test "$GITHUB_SHA" = "$GITHUB_WORKFLOW_SHA"\n          case "$GITHUB_REF" in refs/heads/?*) ;; *) echo "recovery controller requires a branch ref" >&2; exit 1 ;; esac\n          test "$(git rev-parse HEAD)" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"\n          test "$(git cat-file -t refs/tags/canon-v107)" = "tag"\n          test "$(git rev-parse refs/tags/canon-v107)" = "81c57853b7b5126fa2d8ec465b8ad903e2402c04"\n          test "$(git rev-parse \'refs/tags/canon-v107^{commit}\')" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"\n          test "$(git status --porcelain)" = ""\n          echo "RECOVERY CONTROLLER $GITHUB_SHA"\n          echo "RECOVERY RUN $GITHUB_RUN_ID ATTEMPT $GITHUB_RUN_ATTEMPT"\n          echo "RECOVERY SCIENTIFIC CHECKOUT 03f010760d85c62795b74b3fa8fde79c2c36be7f"',
-    '      - name: Reproduce every frozen public probe for v107 recovery\n        if: github.event_name == \'workflow_dispatch\'\n        env:\n          PYTHONDONTWRITEBYTECODE: "1"\n        run: python -u tools/check_verifier.py\n      - name: Reproduce every frozen minimal reproduction for v107 recovery\n        if: github.event_name == \'workflow_dispatch\'\n        env:\n          PYTHONDONTWRITEBYTECODE: "1"\n        run: python -u tools/check_reproduce.py',
+    '      - name: Pin manual postpublication readback to immutable v107\n        if: github.event_name == \'workflow_dispatch\'\n        run: |\n          test "$GITHUB_REPOSITORY" = "mathorn1973/twist-j"\n          test "$GITHUB_SHA" = "$GITHUB_WORKFLOW_SHA"\n          case "$GITHUB_REF" in refs/heads/?*) ;; *) echo "recovery controller requires a branch ref" >&2; exit 1 ;; esac\n          test "$(git rev-parse HEAD)" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"\n          test "$(git cat-file -t refs/tags/canon-v107)" = "tag"\n          test "$(git rev-parse refs/tags/canon-v107)" = "81c57853b7b5126fa2d8ec465b8ad903e2402c04"\n          test "$(git rev-parse \'refs/tags/canon-v107^{commit}\')" = "03f010760d85c62795b74b3fa8fde79c2c36be7f"\n          test "$(git status --porcelain)" = ""\n          echo "RECOVERY CONTROLLER $GITHUB_SHA"\n          echo "RECOVERY RUN $GITHUB_RUN_ID ATTEMPT $GITHUB_RUN_ATTEMPT"',
+    '      - name: Replay every frozen public probe for v107 postpublication readback\n        if: github.event_name == \'workflow_dispatch\'\n        env:\n          PYTHONDONTWRITEBYTECODE: "1"\n        run: python -u tools/check_verifier.py\n      - name: Replay every frozen minimal reproduction for v107 postpublication readback\n        if: github.event_name == \'workflow_dispatch\'\n        env:\n          PYTHONDONTWRITEBYTECODE: "1"\n        run: python -u tools/check_reproduce.py\n      - name: Validate static v107 activation after complete replay\n        if: github.event_name == \'workflow_dispatch\'\n        env:\n          PYTHONDONTWRITEBYTECODE: "1"\n        run: |\n          test "$(git status --porcelain)" = ""\n          python -u tools/check_activation.py --post-activation --expected-tag canon-v107',
     "      - name: Run activation readback on immutable publication events\n        if: github.event_name != 'workflow_dispatch'",
-    'python -u tools/check_activation.py --post-activation \\\n            --expected-tag canon-v107 \\\n            --manifest-out "$RUNNER_TEMP/v107-recovery/activation-manifest.json"',
-    "      - name: Validate v107 recovery assets and bind provenance\n        if: github.event_name == 'workflow_dispatch'",
-    "if: (github.ref_type == 'tag' && github.event_name != 'workflow_dispatch') || github.event_name == 'workflow_dispatch'",
-    "format('canon-v107-recovery-{0}-{1}', github.run_id, github.run_attempt)",
-    "format('{0}/v107-recovery/', runner.temp)",
-    'PINNED V107 RECOVERY PASS - complete replay, activation, applicable assets and provenance artifact',
+    "if: github.ref_type == 'tag' && github.event_name != 'workflow_dispatch'",
+    "      - name: Verify original v107 tag artifact and immutable published assets\n        if: github.event_name == 'workflow_dispatch'",
+    'PINNED V107 POSTPUBLICATION PASS - complete replay, activation and original immutable assets',
     "permissions:\n  contents: read",
     "jobs:\n  architecture:",
     "name: architecture-${{ matrix.architecture }}",
@@ -182,25 +179,28 @@ if publication_at < 0 or upload_at < publication_at:
 if "pull_request_target:" in workflow:
     fail("pull_request_target is forbidden")
 
-# Bind the operational receipt implementation reviewed with this controller.
+# Bind the reviewed read-only postpublication metadata/asset implementation.
 import hashlib
-receipt_start = workflow.index('          # BEGIN PINNED V107 RECOVERY RECEIPT\n')
-receipt_end_marker = '          # END PINNED V107 RECOVERY RECEIPT\n'
-receipt_end = workflow.index(receipt_end_marker, receipt_start) + len(receipt_end_marker)
-receipt_source = ''.join(line[10:] if line.startswith('          ') else line for line in workflow[receipt_start:receipt_end].splitlines(keepends=True))
-if hashlib.sha256(receipt_source.encode('utf-8')).hexdigest() != 'f1660a1158aa7da17efed781b03161ff125da12360ae5a7fc3fa4288966fe53a':
-    fail('v107 recovery receipt differs from its reviewed contract')
+begin = workflow.index('          # BEGIN PINNED V107 POSTPUBLICATION READBACK\n')
+end_marker = '          # END PINNED V107 POSTPUBLICATION READBACK\n'
+end = workflow.index(end_marker, begin) + len(end_marker)
+source = ''.join(line[10:] if line.startswith('          ') else line for line in workflow[begin:end].splitlines(keepends=True))
+if hashlib.sha256(source.encode()).hexdigest() != 'b9c96884ad2c72d09f725f733adf9c8eacffd2c8c858d36049d2a73a4ae49997':
+    fail('postpublication readback differs from its reviewed contract')
 for forbidden in ('continue-on-error:', 'workflow_call:', '  inputs:', 'contents: write', 'actions: write'):
     if forbidden in workflow:
-        fail('forbidden workflow recovery capability: ' + forbidden)
+        fail('forbidden recovery capability: ' + forbidden)
 publication = workflow[publication_at:]
 if '--base' in publication:
-    fail('publication must not use changed-path replay')
-if publication.index('python -u tools/check_verifier.py') > publication.index('python -u tools/check_reproduce.py'):
-    fail('recovery probe replay must precede minimal reproductions')
-if publication.index('python -u tools/check_reproduce.py') > publication.index('python -u tools/check_activation.py'):
-    fail('complete recovery replay must precede activation')
-if publication.index('name: Validate v107 recovery assets and bind provenance') > publication.index('name: Preserve tag readback manifest'):
-    fail('recovery artifact upload must follow validation')
+    fail('publication must not select changed paths')
+ordered = ('Pin manual postpublication readback to immutable v107', 'python -u tools/check_verifier.py',
+           'python -u tools/check_reproduce.py', 'python -u tools/check_activation.py',
+           'Verify original v107 tag artifact and immutable published assets',
+           'Complete pinned v107 postpublication readback')
+positions = [publication.index(marker) for marker in ordered]
+if positions != sorted(positions):
+    fail('manual readback steps are out of order')
+if workflow.count('--manifest-out') != 1:
+    fail('only the existing ordinary publication path may generate a manifest')
 
 print("POLICY PASS")
