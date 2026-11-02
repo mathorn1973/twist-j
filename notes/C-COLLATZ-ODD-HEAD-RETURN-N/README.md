@@ -47,8 +47,8 @@ The proofs establish four useful constraints on this description.
    the head coefficient has infinite first moment. Their logarithmic
    coefficients differ by an explicitly telescoping boundary term.
 
-The block used here is a run ending at one contracting step. It need not be
-the whole maximal contracting phase of an orbit.
+The block used here ends at the first step with valuation at least two.
+It need not include the whole maximal contracting phase of an orbit.
 
 ## Files and replay
 
