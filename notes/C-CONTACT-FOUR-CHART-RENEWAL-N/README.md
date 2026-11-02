@@ -82,12 +82,18 @@ finite reload or a different history representation.
 | [PROOF-RESOURCES.md](PROOF-RESOURCES.md) | Literal record costs, sum bounds, retention horizons and loading obstructions |
 | [REPLAY-SPEC.md](REPLAY-SPEC.md) | Fixed finite inventory and first-execution contract |
 | [verify.py](verify.py) | Exact integer implementation of native contacts and independent closed formulas |
+| [EXPECTED.txt](EXPECTED.txt) | Actual first stdout, 1167 bytes |
+| [RUN.md](RUN.md) | Public pin and neutral first-execution record |
+| [SHA256SUMS](SHA256SUMS) | Hashes of the seven companion files |
 
 The identities were derived before this verifier was written. This is a
-result-exposed publication replay. The complete source and specification
-will be publicly pinned and read back before its first execution. Actual
-stdout and a neutral run record will then be appended without rewriting
-the pin.
+result-exposed publication replay. The complete source was publicly pinned at
+[4b7e4e7d176bdae9bf77546d91fcb5a9d93fa234](https://github.com/mathorn1973/twist-j/commit/4b7e4e7d176bdae9bf77546d91fcb5a9d93fa234)
+and all five files were read back before the first execution. That execution
+passed all 12,648 cases and full inverses on Linux x86_64 with Python 3.13.5,
+exited zero and wrote empty stderr. Actual stdout and the neutral record are
+appended without rewriting the pin. Both proofs, the specification and the
+verifier remain unchanged.
 
 From the repository root, with Python 3.12 or later and assertions enabled:
 

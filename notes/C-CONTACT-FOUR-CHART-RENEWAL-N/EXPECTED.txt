@@ -1,0 +1,19 @@
+CONTACT-FOUR-CHART-REPLAY v1
+arithmetic: exact rho-basis integers; literal native C powers
+q=3: 8192 complete four-chart cases; PASS
+supplied gains q=1..9: 2304 complete cases; PASS
+occupied archives: 96 complete cases, two literal old records; PASS
+outside depth: 8 cases, depths 13 and 14; DEPTH_LIMIT as specified
+Galois covariance: every corresponding powered-contact boundary; PASS
+primitive word lengths d=1,2,3,4: 34,38,37,41
+current reader: scalar gcd, four shapes and present depth prefix; PASS
+original interface: 2048 actual complete cases; record accounts and sums; PASS
+full native inverses: 12648; PASS
+primitive calls: 948600 enabled: 243095 refused: 705505
+complete-output fingerprint SHA-256: 46084744671a17aa3cf4951881d2f889ebc715582ac70c46953da88854865722
+3->5 necessary funding: original 4602; four-chart 4535
+fixed-point record accounts: original 55; four-chart 75
+unit trace recurrence: r=0..64; resource box: v=0..12,odd m<=31; PASS
+Mersenne prefixes: k=2..64, all initial valuation-one steps; PASS
+scope: no source reload or autonomous chart selector executed
+scope: infinite resource obstructions are proof-only; no Collatz convergence claim
