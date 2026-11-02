@@ -58,12 +58,18 @@ the whole maximal contracting phase of an orbit.
 | [MEASURE.md](MEASURE.md) | Haar branch laws, coefficient moments, and logarithmic boundary term |
 | [REPLAY-SPEC.md](REPLAY-SPEC.md) | Fixed finite inventory and execution contract |
 | [verify.py](verify.py) | Exact standard-library verifier |
+| [EXPECTED.txt](EXPECTED.txt) | Actual first stdout, 1159 bytes |
+| [RUN.md](RUN.md) | Public pin, exact command and neutral execution record |
+| [SHA256SUMS](SHA256SUMS) | Hashes of the seven companion files |
 
 The identities and explicit witnesses were derived before the integrated
 verifier was written. This is a result-exposed publication replay. The complete
-source and specification will be publicly pinned and read back before its
-first execution; the actual stdout and neutral execution record will then be
-appended without rewriting that pin.
+source and specification were publicly pinned at
+[`7f06f306d95342f8d6c0cc99a22024654db369d9`](https://github.com/mathorn1973/twist-j/commit/7f06f306d95342f8d6c0cc99a22024654db369d9)
+and read back before the first execution. That execution passed every fixed
+assertion on Linux x86_64 with Python 3.13.5, exited zero and wrote empty
+stderr. Its actual stdout and neutral record are appended without rewriting
+the source pin. The four scientific source files remain unchanged.
 
 From the repository root, with Python 3.12 or later and assertions enabled:
 
