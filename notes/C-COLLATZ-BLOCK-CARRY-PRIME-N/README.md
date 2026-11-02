@@ -52,11 +52,17 @@ claim or the separate cyclotomic $J/\lambda$ carry proposals.
 | [PROOF.md](PROOF.md) | Self-contained proofs and explicit limits |
 | [REPLAY-SPEC.md](REPLAY-SPEC.md) | Fixed finite domains and result-exposed execution contract |
 | [verify.py](verify.py) | Deterministic standard-library integer verifier |
+| [EXPECTED.txt](EXPECTED.txt) | Exact stdout retained from the first execution |
+| [RUN.md](RUN.md) | Neutral environment, source pin, hashes, and execution result |
+| [SHA256SUMS](SHA256SUMS) | File custody manifest, excluding itself |
 
 The results were known before this integrated verifier was written. The public
 source pin precedes its first execution, but does not retroactively make the
-work a blind preregistration. The actual first stdout and a neutral run record
-will be appended after that pin. Source and scope changes require a new pin.
+work a blind preregistration. The first execution at
+[`3c75ff72c452692747836f374ed0babcc1b9abb7`](https://github.com/mathorn1973/twist-j/commit/3c75ff72c452692747836f374ed0babcc1b9abb7)
+passed on Linux x86_64 with Python 3.13.5, exit zero and empty stderr.
+Its actual 1,075-byte stdout and neutral run record were appended after that
+pin. Source and scope changes require a new pin.
 
 From the repository root, using Python 3.12 or later with assertions enabled:
 
