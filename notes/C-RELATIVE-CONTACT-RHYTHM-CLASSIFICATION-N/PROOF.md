@@ -403,7 +403,8 @@ the finite shell audit.
 
 The following census is an **exact finite computational assertion**, separate
 from the general derivations. Completeness has a proved enumeration bound.
-For each coefficient of a slot,
+For each of the four marked coefficients of a slot, with
+\(i,j,k\in\{0,1,2,3\}\) throughout (20),
 \[
 4Q(a)-5a_i^2
 =\sum_{j\ne i}(2a_j-a_i)^2

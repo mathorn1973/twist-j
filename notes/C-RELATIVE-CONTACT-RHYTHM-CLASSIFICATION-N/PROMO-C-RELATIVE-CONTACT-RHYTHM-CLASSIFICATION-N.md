@@ -16,10 +16,14 @@ to promote it automatically.
 
 ## Required next decisions
 
-1. A genuinely separate reviewer must audit the proof at the exact public
-   commit, especially the full-tick first-return law, least-period argument,
-   sharp eight-tick witness, and account normalization. Same-session
-   assistance does not discharge this review.
+1. The author-confirmed separate review of exact public commit
+   `9b9aa5eea52e18cc662a59df117cd2072e63e478` addresses the full-tick
+   first-return law, least-period argument, sharp eight-tick witness and
+   account normalization. It is accepted with the index-domain clarification
+   in equation (20); see [REVIEW-ACCEPTANCE.md](REVIEW-ACCEPTANCE.md) for
+   exposure, provenance and unchanged scope. Same-session assistance is not
+   counted as an additional independent review. Any later canonical fold
+   still audits the exact evidence at the proposed promotion scope.
 2. If any finite census is to be adopted as computation-grade public T,
    freeze a new scoped public probe with its six required fields and use
    the repository's pinned two-architecture procedure. The known answers

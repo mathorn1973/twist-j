@@ -76,6 +76,13 @@ but does not execute its scientific scripts. The local scientific replay
 is one x86_64 lane. Promotion requirements are in
 [PROMO-C-RELATIVE-CONTACT-RHYTHM-CLASSIFICATION-N.md](PROMO-C-RELATIVE-CONTACT-RHYTHM-CLASSIFICATION-N.md).
 
+The author confirmed a separate mathematical review of public commit
+`9b9aa5eea52e18cc662a59df117cd2072e63e478` on 2026-11-02.
+[REVIEW-ACCEPTANCE.md](REVIEW-ACCEPTANCE.md) records its acceptance, the
+four-coefficient index clarification in equation (20), and the unchanged
+candidate statuses. The review was result-exposed and its reported replay
+used the same x86_64 architecture.
+
 ## Boundary
 
 The proof concerns the declared three-slot arithmetic dynamics. `Q` is an
