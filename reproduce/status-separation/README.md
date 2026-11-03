@@ -984,3 +984,42 @@ unchanged PASS lines and eight specified new descriptions. It is not captured
 output or a run receipt. Formal replay starts only after the complete content
 candidate has been frozen and publicly pushed. No earlier frozen tree is
 rewritten.
+
+
+## Public Canon v108 boundary
+
+Eight current structural guards extend the exact inverse chain to v108. All
+thirteen complete current Canon inputs are pinned by byte count and SHA-256.
+Explicit inverse line edits reconstruct public v107 at
+0c33e2b281e39127c269ef5dd7f5b529a62e9e65 before the unchanged historical
+predicates run. Only the v107 input and reproduction-inventory readers consume
+that validated view. All 200 prior predicates, module constants and PASS
+descriptions remain unchanged; there is no old-byte fallback.
+
+Four proof-carried rhythm theorems are added at L1. The stable
+RELATIVE-CONTACT-COMMON-APPARATUS-OPEN identifier changes from O to T only for
+the independently reviewed finite two-input, 56-slot contact-and-permutation
+construction. Its complete prepared input family, 46 designated auxiliary
+slots, accounts 128/156, four retained record banks and finite stock-funded
+reuse remain explicit. Ten input slots are allocated; only eight vary.
+Prepared inputs and the five supplied whole-slot swaps are premises. The
+result does not supply native U, arbitrary post-start external loading,
+regeneration of spent memory or a physical energy/time calibration.
+
+The owner keeps its complete two-architecture public-probe evidence. The
+four general rhythm theorems use inline scope-hashed proofs; the exposed
+one-architecture rhythm census and reported extra review computation are not
+promoted. All 42 accepted source files from the probe, independent review
+and rhythm package retain exact bytes, SHA-256 and Git blob identities.
+
+All 597 other prior claim rows and all 26 remaining live H/O owners are
+unchanged. No gate is added, removed or relabelled; the separate native
+memory-contact and physical-apparatus owners remain open. Only the closed
+owner leaves the Frontier program. The resulting partition is 602 claims:
+T459/D59/C39/H2/O24/F19. The reproduction inventory remains exactly 38.
+
+EXPECTED.txt is authored before execution by retaining the 200 historical
+PASS lines and appending eight specified structural descriptions. It is not
+a captured run receipt. This audit imports and executes no scientific
+verifier. The first replay of the complete successor candidate occurs only
+after its public immutable pin and readback.
