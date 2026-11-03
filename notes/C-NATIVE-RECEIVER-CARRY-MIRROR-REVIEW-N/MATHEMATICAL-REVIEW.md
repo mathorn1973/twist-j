@@ -35,6 +35,11 @@ None of the corrections changes a conclusion. They make dependencies and
 conventions explicit, and a Canon text built from this probe should
 include them.
 
+Items E6 to E9 were added after the independent execution; see the
+Addendum at the end. The verdicts above are unchanged by them. For
+scope 3, E8 is a required wording restriction, not an optional
+clarification.
+
 ## Section-by-section check
 
 ### 1. Native law, admitted family and first-tick rows
@@ -275,3 +280,62 @@ by the independent execution in RESULT.md.
 The final acceptance decision and any Canon or registry change belong to
 the Canon owner and to a separate reviewed fold. This review does not raise
 any status.
+
+## Addendum after the independent execution
+
+The checker writer worked in a separate context. It did not see this text,
+the target verifier or any outputs. It reported the reading points below,
+and this reviewer has checked each one against PROOF.md. None of them is a
+mathematical error. Each is a precision that a Canon wording should adopt.
+E8 was found by this reviewer while checking those points.
+
+**E6 (section 4). Both ingredients are needed.** PROOF.md says
+`v=res C=3b` follows "either from the exact polynomial for J or from
+5/lambda in (lambda^3)". Neither fact suffices alone. The value 3b comes
+from the l-coefficient e1=-2 of J. That the integer rounding term
+(2b-a)/l vanishes modulo l needs 5/l in (l). The general expansion in
+section 4 above uses both. Replace "either ... or" with "and".
+
+**E7 (section 7). Name trace closure as the premise.** The sentence "a
+deterministic continuation common to all inputs cannot increase the image
+cardinality" holds because every native step is trace-closed: the next
+trace is tau_t of the current trace, over all 5^6 states. It would fail for
+a continuation that reads the full state, which section 7 itself excludes.
+State the closure as the operative premise. The review checker confirms it
+on all 5^6 states and both bits (31250 evaluations), not only on the ready
+family that the target verifier enumerates.
+
+**E8 (section 6). The depth-two result is for carry-only readers.** Fix b
+and take a blank high digit. The two-digit device stores
+`(a,v)=(2b,3b)` for J and `(3b,3b)` for J^-1. The reader `v/a` therefore
+gives 4 for J and 1 for J^-1 for every nonzero b. That separates the
+multipliers already at depth one, from the device's own stored digits,
+without b.
+
+PROOF.md excludes the output letter from the reader's arguments in
+section 6, so its minimality statement is correct as written. But its
+sentence that the two-digit circuit "does not also supply u" can be misread
+as saying the device cannot distinguish the multipliers. A Canon statement
+of scope 3 must therefore keep the restriction explicit: next-precision
+discrimination is minimal among readers of the carry alone. Readers that
+also see the output letter, or the input letter, discriminate in F5.
+
+Relatedly, "observing u requires the product modulo l^3" is true under that
+carry-only contract. The text argues sufficiency, and necessity holds only
+within that contract.
+
+**E9 (minor wording).**
+- Section 1, "the first row then gives gamma=2": this means the first
+  admitted row (s=1). The table's first row is s=0, which would give 4.
+- Section 3, "Only the admitted preparations set h=k=0": in the
+  integrated carrier every preparation, including the s=0 controls, starts
+  with blank high and archive. The marked contract is stated only for the
+  admitted family. The review checker ran the 125 controls as well. As the
+  closed L predicts, they give mark 3, high 3 and archive 4, with the
+  checkpoint restored.
+- Section 8, "the secondary receiver must give the opposite sign": this
+  means opposite to the primary native sign chi(s), and equal to the paired
+  carry sign under the convention of E2b.
+- Section 4, omitted offset: on the s=2 sheet q+r=0, so the reader
+  returns no sign (chi=0) rather than a wrong sign. The count of 125
+  sign-only agreements is unaffected.
