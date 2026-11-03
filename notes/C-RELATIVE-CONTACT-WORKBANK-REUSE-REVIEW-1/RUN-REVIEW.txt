@@ -1,0 +1,33 @@
+K1: PASS
+K2: PASS
+K3: PASS
+K4: PASS
+K5: PASS
+K6: PASS
+K7: PASS
+K8: PASS
+K9: PASS
+K1_box_pairs_crosschecked: 65536
+K1_cache_entries_audited: 229
+K1_cache_distinct_pairs_audited: 63
+W6_admitted_counts: [10, 6, 5] (cases elsewhere,p,q)
+K_admitted_per_mark: 41 of 60; K_noninvolution_cases_of_5: 5
+Literal_triple0: forward+inverse element-level, no RLE/cache
+Decoder_injective_closed_form_on: 1000 triples
+Fresh_archive_pairs_at_boundaries: [3, 2, 1, 0]
+Archive_consumption_per_experiment: 2 banks = 20 slots, preparation account 60
+Archive_consumption_3_experiments: 6 banks = 60 slots, preparation account 180
+Contacts_per_forward: 80610; swaps_per_forward: 10; contacts_per_inverse: 322440; swaps_per_inverse: 10
+Inventory_contacts_if_full: 403050000; executed_triples: 1000
+Executed_contact_applications_literal_count: 403050000 (RLE/cache-audited, see PREREG)
+Fingerprint[S]: 12f7a12e3969a2984dc5549cf42833512b906cc487ad45b96d705b278e842b6e
+Fingerprint[W]: 1352586d46665755b9e03c81c7baa6e03bfdb5039e68c6d362052cdf4923ec47
+Fingerprint[K(11,31)]: 406c6b41405d7ab6b542c0090d6213f40265455959f97646cbf827c0446e8a38
+Fingerprint[forward]: 36b21644a315999b59fe9b917637779e190a14e2f5920ddbaf33eea90ebb5bdb
+Fingerprint[inverse]: 50f67f611ddec6c5e28be952102a449149f0e88f324cccc09c443a45b61ea8e3
+Fingerprint[initial_triple0]: 8fffcdd1c130a71a567ea13af6661d7d68ae80ca2628cb13aed84d3f05a535b3
+Fingerprint[final_triple0]: 0ca5c29762a3f3a471adcf6fdea94085fd65014adda3df144e2faad44cd920ab
+Fingerprint[aggregate_finals_first_1000]: a01988e7b7c61a37f40b8c6bc75588babe474b43eb1b83b8e581d95965f57b11
+Elapsed_seconds (operational only): 5.69
+Scope: full (triples=1000/1000, forward+inverse)
+RESULT: PASS (full)
