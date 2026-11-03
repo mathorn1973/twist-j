@@ -1,6 +1,6 @@
 # TWIST-J core
 
-**Release identity:** Public Canon v107. Normative authority and activation
+**Release identity:** Public Canon v108. Normative authority and activation
 state are declared exclusively by [STATUS.md](../STATUS.md).
 
 TWIST-J tests whether physical reality can be modeled as a closed,
@@ -16,7 +16,7 @@ presented as deriving or justifying it. Where a well-typed comparison family
 exists, uniform and `p = 5`-specific content are distinguished for attribution
 only.
 
-Public Canon v107 also declares a discrete architecture. It does not
+Public Canon v108 also declares a discrete architecture. It does not
 claim that the checkpoint space, the five kernel generators, the
 selector, or the decoder are uniquely derived from J. The architecture
 contains no fitted dimensionless parameter; its one SI calibration
@@ -60,10 +60,23 @@ copies of that known-input load, with every changing auxiliary resource
 counted and no uncounted residue exchange, retaining N specified outputs
 needs at least 4N auxiliary slots and initial trace account 12N. Signed
 copies attain both, while positive copies give only the upper bound 27N.
-One fixed word preserves input residue distance. A common varied-input
-preparation, response, record and funded renewal contract remains open
-under RELATIVE-CONTACT-COMMON-APPARATUS-OPEN [O]. These are conditional
-L1 statements, without a native-U or measured-energy identification.
+One fixed word preserves input residue distance. The complete 56-slot
+construction now closes RELATIVE-CONTACT-COMMON-APPARATUS-OPEN [T] for two
+experiments, each chosen independently from ten prepared inputs. One common
+read core processes all 100 pairs; four current archive banks distinguish
+them, retain the first record through reload, and account for every spent
+resource. The common auxiliary preparation has trace account 128 and the
+complete account is 156. Five whole-slot swaps and prepared inputs are
+supplied; the two-experiment stock is finite.
+
+The same contact, ordered left then right on three slots, has a complete
+arithmetic rhythm classification. At maximal difference depth d, put
+A_d=(4^(d+1)-1)/3. The three nondiagonal primitive classes have least periods
+A_d, 2A_d-1 and 5A_d, with sharp relative-account bounds. An exact pair has
+equal E, S and M, local invariant residues and depth history but
+periods five and twenty-five. Sufficient coefficient readings distinguish
+the full state on a fixed sum/account slice. These are conditional L1
+statements, without a native-U or measured-energy identification.
 
 The native zero predicate now has an exact comparison with the declared
 integer field shell: the piston swap carries it to the shell residue
@@ -489,6 +502,8 @@ The stable orientation claims are generated from the registry:
 - FINITE-COHERENT-BATTERY-DRIFT [T]: L1 for any supplied bounded 0<=Q<=Delta I, d>0, m=ceil(Delta/d), integer N>=2m and the stated sine-ready finite battery: complete total-charge sectors define a full-space unitary representation Gamma(U) conserving floor(Q/d)*d+B exactly; joint reference-uniform whole-word error is at most 2m sin(pi/(2L)), L=N-2m+2; every rounded-energy-conserving unitary changes original Q+B by an operator between -d I and d I; supplied coherence and spectral gates, not exact original-energy conservation or locality
 - RELATIVE-CONTACT-FOUR-SLOT-MINIMUM [T]: at L1 on O^26 with O=Z[j], rho=j^2, the declared total relative contact, arbitrary whole-slot permutations, initial data (6,0^21), exactly four arbitrary auxiliary slots and complete endpoint equality, the least initial auxiliary positive trace account is 27 for (3,3,3,3,0^18) and 12 for (-3,3,3,3,0^18); complete endpoint accounts and inverse witnesses attain both; no shortest length, common unknown-input encoder, native realization or physical energy interpretation is asserted
 - RELATIVE-CONTACT-RETAINED-BANK-CAPACITY [T]: at L1 in the same declared contact/permutation alphabet, the stated used banks cannot return to their initial states while prepared output data stay fixed and every other resource returns exactly; for N disjoint known-input loads and N retained signed or positive outputs, all changing auxiliary resources satisfy L_aux>=4N and E_aux(initial)>=12N; signed disjoint copies attain both, while positive copies give only the upper bound 27N; initial loads and sites are supplied and no clean or autonomous renewal is asserted
+- RELATIVE-CONTACT-COMMON-APPARATUS-OPEN [T]: at L1 the supplied total relative contact and five declared whole-slot transpositions admit one complete fixed program on O^56, with O=Z[j], that processes every ordered pair from the ten-input prepared family {0,1} times Z/5 through the same read core; the 46 designated auxiliary coordinates have one common initial state of positive half-trace account 128 and the complete account is 156; the current four archive banks distinguish all 100 input pairs, the first archives retain their addresses and values throughout reload and the second experiment, the shared controls become ready with initially funded fresh second banks, and every spent input and bank remains in the exact final state; the construction positively decides the common-apparatus existence question at the declared two-experiment horizon, with within-stage retention at complete read and step boundaries, and asserts no raw-input synthesis, arbitrary external post-start loading, contact-only implementation of the transpositions, regeneration of used memory, unbounded reuse, resource minimum, native-U realization or physical interpretation
+- RELATIVE-CONTACT-RHYTHM-CLASSIFICATION [T]: at L1 on O^3, O=Z[j], rho=j^2, with the supplied total integral relative contact and fixed tick F(x)=C23(C12(x)) acting left first, every trajectory is a cycle; doubling has first even return time 1+4r and changes least period/refusal totals by (P,R)->(P+4R,4R); the simultaneous-parity section is reached within at most eight ticks unless the complete primitive one- or five-cycle is recognized, and eight is sharp; with finite maximal common difference depth d and A_d=(4^(d+1)-1)/3, every nondiagonal cycle has exactly one primitive type with (P,R)=(A_d,4^d),(2A_d-1,2*4^d),or(5A_d,5*4^d), all attained; the fully diagonal case has (P,R,M)=(1,0,0) and infinite depth; the schedule and arithmetic carrier are supplied
 
 <!-- END GENERATED CORE CLAIMS -->
 Time is a counter. Space is read through commutators. The modulus and

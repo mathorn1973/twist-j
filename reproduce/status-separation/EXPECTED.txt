@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v107
+historical guards: exact reconstructed v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v108
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -202,5 +202,13 @@ PASS 197 V107-PROOF-SCOPE complete byte-pinned proofs retain exactly four auxili
 PASS 198 V107-EVIDENCE the complete minimum probe retains its two-architecture evidence while three proof-carried theorems and the open owner use inline scope hashes
 PASS 199 V107-SOURCE-CUSTODY all 43 accepted source files and the unchanged minimum probe retain exact bytes, hashes and Git blob identities
 PASS 200 V107-REPRO-INVENTORY one exact three-file contact audit extends the validated reproduction inventory from 37 to 38 without executing a scientific verifier
+PASS 201 V108-PRIOR-BYTES thirteen exact v108 inputs reconstruct public v107 before all 200 unchanged historical guards
+PASS 202 V108-CLAIM-LEDGERS four rhythm theorems and the stable apparatus owner have exact ledgers, four declarations and one O-to-T transition
+PASS 203 V108-DEPENDENCIES four rhythm premise edges and four exact owner basis updates preserve the prior edge graph and keep open owners outside theorem premises
+PASS 204 V108-OWNER-BOUNDARY only the finite L1 apparatus owner closes; all 597 other prior claims, 26 remaining live owners and all gates retain their exact boundaries
+PASS 205 V108-PROOF-SCOPE complete byte-pinned rhythm and two-input apparatus proofs retain supplied laws, finite stock, marked coefficients and physical limits
+PASS 206 V108-EVIDENCE the apparatus uses its complete two-architecture public probe while four general rhythm theorems retain inline proof evidence
+PASS 207 V108-SOURCE-CUSTODY all 42 accepted probe, independent-review and rhythm source files retain exact bytes, SHA-256 and Git blob identities
+PASS 208 V108-REPRO-INVENTORY the validated 38-directory reproduction inventory is unchanged; this structural audit executes no scientific verifier
 
-RESULT 200/200 ALL PASS
+RESULT 208/208 ALL PASS
