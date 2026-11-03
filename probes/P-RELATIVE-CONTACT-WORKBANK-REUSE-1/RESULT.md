@@ -24,8 +24,8 @@ prepared input and the cartridges held the first and second. No state was
 discarded or replaced by an expected-state assignment.
 
 The six actual permanent banks alone decoded all 1000 ordered input triples,
-with 1000 distinct record histories. Each bank was untouched after its own
-copy completed. Working source banks were restored at every 12-contact
+with 1000 distinct record histories. During the forward program, each
+permanent bank was untouched after its own copy completed. Working source banks were restored at every 12-contact
 copier module boundary; their internal contact states need not be constant.
 
 The complete audit checked 60000 read endpoints, 30000 forward step
