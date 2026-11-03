@@ -1,6 +1,6 @@
 # v109 workbank proposal: review disposition
 
-NON-CANONICAL / L1. No accepted new theorem, Canon fold or release.
+NON-CANONICAL / L1. No Canon promotion, fold or release.
 Current authority remains Public Canon v108 at
 17de90b58f814238e151aac77badde6654b52627.
 
@@ -8,6 +8,12 @@ This note records the supplied review of
 [PR1879](https://github.com/mathorn1973/twist-j/pull/1879), exact head
 `d6a5f77169d1027a22959c41aa5a45a783643a3e`, and gives a concrete next-review
 surface in CLAIMS.md. The frozen probe and its output are not changed.
+
+A later separate computational and mathematical review is now available in
+PR1882. [Its exact disposition](REVIEW_1882_DISPOSITION.md) records the new
+evidence, the limited public-freeze chronology, all proof clarifications and
+the forward-only retention correction. The earlier copier-author report
+below remains a distinct historical input; it is not relabelled independent.
 
 ## Authorship and the supplied verdict
 
@@ -26,10 +32,10 @@ disposition corrects their attribution without rewriting them.
 
 The report accepts PROOF sections 1-4 and 6-8 at candidate-theorem scope,
 and treats the section 5 ten-input read identity as a finite exhaustive
-computation. These are the supplied reviewer's judgments, not newly earned
-Canonical statuses. A fresh reviewer who did not author either the original
-copy witness or the PR1879 construction is still needed for independent
-acceptance of the new proof scopes.
+computation. These are that supplied reviewer's judgments, not newly earned
+Canonical statuses. They originally left the new proof scopes awaiting a
+fresh reviewer; the later PR1882 assessment and its specific findings are
+recorded separately in REVIEW_1882_DISPOSITION.md.
 
 ## Custody
 
@@ -90,8 +96,9 @@ inability to access the API does not require another architecture run.
 POLICY says that the workflow can discharge the two-architecture computation
 gate. It does not make every two-architecture result a theorem automatically.
 Independent proof acceptance, exact scope and the reviewed Canon fold remain
-separate requirements. The new copier and finite-k proof acceptance remains
-open for the authorship reason above, not because the CI evidence is missing.
+separate requirements. The new PR1882 review supplies an additional proof
+assessment; its findings are addressed explicitly in REVIEW_1882_DISPOSITION.md.
+Neither the older report nor missing CI access is used as a substitute.
 
 ## Next review and fold
 
