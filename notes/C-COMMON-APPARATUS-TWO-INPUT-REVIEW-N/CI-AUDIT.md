@@ -62,4 +62,3 @@ The aggregate [check job 125773399920](https://github.com/mathorn1973/twist-j/ac
 Each architecture log separately confirms the command `python -m unittest discover -s tools -p 'test_*.py'`, followed by `Ran 218 tests` and `OK`. These are repository-tool unit tests. They are distinct from the scientific probe's admitted input cases and are not 218 independent apparatus implementations or independent mathematical reviews.
 
 The audit confirms the existing two-architecture scientific reproduction at the frozen finite scope. It does not independently discover the construction, establish a stronger input or reuse horizon, compile the five declared slot swaps into native contacts, supply external post-start loading or indefinite renewal, identify physical time/energy, or promote a Canon claim. The separate independent mathematical and runtime review retains its own provenance and conclusions.
-
