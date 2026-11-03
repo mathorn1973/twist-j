@@ -69,12 +69,25 @@ unrestricted input or supplies an indefinitely reusable finite apparatus.
   complete layout, both source renewals, exact accounts and scope.
 - [REPLAY-SPEC.md](REPLAY-SPEC.md): frozen finite corpus, whole-state checks,
   execution order and failure conditions.
-- [verify.py](verify.py): standalone exact-integer replay. Its source must be
-  publicly pinned and read back before its first execution.
+- [verify.py](verify.py): standalone exact-integer replay.
+- [EXPECTED.txt](EXPECTED.txt): unchanged actual stdout of the first run.
+- [RUN.md](RUN.md): public source pin, execution record, hashes and scope.
+- [SHA256SUMS](SHA256SUMS): byte-level manifest of all six other files.
 
-At this source stage no execution result is claimed. The evidence commit
-will add the actual stdout, neutral run record and hash manifest. Required
-repository CI does not execute this notes-only verifier.
+All four source files were publicly pinned at
+`eeb69c75f14d5bfe5b2358540740a9cf0b01d0d5` and read back byte-identical
+before execution. The first run on **Linux x86_64, Python 3.13.5** passed all
+**4160 complete two-pass cases and 4160 full native inverses**, with exit zero
+and empty stderr. It made exactly **707200 primitive calls**, of which
+270400 were enabled and 436800 refused. The complete-output fingerprint is
+
+    b1b4c85bc263651167cfe5cceb82e516175df8cfbb58ce4a2219267001272e7e
+
+The actual stdout is 1013 bytes, SHA-256
+`65b74d7cc56a19b6ce71b49b4a7ea8a6ed785dedfb8414a189c44d5e3a8f4448`.
+The proof, specification and verifier remain unchanged from the source pin.
+Required repository CI does not execute this notes-only verifier and cannot
+be counted as a second scientific architecture.
 
 ## Boundary
 
