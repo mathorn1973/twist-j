@@ -1023,3 +1023,40 @@ PASS lines and appending eight specified structural descriptions. It is not
 a captured run receipt. This audit imports and executes no scientific
 verifier. The first replay of the complete successor candidate occurs only
 after its public immutable pin and readback.
+
+
+## Public Canon v109 boundary
+
+Eight current structural guards extend the exact inverse chain to v109.
+All thirteen complete current Canon inputs are pinned by byte count and
+SHA-256. Explicit inverse line edits reconstruct public v108 at
+17de90b58f814238e151aac77badde6654b52627 before the 208 unchanged historical
+predicates run. Only the v108 current-input and reproduction-inventory
+readers consume that validated view. All prior module constants and PASS
+descriptions remain unchanged. There is no old-byte fallback.
+
+Six L1 theorems cover the positional bank copier, its four-place obstruction,
+finite funded workbank reuse, the first-tick affine trace transfer, the marked
+carry mirror and fixed-input carry precision. One separate L1 computation
+records the finite carry circuit. Their exact statements and proof blocks
+are byte-pinned in the Canon. The contact construction and native receiver
+construction retain their own laws and supplied interfaces. The fold adds
+neither a native memory-contact bridge nor physical apparatus closure.
+
+The six theorems use inline scope-hashed evidence. The finite computation
+uses the complete two-architecture public probe probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1.
+All 48 files in 6 accepted source/review directories retain exact
+bytes, SHA-256 and Git blob identities. Source review is distinguished from
+the authoring session's structural audit; this adapter is not an independent
+mathematical acceptance or a scientific reproduction of those packages.
+
+All 602 prior claims, all 26 live H/O owners, every gate and the Frontier
+remain unchanged. Two Core selections refer to funded workbank reuse and
+the finite carry circuit. The registry partition is 609 claims:
+T465/D59/C40/H2/O24/F19. The reproduction inventory remains exactly 38.
+
+EXPECTED.txt is authored before execution by retaining all 208 historical
+PASS lines and appending eight specified structural descriptions. It is
+not a captured run receipt. This audit imports and executes no scientific
+verifier. The successor candidate is replayed only after its immutable
+public content pin and readback under the release procedure.

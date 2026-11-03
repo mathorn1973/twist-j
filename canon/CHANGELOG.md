@@ -1,11 +1,43 @@
 # Canon changelog (public series)
 
-## Public Canon v108
+## Public Canon v109
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 602 claims; 0 T-LOCK, 459 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Registry snapshot: 609 claims; 0 T-LOCK, 465 T, 59 D, 40 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 38.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Add three L1 workbank theorems: the explicit 60-contact positional-bank
+copier, the four-place literal-copy obstruction, and complete restoration
+of the same work core for every prescribed finite number of inputs.
+The program uses two fresh permanent archives per input; it restores source,
+clock, controls and working banks while retaining every earlier input and
+record. The archive reader recovers all 10^k histories. Constant account is
+68+74k on 26+25k slots; the exhaustive three-input instance uses 101 slots,
+account 290 and six archives. Finite-k induction supplies the general proof.
+
+Add three separate native/carry theorems: the actual first-tick affine
+transfer with its current-trace obstruction, exact marked integral carry
+pairing with the occupied four-register involution, and the next carry
+coefficient distinguishing two specified multipliers. Add the 62-register,
+500-input primitive realization as a finite C result. Its inverse multiplier
+is the literal reversed forward word; its native updates are not globally
+inverted. Character relations share the fact chi(2)=-1; agreement of signed
+readers is a declared convention. The extra carry coefficient is not an
+output of the two-digit circuit.
+
+All 602 prior claims retain their exact scopes and statuses. No gate or
+live H/O owner closes. The contact and native carriers keep separate laws
+and interfaces. Autonomous next-input choice, regeneration of retained
+archives, unlimited finite-carrier operation and physical interpretation
+remain outside these results. The reproduction inventory remains 38, and
+the structural audit preserves all 208 preceding guards and their exact
+historical inputs. The two scientific probe sources remain unchanged.
+
+## Public Canon v108
+
+Registry snapshot: 602 claims; 0 T-LOCK, 459 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
+Reproduction witnesses: 38.
 
 Close the existing common-apparatus owner O -> T with one complete finite L1
 construction on 56 slots. One fixed contact/permutation program processes

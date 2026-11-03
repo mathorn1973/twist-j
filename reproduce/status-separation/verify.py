@@ -47,6 +47,1117 @@ SUCCESSOR_MANIFEST_DIR = (
 
 
 
+V109_PRIOR_COMMIT = '17de90b58f814238e151aac77badde6654b52627'
+
+V109_NEW_STATUSES = {'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': 'T',
+ 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION': 'T',
+ 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE': 'T',
+ 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER': 'T',
+ 'J-MARKED-CARRY-MIRROR': 'T',
+ 'J-FIXED-INPUT-CARRY-PRECISION': 'T',
+ 'U-CARRY-MIRROR-FINITE-CIRCUIT': 'C'}
+
+V109_COMPUTATION = 'U-CARRY-MIRROR-FINITE-CIRCUIT'
+
+V109_PROBE_DIRECTORY = 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1'
+
+V109_INPUT_PATCH = {'REGISTRY.tsv': {'current_sha256': '3563bd31edcbf22d0bf04ac7cd08b6687c040e8e8ae88ce9e2ca5238810d7bde',
+                  'current_bytes': 591272,
+                  'prior_sha256': 'f342a26d61a5f5e8855b8fb97d3c74f1da01ce337808e34420a2d98fecf60af4',
+                  'prior_bytes': 581455,
+                  'restore': [(603, 610, '')]},
+ 'NORMATIVE.tsv': {'current_sha256': 'e22ec0f61c03a07861ec485bcfc3d92acf6d0ea8351e3507328c8aa4af67af6e',
+                   'current_bytes': 78472,
+                   'prior_sha256': '0f5370887190fb4b837ad90409b88d4ca04edbee4d1db9c9f924758fa620efd8',
+                   'prior_bytes': 77541,
+                   'restore': [(668, 675, '')]},
+ 'DEPENDENCIES.tsv': {'current_sha256': '23e7d199bacc93194103c622d118972d7b8e90d1b070a8ae3cef8c7c1ba7b248',
+                      'current_bytes': 200739,
+                      'prior_sha256': '49810a8a124e7a7dd5c6ff1fcee38fe30be256fb4d9cfc2c7e4fcb458428ada7',
+                      'prior_bytes': 197935,
+                      'restore': [(1199, 1212, '')]},
+ 'EVIDENCE.tsv': {'current_sha256': '9a9aba09e832e43743be5ddf5624a5896d2ed6a0a0788afd54f35bf0b8e7a02a',
+                  'current_bytes': 122122,
+                  'prior_sha256': '2a5cbd8882c5fe2bf07399069e1adb9416e53223438dc8d4d6b132c5cdd7ed23',
+                  'prior_bytes': 120762,
+                  'restore': [(603, 610, '')]},
+ 'HISTORY.tsv': {'current_sha256': '29a707a3e6f4a19787d46185391cce8d2bcd722bc09f69d432a5ea246c4eea8e',
+                 'current_bytes': 532368,
+                 'prior_sha256': '9c3b172b71233257bcd8856a9936e4b16fb44252dc568c50988c283471a4165f',
+                 'prior_bytes': 529133,
+                 'restore': [(1151, 1158, '')]},
+ 'GATES.tsv': {'current_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'current_bytes': 13324,
+               'prior_sha256': 'a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e',
+               'prior_bytes': 13324,
+               'restore': []},
+ 'FRONTIER_PROGRAMS.tsv': {'current_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'current_bytes': 1502,
+                           'prior_sha256': 'e4bc1986226d7b1c356eca2c942b2be39a9ad69fde1c7859f4adae597a9a8e1b',
+                           'prior_bytes': 1502,
+                           'restore': []},
+ 'CORE_SELECTION.tsv': {'current_sha256': '23e89cace7b70f98f6bc5ae747135654958db2e5f43579d2d2edf7a8de355002',
+                        'current_bytes': 1422,
+                        'prior_sha256': '5095c24d2697a67c49f65fe9472533f80ed540055d3f2ba6128e21ecbb2c1a27',
+                        'prior_bytes': 1347,
+                        'restore': [(51, 53, '')]},
+ 'CANON.md': {'current_sha256': '035408ec79219cc72a7d3613cf1568154cca185137d2a2daa43b896aae0c6383',
+              'current_bytes': 1464066,
+              'prior_sha256': 'c2c4a1ef4ad8859b4b9e9e92022bdd3528c641a3e426df66dc4ade640a5b862a',
+              'prior_bytes': 1423877,
+              'restore': [(0, 1, '# TWIST-J Public Canon v108\n'),
+                          (2,
+                           3,
+                           '**Release identity.** Public Canon v108. Normative authority and '
+                           'activation\n'),
+                          (26, 36, ''),
+                          (52,
+                           53,
+                           'only. Public Canon v108 also declares the discrete architecture used '
+                           'to read\n'),
+                          (65,
+                           66,
+                           'seed of the two algebraic projections. Public Canon v108 does not '
+                           'claim\n'),
+                          (14722, 15561, '')]},
+ 'CORE.md': {'current_sha256': '0fc8b996b5b900aaad7a4166faf33fab8df6d79d12ba6cb26b8fb8d2b85fc186',
+             'current_bytes': 51239,
+             'prior_sha256': '11fea7fe9e7e101a11506c1944e491fc1135921c01b5e035c85ccb90af859a88',
+             'prior_bytes': 47701,
+             'restore': [(2,
+                          3,
+                          '**Release identity:** Public Canon v108. Normative authority and '
+                          'activation\n'),
+                         (18,
+                          19,
+                          'Public Canon v108 also declares a discrete architecture. It does not\n'),
+                         (70, 87, ''),
+                         (523, 525, '')]},
+ 'FRONTIER.md': {'current_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'current_bytes': 27382,
+                 'prior_sha256': '8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0',
+                 'prior_bytes': 27382,
+                 'restore': []},
+ 'CHANGELOG.md': {'current_sha256': '9048c6cf2e7a1d217e7524b04ff7b2890713192ff2be6973901dd6e43c2c6313',
+                  'current_bytes': 218003,
+                  'prior_sha256': '7d62f01c9ba683496bd9f6c992237db0d157c8ed0c439b1dc1b2026311eff789',
+                  'prior_bytes': 216138,
+                  'restore': [(1, 35, ''),
+                              (38, 38, '<!-- BEGIN GENERATED CURRENT COUNTS -->\n'),
+                              (40, 40, '<!-- END GENERATED CURRENT COUNTS -->\n')]},
+ 'STATUS_COUNTS.tsv': {'current_sha256': '50728b2f38ab2354e41000933ea40938b76cd1b2d58d2f72fffb253910acf31b',
+                       'current_bytes': 244,
+                       'prior_sha256': '7b4ae47a7a7de4e178af1dc86a40df8a1677bb7ef7bca1168a8f7c413c0cc26e',
+                       'prior_bytes': 244,
+                       'restore': [(1, 2, 'claims\t602\n'),
+                                   (3, 4, 'status_T\t459\n'),
+                                   (5, 6, 'status_C\t39\n'),
+                                   (11, 12, 'evidence_none\t182\n'),
+                                   (14, 15, 'evidence_two-architecture\t380\n')]}}
+
+V109_REPRODUCTIONS = ('C-FIELD-J-CONTENT-TRANSPORT-N',
+ 'C-FIELD-J-CONTENT-TRANSPORT-REVIEW-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-N',
+ 'C-FIELD-J-INTERNAL-CONTROL-REVIEW-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-N',
+ 'C-FIELD-J-LOCAL-INSTRUMENT-REVIEW-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-N',
+ 'C-FIELD-J-PREPARATION-MECHANISM-REVIEW-N',
+ 'C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N',
+ 'PHOTON-Z5-EXACT-HEATBATH-KERNEL',
+ 'alpha-exact-lemma',
+ 'alpha-value',
+ 'born-faces',
+ 'born-quartet',
+ 'census',
+ 'color-ladder',
+ 'cosmology-register',
+ 'coupling-metrology',
+ 'dirac-ladder',
+ 'force-born-dictionary',
+ 'foundations-places',
+ 'gravity-chain',
+ 'hyperplane-codec',
+ 'kernel',
+ 'kernel-connectivity',
+ 'mass-ladder',
+ 'maxwell',
+ 'native-quadratic-obstructions',
+ 'observer-boost',
+ 'pentit-p5-closure',
+ 'photon-electron',
+ 'qdd-route-a',
+ 'quadratic-memory-l5',
+ 'relative-contact',
+ 'scalar-hermitian-norm',
+ 'status-separation',
+ 'u_raw_residue_port',
+ 'weinberg')
+
+V109_SOURCE_COMMITS = {'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1': 'd6a5f77169d1027a22959c41aa5a45a783643a3e',
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1': 'c9bd0bc5ac97ad034be399e6619695c7fc2c4a61',
+ 'notes/canon/V109-WORKBANK-REVIEW': 'e3e4779887bad3babf7b8df4924b31a007b71ce1',
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1': 'c9ab9cfdab202e677053c289bc94c46ff548af9b',
+ 'notes/C-WORKBANK-REUSE-INDEPENDENT-REVIEW-N': '1ceabeb19e0421b219bfbfef992837cdb2a8e4fc',
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N': '1fd761201ca07cedc1cd554b8f2191b3489e713b'}
+
+V109_SOURCE_COUNTS = {'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1': 10,
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1': 10,
+ 'notes/canon/V109-WORKBANK-REVIEW': 3,
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1': 9,
+ 'notes/C-WORKBANK-REUSE-INDEPENDENT-REVIEW-N': 7,
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N': 9}
+
+V109_SOURCE_FILES = {'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/EXPECTED.txt': {'bytes': 2083,
+                                                             'sha256': '78d928c9303732b501bfab0b52c159c2fed4fcb0857c24cac59341aad3ec36e3',
+                                                             'git_blob': '6c7f30886c7841cc8c7e4c15f3d0dc09046739e2'},
+ 'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/PREREG.md': {'bytes': 9821,
+                                                          'sha256': 'edd43e722ca7c407a904a6d9cc2c70fcc215c10830b0fa8de92a8f59fc9687e7',
+                                                          'git_blob': '441dc0e89e3a47b942ee1fe103cf783ca0ee224d'},
+ 'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/PROOF.md': {'bytes': 25373,
+                                                         'sha256': '7345b699f2f6f3dc2059318d0a526d15c32b05b72b3f36c6ffdae2b6ffc4c8f8',
+                                                         'git_blob': 'ddc88765f1f009ce78a12839757db2a9b52b50b8'},
+ 'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/PROVENANCE.md': {'bytes': 3337,
+                                                              'sha256': '65788bd17f31b98285e4d519e4a5a3d463d1caa80c6eb4cd9234aa939cda6bf8',
+                                                              'git_blob': '3a172c1bd467523027654e2a9f9af2c28a1f4397'},
+ 'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/README.md': {'bytes': 3494,
+                                                          'sha256': '5363b41d734fb842a27d5818d8289d727fc02c36c0e8fb6ea34e0010144643ec',
+                                                          'git_blob': 'cc196e78fad73d76d56468eace959425972853bd'},
+ 'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/RESULT.md': {'bytes': 5150,
+                                                          'sha256': '83ed0c36057be5e8efb2543787ac9019b861ae5d224a077be08e273af039e3a8',
+                                                          'git_blob': 'ea7ec223bcf8e8f33a84832aa8659bbc139d88de'},
+ 'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/RUN.md': {'bytes': 2474,
+                                                       'sha256': 'ff003305097004fd7a6d3e685ff2709939402309ffd6d36a0f3da1eb62c96c86',
+                                                       'git_blob': 'd2b084ce5fd2a5cc2b575672f6a781b4f30dc5d3'},
+ 'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/SOURCES.tsv': {'bytes': 1906,
+                                                            'sha256': '27c5dea66524af0316ed66b94edd7f28dc7f97d824bc1a02651f2bb7a44e5fd7',
+                                                            'git_blob': 'ec047c3489debfc2e8602e0776c31ca194109ac1'},
+ 'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/WORD535.txt': {'bytes': 4877,
+                                                            'sha256': 'ca6bdd7a9b43e329cbc3630f26e32125b1d16a9872b9563e57733f5c408c916b',
+                                                            'git_blob': '444d45f28b41fa40f8e4246989ce191d8a937692'},
+ 'probes/P-RELATIVE-CONTACT-WORKBANK-REUSE-1/verify.py': {'bytes': 30973,
+                                                          'sha256': '645ac0808feedcfd111cd54b80e1496202be36a142b5c317236496b8dda93bfb',
+                                                          'git_blob': '92146273941170f66a60e40cde0b85c82cde410b'},
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/EXPECTED.txt': {'bytes': 2479,
+                                                          'sha256': '085d8c3dd70a9443e560440f9a4b1d70c9e66bec50b57dfdc7724ae120f8ad50',
+                                                          'git_blob': 'f9d3894849a9aee2870c8c58089095108af66d95'},
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/PREREG.md': {'bytes': 8566,
+                                                       'sha256': '6a2b90f07b4967d0e4eaf09c28a9628b0eae247b6acdf986c26d74f5c2b65a08',
+                                                       'git_blob': '0617c0725c54fd7000d653319e0b994e240f7072'},
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/PROOF.md': {'bytes': 16963,
+                                                      'sha256': '13998852f685c474e0ec775ac2e4cd41f102c2c93412ee2ef0a77beeece28fd5',
+                                                      'git_blob': '07726350bd2734d2577509128eb366a09ce51f48'},
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/PROVENANCE.md': {'bytes': 5710,
+                                                           'sha256': '6882788bc1c108dfa8fe90f55fc6b93a91cc098a1d4f09153cb0d676a999c71f',
+                                                           'git_blob': '870b824a9c4b7c36d9cd8a5a48bed95e30cbee31'},
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/RESULT.md': {'bytes': 5299,
+                                                       'sha256': 'bca6054036c4d9836198a2fd0fedfa59926c417d580ec1aa8b5f432b1548f25e',
+                                                       'git_blob': '2c9238519ff168a5fbd4520a6d51541f620d0483'},
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/RUN.md': {'bytes': 2746,
+                                                    'sha256': '02e2baec1d9ee62743e7ce18bfa8fa798960dde54308d3f5ffe4036678687a68',
+                                                    'git_blob': '29f501dec0f609159dfb5abd47ce4a84f1255854'},
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/RUNTIME_SOURCES.json': {'bytes': 270,
+                                                                  'sha256': '8238c256e9ef089ea79d9349cfa413facbf3d751cd74982dc95f53406bf40ea8',
+                                                                  'git_blob': '2db39bb370cbac40a3cd3b018534f6ea54997db0'},
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/arithmetic_compiler.py': {'bytes': 13728,
+                                                                    'sha256': '0e3668a7e664f572e6c6c34c49bf454e8d931e6dd05b8f2ebaf3c1b0cd761027',
+                                                                    'git_blob': 'dab2f3b49aa0e7e3beec9310aecc86e1c0a58bef'},
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/compiled_audit.py': {'bytes': 17474,
+                                                               'sha256': '1b32ea0f8b38518495e59028ad8d5867ac5a36a87da78b5924726278c56926fd',
+                                                               'git_blob': 'c3c648901bd27e8f819f6dbce9ce0fb3a40eff86'},
+ 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/verify.py': {'bytes': 15954,
+                                                       'sha256': 'd9968f83bf2827f0849e65b65cb00876571d4ea3f262214c65a5362dab5d8fa5',
+                                                       'git_blob': '3f591b88c5d649f9f666db2e4862b57db6676491'},
+ 'notes/canon/V109-WORKBANK-REVIEW/CLAIMS.md': {'bytes': 6372,
+                                                'sha256': '1dacd38182f7ce707f80c9f0cae89027698f3fc84240625c156155491d1f7fee',
+                                                'git_blob': '6ea19f61f8414c3bb7ff63a16b7ee564c022dfb3'},
+ 'notes/canon/V109-WORKBANK-REVIEW/README.md': {'bytes': 6838,
+                                                'sha256': '7ef2d7385b877380fce27a82b5b0866f3c747b9dbda9ef1e3202b1736c54e140',
+                                                'git_blob': 'eaef6755129fd8dd221b7a2f69baa6ce4f5f2a38'},
+ 'notes/canon/V109-WORKBANK-REVIEW/REVIEW_1882_DISPOSITION.md': {'bytes': 10212,
+                                                                 'sha256': 'e12f806210b6f5e17535f7f43de9cd4e12c0b35bfa2ec39605af1014230b4bb0',
+                                                                 'git_blob': '78b3e45314c5933801b64b8d487b2355df2d2fb3'},
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1/COMPARISON.json': {'bytes': 14300,
+                                                                      'sha256': 'c58f08f9cd6d179e0ef3ed4d86dfa5b7cbd47cced7b0bd758b23ac4f3442ddad',
+                                                                      'git_blob': 'db632f96199dc2cfa28631492770f2d8d18400ba'},
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1/PREREG.md': {'bytes': 15092,
+                                                                'sha256': '4e0ff6ccd685649dfd56bf3ab4e6292e14f6501c60d892fd74ae9bb48e30da33',
+                                                                'git_blob': '5f5fd177d8f8e9c8d4efc14467c50696f99cef46'},
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1/README.md': {'bytes': 3469,
+                                                                'sha256': '0d8bb9ba6031ea315e58ed54dc7130f5491789a27aa1766ad3fea4b523a84ff9',
+                                                                'git_blob': '54cd0bc64f99388207f38efc6c725b19885e43ba'},
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1/RESULT.md': {'bytes': 7415,
+                                                                'sha256': '6834c1f3f372a307c0e85b9707ff181140466443ff791893fed07229a0c44bf6',
+                                                                'git_blob': '9747bcef9aa2af42ef593e4e11b5e1e0557120db'},
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1/RUN-REVIEW-STDERR.txt': {'bytes': 0,
+                                                                            'sha256': 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+                                                                            'git_blob': 'e69de29bb2d1d6434b8b29ae775ad8c2e48c5391'},
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1/RUN-REVIEW.txt': {'bytes': 1690,
+                                                                     'sha256': 'cd39721409a5542045459af4f2dedcbee5b84c201cf0b5a5ed771a041156d3de',
+                                                                     'git_blob': 'b115d7f7108f3c95a70930eab5d413f03eb0d661'},
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1/SHA256SUMS': {'bytes': 555,
+                                                                 'sha256': 'd4251c8e8f8ad4f43f818dd0d9c720c1d0549d82330196a5db210762ad9c3164',
+                                                                 'git_blob': 'b42f87babf9e3e16fa34e9c5b943f38583dfb10c'},
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1/mathreview/MATHEMATICAL-REVIEW.md': {'bytes': 44303,
+                                                                                        'sha256': '3fbb38594502a88863bb83fffc5ac2f31b969174552097db46b5e9ef30d904c3',
+                                                                                        'git_blob': '7dbe4e36f893aaaa719dcdd2302569f83efae09f'},
+ 'notes/C-RELATIVE-CONTACT-WORKBANK-REUSE-REVIEW-1/review.py': {'bytes': 39558,
+                                                                'sha256': 'faef109eb9499d6df9673e7946350f9a38b9fc65ec529a977d8241583ca95ffb',
+                                                                'git_blob': 'b0681656106161a3e699762e42bb382bfce3e2a8'},
+ 'notes/C-WORKBANK-REUSE-INDEPENDENT-REVIEW-N/COMPARE-OUTPUT.txt': {'bytes': 450,
+                                                                    'sha256': 'ea62f5c7500c0fcb789dd34dbb2017bc347e843735057858384b4d0fbf89acaf',
+                                                                    'git_blob': '8480d6db78e6c9fcabc030b64a6752e98c080e32'},
+ 'notes/C-WORKBANK-REUSE-INDEPENDENT-REVIEW-N/README.md': {'bytes': 7251,
+                                                           'sha256': '9cf6dfd1b97bd22b1f2ce8abbe771b515b9e0fa71e17b344767f80958b0551a6',
+                                                           'git_blob': 'e65e747182979a27a955ecf6f796bef1ec7e88f4'},
+ 'notes/C-WORKBANK-REUSE-INDEPENDENT-REVIEW-N/REVIEW-OUTPUT.txt': {'bytes': 3335,
+                                                                   'sha256': '89dd7c026fb149245c86ab115dafbd7a7683a992638782eae4d3e970ff856112',
+                                                                   'git_blob': '36fb2a80c07a923e20467012b5f159d116d15e4e'},
+ 'notes/C-WORKBANK-REUSE-INDEPENDENT-REVIEW-N/REVIEW.md': {'bytes': 12465,
+                                                           'sha256': 'e89df72c9ecb4203311c38ec3e2d58034da11a49ae179b0b2f9a579e94d61813',
+                                                           'git_blob': '80e8b668c7a4e4bbfa67d3e70ecd64a1c6e9c5d7'},
+ 'notes/C-WORKBANK-REUSE-INDEPENDENT-REVIEW-N/SHA256SUMS': {'bytes': 484,
+                                                            'sha256': 'e10b4656201866697d59cbaf3375bd15cb6b4f38d97818a7467e246438537497',
+                                                            'git_blob': '315a6f3b0b5d2aa0aa3105dd62a2a0b283f78da7'},
+ 'notes/C-WORKBANK-REUSE-INDEPENDENT-REVIEW-N/compare_after_run.py': {'bytes': 3171,
+                                                                      'sha256': '0ff1abadacd8d473b76fe18323ba345b7d4eea7bc059aea11257303c75556e24',
+                                                                      'git_blob': '94f6c2035db633653cbf3f70d381d6765006d7a1'},
+ 'notes/C-WORKBANK-REUSE-INDEPENDENT-REVIEW-N/review.py': {'bytes': 31583,
+                                                           'sha256': 'e30ad600d4c12c1b8acae98befac7d81f441e872732309cb9b8472c7327e5ee3',
+                                                           'git_blob': '50814390735c623b1f3a999f18bac6d2a003b812'},
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N/CI-AUDIT.md': {'bytes': 4502,
+                                                               'sha256': '21264ab6e947ad8ede629b9dbf3b24efd4b192085526928fbc917f61a40141ec',
+                                                               'git_blob': 'ef1c6247690c271107c03f0015a4e21f120675d1'},
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N/EXPECTED.txt': {'bytes': 7022,
+                                                                'sha256': '42176dd02ca6c268084812ddc6ecef1d9e4b8e6d778c82e84950680cf23b0407',
+                                                                'git_blob': '438bc6aaacb1ac91e23d0e582012deca7ccf5b85'},
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N/MATHEMATICAL-REVIEW.md': {'bytes': 16878,
+                                                                          'sha256': '9bc56c55651dd0bc0d62aa4cb6440366ef4eac3aa9ffee36995ec8927bee9cbc',
+                                                                          'git_blob': '636ca252de170ff6f039102af2f800d89a1f6533'},
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N/PREREG.md': {'bytes': 9849,
+                                                             'sha256': '56d189b77bafc912bc80cfe04ce2d800fa2007489361958222d4e0f73ba91448',
+                                                             'git_blob': 'b4c7b714869375bd4eb62062229e8678e38ebe93'},
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N/README.md': {'bytes': 2945,
+                                                             'sha256': '20ec1e154e83704fea7fe87cddb36362e066c183c97501b3b175ac396f9c5a3a',
+                                                             'git_blob': 'a5fe1f17c94e85700a5d6abe16eae4601d7b3e6f'},
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N/RESULT.md': {'bytes': 5854,
+                                                             'sha256': '5d957672659dacf520152bbca4457f8baffeca7c8f534328b8a019b3967c4540',
+                                                             'git_blob': 'fbfcb1974b42c677d45fc0511627cd1dd3517a20'},
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N/RUN.md': {'bytes': 2802,
+                                                          'sha256': '9ac4bbf18f3f5877fe33927e102dbe4107bd2c161eb623782306f71a6000553c',
+                                                          'git_blob': '873ff4a23250717af4f95ec3f6b0a93a46865faa'},
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N/SHA256SUMS': {'bytes': 623,
+                                                              'sha256': 'a86c8e7d335c976521f343cdae6f26224bd2eec8889635daf0d87b65044438a8',
+                                                              'git_blob': '81955de03e60ba3d360345ba74325a9217eafe98'},
+ 'notes/C-NATIVE-RECEIVER-CARRY-MIRROR-REVIEW-N/review.py': {'bytes': 55881,
+                                                             'sha256': 'd7fa6b7e49c18da08283bac915a76a3c41c11c2ed2aa5df163c078734ceb5fc3',
+                                                             'git_blob': '233e87d1fbcd13e2fd79c10b70488b7f841c8847'}}
+
+V109_CLAIM_ROWS = {'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': {'claim_id': 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY',
+                                           'status': 'T',
+                                           'scope': 'at L1 on O=Z[j], rho=j^2 and b=1+rho^2, the '
+                                                    'supplied total integral relative contact '
+                                                    'admits one fixed 60-contact word on two '
+                                                    'disjoint ten-slot positional banks taking '
+                                                    '(M[p],M_empty) to (M[p],M[p]) for every p in '
+                                                    'Z/5; the source is restored at each '
+                                                    '12-contact module boundary, exactly 41 '
+                                                    'contacts are admitted, the complete two-bank '
+                                                    'account is 60 and sum zero, and the literal '
+                                                    '240-contact inverse restores the complete '
+                                                    'state; the target must be fresh, source '
+                                                    'constancy inside a module and arbitrary '
+                                                    'occupied-target writes are not asserted, and '
+                                                    'neither minimum length nor physical copying '
+                                                    'is claimed',
+                                           'canon_section': '2. Time, space, and the decoder',
+                                           'evidence': 'inline',
+                                           'falsifier': 'fires on a failure of a displayed local '
+                                                        'phase row or parity decision, an edge '
+                                                        'embedding, source restoration at a module '
+                                                        'boundary, the complete copy identity, the '
+                                                        'count of 41 admissions, an account '
+                                                        'identity or the exact inverse on the '
+                                                        'stated family; occupied targets and '
+                                                        'stronger copying contracts are outside '
+                                                        'the positive assertion'},
+ 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION': {'claim_id': 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION',
+                                                  'status': 'T',
+                                                  'scope': 'at L1 for any nonzero b in O=Z[j] with '
+                                                           'rho=j^2, no fixed word of the supplied '
+                                                           'total relative contacts on four places '
+                                                           'satisfies both G(E)=E and G(A)=T for '
+                                                           'E=(-b,b,-b,b), A=(-rho*b,rho*b,-b,b) '
+                                                           'and T=rho*E; guard-preserving global '
+                                                           'rho equivariance and bijectivity give '
+                                                           'the obstruction; the carrier has no '
+                                                           'additional changing reference, and a '
+                                                           'different output code or the '
+                                                           'twenty-place positional-bank copier is '
+                                                           'outside the obstruction',
+                                                  'canon_section': '2. Time, space, and the '
+                                                                   'decoder',
+                                                  'evidence': 'inline',
+                                                  'falsifier': 'fires on failure of '
+                                                               'complete-contact equivariance or '
+                                                               'bijectivity, or on a fixed contact '
+                                                               'word meeting both displayed '
+                                                               'endpoint conditions with b nonzero '
+                                                               'on the same four-place carrier; a '
+                                                               'larger carrier or different output '
+                                                               'code is outside scope'},
+ 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE': {'claim_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+                                            'status': 'T',
+                                            'scope': 'at L1, for every k>=1 fixed in advance, one '
+                                                     'supplied contact/SWAP word P_k on 26+25k '
+                                                     'slots accepts all 10^k tuples from ({0,1} '
+                                                     'times Z/5)^k with one common preparation of '
+                                                     'the 26+20k auxiliary slots; each cycle '
+                                                     'writes two records, copies them to fresh '
+                                                     'archive banks and reverses the complete '
+                                                     '31-slot work core, restoring the same '
+                                                     'work-bank addresses and the current prepared '
+                                                     'source and clock; fixed swaps load prequeued '
+                                                     'inputs and retain all actual earlier inputs, '
+                                                     'the 2k archive banks alone decode the '
+                                                     'ordered input tuple, and each completed '
+                                                     'archive is untouched through the remainder '
+                                                     'of the forward P_k; total account is 68+74k, '
+                                                     'auxiliary account 68+60k and ring sum '
+                                                     '2(k+1); P_k has 26870k contacts and 5(k-1) '
+                                                     'swaps, and its unreduced inverse has 107480k '
+                                                     'contacts and 5(k-1) swaps and restores every '
+                                                     'initial coordinate while removing the '
+                                                     'records; B five-valued marked banks alone '
+                                                     'require 5^B>=10^k, so 2k is a construction '
+                                                     'upper bound and not a storage minimum; no '
+                                                     'one finite carrier retaining unlimited '
+                                                     'history, occupied-archive regeneration, '
+                                                     'post-start external loading, autonomous '
+                                                     'schedule, contact-only swap compilation, '
+                                                     'native-U realization or physical '
+                                                     'interpretation follows',
+                                            'canon_section': '2. Time, space, and the decoder',
+                                            'evidence': 'inline',
+                                            'falsifier': 'fires on an admitted finite input tuple '
+                                                         'violating the complete cycle or final '
+                                                         'endpoint, common initial preparation, '
+                                                         'actual input parking, ready-core and '
+                                                         'fresh-target induction premises, forward '
+                                                         'archive retention, resource accounts, '
+                                                         'current-archive decoding or complete '
+                                                         'inverse; the exhaustive k=3 replay '
+                                                         'corroborates that finite instance and is '
+                                                         'not the universal finite-k proof'},
+ 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER': {'claim_id': 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+                                        'status': 'T',
+                                        'scope': 'At L1 on unchanged origin-zero native U with '
+                                                 'every four-piston P and common receiver (0,1), '
+                                                 'restricted to s=sum(P)+1!=0: the 500 '
+                                                 'preparations form four classes of 125 and the '
+                                                 'actual first receiver gives s=q+r+2, uniquely '
+                                                 'among affine scalar maps of that receiver; the '
+                                                 'five first receiver pairs are distinct, the '
+                                                 'excluded s=0 sheet is sent to 3, and omitting +2 '
+                                                 'gives 500 wrong marks despite 125 incidental '
+                                                 'character agreements. The closed current-trace '
+                                                 'maps tau0=(0,4,0,4,4) and tau1=(2,1,1,3,1) have '
+                                                 'rank two on the admitted sheets, so no nonempty '
+                                                 'common binary clock word makes that port equal '
+                                                 's->2s. This is a fixed first-tick transfer and a '
+                                                 'current-trace obstruction, not a restriction on '
+                                                 'full-receiver or history decoding, a persistent '
+                                                 'reader, a derived write or physical measurement.',
+                                        'canon_section': '2. Time, space, and the decoder',
+                                        'evidence': 'inline',
+                                        'falsifier': 'An admitted native first step with another '
+                                                     'receiver or affine transfer value, another '
+                                                     'affine scalar map on the same four rows, a '
+                                                     'failure of the exact multiplicities or '
+                                                     'offset control, failure of trace closure or '
+                                                     'either displayed trace map, or a nonempty '
+                                                     'common clock word with four distinct '
+                                                     'current-trace values on the admitted sheets; '
+                                                     'changing the ready state, observed port or '
+                                                     'reading class changes the contract.'},
+ 'J-MARKED-CARRY-MIRROR': {'claim_id': 'J-MARKED-CARRY-MIRROR',
+                           'status': 'T',
+                           'scope': 'At L1 for O=Z[j], lambda=1-j and J=1+j^2, the two-digit '
+                                    'quotient maps F(lo,hi)=(2lo,3lo+2hi) and '
+                                    'I(lo,hi)=(3lo,3lo+3hi) are inverse. With '
+                                    'S(q,r,h,k)=(q+r+2,r,h,k), F_hat acting on (q,h), M=F_hat o S '
+                                    'and right-first composition, L=M^-1 o SWAP(h,k) o M equals '
+                                    '(q,r,b+3k,3b+2h), b=q+r+2, and is an involution on all 625 '
+                                    'states. Blank h,k retain residues h=b,k=3b and restore the '
+                                    'complete primary post-tick checkpoint. In either counting or '
+                                    'balanced digit section, marked integral carries satisfy '
+                                    'C_pair=-J^-1 C exactly, with residue identities v=3*res(b), '
+                                    'w=res(b) and res(a)=2*res(b) in F5; for nonzero '
+                                    'representatives chi(v)=-chi(b),chi(w)=chi(b),chi(a)=-chi(b), '
+                                    'all using chi(2)=-1. Agreement of the declared -chi carry '
+                                    'reader and native q-reader is conventional. A supplied second '
+                                    'common-ready native device fed by the actual a has the '
+                                    'displayed full first-tick output and character chi(a). '
+                                    'Same-input inversion has the same first carry residue; '
+                                    'inversion of the full forward pair erases its carry. The '
+                                    'wiring, archive and second origin are supplied, with no '
+                                    'native inverse or retained-record resource regeneration.',
+                           'canon_section': '2. Time, space, and the decoder',
+                           'evidence': 'inline',
+                           'falsifier': 'An exact failure of the unit or quotient identities, the '
+                                        'complete occupied-register formula or involution, the '
+                                        'paired integral identity in either declared digit '
+                                        'section, the character relations for an admitted nonzero '
+                                        'representative, the two inverse controls, or the complete '
+                                        'second-device table under its specified preparation and '
+                                        'live SUM; a different sign convention or unit does not '
+                                        'refute the stated convention-free character identities.'},
+ 'J-FIXED-INPUT-CARRY-PRECISION': {'claim_id': 'J-FIXED-INPUT-CARRY-PRECISION',
+                                   'status': 'T',
+                                   'scope': 'At L1 compare J and J^-1 at a common tick with zero '
+                                            'initial carry and the same nonzero input '
+                                            'representative b from D={0,1,2,3,4} or '
+                                            'D={-2,-1,0,1,2}, each with its own output '
+                                            'representative in that same D. Their first integral '
+                                            'carries have identical residue v=3b but next '
+                                            'coefficients u=b and u=-b, independently of the '
+                                            'integer lift used to read u. Hence one fixed reader '
+                                            'of the carry modulo lambda^2 distinguishes the two '
+                                            'multipliers by u/v=2 or 3 without an input letter, '
+                                            'output letter, operation label or clock direction; '
+                                            'modulo lambda no reader at the common tick '
+                                            'distinguishes them for a fixed b. This minimum is '
+                                            'restricted to ideal-power precision of the carry-only '
+                                            "observation; the device's own output-letter and "
+                                            'first-carry pair already distinguishes the two '
+                                            'multipliers in F5 by v/a=4 or 1 without the input '
+                                            'letter. For b=0 both carries vanish. Under the '
+                                            'carry-only observation contract, reading the next '
+                                            'coefficient requires the product modulo lambda^3 or '
+                                            'the integral carry and is not supplied by the '
+                                            'two-digit compiled circuit; arbitrary non-integer '
+                                            'sources, occupied initial carry and physical time '
+                                            'direction are outside scope.',
+                                   'canon_section': '2. Time, space, and the decoder',
+                                   'evidence': 'inline',
+                                   'falsifier': 'An admitted representative or specified digit '
+                                                'section violating the exact carry expansions, the '
+                                                'common residue, lift independence or slopes 2 and '
+                                                '3; a residue-only reader distinguishing the two '
+                                                'operations at the same admitted input and tick; '
+                                                'or nonzero carry at b=0 under the stated '
+                                                'zero-representative sections. Access to '
+                                                'source/output letters or a changed initial carry '
+                                                'changes the observation contract.'},
+ 'U-CARRY-MIRROR-FINITE-CIRCUIT': {'claim_id': 'U-CARRY-MIRROR-FINITE-CIRCUIT',
+                                   'status': 'C',
+                                   'scope': 'At L1 the hash-bound discrete compiler witness in '
+                                            'P-NATIVE-RECEIVER-CARRY-MIRROR-1 expands into 40348 '
+                                            'SUM/EQ/MUL/SHIFT/REFLECT/SCALE primitives on 50 '
+                                            'compiler cells, including 48 clean work cells; its '
+                                            'literal reversed and primitive-inverted word realizes '
+                                            'I on every two-digit input. The finite audit checks '
+                                            'all 25 inputs in each direction, an untouched archive '
+                                            'sentinel and five marked mirrors with complete undo. '
+                                            'On the declared 62-cell carrier, only four primary '
+                                            'pistons vary and 58 other initial cells are common; '
+                                            'all 500 admitted s!=0 preparations execute the actual '
+                                            'primary origin tick, live receiver shear, forward '
+                                            'word, secondary SUM and origin tick, carry/archive '
+                                            'swap, literal inverse word and inverse shear. '
+                                            'Complete endpoints restore the primary post-tick '
+                                            'checkpoint, retain high=s and archive=3s and the full '
+                                            'secondary output at a=2s, and restore all 48 work '
+                                            'cells at both multiplier boundaries. Each input uses '
+                                            '80705 primitives and two supplied native ticks, with '
+                                            'four boundary classes of 125. The 62 count excludes '
+                                            'the supplied origins and program control; no pulse '
+                                            'execution, circuit minimum, extra carry coefficient, '
+                                            'native global inverse, autonomous controller, '
+                                            'contact-bank bridge or archive regeneration is '
+                                            'established.',
+                                   'canon_section': '2. Time, space, and the decoder',
+                                   'evidence': 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/RESULT.md',
+                                   'falsifier': 'A byte-different replay of the unchanged accepted '
+                                                'verifier, a wrong primitive inventory, a compiler '
+                                                'input failing F or its literal inverse I with '
+                                                'clean workspace and untouched complement, a '
+                                                'failed complete marked undo, or any of the 500 '
+                                                'admitted full 62-cell executions violating an '
+                                                'actual checkpoint, workspace boundary, retained '
+                                                'carry, complete secondary output or fixed gate '
+                                                'count. A source-custody mismatch stops '
+                                                'validation; a changed compiler revision, gate '
+                                                'alphabet, input family or initialization is a '
+                                                'different finite witness.'}}
+
+V109_NORMATIVE_ROWS = {'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': {'item_id': 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY',
+                                           'item_type': 'THEOREM',
+                                           'claim_id': 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY',
+                                           'status': 'T',
+                                           'layer': 'L1',
+                                           'gate_ids': '',
+                                           'statement_source': 'canon/CANON.md::RELATIVE-CONTACT-POSITIONAL-BANK-COPY'},
+ 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION': {'item_id': 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION',
+                                                  'item_type': 'THEOREM',
+                                                  'claim_id': 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION',
+                                                  'status': 'T',
+                                                  'layer': 'L1',
+                                                  'gate_ids': '',
+                                                  'statement_source': 'canon/CANON.md::RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION'},
+ 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE': {'item_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+                                            'item_type': 'THEOREM',
+                                            'claim_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+                                            'status': 'T',
+                                            'layer': 'L1',
+                                            'gate_ids': '',
+                                            'statement_source': 'canon/CANON.md::RELATIVE-CONTACT-FINITE-WORKBANK-REUSE'},
+ 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER': {'item_id': 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+                                        'item_type': 'THEOREM',
+                                        'claim_id': 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+                                        'status': 'T',
+                                        'layer': 'L1',
+                                        'gate_ids': '',
+                                        'statement_source': 'canon/CANON.md::U-FIRST-TICK-AFFINE-TRACE-TRANSFER'},
+ 'J-MARKED-CARRY-MIRROR': {'item_id': 'J-MARKED-CARRY-MIRROR',
+                           'item_type': 'THEOREM',
+                           'claim_id': 'J-MARKED-CARRY-MIRROR',
+                           'status': 'T',
+                           'layer': 'L1',
+                           'gate_ids': '',
+                           'statement_source': 'canon/CANON.md::J-MARKED-CARRY-MIRROR'},
+ 'J-FIXED-INPUT-CARRY-PRECISION': {'item_id': 'J-FIXED-INPUT-CARRY-PRECISION',
+                                   'item_type': 'THEOREM',
+                                   'claim_id': 'J-FIXED-INPUT-CARRY-PRECISION',
+                                   'status': 'T',
+                                   'layer': 'L1',
+                                   'gate_ids': '',
+                                   'statement_source': 'canon/CANON.md::J-FIXED-INPUT-CARRY-PRECISION'},
+ 'U-CARRY-MIRROR-FINITE-CIRCUIT': {'item_id': 'U-CARRY-MIRROR-FINITE-CIRCUIT',
+                                   'item_type': 'COMPUTATION',
+                                   'claim_id': 'U-CARRY-MIRROR-FINITE-CIRCUIT',
+                                   'status': 'C',
+                                   'layer': 'L1',
+                                   'gate_ids': '',
+                                   'statement_source': 'canon/CANON.md::U-CARRY-MIRROR-FINITE-CIRCUIT'}}
+
+V109_EVIDENCE_ROWS = {'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': {'claim_id': 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY',
+                                           'evidence_id': 'EV-RELATIVE-CONTACT-POSITIONAL-BANK-COPY',
+                                           'evidence_kind': 'INLINE_CANON',
+                                           'location': 'inline',
+                                           'sha256': '1c4b6d0b712cdcac1876ab8d05b7508ffab73ff9738747be0f5348ada8f815fb',
+                                           'hash_mode': 'registry-scope-sha256-v1',
+                                           'architecture_requirement': 'none'},
+ 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION': {'claim_id': 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION',
+                                                  'evidence_id': 'EV-RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION',
+                                                  'evidence_kind': 'INLINE_CANON',
+                                                  'location': 'inline',
+                                                  'sha256': '1b9ffabfa4f016bbbc820a421e0240593a6a1e8cdb0b8a16e68e965efe1faf4c',
+                                                  'hash_mode': 'registry-scope-sha256-v1',
+                                                  'architecture_requirement': 'none'},
+ 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE': {'claim_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+                                            'evidence_id': 'EV-RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+                                            'evidence_kind': 'INLINE_CANON',
+                                            'location': 'inline',
+                                            'sha256': 'ef7f84cf9d59cbd9fccbf87de306b06be21194809c702a85e2e5d9c609c94d99',
+                                            'hash_mode': 'registry-scope-sha256-v1',
+                                            'architecture_requirement': 'none'},
+ 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER': {'claim_id': 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+                                        'evidence_id': 'EV-U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+                                        'evidence_kind': 'INLINE_CANON',
+                                        'location': 'inline',
+                                        'sha256': 'bc1581785aba917af1ce3ca93aaec9960134f86663ce89cff08cdd2988a8892d',
+                                        'hash_mode': 'registry-scope-sha256-v1',
+                                        'architecture_requirement': 'none'},
+ 'J-MARKED-CARRY-MIRROR': {'claim_id': 'J-MARKED-CARRY-MIRROR',
+                           'evidence_id': 'EV-J-MARKED-CARRY-MIRROR',
+                           'evidence_kind': 'INLINE_CANON',
+                           'location': 'inline',
+                           'sha256': 'ea9d98706f941718a28af38c50060847d4d3694edee18f35f3ec1725e2312207',
+                           'hash_mode': 'registry-scope-sha256-v1',
+                           'architecture_requirement': 'none'},
+ 'J-FIXED-INPUT-CARRY-PRECISION': {'claim_id': 'J-FIXED-INPUT-CARRY-PRECISION',
+                                   'evidence_id': 'EV-J-FIXED-INPUT-CARRY-PRECISION',
+                                   'evidence_kind': 'INLINE_CANON',
+                                   'location': 'inline',
+                                   'sha256': '4fb162778ca28c8228c32bc7943c9babd06f209ad6a20c5767cc8ed72be16228',
+                                   'hash_mode': 'registry-scope-sha256-v1',
+                                   'architecture_requirement': 'none'},
+ 'U-CARRY-MIRROR-FINITE-CIRCUIT': {'claim_id': 'U-CARRY-MIRROR-FINITE-CIRCUIT',
+                                   'evidence_id': 'EV-U-CARRY-MIRROR-FINITE-CIRCUIT',
+                                   'evidence_kind': 'PUBLIC_PROBE',
+                                   'location': 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/RESULT.md',
+                                   'sha256': '843e4a03c8765d732c09588f869bd70e6e2a9108c1576229055d7a4ddc326040',
+                                   'hash_mode': 'bundle-manifest-sha256-v1',
+                                   'architecture_requirement': 'two-architecture'}}
+
+V109_HISTORY_EVENTS = [{'event_id': 'CANON109-DECLARE-RELATIVE-CONTACT-POSITIONAL-BANK-COPY',
+  'event_sequence': '1',
+  'event_date': '2026-11-03',
+  'release': 'canon-v109',
+  'claim_id': 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '1c4b6d0b712cdcac1876ab8d05b7508ffab73ff9738747be0f5348ada8f815fb',
+  'evidence_id': 'EV-RELATIVE-CONTACT-POSITIONAL-BANK-COPY',
+  'evidence_location': 'inline',
+  'evidence_sha256': '1c4b6d0b712cdcac1876ab8d05b7508ffab73ff9738747be0f5348ada8f815fb',
+  'rationale': 'Adopt the exact independently reviewed conditional L1 proof, preserving the '
+               'declared carrier, ready family, supplied operations and finite-resource '
+               'boundaries.'},
+ {'event_id': 'CANON109-DECLARE-RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION',
+  'event_sequence': '1',
+  'event_date': '2026-11-03',
+  'release': 'canon-v109',
+  'claim_id': 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '1b9ffabfa4f016bbbc820a421e0240593a6a1e8cdb0b8a16e68e965efe1faf4c',
+  'evidence_id': 'EV-RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION',
+  'evidence_location': 'inline',
+  'evidence_sha256': '1b9ffabfa4f016bbbc820a421e0240593a6a1e8cdb0b8a16e68e965efe1faf4c',
+  'rationale': 'Adopt the exact independently reviewed conditional L1 proof, preserving the '
+               'declared carrier, ready family, supplied operations and finite-resource '
+               'boundaries.'},
+ {'event_id': 'CANON109-DECLARE-RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+  'event_sequence': '1',
+  'event_date': '2026-11-03',
+  'release': 'canon-v109',
+  'claim_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': 'ef7f84cf9d59cbd9fccbf87de306b06be21194809c702a85e2e5d9c609c94d99',
+  'evidence_id': 'EV-RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+  'evidence_location': 'inline',
+  'evidence_sha256': 'ef7f84cf9d59cbd9fccbf87de306b06be21194809c702a85e2e5d9c609c94d99',
+  'rationale': 'Adopt the exact independently reviewed conditional L1 proof, preserving the '
+               'declared carrier, ready family, supplied operations and finite-resource '
+               'boundaries.'},
+ {'event_id': 'CANON109-DECLARE-U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+  'event_sequence': '1',
+  'event_date': '2026-11-03',
+  'release': 'canon-v109',
+  'claim_id': 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': 'bc1581785aba917af1ce3ca93aaec9960134f86663ce89cff08cdd2988a8892d',
+  'evidence_id': 'EV-U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+  'evidence_location': 'inline',
+  'evidence_sha256': 'bc1581785aba917af1ce3ca93aaec9960134f86663ce89cff08cdd2988a8892d',
+  'rationale': 'Adopt the exact independently reviewed conditional L1 proof, preserving the '
+               'declared carrier, ready family, supplied operations and finite-resource '
+               'boundaries.'},
+ {'event_id': 'CANON109-DECLARE-J-MARKED-CARRY-MIRROR',
+  'event_sequence': '1',
+  'event_date': '2026-11-03',
+  'release': 'canon-v109',
+  'claim_id': 'J-MARKED-CARRY-MIRROR',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': 'ea9d98706f941718a28af38c50060847d4d3694edee18f35f3ec1725e2312207',
+  'evidence_id': 'EV-J-MARKED-CARRY-MIRROR',
+  'evidence_location': 'inline',
+  'evidence_sha256': 'ea9d98706f941718a28af38c50060847d4d3694edee18f35f3ec1725e2312207',
+  'rationale': 'Adopt the exact independently reviewed conditional L1 proof, preserving the '
+               'declared carrier, ready family, supplied operations and finite-resource '
+               'boundaries.'},
+ {'event_id': 'CANON109-DECLARE-J-FIXED-INPUT-CARRY-PRECISION',
+  'event_sequence': '1',
+  'event_date': '2026-11-03',
+  'release': 'canon-v109',
+  'claim_id': 'J-FIXED-INPUT-CARRY-PRECISION',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'T',
+  'scope_sha256': '4fb162778ca28c8228c32bc7943c9babd06f209ad6a20c5767cc8ed72be16228',
+  'evidence_id': 'EV-J-FIXED-INPUT-CARRY-PRECISION',
+  'evidence_location': 'inline',
+  'evidence_sha256': '4fb162778ca28c8228c32bc7943c9babd06f209ad6a20c5767cc8ed72be16228',
+  'rationale': 'Adopt the exact independently reviewed conditional L1 proof, preserving the '
+               'declared carrier, ready family, supplied operations and finite-resource '
+               'boundaries.'},
+ {'event_id': 'CANON109-DECLARE-U-CARRY-MIRROR-FINITE-CIRCUIT',
+  'event_sequence': '1',
+  'event_date': '2026-11-03',
+  'release': 'canon-v109',
+  'claim_id': 'U-CARRY-MIRROR-FINITE-CIRCUIT',
+  'event_type': 'DECLARE',
+  'previous_status': '-',
+  'new_status': 'C',
+  'scope_sha256': '6afabee9200a991256e7bc9c0de4dda8af27dc7beb353bf77e1dcb869d535fe9',
+  'evidence_id': 'EV-U-CARRY-MIRROR-FINITE-CIRCUIT',
+  'evidence_location': 'probes/P-NATIVE-RECEIVER-CARRY-MIRROR-1/RESULT.md',
+  'evidence_sha256': '843e4a03c8765d732c09588f869bd70e6e2a9108c1576229055d7a4ddc326040',
+  'rationale': 'Retain the exact public two-architecture compiled finite witness as C; its '
+               'supplied interconnection, origins, clean workspace and 500-input domain remain '
+               'explicit.'}]
+
+V109_DEPENDENCY_ROWS = [{'item_id': 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'The complete parity-guarded contact, global inverse and exact Hermitian, trace, sum '
+           'and labelled-residue invariants support the local copying identities'},
+ {'item_id': 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'Global contact bijectivity and guard-preserving rho equivariance imply the four-place '
+           'literal-copy contradiction'},
+ {'item_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+  'depends_on': 'RELATIVE-CONTACT-POSITIONAL-BANK-COPY',
+  'relation': 'REQUIRES',
+  'basis': 'Each actual work record is copied to a fresh archive while the complete source bank is '
+           'restored before uncomputing the work core'},
+ {'item_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+  'depends_on': 'RELATIVE-CONTACT-COMMON-APPARATUS-OPEN',
+  'relation': 'REQUIRES',
+  'basis': 'The canonical 535-contact read word supplies the proved complete ten-step 31-slot '
+           'input and output identity on the ten-input family'},
+ {'item_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+  'depends_on': 'RELATIVE-CONTACT-INTEGRAL-LAW',
+  'relation': 'REQUIRES',
+  'basis': 'The complete inverse and conservation laws apply to every contact in the fixed mixed '
+           'word and to its actual occupied checkpoints'},
+ {'item_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+  'depends_on': 'RELATIVE-CONTACT-RETAINED-BANK-CAPACITY',
+  'relation': 'BOUNDED_BY',
+  'basis': 'Work-bank restoration retains records only by using separately funded fresh archives; '
+           'no complete resource reset with retained output or unlimited finite-stock reuse is '
+           'inferred'},
+ {'item_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE',
+  'depends_on': 'RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY',
+  'relation': 'BOUNDED_BY',
+  'basis': 'The fixed contact and slot-permutation schedule has no input-dependent address choice '
+           'and its reloads exchange equal corresponding residues on the stated prepared family'},
+ {'item_id': 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+  'depends_on': 'DEF-AUTONOMOUS-STATE',
+  'relation': 'REQUIRES',
+  'basis': 'The unchanged native origin-zero update, declared generators and selector determine '
+           'the actual first receiver and the closed current-trace maps.'},
+ {'item_id': 'J-MARKED-CARRY-MIRROR',
+  'depends_on': 'J-UNIT',
+  'relation': 'REQUIRES',
+  'basis': 'The exact cyclotomic unit J and its inverse define the quotient multipliers and '
+           'integral carry identities.'},
+ {'item_id': 'J-MARKED-CARRY-MIRROR',
+  'depends_on': 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+  'relation': 'REQUIRES',
+  'basis': 'The first receiver supplies b through its fixed affine transfer, and the same native '
+           'first-step table supplies the second-device character after the declared live write.'},
+ {'item_id': 'J-FIXED-INPUT-CARRY-PRECISION',
+  'depends_on': 'J-UNIT',
+  'relation': 'REQUIRES',
+  'basis': 'The exact J and J-inverse expansions at lambda determine the first two carry '
+           'coefficients in the specified integer digit sections.'},
+ {'item_id': 'U-CARRY-MIRROR-FINITE-CIRCUIT',
+  'depends_on': 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER',
+  'relation': 'REQUIRES',
+  'basis': 'The common-ready primary native step supplies the actual low digit from its current '
+           'receiver on the complete admitted 500-input family.'},
+ {'item_id': 'U-CARRY-MIRROR-FINITE-CIRCUIT',
+  'depends_on': 'J-MARKED-CARRY-MIRROR',
+  'relation': 'REQUIRES',
+  'basis': 'The reversible register circuit and separately initialized second native device '
+           'specify the complete mathematical endpoints compared with the actual compiled word.'}]
+
+V109_CORE_ADDITIONS = [{'rank': '51', 'claim_id': 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE'},
+ {'rank': '52', 'claim_id': 'U-CARRY-MIRROR-FINITE-CIRCUIT'}]
+
+V109_STATUS_PARTITION = {'T': 465, 'C': 40, 'D': 59, 'F': 19, 'H': 2, 'O': 24}
+
+V109_METRICS = {'claims': '609',
+ 'status_T-LOCK': '0',
+ 'status_T': '465',
+ 'status_D': '59',
+ 'status_C': '40',
+ 'status_H': '2',
+ 'status_O': '24',
+ 'status_F': '19',
+ 'live_H_O': '26',
+ 'reproductions': '38',
+ 'evidence_none': '188',
+ 'evidence_one-architecture': '9',
+ 'evidence_recorded-audit': '31',
+ 'evidence_two-architecture': '381'}
+
+V109_PROOF_CONTRACTS = {'RELATIVE-CONTACT-POSITIONAL-BANK-COPY': {'begin': '### Copying a positional bank into a fresh '
+                                                    'bank\n',
+                                           'characters': 6902,
+                                           'bytes': 6902,
+                                           'sha256': '2e2d7b3935216a1ef042c4fdc75e6f6548bd61b34ea16b2eff9c91f71c4af170',
+                                           'claim_marker': '**RELATIVE-CONTACT-POSITIONAL-BANK-COPY '
+                                                           '[T].**'},
+ 'RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION': {'begin': '### A four-place obstruction to '
+                                                           'literal copying\n',
+                                                  'characters': 2038,
+                                                  'bytes': 2038,
+                                                  'sha256': 'dc3e8c0a6dc3c0a4a7253ab2ab7ba031b845090c261589dbc32524f942ffc491',
+                                                  'claim_marker': '**RELATIVE-CONTACT-FOUR-PLACE-COPY-OBSTRUCTION '
+                                                                  '[T].**'},
+ 'RELATIVE-CONTACT-FINITE-WORKBANK-REUSE': {'begin': '### Finite reuse of one work core with '
+                                                     'retained archives\n',
+                                            'characters': 12900,
+                                            'bytes': 12900,
+                                            'sha256': 'c97045e931230a8430ce35b127f7c76143c7a16ab3666af0cce59ed5d34dc6fc',
+                                            'claim_marker': '**RELATIVE-CONTACT-FINITE-WORKBANK-REUSE '
+                                                            '[T].**'},
+ 'U-FIRST-TICK-AFFINE-TRACE-TRANSFER': {'begin': '### First-tick transfer and the current trace '
+                                                 'boundary\n',
+                                        'characters': 3526,
+                                        'bytes': 3526,
+                                        'sha256': '368735db863aab7fe028434284971a25096c78f809c4f3a4bea8f37054f90cdd',
+                                        'claim_marker': '**U-FIRST-TICK-AFFINE-TRACE-TRANSFER '
+                                                        '[T].**'},
+ 'J-MARKED-CARRY-MIRROR': {'begin': '### Marked carry pairing and a reversible register circuit\n',
+                           'characters': 5561,
+                           'bytes': 5561,
+                           'sha256': 'e27844db92abf5b388d424d063284451aea73c61b74a98df4fc57a1a3905e360',
+                           'claim_marker': '**J-MARKED-CARRY-MIRROR [T].**'},
+ 'J-FIXED-INPUT-CARRY-PRECISION': {'begin': '### The next carry coefficient distinguishes the '
+                                            'fixed multipliers\n',
+                                   'characters': 3283,
+                                   'bytes': 3283,
+                                   'sha256': '540ae9e2ecb2f268ad98e6867a83cb01d478900bba9ae6383c507c3fa863f00e',
+                                   'claim_marker': '**J-FIXED-INPUT-CARRY-PRECISION [T].**'},
+ 'U-CARRY-MIRROR-FINITE-CIRCUIT': {'begin': '### Finite compiled receiver and carry circuit\n',
+                                   'characters': 5595,
+                                   'bytes': 5595,
+                                   'sha256': 'c6d2b8d8ae8169e9aa32e435264019fdd0422c21629ce6cce7d4bb92eb053240',
+                                   'claim_marker': '**U-CARRY-MIRROR-FINITE-CIRCUIT [C].**'}}
+
+V109_CHECKS = (('V109-PRIOR-BYTES',
+  'thirteen exact v109 inputs reconstruct public v108 before all 208 unchanged historical guards'),
+ ('V109-CLAIM-LEDGERS',
+  'six L1 theorems and one finite L1 computation have exact declarations while all 602 prior claim '
+  'rows remain unchanged'),
+ ('V109-DEPENDENCIES',
+  'only the seven new claims add exact premise edges; old dependencies are unchanged and no '
+  'theorem consumes an open or computational premise'),
+ ('V109-OPEN-BOUNDARY',
+  'all 26 live owners, every gate and the Frontier retain their exact boundaries; the registry has '
+  '609 claims'),
+ ('V109-PROOF-SCOPE',
+  'byte-pinned copy, finite funded workbank reuse and native carry proofs preserve their separate '
+  'supplied laws and restricted readers'),
+ ('V109-EVIDENCE',
+  'six theorems retain inline scope-hashed evidence and the finite carry circuit uses its complete '
+  'two-architecture public probe'),
+ ('V109-SOURCE-CUSTODY',
+  'the accepted source and review inventories retain exact bytes, SHA-256 and Git blob identities '
+  'at their declared immutable commits'),
+ ('V109-REPRO-INVENTORY',
+  'the validated 38-directory reproduction inventory is unchanged; this structural audit executes '
+  'no scientific verifier'))
+
+# Exact v109 current custody and reversible v108 input reconstruction.
+# This structural adapter neither imports nor executes a scientific verifier.
+
+@lru_cache(maxsize=1)
+def v109_current_snapshot():
+    data, sources = {}, {}
+    try:
+        for name, contract in V109_INPUT_PATCH.items():
+            path = ROOT / 'canon' / name
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            if (len(content) != contract['current_bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
+                return None
+            data[name] = content
+        if any(path.is_symlink() for path in REPRODUCE.iterdir()):
+            return None
+        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        if inventory != frozenset(V109_REPRODUCTIONS):
+            return None
+        for relative, contract in V109_SOURCE_FILES.items():
+            path = ROOT / relative
+            if not path.is_file() or path.is_symlink():
+                return None
+            content = path.read_bytes()
+            blob = hashlib.sha1(b'blob ' + str(len(content)).encode('ascii')
+                               + b'\0' + content).hexdigest()
+            if (len(content) != contract['bytes']
+                    or hashlib.sha256(content).hexdigest() != contract['sha256']
+                    or blob != contract['git_blob']):
+                return None
+            sources[relative] = content
+        actual = set()
+        for directory in V109_SOURCE_COMMITS:
+            base = ROOT / directory
+            if not base.is_dir() or base.is_symlink():
+                return None
+            for path in base.rglob('*'):
+                if path.is_symlink():
+                    return None
+                if path.is_file() and '__pycache__' not in path.parts and path.suffix != '.pyc':
+                    actual.add(path.relative_to(ROOT).as_posix())
+        if actual != set(V109_SOURCE_FILES):
+            return None
+    except OSError:
+        return None
+    return {'canon': data, 'reproductions': inventory, 'sources': sources}
+
+
+@lru_cache(maxsize=13)
+def v109_previous_bytes(path):
+    """Reconstruct exact public v108 only from validated current v109 bytes."""
+    if path.parent != ROOT / 'canon' or path.name not in V109_INPUT_PATCH:
+        return None
+    snapshot = v109_current_snapshot()
+    if snapshot is None:
+        return None
+    contract = V109_INPUT_PATCH[path.name]
+    lines = snapshot['canon'][path.name].decode('utf-8').splitlines(keepends=True)
+    for first, last, original in reversed(contract['restore']):
+        if not 0 <= first <= last <= len(lines):
+            return None
+        lines[first:last] = original.splitlines(keepends=True)
+    previous = ''.join(lines).encode('utf-8')
+    if (len(previous) != contract['prior_bytes']
+            or hashlib.sha256(previous).hexdigest() != contract['prior_sha256']):
+        return None
+    return previous
+
+
+def v109_previous_reproduction_dirs():
+    snapshot = v109_current_snapshot()
+    return set(snapshot['reproductions']) if snapshot is not None else set()
+
+
+def v109_current_checks():
+    failed = [(tag, description, False) for tag, description in V109_CHECKS]
+    snapshot = v109_current_snapshot()
+    if snapshot is None:
+        return failed
+    prior_bytes = {name: v109_previous_bytes(ROOT / 'canon' / name)
+                   for name in V109_INPUT_PATCH}
+    if any(value is None for value in prior_bytes.values()):
+        return failed
+    try:
+        names = tuple(name for name in V109_INPUT_PATCH if name.endswith('.tsv'))
+        prior = {name: v87_table_bytes(prior_bytes[name]) for name in names}
+        current = {name: v87_table_bytes(snapshot['canon'][name]) for name in names}
+        old_index = {row['claim_id']: row for row in prior['REGISTRY.tsv']}
+        index = {row['claim_id']: row for row in current['REGISTRY.tsv']}
+        normative = {row['item_id']: row for row in current['NORMATIVE.tsv']}
+        evidence = {row['claim_id']: row for row in current['EVIDENCE.tsv']}
+        new_ids = set(V109_NEW_STATUSES)
+        exact_prior = (
+            len(prior_bytes) == 13 and set(prior_bytes) == set(V109_INPUT_PATCH)
+            and all(len(prior_bytes[name]) == contract['prior_bytes']
+                    and hashlib.sha256(prior_bytes[name]).hexdigest() == contract['prior_sha256']
+                    for name, contract in V109_INPUT_PATCH.items()))
+        exact_claims = (
+            len(prior['REGISTRY.tsv']) == len(old_index) == 602
+            and len(current['REGISTRY.tsv']) == len(index) == 609 and len(new_ids) == 7
+            and set(index) == set(old_index) | new_ids
+            and all(index.get(claim) == row for claim, row in old_index.items())
+            and all(index.get(claim) == row for claim, row in V109_CLAIM_ROWS.items())
+            and all(normative.get(claim) == row for claim, row in V109_NORMATIVE_ROWS.items())
+            and all(index[claim]['status'] == status
+                    and normative[claim]['item_type'] == ('THEOREM' if status == 'T' else 'COMPUTATION')
+                    and normative[claim]['status'] == status
+                    and normative[claim]['layer'] == 'L1'
+                    and normative[claim]['gate_ids'] == ''
+                    for claim, status in V109_NEW_STATUSES.items()))
+        for filename, key in (('REGISTRY.tsv', 'claim_id'), ('NORMATIVE.tsv', 'item_id'),
+                              ('EVIDENCE.tsv', 'claim_id')):
+            exact_claims = exact_claims and (
+                [row for row in current[filename] if row[key] not in new_ids] == prior[filename]
+                and len(current[filename]) == len(prior[filename]) + 7)
+        history = current['HISTORY.tsv'][len(prior['HISTORY.tsv']):]
+        exact_history = (
+            current['HISTORY.tsv'][:len(prior['HISTORY.tsv'])] == prior['HISTORY.tsv']
+            and history == V109_HISTORY_EVENTS and len(history) == 7
+            and {row['claim_id'] for row in history} == new_ids
+            and all(row['event_sequence'] == '1' and row['event_type'] == 'DECLARE'
+                    and row['previous_status'] == '-'
+                    and row['new_status'] == V109_NEW_STATUSES[row['claim_id']]
+                    and row['release'] == 'canon-v109'
+                    and row['scope_sha256'] == hashlib.sha256(
+                        index[row['claim_id']]['scope'].encode('utf-8')).hexdigest()
+                    and row['evidence_id'] == evidence[row['claim_id']]['evidence_id']
+                    and row['evidence_location'] == evidence[row['claim_id']]['location']
+                    and row['evidence_sha256'] == evidence[row['claim_id']]['sha256']
+                    for row in history))
+        added = current['DEPENDENCIES.tsv'][len(prior['DEPENDENCIES.tsv']):]
+        exact_dependencies = (
+            current['DEPENDENCIES.tsv'][:len(prior['DEPENDENCIES.tsv'])] == prior['DEPENDENCIES.tsv']
+            and added == V109_DEPENDENCY_ROWS
+            and all(row['item_id'] in new_ids and row['depends_on'] in normative
+                    and (row['relation'] != 'REQUIRES'
+                         or V109_NEW_STATUSES[row['item_id']] != 'T'
+                         or normative[row['depends_on']]['status'] in {'T', 'T-LOCK'}
+                         or normative[row['depends_on']]['item_type'] in {'AXIOM', 'DEFINITION'})
+                    for row in added))
+        old_live = {claim: row for claim, row in old_index.items() if row['status'] in {'H', 'O'}}
+        live = {claim: row for claim, row in index.items() if row['status'] in {'H', 'O'}}
+        counts = {status: sum(row['status'] == status for row in index.values())
+                  for status in {row['status'] for row in index.values()}}
+        metrics = {row['metric']: row['value'] for row in current['STATUS_COUNTS.tsv']}
+        exact_boundary = (
+            len(live) == 26 and live == old_live
+            and snapshot['canon']['GATES.tsv'] == prior_bytes['GATES.tsv']
+            and snapshot['canon']['FRONTIER_PROGRAMS.tsv'] == prior_bytes['FRONTIER_PROGRAMS.tsv']
+            and snapshot['canon']['FRONTIER.md'] == prior_bytes['FRONTIER.md']
+            and current['CORE_SELECTION.tsv'] == prior['CORE_SELECTION.tsv'] + V109_CORE_ADDITIONS
+            and counts == V109_STATUS_PARTITION and metrics == V109_METRICS
+            and normative['QUADRATIC-MEMORY-NATIVE-CONTACT']['status'] == 'O'
+            and normative['QDD-INSTRUMENT-APPARATUS']['status'] == 'O')
+        canon = snapshot['canon']['CANON.md'].decode('utf-8')
+        exact_proofs = set(V109_PROOF_CONTRACTS) == new_ids
+        for claim, contract in V109_PROOF_CONTRACTS.items():
+            first = canon.find(contract['begin'])
+            if first < 0 or canon.count(contract['begin']) != 1:
+                exact_proofs = False
+                continue
+            block = canon[first:first + contract['characters']]
+            exact_proofs = exact_proofs and (
+                len(block.encode('utf-8')) == contract['bytes']
+                and hashlib.sha256(block.encode('utf-8')).hexdigest() == contract['sha256']
+                and block.count(contract['claim_marker']) == 1)
+        prefix = V109_PROBE_DIRECTORY + '/'
+        manifest = ''.join(hashlib.sha256(snapshot['sources'][path]).hexdigest() + '  ' + path + '\n'
+                           for path in sorted(snapshot['sources'])
+                           if path.startswith(prefix)
+                           and 'RUNS' not in path.split('/') and '__pycache__' not in path.split('/')
+                           and not path.endswith('.pyc'))
+        probe_hash = hashlib.sha256(manifest.encode('utf-8')).hexdigest()
+        computation = V109_COMPUTATION
+        exact_evidence = (
+            all(evidence.get(claim) == row for claim, row in V109_EVIDENCE_ROWS.items())
+            and evidence[computation]['evidence_kind'] == 'PUBLIC_PROBE'
+            and evidence[computation]['location'] == V109_PROBE_DIRECTORY + '/RESULT.md'
+            and evidence[computation]['architecture_requirement'] == 'two-architecture'
+            and evidence[computation]['hash_mode'] == 'bundle-manifest-sha256-v1'
+            and evidence[computation]['sha256'] == probe_hash
+            and all(evidence[claim]['evidence_kind'] == 'INLINE_CANON'
+                    and evidence[claim]['location'] == 'inline'
+                    and evidence[claim]['architecture_requirement'] == 'none'
+                    and evidence[claim]['hash_mode'] == 'registry-scope-sha256-v1'
+                    and evidence[claim]['sha256'] == hashlib.sha256(
+                        index[claim]['scope'].encode('utf-8')).hexdigest()
+                    for claim, status in V109_NEW_STATUSES.items() if status == 'T'))
+        source_counts = {directory: sum(path.startswith(directory + '/') for path in snapshot['sources'])
+                         for directory in V109_SOURCE_COMMITS}
+        exact_sources = (source_counts == V109_SOURCE_COUNTS
+                         and len(snapshot['sources']) == sum(V109_SOURCE_COUNTS.values())
+                         and set(snapshot['sources']) == set(V109_SOURCE_FILES))
+        exact_inventory = (len(snapshot['reproductions']) == 38
+                           and snapshot['reproductions'] == frozenset(V108_REPRODUCTIONS)
+                           and frozenset(v109_previous_reproduction_dirs()) == snapshot['reproductions'])
+    except (KeyError, TypeError, ValueError, IndexError):
+        return failed
+    outcomes = (exact_prior, exact_claims and exact_history, exact_dependencies,
+                exact_boundary, exact_proofs, exact_evidence, exact_sources, exact_inventory)
+    return [(tag, description, bool(ok)) for (tag, description), ok in zip(V109_CHECKS, outcomes)]
+
+
 V108_PRIOR_COMMIT = '0c33e2b281e39127c269ef5dd7f5b529a62e9e65'
 
 V108_CLOSED_OWNER = 'RELATIVE-CONTACT-COMMON-APPARATUS-OPEN'
@@ -923,17 +2034,16 @@ def v108_current_snapshot():
     data, sources = {}, {}
     try:
         for name, contract in V108_INPUT_PATCH.items():
-            path = ROOT / 'canon' / name
-            if not path.is_file() or path.is_symlink():
+            content = v109_previous_bytes(ROOT / 'canon' / name)
+            if content is None:
                 return None
-            content = path.read_bytes()
             if (len(content) != contract['current_bytes']
                     or hashlib.sha256(content).hexdigest() != contract['current_sha256']):
                 return None
             data[name] = content
         if any(path.is_symlink() for path in REPRODUCE.iterdir()):
             return None
-        inventory = frozenset(path.name for path in REPRODUCE.iterdir() if path.is_dir())
+        inventory = frozenset(v109_previous_reproduction_dirs())
         if inventory != frozenset(V108_REPRODUCTIONS):
             return None
         for relative, contract in V108_SOURCE_FILES.items():
@@ -23992,9 +25102,10 @@ def run():
     checks.extend(v106_current_checks())
     checks.extend(v107_current_checks())
     checks.extend(v108_current_checks())
+    checks.extend(v109_current_checks())
 
     print("TWIST-J theorem/dictionary separation audit")
-    print("historical guards: exact reconstructed v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v108")
+    print("historical guards: exact reconstructed v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v109")
     print("exact algebra and finite computations remain distinct from physical readings")
     print()
     passed = 0
