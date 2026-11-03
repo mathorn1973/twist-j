@@ -1,11 +1,39 @@
 # Canon changelog (public series)
 
-## Public Canon v107
+## Public Canon v108
 
 <!-- BEGIN GENERATED CURRENT COUNTS -->
-Registry snapshot: 598 claims; 0 T-LOCK, 454 T, 59 D, 39 C, 2 H, 25 O, 19 F; 27 live H/O.
+Registry snapshot: 602 claims; 0 T-LOCK, 459 T, 59 D, 39 C, 2 H, 24 O, 19 F; 26 live H/O.
 Reproduction witnesses: 38.
 <!-- END GENERATED CURRENT COUNTS -->
+
+Close the existing common-apparatus owner O -> T with one complete finite L1
+construction on 56 slots. One fixed contact/permutation program processes
+all 100 ordered pairs from the ten-input prepared family through the same
+read core. Four current archive banks distinguish both inputs; the first
+records keep their original addresses throughout reload and the second
+experiment. All changing sources, controls and memory remain in the account.
+The auxiliary preparation is 128 and the complete trace account 156. This
+is funded reuse for two experiments, with supplied prepared inputs and five
+whole-slot transpositions. Exact reversal removes the records.
+
+Adopt four independently reviewed general arithmetic theorems: complete
+three-slot rhythm classification, sharp relative-account bounds, an unresolved
+fivefold phase with explicit indistinguishable restricted readings, and a
+sufficient injectivity bound for coefficient readings. The proofs are inline;
+finite shell censuses and numerical minimum-modulus searches are not promoted.
+
+The stable common-apparatus identifier is retained after its positive decision.
+The other 597 prior claims and all other live owners retain their statuses and
+scopes. No layer gate is added or closed. QDD-INSTRUMENT-APPARATUS and
+QUADRATIC-MEMORY-NATIVE-CONTACT remain open. The reproduction inventory stays
+38; the status-separation audit reconstructs every earlier snapshot exactly.
+Source probes, accepted reviews and their evidence bytes are unchanged.
+
+## Public Canon v107
+
+Registry snapshot: 598 claims; 0 T-LOCK, 454 T, 59 D, 39 C, 2 H, 25 O, 19 F; 27 live H/O.
+Reproduction witnesses: 38.
 
 Adopt four reviewed conditional L1 theorems about the supplied integral
 relative contact: its total conservative law, sharp known-input preparation
