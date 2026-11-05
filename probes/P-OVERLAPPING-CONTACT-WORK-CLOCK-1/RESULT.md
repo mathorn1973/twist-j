@@ -24,7 +24,7 @@ contacts. All pulse seams are smooth, and negative-time flow is the inverse.
 For three data slots define
 
     R=sum Q, I=Q(x-y)+Q(y-z), C_ctrl=4*((q-1/2)^2+p^2),
-    E_lambda=R+lambda I+C_ctrl.
+    E_lambda=R+lambda I+C_ctrl, lambda>=0.
 
 On integral data with the controller ready at (0,0), its account is 1.
 The exact identity 3R-I=Q(x+y+z)+Q(x-z) proves that the sufficient initial
