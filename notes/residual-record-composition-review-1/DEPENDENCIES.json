@@ -1,0 +1,47 @@
+{
+  "status": "NON-CANONICAL review submissions; not accepted formal probe pins",
+  "contract": "V100-JOIN-1",
+  "proposed_probe": "P-RESIDUAL-RECORD-COMPOSITION-1",
+  "public_basis": {
+    "repository": "mathorn1973/twist-j",
+    "canon": "Public Canon v99",
+    "main_and_tag_target": "68080edc12faf029de48181f0a384f66e42dbc04",
+    "content_commit": "304175766e51896917ac2f9e8ff15b9db303c71a",
+    "canon_sha256": "246100c6a154c27c359e55acb399f18df384fa31db190d6d4fd5557d051ee927",
+    "canon_bytes": 957135
+  },
+  "candidate_dependencies": [
+    {
+      "id": "P-CONTACT-RECORD-1",
+      "issue": 1385,
+      "review_pr": 1388,
+      "notes_commit": "8128286127f1a48b01ebda1a5c1e7a0d88d46095",
+      "proof_path": "notes/contact-record-review-1/candidate/PROOF.md",
+      "proof_sha256": "805137842d66894b36cc5cef17b45bf1c67b81570bf9eb8a4c77c9394d40abf5",
+      "verifier_sha256": "99ea8680db65567fb73e78f074841532802e6398dfbd34077b37914024341134",
+      "scope_changed": false,
+      "formal_pin_accepted": false
+    },
+    {
+      "id": "P-ALG-CONTACT-REALIZATION-1",
+      "compiler_version": "CW-ALG-1",
+      "target_permutation": "Pi_alg, distinct from lexicographic Pi",
+      "issue": 1386,
+      "review_pr": 1389,
+      "notes_commit": "13081b0dec64ab99386a8cd06759b152e3e05636",
+      "verifier_review_commit": "a7c5d72a0ff0ab0af0b1de18ae3f18af134529d3",
+      "verifier_source_path": "notes/alg-contact-realization-review-1/verify.py",
+      "verifier_sha256": "115f6cae93934792a31178bd5b2ea630336ac7e43cf2abbeca8e2db0823222b0",
+      "proof_path": "notes/alg-contact-realization-review-1/SPEC.md",
+      "proof_sha256": "bcf48fbece05e445a1e6d958b749dfc0ff4d0b6f05f702d699f08fb142bfa656",
+      "formal_pin_accepted": false
+    }
+  ],
+  "declared_architecture_inputs": ["W_a", "W_b", "Ucal_x", "Ucal_y", "one initial preparation S0", "fixed final readings"],
+  "new_native_primitives": [],
+  "new_registers": [],
+  "intermediate_preparations": [],
+  "entire_compiled_word_executed": false,
+  "verifier_source_bindings": "VERIFIER-PINS.json; review sources only, not accepted formal pins",
+  "joint_public_fold_ready": false
+}
