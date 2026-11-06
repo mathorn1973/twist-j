@@ -1,0 +1,18 @@
+PASS integer cyclotomic phase-work contact; NON-CANONICAL
+scalar_fixtures=625; scalar_phase_checks=3125
+lattice_basis=16; contact_inverse_cases=80; gram_pairings=1280
+triple_group_basis_cases=2000; dirty_two_slot_cases=3630
+initial_channel_costs=(32,32,0,0); total=64
+r=0; s=+1; costs=(32, 32, 0, 0); DeltaF=0; DeltaM=0
+r=1; s=+1; costs=(17, 37, 5, 5); DeltaF=-10; DeltaM=10
+r=2; s=+1; costs=(22, 22, 10, 10); DeltaF=0; DeltaM=0
+r=3; s=+1; costs=(22, 22, 10, 10); DeltaF=0; DeltaM=0
+r=4; s=+1; costs=(37, 17, 5, 5); DeltaF=10; DeltaM=-10
+r=0; s=-1; costs=(32, 32, 0, 0); DeltaF=0; DeltaM=0
+r=1; s=-1; costs=(37, 17, 5, 5); DeltaF=10; DeltaM=-10
+r=2; s=-1; costs=(22, 22, 10, 10); DeltaF=0; DeltaM=0
+r=3; s=-1; costs=(22, 22, 10, 10); DeltaF=0; DeltaM=0
+r=4; s=-1; costs=(17, 37, 5, 5); DeltaF=-10; DeltaM=10
+PASS large integer scaling; no coefficient cutoff
+PASS negative controls: nonadmission; wrapping; bare-J; unmixed phase; lost phase datum
+PASS full-state inverse and positive common energy; native physical bridge OPEN
