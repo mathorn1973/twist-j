@@ -1,0 +1,7 @@
+PASS exact cyclotomic field: Phi20, phases, coin normalization
+PASS complete encoded circuit: 34 columns, 1156 unitary pairings
+PASS physical current: 3468 exact mixed pairings at cuts 98.5,99.5,100.5
+PASS full slice Green form: 4624 pairings, standing receiver included
+PASS local continuity: 1156 two-site mixed balances, no spectator trace
+PASS open-token premise: 30 free-symbol identities and exact whole-window bounds
+RESULT PASS: finite audit only; universal current, relation and no-inverse use proofs
