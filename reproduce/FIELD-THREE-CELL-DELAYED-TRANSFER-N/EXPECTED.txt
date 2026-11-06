@@ -1,0 +1,5 @@
+IMPLEMENTATION primary
+PRIMARY PASS: three-cell delay; 6120 states; full inverse, energy and Gauss
+IMPLEMENTATION challenger
+CHALLENGER PASS: independent delay audit; both cuts, occupied contents and order controls
+DELAY PASS: NON-CANONICAL L1; middle at 1, arrival at 2, receiver work at 3
