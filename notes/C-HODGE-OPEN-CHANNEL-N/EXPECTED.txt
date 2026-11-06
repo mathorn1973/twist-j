@@ -1,0 +1,8 @@
+PASS exact cyclotomic field and source phase cancellation
+PASS source moments mu_0..mu_4, memory g_0..g_3, Schur series and nonreal g_3
+PASS 8 complete-state histories through 4 periods: exact causal reconstruction
+PASS 320 mixed norm, 960 history-charge and 768 native-current pairings
+PASS open-object counterexample: pulse history zero, native current 8/5
+PASS cyclic/dark native-charge interference: cross pairing 8/5 in unnormalised audit
+PASS coherent memory requires off-diagonal delay pairings
+RESULT: PASS exact finite open-channel audit; no stationary or Hodge promotion

@@ -1,0 +1,7 @@
+PASS symbolic Schur defect: 16 Re F
+PASS symbolic S_F: both unitary Gram identities
+PASS four interior F samples; Re F=0 boundary; negative-Re control
+PASS source W cut99.5: object current 8/5, pulse current 0
+PASS source W: mu1=0, mu2=4/5, mu4=(80-28*z^4)/125, g3=(48-28*z^4)/125
+PASS source memory: charge 2/25 versus diagonal-only 2; cross=-48/25
+PASS 6 finite exact audit groups; no whole-window spectral claim
