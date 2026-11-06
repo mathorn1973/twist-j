@@ -1,0 +1,37 @@
+Exact phase-ring cases: 50
+Exact signed odd-reference detector cases: 300
+Principal positive-source c=3 cases: 25
+Principal retained pointer snapshots: 525
+Zero-transfer c=-1 controls: 25
+Negative-source unlatched control: Q=(60,10)
+Odd-scale b=3 control: transferred Q=180 or 0
+L,h,D,snapshot,read_completion,pointer_bit0,pointer_bit1
+64,0,4,4,5,25,45
+64,0,8,8,9,25,45
+64,0,12,12,13,25,45
+64,0,16,16,17,25,45
+64,0,20,20,21,25,45
+64,0,24,24,25,25,45
+20,1,8,25,26,25,45
+20,2,8,25,26,25,45
+20,3,8,25,26,25,45
+20,4,8,25,26,25,45
+22,1,8,31,32,45,25
+22,2,8,31,32,45,25
+22,3,8,31,32,45,25
+22,4,8,31,32,45,25
+24,1,8,40,41,25,45
+24,2,8,40,41,25,45
+24,3,8,40,41,25,45
+24,4,8,40,41,25,45
+26,1,8,50,51,25,45
+26,2,8,50,51,25,45
+26,3,8,50,51,25,45
+26,4,8,50,51,25,45
+28,1,8,55,56,25,45
+28,2,8,55,56,25,45
+28,3,8,55,56,25,45
+28,4,8,55,56,25,45
+Whole-ring paired experiments: 26
+Complete invasive-read continuations and reversals: 52
+PASS: specified L1 identities and finite composition; no physical-energy or occurrence claim
