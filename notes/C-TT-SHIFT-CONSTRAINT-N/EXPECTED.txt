@@ -1,0 +1,49 @@
+C-TT-SHIFT-CONSTRAINT-N verifier, exact arithmetic
+PASS P1 Noether identities for xi_0, xi_1, xi_2, xi_3 vanish identically in vacuum (every antisymmetric D, L = -D^2)
+PASS P2 the quadratic form vanishes identically on pure-gauge configurations (C + C^T = 0 for all pairs)
+PASS P1 with a prescribed source the field part of every Noether combination still vanishes
+PASS P1 conservation laws: xi0 gives (1 - E) rho = D J3; xi_i gives (E^-1 - 1) J_i = D S_i3 (i = 1,2,3)
+PASS P1 constraint expressions: EL_n = L tau, EL_N1 = D K13, EL_N2 = D K23, EL_N3 = -D Delta tau (gravitational factor 1/(2 lambda) stripped)
+PASS P3 explicit D_c model, time periodic: S(phi + G xi) - S(phi) = 0 as a polynomial identity in all 200 field and 80 gauge variables
+PASS P3 Euler-Lagrange polynomials of the explicit model equal the P1 operator expressions instantiated with D_c (all 10 fields, all slices, all sites)
+PASS P4 public planar rates m1 = 29/324, m2 = 65/324
+PASS P4 -D^2 for D = x(S - S^-1) + y(S^2 - S^-2) has the displayed circulant entries (symbolic)
+PASS P4 rational D requires a rational root of 65 t^2 - 188 t - 29; discriminant 42884 = 4 . 71 . 151 is not a square; x = 0 gives y^2 = 29/324, also not rational
+PASS P4 the rational D_c gives L_c = -D_c^2 with entries 1/2 at 0 and -1/4 at shifts +-2, not the public stencil
+PASS P5 rank D_c = 4 and rank L_public = 4 on Z/5: both annihilate exactly the constants
+PASS P5 covector K1 source: D_c iota != 0 for all ten words and both cuts (momentum law fails with J = 0); (1 - E) rho = 0 fails for 6 of 10 words
+PASS P5 a conserved completion exists for the K1 intensities: J3 = D_c^-1 (rho_0 - rho_1) is exact and mean-zero for word 0010; the transverse stress S11, S22, S12 is unconstrained by the planar laws
+PASS P6 k = 0: EL_n reduces to -rho_hat_0 (L and D annihilate constants); sum rho = a^2/2 > 0 for every K1 word: no static flat solution
+PASS P7 witness h13 = n f(r) with N = 0: every equation holds except the momentum constraint EL_N1, which fails (FC part 1)
+PASS P7 witness with N1 = D_c^-1 f: all equations hold; it is the pure-gauge configuration xi1 = n D_c^-1 f (FC part 2)
+PASS P7 TT-only data (h11 = -h22 = h_+, h12 = h_x) evolved by Delta^2 h + L_c h = 0 with n = N = tau = ell = vector = 0 satisfy every constraint and evolution equation
+checks: 18 failed: 0
+
+P1 Euler-Lagrange expressions (vacuum, gravitational factor 1/(2 lambda) stripped):
+  EL_h11 = (1/2 E^-1 D + -1/2 D) N3  (1/4 E^-1 + -1/2 + 1/4 L + 1/4 E^1) h22  (1/4 E^-1 + -1/2 + 1/4 E^1) h33  (1/2 L) n
+  EL_h22 = (1/2 E^-1 D + -1/2 D) N3  (1/4 E^-1 + -1/2 + 1/4 L + 1/4 E^1) h11  (1/4 E^-1 + -1/2 + 1/4 E^1) h33  (1/2 L) n
+  EL_h12 = (-1/2 E^-1 + 1 + -1/2 L + -1/2 E^1) h12
+  EL_h13 = (-1/2 E^-1 D + 1/2 D) N1  (-1/2 E^-1 + 1 + -1/2 E^1) h13
+  EL_h23 = (-1/2 E^-1 D + 1/2 D) N2  (-1/2 E^-1 + 1 + -1/2 E^1) h23
+  EL_h33 = (1/4 E^-1 + -1/2 + 1/4 E^1) h11  (1/4 E^-1 + -1/2 + 1/4 E^1) h22
+  EL_n   = (1/2 L) h11  (1/2 L) h22
+  EL_N1  = (1/2 L) N1  (-1/2 D + 1/2 E^1 D) h13
+  EL_N2  = (1/2 L) N2  (-1/2 D + 1/2 E^1 D) h23
+  EL_N3  = (1/2 D + -1/2 E^1 D) h11  (1/2 D + -1/2 E^1 D) h22
+
+P1 Noether identities (each is identically zero; displayed as the combination G^T EL):
+  xi0: ((1 D))^T EL_N3 + ((1 E^-1 + -1))^T EL_n = 0
+  xi1: ((1 D))^T EL_h13 + ((-1 + 1 E^1))^T EL_N1 = 0
+  xi2: ((1 D))^T EL_h23 + ((-1 + 1 E^1))^T EL_N2 = 0
+  xi3: ((2 D))^T EL_h33 + ((-1 + 1 E^1))^T EL_N3 = 0
+
+P1 conservation laws required of a prescribed source:
+  xi0: (-1 D) J3  (1 + -1 E^1) rho = 0
+  xi1: (1 E^-1 + -1) J1  (-1 D) S13 = 0
+  xi2: (1 E^-1 + -1) J2  (-1 D) S23 = 0
+  xi3: (1 E^-1 + -1) J3  (-1 D) S33 = 0
+
+P5 conserved completion, word 0010: rho_0 - rho_1 = ['-1/4', '0', '1/4', '0', '0']
+    J3 (half slice) = ['1/10', '-2/5', '1/10', '1/10', '1/10']
+P7 witness N1 = D_c^-1 f = ['12/5', '-8/5', '-8/5', '22/5', '-18/5']  for f = ['1', '-2', '3', '-1', '-1']
+P3 action polynomial: 880 monomials
