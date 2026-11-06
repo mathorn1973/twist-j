@@ -1,0 +1,69 @@
+{
+  "actual_second_contacts": 25,
+  "decision": "SYMMETRIC-ISOLATED-CONTACT-EXCLUDED-BELOW-1/2",
+  "history_distinct": [
+    25,
+    20,
+    20,
+    15,
+    15,
+    15,
+    15,
+    12,
+    12,
+    9
+  ],
+  "history_max_fibre": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    4,
+    4,
+    4
+  ],
+  "identical_spectrum_coefficients": [
+    [
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      -1,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      -1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      -1,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "independent_audit": "AGREE",
+  "model_error_bound": "NOT_CALIBRATED",
+  "physical_realization": "NOT_PROVIDED",
+  "relabelled_target_is_swap": true,
+  "scope": "NON-CANONICAL L1 restricted effective-model boundary",
+  "status": "PASS",
+  "symmetric_success_bound": "1/2",
+  "target_swap_commutator_mismatches": 25,
+  "zero_pair_histories": 5
+}
