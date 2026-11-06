@@ -1,0 +1,60 @@
+{
+  "repository": "mathorn1973/twist-j",
+  "commit": "892a0b11089d34e241e1eb76d2c03247022d18e6",
+  "files": [
+    {
+      "path": "STATUS.md",
+      "sha256": "24c115b808e61bf0be4efffec79af50bc7ca350dcc2c1d8dc5f91899d1fdb125",
+      "bytes": 2391
+    },
+    {
+      "path": "POLICY.md",
+      "sha256": "da5d2cf5a021f4d069c471725e02b6d2c201e3acadd5ecfd4213a361184b7a5d",
+      "bytes": 17333
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1",
+      "bytes": 21813
+    },
+    {
+      "path": "canon/CORE.md",
+      "sha256": "5318823839f7f42c61cc5245166493b3cd9b641b849e288a12ec300ee60d1e9e",
+      "bytes": 38193
+    },
+    {
+      "path": "canon/FRONTIER.md",
+      "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+      "bytes": 27382
+    },
+    {
+      "path": "canon/REGISTRY.tsv",
+      "sha256": "460db26185e18ef684ebd9db2e2dd4163a18830a5b362489dc41eeb2526e82af",
+      "bytes": 560217
+    },
+    {
+      "path": "canon/EVIDENCE.tsv",
+      "sha256": "e7223862470764513b1f84da75c875137d7ac4adc0f17ecdae35649707aad184",
+      "bytes": 115937
+    },
+    {
+      "path": "notes/C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N/PROOF_CAPTURE_SCATTERING.md",
+      "sha256": "62b6e848de6de50534c1edfbec086551f67576708bc8b117f7dee2928fd2d997",
+      "bytes": 41783
+    },
+    {
+      "path": "notes/C-HOMOGENEOUS-CAPTURE-CURRENT-RECORD-N/PROOF_CURRENT_RECORD_INTERFACE.md",
+      "sha256": "705bc93a6293bc1a7b84c913d86c48cd294d4ca7c8c466e20aa873c980e0621c",
+      "bytes": 30031
+    }
+  ],
+  "context_only": [
+    "public issue #1741 finite-interface proof",
+    "PR #1743 native admission audit",
+    "PR #1744 declared-family retention"
+  ],
+  "nondependencies": [
+    "private PR #47 fixed asymptotic-packet preparation",
+    "private PR #48 fixed detector corrections"
+  ]
+}
