@@ -1,0 +1,8 @@
+G1 PASS: 8 stationary phases, 16 boundary inputs; full source equations/current/dispersion
+G2 PASS: all 85 words; full congruence polynomial; all 676 retained label pairs
+G3 PASS: all 25 CRT residues; all 625 states in both full slices; 9 trace pairings
+G4 PASS: marked A4 reconstruction; E_J rank 4, both factors, fixed Gram and determinant obstruction
+G5 PASS: explicit CM map; entire action and scaled form; original normalization rejected
+G6 PASS: all 4 F4 residues; inert-prime norm obstruction; five negative controls
+PASS: NON-CANONICAL L1; candidate-C audits of proof-first candidate-T statements
+SCOPE: fixed-current two-port obstruction; CM target representation is not a source derivation
