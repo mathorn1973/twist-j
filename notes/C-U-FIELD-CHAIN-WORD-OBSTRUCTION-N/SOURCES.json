@@ -1,0 +1,113 @@
+{
+  "repository": "mathorn1973/twist-j",
+  "inputs": [
+    {
+      "path": "STATUS.md",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "7936da8f8db8ec393d36c039d21e1fb58a93043c",
+      "sha256": "6ff52d4fc3bdeb210fe2c8ae89d54d4e5f21dfccb63aa37ddad281710ef21375",
+      "bytes": 2391,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "POLICY.md",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "10b49a9551eb2f2a3e32d65b0d5b7206febe9de9",
+      "sha256": "da5d2cf5a021f4d069c471725e02b6d2c201e3acadd5ecfd4213a361184b7a5d",
+      "bytes": 17333,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "AGENTS.md",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "a449c8036ccbc40240060c885bb936630d4fc680",
+      "sha256": "7363b83ca6d822ec35e8465fe64c1aa8cd0007bf8b99ae599c265cc49fcee6e1",
+      "bytes": 21813,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "canon/CORE.md",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+      "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+      "bytes": 30714,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "canon/FRONTIER.md",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+      "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+      "bytes": 27382,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "canon/CANON.md",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+      "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+      "bytes": 1052518,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "canon/REGISTRY.tsv",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+      "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+      "bytes": 532811,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "canon/DEPENDENCIES.tsv",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "034a95d6b0b5d1e7ebcf71ac4041f660b2ce5a4d",
+      "sha256": "3557fd859c1879d7f2ada8da0a027a006fead94f335f2530ea177338aa53d742",
+      "bytes": 182185,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "canon/EVIDENCE.tsv",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "30b06b26ac7ce4a387b36f3c7e9c5a81e370cbbd",
+      "sha256": "d5b19778bbf1b52ef35ec4e4306f38846af628f3b3cdeca83f0e8fa95846d169",
+      "bytes": 107253,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "canon/GATES.tsv",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "27ea01b11bf6d1f2d6f7c3b0c1b81a704582153f",
+      "sha256": "a42d76b446e376d89a3fb5fa9714cc6a5700c63abc169c5083fa209c067ec01e",
+      "bytes": 13324,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "canon/SHA256SUMS",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "b733e866f4438e95eee264c408449afd3ecdd3e7",
+      "sha256": "0579c7174198fdea2af8357512c1d746584da9bd58ec3b584c8b8d54884d1fb4",
+      "bytes": 415,
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "tools/check_reproduce.py",
+      "commit": "dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d",
+      "blob": "4412590cfbb04a163c895096200fc5acbe4f4b52",
+      "sha256": "2f1e5764abd5ff06e44a3131b4a2341b036a24d01c2e228f74a58846146d19cf",
+      "bytes": 3604,
+      "license": "Apache-2.0"
+    }
+  ],
+  "scientific_sections": [
+    "DEF-FIELD-WORK-RECORD-CHAIN shared proof 1-5",
+    "U-FIELD-RESIDUE-GATE",
+    "FIELD-UNIT-RESIDUE-CLASSIFICATION",
+    "FIELD-NATIVE-BOUNDARY-THREE-MINIMUM",
+    "U-NATIVE-UNIT-LIFT-OBSTRUCTION"
+  ],
+  "noncanonical_neighbor_exposure_only": [
+    "#1305 field-L5 funded cell",
+    "#1419 integer cyclotomic phase-work contact"
+  ],
+  "new_scientific_execution": "NONE at this pin"
+}
