@@ -1,0 +1,57 @@
+{
+  "status": "NON-CANONICAL",
+  "date": "2026-10-29",
+  "reservation": 1824,
+  "authority": {
+    "repository": "mathorn1973/twist-j",
+    "main_commit": "a193e389fb1ddb0bdc89165b015c95a17eb1e425",
+    "tag": "canon-v106",
+    "content_commit": "9242db4f040d67d9417eacd06612230b74248cff",
+    "canon_sha256": "52302c640033dd15d4a7a075cad16fa48b1473b7396d1f7413536a9ec45422e7",
+    "canon_bytes": 1370107
+  },
+  "public_premises": [
+    {
+      "path": "canon/CORE.md",
+      "scope": "complete native state, read-only decoder and fixed update"
+    },
+    {
+      "path": "canon/CANON.md",
+      "sections": [
+        "Native conventions preceding U-NATIVE-SOURCE-RECEIVER-RECORD",
+        "U-NATIVE-SOURCE-RECEIVER-RECORD",
+        "U-NATIVE-RECORD-CONTINUATION-BOUNDARY",
+        "U-NATIVE-INVARIANT-AND-NOWRITE"
+      ],
+      "scope": "fixed generators, original permanent record, scoped continuation boundary, actual whole-fibre recurrence"
+    },
+    {
+      "path": "probes/P-QDD-U-NATIVE-READBACK-1/PROOF.md",
+      "scope": "synchronized layer and adjacent-clock-bit selector"
+    },
+    {
+      "path": "probes/P-U-NATIVE-MEMORY-EVENT-1/MEMORY-PROOF.md",
+      "scope": "invariant fibres"
+    },
+    {
+      "path": "probes/P-U-NATIVE-MEMORY-EVENT-1/CLOCK-PROOF.md",
+      "scope": "actual-clock recurrence"
+    },
+    {
+      "path": "probes/P-U-NATIVE-MEMORY-EVENT-1/FREQUENCY-PROOF.md",
+      "scope": "primitive-word argument cited by accepted recurrence"
+    }
+  ],
+  "definition_comparison": {
+    "earlier_commit": "af8dc5956e26917b265fd0070f500c841c326512",
+    "later_commit": "a193e389fb1ddb0bdc89165b015c95a17eb1e425",
+    "path": "reproduce/census/verify.py",
+    "bytes": 8127,
+    "git_blob": "f96615344421ea80b8dcfc31f8d905e9fd30fa8c",
+    "conclusion": "complete file bytes identical; native autonomous-state/update block in CORE identical; not all Canon content identical"
+  },
+  "provenance": "Earlier one-shot witness is already in public Canon. The two-step memory-use witness is restated with a self-contained direct algebraic derivation from author-owned work dated 2026-10-28. No historical private archive or historical run is imported. Section4.1 is a new static algebraic witness, independently checked by substitution.",
+  "execution": "No new scientific program executed; no finite scan claimed. New universal statements have the displayed algebraic proof; the permanence corollary explicitly uses accepted recurrence.",
+  "review": "Separate-context automated reasoning within the same assistant system; no external human or another-model peer review.",
+  "boundary": "No canon promotion, physical preparation, universal selfhood statement, new input port, or enlarged native dynamics."
+}
