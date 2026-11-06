@@ -284,6 +284,13 @@ It validates every existing record, requires both architectures wherever the
 ledger says `two-architecture`, and permits no post-content change except
 neutral formal records. This refresh creates no PR, merge, or activation.
 
+Every `check_activation.py` mode tests candidate and run-base ancestry with
+`git merge-base`, so each one requires a full clone. On a shallow clone that
+history is absent, every reproduction record is reported as unrelated, and the
+run exits `1` on ancestry blockers that carry no information about the tree.
+Run `git fetch --unshallow` before trusting a local result; the workflow checks
+out with `fetch-depth: 0` and so is unaffected.
+
 ### Phase B: activation
 
 14. After the synthesis pull request merges, create
