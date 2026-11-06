@@ -1,0 +1,24 @@
+SCOPE full
+EDGE_FINGERPRINT_MINE sha256=70209eab365e43fed18f875f25a76d57ac346f58bf06889aba3c7a14d9c42c09 bytes=65 payload=0>1;0>2;0>3;0>4;0>5;0>6;0>7;0>8;0>9;0>10;0>11;0>12;0>13;0>14;0>15
+COUNTS A=2048 B=576 C=225 witness=1 inverses=2850 contacts=213750 distinct_pairs=48772
+DEPTHS_A {1: 1024, 2: 512, 3: 256, 4: 128, 5: 64, 6: 32, 7: 16, 8: 8, 9: 4, 10: 2, 11: 1, 12: 1}
+DEPTHS_B {0: 256, 1: 160, 2: 80, 3: 40, 4: 20, 5: 10, 6: 5, 7: 2, 8: 2, 9: 1}
+FINGERPRINT_MINE sha256=9ed972dd4a26edeff22b0999e0a34cc2654a37e24b7f62037a5998749deb0f41 payload_bytes=379591 lines=2048
+PASS R01 (checks=8)
+PASS R02 (checks=5703)
+PASS R03 (checks=2)
+PASS R04 (checks=244729)
+PASS R05 (checks=4)
+PASS R06 (checks=3)
+PASS R07 (checks=1)
+PASS R08 (checks=1)
+PASS R09 (checks=39893)
+PASS R10 (checks=4)
+PASS R11 (checks=2851)
+PASS R12 (checks=451)
+PASS R13 (checks=7)
+PASS R14 (checks=3)
+PASS R15 (checks=8548)
+PASS R16 (checks=10)
+PASS R17 (checks=2)
+RESULT PASS
