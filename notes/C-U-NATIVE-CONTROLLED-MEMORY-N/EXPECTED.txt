@@ -1,0 +1,10 @@
+PASS product_preparation_and_prefix inputs=50 checkpoints=200
+PASS complete_tail_carrier states=1000 logical_outputs=50 states_per_output=20
+PASS closed_tail_all_bits transitions=2000
+PASS raw_response_covariance complete_state_equalities=500
+PASS paired_port_record_blindness comparisons=5000
+PASS origin_zero_synchronization input_heads=15625 image_heads=3125 fiber_size=5
+PASS synchronized_closed_block_law point_bit_cases=12500 raw_blocks=4
+PASS affine_boundary_finite_identity_audit intervals=1088 proof=BOUNDARY.md
+PASS negative_controls checks=4
+PASS ALL exact_native_controlled_memory groups=9
