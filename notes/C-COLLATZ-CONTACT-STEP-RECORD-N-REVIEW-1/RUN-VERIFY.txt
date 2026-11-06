@@ -1,0 +1,10 @@
+PASS six literal controlled-swap rows and inverses
+PASS eight two-transition-plus-skip trajectories and full primitive inverses
+PASS 80 literal occupied-A continuations and full inverses
+PASS 4096 abstract-token skip cases, using the six-row literal contract
+WORD contacts=18280 macros=794 sha256=92fcd3f9f267dd5ff5be76327680bbe02d39e87f58bed0c395e3e03904722460
+BOUNDARY sha256=ca60bf44b6234819e41435a7032661b5cecb428f602fbeda2df00e406dcef1dd
+RESOURCE slots=49 account=98 source_bits=6 depth_bits_per_bank=3
+FINAL [[1,1,2,1,2],[3,5,1,1,4],[5,1,4,1,2],[7,11,1,17,1],[9,7,2,11,1],[11,17,1,13,2],[13,5,3,1,4],[15,23,1,35,1]]
+COUNTS primitive_applications=9506290 distinct_pair_inputs=15
+PASS C-COLLATZ-CONTACT-STEP-RECORD-N; finite supplied-rule compiler only
