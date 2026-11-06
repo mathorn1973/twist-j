@@ -1,0 +1,14 @@
+PASS B-U affine tables reproduce the five Canon generators on all 15625 states
+PASS B-U trace map z' = f(letter, z) on all states
+PASS B-U all five sheets are synchronized from counter 3 on first common sheet at n=3
+PASS B-U first-three-tick words per initial sheet {0: 'ace', 1: 'bbd', 2: 'cce', 3: 'dbd', 4: 'ebd'}
+PASS B-U three-tick fibre maps: r+1 (z0=0), 1-r (z0=1,2), 2-r (z0=3,4), no other coordinate enters
+PASS B-U for 3<=n<4096: one letter per tick (b,d,e)
+PASS B-U for 3<=n<4096: composite 3->n has r-row (0,0,0,0,0,+-1) and piston rows free of q,r
+PASS B-U integer lift of the composite 3->n equals the closed form A(k)-A(1) on all even windows to 4096
+PASS B-K fresh sample: Q(d) = psi' - psi mod 5 with the independent digit algorithm admitted contacts=100000
+PASS B-K second potential: Q(d) = -c((T'-T)/u) mod 5 with T = sum x*sigma_2(x)
+PASS B-K every admitted edge of the complete I_1 orbit: Q(d) = psi(head) - psi(tail) mod 5 states=20400 admitted edges=48480
+PASS B-L random three- and four-slot banks: every closed loop has Hermitian area in 5 Z[phi] {'banks': 400, 'capped': 188, 'area_bad': 0, 'count_hol': 191, 'maxsize': 20000}
+   banks with count holonomy mod 5: 191 of 400
+RESULT PASS fails=0
