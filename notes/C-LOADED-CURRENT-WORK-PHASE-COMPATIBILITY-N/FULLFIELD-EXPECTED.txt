@@ -1,0 +1,9 @@
+scope=NON-CANONICAL L1; new declared quotient, not original bundle replay
+carrier=27 sites,30 labelled directions; exact Fraction cyclotomic arithmetic
+field_fixtures=8 direct_curl_comparisons=16 loaded_cases=18 refused_cases=2
+Gamma=1053/256; residues_mod5=3,mod25=13; four_tick_sum_residue=2
+four_tick_base_return=MOD5_ONLY; exact_field_return=FALSE
+encoded_pointer_cases=625 complement_cases=100 reader_cases=25 reader_account=48
+cold_amplitude=1 admissions=100 field_works=5,0,0 pointer_labels=24,24,24
+cold_amplitude=216 admissions=110 field_works=233280,217410,0 pointer_labels=19,5,8
+assertions=2547 PASS

@@ -1,0 +1,42 @@
+[
+  {
+    "candidate_commit": "2caeb658493825ad0e8a5f8f840c15634aa3ca8d",
+    "source_sha256": "bf84cbca8fe96b4dfc7e4f96d973e787d29ea922687bfbaa7dcf1b1909758023",
+    "source_bytes": 23976,
+    "command": "python3 -I -B notes/C-LOADED-CURRENT-WORK-PHASE-COMPATIBILITY-N/verify_fullfield.py",
+    "platform": "Ubuntu 22.04.5 LTS",
+    "architecture": "x86_64",
+    "python": "3.10.12",
+    "started_utc": "2026-11-07T09:21:20.289001+01:00",
+    "elapsed_seconds": 116.50651678300001,
+    "exit_code": 0,
+    "timeout": false,
+    "timeout_seconds": 900,
+    "memory_limit_bytes": 1073741824,
+    "stdout_bytes": 612,
+    "stdout_sha256": "3b5f60d029efcb5df47678184826f30d5e11b8164fd0f997feb6166d8e5c5419",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scope": "first prospective full-field reconstruction audit; not original-source replay"
+  },
+  {
+    "candidate_commit": "2caeb658493825ad0e8a5f8f840c15634aa3ca8d",
+    "source_sha256": "bf84cbca8fe96b4dfc7e4f96d973e787d29ea922687bfbaa7dcf1b1909758023",
+    "source_bytes": 23976,
+    "command": "python3 -I -B notes/C-LOADED-CURRENT-WORK-PHASE-COMPATIBILITY-N/verify_fullfield.py",
+    "platform": "Debian GNU/Linux 12 (bookworm)",
+    "architecture": "aarch64",
+    "python": "3.11.2",
+    "started_utc": "2026-11-07T09:22:55.946998+01:00",
+    "elapsed_seconds": 340.5661609920062,
+    "exit_code": 0,
+    "timeout": false,
+    "timeout_seconds": 900,
+    "memory_limit_bytes": 1073741824,
+    "stdout_bytes": 612,
+    "stdout_sha256": "3b5f60d029efcb5df47678184826f30d5e11b8164fd0f997feb6166d8e5c5419",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scope": "clean public-pin full-field reconstruction, not original-source replay"
+  }
+]
