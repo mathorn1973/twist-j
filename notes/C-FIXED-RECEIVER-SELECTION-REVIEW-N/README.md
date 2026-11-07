@@ -6,14 +6,11 @@
 `3d8d364cb981bb5d53bbede432fb5a4ac4181709`. Review lock:
 [issue #1935](https://github.com/mathorn1973/twist-j/issues/1935).
 
-**State: checker pinned, not yet executed.** This commit pins three files:
-
-- the code-independent checker review.py;
-- the pre-run MATHEMATICAL-REVIEW.md;
-- PREREG-AMENDMENT-1.md.
-
-They are read back from GitHub before the single run. Nothing has been
-executed under this review.
+**State: executed once, PASS.** The checker review.py was pinned at
+fc384a5c9600fbcc60b61ac7d6c22f5c32c57d7e and read back from GitHub. Its
+single run passed every frozen check, and both target verifiers replayed
+byte for byte. All seven scopes are accepted with stated corrections; see
+RESULT.md.
 
 PREREG.md was frozen in commit acf69adba32e838a7891bb8b3c1e4386abaf690f,
 before the checker existed. It fixes:
@@ -41,10 +38,10 @@ unchanged in INFORMAL/. It is not backdated as a preregistered test.
 | INFORMAL/PROVENANCE.md | Executed bytes, hashes, transcribed stdout and seven known weaknesses of the earlier unregistered check. |
 | INFORMAL/check_receiver_indep.py | The informal checker, byte for byte as executed. |
 | INFORMAL/stock_scan.py | The informal stock scan, byte for byte as executed. |
+| RUN.md | Pin, readback, pre-pin checker changes, the exact commands, exits and hashes of the single run. |
+| EXPECTED.txt | The exact stdout of review.py. |
+| RESULT.md | Verdicts, what the run confirmed, exploratory outputs and limits. |
 | SHA256SUMS | Hashes of the files above. |
-
-A later, separate commit adds the run record (RUN.md), the stdout
-(EXPECTED.txt) and the result (RESULT.md).
 
 The review changes no target file, registry row, Canon text or release.
 Accepting it, and any merge or promotion of the target, are decisions for
