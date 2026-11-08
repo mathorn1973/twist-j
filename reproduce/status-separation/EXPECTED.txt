@@ -1,5 +1,5 @@
 TWIST-J theorem/dictionary separation audit
-historical guards: exact reconstructed v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v106
+historical guards: exact reconstructed v108, v107, v106, v105, v104, v103, v102, v101, v100, v99, v98, v97, v96, v95, v94, v93, v92, v91, v90, v89, v88, v87, v86 and v85; current boundary: v109
 exact algebra and finite computations remain distinct from physical readings
 
 PASS 01 COUNTS     registry and companion-ledger counts match Public Canon v85
@@ -194,5 +194,29 @@ PASS 189 V106-PROOF-SCOPE complete byte-pinned proofs retain the declared source
 PASS 190 V106-INLINE-EVIDENCE each new theorem has exact scope-hashed inline evidence and declaration; no analytical proof is relabelled as a two-architecture computation
 PASS 191 V106-SOURCE-CUSTODY 29 reviewed source files retain exact bytes, SHA-256 and Git blob identities with complete claim coverage
 PASS 192 V106-REPRO-INVENTORY the validated actual 37-directory reproduction inventory is unchanged; this structural audit executes no scientific verifier
+PASS 193 V107-PRIOR-BYTES thirteen exact v107 inputs reconstruct public v106 before all 192 unchanged historical guards
+PASS 194 V107-CLAIM-LEDGERS four scoped L1 theorems and one open common-apparatus owner have exact append-only ledgers and declarations
+PASS 195 V107-DEPENDENCIES exact new premise and boundary edges preserve every earlier dependency without making an open owner a theorem premise
+PASS 196 V107-OWNER-BOUNDARY all 593 prior claims and 26 live owners retain exact scopes; one counted open owner adds no physical closure or gate
+PASS 197 V107-PROOF-SCOPE complete byte-pinned proofs retain exactly four auxiliary slots, initial trace accounts, retained-output and fixed-word limits
+PASS 198 V107-EVIDENCE the complete minimum probe retains its two-architecture evidence while three proof-carried theorems and the open owner use inline scope hashes
+PASS 199 V107-SOURCE-CUSTODY all 43 accepted source files and the unchanged minimum probe retain exact bytes, hashes and Git blob identities
+PASS 200 V107-REPRO-INVENTORY one exact three-file contact audit extends the validated reproduction inventory from 37 to 38 without executing a scientific verifier
+PASS 201 V108-PRIOR-BYTES thirteen exact v108 inputs reconstruct public v107 before all 200 unchanged historical guards
+PASS 202 V108-CLAIM-LEDGERS four rhythm theorems and the stable apparatus owner have exact ledgers, four declarations and one O-to-T transition
+PASS 203 V108-DEPENDENCIES four rhythm premise edges and four exact owner basis updates preserve the prior edge graph and keep open owners outside theorem premises
+PASS 204 V108-OWNER-BOUNDARY only the finite L1 apparatus owner closes; all 597 other prior claims, 26 remaining live owners and all gates retain their exact boundaries
+PASS 205 V108-PROOF-SCOPE complete byte-pinned rhythm and two-input apparatus proofs retain supplied laws, finite stock, marked coefficients and physical limits
+PASS 206 V108-EVIDENCE the apparatus uses its complete two-architecture public probe while four general rhythm theorems retain inline proof evidence
+PASS 207 V108-SOURCE-CUSTODY all 42 accepted probe, independent-review and rhythm source files retain exact bytes, SHA-256 and Git blob identities
+PASS 208 V108-REPRO-INVENTORY the validated 38-directory reproduction inventory is unchanged; this structural audit executes no scientific verifier
+PASS 209 V109-PRIOR-BYTES thirteen exact v109 inputs reconstruct public v108 before all 208 unchanged historical guards
+PASS 210 V109-CLAIM-LEDGERS six L1 theorems and one finite L1 computation have exact declarations while all 602 prior claim rows remain unchanged
+PASS 211 V109-DEPENDENCIES only the seven new claims add exact premise edges; old dependencies are unchanged and no theorem consumes an open or computational premise
+PASS 212 V109-OPEN-BOUNDARY all 26 live owners, every gate and the Frontier retain their exact boundaries; the registry has 609 claims
+PASS 213 V109-PROOF-SCOPE byte-pinned copy, finite funded workbank reuse and native carry proofs preserve their separate supplied laws and restricted readers
+PASS 214 V109-EVIDENCE six theorems retain inline scope-hashed evidence and the finite carry circuit uses its complete two-architecture public probe
+PASS 215 V109-SOURCE-CUSTODY the accepted source and review inventories retain exact bytes, SHA-256 and Git blob identities at their declared immutable commits
+PASS 216 V109-REPRO-INVENTORY the validated 38-directory reproduction inventory is unchanged; this structural audit executes no scientific verifier
 
-RESULT 192/192 ALL PASS
+RESULT 216/216 ALL PASS
