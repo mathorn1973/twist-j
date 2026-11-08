@@ -1,0 +1,293 @@
+{
+  "facts": {
+    "H": {
+      "cases": 250,
+      "inventory": {
+        "local_operations": 380,
+        "pair_pulses": 208,
+        "primitive_counts": {
+          "EQ": 24,
+          "MUL": 4
+        }
+      },
+      "physical_phase_dependency": "fresh frozen exact EQ/MUL matrix audits"
+    },
+    "adders": {
+      "exhaustive": [
+        {
+          "forward_and_inverse": true,
+          "length": 1,
+          "local_operations": 2,
+          "pair_pulses": 1,
+          "pairs": 25
+        },
+        {
+          "forward_and_inverse": true,
+          "length": 2,
+          "local_operations": 876,
+          "pair_pulses": 470,
+          "pairs": 625
+        },
+        {
+          "forward_and_inverse": true,
+          "length": 3,
+          "local_operations": 1748,
+          "pair_pulses": 938,
+          "pairs": 15625
+        },
+        {
+          "forward_and_inverse": true,
+          "length": 4,
+          "local_operations": 2620,
+          "pair_pulses": 1406,
+          "pairs": 390625
+        }
+      ],
+      "primitive_cases": 668
+    },
+    "arithmetic_compiler_sha256": "0e3668a7e664f572e6c6c34c49bf454e8d931e6dd05b8f2ebaf3c1b0cd761027",
+    "baseline_carry": [
+      {
+        "edges": 8245,
+        "max_Q": 274,
+        "max_abs": 9,
+        "max_depth": 28,
+        "q": 5,
+        "states": 1649,
+        "table_sha256": "2119e4134c93dc740711fb124027f8cf3c752be2b5c502c2002980462d04322a",
+        "unit": "J"
+      },
+      {
+        "edges": 8245,
+        "max_Q": 706,
+        "max_abs": 13,
+        "max_depth": 28,
+        "q": 5,
+        "states": 1649,
+        "table_sha256": "838b779a394c71d79cccef53ac13d8fd0562fb9db55ee2bcc4ee2a794b8640c4",
+        "unit": "J_inverse"
+      }
+    ],
+    "baseline_dependency_pins": {
+      "THEOREMS.md": "19f05a4365ac131b9c2e4deaa6cb2e19cfcccc5ec2b5ec90fe07f42417fdf84f",
+      "check_independent.py": "7d6bad0dc8ee8a5c534cbce4888ff8464e33009a9b74bdc6b78eb16a21d9482c",
+      "compiler.py": "6568abd79d31ae69ac34e163a55da4d34269da97ef1bdfeaf7a890df2fda23e3",
+      "verify_general.py": "6543587aee0c561d7080a99ca191082658ae569ee994cc256e932fff43239245"
+    },
+    "baseline_independent_facts_agree": true,
+    "baseline_primitive_matrices": {
+      "equality_matrix_cases": 2500,
+      "equality_phase_cases": 500,
+      "multiply_matrix_cases": 1250,
+      "multiply_phase_cases": 250
+    },
+    "edges": {
+      "primitive_step_cases": 30,
+      "tables": [
+        {
+          "edges": 8245,
+          "max_S": 206,
+          "min_S": 148,
+          "states": 1649,
+          "table_sha256": "2119e4134c93dc740711fb124027f8cf3c752be2b5c502c2002980462d04322a",
+          "unit": "J"
+        },
+        {
+          "edges": 8245,
+          "max_S": 203,
+          "min_S": 131,
+          "states": 1649,
+          "table_sha256": "838b779a394c71d79cccef53ac13d8fd0562fb9db55ee2bcc4ee2a794b8640c4",
+          "unit": "J_inverse"
+        }
+      ]
+    },
+    "exhaustive": [
+      {
+        "N": 1,
+        "map_sha256": "70d2f37c29b3d6301f3423c102935a65fbdb13afe5267f5979f55e79418775b3",
+        "words": 5
+      },
+      {
+        "N": 2,
+        "map_sha256": "a920269f68690add78e8862f8e84ee1d5dc277081b1b5d30b9d2f9b95a35bf59",
+        "words": 25
+      },
+      {
+        "N": 3,
+        "map_sha256": "e099f3785518179fd16bd0e6344c548639f33b59d32165071268d1ce0b5dc697",
+        "words": 125
+      },
+      {
+        "N": 4,
+        "map_sha256": "062912e621594eec398000e8973173f85b7f37a5d37d8a3d6f9634f36f257f65",
+        "words": 625
+      },
+      {
+        "N": 5,
+        "map_sha256": "0547cb23b04d2b285b2376a340776664734ca7564220d766a6f7d0640d9b880b",
+        "words": 3125
+      },
+      {
+        "N": 6,
+        "map_sha256": "21c059049a673bd361b55bee29e383b0eaa4261abda0f299a7b22cd088abad28",
+        "words": 15625
+      },
+      {
+        "N": 7,
+        "map_sha256": "cc9cfc7b410654fe7f4407ded309192f6c82b6cb7245dc2b875aa5911f777361",
+        "words": 78125
+      }
+    ],
+    "long": [
+      {
+        "N": 8,
+        "map_sha256": "0ec8cc62924549d36855ce0826400d5cd0709c4282d3a306f5d1fe1eaa675a4a",
+        "words": 25
+      },
+      {
+        "N": 9,
+        "map_sha256": "7579ac2f5efc992dd50b8232eefb7262b46dd46c3fb2d751ea29ef307b744755",
+        "words": 25
+      },
+      {
+        "N": 12,
+        "map_sha256": "978f93858c5ce6e3445fb55a649d45d5adf83bac4ccf69bc43ae0ad7f0da23cf",
+        "words": 25
+      },
+      {
+        "N": 16,
+        "map_sha256": "62a46162f43a86471ef9b0ce72fb76ab6cee6d12e497a062b962eccb674945e4",
+        "words": 25
+      },
+      {
+        "N": 32,
+        "map_sha256": "7eaa739502de6cfdba24134332ed120cfd498b859ca206a3be4a8baed02abb64",
+        "words": 25
+      },
+      {
+        "N": 64,
+        "map_sha256": "4ec9cafed7df3cfea024794cbd1fba28037387de84684aa063a0690f4aae2ad7",
+        "words": 25
+      },
+      {
+        "N": 128,
+        "map_sha256": "8c288f26e6d92cf534457970b28b480e90d1d9d30150b5fc1d3281f16afb5ed5",
+        "words": 25
+      }
+    ],
+    "programs": {
+      "dirty_oracle_cases_at_ADD_level": 1320,
+      "multiplier_cases_at_ADD_level": 330
+    },
+    "resources": [
+      {
+        "N": 1,
+        "cells": 36,
+        "cells_with_archive": 37,
+        "multiplier_local_operations": 255219,
+        "multiplier_pair_pulses": 136917,
+        "word_pair_pulses": 136918,
+        "word_total_operations": 392140
+      },
+      {
+        "N": 2,
+        "cells": 50,
+        "cells_with_archive": 52,
+        "multiplier_local_operations": 510406,
+        "multiplier_pair_pulses": 273834,
+        "word_pair_pulses": 547670,
+        "word_total_operations": 1568488
+      },
+      {
+        "N": 3,
+        "cells": 64,
+        "cells_with_archive": 67,
+        "multiplier_local_operations": 765593,
+        "multiplier_pair_pulses": 410751,
+        "word_pair_pulses": 1232256,
+        "word_total_operations": 3529044
+      },
+      {
+        "N": 5,
+        "cells": 92,
+        "cells_with_archive": 97,
+        "multiplier_local_operations": 1275967,
+        "multiplier_pair_pulses": 684585,
+        "word_pair_pulses": 3422930,
+        "word_total_operations": 9802780
+      },
+      {
+        "N": 8,
+        "cells": 134,
+        "cells_with_archive": 142,
+        "multiplier_local_operations": 2041528,
+        "multiplier_pair_pulses": 1095336,
+        "word_pair_pulses": 8762696,
+        "word_total_operations": 25094944
+      },
+      {
+        "N": 32,
+        "cells": 470,
+        "cells_with_archive": 502,
+        "multiplier_local_operations": 8166016,
+        "multiplier_pair_pulses": 4381344,
+        "word_pair_pulses": 140203040,
+        "word_total_operations": 401515648
+      },
+      {
+        "N": 128,
+        "cells": 1814,
+        "cells_with_archive": 1942,
+        "multiplier_local_operations": 32663968,
+        "multiplier_pair_pulses": 17525376,
+        "word_pair_pulses": 2243248256,
+        "word_total_operations": 6424236544
+      }
+    ],
+    "word_readout": [
+      {
+        "N": 1,
+        "map_sha256": "402bfdba0a795ab69f75d5f5020c1376530493ddbc8cdbb224a034405c249fe4",
+        "words": 5,
+        "zero_count": 0
+      },
+      {
+        "N": 2,
+        "map_sha256": "58e3750bcd27fd27a5337f31a7bcb867a282855f453d9c11a52769f2a106eb9c",
+        "words": 25,
+        "zero_count": 0
+      },
+      {
+        "N": 3,
+        "map_sha256": "63a6e33690f1454457a742754e932ac20799c9d6c8bc600412d0d3e9562ec130",
+        "words": 125,
+        "zero_count": 0
+      },
+      {
+        "N": 4,
+        "map_sha256": "bfead22144524fc286d4235094b3b6b222de7dfc7686833f90d8f5c9121d311b",
+        "words": 625,
+        "zero_count": 0
+      },
+      {
+        "N": 5,
+        "map_sha256": "334860220efa0cfb4ff9c092112054192bbb13424d321331f3521fbb8e1df1a8",
+        "words": 3125,
+        "zero_count": 120
+      }
+    ]
+  },
+  "scope": {
+    "actual_single_outcome_law": false,
+    "all_large_physical_pulses_simulated": false,
+    "all_reachable_edges_executed_as_coefficient_schedules": true,
+    "all_small_adders_executed_as_ripple_schedules": true,
+    "archive_uses_generated_program_with_certified_ADD_blocks": true,
+    "clock_and_routing_in_data_memory": false,
+    "native_U_derivation": false,
+    "new_arithmetic_engine_independent_of_old_carry_table": true,
+    "scientific_float_arithmetic": false,
+    "status": "NON-CANONICAL"
+  }
+}
