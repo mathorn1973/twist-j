@@ -1,0 +1,22 @@
+C-JM-PREPARATION-MEMORY-N EXACT AUDIT v1
+ONE-COPY COLLISION PASS
+REDRAW tensor powers k=1..4 PASS
+HOLD two-reference gap = 15936/1210262180216419
+HOLD trace distance and fixed-effect gap = 31872/1210262180216419
+HOLD trace-distance polynomial certificate PASS
+DUAL seam coefficient C = 19639/20
+Q 8 interval 88 settings/copies 5 one-sided lower 1
+Q 16 interval 125 settings/copies 7 one-sided lower 1
+Q 14112 interval 3722 settings/copies 181 one-sided lower 3
+COMPLETE INTEGER-INTERVAL CHECKS 7873 zeros 193
+181 RATIONAL PROJECTORS PASS
+TERNARY admitted pure-source controls 2162 PASS
+ALL-ON HOLD zero; same-alphabet REDRAW positive PASS
+k=2 DARKNESS OBSTRUCTION: exact line interpolation PASS
+BLOCK BOUNDS 16 1 7
+BLOCK BOUNDS 13456 3 177
+BLOCK BOUNDS 14112 3 181
+BLOCK BOUNDS 1000000 17 1529
+BLOCK BOUNDS 100000000 173 15285
+BETA_14112 numerator_bits 783 denominator_bits 7055
+ALL FROZEN FINITE CHECKS PASS

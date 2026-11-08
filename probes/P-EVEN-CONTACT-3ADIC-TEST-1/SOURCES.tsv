@@ -1,0 +1,3 @@
+source_id	repository_path	commit	git_blob	sha256	bytes	license	use
+apparatus	probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/apparatus.py	dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d	f63b1d526085d3d0fff8ac28f83c91c472bdbeab	f0edfd80157c8993322a5338e88120c552908d3830fe5f9ea7536257213c6173	58388	Apache-2.0	static definitions only; no runtime import
+domain	probes/P-TWO-USE-TYPED-READOUT-CLOSURE-1/DOMAIN.tsv	dc162f03ba9e0b09ce950a76f0bf4939a31a8d8d	b139d0e7bab0ddd547da9f8624c62808a445ef01	2e9b77cf8c507b9bc6675d9a07bf8e27ad88921c72c1efc22dcf5bdb41d8a7c0	5029	Apache-2.0	unchanged local runtime copy DOMAIN.tsv

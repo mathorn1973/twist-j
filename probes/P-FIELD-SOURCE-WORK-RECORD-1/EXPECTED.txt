@@ -1,0 +1,13 @@
+LOCAL PASS split_K=28125 context_K_G=12500 raw=2187 refused=9252 nonsplit=1728
+OCCUPIED PASS complete_two_cell_cases=3840 both_directions cuts both_laws
+PHASE PASS common_H=15 common_r=0 common_mod5 delta=(-10,115,260,225,60)
+CHAIN PASS N=2 arrival=(1,5) first_write=(2,6) distinguish=2..5
+CHAIN PASS N=3 arrival=(2,6) first_write=(3,7) distinguish=3..6
+CHAIN PASS N=4 arrival=(3,7) first_write=(4,8) distinguish=4..7
+CHAIN PASS N=5 arrival=(4,8) first_write=(5,9) distinguish=5..8
+CHAIN PASS N=6 arrival=(5,9) first_write=(6,10) distinguish=6..9
+CHAIN PASS N=7 arrival=(6,10) first_write=(7,11) distinguish=7..10
+CHAIN PASS N=8 arrival=(7,11) first_write=(8,12) distinguish=8..11
+RECORD PASS trajectories=147 steps=2555 cut_runs=56 nonblank_pointer_runs=56
+BOUNDARY added local integer gate; original U admission and physical reading UNSUPPLIED
+AUDIT PASS
