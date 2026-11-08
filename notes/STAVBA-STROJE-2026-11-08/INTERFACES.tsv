@@ -1,0 +1,46 @@
+from	to	kind	evidence	note
+S0/K6	S1/K6	proved-composition	C-THERMAL-WORK-CLOCK-BOOTSTRAP-N;C-COMMON-TEMPERATURE-PREPARATION-N	jedna reakce nabije zasobnik, vytvori hlavni zaznam a kurzor; candidate, bez verifieru
+S1/K6	S2/K6	proved-composition	C-THERMAL-WORK-CLOCK-BOOTSTRAP-N;C-THERMAL-REGISTER-PREPARATION-N	hlidane predani do puvodniho konecneho programu; candidate
+S2/K6	S3/K6	proved-composition	C-THERMAL-WORK-CLOCK-BOOTSTRAP-N	nabehovy kurzor je soucasti teze pripravy; candidate
+S3/K6	S4/K6	proved-composition	THERMAL-ORIGINAL-PORT-APPARATUS[T]	priprava zdroje a tri kroky U_rec pod jednim hamiltonianem
+S4/K6	S5/K6	proved-composition	LOCAL-THERMAL-TWO-ATTEMPT[T];COMPACT-ACTIVE-RECORD-APPARATUS[T]	uchovani prvniho vystupu na pevnych mistech
+S5/K6	S6/K6	proved-composition	THERMAL-ORIGINAL-PORT-APPARATUS[T]	ctecí okna s pravdepodobnosti navesti > 1/4
+S6/K6	S7/K6	proved-composition	LOCAL-THERMAL-TWO-ATTEMPT[T];OCCUPIED-RECORD-EXPORT-REUSE[T]	vymena pracovniho jadra; zasoba je spotrebovana
+S7/K6	S8/K6	proved-composition	OCCUPIED-RECORD-EXPORT-REUSE[T]	N pokusu za sebou s (N+1)S+7N zasobnich qubitu
+S4/K6	S4/K5	declared-not-identified	THERMAL-ORIGINAL-PORT-APPARATUS[T];LOCAL-THERMAL-TWO-ATTEMPT[T]	vlastni zachovana energie, zadna rovnost s puvodnim Q (most B4)
+S4/K5	S5/K5	proved-composition	HOMOGENEOUS-CAPTURE-CURRENT-RECORD[T]	zachyt, proud a koherentni zapis v jednom zakonu; asymptoticke
+S5/K5	S6/K5	missing-bridge	HOMOGENEOUS-CAPTURE-CURRENT-RECORD[T]	selektivni spolecny detektor a kvantitativni retence zustavaji otevrene
+S2/K2	S3/K2	missing-bridge	P-POLE-HEIGHT-FIVE-INPUT-REPLAY-1;P-RELATIVE-CONTACT-VARIABLE-ARRIVAL-1	tyz kontaktni zakon, jiny vstupni dialekt: (u+tB,u-tB) proti (Y_n,X_r); prekladove slovo chybi
+S3/K2	S4/K2	proved-composition	RELATIVE-CONTACT-FINITE-WORKBANK-REUSE[T]	pet pevnych vymen nacte predem zarazeny vstup do aktivnich mist
+S2/K2	S4/K2	proved-composition	RELATIVE-CONTACT-COMMON-APPARATUS-OPEN[T]	jedna spolecna pomocna priprava pro vsech 100 dvojic
+S4/K2	S5/K2	proved-composition	RELATIVE-CONTACT-COMMON-APPARATUS-OPEN[T]	ctyri archivni banky rozlisi vsechny vstupy
+S5/K2	S6/K2	proved-composition	RELATIVE-CONTACT-FINITE-WORKBANK-REUSE[T]	2k archivu samo dekoduje usporadanou k-tici vstupu
+S6/K2	S7/K2	proved-composition	RELATIVE-CONTACT-FINITE-WORKBANK-REUSE[T]	doslovna inverze prace obnovi 31-mistne jadro
+S7/K2	S8/K2	proved-composition	RELATIVE-CONTACT-FINITE-WORKBANK-REUSE[T]	indukce pres konecne nosice pro kazde k
+S4/K2	S4/K1	declared-not-identified	RELATIVE-CONTACT-FIXED-WORD-RESIDUE-BOUNDARY[T];RELATIVE-CONTACT-FINITE-WORKBANK-REUSE[T]	stin kontaktniho slova modulo 1-j je permutace mist; z generatoru a..e je permutaci souradnic jen a (most B1)
+S4/K2	S4/K5	declared-not-identified	COHERENT-W-LOCALIZED-RING-CLOSURE[T];C-COMMON-COUNTER-PATH-PHASE-N	zadna unitalni mapa O[1/5] -> F_5; pocet proti polostope, normalizace amplitudy chybi (most B3)
+S4/K5	S4/K1	declared-not-identified	COHERENT-W-LOCAL-NATIVE-NETWORK[T];HOMOGENEOUS-CAPTURE-CURRENT-RECORD[T]	F_5 stin surove W je semikonjugovany na U_net = bunkove nativni U plus dodatecna vazba kazdy treti tik; vazba neni odvozena z U; U_rec neni intertwiner puvodniho U
+S2/K1	S4/K1	proved-composition	U-NATIVE-COMMON-READY-SOURCE-RETENTION[T];U-NATIVE-RAW-RESIDUE-READOUT[T]	spolecna pripravenost (0,1) a prenos zbytkoveho souctu
+S4/K1	S5/K1	proved-composition	U-NATIVE-INVARIANT-AND-NOWRITE[T];U-CARRY-MIRROR-FINITE-CIRCUIT[C]	synchronizovany zakaz zapisu; zaznam prenosu jen pres registrovy obvod
+S5/K1	S6/K1	proved-composition	U-NATIVE-RAW-RESIDUE-READOUT[T];U-NATIVE-RECEIVER-ONLY-RESIDUE-NOGO[T]	presny odecet z prijimace a citace; samotny prijimac nestaci
+S6/K1	S7/K1	missing-bridge	U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS[T]	navratova okna nejsou reset ani obnova
+S4/K1	S4/K3	proved-composition	U-CARRY-MIRROR-FINITE-CIRCUIT[C]	skutecny nativni tik prvniho prijimace proveden na 62 registrech; konecne C, dodane puvody (most B2)
+S4/K3	S5/K3	proved-composition	U-CARRY-MIRROR-FINITE-CIRCUIT[C]	prenosy a archiv zachovany pro vsech 500 vstupu
+S5/K3	S6/K3	proved-composition	U-CARRY-MIRROR-FINITE-CIRCUIT[C];P-CARRY-MOMENT-DEPTH-1	cteni prenosu; momenty prenosu
+S6/K3	S7/K3	proved-composition	U-CARRY-MIRROR-FINITE-CIRCUIT[C]	obnova 48 pracovnich bunek
+S4/K3	S4/K2	missing-bridge	U-CARRY-MIRROR-FINITE-CIRCUIT[C]	most ke kontaktnim bankam neni ustaven (vyslovne v rozsahu C radku)
+S2/K4	S4/K4	proved-composition	JM-FUNDED-INTEGER-PAIR-SOURCE[T];AUTONOMOUS-SOURCE-WORK-RECORD-CHAIN[T]	financovany zdroj a autonomni konzervativni bijekce
+S4/K4	S5/K4	proved-composition	FIELD-CONSERVATIVE-CHAIN-LAW[T];FIELD-LOCAL-WORK-RECORD[T]	prvni prichod N-1, prace N, lokalni C5 ukazatel
+S5/K4	S6/K4	proved-composition	JM-POSITIVE-REFERENCED-READING[T];INTEGER-PRIMITIVE-SOURCED-METRIC[T]	cteni s afinni referenci; metricka ctecka
+S6/K4	S7/K4	proved-composition	FIELD-CHAIN-FIRST-WORK[T]	navrat puvodniho prijimace v N+1; neni reset celeho pristroje
+S4/K4	S4/K1	declared-not-identified	FIELD-CONSERVATIVE-CHAIN-LAW[T];U-FIELD-RESIDUE-GATE[T]	odvozeni z nativniho U zustava otevrene; zbytkova brana spojuje jen nulovy predikat se shellem
+S8/K2	X1	missing-bridge	QDD-SELECTED-BORN[D];U-FINITE-READER-INDEPENDENCE-OBSTRUCTION[T]	vyskyt je prijat na D, nikoli odvozen; pevna ctecka s konecnou pameti nedava nezavisle hody
+S8/K6	X1	missing-bridge	QDD-SELECTED-BORN[D];THERMAL-ORIGINAL-PORT-APPARATUS[T]	ctecí okno je nemerene; vyber jedineho vysledku neni dodan
+S6/K1	X1	missing-bridge	U-POINT-SOURCE-SHARP-READOUT-NOGO[T];ENTROPY-LAYER-BRIDGE[F];TM-SYM2-MEASURE[F]	nativni vzorkovaci mechanismus neni poskytnut; tri trasy vystrelily
+X1	X2	missing-bridge	QDD-INSTRUMENT-APPARATUS[O];QDD-TERMINAL-EVENT-SEMANTICS[O]	fyzikalni smlouva pristroje chybi; vsechny ctyri vlastnici na STOP
+X2	X3	declared-not-identified	GRAVITY-BRIDGE-LAW[D];METRO-EDGE-SCALE[O];SCHEME-DICTIONARY[O]	slovniky na D; SI jen pres m_e; kanonicky selektor a schema otevrene
+S4/K1	X3	declared-not-identified	READING-SPLIT[D];MEASURE-BORN-VERB[D]	dekoder cte legy slovnikem, ne vetou o uplnosti
+S0/K2	S0/K6	missing-bridge	RELATIVE-CONTACT-INTEGRAL-LAW[T]	kontaktni nosic nema prostredi; ucet Q je priprava, ne teplota
+S0/K1	S1/K1	missing-bridge	U-NATIVE-CHART-AND-QDD-READBACK[T]	nativni citac nema zdroj ani bootstrap
+S1/K2	S3/K1	missing-bridge	RELATIVE-CONTACT-FOUR-SLOT-MINIMUM[T]	zadny bootstrap uctu na kontaktnim nosici; zadny nativni zavadec
+S7/K1	S8/K1	missing-bridge	U-NATIVE-WHOLE-SHEET-RETURN-WINDOWS[T]	bez obnovy neni opakovani
