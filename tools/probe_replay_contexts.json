@@ -163,6 +163,53 @@
         }
       }
     },
+    "P-INTEGER-RECIPROCAL-SOURCE-ACTION-1": {
+      "pin_commit": "a369fbf85feb79a2a10716b8bd7efd9ff8da5814",
+      "verifier": {
+        "git_blob": "f48596738eb93e130a8bf7de2dc8914218c7cd29",
+        "sha256": "2af1a3074b5d934075d33c9dd946bec51b5c982bd04bdc491a6370dfcb41c426",
+        "bytes": 32577
+      },
+      "prereg": {
+        "git_blob": "e3ed720883cc3b9474a60b1503cc6dc1e3e4f1c5",
+        "sha256": "591130cef486d8832d98643c32551f971eaacb0a3c05a57e293d6b7f600d21f0",
+        "bytes": 21428
+      },
+      "context_files": {
+        "canon/CANON.md": {
+          "git_blob": "eb17f2a31cd100fcfb1f201e19a0461aa19b30b7",
+          "sha256": "d87657aeccc568dd668718fb9cbea6136643e5db32dd4e289a4de328e64f824b",
+          "bytes": 1052518
+        },
+        "canon/CORE.md": {
+          "git_blob": "a9dd840aa7d7df132181e5d84bb8908fd0a12df9",
+          "sha256": "9d5617a163bc7a4e1964d41861ff7f2f44009117c61debe08a4e1547c88be728",
+          "bytes": 30714
+        },
+        "canon/FRONTIER.md": {
+          "git_blob": "acc208da19cf123cd50f538ee1f967530daadbc4",
+          "sha256": "8574c3d4b0cc70278dec7d64e2a51022718cc54497c64025d9e6021775fcbaf0",
+          "bytes": 27382
+        },
+        "canon/REGISTRY.tsv": {
+          "git_blob": "e679b71dee5fa70ce70d4dfa99840a7a1b5c2599",
+          "sha256": "5cd008147435bf1facfe93b2e05d9d7e41554d73f647ad09659aac002195890d",
+          "bytes": 532811
+        },
+        "canon/CHANGELOG.md": {
+          "git_blob": "4de1b3b8b75d3d7c1bfc3e5138ce7015f3e83e03",
+          "sha256": "79f6bd8f30b1f845ae918b7374049f4bf8e0a2270e89b4c5223469a93855f078",
+          "bytes": 207770
+        }
+      },
+      "bundle_files": {
+        "probes/P-INTEGER-RECIPROCAL-SOURCE-ACTION-1/breaker.py": {
+          "git_blob": "84abf8038e2cb23d9bada840a9f95cb44d9a6865",
+          "sha256": "8486ed7ee12349433f1e5d252d4dc3ec6a75d762a5a0ace6753856ae9ecf394c",
+          "bytes": 40327
+        }
+      }
+    },
     "P-TWO-USE-READOUT-FAILURE-REGRESSION-2": {
       "pin_commit": "0803c167d5e903a216b3cd96d9f7c6fcf4e62345",
       "verifier": {
