@@ -87,6 +87,24 @@ decision 8, and declined decision 6.
     siblings in `00c089de`;
   - #1639, #1644 and #1658: the V104 release review (row E) requires explicit
     errata before merge.
+- **Prepared afterwards for the held pull requests** (owner request,
+  2026-11-08), pushed to their own branches after merging `main` into each:
+  - replay-context registrations for #1643, #1644, #1646, #1648, #1657 and
+    #1658 in `tools/probe_replay_contexts.json`,
+    `tools/probe_replay_context.py` and `tools/test_probe_replay_context.py`.
+    Each binds the original pin, the unchanged verifier, preregistration and
+    breaker, and the five v103 Canon inputs by Git blob, SHA-256 and byte
+    count, like the merged siblings registered in `00c089de`. A registration
+    must travel with its probe, because the registration tests read each
+    registered probe's `RUN.md`. Each pull request inserts at its own point,
+    so the six merge in any order; a local simulation in shuffled order
+    merged without conflict and replayed all 20 registrations after every
+    step;
+  - `ERRATA.md` for #1639 and #1658 with the corrections required by row E of
+    the V104 release review and by the independent reviews. #1644 already
+    carries every requested correction in its post-run files, so it gets no
+    new errata file. #1639 needs no registration, because its verifier reads
+    no Canon file.
 - **Closed without merge, branches kept:** the 15 superseded pull requests
   of decision 3.
 - **Not done, blocked by this session's git policy:** deleting the 19 MERGED
