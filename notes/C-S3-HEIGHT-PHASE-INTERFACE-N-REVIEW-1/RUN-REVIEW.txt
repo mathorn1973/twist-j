@@ -1,0 +1,19 @@
+C-S3-HEIGHT-PHASE-INTERFACE-N-REVIEW-1 review.py
+R01 PASS ring, F16 (rho order 5, u order 15, J=u^2, u/J outside <rho>), constants, mul_A==mul_B pairs=10936
+R02 PASS contact law on pairs=65536: parity guard, identity on refusal, pair invariants, C^5=id, orientation-free
+R03 PASS stock table (7 values, h, Q), E_Z=80 H_Z=33+14phi Sigma_Z=(-4,-10,-6,-10), input accounts 39+10t^2 / 119+10t^2, residues
+R04 PASS separator traces (even|+-2|+-1), x_t values, five distinct nonzero parities, P^-1 restores
+R05 PASS markers on 20 (t,s) pairs: refuse off-sample, zero reference and gate J on sample, M^-1 restores
+R06 PASS writer cases=24: active phase-zero rotation to p, inactive identity on every phase, gate restored
+R07 PASS compiler |A|=95 endpoints exact for t=-2..2, only slots 6,7 change, inverse 380, cuts=2375, admitted_per_t=[30, 36, 37, 38, 44] FP_WORD=bfd48f0b8befb7c64f1b8a1b0f6589fc71a2120c87e63c9ba0ca21add2fe7b8d FP_TRACES=075ca8281d2cb629f800e5e2ea3e9e49452159db915bbe2c76c09ffcae71863a FP_ENDPOINTS=46b86040ef87c325d1417beb27546494c80b5d5706cb3e0e09c56bf7f023e549
+R09 PASS S from blocks == WORD535.txt contact by contact (535), block lengths, |W|=5350 |W^-1|=21400 |K|=60 |U|=26870, K copies M[r] with 41/60 admitted, FP_S=12f7a12e3969a2984dc5549cf42833512b906cc487ad45b96d705b278e842b6e
+R08 PASS assembly formulas from built states: N=39+25k, E=177+78k+10sum t^2, H, Sigma, common aux 177+60k, archives 60, word counts 27345k / 109380k, swaps 5(k-1)
+R10 PASS stopwatch W on all 10 ready cores == closed form (Y_(n+10), X_r, controls, M[-r], M[-r-Delta_n]); W^-1 restores; invariants at every S boundary
+R11 PASS assembly cases=14 cycles=19 boundaries=147 contacts=2597775 swaps=50 archives untouched, decode==input, full inverse restores, FP_FINALS=ba66ebc699ec5f0bfd9133597d920a9b2cb0a84bde4e8707737fa31612e4e954
+R12 PASS fresh archive pairs per stage k,k-1,...,0; work banks empty after each stage; no empty archive at the end
+R13 PASS root-proof finite checks: bare-seed classes distinct mod 2, adjacent-height distance arithmetic, trace separation of A
+R14 PASS mutant_seed_detected=True mutant_a2_detected=True
+R15 OBSERVED bfs_result=INCONCLUSIVE reason=depth cap visited=12853 max_depth=6
+TOTAL contacts=3335050 admitted=1039108 swaps=50 distinct_pairs=74426
+CHECKS=14 FAILED=0 BFS=INCONCLUSIVE
+RESULT PASS
