@@ -1,0 +1,6 @@
+PASS T0 the integer lift reduces to the native fibre at every tick heads=50 ticks=4096
+PASS T1 letters in {b,d,e} from counter 3 (from counter 1 on the traces 1 and 4)
+PASS T2 kick kappa_n = t_(n+1) (N_(n+1) - N_n) as integers
+PASS T3 kappa_n = 0 for odd n and kappa_(2k) = S(k) - S(k-1) = [v_2(k) even]
+PASS T4 window law for both parities, n1 <= 300 window checks=2224590 of which from n0<3: 11940
+RESULT PASS fails=0

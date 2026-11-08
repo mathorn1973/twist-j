@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-17T17:50:33.025980+00:00",
+  "files": {
+    "contact/verify.py": "f08be72c163003ae5cfbb9e48f1b9e907c3c4aa8febe25e33844d7cbd9063d14",
+    "geometry/verify.py": "20c986a96c21cf46f9b17108514aa68ba13a33ac3c7c11a1ea912099eef30878",
+    "independent/REVIEW.md": "c7c4659447b2e08e2e939dc1b36a1829d066c13e32d22d94bc5140ee3a38b3a9",
+    "independent/verify.py": "dac53f0749d88900564c508fee3fe181dc1a4b82188e0211b411df8697c34468",
+    "run_check.py": "50623f975248154ab8241d1fe1a041bdcf9d523c82c556231620326041ee829e"
+  },
+  "freeze_sha256": "7b6475aba1f5a4a48de043c7b7b6f7f6d6cb1432fee5389dd9620f5e6e521861",
+  "independent_new_author_code_or_results_seen": false,
+  "kind": "All implementations pinned before any new scientific run",
+  "prereg_sha256": "5061341dd53c3814ef87293b4a5d361600b123f53ac1892bd25005bb46b5640f",
+  "scientific_runs_before_pin": 0
+}
