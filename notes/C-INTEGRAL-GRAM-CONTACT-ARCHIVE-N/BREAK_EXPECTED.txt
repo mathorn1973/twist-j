@@ -1,0 +1,13 @@
+PROVENANCE {"prereg_sha256": "067115f7b1df57cf8475eceb3bbca7d4eb2b97ec940b6a2fe4798c5b520074a2", "prereg_source_commit": "c6e7eaef4741d7ec36bfb2e96d0e5831ea9295be", "source_sha256": "a4f86eef9e3440c368f82a560bcad2bf762ac953c55d0fbf045a4b56cb987b42"}
+F1 {"checks": 124, "nonzero_trace_zeros": 5, "residues": 16, "status": "OK"}
+F2 {"admitted_pairs": 625, "checks": 174649, "matrix_coefficient_divisions": 120000, "matrix_entry_divisions": 30000, "pairs": 6561, "refused_pairs": 5936, "status": "OK"}
+F3 {"checks": 30, "controls_attempted": 5, "controls_completed": 5, "status": "OK"}
+F4 {"checks": 1266, "paired_boundaries": 630, "paired_cycles": 42, "status": "OK"}
+F5 {"all_zero_inputs": 1, "boundaries": 19200, "checks": 140808, "matrix_coefficient_divisions": 1003520, "matrix_entry_divisions": 250880, "prepared_cases": 1280, "status": "OK", "valid_boundaries": 3840, "zero_valid_boundaries": 3, "zero_valid_cases": 1}
+F6 {"boundaries": 3840, "checks": 23812, "matrix_coefficient_divisions": 150528, "matrix_entry_divisions": 37632, "occupied_cases": 256, "status": "OK", "valid_boundaries": 768, "zero_valid_boundaries": 0, "zero_valid_cases": 0}
+F7 {"boundaries": 210, "checks": 2271, "complete_cycles": 14, "inverse_transition_pairs": 196, "matrix_coefficient_divisions": 43904, "matrix_entry_divisions": 10976, "status": "OK", "valid_boundaries": 45}
+CERTIFICATES {"checks": 4, "status": "OK"}
+PAIR_SHA256 813ea392db9eb4e42e6c2cc205f56b224699e37673d7a8c8fdef155513e3947b
+PROGRAM_SHA256 ee8cdbe56ab01b745092d8fd700739f546120c35c3369b696b215101788f30e7
+CERTIFICATE_STATUS COMPLETE_FINITE_AUDIT
+RESULT FINITE_AUDIT_OK_ONLY
