@@ -1,0 +1,49 @@
+{
+  "comparison_after_own_scientific_execution": true,
+  "converted_published_hashes": {
+    "complete_program_sha256": "aac3ba991d73dca62c0d5cf544b685dc0b18c4431363b6d5eec3b66e9831a59d",
+    "decoded_sha256": "27a2bd9246f9ca920dc28c7991fa42bec5bdba7d13929f9f253029567f9526e7",
+    "endpoint_sha256": "d8c0c14f90b285a896569d1fbdea95b0fafc1898054a63280b92c96983822aae",
+    "event_sha256": "fae2aab5a34ec51a83fcab71336491f4d3d832e54706760361528d8424b78fc1",
+    "read_checkpoint_sha256": "a5c9d1599d4ae022c4078b5d018cdafd2e357c21a34b8c07d10669a7a3321770",
+    "reload_checkpoint_sha256": "7d126d3594e6d937a9c13e11cd964851a04ea94ea2fb923b1af6118edcf73abf",
+    "step_checkpoint_sha256": "9033de4f2e29fce4601cd71d015af2da173d4f60aa097d89af6455fe288bf955"
+  },
+  "converted_read_rows": 4000,
+  "converted_reload_rows": 100,
+  "converted_step_rows": 2000,
+  "counter_matches": {
+    "R_checkpoints": true,
+    "S_checkpoints": true,
+    "designated_events": true,
+    "distinct_ordered_contact_pairs": true,
+    "full_native_inverses": true,
+    "reload_checkpoints": true,
+    "separate_fixture_contacts": true,
+    "trajectory_contact_applications": true,
+    "trajectory_swap_applications": true
+  },
+  "frozen_review_sha256": "e615346185100da3aa68bc5d6432ac5781752ce16311a97cac71378586de1eb8",
+  "frozen_scope_sha256": "0e9a48d6d5c41dc2def54a911c45e8a3aa8e1e6673d2b99d6c98ebb71b75f482",
+  "independent_reader_rejection_count": 24,
+  "independent_source_pin": "8199bb6297178ebeb001820d51b1a3882796ba29",
+  "normalization": "stream compact per-row JSON; S tick+1; explicit event dictionaries; no trajectory rerun",
+  "published_hash_matches_after_explicit_format_conversion": {
+    "complete_program_sha256": true,
+    "decoded_sha256": true,
+    "endpoint_sha256": true,
+    "event_sha256": true,
+    "read_checkpoint_sha256": true,
+    "reload_checkpoint_sha256": true,
+    "step_checkpoint_sha256": true
+  },
+  "same_literal_535_oriented_edges": true,
+  "same_sorted_actual_record_quadruples": true,
+  "status": "PASS",
+  "target_head": "26731e2bd7f1394b4d274528525e6d78cbe6bbf9",
+  "target_source_hashes": {
+    "EXPECTED.txt": "40a71401c28406605aea666a40fec5f773505d3a5b56b82897cdc09ad4c1952c",
+    "WORD535.txt": "ca6bdd7a9b43e329cbc3630f26e32125b1d16a9872b9563e57733f5c408c916b",
+    "verify.py": "fbee888930ac613c517c2ec0b4312c5b7b9860d1e1f21be21e9d12ba03cf0884"
+  }
+}
