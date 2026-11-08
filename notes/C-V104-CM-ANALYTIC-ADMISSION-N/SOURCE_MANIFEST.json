@@ -1,0 +1,124 @@
+{
+  "status": "NON-CANONICAL",
+  "admission": "C-V104-CM-ANALYTIC-ADMISSION-N",
+  "public_comparison_commit": "655e022d0ef95ee94681464d3325d2aa589df1d6",
+  "source_files": [
+    {
+      "path": "MODULE_A.md",
+      "bytes": 22636,
+      "sha256": "a0ef2c2e2e4fb215f97a46d5800c7a6c4eb4a25742cab7dd0849bb8e171ed500",
+      "license": "Apache-2.0 under repository POLICY.md",
+      "source": {
+        "repository": "mathorn1973/twistj-handoff",
+        "commit": "c7a4852a0b0c253291df9cf0d403950ca9934f92",
+        "path": "polarization-reachability-2026-10-20/MODULE_A.md",
+        "git_blob": "8b931c80624b8c0b36c16a36e8b6837e39f5c162",
+        "bytes": 22643,
+        "sha256": "93f0a418a42603f6e774a272fa7944cc3b69582d74e7667c21b183c02d6bb363"
+      },
+      "transformation": "editorial-public-adaptation",
+      "mathematical_equations_changed": false,
+      "editorial_changes": [
+        "Replace nonpublic geometric source link and its label by the already public equivalent proof at the pinned comparison revision.",
+        "Replace the unadmitted historical run-record link by an explicit admission boundary; the complete finite-domain proof remains unchanged."
+      ]
+    },
+    {
+      "path": "MODULE_B.md",
+      "bytes": 20162,
+      "sha256": "643ef4a54719a9d5e8057f0cbf6912642c2e9d475a467b0195e12dfb93901f88",
+      "license": "Apache-2.0 under repository POLICY.md",
+      "source": {
+        "repository": "mathorn1973/twistj-handoff",
+        "commit": "c7a4852a0b0c253291df9cf0d403950ca9934f92",
+        "path": "polarization-reachability-2026-10-20/MODULE_B.md",
+        "git_blob": "a97c6665e88b4c71ecf26cdc447b16cdcd789a09",
+        "bytes": 20402,
+        "sha256": "2d28b1106038b7f0c778ad6d0e96adcdbdf8b9b0e3169e57d49869c2ba4465a4"
+      },
+      "transformation": "editorial-public-adaptation",
+      "mathematical_equations_changed": false,
+      "editorial_changes": [
+        "Replace two nonpublic dependency links and their labels with pinned public equivalent proofs.",
+        "Remove a development-only agent reference from the introductory denominator paragraph; its mathematical method and scope are unchanged.",
+        "Replace the final unadmitted auxiliary-code/preregistration/run paragraph by a concise source-status boundary."
+      ]
+    },
+    {
+      "path": "PRIME_SECTORS_2L.md",
+      "bytes": 17732,
+      "sha256": "50c37bcc0cbbfc1920e5e6e2761c478c8714f1f4342f9100d76091ca73ff537c",
+      "license": "Apache-2.0 under repository POLICY.md",
+      "source": {
+        "repository": "mathorn1973/twistj-handoff",
+        "commit": "40c26a45d37951c50d676837615b4bf68f02c655",
+        "path": "prime-sectors-2l-2026-10-20/PRIME_SECTORS_2L.md",
+        "git_blob": "b0a757d117c704b2e8e2bdbf979cdeff56070b87",
+        "bytes": 17649,
+        "sha256": "1e56657e37868df20b3ddca58676aa65e16647caf9606cf0a43b09c0c5a9449f"
+      },
+      "transformation": "editorial-public-adaptation",
+      "mathematical_equations_changed": false,
+      "editorial_changes": [
+        "Replace the unadmitted broad source-manifest pointer with the new narrow public manifest.",
+        "Replace two nonpublic relative dependency links with pinned public proofs and remove inherited independent-review wording."
+      ]
+    }
+  ],
+  "public_dependencies": [
+    {
+      "path": "notes/C-RH-CM5-HECKE-DICTIONARY-N/CM5_POLARIZATIONS.md",
+      "commit": "655e022d0ef95ee94681464d3325d2aa589df1d6",
+      "bytes": 38987,
+      "sha256": "a967038711624409a9620964cfcdf20fbd49c60c8837fe75842d099cfbe93208"
+    },
+    {
+      "path": "notes/C-RH-CM5-HECKE-DICTIONARY-N/HECKE_MAASS_BRIDGE.md",
+      "commit": "655e022d0ef95ee94681464d3325d2aa589df1d6",
+      "bytes": 30385,
+      "sha256": "c56a097133be16db3cc29bf4da5927c294f3dabecc29d477cadc1d3185778618"
+    }
+  ],
+  "external_theorems": [
+    {
+      "url": "https://arxiv.org/pdf/2010.12929v8",
+      "locations": [
+        "Theorem 2.1, printed page 4"
+      ],
+      "role": "Nonnegative multiplicative mean theorem; MODULE_B checks all hypotheses."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2008.09677v3",
+      "locations": [
+        "Section 1.1",
+        "Theorem 2.2",
+        "Lemma 2.3",
+        "Theorems 2.5 and 2.6",
+        "Lemma 2.7"
+      ],
+      "role": "Full-family Hecke basis, zero-free region, zero density, angular approximation and per-mode local zero count."
+    },
+    {
+      "url": "https://terrytao.wordpress.com/2014/12/09/254a-notes-2-complex-analytic-multiplicative-number-theory/",
+      "locations": [
+        "Exercise 64"
+      ],
+      "role": "Fixed modulus five prime number theorem."
+    },
+    {
+      "url": "https://math.mit.edu/classes/18.785/2016fa/LectureNotes14.pdf",
+      "locations": [
+        "Theorems 14.13 and 14.15"
+      ],
+      "role": "Minkowski ideal-class bound."
+    },
+    {
+      "url": "https://dlmf.nist.gov/4.22.E3",
+      "locations": [
+        "Equation 4.22.3"
+      ],
+      "role": "Cotangent partial fractions for the explicit character L-value."
+    }
+  ],
+  "custody_boundary": "Original source identities remain pinned; admitted files are explicitly edited public versions, not byte-identical copies. External articles and historical records are not redistributed. This admission creates no formal run record, preregistration or Canon status."
+}
